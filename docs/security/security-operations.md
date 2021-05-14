@@ -1,6 +1,6 @@
 ---
-title: Security Operations
-description: Best practice guidance for establishing a Security Operations function
+title: Security operations
+description: Learn about best practice guidance for establishing a security operations function. This function helps limit damage from attackers.
 author: DominicAllen
 ms.author: doalle
 ms.date: 04/04/2021
@@ -10,27 +10,27 @@ ms.subservice: secure
 ms.custom: internal
 ---
 
-# Security Operations
+# Security operations
 
-This article provides strategic guidance for leaders planning to establish or modernize a security operation function. For architecture and technology focused best practices, see https://aka.ms/secopstech
+This article provides strategic guidance for leaders establishing or modernizing a security operation function. For architecture and technology focused best practices, see [best practices for security operations](https://aka.ms/secopstech).
 
-Security Operations reduces organizational risk by limiting damage from attackers who have gained access to the organization's resources. Security operations focuses on reducing the time attackers have access by detecting, responding to, and helping recover from active attacks.
+Security operations reduce risk by limiting damage from attackers who gain access to your organization's resources. Security operations focuses on reducing the time attackers have access by detecting, responding to, and helping recover from active attacks.
 
-Rapid response and recovery protects the organization by damaging the adversary's return on investment (ROI). When adversaries are evicted and forced to start a new attack, their cost to attack your organization goes up.
+Rapid response and recovery protects your organization by damaging the adversary's return on investment (ROI). When adversaries are evicted and forced to start a new attack, their cost to attack your organization goes up.
 
-Security Operations (SecOps) is sometimes referred to or structured as a Security Operations Center (SOC). [Security posture management](./security-governance.md#security-posture-management) of the operational environment is a function of governance discipline. Security of the DevOps process is part of the [innovation security](innovation-security.md) discipline
+Security Operations (SecOps) is sometimes referred to or structured as a Security Operations Center (SOC). [Security posture management](./security-governance.md#security-posture-management) of the operational environment is a function of governance discipline. Security of the DevOps process is part of the [innovation security](innovation-security.md) discipline.
 
-## People and Process
+## People and process
 
-While Security Operations can be highly technical, it is first and foremost a human discipline. People are the most valuable asset in security operations — their experience, skill, insight, creativity, and resourcefulness are what makes the discipline effective. 
+While Security Operations can be highly technical, it's first and foremost a human discipline. People are the most valuable asset in security operations. Their experience, skill, insight, creativity, and resourcefulness are what make the discipline effective.
 
-Attacks on an organization are also planned and conducted motivated by people (criminals, spies, hacktivists, etc.). While some commodity attacks are fully automated, the most damaging ones are often perpetrated by live human attack operators. 
+Attacks on your organization are also planned and conducted by people like criminals, spies, and hacktivists. While some commodity attacks are fully automated, the most damaging ones are often done by live human attack operators.
 
-**Focus on empowering (not replacing) people** - Your goal should not be to replace people with automation, but to empower your people with tools that simplify their daily workflows and enable them to keep up with or get ahead of the human adversaries they face. 
- 
-Rapidly sorting out  signal (real detections) from the noise (false positives) requires investing in both humans and automation. Automation and technology can reduce human toil, but ultimately attackers are human and human judgement is critical to the process for defeating them.
+**Focus on empowering people** - Your goal should not be to replace people with automation. You should empower your people with tools that simplify their daily workflows and enable them to keep up with or get ahead of the human adversaries they face.
 
-**Diversify your thinking portfolio** - While security operations is highly technical, it is also just another new version of forensic investigation that shows up in many career fields like criminal justice. Don't be afraid to hire people with a strong competency in investigation or deductive/inductive reasons and train them on technology. 
+Rapidly sorting out signal (real detections) from the noise (false positives) requires investing in both humans and automation. Automation and technology can reduce human work, but attackers are human and human judgement is critical in the process of defeating them.
+
+**Diversify your thinking portfolio** - While security operations is highly technical, it's also just another new version of forensic investigation that shows up in many career fields like criminal justice. Don't be afraid to hire people with a strong competency in investigation or deductive or inductive reasons and train them on technology.
 
 You can increase productivity and employee enjoyment of their jobs by ensuring people are set up with a healthy culture and are  measuring the right outcomes.
 
