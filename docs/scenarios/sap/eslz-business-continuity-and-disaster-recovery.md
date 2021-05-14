@@ -66,7 +66,7 @@ Before you deploy your HA infrastructure and depending on the region you've chos
 
 - The type of VMs that can be deployed through a single availability set are restricted since the host is defined by the first VM deployed in the set. One example result is that you won't be able to combine an M-series and E-series VMs into one availability set.
 
-One advantage of deploying your HA architecture across different Availability Zones is that your SLA for the VMs could be higher. For details, review [Azure VM SLAs](https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_9/). Depending on the Azure region, you might discover different network latency conditions in network traffic between VMs. Read through [SAP workload configurations with Azure Availability Zones](/azure/virtual-machines/workloads/sap/sap-ha-availability-zones) for more information about SAP workload deployments across different Availability Zones.
+One advantage of deploying your HA architecture across different Availability Zones is that your SLA for the VMs could be higher. For details, review [Azure VM SLAs](https://azure.microsoft.com/support/legal/sla/virtual-machines). Depending on the Azure region, you might discover different network latency conditions in network traffic between VMs. Read through [SAP workload configurations with Azure Availability Zones](/azure/virtual-machines/workloads/sap/sap-ha-availability-zones) for more information about SAP workload deployments across different Availability Zones.
 
 **Design recommendations for HA:**
 

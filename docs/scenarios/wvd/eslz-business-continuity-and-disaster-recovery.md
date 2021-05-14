@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Business continuity and disaster recovery (BCDR) for Windows Virtual Desktop enterprise-scale scenario
 
-Windows Virtual Desktop is a managed service that provides Microsoft a control plane for your desktop virtualization environment. The service is free of charge, and Microsoft doesn't offer a financially backed [service level agreement](https://azure.microsoft.com/support/legal/sla/virtual-desktop) (SLA). Despite having no SLA, we try to achieve at least 99.9% availability for the Windows Virtual Desktop service URLs.
+Windows Virtual Desktop is a managed service that provides Microsoft a control plane for your desktop virtualization environment. The service is free of charge, and Microsoft doesn't offer a financially backed [service-level agreement (SLA)](https://azure.microsoft.com/support/legal/sla/virtual-desktop). Despite having no SLA, we try to achieve at least 99.9% availability for the Windows Virtual Desktop service URLs.
 
 > [!NOTE]
 > The availability of the session host virtual machines in your subscription is covered by the [Azure Virtual Machines SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines).
@@ -29,7 +29,7 @@ For more information, see [Set up a business continuity and disaster recovery pl
 ### Host pool compute strategy
 
 - For Windows Virtual Desktop host pool, both *active-active* and *active-passive* can be good BCDR approaches, depending on the requirements.
-  - With *active-active*, a single host pool can have VMs from multiple regions. In this scenario, usage of [Cloud Cache](/fslogix/cloud-cache-resiliency-availability-cncpt) is required to actively replicate the user's FSLogix profile and office containers between the regions. For virtual machines (VMs) in each region, the cloud cache registry entry specifying locations needs to be inverted to give precedence to the local one.
+  - With *active-active*, a single host pool can have VMs from multiple regions. In this scenario, usage of [cloud cache](/fslogix/cloud-cache-resiliency-availability-cncpt) is required to actively replicate the user's FSLogix profile and office containers between the regions. For virtual machines (VMs) in each region, the cloud cache registry entry specifying locations needs to be inverted to give precedence to the local one.
     - This configuration is complex. *active-active* protects against storage outages without requiring the user to log in again. It then enables continuous testing of the disaster recovery location. This configuration isn't considered either a performance or cost optimization.
     - Load balancing of incoming user connection can't take proximity into account; all hosts will be equal, and users may be directed to a remote (not optimal) Windows Virtual Desktop host pool VM.
     - This configuration is limited to a *Pooled* (shared) host pool type. For a *Personal* (dedicated) type, once a desktop is assigned to a user on a certain session host VM, it sticks and doesn't change, even if not available.
@@ -40,12 +40,12 @@ For more information, see [Set up a business continuity and disaster recovery pl
 
 - For host pool VM resiliency, different [options](/azure/virtual-machines/availability) are available when creating a new Windows Virtual Desktop host pool. It's important to select the right option based on your requirements during creation. These options can't be changed later.
 
-  - The default resiliency option for Windows Virtual Desktop host pool deployment is **Availability Set**. This option only ensures host pool resiliency at the single Azure datacenter level, with formal 99.95% high-availability ([SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_9)).
+  - The default resiliency option for Windows Virtual Desktop host pool deployment is **Availability Set**. This option only ensures host pool resiliency at the single Azure datacenter level, with formal 99.95 percent high-availability [SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines).
 
      > [!NOTE]
      > The maximum number of VMs inside an **Availability Set** is 200, as documented in [Subscription and service limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#virtual-machines-limits---azure-resource-manager).
 
-  - Using [Availability Zones](/azure/availability-zones/az-overview), VMs in the host pool are distributed across different datacenters. VMs are still inside the same region, and have higher resiliency and higher formal 99.99% high-availability ([SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_9)). Your capacity planning should take into account enough extra compute capacity to ensure Windows Virtual Desktop continues to operate even if a single zone is lost.
+  - Using [Availability Zones](/azure/availability-zones/az-overview), VMs in the host pool are distributed across different datacenters. VMs are still inside the same region, and have higher resiliency and higher formal 99.99 percent high-availability [SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines). Your capacity planning should take into account enough extra compute capacity to ensure Windows Virtual Desktop continues to operate even if a single zone is lost.
 
      > [!NOTE]
      > An Azure Resource Manager (ARM) template must be used to specify zones. This option isn't available yet in the Azure portal.
@@ -72,7 +72,7 @@ For more information, see [Set up a business continuity and disaster recovery pl
 
 In Windows Virtual Desktop, multiple replication mechanisms and strategies can be used for user data in [FSLogix](/azure/architecture/example-scenario/wvd/windows-virtual-desktop-fslogix) containers:
 
-- **Profile pattern #1:** Native Azure storage replication mechanisms. For example [geo-redundant storage (GRS)](/azure/storage/common/storage-redundancy#redundancy-in-a-secondary-region) for standard file shares, [cross-region replication](/azure/azure-netapp-files/cross-region-replication-introduction) of Azure NetApp Files, or [Azure Files Sync](/azure/storage/files/storage-sync-files-deployment-guide) for VM-based file servers.
+- **Profile pattern #1:** Native Azure storage replication mechanisms. For example [geo-redundant storage (GRS)](/azure/storage/common/storage-redundancy#redundancy-in-a-secondary-region) for standard file shares, [cross-region replication](/azure/azure-netapp-files/cross-region-replication-introduction) of Azure NetApp Files, or [Azure File Sync](/azure/storage/file-sync/file-sync-deployment-guide) for VM-based file servers.
 
 - **Profile pattern #2:** FSLogix [cloud cache](/azure/architecture/example-scenario/wvd/windows-virtual-desktop-fslogix#using-cloud-cache) has a built-in automatic mechanism to replicate containers between up to four different storage accounts.
 
@@ -80,7 +80,7 @@ In Windows Virtual Desktop, multiple replication mechanisms and strategies can b
 
 ### Golden image availability
 
-If you use custom images to deploy Windows Virtual Desktop host pool VMs, it's important to ensure those artifacts are available in all regions if there's a major disaster. Use the [Azure Shared Image Gallery](/azure/virtual-machines/windows/shared-image-galleries) service to replicate images across all regions where a host pool is deployed with redundant storage and multiple copies.
+If you use custom images to deploy Windows Virtual Desktop host pool VMs, it's important to ensure those artifacts are available in all regions if there's a major disaster. Use the [Azure Shared Image Gallery](/azure/virtual-machines/shared-image-galleries) service to replicate images across all regions where a host pool is deployed with redundant storage and multiple copies.
 
 ### Backup protection
 
@@ -91,7 +91,7 @@ Preventing data loss for critical user data is important.
 2. Consider the appropriate mechanism to provide protection for critical user data.
 
    - You can use the [Azure Backup](/azure/backup/backup-overview) service to protect profile and office containers data when it's stored on Azure Files standard and premium tiers.
-   - You can use Azure NetApp Files [Snapshots](/azure/azure-netapp-files/azure-netapp-files-manage-snapshots) and [Policies](/azure/azure-netapp-files/azure-netapp-files-manage-snapshots#manage-snapshot-policies) for Azure NetApp Files on all tiers.
+   - You can use Azure NetApp Files [snapshots](/azure/azure-netapp-files/azure-netapp-files-manage-snapshots) and [policies](/azure/azure-netapp-files/azure-netapp-files-manage-snapshots#manage-snapshot-policies) for Azure NetApp Files on all tiers.
    - You can use Azure Backup to protect host pool VMs. This practice is supported even if host pool VMs are stateless.
 
 ### Infrastructure and application dependencies
