@@ -1,5 +1,5 @@
 ---
-title: Data democratization
+title: Democratize data
 description: Learn about data democratization with Azure Data Catalog, Azure Data Share, and other tools that enhance data discoverability and understanding.
 author: BrianBlanchard
 ms.author: brblanch
