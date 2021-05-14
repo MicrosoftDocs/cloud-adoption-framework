@@ -91,7 +91,7 @@ When working in Azure DevOps, use variable groups in your pipelines. Variable gr
 
 Store your Packer files and provisions in a centralized location for Azure Pipelines to access. We recommend using Azure file shares to securely store these files. The access credentials are an example of what's stored in the key vault that's linked to the variable group.
 
-When you use Azure file share for the Packer files, store the name and account key in the key vault that's linked to the variable group in Azure DevOps. These credentials are accessed by pipelines to download the Packer files to the VM that's used to create the image. Like the storage account name and primary key, store the unc path as a variable in the variable group.
+When you use Azure file share for the Packer files, store the name and account key in the key vault that's linked to the variable group in Azure DevOps. These credentials are accessed by pipelines to download the Packer files to the VM that's used to create the image. Like the storage account name and primary key, store the UNC path as a variable in the variable group.
 
 Azure Pipelines has many different features. Our recommendations when it comes to setting up Packer are to use gateways, marketplace, and deployment services.
 

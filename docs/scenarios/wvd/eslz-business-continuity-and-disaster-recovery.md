@@ -130,7 +130,7 @@ The following are best practices for your design:
   - Replication between disparate storage is required.
 
 - We recommend the following guidelines when using cloud cache:
-  - Use a solid state drive (SSD) for the managed disk of the Windows Virtual Desktop host pool VMs.
+  - Use a solid-state drive (SSD) for the managed disk of the Windows Virtual Desktop host pool VMs.
   - Have a backup solution in place to protect user profile and office containers.
   - Make sure that the local VM managed disk is large enough to accommodate the local cache of all user's FSLogix profile and office containers.
 
