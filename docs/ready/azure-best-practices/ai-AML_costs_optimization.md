@@ -250,10 +250,10 @@ Last but not least, it is important to balance the investments among Azure Machi
 
 # Learn more
 
-Provide the right level of cost access
+### Provide the right level of cost access
 
 [Track costs across business units, environments, or projects - Cloud Adoption Framework | Microsoft Docs](https://review.docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/track-costs?branch=pr-en-us-1254#provide-the-right-level-of-cost-access)
 
-Additional cost management resources on Azure
+### Additional cost management resources on Azure
 
 [Track costs across business units, environments, or projects - Cloud Adoption Framework | Microsoft Docs](https://review.docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/track-costs?branch=pr-en-us-1254#additional-cost-management-resources)
