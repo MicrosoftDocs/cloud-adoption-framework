@@ -26,7 +26,7 @@ When mature, the goal of security is to expose and mitigate risks, and then empo
 
 Cybersecurity risk is the potential damage or destruction of business assets, revenue, and reputation. This damage is caused by human attackers attempting to steal money, information, or technology.
 
-While these attacks happen in the technical environment, they often represent a risk to your entire organization. Cybersecurity risk should be aligned to your risk measurement, tracking, and mitigation framework. Many organizations still treat cybersecurity risk as a technical problem to be *solved*. This perception isn't right and doesn't mitigate the strategic business impact of risk.
+While these attacks happen in the technical environment, they often represent a risk to your entire organization. Cybersecurity risk should be aligned to your risk measurement, tracking, and mitigation framework. Many organizations still treat cybersecurity risk as a technical problem to be *solved*. This perception leads to the wrong conclusions that don't mitigate the strategic business impact of risk.
 
 The following diagram shows the shift from a typical technically oriented program to a business framework.
 
