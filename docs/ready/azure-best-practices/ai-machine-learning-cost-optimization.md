@@ -70,16 +70,6 @@ For batch inference scenarios consider the following:
 - When using Azure Machine Learning pipelines for batch inferencing, follow the guidance under 'Determining the compute size for training' to choose your initial VM size.
 - Optimize cost and performance by scaling horizontally. One of the key methods of optimizing cost and performance is by parallelizing the workload with the help of [Parallel Run Step](https://docs.microsoft.com/python/api/azureml-pipeline-steps/azureml.pipeline.steps.parallelrunstep?view=azure-ml-py) in Azure Machine Learning. This pipeline step allows you to use many smaller nodes to execute the task in parallel, hence allowing you to scale horizontally. There is an overhead for parallelization though, so depending on the workload and the degree of parallelism that can be achieved, this may or may not be an option.
 
-### Determining the compute type and size for data preparation [TODO]
-
-If you are leveraging attached Synapse Apache Spark pools to do data preparation, it will use memory optimized Spark pools. Usage of Spark pools is billed by rounding up to the nearest minute.
-
-| **Type** | **Price** | **Free Quantity** |
-| --- | --- | --- |
-| Memory Optimized | $0.143 per vCore-hour | 120 free vCore-hours per month until July31, 2021\* |
-
-\*Free quantities apply only to the follow subscription types: Pay-As-You-Go, Microsoft Azure Enterprise, Microsoft Azure Plan, Azure in CSP, Enterprise Dev/Test. These included free quantities aggregate at the enrollment level for enterprise agreements and at the subscription level for pay-as-you-go subscriptions.
-
 ### Determine the size for Compute Instance compute
 
 For interactive development, Azure Machine Learning's Compute Instance (CI) compute type is recommended to use. The CI offering brings single node compute that is bound to a single user and can hence be used as a workstation replacement.
