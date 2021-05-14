@@ -32,7 +32,7 @@ This article covers the following aspects of BCDR for an enterprise-scale SAP sc
 
 - High availability (HA) within an Azure region
 - Backup/restore considerations
-- DR: Cross-regional versus regional DR decision criteria
+- Cross-regional versus regional disaster recovery (DR) decision criteria
 
 ### High availability (HA) within an Azure region
 
@@ -86,7 +86,7 @@ One advantage of deploying your HA architecture across different Availability Zo
 
 - Use a Standard Load Balancer SKU in front of ASCS and DB clusters.
 
-- All production systems should run on premium-managed SSDs and use Azure NetApp Files or ultra disks. At least the OS disk should be Premium tier to achieve better performance and the best SLA.
+- All production systems should run on premium-managed SSDs and use Azure NetApp Files or Ultra Disk Storage. At least the OS disk should be Premium tier to achieve better performance and the best SLA.
 
 - Both VMs in the HA pair should be deployed in an availability set, or Availability Zones should be the same size and have the same storage configuration.
 
@@ -167,9 +167,9 @@ Another factor that you should consider when choosing your DR region is the RPO 
 
 - Use Site Recovery to replicate an application server to a DR site. Site Recovery can also help with replicating central-services cluster VMs to the DR site. When you invoke DR, you'll need to reconfigure the Linux Pacemaker cluster on the DR site (for example, replace the VIP or SBD, run `corosync.conf`, and more).
 
-- Use Cross-region replication in Azure NetApp Files to synchronize file volumes between the primary and DR region. Cross-region replication is [currently in public preview](/azure/azure-netapp-files/cross-region-replication-introduction).
+- Use [cross-region replication](/azure/azure-netapp-files/cross-region-replication-introduction) in Azure NetApp Files (currently in public preview) to synchronize file volumes between the primary and DR region.
 
-- Native database replication should be used to synchronize data to the DR site; Site Recovery shouldn't be used.
+- Native database replication should be used to synchronize data to the DR site, rather than Azure Site Recovery.
 
 - Peer the primary and DR VNets. For example, for HANA System Replication, an SAP HANA DB VNet needs to be peered to the DR site's SAP HANA DB VNet.
 

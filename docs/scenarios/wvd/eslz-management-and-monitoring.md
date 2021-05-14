@@ -22,7 +22,7 @@ ms.subservice: ready
 - Performance counters should be collected.
 - Windows event logs should be collected.
 - Create a dashboard from the platform logs to centralize visuals for reporting operations.
-- Use the [Windows Virtual Desktop Monitoring documentation](/azure/virtual-desktop/azure-monitor) for more guidance.
+- Learn to [use Azure Monitor for Windows Virtual Desktop to monitor your deployment](/azure/virtual-desktop/azure-monitor).
 
 ### Design recommendations
 
@@ -70,13 +70,13 @@ ms.subservice: ready
     - `Microsoft-Windows-TerminalServices-RemoteConnectionManager/Admin`
     - `Microsoft-FSLogix-Apps/Admin`
 
-- Use [Monitoring for Windows Virtual Desktop](/azure/virtual-desktop/azure-monitor) for ease of configuration.
+- Use [Azure Monitor for Windows Virtual Desktop](/azure/virtual-desktop/azure-monitor) for ease of configuration.
 
 - Assign application groups to user groups to ease your administration overhead.
 
 - Application groups can be segregated in many ways. We recommend separating them based on which department or user type (for example, power, engineering, or general) the user is a part of.
 
-For a glossary, data storage cost estimations, and further troubleshooting, see the [Next Steps](/azure/virtual-desktop/azure-monitor#next-steps) part of the documentation.
+For a glossary, data storage cost estimations, and additional troubleshooting guidance, see [Azure Monitor next steps](/azure/virtual-desktop/azure-monitor#next-steps).
 
 ## Infrastructure management and monitoring
 

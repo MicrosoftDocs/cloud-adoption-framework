@@ -20,10 +20,10 @@ The following approach to the migration process is simplified to outline a proof
 
 1. **Assess:** The team deploys host pools by using the default virtual machine (VM) sizes. Assessment data helps the team identify the expected number of concurrent user sessions and the number of VMs required to support those concurrent sessions.
 2. **Deploy:** The team [creates a host pool](/azure/virtual-desktop/create-host-pools-azure-marketplace) for pooled desktops by using a Windows 10 Enterprise multi-session gallery image from Azure Marketplace and the sizing from assessment step 1.
-3. **Deploy:** The team [creates either Desktop or RemoteApp application groups](/azure/virtual-desktop/manage-app-groups#create-a-remoteapp-group) for workloads that it has already migrated.
+3. **Deploy:** The team [creates either desktop or RemoteApp application groups](/azure/virtual-desktop/manage-app-groups#create-a-remoteapp-group) for workloads that it has already migrated.
 4. **Deploy:** The team [creates an FSLogix profile container](/azure/virtual-desktop/create-host-pools-user-profile) to store user profiles.
 5. **Release:** The team tests the performance and latency of application groups and deployed desktops for a sampling of users.
-6. **Release:** The team onboards its end users to teach them how to connect through [Windows desktop client](/azure/virtual-desktop/connect-windows-7-and-10), [web client](/azure/virtual-desktop/connect-web), [Android client](/azure/virtual-desktop/connect-android), [macOS client](/azure/virtual-desktop/connect-macos), or [iOS client](/azure/virtual-desktop/connect-ios).
+6. **Release:** The team onboards its end users to teach them how to connect through [Windows desktop client](/azure/virtual-desktop/connect-windows-7-10), [web client](/azure/virtual-desktop/connect-web), [Android client](/azure/virtual-desktop/connect-android), [macOS client](/azure/virtual-desktop/connect-macos), or [iOS client](/azure/virtual-desktop/connect-ios).
 
 ## Assumptions
 

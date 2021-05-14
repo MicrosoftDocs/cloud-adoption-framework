@@ -46,12 +46,12 @@ Windows Virtual Desktop has custom Azure roles designed for each functional area
   - You can only project Azure AD DS into a single virtual network (and single Azure region) that uses a non-public IP address range. You can't add domain controllers to an Azure AD DS domain.
   - You can't fail over Azure AD DS to another region for disaster recovery.
 
-   For more information, see [Frequently asked questions (FAQs) about Azure Active Directory (AD) Domain Services](/azure/active-directory-domain-services/faqs).
+   For more information, see [Frequently asked questions (FAQ) about Azure Active Directory Domain Services (Azure AD DS)](/azure/active-directory-domain-services/faqs).
 - When specifying an organizational unit, use the distinguished name without quotation marks.
 - Follow the principle of least privilege by assigning the minimum permissions needed for authorized tasks.
 - The user principal name used to subscribe to Windows Virtual Desktop must exist in the Active Directory domain where the session host virtual machine is joined. For more information about user requirements, see [Windows Virtual Desktop requirements](/azure/virtual-desktop/overview#requirements).
 - When using smart cards, a direct connection (line of sight) with an Active Directory domain controller for Kerberos authentication is required. For more information, see [Configure a Kerberos Key Distribution Center proxy](/azure/virtual-desktop/key-distribution-center-proxy).
-- Using Windows Hello for Business requires the hybrid certificate trust model to be compatible with Windows Virtual Desktop. For more information, see [Hybrid Azure AD joined Certificate Trust Deployment](/windows/security/identity-protection/hello-for-business/hello-hybrid-cert-trust).
+- Using Windows Hello for Business requires the hybrid certificate trust model to be compatible with Windows Virtual Desktop. For more information, see [Hybrid Azure AD joined certificate trust deployment](/windows/security/identity-protection/hello-for-business/hello-hybrid-cert-trust).
 - When using Windows Hello for Business or smart-card authentication, the initiating client must be able to communicate with the domain controller because these authentication methods use Kerberos to sign in. For more information, see [Supported authentication methods](/azure/virtual-desktop/authentication).
 - Single sign-on can improve user experience but it requires additional configuration and is only supported using Active Directory Federation Services.
 

@@ -21,7 +21,7 @@ Not everyone adopts Windows Virtual Desktop on Azure in the same way. The Cloud 
 
 Learn about guidelines that drive the design of the Cloud Adoption Framework for Azure enterprise-scale landing zone. There are six critical design areas:
 
-- [Identity and Access Management](./eslz-identity-and-access-management.md)
+- [Identity and access management](./eslz-identity-and-access-management.md)
 - [Network topology and connectivity](./eslz-network-topology-and-connectivity.md)
 - [Management and monitoring](./eslz-management-and-monitoring.md)
 - [Business continuity and disaster recovery](./eslz-business-continuity-and-disaster-recovery.md)
@@ -32,17 +32,17 @@ Learn about guidelines that drive the design of the Cloud Adoption Framework for
 
 The following image shows a conceptual reference architecture that demonstrates design areas and best practices.
 
-![Construction Set Architecture](media\windowsvirtualdesktoparchitecture.png)
+![Construction set architecture](./media/windows-virtual-desktop-architecture.png)
 
 ### Implementation with Azure Resource Manager (ARM) templates for Remote Desktop Services
 
 ARM Windows Virtual Desktop templates are a collection of the infrastructure-as-code ARM template to deploy a Windows Virtual Desktop environment on Azure.
 
-The [Automate Windows Virtual Desktop deployments in Azure Cloud](https://github.com/Azure/RDS-Templates/tree/master/ARM-wvd-templates) GitHub repository contains code that can be used to automatically deploy Windows Virtual Desktop environments in the Azure cloud.
+The [automate Windows Virtual Desktop deployments in Azure](https://github.com/Azure/RDS-Templates/tree/master/ARM-wvd-templates) GitHub repository contains code that lets you automatically deploy Windows Virtual Desktop environments in the Azure cloud.
 
 ## Next steps
 
 Review the Windows Virtual Desktop construction set critical design areas to make considerations and recommendations for your Windows Virtual Desktop construction set architecture.
 
 > [!div class="nextstepaction"]
-> [Identity and Access Management](./eslz-identity-and-access-management.md)
+> [Identity and access management](./eslz-identity-and-access-management.md)

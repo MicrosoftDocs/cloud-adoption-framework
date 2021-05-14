@@ -16,7 +16,7 @@ The release process for the migration or deployment of Windows Virtual Desktop i
 
 - Test the performance and latency of application groups and deployed desktops for a sampling of users.
 - Onboard end users to teach them how to connect via:
-  - [Windows desktop client](/azure/virtual-desktop/connect-windows-7-and-10)
+  - [Windows desktop client](/azure/virtual-desktop/connect-windows-7-10)
   - [Web client](/azure/virtual-desktop/connect-web)
   - [Android client](/azure/virtual-desktop/connect-android)
   - [macOS client](/azure/virtual-desktop/connect-macos)

@@ -31,7 +31,7 @@ When scaling up your Windows Virtual Desktop environment, your host pools are cr
 
 Another option is to start a process where checklists are used. In large environments, this process should only be part of the initial dev/test setup. The more you automate your gold image creation, the more secure you'll be in the accuracy of your build and environment stability.
 
-It's possible to take the 'old' image, and then use it to create a VM. You can update that VM with the applications and configuration changes for that update, and then capture that to your 'new' image. We don't recommend this process for creating gold images, as it's risky to maintain. It's the major cause of desktop virtualization environments becoming static and fragile. Windows is limited to running [Sysprep](/windows-hardware/manufacture/desktop/sysprep--generalize--a-windows-installation) eight times, which limits how many times you can create a gold image.
+It's possible to take the "old" image, and then use it to create a VM. You can update that VM with the applications and configuration changes for that update, and then capture that to your "new" image. We don't recommend this process for creating gold images, as it's risky to maintain. It's the major cause of desktop virtualization environments becoming static and fragile. Windows is limited to running [Sysprep](/windows-hardware/manufacture/desktop/sysprep--generalize--a-windows-installation) eight times, which limits how many times you can create a gold image.
 
 There are many automation tools available to create gold images. Use the tool set that's most appropriate for your organization. You can choose the tool set based on the existing skill set and process, or cost considerations.
 
@@ -109,7 +109,7 @@ For universal applications installed in the gold image, use the same Packer meth
 
 [App-V](/windows/application-management/app-v/appv-getting-started) is currently the supported method from Microsoft for streaming applications on a per-user basis.
 
-Use FSLogix [App Masking](/fslogix/implement-application-masking-tutorial) to hide or reveal applications or plug-ins when those applications don't work well with App-V.
+Use [FSLogix application masking](/fslogix/implement-application-masking-tutorial) to hide or reveal applications or plug-ins when those applications don't work well with App-V.
 
 Third parties also available.
 
@@ -135,7 +135,7 @@ There are several options to automate the distribution of your Windows Virtual D
 - Sharing Windows Virtual Desktop images across subscriptions, and even between Azure AD tenants, using role-based access control (RBAC).
 - Scaling your deployments with image replicas in each region.
 
-For more information, see [Shared Image Galleries](/azure/virtual-machines/shared-image-galleries).
+For more information, see the [Shared Image Gallery service overview](/azure/virtual-machines/shared-image-galleries).
 
 ### Create Windows Virtual Desktop host pools using ARM templates from images in shared image galleries
 
