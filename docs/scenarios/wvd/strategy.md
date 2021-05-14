@@ -88,9 +88,9 @@ When the migration to the cloud is finished, the overhead and costs of managing 
 
 ## How to measure progress during a Windows Virtual Desktop adoption
 
-Once you understand the top motivations for this scenario, the cloud strategy team can define measurable outcomes to further guide adoption activities. Examples of business outcomes commonly seen during cloud adoption can be reviewed in [business outcomes](../../strategy/business-outcomes/index.md).
+Once you understand the top motivations for this scenario, the cloud strategy team can define measurable outcomes to further guide adoption activities. Examples of business outcomes commonly seen during cloud adoption can be reviewed in [Business outcomes](../../strategy/business-outcomes/index.md).
 
-Given the impact of a Windows Virtual Desktop platform, you need to create many defined objectives and measurable key results. Commonly known as OKRs, objectives and key results can help you break down Windows Virtual Desktop adoption into manageable efforts. For more information, see [objectives and key results](../../strategy/business-outcomes/okr.md) to understand OKRs in more detail.
+Given the impact of a Windows Virtual Desktop platform, you need to create many defined objectives and measurable key results. Commonly known as OKRs, objectives and key results can help you break down Windows Virtual Desktop adoption into manageable efforts. For more information, see [Objectives and key results](../../strategy/business-outcomes/okr.md) to understand OKRs in more detail.
 
 ## Next step: Plan for a virtual desktop environment
 
@@ -102,6 +102,6 @@ The following resources provide guidance for specific points throughout the clou
 - [Assess for Windows Virtual Desktop migration or deployment](./migrate-assess.md)
 - [Deploy or migrate Windows Virtual Desktop instances](./migrate-deploy.md)
 - [Release your Windows Virtual Desktop deployment to production](./migrate-release.md)
-- [Enterprise Scale Landing Zone for Windows Virtual Desktop](./enterprise-scale-landing-zone.md)
+- [Enterprise-scale landing zone for Windows Virtual Desktop](./enterprise-scale-landing-zone.md)
 - [Manage your virtual desktop environment](./manage.md)
 - [Govern your virtual desktop environment](./govern.md)

@@ -41,6 +41,6 @@ The following resources provide guidance for specific points throughout the clou
 - [Assess for Windows Virtual Desktop migration or deployment](./migrate-assess.md)
 - [Deploy or migrate Windows Virtual Desktop instances](./migrate-deploy.md)
 - [Release your Windows Virtual Desktop deployment to production](./migrate-release.md)
-- [Enterprise Scale Landing Zone for Windows Virtual Desktop](./enterprise-scale-landing-zone.md)
+- [Enterprise-scale landing zone for Windows Virtual Desktop](./enterprise-scale-landing-zone.md)
 - [Manage your virtual desktop environment](./manage.md)
 - [Govern your virtual desktop environment](./govern.md)

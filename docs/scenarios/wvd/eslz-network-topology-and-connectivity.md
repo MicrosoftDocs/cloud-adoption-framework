@@ -55,7 +55,7 @@ The following questions help you make decisions based on the Azure networking se
 
   Virtual network peering provides connectivity between only two peered networks. You might provide services across multiple subscriptions or need to manage a large number of network peerings. Consider adopting a hub and spoke networking architecture or using Azure Virtual WAN. For more information, see:
 
-  - [Software Defined Networking: Hub and spoke](../../decision-guides/software-defined-network/hub-spoke.md)
+  - [Software Defined Networking: hub and spoke](../../decision-guides/software-defined-network/hub-spoke.md)
   - [What is Azure Virtual WAN?](/azure/virtual-wan/virtual-wan-about)
 
 - Will you need to support custom DNS management?
@@ -64,7 +64,7 @@ The following questions help you make decisions based on the Azure networking se
 
   Your workloads might require name resolution support beyond Azure DNS. If your workloads also require Active Directory services, consider using Azure Active Directory Domain Services to augment Azure DNS capabilities. To add capabilities, deploy custom IaaS virtual machines. For more information, see:
 
-  -[What is Azure Active Directory Domain Services?](/azure/active-directory-domain-services/overview)
+- [What is Azure Active Directory Domain Services?](/azure/active-directory-domain-services/overview)
   - [Name resolution for resources in Azure Virtual Network](/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances)
 
 ## Understand common networking scenarios
