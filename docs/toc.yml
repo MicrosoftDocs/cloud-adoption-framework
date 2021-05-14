@@ -915,11 +915,8 @@ items:
 
     - name: Innovate
       items:
-      - name: Overview from original TOC
+      - name: Overview
         href: innovate/index.md
-
-      - name: Overview from process improvements
-        href: innovate/considerations/index.md
       - name: Business value consensus
         href: innovate/business-value.md
       - name: Build with customer empathy
@@ -942,12 +939,6 @@ items:
           href: innovate/considerations/devices.md
         - name: Predict and influence
           href: innovate/considerations/predict.md
-      - name: Where do these go?
-        items:
-        - name: Feedback loops
-          href: innovate/considerations/adoption.md
-        - name: Customer challenges and blockers
-          href: innovate/considerations/challenges.md
             
       - name: Innovation scenarios
         items:
@@ -976,6 +967,8 @@ items:
         items:
         - name: Overview and Azure toolchain
           href: innovate/best-practices/index.md
+        - name: Customer challenges and blockers
+          href: innovate/considerations/challenges.md
         - name: Democratize data
           items:
           - name: Overview
@@ -1257,6 +1250,22 @@ items:
             items:
             - name: What is Azure Cognitive Search?
               href: innovate\best-practices\cognitive-search.md
+      - name: Azure innovation guide
+        items:
+        - name: Innovation guide overview
+          href: innovate/innovation-guide/index.md
+        - name: Prepare for customer feedback
+          href: innovate/innovation-guide/adoption.md
+        - name: Democratize data
+          href: innovate/innovation-guide/data.md
+        - name: Engage customers through apps
+          href: innovate/innovation-guide/apps.md
+        - name: Empower adoption
+          href: innovate/innovation-guide/ci-cd.md
+        - name: Interact through devices
+          href: innovate/innovation-guide/devices.md
+        - name: Innovate with AI
+          href: innovate/innovation-guide/predict.md
 
   - name: Govern
     items:

@@ -81,7 +81,7 @@ Learn more about how to create an ambient experience through an [adjusted realit
 
 ## Next steps
 
-Having acquainted yourself with [disciplines of invention](./invention.md) and the [Innovate methodology](./index.md), you're now ready to learn how to [build with customer empathy](./build.md).
+Review a prescriptive framework that includes the tools, programs, and content (best practices, configuration templates, and architecture guidance) to simplify adoption for the following innovation scenarios.
 
-> [!div class="nextstepaction"]
-> [Build with empathy](./build.md)
+- [Kubernetes in the Cloud Adoption Framework](..\kubernetes\index.md)
+- [AI in the Cloud Adoption Framework](..\ai\index.md)
