@@ -18,22 +18,22 @@ This article will help expose a number of considerations regarding containers th
 
 ## Motivations
 
-Application services and containers can accelerate cloud adoption strategies, if the motivations of that strategy focus on the following: 
+Application services and containers can accelerate cloud adoption strategies, if the motivations of that strategy focus on the following:
 
 - Pace of innovation: Delivering technology-driven products and services to market faster than the competition
-- Streamlined operations: Operations of a diverse set of workloads needs to be optimized to reduce operational overhead
+- Streamlined operations: Operations of a diverse set of workloads need to be optimized to reduce operational overhead
 
-Reducing the direct dependencies between workload operations and the operations of the underlying infrastructure through abstraction options like Applications services (PaaS solutions) and orchestrated containers, can contribute to the success of each of these common motivations.
+Reducing the direct dependencies between workload operations and the operations of the underlying infrastructure through abstraction options like applications services (PaaS solutions) and orchestrated containers, can contribute to the success of each of these common motivations.
 
 ## Modern container outcomes
 
 To measure the impact of modern app platform adoption efforts, the following are a few key outcomes that can be tracked and evaluated:
 
-- **Accelerated development times:** Combining development tools, automated deployment, and integrated monitoring across consistent and standardized environments allows developers to focus more on building great products and less on the supporting infrastructure configuration across dev and prod environments.
+- **Accelerated development times:** Combining development tools, automated deployment, and integrated monitoring across consistent and standardized environments allows developers to focus more on building great products and less on the supporting infrastructure configuration across development and production environments.
 - **Streamlined operations:** Standardized container orchestration ensures consistent runtimes across all hosts, which can reduce technical complexity across the portfolio. Through standardization, centralized operations teams can extend traditional support and operations practices to container hosts resulting in a smaller number of assets to be managed.
 - **Workload portability:** Move your applications anywhere with a common containerized environment. Since there is a layer of abstraction between the Kubernetes cluster and the underlying infrastructure, you can move workloads between development and production environments or between cloud providers with less effort than cloud provider native solutions.
 - **Provisioning and scale time:** Infrastructure elasticity to reduce the time to provision and scale the resources supporting your workloads.
-- **Safe deployment practices:** Kubernetes workloads and constructs supports many deployment methods, allowing workloads to be rolled out with confidence.
+- **Safe deployment practices:** Kubernetes workloads and constructs support many deployment methods, allowing workloads to be rolled out with confidence.
 - **Integrated access management:** Integration between your existing identity and access management (IAM) provider and your clusters ensures a secure environment across all stages of deployment.
 - **Infrastructure isolation:** Kubernetes clusters can range from a public cloud offering through a completely private offering, allowing you to control exposure of your workload and its runtime environment specifically to the desired level.
 - **Network observability:** Traffic entering and exiting Kubernetes clusters can be subjected to internal traffic monitoring and control to achieve desired security outcomes.
