@@ -33,7 +33,7 @@ ms.custom: think-tank, e2e-aks
   - Other domains will be forwarded to the DNS servers configured in Azure Virtual Network, which will be either the default Azure DNS resolver, or any custom DNS servers configured at the virtual network level.
 - Outbound (egress) network traffic can be sent through an Azure Firewall or network virtual appliance cluster.
   - By default, AKS clusters have unrestricted egress internet access.
-  - There are two deployment models for outbound connectivity: [LB or UDR](https://docs.microsoft.com/en-us/azure/aks/egress-outboundtype). With UDR, there’s no outbound rule in the standard LB created. 
+  - There are two deployment models for outbound connectivity: [LB or UDR](/azure/aks/egress-outboundtype). With UDR, there’s no outbound rule in the standard LB created. 
   - Egress traffic from the AKS cluster can be sent through Azure Firewall or a network virtual appliance cluster by configuring UDRs in the AKS subnet.
   - Two deployment models for outbound connectivity: LB or UDR. With UDR, there’s no outbound rule in the standard LB created. 
   - If using outbound mode LB, you need to “carefully” manage outbound ports, since you can run into a case where you run into outbound port exhaustion 
