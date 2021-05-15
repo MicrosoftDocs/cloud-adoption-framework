@@ -141,7 +141,6 @@ By using MSAL instead of ADAL:
 ## Identity Platform additional considerations
 
 > [!div class="checklist"]
->
 > * Apply [Microsoft Platform Policies](https://docs.microsoft.com/legal/microsoft-identity-platform/terms-of-use)
 > * Keep the information associated to the account used to register and manage apps up-to-date.
 > * Implement proper branding guidelines for applications.
