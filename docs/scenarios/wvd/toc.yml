@@ -1,12 +1,9 @@
-# docsTest:ignore "NET Core" "Cloud Operating Model" "Virtual Datacenter" Framework app
-#cSpell:ignore devtest mariadb
-
 items:
-  - name: Desktop Virtualization - Microsoft Cloud Adoption Framework for Azure
+  - name: Desktop virtualization - Microsoft Cloud Adoption Framework for Azure
     href: index.md
     pdf_name: Desktop Virtualization - Microsoft Cloud Adoption Framework for Azure
   - name: Strategic impact
-    href: WVD-Strategy.md
+    href: strategy.md
   - name: Technical planning
     href: plan.md
   - name: Prepare your environments
@@ -17,29 +14,29 @@ items:
       href: proof-of-concept.md
     - name: Assess
       href: migrate-assess.md
-    - name: Migrate (or Deploy)
+    - name: Migrate (or deploy)
       href: migrate-deploy.md
     - name: Release
-      href: migrate-release.md    
+      href: migrate-release.md
   - name: Innovate in the cloud
-    href: WVD-innovate.md
+    href: innovate.md
   - name: Govern your portfolio
-    href: WVD-govern.md
+    href: govern.md
   - name: Manage your portfolio
-    href: WVD-manage.md
+    href: manage.md
 
   - name: Architectures
     items:
-    - name: Windows Virtual Desktop Architecture 
+    - name: Windows Virtual Desktop architecture
       href: /azure/architecture/example-scenario/wvd/windows-virtual-desktop
 
   - name: Best practices
     items:
-    - name: WVD Security Best Practices
+    - name: WVD security best practices
       href: /azure/virtual-desktop/security-guide
-    - name: Azure Security Baseline for Windows Virtual Desktop
-      href: /azure/virtual-desktop/security-baseline
-    - name: Virtual Desktop machine sizing
+    - name: Azure security baseline for Windows Virtual Desktop
+      href: /security/benchmark/azure/baselines/windows-virtual-desktop-security-baseline
+    - name: Virtual desktop machine sizing
       href: /windows-server/remote/remote-desktop-services/virtual-machine-recs?context=/azure/virtual-desktop/context/context
     - name: Configure device redirections
       href: /azure/virtual-desktop/configure-device-redirections
@@ -62,7 +59,7 @@ items:
       href: eslz-security-governance-and-compliance.md
     - name: Platform automation and DevOps
       href: eslz-platform-automation-and-devops.md
-       
+
   - name: Microsoft products
     items:
     - name: Windows Virtual Desktop
@@ -78,8 +75,8 @@ items:
       href: /learn/modules/m365-prepare-for-wvd/
     - name: Deploy Windows Virtual Desktop in Microsoft Azure
       href: /learn/modules/m365-deploy-wvd/
-    - name: Deliver remote desktops and apps from Azure with Windows Virtual Desktop
-      href: /learn/paths/m365-wvd/      
+    - name: Deliver remote desktops and applications from Azure with Windows Virtual Desktop
+      href: /learn/paths/m365-wvd/
     - name: Optimize Windows Virtual Desktop in Microsoft Azure
       href: /learn/modules/m365-optimize-wvd/
     - name: Deploy applications by using MSIX app attach for Windows Virtual Desktop
