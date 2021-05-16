@@ -13,7 +13,7 @@ ms.custom: think-tank, e2e-aks
 
 # Construction set for AKS enterprise-scale scenario
 
-The enterprise scale AKS construction set represents the strategic design path and target technical state for an Azure Kubernetes Service (AKS) landing zone. Prepare your enterprise-scale landing zone for a scalable Azure Kubernetes Service (AKS) cluster by using the AKS construction set. Learn about the assets that the AKS construction set brings to your project. The AKS construction set is a collection of templates that provides an architectural approach and reference implementation. The implementation follows the architecture and best practices of the Cloud Adoption Framework.
+The enterprise-scale AKS construction set represents the strategic design path and target technical state for an Azure Kubernetes Service (AKS) landing zone. Prepare your enterprise-scale landing zone for a scalable Azure Kubernetes Service (AKS) cluster by using the AKS construction set. Learn about the assets that the AKS construction set brings to your project. The AKS construction set is a collection of templates that provides an architectural approach and reference implementation. The implementation follows the architecture and best practices of the Cloud Adoption Framework.
 
 The construction set templates are open source. You can adapt the templates to create an architecture that meets your needs. The following guidance provides design considerations for implementing a scalable AKS cluster in your landing zone. The design decisions your organization makes, based on this guidance, can lay the groundwork for scalability.
 
@@ -24,7 +24,7 @@ The AKS construction set assumes that an enterprise-scale landing zone has been 
 - [Start with Cloud Adoption Framework enterprise-scale landing zones](../../ready/enterprise-scale/index.md)
 - [Implement Cloud Adoption Framework enterprise-scale landing zones in Azure](../../ready/enterprise-scale/implementation.md)
 
-If you are not operating within an enterprise-scale landing zone topology, you may instead wish to follow the guidance found in the [AKS Baseline reference architecture](/azure/architecture/reference-architectures/containers/aks/secure-baseline-aks).
+If you are not operating within an enterprise-scale landing zone topology, you might want to follow the guidance found in the [AKS Baseline reference architecture](/azure/architecture/reference-architectures/containers/aks/secure-baseline-aks).
 
 ## What the AKS construction set provides
 
@@ -50,15 +50,16 @@ These articles provide guidelines for the AKS enterprise-scale scenario:
 
 The following conceptual reference architecture is an example that shows a golden state for an enterprise scale landing zone with a corporate landing zone subscription and shows design areas and best practices.
 
-![Golden state Architecture for AKS Construction Set](./media/golden-state-enterprise-architecture-aks.png)
+![Golden state architecture for AKS construction set](./media/golden-state-enterprise-architecture-aks.png)
 
-## AKS Construction Set RI for Online Landing Zone
+## AKS construction set reference implementation for online landing zone
 
-The AKS construction set reference implementation (RI) is an open-source collection of Terraform templates. Terraform templates deploy infrastructure components like virtual machines, networks, or storage to Azure. To get the templates, see [Enterprise-Scale Construction Set for Azure Kubernetes Services using Terraform](https://github.com/Azure/caf-terraform-landingzones-starter/tree/starter/enterprise_scale/construction_sets/aks/online/aks_secure_baseline). This RI currently deploys a simplistic version of an AKS implementation that can sit in its own subscription within the online management group of an ESLZ. An application deployed in the subscription for an online landing zone will be internet-facing, and does not require hybrid connectivity.
+The AKS construction set reference implementation is an open-source collection of Terraform templates. Terraform templates deploy infrastructure components like virtual machines, networks, or storage to Azure. To get the templates, see [Enterprise-Scale Construction Set for Azure Kubernetes Services using Terraform](https://github.com/Azure/caf-terraform-landingzones-starter/tree/starter/enterprise_scale/construction_sets/aks/online/aks_secure_baseline). This reference implementation currently deploys a simplistic version of an AKS implementation that can sit in its own subscription within the online management group of an enterprise-scale landing zone. An application deployed in the subscription for an online landing zone will be internet-facing, and does not require hybrid connectivity.
 
 ![Reference Implementation](./media/aks-eslz-reference-implementation.png)
 
 ## Next steps
 
 Learn about design considerations for identity and access management for your AKS enterprise-scale scenario.
+
 - [Identity and access management for Azure Kubernetes Service (AKS) enterprise-scale scenario](./eslz-identity-and-access-management.md)

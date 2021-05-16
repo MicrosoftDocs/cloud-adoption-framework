@@ -12,12 +12,12 @@ ms.custom: think-tank, e2e-aks
 
 # Introduction to the modern containers adoption scenario
 
-As customers address larger, more sophisticated forms of cloud adoption, their journey to the cloud becomes more complex. Commonly, customers are using orchestrated containers to manage pools of workloads in one or more centralized clusters. This article series combines technical and non-technical considerations required to prepare for Kubernetes and container integration into centralized operations and your broader cloud strategy.
+As customers address larger, more sophisticated forms of cloud adoption, their journey to the cloud becomes more complex. Commonly, customers use orchestrated containers to manage pools of workloads in one or more centralized clusters. This article series combines technical and non-technical considerations required to prepare for Kubernetes and container integration into centralized operations and your broader cloud strategy.
 
 This scenario focuses on two targeted outcomes:
 
 - **Containerized solutions:** Containers create a layer of abstraction between technical assets and underlying infrastructure. Organizations include containers in their overall strategy to reduce vendor lock-in and make workloads more portable.
-- **Workload portability:** The layer of abstraction created by containers makes it easier to move workloads between container platforms in private clouds or multiple public clouds. When applying a Workload portability approach, central IT teams provide a common container platform across clouds. Workload teams can then choose to deploy worklaods to the desired cloud provider. During operations, central IT and workload teams would have more easily be able to move workloads between clouds. 
+- **Workload portability:** The layer of abstraction created by containers makes it easier to move workloads between container platforms in private clouds or multiple public clouds. When applying a workload portability approach, central IT teams provide a common container platform across clouds. Workload teams can then choose to deploy workloads to the desired cloud provider. During operations, central IT and workload teams can more easily move workloads between clouds.
 - **Managing containers with Kubernetes:** Kubernetes provides a control plane for managing and deploying containerized applications, managing compute density, and describing high availability needs of workloads.
 
 This article series outlines how you can integrate container and container management into your strategy, plan, adoption, and operation phases of your cloud journey.
@@ -38,7 +38,7 @@ This scenario is designed to guide the end-to-end customer journey, throughout t
 
 **Migrate existing workloads to AKS:** A common use case for AKS in Azure is to modernize existing web-based workloads directly to a container-based or cloud-native solution, instead of traditional migration efforts. The article on [migrating to containers](./migrate.md) will demonstrate how Azure Migrate can accelerate container migration within your standard migration processes.
 
-**Centralize deployment and management of containers:** The first set of articles in the left pane provides rich guidance on centralization of your container strategy. This article series is intended to help central IT or cloud center of excellence teams understand how containers affect your cloud strategy and how to provide consistent centralized support.
+**Centralize deployment and management of containers:** The first set of articles in the left pane provides rich guidance on centralization of your container strategy. This article series intends to help central IT or cloud center of excellence teams understand how containers affect your cloud strategy and how to provide consistent centralized support.
 
 **Prepare for governance and operation of containers at scale:** The enterprise-scale construction set demonstrates how you can use enterprise-scale landing zones to ensure consistent governance, security, and operations across multiple landing zones for centralized management of containers at scale.
 

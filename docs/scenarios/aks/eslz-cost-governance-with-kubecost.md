@@ -18,7 +18,7 @@ Cost governance is the continuous process of implementing policies to control co
 
 This section shows how to use [Kubecost](https://kubecost.com/) to govern AKS cluster cost. You can scope cost allocation to a deployment, service, label, pod, or namespace, which provides flexibility in charging back or showing cluster users.
 
-### Install Kubecost
+## Install Kubecost
 
 There are several Kubecost installation options. For more information, see [Installing Kubecost](https://docs.kubecost.com/install).
 
@@ -79,7 +79,7 @@ Select **Allocation** on the left to dig down into the namespace cost of your re
 
 :::image type="content" source="./media/kubecost-allocation.png" alt-text="Screenshot showing the Kubecost Allocation screen.":::
 
-Select **Savings** on the left to dig into cost savings for underutilized resources. **Savings** gives you information about underutilized nodes and pods and abandoned resources, and identifies resource requests that are overprovisioned within the cluster. The following screenshot shows an example **Savings** overview:
+Select **Savings** on the left to dig into cost savings for underutilized resources. **Savings** gives you information about underutilized nodes and pods and abandoned resources, and identifies overprovisioned  resource request swithin the cluster. The following screenshot shows an example **Savings** overview:
 
 :::image type="content" source="./media/kubecost-savings.png" alt-text="Screenshot showing the Kubecost Savings screen.":::
 

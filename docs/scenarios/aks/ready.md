@@ -35,7 +35,7 @@ The primary deference between the two options above resides in how separation of
 
 ## Environmental considerations for non-orchestrated container solutions
 
-The following container services run as platform as a service solutions, which require less environmental configuration. But the reduced configuration requirements result in reduced control over container orchestration and solutions specific configurations to integrate the workload into other assets, like VMs or other containers. These non-orchestrated solutions tend to lend themselves to a workload-biased operations strategy.
+The following container services run as platform as a service (PaaS) solutions, which require less environmental configuration. The reduced configuration requirements, however, result in reduced control over container orchestration and solution-specific configurations to integrate the workload into other assets, like VMs or other containers. These non-orchestrated solutions tend to lend themselves to a workload-biased operations strategy.
 
 Review the concepts and how-to guides in each of the product documentation links below to evaluate different types of environmental configurations for non-orchestrated container types:
 
