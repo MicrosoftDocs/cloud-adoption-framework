@@ -71,7 +71,7 @@ Without business leadership support, security and IT leaders are distracted from
 
 Network isolation may be a valid option for protecting older assets. Some assets can no longer be secured. They cannot be easily retired, for instance, end of life operating systems and applications. This situation is common in operational technology environment and legacy systems.
 
-Isolation itself is considered access control, even though the unsecurable assets are identified as part of asset protection. For more information, see [Avoid Firewall and Forget](.\access-control.md#avoid-firewall-and-forget).
+Isolation itself is considered access control, even though the unsecurable assets are identified as part of asset protection. For more information, see [Avoid Firewall and Forget](.\access-control.md).
 
 Some systems at end of life are difficult to disconnect and isolate completely. We don't recommend leaving these insecure systems fully connected to a production network. This configuration can allow attackers to compromise the system and gain access to assets in the organization.
 
