@@ -10,8 +10,6 @@ ms.subservice: migrate
 ms.custom: think-tank
 ---
 
-<!-- cSpell:ignore FSLogix onboards remoteapp macos -->
-
 # Windows Virtual Desktop proof of concept
 
 Before deploying end-user desktops, validate the configuration of the Azure landing zone and end-user network capacity by completing and testing a proof of concept.

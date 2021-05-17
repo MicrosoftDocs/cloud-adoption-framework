@@ -25,7 +25,7 @@ Windows Virtual Desktop has custom Azure roles designed for each functional area
 - **Desktop Virtualization Host Pool Reader:** This role lets you view everything in the host pool, but doesn't let you make changes.
 - **Desktop Virtualization Application Group Contributor:** This role lets you manage all aspects of application groups. To publish application groups to users, or to user groups, you need the User Access Administrator role.
 - **Desktop Virtualization Application Group Reader:** This role lets you view everything in the application group, but doesn't let you make changes.
-- **Desktop Virtualization Workspace Contributor:** This role lets you manage all aspects of workspaces. To get information on applications added to the application groups, you need the desktop virtualization application group Reader role.
+- **Desktop Virtualization Workspace Contributor:** This role lets you manage all aspects of workspaces. To get information on applications added to the application groups, you need the Desktop Virtualization Application Group Reader role.
 - **Desktop Virtualization Workspace Reader:** This role lets you view everything in the workspace, but doesn't let you make changes.
 - **Desktop Virtualization User Session Operator:** This role lets you send messages, disconnect sessions, and use the logoff function to sign sessions out of the session host. However, it doesn't let you perform session host management like removing session host, changing drain mode, and so on.
 - **Desktop Virtualization Session Host Operator:** This role lets you view and remove session hosts, and change drain mode. You can't add session hosts using the Azure portal because you don't have write permission for host pool objects.
@@ -59,7 +59,7 @@ Windows Virtual Desktop has custom Azure roles designed for each functional area
 
 - Use Azure AD Connect to synchronize all identities to a single Azure AD tenant. For more information, see [What is Azure AD Connect?](/azure/active-directory/hybrid/whatis-azure-ad-connect) .
 - Ensure Windows Virtual Desktop session hosts can communicate with Azure AD DS or AD DS.
-- Use the Kerberos key distribution center proxy solution to proxy smart-card authentication traffic and to sign in remotely. For more information, see [Configure a Kerberos Key Distribution Center proxy](/azure/virtual-desktop/key-distribution-center-proxy).
+- Use the Kerberos Key Distribution Center proxy solution to proxy smart-card authentication traffic and to sign in remotely. For more information, see [Configure a Kerberos Key Distribution Center proxy](/azure/virtual-desktop/key-distribution-center-proxy).
 - Segregate session host virtual machines into Active Directory organization units for each host pool to more easily manage policies and orphaned objects. For more information, see [Virtual machine details](/azure/virtual-desktop/create-host-pools-azure-marketplace#virtual-machine-details).
 - Use a solution like Local Administrator Password Solution (LAPS) to rotate local administrator passwords on Windows Virtual Desktop session hosts frequently. For more information, see [Security assessment: Microsoft LAPS usage](/defender-for-identity/cas-isp-laps).
 - For users, assign the Desktop Virtualization User built-in role to security groups to grant access to Windows Virtual Desktop application groups. For more information, see [Delegated access in Windows Virtual Desktop](/azure/virtual-desktop/delegated-access-virtual-desktop).

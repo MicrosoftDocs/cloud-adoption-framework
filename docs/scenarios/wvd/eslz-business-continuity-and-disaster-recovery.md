@@ -72,7 +72,7 @@ For more information, see [Set up a business continuity and disaster recovery pl
 
 In Windows Virtual Desktop, multiple replication mechanisms and strategies can be used for user data in [FSLogix](/azure/architecture/example-scenario/wvd/windows-virtual-desktop-fslogix) containers:
 
-- **Profile pattern #1:** Native Azure storage replication mechanisms. For example [geo-redundant storage (GRS)](/azure/storage/common/storage-redundancy#redundancy-in-a-secondary-region) for standard file shares, [cross-region replication](/azure/azure-netapp-files/cross-region-replication-introduction) of Azure NetApp Files, or [Azure File Sync](/azure/storage/file-sync/file-sync-deployment-guide) for VM-based file servers.
+- **Profile pattern #1:** Native Azure Storage replication mechanisms. For example [geo-redundant storage (GRS)](/azure/storage/common/storage-redundancy#redundancy-in-a-secondary-region) for standard file shares, [cross-region replication](/azure/azure-netapp-files/cross-region-replication-introduction) of Azure NetApp Files, or [Azure File Sync](/azure/storage/file-sync/file-sync-deployment-guide) for VM-based file servers.
 
 - **Profile pattern #2:** FSLogix [cloud cache](/azure/architecture/example-scenario/wvd/windows-virtual-desktop-fslogix#using-cloud-cache) has a built-in automatic mechanism to replicate containers between up to four different storage accounts.
 
@@ -117,7 +117,7 @@ The following are best practices for your design:
   - The recommended options for container storage types are (in order): Azure Files Premium tier, Azure NetApp Files Standard tier, and Azure NetApp Files Premium tier. The recommended storage type depends on the resources and latency required by the specific workload.
   - For optimal performance, place FSLogix containers on storage close to the VM the user is logged on to. Keeping the containers in the same datacenter is best.
 
-- Use Azure storage built-in replication mechanisms for BCDR when possible for less critical environments.
+- Use Azure Storage built-in replication mechanisms for BCDR when possible for less critical environments.
   - Use zone-redundant storage (ZRS) or GRS for Azure Files.
   - Use LRS with local only resiliency if no zone/region protection is required.
 

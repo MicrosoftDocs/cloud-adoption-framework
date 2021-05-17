@@ -86,11 +86,11 @@ For a glossary, data storage cost estimations, and additional troubleshooting gu
 - The session host performance counters are collected and logged.
 - Use network performance monitoring for user experience management.
 - Set up an alerting model around the collected logs and metrics.
-- Use Windows Update management for the session hosts between feature updates.
+- Use Windows Update Management for the session hosts between feature updates.
 
 ### Design recommendations: Infrastructure
 
 - Use a centralized Azure Monitor Log Analytics workspace in the region of your session hosts.
 - Set up the performance counters according to the [documentation](/azure/virtual-desktop/azure-monitor#set-up-performance-counters).
-- Set up the Network Performance Monitor in the same region as your Azure Virtual Network and session host(s).
+- Set up the Network Performance Monitor in the same region as your Azure Virtual Network and session hosts.
 - Incorporate Azure policies and governance for enterprise-scale into the Windows Virtual Desktop landing zone.
