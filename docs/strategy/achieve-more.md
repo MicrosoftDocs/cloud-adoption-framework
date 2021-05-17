@@ -103,7 +103,7 @@ When you plan your phases of cloud maturity and the reinvestment of your cloud s
 
 ## Next steps
 
-Learn more about starting your first cloud adoption project.
+Learn more about how to align your partner strategy when you migrate to the cloud.
 
 > [!div class="nextstepaction"]
-> [First cloud adoption project](./first-adoption-project.md)
+> [Strategy for partner alignment](../partner-alignment.md)
