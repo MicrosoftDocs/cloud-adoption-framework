@@ -50,12 +50,12 @@ Because some approaches to threat modeling can be a time consuming and skill int
 
 These simple questions for threat modeling are ideal to get your started:
 
-- **[Simple questions method from Microsoft](https://docs.microsoft.com/security/compass/applications-services#simple-questions-method)** - This method asks specific technical questions designed to surface common security design mistakes.
+- **[Simple questions method from Microsoft](/security/compass/applications-services#simple-questions-method)** - This method asks specific technical questions designed to surface common security design mistakes.
 - **[OWASP threat modeling](https://owasp.org/www-community/Threat_Modeling)** - This method focuses on asking simple, non-technical questions to get the process started.
 
 You can use either or both of these approaches, depending on what works better for the team.
 
-As the team gets more comfortable with the process, they can apply more advanced techniques from Microsoft [Security Development Lifecycle](https://www.microsoft.com/securityengineering/sdl/threatmodeling) and integrate threat modeling tools like [Microsoft Threat Modeling Tool](https://docs.microsoft.com/azure/security/develop/threat-modeling-tool) to get deeper insights and help automate the process.
+As the team gets more comfortable with the process, they can apply more advanced techniques from Microsoft [Security Development Lifecycle](https://www.microsoft.com/securityengineering/sdl/threatmodeling) and integrate threat modeling tools like [Microsoft Threat Modeling Tool](/azure/security/develop/threat-modeling-tool) to get deeper insights and help automate the process.
 
 Another helpful resource is [A Guide to Threat Modeling for Developers (martinfowler.com)](https://martinfowler.com/articles/agile-threat-modelling.html)
 
@@ -130,13 +130,13 @@ When the solution is delivered to the production, it's vital to continue oversee
 
 To obtain visibility for cloud subscriptions and resource configuration across multiple subscriptions, [the Azure Tenant Security Solution](https://github.com/azsk/DevOpsKit-docs/tree/master/13-Tenant%20Security%20Solution%20Setup#overview) from AzSk team can be used.
 
-Azure includes monitoring and security capabilities that are designed to detect and alert anomalous events or configurations that require investigation and potential remediation. Technologies such as [Azure Defender](azure/security-center/azure-defender), [Azure Security Center](/azure/security-center/security-center-introduction), and [Azure Sentinel](https://techcommunity.microsoft.com/t5/azure-sentinel/become-an-azure-sentinel-ninja-the-complete-level-400-training/ba-p/1246310) are first-party tools that natively integrate into the Azure environments. These tools complement the environment and code security tools to provide a broad-reaching set of security monitoring to enable organizations to experiment and innovate at a pace in a secure way.
+Azure includes monitoring and security capabilities that are designed to detect and alert anomalous events or configurations that require investigation and potential remediation. Technologies such as [Azure Defender](/azure/security-center/azure-defender), [Azure Security Center](/azure/security-center/security-center-introduction), and [Azure Sentinel](https://techcommunity.microsoft.com/t5/azure-sentinel/become-an-azure-sentinel-ninja-the-complete-level-400-training/ba-p/1246310) are first-party tools that natively integrate into the Azure environments. These tools complement the environment and code security tools to provide a broad-reaching set of security monitoring to enable organizations to experiment and innovate at a pace in a secure way.
 
 ### Penetration testing
 
 Penetration testing is a recommended practice for environments to check for any vulnerabilities in the infrastructure or application configuration that might create weaknesses that attackers could exploit.
 
-There are many products and partners that provide penetration testing services and [Microsoft provides guidance on how to provide notification of penetration activities.](../azure/security/fundamentals/pen-testing.md)
+There are many products and partners that provide penetration testing services and [Microsoft provides guidance on how to provide notification of penetration activities.](./azure/security/fundamentals/pen-testing.md)
 
 Testing typical covers the following test types:
 
