@@ -40,4 +40,10 @@ Use these common finance terms when your team is creating a cloud migration busi
 **Return on Investment (ROI)**: Return on investment (ROI) is a metric used to understand the profitability of an investment. ROI compares how much you paid for an investment to how much you earned to evaluate its efficiency.
 
 ## Next steps
+
+Learn more about the most common cloud accounting models for IT.
+
+> [!div class="nextstepaction"]
+> [Understand cloud accounting](./cloud-accounting.md)
+
 <!-- To be added after all articles merged into release branch -->

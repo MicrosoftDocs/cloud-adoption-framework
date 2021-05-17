@@ -12,25 +12,25 @@ ms.custom: internal
 
 # Build a digital transformation timeline
 
-Digital transformation and cloud adoption may seem like technical project. But at their core, both are complex change management efforts involving multiple stakeholders moving in alignment to accomplish business and technical change. When they move in unison the impact on the business can is apparent.
+Digital transformation and cloud adoption might seem like technical project. But at their core, both are complex change management efforts involving multiple stakeholders moving in alignment to accomplish business and technical change. When they move in unison, the impact on the business is apparent.
 
 ## Competing objectives
 
 If you've been building out the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) for your organization, some trends have likely begun to emerge:
 
-- Competing motivations: Your organization is likely motivated by by needs that span several of the [motivation categories](./motivations.md): migration motivations, innovation motivations, and critical business events. Each of these categories require slightly different behaviors during technical implementation and business adoption.
-- Competing business outcomes: Your organization is also likely to see competing [business outcomes](business-outcomes/index.md). It is possible to improve customer engagements in the cloud. You could also use the cloud to achieve cost reduction outcomes. But the behaviors required to do each are different, making it difficult to succeed at both in parallel.
-- Aligning financial and technical considerations: If motivations and outcomes aren't aligned, it is very easy to have misaligned conceptions when evaluating key considerations. This can lead to difficulty executing your strategy or at minimum communicating success.
+- Competing motivations: Your organization is likely motivated by needs that span several of the [motivation categories](./motivations.md): Migration motivations, innovation motivations, and critical business events. Each of these categories requires slightly different behaviors during technical implementation and business adoption.
+- Competing business outcomes: Your organization is also likely to see competing [business outcomes](business-outcomes/index.md). It's possible to improve customer engagements in the cloud. You could also use the cloud to achieve cost reduction outcomes. But the behaviors required to do each are different, making it difficult to succeed at both in parallel.
+- Aligning financial and technical considerations: If motivations and outcomes aren't aligned, it's easy to have misaligned conceptions when evaluating key considerations. This can lead to difficulty executing your strategy or at minimum communicating success.
 
-It is possible to achieve conflicting motivations and competing outcomes. But, your successes will be greater if you prioritize your transformation and develop a timeline that focuses on the most important objectives first.
+It's possible to achieve conflicting motivations and competing outcomes. However, your successes will be greater if you prioritize your transformation and develop a timeline that focuses on the most important objectives first.
 
 ## Constrained staff
 
 Change management of any type places a strain on existing staff. Cloud adoption is no different. Even if the financial and technical considerations look good on paper, competing or parallel outcomes will intensify the strains of change management.
 
-Even with adequate staffing, or ample budget for implementation partners, staffing constraints are a notable risk when outcomes are expected in parallel. There is typically some overlooked shared dependency which becomes a blocker for one or more projects. Usually, those overlooked dependencies follows Murphy's law & become an issue when they are on the critical path for multiple projects.
+Even with adequate staffing, or ample budget for implementation partners, staffing constraints are a notable risk when outcomes are expected in parallel. There's typically some overlooked shared dependency, which becomes a blocker for one or more projects. Usually, those overlooked dependencies follow Murphy's law and become an issue when they are on the critical path for multiple projects.
 
-If you must deliver parallel outcomes, scrutinize your staffing plans and critical path for any potential shared dependencies before committing to the strategy.
+If you must deliver parallel outcomes, scrutinize your staffing plans and critical path for any potential shared dependencies before you commit to the strategy.
 
 ## De-risk with cloud adoption horizons
 
@@ -40,17 +40,17 @@ Stratification is a sound principle in macroeconomics. But with the limited budg
 
 To create clarity and alignment, it's suggested that complex digital transformation projects align to an organization's horizons or phased program delivery. In this type of approach, the company commits to a single motivation category for a time-bound period. All teams and organizations prioritize investments and collaborate to support the priority outcome, as needed, for the defined period of time. This approach creates unity, clarity, and drives a snowball effect, allowing the success of one horizon to accelerate the target outcomes of the next horizon.
 
-In this model, the full program team can overcome skills gaps, together. Support one another in achieving small but critical milestones, together. Deliver on those outcomes more quickly, then move on to the next horizon together. In the end, a supportive team-based approach with loosely defined & agile horizons will progress faster than the same teams competing with one another for limited resources.
+In this model, the full program team can overcome skills gaps, together. Support one another in achieving small but critical milestones, together. Deliver on those outcomes more quickly, then move on to the next horizon together. In the end, a supportive team-based approach with loosely defined and agile horizons will progress faster than the same teams competing with one another for limited resources.
 
 ## Example of a cloud adoption plan with four horizons
 
-In this example, a customer has a high number of motivations which appear in each category of the motivations table. Diverse motivations suggests that the organization has multiple critical business events to address, a need for operational improvements from a migration or modernization, and innovation opportunities:
+In this example, a customer has a high number of motivations that appear in each category of the motivations table. Diverse motivations suggest that the organization has multiple critical business events to address, a need for operational improvements from a migration or modernization, and innovation opportunities:
 
-- **Datacenter exit:** They are delivering on a datacenter exit requiring significant focus from the central IT and cloud adoption teams. The 12- to 18-month time frame to fully plan two datacenter replacements is aggressive but realistic, if there are few distractions.
+- **Datacenter exit:** They're delivering on a datacenter exit requiring significant focus from the central IT and cloud adoption teams. The 12- to 18-month time frame to fully plan two datacenter replacements is aggressive but realistic, if there are few distractions.
 - **Operational improvements:** Accelerating innovation requires modernizing existing operational systems. It also requires modernizing processes that are dedicated to current production environments.
-- **Innovation expansion:** The long-term objective is to continue to grow and lead the market through innovation. The ultimate goal is to maximize the amount of effort IT invests in innovation overall & reduce existing operational investments.
+- **Innovation expansion:** The long-term objective is to continue to grow and lead the market through innovation. The ultimate goal is to maximize the amount of effort IT invests in innovation overall and reduce existing operational investments.
 
-This reference customer developed horizons aligned to the following target schedule, to be evaluated & updated as part of quarterly release plan:
+This reference customer developed horizons aligned to the following target schedule, to be evaluated and updated as part of quarterly release plan:
 
 |Horizon  |Objective  |Time frame  |Considerations  |
 |---------|---------|---------|---------|
@@ -61,8 +61,8 @@ This reference customer developed horizons aligned to the following target sched
 
 ## Next steps
 
-Developing a similar set of cloud horizons could help refine your technical and financial considerations. This approach could also make it easier to share your priorities and objectives with stakeholders and technical staff to ensure that their efforts align with the desired outcomes.
-With defined cloud adoption horizons and updated considerations, you are now ready to [share your strategy](./share-your-strategy.md).
+Developing a similar set of cloud horizons can help refine your technical and financial considerations. This approach could also make it easier to share your priorities and objectives with stakeholders and technical staff to ensure their efforts align with the desired outcomes.
+With defined cloud adoption horizons and updated considerations, you're now ready to [create a business case](./financial-models.md).
 
 > [!div class="nextstepaction"]
-> [Share your strategy](./share-your-strategy.md)
+> [Create a business case](./financial-models.md)

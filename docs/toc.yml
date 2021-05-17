@@ -112,16 +112,18 @@ items:
         href: strategy/business-outcomes/okr.md
     - name: Financial considerations
       items:
+      - name: Overview
+        href: strategy/financial-considerations/index.md
       - name: Common finance vocabulary terms
         href: strategy/finance-vocabulary-terms.md
       - name: Understand cloud accounting
         href: strategy/cloud-accounting.md    
     - name: Technical considerations
       items: 
+      - name: Overview
+        href: strategy/technical-considerations/index.md
       - name: Achieve more with your investment
         href: strategy/achieve-more.md
-      - name: First cloud adoption project
-        href: strategy/first-adoption-project.md
       - name: Align your partner strategy
         href: strategy/partner-alignment.md
     - name: Build a digital transformation timeline
