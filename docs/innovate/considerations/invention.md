@@ -2,20 +2,18 @@
 title: Types of innovation and digital invention
 description: Review the types of innovations to balance invention and adoption for the development of products while keeping customer adoption and empathy in mind.
 author: BrianBlanchard
-keywords: types of innovation, different types of innovation, innovation product development, digital invention
 ms.author: brblanch
 ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
-ms.custom: 
- - internal
- - seo-caf-innovate
+ms.custom: internal, seo-caf-innovate
+keywords: types of innovation, different types of innovation, innovation product development, digital invention
 ---
 
 # Develop digital inventions
 
-What are digital inventions? As described in [Innovation in the digital economy](./index.md), innovation requires a balance between invention and adoption. Digital inventions are the products of technological innovation that solve customer’s needs and provide innovative solutions. Customer feedback and partnership are required to drive adoption, preferably using the build-measure-learn feedback loop. For more information, see [Create customer partnerships through the build-measure-learn feedback loop](./adoption.md).
+What are digital inventions? As described in [Innovation in the digital economy](./index.md), innovation requires a balance between invention and adoption. Digital inventions are the products of technological innovation that solve customer's needs and provide innovative solutions. Customer feedback and partnership are required to drive adoption, preferably using the build-measure-learn feedback loop. For more information, see [Create customer partnerships through the build-measure-learn feedback loop](./adoption.md).
 
 The types of innovation and disciplines described in the next section introduce a series of approaches to developing digital inventions while keeping adoption and customer empathy in mind. Each discipline is briefly described, along with links to each process.
 

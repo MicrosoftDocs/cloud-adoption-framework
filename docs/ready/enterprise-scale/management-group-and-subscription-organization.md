@@ -6,7 +6,7 @@ ms.author: brblanch
 ms.date: 04/02/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready 
+ms.subservice: ready
 ms.custom: think-tank
 ---
 
@@ -26,7 +26,7 @@ Management group structures within an Azure Active Directory (Azure AD) tenant s
 
 - A management group tree can support up to [six levels of depth](/azure/governance/management-groups/overview#hierarchy-of-management-groups-and-subscriptions). This limit doesn't include the tenant root level or the subscription level.
 
-- Any principal (user, service principal) within an Azure AD tenant can create new management groups since Azure role-based access control (RBAC) authorization for management group operations isn't enabled by default.
+- Any principal (user or service principal) within an Azure AD tenant can create new management groups since Azure role-based access control (RBAC) authorization for management group operations isn't enabled by default.
 
 - All new subscriptions will be placed under the root management group by default.
 
@@ -80,13 +80,13 @@ Subscriptions are a unit of management, billing, and scale within Azure. They pl
   - Perform an access review in Azure AD Privileged Identity Management quarterly or twice a year to ensure that privileges don't proliferate as users move within the customer organization.
   - Take full ownership of budget spending and resource utilization.
   - Ensure policy compliance and remediate when necessary.
-  
+
 - Use the following principles when identifying requirements for new subscriptions:
   - **Scale limits:** Subscriptions serve as a scale unit for component workloads to scale within platform subscription limits. For example, large, specialized workloads such as high-performance computing, IoT, and SAP are all better suited to use separate subscriptions to avoid limits (such as a limit of 50 Azure Data Factory integrations).
   - **Management boundary:** Subscriptions provide a management boundary for governance and isolation, which allows for a clear separation of concerns. For example, different environments such as development, test, and production are often isolated from a management perspective.
   - **Policy boundary:** Subscriptions serve as a boundary for the assignment of Azure policies. For example, secure workloads such as PCI typically require additional policies to achieve compliance. This additional overhead doesn't need to be considered holistically if a separate subscription is used. Similarly, development environments might have more relaxed policy requirements relative to production environments.
   - **Target network topology:** Virtual networks can't be shared across subscriptions, but they can connect with different technologies such as virtual network peering or Azure ExpressRoute. Consider which workloads must communicate with each other when you decide whether a new subscription is required.
-  
+
 - Group subscriptions together under management groups aligned within the management group structure and policy requirements at scale. Grouping ensures that subscriptions with the same set of policies and Azure role assignments can inherit them from a management group, which avoids duplicate assignments.
 
 - Establish a dedicated management subscription in the `Platform` management group to support global management capabilities such as Azure Monitor Log Analytics workspaces and Azure Automation runbooks.
@@ -311,7 +311,7 @@ Organizations can use enterprise-scale Azure policies to enforce the following g
 
     Azure Network Watcher helps enterprises to monitor and repair network issue for infrastructure-as-a-service (IaaS) services in Azure. With this service, NSG flow logs provides a way to capture information about network traffic. Enterprises can benefit from traffic analysis and patterns, forecast future capacity needs, and enforce compliance with corporate governance policies.
 
-    Azure offers a custom policy for setting up NSG flow logs in Network Watcher; here, a Storage account is provisioned as repository to store NSG flow logs. This policy also configuring the retention period to store the NSG flow logs.  
+    Azure offers a custom policy for setting up NSG flow logs in Network Watcher. Here, a storage account is provisioned as a repository to store NSG flow logs. This policy also configuring the retention period to store the NSG flow logs.
 
 - **Provision an at-scale network connectivity solution**
 
@@ -319,7 +319,7 @@ Organizations can use enterprise-scale Azure policies to enforce the following g
 
     Azure Virtual WAN is an enterprise-level network service that helps organizations to resolve connectivity challenges. The service provides higher aggregate throughput with network connectivity, optimal routing over the Azure backbone, and a unified Azure management experience.
 
-    Azure offers a custom policy to set up Virtual WAN and provision a virtual hub within the service. Enterprises can deploy virtual hubs to act as a central point for connections from multiple sources and destinations. ExpressRoute, VPN gateways, and Azure Firewall are also provisioned to address network connectivity requirements.  
+    Azure offers a custom policy to set up Virtual WAN and provision a virtual hub within the service. Enterprises can deploy virtual hubs to act as a central point for connections from multiple sources and destinations. ExpressRoute, VPN gateways, and Azure Firewall are also provisioned to address network connectivity requirements.
 
 - **Back up virtual machines**
 
@@ -339,8 +339,8 @@ Organizations can use enterprise-scale Azure policies to enforce the following g
 
 - **Enforce Windows VMs to join Azure AD domains**
 
-    Enterprises have been using domain joined VMs for a consistent management experience. When operations like corporate password policies, central authentication, and others are created as part of domain policies, a VM that doesn't join the domain is exposed to risks like weak passwords and an inability to connect with corporate devices, applications, and other limitations. When deployed on VMs that aren't joined to the domain, legacy applications relying on authentication protocols like Microsoft New technology LAN Manager or Kerberos could face authentication issues. 
+    Enterprises have been using domain-joined VMs for a consistent management experience. When operations like corporate password policies, central authentication, and others are created as part of domain policies, a VM that doesn't join the domain is exposed to risks like weak passwords and an inability to connect with corporate devices, applications, and other limitations. When deployed on VMs that aren't joined to the domain, legacy applications relying on authentication protocols like NTLM or Kerberos could face authentication issues.
 
     Azure provides managed and unmanaged solutions for implementing domain services. With self-managed Azure AD DS services, enterprises gain the same complete control of setups, configurations, and operations as with on-premises environment. The service frees enterprises of management overhead while providing essential domain services.
 
-    Azure offers a custom policy that helps new Windows VMs to automatically join domains. The 'JsonADDomainExtension' extension deployed on the VM uses configuration settings like the username, domain, OUPath, and more to ensure that the VM joins the specified domain. This policy uses Azure KeyVault to manage confidential domain username and password information.
+    Azure offers a custom policy that helps new Windows VMs to automatically join domains. The `JsonADDomainExtension` extension deployed on the VM uses configuration settings like the username, domain, OUPath, and more to ensure that the VM joins the specified domain. This policy uses Azure KeyVault to manage confidential domain username and password information.

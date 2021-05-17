@@ -1,5 +1,5 @@
 ---
-title: Data democratization
+title: Support business with data innovation
 description: Support business with data innovation by using a centralized data repository.
 author: BrianBlanchard
 ms.author: brblanch
@@ -10,7 +10,7 @@ ms.subservice: strategy
 ms.custom: internal
 ---
 
-# Data democratization
+# Support business with data innovation
 
 Many companies keep data warehouses in their datacenters to help different parts of their business analyze data and make decisions. Sales, marketing, and finance departments rely heavily on these systems in order to produce standard reports and dashboards. Companies also employ business analysts to perform ad hoc querying and analysis of data in data marts. These data marts use self-service business intelligence tools to perform multidimensional analysis.
 
@@ -42,7 +42,7 @@ From there, subsets of data are extracted into data marts to analyze activity as
 
 For a business to run efficiently, it needs all types of data for the different skills and roles described earlier. You need raw data that has been cleansed for data scientists to build machine-learning models. You need clean and structured data for a data warehouse to provide reliable performance to business applications and dashboards. Most importantly, you need to be able to go from raw data to insights in minutes, not days.
 
-Azure Synapse Analytics has a native, built-in business intelligence tool with Microsoft Power BI. Here, one service within one interface supports you to quickly transform raw data into a dashboard that displays insights. 
+Azure Synapse Analytics has a native, built-in business intelligence tool with Microsoft Power BI. Here, one service within one interface supports you to quickly transform raw data into a dashboard that displays insights.
 
 ## Next steps
 

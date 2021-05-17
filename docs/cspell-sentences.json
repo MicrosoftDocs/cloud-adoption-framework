@@ -316,7 +316,7 @@
         "TODO"
     ],
     "ignoreRegExpList": [
-        "\\]\\([#/][^\\)]+\\)",
+        "\\](\\(|: )[#/][^\\)]+\\)",
         "\\n *(author|ms\\.author|manager): .*(?=\\r?\\n)",
         "OpenBlade\\[.*\\]",
         "\\s`[^`]+`\\s",

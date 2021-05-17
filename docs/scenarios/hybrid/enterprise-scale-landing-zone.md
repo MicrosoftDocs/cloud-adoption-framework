@@ -11,7 +11,7 @@ ms.custom: think-tank, e2e-hybrid
 ---
 
 # Enterprise-scale support for hybrid and multicloud
-  
+
 Enterprise-scale landing zones provide a specific architectural approach, reference architecture, and reference implementations to prepare your landing zones for mission-critical technology platforms and any supported workloads.
 
 Enterprise-scale was built with hybrid and multicloud in mind. Supporting hybrid and multicloud requires three simple additions to the reference architecture:
@@ -95,7 +95,7 @@ These patterns can be extended using technologies such as Azure Arc, which is de
 ## Management
 
 Similar to the considerations needed for governance in a hybrid environment, managing distributed workloads at scale requires planning in order to ensure issues are not introduced as the span of deployments scales.
-Using technologies such as [Log Analytics](/azure/azure-monitor/log-query/log-analytics-overview), [Application Insights](/azure/azure-monitor/app/app-insights-overview), [Azure Monitor](https://azure.microsoft.com/services/monitor/#features), and [Azure Security Center](/azure/security-center/) to [aggregate telemetry and work from a 'single pane of glass'](../../manage/azure-management-guide/inventory.md?tabs=AzureServiceHealth%2CLog-Analytics%2CAzure-Monitor%2CConfigure-solutions) enables infrastructure and application teams to manage by exception and focus on fixing identified issues from a consolidated view.  
+Using technologies such as [Log Analytics](/azure/azure-monitor/log-query/log-analytics-overview), [Application Insights](/azure/azure-monitor/app/app-insights-overview), [Azure Monitor](https://azure.microsoft.com/services/monitor/#features), and [Azure Security Center](/azure/security-center/) to [aggregate telemetry and work from a 'single pane of glass'](../../manage/azure-management-guide/inventory.md?tabs=AzureServiceHealth%2CLog-Analytics%2CAzure-Monitor%2CConfigure-solutions) enables infrastructure and application teams to manage by exception and focus on fixing identified issues from a consolidated view.
 
 Also similar to governance techniques, the management technologies described above can also be extended out to other environments, such as on-premises and other cloud platforms for certain use cases.
 
