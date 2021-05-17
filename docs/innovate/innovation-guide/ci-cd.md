@@ -85,7 +85,7 @@ Software development is a team sport. Collaboration with peers and knowledge sha
 
 GitHub, the largest developer community, is at the heart of the open-source community. It will always be an open platform that supports all developers. Collaboration is at the heart of GitHub. Developers made more than 1 billion contributions over the course of a year to the open-source projects and private repositories hosted on GitHub. It's where developers collaborate, store their source code, and manage continuous integration.
 
-**Go to the [Microsoft Azure repo on GitHub](https://github.com/azure)**
+**Go to the [Microsoft Azure Repos on GitHub](https://github.com/azure)**
 
 ### Open-source innovation
 
