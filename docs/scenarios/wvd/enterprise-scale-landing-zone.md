@@ -36,13 +36,13 @@ The following image shows a conceptual reference architecture that demonstrates 
 
 ### Implementation with Azure Resource Manager (ARM) templates for Remote Desktop Services
 
-ARM Windows Virtual Desktop templates are a collection of the infrastructure-as-code ARM template to deploy a Windows Virtual Desktop environment on Azure.
+ARM Windows Virtual Desktop templates provide a collection of infrastructure-as-code ARM templates to deploy a Windows Virtual Desktop environment on Azure.
 
 The [automate Windows Virtual Desktop deployments in Azure](https://github.com/Azure/RDS-Templates/tree/master/ARM-wvd-templates) GitHub repository contains code that lets you automatically deploy Windows Virtual Desktop environments in the Azure cloud.
 
 ## Next steps
 
-Review the Windows Virtual Desktop construction set critical design areas to make considerations and recommendations for your Windows Virtual Desktop construction set architecture.
+Review the critical design areas for the Windows Virtual Desktop construction set for considerations and recommendations about your Windows Virtual Desktop construction set architecture.
 
 > [!div class="nextstepaction"]
 > [Identity and access management](./eslz-identity-and-access-management.md)
