@@ -113,7 +113,7 @@ items:
     - name: Financial considerations
       items:
       - name: Overview
-        href: financial-considerations/index.md
+        href: strategy/financial-considerations/index.md
       - name: Common finance vocabulary terms
         href: strategy/finance-vocabulary-terms.md
       - name: Understand cloud accounting
@@ -121,7 +121,7 @@ items:
     - name: Technical considerations
       items: 
       - name: Overview
-        href: technical-considerations/index.md
+        href: strategy/technical-considerations/index.md
       - name: Achieve more with your investment
         href: strategy/achieve-more.md
       - name: Align your partner strategy

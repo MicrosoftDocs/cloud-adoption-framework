@@ -106,4 +106,4 @@ When you plan your phases of cloud maturity and the reinvestment of your cloud s
 Learn more about how to align your partner strategy when you migrate to the cloud.
 
 > [!div class="nextstepaction"]
-> [Strategy for partner alignment](../partner-alignment.md)
+> [Strategy for partner alignment](./partner-alignment.md)

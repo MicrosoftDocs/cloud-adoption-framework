@@ -42,4 +42,4 @@ Migrating to the cloud can reduce your carbon footprint and your organization im
 The financial considerations guidance above, and subsequent guidance in the Strategy methodology help you build a business case to migrate to the cloud. Before building your business case, review common finance terms that can help.
 
 > [!div class="nextstepaction"]
-> [Glossary of common finance terms](./finance-vocabulary-terms.md)
+> [Glossary of common finance terms](../finance-vocabulary-terms.md)

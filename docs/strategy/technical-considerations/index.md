@@ -50,4 +50,4 @@ Successful cloud adoption programs typically involve at least one level of suppo
 Learn how you can achieve more with your Azure investment.
 
 > [!div class="nextstepaction"]
-> [Achieve more with your investment in the cloud](./achieve-more.md)
+> [Achieve more with your investment in the cloud](../achieve-more.md)
