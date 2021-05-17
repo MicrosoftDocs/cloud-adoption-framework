@@ -1,52 +1,102 @@
 ---
-title: Business justification for cloud migration
-description: Use the Cloud Adoption Framework to learn about the benefits of Azure and to develop a business justification for cloud migration.
+title: Create a business case
+description: Create a business case for your migration to the cloud that provides a technical and financial timeline of your environment and can represent the opportunities for reinvestment into further modernization.
 author: WendyRing
 ms.author: wering
-ms.date: 04/16/2021
-ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
-ms.custom: internal
+ms.topic: conceptual
+ms.date: 04/23/2021
+ms.custom: template-concept
 ---
 
-# Build a business justification for cloud migration
+# What is a business case?
 
-Developing a business case for moving to the cloud includes building a financial plan that takes technical considerations into account and aligns with [business outcomes](business-outcomes/index.md). This plan provides key components to help you gain support and buy-in from your Finance team. Their support helps accelerate your organization's cloud migration and enables business [agility](business-outcomes/agility-outcomes.md). Before you start building your business case, it's important to understand the key principles of [Cloud economics](https://www.microsoft.com) that you can use to develop a clear business justification with tangible costs and returns.
+Your organization depends on information technology (IT) for its operations, and probably for creating and supplying its products as well. It's a significant expense. For these reasons, a move to the cloud must be carefully considered and planned.
 
-## Why move to the cloud?
+A business case provides a view of the technical and financial timeline of your environment and can represent the opportunities for reinvestment into further modernization. Developing a business case includes building a financial plan that takes technical considerations into account and aligns with [business outcomes](business-outcomes/index.md). It helps you foster support from your Finance team and other areas of the business, helps accelerate cloud migration, and enables business [agility](business-outcomes/agility-outcomes.md).
 
-The cloud drives technical and financial benefits, efficiencies, and capabilities that aren’t possible with on-premises IT infrastructure.
+## Key components of a business case
 
-  :::image type="content" source="media/cloud-migration-business-case/benefits-cloud-migration-v2.png" alt-text="Diagram that summarizes core benefits of cloud migration, including technical and financial benefits.":::
+When you're planning your business case to migrate to the cloud, there are several key components to consider.
 
-### Technical benefits
+**Environment scope, technical and financial:** As you build out the on-premises view of your environment, think about how your environment scope, from both a technical and financial perspective, is aligned. You want to be sure the technical environment you're using for your plan matches up to the financial data.
 
-**Scalability**: There's abilities that are limited on-premises and more accessible in the cloud, one of them being scalability. In the cloud, you can scale your resources up or down depending on usage, utilization, and demand. Your time to provision will decrease, hardware utilization improves, and your Azure resources can be accessible everywhere due to the availability of multiple Azure regions.
+**Baseline financial data: Cost to run today:** When you build out your business case, it’s important to pull your baseline financial data. Common questions you can ask to gather the financial data needed are:
 
-**Availability**: Availability is another technical benefit of migrating to the cloud. It's more costly to build highly available infrastructure on-premises than to architect highly available infrastructure in the cloud.
+- How much does it cost to run my environment today?
+- What am I spending on servers in an average year?
+- What am I spending in my data center operations categories, for example, power or lease costs?
+- When is the next hardware refresh?
 
-**Security and compliance**: Security and compliance is a technical benefit of moving to Azure. Security infrastructure and toolsets keep you up to date with security threats on global networks. You benefit from corporate learnings around securing the platform, methodologies of intrusions and attacks, and learnings from multiple services beyond Azure.
+**Projections: On-premises costs in on-premises scenario:** Forecast what your on-premises costs will be if you don’t migrate to the cloud.
 
-**Capacity optimization**: Capacity optimization, where you pay only for what you consume over time, is another technical benefit of moving to the cloud. Your capacity can fluctuate depending on your business demands. You can scale your resources up or down to depending on what’s required, and decrease the time to provision or deprovision resources because it’s done dynamically. On-premises datacenters are frequently over-built to handle usage peaks, which might result in excess capacity and excess spend. For example, if your datacenter operates at a baseline of 30 percent, with regular spikes up to 70 percent, there's room for optimization in the cloud.
+:::image type="content" source="media/create-financial-plan/optimization-opportunity.png" alt-text="Diagram of comparison of cloud to on-premises or status quo.":::
 
-The initial technical benefits focus on the lift and shift model, where  you migrate workloads to infrastructure-as-a-service (IaaS) in the cloud. As you free up cash flow, continue your cloud adoption, and mature your workloads, you can reinvest the savings to modernize to different service levels. The goal is to get the most out of your on-premises investment, and then move those workloads to IaaS, potentially freeing up 20% to 30% of the overall required cash flow. Historically, this process would be considered a savings opportunity. This approach in the cloud is better viewed as a reinvestment opportunity.
+**Projections: On-premises costs in Azure scenario:** Forecast what your on-premises costs will be when you migrate to the cloud in an Azure scenario. It takes resources and time to shift your environment to the cloud, so it’s important to account for them in the business case. When you build out the Azure scenario, be sure to take into consideration and include all of the core benefits the cloud provides.
 
-Once you have your initial workloads in IaaS, you might think about moving some workloads to platform-as-a-service (PaaS). You’ll still provide the same type of service delivery however, you'll deliver it at a lower cost with more features and functionality. The next step in the iterative modernization process is moving some workflows and line-of-business applications to software-as-a-service (SaaS).
+:::image type="content" source="media/create-financial-plan/optimized-consumption-plan.png" alt-text="Diagram of comparison of cloud to on-premises or status quo.":::
 
-### Financial benefits
+**Projections: Migration timeline and Azure costs (optimized):** Project what migration timeline and the Azure costs will be with a given environment. Consider how you can optimize and get the most out of your Azure investment. For example, use reserved instances, scale capacity up and down, use the Azure hybrid benefit, and right-size your resources.
 
-**OPEX pricing models**: One of the financial benefits of the cloud is the shift from capital expenditure (CAPEX) to operational expenditure (OPEX) and improved cashflow timing. In an on-premises environment, spend is typically in the capital expenditure category. When you move to the cloud, you frequently see a transition to operating expenses, where spend is spread out over time. With an operational expense (OPEX) model, the cloud allows you to create resources as needed, and only pay for what you use.
+A business case isn't just a point-in-time view. It’s a plan for a period of time. As you shift to the cloud, you reduce your spend over-time and create a cloud migration plan. You can model out what the ramp-down in spend will be on-premises over time associated with your cloud migration plan.
 
-An important consideration when planning your move to the cloud is earnings before interest, taxes, depreciation, and amortization (EBITDA). EBITDA is a financial key performance indicator (KPI) that organization’s use to measure profitability. When moving to the cloud, EBITDA is affected because the metric can’t ignore costs like server depreciation. You can use other financial metrics that better measure increased business value, for example, cash flows or operating income. For more information about EBITDA, see the [Glossary of common finance terms](finance-vocabulary-terms.md).
+Once on-premises workloads and cost structure have been identified, you can then build out your optimized Azure consumption plan.
 
-**Reduced datacenter footprint**: Another financial benefit is you can reduce your datacenter footprint with cloud optimizations. On-premises data centers are frequently overbuilt for peaks, resulting in excess capacity and excess spend. Acquiring on-premises datacenter and server capacity has a significant lead-time. As a result, customers frequently invest well in advance of demand, resulting in under-utilized capacity. Capital sits in server spend, buildings, data center costs, power and cooling, and head count.
+As a final step, when you create your business case, you want to compare the cloud environment to an on-premises or status quo scenario. You can take your Azure view and compare it to your on-premises or status quo scenario with no migration so you can assess the benefit of migrating to the cloud. The Azure view will show on-premises costs that are being reduced over time, your Azure environment costs, and any migration costs associated with shifting to a cloud environment.
 
-**Increased productivity and service delivery**: Another financial benefit of the cloud is increased productivity and service delivery. One of the key improvements that the cloud can unlock is better DevOps processes. DevOps is the ability for continuous delivery, that enables the delivery of your products to the end user. The cloud provides faster time-to-market, increases in revenue, and increases in staff productivity. These improvements can have a direct economic impact on your business by driving efficiencies.
+:::image type="content" source="media/create-financial-plan/cloud-on-premises-comparison.png" alt-text="Diagram of comparison of cloud to on-premises or status quo.":::
 
-**Sustainability**: The cloud can help you reduce your carbon footprint. Many customers are focused on investing in becoming more green, improving their sustainability, and reducing their carbon footprint. As a takeaway from Microsoft’s sustainability journey, when we migrated to the cloud we reduced our carbon emissions and we took advantage of key technologies that Microsoft has built into our data centers. We use an internal carbon tax to fund innovation and drive proper behavior. Smart water approaches have also helped to reduce water usage, and our remote work processes and procedures have also accelerated some of those carbon reductions.
+## Cloud savings provide for future investment
+
+Cloud billing models and offers differ from on-premises however, they can create meaningful savings opportunities you can take advantage of to reduce cloud costs. Saved costs from cloud adoption can be reinvested into iterative modernization. Cloud costs are flexible, and can be reduced with:
+
+**Azure Hybrid Benefit:** Reduce the costs of running your workloads in the cloud by using this licensing benefit. You can use your on-premises Software Assurance-enabled Windows Server and SQL Server licenses on Azure. This benefit applies to RedHat and SUSE Linux subscriptions, too. To learn more, see [Azure Hybrid Benefit](/pricing/hybrid-benefit/).
+
+**Spot virtual machines:** You can use spot virtual machines with deep discounts for workloads that can be interrupted and don't need to complete within a specific time frame. For example, high-performance computing scenarios, batch processing jobs, visual rendering applications, dev and test environments, including continuous integration and continuous delivery workloads, or large-scale stateless applications. To learn more, see [Spot virtual machines](/azure/virtual-machines/spot-vms).
+
+**Reservations:** Receive a discount on your workloads when you reserve your resources in advance. In return, Microsoft passes the savings onto you as discounts of up to 72 percent. For more information, see [Azure reservations](/reservations/).
+
+**Azure Dev/Test pricing:** Take advantage of discounted rates for your development and testing, including the Microsoft software charges on Azure Virtual Machines and special dev and test pricing on other services. For more information, see [Azure Dev/Test pricing](/pricing/dev-test/).
+
+**Extended security updates:** Receive continued support for SQL Server 2008 and SQL Server 2008 R2 in the cloud, which has reached the end of their support (EOS) life cycle. You can migrate your on-premises SQL Server instances to Azure Virtual Machines, Azure SQL Database, or stay on-premises and purchase extended security updates. You'll receive free extended security patches by migrating to an Azure Virtual Machine. To learn more, see [Lifecycle FAQ - Extended Security Updates](/lifecycle/faq/extended-security-updates).
+
+## Tools
+
+There are many valuable tools and calculators you can use to help prepare a business case for your cloud migration.
+
+**Azure Total Cost of Ownership (TCO) Calculator:** Use the [Total Cost of Ownership (TCO) Calculator](https://azure.microsoft.com/pricing/tco/calculator/)
+ online tool to estimate the cost savings you can realize when you migrate your workloads to Azure.
+
+Enter details of your on-premises infrastructure into the tool including servers, databases, storage, and networking, licensing assumptions and costs.
+
+The Calculator creates a match from Azure Services to create a high-level initial TCO comparison. However, the results of the TCO calculator need to be considered with care, since an on-premises server list is often complex and optimization steps can be taken when considering Azure.
+
+**Retail Rates Prices API:** Use the Retail Rates Prices API to retrieve retail prices for all Azure services. Previously, the only way that you could retrieve prices for Azure services was to either use the Azure Pricing Calculator or use the Azure portal. This API gives you an unauthenticated experience to get retail rates for all Azure services. Use the API to explore prices for Azure services against different regions and different SKUs. The programmatic API can also help you create your own tools for internal analysis and price comparison across SKUs and regions. To learn more, see [Retail Rates Prices API](/rest/api/cost-management/retail-prices/azure-retail-prices).
+
+**Azure Pricing Calculator:** Use the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator) to configure and estimate the costs for Azure products.
+
+**Partner toolsets:** Microsoft Partners have tools in the [Azure Marketplace](https://azuremarketplace.microsoft.com/home) that can help create a migration cost analysis.
+
+**Solution assessments:** Get assistance from a Microsoft solutions assessment expert or qualified partner as part of a [Solution Assessment engagement](https://www.microsoft.com/solutionassessments/solutionassessments.aspx?rtc=1).
+
+**Azure Migration Program:** Join the  [Azure Migration Program](https://azure.microsoft.com/migration/migration-program/) to get the guidance and expert help you need at every stage of the cloud migration journey. Migrate infrastructure, databases, and apps—and move forward with confidence.
+
+### Learn about Azure with Microsoft Learn
+
+[Microsoft Learn](/learn) offers many Azure learning paths that you might want to consider as you build your business case.
+
+- [Control Azure spending and manage bills with Azure Cost Management + Billing](/learn/paths/control-spending-manage-bills).
+- [Microsoft Azure Well-Architected Framework—Cost Optimization](/learn/modules/azure-well-architected-cost-optimization)
+- [Plan and manage your Azure costs](/learn/modules/plan-manage-azure-costs)
+- [Analyze costs and create budgets with Azure Cost Management](/learn/modules/analyze-costs-create-budgets-azure-cost-management)
+- [Save money with Azure Reserved Instances](/learn/modules/save-money-with-azure-reserved-instances)
+- [Optimize Azure costs with data analysis in Power BI](/learn/modules/optimize-costs-data-analysis-powerbi)
+- [Configure and manage costs as a Microsoft partner by using Azure Cost Management](/learn/modules/manage-costs-partner-cost-management)
 
 ## Next steps
 
+Learn more about how to share your strategy and business case to migrate to the cloud:
+
 > [!div class="nextstepaction"]
-> [Create your business case](./create-financial-plan.md)
+> [Share your strategy](./share-your-strategy.md)

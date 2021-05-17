@@ -91,6 +91,16 @@
          "redirect_document_id": true
       },
       {
+         "source_path": "docs/strategy/financial-models.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/cloud-migration-business-case",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/strategy/first-adoption-project.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/motivations.md",
+         "redirect_document_id": true
+      },
+      {
          "source_path": "docs/ready/expanded-scope/terraform-landing-zone.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/terraform-landing-zone",
          "redirect_document_id": true
