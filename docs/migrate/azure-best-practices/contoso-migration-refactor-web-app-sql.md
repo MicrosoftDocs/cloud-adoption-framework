@@ -269,7 +269,7 @@ The Contoso admins now configure Azure DevOps to perform the build and release p
 
 1. On the pipeline > **Artifacts**, they select **+ Add an artifact**, then select to build with the `ContosoSmarthotel360Refactor` pipeline.
 
-     ![Screenshot of the Build button on the **Add an artifact** pane.](./media/contoso-migration-refactor-web-app-sql/pipeline12.png)
+     ![Screenshot of the **Build** button on the **Add an artifact** pane.](./media/contoso-migration-refactor-web-app-sql/pipeline12.png)
 
 1. To enable the continuous deployment trigger, the admins select the lightning bolt icon on the artifact.
 

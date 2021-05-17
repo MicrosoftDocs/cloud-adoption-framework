@@ -6,7 +6,7 @@ ms.author: janet
 ms.date: 07/14/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: operate
+ms.subservice: manage
 ms.custom: think-tank
 ---
 
