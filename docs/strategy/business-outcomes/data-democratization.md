@@ -1,5 +1,5 @@
 ---
-title: Data democratization
+title: Democratize data
 description: Support business with data innovation by using a centralized data repository.
 author: BrianBlanchard
 ms.author: brblanch
@@ -10,7 +10,7 @@ ms.subservice: strategy
 ms.custom: internal
 ---
 
-# Data democratization
+# Democratize data
 
 Many companies keep data warehouses in their datacenters to help different parts of their business analyze data and make decisions. Sales, marketing, and finance departments rely heavily on these systems in order to produce standard reports and dashboards. Companies also employ business analysts to perform ad hoc querying and analysis of data in data marts. These data marts use self-service business intelligence tools to perform multidimensional analysis.
 

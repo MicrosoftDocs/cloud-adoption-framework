@@ -118,7 +118,7 @@ Netezza implements some database objects that aren't directly supported in Azure
 | IBM Netezza data type | Azure Synapse SQL v2 data type |
 | :-------------------- | :----------------------------- |
 | bigint (int8) | bigint |
-| binary varying(n) (alias varbinary(n)) | varbinary(n) | |
+| binary varying(n) (alias varbinary(n)) | varbinary(n) |
 | binary(n) | binary(n) |
 | boolean (bool) | bit |
 | bpchar(n) | varchar(n) |

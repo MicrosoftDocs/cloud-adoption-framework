@@ -556,7 +556,7 @@ The Contoso security team reviews the virtual machines `WEBVM`, `SQLAOG1`, and `
 
 - Review the network security groups (NSGs) for the VM to control access. NSGs are used to ensure that only traffic allowed to the application can pass.
 - Consider securing the data on the disk by using Azure Disk Encryption and Azure Key Vault.
-- Evaluate transparent data encryption. Then enable it on the `SmartHotel360` database running on the new Always On availability group. Learn more about [transparent data encryption](/sql/relational-databases/security/encryption/transparent-data-encryption?view=sql-server-2017).
+- Evaluate transparent data encryption. Then enable it on the `SmartHotel360` database running on the new Always On availability group. Learn more about [transparent data encryption](/sql/relational-databases/security/encryption/transparent-data-encryption).
 
 For more information, see [Security best practices for IaaS workloads in Azure](/azure/security/fundamentals/iaas).
 
