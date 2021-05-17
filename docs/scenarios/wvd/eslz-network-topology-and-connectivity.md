@@ -11,8 +11,6 @@ ms.subservice: ready
 
 # Network topology and connectivity for Windows Virtual Desktop at enterprise scale
 
-<!-- cSpell:ignore NVAs VPNs -->
-
 ## Review network options
 
 Designing and implementing Windows Virtual Desktop Azure networking capabilities is critical for your Windows Virtual Desktop landing zone. Azure networking products and services support a wide variety of networking capabilities. How you structure these services and the networking architectures you choose depends on your organization's workload, governance, and connectivity requirements.
@@ -35,7 +33,7 @@ The following questions help you make decisions based on the Azure networking se
 
   Azure provides two solutions for establishing hybrid networking capabilities:
 
-  - Azure VPN Gateway connects your on-premises networks to Azure through Site-to-Site VPNs similar to how you might set up and connect to a remote branch office. VPN Gateway has a maximum bandwidth of 10 Gbps. For more information, see [What is VPN Gateway?](/azure/vpn-gateway/vpn-gateway-about-vpngateways)
+  - Azure VPN Gateway connects your on-premises networks to Azure through Site-to-Site VPNs similar to how you might set up and connect to a remote branch office. VPN Gateway has a maximum bandwidth of 10 Gbps. For more information, see [What is Azure VPN Gateway?](/azure/vpn-gateway/vpn-gateway-about-vpngateways)
   - Azure ExpressRoute offers higher reliability and lower latency by using a private connection between Azure and your on-premises infrastructure. Bandwidth options for ExpressRoute range from 50 Mbps to 100 Gbps. For more information, see [What is Azure ExpressRoute?](/azure/expressroute/expressroute-introduction)
 
 - Will you need to inspect and audit outgoing traffic by using on-premises network devices?
@@ -47,41 +45,47 @@ The following questions help you make decisions based on the Azure networking se
   - [App Service Environment in Azure App Service](/azure/app-service/environment/intro)
   - [Azure API Management](/azure/api-management/api-management-key-concepts)
   - [Azure Kubernetes Service](/azure/aks/intro-kubernetes)
-  - [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance-index)
-  - [Azure Databricks](/azure/azure-databricks/what-is-azure-databricks)
-  - [Azure HDInsight](/azure/hdinsight)
+  - [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview)
+  - [Azure Databricks](/azure/databricks/scenarios/what-is-azure-databricks)
+  - [Azure HDInsight](/azure/hdinsight/)
 
 - Do you need to connect multiple virtual networks?
 
   You can use virtual network peering to connect instances of Azure Virtual Network. Peering can support connections across subscriptions and regions. For more information, see [Virtual network peering](/azure/virtual-network/virtual-network-peering-overview).
 
-  Virtual network peering provides connectivity between only two peered networks. You might provide services across multiple subscriptions or need to manage a large number of network peerings. Consider adopting a hub and spoke networking architecture or using Azure Virtual WAN. For more information, see [Hub and spoke](../../decision-guides/software-defined-network/hub-spoke.md) and [What is Azure Virtual WAN?](/azure/virtual-wan/virtual-wan-about)
+  Virtual network peering provides connectivity between only two peered networks. You might provide services across multiple subscriptions or need to manage a large number of network peerings. Consider adopting a hub and spoke networking architecture or using Azure Virtual WAN. For more information, see:
+
+  - [Software Defined Networking: hub and spoke](../../decision-guides/software-defined-network/hub-spoke.md)
+  - [What is Azure Virtual WAN?](/azure/virtual-wan/virtual-wan-about)
 
 - Will you need to support custom DNS management?
 
   Azure DNS is a hosting service for DNS domains. Azure DNS provides name resolution by using the Azure infrastructure. For more information, see [What is Azure DNS?](/azure/dns/dns-overview)
 
-  Your workloads might require name resolution support beyond Azure DNS. If your workloads also require Active Directory services, consider using Azure Active Directory Domain Services to augment Azure DNS capabilities. To add capabilities, deploy custom IaaS virtual machines. For more information, see [What is Azure Active Directory Domain Services?](/azure/active-directory-domain-services/overview) and [Name resolution for resources in Azure virtual networks](/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances).
+  Your workloads might require name resolution support beyond Azure DNS. If your workloads also require Active Directory services, consider using Azure Active Directory Domain Services to augment Azure DNS capabilities. To add capabilities, deploy custom IaaS virtual machines. For more information, see:
+
+- [What is Azure Active Directory Domain Services?](/azure/active-directory-domain-services/overview)
+  - [Name resolution for resources in Azure Virtual Network](/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances)
 
 ## Understand common networking scenarios
 
-Azure networking includes products and services that provide different networking capabilities. As part of your networking design process, compare your workload requirements to  networking scenarios. Identify the Azure tools or services that provide these networking capabilities:
+Azure networking includes products and services that provide different networking capabilities. As part of your networking design process, compare your workload requirements to networking scenarios. Identify the Azure tools or services that provide these networking capabilities:
 
 | Scenario | Networking product or service |
 | --- | --- |
-| I need networking infrastructure to connect everything, from virtual machines to incoming VPN connections. | [Azure Virtual Network](/azure/virtual-network) |
-| I need to balance inbound and outbound connections and requests to my applications or services. | [Azure Load Balancer](/azure/load-balancer) |
-| I want to optimize delivery from application server farms while increasing application security with a web application firewall. | [Azure Application Gateway](/azure/application-gateway) and [Azure Front Door](/azure/frontdoor) |
-| I need to securely use the internet to access Azure Virtual Network through high-performance VPN gateways. | [Azure VPN gateway](/azure/vpn-gateway) |
-| I need ultra-fast DNS responses and ultra-high availability for all my domain needs. | [Azure DNS](/azure/dns) |
-| I need to accelerate the delivery of high-bandwidth content to customers worldwide. This content includes applications, stored content, and streaming video. | [Azure Content Delivery Network (CDN)](/azure/cdn) |
-| I need to protect my Azure applications from DDoS attacks. | [Azure DDoS protection](/azure/virtual-network/ddos-protection-overview) |
-| I need to distribute traffic optimally to services globally across Azure regions, while providing high availability and responsiveness. | [Azure Traffic Manager](/azure/traffic-manager) and [Azure Front Door](/azure/frontdoor) |
-| I need to add private network connectivity to access Microsoft cloud services from my corporate networks as if they were on-premises. | [Azure ExpressRoute](/azure/expressroute) |
-| I want to monitor and diagnose conditions at a network level. | [Azure Network Watcher](/azure/network-watcher) |
+| I need networking infrastructure to connect everything, from virtual machines to incoming VPN connections. | [Azure Virtual Network](/azure/virtual-network/) |
+| I need to balance inbound and outbound connections and requests to my applications or services. | [Azure Load Balancer](/azure/load-balancer/) |
+| I want to optimize delivery from application server farms while increasing application security with a web application firewall. | [Azure Application Gateway](/azure/application-gateway/) and [Azure Front Door](/azure/frontdoor/) |
+| I need to securely use the internet to access Azure Virtual Network through high-performance VPN gateways. | [Azure VPN Gateway](/azure/vpn-gateway/) |
+| I need ultra-fast DNS responses and ultra-high availability for all my domain needs. | [Azure DNS](/azure/dns/) |
+| I need to accelerate the delivery of high-bandwidth content to customers worldwide. This content includes applications, stored content, and streaming video. | [Azure Content Delivery Network (CDN)](/azure/cdn/) |
+| I need to protect my Azure applications from DDoS attacks. | [Azure DDoS protection](/azure/ddos-protection/ddos-protection-overview) |
+| I need to distribute traffic optimally to services globally across Azure regions, while providing high availability and responsiveness. | [Azure Traffic Manager](/azure/traffic-manager/) and [Azure Front Door](/azure/frontdoor/) |
+| I need to add private network connectivity to access Microsoft cloud services from my corporate networks as if they were on-premises. | [Azure ExpressRoute](/azure/expressroute/) |
+| I want to monitor and diagnose conditions at a network level. | [Azure Network Watcher](/azure/network-watcher/) |
 | I need native firewall capabilities, with built-in high availability, unrestricted cloud scalability, and zero maintenance. | [Azure Firewall](/azure/firewall/overview) |
-| I need to connect business offices, retail locations, and sites securely. | [Azure Virtual WAN](/azure/virtual-wan) |
-| I need a scalable, security-enhanced delivery point for global microservices-based web applications. | [Azure Front Door](/azure/frontdoor) |
+| I need to connect business offices, retail locations, and sites securely. | [Azure Virtual WAN](/azure/virtual-wan/) |
+| I need a scalable, security-enhanced delivery point for global microservices-based web applications. | [Azure Front Door](/azure/frontdoor/) |
 
 ## Choose a networking architecture
 
@@ -118,7 +122,7 @@ As part of your networking design process, see these articles:
 
 - [Plan virtual networks](/azure/virtual-network/virtual-network-vnet-plan-design-arm). Learn how to plan for virtual networks based on your isolation, connectivity, and location requirements.
 - [Azure best practices for network security](/azure/security/fundamentals/network-best-practices). Learn about Azure best practices that can help you enhance your network security.
-- [Best practices for networking when you migrate workloads to Azure](/azure/migrate/migrate-best-practices-networking). Get more guidance about how to implement Azure networking to support workloads.
+- [Best practices for networking when you migrate workloads to Azure](/azure/cloud-adoption-framework/migrate/azure-best-practices/migrate-best-practices-networking). Get more guidance about how to implement Azure networking to support workloads.
 
 ## Next steps
 

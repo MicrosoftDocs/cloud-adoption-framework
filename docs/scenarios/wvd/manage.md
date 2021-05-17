@@ -43,8 +43,7 @@ Unless this implementation is your organization's first or only deployment to th
 
 ### Inventory and visibility
 
-Monitoring Windows Virtual Desktop uses the tools, dashboards, and alerts in your operations baseline.
-However, you might need to add extra configuration to integrate data from your virtual desktop into operations monitoring tools like [Azure Monitor for Windows Virtual Desktop](/azure/virtual-desktop/azure-monitor).
+Monitoring Windows Virtual Desktop uses the tools, dashboards, and alerts in your operations baseline. However, you might need to add extra configuration to integrate data from your virtual desktop into operations monitoring tools like [Azure Monitor for Windows Virtual Desktop](/azure/virtual-desktop/azure-monitor).
 
 Once you've configured Azure Monitor to collect data on your virtual desktop, you can monitor the following areas as part of your centralized management processes:
 
@@ -57,17 +56,17 @@ These metrics will enable operations teams to monitor and react to performance a
 
 ### Operations compliance
 
-Patching and scaling are key elements of the on-going operational management of a Windows Virtual Desktop environment. The operators may sit in many different teams, depending on your desired operations approach.
+Patching and scaling are key elements of the ongoing operational management of a Windows Virtual Desktop environment. The operators may sit in many different teams, depending on your desired operations approach.
 
 To maintain operations compliance, an operator will monitor usage, resize assets to balance performance and cost, and patch the underlying systems to minimize risk and configuration drift.
 
-Central IT organizations tend to deliver these tasks as part of the operations baseline for infrastructure-as-a-Service (IaaS).
+Central IT organizations tend to deliver these tasks as part of the operations baseline for infrastructure as a service (IaaS).
 
 The following guides provide best practices for implementing management capabilities for Windows Virtual Desktop environments:
 
-- [WVD Azure Monitor](/azure/virtual-desktop/azure-monitor)
-- [WVD Azure Advisor](/azure/virtual-desktop/azure-advisor)
-- [WVD Configure Automatic Updates](/azure/virtual-desktop/configure-automatic-updates)
+- [Use Azure Monitor for Windows Virtual Desktop](/azure/virtual-desktop/azure-monitor)
+- [Use Azure Advisor for Windows Virtual Desktop](/azure/virtual-desktop/azure-advisor)
+- [Configure automatic updates for Windows Virtual Desktop](/azure/virtual-desktop/configure-automatic-updates)
 
 ### Protect and recover
 

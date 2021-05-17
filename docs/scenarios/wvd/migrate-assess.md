@@ -7,7 +7,7 @@ ms.date: 4/1/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
-ms.custom: internal
+ms.custom: think-tank
 ---
 
 # Windows Virtual Desktop assessment
@@ -22,9 +22,9 @@ Each Windows Virtual Desktop assessment will evaluate a combination of a user pe
 
 The answers to these questions start with data. In the Plan methodology, specifically [best practices](../../plan/index.md) and [digital estate assessment](../../digital-estate/index.md), data should already be collected and analyzed to create a migration plan. However, the questions in this specific workload assessment will likely require additional data. Data about the desktops, users, and workloads to be used by each user is required to develop a Windows Virtual Desktop deployment plan.
 
-If you use [Movere](/azure/migrate/migrate-services-overview#movere) as your data collection tool, you'll likely have the data you need to develop personas and answer these questions by using data in [Azure Migrate](/azure/migrate), just like any other migration scenario.
+If you use [Movere](/azure/migrate/migrate-services-overview#movere) as your data collection tool, you'll likely have the data you need to develop personas and answer these questions by using data in [Azure Migrate](/azure/migrate/), just like any other migration scenario.
 
-If you don't have the data that you require to answer all the questions in this section, an additional third-party software vendor can provide a separate discovery process to augment the data you have. The vendor, [Lakeside](/azure/migrate/migrate-services-overview#isv-integration), is also integrated with Azure Migrate within the virtual desktop infrastructure migration goals section. The vendor can help you map out a plan for Windows Virtual Desktop deployment, including personas, host pools, applications, and user profiles.
+If you don't have the data that you require to answer all the questions in this section, an additional third-party software vendor can provide a separate discovery process to augment the data you have. The vendor, [Lakeside Software](/azure/migrate/migrate-services-overview#isv-integration), is also integrated with Azure Migrate within the virtual desktop infrastructure migration goals section. The vendor can help you map out a plan for Windows Virtual Desktop deployment, including personas, host pools, applications, and user profiles.
 
 ### User personas
 
@@ -64,8 +64,8 @@ See examples for pricing in the [East US](https://azure.com/e/448606254c9a44f887
 Both Movere and Lakeside scans of the current on-premises environment can provide data about the applications that are run on end-user desktops. By using that data, you can create a list of all applications required per each persona. For each required application, the answers to the following questions will shape deployment iterations:
 
 - Do any applications need to be installed for the persona to use this desktop? Unless the persona uses 100 percent web-based software as a service applications, you'll likely need to [configure a custom master VHD image](/azure/virtual-desktop/set-up-customize-master-image) for each persona, with the required applications installed on the master image.
-- Does this persona need Microsoft 365 applications? If so, you'll need to select an image from the gallery that has M365 apps included or [add Microsoft 365 to a customized master VHD image](/azure/virtual-desktop/install-office-on-wvd-master-image).
-- Is this application compatible with Windows&nbsp;10 Enterprise multi-session? If an application isn't compatible, a [personal pool](/azure/virtual-desktop/configure-host-pool-personal-desktop-assignment-type) might be required to run the custom VHD image. For assistance with application and Windows Virtual Desktop compatibility issues, see the [desktop application assure](/fasttrack/win-10-app-assure-assistance-offered) service.
+- Does this persona need Microsoft 365 applications? If so, you'll need to select an image from the gallery that has Microsoft 365 apps included or [add Microsoft 365 to a customized master VHD image](/azure/virtual-desktop/install-office-on-wvd-master-image).
+- Is this application compatible with Windows&nbsp;10 Enterprise multi-session? If an application isn't compatible, a [personal pool](/azure/virtual-desktop/configure-host-pool-personal-desktop-assignment-type) might be required to run the custom VHD image. For assistance with application and Windows Virtual Desktop compatibility issues, see the [desktop application assure](/fasttrack/products-and-capabilities#app-assure) service.
 - Are mission-critical applications likely to suffer from latency between the Windows Virtual Desktop instance and any back-end systems? If so, you might want to consider migrating the back-end systems that support the application to Azure.
 
 The answers to these questions might require the plan to include remediation to the desktop images or supporting application components prior to desktop migration or deployment.

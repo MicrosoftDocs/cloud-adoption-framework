@@ -15,7 +15,7 @@ Best practice guidance encourages customers to create a single centralized cloud
 
 This guidance will help expose several considerations about virtual desktops that will have an impact on your strategy.
 
-## Virtual Desktop outcomes
+## Virtual desktop outcomes
 
 Virtual desktop migrations are motivated by a few common target outcomes, as shown and listed here:
 
@@ -47,7 +47,7 @@ Windows Virtual Desktop is an influential platform, and organizations have sever
 
 - **Infrastructure scale flexibility requirements:** The cloud offers the ability to seamlessly scale up and down with infrastructure as part of business transformation with Windows Virtual Desktop.
 
-- **Choice and Flexibility:** Customers now have the choice and flexibility to choose from any of the available virtual machine families and sizes, all optimized for different usage requirements. They can provide these virtual machines seamlessly to their user estate, all of which will likely have different compute requirements based upon their application portfolio.
+- **Choice and flexibility:** Customers now have the choice and flexibility to choose from any of the available virtual machine families and sizes, all optimized for different usage requirements. They can provide these virtual machines seamlessly to their user estate, all of which will likely have different compute requirements based on their application portfolio.
 
 - **Potential cost savings:** Customers can take advantage of Azure as an operational cost rather than upfront cost, because it's a consumption-based service. For example, virtual machines charge costs only for the time they are powered on, providing the capability to realize cost savings back to their organizations.
 
@@ -65,7 +65,7 @@ Motivations to adopt a Windows Virtual Desktop platform in the cloud are often b
 
 [Building a business justification for cloud migration](../../strategy/cloud-migration-business-case.md) can dispel many common myths for your team's financial plan. However, your finance team might need to develop a detailed financial model to account for all parts associated with Windows Virtual Desktop cloud adoption.
 
-The [Forrester study on the total economic impact of Microsoft Azure for Windows Virtual Desktop](https://azure.microsoft.com/resources/the-total-economic-impact-of-microsoft-windows-virtual-desktop-a-commissioned-study-conducted-by-forrester-consulting//) offers an analysis where the following justifications are typically defendable:
+The [Forrester study on the total economic impact of Microsoft Azure for Windows Virtual Desktop](https://azure.microsoft.com/resources/the-total-economic-impact-of-microsoft-windows-virtual-desktop-a-commissioned-study-conducted-by-forrester-consulting/) offers an analysis where the following justifications are typically defendable:
 
 - Time to market benefits exceed $3 million USD
 - Cost avoidance exceeds $7 million USD
@@ -88,9 +88,9 @@ When the migration to the cloud is finished, the overhead and costs of managing 
 
 ## How to measure progress during a Windows Virtual Desktop adoption
 
-Once you understand the top motivations for this scenario, the cloud strategy team can define measurable outcomes to further guide adoption activities. Examples of business outcomes commonly seen during cloud adoption can be reviewed in [business outcomes](../../strategy/business-outcomes/index.md).
+Once you understand the top motivations for this scenario, the cloud strategy team can define measurable outcomes to further guide adoption activities. Examples of business outcomes commonly seen during cloud adoption can be reviewed in [Business outcomes](../../strategy/business-outcomes/index.md).
 
-Given the impact of a Windows Virtual Desktop platform, you need to create many defined objectives and measurable key results. Commonly known as OKRs, objectives and key results can help you break down Windows Virtual Desktop adoption into manageable efforts. For more information, see [objectives and key results](../../strategy/business-outcomes/okr.md) to understand OKRs in more detail.
+Given the impact of a Windows Virtual Desktop platform, you need to create many defined objectives and measurable key results. Commonly known as OKRs, objectives and key results can help you break down Windows Virtual Desktop adoption into manageable efforts. For more information, see [Objectives and key results](../../strategy/business-outcomes/okr.md) to understand OKRs in more detail.
 
 ## Next step: Plan for a virtual desktop environment
 
@@ -102,6 +102,6 @@ The following resources provide guidance for specific points throughout the clou
 - [Assess for Windows Virtual Desktop migration or deployment](./migrate-assess.md)
 - [Deploy or migrate Windows Virtual Desktop instances](./migrate-deploy.md)
 - [Release your Windows Virtual Desktop deployment to production](./migrate-release.md)
-- [Enterprise Scale Landing Zone for Windows Virtual Desktop](./enterprise-scale-landing-zone.md)
-- [Manage your virtual desktop environment](./WVD-manage.md)
-- [Govern your virtual desktop environment](./WVD-govern.md)
+- [Enterprise-scale landing zone for Windows Virtual Desktop](./enterprise-scale-landing-zone.md)
+- [Manage your virtual desktop environment](./manage.md)
+- [Govern your virtual desktop environment](./govern.md)
