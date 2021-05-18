@@ -31,11 +31,11 @@ When you're planning your business case to migrate to the cloud, there are sever
 
 **Projections: On-premises costs in on-premises scenario:** Forecast what your on-premises costs will be if you don’t migrate to the cloud.
 
-:::image type="content" source="media/create-financial-plan/optimization-opportunity.png" alt-text="Diagram of comparison of cloud to on-premises or status quo.":::
+:::image type="content" source="media/create-financial-plan/optimization-opportunity.png" alt-text="Diagram of on-premises or status quo.":::
 
 **Projections: On-premises costs in Azure scenario:** Forecast what your on-premises costs will be when you migrate to the cloud in an Azure scenario. It takes resources and time to shift your environment to the cloud, so it’s important to account for them in the business case. When you build out the Azure scenario, be sure to take into consideration and include all of the core benefits the cloud provides.
 
-:::image type="content" source="media/create-financial-plan/optimized-consumption-plan.png" alt-text="Diagram of comparison of cloud to on-premises or status quo.":::
+:::image type="content" source="media/create-financial-plan/optimized-consumption-plan.png" alt-text="Diagram of on-premises costs in Azure scenario.":::
 
 **Projections: Migration timeline and Azure costs (optimized):** Project what migration timeline and the Azure costs will be with a given environment. Consider how you can optimize and get the most out of your Azure investment. For example, use reserved instances, scale capacity up and down, use the Azure hybrid benefit, and right-size your resources.
 
