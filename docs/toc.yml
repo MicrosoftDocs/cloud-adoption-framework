@@ -74,6 +74,8 @@ items:
         href: scenarios/aks/index.md
       - name: SAP
         href: scenarios/sap/index.md
+      - name: Virtual desktops
+        href: scenarios/wvd/index.md
 
     - name: Antipatterns to avoid
       href: antipatterns/antipatterns-to-avoid.md
@@ -653,23 +655,6 @@ items:
               href: /azure/vmware-cloudsimple/disaster-recovery-zerto?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
             - name: Set up CloudSimple Private Cloud as disaster recovery site using VMware SRM
               href: /azure/vmware-cloudsimple/disaster-recovery-site-recovery-manager?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
-
-        - name: Windows Virtual Desktop
-          items:
-          - name: Overview
-            href: scenarios/wvd/index.md
-          - name: Planning
-            href: scenarios/wvd/plan.md
-          - name: Azure landing zone review
-            href: scenarios/wvd/ready.md
-          - name: Proof of concept
-            href: scenarios/wvd/proof-of-concept.md
-          - name: Assess
-            href: scenarios/wvd/migrate-assess.md
-          - name: Migrate (or Deploy)
-            href: scenarios/wvd/migrate-deploy.md
-          - name: Release
-            href: scenarios/wvd/migrate-release.md
 
         - name: Data platforms
           items:
