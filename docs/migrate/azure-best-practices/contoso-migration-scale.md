@@ -163,7 +163,7 @@ Contoso will use automated scripts to install the required Windows or Linux agen
 
 #### Database tools
 
-In addition to Azure Migrate, Contoso will focus on using tools specifically for database assessment. Tools such as [Data Migration Assistant](/sql/dma/dma-overview?view=sql-server-2017) will help assess SQL Server databases for migration.
+In addition to Azure Migrate, Contoso will focus on using tools specifically for database assessment. Tools such as [Data Migration Assistant](/sql/dma/dma-overview) will help assess SQL Server databases for migration.
 
 Data Migration Assistant can help Contoso to figure out whether on-premises databases are compatible with a range of Azure database solutions. These solutions include Azure SQL Database, SQL Server running on an Azure IaaS VM, and Azure SQL Managed Instance.
 

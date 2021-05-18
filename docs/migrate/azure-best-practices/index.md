@@ -14,7 +14,7 @@ ms.custom: internal, seo-azure-migrate
 
 Start with the [Azure migration guide](../azure-migration-guide/index.md) in the Cloud Adoption Framework if you're interested in migrating to Azure. That guide walks you through a set of tools and basic approaches to migrating virtual machines to the cloud.
 
-The following checklists provide Azure cloud migration best practices that go beyond the basic cloud-native tools. These outline the common areas of complexity that might require the scope of the migration to expand beyond the [Azure migration guide](../azure-migration-guide/index.md).
+The following checklists provide Azure cloud migration best practices that go beyond the basic cloud-native tools. These checklists outline the common areas of complexity that might require the scope of the migration to expand beyond the [Azure migration guide](../azure-migration-guide/index.md).
 
 ## Migration best practices for business-driven scope expansion
 
@@ -37,7 +37,7 @@ The following checklists provide Azure cloud migration best practices that go be
 
 ## Next steps
 
-The following is a good starting point for reviewing Azure migration best practices.
+The following step is a good starting point for reviewing Azure migration best practices.
 
 > [!div class="nextstepaction"]
 > [Multiple datacenters](./multiple-datacenters.md)
