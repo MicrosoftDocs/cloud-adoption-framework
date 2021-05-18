@@ -3,7 +3,7 @@ title: Migrate to or deploy Windows Virtual Desktop session hosts to Azure
 description: Use the Cloud Adoption Framework best practices to migrate or deploy Windows Virtual Desktop instances to Azure.
 author: DominicAllen
 ms.author: doalle
-ms.date: 4/1/2021
+ms.date: 05/18/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy

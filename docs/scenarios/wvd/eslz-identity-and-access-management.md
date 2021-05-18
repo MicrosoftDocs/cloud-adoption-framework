@@ -3,7 +3,7 @@ title: Enterprise-scale identity and access management for Windows Virtual Deskt
 description: Learn how to use Azure role-based access control for identity and access management in your enterprise-scale virtual desktop infrastructure.
 author: wahidsaleemi
 ms.author: wasaleem
-ms.date: 11/05/2020
+ms.date: 05/18/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -63,5 +63,5 @@ Windows Virtual Desktop has custom Azure roles designed for each functional area
 - Segregate session host virtual machines into Active Directory organization units for each host pool to more easily manage policies and orphaned objects. For more information, see [Virtual machine details](/azure/virtual-desktop/create-host-pools-azure-marketplace#virtual-machine-details).
 - Use a solution like Local Administrator Password Solution (LAPS) to rotate local administrator passwords on Windows Virtual Desktop session hosts frequently. For more information, see [Security assessment: Microsoft LAPS usage](/defender-for-identity/cas-isp-laps).
 - For users, assign the Desktop Virtualization User built-in role to security groups to grant access to Windows Virtual Desktop application groups. For more information, see [Delegated access in Windows Virtual Desktop](/azure/virtual-desktop/delegated-access-virtual-desktop).
-- Create conditional access policies for Windows Virtual Desktop. Such policies can enforce multifactor authentication based on conditions like risky sign-ins to increase an organization's security posture. For more information, see [Enable Azure multifactor authentication for Windows Virtual Desktop](/azure/virtual-desktop/set-up-mfa).
+- Create conditional access policies for Windows Virtual Desktop. Such policies can enforce multifactor authentication based on conditions like risky sign-ins to increase an organization's security posture. For more information, see [Enable Azure Active Directory multifactor authentication for Windows Virtual Desktop](/azure/virtual-desktop/set-up-mfa).
 - Configure AD FS to enable single sign-on for users on the corporate network.

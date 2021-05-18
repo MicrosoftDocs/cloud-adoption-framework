@@ -3,7 +3,7 @@ title: Assess Windows Virtual Desktop for Azure
 description: Use the Cloud Adoption Framework for Azure to assess your Windows Virtual Desktop migration scenario using best practices that accelerate the migration or deployment process.
 author: DominicAllen
 ms.author: doalle
-ms.date: 4/1/2020
+ms.date: 05/18/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
