@@ -974,8 +974,6 @@ items:
         items:
         - name: Overview and Azure toolchain
           href: innovate/best-practices/index.md
-        - name: Customer challenges and blockers
-          href: innovate/considerations/challenges.md
         - name: Democratize data
           items:
           - name: Overview
