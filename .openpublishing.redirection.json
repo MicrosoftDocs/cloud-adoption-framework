@@ -97,7 +97,7 @@
       },
       {
          "source_path": "docs/strategy/first-adoption-project.md",
-         "redirect_url": "/azure/cloud-adoption-framework/strategy/motivations.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/motivations",
          "redirect_document_id": true
       },
       {
