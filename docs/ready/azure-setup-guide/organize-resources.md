@@ -138,7 +138,7 @@ The following table includes naming patterns for a few sample types of Azure res
 
 ::: zone target="docs"
 
->[!TIP]
+> [!TIP]
 > Avoid using any special characters (`-` or `_`) as the first or last character in any name. These characters cause most validation rules to fail.
 
 ::: zone-end

@@ -7,9 +7,7 @@ ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
-ms.custom: 
- - internal
- - seo-caf-innovate
+ms.custom: internal, seo-caf-innovate
 keywords: digital inventions, digital invention, best practices, digital best practices
 ---
 
@@ -25,7 +23,7 @@ There are many combinations of cloud-based tools for digital invention and innov
 
 ## Toolchain
 
-The following article series demonstrates a few of the best practices and tools that closely align with the Innovate methodology. To test your hypothesis, start with the overview page of the type of digital invention you require.  The overview page has the best practice guidance to act on so that you can [build with customer empathy](../considerations/build.md).
+The following article series demonstrates a few of the best practices and tools that closely align with the Innovate methodology. To test your hypothesis, start with the overview page of the type of digital invention you require. The overview page has the best practice guidance to act on so that you can [build with customer empathy](../considerations/build.md).
 
 Here are the types of digital invention in this article series:
 
