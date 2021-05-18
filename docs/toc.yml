@@ -269,7 +269,7 @@ items:
             - name: DNS for on-premises and Azure resources
               href: ready/azure-best-practices/dns-for-on-premises-and-azure-resources.md
             - name: Private Link and DNS integration at scale
-              href: ready/azure-best-practices/private-link-and-dns-integration-at-scale.md  
+              href: ready/azure-best-practices/private-link-and-dns-integration-at-scale.md
             - name: Define an Azure network topology
               href: ready/azure-best-practices/define-an-azure-network-topology.md
             - name: Virtual WAN network topology (Microsoft-managed)
@@ -289,7 +289,7 @@ items:
             - name: Define network encryption requirements
               href: ready/azure-best-practices/define-network-encryption-requirements.md
             - name: Plan for traffic inspection
-              href: ready/azure-best-practices/plan-for-traffic-inspection.md  
+              href: ready/azure-best-practices/plan-for-traffic-inspection.md
             - name: Connectivity to other cloud providers
               href: ready/azure-best-practices/connectivity-to-other-providers.md
           - name: Management and monitoring

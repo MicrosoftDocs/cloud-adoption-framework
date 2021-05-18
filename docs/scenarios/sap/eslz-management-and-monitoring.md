@@ -22,7 +22,7 @@ Here are some design considerations for SAP on Azure monitoring and management:
 
 - Consider inter-virtual machine (VM) latency monitoring for latency-sensitive applications.
 
-- Consider scheduling [AzAcSnap](/azure/azure-netapp-files/azacsnap-introduction) from a central VM rather than on individual VMs.
+- Consider scheduling [`AzAcSnap`](/azure/azure-netapp-files/azacsnap-introduction) from a central VM rather than on individual VMs.
 
 **Design recommendations:**
 

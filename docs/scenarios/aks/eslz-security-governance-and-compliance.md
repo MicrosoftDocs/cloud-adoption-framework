@@ -10,6 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank, e2e-aks
 ---
 
+<!-- cspell:ignore seccomp kured -->
 <!-- docutune:casing "Contoso Financials" -->
 
 # AKS enterprise-scale platform security governance and compliance

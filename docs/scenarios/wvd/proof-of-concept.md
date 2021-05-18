@@ -25,7 +25,7 @@ The following approach to the migration process is simplified to outline a proof
 
 ## Assumptions
 
-The proof of concept approach could meet some production needs, but it's built on a number of assumptions.
+The proof-of-concept approach could meet some production needs, but it's built on a number of assumptions.
 
 It's unlikely that all the following assumptions will prove to be true for every enterprise migration of Windows Virtual Desktop, but they serve as a reference point to determine where tailoring may be required.
 

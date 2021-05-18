@@ -10,7 +10,7 @@ ms.subservice: migrate
 ms.custom: think-tank
 ---
 
-<!-- cSpell:ignore WEBVM SQLVM contosohost vcenter contosodc AOAG SQLAOG SQLAOGAVSET contosoadmin contosocloudwitness MSSQLSERVER BEPOOL contosovmsacc SHAOG NSGs inetpub iisreset -->
+<!-- cSpell:ignore AOAG SQLAOG SQLAOGAVSET BEPOOL contosovmsacc SHAOG -->
 
 # Rehost an on-premises application with Azure VMs and SQL Server Always On availability groups
 
@@ -233,7 +233,7 @@ The Contoso admins can now enable Always On availability groups:
 
 1. They restart the service for changes to take effect.
 
-With Always On availability groups enabled, Contoso can set up the Always On availability group that will protect the SmartHotel360 database.
+With Always On availability groups enabled, Contoso can set up the Always On availability group that will protect the `SmartHotel360` database.
 
 **Need more help?**
 
@@ -273,7 +273,7 @@ The Contoso admins create a health probe so that the load balancer can monitor t
 
 To create the probe, the Contoso admins:
 
-1. In the load balancer settings in the portal, create a health probe: **SQLAlwaysOnEndPointProbe**.
+1. In the load balancer settings in the portal, create a health probe: `SQLAlwaysOnEndPointProbe`.
 1. Set the probe to monitor VMs on TCP port 59999.
 1. Set an interval of 5 seconds between probes and a threshold of 2. If two probes fail, the VM will be considered unhealthy.
 
@@ -536,7 +536,7 @@ As the final step in the migration process, the Contoso admins update the connec
 
 ### Clean up after migration
 
-After migration, the SmartHotel360 application is running on an Azure VM. The SmartHotel360 database is located in the SQL Server cluster in Azure.
+After migration, the SmartHotel360 application is running on an Azure VM. The `SmartHotel360` database is located in the SQL Server cluster in Azure.
 
 Now, Contoso needs to finish these cleanup steps:
 
@@ -556,7 +556,7 @@ The Contoso security team reviews the virtual machines `WEBVM`, `SQLAOG1`, and `
 
 - Review the network security groups (NSGs) for the VM to control access. NSGs are used to ensure that only traffic allowed to the application can pass.
 - Consider securing the data on the disk by using Azure Disk Encryption and Azure Key Vault.
-- Evaluate transparent data encryption. Then enable it on the SmartHotel360 database running on the new Always On availability group. Learn more about [transparent data encryption](/sql/relational-databases/security/encryption/transparent-data-encryption?view=sql-server-2017).
+- Evaluate transparent data encryption. Then enable it on the `SmartHotel360` database running on the new Always On availability group. Learn more about [transparent data encryption](/sql/relational-databases/security/encryption/transparent-data-encryption).
 
 For more information, see [Security best practices for IaaS workloads in Azure](/azure/security/fundamentals/iaas).
 
