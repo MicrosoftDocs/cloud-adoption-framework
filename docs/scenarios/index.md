@@ -23,7 +23,7 @@ The following diagram and table outline a number of scenarios that follow the sa
 
 ![Diagram of the Cloud Adoption Framework migration model showing the virtual machines, applications, data, and hybrid resources you will need.](../_images/migrate/one-migrate.png)
 
-| | <span>&nbsp; | <span>&nbsp; | <span>&nbsp;|
+| <span title="Scenario">&nbsp;</span> | <span title="Column 2">&nbsp;</span> | <span title="Column 3">&nbsp;</span> | <span title="Column 4">&nbsp;</span> |
 |--|---------|---------|---------|
 | Virtual machines | [Virtual machines](../migrate/azure-best-practices/contoso-migration-rehost-vm.md) | [Linux servers](../migrate/azure-best-practices/contoso-migration-rehost-linux-vm.md) | [Virtual desktops](./wvd/index.md) |
 | Applications | [ASP.NET](../migrate/azure-best-practices/contoso-migration-refactor-web-app-sql.md) | [Java](/azure/java/migration-overview?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json) | [PHP](../migrate/azure-best-practices/contoso-migration-refactor-linux-app-service-mysql.md) |
