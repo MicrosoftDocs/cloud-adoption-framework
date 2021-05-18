@@ -3,7 +3,7 @@ title: Enterprise-scale platform automation and DevOps for Windows Virtual Deskt
 description: Learn how this enterprise-scale scenario can improve platform automation and DevOps for Windows Virtual Desktop.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 09/11/2020
+ms.date: 05/18/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready

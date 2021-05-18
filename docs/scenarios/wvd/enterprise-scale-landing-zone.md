@@ -3,7 +3,7 @@ title: Enterprise-scale support for Windows Virtual Desktop
 description: Learn how enterprise-scale support for the Windows Virtual Desktop construction set can accelerate the adoption of Windows Virtual Desktop.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 09/11/2020
+ms.date: 05/18/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -32,7 +32,7 @@ Learn about guidelines that drive the design of the Cloud Adoption Framework for
 
 The following image shows a conceptual reference architecture that demonstrates design areas and best practices.
 
-![Construction set architecture](./media/windows-virtual-desktop-architecture.png)
+[![A diagram of a reference architecture for a Windows Virtual Desktop environment.](./media/windows-virtual-desktop-architecture.png)](./media/windows-virtual-desktop-architecture.png#lightbox)
 
 ### Implementation with Azure Resource Manager (ARM) templates for Remote Desktop Services
 

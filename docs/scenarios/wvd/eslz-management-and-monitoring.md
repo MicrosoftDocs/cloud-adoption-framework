@@ -3,7 +3,7 @@ title: Enterprise-scale management and monitoring for Windows Virtual Desktop
 description: Learn how this enterprise-scale scenario can improve the management and monitoring of Windows Virtual Desktop.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 01/22/2021
+ms.date: 05/18/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -11,7 +11,11 @@ ms.subservice: ready
 
 # Management and monitoring for a Windows Virtual Desktop enterprise-scale scenario
 
+Achieve operational excellence and customer success by properly designing your Windows Virtual Desktop environment with management and monitoring in mind.
+
 ## Platform management and monitoring
+
+Review the following considerations and recommendation for platform management and monitoring of Windows Virtual Desktop.
 
 ### Design considerations
 
@@ -79,6 +83,8 @@ ms.subservice: ready
 For a glossary, data storage cost estimations, and additional troubleshooting guidance, see [Azure Monitor next steps](/azure/virtual-desktop/azure-monitor#next-steps).
 
 ## Infrastructure management and monitoring
+
+Review the following considerations and recommendation for infrastructure management and monitoring of Windows Virtual Desktop.
 
 ### Design considerations: Infrastructure
 
