@@ -974,6 +974,8 @@ items:
         items:
         - name: Overview and Azure toolchain
           href: innovate/best-practices/index.md
+        - name: Customer challenges and blockers
+          href: innovate/considerations/challenges.md
         - name: Democratize data
           items:
           - name: Overview
@@ -1255,6 +1257,7 @@ items:
             items:
             - name: What is Azure Cognitive Search?
               href: innovate\best-practices\cognitive-search.md
+
       - name: Process improvements
         items:
         - name: Overview
