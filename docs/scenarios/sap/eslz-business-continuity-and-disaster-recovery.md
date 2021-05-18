@@ -163,7 +163,7 @@ Another factor that you should consider when choosing your DR region is the RPO 
 
 - Set up ExpressRoute connections from on-premises to the primary and secondary Azure DR region.
 
-- An alternative to using ExpressRoute is to set up VPN connections from on-premies to the primary and secondary Azure DR region.
+- An alternative to using ExpressRoute is to set up VPN connections from on-premises to the primary and secondary Azure DR region.
 
 - Use Site Recovery to replicate an application server to a DR site. Site Recovery can also help with replicating central-services cluster VMs to the DR site. When you invoke DR, you'll need to reconfigure the Linux Pacemaker cluster on the DR site (for example, replace the VIP or SBD, run `corosync.conf`, and more).
 
