@@ -256,6 +256,8 @@
         "hierarchyid",
         "highres",
         "ipsec",
+        "kube",
+        "kubectl",
         "linktype",
         "localizationpriority",
         "mariadb",
