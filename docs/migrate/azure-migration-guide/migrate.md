@@ -27,21 +27,22 @@ Azure Migrate is a centralized hub to assess and migrate on-premises servers, in
 
 - Unified platform with assessment, migration, and progress tracking.
 - Enhanced assessment and migration capabilities:
-  - On-premises servers including Hyper-V and VMware.
+  - Assess on-premises servers including SQL Server instances and migrate them to Azure virtual machines or Azure VMware Solution (AVS) (Preview).
   - Agentless migration of VMware virtual machines to Azure.
-  - Database migrations to Azure SQL Database or SQL Managed Instance
-  - Web applications
-  - Virtual desktop infrastructure (VDI) to Windows Virtual Desktop in Azure
-  - Large data collections using Azure Data Box products
+  - Assess on-premises databases and migrate them to Azure SQL Database or to SQL Managed Instance.
+  - Assess on-premises web applications and migrate them to Azure App Service by using the Azure App Service Migration Assistant.
+  - Assess your on-premises virtual desktop infrastructure (VDI) and migrate it to Windows Virtual Desktop in Azure.
+  - Migrate large amounts of data to Azure quickly and cost-effectively using Azure Data Box products.
 - Extensible approach with ISV integration (such as Cloudamize).
 
 To perform a migration using Azure Migrate, follow these steps:
 
 1. Search for Azure Migrate under **All services**. Select **Azure Migrate** to continue.
-1. Select **Add a tool** to start your migration project.
-1. Select the subscription, resource group, and geography to host the migration.
-1. Select **Select assessment tool** > **Azure Migrate: Server assessment** > **Next**.
-1. Select **Review + add tools**, and verify the configuration. Select **Add tools** to initiate the job to create the migration project and register the selected solutions.
+1. 1. In **Overview**, select **Discover, assess and migrate**.
+1. Select **Add tools**.
+1. In **Project**, select your Azure subscription, then create a resource group if you don't have one.
+1. In **Project Details**, specify the project name and geography where you want to create the project, then select **Create**.
+1. After creating the project, tools are visible in project and user can start with Discovery.
 
 > [!NOTE]
 > For guidance specific to your scenario refer to the tutorials and Azure Migrate [documentation](/azure/migrate/migrate-services-overview).
@@ -205,7 +206,7 @@ Cloudamize is an ISV service that covers all phases of the migration strategy.
 
 Zerto provides virtual replication handling both Microsoft Hyper-V and VMware vSphere environments.
 
-[Learn more](https://www.zerto.com/modernize)
+[Learn more](https://go.microsoft.com/fwlink/?linkid=2152102)
 
 ### Carbonite
 

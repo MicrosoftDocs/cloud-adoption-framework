@@ -7,7 +7,7 @@ ms.date: 06/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: think-tank
+ms.custom: internal
 ---
 
 # Enterprise-scale security, governance, and compliance
@@ -219,7 +219,7 @@ As business units request to deploy workloads to Azure, you need additional visi
 | Identity and access management | Authentication and access control                                       | Are all control plane operations governed by Azure AD? Is there a nested control plane, such as with Azure Kubernetes Service?                             |
 |                              |                                                                       | What methods exist to provide access to the data plane?                                                                                      |
 |                              |                                                                       | Does the data plane integrate with Azure AD?                                                                                                      |
-|                              |                                                                       | Does authentication bwtween Azure services use managed identities  or service principals?                                                         |
+|                              |                                                                       | Does authentication between Azure services use managed identities or service principals?                                                         |
 |                              |                                                                       | Is Azure-to-IaaS (service-to-virtual-network) authentication via Azure AD?                                                                                   |
 |                              |                                                                       | How are any applicable keys or shared access signatures managed?                                                                                                     |
 |                              |                                                                       | How can access be revoked?                                                                                                                   |

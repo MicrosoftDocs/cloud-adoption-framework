@@ -7,7 +7,10 @@ ms.date: 03/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
+ms.custom: think-tank, e2e-aks
 ---
+
+<!-- cspell:ignore kube Reshifter -->
 
 # Migrate workloads to modern containers
 
@@ -21,7 +24,7 @@ You can migrate to Azure Kubernetes Service (AKS) to accelerate containers in th
 
 ### Assess workloads
 
-You'll need an inventory of workloads and their current containerization status. Workloads cannot be migrated until they have been validated as functional and performant while operating within a container. Work with application owners to allocate time to perform containerization, validate results, and build image building pipelines for the work. Take note of unique dependencies such as Windows-specific requirements (e.g. Gmsa), local file system usage, cache implementation details, singleton implementations, and dependencies such as databases.
+You'll need an inventory of workloads and their current containerization status. Workloads cannot be migrated until they have been validated as functional and performant while operating within a container. Work with application owners to allocate time to perform containerization, validate results, and build image building pipelines for the work. Take note of unique dependencies such as Windows-specific requirements (such as group managed service accounts), local file system usage, cache implementation details, singleton implementations, and dependencies such as databases.
 
 While a centralized team can lead the containerization efforts across an org, consider that more of a project management function and technical requirements gathering and oversight process, application owners will need to be highly involved in this process.
 

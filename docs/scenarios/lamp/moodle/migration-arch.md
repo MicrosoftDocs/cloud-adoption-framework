@@ -84,7 +84,7 @@ If your on-premises PHP and Moodle versions differ from the preceding values, up
 
    For example, for Moodle 3.9, the `moodleVersion` value should be `MOODLE_39_STABLE`.
 
-   :::image type="content" source="images/edit-template.png" alt-text="Screenshot showing the Edit template page for a Moodle deployment ARM template." border="false":::
+   :::image type="content" source="./images/edit-template.png" alt-text="Screenshot showing the Edit template page for a Moodle deployment ARM template." border="false":::
 
 1. Select **Save**.
 

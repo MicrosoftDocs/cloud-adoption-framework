@@ -6,7 +6,7 @@ ms.author: brblanch
 ms.date: 01/29/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: operate
+ms.subservice: manage
 ms.custom: think-tank, e2e-hybrid
 ---
 
@@ -145,7 +145,7 @@ If you want to demo/control the actual registration process, do the following:
 
 4. Create a user and password for the VM by selecting **Set Password** and specifying a user name.
 
-    ![A screenshot showing how to set a username and password for a Windows server in the GCP console.](./media/gcp-windows/name-pword.png)
+    ![A screenshot showing how to set a username and password for a Windows server in the GCP console.](./media/gcp-windows/name-password.png)
 
 5. RDP into the VM by selecting the RDP button from the VM page in the GCP console, and sign in with the username and password you just created.
 

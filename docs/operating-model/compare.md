@@ -6,7 +6,7 @@ ms.author: brblanch
 ms.date: 08/14/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: overview
+ms.subservice: general
 ms.custom: internal, operating-model
 ---
 
@@ -38,7 +38,7 @@ A cloud operating model is primarily driven by two factors:
 
 - **Strategic priorities or [motivations](../strategy/motivations.md):** Each operating model is capable of delivering the typical [strategic motivations for cloud adoption](../strategy/motivations.md). However, some operating models simplify realizing specific motivations.
 
-- **[Portfolio scope](../reference/fundamental-concepts/hosting-hierarchy.md):** The portfolio scope row below identifies the largest scope that a specific operating model is designed to support. For example, centralized operations is designed for a small number of landing zones. But that operating model decision could inject operational risks for an organization that's trying to manage a large, complex portfolio that might require many landing zones or variable complexity in landing zone design.
+- [Portfolio scope](../reference/fundamental-concepts/hosting-hierarchy.md): The portfolio scope row below identifies the largest scope that a specific operating model is designed to support. For example, centralized operations is designed for a small number of landing zones. But that operating model decision could inject operational risks for an organization that's trying to manage a large, complex portfolio that might require many landing zones or variable complexity in landing zone design.
 
 > [!IMPORTANT]
 > Adopting the cloud often triggers a reflection on the current operating model and might lead to a shift from one of the common operating models to another. But cloud adoption isn't the only trigger. As business priorities and the scope of cloud adoption change how the portfolio needs to be supported, there could be other shifts in the most-appropriately aligned operating model. When the board or other executive teams develop 5 to 10 year business plans, those plans often include a requirement (explicit or implied) to adjust the operating model. While these common models are a good reference for guiding decisions, keep in mind that your operating model might change or you might need to customize one of these models to meet your requirements and constraints.
@@ -47,13 +47,13 @@ A cloud operating model is primarily driven by two factors:
 
 While many teams and individuals will be responsible for supporting different functions, each of the common operating models assigns final accountability for decisions and their outcomes to one team or one individual. This approach affects how the operating model is funded and what level of support is provided for each function.
 
-||Decentralized ops |Centralized ops  |Enterprise ops          |Distributed ops|
-|---------              |---------      |---------    |---------          |---------|
-|**Business alignment**|[Workload team](../organize/cloud-adoption.md)|[Central cloud strategy](../organize/cloud-strategy.md)|[CCoE](../organize/cloud-center-of-excellence.md)|Variable - [form a broad cloud strategy team?](../get-started/team/cloud-strategy.md)|
-|**[Cloud operations](../organize/cloud-operations.md)**|[Workload team](../organize/cloud-adoption.md)|[Central IT](../organize/central-it.md)|[CCoE](../organize/cloud-center-of-excellence.md)|Based on portfolio analysis - see [Business alignment](../manage/considerations/business-alignment.md) and [business commitments](../manage/considerations/commitment.md)|
-|**[Cloud governance](../organize/cloud-governance.md)**|[Workload team](../organize/cloud-adoption.md)|[Central IT](../organize/central-it.md)|[CCoE](../organize/cloud-center-of-excellence.md)|[Multiple layers of governance](../govern/guides/complex/multiple-layers-of-governance.md)|
-|**[Cloud security](../organize/cloud-security.md)**|[Workload team](../organize/cloud-adoption.md)|[Security operations center (SOC)](../organize/cloud-security-operations-center.md)|[CCoE](../organize/cloud-center-of-excellence.md) + [SOC](../organize/cloud-security-operations-center.md)|Mixed - see [Define a security strategy](../strategy/define-security-strategy.md)|
-|**[Cloud automation and DevOps](../organize/cloud-automation.md)**|[Workload team](../organize/cloud-adoption.md)|[Central IT](../organize/central-it.md) or N/A|[CCoE](../organize/cloud-center-of-excellence.md)|Based on portfolio analysis - see [Business alignment](../manage/considerations/business-alignment.md) and [business commitments](../manage/considerations/commitment.md)|
+|  | Decentralized ops | Centralized ops | Enterprise ops | Distributed ops |
+|--|--|--|--|--|
+| **Business alignment** | [Workload team](../organize/cloud-adoption.md) | [Central cloud strategy](../organize/cloud-strategy.md) | [CCoE](../organize/cloud-center-of-excellence.md) | Variable - [form a broad cloud strategy team?](../get-started/team/cloud-strategy.md) |
+| **[Cloud operations](../organize/cloud-operations.md)** | [Workload team](../organize/cloud-adoption.md) | [Central IT](../organize/central-it.md) | [CCoE](../organize/cloud-center-of-excellence.md) | Based on portfolio analysis - see [Business alignment](../manage/considerations/business-alignment.md) and [business commitments](../manage/considerations/commitment.md) |
+| **[Cloud governance](../organize/cloud-governance.md)** | [Workload team](../organize/cloud-adoption.md) | [Central IT](../organize/central-it.md) | [CCoE](../organize/cloud-center-of-excellence.md) | [Multiple layers of governance](../govern/guides/complex/multiple-layers-of-governance.md) |
+| **[Cloud security](../organize/cloud-security.md)** | [Workload team](../organize/cloud-adoption.md) | [Security operations center (SOC)](../organize/cloud-security-operations-center.md) | [CCoE](../organize/cloud-center-of-excellence.md) + [SOC](../organize/cloud-security-operations-center.md) | Mixed - see [Define a security strategy](../strategy/define-security-strategy.md) |
+| **[Cloud automation and DevOps](../organize/cloud-automation.md)** | [Workload team](../organize/cloud-adoption.md) | [Central IT](../organize/central-it.md) or N/A | [CCoE](../organize/cloud-center-of-excellence.md) | Based on portfolio analysis - see [Business alignment](../manage/considerations/business-alignment.md) and [business commitments](../manage/considerations/commitment.md) |
 
 ### Accelerate operating model implementation in Azure
 

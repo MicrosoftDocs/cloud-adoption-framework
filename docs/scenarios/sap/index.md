@@ -6,8 +6,8 @@ ms.author: brblanch
 ms.date: 03/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: overview
-ms.custom: think-tank
+ms.subservice: general
+ms.custom: think-tank, e2e-sap
 ---
 
 # Introduction to an SAP adoption scenario

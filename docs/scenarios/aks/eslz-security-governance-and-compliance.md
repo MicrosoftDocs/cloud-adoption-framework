@@ -7,8 +7,10 @@ ms.date: 03/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: think-tank, e2e-aks
 ---
 
+<!-- cspell:ignore seccomp kured -->
 <!-- docutune:casing "Contoso Financials" -->
 
 # AKS enterprise-scale platform security governance and compliance

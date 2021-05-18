@@ -1,16 +1,17 @@
 ---
-title: "Enterprise-Scale support for hybrid and multicloud"
+title: Enterprise-Scale support for hybrid and multicloud
 description: Describe how enterprise-scale can accelerate adoption of hybrid or multi-cloud architectures.
-author: DominicAllen
+author: JefferyMitchell
 ms.author: doalle
 ms.date: 03/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: think-tank, e2e-hybrid
 ---
 
 # Enterprise-scale support for hybrid and multicloud
-  
+
 Enterprise-scale landing zones provide a specific architectural approach, reference architecture, and reference implementations to prepare your landing zones for mission-critical technology platforms and any supported workloads.
 
 Enterprise-scale was built with hybrid and multicloud in mind. Supporting hybrid and multicloud requires three simple additions to the reference architecture:
@@ -60,8 +61,7 @@ For example, [Guidance can be found here](../../ready/azure-best-practices/conne
 
 ## Network
 
-Networking topology is a key consideration when integrating between Azure and external environments and should be factored into any planning exercises and design work in order to ensure a smooth implementation.
-The following provides some specific and actionable guidance on specific topics:
+Networking topology is a key consideration when integrating between Azure and external environments and should be factored into any planning exercises and design work in order to ensure a smooth implementation. The following links provide specific and actionable guidance on specific topics:
 
 - [Connectivity to Azure](../../ready/azure-best-practices/connectivity-to-azure.md)
 - [IP Addressing](../../ready/azure-best-practices/plan-for-ip-addressing.md)
@@ -71,9 +71,7 @@ The following provides some specific and actionable guidance on specific topics:
 
 ## Identity
 
-As organizations build out cloud environments alongside existing on-premises datacenters, identity becomes an area for consideration to ensure issues are not introduced.
-With applications spread between on-premises and the cloud, management of access for users can become a challenge.
-Azure has technologies that help organizations manage identities across on-premises and cloud environments in order to simplify the experience for users.
+As organizations build out cloud environments alongside existing on-premises datacenters, identity becomes an area for consideration to ensure issues are not introduced. With applications spread between on-premises and the cloud, management of access for users can become a challenge. Azure has technologies that help organizations manage identities across on-premises and cloud environments in order to simplify the experience for users.
 
 To achieve hybrid identity, organizations should consider the following three Azure Active Directory approaches:
 
@@ -81,31 +79,26 @@ To achieve hybrid identity, organizations should consider the following three Az
 - [Pass-through authentication (PTA)](/azure/active-directory/hybrid/how-to-connect-pta)
 - [Federation (AD FS)](/azure/active-directory/hybrid/whatis-fed)
 
-[Further information can be found here](/azure/active-directory/hybrid/whatis-hybrid-identity)  for planning identity models in a hybrid environment.
+[Further information can be found here](/azure/active-directory/hybrid/whatis-hybrid-identity) for planning identity models in a hybrid environment.
 
 ## Governance
 
-Expanding infrastructure and applications across multiple locations potentially introduces additional complexity to maintaining governance standards.
-As part of the planning for hybrid, centralized governance tools and processes should be implemented in order to establish good patterns as workloads scale out.
+Expanding infrastructure and applications across multiple locations potentially introduces additional complexity to maintaining governance standards. As part of the planning for hybrid, centralized governance tools and processes should be implemented in order to establish good patterns as workloads scale out.
 
-The [Cloud Adoption Framework's Enterprise Scale Landing Zone architecture](../../ready/enterprise-scale/architecture.md) includes patterns for standardizing the deployment of [Azure Policy](/azure/governance/policy/overview) and [Role-based Access Controls (RBAC)](../../ready/azure-setup-guide/manage-access.md) through structured use of management groups to segment resources into logical groupings.
-These patterns can be extended using technologies such as Azure Arc, which is detailed further below.
+The [Cloud Adoption Framework's Enterprise Scale Landing Zone architecture](../../ready/enterprise-scale/architecture.md) includes patterns for standardizing the deployment of [Azure Policy](/azure/governance/policy/overview) and [Role-based Access Controls (RBAC)](../../ready/azure-setup-guide/manage-access.md) through structured use of management groups to segment resources into logical groupings. These patterns can be extended using technologies such as Azure Arc, which is detailed further below.
 
 ## Management
 
-Similar to the considerations needed for governance in a hybrid environment, managing distributed workloads at scale requires planning in order to ensure issues are not introduced as the span of deployments scales.
-Using technologies such as [Log Analytics](/azure/azure-monitor/log-query/log-analytics-overview), [Application Insights](/azure/azure-monitor/app/app-insights-overview), [Azure Monitor](https://azure.microsoft.com/services/monitor/#features), and [Azure Security Center](/azure/security-center/) to [aggregate telemetry and work from a 'single pane of glass'](../../manage/azure-management-guide/inventory.md?tabs=AzureServiceHealth%2CLog-Analytics%2CAzure-Monitor%2CConfigure-solutions) enables infrastructure and application teams to manage by exception and focus on fixing identified issues from a consolidated view.  
+Similar to the considerations needed for governance in a hybrid environment, managing distributed workloads at scale requires planning in order to ensure issues are not introduced as the span of deployments scales. Using technologies such as [Log Analytics](/azure/azure-monitor/log-query/log-analytics-overview), [Application Insights](/azure/azure-monitor/app/app-insights-overview), [Azure Monitor](https://azure.microsoft.com/services/monitor/#features), and [Azure Security Center](/azure/security-center/) to [aggregate telemetry and work from a 'single pane of glass'](../../manage/azure-management-guide/inventory.md?tabs=AzureServiceHealth%2CLog-Analytics%2CAzure-Monitor%2CConfigure-solutions) enables infrastructure and application teams to manage by exception and focus on fixing identified issues from a consolidated view.
 
 Also similar to governance techniques, the management technologies described above can also be extended out to other environments, such as on-premises and other cloud platforms for certain use cases.
 
 ## Azure Arc
 
-As described in this article, Azure provides organizations with various management tools that enable infrastructure and applications to be monitored and governed at scale.
-When implementing a hybrid Landing Zone, these Azure tools should be extended to control infrastructure and applications running outside of Azure.
+As described in this article, Azure provides organizations with various management tools that enable infrastructure and applications to be monitored and governed at scale. When implementing a hybrid Landing Zone, these Azure tools should be extended to control infrastructure and applications running outside of Azure.
 
 This provides a single management plane and a single view on the entire hybrid estate in order to make monitoring and management at scale as straightforward as possible.
 
-[Azure Arc](/azure/azure-arc/) simplifies governance and management by delivering a consistent multi-cloud and on-premises management platform.
-Azure Arc enables you to manage your entire environment, with a single pane of glass, by projecting your existing resources into [Azure Resource Manager](/azure/azure-resource-manager/management/overview#:~:text=Azure%20Resource%20Manager%20is%20the%20deployment%20and%20management,Manager%20templates%20(ARM%20templates),%20see%20the%20template).
+[Azure Arc](/azure/azure-arc/) simplifies governance and management by delivering a consistent multi-cloud and on-premises management platform. Azure Arc enables you to manage your entire environment, with a single pane of glass, by projecting your existing resources into [Azure Resource Manager](/azure/azure-resource-manager/management/overview).
 
 You can now manage virtual machines, Kubernetes clusters, and databases as if they are running in Azure. Regardless of where they live, you can use familiar Azure services and management capabilities. Azure Arc enables you to continue using traditional ITOps, while introducing DevOps practices to support new cloud native patterns in your environment.

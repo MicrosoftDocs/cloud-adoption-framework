@@ -27,6 +27,7 @@ Watch the following video to learn more about sustainability and how cloud migra
 Microsoft has been leading in many of these areas. The company has been operating as carbon-neutral since 2012 and has made a commitment to be carbon-negative by 2030. [The carbon benefits of cloud computing](https://download.microsoft.com/download/7/3/9/739BC4AD-A855-436E-961D-9C95EB51DAF9/Microsoft_Cloud_Carbon_Study_2018.pdf), a study on the Microsoft cloud in partnership with WSP, supports research on how moving on-premises datacenters to the Microsoft cloud can significantly reduce carbon footprints.
 
 <!-- docutune:casing "Bühler Insights" -->
+<!-- cspell:ignore Bühler -->
 
 [Bühler Group's](https://customers.microsoft.com/story/730776-buhler-group-consumer-goods-azure-iot-germany)'s IoT platform, known as Bühler Insights and powered by Azure IoT Hub, generates vital data so customers can monitor machine performance and generate accurate records for every product batch, helping food producers optimize safety, sustainability, and transparency across the supply chain.
 

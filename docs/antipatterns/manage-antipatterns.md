@@ -1,12 +1,12 @@
 ---
 title: Cloud operation and management antipatterns
-description: "Introducing or modernizing IT tools doesn't necessarily guarantee faster deliveries or better business outcomes."
+description: Introducing or modernizing IT tools doesn't necessarily guarantee faster deliveries or better business outcomes.
 author: lpassig
 ms.author: brblanch
 ms.date: 02/19/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: operate
+ms.subservice: manage
 ms.custom: think-tank
 ---
 
@@ -24,10 +24,10 @@ A company introduces a new, improved version of its continuous integration and c
 
 ### Preferred outcome: Measure success with business outcomes
 
-To keep your technology and business goals aligned, have leaders from both areas jointly define desired outcomes. Make sure these outcomes and goals are Specific, Measurable, Achievable, Reasonable, and Time-bound (SMART). Ensure that the outcomes and goals have an impact on technology and the business. The Microsoft Cloud Adoption Framework for Azure can help to [determine a proper commitment within the business](../manage/considerations/commitment.md).
+To keep your technology and business goals aligned, have leaders from both areas jointly define desired outcomes. Make sure these outcomes and goals are specific, measurable, achievable, reasonable, and time-bound (SMART). Ensure that the outcomes and goals have an impact on technology and the business. The Microsoft Cloud Adoption Framework for Azure can help to [determine a proper commitment within the business](../manage/considerations/commitment.md).
 
-Don't use simple technology outputs (such as faster deployment and pipeline configurations) to measure success. Instead, use technology and business outcomes. For help with this task, see [Developer Velocity](https://azure.microsoft.com/overview/developer-velocity/).
+Don't use simple technology outputs (such as faster deployment and pipeline configurations) to measure success. Instead, use technology and business outcomes. For help with this task, see [Developer velocity](https://azure.microsoft.com/overview/developer-velocity/).
 
-## Next step
+## Next steps
 
 - [Business commitment in cloud management](../manage/considerations/commitment.md)

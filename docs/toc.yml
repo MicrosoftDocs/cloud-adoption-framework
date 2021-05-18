@@ -244,8 +244,6 @@ items:
         items:
         - name: Overview
           href: ready/enterprise-scale/index.md
-        - name: Implement enterprise-scale landing zones
-          href: ready/enterprise-scale/implementation.md
         - name: Architecture
           href: ready/enterprise-scale/architecture.md
         - name: Design principles
@@ -269,7 +267,7 @@ items:
             - name: DNS for on-premises and Azure resources
               href: ready/azure-best-practices/dns-for-on-premises-and-azure-resources.md
             - name: Private Link and DNS integration at scale
-              href: ready/azure-best-practices/private-link-and-dns-integration-at-scale.md  
+              href: ready/azure-best-practices/private-link-and-dns-integration-at-scale.md
             - name: Define an Azure network topology
               href: ready/azure-best-practices/define-an-azure-network-topology.md
             - name: Virtual WAN network topology (Microsoft-managed)
@@ -289,7 +287,7 @@ items:
             - name: Define network encryption requirements
               href: ready/azure-best-practices/define-network-encryption-requirements.md
             - name: Plan for traffic inspection
-              href: ready/azure-best-practices/plan-for-traffic-inspection.md  
+              href: ready/azure-best-practices/plan-for-traffic-inspection.md
             - name: Connectivity to other cloud providers
               href: ready/azure-best-practices/connectivity-to-other-providers.md
           - name: Management and monitoring
@@ -300,8 +298,8 @@ items:
             href: ready/enterprise-scale/security-governance-and-compliance.md
           - name: Platform automation and DevOps
             href: ready/enterprise-scale/platform-automation-and-devops.md
-        - name: Implementation guidelines
-          href: ready/enterprise-scale/implementation-guidelines.md
+        - name: Implement enterprise-scale landing zones
+          href: ready/enterprise-scale/implementation.md
         - name: Terraform module for CAF enterprise-scale
           href: ready/enterprise-scale/terraform-module-caf-enterprise-scale.md
         - name: Transition to enterprise-scale (brownfield)
@@ -418,7 +416,7 @@ items:
           href: /azure/sql-database/sql-database-paas-vs-sql-server-iaas?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
       - name: AI + Machine Learning
         items:
-        - name: Setting up Azure Machine Learning for Enterprise scale
+        - name: Organize and set up Azure Machine Learning environments
           href: ready/azure-best-practices/ai-machine-learning-resource-organization.md
       - name: Cost management
         items:
@@ -480,6 +478,13 @@ items:
             href: migrate/azure-best-practices/contoso-migration-rehost-vm-sql-managed-instance.md
           - name: Rehost an app on Azure VMs and SQL Server Always On availability groups
             href: migrate/azure-best-practices/contoso-migration-rehost-vm-sql-ag.md
+
+        - name: Storage migration
+          items:
+          - name: Storage migration overview
+            href: /azure/storage/common/storage-migration-overview?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          - name: Tools for unstructured storage migration
+            href: /azure/storage/solution-integration/validated-partners/data-management/migration-tools-comparison?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
 
         - name: Linux and open-source databases
           items:
@@ -1103,7 +1108,7 @@ items:
               - name: Distributed tracing with Azure Spring Cloud
                 href: /azure/spring-cloud/spring-cloud-tutorial-distributed-tracing?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
               - name: Bind an Azure Cosmos DB to your Azure Spring Cloud application
-                href: /azure/spring-cloud/spring-cloud-tutorial-bind-cosmos?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+                href: /azure/spring-cloud/how-to-bind-cosmos?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
             - name: Event-driven applications
               items:
               - name: Learning path for creating serverless applications
@@ -1274,7 +1279,7 @@ items:
             href: innovate/considerations/invention.md
           - name: Democratize data
             href: innovate/considerations/data.md
-          - name: Engage via apps
+          - name: Application development for innovative apps
             href: innovate/considerations/apps.md
           - name: Empower adoption
             href: innovate/considerations/ci-cd.md
@@ -1357,6 +1362,8 @@ items:
           href: govern/policy-compliance/governance-alignment.md
         - name: Establish policy adherence processes
           href: govern/policy-compliance/processes.md
+        - name: Implement cloud service controls
+          href: govern/cloud-service-controls.md
         - name: Regulatory compliance
           href: govern/policy-compliance/regulatory-compliance.md
         - name: Cloud security readiness

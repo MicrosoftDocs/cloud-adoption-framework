@@ -10,9 +10,6 @@ ms.subservice: organize
 ms.custom: internal
 ---
 
-<!-- docutune:casing CDOC "Cyber Defense Operations Center" -->
-<!-- cSpell:ignore CISO MTTA MTTR SIEM NIST SOCs CDOC -->
-
 # Cloud SOC functions
 
 The main objective of a cloud security operations center (SOC) is to detect, respond to, and recover from active attacks on enterprise assets.

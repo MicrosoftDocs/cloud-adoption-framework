@@ -1,123 +1,131 @@
 ---
-title: Setting up Azure Machine Learning for Enterprise scale
-description: When planning an Azure Machine Learning deployment for an enterprise environment, there are common decision points and scenarios that impact how you create the Workspace.
+title: Organize and set up Azure Machine Learning environments
+description: When planning an Azure Machine Learning deployment for an enterprise environment, there are common consideration and decision points that impact how you create the Azure Machine Learning workspace(s).
 author: denniseik
 ms.author: deeikele
-ms.date: 22/03/2021
+ms.date: 03/22/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: internal
+ms.custom: think-tank
 ---
 
-This article discusses decision points when creating a Workspace. When planning an Azure Machine Learning deployment for an enterprise environment, there are some common decision points or scenarios that impact how you create the Workspace. These decision points are:
+# Organize and set up Azure Machine Learning environments
 
-* Team structure, meaning the way your Machine Learning teams are organized and collaborate on projects given use case and data segregation, or cost management requirements.
-* Environments used as part of your development and release workflow to segregate development from production.
-* Regionality of your data or the audience you need to serve your ML solution to.
+When planning an Azure Machine Learning deployment for an enterprise environment, there are some common decision points that affect how you create the workspace:
 
-# How does team structure impact Workspace set up?
+- **Team structure:** The way your Machine Learning teams are organized and collaborate on projects given use case and data segregation, or cost management requirements.
 
-The Workspace is the top-level resource in Azure Machine Learning, holding Azure Machine Learning artifacts produced when working with Azure ML, as well as managed compute and pointers to attached and associated resources. From a manageability standpoint, the Workspace as an ARM-resource allows for Role Based Access Control, management by Policy, and can be used as a unit for cost reporting.  
+- **Environments:** The environments used as part of your development and release workflow to segregate development from production.
 
-Organizations typically choose for one or a combination of the below solution patterns to comply with manageability requirements.
+- **Region:** The location of your data and the audience you need to serve your Machine Learning solution to.
 
-1. A **Workspace per team** is typically chosen when all members of team require the same level of access to data and experimentation assets.   For instance, an organization with three ML-teams might create three workspaces, one for each team.
+## Team structure and workspace setup
 
-    Benefits: As a result, all ML-related artefacts for all projects run by that team are found in a single place. This can boost productivity since it makes exploration of experimentation results from peers on the team accessible and more easily reusable. Organization by team typically means a low Azure resource footprint and allows for cost management per team. Since experimentation assets can grow fast, follow proper naming and tagging conventions to keep artifacts organized.
+The workspace is the top-level resource in Azure Machine Learning. It stores the artifacts produced when working with Machine Learning and the managed compute and pointers to attached and associated resources. From a manageability standpoint, the workspace as an Azure Resource Manager resource allows for Azure role-based access control (Azure RBAC), management by Policy, and can be used as a unit for cost reporting.
 
-    To consider: Since granular RBAC and “ACL”'ing of data sources and experimentation assets is limited within a Workspace, each user of the Workspace must have similar data access level permissions and no use case data segregation requirements must exists.
+Organizations typically choose one or a combination of the following solution patterns to follow manageability requirements.
 
-1. A **Workspace per project** is common for teams that require segregation of data and experimentation assets by project or face cost reporting and budgeting requirements on a project-level. For instance, an organization with four ML teams that each runs three projects, might create 12 Workspace instances in total.
+**Workspace per team**: Choose to use one workspace for each team when all members of a team require the same level of access to data and experimentation assets. For example, an organization with three machine learning teams might create three workspaces, one for each team.
 
-    Benefits: As a result, cost can be managed on a project-level. Teams typically choose to create a dedicated resource group for Azure ML and associated resources for similar reasons. When working with external contributors, the project-centered Workspace set up also allows for easier collaboration on a project, since external users only need to be granted access to the project resources and not for the team.
+The benefit of using one workspace per team is that all Machine Learning artifacts for the team's projects are stored in one place. Productivity increases can be realized because team members can easily access, explore, and reuse experimentation results. Organizing your workspaces by team reduces your Azure footprint and simplifies cost management by team. Because the number of experimentation assets can grow quickly, you can keep your artifacts organized by following naming and tagging conventions. For recommendations about how to name resources, see [Develop your naming and tagging strategy for Azure resources](./naming-and-tagging.md).
 
-    To consider: The isolation of experimentation results and assets might make discovery and reuse more difficult within the organization due to assets being scattered across multiple Workspace instances.
+A consideration for this approach is each team member must have similar data access level permissions. Granular RBAC and access control lists (ACL) for data sources and experimentation assets are limited within a workspace. You can't have use case data segregation requirements.
 
-1. A **Single Workspace** for every user is typically chosen for non-team or non-project related work, or when costs cannot be directly associated to a specific unit of billing like is the case with R&D.
+**Workspace per project:** Choose to use one workspace for each project if you require segregation of data and experimentation assets by project, or have cost reporting and budgeting requirements at a project level. For example, an organization with four machine learning teams that each runs three projects, might create 12 workspace instances.
 
-    Benefits: As a result, cost of individual non-project related work can be decoupled from project-related cost. When setting up a single workspace for all users to do individual work, this means a significantly lower Azure resource footprint compared to a set up where N workspaces would exist for N users to facilitate individual work.
+The benefit of using one workspace per project is that costs can be managed at the project level. Teams typically create a dedicated resource group for Azure Machine Learning and associated resources for similar reasons. When you work with external contributors, for example, a project-centered workspace simplifies collaboration on a project because external users only need to be granted access to the project resources, not the team resources.
 
-    To consider: The Workspace might become cluttered quickly when many ML practitioners share the same instance. Users possibly require UI-based filtering of assets to effectively find one's own resources. Consider creating shared ML Workspaces per business division to mitigate scale concerns or to segment budgets.
+A consideration with this approach is the isolation of experimentation results and assets. The discovery and reuse of the assets might be more difficult because of assets being spread across multiple workspace instances.
 
-# How to reflect multiple environments (dev/test/prod), in the Workspace setup?
+**Single Workspace:** Choose to use one workspace for non-team or non-project related work, or when costs can't be directly associated to a specific unit of billing, for example with R&D.
 
-An environment is a collection of resources that can be targeted by deployments, where an environment for instance segregates resources by their application lifecycle stage. Typical examples of environment names are Dev, Test, QA, Staging, and Production.
+The benefit of this setup is the cost of individual, non-project related work can be decoupled from project-related costs. When you set up a single workspace for all users to do their individual work, you reduce your Azure footprint.
 
-Dependent on the development process in your organization, requirements to environment usage might vary and hence also the setup of Azure Machine Learning and associated resources such as attached compute. For instance, data availability might put constraints on the manageability of having an Azure Machine Learning instance available for each environment. The following solution patterns are common.
+A consideration for this approach is the workspace might become cluttered quickly when many Machine Learning practitioners share the same instance. Users might require UI-based filtering of assets to effectively find their resources. You can create shared Machine Learning workspaces for each business division to mitigate scale concerns or to segment budgets.
 
-1. A **single environment Workspace deployment**. While multiple environments may typically be used for regular application development in your organization, in this setup Azure Machine Learning is deployed only to a single environment. This setup is common for research-centered scenarios, where there are is no need to release ML artifacts in a multi-stage way across environments. Another scenario where this setup is chosen for is when only inferencing services, and not ML pipelines, are deployed across environments.
+## Environments and workspace setup
 
-    Benefits: if your scenario is research-centered, this setup allows for a low Azure resource footprint and minimal management overhead, since the way of working implies no need to have an Azure Machine Learning Workspace deployed in each environment.
+An environment is a collection of resources that deployments target based on their stage in the application lifecycle. Common examples of environment names are Dev, Test, QA, Staging, and Production.
 
-    To consider: feasibility of a single environment deployment is subject to data availability. Caution is required with the Datastore set up, since too extensive access (writer access) on production data sources might unintentionally harm data quality. When intending to bring work to production in the same environment as where development happens, same RBAC restrictions will apply for development and production work, which might make both 'environments' be too rigid or too flexible.
+The development process in your organization affects requirements for environment usage. Your environment affects the setup of Azure Machine Learning and associated resources, for example attached compute. For example, data availability might put constraints on the manageability of having a Machine Learning instance available for each environment. The following solution patterns are common:
 
-    ![Single-environment deployment](media/azureml-setup-single-environment.png)
+**Single environment workspace deployment:** When you choose a single environment workspace deployment, Azure Machine Learning is deployed to one environment. This setup is common for research-centered scenarios, where there is no need to release Machine Learning artifacts based on their lifecycle stage, across environments. Another scenario where this setup makes sense is when only inferencing services, and not Machine Learning pipelines, are deployed across environments.
 
-1. A **multi-environment Workspace deployment**. In this set up a Workspace instance is deployed for each environment. A common scenario for this setup is a regulated workplace with a clear separation of duties between environments, as well as for those who have resource access to those environments.
+The benefit of a research-centered setup is a smaller Azure footprint and minimal management overhead. This way of working implies no need to have an Azure Machine Learning workspace deployed in each environment.
 
-    Benefits: this setup enables a way of working with a staged roll out of ML workflows and artifacts such as Models across environments, with potential of enhancing agility and reducing time-to-deployment. There is the opportunity of enhanced security and control of resources since additional access restrictions can be assigned in downstream environments. This set up also enables training scenarios on production data in non-dev environments where only a select group of users have access.
+A consideration for this approach is a single environment deployment is subject to data availability. Caution is required with the Datastore set up. If you set up extensive access, for example, writer access on production data sources, you might unintentionally harm data quality. If you bring work to production in the same environment where development is done, the same RBAC restrictions apply for both the development work and the production work. This setup might make both environments too rigid or too flexible.
 
-    To consider: there is a risk of management and process overhead since this setup requires a fine-grained development and roll out process for ML artifacts across Workspace instances. Moreover, data management and engineering effort might be required to make production data available for training in the development environment. Access management is required to enable a team to resolve and investigate incidents in production. Moreover, DevOps and ML Engineering expertise is needed on the team to be able to implement automation workflows.
+![Single environment deployment](./media/azure-ml-setup-single-environment.png)
 
-    ![Multi-environment deployment](media/azureml-setup-multi-environment.png)
+**Multiple environment workspace deployment:** When you choose a multiple environment workspace deployment, a workspace instance is deployed for each environment. A common scenario for this setup is a regulated workplace with a clear separation of duties between environments, and for users who have resource access to those environments.
 
-1. **One environment with limited data access, one with production data access** is a special variant of #2. While multiple environments may typically be used for regular application development in your organization, in this setup Azure Machine Learning is deployed only to two environments – one environment where there is limited data access, and an environment where there is live production data access. This setup is common when there is a requirement to segregate development and production environments, but when acting either under organizational constraints to make production data available in any environment or when looking for a set up to segregate dev from production work in the leanest way without duplicating data more than required e.g. because the cost of maintenance is to high.
+The benefits of this setup are:
 
-    Benefits: as a result, this set up allows for a clear separation of duties and access between dev and production environments with lower resource management than in the regular multi-environment deployment scenario.
+- Staged rollout of Machine Learning workflows and artifacts. For example, models across environments, with the potential of enhancing agility and reducing time-to-deployment.
 
-    To consider: this set up requires a defined development and roll out process of ML artifacts across Workspace instances. Data management and engineering effort might be required to make production data available for training in a dev environment but might be relatively less in effort than is the case with #2.
+- Enhanced security and control of resources because you have the ability to assign more access restrictions in downstream environments.
 
-    ![One environment with limited data access, one with production data access](media/azureml-setup-double-workspace-deployment.png)
+- Training scenarios on production data in non-development environments because you can give a select group of users access.
 
-# How does regionality impact resource set up?
+A consideration for this approach is you are at risk for more management and process overhead since this setup requires a fine-grained development and rollout process for Machine Learning artifacts across workspace instances. Additionally, data management and engineering effort might be required to make production data available for training in the development environment. Access management is required for you to give a team access to resolve and investigate incidents in production. And finally, Azure DevOps and Machine Learning engineering expertise is needed on your team to implement automation workflows.
 
-Regionality of resources, data, or users, might impose the requirement to create Azure Machine Learning Workspace instances and associated resources in multiple Azure regions. For instance, one project might span its resources across the West Europe and East US Azure regions for performance, cost and/or compliance reasons. The below scenarios are common.
+![Multiple environment deployment](./media/azure-ml-setup-multi-environment.png)
 
-1. **Regional training** means that machine learning training jobs run in the same Azure region as where the data resides. In this setup an Azure Machine Learning workspace is deployed to each Azure region where data is located. It is a typical scenario when acting under compliance, or when there are data movement constraints across regions.
+**One environment with limited data access, one with production data access:** When you choose this setup, Azure Machine Learning is deployed to two environments: one with limited data access and one with production data access. This setup is common if you need to segregate development and production environments. For example, you might be working under organizational constraints to make production data available in any environment, or you might want to segregate development work from production work without duplicating data more than required due to the high cost of maintenance.
 
-    Benefits: as a result, experimentation is enabled in the data center where the data resides and with least network latency.
+The benefit of this setup is the clear separation of duties and access between development and production environments. Another benefit is lower resource management overhead when compared to a multi-environment deployment scenario.
 
-    To consider: at the downside, when a ML pipeline is run across multiple Workspace instances, this imposed additional management complexity. It becomes harder to compare experimentation results across instances and adds an overhead to quota and compute management.
+A consideration for this approach a defined development and rollout process for Machine Learning artifacts across workspaces is required. Another consideration is data management and engineering effort might be required to make production data available for training in a development environment. However, it might require relatively less effort than a multi-environment workspace deployment.
 
-    If you are looking to attach storage across regions, but use compute from one region, note that Azure ML supports the scenario of attaching storage accounts in a region other than the workspace. Metadata such as metrics however will be stored in the region of the Workspace.
+![One environment with limited data access, one environment with production data access](./media/azure-ml-setup-double-workspace-deployment.png)
 
-    ![Regional Training](media/azureml-setup-regional-training.png)
+## Regions and resource setup
 
-1. **Regional serving** means deploying Machine Learning services close to where the target audience lives. For instance, when target users reside in Australia and the main storage and experimentation region is West Europe, deploy the ML Workspace for experimentation in West Europe, and deploy an AKS cluster for inference endpoint deployment in Australia.
+The location of your resources, data, or users might require you to create Azure Machine Learning workspace instances and associated resources in multiple Azure regions. For example, one project might span its resources across the West Europe and East US Azure regions for performance, cost, and compliance reasons. The following scenarios are common:
 
-    Benefits: as a result, this enables inferencing in the data center where new data is ingested, minimizing latency and data movement, and/or enabling complying with local regulations.
+**Regional training:** The machine learning training jobs run in the same Azure region as where the data is located. In this setup, a Machine Learning workspace is deployed to each Azure region where data is located. It's a common scenario when you are acting under compliance, or when you have data movement constraints across regions.
 
-    To consider: while a multi-region set up brings several advantages, it also imposes an overhead on quota and compute management. When there is a requirement for batch inferencing, regional serving might require a multi-Workspace deployment. Moreover, data collected via inferencing endpoints might still require to be transferred across regions for retraining scenarios.
+The benefit of this setup is experimentation can be done in the data center where the data is located with the least network latency. A consideration for this approach is when a Machine Learning pipeline is run across multiple workspace instances, it adds more management complexity. It becomes challenging to compare experimentation results across instances and adds overhead to quota and compute management.
 
-    ![Regional Serving](media/azureml-setup-regional-serving.png)
+If you want to attach storage across regions, but use compute from one region, Azure Machine Learning supports the scenario of attaching storage accounts in a region rather than the workspace. Metadata, for example metrics, will be stored in the workspace region.
 
-1. **Regional finetuning** is a variant of regional training. In this case, a base model is trained on an initial dataset e.g. public data or data from all regions, and is later finetuned with a regional dataset. This latter dataset might only exist in a particular region due to compliance or data movement constraints.  Base model training might in this case be executed in a Workspace in region A, while finetuning is executed in a Workspace in region B.
+![Regional training](./media/azure-ml-setup-regional-training.png)
 
-    Benefits: as a result, experimentation is enabled in compliance in the data center where the data resides, while there can still be taken advantage of base model training on a larger dataset in an earlier pipeline stage.
+**Regional serving:** Machine Learning services are deployed close to where the target audience lives. For example, if target users are in Australia and the main storage and experimentation region is West Europe, deploy the Machine Learning workspace for experimentation in West Europe, and deploy an AKS cluster for inference endpoint deployment in Australia.
 
-    To consider: while this set up enables complex experimentation pipelines, it imposes challenges on comparing experiment results across regions and adds an overhead to quota and compute management.
+The benefits of this setup are the opportunity for inferencing in the data center where new data is ingested, minimizing latency and data movement, and compliance with local regulations.
 
-    ![Regional Finetuning](media/azureml-setup-regional-finetuning.png)
+A consideration for this approach is a multi-region setup provides several advantages, it also adds more overhead on quota and compute management. When there is a requirement for batch inferencing, regional serving might require a multi-workspace deployment. Data collected through inferencing endpoints might require to be transferred across regions for retraining scenarios.
 
-# Reference implementation
+![Regional serving](./media/azure-ml-setup-regional-serving.png)
 
-To illustrate the deployment of Azure Machine Learning in a larger setting, this section outlines how the organization 'Contoso' has set up Azure Machine Learning given their organizational constraints, reporting and budgeting requirements:
+**Regional fine-tuning:** A base model is trained on an initial dataset, for example, public data or data from all regions, and is later fine-tuned with a regional dataset. The regional dataset might only exist in a particular region because of compliance or data movement constraints. For example, base model training might be done in a workspace in region A, while fine tuning might be done in a workspace in region B.
 
-* Contoso creates resource groups on a solution basis for cost management and reporting reasons.
-* Due to budgeting requirements, IT administrators can only create resource groups and resources for funded solutions. 
-* Due to the explorative and uncertain nature of Data Science, there’s a need for users to have a place to experiment and work for use case and data exploration. Explorative work however can in many cases not be directly associated yet to a particular use case, rather only to R&D budget. Contoso is hence looking to fund some Azure ML resources centrally that anyone can use for exploration purposes.
-* Once a ML use case proves itself to be successful in the explorative environment, teams can request resource group(s) (Dev, QA, Prod) for iterative experimentation project work, and access to production data sources can be set up.
-* Data segregation and compliance requirements disallow live production data to exists in dev environments.
-* Different RBAC requirement exist for various user groups by IT policy per environment e.g. access is more restrictive in prod.
-* All data, experimentation and inferencing takes place in a single Azure region.
+The benefit of this setup is experimentation is available in compliance with the data center where the data resides, and still takes advantage of base model training on a larger dataset in an earlier pipeline stage.
+
+A consideration is this approach provides the ability for complex experimentation pipelines, however it might create more challenges. For example, comparing experiment results across regions and more adding more overhead to quota and compute management.
+
+![Regional fine-tuning](./media/azure-ml-setup-regional-fine-tuning.png)
+
+## Reference implementation
+
+To illustrate the deployment of Azure Machine Learning in a larger setting, this section outlines how the organization 'Contoso' has set up Azure Machine Learning given their organizational constraints, reporting, and budgeting requirements:
+
+- Contoso creates resource groups on a solution basis for cost management and reporting reasons.
+- IT administrators only create resource groups and resources for funded solutions to meet budget requirements.
+- Because of the exploratory and uncertain nature of Data Science, users need a place to experiment and work for use case and data exploration. Often, exploratory work can't be directly associated to a particular use case, and can be associated only to an R&D budget. Contoso wants to fund some Machine Learning resources centrally that anyone can use for exploration purposes.
+- Once a Machine Learning use case proves to be successful in the exploratory environment, teams can request resource groups. For example, Dev, QA, and Prod for iterative experimentation project work, and access to production data sources can be set up.
+- Data segregation and compliance requirements don't allow live production data to exist in development environments.
+- Different RBAC requirements exist for various user groups by IT policy per environment, for example access is more restrictive in production.
+- All data, experimentation, and inferencing is done in a single Azure region.
 
 To adhere to the above requirements, Contoso has set up their resources in the following way:
 
-* Azure Machine Learning workspaces and resource groups scoped per Project to comply with budgeting and use case segregation requirements.
-* A multiple-environment set up for Azure ML and associated resources to address cost managment, RBAC and data access requirements. 
-* A single resource group and ML Workspace that is dedicated for Exploration -- the so-called ‘Exploration’ environment.
-* Azure Active Directory groups that are different per user role and environment e.g. operations that a 'data scientist' can do in a production environment are different than in the development environment, and access levels might differ per solution.
-* All resources created in a single Azure region.
+- Azure Machine Learning workspaces and resource groups are scoped per project to follow budgeting and use case segregation requirements.
+- A multiple-environment setup for Azure Machine Learning and associated resources to address cost management, RBAC, and data access requirements.
+- A single resource group and Machine Learning workspace that is dedicated for exploration.
+- Azure Active Directory groups that are different per user role and environment, for example operations that a data scientist can do in a production environment are different than in the development environment, and access levels might differ per solution.
+- All resources are created in a single Azure region.
 
-![Contoso Reference Implementation](media/azureml-setup-contoso-reference-implementation.png)
+![Contoso reference implementation](./media/azure-ml-setup-contoso-reference-implementation.png)

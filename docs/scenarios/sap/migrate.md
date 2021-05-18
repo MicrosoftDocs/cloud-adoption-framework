@@ -7,7 +7,7 @@ ms.date: 03/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
-ms.custom: think-tank
+ms.custom: think-tank, e2e-sap
 ---
 
 # Migrate an SAP platform to Azure
@@ -61,7 +61,7 @@ Explore the [SAP on Azure Architecture Guide](/azure/architecture/reference-arch
 
 ## Migrate the platform
 
-The DBMS needs to be changed, or the internal format of the same DBMS system needs to change to the little endian format supported in the Intel world; for example, migrating from the IBM pSeries to Azure. The SAP workload's data points help to choose the appropriate migration approach: classical or an SAP Database Migration Option (DMO).
+The DBMS needs to be changed, or the internal format of the same DBMS system needs to change to the little-endian format supported in the Intel world; for example, migrating from the IBM pSeries to Azure. The SAP workload's data points help to choose the appropriate migration approach: classical or an SAP Database Migration Option (DMO).
 
 **Classical migration:** The SAP Software Provisioning Manager is used specifically as a software logistics tool for database migrations. Classical migration uses a heterogenous system copy approach and is sometimes called a *two-step migration*. This approach is commonly used when the following observations surface in the migration plan:
 

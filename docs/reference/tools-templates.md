@@ -1,12 +1,12 @@
 ---
-title: "Tools and templates"
+title: Tools and templates
 description: Find the tools and templates that are available in the Cloud Adoption Framework to help you accelerate your cloud adoption.
 author: JanetCThomas
 ms.author: janet
 ms.date: 04/14/2020
 ms.topic: article
 ms.service: cloud-adoption-framework
-ms.subservice: reference
+ms.subservice: general
 ms.custom: internal
 ---
 
@@ -25,6 +25,7 @@ The Cloud Adoption Framework includes tools that help you quickly implement tech
 
 | Resource | Description |
 |----------|-------------|
+| [Strategic Migration Assessment and Readiness Tool](/assessments/?mode=pre-assessment&id=Strategic-Migration-Assessment) | From business planning to training to security and governance, find out what you need to do to prepare for your Microsoft Azure migration with the Strategic Migration Assessment and Readiness Tool (SMART). |
 | [Cloud journey tracker](/assessments/?id=cloud-journey-tracker&mode=pre-assessment) | Identify your cloud adoption path based on the needs of your business. |
 | [Strategy&nbsp;and&nbsp;plan&nbsp;template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) | Document decisions, as you execute your cloud adoption strategy and plan. |
 | [Cloud adoption plan generator](../plan/template.md) | Standardize processes by deploying a backlog to [Azure Boards](/azure/devops/boards/get-started/what-is-azure-boards) using a template. |
@@ -63,13 +64,11 @@ The Cloud Adoption Framework includes tools that help you quickly implement tech
 | [Datacenter migration discovery checklist](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/migrate/datacenter-migration-discovery-checklist.docx) | Review this checklist for information that helps identify workloads, servers, and other assets in your datacenter. Use this information to help plan your migration.
 | [Migration templates](https://aka.ms/adopt/plan/generator) | In the Azure DevOps generator we have built a number of templates which you can use to help streamline your projects. Templates have been created for [WVD](https://azuredevopsdemogenerator.azurewebsites.net/?name=wvdmigration), [Server Migration](https://azuredevopsdemogenerator.azurewebsites.net/?name=servermigration), [SQL Migration](https://azuredevopsdemogenerator.azurewebsites.net/?name=sqlmigration) and [AKS deployments](https://azuredevopsdemogenerator.azurewebsites.net/?name=cafaks).
 
-
 ## Innovate
 
 | Resource | Description |
 |----------|-------------|
 | [Deployment templates](https://aka.ms/adopt/plan/generator) | The Azure DevOps generator has project checklists to help you build your [knowledge mining](https://azuredevopsdemogenerator.azurewebsites.net/?name=kmine), [modern data warehouse](https://azuredevopsdemogenerator.azurewebsites.net/?name=moddw) and industry focused accelerators such as the [retail recommender](https://azuredevopsdemogenerator.azurewebsites.net/?name=moddw) using AI and [modern IoT](https://azuredevopsdemogenerator.azurewebsites.net/?name=modiot). The templates gives you a structured approach and checklist to follow. Each template and workitem has links to required content, assets and code samples that can help you get started.
-
 
 ## Manage
 

@@ -7,7 +7,7 @@ ms.date: 03/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: think-tank
+ms.custom: think-tank, e2e-sap
 ---
 
 # Enterprise-scale management and monitoring for SAP on Azure
@@ -22,7 +22,7 @@ Here are some design considerations for SAP on Azure monitoring and management:
 
 - Consider inter-virtual machine (VM) latency monitoring for latency-sensitive applications.
 
-- Consider scheduling [AzAcSnap](/azure/azure-netapp-files/azacsnap-introduction) from a central VM rather than on individual VMs.
+- Consider scheduling [`AzAcSnap`](/azure/azure-netapp-files/azacsnap-introduction) from a central VM rather than on individual VMs.
 
 **Design recommendations:**
 

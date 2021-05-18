@@ -6,7 +6,7 @@ ms.author: brblanch
 ms.date: 01/29/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: operate
+ms.subservice: manage
 ms.custom: think-tank, e2e-hybrid
 ---
 
@@ -114,7 +114,7 @@ If you want to demo/control the actual registration process, complete the follow
 
     ![A screenshot of the `azcmagent connect` command.](./media/local-vagrant/vagrant-ubuntu-azcmagent.png)
 
-    ![A screenshot of the `az group create` command.](./media/local-vagrant/vagrant-ubuntu-azgroup-create.png)
+    ![A screenshot of the `az group create` command.](./media/local-vagrant/vagrant-ubuntu-az-group-create.png)
 
 2. SSH to the VM using the `vagrant ssh` command.
 

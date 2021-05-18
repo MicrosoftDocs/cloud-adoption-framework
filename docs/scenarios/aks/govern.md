@@ -7,6 +7,7 @@ ms.date: 03/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
+ms.custom: think-tank, e2e-aks
 ---
 
 <!-- docutune:ignore "public container registry" -->
@@ -43,8 +44,6 @@ Governance of Kubernetes clusters can be looked at with five distinct perspectiv
 
 The first is the Azure resource perspective. Ensuring that all clusters adhere to your organization's requirements. This includes concepts like network topology, private cluster, Azure RBAC roles for SRE teams, diagnostics settings, region availability, node pool considerations, Azure Container Registry governance, Azure Load Balancer options, AKS add-ons, diagnostics settings, and so on. This governance ensures consistency in "look and feel" and "topology" of clusters in your organizations. This should also extend to post cluster deployment bootstrapping, such as what security agents must be installed and how they should be configured.
 
-<!-- docutune:casing Bicep CVEs -->
-
 Snowflake clusters are hard to govern in any central capacity. Minimize discrepancies between clusters so that policies can apply uniformly and anomalous clusters are discouraged and detectable. This might also include technologies used to deploy the clusters, such as ARM, Bicep, or Terraform.
 
 Azure Policy applied at management group/subscription level can help deliver a lot of these considerations, but not all.
@@ -71,7 +70,7 @@ This choice should have been made during the [Strategy phase](./strategy.md) bec
 
 ### Stay current efforts
 
-The fifth is around operations, such as node image freshness (patching) and Kubernetes versioning. Who is responsible for node image upgrades, tracking applied patches, tracking and putting together Kubernetes and AKS CVEs remediation plans? Workload teams *need* to be involved in validating their solution works on cluster upgrades, and if your clusters are not current, they will fall out of Azure Support. Having a strong governance in place around "stay current" efforts is *critical* in AKS, more so most other platforms in Azure. This will necessitate a very close working relationship with application teams and dedicated time by them, at least monthly, for workload validation to ensure clusters stay current. Ensure all teams taking a dependency on Kubernetes understands the requirements and cost of this ongoing effort, which will last as long as they are on the platform.
+The fifth is around operations, such as node image freshness (patching) and Kubernetes versioning. Who is responsible for node image upgrades, tracking applied patches, tracking and putting together remediation plans for Kubernetes and AKS common vulnerabilities and exposures? Workload teams *need* to be involved in validating their solution works on cluster upgrades, and if your clusters are not current, they will fall out of Azure Support. Having a strong governance in place around "stay current" efforts is *critical* in AKS, more so most other platforms in Azure. This will necessitate a very close working relationship with application teams and dedicated time by them, at least monthly, for workload validation to ensure clusters stay current. Ensure all teams taking a dependency on Kubernetes understands the requirements and cost of this ongoing effort, which will last as long as they are on the platform.
 
 ### Security baseline
 

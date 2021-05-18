@@ -131,7 +131,7 @@ Complexity of the portfolio hierarchy will help inform organizational structures
 
 **Deliverables:**
 
-- Complete the getting-started guides for organizational alignment based on these concepts.
+- Complete the getting started guides for organizational alignment based on these concepts.
 
 **Guidance to support deliverable completion:**
 
@@ -146,7 +146,7 @@ Complexity of the portfolio hierarchy will help inform organizational structures
 
 ## What's next
 
-Build on this set of fundamental concepts through the series of getting-started guides in this section of the Cloud Adoption Framework.
+Build on this set of fundamental concepts through the series of getting started guides in this section of the Cloud Adoption Framework.
 
 > [!div class="nextstepaction"]
-> [Apply fundamental concepts to other getting-started guides](./index.md)
+> [Apply fundamental concepts to other getting started guides](./index.md)

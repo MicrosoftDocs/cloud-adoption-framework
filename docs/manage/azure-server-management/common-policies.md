@@ -6,7 +6,7 @@ ms.author: brblanch
 ms.date: 05/10/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: operate
+ms.subservice: manage
 ms.custom: internal
 ---
 
@@ -32,7 +32,7 @@ Get-AzPolicyDefinition | Where-Object { ($_.Properties.policyType -eq 'BuiltIn')
   -and ($_.Properties.displayName -like '*location*') }
 ```
 
-The following script shows how to assign the policy. Change the `$SubscriptionID` value to point to the subscription that you want to assign the policy to. Before you run the script, use the [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount) cmdlet to sign in.
+The following script shows how to assign the policy. Change the `$SubscriptionID` value to point to the subscription that you want to assign the policy to. Before you run the script, use the [`Connect-AzAccount`](/powershell/module/az.accounts/connect-azaccount) cmdlet to sign in.
 
 ```powershell
 
@@ -75,7 +75,7 @@ You can use this policy to deploy the Microsoft Antimalware Extension with a def
 
 The policy GUID is `2835b622-407b-4114-9198-6f7064cbe0dc`.
 
-The following script shows how to assign the policy. To use the script, change the `$SubscriptionID` value to point to the subscription that you want to assign the policy to. Before you run the script, use the [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount) cmdlet to sign in.
+The following script shows how to assign the policy. To use the script, change the `$SubscriptionID` value to point to the subscription that you want to assign the policy to. Before you run the script, use the [`Connect-AzAccount`](/powershell/module/az.accounts/connect-azaccount) cmdlet to sign in.
 
 ```powershell
 

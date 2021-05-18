@@ -7,7 +7,7 @@ ms.date: 03/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: think-tank
+ms.custom: think-tank, e2e-sap
 ---
 
 # Enterprise-scale network topology and connectivity for an SAP migration
@@ -77,7 +77,7 @@ Use a traditional Azure network topology based on hub-and-spoke architecture if 
 
 - Virtual WAN manages connectivity between spoke VNets for virtual-WAN-based topologies (no need to set up user-defined routing [UDR] or NVAs), and maximum network throughput for VNet-to-VNet traffic in the same virtual hub is 50 gigabits per second. If necessary, SAP landing zones can use VNet peering to connect to other landing zones and overcome this bandwidth limitation.
 
-- Deploying NVAs in an SAP application's database server isn't supported.
+- Deploying NVAs between an SAP application and database server isn't supported.
 
 - Local and global VNet peering provide connectivity and are the preferred approaches to ensure connectivity between landing zones for SAP deployments across multiple Azure regions.
 

@@ -22,7 +22,7 @@ For each application or service you'll deploy to your landing zone environment, 
 
 ![Diagram of an Azure compute services decision tree.](../../_images/ready/compute-decision-tree.png)
 
-_Figure 1: An Azure compute services decision tree._
+*Figure 1: An Azure compute services decision tree.*
 
 Definitions:
 
