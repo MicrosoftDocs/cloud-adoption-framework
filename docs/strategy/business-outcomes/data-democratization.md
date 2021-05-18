@@ -34,7 +34,7 @@ The following diagram shows an example of a classic data warehouse architecture.
 
 ![Diagram of the classic data warehouse.](../../_images/analytics/the-classic-data-warehouse.png)
 
-_Figure 1: Classic data warehouse architecture._
+*Figure 1: Classic data warehouse architecture.*
 
 Known structured data is extracted from core transaction processing systems and copied into a staging area. From there, it's cleaned, transformed, and integrated into production tables in a data warehouse. It's common for several years of historical transaction data to build up here. This provides the data needed to understand changes in sales, customer purchasing behavior, and customer segmentation over time. It also provides yearly financial reporting and analysis to help with decision making.
 

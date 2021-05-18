@@ -14,7 +14,7 @@ ms.custom: think-tank
 
 ![Diagram that shows management group hierarchy.](./media/sub-org.png)
 
-_Figure 1: Management group hierarchy._
+*Figure 1: Management group hierarchy.*
 
 ## Define a management group hierarchy
 
@@ -189,7 +189,7 @@ Organizations can use enterprise-scale Azure policies to enforce the following g
 
 - **Evaluate proven best practices**
 
-   An SQL database can experience a lot of of schema, permission, and configuration changes throughout its life cycle, and these changes can deviate from best practices. In turn, excessive permissions, orphaned roles, and other configurational drifts can be exploited by malicious actors.
+   An SQL database can experience a lot of schema, permission, and configuration changes throughout its life cycle, and these changes can deviate from best practices. In turn, excessive permissions, orphaned roles, and other configurational drifts can be exploited by malicious actors.
 
    Microsoft best practices for SQL databases can help enterprises to assess their SQL databases, and SQL Database has a built-in vulnerability assessment service to assist. A vulnerability assessment scans and identifies database- and server-level security risks, and it offers remediation tasks that can fix vulnerabilities.
 
@@ -201,7 +201,7 @@ Organizations can use enterprise-scale Azure policies to enforce the following g
 
     The **soft-delete** feature in Azure Key Vault can protect enterprises against intentional or accidental deletion. With **soft-delete** enabled, deleted keys are retained for a predefined time period. If the delete operation was intended, then key content can be deleted until an another purge, typically by a user with more access privileges. If the delete operation was an accident, then the deleted keys can be restored within the time defined.
 
-    Azure offers a a custom policy to ensure that **soft-delete** is enabled by default with Azure Key Vault. This policy provides an extra security layer if Azure Key Vault content is deleted maliciously, and enterprises gain more control if content is deleted accidentally.
+    Azure offers a custom policy to ensure that **soft-delete** is enabled by default with Azure Key Vault. This policy provides an extra security layer if Azure Key Vault content is deleted maliciously, and enterprises gain more control if content is deleted accidentally.
 
 - **Enforce Azure Application Gateway Web Application Firewall**
 

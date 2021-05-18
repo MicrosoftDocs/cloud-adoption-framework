@@ -52,7 +52,7 @@ The Contoso cloud team has pinned down goals for the various migrations. These g
 
 ## Solution design
 
-Contoso has already performed a [migration assessment](../..//plan/contoso-migration-assessment.md) of their digital estate using [Azure Migrate](/azure/migrate/migrate-services-overview).
+Contoso has already performed a [migration assessment](../../plan/contoso-migration-assessment.md) of their digital estate using [Azure Migrate](/azure/migrate/migrate-services-overview).
 
 The assessment results in multiple workloads spread across multiple departments. The overall size of the migration project will require a full project management office (PMO), to manage the specifics of communication, resources and schedule planning.
 
@@ -151,9 +151,9 @@ With the information at hand, Contoso uses the following guidelines to determine
 | Azure SQL Managed Instance | SQL Server (advanced features) | These databases use triggers and other [advanced concepts](/azure/azure-sql/managed-instance/transact-sql-tsql-differences-sql-server#service-broker) such as custom .NET types, service brokers, and so on. | [Data Migration Assistant](/sql/dma/dma-overview), [transactional replication](/azure/azure-sql/managed-instance/replication-transactional-overview) | [BACPAC](/sql/relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database), [bcp](/sql/tools/bcp-utility?view=sql-server-ver15), [native backup/restore](/azure/azure-sql/managed-instance/restore-sample-database-quickstart) | 2 TiB - 8 TiB | [Link](/azure/dms/tutorial-sql-server-managed-instance-online) |
 | SQL Server on Azure Virtual Machines (IaaS) | SQL Server (third-party integrations) | The SQL Server must have [non-supported SQL Managed Instance features](/azure/azure-sql/managed-instance/transact-sql-tsql-differences-sql-server#service-broker) (cross-instance service brokers, cryptographic providers, buffer pool, compatibility levels below 100, database mirroring, FILESTREAM, PolyBase, anything that requires access to file shares, external scripts, extended stored procedures, and others) or third-party software installed to support the activities of the database. | [Transactional replication](/azure/azure-sql/managed-instance/replication-transactional-overview) | [BACPAC](/sql/relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database), [bcp](/sql/tools/bcp-utility?view=sql-server-ver15), [snapshot replication](/azure/azure-sql/managed-instance/replication-transactional-overview), [native backup/restore](/azure/azure-sql/managed-instance/restore-sample-database-quickstart), convert physical machine to VM | 4 GiB - 64 TiB | [Link](/azure/azure-sql/virtual-machines/windows/migrate-to-vm-from-sql-server) |
 
-Due to the large number of databases, Contoso created a project management office (PMO) to keep track of every database migration instance. [Accountability and responsibilities](../..//migrate/migration-considerations/assess/index.md) were assigned to each business and application team.
+Due to the large number of databases, Contoso created a project management office (PMO) to keep track of every database migration instance. [Accountability and responsibilities](../../migrate/migration-considerations/assess/index.md) were assigned to each business and application team.
 
-Contoso also performed a [workload readiness review](../..//migrate/migration-considerations/assess/evaluate.md). This review examined the infrastructure, database and network components.
+Contoso also performed a [workload readiness review](../../migrate/migration-considerations/assess/evaluate.md). This review examined the infrastructure, database and network components.
 
 #### Step 5: Test migrations
 
@@ -163,7 +163,7 @@ Any rollback procedures were identified for each of the database workloads in ca
 
 For the IaaS-based workloads, they set up all the required third-party software beforehand.
 
-After the test migration, Contoso was able to use the various Azure [cost estimation tools](../..//migrate/migration-considerations/assess/estimate.md) to get a more accurate picture of the future operational costs of their migration.
+After the test migration, Contoso was able to use the various Azure [cost estimation tools](../../migrate/migration-considerations/assess/estimate.md) to get a more accurate picture of the future operational costs of their migration.
 
 #### Step 6: Migration
 

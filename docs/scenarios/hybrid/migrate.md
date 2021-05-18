@@ -22,9 +22,9 @@ Typically, migration efforts have been seen as a one-way street. Assets move up 
 
 The direct effect of divergences on migration processes is minor, but awareness of them can increase your organization's likelihood of success. The act of migrating workloads consists of three high-level processes repeated in waves, or sprints, until the migration is complete. Here's a brief look at how these processes change:
 
-- **Assess workloads**: A few considerations will shape how you assess workloads before migration.
-- **Deploy workloads**: Deployment of the waves of workloads is largely unchanged. But you might want to use more of the [Azure Migrate](/azure/migrate/) ecosystem to accelerate specific types of migrations.
-- **Release workloads**: After workloads are deployed, the biggest shift is seen in testing cycles before release to production traffic.
+- **Assess workloads:** A few considerations will shape how you assess workloads before migration.
+- **Deploy workloads:** Deployment of the waves of workloads is largely unchanged. But you might want to use more of the [Azure Migrate](/azure/migrate/) ecosystem to accelerate specific types of migrations.
+- **Release workloads:** After workloads are deployed, the biggest shift is seen in testing cycles before release to production traffic.
 
 More information on how to assess, deploy, or release workloads within your migration processes is discussed later on in this article. First, review the next section on the bigger changes to upstream and downstream processes that will affect your migration.
 
@@ -45,14 +45,14 @@ Hybrid and multicloud migrations that come across assessment challenges indicate
 - Place a more thorough emphasis on dependencies because a larger percentage of assets might be hosted in other clouds.
 - Understand the reason behind the hybrid and multicloud decision to evaluate compatibility of the various workloads with tools that support:
 
-  - **Azure Stack HCI compatibility,** which is important if you're modernizing your datacenter to allow for cloud native solutions on-premises.
-  - **Kubernetes compatibility,** which is important if you're maintaining portability through container-based infrastructure.
-  - **Azure Edge compatibility,** which might be important to extend workloads and reduce latency at the point of interaction.
-  - **Regulatory, compliance, or business requirements,** which might dictate that some assets or data remain on-premises. To monitor assets that are migrated, you might need to add more monitoring tools.
+  - **Azure Stack HCI compatibility**, which is important if you're modernizing your datacenter to allow for cloud native solutions on-premises.
+  - **Kubernetes compatibility**, which is important if you're maintaining portability through container-based infrastructure.
+  - **Azure Edge compatibility**, which might be important to extend workloads and reduce latency at the point of interaction.
+  - **Regulatory, compliance, or business requirements**, which might dictate that some assets or data remain on-premises. To monitor assets that are migrated, you might need to add more monitoring tools.
 
 These articles will help you to develop the most impactful processes required for this type of migration:
 
-- [Responsibilities](../..//migrate/migration-considerations/assess/index.md#accountability-during-assessment)
+- [Responsibilities](../../migrate/migration-considerations/assess/index.md#accountability-during-assessment)
 - [Workload classification](../../migrate/migration-considerations/assess/classify.md)
 - [Cloud compatibility](../../migrate/migration-considerations/assess/evaluate.md)
 - [Agile change management](../../migrate/migration-considerations/assess/release-iteration-backlog.md)
