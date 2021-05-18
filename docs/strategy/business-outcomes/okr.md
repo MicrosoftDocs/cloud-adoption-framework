@@ -50,7 +50,7 @@ OKRs help to create alignment and accountability within organizations.
 
 ![How OKRs increase alignment and accountability within organizations to help them meet goals faster.](../../_images/strategy/okr.jpg)
 
-_Figure 1: How OKRs increase alignment and accountability within organizations to help them meet goals faster._
+*Figure 1: How OKRs increase alignment and accountability within organizations to help them meet goals faster.*
 
 Learn more about how your team can align [strategy and execution](https://www.workboard.com/blog/execution-vs-strategy.php) during planning and execution phases.
 

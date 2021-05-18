@@ -58,7 +58,7 @@ items:
       - name: AI at the edge (disconnected)
         href: /azure/architecture/solution-ideas/articles/ai-at-the-edge-disconnected?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
       - name: Azure Functions in a hybrid environment
-        href: /azure/architecture/hybrid/azure-functions-hybrid?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json                                
+        href: /azure/architecture/hybrid/azure-functions-hybrid?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
       - name: Robo application example on Azure Stack HCI
         href: /azure/architecture/hybrid/azure-stack-robo?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
       - name: Run containers in a hybrid environment
@@ -68,14 +68,14 @@ items:
       - name: Hybrid HPC with HPC Pack
         href: /azure/architecture/solution-ideas/articles/hybrid-hpc-in-azure-with-hpc-pack?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
       - name: Hybrid DevOps
-        href: /azure/architecture/solution-ideas/articles/devops-in-a-hybrid-environment?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json        
+        href: /azure/architecture/solution-ideas/articles/devops-in-a-hybrid-environment?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
 
     - name: Data
       items:
       - name: Administer SQL Server anywhere with Azure Arc
         href: /azure/architecture/hybrid/azure-arc-sql-server?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
       - name: Hybrid big data with HDInsight
-        href: /azure/architecture/solution-ideas/articles/extend-your-on-premises-big-data-investments-with-hdinsight?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json   
+        href: /azure/architecture/solution-ideas/articles/extend-your-on-premises-big-data-investments-with-hdinsight?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
       - name: Extend on-premises data solutions to Azure
         href: /azure/architecture/data-guide/scenarios/hybrid-on-premises-and-cloud?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
       - name: Hybrid ETL with Azure Data Factory

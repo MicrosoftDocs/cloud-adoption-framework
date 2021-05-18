@@ -115,6 +115,8 @@ Netezza implements some database objects that aren't directly supported in Azure
 
 - **Data type mapping:** Most Netezza data types have a direct equivalent in Azure Synapse. The following table shows the data types and the recommended approaches for mapping the data types.
 
+<!-- docutune:disable -->
+
 | IBM Netezza data type | Azure Synapse SQL v2 data type |
 | :-------------------- | :----------------------------- |
 | bigint (int8) | bigint |
@@ -151,6 +153,8 @@ Netezza implements some database objects that aren't directly supported in Azure
 | time with time zone (alias timetz) | datetimeoffset |
 | timestamp(p) | datetime2(p) |
 | transactionid | *Not Supported* |
+
+<!-- docutune:enable -->
 
 Note: Some third-party vendors offer tools and services that can automate migration tasks, including data type mapping. If a third-party ETL tool like Informatica or Talend is already used in the Netezza environment, you can use the tool to implement any data transformations that are required.
 

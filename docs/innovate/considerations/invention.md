@@ -23,11 +23,11 @@ The types of innovation and disciplines described in the next section introduce 
 
 There are different types of innovation for product development. Not every discipline is required to drive innovation for each specific case. By following the guidance in [Build with customer empathy](./build.md), you'll test a hypothesis in every iteration. Defining the output of each iteration as a [minimum viable product (MVP)](../../govern/policy-compliance/index.md#minimum-viable-product-mvp-for-policy) should enable you to create innovation with the smallest number of disciplines.
 
-- **[Democratize data](./data.md):** By getting data into the hands of customers, partners, and employees, you encourage innovative observation. Ingest, centralize, govern, and share data.
-- **[Engage via applications](./apps.md):** People connect with knowledge through applications and experiences. Empower professional and citizen developers to create applications quickly.
-- **[Empower adoption](./ci-cd.md):** Encourage innovation by reducing friction to adoption and partnership. Architect for visibility, collaboration, speed, and feedback loops.
-- **[Interact with devices](./devices.md):** Digital and physical lines have blurred across multiple-channels. Deliver experiences across devices, IoT, and mixed reality.
-- **[Predict and influence](./predict.md):** Look to the future to lead innovation. Look past current data to inform experiences and interactions through predictive tools.
+- [Democratize data](./data.md): By getting data into the hands of customers, partners, and employees, you encourage innovative observation. Ingest, centralize, govern, and share data.
+- [Engage via applications](./apps.md): People connect with knowledge through applications and experiences. Empower professional and citizen developers to create applications quickly.
+- [Empower adoption](./ci-cd.md): Encourage innovation by reducing friction to adoption and partnership. Architect for visibility, collaboration, speed, and feedback loops.
+- [Interact with devices](./devices.md): Digital and physical lines have blurred across multiple-channels. Deliver experiences across devices, IoT, and mixed reality.
+- [Predict and influence](./predict.md): Look to the future to lead innovation. Look past current data to inform experiences and interactions through predictive tools.
 
 ## Next steps
 

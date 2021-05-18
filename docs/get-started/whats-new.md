@@ -69,7 +69,7 @@ When planning an Azure Machine Learning deployment for an enterprise environment
 
 We added a reference implementation example to help illustrate the deployment of Azure Machine Learning in a larger setting. It outlines how the organization 'Contoso' set up Azure Machine Learning given their organizational constraints, reporting, and budgeting requirements.
 
-### Azure Storage migration  overview
+### Azure Storage migration overview
 
 To help you plan your Azure Storage migration, we've provided guidance in a new article, [Azure Storage migration overview](/windows-server/storage/storage-migration-service/overview), for two migration scenarios:
 

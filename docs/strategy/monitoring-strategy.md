@@ -62,7 +62,7 @@ As the business determines what services to move, you need to invest your resour
 
 ## Monitoring informs strategy
 
-Consider where early monitoring capability _informs strategy_. Many decisions depend on early monitoring data in order to build a capability roadmap that guides limited resources and adds confidence. Strategies also need real-world input from monitoring of service enablement.
+Consider where early monitoring capability *informs strategy*. Many decisions depend on early monitoring data in order to build a capability roadmap that guides limited resources and adds confidence. Strategies also need real-world input from monitoring of service enablement.
 
 Consider the role monitoring plays in strategies to incrementally protect and secure the digital estate:
 
@@ -144,7 +144,7 @@ As a monitoring expert or systems administrator, you've discovered that cloud mo
 
 ### Consider scale
 
-Consider scale in your strategy and who will be defining and standardizing _monitoring as code_. Your organization should plan to build standardized solutions using a combination of tools such as:
+Consider scale in your strategy and who will be defining and standardizing *monitoring as code*. Your organization should plan to build standardized solutions using a combination of tools such as:
 
 - Azure Resource Manager templates.
 - Azure Policy monitoring initiative definitions and policies.
@@ -257,7 +257,7 @@ Include in your strategy and operating model how you communicate monitoring plan
 
 ## Establish minimum governance
 
-As early as possible, establish how you intend to govern your cloud monitoring investment. Remember that Azure Monitor is a _tenant_ service with visibility across management groups and subscriptions, and users can be scoped to limit their actions with Azure role-based access control.
+As early as possible, establish how you intend to govern your cloud monitoring investment. Remember that Azure Monitor is a *tenant* service with visibility across management groups and subscriptions, and users can be scoped to limit their actions with Azure role-based access control.
 
 Define who will have what level of access in Azure to support their role and responsibility. We recommend you to set `Reader` role access for monitoring consumers as early as possible and then start controlling who are granted the `Contributor` role.
 

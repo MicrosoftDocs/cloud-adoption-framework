@@ -7,18 +7,18 @@ ms.date: 03/22/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: internal
+ms.custom: think-tank
 ---
 
 # Organize and set up Azure Machine Learning environments
 
 When planning an Azure Machine Learning deployment for an enterprise environment, there are some common decision points that affect how you create the workspace:
 
-* **Team structure:** The way your Machine Learning teams are organized and collaborate on projects given use case and data segregation, or cost management requirements.
+- **Team structure:** The way your Machine Learning teams are organized and collaborate on projects given use case and data segregation, or cost management requirements.
 
-* **Environments:** The environments used as part of your development and release workflow to segregate development from production.
+- **Environments:** The environments used as part of your development and release workflow to segregate development from production.
 
-* **Region:** The location of your data and the audience you need to serve your Machine Learning solution to.
+- **Region:** The location of your data and the audience you need to serve your Machine Learning solution to.
 
 ## Team structure and workspace setup
 
@@ -62,17 +62,17 @@ A consideration for this approach is a single environment deployment is subject 
 
 The benefits of this setup are:
 
-* Staged rollout of Machine Learning workflows and artifacts. For example, models across environments, with the potential of enhancing agility and reducing time-to-deployment.
+- Staged rollout of Machine Learning workflows and artifacts. For example, models across environments, with the potential of enhancing agility and reducing time-to-deployment.
 
-* Enhanced security and control of resources because you have the ability to assign more access restrictions in downstream environments.
+- Enhanced security and control of resources because you have the ability to assign more access restrictions in downstream environments.
 
-* Training scenarios on production data in non-development environments because you can give a select group of users access.
+- Training scenarios on production data in non-development environments because you can give a select group of users access.
 
 A consideration for this approach is you are at risk for more management and process overhead since this setup requires a fine-grained development and rollout process for Machine Learning artifacts across workspace instances. Additionally, data management and engineering effort might be required to make production data available for training in the development environment. Access management is required for you to give a team access to resolve and investigate incidents in production. And finally, Azure DevOps and Machine Learning engineering expertise is needed on your team to implement automation workflows.
 
 ![Multiple environment deployment](./media/azure-ml-setup-multi-environment.png)
 
-**One environment with limited data access, one with production data access:** When you choose this setup, Azure Machine Learning is deployed to two environments – one environment that has limited data access, and one environment that has production data access. This setup is common if you have a requirement to segregate development and production environments. For example, if you are working under organizational constraints to make production data available in any environment or when you want to segregate development work from production work without duplicating data more than required due to the high cost of maintenance.
+**One environment with limited data access, one with production data access:** When you choose this setup, Azure Machine Learning is deployed to two environments: one with limited data access and one with production data access. This setup is common if you need to segregate development and production environments. For example, you might be working under organizational constraints to make production data available in any environment, or you might want to segregate development work from production work without duplicating data more than required due to the high cost of maintenance.
 
 The benefit of this setup is the clear separation of duties and access between development and production environments. Another benefit is lower resource management overhead when compared to a multi-environment deployment scenario.
 
@@ -82,12 +82,11 @@ A consideration for this approach a defined development and rollout process for 
 
 ## Regions and resource setup
 
-The location of your resources, data, or users, might require you to create Azure Machine Learning workspace instances and associated resources in multiple Azure regions. For example, one project might span its resources across the West Europe and East US Azure regions for performance, cost, and  compliance reasons. The following scenarios are common:
+The location of your resources, data, or users might require you to create Azure Machine Learning workspace instances and associated resources in multiple Azure regions. For example, one project might span its resources across the West Europe and East US Azure regions for performance, cost, and compliance reasons. The following scenarios are common:
 
 **Regional training:** The machine learning training jobs run in the same Azure region as where the data is located. In this setup, a Machine Learning workspace is deployed to each Azure region where data is located. It's a common scenario when you are acting under compliance, or when you have data movement constraints across regions.
 
-The benefit of this setup is experimentation can be done in the data center where the data is located with the least network latency.
-A consideration for this approach is when a Machine Learning pipeline is run across multiple workspace instances, it adds more management complexity. It becomes challenging to compare experimentation results across instances and adds overhead to quota and compute management.
+The benefit of this setup is experimentation can be done in the data center where the data is located with the least network latency. A consideration for this approach is when a Machine Learning pipeline is run across multiple workspace instances, it adds more management complexity. It becomes challenging to compare experimentation results across instances and adds overhead to quota and compute management.
 
 If you want to attach storage across regions, but use compute from one region, Azure Machine Learning supports the scenario of attaching storage accounts in a region rather than the workspace. Metadata, for example metrics, will be stored in the workspace region.
 
@@ -113,21 +112,20 @@ A consideration is this approach provides the ability for complex experimentatio
 
 To illustrate the deployment of Azure Machine Learning in a larger setting, this section outlines how the organization 'Contoso' has set up Azure Machine Learning given their organizational constraints, reporting, and budgeting requirements:
 
-* Contoso creates resource groups on a solution basis for cost management and reporting reasons.
-* IT administrators only create resource groups and resources for funded solutions to meet budget requirements.
-* Because of the exploratory and uncertain nature of Data Science, users need a place to experiment and work for use case and data exploration. Often, exploratory work can't be directly associated to a particular use case, and can be associated only to an R&D budget. Contoso wants to fund some Machine Learning resources centrally that anyone can use for exploration purposes.
-* Once a Machine Learning use case proves to be successful in the exploratory environment, teams can request resource groups. For example, Dev, QA, and Prod for iterative experimentation project work, and access to production data sources can be set up.
-
-* Data segregation and compliance requirements don't allow live production data to exist in development environments.
-* Different RBAC requirements exist for various user groups by IT policy per environment, for example access is more restrictive in production.
-* All data, experimentation, and inferencing is done in a single Azure region.
+- Contoso creates resource groups on a solution basis for cost management and reporting reasons.
+- IT administrators only create resource groups and resources for funded solutions to meet budget requirements.
+- Because of the exploratory and uncertain nature of Data Science, users need a place to experiment and work for use case and data exploration. Often, exploratory work can't be directly associated to a particular use case, and can be associated only to an R&D budget. Contoso wants to fund some Machine Learning resources centrally that anyone can use for exploration purposes.
+- Once a Machine Learning use case proves to be successful in the exploratory environment, teams can request resource groups. For example, Dev, QA, and Prod for iterative experimentation project work, and access to production data sources can be set up.
+- Data segregation and compliance requirements don't allow live production data to exist in development environments.
+- Different RBAC requirements exist for various user groups by IT policy per environment, for example access is more restrictive in production.
+- All data, experimentation, and inferencing is done in a single Azure region.
 
 To adhere to the above requirements, Contoso has set up their resources in the following way:
 
-* Azure Machine Learning workspaces and resource groups are scoped per project to follow budgeting and use case segregation requirements.
-* A multiple-environment setup for Azure Machine Learning and associated resources to address cost management, RBAC, and data access requirements.
-* A single resource group and Machine Learning workspace that is dedicated for exploration.
-* Azure Active Directory groups that are different per user role and environment, for example operations that a data scientist can do in a production environment are different than in the development environment, and access levels might differ per solution.
-* All resources are created in a single Azure region.
+- Azure Machine Learning workspaces and resource groups are scoped per project to follow budgeting and use case segregation requirements.
+- A multiple-environment setup for Azure Machine Learning and associated resources to address cost management, RBAC, and data access requirements.
+- A single resource group and Machine Learning workspace that is dedicated for exploration.
+- Azure Active Directory groups that are different per user role and environment, for example operations that a data scientist can do in a production environment are different than in the development environment, and access levels might differ per solution.
+- All resources are created in a single Azure region.
 
 ![Contoso reference implementation](./media/azure-ml-setup-contoso-reference-implementation.png)

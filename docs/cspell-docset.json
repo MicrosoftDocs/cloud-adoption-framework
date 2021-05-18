@@ -3,6 +3,7 @@
   "language": "en",
   "words": [
       "deprioritize",
+      "financials",
       "inexhaustive",
       "offboarding",
       "passwordless",
@@ -17,6 +18,7 @@
     "/(whitepapers?|azureml)\b"
   ],
   "ignoreWords": [
+      "arnaud",
       "bpchar",
       "byteint",
       "customscript",
