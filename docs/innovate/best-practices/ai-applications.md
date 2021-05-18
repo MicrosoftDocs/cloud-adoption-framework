@@ -29,7 +29,7 @@ Azure Cognitive Services can simplify how you integrate AI capabilities and brea
 
 Cognitive Services is made up of APIs, SDKs, and services available to help developers build intelligent applications without having direct AI or data science skills or knowledge. Cognitive Services enables developers to easily add cognitive features into their applications. The catalog of services within Cognitive Services can be categorized into five main parts: vision, speech, language, web search, and decision.
 
-### Computer vision APIs
+### Computer Vision APIs
 
 | Service name | Service description |
 | --- | --- |
@@ -90,7 +90,7 @@ To understand privacy and data management, go to the [Microsoft Trust Center](ht
 Cognitive Services and Azure Machine Learning have the common goal of applying AI to enhance business operations. How each one provides this capability in the respective offerings is different. Generally, the audiences are different:
 
 - Cognitive Services is for developers without machine learning experience.
-- Machine Learning is tailored for data scientists.
+- Machine learning is tailored for data scientists.
 
 ## How is a cognitive service different from machine learning?
 

@@ -61,11 +61,12 @@ An SAP deployment automation should be implemented as a workflow that starts wit
 **Design considerations:**
 
 - Define the scope of automation needed:
+
   - Infrastructure
   - Configuring the operating system
   - Installing the application installation
   - Ongoing operations (run-state operations)
-  
+
 - Define the strategy for storing parameter files
 
 **Design recommendations:**

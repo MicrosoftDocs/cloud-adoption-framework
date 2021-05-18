@@ -36,7 +36,7 @@ AI systems need to be reliable and safe in order to be trusted. It's important f
 
 An AI system's performance can degrade over time, so a robust monitoring and model tracking process needs to be established to reactively and proactively measure the model's performance and retrain it, as necessary, to modernize it.
 
-## What is explainable
+## Explainability
 
 Explainability helps data scientists, auditors, and business decision makers to ensure that AI systems can reasonably justify their decisions and how they reach their conclusions. This also ensures compliance with company policies, industry standards, and government regulations. A data scientist should be able to explain to the stakeholder how they achieved certain levels of accuracy and what influenced this outcome. Likewise, in order to comply with the company's policies, an auditor needs a tool that validates the model, and a business decision maker needs to be able to provide a transparent model in order to gain trust.
 

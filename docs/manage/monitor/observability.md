@@ -26,7 +26,7 @@ The goal of this article is to take the [monitoring strategy](../../strategy/mon
 
 Simply, its observability *first* that drives the monitoring consumer to understand what is considered or perceived as *normal* operation of a service. In other words, you seek *total visibility*, a key monitoring principle, as soon as possible. Once initial observability is achieved, then you build upon that initial level of visibility to develop actionable alerts, create useful dashboards, and evaluate AIOps solutions. This allows you time to get comfortable with the underlying metric and log monitoring data.
 
->[!NOTE]
+> [!NOTE]
 > This is the opposite of the approach used in the past, when teams worked to define all of the monitoring requirements first on paper, before build, test, and deploy.
 
 Whether the plan (that is, objective) targets an Azure resource type such as Key Vault, an entire Resource Group, or even Microsoft 365 Exchange Online, the first step is to *establish observability*.

@@ -41,6 +41,7 @@ This list provides recommended abbreviations for various Azure resource types to
 | DNS | `Microsoft.Network/dnsZones` | `dnsz-` |
 | DNS zone | `Microsoft.Network/privateDnsZones` | `pdnsz-` |
 | Firewall | `Microsoft.Network/azureFirewalls` | `afw-` |
+| Firewall policy | `Microsoft.Network/firewallPolicies` | `afwp-` |
 | ExpressRoute circuit | `Microsoft.Network/expressRouteCircuits` | `erc-` |
 | Front Door instance | `Microsoft.Network/frontDoors` | `fd-` |
 | Front Door firewall policy | `Microsoft.Network/frontdoorWebApplicationFirewallPolicies` | `fdfp-`|
