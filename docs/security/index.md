@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Secure Methodology - Building security into your cloud adoption journey
 
-Just cloud adoption is a journey, cloud security is also an ongoing journey of incremental progress and maturity, not a static destination.
+Just as cloud adoption is a journey, cloud security is also an ongoing journey of incremental progress and maturity, not a static destination.
 
 ## Envision a security end state
 
