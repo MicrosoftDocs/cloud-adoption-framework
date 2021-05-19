@@ -1,26 +1,26 @@
 ---
 title: Plan and Deploy Azure Migrate for Servers
-description: Learn how Contoso sets up an Azure Migrate Server Replication.
-author: Alejandra Palacios (mahernan)
-ms.author: Alejandra Palacios (mahernan)
+description: Learn how Tailwind Traders sets up an Azure Migrate Server Replication.
+author: alejandra8481
+ms.author: brblanch
 ms.date: 04/09/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
-ms.custom: azure-fast-track
+ms.custom: azure-fast-track, think-tank
 ---
 
 # Plan and Deploy Azure Migrate for Servers
 
-This article shows how the fictional company Contoso prepares its deployment plan for on-premises infrastructure migration using Azure Migrate's server replication features.
+This article shows how the fictional company Tailwind Traders prepares its deployment plan for on-premises infrastructure migration using Azure Migrate's server replication features.
 
-When you use this example to help plan your own infrastructure migration efforts, keep in mind that the provided sample plan and deployment is specific to Contoso. Review your organization's business needs, structure, and technical requirements when making important infrastructure migration decisions.
+When you use this example to help plan your own infrastructure migration efforts, keep in mind that the provided sample plan and deployment is specific to Tailwind. Review your organization's business needs, structure, and technical requirements when making important infrastructure migration decisions.
 
 Whether you need all the elements described in this article depends on your migration strategy and needs. For example, you might find it's better to re-deploy a VM in Azure and redeploy the application instead of replicating the on-premises server to Azure.
 
 ## Overview
 
-In order for Contoso to migrate to Azure, it's critical to plan for the migration toolset and activities. Generally, Contoso needs to think about 3 areas:
+In order for Tailwind to migrate to Azure, it's critical to plan for the migration toolset and activities. Generally, Tailwind needs to think about 3 areas:
 
 > [!div class="checklist"]
 >
@@ -39,7 +39,7 @@ Before we start diving deep in infrastructure migration planning and deployment,
 
 ## Step 1: Tooling & Replication
 
-Contoso needs to figure out considerations on the number of appliances needed for replication and replication traffic impact.
+Tailwind needs to figure out considerations on the number of appliances needed for replication and replication traffic impact.
 
 ### Capacity Planning for Core Quotas
 
@@ -47,9 +47,9 @@ In order to pro-actively ensure that the target migration Azure subscriptions wi
 
 ### Server Migration Tooling Planning and Implementation
 
-After increasing the subscription core quotas, Contoso needs to prepare to deploy the appliances and/or agents needed for replication of their on-premises server infrastructure.
+After increasing the subscription core quotas, Tailwind needs to prepare to deploy the appliances and/or agents needed for replication of their on-premises server infrastructure.
 
-Using the below workflow, Contoso is able to define the server migration tools required to enable replication of on-premises servers. This will aid Contoso in pro-actively identifying necessary infrastructure requests to successfully enable replication of their migrateable estate.
+Using the below workflow, Tailwind is able to define the server migration tools required to enable replication of on-premises servers. This will aid Tailwind in pro-actively identifying necessary infrastructure requests to successfully enable replication of their migrateable estate.
 
 ![Concept Diagram](./media/tailwind-migration-rehost-server-replication/replication-workflow.png)
 
@@ -66,21 +66,21 @@ Further details can be found in the reference links below from the Azure Migrate
     - [AWS](https://docs.microsoft.com/en-us/azure/migrate/tutorial-migrate-aws-virtual-machines)
     - [GCP](https://docs.microsoft.com/en-us/azure/migrate/tutorial-migrate-gcp-virtual-machines)
 
-As a best practice, Contoso works closely with their virtualization administrators to ensure careful monitoring of key performance counters for CPU, memory and disk space of the deployed appliances and hypervisor hosts. This will ensure virtualization infrastructure has enough resources to handle additional load from replication appliances and agents.
+As a best practice, Tailwind works closely with their virtualization administrators to ensure careful monitoring of key performance counters for CPU, memory and disk space of the deployed appliances and hypervisor hosts. This will ensure virtualization infrastructure has enough resources to handle additional load from replication appliances and agents.
 
 ### Replication
 
 #### Enabling and Monitoring Replication
 
-With replication appliances and agents configured, Contoso can start planning the replication of their on-premises servers. A colleciton of applications and their dependencies which must be migrated during the same time window is commonly referred to as a migration wave or migration group. Contoso will use the term migration wave to maintain consistency across planning activities.
+With replication appliances and agents configured, Tailwind can start planning the replication of their on-premises servers. A colleciton of applications and their dependencies which must be migrated during the same time window is commonly referred to as a migration wave or migration group. Tailwind will use the term migration wave to maintain consistency across planning activities.
 
-As a best practice, Contoso will plan to enable initial replication for a subset of their migration waves in order to be cautious of their available bandwidth. Contoso understands the initial replication is a full copy of the servers and consumes more bandwidth versus ongoing (delta) replications. Given Contoso's bandwidth constraint considerations, Contoso will only enable replication for migration waves which are close to 1-2 weeks from test migration and cutover dates.
+As a best practice, Tailwind will plan to enable initial replication for a subset of their migration waves in order to be cautious of their available bandwidth. Tailwind understands the initial replication is a full copy of the servers and consumes more bandwidth versus ongoing (delta) replications. Given Tailwind's bandwidth constraint considerations, Tailwind will only enable replication for migration waves which are close to 1-2 weeks from test migration and cutover dates.
 
-Further, Contoso will monitor initial and ongoing replication closely to ensure healthy and stable replication before enabling replication for additional servers. If errors or warnings should arise, Contoso can pro-actively detect and act on it prior to test migration or cutover dates.
+Further, Tailwind will monitor initial and ongoing replication closely to ensure healthy and stable replication before enabling replication for additional servers. If errors or warnings should arise, Tailwind can pro-actively detect and act on it prior to test migration or cutover dates.
 
 #### Replication Tuning
 
-Based on the observed initial and ongoing replications bandwidth patterns, Contoso will tune their replication strategy based on the below queries:
+Based on the observed initial and ongoing replications bandwidth patterns, Tailwind will tune their replication strategy based on the below queries:
 
 - How much bandwidth is needed and available for replications?
 - How many VMs, on average, can be initially replicated at the same time?
@@ -89,13 +89,13 @@ Based on the observed initial and ongoing replications bandwidth patterns, Conto
 
 ## Step 2: Testing and Pre/Post Migration Activities
 
-Given the success in replication toolset deployment and planning for a subset of their migration waves, Contoso decides to start planning their testing needs and pre/post migration activities.
+Given the success in replication toolset deployment and planning for a subset of their migration waves, Tailwind decides to start planning their testing needs and pre/post migration activities.
 
-Contoso understands the migrations are an orchestration of both business and technical groups. Therefore, the below activities are defined as pre and post migration activities.
+Tailwind understands the migrations are an orchestration of both business and technical groups. Therefore, the below activities are defined as pre and post migration activities.
 
 #### Business
 
-In order to prepare the business and its stakeholders for the migration activities, Contoso defines the below items:
+In order to prepare the business and its stakeholders for the migration activities, Tailwind defines the below items:
 
 - A maintenance window for each of the applications to migrate.
 - Communications on application downtime and impact to business.
@@ -111,7 +111,7 @@ In order to prepare the business and its stakeholders for the migration activiti
 
 #### Technical: Pre-Migration
 
-In order to plan for best practice pre-migration activities, Contoso defines the below activities to be executed prior to a migration failover:
+In order to plan for best practice pre-migration activities, Tailwind defines the below activities to be executed prior to a migration failover:
 
 - A Rollback Plan.
 - Latest backup of the servers.
@@ -125,7 +125,7 @@ In order to plan for best practice pre-migration activities, Contoso defines the
     - Plan for an isolated virtual network in each subscription containing migrated VMs. The Test Migration functionality in Azure Migrate must use a virtual network in the same subscription where the migrated VM will exist.
 
 #### Technical: Post-Migration
- Further, Contoso defines the below activities to be executed after the migration failover:
+ Further, Tailwind defines the below activities to be executed after the migration failover:
 
 - Review Azure Migrate's documented post-migration activities based on the source environments below:
     - [VMware Agentless](https://docs.microsoft.com/en-us/azure/migrate/tutorial-migrate-vmware#complete-the-migration)
@@ -133,7 +133,7 @@ In order to plan for best practice pre-migration activities, Contoso defines the
     - [Hyper-V](https://docs.microsoft.com/en-us/azure/migrate/tutorial-migrate-hyper-v#complete-the-migration)
     - [Physical](https://docs.microsoft.com/en-us/azure/migrate/tutorial-migrate-physical-virtual-machines#complete-the-migration), [AWS](https://docs.microsoft.com/en-us/azure/migrate/tutorial-migrate-aws-virtual-machines#complete-the-migration), [GCP](https://docs.microsoft.com/en-us/azure/migrate/tutorial-migrate-gcp-virtual-machines#complete-the-migration)
 
-- In addition, Contoso adds the below activities as best practice post-migration activities:
+- In addition, Tailwind adds the below activities as best practice post-migration activities:
 
     - Validate login with local credentials/keys for RDP or SSH.
     - Validate DNS resolves and DNS servers are configured in network settings (E.G. TCP/IP settings) for the OS.
@@ -156,13 +156,13 @@ In order to plan for best practice pre-migration activities, Contoso defines the
 
 #### Test Migration and Migration
 
-Moving forward Contoso now looks to understand the need for a test migration, what test cases make sense, and which vnets to leverage as targets for the test migration and migration.
+Moving forward Tailwind now looks to understand the need for a test migration, what test cases make sense, and which vnets to leverage as targets for the test migration and migration.
 
 ##### Define Smoke Test
 
-As a first step, Contoso realizes there's a need to perform a smoke test to validate that servers identified to migrate will boot in Azure. It is recommended to perform this smoke test in an isolated vnet for all servers to be migrated. Contoso will follow this recommendation and is especially focused on the smoke test for servers which are legacy, highly customized or contain hardened operating systems. Additionally, Contoso is also keen to run a smoke test for servers which have been marked as "Conditionally Ready" by their Azure Migrate assessments.
+As a first step, Tailwind realizes there's a need to perform a smoke test to validate that servers identified to migrate will boot in Azure. It is recommended to perform this smoke test in an isolated vnet for all servers to be migrated. Tailwind will follow this recommendation and is especially focused on the smoke test for servers which are legacy, highly customized or contain hardened operating systems. Additionally, Tailwind is also keen to run a smoke test for servers which have been marked as "Conditionally Ready" by their Azure Migrate assessments.
 
-Contoso defines a smoke test to be successful when basic server functionality and properties are validated. For example, Smoke testing may include:
+Tailwind defines a smoke test to be successful when basic server functionality and properties are validated. For example, Smoke testing may include:
 
 - The server boots in Azure.
 - The administrator is able to login to the server using local credentials.
@@ -173,9 +173,9 @@ Typically this test is led by the server administrators or the migration partner
 
 ##### Define User Acceptance Testing
 
-As second step, Contoso now looks to perform UAT (User Acceptance Testing) to ensure that the applications are functional and accessible by expected users. Contoso is aware that UAT will help surface missed configuration changes necessary for a successful migration which may include hardcoded IP addresses.
+As second step, Tailwind now looks to perform UAT (User Acceptance Testing) to ensure that the applications are functional and accessible by expected users. Tailwind is aware that UAT will help surface missed configuration changes necessary for a successful migration which may include hardcoded IP addresses.
 
-Contoso defines UAT to be successful when application functionality and access to dependencies is validated. For example, UAT may include:
+Tailwind defines UAT to be successful when application functionality and access to dependencies is validated. For example, UAT may include:
 
 - Validate login with domain credentials.
 - Validate application has access to dependencies (E.G. accessing target URLs or connection strings).
@@ -185,13 +185,13 @@ Typically, this is usually led by application owners.
 
 #### Identify Testing and Migration Workflow
 
-Now that test cases have been defined, Contoso developes the below workflow to encompass the various scenarios they may encounter based on each applications and servers needs.
+Now that test cases have been defined, Tailwind developes the below workflow to encompass the various scenarios they may encounter based on each applications and servers needs.
 
-The majority of Contoso's scenarios require the second and fifth paths in the workflow below. Contoso has quite the amount of legacy servers and servers marked as "Ready with Conditions" which they are unsure will boot in Azure. Therefore, they will test each of those servers in an isolated vnet to ensure each pass the Smoke Test. For this, Contoso will perform a test migration in Azure Migrate which allows for the option for automated clean up of created resources such as VMs and NICs.
+The majority of Tailwind's scenarios require the second and fifth paths in the workflow below. Tailwind has quite the amount of legacy servers and servers marked as "Ready with Conditions" which they are unsure will boot in Azure. Therefore, they will test each of those servers in an isolated vnet to ensure each pass the Smoke Test. For this, Tailwind will perform a test migration in Azure Migrate which allows for the option for automated clean up of created resources such as VMs and NICs.
 
-Further, Contoso's environment is tightly coupled which means there's a large amount of servers which are interdependent with one another, thus resulting in large migration waves. Contoso has decided to split their large migration waves and migrate servers together which have the most strict latency requirements. As a result, some application dependencies must remain on-premises for a given migration wave. Contoso finds it's best they migrate directly into the production vnet given that the production vnet already has connectivity back to their on-premises dependencies. In this path, Contoso will perform necessary smoke tests in an isolated vnet and perform UAT in the production vnet. If all is successful, Contoso will conclude the migration as a final cutover for the servers.
+Further, Tailwind's environment is tightly coupled which means there's a large amount of servers which are interdependent with one another, thus resulting in large migration waves. Tailwind has decided to split their large migration waves and migrate servers together which have the most strict latency requirements. As a result, some application dependencies must remain on-premises for a given migration wave. Tailwind finds it's best they migrate directly into the production vnet given that the production vnet already has connectivity back to their on-premises dependencies. In this path, Tailwind will perform necessary smoke tests in an isolated vnet and perform UAT in the production vnet. If all is successful, Tailwind will conclude the migration as a final cutover for the servers.
 
-Nonetheless, Contoso does find value in considering the remainder paths only for scenarios where they find possible migrating all dependencies to an isolated vnet in order to perform UAT or where UAT is not enforced.
+Nonetheless, Tailwind does find value in considering the remainder paths only for scenarios where they find possible migrating all dependencies to an isolated vnet in order to perform UAT or where UAT is not enforced.
 
 ![Concept Diagram](./media/tailwind-migration-rehost-server-replication/migration-workflow.png)
 
@@ -199,11 +199,11 @@ Nonetheless, Contoso does find value in considering the remainder paths only for
 
 ## Step 3: Cutover and Post-Go-Live
 
-As a final step, Contoso is now ready and confident to perform the production migrations. The envision that during Cutover all hands on deck will be required to ensure end-to-end support. Furthermore, after the soak period concludes, Contoso is looking forward to close-out and call for a successful migration to Azure.
+As a final step, Tailwind is now ready and confident to perform the production migrations. The envision that during Cutover all hands on deck will be required to ensure end-to-end support. Furthermore, after the soak period concludes, Tailwind is looking forward to close-out and call for a successful migration to Azure.
 
 ### Cutover
 
-With the migration activities and workflow defined, Contoso irons out the final plans for cutover by:
+With the migration activities and workflow defined, Tailwind irons out the final plans for cutover by:
 
 - Identifying more specific cutover window, which they have planned for a Friday evening or weekend. Each cutover window will last at a minimum for 4 hours.
 - Announce to the business and those impacted by the migration of the maintenance window. The maintenance window should include a meeting invite that includes the migration plan and a conference bridge to discuss any open items during the migration.
@@ -214,12 +214,12 @@ With the migration activities and workflow defined, Contoso irons out the final 
 
 ### Post-Go Live
 
-Once the cutover successfully concludes, Contoso prepares for decommission of the source servers. Contoso decides that server decommissioning will be executed after the soak period timeline is concluded.
+Once the cutover successfully concludes, Tailwind prepares for decommission of the source servers. Tailwind decides that server decommissioning will be executed after the soak period timeline is concluded.
 
-After each migration wave, Contoso also has a brief retrospective to discuss what went well and what could be improved for future migration waves. Contoso understands these incremental learnings and improvements will ensure a smoother migration for all subsequent migration waves.
+After each migration wave, Tailwind also has a brief retrospective to discuss what went well and what could be improved for future migration waves. Tailwind understands these incremental learnings and improvements will ensure a smoother migration for all subsequent migration waves.
 
 ## Conclusion
 
-In this article, Contoso sets up Azure Migrate Server Migration tools and plans for their infrastructure migration activities and workflow.
+In this article, Tailwind sets up Azure Migrate Server Migration tools and plans for their infrastructure migration activities and workflow.
 
-Not every step taken here is required for a server migration. In this case, Contoso planned for a migration workflow, test plans and pre/post migration activities which can be accomplished by  pro-active and reliable replication.
+Not every step taken here is required for a server migration. In this case, Tailwind planned for a migration workflow, test plans and pre/post migration activities which can be accomplished by  pro-active and reliable replication.
