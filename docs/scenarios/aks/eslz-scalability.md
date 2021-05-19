@@ -2,8 +2,8 @@
 title: Scalability considerations for AKS environments
 description: Scalability considerations for AKS environments
 author: xstabel
-ms.author: ctalaver
-ms.date: 03/01/2021
+ms.author: brblanch
+ms.date: 05/18/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
