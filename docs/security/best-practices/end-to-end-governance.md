@@ -1,6 +1,6 @@
 ---
-title: End to End Governance
-description: DESCRIPTION
+title: End-to-end governance from DevOps to Azure
+description: Learn about how to implement end-to-end governance from DevOps to Azure
 author: julie-ng
 ms.author: julng
 ms.date: 04/21/2021
@@ -10,72 +10,67 @@ ms.subservice: secure
 ms.custom: internal
 ---
 
-## End to End Governance - from DevOps to Azure
+## End to end governance from DevOps to Azure
 
-It is not sufficient to plan and implement an [Azure RBAC model](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/considerations/roles) for ARM, which restricts access via Azure Portal and Azure CLI. 
+It's not sufficient to plan and implement an [Azure role-based access control (RBAC) model](/azure/cloud-adoption-framework/ready/considerations/roles) for Azure Resource Manager templates (ARM templates), which restricts access via Azure portal and Azure CLI.
 
-If this model is not mirrored on the DevOps automation side, your organization may have a left open a **security back-door**. If a developer does not have access via ARM but still has sufficient permissions to change application code or Infrastructure as code and trigger an automation workflow, they can indirectly via DevOps access and make destructive chagnes to your ARM resources.
+If this model isn't mirrored for DevOps automation, your organization might leave a **security back-door** open. Consider an example where a developer doesn't have access via ARM templates, but still has sufficient permissions to change application code or infrastructure as code and trigger an automation workflow. The developer, indirectly via DevOps, can access and make destructive changes to your ARM templates.
 
-This article explains best practices to help plan for and avoid such a scenario.
+This article explains best practices to help plan for and avoid a scenario where destructive changes can occur.
 
-### Single Identity Management Plane with Azure AD Groups
+### Single identity management plane with Azure AD groups
 
-The first step is to integrate Azure Active Directory to leverage [single sign-on per identity management best practice](https://docs.microsoft.com/en-us/azure/security/fundamentals/identity-management-best-practices#enable-single-sign-on).
+The first step is to integrate Azure Active Directory to use [single sign-on per identity management best practice](/azure/security/fundamentals/identity-management-best-practices#enable-single-sign-on).
 
-If are not using an Azure first party CI product like Azure DevOps, check if your vendor offers Azure AD integration, which many do.
+If you aren't using an Azure first party CI product like Azure DevOps, check if your vendor offers Azure AD integration.
 
-The second step is to leverage Azure AD groups, the same groups you are already using for your Azure ARM RBAC model. It is [best practice to assign roles to Azure AD groups](https://docs.microsoft.com/en-us/azure/role-based-access-control/best-practices#assign-roles-to-groups-not-users), not to individuals. To create an end to end governance model, you will need to do this both for Azure ARM and for DevOps.
+The second step is to use Azure AD groups, the same groups you're already using for your ARM templates RBAC model. It's a [best practice to assign roles to Azure AD groups](/azure/role-based-access-control/best-practices#assign-roles-to-groups-not-users), not to individuals. To create an end-to-end governance model, you will need to do this step for ARM templates and DevOps.
 
-Azure DevOps has tight integration with Azure Active Directory including [AAD groups membership](https://docs.microsoft.com/en-us/azure/devops/organizations/security/add-ad-aad-built-in-security-groups?view=azure-devops&tabs=preview-page), making it easy to apply Role assignments to the same Azure AD group. 
+Azure DevOps has tight integration with Azure Active Directory including [AAD groups membership](/azure/devops/organizations/security/add-ad-aad-built-in-security-groups?view=azure-devops&tabs=preview-page), making it easy to apply role assignments to the same Azure AD group.
 
-(Note: if you are using another CI vendor, you may have an intermediary logical container for managing group memberships, which you also need to maintain if AAD group membership is not synchronized.)
+> [!NOTE]
+> If you are using another CI vendor, you might have an intermediary logical container for managing group memberships, which you also need to maintain if AAD group membership is not synchronized. 
 
-The diagram below illustrates how Azure AD is used as the single identity management plane. In ARM and in our DevOps tooling (Azure DevOps in this diagram), we only need to manage **Role Assignments**, not memberships, which should be managed in Azure AD.
+The diagram below illustrates how Azure AD is used as the single identity management plane. In ARM templates and in our DevOps tooling (Azure DevOps in this example), we only need to manage role assignments, not memberships, which should be managed in Azure AD. Note the resource names follow recommended [Naming Conventions](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming) and [Abbreviations](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming) for Azure Resources.
 
-<img src="./../media/e2e-governance-overview.svg" alt="Diagram - End to End Governance">
+<img src="./../media/e2e-governance-overview.svg" alt="Diagram of end-to-end governance and how to access to your Azure resources, both from ARM templates and CI/CD workflows">
 
-_**Figure 1 - Secure ALL access to your Azure resources, both from ARM and CI/CD workflows**_
+#### Example scenario: Remove contractor access with a single step, AAD membership
 
-Please note the names follow recommended [Naming Conventions](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming) and [Abbreviations](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming) for Azure Resources.
+To make end-to-end governance concrete, let's examine the benefits with an example scenario.
 
-#### Example Scenario - remove contractor access with a single step, AAD membership
+If you use Azure AD as your single identity management plane, you can remove a developer's access to your Azure resources in one action, by adjusting their _**Azure AD group memberships**_. For example, if a contractor's access should be revoked upon project completion, when you remove their membership from the relevant Azure AD groups, it will remove access to ARM templates and to Azure DevOps.
 
-To make end to end governance concrete, let's examine the benefits with an example scenario.
+## Mirror RBAC model with role assignments
 
-If you use Azure AD as your single identity management plane as illustrated in figure 2 above, you can remove a developer's access to your Azure resources in one action - adjusting their _**Azure AD group memberships**_. For example, if a contractor's access should be revoked on project completion, removing their membership from the relevant Azure AD groups would remove both access to ARM as well as to Azure DevOps.
+When planned well, the RBAC model in your CI tooling will closely mirror your Azure RBAC model. Although the Azure AD group name examples in the diagram above imply security rules, membership alone doesn't enforce security. Remember that RBAC is a combination of principals, definitions, and scopes, which does not go into effect **until the role assignment is created**.
 
-## Mirror RBAC Model with Role Assignments
+<img src="./../media/devsecops-role-assignments.svg" alt="Diagram of Azure Active Directory as a single identity management plane in Azure DevOps">
 
-When planned well, the RBAC model in your CI tooling will very closely mirror your Azure RBAC model. Although the Azure AD group name examples in the diagram above imply security rules, membership alone does not enforce securiy. Remember that RBAC is a combination of principals, definitions and scopes, which does not go into affect **until the role assignment is created**.
-
-<img src="./../media/devsecops-role-assignments.svg" alt="Diagram - Azure Active Directory as Single Identity Management Plane">
-
-_**Figure 2 - Leveraging Azure Active Directory as a single Identity Management Plane in Azure DevOps**_
-
-Review figure 2 above closely and note:
-
-- the diagram illustrates role assignment for a single AAD group, the `contoso-admins-group`
-- this AAD group has "Owner" role on Azure ARM side at _multiple_ subscription scopes:
+- The diagram illustrates role assignment for a single AAD group, the `contoso-admins-group`
+- This AAD group has *Owner* role for Azure ARM templates at _multiple_ subscription scopes:
   - `contoso-dev-sub` subscription
   - `contoso-prod-sub` subscription
-- this AAD group has "Project Administrator" role on the Azure DevOps side at a _single_ project scope.
+- This AAD group has *Project Administrator* role for Azure DevOps at a _single_ project scope.
 
-Note: 
+The Azure AD group has similarly privileged roles for both ARM templates and DevOps. Following this logic, if we have a developer group with *Contributor* access for ARM templates, we would not expect them to have *Project Administrator* access for DevOps.
 
-In this way, the Azure AD group has similarly privileged roles on both sides. Following this logic, if we have a developers group with "Contributor" access on the ARM side, we would not expect them to have "Project Administrator" access on the DevOps side. 
+Now that you understand the need to secure ARM templates and DevOps workflows, you should:
 
-## Next Steps
+- Review your RBAC model and think about how the roles and responsibilities you have defined for ARM templates match to your CI/CD workflow.
+- Review your CI platform's identity management solutions and integrate Azure Active Directory. Ideally, you want to include the AAD group membership.
+- Review the roles and access levels offered by your CI tooling and compare them with your Azure RBAC model. The roles and access levels will not map one to one. Check your configuration. If a developer doesn't have access for ARM templates, they shouldn't have access for DevOps. In the simplest example, a developer who doesn't have *write* permissions to production resources shouldn't have direct access to trigger production pipeline runs.
 
-Now that you understand you need to secure both ARM and DevOps workflows, you should 
+To learn more about governance design and permissions, see:
 
-- review your RBAC model and think about how the roles and responsibilities you have defined for ARM match to CI/CD workflow
-- review your CI platform's identity management solutions and integrate Azure Active Directory, ideally including AAD group membership
-- review the Roles and Access Levels offered by your CI tooling and compare with your Azure RBAC model. They will not map 1:1. Check your configuration however such that if a developer does not have acces on the ARM side, they should not be able to achieve that access on the DevOps side. In the simplest example, a developer who does not have Write permissions to production resources should not have direct access to trigger production pipeline runs. (TODO - link to Secure DevOps? That would be the next logical step)
+- [Governance design for multiple teams](/azure/cloud-adoption-framework/govern/resource-consistency/governance-multiple-teams)
+- [Recommended method for granting and restricting permissions](/azure/devops/organizations/security/restrict-access?view=azure-devops#recommended-method-for-granting-and-restricting-permissions)
+- [Default permissions and access for Azure DevOps](/azure/devops/organizations/security/permissions-access?view=azure-devops)
+- [Managing people's access to your organization with roles](https://docs.github.com/en/organizations/managing-peoples-access-to-your-organization-with-roles)
 
-## Further Reading
+## Next steps
 
-- [Cloud Adoption Framework - Operating Model - Governance design for multiple teams](https://docs.microsoft.com/azure/cloud-adoption-framework/govern/resource-consistency/governance-multiple-teams)
-- [Azure DevOps - Recommended method for granting and restricting permissions](https://docs.microsoft.com/azure/devops/organizations/security/restrict-access?view=azure-devops#recommended-method-for-granting-and-restricting-permissions)
-- [Azure DevOps - Default permissions and access](https://docs.microsoft.com/azure/devops/organizations/security/permissions-access?view=azure-devops)
-- [GitHub.com - Managing people's access to your organization with roles](https://docs.github.com/en/organizations/managing-peoples-access-to-your-organization-with-roles)
+Now that you understand the need to secure ARM templates and DevOps workflows, learn how to manage secrets in a secure way.
 
+> [!div class="nextstepaction"]
+> [Manage secrets in a secure way](./managing-secrets.md)
