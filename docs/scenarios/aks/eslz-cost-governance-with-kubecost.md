@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank, e2e-aks
 ---
 
-<!-- cspell:ignoreRegExp "kubecostToken=.[A-Za-z\d=]{20,}" -->
+<!-- cspell:ignoreRegExp "kubecostToken=.[A-Za-z\d=]{20,50}" -->
 
 # Cost governance with Kubecost
 

@@ -11,7 +11,6 @@ ms.custom: internal
 ---
 
 <!-- docutune:casing CDOC "Cyber Defense Operations Center" -->
-<!-- cSpell:ignore CISO MTTA MTTR SIEM NIST SOCs CDOC -->
 
 # Cloud SOC functions
 

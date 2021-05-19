@@ -28,7 +28,7 @@ Build security is about the proper utilization of DevSecOps with container image
 
 Poor image configuration can lead to security vulnerabilities down the pipeline, for example having containers that are built running with greater privileges than needed. They might also be configured to allow certain network access, which might put the system at risk. Not limiting the allowed system calls to those required for the safe operation of containers can increase risk from a compromised container. Another vulnerability could be allowing the container get access to sensitive directory of the host or allowing the containers change the locations that control the basic function of the host.
 
-Rouge containers, which are unplanned containers in an environment can be a result of developers testing their code in test environments. These containers might not have gone through vigorous scanning for vulnerabilities or be properly configured. These vulnerabilities might open up an entry point for attackers.
+Rogue containers, which are unplanned containers in an environment can be a result of developers testing their code in test environments. These containers might not have gone through vigorous scanning for vulnerabilities or be properly configured. These vulnerabilities might open up an entry point for attackers.
 
 Using base images that are not from trusted sources or not up to date with security updates could also lead to vulnerabilities in the containers they use them to build.
 
@@ -103,7 +103,7 @@ Kubernetes cluster should be configured to provide a secure environment for appl
 
 Organizations should automatically ensure compliance with container runtime configuration standards defined. There are many policies within Azure that makes this process easy and users can create their own policies as well. Use Azure security features to continuously assess configuration settings across the environment and actively enforce them.
 
-Organizations should automatically ensure vulnerabilities of the Kubernetes components are being addressed. Separate environments should be used for development, test, and production each with their own controls and RBAC for container management. All container creation should be associated with individual user identities and logged for auditing. This would help reduce risk of rouge containers.
+Organizations should automatically ensure vulnerabilities of the Kubernetes components are being addressed. Separate environments should be used for development, test, and production each with their own controls and RBAC for container management. All container creation should be associated with individual user identities and logged for auditing. This would help reduce risk of rogue containers.
 
 ### Node security
 
@@ -172,8 +172,8 @@ Here are some other design considerations for AKS security, governance, and comp
 - Decide whether the cluster's control plane is accessible via the internet, which is the default, or only within a specific virtual network as a private cluster.
 - Evaluate using the built-in [AppArmor](/azure/aks/operator-best-practices-cluster-security#app-armor) Linux security module to limit actions that containers can perform, like read, write, execute, or system functions like mounting file systems.
 - Evaluate using [secure computing (seccomp)](/azure/aks/operator-best-practices-cluster-security#secure-computing) at the process level to limit the process calls that containers can perform.
-- Decide whether your private container registry is accessible via the internet, or only within a specific virtual network.
-- Decide whether your private container registry instance is being shared across multiple landing zones or if you deploy a dedicated container registry to each landing zone subscription.
+- Decide whether your private Container Registry instance is accessible via the internet, or only within a specific virtual network.
+- Decide whether your private Container Registry instance is being shared across multiple landing zones or if you deploy a dedicated container registry to each landing zone subscription.
 - Consider using a security solution like [Azure Defender for Kubernetes](/azure/security-center/defender-for-kubernetes-introduction) for threat detection.
 - Consider scanning your container images for vulnerabilities.
 

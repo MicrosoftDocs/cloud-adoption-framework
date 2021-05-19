@@ -1,6 +1,6 @@
 ---
 title: Resource organization considerations for AKS
-description: AKS guidelines for Resource organization
+description: AKS guidelines for resource organization
 author: brianblanchard
 ms.author: brblanch
 ms.date: 05/01/2021
@@ -18,18 +18,18 @@ The following considerations and recommendations will help establish proper reso
 
 - Decide who will be managing the container hosts:
 
-  - If the hosts are managed centrally, you could reduce the number of landing zone instances and require developers to follow defined processes for deploying the hosts & using shared dashboards/alerts for workload-level operations
-  - If the hosts are managed by the workload teams, you would need more landing zone instances to segment host environments & allow workload teams to control their deployments.
+  - If the hosts are managed centrally, you could reduce the number of landing zone instances and require developers to follow defined processes for deploying the hosts and using shared dashboards and alerts for workload-level operations.
+  - If the hosts are managed by the workload teams, you would need more landing zone instances to segment host environments and allow workload teams to control their deployments.
   - In both cases, you'll need to extend this consideration to adjacent and related resources such as web application firewalls, key vaults, pipeline build agents, and potentially jump boxes.
 
 - Choose a tenancy model for clusters:
 
-  - Workload operated, single tenant: Single cluster host supporting a single workload will likely require a dedicated landing zone to allow for workload team segmentation and control.
-  - Centrally operated, multi-tenant hosts: When hosts are centrally managed, operational efficiency comes from consolidation of multiple hosts and multiple workloads in shared landing zone environments. This reduces the number of landing zones and hosts dedicated to the support of a single cluster &/or workload.
+  - **Workload operated, single tenant:** Single cluster host supporting a single workload will likely require a dedicated landing zone to allow for workload team segmentation and control.
+  - **Centrally operated, multitenant hosts:** When hosts are centrally managed, operational efficiency comes from consolidation of multiple hosts and multiple workloads in shared landing zone environments. This reduces the number of landing zones and hosts dedicated to the support of a single cluster or workload.
 
     Additional landing zones may be required if segmentation is required to separate based on region, business unit, environment, criticality, or other external constraints.
 
-  - Centrally operated, single tenant: For hostile or regulated workloads which are still centrally operated, it's common to have dedicated hosts for those workloads. But you may still experience operational efficiency by consolidating the number of supporting landing zones.
+  - **Centrally operated, single tenant** For hostile or regulated workloads which are still centrally operated, it's common to have dedicated hosts for those workloads. But you may still experience operational efficiency by consolidating the number of supporting landing zones.
 
 - Choose a management group hierarchy based on the general scale and alignment of environments and hosts required to support overall portfolio requirements:
 
@@ -44,7 +44,7 @@ The following considerations and recommendations will help establish proper reso
   - One registry per all clusters in the landing zone with multiple workloads and clusters in the same registry
   - One registry per all clusters across multiple landing zones with multiple workloads and clusters in the same registry
 
-- Decide the scope for container registry policies in Azure policy:
+- Decide the scope for container registry policies in Azure Policy:
 
   - Set a policy at the subscription level requiring all hosts in the landing zone to use the defined registry
   - Set a more granular policy at the resource group level

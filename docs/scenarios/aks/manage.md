@@ -65,7 +65,7 @@ This data will also support workload operations teams by providing detailed info
 
 - Review the resource utilization of workloads running on the host that are unrelated to the standard processes that support the pod.
 - Integrate with [Prometheus](/azure/azure-monitor/containers/container-insights-prometheus-integration) to view application metrics.
-- Monitor container workloads deployed to AKS Engine on-premises and AKS Engine on Azure Stack.
+- Monitor container workloads deployed to AKS engine on-premises and AKS engine on Azure Stack.
 - Monitor container workloads deployed to Azure Red Hat OpenShift.
 - Monitor container workloads deployed to Azure Arc enabled Kubernetes (preview).
 

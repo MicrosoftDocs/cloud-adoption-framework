@@ -32,7 +32,7 @@ Each of these features of the initial governance foundation can be used to gover
 
 - [Azure Kubernetes Service (AKS)](/azure/aks/intro-kubernetes?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)
 - [Azure Arc enabled Kubernetes](/azure/azure-arc/kubernetes/overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)
-- [AKS Engine](https://github.com/Azure/aks-engine/blob/master/docs/README.md)
+- [AKS engine](https://github.com/Azure/aks-engine/blob/master/docs/README.md)
 
 ## Expand on governance disciplines
 
@@ -43,8 +43,6 @@ Governance of Kubernetes clusters can be looked at with five distinct perspectiv
 ### Azure resource governance
 
 The first is the Azure resource perspective. Ensuring that all clusters adhere to your organization's requirements. This includes concepts like network topology, private cluster, Azure RBAC roles for SRE teams, diagnostics settings, region availability, node pool considerations, Azure Container Registry governance, Azure Load Balancer options, AKS add-ons, diagnostics settings, and so on. This governance ensures consistency in "look and feel" and "topology" of clusters in your organizations. This should also extend to post cluster deployment bootstrapping, such as what security agents must be installed and how they should be configured.
-
-<!-- docutune:casing Bicep CVEs -->
 
 Snowflake clusters are hard to govern in any central capacity. Minimize discrepancies between clusters so that policies can apply uniformly and anomalous clusters are discouraged and detectable. This might also include technologies used to deploy the clusters, such as ARM, Bicep, or Terraform.
 

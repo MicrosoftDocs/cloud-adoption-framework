@@ -25,6 +25,8 @@ The standard [cloud adoption plan template](../../plan/template.md) accounts for
 > [!CAUTION]
 > This article assumes the reader is already following the best practices outlined in the article series on [building a cloud adoption plan in Azure DevOps](../../plan/plan-intro.md). If you are tracking your cloud adoption plan in spreadsheet or other project tracking tools, the following sections are still applicable but the actionable steps of adding data to your plan would need to be adjusted.
 
+<!-- -->
+
 > [!WARNING]
 > Incorporating a modern application platform strategy into standard migration processes (or a migration factory) will require mature implementation of tasks associated with [architecting workloads prior to migration](../../migrate/migration-considerations/assess/architect.md). Continuing with this strategy without those tasks will delay the migration effort and could lead to poor architecture decisions for the deployed container hosts and supporting workloads.
 
@@ -51,7 +53,7 @@ When building a cloud adoption plan, each workload is documented following the g
 The following are business related data points which may influence the decision to include a workload in the modern application platform strategy.
 
 - **Compliance drivers:** What specific compliance criteria are driving considerations to host this workload in a private cloud?
-- **Data protection drivers**: What data protection measures are driving considerations to host this workload in a private cloud?
+- **Data protection drivers:** What data protection measures are driving considerations to host this workload in a private cloud?
 - **Operational constraints:** What operational constraints are driving considerations to host this workload in a private cloud?
 - **Modern container outcomes:** Which of the following is the driver behind evaluating this workload as a container candidate? DevOps, portability, consolidation, legacy, or multiple of these drivers.
 - **Operating model:** Will this workload be managed centrally (by central IT/CCoE), de-centrally (by workload team), or with enterprise operations (central support and workload specific operations)?
@@ -76,7 +78,7 @@ Considerations related to the operations of the platform, hosts, and workloads.
 - Primary cloud platform: organizations should define a primary cloud platform to provide operations management tooling. Some organizations might have more than one primary cloud platform to manage various types of operations. What is the primary cloud platform to operate this workload?
 - Additional operations platforms: will this workload also be managed by any additional operations platforms?
 - Cloud hosting requirements: does this workload require a specific cloud hosting strategy? Public cloud, private cloud, or cloud portability
-- Standardized orchestration platform: if the company has a standard solution for container orchestration, include the name of the standardized platform to be considered. Examples: Azure Kubernetes Service (AKS), AKS Engine, or Kubernetes.
+- Standardized orchestration platform: if the company has a standard solution for container orchestration, include the name of the standardized platform to be considered. Examples: Azure Kubernetes Service (AKS), AKS engine, or Kubernetes.
 - Custom orchestration considerations: is there a requirement for a non-standard container orchestration platform? If so, explain that requirement.
 - Standardized host operations: It's assumed that workloads are non-hostile and can be hosted on shared containers supported by standardized host operations. Is this workload compatible with this approach?
 - Customized host operations considerations: if the workload is not compatible with standardized operations, what specific requirements should be considered when establishing host operations practices for this workload?

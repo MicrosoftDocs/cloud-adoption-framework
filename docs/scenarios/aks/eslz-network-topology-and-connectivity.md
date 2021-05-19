@@ -32,7 +32,7 @@ ms.custom: think-tank, e2e-aks
   - Other domains will be forwarded to the DNS servers configured in Azure Virtual Network, which will be either the default Azure DNS resolver, or any custom DNS servers configured at the virtual network level.
 - Outbound (egress) network traffic can be sent through an Azure Firewall or network virtual appliance cluster.
   - By default, AKS clusters have unrestricted egress internet access.
-  - There are two deployment models for outbound connectivity: [`loadBalancer` or `UDR`](/azure/aks/egress-outboundtype). With `UDR`, there's no outbound rule in the standard load balancer that's created.
+  - There are two deployment models for outbound connectivity: [`loadBalancer` or `UDR`](/azure/aks/egress-outboundtype). With `UDR`, there's no outbound rule in the Standard tier load balancer that's created.
   - Egress traffic from the AKS cluster can be sent through Azure Firewall or a network virtual appliance cluster by configuring UDRs in the AKS subnet.
   - If using outbound mode `loadBalancer`, you must carefully manage outbound ports, since you might use up the available outbound ports.
 - By default, all pods in an AKS cluster can send and receive traffic without limitations. Kubernetes network policies can be used to improve security and filter network traffic between pods in an AKS cluster. Two [network policy models](/azure/aks/use-network-policies#network-policy-options-in-aks) are available for AKS. Azure network policies are fully supported by Microsoft, while Calico is an open-source network security solution with more features and is also recommended.

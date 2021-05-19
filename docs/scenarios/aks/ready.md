@@ -58,7 +58,7 @@ The primary difference between the two options above resides in how separation o
 
 Once the core AKS landing zone is deployed and ready for further application deployment, more application platform configuration can be applied to the container hosts. With Azure App Service for Kubernetes with Azure Arc, this includes the installation of a specific application platform on top of each of your clusters.
 
-Depending on your deployment pipeline and Container Registry, you have two options for adding the application platform overlays:
+Depending on your deployment pipeline and your container registry, you have two options for adding the application platform overlays:
 
 - The overlay installation can be included in the container images in your Container Registry standardizing the application platform deployment with the container deployment.
 - Alternatively, the overlay can be deployed during your DevOps pipeline adding the runtime to an existing instance of your container hosts.
