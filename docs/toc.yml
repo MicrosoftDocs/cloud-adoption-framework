@@ -1613,6 +1613,8 @@ items:
         href: security/best-practices/secure-devops.md
       - name: Secure DevOps Governance
         href: security/best-practices/end-to-end-governance.md 
+      - name: Windows Virtual Desktop
+        href: scenarios/wvd/eslz-security-governance-and-compliance.md
       - name: Managing Secrets
         href: security/best-practices/managing-secrets.md
       - name: Network Security
