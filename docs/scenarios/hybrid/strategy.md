@@ -18,12 +18,12 @@ Best practices encourage customers to create a single centralized cloud adoption
 
 A hybrid and multicloud scenario isn't a strategy. It's a technical approach with dependencies on specific architectures and tools that can accelerate business and technology strategies. The following common strategic motivations can be affected by using a hybrid and multicloud scenario:
 
-- **Critical business events**: Responding to critical business events is a common driver for hybrid and multicloud adoption. The ability to *connect multiple environments with hybrid networks and move workloads between platforms* allows technology staff to respond rapidly and more effectively to:
-   - Business changes from a datacenter exit.
-   - Merger/acquisition events.
-   - Changes to regulatory compliance.
-- **Migration motivations**: Looking beyond immediate and critical events, migration and modernization motivations strive for midterm optimization of technology costs, operational complexity, and business agility. Connectivity between the current environment and the cloud provider allows for one-way migration capabilities. Use of abstraction layers, like containers, Kubernetes, or Azure Kubernetes Service (AKS), streamlines the migration process.
-- **Innovation motivations**: When you build solutions to drive long-term innovation, a hybrid and multicloud scenario might accelerate development efforts. Containers, Kubernetes, and AKS allow developers to build solutions with fewer dependencies on the features of any one cloud platform. Azure Stack HCI, Azure Stack Hub, and Azure Stack Edge allow developers to continue innovating with cloud native solutions, even in the local, on-premises datacenter. Conversely, connectivity across multiple clouds allows developers to maximize the use of cloud native services on their chosen platform while they integrate across those clouds for holistic enterprise environments.
+- **Critical business events:** Responding to critical business events is a common driver for hybrid and multicloud adoption. The ability to *connect multiple environments with hybrid networks and move workloads between platforms* allows technology staff to respond rapidly and more effectively to:
+  - Business changes from a datacenter exit.
+  - Merger/acquisition events.
+  - Changes to regulatory compliance.
+- **Migration motivations:** Looking beyond immediate and critical events, migration and modernization motivations strive for midterm optimization of technology costs, operational complexity, and business agility. Connectivity between the current environment and the cloud provider allows for one-way migration capabilities. Use of abstraction layers, like containers, Kubernetes, or Azure Kubernetes Service (AKS), streamlines the migration process.
+- **Innovation motivations:** When you build solutions to drive long-term innovation, a hybrid and multicloud scenario might accelerate development efforts. Containers, Kubernetes, and AKS allow developers to build solutions with fewer dependencies on the features of any one cloud platform. Azure Stack HCI, Azure Stack Hub, and Azure Stack Edge allow developers to continue innovating with cloud native solutions, even in the local, on-premises datacenter. Conversely, connectivity across multiple clouds allows developers to maximize the use of cloud native services on their chosen platform while they integrate across those clouds for holistic enterprise environments.
 
 Review a detailed list of [common motivations](../../strategy/motivations.md) to see which of the preceding motivations most closely maps to your organization's strategy.
 
@@ -87,7 +87,7 @@ Various [motivations](../../strategy/motivations.md) might steer customers to ad
 
 Customers might have a digital estate that's bound by specific regulatory requirements and data localization laws that constrain in which geographic location it must reside. A particular industry might require low latency and high connectivity for efficient operational capacity, such as financial services. Low-latency and high-connectivity are common requirements for other industries like media, healthcare, education, and government.
 
-A multinational organization, for example, might have globally distributed, legacy datacenters, with an aging infrastructure that's not compatible with a companywide migration effort. Or, there might be corporations with even larger cloud estates that are sprawled across several cloud environments, where visibility and control of IT operations is challenging.
+A multinational organization, for example, might have globally distributed, legacy datacenters, with an aging infrastructure that's not compatible with a company-wide migration effort. Or, there might be corporations with even larger cloud estates that are sprawled across several cloud environments, where visibility and control of IT operations is challenging.
 
 ## What are the overall benefits of a multicloud control plane?
 

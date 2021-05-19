@@ -1,12 +1,12 @@
 ---
-title: Operations management process 
-description: Establish an operational fitness review to support the ongoing operations management process 
+title: Operations management process
+description: Establish an operational fitness review to support the ongoing operations management process
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2018
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: operate
+ms.subservice: manage
 ms.custom: internal
 ---
 
@@ -16,7 +16,7 @@ As your enterprise begins to operate workloads in Azure, the next step is to est
 
 A process for operational fitness review ensures that the entire portfolio of workloads meet business commitments to performance, reliability, and cost. This process aligns the efforts of [Central IT](../organize/central-it.md), [Cloud Center of Excellence](../organize/cloud-center-of-excellence.md), and workload teams to deliver operational excellence at scale.
 
-## Establish a core process for operational fitness review 
+## Establish a core process for operational fitness review
 
 Create a process for operational fitness review to fully understand the problems that result from running workloads in a production environment, and how to remediate and resolve those problems. This article outlines a high-level process for operational fitness review that your enterprise can use to achieve this goal.
 
@@ -28,10 +28,10 @@ The processes that Microsoft follows form the basis for the processes outlined i
 
 ## Understand roles & operating models
 
-Operations management is a broad discipline involving multiple roles across the company. Depending on the organizations operating model, those roles may operate in a matrixed environment with a number of hand offs between centralized and decentralized operations teams. 
+Operations management is a broad discipline involving multiple roles across the company. Depending on the organizations operating model, those roles may operate in a matrixed environment with a number of hand offs between centralized and decentralized operations teams.
 
 - **Central IT / CCoE:** This centralized technology function is responsible for the configuration, operations, governance, and security of all technology assets in the technology portfolio.
-- **Cloud Operations:** A function within the centralized technology organization, this centralized operations function is responsible for the health and operations of the technology portfolio. It is their responsibility to ensure the process is run smoothly, that each adjacent role in the process has the tools they need, & that each of the subsequent roles is held accountable for expectations of this process. 
+- **Cloud Operations:** A function within the centralized technology organization, this centralized operations function is responsible for the health and operations of the technology portfolio. It is their responsibility to ensure the process is run smoothly, that each adjacent role in the process has the tools they need, & that each of the subsequent roles is held accountable for expectations of this process.
 - **Cloud Strategy:** Provides knowledge of the business to identify and prioritize commitments to maintain operational requirements of various workloads. This role also compares the mitigation cost to the business impact, and drives the final decision on remediation.
 - **Workload Team:** Accountable for development and operations of discreet workloads which map to specific supporting applications, services, and infrastructure, whether on-premises or in the cloud. The role requires deep knowledge of the workload architecture.
 
@@ -65,17 +65,17 @@ At a high level, the process has two phases. In the *prerequisites phase*, the r
 
 The steps in this phase capture the requirements for conducting a regular review of the portfolio and any mission critical workloads.
 
-1. **Identify critical business operations.** Identify the enterprise's mission-critical business operations based on agreed upon business commitments. Business operations are independent from any supporting service functionality. In other words, business operations represent the actual activities that the business needs to perform and that are supported by a set of IT services. 
+1. **Identify critical business operations.** Identify the enterprise's mission-critical business operations based on agreed upon business commitments. Business operations are independent from any supporting service functionality. In other words, business operations represent the actual activities that the business needs to perform and that are supported by a set of IT services.
 
     The term *mission-critical* (or *business-critical*) reflects a severe impact on the business if the operation is impeded. For example, an online retailer might have a business operation, such as "enable a customer to add an item to a shopping cart" or "process a credit card payment." If either of these operations fails, a customer can't complete the transaction and the enterprise fails to realize sales.
 
-1. **Map operations to services.** Map the critical business operations to the IT services (Baseline, Platform or Workload operations) that support them. Any technology platform or workload required to support a critical business function should also be identified to map operations and services to responsible teams. 
+1. **Map operations to services.** Map the critical business operations to the IT services (Baseline, Platform or Workload operations) that support them. Any technology platform or workload required to support a critical business function should also be identified to map operations and services to responsible teams.
 
 1. **Analyze service dependencies.** Most business operations require orchestration among multiple supporting workloads and technology platforms. It's important to understand the dependencies between each set of supporting assets, and the flow of mission-critical transactions through these services.
 
     Also consider the dependencies between on-premises services and Azure services. In the shopping-cart example, the inventory stock-management service might be hosted on-premises and ingest data entered by employees from a physical warehouse. However, it might store data off-premises in an Azure service, such as [Azure Storage](/azure/storage/common/storage-introduction), or a database, such as [Azure Cosmos DB](/azure/cosmos-db/introduction).
 
-An output from these activities is a set of *scorecard metrics* for operations management. The scorecard measures criteria such as Reliability, Performance, and Cost. Scorecard metrics express the operational criteria that you expect the service to meet. 
+An output from these activities is a set of *scorecard metrics* for operations management. The scorecard measures criteria such as Reliability, Performance, and Cost. Scorecard metrics express the operational criteria that you expect the service to meet.
 
 The scorecard should be expressed in simple terms to facilitate meaningful discussion between the business owners, cloud operations, and workload teams. For example, a scorecard metric for reliability might be color-coded based on attainment of the agreed SLA. Green means meeting the defined SLA, yellow means failing to meet the defined criteria but actively implementing a planned remediation, and red means failing to meet the defined criteria with no plan or action.
 
@@ -104,6 +104,6 @@ Adapt the details of the process and meeting to fit your specific needs. We reco
 
 ## Recommended resources
 
-- [Azure Automanage](/azure/automanage/). Azure Automanage automatically monitors operational fitness across the operations baseline & automates the application of various remediation strategies across the portfolio.
+- [Azure Automanage](https://azure.microsoft.com/services/azure-automanage/). Azure Automanage automatically monitors operational fitness across the operations baseline & automates the application of various remediation strategies across the portfolio.
 - [Azure Advisor](/azure/advisor/). Azure Advisor provides personalized recommendations based on your usage and configurations to help optimize your resources. By default this tool provides recommendations across a subscription to improve the operations baseline. It can also be used more granularly to identify improvements to tech platforms or individual workloads.
 - [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/): Guidance to improve workload operations or to guide decentralized operations.

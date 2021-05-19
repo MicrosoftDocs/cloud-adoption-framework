@@ -225,8 +225,8 @@ Operations management is another requirement to reach migration success. Migrati
 - Complete the operations management workbook.
 - Identify any workloads that require an Microsoft Azure Well-Architected Review assessment.
 - Timeline risks:
-  - Review the workbook: Estimate one hour per application owner.
-  - Complete the Microsoft Azure Well-Architected Review assessment: Estimate one hour per application.
+  - Review the workbook: estimate one hour per application owner.
+  - Complete the Microsoft Azure Well-Architected Review assessment: estimate one hour per application.
 
 <br>
 

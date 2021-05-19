@@ -279,5 +279,5 @@ items:
         href: /learn/modules/azure-stack-hci-plan-deploy/
       - name: Azure Stack HCI technologies
         href: /learn/modules/azure-stack-hci-technologies/
-      - name: Azure Stack HCI - Azure Arc integration
+      - name: Azure Stack HCI - Arc integration
         href: /learn/modules/stack-hci-arc-integration/

@@ -6,9 +6,11 @@ ms.author: brblanch
 ms.date: 05/10/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: operate
+ms.subservice: manage
 ms.custom: internal
 ---
+
+<!-- cspell:ignore perf -->
 
 # Automate onboarding
 

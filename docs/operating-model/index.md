@@ -6,12 +6,9 @@ ms.author: brblanch
 ms.date: 08/14/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: overview
+ms.subservice: general
 ms.custom: internal, operating-model
 ---
-
-<!-- docutune:casing GRC -->
-<!-- cspell:ignore reimagine -->
 
 # Understand cloud operating models
 

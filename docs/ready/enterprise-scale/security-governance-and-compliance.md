@@ -7,7 +7,7 @@ ms.date: 06/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: think-tank
+ms.custom: internal
 ---
 
 # Enterprise-scale security, governance, and compliance

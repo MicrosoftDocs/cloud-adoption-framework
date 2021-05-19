@@ -26,7 +26,7 @@ The best Deployment Acceleration tools in the cloud are only as good as the proc
 
 **Annual planning:** Conduct an annual high-level review of Deployment Acceleration strategy. Explore future corporate priorities and updated cloud adoption strategies to identify potential risk increase and other emerging configuration needs and opportunities. Also use this time to review the latest DevOps best practices and integrate these into your policies and review processes.
 
-**Quarterly review and planning:** Conduct a quarterly review of operational audit data and incident reports to identify any changes required in Deployment Acceleration policy. As part of this process, review current DevOps and devtechops best practices, and update policy as appropriate. After the review is complete, align application and systems design guidance with updated policy.
+**Quarterly review and planning:** Conduct a quarterly review of operational audit data and incident reports to identify any changes required in Deployment Acceleration policy. As part of this process, review current DevOps and TechOps best practices, and update policy as appropriate. After the review is complete, align application and systems design guidance with updated policy.
 
 This planning process is also a good time to evaluate the current membership of your cloud governance team for knowledge gaps related to new or changing policy and risks related to DevOps and deployment acceleration. Invite relevant IT staff to participate in reviews and planning as either temporary technical advisors or permanent members of your team.
 

@@ -6,9 +6,11 @@ ms.author: brblanch
 ms.date: 01/29/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: operate
+ms.subservice: manage
 ms.custom: think-tank, e2e-hybrid
 ---
+
+<!-- cspell:ignore netplan -->
 
 # Create a VMware vSphere template for Ubuntu server 18.04
 
@@ -102,16 +104,16 @@ This article provides guidance for creating an Ubuntu Server 18.04 VMware vSpher
 
 ### Post-installation
 
-Before converting the VM to a template, few actions are needed.
+Before converting the VM to a template, several actions are needed.
 
-- It's better to have your OS packages up-to-date
+- Update your OS packages:
 
     ```console
     sudo apt-get update
     sudo apt-get upgrade -y
     ```
 
-- Prevent cloudconfig from preserving the original hostname and reset the hostname
+- Prevent cloudconfig from preserving the original hostname and reset the hostname:
 
     ```console
     sudo sed -i 's/preserve_hostname: false/preserve_hostname: true/g' /etc/cloud/cloud.cfg
@@ -119,13 +121,13 @@ Before converting the VM to a template, few actions are needed.
     sudo hostnamectl set-hostname localhost
     ```
 
-- Remove the current network configuration
+- Remove the current network configuration:
 
     ```console
     sudo rm /etc/netplan/50-cloud-init.yaml
     ```
 
-- Clean shell history and shutdown the VM
+- Clean shell history and shutdown the VM:
 
     ```console
     cat /dev/null > ~/.bash_history && history -c

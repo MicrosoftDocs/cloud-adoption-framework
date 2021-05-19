@@ -47,6 +47,9 @@ The following bullets provide an overview of the phases of this process (picture
 
 > [!NOTE]
 > In some early iterations of migration effort, it is common to limit scope to a single workload. This approach maximizes skills retention and provides the team with more time to experiment and learn.
+
+<!-- -->
+
 > [!NOTE]
 > When building a migration factory, some teams may choose to disperse each of the above phases across multiple teams and multiple sprints. This approach can improve repeatability and accelerate migration efforts.
 

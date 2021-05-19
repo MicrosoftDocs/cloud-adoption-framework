@@ -24,7 +24,7 @@ Determine the controls and measures to implement as part of your organization's 
 
 Implementing organizational cloud policy stretches across many layers of the implementation process. These layers include platform-wide controls, individual service controls, and application controls. The higher the level of control, the more coverage it gets. The more complex the implementation is, the easier it is to ensure the cloud policy covers all of the cloud adoption team needs.
 
-| Control Level | Suitability                                  | Considerations                                                                                                                                                               | Examples                            |
+| Control level | Suitability                                  | Considerations                                                                                                                                                               | Examples                            |
 | ------------- | -------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- |
 | Platform      | Broad coverage             | Hard to implement service-specific management or remediation. Ensure that the desired outcome is not negated by the application implementation.                               | Resource tagging or allowed regions |
 | Cloud service | Tailored for individual services             | Control must be implemented individually for each service. Ensure that the desired outcome is not negated by the application implementation.                              | Data encryption or monitoring       |
@@ -44,7 +44,7 @@ This level of implementation can be delivered in several layers. The governance 
 
 While classifying the different approaches lists out the extreme ends of the spectrum, many organizations will choose an approach between these models. For example, most organizations will allow some cloud services with a few controls, some will just be allowed without controls, and access to others will be denied.
 
-Whatever the approach taken to Service governance is, the key input is the corporate [Cloud policy statements](https://docs.microsoft.com/azure/cloud-adoption-framework/govern/policy-compliance/policy-definition#create-cloud-policy-statements) defined by the governance team.
+Whatever the approach taken to service governance is, the key input is the corporate [Cloud policy statements](/azure/cloud-adoption-framework/govern/policy-compliance/policy-definition#create-cloud-policy-statements) defined by the governance team.
 
 ## Basic governance
 
@@ -62,11 +62,11 @@ To create an allowlist and blocklist of cloud services, review each cloud servic
 
 ### Implementing blocklists
 
-Services that are explicitly denied use in your organization should use [Azure Policy](https://docs.microsoft.com/azure/governance/policy/tutorials/create-and-manage) to block the use of the service. Azure Policy is a platform level of control and can be implemented by a management group to ensure control over subordinate subscriptions.
+Services that are explicitly denied use in your organization should use [Azure Policy](/azure/governance/policy/tutorials/create-and-manage) to block the use of the service. Azure Policy is a platform level of control and can be implemented by a management group to ensure control over subordinate subscriptions.
 
 The number of policies used to implement the block service is a balanced decision that must take into account the process for a policy exception.
 
-There are often exceptions for the use of a service. Once the exception has been approved through the organizational process, [Azure Policy exemptions](https://docs.microsoft.com/azure/governance/policy/concepts/exemption-structure) can be used to allow the implementation of the service in a targeted area.
+There are often exceptions for the use of a service. Once the exception has been approved through the organizational process, [Azure Policy exemptions](/azure/governance/policy/concepts/exemption-structure) can be used to allow the implementation of the service in a targeted area.
 
 If a single policy is implemented with all the denied services listed, then granting an exception for a single service will grant an exception to all denied services. Upfront implementation is simpler, but releases more control with exceptions.
 
@@ -172,7 +172,7 @@ When starting this process, most organizations will already have an Azure footpr
 
 1. Create a service guidance for every service that's currently used in your organization with the current service controls.
 
-   For example, if key vaults are used and there are no controls enforced on them, create a service guidance for "Key vault with no controls". If storage accounts are in use and a policy enforces encryption, create the storage account guidance with the control that encryption will be enforced.
+   For example, if key vaults are used and there are no controls enforced on them, create a service guidance for "a key vault with no controls". If storage accounts are in use and a policy enforces encryption, create the storage account guidance with the control that encryption will be enforced.
 
 2. Trigger a service review for all services that are currently in use, adding them all to the service review schedule.
 
@@ -192,7 +192,7 @@ A main component of the service review process is to prevent services that don't
 
 A staged approach for allowing service use in different environments gives adoption teams earlier access to controls while reducing the exposure of services without controls.
 
-There are several stages that ensure adoption teams aren't blocked during the creation of new service guidance. The process accelerates their ability to start using  services. The first stage, "Sandbox", is for the adoption team to nominate the new service that they need for a service review.
+There are several stages that ensure adoption teams aren't blocked during the creation of new service guidance. The process accelerates their ability to start using services. The first stage, "Sandbox", is for the adoption team to nominate the new service that they need for a service review.
 
 ![Diagram that shows a new service control lifecycle.](../_images/govern/new-service-control-lifecycle.png)
 
@@ -203,7 +203,7 @@ Here, organizations can decide to allow adoption teams to start using the servic
 - Limited network connectivity to the corporate environment
 - Limited connectivity to outside services
 
-Once a draft version of the service review has been done, the service can be provisionally approved for use in a development and test environment. At this point, the code for the controls might not be complete, but basic guidance about how the service is deployed has been written. The developers can start to work in the Dev/Test environment with the understanding that the service might require reworking later. For example, if new controls are added as part of the final implementation of the production controls, some rework might be needed.
+Once a draft version of the service review has been done, the service can be provisionally approved for use in a development and test environment. At this point, the code for the controls might not be complete, but basic guidance about how the service is deployed has been written. The developers can start to work in the dev/test environment with the understanding that the service might require reworking later. For example, if new controls are added as part of the final implementation of the production controls, some rework might be needed.
 
 For the release of service controls, and to authorize application teams to deploy the service into the production environment, the following tasks must be complete:
 

@@ -6,9 +6,11 @@ ms.author: brblanch
 ms.date: 01/29/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: operate
+ms.subservice: manage
 ms.custom: think-tank, e2e-hybrid
 ---
+
+<!-- cspell:ignore tfvars winsrv -->
 
 # Use a Terraform plan to deploy a VMware Ubuntu virtual machine and connect it to Azure Arc
 
