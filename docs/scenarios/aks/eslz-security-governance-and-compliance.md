@@ -165,9 +165,9 @@ Containers should run with their root filesystem in read-only mode to isolate wr
 
 ## Design considerations
 
-AKS has several interfaces to other Azure services like Azure Active Directory, Azure Storage, and Azure Virtual Network, which requires special attention during the planning phase. AKS also adds extra complexity that requires you to consider applying the same security, governance, and compliance mechanisms and controls as in the rest of your infrastructure landscape.
+AKS has several interfaces to other Azure services like Azure Active Directory, Azure Storage, and Azure Virtual Network, which requires special attention during the planning phase. AKS also adds extra complexity that requires you to consider applying the same security governance and compliance mechanisms and controls as in the rest of your infrastructure landscape.
 
-Here are some other design considerations for AKS security, governance, and compliance:
+Here are some other design considerations for AKS security governance and compliance:
 
 - Decide whether the cluster's control plane is accessible via the internet, which is the default, or only within a specific virtual network as a private cluster.
 - Evaluate using the built-in [AppArmor](/azure/aks/operator-best-practices-cluster-security#app-armor) Linux security module to limit actions that containers can perform, like read, write, execute, or system functions like mounting file systems.
