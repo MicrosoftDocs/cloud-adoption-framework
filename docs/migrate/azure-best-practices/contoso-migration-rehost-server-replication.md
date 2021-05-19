@@ -51,7 +51,7 @@ After increasing the subscription core quotas, Contoso needs to prepare to deplo
 
 Using the below workflow, Contoso is able to define the server migration tools required to enable replication of on-premises servers. This will aid Contoso in pro-actively identifying necessary infrastructure requests to successfully enable replication of their migrateable estate.
 
-![Concept Diagram](./media/contoso-migration-rehost-server-replication/replication-workflow.PNG)
+![Concept Diagram](./media/tailwind-migration-rehost-server-replication/replication-workflow.png)
 
 *Figure 1: Replication Appliances and Agents Workflow.*
 
@@ -193,7 +193,7 @@ Further, Contoso's environment is tightly coupled which means there's a large am
 
 Nonetheless, Contoso does find value in considering the remainder paths only for scenarios where they find possible migrating all dependencies to an isolated vnet in order to perform UAT or where UAT is not enforced.
 
-![Concept Diagram](./media/contoso-migration-rehost-server-replication/migration-workflow.PNG)
+![Concept Diagram](./media/tailwind-migration-rehost-server-replication/migration-workflow.png)
 
 *Figure 2: Testing and Migration Workflow.*
 
