@@ -34,12 +34,12 @@ The standard [cloud adoption plan template](../../plan/template.md) accounts for
 
 In the modern application platform scenario, longer term returns, which require a greater upfront investment, are prioritized over more efficient migration processes. The longer term investments are represented in specific parts of the plan as an increased focus on enabling innovation and streamlining operations for specific groups of workloads.
 
-To begin aligning the strategy and plan, identify any workloads which are assumed to be affected by the addition of modern application platforms in your cloud adoption strategy. Those assumptions will be validated prior to implementing any technical changes. To aid in identifying potential candidates, look for the following criteria within your portfolio of workloads:
+To begin aligning the strategy and plan, identify any workloads that are likely to be affected by the addition of modern application platforms in your cloud adoption strategy. Those assumptions will be validated prior to implementing any technical changes. To aid in identifying potential candidates, look for the following criteria within your portfolio of workloads:
 
-1. **Active Development or DevOps investments:** A percentage of production workloads will be under active development. Some may even be managed through ongoing DevOps practices.
-2. **Workload portability:** Some workloads are affected by compliance, data protection, or operational constraints which may require portability across private cloud, edge, or even multiple public cloud providers.
-3. **Workload consolidation:** Many workloads (especially low utilization workloads) may be candidates for consolidation on container hosts resulting in few servers/VMs and reduced operating costs.
-4. **Legacy workloads:** Legacy workloads can block updates to operating systems and even prevent migration to the cloud. Legacy workloads which aren't compatible with the Azure features might be a candidate for migration on a container host.
+- **Active development or DevOps investments:** A percentage of production workloads will be under active development. Some may even be managed through ongoing DevOps practices.
+- **Workload portability:** Some workloads are affected by compliance, data protection, or operational constraints which may require portability across private cloud, edge, or even multiple public cloud providers.
+- **Workload consolidation:** Many workloads (especially low utilization workloads) may be candidates for consolidation on container hosts resulting in few servers/VMs and reduced operating costs.
+- **Legacy workloads:** Legacy workloads can block updates to operating systems and even prevent migration to the cloud. Legacy workloads which aren't compatible with the Azure features might be a candidate for migration on a container host.
 
 ## Document candidate workloads
 

@@ -53,14 +53,14 @@ The following conceptual reference architecture is an example that shows a golde
 
 ## Deploy enterprise-scale for AKS
 
-![Enterprise-scale for AKS architecture](./media/golden-state-enterprise-architecture-aks.png)
+[![Enterprise-scale for AKS architecture](./media/aks-eslz-architecture.png)](./media/aks-eslz-architecture.png#lightbox)
 
 Enterprise-scale for AKS is an open-source collection of Terraform templates, available in the [`caf-terraform-landingzones-starter`
  repo](https://github.com/Azure/caf-terraform-landingzones-starter/tree/starter/enterprise_scale/construction_sets/aks/online/aks_secure_baseline).
 
 Terraform templates deploy infrastructure components like virtual machines, networks, or storage to Azure. To get the templates, see the [enterprise-scale construction set for Azure Kubernetes services using Terraform](https://github.com/Azure/caf-terraform-landingzones-starter/tree/starter/enterprise_scale/construction_sets/aks/online/aks_secure_baseline). This reference implementation currently deploys a simplistic version of an AKS implementation that can sit in its own subscription within the online management group of an enterprise-scale landing zone. An application deployed in the subscription for an online landing zone will be internet-facing, and does not require hybrid connectivity.
 
-![Reference implementation](./media/aks-eslz-reference-implementation.png)
+[![Reference implementation](./media/aks-eslz-reference-implementation.png)](./media/aks-eslz-reference-implementation.png#lightbox)
 
 ## Next steps
 

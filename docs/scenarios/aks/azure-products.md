@@ -93,9 +93,9 @@ Azure App Service on Kubernetes with Azure Arc creates consistency across develo
   - Kubernetes foundation allows for customizable or standardized container host operations at the host and workload levels.
   - The application platform overlay ensures a consistent runtime for applications that can run on Kubernetes hosts in a private cloud or edge and AKS in Azure.
 
-## Next step: Integrate modern application platforms into your cloud adoption journey
+## Take action
 
-The following list of articles will take you to guidance at specific points in the cloud adoption journey to help you be successful in the cloud adoption scenario.
+Your next step to integrate modern application platforms into your cloud adoption journey. The following list of articles will take you to guidance at specific points in the cloud adoption journey to help you be successful in the cloud adoption scenario.
 
 - [Strategy for modern application platforms](./strategy.md)
 - [Plan for modern application platforms](./plan.md)
