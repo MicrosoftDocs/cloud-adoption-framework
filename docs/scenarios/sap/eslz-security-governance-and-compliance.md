@@ -34,7 +34,7 @@ For more information about the shared responsibility model, see [Shared responsi
 
 Security is a shared responsibility between Microsoft and customers. You can upload your own virtual machine (VM) and database images to Azure, or use images from the Azure Marketplace. However, these images need security controls that meet application and organizational requirements. You must apply your customer-specific security controls to the operating system, data, and SAP application layer.
 
-For generally-accepted security guidance, refer to the [cybersecurity best practices](https://www.cisecurity.org/cybersecurity-best-practices/)from the Center for Internet Security (CIS).
+For generally-accepted security guidance, refer to the [cybersecurity best practices](https://www.cisecurity.org/cybersecurity-best-practices/) from the Center for Internet Security (CIS).
 
 ### Enable Azure Security Center
 

@@ -13,9 +13,9 @@ ms.custom: think-tank, e2e-sap
 <!-- docutune:casing "Azure Fence Agent" -->
 <!-- docutune:ignore DB -->
 
-# Business continuity and disaster recovery (BC/DR) for an SAP migration
+# Business continuity and disaster recovery (BCDR) for an SAP migration
 
-This article builds on a number of considerations and recommendations defined in the Azure Landing Zone article [enterprise-scale design area for BC/DR](../../ready/enterprise-scale/business-continuity-and-disaster-recovery.md). Following the guidance in this article will help understand the unique constraints required for any landing zone to support the SAP platform. However, since SAP is an mission-critical platform, the guidance on the enterprise-scale design areas should also be included in your design.
+This article builds on a number of considerations and recommendations defined in the Azure landing zone article [enterprise-scale design area for BCDR](../../ready/enterprise-scale/business-continuity-and-disaster-recovery.md). Following the guidance in this article will help understand the unique constraints required for any landing zone to support the SAP platform. However, since SAP is an mission-critical platform, the guidance on the enterprise-scale design areas should also be included in your design.
 
 ## Scenario and scope
 
@@ -34,7 +34,7 @@ This article covers the following aspects of BCDR for an enterprise-scale SAP sc
 
 - High availability (HA) within an Azure region
 - Backup/restore considerations
-- DR: Cross-regional versus regional DR decision criteria
+- Cross-regional versus regional disaster recovery decision criteria
 
 ### High availability (HA) within an Azure region
 
@@ -88,7 +88,7 @@ One advantage of deploying your HA architecture across different Availability Zo
 
 - Use a Standard Load Balancer SKU in front of ASCS and DB clusters.
 
-- All production systems should run on premium-managed SSDs and use Azure NetApp Files or ultra disks. At least the OS disk should be Premium tier to achieve better performance and the best SLA.
+- All production systems should run on premium-managed SSDs and use Azure NetApp Files or Ultra Disk Storage. At least the OS disk should be Premium tier to achieve better performance and the best SLA.
 
 - Both VMs in the HA pair should be deployed in an availability set, or Availability Zones should be the same size and have the same storage configuration.
 
@@ -169,7 +169,7 @@ Another factor that you should consider when choosing your DR region is the RPO 
 
 - Use Site Recovery to replicate an application server to a DR site. Site Recovery can also help with replicating central-services cluster VMs to the DR site. When you invoke DR, you'll need to reconfigure the Linux Pacemaker cluster on the DR site (for example, replace the VIP or SBD, run `corosync.conf`, and more).
 
-- Use Cross-region replication in Azure NetApp Files to synchronize file volumes between the primary and DR region. Cross-region replication is [currently in public preview](/azure/azure-netapp-files/cross-region-replication-introduction).
+- Use cross-region replication in Azure NetApp Files to synchronize file volumes between the primary and DR region. Cross-region replication is [currently in public preview](/azure/azure-netapp-files/cross-region-replication-introduction).
 
 - Native database replication should be used to synchronize data to the DR site; Site Recovery shouldn't be used.
 

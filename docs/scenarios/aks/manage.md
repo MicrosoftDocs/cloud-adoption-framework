@@ -1,5 +1,5 @@
 ---
-title: Manage modern app platform solutions
+title: Manage modern application platform solutions
 description: Describe the scenario's impact on operations management
 author: BrianBlanchard
 ms.author: brblanch
@@ -10,7 +10,7 @@ ms.subservice: operate
 ms.custom: think-tank, e2e-aks
 ---
 
-# Manage modern app platform clusters
+# Manage modern application platform clusters
 
 The [Cloud Adoption Framework provides a core methodology to define operation management processes](../../manage/index.md) for the cloud in an agnostic sense. Its guidance helps establish an operations management baseline and other specialized layers of operations. This guidance might still apply for organizations that have a mixture of infrastructure as a service (IaaS), platform as a service (PaaS), and containerized workloads. This article outlines what you need to integrate into your existing operations to prepare for container management. It also highlights the benefits of integrating Azure Kubernetes Service (AKS) into your container management strategy.
 
@@ -65,7 +65,7 @@ This data will also support workload operations teams by providing detailed info
 
 - Review the resource utilization of workloads running on the host that are unrelated to the standard processes that support the pod.
 - Integrate with [Prometheus](/azure/azure-monitor/containers/container-insights-prometheus-integration) to view application metrics.
-- Monitor container workloads deployed to AKS Engine on-premises and AKS Engine on Azure Stack.
+- Monitor container workloads deployed to AKS engine on-premises and AKS engine on Azure Stack.
 - Monitor container workloads deployed to Azure Red Hat OpenShift.
 - Monitor container workloads deployed to Azure Arc enabled Kubernetes (preview).
 
@@ -75,7 +75,7 @@ Patching, tuning, and sizing happens at a few different levels in a containerize
 
 In a cluster environment in Azure, these tasks are performed at multiple levels: AKS cluster, node image, and node OS. All of these operations tasks become more dependent on an understanding and working relationship of the workloads running in the clusters or on individual node pools. The following statements will help evaluate what and if you want to do to operate your container environments.
 
-- If the sizing and patching of the AKS cluster, node image or node OS is delivered as part of the deployment pipeline for the application or is dependent on application architecture/configuration, then it is best to shift operational compliance to the workload team for granular control. Because workloads often take a dependency on orchestration features, this is the most common pattern as an unexpected AKS version change or node image change could be catastrophic to the workload or its runtime tooling.
+- If the sizing and patching of the AKS cluster, node image or node OS is delivered as part of the deployment pipeline for the application or is dependent on application architecture or configuration, then it's best to shift operational compliance to the workload team for granular control. Because workloads often take a dependency on orchestration features, this is the most common pattern as an unexpected AKS version change or node image change could be catastrophic to the workload or its runtime tooling.
 - For the less common centralized clusters, supporting a portfolio of workloads and a variety of applications, the centralized operations team may still be responsible for operational compliance tasks, the following guides will help deliver those tasks across your clusters. Executing these tasks on a recurring basis instills platform specific operations. There is notable risk in a central operations approach, and careful testing of upgrades in pre-production environments, clear and adhered to scheduled maintenance, and contingency plans for noncompliant workloads all need to be in place. One bad upgrade can be a single point of failure and likewise, one workload not able to upgrade can cause a cluster to fall out of support. Plan and manage multitenant clusters with due diligence.
 
 For both cluster types, follow the guidance on upgrades, node images, and node OS updates found below:
@@ -92,7 +92,7 @@ AKS nodes are ephemeral in nature, and as such are not backed up in a way that c
 - Choose to add an [uptime SLA to your cluster](/azure/aks/uptime-sla).
 - For higher SLAs, you may also want to consider [multiregion BCDR best practices](/azure/aks/operator-best-practices-multi-region?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json) to provide additional protection.
 - Since clusters should not contain state, external state restoration is handled using existing operations baseline guidance. If you brought state into your clusters ensure your following the [operators best practice on storage](/azure/aks/operator-best-practices-storage?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json), and have a strategy to [back and up restore this data](/azure/aks/operator-best-practices-storage#secure-and-back-up-your-data) for a given workload. Use of tools like [Velero](https://github.com/vmware-tanzu/velero) is an example of platform specific operations, that extend your operations baseline.
-  - If your portfolio of applications inconsistently applies state, it is advised that the central operations team not attempt to maintain both solutions. Instead, standardize on the desired-state toolchain for all containers, but shift the responsibility for alternative recovery solutions to workload operations teams. This approach allows design freedom for the developers, keeps central costs lower, and provides a cost reduction incentive for workload teams to conform to the standard.
+  - If your portfolio of applications inconsistently applies state, the central operations team shouldn't try to maintain both solutions. Instead, standardize on the desired-state toolchain for all containers, but shift the responsibility for alternative recovery solutions to workload operations teams. This approach allows design freedom for the developers, keeps central costs lower, and provides a cost-reduction incentive for workload teams to conform to the standard.
 
 ## Workload operations
 
@@ -102,12 +102,12 @@ Workload operations can build on your existing operations baseline and platform-
 
 ## Next step: Your next migration iteration
 
-Once the modern app platform migration is complete, the cloud adoption team can begin your next scenario-specific migration. Alternatively, if there are addition platforms to be migrated, this article series can be used again to guide your next modern app platform migration or deployment.
+Once the modern application platform migration is complete, the cloud adoption team can begin your next scenario-specific migration. Alternatively, if there are addition platforms to be migrated, this article series can be used again to guide your next modern application platform migration or deployment.
 
-- [Strategy for modern app platforms](./strategy.md)
-- [Plan for modern app platforms](./plan.md)
+- [Strategy for modern application platforms](./strategy.md)
+- [Plan for modern application platforms](./plan.md)
 - [Review your environment or Azure landing zones](./ready.md)
-- [Migrate workloads to modern app platforms](./migrate.md)
-- [Innovate using modern app platform solutions](./innovate.md)
-- [Govern modern app platform solutions](./govern.md)
-- [Manage modern app platform solutions](./manage.md)
+- [Migrate workloads to modern application platforms](./migrate.md)
+- [Innovate using modern application platform solutions](./innovate.md)
+- [Govern modern application platform solutions](./govern.md)
+- [Manage modern application platform solutions](./manage.md)

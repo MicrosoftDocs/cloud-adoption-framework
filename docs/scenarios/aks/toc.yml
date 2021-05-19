@@ -2,7 +2,7 @@
 #cSpell:ignore devtest mariadb
 
 items:
-  - name: Modern App Platform - Microsoft Cloud Adoption Framework for Azure
+  - name: Modern application platform - Microsoft Cloud Adoption Framework for Azure
     href: index.md
     pdf_name: Modern App Platform - Microsoft Cloud Adoption Framework for Azure
   - name: Overview
@@ -15,7 +15,7 @@ items:
     href: plan.md
   - name: Prepare your environment
     items:
-    - name: Azure Landing Zones
+    - name: Azure landing zones
       href: ready.md
     - name: Design areas
       items:
@@ -37,14 +37,14 @@ items:
         href: eslz-platform-automation-and-devops.md
     - name: Implementation options
       items:
-      - name: Start small & expand with the AKS baseline
+      - name: Start small and expand with the AKS baseline
         href: /azure/architecture/reference-architectures/containers/aks/secure-baseline-aks?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
       - name: Enterprise-scale for AKS
         href: enterprise-scale-landing-zone.md
-      
-  - name: Migrate to modern app platforms
+
+  - name: Migrate to modern application platforms
     href: migrate.md
-  - name: Innovation on modern app platforms
+  - name: Innovation on modern application platforms
     href: innovate.md
   - name: Govern your portfolio
     href: govern.md
@@ -55,7 +55,7 @@ items:
     items:
     - name: Best practices for application developers
       href: /azure/aks/developer-best-practices-resource-management?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
-  - name: Container Architectures
+  - name: Container architectures
     items:
     - name: Container product decision tree
       href: /azure/architecture/guide/technology-choices/compute-decision-tree?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
@@ -112,15 +112,15 @@ items:
           items:
             - name: Overview
               href: /azure/architecture/operator-guides/aks/aks-triage-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
-            - name: 1- Cluster health
+            - name: Cluster health
               href: /azure/architecture/operator-guides/aks/aks-triage-cluster-health?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
-            - name: 2- Node and pod health
+            - name: Node and pod health
               href: /azure/architecture/operator-guides/aks/aks-triage-node-health?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
-            - name: 3- Workload deployments
+            - name: Workload deployments
               href: /azure/architecture/operator-guides/aks/aks-triage-deployment?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
-            - name: 4- Admission controllers
+            - name: Admission controllers
               href: /azure/architecture/operator-guides/aks/aks-triage-controllers?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
-            - name: 5- Container registry connectivity
+            - name: Container registry connectivity
               href: /azure/architecture/operator-guides/aks/aks-triage-container-registry?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
         - name: Patching and upgrade guidance
           href: /azure/architecture/operator-guides/aks/aks-upgrade-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
@@ -129,7 +129,7 @@ items:
           maintainContext: true
 
     - name: Migration
-      items:         
+      items:
       - name: Migrate to AKS
         href: /azure/aks/aks-migration?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
         maintainContext: true
@@ -139,7 +139,7 @@ items:
       - name: Tomcat
         href: /azure/developer/java/migration/migrate-tomcat-to-containers-on-azure-kubernetes-service
         maintainContext: true
-      - name: Wildfly
+      - name: WildFly
         href: /azure/developer/java/migration/migrate-wildfly-to-wildfly-on-azure-kubernetes-service
         maintainContext: true
       - name: WebLogic
@@ -160,7 +160,7 @@ items:
         href: /azure/aks/intro-kubernetes?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
       - name: Azure Arc enabled Kubernetes
         href: /azure/azure-arc/kubernetes/overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
-      - name: AKS Engine
+      - name: AKS engine
         href: https://github.com/Azure/aks-engine/blob/master/docs/README.md
       - name: Secure pods
         href: /azure/aks/use-pod-security-on-azure-policy?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
@@ -191,7 +191,7 @@ items:
         href: /azure/azure-monitor/insights/container-insights-enable-new-cluster?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
       - name: Enable for existing AKS cluster
         href: /azure/azure-monitor/insights/container-insights-enable-existing-clusters?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
-      - name: Enable for Arc enabled cluster
+      - name: Enable for Azure Arc enabled cluster
         href: /azure/azure-monitor/insights/container-insights-enable-arc-enabled-clusters?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
       - name: Enable for hybrid cluster
         href: /azure/azure-monitor/insights/container-insights-hybrid-setup?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
@@ -204,7 +204,7 @@ items:
       items:
       - name: Upgrade the AKS cluster
         href: /azure/aks/upgrade-cluster?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
-      - name: Upgrade the Node image
+      - name: Upgrade the node image
         href: /azure/aks/node-image-upgrade?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
       - name: Process node OS updates
         href: /azure/aks/node-updates-kured?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
@@ -230,7 +230,7 @@ items:
         href: /azure/aks/operator-best-practices-cluster-security?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
       - name: Networking
         href: /azure/aks/operator-best-practices-network?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
-       
+
   - name: Azure product documentation
     items:
     - name: Azure Kubernetes Service (AKS)
@@ -245,19 +245,19 @@ items:
         href: /azure/aks/quickstart-helm?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
       - name: Package and migrate a workload
         items:
-        - name: 1 - Prepare application for AKS
+        - name: Prepare application for AKS
           href: /azure/aks/tutorial-kubernetes-prepare-app?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
-        - name: 2 - Create container registry
+        - name: Create container registry
           href: /azure/aks/tutorial-kubernetes-prepare-acr?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
-        - name: 3 - Create Kubernetes cluster
+        - name: Create Kubernetes cluster
           href: /azure/aks/tutorial-kubernetes-deploy-cluster?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
-        - name: 4 - Run application
+        - name: Run application
           href: /azure/aks/tutorial-kubernetes-deploy-application?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
-        - name: 5 - Scale application
+        - name: Scale application
           href: /azure/aks/tutorial-kubernetes-scale?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
-        - name: 6 - Update application
+        - name: Update application
           href: /azure/aks/tutorial-kubernetes-app-update?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
-        - name: 7 - Upgrade cluster
+        - name: Upgrade cluster
           href: /azure/aks/tutorial-kubernetes-upgrade-cluster?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
     - name: Develop with Kubernetes
       items:
@@ -294,7 +294,7 @@ items:
         href: /azure/app-service/quickstart-arm-template?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
       - name: Custom container
         href: /azure/app-service/quickstart-custom-container?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
-      - name: Multi-container app
+      - name: Multicontainer application
         href: /azure/app-service/quickstart-multi-container?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
     - name: Azure Container Instances
       items:
@@ -304,7 +304,7 @@ items:
           href: /azure/container-instances/container-instances-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
         - name: Deploy a container instance - CLI
           href: /azure/container-instances/container-instances-quickstart?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
-        - name: Deploy a container instance - Portal
+        - name: Deploy a container instance - Azure portal
           href: /azure/container-instances/container-instances-quickstart-portal?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
         - name: Deploy a container instance - PowerShell
           href: /azure/container-instances/container-instances-quickstart-powershell?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
@@ -317,15 +317,15 @@ items:
       items:
       - name: Overview
         href: /azure/batch/batch-technical-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
-      - name: Run a Batch job - CLI
+      - name: Run a batch job - CLI
         href: /azure/batch/quick-create-cli?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
-      - name: Run a Batch job - Portal
+      - name: Run a batch job - Azure portal
         href: /azure/batch/quick-create-portal?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
-      - name: Run a Batch job - .NET
+      - name: Run a batch job - .NET
         href: /azure/batch/quick-run-dotnet?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
-      - name: Run a Batch job - Python
+      - name: Run a batch job - Python
         href: /azure/batch/quick-run-python?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
-      - name: Create a Batch account - ARM template
+      - name: Create a batch account - ARM template
         href: /azure/batch/quick-create-template?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
     - name: Azure Service Fabric
       items:
@@ -346,7 +346,7 @@ items:
         href: /azure/service-fabric/service-fabric-quickstart-containers?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
       - name: Deploy a Spring Boot application
         href: /azure/service-fabric/service-fabric-quickstart-java-spring-boot?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
-      - name: Deploy a Reliable Services application
+      - name: Deploy a reliable services application
         href: /azure/service-fabric/service-fabric-quickstart-java-reliable-services?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
     - name: Azure Container Registry
       items:
@@ -354,7 +354,7 @@ items:
         href: /azure/container-registry/container-registry-intro?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
       - name: Create container registry - CLI
         href: /azure/container-registry/container-registry-get-started-azure-cli?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
-      - name: Create container registry - Portal
+      - name: Create container registry - Azure portal
         href: /azure/container-registry/container-registry-get-started-portal?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
       - name: Create container registry - PowerShell
         href: /azure/container-registry/container-registry-get-started-powershell?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
