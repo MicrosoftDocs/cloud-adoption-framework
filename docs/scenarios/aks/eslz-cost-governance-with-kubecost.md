@@ -79,7 +79,7 @@ Select **Allocation** on the left to dig down into the namespace cost of your re
 
 :::image type="content" source="./media/kubecost-allocation.png" alt-text="Screenshot showing the Kubecost Allocation screen.":::
 
-Select **Savings** on the left to dig into cost savings for underutilized resources. **Savings** gives you information about underutilized nodes and pods and abandoned resources, and identifies resource requests that are overprovisioned within the cluster. The following screenshot shows an example **Savings** overview:
+Select **Savings** on the left to dig into cost savings for underutilized resources. **Savings** gives you information about underutilized nodes and pods and abandoned resources, and identifies overprovisioned  resource request swithin the cluster. The following screenshot shows an example **Savings** overview:
 
 :::image type="content" source="./media/kubecost-savings.png" alt-text="Screenshot showing the Kubecost Savings screen.":::
 

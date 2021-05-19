@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-aks
 
 # Introduction to the modern application platform scenario
 
-As customers address larger, more sophisticated forms of cloud adoption, their journey to the cloud becomes more complex. Commonly, customers are using orchestrated containers to manage pools of workloads in one or more centralized clusters. This article series combines technical and non-technical considerations required to prepare for Kubernetes and container integration into centralized operations and your broader cloud strategy.
+As customers address larger, more sophisticated forms of cloud adoption, their journey to the cloud becomes more complex. Commonly, customers use orchestrated containers to manage pools of workloads in one or more centralized clusters. This article series combines technical and non-technical considerations required to prepare for Kubernetes and container integration into centralized operations and your broader cloud strategy.
 
 Organizations include managed services, application services, and containers in their overall strategy to accelerate developer productivity, reduce operating overhead, make workloads more portable, and modernize legacy workloads.
 
@@ -46,7 +46,7 @@ This scenario is designed to guide the end-to-end customer journey, throughout t
 
 **Migrate existing workloads to AKS:** A common use case for AKS in Azure is to modernize existing web-based workloads directly to a container-based or cloud-native solution, instead of traditional migration efforts. The article on [migrating to containers](./migrate.md) will demonstrate how Azure Migrate can accelerate container migration within your standard migration processes.
 
-**Centralize deployment and management of containers:** The first set of articles in the left pane provides rich guidance on centralization of your container strategy. This article series is intended to help central IT or cloud center of excellence teams understand how containers affect your cloud strategy and how to provide consistent centralized support.
+**Centralize deployment and management of containers:** The first set of articles in the left pane provides rich guidance on centralization of your container strategy. This article series intends to help central IT or cloud center of excellence teams understand how containers affect your cloud strategy and how to provide consistent centralized support.
 
 **Prepare for governance and operation of containers at scale:** Enterprise-scale for AKS demonstrates how you can use enterprise-scale landing zones to ensure consistent governance, security, and operations across multiple landing zones for centralized management of containers at scale.
 
