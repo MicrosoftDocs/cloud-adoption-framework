@@ -26,7 +26,7 @@ Here are common Azure admin activities involved in administration and management
 
 | Azure resource | Azure resource provider | Activities |
 |---|---|---|
-| Virtual machines | Microsoft.Compute/virtualmachines | Start, stop, restart, deallocate, deploy, redeploy, change, resize, extensions, availability sets, proximity placement groups |
+| Virtual machines | Microsoft.Compute/virtualMachines | Start, stop, restart, deallocate, deploy, redeploy, change, resize, extensions, availability sets, proximity placement groups |
 | Virtual machines | Microsoft.Compute/disks | Read and write to disk |
 | Storage | Microsoft.Storage | Read, change on storage accounts (for example boot diagnostics) |
 | Storage | Microsoft.NetApp | Read, change on NetApp capacity pools and volumes |

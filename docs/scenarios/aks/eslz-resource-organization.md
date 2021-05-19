@@ -33,22 +33,22 @@ The following considerations and recommendations will help establish proper reso
 
 - Choose a management group hierarchy based on the general scale and alignment of environments and hosts required to support overall portfolio requirements:
 
-  - Flat structure to support a number of dedicated hosts in dedicated environments for decentralized operations run be each workload team
-  - Segmented structure to create a management group for centrally managed hosts and a separate management group for decentralized operations
-  - Hierarchial structure further segmenting environments to reflect billing, governance, or operational requirements
+  - Flat structure to support a number of dedicated hosts in dedicated environments for decentralized operations run be each workload team.
+  - Segmented structure to create a management group for centrally managed hosts and a separate management group for decentralized operations.
+  - Hierarchial structure further segmenting environments to reflect billing, governance, or operational requirements.
 
 - Decide which container registry topology to use for OCI artifact distribution:
 
-  - One registry per workload
-  - One registry per cluster with multiple workloads in the registry
-  - One registry per all clusters in the landing zone with multiple workloads and clusters in the same registry
-  - One registry per all clusters across multiple landing zones with multiple workloads and clusters in the same registry
+  - One registry per workload.
+  - One registry per cluster with multiple workloads in the registry.
+  - One registry per all clusters in the landing zone with multiple workloads and clusters in the same registry.
+  - One registry per all clusters across multiple landing zones with multiple workloads and clusters in the same registry.
 
 - Decide the scope for container registry policies in Azure Policy:
 
-  - Set a policy at the subscription level requiring all hosts in the landing zone to use the defined registry
-  - Set a more granular policy at the resource group level
-  - Set a broader policy at the management group level
+  - Set a policy at the subscription level requiring all hosts in the landing zone to use the defined registry.
+  - Set a more granular policy at the resource group level.
+  - Set a broader policy at the management group level.
 
 ## Design recommendations
 

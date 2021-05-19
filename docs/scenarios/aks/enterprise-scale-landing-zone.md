@@ -10,6 +10,8 @@ ms.subservice: ready
 ms.custom: think-tank, e2e-aks
 ---
 
+<!-- cspell:ignore landingzones -->
+
 # Enterprise-scale for AKS
 
 Enterprise-scale for AKS represents the strategic design path and target technical state for an Azure Kubernetes Service (AKS) deployment. This solution provides an architectural approach and reference implementation to prepare landing zone subscriptions for a scalable Azure Kubernetes Service (AKS) cluster. The implementation adheres to the architecture and best practices of the Cloud Adoption Framework's Azure landing zones with a focus on the design principles of enterprise-scale.
@@ -53,7 +55,8 @@ The following conceptual reference architecture is an example that shows a golde
 
 ![Enterprise-scale for AKS architecture](./media/golden-state-enterprise-architecture-aks.png)
 
-Enterprise-scale for AKS is an open-source collection of Terraform templates, available in [This GitHub repo](https://github.com/Azure/caf-terraform-landingzones-starter/tree/starter/enterprise_scale/construction_sets/aks/online/aks_secure_baseline).
+Enterprise-scale for AKS is an open-source collection of Terraform templates, available in the [`caf-terraform-landingzones-starter`
+ repo](https://github.com/Azure/caf-terraform-landingzones-starter/tree/starter/enterprise_scale/construction_sets/aks/online/aks_secure_baseline).
 
 Terraform templates deploy infrastructure components like virtual machines, networks, or storage to Azure. To get the templates, see the [enterprise-scale construction set for Azure Kubernetes services using Terraform](https://github.com/Azure/caf-terraform-landingzones-starter/tree/starter/enterprise_scale/construction_sets/aks/online/aks_secure_baseline). This reference implementation currently deploys a simplistic version of an AKS implementation that can sit in its own subscription within the online management group of an enterprise-scale landing zone. An application deployed in the subscription for an online landing zone will be internet-facing, and does not require hybrid connectivity.
 

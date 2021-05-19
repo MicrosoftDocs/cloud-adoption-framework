@@ -66,22 +66,22 @@ The following are data points from the technology teams which may influence the 
 
 Considerations related to where the workload will be hosted.
 
-- Public cloud hosting requirement: is there a specific technical constraint associated with the public cloud requirement?
-- Private cloud hosting requirement: is there a specific technical constraint associated with the private cloud requirement?
-- Edge hosting requirement: is there a specific technical constraint associated with the edge requirement?
-- Portability requirement: is there a specific technical constraint associated with the cloud portability requirement?
+- **Public cloud hosting requirement:** Is there a specific technical constraint associated with the public cloud requirement?
+- **Private cloud hosting requirement:** Is there a specific technical constraint associated with the private cloud requirement?
+- **Edge hosting requirement:** Is there a specific technical constraint associated with the edge requirement?
+- **Portability requirement:** Is there a specific technical constraint associated with the cloud portability requirement?
 
 **Operations considerations:**
 
 Considerations related to the operations of the platform, hosts, and workloads.
 
-- Primary cloud platform: organizations should define a primary cloud platform to provide operations management tooling. Some organizations might have more than one primary cloud platform to manage various types of operations. What is the primary cloud platform to operate this workload?
-- Additional operations platforms: will this workload also be managed by any additional operations platforms?
-- Cloud hosting requirements: does this workload require a specific cloud hosting strategy? Public cloud, private cloud, or cloud portability
-- Standardized orchestration platform: if the company has a standard solution for container orchestration, include the name of the standardized platform to be considered. Examples: Azure Kubernetes Service (AKS), AKS engine, or Kubernetes.
-- Custom orchestration considerations: is there a requirement for a non-standard container orchestration platform? If so, explain that requirement.
-- Standardized host operations: It's assumed that workloads are non-hostile and can be hosted on shared containers supported by standardized host operations. Is this workload compatible with this approach?
-- Customized host operations considerations: if the workload is not compatible with standardized operations, what specific requirements should be considered when establishing host operations practices for this workload?
+- **Primary cloud platform:** Organizations should define a primary cloud platform to provide operations management tooling. Some organizations might have more than one primary cloud platform to manage various types of operations. What is the primary cloud platform to operate this workload?
+- **Additional operations platforms:** Will this workload also be managed by any additional operations platforms?
+- **Cloud hosting requirements:** Does this workload require a specific cloud hosting strategy? Public cloud, private cloud, or cloud portability
+- **Standardized orchestration platform:** If the company has a standard solution for container orchestration, include the name of the standardized platform to be considered. Examples: Azure Kubernetes Service (AKS), AKS engine, or Kubernetes.
+- **Custom orchestration considerations:** Is there a requirement for a non-standard container orchestration platform? If so, explain that requirement.
+- **Standardized host operations:** It's assumed that workloads are non-hostile and can be hosted on shared containers supported by standardized host operations. Is this workload compatible with this approach?
+- **Customized host operations considerations:** If the workload is not compatible with standardized operations, what specific requirements should be considered when establishing host operations practices for this workload?
 
 **Application considerations:**
 

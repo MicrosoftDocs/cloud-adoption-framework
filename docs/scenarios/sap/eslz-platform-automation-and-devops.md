@@ -149,7 +149,7 @@ The SAP system is the actual SAP application, as it contains all Azure Artifacts
 
 ## The SAP deployment automation framework
 
-The SAP deployment automation framework provides Terraform templates and Ansible playbooks, which can be used to build and configure environments to run SAP in Azure. The artifacts are hosted in the [Azure SAP HANA repository](https://github.com/Azure/sap-hana), and Azure supports open-source deployment scripts (code isn't customized) for SAP in Azure.
+The SAP deployment automation framework provides Terraform templates and Ansible playbooks, which can be used to build and configure environments to run SAP in Azure. The artifacts are hosted in the [Azure `sap-hana` repository](https://github.com/Azure/sap-hana), and Azure supports open-source deployment scripts (code isn't customized) for SAP in Azure.
 
 ### Automation capabilities
 
@@ -169,7 +169,7 @@ The SAP deployment automation framework capabilities matrix:
 |:-|:-|:-|
 | Accelerated networking | Y | Accelerated networking is enabled on VMs. |
 | Application security groups | N | These are on the roadmap. |
-| Anchor VM | Y | A VM that anchors the proximity placement group in an Availability Zone. |
+| Anchor VM | Y | A virtual machine that anchors the proximity placement group in an Availability Zone. |
 | Application configuration | N | An Ansible-based configuration; to be released shortly. |
 | Application installation | N | An Ansible-based installation; to be released shortly. |
 | Authentication | Y | The authentication supports SSH-based and username-/password-based authentication. |
