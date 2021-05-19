@@ -35,7 +35,7 @@ The following considerations and recommendations will help establish proper reso
 
   - Flat structure to support a number of dedicated hosts in dedicated environments for decentralized operations run be each workload team.
   - Segmented structure to create a management group for centrally managed hosts and a separate management group for decentralized operations.
-  - Hierarchial structure further segmenting environments to reflect billing, governance, or operational requirements.
+  - Hierarchical structure further segmenting environments to reflect billing, governance, or operational requirements.
 
 - Decide which container registry topology to use for OCI artifact distribution:
 
