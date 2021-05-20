@@ -58,7 +58,7 @@ For more information, see these Azure Migrate topics:
 
 - [Support matrix for VMware migration](/azure/migrate/migrate-support-matrix-vmware-migration#vm-requirements-agentless).
 - [Migrate VMware VMs to Azure (agent-based)](/azure/migrate/tutorial-migrate-vmware-agent).
-- [Migrate VMware VMs to Azure (agentless) via Powershell](/azure/migrate/tutorial-migrate-vmware-powershell).
+- [Migrate VMware VMs to Azure (agentless) via PowerShell](/azure/migrate/tutorial-migrate-vmware-powershell).
 - [Migrate Hyper-V VMs to Azure](/azure/migrate/tutorial-migrate-hyper-v).
 - Other hypervisors:
   - [Migrate machines as physical servers to Azure](/azure/migrate/tutorial-migrate-physical-virtual-machines)
@@ -79,7 +79,7 @@ Tailwind will also monitor initial and ongoing replication closely to ensure hea
 
 #### Replication tuning
 
-Based on the observed initial and ongoing replications bandwidth patterns, Tailwind will tune their replication strategy based on the below queries:
+Based on the observed initial and ongoing replications bandwidth patterns, Tailwind will tune their replication strategy based on the following queries:
 
 - How much bandwidth is needed and available for replications?
 - How many VMs, on average, can be initially replicated at the same time?
@@ -90,15 +90,15 @@ Based on the observed initial and ongoing replications bandwidth patterns, Tailw
 
 Given the success in replication toolset deployment and planning for a subset of their migration waves, Tailwind decides to start planning their testing needs and pre-migration and post-migration activities.
 
-Tailwind understands that the migrations are an orchestration of both business and technical groups. Therefore, the below activities are defined as pre-migration and post-migration activities.
+Tailwind understands that the migrations are an orchestration of both business and technical groups. Therefore, the following activities are defined as pre-migration and post-migration activities.
 
 ### Business
 
-In order to prepare the business and its stakeholders for the migration activities, Tailwind defines the below items:
+In order to prepare the business and its stakeholders for the migration activities, Tailwind defines the following items:
 
 - A maintenance window for each of the applications to migrate.
 - Communications on application downtime and impact to business.
-- Points of contact (POCs) that can provide support for the below key areas during migration testing and cutover:
+- Points of contact (POCs) that can provide support for the following key areas during migration testing and cutover:
   - Network administrators
   - Backup administrators
   - Server administrators
@@ -110,7 +110,7 @@ In order to prepare the business and its stakeholders for the migration activiti
 
 ### Technical: Pre-migration
 
-In order to plan for best practice pre-migration activities, Tailwind defines the below activities to be executed prior to a migration failover:
+In order to plan for best practice pre-migration activities, Tailwind defines the following activities to be executed prior to a migration failover:
 
 - A rollback plan.
 - Latest backup of the servers.
@@ -180,21 +180,21 @@ As a second step, Tailwind now looks to perform user acceptance testing (UAT) to
 
 Tailwind defines UAT to be successful when application functionality and access to dependencies is validated. For example, UAT may include:
 
-- Validate login with domain credentials.
-- Validate application has access to dependencies (such as target URLs or connection strings).
+- Validate sign-in with domain credentials.
+- Verify that the application has access to dependencies (such as target URLs or connection strings).
 - Validate application functionality with test users.
 
 Typically, this is usually led by application owners.
 
 #### Identify testing and migration workflow
 
-Now that test cases have been defined, Tailwind developes the below workflow to encompass the various scenarios they may encounter based on each applications and servers needs.
+Now that test cases have been defined, Tailwind develops the following workflow to encompass the various scenarios it might encounter based on the needs of each application or server.
 
-The majority of Tailwind's scenarios require the second and fifth paths in the following workflow. Tailwind has many legacy servers and other servers marked as **Ready with Conditions**, which they are unsure will boot in Azure. Therefore, they will test each of those servers in an isolated VNet to ensure that each server passes the smoke test. For this, Tailwind will perform a test migration in Azure Migrate which allows for the option for automated clean up of created resources such as VMs and NICs.
+The majority of Tailwind's scenarios require the second and fifth paths in the following workflow. Tailwind has many legacy servers and other servers marked as **Ready with Conditions**, which might not boot in Azure. Therefore, Tailwind will test each of those servers in an isolated VNet to ensure that each server passes the smoke test. For this, Tailwind will perform a test migration in Azure Migrate which allows for the option for automated clean up of created resources such as VMs and NICs.
 
-Further, Tailwind's environment is tightly coupled which means there's a large amount of servers which are interdependent with one another, thus resulting in large migration waves. Tailwind has decided to split their large migration waves and migrate servers together which have the most strict latency requirements. As a result, some application dependencies must remain on-premises for a given migration wave. Tailwind finds it's best they migrate directly into the production VNet given that the production VNet already has connectivity back to their on-premises dependencies. In this path, Tailwind will perform necessary smoke tests in an isolated VNet and perform UAT in the production VNet. If successful, Tailwind will conclude the migration as a final cutover for the servers.
+Further, Tailwind's environment is tightly coupled which means there's a large amount of servers which are interdependent with one another, thus resulting in large migration waves. Tailwind has decided to split their large migration waves and migrate servers together which have the most strict latency requirements. As a result, some application dependencies must remain on-premises for a given migration wave. Tailwind determines that it should migrate directly into the production VNet, since that network already has connectivity back to their on-premises dependencies. In this path, Tailwind will perform necessary smoke tests in an isolated VNet and perform UAT in the production VNet. If successful, Tailwind will conclude the migration as a final cutover for the servers.
 
-Nonetheless, Tailwind does find value in considering the remainder paths only for scenarios where they find possible migrating all dependencies to an isolated VNet in order to perform UAT or where UAT is not enforced.
+Nonetheless, Tailwind does find value in considering the remainder paths only for scenarios where it's possible to migrate all dependencies to an isolated VNet in order to perform UAT, or where UAT is not enforced.
 
 ![Diagram of the migration workflow.](./media/tailwind-migration-rehost-server-replication/migration-workflow.png)
 
@@ -208,12 +208,12 @@ As a final step, Tailwind is now ready to confidently perform the production mig
 
 With the migration activities and workflow defined, Tailwind irons out the final plans for cutover by:
 
-- Identifying more specific cutover window, which they have planned for a Friday evening or weekend. Each cutover window will last at a minimum for 4 hours.
-- Announce to the business and those affected by the migration of the maintenance window. The maintenance window should include a meeting invite that includes the migration plan and a conference bridge to discuss any open items during the migration.
-- Reached out to the network administrators, backup administrators, server administrators, identity administrators, application owners, Microsoft support and resources and partner to ensure they are available during cutover.
-- Ensure a backup of the server has been committed prior to cutover.
-- Ensure rollback plan is defined and ready for execution if needed
-- Ensure migration handover to operations team by settings expectations that day-2 operations must commence with regards to Azure server backup, patching, monitoring, and so on.
+- Identifying a more specific cutover window, which is planned for a Friday evening or weekend. Each cutover window will last at a minimum for 4 hours.
+- Notifying the business and those affected by the migration of the maintenance window. The maintenance window should include a meeting invite that includes the migration plan and a conference bridge to discuss any open items during the migration.
+- Contacting the network administrators, backup administrators, server administrators, identity administrators, application owners, Microsoft support resources, and partners to ensure that each party is available during cutover.
+- Ensuring a backup of the server has been committed prior to cutover.
+- Ensuring the rollback plan is defined and ready for execution if needed.
+- Ensure the migration handover to the operations team by setting expectations that day-2 operations must commence for Azure server backup, patching, monitoring, and so on.
 
 ### Post-go-live
 

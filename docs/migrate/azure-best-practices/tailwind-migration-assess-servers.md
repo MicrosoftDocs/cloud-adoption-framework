@@ -64,13 +64,13 @@ Tailwind first needs to determine the Azure Migrate appliances needed for discov
 
 To start gathering data required for assessment, Tailwind needs to prepare to deploy the appliances and agents needed for discovery of their on-premises server infrastructure.
 
-Using the below workflow, Tailwind can define the server discovery tools required to gather information from on-premises servers and their dependencies.
+Using the following workflow, Tailwind can define the server discovery tools required to gather information from on-premises servers and their dependencies.
 
 ![Diagram of the discovery workflow.](./media/tailwind-migration-assess-servers/discovery-workflow.png)
 
 *Figure 1: Discovery appliances and agents workflow.*
 
-Further details can be found in the reference links below from the Azure Migrate documentation:
+For more information, see these Azure Migrate topics:
 
 - [Discover VMware VMs](/azure/migrate/tutorial-discover-vmware#set-up-the-appliance)
 - [Discover Hyper-V VMs](/azure/migrate/tutorial-discover-hyper-v#set-up-the-appliance)
@@ -100,7 +100,7 @@ Tailwind can choose to run various assessments such as a [Azure VM assessment](/
 Tailwind understands that the Azure Migrate appliance will continue to collect performance data of their on-premises infrastructure and send it over to Azure Migrate, therefore Tailwind has the opportunity to recalculate Azure Migrate assessment at any future point in time to ensure the latest data sets are being included as migration execution approximates.
 
 > [!NOTE]
-> For server infrastructure that Tailwind is unable to discover via the Azure Migrate appliance, they plan to create a CSV file with the required data and upload it to Azure Migrate. For more information, see [Assess servers using an imported CSV file](/azure/migrate/tutorial-discover-import).
+> For server infrastructure that cannot be discovered via the Azure Migrate appliance, Tailwind will create a CSV file with the required data and upload it to Azure Migrate. For more information, see [Assess servers using an imported CSV file](/azure/migrate/tutorial-discover-import).
 
 ### Assessment properties
 
@@ -112,9 +112,9 @@ Tailwind plans to migrate to Azure and observe behavior for at least a few month
 
 Tailwind selects performance-based sizing criteria and sets performance history to one month. This will enable Tailwind to find recommended VM sizes and managed disks based on actual server requirements that were gathered during the discovery phase. Thus, resulting in optimization of infrastructure as a result of the migration. Tailwind understands that Azure Migrate assessment will recommend VM SKUs based on CPU and memory utilization. For disk types, Azure Migrate will base the recommendations on IOPS and throughput of the existing disks in the on-premises servers assessed.
 
-Further, as Tailwind expects existing workloads to slightly increase on their resource utilization in the future, they select 1.1x as the comfort factor. This will add 10 percent more resources to VM requirements based on the gathered performance data and recommend VM sizes which include this 10 percent buffer.
+Further, as resource usage for existing workloads is expected to increase slightly over time, Tailwind set the comfort factor to **1.1x**. This will add 10 percent more resources to VM requirements based on the gathered performance data, and recommended VM sizes will include this 10 percent buffer.
 
-Based on the Microsoft Azure offer associated with Tailwind's Azure subscription, appropriate offer or licensing program and currency is selected. Tailwind is eligible for [Azure Hybrid Benefit](http://go.microsoft.com/fwlink/?LinkId=859786), so they set **Already have a Windows Server license** to **yes**. Tailwind understands that not configuring Azure Hybrid Benefit might result in additional billing of Windows Server licenses that were already purchased. Tailwind also understand that Azure Hybrid Benefit primarily applies to Windows operating systems, so for any servers running Linux or other non-Windows operating systems, Tailwind should consult on license portability separately.
+Based on the Azure offer associated with Tailwind's subscription, the appropriate offer or licensing program and currency is selected. Tailwind is eligible for [Azure Hybrid Benefit](http://go.microsoft.com/fwlink/?LinkId=859786), so it sets **Already have a Windows Server license** to **yes**. Tailwind understands that not configuring Azure Hybrid Benefit might result in additional billing of Windows Server licenses that were already purchased. Tailwind also understand that Azure Hybrid Benefit primarily applies to Windows operating systems, so for any servers running Linux or other non-Windows operating systems, Tailwind should consult on license portability separately.
 
 After saving assessment properties, Tailwind needs to select servers to assess. Tailwind creates a new [server group](/azure/migrate/how-to-create-a-group) that includes all discovered servers from all discovery appliances and creates assessments for each specific environment. Although Tailwind considered creating a server group and assessment for each specific application, while the ideal scenario, it was decided to create server groups at a later stage, closer to wave migration planning, as more time is needed to analyze dependencies between servers.
 
@@ -168,7 +168,7 @@ To perform effective dependency analysis, Tailwind takes the following steps:
 
 ### Review data collected with application owners
 
-As Tailwind continues to prepare for the migration, Tailwind realizes they need to gather additional workload details from application owners. Based on the gathered information, the migration team will review complexity, criticality, and dependencies of each server group or workload and finalize the prioritization of server groups for their migration wave schedules. As Tailwind schedules additional interviews with application owners, it ensures collection of the following data points:
+As preparation continues for the migration, Tailwind realizes that additional workload details must be gathered from application owners. Based on those details, the migration team reviews complexity, criticality, and dependencies of each server group or workload, and then finalizes the prioritization of server groups for their migration wave schedules. As Tailwind schedules additional interviews with application owners, it ensures collection of the following data points:
 
 - Business criticality
 - Workload architecture (all servers and other components such as load balancers that are required for workload to run)
@@ -189,8 +189,8 @@ As a best practice, Tailwind reviews server assessment results with application 
 - Identify any components that need optimization or replacement in Azure (such as load balancers or clusters).
 - Verify all dependencies are discovered and validated with application owners.
 - Confirm SLA requirements are met.
-- Review SQL assessment results and review options for replatforming SQL Server to Azure SQL Database or SQL Managed Instance.
-- Review cost estimation
+- Review SQL assessment results and review options for rehosting your SQL Server databases on Azure SQL Database or SQL Managed Instance.
+- Review cost estimates.
 
 ### Document the migration plan
 
@@ -228,7 +228,7 @@ Tailwind reviews the guidance in [Build a migration plan with Azure Migrate](/az
   - Prioritize workloads with less restrictive data classification.
   - Prioritize workloads with newer operating systems, since older operating systems tend to have more issues booting in Azure or in supporting Azure management extensions.
 
-Tailwind understands that some migration waves will change as they progress through migration execution, so the migration team reviews and modifies waves periodically. The migration team incorporates learnings from executed waves to improve assessment and migration planning (such as capturing any missing network requirements, pre-migration testing, post-migration tweaks, review permissions, and so on.).
+Tailwind understands that some migration waves will change migration execution progresses, so the migration team reviews and modifies waves periodically. The migration team incorporates learnings from executed waves to improve assessment and migration planning (such as capturing any missing network requirements, pre-migration testing, post-migration tweaks, review permissions, and so on.).
 
 ## Conclusion
 
