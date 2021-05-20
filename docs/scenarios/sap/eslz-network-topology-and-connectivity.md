@@ -1,5 +1,5 @@
 ---
-title: Enterprise-scale network topology and connectivity for an SAP migration
+title: Network topology and connectivity for an SAP migration
 description: Understand key design considerations and best practices surrounding networking and connectivity to, from, and within Microsoft Azure and SAP deployments.
 author: JefferyMitchell
 ms.author: brblanch
@@ -10,9 +10,9 @@ ms.subservice: ready
 ms.custom: think-tank, e2e-sap
 ---
 
-# Enterprise-scale network topology and connectivity for an SAP migration
+# Network topology and connectivity for an SAP migration
 
-This article examines key design considerations and best practices surrounding networking and connectivity to, from, and within Microsoft Azure and SAP deployments.
+This article builds on a number of considerations and recommendations defined in the Azure landing zone article [enterprise-scale design area for network topology and connectivity](../../ready/enterprise-scale/network-topology-and-connectivity.md). Following the guidance in this article will help examine key design considerations and best practices surrounding networking and connectivity to, from, and within Microsoft Azure and SAP deployments. Since SAP is an mission-critical platform, the guidance on the enterprise-scale design areas should also be included in your design.
 
 ## Plan for IP addressing
 
@@ -22,11 +22,11 @@ It's vital to plan for IP addressing in Azure to ensure that:
 - The virtual network (VNet) contains the right address space.
 - Proper planning for subnet configuration happens in advance.
 
-The following architecture diagram shows enterprise-scale networking considerations in an SAP on Azure construction set:
+The following architecture diagram shows networking considerations in enterprise-scale for SAP on Azure:
 
- ![A diagram of enterprise-scale networking considerations in an SAP on Azure construction set.](./media/ntc-architecture.png#lightbox)
+ ![A diagram of networking considerations in Enterprise-scale for SAP on Azure.](./media/ntc-architecture.png#lightbox)
 
-*Figure 1: A diagram of enterprise-scale networking considerations in an SAP on Azure construction set.*
+*Figure 1: A diagram of networking considerations in Enterprise-scale for SAP on Azure.*
 
 **Design considerations for SAP implementation:**
 
@@ -95,9 +95,9 @@ This section recommends connectivity models for in- and outbound connectivity to
 
 Since SAP Web Dispatcher and NetScaler are more intelligent than Application Gateway, extensive testing is necessary to replace them with this service. Verify the most current status and list all supported and not supported (or tested/not tested) scenarios, if possible.
 
-- Use a Web Application Firewall to scan your traffic when it's exposed to the internet. Another option is to use it with your load balancer or with resources that have built-in firewall capabilities like Application Gateway or third-party solutions.
+- Use a web application firewall to scan your traffic when it's exposed to the internet. Another option is to use it with your load balancer or with resources that have built-in firewall capabilities like Application Gateway or third-party solutions.
 
-- To prevent data leakage, use Azure Private Link to securely access platform as a service resources like Azure Blob Storage, Azure Files, Azure Data Lake Storage Gen2, Azure Data Factory, and more. Azure Private Endpoint can also help to secure traffic between VNets and services like Azure Storage, Azure Backup, and more. Traffic between your VNet and the Private-EndPoint-enabled service travels across the Microsoft global network, which prevents its exposure to the public internet.
+- To prevent data leakage, use Azure Private Link to securely access platform as a service resources like Azure Blob Storage, Azure Files, Azure Data Lake Storage Gen2, Azure Data Factory, and more. Azure Private Endpoint can also help to secure traffic between VNets and services like Azure Storage, Azure Backup, and more. Traffic between your VNet and the Private Endpoint enabled service travels across the Microsoft global network, which prevents its exposure to the public internet.
 
 ## Define network encryption requirements
 
@@ -132,7 +132,7 @@ It isn't recommended to host the database management system (DBMS) and applicati
   - Windows Server 2012 R2 or later
   - SUSE Linux 12 SP3 or later
   - Red Hat Enterprise Linux 7.4 or later
-  - Oracle Linux 7.5: Release 3.10.0-862.13.1.el7 is required for the kernel compatible with Red Hat Enterprise Linux. Release 5 is required for the Oracle Unbreakable Enterprise Kernel.
+  - Oracle Linux 7.5 release 3.10.0-862.13.1.el7 is required for the kernel compatible with Red Hat Enterprise Linux. Release 5 is required for the Oracle Unbreakable Enterprise Kernel.
 
 - Make sure that internal deployments for Azure Load Balancer are set up to use Direct Server Return (DSR). This setting will reduce latency when internal load balancer configurations are used for high-availability configurations on the DBMS layer.
 

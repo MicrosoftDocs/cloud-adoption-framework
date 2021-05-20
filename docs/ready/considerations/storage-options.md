@@ -112,7 +112,7 @@ After you identify the Azure tools that best match your requirements, use the de
 
 Azure Storage has various redundancy options to help ensure durability and high availability based on customer needs: locally redundant storage, zone-redundant storage, geo-redundant storage (GRS), and read-access GRS (RA-GRS).
 
-See [Azure Storage redundancy](/azure/storage/common/storage-redundancy) to learn more about these capabilities and how you can decide on the best redundancy option for your use cases. Also, service-level agreements (SLAs) for storage services provide guarantees that are financially backed. For more information, see [SLA for managed disks](https://azure.microsoft.com/support/legal/sla/managed-disks/v1_0), [SLA for virtual machines](https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_8), and [SLA for storage accounts](https://azure.microsoft.com/support/legal/sla/storage/v1_4).
+See [Azure Storage redundancy](/azure/storage/common/storage-redundancy) to learn more about these capabilities and how you can decide on the best redundancy option for your use cases. Also, service-level agreements (SLAs) for storage services provide guarantees that are financially backed. For more information, see [SLA for managed disks](https://azure.microsoft.com/support/legal/sla/managed-disks), [SLA for virtual machines](https://azure.microsoft.com/support/legal/sla/virtual-machines), and [SLA for storage accounts](https://azure.microsoft.com/support/legal/sla/storage).
 
 For help with planning the right solution for Azure disks, see [Backup and disaster recovery for Azure disk storage](/azure/virtual-machines/windows/backup-and-disaster-recovery-for-azure-iaas-disks).
 

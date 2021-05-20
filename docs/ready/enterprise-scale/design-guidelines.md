@@ -30,5 +30,5 @@ The impact of decisions made within these critical areas will reverberate across
 - [Network topology and connectivity](./network-topology-and-connectivity.md)
 - [Management and monitoring](./management-and-monitoring.md)
 - [Business continuity and disaster recovery](./business-continuity-and-disaster-recovery.md)
-- [Security, governance, and compliance](./security-governance-and-compliance.md)
+- [Security governance and compliance](./security-governance-and-compliance.md)
 - [Platform automation and DevOps](./platform-automation-and-devops.md)
