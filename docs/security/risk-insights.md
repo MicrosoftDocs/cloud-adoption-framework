@@ -1,6 +1,6 @@
 ---
-title: Risk Management Insights
-description: Integrate security insights into you risk management framework and digital initiatives
+title: Risk management insights
+description: Learn how to integrate security insights into your risk management framework and digital initiatives.
 author: NaomiOooo
 ms.author: naomio
 ms.date: 04/04/2021
@@ -11,86 +11,88 @@ ms.custom: internal
 
 ---
 
-# Risk Management Insights
+# Risk management insights
 
-Business inherently requires risk in order to capture opportunity. The role of security is to inform and advise decision makers (who already own other risks and benefits) on how security risks fit in those frameworks. The goal of security isn't to say "No. Don't take that risk." but to learn the business, apply their security expertise to identify risks to business objectives and assets, and advise those decision makers on the risks and which ones are recommended to accept or not (with the understanding that the final risk acceptance and accountability for consequences lies with the asset/process owner in the business).
+Operating a business comes with risk. A security team's role is to inform and advise decision makers on how security risks fit in their frameworks. The goal of security is to learn about your business, and then use their security expertise to identify risks to business goals and assets. Security then advises your decision makers on each risk and then recommends which ones are acceptable. This information is provided with the understanding that the responsibility for these decisions lies with your asset or process owner.
 
 > [!NOTE]
-> This rule of thumb on who should be accountable for risk helps illustrate the natural ownership of risk:
+> The general rule for risk accountability is:
 >
->> The person who owns (and accepts) the risk is the one who will stand in front of the news cameras and explain to the world why the worst case scenario happened.
+> The person who owns and accepts the risk is the person that explains to the world what went wrong (often in front of TV cameras).
 
-When mature, the objective of security, is to expose risks, mitigate risks, and empower business change with minimal risk. That level of maturity requires risk insights and deep security integration. At any maturity level of organization, the top security risks to the organization should appear on the organization's risk register and be actively managed down to an acceptable level like any other risk. 
+When mature, the goal of security is to expose and mitigate risks, and then empower the business to change with minimal risk. That level of maturity requires risk insights and deep security integration. At any level of maturity for your organization, the top security risks should appear on the risk register. Those risks are then managed down to an acceptable level.
 
-## What is Cybersecurity Risk?
+## What is cybersecurity risk?
 
-Cybersecurity risk is the damage or destruction of business assets, revenue, and reputation by hostile human attackers seeking illicit gains. 
+Cybersecurity risk is the potential damage or destruction of business assets, revenue, and reputation. This damage is caused by human attackers attempting to steal money, information, or technology.
 
-While these risks happen in the technical environment, they often represent a risk to the organization and should be aligned to the risk measurement, tracking, and mitigations framework used by the organzation. While many organizations still treat cybersecurity risk as a technical problem to be 'solved', this perception is not accurate and does not mitigate the strategic business impact.
+While these attacks happen in the technical environment, they often represent a risk to your entire organization. Cybersecurity risk should be aligned to your risk measurement, tracking, and mitigation framework. Many organizations still treat cybersecurity risk as a technical problem to be *solved*. This perception leads to the wrong conclusions that don't mitigate the strategic business impact of risk.
 
-This diagram depicts the shift from a typical technically oriented program to a business framework
+The following diagram shows the shift from a typical technically oriented program to a business framework.
 
-:::image type="content" source="./media/technical-to-business-transformation.png" alt-text="Risk Transformation" lightbox="./media/technical-to-business-transformation-popout.png":::
+:::image type="content" source="./media/technical-to-business-transformation.png" alt-text="Diagram that shows the shift from a typical technically oriented program to a business framework." lightbox="./media/technical-to-business-transformation-popout.png":::
 
-Security leaders must step back from the technical lens, learn what assets and data are important to business leaders, and prioritize how teams spend their time, attention, and budget through the lens of business importance. The technical lens will be re-applied as the security and IT teams work through solutions, but looking at this only as a technology problem runs a high risk of solving the wrong problems.
+Security leaders must step back from the technical lens and learn what assets and data are important to business leaders. Then prioritize how teams spend their time, attention, and budget relating to business importance. The technical lens is reapplied as the security and IT teams work through solutions. But looking at cybersecurity risk only as a technology problem runs the risk of solving the wrong problems.
 
-## Process - Aligning Security Risk Management
+## Align your security risk management
 
-You should continuously build a stronger bridge between cybersecurity and your organizational leadership, both in human relationships and explicit processes. The dynamic nature of security risk and the divergent dyanmics of business opportunities and security risk sources require ongoing investment into building and improving this relationship. 
+Continuously work to build a stronger bridge between cybersecurity and your organizational leadership. This concept applies to both human relationships and explicit processes. The nature of security risk and the divergent dynamics of business opportunities are always changing. Security risk sources require ongoing investment into building and improving this relationship.
 
-A key ongoing process in this relationship is translating how business value maps to specific technical assets. Without this north star, security will not be sure what really matters to the organization and will only succeed at protecting the most important assets with lucky guesses. 
- 
-It's critical to get started on this journey if you haven't already, starting with developing a better understanding of the most sensitive and business critical assets in the organization. 
+Key to this relationship is understanding how business value connects to specific technical assets. Without this direction, security can't be sure what's most important to your organization. They only succeed at protecting the most important assets with lucky guesses.
+
+It's important to begin this process immediately. Start by gaining a better understanding of sensitive and business critical assets in your organization.
 
 The typical process of starting this transformation is:
 
-1. **Aligning the business** in a two-way relationship:
-   - **Communicate in their language:** explain security threats in business-friendly language and terminology that helps to quantify the risk and impact to the overall business strategy and mission.
-   - **Participate in active listening and learning:** talk to people across the business to understand the important business services and information and the impact if that were compromised or breached. This will provide clear insight into prioritizing the investment in policies, standards, training, and security controls.
-2. **Translating learnings** about business priorities and risks into concrete and sustainable actions:
-   - **Short term** focus on dealing with burning priorities:
-     - Protecting critical assets and high-value information with appropriate security controls (that increases security while enabling business productivity)
+1. **Align the business** in a two-way relationship:
+   - **Communicate in their language** to explain security threats using business-friendly terminology. This explanation helps to quantify the risk and impact to the overall business strategy and mission.
+   - **Actively listen and learn** by talking to people across the business.  Work to understand the impact to important business services and information if they were compromised or breached. This understanding provides clear insight into the importance of investing in policies, standards, training, and security controls.
+2. **Translate learnings** about business priorities and risks into concrete and sustainable actions, such as:
+   - **Short term** that focuses on dealing with important priorities.
+     - Protect critical assets and high-value information with appropriate security controls. These controls increase security while enabling business productivity.
      - Focus on immediate and emerging threats that are most likely to cause business impact.
-     - Monitoring changes in business strategies and initiatives to stay in alignment.
-   - **Long term** set direction and priorities to make steady progress over time, to improve overall security posture:
-     - **Zero Trust:** Create a clear vision, strategy, plan, and architecture for reducing risks in your organization aligned to the [zero trust](https://aka.ms/zerotrust) principles of assuming breach, least privilege, and explicit verification. Adopting these principles shifts from static controls to more dynamic risk-based decisions that are based on real-time detections of anomalous behavior irrespective of where the threat derived.
-     - **Burn down technical debt** as a consistent strategy by operating security best practices across the organization such as replacing password-based authentication with passwordless and multi-factor authentication (MFA), applying security patches, and retiring (or isolating) legacy systems. Just like paying off a mortgage, you need to make steady payments to realize the full benefit and value of your investments.
-     - **Apply data classifications, sensitivity labels, and role-based access controls** to protect data from loss or compromise throughout its lifecycle. While these can’t completely capture the dynamic nature and richness of business context and insight, they are key enablers to guide information protection and governance, limiting the potential impact of an attack.
-3. **Establishing a healthy [security culture](https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/define-security-strategy#transformations-mindsets-and-expectations)** by explicitly practicing, communicating, and publicly modeling the right behavior. The culture should focus on open collaboration between business, IT, and security colleagues and applying a ‘growth mindset’ of continuous learning. Culture changes should be focused on removing siloes from security, IT, and the larger business organization to achieve greater knowledge sharing and resilience levels.
+     - Monitor changes in business strategies and initiatives to stay in alignment.
+   - **Long term** sets direction and priorities to make steady progress over time, improving the overall security posture.
+     - Use **Zero trust** to create a strategy, plan, and architecture for reducing risks in your organization. Align them with the [zero trust](https://aka.ms/zerotrust) principles of assuming breach, least privilege, and explicit verification. Adopting these principles shifts from static controls to more dynamic risk-based decisions. These decisions are based on real-time detections of strange behavior no matter where the threat started.
+     - **Pay off technical debt** as a consistent strategy by operating security best practices across the organization. For example, replace password-based authentication with passwordless and multi-factor authentication (MFA), apply security patches, and retire or isolate legacy systems. Like paying off a mortgage, you must make steady payments to realize the full benefit and value of your investments.
+     - **Apply data classifications, sensitivity labels, and role-based access controls** to protect data from loss or compromise throughout its lifecycle. These efforts can’t completely capture the dynamic nature and richness of business context and insight. But these key enablers are used to guide information protection and governance, limiting the potential impact of an attack.
+3. **Establish a healthy [security culture](/azure/cloud-adoption-framework/strategy/define-security-strategy#transformations-mindsets-and-expectations)** by explicitly practicing, communicating, and publicly modeling the right behavior. The culture should focus on open collaboration between business, IT, and security colleagues. Then apply that focus to a ‘growth mindset’ of continuous learning. Focus culture changes on removing silos from security, IT, and the larger business organization. These changes achieve greater knowledge sharing and resilience levels.
 
-You can read more on Microsoft’s recommendations for [security strategy and culture here](https://aka.ms/securitystrategy).
+For more information, see [Define a security strategy](https://aka.ms/securitystrategy).
 
-## Understanding Cybersecurity Risk
+## Understanding cybersecurity risk
 
-Because cybersecurity risk is caused by hostile human attackers seeking illicit gains, it's important to understand the motivations and behavior patterns of these human attackers. 
+Cybersecurity risk is caused by human attackers trying to steal money, information, or technology. It's important to understand the motivations and behavior patterns of these attackers.
 
 ### Motivations
 
-The motivations and incentives for different types of attackers mirrors those of legitimate organizations:
+The motivations and incentives for different types of attackers mirror those of legitimate organizations.
 
-:::image type="content" source="./media/attacker-motivations.png" alt-text="Risk Transformation" lightbox="./media/attacker-motivations-popout.png":::
+:::image type="content" source="./media/attacker-motivations.png" alt-text="Diagram that shows the motivations of attackers." lightbox="./media/attacker-motivations-popout.png":::
 
-Understanding the motivation of attacker groups you face can better understand the likelihood and potential impact of different types of attacks. While the security strategies and most important technical controls will be similar across organizations, this context can help guide your security investment focus areas. 
+Understanding the attackers' motivations can help you understand the likelihood and potential impact of different types of attacks. While the security strategies and most important technical controls are similar across organizations, this context can help guide your security investment focus areas.
 
-For more information, see [Disrupting Attacker Return on Investment](https://docs.microsoft.com/security/ciso-workshop/ciso-workshop-module-2#part-1-disrupting-attacker-return-on-investment-1431) 
+For more information, see [Disrupting Attacker Return on Investment](/security/ciso-workshop/ciso-workshop-module-2#part-1-disrupting-attacker-return-on-investment-1431).
 
-### Behavior Patterns
+### Behavior patterns
 
 Organizations face a range of human attacker models that shape their behavior:
 
- - **Commodity** - The highest volume of threats organizations typically face are for-profit attackers driven by financial return on investment (ROI). These attackers typically use the cheapest and most effective available tools and methods, and the sophistication of these attacks (stealth, tooling, etc.) typically grows steadily new methods are proven by others and made available for high scale use. 
- - **Leading Edge** - Sophisticated attack groups are driven by long term mission outcomes and often have funding available to focus on innovation (e.g investing in supply chain attacks, changing tactics within an attack campaign to hinder detection and investigation, and other means to achieve stealth)
+- **Commodity**: Most of the threats organizations typically face are for-profit attackers driven by a financial return on investment (ROI). These attackers typically use the cheapest and most effective available tools and methods. The sophistication of these attacks (for example, stealth and tooling) typically grows as new methods are proven by others and made available for high scale use.
+
+- **Leading edge**: Sophisticated attack groups are driven by long-term mission outcomes and often have funding available. This funding is used to focus on innovation. This innovation might include investing in supply chain attacks or changing tactics within an attack campaign to hinder detection and investigation.
 
 Typically, the attackers are:
- - **Flexible:** Utilize more than one attack vector to gain entry to the network.
- - **Objective driven:** Achieve a defined purpose from accessing your environment. This could be specific to your people, data, or applications, but you may also just fit a class of targets like “a profitable company that is likely to pay to restore access to their data and systems.”
- - **Stealthy:** Take precautions to remove evidence or obfuscate their tracks (though at different investment and priority levels, see figure one)
- - **Patient:** Take time to perform reconnaissance to understand the infrastructure and business environment.
- - **Well-resourced and skilled** in the technologies they are targeting (though the depth of skill can vary).
- - **Experienced:** They use established techniques and tools to gain elevated privileges to access or control different aspects of the estate (which grants them the privileges they need to fulfill their objective).
+
+- **Flexible:** They use more than one attack vector to gain entry to the network.
+- **Objective driven:** They achieve a defined purpose from accessing your environment. The goals might be specific to your people, data, or applications, but you might also fit a certain class of targets. For example, “a profitable company that's likely to pay to restore access to their data and systems.”
+- **Stealthy:** They take precautions to remove evidence or hide their tracks, usually at different investment and priority levels.
+- **Patient:** They take time to do reconnaissance to understand your infrastructure and business environment.
+- **Well-resourced and skilled**: They're educated in the technologies they're targeting, though the depth of skill can vary.
+- **Experienced:** They use established techniques and tools to gain elevated privileges to access or control different aspects of the estate.
 
 ## Next Steps
 
-In order for risk management to be effective, it must be integrated into all aspects of the governance and compliance activities of an organization. In order for risks to be properly assessed, security must always be considered as part of a comprehensive approach.
+For risk management to be effective, it must be rolled into all aspects of your governance and compliance activities. For risks to be properly assessed, security must always be considered as part of a comprehensive approach.
 
- - [Security Integration](./security-integration.md) is the next focus area of security. 
+- [Security Integration](./security-integration.md) is the next focus area of security.
