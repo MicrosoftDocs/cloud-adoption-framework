@@ -44,26 +44,26 @@ Whether you're already operating in the cloud or you're planning for future adop
 
 **People:**
 
-1. [Educate teams about the cloud security journey](../security/security-top-10.md#1-people-educate-teams-about-the-cloud-security-journey)
-2. [Educate teams on cloud security technology](../security/security-top-10.md#2-people-educate-teams-on-cloud-security-technology)
+1. [Educate teams about the cloud security journey](../secure/security-top-10.md#1-people-educate-teams-about-the-cloud-security-journey)
+2. [Educate teams on cloud security technology](../secure/security-top-10.md#2-people-educate-teams-on-cloud-security-technology)
 
 **Process:**
 
-3. [Assign accountability for cloud security decisions](../security/security-top-10.md#3-process-assign-accountability-for-cloud-security-decisions)
-4. [Update incident response processes for cloud](../security/security-top-10.md#4-process-update-incident-response-processes-for-cloud)
-5. [Establish security posture management](../security/security-top-10.md#5-process-establish-security-posture-management)
+3. [Assign accountability for cloud security decisions](../secure/security-top-10.md#3-process-assign-accountability-for-cloud-security-decisions)
+4. [Update incident response processes for cloud](../secure/security-top-10.md#4-process-update-incident-response-processes-for-cloud)
+5. [Establish security posture management](../secure/security-top-10.md#5-process-establish-security-posture-management)
 
 **Technology:**
 
-6. [Require passwordless or multi-factor authentication](../security/security-top-10.md#6-technology-require-passwordless-or-multi-factor-authentication-mfa)
-7. [Integrate native firewall and network security](../security/security-top-10.md#7-technology-integrate-native-firewall-and-network-security)
-8. [Integrate native threat detection](../security/security-top-10.md#8-technology-integrate-native-threat-detection)
+6. [Require passwordless or multi-factor authentication](../secure/security-top-10.md#6-technology-require-passwordless-or-multi-factor-authentication-mfa)
+7. [Integrate native firewall and network security](../secure/security-top-10.md#7-technology-integrate-native-firewall-and-network-security)
+8. [Integrate native threat detection](../secure/security-top-10.md#8-technology-integrate-native-threat-detection)
 
 **Foundational architecture decisions:**
 
-9. [Standardize on a single directory and identity](../security/security-top-10.md#9-architecture-standardize-on-a-single-directory-and-identity)
-10. [Use identity-based access control (instead of keys)](../security/security-top-10.md#10-architecture-use-identity-based-access-control-instead-of-keys)
-11. [Establish a single unified security strategy](../security/security-top-10.md#11-architecture-establish-a-single-unified-security-strategy)
+9. [Standardize on a single directory and identity](../secure/security-top-10.md#9-architecture-standardize-on-a-single-directory-and-identity)
+10. [Use identity-based access control (instead of keys)](../secure/security-top-10.md#10-architecture-use-identity-based-access-control-instead-of-keys)
+11. [Establish a single unified security strategy](../secure/security-top-10.md#11-architecture-establish-a-single-unified-security-strategy)
 
 <!-- markdownlint-enable MD029 -->
 

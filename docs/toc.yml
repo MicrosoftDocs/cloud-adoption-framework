@@ -1584,43 +1584,43 @@ items:
   - name: Secure
     items:
     - name: Overview
-      href: security/index.md
+      href: secure/index.md
     - name: Methodology
       items:
       - name: Risk Insights
-        href: security/risk-insights.md
+        href: secure/risk-insights.md
       - name: Security Integration
-        href: security/security-integration.md
+        href: secure/security-integration.md
         
       - name: Business Resilience
-        href: security/business-resilience.md
+        href: secure/business-resilience.md
       - name: Access Control
-        href: security/access-control.md
+        href: secure/access-control.md
       - name: Security Operations 
-        href: security/security-operations.md
+        href: secure/security-operations.md
       - name: Asset Protection
-        href: security/asset-protection.md
+        href: secure/asset-protection.md
       - name: Security Governance
-        href: security/security-governance.md
+        href: secure/security-governance.md
       - name: Innovation Security
-        href: security/innovation-security.md
+        href: secure/innovation-security.md
       - name: DevSecOps Controls
-        href: security/devsecops-controls.md    
+        href: secure/devsecops-controls.md    
     
     - name: Best Practices
       items:
       - name: Securing DevOps
-        href: security/best-practices/secure-devops.md
+        href: secure/best-practices/secure-devops.md
       - name: Secure DevOps Governance
-        href: security/best-practices/end-to-end-governance.md 
+        href: secure/best-practices/end-to-end-governance.md 
       - name: Windows Virtual Desktop
         href: scenarios/wvd/eslz-security-governance-and-compliance.md
       - name: Managing Secrets
-        href: security/best-practices/managing-secrets.md
+        href: secure/best-practices/managing-secrets.md
       - name: Network Security
         href: /security/compass/network-security-containment
       - name: Toolchain
-        href: security/best-practices/toolchain.md
+        href: secure/best-practices/toolchain.md
         
     - name: Security Considerations
       items:
@@ -1714,7 +1714,7 @@ items:
     - name: Tools and templates
       href: reference/tools-templates.md
     - name: Azure security best practices
-      href: ./security/security-top-10.md
+      href: ./secure/security-top-10.md
     - name: Decision guides
       items:
       - name: Overview

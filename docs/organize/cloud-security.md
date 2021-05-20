@@ -26,7 +26,7 @@ This diagram depicts the specific organizational functions within security, ofte
 
 These diagrams and documentation represent an ideal view of an complete enterprise security team. This may be an aspirational view for security teams with limited resources that may not have formal responsibilities defined around all of these functions. Each function may be performed by one or more people, and each person may perform one or more functions depending on various factors such as culture, budget, and available resources.
 
-:::image type="content" source="../security/media/security-responsibilities.png" alt-text="View of the responsibilities/functions of an enterprise security team" lightbox="../security/media/security-responsibilities-popout.png":::
+:::image type="content" source="../secure/media/security-responsibilities.png" alt-text="View of the responsibilities/functions of an enterprise security team" lightbox="../secure/media/security-responsibilities-popout.png":::
 
 Each of the following articles provide information about each function including a summary of objectives, how the function can evolve because of the threat environment or cloud technology changes, and the relationships and dependencies that are critical to its success.
 
@@ -66,7 +66,7 @@ The middle (dark blue) section groups these responsibilities into typical roles 
  - **Security Posture & Compliance** - This is a newer role type that represents the increasing convergence of compliance reporting with traditional security disciplines like vulnerability management and configuration baselines. While the scope and audience are different for security and compliance reporting, they are answering different versions of the question of "how secure is the organization?". The way that question is answered is getting more and more similar with through tools like secure score and azure security center:
      - The use of on-demand data feeds from cloud services is reducing the time required to report compliance. 
      - The increased scope of data available is enabling security governance to look beyond traditional software updates/patches and discover/track "vulnerabilities" from security configurations and operational practices
- - **Platform security engineer** - These are technology roles focused on platforms that host multiple workloads, focused on both access control and asset protection. These roles are often grouped into teams with specialized technical skillsets including network security, infrastructure and endpoints, identity and key management, and others. These teams work on both preventive controls and detective controls, with detective controls being a partnership with SecOps and preventive controls being primarily a partnership with IT Operations. See [Security Integration](../security/security-integration.md) for more details
+ - **Platform security engineer** - These are technology roles focused on platforms that host multiple workloads, focused on both access control and asset protection. These roles are often grouped into teams with specialized technical skillsets including network security, infrastructure and endpoints, identity and key management, and others. These teams work on both preventive controls and detective controls, with detective controls being a partnership with SecOps and preventive controls being primarily a partnership with IT Operations. See [Security Integration](../secure/security-integration.md) for more details
  - **Application Security Engineer** - These technology roles focused on security controls for specific workloads, supporting both classic development models and modern DevOps/DevSecOps model. This is a blend of application/development security skills for unique code and infrastructure skills for common technical components like VMs, databases, and containers. These roles may be located in central IT/Security organizations or within business/development teams, depending on organizational factors. 
 
 >[!Note]
@@ -74,4 +74,4 @@ The middle (dark blue) section groups these responsibilities into typical roles 
 
 ## Next Steps
 
-Review the [Secure Methodology](../security/index.md)
+Review the [Secure Methodology](../secure/index.md)
