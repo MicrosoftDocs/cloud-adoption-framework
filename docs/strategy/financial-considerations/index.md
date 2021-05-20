@@ -19,7 +19,6 @@ This guidance will help you learn how to use the cloud to make your IT cost stru
 ## How does cloud pricing work?
 
 The cloud uses a pay-for-what-you-consume model versus the up-front server infrastructure and software licensing costs that you would typically pay on-premises in your data center. The cloud allows you to take advantage of a variable cost model instead of a fixed cost model.
-Financial benefits
 
 ## CAPEX to OPEX
 
