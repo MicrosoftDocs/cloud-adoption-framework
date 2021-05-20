@@ -1255,6 +1255,7 @@ items:
             items:
             - name: What is Azure Cognitive Search?
               href: innovate\best-practices\cognitive-search.md
+
       - name: Process improvements
         items:
         - name: Overview

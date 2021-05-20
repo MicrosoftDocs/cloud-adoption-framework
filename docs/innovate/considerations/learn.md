@@ -25,7 +25,7 @@ Continuous learning is a method for responding to learning metrics and assessing
 
 - **Did the hypothesis prove true?** When the answer is yes, celebrate for a moment and then move on. There are always more things to learn, more hypotheses to test, and more ways to help the customer in your next iteration. When a hypothesis proves true, it's a good time to decide on a new feature that enhances the solution's utility for the customer.
 - **Can you get closer to a validated hypothesis by iterating on the current solution?** The answer is usually yes. Learning metrics typically suggest points in the process that lead to customer deviation. Use these data to find the root of a failed hypothesis. At times, the metrics may also suggest a solution.
-- **Is a reset of the hypothesis required?** Sometimes you learn that the hypothesis or underlying need was flawed. When you find a flaw, an iteration alone isn't necessarily the right answer. When a reset is required, rewrite the hypothesis and review the solution in light of the new hypothesis. The sooner this type of learning occurs, the easier it is to pivot. Early hypotheses should focus on testing the riskiest aspects of the solution to avoid pivots later in development.
+- **Is a reset of the hypothesis required?** Sometimes you learn that the hypothesis or underlying requirement was flawed. When you find a flaw, an iteration alone isn't necessarily the right answer. If a reset is required, rewrite the hypothesis and review the solution in light of the new hypothesis. The sooner this type of learning occurs, the easier it is to pivot. Early hypotheses should focus on testing the riskiest aspects of the solution to avoid pivots later in development.
 - **Unsure?** The second most common response after "iterate" is "we're not sure." Embrace this response. This response represents an opportunity to engage the customer, foster customer empathy, and to look beyond the data.
 
 The answers to these questions shape the iteration to follow. Companies that demonstrate an ability to apply continuous learning and boldly make the right decisions for their customers are more likely to emerge as leaders in their markets.
@@ -44,6 +44,26 @@ Few could deny the radical transformation within Microsoft culture that's occurr
 - **Share the code:** If our obligation is to own a code base, we lose sight of the true power of innovation. Focus on owning and driving outcomes for your customers. Share your code, publicly with the world or privately within your company, to invite diverse perspectives into the solution and the code base.
 - **Challenge what works:** Success doesn't mean you're demonstrating true customer empathy. Avoid having a fixed mindset and a bias toward doing what's worked before. Look for learning in positive and negative metrics by engaging your customers.
 - **Be inclusive:** Work hard to invite diverse perspectives into the mix. There are many variables that can divide humans into segregated groups. Cultural norms, past behaviors, gender, religion, sexual preference, even physical abilities. True innovation comes when we challenge ourselves to see past our differences and consciously strive to include all customers, partners, and coworkers.
+
+## The build-measure-learn feedback loop
+
+True innovation comes from the hard work of building solutions that demonstrate customer empathy, from measuring the impact of those changes on the customer, and from learning with the customer. Most importantly, it comes from feedback over multiple iterations.
+
+If the past decade has taught us anything about innovation, it's that the old rules of business have changed. Large, wealthy incumbents no longer have an unbreakable hold on the market. The first or best players to market are not always the winners. Having the best idea doesn't lead to market dominance. In a rapidly changing business climate, market leaders are the most agile. Those who can adapt to changing conditions lead.
+
+Large or small, the companies that thrive in the digital economy as innovative leaders are those organizations with the greatest ability to listen to their customer base. That skill can be cultivated and managed. At the core of all good partnerships is a clear feedback loop. The process for building customer partnerships within the Cloud Adoption Framework is the build-measure-learn feedback loop.
+
+Innovation requires a balance between invention and adoption. Customer feedback and partnership drive adoption. By turning your customers into strong, loyal partners during innovation cycles, you can realize better products and gain quicker traction in the market.
+
+![Diagram of the build-measure-learn feedback loop](../../_images/innovate/bml-feedback-loop.png)
+
+This process for managing customer partnerships and integrating them into your innovation efforts includes three phases of development:
+
+- [Build with customer empathy](./build.md)
+- [Measure for customer impact](./measure.md)
+- [Learn with customers](./learn.md)
+
+Each phase of the process helps you build better solutions with your customers.
 
 ## Next steps
 
