@@ -1,6 +1,6 @@
 ---
-title: Enterprise-scale business continuity and disaster recovery for an SAP migration
-description: Learn about enterprise-scale business continuity and disaster recovery for an SAP migration in the Microsoft Cloud Adoption Framework for Azure.
+title: Business continuity and disaster recovery for an SAP migration
+description: Learn about business continuity and disaster recovery for an SAP migration.
 author: JeffreyMitchell
 ms.author: brblanch
 ms.date: 3/12/2021
@@ -13,7 +13,9 @@ ms.custom: think-tank, e2e-sap
 <!-- docutune:casing "Azure Fence Agent" -->
 <!-- docutune:ignore DB -->
 
-# Enterprise-scale business continuity and disaster recovery for an SAP migration
+# Business continuity and disaster recovery (BCDR) for an SAP migration
+
+This article builds on a number of considerations and recommendations defined in the Azure landing zone article [enterprise-scale design area for BCDR](../../ready/enterprise-scale/business-continuity-and-disaster-recovery.md). Following the guidance in this article will help understand the unique constraints required for any landing zone to support the SAP platform. However, since SAP is an mission-critical platform, the guidance on the enterprise-scale design areas should also be included in your design.
 
 ## Scenario and scope
 
@@ -32,7 +34,7 @@ This article covers the following aspects of BCDR for an enterprise-scale SAP sc
 
 - High availability (HA) within an Azure region
 - Backup/restore considerations
-- Cross-regional versus regional disaster recovery (DR) decision criteria
+- Cross-regional vs. regional disaster recovery decision criteria
 
 ### High availability (HA) within an Azure region
 
@@ -167,7 +169,7 @@ Another factor that you should consider when choosing your DR region is the RPO 
 
 - Use Site Recovery to replicate an application server to a DR site. Site Recovery can also help with replicating central-services cluster VMs to the DR site. When you invoke DR, you'll need to reconfigure the Linux Pacemaker cluster on the DR site (for example, replace the VIP or SBD, run `corosync.conf`, and more).
 
-- Use [cross-region replication](/azure/azure-netapp-files/cross-region-replication-introduction) in Azure NetApp Files (currently in public preview) to synchronize file volumes between the primary and DR region.
+- Use [cross-region replication in Azure NetApp Files](/azure/azure-netapp-files/cross-region-replication-introduction) (currently in public preview) to synchronize file volumes between the primary region and the DR region.
 
 - Native database replication should be used to synchronize data to the DR site, rather than Azure Site Recovery.
 

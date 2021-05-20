@@ -1,5 +1,5 @@
 ---
-title: Enterprise-scale business continuity and disaster recovery for Azure Kubernetes Service
+title: Business continuity and disaster recovery considerations for Azure Kubernetes Service
 description: Describe how this enterprise-scale scenario can improve business continuity and disaster recovery of Azure Kubernetes Service.
 author: JeffMitchell
 ms.author: jemitche
@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank, e2e-aks
 ---
 
-# Enterprise-scale business continuity and disaster recovery for Azure Kubernetes Service
+# Business continuity and disaster recovery considerations for AKS
 
 Your organization needs to design suitable Azure Kubernetes Service (AKS) platform-level capabilities to meet its specific requirements. These application services have requirements related to recovery time objective (RTO) and recovery point objective (RPO). There are multiple considerations to address for AKS disaster recovery. Your first step is to define a service-level agreement (SLA) for your infrastructure and application. Learn about the [SLA for Azure Kubernetes Service (AKS)](https://azure.microsoft.com/support/legal/sla/kubernetes-service). See the **SLA details** section for information about monthly uptime calculations.
 
@@ -44,7 +44,7 @@ Consider the following factors:
 
   - A non-stateful service can be replicated efficiently.
 
-  - If you need to store state in the cluster (not recommended), make sure you back up the data frequently in the paired region.
+  - If you need to store *state* in the cluster, back up the data frequently in the paired region. One consideration is to store *state* in the cluster properly can be complicated.
 
 - Cluster update and maintenance.
 
@@ -76,7 +76,7 @@ The following are best practices for your design:
 
 - Isolate your application from the system services by placing it in a separate node pool. This way, Kubernetes services run on dedicated nodes and don't compete with other services. Use [tags, labels, and taints](/azure/aks/use-multiple-node-pools#specify-a-taint-label-or-tag-for-a-node-pool) to identify the node pool to schedule your workload.
 
-- Regular upkeep of your cluster like making timely updates is crucial for reliability. Be mindful of [supported window of Kubernetes versions on AKS](/azure/aks/supported-kubernetes-versions) and plan your updates in advance. Also, monitoring the health of the pods through probes is recommended.
+- Regular upkeep of your cluster, for example, making timely updates, is crucial for reliability. Be mindful of the [support window for Kubernetes versions on AKS](/azure/aks/supported-kubernetes-versions) and plan your updates in advance. Also, monitoring the health of the pods through probes is recommended.
 
 - Whenever possible, [remove service state from inside containers](/azure/aks/operator-best-practices-multi-region#remove-service-state-from-inside-containers). Instead, use an Azure platform as a service (PaaS) that supports multiregion replication.
 
@@ -106,7 +106,7 @@ The following are best practices for your design:
 
 - AKS can be used as a free service, but that tier doesn't offer a financially backed SLA. To get that SLA, you have to add an uptime SLA to what you buy. We recommend all production clusters use this option. Reserve clusters without this option for pre-production clusters. When combined with Availability Zones, the Kubernetes API server SLA is increased to 99.95%. Your node pools, and other resources are covered under their own SLA.
 
-- Use multiple regions and peering locations for [ExpressRoute](/azure/expressroute/expressroute-introduction) connectivity.
+- Use multiple regions and peering locations for [Azure ExpressRoute](/azure/expressroute/expressroute-introduction) connectivity.
 
   If an outage affecting an Azure region or peering provider location occurs, a redundant hybrid network architecture can help ensure uninterrupted cross-premises connectivity.
 
