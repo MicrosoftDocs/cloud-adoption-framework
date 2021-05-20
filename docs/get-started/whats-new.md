@@ -6,7 +6,7 @@ ms.author: janet
 ms.date: 03/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: overview
+ms.subservice: general
 ms.custom: internal
 ---
 
@@ -162,7 +162,7 @@ This release adds a number of new scenarios to make cloud adoption more actionab
 
 **Migration scenarios:**
 
-The new [migration scenarios overview page](../scenarios/index.md) builds on the Migrate methodology to demonstrate how Azure delivers on the "#OneMigrate" promise. It provides approaches to migrating multiple first and third-party scenarios to Azure. This includes three new migration scenarios:
+The new [migration scenarios overview page](../scenarios/index.md) builds on the Migrate methodology to demonstrate how Azure delivers on the #OneMigrate promise. It provides approaches to migrating multiple first and third-party scenarios to Azure. This includes new migration scenarios:
 
 | Article | Description |
 |--|--|
@@ -210,7 +210,7 @@ The existing CAF blueprint definitions and CAF Terraform modules provide a start
 | [Enterprise-scale architecture](../ready/enterprise-scale/architecture.md) | Understand the architecture behind enterprise-scale |
 | [Enterprise-scale design principles](../ready/enterprise-scale/design-principles.md) | Understand the architectural design principles that guide decisions during implementation to evaluate whether this approach fits your cloud operating model |
 | [Enterprise-scale design guideline](../ready/enterprise-scale/design-guidelines.md) | Evaluate the enterprise-scale guidelines for fulfilling the common design areas of Azure landing zones |
-| [Implementation guidelines](../ready/enterprise-scale/implementation-guidelines.md) | Review the activities required for an enterprise-scale implementation before deployment |
+| [Implementation details](../ready/enterprise-scale/implementation.md) | Review the activities required for an enterprise-scale implementation before deployment |
 
 Partners are an important aspect of successful cloud adoption. Throughout the Cloud Adoption Framework guidance, we have added references to show the important role that partners play and how customers can better engage partners. For a list of validated CAF partners, see the [CAF-aligned partner offers](https://aka.ms/adopt/partneroffers), [Azure expert managed service providers (MSPs)](https://www.microsoft.com/azure/partners/azureexpertmsp?filters=all), or [advanced specialist partners](https://www.microsoft.com/azure/partners/advspec).
 
