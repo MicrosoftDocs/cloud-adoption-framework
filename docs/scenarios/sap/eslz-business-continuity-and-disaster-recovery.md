@@ -34,7 +34,7 @@ This article covers the following aspects of BCDR for an enterprise-scale SAP sc
 
 - High availability (HA) within an Azure region
 - Backup/restore considerations
-- Cross-regional versus regional disaster recovery decision criteria
+- Cross-regional vs. regional disaster recovery decision criteria
 
 ### High availability (HA) within an Azure region
 
@@ -68,7 +68,7 @@ Before you deploy your HA infrastructure and depending on the region you've chos
 
 - The type of VMs that can be deployed through a single availability set are restricted since the host is defined by the first VM deployed in the set. One example result is that you won't be able to combine an M-series and E-series VMs into one availability set.
 
-One advantage of deploying your HA architecture across different Availability Zones is that your SLA for the VMs could be higher. For details, review [Azure VM SLAs](https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_9/). Depending on the Azure region, you might discover different network latency conditions in network traffic between VMs. Read through [SAP workload configurations with Azure Availability Zones](/azure/virtual-machines/workloads/sap/sap-ha-availability-zones) for more information about SAP workload deployments across different Availability Zones.
+One advantage of deploying your HA architecture across different Availability Zones is that your SLA for the VMs could be higher. For details, review [Azure VM SLAs](https://azure.microsoft.com/support/legal/sla/virtual-machines). Depending on the Azure region, you might discover different network latency conditions in network traffic between VMs. Read through [SAP workload configurations with Azure Availability Zones](/azure/virtual-machines/workloads/sap/sap-ha-availability-zones) for more information about SAP workload deployments across different Availability Zones.
 
 **Design recommendations for HA:**
 
@@ -165,13 +165,13 @@ Another factor that you should consider when choosing your DR region is the RPO 
 
 - Set up ExpressRoute connections from on-premises to the primary and secondary Azure DR region.
 
-- An alternative to using ExpressRoute is to set up VPN connections from on-premies to the primary and secondary Azure DR region.
+- An alternative to using ExpressRoute is to set up VPN connections from on-premises to the primary and secondary Azure DR region.
 
 - Use Site Recovery to replicate an application server to a DR site. Site Recovery can also help with replicating central-services cluster VMs to the DR site. When you invoke DR, you'll need to reconfigure the Linux Pacemaker cluster on the DR site (for example, replace the VIP or SBD, run `corosync.conf`, and more).
 
-- Use cross-region replication in Azure NetApp Files to synchronize file volumes between the primary and DR region. Cross-region replication is [currently in public preview](/azure/azure-netapp-files/cross-region-replication-introduction).
+- Use [cross-region replication in Azure NetApp Files](/azure/azure-netapp-files/cross-region-replication-introduction) (currently in public preview) to synchronize file volumes between the primary region and the DR region.
 
-- Native database replication should be used to synchronize data to the DR site; Site Recovery shouldn't be used.
+- Native database replication should be used to synchronize data to the DR site, rather than Azure Site Recovery.
 
 - Peer the primary and DR VNets. For example, for HANA System Replication, an SAP HANA DB VNet needs to be peered to the DR site's SAP HANA DB VNet.
 
