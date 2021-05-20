@@ -219,7 +219,7 @@ With the migration activities and workflow defined, Tailwind irons out the final
 
 Once the cutover successfully concludes, Tailwind prepares for decommission of the source servers. Tailwind decides that server decommissioning will be executed after the soak period timeline is concluded.
 
-After each migration wave, Tailwind also has a brief retrospective to discuss what went well and what could be improved for future migration waves. Tailwind understands these incremental learnings and improvements will ensure a smoother migration for all subsequent migration waves.
+After each migration wave, Tailwind also conducts a brief retrospective to discuss what went well and what can be improved for future migration waves. Tailwind understands these incremental learnings and improvements will ensure a smoother migration for all subsequent migration waves.
 
 ## Conclusion
 

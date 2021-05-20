@@ -228,7 +228,7 @@ Tailwind reviews the guidance in [Build a migration plan with Azure Migrate](/az
   - Prioritize workloads with less restrictive data classification.
   - Prioritize workloads with newer operating systems, since older operating systems tend to have more issues booting in Azure or in supporting Azure management extensions.
 
-Tailwind understands that some migration waves will change migration execution progresses, so the migration team reviews and modifies waves periodically. The migration team incorporates learnings from executed waves to improve assessment and migration planning (such as capturing any missing network requirements, pre-migration testing, post-migration tweaks, review permissions, and so on.).
+Tailwind understands that some migration waves will change migration execution progresses, so the migration team reviews and modifies waves periodically. The migration team incorporates learnings from executed waves to improve assessment and migration planning, such as capturing any missing network requirements, performing pre-migration testing, implementing post-migration tweaks, reviewing permissions, and so on.
 
 ## Conclusion
 
