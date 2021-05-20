@@ -1,5 +1,5 @@
 ---
-title: Cloud Adoption Framework - Security Methodology
+title: Cloud Adoption Framework - Secure Methodology
 description: Integrating security through the cloud adoption journey
 author: MarkSimos
 ms.author: mas
