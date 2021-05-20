@@ -2,7 +2,6 @@
 title: Recommended Azure role-based access control
 description: Learn how to separate duties within your team and grant Azure role-based access control so that users and groups can perform their jobs.
 author: alexbuckgit
-manager: BrianBlanchard
 ms.author: brblanch
 ms.date: 11/28/2018
 ms.topic: conceptual

@@ -98,7 +98,7 @@ items:
           maintainContext: true
 
     - name: Migration
-      items:         
+      items:
       - name: Migrate to AKS
         href: /azure/aks/aks-migration?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
         maintainContext: true
@@ -216,7 +216,7 @@ items:
       href: eslz-security-governance-and-compliance.md
     - name: Platform automation and DevOps
       href: eslz-platform-automation-and-devops.md
-       
+
   - name: Azure container products
     items:
     - name: Container product decision tree

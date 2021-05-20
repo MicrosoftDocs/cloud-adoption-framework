@@ -146,12 +146,12 @@ While similar in many ways, cloud platforms have important technical difference 
 
 - **Shared responsibility model and cloud architectures:** To a security analyst, Azure is a software defined datacenter that provides many services including VMs (familiar) and others that are very different from on-premises such as Azure SQL Azure Functions, etc. where the best data is in the service logs or the specialized threat detection services rather than in logs for the underlying OS/VMs (which are operated by Microsoft and service multiple customers). Analysts need to understand and integrate this context into their daily workflows so they know what data to expect, where to get it, and what format it will be in.
 - **Endpoint data sources:** Getting insights and data for attacks and malware on cloud hosted servers is often faster, easier, and more accurate with native cloud detection tools like Azure Security Center and EDR systems as opposed to traditional approaches of direct disk access. While direct disk forensics are available for scenarios where it is possible and required for legal proceedings ([Computer forensics in Azure](/azure/architecture/example-scenario/forensics/)), this is often the most inefficient way to detect and investigate attacks.
-- **Network and Identity data sources:** Many functions of cloud platforms primarily use identity primarily for access control such as access to the Azure portal (though network access controls are used extensively as well). This requires analysts to develop an understanding of cloud identity protocols to get a full, rich, picture of attacker activity (and legitimate user activity) to support incident investigation and remediation. Identity directories and protocols are also different from on-premises as they are typically based on SAML, OAuth, and OIDC and Cloud directories rather than LDAP, Kerberos, NTLM, and Active Directory that are commonly found on-premises.
+- **Network and Identity data sources:** Many functions of cloud platforms primarily use identity primarily for access control such as access to the Azure portal (though network access controls are used extensively as well). This requires analysts to develop an understanding of cloud identity protocols to get a full, rich, picture of attacker activity (and legitimate user activity) to support incident investigation and remediation. Identity directories and protocols are also different from on-premises as they are typically based on SAML, OAuth, OpenID Connect, and cloud directories rather than LDAP, Kerberos, NTLM, and Active Directory that are commonly found on-premises.
 - **Practice exercises:** Simulated attacks and response can help build organizational muscle memory and technical readiness for your security analysts, threat hunters, incident managers, and other stakeholders in your organization. Learning on the job and adapting is a natural part of incident response, but you should work to minimize how much you have to learn in a crisis.
 
 **Key Resources:**
 
-- [Incident Response Reference Guide](https://aka.ms/IRRG) (IRRG)
+- [Incident Response Reference Guide](https://aka.ms/irrg)
 - Guidance on [building your own security incident response process](https://msrc-blog.microsoft.com/2019/07/01/inside-the-msrc-building-your-own-security-incident-response-process/)
 - [Azure Logging and Alerting](/azure/security/fundamentals/log-audit)
 - Microsoft Security Best Practices
@@ -270,7 +270,7 @@ This can free up your team's time and attention for higher value security tasks 
   - **Cloud network leads** ([Central IT Operations](../organize/central-it.md)) + **Cloud Network security leads** ([Infrastructure security Team](../organize/cloud-security-infrastructure-endpoint.md))
     - Establish cloud network security architecture with security architects
     - Configure Firewall, NSG, and WAF capabilities and work with application architects on WAF rules
-  - **Application architects:** Work with network security to build and refine WAF rulesets and DDoS configurations to protect the application without disrupting availability
+  - **Application architects:** Work with network security to build and refine WAF rule sets and DDoS configurations to protect the application without disrupting availability
 
 **How**: Organizations looking to simplify their operations have two options:
 

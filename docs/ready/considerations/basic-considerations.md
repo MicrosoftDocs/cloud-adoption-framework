@@ -12,10 +12,10 @@ ms.custom: internal
 
 # Landing zone considerations
 
-A landing zone is the basic building block of any cloud adoption environment. The term _landing zone_ refers to an environment that's been provisioned and prepared to host workloads in a cloud environment like Azure. A fully functioning landing zone is the final deliverable of any iteration of the Cloud Adoption Framework's Ready methodology.
+A landing zone is the basic building block of any cloud adoption environment. The term *landing zone* refers to an environment that's been provisioned and prepared to host workloads in a cloud environment like Azure. A fully functioning landing zone is the final deliverable of any iteration of the Cloud Adoption Framework's Ready methodology.
 
 ![Landing zone considerations](../../_images/ready/landing-zone-considerations.png)
-_Figure 1: Landing zone considerations._
+*Figure 1: Landing zone considerations.*
 
 This image shows the major considerations for implementing any landing zone deployment. The considerations can be broken into three categories or types of considerations: hosting, Azure fundamentals, and governance.
 

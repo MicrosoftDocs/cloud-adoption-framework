@@ -19,7 +19,7 @@ This section of the Ready methodology builds on the principles of [landing zone 
 Expanding your landing zone provides a code-first approach to embedding the following principles into the landing zone and more broadly into your overall cloud environment.
 
 ![Shared architecture principles](../../_images/ready/shared-principles.png)
-_Figure 1: Shared architecture principles._
+*Figure 1: Shared architecture principles.*
 
 These same architecture principles are shared by [Azure Advisor](/azure/advisor/advisor-overview), the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework), and the solutions in the [Azure Architecture Center](/azure/architecture).
 

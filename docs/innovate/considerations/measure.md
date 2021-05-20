@@ -7,9 +7,7 @@ ms.date: 04/23/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
-ms.custom: 
-- internal
-- seo-caf-innovate
+ms.custom: internal, seo-caf-innovate
 keywords: customer impact, how to measure impact, what are metrics in business, business metrics, learning metrics
 ---
 
