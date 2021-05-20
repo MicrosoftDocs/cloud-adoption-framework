@@ -26,8 +26,8 @@ Compliance and reporting on external security requirements, and sometimes intern
 
 Architecture, standards, and policy provide the critical translation from business requirements and risk into the technical environment. We recommend having a unified view across your enterprise estate instead of splitting up cloud versus on-premises. Attackers don’t care about your internal processes and follow the path of least resistance to their goal. That includes moving laterally between cloud and on-premises environments. Most enterprises today are a hybrid environment that spans:
 
-- **On-premises**: Includes multiple generations of technology and often a significant amount of legacy software and hardware. This tech sometimes includes operational technology controlling physical systems with a potential life or safety impact.
-- **Clouds**: Typically includes multiple providers for:
+- **On-premises:** Includes multiple generations of technology and often a significant amount of legacy software and hardware. This tech sometimes includes operational technology controlling physical systems with a potential life or safety impact.
+- **Clouds:** Typically includes multiple providers for:
   - Software as a service (SaaS) applications
   - Infrastructure as a service (IaaS)
   - Platform as a service (Paas)
@@ -42,8 +42,8 @@ In its ideal state, governance is the heart of continuous improvement. This impr
 
 The key tenets of success for governance are:
 
-- **Continuous discovery of assets and asset types**: A static inventory isn't possible in a dynamic cloud environment. Your organization must focus on the continuous discovery of assets and asset types. In the cloud, new types of services are added regularly. Workload owners dynamically spin up and down instances of applications and services as needed, making inventory management a dynamic discipline. Governance teams need to continuously discover asset types and instances to keep up with this pace of change.
-- **Continuous improvement of asset security posture**: Governance teams should focus on improving standards, and enforcement of those standards, to keep up with the cloud and attackers. Information technology (IT) organizations must react quickly to new threats and adapt accordingly. Attackers are continuously evolving their techniques, and defenses are continuously improving and might need to be enabled. You can’t always get all the security you need into the initial configuration.
+- **Continuous discovery of assets and asset types:** A static inventory isn't possible in a dynamic cloud environment. Your organization must focus on the continuous discovery of assets and asset types. In the cloud, new types of services are added regularly. Workload owners dynamically spin up and down instances of applications and services as needed, making inventory management a dynamic discipline. Governance teams need to continuously discover asset types and instances to keep up with this pace of change.
+- **Continuous improvement of asset security posture:** Governance teams should focus on improving standards, and enforcement of those standards, to keep up with the cloud and attackers. Information technology (IT) organizations must react quickly to new threats and adapt accordingly. Attackers are continuously evolving their techniques, and defenses are continuously improving and might need to be enabled. You can’t always get all the security you need into the initial configuration.
 - **Policy driven governance**: This governance provides consistent execution by fixing something once in policy that's automatically applied at scale across resources. This process limits any wasted time and effort on repeated manual tasks. It's often implemented using Azure Policy or third-party policy automation frameworks.
 
 To maintain agility, best practices guidance is often iterative. It digests small pieces of information from multiple sources to create the whole picture and continuously make small adjustments.
