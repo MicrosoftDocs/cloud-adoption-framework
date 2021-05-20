@@ -27,7 +27,7 @@ Both of the primary blockers are rooted in one belief, the cloud environment and
 
 ### Blocker: Acting too soon
 
-It took years and significant effort to reach the current state of security, governance, and operations in the current datacenter. It also required observations, learning, and customization to meet the unique constraints of that environment. Replicating those same procedures and configurations will take time. Reaching complete feature parity may also result in an environment that underperforms in the cloud. This parity approach also commonly leads to significant unplanned overspending in the cloud environment. Don't try to apply current-state requirements to a future-state environment as an early stage gate. Such an approach rarely proves to be profitable.
+It took years and significant effort to reach the current state of security governance and operations in the current datacenter. It also required observations, learning, and customization to meet the unique constraints of that environment. Replicating those same procedures and configurations will take time. Reaching complete feature parity may also result in an environment that underperforms in the cloud. This parity approach also commonly leads to significant unplanned overspending in the cloud environment. Don't try to apply current-state requirements to a future-state environment as an early stage gate. Such an approach rarely proves to be profitable.
 
 ![Common blocker: Acting too soon](../../_images/ready/blocker-act-too-soon.png)
 *Figure 2: Acting too soon is a common blocker.*

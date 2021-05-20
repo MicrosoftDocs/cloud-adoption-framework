@@ -1,5 +1,5 @@
 ---
-title: Democratize data
+title: Data democratization tools
 description: Learn about data democratization with Azure Data Catalog, Azure Data Share, and other tools that enhance data discoverability and understanding.
 author: BrianBlanchard
 ms.author: brblanch
@@ -12,7 +12,7 @@ ms.custom: internal, fasttrack-new, AQC, seo-caf-innovate
 keywords: Democratize, democratize data, democratizing data, data democratization, democratized
 ---
 
-# Democratize data
+# Data democratization tools
 
 Data democratization is the ability to make digital information accessible to the average non-technical user of information systems, without having a gatekeeper or outside help to access the data. Democratizing data helps users gain unfettered access to important data without creating a bottleneck that impedes productivity.
 

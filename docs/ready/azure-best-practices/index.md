@@ -56,7 +56,7 @@ Design your identity and access control infrastructure to improve the security a
 
 ## AI + Machine Learning
 
-- [Setting up Azure Machine Learning for Enterprise scale](./ai-machine-learning-resource-organization.md). Learn about key decision points in setting up Azure Machine Learning for your organization.
+- [Organize and set up Azure Machine Learning environments](./ai-machine-learning-resource-organization.md). Learn about key decision points in setting up Azure Machine Learning for your organization.
 
 ## Cost management
 
