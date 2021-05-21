@@ -75,7 +75,7 @@ Secure innovation is an integrated approach for both of these phases:
   - **Development:** Functionality meets the minimum business requirements
   - **Security:** Capabilities meet the regulatory compliance, security, and safety requirements for production use
   - **Operations:** Functionality meets the minimum quality, performance, and supportability requirements to be a production system
-- **Devoperations** this phase is the ongoing iterative development process of the application or workload that enables continuous innovation and improvement
+- **DevOps:** This phase is the ongoing iterative development process of the application or workload that enables continuous innovation and improvement
 
 ### The leadership imperative: Blend the cultures
 

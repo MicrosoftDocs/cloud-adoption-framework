@@ -16,7 +16,7 @@ Just as cloud adoption is a journey, cloud security is also an ongoing journey o
 
 ## Envision a security end state
 
-A journey without a target destination is just wandering. While this may eventually lead to enlightenment, business goals and constraints often require focusing on objectives and key results.
+A journey without a target destination is just wandering. While this approach might eventually lead to enlightenment, business goals and constraints often require focusing on objectives and key results.
 
 The Secure methodology provides a vision of the complete end state to guide the improvement of your security program over time. The following infographic provides a visual mapping of the key ways that security integrates with the larger organization and the disciplines within security.
 
@@ -26,13 +26,13 @@ The Cloud Adoption Framework provides security guidance for this security journe
 
 ## Mapping to concepts, frameworks, and standards
 
-Security itself is both a standalone organizational discipline and a quality/attribute that is integrated or overlaid on other disciplines, which makes it difficult to precisely define and map in detail. The security industry uses many different frameworks to capture risk, plan controls, and operate. This is a quick summary of how the disciplines in the CAF Secure methodology disciplines relates to other security concepts and guidance:
+Security itself is both a standalone organizational discipline and a quality/attribute that is integrated or overlaid on other disciplines, which make it difficult to precisely define and map in detail. The security industry uses many different frameworks to capture risk, plan controls, and operate. Here is a quick summary of how the disciplines in the CAF Secure methodology disciplines relates to other security concepts and guidance:
 
-- **Zero trust:** Microsoft believes all security disciplines should follow the zero-trust principles of *assume breach*, *verify explicitly*, and *use least privilege access*. These underpin any sound [security strategy](https://aka.ms/securitystrategy) and also must be balanced with *business enablement* goals. The first and most visible part of zero trust is in access control, so it's highlighted in the description of access control security discipline.
+- **Zero trust:** Microsoft believes all security disciplines should follow the zero-trust principles of *assume breach*, *verify explicitly*, and *use least privilege access*. These principles underpin any sound [security strategy](https://aka.ms/securitystrategy) and also must be balanced with *business enablement* goals. The first and most visible part of zero trust is in access control, so it's highlighted in the description of access control security discipline.
 
-- **The Open Group:** These security disciplines map closely to the zero-trust components in the [core principles white paper](https://publications.opengroup.org/security-library/w210) published by The Open Group, where Microsoft actively participates. The one notable exception is that Microsoft elevated the discipline of innovation security so that DevSecOps is a top-level element because of how new, important, and transformative this discipline is for many organizations.
+- **The Open Group:** These security disciplines map closely to the zero-trust components in the [Core Principles white paper](https://publications.opengroup.org/security-library/w210) published by The Open Group, where Microsoft actively participates. The one notable exception is that Microsoft elevated the discipline of innovation security so that DevSecOps is a top-level element because of how new, important, and transformative this discipline is for many organizations.
 
-- **NIST cybersecurity framework (csf):** For organizations that use the [NIST cybersecurity framework](https://www.nist.gov/cyberframework), we have highlighted bold text where the framework most closely maps. Modern access control and DevSecOps map broadly to the full spectrum of the framework, so those items aren't noted individually.
+- **NIST cybersecurity framework:** For organizations that use the [NIST cybersecurity framework](https://www.nist.gov/cyberframework), we have highlighted bold text where the framework most closely maps. Modern access control and DevSecOps map broadly to the full spectrum of the framework, so those items aren't noted individually.
 
 ## Mapping to roles and responsibilities
 
@@ -65,7 +65,7 @@ Transforming how the business and tech teams view security requires aligning sec
 - **Culture:** The culture of security must be focused on safely meeting the business mission, not impeding it. At the same time, security must become a normalized part of the culture of the organization as the internet upon which the business operates is open, allow adversaries to attempt attacks at any time. This cultural shift requires improved processes, partnerships, and ongoing leadership support at all levels to communicate the change, model the behavior, and reinforce the shift.
 - **Risk ownership:** The accountability for security risk should be assigned to the same roles that own all other risks, freeing security up to be a trusted advisor and subject matter expert rather than a scapegoat. Security should be responsible for sound and balanced advice that is communicated in the language of those leaders, but should not be held accountable for decisions they do not own.
 - **Security talent:**  Security talent is in a chronic shortage and organizations should always be planning how to best develop and distribute security knowledge and skills. In addition to growing security teams directly with technical security skill sets, mature security teams are also diversifying their strategy by focusing on
-  - **Growing security skill sets and knowledge** within existing teams in IT and the business. This is particularly important for DevOps teams with a DevSecOps approach and can take many forms (such as a security help desk, identifying and training champions within the community, or job swapping programs).
+  - **Growing security skill sets and knowledge** within existing teams in IT and the business. This is especially important for DevOps teams with a DevSecOps approach and can take many forms (such as a security help desk, identifying and training champions within the community, or job swapping programs).
   - **Recruiting diverse skill sets** to security teams to bring fresh perspectives and frameworks to problems (like business, human psychology, or economics) and build better relationships within the organization. To a hammer, all problems look like nails.
 
 ### Business alignment
@@ -78,13 +78,13 @@ Because of these shifts, your cloud adoption program should focus heavily on bus
 
 ### Security disciplines
 
-This transformation will affect each security discipline differently. While all of these are extremely important and require investment, these are ordered (roughly) by which ones have the most immediate opportunities for quick wins as you adopt the cloud :
+This transformation will affect each security discipline differently. While each of these disciples is extremely important and requires investment, these are ordered (roughly) by which ones have the most immediate opportunities for quick wins as you adopt the cloud:
 
 - **Access control:** Application of network and identity create access boundaries and segmentation to reduce the frequency and reach of any security breaches
 - **Security operations:** Monitor IT operations to detect, respond, and recover from breach. Use data to continuously reduce risk of breach
 - **Asset protection:** Maximize protection of all assets (infrastructure, devices, data, applications, networks, and identities) to minimize risk to the overall environment
 - **Security governance:** Delegated decisions accelerate innovation and introduce new risks. Monitor decisions, configurations, and data to govern decisions made across the environment and within all workloads across the portfolio.
-- **Innovation security:** As organization adopt DevOps models to increase the pace of innovation, security must become an integral part of a DevSecOps process and integrate security expertise and resources directly into this high speed cycle. This involves shifting some decision making from centralized teams to empower workload-focused teams.
+- **Innovation security:** As an organization adopts DevOps models to increase the pace of innovation, security must become an integral part of a DevSecOps process and integrate security expertise and resources directly into this high-speed cycle. This involves shifting some decision making from centralized teams to empower workload-focused teams.
 
 ### Guiding principles
 
@@ -96,7 +96,7 @@ All security activities should be aligned to and shaped by a dual focus on
   - **Explicit verification:** Explicitly validate trust using all available data points, rather than assuming trust. For example, in access control, validate the user identity, location, device health, service or workload, data classification, and anomalies, rather than simply allowing access from an implicitly trusted internal network.
   - **Least-privileged access:** Limit the risk of a compromised user or resource by providing just-in-time and just-enough-access (JIT/JEA), risk-based adaptive policies, and data protection to help secure both data and productivity.
 
-### Additional resources
+## Related resources
 
 The Secure methodology is part of a comprehensive set of security guidance that also includes:
 
