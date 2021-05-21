@@ -57,8 +57,8 @@ Plan to upgrade or retire end of life software. Investing into your security pos
 
 It's critical for business leaders to support their IT and security leaders and teams. Running complex software in a hostile environment has inherent risk. Security and IT leaders constantly make difficult decisions about operational risk and security risk.
 
-- **Operational risk:**. A change to the software where the system runs could disrupt business processes. Such changes affect the assumptions made when the system was customized for the organization. This fact creates pressure to avoiding changing the system.
-- **Security risk:**. An attack brings the business risk of downtime. Attackers analyze every major security update on release. They can develop a working exploit in 24-48 hours to attack organizations that haven't applied the security update.
+- **Operational risk:.** A change to the software where the system runs could disrupt business processes. Such changes affect the assumptions made when the system was customized for the organization. This fact creates pressure to avoiding changing the system.
+- **Security risk:.** An attack brings the business risk of downtime. Attackers analyze every major security update on release. They can develop a working exploit in 24-48 hours to attack organizations that haven't applied the security update.
 
 Your organization could have this dilemma often because of the continuing changes to technology and evolution of attack technique. Business leaders must recognize the risk of running a business using complex software. Support updating business processes such as these examples:
 
@@ -86,7 +86,7 @@ To get started with asset protection, we recommend that organizations take the f
 - **Focus on well-known resources first:** Think about virtual machines, networks, and identities in the cloud that the team is already familiar with. This technique allows you to make immediate progress and are often easier to manage and secure with native cloud tools like Azure Security Center and Azure Defender.
 - **Start with vendor/industry baselines:** Start your security configuration with a well known and proven solution, for example:
       - Azure Baselines in Azure Security Benchmark. Microsoft provides security configuration guidance tailored to individual Azure services. These baselines apply the Azure security benchmarks to the unique attributes of each service. This approach enables security teams to secure each service and refine configurations as needed. For more information, see [Security baselines for Azure](/security/benchmark/azure/security-baselines-overview). See [Security Baselines for Azure](/security/benchmark/azure/security-baselines-overview)
-      -  Microsoft Security Baselines. Microsoft provides security configuration guidance for commonly used technologies including Windows, Office, and Microsoft Edge. For more information, see [Microsoft Security Baselines](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines).Microsoft-Security-Baselines) for more information
+- Microsoft Security Baselines. Microsoft provides security configuration guidance for commonly used technologies including Windows, Office, and Microsoft Edge. For more information, see [Microsoft Security Baselines](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines).Microsoft-Security-Baselines) for more information
       - CIS Benchmarks. The Center for Internet Security (CIS) provides specific configuration guidance for many products and vendors. For more information, see [CIS Benchmarks](https://www.cisecurity.org/cis-benchmarks/).
 
 ## Key information

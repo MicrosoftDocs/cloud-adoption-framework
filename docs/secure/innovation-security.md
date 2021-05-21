@@ -22,7 +22,7 @@ Developing new capabilities and applications requires successfully meeting three
 - **Security (Sec):** Your application must be resilient to attacks from rapidly evolving attackers and take advantage of innovations in security defenses.
 - **IT operations (Ops):** Your application must be reliable and perform efficiently.
 
-Merging these three requirements together and creating a shared culture is critically important, but often challenging. Leaders of development, IT, and security teams must work together to drive this change. For more information, see [The Leadership Imperative: Blend the Cultures](/#the-leadership-imperative-blend-the-cultures).
+Merging these three requirements together and creating a shared culture is critically important, but often challenging. Leaders of development, IT, and security teams must work together to drive this change. For more information, see The [Leadership Imperative: Blend the Cultures](/#the-leadership-imperative-blend-the-cultures).
 
 ## What is DevSecOps?
 
@@ -57,8 +57,7 @@ Protecting this innovation requires that organizations address potential securit
 Attackers might exploit weaknesses in:
 
 - **Development process:** Attackers might find weaknesses in the application design process, for example, using weak or no encryption for communications. Or attackers might find weakness in the implementation of the design, for example, code doesn't validate input and allows common attacks like SQL injection. Additionally, attackers might implant back doors in the code that allows them to return later to exploit in your environment or in your customer's environment.
-- **IT infrastructure:** Attackers can compromise endpoint and infrastructure elements that the development process is hosted on using standard attacks. Attackers might also conduct a multi-stage attack that uses stolen credentials or malware to access development infrastructure from other parts of the environment.
-Additionally, the risk of software supply chain attacks makes it critical to integrate security into your process for both:
+- **IT infrastructure:** Attackers can compromise endpoint and infrastructure elements that the development process is hosted on using standard attacks. Attackers might also conduct a multi-stage attack that uses stolen credentials or malware to access development infrastructure from other parts of the environment. Additionally, the risk of software supply chain attacks makes it critical to integrate security into your process for both:
 - **Protecting your organization:** From malicious code and vulnerabilities in your source code supply chain
 - **Protecting your customers:** From any security issues in your applications and systems, which might result in reputation damage, liability, or other negative business impacts on your organization
 

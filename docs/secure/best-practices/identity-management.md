@@ -16,29 +16,29 @@ ms.custom: internal
 
 > [!div class="checklist"]
 >
-> * Treat identity as the primary security perimeter.
-> * Define clear lines of responsibility and separation of duties for each function. Restrict access based on a need-to-know basis and least privilege security principals.
-> * Use role-base access control. Assign permissions to users, groups, and applications at a certain scope through Azure RBAC. Use built-in roles when possible.
-> * Prevent deletion or modification of a resource, resource group, or subscription through management locks.
-> * Use Managed Identities to access resources in Azure.
-> * Support a single enterprise directory. Keep the cloud and on-premises directories synchronized, except for critical-impact accounts.
-> * Centralize identity management. Designate a single Azure AD directory as the authoritative source for corporate and organizational accounts. Consistency and a single authoritative sources will increase clarity and reduce security risks from human errors and configuration complexity.
-> * Set up Azure AD Conditional Access. Enforce and measure key security attributes when authenticating all users, especially for critical-impact, high privilege accounts.
-> * Lower exposure of privilege accounts.
-> * Choose a passwordless authentication method when possible.
-> * Enable password management and roll our self service password reset. Enable Microsoft's password guidance.
-> * Create an organization specific custom banned password list.
-> * Block legacy protocols and authentication methods. This can be achieved with Conditional Access.
-> * Manage connected tenants.
-> * Plan for routine security improvements.
-> * Enforce multi-factor verification for users.
-> * Enable single sign-on
-> * Use Azure AD for storage authentication.
-> * Enable Privilege Identity Management for tracking admin roles.
-> * Enable Azure Active Directory Identity Protection.
-> * Use risk detection to trigger MFA and password changes.
-> * Automate threat response.
-> * Monitor Azure AD Connect Health in hybrid environments.
+> - Treat identity as the primary security perimeter.
+> - Define clear lines of responsibility and separation of duties for each function. Restrict access based on a need-to-know basis and least privilege security principals.
+> - Use role-base access control. Assign permissions to users, groups, and applications at a certain scope through Azure RBAC. Use built-in roles when possible.
+> - Prevent deletion or modification of a resource, resource group, or subscription through management locks.
+> - Use Managed Identities to access resources in Azure.
+> - Support a single enterprise directory. Keep the cloud and on-premises directories synchronized, except for critical-impact accounts.
+> - Centralize identity management. Designate a single Azure AD directory as the authoritative source for corporate and organizational accounts. Consistency and a single authoritative sources will increase clarity and reduce security risks from human errors and configuration complexity.
+> - Set up Azure AD Conditional Access. Enforce and measure key security attributes when authenticating all users, especially for critical-impact, high privilege accounts.
+> - Lower exposure of privilege accounts.
+> - Choose a passwordless authentication method when possible.
+> - Enable password management and roll our self service password reset. Enable Microsoft's password guidance.
+> - Create an organization specific custom banned password list.
+> - Block legacy protocols and authentication methods. This can be achieved with Conditional Access.
+> - Manage connected tenants.
+> - Plan for routine security improvements.
+> - Enforce multi-factor verification for users.
+> - Enable single sign-on
+> - Use Azure AD for storage authentication.
+> - Enable Privilege Identity Management for tracking admin roles.
+> - Enable Azure Active Directory Identity Protection.
+> - Use risk detection to trigger MFA and password changes.
+> - Automate threat response.
+> - Monitor Azure AD Connect Health in hybrid environments.
 
 ## Azure Services for Identity
 
@@ -105,13 +105,11 @@ The following diagram outlines the most common app scenarios and their identity 
 
 ### SAMLv2.0
 
-Security Assertion Markup Language (SAML) is an open standard for exchanging authentication and authorization data between an identity provider and a service provider. SAML is an XML-based markup language for security assertions, which are statements that service providers use to make access-control decisions.
-The SAML specification defines three roles:
+Security Assertion Markup Language (SAML) is an open standard for exchanging authentication and authorization data between an identity provider and a service provider. SAML is an XML-based markup language for security assertions, which are statements that service providers use to make access-control decisions. The SAML specification defines three roles:
 
 - The principal, generally a user
 - The identity provider (IdP)
-- The service provider (SP)
-Use when there's a need to provide an single sign-on (SSO) experience for an enterprise SAML application.
+- The service provider (SP) Use when there's a need to provide an single sign-on (SSO) experience for an enterprise SAML application.
 
 ### Authentication Libraries
 
@@ -136,31 +134,31 @@ By using MSAL instead of ADAL:
 ## Identity Platform additional considerations
 
 > [!div class="checklist"]
-> * Apply [Microsoft Platform Policies](/legal/microsoft-identity-platform/terms-of-use)
-> * Keep the information associated to the account used to register and manage apps up-to-date.
-> * Implement proper branding guidelines for applications.
-> * Provide links to your app terms of service and privacy statements.
-> * Manage all redirect URIs.
-> * Minimize and manage the list of app registration owners.
-> * Don't enable support for OAuth2 implicit grant flow.
-> * Move beyond username and password, don't use resource owner password credential flow (ROPC)
-> * Protect and manage app credentials for web apps, web APIs and daemon apps. Use certificate credentials instead of password credentials or client secrets.
-> * Don't store credentials in code or configuration files. Use manage identities and Azure Key Vault to store and rotate credentials.
-> * Use least privilege principle on applications so it only asks for the permissions in needs only when needed.
-> * Use modern authentication solutions (OAuth 2.0 and OpenID Connect)
-> * Don't program directly against these protocols. Instead, use the Microsoft Authentication Library (MSAL) and migrate apps that use ADAL to use MSAL.
-> * In web apps of web APIs, keep one token cache per account.
-> * Don't look at the access token value, or attempt to parse it as a client. They can change values, formats, or even become encrypted without warning - always use the id_token if your client needs to learn something about the user, or call Microsoft Graph.
-> * Understand user consent experience
-> * Test for Conditional Access Policies.
+> - Apply [Microsoft Platform Policies](/legal/microsoft-identity-platform/terms-of-use)
+> - Keep the information associated to the account used to register and manage apps up-to-date.
+> - Implement proper branding guidelines for applications.
+> - Provide links to your app terms of service and privacy statements.
+> - Manage all redirect URIs.
+> - Minimize and manage the list of app registration owners.
+> - Don't enable support for OAuth2 implicit grant flow.
+> - Move beyond username and password, don't use resource owner password credential flow (ROPC)
+> - Protect and manage app credentials for web apps, web APIs and daemon apps. Use certificate credentials instead of password credentials or client secrets.
+> - Don't store credentials in code or configuration files. Use manage identities and Azure Key Vault to store and rotate credentials.
+> - Use least privilege principle on applications so it only asks for the permissions in needs only when needed.
+> - Use modern authentication solutions (OAuth 2.0 and OpenID Connect)
+> - Don't program directly against these protocols. Instead, use the Microsoft Authentication Library (MSAL) and migrate apps that use ADAL to use MSAL.
+> - In web apps of web APIs, keep one token cache per account.
+> - Don't look at the access token value, or attempt to parse it as a client. They can change values, formats, or even become encrypted without warning - always use the id_token if your client needs to learn something about the user, or call Microsoft Graph.
+> - Understand user consent experience
+> - Test for Conditional Access Policies.
 
 **Further reading:**
-* [Microsoft identity platform (overview)](/azure/active-directory/develop/v2-overview)
-* [Microsoft identity platform protocols reference](/azure/active-directory/develop/active-directory-v2-protocols)
-* [Access tokens reference](/azure/active-directory/develop/access-tokens)
-* [ID tokens reference](/azure/active-directory/develop/id-tokens)
-* [Authentication libraries reference](/azure/active-directory/develop/reference-v2-libraries)
-* [Permissions and consent in the Microsoft identity platform](/azure/active-directory/develop/v2-permissions-and-consent)
+- [Microsoft identity platform (overview)](/azure/active-directory/develop/v2-overview)
+- [Microsoft identity platform protocols reference](/azure/active-directory/develop/active-directory-v2-protocols)
+- [Access tokens reference](/azure/active-directory/develop/access-tokens)
+- [ID tokens reference](/azure/active-directory/develop/id-tokens)
+- [Authentication libraries reference](/azure/active-directory/develop/reference-v2-libraries)
+- [Permissions and consent in the Microsoft identity platform](/azure/active-directory/develop/v2-permissions-and-consent)
 
 ## Identity and Access APIs
 
@@ -178,9 +176,9 @@ Azure AD's support for the SCIM 2.0 protocol is described in Using System for Cr
 
 **Further reading:**
 
-* [Decision tree to help you choose between SCIM and Microsoft Graph to automate provisioning](/azure/active-directory/app-provisioning/scim-graph-scenarios)
+- [Decision tree to help you choose between SCIM and Microsoft Graph to automate provisioning](/azure/active-directory/app-provisioning/scim-graph-scenarios)
 
-* [SCIM Protocol Compliance](/azure/active-directory/app-provisioning/application-provisioning-config-problem-scim-compatibility)
+- [SCIM Protocol Compliance](/azure/active-directory/app-provisioning/application-provisioning-config-problem-scim-compatibility)
 
 ## Azure AD Conditional Access
 
@@ -223,7 +221,7 @@ Azure AD Multi-Factor Authentication works by requiring two or more of the follo
 
 - Something you know, typically a password.
 - Something you have, such as a trusted device that is not easily duplicated, like a phone or hardware key.
-- Something you are - biometrics like a fingerprint or face scan.
+- **Something you are:** biometrics like a fingerprint or face scan.
 
 **Further Reading:**
 
@@ -279,14 +277,14 @@ Here are some of the key features of Privileged Identity Management:
 
 ## Further reading
 
-* [Identity Management Best Practices](/azure/security/fundamentals/identity-management-best-practices)
+- [Identity Management Best Practices](/azure/security/fundamentals/identity-management-best-practices)
 
-* [Security Checklist for Identity Management](/azure/security/fundamentals/steps-secure-identity)
+- [Security Checklist for Identity Management](/azure/security/fundamentals/steps-secure-identity)
 
-* [Choose passwordless authentication](/azure/active-directory/authentication/concept-authentication-passwordless)
+- [Choose passwordless authentication](/azure/active-directory/authentication/concept-authentication-passwordless)
 
-* [Microsoft security best practices for Identity and Access Management](/security/compass/identity)
+- [Microsoft security best practices for Identity and Access Management](/security/compass/identity)
 
-* [AAD deployment 30, 90 and beyond](/azure/active-directory/fundamentals/active-directory-deployment-checklist-p2)
+- [AAD deployment 30, 90 and beyond](/azure/active-directory/fundamentals/active-directory-deployment-checklist-p2)
 
-* [Identity Platform Best Practices](/azure/active-directory/develop/identity-platform-integration-checklist)
+- [Identity Platform Best Practices](/azure/active-directory/develop/identity-platform-integration-checklist)
