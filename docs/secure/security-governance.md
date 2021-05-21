@@ -60,8 +60,8 @@ Security governance and security operations work together to provide complete vi
 
 Governance and security operations provide complementary types of visibility.
 
-- *Security operations* provide insight into the immediate risk of active attacks.
-- *Security governance* provides a broad or long view of risk from potential future attacks and attack vectors.
+- **Security operations** provide insight into the immediate risk of active attacks.
+- **Security governance** provides a broad or long view of risk from potential future attacks and attack vectors.
 
 The security architects within the governance function help identify lessons learned from incidents. For example, the root cause of major incidents. They capture the lessons into your organization's standards to ensure consistent application across the enterprise.
 

@@ -402,7 +402,7 @@ One example of this that has played out consistently in many organizations is th
 
 - The *network security team* develops a strategy for segmenting a *flat network* to increase security (often based on physical sites, assigned IP address addresses/ranges, or similar)
 - Separately, the *identity team* developed a strategy for groups and Active Directory organizational units (OUs) based on their understanding and knowledge of the organization.
-- *Application teams* often find it difficult to work with these systems because they were designed with limited input and understanding of business operations, goals, and risks.
+- Often, *application teams* find it difficult to work with these systems because they were designed with limited input and understanding of business operations, goals, and risks.
 
 In organizations where this happens, teams frequently experience conflicts over firewall exceptions, which negatively impact both security (exceptions are usually approved) and productivity (deployment is slowed for application functionality the business needs).
 

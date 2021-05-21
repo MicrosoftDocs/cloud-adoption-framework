@@ -52,9 +52,9 @@ To guide this transformation, this methodology provides guidance on the integrat
 
 Security organizations are experiencing two types of major transformations at the same time
 
-- **Security as business risk:** Security has been propelled into the realm of business risk management from a purely technical quality-oriented discipline. This is driven by dual forces of
-  - ***digital transformation*:** increases in digital footprint are continuously increasing the potential attack surface of the organization
-  - ** *threat landscape*:** increases in attack volume and sophistication that are fueled by an industrialized attack economy with specialized skills and continuous commoditization of attack tools and techniques
+- **Security as business risk:** Security has been propelled into the realm of business risk management from a purely technical quality-oriented discipline. This is driven by dual forces of:
+  - **Digital transformation:** increases in digital footprint are continuously increasing the potential attack surface of the organization
+  - **Threat landscape:** increases in attack volume and sophistication that are fueled by an industrialized attack economy with specialized skills and continual commoditization of attack tools and techniques.
 - **Platform change:** Security is also grappling with a technical platform change to the cloud. This shift is on the scale of factories shifting from running their own electrical generators to plugging into an electrical grid. While security teams often have the right foundational skills, they are becoming overwhelmed by the changes to nearly every process and technology they use everyday.
 - **Shift in expectations:** In the past decade, digital innovation has redefined entire industries. Business agility, especially agility related to digital transformation, can quickly unseat an organization as a market leader. Likewise, loss of consumer confidence can have a similar impact on the business. While it was once acceptable for security to start with "No" to block a project and protect the organization,  the urgency of embracing digital transformation must change the engagement model to "Let's talk about how to stay safe while you do what is needed to stay relevant."
 
@@ -65,8 +65,8 @@ Transforming how the business and tech teams view security requires aligning sec
 - **Culture:** The culture of security must be focused on safely meeting the business mission, not impeding it. At the same time, security must become a normalized part of the culture of the organization as the internet upon which the business operates is open, allow adversaries to attempt attacks at any time. This cultural shift requires improved processes, partnerships, and ongoing leadership support at all levels to communicate the change, model the behavior, and reinforce the shift.
 - **Risk ownership:** The accountability for security risk should be assigned to the same roles that own all other risks, freeing security up to be a trusted advisor and subject matter expert rather than a scapegoat. Security should be responsible for sound and balanced advice that is communicated in the language of those leaders, but should not be held accountable for decisions they do not own.
 - **Security Talent:**  Security talent is in a chronic shortage and organizations should always be planning how to best develop and distribute security knowledge and skills. In addition to growing security teams directly with technical security skill sets, mature security teams are also diversifying their strategy by focusing on
-  - *Growing security skill sets and knowledge* within existing teams in IT and the business. This is particularly important for DevOps teams with a DevSecOps approach and can take many forms (such as a security help desk, identifying and training champions within the community, or job swapping programs).
-  - *Recruiting diverse skill sets* to security teams to bring fresh perspectives and frameworks to problems (like business, human psychology, or economics) and build better relationships within the organization. To a hammer, all problems look like nails.
+  - **Growing security skill sets and knowledge** within existing teams in IT and the business. This is particularly important for DevOps teams with a DevSecOps approach and can take many forms (such as a security help desk, identifying and training champions within the community, or job swapping programs).
+  - **Recruiting diverse skill sets** to security teams to bring fresh perspectives and frameworks to problems (like business, human psychology, or economics) and build better relationships within the organization. To a hammer, all problems look like nails.
 
 ### Business Alignment
 
@@ -92,9 +92,9 @@ All security activities should be aligned to and shaped by a dual focus on
 
 - **Business Enablement:** Align to organization's business objective and risk framework
 - **Security Assurances:** Focused on applying zero trust principles of
-  - *Assume Breach:* When designing security for any component or system, reduce risk of attackers expanding access by assuming other resources in the organization are compromised
-  - *Explicit Verification:* Explicitly validate trust using all available data points, rather than assuming trust. (e.g. in access control validate the user identity, location, device health, service or workload, data classification, and anomalies rather than simply allowing access from an implicitly trusted internal network)
-  - *Least Privileged Access:* Limit the risk of a compromised user or resource by providing just-in-time and just-enough-access (JIT/JEA), risk-based adaptive polices, and data protection to help secure both data and productivity.
+  - **Assume Breach:** When designing security for any component or system, reduce risk of attackers expanding access by assuming other resources in the organization are compromised
+  - **Explicit Verification:** Explicitly validate trust using all available data points, rather than assuming trust. (e.g. in access control validate the user identity, location, device health, service or workload, data classification, and anomalies rather than simply allowing access from an implicitly trusted internal network)
+  - **Least Privileged Access:** Limit the risk of a compromised user or resource by providing just-in-time and just-enough-access (JIT/JEA), risk-based adaptive polices, and data protection to help secure both data and productivity.
 
 ### Additional Resources
 

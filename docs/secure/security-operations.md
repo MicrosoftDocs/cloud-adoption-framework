@@ -56,8 +56,8 @@ Two main metrics to focus on that have a direct influence on organizational risk
 
 - **Mean time to acknowledge (MTTA):** Responsiveness is one of the few elements SecOps has more direct control over. Measure the time between an alert, like when the *light starts to blink*, and when an analyst sees that alert and begins the investigation. Improving this responsiveness requires that analysts don't waste time investigating false positives. It can be achieved with ruthless prioritization, ensuring that any alert feed that requires an analyst response must have a track record of 90 percent true positive detections.
 - **Mean time to remediate (MTTR):** Effectiveness of reducing risk measures the next period of time. That period is the time the analyst begins the investigation to when the incident is remediated. MTTR identifies how long it takes SecOps to remove the attacker's access from the environment. This information helps identify where to invest in processes and tools to help analysts reduce risk.
-- *Incidents remediated (manually/with automation)*: Measuring how many incidents are remediated manually and how many are resolved with automation is another key way to inform staffing and tool decisions.
-- *Escalations between each tier*: Track how many incidents escalated between tiers. It helps ensure accurate tracking of the workload to inform staffing and other decisions. For example, so that work done on escalated incidents isn't attributed to the wrong team.
+- **Incidents remediated (manually or with automation):** Measuring how many incidents are remediated manually and how many are resolved with automation is another key way to inform staffing and tool decisions.
+- **Escalations between each tier:** Track how many incidents escalated between tiers. It helps ensure accurate tracking of the workload to inform staffing and other decisions. For example, so that work done on escalated incidents isn't attributed to the wrong team.
 
 ## Security Operations model
 
@@ -68,9 +68,9 @@ Security Operations handles a combination of high volume incidents and high comp
 Security operations teams often focus on three key outcomes:
 
 - **Incident Management:** Manage active attacks on the environment, including:
-  - *Reactively responding* to detected attacks.
-  - *Proactively hunting* for attacks that slipped through traditional threat detections.
-  - *Coordinating* the legal, communications, and other business implications of security incidents.
+  - **Reactively responding** to detected attacks.
+  - **Proactively hunting** for attacks that slipped through traditional threat detections.
+  - **Coordinating** the legal, communications, and other business implications of security incidents.
 - **Incident Preparation:** Help the organization prepare for future attacks. Incident preparation is a broader strategic set of activities that are aimed at building muscle memory and context at all levels of the organization. This strategy prepares people to better handle major attacks and gain insights on security process improvements.
 - **Threat Intelligence:** Gathering, processing, and disseminating threat intelligence to security operations, security teams, security leadership, and business leadership stakeholders through security leadership.
 
