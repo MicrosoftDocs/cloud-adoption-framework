@@ -115,7 +115,7 @@ For the following sections on keys (used as tokens) and secrets, there are sever
 - **Command and Query Responsibility Segregation (CQRS) pattern:** The Command and Query Responsibility Segregation (CQRS) pattern separates read and update operations for a data store. Implementing CQRS in your application can maximize its performance, scalability, and security. The flexibility created by migrating to CQRS allows a system to better evolve over time and prevents update commands from causing merge conflicts at the domain level.
 
 > [!IMPORTANT]
-> For each of your workloads, identify various established cloud design patterns that address each of the problem domain(s) to ensure alignment with your business security requirements.
+> For each of your workloads, identify various established cloud design patterns that address each of the problem domains to ensure alignment with your business security requirements.
 
 To learn more, see:
 

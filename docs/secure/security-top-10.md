@@ -190,14 +190,14 @@ These new capabilities offer new possibilities, but realizing value from them re
 - **Security remediation:** Assign accountability for addressing these risks to the teams responsible for managing those resources. This should either the DevOps teams managing their own application resources or the technology-specific teams in **[Central IT Operations](../organize/central-it.md)**:
 
   - **Compute and application resources:**
-    - **App Services:** Application Development/Security Team(s)
+    - **App Services:** Application Development/Security Teams
     - **Containers:** Application Development or Infrastructure/IT Operations
     - **VMs/Scale sets/compute:** IT/Infrastructure Operations
   - **Data and storage resources:**
     - **SQL/Redis/Data Lake Analytics/Data Lake Store:** Database Team
     - **Storage Accounts:** Storage/Infrastructure Team
   - **Identity and access resources:**
-    - **Subscriptions:** Identity Team(s)
+    - **Subscriptions:** Identity Teams
     - **Key Vault:** Identity or Information/Data Security Team
   - **Networking resources:** Network Security Team
   - **IoT Security:** IoT Operations Team
