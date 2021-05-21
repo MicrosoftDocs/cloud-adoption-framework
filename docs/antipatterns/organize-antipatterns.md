@@ -86,7 +86,7 @@ Companies place importance on finding the right personnel. As a result, they oft
 
 ### Example: Hire TDMs only
 
-A research institute hires several TDMs to lead its cloud journey. After the initial high-level-concept phase ends, the implementation phase starts. The institute then realizes that cloud deployments behave differently than on-premises deployments. It needs extra cloud engineering effort to properly implement [infrastructure as code (IaC)](/azure/devops/learn/what-is-infrastructure-as-code) concepts and policy-driven governance.
+A research institute hires several TDMs to lead its cloud journey. After the initial high-level-concept phase ends, the implementation phase starts. The institute then realizes that cloud deployments behave differently than on-premises deployments. It needs extra cloud engineering effort to properly implement [infrastructure as code (IaC)](/devops/deliver/what-is-infrastructure-as-code) concepts and policy-driven governance.
 
 ### Preferred outcome: Use cloud engineers for the implementation phase
 

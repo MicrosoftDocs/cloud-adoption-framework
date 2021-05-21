@@ -38,7 +38,7 @@ While OSS could be interpreted as the packages, libraries, scripts, and dependen
 
 ### Infrastructure as code
 
-Infrastructure as code (IaC) is the management of infrastructure (networks, virtual machines, load balancers, and connection topology) in a descriptive model, using the same versioning system that the DevOps team uses for source code. Like the principle that the same source code generates the same binary, an IaC model generates the same environment every time that it's applied. IaC is a key DevOps practice that's used with [continuous delivery (CD)](/azure/devops/learn/what-is-continuous-delivery).
+Infrastructure as code (IaC) is the management of infrastructure (networks, virtual machines, load balancers, and connection topology) in a descriptive model, using the same versioning system that the DevOps team uses for source code. Like the principle that the same source code generates the same binary, an IaC model generates the same environment every time that it's applied. IaC is a key DevOps practice that's used with [continuous delivery (CD)](/devops/deliver/what-is-infrastructure-as-code).
 
 IaC evolved to solve the problem of environment drift in the release pipeline. Without it, teams must maintain the settings of individual deployment environments, and inconsistencies between environments lead to issues during deployments. Every environment eventually becomes a snowflake, a unique configuration that can't be reproduced automatically. With snowflakes, infrastructure administration and maintenance requires manual processes that contribute to errors and are hard to track. Infrastructure deployments with IaC are repeatable and prevent runtime issues caused by configuration drift or missing dependencies.
 
