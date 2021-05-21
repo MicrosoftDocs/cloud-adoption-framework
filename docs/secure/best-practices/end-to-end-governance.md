@@ -12,7 +12,7 @@ ms.custom: internal
 
 ## End to end governance from DevOps to Azure
 
-It's not sufficient to plan and implement an [Azure role-based access control (RBAC) model](/azure/cloud-adoption-framework/ready/considerations/roles) for Azure Resource Manager templates (ARM templates), which restricts access via Azure portal and Azure CLI.
+It's not sufficient to plan and implement an [Azure role-based access control (RBAC) model](../ready/considerations/roles.md) for Azure Resource Manager templates (ARM templates), which restricts access via Azure portal and Azure CLI.
 
 If this model isn't mirrored for DevOps automation, your organization might leave a **security back-door** open. Consider an example where a developer doesn't have access via ARM templates, but still has sufficient permissions to change application code or infrastructure as code and trigger an automation workflow. The developer, indirectly via DevOps, can access and make destructive changes to your ARM templates.
 
@@ -31,7 +31,7 @@ Azure DevOps has tight integration with Azure Active Directory including [AAD gr
 > [!NOTE]
 > If you are using another CI vendor, you might have an intermediary logical container for managing group memberships, which you also need to maintain if AAD group membership is not synchronized. 
 
-The diagram below illustrates how Azure AD is used as the single identity management plane. In ARM templates and in our DevOps tooling (Azure DevOps in this example), we only need to manage role assignments, not memberships, which should be managed in Azure AD. Note the resource names follow recommended [Naming Conventions](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming) and [Abbreviations](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming) for Azure Resources.
+The diagram below illustrates how Azure AD is used as the single identity management plane. In ARM templates and in our DevOps tooling (Azure DevOps in this example), we only need to manage role assignments, not memberships, which should be managed in Azure AD. Note the resource names follow recommended [Naming Conventions](../../ready/azure-best-practices/resource-naming.md) and [Abbreviations](../ready/azure-best-practices/resource-naming.md) for Azure Resources.
 
 <img src="./../media/e2e-governance-overview.svg" alt="Diagram of end-to-end governance and how to access to your Azure resources, both from ARM templates and CI/CD workflows">
 
@@ -63,7 +63,7 @@ Now that you understand the need to secure ARM templates and DevOps workflows, y
 
 To learn more about governance design and permissions, see:
 
-- [Governance design for multiple teams](/azure/cloud-adoption-framework/govern/resource-consistency/governance-multiple-teams)
+- [Governance design for multiple teams](../../govern/resource-consistency/governance-multiple-teams.md)
 - [Recommended method for granting and restricting permissions](/azure/devops/organizations/security/restrict-access?view=azure-devops#recommended-method-for-granting-and-restricting-permissions)
 - [Default permissions and access for Azure DevOps](/azure/devops/organizations/security/permissions-access?view=azure-devops)
 - [Managing people's access to your organization with roles](https://docs.github.com/en/organizations/managing-peoples-access-to-your-organization-with-roles)

@@ -20,9 +20,9 @@ The following diagram illustrates a baseline CI/CD workflow. The red configurati
 
 Let's examine each stage of this typical workflow to help you understand how the configurations often depend on one another. Your workflow might have more stages. The concepts below will help you understand CI/CD and help you design your workflow for security.
 
-### Stage 1 - Git workflow
+### Stage 1: Git workflow
 
-Code changes, not just to software, but also to *pipeline as code* and [Infrastructure as Code](https://docs.microsoft.com/azure/devops/learn/what-is-infrastructure-as-code), are saved and managed in Git. Git is a distributed source code management software. When code is pushed from local computers to the centralized Git server, business rules can be applied before it's accepted.
+Code changes, not just to software, but also to *pipeline as code* and [Infrastructure as Code](/devops/deliver/what-is-infrastructure-as-code), are saved and managed in Git. Git is a distributed source code management software. When code is pushed from local computers to the centralized Git server, business rules can be applied before it's accepted.
 
 #### Pull requests and collaboration
 
@@ -42,7 +42,7 @@ If the requirements are met, the code changes are accepted and can be merged.
 
 The pull request workflow is used together with restricted access controls. The pull request workflow can't be enforced however, unless the server is configured to reject direct changes to protected branches.
 
-A developer can't push directly to the `production` branch, but instead must create a pull request that targets the protected branch. Each SCM vendor has a different flavor for achieving restricted access to protected branches. For example, with GitHub this feature is only [available](https://docs.github.com/en/github/administering-a-repository/about-protected-branches#restrict-who-can-push-to-matching-branches) for organizations using GitHub Team or GitHub Enterprise Cloud.
+A developer can't push directly to the `production` branch, but instead must create a pull request that targets the protected branch. Each SCM vendor has a different flavor for achieving restricted access to protected branches. For example, with GitHub this feature is only [available](https://docs.github.com/en/github/administering-a-repository/defining-the-mergeability-of-pull-requests/about-protected-branches#restrict-who-can-push-to-matching-branches) for organizations using GitHub Team or GitHub Enterprise Cloud.
 
 #### Document your Git access model
 
@@ -72,16 +72,16 @@ To learn more about pull requests and protected branches, see:
 - [Set branch permissions](https://docs.microsoft.com/azure/devops/repos/git/branch-permissions?view=azure-devops)
 - [Create, view, and manage pull requests](https://docs.microsoft.com/azure/devops/repos/git/pull-requests?view=azure-devops)
 - [Improve code quality with branch policies](https://docs.microsoft.com/azure/devops/repos/git/branch-policies?view=azure-devops)
-- [About pull requests](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests)
-- [About protected branches](https://docs.github.com/en/github/administering-a-repository/about-protected-branches)
+- [About pull requests](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
+- [About protected branches](https://docs.github.com/en/github/administering-a-repository/defining-the-mergeability-of-pull-requests/about-protected-branches)
 
-### Stage 2 - Pipelines as code
+### Stage 2: Pipelines as code
 
 The Pipeline as code movement accelerated automation adoption and deployments by moving pipeline definitions and configurations from the CI vendor to the developers, bringing the build and deployment logic closer to the corresponding application logic. The greater flexibility here also comes with greater responsibility.
 
 RBAC controls in a UI driven pipeline can prevent individual users from making destructive changes. Pipelines as code, however, often run with privileged identities and can destroy your workloads if instructed to do so.
 
-### Stage 3 - Securing your deployment credentials
+### Stage 3: Secure your deployment credentials
 
 Pipelines and code repositories should not include hard-coded credentials and secrets. Credentials and secrets should be stored elsewhere and use CI vendor features for security. Because Pipelines run as headless agents, they should never use an individual's password. Pipelines should run using headless security principals instead,  for example, Service principals](/azure/active-directory/develop/app-objects-and-service-principals) or [Managed identities](/azure/active-directory/managed-identities-azure-resources/overview). Access to this security principal's credentials, database connection strings, and third-party API keys should also be securely managed in the CI platform.
 
@@ -120,7 +120,7 @@ To learn more, see:
 
 ## Resources
 
-- [Platform automation and DevOps](/azure/cloud-adoption-framework/ready/enterprise-scale/platform-automation-and-devops)
+- [Platform automation and DevOps](../../ready/enterprise-scale/platform-automation-and-devops.md)
 - [Pipelines security walkthrough](/azure/devops/pipelines/security/overview?view=azure-devops)  
 - [Security through templates](/azure/devops/pipelines/security/templates?view=azure-devops)
 - [DevSecOps in GitHub](/azure/architecture/solution-ideas/articles/devsecops-in-github)

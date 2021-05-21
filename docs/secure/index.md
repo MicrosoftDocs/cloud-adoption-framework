@@ -28,7 +28,7 @@ The Cloud Adoption Framework provides security guidance for this security journe
 
 Security itself is both a standalone organizational discipline and a quality/attribute that is integrated/overlaid on other disciplines, which makes it difficult to precisely define and map in detail. The security industry uses many different frameworks to capture risk, plan controls, and operate. This is a quick summary of how the disciplines in the CAF secure methodology disciplines relates to other security concepts and guidance:
 
- - **Zero Trust** - Microsoft believes all security disciplines should follow the  Zero Trust principles of *assume breach, verify explicity,* and *use least privilege access*. These underpin any sound [security strategy](https://aka.ms/securitystrategy) and also must be balanced with *business enablement* goals. The first and most visible part of zero trust is in access control, so it is  highlighted in the description of access control security discipline.  
+ - **Zero Trust** - Microsoft believes all security disciplines should follow the  Zero Trust principles of *assume breach*, *verify explicitly*, and *use least privilege access*. These underpin any sound [security strategy](https://aka.ms/securitystrategy) and also must be balanced with *business enablement* goals. The first and most visible part of zero trust is in access control, so it is  highlighted in the description of access control security discipline.  
 	
  - **The Open Group** - These security disciplines map closely to the Zero Trust Components in the [Core principles whitepaper](https://publications.opengroup.org/security-library/w210) published by The Open Group, where Microsoft actively participates. The one notable exception is that Microsoft elevated the discipline of Innovation Security so that DevSecOps is a top level element because of how new, important, and transformative this discipline is for many organizations. 
 	
@@ -99,8 +99,9 @@ All security activities should be aligned to and shaped by a dual focus on
 
 ### Additional Resources
 
-This CAF Secure methodology is part of a comprehensive set of security guidance that also includes
- - [**Azure Well-Architected Framework**](https://docs.microsoft.com/azure/architecture/framework/security/overview) - Guidance on securing your workloads on Azure
- - [**Azure Security Benchmarks**](https://aka.ms/benchmarkdocs) - Prescriptive Best Practices and Controls for Azure Security
- - [**Enterprise Scale Landing Zone**](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/security-governance-and-compliance) -Azure Reference architecture and implementation with integrated security
- - [**Azure Top 10 Security Best Practices**](https://aka.ms/azuresecuritytop10) - Top Azure security best practices that Microsoft recommends based on lessons learned across customers and our own environments.
+This CAF Secure methodology is part of a comprehensive set of security guidance that also includes:
+
+- [**Azure Well-Architected Framework**](https://docs.microsoft.com/azure/architecture/framework/security/overview) - Guidance on securing your workloads on Azure
+- [**Azure Security Benchmarks**](https://aka.ms/benchmarkdocs) - Prescriptive Best Practices and Controls for Azure Security
+- [**Enterprise Scale Landing Zone**](../../ready/enterprise-scale/security-governance-and-compliance.md) -Azure Reference architecture and implementation with integrated security
+- [**Azure Top 10 Security Best Practices**](https://aka.ms/azuresecuritytop10) - Top Azure security best practices that Microsoft recommends based on lessons learned across customers and our own environments.

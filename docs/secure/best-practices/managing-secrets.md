@@ -1,6 +1,6 @@
 ---
 title: Manage secrets
-description: Learn about best practices on how to manage secrets
+description: Learn about best practices for managing secrets securely.
 author: petpipe-msft
 ms.author: pepiper
 ms.date: 04/04/2021
@@ -17,13 +17,13 @@ The management of company sensitive secrets, keys, and certificates (and associa
 Before you continue, it's highly recommended to document the following items within your organization so your alignment with these best practices can be put into action:
 
 1. Limitations and exceptions: Understand and document how various security configurations have a direct effect to performance and cost. Ensure your documentation aligns with your overall business requirements.  Next, review each business requirement to ensure all stakeholders agree and accept the overhead and complexities various security requirements will place on your secrets management implementation.
-2. Identify your compliance and attestation requirements. For example: Center for Internet Security (CIS), National Institute of Standards and Technology (NIST), Health Insurance Portability and Accountability Act (HIPAA), HITRUST, Cybersecurity Maturity Model Certification (CMMC), Protected B, medium integrity, and medium availability (PBMM), and Federal Information Processing Standard (FIPS). With respect to implementation, several of these compliance requirements might be implemented through built-in governance policy-based rulesets within Azure services. For example, there are various security controls in Azure Policy that can be applied to Azure Key Vault.
+2. Identify your compliance and attestation requirements. For example: Center for Internet Security (CIS), National Institute of Standards and Technology (NIST), Health Insurance Portability and Accountability Act (HIPAA), HITRUST, Cybersecurity Maturity Model Certification (CMMC), Protected B, medium integrity, and medium availability (PBMM), and Federal Information Processing Standard (FIPS). With respect to implementation, several of these compliance requirements might be implemented through built-in governance policy-based rule sets within Azure services. For example, there are various security controls in Azure Policy that can be applied to Azure Key Vault.
 3. Identify the personas and their access requirements to the various Azure services. For example, developers and applications might only require read access to the secrets stored to Azure Key Vault within a development environment. On the other hand, operators or administrators will require full management access to all Azure Key Vaults within each environment.
 4. The overall *observability methodology* used by your organization to ensure your logging, monitoring, auditing, and alerting configurations are aligned with business requirements.
 
 The following illustration is a high-level logical representation of these processes:
 
-![picture alt](./../media/managing-secrest-hl_process.svg "Managing Secrets high-level process")
+![High-level process for managing secrets](./../media/managing-secrets-high-level-process.svg "Managing Secrets high-level process")
 
 ## Anticipate limitations and exceptions
 
@@ -135,7 +135,7 @@ Additionally, many Azure services support managed identities for authentication.
 > [!IMPORTANT]
 >
 > - Use Azure AD managed identities when your use cases support the capabilities of managed identities for the various Azure services your solution will be composed of.
-> - If Azure AD managed identities is not suitable for your use cases nor available to an Azure service, following a "least-privelege model" by using stored access policies and/or signatures (also known as "SAS") with explicit access and  time-bound values.
+> - If Azure AD managed identities is not suitable for your use cases nor available to an Azure service, following a "least-privilege model" by using stored access policies or shared-access signatures (SAS) with explicit access and  time-bound values.
 
 Several Azure services might not have the features to use a stored access signature; however, these services might have the following policy features: manage, send, listen. For example, Azure Service Bus, Azure Event Hubs, [Azure IoT Hub](https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-security) have these types of security access policies in addition to using Azure Active Directory.
 
@@ -200,4 +200,4 @@ To learn more, see:
 ## **Next steps**
 
 -> [!div class="nextstepaction"]
-> [Secure DevOps](./best-practices/secure-devops.md)
+> [Secure DevOps](./secure-devops.md)
