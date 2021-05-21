@@ -10,15 +10,15 @@ ms.subservice: secure
 ms.custom: internal
 ---
 
-## End-to-end governance from DevOps to Azure
+# End-to-end governance from DevOps to Azure
 
-It's not sufficient to plan and implement an [Azure role-based access control (RBAC) model](../ready/considerations/roles.md) for Azure Resource Manager templates (ARM templates), which restricts access via Azure portal and Azure CLI.
+It's not sufficient to plan and implement an [Azure role-based access control (RBAC) model](../../ready/considerations/roles.md) for Azure Resource Manager templates (ARM templates), which restricts access via Azure portal and Azure CLI.
 
 If this model isn't mirrored for DevOps automation, your organization might leave a **security back-door** open. Consider an example where a developer doesn't have access via ARM templates, but still has sufficient permissions to change application code or infrastructure as code and trigger an automation workflow. The developer, indirectly via DevOps, can access and make destructive changes to your ARM templates.
 
 This article explains best practices to help plan for and avoid a scenario where destructive changes can occur.
 
-### Single identity management plane with Azure AD groups
+## Single identity management plane with Azure AD groups
 
 The first step is to integrate Azure Active Directory to use [single sign-on per identity management best practice](/azure/security/fundamentals/identity-management-best-practices#enable-single-sign-on).
 
@@ -31,11 +31,11 @@ Azure DevOps has tight integration with Azure Active Directory including [Azure 
 > [!NOTE]
 > If you are using another CI vendor, you might have an intermediary logical container for managing group memberships, which you also need to maintain if Azure AD group membership is not synchronized.
 
-The following diagram illustrates how Azure AD is used as the single identity management plane. In ARM templates and in our DevOps tooling (Azure DevOps in this example), we only need to manage role assignments, not memberships, which should be managed in Azure AD. Note the resource names follow recommended [Naming Conventions](../../ready/azure-best-practices/resource-naming.md) and [Abbreviations](../ready/azure-best-practices/resource-naming.md) for Azure Resources.
+The following diagram illustrates how Azure AD is used as the single identity management plane. In ARM templates and in our DevOps tooling (Azure DevOps in this example), we only need to manage role assignments, not memberships, which should be managed in Azure AD. Note the resource names follow recommended [Naming Conventions](../../ready/azure-best-practices/resource-naming.md) and [Abbreviations](../../ready/azure-best-practices/resource-naming.md) for Azure Resources.
 
 <img src="./../media/e2e-governance-overview.svg" alt="Diagram of end-to-end governance and how to access to your Azure resources, both from ARM templates and CI/CD workflows">
 
-#### Example scenario: Remove contractor access with a single step, Azure AD membership
+### Example scenario: Remove contractor access with a single step, Azure AD membership
 
 To make end-to-end governance concrete, let's examine the benefits with an example scenario.
 

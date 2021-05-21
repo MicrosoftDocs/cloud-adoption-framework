@@ -106,7 +106,7 @@ The transformation of security operations is driven primarily by the following t
 
 It's important to invest in updated SecOps tools and training to ensure security operations can meet these challenges. For more information, see [Update incident response processes for cloud](security-top-10.md#4-process-update-incident-response-processes-for-cloud).
 
-For more information on Security Operations roles and responsibilities, see [Security Operations](../organize/cloud-security-operations-center).
+For more information on Security Operations roles and responsibilities, see [Security Operations](../organize/cloud-security-operations-center.md).
 
 For more architecture and technology focused best practices, see [Microsoft security best practices for security operations](https://aka.ms/secopstech) and the [videos and slides](/security/compass/security-operations-videos-and-decks).
 

@@ -136,7 +136,7 @@ Azure includes monitoring and security capabilities that are designed to detect 
 
 Penetration testing is a recommended practice for environments to check for any vulnerabilities in the infrastructure or application configuration that might create weaknesses that attackers could exploit.
 
-There are many products and partners that provide penetration testing services and [Microsoft provides guidance on how to provide notification of penetration activities](./azure/security/fundamentals/pen-testing.md).
+There are many products and partners that provide penetration testing services and [Microsoft provides guidance on how to provide notification of penetration activities](/azure/security/fundamentals/pen-testing.md).
 
 Testing typical covers the following test types:
 

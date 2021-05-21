@@ -10,7 +10,7 @@ ms.subservice: secure
 ms.custom: internal
 ---
 
-## Securing the pipeline and CI/CD workflow
+# Secure the pipeline and CI/CD workflow
 
 Automation and the agile methodology enables teams to deliver faster, but also adds complexity to security because the workflow extends to the developer teams themselves.
 
@@ -20,11 +20,11 @@ The following diagram illustrates a baseline CI/CD workflow. The red configurati
 
 Let's examine each stage of this typical workflow to help you understand how the configurations often depend on one another. Your workflow might have more stages. The following concepts will help you understand CI/CD and help you design your workflow for security.
 
-### Stage 1: Git workflow
+## Stage 1: Git workflow
 
 Code changes, not just to software, but also to *pipeline as code* and [Infrastructure as Code](/devops/deliver/what-is-infrastructure-as-code), are saved and managed in Git. Git is a distributed source code management software. When code is pushed from local computers to the centralized Git server, business rules can be applied before it's accepted.
 
-#### Pull requests and collaboration
+### Pull requests and collaboration
 
 The industry standard workflow, regardless of your software configuration management (SCM) software as a service (SaaS) vendor, is to use [pull requests](/azure/devops/repos/git/pull-requests), which can act both as an automated quality gatekeeper and a manual approval step before source code is accepted.
 
@@ -38,13 +38,13 @@ It's common for pull requests to require:
 
 If the requirements are met, the code changes are accepted and can be merged.
 
-#### Restrict Access to protected branches
+### Restrict Access to protected branches
 
 The pull request workflow is used together with restricted access controls. The pull request workflow can't be enforced however, unless the server is configured to reject direct changes to protected branches.
 
 A developer can't push directly to the `production` branch, but instead must create a pull request that targets the protected branch. Each SCM vendor has a different flavor for achieving restricted access to protected branches. For example, with GitHub this feature is only [available](https://docs.github.com/en/github/administering-a-repository/defining-the-mergeability-of-pull-requests/about-protected-branches#restrict-who-can-push-to-matching-branches) for organizations using GitHub Team or GitHub Enterprise Cloud.
 
-#### Document your Git access model
+### Document your Git access model
 
 Because the collaboration model is complex and has many moving parts, it's helpful to create a table that documents all possible ways code changes can trigger deployments For example:
 
@@ -75,13 +75,13 @@ To learn more about pull requests and protected branches, see:
 - [About pull requests](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
 - [About protected branches](https://docs.github.com/en/github/administering-a-repository/defining-the-mergeability-of-pull-requests/about-protected-branches)
 
-### Stage 2: Pipelines as code
+## Stage 2: Pipelines as code
 
 The Pipeline as code movement accelerated automation adoption and deployments by moving pipeline definitions and configurations from the CI vendor to the developers, bringing the build and deployment logic closer to the corresponding application logic. The greater flexibility here also comes with greater responsibility.
 
 RBAC controls in a UI-driven pipeline can prevent individual users from making destructive changes. Pipelines as code, however, often run with privileged identities and can destroy your workloads if instructed to do so.
 
-### Stage 3: Secure your deployment credentials
+## Stage 3: Secure your deployment credentials
 
 Pipelines and code repositories should not include hard-coded credentials and secrets. Credentials and secrets should be stored elsewhere and use CI vendor features for security. Because Pipelines run as headless agents, they should never use an individual's password. Pipelines should run using headless security principals instead,  for example, Service principals](/azure/active-directory/develop/app-objects-and-service-principals) or [Managed identities](/azure/active-directory/managed-identities-azure-resources/overview). Access to this security principal's credentials, database connection strings, and third-party API keys should also be securely managed in the CI platform.
 
@@ -89,11 +89,11 @@ Pipelines and code repositories should not include hard-coded credentials and se
 
 Azure Pipelines is an enterprise-scale continuous integration solution where credentials are stored as [Service connections](/azure/devops/pipelines/library/service-endpoints?tabs=yaml), upon which you can [configure approvals and checks](/azure/devops/pipelines/process/approvals?tabs=check-pass). This configuration includes manual approval and specific branch or pipeline authorizations.
 
-#### Azure Key Vault
+### Azure Key Vault
 
 If your CI platform supports it, consider storing credentials in a dedicated secret store, for example [Azure Key Vault](https://azure.microsoft.com/services/key-vault/). Credentials are fetched at runtime by the build agent and your attack surface is reduced.
 
-### Phase 4 - Securing your Azure resources
+## Stage 4: Securing your Azure resources
 
 Your Azure resources should be secured according to Principle of Least Privilege, applied to both permissions and scope.
 
@@ -103,7 +103,7 @@ For more information, see:
 
 - [What is Azure role-based access control (Azure RBAC)?](/azure/role-based-access-control/overview)
 
-#### Create custom roles for build agents
+### Create custom roles for build agents
 
 CI/CD automation applies not just to applications, but also to infrastructure. Infrastructure as Code (IaC) templates ensure consistent deployments and help central cloud platform teams scale.
 

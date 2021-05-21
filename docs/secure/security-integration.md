@@ -52,7 +52,7 @@ Teams should strive for the best balance between two absolute truths:
 
 It's critical to find a balance as security is integrated into the process. Stakeholders must all work together to ensure business concerns, IT reliability and performance concerns, and security concerns are considered and balanced. Organizations need to also work on solving for the 80 percent and planning for the other 20 percent. By holding off on controls, features, and capabilities for security until there is a 100 percent solution, organizations will put everything they do at risk of exposure. Iterative approaches work well, as do the basics of updating and education.
 
-For more information about healthy security friction, see The [right level of security friction](../../strategy/define-security-strategy.md#the-right-level-of-security-friction) in the security strategy guidance.
+For more information about healthy security friction, see The [right level of security friction](../strategy/define-security-strategy.md#the-right-level-of-security-friction) in the security strategy guidance.
 
 The next section illustrates how to integrate security stakeholders with IT, end users, and workload owners. It also includes examples for within the security team.
 
