@@ -182,7 +182,7 @@ Let's begin by evaluating the first option. You'll be using the permissions mode
 1. The **network operations** user reviews the request, approves it, then specifies the peering in the settings for the `hub-vnet`. The peering connection is now complete, and network traffic flows between the two virtual networks.
   ![Diagram showing the approval of the request and the specifying of the peering settings.](../../_images/govern/design/governance-3-6.png)
 1. Now, a second **workload owner** sends a request to the **subscription service administrator** and is added to the existing **production** and **development** environment resource groups with the **contributor** role. The second **workload owner** has the same permissions on all resources as the first **workload owner** in each resource group.
-  ![Diagram showing the second workload owner being added to teh resource groups.](../../_images/govern/design/governance-3-7.png)
+  ![Diagram showing the second workload owner being added to the resource groups.](../../_images/govern/design/governance-3-7.png)
 1. The second **workload owner** creates a subnet in the `prod-vnet` virtual network, then adds two virtual machines. The second **workload owner** applies the `environment` and `managedBy` tags to each resource.
   ![Creating subnets](../../_images/govern/design/governance-3-8.png)
 

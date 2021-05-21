@@ -71,7 +71,7 @@ This guide will allow you to use and onboard Azure VMs to Azure Arc **for demo p
 
 For you to get familiar with the automation and deployment flow, below is an explanation.
 
-1. A user edits the ARM template parameters file (one time edit). These parameter values are being used throughout the deployment.
+1. A user edits the ARM template parameters file (a one-time edit). These parameter values are being used throughout the deployment.
 
 2. The ARM template includes an Azure VM custom script extension, which deploys the [`install_arc_agent.ps1`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/azure/windows/arm_template/scripts/install_arc_agent.ps1) PowerShell script.
 
