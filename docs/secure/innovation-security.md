@@ -14,7 +14,7 @@ ms.custom: internal
 
 Innovation is the lifeblood of an organization in the digital age and needs to be both enabled and protected. Innovation security protects the processes and data of innovation against cyberattacks. Innovation in the digital age takes the form of developing applications using the DevOps or [DevSecOps](./devsecops-controls.md) method to rapidly innovate without waiting for the traditional waterfall ship schedule that can take months or years between releases.
 
-![DevSecOps Heart](./media/DevSecOpsHeart.png)
+![DevSecOps Heart](./media/devsecops-heart.pngg)
 
 Developing new capabilities and applications requires successfully meeting three different requirement types:
 
@@ -156,6 +156,6 @@ Transformation requires building towards this ideal state incrementally on a jou
 
 Review the [DevSecOps Technical Controls](./devsecops-controls.md) for more detailed guidance on DevSecOps.
 
-For information on how GitHub Advanced Security integrates security into your continuous integration and continuous delivery (CI/CD) pipelines, see [About GitHub Advanced Security](https://docs.github.com/en/github/getting-started-with-github/about-github-advanced-security).
+For information on how GitHub Advanced Security integrates security into your continuous integration and continuous delivery (CI/CD) pipelines, see [About GitHub Advanced Security](https://docs.github.com/en/github/getting-started-with-github/learning-about-github/about-github-advanced-security).
 
 For more information and tooling on how Microsoft's IT organization implemented DevSecOps, see [Secure DevOps Toolkit](https://azsk.azurewebsites.net/).

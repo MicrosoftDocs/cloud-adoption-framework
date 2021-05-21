@@ -29,7 +29,7 @@ The following illustration is a high-level logical representation of these proce
 
 To anticipate exceptions to the best practices will be difficult and these exceptions might occur within various phases of your cloud journey. Ensure that exceptions and their risks to the business are documented and accepted across all stakeholders. Each Azure service will have limitations or quotas documented that might affect your Azure workload. Review each of the service limits that applies to your workload to ensure they are documented and align with stakeholder expectations.  
 
-There might be other limitations and exceptions that will require documentation and require alignment with your business requirements. For example, when you perform a backup of keys, secrets, and certifications and their number of [object versions allowed](https://docs.microsoft.com/azure/key-vault/general/service-limits) within Azure Key Vault.
+There might be other limitations and exceptions that will require documentation and require alignment with your business requirements. For example, when you perform a backup of keys, secrets, and certifications and their number of [object versions allowed](/azure/key-vault/general/service-limits) within Azure Key Vault.
 
 > [!IMPORTANT]
 > The best practice to apply for each exception encountered is: *mitigate as much as possible to ensure your risks are minimized*. If each risk can't be mitigated, ensure your *observability methodology* will enable you to identify any nefarious activities as early as possible with the information that will support your:
@@ -54,19 +54,19 @@ Understanding alternatives to using Azure Key Vault and adhering to the external
 > - Implement observability, for example: logging, monitoring, and alerting
 > - If you use Azure Key Vault:
 >   - Implement the security baseline for Azure Key Vault
->   - Enable [Azure Defender for Azure Key Vault](https://docs.microsoft.com/azure/security-center/defender-for-key-vault-introduction)
+>   - Enable [Azure Defender for Azure Key Vault](/azure/security-center/defender-for-key-vault-introduction)
 >   - Enable logging for Azure Key Vault
 
 To learn more, see:
 
-- [Azure subscription and service limits](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits)
-- [External configuration store pattern](https://docs.microsoft.com/azure/architecture/patterns/external-configuration-store)
+- [Azure subscription and service limits](/azure/azure-resource-manager/management/azure-subscription-service-limits)
+- [External configuration store pattern](/azure/architecture/patterns/external-configuration-store)
 - [Understanding separation of duty concept within NIST](https://csrc.nist.gov/glossary/term/Separation_of_Duty)
-- [Applying Azure Policy's NIST SP 800-53 R4 controls that includes Separation of Duties](https://docs.microsoft.com/azure/governance/policy/samples/nist-sp-800-53-r4)
-- [Start with the Azure Key Vault security baseline](https://docs.microsoft.com/security/benchmark/azure/baselines/key-vault-security-baseline?context=/azure/key-vault/general/context/context)
-- [Review and validate against the Azure Key Vault authentication fundamentals](https://docs.microsoft.com/azure/key-vault/general/authentication)
-- [Azure Policy regulatory compliance controls for Azure Key Vault](https://docs.microsoft.com/azure/key-vault/security-controls-policy)
-- [Observability using Azure Key Vault logging](https://docs.microsoft.com/azure/key-vault/general/logging?tabs=Vault)
+- [Applying Azure Policy's NIST SP 800-53 R4 controls that includes Separation of Duties](/azure/governance/policy/samples/nist-sp-800-53-r4)
+- [Start with the Azure Key Vault security baseline](/security/benchmark/azure/baselines/key-vault-security-baseline?context=/azure/key-vault/general/context/context)
+- [Review and validate against the Azure Key Vault authentication fundamentals](/azure/key-vault/general/authentication)
+- [Azure Policy regulatory compliance controls for Azure Key Vault](/azure/key-vault/security-controls-policy)
+- [Observability using Azure Key Vault logging](/azure/key-vault/general/logging?tabs=Vault)
 
 ## Manage keys in a secure way
 
@@ -77,7 +77,7 @@ There are different types of keys that can be used within various Azure services
 
 ### **Keys used for cryptographic keys: encryption-at-rest**
 
-Read [the encryption security fundamentals](https://docs.microsoft.com/azure/security/fundamentals/encryption-overview) document for an encryption overview in Azure.
+Read [the encryption security fundamentals](/azure/security/fundamentals/encryption-overview) document for an encryption overview in Azure.
 
 The two types of keys for encryption-at-rest are:
 
@@ -101,10 +101,10 @@ If your business requires customer-managed keys for encryption-at-rest, ensure y
 
 To learn more about keys used for encryption, see:
 
-- [Azure Monitor customer-managed key](https://docs.microsoft.com/azure/azure-monitor/logs/customer-managed-keys?tabs=portal)
-- [Customer-managed keys for Azure Storage encryption](https://docs.microsoft.com/azure/storage/common/customer-managed-keys-overview)
-- [Replicate machines with CMK enabled disks](https://docs.microsoft.com/azure/site-recovery/azure-to-azure-how-to-enable-replication-cmk-disks)
-- [Configure customer-managed keys for your Azure Cosmos account with Azure Key Vault](https://docs.microsoft.com/azure/cosmos-db/how-to-setup-cmk)
+- [Azure Monitor customer-managed key](/azure/azure-monitor/logs/customer-managed-keys?tabs=portal)
+- [Customer-managed keys for Azure Storage encryption](/azure/storage/common/customer-managed-keys-overview)
+- [Replicate machines with CMK enabled disks](/azure/site-recovery/azure-to-azure-how-to-enable-replication-cmk-disks)
+- [Configure customer-managed keys for your Azure Cosmos account with Azure Key Vault](/azure/cosmos-db/how-to-setup-cmk)
 
 ### Other security-based cloud design patterns
 
@@ -119,8 +119,8 @@ For the following sections on keys (used as tokens) and secrets, there are sever
 
 To learn more, see:
 
-- [Valet pattern](https://docs.microsoft.com/azure/architecture/patterns/valet-key)
-- [CQRS pattern](https://docs.microsoft.com/azure/architecture/patterns/cqrs)
+- [Valet pattern](/azure/architecture/patterns/valet-key)
+- [CQRS pattern](/azure/architecture/patterns/cqrs)
 
 ### **Keys used as connectivity or tokens: invocation or within connection strings**
 
@@ -128,16 +128,16 @@ The other type of keys are used for various Azure services for connectivity or t
 
 There are limitations and/or exceptions for the keys of various Azure services. Understanding and aligning with your business requirements will validate the best choice or practice below. For example, Azure Storage has support for shared access policies, shared access signatures, Azure AD, etc.
 
-Understanding each of these [options](https://docs.microsoft.com/azure/storage/common/storage-auth?toc=/azure/storage/blobs/toc.json) and documenting them to your business requirements will guide you through this decision process.
+Understanding each of these [options](/azure/storage/common/storage-auth?toc=/azure/storage/blobs/toc.json) and documenting them to your business requirements will guide you through this decision process.
 
-Additionally, many Azure services support managed identities for authentication.  [What are Managed identities?](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview)
+Additionally, many Azure services support managed identities for authentication.  [What are Managed identities?](/azure/active-directory/managed-identities-azure-resources/overview)
 
 > [!IMPORTANT]
 >
 > - Use Azure AD managed identities when your use cases support the capabilities of managed identities for the various Azure services your solution will be composed of.
 > - If Azure AD managed identities is not suitable for your use cases nor available to an Azure service, following a "least-privilege model" by using stored access policies or shared-access signatures (SAS) with explicit access and  time-bound values.
 
-Several Azure services might not have the features to use a stored access signature; however, these services might have the following policy features: manage, send, listen. For example, Azure Service Bus, Azure Event Hubs, [Azure IoT Hub](https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-security) have these types of security access policies in addition to using Azure Active Directory.
+Several Azure services might not have the features to use a stored access signature; however, these services might have the following policy features: manage, send, listen. For example, Azure Service Bus, Azure Event Hubs, [Azure IoT Hub](/azure/iot-hub/iot-hub-devguide-security) have these types of security access policies in addition to using Azure Active Directory.
 
 > [!IMPORTANT]
 > Following a "least-privilege model", when defining and configuring a policy will only provide at the specified scope the necessary operations needed.
@@ -147,21 +147,21 @@ Several Azure services use a key to allow an invocation to be performed. For exa
 > [!IMPORTANT]
 > Ensure the keys used for invocation have a defined purpose. Create several keys for their intended purpose and renew or regenerate these keys on a frequent interval or when the key is compromised.
 
-Lastly, various Azure services have features that support key rotation.  Understanding [shared responsibility](https://docs.microsoft.com/azure/security/fundamentals/shared-responsibility) in the cloud will support your documentation for various workloads.
+Lastly, various Azure services have features that support key rotation.  Understanding [shared responsibility](/azure/security/fundamentals/shared-responsibility) in the cloud will support your documentation for various workloads.
 
 >[!IMPORTANT]
 > Within each of your workloads, periodically rotate your connection string keys for each of the Azure services. Use automation and an external configuration store, such as Azure Key Vault so that there is minimized disruption.  When not using an external configuration store, each of these Azure services have two keys so that they can be used to minimize disruption during your maintenance window.
 
 To learn more about Keys used to invocate or within connection strings, see:
 
-- [Define a stored access policy on Azure Storage](https://docs.microsoft.com/rest/api/storageservices/define-stored-access-policy)
-- [Manage storage account keys with Key Vault and the Azure CLI](https://docs.microsoft.com/azure/key-vault/secrets/overview-storage-keys)
-- [Grant limited access to Azure Storage resources using shared access signatures](https://docs.microsoft.com/azure/storage/common/storage-sas-overview)
-- [Azure Policy regulatory compliance controls for Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/security-controls-policy)
-- [Samples: Azure.Security.KeyVault.Administration using .NET](https://docs.microsoft.com/samples/azure/azure-sdk-for-net/azuresecuritykeyvaultadministration-samples/)
-- [Managing CMKs with Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/configure-customer-managed-key)
-- [Automate the rotation of secret for resources that use one set of augmentation credentials](https://docs.microsoft.com/azure/key-vault/secrets/tutorial-rotation)
-- [Automate the rotation of secret for resources that use two sets of authentication credentials](https://docs.microsoft.com/azure/key-vault/secrets/tutorial-rotation-dual?tabs=azure-cli)
+- [Define a stored access policy on Azure Storage](/rest/api/storageservices/define-stored-access-policy)
+- [Manage storage account keys with Key Vault and the Azure CLI](/azure/key-vault/secrets/overview-storage-keys)
+- [Grant limited access to Azure Storage resources using shared access signatures](/azure/storage/common/storage-sas-overview)
+- [Azure Policy regulatory compliance controls for Azure Service Bus](/azure/service-bus-messaging/security-controls-policy)
+- [Samples: Azure.Security.KeyVault.Administration using .NET](/samples/azure/azure-sdk-for-net/azuresecuritykeyvaultadministration-samples/)
+- [Managing CMKs with Azure Service Bus](/azure/service-bus-messaging/configure-customer-managed-key)
+- [Automate the rotation of secret for resources that use one set of augmentation credentials](/azure/key-vault/secrets/tutorial-rotation)
+- [Automate the rotation of secret for resources that use two sets of authentication credentials](/azure/key-vault/secrets/tutorial-rotation-dual?tabs=azure-cli)
 
 ## Manage your secrets in a secure way
 
@@ -176,11 +176,11 @@ Applying automation will improve operational efficiencies and using credentials 
 
 To learn more, see:
 
-- [Azure Service Bus authentication and authorization](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-authentication-and-authorization)
+- [Azure Service Bus authentication and authorization](/azure/service-bus-messaging/service-bus-authentication-and-authorization)
 - [Microsoft's TechCommunity: Azure Architecture on managing and rotating secrets with Azure Key Vault, pt 1](https://techcommunity.microsoft.com/t5/azure-architecture-blog/managing-and-rotating-secrets-with-azure-key-vault-managed/ba-p/1800612)
-- [Automate the rotation of secret for resources that use one set of authentication credentials](https://docs.microsoft.com/azure/key-vault/secrets/tutorial-rotation)
-- [Automate the rotation of secret for resources that use two sets of authentication credentials](https://docs.microsoft.com/azure/key-vault/secrets/tutorial-rotation-dual?tabs=azure-cli)
-- [Using credentials in Azure Automation runbooks](https://docs.microsoft.com/azure/automation/shared-resources/credentials?tabs=azure-powershell)
+- [Automate the rotation of secret for resources that use one set of authentication credentials](/azure/key-vault/secrets/tutorial-rotation)
+- [Automate the rotation of secret for resources that use two sets of authentication credentials](/azure/key-vault/secrets/tutorial-rotation-dual?tabs=azure-cli)
+- [Using credentials in Azure Automation runbooks](/azure/automation/shared-resources/credentials?tabs=azure-powershell)
 
 ## Renew certificates
 
@@ -193,9 +193,9 @@ There are limitations and exceptions, such as authorizing automation actions wit
 
 To learn more, see:
 
-- [About Azure Key Vault certificates](https://docs.microsoft.com/azure/key-vault/certificates/about-certificates)
-- [Renew your Azure Key Vault certificates](https://docs.microsoft.com/azure/key-vault/certificates/overview-renew-certificate)
-- [Manage certificates in Azure Automation](https://docs.microsoft.com/azure/automation/shared-resources/certificates?tabs=azure-powershell)
+- [About Azure Key Vault certificates](/azure/key-vault/certificates/about-certificates)
+- [Renew your Azure Key Vault certificates](/azure/key-vault/certificates/overview-renew-certificate)
+- [Manage certificates in Azure Automation](/azure/automation/shared-resources/certificates?tabs=azure-powershell)
 
 ## **Next steps**
 

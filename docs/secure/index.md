@@ -101,7 +101,7 @@ All security activities should be aligned to and shaped by a dual focus on
 
 This CAF Secure methodology is part of a comprehensive set of security guidance that also includes:
 
-- [**Azure Well-Architected Framework**](https://docs.microsoft.com/azure/architecture/framework/security/overview) - Guidance on securing your workloads on Azure
+- [**Azure Well-Architected Framework**](/azure/architecture/framework/security/overview) - Guidance on securing your workloads on Azure
 - [**Azure Security Benchmarks**](https://aka.ms/benchmarkdocs) - Prescriptive Best Practices and Controls for Azure Security
 - [**Enterprise Scale Landing Zone**](../../ready/enterprise-scale/security-governance-and-compliance.md) -Azure Reference architecture and implementation with integrated security
 - [**Azure Top 10 Security Best Practices**](https://aka.ms/azuresecuritytop10) - Top Azure security best practices that Microsoft recommends based on lessons learned across customers and our own environments.

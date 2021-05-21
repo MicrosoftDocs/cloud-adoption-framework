@@ -18,7 +18,7 @@ Because DevOps itself is an emerging discipline with a high degree of process va
 
 This documentation reviews each stage of a continuous integration and continuous delivery (CI/CD) DevOps process and what security controls we recommend integrating first.
 
-![DevSecOps controls](./media/DevSecOpsControls.png)
+![DevSecOps controls](./media/devsecops-controls.pngg)
 
 ## Plan and develop
 

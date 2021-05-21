@@ -12,4 +12,4 @@ ms.custom: internal
 
 # Enterprise Access
 
-Linky here - https://docs.microsoft.com/en-us/security/compass/privileged-access-access-model
+Linky here - /security/compass/privileged-access-access-model

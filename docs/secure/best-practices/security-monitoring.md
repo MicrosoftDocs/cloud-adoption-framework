@@ -18,11 +18,11 @@ Keeping your resources safe is a joint effort between your cloud provider, Azure
 
 Azure Security Center covers two broad pillars of cloud security:
 
-* **Cloud security posture management (CSPM)** - Free service that allows you to manage and track compliance based on several built-in policies, and associating them with a [Secure Score](https://docs.microsoft.com/en-us/azure/security-center/secure-score-security-controls) 
-* **Cloud Workload protection (CWP)** - [Azure Defender](https://docs.microsoft.com/en-us/azure/security-center/azure-defender) brings advanced, intelligent, protection of your Azure and hybrid resources and workloads.
+* **Cloud security posture management (CSPM)** - Free service that allows you to manage and track compliance based on several built-in policies, and associating them with a [Secure Score](/azure/security-center/secure-score-security-controls) 
+* **Cloud Workload protection (CWP)** - [Azure Defender](/azure/security-center/azure-defender) brings advanced, intelligent, protection of your Azure and hybrid resources and workloads.
 
 ## Sentinel
-[Azure Sentinel](https://docs.microsoft.com/en-us/azure/sentinel/overview) is a scalable, cloud-native, **security information event management (SIEM)** and **security orchestration automated response (SOAR)** solution. Azure Sentinel delivers intelligent security analytics and threat intelligence across the enterprise, providing a single solution for alert detection, threat visibility, proactive hunting, and threat response. 
+[Azure Sentinel](/azure/sentinel/overview) is a scalable, cloud-native, **security information event management (SIEM)** and **security orchestration automated response (SOAR)** solution. Azure Sentinel delivers intelligent security analytics and threat intelligence across the enterprise, providing a single solution for alert detection, threat visibility, proactive hunting, and threat response. 
 
 As today's cyberattacks are more advanced than ever before, it makes sense to use Azure Sentinel as your birds-eye view across the enterprise. Some of its characteristics includes:
 
@@ -49,13 +49,13 @@ As the SOC matures, security operations should:
 Security organizations require visibility into the technical environment to perform their duties. Ensure the security organization is aware of all enrollments and associated subscriptions connected to the existing environment and is able to monitor those resources as part of the overall enterprise security posture. 
 
 Nevertheless, you should always:
-- Restrict access based on [need to know and least privilege](https://docs.microsoft.com/en-us/azure/security/fundamentals/identity-management-best-practices?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json#use-role-based-access-control) security principles. 
-- Pleaser refer to this article on [RBAC](https://docs.microsoft.com/en-us/azure/role-based-access-control/overview), for guidance on how to ensure it.
+- Restrict access based on [need to know and least privilege](/azure/security/fundamentals/identity-management-best-practices?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json#use-role-based-access-control) security principles. 
+- Pleaser refer to this article on [RBAC](/azure/role-based-access-control/overview), for guidance on how to ensure it.
 
 ## Identity monitoring 
 Identity is increasingly considered the primary security perimeter in the cloud, which is a shift from the traditional focus on network security. Identity services provide the core mechanisms supporting access control and organization within IT environments, and the [Identity Baseline](../../govern/identity-baseline/index.md) discipline complements the [Security Baseline](../../govern/security-baseline.md) discipline by consistently applying authentication and authorization requirements across cloud adoption efforts. It is really important that you define the [metrics, indicators and risk tolerance](../../govern/identity-baseline/metrics-tolerance.md) associated with your Identity Baseline and that you actively incorporate monitoring it in your security processes.
 
-There are also several [identity management and access control security best practices](https://docs.microsoft.com/en-us/azure/security/fundamentals/identity-management-best-practices?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json) that you should consider following:
+There are also several [identity management and access control security best practices](/azure/security/fundamentals/identity-management-best-practices?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json) that you should consider following:
 * Treat identity as the primary security perimeter
 * Centralize identity management
 * Manage connected tenants
@@ -69,7 +69,7 @@ There are also several [identity management and access control security best pra
 * Control locations where resources are located
 * Use Azure AD for storage authentication
 
-For bigger and more complex environments there are several [other considerations](../../ready/enterprise-scale/identity-and-access-management.md) that you should take into consideration, such as, using the capabilities for Azure AD Premium P2 that will allow you to conduct [access reviews](/azure/active-directory/governance/access-reviews-overview) and use just-in-time access to Azure AD  and Azure resources (with [Privileged Identity Management](https://docs.microsoft.com/en-us/azure/active-directory/governance/access-reviews-overview)).
+For bigger and more complex environments there are several [other considerations](../../ready/enterprise-scale/identity-and-access-management.md) that you should take into consideration, such as, using the capabilities for Azure AD Premium P2 that will allow you to conduct [access reviews](/azure/active-directory/governance/access-reviews-overview) and use just-in-time access to Azure AD  and Azure resources (with [Privileged Identity Management](/azure/active-directory/governance/access-reviews-overview)).
 
 
 ## Accountability

@@ -14,7 +14,7 @@ ms.custom: internal
 
 Automation and the agile methodology enables teams to deliver faster, but also adds complexity to security because the workflow extends to the developer teams themselves.
 
-The following diagram illustrates a baseline CI/CD workflow. The red configuration icon <img src="./../media/devsecops-iconmonstr-gear-10.svg" valign="middle" alt="configuration cog icon"> indicates security permissions which must be configured by the customer. This follows the [Shared Responsibility Model](https://docs.microsoft.com/azure/security/fundamentals/shared-responsibility), where Azure and other vendors provide permissions, which must be configured by the customer according to their governance model and business requirements.
+The following diagram illustrates a baseline CI/CD workflow. The red configuration icon <img src="./../media/devsecops-iconmonstr-gear-10.svg" valign="middle" alt="configuration cog icon"> indicates security permissions which must be configured by the customer. This follows the [Shared Responsibility Model](/azure/security/fundamentals/shared-responsibility), where Azure and other vendors provide permissions, which must be configured by the customer according to their governance model and business requirements.
 
 <img src="./../media/devsecops-workflow.svg" alt="A typical CI/CD workflow that illustrates how code changes in a Git repository will affect your cloud resources">
 
@@ -26,7 +26,7 @@ Code changes, not just to software, but also to *pipeline as code* and [Infrastr
 
 #### Pull requests and collaboration
 
-The industry standard workflow, regardless of your software configuration management (SCM) software as a service (SaaS) vendor, is to use [pull requests](https://docs.microsoft.com/azure/devops/repos/git/pull-requests?view=azure-devops), which can act both as an automated quality gatekeeper and a manual approval step before source code is accepted.
+The industry standard workflow, regardless of your software configuration management (SCM) software as a service (SaaS) vendor, is to use [pull requests](/azure/devops/repos/git/pull-requests?view=azure-devops), which can act both as an automated quality gatekeeper and a manual approval step before source code is accepted.
 
 The Pull request workflow is designed to introduce healthy friction, which is why it should only be applied to secure _specific Git branches_. Especially the branches that will trigger automated workflows that can deploy, configure, or in any other way affect your cloud resources. These branches are called protected branches and typically follow naming conventions such as `production` or `releases/*`.
 
@@ -69,9 +69,9 @@ Because DevOps is a journey, your Git access model isn't static. It will change 
 
 To learn more about pull requests and protected branches, see:
 
-- [Set branch permissions](https://docs.microsoft.com/azure/devops/repos/git/branch-permissions?view=azure-devops)
-- [Create, view, and manage pull requests](https://docs.microsoft.com/azure/devops/repos/git/pull-requests?view=azure-devops)
-- [Improve code quality with branch policies](https://docs.microsoft.com/azure/devops/repos/git/branch-policies?view=azure-devops)
+- [Set branch permissions](/azure/devops/repos/git/branch-permissions?view=azure-devops)
+- [Create, view, and manage pull requests](/azure/devops/repos/git/pull-requests?view=azure-devops)
+- [Improve code quality with branch policies](/azure/devops/repos/git/branch-policies?view=azure-devops)
 - [About pull requests](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
 - [About protected branches](https://docs.github.com/en/github/administering-a-repository/defining-the-mergeability-of-pull-requests/about-protected-branches)
 
@@ -87,7 +87,7 @@ Pipelines and code repositories should not include hard-coded credentials and se
 
 _How_ a credential is secured, gates, and approvals are vendor-specific features. When choosing a CI platform, make sure it supports all the features you require.
 
-Azure Pipelines is an enterprise scale continuous integration solution where credentials are stored as [Service connections](https://docs.microsoft.com/azure/devops/pipelines/library/service-endpoints?view=azure-devops&tabs=yaml), upon which you can [configure approvals and checks](https://docs.microsoft.com/azure/devops/pipelines/process/approvals?view=azure-devops&tabs=check-pass). This configuration includes manual approval and specific branch or pipeline authorizations.
+Azure Pipelines is an enterprise scale continuous integration solution where credentials are stored as [Service connections](/azure/devops/pipelines/library/service-endpoints?view=azure-devops&tabs=yaml), upon which you can [configure approvals and checks](/azure/devops/pipelines/process/approvals?view=azure-devops&tabs=check-pass). This configuration includes manual approval and specific branch or pipeline authorizations.
 
 #### Azure Key Vault
 
@@ -115,8 +115,8 @@ It's recommended to [create a custom role](/azure/role-based-access-control/cust
 
 To learn more, see:
 
-- [Azure AD built-in roles](https://docs.microsoft.com/azure/active-directory/roles/permissions-reference)
-- [Azure resource provider operations](https://docs.microsoft.com/azure/role-based-access-control/resource-provider-operations)
+- [Azure AD built-in roles](/azure/active-directory/roles/permissions-reference)
+- [Azure resource provider operations](/azure/role-based-access-control/resource-provider-operations)
 
 ## Resources
 
