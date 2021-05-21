@@ -60,7 +60,7 @@ Nevertheless, you should always:
 
 ## Identity monitoring
 
-Identity is increasingly considered the primary security perimeter in the cloud, which is a shift from the traditional focus on network security. Identity services provide the core mechanisms supporting access control and organization within IT environments, and the [Identity Baseline](../../govern/identity-baseline/index.md) discipline complements the [Security Baseline](../../govern/security-baseline.md) discipline by consistently applying authentication and authorization requirements across cloud adoption efforts. It's really important that you define the [metrics, indicators and risk tolerance](../../govern/identity-baseline/metrics-tolerance.md) associated with your Identity Baseline and that you actively incorporate monitoring it in your security processes.
+Identity is increasingly considered the primary security perimeter in the cloud, which is a shift from the traditional focus on network security. Identity services provide the core mechanisms supporting access control and organization within IT environments, and the [Identity Baseline](../../govern/identity-baseline/index.md) discipline complements the [Security Baseline](../../govern/security-baseline/index.md) discipline by consistently applying authentication and authorization requirements across cloud adoption efforts. It's really important that you define the [metrics, indicators and risk tolerance](../../govern/identity-baseline/metrics-tolerance.md) associated with your Identity Baseline and that you actively incorporate monitoring it in your security processes.
 
 Also consider following these [identity management and access control security best practices](/azure/security/fundamentals/identity-management-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json):
 
@@ -84,6 +84,6 @@ For bigger and more complex environments there are several [other considerations
 To ensure accountability, follow these steps:
 
 - Designate who is responsible for monitoring and making each type of security decision for the enterprise Azure environment. Establish clear ownership of security areas speeds up cloud adoption and increases security. Lack of, typically creates friction. This friction frequently impedes business goals, developer timelines, IT goals, and security assurances.
-- [Document these owners](./security-top-10.md#3-process-assign-accountability-for-cloud-security-decisions), their contact information, and socialize this widely within the security, IT, and cloud teams to ensure it's easy for all roles to contact them.
+- [Document these owners](../security-top-10.md#3-process-assign-accountability-for-cloud-security-decisions), their contact information, and socialize this widely within the security, IT, and cloud teams to ensure it's easy for all roles to contact them.
 
 It's also extremely important to make sure you have set the right owners for [Azure incident notifications](/azure/service-health/alerts-activity-log-service-notifications-portal) from Microsoft.

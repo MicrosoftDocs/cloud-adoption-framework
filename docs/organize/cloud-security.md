@@ -43,13 +43,13 @@ Each of the following articles provide information about each function including
 - [Posture management](./cloud-security-posture-management.md)
 - [Incident preparation](./cloud-security-incident-preparation.md)
 
-These responsibilities are referenced throughout Microsoft documentation including the [Azure Security Benchmark](https://aka.ms/benchmarkdocs), the [Securing Privileged Access – Rapid Modernization Plan (RaMP)](https://aka.ms/sparoadmap), and the [Azure Security Top 10](https://aka.ms/azuresecuritytop10), 
+These responsibilities are referenced throughout Microsoft documentation including the [Azure Security Benchmark](https://aka.ms/benchmarkdocs), the [Securing Privileged Access – Rapid Modernization Plan (RaMP)](https://aka.ms/sparoadmap), and the [Azure Security Top 10](https://aka.ms/azuresecuritytop10),
 
-## Roles and Responsibilities
+## Roles and responsibilities
 
-The following diagram depicts how these functions map to role types within an organization
+The following diagram depicts how these functions map to role types within an organization:
 
-:::image type="content" source="./media/roles-and-responsibilities.png" alt-text="View of the responsibilities/functions of an enterprise security team" lightbox="./media/roles-and-responsibilities.png":::
+:::image type="content" source="../secure/media/roles-and-responsibilities.png" alt-text="View of security roles and responsibilities." lightbox="../secure/media/roles-and-responsibilities.png":::
 
 ### Mapping security to business outcomes
 
