@@ -77,7 +77,7 @@ For more information, see [Disrupting Attacker Return on Investment](/security/c
 
 Organizations face a range of human attacker models that shape their behavior:
 
-- **Commodity:** Most of the threats organizations typically face are for-profit attackers-driven by a financial return on investment (ROI). These attackers typically use the cheapest and most effective available tools and methods. The sophistication of these attacks (for example, stealth and tooling) typically grows as new methods are proven by others and made available for high scale use.
+- **Commodity:** Most of the threats organizations typically face are for-profit attackers, driven by a financial return on investment (ROI). These attackers typically use the cheapest and most effective available tools and methods. The sophistication of these attacks (for example, stealth and tooling) typically grows as new methods are proven by others and made available for high scale use.
 
 - **Leading edge:** Sophisticated attack groups are driven by long-term mission outcomes and often have funding available. This funding is used to focus on innovation. This innovation might include investing in supply chain attacks or changing tactics within an attack campaign to hinder detection and investigation.
 

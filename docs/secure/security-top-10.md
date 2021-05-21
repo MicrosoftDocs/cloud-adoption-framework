@@ -329,7 +329,7 @@ Managing multiple accounts and directories also creates an incentive for poor se
 
 While it sometimes seems easier to quickly stand up a custom LDAP directory for a particular application or workload, this creates much more work to integrate and manage. This is similar to choosing to set up an additional Azure tenant or on-premises Active Directory forest rather than using the existing enterprise tenant. See also the [security principle of driving simplicity](/azure/architecture/framework/security/security-principles).
 
-**Who**: This is often a cross-team effort-driven by [Security Architecture](../organize/cloud-security-architecture.md) or [Identity and Key Management](../organize/cloud-security-identity-keys.md) teams.
+**Who**: This is often a cross-team effort, driven by [Security Architecture](../organize/cloud-security-architecture.md) or [Identity and Key Management](../organize/cloud-security-identity-keys.md) teams.
 
 - **Sponsorship:** This is typically sponsored by [Identity and Key management](../organize/cloud-security-identity-keys.md) and [Security Architecture](../organize/cloud-security-architecture.md) (though some organizations may require sponsorship by CISO or CIO)
 - **Execution:** This is a collaborative effort involving:
@@ -366,7 +366,7 @@ Also see the Azure Security Benchmark [ID-1: Standardize Azure Active Directory 
 
 Identity-based authentication overcomes many of these challenges with mature capabilities for secret rotation, lifecycle management, administrative delegation, and more.
 
-**Who**: This is often a cross-team effort-driven by [Security Architecture](../organize/cloud-security-architecture.md) or [Identity and Key management](../organize/cloud-security-identity-keys.md) teams.
+**Who**: This is often a cross-team effort, driven by [Security Architecture](../organize/cloud-security-architecture.md) or [Identity and Key management](../organize/cloud-security-identity-keys.md) teams.
 
 - **Sponsorship:** This is typically sponsored by [Security Architecture](../organize/cloud-security-architecture.md) or [Identity and Key management](../organize/cloud-security-identity-keys.md)  (though some organizations may require sponsorship by CISO or CIO).
 - **Execution:** This is a collaborative effort involving
