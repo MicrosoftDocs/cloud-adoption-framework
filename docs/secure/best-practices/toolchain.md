@@ -10,7 +10,7 @@ ms.subservice: secure
 ms.custom: internal
 ---
 
-## Security toolchain
+# Security toolchain
 
 Commonly used tools in Azure Security:
 
