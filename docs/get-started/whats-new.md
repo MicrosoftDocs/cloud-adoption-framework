@@ -24,6 +24,18 @@ This framework is built collaboratively with customers, partners, and internal M
 
 As part of the on-going series of adoption journeys, this release includes [expanded guidance for integrating Windows Virtual Desktop (WVD) into your cloud adoption journey](../scenarios/wvd/index.md). This rich guidance provides information on how each of the Cloud Adoption Framework methodologies can help provide structure and best practices to your implementation approach.
 
+### Cloud economics
+
+This release continues the refresh of the [Strategy methodology](../strategy/index.md) by integrating Microsoft's [cloud economics program](https://azure.microsoft.com/overview/cloud-economics/).
+
+We've added new content that includes the financial and technical considerations to keep in mind as you develop your business case.
+
+- [Financial considerations](../strategy/financial-considerations/index.md)
+- [Technical considerations](../strategy/technical-considerations/index.md)
+- [Build a digital transformation timeline](../strategy/digital-transformation-timeline.md)
+- [Create a business case](../strategy/cloud-migration-business-case.md)
+- [Share your strategy](../strategy/share-your-strategy.md)
+
 ## April 2021
 
 ### Cloud service controls
