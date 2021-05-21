@@ -23,7 +23,7 @@ ms.custom: internal
 > * Use Managed Identities to access resources in Azure.
 > * Support a single enterprise directory. Keep the cloud and on-premises directories synchronized, except for critical-impact accounts.
 > * Centralize identity management. Designate a single Azure AD directory as the authoritative source for corporate and organizational accounts. Consistency and a single authoritative sources will increase clarity and reduce security risks from human errors and configuration complexity.
-> * Set up Azure AD Conditional Access. Enforce and measure key security attributes when authenticating all users, especially for critical-impact, high privilege accounts. 
+> * Set up Azure AD Conditional Access. Enforce and measure key security attributes when authenticating all users, especially for critical-impact, high privilege accounts.
 > * Lower exposure of privilege accounts.
 > * Choose a passwordless authentication method when possible.
 > * Enable password management and roll our self service password reset. Enable Microsoft's password guidance.
@@ -39,10 +39,6 @@ ms.custom: internal
 > * Use risk detection to trigger MFA and password changes.
 > * Automate threat response.
 > * Monitor Azure AD Connect Health in hybrid environments.
-
-
-
-
 
 ## Azure Services for Identity
 
@@ -72,7 +68,6 @@ Use managed identities to access data resources in Azure whenever possible, this
 - [Connect with Managed Identity to Azure Database for MySQL](/azure/mysql/howto-connect-with-managed-identity)
 - [Connect to and Azure Database for PostgreSQL using Managed Identities](/azure/postgresql/howto-connect-with-managed-identity)
 - [Connect to Azure Storage using Managed Identities](/azure/search/search-howto-managed-identities-storage)
-
 
 ## Modern Authentication and Provisioning Protocols
 
@@ -133,7 +128,7 @@ By using MSAL instead of ADAL:
 - Supporting Conditional Access is easier.
 - You benefit from innovation. Because all Microsoft development efforts are now focused on MSAL, no new features will be implemented in ADAL.
 
->[!Important]
+> [!IMPORTANT]
 > **Key take away**:
 > MSAL is now the recommended authentication library for use with the Microsoft identity platform.
 > Migrate existing apps from Azure Active Directory Authentication Library (ADAL) to Microsoft Authentication Library (MSAL).
@@ -155,7 +150,7 @@ By using MSAL instead of ADAL:
 > * Use modern authentication solutions (OAuth 2.0 and OpenID Connect)
 > * Don't program directly against these protocols. Instead, use the Microsoft Authentication Library (MSAL) and migrate apps that use ADAL to use MSAL.
 > * In web apps of web APIs, keep one token cache per account.
-> * Don't look at the access token value, or attempt to parse it as a client. They can change values, formats, or even become encrypted without warning - always use the id_token if your client needs to learn something about the user, or call Microsoft Graph. 
+> * Don't look at the access token value, or attempt to parse it as a client. They can change values, formats, or even become encrypted without warning - always use the id_token if your client needs to learn something about the user, or call Microsoft Graph.
 > * Understand user consent experience
 > * Test for Conditional Access Policies.
 
@@ -167,7 +162,6 @@ By using MSAL instead of ADAL:
 * [Authentication libraries reference](/azure/active-directory/develop/reference-v2-libraries)
 * [Permissions and consent in the Microsoft identity platform](/azure/active-directory/develop/v2-permissions-and-consent)
 
-
 ## Identity and Access APIs
 
 With **Microsoft Graph**, you can access [Azure Active Directory](/azure/active-directory/fundamentals/active-directory-whatis) resources to enable scenarios like managing administrator (directory) roles, inviting external users to an organization, and, if you are a Cloud Solution Provider (CSP), managing your customer's data. Microsoft Graph also provides methods that apps can use to, for example, discover information about users' transitive group and role memberships.
@@ -177,6 +171,7 @@ Directory resources and APIs can open up new ways for you to engage with users a
 You can use the [**Azure Active Directory PowerShell Module** Version for Graph](/powershell/module/azuread/?view=azureadps-2.0&preserve-view=true) for Azure AD administrative tasks such as user management, domain management and for configuring single sign-on. The Azure AD PowerShell for Graph module has two versions: a Public preview version and a General Availability version. It is not recommended to use the Public Preview version for production scenarios.
 
 ## Use SCIM to automate provisioning on AAD
+
 Azure Active Directory (Azure AD) can automatically provision users and groups to any application or system that is fronted by a web service with the interface defined in the System for Cross-Domain Identity Management (SCIM) 2.0 protocol specification.
 
 Azure AD's support for the SCIM 2.0 protocol is described in Using System for Cross-Domain Identity Management (SCIM) to automatically provision users and groups from Azure Active Directory to applications.
@@ -217,8 +212,6 @@ Microsoft global Azure offer the following three passwordless authentication opt
 - Windows Hello for Business
 - Microsoft Authenticator app
 - FIDO2 security keys
-
-
 
 ### Multi-factor Authentication
 
@@ -272,12 +265,6 @@ Here are some of the key features of Privileged Identity Management:
 - IM-6: [Restrict Azure resource access based on conditions](/security/benchmark/azure/security-controls-v2-identity-management#im-6-restrict-azure-resource-access-based-on-conditions)
 - IM-7: [Eliminate unintended credential exposure](/security/benchmark/azure/security-controls-v2-identity-management#im-7-eliminate-unintended-credential-exposure)
 - IM-8: [Secure user access to legacy applications](/security/benchmark/azure/security-controls-v2-identity-management#im-8-secure-user-access-to-legacy-applications)
-
-
-
-
-
-
 
 ## Summary
 

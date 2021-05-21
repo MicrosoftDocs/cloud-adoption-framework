@@ -29,7 +29,7 @@ The second step is to use Azure AD groups, the same groups you're already using 
 Azure DevOps has tight integration with Azure Active Directory including [AAD groups membership](/azure/devops/organizations/security/add-ad-aad-built-in-security-groups?tabs=preview-page), making it easy to apply role assignments to the same Azure AD group.
 
 > [!NOTE]
-> If you are using another CI vendor, you might have an intermediary logical container for managing group memberships, which you also need to maintain if AAD group membership is not synchronized. 
+> If you are using another CI vendor, you might have an intermediary logical container for managing group memberships, which you also need to maintain if AAD group membership is not synchronized.
 
 The diagram below illustrates how Azure AD is used as the single identity management plane. In ARM templates and in our DevOps tooling (Azure DevOps in this example), we only need to manage role assignments, not memberships, which should be managed in Azure AD. Note the resource names follow recommended [Naming Conventions](../../ready/azure-best-practices/resource-naming.md) and [Abbreviations](../ready/azure-best-practices/resource-naming.md) for Azure Resources.
 

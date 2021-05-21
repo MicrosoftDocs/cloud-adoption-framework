@@ -9,17 +9,18 @@ ms.service: cloud-adoption-framework
 ms.subservice: secure
 ms.custom: internal
 ---
+
 # Business resilience
 
 An organization can never have perfect security, but it can become resilient to security attacks. Like we are never perfectly immune to all health and safety risks in the physical world, the data and information systems we operate are also never 100 percent safe from all attacks all the time.
 
-Focus your security efforts on increasing the resilience of business operations in the face of security incidents. These efforts can reduce risk and enable continuous improvements in security posture and your ability to respond to incidents.  
+Focus your security efforts on increasing the resilience of business operations in the face of security incidents. These efforts can reduce risk and enable continuous improvements in security posture and your ability to respond to incidents.
 
 Resilience requires taking a pragmatic view that assumes a breach. It needs continuous investment across the full lifecycle of security risk.
 
 :::image type="content" source="./media/security-resilience-cycle.png" alt-text="Security Resilience Cycle" lightbox="./media/security-resilience-cycle-popout.png":::
 
-- **Before an incident:** Continuously improve security posture and the organization’s ability to respond to an incident. Continuously improving security posture helps limit the likelihood and potential impact of a security incident on your business operations and assets. There are many techniques covered throughout the security disciplines, but all of them are designed to raise the cost of attack. Make the attackers develop and try new techniques because you've made their old ones stop working. These techniques raise their costs and friction, slowing them down and limiting their success.
+- **Before an incident:** Continuously improve security posture and the organization's ability to respond to an incident. Continuously improving security posture helps limit the likelihood and potential impact of a security incident on your business operations and assets. There are many techniques covered throughout the security disciplines, but all of them are designed to raise the cost of attack. Make the attackers develop and try new techniques because you've made their old ones stop working. These techniques raise their costs and friction, slowing them down and limiting their success.
 
 - **During an incident:** Business operations must continue during an incident, even if they're degraded, slower, or limited to only critical systems. During an attack, a hospital can't stop caring for patients, ships need to move cargo, and planes must continue to fly safely. The two main priorities during an incident are:
   - *Protect critical operations*: If threatened, all efforts should focus on protecting and sustaining critical business operations over all other functions.
@@ -50,7 +51,7 @@ Resiliency requires a close partnership between business stakeholders, IT profes
 
 ## Next steps
 
-The security disciplines in the Security methodology align to the goal of increasing resilience to security incidents. To learn more, see
+The security disciplines in the Secure methodology align to the goal of increasing resilience to security incidents. For more information, see:
 
 - [Access control](./access-control.md)
 - [Security operations](./security-operations.md)

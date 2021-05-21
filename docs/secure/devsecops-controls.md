@@ -18,7 +18,7 @@ Because DevOps itself is an emerging discipline with a high degree of process va
 
 This documentation reviews each stage of a continuous integration and continuous delivery (CI/CD) DevOps process and what security controls we recommend integrating first.
 
-![DevSecOps controls](./media/devsecops-controls.pngg)
+![DevSecOps controls](./media/devsecops-controls.png)
 
 ## Plan and develop
 
@@ -109,7 +109,7 @@ Many organizations use build and release pipelines to automate and standardize t
 
 In a classical waterfall development model, security was typically introduced on the last stop, right before going to production. One of the most popular security approaches is penetration testing or pen test. The penetration test is an important step, which allows looking at the application from the black-box security perspective, closest to the attacker mindset. A penetration test consists of several action points, one of them is known as dynamic application security testing (DAST). DAST is a web application security test that finds security issues in the running application by seeing how the application responds to specially crafted requests. DAST tools are also known as web application vulnerability scanners. One of them is an open-source [OWASP ZAP Zed Attack Proxy](https://owasp.org/www-project-zap/), which finds vulnerabilities in the running web application. There are several ways how OWASP ZAP does the scan: passive baseline scan or full scan depending on the configuration.
 
-The downside of a pen test is that it takes time. The proper pen test might take up to several weeks, and with DevOps development speed, it becomes unsustainable. However, it's still worth adding a *lighter* version of pen test during the development process to uncover what might be missed by SAST and previous steps. DAST tools like OWASP ZAP might help. Developers can integrate OWASP ZAP in the pipeline as a task. During the execution, the OWASP ZAP scanner is spun up in the container and does the scanning process after it publishes results. This approach might not be a perfect, as it's not complete penetration testing, however, it's one more quality gate in the development cycle for improving the security posture.  
+The downside of a pen test is that it takes time. The proper pen test might take up to several weeks, and with DevOps development speed, it becomes unsustainable. However, it's still worth adding a *lighter* version of pen test during the development process to uncover what might be missed by SAST and previous steps. DAST tools like OWASP ZAP might help. Developers can integrate OWASP ZAP in the pipeline as a task. During the execution, the OWASP ZAP scanner is spun up in the container and does the scanning process after it publishes results. This approach might not be a perfect, as it's not complete penetration testing, however, it's one more quality gate in the development cycle for improving the security posture.
 
 ### Cloud configuration validation and infrastructure scanning
 

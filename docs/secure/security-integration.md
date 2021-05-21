@@ -47,7 +47,7 @@ These joint teams should always strive for a healthy level of friction in the pr
 
 Teams should strive for the best balance between two absolute truths:
 
-- Security cannot be skipped. Skipping security often leads to incidents that cost more in the end (productivity, revenue, overall business impact) than integrating security would have.  
+- Security cannot be skipped. Skipping security often leads to incidents that cost more in the end (productivity, revenue, overall business impact) than integrating security would have.
 - Security controls can reach an unhealthy level of friction where the security friction impedes more value than it protects.
 
 It's critical to find a balance as security is integrated into the process. Stakeholders must all work together to ensure business concerns, IT reliability and performance concerns, and security concerns are considered and balanced. Organizations need to also work on solving for the 80 percent and planning for the other 20 percent. By holding off on controls, features, and capabilities for security until there is a 100 percent solution, organizations will put everything they do at risk of exposure. Iterative approaches work well, as do the basics of updating and education.
@@ -106,14 +106,14 @@ Security's primary mission is to rapidly respond to the following situations:
 - **New insights and learnings:** New insights and learnings can come from the following sources:
 
   - External incidents. Incidents at other organizations can offer insights on attackers. They might attempt the same on your organization. This knowledge informs improvement plans or validates that your investments are on the right track. Discover external incidents through an information sharing and analysis center (ISAC), direct relationships with peer organizations, or other public reporting and analysis on incidents.
-  
+
   - New technical capabilities. Cloud providers and software vendors continuously innovate. They add capabilities to their products:
     - Business capabilities that require security defenses.
     - Security capabilities that improve the ability of security to defend the assets. These capabilities might be native security capabilities integrated into cloud platforms or other platform technology. They might be traditional stand-alone security capabilities.
     - The visibility and telemetry available from cloud-based security far outweighs what organizations could get from their single on-premises environment. All of this data is gathered by using metadata from all over. The data is put through a rigorous analysis process, including behavioral analytics, detonation chambers, machine learning, and AI.
 
   - **Industry best practices:* Industry best practices from vendors and organizations like National Institute of Standards and Technology (NIST), Center for Internet Security (CIS), and The Open Group. These organizations have a charter to gather and share learnings and best practices that security teams can learn from.
-  
+
   - Vulnerabilities are anything that an attacker can exploit to take control of an asset, such as software vulnerabilities. There are also security configuration choices, weaknesses in cryptographic algorithms, insecure practices, and processes for using or managing systems. As you discover vulnerabilities, evaluate them for how they affect your security posture and ability to detect, respond to, and recover from an attack.
 
 - **Respond to threat:** Security operations teams investigate detections. They respond to them by evicting adversaries from their control points in the organization. Depending on the size of the organization and complexity of the incident, this response might involve several security teams.
@@ -123,7 +123,7 @@ Security's primary mission is to rapidly respond to the following situations:
 - **Hunt for threat:** Hunting proactively for threats is an ongoing activity. Hunting should always consider new insights or learnings in the hunt planning and hypothesis development. Hunt teams might want to focus on key aspects:
   - Recently widespread or high impact vulnerability.
   - A new attacker group.
-  - A new attack technique that was demonstrated at a conference.  
+  - A new attack technique that was demonstrated at a conference.
 
 - **Design and implement mitigation:** Lessons learned must be integrated into the technical environment and both security and business processes. Teams should work together to integrate lessons into architecture, policy, and standards. For example, the theft of administrative credentials in a recent internal or public incident might spur the organization to adopt the controls in Microsoft's privilege access. For more information, see [Security rapid modernization plan](https://aka.ms/SPA-RAMP).
 

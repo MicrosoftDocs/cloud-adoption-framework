@@ -16,7 +16,7 @@ Just as cloud adoption is a journey, cloud security is also an ongoing journey o
 
 ## Envision a security end state
 
-A journey without a target destination is just wandering. While this may eventually lead to enlightenment, business goals and constraints often require focusing on objectives and key results. 
+A journey without a target destination is just wandering. While this may eventually lead to enlightenment, business goals and constraints often require focusing on objectives and key results.
 
 The Secure methodology provides a vision of the complete end state to guide the improvement of your security program over time. The following infographic provides a visual mapping of the key ways that security integrates with the larger organization and the disciplines within security.
 
@@ -28,15 +28,15 @@ The Cloud Adoption Framework provides security guidance for this security journe
 
 Security itself is both a standalone organizational discipline and a quality/attribute that is integrated/overlaid on other disciplines, which makes it difficult to precisely define and map in detail. The security industry uses many different frameworks to capture risk, plan controls, and operate. This is a quick summary of how the disciplines in the CAF secure methodology disciplines relates to other security concepts and guidance:
 
- - **Zero Trust** - Microsoft believes all security disciplines should follow the  Zero Trust principles of *assume breach*, *verify explicitly*, and *use least privilege access*. These underpin any sound [security strategy](https://aka.ms/securitystrategy) and also must be balanced with *business enablement* goals. The first and most visible part of zero trust is in access control, so it is  highlighted in the description of access control security discipline.  
-	
- - **The Open Group** - These security disciplines map closely to the Zero Trust Components in the [Core principles whitepaper](https://publications.opengroup.org/security-library/w210) published by The Open Group, where Microsoft actively participates. The one notable exception is that Microsoft elevated the discipline of Innovation Security so that DevSecOps is a top level element because of how new, important, and transformative this discipline is for many organizations. 
-	
- - **NIST Cybersecurity Framework (CSF)** - For organizations that use the [NIST cybersecurity framework](https://www.nist.gov/cyberframework), we have highlighted bold text where the NIST CSF most closely maps. Modern access control and DevSecOps map broadly to the full spectrum of CSF so aren't noted individually. 
+- **Zero Trust** - Microsoft believes all security disciplines should follow the  Zero Trust principles of *assume breach*, *verify explicitly*, and *use least privilege access*. These underpin any sound [security strategy](https://aka.ms/securitystrategy) and also must be balanced with *business enablement* goals. The first and most visible part of zero trust is in access control, so it is  highlighted in the description of access control security discipline.
+
+- **The Open Group** - These security disciplines map closely to the Zero Trust Components in the [Core principles whitepaper](https://publications.opengroup.org/security-library/w210) published by The Open Group, where Microsoft actively participates. The one notable exception is that Microsoft elevated the discipline of Innovation Security so that DevSecOps is a top level element because of how new, important, and transformative this discipline is for many organizations.
+
+- **NIST Cybersecurity Framework (CSF)** - For organizations that use the [NIST cybersecurity framework](https://www.nist.gov/cyberframework), we have highlighted bold text where the NIST CSF most closely maps. Modern access control and DevSecOps map broadly to the full spectrum of CSF so aren't noted individually.
 
 ## Mapping to Roles and Responsibilities
 
-While security is a highly technical discipline, it is first and foremost a human discipline reflective of the long history of human conflict (just updated for computers and the internet). The following diagram summarizes the roles and responsibilities in a security program. 
+While security is a highly technical discipline, it is first and foremost a human discipline reflective of the long history of human conflict (just updated for computers and the internet). The following diagram summarizes the roles and responsibilities in a security program.
 
 :::image type="content" source="./media/roles-and-responsibilities.png" alt-text="View of the responsibilities/functions of an enterprise security team" lightbox="./media/roles-and-responsibilities-popout.png":::
 
@@ -63,18 +63,18 @@ Security organizations are experiencing two types of major transformations at th
 Transforming how the business and tech teams view security requires aligning security closely to the priorities, processes, and risk framework. Key areas that drive success are
 
 - **Culture:** The culture of security must be focused on safely meeting the business mission, not impeding it. At the same time, security must become a normalized part of the culture of the organization as the internet upon which the business operates is open, allow adversaries to attempt attacks at any time. This cultural shift requires improved processes, partnerships, and ongoing leadership support at all levels to communicate the change, model the behavior, and reinforce the shift.
-- **Risk ownership:** The accountability for security risk should be assigned to the same roles that own all other risks, freeing security up to be a trusted advisor and subject matter expert rather than a scapegoat. Security should be responsible for sound and balanced advice that is communicated in the language of those leaders, but should not be held accountable for decisions they do not own. 
-- **Security Talent:**  Security talent is in a chronic shortage and organizations should always be planning how to best develop and distribute security knowledge and skills. In addition to growing security teams directly with technical security skillsets, mature security teams are also diversifying their strategy by focusing on
-  - *Growing security skillsets and knowledge* within existing teams in IT and the business. This is particularly important for DevOps teams with a DevSecOps approach and can take many forms (security helpdesk, identify and train champions within the community, job swapping programs, etc.).  
-  - *Recruiting diverse skillsets* to security teams to bring fresh perspectives and frameworks to problems (business, human psychology, economics, etc.) and build better relationships within the organization. To a hammer, all problems look like nails. 
+- **Risk ownership:** The accountability for security risk should be assigned to the same roles that own all other risks, freeing security up to be a trusted advisor and subject matter expert rather than a scapegoat. Security should be responsible for sound and balanced advice that is communicated in the language of those leaders, but should not be held accountable for decisions they do not own.
+- **Security Talent:**  Security talent is in a chronic shortage and organizations should always be planning how to best develop and distribute security knowledge and skills. In addition to growing security teams directly with technical security skill sets, mature security teams are also diversifying their strategy by focusing on
+  - *Growing security skill sets and knowledge* within existing teams in IT and the business. This is particularly important for DevOps teams with a DevSecOps approach and can take many forms (such as a security help desk, identifying and training champions within the community, or job swapping programs).
+  - *Recruiting diverse skill sets* to security teams to bring fresh perspectives and frameworks to problems (like business, human psychology, or economics) and build better relationships within the organization. To a hammer, all problems look like nails.
 
 ### Business Alignment
 
 Because of these shifts, your cloud adoption program should focus heavily on business alignment in three categories
 
 - **Risk Insights:** Align and integrate security insights and risk signals/sources to the business initiatives. Ensure repeatable processes educate all teams on the application of those insights and hold teams accountable for improvements.
-- **Security Integration:** Integrate security knowledge, skills, and insights deeper into daily operations of the business and IT environment via repeatable processes and  deep partnership at all levels of the organization. 
-- **Operational Resiliency** - Focus on ensuring the organization is resilient by being able to continue operations during an attack (even if at a degraded state) and that the organization rapidly bounces back to full operations. 
+- **Security Integration:** Integrate security knowledge, skills, and insights deeper into daily operations of the business and IT environment via repeatable processes and  deep partnership at all levels of the organization.
+- **Operational Resiliency** - Focus on ensuring the organization is resilient by being able to continue operations during an attack (even if at a degraded state) and that the organization rapidly bounces back to full operations.
 
 ### Security Disciplines
 
@@ -95,7 +95,6 @@ All security activities should be aligned to and shaped by a dual focus on
   - *Assume Breach:* When designing security for any component or system, reduce risk of attackers expanding access by assuming other resources in the organization are compromised
   - *Explicit Verification:* Explicitly validate trust using all available data points, rather than assuming trust. (e.g. in access control validate the user identity, location, device health, service or workload, data classification, and anomalies rather than simply allowing access from an implicitly trusted internal network)
   - *Least Privileged Access:* Limit the risk of a compromised user or resource by providing just-in-time and just-enough-access (JIT/JEA), risk-based adaptive polices, and data protection to help secure both data and productivity.
-
 
 ### Additional Resources
 

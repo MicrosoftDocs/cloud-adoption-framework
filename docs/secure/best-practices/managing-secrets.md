@@ -27,7 +27,7 @@ The following illustration is a high-level logical representation of these proce
 
 ## Anticipate limitations and exceptions
 
-To anticipate exceptions to the best practices will be difficult and these exceptions might occur within various phases of your cloud journey. Ensure that exceptions and their risks to the business are documented and accepted across all stakeholders. Each Azure service will have limitations or quotas documented that might affect your Azure workload. Review each of the service limits that applies to your workload to ensure they are documented and align with stakeholder expectations.  
+To anticipate exceptions to the best practices will be difficult and these exceptions might occur within various phases of your cloud journey. Ensure that exceptions and their risks to the business are documented and accepted across all stakeholders. Each Azure service will have limitations or quotas documented that might affect your Azure workload. Review each of the service limits that applies to your workload to ensure they are documented and align with stakeholder expectations.
 
 There might be other limitations and exceptions that will require documentation and require alignment with your business requirements. For example, when you perform a backup of keys, secrets, and certifications and their number of [object versions allowed](/azure/key-vault/general/service-limits) within Azure Key Vault.
 
@@ -149,7 +149,7 @@ Several Azure services use a key to allow an invocation to be performed. For exa
 
 Lastly, various Azure services have features that support key rotation.  Understanding [shared responsibility](/azure/security/fundamentals/shared-responsibility) in the cloud will support your documentation for various workloads.
 
->[!IMPORTANT]
+> [!IMPORTANT]
 > Within each of your workloads, periodically rotate your connection string keys for each of the Azure services. Use automation and an external configuration store, such as Azure Key Vault so that there is minimized disruption.  When not using an external configuration store, each of these Azure services have two keys so that they can be used to minimize disruption during your maintenance window.
 
 To learn more about Keys used to invocate or within connection strings, see:
@@ -171,7 +171,7 @@ Passwords and secrets are managed outside of application artifacts, using tools 
 
 Applying automation will improve operational efficiencies and using credentials for various automated runbooks will need to be aligned with your business requirements.  For example, a runbook within an Azure automation account that purges expired data from storage accounts will need to have credentials to perform said action.
 
->[!IMPORTANT]
+> [!IMPORTANT]
 > Use an external configuration store, such as Azure Key Vault, to store sensitive information. For example, fully qualified connection strings or passwords. Where possible, automate rotation of secrets and store them in Azure Key Vault so that there is minimized disruption.
 
 To learn more, see:
@@ -188,8 +188,8 @@ Certificates are used for encryption, authorize automation actions, device manag
 
 There are limitations and exceptions, such as authorizing automation actions within Azure automation accounts when using desired state configuration, also known as DSC, and where these certificates are stored.
 
->[!IMPORTANT]
->Align with the authorized personas, use central storage of these certificates, such as Azure Key Vault, and ensure the expiry dates of SSL/TLS certificates are monitored and there are renewal processes in place that align with your business requirements.
+> [!IMPORTANT]
+> Align with the authorized personas, use central storage of these certificates, such as Azure Key Vault, and ensure the expiry dates of SSL/TLS certificates are monitored and there are renewal processes in place that align with your business requirements.
 
 To learn more, see:
 

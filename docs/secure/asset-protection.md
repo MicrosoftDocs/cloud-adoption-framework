@@ -20,7 +20,7 @@ Asset protection focuses on consistent execution across all control types. Preve
 
 Asset protection acts as the technical subject matter expert for assets. It works with other disciplines, such as governance, architecture, security operations, and workload teams. Asset protection ensures that policy and standards are feasible and it enables implementation of controls to support the policy and standards. Asset protection provides feedback for continuous improvement.
 
-> [!Note]
+> [!NOTE]
 > Asset protection is usually implemented by IT Operations teams that maintain the assets and are supplemented by expertise in the security team. For more information, see [Design controls as a team](#design-controls-as-a-team).
 
 Threat actors are persistent and seek out vulnerabilities that result from gaps in the application of standards and policy. Attackers can directly target the business-critical data or application. They can also target the infrastructure that grants them access to the business-critical data and applications. Access control focuses on managing authorized access to resources. Asset protection addresses on all other potential out of band ways to gain access or control of resources. These two disciplines compliment each other and should be designed together to meet your architecture, policies, and standards. For more information, see [Access control](.\access-control.md).
@@ -34,7 +34,7 @@ Get secure focuses on bringing resources up to meet your organization's current 
 - **Brownfield:** Retrofit current security standards and controls to existing assets. Organizations might design and operate IT environments with security as low priority. This approach creates a "technical debt": weak security configurations, software that isn't upgraded, unencrypted communication or storage, legacy software and protocols, and more. Bring your security controls up to current approach. This improvement is critical to mitigate risk because attackers continually improve their ability to exploit these opportunities.
 - **Greenfield:** Ensure that new assets and new asset types are configured to standards. This process is critical to avoid continuously creating instant legacy or brownfield, or systems that don't meet current standards. This technical debt will have to be addressed later at a greater expense, which results in increased risk exposure until it's complete.
 
-Financially, *get secure* typically maps to capital expenditures (CAPEX) dynamics of a one time investment. *Greenfield budget* for security should be mapped as closely as feasible to the creation of the asset, with a reserved percentage of the budget for security for each new software project, major software upgrade, or overall cloud adoption initiative. Many organizations reserve around 10 percent of budget for security. *Brownfield budget* is typically a special project funded to bring security controls up to current standards and compliance.
+Financially, *get secure* typically maps to capital expenditures (CAPEX) dynamics of a one-time investment. *Greenfield budget* for security should be mapped as closely as feasible to the creation of the asset, with a reserved percentage of the budget for security for each new software project, major software upgrade, or overall cloud adoption initiative. Many organizations reserve around 10 percent of budget for security. *Brownfield budget* is typically a special project funded to bring security controls up to current standards and compliance.
 
 ## Stay secure
 
@@ -95,9 +95,9 @@ These key element help guide your asset protection process:
 
 ### Accountable and responsible teams
 
-Accountability for security should always reside with the ultimate resource owner in the business that owns all other risks and benefits. The security teams and subject matter experts are collectively responsible for advising the accountable owner on the risks, any mitigation, and on doing the actual implementation.  
+Accountability for security should always reside with the ultimate resource owner in the business that owns all other risks and benefits. The security teams and subject matter experts are collectively responsible for advising the accountable owner on the risks, any mitigation, and on doing the actual implementation.
 
-Asset Protection responsibilities might be performed by IT operations that manage enterprise-wide assets, DevOps and DevSecOps teams responsible for their workload’s assets, or security teams working with the IT or DevOps and DevSecOps teams.
+Asset Protection responsibilities might be performed by IT operations that manage enterprise-wide assets, DevOps and DevSecOps teams responsible for their workload's assets, or security teams working with the IT or DevOps and DevSecOps teams.
 
 As organizations move to the cloud, many of these responsibilities can transfer to the cloud provider, for example, updating firmware and virtualization solution, or made easier, for example, security configuration scanning and remediation.
 
@@ -128,7 +128,7 @@ Azure Policy allows central teams to specify configurations to use for assets ac
 All controls should be designed as a partnership with key stakeholders:
 
 - **Asset protection** provides subject matter expertise on the assets, the controls available for them, and feasibility of implementing the controls.
-- **Governance team** provides context of how the controls fit into the security architecture, policies and standards, and regulatory compliance requirements.  
+- **Governance team** provides context of how the controls fit into the security architecture, policies and standards, and regulatory compliance requirements.
 - **Security operations** advise on detective controls. They integrate alerts and logs into security operations tools, processes, and training.
 - **Vendors and cloud providers** can provide deep subject matter expertise on systems and components to avoid known issues seen across their customer base.
 
