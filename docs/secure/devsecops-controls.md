@@ -25,7 +25,7 @@ This documentation reviews each stage of a continuous integration and continuous
 Typically, modern development follows an agile development methodology. Scrum is one implementation of agile methodology that has every sprint start with a planning activity. Introducing security into this part of the development process should focus on
 
 - **Threat modeling** to view the application through the lens of a potential attacker
-- **IDE Security plugins and pre-commit hooks** provide lightweight static analysis checking in the developer's environments (IDEs)
+- **IDE Security plug-ins and pre-commit hooks** provide lightweight static analysis checking in the developer's environments (IDEs)
 - **Peer review and secure coding standards** identify good security coding standards, peer review processes, and pre-commit hooks
 
 It's not mandatory to add all of these steps, however, each one helps discover security issues early, when they're much cheaper and easier to fix.
@@ -59,13 +59,13 @@ As the team gets more comfortable with the process, they can apply more advanced
 
 Another helpful resource is [A Guide to Threat Modeling for Developers](https://martinfowler.com/articles/agile-threat-modelling.html).
 
-### IDE security plugins and pre-commit hooks
+### IDE security plug-ins and pre-commit hooks
 
-Developers focus on the speed of delivery, and security controls might slow down the process. Typically, the slow-down occurs if the security checks start at the pipeline. A developer will find out about the potential vulnerability after pushing the code to the repository. To speed up this process and give immediate feedback, it's worth adding steps such as IDE security plugins and pre-commit hooks.
+Developers focus on the speed of delivery, and security controls might slow down the process. Typically, the slow-down occurs if the security checks start at the pipeline. A developer will find out about the potential vulnerability after pushing the code to the repository. To speed up this process and give immediate feedback, it's worth adding steps such as IDE security plug-ins and pre-commit hooks.
 
-IDE security plugins identify different security issues during the development process in the developer's comfort zone, which is their IDE environment. Plugins can provide immediate feedback if there's a potential security risk in the developer's written code, or the third-party library or package included. Depending on the chosen IDE, many open-source or commercial plugins are provided by security companies available on the market.
+IDE security plug-ins identify different security issues during the development process in the developer's comfort zone, which is their IDE environment. Plug-ins can provide immediate feedback if there's a potential security risk in the developer's written code, or the third-party library or package included. Depending on the chosen IDE, many open-source or commercial plug-ins are provided by security companies available on the market.
 
-Another step worth considering is to introduce a pre-commit framework if the version control system allows it. Pre-commit is git hook scripts that will enable identification issues before submitting code for code review. One example is [pre-commit](https://pre-commit.com) and can be implemented in GitHub.
+Another step worth considering is to introduce a pre-commit framework if the version control system allows it. A pre-commit framework provides Git hook scripts that enable identification issues before submitting code for code review. One example is [pre-commit](https://pre-commit.com) and can be implemented in GitHub.
 
 ### Peer review and secure coding standards
 
@@ -85,11 +85,11 @@ It's known that up 90 percent of the code in current applications contains and i
 
 Developer teams should ensure that they know what components are included in their applications, be sure that secure and up-to-date versions are downloaded from the known sources, and there's a process for keeping them up to date. This can be done with tools like the OWASP Dependency Check project, WhiteSource, and others.
 
-To focus on the dependency vulnerabilities or their lifecycle only is not enough. It's also important to address package feeds security. There are known attack vectors towards package management systems: typosquatting, compromising existing packages, substitution attacks, and others. Therefore responsible for the package management administration must address those risks. The good starting point is [Three Ways to Mitigate Risk When Using Private Package Feeds](https://aka.ms/pkg-sec-wp) documentation.
+To focus on the dependency vulnerabilities or their lifecycle only is not enough. It's also important to address package feeds security. There are known attack vectors toward package management systems: typosquatting, compromising existing packages, substitution attacks, and others. Therefore responsible for the package management administration must address those risks. The good starting point is [Three Ways to Mitigate Risk When Using Private Package Feeds](https://aka.ms/pkg-sec-wp) documentation.
 
 ### Static application security testing
 
-Once third-party libraries and package management have been addressed, it's essential to shift the focus and improve one's written code security state. There are different ways to improve code security, like using IDE security plugins and wiring incremental static analysis pre-commit and commit checks discussed before. It's also possible to do the complete source code scanning to catch some mistakes missed by previous steps. It's needed but might take hours or days to run on a large block of code. This approach can slow down development and introduce burden.
+Once third-party libraries and package management have been addressed, it's essential to shift the focus and improve one's written code security state. There are different ways to improve code security, like using IDE security plug-ins and wiring incremental static analysis pre-commit and commit checks discussed before. It's also possible to do the complete source code scanning to catch some mistakes missed by previous steps. It's needed but might take hours or days to run on a large block of code. This approach can slow down development and introduce burden.
 
 There's a need to start from somewhere when you start to implement static code scanning practices. One way is to introduce static code analysis inside of continuous integration to verify security as soon as changes are made. One of these tools is SonarCloud, which wraps multiple static application security testing (SAST) tools for different languages. SonarCloud assesses and tracks technical debt with a focus on maintainability, such as code quality and style, and has security-specific checkers. There are many others commercial and open-source tools available on a market.
 
@@ -116,9 +116,9 @@ The downside of a pen test is that it takes time. The proper pen test might take
 Alongside scanning and securing the code for applications, it's important to ensure that the environments that applications are deployed into are also secure. This is key for organizations who want to move at pace, innovate, and use new technologies or create environments quickly for experimentation. Azure has capabilities that enable organizations to create security standards from environments, such as Azure Policy, that can be used to create policy sets that prevent the creation of certain workload types or configuration items such as public IP addresses. These *guardrails* enable teams to experiment within a safe and controlled environment, balancing innovation and governance.
 
 One of the DevOps aspects when bringing closer developers and operations in cooperation is transferring infrastructure into Infrastructure as Code concept.
-> Infrastructure as Code (IaC) is the management of infrastructure (networks, virtual machines, load balancers, and connection topology) in a descriptive model, using the same versioning as the DevOps team uses for source code. Like the principle that the same source code generates the same binary, an IaC model generates the same environment every time it is applied. IaC is a key DevOps practice and is used in conjunction with [continuous delivery](/devops/deliver/what-is-continuous-delivery).
+> Infrastructure as Code (IaC) is the management of infrastructure (networks, virtual machines, load balancers, and connection topology) in a descriptive model, using the same versioning as the DevOps team uses for source code. Like the principle that the same source code generates the same binary, an IaC model generates the same environment every time it's applied. IaC is a key DevOps practice and is used in conjunction with [continuous delivery](/devops/deliver/what-is-continuous-delivery).
 
-DevSecOps is shifting security left and it's not only about application security but about infrastructure security as well. One of the steps is to introduce security scanning of infrastructure before it's deployed in the cloud. As infrastructure became code, it's possible to apply the same security actions as it is for application security shown in the previous challenges. There are security tools that can do the security scanning based on chosen IaC strategy.
+DevSecOps is shifting security left and it's not only about application security but about infrastructure security as well. One of the steps is to introduce security scanning of infrastructure before it's deployed in the cloud. As infrastructure became code, it became possible to apply the same security actions as those for application security shown in the previous challenges. There are security tools that can do the security scanning based on chosen IaC strategy.
 
 With the adoption of the cloud, containerization is a popular approach in application architecture decisions. Some of the container repositories scan images to catch packages with the known vulnerabilities. There's still a risk that a container might contain out-of-date software. Because of this risk, it's vital to scan the container for security risks. There are plenty of open-source and commercial security tools targeting this area and supporting tight integration in the continuous delivery process. Those tools are helping to adopt DevSecOps for infrastructure as code and specifically containers part.
 
@@ -128,7 +128,7 @@ When the solution is delivered to the production, it's vital to continue oversee
 
 ### Configuration and infrastructure scanning
 
-To obtain visibility for cloud subscriptions and resource configuration across multiple subscriptions, the [Azure Tenant Security Solution](https://github.com/azsk/DevOpsKit-docs/tree/master/13-Tenant%20Security%20Solution%20Setup#overview) from AzSk team can be used.
+To obtain visibility for cloud subscriptions and resource configuration across multiple subscriptions, the [Azure Tenant Security Solution](https://github.com/azsk/DevOpsKit-docs/tree/master/13-Tenant%20Security%20Solution%20Setup#overview) from AzSK team can be used.
 
 Azure includes monitoring and security capabilities that are designed to detect and alert anomalous events or configurations that require investigation and potential remediation. Technologies such as [Azure Defender](/azure/security-center/azure-defender), [Azure Security Center](/azure/security-center/security-center-introduction), and [Azure Sentinel](https://techcommunity.microsoft.com/t5/azure-sentinel/become-an-azure-sentinel-ninja-the-complete-level-400-training/ba-p/1246310) are first-party tools that natively integrate into the Azure environments. These tools complement the environment and code security tools to provide a broad-reaching set of security monitoring to enable organizations to experiment and innovate at a pace in a secure way.
 
@@ -146,7 +146,7 @@ Testing typical covers the following test types:
 
 ### Actionable intelligence
 
-The tools and techniques in this guidance can significantly contribute towards a holistic security model for organizations who want to move at pace and experiment with new technologies that aim to drive innovation. A key element of DevSecOps is data-driven, event-driven processes that enable the three functions to operate effectively in identifying, evaluating, and responding to potential risks. Many organizations choose to integrate these alerts and telemetry into their IT Service Management (ITSM) platform in order to bring the same structured workflow to security events that they use for other incidents are requests.
+The tools and techniques in this guidance can significantly contribute toward a holistic security model for organizations who want to move at pace and experiment with new technologies that aim to drive innovation. A key element of DevSecOps is data-driven, event-driven processes that enable the three functions to operate effectively in identifying, evaluating, and responding to potential risks. Many organizations choose to integrate these alerts and telemetry into their IT Service Management (ITSM) platform in order to bring the same structured workflow to security events that they use for other incidents are requests.
 
 ### Feedback loops
 

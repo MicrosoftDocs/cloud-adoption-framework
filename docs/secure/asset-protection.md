@@ -40,15 +40,15 @@ Financially, *get secure* typically maps to capital expenditures (CAPEX) dynamic
 
 Everything degrades over time. Physical items wear out. The environment changes around virtual items like software, security controls, and security. They might no longer meet changing requirements. These shifts happen fast today because of the following rapid changes:
 
-- Business requirements driven by digital transformation.
-- Technology requirements driven by rapid cloud platform evolution and feature releases.
-- Security requirements driven by attacker innovation and rapid evolution of native cloud security capabilities.
+- **Business requirements**, driven by digital transformation.
+- **Technology requirements**, driven by rapid cloud platform evolution and feature releases.
+- **Security requirements**, driven by attacker innovation and rapid evolution of native cloud security capabilities.
 
 This dynamic affects all parts of security, including [Security operations](.\security-operations.md), [Access control](.\access-control.md), and particularly DevSecOps in [Innovation security](.\innovation-security.md).
 
 Staying secure includes many elements. Focus on these two specific areas of asset protection:
 
-- **Continuous cloud improvement:** Embrace the continuous improvement in security capabilities that the cloud brings. For example, many services in Azure like Azure Storage and Azure SQL added security features to defend against attackers over time.
+- **Continuous cloud improvement:** Embrace the continuous improvement in security capabilities that the cloud brings. For example, many services in Azure like Azure Storage and Azure SQL Database have added security features to defend against attackers over time.
 - **Software End of Life:** Any software, including operating systems, always reach end of life, when security updates are no longer provided. This situation can expose business critical data and applications to cheap and easy attacks. While software as a service (SaaS) and cloud infrastructure and platforms are maintained by the cloud provider, enterprises often have a significant amount of software they install, author, and must maintain.
 
 Plan to upgrade or retire end of life software. Investing into your security posture reduces the risk of a major security incident. *Stay secure* is part of the Operational Expenditures (OPEX) dynamics of a regular ongoing investment.

@@ -18,7 +18,7 @@ The following diagram illustrates a baseline CI/CD workflow. The red configurati
 
 <img src="./../media/devsecops-workflow.svg" alt="A typical CI/CD workflow that illustrates how code changes in a Git repository will affect your cloud resources">
 
-Let's examine each stage of this typical workflow to help you understand how the configurations often depend on one another. Your workflow might have more stages. The concepts below will help you understand CI/CD and help you design your workflow for security.
+Let's examine each stage of this typical workflow to help you understand how the configurations often depend on one another. Your workflow might have more stages. The following concepts will help you understand CI/CD and help you design your workflow for security.
 
 ### Stage 1: Git workflow
 
@@ -63,7 +63,7 @@ The table should help you answer questions such as:
 - If a security vulnerability is found, how many code pushes and approvals are required before it lands in production?
 - and more.
 
-Not only is this table useful for debugging and static documentation, but also for team collaboration. It is transparent to developers where healthy friction has been introduced into the workflow to prioritize code quality and security. More importantly, it shows the developer the expected path for code changes to reach production.
+Not only is this table useful for debugging and static documentation, but also for team collaboration. It's transparent to developers where healthy friction has been introduced into the workflow to prioritize code quality and security. More importantly, it shows the developer the expected path for code changes to reach production.
 
 Because DevOps is a journey, your Git access model isn't static. It will change and evolve as the teams find their own rhythms and mature. That's why it's important to store this documentation as close as possible to the code, for example, in the Git repositories.
 
@@ -79,7 +79,7 @@ To learn more about pull requests and protected branches, see:
 
 The Pipeline as code movement accelerated automation adoption and deployments by moving pipeline definitions and configurations from the CI vendor to the developers, bringing the build and deployment logic closer to the corresponding application logic. The greater flexibility here also comes with greater responsibility.
 
-RBAC controls in a UI driven pipeline can prevent individual users from making destructive changes. Pipelines as code, however, often run with privileged identities and can destroy your workloads if instructed to do so.
+RBAC controls in a UI-driven pipeline can prevent individual users from making destructive changes. Pipelines as code, however, often run with privileged identities and can destroy your workloads if instructed to do so.
 
 ### Stage 3: Secure your deployment credentials
 
@@ -87,7 +87,7 @@ Pipelines and code repositories should not include hard-coded credentials and se
 
 **How** a credential is secured, gates, and approvals are vendor-specific features. When choosing a CI platform, make sure it supports all the features you require.
 
-Azure Pipelines is an enterprise scale continuous integration solution where credentials are stored as [Service connections](/azure/devops/pipelines/library/service-endpoints?tabs=yaml), upon which you can [configure approvals and checks](/azure/devops/pipelines/process/approvals?tabs=check-pass). This configuration includes manual approval and specific branch or pipeline authorizations.
+Azure Pipelines is an enterprise-scale continuous integration solution where credentials are stored as [Service connections](/azure/devops/pipelines/library/service-endpoints?tabs=yaml), upon which you can [configure approvals and checks](/azure/devops/pipelines/process/approvals?tabs=check-pass). This configuration includes manual approval and specific branch or pipeline authorizations.
 
 #### Azure Key Vault
 

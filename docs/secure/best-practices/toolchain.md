@@ -15,7 +15,7 @@ ms.custom: internal
 Commonly used tools in Azure Security:
 
 - [Azure Active Directory](/azure/active-directory/)
-- [Azure Role Based Access Control (RBAC)](/azure/role-based-access-control/)
+- [Azure Role-based Access Control (RBAC)](/azure/role-based-access-control/)
 - [Azure Defender](/azure/security-center/azure-defender)
 - [Azure DDoS Protection](/azure/ddos-protection/)
 - [Azure Firewall](/azure/firewall/)
