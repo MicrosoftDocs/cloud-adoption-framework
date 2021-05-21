@@ -21,7 +21,7 @@ Asset protection focuses on consistent execution across all control types. Preve
 Asset protection acts as the technical subject matter expert for assets. It works with other disciplines, such as governance, architecture, security operations, and workload teams. Asset protection ensures that policy and standards are feasible and it enables implementation of controls to support the policy and standards. Asset protection provides feedback for continuous improvement.
 
 > [!NOTE]
-> Asset protection is usually implemented by IT Operations teams that maintain the assets and are supplemented by expertise in the security team. For more information, see [Design controls as a team](#design-controls-as-a-team).
+> Asset protection is usually implemented by IT operations teams that maintain the assets and are supplemented by expertise in the security team. For more information, see [Design controls as a team](#design-controls-as-a-team).
 
 Threat actors are persistent and seek out vulnerabilities that result from gaps in the application of standards and policy. Attackers can directly target the business-critical data or application. They can also target the infrastructure that grants them access to the business-critical data and applications. Access control focuses on managing authorized access to resources. Asset protection addresses on all other potential out of band ways to gain access or control of resources. These two disciplines compliment each other and should be designed together to meet your architecture, policies, and standards. For more information, see [Access control](.\access-control.md).
 
@@ -44,14 +44,14 @@ Everything degrades over time. Physical items wear out. The environment changes 
 - **Technology requirements**, driven by rapid cloud platform evolution and feature releases.
 - **Security requirements**, driven by attacker innovation and rapid evolution of native cloud security capabilities.
 
-This dynamic affects all parts of security, including [Security operations](.\security-operations.md), [Access control](.\access-control.md), and particularly DevSecOps in [Innovation security](.\innovation-security.md).
+This dynamic affects all parts of security, including [security operations](.\security-operations.md), [access control](.\access-control.md), and particularly DevSecOps in [Innovation security](.\innovation-security.md).
 
 Staying secure includes many elements. Focus on these two specific areas of asset protection:
 
 - **Continuous cloud improvement:** Embrace the continuous improvement in security capabilities that the cloud brings. For example, many services in Azure like Azure Storage and Azure SQL Database have added security features to defend against attackers over time.
-- **Software End of Life:** Any software, including operating systems, always reach end of life, when security updates are no longer provided. This situation can expose business critical data and applications to cheap and easy attacks. While software as a service (SaaS) and cloud infrastructure and platforms are maintained by the cloud provider, enterprises often have a significant amount of software they install, author, and must maintain.
+- **Software end-of-life:** Any software, including operating systems, always reach end-of-life, when security updates are no longer provided. This situation can expose business critical data and applications to cheap and easy attacks. While software as a service (SaaS) and cloud infrastructure and platforms are maintained by the cloud provider, enterprises often have a significant amount of software they install, author, and must maintain.
 
-Plan to upgrade or retire end of life software. Investing into your security posture reduces the risk of a major security incident. *Stay secure* is part of the Operational Expenditures (OPEX) dynamics of a regular ongoing investment.
+Plan to upgrade or retire end-of-life software. Investing into your security posture reduces the risk of a major security incident. *Stay secure* is part of the operational expenditures (OPEX) dynamics of a regular ongoing investment.
 
 ### The patch dilemma
 
@@ -69,7 +69,7 @@ Without business leadership support, security and IT leaders are distracted from
 
 ### Network isolation
 
-Network isolation might be a valid option for protecting older assets that can no longer be secured, but cannot be immediately retired. This scenario can typically occur for end of life operating systems and applications. It's common in operational technology (OT) environments and legacy systems.
+Network isolation might be a valid option for protecting older assets that can no longer be secured, but cannot be immediately retired. This scenario can typically occur for end of life operating systems and applications. It's common in operational technology (ot) environments and legacy systems.
 
 Isolation itself is considered access control, even though the assets that can't be secured are identified as part of asset protection. For more information, see [Avoid firewall and forget](.\access-control.md).
 
@@ -84,11 +84,11 @@ Staying secure is challenging in a world that is constantly changing. It's criti
 To get started with asset protection, we recommend that organizations take the following steps.
 
 - **Focus on well-known resources first:** Think about virtual machines, networks, and identities in the cloud that the team is already familiar with. This technique allows you to make immediate progress and are often easier to manage and secure with native cloud tools like Azure Security Center and Azure Defender.
-- **Start with vendor/industry baselines:** Start your security configuration with a well known and proven solution, for example:
+- **Start with vendor/industry baselines:** Start your security configuration with a well-known and proven solution, for example:
 
-  - Azure Baselines in Azure Security Benchmark. Microsoft provides security configuration guidance tailored to individual Azure services. These baselines apply the Azure security benchmarks to the unique attributes of each service. This approach enables security teams to secure each service and refine configurations as needed. For more information, see [Security baselines for Azure](/security/benchmark/azure/security-baselines-overview).
-  - Microsoft Security Baselines. Microsoft provides security configuration guidance for commonly used technologies including Windows, Office, and Microsoft Edge. For more information, see [Microsoft Security Baselines](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines).Microsoft-Security-Baselines) for more information
-  - CIS Benchmarks. The Center for Internet Security (CIS) provides specific configuration guidance for many products and vendors. For more information, see [CIS Benchmarks](https://www.cisecurity.org/cis-benchmarks/).
+  - **Security baselines in the Azure Security Benchmark.** Microsoft provides security configuration guidance tailored to individual Azure services. These baselines apply the Azure security benchmarks to the unique attributes of each service. This approach enables security teams to secure each service and refine configurations as needed. For more information, see [Security baselines for Azure](/security/benchmark/azure/security-baselines-overview).
+  - **Microsoft security baselines.** Microsoft provides security configuration guidance for commonly used technologies including Windows, Microsoft Office, and Microsoft Edge. For more information, see [Microsoft security baselines](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines).Microsoft-security-baselines) for more information
+  - **CIS benchmarks.** The Center for Internet Security (CIS) provides specific configuration guidance for many products and vendors. For more information, see [CIS benchmarks](https://www.cisecurity.org/cis-benchmarks/).
 
 ## Key information
 
@@ -98,7 +98,7 @@ These key element help guide your asset protection process:
 
 Accountability for security should always reside with the ultimate resource owner in the business that owns all other risks and benefits. The security teams and subject matter experts are collectively responsible for advising the accountable owner on the risks, any mitigation, and on doing the actual implementation.
 
-Asset Protection responsibilities might be performed by IT operations that manage enterprise-wide assets, DevOps and DevSecOps teams responsible for their workload's assets, or security teams working with the IT or DevOps and DevSecOps teams.
+Asset protection responsibilities might be performed by IT operations that manage enterprise-wide assets, DevOps and DevSecOps teams responsible for their workload's assets, or security teams working with the IT or DevOps and DevSecOps teams.
 
 As organizations move to the cloud, many of these responsibilities can transfer to the cloud provider, for example, updating firmware and virtualization solution, or made easier, for example, security configuration scanning and remediation.
 
@@ -135,4 +135,4 @@ All controls should be designed as a partnership with key stakeholders:
 
 ## Next steps
 
-The next discipline is [Security governance](./security-governance.md)
+The next discipline to review is [security governance](./security-governance.md)

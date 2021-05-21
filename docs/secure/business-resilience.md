@@ -27,7 +27,7 @@ Resilience requires taking a pragmatic view that assumes a breach. It needs cont
   - **Prevent further damage:** The default priority for security operations is to discover the full extent of attacker access, and then rapidly evict them from the environment. This eviction prevents further damage by the attackers, including retaliation.
 
 - **After an incident:** If business operations are damaged during an attack, repairs must start immediately to restore full business operations. These repairs apply even if that means restoring operations without data that was lost in an attack, for example ransomware or a destructive attack like NotPetya.
-- **Feedback Loop:** Attackers repeat themselves, or repeat what other attackers have found to work. Attackers learn from attacking your organization, so you must continuously learn from their attacks. Focus on taking the proven and available techniques that were attempted before. Then ensure you can block, detect, rapidly respond, and recover from them. Your efforts raise the cost of attack on your organization and deter or slow down future attacks.
+- **Feedback loop:** Attackers repeat themselves, or repeat what other attackers have found to work. Attackers learn from attacking your organization, so you must continuously learn from their attacks. Focus on taking the proven and available techniques that were attempted before. Then ensure you can block, detect, rapidly respond, and recover from them. Your efforts raise the cost of attack on your organization and deter or slow down future attacks.
 
 ## Resilience goals
 
@@ -51,7 +51,7 @@ Resiliency requires a close partnership between business stakeholders, IT profes
 
 ## Next steps
 
-The security disciplines in the Secure methodology align to the goal of increasing resilience to security incidents. For more information, see:
+The security disciplines in the secure methodology align to the goal of increasing resilience to security incidents. For more information, see:
 
 - [Access control](./access-control.md)
 - [Security operations](./security-operations.md)

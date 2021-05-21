@@ -16,9 +16,9 @@ The management of company sensitive secrets, keys, and certificates (and associa
 
 Before you continue, it's highly recommended to document the following items within your organization so your alignment with these best practices can be put into action:
 
-1. Limitations and exceptions: Understand and document how various security configurations have a direct effect to performance and cost. Ensure your documentation aligns with your overall business requirements. Next, review each business requirement to ensure all stakeholders agree and accept the overhead and complexities various security requirements will place on your secrets management implementation.
-2. Identify your compliance and attestation requirements. For example: Center for Internet Security (CIS), National Institute of Standards and Technology (NIST), Health Insurance Portability and Accountability Act (HIPAA), HITRUST, Cybersecurity Maturity Model Certification (CMMC), Protected B, medium integrity, and medium availability (PBMM), and Federal Information Processing Standard (FIPS). With respect to implementation, several of these compliance requirements might be implemented through built-in governance policy-based rule sets within Azure services. For example, there are various security controls in Azure Policy that can be applied to Azure Key Vault.
-3. Identify the personas and their access requirements to the various Azure services. For example, developers and applications might only require read access to the secrets stored to Azure Key Vault within a development environment. On the other hand, operators or administrators will require full management access to all Azure Key Vaults within each environment.
+1. Limitations and exceptions: understand and document how various security configurations have a direct effect to performance and cost. Ensure your documentation aligns with your overall business requirements. Next, review each business requirement to ensure all stakeholders agree and accept the overhead and complexities various security requirements will place on your secrets management implementation.
+2. Identify your compliance and attestation requirements. For example: Center for Internet Security (CIS), National Institute of Standards and Technology (NIST), Health Insurance Portability and Accountability Act (HIPAA), HITRUST, cybersecurity maturity model certification (CMMC), protected B, medium integrity, and medium availability (pbmm), and federal information processing standard (FIPS). With respect to implementation, several of these compliance requirements might be implemented through built-in governance policy-based rule sets within Azure services. For example, there are various security controls in Azure Policy that can be applied to Azure Key Vault.
+3. Identify the personas and their access requirements to the various Azure services. For example, developers and applications might only require read access to the secrets stored in Azure Key Vault within a development environment. On the other hand, operators or administrators will require full management access to all key vaults within each environment.
 4. The overall *observability methodology* used by your organization to ensure your logging, monitoring, auditing, and alerting configurations are aligned with business requirements.
 
 The following illustration is a high-level logical representation of these processes:
@@ -40,7 +40,7 @@ There might be other limitations and exceptions that will require documentation 
 
 ## External configuration store pattern
 
-Most of these best practices across your enterprise and workloads deployed to the cloud will use a secret store. To Understand the external configuration store cloud design pattern will not only provide context, it will provide insights to various issues and considerations that might affect your workload architectural design.
+Most of these best practices across your enterprise and workloads deployed to the cloud will use a secret store. To understand the external configuration store cloud design pattern will not only provide context, it will provide insights to various issues and considerations that might affect your workload architectural design.
 
 For example, there are rare exceptions to the security best practice of using Azure Key Vault to store secrets, such as connection strings. These exceptions might be revealed during the development implementation phase when conducting performance and load testing. Ensure your business stakeholders state that performance is critical to the workload.
 
@@ -62,7 +62,7 @@ To learn more, see:
 - [Azure subscription and service limits](/azure/azure-resource-manager/management/azure-subscription-service-limits)
 - [External configuration store pattern](/azure/architecture/patterns/external-configuration-store)
 - [Understanding separation of duties within NIST](https://csrc.nist.gov/glossary/term/Separation_of_Duty)
-- [Applying Azure Policy's NIST SP 800-53 R4 controls that includes Separation of Duties](/azure/governance/policy/samples/nist-sp-800-53-r4)
+- [Applying Azure Policy's NIST SP 800-53 R4 controls, including separation of duties](/azure/governance/policy/samples/nist-sp-800-53-r4)
 - [Start with the Azure Key Vault security baseline](/security/benchmark/azure/baselines/key-vault-security-baseline?context=/azure/key-vault/general/context/context)
 - [Review and validate against the Azure Key Vault authentication fundamentals](/azure/key-vault/general/authentication)
 - [Azure Policy regulatory compliance controls for Azure Key Vault](/azure/key-vault/security-controls-policy)
@@ -73,16 +73,16 @@ To learn more, see:
 There are different types of keys that can be used within various Azure services:
 
 - Keys that are cryptographic, such as encryption-at-rest or encryption-in-transit.
-- Keys used for connectivity, also known as a token for authentication AuthN and authorization AuthZ to various Azure services
+- Keys used for connectivity, also known as a token for authentication (AuthN) and authorization (AuthZ) to various Azure services.
 
-### **Keys used for cryptographic keys: encryption-at-rest**
+### Keys used for cryptographic keys: Encryption-at-rest
 
 Read the [encryption security fundamentals](/azure/security/fundamentals/encryption-overview) document for an encryption overview in Azure.
 
 The two types of keys for encryption-at-rest are:
 
-- Platform-managed keys, also known as PMK
-- Customer-managed keys, also known as CMK or bring-your-own-key (BYOK)
+- Platform-managed keys (PMK)
+- Customer-managed keys (CMK), also known as bring-your-own-key (BYOK)
 
 As mentioned above, document your various business requirements. For example, what are your encryption-at-rest requirements with respect to key management? Ask yourself: *Are there any limitations or exceptions that I need to be made aware of?*
 
@@ -91,7 +91,7 @@ You might find limitations or exceptions with various Azure services that might 
 > [!IMPORTANT]
 > When CMKs are not required, use PMKs due to operational simplicity as they are managed (including rotation) by the platform.
 
-If your business requires customer-managed keys for encryption-at-rest, ensure you document the various Azure services that support this and their limitations or their release status, such as Preview or GA. For example, Azure Monitor supports customer-managed keys and the documents any limitations.
+If your business requires customer-managed keys for encryption-at-rest, ensure you document the various Azure services that support this and their limitations or their release status, such as preview or GA. For example, Azure Monitor supports customer-managed keys and the documents any limitations.
 
 > [!IMPORTANT]
 >
@@ -112,7 +112,7 @@ For the following sections on keys (used as tokens) and secrets, there are sever
 
 - **Valet Key pattern:** Use a token that provides clients with restricted direct access to a specific resource, in order to offload data transfer from the application.
 
-- **Command and Query Responsibility Segregation (CQRS) pattern:** The Command and Query Responsibility Segregation (CQRS) pattern separates read and update operations for a data store. Implementing CQRS in your application can maximize its performance, scalability, and security. The flexibility created by migrating to CQRS allows a system to better evolve over time and prevents update commands from causing merge conflicts at the domain level.
+- **Command and Query Responsibility Segregation (CQRS) pattern:** The command and query responsibility segregation (CQRS) pattern separates read and update operations for a data store. Implementing CQRS in your application can maximize its performance, scalability, and security. The flexibility created by migrating to CQRS allows a system to better evolve over time and prevents update commands from causing merge conflicts at the domain level.
 
 > [!IMPORTANT]
 > For each of your workloads, identify various established cloud design patterns that address each of the problem domains to ensure alignment with your business security requirements.
@@ -122,7 +122,7 @@ To learn more, see:
 - [Valet pattern](/azure/architecture/patterns/valet-key)
 - [CQRS pattern](/azure/architecture/patterns/cqrs)
 
-### **Keys used as connectivity or tokens: invocation or within connection strings**
+### Keys used as connectivity or tokens: Invocation or within connection strings
 
 The other type of keys are used for various Azure services for connectivity or tokens, for example, Azure Storage or Azure Service Bus access keys.
 
@@ -130,7 +130,7 @@ There are limitations or exceptions for the keys of various Azure services. Unde
 
 Understanding each of these [options](/azure/storage/common/storage-auth?toc=/azure/storage/blobs/toc.json) and documenting them to your business requirements will guide you through this decision process.
 
-Additionally, many Azure services support managed identities for authentication.  [What are Managed identities?](/azure/active-directory/managed-identities-azure-resources/overview)
+Additionally, many Azure services support managed identities for authentication.  [What are managed identities?](/azure/active-directory/managed-identities-azure-resources/overview)
 
 > [!IMPORTANT]
 >
@@ -152,7 +152,7 @@ Lastly, various Azure services have features that support key rotation. Understa
 > [!IMPORTANT]
 > Within each of your workloads, periodically rotate your connection string keys for each of the Azure services. Use automation and an external configuration store, such as Azure Key Vault so that there is minimized disruption. When not using an external configuration store, each of these Azure services have two keys so that they can be used to minimize disruption during your maintenance window.
 
-To learn more about Keys used to invocate or within connection strings, see:
+To learn more about keys used to invocate or within connection strings, see:
 
 - [Define a stored access policy on Azure Storage](/rest/api/storageservices/define-stored-access-policy)
 - [Manage storage account keys with Key Vault and the Azure CLI](/azure/key-vault/secrets/overview-storage-keys)
@@ -177,7 +177,7 @@ Applying automation will improve operational efficiencies and using credentials 
 To learn more, see:
 
 - [Azure Service Bus authentication and authorization](/azure/service-bus-messaging/service-bus-authentication-and-authorization)
-- [Microsoft's TechCommunity: Azure Architecture on managing and rotating secrets with Azure Key Vault, pt 1](https://techcommunity.microsoft.com/t5/azure-architecture-blog/managing-and-rotating-secrets-with-azure-key-vault-managed/ba-p/1800612)
+- [Azure architecture blog: Managing and rotating secrets with Azure Key Vault](https://techcommunity.microsoft.com/t5/azure-architecture-blog/managing-and-rotating-secrets-with-azure-key-vault-managed/ba-p/1800612)
 - [Automate the rotation of secret for resources that use one set of authentication credentials](/azure/key-vault/secrets/tutorial-rotation)
 - [Automate the rotation of secret for resources that use two sets of authentication credentials](/azure/key-vault/secrets/tutorial-rotation-dual?tabs=azure-cli)
 - [Using credentials in Azure Automation runbooks](/azure/automation/shared-resources/credentials?tabs=azure-powershell)

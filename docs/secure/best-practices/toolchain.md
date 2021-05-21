@@ -12,24 +12,24 @@ ms.custom: internal
 
 # Security toolchain
 
-Commonly used tools in Azure Security:
+Commonly used tools in Azure security:
 
 - [Azure Active Directory](/azure/active-directory/)
-- [Azure Role-based Access Control (RBAC)](/azure/role-based-access-control/)
+- [Azure role-based access control (RBAC)](/azure/role-based-access-control/)
 - [Azure Defender](/azure/security-center/azure-defender)
-- [Azure DDoS Protection](/azure/ddos-protection/)
+- [Azure DDoS protection](/azure/ddos-protection/)
 - [Azure Firewall](/azure/firewall/)
 - [Azure Monitor](/azure/azure-monitor/)
 - [Azure Policy](/azure/governance/policy/)
-- [Azure Policy Samples](/azure/governance/policy/samples/)
+- [Azure Policy samples](/azure/governance/policy/samples/)
 - [Azure Security Center](/azure/security-center/)
 - [Azure Security Benchmark](/security/benchmark/azure/)
 - [Azure Sentinel](/azure/sentinel/)
-- [Confidential Computing on Azure](/azure/confidential-computing/)
+- [Confidential computing on Azure](/azure/confidential-computing/)
 
 Additional resources:
 
-- [Microsoft Zero Trust Blog](https://www.microsoft.com/security/blog/zero-trust/)
-- [Implementing a Zero Trust security model at Microsoft](https://www.microsoft.com/itshowcase/implementing-a-zero-trust-security-model-at-microsoft)
-- [Microsoft Security Blog](https://www.microsoft.com/security/blog/)
-- [Microsoft Security Response Center (MSRC) Blog](https://msrc-blog.microsoft.com/)
+- [Microsoft zero-trust blog](https://www.microsoft.com/security/blog/zero-trust/)
+- [Implementing a zero-trust security model at Microsoft](https://www.microsoft.com/itshowcase/implementing-a-zero-trust-security-model-at-microsoft)
+- [Microsoft security blog](https://www.microsoft.com/security/blog/)
+- [Microsoft security response center (MSRC) blog](https://msrc-blog.microsoft.com/)

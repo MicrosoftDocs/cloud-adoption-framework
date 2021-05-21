@@ -1,5 +1,5 @@
 ---
-title: Innovation Security
+title: Innovation security
 description: Explore the key themes of consideration for integrating security best practices into innovation areas
 author: DominicAllen
 ms.author: doalle
@@ -14,15 +14,15 @@ ms.custom: internal
 
 Innovation is the lifeblood of an organization in the digital age and needs to be both enabled and protected. Innovation security protects the processes and data of innovation against cyberattacks. Innovation in the digital age takes the form of developing applications using the DevOps or [DevSecOps](./devsecops-controls.md) method to rapidly innovate without waiting for the traditional waterfall ship schedule that can take months or years between releases.
 
-![DevSecOps Heart](./media/devsecops-heart.png)
+![DevSecOps heart](./media/devsecops-heart.png)
 
 Developing new capabilities and applications requires successfully meeting three different requirement types:
 
-- **Business development (Dev):** Your application must meet business and user needs, which are often rapidly evolving.
-- **Security (Sec):** Your application must be resilient to attacks from rapidly evolving attackers and take advantage of innovations in security defenses.
-- **IT operations (Ops):** Your application must be reliable and perform efficiently.
+- **Business development (`Dev`):** Your application must meet business and user needs, which are often rapidly evolving.
+- **Security (`Sec`):** Your application must be resilient to attacks from rapidly evolving attackers and take advantage of innovations in security defenses.
+- **IT operations (`Ops`):** Your application must be reliable and perform efficiently.
 
-Merging these three requirements together and creating a shared culture is critically important, but often challenging. Leaders of development, IT, and security teams must work together to drive this change. For more information, see The [Leadership Imperative: Blend the Cultures](/#the-leadership-imperative-blend-the-cultures).
+Merging these three requirements together and creating a shared culture is critically important, but often challenging. Leaders of development, IT, and security teams must work together to drive this change. For more information, see the [leadership imperative: blend the cultures](/#the-leadership-imperative-blend-the-cultures).
 
 ## What is DevSecOps?
 
@@ -71,13 +71,13 @@ This diagram shows the lifecycle of this kind of innovation factory approach:
 
 Secure innovation is an integrated approach for both of these phases:
 
-- **Idea Incubation** where an initial idea is built, validated, and made ready for initial production use. This phase begins with a new idea and ends when the **first production release** meets the minimum viable product (MVP) criteria for:
+- **Idea incubation** where an initial idea is built, validated, and made ready for initial production use. This phase begins with a new idea and ends when the **first production release** meets the minimum viable product (MVP) criteria for:
   - **Development:** Functionality meets the minimum business requirements
   - **Security:** Capabilities meet the regulatory compliance, security, and safety requirements for production use
   - **Operations:** Functionality meets the minimum quality, performance, and supportability requirements to be a production system
-- **DevOperations** This phase is the ongoing iterative development process of the application or workload that enables continuous innovation and improvement
+- **Devoperations** this phase is the ongoing iterative development process of the application or workload that enables continuous innovation and improvement
 
-### The leadership imperative: blend the cultures
+### The leadership imperative: Blend the cultures
 
 Meeting these three requirements requires merging these three cultures together to ensure that all team members value all types of requirements and work together toward common goals.
 
@@ -89,7 +89,7 @@ Integrating these cultures and goals together into a true DevSecOps approach can
 
 While having a few issues is normal and expected with new development, inter-team conflicts often dramatically increase the number and severity of these issues. The conflicts occur, often because one or two teams have a political advantage, and repeatedly override requirements of other teams. Over time, the neglected issues grow in volume and seriousness. Left unsolved, this dynamic might get worse with DevOps as the speed of making decisions increases to meet the rapid evolution of business needs and customer preferences.
 
-Solving these problems requires creating a shared culture that values Dev, Sec, and Ops requirements that are supported by leadership. This approach will allow your teams to work better together and help solve the most urgent issues on any given sprint, whether they're improving security, operational stability, or adding critical business features.
+Solving these problems requires creating a shared culture that values dev, sec, and ops requirements that are supported by leadership. This approach will allow your teams to work better together and help solve the most urgent issues on any given sprint, whether they're improving security, operational stability, or adding critical business features.
 
 #### Leadership techniques
 
@@ -97,8 +97,8 @@ These key techniques can help leadership build a shared culture:
 
 1. **No one wins all the arguments:** Leaders must ensure that no single mindset dominates all decisions that might cause an imbalance that negatively impacts the business.
 1. **Expect continuous improvement, not perfection:** Leaders should set an expectation of continuous improvement and continuous learning. Building a successful DevSecOps program doesn't happen overnight. It's a continuous journey with incremental progress.
-1. **Celebrate both common interests and unique individual values:** Ensure the teams can see that they're working toward common outcomes and each individual provides something the others can't. All of the requirement types are about creating and protecting the same business value. Development is trying to create new value, while Ops and Security are trying to protect and preserve that value, against different risk scenarios. Leaders at all levels throughout the organization should communicate this commonality and how important it is to meet all types of requirements for both immediate and long-term success.
-1. **Develop Shared Understanding:** Everyone on the team should have a basic understanding of:
+1. **Celebrate both common interests and unique individual values:** Ensure the teams can see that they're working toward common outcomes and each individual provides something the others can't. All of the requirement types are about creating and protecting the same business value. Development is trying to create new value, while ops and security are trying to protect and preserve that value, against different risk scenarios. Leaders at all levels throughout the organization should communicate this commonality and how important it is to meet all types of requirements for both immediate and long-term success.
+1. **Develop shared understanding:** Everyone on the team should have a basic understanding of:
      - **Business urgency:** The team should have a clear picture of revenue at stake. This view should include current revenue (if the service is offline), and potential future revenue that will be affected by a delay in delivery of applications and features. This should be directly based on signals from leadership stakeholders.
      - **Likely risks and threats:** Based on threat intelligence team input, if present, the team should establish a sense of the likely threats that the application portfolio will face.
      - **Availability requirements:** The team should have a shared sense of the operational requirements such as required uptime, expected lifetime of the application, and troubleshooting and maintenance requirements, for example, patching while service online.
@@ -117,9 +117,9 @@ These key techniques can help leadership build a shared culture:
 
 During the transition from an idea to production, it's critical to ensure that the capability meets the minimum requirements, or the minimum viable product (MVP), for each requirement type:
 
-- **Developers (Dev)** focus on representing the business needs for rapid delivery of capabilities that meet the expectations of users, customers, and business leaders. Identify the minimum requirements to ensure that the capability helps make the organization successful.
-- **Security (Sec)** brings focus to meeting compliance obligations and defending against the attackers that are continuously seeking illicit gain from the organization's resources. Identify the minimum requirements to meet regulatory compliance requirements, sustain security posture, and ensure security operations can rapidly detect and respond to an active attack.
-- **Operations (Ops)** focus on performance, quality, and efficiency, ensuring that the workload can continue to deliver value over the long term. Identify the minimum requirements to ensure that the workload can perform and be supported without requiring massive architectural or design changes in the foreseeable future.
+- **Developers (dev)** focus on representing the business needs for rapid delivery of capabilities that meet the expectations of users, customers, and business leaders. Identify the minimum requirements to ensure that the capability helps make the organization successful.
+- **Security (sec)** brings focus to meeting compliance obligations and defending against the attackers that are continuously seeking illicit gain from the organization's resources. Identify the minimum requirements to meet regulatory compliance requirements, sustain security posture, and ensure security operations can rapidly detect and respond to an active attack.
+- **Operations (ops)** focus on performance, quality, and efficiency, ensuring that the workload can continue to deliver value over the long term. Identify the minimum requirements to ensure that the workload can perform and be supported without requiring massive architectural or design changes in the foreseeable future.
 
 The definitions for MVP can change over time, and with different workload types, as the team learns together from their own experience and from other organizations.
 
@@ -141,7 +141,7 @@ Transformation requires building toward this ideal state incrementally on a jour
 
 - **Education and culture changes are critical early steps:** *You go to war with the army you have*. The team you have will often need to develop new skills and adopt new perspectives to understand the other parts of the DevSecOps model. This education and culture change takes time, focus, executive sponsorship, and regular follow up to help individuals fully understand and see the value of the change. Changing cultures and skills drastically can sometimes tap into the professional identity of individuals, creating potential for strong resistance. It's critical to understand and express the why, what, and how of the change for each individual and their situation.
 - **Change takes time:** You can only move as fast as your team can adapt to the implications of doing things in new ways. Teams will always have to do their existing jobs while they transform. It's critical to carefully prioritize what is most important and to manage expectations of how fast this change can happen. Focusing on a crawl, walk, run strategy, where the most important and foundational elements come first, will serve your organization well.
-- **Limited Resources:** A challenge organizations usually face early on is to find talent and skills in both security and application development. As organizations begin to collaborate more effectively, they might find hidden talent, such as developers with a security mindset or security professionals with a development background.
+- **Limited resources:** A challenge organizations usually face early on is to find talent and skills in both security and application development. As organizations begin to collaborate more effectively, they might find hidden talent, such as developers with a security mindset or security professionals with a development background.
 - **Shifting nature of applications, code, and infrastructure:** The technical definition and composition of an application is fundamentally changing with the introduction of technologies such as serverless, cloud services, cloud APIs, and codeless applications, such as Power Apps. This shift is changing development practices, application security, and even empowers non-developers to create applications.
 
 > [!NOTE]
@@ -151,10 +151,10 @@ Transformation requires building toward this ideal state incrementally on a jour
 >
 > Even if you are targeting an SRE model, we recommend starting by embedding security into DevOps using practical quick wins and incremental progress outlined in this guidance to ensure you are getting good return on investment (ROI) and meeting immediate needs. This will incrementally add security responsibilities to your operations and development personnel, which gets your people closer to the end-state of an SRE (if your organization plans to adopt that model later).
 
-## Next Steps
+## Next steps
 
-Review the [DevSecOps Technical Controls](./devsecops-controls.md) for more detailed guidance on DevSecOps.
+Review the [DevSecOps technical controls](./devsecops-controls.md) for more detailed guidance on DevSecOps.
 
-For information on how GitHub Advanced Security integrates security into your continuous integration and continuous delivery (CI/CD) pipelines, see [About GitHub Advanced Security](https://docs.github.com/en/github/getting-started-with-github/learning-about-github/about-github-advanced-security).
+For information on how GitHub advanced security integrates security into your continuous integration and continuous delivery (CI/CD) pipelines, see [About GitHub advanced security](https://docs.github.com/en/github/getting-started-with-github/learning-about-github/about-github-advanced-security).
 
-For more information and tooling on how Microsoft's IT organization implemented DevSecOps, see [Secure DevOps Toolkit](https://azsk.azurewebsites.net/).
+For more information and tooling on how Microsoft's IT organization implemented DevSecOps, see [Secure DevOps toolkit](https://azsk.azurewebsites.net/).
