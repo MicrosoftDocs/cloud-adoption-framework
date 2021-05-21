@@ -71,7 +71,7 @@ The motivations and incentives for different types of attackers mirror those of 
 
 Understanding the attackers' motivations can help you understand the likelihood and potential impact of different types of attacks. While the security strategies and most important technical controls are similar across organizations, this context can help guide your security investment focus areas.
 
-For more information, see [Disrupting Attacker Return on Investment](/security/ciso-workshop/ciso-workshop-module-2#part-1-disrupting-attacker-return-on-investment-1431).
+For more information, see [Disrupting attacker return on investment](/security/ciso-workshop/ciso-workshop-module-2#part-1-disrupting-attacker-return-on-investment-1431).
 
 ### Behavior patterns
 
@@ -90,8 +90,8 @@ Typically, the attackers are:
 - **Well-resourced and skilled:** They're educated in the technologies they're targeting, though the depth of skill can vary.
 - **Experienced:** They use established techniques and tools to gain elevated privileges to access or control different aspects of the estate.
 
-## Next Steps
+## Next steps
 
 For risk management to be effective, it must be rolled into all aspects of your governance and compliance activities. For risks to be properly assessed, security must always be considered as part of a comprehensive approach.
 
-- [Security Integration](./security-integration.md) is the next focus area of security.
+- [Security integration](./security-integration.md) is the next focus area of security.

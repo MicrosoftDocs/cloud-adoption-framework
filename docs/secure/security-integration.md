@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Security integration
 
-In your organization, security should be a part of everyone's job, just like business requirements, performance, and reliability. Security, at all levels, should be familiar with overall business priorities, IT Initiatives, and risk appetite for your organization. Envision security as a thread that weaves through every aspect of your business. Security should feel like natural part of business. Business should feel like a natural part of security.
+In your organization, security should be a part of everyone's job, just like business requirements, performance, and reliability. Security, at all levels, should be familiar with overall business priorities, IT initiatives, and risk appetite for your organization. Envision security as a thread that weaves through every aspect of your business. Security should feel like natural part of business. Business should feel like a natural part of security.
 
 Your organization must maintain security assurances while minimizing friction with business processes.
 
@@ -52,7 +52,7 @@ Teams should strive for the best balance between two absolute truths:
 
 It's critical to find a balance as security is integrated into the process. Stakeholders must all work together to ensure business concerns, IT reliability and performance concerns, and security concerns are considered and balanced. Organizations need to also work on solving for the 80 percent and planning for the other 20 percent. By holding off on controls, features, and capabilities for security until there is a 100 percent solution, organizations will put everything they do at risk of exposure. Iterative approaches work well, as do the basics of updating and education.
 
-For more information about healthy security friction, see The [right level of security friction](../strategy/define-security-strategy.md#the-right-level-of-security-friction) in the security strategy guidance.
+For more information about healthy security friction, see the [right level of security friction](../strategy/define-security-strategy.md#the-right-level-of-security-friction) in the security strategy guidance.
 
 The next section illustrates how to integrate security stakeholders with IT, end users, and workload owners. It also includes examples for within the security team.
 
@@ -79,7 +79,7 @@ This process is followed on a regular schedule:
 
 - Enterprise IT and security teams start the process by identifying which security updates, or patches, are required and the highest impact. They make these updates available to end users or workload owners through enterprise-wide distribution channels.
 - End users have a fixed period to test the updates, apply them, and restart their devices. After that period expires, enterprise IT and security teams either apply the update or block access to corporate resources. They might use a mechanism like Azure AD Conditional Access or a third-party network access control solution.
-- Workload owners are given a fixed period of time to test the updates, apply them to production systems, and reboot as required. After that self-service period, and any grace period expires, enterprise IT and security teams will either force the update to apply or isolate them from other corporate resources. Some organizations with stringent requirements might decommission the assets by deleting them from Azure Subscriptions or AWS Accounts.
+- Workload owners are given a fixed period of time to test the updates, apply them to production systems, and reboot as required. After that self-service period, and any grace period expires, enterprise IT and security teams will either force the update to apply or isolate them from other corporate resources. Some organizations with stringent requirements might decommission the assets by deleting them from Azure subscriptions or AWS accounts.
 - Enterprise IT and security teams monitor the status of the update and conduct any forced remediation that's identified.
 
 This process is not static and it's not set up in one day. It's built iteratively and continuously improved over time. Start wherever you are and continually improve the process to make incremental progress toward this end state. Use the following dimensions for continuous improvement planning:
@@ -112,7 +112,7 @@ Security's primary mission is to rapidly respond to the following situations:
     - Security capabilities that improve the ability of security to defend the assets. These capabilities might be native security capabilities integrated into cloud platforms or other platform technology. They might be traditional stand-alone security capabilities.
     - The visibility and telemetry available from cloud-based security far outweighs what organizations could get from their single on-premises environment. All of this data is gathered by using metadata from all over. The data is put through a rigorous analysis process, including behavioral analytics, detonation chambers, machine learning, and AI.
 
-  - **Industry best practices:* Industry best practices from vendors and organizations like National Institute of Standards and Technology (NIST), Center for Internet Security (CIS), and The Open Group. These organizations have a charter to gather and share learnings and best practices that security teams can learn from.
+  - **Industry best practices:** Industry best practices from vendors and organizations like National Institute of Standards and Technology (NIST), Center for Internet Security (CIS), and The Open Group. These organizations have a charter to gather and share learnings and best practices that security teams can learn from.
 
   - Vulnerabilities are anything that an attacker can exploit to take control of an asset, such as software vulnerabilities. There are also security configuration choices, weaknesses in cryptographic algorithms, insecure practices, and processes for using or managing systems. As you discover vulnerabilities, evaluate them for how they affect your security posture and ability to detect, respond to, and recover from an attack.
 
@@ -131,7 +131,7 @@ Security's primary mission is to rapidly respond to the following situations:
 
 As you plan your cloud adoption, focus on integrating security functions together. Integrate security with your larger organization. Pay close attention to the friction that security generates. Be sure the friction is healthy. Healthy friction reduces risk for the organization without creating slowdowns that erode more value than they protect.
 
-- Review [Define a security strategy](https://aka.ms/securitystrategy)
-- Review [Cloud security functions](https://aka.ms/securityroles)
+- Review [define a security strategy](https://aka.ms/securitystrategy)
+- Review [cloud security functions](https://aka.ms/securityroles)
 
-- Review [Business resilience](./business-resilience.md), which is the next focus area of security.
+- Review [business resilience](./business-resilience.md), which is the next focus area of security.

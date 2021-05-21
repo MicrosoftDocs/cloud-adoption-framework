@@ -34,7 +34,7 @@ Architecture, standards, and policy provide the critical translation from busine
 
 ## Security posture management
 
-Hope and reporting problems isn't a plan. Governance in the cloud age must have an active component that continuously engages with other teams. Security posture management is an emerging function. It represents a step forward in the long-term convergence of security functions. These functions answer the question "How secure is the environment?", including vulnerability management and security compliance reporting.
+Hope and reporting problems isn't a plan. Governance in the cloud age must have an active component that continuously engages with other teams. Security posture management is an emerging function. It represents a step forward in the long-term convergence of security functions. These functions answer the question "how secure is the environment?", including vulnerability management and security compliance reporting.
 
 In the on-premises world, security governance followed the cadence of data it could get about the environment. This way of getting data might take time and be constantly out of date. Cloud technology now provides on-demand visibility into the current security posture and asset coverage. This visibility drives a major transformation of governance into a more dynamic organization. This organization provides a closer relationship to other security teams to monitor security standards, provide guidance, and improve processes.
 
@@ -72,4 +72,4 @@ For more information, see [Security integration](./security-integration.md).
 
 ## Next steps
 
-The next discipline is [Innovation security](./innovation-security.md).
+The next discipline is [innovation security](./innovation-security.md).

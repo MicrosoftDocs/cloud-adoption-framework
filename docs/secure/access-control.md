@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Access control
 
-Access control is the part of security that people experience first and most often. They see it when they sign in to their computers and mobile phones, when they share a file or try to access an application, and when they use an ID Card key to enter a building or room. While access control isn't everything in security, it's critically important, and it requires proper attention so that both the user experience and the security assurances are right.
+Access control is the part of security that people experience first and most often. They see it when they sign in to their computers and mobile phones, when they share a file or try to access an application, and when they use an ID card key to enter a building or room. While access control isn't everything in security, it's critically important, and it requires proper attention so that both the user experience and the security assurances are right.
 
 ## From security perimeter to zero trust
 
@@ -53,11 +53,11 @@ The enterprise access model is a comprehensive access model based on zero trust.
 
 The enterprise access model is described in detail in [Enterprise access model](/security/compass/privileged-access-access-model)
 
-## Known, Trusted, Allowed
+## Known, trusted, allowed
 
-One helpful perspective on the zero trust transformation of access control is that it shifts from a static two-step process of authentication and authorization, to a dynamic three-step process called Known, Trusted, Allowed:
+One helpful perspective on the zero trust transformation of access control is that it shifts from a static two-step process of authentication and authorization, to a dynamic three-step process called *known, trusted, allowed*:
 
-:::image type="content" source="./media/known-trusted-allowed-physical.png" alt-text="Known Trusted Allowed - Physical" lightbox="./media/known-trusted-allowed-physical-popout.png":::
+:::image type="content" source="./media/known-trusted-allowed-physical.png" alt-text="Known, trusted, allowed: Physical" lightbox="./media/known-trusted-allowed-physical-popout.png":::
 
 1. **Known:** Authentication that ensures you are who you say you are. This process is analogous to the physical process of checking a government-issued photo identification document.
 1. **Trusted:** Validation that the user or device is trustworthy enough to access the resource. This process is analogous to security at an airport that screens all passengers for security risks before allowing them to enter the airport.
@@ -70,9 +70,9 @@ The key technical capabilities that enable modern access control are:
 - **Policy engine:** The component where organizations configure the technical security policy to meet the organization's productivity and security objectives.
 - **Policy enforcement points:** Points that enforce, across the organization's resources, the central policy decisions by the policy engine. The resources include data, applications, identity, network, and databases.
 
-This diagram depicts how Azure Active Directory provides a policy engine and a policy enforcement point, so that security protocols can implement Known, Trusted, Allowed:
+This diagram depicts how Azure Active Directory provides a policy engine and a policy enforcement point, so that security protocols can implement a *known, trusted, allowed* approach.
 
-:::image type="content" source="./media/known-trusted-allowed-electronic.png" alt-text="Known Trusted Allowed - Electronic" lightbox="./media/known-trusted-allowed-electronic-popout.png":::
+:::image type="content" source="./media/known-trusted-allowed-electronic.png" alt-text="Known, trusted, allowed: Electronic" lightbox="./media/known-trusted-allowed-electronic-popout.png":::
 
 The Azure Active Directory policy engine can be extended to other policy enforcement points, including:
 
@@ -90,7 +90,7 @@ To fulfill the zero trust principle of explicit validation, it's critical to mak
 - Whether the device has been compromised by an attacker.
 - Whether the user has the appropriate roles and permissions.
 
-Microsoft built a threat intelligence system that integrates security context from many and diverse signal sources. For more information, see [Summary of Microsoft Threat Intelligence](https://aka.ms/threatintelligence).
+Microsoft built a threat intelligence system that integrates security context from many and diverse signal sources. For more information, see [Summary of Microsoft threat intelligence](https://aka.ms/threatintelligence).
 
 ## Segmentation: Separate to protect
 
@@ -109,16 +109,16 @@ Isolation is an extreme form of segmentation that is sometimes required for prot
 
 Isolation must be designed as a complete people/process/technology system and be integrated with business processes to be successful and sustainable. This approach typically fails over time if it's implemented as a purely technology approach without processes and training to validate and sustain the defenses. It's easy to fall into a *firewall and forget* trap by defining the problem as static and technical.
 
-In most cases, processes are needed to implement isolation, processes that various teams (security, IT, operational technology (OT), and sometimes business operations) must follow. Successful isolation usually consists of:
+In most cases, processes are needed to implement isolation, processes that various teams like security, IT, operational technology (OT), and sometimes business operations must follow. Successful isolation usually consists of:
 
 - **People:** Train all employees, vendors, and stakeholders on isolation strategy and their part in it. Include why it's important, for example, threats, risks and potential business impact, what they're expected to do, and how to do it.
 - **Process:** Establish clear policy and standards and document processes for business and technical stakeholders for all scenarios such as vendor access, change management process, threat response procedures, including exception management. Monitor to ensure the configuration doesn't drift and that other processes are followed correctly and rigorously.
 - **Technology:** Implement technical controls to block unauthorized communications, detect anomalies and potential threats, and harden bridging and transit devices that interact with the isolated environment, for example, operator consoles for operational technology (OT) systems.
 
-For more information, see Network isolation in [Asset Protection](.\asset-protection.md\#network-isolation).
+For more information, see [Asset protection: network isolation](.\asset-protection.md\#network-isolation).
 
 ## Next steps
 
 Whatever your requirements for access control, your strategy should be grounded in the proper fundamentals. The guidance provided in these articles, and in the Cloud Adoption Framework, can help organizations find and implement the right approach.
 
-The next discipline is modernizing [Security operations](security-operations.md).
+The next discipline is modernizing [security operations](security-operations.md).
