@@ -10,7 +10,7 @@ ms.subservice: secure
 ms.custom: internal
 ---
 
-## End to end governance from DevOps to Azure
+## End-to-end governance from DevOps to Azure
 
 It's not sufficient to plan and implement an [Azure role-based access control (RBAC) model](../ready/considerations/roles.md) for Azure Resource Manager templates (ARM templates), which restricts access via Azure portal and Azure CLI.
 
@@ -39,7 +39,7 @@ The diagram below illustrates how Azure AD is used as the single identity manage
 
 To make end-to-end governance concrete, let's examine the benefits with an example scenario.
 
-If you use Azure AD as your single identity management plane, you can remove a developer's access to your Azure resources in one action, by adjusting their _**Azure AD group memberships**_. For example, if a contractor's access should be revoked upon project completion, when you remove their membership from the relevant Azure AD groups, it will remove access to ARM templates and to Azure DevOps.
+If you use Azure AD as your single identity management plane, you can remove a developer's access to your Azure resources in one action, by adjusting their ***Azure AD group memberships***. For example, if a contractor's access should be revoked upon project completion, when you remove their membership from the relevant Azure AD groups, it will remove access to ARM templates and to Azure DevOps.
 
 ## Mirror RBAC model with role assignments
 
@@ -48,10 +48,10 @@ When planned well, the RBAC model in your CI tooling will closely mirror your Az
 <img src="./../media/devsecops-role-assignments.svg" alt="Diagram of Azure Active Directory as a single identity management plane in Azure DevOps">
 
 - The diagram illustrates role assignment for a single AAD group, the `contoso-admins-group`
-- This AAD group has *Owner* role for Azure ARM templates at _multiple_ subscription scopes:
+- This AAD group has *Owner* role for Azure ARM templates at *multiple* subscription scopes:
   - `contoso-dev-sub` subscription
   - `contoso-prod-sub` subscription
-- This AAD group has *Project Administrator* role for Azure DevOps at a _single_ project scope.
+- This AAD group has *Project Administrator* role for Azure DevOps at a *single* project scope.
 
 The Azure AD group has similarly privileged roles for both ARM templates and DevOps. Following this logic, if we have a developer group with *Contributor* access for ARM templates, we would not expect them to have *Project Administrator* access for DevOps.
 

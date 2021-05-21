@@ -45,7 +45,7 @@ The typical process of starting this transformation is:
 
 1. **Align the business** in a two-way relationship:
    - **Communicate in their language** to explain security threats using business-friendly terminology. This explanation helps to quantify the risk and impact to the overall business strategy and mission.
-   - **Actively listen and learn** by talking to people across the business.  Work to understand the impact to important business services and information if they were compromised or breached. This understanding provides clear insight into the importance of investing in policies, standards, training, and security controls.
+   - **Actively listen and learn** by talking to people across the business. Work to understand the impact to important business services and information if they were compromised or breached. This understanding provides clear insight into the importance of investing in policies, standards, training, and security controls.
 2. **Translate learnings** about business priorities and risks into concrete and sustainable actions, such as:
    - **Short term** that focuses on dealing with important priorities.
      - Protect critical assets and high-value information with appropriate security controls. These controls increase security while enabling business productivity.
@@ -77,9 +77,9 @@ For more information, see [Disrupting Attacker Return on Investment](/security/c
 
 Organizations face a range of human attacker models that shape their behavior:
 
-- **Commodity**: Most of the threats organizations typically face are for-profit attackers driven by a financial return on investment (ROI). These attackers typically use the cheapest and most effective available tools and methods. The sophistication of these attacks (for example, stealth and tooling) typically grows as new methods are proven by others and made available for high scale use.
+- **Commodity:** Most of the threats organizations typically face are for-profit attackers driven by a financial return on investment (ROI). These attackers typically use the cheapest and most effective available tools and methods. The sophistication of these attacks (for example, stealth and tooling) typically grows as new methods are proven by others and made available for high scale use.
 
-- **Leading edge**: Sophisticated attack groups are driven by long-term mission outcomes and often have funding available. This funding is used to focus on innovation. This innovation might include investing in supply chain attacks or changing tactics within an attack campaign to hinder detection and investigation.
+- **Leading edge:** Sophisticated attack groups are driven by long-term mission outcomes and often have funding available. This funding is used to focus on innovation. This innovation might include investing in supply chain attacks or changing tactics within an attack campaign to hinder detection and investigation.
 
 Typically, the attackers are:
 
@@ -87,7 +87,7 @@ Typically, the attackers are:
 - **Objective driven:** They achieve a defined purpose from accessing your environment. The goals might be specific to your people, data, or applications, but you might also fit a certain class of targets. For example, "a profitable company that's likely to pay to restore access to their data and systems."
 - **Stealthy:** They take precautions to remove evidence or hide their tracks, usually at different investment and priority levels.
 - **Patient:** They take time to do reconnaissance to understand your infrastructure and business environment.
-- **Well-resourced and skilled**: They're educated in the technologies they're targeting, though the depth of skill can vary.
+- **Well-resourced and skilled:** They're educated in the technologies they're targeting, though the depth of skill can vary.
 - **Experienced:** They use established techniques and tools to gain elevated privileges to access or control different aspects of the estate.
 
 ## Next Steps

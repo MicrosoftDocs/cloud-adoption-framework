@@ -50,8 +50,8 @@ Because some approaches to threat modeling can be a time consuming and skill int
 
 These simple questions for threat modeling are ideal to get your started:
 
-- **[Simple questions method from Microsoft](/security/compass/applications-services#simple-questions-method)** - This method asks specific technical questions designed to surface common security design mistakes.
-- **[OWASP threat modeling](https://owasp.org/www-community/Threat_Modeling)** - This method focuses on asking simple, non-technical questions to get the process started.
+- [Simple questions method from Microsoft](/security/compass/applications-services#simple-questions-method): This method asks specific technical questions designed to surface common security design mistakes.
+- [OWASP threat modeling](https://owasp.org/www-community/Threat_Modeling): This method focuses on asking simple, non-technical questions to get the process started.
 
 You can use either or both of these approaches, depending on what works better for the team.
 
@@ -93,13 +93,13 @@ Once third-party libraries and package management have been addressed, it's esse
 
 There's a need to start from somewhere when you start to implement static code scanning practices. One way is to introduce static code analysis inside of continuous integration to verify security as soon as changes are made. One of these tools is SonarCloud, which wraps multiple static application security testing (SAST) tools for different languages. SonarCloud assesses and tracks technical debt with a focus on maintainability, such as code quality and style, and has security-specific checkers. There are many others commercial and open-source tools available on a market.
 
-To ensure that the feedback loop is effective, it's crucial to tune the tool to minimize false positives and provide clear, actionable feedback on problems to fix. Additionally, it's good to implement the workflow, which prevents code commit to the _main_ branch if there are findings. For both quality and security findings. In this way, security becomes a part of the unit tests experience.
+To ensure that the feedback loop is effective, it's crucial to tune the tool to minimize false positives and provide clear, actionable feedback on problems to fix. Additionally, it's good to implement the workflow, which prevents code commit to the default branch if there are findings. For both quality and security findings. In this way, security becomes a part of the unit testing experience.
 
 ### Secure pipelines
 
-DevOps brings automation on another level where everything goes through the pipelines. Continuous integration and continuous delivery is a large part of modern development. Infrastructure is why pipelines are a centric part of the development and have keys to the kingdom. Pipelines introduce unique security challenges. They can be compromised to run malicious code, credentials might be stolen from pipelines, or an attacker without access to the production might modify the pipeline to achieve their goals.
+DevOps brings automation on another level where everything goes through the pipelines. Continuous integration and continuous delivery is a large part of modern development. Infrastructure is why pipelines are a central part of the development and have keys to the kingdom. Pipelines introduce unique security challenges. They can be compromised to run malicious code, credentials might be stolen from pipelines, or an attacker without access to the production might modify the pipeline to achieve their goals.
 
-DevOps teams must ensure the proper security controls are implemented for the pipeline. Depending on the chosen platform, there are different guidelines on how to address those risks. For more information, see [LINKTEXT](/azure/devops/pipelines/security/overview).
+DevOps teams must ensure the proper security controls are implemented for the pipeline. Depending on the chosen platform, there are different guidelines on how to address those risks. For more information, see [Securing Azure Pipelines](/azure/devops/pipelines/security/overview).
 
 ## Build and test
 
@@ -128,7 +128,7 @@ When the solution is delivered to the production, it's vital to continue oversee
 
 ### Configuration and infrastructure scanning
 
-To obtain visibility for cloud subscriptions and resource configuration across multiple subscriptions, [the Azure Tenant Security Solution](https://github.com/azsk/DevOpsKit-docs/tree/master/13-Tenant%20Security%20Solution%20Setup#overview) from AzSk team can be used.
+To obtain visibility for cloud subscriptions and resource configuration across multiple subscriptions, the [Azure Tenant Security Solution](https://github.com/azsk/DevOpsKit-docs/tree/master/13-Tenant%20Security%20Solution%20Setup#overview) from AzSk team can be used.
 
 Azure includes monitoring and security capabilities that are designed to detect and alert anomalous events or configurations that require investigation and potential remediation. Technologies such as [Azure Defender](/azure/security-center/azure-defender), [Azure Security Center](/azure/security-center/security-center-introduction), and [Azure Sentinel](https://techcommunity.microsoft.com/t5/azure-sentinel/become-an-azure-sentinel-ninja-the-complete-level-400-training/ba-p/1246310) are first-party tools that natively integrate into the Azure environments. These tools complement the environment and code security tools to provide a broad-reaching set of security monitoring to enable organizations to experiment and innovate at a pace in a secure way.
 
@@ -136,7 +136,7 @@ Azure includes monitoring and security capabilities that are designed to detect 
 
 Penetration testing is a recommended practice for environments to check for any vulnerabilities in the infrastructure or application configuration that might create weaknesses that attackers could exploit.
 
-There are many products and partners that provide penetration testing services and [Microsoft provides guidance on how to provide notification of penetration activities.](./azure/security/fundamentals/pen-testing.md)
+There are many products and partners that provide penetration testing services and [Microsoft provides guidance on how to provide notification of penetration activities](./azure/security/fundamentals/pen-testing.md).
 
 Testing typical covers the following test types:
 
@@ -150,6 +150,6 @@ The tools and techniques in this guidance can significantly contribute towards a
 
 ### Feedback loops
 
-![Continuous security model](./media/Continuous-Security.png)
+![Continuous security model](./media/continuous-security.png)
 
 All of these techniques and tools enable teams to find and flag risks and vulnerabilities that require investigation and potential resolution. Operations teams who receive an alert, or discover a potential issue when they investigate a support ticket, need a route back to the development team to flag items for review. A smooth, collaborative, feedback loop is vital to address issues quickly and to minimize the risk of a vulnerability as much as possible. A common pattern for this feedback is to integrate it into the organization's developer work management system, such as Azure DevOps or GitHub to link alerts or incidents to work items for developers to plan and action. This process provides an effective way for developers to resolve issues within their standard workflow, including development, testing, and release.

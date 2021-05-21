@@ -42,15 +42,15 @@ With Azure Security Center Standard, you can:
 - Assess compliance with common frameworks like PCI.
 - Strengthen the overall security of your environment.
 
-To learn more, see [Onboard your Azure subscription to Security Center Standard.](/azure/security-center/security-center-get-started)
+To learn more, see [Onboard your Azure subscription to Security Center Standard](/azure/security-center/security-center-get-started).
 
 ### Improve your Secure Score
 
-Secure Score provides recommendations and best practice advice for improving your overall security. These recommendations are prioritized to help you pick which ones are most important, and the Quick Fix options help you address potential vulnerabilities quickly. These recommendations also update over time, keeping you up to date on the best ways to maintain your environment's security. To learn more, see [Improve your Secure Score in Azure Security Center.](/azure/security-center/secure-score-security-controls)
+Secure Score provides recommendations and best practice advice for improving your overall security. These recommendations are prioritized to help you pick which ones are most important, and the Quick Fix options help you address potential vulnerabilities quickly. These recommendations also update over time, keeping you up to date on the best ways to maintain your environment's security. To learn more, see [Improve your Secure Score in Azure Security Center](/azure/security-center/secure-score-security-controls).
 
 ### Azure Defender
 
-To protect your deployment from known malicious software, we recommend enabling endpoint protection on all session hosts. You can use either Windows Defender Antivirus or a third-party program. To learn more, see Deployment guide for [Windows Defender Antivirus in a VDI environment.](/microsoft-365/security/defender-endpoint/deployment-vdi-microsoft-defender-antivirus)
+To protect your deployment from known malicious software, we recommend enabling endpoint protection on all session hosts. You can use either Windows Defender Antivirus or a third-party program. To learn more, see Deployment guide for [Windows Defender Antivirus in a VDI environment](/microsoft-365/security/defender-endpoint/deployment-vdi-microsoft-defender-antivirus).
 
 ## Next Steps
 
