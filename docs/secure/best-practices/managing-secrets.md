@@ -23,7 +23,7 @@ Before you continue, it's highly recommended to document the following items wit
 
 The following illustration is a high-level logical representation of these processes:
 
-![High-level process for managing secrets](./../media/managing-secrets-high-level-process.svg **Managing Secrets high-level process**)
+![High-level process for managing secrets](../media/managing-secrets-high-level-process.svg)
 
 ## Anticipate limitations and exceptions
 
@@ -199,5 +199,5 @@ To learn more, see:
 
 ## **Next steps**
 
-- > [!div class="nextstepaction"]
+> [!div class="nextstepaction"]
 > [Secure DevOps](./secure-devops.md)

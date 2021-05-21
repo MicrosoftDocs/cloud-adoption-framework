@@ -28,7 +28,7 @@ Code changes, not just to software, but also to *pipeline as code* and [Infrastr
 
 The industry standard workflow, regardless of your software configuration management (SCM) software as a service (SaaS) vendor, is to use [pull requests](/azure/devops/repos/git/pull-requests), which can act both as an automated quality gatekeeper and a manual approval step before source code is accepted.
 
-The Pull request workflow is designed to introduce healthy friction, which is why it should only be applied to secure *specific Git branches*. Especially the branches that will trigger automated workflows that can deploy, configure, or in any other way affect your cloud resources. These branches are called protected branches and typically follow naming conventions such as `production` or `releases/*`.
+The Pull request workflow is designed to introduce healthy friction, which is why it should only be applied to secure **specific Git branches**. Especially the branches that will trigger automated workflows that can deploy, configure, or in any other way affect your cloud resources. These branches are called protected branches and typically follow naming conventions such as `production` or `releases/*`.
 
 It's common for pull requests to require:
 
@@ -85,7 +85,7 @@ RBAC controls in a UI driven pipeline can prevent individual users from making d
 
 Pipelines and code repositories should not include hard-coded credentials and secrets. Credentials and secrets should be stored elsewhere and use CI vendor features for security. Because Pipelines run as headless agents, they should never use an individual's password. Pipelines should run using headless security principals instead,  for example, Service principals](/azure/active-directory/develop/app-objects-and-service-principals) or [Managed identities](/azure/active-directory/managed-identities-azure-resources/overview). Access to this security principal's credentials, database connection strings, and third-party API keys should also be securely managed in the CI platform.
 
-*How* a credential is secured, gates, and approvals are vendor-specific features. When choosing a CI platform, make sure it supports all the features you require.
+**How** a credential is secured, gates, and approvals are vendor-specific features. When choosing a CI platform, make sure it supports all the features you require.
 
 Azure Pipelines is an enterprise scale continuous integration solution where credentials are stored as [Service connections](/azure/devops/pipelines/library/service-endpoints?tabs=yaml), upon which you can [configure approvals and checks](/azure/devops/pipelines/process/approvals?tabs=check-pass). This configuration includes manual approval and specific branch or pipeline authorizations.
 
@@ -111,7 +111,7 @@ It's important to understand that IaC automation can go wrong. It can misconfigu
 
 For example, [cannot-delete management locks](/azure/azure-resource-manager/management/lock-resources), might be applied to business critical resources like a data. To prevent this from happening, you might *remove* `Microsoft.Authorization/*/Delete` permissions from a service principal used in CI automation. In this example and use-case, the service principal can *create* the management lock, but not delete it.
 
-It's recommended to [create a custom role](/azure/role-based-access-control/custom-roles) for your CI agents. Remember, build agents run headless. And headless agents are well, *brainless*. Choose your permissions carefully.
+It's recommended to [create a custom role](/azure/role-based-access-control/custom-roles) for your CI agents. Remember, build agents run headless, and headless agents are brainless. Choose your permissions carefully.
 
 To learn more, see:
 

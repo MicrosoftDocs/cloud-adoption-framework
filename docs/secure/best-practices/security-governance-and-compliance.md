@@ -12,7 +12,10 @@ ms.custom: internal
 
 # Security governance and compliance
 
-Organizations of all sizes are constrained by their available resources: financial, people, and time. To achieve an effective return on investment (ROI) organizations must prioritize where they will invest. Implementation of security across the organization is also constrained by this, so to achieve an appropriate ROI on security the organization needs to first understand and define its security priorities. The primary audience for this guidance is your organization's cloud architects and other members of your cloud governance team. The decisions, policies, and processes that emerge from this discipline should involve engagement and discussions with relevant members of your IT and security teams, especially those technical leaders responsible for implementing networking, encryption, and identity services. Therefore, important first actions to take include:
+Organizations of all sizes are constrained by their available resources: financial, people, and time. To achieve an effective return on investment (ROI) organizations must prioritize where they will invest. Implementation of security across the organization is also constrained by this, so to achieve an appropriate ROI on security the organization needs to first understand and define its security priorities.
+
+The primary audience for this guidance is your organization's cloud architects and other members of your cloud governance team. The decisions, policies, and processes that emerge from this discipline should involve engagement and discussions with relevant members of your IT and security teams, especially those technical leaders responsible for implementing networking, encryption, and identity services. Therefore, important first actions to take include:
+
 - Ensuring that the relevant stakeholders in these teams are identified
 - Setting up the appropriate communication and collaboration mechanisms with them
 
@@ -33,6 +36,7 @@ The top level is called the root management group and any changes that are appli
 Defining organizational policy is not effective unless it can be [enforced across your organization](../../decision-guides/policy-enforcement/index.md). A key aspect of planning any cloud implementation is determining how best to combine tools provided by the cloud platform with your existing IT processes to maximize policy compliance across your entire cloud estate. Azure policies can be used on multiple levels. It is recommended to apply organizational wide security controls on Azure platform level. These policies build the guardrails of a landing zone.
 
 You can determine the scope of your policy enforcement processes by focusing on these key elements:
+
 - Your organization's [cloud governance requirements](../../govern/index.md)
 - The size and nature of your cloud estate, and
 - How your organization is reflected in your [subscription design](../../decision-guides/subscriptions/index.md).
@@ -49,7 +53,7 @@ In the article [Introduction to regulatory compliance](../../govern/policy-compl
 
 ## Monitoring Compliance
 
-Compliance attestations should be regularly performed through [well-thought-out processes](../../govern/security-baseline/compliance-processes.md). Knowing whether your cloud resources are in compliance with standards mandated by governments or industry organizations is essential in today's globalized world (e.g. GDPR). This requires constant involvement of the cloud governance team and interested business and IT stakeholders to review and update policy and ensure policy compliance through different processes. In addition, many ongoing monitoring and enforcement processes can be automated or supplemented with tooling to reduce the overhead of governance and allow for faster response to policy deviation. Continuous monitoring and assessing workload increases the overall security and compliance of your workload in Azure. For example [Azure Security Center](https://azure.microsoft.com/en-us/services/security-center/) provides a regulatory compliance dashboard.
+Compliance attestations should be regularly performed through [well-thought-out processes](../../govern/security-baseline/compliance-processes.md). Knowing whether your cloud resources are in compliance with standards mandated by governments or industry organizations is essential in today's globalized world (e.g. GDPR). This requires constant involvement of the cloud governance team and interested business and IT stakeholders to review and update policy and ensure policy compliance through different processes. In addition, many ongoing monitoring and enforcement processes can be automated or supplemented with tooling to reduce the overhead of governance and allow for faster response to policy deviation. Continuous monitoring and assessing workload increases the overall security and compliance of your workload in Azure. For example [Azure Security Center](https://azure.microsoft.com/services/security-center/) provides a regulatory compliance dashboard.
 
 ## External or internal audits
 
@@ -69,7 +73,8 @@ The best way to damage an attacker's ability to successfully attack your organiz
 
 The actual security risk for an organization is heavily influenced by how much access an adversary can or does obtain to valuable systems and data. Your investments should be focused on ensuring your security measures constrain how much access an adversary gets.
 
-This should be covered in two front:
+This should be covered on two fronts:
+
 - **Time:**  Limit how long the adversary can have access to your environment during an attack operation. This is primarily achieved through security operations and defining [metrics and indicators](../../govern/security-baseline/metrics-tolerance.md), that rapidly detect potential attacks, prioritizing potential detections so your team is focused on quickly investigating real attacks (vs. false positives), and reducing your mean time to remediate those real incidents.
 - **Privilege:** Limit the privileges and permissions that an adversary can gain during an attack operation (by permissions and by amount of time privileges are assigned). As a vital first step, create a solid [identity baseline](../../govern/identity-baseline/index.md)
 

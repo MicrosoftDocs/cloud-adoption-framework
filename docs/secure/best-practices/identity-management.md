@@ -118,22 +118,26 @@ Many developers have built and deployed applications using the Azure Active Dire
 By using MSAL instead of ADAL:
 
 - You can authenticate a broader set of identities:
-    - Azure AD identities
-    - Microsoft accounts
-    - Social and local accounts by using Azure AD B2C
+
+  - Azure AD identities
+  - Microsoft accounts
+  - Social and local accounts by using Azure AD B2C
+
 - Your users will get the best single-sign-on experience.
+
 - Your application can enable incremental consent.
+
 - Supporting Conditional Access is easier.
+
 - You benefit from innovation. Because all Microsoft development efforts are now focused on MSAL, no new features will be implemented in ADAL.
 
 > [!IMPORTANT]
-> **Key take away**:
-> MSAL is now the recommended authentication library for use with the Microsoft identity platform.
-> Migrate existing apps from Azure Active Directory Authentication Library (ADAL) to Microsoft Authentication Library (MSAL).
+> MSAL is now the recommended authentication library for use with the Microsoft identity platform. Migrate existing apps from Azure Active Directory Authentication Library (ADAL) to Microsoft Authentication Library (MSAL).
 
 ## Identity Platform additional considerations
 
 > [!div class="checklist"]
+>
 > - Apply [Microsoft Platform Policies](/legal/microsoft-identity-platform/terms-of-use)
 > - Keep the information associated to the account used to register and manage apps up-to-date.
 > - Implement proper branding guidelines for applications.
@@ -152,7 +156,8 @@ By using MSAL instead of ADAL:
 > - Understand user consent experience
 > - Test for Conditional Access Policies.
 
-**Further reading:**
+For more information, see:
+
 - [Microsoft identity platform (overview)](/azure/active-directory/develop/v2-overview)
 - [Microsoft identity platform protocols reference](/azure/active-directory/develop/active-directory-v2-protocols)
 - [Access tokens reference](/azure/active-directory/develop/access-tokens)
@@ -174,7 +179,7 @@ Azure Active Directory (Azure AD) can automatically provision users and groups t
 
 Azure AD's support for the SCIM 2.0 protocol is described in Using System for Cross-Domain Identity Management (SCIM) to automatically provision users and groups from Azure Active Directory to applications.
 
-**Further reading:**
+For more information, see:
 
 - [Decision tree to help you choose between SCIM and Microsoft Graph to automate provisioning](/azure/active-directory/app-provisioning/scim-graph-scenarios)
 
@@ -194,7 +199,7 @@ In the following illustration, user requests to access the on-premises and cloud
 
 <img src="./../media/conditional-access.png" alt="Conditional Access - User Requests">
 
-**Further reading:**
+For more information, see:
 
 - [Conditional Access Overview and main concepts](/azure/active-directory/conditional-access/overview)
 - [How to build a Conditional Access Policy](/azure/active-directory/conditional-access/concept-conditional-access-policies)
@@ -219,11 +224,11 @@ If you only use a password to authenticate a user, it leaves an insecure vector 
 
 Azure AD Multi-Factor Authentication works by requiring two or more of the following authentication methods:
 
-- Something you know, typically a password.
-- Something you have, such as a trusted device that is not easily duplicated, like a phone or hardware key.
-- **Something you are:** biometrics like a fingerprint or face scan.
+- **Something you know**, typically a password.
+- **Something you have**, such as a trusted device that is not easily duplicated, like a phone or hardware key.
+- **Something you are**, such as biometric characteristics like a fingerprint or face scan.
 
-**Further Reading:**
+For more information, see:
 
 - [Deploying Passwordless Authentication](/azure/active-directory/authentication/howto-authentication-passwordless-deployment)
 - [How MFA works](/azure/active-directory/authentication/concept-mfa-howitworks)
@@ -275,7 +280,7 @@ Here are some of the key features of Privileged Identity Management:
 - Password-less or multi-factor authentication (MFA) is enforced for users of this workload.Attack methods have evolved to the point where passwords alone cannot reliably protect an account. Modern authentication solutions including password-less and multi-factor authentication increase security posture through strong authentication.
 - Current on-premises Active Directory is synchronized with Azure AD or other cloud identity system.
 
-## Further reading
+## Related resources
 
 - [Identity Management Best Practices](/azure/security/fundamentals/identity-management-best-practices)
 

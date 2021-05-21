@@ -46,7 +46,7 @@ With IaC, teams make changes to the environment description and version the conf
 
 See the [AzOps](https://github.com/Azure/azops) GitHub action for an example of how to deploy custom Resource Manager templates at various Azure scopes. If you're new to Resource Manager templates or IaC, you can also browse the [azure-quickstart-templates repo](https://github.com/Azure/azure-quickstart-templates) on GitHub, find the template that you wish to deploy, and select the **Deploy to Azure** button to test how it works.
 
-![Screenshit of a **Deploy to Azure** button.](./media/deploy-to-azure.png)
+![Screenshot of a **Deploy to Azure** button.](./media/deploy-to-azure.png)
 
 ### Cloud pattern components and best practices
 
@@ -108,7 +108,7 @@ GitHub Actions supports users to create custom workflows directly in their GitHu
 
 GitHub Actions can be used to combine IaC concepts and CI/CD practices to automate the entire end-to-end deployment lifecycle, including provisioning or updating the target environment in a repeatable manner and packaging and deploying the application itself.
 
-### Example
+**Example:**
 
 [GitHub Actions for Azure](https://github.com/azure/actions) are built to simplify how you automate your deployment processes to target Azure services such as Azure App Service, Azure Kubernetes Service, Azure Functions, and more. The [Azure starter action workflows repository](https://github.com/azure/actions-workflow-samples) includes end-to-end workflows to build and deploy web apps of any language and any ecosystem to Azure. Visit [GitHub marketplace](https://github.com/marketplace?query=azure&type=actions) to see all of the actions that are available.
 
@@ -127,7 +127,7 @@ With many security capabilities, GitHub offers tools that support every part of 
 - Spaces that provide a way to privately discuss and resolve security threats and then publish the information
 - Combined with the monitoring and evaluation power of Azure, these features provide a superb service for building secure cloud solutions
 
-### Example
+**Example:**
 
 GitHub DevSecOps installations cover many security scenarios. Possibilities include the following cases:
 
@@ -136,7 +136,7 @@ GitHub DevSecOps installations cover many security scenarios. Possibilities incl
 - Streamlined organizations that need systems to automatically acquire new and uncompromised security devices when secrets are left exposed in code
 - Development teams that could benefit from automatic upgrades when newer or more secure versions of external packages become available
 
-For further reading, see:
+For more information, see:
 
 - [DevSecOps in GitHub: Azure solution ideas | Microsoft docs](/azure/architecture/solution-ideas/articles/devsecops-in-github)
 - [Code scanning a GitHub repository using GitHub advanced security within an Azure DevOps pipeline](https://github.blog/2020-10-27-code-scanning-a-github-repository-using-github-advanced-security-within-an-azure-devops-pipeline/)
