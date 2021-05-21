@@ -53,7 +53,7 @@ Compliance attestations should be regularly performed through [well-thought-out 
 Compliance is important for several reasons. Auditing security related activities with IT staff and identifying any compliance issues not already handled should be part of the [ongoing monitoring and enforcement processes](../../govern/security-baseline/compliance-processes.md#planning-review-and-reporting-processes). The result of this audit is a report for the cloud strategy team and each cloud adoption team to communicate overall adherence to policy. The report is also stored for auditing and legal purposes. Noncompliance with regulatory guidelines may bring sanctions and penalties.
 
 ## Revision process
-Best practices and guidelines, based on industry recommendations, should be reviewed and applied proactively. Please refer to the article [Security best practices](../../security/security-top-10.md) for guidance on how to proactively and comprehensively apply best practices to all systems as a cloud program is implemented.
+Best practices and guidelines, based on industry recommendations, should be reviewed and applied proactively. Please refer to the article [Security best practices](../security-top-10.md) for guidance on how to proactively and comprehensively apply best practices to all systems as a cloud program is implemented.
 
 ## Attacker vs. defender costs 
 Cybersecurity attacks are planned and conducted by human attackers that must manage their return on investment into attacks (return could include profit or achieving an assigned objective). As you invest in security, you should carefully consider how you can damage the _attacker’s return on investment_ with your defensive investments.

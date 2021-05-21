@@ -26,7 +26,7 @@ If you aren't using an Azure first party CI product like Azure DevOps, check if 
 
 The second step is to use Azure AD groups, the same groups you're already using for your ARM templates RBAC model. It's a [best practice to assign roles to Azure AD groups](/azure/role-based-access-control/best-practices#assign-roles-to-groups-not-users), not to individuals. To create an end-to-end governance model, you will need to do this step for ARM templates and DevOps.
 
-Azure DevOps has tight integration with Azure Active Directory including [AAD groups membership](/azure/devops/organizations/security/add-ad-aad-built-in-security-groups?view=azure-devops&tabs=preview-page), making it easy to apply role assignments to the same Azure AD group.
+Azure DevOps has tight integration with Azure Active Directory including [AAD groups membership](/azure/devops/organizations/security/add-ad-aad-built-in-security-groups?tabs=preview-page), making it easy to apply role assignments to the same Azure AD group.
 
 > [!NOTE]
 > If you are using another CI vendor, you might have an intermediary logical container for managing group memberships, which you also need to maintain if AAD group membership is not synchronized. 
@@ -64,8 +64,8 @@ Now that you understand the need to secure ARM templates and DevOps workflows, y
 To learn more about governance design and permissions, see:
 
 - [Governance design for multiple teams](../../govern/resource-consistency/governance-multiple-teams.md)
-- [Recommended method for granting and restricting permissions](/azure/devops/organizations/security/restrict-access?view=azure-devops#recommended-method-for-granting-and-restricting-permissions)
-- [Default permissions and access for Azure DevOps](/azure/devops/organizations/security/permissions-access?view=azure-devops)
+- [Recommended method for granting and restricting permissions](/azure/devops/organizations/security/restrict-access#recommended-method-for-granting-and-restricting-permissions)
+- [Default permissions and access for Azure DevOps](/azure/devops/organizations/security/permissions-access)
 - [Managing people's access to your organization with roles](https://docs.github.com/en/organizations/managing-peoples-access-to-your-organization-with-roles)
 
 ## Next steps

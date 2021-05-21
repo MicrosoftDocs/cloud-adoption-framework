@@ -99,7 +99,7 @@ To ensure that the feedback loop is effective, it's crucial to tune the tool to 
 
 DevOps brings automation on another level where everything goes through the pipelines. Continuous integration and continuous delivery is a large part of modern development. Infrastructure is why pipelines are a centric part of the development and have keys to the kingdom. Pipelines introduce unique security challenges. They can be compromised to run malicious code, credentials might be stolen from pipelines, or an attacker without access to the production might modify the pipeline to achieve their goals.
 
-DevOps teams must ensure the proper security controls are implemented for the pipeline. Depending on the chosen platform, there are different guidelines on how to address those risks. For the Azure Pipelines, there's a documentation available: [Securing Azure Pipelines](/azure/devops/pipelines/security/overview?view=azure-devops)
+DevOps teams must ensure the proper security controls are implemented for the pipeline. Depending on the chosen platform, there are different guidelines on how to address those risks. For more information, see [LINKTEXT](/azure/devops/pipelines/security/overview).
 
 ## Build and test
 

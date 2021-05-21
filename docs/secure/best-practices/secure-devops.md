@@ -26,7 +26,7 @@ Code changes, not just to software, but also to *pipeline as code* and [Infrastr
 
 #### Pull requests and collaboration
 
-The industry standard workflow, regardless of your software configuration management (SCM) software as a service (SaaS) vendor, is to use [pull requests](/azure/devops/repos/git/pull-requests?view=azure-devops), which can act both as an automated quality gatekeeper and a manual approval step before source code is accepted.
+The industry standard workflow, regardless of your software configuration management (SCM) software as a service (SaaS) vendor, is to use [pull requests](/azure/devops/repos/git/pull-requests), which can act both as an automated quality gatekeeper and a manual approval step before source code is accepted.
 
 The Pull request workflow is designed to introduce healthy friction, which is why it should only be applied to secure _specific Git branches_. Especially the branches that will trigger automated workflows that can deploy, configure, or in any other way affect your cloud resources. These branches are called protected branches and typically follow naming conventions such as `production` or `releases/*`.
 
@@ -69,9 +69,9 @@ Because DevOps is a journey, your Git access model isn't static. It will change 
 
 To learn more about pull requests and protected branches, see:
 
-- [Set branch permissions](/azure/devops/repos/git/branch-permissions?view=azure-devops)
-- [Create, view, and manage pull requests](/azure/devops/repos/git/pull-requests?view=azure-devops)
-- [Improve code quality with branch policies](/azure/devops/repos/git/branch-policies?view=azure-devops)
+- [Set branch permissions](/azure/devops/repos/git/branch-permissions)
+- [Create, view, and manage pull requests](/azure/devops/repos/git/pull-requests)
+- [Improve code quality with branch policies](/azure/devops/repos/git/branch-policies)
 - [About pull requests](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
 - [About protected branches](https://docs.github.com/en/github/administering-a-repository/defining-the-mergeability-of-pull-requests/about-protected-branches)
 
@@ -87,7 +87,7 @@ Pipelines and code repositories should not include hard-coded credentials and se
 
 _How_ a credential is secured, gates, and approvals are vendor-specific features. When choosing a CI platform, make sure it supports all the features you require.
 
-Azure Pipelines is an enterprise scale continuous integration solution where credentials are stored as [Service connections](/azure/devops/pipelines/library/service-endpoints?view=azure-devops&tabs=yaml), upon which you can [configure approvals and checks](/azure/devops/pipelines/process/approvals?view=azure-devops&tabs=check-pass). This configuration includes manual approval and specific branch or pipeline authorizations.
+Azure Pipelines is an enterprise scale continuous integration solution where credentials are stored as [Service connections](/azure/devops/pipelines/library/service-endpoints?tabs=yaml), upon which you can [configure approvals and checks](/azure/devops/pipelines/process/approvals?tabs=check-pass). This configuration includes manual approval and specific branch or pipeline authorizations.
 
 #### Azure Key Vault
 
@@ -121,8 +121,8 @@ To learn more, see:
 ## Resources
 
 - [Platform automation and DevOps](../../ready/enterprise-scale/platform-automation-and-devops.md)
-- [Pipelines security walkthrough](/azure/devops/pipelines/security/overview?view=azure-devops)  
-- [Security through templates](/azure/devops/pipelines/security/templates?view=azure-devops)
+- [Pipelines security walkthrough](/azure/devops/pipelines/security/overview)
+- [Security via templates](/azure/devops/pipelines/security/templates)
 - [DevSecOps in GitHub](/azure/architecture/solution-ideas/articles/devsecops-in-github)
 
 ## Next steps
