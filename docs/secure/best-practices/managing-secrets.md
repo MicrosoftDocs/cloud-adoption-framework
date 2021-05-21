@@ -62,7 +62,7 @@ To learn more, see:
 - [Azure subscription and service limits](/azure/azure-resource-manager/management/azure-subscription-service-limits)
 - [External configuration store pattern](/azure/architecture/patterns/external-configuration-store)
 - [Understanding separation of duties within NIST](https://csrc.nist.gov/glossary/term/Separation_of_Duty)
-- [Applying Azure Policy's NIST service principal 800-53 R4 controls that includes Separation of Duties](/azure/governance/policy/samples/nist-sp-800-53-r4)
+- [Applying Azure Policy's NIST SP 800-53 R4 controls that includes Separation of Duties](/azure/governance/policy/samples/nist-sp-800-53-r4)
 - [Start with the Azure Key Vault security baseline](/security/benchmark/azure/baselines/key-vault-security-baseline?context=/azure/key-vault/general/context/context)
 - [Review and validate against the Azure Key Vault authentication fundamentals](/azure/key-vault/general/authentication)
 - [Azure Policy regulatory compliance controls for Azure Key Vault](/azure/key-vault/security-controls-policy)
