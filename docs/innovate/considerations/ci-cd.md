@@ -60,7 +60,7 @@ Continuous integration is the automating of code multiple times per day to have 
 
 In continuous integration, code changes are frequently merged into the main branch. Automated build and test processes make sure that code in the main branch is always production quality. This ensures that developers are working together to develop shared solutions that provide accurate and reliable feedback loops.
 
-Azure DevOps and [Azure Pipelines](/azure/devops/pipelines/) provide continuous integration capabilities with just a few steps in GitHub or other repositories. For more information, see [What is continuous integration?](/azure/devops/learn/what-is-continuous-integration) or check out the [hands-on lab](https://www.azuredevopslabs.com/labs/azuredevops/continuousintegration/). Solution architectures are available that can accelerate creation of your [CI/CD pipelines via Azure DevOps](https://azure.microsoft.com/solutions/devops/).
+Azure DevOps and [Azure Pipelines](/azure/devops/pipelines/) provide continuous integration capabilities with just a few steps in GitHub or other repositories. For more information, see [What is continuous integration?](/devops/deliver/what-is-continuous-integration) or try the [continuous integration hands-on lab](https://www.azuredevopslabs.com/labs/azuredevops/continuousintegration/). Solution architectures are available that can accelerate creation of your [CI/CD pipelines via Azure DevOps](https://azure.microsoft.com/solutions/devops/).
 
 ## Reliable testing
 
@@ -84,7 +84,7 @@ During the first iteration of an MVP solution, manual deployment is common, desp
 
 Investing early can lead to lost time. More importantly, it can create dependencies on the release pipeline that make the team more resistant to an early pivot. After the first few iterations or when customer feedback suggests potential success, a more advanced model of deployment should be quickly adopted.
 
-At any stage of hypothesis validation, Azure DevOps and [Azure Pipelines](/azure/devops/pipelines/) provide continuous delivery and continuous deployment capabilities. Learn more about [continuous delivery](/azure/devops/learn/what-is-continuous-delivery), or check out the [hands-on lab](https://www.azuredevopslabs.com/labs/azuredevops/continuousdeployment/). Solution architecture can also accelerate creation of your [CI/CD pipelines through Azure DevOps](https://azure.microsoft.com/solutions/devops/).
+At any stage of hypothesis validation, Azure DevOps and [Azure Pipelines](/azure/devops/pipelines/) provide continuous delivery and continuous deployment capabilities. Learn more about [continuous delivery](/devops/deliver/what-is-continuous-delivery), or check out the [hands-on lab](https://www.azuredevopslabs.com/labs/azuredevops/continuousdeployment/). Solution architecture can also accelerate creation of your [CI/CD pipelines through Azure DevOps](https://azure.microsoft.com/solutions/devops/).
 
 ## Integrated measurements
 
