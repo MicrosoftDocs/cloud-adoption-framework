@@ -28,7 +28,7 @@ You can view a video presentation of these best practices in the [Microsoft Tech
 
 **Why**: Moving to the cloud is a significant change that requires a shift in mindset and approach for security. While the outcomes security provides to the organization won't change, the best way to accomplish this in the cloud often changes, sometimes significantly.
 
-In many ways, moving to the cloud is similar to moving from a standalone house into a high-rise luxury apartment building. You still have basic infrastructure (plumbing, electricity, etc.) and perform similar activities (socializing, cooking, TV and Internet, etc.) but there often quite a difference in what comes with the building (gym, restaurants, etc.), who provides and maintains them, and your daily routine.
+In many ways, moving to the cloud is similar to moving from a standalone house into a high-rise luxury apartment building. You still have basic infrastructure (like plumbing and electricity) and perform similar activities (such as socializing, cooking, TV and internet, and so on). However, there is often quite a difference in what comes with the building (like restaurants or a gym), who provides and maintains them, and your daily routine.
 
 **Who**: Everyone in the security and IT organization with any security responsibilities should be familiar with this context and the changes (from CIO/CISO to technical practitioners).
 
@@ -70,7 +70,7 @@ Microsoft provides extensive resources to help technical professionals ramp up o
 
 - Azure Security
   - AZ-500 [learning path](/learn/certifications/exams/az-500?tab=tab-learning-paths) (and certification)
-  - [Azure security benchmark (ASB)](/security/benchmark/azure/) -Prescriptive Best Practices and Controls for Azure Security
+  - [Azure Security Benchmark (ASB)](/security/benchmark/azure/) -Prescriptive Best Practices and Controls for Azure Security
     - [Security Baselines for Azure](/security/benchmark/azure/security-baselines-overview): Application of ASB to individual Azure Services
   - [Microsoft security best practices](/security/compass/microsoft-security-compass-introduction) - Videos and Documentation
 - Azure Compliance
@@ -78,7 +78,7 @@ Microsoft provides extensive resources to help technical professionals ramp up o
 - Identity Protocols and Security
   - [Azure security documentation site](/azure/security/)
   - Azure AD Authentication [YouTube series](https://www.youtube.com/playlist?list=PLLasX02E8BPD5vC2XHS_oHaMVmaeHHPLy)
-  - [Securing Azure environments with Azure active directory](https://azure.microsoft.com/resources/securing-azure-environments-with-azure-active-directory/)
+  - [Securing Azure environments with Azure Active Directory](https://azure.microsoft.com/resources/securing-azure-environments-with-azure-active-directory/)
 
 Also see the Azure Security Benchmark [GS-3: Align organization roles, responsibilities, and accountabilities](/security/benchmark/azure/security-controls-v2-governance-strategy#gs-3-align-organization-roles-responsibilities-and-accountabilities)
 
@@ -103,12 +103,12 @@ These are the typical areas where security decisions are needed, descriptions, a
 
 | Decision         | Description           | Typical Team  |
 | ------------- |-------------| -----|
-| Network Security | Configuration and maintenance of Azure Firewall, Network Virtual Appliances (and associated routing), WAFs, NSGs, ASGs, etc. | *Typically [Infrastructure and endpoint security](../organize/cloud-security-infrastructure-endpoint.md) team focused on network security*  |
+| Network Security | Configuration and maintenance of Azure Firewall, Network Virtual Appliances (and associated routing), WAFs, NSGs, ASGs, and so on. | *Typically [Infrastructure and endpoint security](../organize/cloud-security-infrastructure-endpoint.md) team focused on network security*  |
 | Network Management | Enterprise-wide virtual network and subnet allocation | *Typically existing network operations team in [Central IT Operations](../organize/central-it.md)* |
-| Server Endpoint Security | Monitor and remediate server security (patching, configuration, endpoint security, etc.) | *Typically [Central IT Operations](../organize/central-it.md) and [Infrastructure and endpoint security](../organize/cloud-security-infrastructure-endpoint.md) teams jointly* |
-| Incident Monitoring and Response | Investigate and remediate security incidents in SIEM or source console (Azure Security Center, Azure AD Identity Protection, etc.) | *Typically [security operations](../organize/cloud-security-operations-center.md) team* |
+| Server Endpoint Security | Monitor and remediate server security (patching, configuration, endpoint security, and so on.) | *Typically [Central IT Operations](../organize/central-it.md) and [Infrastructure and endpoint security](../organize/cloud-security-infrastructure-endpoint.md) teams jointly* |
+| Incident Monitoring and Response | Investigate and remediate security incidents in SIEM or source console (Azure Security Center, Azure AD Identity Protection, and so on.) | *Typically [security operations](../organize/cloud-security-operations-center.md) team* |
 | Policy Management | Set direction for use of Azure role-based access control (Azure RBAC), Azure Security Center, Administrator protection strategy, and Azure Policy to govern Azure resources | *Typically [Policy and Standards](../organize/cloud-security-policy-standards.md) + [Security Architecture](../organize/cloud-security-architecture.md) Teams jointly* |
-| Identity Security and Standards | Set direction for Azure AD directories, PIM/PAM usage, MFA, password/synchronization configuration, Application Identity Standards | *Typically [Identity and Key Management](../organize/cloud-security-identity-keys.md) + [Policy and Standards](../organize/cloud-security-policy-standards.md) + [Security Architecture](../organize/cloud-security-architecture.md) Teams jointly*  |
+| Identity Security and Standards | Set direction for Azure AD directories, PIM/PAM usage, multifactor authentication, password/synchronization configuration, Application Identity Standards | *Typically [Identity and Key Management](../organize/cloud-security-identity-keys.md) + [Policy and Standards](../organize/cloud-security-policy-standards.md) + [Security Architecture](../organize/cloud-security-architecture.md) Teams jointly*  |
 
 > [!NOTE]
 >
@@ -138,20 +138,20 @@ While similar in many ways, cloud platforms have important technical difference 
 
 **How**: Update processes and prepare your team so they know what to do when they find an active attacker.
 
-- **Processes and Playbooks:** Adapt existing investigations, remediation, and threat hunting processes to the differences of how cloud platforms work (new/different tools, data sources, identity protocols, etc.).
+- **Processes and Playbooks:** Adapt existing investigations, remediation, and threat hunting processes to the differences of how cloud platforms work (new/different tools, data sources, identity protocols, and so on.).
 
 - **Education:** Educate analysts on the overall cloud transformation, technical details of how the platform works, and new/updated processes so that they know what will be different and where to go for what they need.
 
 **Key Focus Areas**: While there are many details described in the resource links, these are key areas to focus your education and planning efforts:
 
-- **Shared responsibility model and cloud architectures:** To a security analyst, Azure is a software defined datacenter that provides many services including VMs (familiar) and others that are very different from on-premises such as Azure SQL Azure Functions, etc. where the best data is in the service logs or the specialized threat detection services rather than in logs for the underlying OS/VMs (which are operated by Microsoft and service multiple customers). Analysts need to understand and integrate this context into their daily workflows so they know what data to expect, where to get it, and what format it will be in.
-- **Endpoint data sources:** Getting insights and data for attacks and malware on cloud hosted servers is often faster, easier, and more accurate with native cloud detection tools like Azure Security Center and EDR systems as opposed to traditional approaches of direct disk access. While direct disk forensics are available for scenarios where it is possible and required for legal proceedings ([Computer forensics in Azure](/azure/architecture/example-scenario/forensics/)), this is often the most inefficient way to detect and investigate attacks.
+- **Shared responsibility model and cloud architectures:** To a security analyst, Azure is a software defined datacenter that provides many services including VMs (familiar) and others that are very different from on-premises such as Azure SQL Database Azure Functions, and so on. where the best data is in the service logs or the specialized threat detection services rather than in logs for the underlying OS/VMs (which are operated by Microsoft and service multiple customers). Analysts need to understand and integrate this context into their daily workflows so they know what data to expect, where to get it, and what format it will be in.
+- **Endpoint data sources:** Getting insights and data for attacks and malware on cloud hosted servers is often faster, easier, and more accurate with native cloud detection tools like Azure Security Center and EDR systems as opposed to traditional approaches of direct disk access. While direct disk forensics are available for scenarios where it's possible and required for legal proceedings ([Computer forensics in Azure](/azure/architecture/example-scenario/forensics/)), this is often the most inefficient way to detect and investigate attacks.
 - **Network and Identity data sources:** Many functions of cloud platforms primarily use identity primarily for access control such as access to the Azure portal (though network access controls are used extensively as well). This requires analysts to develop an understanding of cloud identity protocols to get a full, rich, picture of attacker activity (and legitimate user activity) to support incident investigation and remediation. Identity directories and protocols are also different from on-premises as they are typically based on SAML, OAuth, and OIDC and Cloud directories rather than LDAP, Kerberos, NTLM, and Active Directory that are commonly found on-premises.
 - **Practice exercises:** Simulated attacks and response can help build organizational muscle memory and technical readiness for your security analysts, threat hunters, incident managers, and other stakeholders in your organization. Learning on the job and adapting is a natural part of incident response, but you should work to minimize how much you have to learn in a crisis.
 
 **Key Resources:**
 
-- [Incident Response Reference Guide](https://aka.ms/IRRG) (IRRG)
+- [Incident response Reference Guide](https://aka.ms/IRRG) (IRRG)
 - Guidance on [building your own security incident response process](https://msrc-blog.microsoft.com/2019/07/01/inside-the-msrc-building-your-own-security-incident-response-process/)
 - [Azure Logging and Alerting](/azure/security/fundamentals/log-audit)
 - Microsoft Security Best Practices
@@ -177,7 +177,7 @@ Also see the Azure Security Benchmark [IR-1: Preparation - update incident respo
 
 **Why**: Rapidly identifying and remediating common security hygiene risks significantly reduces organizational risk.
 
-The software defined nature of cloud datacenters enables continuous monitoring of security risk (software vulnerabilities, security misconfigurations, etc.) with extensive asset instrumentation. The speed at which developers and IT team can deploy VMs, databases, and other resources also create a need to ensure resources are configured securely and actively monitored.
+The software-defined nature of cloud datacenters enables continuous monitoring of security risks (such as software vulnerabilities or security misconfigurations) with extensive asset instrumentation. The speed at which developers and IT team can deploy VMs, databases, and other resources also create a need to ensure resources are configured securely and actively monitored.
 
 These new capabilities offer new possibilities, but realizing value from them requires assigning responsibility for using them. Executing consistently on with rapidly evolving cloud operations also requires keeping human processes as simple and automated as possible. See the "Drive Simplicity" [security principle](/azure/architecture/framework/security/security-principles).
 
@@ -189,17 +189,17 @@ These new capabilities offer new possibilities, but realizing value from them re
 - [Security posture management](../organize/cloud-security-posture-management.md) - This newer function is often an evolution of existing vulnerability management or governance functions. This includes monitoring overall security posture using Azure Security Center Secure Score and other data sources, actively working with resource owners to mitigate risks, and reporting risk to security leadership.
 - **Security remediation:** Assign accountability for addressing these risks to the teams responsible for managing those resources. This should either the DevOps teams managing their own application resources or the technology-specific teams in **[Central IT Operations](../organize/central-it.md)**:
 
-  - **Compute and Apps Resources:**
-    - **App Services:** Application Development/Security Team(s)
-    - **Containers:** Application Development and/or Infrastructure/IT Operations
+  - **Compute and application resources:**
+    - **App Services:** Application Development/Security Teams
+    - **Containers:** Application Development or Infrastructure/IT Operations
     - **VMs/Scale sets/compute:** IT/Infrastructure Operations
-  - **Data & Storage Resources:**
+  - **Data and storage resources:**
     - **SQL/Redis/Data Lake Analytics/Data Lake Store:** Database Team
     - **Storage Accounts:** Storage/Infrastructure Team
-  - **Identity and Access Resources:**
-    - **Subscriptions:** Identity Team(s)
+  - **Identity and access resources:**
+    - **Subscriptions:** Identity Teams
     - **Key Vault:** Identity or Information/Data Security Team
-  - **Networking Resources:** Network Security Team
+  - **Networking resources:** Network Security Team
   - **IoT Security:** IoT Operations Team
 
 **How**: Security is everyone's job, but not everyone currently knows how important it is, what to do, and how to do it.
@@ -208,7 +208,7 @@ These new capabilities offer new possibilities, but realizing value from them re
 - Support resource owners with a clear understanding of why security risk matters to their assets, what they should do to mitigate risk, and how to implement it with minimal productivity loss.
 
 > [!IMPORTANT]
-> The explanations for why, what, and how to secure resources are often similar across different resource types and applications, but it's critical to relate these to what each team already knows and cares about. Security teams should engage with their IT and DevOps counterparts as a trusted advisor and partner focused on enabling these teams to be successful.
+> The explanations for why, what, and how to secure resources are often similar across different resource types and applications, but it's critical to relate these to what each team already knows and cares about. Security teams should engage with their IT and DevOps counterparts as a trusted Advisor and partner focused on enabling these teams to be successful.
 
 **Tooling**: [Secure Score](/azure/security-center/secure-score-security-controls) in Azure Security Center provides an assessment of the most important security information in Azure for a wide variety of assets. This should be your starting point on posture management and can be supplemented with custom Azure policies and other mechanisms as needed.
 
@@ -219,17 +219,17 @@ These new capabilities offer new possibilities, but realizing value from them re
 
 Also see the Azure Security Benchmark [GS-2: Define security posture management strategy](/security/benchmark/azure/security-controls-v2-governance-strategy#gs-2-define-security-posture-management-strategy).
 
-## 6. Technology: Require Passwordless or Multi-Factor Authentication (MFA)
+## 6. Technology: Require Passwordless or multifactor authentication
 
-*Are you willing to bet the security of your enterprise that professional attackers can't guess or steal your admin's password?*
+*Are you willing to bet the security of your enterprise that professional attackers can't guess or steal your administrator's password?*
 
-**What**: Require all critical impact admins to use passwordless or multi-factor authentication (MFA).
+**What**: Require all critical impact admins to use passwordless or multifactor authentication.
 
 **Why**: Just as antique skeleton keys won't protect a house against a modern day burglar, passwords cannot protect accounts against common attacks we see today. Technical details are described in [Your Pa$$word doesn't matter](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/your-pa-word-doesn-t-matter/ba-p/731984).
 
-While MFA was once a burdensome extra step, Passwordless approaches today improve the logon experience using biometric approaches like facial recognition in Windows Hello and mobile devices (where you don't have to remember or type a password). Additionally, zero trust approaches remember trusted devices, which reduce prompting for annoying out of band MFA actions (see [user sign-in frequency](/azure/active-directory/conditional-access/howto-conditional-access-session-lifetime#user-sign-in-frequency)).
+While multifactor authentication was once a burdensome extra step, Passwordless approaches today improve the logon experience using biometric approaches like facial recognition in Windows Hello and mobile devices (where you don't have to remember or type a password). Additionally, zero trust approaches remember trusted devices, which reduce prompting for annoying out of band multifactor authentication actions (see [User sign-in frequency](/azure/active-directory/conditional-access/howto-conditional-access-session-lifetime#user-sign-in-frequency)).
 
-**Who**: Password and multi-factor initiative is typically led by [Identity and Key Management](../organize/cloud-security-identity-keys.md) and/or [Security Architecture](../organize/cloud-security-architecture.md).
+**Who**: Password and multifactor initiative is typically led by [Identity and Key Management](../organize/cloud-security-identity-keys.md) or [Security Architecture](../organize/cloud-security-architecture.md).
 
 - **Sponsorship:** This is typically sponsored by CISO, CIO, or Director of Identity
 - **Execution:** This is a collaborative effort involving
@@ -237,17 +237,17 @@ While MFA was once a burdensome extra step, Passwordless approaches today improv
   - [Identity and Key Management](../organize/cloud-security-identity-keys.md) or [Central IT Operations](../organize/central-it.md) to implement the policy
   - [Security Compliance management](../organize/cloud-security-compliance-management.md) monitors to ensure compliance
 
-**How**: Implement Passwordless or MFA authentication, train administrators on how to use it (as needed), and require admins to follow using written policy. This can be accomplished by one or more of these technologies:
+**How**: Implement Passwordless or multifactor authentication authentication, train administrators on how to use it (as needed), and require admins to follow using written policy. This can be accomplished by one or more of these technologies:
 
 - [Passwordless (Windows Hello)](/windows/security/identity-protection/hello-for-business/hello-identity-verification)
 - [Passwordless (Authenticator App)](/azure/active-directory/authentication/howto-authentication-passwordless-phone)
 - [Azure Multifactor Authentication](/azure/active-directory/authentication/howto-mfa-userstates)
-- Third-party MFA solution
+- Third-party multifactor authentication solution
 
 > [!NOTE]
-> Text Message based MFA is now relatively inexpensive for attackers to bypass, so focus on passwordless & stronger MFA.
+> Text Message-based multifactor authentication is now relatively inexpensive for attackers to bypass, so focus on passwordless and stronger multifactor authentication.
 
-Also see the Azure Security Benchmark [ID-4: Use strong authentication controls for all Azure Active Directory based access](/security/benchmark/azure/security-controls-v2-identity-management#id-4-use-strong-authentication-controls-for-all-azure-active-directory-based-access).
+Also see the Azure Security Benchmark [ID-4: Use strong authentication controls for all Azure Active Directory-based access](/security/benchmark/azure/security-controls-v2-identity-management#id-4-use-strong-authentication-controls-for-all-azure-active-directory-based-access).
 
 ## 7. Technology: Integrate native firewall and network security
 
@@ -263,14 +263,14 @@ This can free up your team's time and attention for higher value security tasks 
 
 **Who**:
 
-- **Sponsorship:** This update of network security strategy is typically sponsored by security leadership and/or IT leadership
+- **Sponsorship:** This update of network security strategy is typically sponsored by security leadership or IT leadership
 - **Execution:** Integrating these into your cloud network security strategy is a collaborative effort involving:
 
   - [Security Architecture](../organize/cloud-security-architecture.md) - Establish cloud network security architecture with cloud network and cloud network security leads.
   - **Cloud network leads** ([Central IT Operations](../organize/central-it.md)) + **Cloud Network security leads** ([Infrastructure security Team](../organize/cloud-security-infrastructure-endpoint.md))
     - Establish cloud network security architecture with security architects
     - Configure Firewall, NSG, and WAF capabilities and work with application architects on WAF rules
-  - **Application architects:** Work with network security to build and refine WAF rulesets and DDoS configurations to protect the application without disrupting availability
+  - **Application architects:** Work with network security to build and refine WAF rule sets and DDoS configurations to protect the application without disrupting availability
 
 **How**: Organizations looking to simplify their operations have two options:
 
@@ -310,7 +310,7 @@ These native solutions also enable security operations teams to focus on inciden
   - [Policy and standards](../organize/cloud-security-policy-standards.md): Set standards and policy for enabling native tooling throughout the organization. Monitor for compliance.
   - [Infrastructure and Endpoint](../organize/cloud-security-infrastructure-endpoint.md) / **[Central IT Operations](../organize/central-it.md):** Configure and enable detections, integrate into automation and infrastructure as code solutions.
 
-**How**: Enable [threat detection in Azure security center](/azure/security-center/azure-defender) for all the resources you are using and have each team integrate these into their processes as described above.
+**How**: Enable [threat detection in Azure Security Center](/azure/security-center/azure-defender) for all the resources you are using and have each team integrate these into their processes as described above.
 
 Also see the Azure Security Benchmark [LT-1: Enable threat detection for Azure resources](/security/benchmark/azure/security-controls-v2-logging-threat-detection#lt-1-enable-threat-detection-for-azure-resources).
 
@@ -327,16 +327,16 @@ Also see the Azure Security Benchmark [LT-1: Enable threat detection for Azure r
 
 Managing multiple accounts and directories also creates an incentive for poor security practices such as reusing the same password across accounts and increases the likelihood of stale/abandoned accounts that attackers can target.
 
-While it sometimes seems easier to quickly stand up a custom directory (based on LDAP, etc.) for a particular application or workload, this creates much more integration and maintenance work to set up and manage. This is similar in many ways to the decision of setting up an additional Azure tenant or additional on-premises Active Directory Forest vs. using the existing enterprise one. See also the "Drive Simplicity" [security principle](/azure/architecture/framework/security/security-principles).
+While it sometimes seems easier to quickly stand up a custom LDAP directory for a particular application or workload, this creates much more work to integrate and manage. This is similar to choosing to set up an additional Azure tenant or on-premises Active Directory forest rather than using the existing enterprise tenant. See also the [security principle of driving simplicity](/azure/architecture/framework/security/security-principles).
 
-**Who**: This is often a cross-team effort driven by [Security Architecture](../organize/cloud-security-architecture.md) or [Identity and Key Management](../organize/cloud-security-identity-keys.md) teams.
+**Who**: This is often a cross-team effort, driven by [Security Architecture](../organize/cloud-security-architecture.md) or [Identity and Key Management](../organize/cloud-security-identity-keys.md) teams.
 
 - **Sponsorship:** This is typically sponsored by [Identity and Key management](../organize/cloud-security-identity-keys.md) and [Security Architecture](../organize/cloud-security-architecture.md) (though some organizations may require sponsorship by CISO or CIO)
 - **Execution:** This is a collaborative effort involving:
   - [Security Architecture](../organize/cloud-security-architecture.md): Incorporates into security and IT architecture documents and diagrams
   - [Policy and standards](../organize/cloud-security-policy-standards.md): Document policy and monitor for compliance
   - [Identity and Key Management](../organize/cloud-security-identity-keys.md) or **[Central IT Operations](../organize/central-it.md)** to implement the policy by enabling features and supporting developers with accounts, education, and so on.
-  - **Application developers** and/or **[Central IT Operations](../organize/central-it.md):** Use identity in applications and Azure service configurations (responsibilities will vary based on level of DevOps adoption)
+  - **Application developers** or **[Central IT Operations](../organize/central-it.md):** Use identity in applications and Azure service configurations (responsibilities will vary based on level of DevOps adoption)
 
 **How**: Adopt a pragmatic approach that starts with new *greenfield* capabilities (growing today) and then clean up challenges with the *brownfield* of existing applications and services as a follow-up exercise:
 
@@ -346,8 +346,8 @@ While it sometimes seems easier to quickly stand up a custom directory (based on
 
 The ideal time to consolidate your use of identity is during application development cycles as you:
 
-- Modernize applications for the cloud
-- Update cloud applications with DevOps processes
+- Modernize applications for the cloud.
+- Update cloud applications with DevOps processes.
 
 While there are valid reasons for a separate directory in the case of extremely independent business units or regulatory requirements, multiple directories should be avoided in all other circumstances.
 
@@ -358,29 +358,29 @@ Also see the Azure Security Benchmark [ID-1: Standardize Azure Active Directory 
 >
 > For more information, see Azure Security Benchmark [Privileged Access](/security/benchmark/azure/security-controls-v2-privileged-access).
 
-## 10. Architecture: Use identity based access control (instead of keys)
+## 10. Architecture: Use identity-based access control (instead of keys)
 
-**What**: Use Azure AD identities instead of key based authentication wherever possible (Azure Services, Applications, APIs, etc.).
+**What**: Use Azure AD identities instead of key-based authentication wherever possible (Azure Services, Applications, APIs, and so on.).
 
-**Why**: Key based authentication can be used to authenticate to cloud services and APIs but requires managing keys securely, which is challenging to perform well (especially at scale). Secure key management is difficult for non-security professionals like developers and infrastructure professionals and they often fail to do it securely, often creating major security risks for the organization.
+**Why**: Key-based authentication can be used to authenticate to cloud services and APIs but requires managing keys securely, which is challenging to perform well (especially at scale). Secure key management is difficult for non-security professionals like developers and infrastructure professionals and they often fail to do it securely, often creating major security risks for the organization.
 
-Identity based authentication overcomes many of these challenges with mature capabilities for secret rotation, lifecycle management, administrative delegation, and more.
+Identity-based authentication overcomes many of these challenges with mature capabilities for secret rotation, lifecycle management, administrative delegation, and more.
 
-**Who**: This is often a cross-team effort driven by [Security Architecture](../organize/cloud-security-architecture.md) or [Identity and Key management](../organize/cloud-security-identity-keys.md) teams.
+**Who**: This is often a cross-team effort, driven by [Security Architecture](../organize/cloud-security-architecture.md) or [Identity and Key management](../organize/cloud-security-identity-keys.md) teams.
 
 - **Sponsorship:** This is typically sponsored by [Security Architecture](../organize/cloud-security-architecture.md) or [Identity and Key management](../organize/cloud-security-identity-keys.md)  (though some organizations may require sponsorship by CISO or CIO).
 - **Execution:** This is a collaborative effort involving
   - [Security Architecture](../organize/cloud-security-architecture.md): Incorporates into Security and IT Architecture diagrams and documents.
   - [Policy and standards](../organize/cloud-security-policy-standards.md): Document policy and monitor for compliance.
-  - [Identity and Key Management](../organize/cloud-security-identity-keys.md) or **[Central IT Operations](../organize/central-it.md)** to implement the policy by enabling features and supporting developers with accounts, education, etc.
-  - **App developers** and/or **[Central IT Operations](../organize/central-it.md):** Use identity in applications and Azure service configurations (responsibilities will vary based on level of DevOps adoption).
+  - [Identity and Key Management](../organize/cloud-security-identity-keys.md) or **[Central IT Operations](../organize/central-it.md)** to implement the policy by enabling features and supporting developers with accounts, education, and so on.
+  - **App developers** or **[Central IT Operations](../organize/central-it.md):** Use identity in applications and Azure service configurations (responsibilities will vary based on level of DevOps adoption).
 
 **How**: Setting an organizational preference and habit for using identity-based authentication requires following a process and enabling technology.
 
 **The process:**
 
 1. **Establish policy** and standards that clearly outline the default identity-based authentication, as well as acceptable exceptions.
-2. **Educate** developers & infrastructure teams on why to use the new approach, what they need to do, and how to do it.
+2. **Educate** developers and infrastructure teams on why to use the new approach, what they need to do, and how to do it.
 3. **Implement** changes in a pragmatic way - starting with new greenfield capabilities being adopted now and in the future (new Azure services, new applications) and then following up with a clean-up of existing brownfield configurations.
 4. **Monitor** for compliance and follow up with developer and infrastructure teams to remediate.
 

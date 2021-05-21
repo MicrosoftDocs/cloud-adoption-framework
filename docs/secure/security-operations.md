@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Security operations
 
-This article provides strategic guidance for leaders establishing or modernizing a security operation function. For architecture and technology focused best practices, see [best practices for security operations](https://aka.ms/secopstech).
+This article provides strategic guidance for leaders establishing or modernizing a security operation function. For architecture and technology focused best practices, see [Best practices for security operations](https://aka.ms/secopstech).
 
 Security operations reduce risk by limiting damage from attackers who gain access to your organization's resources. Security operations focus on reducing the time attackers have access to resources by detecting, responding to, and helping recover from active attacks.
 
@@ -102,11 +102,11 @@ The transformation of security operations is driven primarily by the following t
   - Attackers have incorporated identity attacks, like phishing, credential theft, password spray, and other attack types into their arsenal that reliably evade network-based detections.
   - Assets of value, like bring your own devices (BYODs) spend some or all of their lifecycle outside the network perimeter, limiting the utility of network detections.
 - **Internet of Things (IoT) and Operational Technology (OT) coverage:** Adversaries actively target IoT and OT devices as part of their attack chains. These targets might be the ultimate purpose of an attack or a means to access or traverse the environment.
-- **Cloud processing of telemetry:** Security operations modernization is required because of the massive increase in relevant telemetry that comes from the cloud. This telemetry is difficult or impossible to process with on-premises resources and classic techniques. It then drives SecOps to embrace cloud services that provide massive scale analytics, machine learning (ML), and behavior analytics. These technologies help rapidly extract the value to meet the time sensitive needs of security operations.
+- **Cloud processing of telemetry:** Security operations modernization is required because of the massive increase in relevant telemetry that comes from the cloud. This telemetry is difficult or impossible to process with on-premises resources and classic techniques. It then drives SecOps to embrace cloud services that provide massive scale analytics, machine learning, and behavior analytics. These technologies help rapidly extract the value to meet the time sensitive needs of security operations.
 
 It's important to invest in updated SecOps tools and training to ensure security operations can meet these challenges. For more information, see [Update incident response processes for cloud](security-top-10.md#4-process-update-incident-response-processes-for-cloud).
 
-For more information on Security Operations roles and responsibilities, see [Security Operations](../organize/cloud-security-operations-center).
+For more information on Security Operations roles and responsibilities, see [Security Operations](../organize/cloud-security-operations-center.md).
 
 For more architecture and technology focused best practices, see [Microsoft security best practices for security operations](https://aka.ms/secopstech) and the [videos and slides](/security/compass/security-operations-videos-and-decks).
 

@@ -1,6 +1,6 @@
 ---
-title: Security Toolchain
-description: Start browsing best practices for using the Cloud Adoption Framework in Azure and Innovate methodology to create a toolchain for Security
+title: Security toolchain
+description: Review best practices for using the Cloud Adoption Framework for Azure and the Innovate methodology to create a toolchain for security.
 author: NaomiOooo
 ms.author: naomio
 ms.date: 04/04/2021
@@ -10,12 +10,12 @@ ms.subservice: secure
 ms.custom: internal
 ---
 
-## Security toolchain
+# Security toolchain
 
 Commonly used tools in Azure Security:
 
 - [Azure Active Directory](/azure/active-directory/)
-- [Azure Role Based Access Control (RBAC)](/azure/role-based-access-control/)
+- [Azure Role-based Access Control (RBAC)](/azure/role-based-access-control/)
 - [Azure Defender](/azure/security-center/azure-defender)
 - [Azure DDoS Protection](/azure/ddos-protection/)
 - [Azure Firewall](/azure/firewall/)
@@ -30,6 +30,6 @@ Commonly used tools in Azure Security:
 Additional resources:
 
 - [Microsoft Zero Trust Blog](https://www.microsoft.com/security/blog/zero-trust/)
-- [Implementing a Zero Trust security model at Microsoft](https://www.microsoft.com/en-us/itshowcase/implementing-a-zero-trust-security-model-at-microsoft)
+- [Implementing a Zero Trust security model at Microsoft](https://www.microsoft.com/itshowcase/implementing-a-zero-trust-security-model-at-microsoft)
 - [Microsoft Security Blog](https://www.microsoft.com/security/blog/)
 - [Microsoft Security Response Center (MSRC) Blog](https://msrc-blog.microsoft.com/)

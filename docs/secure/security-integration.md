@@ -52,7 +52,7 @@ Teams should strive for the best balance between two absolute truths:
 
 It's critical to find a balance as security is integrated into the process. Stakeholders must all work together to ensure business concerns, IT reliability and performance concerns, and security concerns are considered and balanced. Organizations need to also work on solving for the 80 percent and planning for the other 20 percent. By holding off on controls, features, and capabilities for security until there is a 100 percent solution, organizations will put everything they do at risk of exposure. Iterative approaches work well, as do the basics of updating and education.
 
-For more information about healthy security friction, see The [right level of security friction](../../strategy/define-security-strategy.md#the-right-level-of-security-friction) in the security strategy guidance.
+For more information about healthy security friction, see The [right level of security friction](../strategy/define-security-strategy.md#the-right-level-of-security-friction) in the security strategy guidance.
 
 The next section illustrates how to integrate security stakeholders with IT, end users, and workload owners. It also includes examples for within the security team.
 
@@ -82,11 +82,11 @@ This process is followed on a regular schedule:
 - Workload owners are given a fixed period of time to test the updates, apply them to production systems, and reboot as required. After that self-service period, and any grace period expires, enterprise IT and security teams will either force the update to apply or isolate them from other corporate resources. Some organizations with stringent requirements might decommission the assets by deleting them from Azure Subscriptions or AWS Accounts.
 - Enterprise IT and security teams monitor the status of the update and conduct any forced remediation that's identified.
 
-This process is not static and it's not set up in one day. It's built iteratively and continuously improved over time. Start wherever you are and continually improve the process to make incremental progress towards this end state. Use the following dimensions for continuous improvement planning:
+This process is not static and it's not set up in one day. It's built iteratively and continuously improved over time. Start wherever you are and continually improve the process to make incremental progress toward this end state. Use the following dimensions for continuous improvement planning:
 
 - **Coverage:** Start with a few application teams that have a high chance of success or have a large business impact if compromised. Add more until you cover all workloads in your environment.
 - **Time:** Start with deadlines that you know you can accomplish and set a clear roadmap to continually shorten them until you are close to fully updated in a week or less.
-- Technology scope. Continuously improve what patches and technologies you cover, including applications, middleware, and open-source components used in application code. You should encourage the use of components that are updated for you to lower the maintenance burden. For example, use [Azure SQL](/azure/azure-sql/) instead of installing and updating your own SQL server.
+- Technology scope. Continuously improve what patches and technologies you cover, including applications, middleware, and open-source components used in application code. You should encourage the use of components that are updated for you to lower the maintenance burden. For example, use [Azure SQL Database](/azure/azure-sql/) instead of installing and updating your own SQL Server.
 - **Processes:** Continually improve communication channels between teams, prioritization guidance, exception processes, and all other aspects of this process.
 
 ## Integrate security teams

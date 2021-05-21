@@ -90,7 +90,7 @@ To fulfill the zero trust principle of explicit validation, it's critical to mak
 - Whether the device has been compromised by an attacker.
 - Whether the user has the appropriate roles and permissions.
 
-Microsoft built a threat intelligence system that integrates security context from many and diverse signal sources. For more information, see [summary of Microsoft Threat Intelligence](https://aka.ms/threatintelligence).
+Microsoft built a threat intelligence system that integrates security context from many and diverse signal sources. For more information, see [Summary of Microsoft Threat Intelligence](https://aka.ms/threatintelligence).
 
 ## Segmentation: Separate to protect
 

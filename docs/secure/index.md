@@ -28,19 +28,19 @@ The Cloud Adoption Framework provides security guidance for this security journe
 
 Security itself is both a standalone organizational discipline and a quality/attribute that is integrated/overlaid on other disciplines, which makes it difficult to precisely define and map in detail. The security industry uses many different frameworks to capture risk, plan controls, and operate. This is a quick summary of how the disciplines in the CAF secure methodology disciplines relates to other security concepts and guidance:
 
-- **Zero Trust:** Microsoft believes all security disciplines should follow the Zero Trust principles of *assume breach*, *verify explicitly*, and *use least privilege access*. These underpin any sound [security strategy](https://aka.ms/securitystrategy) and also must be balanced with *business enablement* goals. The first and most visible part of zero trust is in access control, so it is highlighted in the description of access control security discipline.
+- **Zero Trust:** Microsoft believes all security disciplines should follow the Zero Trust principles of *assume breach*, *verify explicitly*, and *use least privilege access*. These underpin any sound [security strategy](https://aka.ms/securitystrategy) and also must be balanced with *business enablement* goals. The first and most visible part of zero trust is in access control, so it's highlighted in the description of access control security discipline.
 
-- **The Open Group:** These security disciplines map closely to the Zero Trust Components in the [Core principles whitepaper](https://publications.opengroup.org/security-library/w210) published by The Open Group, where Microsoft actively participates. The one notable exception is that Microsoft elevated the discipline of Innovation Security so that DevSecOps is a top level element because of how new, important, and transformative this discipline is for many organizations.
+- **The Open Group:** These security disciplines map closely to the Zero Trust Components in the [Core principles white paper](https://publications.opengroup.org/security-library/w210) published by The Open Group, where Microsoft actively participates. The one notable exception is that Microsoft elevated the discipline of Innovation Security so that DevSecOps is a top level element because of how new, important, and transformative this discipline is for many organizations.
 
 - **NIST Cybersecurity Framework (CSF):** For organizations that use the [NIST cybersecurity framework](https://www.nist.gov/cyberframework), we have highlighted bold text where the NIST CSF most closely maps. Modern access control and DevSecOps map broadly to the full spectrum of CSF so aren't noted individually.
 
 ## Mapping to Roles and Responsibilities
 
-While security is a highly technical discipline, it is first and foremost a human discipline reflective of the long history of human conflict (just updated for computers and the internet). The following diagram summarizes the roles and responsibilities in a security program.
+While security is a highly technical discipline, it's first and foremost a human discipline reflective of the long history of human conflict (just updated for computers and the internet). The following diagram summarizes the roles and responsibilities in a security program.
 
 :::image type="content" source="./media/roles-and-responsibilities.png" alt-text="View of the responsibilities/functions of an enterprise security team" lightbox="./media/roles-and-responsibilities-popout.png":::
 
-For more information on these, see https://aka.ms/securityroles
+For more information, see [Cloud security functions](../organize/cloud-security.md).
 
 ## Security Transformation
 
@@ -81,7 +81,7 @@ Because of these shifts, your cloud adoption program should focus heavily on bus
 This transformation will affect each security discipline differently. While all of these are extremely important and require investment, these are ordered (roughly) by which ones have the most immediate opportunities for quick wins as you adopt the cloud :
 
 - **Access Control:** Application of network and identity create access boundaries and segmentation to reduce the frequency and reach of any security breaches
-- **Security Operations:** Monitor IT operations to detect, respond, and recover from breach. Use data to continously reduce risk of breach
+- **Security Operations:** Monitor IT operations to detect, respond, and recover from breach. Use data to continuously reduce risk of breach
 - **Asset Protection:** Maximize protection of all assets (Infrastructure, Devices, Data, Applications, Networks, and Identities) to minimize risk to the overall environment
 - **Security Governance:** Delegated decisions accelerate innovation and introduce new risks. Monitor decisions, configurations, and data to govern decisions made across the environment and within all workloads across the portfolio.
 - **Innovation Security:** As organization adopt DevOps models to increase the pace of innovation, security must become an integral part of a DevSecOps process and integrate security expertise and resources directly into this high speed cycle. This involves shifting some decision making from centralized teams to empower workload-focused teams.
@@ -93,8 +93,8 @@ All security activities should be aligned to and shaped by a dual focus on
 - **Business Enablement:** Align to organization's business objective and risk framework
 - **Security Assurances:** Focused on applying zero trust principles of
   - **Assume Breach:** When designing security for any component or system, reduce risk of attackers expanding access by assuming other resources in the organization are compromised
-  - **Explicit Verification:** Explicitly validate trust using all available data points, rather than assuming trust. (e.g. in access control validate the user identity, location, device health, service or workload, data classification, and anomalies rather than simply allowing access from an implicitly trusted internal network)
-  - **Least Privileged Access:** Limit the risk of a compromised user or resource by providing just-in-time and just-enough-access (JIT/JEA), risk-based adaptive polices, and data protection to help secure both data and productivity.
+  - **Explicit Verification:** Explicitly validate trust using all available data points, rather than assuming trust. For example, in access control, validate the user identity, location, device health, service or workload, data classification, and anomalies, rather than simply allowing access from an implicitly trusted internal network.
+  - **Least-privileged access:** Limit the risk of a compromised user or resource by providing just-in-time and just-enough-access (JIT/JEA), risk-based adaptive policies, and data protection to help secure both data and productivity.
 
 ### Additional Resources
 
@@ -102,5 +102,5 @@ This CAF Secure methodology is part of a comprehensive set of security guidance 
 
 - [**Azure Well-Architected Framework**](/azure/architecture/framework/security/overview): Guidance on securing your workloads on Azure.
 - [**Azure Security Benchmarks**](https://aka.ms/benchmarkdocs): Prescriptive Best Practices and Controls for Azure Security.
-- [**Enterprise Scale Landing Zone**](../../ready/enterprise-scale/security-governance-and-compliance.md): Azure Reference architecture and implementation with integrated security.
+- [**Enterprise Scale Landing Zone**](../ready/enterprise-scale/security-governance-and-compliance.md): Azure Reference architecture and implementation with integrated security.
 - [**Azure Top 10 Security Best Practices**](https://aka.ms/azuresecuritytop10): Top Azure security best practices that Microsoft recommends based on lessons learned across customers and our own environments.
