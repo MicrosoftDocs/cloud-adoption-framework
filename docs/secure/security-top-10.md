@@ -28,7 +28,7 @@ You can view a video presentation of these best practices in the [Microsoft Tech
 
 **Why**: Moving to the cloud is a significant change that requires a shift in mindset and approach for security. While the outcomes security provides to the organization won't change, the best way to accomplish this in the cloud often changes, sometimes significantly.
 
-In many ways, moving to the cloud is similar to moving from a standalone house into a high-rise luxury apartment building. You still have basic infrastructure (plumbing, electricity, and so on.) and perform similar activities (socializing, cooking, TV and Internet, and so on.) but there often quite a difference in what comes with the building (gym, restaurants, and so on.), who provides and maintains them, and your daily routine.
+In many ways, moving to the cloud is similar to moving from a standalone house into a high-rise luxury apartment building. You still have basic infrastructure (like plumbing and electricity) and perform similar activities (such as socializing, cooking, TV and internet, and so on). However, there is often quite a difference in what comes with the building (like restaurants or a gym), who provides and maintains them, and your daily routine.
 
 **Who**: Everyone in the security and IT organization with any security responsibilities should be familiar with this context and the changes (from CIO/CISO to technical practitioners).
 
@@ -177,7 +177,7 @@ Also see the Azure Security Benchmark [IR-1: Preparation - update incident respo
 
 **Why**: Rapidly identifying and remediating common security hygiene risks significantly reduces organizational risk.
 
-The software defined nature of cloud datacenters enables continuous monitoring of security risk (software vulnerabilities, security misconfigurations, and so on.) with extensive asset instrumentation. The speed at which developers and IT team can deploy VMs, databases, and other resources also create a need to ensure resources are configured securely and actively monitored.
+The software-defined nature of cloud datacenters enables continuous monitoring of security risks (such as software vulnerabilities or security misconfigurations) with extensive asset instrumentation. The speed at which developers and IT team can deploy VMs, databases, and other resources also create a need to ensure resources are configured securely and actively monitored.
 
 These new capabilities offer new possibilities, but realizing value from them requires assigning responsibility for using them. Executing consistently on with rapidly evolving cloud operations also requires keeping human processes as simple and automated as possible. See the "Drive Simplicity" [security principle](/azure/architecture/framework/security/security-principles).
 
@@ -189,17 +189,17 @@ These new capabilities offer new possibilities, but realizing value from them re
 - [Security posture management](../organize/cloud-security-posture-management.md) - This newer function is often an evolution of existing vulnerability management or governance functions. This includes monitoring overall security posture using Azure Security Center Secure Score and other data sources, actively working with resource owners to mitigate risks, and reporting risk to security leadership.
 - **Security remediation:** Assign accountability for addressing these risks to the teams responsible for managing those resources. This should either the DevOps teams managing their own application resources or the technology-specific teams in **[Central IT Operations](../organize/central-it.md)**:
 
-  - **Compute and applications Resources:**
+  - **Compute and application resources:**
     - **App Services:** Application Development/Security Team(s)
     - **Containers:** Application Development or Infrastructure/IT Operations
     - **VMs/Scale sets/compute:** IT/Infrastructure Operations
-  - **Data & Storage Resources:**
+  - **Data and storage resources:**
     - **SQL/Redis/Data Lake Analytics/Data Lake Store:** Database Team
     - **Storage Accounts:** Storage/Infrastructure Team
-  - **Identity and Access Resources:**
+  - **Identity and access resources:**
     - **Subscriptions:** Identity Team(s)
     - **Key Vault:** Identity or Information/Data Security Team
-  - **Networking Resources:** Network Security Team
+  - **Networking resources:** Network Security Team
   - **IoT Security:** IoT Operations Team
 
 **How**: Security is everyone's job, but not everyone currently knows how important it is, what to do, and how to do it.
@@ -327,7 +327,7 @@ Also see the Azure Security Benchmark [LT-1: Enable threat detection for Azure r
 
 Managing multiple accounts and directories also creates an incentive for poor security practices such as reusing the same password across accounts and increases the likelihood of stale/abandoned accounts that attackers can target.
 
-While it sometimes seems easier to quickly stand up a custom directory (based on LDAP, and so on.) for a particular application or workload, this creates much more integration and maintenance work to set up and manage. This is similar in many ways to the decision of setting up an additional Azure tenant or additional on-premises Active Directory Forest vs. using the existing enterprise one. See also the "Drive Simplicity" [security principle](/azure/architecture/framework/security/security-principles).
+While it sometimes seems easier to quickly stand up a custom LDAP directory for a particular application or workload, this creates much more work to integrate and manage. This is similar to choosing to set up an additional Azure tenant or on-premises Active Directory forest rather than using the existing enterprise tenant. See also the [security principle of driving simplicity](/azure/architecture/framework/security/security-principles).
 
 **Who**: This is often a cross-team effort-driven by [Security Architecture](../organize/cloud-security-architecture.md) or [Identity and Key Management](../organize/cloud-security-identity-keys.md) teams.
 
@@ -346,8 +346,8 @@ While it sometimes seems easier to quickly stand up a custom directory (based on
 
 The ideal time to consolidate your use of identity is during application development cycles as you:
 
-- Modernize applications for the cloud
-- Update cloud applications with DevOps processes
+- Modernize applications for the cloud.
+- Update cloud applications with DevOps processes.
 
 While there are valid reasons for a separate directory in the case of extremely independent business units or regulatory requirements, multiple directories should be avoided in all other circumstances.
 
