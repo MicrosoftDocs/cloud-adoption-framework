@@ -1,6 +1,6 @@
 ---
 title: Secure identity management
-description: 'Secure methodology best practices: Identity and access management'
+description: Learn best practices for identity and access management.
 author: lizetpenamsft
 ms.author: lipenade
 ms.date: 05/07/2021
@@ -43,7 +43,7 @@ ms.custom: internal
 ## Azure services for identity
 
 - [Azure AD](/azure/active-directory/fundamentals/active-directory-whatis) Azure AD allows application management for cloud and on-premises applications using Application Proxy, the my applications portal or access panel, and software as a service applications. It allows authentication, self service password resets, multifactor authentication, custom banned password list, and smart lockout. It allows developers to build applications that sign in all Microsoft identities, get tokens to call Microsoft Graph, other Microsoft APIs or custom APIs.among the features provided by Azure AD are: conditional access, device management, manage license assignments for enterprise users, access to applications and setup delegates using groups and administrator roles. Use Azure Active Directory connect and connect health to provide a single user identity for authentication and authorization to all resources, regardless of location (cloud or on-premises) through hybrid identity. It offers identity governance and protection, managed identities to access Azure resources, Privileged Identity Management (PIM) as well as reports and monitoring.
-- [Azure AD Connect](/azure/active-directory/hybrid/whatis-hybrid-identity) synchronize Azure AD with your existing on-premises Active Directory using Azure AD Connect. Often this is in place already if you have services like Office 365 or Microsoft Dynamics Online deployed.
+- [Azure AD Connect](/azure/active-directory/hybrid/whatis-hybrid-identity) synchronize Azure AD with your existing on-premises Active Directory using Azure AD Connect. Often this is in place already if you have services like Office 365 or Microsoft Dynamics 365 deployed.
 - [Azure AD B2B](/azure/active-directory/external-identities/what-is-b2b) Azure Active Directory (Azure AD) business-to-business (B2B) collaboration is a feature within external identities that lets you invite guest users to collaborate with your organization. With B2B collaboration, you can securely share your company's applications and services with guest users from any other organization, while maintaining control over your own corporate data. Work safely and securely with external partners, large or small, even if they don't have Azure AD or an IT department. A simple invitation and redemption process lets partners use their own credentials to access your company's resources. Developers can use Azure AD business-to-business APIs to customize the invitation process or write applications like self-service sign-up portals.
 - [Azure AD B2C](/azure/active-directory-b2c/overview) Azure Active Directory B2C provides business-to-customer identity as a service. Your customers use their preferred social, enterprise, or local account identities to get single sign-on access to your applications and APIs. Azure Active Directory B2C (Azure AD B2C) is a customer identity access management solution capable of supporting millions of users and billions of authentications per day. It takes care of the scaling and safety of the authentication platform, monitoring and automatically handling threats like denial-of-service, password spray, or brute force attacks. Azure AD B2C is a white-label authentication solution. You can customize the entire user experience with your brand so that it blends seamlessly with your web and mobile applications. It allows single sign-on access with a user-provided identity using standards-based authentication protocols including OpenID Connect, OAuth 2.0, and SAML.
 
@@ -103,7 +103,7 @@ Applications use the different authentication flows to sign in users and get tok
 
 The following diagram outlines the most common application scenarios and their identity components.
 
-<img src="./../media/application-scenarios-identity-platform.svg" alt="App scenarios and their identity components">
+![App scenarios and their identity components](../media/application-scenarios-identity-platform.svg)
 
 ### SAML v2.0
 
@@ -117,7 +117,7 @@ Use when there's a need to provide an single sign-on (SSO) experience for an ent
 
 ### Authentication libraries
 
-Many developers have built and deployed applications using the Azure Active Directory authentication library (ADAL). We now recommend using the Microsoft authentication library (MSAL) for authentication and authorization of Azure AD entities.
+Many developers have built and deployed applications using the Azure Active Directory Authentication Library (ADAL). We now recommend using the Microsoft Authentication Library (MSAL) for authentication and authorization of Azure AD entities.
 
 By using MSAL instead of ADAL:
 
@@ -136,7 +136,7 @@ By using MSAL instead of ADAL:
 - You benefit from innovation. Because all Microsoft development efforts are now focused on MSAL, no new features will be implemented in ADAL.
 
 > [!IMPORTANT]
-> MSAL is now the recommended authentication library for use with the Microsoft identity platform. Migrate existing applications from Azure Active Directory authentication library (ADAL) to Microsoft authentication library (MSAL).
+> MSAL is now the recommended authentication library for use with the Microsoft identity platform. Migrate existing applications from Azure Active Directory Authentication Library (ADAL) to Microsoft Authentication Library (MSAL).
 
 ## Identity platform additional considerations
 
@@ -154,10 +154,10 @@ By using MSAL instead of ADAL:
 > - Don't store credentials in code or configuration files. Use manage identities and Azure Key Vault to store and rotate credentials.
 > - Use least privilege principle on applications so it only asks for the permissions in needs only when needed.
 > - Use modern authentication solutions (OAuth 2.0 and OpenID Connect)
-> - Don't program directly against these protocols. Instead, use the Microsoft authentication library (MSAL) and migrate applications that use ADAL to use MSAL.
+> - Don't program directly against these protocols. Instead, use the Microsoft Authentication Library (MSAL) and migrate applications that use ADAL to use MSAL.
 > - In web apps of web APIs, keep one token cache per account.
-> - Don't look at the access token value, or attempt to parse it as a client. They can change values, formats, or even become encrypted without warning - always use the id_token if your client needs to learn something about the user, or call Microsoft Graph.
-> - Understand user consent experience
+> - Don't look at the access token value, or attempt to parse it as a client. They can change values, formats, or even become encrypted without warning. Always use the `id_token` if your client needs to learn something about the user, or call Microsoft Graph.
+> - Understand the user consent experience.
 > - Test for conditional access policies.
 
 For more information, see:
@@ -175,7 +175,7 @@ With **Microsoft Graph**, you can access [Azure Active Directory](/azure/active-
 
 Directory resources and APIs can open up new ways for you to engage with users and manage their experiences with Microsoft Graph. You can try the API in the [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer).
 
-You can use the [Azure Active Directory PowerShell for Graph module](/powershell/module/azuread/?view=azureadps-2.0&preserve-view=true) for Azure AD administrative tasks such as user management, domain management and for configuring single sign-on. The Azure AD PowerShell for graph module has two versions: a public preview version and a general availability version. It's not recommended to use the public preview version for production scenarios.
+You can use the [Azure Active Directory PowerShell for Graph module](/powershell/module/azuread/?view=azureadps-2.0&preserve-view=true) for Azure AD administrative tasks such as user management, domain management and for configuring single sign-on. The Azure AD PowerShell for Graph module has two versions: a public preview version and a general availability version. It's not recommended to use the public preview version for production scenarios.
 
 ## Use SCIM to automate provisioning on Azure AD
 
@@ -195,11 +195,11 @@ Azure AD Conditional Access bring signals together to make decisions and enforce
 
 By using conditional access policies, you can apply the right access controls when needed to keep your organization secure and stay out of your user's way when not needed.
 
-<img src="./../media/conditional-access-overview.png" alt="Conditional Access Overview">
+![Conditional access overview](../media/conditional-access-overview.png)
 
 In the following illustration, user requests to access the on-premises and cloud applications are first checked against a list of conditions. The requests are either allowed access, forced to go through multifactor authentication, or blocked based on the conditions that they satisfy.
 
-<img src="./../media/conditional-access.png" alt="Conditional Access - User Requests">
+![Conditional access: user requests](../media/conditional-access.png)
 
 For more information, see:
 
@@ -215,8 +215,8 @@ Features like multifactor authentication are a great way to secure your organiza
 Microsoft global Azure offer the following three passwordless authentication options that integrate with Azure Active Directory (Azure AD):
 
 - Windows Hello for Business
-- Microsoft authenticator app
-- Fido2 security keys
+- Microsoft Authenticator app
+- FIDO2 security keys
 
 ### Multifactor authentication
 
@@ -262,14 +262,14 @@ Here are some of the key features of Privileged Identity Management:
 
 [Security control v2: identity management](/security/benchmark/azure/security-controls-v2-identity-management)
 
-- [IM-1: Standardize Azure Active Directory as the central identity and authentication system](/security/benchmark/azure/security-controls-v2-identity-management#im-1-standardize-azure-active-directory-as-the-central-identity-and-authentication-system)
-- [IM-2: Manage application identities securely and automatically](/security/benchmark/azure/security-controls-v2-identity-management#im-2-manage-application-identities-securely-and-automatically)
-- [IM-3: Use Azure AD single sign-on (SSO) for application access](/security/benchmark/azure/security-controls-v2-identity-management#im-3-use-azure-ad-single-sign-on-sso-for-application-access)
-- [IM-4: Use strong authentication controls for all Azure AD-based access](/security/benchmark/azure/security-controls-v2-identity-management#im-4-use-strong-authentication-controls-for-all-azure-active-directory-based-access)
-- [IM-5: Monitor and alert on account anomalies](/security/benchmark/azure/security-controls-v2-identity-management#im-5-monitor-and-alert-on-account-anomalies)
-- [IM-6: Restrict Azure resource access based on conditions](/security/benchmark/azure/security-controls-v2-identity-management#im-6-restrict-azure-resource-access-based-on-conditions)
-- [IM-7: Eliminate unintended credential exposure](/security/benchmark/azure/security-controls-v2-identity-management#im-7-eliminate-unintended-credential-exposure)
-- [IM-8: Secure user access to legacy applications](/security/benchmark/azure/security-controls-v2-identity-management#im-8-secure-user-access-to-legacy-applications)
+- [IM-1: standardize Azure Active Directory as the central identity and authentication system](/security/benchmark/azure/security-controls-v2-identity-management#im-1-standardize-azure-active-directory-as-the-central-identity-and-authentication-system)
+- [IM-2: manage application identities securely and automatically](/security/benchmark/azure/security-controls-v2-identity-management#im-2-manage-application-identities-securely-and-automatically)
+- [IM-3: use Azure AD single sign-on (SSO) for application access](/security/benchmark/azure/security-controls-v2-identity-management#im-3-use-azure-ad-single-sign-on-sso-for-application-access)
+- [IM-4: use strong authentication controls for all Azure AD-based access](/security/benchmark/azure/security-controls-v2-identity-management#im-4-use-strong-authentication-controls-for-all-azure-active-directory-based-access)
+- [IM-5: monitor and alert on account anomalies](/security/benchmark/azure/security-controls-v2-identity-management#im-5-monitor-and-alert-on-account-anomalies)
+- [IM-6: restrict Azure resource access based on conditions](/security/benchmark/azure/security-controls-v2-identity-management#im-6-restrict-azure-resource-access-based-on-conditions)
+- [IM-7: eliminate unintended credential exposure](/security/benchmark/azure/security-controls-v2-identity-management#im-7-eliminate-unintended-credential-exposure)
+- [IM-8: secure user access to legacy applications](/security/benchmark/azure/security-controls-v2-identity-management#im-8-secure-user-access-to-legacy-applications)
 
 ## Summary
 

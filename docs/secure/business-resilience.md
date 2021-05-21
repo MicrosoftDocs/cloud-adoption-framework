@@ -51,7 +51,7 @@ Resiliency requires a close partnership between business stakeholders, IT profes
 
 ## Next steps
 
-The security disciplines in the secure methodology align to the goal of increasing resilience to security incidents. For more information, see:
+The security disciplines in the Secure methodology align to the goal of increasing resilience to security incidents. For more information, see:
 
 - [Access control](./access-control.md)
 - [Security operations](./security-operations.md)

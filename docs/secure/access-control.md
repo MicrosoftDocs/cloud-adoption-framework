@@ -100,22 +100,22 @@ For information on applying segmentation to Azure environments, see [Azure compo
 
 ## Isolation: Avoid firewall and forget
 
-Isolation is an extreme form of segmentation that is sometimes required for protecting critically important assets. Isolation is most often used for assets that are both business-critical, and difficult to bring up to current policy and standards. Classes of assets that might require isolation include operational technology (ot) systems like:
+Isolation is an extreme form of segmentation that is sometimes required for protecting critically important assets. Isolation is most often used for assets that are both business-critical, and difficult to bring up to current policy and standards. Classes of assets that might require isolation include operational technology (OT) systems like:
 
 - Supervisory control and data acquisition (SCADA)
-- Industrial control system (ics)
+- Industrial control system (ICS)
 
 :::image type="content" source="./media/firewall-and-forget.png" alt-text="People, Process, Technology for isolation" lightbox="./media/firewall-and-forget-popout.png":::
 
 Isolation must be designed as a complete people/process/technology system and be integrated with business processes to be successful and sustainable. This approach typically fails over time if it's implemented as a purely technology approach without processes and training to validate and sustain the defenses. It's easy to fall into a *firewall and forget* trap by defining the problem as static and technical.
 
-In most cases, processes are needed to implement isolation, processes that various teams like security, IT, operational technology (ot), and sometimes business operations must follow. Successful isolation usually consists of:
+In most cases, processes are needed to implement isolation, processes that various teams like security, IT, operational technology (OT), and sometimes business operations must follow. Successful isolation usually consists of:
 
 - **People:** Train all employees, vendors, and stakeholders on isolation strategy and their part in it. Include why it's important, for example, threats, risks and potential business impact, what they're expected to do, and how to do it.
 - **Process:** Establish clear policy and standards and document processes for business and technical stakeholders for all scenarios such as vendor access, change management process, threat response procedures, including exception management. Monitor to ensure the configuration doesn't drift and that other processes are followed correctly and rigorously.
-- **Technology:** Implement technical controls to block unauthorized communications, detect anomalies and potential threats, and harden bridging and transit devices that interact with the isolated environment, for example, operator consoles for operational technology (ot) systems.
+- **Technology:** Implement technical controls to block unauthorized communications, detect anomalies and potential threats, and harden bridging and transit devices that interact with the isolated environment, for example, operator consoles for operational technology (OT) systems.
 
-For more information, see [Asset protection: Network isolation](.\asset-protection.md\#network-isolation).
+For more information, see [Asset protection: network isolation](.\asset-protection.md\#network-isolation).
 
 ## Next steps
 

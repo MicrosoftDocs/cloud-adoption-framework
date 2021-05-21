@@ -14,9 +14,9 @@ ms.custom: internal
 
 Automation and the agile methodology enables teams to deliver faster, but also adds complexity to security because the workflow extends to the developer teams themselves.
 
-The following diagram illustrates a baseline CI/CD workflow. The red configuration icon <img src="./../media/devsecops-iconmonstr-gear-10.svg" valign="middle" alt="configuration cog icon"> indicates security permissions which must be configured by the customer. This follows the [shared responsibility model](/azure/security/fundamentals/shared-responsibility), where Azure and other vendors provide permissions, which must be configured by the customer according to their governance model and business requirements.
+The following diagram illustrates a baseline CI/CD workflow. The red configuration icon :::image type="icon" source="../media/devsecops-iconmonstr-gear-10.svg"::: indicates security permissions which must be configured by the customer. This follows the [shared responsibility model](/azure/security/fundamentals/shared-responsibility), where Azure and other vendors provide permissions, which must be configured by the customer according to their governance model and business requirements.
 
-<img src="./../media/devsecops-workflow.svg" alt="A typical CI/CD workflow that illustrates how code changes in a Git repository will affect your cloud resources">
+![A typical CI/CD workflow that illustrates how code changes in a Git repository will affect your cloud resources](../media/devsecops-workflow.svg)
 
 Let's examine each stage of this typical workflow to help you understand how the configurations often depend on one another. Your workflow might have more stages. The following concepts will help you understand CI/CD and help you design your workflow for security.
 

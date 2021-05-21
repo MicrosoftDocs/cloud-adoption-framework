@@ -61,7 +61,7 @@ Compliance is important for several reasons. Auditing security related activitie
 
 ## Revision process
 
-Best practices and guidelines, based on industry recommendations, should be reviewed and applied proactively. Please refer to [security best practices](../security-top-10.md) for guidance on proactively and comprehensively applying best practices to all systems as your cloud program is implemented.
+Best practices and guidelines, based on industry recommendations, should be reviewed and applied proactively. Please refer to [Security best practices](../security-top-10.md) for guidance on proactively and comprehensively applying best practices to all systems as your cloud program is implemented.
 
 ## Attacker vs. defender costs
 

@@ -69,7 +69,7 @@ Without business leadership support, security and IT leaders are distracted from
 
 ### Network isolation
 
-Network isolation might be a valid option for protecting older assets that can no longer be secured, but cannot be immediately retired. This scenario can typically occur for end of life operating systems and applications. It's common in operational technology (ot) environments and legacy systems.
+Network isolation might be a valid option for protecting older assets that can no longer be secured, but cannot be immediately retired. This scenario can typically occur for end of life operating systems and applications. It's common in operational technology (OT) environments and legacy systems.
 
 Isolation itself is considered access control, even though the assets that can't be secured are identified as part of asset protection. For more information, see [Avoid firewall and forget](.\access-control.md).
 

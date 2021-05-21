@@ -18,21 +18,21 @@ Just as cloud adoption is a journey, cloud security is also an ongoing journey o
 
 A journey without a target destination is just wandering. While this may eventually lead to enlightenment, business goals and constraints often require focusing on objectives and key results.
 
-The secure methodology provides a vision of the complete end state to guide the improvement of your security program over time. The following infographic provides a visual mapping of the key ways that security integrates with the larger organization and the disciplines within security.
+The Secure methodology provides a vision of the complete end state to guide the improvement of your security program over time. The following infographic provides a visual mapping of the key ways that security integrates with the larger organization and the disciplines within security.
 
 :::image type="content" source="./media/secure-methodology.png" alt-text="CAF Secure Methodology" lightbox="./media/secure-methodology-popout.png":::
 
-The Cloud Adoption Framework provides security guidance for this security journey by providing clarity for the processes, best practices, models, and experiences. This guidance is based on the lessons learned and real world experiences of real customers, Microsoft's security journey, and work with organizations like NIST, the open group, and the [Center for Internet Security (CIS)](https://www.cisecurity.org/).
+The Cloud Adoption Framework provides security guidance for this security journey by providing clarity for the processes, best practices, models, and experiences. This guidance is based on the lessons learned and real world experiences of real customers, Microsoft's security journey, and work with organizations like NIST, The Open Group, and the [Center for Internet Security (CIS)](https://www.cisecurity.org/).
 
 ## Mapping to concepts, frameworks, and standards
 
-Security itself is both a standalone organizational discipline and a quality/attribute that is integrated/overlaid on other disciplines, which makes it difficult to precisely define and map in detail. The security industry uses many different frameworks to capture risk, plan controls, and operate. This is a quick summary of how the disciplines in the CAF secure methodology disciplines relates to other security concepts and guidance:
+Security itself is both a standalone organizational discipline and a quality/attribute that is integrated or overlaid on other disciplines, which makes it difficult to precisely define and map in detail. The security industry uses many different frameworks to capture risk, plan controls, and operate. This is a quick summary of how the disciplines in the CAF Secure methodology disciplines relates to other security concepts and guidance:
 
 - **Zero trust:** Microsoft believes all security disciplines should follow the zero-trust principles of *assume breach*, *verify explicitly*, and *use least privilege access*. These underpin any sound [security strategy](https://aka.ms/securitystrategy) and also must be balanced with *business enablement* goals. The first and most visible part of zero trust is in access control, so it's highlighted in the description of access control security discipline.
 
-- **The open group:** These security disciplines map closely to the zero-trust components in the [core principles white paper](https://publications.opengroup.org/security-library/w210) published by the open group, where Microsoft actively participates. The one notable exception is that Microsoft elevated the discipline of innovation security so that DevSecOps is a top-level element because of how new, important, and transformative this discipline is for many organizations.
+- **The Open Group:** These security disciplines map closely to the zero-trust components in the [core principles white paper](https://publications.opengroup.org/security-library/w210) published by The Open Group, where Microsoft actively participates. The one notable exception is that Microsoft elevated the discipline of innovation security so that DevSecOps is a top-level element because of how new, important, and transformative this discipline is for many organizations.
 
-- **NIST cybersecurity framework (csf):** For organizations that use the [NIST cybersecurity framework](https://www.nist.gov/cyberframework), we have highlighted bold text where the framework most closely maps. Modern access control and DevSecOps map broadly to the full spectrum of the frameworj, so those items aren't noted individually.
+- **NIST cybersecurity framework (csf):** For organizations that use the [NIST cybersecurity framework](https://www.nist.gov/cyberframework), we have highlighted bold text where the framework most closely maps. Modern access control and DevSecOps map broadly to the full spectrum of the framework, so those items aren't noted individually.
 
 ## Mapping to roles and responsibilities
 
@@ -101,6 +101,6 @@ All security activities should be aligned to and shaped by a dual focus on
 The Secure methodology is part of a comprehensive set of security guidance that also includes:
 
 - [Azure Well-Architected Framework](/azure/architecture/framework/security/overview): Guidance on securing your workloads on Azure.
-- [Azure Security Benchmarks](https://aka.ms/benchmarkdocs): Prescriptive best practices and controls for Azure security.
-- [Enterprise Scale Landing Zone](../ready/enterprise-scale/security-governance-and-compliance.md): Azure reference architecture and implementation with integrated security.
-- [Top 10 Security Best Practices for Azure](https://aka.ms/azuresecuritytop10): Top Azure security best practices that Microsoft recommends based on lessons learned across customers and our own environments.
+- [Azure security benchmarks](https://aka.ms/benchmarkdocs): Prescriptive best practices and controls for Azure security.
+- [Enterprise-scale landing zone](../ready/enterprise-scale/security-governance-and-compliance.md): Azure reference architecture and implementation with integrated security.
+- [Top 10 security best practices for Azure](https://aka.ms/azuresecuritytop10): Top Azure security best practices that Microsoft recommends based on lessons learned across customers and our own environments.

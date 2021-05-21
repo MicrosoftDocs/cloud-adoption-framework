@@ -110,9 +110,9 @@ To learn more about keys used for encryption, see:
 
 For the following sections on keys (used as tokens) and secrets, there are several cloud design patterns that address security best practices and should be considered when designing your workloads. These patterns are:
 
-- **Valet Key pattern:** Use a token that provides clients with restricted direct access to a specific resource, in order to offload data transfer from the application.
+- **Valet key pattern:** Use a token that provides clients with restricted direct access to a specific resource, in order to offload data transfer from the application.
 
-- **Command and Query Responsibility Segregation (CQRS) pattern:** The command and query responsibility segregation (CQRS) pattern separates read and update operations for a data store. Implementing CQRS in your application can maximize its performance, scalability, and security. The flexibility created by migrating to CQRS allows a system to better evolve over time and prevents update commands from causing merge conflicts at the domain level.
+- **Command and query responsibility segregation (CQRS) pattern:** The command and query responsibility segregation (CQRS) pattern separates read and update operations for a data store. Implementing CQRS in your application can maximize its performance, scalability, and security. The flexibility created by migrating to CQRS allows a system to better evolve over time and prevents update commands from causing merge conflicts at the domain level.
 
 > [!IMPORTANT]
 > For each of your workloads, identify various established cloud design patterns that address each of the problem domains to ensure alignment with your business security requirements.
@@ -177,7 +177,7 @@ Applying automation will improve operational efficiencies and using credentials 
 To learn more, see:
 
 - [Azure Service Bus authentication and authorization](/azure/service-bus-messaging/service-bus-authentication-and-authorization)
-- [Azure architecture blog: Managing and rotating secrets with Azure Key Vault](https://techcommunity.microsoft.com/t5/azure-architecture-blog/managing-and-rotating-secrets-with-azure-key-vault-managed/ba-p/1800612)
+- [Azure architecture blog: managing and rotating secrets with Azure Key Vault](https://techcommunity.microsoft.com/t5/azure-architecture-blog/managing-and-rotating-secrets-with-azure-key-vault-managed/ba-p/1800612)
 - [Automate the rotation of secret for resources that use one set of authentication credentials](/azure/key-vault/secrets/tutorial-rotation)
 - [Automate the rotation of secret for resources that use two sets of authentication credentials](/azure/key-vault/secrets/tutorial-rotation-dual?tabs=azure-cli)
 - [Using credentials in Azure Automation runbooks](/azure/automation/shared-resources/credentials?tabs=azure-powershell)

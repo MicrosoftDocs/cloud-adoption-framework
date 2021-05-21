@@ -50,7 +50,7 @@ Microsoft Secure Score provides recommendations and best practice advice for imp
 
 ### Azure Defender
 
-To protect your deployment from known malicious software, we recommend enabling endpoint protection on all session hosts. You can use either Windows defender antivirus or a third-party program. For more information, see the deployment guide for [Microsoft Defender Antivirus in a virtual desktop infrastructure environment](/microsoft-365/security/defender-endpoint/deployment-vdi-microsoft-defender-antivirus).
+To protect your deployment from known malicious software, we recommend enabling endpoint protection on all session hosts. You can use either Windows Defender Antivirus or a third-party program. For more information, see the deployment guide for [Microsoft Defender Antivirus in a virtual desktop infrastructure environment](/microsoft-365/security/defender-endpoint/deployment-vdi-microsoft-defender-antivirus).
 
 ## Next steps
 

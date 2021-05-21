@@ -151,7 +151,7 @@ While similar in many ways, cloud platforms have important technical difference 
 
 **Key Resources:**
 
-- [Incident response reference guide](https://aka.ms/IRRG) (irrg)
+- [Incident response reference guide](https://aka.ms/IRRG) (IRRG)
 - Guidance on [building your own security incident response process](https://msrc-blog.microsoft.com/2019/07/01/inside-the-msrc-building-your-own-security-incident-response-process/)
 - [Azure logging and alerting](/azure/security/fundamentals/log-audit)
 - Microsoft security best practices
