@@ -41,7 +41,7 @@ Microsoft has published lessons learned by our customers and our own IT organiza
 - [Transformation of security, strategies, tools, and threats](/security/compass/microsoft-security-compass-introduction#transformation-of-security-strategies-tools--threats-1513)
 - [Learnings from Microsoft experience securing hyperscale cloud environment](/security/compass/microsoft-security-compass-introduction#microsoft-security-practices-1349) that can help you on your journey
 
-Also see the Azure Security Benchmark [GS-3: Align organization roles, responsibilities, and accountabilities](/azure/security/benchmarks/security-controls-v2-governance-strategy#gs-3-align-organization-roles-responsibilities-and-accountabilities).
+Also see the Azure Security Benchmark [GS-3: Align organization roles, responsibilities, and accountabilities](/security/benchmark/azure/security-controls-v2-governance-strategy#gs-3-align-organization-roles-responsibilities-and-accountabilities).
 
 ## 2. People: Educate teams on cloud security technology
 
@@ -70,8 +70,8 @@ Microsoft provides extensive resources to help technical professionals ramp up o
 
 - Azure Security
   - AZ-500 [learning path](/learn/certifications/exams/az-500?tab=tab-learning-paths) (and Certification)
-  - [Azure security benchmark (ASB)](/azure/security/benchmarks/) –Prescriptive Best Practices and Controls for Azure Security
-    - [Security Baselines for Azure](/azure/security/benchmarks/security-baselines-overview) – Application of ASB to individual Azure Services
+  - [Azure security benchmark (ASB)](/security/benchmark/azure/) –Prescriptive Best Practices and Controls for Azure Security
+    - [Security Baselines for Azure](/security/benchmark/azure/security-baselines-overview) – Application of ASB to individual Azure Services
   - [Microsoft security best practices](/security/compass/microsoft-security-compass-introduction) - Videos and Documentation
 - Azure Compliance
   - [Regulatory compliance](/azure/security-center/security-center-compliance-dashboard) evaluation with Azure Security Center
@@ -80,7 +80,7 @@ Microsoft provides extensive resources to help technical professionals ramp up o
   - Azure AD Authentication [YouTube series](https://www.youtube.com/playlist?list=PLLasX02E8BPD5vC2XHS_oHaMVmaeHHPLy)
   - [Securing Azure environments with Azure active directory](https://azure.microsoft.com/resources/securing-azure-environments-with-azure-active-directory/)
 
-Also see the Azure Security Benchmark [GS-3: Align organization roles, responsibilities, and accountabilities](/azure/security/benchmarks/security-controls-v2-governance-strategy#gs-3-align-organization-roles-responsibilities-and-accountabilities)
+Also see the Azure Security Benchmark [GS-3: Align organization roles, responsibilities, and accountabilities](/security/benchmark/azure/security-controls-v2-governance-strategy#gs-3-align-organization-roles-responsibilities-and-accountabilities)
 
 ## 3. Process: Assign accountability for cloud security decisions
 
@@ -115,7 +115,7 @@ These are the typical areas where security decisions are needed, descriptions, a
 > - Ensure decision makers have the appropriate education in their area of the cloud to accompany this responsibility.
 > - Ensure decisions are documented in policy and standards to provide a record and guide the organization over the long term.
 
-Also see the Azure Security Benchmark [GS-3: Align organization roles, responsibilities, and accountabilities](/azure/security/benchmarks/security-controls-v2-governance-strategy#gs-3-align-organization-roles-responsibilities-and-accountabilities)
+Also see the Azure Security Benchmark [GS-3: Align organization roles, responsibilities, and accountabilities](/security/benchmark/azure/security-controls-v2-governance-strategy#gs-3-align-organization-roles-responsibilities-and-accountabilities)
 
 ## 4. Process: Update incident response processes for cloud
 
@@ -162,7 +162,7 @@ While similar in many ways, cloud platforms have important technical difference 
   - [Incident Investigation](https://www.microsoft.com/security/blog/2019/12/23/ciso-series-lessons-learned-from-the-microsoft-soc-part-3b-a-day-in-the-life/)
   - [Incident Remediation](https://www.microsoft.com/security/blog/2020/05/04/lessons-learned-microsoft-soc-part-3c/)
 
-Also see the Azure Security Benchmark [IR-1: Preparation – update incident response process for Azure](/azure/security/benchmarks/security-controls-v2-incident-response#ir-1-preparation--update-incident-response-process-for-azure).
+Also see the Azure Security Benchmark [IR-1: Preparation – update incident response process for Azure](/security/benchmark/azure/security-controls-v2-incident-response#ir-1-preparation--update-incident-response-process-for-azure).
 
 ## 5. Process: Establish security posture management
 
@@ -210,14 +210,14 @@ These new capabilities offer new possibilities, but realizing value from them re
 > [!IMPORTANT]
 > The explanations for why, what, and how to secure resources are often similar across different resource types and applications, but it's critical to relate these to what each team already knows and cares about. Security teams should engage with their IT and DevOps counterparts as a trusted advisor and partner focused on enabling these teams to be successful.
 
-**Tooling**: [Secure Score](/azure/security-center/security-center-secure-score) in Azure Security Center provides an assessment of the most important security information in Azure for a wide variety of assets. This should be your starting point on posture management and can be supplemented with custom Azure policies and other mechanisms as needed.
+**Tooling**: [Secure Score](/azure/security-center/secure-score-security-controls) in Azure Security Center provides an assessment of the most important security information in Azure for a wide variety of assets. This should be your starting point on posture management and can be supplemented with custom Azure policies and other mechanisms as needed.
 
 **Frequency**: Set up a regular cadence (typically monthly) to review Azure secure score and plan initiatives with specific improvement goals. The frequency can be increased as needed.
 
 > [!TIP]
  > Gamify the activity if possible to increase engagement, such as creating fun competitions and prizes for the DevOps teams that improve their score the most.
 
-Also see the Azure Security Benchmark [GS-2: Define security posture management strategy](/azure/security/benchmarks/security-controls-v2-governance-strategy#gs-2-define-security-posture-management-strategy).
+Also see the Azure Security Benchmark [GS-2: Define security posture management strategy](/security/benchmark/azure/security-controls-v2-governance-strategy#gs-2-define-security-posture-management-strategy).
 
 ## 6. Technology: Require Passwordless or Multi-Factor Authentication (MFA)
 
@@ -240,14 +240,14 @@ While MFA was once a burdensome extra step, Passwordless approaches today improv
 **How**: Implement Passwordless or MFA authentication, train administrators on how to use it (as needed), and require admins to follow using written policy. This can be accomplished by one or more of these technologies:
 
 - [Passwordless (Windows Hello)](/windows/security/identity-protection/hello-for-business/hello-identity-verification)
-- [Passwordless (Authenticator App)](/azure/active-directory/authentication/howto-authentication-phone-sign-in)
+- [Passwordless (Authenticator App)](/azure/active-directory/authentication/howto-authentication-passwordless-phone)
 - [Azure Multifactor Authentication](/azure/active-directory/authentication/howto-mfa-userstates)
 - Third-party MFA solution
 
 > [!NOTE]
 > Text Message based MFA is now relatively inexpensive for attackers to bypass, so focus on passwordless & stronger MFA.
 
-Also see the Azure Security Benchmark [ID-4: Use strong authentication controls for all Azure Active Directory based access](/azure/security/benchmarks/security-controls-v2-identity-management#id-4-use-strong-authentication-controls-for-all-azure-active-directory-based-access).
+Also see the Azure Security Benchmark [ID-4: Use strong authentication controls for all Azure Active Directory based access](/security/benchmark/azure/security-controls-v2-identity-management#id-4-use-strong-authentication-controls-for-all-azure-active-directory-based-access).
 
 ## 7. Technology: Integrate native firewall and network security
 
@@ -281,11 +281,11 @@ Documentation on Azure native network security capabilities can be found at:
 
 - [Azure Firewall](/azure/firewall/overview)
 - [Azure Web Application Firewall (WAF)](/azure/web-application-firewall/)
-- [Azure DDoS Protection](/azure/virtual-network/ddos-protection-overview)
+- [Azure DDoS Protection](/azure/ddos-protection/ddos-protection-overview)
 
 [Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps?page=1&search=firewall) includes many third-party firewall providers.
 
-Also see the Azure Security Benchmark [NS-4: Protect applications and services from external network attacks](/azure/security/benchmarks/security-controls-v2-network-security#ns-4-protect-applications-and-services-from-external-network-attacks).
+Also see the Azure Security Benchmark [NS-4: Protect applications and services from external network attacks](/security/benchmark/azure/security-controls-v2-network-security#ns-4-protect-applications-and-services-from-external-network-attacks).
 
 ## 8. Technology: Integrate native threat detection
 
@@ -310,9 +310,9 @@ These native solutions also enable security operations teams to focus on inciden
   - **[Policy and standards](../organize/cloud-security-policy-standards.md):** Set standards and policy for enabling native tooling throughout the organization. Monitor for compliance.
   - **[Infrastructure and Endpoint](../organize/cloud-security-infrastructure-endpoint.md)** / **[Central IT Operations](../organize/central-it.md):** Configure and enable detections, integrate into automation and infrastructure as code solutions.
 
-**How**: Enable [threat detection in Azure security center](/azure/security-center/threat-protection) for all the resources you are using and have each team integrate these into their processes as described above.
+**How**: Enable [threat detection in Azure security center](/azure/security-center/azure-defender) for all the resources you are using and have each team integrate these into their processes as described above.
 
-Also see the Azure Security Benchmark [LT-1: Enable threat detection for Azure resources](/azure/security/benchmarks/security-controls-v2-logging-threat-detection#lt-1-enable-threat-detection-for-azure-resources).
+Also see the Azure Security Benchmark [LT-1: Enable threat detection for Azure resources](/security/benchmark/azure/security-controls-v2-logging-threat-detection#lt-1-enable-threat-detection-for-azure-resources).
 
 ## 9. Architecture: Standardize on a single directory and identity
 
@@ -351,12 +351,12 @@ The ideal time to consolidate your use of identity is during application develop
 
 While there are valid reasons for a separate directory in the case of extremely independent business units or regulatory requirements, multiple directories should be avoided in all other circumstances.
 
-Also see the Azure Security Benchmark [ID-1: Standardize Azure Active Directory as the central identity and authentication system](/azure/security/benchmarks/security-controls-v2-identity-management#id-1-standardize-azure-active-directory-as-the-central-identity-and-authentication-system).
+Also see the Azure Security Benchmark [ID-1: Standardize Azure Active Directory as the central identity and authentication system](/security/benchmark/azure/security-controls-v2-identity-management#id-1-standardize-azure-active-directory-as-the-central-identity-and-authentication-system).
 
 > [!IMPORTANT]
 > The only exception to the single accounts rule is that privileged users (including IT administrators and security analysts) should have separate accounts for standard user tasks vs. administrative tasks.
 >
-> For more information, see Azure Security Benchmark [Privileged Access](/azure/security/benchmarks/security-controls-v2-privileged-access).
+> For more information, see Azure Security Benchmark [Privileged Access](/security/benchmark/azure/security-controls-v2-privileged-access).
 
 ## 10. Architecture: Use identity based access control (instead of keys)
 
@@ -388,7 +388,7 @@ Identity based authentication overcomes many of these challenges with mature cap
 
 For services that do not support managed identities, use Azure AD to create a [service principal](/azure/active-directory/develop/app-objects-and-service-principals) with restricted permissions at the resource level instead. We recommended configuring service principals with certificate credentials and fall back to client secrets. In both cases, [Azure Key Vault](/azure/key-vault/general/overview) can be used in conjunction with Azure managed identities, so that the runtime environment (such as an Azure function) can retrieve the credential from the key vault.
 
-Also see the Azure Security Benchmark [ID-2: Manage application identities securely and automatically](/azure/security/benchmarks/security-controls-v2-identity-management#id-2-manage-application-identities-securely-and-automatically).
+Also see the Azure Security Benchmark [ID-2: Manage application identities securely and automatically](/security/benchmark/azure/security-controls-v2-identity-management#id-2-manage-application-identities-securely-and-automatically).
 
 ## 11. Architecture: Establish a single unified security strategy
 
@@ -433,4 +433,4 @@ The Cloud Adoption Framework includes guidance to help your teams with:
 - **[Building a cloud strategy team](../get-started/team/cloud-strategy.md):** Ideally, security should be integrated into an existing cloud strategy.
 - **[Build or modernize a security strategy](../strategy/define-security-strategy.md):** To meet business and security goals in the current age of cloud services and modern threats.
 
-Also see the [Azure Security Benchmark governance and strategy](/azure/security/benchmarks/security-controls-v2-governance-strategy).
+Also see the [Azure Security Benchmark governance and strategy](/security/benchmark/azure/security-controls-v2-governance-strategy).
