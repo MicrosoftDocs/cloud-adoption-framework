@@ -69,9 +69,9 @@ Additionally security and IT technical managers (and often project managers) sho
 Microsoft provides extensive resources to help technical professionals ramp up on securing Azure resources and report compliance:
 
 - Azure Security
-  - AZ-500 [learning path](/learn/certifications/exams/az-500?tab=tab-learning-paths) (and Certification)
+  - AZ-500 [learning path](/learn/certifications/exams/az-500?tab=tab-learning-paths) (and certification)
   - [Azure security benchmark (ASB)](/security/benchmark/azure/) -Prescriptive Best Practices and Controls for Azure Security
-    - [Security Baselines for Azure](/security/benchmark/azure/security-baselines-overview) - Application of ASB to individual Azure Services
+    - [Security Baselines for Azure](/security/benchmark/azure/security-baselines-overview): Application of ASB to individual Azure Services
   - [Microsoft security best practices](/security/compass/microsoft-security-compass-introduction) - Videos and Documentation
 - Azure Compliance
   - [Regulatory compliance](/azure/security-center/security-center-compliance-dashboard) evaluation with Azure Security Center
