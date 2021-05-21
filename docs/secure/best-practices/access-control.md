@@ -10,7 +10,6 @@ ms.subservice: secure
 ms.custom: internal
 ---
 
-
 Point to: https://docs.microsoft.com/en-us/security/compass/critical-impact-accounts
 
 # Generic space holder - remember to edit the metadata before publication

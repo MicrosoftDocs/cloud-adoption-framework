@@ -16,7 +16,7 @@ https://docs.microsoft.com/en-us/security/compass/incident-response-playbooks
 
 ## This article should cover all of the items under the "validate security and incident response" question at the CAF level
 
-**This article may need to be split into multiple articles to cover "How do you validate security" and "Incident/Threat Response" as two topics. // SME review request** 
+**This article may need to be split into multiple articles to cover "How do you validate security" and "Incident/Threat Response" as two topics. // SME review request**
 
 - For containerized workloads, Azure Defender (Azure Security Center) or other third-party solution is used to scan for vulnerabilities.Azure Security Center is the Azure-native solution for securing containers. Security Center can protect virtual machines that are running Docker, Azure Kubernetes Service clusters, Azure Container Registry registries. ASC is able to scan container images and identify security issues, or provide real-time threat detection for containerized environments.
 - Penetration testing is performed in-house or a third-party entity performs penetration testing of this workload to validate the current security defenses.Real world validation of security defenses is critical to validate a defense strategy and implementation. Penetration tests or red team programs can be used to simulate either one time, or persistent threats against an organization to validate defenses that have been put in place to protect organizational resources.

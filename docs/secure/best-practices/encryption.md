@@ -12,7 +12,6 @@ ms.custom: internal
 https://docs.microsoft.com/en-us/azure/security/fundamentals/encryption-overview
 https://docs.microsoft.com/en-us/security/compass/storage-data-encryption
 
-
 # Generic space holder - remember to edit the metadata before publication
 
 ## This article should cover all of the items under the "managing encryption" question at the CAF level

@@ -20,11 +20,11 @@ Security governance bridges your business priorities with technical implementati
 
 ## Compliance and reporting
 
-Compliance and reporting on external security requirements, and sometimes internal policy, are basic required elements of operating in a given industry. The mandatory requirements are like feeding a bear in the zoo. If you don’t feed the bear every day, it might eat you.
+Compliance and reporting on external security requirements, and sometimes internal policy, are basic required elements of operating in a given industry. The mandatory requirements are like feeding a bear in the zoo. If you don't feed the bear every day, it might eat you.
 
 ## Architecture and standards
 
-Architecture, standards, and policy provide the critical translation from business requirements and risk into the technical environment. We recommend having a unified view across your enterprise estate instead of splitting up cloud versus on-premises. Attackers don’t care about your internal processes and follow the path of least resistance to their goal. That includes moving laterally between cloud and on-premises environments. Most enterprises today are a hybrid environment that spans:
+Architecture, standards, and policy provide the critical translation from business requirements and risk into the technical environment. We recommend having a unified view across your enterprise estate instead of splitting up cloud versus on-premises. Attackers don't care about your internal processes and follow the path of least resistance to their goal. That includes moving laterally between cloud and on-premises environments. Most enterprises today are a hybrid environment that spans:
 
 - **On-premises:** Includes multiple generations of technology and often a significant amount of legacy software and hardware. This tech sometimes includes operational technology controlling physical systems with a potential life or safety impact.
 - **Clouds:** Typically includes multiple providers for:
@@ -34,7 +34,7 @@ Architecture, standards, and policy provide the critical translation from busine
 
 ## Security posture management
 
-Hope and reporting problems isn't a plan. Governance in the cloud age must have an active component that continuously engages with other teams. Security posture management is an emerging function. It represents a step forward in the long-term convergence of security functions. These functions answer the question “How secure is the environment?”, including vulnerability management and security compliance reporting.
+Hope and reporting problems isn't a plan. Governance in the cloud age must have an active component that continuously engages with other teams. Security posture management is an emerging function. It represents a step forward in the long-term convergence of security functions. These functions answer the question "How secure is the environment?", including vulnerability management and security compliance reporting.
 
 In the on-premises world, security governance followed the cadence of data it could get about the environment. This way of getting data might take time and be constantly out of date. Cloud technology now provides on-demand visibility into the current security posture and asset coverage. This visibility drives a major transformation of governance into a more dynamic organization. This organization provides a closer relationship to other security teams to monitor security standards, provide guidance, and improve processes.
 
@@ -43,7 +43,7 @@ In its ideal state, governance is the heart of continuous improvement. This impr
 The key tenets of success for governance are:
 
 - **Continuous discovery of assets and asset types:** A static inventory isn't possible in a dynamic cloud environment. Your organization must focus on the continuous discovery of assets and asset types. In the cloud, new types of services are added regularly. Workload owners dynamically spin up and down instances of applications and services as needed, making inventory management a dynamic discipline. Governance teams need to continuously discover asset types and instances to keep up with this pace of change.
-- **Continuous improvement of asset security posture:** Governance teams should focus on improving standards, and enforcement of those standards, to keep up with the cloud and attackers. Information technology (IT) organizations must react quickly to new threats and adapt accordingly. Attackers are continuously evolving their techniques, and defenses are continuously improving and might need to be enabled. You can’t always get all the security you need into the initial configuration.
+- **Continuous improvement of asset security posture:** Governance teams should focus on improving standards, and enforcement of those standards, to keep up with the cloud and attackers. Information technology (IT) organizations must react quickly to new threats and adapt accordingly. Attackers are continuously evolving their techniques, and defenses are continuously improving and might need to be enabled. You can't always get all the security you need into the initial configuration.
 - **Policy driven governance**: This governance provides consistent execution by fixing something once in policy that's automatically applied at scale across resources. This process limits any wasted time and effort on repeated manual tasks. It's often implemented using Azure Policy or third-party policy automation frameworks.
 
 To maintain agility, best practices guidance is often iterative. It digests small pieces of information from multiple sources to create the whole picture and continuously make small adjustments.
@@ -52,7 +52,7 @@ To maintain agility, best practices guidance is often iterative. It digests smal
 
 Protection disciplines include access control, asset protection, and innovation security. The security governance team provides standards and guidance to drive consistent execution of security best practices and controls.
 
-In the ideal state, the protection teams apply these controls and provide feedback on what's working, like challenges in applying the controls. The teams then work together to identify the best solutions.  
+In the ideal state, the protection teams apply these controls and provide feedback on what's working, like challenges in applying the controls. The teams then work together to identify the best solutions.
 
 ## Governance and security operations
 

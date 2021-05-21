@@ -10,22 +10,22 @@ ms.subservice: secure
 ms.custom: internal
 ---
 
-## Toolchain
+## Security toolchain
 
 Commonly used tools in Azure Security:
 
-- [Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/)
-- [Azure Role Based Access Control (RBAC)](https://docs.microsoft.com/en-us/azure/role-based-access-control/)
-- [Azure Defender](https://docs.microsoft.com/en-us/azure/security-center/azure-defender/)
-- [Azure DDoS Protection](https://docs.microsoft.com/en-us/azure/ddos-protection/)
-- [Azure Firewall](https://docs.microsoft.com/en-us/azure/firewall/)
-- [Azure Monitor](https://docs.microsoft.com/en-us/azure/azure-monitor/)
-- [Azure Policy](https://docs.microsoft.com/en-us/azure/governance/policy/)
-- [Azure Policy Samples](https://docs.microsoft.com/en-us/azure/governance/policy/samples/)
-- [Azure Security Center](https://docs.microsoft.com/en-us/azure/security-center/)
-- [Azure Security Benchmark](https://docs.microsoft.com/en-us/security/benchmark/azure/)
-- [Azure Sentinel](https://docs.microsoft.com/en-us/azure/sentinel/)
-- [Confidential Computing on Azure](https://docs.microsoft.com/en-us/azure/confidential-computing/)
+- [Azure Active Directory](/azure/active-directory/)
+- [Azure Role Based Access Control (RBAC)](/azure/role-based-access-control/)
+- [Azure Defender](/azure/security-center/azure-defender)
+- [Azure DDoS Protection](/azure/ddos-protection/)
+- [Azure Firewall](/azure/firewall/)
+- [Azure Monitor](/azure/azure-monitor/)
+- [Azure Policy](/azure/governance/policy/)
+- [Azure Policy Samples](/azure/governance/policy/samples/)
+- [Azure Security Center](/azure/security-center/)
+- [Azure Security Benchmark](/security/benchmark/azure/)
+- [Azure Sentinel](/azure/sentinel/)
+- [Confidential Computing on Azure](/azure/confidential-computing/)
 
 Additional resources:
 

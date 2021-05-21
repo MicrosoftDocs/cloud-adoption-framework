@@ -18,7 +18,7 @@ Because DevOps itself is an emerging discipline with a high degree of process va
 
 This documentation reviews each stage of a continuous integration and continuous delivery (CI/CD) DevOps process and what security controls we recommend integrating first.
 
-![DevSecOps controls](./media/DevSecOpsControls.png)
+![DevSecOps controls](./media/devsecops-controls.png)
 
 ## Plan and develop
 
@@ -57,7 +57,7 @@ You can use either or both of these approaches, depending on what works better f
 
 As the team gets more comfortable with the process, they can apply more advanced techniques from Microsoft [Security Development Lifecycle](https://www.microsoft.com/securityengineering/sdl/threatmodeling) and integrate threat modeling tools like [Microsoft Threat Modeling Tool](/azure/security/develop/threat-modeling-tool) to get deeper insights and help automate the process.
 
-Another helpful resource is [A Guide to Threat Modeling for Developers (martinfowler.com)](https://martinfowler.com/articles/agile-threat-modelling.html)
+Another helpful resource is [A Guide to Threat Modeling for Developers](https://martinfowler.com/articles/agile-threat-modelling.html).
 
 ### IDE security plugins and pre-commit hooks
 
@@ -83,7 +83,7 @@ To address this risk, development teams should evaluate and implement a reposito
 
 It's known that up 90 percent of the code in current applications contains and is based on external packages and libraries. With the adoption of dependencies in the source code, it's essential to address potential risks. Many third-party libraries have serious security problems themselves. Additionally, developers not consistently implement the proper lifecycle and keep them up to date.
 
-Developer teams should ensure that they know what components are included in their applications, be sure that secure and up-to-date versions are downloaded from the known sources, and there's a process for keeping them up to date. This can be done with tools like OWASP's Dependency Check project, WhiteSource, and others.
+Developer teams should ensure that they know what components are included in their applications, be sure that secure and up-to-date versions are downloaded from the known sources, and there's a process for keeping them up to date. This can be done with tools like the OWASP Dependency Check project, WhiteSource, and others.
 
 To focus on the dependency vulnerabilities or their lifecycle only is not enough. It's also important to address package feeds security. There are known attack vectors towards package management systems: typosquatting, compromising existing packages, substitution attacks, and others. Therefore responsible for the package management administration must address those risks. The good starting point is [Three Ways to Mitigate Risk When Using Private Package Feeds](https://aka.ms/pkg-sec-wp) documentation.
 
@@ -91,7 +91,7 @@ To focus on the dependency vulnerabilities or their lifecycle only is not enough
 
 Once third-party libraries and package management have been addressed, it's essential to shift the focus and improve one's written code security state. There are different ways to improve code security, like using IDE security plugins and wiring incremental static analysis pre-commit and commit checks discussed before. It's also possible to do the complete source code scanning to catch some mistakes missed by previous steps. It's needed but might take hours or days to run on a large block of code. This approach can slow down development and introduce burden.
 
-There's a need to start from somewhere when you start to implement static code scanning practices. One way is to introduce static code analysis inside of continuous integration to verify security as soon as changes are made. One of these tools is SonarCloud, which wraps multiple SAST scanning tools for different languages. SonarCloud assesses and tracks technical debt with a focus on maintainability, such as code quality and style, and has security-specific checkers. There are many others commercial and open-source tools available on a market.
+There's a need to start from somewhere when you start to implement static code scanning practices. One way is to introduce static code analysis inside of continuous integration to verify security as soon as changes are made. One of these tools is SonarCloud, which wraps multiple static application security testing (SAST) tools for different languages. SonarCloud assesses and tracks technical debt with a focus on maintainability, such as code quality and style, and has security-specific checkers. There are many others commercial and open-source tools available on a market.
 
 To ensure that the feedback loop is effective, it's crucial to tune the tool to minimize false positives and provide clear, actionable feedback on problems to fix. Additionally, it's good to implement the workflow, which prevents code commit to the _main_ branch if there are findings. For both quality and security findings. In this way, security becomes a part of the unit tests experience.
 
@@ -99,7 +99,7 @@ To ensure that the feedback loop is effective, it's crucial to tune the tool to 
 
 DevOps brings automation on another level where everything goes through the pipelines. Continuous integration and continuous delivery is a large part of modern development. Infrastructure is why pipelines are a centric part of the development and have keys to the kingdom. Pipelines introduce unique security challenges. They can be compromised to run malicious code, credentials might be stolen from pipelines, or an attacker without access to the production might modify the pipeline to achieve their goals.
 
-DevOps teams must ensure the proper security controls are implemented for the pipeline. Depending on the chosen platform, there are different guidelines on how to address those risks. For the Azure Pipelines, there's a documentation available: [Securing Azure Pipelines](/azure/devops/pipelines/security/overview?view=azure-devops)
+DevOps teams must ensure the proper security controls are implemented for the pipeline. Depending on the chosen platform, there are different guidelines on how to address those risks. For more information, see [LINKTEXT](/azure/devops/pipelines/security/overview).
 
 ## Build and test
 
@@ -107,16 +107,16 @@ Many organizations use build and release pipelines to automate and standardize t
 
 ### Dynamic application security testing
 
-In a classical waterfall development model, security was typically introduced on the last stop, right before going to production. One of the most popular security approaches is penetration testing or pen test. The penetration test is an important step, which allows looking at the application from the black-box security perspective, closest to the attacker mindset. A penetration test consists of several action points, one of them is known as a Dynamic Application Security Testing (DAST). DAST is a web application security test that finds security issues in the running application by seeing how the application responds to specially crafted requests. DAST tools are also known as web application vulnerability scanners. One of them is an open-source [OWASP ZAP Zed Attack Proxy](https://owasp.org/www-project-zap/), which finds vulnerabilities in the running web application. There are several ways how OWASP ZAP does the scan: passive baseline scan or full scan depending on the configuration.
+In a classical waterfall development model, security was typically introduced on the last stop, right before going to production. One of the most popular security approaches is penetration testing or pen test. The penetration test is an important step, which allows looking at the application from the black-box security perspective, closest to the attacker mindset. A penetration test consists of several action points, one of them is known as dynamic application security testing (DAST). DAST is a web application security test that finds security issues in the running application by seeing how the application responds to specially crafted requests. DAST tools are also known as web application vulnerability scanners. One of them is an open-source [OWASP ZAP Zed Attack Proxy](https://owasp.org/www-project-zap/), which finds vulnerabilities in the running web application. There are several ways how OWASP ZAP does the scan: passive baseline scan or full scan depending on the configuration.
 
-The downside of a pen test is that it takes time. The proper pen test might take up to several weeks, and with DevOps development speed, it becomes unsustainable. However, it's still worth adding a *lighter* version of pen test during the development process to uncover what might be missed by SAST and previous steps. DAST tools like OWASP ZAP might help. Developers can integrate OWASP ZAP in the pipeline as a task. During the execution, the OWASP ZAP scanner is spun up in the container and does the scanning process after it publishes results. This approach might not be a perfect, as it's not complete penetration testing, however, it's one more quality gate in the development cycle for improving the security posture.  
+The downside of a pen test is that it takes time. The proper pen test might take up to several weeks, and with DevOps development speed, it becomes unsustainable. However, it's still worth adding a *lighter* version of pen test during the development process to uncover what might be missed by SAST and previous steps. DAST tools like OWASP ZAP might help. Developers can integrate OWASP ZAP in the pipeline as a task. During the execution, the OWASP ZAP scanner is spun up in the container and does the scanning process after it publishes results. This approach might not be a perfect, as it's not complete penetration testing, however, it's one more quality gate in the development cycle for improving the security posture.
 
 ### Cloud configuration validation and infrastructure scanning
 
 Alongside scanning and securing the code for applications, it's important to ensure that the environments that applications are deployed into are also secure. This is key for organizations who want to move at pace, innovate, and use new technologies or create environments quickly for experimentation. Azure has capabilities that enable organizations to create security standards from environments, such as Azure Policy, that can be used to create policy sets that prevent the creation of certain workload types or configuration items such as public IP addresses. These *guardrails* enable teams to experiment within a safe and controlled environment, balancing innovation and governance.
 
 One of the DevOps aspects when bringing closer developers and operations in cooperation is transferring infrastructure into Infrastructure as Code concept.
-> Infrastructure as Code (IaC) is the management of infrastructure (networks, virtual machines, load balancers, and connection topology) in a descriptive model, using the same versioning as the DevOps team uses for source code. Like the principle that the same source code generates the same binary, an IaC model generates the same environment every time it is applied. IaC is a key DevOps practice and is used in conjunction with [continuous delivery](/azure/devops/learn/what-is-continuous-delivery).
+> Infrastructure as Code (IaC) is the management of infrastructure (networks, virtual machines, load balancers, and connection topology) in a descriptive model, using the same versioning as the DevOps team uses for source code. Like the principle that the same source code generates the same binary, an IaC model generates the same environment every time it is applied. IaC is a key DevOps practice and is used in conjunction with [continuous delivery](/devops/deliver/what-is-continuous-delivery).
 
 DevSecOps is shifting security left and it's not only about application security but about infrastructure security as well. One of the steps is to introduce security scanning of infrastructure before it's deployed in the cloud. As infrastructure became code, it's possible to apply the same security actions as it is for application security shown in the previous challenges. There are security tools that can do the security scanning based on chosen IaC strategy.
 

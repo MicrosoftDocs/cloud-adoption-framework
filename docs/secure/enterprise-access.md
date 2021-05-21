@@ -1,6 +1,6 @@
 ---
 title: Enterprise Access
-description: Learn about Enterprise Accses in the Cloud Adoption Framework for Azure.
+description: Learn about Enterprise Access in the Cloud Adoption Framework for Azure.
 author: NaomiOooo
 ms.author: naomio
 ms.date: 04/04/2021
@@ -12,4 +12,4 @@ ms.custom: internal
 
 # Enterprise Access
 
-Linky here - https://docs.microsoft.com/en-us/security/compass/privileged-access-access-model
+Linky here - /security/compass/privileged-access-access-model
