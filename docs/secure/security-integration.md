@@ -18,7 +18,7 @@ Your organization must maintain security assurances while minimizing friction wi
 
 :::image type="content" source="./media/business-process-security-integration.png" alt-text="Diagram shows finance, information technology, and information security departments with a two headed arrow that represents internal interactions." lightbox="./media/business-process-security-integration-popout.png":::
 
-Internal friction and low levels of inter-team conflict might occur in organizations. Such conflicts aren't sustainable. It's critical for all of the teams to work together in the age of cloud, digital business, and zero trust security. Teams operating with different goals, culture, and language make an organization inefficient and ineffective.
+Internal friction and low levels of conflict between teams might occur in organizations. Such conflicts aren't sustainable. It's critical for all of the teams to work together in the age of cloud, digital business, and zero trust security. Teams operating with different goals, culture, and language make an organization inefficient and ineffective.
 
 Be sure that security teams aren't operating in silos. The teams should work closely together to ensure smooth process operations and knowledge sharing.
 

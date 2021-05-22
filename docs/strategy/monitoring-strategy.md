@@ -213,7 +213,7 @@ To help you align monitoring plans to strategy, use the following table to categ
 | 3 | On-premises to/with cloud (cooperative) where services run in both the cloud and on-premises | Establish initial monitoring with Azure Monitor. Connect Azure Monitor to System Center Operations Manager and alert sources, such as Zabbix or Nagios. Deploy Azure Monitor monitoring agents, multihoming with System Center Operations Manager where they monitor cooperatively. |
 | 4 | Hybrid migration | Monitor the migration, for example, Microsoft Exchange Server to Microsoft 365 Exchange Online. Exchange Online service health and service usage, security and compliance, all from Microsoft 365. Gradually decommission monitoring exchange on-premises with System Center Operations Manager until migration is complete. |
 | 5 | Hybrid forever | System Center Operations Manager, Azure AD, Azure Monitor, Azure Security Center, Intune, and others; a range of tools for a mixture of digital assets. |
-| 6 | Cloud native | Azure Monitor, Azure Policy, Azure Security Center, Microsoft 365, Azure Service Health, Azure resource health, and others. |
+| 6 | Cloud native | Azure Monitor, Azure Policy, Azure Security Center, Microsoft 365, Azure Service Health, Azure Resource Health, and others. |
 | 7 | Multicloud owned tenants (consolidate) | Centralize the monitoring of many tenants. Azure Lighthouse, Azure Policy, Azure Monitor, and Azure Sentinel. |
 | 8 | Multicloud ecosystem | Centralize the monitoring of different cloud providers: Microsoft, Amazon, Google, and others. |
 | 9 | Provider > Consumer | Monitoring solutions and services as a cloud provider. |

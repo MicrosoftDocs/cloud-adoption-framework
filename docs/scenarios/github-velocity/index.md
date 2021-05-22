@@ -100,7 +100,7 @@ Within an enterprise, contributors are developers across the company, and mainta
 
 - **Contributors:** Developers, data scientists, product managers, marketers, and other roles within a company that help drive software forward. Contributors might not be part of the direct project team but help build software by contributing code, submitting bug fixes, and more.
 
-For more information, see the [Introduction to Innersource](https://resources.github.com/whitepapers/introduction-to-innersource/) white paper.
+For more information, see the white paper [An introduction to innersource](https://resources.github.com/whitepapers/introduction-to-innersource/).
 
 ## Automation
 
@@ -131,10 +131,10 @@ With many security capabilities, GitHub offers tools that support every part of 
 
 GitHub DevSecOps installations cover many security scenarios. Possibilities include the following cases:
 
-- Developers who want to take advantage of pre-configured environments that offer security capabilities
-- Administrators who rely on having up-to-date, prioritized security reports at their fingertips, along with details on affected code and suggested fixes
-- Streamlined organizations that need systems to automatically acquire new and uncompromised security devices when secrets are left exposed in code
-- Development teams that could benefit from automatic upgrades when newer or more secure versions of external packages become available
+- Developers who want to take advantage of preconfigured environments that offer security capabilities.
+- Administrators who rely on having up-to-date, prioritized security reports at their fingertips, along with details on affected code and suggested fixes.
+- Streamlined organizations that need systems to automatically acquire new and uncompromised security devices when secrets are left exposed in code.
+- Development teams that could benefit from automatic upgrades when newer or more secure versions of external packages become available.
 
 For more information, see:
 

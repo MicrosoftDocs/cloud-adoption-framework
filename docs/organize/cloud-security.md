@@ -43,7 +43,7 @@ Each of the following articles provide information about each function including
 - [Posture management](./cloud-security-posture-management.md)
 - [Incident preparation](./cloud-security-incident-preparation.md)
 
-These responsibilities are referenced throughout Microsoft documentation including the [Azure Security Benchmark](https://aka.ms/benchmarkdocs), [Securing privileged access: rapid modernization plan (RaMP)](https://aka.ms/sparoadmap), and the [Azure security top 10](https://aka.ms/azuresecuritytop10),
+These responsibilities are referenced throughout Microsoft documentation including the [Azure Security Benchmark](https://aka.ms/benchmarkdocs), [securing privileged access: rapid modernization plan](https://aka.ms/sparoadmap), and the [Azure security top 10](https://aka.ms/azuresecuritytop10),
 
 ## Roles and responsibilities
 
@@ -71,7 +71,7 @@ The middle (dark blue) section groups these responsibilities into typical roles 
 - **Application security engineer:** These technology roles focused on security controls for specific workloads, supporting both classic development models and modern DevOps/DevSecOps model. This is a blend of application/development security skills for unique code and infrastructure skills for common technical components like VMs, databases, and containers. These roles may be located in central IT or security organizations or within business and development teams, depending on organizational factors.
 
 > [!NOTE]
-> As both DevOps and infrastructure as code trends progress, we expect to see some security talent migrate from platform security engineering teams to application security teams and posture management roles. This is because the DevOps model requires infrastructure security skills (such as securing the _ops_ in DevOps) and governance teams will also require these skills and experience to effectively monitor technical security posture in real time. Additionally, infrastructure as code will automate repetitive manual technical tasks, reducing the volume of time required for these skills in the platform security engineer roles (though increasing the need for broad technical skill sets and automation or scripting skills).
+> As both DevOps and infrastructure as code trends progress, we expect to see some security talent migrate from platform security engineering teams to application security teams and posture management roles. This is because the DevOps model requires infrastructure security skills (such as securing the *ops* in DevOps) and governance teams will also require these skills and experience to effectively monitor technical security posture in real time. Additionally, infrastructure as code will automate repetitive manual technical tasks, reducing the volume of time required for these skills in the platform security engineer roles (though increasing the need for broad technical skill sets and automation or scripting skills).
 
 ## Next steps
 

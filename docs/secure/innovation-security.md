@@ -87,7 +87,7 @@ Integrating these cultures and goals together into a true DevSecOps approach can
 - Quality and performance issues
 - Security issues
 
-While having a few issues is normal and expected with new development, inter-team conflicts often dramatically increase the number and severity of these issues. The conflicts occur, often because one or two teams have a political advantage, and repeatedly override requirements of other teams. Over time, the neglected issues grow in volume and seriousness. Left unsolved, this dynamic might get worse with DevOps as the speed of making decisions increases to meet the rapid evolution of business needs and customer preferences.
+While having a few issues is normal and expected with new development, conflicts between teams often dramatically increase the number and severity of these issues. The conflicts occur, often because one or two teams have a political advantage, and repeatedly override requirements of other teams. Over time, the neglected issues grow in volume and seriousness. Left unsolved, this dynamic might get worse with DevOps as the speed of making decisions increases to meet the rapid evolution of business needs and customer preferences.
 
 Solving these problems requires creating a shared culture that values dev, sec, and ops requirements that are supported by leadership. This approach will allow your teams to work better together and help solve the most urgent issues on any given sprint, whether they're improving security, operational stability, or adding critical business features.
 
