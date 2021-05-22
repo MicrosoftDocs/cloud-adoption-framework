@@ -103,7 +103,7 @@ Applications use the different authentication flows to sign in users and get tok
 
 The following diagram outlines the most common application scenarios and their identity components.
 
-![App scenarios and their identity components](../media/application-scenarios-identity-platform.svg)
+![Application scenarios and their identity components](../media/application-scenarios-identity-platform.svg)
 
 ### SAML v2.0
 

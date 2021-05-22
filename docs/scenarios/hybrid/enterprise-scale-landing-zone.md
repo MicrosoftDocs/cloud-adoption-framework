@@ -38,7 +38,7 @@ This article assumes that enterprise-scale landing zone has been successfully im
 
 ## Design guidelines
 
-Guide to the critical decisions that drive the design of the Cloud Adoption Framework for Azure enterprise-scale landing zone. There are six critical design areas that can be used to review and modify your enterprise-scale landing zone or any other Azure Landing Zone implementation:
+Guide to the critical decisions that drive the design of the Cloud Adoption Framework for Azure enterprise-scale landing zone. There are six critical design areas that can be used to review and modify your enterprise-scale landing zone or any other Azure landing zone implementation:
 
 - [Identity and access management](../../ready/enterprise-scale/identity-and-access-management.md)
 - [Network topology and connectivity](../../ready/enterprise-scale/network-topology-and-connectivity.md)

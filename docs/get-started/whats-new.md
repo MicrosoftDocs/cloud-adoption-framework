@@ -20,9 +20,9 @@ This framework is built collaboratively with customers, partners, and internal M
 
 ## May 2021
 
-### Cloud Adoption Framework Secure Methodology
+### Cloud Adoption Framework Secure methodology
 
-This release of the Cloud Adoption Framework introduces the new Secure methodology, which will centralize the theme of security best practices and provide end-to-end guidance for customers looking to adopt Microsoft guidance for their cloud environments. Security concerns have surged to the forefront of many top priorities lists recently, building on feedback requesting a more security-centric view, the [Secure Methodology](../secure/index.md) will assist in defining the security aspect of the cloud journey.
+This release of the Cloud Adoption Framework introduces the new Secure methodology, which will centralize the theme of security best practices and provide end-to-end guidance for customers looking to adopt Microsoft guidance for their cloud environments. Security concerns have surged to the forefront of many top priorities lists recently, building on feedback requesting a more security-centric view, the [Secure methodology](../secure/index.md) will assist in defining the security aspect of the cloud journey.
 
 ## April 2021
 
@@ -36,7 +36,7 @@ This release is the largest update of the framework yet, adding a number of new 
 
 ### Adoption journeys
 
-Most notable in this release is the addition of adoption journeys, which provide a short, consumable overlay or lenses that rest on top of the deeper framework to accelerate engagement. These shorter guides demonstrate how to apply the guidance in the Cloud Adoption Framework, the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/), the [Azure Architecture Center](/azure/architecture), [Microsoft Learn](/learn), and other [Microsoft documentation](/) to the adoption of specific technology platforms. The following table provides links to the overview page for each of the new journeys:
+Most notable in this release is the addition of adoption journeys, which provide a short, consumable overlay or lenses that rest on top of the deeper framework to accelerate engagement. These shorter guides demonstrate how to apply the guidance in the Cloud Adoption Framework, the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/), the [Azure Architecture Center](/azure/architecture/), [Microsoft Learn](/learn/), and other [Microsoft documentation](/) to the adoption of specific technology platforms. The following table provides links to the overview page for each of the new journeys:
 
 | Journey | Description |
 |--|--|
@@ -61,17 +61,17 @@ We've updated the introduction to each category of business outcomes with refere
 
 The critical design area of [network topology and connectivity](../ready/azure-best-practices/define-an-azure-network-topology.md) includes new articles that simplify rationalizing individual components of your network design. Those design aspects now include guidance on [connecting to multicloud providers](../ready/azure-best-practices/connectivity-to-other-providers.md) like Oracle Cloud Infrastructure. We've also released the new enterprise-scale Terraform module to demonstrate Microsoft's continued investment in open-source approaches to Azure landing zone configuration. Lastly, we've updated guidance on how enterprises can [optimize management groups and organize subscriptions](../ready/enterprise-scale/management-group-and-subscription-organization] in Azure to meet cloud governance requirements.
 
-### Anti-patterns
+### Antipatterns
 
-Companies often miss important steps in their cloud adoption journey. The new [cloud adoption anti-patterns](../antipatterns/antipatterns-to-avoid.md) guidance highlights common customer pain points, what skipped step led to that pain, and the fastest path to recovery. The anti-patterns are distributed throughout each methodology, but a top 10 list is available in the getting started section of the framework.
+Companies often miss important steps in their cloud adoption journey. The new [cloud adoption antipatterns](../antipatterns/antipatterns-to-avoid.md) guidance highlights common customer pain points, what skipped step led to that pain, and the fastest path to recovery. The antipatterns are distributed throughout each methodology, but a top 10 list is available in the getting started section of the framework.
 
 ### AI + Machine Learning
 
 When planning an Azure Machine Learning deployment for an enterprise environment, there are common decision points that affect how you create the workspaces. We've published a new article, [Organize and set up Azure Machine Learning environments](../ready/azure-best-practices/ai-machine-learning-resource-organization.md), that highlights these decision areas and the benefits of each:
 
-- Team structure: The way your Machine Learning teams are organized and collaborate on projects given use case and data segregation, or cost management requirements.
-- Environments: The environments used as part of your development and release workflow to segregate development from production.
-- Region: The location of your data and the audience you need to serve your Machine Learning solution to.
+- **Team structure:** How your Machine Learning teams are organized and collaborate on a project's given use case and data segregation, or cost management requirements.
+- **Environments:** The environments used as part of your development and release workflow to segregate development from production.
+- **Region:** The location of your data and the audience you need to serve your Machine Learning solution to.
 
 We added a reference implementation example to help illustrate the deployment of Azure Machine Learning in a larger setting. It outlines how the organization 'Contoso' set up Azure Machine Learning given their organizational constraints, reporting, and budgeting requirements.
 
@@ -80,7 +80,7 @@ We added a reference implementation example to help illustrate the deployment of
 To help you plan your Azure Storage migration, we've provided guidance in a new article, [Azure Storage migration overview](/windows-server/storage/storage-migration-service/overview), for two migration scenarios:
 
 - Migration of unstructured data, such as files and objects
-- Migration of block-based devices, such as disks and storage area networks (SANs)
+- Migration of block-based devices, such as disks and storage area networks
 
 ## January 2021
 
@@ -89,7 +89,7 @@ To help you accelerate adoption and innovation, we've added new information abou
 | Article | Description |
 |--|--|
 | [How&nbsp;GitHub&nbsp;accelerates&nbsp;cloud&nbsp;adoption](../scenarios/github-velocity/index.md) | This article outlines the benefits of using GitHub to accelerate cloud adoption by taking advantage of open-source assets, collaborative development environments, automation and security features. |
-| [Best practices for machine learning](../innovate/best-practices/machine-learning.md) | We've updated and expanded the best practice guidance for machine learning. Included in the best practices are: <br><br> <li> [How to approach machine learning operations](../innovate/best-practices/how-to-approach-mlops.md) and [the MLOps process](../innovate/best-practices/mlops-process.md) <li> [Machine learning security](../innovate/best-practices/ml-security.md) <li> [Machine learning inference and deployment](../innovate/best-practices/ml-deployment-inference.md) <li> [Determine compute instances for your model](../innovate/best-practices/dev-train-comp-instances-for-ml.md) <li> [Set up machine learning workspaces](../innovate/best-practices/set-up-ml-workspaces.md) <li> [Responsible and trusted AI](../innovate/best-practices/trusted-ai.md) |
+| [Best practices for machine learning](../innovate/best-practices/machine-learning.md) | We've updated and expanded the best practice guidance for machine learning. Included in the best practices are: <br><br> <li> [How to approach machine learning operations](../innovate/best-practices/how-to-approach-mlops.md) and the [MLOps process](../innovate/best-practices/mlops-process.md) <li> [Machine learning security](../innovate/best-practices/ml-security.md) <li> [Machine learning inference and deployment](../innovate/best-practices/ml-deployment-inference.md) <li> [Determine compute instances for your model](../innovate/best-practices/dev-train-comp-instances-for-ml.md) <li> [Set up machine learning workspaces](../innovate/best-practices/set-up-ml-workspaces.md) <li> [Responsible and trusted AI](../innovate/best-practices/trusted-ai.md) |
 | [Choose&nbsp;a&nbsp;landing&nbsp;zone&nbsp;option](../ready/landing-zone/choose-landing-zone-option.md) | Microsoft offers two implementation options for landing zones: *Start small and expand* and *Enterprise-scale*. Use this new article to review both options and choose the right approach for your organization. |
 
 ## December 2020
@@ -243,7 +243,7 @@ Continued iteration of refinement to the Migrate methodology and the Ready metho
 
 | Article | Description |
 |--|--|
-| [Migrate methodology](../migrate/index.md) | These changes streamline the phases of the migration effort (assess workloads, deploy workloads, and release workloads). The changes also remove the details regarding the migration backlog. Removing those details and referencing plan, ready, and Adopt methodologies instead creates flexibility for various different cloud adoption programs to better align with the methodology. |
+| [Migrate methodology](../migrate/index.md) | These changes streamline the phases of the migration effort (assess workloads, deploy workloads, and release workloads). The changes also remove the details regarding the migration backlog. Removing those details and referencing Plan, Ready, and Adopt methodologies instead creates flexibility for various different cloud adoption programs to better align with the methodology. |
 
 **Ready methodology updates:**
 

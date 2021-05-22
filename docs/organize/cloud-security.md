@@ -12,11 +12,11 @@ ms.custom: think-tank
 
 # Cloud security functions
 
-This article provides a summary of the organizational functions required to manage information security risk in an enterprise. These roles and responsibilities form the human portion of an overall cybersecurity system. 
+This article provides a summary of the organizational functions required to manage information security risk in an enterprise. These roles and responsibilities form the human portion of an overall cybersecurity system.
 
-### Security is a team sport
+## Security is a team sport
 
-Its critical that individuals on the security team see each other as part of a whole security team, part of the whole organization, and part of a larger security community defending against the same adversaries. 
+It's critical that individuals on the security team see each other as part of a whole security team, part of the whole organization, and part of a larger security community defending against the same adversaries.
 
 This holistic worldview enables the team to work well in general. It's especially important as the teams work through any unplanned gaps and overlaps discovered during the evolution of roles and responsibilities.
 
@@ -24,11 +24,11 @@ This holistic worldview enables the team to work well in general. It's especiall
 
 This diagram depicts the specific organizational functions within security, often called responsibilities or "jobs to be done".
 
-These diagrams and documentation represent an ideal view of an complete enterprise security team. This may be an aspirational view for security teams with limited resources that may not have formal responsibilities defined around all of these functions. Each function may be performed by one or more people, and each person may perform one or more functions depending on various factors such as culture, budget, and available resources.
+These diagrams and documentation represent an ideal view of a complete enterprise security team. This may be an aspirational view for security teams with limited resources that may not have formal responsibilities defined around all of these functions. Each function may be performed by one or more people, and each person may perform one or more functions depending on various factors such as culture, budget, and available resources.
 
 :::image type="content" source="../secure/media/security-responsibilities.png" alt-text="View of the responsibilities/functions of an enterprise security team" lightbox="../secure/media/security-responsibilities-popout.png":::
 
-Each of the following articles provide information about each function including a summary of objectives, how the function can evolve because of the threat environment or cloud technology changes, and the relationships and dependencies that are critical to its success.
+Each of the following articles provides information about each function including a summary of objectives, how the function can evolve because of the threat environment or cloud technology changes, and the relationships and dependencies that are critical to its success.
 
 - [Policy and standards](./cloud-security-policy-standards.md)
 - [Security operations](./cloud-security-operations-center.md)
@@ -43,7 +43,7 @@ Each of the following articles provide information about each function including
 - [Posture management](./cloud-security-posture-management.md)
 - [Incident preparation](./cloud-security-incident-preparation.md)
 
-These responsibilities are referenced throughout Microsoft documentation including the [Azure Security Benchmark](https://aka.ms/benchmarkdocs), the [Securing Privileged Access – Rapid Modernization Plan (RaMP)](https://aka.ms/sparoadmap), and the [Azure Security Top 10](https://aka.ms/azuresecuritytop10),
+These responsibilities are referenced throughout Microsoft documentation including the [Azure Security Benchmark](https://aka.ms/benchmarkdocs), [securing privileged access: rapid modernization plan](https://aka.ms/sparoadmap), and the [Azure security top 10](https://aka.ms/azuresecuritytop10),
 
 ## Roles and responsibilities
 
@@ -53,25 +53,26 @@ The following diagram depicts how these functions map to role types within an or
 
 ### Mapping security to business outcomes
 
-At the organizational level, the security disciplines map to standard plan-build-run phases seen widely across industries and organizations. While this cycle is accelerating into a continuous change cycle with the digital age and the advent of DevOps, this illustrates how security maps to normal business processes. 
+At the organizational level, the security disciplines map to standard plan-build-run phases seen widely across industries and organizations. While this cycle is accelerating into a continuous change cycle with the digital age and the advent of DevOps, this illustrates how security maps to normal business processes.
 
-Security is both discipline with its own unique functions *and* a critical element to integrate into normal business operations. 
+Security is both discipline with its own unique functions *and* a critical element to integrate into normal business operations.
 
-## Role Types
+## Role types
 
-The middle (dark blue) section groups these responsibilities into typical roles that have common skillsets and career profiles. These groupings also helps provide clarity on how industry trends are impacting security professionals:
+The middle (dark blue) section groups these responsibilities into typical roles that have common skill sets and career profiles. These groupings also help provide clarity on how industry trends are affecting security professionals:
 
- - **Security Leadership** - These roles frequently span across functions, ensuring that teams coordinate with each other, providing prioritization and setting cultural norms, policies, and standards for security.
- - **Security Architect** - These roles span across functions and provide a key governance capability to ensure all of the technical functions work harmoniously within a consistent architecture
- - **Security Posture & Compliance** - This is a newer role type that represents the increasing convergence of compliance reporting with traditional security disciplines like vulnerability management and configuration baselines. While the scope and audience are different for security and compliance reporting, they are answering different versions of the question of "how secure is the organization?". The way that question is answered is getting more and more similar with through tools like secure score and azure security center:
-     - The use of on-demand data feeds from cloud services is reducing the time required to report compliance. 
-     - The increased scope of data available is enabling security governance to look beyond traditional software updates/patches and discover/track "vulnerabilities" from security configurations and operational practices
- - **Platform security engineer** - These are technology roles focused on platforms that host multiple workloads, focused on both access control and asset protection. These roles are often grouped into teams with specialized technical skillsets including network security, infrastructure and endpoints, identity and key management, and others. These teams work on both preventive controls and detective controls, with detective controls being a partnership with SecOps and preventive controls being primarily a partnership with IT Operations. See [Security Integration](../secure/security-integration.md) for more details
- - **Application Security Engineer** - These technology roles focused on security controls for specific workloads, supporting both classic development models and modern DevOps/DevSecOps model. This is a blend of application/development security skills for unique code and infrastructure skills for common technical components like VMs, databases, and containers. These roles may be located in central IT/Security organizations or within business/development teams, depending on organizational factors. 
+- **Security leadership:** These roles frequently span across functions, ensuring that teams coordinate with each other, providing prioritization and setting cultural norms, policies, and standards for security.
+- **Security architect:** These roles span across functions and provide a key governance capability to ensure all of the technical functions work harmoniously within a consistent architecture
+- **Security posture and compliance:** This is a newer role type that represents the increasing convergence of compliance reporting with traditional security disciplines like vulnerability management and configuration baselines. While the scope and audience are different for security and compliance reporting, they are answering different versions of the question of "how secure is the organization?". The way that question is answered is growing more similar via tools like Microsoft Secure Score and Azure Security Center:
 
->[!Note]
-> As both DevOps and Infrastructure as code trends progress, we expect to see some security talent migrate from platform security engineering teams to application security teams and posture management roles. This is because the DevOps model requires infrastructure security skills (e.g. securing the "ops" in devops) and governance teams will also require these skills and experience to effectively monitor technical security posture in real time. Additionally, infrastructure as code will automate repetitive manual technical tasks, reducing the volume of time required for these skills in the platform security engineer roles (though increasing the need for broad technical skillsets and automation/scripting skills).  
+  - The use of on-demand data feeds from cloud services is reducing the time required to report compliance.
+  - The increased scope of data available is enabling security governance to look beyond traditional software updates/patches and discover/track "vulnerabilities" from security configurations and operational practices
+- **Platform security engineer:** These are technology roles focused on platforms that host multiple workloads, focused on both access control and asset protection. These roles are often grouped into teams with specialized technical skill sets including network security, infrastructure and endpoints, identity and key management, and others. These teams work on both preventive controls and detective controls, with detective controls being a partnership with SecOps and preventive controls being primarily a partnership with IT operations. For more information, see [Security integration](../secure/security-integration.md).
+- **Application security engineer:** These technology roles focused on security controls for specific workloads, supporting both classic development models and modern DevOps/DevSecOps model. This is a blend of application/development security skills for unique code and infrastructure skills for common technical components like VMs, databases, and containers. These roles may be located in central IT or security organizations or within business and development teams, depending on organizational factors.
 
-## Next Steps
+> [!NOTE]
+> As both DevOps and infrastructure as code trends progress, we expect to see some security talent migrate from platform security engineering teams to application security teams and posture management roles. This is because the DevOps model requires infrastructure security skills (such as securing the *ops* in DevOps) and governance teams will also require these skills and experience to effectively monitor technical security posture in real time. Additionally, infrastructure as code will automate repetitive manual technical tasks, reducing the volume of time required for these skills in the platform security engineer roles (though increasing the need for broad technical skill sets and automation or scripting skills).
 
-Review the [Secure Methodology](../secure/index.md)
+## Next steps
+
+Review the [Secure methodology](../secure/index.md)

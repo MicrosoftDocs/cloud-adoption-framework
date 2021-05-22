@@ -55,7 +55,7 @@ Whether you're already operating in the cloud or you're planning for future adop
 
 **Technology:**
 
-6. [Require passwordless or multi-factor authentication](../secure/security-top-10.md#6-technology-require-passwordless-or-multifactor-authentication)
+6. [Require passwordless or multifactor authentication](../secure/security-top-10.md#6-technology-require-passwordless-or-multifactor-authentication)
 7. [Integrate native firewall and network security](../secure/security-top-10.md#7-technology-integrate-native-firewall-and-network-security)
 8. [Integrate native threat detection](../secure/security-top-10.md#8-technology-integrate-native-threat-detection)
 
@@ -229,7 +229,7 @@ During [landing zone](../ready/landing-zone/index.md) implementation, many decis
 
   Microsoft has published guidance to help you build your security baselines:
   - [Azure security standards for strategy and architecture](/security/compass/compass): Strategy and architectural recommendations to shape your environment's security posture.
-  - [Azure security benchmarks](/azure/security/benchmarks/introduction): Specific configuration recommendations for securing Azure environments.
+  - [Azure security benchmarks](/security/benchmark/azure/introduction): Specific configuration recommendations for securing Azure environments.
   - [Azure security baseline training](/learn/modules/create-security-baselines/).
 
 - **Provide guardrails:** Safeguards should include automated policy auditing and enforcement. For these new environments, teams should strive to both audit and enforce the organization's security baselines. These efforts can help minimize security surprises during the development of workloads, as well as continuous integration and continuous deployment (CI/CD) of workloads.
@@ -302,7 +302,7 @@ The steps in this guide have helped you implement the strategy, controls, proces
 As you continue into the operations mode of cloud security, consider these next steps:
 
 - Review [Microsoft security documentation](/security/). It provides technical guidance to help security professionals build and improve cybersecurity strategy, architecture, and prioritized roadmaps.
-- Review security information in [Built-in security controls for Azure services](/azure/security/fundamentals/security-controls).
+- Review security information in [Built-in security controls for Azure services](/security/benchmark/azure/).
 - Review Azure security tools and services in [Security services and technologies available on Azure](/azure/security/fundamentals/services-technologies).
 - Review the [Microsoft Trust Center](https://www.microsoft.com/trustcenter/guidance/risk-assessment). It contains extensive guidance, reports, and related documentation that can help you perform risk assessments as part of your regulatory compliance processes.
 - Review third-party tools available to facilitate meeting your security requirements. For more information, see [Integrate security solutions in Azure Security Center](/azure/security-center/security-center-partner-integration).
