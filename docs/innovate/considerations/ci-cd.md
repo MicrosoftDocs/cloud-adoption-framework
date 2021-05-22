@@ -60,7 +60,7 @@ Continuous integration is the automating of code multiple times per day to have 
 
 In continuous integration, code changes are frequently merged into the main branch. Automated build and test processes make sure that code in the main branch is always production quality. This ensures that developers are working together to develop shared solutions that provide accurate and reliable feedback loops.
 
-Azure DevOps and [Azure Pipelines](/azure/devops/pipelines/) provide continuous integration capabilities with just a few steps in GitHub or other repositories. For more information, see [What is continuous integration?](/devops/develop/what-is-continuous-integration) or check out the [hands-on lab](https://www.azuredevopslabs.com/labs/azuredevops/continuousintegration/). Solution architectures are available that can accelerate creation of your [CI/CD pipelines via Azure DevOps](https://azure.microsoft.com/solutions/devops/).
+Azure DevOps and [Azure Pipelines](/azure/devops/pipelines/) provide continuous integration capabilities with just a few steps in GitHub or other repositories. For more information, see [What is continuous integration?](/devops/deliver/what-is-continuous-integration) or try the [continuous integration hands-on lab](https://www.azuredevopslabs.com/labs/azuredevops/continuousintegration/). Solution architectures are available that can accelerate creation of your [CI/CD pipelines via Azure DevOps](https://azure.microsoft.com/solutions/devops/).
 
 ## Reliable testing
 
@@ -78,7 +78,7 @@ There are several methods for solution deployment. The three most common are:
 
 - **Continuous deployment** is the most advanced method, as it automatically deploys code changes into production. For mature teams that are testing mature hypotheses, continuous deployment can be extremely valuable.
 - During early stages of development, **continuous delivery** might be more appropriate. In continuous delivery, any code changes are automatically deployed to a production-like environment. Developers, business decision-makers, and others on the team can use this environment to verify that their work is production-ready. You can also use this method to test a hypothesis with customers without affecting ongoing business activities.
-- **Manual deployment** is the least sophisticated approach to release management. As the name suggests, someone on the team manually deploys the most recent code changes. This approach is error prone, unreliable, and considered an antipattern by most seasoned engineers.
+- **Manual deployment** is the least sophisticated approach to release management. As the name suggests, someone on the team manually deploys the most recent code changes. This approach is error prone, unreliable, and considered an anti-pattern by most seasoned engineers.
 
 During the first iteration of an MVP solution, manual deployment is common, despite the preceding assessment. When the solution is extremely fluid and customer feedback is unknown, there's a significant risk in resetting the entire solution (or even the core hypothesis). Here's the general rule for manual deployment: no customer proof, no deployment automation.
 

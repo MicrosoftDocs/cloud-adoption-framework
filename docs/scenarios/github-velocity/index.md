@@ -38,13 +38,13 @@ While OSS could be interpreted as the packages, libraries, scripts, and dependen
 
 ### Infrastructure as code
 
-Infrastructure as code (IaC) is the management of infrastructure (networks, virtual machines, load balancers, and connection topology) in a descriptive model, using the same versioning system that the DevOps team uses for source code. Like the principle that the same source code generates the same binary, an IaC model generates the same environment every time that it's applied. IaC is a key DevOps practice that's used with [continuous delivery (CD)](/devops/deliver/what-is-continuous-delivery).
+Infrastructure as code (IaC) is the management of infrastructure (networks, virtual machines, load balancers, and connection topology) in a descriptive model, using the same versioning system that the DevOps team uses for source code. Like the principle that the same source code generates the same binary, an IaC model generates the same environment every time that it's applied. IaC is a key DevOps practice that's used with [continuous delivery (CD)](/devops/deliver/what-is-infrastructure-as-code).
 
 IaC evolved to solve the problem of environment drift in the release pipeline. Without it, teams must maintain the settings of individual deployment environments, and inconsistencies between environments lead to issues during deployments. Every environment eventually becomes a snowflake, a unique configuration that can't be reproduced automatically. With snowflakes, infrastructure administration and maintenance requires manual processes that contribute to errors and are hard to track. Infrastructure deployments with IaC are repeatable and prevent runtime issues caused by configuration drift or missing dependencies.
 
 With IaC, teams make changes to the environment description and version the configuration model, which is typically in well-documented code formats like JSON; see [Azure Resource Manager templates](/azure/azure-resource-manager/templates/overview) for more information. Developers can simplify their workflows by hosting IaC code in the same GitHub repo as their application source code and adopt the same continuous integration (CI) /CD practices for IaC powered by [GitHub Actions](https://github.com/features/actions).
 
-See the [AzOps](https://github.com/Azure/azops) GitHub action for an example of how to deploy custom Resource Manager templates at various Azure scopes. If you're new to Resource Manager templates or IaC, you can also browse the [`azure-quickstart-templates` repo](https://github.com/Azure/azure-quickstart-templates) on GitHub, find the template that you wish to deploy, and select the **Deploy to Azure** button to test how it works.
+See the [AzOps](https://github.com/Azure/azops) GitHub action for an example of how to deploy custom Resource Manager templates at various Azure scopes. If you're new to Resource Manager templates or IaC, you can also browse the [azure-quickstart-templates repo](https://github.com/Azure/azure-quickstart-templates) on GitHub, find the template that you wish to deploy, and select the **Deploy to Azure** button to test how it works.
 
 ![Screenshot of a **Deploy to Azure** button.](./media/deploy-to-azure.png)
 
@@ -54,9 +54,9 @@ The following architecture diagram highlights the security checks that run in th
 
 ![An architecture diagram highlighting the security checks that run in the GitHub and Azure components of a GitHub DevSecOps environment.](./media/github-security-checks.png)
 
-- [GitHub](https://docs.github.com/en) provides a code-hosting platform that developers can use for collaborating on open- and innersource projects.
+- [GitHub](https://docs.github.com) provides a code-hosting platform that developers can use for collaborating on open- and innersource projects.
 
-- [Codespaces](https://docs.github.com/codespaces/about-codespaces) is an online development environment. Hosted by GitHub and powered by Microsoft Visual Studio Code, this tool provides a complete development solution in the cloud.
+- [Codespaces](https://docs.github.com/github/developing-online-with-codespaces/about-codespaces) is an online development environment. Hosted by GitHub and powered by Microsoft Visual Studio Code, this tool provides a complete development solution in the cloud.
 
 - [GitHub security](https://github.com/features/security) works to eliminate threats in multiple ways. Agents and services identify vulnerabilities in repositories and dependent packages. They also upgrade dependencies to current and secure versions.
 
@@ -100,15 +100,15 @@ Within an enterprise, contributors are developers across the company, and mainta
 
 - **Contributors:** Developers, data scientists, product managers, marketers, and other roles within a company that help drive software forward. Contributors might not be part of the direct project team but help build software by contributing code, submitting bug fixes, and more.
 
-For more information, see the white paper [An introduction to innersource](https://resources.github.com/whitepapers/introduction-to-innersource/).
+See the [introduction to innersource](https://resources.github.com/whitepapers/introduction-to-innersource/) white paper to learn more.
 
 ## Automation
 
-GitHub Actions supports users to create custom workflows directly in their GitHub repositories. Users can discover, create, and share actions to perform any job, including CI/CD, and combine actions in a completely customized workflow. They can also create CI workflows that build and test projects written in different programming languages. Examples are available in the [guides for GitHub Actions](https://docs.github.com/en/actions/guides).
+GitHub Actions supports users to create custom workflows directly in their GitHub repositories. Users can discover, create, and share actions to perform any job, including CI/CD, and combine actions in a completely customized workflow. They can also create CI workflows that build and test projects written in different programming languages. Examples are available in the [guides for GitHub actions](https://docs.github.com/actions/guides).
 
 GitHub Actions can be used to combine IaC concepts and CI/CD practices to automate the entire end-to-end deployment lifecycle, including provisioning or updating the target environment in a repeatable manner and packaging and deploying the application itself.
 
-**Example:**
+### Example
 
 [GitHub Actions for Azure](https://github.com/azure/actions) are built to simplify how you automate your deployment processes to target Azure services such as Azure App Service, Azure Kubernetes Service, Azure Functions, and more. The [Azure starter action workflows repository](https://github.com/azure/actions-workflow-samples) includes end-to-end workflows to build and deploy web apps of any language and any ecosystem to Azure. Visit [GitHub marketplace](https://github.com/marketplace?query=azure&type=actions) to see all of the actions that are available.
 
@@ -127,18 +127,18 @@ With many security capabilities, GitHub offers tools that support every part of 
 - Spaces that provide a way to privately discuss and resolve security threats and then publish the information
 - Combined with the monitoring and evaluation power of Azure, these features provide a superb service for building secure cloud solutions
 
-**Example:**
+### Example
 
 GitHub DevSecOps installations cover many security scenarios. Possibilities include the following cases:
 
-- Developers who want to take advantage of preconfigured environments that offer security capabilities.
-- Administrators who rely on having up-to-date, prioritized security reports at their fingertips, along with details on affected code and suggested fixes.
-- Streamlined organizations that need systems to automatically acquire new and uncompromised security devices when secrets are left exposed in code.
-- Development teams that could benefit from automatic upgrades when newer or more secure versions of external packages become available.
+- Developers who want to take advantage of pre-configured environments that offer security capabilities
+- Administrators who rely on having up-to-date, prioritized security reports at their fingertips, along with details on affected code and suggested fixes
+- Streamlined organizations that need systems to automatically acquire new and uncompromised security devices when secrets are left exposed in code
+- Development teams that could benefit from automatic upgrades when newer or more secure versions of external packages become available
 
-For more information, see:
+For further reading, see:
 
-- [DevSecOps in GitHub: Azure solution ideas](/azure/architecture/solution-ideas/articles/devsecops-in-github)
+- [DevSecOps in GitHub: Azure solution ideas | Microsoft docs](/azure/architecture/solution-ideas/articles/devsecops-in-github)
 - [Code scanning a GitHub repository using GitHub advanced security within an Azure DevOps pipeline](https://github.blog/2020-10-27-code-scanning-a-github-repository-using-github-advanced-security-within-an-azure-devops-pipeline/)
 - [Applying DevSecOps to your software supply chain](https://github.blog/2020-12-03-applying-devsecops-to-your-software-supply-chain/)
 

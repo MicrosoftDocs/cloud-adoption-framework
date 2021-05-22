@@ -53,7 +53,7 @@ Here are some design recommendations for AKS platform automation and DevOps:
 
 - Separate infrastructure deployment from application deployment. Core infrastructure changes less than applications. Treat each type of deployment as a separate flow and pipeline.
 
-- Deploy using [cloud-native](/dotnet/architecture/cloud-native/introduction) concepts. Use [infrastructure as code](/devops/deliver/what-is-infrastructure-as-code) to deploy infrastructure including the control plane, and use [Helm](https://helm.sh/) and the [Operator pattern in Kubernetes](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/) to deploy and maintain Kubernetes native components.
+- Deploy using [cloud-native](/dotnet/architecture/cloud-native/introduction) approaches. Use [infrastructure as code](/devops/deliver/what-is-infrastructure-as-code) to deploy infrastructure including the control plane, and use [Helm](https://helm.sh/) and the [Operator pattern in Kubernetes](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/) to deploy and maintain Kubernetes native components.
 
 - Use [GitOps](/azure/azure-arc/kubernetes/tutorial-use-gitops-connected-cluster) to deploy and maintain applications. GitOps uses the Git repository as a single source of truth, avoiding configuration drift and increasing productivity and reliability during rollbacks and related procedures.
 
@@ -63,7 +63,7 @@ Here are some design recommendations for AKS platform automation and DevOps:
 
 - Rely on well-known conventions across infrastructure and application-related deployments. Use [admission controllers](https://kubernetes.io/blog/2019/03/21/a-guide-to-kubernetes-admission-controllers/) combined with [gatekeeper](https://github.com/open-policy-agent/gatekeeper) to validate and enforce conventions among the other defined policies.
 
-- Embrace [shift-left](/devops/develop/shift-left-make-testing-fast-reliable) consistently with:
+- Embrace [shift left](/devops/develop/shift-left-make-testing-fast-reliable) consistently with:
   - Security, by adding vulnerability scanning tools like container scanning early in the pipeline.
   - Policy, by using policy as code and enforcing policies in a cloud-native manner through admission controllers.
 
