@@ -33,7 +33,7 @@ If your team is following the guidance in both frameworks, you'll see very simil
 | <span title="Name">&nbsp;</span> | <span title="Description">&nbsp;</span> |
 |---|---|
 | **Discover** | When cloud adoption spans multiple technology platforms, it's helpful to separate the discovery process into two conversations: [`Strategy`](./strategy.md), to engage business executives during strategic alignment, and [`Plan`](./plan.md), to prepare the plan based on current and future-state data. |
-| **Prepare** | The [Ready methodology](./ready.md) methodology prepares your team and the environment for the coming work. This scenario also integrates Azure landing zones to provide pre-developed and opinionated approaches to help your team to rapidly deploy environments that can support various technology platforms. |
+| **Prepare** | The [Ready methodology](./ready.md) methodology prepares your team and the environment for the coming work. This scenario also integrates Azure landing zones to provide prebuilt and opinionated approaches to help your team to rapidly deploy environments that can support various technology platforms. |
 | **Migrate** | The [Migrate methodology](./migrate.md) demonstrates how an SAP migration can integrate with other repeatable migration processes.|
 | **Run** | The [Manage methodology](./manage.md) shows how a common operations baseline can address many of the run-state concerns addressed in [Migrate](./migrate.md) and also meet the operational needs of other technology platforms. |
 | **Innovate** | The [Innovate methodology](./innovate.md) outlines how you can take your SAP platform to the next level and integrate cloud-native solutions into your workloads. |

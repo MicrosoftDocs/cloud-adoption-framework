@@ -16,10 +16,10 @@ This article provides guidance for using an [Azure Resource Manager template (AR
 
 Azure VMs are using the [Azure Instance Metadata Service (IMDS)](/azure/virtual-machines/windows/instance-metadata-service) by default. By projecting an Azure VM as an Azure Arc enabled server, a *conflict* is created, which will not allow for the Azure Arc server resources to be represented as one when the IMDS is being used. Instead, the Azure Arc server will still "act" as a native Azure VM.
 
-This guide will allow you to use and onboard Azure VMs to Azure Arc **for demo purposes only**. You will have the ability to simulate a server deployed outside of Azure, for example, "on-premises" or in other cloud platforms.
+This guide will allow you to use and onboard Azure VMs to Azure Arc **for demo purposes only**. You will have the ability to simulate a server deployed outside of Azure, for example, on-premises or in other cloud platforms.
 
 > [!NOTE]
-> An Azure VM is not expected to be an Azure Arc enabled server. The below scenario is unsupported and should only be used for demo and testing purposes.
+> An Azure VM is not expected to be an Azure Arc enabled server. The following scenario is unsupported and should only be used for demo and testing purposes.
 
 ## Prerequisites
 

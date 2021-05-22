@@ -55,15 +55,15 @@ Based on the preceding criticality-scale table, we recommend that you adopt *med
 
 Understanding, identifying and designating business criticality is the first major step. The next management consideration topic is to ensure your operational compliance requirements, especially security compliances, are aligned. Performing the same methodologies for business criticality to your security compliance considerations will:
 
-- Reveal the complexities of your business systems and their compliance requirements, for example: sovereignty, industry, privacy, etc.
+- Reveal the complexities of your business systems and their compliance requirements, such as sovereignty, industry, or privacy.
 - Map any inter-dependencies with your development, operation and security teams, ensuring key "point of contacts" / "subject matter experts" ("SMEs") are identified and well known across your organization
 - Ensure your compliance adheres to any compliance audit and reporting requirements
 
 Apply the [operational compliance](./operational-compliance.md) content to ensure your business requirements, criticality and compliance requirements are aligned.
 
-Next, review and use the [Overview of the Azure Security Benchmark](/security/benchmark/azure/overview) content to ensure the various control domains are identified and mapped to your operational-compliance.
+Next, review and use the [overview of the Azure Security Benchmark](/security/benchmark/azure/overview) content to ensure the various control domains are identified and mapped to your operational-compliance.
 
-Lastly, ensure the incorporation of the governance and security content within [Security Control V2: Governance and Strategy](/security/benchmark/azure/security-controls-v2-governance-strategy) is documented within your overall business operational methodologies.
+Lastly, ensure the incorporation of the governance and security content in [Security control v2: governance and strategy](/security/benchmark/azure/security-controls-v2-governance-strategy) is documented within your overall business operational methodologies.
 
 ## Use the template
 

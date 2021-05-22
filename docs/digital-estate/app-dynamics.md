@@ -18,7 +18,7 @@ Measuring and quantifying successful business outcomes is a crucial part of any 
 
 AppDynamics can provide business insights for most use cases, and many organizations start a comprehensive cloud adoption strategy with the following use cases:
 
-- A pre- and post-migration comparison
+- A pre-migration and post-migration comparison
 - Business health
 - Release validation
 - Segment health
@@ -26,7 +26,7 @@ AppDynamics can provide business insights for most use cases, and many organizat
 - Business journeys
 - Conversion funnels
 
-This guidance will focus on how to measure business outcomes of a pre- and post-migration comparison and how to accelerate and reduce risk for a migration during your cloud adoption journey.
+This guidance will focus on how to measure business outcomes of a pre-migration and post-migration comparison and how to accelerate and reduce risk for a migration during your cloud adoption journey.
 
 ## How AppDynamics works
 
@@ -72,7 +72,7 @@ The [strategy](../strategy/index.md) and [business outcomes](../strategy/busines
 
 ## Pre- and post-migration comparison
 
-The cloud offers vast benefits and potential, but the first steps of a migration are often unclear and full of risk. A successful migration must be evaluated by more criteria than the capability for a successful deployment. Understanding the pre- and post-cloud-migration user experience and business performance helps you to adjust and stabilize both, when needed, which can help to produce successful business outcomes while reinforcing the value that Azure provides throughout your migration journey.
+The cloud offers vast benefits and potential, but the first steps of a migration are often unclear and full of risk. A successful migration must be evaluated by more criteria than the capability for a successful deployment. Understanding the pre-cloud-migration and post-cloud-migration user experience and business performance helps you to adjust and stabilize both, when needed, which can help to produce successful business outcomes while reinforcing the value that Azure provides throughout your migration journey.
 
 To build on the foundation of understanding how AppDynamics provides business and application metrics, compare those metrics before and after a migration to evaluate its success and if the target business outcomes are met.
 

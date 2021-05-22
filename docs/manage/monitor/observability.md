@@ -159,7 +159,7 @@ Like any application or infrastructure service, a diverse list of stakeholders a
 
 On-premises monitoring of services in the datacenter is traditionally undertaken with a product such as System Center Operations Manager. Operations Manager's approach is firmly rooted in infrastructure and servers, with agents and operating systems. Application monitoring, whether containerized or not, is up-stack and dependent on infrastructure monitoring of servers down-stack. Vertically, you see the solution coverage from bottom-up, starting with networking and at the top, user-experience monitoring.
 
-The long history of IaaS monitoring reveals that *observability can be pre-defined*, or if you wish, *pre-engineered*. An IaaS-based service is one where the product engineers can author Operations Manager management packs, in essence customizing the monitoring solution for most of the supported use cases.
+The long history of IaaS monitoring reveals that *observability can be predefined*, or if you wish, *pre-engineered*. An IaaS-based service is one where the product engineers can author Operations Manager management packs, in essence customizing the monitoring solution for most of the supported use cases.
 
 Thus in the need to control infrastructure services by monitoring solutions, customers seek more of a fixed approach in most cases.
 

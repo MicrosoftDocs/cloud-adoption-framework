@@ -57,11 +57,11 @@ Also see the Azure Security Benchmark [gs-3: align organization roles, responsib
 
 Structuring dedicated time for technical learning helps ensure people have time to build confidence on their ability to assess cloud security and think through how to adapt their existing skills and processes. Even the most talented special operations teams in the military need training and intelligence to perform at their best.
 
-**Who**: All roles that directly interact with cloud technology (in security and IT departments) should dedicate time for technical learning on cloud platforms and how to secure them.
+**Who:** All roles that directly interact with cloud technology (in security and IT departments) should dedicate time for technical learning on cloud platforms and how to secure them.
 
 Additionally security and IT technical managers (and often project managers) should develop familiarity with some technical details for securing cloud resources (as this will help them more effectively lead and coordinate cloud initiatives).
 
-**How**: Ensure that technical professionals in security have time set aside for self-paced training on how to secure cloud assets. While not always feasible, ideally provide access to formal training with an experienced instructor and hands-on labs.
+**How:** Ensure that technical professionals in security have time set aside for self-paced training on how to secure cloud assets. While not always feasible, ideally provide access to formal training with an experienced instructor and hands-on labs.
 
 > [!IMPORTANT]
 > Identity protocols are critical to access control in the cloud but often not prioritized in on-premises security, so security teams should ensure to focus on developing familiarity with these protocols and logs.
@@ -145,13 +145,13 @@ While similar in many ways, cloud platforms have important technical difference 
 **Key Focus Areas**: while there are many details described in the resource links, these are key areas to focus your education and planning efforts:
 
 - **Shared responsibility model and cloud architectures:** To a security analyst, Azure is a software defined datacenter that provides many services including VMs (familiar) and others that are very different from on-premises such as Azure SQL Database Azure Functions, and so on. Where the best data is in the service logs or the specialized threat detection services rather than in logs for the underlying OS/VMs (which are operated by Microsoft and service multiple customers). Analysts need to understand and integrate this context into their daily workflows so they know what data to expect, where to get it, and what format it will be in.
-- **Endpoint data sources:** Getting insights and data for attacks and malware on cloud hosted servers is often faster, easier, and more accurate with native cloud detection tools like Azure Security Center and EDR systems as opposed to traditional approaches of direct disk access. While direct disk forensics are available for scenarios where it's possible and required for legal proceedings ([computer forensics in Azure](/azure/architecture/example-scenario/forensics/)), this is often the most inefficient way to detect and investigate attacks.
+- **Endpoint data sources:** Getting insights and data for attacks and malware on cloud hosted servers is often faster, easier, and more accurate with native cloud detection tools like Azure Security Center and endpoint detection and response (EDR) solutions as opposed to traditional approaches of direct disk access. While direct disk forensics are available for scenarios where it's possible and required for legal proceedings ([computer forensics in Azure](/azure/architecture/example-scenario/forensics/)), this is often the most inefficient way to detect and investigate attacks.
 - **Network and identity data sources:** Many functions of cloud platforms primarily use identity primarily for access control such as access to the Azure portal (though network access controls are used extensively as well). This requires analysts to develop an understanding of cloud identity protocols to get a full, rich, picture of attacker activity (and legitimate user activity) to support incident investigation and remediation. Identity directories and protocols are also different from on-premises as they are typically based on SAML, OAuth, and OpenID Connect and cloud directories rather than LDAP, Kerberos, NTLM, and Active Directory that are commonly found on-premises.
 - **Practice exercises:** Simulated attacks and response can help build organizational muscle memory and technical readiness for your security analysts, threat hunters, incident managers, and other stakeholders in your organization. Learning on the job and adapting is a natural part of incident response, but you should work to minimize how much you have to learn in a crisis.
 
 **Key Resources:**
 
-- [Incident response reference guide](https://aka.ms/IRRG) (IRRG)
+- [Incident response reference guide (IRRG)](https://aka.ms/IRRG)
 - Guidance on [building your own security incident response process](https://msrc-blog.microsoft.com/2019/07/01/inside-the-msrc-building-your-own-security-incident-response-process/)
 - [Azure logging and alerting](/azure/security/fundamentals/log-audit)
 - Microsoft security best practices
