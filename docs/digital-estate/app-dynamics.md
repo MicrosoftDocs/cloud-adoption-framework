@@ -72,7 +72,7 @@ The [strategy](../strategy/index.md) and [business outcomes](../strategy/busines
 
 ## Pre- and post-migration comparison
 
-The cloud offers vast benefits and potential, but the first steps of a migration are often unclear and full of risk. A successful migration must be evaluated by more criteria than the capability for a successful deployment. Understanding the pre-cloud-migration and post-cloud-migration user experience and business performance helps you to adjust and stabilize both, when needed, which can help to produce successful business outcomes while reinforcing the value that Azure provides throughout your migration journey.
+The cloud offers vast benefits and potential, but the first steps of a migration are often unclear and full of risk. A successful migration must be evaluated by more criteria than the capability for a successful deployment. Understanding the user experience and business performance before and after the cloud migration helps you to adjust and stabilize both as needed, which helps produce successful business outcomes while reinforcing the value that Azure provides throughout your migration journey.
 
 To build on the foundation of understanding how AppDynamics provides business and application metrics, compare those metrics before and after a migration to evaluate its success and if the target business outcomes are met.
 
