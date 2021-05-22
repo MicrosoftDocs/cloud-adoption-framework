@@ -24,11 +24,11 @@ This holistic worldview enables the team to work well in general. It's especiall
 
 This diagram depicts the specific organizational functions within security, often called responsibilities or "jobs to be done".
 
-These diagrams and documentation represent an ideal view of an complete enterprise security team. This may be an aspirational view for security teams with limited resources that may not have formal responsibilities defined around all of these functions. Each function may be performed by one or more people, and each person may perform one or more functions depending on various factors such as culture, budget, and available resources.
+These diagrams and documentation represent an ideal view of a complete enterprise security team. This may be an aspirational view for security teams with limited resources that may not have formal responsibilities defined around all of these functions. Each function may be performed by one or more people, and each person may perform one or more functions depending on various factors such as culture, budget, and available resources.
 
 :::image type="content" source="../secure/media/security-responsibilities.png" alt-text="View of the responsibilities/functions of an enterprise security team" lightbox="../secure/media/security-responsibilities-popout.png":::
 
-Each of the following articles provide information about each function including a summary of objectives, how the function can evolve because of the threat environment or cloud technology changes, and the relationships and dependencies that are critical to its success.
+Each of the following articles provides information about each function including a summary of objectives, how the function can evolve because of the threat environment or cloud technology changes, and the relationships and dependencies that are critical to its success.
 
 - [Policy and standards](./cloud-security-policy-standards.md)
 - [Security operations](./cloud-security-operations-center.md)
@@ -59,11 +59,11 @@ Security is both discipline with its own unique functions *and* a critical eleme
 
 ## Role types
 
-The middle (dark blue) section groups these responsibilities into typical roles that have common skill sets and career profiles. These groupings also helps provide clarity on how industry trends are affecting security professionals:
+The middle (dark blue) section groups these responsibilities into typical roles that have common skill sets and career profiles. These groupings also help provide clarity on how industry trends are affecting security professionals:
 
 - **Security leadership:** These roles frequently span across functions, ensuring that teams coordinate with each other, providing prioritization and setting cultural norms, policies, and standards for security.
 - **Security architect:** These roles span across functions and provide a key governance capability to ensure all of the technical functions work harmoniously within a consistent architecture
-- **Security posture and compliance:** This is a newer role type that represents the increasing convergence of compliance reporting with traditional security disciplines like vulnerability management and configuration baselines. While the scope and audience are different for security and compliance reporting, they are answering different versions of the question of "how secure is the organization?". The way that question is answered is getting more and more similar with through tools like secure score and Azure Security Center:
+- **Security posture and compliance:** This is a newer role type that represents the increasing convergence of compliance reporting with traditional security disciplines like vulnerability management and configuration baselines. While the scope and audience are different for security and compliance reporting, they are answering different versions of the question of "how secure is the organization?". The way that question is answered is growing more similar via tools like Microsoft Secure Score and Azure Security Center:
 
   - The use of on-demand data feeds from cloud services is reducing the time required to report compliance.
   - The increased scope of data available is enabling security governance to look beyond traditional software updates/patches and discover/track "vulnerabilities" from security configurations and operational practices
