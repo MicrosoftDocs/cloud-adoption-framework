@@ -48,7 +48,7 @@ As an architect or strategic planner, you may need to formulate an early strateg
 
 3. Make your monitoring solution processes more efficient, work faster and smoother, at scale and be able to change quickly too.
 
-4. Account for how your organization will plan for and host monitoring based on cloud models. Work towards the goal of reducing your requirements as the organization transitions from IaaS to PaaS, and then to SaaS.
+4. Account for how your organization will plan for and host monitoring based on cloud models. Work toward the goal of reducing your requirements as the organization transitions from IaaS to PaaS, and then to SaaS.
 
 ## Determine what you have
 
@@ -128,9 +128,9 @@ Consider your data flows and tools:
 
 - The role of global monitoring or the top-tier.
 
-- The role of IT Service Management (ITSM) integration to trigger on significant events.
+- The role of IT service management (ITSM) integration to trigger on significant events.
 
-Consider a single policy in your governance plan for event significance, throughout your enterprise, to drive alerting and notifications. It is one of the key policies in your monitoring strategy. The following table is an example of incident management priority model to standardize events, significance, and alerting used for notifications.
+Consider a single policy in your governance plan for event significance, throughout your enterprise, to drive alerting and notifications. It's one of the key policies in your monitoring strategy. The following table is an example of incident management priority model to standardize events, significance, and alerting used for notifications.
 
 ![Impact severity and priority matrix example](./media/monitoring-strategy/incident-priority-severity-matrix.png)
 
@@ -161,7 +161,7 @@ Your monitoring strategy should include these components:
 
 ### Consider business continuity
 
-Azure Monitor collects, indexes, and analyzes real-time machine and resource-generated data to support your operations and help drive business decisions. Under rare circumstances, it is possible that facilities in an entire region can become inaccessible, for example due to network failures. Or facilities can be lost entirely, for example due to a natural disaster. By relying on these services in the cloud, your planning isn't focused around infrastructure resiliency and high availability, rather its planning for:
+Azure Monitor collects, indexes, and analyzes real-time machine and resource-generated data to support your operations and help drive business decisions. Under rare circumstances, it's possible that facilities in an entire region can become inaccessible, for example due to network failures. Or facilities can be lost entirely, for example due to a natural disaster. By relying on these services in the cloud, your planning isn't focused around infrastructure resiliency and high availability, rather its planning for:
 
 - Availability for data ingestion from all your dependent services and resources in Azure, resources in other clouds, and from on-premises.
 - Data availability for insights, solutions, workbooks and other visualizations, alerting, integration with ITSM, and other control plane services in Azure supporting your operational requirements.
@@ -216,11 +216,11 @@ To help you align monitoring plans to strategy, use the following table to categ
 | 6 | Cloud native | Azure Monitor, Azure Policy, Azure Security Center, Microsoft 365, Azure Service Health, Azure Resource Health, and others. |
 | 7 | Multicloud owned tenants (consolidate) | Centralize the monitoring of many tenants. Azure Lighthouse, Azure Policy, Azure Monitor, and Azure Sentinel. |
 | 8 | Multicloud ecosystem | Centralize the monitoring of different cloud providers: Microsoft, Amazon, Google, and others. |
-| 9 | Provider > Consumer | Monitoring solutions and services as a cloud provider. |
+| 9 | Provider > consumer | Monitoring solutions and services as a cloud provider. |
 
 ## Formulate monitoring requirements
 
-As you progress through this process, your strategy reveals there may be much to do in the end. Ultimately your mindset extends outside the corporate network into the workplace, to devices and endpoints, and further outward to the identity-as-security boundary. The new edge defined with cloud monitoring is a strong motivator in contrast with a data center and workplace mindset.
+As you progress through this process, your strategy reveals there may be much to do in the end. Ultimately your mindset extends outside the corporate network into the workplace, to devices and endpoints, and further outward to the identity-as-security boundary. The new edge defined with cloud monitoring is a strong motivator in contrast with a datacenter and workplace mindset.
 
 You can use Azure now to gradually begin managing all or some aspects of your on-premises resources, even for services you'll keep on-premises. You also want strategy to define your monitoring boundaries of responsibility in alignment with the business' cloud adoption strategy, based on the cloud service model your business adopts. Even for services based on IaaS, you'll get metrics, logs, views, and alerting capabilities through Azure Service Health and here, you'll configure alerts from availability monitoring of your Azure resources with resource health. With SaaS services, such as Microsoft 365, much is already provided, and you need to configure appropriate access to portals, dashboards, analytics, and alerts. From a service perspective, a large service with distributed components such as Microsoft 365 Exchange Online have many objectives, not just the need to observe its health and status.
 
@@ -241,11 +241,11 @@ You can use Azure now to gradually begin managing all or some aspects of your on
 | Identity and access monitoring | Observe, measure, learn, and improve both the usage and security of Active Directory, Azure Active Directory, and identity management that integrates users, applications, devices, and other resources no matter where they are. |
 | Information protection | Not only Azure Monitor, but Azure Information Protection depending on the plan, includes usage analytics critical to your development of a robust information protection strategy across Azure and Microsoft. |
 | Privacy monitoring | Organizations face expanding privacy needs to include information protection of the digital estate, data classification, and data loss prevention to mitigate risks to privacy breaches and infractions. Microsoft 365 information protection includes monitoring capabilities that can also be integrated with Azure Monitor. |
-| Threat management and integrated threat protection | The cloud brings together the separate, traditional roles of security monitoring with health monitoring. Integrated threat protection, for example, involves monitoring to accelerate an optimal state of zero trust. Integrating Azure Advanced Threat Protection allows a migration from using System Center Operations Manager to monitor Active Directory, and integrate your Active Directory security-related signals to detect advanced attacks in hybrid environments. |
+| Threat management and integrated threat protection | The cloud brings together the separate, traditional roles of security monitoring with health monitoring. Integrated threat protection, for example, involves monitoring to accelerate an optimal state of zero trust. Integrating Microsoft Defender for Identity allows a migration from using System Center Operations Manager to monitor Active Directory, and integrate your Active Directory security-related signals to detect advanced attacks in hybrid environments. |
 
 ## Agile solution releases
 
-Ultimately, you'll deliver monitoring configurations or solutions into production. As an IT Operations Manager or monitoring team lead, consider a standard, simple taxonomy to improve communication with consumers, managers, and IT operations. An agile DevOps approach ensures monitoring is embedded within the teams who will be building and operating cloud services. While traditional project management works, it is not fast enough nor typically accepted as a standard practice by operations teams.
+Ultimately, you'll deliver monitoring configurations or solutions into production. As an IT Operations Manager or monitoring team lead, consider a standard, simple taxonomy to improve communication with consumers, managers, and IT operations. An agile DevOps approach ensures monitoring is embedded within the teams who will be building and operating cloud services. While traditional project management works, it's not fast enough nor typically accepted as a standard practice by operations teams.
 
 Include in your strategy and operating model how you communicate monitoring plans, objectives, and configurations (the solutions). For example, how you might use Azure Boards:
 

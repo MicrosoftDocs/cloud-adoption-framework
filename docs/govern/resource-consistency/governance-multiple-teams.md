@@ -93,7 +93,7 @@ In both examples, there is a subscription Service Administrator that is assigned
 1. Let's assume that **workload owner A** has a requirement for a pair of team members to view the CPU and network traffic monitoring data as part of capacity planning for the workload. Because **workload owner A** is assigned the Contributor role, they do not have permission to add a user to **resource group A**. They must send this request to the **Service Administrator**.
   ![Workload owner requests workload contributors be added to resource group](../../_images/govern/design/governance-2-5.png)
 1. The **Service Administrator** reviews the request, and adds the two **workload contributor** users to **resource group A**. Neither of these two users require permission to manage resources, so they're assigned the [built-in Reader role](/azure/role-based-access-control/built-in-roles#contributor).
-  ![The Service Administrator adds workload contributors to resource group A](../../_images/govern/design/governance-2-6.png)
+  ![Diagram of the Service Administrator adding workload contributors to resource group A.](../../_images/govern/design/governance-2-6.png)
 1. Next, **workload owner B** also requires a resource group to contain the resources for their workload. As with **workload owner A**, **workload owner B** initially does not have permission to take any action at the subscription scope so they must send a request to the **Service Administrator**.
   ![Workload owner B requests creation of resource group B](../../_images/govern/design/governance-2-7.png)
 1. The **Service Administrator** reviews the request and creates **resource group B**.

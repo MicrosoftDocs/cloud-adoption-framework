@@ -39,9 +39,9 @@ Developing necessary cloud skilling, and building cloud processes that support t
 
 ## Planning for hybrid and multicloud strategy
 
-In most cloud adoption scenarios, we assume an intention to rehost (IaaS VMs), rearchitect (PaaS services), or rebuild (cloud-native) workloads with Azure as a target platform, with a uni-directional migration to Azure, using these standard rationalizations to identify assets for possible migration.
+In most cloud adoption scenarios, we assume a goal to rehost (IaaS VMs), rearchitect (PaaS services), or rebuild (cloud-native) workloads with Azure as a target platform and with a unidirectional migration to Azure, using these standard rationalizations to identify assets for possible migration.
 
-When considering a hybrid and multicloud migration, the rationalization criteria change, and migration goals that were uni-directional now fit into a more distributed services model for cloud environments. With a hybrid and multicloud effort, cloud rationalization no longer assumes a one-way migration effort that maintains "migrate everything to the cloud."
+When considering a hybrid and multicloud migration, the rationalization criteria change, and migration goals that were unidirectional now fit into a more distributed services model for cloud environments. With a hybrid and multicloud effort, cloud rationalization no longer assumes a one-way migration effort that maintains "migrate everything to the cloud."
 
 In a hybrid and multicloud migration scenario, we assume a distributed, multiplatform cloud services model that is no longer limited to one on-premises environment and a single public cloud to an expansive on-premises, multicloud, and edge model of cloud computing. Rationalization decisions now consider whether to **retain** workloads or assets on-premises, **replatform** workloads to multiple cloud platforms, and have **rehost portability** allowing workloads to move smoothly into any hosting environments.
 
@@ -55,13 +55,13 @@ Because Azure Arc extends a single enterprise control plane of Azure services an
 
 Opening deployment options across on-premises and public cloud enables organizations to bring the consistency and innovation of uniform cloud practices to on-premises workloads (for example, keeping highly sensitive data on-premises to meet client needs or regulatory requirements) and still prepare other workloads for migration with the same benefits of cloud practices and technologies.
 
-The biggest change in planning unified operations with expanded deployment options is the process of evaluating deployment decisions against **Retain**, **Replatform**, and **Rehost** portability, the primary 3 Rs of migration. With expanded deployment options across truly distributed cloud environments, cloud practices and technologies can be brought to any location, allowing reverse rehosting of IaaS/PaaS workloads on-premises, reversing the uni-directional migration model that operated under the assumption of *migrate everything to the cloud*.
+The biggest change in planning unified operations with expanded deployment options is the process of evaluating deployment decisions against **Retain**, **Replatform**, and **Rehost** portability, the primary 3 Rs of migration. With expanded deployment options across truly distributed cloud environments, cloud practices and technologies can be brought to any location, allowing reverse rehosting of IaaS/PaaS workloads on-premises, reversing the unidirectional migration model that operated under the assumption of *migrate everything to the cloud*.
 
 In many cases, we start by assuming that every asset fits a **Retain** pattern, proactively adding each asset to the enterprise control plane for unified cloud operations and management efforts. Adopting a consistent cloud dashboard **can speed up cloud adoption and migration efforts for your organization** by deploying consistent cloud practices and technologies across assets designated for on-premises workloads, and cloud-ready skills and processes to support workloads with migration-designated assets.
 
 ## Hybrid and multicloud digital estate
 
-The current assumption in today's enterprise landscape is that most organizations will adopt the cloud. A complete enterprise migration could take days or even years, depending on what assets are included as migration candidates in the digital estate. Consider an enterprise environment with thousands of VMs and hundreds of applications, where the human effort required can easily exceed 1,500 FTE hours and nine months of planning. With standard (uni-directional) migration efforts, the assumption is that you will look for standard opportunities for rehost/rearchitect (assets that surface as standard migration candidates when rationalizing your digital estate).
+The current assumption in today's enterprise landscape is that most organizations will adopt the cloud. A complete enterprise migration could take days or even years, depending on what assets are included as migration candidates in the digital estate. Consider an enterprise environment with thousands of VMs and hundreds of applications, where the human effort required can easily exceed 1,500 FTE hours and nine months of planning. With standard unidirectional migration efforts, the assumption is that you will look for standard opportunities for rehosting or rearchitecting (assets that surface as standard migration candidates when rationalizing your digital estate).
 
 In moving to a hybrid and multicloud scenario, where we assume unified operations for all resources in the digital estate, certain rationalization decisions will surface.
 
@@ -143,11 +143,11 @@ Planning efforts for unified operations and management assume that most assets f
 
 If unified operations is a core part of your strategy, you should start by lighting up Azure Arc for all resources before starting your Azure Migrate integration.
 
-Do you have to look at the existing estate differently? Or is a simple VM to VM migration sufficient? For more information, see [LINKTEXT](../../digital-estate/inventory.md).
+Do you have to look at the existing estate differently? Or is a simple VM to VM migration sufficient? For more information, see [Gather inventory data for a digital estate](../../digital-estate/inventory.md).
 
 ## Hybrid and multicloud adoption plan
 
-Do you have a specific DevOps backlog the customer should use? Or is the standard adoption plan template still sufficient? For more information, see [LINKTEXT](../../plan/template.md).
+Do you have a specific DevOps backlog the customer should use? Or is the standard adoption plan template still sufficient? For more information, see [Cloud adoption plan and Azure DevOps](../../plan/template.md).
 
 ## Hybrid and multicloud readiness plan
 
