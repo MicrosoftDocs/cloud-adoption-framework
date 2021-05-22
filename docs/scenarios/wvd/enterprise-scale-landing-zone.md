@@ -34,6 +34,8 @@ The following image shows a conceptual reference architecture that demonstrates 
 
 [![A diagram of a reference architecture for a Windows Virtual Desktop environment.](./media/windows-virtual-desktop-architecture.png)](./media/windows-virtual-desktop-architecture.png#lightbox)
 
+Note: 'Indentity' subscription in the diagram above is: Identity.
+
 ### Implementation with Azure Resource Manager (ARM) templates for Remote Desktop Services
 
 ARM Windows Virtual Desktop templates provide a collection of infrastructure-as-code ARM templates to deploy a Windows Virtual Desktop environment on Azure.
