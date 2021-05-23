@@ -121,7 +121,7 @@ Traffic between the AKS pods and the private endpoints per default will not go t
   - Use custom private DNS zones when creating a private cluster, rather than letting the creation process use a [system private DNS zone](/azure/aks/private-clusters#configure-private-dns-zone).
 - Use Azure Container Networking Interface (CNI) as a network model, unless you have a limited range of IP addresses that can be assigned to the AKS cluster.
   - Follow the documentation with regards to [IP address planning](/azure/aks/configure-azure-cni#plan-ip-addressing-for-your-cluster) with CNI.
-  - To use Windows Server node pools and virtual nodes to verify eventual limitations, please refer to the [Windows AKS support FAQ](/azure/aks/windows-faq).
+  - To use Windows Server node pools and virtual nodes to verify eventual limitations, refer to the [Windows AKS support FAQ](/azure/aks/windows-faq).
 - Use Azure DDoS Protection Standard to protect the virtual network used for the AKS cluster **unless you use Azure Firewall or WAF in a centralized subscription**.
 - Use the DNS configuration linked to the overall network setup with Azure Virtual WAN or hub and spoke architecture, Azure DNS zones, and your own DNS infrastructure.
 - Use Private Link to secure network connections and use private IP-based connectivity to other managed Azure services used that support Private Link, such as Azure Storage, Azure Container Registry, Azure SQL Database, and Azure Key Vault.

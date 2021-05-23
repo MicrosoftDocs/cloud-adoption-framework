@@ -1591,10 +1591,68 @@ items:
         href: manage/considerations/workload.md
     - name: Advanced management and system design
       href: manage/design-principles.md
-
     - name: Manage antipatterns
       href: antipatterns/manage-antipatterns.md
 
+  - name: Secure
+    items:
+    - name: Overview
+      href: secure/index.md
+    - name: Methodology
+      items:
+      - name: Risk Insights
+        href: secure/risk-insights.md
+      - name: Security Integration
+        href: secure/security-integration.md
+        
+      - name: Business Resilience
+        href: secure/business-resilience.md
+      - name: Access Control
+        href: secure/access-control.md
+      - name: Security Operations 
+        href: secure/security-operations.md
+      - name: Asset Protection
+        href: secure/asset-protection.md
+      - name: Security Governance
+        href: secure/security-governance.md
+      - name: Innovation Security
+        href: secure/innovation-security.md
+      - name: DevSecOps Controls
+        href: secure/devsecops-controls.md    
+    
+    - name: Best Practices
+      items:
+      - name: Securing DevOps
+        href: secure/best-practices/secure-devops.md
+      - name: Secure DevOps Governance
+        href: secure/best-practices/end-to-end-governance.md 
+      - name: Windows Virtual Desktop
+        href: scenarios/wvd/eslz-security-governance-and-compliance.md
+      - name: Managing Secrets
+        href: secure/best-practices/managing-secrets.md
+      - name: Network Security
+        href: /security/compass/network-security-containment
+      - name: Toolchain
+        href: secure/best-practices/toolchain.md
+        
+    - name: Security Considerations
+      items:
+      - name: Security Strategy
+        href: /azure/cloud-adoption-framework/strategy/define-security-strategy?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+      - name: Roles and Responsibilities
+        href: /azure/cloud-adoption-framework/organize/cloud-security?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+      - name: Getting Started
+        href: /azure/cloud-adoption-framework/get-started/security?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+      - name: Azure Security Top 10
+        href: /azure/cloud-adoption-framework/security/security-top-10?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+      - name: Security Reference Architecture (PPT)
+        href: https://aka.ms/MCRA
+      - name: Security Documentation
+        href: /security?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+      - name: Azure Security Benchmarks
+        href: /security/benchmark/azure?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        
+    
   - name: Organize
     items:
     - name: Managing organization alignment
@@ -1669,7 +1727,7 @@ items:
     - name: Tools and templates
       href: reference/tools-templates.md
     - name: Azure security best practices
-      href: ./security/security-top-10.md
+      href: ./secure/security-top-10.md
     - name: Decision guides
       items:
       - name: Overview
