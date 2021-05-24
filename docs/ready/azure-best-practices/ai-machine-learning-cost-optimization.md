@@ -22,7 +22,7 @@ In this article we present best practices in optimizing costs, managing budgets,
 
 ## Optimizing compute to meet workload requirements
 
-When starting a new machine learning project, explorative work might be needed to get a good picture of compute requirements. This section provides recommendations on what you as an individual ML practicioner can do to determine the right VM SKU choice for training, for inferencing, or as a workstation to work from.
+When starting a new machine learning project, explorative work might be needed to get a good picture of compute requirements. This section provides recommendations on what you as an individual contributor can do to determine the right VM SKU choice for training, for inferencing, or as a workstation to work from.
 
 ### Determining the compute size for training
 
@@ -31,10 +31,10 @@ Hardware requirements for your training workload might vary from project to proj
 - General purpose- balanced CPU to memory ratio.
 - Memory optimized- high memory to CPU ratio.
 - Compute optimized- high CPU to memory ratio.
-- High performance compute- deliver leadership-class performance, scalability, and cost efficiency for various real-world HPC workloads.
+- High-performance compute- deliver leadership-class performance, scalability, and cost efficiency for various real-world HPC workloads.
 - Instances with GPUs.
 
-When you do not have a good idea yet about what your compute requirements are, we recommend to start with either of the two default options below which are cost effective options for light weight testing and for training workloads.
+When you do not have a good idea yet about what your compute requirements are, we recommend starting with either of the two default options below which are cost effective options for light weight testing and for training workloads.
 
 | **Type** | **Virtual machine size** | **Specs** |
 | --- | --- | --- |
@@ -45,7 +45,7 @@ Getting the best VM size for your scenario may consist of trial and error. Here 
 
 - If you need a CPU:
   - Use a [memory optimized](/azure/virtual-machines/sizes-memory) VM if you are training on very large datasets.
-  - Use a [compute optimized](/azure/virtual-machines/sizes-compute) VM if you are doing real-time inferencing or other latency sensitive tasks.
+  - Use a [compute optimized](/azure/virtual-machines/sizes-compute) VM if you are doing real time inferencing or other latency sensitive tasks.
   - Use a VM with additional cores and/or RAM in order to speed up training times.
 - If you need a GPU:
   - Use a VM with a faster GPU in order to speed up training times. Here is the list of GPU-enabled VM families in order of speed:
@@ -59,23 +59,23 @@ Getting the best VM size for your scenario may consist of trial and error. Here 
   - If you are doing distributed training, use VM sizes that have multiple GPUs.
   - If you are doing distributed training on multiple nodes, use GPUs that have NVLink connections.
 
-While selecting the VM type and SKU that best fits your workload, evaluate comparable VM SKUs as a trade off between CPU and GPU performance and pricing. From a cost management perspective, a job might run reasonably well on several SKUs.
+While selecting the VM type and SKU that best fits your workload, evaluate comparable VM SKUs as a trade-off between CPU and GPU performance and pricing. From a cost management perspective, a job might run reasonably well on several SKUs.
 
 Certain GPUs such as NC family, particularly NC\_Promo SKUs have similar abilities to other GPUs such as low latency and ability to manage multiple computing workloads in parallel, however they are offered at discounted prices compared to some of the other GPUs. Considerately selecting VM SKUs to the workload might save cost significantly in the long run.
 
-A reminder on the importance for utilization – signing up for a greater number of GPUs does not necessarily runs faster results. Instead, make sure the GPUs are fully utilized. For example, double check the need for NVIDIA CUDA. While it might be required for high-performance GPU execution, your job might not take a dependency on it.
+A reminder on the importance for utilization – signing up for a greater number of GPUs does not necessarily executes with faster results. Instead, make sure the GPUs are fully utilized. For example, double check the need for NVIDIA CUDA. While it might be required for high-performance GPU execution, your job might not take a dependency on it.
 
 ### Determining the compute size for inference
 
-Compute requirements for inference scenarios differ from training scenarios. Available options differ based on whether your scenario demands offline inference in batch or requires online inference in real-time.
+Compute requirements for inference scenarios differ from training scenarios. Available options differ based on whether your scenario demands offline inference in batch or requires online inference in real time.
 
-For real-time inference scenarios consider the following:
+For real time inference scenarios consider the following:
 
 - Make use of [profiling capabilities](/azure/machine-learning/how-to-deploy-profile-model?pivots=py-sdk) on your model with Azure Machine Learning to determine how much CPU and memory you will need to allocate for the model when deploying it as a web service.
-- If you are doing real-time inference but don't need high availability, deploy to [Azure Container Instances](/azure/machine-learning/how-to-deploy-azure-container-instance) (no SKU selection)
-- If you are doing real-time inference but need high availability, deploy to [Azure Kubernetes Service](/azure/machine-learning/how-to-deploy-azure-kubernetes-service?tabs=python)
-  - If you are using traditional ML models and receve \&lt; 10 queries/second, start with a CPU SKU. F-series SKUs often work well.
-  - If you are using deep learning models and receive \&gt; 10 queries/second, try an NVIDIA GPU SKU (NCasT4\_v3 often works well) [with Triton](/azure/machine-learning/how-to-deploy-with-triton?tabs=python)
+- If you are doing real time inference but don't need high availability, deploy to [Azure Container Instances](/azure/machine-learning/how-to-deploy-azure-container-instance) (no SKU selection)
+- If you are doing real time inference but need high availability, deploy to [Azure Kubernetes Service](/azure/machine-learning/how-to-deploy-azure-kubernetes-service?tabs=python)
+  - If you are using traditional ML models and receive < 10 queries/second, start with a CPU SKU. F-series SKUs often work well.
+  - If you are using deep learning models and receive > 10 queries/second, try a NVIDIA GPU SKU (NCasT4\_v3 often works well) [with Triton](/azure/machine-learning/how-to-deploy-with-triton?tabs=python)
 
 For batch inference scenarios consider the following:
 
@@ -98,7 +98,7 @@ _Note that stopping the compute instance stops billing for compute hours, but no
 
 ### Tune the chosen VM size by monitoring compute utilization
 
-You can view information on your Azure Machine Learning compute usage and utilization via Azure Monitor. You can view details on model deployment and registration, quota details such as active and idle nodes, run details such as cancelled and completed runs, as well as compute utilization for GPU and CPU utilization.
+You can view information on your Azure Machine Learning compute usage and utilization via Azure Monitor. You can view details on model deployment and registration, quota details such as active and idle nodes, run details such as canceled and completed runs, as well as compute utilization for GPU and CPU utilization.
 
 Based on the insights from the monitoring details, you can better plan or adjust your resource usage across the team. For example, if you notice a lot of idle nodes over the past week, you can work with the corresponding workspace owners to update the compute cluster configuration to prevent this additional cost. Benefits of analyzing the utilization patterns can help with forecasting costs and budget improvements.
 
@@ -136,8 +136,8 @@ The key to optimizing costs of shared compute resources is to ensure that these 
 1. When using compute instances, only turn them on when you have code to execute (i.e. shut them down when they are not being used).
 1. When using compute clusters, set the minimum node count to 0 and the maximum node count to a number that is evaluated based on your budget constraints. Use [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) to calculate the cost of full utilization of one VM node of your chosen VM SKU. Auto-scaling will scale down all the compute nodes when there is no one using it and only scale up to the number of nodes you have budget for.
 [azureml.core.compute.amlcompute.ScaleSettings class - Azure Machine Learning Python | Microsoft Docs](https://docs.microsoft.com/python/api/azureml-core/azureml.core.compute.amlcompute.scalesettings?view=azure-ml-py)
-1. Monitor your resource utilizations (CPU utilization, GPU utilization, etc) when training models. If the resources aren't being fully utilized, modify your code to better utilize resources or scale down to smaller/cheaper VM sizes.
-1. Evaluate whether you can create shared compute resources for your team to avoid compute inefficiencies caused by cluster scaling operations.
+1. Monitor your resource utilizations (CPU utilization, GPU utilization, etc.) when training models. If the resources aren't being fully utilized, modify your code to better utilize resources or scale down to smaller/cheaper VM sizes.
+1. Evaluate whether you can create shared compute resources for your team to avoid computing inefficiencies caused by cluster scaling operations.
 1. Optimize compute cluster auto-scaling timeout policies based on usage telemetry.
 1. Use workspace quotas to control the amount of compute resources that individual workspaces have access to.
 
@@ -145,7 +145,7 @@ The key to optimizing costs of shared compute resources is to ensure that these 
 
 Acting under quota and budget constraints, a team must trade off timely execution of jobs versus cost, to ensure important jobs run timely and a budget is best utilized.
 
-To support best compute utilization, teams are recommended to create clusters of various sizes and with 'low priority' and 'dedicated' VM priorities. Low-priority compute make use of surplus capacity in Azure and hence come with discounted rates. On the downside, these machines can be preempted any time a higher priority ask comes in.
+To support best compute utilization, teams are recommended to create clusters of various sizes and with 'low priority' and 'dedicated' VM priorities. Low-priority computes make use of surplus capacity in Azure and hence come with discounted rates. On the downside, these machines can be preempted anytime a higher priority ask comes in.
 
 Using the clusters of varying size and priority, a notion of scheduling priority can be introduced. For instance, when experimental and production jobs compete for the same 'NC' GPU-quota, a production job might have preference to run over the experimental job. In that case, run the production job on the dedicated compute cluster, and the experimental job on the low priority compute cluster. When quota fall short, the experimental job will be preempted in favor of the production job.
 
@@ -157,7 +157,7 @@ When continuously experimenting to improve a model against its baseline, you mig
 
 ## Plan, manage and share budgets, cost, and quota at an Enterprise-scale
 
-As an organization grows its number of machine learning use cases and teams, it requires an increased operating maturity from IT and Finance and coordination between individual machine learning teams to ensure efficient operations. Company-scale capacity and quota management becomes important to address scarceness of compute resources and overcome management overhead.
+As an organization grows its number of machine learning use cases and teams, it requires an increased operating maturity from IT and Finance and coordination between individual machine learning teams to ensure efficient operations. Company-scale capacity and quota management become important to address scarceness of compute resources and overcome management overhead.
 
 This section discusses best practices for planning, managing, and sharing budgets, cost, and quota at enterprise scale, based on learnings from managing a large number of GPU training resources for machine learning internally at Microsoft.
 
@@ -175,13 +175,13 @@ To understand where the budget is going, it is critical to know where the costs 
 
 When managing an Azure Environment with many workloads, it can be challenging to keep the overview on resource spend. [Azure Policy](/azure/governance/policy/overview) can help control and govern resource spend, by restricting particular usage patterns across the Azure environment.
 
-In specific for Azure Machine Leanring, we recommend setting up policies to allow only for usage of specific VM SKUs. This can help prevent and control selection of expensive VMs. Policies can also be used to enforce usage of low-priority VM SKUs.
+In specific for Azure Machine Learning, we recommend setting up policies to allow only for usage of specific VM SKUs. This can help prevent and control selection of expensive VMs. Policies can also be used to enforce usage of low-priority VM SKUs.
 
 ### Allocate and manage quota based on business priority
 
 Azure allows to set limits for quota allocation on a subscription and Azure Machine Learning workspace level. Restricting who can manage quota through [Azure RBAC](/azure/role-based-access-control/overview) can help ensure resource utilization and cost predictability.
 
-Availability of GPU-quota can be scarce across your subscriptions, or in some cases, at Azure Data Center level. To ensure high quota utilization across workloads, we recommend to monitor whether quota are best utilized and assigned across workloads.
+Availability of GPU-quota can be scarce across your subscriptions, or in some cases, at Azure Data Center level. To ensure high quota utilization across workloads, we recommend monitoring whether quota is best utilized and assigned across workloads.
 
 At Microsoft, it is determined periodically whether GPU quotas are best utilized and allocated across machine learning teams by evaluating capacity needs against business priority.
 
@@ -218,9 +218,9 @@ For dev/test scenarios where throughput and security are less critical, either S
 
 The 'Basic' SKU of Azure Container Registry is not recommended for Azure ML, because of its low throughput and low included storage, which can be quickly exceeded by Azure ML's relatively large sized (1+ GB) Docker images.
 
-#### Consider compute type availability when choosing Azure regions
+#### Consider computing type availability when choosing Azure regions
 
-When picking a region for your compute, keep compute quota availability in mind. Popular and larger regions such as East US, West US and West Europe tend to have higher default quota values and greater availability of most CPUs and GPUs compared to some other regions with stricter capacity restrictions in place.
+When picking a region for your compute, keep computing quota availability in mind. Popular and larger regions such as East US, West US and West Europe tend to have higher default quota values and greater availability of most CPUs and GPUs compared to some other regions with stricter capacity restrictions in place.
 
 # Learn more
 
