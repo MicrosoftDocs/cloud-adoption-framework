@@ -1643,7 +1643,7 @@ items:
       - name: Getting started
         href: get-started/security.md
       - name: Azure security top 10
-        href: security/security-top-10.md
+        href: secure/security-top-10.md
       - name: Microsoft cybersecurity reference architectures
         href: /security/cybersecurity-reference-architecture/mcra?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
       - name: Security documentation
