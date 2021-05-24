@@ -52,7 +52,10 @@ items:
       - name: Manage
         tocHref: /azure/cloud-adoption-framework/manage/
         topicHref: /azure/cloud-adoption-framework/manage
-    - name: Scenarios (Lenses)
+      - name: Secure
+        tocHref: /azure/cloud-adoption-framework/secure/
+        topicHref: /azure/cloud-adoption-framework/secure
+    - name: Scenarios (lenses)
       tocHref: /azure/cloud-adoption-framework/scenarios/
       topicHref: /azure/cloud-adoption-framework/scenarios
     - name: Reference
