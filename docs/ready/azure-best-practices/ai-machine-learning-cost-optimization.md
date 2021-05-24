@@ -14,7 +14,7 @@ When starting a new machine learning project, explorative work might be needed t
 
 ### Determining the compute size for training
 
-Hardware requirements for your training workload might vary from project to project. To meet these varying requirements, Azure Machine Learning Compute [offers various types](https://docs.microsoft.com/azure/machine-learning/concept-compute-target#supported-vm-series-and-sizes) of VMs:
+Hardware requirements for your training workload might vary from project to project. To meet these varying requirements, Azure Machine Learning Compute [offers various types](/azure/machine-learning/concept-compute-target#supported-vm-series-and-sizes) of VMs:
 
 - General purpose- balanced CPU to memory ratio.
 - Memory optimized- high memory to CPU ratio.
@@ -32,18 +32,18 @@ When you do not have a good idea yet about what your compute requirements are, w
 Getting the best VM size for your scenario may consist of trial and error. Here are several aspects to consider.
 
 - If you need a CPU:
-  - Use a [memory optimized](https://docs.microsoft.com/azure/virtual-machines/sizes-memory) VM if you are training on very large datasets.
-  - Use a [compute optimized](https://docs.microsoft.com/azure/virtual-machines/sizes-compute) VM if you are doing real-time inferencing or other latency sensitive tasks.
+  - Use a [memory optimized](/azure/virtual-machines/sizes-memory) VM if you are training on very large datasets.
+  - Use a [compute optimized](/azure/virtual-machines/sizes-compute) VM if you are doing real-time inferencing or other latency sensitive tasks.
   - Use a VM with additional cores and/or RAM in order to speed up training times.
 - If you need a GPU:
   - Use a VM with a faster GPU in order to speed up training times. Here is the list of GPU-enabled VM families in order of speed:
-    1. [NC-series](https://docs.microsoft.com/azure/virtual-machines/nc-series) (Nvidia Tesla K80)
-    2. [NV-series](https://docs.microsoft.com/azure/virtual-machines/nv-series) (Nvidia Tesla M80)
-    3. [ND-series](https://docs.microsoft.com/azure/virtual-machines/nd-series) (Nvidia Tesla P40)
-    4. [NCv2-series](https://docs.microsoft.com/azure/virtual-machines/ncv2-series) (Nvidia Tesla P100)
-    5. [NCv3-series](https://docs.microsoft.com/azure/virtual-machines/ncv3-series) (Nvidia Tesla V100)
-    6. [NDv2-series](https://docs.microsoft.com/azure/virtual-machines/ndv2-series) (Nvidia Tesla V100 with NVLink connections)
-    7. [NCasT4\_v3-series](https://docs.microsoft.com/azure/virtual-machines/nct4-v3-series) (Nvidia Tesla T4)
+    1. [NC-series](/azure/virtual-machines/nc-series) (Nvidia Tesla K80)
+    2. [NV-series](/azure/virtual-machines/nv-series) (Nvidia Tesla M80)
+    3. [ND-series](/azure/virtual-machines/nd-series) (Nvidia Tesla P40)
+    4. [NCv2-series](/azure/virtual-machines/ncv2-series) (Nvidia Tesla P100)
+    5. [NCv3-series](/azure/virtual-machines/ncv3-series) (Nvidia Tesla V100)
+    6. [NDv2-series](/azure/virtual-machines/ndv2-series) (Nvidia Tesla V100 with NVLink connections)
+    7. [NCasT4\_v3-series](/azure/virtual-machines/nct4-v3-series) (Nvidia Tesla T4)
   - If you are doing distributed training, use VM sizes that have multiple GPUs.
   - If you are doing distributed training on multiple nodes, use GPUs that have NVLink connections.
 
@@ -59,20 +59,20 @@ Compute requirements for inference scenarios differ from training scenarios. Ava
 
 For real-time inference scenarios consider the following:
 
-- Make use of [profiling capabilities](https://docs.microsoft.com/azure/machine-learning/how-to-deploy-profile-model?pivots=py-sdk) on your model with Azure Machine Learning to determine how much CPU and memory you will need to allocate for the model when deploying it as a web service.
-- If you are doing real-time inference but don't need high availability, deploy to [Azure Container Instances](https://docs.microsoft.com/azure/machine-learning/how-to-deploy-azure-container-instance) (no SKU selection)
-- If you are doing real-time inference but need high availability, deploy to [Azure Kubernetes Service](https://docs.microsoft.com/azure/machine-learning/how-to-deploy-azure-kubernetes-service?tabs=python)
+- Make use of [profiling capabilities](/azure/machine-learning/how-to-deploy-profile-model?pivots=py-sdk) on your model with Azure Machine Learning to determine how much CPU and memory you will need to allocate for the model when deploying it as a web service.
+- If you are doing real-time inference but don't need high availability, deploy to [Azure Container Instances](/azure/machine-learning/how-to-deploy-azure-container-instance) (no SKU selection)
+- If you are doing real-time inference but need high availability, deploy to [Azure Kubernetes Service](/azure/machine-learning/how-to-deploy-azure-kubernetes-service?tabs=python)
   - If you are using traditional ML models and receve \&lt; 10 queries/second, start with a CPU SKU. F-series SKUs often work well.
-  - If you are using deep learning models and receive \&gt; 10 queries/second, try an NVIDIA GPU SKU (NCasT4\_v3 often works well) [with Triton](https://aka.ms/triton-aml-docs)
+  - If you are using deep learning models and receive \&gt; 10 queries/second, try an NVIDIA GPU SKU (NCasT4\_v3 often works well) [with Triton](/azure/machine-learning/how-to-deploy-with-triton?tabs=python)
 
 For batch inference scenarios consider the following:
 
-- When using Azure Machine Learning pipelines for batch inferencing, follow the guidance under 'Determining the compute size for training' to choose your initial VM size.
+- When using Azure Machine Learning pipelines for batch inferencing, follow the guidance under ['Determining the compute size for training'](#_Determining_the_compute_size_for_ inference) to choose your initial VM size.
 - Optimize cost and performance by scaling horizontally. One of the key methods of optimizing cost and performance is by parallelizing the workload with the help of [Parallel Run Step](https://docs.microsoft.com/python/api/azureml-pipeline-steps/azureml.pipeline.steps.parallelrunstep?view=azure-ml-py) in Azure Machine Learning. This pipeline step allows you to use many smaller nodes to execute the task in parallel, hence allowing you to scale horizontally. There is an overhead for parallelization though, so depending on the workload and the degree of parallelism that can be achieved, this may or may not be an option.
 
 ### Determine the size for compute instance compute
 
-For interactive development, Azure Machine Learning's compute instance (CI) compute type is recommended to use. The CI offering brings single node compute that is bound to a single user and can hence be used as a workstation replacement.
+For interactive development, Azure Machine Learning's compute instance compute type is recommended to use. The CI offering brings single node compute that is bound to a single user and can hence be used as a workstation replacement.
 
 Some organizations disallow the use of production data on local workstations, have enforced restrictions to the workstation environment, or restrict the installation of packages and dependencies in the Corporate IT environment. Compute instance can be used as a workstation to overcome the limitation, offering a secure environment with production data access, and running on images that come with popular packages and tools for data science pre-installed.
 
@@ -82,7 +82,7 @@ Compute instances are only billed when running. To save on cost, users are recom
 - Work with a sample of your data on compute instance and scale out to compute clusters to work with your full set of data.
 - Submit experimentation jobs in 'local' compute target mode on the compute instance while developing or testing, while switching to shared compute cluster capacity when submitting jobs at full scale (many epochs, full set of data, hyperparameter search, etc.)
 
-_Note that stopping the CI stops billing for compute hours, but not billing for disk and load balancer._
+_Note that stopping the compute instance stops billing for compute hours, but not billing for disk and load balancer._
 
 ### Tune the chosen VM size by monitoring compute utilization
 
@@ -109,7 +109,7 @@ To save cost and work productively, it is recommended to:
 - When your jobs take long to execute, consider optimizing your code base for distributed training to allow for scaling out horizontally.
 - Design your distributed training workloads for node elasticity, to allow flexible use of single-node and multi-node compute, and ease usage of preemptible compute.
 
-### Combine compute types using Azure Machine Learning Pipelines
+### Combine compute types using Azure Machine Learning pipelines
 
 When orchestrating your machine learning workflows, you can define a pipeline with multiple steps. Each step in the pipeline can run on its own compute type, so you can optimize performance and cost to meet varying compute requirements across the machine learning lifecycle.
 
@@ -161,13 +161,13 @@ To understand where the budget is going, it is critical to know where the costs 
 
 ### Govern and restrict compute usage by policy
 
-When managing an Azure Environment with many workloads, it can be challenging to keep the overview on resource spend. [Azure Policies] can help control and govern resource spend, by restricting particular usage patterns across the Azure environment.
+When managing an Azure Environment with many workloads, it can be challenging to keep the overview on resource spend. [Azure Policy](/azure/governance/policy/overview) can help control and govern resource spend, by restricting particular usage patterns across the Azure environment.
 
 In specific for Azure Machine Leanring, we recommend setting up policies to allow only for usage of specific VM SKUs. This can help prevent and control selection of expensive VMs. Policies can also be used to enforce usage of low-priority VM SKUs.
 
 ### Allocate and manage quota based on business priority
 
-Azure allows to set limits for quota allocation on a subscription and Azure Machine Learning workspace level. Restricting who can manage quota through [Azure RBAC](https://docs.microsoft.com/azure/role-based-access-control/overview) can help ensure resource utilization and cost predictability.
+Azure allows to set limits for quota allocation on a subscription and Azure Machine Learning workspace level. Restricting who can manage quota through [Azure RBAC](/azure/role-based-access-control/overview) can help ensure resource utilization and cost predictability.
 
 Availability of GPU-quota can be scarce across your subscriptions, or in some cases, at Azure Data Center level. To ensure high quota utilization across workloads, we recommend to monitor whether quota are best utilized and assigned across workloads.
 
@@ -183,13 +183,13 @@ Azure Machine Learning Compute supports reserved instances. Discounts are automa
 
 Every time a pipeline is executed, intermediate datasets can be generated at each step for data caching and reuse. This could form a pain point for big organization with group of data scientists, running pipelines heavily.
 
-Data scientist would typically not spend their time to clean up the intermediate datasets that are generated. Over time the amount of data that is generated will add up. Azure Storage comes with a capability to enhance the management of the data lifecycle. Using [Blob Lifecycle Management](https://docs.microsoft.com/azure/storage/blobs/storage-lifecycle-management-concepts?tabs=azure-portal), you can set up general/policies to move data that is unused into colder storage tiers and save costs.  this way, you can 
+Data scientist would typically not spend their time to clean up the intermediate datasets that are generated. Over time the amount of data that is generated will add up. Azure Storage comes with a capability to enhance the management of the data lifecycle. Using [Blob Lifecycle Management](/azure/storage/blobs/storage-lifecycle-management-concepts?tabs=azure-portal), you can set up general/policies to move data that is unused into colder storage tiers and save costs.  this way, you can 
 
 ### Infrastructure cost optimization considerations
 
 #### Networking
 
-Azure networking cost is incurred from outbound bandwidth from Azure datacenter. All inbound data to Azure datacenter is free. Pricing can be found on this [page](https://azure.microsoft.com/pricing/details/bandwidth/). The key to reduce network cost is to deploy all your resources in the same datacenter region whenever possible. If you can deploy Azure Machine Learning workspace and compute in the same region that has your data, you can enjoy lower cost and higher performance.
+Azure networking cost is incurred from outbound bandwidth from Azure datacenter. All inbound data to an Azure datacenter is free. The key to reduce network cost is to deploy all your resources in the same datacenter region whenever possible. If you can deploy Azure Machine Learning workspace and compute in the same region that has your data, you can enjoy lower cost and higher performance.
 
 You might want to have private connection between your on-premises network and your Azure network to have hybrid cloud environment. ExpressRoute enables you to do that but considering the high cost of ExpressRoute, it may be more cost effective to move away from a hybrid-cloud setup and move all resources to Azure cloud.
 
@@ -212,10 +212,4 @@ When picking a region for your compute, keep compute quota availability in mind.
 
 # Learn more
 
-### Provide the right level of cost access
-
-[Track costs across business units, environments, or projects - Cloud Adoption Framework | Microsoft Docs](https://review.docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/track-costs?branch=pr-en-us-1254#provide-the-right-level-of-cost-access)
-
-### Additional cost management resources on Azure
-
-[Track costs across business units, environments, or projects - Cloud Adoption Framework | Microsoft Docs](https://review.docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/track-costs?branch=pr-en-us-1254#additional-cost-management-resources)
+* [Track costs across business units, environments, or projects - Cloud Adoption Framework | Microsoft Docs](/azure/cloud-adoption-framework/ready/azure-best-practices/track-costs)
