@@ -70,17 +70,17 @@ For batch inference scenarios consider the following:
 - When using Azure Machine Learning pipelines for batch inferencing, follow the guidance under 'Determining the compute size for training' to choose your initial VM size.
 - Optimize cost and performance by scaling horizontally. One of the key methods of optimizing cost and performance is by parallelizing the workload with the help of [Parallel Run Step](https://docs.microsoft.com/python/api/azureml-pipeline-steps/azureml.pipeline.steps.parallelrunstep?view=azure-ml-py) in Azure Machine Learning. This pipeline step allows you to use many smaller nodes to execute the task in parallel, hence allowing you to scale horizontally. There is an overhead for parallelization though, so depending on the workload and the degree of parallelism that can be achieved, this may or may not be an option.
 
-### Determine the size for Compute Instance compute
+### Determine the size for compute instance compute
 
-For interactive development, Azure Machine Learning's Compute Instance (CI) compute type is recommended to use. The CI offering brings single node compute that is bound to a single user and can hence be used as a workstation replacement.
+For interactive development, Azure Machine Learning's compute instance (CI) compute type is recommended to use. The CI offering brings single node compute that is bound to a single user and can hence be used as a workstation replacement.
 
-Some organizations disallow the use of production data on local workstations, have enforced restrictions to the workstation environment, or restrict the installation of packages and dependencies in the Corporate IT environment. Compute Instance can be used as a workstation to overcome the limitation, offering a secure environment with production data access, and running on images that come with popular packages and tools for data science pre-installed.
+Some organizations disallow the use of production data on local workstations, have enforced restrictions to the workstation environment, or restrict the installation of packages and dependencies in the Corporate IT environment. Compute instance can be used as a workstation to overcome the limitation, offering a secure environment with production data access, and running on images that come with popular packages and tools for data science pre-installed.
 
-Compute Instances are only billed when running. To save on cost, users are recommended to:
+Compute instances are only billed when running. To save on cost, users are recommended to:
 
-- Start and stop the Compute Instance when not used.
+- Start and stop the compute instance when not used.
 - Work with a sample of your data on compute instance and scale out to compute clusters to work with your full set of data.
-- Submit experimentation jobs in 'local' compute target mode on the Compute Instance while developing or testing, while switching to shared compute cluster capacity when submitting jobs at full scale (many epochs, full set of data, hyperparameter search, etc.)
+- Submit experimentation jobs in 'local' compute target mode on the compute instance while developing or testing, while switching to shared compute cluster capacity when submitting jobs at full scale (many epochs, full set of data, hyperparameter search, etc.)
 
 _Note that stopping the CI stops billing for compute hours, but not billing for disk and load balancer._
 
@@ -105,7 +105,7 @@ To save cost and work productively, it is recommended to:
 - Parameterize your experimentation code base so that you can configure your jobs to run with a varying number of epochs or on datasets of different size.
 - Do not hard code the folder path of your dataset, so that you can easily reuse the same code base with different datasets, and under local and cloud execution context.
 - Bootstrap your experimentation jobs in 'local' compute target mode while developing or testing, while switching to shared compute cluster capacity when submitting jobs at full scale.
-- If your dataset is large, work with a sample of data on your local or Compute Instance workstation, while scaling to cloud compute in Azure Machine Learning to work with your full set of data.
+- If your dataset is large, work with a sample of data on your local or compute instance workstation, while scaling to cloud compute in Azure Machine Learning to work with your full set of data.
 - When your jobs take long to execute, consider optimizing your code base for distributed training to allow for scaling out horizontally.
 - Design your distributed training workloads for node elasticity, to allow flexible use of single-node and multi-node compute, and ease usage of preemptible compute.
 
