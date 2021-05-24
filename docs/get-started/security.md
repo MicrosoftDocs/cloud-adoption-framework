@@ -286,7 +286,7 @@ Consistent application of security requirements comes from sound governance disc
 **Guidance to support deliverable completion:**
 
 - Use the same security baselines and auditing mechanisms that you built in [Step 4](#step-4-secure-new-workloads) as technical components of monitoring the baselines. Complement these baselines with people and process controls to ensure consistency.
-- Ensure that all workloads and resources follow proper [naming and tagging conventions](../ready/azure-best-practices/naming-and-tagging.md). [Enforce tagging conventions by using Azure Policy](/azure/governance/policy/tutorials/govern-tags), with a specific emphasis on tags for "data sensitivity."
+- Ensure that all workloads and resources follow proper [naming and tagging conventions](../ready/azure-best-practices/naming-and-tagging.md). [Enforce tagging conventions by using Azure Policy](/azure/governance/policy/tutorials/govern-tags), with a specific emphasis on tags for data sensitivity.
 - If you're new to cloud governance, establish [governance policies, processes, and disciplines](../govern/index.md) by using the Govern methodology.
 
 <br>

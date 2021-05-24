@@ -28,7 +28,7 @@ Encryption is a vital step toward ensuring data privacy, compliance, and data re
 
 - You can optimize Premium SKUs where hardware-security-module-protected keys are required. Underlying hardware security modules (HSMs) are FIPS 140-2 Level 2 compliant. Manage Azure dedicated HSM for FIPS 140-2 Level 3 compliance by considering the supported scenarios.
 
-- Key rotation and secret expiration.
+- Key rotation and secret expiration:
 
   - Certificate procurement and signing by using Key Vault [about certificates](/azure/key-vault/certificates/about-certificates).
   - Alerting/notifications and automated certificate renewals.
@@ -37,13 +37,14 @@ Encryption is a vital step toward ensuring data privacy, compliance, and data re
 
   Key Vault service replication and failover capabilities: [availability and redundancy](/azure/key-vault/general/disaster-recovery-guidance).
 
-- Monitoring key, certificate, and secret usage.
+- Monitoring key, certificate, and secret usage:
 
   Detecting unauthorized access by using a key vault or Azure Monitor Log Analytics workspace: [monitoring and alerting](/azure/key-vault/general/alert).
 
 - Delegated Key Vault instantiation and privileged access: [secure access](/azure/key-vault/general/secure-your-key-vault).
 
 - Requirements for using customer-managed keys for native encryption mechanisms such as Azure Storage encryption:
+
   - [Customer-managed keys](/azure/storage/common/customer-managed-keys-configure-key-vault).
   - Whole-disk encryption for virtual machines (VMs).
   - Data-in-transit encryption.
