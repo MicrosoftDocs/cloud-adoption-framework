@@ -88,9 +88,9 @@ For interactive development, Azure Machine Learning's compute instance compute t
 
 Some organizations disallow the use of production data on local workstations, have enforced restrictions to the workstation environment, or restrict the installation of packages and dependencies in the Corporate IT environment. Compute instance can be used as a workstation to overcome the limitation, offering a secure environment with production data access, and running on images that come with popular packages and tools for data science pre-installed.
 
-Compute instances are only billed when running. To save on cost, users are recommended to:
+Compute Instances are billed when running for compute hours, load balancer (included load balancer and outbound rules, data processed), OS disk, temp disk (depends on VM size chosen), and public IP address. To save on cost, users are recommended to consider:
 
-- Start and stop the compute instance when not used.
+- Starting and stopping the compute instance when not used.
 - Work with a sample of your data on compute instance and scale out to compute clusters to work with your full set of data.
 - Submit experimentation jobs in 'local' compute target mode on the compute instance while developing or testing, while switching to shared computing capacity when submitting jobs at full scale (many epochs, full set of data, hyperparameter search, etc.)
 
