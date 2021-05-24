@@ -24,11 +24,34 @@ This framework is built collaboratively with customers, partners, and internal M
 
 This release of the Cloud Adoption Framework introduces the new Secure methodology, which will centralize the theme of security best practices and provide end-to-end guidance for customers looking to adopt Microsoft guidance for their cloud environments. Security concerns have surged to the forefront of many top priorities lists recently, building on feedback requesting a more security-centric view, the [Secure methodology](../secure/index.md) will assist in defining the security aspect of the cloud journey.
 
+### Windows Virtual Desktop adoption journey
+
+As part of the ongoing series of adoption journeys, this release includes expanded guidance for [integrating Windows Virtual Desktop (WVD) into your cloud adoption journey](../scenarios/wvd/index.md). This rich guidance shows how each methodology in the Cloud Adoption Framework helps provide structure and best practices to your implementation approach.
+
+### Cloud economics
+
+This release continues the refresh of the [Strategy methodology](../strategy/index.md) by integrating Microsoft's [cloud economics program](https://azure.microsoft.com/overview/cloud-economics/).
+
+We've added new content that includes the financial and technical considerations to keep in mind as you develop your business case.
+
+- [Financial considerations](../strategy/financial-considerations/index.md)
+- [Technical considerations](../strategy/technical-considerations/index.md)
+- [Build a digital transformation timeline](../strategy/digital-transformation-timeline.md)
+- [Create a business case](../strategy/cloud-migration-business-case.md)
+- [Share your strategy](../strategy/share-your-strategy.md)
+
 ## April 2021
 
 ### Cloud service controls
 
 To help you implement cloud governance at a pace that sustains a high level of innovation, and implements the right level of control for your environment, we've added a new article, [Implement cloud service controls](../govern/cloud-service-controls.md). It focuses on a proven process to help governance teams implement granular controls across the Azure platform, while accelerating the development capabilities for cloud adoption teams. The process can be implemented by enterprises of any size, at any stage of their cloud journey. This guidance outlines the different stages of the process, from taking the enterprise requirements for cloud control for security, operations, and cost management, through the stages of development and release of controls.
+
+### Azure Storage migration overview
+
+To help you plan your Azure Storage migration, we've provided guidance in a new article, [Azure Storage migration overview](/windows-server/storage/storage-migration-service/overview), for two migration scenarios:
+
+- Migration of unstructured data, such as files and objects.
+- Migration of block-based devices, such as disks and storage area networks.
 
 ## March 2021
 
