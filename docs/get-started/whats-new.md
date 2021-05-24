@@ -20,9 +20,9 @@ This framework is built collaboratively with customers, partners, and internal M
 
 ## May 2021
 
-### Windows Virtual Desktop Adoption Journey
+### Windows Virtual Desktop adoption journey
 
-As part of the on-going series of adoption journeys, this release includes [expanded guidance for integrating Windows Virtual Desktop (WVD) into your cloud adoption journey](../scenarios/wvd/index.md). This rich guidance provides information on how each of the Cloud Adoption Framework methodologies can help provide structure and best practices to your implementation approach.
+As part of the ongoing series of adoption journeys, this release includes expanded guidance for [integrating Windows Virtual Desktop (WVD) into your cloud adoption journey](../scenarios/wvd/index.md). This rich guidance shows how each methodology in the Cloud Adoption Framework helps provide structure and best practices to your implementation approach.
 
 ### Cloud economics
 
@@ -42,12 +42,12 @@ We've added new content that includes the financial and technical considerations
 
 To help you implement cloud governance at a pace that sustains a high level of innovation, and implements the right level of control for your environment, we've added a new article, [Implement cloud service controls](../govern/cloud-service-controls.md). It focuses on a proven process to help governance teams implement granular controls across the Azure platform, while accelerating the development capabilities for cloud adoption teams. The process can be implemented by enterprises of any size, at any stage of their cloud journey. This guidance outlines the different stages of the process, from taking the enterprise requirements for cloud control for security, operations, and cost management, through the stages of development and release of controls.
 
-### Azure Storage migration  overview
+### Azure Storage migration overview
 
 To help you plan your Azure Storage migration, we've provided guidance in a new article, [Azure Storage migration overview](/windows-server/storage/storage-migration-service/overview), for two migration scenarios:
 
-- Migration of unstructured data, such as files and objects
-- Migration of block-based devices, such as disks and storage area networks (SANs)
+- Migration of unstructured data, such as files and objects.
+- Migration of block-based devices, such as disks and storage area networks.
 
 ## March 2021
 
