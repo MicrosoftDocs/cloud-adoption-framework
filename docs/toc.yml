@@ -70,7 +70,7 @@ items:
       items:
       - name: Hybrid and multicloud
         href: scenarios/hybrid/index.md
-      - name: Modern app platform
+      - name: Modern application platform
         href: scenarios/aks/index.md
       - name: SAP
         href: scenarios/sap/index.md
@@ -292,7 +292,7 @@ items:
               href: ready/azure-best-practices/connectivity-to-azure-paas-services.md
             - name: Plan for inbound and outbound internet connectivity
               href: ready/azure-best-practices/plan-for-inbound-and-outbound-internet-connectivity.md
-            - name: Plan for app delivery
+            - name: Plan for application delivery
               href: ready/azure-best-practices/plan-for-app-delivery.md
             - name: Plan for landing zone network segmentation
               href: ready/azure-best-practices/plan-for-landing-zone-network-segmentation.md
@@ -424,7 +424,7 @@ items:
         items:
         - name: Database security best practices
           href: /azure/sql-database/sql-database-security-best-practice?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
-        - name: Choose a deployment option in Azure SQL
+        - name: Choose a deployment option in Azure SQL Database
           href: /azure/sql-database/sql-database-paas-vs-sql-server-iaas?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
       - name: AI + Machine Learning
         items:
@@ -479,16 +479,16 @@ items:
           href: migrate/azure-best-practices/contoso-migration-overview.md
         - name: Windows Server workloads
           items:
-          - name: Rehost a Windows app on Azure VMs
+          - name: Rehost a Windows application on Azure VMs
             href: migrate/azure-best-practices/contoso-migration-rehost-vm.md
 
         - name: SQL Server workloads
           items:
           - name: Migrate SQL Server databases to Azure
             href: migrate/azure-best-practices/contoso-migration-sql-server-db-to-azure.md
-          - name: Rehost an app on Azure VMs and Azure SQL Managed Instance
+          - name: Rehost an application on Azure VMs and Azure SQL Managed Instance
             href: migrate/azure-best-practices/contoso-migration-rehost-vm-sql-managed-instance.md
-          - name: Rehost an app on Azure VMs and SQL Server Always On availability groups
+          - name: Rehost an application on Azure VMs and SQL Server Always On availability groups
             href: migrate/azure-best-practices/contoso-migration-rehost-vm-sql-ag.md
 
         - name: Storage migration
@@ -508,9 +508,9 @@ items:
             href: migrate/azure-best-practices/contoso-migration-postgresql-to-azure.md
           - name: Migrate MariaDB to Azure
             href: migrate/azure-best-practices/contoso-migration-mariadb-to-azure.md
-          - name: Rehost a Linux app on Azure VMs
+          - name: Rehost a Linux application on Azure VMs
             href: migrate/azure-best-practices/contoso-migration-rehost-linux-vm.md
-          - name: Rehost a Linux app on Azure VMs and Azure Database for MySQL
+          - name: Rehost a Linux application on Azure VMs and Azure Database for MySQL
             href: migrate/azure-best-practices/contoso-migration-rehost-linux-vm-mysql.md
 
         - name: Open-source platforms
@@ -541,18 +541,18 @@ items:
 
         - name: ASP.NET and PHP web apps
           items:
-          - name: Refactor a Windows app onto App Service and Azure SQL Database
+          - name: Refactor a Windows application onto App Service and Azure SQL Database
             href: migrate/azure-best-practices/contoso-migration-refactor-web-app-sql.md
-          - name: Refactor a Windows app onto App Service and SQL Managed Instance
+          - name: Refactor a Windows application onto App Service and SQL Managed Instance
             href: migrate/azure-best-practices/contoso-migration-refactor-web-app-sql-managed-instance.md
-          - name: Refactor a Linux app onto App Service and MySQL
+          - name: Refactor a Linux application onto App Service and MySQL
             href: migrate/azure-best-practices/contoso-migration-refactor-linux-app-service-mysql.md
-          - name: Rebuild an app in Azure
+          - name: Rebuild an application in Azure
             href: migrate/azure-best-practices/contoso-migration-rebuild.md
           - name: Refactor TFS to Azure DevOps Services
             href: migrate/azure-best-practices/contoso-migration-tfs-vsts.md
 
-        - name: Java apps
+        - name: Java applications
           items:
           - name: Migration overview
             href: /azure/developer/java/migration/migration-overview?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
@@ -574,9 +574,9 @@ items:
             items:
               - name: WebLogic to Azure Virtual Machines
                 href: /azure/developer/java/migration/migrate-weblogic-to-virtual-machines?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
-              - name: WebLogic with AAD via LDAP
+              - name: WebLogic with Azure AD via LDAP
                 href: /azure/developer/java/migration/migrate-weblogic-with-aad-ldap?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
-              - name: WebLogic with App Gateway
+              - name: WebLogic with Application Gateway
                 href: /azure/developer/java/migration/migrate-weblogic-with-app-gateway?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
           - name: WildFly to WildFly on AKS
             href: /azure/developer/java/migration/migrate-wildfly-to-wildfly-on-azure-kubernetes-service?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
@@ -643,7 +643,7 @@ items:
                 href: /azure/vmware-cloudsimple/set-vcenter-identity?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
               - name: Azure Application Gateway with VMware VMs
                 href: /azure/vmware-cloudsimple/azure-application-gateway?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
-              - name: vCenter server as vRealize Automation endpoint
+              - name: vCenter Server as vRealize Automation endpoint
                 href: /azure/vmware-cloudsimple/configure-server-vrealize-automation-endpoint?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
               - name: Ensure application high availability in VMware on Azure
                 href: /azure/vmware-cloudsimple/ensuring-high-availability?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
@@ -722,7 +722,7 @@ items:
               items:
               - name: Refactor Access database to Azure SQL Database
                 href: https://datamigration.microsoft.com/scenario/access-to-azuresqldb
-          - name: Azure Database Migration Service (DMS) tutorials
+          - name: Azure Database Migration Service tutorials
             items:
             - name: Azure Database Migration Service overview
               href: /azure/dms/dms-overview?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
@@ -761,7 +761,7 @@ items:
             href: scenarios/azure-stack/ready.md
           - name: Assess
             href: scenarios/azure-stack/migrate-assess.md
-          - name: Migrate (or Deploy)
+          - name: Migrate and Deploy
             href: scenarios/azure-stack/migrate-deploy.md
           - name: Govern
             href: scenarios/azure-stack/govern.md
@@ -837,7 +837,7 @@ items:
           href: migrate/azure-best-practices/migrate-best-practices-costs.md
         - name: Scale a migration
           href: migrate/azure-best-practices/contoso-migration-scale.md
-        - name: Schema migration Data Definition Languages
+        - name: Schema migration and DDL commands
           href: migrate/azure-best-practices/analytics/schema-migration-ddl.md
         - name: High availability for Azure Synapse
           href: migrate/azure-best-practices/analytics/azure-synapse.md
@@ -933,7 +933,7 @@ items:
           href: innovate/innovation-guide/adoption.md
         - name: Democratize data
           href: innovate/innovation-guide/data.md
-        - name: Engage customers through apps
+        - name: Engage customers through applications
           href: innovate/innovation-guide/apps.md
         - name: Empower adoption
           href: innovate/innovation-guide/ci-cd.md
@@ -954,13 +954,13 @@ items:
             href: innovate/kubernetes/cluster-design-operations.md
           - name: Cluster and application security
             href: innovate/kubernetes/cluster-application-security.md
-        - name: Artificial intelligence (AI)
+        - name: AI
           items:
           - name: Innovate with AI
             href: innovate/ai/index.md
           - name: Machine learning
             href: innovate/ai/machine-learning.md
-          - name: AI apps and agents
+          - name: AI applications and agents
             href: innovate/ai/ai-applications.md
           - name: Knowledge mining
             href: innovate/ai/knowledge-mining.md
@@ -989,9 +989,9 @@ items:
               href: innovate/best-practices/data-classification.md
             - name: Secure data
               href: /azure/architecture/data-guide/scenarios/securing-data-solutions?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
-            - name: Annotate data with Data Catalog
+            - name: Annotate data with Azure Data Catalog
               href: /azure/data-catalog/data-catalog-how-to-annotate?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
-            - name: Document data sources with Data Catalog
+            - name: Document data sources with Azure Data Catalog
               href: /azure/data-catalog/data-catalog-how-to-documentation?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
           - name: Centralize data
             items:
@@ -1024,7 +1024,7 @@ items:
             - name: Load data into Azure Synapse Analytics SQL pool
               href: /azure/synapse-analytics/sql-data-warehouse/load-data-wideworldimportersdw?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
 
-        - name: Engage via apps
+        - name: Engage via applications
           items:
           - name: Overview
             href: innovate/best-practices/apps.md
@@ -1032,7 +1032,7 @@ items:
             items:
             - name: Power Apps overview
               href: /powerapps/powerapps-overview?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
-            - name: Creating apps in Power Apps
+            - name: Creating applications in Power Apps
               href: /powerapps/maker?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
             - name: Create your first workflow with Power Automate
               href: /power-automate/getting-started?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
@@ -1048,17 +1048,17 @@ items:
               items:
               - name: Reference solutions for web apps
                 href: /azure/architecture/solution-ideas/articles/scalable-ecommerce-web-app?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
-              - name: Create a .NET Core app with Azure SQL Database
+              - name: Create a .NET Core application with Azure SQL Database
                 href: /azure/app-service/app-service-web-tutorial-dotnet-sqldatabase
-              - name: Create a .NET app with Azure SQL Database
+              - name: Create a .NET application with Azure SQL Database
                 href: /azure/app-service/app-service-web-tutorial-dotnet-sqldatabase?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
-              - name: Create a PHP app with MySQL
+              - name: Create a PHP application with MySQL
                 href: /azure/app-service/app-service-web-tutorial-php-mysql?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
               - name: Create a Node.js with MongoDB
                 href: /azure/app-service/app-service-web-tutorial-nodejs-mongodb-app?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
             - name: Infusing intelligence
               items:
-              - name: Computer vision in Visual Studio
+              - name: Computer Vision service
                 href: /azure/cognitive-services/computer-vision/home?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
               - name: Translate text in real time
                 href: /azure/cognitive-services/translator/quickstart-translator?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
@@ -1074,7 +1074,7 @@ items:
               items:
               - name: Create and deploy a basic bot
                 href: /azure/bot-service/bot-builder-tutorial-basic-deploy?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&tabs=csharp&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json&view=azure-bot-service-4.0
-              - name: "Learning path: Create bots with the Azure bot service"
+              - name: "Learning path: Create bots with the Azure Bot Service"
                 href: /learn/paths/create-bots-with-the-azure-bot-service
               - name: Azure bot samples on GitHub
                 href: https://github.com/Microsoft/botframework-sdk
@@ -1166,11 +1166,11 @@ items:
             href: innovate/best-practices/devices.md
           - name: Mobile experience
             items:
-            - name: Extend a legacy claims-processing app with a web and mobile experience
+            - name: Extend a legacy claims-processing application with a web and mobile experience
               href: /azure/architecture/solution-ideas/articles/adding-a-modern-web-and-mobile-frontend-to-a-legacy-claims-processing-application
             - name: Optimize reports to share data on a mobile app
               href: /power-bi/desktop-create-phone-report?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
-            - name: Extend PowerApps canvas app to a mobile experience
+            - name: Extend Power Apps canvas application to a mobile experience
               href: /powerapps/user/run-app-client?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
             - name: Extend Power Automate to add a mobile experience
               href: /power-automate/create-mobile-task-flow?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
@@ -1202,7 +1202,7 @@ items:
               href: /azure-sphere/deployment/create-a-deployment?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
             - name: Get started with Azure Kinect DK
               href: /azure/Kinect-dk/about-azure-kinect-dk?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
-            - name: Build your first Azure Kinect DK app
+            - name: Build your first Azure Kinect DK application
               href: /azure/Kinect-dk/build-first-app?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
           - name: Adjusted reality
             items:
@@ -1240,9 +1240,9 @@ items:
             - name: Responsible and trusted AI
               href: innovate\best-practices\trusted-ai.md
 
-          - name: AI apps and agents
+          - name: AI applications and agents
             items:
-            - name: What are AI apps
+            - name: What are AI applications?
               href: innovate\best-practices\ai-applications.md
             - name: What are AI agents
               href: innovate\best-practices\conversational-ai.md
@@ -1275,7 +1275,7 @@ items:
             href: innovate/considerations/invention.md
           - name: Democratize data
             href: innovate/considerations/data.md
-          - name: Application development for innovative apps
+          - name: Application development for innovative applications
             href: innovate/considerations/apps.md
           - name: Empower adoption
             href: innovate/considerations/ci-cd.md
@@ -1482,7 +1482,7 @@ items:
     items:
     - name: Overview
       href: manage/index.md
-    - name: Azure management guide
+    - name: Azure Management Guide
       items:
       - name: Before you start
         href: manage/azure-management-guide/index.md
@@ -1591,9 +1591,65 @@ items:
         href: manage/considerations/workload.md
     - name: Advanced management and system design
       href: manage/design-principles.md
-
     - name: Manage antipatterns
       href: antipatterns/manage-antipatterns.md
+
+  - name: Secure
+    items:
+    - name: Overview
+      href: secure/index.md
+    - name: Methodology
+      items:
+      - name: Risk insights
+        href: secure/risk-insights.md
+      - name: Security integration
+        href: secure/security-integration.md
+      - name: Business resilience
+        href: secure/business-resilience.md
+      - name: Access control
+        href: secure/access-control.md
+      - name: Security operations 
+        href: secure/security-operations.md
+      - name: Asset protection
+        href: secure/asset-protection.md
+      - name: Security governance
+        href: secure/security-governance.md
+      - name: Innovation security
+        href: secure/innovation-security.md
+      - name: DevSecOps controls
+        href: secure/devsecops-controls.md
+
+    - name: Best practices
+      items:
+      - name: Securing DevOps
+        href: secure/best-practices/secure-devops.md
+      - name: Secure DevOps governance
+        href: secure/best-practices/end-to-end-governance.md 
+      - name: Windows Virtual Desktop
+        href: scenarios/wvd/eslz-security-governance-and-compliance.md
+      - name: Managing secrets
+        href: secure/best-practices/manage-secrets.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+      - name: Network security
+        href: /security/compass/network-security-containment
+      - name: Toolchain
+        href: secure/best-practices/toolchain.md
+
+    - name: Security considerations
+      items:
+      - name: Security strategy
+        href: strategy/define-security-strategy.md
+      - name: Roles and responsibilities
+        href: organize/cloud-security.md
+      - name: Getting started
+        href: get-started/security.md
+      - name: Azure security top 10
+        href: secure/security-top-10.md
+      - name: Microsoft cybersecurity reference architectures
+        href: /security/cybersecurity-reference-architecture/mcra?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+      - name: Security documentation
+        href: /security?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+      - name: Azure security benchmarks
+        href: /security/benchmark/azure?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
 
   - name: Organize
     items:
@@ -1669,7 +1725,7 @@ items:
     - name: Tools and templates
       href: reference/tools-templates.md
     - name: Azure security best practices
-      href: ./security/security-top-10.md
+      href: ./secure/security-top-10.md
     - name: Decision guides
       items:
       - name: Overview
