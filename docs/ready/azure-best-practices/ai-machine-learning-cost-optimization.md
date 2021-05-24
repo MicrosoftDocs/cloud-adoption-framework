@@ -16,9 +16,9 @@ When managing compute cost incurring from Azure Machine Learning on an organizat
 
 In this article, we present best practices in optimizing costs, managing budgets, and sharing quota with Azure Machine Learning reflecting on the experience and lessons learnt from running machine learning teams internally at Microsoft and while partnering with our customers. You'll learn how to:
 
-- [Optimize compute resources to meet workload requirements.](#_Optimizing_compute_to)
-- [Drive the best utilization of a team's budget.](#_Drive_best_utilization)
-- [Plan, manage and share budgets, cost, and quota at an Enterprise-scale.](#_Plan,_manage_and)
+- [Optimize compute resources to meet workload requirements.](#optimizing-compute-to-meet-workload-requirements)
+- [Drive the best utilization of a team's budget.](#driving-best-utilization-of-a-teams-budget)
+- [Plan, manage and share budgets, cost, and quota at an Enterprise-scale.](#plan-manage-and-share-budgets-cost-and-quota-at-an-enterprise-scale)
 
 ## Optimizing compute to meet workload requirements
 
@@ -80,7 +80,7 @@ For real-time inference scenarios consider following the below suggestions:
 For batch inference scenarios consider following the below suggestions:
 
 - When using Azure Machine Learning pipelines for batch inferencing, follow the guidance under ['Determining the compute size for training'](#_Determining_the_compute_size_for_ inference) to choose your initial VM size.
-- Optimize cost and performance by scaling horizontally. One of the key methods of optimizing cost and performance is by parallelizing the workload with the help of [Parallel Run Step](/python/api/azureml-pipeline-steps/azureml.pipeline.steps.parallelrunstep?view=azure-ml-py) in Azure Machine Learning. This pipeline step allows you to use many smaller nodes to execute the task in parallel, hence allowing you to scale horizontally. There is an overhead for parallelization though, so depending on the workload and the degree of parallelism that can be achieved, parallel run step may or may not be an option.
+- Optimize cost and performance by scaling horizontally. One of the key methods of optimizing cost and performance is by parallelizing the workload with the help of [Parallel Run Step](/python/api/azureml-pipeline-steps/azureml.pipeline.steps.parallelrunstep) in Azure Machine Learning. This pipeline step allows you to use many smaller nodes to execute the task in parallel, hence allowing you to scale horizontally. There is an overhead for parallelization though, so depending on the workload and the degree of parallelism that can be achieved, parallel run step may or may not be an option.
 
 ### Determine the size for compute instance compute
 
@@ -135,7 +135,7 @@ The key to optimizing costs of shared compute resources is to ensure that these 
 
 1. When using compute instances, only turn them on when you have code to execute (that is, shut them down when they are not being used).
 1. When using compute clusters, set the minimum node count to 0 and the maximum node count to a number that is evaluated based on your budget constraints. Use [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) to calculate the cost of full utilization of one VM node of your chosen VM SKU. Autoscaling will scale down all the compute nodes when there is no one using it and only scale up to the number of nodes you have budget for.
-[azureml.core.compute.amlcompute.ScaleSettings class - Azure Machine Learning Python | Microsoft Docs](/python/api/azureml-core/azureml.core.compute.amlcompute.scalesettings?view=azure-ml-py)
+[azureml.core.compute.amlcompute.ScaleSettings class - Azure Machine Learning Python | Microsoft Docs](/python/api/azureml-core/azureml.core.compute.amlcompute.scalesettings)
 1. Monitor your resource utilizations (CPU utilization, GPU utilization, etc.) when training models. If the resources aren't being fully utilized, modify your code to better utilize resources or scale down to smaller/cheaper VM sizes.
 1. Evaluate whether you can create shared compute resources for your team to avoid computing inefficiencies caused by cluster scaling operations.
 1. Optimize compute cluster autoscaling timeout policies based on usage telemetry.
