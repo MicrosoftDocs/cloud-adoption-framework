@@ -45,7 +45,7 @@ You can determine the scope of your policy enforcement processes by focusing on 
 
 Compliance is challenging for multinational organizations, especially in heavily regulated industries like healthcare and financial services. Standards and regulations abound, and in certain cases may change frequently, making it difficult for businesses to keep up with changing international electronic data handling laws.
 
-As with security controls, organizations should understand the division of responsibilities regarding regulatory compliance in the cloud. Whilst cloud providers strive to ensure that their platforms and services are compliant, organizations also need to confirm that their applications, the infrastructure those applications depend on, and services supplied by third parties are also certified as compliant, as the responsibilities are shared (see [Shared responsibility in the cloud](/azure/security/fundamentals/shared-responsibility).
+As with security controls, organizations should understand the division of responsibilities regarding regulatory compliance in the cloud. Whilst cloud providers strive to ensure that their platforms and services are compliant, organizations also need to confirm that their applications, the infrastructure those applications depend on, and services supplied by third parties are also certified as compliant, as the responsibilities are shared. For more information, see [Shared responsibility in the cloud](/azure/security/fundamentals/shared-responsibility).
 
 [Introduction to regulatory compliance](../../govern/policy-compliance/regulatory-compliance.md) describes compliance regulations in various industries and geographies. Use this information to help identify which regulations are relevant for your organization.
 

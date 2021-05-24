@@ -197,7 +197,7 @@ To learn more, see:
 - [Renew your Azure Key Vault certificates](/azure/key-vault/certificates/overview-renew-certificate)
 - [Manage certificates in Azure Automation](/azure/automation/shared-resources/certificates?tabs=azure-powershell)
 
-## **Next steps**
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Secure DevOps](./secure-devops.md)
