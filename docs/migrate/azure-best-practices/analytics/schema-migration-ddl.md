@@ -1,6 +1,6 @@
 ---
-title: Schema migration data definition languages
-description: Learn about design considerations and performance options for data definition languages (DDLs) when you're migrating schemas to Azure Synapse Analytics.
+title: Schema migration and data definition language (DDL) commands 
+description: Learn about design considerations and performance options for data definition language (DDL) commands when you're migrating schemas to Azure Synapse Analytics.
 author: v-hanki
 ms.author: brblanch
 ms.date: 07/14/2020
@@ -10,9 +10,9 @@ ms.subservice: migrate
 ms.custom: think-tank
 ---
 
-# Data definition languages for schema migration
+# Schema migration and DDL commands
 
-This article describes design considerations and performance options for data definition languages (DDLs) when you're migrating schemas to Azure Synapse Analytics.
+This article describes design considerations and performance options for data definition language (DDL) commands when you're migrating schemas to Azure Synapse Analytics.
 
 ## Design considerations
 
@@ -186,7 +186,7 @@ Avoid defining character fields with a large default size. If the maximum size o
 
 Don't migrate unnecessary objects or processes. Use built-in features and functions in the target Azure environment where appropriate to reduce the actual number of objects and processes to migrate. Consider using a virtualization layer to reduce or eliminate the number of physical data marts that you'll migrate and to push down processing into the data warehouse.
 
-Automate wherever possible, and use metadata from system catalogs in the source system to generate DDLs for the target environment. If possible, also automate generating documents. Microsoft partners such as WhereScape can provide specialized tools and services to assist with automation.
+Automate wherever possible, and use metadata from system catalogs in the source system to generate DDL commands for the target environment. If possible, also automate generating documents. Microsoft partners such as WhereScape can provide specialized tools and services to assist with automation.
 
 Perform any required data model changes or data-mapping optimizations on the target platform. You can make these changes more efficiently in Azure Synapse Analytics. This approach reduces the impact on source systems that might already be running close to full capacity.
 
