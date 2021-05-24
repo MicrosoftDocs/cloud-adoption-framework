@@ -475,7 +475,7 @@ With diagnostic logging enabled for Azure resources, you can start to use loggin
 The Azure portal is a web-based unified console that allows you to build, manage, and monitor everything from simple web apps to complex cloud applications. It includes a customizable dashboard and accessibility options.
 
 - You can create multiple dashboards and share them with others who have access to your Azure subscriptions.
-- With this shared model, your team has visibility into the Azure environment, which helps them them to be proactive when managing systems in the cloud.
+- With this shared model, your team has visibility into the Azure environment, which helps them be proactive when managing systems in the cloud.
 
   ![Screenshot of an Azure dashboard.](./media/migrate-best-practices-security-management/dashboard.png)
 
@@ -537,7 +537,7 @@ Azure has a change-tracking solution in Azure Automation:
 
   ![Screenshot of a change management chart.](./media/migrate-best-practices-security-management/change.png)
 
-  _Figure 19: A change management chart._
+  *Figure 19: A change management chart.*
 
 **Learn more:**
 

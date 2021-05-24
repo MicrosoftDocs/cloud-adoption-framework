@@ -251,7 +251,7 @@ You can monitor VM usage by using Microsoft tools, such as Azure Cost Management
 - Read overviews of [Azure Monitor](/azure/azure-monitor/overview) and [Azure Advisor](/azure/advisor/advisor-overview).
 - [Get Azure Advisor cost recommendations](/azure/advisor/advisor-cost-recommendations).
 - Learn how to [optimize costs from recommendations](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations), and [prevent unexpected charges](/azure/cost-management-billing/cost-management-billing-overview).
-- Learn about the [Azure Resource Optimization (ARO) toolkit](https://github.com/azure/azure-quickstart-templates/tree/master/azure-resource-optimization-toolkit).
+- Learn about the [Azure Resource Optimization (ARO) toolkit](https://github.com/Azure/azure-quickstart-templates/tree/master/demos/azure-resource-optimization-toolkit).
 
 ## Best practice: Implement resource group budgets
 
@@ -302,7 +302,7 @@ You can optimize a VM with Azure Automation, virtual machine scale sets, auto-sh
 - Learn about [vertical autoscaling](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-vertical-scale-reprovision).
 - [Schedule a VM autostart](https://azure.microsoft.com/updates/azure-devtest-labs-schedule-vm-auto-start/).
 - Learn how to [start or stop VMs off hours in Azure Automation](/azure/automation/automation-solution-vm-management).
-- Get more information about [Azure Advisor](/azure/advisor/advisor-overview), and the [Azure Resource Optimization (ARO) toolkit](https://github.com/azure/azure-quickstart-templates/tree/master/azure-resource-optimization-toolkit).
+- Get more information about [Azure Advisor](/azure/advisor/advisor-overview), and the [Azure Resource Optimization (ARO) toolkit](https://github.com/Azure/azure-quickstart-templates/tree/master/demos/azure-resource-optimization-toolkit).
 
 ## Best practices: Use Azure Logic Apps and runbooks with Budgets API
 

@@ -18,7 +18,7 @@ This section explores how to operationally maintain an Azure enterprise estate w
 
 ![Diagram that shows management and monitoring.](./media/management-and-monitoring.png)
 
-_Figure 1: Platform management and monitoring._
+*Figure 1: Platform management and monitoring.*
 
 <!-- cSpell:ignore syslogs SIEM -->
 
@@ -52,17 +52,15 @@ _Figure 1: Platform management and monitoring._
 
     In the context of the enterprise-scale architecture, centralized logging is primarily concerned with platform operations. This emphasis doesn't prevent the use of the same workspace for VM-based application logging. With a workspace configured in resource-centric access control mode, granular Azure RBAC is enforced to ensure application teams will only have access to the logs from their resources. In this model, application teams benefit from the use of existing platform infrastructure by reducing their management overhead. For any non-compute resources such as web apps or Azure Cosmos DB databases, application teams can use their own Log Analytics workspaces and configure diagnostics and metrics to be routed here.
 
-<!-- docutune:ignore WORM -->
-
 - Export logs to Azure Storage if log retention requirements exceed two years. Use immutable storage with a write-once, read-many policy to make data non-erasable and non-modifiable for a user-specified interval.
 - Use Azure Policy for access control and compliance reporting. Azure Policy provides the ability to enforce organization-wide settings to ensure consistent policy adherence and fast violation detection. For more information, see [Understand Azure Policy effects](/azure/governance/policy/concepts/effects).
 - Monitor in-guest virtual machine (VM) configuration drift using Azure Policy. Enabling [guest configuration](/azure/governance/policy/concepts/guest-configuration) audit capabilities through policy helps application team workloads to immediately consume feature capabilities with little effort.
 - Use [Update Management in Azure Automation](/azure/automation/update-management/overview) as a long-term patching mechanism for both Windows and Linux VMs. Enforcing Update Management configurations via Azure Policy ensures that all VMs are included in the patch management regimen and provides application teams with the ability to manage patch deployment for their VMs. It also provides visibility and enforcement capabilities to the central IT team across all VMs.
 - Use Network Watcher to proactively monitor traffic flows via [Network Watcher NSG flow logs v2](/azure/network-watcher/network-watcher-nsg-flow-logging-overview). [Traffic Analytics](/azure/network-watcher/traffic-analytics) analyzes NSG flow logs to gather deep insights about IP traffic within a virtual network and provides critical information for effective management and monitoring. Traffic Analytics provide information such as most communicating hosts and application protocols, most conversing host pairs, allowed or blocked traffic, inbound and outbound traffic, open internet ports, most blocking rules, traffic distribution per an Azure datacenter, virtual network, subnets, or rogue networks.
 - Use resource locks to prevent accidental deletion of critical shared services.
-- Use [deny policies](/azure/governance/policy/concepts/effects#deny) to supplement Azure role assignments. Deny policies are used to prevent deploying and configuring resources that don't match defined standards by preventing the request from being sent to the resource provider. The combination of deny policies and Azure role assignments ensures the appropriate guardrails are in place to enforce _who_ can deploy and configure resources and _what_ resources they can deploy and configure.
+- Use [deny policies](/azure/governance/policy/concepts/effects#deny) to supplement Azure role assignments. Deny policies are used to prevent deploying and configuring resources that don't match defined standards by preventing the request from being sent to the resource provider. The combination of deny policies and Azure role assignments ensures the appropriate guardrails are in place to enforce *who* can deploy and configure resources and *what* resources they can deploy and configure.
 - Include [service](/azure/service-health/service-health-overview) and [resource](/azure/service-health/resource-health-overview) health events as part of the overall platform monitoring solution. Tracking service and resource health from the platform perspective is an important component of resource management in Azure.
-- Don't send raw log entries back to on-premises monitoring systems. Instead, adopt a principle that _data born in Azure stays in Azure_. If on-premises SIEM integration is required, then [send critical alerts](/azure/security-center/continuous-export) instead of logs.
+- Don't send raw log entries back to on-premises monitoring systems. Instead, adopt a principle that *data born in Azure stays in Azure*. If on-premises SIEM integration is required, then [send critical alerts](/azure/security-center/continuous-export) instead of logs.
 
 ## Plan for application management and monitoring
 
@@ -74,7 +72,7 @@ To expand on the previous section, this section will consider a federated model 
 - For applications that are deployed to virtual machines, logs should be stored centrally to the dedicated Log Analytics workspace from a platform perspective. Application teams can access the logs subject to the Azure RBAC they have on their applications or virtual machines.
 - Application performance and health monitoring for both infrastructure as a service (IaaS) and platform as a service (PaaS) resources.
 - Data aggregation across all application components.
-- [Health modeling and operationalization](../..//manage/monitor/cloud-models-monitor-overview.md):
+- [Health modeling and operationalization](../../manage/monitor/cloud-models-monitor-overview.md):
   - How to measure the health of the workload and its subsystems
   - A traffic-light model to represent health
   - How to respond to failures across application components

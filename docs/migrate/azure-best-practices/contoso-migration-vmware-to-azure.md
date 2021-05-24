@@ -126,7 +126,7 @@ The Azure VMware Solution private cloud is connected to Contoso's virtual networ
 
 Azure VMware Solution private clouds require, at minimum, a `/22` CIDR network address block for subnets. To connect to on-premises environments and virtual networks, this must be a non-overlapping network address block.
 
->[!NOTE]
+> [!NOTE]
 > To learn about network planning for Azure VMware Solution, see [Networking checklist for Azure VMware Solution](/azure/azure-vmware/tutorial-network-checklist).
 
 ### Step 2: Create an Azure VMware Solution private cloud

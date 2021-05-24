@@ -163,7 +163,7 @@ Contoso will use automated scripts to install the required Windows or Linux agen
 
 #### Database tools
 
-In addition to Azure Migrate, Contoso will focus on using tools specifically for database assessment. Tools such as [Data Migration Assistant](/sql/dma/dma-overview?view=sql-server-2017) will help assess SQL Server databases for migration.
+In addition to Azure Migrate, Contoso will focus on using tools specifically for database assessment. Tools such as [Data Migration Assistant](/sql/dma/dma-overview) will help assess SQL Server databases for migration.
 
 Data Migration Assistant can help Contoso to figure out whether on-premises databases are compatible with a range of Azure database solutions. These solutions include Azure SQL Database, SQL Server running on an Azure IaaS VM, and Azure SQL Managed Instance.
 
@@ -300,7 +300,7 @@ You can learn more in an [overview of Azure Cost Management + Billing](/azure/co
 
 Contoso will also use scripts to locate unused resources.
 
-During large migrations, there are often leftover pieces of data such as virtual hard drives, which incur a charge but provide no value to the company. Scripts are available in the [GitHub repo](https://github.com/azure/azure-quickstart-templates/tree/master/azure-resource-optimization-toolkit).
+During large migrations, there are often leftover pieces of data such as virtual hard drives, which incur a charge but provide no value to the company. Scripts are available in the [GitHub repo](https://github.com/Azure/azure-quickstart-templates/tree/master/demos/azure-resource-optimization-toolkit).
 
 Contoso will take advantage of work done by Microsoft's IT department and consider implementing the Azure Resource Optimization (ARO) toolkit. The toolkit is also in the GitHub repo.
 

@@ -34,7 +34,7 @@ Reuse of components is a fundamental principle of infrastructure as code. Module
 
 The [Terraform module for Cloud Adoption Framework enterprise-scale](https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest) deploys the following components from the enterprise scale [reference architecture](./architecture.md#high-level-architecture):
 
-![Overview of resources deployed by the Terraform module for Cloud Adoption Framework enterprise-scale](media/terraform-caf-enterprise-scale-overview.png)
+![Overview of resources deployed by the Terraform module for Cloud Adoption Framework enterprise-scale](./media/terraform-caf-enterprise-scale-overview.png)
 *Figure 1: Overview of resources deployed by the Terraform module for Cloud Adoption Framework enterprise-scale.*
 
 ## Capabilities

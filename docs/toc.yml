@@ -70,10 +70,12 @@ items:
       items:
       - name: Hybrid and multicloud
         href: scenarios/hybrid/index.md
-      - name: Modern containers
+      - name: Modern app platform
         href: scenarios/aks/index.md
       - name: SAP
         href: scenarios/sap/index.md
+      - name: Virtual desktops
+        href: scenarios/wvd/index.md
 
     - name: Antipatterns to avoid
       href: antipatterns/antipatterns-to-avoid.md
@@ -110,18 +112,28 @@ items:
         href: strategy/learning-metrics.md
       - name: Objectives and key results
         href: strategy/business-outcomes/okr.md
-    - name: Business justification
+    - name: Financial considerations
       items:
-      - name: Build a business justification
-        href: strategy/cloud-migration-business-case.md
-      - name: Create a financial model
-        href: strategy/financial-models.md
+      - name: Overview
+        href: strategy/financial-considerations/index.md
+      - name: Common finance vocabulary terms
+        href: strategy/finance-vocabulary-terms.md
       - name: Understand cloud accounting
-        href: strategy/cloud-accounting.md
-    - name: Align your partner strategy
-      href: strategy/partner-alignment.md
-    - name: First cloud adoption project
-      href: strategy/first-adoption-project.md
+        href: strategy/cloud-accounting.md    
+    - name: Technical considerations
+      items: 
+      - name: Overview
+        href: strategy/technical-considerations/index.md
+      - name: Achieve more with your investment
+        href: strategy/achieve-more.md
+      - name: Align your partner strategy
+        href: strategy/partner-alignment.md
+    - name: Build a digital transformation timeline
+      href: strategy/digital-transformation-timeline.md
+    - name: Create a business case
+      href: strategy/cloud-migration-business-case.md
+    - name: Share your strategy
+      href: strategy/share-your-strategy.md
     - name: Additional considerations
       items:
       - name: Balance competing priorities
@@ -267,7 +279,7 @@ items:
             - name: DNS for on-premises and Azure resources
               href: ready/azure-best-practices/dns-for-on-premises-and-azure-resources.md
             - name: Private Link and DNS integration at scale
-              href: ready/azure-best-practices/private-link-and-dns-integration-at-scale.md  
+              href: ready/azure-best-practices/private-link-and-dns-integration-at-scale.md
             - name: Define an Azure network topology
               href: ready/azure-best-practices/define-an-azure-network-topology.md
             - name: Virtual WAN network topology (Microsoft-managed)
@@ -287,7 +299,7 @@ items:
             - name: Define network encryption requirements
               href: ready/azure-best-practices/define-network-encryption-requirements.md
             - name: Plan for traffic inspection
-              href: ready/azure-best-practices/plan-for-traffic-inspection.md  
+              href: ready/azure-best-practices/plan-for-traffic-inspection.md
             - name: Connectivity to other cloud providers
               href: ready/azure-best-practices/connectivity-to-other-providers.md
           - name: Management and monitoring
@@ -653,23 +665,6 @@ items:
               href: /azure/vmware-cloudsimple/disaster-recovery-zerto?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
             - name: Set up CloudSimple Private Cloud as disaster recovery site using VMware SRM
               href: /azure/vmware-cloudsimple/disaster-recovery-site-recovery-manager?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
-
-        - name: Windows Virtual Desktop
-          items:
-          - name: Overview
-            href: scenarios/wvd/index.md
-          - name: Planning
-            href: scenarios/wvd/plan.md
-          - name: Azure landing zone review
-            href: scenarios/wvd/ready.md
-          - name: Proof of concept
-            href: scenarios/wvd/proof-of-concept.md
-          - name: Assess
-            href: scenarios/wvd/migrate-assess.md
-          - name: Migrate (or Deploy)
-            href: scenarios/wvd/migrate-deploy.md
-          - name: Release
-            href: scenarios/wvd/migrate-release.md
 
         - name: Data platforms
           items:
@@ -1255,6 +1250,7 @@ items:
             items:
             - name: What is Azure Cognitive Search?
               href: innovate\best-practices\cognitive-search.md
+
       - name: Process improvements
         items:
         - name: Overview

@@ -1,6 +1,6 @@
 ---
 title: Best practices for Azure readiness
-description: Learn about best practices and additional guidance to help your team establish and prepare your Azure environment.
+description: Learn about best practices and extra guidance to help your team establish and prepare your Azure environment.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/10/2019
@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Best practices for Azure readiness
 
-Cloud readiness requires equipping staff with the technical skills needed to start a cloud adoption effort and prepare your migration target environment for the assets and workloads you'll move to the cloud. Read these best practices and additional guidance to help your team prepare your Azure environment.
+Cloud readiness requires equipping staff with the technical skills needed to start a cloud adoption effort and prepare your migration target environment for the assets and workloads you'll move to the cloud. Read these best practices and more guidance to help your team prepare your Azure environment.
 
 ## Azure fundamentals
 
@@ -56,8 +56,8 @@ Design your identity and access control infrastructure to improve the security a
 
 ## AI + Machine Learning
 
-- [Setting up Azure Machine Learning for Enterprise scale](./ai-machine-learning-resource-organization.md). Learn about key decision points in setting up Azure Machine Learning for your organization. 
- 
+- [Organize and set up Azure Machine Learning environments](./ai-machine-learning-resource-organization.md). Learn about key decision points in setting up Azure Machine Learning for your organization.
+
 ## Cost management
 
 - [Tracking costs across business units, environments, and projects](./track-costs.md). Learn best practices for creating proper cost-tracking mechanisms.

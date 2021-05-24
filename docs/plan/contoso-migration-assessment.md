@@ -130,12 +130,12 @@ Here's how Contoso performs its assessment:
 1. Contoso downloads Data Migration Assistant from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53595).
     - Data Migration Assistant can be installed on any machine that can connect to the SQL Server instance. Contoso doesn't need to run it on the SQL Server machine.
     - Data Migration Assistant shouldn't be run on the SQL Server host machine.
-2. Contoso runs the downloaded setup file (DownloadMigrationAssistant.msi) to begin the installation.
+2. Contoso runs the downloaded setup file `DownloadMigrationAssistant.msi` to begin the installation.
 3. On the **Finish** page, Contoso selects **Launch Microsoft Data Migration Assistant** before finishing the wizard.
 
 ## Step 2: Run and analyze the database assessment for SmartHotel360
 
-Now, Contoso can run an assessment to analyze its on-premises SQL Server database for the SmartHotel360 app.
+Now, Contoso can run an assessment to analyze its on-premises SQL Server database for the SmartHotel360 application.
 
 1. In Data Migration Assistant, Contoso selects **New** > **Assessment**, and then gives the assessment a project name.
 

@@ -17,10 +17,10 @@ Landing zone governance is the smallest unit of overall governance. Establishing
 ## Landing zone governance best practices
 
 - **Initial landing zone governance:** The article on establishing an [initial governance foundation](../../govern/guides/complex/index.md) can assist with adding initial governance tooling to the first few landing zones. These practices will aid in scaling adoption and governance, along with implementing sound cost management. This approach starts with: resource organization, policy definitions, Azure roles, and blueprint definitions.
-- **[Naming and tagging standards](../azure-best-practices/naming-and-tagging.md):** Ensure consistency in naming and tagging, which is the foundational data for establishing sound governance practices.
-- **[Track costs across workloads](../azure-best-practices/track-costs.md):** Begin tracking costs in your first landing zone. Evaluate how you will apply consistency across multiple workloads and roles.
-- **[Scale with multiple subscriptions](../azure-best-practices/scale-subscriptions.md):** Evaluate how this landing zone and other landing zones will scale, as multiple subscriptions become a requirement.
-- **[Organize subscriptions](../azure-best-practices/organize-subscriptions.md):** Understand how to organize and manage multiple subscriptions.
+- [Naming and tagging standards](../azure-best-practices/naming-and-tagging.md): Ensure consistency in naming and tagging, which is the foundational data for establishing sound governance practices.
+- [Track costs across workloads](../azure-best-practices/track-costs.md): Begin tracking costs in your first landing zone. Evaluate how you will apply consistency across multiple workloads and roles.
+- [Scale with multiple subscriptions](../azure-best-practices/scale-subscriptions.md): Evaluate how this landing zone and other landing zones will scale, as multiple subscriptions become a requirement.
+- [Organize subscriptions](../azure-best-practices/organize-subscriptions.md): Understand how to organize and manage multiple subscriptions.
 
 ## Four steps to improve overall governance
 

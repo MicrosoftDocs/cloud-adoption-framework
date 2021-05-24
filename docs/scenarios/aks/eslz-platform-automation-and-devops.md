@@ -1,5 +1,5 @@
 ---
-title: Enterprise-scale Azure Kubernetes Service (AKS) platform automation and DevOps
+title: Deployment option considerations for Azure Kubernetes Service (AKS)
 description: Understand design recommendations and considerations for Azure Kubernetes Service (AKS) platform automation and DevOps.
 author: BrianBlanchard
 ms.author: brblanch
@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank, e2e-aks
 ---
 
-# AKS enterprise-scale platform automation and DevOps
+# Deployment option considerations for AKS
 
 As a cloud-native construct, Kubernetes requires a cloud-native approach to deployment and operations. Azure and Kubernetes are open and extensible platforms with rich and well-architected APIs, providing opportunity and ability to automate to the full extent. Plan for a DevOps and highly automated approach by relying on automation and general DevOps best practices.
 
@@ -18,7 +18,7 @@ As a cloud-native construct, Kubernetes requires a cloud-native approach to depl
 
 Here are some design considerations for AKS platform automation and DevOps:
 
-- Consider the [Azure service limitations](/azure/azure-resource-manager/management/azure-subscription-service-limits) and your continuous integration/continuous delivery (CI/CD) environment when determining your engineering and automation approach. For another example, see the [GitHub usage limitations](https://docs.github.com/actions/reference/usage-limits-billing-and-administration).
+- Consider the [Azure service limitations](/azure/azure-resource-manager/management/azure-subscription-service-limits) and your continuous integration and continuous delivery (CI/CD) environment when determining your engineering and automation approach. For another example, see the [GitHub usage limitations](https://docs.github.com/actions/reference/usage-limits-billing-and-administration).
 
 - When securing and protecting access to development, test, Q&A, and production environments, consider security options from a CI/CD perspective. Deployments happen automatically, so map access control accordingly.
 
@@ -53,7 +53,7 @@ Here are some design recommendations for AKS platform automation and DevOps:
 
 - Separate infrastructure deployment from application deployment. Core infrastructure changes less than applications. Treat each type of deployment as a separate flow and pipeline.
 
-- Deploy using [cloud-native](/dotnet/architecture/cloud-native/introduction) concepts. Use [infrastructure as code](/azure/devops/learn/what-is-infrastructure-as-code) to deploy infrastructure including the control plane, and use [Helm](https://helm.sh/) and [Kubernetes operators](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/) to deploy and maintain Kubernetes native components.
+- Deploy using [cloud-native](/dotnet/architecture/cloud-native/introduction) approaches. Use [infrastructure as code](/devops/deliver/what-is-infrastructure-as-code) to deploy infrastructure including the control plane, and use [Helm](https://helm.sh/) and the [Operator pattern in Kubernetes](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/) to deploy and maintain Kubernetes native components.
 
 - Use [GitOps](/azure/azure-arc/kubernetes/tutorial-use-gitops-connected-cluster) to deploy and maintain applications. GitOps uses the Git repository as a single source of truth, avoiding configuration drift and increasing productivity and reliability during rollbacks and related procedures.
 
@@ -63,7 +63,7 @@ Here are some design recommendations for AKS platform automation and DevOps:
 
 - Rely on well-known conventions across infrastructure and application-related deployments. Use [admission controllers](https://kubernetes.io/blog/2019/03/21/a-guide-to-kubernetes-admission-controllers/) combined with [gatekeeper](https://github.com/open-policy-agent/gatekeeper) to validate and enforce conventions among the other defined policies.
 
-- Embrace [shift left](/azure/devops/learn/devops-at-microsoft/shift-left-make-testing-fast-reliable) consistently with:
+- Embrace [shift left](/devops/develop/shift-left-make-testing-fast-reliable) consistently with:
   - Security, by adding vulnerability scanning tools like container scanning early in the pipeline.
   - Policy, by using policy as code and enforcing policies in a cloud-native manner through admission controllers.
 

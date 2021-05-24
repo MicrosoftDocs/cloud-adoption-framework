@@ -1,5 +1,5 @@
 ---
-title: Enterprise-scale security, governance, and compliance
+title: Enterprise-scale security governance and compliance
 description: Learn about enterprise-scale security governance and compliance in the Microsoft Cloud Adoption Framework for Azure.
 author: BrianBlanchard
 ms.author: brblanch
@@ -7,10 +7,10 @@ ms.date: 06/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: think-tank
+ms.custom: internal
 ---
 
-# Enterprise-scale security, governance, and compliance
+# Enterprise-scale security governance and compliance
 
 This article covers defining encryption and key management, planning for governance, defining security monitoring and an audit policy, and planning for platform security. At the end of the article, you can refer to a table that describes a framework to assess enterprise security readiness of Azure services.
 
@@ -89,7 +89,7 @@ Governance provides mechanisms and processes to maintain control over your appli
 
 - Understand that Azure Policy has limits, such as the restriction of definitions at any particular scope: [policy limits](/azure/azure-resource-manager/management/azure-subscription-service-limits).
 
-- Understand regulatory compliance policies. These might include HIPAA, PCI-DSS, or SOC 2 trust service principles.
+- Understand regulatory compliance policies. These might include HIPAA, PCI DSS, or SOC 2 Trust Services Criteria.
 
 **Design recommendations:**
 
@@ -105,7 +105,7 @@ Governance provides mechanisms and processes to maintain control over your appli
 
 - Use built-in policies where possible to minimize operational overhead.
 
-- Assign the built-in Policy Contributor role at a particular scope to enable application-level governance.
+- Assign the built-in Resource Policy Contributor role at a particular scope to enable application-level governance.
 
 - Limit the number of Azure Policy assignments made at the root management group scope to avoid managing through exclusions at inherited scopes.
 
@@ -192,64 +192,64 @@ The Azure Security Benchmark documentation specifies security controls and servi
 
 As business units request to deploy workloads to Azure, you need additional visibility into a workload to determine how to achieve appropriate levels of governance, security, and compliance. When a new service is required, you need to allow it. The following table provides a framework to assess enterprise security readiness of Azure services:
 
-| Assessment                    | Category                                                              | Criteria                                                                                                                                     |
-|------------------------------|-----------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| Security                     | Network endpoint                                                      | Does the service have a public endpoint that is accessible outside of a virtual network?                                                                |
-|                              |                                                                       | Does it support virtual network service endpoints?                                                                                                      |
-|                              |                                                                       | Can Azure services interact directly with the service endpoint?                                                                              |
-|                              |                                                                       | Does it support Azure Private Link endpoints?                                                                                                           |
-|                              |                                                                       | Can it be deployed within a virtual network?                                                                                                            |
-|                              | Data exfiltration prevention                                          | Does the PaaS service have a separate Border Gateway Protocol (BGP) community in Azure ExpressRoute Microsoft peering? Does ExpressRoute expose a route filter for the service? |
-|                              |                                                                       | Does the service support Private Link endpoints?                                                                                                       |
-|                              | Enforce network traffic flow for management and data plane operations | Is it possible to inspect traffic entering/exiting the service? Can traffic be force-tunnelled with user-defined routing?                                    |
-|                              |                                                                       | Do management operations use Azure shared public IP ranges?                                                                                 |
-|                              |                                                                       | Is management traffic directed via a link-local endpoint exposed on the host?                                                                |
-|                              | Data encryption at-rest                                               | Is encryption applied by default?                                                                                                            |
-|                              |                                                                       | Can encryption be disabled?                                                                                                                  |
-|                              |                                                                       | Is encryption performed with Microsoft-managed keys or customer-managed keys?                                                   |
-|                              | Data encryption in-transit                                            | Is traffic to the service encrypted at a protocol level (SSL/TLS)?                                                                           |
-|                              |                                                                       | Are there any HTTP endpoints, and can they be disabled?                                                                                        |
-|                              |                                                                       | Is underlying service communication also encrypted?                                                                                          |
-|                              |                                                                       | Is encryption performed with Microsoft-managed keys or customer-managed keys? (Is bring your own encryption supported?)                                                                               |
-|                              | Software deployment                                                   | Can application software or third-party products be deployed to the service?                                                                 |
-|                              |                                                                       | How is software deployment performed and managed?                                                                                            |
-|                              |                                                                       | Can policies be enforced to control source or code integrity?                                                                                   |
-|                              |                                                                       | If software is deployable, can antimalware capability, vulnerability management, and security monitoring tools be used?                                  |
-|                              |                                                                       | Does the service provide such capabilities natively, such as with Azure Kubernetes Service?                                                                              |
-| Identity and access management | Authentication and access control                                       | Are all control plane operations governed by Azure AD? Is there a nested control plane, such as with Azure Kubernetes Service?                             |
-|                              |                                                                       | What methods exist to provide access to the data plane?                                                                                      |
-|                              |                                                                       | Does the data plane integrate with Azure AD?                                                                                                      |
-|                              |                                                                       | Does authentication bwtween Azure services use managed identities  or service principals?                                                         |
-|                              |                                                                       | Is Azure-to-IaaS (service-to-virtual-network) authentication via Azure AD?                                                                                   |
-|                              |                                                                       | How are any applicable keys or shared access signatures managed?                                                                                                     |
-|                              |                                                                       | How can access be revoked?                                                                                                                   |
-|                              | Segregation of duties                                                 | Does the service separate control plane and data plane operations within Azure AD?                                                                |
-|                              | Multi-factor authentication and conditional access                                            | Is multi-factor authentication enforced for user to service interactions?                                                                                            |
-| Governance                   | Data export and import                                                  | Does service allow you to import and export data securely and encrypted?                                                                     |
-|                              | Data privacy and usage                                                  | Can Microsoft engineers access the data?                                                                                                     |
-|                              |                                                                       | Is any Microsoft Support interaction with the service audited?                                                                               |
-|                              | Data residency                                                        | Is data contained to the service deployment region?                                                                                          |
-| Operations                   | Monitoring                                                            | Does the service integrate with Azure Monitor?                                                                                               |
-|                              | Backup management                                                     | Which workload data need to be backed up?                                                                                                       |
-|                              |                                                                       | How are backups captured?                                                                                                                    |
-|                              |                                                                       | How frequently can backups be taken?                                                                                                         |
-|                              |                                                                       | How long can backups be retained for?                                                                                                        |
-|                              |                                                                       | Are backups encrypted?                                                                                                                       |
-|                              |                                                                       | Is backup encryption performed with Microsoft-managed keys or customer-managed keys?                                                                                             |
-|                              | Disaster recovery                                                     | How can the service be used in a regional redundant fashion?                                                                                 |
-|                              |                                                                       | What is the attainable recovery time objective and recovery point objective?                                                                                                          |
-|                              | SKU                                                                   | What SKUs are available? And how do they differ?                                                                                             |
-|                              |                                                                       | Are there any features related to security for Premium SKU?                                                                                  |
-|                              | Capacity management                                                   | How is capacity monitored?                                                                                                                   |
-|                              |                                                                       | What is the unit of horizontal scale?                                                                                                        |
-|                              | Patch and update management                                             | Does the service require active updating or do updates happen automatically?                                                                        |
-|                              |                                                                       | How frequently are updates applied? Can they be automated?                                                                                |
-|                              | Audit                                                                 | Are nested control plane operations captured (for example, Azure Kubernetes Service or Azure Databricks)?                                                                      |
-|                              |                                                                       | Are key data plane activities recorded?                                                                                                      |
-|                              | Configuration management                                              | Does it support tags and provide a `put` schema for all resources?                                                                             |
-| Azure service compliance     | Service attestation, certification, and external audits                | Is the service PCI/ISO/SOC compliant?                                                                                                        |
-|                              | Service availability                                                  | Is the service a private preview, a public preview, or generally available?                                                                                            |
-|                              |                                                                       | In what regions is the service available?                                                                                                    |
-|                              |                                                                       | What is the deployment scope of the service? Is it a regional or global service?                                                      |
-|                              | Service-level agreements (SLAs)                                              | What is the SLA for service availability?                                                                                                    |
-|                              |                                                                       | If applicable, what is the SLA for performance?                                                                                              |
+| Assessment | Category | Criteria |
+|--|--|--|
+| Security | Network endpoint | Does the service have a public endpoint that is accessible outside of a virtual network? |
+|  |  | Does it support virtual network service endpoints? |
+|  |  | Can Azure services interact directly with the service endpoint? |
+|  |  | Does it support Azure Private Link endpoints? |
+|  |  | Can it be deployed within a virtual network? |
+|  | Data exfiltration prevention | Does the PaaS service have a separate Border Gateway Protocol (BGP) community in Azure ExpressRoute Microsoft peering? Does ExpressRoute expose a route filter for the service? |
+|  |  | Does the service support Private Link endpoints? |
+|  | Enforce network traffic flow for management and data plane operations | Is it possible to inspect traffic entering/exiting the service? Can traffic be force-tunnelled with user-defined routing? |
+|  |  | Do management operations use Azure shared public IP ranges? |
+|  |  | Is management traffic directed via a link-local endpoint exposed on the host? |
+|  | Data encryption at-rest | Is encryption applied by default? |
+|  |  | Can encryption be disabled? |
+|  |  | Is encryption performed with Microsoft-managed keys or customer-managed keys? |
+|  | Data encryption in-transit | Is traffic to the service encrypted at a protocol level (SSL/TLS)? |
+|  |  | Are there any HTTP endpoints, and can they be disabled? |
+|  |  | Is underlying service communication also encrypted? |
+|  |  | Is encryption performed with Microsoft-managed keys or customer-managed keys? (Is bring your own encryption supported?) |
+|  | Software deployment | Can application software or third-party products be deployed to the service? |
+|  |  | How is software deployment performed and managed? |
+|  |  | Can policies be enforced to control source or code integrity? |
+|  |  | If software is deployable, can antimalware capability, vulnerability management, and security monitoring tools be used? |
+|  |  | Does the service provide such capabilities natively, such as with Azure Kubernetes Service? |
+| Identity and access management | Authentication and access control | Are all control plane operations governed by Azure AD? Is there a nested control plane, such as with Azure Kubernetes Service? |
+|  |  | What methods exist to provide access to the data plane? |
+|  |  | Does the data plane integrate with Azure AD? |
+|  |  | Does authentication between Azure services use managed identities or service principals? |
+|  |  | Is Azure-to-IaaS (service-to-virtual-network) authentication via Azure AD? |
+|  |  | How are any applicable keys or shared access signatures managed? |
+|  |  | How can access be revoked? |
+|  | Segregation of duties | Does the service separate control plane and data plane operations within Azure AD? |
+|  | Multifactor authentication and conditional access | Is multifactor authentication enforced for user to service interactions? |
+| Governance | Data export and import | Does service allow you to import and export data securely and encrypted? |
+|  | Data privacy and usage | Can Microsoft engineers access the data? |
+|  |  | Is any Microsoft Support interaction with the service audited? |
+|  | Data residency | Is data contained to the service deployment region? |
+| Operations | Monitoring | Does the service integrate with Azure Monitor? |
+|  | Backup management | Which workload data need to be backed up? |
+|  |  | How are backups captured? |
+|  |  | How frequently can backups be taken? |
+|  |  | How long can backups be retained for? |
+|  |  | Are backups encrypted? |
+|  |  | Is backup encryption performed with Microsoft-managed keys or customer-managed keys? |
+|  | Disaster recovery | How can the service be used in a regional redundant fashion? |
+|  |  | What is the attainable recovery time objective and recovery point objective? |
+|  | SKU | What SKUs are available? And how do they differ? |
+|  |  | Are there any features related to security for Premium SKU? |
+|  | Capacity management | How is capacity monitored? |
+|  |  | What is the unit of horizontal scale? |
+|  | Patch and update management | Does the service require active updating or do updates happen automatically? |
+|  |  | How frequently are updates applied? Can they be automated? |
+|  | Audit | Are nested control plane operations captured (for example, Azure Kubernetes Service or Azure Databricks)? |
+|  |  | Are key data plane activities recorded? |
+|  | Configuration management | Does it support tags and provide a `put` schema for all resources? |
+| Azure service compliance | Service attestation, certification, and external audits | Is the service PCI/ISO/SOC compliant? |
+|  | Service availability | Is the service a private preview, a public preview, or generally available? |
+|  |  | In what regions is the service available? |
+|  |  | What is the deployment scope of the service? Is it a regional or global service? |
+|  | Service-level agreements (SLAs) | What is the SLA for service availability? |
+|  |  | If applicable, what is the SLA for performance? |
