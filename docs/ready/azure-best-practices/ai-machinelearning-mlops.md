@@ -30,14 +30,14 @@ You may have built a fantastic machine learning model that exceeds all your accu
 
 Over time, you or one of your colleagues may develop a new model that could perform better than the old model, but can you carefully implement it without potentially disrupting business? It may also be necessary for regulatory purposes to recreate the model and explain the model's predictions when unusual or biased predictions are made. Data inputted to your training and model can change over time and it may be necessary to retrain the model periodically to maintain the accuracy of its predictions. Who will have responsibility to feed the data, monitor the performance, retrain the model and fix it should it fail?
 
-If you experience these problems, you may want to consider implementing an MLOps strategy for your project. At a high-level MLOps refers to the application of DevOps principles to AI-infused applications. Let's consider one very common use case: Suppose you have an application that serves a model's predictions via a REST API. Even such a simple use case can face many issues in production. Some MLOps tasks fit well in the general DevOps framework, such as setting up unit tests and integration tests, or tracking changes through version control. Other tasks are more unique to MLOps, including the following.
+If you experience these problems, you may want to consider implementing an MLOps strategy for your project. At a high-level MLOps refers to the application of DevOps principles to AI-infused applications. Let's consider one common use case: Suppose you have an application that serves a model's predictions via a REST API. Even such a simple use case can face many issues in production. Some MLOps tasks fit well in the general DevOps framework, such as setting up unit tests and integration tests, or tracking changes through version control. Other tasks are more unique to MLOps, including the following.
 
 - How to enable continuous experimentation and comparison against a baseline model.
 - How to monitor the incoming data to detect [data drift](/azure/machine-learning/how-to-monitor-datasets?tabs=python).
 - How trigger model retraining and set-up a rollback just in case.
 - How to create reusable data pipelines that can be applied for both training and scoring.
 
-Ultimately, the goal of MLOps is to close the gap between development and production and deliver value to customers faster. To achieve this goal, we need to rethink how things are done in development and in production. To what extent data scientists specifically are expected to be involved in MLOps is an organizational choice, as the role of Data Scientist itself is defined differently across different organizations. We recommend you check out the [MLOps maturity model](/azure/architecture/example-scenario/mlops/mlops-maturity-model#:~:text=Maturity%20model%20%20%20%20Level%20%20,model%20performa%20...%20%201%20more%20rows%20) to see where you are and where you want to be on the maturity scale.
+Ultimately, the goal of MLOps is to close the gap between development and production and deliver value to customers faster. To achieve this goal, we need to rethink how things are done in development and in production. To what extent data scientists specifically are expected to be involved in MLOps is an organizational choice, as the role of Data Scientist is defined differently across different organizations. We recommend you check out the [MLOps maturity model](/azure/architecture/example-scenario/mlops/mlops-maturity-model#:~:text=Maturity%20model%20%20%20%20Level%20%20,model%20performa%20...%20%201%20more%20rows%20) to see where you are and where you want to be on the maturity scale.
 
 ### How Machine Learning DevOps is different than DevOps
 
@@ -89,7 +89,7 @@ When looking to adopt MLOps for your next machine learning project, consider app
 
 1. _Test code, validate data integrity, model quality_
 
-    [Test](/azure/architecture/framework/scalability/test-checklist) your experimentation code base including correctness of data preparation functions, featurizers, checks on data integrity, and obtained model performance.
+    [Test](/azure/architecture/framework/scalability/test-checklist) your experimentation code base including correctness of data preparation functions, feature extraction functions, checks on data integrity, and obtained model performance.
 
 1. _Machine Learning Continuous Integration and Delivery_
 
@@ -102,7 +102,7 @@ When looking to adopt MLOps for your next machine learning project, consider app
 
 ## MLOps Best Practices with Azure Machine Learning
 
-Azure Machine Learning offers several asset management, orchestration, and automation services to help you manage the lifecycle of your model training and deployment workflows. This section discusses best practices and recommendations in applying MLOps across the areas of People, Process and Technology supported by Azure Machine Learning.
+Azure Machine Learning offers several asset management, orchestration, and automation services to help you manage the lifecycle of your model training and deployment workflows. This section discusses best practices and recommendations in applying MLOps across the areas of People, Process, and Technology supported by Azure Machine Learning.
 
 ### People
 
@@ -123,7 +123,7 @@ Azure Machine Learning offers several asset management, orchestration, and autom
 - Elevate [Continuous Integration](/azure/architecture/microservices/ci-cd) to Continuous Training by including model training as part of the build. For instance, initiate model training on the full dataset with each pull request.
 - Shorten time-to-feedback on the quality of machine learning pipeline by running automated build just on a sample of the data. Use [Azure ML Pipeline parameters](/azure/machine-learning/how-to-use-pipeline-parameter) to parameterize input [Datasets](/azure/machine-learning/how-to-train-with-datasets).
 - Use [Continuous Deployment for Machine Learning models](/azure/machine-learning/how-to-deploy-continuously-deploy) to automate the deployment and testing of real time scoring services across your Azure environments (dev, test, prod).
-- In some regulated industries, model validation steps may be required before a machine learning model can be used in a production environment. By automating validation steps (to an extent) one might be able to accelerate time to delivery. When manual review or validation steps are still the bottleneck, consider whether it is possible to certify the automated model validation pipeline. Use resource Tags in Azure Machine Learning to indicate asset compliance, candidates for review, or as triggers for deployment.
+- In some regulated industries, model validation steps may be required before a machine learning model can be used in a production environment. By automating validation steps (to an extent) one might be able to accelerate time to delivery. When manual review or validation steps are still the bottleneck, consider whether it is possible to certify the automated model validation pipeline. Use resource tags in Azure Machine Learning to indicate asset compliance, candidates for review, or as triggers for deployment.
 - Do not retrain in production and directly replace the production model without any integration testing. Even though model performance and functional requirements are good, amongst other potential issues, a model might have grown in footprint breaking the serving environment.
 - When production data access is only available in production, use [Azure RBAC](/azure/role-based-access-control/resource-provider-operations#microsoftmachinelearningservices) and [custom roles](/azure/machine-learning/how-to-assign-roles) to give a select number of ML practitioners the read access they require, for example for data exploration. Alternatively, make a data copy available in the non-production environments.
 - Agree on naming conventions and tags for Azure Machine Learning [Experiments](/python/api/azureml-core/azureml.core.experiment.experiment) to differentiate retraining baseline machine learning pipelines from experimental work.
@@ -141,7 +141,7 @@ Azure Machine Learning offers several asset management, orchestration, and autom
 
 ## MLOps at organizational scale: AI Factories
 
-A data science team may decide that they can manage a handful of machine learning use cases internally. Adopting MLOps helps set up project teams for better quality, reliability, and maintainability of solutions through balanced teams, supporting process and technology automation. This allows the team to scale and focus on the development of new use cases.
+A data science team may decide that they can manage a handful of machine learning use cases internally. Adopting MLOps helps set up project teams for better quality, reliability, and maintainability of solutions through balanced teams, supporting process, and technology automation. This allows the team to scale and focus on the development of new use cases.
 
 As the number of use cases grows in an organization, the management burden of supporting these use cases grows linearly or even more. The challenge becomes how to leverage organizational scale to accelerate time-to-market, quicker assess use case feasibility, enable repeatability, and best utilize the available resources and skillsets across the full range of projects.
 
