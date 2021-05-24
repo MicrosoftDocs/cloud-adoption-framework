@@ -1604,7 +1604,6 @@ items:
         href: secure/risk-insights.md
       - name: Security integration
         href: secure/security-integration.md
-
       - name: Business resilience
         href: secure/business-resilience.md
       - name: Access control
@@ -1629,9 +1628,9 @@ items:
       - name: Windows Virtual Desktop
         href: scenarios/wvd/eslz-security-governance-and-compliance.md
       - name: Managing secrets
-        href: secure/best-practices/managing-secrets.md
+        href: secure/best-practices/manage-secrets.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
       - name: Network security
-        href: /security/compass/network-security-containment?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /security/compass/network-security-containment
       - name: Toolchain
         href: secure/best-practices/toolchain.md
 
