@@ -1,6 +1,6 @@
 ---
-title: Enterprise-scale security, governance, and compliance for Windows Virtual Desktop infrastructure
-description: Learn key design considerations and recommendations for security, governance, and compliance in an enterprise-scale Windows Virtual Desktop infrastructure.
+title: Enterprise-scale security governance and compliance for Windows Virtual Desktop infrastructure
+description: Learn key design considerations and recommendations for security governance and compliance in an enterprise-scale Windows Virtual Desktop infrastructure.
 author: AdamWhitlatch
 ms.author: dawhitla
 ms.date: 05/18/2021
@@ -9,9 +9,9 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Security, governance, and compliance for Windows Virtual Desktop enterprise-scale scenario
+# Security governance and compliance for Windows Virtual Desktop enterprise-scale scenario
 
-This article covers key design considerations and recommendations for security, governance, and compliance in a [Cloud Adoption Framework enterprise-scale landing zone architecture](/azure/cloud-adoption-framework/ready/enterprise-scale/architecture) for [Windows Virtual Desktop](/azure/virtual-desktop/overview).
+This article covers key design considerations and recommendations for security governance and compliance in a [Cloud Adoption Framework enterprise-scale landing zone architecture](/azure/cloud-adoption-framework/ready/enterprise-scale/architecture) for [Windows Virtual Desktop](/azure/virtual-desktop/overview).
 
  As with any IT service, it's important to build the environment to scale, secure it, and be able to operate your environment simply and efficiently. While the Windows Virtual Desktop service does most of the front-end work, you still need to have the right control mechanisms to keep your systems and data safe. You also need processes to continually review those controls, report changes and, if necessary, remediate. At the end of this article, you'll understand the critical design areas for security, governance, and compliance, and you'll have clear guidance on Microsoft recommendations in each area.
 
