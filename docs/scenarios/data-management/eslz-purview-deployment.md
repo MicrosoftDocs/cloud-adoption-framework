@@ -1,0 +1,246 @@
+---
+title: Enterprise Scale Analytics and AI Azure Purview Deployment
+description: Enterprise Scale Analytics and AI Azure Purview Deployment Overview
+author: zeinam
+ms.author: zeinam # Microsoft employees only
+ms.date: 05/21/2021
+ms.topic: conceptual
+ms.service: cloud-adoption-framework
+ms.subservice: ready
+---
+
+# Azure Purview Deployment Best Practices
+
+[Azure Purview](https://azure.microsoft.com/services/purview) is a unified data governance service that helps organizations to manage and govern data across on-premises, multi-cloud, and software-as-a-service (SaaS). Azure Purview creates a holistic, up-to-date map of data landscape with automated data discovery, sensitive data classification, and end-to-end data lineage. Azure Purview empowers data consumers to find valuable, trustworthy data.
+
+For data governance, inside your Data Landing Zones, Azure Purview provides the following capabilities along with other features:
+
+- [Data Catalog](eslz-data-management-landing-zone.md/#data-catalog)
+- [Data Discovery](eslz-data-management-landing-zone.md/#data-discovery)
+- [Data Classification and labeling](eslz-data-management-landing-zone.md/#data-classification)
+- [Data Lineage](eslz-data-management-landing-zone.md/#data-lineage)
+
+This section aims to explain prescribed configurations which are specific to the Enterprise Scale Analytic and AI solution pattern and discusses a collection of Azure best practices to enhance your Data Governance using Azure Purview. It is a compliment to the official [Azure Purview Documentation](https://docs.microsoft.com/azure/purview/).
+
+## Overview
+
+One Azure Purview account is deployed inside _Data Management Landing Zones_ which serves as a centralized Data Catalog and Data Governance solution.
+From Data Management Landing Zone, the Data Catalog (Azure Purview) will be able to communicate with each Data Landing Zone via private network connectivity using VNet Peering across Data Management and Data Landing Zones and Self-Hosted Integration Runtimes.
+Discovery of datasets in on-premises stores and other public clouds is achieved by additional deployments of Self-Hosted Integration Runtimes.
+
+![Azure Purview Overview](./images/purview-overview.png)
+
+## Azure Purview Account Setup
+
+The first step is the deployment of an Azure Purview Account. During the deployment of [Data Management Landing Zone](./eslz-data-management-landing-zone.md), a single Azure Purview Account is automatically deployed inside the data Management subscription. The aim is to centralize the entire data map into a single Azure Purview account across all data landing zones, therefore, it is recommended to consider a shared single Azure Purview account inside Data Management subscription per environment type.
+
+In addition to Azure Purview Account, a managed Resource Group is also deployed. A managed Storage Account and a managed EventHub Namespace resources are deployed inside this Resource Group and used to ingest the metadata as a result of scans. Since these resources are consumed by Azure Purview catalog, they must not be removed, therefore, an Azure RBAC _deny assignment_ is automatically added for _all principals_ at the resource group level at the time of deployment.
+
+ > [!IMPORTANT]
+Prior to deployment of Data Management Landing Zone, review the following requirements inside your Azure subscription which is aimed to serve as Data Management Landing Zone subscription:
+>
+> - If you have an existing Azure Policy Assignment which is preventing administrators or applications from creating Azure Storage Accounts, EventHub Namespace, Azure Purview Accounts, Azure Private DNS Zones or Private Endpoints, you need to apply [Azure Policy exemptions](https://docs.microsoft.com/azure/governance/policy/concepts/exemption-structure), so the required resources can be deployed in the Data Management Landing Zone along with Azure Purview deployment.
+>
+> - Make sure the following Azure Resource Providers are registered in Data Management subscription:
+>   - Microsoft.EventHub
+>   - Microsoft.Purview
+>   - Microsoft.Storage
+>
+> For more information, see [Azure Purview Prerequisites](https://docs.microsoft.com/en-us/azure/purview/manage-credentials#create-azure-key-vaults-connections-in-your-azure-purview-account).
+
+## Azure Purview Networking and Name Resolution
+
+The Azure Purview account is deployed inside hub VNet within Data Management Landing Zone.
+
+### Azure Purview Private Endpoint Deployment
+
+The Enterprise Scale Analytics and AI deployment uses Private Endpoint to enable secure access to the catalog over a Private Link. The private endpoint uses IP addresses from the VNet address space for your Azure Purview account. Network traffic between the clients on the VNet and the Purview account traverses over the VNet and a private link on the Microsoft backbone network, eliminating exposure from the public internet. To enable network isolation for end-to-end scan scenarios, additional Private Endpoint are deployed so for data sources in both Azure and on-premises sources can be connected through Private Link.
+To scan data sources you need to use a Self-hosted integration Run Time which must be deployed inside the private network, either in Data Management or Data Landing Zones.
+
+![Azure Purview Networking](./images/purview-private-endpoint2.png)
+
+For more information related to Enterprise Scale Analytics and AI networking and name resolution, see [Enterprise Scale Analytics and AI Networking](./eslz-network-topology-and-connectivity.md).
+
+#### Private Endpoint for Account and Portal
+
+Azure Purview is being deployed with two Private Endpoints:
+
+- **Account** Private Endpoint is used for securing APIs and it is required as a prerequisites for **portal** Private Endpoint.
+- **Portal** Private Endpoint is aimed to provide private connectivity to Azure Purview Studio.
+
+To manage data estate using Azure Purview and connect to Azure Purview Studio, you need to use a private connectivity, because public access is restricted Azure Purview Account that is deployed inside Data Management Landing Zone to provide additional security.
+
+### Access to Azure Purview Studio
+
+To maintain the use of Azure Purview portal through private connectivity, it is recommended to keep the **Public network access** as **Deny**, therefore, to connect to Azure Purview Studio, a jump machine that is deployed inside your network is needed.For this purpose, you can either deploy a VM inside Landing Zones or connect using a machine from hybrid network. A jump box is a hardened remote access server, commonly using Microsoft's Remote Desktop Services or Secure Shell (SSH) software. Jump boxes act as a stepping point for administrators accessing critical systems with all administrative actions performed from the dedicated host.
+
+Use any of the following options to manage your data using Azure Purview through Azure Purview Studio:
+
+- **Option 1**: Use a jump machine which is connected to CorpNet. To use this connectivity model, you must have connectivity between VNet where Azure Purview Portal Private Endpoint is created which your corporate network. 
+  
+  Review Cloud Adoption Framework Networking for more information [Network topology and connectivity](../ready/enterprise-scale/network-topology-and-connectivity.md).
+
+- **Option 2**: If hybrid connectivity is not available in your organization, [deploy a Virtual Machine](https://docs.microsoft.com/azure/virtual-machines/windows/quick-create-portal) inside Azure Data Management Landing Zone and [deploy an Azure Bastion](https://docs.microsoft.com/azure/bastion/quickstart-host-portal) to connect to Azure Purview using a secure connection.
+
+The Azure Bastion service is a fully platform-managed PaaS service that you provision inside your virtual network that lets you connect to a virtual machine using your browser and the Azure portal instead of Public IP address. Azure Bastion offer a limited attack surface to attackers. While they are exposed to the public internet, customers (and attackers) have no access to underlying operating systems providing the services and they are typically maintained and monitored consistently via automated mechanisms at the cloud provider. This smaller attack surface limits the available options to attackers vs. classic on-premises applications and appliances that must be configured, patched, and monitored by IT personnel who are often overwhelmed by conflicting priorities and more security tasks than they have time to complete.
+Azure Bastion effectively provides a flexible solution that can be used by IT Operations personnel and workload administrators outside of IT to manage resources hosted in Azure without requiring a full VPN connection to the environment.
+
+#### Private Endpoint for ingestion
+
+Azure Purview can scan data sources in Azure or on-premises environment using Private Endpoint or Public Endpoint. As part of a Data Landing Zone deployment, the network of a Data Landing Zone is automatically peered with the Data Management Landing Zone VNet and Connectivity subscription VNet, therefore data sources inside Landing zones can be scanned using private connectivity.
+
+It is recommended to enable Private Endpoint for additional [data sources inside your landing zones](https://docs.microsoft.com/azure/purview/catalog-private-link) and scan data sources using private connectivity.
+
+To read more about Azure Private Link, see [Azure Private Link](https://docs.microsoft.com/azure/private-link/).
+
+### Name Resolution
+
+DNS resolution for private endpoints should be handled through central Azure Private DNS zones. The following Private DNS Zones are deployed automatically, part of Azure Purview deployment in Data Management Landing Zone:
+
+- privatelink.purview.azure.com
+- privatelink.blob.core.windows.net
+- privatelink.queue.core.windows.net
+- privatelink.servicebus.windows.net
+
+![High Level Name Resolution Architecture](./images/purview-name-resolution.png)
+
+If you have a hybrid cloud and cross-premises name resolution is required, it is important that on-premises DNS Servers are configured correctly to forward the appropriate requests to the Custom DNS server in Azure. There are multiple ways to do this:
+
+- If you have Custom DNS already in Azure, you just need to setup conditional forwarders on your on-premises DNS server pointing to it.
+
+- If you do not have a Custom DNS VM in Azure, you can deploy the Azure Virtual Machine Scale Set that includes Nginx already configured to forward DNS requests to Azure-provided DNS IP **168.63.129.16**. Refer to [Deploy VMSS of a NGINX DNS Proxy into an existing Virtual Network](https://github.com/Microsoft/PL-DNS-Proxy).
+
+>[!TIP]
+> To allow name resolution among Data Management and Data Landing Zones, use the same Private DNS Zones located inside `{prefix}-global-dns` inside the Data Management Landing Zones across Data Management and Data Landing zones to provide private DNS Name Resolution across multiple landing zones.
+
+For more information related to Enterprise Scale Analytics and AI networking and name resolution, see [Enterprise Scale Analytics and AI Networking](./eslz-network-topology-and-connectivity.md)
+
+## Manage authentication for data sources in Azure Purview
+
+Azure Purview requires access to _control plane_ and _data plane_ to register and scan data sources.
+
+### Register Data Sources
+
+#### Assign Azure RBAC _Reader_ role to Azure Purview Managed Identity to register data sources
+
+When Azure Purview Account is deployed, a System Managed Identity is automatically created in your Azure Active Directory tenant and assigned to this resource. 
+
+To read and enumerate Azure resources under a subscription or resource group when registering data sources in Azure Purview, the Azure Purview Managed Identity requires Azure RBAC _Reader_ role on the scope.
+
+> [!IMPORTANT]
+> Consider assigning _Reader_ role to Azure Purview Managed Identity in each Data Landing Zones subscriptions, before registering any of the following data sources into Azure Purview:
+
+- Azure Blob Storage
+- Azure Data Lake Storage Gen1
+- Azure Data Lake Storage Gen2
+- Azure SQL Database
+- Azure SQL Managed Instance
+- Azure Synapse Analytics
+
+### Scan Data Sources
+
+#### Deploy and register self-hosted integration runtime
+
+Deploy and register [Self-hosted Integration Runtime](https://docs.microsoft.com/azure/purview/manage-integration-runtimes) VMs for each data landing zone. The Self-hosted IRs are required to scan data sources such as Azure SQL DB or any VM-based data sources in the on-premises or in each data landing zones.
+A self-hosted integration runtime can run copy activities between a cloud data store and a data store in a private network. It also can dispatch transform activities against compute resources in an on-premises network or an Azure virtual network. The installation of a self-hosted integration runtime needs an on-premises machine or a virtual machine inside a private network.
+
+We recommend that you use a dedicated machine to host IR. The machine should be separate from the server hosting the data store.
+
+Also, it is highly recommended to plan for at least 2 self-hosted integration runtime VMs in each data landing zone or on-premises environment.
+
+You might want to host an increasing concurrent workload. Or you might want to achieve higher performance in your present workload level. You can enhance the scale of processing by the following approaches:
+
+- Scale up works when the processor and memory of the node are being less than fully utilized.
+- You can scale out the self-hosted IR, by adding more nodes (machines).
+
+#### Assign access to data plane to scan data sources
+
+In order to provide access to Azure Purview at data plane, there are multiple options to setup the authentication for Azure Purview to access data sources:
+
+- Option 1: Managed Identity
+- Option 2: Account Key or Passwords stored in Azure Key Vault as a secret
+- Option 3: Service Principal stored in Azure Key Vault as a secret
+
+> [!IMPORTANT]
+> Currently, in order to scan data sources through Private Link in Azure Purview, you need to deploy a Self-Hosted Integration Runtime and use either **key Vault** or **Service Principal** from the options above, as for authentication to data sources.
+
+>[!TIP]
+> It is recommended to use Azure Purview Managed Identity as your preferred option to scan data sources if data sources cannot be connected to private endpoint.
+
+### Store Secrets inside Azure Key Vault
+
+Multiple Azure Key Vault resources are deployed inside Data Management and Data Landing Zones. Use the following Key Vault resources in each Data Landing Zones to store data sources secrets:
+
+|Subscription  |Key Vault resource  |Purpose  |
+|---------|---------|---------|
+|Data Management        | `{prefix}-`keyvault001        |keys and database authentication secrets related to Metadata data sources in the Data Management Landing Zone         |
+|Data Landing Zone 1    |`{prefix}-`keyvault001         |keys and database authentication secrets related to Azure SQL secrets, consumed by ADF in the Data Landing Zone        |
+|Data Landing Zone 1    |`{prefix}-`keyvault002         |keys and database authentication secrets related to MySQL, used by the Databricks workspaces in the Data Landing Zone        |
+|Data Landing Zone 1    |`{prefix}-`keyvault003         |N/A for Purview         |
+|Data Landing Zone 2    |`{prefix}-`keyvault001         |keys and database authentication secrets related to Azure SQL secrets, consumed by ADF in the Data Landing Zone        |
+|Data Landing Zone 2    |`{prefix}-`keyvault002         |keys and database authentication secrets related to MySQL, used by the Databricks workspaces in the Data Landing Zone        |
+|Data Landing Zone 2    |`{prefix}-`keyvault003         | N/A for Purview        |
+
+### Connect Data Landing Zones Azure Key Vaults to your Azure Purview Account
+
+Azure Purview can use the secrets and credentials stored in Azure Key Vaults only if the Azure key Vault connection is created inside Azure Purview Account and The secret is registered.
+
+After adding a new Data Landing Zone, it is necessary to create new Azure Key Vault connections inside Azure Purview Account. The connection is a one to one association of Azure Key Vault resource with the Azure Purview account and will allow create credentials inside the Azure Purview account out of the secrets stored in the Key Vault.
+
+For more information, see [Create Azure Key Vaults connections in your Azure Purview account](https://docs.microsoft.com/en-us/azure/purview/manage-credentials#create-azure-key-vaults-connections-in-your-azure-purview-account).
+
+>[!TIP]
+> Keep the Key Vault connections list minimum by removing any unused Azure Key vaults.  
+>
+### Create Credentials inside Azure Purview
+
+You may require to setup a _Credential_ using a Key Vault _Secret_ for scenarios such as the following:
+
+- To scan any data sources where Azure Purview Managed Identity cannot be used as the authentication method.
+- To scan any data sources using Self-hosted integration runtime, the supported authentication types such as Account Keys, SQL Authentication or Service Principal must be stored in a Credential.
+- To scan data sources using Private Endpoint for Data Ingestion.
+- To scan data sources that are inside a Virtual Machine or inside on-premises environment.
+
+Before creating any Credentials in Azure Purview, your Azure Purview Account must have access to Key Vault Secrets. Use Azure Key Vault Access Policy or Role-based Access Control to grant Azure Purview MSI the required access.
+
+For more information about how to grant Azure Purview MSI access to Azure Key Vault and create Credentials inside Azure Purview, see [Credentials for source authentication in Azure Purview](https://docs.microsoft.com/en-us/azure/purview/manage-credentials).
+
+<br>
+
+## Azure Purview Roles and Access Control
+
+Azure Purview has several Azure built-in RBAC roles to manage Azure purview at data plane.
+
+- Purview Data Reader
+- Purview Data Curator
+- Purview Data Source Administrator + Data Reader
+- Purview Data Source Administrator + Data Curator
+
+![Azure Purview Roles](./images/purview-roles1.png)
+
+<br>
+
+For more information about Azure Purview catalog Role, see [Role-based access control in Azure Purview's Data Plane](https://docs.microsoft.com/azure/purview/catalog-permissions)
+
+Once Data Management Landing Zone deployment completed, use least privilege model to provide access to view and manage data in Azure Purview.
+
+Assign roles to Azure Purview resource using [Azure Role-based Access control](https://docs.microsoft.com/en-us/azure/role-based-access-control).
+
+Review the following list of personas involved in an Enterprise Scale Analytics and AI deployment and assign them the relevant Azure Purview roles so they can contribute in the success of the program:
+
+| Persona | Role |Recommended Azure Purview Role  |
+|-|-|-|
+|Product Owners| Product Owners leverage Azure to transform your solutions and bring agility to the business and optimize business processes.|Purview Data Reader |
+| Solution Architects | Define solutions to drive across the boundaries of the enterprise business network. Learn how to deal with diagnosis, analysis, design, deployment, and integration of Azure services. |Purview Data Source Administrator + Data Curator    |
+|Developer/DevOps Engineers|Design, build, deploy, test, and maintain continuous integration and delivery process with Azure DevOps or GitHub.|N/A  |
+| Security Engineers <sup>1</sup> | Enable your teams to design and implement a secure infrastructure on Azure leveraging best practices. |Purview Data Reader  |
+| Technical/Business Managers <sup>1</sup>|Build an overall understanding of Azure services. Control your cloud costs and optimize your operations and the agility of your team.|N/A |
+|Decision Makers / Business Users|Leverage Azure to access actionable insight, expecting it to be delivered in most relevant form. Leverage AI embedded in existing solutions to optimize business processes.|Purview Data Reader   |
+| Data Managers | Responsible for provisioning and managing access to data assets. |Purview Data Reader or Purview Data Curator |
+|Data Analysts / Performance Analysts |Leverage Azure to discover and share new insights from existing data assets or *ad hoc* data. Create one-click AI transformations, consume pre-built models, and generate ML models in clicks.|Purview Data Source Administrator + Data Reader   |
+|Data Engineers | Leverage Azure to build, integrate, and manage data and analytics products. Create AI enabled applications / solutions when applicable.|Purview Data Source Administrator + Data Curator|
+|Citizen Data Scientists |Create ML models via powerful visual, drag-and-drop, no-code tools where no coding is necessary |Purview Data Source Administrator + Data Curator |
+| Data Scientists | Use your preferred tools and machine learning frameworks to build scalable data science solutions. Accelerate end-to-end ML lifecycle.|Purview Data Source Administrator + Data Curator |
+| ML Engineers | Enable right processes and infrastructure for easy model deployment and model management. |Purview Data Source Administrator + Data Curator    |
+
+For more information about Data Personas, see [Personas and Teams](eslz-persona-and-teams.md/#personas)
