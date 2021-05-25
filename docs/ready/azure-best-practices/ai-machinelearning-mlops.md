@@ -160,7 +160,7 @@ The architectural patterns can include but are not limited to the following topi
 - Preferred services for each stage of the project
 - Data connectivity and governance
 - An MLOps strategy tailored to the requirements of the industry, business, or data classification
-- Experiment management process champion / Challenger models
+- Experiment management process "Champion" / "Challenger" models
 
 ### Facilitate cross-team collaboration and sharing
 
