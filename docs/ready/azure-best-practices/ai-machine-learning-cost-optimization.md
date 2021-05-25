@@ -79,7 +79,7 @@ For real-time inference scenarios consider following the below suggestions:
 
 For batch inference scenarios consider following the below suggestions:
 
-- When using Azure Machine Learning pipelines for batch inferencing, follow the guidance under ['Determining the compute size for training'](#_Determining_the_compute_size_for_ inference) to choose your initial VM size.
+- When using Azure Machine Learning pipelines for batch inferencing, follow the guidance under [Determining the compute size for training](#determining-the-compute-size-for-training) to choose your initial VM size.
 - Optimize cost and performance by scaling horizontally. One of the key methods of optimizing cost and performance is by parallelizing the workload with the help of [Parallel Run Step](/python/api/azureml-pipeline-steps/azureml.pipeline.steps.parallelrunstep) in Azure Machine Learning. This pipeline step allows you to use many smaller nodes to execute the task in parallel, hence allowing you to scale horizontally. There is an overhead for parallelization though, so depending on the workload and the degree of parallelism that can be achieved, parallel run step may or may not be an option.
 
 ### Determine the size for compute instance compute
