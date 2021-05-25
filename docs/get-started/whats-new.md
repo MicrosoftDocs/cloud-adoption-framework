@@ -40,6 +40,10 @@ We've added new content that includes the financial and technical considerations
 - [Create a business case](../strategy/cloud-migration-business-case.md)
 - [Share your strategy](../strategy/share-your-strategy.md)
 
+### Modern application platform
+
+We expanded and revised the the Modern application platform content in this release. Commonly, customers use orchestrated containers to manage pools of workloads in one or more centralized clusters. The articles in this series for [Modern application platform](../scenarios/aks/index.md) combine technical and non-technical considerations required to prepare for Kubernetes and container integration into centralized operations and your broader cloud strategy.
+
 ## April 2021
 
 ### Cloud service controls
