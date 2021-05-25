@@ -10,6 +10,8 @@ ms.subservice: ready
 ms.custom: e2e-hybrid
 ---
 
+<!-- docutune:casing "Harry's Harvesters" "Angie's Applications" "Mary's Markets" -->
+
 # Ready: Prepare your environment for a hybrid and multicloud scenario
 
 The [Ready methodology](../../ready/index.md) of the Cloud Adoption Framework for Azure guides customers through environment readiness to prepare for cloud adoption. The readiness section includes technical accelerators (Azure landing zones), which are the basic building block in any cloud adoption environment. Review your choice of what landing zone to deploy. If you need help choosing the right one to deploy, this guide can help you get started. If you are considering what landing zone would best fit your organization's operating model, [this article](../../ready/landing-zone/choose-landing-zone-option.md) can help you get started with this alignment.
@@ -18,8 +20,7 @@ The [Ready methodology](../../ready/index.md) of the Cloud Adoption Framework fo
 
 Landing zones automate the configuration of your Azure environment, and align with best practices guidance in the Cloud Adoption Framework. When you prepare for a hybrid and multicloud deployment, environment configurations might be slightly different.
 
-These are the key changes necessary to prepare a consistent environment for any hybrid and multicloud deployment
-(hybrid and multicloud landing zone):
+These are the key changes necessary to prepare a consistent environment for any hybrid and multicloud deployment (hybrid and multicloud landing zone):
 
 - Hybrid and multicloud network connectivity
 - Common identity management
@@ -39,27 +40,27 @@ For each cloud mix above, you'll need an Azure environment to support, govern, a
 
 ## Evaluate your cloud mix
 
-Choosing a hybrid and multicloud environment isn't a binary decision. It's closer to a range of decisions, as seen in the chart below. Confirm what Azure landing zone option you have chosen.
+Choosing a hybrid and multicloud environment isn't a binary decision. It's closer to a range of decisions, as seen in the following chart. Confirm what Azure landing zone option you have chosen.
 
 Before you configure your Azure environment or any other cloud environment, it's important to identify how your cloud environment will support your specific mix of cloud hosting decisions. Here are some examples of common cloud mixes.
 
 ![Three illustrations showing how different customers distribute workloads across cloud providers.](../../_images/hybrid/cloud-mix.png)
 
-Each dark blue dot represents a workload—and each light blue circle a business process, supported by a distinct environment. Each cloud mix requires a different Azure environment configuration, as seen with our three reference customers:
+Each dark blue dot represents a workload, and each light blue circle a business process, supported by a distinct environment. Each cloud mix requires a different Azure environment configuration, as seen with our three reference customers:
 
-- **Hybrid-first** customer: Most workloads stay on-premises, often in a mixture of traditional, hybrid, and portable asset-hosting models. A few specific workloads are deployed to the edge, Azure, or to other cloud providers.  
+- **Hybrid-first customer:** Most workloads stay on-premises, often in a mixture of traditional, hybrid, and portable asset-hosting models. A few specific workloads are deployed to the edge, Azure, or to other cloud providers.
 
-**Harry’s Harvesters** is a _Hybrid first_ customer, with a heavy investment in aging datacenters. Cost and governance are his high priorities. Legacy IT priorities and aging technology infrastructure hindered innovation, which drove some early cloud adoption.
+  **Harry's Harvesters** is a *hybrid-first* customer, with a heavy investment in aging datacenters. Cost and governance are its highest priorities. Legacy IT priorities and aging technology infrastructure hindered innovation, which drove some early cloud adoption.
 
-- **Azure-first** customer: Most workloads have been moved to Azure. A few workloads stay on-premises. Strategic decisions have led to a few workloads living on the edge or in multicloud environments.
+- **Azure-first customer:** Most workloads have been moved to Azure. A few workloads stay on-premises. Strategic decisions have led to a few workloads living on the edge or in multicloud environments.
 
-**Angie’s Applications** is "Azure first". Like Harry's, Angie’s Apps completed their first wave of digital transformation, acquired a few companies, and added customers in regulated industries. Innovation is still their priority. But with their multicloud environment, they're focused on operations management, and efficient, scalable operations required to continue their acquisition strategy.
+  **Angie's Applications** is an *Azure-first* customer. Like Harry's Harvesters, it completed its first wave of digital transformation, acquired a few companies, and added customers in regulated industries. Innovation is still its priority. But with its multicloud environment, it's focused on operations management, and efficient, scalable operations required to continue its acquisition strategy.
 
-- **Multicloud-first** customer: Most workloads are currently hosted on a different public cloud, like GCP or AWS. Strategic decisions have led to a few workloads living in Azure or on the edge. Each month, we see a steady flow of customers moving from a _hybrid first_ mix to an _Azure first_ mix as their cloud strategy matures. But, we also support customers who have made strategic decisions to prioritize hybrid or multicloud mixes. Azure plays a role in each mix.
+- **Multicloud-first customer:** Most workloads are currently hosted on a different public cloud, like GCP or AWS. Strategic decisions have led to a few workloads living in Azure or on the edge. Each month, we see a steady flow of customers moving from a hybrid-first mix to an Azure-first mix as their cloud strategy matures. But, we also support customers who have made strategic decisions to prioritize hybrid or multicloud mixes. Azure plays a role in each mix.
 
-**Mary’s Markets** is a "Multicloud first" customer. Like Angie’s Apps, they moved to the cloud, but didn’t choose Azure. They also have some local datacenter assets and edge devices. Mary's is an early adopter of other clouds in early startup phase, and growth is her big priority. Driving her growth in hybrid and multicloud are the retail requirements of her customers, and the need to improve operations in order to scale efficiently.
+  **Mary's Markets** is a *multicloud-first* customer. Like Angie's Applications, it moved to the cloud, but didn't choose Azure. It also has some local datacenter assets and edge devices. Mary's Markets is an early adopter of other clouds in an early startup phase, and growth is its big priority. Driving growth in hybrid and multicloud are the retail requirements of its customers, and the need to improve operations in order to scale efficiently.
 
-Here are the most important items to consider when you prepare any of your cloud environments for hybrid and multicloud. Your hybrid and multicloud strategy for applications and data will drive the answers to the questions below. Clearly identify what intended cloud mix is required, then consider the best configuration for your environment(s):
+The following considerations are most important when preparing any of your cloud environments for hybrid and multicloud. Your hybrid and multicloud strategy for applications and data will drive the answers to the following questions. Clearly identify what intended cloud mix is required, then consider the best configuration for your environments:
 
 - What mixture of hybrid, edge, and multicloud environments do you support today?
 - What mixture best aligns with your strategy for the future?
@@ -67,38 +68,38 @@ Here are the most important items to consider when you prepare any of your cloud
 
 ## Modify your environment to reflect your cloud mix
 
-All three customers will have to deliver on slightly different _strategic_ requirements to succeed in their digital transformation.
+All three customers will have to deliver on slightly different *strategic* requirements to succeed in their digital transformation.
 
-- **Harry’s Harvesters** will need to focus on a **migration and governance** strategy to achieve cost controls, while ensure continued compliance.
-- **Angie’s applications** will continue to invest in **innovation** but also needs to focus on a strategy to **optimize operations**, as they innovate.
-- **Mary’s Markets** will need to focus on **migration** and **scaling operations** to continue to grow their market share.
+- **Harry's Harvesters** will need to focus on a **migration and governance** strategy to achieve cost controls, while ensure continued compliance.
+- **Angie's Applications** will continue to invest in **innovation** but also needs to focus on a strategy to **optimize operations**, as they innovate.
+- **Mary's Markets** will need to focus on **migration** and **scaling operations** to continue to grow their market share.
 
-These customer all have different strategic, operational, governance, and environmental requirements. There is no one-size-fits-all solution to prepare them for their unique journeys to hybrid and multicloud. But they do all have one common need before they make impactful decisions—visibility.
+These customer all have different strategic, operational, governance, and environmental requirements. There is no one-size-fits-all solution to prepare them for their unique journeys to hybrid and multicloud. But they do all have one common need before they make impactful decisions: visibility.
 
-Starting on different paths, these customers' first step in their cloud journey is the same—to onboard hybrid and multicloud assets into Azure Arc at no costs—and **gain visibility across workloads and cloud providers**. While their strategic focus will differ, _the starting point remains the Cloud Adoption Framework_, accomplishing their strategic objective by following guidance in different methodologies.
+Starting on different paths, each customer's first step in its cloud journey is the same: to onboard hybrid and multicloud assets into Azure Arc at no costs, and **gain visibility across workloads and cloud providers**. While their strategic focus will differ, **the starting point remains the Cloud Adoption Framework**, each accomplishing its strategic objective by following guidance in different methodologies.
 
 ![Illustration showing three customer stories and their intended cloud mix during their hybrid and multicloud journey.](../../_images/hybrid/customer-stories-hybrid-multicloud.png)
 
-- **Harry's Harvesters** will require visibility into inventory and costs. Following guidance in the Strategy and Govern methodologies, he'll focus on governance and cloud migration, to reduce cost and shift to OpEx cost models.
-- **Angie's Applications** will need connectivity between clouds and new operational innovations. She'll follow guidance in the Innovate and Manage methodologies, with a focus on cloud-native innovation and Azure landing zones for cross-cloud connectivity.
-- **Mary's Markets** will need to scale workloads, and support demands form retail customers. She'll follow guidance in the Migrate and Manage methodologies, focusing first on the operations baseline to prepare for scale, then a limited migration to Azure.
+- **Harry's Harvesters** needs visibility into inventory and costs. Following guidance in the Strategy and Govern methodologies, it will focus on governance and cloud migration to reduce cost and shift to OPEX cost models.
+- **Angie's Applications** needs connectivity between clouds and new operational innovations. It will follow guidance in the Innovate and Manage methodologies, with a focus on cloud-native innovation and Azure landing zones for cross-cloud connectivity.
+- **Mary's Markets** needs to scale workloads, and support demand from retail customers. It will follow guidance in the Migrate and Manage methodologies, focusing first on the operations baseline to prepare for scale, then a limited migration to Azure.
 
-![Illustration showing three customer stories and their intended cloud mix during their hybrid and multicloud journey.](../../_images/hybrid/customer-stories-hybrid-multicloud-2.png)
+![Illustration showing three customer stories and each customer's intended cloud mix during their hybrid and multicloud journey.](../../_images/hybrid/customer-stories-hybrid-multicloud-2.png)
 
-Each customer now needs to address network, identity, governance, and operations management to ensure proper environmental configuration. With their slightly different requirements for operations and environmental configuration, they'll use different implementation options with Azure Landing Zones:
+Each customer now needs to address network, identity, governance, and operations management to ensure proper environmental configuration. With their slightly different requirements for operations and environmental configuration, they'll use different implementation options with Azure landing zones:
 
-- **Harry's Harvesters**' operational requirement is to modernize existing operations into new environments, and quickly build a compliant environment for his full datacenter in Azure. His ambitious plan is to migrate out of his organization's local datacenters, requiring compliance from day 1. The fastest path to his objectives is Enterprise-scale landing zones.
-- **Angie's Applications**' operational requirement is to ensure consistent environmental configuration and control, adding hybrid and multicloud configuration to existing environments. She started with a smaller landing zone footprint and grew over time—and are at the _Expand_ phase of the _Start Small and Expand_ approach to Azure Landing Zones. She'll use the Operations Baseline in the Manage methodology, and the decisions trees in the Ready methodology to move forward.
-- **Mary's Markets**' operational goal is to configure Azure and a hybrid environment to work with existing cloud configurations, using third-party options to extend her multicloud expertise to Azure and a hybrid environment configuration. Her organization has invested heavily in Terraform to build their multicloud environments. She'll start with the Cloud Adoption Framework Terraform modules to Start Small & Expand into the hybrid environment to integrate with their existing cloud solutions.
+- **Harry's Harvesters**' operational requirement is to modernize existing operations into new environments, and quickly build a compliant environment for its entire datacenter in Azure. It's ambitious plan is to migrate out of its organization's local datacenters, requiring compliance from day 1. The fastest path to its objectives is via enterprise-scale landing zones.
+- **Angie's Applications**' operational requirement is to ensure consistent environmental configuration and control, adding hybrid and multicloud configuration to existing environments. It started with a smaller landing zone footprint and grew over time, and it's now in the *expand* phase of the *start small and expand* approach to Azure landing zones. The company will use the operations baseline in the Manage methodology and the decision trees in the Ready methodology to move forward.
+- **Mary's Markets** has an operational goal to configure Azure and a hybrid environment to work with existing cloud configurations, using third-party options to extend its multicloud expertise to Azure and a hybrid environment configuration. The organization has invested heavily in Terraform to build their multicloud environments. It will start with the CAF Terraform modules to start small and expand into the hybrid environment, integrating with their existing cloud solutions.
 
 ## Support the most appropriate cloud mix
 
 After establishing your Azure environment, consider modifications to:
 
-- **Identity**: Which cloud will host your primary identity provider? If that provider is outside of Azure, you might need to integrate your identity provider with Azure Active Directory. For more information on identity providers, see [this article](/azure/active-directory/external-identities/identity-providers).
-- **Public network connectivity**: Best practices suggest that all ingress and egress traffic should route through one cloud platform when possible. But your requirements or cloud mix might require more of a peer model. This arrangement is especially common if your cloud mix is used to satisfy redundancy and reliability requirements. How will you configure connectivity between each cloud platform and the public internet?
-- **Backup and recovery**: It's common for customers to centralize their backup and recovery strategy around the most reliable provider in their cloud mix. Often the result is that one of the cloud providers serves as a shared recovery center. Azure Backup and Azure Site Recovery can help in each case.
-- **Cloud platform connectivity**: If your cloud platforms will share common recovery, operations, or governance resources, you might require connectivity between each cloud platform. How will you configure connectivity between each cloud platform?
+- **Identity:** Which cloud will host your primary identity provider? If that provider is outside of Azure, you might need to integrate your identity provider with Azure Active Directory. For more information on identity providers, see [LINKTEXT](/azure/active-directory/external-identities/identity-providers).
+- **Public network connectivity:** Best practices suggest that all ingress and egress traffic should route through one cloud platform when possible. But your requirements or cloud mix might require more of a peer model. This arrangement is especially common if your cloud mix is used to satisfy redundancy and reliability requirements. How will you configure connectivity between each cloud platform and the public internet?
+- **Backup and recovery:** It's common for customers to centralize their backup and recovery strategy around the most reliable provider in their cloud mix. Often the result is that one of the cloud providers serves as a shared recovery center. Azure Backup and Azure Site Recovery can help in each case.
+- **Cloud platform connectivity:** If your cloud platforms will share common recovery, operations, or governance resources, you might require connectivity between each cloud platform. How will you configure connectivity between each cloud platform?
 
 ### The most important consideration
 
