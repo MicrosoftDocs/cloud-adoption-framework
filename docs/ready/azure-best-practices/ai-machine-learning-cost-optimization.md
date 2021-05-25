@@ -181,7 +181,7 @@ In specific for Azure Machine Learning, we recommend setting up policies to allo
 
 Azure allows setting limits for quota allocation on a subscription and Azure Machine Learning workspace level. Restricting who can manage quota through [Azure RBAC](/azure/role-based-access-control/overview) can help ensure resource utilization and cost predictability.
 
-Availability of GPU-quota can be scarce across your subscriptions, or in some cases, at Azure Data Center level. To ensure high quota utilization across workloads, we recommend monitoring whether quota is best utilized and assigned across workloads.
+Availability of GPU-quota can be scarce across your subscriptions. To ensure high quota utilization across workloads, we recommend monitoring whether quota is best utilized and assigned across workloads.
 
 At Microsoft, it is determined periodically whether GPU quotas are best utilized and allocated across machine learning teams by evaluating capacity needs against business priority.
 
