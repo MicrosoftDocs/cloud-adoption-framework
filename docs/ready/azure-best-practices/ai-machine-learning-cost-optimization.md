@@ -203,7 +203,7 @@ Data scientist would typically not spend their time to clean up the intermediate
 
 Azure networking cost is incurred from outbound bandwidth from Azure datacenter. All inbound data to an Azure datacenter is free. The key to reduce network cost is to deploy all your resources in the same datacenter region whenever possible. If you can deploy Azure Machine Learning workspace and compute in the same region that has your data, you can enjoy lower cost and higher performance.
 
-You might want to have private connection between your on-premises network and your Azure network to have hybrid cloud environment. ExpressRoute enables you to do that but considering the high cost of ExpressRoute, it may be more cost effective to move away from a hybrid-cloud setup and move all resources to Azure cloud.
+You might want to have private connection between your on-premises network and your Azure network to have a hybrid cloud environment. ExpressRoute enables you to do that but considering the high cost of ExpressRoute, it may be more cost effective to move away from a hybrid cloud setup and move all resources to Azure cloud.
 
 #### Azure Container Registry
 
