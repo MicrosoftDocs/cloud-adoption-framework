@@ -197,7 +197,7 @@ Make use of Azure Monitor metrics for Azure Machine Learning and associated serv
 
 Many companies have implemented the role of the ML Engineer who specializes in creating and operating robust ML pipelines, drift monitoring and retraining workflows, monitoring dashboards, and drive overall responsibility for industrializing the ML solution from development to production. They work closely with data engineering, architects, and security and operations to ensure that all the necessary controls are in place.
 
-While data science requires deep domain expertise, ML engineering as a discipline is more technical focused. This makes the ML engineer more flexible to work across various projects and business departments. Large data science practices can benefit from a specialist ML Engineering team that drives repeatability and reuse of automation workflows across various use cases and business departments.
+While data science requires deep domain expertise, ML engineering as a discipline is more technical in focus. This makes the ML engineer more flexible to work across various projects and business departments. Large data science practices can benefit from a specialist ML engineering team that drives repeatability and reuse of automation workflows across various use cases and business departments.
 
 ### Enablement &amp; Documentation
 
