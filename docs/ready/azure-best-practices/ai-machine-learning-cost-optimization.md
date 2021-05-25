@@ -220,7 +220,7 @@ The Basic SKU of Azure Container Registry is not recommended for Azure ML, becau
 
 #### Consider computing type availability when choosing Azure regions
 
-When picking a region for your compute, keep computing quota availability in mind. Popular and larger regions such as East US, West US, and West Europe tend to have higher default quota values and greater availability of most CPUs and GPUs compared to some other regions with stricter capacity restrictions in place.
+When [picking a region for your compute](https://azure.microsoft.com/en-us/global-infrastructure/services/?products=virtual-machines), keep computing quota availability in mind. Popular and larger regions such as East US, West US, and West Europe tend to have higher default quota values and greater availability of most CPUs and GPUs compared to some other regions with stricter capacity restrictions in place.
 
 ## Learn more
 
