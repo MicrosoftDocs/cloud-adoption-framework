@@ -34,7 +34,7 @@ There are some differences between Azure and Azure Stack Hub. Some are very visi
 
 - Azure offers near limitless capacity. Azure Stack Hub is built on physical hardware in your datacenter, which leads to capacity limitations.
 - API versions and authentication mechanisms might be slightly different between Azure and Azure Stack Hub.
-- Azure Stack Hub differs in _who_ operates the cloud, which affects the level of workload operations.
+- Azure Stack Hub differs in *who* operates the cloud, which affects the level of workload operations.
 - Consider which part of the Azure Stack Hub service the Azure Stack Hub operator runs on, because that determines whether the customer calls a service PaaS or software as a service (SaaS).
 
 Other differences will be called out in other Azure Stack Hub articles at various points in the cloud adoption lifecycle.

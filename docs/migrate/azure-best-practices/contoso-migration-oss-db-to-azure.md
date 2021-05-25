@@ -45,7 +45,7 @@ The Contoso cloud team has pinned down goals for the various migrations. These g
 
 ## Solution design
 
-Contoso has already performed a [migration assessment](../..//plan/contoso-migration-assessment.md) of its digital estate by using [Azure Migrate](/azure/migrate/migrate-services-overview).
+Contoso has already performed a [migration assessment](../../plan/contoso-migration-assessment.md) of its digital estate by using [Azure Migrate](/azure/migrate/migrate-services-overview).
 
 ![Diagram shows the migration process.](./media/contoso-migration-oss-db-to-azure/migration-process.png)
 *Figure 1: The migration process.*
@@ -111,9 +111,9 @@ As the databases were inventoried, each type of database was reviewed to determi
 
 #### Step 4: Migration planning
 
-Because of the large number of databases, Contoso set up a project management office to keep track of every database migration instance. [Accountability and responsibilities](../..//migrate/migration-considerations/assess/index.md) were assigned to each business and application team.
+Because of the large number of databases, Contoso set up a project management office to keep track of every database migration instance. [Accountability and responsibilities](../../migrate/migration-considerations/assess/index.md) were assigned to each business and application team.
 
-Contoso also performed a [workload readiness review](../..//migrate/migration-considerations/assess/evaluate.md). This review examined the infrastructure, database, and network components.
+Contoso also performed a [workload readiness review](../../migrate/migration-considerations/assess/evaluate.md). This review examined the infrastructure, database, and network components.
 
 #### Step 5: Test migrations
 
@@ -123,7 +123,7 @@ Any rollback procedures were identified for each of the database workloads in ca
 
 For the IaaS-based workloads, the company set up all the required third-party software beforehand.
 
-After the test migration, Contoso used the various Azure [cost-estimation tools](../..//migrate/migration-considerations/assess/estimate.md) to get a more accurate picture of the future operational costs of the migration.
+After the test migration, Contoso used the various Azure [cost-estimation tools](../../migrate/migration-considerations/assess/estimate.md) to get a more accurate picture of the future operational costs of the migration.
 
 #### Step 6: Migration
 

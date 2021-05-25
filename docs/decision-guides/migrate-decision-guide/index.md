@@ -35,7 +35,7 @@ In line with the Cloud Adoption Framework's emphasis on [incremental migration](
 
 ## Learn more
 
-- **[Cloud fundamentals: Overview of Azure compute options](/azure/architecture/guide/technology-choices/compute-decision-tree):** Provides information on the capabilities of Azure IaaS and PaaS compute options.
-- **[Cloud fundamentals: Choose the right data store](/azure/architecture/guide/technology-choices/data-store-overview):** Discusses PaaS storage options available on the Azure platform.
-- **[Migration best practices: Data requirements exceed network capacity during a migration effort](../../migrate/azure-best-practices/network-capacity-exceeded.md):** Discusses alternative data migration mechanisms for scenarios where data migration is hindered by available network bandwidth.
-- **[SQL Database: Choose the right SQL Server option in Azure](/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview#business-motivations-for-choosing-databases-managed-instances-or-sql-virtual-machines):** Discussion of the options and business justifications for choosing to host your SQL Server workloads in a managed infrastructure (IaaS) or a managed service (PaaS) environment.
+- [Cloud fundamentals: Overview of Azure compute options](/azure/architecture/guide/technology-choices/compute-decision-tree): Provides information on the capabilities of Azure IaaS and PaaS compute options.
+- [Cloud fundamentals: Choose the right data store](/azure/architecture/guide/technology-choices/data-store-overview): Discusses PaaS storage options available on the Azure platform.
+- [Migration best practices: Data requirements exceed network capacity during a migration effort](../../migrate/azure-best-practices/network-capacity-exceeded.md): Discusses alternative data migration mechanisms for scenarios where data migration is hindered by available network bandwidth.
+- [SQL Database: Choose the right SQL Server option in Azure](/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview#business-motivations-for-choosing-databases-managed-instances-or-sql-virtual-machines): Discussion of the options and business justifications for choosing to host your SQL Server workloads in a managed infrastructure (IaaS) or a managed service (PaaS) environment.

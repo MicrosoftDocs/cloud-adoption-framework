@@ -62,7 +62,7 @@ Resource consistency decisions determine the tools, processes, and effort requir
 - Azure management groups enable updating governance designs as corporate policy matures.
 - Extensive implementation of Azure Policy could exceed the team's time commitments and may not provide a great deal of value at this time. A simple default policy should be created and applied to each management group to enforce the small number of current cloud governance policy statements. This policy will define the implementation of specific governance requirements. Those implementations can then be applied across all deployed assets.
 
->[!IMPORTANT]
+> [!IMPORTANT]
 > Any time a resource in a resource group no longer shares the same lifecycle, it should be moved to another resource group. Examples include common databases and networking components. While they may serve the application being developed, they may also serve other purposes and should therefore exist in other resource groups.
 
 ### Resource tagging

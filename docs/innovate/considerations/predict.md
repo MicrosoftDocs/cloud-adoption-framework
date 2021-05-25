@@ -21,7 +21,7 @@ Unfortunately, customers often take a myopic view that leads to decisions based 
 
 ## Examples of predictive modeling and how it influences customer behavior
 
-Different kinds of applications and ambient experiences use data to make predictions:
+Various applications and ambient experiences use data to make predictions:
 
 - **E-commerce:** Based on what other similar consumers have purchased, an e-commerce website suggests products that may be worth adding to your cart.
 - **Adjusted reality:** IoT offers more advanced instances of predictive functionality. For example, suppose a device on an assembly line detects a rise in a machine's temperature. A cloud-based predictive model determines how to respond. Based on that prediction, another device slows down the assembly line until the machine can cool.
@@ -48,7 +48,7 @@ Each aspect is required to develop predictive capabilities. Like all great innov
 
 Data is the most elemental of the characteristics mentioned earlier. Each of the disciplines for developing digital inventions generates data. That data, of course, contributes to the development of predictions. For more information on ways to get data into a predictive solution, see [Democratize data with digital invention](./data.md) and [Interact with devices](./devices.md).
 
-A variety of data sources can be used to deliver predictive modeling capabilities.
+Various data sources can be used to deliver predictive capabilities:
 
 ## Insights
 
@@ -82,7 +82,7 @@ Learn more about how to create an ambient experience through an [adjusted realit
 
 ## Next steps
 
-Having acquainted yourself with [disciplines of invention](./invention.md) and the [Innovate methodology](./index.md), you're now ready to learn how to build with customer empathy.
+Review a prescriptive framework that includes the tools, programs, and content (best practices, configuration templates, and architecture guidance) to simplify adoption for the following innovation scenarios.
 
-> [!div class="nextstepaction"]
-> [Build with empathy](./build.md)
+- [Kubernetes in the Cloud Adoption Framework](..\kubernetes\index.md)
+- [AI in the Cloud Adoption Framework](..\ai\index.md)

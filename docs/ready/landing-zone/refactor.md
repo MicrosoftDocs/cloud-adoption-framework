@@ -17,7 +17,7 @@ A landing zone is an environment for hosting your workloads that's **preprovisio
 The Ready methodology uses the concept of refactoring to accelerate migration and remove common blockers. The steps in the ready overview discuss a process that starts with predefined landing zone template that aligns best with your hosting function. Then refactor or add to the source code to expand the landing zones ability to deliver that function through improved security, operations, or governance. The following image illustrates the concept of refactoring.
 
 ![Landing zone refactoring illustration - described in later section of this article](../../_images/ready/refactor.png)
-_Figure 1: Landing zone refactoring._
+*Figure 1: Landing zone refactoring.*
 
 ## Common blockers
 
@@ -27,19 +27,19 @@ Both of the primary blockers are rooted in one belief, the cloud environment and
 
 ### Blocker: Acting too soon
 
-It took years and significant effort to reach the current state of security, governance, and operations in the current datacenter. It also required observations, learning, and customization to meet the unique constraints of that environment. Replicating those same procedures and configurations will take time. Reaching complete feature parity may also result in an environment that underperforms in the cloud. This parity approach also commonly leads to significant unplanned overspending in the cloud environment. Don't try to apply current-state requirements to a future-state environment as an early stage gate. Such an approach rarely proves to be profitable.
+It took years and significant effort to reach the current state of security governance and operations in the current datacenter. It also required observations, learning, and customization to meet the unique constraints of that environment. Replicating those same procedures and configurations will take time. Reaching complete feature parity may also result in an environment that underperforms in the cloud. This parity approach also commonly leads to significant unplanned overspending in the cloud environment. Don't try to apply current-state requirements to a future-state environment as an early stage gate. Such an approach rarely proves to be profitable.
 
 ![Common blocker: Acting too soon](../../_images/ready/blocker-act-too-soon.png)
-_Figure 2: Acting too soon is a common blocker._
+*Figure 2: Acting too soon is a common blocker.*
 
-In the image above, the customer has an objective of 100 workloads running in the cloud. To get there, the customer will likely deploy their first workload and then their first ten or so workloads before they're ready to release one of them to production. Eventually, they'll reach the objective of the adoption plan and have a robust portfolio in the cloud. But the red _X_ in the image shows where customers commonly get stuck. Waiting for total alignment can delay the first workload by weeks, months, or even years.
+In the image above, the customer has an objective of 100 workloads running in the cloud. To get there, the customer will likely deploy their first workload and then their first ten or so workloads before they're ready to release one of them to production. Eventually, they'll reach the objective of the adoption plan and have a robust portfolio in the cloud. But the red *X* in the image shows where customers commonly get stuck. Waiting for total alignment can delay the first workload by weeks, months, or even years.
 
 ### Blocker: Acting too late
 
 On the other hand, acting too late can have significant long-term consequences on the success of the cloud adoption effort. If the team waits to reach feature parity until the adoption efforts are complete, they will encounter unnecessary roadblocks and require several escalations to keep the efforts on track.
 
 ![Common blocker: Acting too late](../../_images/ready/blocker-act-too-late.png)
-_Figure 3: Acting too late is a common blocker._
+*Figure 3: Acting too late is a common blocker.*
 
 Similar to acting too soon, in this image, the customer waits too long to reach enterprise readiness across landing zones. By waiting too long, the customer will be constrained on the amount of refactoring and expansion they can do in the environment. Those constraints will limit their ability to drive continued success.
 
@@ -65,7 +65,7 @@ The concept of refactoring a landing zone is simple, but execution requires prop
 The advantage of a refactoring-based approach, is the ability to create parallel iteration paths for development. The image below provides an example of two parallel iteration paths: cloud adoption and cloud platform. Both progress at their own pace, with minimal risk of becoming a blocker to either team's daily efforts. Alignment on the adoption plan and refactoring guardrails can lead to agreement about milestones and clarity about future-state dependencies.
 
 ![Landing zone parallel iteration](../../_images/ready/iterations.png)
-_Figure 4: Landing zone parallel iteration._
+*Figure 4: Landing zone parallel iteration.*
 
 In the example iteration paths above, the cloud adoption team is migrating their portfolio of 100 workloads to the cloud. In parallel, the cloud platform team is focused on staying ahead of the cloud adoption plan to ensure the environment is prepared for those workloads.
 
@@ -102,7 +102,7 @@ For this example, the above set of agreed upon conditions will allow the adoptio
 The section of the Ready methodology on expanding your landing zone will aid in moving towards the longer term requirements. As the cloud adoption team progresses with their adoption plan, review [Expand your landing zone](../considerations/index.md) for guidance to help make decisions and refactor to meet the evolving requirements of various teams.
 
 ![Parallel landing zone iteration](../../_images/ready/refactor-methodologies.png)
-_Figure 5: Deeper methodologies assisting a parallel landing zone iteration._
+*Figure 5: Deeper methodologies assisting a parallel landing zone iteration.*
 
 Each subsection of [expand your landing zone](../considerations/index.md) maps to one of the additions outlined in the image above. Beyond those basic expansions, the deeper methodologies (such as govern or manage) of this framework will aid in going beyond basic landing zone modifications to implement long-term disciplines.
 

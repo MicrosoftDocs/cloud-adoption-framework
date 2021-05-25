@@ -10,10 +10,6 @@ ms.subservice: migrate
 ms.custom: internal
 ---
 
-<!-- docutune:casing "Enable .NET" SmartHotel360-Backend Pet.Checker "contoso-datacenter" PetCheckerFunction -->
-
-<!-- cSpell:ignore SQLVM WEBVM contoso contosohost vcenter contosodc smarthotel contososmarthotel smarthotelcontoso smarthotelpetchecker petchecker smarthotelakseus smarthotelacreus smarthotelpets kubectl contosodevops visualstudio azuredeploy cloudapp smarthotelsettingsurl appsettings -->
-
 # Rebuild an on-premises application in Azure
 
 This article demonstrates how the fictional company Contoso rebuilds a two-tier Windows .NET application that's running on VMware virtual machines (VMs) as part of a migration to Azure. Contoso migrates the front-end VM to an Azure App Service web app. Contoso builds the application back end by using microservices that are deployed to containers managed by Azure Kubernetes Service (AKS). The site interacts with Azure Functions to provide pet photo functionality.
@@ -121,7 +117,7 @@ Here's how Contoso will run the migration:
 
 ## Provision back-end resources
 
-Contoso admins run a deployment script to create the managed Kubernetes cluster by using AKS and Azure Container Registry. The instructions for this section use the [SmartHotel360-Backend](https://github.com/Microsoft/SmartHotel360-Backend) GitHub repository. The repository contains all the software for this part of the deployment.
+Contoso admins run a deployment script to create the managed Kubernetes cluster by using AKS and Azure Container Registry. The instructions for this section use the [`SmartHotel360-Backend`](https://github.com/Microsoft/SmartHotel360-Backend) GitHub repository. The repository contains all the software for this part of the deployment.
 
 ### Ensure that prerequisites are met
 
@@ -194,7 +190,7 @@ The Contoso admins provision AKS and Azure Container Registry as follows:
 
 ### Create an Azure DevOps project and build
 
-Contoso creates an Azure DevOps project, configures a CI build to create the container, and then pushes it to the container registry. The instructions in this section use the [SmartHotel360-Backend](https://github.com/Microsoft/SmartHotel360-Backend) repository.
+Contoso creates an Azure DevOps project, configures a CI build to create the container, and then pushes it to the container registry. The instructions in this section use the [`SmartHotel360-Backend`](https://github.com/Microsoft/SmartHotel360-Backend) repository.
 
 1. From `visualstudio.com`, they create a new organization (`contosodevops360.visualstudio.com`) and configure it to use Git.
 
@@ -272,7 +268,7 @@ Contoso creates an Azure DevOps project, configures a CI build to create the con
 
 With the AKS cluster created and the Docker images built, Contoso admins now deploy the rest of the infrastructure that will be used by back-end microservices.
 
-- Instructions in this section use the [SmartHotel360-Backend](https://github.com/Microsoft/SmartHotel360-Backend) repo.
+- Instructions in this section use the [`SmartHotel360-Backend`](https://github.com/Microsoft/SmartHotel360-Backend) repo.
 - In the `/deploy/k8s/arm` folder, there's a single script to create all items.
 
 The admins deploy the infrastructure as follows:
@@ -298,14 +294,14 @@ Now, Contoso admins do the following:
 - Deploy the NGINX ingress controller to allow inbound traffic to the services.
 - Deploy the microservices to the AKS cluster.
 - As a first step, admins update the connection strings to the microservices by using Azure DevOps. They then configure a new Azure DevOps release pipeline to deploy the microservices.
-- The instructions in this section use the [SmartHotel360-Backend](https://github.com/Microsoft/SmartHotel360-Backend) repo.
-- Some of the configuration settings (for example, Active Directory B2C) aren't covered in this article. For more information about these settings, review the previously mentioned SmartHotel360-Backend repo.
+- The instructions in this section use the [`SmartHotel360-Backend`](https://github.com/Microsoft/SmartHotel360-Backend) repo.
+- Some of the configuration settings (for example, Active Directory B2C) aren't covered in this article. For more information about these settings, review the previously mentioned `SmartHotel360-Backend` repo.
 
 The admins create the pipeline:
 
 1. In Visual Studio, they update the `/deploy/k8s/config_local.yml` file with the database connection information that they noted earlier.
 
-2. They open Azure DevOps and, in the SmartHotel360 project, they select **+ New pipeline** on the **Releases** pane.
+2. They open Azure DevOps and, in the `SmartHotel360` project, they select **+ New pipeline** on the **Releases** pane.
 
     ![Screenshot showing the **New pipeline** button in Azure DevOps.](./media/contoso-migration-rebuild/back-pipe2.png)
     *Figure 29: Creating a new pipeline.*
@@ -371,7 +367,7 @@ Contoso admins need to deploy the infrastructure that will be used by the front-
 - An Azure Cosmos DB database to store documents containing pet information.
 - The Computer Vision API for the website.
 
-Instructions for this section use the [SmartHotel360-website](https://github.com/microsoft/smartHotel360-website) repo.
+Instructions for this section use the [`SmartHotel360-Website`](https://github.com/microsoft/SmartHotel360-Website) repo.
 
 ### Create Blob Storage containers
 
@@ -475,12 +471,12 @@ In the Azure portal, Contoso admins provision the function app.
 
 Contoso admins create two different projects for the front-end site.
 
-1. In Azure DevOps, they create a project `SmartHotelFrontend`.
+1. In Azure DevOps, they create a project named `SmartHotelFrontEnd`.
 
     ![Screenshot of the creation of a front-end project.](./media/contoso-migration-rebuild/function-app1.png)
     *Figure 55: Creating a front-end project.*
 
-2. They import the [SmartHotel360 front end](https://github.com/Microsoft/SmartHotel360-Website) Git repository into the new project.
+2. They import the [`SmartHotel360-Website`](https://github.com/Microsoft/SmartHotel360-Website) Git repository into the new project.
 
 3. For the function app, they create another Azure DevOps project (`SmartHotelPetChecker`) and import the [PetChecker](https://github.com/sonahander/SmartHotel360-PetCheckerFunction) Git repository into this project.
 
@@ -529,7 +525,7 @@ Now Contoso admins configure the web app to use Contoso resources.
 
 Contoso admins can now publish the website.
 
-1. They open Azure DevOps and, in the `SmartHotelFrontend` project in **Builds and Releases**, they select **+ New pipeline**.
+1. They open Azure DevOps and, in the `SmartHotelFrontEnd` project in **Builds and Releases**, they select **+ New pipeline**.
 2. They select **Azure DevOps Git** as a source.
 3. They select the **ASP.NET Core** template.
 4. They review the pipeline and check to ensure that **Publish Web Projects** and **Zip Published Projects** are selected.
@@ -703,6 +699,6 @@ Here are two examples of tailored learning paths on Microsoft Learn that align w
 
 <!-- docsTest:casing "computer vision functionality" -->
 
-- **[Deploy a website to Azure with Azure App Service](/learn/paths/deploy-a-website-with-azure-app-service/):** By creating web apps in Azure, you can publish and manage your website easily without having to work with the underlying servers, storage, or network assets. Instead, you can focus on your website features and rely on the robust Azure platform to help provide secure access to your site.
+- [Deploy a website to Azure with Azure App Service](/learn/paths/deploy-a-website-with-azure-app-service/): By creating web apps in Azure, you can publish and manage your website easily without having to work with the underlying servers, storage, or network assets. Instead, you can focus on your website features and rely on the robust Azure platform to help provide secure access to your site.
 
-- **[Process and classify images with the Azure cognitive vision services](/learn/paths/process-classify-images-with-azure-cognitive-vision-services/):** Azure Cognitive Services offers prebuilt functionality to enable computer vision functionality in your applications. Learn how to use the Azure cognitive vision services to detect faces, tag and classify images, and identify objects.
+- [Process and classify images with the Azure cognitive vision services](/learn/paths/process-classify-images-with-azure-cognitive-vision-services/): Azure Cognitive Services offers prebuilt functionality to enable computer vision functionality in your applications. Learn how to use the Azure cognitive vision services to detect faces, tag and classify images, and identify objects.

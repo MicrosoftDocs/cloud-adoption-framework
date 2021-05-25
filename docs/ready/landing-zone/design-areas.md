@@ -29,7 +29,7 @@ Regardless of the deployment option, you should carefully consider each design a
 | Identity | Identity and access management is a primary security boundary in the public cloud. It's the foundation for any secure and fully compliant architecture. | Ready |
 | Network topology and connectivity | Networking and connectivity decisions are an equally important foundational aspect of any cloud architecture. | Ready |
 | Resource organization | As cloud adoption scales, considerations for subscription design and management group hierarchy have an impact on governance, operations management, and adoption patterns. | Govern |
-| Governance disciplines | Automate auditing and enforcement of security, governance, and compliance policies. | Govern |
+| Governance disciplines | Automate auditing and enforcement of security governance and compliance policies. | Govern |
 | Operations baseline | For stable, ongoing operations in the cloud, an operations baseline is required to provide visibility, operations compliance, and protect and recover capabilities. | Manage |
 | Business continuity and disaster recovery (BCDR) | Resiliency is key for smooth functioning of applications. BCDR is an important component of resiliency. BCDR involves protection of data via backups and protection of applications from outages via disaster recovery. | Manage |
 | Deployment options | Align the best tools and templates to deploy your landing zones and supporting resources. | Ready |
