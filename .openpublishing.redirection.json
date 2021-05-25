@@ -414,6 +414,11 @@
          "source_path": "docs/ready/azure-best-practices/connectivity-to-other-cloud-providers.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/azure-best-practices/connectivity-to-other-providers",
          "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/security/security-top-10.md",
+         "redirect_url": "/azure/cloud-adoption-framework/secure/security-top-10",
+         "redirect_document_id": true
       }
    ]
 }
