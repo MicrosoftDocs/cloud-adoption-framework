@@ -37,7 +37,7 @@ If you experience these challenges, you may want to consider implementing an MLO
 - How trigger model retraining and set-up a rollback just in case.
 - How to create reusable data pipelines that can be applied for both training and scoring.
 
-Ultimately, the goal of MLOps is to close the gap between development and production and deliver value to customers faster. To achieve this goal, we need to rethink how things are done in development and in production. To what extent data scientists specifically are expected to be involved in MLOps is an organizational choice, as the role of Data Scientist is defined differently across different organizations. We recommend you check out the [MLOps maturity model](/azure/architecture/example-scenario/mlops/mlops-maturity-model#:~:text=Maturity%20model%20%20%20%20Level%20%20,model%20performa%20...%20%201%20more%20rows%20) to see where you are and where you want to be on the maturity scale.
+Ultimately, the goal of MLOps is to close the gap between development and production and deliver value to customers faster. To achieve this goal, we need to rethink how things are done in development and in production. To what extent data scientists specifically are expected to be involved in MLOps is an organizational choice, as the role of Data Scientist is defined differently across different organizations. We recommend you check out the [MLOps maturity model](/azure/architecture/example-scenario/mlops/mlops-maturity-model) to see where you are and where you want to be on the maturity scale.
 
 ### How Machine Learning DevOps is different than DevOps
 
