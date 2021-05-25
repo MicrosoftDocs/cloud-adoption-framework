@@ -83,7 +83,7 @@ Starting on different paths, these customers' first step in their cloud journey 
 - **Angie's Applications** will need connectivity between clouds and new operational innovations. She'll follow guidance in the Innovate and Manage methodologies, with a focus on cloud-native innovation and Azure landing zones for cross-cloud connectivity.
 - **Mary's Markets** will need to scale workloads, and support demands form retail customers. She'll follow guidance in the Migrate and Manage methodologies, focusing first on the operations baseline to prepare for scale, then a limited migration to Azure.
 
-![Illustration showing three customer stories and their intended cloud mix during their hybrid and multicloud journey.](../../_images/hybrid/customer-stories-hybrid-multicloud_2.png)
+![Illustration showing three customer stories and their intended cloud mix during their hybrid and multicloud journey.](../../_images/hybrid/customer-stories-hybrid-multicloud-2.png)
 
 Each customer now needs to address network, identity, governance, and operations management to ensure proper environmental configuration. With their slightly different requirements for operations and environmental configuration, they'll use different implementation options with Azure Landing Zones:
 
