@@ -55,7 +55,7 @@ One who tries to apply a typical DevOps way of working to a data science project
 
 #### Data quality requirements and data availability constrain the work environment
 
-For a machine learning team to effectively develop ML-infused applications, production data access is desirable across work environments. In case production data access is not possible due to compliance requirements or technical constraints, consider implementing [Azure RBAC with Azure Machine Learning](/azure/machine-learning/how-to-assign-roles), [Just-in-Time access](/azure/security-center/security-center-just-in-time?tabs=jit-config-asc%2Cjit-request-asc) or [data movement pipelines](/azure/data-factory/#:~:text=Azure%20Data%20Factory%20documentation.%20Azure%20Data%20Factory%20is,and%20run%20them%20with%20full%20compatibility%20in%20) to create production data replicas and enable user productivity.
+For a machine learning team to effectively develop ML-infused applications, production data access is desirable across work environments. In case production data access is not possible due to compliance requirements or technical constraints, consider implementing [Azure RBAC with Azure Machine Learning](/azure/machine-learning/how-to-assign-roles), [Just-in-Time access](/azure/security-center/security-center-just-in-time) or [data movement pipelines](/azure/data-factory/) to create production data replicas and enable user productivity.
 
 #### Machine learning requires a greater operational effort
 
