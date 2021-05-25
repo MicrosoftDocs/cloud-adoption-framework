@@ -136,7 +136,7 @@ Azure Machine Learning offers several asset management, orchestration, and autom
 - When you are developing Python packages for your machine learning application, you can host them in an Azure DevOps repository as artifacts and publish them as a feed. This approach [allows you to integrate](/azure/machine-learning/how-to-use-private-python-packages) the DevOps workflow for building packages with your Azure Machine Learning Workspace.
 - Consider using a staging environment to system integration test ML pipelines with upstream or downstream application components.
 - Create unit and integration test for your Inference Endpoints for enhanced debuggability and accelerated time to deployment.
-- To trigger retraining, make use of [Dataset Monitors](/azure/machine-learning/how-to-monitor-datasets?tabs=python) and use [event-driven workflows](/azure/machine-learning/how-to-use-event-grid) to subscribe to Data drift Events and automate the triggering of [machine learning pipelines for retraining](/azure/machine-learning/how-to-retrain-designer).
+- To trigger retraining, make use of [Dataset Monitors](/azure/machine-learning/how-to-monitor-datasets) and use [event-driven workflows](/azure/machine-learning/how-to-use-event-grid) to subscribe to Data drift Events and automate the triggering of [machine learning pipelines for retraining](/azure/machine-learning/how-to-retrain-designer).
 
 
 ## MLOps at organizational scale: AI Factories
