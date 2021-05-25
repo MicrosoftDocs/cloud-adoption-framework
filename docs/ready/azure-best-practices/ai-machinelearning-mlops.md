@@ -226,4 +226,4 @@ The following figure summarizes key elements of an AI Factory:
 
 ![AI Factory Summary](media/aifactory_summary.png)
 
-Not all MLOps requirements are the same: The MLOps architecture for a large multi-national enterprise is unlikely to fit a small startup. Organizations may prefer to start small and build up as their maturity, model catalog and experience grows.
+Not all organization's MLOps requirements are the same: The MLOps architecture for a large multi-national enterprise is unlikely to fit a small startup. Organizations may prefer to start small and build up as their maturity, model catalog and experience grows.
