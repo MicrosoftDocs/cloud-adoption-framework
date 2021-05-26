@@ -119,9 +119,9 @@ items:
       - name: Common finance vocabulary terms
         href: strategy/finance-vocabulary-terms.md
       - name: Understand cloud accounting
-        href: strategy/cloud-accounting.md    
+        href: strategy/cloud-accounting.md
     - name: Technical considerations
-      items: 
+      items:
       - name: Overview
         href: strategy/technical-considerations/index.md
       - name: Achieve more with your investment
@@ -761,7 +761,7 @@ items:
             href: scenarios/azure-stack/ready.md
           - name: Assess
             href: scenarios/azure-stack/migrate-assess.md
-          - name: Migrate and Deploy
+          - name: Migrate and deploy
             href: scenarios/azure-stack/migrate-deploy.md
           - name: Govern
             href: scenarios/azure-stack/govern.md
@@ -1086,7 +1086,7 @@ items:
                 href: /azure/architecture/guide/architecture-styles/microservices?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
               - name: Reference architecture for microservices with Azure Kubernetes Service (AKS)
                 href: /azure/architecture/reference-architectures/containers/aks-microservices/aks-microservices
-              - name: Reference architecture - serverless microservices sample
+              - name: Reference architecture for serverless microservices
                 href: /samples/azure-samples/serverless-microservices-reference-architecture/serverless-microservices-reference-architecture/?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
             - name: Containers
               items:
@@ -1121,7 +1121,7 @@ items:
             href: innovate/best-practices/ci-cd.md
           - name: Shared solution
             items:
-            - name: Get started with a shared repository - GitHub and Git
+            - name: Get started with a shared repository via GitHub
               href: https://guides.github.com/introduction/git-handbook
             - name: Get started with a shared backlog
               href: /azure/devops/boards/backlogs/backlogs-boards-plans?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json&view=azure-devops
@@ -1608,7 +1608,7 @@ items:
         href: secure/business-resilience.md
       - name: Access control
         href: secure/access-control.md
-      - name: Security operations 
+      - name: Security operations
         href: secure/security-operations.md
       - name: Asset protection
         href: secure/asset-protection.md
@@ -1624,7 +1624,7 @@ items:
       - name: Securing DevOps
         href: secure/best-practices/secure-devops.md
       - name: Secure DevOps governance
-        href: secure/best-practices/end-to-end-governance.md 
+        href: secure/best-practices/end-to-end-governance.md
       - name: Windows Virtual Desktop
         href: scenarios/wvd/eslz-security-governance-and-compliance.md
       - name: Managing secrets
