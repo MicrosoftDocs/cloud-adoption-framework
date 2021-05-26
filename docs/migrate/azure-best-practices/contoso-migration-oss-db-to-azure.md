@@ -69,7 +69,7 @@ For the billing requirements, each of the Azure resources are then [tagged](/azu
 
 ### Migration process
 
-Data migrations follow a standard and repeatable pattern. This process involves the following steps based on [Microsoft best practices](https://datamigration.microsoft.com/):
+Data migrations follow a standard and repeatable pattern. This process involves the following steps based on [Microsoft best practices](/data-migration/):
 
 - Pre-migration:
   - **Discovery:** Inventory database assets and application stack.
@@ -107,7 +107,7 @@ As the databases were inventoried, each type of database was reviewed to determi
 | --- | --- | --- | --- |
 | **MySQL** | All supported versions upgrade to a supported version before migration | Azure Database for MySQL (PaaS) | [Guide](/azure/dms/tutorial-mysql-azure-mysql-online)
 | **PostgreSQL** | All supported versions upgrade to a supported version before migration | Azure Database for PostgreSQL (PaaS) | [Guide](/azure/dms/tutorial-postgresql-azure-postgresql-online) |
-| **MariaDB** | All supported versions upgrade to a supported version before migration | Azure Database for MariaDB (PaaS) | [Guide](https://datamigration.microsoft.com/scenario/mariadb-to-azuremariadb?step=1) |
+| **MariaDB** | All supported versions upgrade to a supported version before migration | Azure Database for MariaDB (PaaS) | [Guide](/azure/mariadb/howto-migrate-dump-restore) |
 
 #### Step 4: Migration planning
 

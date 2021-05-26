@@ -269,7 +269,7 @@ Contoso needs to:
 - Implement [BYOK](/azure/postgresql/concepts-data-encryption-postgresql) for data encryption.
 - Update all applications to [require SSL](/azure/postgresql/concepts-ssl-connection-security) connections to the databases.
 - Set up [Private Link](/azure/postgresql/concepts-data-access-and-security-private-link) so that all database traffic is kept inside Azure and the on-premises network.
-- Enable [Microsoft Defender for Identity](/azure/postgresql/concepts-data-access-and-security-threat-protection).
+- Enable [Microsoft Defender for Identity](/azure/security-center/defender-for-databases-introduction).
 - Configure Log Analytics to monitor and alert on security and logs entries of interest.
 
 ### Backups

@@ -129,7 +129,7 @@ To control and manage disk encryption keys and secrets for non-HANA Windows and 
 
 For internet-facing applications like SAP Fiori, make sure to distribute load per application requirements while maintaining security levels. For Layer 7 security, you can use a third-party Web Application Firewall (WAF) available in the Azure Marketplace.
 
-For mobile apps, [Microsoft Enterprise Mobility + Security](https://www.microsoft.com/microsoft-365/enterprise-mobility-security) can integrate SAP internet-facing applications as it helps to protect and secure your organization and empowers your employees to work in new and flexible ways.
+For mobile apps, [Microsoft Enterprise Mobility + Security](https://www.microsoft.com/security/business/enterprise-mobility-security) can integrate SAP internet-facing applications as it helps to protect and secure your organization and empowers your employees to work in new and flexible ways.
 
 ### Securely manage traffic
 

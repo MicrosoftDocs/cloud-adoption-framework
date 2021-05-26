@@ -77,7 +77,7 @@ For the billing requirements, each of the Azure resources are then [tagged](/azu
 
 ### Migration process
 
-Data migrations follow a standard repeatable pattern. This involves the following steps based on [Microsoft best practices](https://datamigration.microsoft.com/):
+Data migrations follow a standard repeatable pattern. This involves the following steps based on [Microsoft best practices](/data-migration/):
 
 - Pre-migration:
   - **Discovery:** Inventory database assets and application stack.
@@ -126,7 +126,7 @@ Contoso followed these steps to assess their databases and then upload results d
 
 DMA recommends performance and reliability improvements for your target environment and allows them to move their schema, data, and uncontained objects from a source server to a target server.
 
-Learn more about [Data Migration Assistant](/sql/dma/dma-assesssqlonprem?view).
+Learn more about [Data Migration Assistant](/sql/dma/dma-assesssqlonprem).
 
 Contoso used the DMA to run the assessment and then uploaded the data directly to Azure Migrate.
 

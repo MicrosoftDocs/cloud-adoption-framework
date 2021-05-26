@@ -25,7 +25,7 @@ The skills needed to provide cloud operations functions can be provided by:
 - DevOps teams
 
 > [!IMPORTANT]
-> The individuals or teams accountable for cloud operations are generally responsible for making reactive changes to configuration during remediation. They're also likely to be responsible for proactive configuration changes to minimize operational disruptions. Depending on the organizations cloud operating model, those changes could be delivered via infrastructure-as-code, Azure Pipelines, or direct configuration in the portal. Since operations team will likely have elevated permissions, it is extremely important that those who fill this role are following [identity and access control best practices](/azure/security/benchmarks/security-control-identity-access-control) to minimize unintended access or production changes.
+> The individuals or teams accountable for cloud operations are generally responsible for making reactive changes to configuration during remediation. They're also likely to be responsible for proactive configuration changes to minimize operational disruptions. Depending on the organizations cloud operating model, those changes could be delivered via infrastructure-as-code, Azure Pipelines, or direct configuration in the portal. Since operations team will likely have elevated permissions, it is extremely important that those who fill this role are following [identity and access control best practices](/security/benchmark/azure/security-control-identity-access-control) to minimize unintended access or production changes.
 
 ## Preparation
 
