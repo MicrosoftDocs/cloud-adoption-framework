@@ -204,7 +204,7 @@ items:
           href: /azure/backup/backup-azure-sap-hana-database-troubleshoot?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
         - name: Tutorial - back up SAP HANA databases in an Azure VM'
           href: /azure/backup/tutorial-backup-sap-hana-db?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-    - name: SAP NetWeaver, S/4HANA and SAP Business One on Azure Virtual Machines
+    - name: SAP NetWeaver, S/4HANA, and SAP Business One on Azure Virtual Machines
       items:
       - name: SAP workload planning and deployment checklist
         href: /azure/virtual-machines/workloads/sap/sap-deployment-checklist?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
@@ -235,7 +235,7 @@ items:
           href: /azure/virtual-machines/workloads/sap/high-availability-guide-rhel-ibm-db2-luw?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
         - name: SAP ASE Azure Virtual Machines DBMS deployment for SAP workload
           href: /azure/virtual-machines/workloads/sap/dbms_guide_sapase?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-        - name: SAP MaxDB, SAP liveCache and SAP Content Server deployment on Azure
+        - name: SAP MaxDB, SAP liveCache, and SAP Content Server deployment on Azure
           href: /azure/virtual-machines/workloads/sap/dbms_guide_maxdb?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
         - name: SAP HANA availability in Azure Virtual Machines
           items:
@@ -339,9 +339,9 @@ items:
         href: /azure/active-directory/saas-apps/sap-successfactors-inbound-provisioning-cloud-only-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
       - name: Write-back users from Azure AD to SAP SuccessFactors
         href: /azure/active-directory/saas-apps/sap-successfactors-writeback-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-      - name: Provision users to 
+      - name: Provision users to
         href: /azure/active-directory/saas-apps/sap-cloud-platform-identity-authentication-provisioning-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-      - name: Configure SSO with SAP Cloud Platform Identity Authentication
+      - name: Configure SSO with SAP Cloud Platform identity authentication
         href: /azure/active-directory/saas-apps/sap-hana-cloud-platform-identity-authentication-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
       - name: Configure SSO with SAP SuccessFactors
         href: /azure/active-directory/saas-apps/successfactors-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
@@ -349,17 +349,17 @@ items:
         href: /azure/active-directory/saas-apps/sapboc-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
       - name: Configure SSO with SAP Fiori
         href: /azure/active-directory/saas-apps/sap-fiori-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-      - name: Configure SSO with SAP qualtrics
+      - name: Configure SSO with SAP Qualtrics
         href: /azure/active-directory/saas-apps/qualtrics-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-      - name: Configure SSO with SAP ariba
+      - name: Configure SSO with SAP Ariba
         href: /azure/active-directory/saas-apps/ariba-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-      - name: Configure SSO with SAP concur travel and expense
+      - name: Configure SSO with SAP Concur Travel and Expense
         href: /azure/active-directory/saas-apps/concur-travel-and-expense-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
       - name: Configure SSO with SAP Cloud Platform
         href: /azure/active-directory/saas-apps/sap-hana-cloud-platform-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
       - name: Configure SSO with SAP NetWeaver
         href: /azure/active-directory/saas-apps/sap-netweaver-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-      - name: Configure SSO with SAP business bydesign
+      - name: Configure SSO with SAP Business ByDesign
         href: /azure/active-directory/saas-apps/sapbusinessbydesign-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
       - name: Configure SSO with SAP HANA
         href: /azure/active-directory/saas-apps/saphana-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
