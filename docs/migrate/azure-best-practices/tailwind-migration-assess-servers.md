@@ -1,5 +1,5 @@
 ---
-title: Discover and assess your migratable estate with Azure Migrate
+title: Assessment and migration planning with Azure Migrate for servers
 description: Learn how Tailwind Traders sets up an Azure Migrate for discovery and assessment of existing estate.
 author: akasnik
 ms.author: akasnik
@@ -12,7 +12,7 @@ ms.custom: azure-fast-track
 
 <!-- docutune:casing "Tassels Parallel Sets Slicer" -->
 
-# Discover and assess your migratable estate with Azure Migrate
+# Assessment and migration planning with Azure Migrate for servers
 
 Migration of workloads to Azure can be a challenging project. Preparing well for a migration project helps drive success and reduces the complexity of the project.
 
@@ -66,7 +66,7 @@ To start gathering data required for assessment, Tailwind needs to prepare to de
 
 Using the following workflow, Tailwind can define the server discovery tools required to gather information from on-premises servers and their dependencies.
 
-![Diagram of the discovery workflow.](./media/tailwind-migration-assess-servers/discovery-workflow.png)
+[![Diagram of the discovery workflow.](./media/tailwind-migration-assess-servers/discovery-workflow.png)](./media/tailwind-migration-assess-servers/discovery-workflow.png#lightbox)
 
 *Figure 1: Discovery appliances and agents workflow.*
 

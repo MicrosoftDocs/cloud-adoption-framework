@@ -1,5 +1,5 @@
 ---
-title: Plan and deploy Azure Migrate for servers
+title: Migration execution with Azure Migrate for servers
 description: Learn how Tailwind Traders sets up an Azure Migrate server replication.
 author: alejandra8481
 ms.author: brblanch
@@ -10,7 +10,7 @@ ms.subservice: migrate
 ms.custom: azure-fast-track, think-tank
 ---
 
-# Plan and deploy Azure Migrate for servers
+# Migration execution with Azure Migrate for servers
 
 This article shows how the fictional company Tailwind Traders prepares its deployment plan for on-premises infrastructure migration using the server replication features of Azure Migrate.
 
@@ -25,8 +25,8 @@ In order for Tailwind to migrate to Azure, it's critical to plan for the migrati
 > [!div class="checklist"]
 >
 > - **Step 1: Tooling and replication.** How many replication appliances will you need? What are best practices to enable replication?
-> - **Step 2: Testing and pre-migration and post-migration activities.** What activities will resources need to execute before and after the migration? What value is provided, and when should I plan for a test migration? What are the constraints when testing in an isolated VNet?
-> - **Step 3: Cutover and post-go-live.** How does cutover look like? What happens after cutover?
+> - **Step 2: Migration cutover preparation.** What activities will resources need to execute before and after the migration? What value is provided, and when should I plan for a test migration? What are the constraints when testing in an isolated VNet?
+> - **Step 3: Migration cutover execution.** How does cutover look like? What happens after cutover?
 
 ## Before you start
 
@@ -50,7 +50,7 @@ After increasing the subscription core quotas, Tailwind needs to prepare to depl
 
 Using the following workflow, Tailwind can identify the server migration tools required to enable replication of on-premises servers. This will aid Tailwind in proactively identifying necessary infrastructure requests to successfully enable replication of their migratable estate.
 
-![Diagram of the replication workflow.](./media/tailwind-migration-rehost-server-replication/replication-workflow.png)
+[![Diagram of the replication workflow.](./media/tailwind-migration-rehost-server-replication/replication-workflow.png)](./media/tailwind-migration-rehost-server-replication/replication-workflow.png#lightbox)
 
 *Figure 1: Replication appliances and agents workflow.*
 
@@ -86,7 +86,7 @@ Based on the observed initial and ongoing replications bandwidth patterns, Tailw
 - How many VMs, on average, can be left replicating (delta replication) at the same time?
 - Is there an need to throttle replication within the replication appliances or agents?
 
-## Step 2: Testing and pre-migration and post-migration activities
+## Step 2: Migration cutover preparation
 
 Given the success in replication toolset deployment and planning for a subset of their migration waves, Tailwind decides to start planning their testing needs and pre-migration and post-migration activities.
 
@@ -196,11 +196,11 @@ Further, Tailwind's environment is tightly coupled which means there's a large a
 
 Nonetheless, Tailwind does find value in considering the remainder paths only for scenarios where it's possible to migrate all dependencies to an isolated VNet in order to perform UAT, or where UAT is not enforced.
 
-![Diagram of the migration workflow.](./media/tailwind-migration-rehost-server-replication/migration-workflow.png)
+[![Diagram of the migration workflow.](./media/tailwind-migration-rehost-server-replication/migration-workflow.png)](./media/tailwind-migration-rehost-server-replication/migration-workflow.png)
 
 *Figure 2: Testing and migration workflow.*
 
-## Step 3: Cutover and post-go-live
+## Step 3: Migration cutover preparation
 
 As a final step, Tailwind is now ready to confidently perform the production migrations. The envision that during cutover all hands on deck will be required to ensure end-to-end support. Furthermore, after the soak period concludes, Tailwind is looking forward to close-out and call for a successful migration to Azure.
 
