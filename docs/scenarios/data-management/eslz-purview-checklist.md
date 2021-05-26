@@ -73,33 +73,31 @@ The **Azure Purview Readiness Checklist** below is high level guidance that can 
 
 ## Phase 2: Build your Data Governance and Management Foundation
 
-_By Deploying a Data Management Landing Zone:_
+1. Prepare your Azure subscription to deploy the Data Management Landing Zone with Azure Purview.
+   - Define which subscription will be used.
+   - Register required Azure Resource Providers.
+   - Review and update the Azure Policy assigned to allow deployment of Azure Storage, EventHub Namespace and Azure Purview Accounts.
+   - Validate if the Azure Purview account is provided access to data source subscription to register and scan data sources.
+   - If needed, assign required access to key vault secrets to Azure Purview account's Managed Identity.
+   - For on-premises and IaaS data sources, create credentials and map to key vault's secrets in Azure Purview.
+   - Generate and register Integration Runtime for data sources inside IaaS or on-premises VMs.
+   - In case of multiple environments such as prod and non-prod, prepare to deploy the respective Data Management Landing Zones with Azure Purview accounts.
 
-1. Prepare your Azure Subscriptions to deploy Data Management Landing Zone including Azure Purview.
-   - Define what Azure Subscriptions will be used to deploy Azure Purview.
-   - Register required Azure Resource Providers in Purview subscription.
-   - Review and update Azure Policy assigned to Purview subscriptions to allow deployment of Azure Storage, EventHub Namespace and Purview Accounts.
-   - Deploy Data Management Landing Zones with Azure Purview Accounts for production and non-production environments.
-   - Validate if Azure Purview Account is provided access to data source subscription to register and scan data sources.
-   - If needed, assign required access to key vault secrets to Azure Purview Account's MSI.
-   - For on-premises and IaaS data service create Credentials and map to Key Vault's secrets in Azure Purview.
-   - Generate and Register Integration Runtime for data sources inside IaaS or on-premises VMs.
+2. Import your glossary terms to Azure Purview and define the formatting. Use Azure Purview default template or create a new term templates in Azure Purview.
 
-2. Import your glossary terms to Azure Purview. Define your glossary terms formatting; use Azure Purview default template or create a new term templates in Azure Purview.
+3. Build your custom classifications and classification rules.
 
-3. Build your custom classifications / classification rules.
+4. Consent to extend sensitivity labels to Azure Purview.
 
-4. Consent to extend Sensitivity Labels to Azure Purview.
+5. Validate and update M365 sensitivity labels in the Microsoft Security and Compliance dashboard.
 
-5. Validate / Update M365 Sensitivity Labels in Microsoft Security & Compliance dashboard.
+6. Create auto-labeling rules in M365.
 
-6. Create Auto-labeling Rules in M365.
+7. Grant *Data Reader* or *Data Curator* access in Azure Purview to data governance and security teams in the organization.
 
-7. Grant Data Reader or Data Curator access to Azure Purview to data, governance and security teams in the organization.
+8. Perform an initial security review.
 
-8. Perform initial Security review.
-
-9. Build and communicate detailed plan of tasks, roles and responsibilities to operate Azure Purview.
+9. Build and communicate a detailed plan of tasks, roles and responsibilities to operate Azure Purview.
 
 ## Phase 3: Onboard first Data Landing Zone
 
