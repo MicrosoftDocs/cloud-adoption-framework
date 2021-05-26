@@ -69,7 +69,7 @@ For the billing requirements, each of the Azure resources are then [tagged](/azu
 
 ### Migration process
 
-Data migrations follow a standard and repeatable pattern. This process involves the following steps based on [Microsoft best practices](https://datamigration.microsoft.com/):
+Data migrations follow a standard and repeatable pattern. This process involves the following steps based on [Microsoft best practices](/data-migration/):
 
 - Pre-migration:
   - **Discovery:** Inventory database assets and application stack.
@@ -107,13 +107,13 @@ As the databases were inventoried, each type of database was reviewed to determi
 | --- | --- | --- | --- |
 | **MySQL** | All supported versions upgrade to a supported version before migration | Azure Database for MySQL (PaaS) | [Guide](/azure/dms/tutorial-mysql-azure-mysql-online)
 | **PostgreSQL** | All supported versions upgrade to a supported version before migration | Azure Database for PostgreSQL (PaaS) | [Guide](/azure/dms/tutorial-postgresql-azure-postgresql-online) |
-| **MariaDB** | All supported versions upgrade to a supported version before migration | Azure Database for MariaDB (PaaS) | [Guide](https://datamigration.microsoft.com/scenario/mariadb-to-azuremariadb?step=1) |
+| **MariaDB** | All supported versions upgrade to a supported version before migration | Azure Database for MariaDB (PaaS) | [Guide](/azure/mariadb/howto-migrate-dump-restore) |
 
 #### Step 4: Migration planning
 
-Because of the large number of databases, Contoso set up a project management office to keep track of every database migration instance. [Accountability and responsibilities](../../migrate/migration-considerations/assess/index.md) were assigned to each business and application team.
+Because of the large number of databases, Contoso set up a project management office to keep track of every database migration instance. [Accountability and responsibilities](../migration-considerations/assess/index.md) were assigned to each business and application team.
 
-Contoso also performed a [workload readiness review](../../migrate/migration-considerations/assess/evaluate.md). This review examined the infrastructure, database, and network components.
+Contoso also performed a [workload readiness review](../migration-considerations/assess/evaluate.md). This review examined the infrastructure, database, and network components.
 
 #### Step 5: Test migrations
 
@@ -123,7 +123,7 @@ Any rollback procedures were identified for each of the database workloads in ca
 
 For the IaaS-based workloads, the company set up all the required third-party software beforehand.
 
-After the test migration, Contoso used the various Azure [cost-estimation tools](../../migrate/migration-considerations/assess/estimate.md) to get a more accurate picture of the future operational costs of the migration.
+After the test migration, Contoso used the various Azure [cost-estimation tools](../migration-considerations/assess/estimate.md) to get a more accurate picture of the future operational costs of the migration.
 
 #### Step 6: Migration
 

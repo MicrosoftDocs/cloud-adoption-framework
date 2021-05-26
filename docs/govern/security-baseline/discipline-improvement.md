@@ -39,7 +39,7 @@ This phase of governance maturity bridges the divide between business outcomes a
 
 - Define a data classification schema.
 - Conduct a digital estate planning process to inventory the current IT assets powering your business processes and supporting operations.
-- Conduct a [policy review](../../govern/policy-compliance/cloud-policy-review.md) to begin the process of modernizing existing corporate IT security policies, and define MVP policies addressing known risks.
+- Conduct a [policy review](../policy-compliance/cloud-policy-review.md) to begin the process of modernizing existing corporate IT security policies, and define MVP policies addressing known risks.
 - Review your cloud platform's security guidelines. For Azure these can be found in the [Microsoft Service Trust Portal](https://servicetrust.microsoft.com).
 - Determine whether your Security Baseline policy includes a [security development lifecycle](https://www.microsoft.com/sdl).
 - Evaluate network, data, and asset-related business risks based on the next one to three releases, and gauge your organization's tolerance for those risks.
