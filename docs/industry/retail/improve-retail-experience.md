@@ -50,9 +50,9 @@ For information and support, see the following resources:
 - [Azure Synapse Analytics (workspace preview)](/azure/synapse-analytics/)
 - [Azure Kubernetes Services](/azure/aks/)
 - [Azure Machine Learning Services](/azure/machine-learning/overview-what-is-azure-ml)
-- [Azure Synapse Content on Microsoft Learn](https://docs.microsoft.com/learn/browse/?terms=synapse)
-- [Azure Kubernetes on Microsoft Learn](https://docs.microsoft.com/learn/browse/?terms=kubernetes)
-- [Data Scientist learning path on Microsoft Learn](https://docs.microsoft.com/learn/browse/?roles=data-scientist)
+- [Azure Synapse Content on Microsoft Learn](/learn/browse/?terms=synapse)
+- [Azure Kubernetes on Microsoft Learn](/learn/browse/?terms=kubernetes)
+- [Data Scientist learning path on Microsoft Learn](/learn/browse/?roles=data-scientist)
 
 ## Getting started and process overview
 
