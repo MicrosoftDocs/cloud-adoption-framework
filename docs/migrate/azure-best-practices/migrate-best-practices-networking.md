@@ -97,7 +97,7 @@ The table shows an example of a virtual network with an address space of `10.245
 **Learn more:**
 
 - Learn about [designing subnets](/azure/virtual-network/virtual-network-vnet-plan-design-arm#segmentation).
-- Learn how Contoso, a fictional company, [prepared their networking infrastructure for migration](../../migrate/index.md).
+- Learn how Contoso, a fictional company, [prepared their networking infrastructure for migration](../index.md).
 
 ## Best practice: Set up a DNS server
 
@@ -117,7 +117,7 @@ Azure adds a DNS server by default when you deploy a virtual network. This allow
 
 **Learn more:**
 
-- Learn about [name resolution when you use your own DNS server](../../migrate/index.md).
+- Learn about [name resolution when you use your own DNS server](../index.md).
 - Learn about [DNS naming rules and restrictions](../../ready/azure-best-practices/naming-and-tagging.md).
 
 ## Best practice: Set up Availability Zones

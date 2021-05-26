@@ -159,11 +159,11 @@ Planning efforts for unified operations and management assume that most assets f
 
 If unified operations is a core part of your strategy, you should start by lighting up Azure Arc for all resources before starting your Azure Migrate integration.
 
-Do you have to look at the existing estate differently? Or is a simple VM to VM migration sufficient? Review this article when you are [gathering inventory for your digital estate](../../scenarios/hybrid/ready.md).
+Do you have to look at the existing estate differently? Or is a simple VM to VM migration sufficient? Review this article when you are [gathering inventory for your digital estate](../hybrid/ready.md).
 
 ## Hybrid and multicloud adoption plan
 
-Do you have a specific DevOps backlog the customer should use? Or is the standard adoption plan template still sufficient? Check out the strategy and plan template in the [Tools and templates](../../reference/tools-templates) section.
+Do you have a specific DevOps backlog the customer should use? Or is the standard adoption plan template still sufficient? Check out the strategy and plan template in the [Tools and templates](../../reference/tools-templates.md) section.
 
 ## Hybrid and multicloud readiness plan
 

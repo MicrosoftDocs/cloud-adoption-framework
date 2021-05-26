@@ -56,7 +56,7 @@ The clearest view of the cloud adoption plan comes from the **Epics** backlog vi
 
 ## Align the cloud adoption plan
 
-The overview pages for the Strategy methodology and the Plan methodology each refer to the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx). That template organizes the decisions and data points that will align the template for the cloud adoption plan with your specific plans for adoption. Considering completing the exercises in the [Strategy methodology](../strategy/index.md) and the [Plan methodology](../plan/index.md) before aligning your new project.
+The overview pages for the Strategy methodology and the Plan methodology each refer to the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx). That template organizes the decisions and data points that will align the template for the cloud adoption plan with your specific plans for adoption. Considering completing the exercises in the [Strategy methodology](../strategy/index.md) and the [Plan methodology](./index.md) before aligning your new project.
 
 The following articles support alignment of the cloud adoption plan:
 

@@ -118,4 +118,4 @@ For more guidance for your cloud adoption journey, see the following articles:
 - [Hybrid and multicloud migration](./migrate.md)
 - [Govern hybrid and multicloud environments](./govern.md)
 - [Manage hybrid and multicloud environments](./manage.md)
-- [Enterprise-scale support for hybrid and multicloud](../../scenarios/hybrid/enterprise-scale-landing-zone)
+- [Enterprise-scale support for hybrid and multicloud](../hybrid/enterprise-scale-landing-zone.md)
