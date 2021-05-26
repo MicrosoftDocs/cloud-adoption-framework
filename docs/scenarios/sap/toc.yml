@@ -341,7 +341,7 @@ items:
         href: /azure/active-directory/saas-apps/sap-successfactors-writeback-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
       - name: Provision users to SAP Cloud Platform Identity Authentication
         href: /azure/active-directory/saas-apps/sap-cloud-platform-identity-authentication-provisioning-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-      - name: Configure SSO with SAP Cloud Platform identity authentication
+      - name: Configure SSO with SAP Cloud Platform Identity Authentication
         href: /azure/active-directory/saas-apps/sap-hana-cloud-platform-identity-authentication-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
       - name: Configure SSO with SAP SuccessFactors
         href: /azure/active-directory/saas-apps/successfactors-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
