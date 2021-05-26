@@ -11,29 +11,29 @@ ms.subservice: ready
 
 # Azure Purview deployment best practices for 'data management and analytics' Enterprise-Scale scenario
 
-The [Data Management Landing Zone](eslz-data-management-landing-zone.md) is responsible for the governance of the Enterprise Scale Analytics and AI platform and relies on Azure Purview to provide the following data management capabilities:
+The [Data Management Landing Zone](eslz-data-management-landing-zone.md) is responsible for the governance of the Enterprise Scale Analytics and AI platform and relies on [Azure Purview](https://azure.microsoft.com/services/purview) to provide the following data management capabilities:
 
 - [Data Catalog](eslz-data-management-landing-zone.md/#data-catalog)
 - [Data Classification](eslz-data-management-landing-zone.md/#data-classification)
 - [Data Lineage](eslz-data-management-landing-zone.md/#data-lineage)
 
-[Azure Purview](https://azure.microsoft.com/services/purview) is a unified data governance service that helps organizations to manage and govern data across on-premises, multi-cloud, and software-as-a-service (SaaS). Azure Purview creates a holistic, up-to-date map of the data landscape with automated data discovery, sensitive data classification, and end-to-end data lineage. Azure Purview empowers data consumers to find valuable, trustworthy data.
+Azure Purview is a unified data governance service that helps organizations to manage and govern data across on-premises, multi-cloud, and software-as-a-service (SaaS). Azure Purview creates a holistic, up-to-date map of the data landscape with automated data discovery, sensitive data classification, and end-to-end data lineage. Azure Purview empowers data consumers to find valuable, trustworthy data.
 
-> [!NOTE]
+> [!TIP]
 > We recommend using third-party tools of your choice to integrate the remaining capabilities of the [Data Management Landing Zone](eslz-data-management-landing-zone.md) with Azure that are currently not supported by Azure Purview.
 
-This section aims to explain prescribed configurations which are specific to the Enterprise Scale Analytic and AI solution pattern and discusses a collection of Azure best practices to enhance your data governance using Azure Purview. It is a compliment to the official [Azure Purview Documentation](https://docs.microsoft.com/azure/purview/).
+> [!NOTE]
+> This section aims to explain prescribed configurations which are specific to the Enterprise Scale Analytic and AI solution pattern and discusses a collection of Azure best practices to enhance your data governance using Azure Purview. It is a compliment to the official [Azure Purview Documentation](https://docs.microsoft.com/azure/purview/).
 
 ## Overview
 
-One Azure Purview account is deployed inside the Data Management Landing Zone which serves as a centralized Data Catalog and Data Governance solution. From Data Management Landing Zone, the Data Catalog (Azure Purview) will be able to communicate with each Data Landing Zone via private network connectivity using VNet Peering across Data Management and Data Landing Zones and Self-Hosted Integration Runtimes.
-Discovery of datasets in on-premises stores and other public clouds is achieved by additional deployments of Self-Hosted Integration Runtimes.
-
 ![Azure Purview Overview](./images/purview-overview.png)
 
-## Azure Purview Account Setup
+One Azure Purview account is deployed inside the Data Management Landing Zone which serves as a centralized data catalog as shown in the figure above. From the Data Management Landing Zone, Azure Purview will be able to communicate with each Data Landing Zone via private network connectivity using VNet Peering across Data Management and Data Landing Zones and Self-Hosted Integration Runtimes. Discovery of datasets in on-premises data stores and other public clouds is achieved by additional deployments of Self-Hosted Integration Runtimes.
 
-The first step is the deployment of an Azure Purview Account. During the deployment of [Data Management Landing Zone](./eslz-data-management-landing-zone.md), a single Azure Purview Account is automatically deployed inside the data Management subscription. The aim is to centralize the entire data map into a single Azure Purview account across all data landing zones, therefore, it is recommended to consider a shared single Azure Purview account inside Data Management subscription per environment type.
+## Account Setup
+
+The first step is the deployment of an Azure Purview Account. During the deployment of the [Data Management Landing Zone](./eslz-data-management-landing-zone.md), a single Azure Purview Account is automatically deployed inside the data Management subscription. The aim is to centralize the entire data map into a single Azure Purview account across all data landing zones, therefore, it is recommended to consider a shared single Azure Purview account inside Data Management subscription per environment type.
 
 In addition to Azure Purview Account, a managed Resource Group is also deployed. A managed Storage Account and a managed EventHub Namespace resources are deployed inside this Resource Group and used to ingest the metadata as a result of scans. Since these resources are consumed by Azure Purview catalog, they must not be removed, therefore, an Azure RBAC _deny assignment_ is automatically added for _all principals_ at the resource group level at the time of deployment.
 
@@ -49,11 +49,11 @@ Prior to deployment of Data Management Landing Zone, review the following requir
 >
 > For more information, see [Azure Purview Prerequisites](https://docs.microsoft.com/en-us/azure/purview/manage-credentials#create-azure-key-vaults-connections-in-your-azure-purview-account).
 
-## Azure Purview Networking and Name Resolution
+## Networking and Name Resolution
 
 The Azure Purview account is deployed inside hub VNet within Data Management Landing Zone.
 
-### Azure Purview Private Endpoint Deployment
+### Private Endpoint Deployment
 
 The Enterprise Scale Analytics and AI deployment uses Private Endpoint to enable secure access to the catalog over a Private Link. The private endpoint uses IP addresses from the VNet address space for your Azure Purview account. Network traffic between the clients on the VNet and the Purview account traverses over the VNet and a private link on the Microsoft backbone network, eliminating exposure from the public internet. To enable network isolation for end-to-end scan scenarios, additional Private Endpoint are deployed so for data sources in both Azure and on-premises sources can be connected through Private Link.
 To scan data sources you need to use a Self-hosted integration Run Time which must be deployed inside the private network, either in Data Management or Data Landing Zones.
@@ -118,7 +118,7 @@ For more information related to Enterprise Scale Analytics and AI networking and
 
 ## Manage authentication for data sources in Azure Purview
 
-Azure Purview requires access to _control plane_ and _data plane_ to register and scan data sources.
+Azure Purview requires access to the _control plane_ and _data plane_ to register and scan data sources.
 
 ### Register Data Sources
 
