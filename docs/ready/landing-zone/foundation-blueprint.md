@@ -56,7 +56,7 @@ To aid in this comparison early in adoption cycles, the following articles shoul
 - [Organize subscriptions](../azure-best-practices/organize-subscriptions.md): How will you organize subscriptions as you scale?
 - [Tagging standards](../azure-best-practices/resource-tagging.md): What other criteria need to be consistently captured in tags to augment your subscription design?
 
-To aid in this comparison when teams are further along with cloud adoption, see the governance patters section of the [governance guide - prescriptive guidance](../../govern/guides/complex/prescriptive-guidance.md#application-of-governance-defined-patterns) article. This section of the prescriptive guidance demonstrates a set of patterns based on a specific narrative and operating model. That guidance also includes links to other patterns that should be considered.
+To aid in this comparison when teams are further along with cloud adoption, see the governance patterns section of the [governance guide: prescriptive guidance](../../govern/guides/complex/prescriptive-guidance.md#application-of-governance-defined-patterns) article. This section of the prescriptive guidance demonstrates a set of patterns based on a specific narrative and operating model. That guidance also includes links to other patterns that should be considered.
 
 ### Governance disciplines
 

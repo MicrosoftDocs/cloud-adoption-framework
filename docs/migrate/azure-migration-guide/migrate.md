@@ -51,7 +51,7 @@ To perform a migration using Azure Migrate, follow these steps:
 #### Learn more
 
 - [About Azure Migrate](/azure/migrate/migrate-services-overview)
-- [Azure Migrate tutorial - migrate physical or virtualized servers to Azure](/azure/migrate/tutorial-migrate-physical-virtual-machines)
+- [Azure Migrate tutorial: Migrate physical or virtualized servers to Azure](/azure/migrate/tutorial-migrate-physical-virtual-machines)
 
 ### Azure Database Migration Service
 

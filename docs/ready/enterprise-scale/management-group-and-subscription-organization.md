@@ -189,7 +189,7 @@ Organizations can use enterprise-scale Azure policies to enforce the following g
 
 - **Evaluate proven best practices**
 
-   An SQL database can experience a lot of schema, permission, and configuration changes throughout its life cycle, and these changes can deviate from best practices. In turn, excessive permissions, orphaned roles, and other configurational drifts can be exploited by malicious actors.
+   An SQL database can experience a lot of schema, permission, and configuration changes throughout its lifecycle, and these changes can deviate from best practices. In turn, excessive permissions, orphaned roles, and other configurational drifts can be exploited by malicious actors.
 
    Microsoft best practices for SQL databases can help enterprises to assess their SQL databases, and SQL Database has a built-in vulnerability assessment service to assist. A vulnerability assessment scans and identifies database- and server-level security risks, and it offers remediation tasks that can fix vulnerabilities.
 

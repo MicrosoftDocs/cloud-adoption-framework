@@ -243,7 +243,7 @@ Let's review an example:
 
 - You have two offices in the US, one in Los Angeles and one in New York City.
 - Your offices are connected on a WAN, which can be either your own backbone network or your service provider's IP VPN.
-- You have two ExpressRoute circuits, one in `West US` and one in `East US`, that are also connected on the WAN. Obviously, you have two paths to connect to the Microsoft network.
+- You have two ExpressRoute circuits, one in `West US` and one in `East US`, which are also connected on the WAN. Obviously, you have two paths to connect to the Microsoft network.
 
 **Problem:**
 

@@ -233,6 +233,6 @@ The following recommendations are for various compliance and governance scenario
 - [Introduction to Azure security](/azure/security/fundamentals/overview)
 - [SAP on Azure Architecture Guide](/azure/architecture/reference-architectures/sap/sap-overview)
 - [SAP workloads on Azure: planning and deployment checklist](/azure/virtual-machines/workloads/sap/sap-deployment-checklist)
-- [Best practices in migrating SAP applications to Azure - part 1](https://azure.microsoft.com/blog/best-practices-in-migrating-sap-applications-to-azure-part-1/)
+- [Best practices in migrating SAP applications to Azure, part 1](https://azure.microsoft.com/blog/best-practices-in-migrating-sap-applications-to-azure-part-1/)
 - [SAP on Azure: designing for efficiency and operations](https://azure.microsoft.com/blog/sap-on-azure-designing-for-efficiency-operations/)
 - [Azure Virtual Machines planning and implementation for SAP NetWeaver](/azure/virtual-machines/workloads/sap/planning-guide)

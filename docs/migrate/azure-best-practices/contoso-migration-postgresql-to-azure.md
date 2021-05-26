@@ -112,7 +112,7 @@ Contoso will need to assess the current database for replication issues. These i
   ![Diagram of the migration process.](./media/contoso-migration-postgresql-to-azure/migration-process.png)
   *Figure 2: The migration process.*
 
-#### Migration
+**Migration:**
 
 Contoso can perform the migration in several ways:
 
@@ -180,7 +180,7 @@ To prepare, set up a virtual network to access the database. Create a virtual ne
         psql -h {host}.postgres.database.azure.com -d dvdrental -U username -f dvdrental_schema.sql
       ```
 
-### Migration
+**Migration:**
 
 1. In the Azure portal, Contoso goes to its Database Migration Service resource.
 1. If the service isn't started, select **Start Service**.
@@ -264,7 +264,7 @@ With the migrated resources in Azure, Contoso needs to fully operationalize and 
 
 Contoso needs to:
 
-- Ensure that the new Azure Database for PostgreSQL instance and databases are secure. For more information, see [Security in Azure Database for PostgreSQL - Single Server](/azure/postgresql/concepts-security).
+- Ensure that the new Azure Database for PostgreSQL instance and databases are secure. For more information, see [Security in Azure Database for PostgreSQL: Single server](/azure/postgresql/concepts-security).
 - Review the [firewall rules](/azure/postgresql/concepts-firewall-rules) and virtual network configurations to verify that connections are limited to only the applications that require it.
 - Implement [BYOK](/azure/postgresql/concepts-data-encryption-postgresql) for data encryption.
 - Update all applications to [require SSL](/azure/postgresql/concepts-ssl-connection-security) connections to the databases.
