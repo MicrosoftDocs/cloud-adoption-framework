@@ -196,7 +196,7 @@ Further, Tailwind's environment is tightly coupled which means there's a large a
 
 Nonetheless, Tailwind does find value in considering the remainder paths only for scenarios where it's possible to migrate all dependencies to an isolated VNet in order to perform UAT, or where UAT is not enforced.
 
-[![Diagram of the migration workflow.](./media/tailwind-migration-rehost-server-replication/migration-workflow.png)](./media/tailwind-migration-rehost-server-replication/migration-workflow.png)
+[![Diagram of the migration workflow.](./media/tailwind-migration-rehost-server-replication/migration-workflow.png)](./media/tailwind-migration-rehost-server-replication/migration-workflow.png#lightbox)
 
 *Figure 2: Testing and migration workflow.*
 
