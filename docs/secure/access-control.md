@@ -115,10 +115,10 @@ In most cases, processes are needed to implement isolation, processes that vario
 - **Process:** Establish clear policy and standards and document processes for business and technical stakeholders for all scenarios such as vendor access, change management process, threat response procedures, including exception management. Monitor to ensure the configuration doesn't drift and that other processes are followed correctly and rigorously.
 - **Technology:** Implement technical controls to block unauthorized communications, detect anomalies and potential threats, and harden bridging and transit devices that interact with the isolated environment, for example, operator consoles for operational technology (OT) systems.
 
-For more information, see [Asset protection: network isolation](.\asset-protection.md\#network-isolation).
+For more information, see [Asset protection: network isolation](./asset-protection.md#network-isolation).
 
 ## Next steps
 
 Whatever your requirements for access control, your strategy should be grounded in the proper fundamentals. The guidance provided in these articles, and in the Cloud Adoption Framework, can help organizations find and implement the right approach.
 
-The next discipline is modernizing [security operations](security-operations.md).
+The next discipline is modernizing [security operations](./security-operations.md).

@@ -39,7 +39,7 @@ The following diagram illustrates how Azure AD is used as the single identity ma
 
 To make end-to-end governance concrete, let's examine the benefits with an example scenario.
 
-If you use Azure AD as your single identity management plane, you can remove a developer's access to your Azure resources in one action, by adjusting their ***Azure AD group memberships***. For example, if a contractor's access should be revoked upon project completion, when you remove the contractor's membership from the relevant Azure AD groups, access to ARM templates and Azure DevOps is removed.
+If you use Azure AD as your single identity management plane, you can remove a developer's access to your Azure resources in one action, by adjusting their *Azure AD group memberships*. For example, if a contractor's access should be revoked upon project completion, when you remove the contractor's membership from the relevant Azure AD groups, access to ARM templates and Azure DevOps is removed.
 
 ## Mirror RBAC model with role assignments
 
