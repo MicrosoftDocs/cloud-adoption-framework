@@ -4,7 +4,7 @@
 items:
   - name: Modern application platform - Microsoft Cloud Adoption Framework for Azure
     href: index.md
-    pdf_name: Modern App Platform - Microsoft Cloud Adoption Framework for Azure
+    pdf_name: Modern application platform - Microsoft Cloud Adoption Framework for Azure
   - name: Overview
     items:
     - name: Azure products
