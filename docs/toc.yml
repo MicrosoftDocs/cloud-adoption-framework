@@ -362,7 +362,7 @@ items:
             - name: Azure network security best practices
               href: /azure/security/fundamentals/network-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Azure operational security best practices
-              href: /azure/security/fundamentals/operational-best-practices?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json
+              href: /azure/security/fundamentals/operational-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Partner landing zones
         href: ready/landing-zone/partner-landing-zone.md
       - name: Infrastructure-as-code theory
@@ -1073,7 +1073,7 @@ items:
             - name: Chatbots
               items:
               - name: Create and deploy a basic bot
-                href: /azure/bot-service/bot-builder-tutorial-basic-deploy?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&tabs=csharp&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json&view=azure-bot-service-4.0
+                href: /azure/bot-service/bot-builder-tutorial-basic-deploy?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
               - name: "Learning path: Create bots with the Azure Bot Service"
                 href: /learn/paths/create-bots-with-the-azure-bot-service
               - name: Azure bot samples on GitHub
@@ -1087,7 +1087,7 @@ items:
               - name: Reference architecture for microservices with Azure Kubernetes Service (AKS)
                 href: /azure/architecture/reference-architectures/containers/aks-microservices/aks-microservices
               - name: Reference architecture for serverless microservices
-                href: /samples/azure-samples/serverless-microservices-reference-architecture/serverless-microservices-reference-architecture/?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+                href: /samples/azure-samples/serverless-microservices-reference-architecture/serverless-microservices-reference-architecture/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Containers
               items:
               - name: What is Kubernetes?
@@ -1130,7 +1130,7 @@ items:
           - name: Feedback loops
             items:
             - name: Manage feedback with Azure DevOps
-              href: /azure/devops/project/feedback?bc=%2fazure%2fcloud-adoption-framework%2ftoc.json&view=azure-devops
+              href: /azure/devops/project/feedback?bc=/azure/cloud-adoption-framework/toc.json
           - name: Continuous integration
             items:
             - name: Continuous integration with Azure Pipelines and GitHub
