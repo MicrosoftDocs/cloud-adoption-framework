@@ -47,7 +47,7 @@ You need basic working knowledge of Azure, Cosmos DB, Azure Machine Learning Ser
 
 For information and support, see the following resources:
 
-- [Azure Synapse Analytics (workspace preview)](/azure/synapse-analytics/)
+- [Azure Synapse Analytics](/azure/synapse-analytics/)
 - [Azure Kubernetes Services](/azure/aks/)
 - [Azure Machine Learning Services](/azure/machine-learning/overview-what-is-azure-ml)
 - [Azure Synapse Content on Microsoft Learn](/learn/browse/?terms=synapse)
@@ -66,23 +66,23 @@ Clone the [Solution Accelerator](https://github.com/microsoft/Azure-Synapse-Reta
 - With Azure API Management, the front end queries the user-based and the item-based recommendations in one unified API layer.
 - Clickstream data and user events are brought back into the data lake for retraining the models and refreshing the recommendations. This feedback increases the accuracy of the recommendations over time.
 
-### Resource Deployment
+### Resource deployment
 
-Use the PowerShell script in the [Resource Deployment](https://github.com/microsoft/Azure-Synapse-Retail-Recommender-Solution-Accelerator/tree/main/Resource_Deployment) folder to deploy the required resources into your Azure Subscription. You can run the script in Cloud Shell in the Azure portal.
+Use the PowerShell script in the [Resource_Deployment](https://github.com/microsoft/Azure-Synapse-Retail-Recommender-Solution-Accelerator/tree/main/Resource_Deployment) folder to deploy the required resources into your Azure Subscription. You can run the script in Cloud Shell in the Azure portal.
 
-### Analytics Deployment
+### Analytics deployment
 
-Use the Notebooks in the [Analytics Deployment](https://github.com/microsoft/Azure-Synapse-Retail-Recommender-Solution-Accelerator/tree/main/Analytics_Deployment) folder to complete this solution accelerator. After you deploy all the required resources from the [ResourceDeployment](https://github.com/microsoft/Azure-Synapse-Retail-Recommender-Solution-Accelerator/blob/main/Resource_Deployment), follow the instructions in Resource Deployment for the Notebooks.  
+Use the Notebooks in the [Analytics_Deployment](https://github.com/microsoft/Azure-Synapse-Retail-Recommender-Solution-Accelerator/tree/main/Analytics_Deployment) folder to complete this solution accelerator. After you deploy all the required resources from the [Resource_Deployment](https://github.com/microsoft/Azure-Synapse-Retail-Recommender-Solution-Accelerator/blob/main/Resource_Deployment) folder, follow the instructions in Resource Deployment for the Notebooks.  
 
-### Application Frontend Web Application Deployment
+### Application front end web application deployment
 
-The [Application Front-end](https://github.com/microsoft/Azure-Synapse-Retail-Recommender-Solution-Accelerator/tree/main/Application_Frontend_Deployment) folder contains the resources to deploy the front-end web application.  
+The [Application Front end](https://github.com/microsoft/Azure-Synapse-Retail-Recommender-Solution-Accelerator/tree/main/Application_Frontend_Deployment) folder contains the resources to deploy the front-end web application.  
 
-### Application Backend API Deployment
+### Application back end API deployment
 
-The [Application Backend](https://github.com/microsoft/Azure-Synapse-Retail-Recommender-Solution-Accelerator/tree/main/Application_Backend_Deployment) folder contains the resources for product details. Manage the products presented to the Azure portal.
+The [Application Back end](https://github.com/microsoft/Azure-Synapse-Retail-Recommender-Solution-Accelerator/tree/main/Application_Backend_Deployment) folder contains the resources for product details. Manage the products presented to the Azure portal.
 
-### ML Model Building
+### Machine learning model building
 
 The [ML Model Building](https://github.com/microsoft/Azure-Synapse-Retail-Recommender-Solution-Accelerator/tree/main/ML_Model_Building) folder contains the resources for exploring how the model was constructed.
 
@@ -94,7 +94,7 @@ Tractor Supply Company To Expand Relationship With Microsoft. The largest rural 
   
 "As Tractor Supply is committed to providing legendary service to our customers, this partnership with Microsoft to enhance our analytics platform will deliver insights that help us better understand our customers, while offering products and services that truly meet their needs," said Rob Mills, Tractor Supply's Executive Vice President, Chief Technology, Digital Commerce, and Strategy Officer. "We believe that this collaboration with Microsoft will help us drive innovation and stay nimble when responding to market changes and our customers’ ever-evolving needs."
   
-Read the full story here: [https://corporate.tractorsupply.com/newsroom/news-releases/news-releases-details/2020/Tractor-Supply-Company-To-Expand-Relationship-With-Microsoft/default.aspx](https://corporate.tractorsupply.com/newsroom/news-releases/news-releases-details/2020/Tractor-Supply-Company-To-Expand-Relationship-With-Microsoft/default.aspx)
+[Read the full story here.](https://corporate.tractorsupply.com/newsroom/news-releases/news-releases-details/2020/Tractor-Supply-Company-To-Expand-Relationship-With-Microsoft/default.aspx)
 
 ![Starbucks logo](../../_images/innovate/starbucks.png)
 
@@ -104,8 +104,7 @@ Within the app, customers receive tailor-made order suggestions generated by usi
 
 "Everything we do in technology is centered around the customer connection in the store, the human connection, one person, one cup, one neighborhood at a time." — Gerri Martin-Flickinger, Starbucks executive vice president and chief technology officer.
 
-Read the full story here:
-[https://news.microsoft.com/transform/starbucks-turns-to-technology-to-brew-up-a-more-personal-connection-with-its-customers/](https://news.microsoft.com/transform/starbucks-turns-to-technology-to-brew-up-a-more-personal-connection-with-its-customers/)
+[Read the full story here.](https://news.microsoft.com/transform/starbucks-turns-to-technology-to-brew-up-a-more-personal-connection-with-its-customers/)
 
 ## Next steps
 
