@@ -33,39 +33,43 @@ The **Azure Purview Readiness Checklist** below is high level guidance that can 
     - Who are the data owners?
     - Who has write access to the data?
     - Where is the data? Is it in the Cloud? Is it on-premises?
-    - What types of data sources do you have in the organization? (e.g., Azure SQL DB, Amazon S3, on-premises SQL Servers, etc.)
+    - What types of data sources do you have in the organization? (e.g., Azure SQL Database, Amazon S3, On-premises SQL Servers, etc.)
   
 2. Define roles and responsibilities to build and manage a unified data governance solution. Consider the following roles for your organization:
 
-    - Data Curators: Manage Classifications and Glossary Terms.
-    - Data Readers: Require read-only access to Search and Insights Reports.
-    - Data Source Administrators + Curators: Register and Scan Data Sources, Manage Catalog.
-    - Data Source Administrators + Readers: Register and Scan Data Sources.
-    - Supporting Roles for building an end-to-end data governance solution using Azure Purview:
-       - Azure Subscription Administrators to manage Azure resources, Policies, RBAC, Resource Providers.
-       - Azure AD Administrators to manage identity and application registration.
-       - NetOps to prepare the network to support Azure Purview connectivity requirements.
-       - SecOps to manage Azure Key Vaults and secrets.
-       - M365 Administrators (Microsoft M365 Information Protection if M365 Sensitivity Labels will be used)
-       - Data Source Owners to map them for roles in Azure Purview.
+    |Role  |Description  |
+    |---------|---------|
+    |Data Curators     |Manage classifications and glossary terms.         |
+    |Data Readers     |Requires read-only access for search and insights reports.         |
+    |Data Source Administrators + Curators     |Register and scan data sources, and manage catalog.         |
+    |Data Source Administrators + Readers     |Register and scan data sources.         |
 
-3. Define whether there is an existing [Enterprise Scale Analytics and AI Data Management Landing Zone] in the environment or you need to deploy a new Data Management Landing Zone. The Data Management Landing Zone is a centralized subscription to deploy services such as Azure Purview.
+    Consider the following supporting roles for building an end-to-end data governance solution using Azure Purview:
+
+    |Role  |Description  |
+    |---------|---------|
+    |Azure Subscription Administrators     |Manage Azure resources, policies, RBAC, and resource providers.         |
+    |Azure AD Administrators     |Manage identity and application registration.         |
+    |NetOps Administrators     |Prepare the network to support Azure Purview connectivity requirements.         |
+    |SecOps Administrators     |Manage Azure Key Vaults and secrets.         |
+    |M365 Administrators     |Microsoft M365 Information Protection if M365 Sensitivity Labels will be used.         |
+    |Data Source Owners     |Mapped to roles in Azure Purview         |
+
+3. Define whether there is an existing Enterprise Scale Analytics and AI [Data Management Landing Zone](eslz-data-management-landing-zone.md) in the environment or if there is a need to deploy a *new* Data Management Landing Zone. The Data Management Landing Zone is a centralized subscription to deploy services such as Azure Purview.
 
 4. Manage budget, costs and licensing.
-   - Understand how Azure Purview billing model works, and define how to control costs. Currently, Microsoft offers Azure Purview in a [pay-as-you-go model](http://aka.ms/purviewpricing).
+   - Understand how the Azure Purview billing model works, and define how to control costs. Currently, Microsoft offers Azure Purview in a [pay-as-you-go model](http://aka.ms/purviewpricing).
    - Know additional costs. For example, if you are planning to extend Microsoft 365 Sensitivity Labels to files and database columns in Azure Purview, you need M365 E5 licenses.
 
-5. Plan for enterprise level communication, readiness and awareness across different teams who require to curate, use and manage data across multiple platforms.
+5. Plan for enterprise level communication, readiness and awareness across different teams who are required to curate, use and manage data across multiple platforms.
 
-6. Locate data sources. If they are in Azure, what subscriptions are in scope. (Design for Data Management Landing Zones)
-   - Identify Subscription Owners of Data Landing Zones.
-   - Define what authentication methods to use to allow Azure Purview to connect to and scan data sources.
-   - If data sources reside in IaaS or on-premises VMs, deploy Microsoft Integration Runtime.
-   - Define Azure Key Vaults requirements to keep required keys and secrets for data governance.
+6. Locate data sources. If they are in Azure, identify which subscriptions are in scope.
+   - Identify subscription owners of Data Landing Zones.
+   - Define which authentication methods to use to allow Azure Purview to connect to and scan data sources.
+   - If data sources reside in IaaS or on on-premises VMs, deploy Microsoft Integration Runtime.
+   - Define Azure Key Vaults requirements to store required keys and secrets for data governance purposes.
 
-7. Prepare Network and connectivity using Private Endpoint.
-
-For further reading, see [Develop a plan for data management and analytics](./plan.md).
+7. Prepare network and connectivity using [Azure Private Endpoint](/azure/private-link/private-endpoint-overview).
 
 ## Phase 2: Build your Data Governance and Management Foundation
 
