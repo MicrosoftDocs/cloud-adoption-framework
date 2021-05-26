@@ -1,6 +1,6 @@
 ---
-title: Enterprise-scale platform automation and DevOps for Windows Virtual Desktop
-description: Learn how this enterprise-scale scenario can improve platform automation and DevOps for Windows Virtual Desktop.
+title: platform automation and DevOps for Windows Virtual Desktop
+description: Learn how this design area can improve platform automation and DevOps for Windows Virtual Desktop.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/18/2021
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Platform automation and DevOps for a Windows Virtual Desktop enterprise-scale scenario
+# Platform automation and DevOps considerations for a Windows Virtual Desktop
 
 Windows Virtual Desktop is a managed service that provides a Microsoft control plane for your desktop virtualization environment.
 

@@ -1,6 +1,6 @@
 ---
-title: Enterprise-scale BCDR for Windows Virtual Desktop
-description: Learn how this enterprise-scale scenario can improve business continuity and disaster recovery (BCDR) of the Windows Virtual Desktop.
+title: BCDR for Windows Virtual Desktop
+description: Learn how this design area can improve business continuity and disaster recovery (BCDR) of the Windows Virtual Desktop.
 author: igorpag
 ms.author: brblanch
 ms.date: 05/18/2021
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Business continuity and disaster recovery (BCDR) for Windows Virtual Desktop enterprise-scale scenario
+# Business continuity and disaster recovery (BCDR) considerations for Windows Virtual Desktop
 
 Windows Virtual Desktop is a managed service that provides Microsoft a control plane for your desktop virtualization environment. The service is free of charge, and Microsoft doesn't offer a financially backed [service-level agreement (SLA)](https://azure.microsoft.com/support/legal/sla/virtual-desktop). Despite having no SLA, we try to achieve at least 99.9% availability for the Windows Virtual Desktop service URLs.
 
