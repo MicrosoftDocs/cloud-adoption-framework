@@ -141,10 +141,10 @@ items:
         href: ./eslz-azure-synapse-analytics-integration.md
       - name: Azure Purview Integration
         items:
-          - name: Azure Purview Deployment Overview
-            href: ./eslz-purview-deployment.md
-          - name: Azure Purview Deployment Checklist
-            href: ./eslz-purview-checklist.md        
+          - name: Readiness Checklist
+            href: ./eslz-purview-checklist.md 
+          - name: Deployment
+            href: ./eslz-purview-deployment.md       
       - name: Data Landing Zone Ingestion
         items:
           - name: Data Ingestion

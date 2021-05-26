@@ -1,6 +1,6 @@
 ---
-title: Enterprise Scale Analytics and AI Azure Purview Deployment
-description: Enterprise Scale Analytics and AI Azure Purview Deployment Overview
+title: Azure Purview deployment best practices for 'data management and analytics' Enterprise-Scale scenario
+description: Azure Purview best practices for account setup, networking, name resolution, authentication of data sources, roles and access control.
 author: zeinam
 ms.author: zeinam # Microsoft employees only
 ms.date: 05/21/2021
@@ -9,23 +9,24 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Azure Purview Deployment Best Practices
+# Azure Purview deployment best practices for 'data management and analytics' Enterprise-Scale scenario
 
-[Azure Purview](https://azure.microsoft.com/services/purview) is a unified data governance service that helps organizations to manage and govern data across on-premises, multi-cloud, and software-as-a-service (SaaS). Azure Purview creates a holistic, up-to-date map of data landscape with automated data discovery, sensitive data classification, and end-to-end data lineage. Azure Purview empowers data consumers to find valuable, trustworthy data.
-
-For data governance, inside your Data Landing Zones, Azure Purview provides the following capabilities along with other features:
+The [Data Management Landing Zone](eslz-data-management-landing-zone.md) is responsible for the governance of the Enterprise Scale Analytics and AI platform and relies on Azure Purview to provide the following data management capabilities:
 
 - [Data Catalog](eslz-data-management-landing-zone.md/#data-catalog)
-- [Data Discovery](eslz-data-management-landing-zone.md/#data-discovery)
-- [Data Classification and labeling](eslz-data-management-landing-zone.md/#data-classification)
+- [Data Classification](eslz-data-management-landing-zone.md/#data-classification)
 - [Data Lineage](eslz-data-management-landing-zone.md/#data-lineage)
 
-This section aims to explain prescribed configurations which are specific to the Enterprise Scale Analytic and AI solution pattern and discusses a collection of Azure best practices to enhance your Data Governance using Azure Purview. It is a compliment to the official [Azure Purview Documentation](https://docs.microsoft.com/azure/purview/).
+[Azure Purview](https://azure.microsoft.com/services/purview) is a unified data governance service that helps organizations to manage and govern data across on-premises, multi-cloud, and software-as-a-service (SaaS). Azure Purview creates a holistic, up-to-date map of the data landscape with automated data discovery, sensitive data classification, and end-to-end data lineage. Azure Purview empowers data consumers to find valuable, trustworthy data.
+
+> [!NOTE]
+> We recommend using third-party tools of your choice to integrate the remaining capabilities of the [Data Management Landing Zone](eslz-data-management-landing-zone.md) with Azure that are currently not supported by Azure Purview.
+
+This section aims to explain prescribed configurations which are specific to the Enterprise Scale Analytic and AI solution pattern and discusses a collection of Azure best practices to enhance your data governance using Azure Purview. It is a compliment to the official [Azure Purview Documentation](https://docs.microsoft.com/azure/purview/).
 
 ## Overview
 
-One Azure Purview account is deployed inside _Data Management Landing Zones_ which serves as a centralized Data Catalog and Data Governance solution.
-From Data Management Landing Zone, the Data Catalog (Azure Purview) will be able to communicate with each Data Landing Zone via private network connectivity using VNet Peering across Data Management and Data Landing Zones and Self-Hosted Integration Runtimes.
+One Azure Purview account is deployed inside the Data Management Landing Zone which serves as a centralized Data Catalog and Data Governance solution. From Data Management Landing Zone, the Data Catalog (Azure Purview) will be able to communicate with each Data Landing Zone via private network connectivity using VNet Peering across Data Management and Data Landing Zones and Self-Hosted Integration Runtimes.
 Discovery of datasets in on-premises stores and other public clouds is achieved by additional deployments of Self-Hosted Integration Runtimes.
 
 ![Azure Purview Overview](./images/purview-overview.png)

@@ -1,5 +1,5 @@
 ---
-title: Enterprise Scale Analytics and AI Azure Purview Readiness Checklist 
+title: Azure Purview readiness checklist for 'data management and analytics' Enterprise-Scale scenario 
 description: Enterprise Scale Analytics and AI Azure Purview Readiness Checklist 
 author: zeinam
 ms.author: zeinam # Microsoft employees only
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Azure Purview Readiness Checklist
+# Azure Purview readiness checklist for 'data management and analytics' Enterprise-Scale scenario
 
 As your organization starts its data governance journey with Azure Purview and Enterprise Scale Analytics and AI, you realize that there are multiple stages in the adoption lifecycle. A well-planned deployment of **Azure Purview** in the [Data Management Landing Zone](eslz-data-management-landing-zone.md) can provide the following benefits:
 
