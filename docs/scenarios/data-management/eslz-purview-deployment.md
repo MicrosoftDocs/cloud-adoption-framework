@@ -106,31 +106,26 @@ DNS resolution for private endpoints should be handled through central Azure Pri
 
 ![High Level Name Resolution Architecture](./images/purview-name-resolution.png)
 
-If you have a hybrid cloud and cross-premises name resolution is required, it is important that on-premises DNS Servers are configured correctly to forward the appropriate requests to the Custom DNS server in Azure. There are multiple ways to do this:
+If you have a hybrid cloud, and cross-premises name resolution is required, it is important that on-premises DNS Servers are configured correctly to forward the appropriate requests to the Custom DNS server in Azure. There are multiple ways to do this:
 
 - If you have Custom DNS already in Azure, you just need to setup conditional forwarders on your on-premises DNS server pointing to it.
 
 - If you do not have a Custom DNS VM in Azure, you can deploy the Azure Virtual Machine Scale Set that includes Nginx already configured to forward DNS requests to Azure-provided DNS IP **168.63.129.16**. Refer to [Deploy VMSS of a NGINX DNS Proxy into an existing Virtual Network](https://github.com/Microsoft/PL-DNS-Proxy).
 
 >[!TIP]
-> To allow name resolution among Data Management and Data Landing Zones, use the same Private DNS Zones located inside `{prefix}-global-dns` inside the Data Management Landing Zones across Data Management and Data Landing zones to provide private DNS Name Resolution across multiple landing zones.
+> To allow name resolution between the Data Management Landing Zone and the Data Landing Zones, use the same Private DNS Zones located inside `{prefix}-global-dns` resource group inside the Data Management Landing Zone.
 
 For more information related to Enterprise Scale Analytics and AI networking and name resolution, see [Enterprise Scale Analytics and AI Networking](./eslz-network-topology-and-connectivity.md)
 
 ## Manage authentication for data sources in Azure Purview
 
-Azure Purview requires access to the _control plane_ and _data plane_ to register and scan data sources.
+Azure Purview requires access to the _control plane_ and the _data plane_ to register and scan data sources.
 
 ### Register Data Sources
 
-#### Assign Azure RBAC _Reader_ role to Azure Purview Managed Identity to register data sources
+When the Azure Purview Account is deployed, a system-assigned managed identity is automatically created in your Azure Active Directory tenant and assigned to this resource. To read and enumerate Azure resources under a subscription or resource group when registering data sources in Azure Purview, the Azure Purview managed identity requires the Azure RBAC _Reader_ role on the scope.
 
-When Azure Purview Account is deployed, a System Managed Identity is automatically created in your Azure Active Directory tenant and assigned to this resource. 
-
-To read and enumerate Azure resources under a subscription or resource group when registering data sources in Azure Purview, the Azure Purview Managed Identity requires Azure RBAC _Reader_ role on the scope.
-
-> [!IMPORTANT]
-> Consider assigning _Reader_ role to Azure Purview Managed Identity in each Data Landing Zones subscriptions, before registering any of the following data sources into Azure Purview:
+Consider assigning the _Reader_ role to the Azure Purview managed identity in each Data Landing Zone subscription before registering any of the following data sources into Azure Purview:
 
 - Azure Blob Storage
 - Azure Data Lake Storage Gen1
@@ -141,73 +136,62 @@ To read and enumerate Azure resources under a subscription or resource group whe
 
 ### Scan Data Sources
 
-#### Deploy and register self-hosted integration runtime
+#### Deploy and register self-hosted integration runtimes
 
-Deploy and register [Self-hosted Integration Runtime](https://docs.microsoft.com/azure/purview/manage-integration-runtimes) VMs for each data landing zone. The Self-hosted IRs are required to scan data sources such as Azure SQL DB or any VM-based data sources in the on-premises or in each data landing zones.
-A self-hosted integration runtime can run copy activities between a cloud data store and a data store in a private network. It also can dispatch transform activities against compute resources in an on-premises network or an Azure virtual network. The installation of a self-hosted integration runtime needs an on-premises machine or a virtual machine inside a private network.
+Deploy and register [self-hosted integration runtime (IR)](https://docs.microsoft.com/azure/purview/manage-integration-runtimes) VMs for each Data Landing Zone. Self-hosted IRs are required to scan data sources such as Azure SQL DB or any VM-based data sources in the on-premises or in each of the Data Landing Zones. A self-hosted IR can run copy activities between a cloud data store and a data store in a private network. It also can dispatch transform activities against compute resources in an on-premises network or an Azure virtual network. The installation of a self-hosted IR needs an on-premises machine or a virtual machine inside a private network.
 
-We recommend that you use a dedicated machine to host IR. The machine should be separate from the server hosting the data store.
+> [!TIP]
+> We recommend that you use a dedicated machine to host the IR. The machine should be separate from the server hosting the data store. Also, it is highly recommended to plan for at least 2 self-hosted IR VMs in each Data Landing Zone or on-premises environment.
 
-Also, it is highly recommended to plan for at least 2 self-hosted integration runtime VMs in each data landing zone or on-premises environment.
+You might want to host an increasing concurrent workload or you might want to achieve higher performance in your present workload level. You can enhance the scale of processing by the following approaches:
 
-You might want to host an increasing concurrent workload. Or you might want to achieve higher performance in your present workload level. You can enhance the scale of processing by the following approaches:
+- Scale up works --? when the processor and memory of the node are being less than fully utilized.
+- You can scale out the self-hosted IR by adding more nodes (virtual machines).
 
-- Scale up works when the processor and memory of the node are being less than fully utilized.
-- You can scale out the self-hosted IR, by adding more nodes (machines).
+#### Assign access to the data plane to scan data sources
 
-#### Assign access to data plane to scan data sources
-
-In order to provide access to Azure Purview at data plane, there are multiple options to setup the authentication for Azure Purview to access data sources:
+In order to provide access to Azure Purview at data plane there are multiple options to setup the authentication for Azure Purview to access data sources:
 
 - Option 1: Managed Identity
-- Option 2: Account Key or Passwords stored in Azure Key Vault as a secret
-- Option 3: Service Principal stored in Azure Key Vault as a secret
+- Option 2: Account key or passwords stored in Azure Key Vault as a secret
+- Option 3: Service principal stored in Azure Key Vault as a secret
 
 > [!IMPORTANT]
-> Currently, in order to scan data sources through Private Link in Azure Purview, you need to deploy a Self-Hosted Integration Runtime and use either **key Vault** or **Service Principal** from the options above, as for authentication to data sources.
+> Currently, in order to scan data sources through Private Link in Azure Purview, you need to deploy a Self-Hosted Integration Runtime and use either **key Vault** or **Service Principal** from the options above for authentication to data sources.
 
 >[!TIP]
-> It is recommended to use Azure Purview Managed Identity as your preferred option to scan data sources if data sources cannot be connected to private endpoint.
+> It is recommended to use Azure Purview Managed Identity as your preferred option to scan data sources if data sources cannot be connected to private endpoint. --?
 
-### Store Secrets inside Azure Key Vault
+### Store secrets inside Azure Key Vault
 
-Multiple Azure Key Vault resources are deployed inside Data Management and Data Landing Zones. Use the following Key Vault resources in each Data Landing Zones to store data sources secrets:
+Multiple Azure Key Vault resources are deployed inside the Data Management Landing Zone and the Data Landing Zone subscriptions. Use the following Azure Key Vault resources in each subscription to store secrets for data sources: --?
 
-|Subscription  |Key Vault resource  |Purpose  |
+|Subscription  |Key Vault  |Purpose  |
 |---------|---------|---------|
-|Data Management        | `{prefix}-`keyvault001        |keys and database authentication secrets related to Metadata data sources in the Data Management Landing Zone         |
-|Data Landing Zone 1    |`{prefix}-`keyvault001         |keys and database authentication secrets related to Azure SQL secrets, consumed by ADF in the Data Landing Zone        |
-|Data Landing Zone 1    |`{prefix}-`keyvault002         |keys and database authentication secrets related to MySQL, used by the Databricks workspaces in the Data Landing Zone        |
-|Data Landing Zone 1    |`{prefix}-`keyvault003         |N/A for Purview         |
-|Data Landing Zone 2    |`{prefix}-`keyvault001         |keys and database authentication secrets related to Azure SQL secrets, consumed by ADF in the Data Landing Zone        |
-|Data Landing Zone 2    |`{prefix}-`keyvault002         |keys and database authentication secrets related to MySQL, used by the Databricks workspaces in the Data Landing Zone        |
-|Data Landing Zone 2    |`{prefix}-`keyvault003         | N/A for Purview        |
+|Data Management        | `{prefix}-`keyvault001       |Keys and database authentication secrets related to Metadata data sources in the Data Management Landing Zone         |
+|Data Landing Zone     |`{prefix}-`keyvault001         |Keys and database authentication secrets related to Azure SQL consumed by ADF in the Data Landing Zone        |
+|Data Landing Zone     |`{prefix}-`keyvault002         |Keys and database authentication secrets related to MySQL used by the Databricks workspaces in the Data Landing Zone        |
+|Data Landing Zone     |`{prefix}-`keyvault003         |N/A for Purview         |
 
 ### Connect Data Landing Zones Azure Key Vaults to your Azure Purview Account
 
-Azure Purview can use the secrets and credentials stored in Azure Key Vaults only if the Azure key Vault connection is created inside Azure Purview Account and The secret is registered.
-
-After adding a new Data Landing Zone, it is necessary to create new Azure Key Vault connections inside Azure Purview Account. The connection is a one to one association of Azure Key Vault resource with the Azure Purview account and will allow create credentials inside the Azure Purview account out of the secrets stored in the Key Vault.
+Azure Purview can use the secrets and credentials stored in Azure Key Vaults only if the Azure key Vault connection is created inside the Azure Purview Account and the secret is registered. After adding a new Data Landing Zone, it is necessary to create new Azure Key Vault connections inside the Azure Purview Account. The connection is a one-to-one association of Azure Key Vault resource with the Azure Purview account and will allow creation of credentials inside the Azure Purview account based on the secrets stored in the Key Vault.
 
 For more information, see [Create Azure Key Vaults connections in your Azure Purview account](https://docs.microsoft.com/en-us/azure/purview/manage-credentials#create-azure-key-vaults-connections-in-your-azure-purview-account).
 
 >[!TIP]
-> Keep the Key Vault connections list minimum by removing any unused Azure Key vaults.  
->
-### Create Credentials inside Azure Purview
+> Minimize Key Vault connections by removing any unused Azure Key Vaults.  
+
+### Create credentials inside Azure Purview
 
 You may require to setup a _Credential_ using a Key Vault _Secret_ for scenarios such as the following:
 
-- To scan any data sources where Azure Purview Managed Identity cannot be used as the authentication method.
-- To scan any data sources using Self-hosted integration runtime, the supported authentication types such as Account Keys, SQL Authentication or Service Principal must be stored in a Credential.
-- To scan data sources using Private Endpoint for Data Ingestion.
-- To scan data sources that are inside a Virtual Machine or inside on-premises environment.
+- To scan any data sources where Azure Purview managed identity cannot be used as the authentication method.
+- To scan any data sources using a self-hosted integration runtime, the supported authentication types such as account keys, SQL authentication or service principal must be stored in a credential. --?
+- To scan data sources using a Private Endpoint for data ingestion.
+- To scan data sources that are inside a Virtual Machine or inside an on-premises environment.
 
-Before creating any Credentials in Azure Purview, your Azure Purview Account must have access to Key Vault Secrets. Use Azure Key Vault Access Policy or Role-based Access Control to grant Azure Purview MSI the required access.
-
-For more information about how to grant Azure Purview MSI access to Azure Key Vault and create Credentials inside Azure Purview, see [Credentials for source authentication in Azure Purview](https://docs.microsoft.com/en-us/azure/purview/manage-credentials).
-
-<br>
+Before creating any credentials in Azure Purview, your Azure Purview Account must have access to Key Vault secrets. Use Azure Key Vault access policy or RBAC to grant Azure Purview MSI the required access. For more information about how to grant Azure Purview MSI access to Azure Key Vault and create Credentials inside Azure Purview, see [Credentials for source authentication in Azure Purview](https://docs.microsoft.com/en-us/azure/purview/manage-credentials).
 
 ## Azure Purview Roles and Access Control
 
@@ -220,13 +204,11 @@ Azure Purview has several Azure built-in RBAC roles to manage Azure purview at d
 
 ![Azure Purview Roles](./images/purview-roles1.png)
 
-<br>
+--? describe the table
 
-For more information about Azure Purview catalog Role, see [Role-based access control in Azure Purview's Data Plane](https://docs.microsoft.com/azure/purview/catalog-permissions)
+For more information about Azure Purview catalog roles, see [Role-based access control in Azure Purview's Data Plane](https://docs.microsoft.com/azure/purview/catalog-permissions)
 
-Once Data Management Landing Zone deployment completed, use least privilege model to provide access to view and manage data in Azure Purview.
-
-Assign roles to Azure Purview resource using [Azure Role-based Access control](https://docs.microsoft.com/en-us/azure/role-based-access-control).
+Once the Data Management Landing Zone deployment completed, use the least privilege model to provide access to view and manage data in Azure Purview. Assign roles to Azure Purview resource using [Azure Role-based Access control](https://docs.microsoft.com/en-us/azure/role-based-access-control).
 
 Review the following list of personas involved in an Enterprise Scale Analytics and AI deployment and assign them the relevant Azure Purview roles so they can contribute in the success of the program:
 
