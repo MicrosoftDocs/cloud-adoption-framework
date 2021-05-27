@@ -11,7 +11,7 @@ ms.subservice: operate
 
 # Managing the cloud for the retail industry
 
-The Manage methodology in the Cloud Adoption Framework for Azure offers a path for implementing an operations baseline. Develop that baseline throughout your cloud adoption lifecycle. For more information, see [Cloud management in the Cloud Adoption Framework](../../manage/).
+The Manage methodology in the Cloud Adoption Framework for Azure offers a path for implementing an operations baseline. Develop that baseline throughout your cloud adoption lifecycle. For more information, see [Cloud management in the Cloud Adoption Framework](../../manage/index.md).
 
 For retail companies, IT operations are heavily influenced by the company's historical growth patterns. Those growth patterns influence your organizational structures across your technology teams. To understand how history affects operations management, see [Understand common growth patterns for retailers](./organize.md#understand-common-growth-patterns-for-retailers).
 
