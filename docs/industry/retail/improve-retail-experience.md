@@ -12,9 +12,9 @@ ms.custom: think-tank
 
 # Improving retail experience with a retail recommender solution accelerator
 
-In the retail world, digital channels drive improved customer engagement. Retailers reimagine how they communicate and share updates on their products. Retailers are looking for ways to improve the connection between shopper and product to improve the attach rate of products.
+In the retail world, digital channels drive improved customer engagement. Retailers are looking for ways to improve the connection between shopper and product to improve the attach rate of products.
 
-In-person shopping can lead to impulse buying. Retailers have all products on display. The online shopping experience is different. Shoppers look for specific products, add them to their basket, and then checkout. The retail recommender solution helps retailers highlight and expose associated products that might interest a shopper.
+In-person shopping can lead to impulse buying. Retailers have all their products on display. The online shopping experience is different. Shoppers look for specific products, add them to the cart, and then checkout. The retail recommender solution helps retailers highlight and expose associated products that might interest a shopper.
 
 This solution accelerator creates a personalized online shopping experience. Applying AI and advanced data analytics technology present shoppers with relevant content and products in the following ways:
 
@@ -32,7 +32,7 @@ Here are some benefits of using the solution accelerator:
 
 ## Prerequisites
 
-This article shows you how to build out a minimal product for the solution accelerator. Before you begin, be sure you have access to the following items:
+This article shows you how to build out a minimal product for the solution accelerator. Before you begin, set up the following prerequisites:
 
 - An Azure account with an active subscription. [Create an account for free.](https://azure.microsoft.com/free/)
 - [Visual Studio 2017 or Visual Studio 2019](https://azure.microsoft.com/downloads/). Ensure you select the **Azure development** workload during installation.
@@ -72,19 +72,19 @@ Use the PowerShell script in the [Resource_Deployment](https://github.com/micros
 
 ### Analytics deployment
 
-Use the Notebooks in the [Analytics_Deployment](https://github.com/microsoft/Azure-Synapse-Retail-Recommender-Solution-Accelerator/tree/main/Analytics_Deployment) folder to complete this solution accelerator. After you deploy all the required resources from the [Resource_Deployment](https://github.com/microsoft/Azure-Synapse-Retail-Recommender-Solution-Accelerator/blob/main/Resource_Deployment) folder, follow the instructions in Resource Deployment for the Notebooks.  
+Use the Notebooks in the [Analytics_Deployment](https://github.com/microsoft/Azure-Synapse-Retail-Recommender-Solution-Accelerator/tree/main/Analytics_Deployment) folder to complete this solution accelerator. After you deploy all the required resources from the [Resource_Deployment](https://github.com/microsoft/Azure-Synapse-Retail-Recommender-Solution-Accelerator/blob/main/Resource_Deployment) folder, follow the instructions in `Resource_Deployment` for the Notebooks.  
 
 ### Application front end web application deployment
 
-The [Application Front end](https://github.com/microsoft/Azure-Synapse-Retail-Recommender-Solution-Accelerator/tree/main/Application_Frontend_Deployment) folder contains the resources to deploy the front-end web application.  
+The [Application_Frontend_Deployment](https://github.com/microsoft/Azure-Synapse-Retail-Recommender-Solution-Accelerator/tree/main/Application_Frontend_Deployment) folder contains the resources to deploy the front-end web application.  
 
 ### Application back end API deployment
 
-The [Application Back end](https://github.com/microsoft/Azure-Synapse-Retail-Recommender-Solution-Accelerator/tree/main/Application_Backend_Deployment) folder contains the resources for product details. Manage the products presented to the Azure portal.
+The [Application_Backend_Deployment](https://github.com/microsoft/Azure-Synapse-Retail-Recommender-Solution-Accelerator/tree/main/Application_Backend_Deployment) folder contains the resources for product details. Manage the products presented to the Azure portal.
 
 ### Machine learning model building
 
-The [ML Model Building](https://github.com/microsoft/Azure-Synapse-Retail-Recommender-Solution-Accelerator/tree/main/ML_Model_Building) folder contains the resources for exploring how the model was constructed.
+The [ML_Model_Building](https://github.com/microsoft/Azure-Synapse-Retail-Recommender-Solution-Accelerator/tree/main/ML_Model_Building) folder contains the resources for exploring how the model was constructed.
 
 ## Customer examples  
 
