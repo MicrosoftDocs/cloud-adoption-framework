@@ -12,15 +12,15 @@ ms.custom: internal
 
 # Machine learning DevOps guide
 
-Machine Learning DevOps (MLOps) is an organizational change that relies on a combination of people, process, and technology to deliver machine learning solutions in a robust, scalable, reliable, and automated way. This guide provides a balanced view across the three areas of people, process, and technology. It summarizes best practices and learnings from adopting MLOps in the enterprise with Azure Machine Learning.
+Machine learning DevOps (MLOps) is an organizational change that relies on a combination of people, process, and technology to deliver machine learning solutions in a robust, scalable, reliable, and automated way. This guide provides a balanced view across the three areas of people, process, and technology. It summarizes best practices and learnings from adopting machine learning DevOps in the enterprise with Azure Machine Learning.
 
 This article is subdivided into three sections:
 
-- **An introduction to MLOps** - A conceptual introduction that provides a balanced view across the three areas of people, process, and technology to anyone new to MLOps.
-- **MLOps best practices with Azure Machine Learning** – Key considerations and recommendations to apply MLOps practices scoped to single ML Project.
-- **MLOps at organizational scale: AI factories** – Key considerations and recommendations to drive organizational change with MLOps in an enterprise environment.
+- **An introduction to MLOps:** A conceptual introduction that provides a balanced view across the three areas of people, process, and technology to anyone new to machine learning DevOps.
+- **MLOps best practices with Azure Machine Learning:** Key considerations and recommendations to apply MLOps practices scoped to single ML Project.
+- **MLOps at organizational scale: AI factories:** Key considerations and recommendations to drive organizational change with MLOps in an enterprise environment.
 
-## An introduction to MLOps
+## An introduction to machine learning DevOps (MLOps)
 
 ### Why MLOps?
 
@@ -30,7 +30,7 @@ You might have built a machine learning model that exceeds all of your accuracy 
 
 Over time, you or one of your colleagues might develop a new model that can do better than the old model. The question you must ask is, can you implement it without disrupting your business? It might be necessary for regulatory purposes to re-create the model and explain the model's predictions if unusual or biased predictions are made. Data inputted to your training and model can change over time. Because of these changes, it might be necessary to retrain the model periodically to maintain the accuracy of its predictions. Who is responsible to feed the data, monitor the performance, retrain the model, and fix it should it fail?
 
-If you experience these challenges, you might want to consider implementing an MLOps strategy for your project. At a high level, MLOps refers to the application of DevOps principles to AI-infused applications. Consider a common use case: Suppose you have an application that serves a model's predictions via a REST API. Even a simple use case such as this can face many issues in production. Some MLOps tasks fit well in the general DevOps framework. For example, to set up unit tests and integration tests, or track changes through version control. Other tasks are more unique to MLOps that include how to:
+If you experience these challenges, you might want to consider implementing an machine learning DevOps (MLOps) strategy for your project. At a high level, MLOps refers to the application of DevOps principles to AI-infused applications. Consider a common use case: Suppose you have an application that serves a model's predictions via a REST API. Even a simple use case such as this can face many issues in production. Some MLOps tasks fit well in the general DevOps framework. For example, to set up unit tests and integration tests, or track changes through version control. Other tasks are more unique to MLOps that include how to:
 
 - Enable continuous experimentation and comparison against a baseline model
 - Monitor the incoming data to detect [data drift](/azure/machine-learning/how-to-monitor-datasets?tabs=python)
@@ -39,7 +39,7 @@ If you experience these challenges, you might want to consider implementing an M
 
 Ultimately, the goal of MLOps is to close the gap between development and production and deliver value to customers faster. To achieve this goal, you must rethink how things are done in development and in production. The extent to which data scientists are involved in MLOps is an organizational choice. The role of Data Scientist is defined differently across different organizations. We recommend you review the [MLOps maturity model](/azure/architecture/example-scenario/mlops/mlops-maturity-model) to see where your organization is and where your organization wants to be on the maturity scale.
 
-### How Machine Learning DevOps is different than DevOps
+### How machine learning DevOps is different than DevOps
 
 #### Exploration precedes development and operations
 
@@ -47,7 +47,7 @@ Data science projects are different from application development or data enginee
 
 The experimentation and development stage usually begins when there is enough confidence that the data science project is feasible and can provide real business value. This stage is when development practices become increasingly important. It’s a good practice to capture metrics for all of the experiments that are done at this stage. It’s also important to incorporate source control so that it’s possible to compare models and toggle between different versions of the code if needed. Development activities include the refactoring, testing, and automation of exploration code into repeatable experimentation pipelines, and the creation of model serving applications and pipelines. Refactoring code into more modular components and libraries helps increase reusability and testability, and it allows for performance optimization. Finally, what is deployed into staging and production environments is the model serving application or batch inference pipelines. Next to monitoring of infrastructure reliability and performance, similar to what's done for a regular application with traditional DevOps, the quality of the data, the data profile, and the model must be continuously monitored at the risk of degradation or drift. Machine learning models require retraining over time to stay relevant in a changing environment.
 
-![Diagram of the MLOps stages](media/mlops_stages.png)
+![Diagram of the machine learning DevOps stages](media/mlops_stages.png)
 
 #### Data science lifecycle requires an adaptive way of working
 
@@ -99,7 +99,7 @@ When you plan to adopt MLOps for your next machine learning project, consider ap
 
     When you serve machine learning models in an operationalized environment, it's critical to monitor these services for their infrastructure uptime and compliance, and for model quality. [Set up monitoring](/learn/modules/monitor-data-drift-with-azure-machine-learning/) to identify data and model drift, to understand whether retraining is required, or to set up triggers for automatic retraining.
 
-## MLOps best practices with Azure Machine Learning
+## Machine learning DevOps (MLOps) best practices with Azure Machine Learning
 
 Azure Machine Learning offers several asset management, orchestration, and automation services to help you manage the lifecycle of your model training and deployment workflows. This section discusses best practices and recommendations to apply MLOps across the areas of people, process, and technology supported by Azure Machine Learning.
 
@@ -139,11 +139,11 @@ Azure Machine Learning offers several asset management, orchestration, and autom
 
 ## MLOps at organizational scale: AI factories
 
-A data science team might decide they can manage a handful of machine learning use cases internally. The adoption of MLOps helps set up project teams for better quality, reliability, and maintainability of solutions through balanced teams, supported processes, and technology automation. This adoption allows the team to scale and focus on the development of new use cases.
+A data science team might decide they can manage a handful of machine learning use cases internally. The adoption of machine learning DevOps (MLOps) helps set up project teams for better quality, reliability, and maintainability of solutions through balanced teams, supported processes, and technology automation. This adoption allows the team to scale and focus on the development of new use cases.
 
 As the number of use cases grows in an organization, the management burden of supporting these use cases grows linearly, or even more. The challenge becomes how to use organizational scale to accelerate time-to-market, quicker assessment of use case feasibility, enable repeatability, and how to best utilize the available resources and skillsets across the full range of projects.
 
-An AI factor is the development of repeatable business process, and a collection of standardized artifacts to accelerate the development and deployment of a large set of machine learning use cases by optimizing team set-up, recommended practices, MLOps strategy, architectural patterns, and reusable templates tailored to business requirements.
+An AI factory is the development of repeatable business process, and a collection of standardized artifacts to accelerate the development and deployment of a large set of machine learning use cases by optimizing team set-up, recommended practices, MLOps strategy, architectural patterns, and reusable templates tailored to business requirements.
 
 ### Standardize on repeatable architectural patterns
 
@@ -157,7 +157,7 @@ The architectural patterns can include but aren't limited to the following topic
 
 - Preferred services for each stage of the project
 - Data connectivity and governance
-- An MLOps strategy tailored to the requirements of the industry, business, or data classification
+- A machine learning DevOps (MLOps) strategy tailored to the requirements of the industry, business, or data classification
 - Experiment management process *Champion* or *Challenger* models
 
 ### Facilitate cross-team collaboration and sharing
@@ -224,4 +224,4 @@ The following figure summarizes key elements of an AI factory:
 
 ![AI factory summary](media/aifactory_summary.png)
 
-Not all organization's MLOps requirements are the same. The MLOps architecture for a large multi-national enterprise is unlikely to fit a small startup. Organizations start small and build up as their maturity, model catalog, and experience grows.
+Not all organization's machine learning DevOps (MLOps) requirements are the same. The MLOps architecture for a large multi-national enterprise is unlikely to fit a small startup. Organizations start small and build up as their maturity, model catalog, and experience grows.
