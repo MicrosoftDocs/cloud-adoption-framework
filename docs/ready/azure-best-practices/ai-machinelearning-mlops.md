@@ -134,14 +134,14 @@ Azure Machine Learning offers several asset management, orchestration, and autom
 - When you use Azure DevOps for automation, use [Azure DevOps Tasks for Machine Learning](https://marketplace.visualstudio.com/items?itemName=ms-air-aiagility.vss-services-azureml) to use machine learning models as pipeline triggers.
 - When you develop Python packages for your machine learning application, you can host them in an Azure DevOps repository as artifacts and publish them as a feed. This approach [allows you to integrate](/azure/machine-learning/how-to-use-private-python-packages) the DevOps workflow for building packages with your Azure Machine Learning workspace.
 - Consider the use of a staging environment to system integration test machine learning pipelines with upstream or downstream application components.
-- Create unit and integration test for your inference endpoints for enhanced debuggability and accelerated time to deployment.
+- Create unit and integration tests for your inference endpoints for enhanced debugging and accelerated time to deployment.
 - To trigger retraining, use [dataset monitors](/azure/machine-learning/how-to-monitor-datasets) and use [event-driven workflows](/azure/machine-learning/how-to-use-event-grid) to subscribe to data drift events and automate the trigger of [machine learning pipelines for retraining](/azure/machine-learning/how-to-retrain-designer).
 
 ## MLOps at organizational scale: AI factories
 
 A data science team might decide they can manage a handful of machine learning use cases internally. The adoption of machine learning DevOps (MLOps) helps set up project teams for better quality, reliability, and maintainability of solutions through balanced teams, supported processes, and technology automation. This adoption allows the team to scale and focus on the development of new use cases.
 
-As the number of use cases grows in an organization, the management burden of supporting these use cases grows linearly, or even more. The challenge becomes how to use organizational scale to accelerate time-to-market, quicker assessment of use case feasibility, enable repeatability, and how to best utilize the available resources and skillsets across the full range of projects.
+As the number of use cases grows in an organization, the management burden of supporting these use cases grows linearly, or even more. The challenge becomes how to use organizational scale to accelerate time-to-market, quicker assessment of use case feasibility, enable repeatability, and how to best utilize the available resources and skill sets across the full range of projects.
 
 An AI factory is the development of repeatable business process, and a collection of standardized artifacts to accelerate the development and deployment of a large set of machine learning use cases by optimizing team set-up, recommended practices, MLOps strategy, architectural patterns, and reusable templates tailored to business requirements.
 
@@ -225,3 +225,9 @@ The following figure summarizes key elements of an AI factory:
 ![AI factory summary](media/aifactory_summary.png)
 
 Not all organization's machine learning DevOps (MLOps) requirements are the same. The MLOps architecture for a large multi-national enterprise is unlikely to fit a small startup. Organizations start small and build up as their maturity, model catalog, and experience grows.
+
+## Next steps
+
+To learn more about how to organize and set up Azure Machine Learning environments, see [Organize and set up Azure Machine Learning environments](./ready/azure-best-practices/ai-machine-learning-resource-organization.md)
+> [!div class="nextstepaction"]
+> [Organize and set up Azure Machine Learning environments](./ready/azure-best-practices/ai-machine-learning-resource-organization.md)
