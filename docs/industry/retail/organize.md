@@ -166,7 +166,7 @@ The following section compares your current situation and future goals. Use it t
 
 ## Traditional, central IT, and centralized operations
 
-When the foundation of a retail company is a brick and mortar business, the technology organization likely formed around specific goals. Such goals might include "keep the lights" on and "keep products moving". Traditional retail organizations tend to focus on facility management and supply chain technologies. The technology organization tends to emphasize security, stability, and operations over innovation. Technology teams that have grown in this growth model often operate as a central IT organization with a focus on central operations.
+When the foundation of a retail company is a brick and mortar business, the technology organization likely formed around specific goals. Such goals might include "keep the lights on" and "keep products moving". Traditional retail organizations tend to focus on facility management and supply chain technologies. The technology organization tends to emphasize security, stability, and operations over innovation. Technology teams that have grown in this growth model often operate as a central IT organization with a focus on central operations.
 
 This type of technology team is well suited for the first two stages of the retail cloud maturity model. These stages are siloed retail and connected retail. If your organization needs to go further in that maturity, be sure to read the next section about CCoE and Enterprise operations.
 
