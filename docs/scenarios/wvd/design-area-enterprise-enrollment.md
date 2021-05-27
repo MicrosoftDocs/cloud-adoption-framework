@@ -11,8 +11,9 @@ ms.subservice: ready
 
 # Enterprise enrollment considerations for a Windows Virtual Desktop implementation
 
-## Design considerations
+For most customer implementations, standard best practices around enterprise enrollment and Active Directory tenants are unchanged when deploying Azure landing zones for Windows Virtual Desktop. There are seldom specific considerations or recommendations that would impact enterprise enrollment or Active Directory tenant decisions. See the following considerations to determine whether Windows Virtual Desktop requirements would impact existing tenant decisions.
 
-## Design recommendations
+However, it could be important to understand any decisions previously made by the cloud platform team to be aware of existing [enterprise enrollment or Active Directory tenant decisions](../../ready/enterprise-scale/enterprise-enrollment-and-azure-ad-tenants.md).
 
-## Next steps
+You might also want to review the [identity and access management considerations](./eslz-identity-and-access-management.md) to understand how the Active Directory tenant is applied in the design of authentication and authorization solutions. You might also want to evaluate the [resource organization considerations](./eslz-resource-organization.md) to understand how the enrollment might be organized into management groups, subscriptions, and resource groups.
+
