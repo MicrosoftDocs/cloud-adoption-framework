@@ -13,8 +13,11 @@ ms.subservice: ready
 
 As with all cloud environments, the structure within which resources are deployed will have a direct bearing on how they are managed and governed.
 
+The following considerations and recommendations will help establish proper resource organization and segmentation across management group hierarchies, subscriptions, landing zones, and resource groups. It will also help establish proper tagging strategies to keep resources organized.
 
+## Design considerations
 
+## Design recommendations
 
 ## Next steps
 

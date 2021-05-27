@@ -10,3 +10,9 @@ ms.subservice: ready
 ---
 
 # Enterprise enrollment considerations for a Windows Virtual Desktop implementation
+
+## Design considerations
+
+## Design recommendations
+
+## Next steps
