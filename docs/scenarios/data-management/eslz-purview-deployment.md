@@ -145,7 +145,7 @@ Deploy and register [self-hosted integration runtime (IR)](https://docs.microsof
 
 You might want to host an increasing concurrent workload or you might want to achieve higher performance in your present workload level. You can enhance the scale of processing by the following approaches:
 
-- Scale up works --? when the processor and memory of the node are being less than fully utilized.
+- Scale up when the processor and memory of the node are being less than fully utilized.
 - You can scale out the self-hosted IR by adding more nodes (virtual machines).
 
 #### Assign access to the data plane to scan data sources
@@ -160,18 +160,11 @@ In order to provide access to Azure Purview at data plane there are multiple opt
 > Currently, in order to scan data sources through Private Link in Azure Purview, you need to deploy a Self-Hosted Integration Runtime and use either **key Vault** or **Service Principal** from the options above for authentication to data sources.
 
 >[!TIP]
-> It is recommended to use Azure Purview Managed Identity as your preferred option to scan data sources if data sources cannot be connected to private endpoint. --?
+> In the case where a data source cannot use Private Link, it is recommended to use Azure Purview managed identity to scan data sources.
 
 ### Store secrets inside Azure Key Vault
 
-Multiple Azure Key Vault resources are deployed inside the Data Management Landing Zone and the Data Landing Zone subscriptions. Use the following Azure Key Vault resources in each subscription to store secrets for data sources: --?
-
-|Subscription  |Key Vault  |Purpose  |
-|---------|---------|---------|
-|Data Management        | `{prefix}-`keyvault001       |Keys and database authentication secrets related to Metadata data sources in the Data Management Landing Zone         |
-|Data Landing Zone     |`{prefix}-`keyvault001         |Keys and database authentication secrets related to Azure SQL consumed by ADF in the Data Landing Zone        |
-|Data Landing Zone     |`{prefix}-`keyvault002         |Keys and database authentication secrets related to MySQL used by the Databricks workspaces in the Data Landing Zone        |
-|Data Landing Zone     |`{prefix}-`keyvault003         |N/A for Purview         |
+Multiple Azure Key Vault resources are deployed inside the Data Management Landing Zone and the Data Landing Zone subscriptions to store secrets related to metadata data sources in the Data Management Landing Zone and data sources such as Azure SQL DB (consumed by Azure Data Factory) or Azure Database for MySQL (used by Databricks workspaces) in the Data Landing Zone.
 
 ### Connect Data Landing Zones Azure Key Vaults to your Azure Purview Account
 
@@ -187,24 +180,17 @@ For more information, see [Create Azure Key Vaults connections in your Azure Pur
 You may require to setup a _Credential_ using a Key Vault _Secret_ for scenarios such as the following:
 
 - To scan any data sources where Azure Purview managed identity cannot be used as the authentication method.
-- To scan any data sources using a self-hosted integration runtime, the supported authentication types such as account keys, SQL authentication or service principal must be stored in a credential. --?
+- To scan any data sources using a self-hosted integration runtime, the supported authentication types such as account keys, SQL authentication (password) or service principal must be stored in a credential.
 - To scan data sources using a Private Endpoint for data ingestion.
 - To scan data sources that are inside a Virtual Machine or inside an on-premises environment.
 
-Before creating any credentials in Azure Purview, your Azure Purview Account must have access to Key Vault secrets. Use Azure Key Vault access policy or RBAC to grant Azure Purview MSI the required access. For more information about how to grant Azure Purview MSI access to Azure Key Vault and create Credentials inside Azure Purview, see [Credentials for source authentication in Azure Purview](https://docs.microsoft.com/en-us/azure/purview/manage-credentials).
+Before creating any credentials in Azure Purview, your Azure Purview Account must have access to Key Vault secrets. Use Azure Key Vault access policy or RBAC to grant Azure Purview Managed Service Identity (MSI) the required access. For more information about how to grant Azure Purview MSI access to Azure Key Vault and create Credentials inside Azure Purview, see [Credentials for source authentication in Azure Purview](https://docs.microsoft.com/en-us/azure/purview/manage-credentials).
 
 ## Azure Purview Roles and Access Control
 
-Azure Purview has several Azure built-in RBAC roles to manage Azure purview at data plane.
-
-- Purview Data Reader
-- Purview Data Curator
-- Purview Data Source Administrator + Data Reader
-- Purview Data Source Administrator + Data Curator
+Azure Purview has several built-in RBAC roles (such as *Purview Data Reader*, *Purview Data Curator* and *Purview Data Source Administrator*) to manage the data plane which can be combined to provide additional privileges as shown in the table below. For example the *Purview Data Reader* role is targeted for roles such as Data officers, Data Stewards and Chief Security Officers who require read-only access to the data estate such as classifications, lineage through search options and reports that are available in Azure Purview.
 
 ![Azure Purview Roles](./images/purview-roles1.png)
-
---? describe the table
 
 For more information about Azure Purview catalog roles, see [Role-based access control in Azure Purview's Data Plane](https://docs.microsoft.com/azure/purview/catalog-permissions)
 
