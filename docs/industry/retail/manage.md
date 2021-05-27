@@ -11,7 +11,7 @@ ms.subservice: operate
 
 # Managing the cloud for the retail industry
 
-The Manage methodology in the Cloud Adoption Framework for Azure outlines a path for implementing an operations baseline. Develop that baseline throughout your cloud adoption lifecycle. For more information, see [Cloud management in the Cloud Adoption Framework](../../manage/).
+The Manage methodology in the Cloud Adoption Framework for Azure offers a path for implementing an operations baseline. Develop that baseline throughout your cloud adoption lifecycle. For more information, see [Cloud management in the Cloud Adoption Framework](../../manage/).
 
 For retail companies, IT operations are heavily influenced by the company's historical growth patterns. Those growth patterns influence your organizational structures across your technology teams. To understand how history affects operations management, see [Understand common growth patterns for retailers](./organize.md#understand-common-growth-patterns-for-retailers).
 
@@ -22,11 +22,11 @@ Think about the following questions.
 - Which is more important in the future?
 
   - Innovation: enable high pace of change.
-  - Control and Stability: limit pace of change to favor security, operations, and control.
+  - Control and stability: limit pace of change to favor security, operations, and control.
 
 - Who is responsible for production changes?
 
-  - Cloud center of excellence (CCoE): A mix of central and workload teams.
+  - Cloud Center of Excellence (CCoE): a mix of central and workload teams.
   - Central team: central IT or central operations.
 
 ## Build a baseline
@@ -37,13 +37,13 @@ You can deploy that baseline more quickly using Microsoft's solution, Azure Auto
 
 ### Align operations
 
-The management baseline sets the tone for all operations management. The baseline automates repetitive tasks that IT staff complete in on-prem datacenters. This change frees up valuable time to tackle other challenges and move toward your cloud maturity targets. For more information, see [Cloud maturity model for Retail](./retail-cloud-maturity.md).
+The management baseline sets the tone for all operations management. The baseline automates repetitive tasks that IT staff complete in on-premises datacenters. This change frees up valuable time to tackle other challenges and move toward your cloud maturity targets. For more information, see [Cloud maturity model for Retail](./retail-cloud-maturity.md).
 
-First, account for tasks that aren't so easy to automate. The alignment questions above help determine what the IT staff focuses on next.
+Begin by finding for tasks that aren't so easy to automate. The alignment questions above help determine what the IT staff focuses on next.
 
-IT is likely to hold accountability for performance, reliability, and cost across your technology solutions. The responsibility of delivering the work, executing the processes, and carrying the financial burden can be shared in an enterprise operations model through a CCoE structure.
+IT is likely to be accountable for performance, reliability, and cost across your technology solutions. The responsibility of delivering the work, executing the processes, and carrying the financial burden can be shared in an enterprise operations model through a CCoE structure.
 
-Considers your answers from the questions above, as your review the following sections. Evaluate if you can shift some of the operational responsibilities to change the focus on Central IT staff.
+Considers your answers from the questions above, as your review the following sections. Evaluate if you can shift some of the operational responsibilities to change the focus on central IT staff.
 
 ## Workload operations
 
