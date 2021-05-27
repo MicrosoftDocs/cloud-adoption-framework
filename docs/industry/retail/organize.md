@@ -1,6 +1,6 @@
 ---
 title: "Organizational structures in the retail industry"
-description: Understand organizational structures in the retail industry
+description: Understand organizational structures in the retail industry for cloud adoption by creating a cloud strategy team and understanding common growth patterns.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/01/2021
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: govern
 ---
 
-# Organizational structures the Retail industry
+# Organizational structures the retail industry
 
 Organizational structures in the retail industry tend to be the result of decades of organic or acquisition-based growth. This article builds on the Organize methodology in the Cloud Adoption Framework to understand some in the retail industry have reorganized to capitalize on new technologies. For more information, see [Manage organizational alignment](../../organize/index.md).
 
