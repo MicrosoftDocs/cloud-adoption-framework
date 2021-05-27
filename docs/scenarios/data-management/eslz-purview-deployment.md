@@ -29,74 +29,75 @@ Azure Purview is a unified data governance service that helps organizations to m
 
 ![Azure Purview Overview](./images/purview-overview.png)
 
-One Azure Purview account is deployed inside the Data Management Landing Zone which serves as a centralized data catalog as shown in the figure above. From the Data Management Landing Zone, Azure Purview will be able to communicate with each Data Landing Zone via private network connectivity using VNet Peering across Data Management and Data Landing Zones and Self-Hosted Integration Runtimes. Discovery of datasets in on-premises data stores and other public clouds is achieved by additional deployments of Self-Hosted Integration Runtimes.
+One Azure Purview account is deployed inside the Data Management Landing Zone which serves as a centralized data catalog as shown in the figure above. From the Data Management Landing Zone, Azure Purview will be able to communicate with each Data Landing Zone via private network connectivity using VNet Peering across Data Management and Data Landing Zones and [Self-Hosted Integration Runtimes](https://docs.microsoft.com/azure/purview/manage-integration-runtimes#:~:text=On%20the%20home%20page%20of%20Purview%20Studio%2C%20select,a%20name%20for%20your%20IR%2C%20and%20select%20Create.). Discovery of datasets in on-premises data stores and other public clouds is achieved by additional deployments of Self-Hosted Integration Runtimes.
 
 ## Account Setup
 
-The first step is the deployment of an Azure Purview Account. During the deployment of the [Data Management Landing Zone](./eslz-data-management-landing-zone.md), a single Azure Purview Account is automatically deployed inside the data Management subscription. The aim is to centralize the entire data map into a single Azure Purview account across all data landing zones, therefore, it is recommended to consider a shared single Azure Purview account inside Data Management subscription per environment type.
+The first step is the deployment of an Azure Purview account. During the deployment of the [Data Management Landing Zone](./eslz-data-management-landing-zone.md), a single Azure Purview account is automatically deployed inside the data management subscription. The aim is to centralize the entire data map into a single Azure Purview account across all data landing zones, therefore, it is recommended to consider a shared single Azure Purview account inside Data Management Landing Zone subscription per environment type.
 
-In addition to Azure Purview Account, a managed Resource Group is also deployed. A managed Storage Account and a managed EventHub Namespace resources are deployed inside this Resource Group and used to ingest the metadata as a result of scans. Since these resources are consumed by Azure Purview catalog, they must not be removed, therefore, an Azure RBAC _deny assignment_ is automatically added for _all principals_ at the resource group level at the time of deployment.
+In addition to the Azure Purview account, a managed resource group is also deployed. A managed *storage account* and a managed *Event Hubs namespace* are deployed inside this resource group and are used to ingest the metadata as a result of scans. Since these resources are consumed by the Azure Purview catalog, they must not be removed. Therefore, an Azure RBAC _deny assignment_ is automatically added for _all principals_ at the resource group level at the time of deployment.
 
- > [!IMPORTANT]
-Prior to deployment of Data Management Landing Zone, review the following requirements inside your Azure subscription which is aimed to serve as Data Management Landing Zone subscription:
->
-> - If you have an existing Azure Policy Assignment which is preventing administrators or applications from creating Azure Storage Accounts, EventHub Namespace, Azure Purview Accounts, Azure Private DNS Zones or Private Endpoints, you need to apply [Azure Policy exemptions](https://docs.microsoft.com/azure/governance/policy/concepts/exemption-structure), so the required resources can be deployed in the Data Management Landing Zone along with Azure Purview deployment.
->
-> - Make sure the following Azure Resource Providers are registered in Data Management subscription:
->   - Microsoft.EventHub
->   - Microsoft.Purview
->   - Microsoft.Storage
->
-> For more information, see [Azure Purview Prerequisites](https://docs.microsoft.com/en-us/azure/purview/manage-credentials#create-azure-key-vaults-connections-in-your-azure-purview-account).
+### Prerequisites
+
+Prior to deployment, review the following requirements inside your Data Management Landing Zone subscription:
+- **Make policy exemptions** (if needed): If you have an existing Azure Policy assignment which is preventing administrators or applications from creating Azure Storage Accounts, Azure Event Hubs namespace, Azure Purview accounts, Azure Private DNS Zones or Azure Private Endpoints, you need to apply [Azure Policy exemptions](https://docs.microsoft.com/azure/governance/policy/concepts/exemption-structure) so the required resources can be deployed in the Data Management Landing Zone along with Azure Purview deployment.
+- **Register resource providers**: Ensure the following Azure resource providers are registered in Data Management Landing Zone subscription.
+  - Microsoft.EventHub
+  - Microsoft.Purview
+  - Microsoft.Storage
+
+> [!IMPORTANT]
+> To successfully deploy the Data Management Landing Zone with Azure Purview, the above mentioned prerequisites should be met. To learn more about registering resource providers, please see [Resource providers for Azure Services](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-services-resource-providers#registration).
 
 ## Networking and Name Resolution
 
-The Azure Purview account is deployed inside hub VNet within Data Management Landing Zone.
+The Azure Purview account is deployed inside the Azure Virtual Network (VNet) within the Data Management Landing Zone.
 
 ### Private Endpoint Deployment
 
-The Enterprise Scale Analytics and AI deployment uses Private Endpoint to enable secure access to the catalog over a Private Link. The private endpoint uses IP addresses from the VNet address space for your Azure Purview account. Network traffic between the clients on the VNet and the Purview account traverses over the VNet and a private link on the Microsoft backbone network, eliminating exposure from the public internet. To enable network isolation for end-to-end scan scenarios, additional Private Endpoint are deployed so for data sources in both Azure and on-premises sources can be connected through Private Link.
-To scan data sources you need to use a Self-hosted integration Run Time which must be deployed inside the private network, either in Data Management or Data Landing Zones.
 
 ![Azure Purview Networking](./images/purview-private-endpoint2.png)
 
-For more information related to Enterprise Scale Analytics and AI networking and name resolution, see [Enterprise Scale Analytics and AI Networking](./eslz-network-topology-and-connectivity.md).
+As shown in the figure above, Enterprise Scale Analytics and AI uses [Azure Private Endpoint](https://docs.microsoft.com/azure/private-link/private-endpoint-overview) to enable secure access to the catalog powered by [Azure Private Link](/azure/private-link/private-link-overview). The private endpoint uses IP addresses from the VNet address space for your Azure Purview account. Network traffic between the clients on the VNet and the Purview account traverses over the VNet and a private link on the Microsoft backbone network eliminating exposure from the public internet. To enable network isolation for end-to-end scan scenarios, additional private endpoints are deployed so data sources in both Azure and on-premises sources can be connected through Private Link.
+
+> [!IMPORTANT]
+> To successfully scan data sources in Azure Purview, a Self-hosted Integration Runtime must be deployed inside the private network either in the Data Management Landing Zone or the Data Landing Zone.
+
+For further reading, see [Enterprise Scale Analytics and AI Networking](./eslz-network-topology-and-connectivity.md).
 
 #### Private Endpoint for Account and Portal
 
-Azure Purview is being deployed with two Private Endpoints:
+Azure Purview is deployed with two private endpoints:
 
-- **Account** Private Endpoint is used for securing APIs and it is required as a prerequisites for **portal** Private Endpoint.
-- **Portal** Private Endpoint is aimed to provide private connectivity to Azure Purview Studio.
+- **Account** private endpoint is used for securing APIs and it is required as a prerequisites for **portal** private endpoint.
+- **Portal** private endpoint is aimed to provide private connectivity to Azure Purview Studio.
 
-To manage data estate using Azure Purview and connect to Azure Purview Studio, you need to use a private connectivity, because public access is restricted Azure Purview Account that is deployed inside Data Management Landing Zone to provide additional security.
+To manage the data estate using Azure Purview and to connect to Azure Purview Studio, you need to use private connectivity because public access is restricted to the Azure Purview Account that is deployed inside the Data Management Landing Zone to provide additional security.
 
 ### Access to Azure Purview Studio
 
-To maintain the use of Azure Purview portal through private connectivity, it is recommended to keep the **Public network access** as **Deny**, therefore, to connect to Azure Purview Studio, a jump machine that is deployed inside your network is needed.For this purpose, you can either deploy a VM inside Landing Zones or connect using a machine from hybrid network. A jump box is a hardened remote access server, commonly using Microsoft's Remote Desktop Services or Secure Shell (SSH) software. Jump boxes act as a stepping point for administrators accessing critical systems with all administrative actions performed from the dedicated host.
+To maintain the use of Azure Purview portal through private connectivity, it is recommended to [deny public network access](https://docs.microsoft.com/azure/purview/catalog-private-link#firewalls-to-restrict-public-access) in Azure Purview settings. Therefore, to connect to Azure Purview Studio, a *jump machine (or jump box)* that is deployed inside your network is needed either using a machine from the hybrid network (option 1) or as a VM inside the Data Management Landing Zone (option 2). A jump machine is a hardened remote access server, commonly using Microsoft's Remote Desktop Services or Secure Shell (SSH) software. Jump machines act as a stepping point for administrators accessing critical systems with all administrative actions performed from the dedicated host.
 
 Use any of the following options to manage your data using Azure Purview through Azure Purview Studio:
 
-- **Option 1**: Use a jump machine which is connected to CorpNet. To use this connectivity model, you must have connectivity between VNet where Azure Purview Portal Private Endpoint is created which your corporate network. 
+- **Option 1**: Use a jump machine which is connected to CorpNet. To use this connectivity model, you must have connectivity between the VNet where Azure Purview Portal Private Endpoint is created which your corporate network.
   
   Review Cloud Adoption Framework Networking for more information [Network topology and connectivity](../ready/enterprise-scale/network-topology-and-connectivity.md).
 
-- **Option 2**: If hybrid connectivity is not available in your organization, [deploy a Virtual Machine](https://docs.microsoft.com/azure/virtual-machines/windows/quick-create-portal) inside Azure Data Management Landing Zone and [deploy an Azure Bastion](https://docs.microsoft.com/azure/bastion/quickstart-host-portal) to connect to Azure Purview using a secure connection.
+- **Option 2**: If hybrid connectivity is not available in your organization, [deploy a Virtual Machine](https://docs.microsoft.com/azure/virtual-machines/windows/quick-create-portal) inside the Data Management Landing Zone and [deploy Azure Bastion](https://docs.microsoft.com/azure/bastion/quickstart-host-portal) to connect to Azure Purview using a secure connection.
 
-The Azure Bastion service is a fully platform-managed PaaS service that you provision inside your virtual network that lets you connect to a virtual machine using your browser and the Azure portal instead of Public IP address. Azure Bastion offer a limited attack surface to attackers. While they are exposed to the public internet, customers (and attackers) have no access to underlying operating systems providing the services and they are typically maintained and monitored consistently via automated mechanisms at the cloud provider. This smaller attack surface limits the available options to attackers vs. classic on-premises applications and appliances that must be configured, patched, and monitored by IT personnel who are often overwhelmed by conflicting priorities and more security tasks than they have time to complete.
-Azure Bastion effectively provides a flexible solution that can be used by IT Operations personnel and workload administrators outside of IT to manage resources hosted in Azure without requiring a full VPN connection to the environment.
+> [!NOTE]
+> The [Azure Bastion service](https://docs.microsoft.com/azure/bastion/bastion-overview) is a fully platform-managed PaaS service that you provision inside your virtual network that lets you connect to a virtual machine using your browser and the Azure portal instead of Public IP address. Azure Bastion offer a limited attack surface to attackers. While they are exposed to the public internet, customers (and attackers) have no access to underlying operating systems providing the services and they are typically maintained and monitored consistently via automated mechanisms at the cloud provider. This smaller attack surface limits the available options to attackers vs. classic on-premises applications and appliances that must be configured, patched, and monitored by IT personnel who are often overwhelmed by conflicting priorities and more security tasks than they have time to complete. Azure Bastion effectively provides a flexible solution that can be used by IT Operations personnel and workload administrators outside of IT to manage resources hosted in Azure without requiring a full VPN connection to the environment.
 
-#### Private Endpoint for ingestion
+#### Private endpoints for ingestion
 
-Azure Purview can scan data sources in Azure or on-premises environment using Private Endpoint or Public Endpoint. As part of a Data Landing Zone deployment, the network of a Data Landing Zone is automatically peered with the Data Management Landing Zone VNet and Connectivity subscription VNet, therefore data sources inside Landing zones can be scanned using private connectivity.
+Azure Purview can scan data sources in Azure or on-premises environments using private or public endpoints. As part of the Data Landing Zone deployment, the network of a Data Landing Zone is automatically peered with the Data Management Landing Zone VNet and the connectivity subscription VNet, therefore data sources inside Data Landing zones can be scanned using private connectivity.
 
-It is recommended to enable Private Endpoint for additional [data sources inside your landing zones](https://docs.microsoft.com/azure/purview/catalog-private-link) and scan data sources using private connectivity.
+It is recommended to enable private endpoints for additional [data sources inside your landing zones](https://docs.microsoft.com/azure/purview/catalog-private-link) and scan data sources using private connectivity.
 
-To read more about Azure Private Link, see [Azure Private Link](https://docs.microsoft.com/azure/private-link/).
+### Name resolution
 
-### Name Resolution
-
-DNS resolution for private endpoints should be handled through central Azure Private DNS zones. The following Private DNS Zones are deployed automatically, part of Azure Purview deployment in Data Management Landing Zone:
+DNS resolution for private endpoints should be handled through central Azure Private DNS zones. The following Private DNS Zones are deployed automatically as part of the Azure Purview deployment in the Data Management Landing Zone:
 
 - privatelink.purview.azure.com
 - privatelink.blob.core.windows.net
