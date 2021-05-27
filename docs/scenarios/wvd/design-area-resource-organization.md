@@ -16,7 +16,6 @@ As with all cloud environments, the structure within which resources are deploye
 
 
 
-
 ## Next steps
 
 [Further reading on recommendations for Windows Virtual Desktop resource organization](../azure/architecture/example-scenario/wvd/windows-virtual-desktop#azure-limitations)
