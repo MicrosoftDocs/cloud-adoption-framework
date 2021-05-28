@@ -1,7 +1,7 @@
 ---
 title: Machine Learning DevOps Guide
 description: This guide provides a balanced view across three areas of MLOps. It discusses best practices and learnings from adopting MLOps in the Enterprise with Azure Machine Learning.
-author: denniseik
+author: makanw
 ms.author: deeikele
 ms.date: 05/24/2021
 ms.topic: conceptual
@@ -204,11 +204,11 @@ To ensure that the key ethical principles that the company stands for are implem
 
 ### Summary
 
-AI factory relies on building repeatable processes and reusable assets that can help an organization scale from tens of use cases to thousands of use cases in a scalable way.
+An AI factory relies on building repeatable processes and reusable assets that can help an organization scale from tens of use cases to thousands of use cases in a scalable way.
 
 The following figure summarizes key elements of an AI factory:
 
-![Diagram of the key elements of an AI factory ](media/ai-factory-summary.png)
+![Diagram of the key elements of an AI factory. ](media/ai-factory-summary.png)
 
 Not every organization's machine learning DevOps (MLOps) requirements are the same. The MLOps architecture for a large multinational enterprise is unlikely to fit a small startup. Organizations start small and build up as their maturity, model catalog, and experience grows.
 
