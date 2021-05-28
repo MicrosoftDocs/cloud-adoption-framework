@@ -228,6 +228,6 @@ Not every organization's machine learning DevOps (MLOps) requirements are the sa
 
 ## Next steps
 
-To learn more about how to organize and set up Azure Machine Learning environments, see [Organize and set up Azure Machine Learning environments](./ai-machine-learning-resource-organization.md)
+To learn more about how to organize and set up Azure Machine Learning environments, see [Organize and set up Azure Machine Learning environments](./ai-machine-learning-resource-organization.md).
 > [!div class="nextstepaction"]
-> [Organize and set up Azure Machine Learning environments](./ai-machine-learning-resource-organization.md).
+> [Organize and set up Azure Machine Learning environments](./ai-machine-learning-resource-organization.md)
