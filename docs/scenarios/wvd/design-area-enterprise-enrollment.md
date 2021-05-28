@@ -1,5 +1,5 @@
 ---
-title: Enterprise-scale support for Windows Virtual Desktop
+title: Enterprise enrollment design area for Windows Virtual Desktop
 description: Explore the enterprise enrollment design area and how to apply it to a WVD implementation
 author: DominicAllen
 ms.author: doalle

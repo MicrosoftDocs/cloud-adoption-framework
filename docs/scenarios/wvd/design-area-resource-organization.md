@@ -21,4 +21,4 @@ The following considerations and recommendations will help establish proper reso
 
 ## Next steps
 
-[Further reading on recommendations for Windows Virtual Desktop resource organization](../azure/architecture/example-scenario/wvd/windows-virtual-desktop#azure-limitations)
+[Further reading on recommendations for Windows Virtual Desktop resource organization](/azure/architecture/example-scenario/wvd/windows-virtual-desktop#azure-limitations)
