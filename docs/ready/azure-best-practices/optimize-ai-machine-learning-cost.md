@@ -134,8 +134,7 @@ While budget allocation decisions might be out of the span of control of an indi
 The key to optimize costs of shared compute resources is to ensure that they're being used to their full capacity. Here are some tips to optimize your shared resource costs:
 
 - When you use compute instances, only turn them on when you have code to execute. Shut them down when they aren't being used.
-- When you use compute clusters, set the minimum node count to 0 and the maximum node count to a number that is evaluated based on your budget constraints. Use the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) to calculate the cost of full utilization of one VM node of your chosen VM SKU. Autoscaling will scale down all the compute nodes when there's no one using it. It will only scale up to the number of nodes you have budget for.
-[azureml.core.compute.amlcompute.ScaleSettings class - Azure Machine Learning Python | Microsoft Docs](/python/api/azureml-core/azureml.core.compute.amlcompute.scalesettings)
+- When you use compute clusters, set the minimum node count to 0 and the maximum node count to a number that is evaluated based on your budget constraints. Use the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) to calculate the cost of full utilization of one VM node of your chosen VM SKU. Autoscaling will scale down all the compute nodes when there's no one using it. It will only scale up to the number of nodes you have budget for. You can configure [autoscaling](/python/api/azureml-core/azureml.core.compute.amlcompute.scalesettings) to scale down all the compute nodes.
 - Monitor your resource utilizations such as CPU utilization and GPU utilization when training models. If the resources aren't being fully utilized, modify your code to better utilize resources or scale down to smaller or cheaper VM sizes.
 - Evaluate whether you can create shared compute resources for your team to avoid computing inefficiencies caused by cluster scaling operations.
 - Optimize compute cluster autoscaling timeout policies based on usage metrics.
@@ -155,7 +154,7 @@ Next to VM priority, consider running jobs on various VM SKUs. It might be that 
 
 When you continuously experiment to improve a model against its baseline, you might be executing various experiment runs, each with slightly different configurations. For one run, you might tweak the input datasets. For another run, you might make a hyperparameter change. Not all changes might be as effective as the other. You detect early that a change didn't have the intended affect on the quality of your model training. To detect if training does not converge, monitor training progress during a run. For example, by logging performance metrics after each training epoch. Consider early terminating the job to free up resources and budget for another trial.
 
-## Plan, manage and share budgets, cost, and quota at an enterprise-scale
+## Plan, manage and share budgets, cost, and quota
 
 As an organization grows its number of machine learning use cases and teams, it requires an increased operating maturity from IT and Finance and coordination between individual machine learning teams to ensure efficient operations. Company-scale capacity and quota management become important to address scarceness of compute resources and overcome management overhead.
 
@@ -229,5 +228,3 @@ When you [pick a region for your compute](https://azure.microsoft.com/global-inf
 ## Next steps
 
 To learn more about how to organize and set up Azure Machine Learning environments, see [Organize and set up Azure Machine Learning environments](./ai-machine-learning-resource-organization.md).
-> [!div class="nextstepaction"]
-> [Organize and set up Azure Machine Learning environments](./ai-machine-learning-resource-organization.md)
