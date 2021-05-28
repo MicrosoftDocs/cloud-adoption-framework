@@ -1,6 +1,6 @@
 ---
-title: Enterprise-scale security, governance, and compliance for Windows Virtual Desktop infrastructure
-description: Learn key design considerations and recommendations for security, governance, and compliance in an enterprise-scale Windows Virtual Desktop infrastructure.
+title: security, governance, and compliance for Windows Virtual Desktop infrastructure
+description: Learn key design considerations and recommendations for a governance baseline in a Windows Virtual Desktop infrastructure.
 author: AdamWhitlatch
 ms.author: dawhitla
 ms.date: 05/18/2021
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Security, governance, and compliance for Windows Virtual Desktop enterprise-scale scenario
+# Governance baseline considerations for Windows Virtual Desktop
 
 This article covers key design considerations and recommendations for security, governance, and compliance in a [Cloud Adoption Framework enterprise-scale landing zone architecture](/azure/cloud-adoption-framework/ready/enterprise-scale/architecture) for [Windows Virtual Desktop](/azure/virtual-desktop/overview).
 

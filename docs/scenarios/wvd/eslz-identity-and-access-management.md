@@ -1,6 +1,6 @@
 ---
-title: Enterprise-scale identity and access management for Windows Virtual Desktop
-description: Learn how to use Azure role-based access control for identity and access management in your enterprise-scale virtual desktop infrastructure.
+title: Identity and access management for Windows Virtual Desktop
+description: Learn how to use Azure role-based access control for identity and access management in your virtual desktop infrastructure.
 author: wahidsaleemi
 ms.author: wasaleem
 ms.date: 05/18/2021
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Identity and access management for Windows Virtual Desktop
+# Identity and access management considerations for Windows Virtual Desktop
 
 Windows Virtual Desktop is a managed service that provides a Microsoft control plane for your virtual desktop infrastructure. Identity and access management for Windows Virtual Desktop uses Azure role-based access control (RBAC) with certain conditions outlined in this article.
 

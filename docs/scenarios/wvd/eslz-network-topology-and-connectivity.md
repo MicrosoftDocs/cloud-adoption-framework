@@ -1,5 +1,5 @@
 ---
-title: Networking for Windows Virtual Desktop at enterprise scale
+title: Networking for Windows Virtual Desktop
 description: Use the Cloud Adoption Framework for Azure to identify networking capabilities that your landing zone needs to support Azure Windows Virtual Desktop workloads.
 author: BrianBlanchard
 ms.author: brblanch
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Network topology and connectivity for Windows Virtual Desktop at enterprise scale
+# Network topology and connectivity considerations for Windows Virtual Desktop
 
 ## Review network options
 

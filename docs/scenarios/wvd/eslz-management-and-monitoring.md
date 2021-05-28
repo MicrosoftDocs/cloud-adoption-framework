@@ -1,6 +1,6 @@
 ---
-title: Enterprise-scale management and monitoring for Windows Virtual Desktop
-description: Learn how this enterprise-scale scenario can improve the management and monitoring of Windows Virtual Desktop.
+title: Management baseline for Windows Virtual Desktop
+description: Learn how the management baseline can improve the management and monitoring of Windows Virtual Desktop.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/18/2021
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Management and monitoring for a Windows Virtual Desktop enterprise-scale scenario
+# Management baseline considerations for a Windows Virtual Desktop
 
 Achieve operational excellence and customer success by properly designing your Windows Virtual Desktop environment with management and monitoring in mind.
 
