@@ -30,7 +30,7 @@ You can use the Azure portal, Azure CLI, an Azure Resource Manager template (ARM
 - [Vagrant Ubuntu box](./local-vagrant-ubuntu.md)
 - [Vagrant Windows box](./local-vagrant-windows.md)
 
-Please review the [Azure Monitor supported OS documentation](/azure/azure-monitor/vm/vminsights-enable-overview#supported-operating-systems) and ensure that the VMs you will use for this exercise are supported. For Linux VMs, check both the Linux distribution and kernel to ensure you are using a supported configuration.
+Review the [Azure Monitor supported OS documentation](/azure/azure-monitor/vm/vminsights-enable-overview#supported-operating-systems) and ensure that the VMs you will use for this exercise are supported. For Linux VMs, check both the Linux distribution and kernel to ensure you are using a supported configuration.
 
 ## Prerequisites
 

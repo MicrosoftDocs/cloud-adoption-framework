@@ -93,10 +93,10 @@ The following table summarizes considerations for each landing zone implementati
         Enables adoption velocity across the organization
     :::column-end:::
     :::column:::
-        Quickly enable low-risk adoption. Build toward security, governance, and compliance over time.
+        Quickly enable low-risk adoption. Build toward security governance and compliance over time.
     :::column-end:::
     :::column:::
-        Start with security, governance, and compliance to enable compliant adoption sooner.
+        Start with security governance and compliance to enable compliant adoption sooner.
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -117,7 +117,7 @@ The following table summarizes considerations for each landing zone implementati
         **Compliance considerations**
     :::column-end:::
     :::column:::
-        Path to attain security, governance, and compliance
+        Path to attain security governance and compliance
     :::column-end:::
     :::column:::
         Iterative approach. Requires Govern and Manage methodologies to support sensitive data or mission critical workloads.
@@ -130,7 +130,7 @@ The following table summarizes considerations for each landing zone implementati
     :::column:::
     :::column-end:::
     :::column:::
-        Associated risks while building out security, governance, and compliance
+        Associated risks while building out security governance and compliance
     :::column-end:::
     :::column:::
         There is a risk of extensive refactoring or even redeployment to attain required needs.
@@ -147,7 +147,7 @@ The following table summarizes considerations for each landing zone implementati
         Best practices from cloud provider?
     :::column-end:::
     :::column:::
-        More best practices are required to be added using Cloud Adoption Framework methodologies to apply security, governance, and compliance.
+        More best practices are required to be added using Cloud Adoption Framework methodologies to apply security governance and compliance.
     :::column-end:::
     :::column:::
         Enterprise-scale includes Azure best practices and is the target technical state for your Azure environment.
@@ -160,7 +160,7 @@ The following table summarizes considerations for each landing zone implementati
         All critical services are present and properly configured according to recommended best practices for identity/access management, governance, security, network, and logging.
     :::column-end:::
     :::column:::
-        Partial. Some resources are deployed. Additional offerings aligned to Cloud Adoption Framework methodologies required to apply best practices to support security, governance, and compliance.
+        Partial. Some resources are deployed. Additional offerings aligned to Cloud Adoption Framework methodologies required to apply best practices to support security governance and compliance.
     :::column-end:::
     :::column:::
         Enterprise-scale architecture is the target technical state recommendation for your Azure environment that aligns with the Azure platform roadmap.
@@ -197,7 +197,7 @@ The following table summarizes considerations for each landing zone implementati
     :::column:::
     :::column-end:::
     :::column:::
-        Timeline to achieve security, governance, and compliance requirements for all workloads:
+        Timeline to achieve security governance and compliance requirements for all workloads:
     :::column-end:::
     :::column:::
         Four to six months
@@ -239,8 +239,8 @@ To learn more about operational excellence, see [Deliver operational excellence 
 
 Consider the following issues around compliance for your organization:
 
-- Path to reach security, governance, and compliance
-- Risks while building out security, governance, and compliance
+- Path to reach security governance and compliance
+- Risks while building out security governance and compliance
 
 Your organization might need to have a particular workload or application that needs to be compliant in a short amount of time, and this requirement could affect your choice.
 
@@ -260,7 +260,7 @@ Deploying your landing zone or landing zones raises several considerations for c
 
 - Automation capabilities like IaC and Azure DevOps.
 
-Both implementation offer best practices. Start small and expand lets you add best practices using Cloud Adoption Framework methodologies to apply security, governance, and compliance.
+Both implementation offer best practices. Start small and expand lets you add best practices using Cloud Adoption Framework methodologies to apply security governance and compliance.
 
 Enterprise-scale comes with all critical services configured. Start small and expand comes with some resources deployed.
 
@@ -289,9 +289,9 @@ Whether you implement start small and expand or enterprise-scale, you can use te
 Landing zone options take different amounts of time to implement. There are two types of timelines:
 
 - A timeline to adopt or migrate a low-risk workload.
-- A timeline to reach security, governance, and compliance requirements for all workloads.
+- A timeline to reach security governance and compliance requirements for all workloads.
 
-With a start-small-and-expand approach, you can have a low-risk workload up and running in 3 to 10 days. For workloads with high security, governance, and compliance requirements, it could take four to six months.
+With a start-small-and-expand approach, you can have a low-risk workload up and running in 3 to 10 days. For workloads with high security governance and compliance requirements, it could take four to six months.
 
 For an enterprise-scale implementation, you can still adopt a low-risk workload in 3 to 10 days, but more elaborate workloads can be ready in six to eight weeks.
 

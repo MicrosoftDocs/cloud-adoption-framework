@@ -23,8 +23,8 @@ As you get started, the checklist and Kubernetes resources below will help you p
 
 > [!div class="checklist"]
 >
->- Have you identified the networking design requirements for your cluster?
->- Do you have services with varying requirements? How many node pools are you going to use?
+> - Have you identified the networking design requirements for your cluster?
+> - Do you have services with varying requirements? How many node pools are you going to use?
 
 **Checklist:**
 
@@ -48,8 +48,8 @@ As you prepare the application for production, implement a minimum set of best p
 
 > [!div class="checklist"]
 >
->- Are you able to confidently redeploy the cluster infrastructure?
->- Have you applied resource quotas?
+> - Are you able to confidently redeploy the cluster infrastructure?
+> - Have you applied resource quotas?
 
 **Checklist:**
 
@@ -65,9 +65,9 @@ Once the application is in production, how can you optimize your workflow and pr
 
 > [!div class="checklist"]
 >
->- Do you have a plan for business continuity and disaster recovery?
->- Can your cluster scale to meet application demands?
->- Are you able to monitor your cluster and application health and receive alerts?
+> - Do you have a plan for business continuity and disaster recovery?
+> - Can your cluster scale to meet application demands?
+> - Are you able to monitor your cluster and application health and receive alerts?
 
 **Checklist:**
 

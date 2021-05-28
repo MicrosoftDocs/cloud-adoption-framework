@@ -78,10 +78,10 @@ productDirectory:
           text: Motivations
         - url: ./strategy/business-outcomes/index.md
           text: Business outcomes
-        - url: ./strategy/partner-alignment.md
-          text: Align your partner strategy
-        - url: ./strategy/first-adoption-project.md
-          text: Choose the right first project
+        - url: ./strategy/financial-considerations/index.md
+          text: Financial considerations
+        - url: ./strategy/technical-considerations/index.md
+          text: Technical considerations
 
     # Card
     - title: Plan

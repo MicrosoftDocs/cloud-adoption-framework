@@ -37,7 +37,7 @@ These baseline functions help you identify risks related to current and future r
 - Review the [Govern methodology](../govern/index.md).
 - Take the [governance benchmark assessment](../govern/benchmark.md).
 - [Introduction to security in Azure](/learn/modules/protect-against-security-threats-azure/): Learn the basic concepts to protect your infrastructure and data in the cloud. Understand what responsibilities are yours and what Azure handles for you.
-- Understand how to work across groups to [manage cost](../organize/cost-conscious-organization.md).
+- Understand how to work across groups to [manage cost](./cost-conscious-organization.md).
 
 ## Minimum scope
 
@@ -54,7 +54,7 @@ Involve the following participants in cloud governance activities:
 
 ## Deliverable
 
-The cloud governance mission is to balance competing forces of transformation and risk mitigation. Additionally, cloud governance ensures that the [cloud migration team](./cloud-migration.md) is aware of data and asset classification, as well as architecture guidelines that govern adoption. Governance teams or individuals also works with the [cloud center of excellence](../organize/cloud-center-of-excellence.md) to apply automated approaches to governing cloud environments.
+The cloud governance mission is to balance competing forces of transformation and risk mitigation. Additionally, cloud governance ensures that the [cloud migration team](./cloud-migration.md) is aware of data and asset classification, as well as architecture guidelines that govern adoption. Governance teams or individuals also works with the [cloud center of excellence](./cloud-center-of-excellence.md) to apply automated approaches to governing cloud environments.
 
 **Ongoing monthly tasks:**
 

@@ -30,7 +30,7 @@ Microsoft has built capabilities and resources to help accelerate your implement
 
 The following diagram shows a holistic approach for using security guidance and platform tooling to establish security visibility and control over your cloud assets in Azure. We recommend this approach.
 
-![Security diagram](../_images/security/security-diagram.png)
+![Security diagram](../_images/security/azure-security-standards.png)
 
 Use these steps to plan and execute your strategy for securing your cloud assets and using the cloud to modernize security operations.
 
@@ -44,26 +44,26 @@ Whether you're already operating in the cloud or you're planning for future adop
 
 **People:**
 
-1. [Educate teams about the cloud security journey](../security/security-top-10.md#1-people-educate-teams-about-the-cloud-security-journey)
-2. [Educate teams on cloud security technology](../security/security-top-10.md#2-people-educate-teams-on-cloud-security-technology)
+1. [Educate teams about the cloud security journey](../secure/security-top-10.md#1-people-educate-teams-about-the-cloud-security-journey)
+2. [Educate teams on cloud security technology](../secure/security-top-10.md#2-people-educate-teams-on-cloud-security-technology)
 
 **Process:**
 
-3. [Assign accountability for cloud security decisions](../security/security-top-10.md#3-process-assign-accountability-for-cloud-security-decisions)
-4. [Update incident response processes for cloud](../security/security-top-10.md#4-process-update-incident-response-processes-for-cloud)
-5. [Establish security posture management](../security/security-top-10.md#5-process-establish-security-posture-management)
+3. [Assign accountability for cloud security decisions](../secure/security-top-10.md#3-process-assign-accountability-for-cloud-security-decisions)
+4. [Update incident response processes for cloud](../secure/security-top-10.md#4-process-update-incident-response-processes-for-cloud)
+5. [Establish security posture management](../secure/security-top-10.md#5-process-establish-security-posture-management)
 
 **Technology:**
 
-6. [Require passwordless or multi-factor authentication](../security/security-top-10.md#6-technology-require-passwordless-or-multi-factor-authentication-mfa)
-7. [Integrate native firewall and network security](../security/security-top-10.md#7-technology-integrate-native-firewall-and-network-security)
-8. [Integrate native threat detection](../security/security-top-10.md#8-technology-integrate-native-threat-detection)
+6. [Require passwordless or multifactor authentication](../secure/security-top-10.md#6-technology-require-passwordless-or-multifactor-authentication)
+7. [Integrate native firewall and network security](../secure/security-top-10.md#7-technology-integrate-native-firewall-and-network-security)
+8. [Integrate native threat detection](../secure/security-top-10.md#8-technology-integrate-native-threat-detection)
 
 **Foundational architecture decisions:**
 
-9. [Standardize on a single directory and identity](../security/security-top-10.md#9-architecture-standardize-on-a-single-directory-and-identity)
-10. [Use identity-based access control (instead of keys)](../security/security-top-10.md#10-architecture-use-identity-based-access-control-instead-of-keys)
-11. [Establish a single unified security strategy](../security/security-top-10.md#11-architecture-establish-a-single-unified-security-strategy)
+9. [Standardize on a single directory and identity](../secure/security-top-10.md#9-architecture-standardize-on-a-single-directory-and-identity)
+10. [Use identity-based access control (instead of keys)](../secure/security-top-10.md#10-architecture-use-identity-based-access-control-instead-of-keys)
+11. [Establish a single unified security strategy](../secure/security-top-10.md#11-architecture-establish-a-single-unified-security-strategy)
 
 <!-- markdownlint-enable MD029 -->
 
@@ -229,7 +229,7 @@ During [landing zone](../ready/landing-zone/index.md) implementation, many decis
 
   Microsoft has published guidance to help you build your security baselines:
   - [Azure security standards for strategy and architecture](/security/compass/compass): Strategy and architectural recommendations to shape your environment's security posture.
-  - [Azure security benchmarks](/azure/security/benchmarks/introduction): Specific configuration recommendations for securing Azure environments.
+  - [Azure security benchmarks](/security/benchmark/azure/introduction): Specific configuration recommendations for securing Azure environments.
   - [Azure security baseline training](/learn/modules/create-security-baselines/).
 
 - **Provide guardrails:** Safeguards should include automated policy auditing and enforcement. For these new environments, teams should strive to both audit and enforce the organization's security baselines. These efforts can help minimize security surprises during the development of workloads, as well as continuous integration and continuous deployment (CI/CD) of workloads.
@@ -286,7 +286,7 @@ Consistent application of security requirements comes from sound governance disc
 **Guidance to support deliverable completion:**
 
 - Use the same security baselines and auditing mechanisms that you built in [Step 4](#step-4-secure-new-workloads) as technical components of monitoring the baselines. Complement these baselines with people and process controls to ensure consistency.
-- Ensure that all workloads and resources follow proper [naming and tagging conventions](../ready/azure-best-practices/naming-and-tagging.md). [Enforce tagging conventions by using Azure Policy](/azure/governance/policy/tutorials/govern-tags), with a specific emphasis on tags for "data sensitivity."
+- Ensure that all workloads and resources follow proper [naming and tagging conventions](../ready/azure-best-practices/naming-and-tagging.md). [Enforce tagging conventions by using Azure Policy](/azure/governance/policy/tutorials/govern-tags), with a specific emphasis on tags for data sensitivity.
 - If you're new to cloud governance, establish [governance policies, processes, and disciplines](../govern/index.md) by using the Govern methodology.
 
 <br>
@@ -302,7 +302,7 @@ The steps in this guide have helped you implement the strategy, controls, proces
 As you continue into the operations mode of cloud security, consider these next steps:
 
 - Review [Microsoft security documentation](/security/). It provides technical guidance to help security professionals build and improve cybersecurity strategy, architecture, and prioritized roadmaps.
-- Review security information in [Built-in security controls for Azure services](/azure/security/fundamentals/security-controls).
+- Review security information in [Built-in security controls for Azure services](/security/benchmark/azure/).
 - Review Azure security tools and services in [Security services and technologies available on Azure](/azure/security/fundamentals/services-technologies).
 - Review the [Microsoft Trust Center](https://www.microsoft.com/trustcenter/guidance/risk-assessment). It contains extensive guidance, reports, and related documentation that can help you perform risk assessments as part of your regulatory compliance processes.
 - Review third-party tools available to facilitate meeting your security requirements. For more information, see [Integrate security solutions in Azure Security Center](/azure/security-center/security-center-partner-integration).

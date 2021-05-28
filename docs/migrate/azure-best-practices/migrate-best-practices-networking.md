@@ -28,7 +28,7 @@ Azure provides virtual networks with these capabilities:
 - A virtual network is a logical isolation of the Azure cloud that's dedicated to your subscription.
 - You can implement multiple virtual networks within each Azure subscription and Azure region.
 - Each virtual network is isolated from other virtual networks.
-- Virtual networks can contain private and public IP addresses defined in [RFC 1918](https://tools.ietf.org/html/rfc1918), expressed in classless inter-domain routing (CIDR) notation. Public IP addresses specified in a virtual network's address space aren't directly accessible from the internet.
+- Virtual networks can contain private and public IP addresses defined in [RFC 1918](https://datatracker.ietf.org/doc/html/rfc1918), expressed in classless inter-domain routing (CIDR) notation. Public IP addresses specified in a virtual network's address space aren't directly accessible from the internet.
 - Virtual networks can connect to each other by using virtual network peering. Connected virtual networks can be in the same region or different regions; resources in one virtual network can connect to resources in other virtual networks.
 - By default, Azure routes traffic between subnets within a virtual network, connected virtual networks, on-premises networks, and the internet.
 
@@ -97,7 +97,7 @@ The table shows an example of a virtual network with an address space of `10.245
 **Learn more:**
 
 - Learn about [designing subnets](/azure/virtual-network/virtual-network-vnet-plan-design-arm#segmentation).
-- Learn how Contoso, a fictional company, [prepared their networking infrastructure for migration](../../migrate/index.md).
+- Learn how Contoso, a fictional company, [prepared their networking infrastructure for migration](../index.md).
 
 ## Best practice: Set up a DNS server
 
@@ -117,7 +117,7 @@ Azure adds a DNS server by default when you deploy a virtual network. This allow
 
 **Learn more:**
 
-- Learn about [name resolution when you use your own DNS server](../../migrate/index.md).
+- Learn about [name resolution when you use your own DNS server](../index.md).
 - Learn about [DNS naming rules and restrictions](../../ready/azure-best-practices/naming-and-tagging.md).
 
 ## Best practice: Set up Availability Zones
@@ -243,7 +243,7 @@ Let's review an example:
 
 - You have two offices in the US, one in Los Angeles and one in New York City.
 - Your offices are connected on a WAN, which can be either your own backbone network or your service provider's IP VPN.
-- You have two ExpressRoute circuits, one in `West US` and one in `East US`, that are also connected on the WAN. Obviously, you have two paths to connect to the Microsoft network.
+- You have two ExpressRoute circuits, one in `West US` and one in `East US`, which are also connected on the WAN. Obviously, you have two paths to connect to the Microsoft network.
 
 **Problem:**
 
