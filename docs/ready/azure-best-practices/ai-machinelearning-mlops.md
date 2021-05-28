@@ -17,7 +17,7 @@ Machine learning DevOps (MLOps) is an organizational change that relies on a com
 This article is subdivided into three sections:
 
 - **An introduction to MLOps:** A conceptual introduction that provides a balanced view across the three areas of people, process, and technology to anyone new to machine learning DevOps.
-- **MLOps best practices with Azure Machine Learning:** Key considerations and recommendations to apply MLOps practices scoped to single ML Project.
+- **MLOps best practices with Azure Machine Learning:** Key considerations and recommendations to apply MLOps practices scoped to a single machine learning project.
 - **MLOps at organizational scale: AI factories:** Key considerations and recommendations to drive organizational change with MLOps in an enterprise environment.
 
 ## An introduction to machine learning DevOps (MLOps)
@@ -73,15 +73,15 @@ When you plan to adopt MLOps for your next machine learning project, consider ap
 
 1. Version control code, data, and experimentation outputs
 
-    Unlike traditional software, data has a direct influence on the quality of machine learning models. Along with versioning your experimentation code base, version your datasets to ensure reproducibility of experiments or inferencing results. Versioning experimentation outputs like models can save effort and the computational cost of recreation.
+    Unlike traditional software, data has a direct influence on the quality of machine learning models. Along with versioning your experimentation code base, version your datasets to ensure you can reproduce experiments or inference results. Versioning experimentation outputs like models can save effort and the computational cost of recreation.
 
 2. Use multiple environments
 
-    To segregate development and testing from production work, [replicate](/azure/cloud-adoption-framework/ready/azure-best-practices/ai-machine-learning-resource-organization?branch=pr-en-us-1541) your infrastructure in at least two environments. Access control for users might differ in each environment.
+    To segregate development and testing from production work, [replicate](/azure/cloud-adoption-framework/ready/azure-best-practices/ai-machine-learning-resource-organization) your infrastructure in at least two environments. Access control for users might differ in each environment.
 
 3. Manage infrastructure and configurations-as-code
 
-    When you create and update infrastructure components in your work environments, use [infrastructure-as-code](/azure/architecture/framework/devops/automation-infrastructure) to prevent inconsistencies between environments. Manage machine learning experiment job specifications as code, so that you can easily rerun and reuse a version of your experiment across environments.
+    When you create and update infrastructure components in your work environments, use [infrastructure as code](/azure/architecture/framework/devops/automation-infrastructure) to prevent inconsistencies between environments. Manage machine learning experiment job specifications as code, so that you can easily rerun and reuse a version of your experiment across environments.
 
 4. Track and manage machine learning experiments
 
@@ -105,9 +105,9 @@ Azure Machine Learning offers several asset management, orchestration, and autom
 
 ### People
 
-- Work in project teams to best utilize specialist and domain knowledge in your organization. [Organize and set up Azure ML Workspaces](/azure/cloud-adoption-framework/ready/azure-best-practices/ai-machine-learning-resource-organization?branch=pr-en-us-1541) on a project basis to comply with use case segregation requirements.
+- Work in project teams to best utilize specialist and domain knowledge in your organization. [Organize and set up Azure Machine Learning Workspaces](/azure/cloud-adoption-framework/ready/azure-best-practices/ai-machine-learning-resource-organization) on a project basis to comply with use case segregation requirements.
 - Define a set of responsibilities and tasks in your organization as a role, where one team member on an MLOps project team could fulfill multiple roles. Use Custom Roles in Azure to define a set of granular [Azure RBAC operations for Azure Machine Learning](/azure/role-based-access-control/resource-provider-operations#microsoftmachinelearningservices) that each role can perform.
-- Standardize on a project lifecycle and agile methodology. The [Team Data Science Process](/azure/machine-learning/team-data-science-process/overview#:~:text=%20What%20is%20the%20Team%20Data%20Science%20Process%3F,resources%20for%20data%20science%20projects.%20The...%20More%20) provides a reference lifecycle implementation.
+- Standardize on a project lifecycle and agile methodology. The [Team Data Science Process](/azure/machine-learning/team-data-science-process/overview) provides a reference lifecycle implementation.
 - Balanced teams can execute all MLOps stages from exploration to development to operations.
 
 ### Process
@@ -224,10 +224,10 @@ The following figure summarizes key elements of an AI factory:
 
 ![AI factory summary](media/aifactory_summary.png)
 
-Not all organization's machine learning DevOps (MLOps) requirements are the same. The MLOps architecture for a large multi-national enterprise is unlikely to fit a small startup. Organizations start small and build up as their maturity, model catalog, and experience grows.
+Not every organization's machine learning DevOps (MLOps) requirements are the same. The MLOps architecture for a large multinational enterprise is unlikely to fit a small startup. Organizations start small and build up as their maturity, model catalog, and experience grows.
 
 ## Next steps
 
 To learn more about how to organize and set up Azure Machine Learning environments, see [Organize and set up Azure Machine Learning environments](./ai-machine-learning-resource-organization.md)
 > [!div class="nextstepaction"]
-> [Organize and set up Azure Machine Learning environments](./ai-machine-learning-resource-organization.md)
+> [Organize and set up Azure Machine Learning environments](./ai-machine-learning-resource-organization.md).
