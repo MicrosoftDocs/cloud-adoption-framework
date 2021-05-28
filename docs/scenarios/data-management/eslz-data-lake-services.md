@@ -151,7 +151,7 @@ Sometimes these datasets mature, and the enterprise should consider how they pro
 
 ## Understanding the built-in RBAC roles
 
-Azure Storage has two layers of access: service management and data. Subscriptions and storage accounts are accessed through the management layer. Containers, blobs, and other data resources are accessed through the data layer. For example, if you want to get a list of your storage accounts from Azure, you send a request to the management endpoint. If you want a list of filesystems (containers), folders or files in a storage account, you send a request to the appropriate service endpoint.
+Azure Storage has two layers of access: service management and data. Subscriptions and storage accounts are accessed through the management layer. Containers, blobs, and other data resources are accessed through the data layer. For example, if you want to get a list of your storage accounts from Azure, you send a request to the management endpoint. If you want a list of file systems (containers), folders or files in a storage account, you send a request to the appropriate service endpoint.
 
 RBAC roles can contain permissions for management or data layer access. The Reader role, for example, grants read-only access to management layer resources but not read access to any of the data.
 
@@ -173,7 +173,7 @@ Roles such as Owner, Contributor, Reader and Storage Account Contributor permit 
 Storage Blob Data Owner is considered a super-user and is granted full access to all mutating operations, including setting the owner of a directory or file as well as ACLs for directories and files for which they are not the owner. Super-user access is the only authorized manner to change the owner of a resource.
 
 >[!NOTE]
-> RBAC assignments can take up to 5 minutes to propagate and take affect.
+> RBAC assignments can take up to 5 minutes to propagate and take effect.
 
 ## How access is evaluated in ADLS
 
@@ -186,9 +186,9 @@ During security principal-based authorization, permissions will be evaluated in 
 >[!NOTE]
 >The above permission model applies to ADLS only and not general purpose (blob) storage without HNS enabled which does not support ACLs.
 >This description excludes [Shared Key and SAS authentication](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control) methods in which no identity is associated with the operation and assumes that the storage account is accessible via appropriate networking configuration. It also excludes scenarios in which the security principal has been assigned the Storage Blob Data Owner built-in role which provides *super-user* access.
->It is recommended to set allowSharedKeyAccess to false so that access can be audited by the identity.
+>It is recommended to set `allowSharedKeyAccess` to false so that access can be audited by the identity.
 
-![howaccessisevaluated](../images/howaccessisevaluatedv2.png)
+![howaccessisevaluated](./images/howaccessisevaluatedv2.png)
 
 See [here](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control#common-scenarios-related-to-permissions) for another example of what ACL based permissions are required for a given operation.
 
@@ -212,7 +212,7 @@ As per the [ADLS best practices](https://docs.microsoft.com/azure/storage/blobs/
 
 However, even when using groups, a proliferation of access control entries may occur at top levels of the directory tree, particularly when very granular permissions with many different groups are required. In order for each group to obtain read access to the files contained in their folder, they will need execute permissions from root, which is the container level, all the way down to the folder they are trying to access. It is likely that the 32 access control entry limit will be reached in the root or levels close to root. An example of this scenario is depicted below:
 
-![flat groups issue](../images/flatgroupsissue.png)
+![flat groups issue](./images/flatgroupsissue.png)
 
 ### Configure access using both RBAC and ACLs
 
@@ -228,18 +228,18 @@ There are two possible solutions to this outlined below but the recommended appr
 
 Where possible before files and folders are created, begin with a parent group which is assigned execute permissions to both default and access ACLs at the container level. Then add the groups requiring data access to the parent group. This technique is known as nesting groups, and from an ADLS authorization perspective, the member group inherits the permissions of the parent group, providing "global" execute permissions to all member groups. The member group in this case will not need execute permissions as these permissions will be inherited because it belongs to the parent group.  Additional nesting may provide greater flexibility and agility if the security groups that represent teams or automated jobs are added to the data access reader and writer groups.
 
-![Nested Groups](../images/nestedgroups.png)
+![Nested Groups](./images/nestedgroups.png)
 
 ### Option 2: The Other ACL entry (Recommended)
 
 Another way to ensure that every part of the path from root to lowest level has execute permissions (--x) is to use the "Other" ACL entry set at the container/root, with defaults and access ACLs applied as shown in the first diagram below. This execute permission propagates down any subsequently added child folders until the depth/folder where the intended access group should have Read and Execute permissions (in the lowest part of the chain as depicted in the second image), which will grant that group access to read the data appropriately. This approach works similarly for write access.
 
-![root_acl](../images/acl_other_rootv2.png)
-![folder_acl](../images/acl_other_lowest.png)
+![root_acl](./images/acl_other_rootv2.png)
+![folder_acl](./images/acl_other_lowest.png)
 
 ## Recommended Data Lake Zones Security
 
-![Data Lake Zones Security](../images/adlssecurityzones.png)
+![Data Lake Zones Security](./images/adlssecurityzones.png)
 
 The recommended security pattern for each of the of the Data Lake Zones is:
 
