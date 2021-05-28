@@ -1,5 +1,5 @@
 ---
-title: Machine Learning DevOps Guide
+title: Machine learning DevOps guide
 description: This guide provides a balanced view across three areas of MLOps. It discusses best practices and learnings from adopting MLOps in the Enterprise with Azure Machine Learning.
 author: manu-kanwarpal
 ms.author: deeikele
@@ -16,7 +16,7 @@ Machine learning DevOps (MLOps) is an organizational change that relies on a com
 
 This article is subdivided into three sections:
 
-- **An introduction to Machine learning DevOps (MLOps):** A conceptual introduction that provides a balanced view across the three areas of people, process, and technology to anyone new to machine learning DevOps.
+- **An introduction to machine learning DevOps (MLOps):** A conceptual introduction that provides a balanced view across the three areas of people, process, and technology to anyone new to machine learning DevOps.
 - **MLOps best practices with Azure Machine Learning:** Key considerations and recommendations to apply MLOps practices scoped to a single machine learning project.
 - **MLOps at organizational scale: AI factories:** Key considerations and recommendations to drive organizational change with MLOps in an enterprise environment.
 

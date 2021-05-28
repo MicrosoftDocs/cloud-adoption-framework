@@ -418,7 +418,7 @@ items:
         items:
         - name: Organize and set up Azure Machine Learning environments
           href: ready/azure-best-practices/ai-machine-learning-resource-organization.md
-        - name: Machine Learning DevOps (MLOps)
+        - name: Machine learning DevOps (MLOps)
           href: ready/azure-best-practices/ai-machine-learning-mlops.md
       - name: Cost management
         items:
