@@ -51,9 +51,9 @@ We recommend that teams providing cloud adoption capability be dedicated to the 
 
 It's best if these teams meet daily in a self-organizing way. The goal of daily meetings is to quickly update the backlog, and to communicate what has been completed, what is to be done today, and what things are blocked, requiring additional external support.
 
-Release schedules and iteration durations are unique to each company. But a range of one to four weeks per iteration seems to be the average duration. Regardless of iteration or release cadence, we recommend that the team meets all supporting teams at the end of each release to communicate the outcome of the release, and to reprioritize upcoming efforts. It's also valuable to meet as a team at the end of each sprint, with the [cloud center of excellence](../organize/cloud-center-of-excellence.md) or [cloud governance team](./cloud-governance.md) to stay aligned on common efforts and any needs for support.
+Release schedules and iteration durations are unique to each company. But a range of one to four weeks per iteration seems to be the average duration. Regardless of iteration or release cadence, we recommend that the team meets all supporting teams at the end of each release to communicate the outcome of the release, and to reprioritize upcoming efforts. It's also valuable to meet as a team at the end of each sprint, with the [cloud center of excellence](./cloud-center-of-excellence.md) or [cloud governance team](./cloud-governance.md) to stay aligned on common efforts and any needs for support.
 
-Some of the technical tasks associated with cloud adoption can become repetitive. Team members should rotate every 3&ndash;6 months to avoid employee satisfaction issues and maintain relevant skills. A rotating seat on [cloud center of excellence](../organize/cloud-center-of-excellence.md) or [cloud governance team](./cloud-governance.md) can provide an excellent opportunity to keep employees fresh and harness new innovations.
+Some of the technical tasks associated with cloud adoption can become repetitive. Team members should rotate every 3&ndash;6 months to avoid employee satisfaction issues and maintain relevant skills. A rotating seat on [cloud center of excellence](./cloud-center-of-excellence.md) or [cloud governance team](./cloud-governance.md) can provide an excellent opportunity to keep employees fresh and harness new innovations.
 
 ## Baseline capability
 
@@ -71,12 +71,12 @@ For optimal collaboration and efficiency, we recommend that cloud adoption teams
 
 Additional support from existing IT staff may be needed. IT can be a valuable contributor to cloud adoption by becoming a cloud broker and a partner for innovation and business agility.
 
-- [Central IT team responsibilities](../organize/central-it.md)
+- [Central IT team responsibilities](./central-it.md)
 
 ## What's next
 
 Adoption is great, but ungoverned adoption can produce unexpected results. Align with the [cloud governance team](./cloud-governance.md) to accelerates adoption and best practices, while reducing business and technical risks.
 
-These two teams create balance across cloud adoption efforts, but is considered an MVP because it may not be sustainable. Each team is wearing many hats, as outlined in the [*responsible, accountable, consulted, informed* (RACI) charts](../organize/raci-alignment.md).
+These two teams create balance across cloud adoption efforts, but is considered an MVP because it may not be sustainable. Each team is wearing many hats, as outlined in the [*responsible, accountable, consulted, informed* (RACI) charts](./raci-alignment.md).
 
-Learn more about [organizational antipatterns: silos and fiefdoms](../organize/fiefdoms-silos.md).
+Learn more about [organizational antipatterns: silos and fiefdoms](./fiefdoms-silos.md).

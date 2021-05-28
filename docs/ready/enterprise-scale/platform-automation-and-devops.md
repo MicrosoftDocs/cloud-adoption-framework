@@ -14,7 +14,7 @@ ms.custom: think-tank
 
 ![Diagram of platform automation and DevOps.](./media/devops.png)
 
-_Figure 1: Platform automation and DevOps._
+*Figure 1: Platform automation and DevOps.*
 
 ## Planning for a DevOps approach
 

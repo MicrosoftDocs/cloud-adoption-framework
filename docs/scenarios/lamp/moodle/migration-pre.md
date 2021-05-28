@@ -10,6 +10,8 @@ ms.subservice: plan
 ms.custom: think-tank
 ---
 
+<!-- cspell:ignore downloadazcopy mysqldump onpremisesstorage zcvf -->
+
 # How to prepare for a Moodle migration
 
 Before you migrate a Moodle application from your on-premises environment to Azure, you should export your data. This guide explains the steps of the export process.

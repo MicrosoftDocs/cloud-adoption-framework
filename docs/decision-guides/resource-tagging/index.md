@@ -18,7 +18,7 @@ Organizing cloud-based resources is a crucial task for IT, unless you only have 
 - **Cost management and optimization:** Making business groups aware of cloud resource consumption requires IT to understand the resources and workloads each team is using. The following topics are supported by cost-related tags:
 
   - [Cloud accounting models](../../strategy/cloud-accounting.md)
-  - [ROI calculations](../../strategy/financial-models.md#return-on-investment)
+  - [ROI calculations](../../strategy/financial-models.md)
   - [Cost tracking](../../ready/azure-best-practices/track-costs.md)
   - [Budgets](/azure/cost-management-billing/costs/tutorial-acm-create-budgets?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
   - [Alerts](/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)

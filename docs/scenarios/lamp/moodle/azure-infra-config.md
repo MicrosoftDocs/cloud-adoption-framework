@@ -10,6 +10,8 @@ ms.subservice: plan
 ms.custom: think-tank
 ---
 
+<!-- cspell:ignore moodledata mbstring mcrypt bcmath -->
+
 # How to set up Moodle worker nodes
 
 Follow these steps to configure a virtual machine scale set, or worker nodes, for Moodle.

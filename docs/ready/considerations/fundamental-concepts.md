@@ -46,7 +46,7 @@ When you create an Azure subscription, you make several key choices about the su
 - **Which Azure offer am I interested in?** Each subscription is associated with a specific [Azure offer](https://azure.microsoft.com/support/legal/offer-details). You can choose the Azure offer that best meets your needs. For example, if you intend to use a subscription to run nonproduction workloads, you might choose the Pay-As-You-Go Dev/Test offer or the Enterprise Dev/Test offer.
 
 > [!NOTE]
-> When you sign up for Azure, you might see the phrase _create an Azure account_. You create an Azure account when you create an Azure subscription and associate the subscription with an email account.
+> When you sign up for Azure, you might see the phrase *create an Azure account*. You create an Azure account when you create an Azure subscription and associate the subscription with an email account.
 
 ## Azure administrative roles
 

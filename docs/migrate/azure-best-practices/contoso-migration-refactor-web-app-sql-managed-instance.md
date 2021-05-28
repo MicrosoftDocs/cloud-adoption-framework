@@ -275,7 +275,7 @@ Contoso needs to build the DevOps infrastructure and pipelines for the applicati
 The Contoso admins make sure that the web apps and database can communicate with each other. To do this, they configure connection strings in the code and in the web apps.
 
 1. In the web app for the WCF service, `SHWCF-EUS2`, under **Settings** > **Application settings**, they add a new connection string named `DefaultConnection`.
-1. They pull the connection string from the SmartHotel-Registration database and then update it with the correct credentials.
+1. They pull the connection string from the `SmartHotel-Registration` database and then update it with the correct credentials.
 
     ![Screenshot of the connection string settings pane.](./media/contoso-migration-refactor-web-app-sql-managed-instance/string1.png)
 

@@ -14,13 +14,13 @@ ms.custom: internal
 
 # Understand and align the portfolio hierarchy
 
-Business needs are often supported, improved, or accelerated through information technology. A collection of technologies that delivers defined business value is called a _workload_. That collection might include applications, servers or virtual machines, data, devices, and other similarly grouped assets.
+Business needs are often supported, improved, or accelerated through information technology. A collection of technologies that delivers defined business value is called a *workload*. That collection might include applications, servers or virtual machines, data, devices, and other similarly grouped assets.
 
 Typically, a business stakeholder and technical leader share accountability for the ongoing support of each workload. In some phases of the workload lifecycle, those roles are clearly stated. In more operational phases of a workload's lifecycle, those roles might be transitioned to a shared operations management team or cloud operations team. As the number of workloads increases, the roles (stated or implied) become more complex and more matrixed.
 
-Most businesses rely on multiple workloads to deliver vital business functions. The collection of workloads, assets, and supporting factors (projects, people, processes, and investments) is called a _portfolio_. The matrix of business, development, and operations staff requires a portfolio hierarchy to show how the workloads and supporting services all fit together.
+Most businesses rely on multiple workloads to deliver vital business functions. The collection of workloads, assets, and supporting factors (projects, people, processes, and investments) is called a *portfolio*. The matrix of business, development, and operations staff requires a portfolio hierarchy to show how the workloads and supporting services all fit together.
 
-This article provides clear definitions for the levels of the portfolio hierarchy. The article aligns various teams with the appropriate accountability in each layer, along with the source of the best guidance for that team to deliver on the expectations for that level. Throughout this article, each level of the hierarchy is also called a _scope_.
+This article provides clear definitions for the levels of the portfolio hierarchy. The article aligns various teams with the appropriate accountability in each layer, along with the source of the best guidance for that team to deliver on the expectations for that level. Throughout this article, each level of the hierarchy is also called a *scope*.
 
 ## Portfolio hierarchy
 
@@ -45,11 +45,11 @@ When companies support workloads through matrixed approaches or centralized appr
 
 ![Image of an IT portfolio with multiple public and private cloud platforms](../../_images/ready/buildout-cloud-platforms.png)
 
-- **Landing zones:** Landing zones provide workloads with the necessary _foundational utilities_ (or shared plumbing) that are provided from a _platform foundation_ that's required to support one or more workloads. Landing zones are so critical in the cloud that the entire Ready methodology of the Cloud Adoption Framework focuses on landing zones. For a more detailed definition, see [What is a landing zone?](../../ready/landing-zone/index.md)
+- **Landing zones:** Landing zones provide workloads with the necessary *foundational utilities* (or shared plumbing) that are provided from a *platform foundation* that's required to support one or more workloads. Landing zones are so critical in the cloud that the entire Ready methodology of the Cloud Adoption Framework focuses on landing zones. For a more detailed definition, see [What is a landing zone?](../../ready/landing-zone/index.md)
 - **Foundational utilities:** These shared IT services are required for workloads to operate within the technology and business portfolio.
 - **Platform foundation:** This organizational construct centralizes foundational solutions and helps ensure that those controls are enforced for all landing zones.
-- **Cloud platforms:** Depending on the overall strategy for supporting the full _portfolio_, customers might need multiple cloud platforms with distinct deployments of the platform foundation to govern multiple regions, hybrid solutions, or even multicloud solutions.
-- **Portfolio:** Through a technology lens, the portfolio is a collection of workloads, assets, and supporting resources that span all cloud platforms. Through a business lens, the portfolio is the collection of projects, people, processes, and investments that support and manage the technology portfolio to drive business outcomes. Together, these two lenses capture the _portfolio_.
+- **Cloud platforms:** Depending on the overall strategy for supporting the full *portfolio*, customers might need multiple cloud platforms with distinct deployments of the platform foundation to govern multiple regions, hybrid solutions, or even multicloud solutions.
+- **Portfolio:** Through a technology lens, the portfolio is a collection of workloads, assets, and supporting resources that span all cloud platforms. Through a business lens, the portfolio is the collection of projects, people, processes, and investments that support and manage the technology portfolio to drive business outcomes. Together, these two lenses capture the *portfolio*.
 
 ## Hierarchy accountability and guidance
 

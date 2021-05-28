@@ -1,5 +1,5 @@
 ---
-title: Enterprise-scale management and monitoring for SAP on Azure
+title: Operations baseline for SAP on Azure
 description: Learn about design considerations and recommendations for managing and monitoring SAP on Azure.
 author: JefferyMitchell
 ms.author: brblanch
@@ -10,9 +10,9 @@ ms.subservice: ready
 ms.custom: think-tank, e2e-sap
 ---
 
-# Enterprise-scale management and monitoring for SAP on Azure
+# Operations baseline for SAP on Azure
 
-This article explores how to operationally maintain an SAP on Azure enterprise estate, with centralized management and monitoring at the platform level. The article presents key recommendations for SAP operations teams to maintain SAP systems within the Azure platform.
+This article builds on a number of considerations and recommendations defined in the Azure landing zone article [enterprise-scale design area for management and monitoring](../../ready/enterprise-scale/management-and-monitoring.md). Following the guidance in this article will help explore how to operationally maintain an SAP platform on Azure enterprise estate, with centralized management and monitoring at the platform level. The article presents key recommendations for SAP operations teams to maintain SAP systems within the Azure platform. Since SAP is an mission-critical platform, the guidance on the enterprise-scale design areas should also be included in your design.
 
 **Design considerations:**
 
@@ -22,7 +22,7 @@ Here are some design considerations for SAP on Azure monitoring and management:
 
 - Consider inter-virtual machine (VM) latency monitoring for latency-sensitive applications.
 
-- Consider scheduling [AzAcSnap](/azure/azure-netapp-files/azacsnap-introduction) from a central VM rather than on individual VMs.
+- Consider scheduling [`AzAcSnap`](/azure/azure-netapp-files/azacsnap-introduction) from a central VM rather than on individual VMs.
 
 **Design recommendations:**
 
@@ -32,7 +32,7 @@ Here are some design recommendations for SAP on Azure monitoring and management:
 
 - Use SAP Solution Manager and [Azure Monitor for SAP Solutions](/azure/virtual-machines/workloads/sap/azure-monitor-overview) to monitor SAP HANA, high-availability SUSE clusters, and SQL systems.
 
-- Run a VM Extension for SAP check. VM Extension for SAP uses a VM's assigned managed identity to access VM monitoring and configuration data. The check ensures that all performance metrics that appear inside your SAP application come from the underlying [Azure Extension for SAP](/azure/virtual-machines/workloads/sap/deployment-guide).
+- Run a VM Extension for SAP check. VM Extension for SAP uses the assigned managed identity of a virtual machine to access VM monitoring and configuration data. The check ensures that all performance metrics that appear inside your SAP application come from the underlying [Azure Extension for SAP](/azure/virtual-machines/workloads/sap/deployment-guide).
 
 - Protect your HANA database with [Azure Backup](/azure/virtual-machines/workloads/sap/sap-hana-backup-guide) service. If you deploy Azure NetApp Files (ANF) for your HANA database, use the [Azure Application Consistent Snapshot tool (AzAcSnap)](/azure/azure-netapp-files/azacsnap-introduction) to take application-consistent snapshots.
 

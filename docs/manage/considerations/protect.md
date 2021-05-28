@@ -64,7 +64,7 @@ Every minute of downtime on those virtual machines could cause lost revenue or r
 
 Each of the preceding models reduces the RTO, resulting in a faster restoration of business process capabilities. However, each model also results in significantly increased cloud management costs.
 
-Also, please note that, apart from replication for high-availability, backup should be enabled for scenarios such as accidental delete, data corruption and ransomware attacks.
+Also note that, apart from replication for high-availability, backup should be enabled for scenarios such as accidental delete, data corruption and ransomware attacks.
 
 For more information about this thought process, see [Workload operations discipline](./workload.md).
 

@@ -65,7 +65,7 @@ The following section provides some example names for common Azure resource type
 <!-- cspell:ignoreRegExp [a-z]+-[a-z]+ -->
 <!-- cspell:ignoreRegExp `[a-z]+` -->
 <!-- cspell:ignoreRegExp [a-z]+\d+ -->
-<!-- cspell:ignoreRegExp _[a-z]+[\\-] -->
+<!-- cspell:ignoreRegExp [_\*][a-z]+[\\-] -->
 
 ## Example names: General
 
