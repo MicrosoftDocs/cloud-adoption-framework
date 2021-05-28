@@ -147,7 +147,7 @@ In this case, the data platform should allocate a workspace for these consumers 
 
 These datasets are usually of unknown quality and accuracy. They are still categorized as a **data product** but are temporary and only relevant to the user group using the data.
 
-Sometimes these datasets mature, and the enterprise should consider how they promote these **Data Products** from the Workspace to the Curated Data Layer.
+Sometimes these datasets mature, and the enterprise should consider how they promote these **Data Products** from the Workspace to the Curated Data Layer. In order to keep Data Product teams responsible for new Data Products, it is recommended to provide these teams a dedicated folder on the Curated Data Layer in which they can then then store the new results and share them with other teams across the organization.
 
 ## Understanding the built-in RBAC roles
 
@@ -295,8 +295,6 @@ With the Common Data Model (CDM), organizations can use a data format that provi
 Each of the data lakes should use Private Endpoints injected into the VNet of the Data Landing Zone. To allow access across landing zones, we propose connecting Data Landing Zones through VNet peering. This provides the optimal solution from both a cost perspective and an access control perspective.
 
 See [Private Endpoints](./eslz-network-topology-and-connectivity.md#private-endpoints) and [Data Management Landing Zone to Data Landing Zone](./eslz-network-topology-and-connectivity.md#data-management-landing-zone-to-data-landing-zone)
-
-
 
 >[!IMPORTANT]
 >Data from a Data Landing Zone can be accessed from another Data Landing Zone over the VNet Peering between the Data Landing Zones using the private endpoints associated with each data lake account. We recommend turning off all public access to the lakes and using private endpoints. Network connectivity across Data Landing Zones (*e.g.* private links) are controlled by the Platform Ops team.
