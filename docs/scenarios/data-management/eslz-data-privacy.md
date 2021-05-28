@@ -150,5 +150,4 @@ As Domains and Data Products create read data sources, they would be registered 
 
 ## Highly Confidential Data
 
-In addition to the above options being implemented for Highly Confidential Data, also known as restricted, we recommend that Highly Confidential Data is hosted in a dedicated Data Landing Zone. This allows specific requirements such as just in time access, customer managed keys and putting inbound/outbound restrictions to the landing zone. The Data Management Landing Zone should be able to connect to catalogue the data, in the Data Landing Zone, but should restrict who can search for this data in the catalogue.
-
+In addition to the above options being implemented for Highly Confidential Data, also known as restricted, we recommend that Highly Confidential Data is hosted in a dedicated Data Landing Zone. This allows specific requirements such as just in time access, customer managed keys for encryption and putting inbound/outbound restrictions to the landing zone. The Data Management Landing Zone should be able to connect to catalogue the data, in the Data Landing Zone, but should restrict who can search for this data in the catalogue.
