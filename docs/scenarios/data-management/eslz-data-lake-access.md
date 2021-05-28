@@ -67,9 +67,9 @@ Storage Blob Data Owner is considered a super-user and is granted full access to
 
 ## How data lake structure relates to access control
 
-A very basic data lake structure may consist of three "layers" or "zones" which represent the stage and quality of data at a particular stage in its transformation lifecycle. While raw data may not yield business value or insights im../imagestely, storing historical high fidelity data in a cost effective manner will allow the value to be unlocked later as transformation pipelines are built to cleanse and enrich the data. Data often needs to be prepared, modelled and optimized for analytics before it is transformed and stored in the curated layer.
+A very basic data lake structure may consist of three "layers" or "zones" which represent the stage and quality of data at a particular stage in its transformation lifecycle. While raw data may not yield business value or insights im./imagestely, storing historical high fidelity data in a cost effective manner will allow the value to be unlocked later as transformation pipelines are built to cleanse and enrich the data. Data often needs to be prepared, modelled and optimized for analytics before it is transformed and stored in the curated layer.
 
-![generic data lake structure](../images/datalakestructure.png)
+![generic data lake structure](./images/datalakestructure.png)
 
 Often the value of data, and therefore implicitly the layers also, have a bearing on which groups of users (automated or human) access the data at a particular point in the lifecycle. For example, analysts will typically only want to work with curated data, whilst engineers building transformation pipelines may need read access to all three layers to pull samples of data into the development environment in order to develop and test a new pipeline. Data in the curated layer may not have reached its end state, it is plausible that new datasets may be developed with other curated datasets. Whilst users may need read access to various parts of the lake, no-one should have write access except for the service principals or managed identities used for automated processing such as ADF pipelines or Azure Databricks jobs. These automated processes should have passed the necessary test and review phases to prevent data corruption, or even worse data loss.
 
@@ -89,7 +89,7 @@ During security principal-based authorisation, permissions will be evaluated in 
 >[!NOTE]
 >This description excludes [Shared Key and SAS authentication](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control) methods in which no identity is associated with the operation and assumes that the storage account is accessible via appropriate networking configuration. It also excludes scenarios in which the security principal has been assigned the Storage Blob Data Owner built-in role which provides *super-user* access.
 
-![howaccessisevaluated](../images/howaccessisevaluatedv2.png)
+![howaccessisevaluated](./images/howaccessisevaluatedv2.png)
 
 See [here](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control#common-scenarios-related-to-permissions)
 for another example of what ACL based permissions are required for a
@@ -110,7 +110,7 @@ given operation.
 1. Click + Container
 1. Specify a container name in accordance with the [naming convention](https://docs.microsoft.com/azure/storage/blobs/storage-blob-container-create#name-a-container)
 
-![createcontainerusingportal](../images/createcontainerusingportal.png)
+![createcontainerusingportal](./images/createcontainerusingportal.png)
 
 ### Using Storage Explorer
 
@@ -122,7 +122,7 @@ given operation.
 1. Right click on Blob Containers, click Create Blob Container
 1. Enter a [valid](https://docs.microsoft.com/azure/storage/blobs/storage-blob-container-create#name-a-container) container name and hit enter
 
-![createcontainerusingstorageexplorer.png](../images/createcontainerusingstorageexplorer.png)
+![createcontainerusingstorageexplorer.png](./images/createcontainerusingstorageexplorer.png)
 
 >[!NOTE]
 > Storage Explorer requires access to both management layer (subscriptions and storage accounts) and data layer (containers, blobs and data), therefore will require at least the Reader role to list storage accounts, and the Storage Blob Data Reader role to list or download folders and files. Alternatively, a SAS URI can be used if access to the management layer is not impossible. For information please see the [documentation](https://docs.microsoft.com/azure/storage/common/storage-explorer-troubleshooting?toc=%2Fazure%2Fstorage%2Fblobs%2Ftoc.json&tabs=Windows%2C1904).
@@ -147,7 +147,7 @@ given operation.
 5. Optionally click on "No members selected" to add members
 6. Click Create
 
-![creategroupusingportal](../images/creategroupusingportal.png)
+![creategroupusingportal](./images/creategroupusingportal.png)
 
 ### Using the API
 
@@ -180,7 +180,7 @@ When using only RBAC, one may question whether ADLS Gen2 is required at all, par
 5.  Keep the default selection for "Assign access to"
 6.  Select the security principal to assign the role to
 
-![assignrbacusingportal](../images/assignrbacusingportal.png)
+![assignrbacusingportal](./images/assignrbacusingportal.png)
 
 ### Using the API
 
@@ -193,7 +193,7 @@ For more information see:
 - 
 ## Storage permutations
 
-![rbacstorageconfigurations](../images/rbacstorageconfigurations.png)
+![rbacstorageconfigurations](./images/rbacstorageconfigurations.png)
 
 __Option 1:__
 
@@ -208,20 +208,20 @@ Configure access using ACLs only
 
 As per the [ADLS best practices](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-best-practices#use-security-groups-versus-individual-users) it is recommended to assign access control entries to a security group rather than an individual user or service principal. When adding or removing users from the group no updates to ADLS are required and using groups also reduces the chance of exceeding the 32 access control entries per file or folder ACL. After the 4 default entries that leaves only 28 remaining for permission assignments. However, even when using groups, a proliferation of access control entries may occur at top levels of the directory tree, particularly when very granular permissions with many different groups are required. In order for each group to obtain read access to the files contained in their folder, they will need execute permissions from root, which is the container level, all the way down to the folder they are trying to access. It is likely that the 32 access control entry limit will be reached in the root or levels close to root. An example of this scenario is depicted below: 
 
-![flatgroupsissue](../images/flatgroupsissue.png)
+![flatgroupsissue](./images/flatgroupsissue.png)
 
 There are two possible solutions to this outlined below but the recommended approach is to make use of nested groups.
 
 ### Option 1 The parent execute group
 Where possible before files and folders are created, begin with a parent group which is assigned execute permissions to both default and access ACLs at the container level. Then add the groups requiring data access to the parent group. This technique is known as nesting groups, and from an ADLS authorisation perspective, the member group inherits the permissions of the parent group, providing "global" execute permissions to all member groups. The member group in this case will not need execute permissions as these permissions will be inherited because it belongs to the parent group.  Additional nesting may provide greater flexibility and agility if the security groups that represent teams or automated jobs are added to the data access reader and writer groups.
 
-![nestedgroups](../images/nestedgroups.png)
+![nestedgroups](./images/nestedgroups.png)
 
 ### Option 2 The Other ACL entry
 Another way to ensure that every part of the path from root to lowest level has execute permissions (--x) is to use the "Other" ACL entry set at the container/root, with defaults and access ACLs applied as shown in the first diagram below. This exceute permission propogates down any subsequently added child folders until the depth/folder where the intended access group should have Read and Execute permissions (in the lowest part of the chain as depicted in the second image), which will grant that group access to read the data appropriately. This approach works similarly for write access.
 
-![root_acl](../images/acl_other_rootv2.png)
-![folder_acl](../images/acl_other_lowest.png)
+![root_acl](./images/acl_other_rootv2.png)
+![folder_acl](./images/acl_other_lowest.png)
 
 ### Using Storage Explorer in the Portal (Preview)
 
@@ -243,7 +243,7 @@ Prerequisite: Follow the steps in "How to create a data lake container" above if
 
 7.  Click Save
 
-![storageexplorerportal](../images/storageexplorerportal.png)
+![storageexplorerportal](./images/storageexplorerportal.png)
 
 ### Using Azure Storage Explorer
 
@@ -261,7 +261,7 @@ Prerequisite: Follow the steps in "How to create a data lake container" above if
 
 6.  Click Save
 
-![aclsusingstorageexplorer](../images/aclsusingstorageexplorer.png)
+![aclsusingstorageexplorer](./images/aclsusingstorageexplorer.png)
 
 ### Using the API
 
@@ -289,7 +289,7 @@ Substitute the parameters in parentheses, and run the following code using a sec
 
 ### Storage permutations
 
-![aclsdesignpermutations](../images/aclsdesignpermutations.png)
+![aclsdesignpermutations](./images/aclsdesignpermutations.png)
 
 Option 1: A single physical data lake approach where the lowest level of granularity can be flexible and applied at the appropriate folder depth. Remember that execute ACLs should be applied at the container level (root) down to the required folder. As the lowest level of granularity for RBAC is the storage container it is unlikely that this data lake design would work for an RBAC-only security model. Using RBAC, every process or person accessing the data lake would have global privileges across the data whether it be read (Storage Blob Data Reader) or read-write (Storage Blob Data Contributor) permissions. Not only does this increase the risk that those with read access might see something they shouldn't, but an even greater risk is that data could inadvertently be overwritten or deleted by one of the writers. For these reasons this design was not one of the RBAC-only options above.
 
@@ -304,7 +304,7 @@ This approach favours scenarios where most users need read access to but only a 
 
 ### Storage permutations
 
-![hybriddesignpermutations](../images/hybriddesignpermutations.png)
+![hybriddesignpermutations](./images/hybriddesignpermutations.png)
 
 Conclusion
 ==========

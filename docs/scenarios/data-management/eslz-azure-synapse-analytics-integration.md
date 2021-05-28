@@ -163,7 +163,7 @@ In Propagate Access Control Lists, choose How to handle failures depending on th
 
 Check the box I understand that propagating ACLs cannot be easily reversable and click OK. 
 
-![Manage Access](../images/ACLPropag2.png)
+![Manage Access](./images/ACLPropag2.png)
 
 #### Considerations when using Spark Tables in Synapse Spark Pool.
 
