@@ -29,7 +29,7 @@ For companies trying to achieve higher states of maturity, it might include migr
 
 The Azure Marketplace has the most convenient approach to application deployment and migration for many common retail industry applications. Before migrating, review the [retail industry applications in the Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps?search=retail&page=1) to see if your applications are already available.
 
-Migrating to an approved, pre-packaged deployment of your favorite applications can accelerate your migration process and significantly reduce the time to reach the *"connected retail"* horizon.
+Migrating to an approved, pre-packaged deployment of your favorite applications can accelerate your migration process and significantly reduce the time to reach the *connected retail* horizon.
 
 ## Standard migration process
 
