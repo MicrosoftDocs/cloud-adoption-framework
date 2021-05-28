@@ -1,5 +1,5 @@
 ---
-title: Managing budgets, costs, and quota for Azure Machine Learning at organizational scale
+title: Manage budgets, costs, and quota for Azure Machine Learning at organizational scale
 description: Best practices in optimizing costs, managing budgets, and sharing quota with Azure Machine Learning.
 author: denniseik
 ms.author: deeikele
@@ -10,14 +10,14 @@ ms.subservice: ready
 ms.custom: internal
 ---
 
-# Managing budgets, costs, and quota for Azure Machine Learning at organizational scale
+# Manage budgets, costs, and quota for Azure Machine Learning at organizational scale
 
 When you manage compute costs incurred from Azure Machine Learning at an organization scale with many workloads, many teams, and users, there are numerous management and optimization challenges to work through.
 
 In this article, we present best practices to optimize costs, manage budgets, and share quota with Azure Machine Learning. It reflects the experience and lessons learned from running machine learning teams internally at Microsoft and while partnering with our customers. You'll learn how to:
 
 - [Optimize compute resources to meet workload requirements.](#optimize-compute-to-meet-workload-requirements)
-- [Drive the best use of a team's budget.](#drive-best-utilization-of-a-teams-budget)
+- [Drive the best use of a team's budget.](#drive-best-use-of-a-teams-budget)
 - [Plan, manage and share budgets, cost, and quota at enterprise-scale.](#plan-manage-and-share-budgets-cost-and-quota-at-an-enterprise-scale)
 
 ## Optimize compute to meet workload requirements
@@ -28,10 +28,10 @@ When you start a new machine learning project, explorative work might be needed 
 
 Hardware requirements for your training workload might vary from project to project. To meet these requirements, Azure Machine Learning compute [offers various types](/azure/machine-learning/concept-compute-target#supported-vm-series-and-sizes) of VMs:
 
-- General purpose- balanced CPU to memory ratio
-- Memory optimized- high memory to CPU ratio
-- Compute optimized- high CPU to memory ratio
-- High-performance compute- deliver leadership-class performance, scalability, and cost efficiency for various real-world HPC workloads
+- General purpose: Balanced CPU to memory ratio
+- Memory optimized: High memory to CPU ratio
+- Compute optimized: High CPU to memory ratio
+- High-performance compute: Deliver leadership-class performance, scalability, and cost efficiency for various real-world HPC workloads
 - Instances with GPUs
 
 When you do not have a good idea yet about what your compute requirements are, we recommend to start with either of the two default options below which are cost effective options for lightweight testing and for training workloads.
@@ -72,10 +72,10 @@ Compute requirements for inference scenarios differ from training scenarios. Ava
 For real-time inference scenarios consider following the below suggestions:
 
 - Use [profiling capabilities](/azure/machine-learning/how-to-deploy-profile-model?pivots=py-sdk) on your model with Azure Machine Learning to determine how much CPU and memory you need to allocate for the model when deploying it as a web service.
-- If you're doing real-time inference but don't need high availability, deploy to [Azure Container Instances](/azure/machine-learning/how-to-deploy-azure-container-instance) (no SKU selection)
-- If you are doing real-time inference but need high availability, deploy to [Azure Kubernetes Service](/azure/machine-learning/how-to-deploy-azure-kubernetes-service?tabs=python)
+- If you're doing real-time inference but don't need high availability, deploy to [Azure Container Instances](/azure/machine-learning/how-to-deploy-azure-container-instance) (no SKU selection).
+- If you are doing real-time inference but need high availability, deploy to [Azure Kubernetes Service](/azure/machine-learning/how-to-deploy-azure-kubernetes-service?tabs=python).
   - If you're using traditional machine learning models and receive < 10 queries/second, start with a CPU SKU. F-series SKUs often work well.
-  - If you're using deep learning models and receive > 10 queries/second, try a NVIDIA GPU SKU (NCasT4\_v3 often works well) [with Triton](/azure/machine-learning/how-to-deploy-with-triton?tabs=python)
+  - If you're using deep learning models and receive > 10 queries per second, try a NVIDIA GPU SKU (NCasT4\_v3 often works well) [with Triton](/azure/machine-learning/how-to-deploy-with-triton?tabs=python).
 
 For batch inference scenarios consider the following suggestions:
 
@@ -84,7 +84,7 @@ For batch inference scenarios consider the following suggestions:
 
 ### Determine the size for compute instance compute
 
-For interactive development, Azure Machine Learning's compute instance compute type is recommended to use. The CI offering brings single node compute that's bound to a single user and can be used as a workstation replacement.
+For interactive development, Azure Machine Learning's compute instance compute type is recommended to use. The continuous integration (CI) offering brings single node compute that's bound to a single user and can be used as a workstation replacement.
 
 Some organizations disallow the use of production data on local workstations, have enforced restrictions to the workstation environment, or restrict the installation of packages and dependencies in the Corporate IT environment. Compute instance can be used as a workstation to overcome the limitation, offering a secure environment with production data access, and running on images that come with popular packages and tools for data science pre-installed.
 
@@ -102,7 +102,7 @@ You can view information on your Azure Machine Learning compute usage and utiliz
 
 Based on the insights from the monitoring details, you can better plan or adjust your resource usage across the team. For example, if you notice many idle nodes over the past week, you can work with the corresponding workspace owners to update the compute cluster configuration to prevent this extra cost. Benefits of analyzing the utilization patterns can help with forecasting costs and budget improvements.
 
-You can access these metrics directly from the Azure portal. Go to your Azure Machine Learning Workspace, and select 'Metrics' under the monitoring section on the left panel. Then, you can select details on what you would like to view, such as metrics, aggregation, and time period. For more information, you can refer to the [Monitor Azure Machine Learning](/azure/machine-learning/monitor-azure-machine-learning) documentation page.
+You can access these metrics directly from the Azure portal. Go to your Azure Machine Learning workspace, and select *Metrics* under the monitoring section on the left panel. Then, you can select details on what you would like to view, such as metrics, aggregation, and time period. For more information, you can refer to the [Monitor Azure Machine Learning](/azure/machine-learning/monitor-azure-machine-learning) documentation page.
 
 ![Azure Monitor metrics for Azure Machine Learning](media/ai-machine-learning-azuremonitor-metrics.png)
 
@@ -116,7 +116,7 @@ To save cost and work productively, it is recommended to:
 - If your dataset is large, consider managing a sample of your data on your local workstation, while keeping the full dataset on cloud storage.
 - Parameterize your experimentation code base so that you can configure your jobs to run with a varying number of epochs or on datasets of different size.
 - Do not hard code the folder path of your dataset, so that you can easily reuse the same code base with different datasets, and under local and cloud execution context.
-- Bootstrap your experimentation jobs in 'local' compute target mode while you develop or test, or when you switch to shared compute cluster capacity when submitting jobs at full scale.
+- Bootstrap your experimentation jobs in *local* compute target mode while you develop or test, or when you switch to shared compute cluster capacity when submitting jobs at full scale.
 - If your dataset is large, work with a sample of data on your local or compute instance workstation, while scaling to cloud compute in Azure Machine Learning to work with your full set of data.
 - When your jobs take long to execute, consider optimizing your code base for distributed training to allow for scaling out horizontally.
 - Design your distributed training workloads for node elasticity, to allow flexible use of single-node and multi-node compute, and ease usage of compute that can be preempted.
@@ -125,7 +125,7 @@ To save cost and work productively, it is recommended to:
 
 When you orchestrate your machine learning workflows, you can define a pipeline with multiple steps. Each step in the pipeline can run on its own compute type, so you can optimize performance and cost to meet varying compute requirements across the machine learning lifecycle.
 
-## Drive the best utilization of a team's budget
+## Drive the best use of a team's budget
 
 While budget allocation decisions might be out of the span of control of an individual team, a team is typically empowered to utilize their allocated budget to their best needs. By trading off job priority versus performance and cost wisely, a team can achieve higher cluster utilization, lower overall cost, and utilize a larger number of compute hours from the same budget, resulting in enhanced team productivity.
 
@@ -134,7 +134,7 @@ While budget allocation decisions might be out of the span of control of an indi
 The key to optimizing costs of shared compute resources is to ensure that these are being used to their full capacity. Here are some tips to do this:
 
 1. When you use compute instances, only turn them on when you have code to execute. Shut them down when they are not being used.
-2. When you use compute clusters, set the minimum node count to 0 and the maximum node count to a number that is evaluated based on your budget constraints. Use [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) to calculate the cost of full utilization of one VM node of your chosen VM SKU. Autoscaling will scale down all the compute nodes when there's no one using it and only scale up to the number of nodes you have budget for.
+2. When you use compute clusters, set the minimum node count to 0 and the maximum node count to a number that is evaluated based on your budget constraints. Use the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) to calculate the cost of full utilization of one VM node of your chosen VM SKU. Autoscaling will scale down all the compute nodes when there's no one using it and only scale up to the number of nodes you have budget for.
 [azureml.core.compute.amlcompute.ScaleSettings class - Azure Machine Learning Python | Microsoft Docs](/python/api/azureml-core/azureml.core.compute.amlcompute.scalesettings)
 3. Monitor your resource utilizations such as CPU utilization and GPU utilization when training models. If the resources aren't being fully utilized, modify your code to better utilize resources or scale down to smaller/cheaper VM sizes.
 4. Evaluate whether you can create shared compute resources for your team to avoid computing inefficiencies caused by cluster scaling operations.
@@ -168,7 +168,7 @@ One of the biggest challenges as an administrator for planning compute needs is 
 To understand where the budget is going, it is critical to know where the costs come from in Azure Machine Learning:
 
 - Azure Machine Learning only charges for compute infrastructure used and doesn't add a surcharge on compute costs.
-- When an Azure Machine Learning Workspace is created, there are also a few other resources created to enable Azure Machine Learning – Key Vault, Application Insights, Storage, and Azure Container Registry. These resources are used in Azure Machine Learning and you will pay for these resources.
+- When an Azure Machine Learning Workspace is created, there are also a few other resources created to enable Azure Machine Learning: Key Vault, Application Insights, Storage, and Azure Container Registry. These resources are used in Azure Machine Learning and you will pay for these resources.
 - There are costs associated with managed compute such as training clusters, compute instances, and managed inferencing endpoints. With these managed compute resources, there are the following infrastructure costs to account for: virtual machines, virtual network, load balancer, bandwidth, and storage.
 
 ### Govern and restrict compute usage by policy
@@ -195,7 +195,7 @@ Azure Machine Learning Compute supports reserved instances. Discounts are automa
 
 Every time a machine learning pipeline is executed, intermediate datasets can be generated at each pipeline step for data caching and reuse. The growth of data as an output of these machine learning pipelines can become a pain point for an organization that is running many machine learning experiments.
 
-Data scientists typically don't spend their time to clean up the intermediate datasets that are generated. Over time, the amount of data that is generated will add up. Azure Storage comes with a capability to enhance the management of the data lifecycle. Using [Blob lifecycle management](/azure/storage/blobs/storage-lifecycle-management-concepts?tabs=azure-portal), you can set up general/policies to move data that is unused into colder storage tiers and save costs.
+Data scientists typically don't spend their time to clean up the intermediate datasets that are generated. Over time, the amount of data that is generated will add up. Azure Storage comes with a capability to enhance the management of the data lifecycle. Using [Blob lifecycle management](/azure/storage/blobs/storage-lifecycle-management-concepts?tabs=azure-portal), you can set up general policies to move data that is unused into colder storage tiers and save costs.
 
 ### Infrastructure cost optimization considerations
 
