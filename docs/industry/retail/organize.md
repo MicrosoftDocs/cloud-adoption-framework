@@ -11,7 +11,7 @@ ms.subservice: govern
 
 # Organizational structures the retail industry
 
-Organizational structures in the retail industry tend to be the result of decades of organic or acquisition-based growth. This article builds on the Organize methodology in the Cloud Adoption Framework to understand some in the retail industry have reorganized to capitalize on new technologies. For more information, see [Manage organizational alignment](../../organize/index.md).
+Organizational structures in the retail industry tend to be the result of decades of organic or acquisition-based growth. This article builds on the Organize methodology in the Cloud Adoption Framework to understand how some in the retail industry have reorganized for new technologies. For more information, see [Manage organizational alignment](../../organize/index.md).
 
 ## Cloud strategy team
 
@@ -91,7 +91,7 @@ Be sure to include the following roles or proxies for each role in recurring mee
         
     :::column-end:::
     :::column span="2":::
-        Increase safety and security of goods/shipments
+        Increase safety and security of goods and shipments
     :::column-end:::
 :::row-end:::
 ---
@@ -164,11 +164,11 @@ To organize around cloud strategies and cloud plans, understand your current org
 
 The following section compares your current situation and future goals. Use it to provide a customized course of action to reach your goals.
 
-## Traditional, central IT, and centralized operations
+## Traditional central IT and centralized operations
 
 When the foundation of a retail company is a brick and mortar business, the technology organization likely formed around specific goals. Such goals might include "keep the lights on" and "keep products moving". Traditional retail organizations tend to focus on facility management and supply chain technologies. The technology organization tends to emphasize security, stability, and operations over innovation. Technology teams that have grown in this growth model often operate as a central IT organization with a focus on central operations.
 
-This type of technology team is well suited for the first two stages of the retail cloud maturity model. These stages are siloed retail and connected retail. If your organization needs to go further in that maturity, be sure to read the next section about CCoE and Enterprise operations.
+This type of technology team is well suited for the first two stages of the retail cloud maturity model. These stages are siloed retail and connected retail. If your organization needs to go further in that maturity, be sure to read the next section about Cloud Center of Excellence (CCoE) and enterprise operations.
 
 ![Central IT team](../../_images/ready/org-ready-central-it.png)
 
@@ -180,7 +180,7 @@ To prepare for central IT and central operations in Azure, evaluate how the curr
 
 As retail organizations expand into more mature phases of the retail cloud maturity model, central IT models could become an inhibitor to innovation for some organizations. It's possible for central IT to evolve and support more mature models. However, reorganization is common for modern retailers.
 
-Retail consumers are increasingly fickle. Retail competitors respond with rapid innovation to stay relevant. Rapid innovation requires systems and processes that can channel, not block, rapid change. For more information, see [Cloud Center of Excellence (CCoE)](../../organize/cloud-center-of-excellence.md).
+Retail consumers are increasingly fickle. Retail competitors respond with rapid innovation to stay relevant. Rapid innovation requires systems and processes that can channel, not block, rapid change. For more information, see [Cloud Center of Excellence](../../organize/cloud-center-of-excellence.md).
 
 Rapid growth startups often begin with this fast pace of change. They have processes to channel the change. Brick and mortar organizations that fully embrace and integrate a startup acquisition often have some of those controls in place. In either case, innovation tends to have an equal or greater priority, compared to stability found in more traditional organizations.
 
@@ -188,16 +188,16 @@ These organizations empower workload owners to make more decisions. They focus o
 
 This type of technology team organization is well suited to achieve the latter two stages of the retail cloud maturity model. These stages are analytics-driven retail and intelligent retail. We refer to these organizations as Cloud Center of Excellence (CCoE) teams. Those teams tend to align best with enterprise operations.
 
-![Cloud Center of Excellence (CCoE) team](../../_images/ready/org-ready-ccoe.png)
+![Cloud Center of Excellence team](../../_images/ready/org-ready-ccoe.png)
 
 CCoE teams tend to value innovation and delegated responsibility. To replicate this operating model in the cloud, the CCoE team enables advanced cloud capabilities:
 
 - Enable zero trust security
 - Separate duties
 - Centralize monitoring and visibility
-- Create policies to force adherence to compliance, security, and operations guardrails.
+- Create policies to force adherence to compliance, security, and operations guardrails
 
-Those advanced controls can most easily be deployed using the enterprise-Scale architecture and implementation options of Azure landing zones. For more information, see [Cloud governance functions](../../organize/cloud-governance.md) and [Cloud platform functions](../../organize/cloud-platform.md).
+Those advanced controls can most easily be deployed using the enterprise-scale architecture and implementation options of Azure landing zones. For more information, see [Cloud governance functions](../../organize/cloud-governance.md) and [Cloud platform functions](../../organize/cloud-platform.md).
 
 To prepare for CCoE and enterprise operations in Azure, evaluate how the current organization structure aligns to the CCoE organizational structure pictured above. New virtual teams or adjustments to the organization may be useful to deliver this advanced operations approach in Azure. Specifically, early cloud adoption projects should focus on building the CCoE functions to modernize existing central IT models. Those teams may also need to define a plan for replacing existing operations tools used to support any central IT processes.
 
