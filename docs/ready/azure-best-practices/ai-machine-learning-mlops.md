@@ -1,7 +1,7 @@
 ---
 title: Machine Learning DevOps Guide
 description: This guide provides a balanced view across three areas of MLOps. It discusses best practices and learnings from adopting MLOps in the Enterprise with Azure Machine Learning.
-author: makanw
+author: manu-kanwarpal
 ms.author: deeikele
 ms.date: 05/24/2021
 ms.topic: conceptual
