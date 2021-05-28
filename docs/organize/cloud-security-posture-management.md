@@ -20,10 +20,10 @@ The main objective for a cloud security team working on posture management is to
 
 Posture management is a set of new functions that realize many previously imagined or attempted ideas that were difficult, impossible, or extremely manual before the advent of the cloud. Some of elements of posture management can be traced to zero trust, deperimeterization, continuous monitoring, and manual scoring of risk by expert consultancies.
 
-Posture management introduces a structured approach to this, using the following:
+Posture management introduces a structured approach to modernization, using the following:
 
 - **Zero trust-based access control:** That considers active threat level during access control decisions.
-- **Real time risk scoring:** To provide visibility into top risks.
+- **Real-time risk scoring:** To provide visibility into top risks.
 - **Threat and vulnerability management (TVM)** to establish a holistic view of the organizations attack surface and risk and integrate it into operations and engineering decision making.
 - **Discover sharing risks:** To understand the data exposure of enterprise intellectual property on both sanctioned and unsanctioned cloud services.
 - **Cloud security posture management** to take advantage of cloud instrumentation to monitor and prioritize security improvements.
@@ -34,7 +34,7 @@ Posture management introduces a structured approach to this, using the following
 
 ## Team composition and key relationships
 
-Security posture management is an evolving function, so it may be a dedicated team or may it be provided by other teams.
+Security posture management is an evolving function, so it might be a dedicated team, or it might be provided by other teams.
 
 Security posture management should work closely with the following teams:
 

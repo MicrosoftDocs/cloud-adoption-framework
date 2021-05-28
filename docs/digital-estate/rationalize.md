@@ -14,6 +14,9 @@ ms.custom: internal
 
 Cloud rationalization is the process of evaluating assets to determine the best approach to hosting them in the cloud. After you've determined an [approach](./approach.md) and aggregated an [inventory](./inventory.md), cloud rationalization can begin. Cloud rationalization discusses the most common rationalization options.
 
+Watch the following video to get a quick overview about completing a comprehensive assessment that will help you plan and prioritize your migration efforts.
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWDpel]
+
 ## Traditional view of rationalization
 
 It's easy to understand rationalization when you visualize the traditional process of rationalization as a complex decision tree. Each asset in the digital estate is fed through a process that results in one of five answers (the five Rs of rationalization). For small estates, this process works well. For larger estates, it's inefficient and can lead to significant delays. Let's examine the process to see why. Then we'll present a more efficient model.

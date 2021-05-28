@@ -71,7 +71,7 @@ The following table lists the native tools that can help mature the policies and
 
 ## Next steps
 
-<!-- TODO: The download button for this whitepaper returns 404. -->
+<!-- TODO: The download button for this white paper returns 404. -->
 
 <!-- docutune:casing "Hybrid Identity Digital Transformation Framework" -->
 

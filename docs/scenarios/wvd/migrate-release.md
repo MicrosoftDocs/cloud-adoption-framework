@@ -1,22 +1,22 @@
 ---
 title: Windows Virtual Desktop post-deployment and release tasks
 description: Use the Cloud Adoption Framework best practices to learn about the release process for the migration or deployment of Windows Virtual Desktop instances.
-author: BrianBlanchard
-ms.author: brblanch
-ms.date: 07/17/2020
+author: DominicAllen
+ms.author: doalle
+ms.date: 05/18/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
-ms.custom: internal
+ms.custom: think-tank
 ---
 
 # Windows Virtual Desktop post-deployment
 
-The release process for the migration or deployment of Windows Virtual Desktop instances is relatively straightforward. This process mirrors the one that's used during the [Windows Virtual Desktop proof of concept](./proof-of-concept.md):
+The release process for the migration or deployment of Windows Virtual Desktop instances is straightforward. This process mirrors the one used during the [Windows Virtual Desktop proof of concept](./proof-of-concept.md):
 
 - Test the performance and latency of application groups and deployed desktops for a sampling of users.
 - Onboard end users to teach them how to connect via:
-  - [Windows desktop client](/azure/virtual-desktop/connect-windows-7-and-10)
+  - [Windows desktop client](/azure/virtual-desktop/connect-windows-7-10)
   - [Web client](/azure/virtual-desktop/connect-web)
   - [Android client](/azure/virtual-desktop/connect-android)
   - [macOS client](/azure/virtual-desktop/connect-macos)
@@ -24,7 +24,7 @@ The release process for the migration or deployment of Windows Virtual Desktop i
 
 ## Post-deployment
 
-After the release has been completed, it's common to add [logging and diagnostics to better operate Windows Virtual Desktop](/azure/virtual-desktop/diagnostics-log-analytics#push-diagnostics-data-to-your-workspace). It's also common for operations teams to onboard the pooled hosts and desktop virtual machines into the [Azure server management best practices](../../manage/azure-server-management/index.md) to manage reporting, patching, and business continuity and disaster recovery configurations.
+After the release has been completed, it's common to add [logging and diagnostics to better operate Windows Virtual Desktop](/azure/virtual-desktop/azure-monitor). It's also common for operations teams to onboard the pooled hosts and desktop virtual machines into the [Azure server management best practices](../../manage/azure-server-management/index.md) to manage reporting, patching, and business continuity and disaster recovery configurations.
 
 Although the release process is out of scope for this migration scenario, the process might expose the need to migrate additional workloads to Azure during subsequent iterations of migration. If you haven't configured Microsoft 365 or Azure Active Directory, your cloud adoption team might choose to onboard into those services upon the release of the desktop scenarios. For a hybrid operating model, operations teams might also choose to integrate Intune, System Center, or other configuration management tools to improve operations, compliance, and security.
 

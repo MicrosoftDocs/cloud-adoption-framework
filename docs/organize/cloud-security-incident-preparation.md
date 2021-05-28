@@ -25,10 +25,9 @@ Practice exercises have become powerful tools to ensure stakeholders are informe
 - **Technical team members** to investigate and remediate incident.
 - **Business continuity integration** with organizational functions that own crisis management, disaster recovery, and business continuity plans.
 
-<!-- docutune:casing "Incident Response Reference Guide" "IRRG" -->
-<!-- cSpell:ignore IRRG -->
+<!-- docutune:casing "Incident Response Reference Guide" -->
 
-Microsoft has published lessons learned and recommendations in the [Incident Response Reference Guide (IRRG)](https://aka.ms/IRRG).
+Microsoft has published lessons learned and recommendations in the [Incident Response Reference Guide](https://aka.ms/irrg).
 
 ## Team composition and key relationships
 

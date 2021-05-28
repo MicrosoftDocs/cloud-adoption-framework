@@ -29,7 +29,7 @@ Reuse of components is a fundamental principle of infrastructure as code. Module
 The first landing zone deploys the following components in your subscription:
 
 ![Foundational landing zone using Terraform](../../_images/ready/foundations-terraform-landing-zone.png)
-_Figure 1: A foundation landing zone using Terraform._
+*Figure 1: A foundation landing zone using Terraform.*
 
 <!-- docutune:casing NetworkMonitoring AdAssessment AdReplication AgentHealthAssessment DnsAnalytics KeyVaultAnalytics -->
 

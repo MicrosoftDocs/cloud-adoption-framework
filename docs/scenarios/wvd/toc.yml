@@ -1,0 +1,85 @@
+items:
+  - name: Desktop virtualization - Microsoft Cloud Adoption Framework for Azure
+    href: index.md
+    pdf_name: Desktop Virtualization - Microsoft Cloud Adoption Framework for Azure
+  - name: Strategic impact
+    href: strategy.md
+  - name: Technical planning
+    href: plan.md
+  - name: Prepare your environments
+    href: ready.md
+  - name: Migrate your virtual desktop platform
+    items:
+    - name: Proof of concept
+      href: proof-of-concept.md
+    - name: Assess
+      href: migrate-assess.md
+    - name: Migrate (or deploy)
+      href: migrate-deploy.md
+    - name: Release
+      href: migrate-release.md
+  - name: Innovate in the cloud
+    href: innovate.md
+  - name: Govern your portfolio
+    href: govern.md
+  - name: Manage your portfolio
+    href: manage.md
+
+  - name: Architectures
+    items:
+    - name: Windows Virtual Desktop architecture
+      href: /azure/architecture/example-scenario/wvd/windows-virtual-desktop
+
+  - name: Best practices
+    items:
+    - name: WVD security best practices
+      href: /azure/virtual-desktop/security-guide
+    - name: Azure security baseline for Windows Virtual Desktop
+      href: /security/benchmark/azure/baselines/windows-virtual-desktop-security-baseline
+    - name: Virtual desktop machine sizing
+      href: /windows-server/remote/remote-desktop-services/virtual-machine-recs?context=/azure/virtual-desktop/context/context
+    - name: Configure device redirections
+      href: /azure/virtual-desktop/configure-device-redirections
+    - name: Scale session hosts
+      href: /azure/virtual-desktop/set-up-scaling-script
+
+  - name: Enterprise-scale construction set
+    items:
+    - name: Construction set for enterprise-scale WVD
+      href: enterprise-scale-landing-zone.md
+    - name: Identity and access management
+      href: eslz-identity-and-access-management.md
+    - name: Network topology and connectivity
+      href: eslz-network-topology-and-connectivity.md
+    - name: Management and monitoring
+      href: eslz-management-and-monitoring.md
+    - name: Business continuity and disaster recovery
+      href: eslz-business-continuity-and-disaster-recovery.md
+    - name: Security governance and compliance
+      href: eslz-security-governance-and-compliance.md
+    - name: Platform automation and DevOps
+      href: eslz-platform-automation-and-devops.md
+
+  - name: Microsoft products
+    items:
+    - name: Windows Virtual Desktop
+      href: https://azure.microsoft.com/services/virtual-desktop/
+    - name: Azure Files
+      href: https://azure.microsoft.com/services/storage/files/
+
+  - name: Learn modules
+    items:
+    - name: Introduction to Windows Virtual Desktop in Microsoft Azure
+      href: /learn/modules/m365-wvd-intro/
+    - name: Prepare for Windows Virtual Desktop in Microsoft Azure
+      href: /learn/modules/m365-prepare-for-wvd/
+    - name: Deploy Windows Virtual Desktop in Microsoft Azure
+      href: /learn/modules/m365-deploy-wvd/
+    - name: Deliver remote desktops and applications from Azure with Windows Virtual Desktop
+      href: /learn/paths/m365-wvd/
+    - name: Optimize Windows Virtual Desktop in Microsoft Azure
+      href: /learn/modules/m365-optimize-wvd/
+    - name: Deploy applications by using MSIX app attach for Windows Virtual Desktop
+      href: /learn/modules/m365-wvd-application-management/
+    - name: Secure a Windows Virtual Desktop deployment
+      href: /learn/modules/m365-wvd-security/

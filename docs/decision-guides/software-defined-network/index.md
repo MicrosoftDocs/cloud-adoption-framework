@@ -47,11 +47,11 @@ When planning which virtual networking architecture or combination of architectu
 
 Learn more about the primary Software Defined Networking architectures:
 
-- **[PaaS-only](./paas-only.md):** Most platform as a service (PaaS) products support a limited set of built-in networking features and may not require an explicitly defined software defined network to support workload requirements.
-- **[Cloud-native](./cloud-native.md):** A cloud-native architecture supports cloud-based workloads using virtual networks built on the cloud platform's default Software Defined Networking capabilities, without reliance on on-premises or other external resources.
-- **[Cloud DMZ](./cloud-dmz.md):** Supports limited connectivity between your on-premises and cloud networks, secured through the implementation of a perimeter network tightly controlling traffic between the two environments.
-- **[Hybrid](./hybrid.md):** The hybrid cloud network architecture allows virtual networks in trusted cloud environments to access your on-premises resources and vice versa.
-- **[Hub and spoke](./hub-spoke.md):** The hub and spoke architecture allows you to centrally manage external connectivity and shared services, isolate individual workloads, and overcome potential subscription limits.
+- [PaaS-only](./paas-only.md): Most platform as a service (PaaS) products support a limited set of built-in networking features and may not require an explicitly defined software defined network to support workload requirements.
+- [Cloud-native](./cloud-native.md): A cloud-native architecture supports cloud-based workloads using virtual networks built on the cloud platform's default Software Defined Networking capabilities, without reliance on on-premises or other external resources.
+- [Cloud DMZ](./cloud-dmz.md): Supports limited connectivity between your on-premises and cloud networks, secured through the implementation of a perimeter network tightly controlling traffic between the two environments.
+- [Hybrid](./hybrid.md): The hybrid cloud network architecture allows virtual networks in trusted cloud environments to access your on-premises resources and vice versa.
+- [Hub and spoke](./hub-spoke.md): The hub and spoke architecture allows you to centrally manage external connectivity and shared services, isolate individual workloads, and overcome potential subscription limits.
 
 ## Learn more
 

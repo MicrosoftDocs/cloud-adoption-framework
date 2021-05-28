@@ -28,10 +28,10 @@ The following series of blogs shows how your organization can implement cloud go
 
 For guidance on applying cloud-native governance tools to Azure Stack Hub environments, see:
 
-- [Azure Resource Manager templates and Desired State Configuration](/azure-stack/user/azure-stack-arm-templates?view=azs-2002)
-- [PowerShell](/azure-stack/user/azure-stack-powershell-overview?view=azs-2002)
-- [Azure Policy](/azure-stack/user/azure-stack-policy-module?view=azs-2002)
-- [Azure role-based access control](/azure-stack/user/azure-stack-manage-permissions?view=azs-2002)
+- [Azure Resource Manager templates and Desired State Configuration](/azure-stack/user/azure-stack-arm-templates)
+- [PowerShell](/azure-stack/user/azure-stack-powershell-overview)
+- [Azure Policy](/azure-stack/user/azure-stack-policy-module)
+- [Azure role-based access control](/azure-stack/user/azure-stack-manage-permissions)
 
 ## Next steps
 
