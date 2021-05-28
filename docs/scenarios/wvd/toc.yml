@@ -24,7 +24,7 @@ items:
       - name: Governance disciplines
         href: eslz-security-governance-and-compliance.md
       - name: Management baseline
-        href: eslz-management-and-monitoring.m
+        href: eslz-management-and-monitoring.md
       - name: Business continuity and disaster recovery
         href: eslz-business-continuity-and-disaster-recovery.md
       - name: Platform automation and DevOps
