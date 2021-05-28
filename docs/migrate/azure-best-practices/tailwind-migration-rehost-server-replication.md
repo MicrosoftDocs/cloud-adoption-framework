@@ -25,7 +25,9 @@ In order for Tailwind to migrate to Azure, it's critical to plan for the migrati
 > [!div class="checklist"]
 >
 > - **Step 1: Tooling and replication.** How many replication appliances will you need? What are best practices to enable replication?
+>
 > - **Step 2: Migration cutover preparation.** What activities will resources need to execute before and after the migration? What value is provided, and when should I plan for a test migration? What are the constraints when testing in an isolated VNet?
+>
 > - **Step 3: Migration cutover execution.** How does cutover look like? What happens after cutover?
 
 ## Before you start
