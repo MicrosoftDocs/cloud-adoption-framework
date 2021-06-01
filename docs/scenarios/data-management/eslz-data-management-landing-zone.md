@@ -23,7 +23,7 @@ The Data Management Landing Zone is a separate subscription which has the standa
 >Polyglot persistence is an enterprise storage term used to describe choosing different data storage/data stores technologies to support the various data types and their storage needs. Polyglot persistence is essentially the idea that an application can use more than one core database or storage technology.
 
 >[!WARNING]
->The Data Management Landing Zone must be deployed as a separate subscription under the platform branch of an Enterprise Scale architecture. This will allow it to control the governance across the enterprise. The [Cloud Adoption Framework Enterprise-Scale Architecture](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/architecture) illustrates the way to approach enterprise-scale.
+>The Data Management Landing Zone must be deployed as a separate subscription under the platform branch of an Enterprise Scale architecture. This will allow it to control the governance across the enterprise. The [Cloud Adoption Framework Enterprise-Scale Architecture](/azure/cloud-adoption-framework/ready/enterprise-scale/architecture) illustrates the way to approach enterprise-scale.
 
 ## Data Catalog
 
@@ -31,7 +31,7 @@ It is recommended to have a catalog service provisioned for defining the metadat
 
 The catalog registers and maintains the data information in a centralized place and makes it available for the organization. This ensures that enterprises avoid duplicate datasets caused by redundant data ingestion by different project teams.
 
-The Enterprise Scale Analytics and AI solution pattern relies on [Azure Purview](https://docs.microsoft.com/azure/purview/overview) to serves as:
+The Enterprise Scale Analytics and AI solution pattern relies on [Azure Purview](/azure/purview/overview) to serves as:
 
 * system of registration
 * discovery for enterprise data sources
@@ -70,7 +70,7 @@ Classifications are like subject tags and are used to mark and identify content 
 
 Azure Purview can scan and automatically classify documents. For example, if you have a file named "multiple.docx" and it has a National ID number in its content, Azure Purview will add a classification such as `EU National Identification Number` in the Asset Detail page.
 
-[Azure Defender for SQL](https://docs.microsoft.com/azure/azure-sql/database/azure-defender-for-sql)
+[Azure Defender for SQL](/azure/azure-sql/database/azure-defender-for-sql)
 is a feature available for Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics. It includes functionality for discovering and classifying sensitive data, surfacing and mitigating potential database vulnerabilities, and detecting anomalous activities that could indicate a threat to your database. It provides a single go-to location for enabling and managing these capabilities.
 
 ## Data Lineage
@@ -156,7 +156,7 @@ The API Catalog can help standardize documentation and offers a place for intern
 ### Data Sharing and Contracts
 
 Although Enterprise Scale Analytics and AI uses
-[Azure AD Entitlement management](https://docs.microsoft.com/azure/active-directory/governance/entitlement-management-overview)
+[Azure AD Entitlement management](/azure/active-directory/governance/entitlement-management-overview)
 to control access and sharing of data, the enterprise might require a sharing and contract repository. As this is an organizational function, this repository should reside in the Data Management Landing Zone.
 
 These contracts should give information on data validation, model, and security policies.
@@ -215,4 +215,4 @@ Azure Synapse Analytics private link hubs are Azure resources which act as conne
 
 There are two steps to connect to Synapse Studio using private links. First, you must create a private link hubs resource. Second, you must create a private endpoint from your Azure virtual network to this private link hub. You can then use private endpoints to securely communicate with Synapse Studio. You must integrate the private endpoints with your DNS solution, either in your on-premises solution or with Azure Private DNS.
 
-See [Connect to Synapse Studio using private links](https://docs.microsoft.com/azure/synapse-analytics/security/synapse-private-link-hubs) for further details.
+See [Connect to Synapse Studio using private links](/azure/synapse-analytics/security/synapse-private-link-hubs) for further details.

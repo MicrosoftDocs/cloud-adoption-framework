@@ -13,7 +13,7 @@ ms.subservice: ready
 
 **Azure Synapse** is the provisioned, integrated analytics service that accelerates time to insight across data warehouses and big data systems. Azure Synapse brings together the best of **SQL** technologies used in enterprise data warehousing, **Spark** technologies used for big data, and **Pipelines** for data integration and ETL/ELT. **Synapse Studio** provides a unified experience for management, monitoring, coding, and security. Synapse has deep integration with other Azure services such as **Power BI**, **CosmosDB**, and **Azure Machine Learning**.
 
-This section aims to describe prescribed configurations which are specific to the Enterprise Scale Analytic and AI solution pattern. It is a compliment to the official [Azure Synapses Documentation](https://docs.microsoft.com/azure/synapse-analytics/).
+This section aims to describe prescribed configurations which are specific to the Enterprise Scale Analytic and AI solution pattern. It is a compliment to the official [Azure Synapses Documentation](/azure/synapse-analytics/).
 
 ## Overview
 
@@ -36,13 +36,13 @@ For premium big data processing and data science capabilities, we recommend Azur
 
 ### Azure Synapse Networking
 
-A Data Landing Zone will create workspaces with a [Azure Synapse Analytics Managed Virtual Network](https://docs.microsoft.com/azure/synapse-analytics/security/synapse-workspace-managed-vnet). Communication with Synapse will be through the three endpoints it exposes: SQL Pool, SQL On-Demand, and the Development Endpoint.
+A Data Landing Zone will create workspaces with a [Azure Synapse Analytics Managed Virtual Network](/azure/synapse-analytics/security/synapse-workspace-managed-vnet). Communication with Synapse will be through the three endpoints it exposes: SQL Pool, SQL On-Demand, and the Development Endpoint.
 
-At the network level, the Enterprise Scale Analytics and AI solution pattern uses [Synapse Managed private endpoints](https://docs.microsoft.com/azure/synapse-analytics/security/synapse-workspace-managed-private-endpoints) to ensure all the traffic between Data Landing Zone vNet and Azure Synapse Workspace(s) traverses entirely over the Microsoft backbone network.
+At the network level, the Enterprise Scale Analytics and AI solution pattern uses [Synapse Managed private endpoints](/azure/synapse-analytics/security/synapse-workspace-managed-private-endpoints) to ensure all the traffic between Data Landing Zone vNet and Azure Synapse Workspace(s) traverses entirely over the Microsoft backbone network.
 
 ### Azure Synapse Data Access Control
 
-[Azure AD pass-through in Azure Synapse Analytics](https://docs.microsoft.com/azure/synapse-analytics/sql/active-directory-authentication#azure-ad-pass-through-in-azure-synapse-analytics) should use Access Control Lists to manage the access to the files in the data lake.
+[Azure AD pass-through in Azure Synapse Analytics](/azure/synapse-analytics/sql/active-directory-authentication#azure-ad-pass-through-in-azure-synapse-analytics) should use Access Control Lists to manage the access to the files in the data lake.
 
 At the database level, in addition to the database roles, we recommend Row-Level Security (RLS) and Column-Level Security to restrict the data access on the tables in Synapse SQL Pool using security policy.
 
@@ -57,7 +57,7 @@ By combining RLS with Column-Level Security (CLS) to restrict access to columns 
 
 When deploying an Azure Synapse workspace, a Data Lake Storage Gen 2 account is required from the subscription or manually using the storage account URL. The specified storage account will be set as **primary** for the deployed Azure Synapse workspace to store its data. Azure Synapse stores data in a container, that includes Apache Spark tables, spark application logs under a folder called `/synapse/{workspacename}`. It also uses container for managing libraries that you choose to install.
 
-During the Synapse workspace deployment through [Azure Portal](https://azure.microsoft.com/en-us/features/azure-portal/), you have the option to either provide an existing storage account or create a new one. The provided storage account will be set as the **primary storage account** for the Synapse workspace. For any of the two options selected, the deployment process automatically grants the Synapse workspace identity data access to the specified Data Lake Storage Gen2 account, using the **Storage Blob Data Contributor** role. If the deployment of Synapse workspace happens outside of the Azure Portal, you will have to add Synapse workspace identity to the **Storage Blob Data Contributor** role manually later. It is recommended to assign the role **Storage Blob Data Contributor** on the file system level to follow the least privilege principle. 
+During the Synapse workspace deployment through [Azure Portal](https://azure.microsoft.com/en-us/features/azure-portal/) you have the option to either provide an existing storage account or create a new one. The provided storage account will be set as the **primary storage account** for the Synapse workspace. For any of the two options selected, the deployment process automatically grants the Synapse workspace identity data access to the specified Data Lake Storage Gen2 account, using the **Storage Blob Data Contributor** role. If the deployment of Synapse workspace happens outside of the Azure Portal, you will have to add Synapse workspace identity to the **Storage Blob Data Contributor** role manually later. It is recommended to assign the role **Storage Blob Data Contributor** on the file system level to follow the least privilege principle. 
 
 It is also possible to manually specify the storage account URL. However, in this case, you will need to contact the storage account owner, and ask them to grant the workspace identity access manually using the **Storage Blob Data Contributor.**
 
@@ -79,18 +79,18 @@ Before you start implementing fined-grained access with ACLs, is important to un
 
 ![RBAC ACLs Evaluation](./images/RBAC-ACLsEvaluation.png)
 
-Please refer to the [Access control model for Azure Data Lake Storage Gen2 | Microsoft Docs](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control-model#how-permissions-are-evaluated) for more information.
+Please refer to the [Access control model for Azure Data Lake Storage Gen2 | Microsoft Docs](/azure/storage/blobs/data-lake-storage-access-control-model#how-permissions-are-evaluated) for more information.
 
 To setup ACLs in Data Lake Storage Gen 2, you can use one of the following methods:  
 
 - **Azure CLI**  
-    - For detailed instructions on how to use **Azure CLI** to grant ACLs permissions in ADLS Gen2 refer to [Use Azure CLI to manage ACLs in Azure Data Lake Storage Gen2](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-acl-cli)
+    - For detailed instructions on how to use **Azure CLI** to grant ACLs permissions in ADLS Gen2 refer to [Use Azure CLI to manage ACLs in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-acl-cli)
 
 - **PowerShell**  
-    - For detailed instructions on how to use **PowerShell** to grant ACLs permissions in ADLS Gen2 refer to [Use PowerShell to manage ACLs in Azure Data Lake Storage Gen2](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-acl-powershell)
+    - For detailed instructions on how to use **PowerShell** to grant ACLs permissions in ADLS Gen2 refer to [Use PowerShell to manage ACLs in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-acl-powershell)
 
 - **Azure Storage Explorer**  
-    - For details instructions on how to use and install, refer to [Get started with Storage Explorer | Microsoft Docs.](https://docs.microsoft.com/azure/vs-azure-tools-storage-manage-with-storage-explorer?tabs=windows)
+    - For details instructions on how to use and install, refer to [Get started with Storage Explorer | Microsoft Docs.](/azure/vs-azure-tools-storage-manage-with-storage-explorer?tabs=windows)
 
 > [!TIP]
 > Consider using **Azure CLI** or **PowerShell** for automation to achieve better scalability when a large amount of folders and files are expected in the ACLs setup process.
@@ -101,7 +101,7 @@ Assigning Azure RBAC Reader role to users or groups in the Synapse workspace pri
 
 Using Data Hub in Synapse Studio, users can browse folders and files before they start writing a query or spark code. Users also have some options available in Synapse Studio to help getting started with queries and reading the data from spark from a specific file. These options include Select Top 100 rows, Create External Table, Load to a Dataframe, New Spark Table.
 
-Refer to the [Assign Azure roles using the Azure portal - Azure RBAC | Microsoft Docs](https://docs.microsoft.com/azure/role-based-access-control/role-assignments-portal) for detailed instructions on how assign Reader role on the storage account.
+Refer to the [Assign Azure roles using the Azure portal - Azure RBAC | Microsoft Docs](/azure/role-based-access-control/role-assignments-portal) for detailed instructions on how assign Reader role on the storage account.
 
 #### Granting Read Access on Azure Data Lake Storage Gen 2 using ACLs.
 
@@ -123,7 +123,7 @@ Please go through the following steps to get started.
 
 After adding the user or group. Select the identity added in the previous step. In Permission for: <name of user or group> check the option **Access**, followed by **Read** and **Execute** options on the right-hand side.
 
-As per [ADLS Best Practices](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-best-practices#use-security-groups-versus-individual-users), it is strongly recommended to assign **Azure Active Directory security groups** instead of assigning individual users to directories and files. Using Security Groups, adding or removing users from the group does not requires updates to ADLS, consequently reduces the chance of exceeding the 32 access control entries per file or folder ACL.
+As per [ADLS Best Practices](/azure/storage/blobs/data-lake-storage-best-practices#use-security-groups-versus-individual-users), it is strongly recommended to assign **Azure Active Directory security groups** instead of assigning individual users to directories and files. Using Security Groups, adding or removing users from the group does not requires updates to ADLS, consequently reduces the chance of exceeding the 32 access control entries per file or folder ACL.
 
 It is important to notice the informative message **"Read and Write permissions will only work for an entity if the entity also has execute permissions on all parent directories, including the container (root directory)"** It means that you will also need to grant Execute permissions on all parent folders, including the container which is the root directory, when granting read or write in a sub directory.
 
@@ -181,4 +181,4 @@ df.write.saveAsTable("<tablename>")
 
 ## References
 
-[How to set up access control for your Synapse workspace - Azure Synapse Analytics | Microsoft Docs](https://docs.microsoft.com/azure/synapse-analytics/security/how-to-set-up-access-control?WT.mc_id=Portal-Microsoft_Azure_Synapse)
+[How to set up access control for your Synapse workspace - Azure Synapse Analytics | Microsoft Docs](/azure/synapse-analytics/security/how-to-set-up-access-control?WT.mc_id=Portal-Microsoft_Azure_Synapse)

@@ -20,7 +20,7 @@ At a minimum, the high level registration process should provide REST APIs to su
 
 1. Create the folders inside the Domain's Data Lake Containers
 1. Create the required Azure AD Groups for access. Each data asset in Azure Data Lake Store owns two matching Azure Active Directory Groups.
-1. Create an Access Package within [Azure AD entitlement management](https://docs.microsoft.com/azure/active-directory/governance/entitlement-management-overview)
+1. Create an Access Package within [Azure AD entitlement management](/azure/active-directory/governance/entitlement-management-overview)
 
 The final step of creating an access package allows users to request access to the package and is based on features available within Azure AD Identity Governance.
 
@@ -47,7 +47,7 @@ As Figure 1 above illustrates:
 1. Users request access to use these packages via Self-Service by browsing an access-package catalog or uses a direct link (from docs or the data catalog) to request access.
 1. Subject to policy and account, an approver is notified and reviews request via access management portal.
 1. If approved, the user will be notified and given access to the dataset.
-1. If the enterprise wants to grant permissions to user based on their metadata (*e.g.* division, title, or location), then [Creating or update a dynamic group in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/enterprise-users/groups-create-rule) could be used and this Dynamic Group could be added as an approved group to the access package.
+1. If the enterprise wants to grant permissions to user based on their metadata (*e.g.* division, title, or location), then [Creating or update a dynamic group in Azure Active Directory](/azure/active-directory/enterprise-users/groups-create-rule) could be used and this Dynamic Group could be added as an approved group to the access package.
 
 >[!TIP]
 >Although Figure 1 illustrates adding Azure AD User Groups, the same process could be achieved for adding Azure Service Principals which would be used by Data Product teams for ingestion pipelines etc.
@@ -80,4 +80,4 @@ Figure 2 brings all of this together on how different personas would work togeth
 ## Next Steps
 
 - Video: [How to deploy Azure Active Directory entitlement management](https://www.youtube.com/watch?v=zaaKvaaYwI4&feature=youtu.be).
-- [Common scenarios in Azure AD entitlement management](https://docs.microsoft.com/azure/active-directory/governance/entitlement-management-scenarios).
+- [Common scenarios in Azure AD entitlement management](/azure/active-directory/governance/entitlement-management-scenarios).

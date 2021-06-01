@@ -18,7 +18,7 @@ The Enterprise Scale Analytics and AI solution pattern represents the strategic 
 A core service provider or harmonized data mesh pattern relies upon distribution of the data and its pipelines across [domains](eslz-data-landing-zone-division-and-consumption.md) enabling ownership of accessibility, usability, and development. Largely based on these patterns, the Enterprise Scale Analytics and AI solution pattern includes capabilities such as storage, data lineage, data classification, data ingestion, networking, security, access management, encryption, resiliency, and monitoring.
 
 > [!NOTE]
-> The Enterprise Scale Analytics and AI framework builds on our [Enterprise-Scale Architecture](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/) and should be considered a supplement to it.
+> The Enterprise Scale Analytics and AI framework builds on our [Enterprise-Scale Architecture](/azure/cloud-adoption-framework/ready/enterprise-scale/) and should be considered a supplement to it.
 
 ## Critical Design Areas
 

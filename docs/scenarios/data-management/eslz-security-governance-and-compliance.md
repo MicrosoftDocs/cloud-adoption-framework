@@ -32,20 +32,20 @@ Azure Defender provides security alerts and advanced threat protection for virtu
 
 When you enable Azure Defender from the **Pricing and settings** area of Azure Security Center, the following Defender plans are all enabled simultaneously and provide comprehensive defenses for the compute, data, and service layers of your environment:
 
-- [Azure Defender for servers](https://docs.microsoft.com/azure/security-center/defender-for-servers-introduction)
-- [Azure Defender for App Service](https://docs.microsoft.com/azure/security-center/defender-for-app-service-introduction)
-- [Azure Defender for Storage](https://docs.microsoft.com/azure/security-center/defender-for-storage-introduction)
-- [Azure Defender for SQL](https://docs.microsoft.com/azure/security-center/defender-for-sql-introduction)
-- [Azure Defender for Kubernetes](https://docs.microsoft.com/azure/security-center/defender-for-kubernetes-introduction)
-- [Azure Defender for container registries](https://docs.microsoft.com/azure/security-center/defender-for-container-registries-introduction)
-- [Azure Defender for Key Vault](https://docs.microsoft.com/azure/security-center/defender-for-key-vault-introduction)
-- [Azure Defender for Resource Manager](https://docs.microsoft.com/azure/security-center/defender-for-resource-manager-introduction)
-- [Azure Defender for DNS](https://docs.microsoft.com/azure/security-center/defender-for-dns-introduction)
+- [Azure Defender for servers](/azure/security-center/defender-for-servers-introduction)
+- [Azure Defender for App Service](/azure/security-center/defender-for-app-service-introduction)
+- [Azure Defender for Storage](/azure/security-center/defender-for-storage-introduction)
+- [Azure Defender for SQL](/azure/security-center/defender-for-sql-introduction)
+- [Azure Defender for Kubernetes](/azure/security-center/defender-for-kubernetes-introduction)
+- [Azure Defender for container registries](/azure/security-center/defender-for-container-registries-introduction)
+- [Azure Defender for Key Vault](/azure/security-center/defender-for-key-vault-introduction)
+- [Azure Defender for Resource Manager](/azure/security-center/defender-for-resource-manager-introduction)
+- [Azure Defender for DNS](/azure/security-center/defender-for-dns-introduction)
 
 Each of these plans is explained separately in the Security Center documentation.
 
 >[!IMPORTANT]
->Where this Azure Defender is available for the PaaS Services, we recommend enabling this feature by default, especially for the Azure Data Lake Storage accounts. See [Introduction to Azure Defender](https://docs.microsoft.com/azure/security-center/azure-defender) and [Configure Azure Defender for Storage](https://docs.microsoft.com/azure/storage/common/azure-defender-storage-configure?tabs=azure-security-center) for further details.
+>Where this Azure Defender is available for the PaaS Services, we recommend enabling this feature by default, especially for the Azure Data Lake Storage accounts. See [Introduction to Azure Defender](/azure/security-center/azure-defender) and [Configure Azure Defender for Storage](/azure/storage/common/azure-defender-storage-configure?tabs=azure-security-center) for further details.
 
 ## Advanced Threat Protection
 
@@ -57,20 +57,20 @@ Where Advanced Threat Protection is available for the PaaS Services, we recommen
 
 Azure Data Lake Gen 2 is the predominant polyglot storage within the Enterprise Scale Analytics and AI pattern. Three data lake accounts are provisioned per Data Landing Zone.
 
-It is important to understand how Enterprise Scale Analytics and AI uses Active Directory identities to secure data in the data lake accounts. This section outlines the core terms required for the solution pattern, but for an in-depth explanation, see [Access control lists (ACLs) in Azure Data Lake Storage Gen2](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control).
+It is important to understand how Enterprise Scale Analytics and AI uses Active Directory identities to secure data in the data lake accounts. This section outlines the core terms required for the solution pattern, but for an in-depth explanation, see [Access control lists (ACLs) in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-access-control).
 
-Azure Data Lake Storage Gen2 supports access control models that combine both Azure RBAC (Role-based access control) and ACLs (Access control lists) to manage access to the data. You can find more information about the [Data Lake Storage Access Control](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control).
+Azure Data Lake Storage Gen2 supports access control models that combine both Azure RBAC (Role-based access control) and ACLs (Access control lists) to manage access to the data. You can find more information about the [Data Lake Storage Access Control](/azure/storage/blobs/data-lake-storage-access-control).
 
 In addition to managing access using Azure Active Directory identities for RBAC and ACLs, Azure Data Lake Storage Gen2 also supports using SAS tokens and shared keys for managing access to data in your storage account.
 
 >[!IMPORTANT]
->We recommend [Prevent Shared Key authorization for an Azure Storage account (preview)](https://docs.microsoft.com/azure/storage/common/shared-key-authorization-prevent) for the Data Landing Zone Data Lakes.
+>We recommend [Prevent Shared Key authorization for an Azure Storage account (preview)](/azure/storage/common/shared-key-authorization-prevent) for the Data Landing Zone Data Lakes.
 
 **RBAC** lets you assign roles to security principals (a user, group, service principal, or managed identity in Azure Active Directory), and these roles are associated with sets of permissions to the data in your file system. RBAC can help manage roles related to control plane operations (such as adding other users, assigning roles, managing encryption settings and firewall rules, etc.) or for data plane operations (such as creating file systems, reading and writing data etc.).
 
 RBAC is essentially scoped to top-level resources, either storage accounts or file systems in Azure Data Lake Storage Gen2. You can also apply RBAC across resources at a resource group or subscription level.
 
-**ACLs** let you manage a specific set of permissions for a security principal to a much narrower scope, such as a file or a directory in Azure Data Lake Storage Gen2. There are [two types of ACLs](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control#types-of-acls): *access ACLs* and *default ACLs*.
+**ACLs** let you manage a specific set of permissions for a security principal to a much narrower scope, such as a file or a directory in Azure Data Lake Storage Gen2. There are [two types of ACLs](/azure/storage/blobs/data-lake-storage-access-control#types-of-acls): *access ACLs* and *default ACLs*.
 
 - Access ACLs control access to an object. Files and directories both have access ACLs.
 - Default ACLs are templates of ACLs associated with a directory that determine the access ACLs for any child items that are created under that directory. Files do not have default ACLs.
@@ -83,7 +83,7 @@ Both access ACLs and default ACLs have the same structure.
 |---------|---------|---------|
 |Scope|Storage accounts, file systems. Cross-resource RBAC at subscription or resource group level.|Files, directories |
 |Limits|2,000 RBAC entries in a subscription | 32 ACLs (effectively 28 ACLs) per file, 32 ACLs (effectively 28 ACLs) per folder, default, and access ACLs each |
-|Supported levels of permission|[Built-in RBAC](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#rbac-roles-for-blobs-and-queues) or [custom RBAC](https://docs.microsoft.com/azure/role-based-access-control/custom-roles)|[ACL permissions](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control#levels-of-permission)|
+|Supported levels of permission|[Built-in RBAC](/azure/storage/common/storage-auth-aad-rbac-portal#rbac-roles-for-blobs-and-queues) or [custom RBAC](/azure/role-based-access-control/custom-roles)|[ACL permissions](/azure/storage/blobs/data-lake-storage-access-control#levels-of-permission)|
 
 The table above gives an overview of how ACLs and RBAC can be used to manage permissions to the data in your Azure Data Lake Storage Gen2 accounts. At a high level, use RBAC to manage coarse-grained permissions that apply to storage accounts or file systems, and use ACLs to manage fine-grained permissions that apply to files and directories.
 
@@ -122,9 +122,9 @@ If a user in the service engineering team transfers to a different team, you cou
 
 Other polyglot storage such as PostgreSQL, MySQL, Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics are likely to be used in the Enterprise Scale Analytic solution pattern. They could be used by Domains to store their Read Data Stores or by Data Product Teams.
 
-- [Use Azure Active Directory for authentication with PostgreSQL](https://docs.microsoft.com/azure/postgresql/howto-configure-sign-in-aad-authentication)
-- [Use Azure Active Directory authentication with Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview)
-- [Use Azure Active Directory for authenticating with MySQL](https://docs.microsoft.com/azure/mysql/concepts-azure-ad-authentication)
+- [Use Azure Active Directory for authentication with PostgreSQL](/azure/postgresql/howto-configure-sign-in-aad-authentication)
+- [Use Azure Active Directory authentication with Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics](/azure/azure-sql/database/authentication-aad-overview)
+- [Use Azure Active Directory for authenticating with MySQL](/azure/mysql/concepts-azure-ad-authentication)
 
 It is recommended that Azure AD groups are used to secure database objects instead of individual Azure AD user accounts. These AD Azure Groups would be used to authenticate users and protects database objects. Similar to the data lake pattern, you could use your Domain or Data Products onboarding to create these groups within you Azure AD service.
 

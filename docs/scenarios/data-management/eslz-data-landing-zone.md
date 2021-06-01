@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Enterprise Scale Analytics and AI Architecture Data Landing Zone Overview
 
-Data Landing Zones (spokes) are connected to the Data Management Landing Zone by VNet Peering and are considered a Data Landing Zone in relation to the [Enterprise-Scale Architecture](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/).
+Data Landing Zones (spokes) are connected to the Data Management Landing Zone by VNet Peering and are considered a Data Landing Zone in relation to the [Enterprise-Scale Architecture](/azure/cloud-adoption-framework/ready/enterprise-scale/).
 
 Before provisioning a Data Landing Zone, you should have your DevOps CI/CD operating model in place and a Data Management Landing Zone deployed. It is highly recommended that you also consider the number of initial Data Landing Zones you want to deploy.
 
@@ -44,7 +44,7 @@ The Enterprise Scale pattern recommends that all logs should be sent to a centra
 
 ### Data Lake Services
 
-Three [Azure Data Lake Storage Gen V2 (ADLS)](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction) accounts will be provisioned in the Data Lake Services Resource Group. The data transformed at different stages will be saved on one of the Data Landing Zone's three data lakes and will be available for the Analytics, Data Products, Data Science, and Visualizations teams to consume. These will be deployed into a single resource group.
+Three [Azure Data Lake Storage Gen V2 (ADLS)](/azure/storage/blobs/data-lake-storage-introduction) accounts will be provisioned in the Data Lake Services Resource Group. The data transformed at different stages will be saved on one of the Data Landing Zone's three data lakes and will be available for the Analytics, Data Products, Data Science, and Visualizations teams to consume. These will be deployed into a single resource group.
 
 ### Upload Ingest Storage Service
 
@@ -102,7 +102,7 @@ Across the Data Landing Zone there is the requirement for a number of shared met
 
 If you have decided to develop your own ingestion framework engine based on the recommendations in the Enterprise Scale Analytics and AI ingestion flow, using either a PowerApp or a .Net Application, in the Data Management Landing Zone, we would suggest deploying an Azure SQL DB to hold metadata for Azure Data Factory to use. Having this custom application will speed up the onboarding of data sources, allowing teams to create new data sources for ingestion for landing into the RAW to ENRICHED in the Data Landing Zone data lakes.
 
-A Self-Hosted Integration Runtime will be deployed for use with Azure Purview to scan data inside the Data Landing Zone. Although the DevOps CI/CD process will handle the registration of these runtimes into Azure Purview, we recommend understanding [Create and manage a self-hosted integration runtime](https://docs.microsoft.com/azure/purview/manage-integration-runtimes).
+A Self-Hosted Integration Runtime will be deployed for use with Azure Purview to scan data inside the Data Landing Zone. Although the DevOps CI/CD process will handle the registration of these runtimes into Azure Purview, we recommend understanding [Create and manage a self-hosted integration runtime](/azure/purview/manage-integration-runtimes).
 
 An Azure Key Vault will be provisioned to store secrets relating to Data Landing Zone Services such as:
 
@@ -121,9 +121,9 @@ To enable you would need to: -
 
 - Create at least one Azure Data Factory in the Integration RG, in the Data Landing Zone, which would only be used for link the Shared Integration Runtime and not for data pipelines.
 - Create at least two Virtual Machines, with a Self-Hosted Integration Runtime inside an availability zone using the [ARM template](https://github.com/Azure/Azure-quickstart-templates/tree/master/101-vms-with-selfhost-integration-runtime).
-- [The Self Hosted Integration Runtimes should be setup in high availability mode](https://docs.microsoft.com/Azure/data-factory/create-self-hosted-integration-runtime#high-availability-and-scalability).
+- [The Self Hosted Integration Runtimes should be setup in high availability mode](/azure/data-factory/create-self-hosted-integration-runtime#high-availability-and-scalability).
 - The Self Hosted Integration Runtimes should be associated with Azure Data Factories in the Data Landing Zone(s).
-- [Azure Automation should be setup to update the Self Hosted Integration Runtime periodically](https://docs.microsoft.com/Azure/data-factory/self-hosted-integration-runtime-automation-scripts)
+- [Azure Automation should be setup to update the Self Hosted Integration Runtime periodically](/azure/data-factory/self-hosted-integration-runtime-automation-scripts)
 
 >[!NOTE]
 >This does not restrict the deployment of Integration Runtimes inside a Data Landing Zone or into 3rd party clouds.

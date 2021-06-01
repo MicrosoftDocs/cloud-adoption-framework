@@ -52,9 +52,9 @@ In the scenario use case, the domain would need to create four Azure AD Groups f
 | DA-EUROPE-HRMANAGER-R | View Europe HR Personnel data asset WITH Salary information |
 | DA-EUROPE-HRGENERAL-R | View Europe HR Personnel data asset WITHOUT Salary information |
 
-The first level of restrictions would support dynamic data masking. [Dynamic data masking](https://docs.microsoft.com/azure/azure-sql/database/dynamic-data-masking-overview) limits sensitive data exposure by masking it to non-privileged users. One of the advantages of using Dynamic Data Masking is this could be implemented into the onboarding process of a dataset using the [Data Masking Policies - Create Or Update](https://docs.microsoft.com/azure/azure-sql/database/dynamic-data-masking-overview) REST API.
+The first level of restrictions would support dynamic data masking. [Dynamic data masking](/azure/azure-sql/database/dynamic-data-masking-overview) limits sensitive data exposure by masking it to non-privileged users. One of the advantages of using Dynamic Data Masking is this could be implemented into the onboarding process of a dataset using the [Data Masking Policies - Create Or Update](/azure/azure-sql/database/dynamic-data-masking-overview) REST API.
 
-The second level is to add [Column-Level Security](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/column-level-security) to restrict non-HR managers from being able to see salaries and [Row-Level Security](https://docs.microsoft.com/sql/relational-databases/security/row-level-security) to restrict which rows European and North American team members could see.
+The second level is to add [Column-Level Security](/azure/synapse-analytics/sql-data-warehouse/column-level-security) to restrict non-HR managers from being able to see salaries and [Row-Level Security](https://docs.microsoft.com/sql/relational-databases/security/row-level-security) to restrict which rows European and North American team members could see.
 
 An additional security layer, on top of Transparent Data Encryption, would be to [Encrypt the Column of Data](https://docs.microsoft.com/sql/relational-databases/security/encryption/encrypt-a-column-of-data) and decrypt upon read.
 
@@ -70,7 +70,7 @@ As the the blog post by Databricks on [Enforcing Column-level Encryption and Avo
 
 *Once we have the sensitive data written and protected, we need a way for privileged users to read the sensitive data. The first thing that needs to be done is to create a permanent UDF to add to the Hive instance running on Databricks. In order for a UDF to be permanent, it must be written in Scala. Fortunately, Fernet also has a Scala implementation that we can leverage for our decrypted reads. This UDF also accesses the same secret we used in the encrypted write to perform the decryption, and, in this case, it is added to the Spark configuration of the cluster. This requires us to add cluster access controls for privileged and non-privileged users to control their access to the key. Once the UDF is created, we can use it within our view definitions for privileged users to see the decrypted data.*
 
-Using [Dynamic view functions](https://docs.microsoft.com/azure/databricks/security/access-control/table-acls/object-privileges#dynamic-view-functions), we are able to create only one view and easily return either the encrypted or decrypted values based on the Databricks group of which they are a member.
+Using [Dynamic view functions](/azure/databricks/security/access-control/table-acls/object-privileges#dynamic-view-functions), we are able to create only one view and easily return either the encrypted or decrypted values based on the Databricks group of which they are a member.
 
 In our example above, we would create two Dynamic view functions, one for North America and another for Europe, and implementing the encryption techniques in this [notebook](https://databricks.com/notebooks/enforcing-column-level-encryption.html).
 

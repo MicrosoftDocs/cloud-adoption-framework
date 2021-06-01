@@ -13,7 +13,7 @@ ms.subservice: ready
 
 When architecting any cloud service, you must consider your availability requirements and how to respond to potential interruptions in the service. An issue could be localized to the specific instance or even region-wide, so having a plan for both is important. Depending on the recovery time objective and the recovery point objective SLAs for your workload, you might choose an aggressive strategy for high availability and disaster recovery.
 
-High availability (HA) and disaster recovery (DR) can sometimes be combined, although each has a slightly different strategy, especially when it comes to data. Microsoft have published guidance using under the [Microsoft Azure Well-Architected Framework](https://docs.microsoft.com/azure/architecture/framework/) and [Reliability Overview](https://docs.microsoft.com/azure/architecture/framework/resiliency/overview).
+High availability (HA) and disaster recovery (DR) can sometimes be combined, although each has a slightly different strategy, especially when it comes to data. Microsoft have published guidance using under the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/) and [Reliability Overview](/azure/architecture/framework/resiliency/overview).
 
 ## Data Lake
 
@@ -28,19 +28,19 @@ Each Data Landing Zone must decide on the Recovery Point Objective for their Dat
 
 ## Azure Synapse Analytics
 
-For an overview of business continuity with Azure Synapse Analytics see [High availability for Azure Synapse Analytics](https://docs.microsoft.com/azure/cloud-adoption-framework/migrate/azure-best-practices/analytics/azure-synapse).
+For an overview of business continuity with Azure Synapse Analytics see [High availability for Azure Synapse Analytics](/azure/cloud-adoption-framework/migrate/azure-best-practices/analytics/azure-synapse).
 
 ## Azure Databricks
 
-For an overview of a disaster recovery architecture useful for Azure Databricks clusters, and the steps to accomplish that design see [Regional disaster recovery for Azure Databricks clusters](https://docs.microsoft.com/azure/databricks/scenarios/howto-regional-disaster-recovery).
+For an overview of a disaster recovery architecture useful for Azure Databricks clusters, and the steps to accomplish that design see [Regional disaster recovery for Azure Databricks clusters](/azure/databricks/scenarios/howto-regional-disaster-recovery).
 
 ## Azure SQL Database
 
-For an overview of business continuity with Azure SQL Database, see [Overview of business continuity with Azure SQL Database](https://docs.microsoft.com/azure/azure-sql/database/business-continuity-high-availability-disaster-recover-hadr-overview).
+For an overview of business continuity with Azure SQL Database, see [Overview of business continuity with Azure SQL Database](/azure/azure-sql/database/business-continuity-high-availability-disaster-recover-hadr-overview).
 
 ## Azure Cosmos DB
 
-For an overview of High Availability with Azure Cosmos DB, see [How does Azure Cosmos DB provide high availability](https://docs.microsoft.com/azure/cosmos-db/high-availability).
+For an overview of High Availability with Azure Cosmos DB, see [How does Azure Cosmos DB provide high availability](/azure/cosmos-db/high-availability).
 
 ## Azure Data Factory
 
@@ -49,6 +49,6 @@ As Data Domains and Data Product are likely to have Azure DevOps (GitHub or any 
 
 ## Azure Key Vault
 
-Azure Key Vault automatically provides features to help you maintain availability and prevent data loss. Back up secrets ([Azure Key Vault Backup](https://docs.microsoft.com/azure/key-vault/general/backup)) only if you have a critical business justification. Backing up secrets in your key vault may introduce operational challenges such as maintaining multiple sets of logs, permissions, and backups when secrets expire or rotate.
+Azure Key Vault automatically provides features to help you maintain availability and prevent data loss. Back up secrets ([Azure Key Vault Backup](/azure/key-vault/general/backup)) only if you have a critical business justification. Backing up secrets in your key vault may introduce operational challenges such as maintaining multiple sets of logs, permissions, and backups when secrets expire or rotate.
 
-Key Vault maintains availability in disaster scenarios and will automatically fail over requests to a paired region without any intervention from a user. For more information, see [Azure Key Vault availability and redundancy](https://docs.microsoft.com/azure/key-vault/general/disaster-recovery-guidance). As an alternative, you may consider storing secrets and other AKV artifacts in a secondary key vault with appropriate permissions. Note that this pattern may be suited for applications which require the vault to be co-located in the same region in which the app exists.
+Key Vault maintains availability in disaster scenarios and will automatically fail over requests to a paired region without any intervention from a user. For more information, see [Azure Key Vault availability and redundancy](/azure/key-vault/general/disaster-recovery-guidance). As an alternative, you may consider storing secrets and other AKV artifacts in a secondary key vault with appropriate permissions. Note that this pattern may be suited for applications which require the vault to be co-located in the same region in which the app exists.

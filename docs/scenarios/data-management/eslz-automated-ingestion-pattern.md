@@ -85,7 +85,7 @@ If the Domain wants to expose data via Synapse Pools, the custom solution should
 
 ## Data Discovery using the Purview Rest API
 
-The Azure Purview REST APIs may be used to submit data to the data catalog or build a custom experience, such as an automated process, for discovering data soon after it is ingested. [See our tutorial on how to use the Azure Purview REST APIs](https://docs.microsoft.com/azure/purview/tutorial-using-rest-apis) to get started.
+The Azure Purview REST APIs may be used to submit data to the data catalog or build a custom experience, such as an automated process, for discovering data soon after it is ingested. [See our tutorial on how to use the Azure Purview REST APIs](/azure/purview/tutorial-using-rest-apis) to get started.
 
 ### Registering Data Sources
 
@@ -149,7 +149,7 @@ Following are a few examples of payloads to register data sources using the Purv
 
 ### Creating a Scan
 
-Before setting up and running a scan, [learn how you can create credentials](https://docs.microsoft.com/azure/purview/manage-credentials) for source authentication in Azure Purview.
+Before setting up and running a scan, [learn how you can create credentials](/azure/purview/manage-credentials) for source authentication in Azure Purview.
 
 To set up a scan on data sources, use the following API call:
 

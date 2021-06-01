@@ -35,7 +35,7 @@ The Enterprise Scale Analytics and AI solutions pattern consists of a Data Manag
 * The Data Management Landing Zone consists of a data catalog, master data management, data quality, data contracts, and API management.
 * The Data Landing Zone can host multiple analytics and AI solutions relevant to their respective business domain.
 
-The platform can be extended to include other Azure services on demand. The proposed approach is to provision the analytics platform with the required services, with t-shirt sizing, and extend it further as new use cases are onboarded. This allows enterprises to regulate the platform cost effectively. The framework builds on our [Enterprise-Scale Architecture](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/) and should be considered a supplement to it.
+The platform can be extended to include other Azure services on demand. The proposed approach is to provision the analytics platform with the required services, with t-shirt sizing, and extend it further as new use cases are onboarded. This allows enterprises to regulate the platform cost effectively. The framework builds on our [Enterprise-Scale Architecture](/azure/cloud-adoption-framework/ready/enterprise-scale/) and should be considered a supplement to it.
 
 ![Enterprise Scale Data Management and Single Data Landing Zone](./images/hldsimple.png)
 

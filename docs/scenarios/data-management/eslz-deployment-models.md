@@ -41,7 +41,7 @@ Users interaction, to Automation interaction, should focus on using User Interfa
 Automation to Runtime interaction is done via Azure DevOps Pipelines and scripted ARM Templates.
 
 >[!IMPORTANT]
->The Enterprise Scale Analytics and AI solution pattern uses [Azure policies](https://docs.microsoft.com/azure/governance/policy/overview) to put boundaries in place and ensure that changes performed by the Data Landing Zone Ops teams are compliant.
+>The Enterprise Scale Analytics and AI solution pattern uses [Azure policies](/azure/governance/policy/overview) to put boundaries in place and ensure that changes performed by the Data Landing Zone Ops teams are compliant.
 
 Enterprise Scale Analytics and AI uses Policies to enforce:
 
@@ -110,7 +110,7 @@ Best practices for repositories should be adopted in order to enforce the use of
 
 Figure 3 illustrates how the On-boarding process is separated from the Data Landing Zone deployment based on the assumption that most organization have a standard Azure subscription deployment process as part of their Cloud Operation Model. In this case, the first step process is used to deploy standard corporate components (e.g. via a 3rd party ITSM tool such as ServiceNow) and the second step to deploy the Data Landing Zone specific components.
 
-As of now, there is no Git APIs available which would allow to clone/update/commit/push in the proposed automation solution. Therefor, our approach is to use an [Azure Automation Account](https://docs.microsoft.com/azure/automation/automation-intro), which will contain the PowerShell runbooks, where we can use specific PowerShell module for working with Git repositories. The Automation Account will contain the following runbooks:
+As of now, there is no Git APIs available which would allow to clone/update/commit/push in the proposed automation solution. Therefor, our approach is to use an [Azure Automation Account](/azure/automation/automation-intro), which will contain the PowerShell runbooks, where we can use specific PowerShell module for working with Git repositories. The Automation Account will contain the following runbooks:
 
 - Setting up Data Landing Zone
 - Forking the main repository to Data Platform Git Repo
@@ -146,7 +146,7 @@ Figure 4 illustrates the process to onboard a new Domain or data product.
 1. On completion the user is notified
 
 >[!TIP]
->If you are new to DataOps the Architecture Center has a hands-on lab for [DataOps for the modern data warehouse](https://docs.microsoft.com/azure/architecture/example-scenario/data-warehouse/dataops-mdw). In this scenario it describes how a fictional city planning office could use this solution. The solution provides an end-to-end data pipeline that follows the MDW architectural pattern, along with corresponding DevOps and DataOps processes, to assess parking use and make more informed business decisions.
+>If you are new to DataOps the Architecture Center has a hands-on lab for [DataOps for the modern data warehouse](/azure/architecture/example-scenario/data-warehouse/dataops-mdw). In this scenario it describes how a fictional city planning office could use this solution. The solution provides an end-to-end data pipeline that follows the MDW architectural pattern, along with corresponding DevOps and DataOps processes, to assess parking use and make more informed business decisions.
 
 ## Summary
 
