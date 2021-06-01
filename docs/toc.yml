@@ -821,9 +821,9 @@ items:
           - name: Security best practices for IaaS workloads in Azure
             href: /azure/security/fundamentals/iaas?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             
-          - name: Assessment and migration planning with Azure Migrate for servers
+        - name: Assessment and migration planning with Azure Migrate for servers
             href: /migrate/azure-best-practices/tailwind-migration-assess-servers.md 
-          - name: Migration execution with Azure Migrate for servers
+        - name: Migration execution with Azure Migrate for servers
             href: /migrate/azure-best-practices/tailwind-migration-rehost-server-replication.md
 
       - name: Best practices
