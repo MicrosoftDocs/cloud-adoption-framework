@@ -302,6 +302,8 @@ items:
               href: ready/azure-best-practices/plan-for-traffic-inspection.md
             - name: Connectivity to other cloud providers
               href: ready/azure-best-practices/connectivity-to-other-providers.md
+            - name: Connectivity to Oracle Cloud Infrastructure
+              href: ready/azure-best-practices/connectivity-to-other-providers-oci.md
           - name: Management and monitoring
             href: ready/enterprise-scale/management-and-monitoring.md
           - name: Business continuity and disaster recovery
