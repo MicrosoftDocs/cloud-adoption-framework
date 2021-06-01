@@ -302,6 +302,8 @@ items:
               href: ready/azure-best-practices/plan-for-traffic-inspection.md
             - name: Connectivity to other cloud providers
               href: ready/azure-best-practices/connectivity-to-other-providers.md
+            - name: Connectivity to Oracle Cloud Infrastructure
+              href: ready/azure-best-practices/connectivity-to-other-providers-oci.md
           - name: Management and monitoring
             href: ready/enterprise-scale/management-and-monitoring.md
           - name: Business continuity and disaster recovery
@@ -430,6 +432,10 @@ items:
         items:
         - name: Organize and set up Azure Machine Learning environments
           href: ready/azure-best-practices/ai-machine-learning-resource-organization.md
+        - name: Budget, cost, and quota management with Azure Machine Learning
+          href: ready/azure-best-practices/optimize-ai-machine-learning-cost.md
+        - name: Machine learning DevOps (MLOps)
+          href: ready/azure-best-practices/ai-machine-learning-mlops.md
       - name: Cost management
         items:
         - name: Track costs

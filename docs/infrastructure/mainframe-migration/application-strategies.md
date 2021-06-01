@@ -159,7 +159,7 @@ The following figure shows a possible Azure deployment using a primary and a sec
 
 ![A possible Azure deployment using a primary and a secondary site](../../_images/mainframe-migration/migration-backup-dr.png)
 
-## Perform a staged mainframe to Azure
+## Perform a staged migration to Azure
 
 Moving solutions from a mainframe to Azure may involve a *staged* migration, whereby some applications are moved first, and others remain on the mainframe temporarily or permanently. This approach typically requires systems that allow applications and databases to interoperate between the mainframe and Azure.
 
