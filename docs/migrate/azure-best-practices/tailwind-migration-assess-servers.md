@@ -16,7 +16,7 @@ ms.custom: azure-fast-track
 
 Migration of workloads to Azure can be a challenging project. Preparing well for a migration project helps drive success and reduces the complexity of the project.
 
-This article shows how the fictional company Tailwind Traders uses Azure Migrate to plan for migration. Tailwind performs discovery and assessment of their existing environment, which is targeted for migration to Azure.
+This article shows how the fictional company Tailwind Traders uses Azure Migrate to plan for migration. Tailwind does discovery and assessment of their existing environment, which is targeted for migration to Azure.
 
 When using this example to help plan your own infrastructure migration efforts, keep in mind that the provided sample plan and deployment is specific to Tailwind. Review your organization's business needs, structure, and technical requirements when making important infrastructure migration decisions.
 
@@ -52,7 +52,7 @@ For successful migration planning, Tailwind needs to think about following areas
 Before diving deep into infrastructure discovery and assessment, consider reading some background information relevant to Azure Migrate discovery and assessment:
 
 - Review the [Azure Migrate: Discovery and assessment tool overview](/azure/migrate/migrate-services-overview#azure-migrate-discovery-and-assessment-tool).
-- Review the deployment scenarios and requirements for the Azure Migrate appliance which performs discovery, [Azure Migrate appliance](/azure/migrate/migrate-appliance#deployment-scenarios).
+- Review the deployment scenarios and requirements for the Azure Migrate appliance that performs discovery, [Azure Migrate appliance](/azure/migrate/migrate-appliance#deployment-scenarios).
 - Review the [Azure Migrate assessment overview](/azure/migrate/concepts-assessment-calculation).
 - Optionally, complete the Microsoft Learn training, [Migrate virtual machines and applications using Azure Migrate](/learn/paths/m365-azure-migrate-virtual-machine/).
 
@@ -70,7 +70,7 @@ Using the following workflow, Tailwind can define the server discovery tools req
 
 *Figure 1: Discovery appliances and agents workflow.*
 
-For more information, see these Azure Migrate topics:
+For more information on Azure Migrate, see:
 
 - [Discover VMware VMs](/azure/migrate/tutorial-discover-vmware#set-up-the-appliance)
 - [Discover Hyper-V VMs](/azure/migrate/tutorial-discover-hyper-v#set-up-the-appliance)
@@ -89,7 +89,7 @@ For more information, see these Azure Migrate topics:
 
 Based on the preceding workflow and following relevant Azure Migrate documentation, Tailwind deploys the required appliances or agents for discovery. During deployment, Tailwind must provide server credentials to perform software inventory (installed applications, roles, and features), agentless dependency analysis, agent-based dependency analysis, and discovery of SQL Server instances and databases. Tailwind's migration team will collaborate with the server infrastructure and SQL Server database administrator teams to prepare required credentials for discovery. After deployment and configuration, Tailwind regularly verifies that data is being collected by the appliance and visible in the Azure Migrate project.
 
-As a best practice, Tailwind gathers data over a prolonged period of time, such as five weeks. The goal is to gather server performance data and dependencies over a period of time which ensures collection of metrics about monthly infrastructure consumption spikes, such as month end transactions (payroll application), weekly batch processes, and data import or export.
+As a best practice, Tailwind gathers data over a prolonged period of time, such as five weeks. The goal is to gather server performance data and dependencies over a period of time, which ensures collection of metrics about monthly infrastructure consumption spikes, such as month end transactions (payroll application), weekly batch processes, and data import or export.
 
 ## Step 2: Perform assessment
 
@@ -106,15 +106,15 @@ Tailwind understands that the Azure Migrate appliance will continue to collect p
 
 Tailwind plans to tune their assessments and plans to specify [custom parameters](/azure/migrate/how-to-modify-assessment). For both production and nonproduction assessments, it specifies its primary Azure region as the target location, as well as same sizing criteria, comfort factor, pricing, and licensing. However, in terms of compute and storage, Tailwind plans to have VM SKUs and storage types specified differently in the assessments.
 
-For production, Tailwind clears the VM SKU options for A-series (or in the future, B-series) and sets the storage type to Standard SSD and Premium SSD managed disks. For nonproduction, Tailwind ensures all VM-series is select and storage type is set to automatic.
+For production, Tailwind clears the VM SKU options for A-series and sets the storage type to Standard SSD and Premium SSD-managed disks. For nonproduction, Tailwind ensures all VM-series is select and storage type is set to automatic.
 
-Tailwind plans to migrate to Azure and observe behavior for at least a few months before making purchase arrangements for reserved instances. If Tailwind were to want to purchase reserved instances in advanced, then for the assessments, after discussing with business on selecting right reserved capacity (compute) option, Tailwind would have selected VM-series or specific VM SKUs which are within the reserved instances purchased scope.
+Tailwind plans to migrate to Azure and observe behavior for at least a few months before making purchase arrangements for reserved instances. If Tailwind wants to purchase reserved instances in advance, then for the assessments, after discussing with business on selecting right reserved capacity (compute) option, Tailwind will select the VM-series or specific VM SKUs, which are within the reserved instances purchased scope.
 
-Tailwind selects performance-based sizing criteria and sets performance history to one month. This will enable Tailwind to find recommended VM sizes and managed disks based on actual server requirements that were gathered during the discovery phase. Thus, resulting in optimization of infrastructure as a result of the migration. Tailwind understands that Azure Migrate assessment will recommend VM SKUs based on CPU and memory utilization. For disk types, Azure Migrate will base the recommendations on IOPS and throughput of the existing disks in the on-premises servers assessed.
+Tailwind selects performance-based sizing criteria and sets performance history to one month. This configuration will enable Tailwind to find recommended VM sizes and managed disks based on actual server requirements that were gathered during the discovery phase. Thus, resulting in optimization of infrastructure as a result of the migration. Tailwind understands that Azure Migrate assessment will recommend VM SKUs based on CPU and memory utilization. For disk types, Azure Migrate will base the recommendations on IOPS and throughput of the existing disks in the on-premises servers assessed.
 
-Further, as resource usage for existing workloads is expected to increase slightly over time, Tailwind set the comfort factor to **1.1x**. This will add 10 percent more resources to VM requirements based on the gathered performance data, and recommended VM sizes will include this 10 percent buffer.
+Further, as resource usage for existing workloads is expected to increase slightly over time, Tailwind sets the comfort factor to **1.1x**. This configuration will add 10 percent more resources to VM requirements based on the gathered performance data, and recommended VM sizes will include this 10 percent buffer.
 
-Based on the Azure offer associated with Tailwind's subscription, the appropriate offer or licensing program and currency is selected. Tailwind is eligible for [Azure Hybrid Benefit](https://go.microsoft.com/fwlink/?LinkId=859786), so it sets **Already have a Windows Server license** to **yes**. Tailwind understands that not configuring Azure Hybrid Benefit might result in additional billing of Windows Server licenses that were already purchased. Tailwind also understand that Azure Hybrid Benefit primarily applies to Windows operating systems, so for any servers running Linux or other non-Windows operating systems, Tailwind should consult on license portability separately.
+Based on the Azure offer associated with Tailwind's subscription, the appropriate offer or licensing program and currency is selected. Tailwind is eligible for [Azure Hybrid Benefit](https://go.microsoft.com/fwlink/?LinkId=859786), so it sets **Already have a Windows Server license** to **yes**. Tailwind understands that not configuring Azure Hybrid Benefit might result in extra billing of Windows Server licenses that were already purchased. Tailwind also understands that Azure Hybrid Benefit primarily applies to Windows operating systems, so for any servers running Linux or other non-Windows operating systems, Tailwind should consult on license portability separately.
 
 After saving assessment properties, Tailwind needs to select servers to assess. Tailwind creates a new [server group](/azure/migrate/how-to-create-a-group) that includes all discovered servers from all discovery appliances and creates assessments for each specific environment. Although Tailwind considered creating a server group and assessment for each specific application, while the ideal scenario, it was decided to create server groups at a later stage, closer to wave migration planning, as more time is needed to analyze dependencies between servers.
 
@@ -132,33 +132,33 @@ Tailwind spends some time reviewing the reasons why some servers are conditional
 
 ### Database assessment
 
-Tailwind is running SQL Server in their on-premises environment. As part of the migration project to Azure, Tailwind would like to understand additional options and modernization approaches for migrating SQL Server workloads to Azure SQL Database or SQL Managed Instance. Although Tailwind's primary migration approach is rehosting to Azure VMs via server replication using Azure Migrate, Tailwind would like to explore what modernization is possible given their current server configurations. This is exploratory at this stage for Tailwind, in order to keep focus on the current migration strategy.
+Tailwind is running SQL Server in their on-premises environment. As part of the migration project to Azure, Tailwind would like to understand extra options and modernization approaches for migrating SQL Server workloads to Azure SQL Database or SQL Managed Instance. Although Tailwind's primary migration approach is rehosting to Azure VMs via server replication using Azure Migrate, Tailwind would like to explore what modernization is possible given their current server configurations. This stage is exploratory for Tailwind, in order to keep focus on the current migration strategy.
 
-Azure Migrate supports creating assessments for migration to Azure SQL Database and SQL Managed Instance, which Tailwind finds as insightful assessments to create. For the target location Tailwind chooses their primary Azure region and for target deployment type Tailwind selects **Recommended** to determine whether Azure SQL Database or SQL Managed Instance is a better fit for their databases. Tailwind set the comfort factor to **1.1x** to account for planned future workload growth. In the pricing section Tailwind chooses options that are aligned with their Azure offer and licensing programs. Tailwind reuses the prior groups created and runs assessment for this group.
+Azure Migrate supports creating assessments for migration to Azure SQL Database and SQL Managed Instance, which Tailwind finds as insightful assessments to create. For the target location, Tailwind chooses their primary Azure region and for target deployment type Tailwind selects **Recommended** to determine whether Azure SQL Database or SQL Managed Instance is a better fit for their databases. Tailwind set the comfort factor to **1.1x** to account for planned future workload growth. In the pricing section Tailwind chooses options that are aligned with their Azure offer and licensing programs. Tailwind reuses the prior groups created and runs assessment for this group.
 
 ### Azure cost details
 
-Azure Migrate assessment results include cost estimation for assessed servers. Tailwind can estimate total compute and storage costs for migration, or drill down for compute and storage cost estimation per individual server. Tailwind understands that after migration to Azure, the server might incur other costs related to networking, monitoring, backup, and so on. Those additional costs are not part of the assessment cost details. For these cost details scenarios, Tailwind resorts to using the [Azure calculator](https://azure.microsoft.com/pricing/calculator/).
+Azure Migrate assessment results include cost estimation for assessed servers. Tailwind can estimate total compute and storage costs for migration, or drill down for compute and storage cost estimation per individual server. Tailwind understands that after migration to Azure, the server might incur other costs related to networking, monitoring, backup, and so on. Those extra costs are not part of the assessment cost details. For these cost details scenarios, Tailwind resorts to using the [Azure calculator](https://azure.microsoft.com/pricing/calculator/).
 
 ## Step 3: Dependency analysis and migration planning
 
-To perform a successful migration to Azure, it's critical for Tailwind to understand workload details in the context of their dependencies during migration planning. As a best practice, Tailwind migration team needs to identify application owners of the workloads running on each of the server assessed for the migration. Tailwind uses their CMDB data to link discovered servers to various business applications and identify respective applications owners, their development and support teams. After application owners are identified, Tailwind migration team schedules review meetings (interviews) with them.
+To perform a successful migration to Azure, it's critical for Tailwind to understand workload details in the context of their dependencies during migration planning. As a best practice, Tailwind migration team needs to identify application owners of the workloads running on each of the server assessed for the migration. Tailwind uses their CMDB data to link discovered servers to various business applications and identify respective applications owners, their development, and support teams. After application owners are identified, Tailwind migration team schedules review meetings (interviews) with them.
 
-The migration team is now better prepared to [group servers](/azure/migrate/how-to-create-a-group) for workload specific assessment based on the application tiers and initial dependencies given the application owner interviews and analysis.
+The migration team is now better prepared to [group servers](/azure/migrate/how-to-create-a-group) for workload-specific assessment based on the application tiers and initial dependencies given the application owner interviews and analysis.
 
 ### Dependency analysis
 
-To further validate server groups and plan for migration waves Tailwind needs to understand dependencies between workloads and its servers. Tailwind uses the results of the [dependency analysis](/azure/migrate/concepts-dependency-visualization) which were ran during the assessment phase. Tailwind exports dependency results and uses [Power BI to visualize network connections](/azure/migrate/how-to-create-group-machine-dependencies-agentless#visualize-network-connections-in-power-bi).
+To further validate server groups and plan for migration waves, Tailwind needs to understand dependencies between workloads and its servers. Tailwind uses the results of the [dependency analysis](/azure/migrate/concepts-dependency-visualization), which ran during the assessment phase. Tailwind exports dependency results and uses [Power BI to visualize network connections](/azure/migrate/how-to-create-group-machine-dependencies-agentless#visualize-network-connections-in-power-bi).
 
 To perform effective dependency analysis, Tailwind takes the following steps:
 
-1. Clean up dependency mapping scan to show unique dependencies based on a one-month period of time by using the PowerShell script as described in [Analyze server dependencies (agentless)](/azure/migrate/how-to-create-group-machine-dependencies-agentless#visualize-network-connections-in-power-bi). This script works as-is for agentless dependency mapping. For agent-based dependency mapping, KQL queries must be created in order to perform the same task. With agent-based dependency mapping, the longest period of time available for is one-hour.
+1. Clean up the dependency mapping scan to show unique dependencies based on a one-month period of time by using the PowerShell script as described in [Analyze server dependencies (agentless)](/azure/migrate/how-to-create-group-machine-dependencies-agentless#visualize-network-connections-in-power-bi). This script works as-is for agentless dependency mapping. For agent-based dependency mapping, KQL queries must be created in order to perform the same task. With agent-based dependency mapping, the longest period of time available is one hour.
 
 2. Filter out the noise from the dependency mapping scan by removing well-known dependencies such as:
 
    - Known system processes
    - Known internet-based endpoints (non-RFC 1918)
-   - Known internal endpoints (RFC 1918) such as domain controllers, file servers, network appliances such as load balancers, and management infrastructure (such as SCCM, SCOM, backup, and antimalware).
+   - Known internal endpoints (RFC 1918) such as domain controllers, file servers, network appliances such as load balancers, and management infrastructure (such as SCCM, System Center Operations Manager, backup, and antimalware).
 
 3. Integrate dependency scan into visualization tooling like Power BI. Helpful visualizations include:
 
@@ -168,7 +168,7 @@ To perform effective dependency analysis, Tailwind takes the following steps:
 
 ### Review data collected with application owners
 
-As preparation continues for the migration, Tailwind realizes that additional workload details must be gathered from application owners. Based on those details, the migration team reviews complexity, criticality, and dependencies of each server group or workload, and then finalizes the prioritization of server groups for their migration wave schedules. As Tailwind schedules additional interviews with application owners, it ensures collection of the following data points:
+As preparation continues for the migration, Tailwind realizes that extra workload details must be gathered from application owners. Based on those details, the migration team reviews complexity, criticality, and dependencies of each server group or workload, and then finalizes the prioritization of server groups for their migration wave schedules. As Tailwind schedules extra interviews with application owners, it ensures collection of the following data points:
 
 - Business criticality
 - Workload architecture (all servers and other components such as load balancers that are required for workload to run)
@@ -181,7 +181,7 @@ As preparation continues for the migration, Tailwind realizes that additional wo
 - Patching mechanism
 - Licensing mechanism (OS and software, dependency on MAC/IP address)
 - Firewall rules (host and network): Ports and protocols
-- Impact of changing server's IP address
+- Effect of changing the server's IP address
 
 As a best practice, Tailwind reviews server assessment results with application owners. During the review, Tailwind will:
 
@@ -194,7 +194,7 @@ As a best practice, Tailwind reviews server assessment results with application 
 
 ### Document the migration plan
 
-Based on the final assessment results and application owner interviews, the Tailwind migration team finalizes the migration approach. They document the migration steps including details from assessment, dependency analysis, and inputs from the application owner interviews. This captures additional configurations like load balancers, DNS updates, database connection strings, licenses and any additional steps the application team or vendor might need to execute as part of pre-migration and post-migration steps.
+Based on the final assessment results and application owner interviews, the Tailwind migration team finalizes the migration approach. They document the migration steps including details from assessment, dependency analysis, and inputs from the application owner interviews. This captures extra configurations like load balancers, DNS updates, database connection strings, licenses, and any extra steps the application team or vendor might need to execute as part of pre-migration and post-migration steps.
 
 ## Step 4: Plan for migration waves
 
@@ -204,7 +204,7 @@ Tailwind now needs to finalize prioritization of the migration waves based on wo
 
 Based on the interviews and dependency mapping data, Tailwind continues to refine their server groups based on the application architecture (multitier) and server dependencies. Tailwind's initial server groups are as follows:
 
-- Server group 1 (LOB application 1): 5 servers
+- Server group 1 (LOB application 1): Five servers
 - Server group 2 (LOB application 2): 30 servers
 - Server group 3 (LOB application 3): 50 servers
 
@@ -219,7 +219,7 @@ In the scenario where a server group (interdependent servers) has to be split an
 - Identify which connections are the most latency-sensitive connections to dependencies and prioritize these dependencies for the migration wave.
 - Reschedule the left-out servers to be migrated on the next immediate migration wave or as part of an interim migration wave.
 
-Tailwind reviews the guidance in [Build a migration plan with Azure Migrate](/azure/migrate/concepts-migration-planning#prioritize-workloads) to prioritize server groups and workloads when assigning them to migration waves. These best practices include the following:
+Tailwind reviews the guidance in [Build a migration plan with Azure Migrate](/azure/migrate/concepts-migration-planning#prioritize-workloads) to prioritize server groups and workloads when assigning them to migration waves. These best practices include:
 
 - Start with server groups with the least number of servers.
 - Start with server groups based on lowest business criticality. For example:
@@ -228,13 +228,13 @@ Tailwind reviews the guidance in [Build a migration plan with Azure Migrate](/az
   - Prioritize workloads with less restrictive data classification.
   - Prioritize workloads with newer operating systems, since older operating systems tend to have more issues booting in Azure or in supporting Azure management extensions.
 
-Tailwind understands that some migration waves will change migration execution progresses, so the migration team reviews and modifies waves periodically. The migration team incorporates learnings from executed waves to improve assessment and migration planning, such as capturing any missing network requirements, performing pre-migration testing, implementing post-migration tweaks, reviewing permissions, and so on.
+Tailwind understands some migration waves will change migration execution progresses, so the migration team reviews and modifies waves periodically. The migration team incorporates learnings from executed waves to improve assessment and migration planning, such as capturing any missing network requirements, performing pre-migration testing, implementing post-migration tweaks, and reviewing permissions.
 
 ## Conclusion
 
 In this article, Tailwind sets up Azure Migrate tools for discovery and assessment and executes steps required to build a migration plan, server groups, and prioritization of server groups in migration waves.
 
-Not every step taken here is required for building a migration plan. However, as good migration planning is often key to successful migration project, Tailwind invests time in developing a proper migration plan by executing all steps as described above. It's also important to review and continuously improve the process based on previous migration wave and feedbacks from key stakeholders teams.
+Not every step taken here is required for building a migration plan. However, as good migration planning is often key to successful migration project, Tailwind invests time in developing a proper migration plan by executing all steps as described above. It's also important to review and continuously improve the process based on previous migration wave and feedback from key stakeholders teams.
 
 ### Next steps
 
