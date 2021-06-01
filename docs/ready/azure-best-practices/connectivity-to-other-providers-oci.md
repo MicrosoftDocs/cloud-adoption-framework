@@ -68,5 +68,4 @@ This section provides different connectivity approaches to integrate an Azure en
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> Connectivity to other cloud providers](./connectivity-to-other-providers.md)
+For information on connectivity to other cloud providers, see [Connectivity to other cloud providers](./connectivity-to-other-providers.md).
