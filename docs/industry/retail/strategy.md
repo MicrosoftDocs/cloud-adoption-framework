@@ -28,7 +28,7 @@ When building out a cloud adoption strategy for your retail organization, make s
 
 ## Retail industry outcomes
 
-There are [common business outcomes](../strategy/business-outcomes/index) associated with standardized cloud adoption strategies. Many of those outcomes apply to the retail industry as well. There are also retail-specific strategies that might be worth including your cloud adoption strategy. Each strategy maps to the critical motivations.
+There are [common business outcomes](../../strategy/business-outcomes/index.md) associated with standardized cloud adoption strategies. Many of those outcomes apply to the retail industry as well. There are also retail-specific strategies that might be worth including your cloud adoption strategy. Each strategy maps to the critical motivations.
 
 ### Business outcomes of personalization
 
