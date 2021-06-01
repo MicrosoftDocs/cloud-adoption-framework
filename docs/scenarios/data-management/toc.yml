@@ -169,47 +169,47 @@ items:
   - name: Featured Azure products
     items:
     - name: ARM Templates
-      href: https://docs.microsoft.com/azure/azure-resource-manager/templates/
+      href: /azure/azure-resource-manager/templates/
     - name: Blob Storage
-      href: https://docs.microsoft.com/azure/storage/blobs/
+      href: /azure/storage/blobs/
     - name: Azure Cosmos DB
-      href: https://docs.microsoft.com/azure/cosmos-db/
+      href: /azure/cosmos-db/
     - name: Azure Database for Maria DB
-      href: https://docs.microsoft.com/azure/mariadb/
+      href: /azure/mariadb/
     - name: Azure Database for MySQL
-      href: https://docs.microsoft.com/azure/mysql/
+      href: /azure/mysql/
     - name: Azure Database for PostgreSQL
-      href: https://docs.microsoft.com/azure/data-explorer       
+      href: /azure/data-explorer       
     - name: Azure Databricks
-      href: https://docs.microsoft.com/azure/databricks/
+      href: /azure/databricks/
     - name: Azure Data Explorer
       href: https://docs.microsoft.com/      
     - name: Azure Data Lake
-      href: https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction
+      href: /azure/storage/blobs/data-lake-storage-introduction
     - name: Azure Key Vault
-      href: https://docs.microsoft.com/azure/key-vault/
+      href: /azure/key-vault/
     - name: Azure Policy
-      href: https://docs.microsoft.com/azure/governance/policy/      
+      href: /azure/governance/policy/      
     - name: Azure Private Link
-      href: https://docs.microsoft.com/azure/private-link/
+      href: /azure/private-link/
     - name: Azure Purview
-      href: https://docs.microsoft.com/azure/purview/
+      href: /azure/purview/
     - name: Azure Stream Analytics
-      href: https://docs.microsoft.com/azure/stream-analytics/
+      href: /azure/stream-analytics/
     - name: Azure SQL
-      href: https://docs.microsoft.com/azure/azure-sql/
+      href: /azure/azure-sql/
     - name: Azure Synapse Analytics
-      href: https://docs.microsoft.com/azure/synapse-analytics/
+      href: /azure/synapse-analytics/
     - name: Data Factory
-      href: https://docs.microsoft.com/azure/data-factory/
+      href: /azure/data-factory/
     - name: Event Hubs
       href: https://docs.microsoft.com/en-us/azure/event-hubs/
     - name: HDInsight
-      href: https://docs.microsoft.com/azure/hdinsight/           
+      href: /azure/hdinsight/           
     - name: Network Watcher
-      href: https://docs.microsoft.com/azure/network-watcher/
+      href: /azure/network-watcher/
     - name: Virtual Network
-      href: https://docs.microsoft.com/azure/virtual-network/ 
+      href: /azure/virtual-network/ 
 
   - name: Learn modules (TBD)
     items:

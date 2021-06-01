@@ -111,7 +111,7 @@ The **Azure Purview Readiness Checklist** aims to provide high-level guidance th
 
 4. Migrate data sources to the new Data Landing Zone.
 
-5. Validate and update your Azure Purview [collections architecture](https://docs.microsoft.com/azure/purview/manage-data-sources#manage-collections).
+5. Validate and update your Azure Purview [collections architecture](/azure/purview/manage-data-sources#manage-collections).
 
 6. Validate and update the collection hierarchy inside Azure Purview Account.
 

@@ -91,7 +91,7 @@ The Data Landing Zone Ops would be notified of new requests and approve or decli
 
 ### Azure Well-Architected Framework Adherence
 
-As the responsible team for the Data Landing Zone it is advisable that the team are proficient in the [Azure Well-Architected Framework](https://docs.microsoft.com/azure/architecture/framework/) which give guidance on Cost Optimization, Reliability, and Security.
+As the responsible team for the Data Landing Zone it is advisable that the team are proficient in the [Azure Well-Architected Framework](/azure/architecture/framework/) which give guidance on Cost Optimization, Reliability, and Security.
 
 ### Business as Usual
 
@@ -224,7 +224,7 @@ The team would use local compute or remote compute to process the data and start
 
 Once the team has ended up with promising ML models, they can start operationalizing these. For this they will expand the team to include Data Ops and ML Engineers who will assist with moving the models into a new Data Product as outlined in Data Products Teams role.
 
-The Data Science team will continue to work with the associated Data Product Owners to capture feedback, support and resolved/update models in production using a [M/L Ops methodology](https://docs.microsoft.com/azure/machine-learning/concept-model-management-and-deployment).
+The Data Science team will continue to work with the associated Data Product Owners to capture feedback, support and resolved/update models in production using a [M/L Ops methodology](/azure/machine-learning/concept-model-management-and-deployment).
 
 ### Analyst
 

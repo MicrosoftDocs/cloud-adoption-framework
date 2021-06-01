@@ -34,7 +34,7 @@ For further ideas on data lake structure and design there are a number of online
 To guide the reader through the process of creating a data lake and configuring access control, step-by-step portal instructions have been provided, along with sample code to support "LakeOps". All code samples are written in Python and use the Azure APIs instead of the associated SDK. The reason is twofold: a.) it can be adapted to any other programming language or utility (such as cUrl or Postman) which supports REST APIs and b.) SDK availability or operation support at the time of writing. The code is provided "as is" and can be run locally if Python 3.6 is installed, or using various options in Azure such as Azure Notebooks, Azure Databricks or even Azure DevOps. If you are new to the Azure REST APIs, please refer to the following [documentation](https://docs.microsoft.com/rest/api/azure/) to help you get started.
 
 >[!NOTE]
->Creating security groups requires necessary permissions to your Azure Active Directory (AAD) tenant or the Microsoft Graph API. In some organizations this level of access can be difficult to obtain, therefore to follow the steps in this article it may be easier to use a [free account](https://azure.microsoft.com/free/), or personal account with a [Visual Studio subscription](https://docs.microsoft.com/visualstudio/subscriptions/vs-azure) or ask your Azure Administrator to create a new AAD tenant and [add a subscription](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory) to the new directory. 
+>Creating security groups requires necessary permissions to your Azure Active Directory (AAD) tenant or the Microsoft Graph API. In some organizations this level of access can be difficult to obtain, therefore to follow the steps in this article it may be easier to use a [free account](https://azure.microsoft.com/free/), or personal account with a [Visual Studio subscription](https://docs.microsoft.com/visualstudio/subscriptions/vs-azure) or ask your Azure Administrator to create a new AAD tenant and [add a subscription](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory) to the new directory. 
 
 ## Understanding the built-in RBAC roles
 
@@ -46,19 +46,19 @@ Only roles explicitly defined for data access permit a security principal to acc
 
 ## Built-in Management Roles
 
-- [Owner](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner):Manage everything, including access to resources. This role will give you key access.
-- [Contributor](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor): Manage everything, excluding access to resources. This role will give you key access.
-- [Reader](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#reader): Read and list resources.
+- [Owner](/azure/role-based-access-control/built-in-roles#owner):Manage everything, including access to resources. This role will give you key access.
+- [Contributor](/azure/role-based-access-control/built-in-roles#contributor): Manage everything, excluding access to resources. This role will give you key access.
+- [Reader](/azure/role-based-access-control/built-in-roles#reader): Read and list resources.
 
 ## Built-in Data Roles
 
-- [Storage Account Contributor](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#storage-account-contributor): Full management of storage accounts. **Note**: this role will give you key access.
+- [Storage Account Contributor](/azure/role-based-access-control/built-in-roles#storage-account-contributor): Full management of storage accounts. **Note**: this role will give you key access.
 
-- [Storage Blob Data Owner](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#storage-blob-data-owner): Full access to Azure Storage blob containers and data including setting of ownership and managing POSIX access control (ACLs)
+- [Storage Blob Data Owner](/azure/role-based-access-control/built-in-roles#storage-blob-data-owner): Full access to Azure Storage blob containers and data including setting of ownership and managing POSIX access control (ACLs)
 
-- [Storage Blob Data Contributor](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor): Read, write, and delete Azure Storage containers and blobs.
+- [Storage Blob Data Contributor](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor): Read, write, and delete Azure Storage containers and blobs.
 
-- [Storage Blob Data Reader](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#storage-blob-data-reader):  Read and list Azure Storage containers and blobs.
+- [Storage Blob Data Reader](/azure/role-based-access-control/built-in-roles#storage-blob-data-reader):  Read and list Azure Storage containers and blobs.
 
 Storage Blob Data Owner is considered a super-user and is granted full access to all mutating operations, including setting the owner of a directory or file as well as ACLs for directories and files for which they are not the owner. Super-user access is the only authorized manner to change the owner of a resource.
 
@@ -73,25 +73,25 @@ A very basic data lake structure may consist of three "layers" or "zones" which 
 
 Often the value of data, and therefore implicitly the layers also, have a bearing on which groups of users (automated or human) access the data at a particular point in the lifecycle. For example, analysts will typically only want to work with curated data, whilst engineers building transformation pipelines may need read access to all three layers to pull samples of data into the development environment in order to develop and test a new pipeline. Data in the curated layer may not have reached its end state, it is plausible that new datasets may be developed with other curated datasets. Whilst users may need read access to various parts of the lake, no-one should have write access except for the service principals or managed identities used for automated processing such as ADF pipelines or Azure Databricks jobs. These automated processes should have passed the necessary test and review phases to prevent data corruption, or even worse data loss.
 
-From an ADLS Gen2 perspective, the data lake layers can be implemented as multiple storage accounts, containers or folders, so when considering access control throughout these layers, decide on a level of granularity which suits your business needs. For some, coarse grained access at the data lake zone may be sufficient control, but for others, fine-grained access control at the data asset level may be required. Decide which is the most granular level of access control appropriate and apply permissions at that level. Review the possible scenarios later in this document to decide whether RBAC or ACLs, or a combination of both, will best suits your scenario. When assigning permissions at a greater scope than the data lake level, please refer the [RBAC documentation](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal?toc=%2fazure%2fstorage%2fblobs%2ftoc.json#determine-resource-scope). 
+From an ADLS Gen2 perspective, the data lake layers can be implemented as multiple storage accounts, containers or folders, so when considering access control throughout these layers, decide on a level of granularity which suits your business needs. For some, coarse grained access at the data lake zone may be sufficient control, but for others, fine-grained access control at the data asset level may be required. Decide which is the most granular level of access control appropriate and apply permissions at that level. Review the possible scenarios later in this document to decide whether RBAC or ACLs, or a combination of both, will best suits your scenario. When assigning permissions at a greater scope than the data lake level, please refer the [RBAC documentation](/azure/storage/common/storage-auth-aad-rbac-portal?toc=%2fazure%2fstorage%2fblobs%2ftoc.json#determine-resource-scope). 
 
 >[!NOTE]
 > If your subscription includes an Azure Databricks namespace, roles that are scoped to the subscription will not grant access to storage account data. Scope roles to the resource group, storage account, or container level instead.
 
 ## How access is evaluated in ADLS
 
-During security principal-based authorisation, permissions will be evaluated in the following order as depicted in the diagram below and described in [the documentation](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control#the-impact-of-role-assignments-on-file-and-directory-level-access-control-lists):
+During security principal-based authorisation, permissions will be evaluated in the following order as depicted in the diagram below and described in [the documentation](/azure/storage/blobs/data-lake-storage-access-control#the-impact-of-role-assignments-on-file-and-directory-level-access-control-lists):
 
 - RBAC is evaluated first and takes priority over any ACL assignments. 
 - If the operation is fully authorised based on RBAC then ACLs are not evaluated at all. 
 - If the operation is not fully authorised then ACLs are evaluated.
 
 >[!NOTE]
->This description excludes [Shared Key and SAS authentication](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control) methods in which no identity is associated with the operation and assumes that the storage account is accessible via appropriate networking configuration. It also excludes scenarios in which the security principal has been assigned the Storage Blob Data Owner built-in role which provides *super-user* access.
+>This description excludes [Shared Key and SAS authentication](/azure/storage/blobs/data-lake-storage-access-control) methods in which no identity is associated with the operation and assumes that the storage account is accessible via appropriate networking configuration. It also excludes scenarios in which the security principal has been assigned the Storage Blob Data Owner built-in role which provides *super-user* access.
 
 ![howaccessisevaluated](./images/howaccessisevaluatedv2.png)
 
-See [here](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control#common-scenarios-related-to-permissions)
+See [here](/azure/storage/blobs/data-lake-storage-access-control#common-scenarios-related-to-permissions)
 for another example of what ACL based permissions are required for a
 given operation.
 
@@ -104,35 +104,35 @@ given operation.
 
 ### Using the Portal
 
-1. [Create a storage account](https://docs.microsoft.com/azure/storage/common/storage-account-create?tabs=azure-portal) with HNS enabled
+1. [Create a storage account](/azure/storage/common/storage-account-create?tabs=azure-portal) with HNS enabled
 1. Navigate to the storage account
 1. Under the Data Lake Storage sub-menu, click Containers
 1. Click + Container
-1. Specify a container name in accordance with the [naming convention](https://docs.microsoft.com/azure/storage/blobs/storage-blob-container-create#name-a-container)
+1. Specify a container name in accordance with the [naming convention](/azure/storage/blobs/storage-blob-container-create#name-a-container)
 
 ![createcontainerusingportal](./images/createcontainerusingportal.png)
 
 ### Using Storage Explorer
 
 1. [Download](https://azure.microsoft.com/features/storage-explorer/) Azure Storage Explorer
-1. [Log in](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-storage-explorer#log-in-to-storage-explorer) to Storage Explorer
-1. [Create a storage account](https://docs.microsoft.com/azure/storage/common/storage-account-create?tabs=azure-portal) with HNS enabled
+1. [Log in](/azure/storage/blobs/storage-quickstart-blobs-storage-explorer#log-in-to-storage-explorer) to Storage Explorer
+1. [Create a storage account](/azure/storage/common/storage-account-create?tabs=azure-portal) with HNS enabled
 1. Find the subscription which hosts the storage account and expand it
 1. Expand the Storage Accounts list and expand the storage account. *Note* it should specify (ADLS Gen2) after the storage account name
 1. Right click on Blob Containers, click Create Blob Container
-1. Enter a [valid](https://docs.microsoft.com/azure/storage/blobs/storage-blob-container-create#name-a-container) container name and hit enter
+1. Enter a [valid](/azure/storage/blobs/storage-blob-container-create#name-a-container) container name and hit enter
 
 ![createcontainerusingstorageexplorer.png](./images/createcontainerusingstorageexplorer.png)
 
 >[!NOTE]
-> Storage Explorer requires access to both management layer (subscriptions and storage accounts) and data layer (containers, blobs and data), therefore will require at least the Reader role to list storage accounts, and the Storage Blob Data Reader role to list or download folders and files. Alternatively, a SAS URI can be used if access to the management layer is not impossible. For information please see the [documentation](https://docs.microsoft.com/azure/storage/common/storage-explorer-troubleshooting?toc=%2Fazure%2Fstorage%2Fblobs%2Ftoc.json&tabs=Windows%2C1904).
+> Storage Explorer requires access to both management layer (subscriptions and storage accounts) and data layer (containers, blobs and data), therefore will require at least the Reader role to list storage accounts, and the Storage Blob Data Reader role to list or download folders and files. Alternatively, a SAS URI can be used if access to the management layer is not impossible. For information please see the [documentation](/azure/storage/common/storage-explorer-troubleshooting?toc=%2Fazure%2Fstorage%2Fblobs%2Ftoc.json&tabs=Windows%2C1904).
 
 ### Using the API
 -------------
 
-1. [Create a service principal](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal) and [secret](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#create-a-new-application-secret)
-1. [Create a storage account](https://docs.microsoft.com/azure/storage/common/storage-account-create?tabs=azure-portal) with HNS enabled
-1. Use the following python code to create an authorisation token and create a container. Replace the tokens in parentheses with the required information. Ensure that a [valid container name](https://docs.microsoft.com/azure/storage/blobs/storage-blob-container-create#name-a-container) is specified.
+1. [Create a service principal](/azure/active-directory/develop/howto-create-service-principal-portal) and [secret](/azure/active-directory/develop/howto-create-service-principal-portal#create-a-new-application-secret)
+1. [Create a storage account](/azure/storage/common/storage-account-create?tabs=azure-portal) with HNS enabled
+1. Use the following python code to create an authorisation token and create a container. Replace the tokens in parentheses with the required information. Ensure that a [valid container name](/azure/storage/blobs/storage-blob-container-create#name-a-container) is specified.
 
 [Click here to view the code sample](./APIs/create_ADLS_container.py)
 
@@ -188,8 +188,8 @@ When using only RBAC, one may question whether ADLS Gen2 is required at all, par
 
 For more information see:
 
--   [Assigning roles using API](https://docs.microsoft.com/azure/role-based-access-control/role-assignments-rest)
--   [Unique ID for each built-in role](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#all)
+-   [Assigning roles using API](/azure/role-based-access-control/role-assignments-rest)
+-   [Unique ID for each built-in role](/azure/role-based-access-control/built-in-roles#all)
 - 
 ## Storage permutations
 
@@ -206,7 +206,7 @@ In this pattern each storage account will represent a particular zone, for examp
 Configure access using ACLs only
 --------------------------------
 
-As per the [ADLS best practices](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-best-practices#use-security-groups-versus-individual-users) it is recommended to assign access control entries to a security group rather than an individual user or service principal. When adding or removing users from the group no updates to ADLS are required and using groups also reduces the chance of exceeding the 32 access control entries per file or folder ACL. After the 4 default entries that leaves only 28 remaining for permission assignments. However, even when using groups, a proliferation of access control entries may occur at top levels of the directory tree, particularly when very granular permissions with many different groups are required. In order for each group to obtain read access to the files contained in their folder, they will need execute permissions from root, which is the container level, all the way down to the folder they are trying to access. It is likely that the 32 access control entry limit will be reached in the root or levels close to root. An example of this scenario is depicted below: 
+As per the [ADLS best practices](/azure/storage/blobs/data-lake-storage-best-practices#use-security-groups-versus-individual-users) it is recommended to assign access control entries to a security group rather than an individual user or service principal. When adding or removing users from the group no updates to ADLS are required and using groups also reduces the chance of exceeding the 32 access control entries per file or folder ACL. After the 4 default entries that leaves only 28 remaining for permission assignments. However, even when using groups, a proliferation of access control entries may occur at top levels of the directory tree, particularly when very granular permissions with many different groups are required. In order for each group to obtain read access to the files contained in their folder, they will need execute permissions from root, which is the container level, all the way down to the folder they are trying to access. It is likely that the 32 access control entry limit will be reached in the root or levels close to root. An example of this scenario is depicted below: 
 
 ![flatgroupsissue](./images/flatgroupsissue.png)
 
@@ -271,7 +271,7 @@ Each ACE has the format of \[scope:\]\[type\]:\[id\]:\[permissions\] where:
 
 -   scope is either "*default*" for a default ACL or not specified which denotes an access ACL
 
--   type is either user, group, mask or other. See [here](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control#users-and-identities) for more details.
+-   type is either user, group, mask or other. See [here](/azure/storage/blobs/data-lake-storage-access-control#users-and-identities) for more details.
 
 -   id is the identifier of the security principal. In the case of a security group, it is the Object ID of the group
 
@@ -285,7 +285,7 @@ Substitute the parameters in parentheses, and run the following code using a sec
 
 [Click here to view the code sample](./APIs/assign_acls.py)
 
-> **_Note:_** should you wish to apply ACL changes retrospectively (after the folders and files exist) then this could be achieved through a for loop recursively listing and setting each folder and file, however the simpler method may be to use a Powershell script with the -Recurse parameter as shown in [this example](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-directory-file-acl-powershell#set-acls-on-all-items-in-a-file-system). 
+> **_Note:_** should you wish to apply ACL changes retrospectively (after the folders and files exist) then this could be achieved through a for loop recursively listing and setting each folder and file, however the simpler method may be to use a Powershell script with the -Recurse parameter as shown in [this example](/azure/storage/blobs/data-lake-storage-directory-file-acl-powershell#set-acls-on-all-items-in-a-file-system). 
 
 ### Storage permutations
 
