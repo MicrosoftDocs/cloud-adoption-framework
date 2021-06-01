@@ -48,7 +48,7 @@ The core platform team, referred as **SAP Basis Operations**, is either staffed 
 Those data points will aid this team to determine the levels of platform operations that must be added to meet operational requirements.
 
 > [!NOTE]
-> If your organization has a centralized SAP platform team, please consider tooling to enhance operations of the core platform using an [enterprise-scale scenario for SAP](./enterprise-scale-landing-zone.md) for elevated management and BCDR scenarios that can improve operations of the platform.
+> If your organization has a centralized SAP platform team, consider tooling to enhance operations of the core platform using an [enterprise-scale scenario for SAP](./enterprise-scale-landing-zone.md) for elevated management and BCDR scenarios that can improve operations of the platform.
 
 ## Workload operations
 

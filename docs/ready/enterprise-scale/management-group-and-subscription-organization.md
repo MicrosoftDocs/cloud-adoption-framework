@@ -66,7 +66,7 @@ Subscriptions are a unit of management, billing, and scale within Azure. They pl
 
 - Subscriptions serve as boundaries for assigning Azure policies. For example, secure workloads such as Payment Card Industry (PCI) workloads typically require additional policies to achieve compliance. Instead of using a management group to group workloads that require PCI compliance, you can achieve the same isolation with a subscription. This way, you don't have too many management groups with a small number of subscriptions.
 
-- Subscriptions serve as a scale unit so that component workloads can scale within the platform [subscription limits](/azure/azure-subscription-service-limits). Make sure to consider subscription resource limits during your workload design sessions.
+- Subscriptions serve as a scale unit so that component workloads can scale within the platform [subscription limits](/azure/azure-resource-manager/management/azure-subscription-service-limits). Make sure to consider subscription resource limits during your workload design sessions.
 
 - Subscriptions provide a management boundary for governance and isolation, which clearly separates concerns.
 
@@ -189,7 +189,7 @@ Organizations can use enterprise-scale Azure policies to enforce the following g
 
 - **Evaluate proven best practices**
 
-   An SQL database can experience a lot of schema, permission, and configuration changes throughout its life cycle, and these changes can deviate from best practices. In turn, excessive permissions, orphaned roles, and other configurational drifts can be exploited by malicious actors.
+   An SQL database can experience a lot of schema, permission, and configuration changes throughout its lifecycle, and these changes can deviate from best practices. In turn, excessive permissions, orphaned roles, and other configurational drifts can be exploited by malicious actors.
 
    Microsoft best practices for SQL databases can help enterprises to assess their SQL databases, and SQL Database has a built-in vulnerability assessment service to assist. A vulnerability assessment scans and identifies database- and server-level security risks, and it offers remediation tasks that can fix vulnerabilities.
 
@@ -319,7 +319,7 @@ Organizations can use enterprise-scale Azure policies to enforce the following g
 
     Azure Virtual WAN is an enterprise-level network service that helps organizations to resolve connectivity challenges. The service provides higher aggregate throughput with network connectivity, optimal routing over the Azure backbone, and a unified Azure management experience.
 
-    Azure offers a custom policy to set up Virtual WAN and provision a virtual hub within the service. Enterprises can deploy virtual hubs to act as a central point for connections from multiple sources and destinations. ExpressRoute, VPN gateways, and Azure Firewall are also provisioned to address network connectivity requirements.
+    Azure offers a custom policy to set up Virtual WAN and provision a virtual hub within the service. Enterprises can deploy virtual hubs to act as a central point for connections from multiple sources and destinations. ExpressRoute, Azure VPN Gateway, and Azure Firewall are also provisioned to address network connectivity requirements.
 
 - **Back up virtual machines**
 

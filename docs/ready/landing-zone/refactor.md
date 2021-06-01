@@ -16,7 +16,7 @@ A landing zone is an environment for hosting your workloads that's **preprovisio
 
 The Ready methodology uses the concept of refactoring to accelerate migration and remove common blockers. The steps in the ready overview discuss a process that starts with predefined landing zone template that aligns best with your hosting function. Then refactor or add to the source code to expand the landing zones ability to deliver that function through improved security, operations, or governance. The following image illustrates the concept of refactoring.
 
-![Landing zone refactoring illustration - described in later section of this article](../../_images/ready/refactor.png)
+![Landing zone refactoring illustration, described in a later section of this article.](../../_images/ready/refactor.png)
 *Figure 1: Landing zone refactoring.*
 
 ## Common blockers
@@ -27,7 +27,7 @@ Both of the primary blockers are rooted in one belief, the cloud environment and
 
 ### Blocker: Acting too soon
 
-It took years and significant effort to reach the current state of security, governance, and operations in the current datacenter. It also required observations, learning, and customization to meet the unique constraints of that environment. Replicating those same procedures and configurations will take time. Reaching complete feature parity may also result in an environment that underperforms in the cloud. This parity approach also commonly leads to significant unplanned overspending in the cloud environment. Don't try to apply current-state requirements to a future-state environment as an early stage gate. Such an approach rarely proves to be profitable.
+It took years and significant effort to reach the current state of security governance and operations in the current datacenter. It also required observations, learning, and customization to meet the unique constraints of that environment. Replicating those same procedures and configurations will take time. Reaching complete feature parity may also result in an environment that underperforms in the cloud. This parity approach also commonly leads to significant unplanned overspending in the cloud environment. Don't try to apply current-state requirements to a future-state environment as an early stage gate. Such an approach rarely proves to be profitable.
 
 ![Common blocker: Acting too soon](../../_images/ready/blocker-act-too-soon.png)
 *Figure 2: Acting too soon is a common blocker.*

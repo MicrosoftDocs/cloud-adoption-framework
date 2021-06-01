@@ -79,8 +79,9 @@ For Oracle Cloud Infrastructure (OCI) where Microsoft and Oracle have partnered 
     ![Cross-cloud connectivity using site-to-site VPN over the Internet.](./media/other-cloud-s2s-vpn.png)
 
     *Figure 5: Cross-cloud connectivity using site-to-site VPN over the Internet.*
-
+  
 ## Next steps
-
+=======
+  
 > [!div class="nextstepaction"]
 > [Connectivity to Oracle Cloud Infrastructure](connectivity-to-other-providers-oci.md)
