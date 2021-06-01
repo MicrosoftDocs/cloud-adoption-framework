@@ -133,8 +133,12 @@ items:
     items:
       - name: Platform Provisioning
         href: ./eslz-platform-provisioning.md
-      - name:  Data Lake Services
-        href: ./eslz-data-lake-services.md
+      - name: Data Lake
+        items:
+          - name:  Managing Data Lake Access 
+            href: ./eslz-data-lake-access.md        
+          - name:  Data Lake Services
+            href: ./eslz-data-lake-services.md
       - name:  Azure Databricks Integration
         href: ./eslz-azure-databricks-integration.md
       - name: Azure Synapse Analytics Integration

@@ -55,7 +55,7 @@ Where Advanced Threat Protection is available for the PaaS Services, we recommen
 
 ## Azure Data Lake Gen 2 RBAC and ACLs
 
-Azure Data Lake Gen 2 is the predominant polygot storage within the Enterprise Scale Analytics and AI pattern. Three data lake accounts are provisioned per Data Landing Zone.
+Azure Data Lake Gen 2 is the predominant polyglot storage within the Enterprise Scale Analytics and AI pattern. Three data lake accounts are provisioned per Data Landing Zone.
 
 It is important to understand how Enterprise Scale Analytics and AI uses Active Directory identities to secure data in the data lake accounts. This section outlines the core terms required for the solution pattern, but for an in-depth explanation, see [Access control lists (ACLs) in Azure Data Lake Storage Gen2](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control).
 
@@ -92,7 +92,7 @@ The table above gives an overview of how ACLs and RBAC can be used to manage per
 \
 If the dataset is non-sensitive, Users Principal Names(UPNs) and Service Principal object can be added to these groups. If the dataset is SENSITIVE, we would recommend that only Service Principal object and/or Managed Service Identity (MSI) be added to these groups. Please see [Data Privacy](eslz-data-privacy.md) for further details on our sensitive data security pattern.
 
-Resist the opportunity to directly assign individual users or service principals. Using an Azure AD Security Group structure will allow you to add and remove users or service principals without the need to reapply ACLs to an entire directory structure. Instead, you can just add or remove users and service principals from the appropriate Azure AD security group.
+Resist the opportunity to directly assign individual users or service principals to ACLs. Using an Azure AD Security Group structure will allow you to add and remove users or service principals without the need to reapply ACLs to an entire directory structure. Instead, you can just add or remove users and service principals from the appropriate Azure AD security group.
 
 #### Data Lake Zones Security
 
@@ -120,7 +120,7 @@ If a user in the service engineering team transfers to a different team, you cou
 
 ## Databases Authentication and Permissions
 
-Other polygot storage such as PostgreSQL, MySQL, Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics are likely to be used in the Enterprise Scale Analytic solution pattern. They could be used by Domains to store their Read Data Stores or by Data Product Teams.
+Other polyglot storage such as PostgreSQL, MySQL, Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics are likely to be used in the Enterprise Scale Analytic solution pattern. They could be used by Domains to store their Read Data Stores or by Data Product Teams.
 
 - [Use Azure Active Directory for authentication with PostgreSQL](https://docs.microsoft.com/azure/postgresql/howto-configure-sign-in-aad-authentication)
 - [Use Azure Active Directory authentication with Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview)
