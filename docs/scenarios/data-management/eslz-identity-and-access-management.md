@@ -1,8 +1,8 @@
 ---
 title: "Enterprise-Scale identity and access management for 'data management and analytics'"
 description: Describe how this enterprise-scale scenario can improve identity and access management of 'data management and analytics'
-author: BrianBlanchard, XintiaGyenge
-ms.author: brblanch, xigyenge
+author: mboswell
+ms.author: mboswell
 ms.date: 09/11/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

@@ -1,8 +1,8 @@
 ---
 title: "Enterprise-Scale Analytics and AI Deployment Models"
 description: Enterprise-Scale Analytics and AI Deployment Models
-author: xigyenge
-ms.author: xigyenge
+author: mboswell
+ms.author: mboswell
 ms.date: 03/05/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
