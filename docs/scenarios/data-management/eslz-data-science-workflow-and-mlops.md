@@ -2,7 +2,7 @@
 title: Enterprise Scale Analytics and AI Data Science Workflow and MLOps
 description: Enterprise Scale Analytics and AI Data Science Workflow and MLOps
 author:  abdale
-ms.author:  abdale # Microsoft employees only
+ms.author: hamoodaleem # Microsoft employees only
 ms.date: 03/03/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -35,7 +35,7 @@ These artifacts will significantly speed up the exploration and operationalizati
 
 Such a setup will also promote the use of git because users will benefit from the provided artifacts.
 
-In addition, the automation process will greatly benefit from these artifacts. The Azure Machine Learning sample pipelines should be either build using the Python SDK or should be based on the new yaml language. The new yaml experience will be more future proof as the AML product team is currently working on a new SDK and CLI offering that will place it’s bet on yaml as a definition language for all artifacts within Azure Machine Learning. These sample pipelines will not necessarily work out of the box for each and every project, but can be used as a baseline and finetuned for the respective projects. The pipeline itself should include the most relevant aspects for each project such as referencing a compute target, referencing datasets, defining parameters, defining inputs and defining two execution steps.
+In addition, the automation process will greatly benefit from these artifacts. The Azure Machine Learning sample pipelines should be either build using the Python SDK or should be based on the new yaml language. The new yaml experience will be more future proof as the AML product team is currently working on a new SDK and CLI offering that will place it's bet on yaml as a definition language for all artifacts within Azure Machine Learning. These sample pipelines will not necessarily work out of the box for each and every project, but can be used as a baseline and finetuned for the respective projects. The pipeline itself should include the most relevant aspects for each project such as referencing a compute target, referencing datasets, defining parameters, defining inputs and defining two execution steps.
 
 The same should be done for the Azure DevOps pipelines. The pipelines should demonstrate how users can connect to a workspace from within a DevOps pipeline, how to check whether the required compute is available, how to submit a job, how to register a model and deploy a model. The DevOps pipelines should also make use of the Azure Machine Learning SDK or CLI.
 
