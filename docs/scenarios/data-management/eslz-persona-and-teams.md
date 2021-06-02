@@ -1,8 +1,8 @@
 ---
 title: Enterprise Scale Analytics and AI Teams
 description: Enterprise Scale Analytics and AI Architecture Persona and Teams structure
-author: xigyenge
-ms.author: xigyenge # Microsoft employees only
+author: abdale
+ms.author: hamoodaleem # Microsoft employees only
 ms.date: 03/03/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -15,7 +15,7 @@ The Enterprise Scale Analytics and AI moves teams from working horizontally acro
 
 ![Enterprise Scale Analytics and AI Teams](./images/esaaiteams.png)
 
-*Figure 1: Enterprise Scale Analytics and AI Teams*
+Figure 1: Enterprise Scale Analytics and AI Teams
 
 ## Personas
 
@@ -96,7 +96,7 @@ Digital security spans the whole of the Enterprise Scale Analytics and AI soluti
 
 ![ Data Governance Review Board](./images/datagovernancereviewboard.png)
 
-*Figure 2: Data Governance Review Board*
+Figure 2: Data Governance Review Board
 
 The Data Governance Review Board is the body that governs your organization's data governance policies, guides and advises your data strategy, prioritizes and approves your data governance initiatives and projects, and offers on-going support for these.
 
