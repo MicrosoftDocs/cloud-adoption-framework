@@ -17,10 +17,10 @@ It's important for you as a retailer to understand your retail space. You can pr
 
 In-store sensors and IoT beacon technology help track everything from store occupancy and checkout line patterns to energy usage and maintenance needs. These technologies allow you to create a smart, connected store environment and optimize building management.
 
-It's this real-time observational data that allows retailers:
+Real-time observational data allows retailers to take action.
 
 - Make more informed decisions. You can harness real-time analytics and alerts about energy usage and warehouse operations.
-- Improve marketing ROI. You can optimize store space to enhance their ability to target and increase advertising and marketing efficiency.
+- Improve marketing ROI. You can optimize store space to enhance your ability to target and increase advertising and marketing efficiency.
 - Provide optimal shopping experiences. Improve customer experience based on real-time data from video cameras, beacon technology, and IoT sensors.
 - Reduce energy costs. Increase the efficiency of store and warehouse operations by applying analytics and AI. Visualize data for quicker decision making.
 
@@ -36,7 +36,7 @@ There are challenges that you must navigate as a result, such as the following e
 
 Retailers can embrace advances in analytics, AI, IoT, and other technologies. You can also join forces with the right technology partner.
 
-### How Microsoft helps retailers optimize building management
+### How Microsoft helps optimize building management
 
 As a trusted technology partner, Microsoft works with retailers to build the future technology for the industry. Our building management optimization offerings apply advances to help you make more informed decisions and improve customer experiences.
 
