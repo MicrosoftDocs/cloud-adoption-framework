@@ -71,7 +71,7 @@ Ingest and Processing will be deployed into a single resource group.
 
 *Figure 3: Data Landing Zone Ingest and Processing*
 
-The ingestion framework engine should copy data through the layers of the data lake service from source to raw to enriched.
+The ingestion framework engine should copy data through the layers of the data lake service from source to Raw to Enriched to Curated.
 
 As data sources are registered and integrated into respective data lakes using a repeatable and consistent framework, the data should be registered with Azure Purview for discovery.
 
@@ -100,7 +100,7 @@ Across the Data Landing Zone there is the requirement for a number of shared met
 
 *Figure 4: Data Landing Zone Metadata Services()
 
-If you have decided to develop your own ingestion framework engine based on the recommendations in the Enterprise Scale Analytics and AI ingestion flow, using either a PowerApp or a .Net Application, in the Data Management Landing Zone, we would suggest deploying an Azure SQL DB to hold metadata for Azure Data Factory to use. Having this custom application will speed up the onboarding of data sources, allowing teams to create new data sources for ingestion for landing into the RAW to ENRICHED in the Data Landing Zone data lakes.
+If you have decided to develop your own ingestion framework engine based on the recommendations in the Enterprise Scale Analytics and AI ingestion flow, using either a PowerApp or a .Net Application, in the Data Management Landing Zone, we would suggest deploying an Azure SQL DB to hold metadata for Azure Data Factory to use. Having this custom application will speed up the onboarding of data sources, allowing teams to create new data sources for ingestion for landing into the Raw to Enriched to Curated in the Data Landing Zone data lakes.
 
 A Self-Hosted Integration Runtime will be deployed for use with Azure Purview to scan data inside the Data Landing Zone. Although the DevOps CI/CD process will handle the registration of these runtimes into Azure Purview, we recommend understanding [Create and manage a self-hosted integration runtime](/azure/purview/manage-integration-runtimes).
 
