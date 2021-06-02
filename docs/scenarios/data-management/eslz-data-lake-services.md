@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Data Lake Services
 
-Three [Azure Data Lake Storage Gen V2 (ADLS)](/azure/storage/blobs/data-lake-storage-introduction) accounts should be provisioned per Data Landing Zone in the "data lake services" resource group. As data passes through the different stages of transformation, it should be saved on one of the Data Landing Zone's three data lakes and available for the **Data Products**. These data lake accounts should be deployed into a single resource group.
+Three [Azure Data Lake Storage Gen2 (ADLS)](/azure/storage/blobs/data-lake-storage-introduction) accounts should be provisioned per [Data Landing Zone](eslz-data-landing-zone.md) in the "data lake services" resource group. As data passes through the different stages of transformation, it should be saved in one of the Data Landing Zone's three data lakes and available for the [data products](eslz-data-landing-zone-data-products.md) in the lake which serves as the enriched and curated data layer. Data products would consume from the enriched and curated data layer only. These data lake accounts should be deployed into a single resource group.
 
 ## Overview
 
