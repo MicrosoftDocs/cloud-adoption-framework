@@ -1,10 +1,11 @@
-// This file points from the root of the repo to the
-// cspell file located in the top-level folder containing articles.
 {
     "version": "0.1",
     "language": "en",
     "enabled": true,
     "import": [
         ".\\docs\\cspell.json"
+    ],
+    "words": [
+        "migratable"
     ]
 }
