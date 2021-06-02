@@ -26,7 +26,7 @@ Some of these connectors support being used as a source (read) or as a sink (wri
 
 - [Azure Databricks](/azure/databricks/) is a fast, easy, and collaborative Apache Spark-based analytics service. For a big data pipeline, the data (raw or structured) is ingested into Azure through Azure Data Factory in batches, or streamed near-real-time using Kafka, Event Hub, or IoT Hub. This data lands in a data lake for long-term, persisted storage in Azure Data Lake Storage. Azure Databricks can read data from multiple data sources as part of the workflow.
 
-- Power Platform provides [connectors to hundreds of services](https://docs.microsoft.com/connectors/connector-reference/) that can be event, schedule, or push driven. Power Automate can act on events and trigger workflows, optimized for single records or small data volumes.\
+- Power Platform provides [connectors to hundreds of services](/connectors/connector-reference/) that can be event, schedule, or push driven. Power Automate can act on events and trigger workflows, optimized for single records or small data volumes.\
 \
 Proprietary native and third-party tooling provides niche capabilities to integrate with specialist systems and/or near-real-time replication.
 
