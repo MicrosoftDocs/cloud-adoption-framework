@@ -11,7 +11,7 @@ ms.subservice: overview
 
 # Omnichannel optimization in the retail industry
 
-In the retail industry, omnichannel refers to integrated channels selling goods and services. An omnichannel provides a coherent, captivating shopping experience for customers, whatever of the platform or device uses. Data is key to the ability of your business to drive such optimization across channels.
+In the retail industry, omnichannel refers to integrated channels selling goods and services. An omnichannel provides a coherent, captivating shopping experience for customers, whatever the platform or device they use. Data is key to the ability of your business to drive such optimization across channels.
 
 Retail businesses collect different types of customer data. This data includes web-browsing patterns, purchase behaviors, demographics, and other session-based web information. Some data comes from internal business operations. Other data must be pulled from external sources such as partners, manufacturers, or public domains.
 
