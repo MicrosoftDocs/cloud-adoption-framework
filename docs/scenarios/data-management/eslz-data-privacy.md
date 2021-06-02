@@ -54,11 +54,11 @@ In the scenario use case, the domain would need to create four Azure AD Groups f
 
 The first level of restrictions would support dynamic data masking. [Dynamic data masking](/azure/azure-sql/database/dynamic-data-masking-overview) limits sensitive data exposure by masking it to non-privileged users. One of the advantages of using Dynamic Data Masking is this could be implemented into the onboarding process of a dataset using the [Data Masking Policies - Create Or Update](/azure/azure-sql/database/dynamic-data-masking-overview) REST API.
 
-The second level is to add [Column-Level Security](/azure/synapse-analytics/sql-data-warehouse/column-level-security) to restrict non-HR managers from being able to see salaries and [Row-Level Security](https://docs.microsoft.com/sql/relational-databases/security/row-level-security) to restrict which rows European and North American team members could see.
+The second level is to add [Column-Level Security](/azure/synapse-analytics/sql-data-warehouse/column-level-security) to restrict non-HR managers from being able to see salaries and [Row-Level Security](/sql/relational-databases/security/row-level-security) to restrict which rows European and North American team members could see.
 
-An additional security layer, on top of Transparent Data Encryption, would be to [Encrypt the Column of Data](https://docs.microsoft.com/sql/relational-databases/security/encryption/encrypt-a-column-of-data) and decrypt upon read.
+An additional security layer, on top of Transparent Data Encryption, would be to [Encrypt the Column of Data](/sql/relational-databases/security/encryption/encrypt-a-column-of-data) and decrypt upon read.
 
-The tables could be made available to Azure Databricks via the [Apache Spark connector: SQL Server & Azure SQL](https://docs.microsoft.com//sql/connect/spark/connector).
+The tables could be made available to Azure Databricks via the [Apache Spark connector: SQL Server & Azure SQL](/sql/connect/spark/connector).
 
 #### Option Two - Azure Databricks
 
@@ -106,7 +106,7 @@ FROM hr_enriched
 where region='EU'
 ```
 
-For this to work you would enable Azure Databricks [Table Access Control](https://docs.microsoft.com//azure/databricks/security/access-control/table-acls/object-privileges) in the Azure Databricks Workspace and apply the following permissions:
+For this to work you would enable Azure Databricks [Table Access Control](/azure/databricks/security/access-control/table-acls/object-privileges) in the Azure Databricks Workspace and apply the following permissions:
 
 * Grant DA-AMERICA-HRMANAGER-R and DA-AMERICA-HRGENERAL-R Azure AD Groups access to the `vhr_us` view.
 * Grant DA-EUROPE-HRMANAGER-R and DA-EUROPE-HRGENERAL-R Azure AD Groups access to the `vhr_eu` view.
