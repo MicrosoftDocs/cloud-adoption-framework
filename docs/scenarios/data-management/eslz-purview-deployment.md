@@ -13,15 +13,14 @@ ms.subservice: ready
 
 The [Data Management Landing Zone](eslz-data-management-landing-zone.md) is responsible for the governance of the Enterprise Scale Analytics and AI platform and relies on [Azure Purview](https://azure.microsoft.com/services/purview) to provide the following data management capabilities:
 
-- [Data Catalog](eslz-data-management-landing-zone.md/#data-catalog)
-- [Data Classification](eslz-data-management-landing-zone.md/#data-classification)
-- [Data Lineage](eslz-data-management-landing-zone.md/#data-lineage)
+- [Data Catalog](eslz-data-management-landing-zone.md#data-catalog)
+- [Data Classification](eslz-data-management-landing-zone.md#data-classification)
+- [Data Lineage](eslz-data-management-landing-zone.md#data-lineage)
 
 Azure Purview is a unified data governance service that helps organizations to manage and govern data across on-premises, multi-cloud, and software-as-a-service (SaaS). Azure Purview creates a holistic, up-to-date map of the data landscape with automated data discovery, sensitive data classification, and end-to-end data lineage. Azure Purview empowers data consumers to find valuable, trustworthy data.
 
 > [!TIP]
 > We recommend using third-party tools of your choice to integrate the remaining capabilities of the [Data Management Landing Zone](eslz-data-management-landing-zone.md) with Azure that are currently not supported by Azure Purview.
-
 > [!NOTE]
 > This section aims to explain prescribed configurations which are specific to the Enterprise Scale Analytic and AI solution pattern and discusses a collection of Azure best practices to enhance your data governance using Azure Purview. It is a compliment to the official [Azure Purview Documentation](/azure/purview/).
 
@@ -40,6 +39,7 @@ In addition to the Azure Purview account, a managed resource group is also deplo
 ### Prerequisites
 
 Prior to deployment, review the following requirements inside your Data Management Landing Zone subscription:
+
 - **Make policy exemptions** (if needed): If you have an existing Azure Policy assignment which is preventing administrators or applications from creating Azure Storage Accounts, Azure Event Hubs namespace, Azure Purview accounts, Azure Private DNS Zones or Azure Private Endpoints, you need to apply [Azure Policy exemptions](/azure/governance/policy/concepts/exemption-structure) so the required resources can be deployed in the Data Management Landing Zone along with Azure Purview deployment.
 - **Register resource providers**: Ensure the following Azure resource providers are registered in Data Management Landing Zone subscription.
   - Microsoft.EventHub
@@ -54,7 +54,6 @@ Prior to deployment, review the following requirements inside your Data Manageme
 The Azure Purview account is deployed inside the Azure Virtual Network (VNet) within the Data Management Landing Zone.
 
 ### Private Endpoint Deployment
-
 
 ![Azure Purview Networking](./images/purview-private-endpoint2.png)
 
@@ -82,7 +81,7 @@ Use any of the following options to manage your data using Azure Purview through
 
 - **Option 1**: Use a jump machine which is connected to CorpNet. To use this connectivity model, you must have connectivity between the VNet where Azure Purview Portal Private Endpoint is created which your corporate network.
   
-  Review Cloud Adoption Framework Networking for more information [Network topology and connectivity](../ready/enterprise-scale/network-topology-and-connectivity.md).
+  Review Cloud Adoption Framework Networking for more information [Network topology and connectivity overview](../../ready/enterprise-scale/network-topology-and-connectivity.md)
 
 - **Option 2**: If hybrid connectivity is not available in your organization, [deploy a Virtual Machine](/azure/virtual-machines/windows/quick-create-portal) inside the Data Management Landing Zone and [deploy Azure Bastion](/azure/bastion/quickstart-host-portal) to connect to Azure Purview using a secure connection.
 
@@ -210,4 +209,4 @@ Review the following list of personas involved in an Enterprise Scale Analytics 
 | Data Scientists | Use your preferred tools and machine learning frameworks to build scalable data science solutions. Accelerate end-to-end ML lifecycle.|Purview Data Source Administrator + Data Curator |
 | ML Engineers | Enable right processes and infrastructure for easy model deployment and model management. |Purview Data Source Administrator + Data Curator    |
 
-For more information about Data Personas, see [Personas and Teams](eslz-persona-and-teams.md/#personas)
+For more information about Data Personas, see [Personas and Teams](eslz-persona-and-teams.md#personas).

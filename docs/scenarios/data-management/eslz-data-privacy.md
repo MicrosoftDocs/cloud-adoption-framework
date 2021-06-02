@@ -1,8 +1,8 @@
 ---
 title: "Enterprise Scale Analytics and AI Data Privacy"
 description: Enterprise Scale Analytics and AI Data Privacy
-author: xigyenge
-ms.author: xigyenge
+author: abdale
+ms.author: hamoodaleem
 ms.date: 03/03/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

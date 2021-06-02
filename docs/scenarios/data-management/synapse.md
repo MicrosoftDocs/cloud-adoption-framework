@@ -1,6 +1,6 @@
 ---
-title: Building a plan for 'data management and analytics'
-description: Building a plan for 'data management and analytics'
+title: Building a plan for Synapse'
+description: Building a plan for 'Synapse
 author: pratimdas
 ms.author: prda # Microsoft employees only
 ms.date: 01/27/2021
