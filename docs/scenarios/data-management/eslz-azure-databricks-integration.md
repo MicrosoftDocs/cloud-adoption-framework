@@ -24,9 +24,9 @@ For every Data Landing Zone deployed, two shared Azure Databricks Workspaces wil
 
 The **Azure Databricks Analytics and Data Science Workspace** is shared across the whole Data Landing Zone, with all users which have been given access to the Workspace. These workspaces should not be used for Data Ingestion, Transformation, and Load &mdash; the **Azure Databricks Engineering Workspace** should be used for this instead.
 
-If you have an automated ingestion framework engine, the **Azure Databricks Engineering Workspace** will use both an Azure Key Vault created in the Metadata Services Resource group, data ingestion pipelines from RAW into ENRICHED and an Azure Key Vault, per Domain, for running developed engineering pipelines to transform from RAW to ENRICHED.
+If you have an automated ingestion framework engine, the **Azure Databricks Engineering Workspace** will use both an Azure Key Vault created in the Metadata Services Resource group, data ingestion pipelines from RAW into ENRICHED and an Azure Key Vault, per Domain, for running developed engineering pipelines to transform from Raw to Enriched to Curated.
 
-If you don't have an automated ingestion framework engine, the **Azure Databricks Engineering Workspace** will use just the Azure Key Vault, per Domain, for running developed engineering pipelines to transform from RAW to ENRICHED.
+If you don't have an automated ingestion framework engine, the **Azure Databricks Engineering Workspace** will use just the Azure Key Vault, per Domain, for running developed engineering pipelines to transform from Raw to Enriched to Curated.
 
 The **Azure Databricks Data Engineering Workspace** should use Service Principals to access Data Lakes.
 
