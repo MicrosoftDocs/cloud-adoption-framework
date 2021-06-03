@@ -41,4 +41,4 @@ For compliance standards that have been automated in a similar Azure blueprint a
 
 The following article provides guidance to help you succeed in the cloud adoption scenario:
 
-- [Management in the Retail industry](./manage.md)
+- [Management in the retail industry](./manage.md)
