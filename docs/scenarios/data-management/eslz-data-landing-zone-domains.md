@@ -24,7 +24,7 @@ This section explains the infrastructure which is deployed for each Domain insid
 For each Domain in a Data Landing Zone, we will  create:
 
 * A Domain Azure Key Vault.
-* A Domain Azure Data Factory for running developed engineering pipelines to transform from RAW to ENRICHED.
+* A Domain Azure Data Factory for running developed engineering pipelines to transform from Raw to Enriched to Curated.
 * A Domain security user group which we use to give access to the Azure Databricks Analytics and Data Science workspace.
 * A Domain sensitive security group which we use to give access to the Azure Databricks Sensitive workspace.
 * A Service Principal which is used by the Domain for deploying ingest jobs to the Azure Databricks Engineering workspace.
@@ -47,7 +47,7 @@ Each Data Landing Zone will have an Azure Key Vault per Domain. This functionali
 
 ## Azure Data Factory
 
-An Azure Data Factory will be deployed to allow pipelines written by the Domain Ops team to take data from RAW to ENRICHED using developed pipelines. We prescribe using Mapping Data Flows for transformations and breaking out to use **Azure Databricks Engineering Workspace** for complex transformations.
+An Azure Data Factory will be deployed to allow pipelines written by the Domain Ops team to take data from Raw to Enriched to Curated using developed pipelines. We prescribe using Mapping Data Flows for transformations and breaking out to use **Azure Databricks Engineering Workspace** for complex transformations.
 
 ## Event Hubs (Optional)
 
