@@ -15,7 +15,7 @@ Microsoft and other partners have assembled this market context to inform the re
 
 ## Consumer experiences come first
 
-Customer service has always been a differentiator in retail. Customers also have expectations that didn’t exist a decade ago. They expect consistent information across different channels, such as mobile apps, websites, or interactions with in-store employees. Customers increasingly demand personalized engagement, like product recommendations or tailored discounts. Your customers also want different kinds of convenient ordering, delivery, and pickup options.
+Customer service has always been a differentiator in retail. Customers also have expectations that didn't exist a decade ago. They expect consistent information across different channels, such as mobile apps, websites, or interactions with in-store employees. Customers increasingly demand personalized engagement, like product recommendations or tailored discounts. Your customers also want different kinds of convenient ordering, delivery, and pickup options.
 
 ## Intelligent operations are a requirement
 
@@ -31,7 +31,7 @@ There are new technologies like cloud computing, advanced analytics, machine lea
 
 The COVID-19 pandemic has had an unprecedented impact on retailers on a global scale.
 
-With brick-and-mortar stores either closed or limited, retailers are seeing increased demand for deliveries and returns by mail. In the United States, grocery stores saw an over 200% spike in online ordering in mid-March 2020 compared to the same period in 2019. This trend will likely continue. In the United States, 68% of shoppers expect to order essential goods online even after COVID-19 has subsided.
+With brick-and-mortar stores either closed or limited, retailers see an increased demand for deliveries and returns by mail. In the United States, grocery stores saw an over 200% spike in online ordering in mid-March 2020 compared to the same period in 2019. This trend will likely continue. In the United States, 68% of shoppers expect to order essential goods online even after COVID-19 has subsided.
 
 For stores that are open, flexible pick-up and check out options aren't just convenient but crucial. There's an urgent demand for experiences that keep customers and employees safe, such as curbside pick-up, contactless payment, and self-checkout. In a recent worldwide survey, 74% of respondents said they'll continue using contactless payments after the pandemic has ended.
 
@@ -49,7 +49,7 @@ If there's one thing to be learned following COVID-19, it's that agility is key.
 
 - 79% percent of worldwide respondents say they're using contactless payments. Mastercard Consumer Polling Data. Online interviews of 17,000 consumers in 19 countries worldwide conducted April 10-12, 2020.
 
-- 75% of US companies' supply chain affected by China's production halt. For more information, see [Cascading Economic Impacts of the COVID-19 Outbreak in China](https://www.uscc.gov/sites/default/files/2020-04/Cascading_Economic_Impacts_of_the_Novel_Coronavirus_April_21_2020.pdf)
+- 75% of US companies' supply chain affected by China's production halt. For more information, see [Cascading Economic Impacts of the COVID-19 Outbreak in China](https://www.uscc.gov/sites/default/files/2020-04/Cascading_Economic_Impacts_of_the_Novel_Coronavirus_April_21_2020.pdf).
 
 - During COVID-19, grocery shopping, there was a spike of 210.1% of online ordering during March 12 to March 15, compared with the same period in 2019. For general merchandise retailers, they also experienced 50% more online orders on March 13. For more information, see [The Impact Of Covid-19 On U.S. Brands And Retailers](https://www.forbes.com/sites/jasongoldberg/2020/03/29/the-impact-of-covid-19-on-us-brands-and-retailers/#55642cb71452).
 
@@ -57,7 +57,7 @@ If there's one thing to be learned following COVID-19, it's that agility is key.
 
 To learn more about how Azure supports retail organizations, see [Azure for Retail](./retail-azure-advantages.md).
 
-These resources offer guidance for points throughout the cloud adoption journey to help you succeed in the cloud adoption scenario.
+These resources offer guidance throughout the cloud adoption journey to help you succeed in the cloud adoption scenario.
 
 - [Cloud adoption strategy for the Retail industry](./strategy.md)
 - [Cloud adoption plan for the Retail industry](./plan.md)
