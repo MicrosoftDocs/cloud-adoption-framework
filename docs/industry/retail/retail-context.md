@@ -59,10 +59,10 @@ To learn more about how Azure supports retail organizations, see [Azure for Reta
 
 These resources offer guidance in the cloud adoption scenario.
 
-- [Cloud adoption strategy for the Retail industry](./strategy.md)
-- [Cloud adoption plan for the Retail industry](./plan.md)
-- [Review your environment or Azure Landing Zone(s)](./ready.md)
-- [Migrate common Retail industry technologies](./migrate.md)
-- [Innovation in the Retail industry](./innovate.md)
-- [Governance in the Retail industry](./govern.md)
-- [Management in the Retail industry](./manage.md)
+- [Cloud adoption strategy for the retail industry](./strategy.md)
+- [Cloud adoption plan for the retail industry](./plan.md)
+- [Azure Landing Zones for the retail industry](./ready.md)
+- [Migrate common retail industry technologies](./migrate.md)
+- [Innovation in the retail industry](./innovate.md)
+- [Governance in the retail industry](./govern.md)
+- [Management in the retail industry](./manage.md)
