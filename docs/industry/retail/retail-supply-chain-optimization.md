@@ -13,7 +13,7 @@ ms.subservice: overview
 
 The speed of retail is accelerating while customer demands evolve. An astonishing 74% of consumers say they're more likely to purchase again from a company after receiving same-day delivery. And, in the store, if a product isn't on the shelf for the customer, they can order from another retailer on their mobile phone.
 
-Supply chain optimization is necessary for retailers are to meet and exceed your customer expectations. In optimization, you gain visibility into the operational bottlenecks that exist between procurement, logistics, and delivery.
+Supply chain optimization is necessary for retailers to meet and exceed your customer expectations. In optimization, you gain visibility into the operational bottlenecks that exist between procurement, logistics, and delivery.
 
 ## Business outcomes of supply chain optimization
 
@@ -89,10 +89,10 @@ Learn about another strategic driver for retail customers: [Building management 
 
 These resources offer guidance for the cloud adoption scenario.
 
-- [Cloud adoption strategy for the Retail industry](./strategy.md)
-- [Cloud adoption plan for the Retail industry](./plan.md)
-- [Review your environment or Azure Landing Zone(s)](./ready.md)
-- [Migrate common Retail industry technologies](./migrate.md)
-- [Innovation in the Retail industry](./innovate.md)
-- [Governance in the Retail industry](./govern.md)
-- [Management in the Retail industry](./manage.md)
+- [Cloud adoption strategy for the retail industry](./strategy.md)
+- [Cloud adoption plan for the retail industry](./plan.md)
+- [Azure Landing Zones for the retail industry](./ready.md)
+- [Migrate common retail industry technologies](./migrate.md)
+- [Innovation in the retail industry](./innovate.md)
+- [Governance in the retail industry](./govern.md)
+- [Management in the retail industry](./manage.md)
