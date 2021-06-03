@@ -11,7 +11,7 @@ ms.subservice: overview
 
 # Omnichannel optimization in the retail industry
 
-In the retail industry, omnichannel refers to integrated channels selling goods and services. An omnichannel provides a coherent, captivating shopping experience for customers, whatever the platform or device they use. Data is key to the ability of your business to drive such optimization across channels.
+In the retail industry, omnichannel refers to integrated channels that sell goods and services. An omnichannel provides a coherent, captivating shopping experience for customers, whatever the platform or device they use. Data is key to the ability of your business to drive such optimization across channels.
 
 Retail businesses collect different types of customer data. This data includes web-browsing patterns, purchase behaviors, demographics, and other session-based web information. Some data comes from internal business operations. Other data must be pulled from external sources such as partners, manufacturers, or public domains.
 
@@ -37,7 +37,7 @@ Retailers gather, prepare, reason over, and act on data from all available sourc
 
 ## Omnichannel optimization challenges
 
-Many retailers are only able to apply a fraction of the data available to them. This fact limits their ability to optimize across channels. The integration of external, heterogeneous data sources into a shared data processing engine has required significant effort and resources to set up.
+Many retailers are only able to apply a fraction of the data available to them. This fact limits your ability to optimize across channels. The integration of external, heterogeneous data sources into a shared data processing engine has required significant effort and resources to set up.
 
 This integration challenge causes problems across retail channels:
 
@@ -45,7 +45,7 @@ This integration challenge causes problems across retail channels:
 - Pricing, promotion, product availability, and fulfillment strategies remain inconsistent.
 - Customers have fragmented, irrelevant, and inconsistent shopping experiences.
 
-To overcome these challenges, retailers need a simple, scalable approach to integrating the analytics and machine learning capabilities.
+To overcome these challenges, you need a simple, scalable approach to integrating the analytics and machine learning capabilities.
 
 ### How Microsoft enables retailers for omnichannel optimization
 
@@ -63,7 +63,7 @@ Microsoft enables retailers to understand preferences, better serve customers, a
 
 - Accelerate insights
 
-  After data has been ingested and prepared, the Azure Synapse Analytics engine acts as a data warehouse. Data is modeled and delivered as actionable insights that drive business outcomes. Azure Synapse Analytics is up to 14x faster and costs 94% less than other cloud providers.  You can accelerate insights needed to support personalized offers and experiences while managing costs.
+  After data has been ingested and prepared, the Azure Synapse Analytics engine acts as a data warehouse. Data is modeled and delivered as actionable insights that drive business outcomes. Azure Synapse Analytics is up to fourteen times faster and costs 94% less than other cloud providers.  You can accelerate insights needed to support personalized offers and experiences while managing costs.
 
 - Empower the entire business
 
@@ -71,7 +71,7 @@ Microsoft enables retailers to understand preferences, better serve customers, a
 
 - Build smarter, more effective advertisements
 
-  Finally, using the AI capabilities Azure helps retailers build smarter, more effective advertisements that resonate with audiences across channels.
+  Using the AI capabilities Azure helps retailers build smarter, more effective advertisements that resonate with audiences across channels.
 
 ### Omnichannel success stories
 
@@ -80,9 +80,9 @@ Microsoft enables retailers to understand preferences, better serve customers, a
 
 ## Next steps
 
-Learn about another strategic driver for retail customers: [Supply chain optimization](./retail-supply-chain-optimization.md)
+Learn about another strategic driver for retail customers: [Supply chain optimization](./retail-supply-chain-optimization.md).
 
-These resources offer guidance found throughout the cloud adoption journey to help you succeed in the cloud adoption scenario.
+These resources offer guidance throughout the cloud adoption scenario.
 
 - [Cloud adoption strategy for the Retail industry](./strategy.md)
 - [Cloud adoption plan for the Retail industry](./plan.md)
