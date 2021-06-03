@@ -15,7 +15,7 @@ The cloud is essential to remain resilient and competitive in modern retail. Clo
 
 The maturity model in this article represents aspirational retail goals, and the right mix of cloud technologies has the potential to unlock these goals. But cloud adoption is a process, and each journey is unique.
 
-Navigating the journey requires that retailers understand their current level of cloud maturity. Consider the following four stages.
+Navigating the journey requires that retailers understand their current level of cloud maturity.
 
 :::image type="content" source="./media/maturity-model.png" alt-text="Diagram that shows the stages of digital retail maturity." lightbox="./media/maturity-model.png" border="false":::
 
