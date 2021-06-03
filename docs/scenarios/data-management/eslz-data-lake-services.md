@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Data Lake Services
 
-Three [Azure Data Lake Storage Gen V2 (ADLS)](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction) accounts should be provisioned per Data Landing Zone in the "data lake services" resource group. As data passes through the different stages of transformation, it should be saved on one of the Data Landing Zone's three data lakes and available for the **Data Products**. These data lake accounts should be deployed into a single resource group.
+Three [Azure Data Lake Storage Gen2 (ADLS)](/azure/storage/blobs/data-lake-storage-introduction) accounts should be provisioned per [Data Landing Zone](eslz-data-landing-zone.md) in the "data lake services" resource group. As data passes through the different stages of transformation, it should be saved in one of the Data Landing Zone's three data lakes and available for the [data products](eslz-data-landing-zone-data-products.md) in the lake which serves as the enriched and curated data layer. Data products would consume from the enriched and curated data layer only. These data lake accounts should be deployed into a single resource group.
 
 ## Overview
 
@@ -27,14 +27,14 @@ There should be a single container per data lake layer. The exception to this re
 
 The folders within the containers lakes should be aligned to **Domains**, **Sub-Domains**, and **Data Products** to enable data exploration via an enterprise team's structure.
 
-The services should be enabled with the "Hierarchical Name Space" feature to allow efficient file management. [The hierarchical name space feature](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-namespace) allows the collection of objects/files within an account to be organized into a hierarchy of directories and nested subdirectories in the same way that the file system on your computer is organized.
+The services should be enabled with the "Hierarchical Name Space" feature to allow efficient file management. [The hierarchical name space feature](/azure/storage/blobs/data-lake-storage-namespace) allows the collection of objects/files within an account to be organized into a hierarchy of directories and nested subdirectories in the same way that the file system on your computer is organized.
 
 >[!IMPORTANT]
 >The Azure Blob Storage Account must have "hierarchical name space" enabled to allow the efficient file management.
 
 Azure Data Lake Storage provides:
 
-* Support for fine-grained [Access Control Lists](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control) (ACLs), protecting data at the file and folder level, which helps enterprises to implement tight security measures around the datasets being stored in this service.
+* Support for fine-grained [Access Control Lists](/azure/storage/blobs/data-lake-storage-access-control) (ACLs), protecting data at the file and folder level, which helps enterprises to implement tight security measures around the datasets being stored in this service.
 * The data is encrypted at rest and integrates with Azure Active Directory integration for the authentication and authorization. It helps to store the data securely and to implement access controls for the AD users and security groups.
 
 Whilst the data lake sits across three data lake accounts, multiple containers, and folders, it represents one logical data lake for the Data Landing Zone. Provisioning three data lake accounts allows you to set different redundancy, retention, and access policies for each lake account. For example you might want your RAW data to be geo-redundant whereas Workspace is used for data exploration and requires locally redundant disaster recovery.
@@ -147,7 +147,7 @@ In this case, the data platform should allocate a workspace for these consumers 
 
 These datasets are usually of unknown quality and accuracy. They are still categorized as a **data product** but are temporary and only relevant to the user group using the data.
 
-Sometimes these datasets mature, and the enterprise should consider how they promote these **Data Products** from the Workspace to the Curated Data Layer.
+Sometimes these datasets mature, and the enterprise should consider how they promote these **Data Products** from the Workspace to the Curated Data Layer. In order to keep Data Product teams responsible for new Data Products, it is recommended to provide these teams a dedicated folder on the Curated Data Layer in which they can then then store the new results and share them with other teams across the organization.
 
 ## Lifecycle Management
 
@@ -181,34 +181,13 @@ When landing data into a data lake, it is important to pre-plan the structure of
 |Folder Structure and Hierarchy| Folder structure to mirror Domain followed by source. | Folder structure to mirror Domain followed by sub-Domain | Folder structure mirrors data product structure |Folder structures mirror teams that the workspace is used by.|
 
 >[!WARNING]
->Because some products do not support mounting the root of a data lake container, each data lake container in Raw, Curated and Enriched, and Workspace should have a single folder before branching off to multiple folders. The folder permissions should be carefully set up as during the creation of a new folder, from the root, the default ACL on the parent directory determines a child directory's default ACL and access ACL; a child file's access ACL (files do not have a default ACL). See [Access control lists (ACLs) in Azure Data Lake Storage Gen2](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control).
-
-## Industry Specific Data Models and Common Data Model with Data Lake
-
-An industry data model enables organizations to more holistically capture and define business concepts, refine and integrate processes, and build interoperability in their ecosystem. [Microsoft acquired ADRM Software, leader in large-scale, industry-specific data models](https://blogs.microsoft.com/blog/2020/06/18/microsoft-acquires-adrm-software-leader-in-large-scale-industry-specific-data-models/) to support this requirement on Azure.
-
-With the Common Data Model (CDM), organizations can use a data format that provides semantic consistency across applications and deployments. With the evolution of the Common Data Model metadata system, the model brings the same structural consistency and semantic meaning to the data stored in Microsoft Azure Data Lake Storage Gen2 with hierarchical namespaces and folders that contain schematized data in standard Common Data Model format. The standardized metadata and self-describing data in an Azure data lake facilitates metadata discovery and interoperability between data producers and data consumers such as Power BI, Azure Data Factory, Azure Databricks, and Azure Machine Learning. When combined, these elements provide compelling centralized data, structured data, fine-grained access control, and semantic consistency for apps and initiatives across the enterprise. See [Use the Common Data Model to optimize Azure Data Lake Storage Gen2](https://docs.microsoft.com/common-data-model/data-lake).
-
->[!NOTE]
->Industry-specific data models and Common Data Models would be predominantly created in the curated data lake layer by product teams for downstream consumption. The folder structure should still sit under a data product folder.
-
-## Data Lake Zones Security
-
-![Data Lake Zones Security](./images/adlssecurityzones.png)
-
-The recommended security pattern for each of the of the Data Lake Zones is:
-
-* RAW should only allow access to data via SPNs
-* Enriched should only allow access to data via SPNs
-* Curated should allow access with both SPNs and UPNs.
+>Because some products do not support mounting the root of a data lake container, each data lake container in Raw, Curated and Enriched, and Workspace should have a single folder before branching off to multiple folders. The folder permissions should be carefully set up as during the creation of a new folder, from the root, the default ACL on the parent directory determines a child directory's default ACL and access ACL; a child file's access ACL (files do not have a default ACL). See [Access control lists (ACLs) in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-access-control).
 
 ## Data Lakes Connectivity
 
 Each of the data lakes should use Private Endpoints injected into the VNet of the Data Landing Zone. To allow access across landing zones, we propose connecting Data Landing Zones through VNet peering. This provides the optimal solution from both a cost perspective and an access control perspective.
 
 See [Private Endpoints](./eslz-network-topology-and-connectivity.md#private-endpoints) and [Data Management Landing Zone to Data Landing Zone](./eslz-network-topology-and-connectivity.md#data-management-landing-zone-to-data-landing-zone)
-
-
 
 >[!IMPORTANT]
 >Data from a Data Landing Zone can be accessed from another Data Landing Zone over the VNet Peering between the Data Landing Zones using the private endpoints associated with each data lake account. We recommend turning off all public access to the lakes and using private endpoints. Network connectivity across Data Landing Zones (*e.g.* private links) are controlled by the Platform Ops team.
@@ -219,17 +198,17 @@ Soft delete for containers (preview) protects your data from being accidentally 
 
 For end-to-end protection for your blob data, Microsoft recommends enabling the following data protection features:
 
-* Container soft delete, to restore a container that has been deleted. To learn how to enable container soft delete, see [Enable and manage soft delete for containers](https://docs.microsoft.com/azure/storage/blobs/soft-delete-container-enable).
-* Blob soft delete, to restore a blob or version that has been deleted. To learn how to enable blob soft delete, see [Enable and manage soft delete for blobs](https://docs.microsoft.com/azure/storage/blobs/soft-delete-blob-enable).
+* Container soft delete, to restore a container that has been deleted. To learn how to enable container soft delete, see [Enable and manage soft delete for containers](/azure/storage/blobs/soft-delete-container-enable).
+* Blob soft delete, to restore a blob or version that has been deleted. To learn how to enable blob soft delete, see [Enable and manage soft delete for blobs](/azure/storage/blobs/soft-delete-blob-enable).
 
 > [!WARNING]
-> Deleting a storage account cannot be undone. Container soft delete does not protect against the deletion of a storage account but only against the deletion of containers in that account. To protect a storage account from deletion, configure a lock on the storage account resource. For more information about locking Azure Resource Manager resources, see [Lock resources to prevent unexpected changes](https://docs.microsoft.com/azure/azure-resource-manager/management/lock-resources).
+> Deleting a storage account cannot be undone. Container soft delete does not protect against the deletion of a storage account but only against the deletion of containers in that account. To protect a storage account from deletion, configure a lock on the storage account resource. For more information about locking Azure Resource Manager resources, see [Lock resources to prevent unexpected changes](/azure/azure-resource-manager/management/lock-resources).
 
 ## Store business-critical blob data with immutable storage (preview)
 
 Immutable storage for Azure Blob storage enables users to store business-critical data objects in a WORM (Write Once, Read Many) state. This state makes the data non-erasable and non-modifiable for a user-specified interval. For the duration of the retention interval, blobs can be created and read but cannot be modified or deleted. Immutable storage is available for general-purpose v1, general-purpose v2, BlobStorage, and BlockBlobStorage accounts in all Azure regions.
 
-For information about how to set and clear legal holds or create a time-based retention policy using the Azure portal, PowerShell, or Azure CLI, see [Set and manage immutability policies for Blob storage](https://docs.microsoft.com/azure/storage/blobs/storage-blob-immutability-policies-manage).
+For information about how to set and clear legal holds or create a time-based retention policy using the Azure portal, PowerShell, or Azure CLI, see [Set and manage immutability policies for Blob storage](/azure/storage/blobs/storage-blob-immutability-policies-manage).
 
 Immutable storage helps healthcare organization, financial institutions and related industries&mdash;particularly broker-dealer organizations&mdash;to store data securely. Immutable storage can also be leveraged in any scenario to protect critical data against modification or deletion.
 
@@ -245,7 +224,7 @@ Data Residency rules or the requirement to have data close to a user base will s
 
 In a Data Landing Zone all the monitoring should be sent to the Data Management Landing Zone for analysis.
 
-Azure Storage collects the same kinds of monitoring data as other Azure resources, which are described in [Monitoring Azure resources with Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/insights/monitor-azure-resource). For more information on the logs and metrics created by Azure Storage, see [Monitoring Azure Blob storage](https://docs.microsoft.com/azure/storage/blobs/monitor-blob-storage).
+Azure Storage collects the same kinds of monitoring data as other Azure resources, which are described in [Monitoring Azure resources with Azure Monitor](/azure/azure-monitor/insights/monitor-azure-resource). For more information on the logs and metrics created by Azure Storage, see [Monitoring Azure Blob storage](/azure/storage/blobs/monitor-blob-storage).
 
 Log entries are created only if there are requests made against the service endpoint.
 
@@ -270,4 +249,4 @@ All other failed anonymous requests are not logged.
 In a Data Landing Zone, all the monitoring is sent to the Data Management Landing Zone for analysis.
 
 >[!IMPORTANT]
->Set default monitoring policy to audit storage and send logs to the Enterprise Scale Management Subscription. 
+>Set default monitoring policy to audit storage and send logs to the Enterprise Scale Management Subscription.

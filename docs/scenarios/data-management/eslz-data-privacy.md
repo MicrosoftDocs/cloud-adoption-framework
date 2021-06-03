@@ -1,8 +1,8 @@
 ---
 title: "Enterprise Scale Analytics and AI Data Privacy"
 description: Enterprise Scale Analytics and AI Data Privacy
-author: xigyenge
-ms.author: xigyenge
+author: abdale
+ms.author: hamoodaleem
 ms.date: 03/03/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -22,7 +22,7 @@ Before Domains ingest data into the solution pattern, they must be able to class
 
 For every domain which is on-boarded we create two data lake folders for each data lake layer (Non-Sensitive and Sensitive) and enable Azure AD Pass-through with ACLs. If a domain onboards a data asset which is non-sensitive then Users Principal Names(UPNs) and Service Principal objects can be added to two Azure AD Groups (one for read/write and the other for read-only). There two Azure AD groups are created as part of the onboarding process and assigned to the data asset folder the domains non-sensitive containers for RAW, Enriched and Curated.
 
-This pattern enables any compute product which supports Azure AD Passthrough to connect to the data lake, authenticate with the user logged in, and, if the user is part of the data asset's Azure AD Group, access the data via Azure AD Passthrough. This would allow those inside the group to read all of the data asset without any policy filtering.
+This pattern enables any compute product which supports Azure AD Passthrough to connect to the data lake, authenticate with the user logged in, and, if the user is part of the data asset's Azure AD Group, access the data via Azure AD Passthrough. This would allow those inside the group to read all of the data asset without any policy filtering. Access can then be audited in detail in the appropriate logs as well as the Microsoft Graph.
 
 >[!NOTE]
 >Examples of compute products are Azure Databricks, Synapse Analytics Spark, and Synapse SQL On-Demand pools enabled with Azure AD passthrough.
@@ -52,13 +52,13 @@ In the scenario use case, the domain would need to create four Azure AD Groups f
 | DA-EUROPE-HRMANAGER-R | View Europe HR Personnel data asset WITH Salary information |
 | DA-EUROPE-HRGENERAL-R | View Europe HR Personnel data asset WITHOUT Salary information |
 
-The first level of restrictions would support dynamic data masking. [Dynamic data masking](https://docs.microsoft.com/azure/azure-sql/database/dynamic-data-masking-overview) limits sensitive data exposure by masking it to non-privileged users. One of the advantages of using Dynamic Data Masking is this could be implemented into the onboarding process of a dataset using the [Data Masking Policies - Create Or Update](https://docs.microsoft.com/azure/azure-sql/database/dynamic-data-masking-overview) REST API.
+The first level of restrictions would support dynamic data masking. [Dynamic data masking](/azure/azure-sql/database/dynamic-data-masking-overview) limits sensitive data exposure by masking it to non-privileged users. One of the advantages of using Dynamic Data Masking is this could be implemented into the onboarding process of a dataset using the [Data Masking Policies - Create Or Update](/azure/azure-sql/database/dynamic-data-masking-overview) REST API.
 
-The second level is to add [Column-Level Security](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/column-level-security) to restrict non-HR managers from being able to see salaries and [Row-Level Security](https://docs.microsoft.com/sql/relational-databases/security/row-level-security) to restrict which rows European and North American team members could see.
+The second level is to add [Column-Level Security](/azure/synapse-analytics/sql-data-warehouse/column-level-security) to restrict non-HR managers from being able to see salaries and [Row-Level Security](/sql/relational-databases/security/row-level-security) to restrict which rows European and North American team members could see.
 
-An additional security layer, on top of Transparent Data Encryption, would be to [Encrypt the Column of Data](https://docs.microsoft.com/sql/relational-databases/security/encryption/encrypt-a-column-of-data) and decrypt upon read.
+An additional security layer, on top of Transparent Data Encryption, would be to [Encrypt the Column of Data](/sql/relational-databases/security/encryption/encrypt-a-column-of-data) and decrypt upon read.
 
-The tables could be made available to Azure Databricks via the [Apache Spark connector: SQL Server & Azure SQL](https://docs.microsoft.com//sql/connect/spark/connector).
+The tables could be made available to Azure Databricks via the [Apache Spark connector: SQL Server & Azure SQL](/sql/connect/spark/connector).
 
 #### Option Two - Azure Databricks
 
@@ -70,7 +70,7 @@ As the the blog post by Databricks on [Enforcing Column-level Encryption and Avo
 
 *Once we have the sensitive data written and protected, we need a way for privileged users to read the sensitive data. The first thing that needs to be done is to create a permanent UDF to add to the Hive instance running on Databricks. In order for a UDF to be permanent, it must be written in Scala. Fortunately, Fernet also has a Scala implementation that we can leverage for our decrypted reads. This UDF also accesses the same secret we used in the encrypted write to perform the decryption, and, in this case, it is added to the Spark configuration of the cluster. This requires us to add cluster access controls for privileged and non-privileged users to control their access to the key. Once the UDF is created, we can use it within our view definitions for privileged users to see the decrypted data.*
 
-Using [Dynamic view functions](https://docs.microsoft.com/azure/databricks/security/access-control/table-acls/object-privileges#dynamic-view-functions), we are able to create only one view and easily return either the encrypted or decrypted values based on the Databricks group of which they are a member.
+Using [Dynamic view functions](/azure/databricks/security/access-control/table-acls/object-privileges#dynamic-view-functions), we are able to create only one view and easily return either the encrypted or decrypted values based on the Databricks group of which they are a member.
 
 In our example above, we would create two Dynamic view functions, one for North America and another for Europe, and implementing the encryption techniques in this [notebook](https://databricks.com/notebooks/enforcing-column-level-encryption.html).
 
@@ -106,7 +106,7 @@ FROM hr_enriched
 where region='EU'
 ```
 
-For this to work you would enable Azure Databricks [Table Access Control](https://docs.microsoft.com//azure/databricks/security/access-control/table-acls/object-privileges) in the Azure Databricks Workspace and apply the following permissions:
+For this to work you would enable Azure Databricks [Table Access Control](/azure/databricks/security/access-control/table-acls/object-privileges) in the Azure Databricks Workspace and apply the following permissions:
 
 * Grant DA-AMERICA-HRMANAGER-R and DA-AMERICA-HRGENERAL-R Azure AD Groups access to the `vhr_us` view.
 * Grant DA-EUROPE-HRMANAGER-R and DA-EUROPE-HRGENERAL-R Azure AD Groups access to the `vhr_eu` view.
@@ -150,5 +150,4 @@ As Domains and Data Products create read data sources, they would be registered 
 
 ## Highly Confidential Data
 
-In addition to the above options being implemented for Highly Confidential Data, also known as restricted, we recommend that Highly Confidential Data is hosted in a dedicated Data Landing Zone. This allows specific requirements such as just in time access, customer managed keys and putting inbound/outbound restrictions to the landing zone. The Data Management Landing Zone should be able to connect to catalogue the data, in the Data Landing Zone, but should restrict who can search for this data in the catalogue.
-
+In addition to the above options being implemented for Highly Confidential Data, also known as restricted, we recommend that Highly Confidential Data is hosted in a dedicated Data Landing Zone. This allows specific requirements such as just in time access, customer managed keys for encryption and putting inbound/outbound restrictions to the landing zone. The Data Management Landing Zone should be able to connect to catalogue the data, in the Data Landing Zone, but should restrict who can search for this data in the catalogue.

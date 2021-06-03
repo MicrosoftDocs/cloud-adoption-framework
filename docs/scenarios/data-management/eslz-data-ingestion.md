@@ -20,17 +20,17 @@ In the Enterprise Scale Analytics and AI solution pattern, Domain and Data Produ
 
 Azure provides several services for ingesting and egesting data to various native and third-party platforms. Depending on volume, velocity, variety, and direction, different services can be leveraged. Some of these services are listed below.
 
-- [Azure Data Factory](https://docs.microsoft.com/azure/data-factory/introduction) is a service built for all data integration needs and skill levels. Easily construct ETL and ELT processes code-free within the intuitive visual environment or write your own code. Visually integrate data sources using more than 90+ natively built and maintenance-free connectors at no added cost. Using integration runtimes, engineers can extend pipelines to third-party environments, including on-premises data sources and other clouds.\
+- [Azure Data Factory](/azure/data-factory/introduction) is a service built for all data integration needs and skill levels. Easily construct ETL and ELT processes code-free within the intuitive visual environment or write your own code. Visually integrate data sources using more than 90+ natively built and maintenance-free connectors at no added cost. Using private endpoints and private link services, engineers can securely connect to Azure PaaS resources without using any public endpoint of the PaaS resource. Using integration runtimes, engineers can extend pipelines to third-party environments, including on-premises data sources and other clouds.\
 \
 Some of these connectors support being used as a source (read) or as a sink (write). Azure native services, Oracle, SAP, and some others can be used as source or sink. However, not all connectors support this. In these cases you can use the generic connectors such as ODBC, filesystem, and SFTP connectors.
 
-- [Azure Databricks](https://docs.microsoft.com/azure/databricks/) is a fast, easy, and collaborative Apache Spark-based analytics service. For a big data pipeline, the data (raw or structured) is ingested into Azure through Azure Data Factory in batches, or streamed near-real-time using Kafka, Event Hub, or IoT Hub. This data lands in a data lake for long-term, persisted storage in Azure Data Lake Storage. Azure Databricks can read data from multiple data sources as part of the workflow.
+- [Azure Databricks](/azure/databricks/) is a fast, easy, and collaborative Apache Spark-based analytics service. For a big data pipeline, the data (raw or structured) is ingested into Azure through Azure Data Factory in batches, or streamed near-real-time using Kafka, Event Hub, or IoT Hub. This data lands in a data lake for long-term, persisted storage in Azure Data Lake Storage. Azure Databricks can read data from multiple data sources as part of the workflow.
 
-- Power Platform provides [connectors to hundreds of services](https://docs.microsoft.com/connectors/connector-reference/) that can be event, schedule, or push driven. Power Automate can act on events and trigger workflows, optimized for single records or small data volumes.\
+- Power Platform provides [connectors to hundreds of services](/connectors/connector-reference/) that can be event, schedule, or push driven. Power Automate can act on events and trigger workflows, optimized for single records or small data volumes.\
 \
 Proprietary native and third-party tooling provides niche capabilities to integrate with specialist systems and/or near-real-time replication.
 
-- [Azure Data Share](https://docs.microsoft.com/azure/data-share) enables organizations to securely share data with multiple external customers and partners. Once a data share account is created and datasets added, customers and partners can be invited to the data share. Data providers are always in control of the data that they have shared. Azure Data Share makes it simple to manage and monitor what data was shared, when, and by whom.
+- [Azure Data Share](/azure/data-share) enables organizations to securely share data with multiple external customers and partners. Once a data share account is created and datasets added, customers and partners can be invited to the data share. Data providers are always in control of the data that they have shared. Azure Data Share makes it simple to manage and monitor what data was shared, when, and by whom.
 
 >[!IMPORTANT]
 >Every Data Landing Zone has an [Ingestion and Processing Resource Group](eslz-data-landing-zone.md#ingestion-and-processing-resource-group) which exists for the purpose of Enterprises who have an ingestion framework engine. If you do not have this framework engine, the only resource we would recommend deploying is the *Azure Databricks Engineering Workspace* which would be used by Domains to run complex ingestion. See [Automated Ingestion Framework](eslz-automated-ingestion-pattern.md#automated-ingestion-framework) for potential automation patterns.
@@ -39,12 +39,14 @@ Proprietary native and third-party tooling provides niche capabilities to integr
 
 If you have an ingestion framework engine, you should deploy a single Azure Data Factory per Data Landing Zone in the production Ingest and Processing Resource Group. The Azure Data Factory workspace should be locked off to users, and only managed identity and service principals will have access to deploy. Data Landing Zone Ops should have Read access to allow debugging of pipelines.
 
-Each Domain will have their own Azure Data Factory which will be used by Domain Ops to move data from source to raw to enriched. By having an Azure Data Factory per domain we can enable a complete Continuos Integration(CI) and Continuos Development(CD) experience by only allowing pipelines to be deployed from Azure DevOps or GitHub.
+Each Domain will have their own Azure Data Factory which will be used by Domain Ops to move data from source to Raw to Enriched to Curated. By having an Azure Data Factory per domain we can enable a complete Continuos Integration(CI) and Continuos Development(CD) experience by only allowing pipelines to be deployed from Azure DevOps or GitHub.
 
-All Azure Data Factory workspaces will predominately use the [Self-Hosted Integration Runtime](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime) for their Data Landing Zone within the Data Management Landing Zone. However, it will be possible to create additional integration runtimes to ingest from on-premises, third-party clouds, and third-party SaaS datasources.
+All Azure Data Factory workspaces will predominately use the Managed VNET feature in ADF or [Self-Hosted Integration Runtime](/azure/data-factory/concepts-integration-runtime) for their Data Landing Zone within the Data Management Landing Zone. Engineers are encouraged to use the managed VNET feature to securely connect to Azure PaaS resource.
+
+However, it will be possible to create additional integration runtimes to ingest from on-premises, third-party clouds, and third-party SaaS data sources.
 
 >[!TIP]
->By deploying a [Self-Hosted Integration Runtime](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime) in the Data Management Data Landing Zone, you can approve the IP range required to connect to on-premises or third-party cloud sources.
+>By deploying a [Self-Hosted Integration Runtime](/azure/data-factory/concepts-integration-runtime) in the Data Management Data Landing Zone, you can approve the IP range required to connect to on-premises or third-party cloud sources.
 
 ## Azure Databricks Ingest Considerations
 
@@ -82,7 +84,7 @@ The last Event Hub or Kafka Landing Zone, inside the use case specific Landing Z
 
 ## Enforcing Data Quality
 
-As data is ingested, data quality checks should be implemented as close to the sources and before downstream subscribers make use of the datasets. In the case of batch ingestion from the the data lake, these checks should be done when moving from the Raw to Enriched and to Curated.
+As data is ingested, data quality checks should be implemented as close to the sources and before downstream subscribers make use of the datasets. In the case of batch ingestion from the the data lake, these checks should be done when moving from the Raw to Enriched to Curated.
 
 ![Implementing Data Quality during ingestion](./images/adlsdq.png)
 
@@ -98,7 +100,7 @@ Figure 2 illustrates the process of data moving through integrity and data quali
 
 ## Ingestion Monitoring
 
-The out-of-the-box [Azure Data Factory pipeline monitoring](https://docs.microsoft.com/azure/data-factory/monitor-visually) will be used for monitoring and troubleshooting the exceptions from the Azure Data Factory pipelines. It reduces the effort on developing a custom monitoring and reporting solution.
+The out-of-the-box [Azure Data Factory pipeline monitoring](/azure/data-factory/monitor-visually) will be used for monitoring and troubleshooting the exceptions from the Azure Data Factory pipelines. It reduces the effort on developing a custom monitoring and reporting solution.
 
 The in-built monitoring is one of the primary reasons to use Azure Data Factory as the main orchestration tool. The creation can be automated using Azure Policy.
 

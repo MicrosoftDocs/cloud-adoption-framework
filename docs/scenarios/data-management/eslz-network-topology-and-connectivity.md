@@ -18,20 +18,20 @@ This section outlines the networking patterns to assist with:
 - facilitating remote workers
 - interfacing with on-premises and Software-as-a-Service solutions
 
-It builds upon the Cloud Adoption Framework for [Network topology and connectivity](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/network-topology-and-connectivity).
+It builds upon the Cloud Adoption Framework for [Network topology and connectivity](/azure/cloud-adoption-framework/ready/enterprise-scale/network-topology-and-connectivity).
 
 ## Private Endpoints
 
-The Enterprise Scale Analytics and AI Framework uses [Private Link](https://docs.microsoft.com/azure/private-link/private-link-service-overview), where available, for shared PaaS services. Private Link is generally available for several services and is in public preview for numerous additional services. Private Link addresses data exfiltration concerns associated with service endpoints.
+The Enterprise Scale Analytics and AI Framework uses [Private Link](/azure/private-link/private-link-service-overview), where available, for shared PaaS services. Private Link is generally available for several services and is in public preview for numerous additional services. Private Link addresses data exfiltration concerns associated with service endpoints.
 
-For the current list of supported products, see [Private Link Resources](https://docs.microsoft.com/azure/private-link/private-endpoint-overview#private-link-resource).
+For the current list of supported products, see [Private Link Resources](/azure/private-link/private-endpoint-overview#private-link-resource).
 
 >[!CAUTION]
 >By design, Enterprise Scale Analytics and AI Networking uses Private Endpoints where available for connectivity to PaaS services.
 
 ### Azure DNS Resolver Implementation for Private Endpoints
 
-DNS resolution for private endpoints should be handled through central [Azure Private DNS](https://docs.microsoft.com/azure/dns/private-dns-overview) zones. Required DNS records for private endpoints can be automatically created using Azure Policy to allow access through FQDNs (Fully Qualified Domain Name). The lifecycle of the DNS records will follow the lifecycle of the private endpoints and will be automatically removed when the private endpoint is deleted.
+DNS resolution for private endpoints should be handled through central [Azure Private DNS](/azure/dns/private-dns-overview) zones. Required DNS records for private endpoints can be automatically created using Azure Policy to allow access through FQDNs (Fully Qualified Domain Name). The lifecycle of the DNS records will follow the lifecycle of the private endpoints and will be automatically removed when the private endpoint is deleted.
 
 The first challenge when trying to resolve Private Endpoints from on-premises networks, when leveraging Azure Private DNS zones, is how to retrieve the Private Endpoint IP via 168.63.129.16 since this IP address is not reachable from on-premises networks.
 
@@ -87,7 +87,7 @@ Data Landing Zones are connected to the other Data Landing Zones via VNet Peerin
 
 ## Data Management Landing Zone to Third-Party Clouds
 
-To enable connectivity between a Data Management Landing Zone and a third-party cloud, a [Site-to-Site VPN](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-tutorial-vpnconnection-powershell) gateway connection is used. It can connect your on-premises or third-party cloud Landing Zone to an Azure Virtual Network over an IPsec or Internet Key Exchange (IKEv1 or IKEv2) VPN tunnel.
+To enable connectivity between a Data Management Landing Zone and a third-party cloud, a [Site-to-Site VPN](/azure/vpn-gateway/vpn-gateway-tutorial-vpnconnection-powershell) gateway connection is used. It can connect your on-premises or third-party cloud Landing Zone to an Azure Virtual Network over an IPsec or Internet Key Exchange (IKEv1 or IKEv2) VPN tunnel.
 
 Site-to-Site VPN can provide better continuity for your workloads in a hybrid cloud setup with Azure.
 

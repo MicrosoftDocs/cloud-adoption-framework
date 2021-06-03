@@ -25,7 +25,7 @@ The figure above illustrates three options for getting data into Azure.
 
 ## Azure Data Factory
 
-[Azure Data Factory](https://docs.microsoft.com/azure/data-factory/connector-overview) provides several connectors to SAP systems and various databases (including SAP HANA). These can be used to build simple, code-free data transformations in minutes. Delta replication is not available out-of-the-box but can be achieved with some programming. Data Factory is only supported for batch processing or micro-batches at a minimum of 15-minute intervals.
+[Azure Data Factory](/azure/data-factory/connector-overview) provides several connectors to SAP systems and various databases (including SAP HANA). These can be used to build simple, code-free data transformations in minutes. Delta replication is not available out-of-the-box but can be achieved with some programming. Data Factory is only supported for batch processing or micro-batches at a minimum of 15-minute intervals.
 
 The Azure Data Factory option supports single sign-on and secure network communication authentication into SAP. It also provides the ability to easily build resilient data flows via code-free data transformations and can be easily integrated with Azure Databricks for flexible data preparation and enrichment coding. It is limited to batch processing and requires coding logic to support delta extracts.
 

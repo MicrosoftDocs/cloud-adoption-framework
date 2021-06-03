@@ -1,8 +1,8 @@
 ---
 title: "Enterprise-Scale platform automation and devops Overview"
 description: Enterprise-Scale platform automation and devops Overview
-author: xigyenge
-ms.author: xigyenge
+author: abdale
+ms.author: hamoodaleem
 ms.date: 03/05/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
