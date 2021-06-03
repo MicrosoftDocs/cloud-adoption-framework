@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Security operations
 
-This article provides strategic guidance for leaders establishing or modernizing a security operation function. For architecture and technology focused best practices, see [Best practices for security operations](https://aka.ms/secopstech).
+This article provides strategic guidance for leaders establishing or modernizing a security operation function. For architecture and technology focused best practices, see [Best practices for security operations](/security/compass/security-operations).
 
 Security operations reduce risk by limiting damage from attackers who gain access to your organization's resources. Security operations focus on reducing the time attackers have access to resources by detecting, responding to, and helping recover from active attacks.
 
@@ -108,7 +108,7 @@ It's important to invest in updated SecOps tools and training to ensure security
 
 For more information on security operations roles and responsibilities, see [Security operations](../organize/cloud-security-operations-center.md).
 
-For more architecture and technology focused best practices, see [Microsoft security best practices for security operations](https://aka.ms/secopstech) and the [videos and slides](/security/compass/security-operations-videos-and-decks).
+For more architecture and technology focused best practices, see [Microsoft security best practices for security operations](/security/compass/security-operations) and the [videos and slides](/security/compass/security-operations-videos-and-decks).
 
 ## Next steps
 

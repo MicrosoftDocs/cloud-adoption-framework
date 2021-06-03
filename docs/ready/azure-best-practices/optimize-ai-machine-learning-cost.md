@@ -223,7 +223,7 @@ When you [pick a region for your compute](https://azure.microsoft.com/global-inf
 
 ## Learn more
 
-[Track costs across business units, environments, or projects by using the Cloud Adoption Framework](/azure/cloud-adoption-framework/ready/azure-best-practices/track-costs)
+[Track costs across business units, environments, or projects by using the Cloud Adoption Framework](./track-costs.md)
 
 ## Next steps
 

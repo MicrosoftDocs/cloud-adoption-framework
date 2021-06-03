@@ -122,7 +122,7 @@ As part of your networking design process, see these articles:
 
 - [Plan virtual networks](/azure/virtual-network/virtual-network-vnet-plan-design-arm). Learn how to plan for virtual networks based on your isolation, connectivity, and location requirements.
 - [Azure best practices for network security](/azure/security/fundamentals/network-best-practices). Learn about Azure best practices that can help you enhance your network security.
-- [Best practices for networking when you migrate workloads to Azure](/azure/cloud-adoption-framework/migrate/azure-best-practices/migrate-best-practices-networking). Get more guidance about how to implement Azure networking to support workloads.
+- [Best practices for networking when you migrate workloads to Azure](../../migrate/azure-best-practices/migrate-best-practices-networking.md). Get more guidance about how to implement Azure networking to support workloads.
 
 ## Next steps
 
