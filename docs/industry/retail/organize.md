@@ -205,10 +205,10 @@ To prepare for CCoE and enterprise operations in Azure, evaluate how the current
 
 This basic understanding of organizational structures and critical roles in the retail organization provides information to prepare your cloud adoption strategy.
 
-- [Cloud adoption strategy for the Retail industry](./strategy.md)
-- [Cloud adoption plan for the Retail industry](./plan.md)
-- [Review your environment or Azure Landing Zone(s)](./ready.md)
-- [Migrate common Retail industry technologies](./migrate.md)
-- [Innovation in the Retail industry](./innovate.md)
-- [Governance in the Retail industry](./govern.md)
-- [Management in the Retail industry](./manage.md)
+- [Cloud adoption strategy for the retail industry](./strategy.md)
+- [Cloud adoption plan for the retail industry](./plan.md)
+- [Azure Landing Zones for the retail industry](./ready.md)
+- [Migrate common retail industry technologies](./migrate.md)
+- [Innovation in the retail industry](./innovate.md)
+- [Governance in the retail industry](./govern.md)
+- [Management in the retail industry](./manage.md)
