@@ -127,6 +127,8 @@ items:
             href: ./eslz-data-landing-zone-domains.md
           - name: Data Products
             href: ./eslz-data-landing-zone-data-products.md
+         - name: Frequently Asked Questions
+         href: ./eslz-faqs.md
        
 
   - name: Best practices
