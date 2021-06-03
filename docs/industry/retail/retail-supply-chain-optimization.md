@@ -87,7 +87,7 @@ Learn how [Anheuser-Busch InBev](https://customers.microsoft.com/en-us/story/ab-
 
 Learn about another strategic driver for retail customers: [Building management optimization](./retail-building-management-optimization.md).
 
-These resources offer guidance throughout the cloud adoption journey in the cloud adoption scenario.
+These resources offer guidance for the cloud adoption scenario.
 
 - [Cloud adoption strategy for the Retail industry](./strategy.md)
 - [Cloud adoption plan for the Retail industry](./plan.md)
