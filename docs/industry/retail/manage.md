@@ -71,10 +71,10 @@ For all remaining workloads, focus first on platform automation. Use Azure servi
 
 The Manage methodology and the retail industry guidance in this article can establish efficient operations in your organizations. They can help move you closer to your target state of retail cloud maturity. To continue on your cloud adoption journey, revisit prior phases and evaluate improvements for your use of the cloud.
 
-- [Cloud adoption strategy for the Retail industry](./strategy.md)
-- [Cloud adoption plan for the Retail industry](./plan.md)
-- [Review your environment or Azure Landing Zone(s)](./ready.md)
-- [Migrate common Retail industry technologies](./migrate.md)
-- [Innovation in the Retail industry](./innovate.md)
-- [Governance in the Retail industry](./govern.md)
-- [Management in the Retail industry](./manage.md)
+- [Cloud adoption strategy for the retail industry](./strategy.md)
+- [Cloud adoption plan for the retail industry](./plan.md)
+- [Azure Landing Zones for the retail industry](./ready.md)
+- [Migrate common retail industry technologies](./migrate.md)
+- [Innovation in the retail industry](./innovate.md)
+- [Governance in the retail industry](./govern.md)
+- [Management in the retail industry](./manage.md)
