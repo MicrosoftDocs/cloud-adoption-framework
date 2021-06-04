@@ -112,7 +112,7 @@ The backlog (or board) is where feedback is recorded as user stories. It's also 
 
 ### Action
 
-Azure board and Azure Pipelines require a portal that's separate from GitHub and Azure. Get started using [Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops).
+Azure Boards and Azure Pipelines require a portal that's separate from GitHub and Azure. Get started using [Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops).
 
 ::: zone-end
 

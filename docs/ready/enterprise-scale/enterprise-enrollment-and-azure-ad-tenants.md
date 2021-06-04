@@ -18,7 +18,7 @@ An Enterprise Agreement (EA) enrollment represents the commercial relationship b
 
 ![Diagram that shows Azure EA hierarchies.](./media/ea.png)
 
-_Figure 1: An Azure EA enrollment hierarchy._
+*Figure 1: An Azure EA enrollment hierarchy.*
 
 - Departments help to segment costs into logical groupings and to set a budget or quota at the department level. The quota isn't enforced firmly and is used for reporting purposes.
 - Accounts are organizational units in the Azure EA portal. They can be used to manage subscriptions and access reports.
