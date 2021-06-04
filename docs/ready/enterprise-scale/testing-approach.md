@@ -90,7 +90,7 @@ If you do not wish to deploy the entire “canary” environment hierarchy, then
 
 [![Diagram that shows testing approach using Sandboxes.](./media/canary-sandboxes.png)](./media/canary-sandboxes.png#lightbox)
 
-_Figure 1: Enterprise Scale Management Group hierarchy highlighting sandboxes._
+_Figure 2: Enterprise Scale Management Group hierarchy highlighting sandboxes._
 
 To test Azure Policy and RBAC in this scenario you just need a single Azure Subscription with the Owner RBAC role assigned to the identity you wish to complete the testing as (User Account, Service Principal or Managed Service Identity). This will then enable you to author, assign, and remediate Azure Policies definitions and assignments within the scope of the sandbox subscription only.
 
