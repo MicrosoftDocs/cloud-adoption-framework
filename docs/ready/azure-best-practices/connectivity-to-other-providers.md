@@ -1,5 +1,6 @@
 ---
 title: Connectivity to other cloud providers
+
 description: Integrate an Azure enterprise-scale landing zone architecture to other cloud providers such as Amazon Web Services (AWS) and Google Cloud Platform (GCP). 
 author: daltondhcp
 ms.author: brblanch
@@ -43,9 +44,9 @@ The various options differ in speed, latency, reliability, service level agreeme
 
 ## Design recommendations
 
-- Use Option 1 or Option 2 to avoid use of the public internet, if you require an SLA, if you want predictable throughput, or need to handle heavy data traffic. Consider whether to use a customer-managed routing or a cloud exchange provider if you haven't implemented ExpressRoute already.
-- Create the ExpressRoute circuits for Option 1 and Option 2 in the connectivity subscription.
-- Use the ExpressRoute circuit of Option 1 or Option 2 to connect to the hub of a hub-and-spoke architecture, or to the hub virtual network or virtual WAN hub of an Azure virtual WAN-based network. For more information, see Figure 2 and Figure 3.
+- Use option 1 or option 2 to avoid use of the public internet, if you require an SLA, if you want predictable throughput, or need to handle heavy data traffic. Consider whether to use a customer-managed routing or a cloud exchange provider if you haven't implemented ExpressRoute already.
+- Create the ExpressRoute circuits for option 1 and option 2 in the connectivity subscription.
+- Use the ExpressRoute circuit of option 1 or option 2 to connect to the hub of a hub-and-spoke architecture, or to the hub virtual network or virtual WAN hub of an Azure virtual WAN-based network. For more information, see Figure 2 and Figure 3.
 
     ![Figure 2: Cross-cloud connectivity with customer-managed routing (Option 1)](./media/eslz-other-cloud-providers.png)
     *Figure 2: Cross-cloud connectivity with customer-managed routing (Option 1)*
