@@ -78,7 +78,7 @@ As data sources are registered and integrated into respective data lakes using a
 If you have an ingestion framework engine, we recommend using Azure Data Factory as the primary orchestration engine for getting data into RAW and to ENRICHED.
 
 >[!IMPORTANT]
->Ingestion and Processing is discussed at length under [Data Ingestion](eslz-data-ingestion.md).
+>Ingestion and Processing is discussed at length under [Data Ingestion](data-ingestion.md).
 
 #### Azure Databricks
 
@@ -163,7 +163,7 @@ During the initial setup of a Data Landing Zone a single Azure Synapse Analytics
 
 ## Domain *X*
 
-The Domain resource groups are provisioned for each domain added to a Data Landing Zone. Further reading on onboarding [Domains](eslz-data-landing-zone-domains.md) explains the process for creating the services and resource groups.
+The Domain resource groups are provisioned for each domain added to a Data Landing Zone. Further reading on onboarding [Domains](data-landing-zone-domains.md) explains the process for creating the services and resource groups.
 
 ## Data Products
 
@@ -171,7 +171,7 @@ A Data Landing Zone can have multiple data products which are created by ingesti
 
 For example, there is a requirement to have an Azure Database for MySQL which is used by a visualization tool. The data must be ingested and transformed before landing into the MySQL database. To achieve this, you would deploy both an Azure Data Factory and Azure Database for MySQL into the Data Product Resource Group.
 
-Further reading on onboarding [Data Products](eslz-data-landing-zone-data-products.md) explains the process for creating the services and resource groups.
+Further reading on onboarding [Data Products](data-landing-zone-data-products.md) explains the process for creating the services and resource groups.
 
 ## Visualization
 

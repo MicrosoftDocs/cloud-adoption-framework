@@ -50,7 +50,7 @@ Granting access to datasets should be done only on an [ACL level of the data lak
 In the case of **standard data**, the following recommendations should be considered:
 
 1. Each data asset in Azure Data Lake Storage should own a matching AAD Data Asset group.
-1. Data asset AAD registration should be automated via a script and restricted to [Domain Ops](eslz-team-functions.md#domain-ops).
+1. Data asset AAD registration should be automated via a script and restricted to [Domain Ops](team-functions.md#domain-ops).
 1. Teams should request access via a Security Group (SG) join request which is approved by Domain Ops.
 1. Once approved, teams should access data from a storage client (SSO authenticated), Azure Synapse Analytics, Azure Databricks etc.
 

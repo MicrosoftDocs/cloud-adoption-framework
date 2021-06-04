@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Data Lake Services
 
-Three [Azure Data Lake Storage Gen2 (ADLS)](/azure/storage/blobs/data-lake-storage-introduction) accounts should be provisioned per [Data Landing Zone](eslz-data-landing-zone.md) in the "data lake services" resource group. As data passes through the different stages of transformation, it should be saved in one of the Data Landing Zone's three data lakes and available for the [data products](eslz-data-landing-zone-data-products.md) in the lake which serves as the enriched and curated data layer. Data products would consume from the enriched and curated data layer only. These data lake accounts should be deployed into a single resource group.
+Three [Azure Data Lake Storage Gen2 (ADLS)](/azure/storage/blobs/data-lake-storage-introduction) accounts should be provisioned per [Data Landing Zone](data-landing-zone.md) in the "data lake services" resource group. As data passes through the different stages of transformation, it should be saved in one of the Data Landing Zone's three data lakes and available for the [data products](data-landing-zone-data-products.md) in the lake which serves as the enriched and curated data layer. Data products would consume from the enriched and curated data layer only. These data lake accounts should be deployed into a single resource group.
 
 ## Overview
 
@@ -187,7 +187,7 @@ When landing data into a data lake, it is important to pre-plan the structure of
 
 Each of the data lakes should use Private Endpoints injected into the VNet of the Data Landing Zone. To allow access across landing zones, we propose connecting Data Landing Zones through VNet peering. This provides the optimal solution from both a cost perspective and an access control perspective.
 
-See [Private Endpoints](./eslz-network-topology-and-connectivity.md#private-endpoints) and [Data Management Landing Zone to Data Landing Zone](./eslz-network-topology-and-connectivity.md#data-management-landing-zone-to-data-landing-zone)
+See [Private Endpoints](./network-topology-and-connectivity.md#private-endpoints) and [Data Management Landing Zone to Data Landing Zone](./network-topology-and-connectivity.md#data-management-landing-zone-to-data-landing-zone)
 
 >[!IMPORTANT]
 >Data from a Data Landing Zone can be accessed from another Data Landing Zone over the VNet Peering between the Data Landing Zones using the private endpoints associated with each data lake account. We recommend turning off all public access to the lakes and using private endpoints. Network connectivity across Data Landing Zones (*e.g.* private links) are controlled by the Platform Ops team.

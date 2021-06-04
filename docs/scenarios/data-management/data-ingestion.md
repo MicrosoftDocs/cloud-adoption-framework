@@ -33,7 +33,7 @@ Proprietary native and third-party tooling provides niche capabilities to integr
 - [Azure Data Share](/azure/data-share) enables organizations to securely share data with multiple external customers and partners. Once a data share account is created and datasets added, customers and partners can be invited to the data share. Data providers are always in control of the data that they have shared. Azure Data Share makes it simple to manage and monitor what data was shared, when, and by whom.
 
 >[!IMPORTANT]
->Every Data Landing Zone has an [Ingestion and Processing Resource Group](eslz-data-landing-zone.md#ingestion-and-processing-resource-group) which exists for the purpose of Enterprises who have an ingestion framework engine. If you do not have this framework engine, the only resource we would recommend deploying is the *Azure Databricks Engineering Workspace* which would be used by Domains to run complex ingestion. See [Automated Ingestion Framework](eslz-automated-ingestion-pattern.md#automated-ingestion-framework) for potential automation patterns.
+>Every Data Landing Zone has an [Ingestion and Processing Resource Group](data-landing-zone.md#ingestion-and-processing-resource-group) which exists for the purpose of Enterprises who have an ingestion framework engine. If you do not have this framework engine, the only resource we would recommend deploying is the *Azure Databricks Engineering Workspace* which would be used by Domains to run complex ingestion. See [Automated Ingestion Framework](automated-ingestion-pattern.md#automated-ingestion-framework) for potential automation patterns.
 
 ## Azure Data Factory Ingest Considerations
 
@@ -54,7 +54,7 @@ This guidance builds on top of:
 
 - [Securing access to Azure Data Lake Gen 2 from Azure Databricks](https://github.com/hurtn/datalake-ADLS-access-patterns-with-Databricks/blob/master/readme.md)
 - [Azure Databricks Best Practices](https://github.com/Azure/AzureDatabricksBestPractices/blob/master/toc.md)
-- [Azure Databricks Configuration in a Data Landing](eslz-azure-databricks-integration.md)
+- [Azure Databricks Configuration in a Data Landing](azure-databricks-integration.md)
 
 A single premium **Azure Databricks Data Engineering** Workspace should be deployed per Data Landing Zone in the production Ingest and Processing resource group. This will enable a complete CI/CD experience and only allow notebooks to be deployed from Azure DevOps or GitHub.
 

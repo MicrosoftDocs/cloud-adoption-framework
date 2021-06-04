@@ -15,7 +15,7 @@ Today, customers are investing in moving data to the cloud and have been followi
 
 The Enterprise Scale Analytics and AI solution pattern represents the strategic design path and targets the technical state for an Azure Analytics and AI environment. It addresses the challenges of a centralized and monolithic data lake by using either a core service provider or a harmonized data mesh pattern.
 
-A core service provider or harmonized data mesh pattern relies upon distribution of the data and its pipelines across [domains](eslz-data-landing-zone-division-and-consumption.md) enabling ownership of accessibility, usability, and development. Largely based on these patterns, the Enterprise Scale Analytics and AI solution pattern includes capabilities such as storage, data lineage, data classification, data ingestion, networking, security, access management, encryption, resiliency, and monitoring.
+A core service provider or harmonized data mesh pattern relies upon distribution of the data and its pipelines across [domains](data-landing-zone-division-and-consumption.md) enabling ownership of accessibility, usability, and development. Largely based on these patterns, the Enterprise Scale Analytics and AI solution pattern includes capabilities such as storage, data lineage, data classification, data ingestion, networking, security, access management, encryption, resiliency, and monitoring.
 
 > [!NOTE]
 > The Enterprise Scale Analytics and AI framework builds on our [Enterprise-Scale Architecture](/azure/cloud-adoption-framework/ready/enterprise-scale/) and should be considered a supplement to it.
@@ -52,16 +52,16 @@ At the heart of Enterprise Scale Analytics and AI is its data management capabil
 
 The **Data Management Landing Zone**, which is a subscription, is responsible for the governance of the platform and allows for the following capabilities:
 
-- [Data Catalog](eslz-data-management-landing-zone.md#data-catalog)
-- [Data Classification](eslz-data-management-landing-zone.md#data-classification)
-- [Data Lineage](eslz-data-management-landing-zone.md#data-lineage)
-- [Data Quality Management](eslz-data-management-landing-zone.md#data-quality-management)
-- [Data Modelling Repository](eslz-data-management-landing-zone.md#data-modelling-repository)
-- [Master Data Management](eslz-data-management-landing-zone.md#master-data-management)
-- [API Catalog](eslz-data-management-landing-zone.md#api-catalog)
+- [Data Catalog](data-management-landing-zone.md#data-catalog)
+- [Data Classification](data-management-landing-zone.md#data-classification)
+- [Data Lineage](data-management-landing-zone.md#data-lineage)
+- [Data Quality Management](data-management-landing-zone.md#data-quality-management)
+- [Data Modelling Repository](data-management-landing-zone.md#data-modelling-repository)
+- [Master Data Management](data-management-landing-zone.md#master-data-management)
+- [API Catalog](data-management-landing-zone.md#api-catalog)
 - Data Sharing and Contracts
 
-For further reading, see [Data Management Landing Zone](eslz-data-management-landing-zone.md).
+For further reading, see [Data Management Landing Zone](data-management-landing-zone.md).
 
 The **Data Landing Zone(s)**, on the other hand, are subscriptions which may host multiple analytics and AI solutions relevant to their respective business domain. These subscriptions within the Enterprise Scale Analytics and AI solution pattern represent primary business groups, integrators, and enablers as these groups own, operate, and often provide innate understanding for the source systems. A few important points to keep in mind about Data Landing Zones:
 
@@ -70,7 +70,7 @@ The **Data Landing Zone(s)**, on the other hand, are subscriptions which may hos
 - A Data Landing Zone can host one or many [Data Domains](#data-domains).
 - A Data Landing Zone can also host one or many [Data Products](#data-products).
 
-For further reading, see [Data Landing Zone](eslz-data-landing-zone.md).
+For further reading, see [Data Landing Zone](data-landing-zone.md).
 
 ### Data Domains
 
@@ -87,7 +87,7 @@ Additional services such as Event Hubs, IoT Hubs, Stream Insight, and Machine Le
 >[!IMPORTANT]
 >A **domain** is responsible for ingestion of data into a read data source. The data should avoid having any data transformations applied to it apart from data quality checks and application of data types.
 
-For further reading, see [Data Landing Zone Data Domains](eslz-data-landing-zone-domains.md).
+For further reading, see [Data Landing Zone Data Domains](data-landing-zone-domains.md).
 
 ### Data Products
 
@@ -103,22 +103,22 @@ Examples of Data Products include Azure Functions, App Service, Logic Apps, Azur
 >[!IMPORTANT]
 >A **data product** is data from a domain READ data source which has had some data transformation applied. This could be a newly curated dataset or a BI report.
 
-For further reading, see [Data Landing Zone Data Products](eslz-data-landing-zone-data-products.md).
+For further reading, see [Data Landing Zone Data Products](data-landing-zone-data-products.md).
 
 ### Data Platform Operational Excellence
 
 The Enterprise Scale Analytics and AI platform was designed with data platform operational excellence at its core through self-service enablement, governance and streamlined deployments. The working model for data operations enables these core principles through the use of Infrastructure as Code, deployment templates, deployment processes that includes a forking and branching strategy and a central repository.
 
-For further reading, see [Platform automation and DevOps](eslz-dataops.md).
+For further reading, see [Platform automation and DevOps](dataops.md).
 
 <!-- ### Data Science Environment
 
 A **data science environment** following the Enterprise Scale Analytics and AI solution pattern, enables data scientists, business analyst and developers to benefit from many types of services, which can be quickly deployed to a [Data Product](#data-products).
 
-For further reading, see [Data Science Environment](eslz-data-science-environment.md).
+For further reading, see [Data Science Environment](data-science-environment.md).
 
 ### Data Science Workflow and MLOps
 
 On Enterprise Scale Analytics and AI platform there is a rigor process in place that allows data science teams to structure their projects and leverage git to share code and other artifacts.
 
-For further reading, see [Data Science Workflow and MLOps](eslz-data-science-workflow-and-mlops.md). -->
+For further reading, see [Data Science Workflow and MLOps](data-science-workflow-and-mlops.md). -->

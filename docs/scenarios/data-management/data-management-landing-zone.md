@@ -94,7 +94,7 @@ In Enterprise Scale Analytics and AI Domains will become responsible for produci
 
 Data quality should happen as close to the source as possible to avoid quality issues replicating across the analytics and AI estate. Moving quality metrics and validation to the domain aligns the quality process with the team(s) that are closest to the data and have the deepest understanding of the domain. Data lineage also provides data quality confidence and should be provided for all datasets and products.
 
-See how data quality can be implemented in [Enforcing Data Quality](eslz-data-ingestion.md#enforcing-data-quality).
+See how data quality can be implemented in [Enforcing Data Quality](data-ingestion.md#enforcing-data-quality).
 
 ## Data Modelling Repository
 
@@ -179,7 +179,7 @@ The lifecycle management policy lets you:
 
 For example, suppose a system has data that is used frequently during the first stages of the lifecycle but only occasionally after a month. After two months, the dataset is rarely used. In this scenario, hot storage is best during the first month. Cool storage is most cost optimal for occasional access. Archive storage is the best tier option after the data gets old. Use a lifecycle management policy rule to automatically move aging data to cooler tiers.
 
-[Data Lake Lifecycle Management](eslz-data-lake-services.md#lifecycle-management) for Enterprise Scale Analytics and AI outlines additional considerations around the different layers in a Data Lake.
+[Data Lake Lifecycle Management](data-lake-services.md#lifecycle-management) for Enterprise Scale Analytics and AI outlines additional considerations around the different layers in a Data Lake.
 
 ## Automation Interfaces (optional)
 
