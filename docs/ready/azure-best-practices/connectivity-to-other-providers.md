@@ -30,6 +30,7 @@ The various options differ in speed, latency, reliability, service level agreeme
    You can use the following cross-cloud connectivity flow chart as an aid to choosing an option:
 
     ![Diagram of cross-cloud connectivity flow chart](./media/cloud-interconnect-decision-tree.png)
+    
     *Figure 1: Cross-cloud connectivity flow chart*
 
 - You can only connect an Azure virtual network to another cloud provider's virtual private cloud (VPC) if the private IP address spaces don't overlap.
@@ -49,9 +50,11 @@ The various options differ in speed, latency, reliability, service level agreeme
 - Use the ExpressRoute circuit of option 1 or option 2 to connect to the hub of a hub-and-spoke architecture, or to the hub virtual network or virtual WAN hub of an Azure virtual WAN-based network. For more information, see Figure 2 and Figure 3.
 
     ![Figure 2: Cross-cloud connectivity with customer-managed routing (Option 1)](./media/eslz-other-cloud-providers.png)
+    
     *Figure 2: Cross-cloud connectivity with customer-managed routing (Option 1)*
 
     ![Figure 3: Cross-cloud connectivity with a cloud exchange provider (Option 2).](./media/other-cloud-exchange-provider.png)
+    
     *Figure 3: Cross-cloud connectivity with a cloud exchange provider (Option 2)*
 
 - If you need to minimize latency between Azure and another cloud provider, consider deploying your application in a single virtual network with an ExpressRoute gateway, and enable FastPath.
