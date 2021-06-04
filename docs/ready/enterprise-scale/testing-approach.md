@@ -103,7 +103,7 @@ However, this approach does not allow you to test with the inheritance of RBAC a
 ## Using a single Azure AD Tenant
 
 - Follows [Enterprise Scale Design Recommendations](./enterprise-enrollment-and-azure-ad-tenants.md#define-azure-ad-tenants) for Azure AD Tenants
-- As per the [Cloud Adoption Framework Azure Best Practices - "Standardize on a single directory and identity"](azure/cloud-adoption-framework/security/security-top-10#9-architecture-standardize-on-a-single-directory-and-identity) guidance; single Azure AD Tenants are best practice for most.
+- As per the [Cloud Adoption Framework Azure Best Practices - "Standardize on a single directory and identity"](/azure/cloud-adoption-framework/security/security-top-10#9-architecture-standardize-on-a-single-directory-and-identity) guidance; single Azure AD Tenants are best practice for most.
   - In a single Azure AD Tenant you can use the different Azure AD Groups for both “production” and “canary” Enterprise Scale environments, with the same users, that are assigned to their relevant Management Group hierarchy within the same Azure AD Tenant.
 - Increased/Duplicated Azure AD licensing costs due to multiple identities across different Azure AD Tenants.
   - This is especially relevant to customers who use Azure AD Premium features.
@@ -126,7 +126,7 @@ Below is guidance on how to implement and utilise the "canary" Management Group 
 3. Implement git branch policies/security for “canary” as you have in place for “production”.
    - You may decide to reduce the number of approvers and checks for “canary” in an effort to “fail-fast”.
 4. Use the same Azure DevOps Pipelines or GitHub Actions utilising environment variables to change which hierarchy is being deployed too OR clone the pipelines and amend the hard-coded settings to define which hierarchy is being deployed too.
-   - Utilising [Azure DevOps Pipeline Templates](https://docs.microsoft.com/azure/devops/pipelines/process/templates) or [GitHub Actions Workflow Templates](https://docs.github.com/en/actions/learn-github-actions/sharing-workflows-with-your-organization) will help prevent the ‘Don’t Repeat Yourself’ (DRY) principle.
+   - Utilising [Azure DevOps Pipeline Templates](/azure/devops/pipelines/process/templates) or [GitHub Actions Workflow Templates](https://docs.github.com/en/actions/learn-github-actions/sharing-workflows-with-your-organization) will help prevent the ‘Don’t Repeat Yourself’ (DRY) principle.
 5. Have a set of “canary” subscriptions under a separate EA Department & Account that can be moved around the “canary” hierarchy as needed.
    - It may also be beneficial to have a set of resources always deployed into these.
    - Or some Infrastructure-as-Code templates (ARM, Bicep, Terraform etc.) to be able to spin up a set of resources to enable validation of changes in the “canary” environment.
