@@ -50,7 +50,7 @@ The platform resources in scope for this page and testing approach are:
 
 ## Example Scenarios & Outcomes
 
-An example of this scenario is an organization that wishes to test the impacts and results of a new Azure Policy to govern resources/settings in all Landing Zones; as per the [“Policy-driven governance” design principle](./design-principles.md#policy-driven-govenrnance). However, they do not wish to make this change directly to the “production” environment as they are concerned about the impact it may have.
+An example of this scenario is an organization that wishes to test the impacts and results of a new Azure Policy to govern resources/settings in all Landing Zones; as per the [“Policy-driven governance” design principle](./design-principles.md#policy-driven-governance). However, they do not wish to make this change directly to the “production” environment as they are concerned about the impact it may have.
 
 Therefore, using the “canary” environment to test this platform change will allow the organisation to implement and review the impact and result of the Azure Policy change to ensure it satisfies their requirements before implementing the Azure Policy to their “production” environment.
 
@@ -126,7 +126,7 @@ Below is guidance on how to implement and utilise the "canary" Management Group 
 3. Implement git branch policies/security for “canary” as you have in place for “production”.
    - You may decide to reduce the number of approvers and checks for “canary” in an effort to “fail-fast”.
 4. Use the same Azure DevOps Pipelines or GitHub Actions utilising environment variables to change which hierarchy is being deployed too OR clone the pipelines and amend the hard-coded settings to define which hierarchy is being deployed too.
-   - Utilising [Azure DevOps Pipeline Templates](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/templates?view=azure-devops) or [GitHub Actions Workflow Templates](https://docs.github.com/en/actions/learn-github-actions/sharing-workflows-with-your-organization) will help prevent the ‘Don’t Repeat Yourself’ (DRY) principle.
+   - Utilising [Azure DevOps Pipeline Templates](https://docs.microsoft.com/azure/devops/pipelines/process/templates) or [GitHub Actions Workflow Templates](https://docs.github.com/en/actions/learn-github-actions/sharing-workflows-with-your-organization) will help prevent the ‘Don’t Repeat Yourself’ (DRY) principle.
 5. Have a set of “canary” subscriptions under a separate EA Department & Account that can be moved around the “canary” hierarchy as needed.
    - It may also be beneficial to have a set of resources always deployed into these.
    - Or some Infrastructure-as-Code templates (ARM, Bicep, Terraform etc.) to be able to spin up a set of resources to enable validation of changes in the “canary” environment.

@@ -59,7 +59,7 @@ Management group structures within an Azure Active Directory (Azure AD) tenant s
 - [Configure](/azure/governance/management-groups/how-to/protect-resource-hierarchy#setting---default-management-group) a default, dedicated management group for new subscriptions to ensure that no subscriptions are placed under the root management group. This is especially important if there are users eligible for MSDN or Visual Studio benefits and subscriptions. A good candidate for this type of management group is a `Sandbox` management group.
 
 >[!NOTE]
- > For testing guidance for Enterprise Scale deployments, please review [Testing approach for Enterprise Scale](azure/cloud-adoption-framework/ready/enterprise-scale/testing-approach)
+ > For testing guidance for Enterprise Scale deployments, please review [Testing approach for Enterprise Scale](./testing-approach.md)
 
 ## Subscription organization and governance
 
