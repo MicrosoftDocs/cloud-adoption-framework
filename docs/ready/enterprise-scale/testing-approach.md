@@ -54,7 +54,7 @@ An example of this scenario is an organization that wishes to test the impacts a
 
 Therefore, using the “canary” environment to test this platform change will allow the organization to implement and review the impact and result of the Azure Policy change to ensure it satisfies their requirements before implementing the Azure Policy to their “production” environment.
 
-A similar scenario which may require a form of testing, before being made in the “production” environment, could be changing Azure RBAC role assignments and/or Azure AD group memberships.
+A similar scenario, which may require a form of testing, before being made in the “production” environment, could be changing Azure RBAC role assignments and/or Azure AD group memberships.
 
 >[!IMPORTANT]
  > This is not a common deployment approach/pattern for most customers and is therefore not mandatory for Enterprise Scale deployments.
@@ -104,7 +104,7 @@ However, this approach does not allow you to test with the inheritance of RBAC a
 
 - Follows [Enterprise Scale Design Recommendations](./enterprise-enrollment-and-azure-ad-tenants.md#define-azure-ad-tenants) for Azure AD Tenants
 - As per the [Cloud Adoption Framework Azure Best Practices - "Standardize on a single directory and identity"](/azure/cloud-adoption-framework/security/security-top-10#9-architecture-standardize-on-a-single-directory-and-identity) guidance; single Azure AD Tenants are best practice for most.
-  - In a single Azure AD Tenant you can use the different Azure AD Groups for both “production” and “canary” Enterprise Scale environments, with the same users, that are assigned to their relevant Management Group hierarchy within the same Azure AD Tenant.
+  - In a single Azure AD Tenant, you can use the different Azure AD Groups for both “production” and “canary” Enterprise Scale environments, with the same users, that are assigned to their relevant Management Group hierarchy within the same Azure AD Tenant.
 - Increased/Duplicated Azure AD licensing costs due to multiple identities across different Azure AD Tenants.
   - This is especially relevant to customers who use Azure AD Premium features.
 - RBAC changes will be more complex in both “canary” & “production” as it is highly likely that the users and groups are not identical across both Azure AD Tenants.
@@ -112,7 +112,7 @@ However, this approach does not allow you to test with the inheritance of RBAC a
 - Reduces complexity and management overhead caused by managing multiple Azure AD Tenants.
   - Privileged users having to maintain access and logging in to separate tenants to perform testing is likely to lead to changes being made to “production” instead of “canary” and vice versa accidentally.
 - Reduces likelihood of configuration drift and deployment failures.
-- Doesn’t require additional security and break-glass/emergency access processes to be created.
+- Doesn’t require extra security and break-glass/emergency access processes to be created.
 - Reduces friction and time taken to implement changes to the Enterprise Scale deployment
 
 ## Implementation Guidance
@@ -124,7 +124,7 @@ Below is guidance on how to implement and utilize the "canary" Management Group 
 2. Use separate folders within a git repository, branches, or repositories to hold the Infrastructure-as-Code for the "production" and "canary" Enterprise Scale deployments.
    - Using the relevant Azure AD Service Principals (SPNs) or Managed Service Identities (MSIs) as part of the CI/CD pipelines depending on which hierarchy is being deployed too.
 3. Implement git branch policies/security for “canary” as you have in place for “production”.
-   - You may decide to reduce the number of approvers and checks for “canary” in an effort to “fail-fast”.
+   - You may decide to reduce the number of approvers and checks for “canary” to “fail-fast”.
 4. Use the same Azure DevOps Pipelines or GitHub Actions utilizing environment variables to change which hierarchy is being deployed too OR clone the pipelines and amend the hard-coded settings to define which hierarchy is being deployed too.
    - Utilizing [Azure DevOps Pipeline Templates](/azure/devops/pipelines/process/templates) or [GitHub Actions Workflow Templates](https://docs.github.com/en/actions/learn-github-actions/sharing-workflows-with-your-organization) will help prevent the ‘Don’t Repeat Yourself’ (DRY) principle.
 5. Have a set of “canary” subscriptions under a separate EA Department & Account that can be moved around the “canary” hierarchy as needed.
