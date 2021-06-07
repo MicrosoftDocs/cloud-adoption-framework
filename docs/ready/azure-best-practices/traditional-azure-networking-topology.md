@@ -3,7 +3,7 @@ title: Traditional Azure networking topology
 description: Examine key design considerations and recommendations surrounding network topologies in Azure.
 author: JefferyMitchell
 ms.author: brblanch
-ms.date: 02/18/2021
+ms.date: 06/07/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -29,6 +29,8 @@ Explore key design considerations and recommendation surrounding network topolog
 - Virtual network peering is the preferred method to connect virtual networks in Azure. You can use virtual network peering to connect virtual networks in the same region, across different Azure regions, and across different Azure Active Directory (Azure AD) tenants.
 
 - Virtual network peering and global virtual network peering are not transitive. User-defined routes (UDRs) and network virtual appliances (NVAs) are required to enable a transit network. For more information, see [Hub-spoke network topology in Azure](/azure/architecture/reference-architectures/hybrid-networking/hub-spoke).
+
+- An Azure DDoS standard protection plan can be shared across all VNets in a single Azure AD Tenant to protect resources with public IP addresses. For more information, see [Azure DDoS Protection Standard](/azure/ddos-protection/ddos-protection-overview).
 
 - You can use ExpressRoute circuits to establish connectivity across virtual networks within the same geopolitical region or by using the premium add-on for connectivity across geopolitical regions. Keep these points in mind:
 
@@ -99,6 +101,12 @@ The following figure shows this topology.
   - There are no conflicting configurations with Azure networking.
 
 - Don't deploy Layer-7 inbound NVAs, such as Azure Application Gateway, as a shared service in the central-hub virtual network. Instead, deploy them together with the application in their respective landing zones.
+
+- Deploy a single Azure DDoS standard protection plan in the Connectivity subscription.
+
+  - All Landing Zone and Platform VNets should use this plan.
+  
+  - Review the [supported resources of Azure DDoS standard protection plans](/azure/ddos-protection/ddos-faq#what-are-the-supported-protected-resource-types)
 
 - Use your existing network, MPLS and SD-WAN, for connecting branch locations with corporate headquarters. Transit in Azure between ExpressRoute and VPN gateways isn't supported.
 
