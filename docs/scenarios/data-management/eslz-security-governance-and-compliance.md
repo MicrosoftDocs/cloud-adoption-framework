@@ -131,7 +131,7 @@ As per the [ADLS best practices](https://docs.microsoft.com/azure/storage/blobs/
 
 However, even when using groups, a proliferation of access control entries may occur at top levels of the directory tree, particularly when very granular permissions with many different groups are required. In order for each group to obtain read access to the files contained in their folder, they will need execute permissions from root, which is the container level, all the way down to the folder they are trying to access. It is likely that the 32 access control entry limit will be reached in the root or levels close to root. An example of this scenario is depicted below:
 
-![flat groups issue](../images/flatgroupsissue.png)
+![flat groups issue](./images/flatgroupsissue.png)
 
 ### Configure access using both RBAC and ACLs
 
@@ -147,14 +147,14 @@ There are two possible solutions to this outlined below but the recommended appr
 
 Where possible before files and folders are created, begin with a parent group which is assigned execute permissions to both default and access ACLs at the container level. Then add the groups requiring data access to the parent group. This technique is known as nesting groups, and from an ADLS authorization perspective, the member group inherits the permissions of the parent group, providing "global" execute permissions to all member groups. The member group in this case will not need execute permissions as these permissions will be inherited because it belongs to the parent group.  Additional nesting may provide greater flexibility and agility if the security groups that represent teams or automated jobs are added to the data access reader and writer groups.
 
-![Nested Groups](../images/nestedgroups.png)
+![Nested Groups](./images/nestedgroups.png)
 
 ### Option 2: The Other ACL entry (Recommended)
 
 Another way to ensure that every part of the path from root to lowest level has execute permissions (--x) is to use the "Other" ACL entry set at the container/root, with defaults and access ACLs applied as shown in the first diagram below. This execute permission propagates down any subsequently added child folders until the depth/folder where the intended access group should have Read and Execute permissions (in the lowest part of the chain as depicted in the second image), which will grant that group access to read the data appropriately. This approach works similarly for write access.
 
-![root_acl](../images/acl_other_rootv2.png)
-![folder_acl](../images/acl_other_lowest.png)
+![root_acl](./images/acl_other_rootv2.png)
+![folder_acl](./images/acl_other_lowest.png)
 
 #### Data Lake Zones Security
 
@@ -220,7 +220,7 @@ Before you start implementing fined-grained access with ACLs, is important to un
 1. If the operation is fully authorized based on Azure role assignment, then ACLs are not evaluated at all.
 1. If the operation is not fully authorized, then ACLs are evaluated.
 
-![RBAC ACLs Evaluation](../images/RBAC-ACLsEvaluation.png)
+![RBAC ACLs Evaluation](./images/RBAC-ACLsEvaluation.png)
 
 Please refer to the [Access control model for Azure Data Lake Storage Gen2 | Microsoft Docs](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control-model#how-permissions-are-evaluated) for more information.
 
@@ -254,15 +254,15 @@ Please go through the following steps to get started.
 
 1. Open Azure Storage Explorer, right click on storage container you want to setup fined-grained access with ACLs and choose Manage Access Control Lists.
 
-![Container Level ACLs](../images/ACLRead1.png)
+![Container Level ACLs](./images/ACLRead1.png)
 
 1. Click in Add to include users or groups that you want to grant permissions.
 
-![Manage Access Window](../images/ACLRead2.png)
+![Manage Access Window](./images/ACLRead2.png)
 
 1. In **Search for a user, group, or service principal.** Type the name of the user of group and click search. The users or groups should show-up. Select the user or group and choose **Add**.
 
-![Add Entity](../images/ACLRead3.png)
+![Add Entity](./images/ACLRead3.png)
 
 After adding the user or group. Select the identity added in the previous step. In Permission for: *name of user or group* check the option **Access**, followed by **Read** and **Execute** options on the right-hand side.
 
@@ -271,13 +271,13 @@ As per [ADLS Best Practices](https://docs.microsoft.com/en-us/azure/storage/blob
 It is important to notice the informative message **"Read and Write permissions will only work for an entity if the entity also has execute permissions on all parent directories, including the container (root directory)"** It means that you will also need to grant Execute permissions on all parent folders, including the container which is the root directory, when granting read or write in a sub directory.
 
 
-![Manage Access](../images/ACLRead4.png)
+![Manage Access](./images/ACLRead4.png)
 
 **Granting permissions automatically to new children of the directory using the Default*** **option.**
 
 If you want to grant ACLs permissions automatically for new children of the directory, use the option **Default*** and select the required permissions read, write, or execute.
 
-![Manage Access](../images/ACLRead5.png)
+![Manage Access](./images/ACLRead5.png)
 
 After granting permission at the container level, repeat the same steps for any subfolder you want to give access to users or groups.
 
@@ -285,13 +285,13 @@ After granting permission at the container level, repeat the same steps for any 
 
 Select the folder you want to give users or groups write permission and choose **Manage ACLs.**
 
-![Manage Access](../images/ACLWrite1.png)
+![Manage Access](./images/ACLWrite1.png)
 
 If you want to grant ACLs permissions automatically for new children of the directory, use the option **Default*** and select the appropriate permissions **Read/write** and **execute.**  As mentioned in the Granting Read Access on ADLS Gen 2 section, this option will automatically propagate parent folder permissions to newly created children's items, such as folder and files.
 
 After selecting the appropriate permissions, click **OK** to close.
 
-![Manage Access](../images/ACLWrite2.png)
+![Manage Access](./images/ACLWrite2.png)
 
 Repeat the same steps for any additional folders and subfolder you may want to grant access to users or groups.
 
@@ -301,13 +301,13 @@ When granting ACLs permissions to folders that already contain child objects suc
 
 To propagate ACL permissions, right-click on the parent folder you desire to propagate the ACL permissions. This action will propagate permissions for all users to the existing child objects from the parent folder you are performing the action.
 
-![Manage Access](../images/ACLPropag1.png)
+![Manage Access](./images/ACLPropag1.png)
 
 In Propagate Access Control Lists, choose How to handle failures depending on the desired behavior you want in case of failures. You can choose from the two options: **Continue on Failure** or **Quit on failure.**
 
 Check the box I understand that propagating ACLs cannot be easily reversable and click OK.
 
-![Manage Access](../images/ACLPropag2.png)
+![Manage Access](./images/ACLPropag2.png)
 
 #### Considerations when using Spark Tables in Synapse Spark Pool.
 
