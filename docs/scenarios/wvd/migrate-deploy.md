@@ -1,6 +1,6 @@
 ---
-title: Deploy Windows Virtual Desktop to Azure
-description: Use the Cloud Adoption Framework for Azure to deploy Windows Virtual Desktop using best practices that reduce complexity and standardize the migration process.
+title: Deploy Azure Virtual Desktop to Azure
+description: Use the Cloud Adoption Framework for Azure to deploy Azure Virtual Desktop using best practices that reduce complexity and standardize the migration process.
 author: DominicAllen
 ms.author: doalle
 ms.date: 05/18/2021
@@ -12,13 +12,13 @@ ms.custom: think-tank
 
 <!-- cSpell:ignore NTFS Logix -->
 
-# Windows Virtual Desktop deployment or migration
+# Azure Virtual Desktop deployment or migration
 
-The guidance in this article assumes that you've [established a plan for Windows Virtual Desktop](./plan.md), [assessed the desktop deployment requirements](./migrate-assess.md), [completed a proof of concept](./proof-of-concept.md), and are now ready to migrate or deploy your Windows Virtual Desktop instances.
+The guidance in this article assumes that you've [established a plan for Azure Virtual Desktop](./plan.md), [assessed the desktop deployment requirements](./migrate-assess.md), [completed a proof of concept](./proof-of-concept.md), and are now ready to migrate or deploy your Azure Virtual Desktop instances.
 
 ## Initial scope
 
-The deployment of Windows Virtual Desktop instances follows a process that's similar to the [proof of concept](./proof-of-concept.md) process. Use this initial scope as a baseline to explain the various scope changes that are required by the output of the assessment.
+The deployment of Azure Virtual Desktop instances follows a process that's similar to the [proof of concept](./proof-of-concept.md) process. Use this initial scope as a baseline to explain the various scope changes that are required by the output of the assessment.
 
 - [Create a host pool](/azure/virtual-desktop/create-host-pools-azure-marketplace) for pooled desktops by using a Windows&nbsp;10 gallery image from Azure Marketplace and the sizing from the first step of that procedure.
 - Create desktop or [RemoteApp application groups](/azure/virtual-desktop/manage-app-groups#create-a-remoteapp-group) for workloads that have already been migrated.
@@ -28,7 +28,7 @@ Deployment and migration consist of persona migration, application migration, an
 
 ## Iterative methodology
 
-Each persona will likely require an iteration of the previously outlined initial scope, resulting in multiple host pools. Depending on the Windows Virtual Desktop assessment, the adoption team should define iterations that are based on the number of personas or users per persona. Breaking the process into persona-driven iterations helps to reduce the change velocity impact on the business and allows the team to focus on proper testing or onboarding of each of the persona pools.
+Each persona will likely require an iteration of the previously outlined initial scope, resulting in multiple host pools. Depending on the Azure Virtual Desktop assessment, the adoption team should define iterations that are based on the number of personas or users per persona. Breaking the process into persona-driven iterations helps to reduce the change velocity impact on the business and allows the team to focus on proper testing or onboarding of each of the persona pools.
 
 ## Scope considerations
 
@@ -64,12 +64,12 @@ You can also use [Azure Files to host user profiles](/azure/virtual-desktop/crea
 - **Per host/persona:** Configure FSLogix on session host virtual machines.
 - **Per user:** Assign users to the host session.
 
-The user profiles for some personas or users might also require a data migration effort, which can delay the migration of specific personas until user profiles can be remediated within your local Active Directory or individual user desktops. This delay could significantly affect the scope outside of the Windows Virtual Desktop scenario. After they've been remediated, the initial scope and the preceding approaches can be resumed.
+The user profiles for some personas or users might also require a data migration effort, which can delay the migration of specific personas until user profiles can be remediated within your local Active Directory or individual user desktops. This delay could significantly affect the scope outside of the Azure Virtual Desktop scenario. After they've been remediated, the initial scope and the preceding approaches can be resumed.
 
-## Deploy or migrate Windows Virtual Desktop
+## Deploy or migrate Azure Virtual Desktop
 
-After all considerations are factored into your production scope for the Windows Virtual Desktop migration or deployment, the process can begin. On an iterative cadence, the adoption team will now deploy host pools, applications, and user profiles. After this phase is completed, the post deployment effort of [testing and onboarding users](./migrate-release.md) can begin.
+After all considerations are factored into your production scope for the Azure Virtual Desktop migration or deployment, the process can begin. On an iterative cadence, the adoption team will now deploy host pools, applications, and user profiles. After this phase is completed, the post deployment effort of [testing and onboarding users](./migrate-release.md) can begin.
 
 ## Next steps
 
-[Release your Windows Virtual Desktop deployment to production](./migrate-release.md)
+[Release your Azure Virtual Desktop deployment to production](./migrate-release.md)

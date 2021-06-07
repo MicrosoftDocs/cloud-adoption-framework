@@ -1,6 +1,6 @@
 ---
-title: Enterprise enrollment design area for Windows Virtual Desktop
-description: Explore the enterprise enrollment design area and how to apply it to a WVD implementation
+title: Enterprise enrollment design area for Azure Virtual Desktop
+description: Explore the enterprise enrollment design area and how to apply it to an Azure Virtual Desktop implementation
 author: DominicAllen
 ms.author: doalle
 ms.date: 06/18/2021
@@ -9,9 +9,9 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Enterprise enrollment considerations for a Windows Virtual Desktop implementation
+# Enterprise enrollment considerations for a Azure Virtual Desktop implementation
 
-For most customer implementations, standard best practices around enterprise enrollment and Active Directory tenants are unchanged when deploying Azure landing zones for Windows Virtual Desktop. There are seldom specific considerations or recommendations that would impact enterprise enrollment or Active Directory tenant decisions. See the following considerations to determine whether Windows Virtual Desktop requirements would impact existing tenant decisions.
+For most customer implementations, standard best practices around enterprise enrollment and Active Directory tenants are unchanged when deploying Azure landing zones for Azure Virtual Desktop. There are seldom specific considerations or recommendations that would impact enterprise enrollment or Active Directory tenant decisions. See the following considerations to determine whether Windows Virtual Desktop requirements would impact existing tenant decisions.
 
 However, it could be important to understand any decisions previously made by the cloud platform team to be aware of existing [enterprise enrollment or Active Directory tenant decisions](../../ready/enterprise-scale/enterprise-enrollment-and-azure-ad-tenants.md).
 
