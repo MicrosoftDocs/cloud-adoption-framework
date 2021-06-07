@@ -33,7 +33,7 @@ Examples of Data Products include:
 
 Azure Policy would drive the default configuration of these services within a Data Landing Zone.
 
-Therefore, we can consider operational analytics as multiple resource groups, which the Data Product Scrum Team can request from a standard service catalog. By using Azure Policy, we can configure the security boundary and required feature set.
+We can consider operational analytics as multiple resource groups, which the Data Product Scrum Team can request from a standard service catalog. By using Azure Policy, we can configure the security boundary and required feature set.
 
 Data products manage, organize, and make sense of the data across domains and present the insights gained from the data products. A data product is a result of data from one or many data domains and/or other data products.
 
@@ -46,7 +46,7 @@ Data Products should be automatically registered in Azure Purview to allow scann
 
 ## Building Data Products
 
-At the start of planning an Enterprise Scale Analytics and AI landing zone you should have identified a number of data products which will help drive the data product architecture. At the top of each decision should be conformity to implement platform governance.
+At the start of planning an Enterprise Scale Analytics and AI landing zone you should have identified a number of data products, which will help drive the data product architecture. At the top of each decision should be conformity to implement platform governance.
 
 ### Banking Industry Example
 
@@ -56,7 +56,15 @@ Figure 1: Banking Industry Example of Data Products
 
 :::image type="content" source="images/data-product-define-hl.png" alt-text="Define Data Product Architecture High Level":::
 
-Figure 2: 
+Figure 2: Define Data Product Architecture High Level
+
+:::image type="content" source="images/data-product-define-detail.png" alt-text="Define Data Product Architecture Detail":::
+
+Figure 3: Define Data Product Architecture Detail
+
+:::image type="content" source="images/data-product-integration-with-enterprise-scale-analytics.png" alt-text="Integration of Data Products.":::
+
+Figure 4: Integration of Data Products
 
 ## Cross Data Landing Zone Data Products
 
@@ -76,7 +84,7 @@ The data exploration stage is meant to explore the data present in your data lak
 
 #### Self-service BI
 
-To cater to self-service requirements and offer flexibility for small scale projects, the option to give access to the data lake through Power BI should be investigated. This pattern is particularly fit for data sets under 10GB, as it is one of the current limitations of Power BI data store. 
+To cater to self-service requirements and offer flexibility for small scale projects, the option to give access to the data lake through Power BI should be investigated. This pattern is fit for data sets under 10GB, as it is one of the current limitations of Power BI data store. 
 
 #### Orchestration and Ingestion layer
 
@@ -84,11 +92,11 @@ The default solution for orchestrating the different data flows and transformati
 
 #### Data warehousing storage
 
-For large scale project, there might be a need to store data in a data warehouse storage to obtain optimal performance. Multiple options are available to you, depending on the dataset size your project requires, a set of features only available in certain solutions and for cost purposes.
+For large-scale project, there might be a need to store data in a data warehouse storage to obtain optimal performance. Multiple options are available to you, depending on the dataset size your project requires, a set of features only available in certain solutions and for cost purposes.
 
 #### Semantic modeling
 
-This layer covers the need to store a subset of highly structured data and calculations for end-user consumption. This can be covered by Power BI premium or by having a dedicated Azure Analysis Services instance. The default option is to use the capabilities embedded in Power Bi premium, however some cases can only be covered by Azure Analysis Services to this day.
+This layer covers the need to store a subset of highly structured data and calculations for end-user consumption. This can be covered by Power BI premium or by having a dedicated Azure Analysis Services instance. The default option is to use the capabilities embedded in Power BI premium, however some cases can only be covered by Azure Analysis Services to this day.
 
 [![Analytic Product decision tree](./images/Data_Product_Decision_Tree.png)](image-file-expanded.png#lightbox)
 
@@ -125,10 +133,10 @@ For every Data Landing Zone, an empty Visualization Resource Group is created. V
 
 Whilst an initial Reporting and Visualization Resource Group would be deployed for a new Data Landing Zone, Data Products might require their own Reporting and Visualization Resource Group due to security boundaries or a requirement to cross-charge the Domain for usage. However, it is important to remember that using Azure Active Directory Passthrough authentication from services such as Power BI and Azure Analysis Services often reduces the need for a separated security boundary.
 
-Power BI is the strategic visualization tool for self-service analytics and for citizen data scientists. Our recommendation is to leverage the current well-established processes for data refresh scheduling, security, compliance, and data confidentiality handling.
+Power BI is the strategic visualization tool for self-service analytics and for citizen data scientists. Our recommendation is to use the current well-established processes for data refresh scheduling, security, compliance, and data confidentiality handling.
 
-Aligned to Microsoft investments and roadmap, we recommend when necessary and if possible to leverage Power BI Premium as the primary option for specific cases where refresh frequency, performance, or users licensing cannot be met by Power BI Pro.
+Aligned to Microsoft investments and roadmap, we recommend when necessary and if possible to use Power BI Premium as the primary option for specific cases where refresh frequency, performance, or users licensing cannot be met by Power BI Pro.
 
-Azure Analysis Services is recommended to be used on an exception basis. There are specific use cases where it might be required such as multi-dimensional models, CI/CD advanced requirements, etc.
+Azure Analysis Services should  be used on an exception basis. There are specific use cases where it might be required such as multi-dimensional models, CI/CD advanced requirements, etc.
 
 Therefore, as part of low-level design, we recommend enterprises consider an approach that allows access to a "trial" PBI Premium capacity by business users who would like to evaluate if it is a good fit for their use cases.
