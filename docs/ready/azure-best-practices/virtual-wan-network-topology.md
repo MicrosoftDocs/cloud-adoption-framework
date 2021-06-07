@@ -67,6 +67,14 @@ Explore key design considerations and recommendations surrounding virtual wide a
 
 - An Azure DDoS standard protection plan can be shared across all VNets in a single Azure AD Tenant to protect resources with public IP addresses. For more information, see [Azure DDoS Protection Standard](/azure/ddos-protection/ddos-protection-overview).
 
+  - At this time Virtual WAN Secure Virtual Hubs do not support Azure DDoS standard protection plans as documented [here](/azure/firewall-manager/overview#known-issues) and [here](/azure/firewall-manager/vhubs-and-vnets#comparison).
+
+  - Only resources with Public IP addresses are covered by Azure DDoS standard protection plans.
+
+    - 100 public IP addresses are included in the cost of an Azure DDoS standard protection plan across all protected VNets associated to the DDoS plan. Any additional public IP addresses over the 100 included with the plan, are charged separately in addition. For more information on Azure DDoS Standard Protection pricing see the [pricing page](https://azure.microsoft.com/pricing/details/ddos-protection/) or the [FAQ](/azure/ddos-protection/ddos-faq#how-does-pricing-work).
+  
+  - Review the [supported resources of Azure DDoS standard protection plans](/azure/ddos-protection/ddos-faq#what-are-the-supported-protected-resource-types)
+
 **Design recommendations:**
 
 - We recommend Virtual WAN for new large or global network deployments in Azure where you need global transit connectivity across Azure regions and on-premises locations. That way, you do not have to manually set up transitive routing for Azure networking.
@@ -110,7 +118,3 @@ Explore key design considerations and recommendations surrounding virtual wide a
 - Deploy a single Azure DDoS standard protection plan in the Connectivity subscription.
 
   - All Landing Zone and Platform VNets should use this plan.
-  
-    - At this time Virtual WAN Secure Virtual Hubs do not support Azure DDoS standard protection plans as documented [here](/azure/firewall-manager/overview#known-issues) and [here](/azure/firewall-manager/vhubs-and-vnets#comparison).
-  
-  - Review the [supported resources of Azure DDoS standard protection plans](/azure/ddos-protection/ddos-faq#what-are-the-supported-protected-resource-types)
