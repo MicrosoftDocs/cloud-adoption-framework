@@ -46,6 +46,17 @@ Data Products should be automatically registered in Azure Purview to allow scann
 
 ## Building Data Products
 
+At the start of planning an Enterprise Scale Analytics and AI landing zone you should have identified a number of data products which will help drive the data product architecture. At the top of each decision should be conformity to implement platform governance.
+
+### Banking Industry Example
+
+:::image type="content" source="images/data-products-banking-example.png" alt-text="Example of Data Products":::
+
+Figure 1: Banking Industry Example of Data Products
+
+:::image type="content" source="images/data-product-define-hl.png" alt-text="Define Data Product Architecture High Level":::
+
+Figure 2: 
 
 ## Cross Data Landing Zone Data Products
 
