@@ -42,7 +42,7 @@ Here’s how our offerings use and augment retail data to enhance personalizatio
 
 - **Determine data inputs**: Azure can use a wide variety of both structured and unstructured data.
   - Customer data
-  - Sales/POS data
+  - Sales or point of sale (POS) data
   - Online transaction data
   - Campaign or offer data
   - Product data
