@@ -65,6 +65,8 @@ Explore key design considerations and recommendations surrounding virtual wide a
 
 - Virtual WAN hub-to-hub traffic via Azure Firewall is currently not supported when the Azure Firewall is deployed inside of the Virtual WAN hub itself (secured virtual hub). Several workarounds exist depending on your requirements, including placing the [Azure Firewall in a spoke virtual network](/azure/virtual-wan/scenario-route-through-nva), or using NSGs for traffic filtering.
 
+- An Azure DDoS standard protection plan can be shared across all VNets in a single Azure AD Tenant to protect resources with public IP addresses. For more information, see [Azure DDoS Protection Standard](/azure/ddos-protection/ddos-protection-overview).
+
 **Design recommendations:**
 
 - We recommend Virtual WAN for new large or global network deployments in Azure where you need global transit connectivity across Azure regions and on-premises locations. That way, you do not have to manually set up transitive routing for Azure networking.
@@ -104,3 +106,11 @@ Explore key design considerations and recommendations surrounding virtual wide a
 - Plan your deployment carefully, and ensure that your network architecture is within the [Azure Virtual WAN limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#virtual-wan-limits).
 
 - Use [insights in Azure Monitor for Virtual WAN (preview)](/azure/virtual-wan/azure-monitor-insights) to monitor the end-to-end topology of your Virtual WAN as well as status and [key metrics](/azure/virtual-wan/azure-monitor-insights#detailed).
+
+- Deploy a single Azure DDoS standard protection plan in the Connectivity subscription.
+
+  - All Landing Zone and Platform VNets should use this plan.
+  
+    - At this time Virtual WAN Secure Virtual Hubs do not support Azure DDoS standard protection plans as documented [here](/azure/firewall-manager/overview#known-issues) and [here](/azure/firewall-manager/vhubs-and-vnets#comparison).
+  
+  - Review the [supported resources of Azure DDoS standard protection plans](/azure/ddos-protection/ddos-faq#what-are-the-supported-protected-resource-types)
