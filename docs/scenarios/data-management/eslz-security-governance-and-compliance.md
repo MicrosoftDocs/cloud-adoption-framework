@@ -107,15 +107,15 @@ During security principal-based authorization, permissions will be evaluated in 
 >This description excludes [Shared Key and SAS authentication](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control) methods in which no identity is associated with the operation and assumes that the storage account is accessible via appropriate networking configuration. It also excludes scenarios in which the security principal has been assigned the Storage Blob Data Owner built-in role which provides *super-user* access.
 >It is recommended to set allowSharedKeyAccess to false so that access can be audited by the identity.
 
-![howaccessisevaluated](../images/howaccessisevaluatedv2.png)
+![howaccessisevaluated](./images/howaccessisevaluatedv2.png)
 
 See [here](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control#common-scenarios-related-to-permissions) for another example of what ACL based permissions are required for a given operation.
 
 >[!NOTE]
 >
-> * ACLs apply only to security principals in the same tenant, including guest users.
-> * Azure Databricks mount points can be created by any user with permissions to attach to a cluster. The mount point will be configured using service principal credentials or the AAD passthrough option, but at the time of creation permissions are not evaluated. Only when an operation is performed using the mount point will permissions be evaluated and any user who can attach to a cluster can attempt to use the mount point. Securing access to ADLS from Azure Databricks is covered in more detail [here](https://github.com/hurtn/datalake-ADLS-access-patterns-with-Databricks).
-> * When creating a table definition in Databricks or Synapse, the user issuing the DDL needs to have read access to the underlying data.
+> - ACLs apply only to security principals in the same tenant, including guest users.
+> - Azure Databricks mount points can be created by any user with permissions to attach to a cluster. The mount point will be configured using service principal credentials or the AAD passthrough option, but at the time of creation permissions are not evaluated. Only when an operation is performed using the mount point will permissions be evaluated and any user who can attach to a cluster can attempt to use the mount point. Securing access to ADLS from Azure Databricks is covered in more detail [here](https://github.com/hurtn/datalake-ADLS-access-patterns-with-Databricks).
+> - When creating a table definition in Databricks or Synapse, the user issuing the DDL needs to have read access to the underlying data.
 
 ## Configuring access to ADLS and Data Lake Storage Configurations
 
@@ -309,18 +309,17 @@ Check the box I understand that propagating ACLs cannot be easily reversable and
 
 ![Manage Access](../images/ACLPropag2.png)
 
-
 #### Considerations when using Spark Tables in Synapse Spark Pool.
 
 When you use Spark Tables in Synapse Spark Pool, the following folder structure will be created automatically by Synapse workspace in the root of the container in the workspace primary storage.  
 
 synapse/workspaces/{workspacename}/**warehouse**
 
-If you plan to create spark tables in Synapse Spark Pool. It is required that you grant write permission on the **warehouse** folder for the users or group executing the command that creates the Spark Table. If the command is executed through triggered job in a pipeline, you will need to grant write permission to the Synapse workspace identity. 
+If you plan to create spark tables in Synapse Spark Pool. It is required that you grant write permission on the **warehouse** folder for the users or group executing the command that creates the Spark Table. If the command is executed through triggered job in a pipeline, you will need to grant write permission to the Synapse workspace identity.
 
-Create Spark Table example 
+Create Spark Table example
 
-```python 
+```python
 df.write.saveAsTable("<tablename>")
 ```
 
