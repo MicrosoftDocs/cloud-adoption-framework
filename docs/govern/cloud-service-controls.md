@@ -44,7 +44,7 @@ This level of implementation can be delivered in several layers. The governance 
 
 While classifying the different approaches lists out the extreme ends of the spectrum, many organizations will choose an approach between these models. For example, most organizations will allow some cloud services with a few controls, some will just be allowed without controls, and access to others will be denied.
 
-Whatever the approach taken to service governance is, the key input is the corporate [Cloud policy statements](/azure/cloud-adoption-framework/govern/policy-compliance/policy-definition#create-cloud-policy-statements) defined by the governance team.
+Whatever the approach taken to service governance is, the key input is the corporate [Cloud policy statements](./policy-compliance/policy-definition.md#create-cloud-policy-statements) defined by the governance team.
 
 ## Basic governance
 

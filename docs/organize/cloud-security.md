@@ -43,7 +43,7 @@ Each of the following articles provides information about each function includin
 - [Posture management](./cloud-security-posture-management.md)
 - [Incident preparation](./cloud-security-incident-preparation.md)
 
-These responsibilities are referenced throughout Microsoft documentation including the [Azure Security Benchmark](https://aka.ms/benchmarkdocs), [securing privileged access: rapid modernization plan](https://aka.ms/sparoadmap), and the [Azure security top 10](https://aka.ms/azuresecuritytop10),
+These responsibilities are referenced throughout Microsoft documentation including the [Azure Security Benchmark](/security/benchmark/azure/), [securing privileged access: rapid modernization plan](/security/compass/security-rapid-modernization-plan), and the [Azure security top 10](../secure/security-top-10.md),
 
 ## Roles and responsibilities
 

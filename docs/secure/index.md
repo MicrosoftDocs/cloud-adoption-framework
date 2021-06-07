@@ -28,7 +28,7 @@ The Cloud Adoption Framework provides security guidance for this security journe
 
 Security itself is both a standalone organizational discipline and a quality/attribute that is integrated or overlaid on other disciplines, which make it difficult to precisely define and map in detail. The security industry uses many different frameworks to capture risk, plan controls, and operate. Here is a quick summary of how the disciplines in the CAF Secure methodology disciplines relates to other security concepts and guidance:
 
-- **Zero trust:** Microsoft believes all security disciplines should follow the zero-trust principles of *assume breach*, *verify explicitly*, and *use least privilege access*. These principles underpin any sound [security strategy](https://aka.ms/securitystrategy) and also must be balanced with *business enablement* goals. The first and most visible part of zero trust is in access control, so it's highlighted in the description of access control security discipline.
+- **Zero trust:** Microsoft believes all security disciplines should follow the zero-trust principles of *assume breach*, *verify explicitly*, and *use least privilege access*. These principles underpin any sound [security strategy](../strategy/define-security-strategy.md) and also must be balanced with *business enablement* goals. The first and most visible part of zero trust is in access control, so it's highlighted in the description of access control security discipline.
 
 - **The Open Group:** These security disciplines map closely to the zero-trust components in the [core principles white paper](https://publications.opengroup.org/security-library/w210) published by The Open Group, where Microsoft actively participates. The one notable exception is that Microsoft elevated the discipline of innovation security so that DevSecOps is a top-level element because of how new, important, and transformative this discipline is for many organizations.
 
@@ -101,6 +101,6 @@ All security activities should be aligned to and shaped by a dual focus on
 The Secure methodology is part of a comprehensive set of security guidance that also includes:
 
 - [Azure Well-Architected Framework](/azure/architecture/framework/security/overview): Guidance on securing your workloads on Azure.
-- [Azure security benchmarks](https://aka.ms/benchmarkdocs): Prescriptive best practices and controls for Azure security.
+- [Azure security benchmarks](/security/benchmark/azure/): Prescriptive best practices and controls for Azure security.
 - [Enterprise-scale landing zone](../ready/enterprise-scale/security-governance-and-compliance.md): Azure reference architecture and implementation with integrated security.
-- [Top 10 security best practices for Azure](https://aka.ms/azuresecuritytop10): Top Azure security best practices that Microsoft recommends based on lessons learned across customers and our own environments.
+- [Top 10 security best practices for Azure](./security-top-10.md): Top Azure security best practices that Microsoft recommends based on lessons learned across customers and our own environments.

@@ -40,7 +40,7 @@ A good access control strategy goes beyond a single tactic or technology. It req
 
 Modern access control must meet the productivity needs of the organization, and also be:
 
-- **Secure:** Explicitly validate the trust of users and devices during access requests, using all available data and telemetry. This configuration makes it more difficult for attackers to impersonate legitimate users without being detected. Also, the access control strategy should focus on eliminating unauthorized escalation of privilege, for example,  granting a privilege that can be used to get higher privileges. For more information on protecting privileged access, see [Securing privileged access](https://aka.ms/spa).
+- **Secure:** Explicitly validate the trust of users and devices during access requests, using all available data and telemetry. This configuration makes it more difficult for attackers to impersonate legitimate users without being detected. Also, the access control strategy should focus on eliminating unauthorized escalation of privilege, for example,  granting a privilege that can be used to get higher privileges. For more information on protecting privileged access, see [Securing privileged access](/security/compass/overview).
 - **Consistent:** Ensure that security assurances are applied consistently and seamlessly across the environment. This standard improves the user experience and removes opportunities for attackers to sneak in through weaknesses in a disjointed or highly complex access control implementation. You should have a single access control strategy that uses the fewest number of policy engines to avoid configuration inconsistencies and configuration drift.
 - **Comprehensive:** Enforcement of access policy should be done as closely to the resources and access pathways as possible. This configuration improves security coverage, and helps security fit smoothly into scenarios and expectations of users. Take advantage of security controls for data, applications, identity, networks, and databases to drive policy enforcement closer to the business assets of value.
 - **Identity-centric:** Prioritize the use of identity and related controls when available. Identity controls provide rich context into access requests, and application context that isn't available from raw network traffic. Networking controls are still important, and sometimes the only available option (such as in operational technology environments), but identity should always be the first choice if available. A failure dialog during application access from the identity layer will be more precise and informative than a network traffic block, making it more likely the user can correct the issue without a costly help desk call.
@@ -90,7 +90,7 @@ To fulfill the zero trust principle of explicit validation, it's critical to mak
 - Whether the device has been compromised by an attacker.
 - Whether the user has the appropriate roles and permissions.
 
-Microsoft built a threat intelligence system that integrates security context from many and diverse signal sources. For more information, see [Summary of Microsoft threat intelligence](https://aka.ms/threatintelligence).
+Microsoft built a threat intelligence system that integrates security context from many and diverse signal sources. For more information, see [Summary of Microsoft threat intelligence](/security/ciso-workshop/ciso-workshop-module-4b#part-4-intelligence-604).
 
 ## Segmentation: Separate to protect
 
