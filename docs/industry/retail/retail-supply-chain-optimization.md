@@ -11,13 +11,13 @@ ms.subservice: overview
 
 # Supply chain optimization in the retail industry
 
-The speed of retail is accelerating while customer demands evolve. An astonishing 74% of consumers say they're more likely to purchase again from a company after receiving same-day delivery. And, in the store, if a product isn't on the shelf for the customer, they can order from another retailer on their mobile phone.
+The speed of retail is accelerating while customer demands evolve. An astonishing 74% of consumers say they're more likely to purchase again from a company after receiving same-day delivery. In the store, if a product isn't on the shelf, a customer can order from another retailer on their mobile phone.
 
 Supply chain optimization is necessary for retailers to meet and exceed your customer expectations. In optimization, you gain visibility into the operational bottlenecks that exist between procurement, logistics, and delivery.
 
 ## Business outcomes of supply chain optimization
 
-Supply chain optimization requires creation of a modernized data environment. Siloed sources provide information for a single source of data. This approach bridges the gap between systems to provide a complete picture. You can use this visibility for the following activities:
+Siloed sources provide information for a single source of data. Supply chain optimization requires creation of a modernized data environment to replace siloed sources. This approach bridges the gap between systems to provide a complete picture. You can use this visibility for the following activities:
 
 - Improve demand forecasting
 
@@ -49,7 +49,7 @@ These challenges are significant. It's possible to overcome them with the right 
 
 Microsoft Azure offers best-in-class analytics and IoT services. These offerings enable you to create a single data source and gain supply chain visibility by connecting data silos.
 
-Our approach layers real-time IoT insights on top of a unified view of retail data.
+Our approach layers real-time IoT insights on a unified view of retail data.
 
 - Collect and ingest data
 
@@ -63,7 +63,7 @@ Our approach layers real-time IoT insights on top of a unified view of retail da
 
 - Eliminate data silos
 
-  Store data using Azure Data Lake Storage and Azure Cosmos DB. This approach removes data silos, ensures data is secure and available, and enables scalability.
+  Store data using Azure Data Lake Storage and Azure Cosmos DB. This approach removes data silos, which ensures that data is secure and available. This approach also enables scalability.
 
 - Conduct complex data analysis
 
