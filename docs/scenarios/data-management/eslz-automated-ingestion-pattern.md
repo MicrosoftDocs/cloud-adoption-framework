@@ -15,7 +15,7 @@ In previous topics [Azure Data Factory Ingest Considerations](eslz-data-ingestio
 
 This section provides guidance for services and processes that could be driven by a Custom Ingestion Framework.
 
->[!WARNING]
+>[!Note]
 >The processes described below do not constitute a Microsoft product nor are they a complete specification. They are suggestions for architecting an Automated Ingestion Framework.
 
 ## Automated Data Source Application
@@ -64,7 +64,7 @@ By entering data into the Azure Data Factory Metastore via a custom app, Logic A
 
 - Source details are registered, including production and non-production environments.
 - Data shape, format, and quality constraints are captured.
-- Domains indicate if the data is sensitive, and this classification drives the process upon which Data Lake folders are created for ingestion of RAW and ENRICHED. RAW is named by source and ENRICHED is named by Data Asset.
+- Domains indicate if the data is sensitive, and this classification drives the process upon which Data Lake folders are created for ingestion of raw and enriched. Raw is named by source. Enriched and curated is named by Data Asset.
 - Service Principal and Security Groups are created for ingesting and giving access to the dataset.
 - An ingestion job is created in the Data Landing Zone ADF Metastore.
 - The Data Definition is inserted in the Azure Purview via its API.

@@ -15,9 +15,9 @@ ms.subservice: ready
 
 ![Data Products Resource Group](./images/dataproductsrg.png)
 
-## Multiple Resource Groups by Data Domain
+## Multiple Resource Groups by Data Product
 
-Data Products are compute or polyglot persistence services that may be required depending on the use case. We therefore expect multiple resource groups by data product.
+Data Products are computed or polyglot persistence services that may be required depending on the use case. We therefore expect multiple resource groups by data product.
 
 Examples of Data Products include:
 
@@ -35,6 +35,8 @@ Azure Policy would drive the default configuration of these services within a Da
 
 Therefore, we can consider operational analytics as multiple resource groups, which the Data Product Scrum Team can request from a standard service catalog. By using Azure Policy, we can configure the security boundary and required feature set.
 
+Data products manage, organize, and make sense of the data across domains and present the insights gained from the data products. A data product is a result of data from one or many data domains and/or other data products.
+
 These services would be considered an incremental deployment to the Data Landing Zone.
 
 Data Products should be automatically registered in Azure Purview to allow scanning of data.
@@ -42,7 +44,10 @@ Data Products should be automatically registered in Azure Purview to allow scann
 >[!IMPORTANT]
 >To drive consistency we recommend configuring an Azure Policy per Data Domain Product.
 
-## Creating a Data Product
+## Building Data Products
+
+
+## Cross Data Landing Zone Data Products
 
 Figure 1 illustrates how a Data Product is created. It shows how a Data Landing Zone hosts multiple data domains and that a Domain logical boundary is driven by data ownership and knowledge. A Data Product is created by ingesting data from Domains either inside the same Data Landing Zone or from across multiple Data Landing Zones subject to approval of the Domain.
 
@@ -74,7 +79,7 @@ For large scale project, there might be a need to store data in a data warehouse
 
 This layer covers the need to store a subset of highly structured data and calculations for end-user consumption. This can be covered by Power BI premium or by having a dedicated Azure Analysis Services instance. The default option is to use the capabilities embedded in Power Bi premium, however some cases can only be covered by Azure Analysis Services to this day.
 
-![Analytic Product decision tree](./images/Data_Product_Decision_Tree.png)
+[![Analytic Product decision tree](./images/Data_Product_Decision_Tree.png)](image-file-expanded.png#lightbox)
 
 Figure 2 : Analytic Product decision tree
 
@@ -84,7 +89,7 @@ Azure Machine Learning should be considered a data product and can be used to en
 
 Azure Machine Learning will cover all aspects of the data science lifecycle from datastore and dataset registration to model deployment. It can be used for any kind of machine learning, from classical ML to deep learning, including both supervised and unsupervised learning. Whether you prefer to write Python or R code or use zero-code/low-code options such as the designer, you can build, train, and track highly accurate machine learning and deep learning models in an Azure Machine Learning Workspace.
 
-![Sample Data Science workflow](./images/sampledatascienceflow.png)
+[![Sample Data Science workflow](./images/sampledatascienceflow.png)](./images/sampledatascienceflow.png#lightbox)
 
 Figure 2: Sample Data Science workflow
 
