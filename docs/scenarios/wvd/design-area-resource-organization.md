@@ -1,6 +1,6 @@
 ---
-title: Implementation design area guidance for Windows Virtual Desktop
-description: Explore the resource organization design area and how to apply it to a WVD implementation
+title: Implementation design area guidance for Azure Virtual Desktop
+description: Explore the resource organization design area and how to apply it to a Azure Virtual Desktop implementation
 author: DominicAllen
 ms.author: doalle
 ms.date: 06/18/2021
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Resource organization considerations for Windows Virtual Desktop
+# Resource organization considerations for Azure Virtual Desktop
 
 As with all cloud environments, the structure within which resources are deployed will have a direct bearing on how they are managed and governed.
 
@@ -17,7 +17,7 @@ The following considerations and recommendations will help establish proper reso
 
 ## Design considerations
 
-### How many Windows Virtual Desktop virtual machines will you require?
+### How many Azure Virtual Desktop virtual machines will you require?
 
 It is recommended not to deploy more than 5,000 virtual machines per region (for both personal and host pools based on Windows 10 Enterprise single and multi-session)
 Increasing the resources of an individual session host virtual machine can help to accommodate more user sessions
@@ -52,6 +52,6 @@ Subscriptions provide a management boundary for governance and isolation, which 
 
 ## Next steps
 
-[Further reading on recommendations for Windows Virtual Desktop resource organization](/azure/architecture/example-scenario/wvd/windows-virtual-desktop#azure-limitations)
+[Further reading on recommendations for Azure Virtual Desktop resource organization](/azure/architecture/example-scenario/wvd/windows-virtual-desktop#azure-limitations)
 
 [Further reading on recommendations for naming and tagging in Azure](/decision-guides/resource-tagging/)

@@ -31,9 +31,9 @@ items:
         href: eslz-platform-automation-and-devops.md      
     - name: Implementation Options
       items:
-      - name: Enterprise scale for Windows Virtual Desktop
+      - name: Enterprise scale for Azure Virtual Desktop
         href: enterprise-scale-landing-zone.md
-      - name: Start small and expand for Windows Virtual Desktop
+      - name: Start small and expand for Azure Virtual Desktop
         href: start-small-wvd.md  
   - name: Migrate your virtual desktop platform
     items:
@@ -54,14 +54,14 @@ items:
 
   - name: Architectures
     items:
-    - name: Windows Virtual Desktop architecture
+    - name: Azure Virtual Desktop architecture
       href: /azure/architecture/example-scenario/wvd/windows-virtual-desktop
 
   - name: Best practices
     items:
     - name: WVD security best practices
       href: /azure/virtual-desktop/security-guide
-    - name: Azure security baseline for Windows Virtual Desktop
+    - name: Azure security baseline for Azure Virtual Desktop
       href: /security/benchmark/azure/baselines/windows-virtual-desktop-security-baseline
     - name: Virtual desktop machine sizing
       href: /windows-server/remote/remote-desktop-services/virtual-machine-recs?context=/azure/virtual-desktop/context/context
@@ -72,24 +72,24 @@ items:
 
   - name: Microsoft products
     items:
-    - name: Windows Virtual Desktop
+    - name: Azure Virtual Desktop
       href: https://azure.microsoft.com/services/virtual-desktop/
     - name: Azure Files
       href: https://azure.microsoft.com/services/storage/files/
 
   - name: Learn modules
     items:
-    - name: Introduction to Windows Virtual Desktop in Microsoft Azure
+    - name: Introduction to Azure Virtual Desktop in Microsoft Azure
       href: /learn/modules/m365-wvd-intro/
-    - name: Prepare for Windows Virtual Desktop in Microsoft Azure
+    - name: Prepare for Azure Virtual Desktop in Microsoft Azure
       href: /learn/modules/m365-prepare-for-wvd/
-    - name: Deploy Windows Virtual Desktop in Microsoft Azure
+    - name: Deploy Azure Virtual Desktop in Microsoft Azure
       href: /learn/modules/m365-deploy-wvd/
-    - name: Deliver remote desktops and applications from Azure with Windows Virtual Desktop
+    - name: Deliver remote desktops and applications from Azure with Azure Virtual Desktop
       href: /learn/paths/m365-wvd/
-    - name: Optimize Windows Virtual Desktop in Microsoft Azure
+    - name: Optimize Azure Virtual Desktop in Microsoft Azure
       href: /learn/modules/m365-optimize-wvd/
-    - name: Deploy applications by using MSIX app attach for Windows Virtual Desktop
+    - name: Deploy applications by using MSIX app attach for Azure Virtual Desktop
       href: /learn/modules/m365-wvd-application-management/
-    - name: Secure a Windows Virtual Desktop deployment
+    - name: Secure a Azure Virtual Desktop deployment
       href: /learn/modules/m365-wvd-security/
