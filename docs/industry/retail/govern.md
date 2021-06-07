@@ -11,19 +11,17 @@ ms.subservice: govern
 
 # Governance for the retail industry
 
-Use the Cloud Adoption Framework methodology to systematically and incrementally improve governance of your cloud portfolio across the five governance disciplines pictured below.
+Use the [Cloud Adoption Framework methodology](../../govern/index.md) to systematically and incrementally improve governance of your cloud portfolio across the five governance disciplines pictured below. This article refines the methodology for governance needs specific to the retail industry.
 
-![Infographic of the Cloud Adoption Framework governance model](../../_images/operational-transformation-govern-large.png)
+![Screenshot of the Cloud Adoption Framework governance model](../../_images/operational-transformation-govern-large.png)
 
-This article refines the methodology for governance needs specific to the retail industry.
-
-When developing your cloud governance strategy, follow the approach in the standard methodology. For more information, see [Governance in the Microsoft Cloud Adoption Framework for Azure](../../govern/index.md). Use this article for potential additions to accelerate or extend your cloud governance capabilities for retail.
+When developing your cloud governance strategy, follow the approach in the standard methodology. Use this article for potential additions to accelerate or extend your cloud governance capabilities for retail.
 
 ## Governance for hybrid and multicloud assets
 
 Aside from online-only retailers, retail organizations operate from several distributed physical locations to deliver brick and mortar retail. Because of latency limitations, those locations can contain technology assets. You need to govern, operate, and secure those assets to help protect your business from risks.
 
-Your governance strategy may require distributed governance, but that may not be a part of your cloud adoption strategy. Does your cloud adoption strategy include digital transformation for [Supply chain optimization](./retail-supply-chain-optimization.md), [Building management optimization](./retail-building-management-optimization.md), or in-store experience for your customers?
+Your governance strategy might require distributed governance, but that might not be a part of your cloud adoption strategy. Does your cloud adoption strategy include digital transformation for [Supply chain optimization](./retail-supply-chain-optimization.md), [Building management optimization](./retail-building-management-optimization.md), or in-store experience for your customers?
 
 If you have distributed locations and need to drive a cloud adoption strategy for assets in those locations, consider a unified operations strategy. This strategy can deliver governance and operations across public cloud, private cloud, and edge locations. For more information, see [Introduction to unified operations](../../scenarios/hybrid/unified-operations.md).
 
