@@ -3,7 +3,7 @@ title: Virtual WAN network topology
 description: Examine key design considerations and recommendations surrounding virtual wide area networks in Microsoft Azure.
 author: JefferyMitchell
 ms.author: brblanch
-ms.date: 02/18/2021
+ms.date: 06/07/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
