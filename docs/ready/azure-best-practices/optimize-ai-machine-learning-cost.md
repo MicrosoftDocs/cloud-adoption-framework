@@ -82,19 +82,19 @@ For batch inference scenarios consider the following suggestions:
 - When you use Azure Machine Learning pipelines for batch inferencing, follow the guidance under [Determine the compute size for training](#determine-the-compute-size-for-training) to choose your initial VM size.
 - Optimize cost and performance by scaling horizontally. One of the key methods of optimizing cost and performance is by parallelizing the workload with the help of [Parallel run step](/python/api/azureml-pipeline-steps/azureml.pipeline.steps.parallelrunstep) in Azure Machine Learning. This pipeline step allows you to use many smaller nodes to execute the task in parallel, which allows you to scale horizontally. There's an overhead for parallelization though. Depending on the workload and the degree of parallelism that can be achieved, a parallel run step may or may not be an option.
 
-### Determine the size for compute instance compute
+### Determine the size for compute instance 
 
-For interactive development, Azure Machine Learning's compute instance compute type is recommended. The continuous integration (CI) offering brings single node compute that's bound to a single user and can be used as a workstation replacement.
+For interactive development, Azure Machine Learning's compute instance is recommended. The compute instance (CI) offering brings single node compute that's bound to a single user and can be used as a cloud workstation.
 
 Some organizations disallow the use of production data on local workstations, have enforced restrictions to the workstation environment, or restrict the installation of packages and dependencies in the Corporate IT environment. A compute instance can be used as a workstation to overcome the limitation. It offers a secure environment with production data access, and runs on images that come with popular packages and tools for data science pre-installed.
 
-Compute instances are billed when you run compute, a load balancer (includes the load balancer, outbound rules, and data processed), OS disk, temp disk (the temp disk depends on the VM size chosen), and public IP address. To save costs, we recommend users consider:
+When compute instance is running, user is billed for VM compute, a standard load balancer (included lb/outbound rules, and data processed), OS disk (premium SSD managed P10 disk), temp disk (the temp disk type depends on the VM size chosen), and public IP address. To save costs, we recommend users consider:
 
 - Start and stop the compute instance when it's not in use.
 - Work with a sample of your data on a compute instance and scale out to compute clusters to work with your full set of data
 - Submit experimentation jobs in *local* compute target mode on the compute instance while developing or testing, or when you switch to shared compute capacity when you submit jobs at full scale. For example, many epochs, full set of data, and hyperparameter search.
 
-If you stop the compute instance, it stops billing for compute hours, but not for the disk and the load balancer.
+If you stop the compute instance, it stops billing for VM compute hours, temp disk, and standard load balancer data processed costs. Please note user still pays for OS disk and standard load balancer included lb/outbound rules even when compute instance is stopped. Any data saved on OS disk is persisted through stop and restarts.
 
 ### Tune the chosen VM size by monitoring compute utilization
 
@@ -223,7 +223,7 @@ When you [pick a region for your compute](https://azure.microsoft.com/global-inf
 
 ## Learn more
 
-[Track costs across business units, environments, or projects by using the Cloud Adoption Framework](/azure/cloud-adoption-framework/ready/azure-best-practices/track-costs)
+[Track costs across business units, environments, or projects by using the Cloud Adoption Framework](./track-costs.md)
 
 ## Next steps
 

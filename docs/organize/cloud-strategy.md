@@ -28,7 +28,7 @@ Cloud strategy functions are commonly provided by the following types of roles. 
 This helps guide critical prioritization and discovery efforts during cloud adoption. It may also trigger changes in business processes, the execution of operations, customer interactions, or even product development. If these functions are confined to IT, the success of cloud adoption efforts will be constrained. To drive true business change, business leaders should be the primary source of this functionality. A defined cloud strategy team provides a means for involving key participants in a structured way.
 
 > [!NOTE]
-> The organization's CEO and CIO often assign the team. Assignments are typically based on empowering this team to drive change that cuts across various different organizations within the enterprise. The cloud strategy team members should be assigned based on the [motivations for cloud adoption](../strategy/motivations.md), [business outcomes](../strategy/business-outcomes/index.md), and relevant [financial models](../strategy/financial-models.md).
+> The organization's CEO and CIO often assign the team. Assignments are typically based on empowering this team to drive change that cuts across various different organizations within the enterprise. The cloud strategy team members should be assigned based on the [motivations for cloud adoption](../strategy/motivations.md), [business outcomes](../strategy/business-outcomes/index.md), and relevant [financial models](../strategy/cloud-migration-business-case.md).
 
 ## Preparation
 

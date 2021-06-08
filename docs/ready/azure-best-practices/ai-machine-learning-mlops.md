@@ -73,7 +73,7 @@ When you plan to adopt MLOps for your next machine learning project, consider ap
 
 - **Version control code, data, and experimentation outputs:** Unlike traditional software, data has a direct influence on the quality of machine learning models. Along with versioning your experimentation code base, version your datasets to ensure you can reproduce experiments or inference results. Versioning experimentation outputs like models can save effort and the computational cost of recreation.
 
-- **Use multiple environments:** To segregate development and testing from production work, [replicate](/azure/cloud-adoption-framework/ready/azure-best-practices/ai-machine-learning-resource-organization) your infrastructure in at least two environments. Access control for users might differ in each environment.
+- **Use multiple environments:** To segregate development and testing from production work, [replicate](./ai-machine-learning-resource-organization.md) your infrastructure in at least two environments. Access control for users might differ in each environment.
 
 - **Manage infrastructure and configurations-as-code:** When you create and update infrastructure components in your work environments, use [infrastructure as code](/azure/architecture/framework/devops/automation-infrastructure) to prevent inconsistencies between environments. Manage machine learning experiment job specifications as code, so that you can easily rerun and reuse a version of your experiment across environments.
 
@@ -91,7 +91,7 @@ Azure Machine Learning offers several asset management, orchestration, and autom
 
 ### People
 
-- Work in project teams to best utilize specialist and domain knowledge in your organization. [Organize and set up Azure Machine Learning Workspaces](/azure/cloud-adoption-framework/ready/azure-best-practices/ai-machine-learning-resource-organization) on a project basis to comply with use case segregation requirements.
+- Work in project teams to best utilize specialist and domain knowledge in your organization. [Organize and set up Azure Machine Learning Workspaces](./ai-machine-learning-resource-organization.md) on a project basis to comply with use case segregation requirements.
 - Define a set of responsibilities and tasks in your organization as a role, where one team member on an MLOps project team could fulfill multiple roles. Use Custom Roles in Azure to define a set of granular [Azure RBAC operations for Azure Machine Learning](/azure/role-based-access-control/resource-provider-operations#microsoftmachinelearningservices) that each role can perform.
 - Standardize on a project lifecycle and agile methodology. The [Team Data Science Process](/azure/machine-learning/team-data-science-process/overview) provides a reference lifecycle implementation.
 - Balanced teams can execute all MLOps stages from exploration to development to operations.

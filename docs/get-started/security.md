@@ -157,7 +157,7 @@ Security planning and cloud adoption planning should not be done in isolation. I
 
       ![Azure RBAC model](../_images/security/azure-rbac-model.png)
 
-    - [Microsoft cybersecurity reference architecture](https://aka.ms/mcra) to build a cybersecurity architecture for a hybrid enterprise that spans on-premises and cloud resources.
+    - [Microsoft cybersecurity reference architecture](/security/cybersecurity-reference-architecture/mcra) to build a cybersecurity architecture for a hybrid enterprise that spans on-premises and cloud resources.
 
     - [Security operations center (SOC) reference architecture](/security/compass/security-operations-videos-and-decks#part-1-introduction---soc-learnings-strategies-and-technical-integration-2430) to modernize security detection, response, and recovery.
 
