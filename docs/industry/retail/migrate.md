@@ -1,6 +1,6 @@
 ---
 title: "Migrate workloads for the retail industry"
-description: Learn about different options and services for migrating workloads to Azure, like Azure Marketplace.
+description: Learn about different options and services for migrating workloads to Azure, like Azure Marketplace for retail.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/01/2021
@@ -11,19 +11,19 @@ ms.subservice: migrate
 
 # Migrate common retail industry technologies
 
-In the [Migrate methodology](../../migrate/index.md) of the Cloud Adoption Framework for Azure, the primary tool for migration is Azure Migrate. Use this tool to deliver a repeatable process for migrating existing infrastructure and workloads from existing data centers to the public cloud. The steps outlined in the migration methodology apply to any retail industry migration project.
+In the [Migrate methodology](../../migrate/index.md) of the Cloud Adoption Framework for Azure, the primary tool for migration is Azure Migrate. Use this tool to deliver a repeatable process to migrate existing infrastructure and workloads from existing data centers to the public cloud. The steps outlined in the migration methodology apply to any retail industry migration project.
 
-There are many other software as a service (SaaS) options available to retailers. These Saas options can accelerate innovation during the migration process. This article outlines considerations for the retail industry. These considerations might influence what and how you migrate specific workloads in your portfolio to Azure.
+There are many software as a service (SaaS) options available to retailers. These Saas options can accelerate innovation during the migration process. This article outlines considerations for the retail industry. These considerations might influence what and how you migrate specific workloads in your portfolio to Azure.
 
 ## Migration for the retail industry
 
 The migration process is influenced by the target stage of maturity for your retail organization. The target stage is based on the [retail cloud maturity model](./retail-cloud-maturity.md).
 
-:::image type="content" source="./media/maturity-model.png" alt-text="Diagram that shows the stages of digital retail maturity, from left-to-right, Siloed retail, Connected retail, Analytics-driven retail, and Intelligent retail.":::
+:::image type="content" source="./media/maturity-model.png" alt-text="Diagram that shows the stages of digital retail maturity, from left to right, Siloed retail, Connected retail, Analytics-driven retail, and Intelligent retail.":::
 
 To move from siloed retail to connected retail, organizations focus on migration of the existing technology portfolio. This phase of cloud adoption often focuses on migrating existing workloads to an infrastructure as a service (IaaS) solution in Azure.
 
-For companies trying to achieve higher states of maturity, it might include migrating to Office 365, PowerPlatform, and Microsoft 365. These migrations replace many workloads that can be more effectively delivered through SaaS offerings.
+For companies trying to achieve higher states of maturity, it might include migrating to Microsoft Power Platform and Microsoft 365. These migrations replace many workloads that can be more effectively delivered through SaaS offerings.
 
 ## Azure Marketplace for retail
 
@@ -39,6 +39,6 @@ The [Migrate methodology](../../migrate/index.md) gives a standard, repeatable p
 
 The following articles take you to guidance found at specific points in the cloud adoption journey. This guidance helps you succeed in the cloud adoption scenario.
 
-- [Innovation in the Retail industry](./innovate.md)
-- [Governance in the Retail industry](./govern.md)
-- [Management in the Retail industry](./manage.md)
+- [Innovation in the retail industry](./innovate.md)
+- [Governance in the retail industry](./govern.md)
+- [Management in the retail industry](./manage.md)
