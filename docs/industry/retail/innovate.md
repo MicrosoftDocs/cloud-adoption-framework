@@ -1,5 +1,5 @@
 ---
-title: "Innovation in the Retail industry"
+title: "Innovation in the retail industry"
 description: Learn how to drive innovation as you implement analytics-driven and intelligent techniques. Reach retail maturity and improve your results.
 author: BrianBlanchard
 ms.author: brblanch
@@ -25,30 +25,26 @@ The tools and techniques presented in this article can help you develop innovati
 
 ## Rapid innovation with Microsoft Cloud for Retail
 
-TODO: Delete this section & update after release of MC4R
-
 [![Microsoft cloud for retail](./media/mc4r.png)](./media/mc4r.png#lightbox)
 
 ## Democratize data
 
-The most important step to innovation is [democratizing data](../../innovate/best-practices/data.md), because data that is accessible *and* understandable across the organization fuels innovation.
+The most important step to innovation is [democratizing data](../../innovate/best-practices/data.md), because data that's accessible *and* understandable across the organization fuels innovation.
 
-The fuel burns hotter when you use a common industry-specific data model. Maintaining a common model breaks down silos that stifle communication between applications and limit data democratization. When all employees, processes, and applications operate from a common data model, they can all apply technology to improve products and services.
-
-TODO: Link to common data model for retail
+This step is accelerated through the  use of a common industry-specific data model. Maintaining a common model breaks down silos that stifle communication between applications and limit data democratization. When all employees, processes, and applications operate from a common data model, they can all apply technology to improve products and services.
 
 To extend your common data model, use cloud native tools in Azure:
 
-- **Power BI** to create rich visualizations and build business insights from your data models. Build and share reports and dashboards, and provide notifications, to bring the power of your data to your workforce.
+- **Microsoft Power BI** to create rich visualizations and build business insights from your data models. Build and share reports and dashboards, and provide notifications, to bring the power of your data to your workforce.
 - **Azure Purview** to classify and add metadata to data sources, making it easier for all users to the find the data they need.
 - **Azure Data Factory** to move and transform data for use by various applications and reports.
-- Other **big data** sources, such as **Hadoop**, **HDInsights**, and **Databricks**, to allow data scientists to build advanced analytics solutions from existing data.
+- Other **big data** sources, such as **Hadoop**, **HDInsight**, and **Databricks**, to allow data scientists to build advanced analytics solutions from existing data.
 
-## Engage via apps
+## Engage via applications
 
 Learn more about ways you can [build applications](../../innovate/best-practices/apps.md) to extend, improve, and automate your retail processes.
 
-- **Microsoft Cloud for Retail** provides a number of packaged solutions to extend your common data model and rapidly deliver innovative applications to improve customer engagement. TODO: Add other MC4R benefits & links here.
+- **Microsoft Cloud for Retail** provides many packaged solutions to extend your common data model and rapidly deliver innovative applications to improve customer engagement.
 - **Power Platform** empowers citizen developers from business teams across sales, payroll, finance, and so on. Extend your common data model by empowering teams to create their own Power Apps and Power Automate solutions.
 - **Intelligent experiences** build modern applications in the cloud with web apps or serverless functions. Infuse intelligence into the applications with speech, text, vision, and chat bots.
 
@@ -57,7 +53,7 @@ Learn more about ways you can [build applications](../../innovate/best-practices
 Learn more about using [device interactions](../../innovate/best-practices/devices.md) to get closer to your customers through connected devices, perhaps devices you already have.
 
 - **Mobile experiences:** Extend customer interactions through the rapid development of mobile apps and Power Apps for mobile experiences.
-- **IoT:** Collect data in near-real time from devices in your retail, supply chain, and other environments.
+- **IoT:** Collect data in near-real-time from devices in your retail, supply chain, and other environments.
 
 ## Next steps
 
