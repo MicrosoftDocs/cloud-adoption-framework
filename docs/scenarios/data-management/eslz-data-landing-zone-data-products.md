@@ -6,7 +6,7 @@ title: Enterprise Scale Analytics and AI Data Products
 description: Enterprise Scale Analytics and AI Data Products
 author:  mboswell
 ms.author:  mboswell # Microsoft employees only
-ms.date: 03/03/2021
+ms.date: 08/06/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -46,7 +46,7 @@ Data Products should be automatically registered in Azure Purview to allow scann
 
 ## Building Data Products
 
-At the start of planning an Enterprise Scale Analytics and AI landing zone you should have identified a number of data products, which will help drive the data product architecture. At the top of each decision should be conformity to implement platform governance.
+At the start of planning an Enterprise Scale Analytics and AI landing zone, you should have identified many data products, which will help drive the data product architecture. At the top of each decision should be conformity to implement platform governance.
 
 ### Banking Industry Example
 
@@ -54,53 +54,77 @@ At the start of planning an Enterprise Scale Analytics and AI landing zone you s
 
 Figure 1: Banking Industry Example of Data Products
 
+Figure 1, illustrates products that could exist within a bank such as investments, risk management, mortgage, loan approvals, and corporate budget.
+
+### Define Data Product Architecture High Level
+
 :::image type="content" source="images/data-product-define-hl.png" alt-text="Define Data Product Architecture High Level":::
 
 Figure 2: Define Data Product Architecture High Level
+
+Figure 2, illustrate the next stage in defining these data products by focusing on how they are data producers and data consumers for others. Across the whole of this ecosystem we illustrate that governance and infrastructure as code should control the environment.
+
+For example, Customer Interaction produces data for mortgages and is termed a data producer. The Mortgage Data Product consumes from Customer Interactions and produces data for Risk Management.
+
+For each product, the Data Product teams must register the metadata they are producing in the data catalog. They must publish their data model in the modeling repository. Service Level Agreements and certification for the data product, should be updated the Data Sharing Contracts to set the right expectation for potential users of the data product.
+
+As Mortgage is consuming the Customer Interaction, we would want to make sure the lineage is capture from Customer Iteration to Mortgage. A further lineage would be captured for Risk Management consuming from Mortgage. This should be captured in the Data Lineage application before every release of a data product.
+
+>[!Note]
+> Using Azure DevOps Pipelines would allow building of approval gates to invoke functions to make sure metadata, lineage and SLAs are registered in the correct governance service.
+
+### Define Data Product Architecture Detail
 
 :::image type="content" source="images/data-product-define-detail.png" alt-text="Define Data Product Architecture Detail":::
 
 Figure 3: Define Data Product Architecture Detail
 
-:::image type="content" source="images/data-product-integration-with-enterprise-scale-analytics.png" alt-text="Integration of Data Products.":::
+Figure 3, shows the next stage of defining a data product depending on the data product usage. For example, Credit Monitoring consumes data from a Read Data Store that has been ingested by the Domains Ops team and produces data assets for two other data products.
 
-Figure 4: Integration of Data Products
+>[!Note]
+>A Read Data Source is also known as Golden Record Source, has been cleaned and hasn't had any transformation applied.
+
+The Credit Monitoring data product team request read access to the read data stores they require for there data product. These requests are routed through to the owners of the data for approval. Upon approval, the product teams can start to build the Credit Monitoring Data Product.
+
+Data from the read data source is transformed into the Credit Monitoring Data Product and any new data assets are stored in the Data Lake Curated layer. These new data assets should be registered, alongside the new data lineage, as part of the DevOps deployment process. A function should check what has been registered metadata with the physical structure of the data asset and register the dependency on the read data source data assets.
+
+The Loan Approval Product team take a dependency on some of the Credit Monitoring data assets. They would request read access to the Credit Monitoring data product assets they require for there data product. Upon release of the Loan Approval data product, all data assets, lineage, and models should be registered in the relevant governance services.  
 
 ## Cross Data Landing Zone Data Products
 
-Figure 1 illustrates how a Data Product is created. It shows how a Data Landing Zone hosts multiple data domains and that a Domain logical boundary is driven by data ownership and knowledge. A Data Product is created by ingesting data from Domains either inside the same Data Landing Zone or from across multiple Data Landing Zones subject to approval of the Domain.
-
 ![Creating a Data Product](./images/dataproductcrossdlz.png)
 
-Figure 1: Creating a Data Product
+Figure 4: Cross Data Landing Zone Data Products
 
-## Analytic Product decision tree
+Figure 4, illustrates how a Data Product is created if you have deployed multiple Data Landing Zone subscriptions. It shows how a Data Landing Zone hosts multiple data domains and data products. A Domain logical boundary is driven by data ownership and knowledge. A Data Product is created by ingesting data from Domains or Data Products either inside the same Data Landing Zone or from across multiple Data Landing Zones subject to approval of the Domain.
 
-Figures 2 presents a decision tree to help choose the components for an analytic product on Azure. You'll navigate it from top to bottom through the following layers to determine for each of them what is the best solution to fit your requirements: 
+## Analytic Product Decision Tree
 
-### Data exploration
+:::image type="content" source="images/Data_Product_Decision_Tree.png" alt-text="Analytics Product Decision Tree" lightbox="images/Data_Product_Decision_Tree.png":::
+
+Figure 5: Analytic Product decision tree
+
+Figures 5, presents a decision tree to help choose the components for an analytic product on Azure. You'll navigate it from top to bottom through the following layers to determine for each of them what is the best solution to fit your requirements:
+
+### Data Exploration
 
 The data exploration stage is meant to explore the data present in your data lakes and determine what data you need to access and its volume. On top of their current view of the business use cases, data project teams might also need an environment that allows them for ad-hoc queries on the data lake or data warehouse storage.
 
-#### Self-service BI
+#### Self-Service BI
 
-To cater to self-service requirements and offer flexibility for small scale projects, the option to give access to the data lake through Power BI should be investigated. This pattern is fit for data sets under 10GB, as it is one of the current limitations of Power BI data store. 
+To cater to self-service requirements and offer flexibility for small scale projects, the option to give access to the data lake through Power BI should be investigated. This pattern is fit for data sets under 10GB, as it is one of the current limitations of Power BI data store.
 
-#### Orchestration and Ingestion layer
+#### Orchestration and Ingestion Layer
 
 The default solution for orchestrating the different data flows and transformations is Azure Data Factory (or its equivalent Synapse pipelines). Three options are today available to ingest data from the different sources, process it and store it in the right target. The choice boils down to the complexity of the transformation and some feature gaps between Azure Data Factory and Azure Synapse Pipelines.
 
-#### Data warehousing storage
+#### Data Warehousing Storage
 
 For large-scale project, there might be a need to store data in a data warehouse storage to obtain optimal performance. Multiple options are available to you, depending on the dataset size your project requires, a set of features only available in certain solutions and for cost purposes.
 
-#### Semantic modeling
+#### Semantic Modeling
 
-This layer covers the need to store a subset of highly structured data and calculations for end-user consumption. This can be covered by Power BI premium or by having a dedicated Azure Analysis Services instance. The default option is to use the capabilities embedded in Power BI premium, however some cases can only be covered by Azure Analysis Services to this day.
-
-[![Analytic Product decision tree](./images/Data_Product_Decision_Tree.png)](image-file-expanded.png#lightbox)
-
-Figure 2 : Analytic Product decision tree
+The Semantic Modeling layer covers the need to store a subset of highly structured data and calculations for end-user consumption. This can be covered by Power BI premium or by having a dedicated Azure Analysis Services instance. The default option is to use the capabilities embedded in Power BI premium, however some cases can only be covered by Azure Analysis Services to this day.
 
 ## Azure Machine Learning (Optional)
 
