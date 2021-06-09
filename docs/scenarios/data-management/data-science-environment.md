@@ -1,5 +1,5 @@
 ---
-title: Enterprise Scale Analytics and AI Data Science Environment
+title: Azure Enterprise Scale Analytics and AI Data Science Environment
 description: Enterprise Scale Analytics and AI Architecture Data Science Environment
 author:  abdale
 ms.author: hamoodaleem # Microsoft employees only

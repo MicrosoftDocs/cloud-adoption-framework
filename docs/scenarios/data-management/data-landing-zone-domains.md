@@ -1,5 +1,5 @@
 ---
-title: Enterprise Scale Analytics and AI Domains
+title: Azure Enterprise Scale Analytics and AI Domains
 description: Enterprise Scale Analytics and AI Domains
 author:  mboswell
 ms.author:  mboswell # Microsoft employees only
@@ -17,7 +17,7 @@ This section explains the infrastructure which is deployed for each Domain insid
 
 ## Overview
 
-![Domains](./images/domainrg.png)
+![Domains](./images/domain-resource-group.png)
 
 *Figure 1: Domain Resource Group*
 
@@ -55,7 +55,7 @@ If the Domain has a requirement to stream data in, it is possible to deploy down
 
 ## Configuration specific to Databricks of adding a Domain to a Data Landing Zone
 
-![Adding Permissions to Databricks Workspaces](./images/addingpermissionstodatabricksworkspaces.png)
+![Adding Permissions to Databricks Workspaces](./images/adding-permissions-databricks-workspaces.png)
 
 *Figure 2: Adding Permissions to Databricks Workspaces*
 

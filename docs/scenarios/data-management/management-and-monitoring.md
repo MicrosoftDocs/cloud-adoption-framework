@@ -1,5 +1,5 @@
 ---
-title: "Enterprise-Scale management and monitoring for 'data management and analytics'"
+title: "Azure Enterprise Scale Analytics management and monitoring for 'data management and analytics'"
 description: Describe how this enterprise-scale scenario can improve management and monitoring of 'data management and analytics'
 author: christophermschmidt
 ms.author: chrschm

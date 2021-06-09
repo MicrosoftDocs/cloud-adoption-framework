@@ -1,5 +1,5 @@
 ---
-title: Enterprise Scale Analytics and AI Define Strategy
+title: Azure Enterprise Scale Analytics and AI Define Strategy
 description: Enterprise Scale Analytics and AI Define Strategy
 author: pratimdas
 ms.author: prda # Microsoft employees only

@@ -1,5 +1,5 @@
 ---
-title: Enterprise Scale Analytics and AI Databricks Pattern
+title: Azure Enterprise Scale Analytics and AI Databricks Pattern
 description: Enterprise Scale Analytics and AI Databricks Pattern
 author:  mboswell
 ms.author:  mboswell # Microsoft employees only
@@ -20,7 +20,7 @@ For the purpose of Enterprise Scale Analytics and AI v1, we have focused on Azur
 For every Data Landing Zone deployed, two shared Azure Databricks Workspaces will be created.
 
 1. An Azure Databricks Workspace is provisioned for Ingestion and Processing which will connect to Azure Data Lake via Azure Service Principals. This is referred to as **Azure Databricks Engineering Workspace**.
-1. An Azure Databricks Workspace is provisioned for all Data Scientists and Data Ops which will connect to the Azure Data Lake using AAD Passthrough. This is referred to as **Azure Databricks Analytics and Data Science Workspace**.
+2. An Azure Databricks Workspace is provisioned for all Data Scientists and Data Ops which will connect to the Azure Data Lake using AAD Passthrough. This is referred to as **Azure Databricks Analytics and Data Science Workspace**.
 
 The **Azure Databricks Analytics and Data Science Workspace** is shared across the whole Data Landing Zone, with all users which have been given access to the Workspace. These workspaces should not be used for Data Ingestion, Transformation, and Load &mdash; the **Azure Databricks Engineering Workspace** should be used for this instead.
 
@@ -63,43 +63,43 @@ To align to the Enterprise Scale Analytics and AI solution pattern, we recommend
 The following Access Control options are set for **ALL** Databricks Workspaces.
 
 1. Workspace Visibility Control: Enabled (default: Disabled)
-1. Cluster Visibility Control: Enabled (default: Disabled)
-1. Job Visibility Control: Enabled (default: Disabled)
+2. Cluster Visibility Control: Enabled (default: Disabled)
+3. Job Visibility Control: Enabled (default: Disabled)
 
 Depending on your use case you might wish to enable the following options for the **Azure Databricks Analytics and Data Science** workspace:
 
 1. Notebook Exporting: Disabled (default: Enabled)
-1. Notebook Table Clipboard Features: Disabled (default: Enabled)
-1. Table Access Control: Enabled (default: Disabled)
-1. Azure Active Directory Conditional Access
+2. Notebook Table Clipboard Features: Disabled (default: Enabled)
+3. Table Access Control: Enabled (default: Disabled)
+4. Azure Active Directory Conditional Access
 
 ## Azure Databricks Deployment
 
 The two Azure Databricks Workspaces are deployed as part of a new Data Landing Zone deployment. Figure 1 shows the overall workflow of deploying an Azure Databricks environment in Enterprise Scale Analytics and AI.
 
-![Azure Databricks Deployment into a Data Landing Zone](./images/databricksdeploy.png)
+![Azure Databricks Deployment into a Data Landing Zone](./images/databricks-deploy.png)
 
 Figure 1: Azure Databricks Deployment into a Data Landing Zone
 
 1. At the start of the provisioning process, it will check to see if the Hive Metastore exists in the Data Landing Zone
    * If it fails to find the Hive Metastore, it will quit and raise an error.
-1. Upon successfully finding the Hive Metastore, the process of creating a workspace is initiated.
-1. After the workspace has been created, the process should check for a Log Analytics workspace in the Data Landing Zone.
+2. Upon successfully finding the Hive Metastore, the process of creating a workspace is initiated.
+3. After the workspace has been created, the process should check for a Log Analytics workspace in the Data Landing Zone.
    * If it fails to find the Log Analytics workspace, it will quit and raise an error.
-1. For each workspace it will create an Azure AD Application and configure SCIM.
+4. For each workspace it will create an Azure AD Application and configure SCIM.
 
 For the **Azure Databricks Engineering Workspace**:
 
 1. It will configure the workspace with the service principal access.
-1. Deploy Data Engineering Policies which have been defined by the Data Platform Ops.
-1. If the Data Landing Zone Ops team has requested Databricks Pools or Clusters, these can be integrated into the deployment process.
-1. Enable workspace options specific to **Azure Databricks Engineering Workspace**.
+2. Deploy Data Engineering Policies which have been defined by the Data Platform Ops.
+3. If the Data Landing Zone Ops team has requested Databricks Pools or Clusters, these can be integrated into the deployment process.
+4. Enable workspace options specific to **Azure Databricks Engineering Workspace**.
 
 For **Azure Databricks Analytics and Data Science**:
 
 1. Deploy Data Analytic Policies which have been defined by the Data Platform Ops team.
-1. Data Landing Zone Ops have requested Databricks Pools or Clusters, these can be integrated into the deployment process.
-1. Enable workspace options specific to **Azure Databricks Engineering Workspace**.
+2. Data Landing Zone Ops have requested Databricks Pools or Clusters, these can be integrated into the deployment process.
+3. Enable workspace options specific to **Azure Databricks Engineering Workspace**.
 
 >[!NOTE]
 >During the creation of a new Domain we will alter the configuration of all Azure Databricks Workspaces within a Data Landing Zone. Please see [Domain & Data Product Deployment Process](deployment-models.md#domain--data-product-deployment-process) for how this is implemented with Azure Databricks shared Workspaces.
@@ -108,12 +108,11 @@ For **Azure Databricks Analytics and Data Science**:
 
 In a deployment of an Azure Databricks workspace:
 
-* A global init script is created that will configure Hive metastore settings for all clusters. This script is managed by the new
+- A global init script is created that will configure Hive metastore settings for all clusters. This script is managed by the new
 [Global Init Scripts](https://docs.databricks.com/clusters/init-scripts.html#global-init-scripts) API.
 As of January, 2021, the new global init scripts API is in public preview. However, Microsoft's official position is that public preview features in Azure Databricks are ready for production environments and are supported by the Support Team. For more details, see:
 [Azure Databricks Preview Releases](/azure/databricks/release-notes/release-types)
-
-* This solution uses [Azure Database for MySQL](https://azure.microsoft.com/services/mysql/) to store the Hive metastore. This database was chosen for its cost effectiveness and its high compatiblilty with Hive.
+- This solution uses [Azure Database for MySQL](https://azure.microsoft.com/services/mysql/) to store the Hive metastore. This database was chosen for its cost effectiveness and its high compatiblilty with Hive.
 
 ## Further Reading
 

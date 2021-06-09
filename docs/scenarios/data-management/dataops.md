@@ -1,5 +1,5 @@
 ---
-title: "Enterprise-Scale platform automation and devops Overview"
+title: "Azure Enterprise Scale Analytics platform automation and devops Overview"
 description: Enterprise-Scale platform automation and devops Overview
 author: abdale
 ms.author: hamoodaleem

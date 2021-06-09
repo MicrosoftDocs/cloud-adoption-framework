@@ -1,5 +1,5 @@
 ---
-title: "Enterprise Scale Analytics and AI Teams and Functions"
+title: "Azure Enterprise Scale Analytics and AI Teams and Functions"
 description: Enterprise Scale Analytics and AI Teams and Functions
 author: mboswell
 ms.author: mboswell
@@ -13,7 +13,7 @@ ms.subservice: ready
 
 The Enterprise Scale Analytics and AI moves teams from working horizontally across each tier such as Ingest, Processing, Analysis, Consumption and Visualization to vertical Data Landing Zone Groups coexisting together in an agile team. Platform teams such as Data Platform Ops and Platform Ops are grouped together under a common Platform Group.
 
-![Enterprise Scale Analytics and AI Teams](./images/esaaiteams.png)
+![Enterprise Scale Analytics and AI Teams](./images/enterprise-scale-analytics-ai-teams.png)
 
 *Figure 1: Enterprise Scale Analytics and AI Teams*
 
@@ -122,8 +122,8 @@ Using there forked repo they would develop ingestion pipelines and deploy to the
 Finally, as part of the Enterprises dataset onboarding process they would register the dataset which would then drive creation of:
 
 1. Registering the dataset in the data catalog.
-1. Creating Azure Data Lake Folders for the dataset.
-1. Notify the domain ops and data product teams of the new data asset.
+2. Creating Azure Data Lake Folders for the dataset.
+3. Notify the domain ops and data product teams of the new data asset.
 
 ### Updates to Existing Dataset
 
@@ -134,7 +134,7 @@ Using there forked repo they would update pipelines and deploy to there domain r
 Finally, as part of the updating the dataset definition they would:
 
 1. Update the the dataset in the data catalog.
-1. Notify the domain ops and data product teams of the new data asset.
+2. Notify the domain ops and data product teams of the new data asset.
 
 ### Manage Access Requests to Datasets
 
@@ -187,7 +187,7 @@ The Data Product team is given a forked repo from the master Data Products templ
 In self-service platform anyone can create reports, create curate datasets in the the Data Lake Workspace account and at certain points they may wish to push them back to for the wider business to use. Request to review data products can be raised by:
 
 1. A business sponsor logging a ticket to certify a data product.
-1. Data Platform Ops nominates data product based on popularity.
+2. Data Platform Ops nominates data product based on popularity.
 
 A data product team would drive a certification process (to be defined by Data Platform Ops and Digital Security) which might include:
 

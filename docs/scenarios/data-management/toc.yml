@@ -82,7 +82,7 @@ items:
           - name: Data Products
             href: ./data-landing-zone-data-products.md
           - name: Division and Consumption
-            href: ./data-landing-zone-division-and-consumption.md
+            href: ./data-landing-zone-division-consumption.md
     - name: Network topology and connectivity
       href: ./network-topology-and-connectivity.md
     - name: Management and monitoring

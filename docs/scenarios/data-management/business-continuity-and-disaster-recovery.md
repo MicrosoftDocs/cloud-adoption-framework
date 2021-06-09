@@ -1,5 +1,5 @@
 ---
-title: "Enterprise-Scale business continuity and disaster recovery for 'data management and analytics'"
+title: Azure Enterprise-Scale business continuity and disaster recovery for 'data management and analytics'
 description: Describe how this enterprise-scale scenario can improve business continuity and disaster recovery of 'data management and analytics'
 author: BrianBlanchard
 ms.author: brblanch
@@ -45,7 +45,6 @@ For an overview of High Availability with Azure Cosmos DB, see [How does Azure C
 ## Azure Data Factory
 
 As Data Domains and Data Product are likely to have Azure DevOps (GitHub or any other code version control software) repositories linked to Azure Data Factory, it is possible to deploy pipelines to another Data Factory with minimal downtime. To use code version control softwares apart from GitHub and Azure DevOps Repo will require developers to use ADF SDK to author pipelines and other Azure data factory objects.
-
 
 ## Azure Key Vault
 

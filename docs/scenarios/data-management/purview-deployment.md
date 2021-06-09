@@ -55,7 +55,7 @@ The Azure Purview account is deployed inside the Azure Virtual Network (VNet) wi
 
 ### Private Endpoint Deployment
 
-![Azure Purview Networking](./images/purview-private-endpoint2.png)
+:::image type="content" source="./images/purview-private-endpoint-2.png" alt-text="Azure Purview Networking" lightbox="./images/purview-private-endpoint-2.png":::
 
 As shown in the figure above, Enterprise Scale Analytics and AI uses [Azure Private Endpoint](/azure/private-link/private-endpoint-overview) to enable secure access to the catalog powered by [Azure Private Link](/azure/private-link/private-link-overview). The private endpoint uses IP addresses from the VNet address space for your Azure Purview account. Network traffic between the clients on the VNet and the Purview account traverses over the VNet and a private link on the Microsoft backbone network eliminating exposure from the public internet. To enable network isolation for end-to-end scan scenarios, additional private endpoints are deployed so data sources in both Azure and on-premises sources can be connected through Private Link.
 
@@ -100,7 +100,7 @@ DNS resolution for private endpoints should be handled through central Azure Pri
 - privatelink.queue.core.windows.net
 - privatelink.servicebus.windows.net
 
-![High Level Name Resolution Architecture](./images/purview-name-resolution.png)
+:::image type="content" source="./images/purview-name-resolution.png" alt-text="High Level Name Resolution Architecture" lightbox="./images/purview-name-resolution.png":::
 
 If you have a hybrid cloud, and cross-premises name resolution is required, it is important that on-premises DNS Servers are configured correctly to forward the appropriate requests to the Custom DNS server in Azure. There are multiple ways to do this:
 
@@ -186,7 +186,7 @@ Before creating any credentials in Azure Purview, your Azure Purview Account mus
 
 Azure Purview has several built-in RBAC roles (such as *Purview Data Reader*, *Purview Data Curator* and *Purview Data Source Administrator*) to manage the data plane which can be combined to provide additional privileges as shown in the table below. For example the *Purview Data Reader* role is targeted for roles such as Data officers, Data Stewards and Chief Security Officers who require read-only access to the data estate such as classifications, lineage through search options and reports that are available in Azure Purview.
 
-![Azure Purview Roles](./images/purview-roles1.png)
+:::image type="content" source="./images/purview-roles.png" alt-text="Azure Purview Roles" lightbox="./images/purview-roles.png":::
 
 For more information about Azure Purview catalog roles, see [Role-based access control in Azure Purview's Data Plane](/azure/purview/catalog-permissions)
 

@@ -1,5 +1,5 @@
 ---
-title: Enterprise Scale Analytics and AI Ingest Overview
+title: Azure Enterprise Scale Analytics and AI Ingest Overview
 description: Enterprise Scale Analytics and AI Ingest Overview
 author:  mboswell
 ms.author:  mboswell # Microsoft employees only
@@ -86,7 +86,7 @@ The last Event Hub or Kafka Landing Zone, inside the use case specific Landing Z
 
 As data is ingested, data quality checks should be implemented as close to the sources and before downstream subscribers make use of the datasets. In the case of batch ingestion from the the data lake, these checks should be done when moving from the Raw to Enriched to Curated.
 
-![Implementing Data Quality during ingestion](./images/adlsdq.png)
+![Implementing Data Quality during ingestion](./images/adls-dq.png)
 
 Figure 2: Implementing Data Quality during ingestion
 

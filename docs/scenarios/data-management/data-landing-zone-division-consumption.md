@@ -1,5 +1,5 @@
 ---
-title: Enterprise Scale Analytics and AI Division and Consumption
+title: Azure Enterprise Scale Analytics and AI Division and Consumption
 description: Enterprise Scale Analytics and AI Architecture Division and Consumption
 author: mboswell
 ms.author: mboswell
@@ -19,7 +19,7 @@ Data Landing Zones can be added and removed over time subject to business acquis
 
 Contoso has identified the following business units to onboard to their Enterprise Scale Analytics and AI solution:
 
-![Contoso Business Units](./images/contosobu.png)
+![Contoso Business Units](./images/contoso-business-unit.png)
 
 Figure 1: Contoso Business Units
 
@@ -58,7 +58,7 @@ The difference of Domains would lead to us to create two Data Landing Zones with
 
 Having decided upon the number of Data Landing Zones, the business should work to split out the Domains into sub-Domains and delegate responsibility to those Domains for ingesting into the Enterprise Scale Analytics and AI solution pattern.
 
-![Contoso Customer Support Domains](./images/contosobusubdomain.png)
+![Contoso Customer Support Domains](./images/contoso-business-unit-sub-domains.png)
 
 Figure 2: Contoso Customer Support Domains
 
@@ -76,7 +76,7 @@ Other factors which can affect the number of Data Landing Zones required include
 
 In a harmonized mesh pattern, data assets ingested by one Data Landing Zone can be consumed via other Data Landing Zones as needed. For instance, the central corporate finance function resides in the Corp Data Landing Zone and can run *ad hoc* finance reports by consuming finance data assets distributed across other Data Landing Zones.
 
-![Inter-Data Landing Zone Consumption](./images/interdlzconsumption.png)
+![Inter-Data Landing Zone Consumption](./images/inter-data-landing-zone-consumption.png)
 
 The illustration above shows how data assets can be shared in-place between Data Landing Zones subject to the consumer/user being part of the correct "data-asset-security-group". Data assets are registered in the data catalog, for users to discover.
 

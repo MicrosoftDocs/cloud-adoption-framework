@@ -1,5 +1,5 @@
 ---
-title: Enterprise Scale Analytics and AI Architecture Data Landing Zone Overview
+title: Azure Enterprise Scale Analytics and AI Architecture Data Landing Zone Overview
 description: Enterprise Scale Analytics and AI Architecture Data Landing Zone Overview
 author:  mboswell
 ms.author:  mboswell # Microsoft employees only
@@ -15,7 +15,7 @@ Data Landing Zones (spokes) are connected to the Data Management Landing Zone by
 
 Before provisioning a Data Landing Zone, you should have your DevOps CI/CD operating model in place and a Data Management Landing Zone deployed. It is highly recommended that you also consider the number of initial Data Landing Zones you want to deploy.
 
-![Data Landing Zone](./images/datalandingzone.png)
+:::image type="content" source="./images/data-landing-zone.png" alt-text="Data Landing Zone" lightbox="./images/data-landing-zone.png":::
 
 *Figure 1: Data Landing Zone*
 
@@ -50,7 +50,7 @@ Three [Azure Data Lake Storage Gen V2 (ADLS)](/azure/storage/blobs/data-lake-sto
 
 Third-party data publishers require the ability to land their data into the platform so domains can pull it into their Data Lakes. The Upload Ingest Storage resource group enables provisioning of blob stores for third-parties. As the provisioning of Azure Storage Blobs is on an as-needed basis, an empty storage service resource group will be deployed in each new Data Landing Zone.
 
-![Upload Ingest Storage Service](./images/dlzingeststorage.png)
+![Upload Ingest Storage Service](./images/data-landing-zone-ingest-storage.png)
 
 *Figure 2: Upload Ingest Storage Service*
 
@@ -67,7 +67,7 @@ If your enterprise has already developed an ingestion framework engine for autom
 
 Ingest and Processing will be deployed into a single resource group.
 
-![Data Landing Zone Ingest and Processing](./images/automatedingestprocessing.png)
+![Data Landing Zone Ingest and Processing](./images/automated-ingest-process.png)
 
 *Figure 3: Data Landing Zone Ingest and Processing*
 
@@ -96,9 +96,9 @@ IOT Hubs and Event Hubs could be used by your ingestion framework engine for rea
 
 Across the Data Landing Zone there is the requirement for a number of shared metadata services which provide functionality to other shared services. These will be deployed into a single resource group.
 
-![Data Landing Zone Metadata Services](./images/dlzsharedservices.png)
+![Data Landing Zone Metadata Services](./images/data-landing-zone-shared-services.png)
 
-*Figure 4: Data Landing Zone Metadata Services()
+Figure 4: Data Landing Zone Metadata Services
 
 If you have decided to develop your own ingestion framework engine based on the recommendations in the Enterprise Scale Analytics and AI ingestion flow, using either a PowerApp or a .Net Application, in the Data Management Landing Zone, we would suggest deploying an Azure SQL DB to hold metadata for Azure Data Factory to use. Having this custom application will speed up the onboarding of data sources, allowing teams to create new data sources for ingestion for landing into the Raw to Enriched to Curated in the Data Landing Zone data lakes.
 
@@ -177,7 +177,7 @@ Further reading on onboarding [Data Products](data-landing-zone-data-products.md
 
 For every Data Landing Zone, an empty visualization resource group will be created. This group can be filled with services required to implement your visualization solution. Using the existing VNet will enable your solution to connect to Data Products.
 
-![Visualization Resource Group](./images/visualizationrg.png)
+![Visualization Resource Group](./images/visualization-resource-group.png)
 
 *Figure 5: Visualization Resource Group*
 

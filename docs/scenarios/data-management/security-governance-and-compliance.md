@@ -1,5 +1,5 @@
 ---
-title: "Enterprise-Scale security, governance, and compliance for 'data management and analytics'"
+title: "Azure Enterprise Scale Analytics security, governance, and compliance for 'data management and analytics'"
 description: Describe how this enterprise-scale scenario can improve security, governance, and compliance of 'data management and analytics'
 author: BrianBlanchard
 ms.author: brblanch
@@ -96,7 +96,7 @@ Resist the opportunity to directly assign individual users or service principals
 
 #### Data Lake Zones Security
 
-![Data Lake Zones Security](./images/adlssecurityzones.png)
+![Data Lake Zones Security](./images/adls-security-zones.png)
 
 The recommended security pattern for each of the of the Data Lake Zones is:
 

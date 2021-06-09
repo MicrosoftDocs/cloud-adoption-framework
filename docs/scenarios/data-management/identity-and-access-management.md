@@ -1,5 +1,5 @@
 ---
-title: "Enterprise-Scale identity and access management for 'data management and analytics'"
+title: Azure Enterprise-Scale identity and access management for 'data management and analytics'"
 description: Describe how this enterprise-scale scenario can improve identity and access management of 'data management and analytics'
 author: mboswell
 ms.author: mboswell
@@ -50,25 +50,26 @@ Granting access to datasets should be done only on an [ACL level of the data lak
 In the case of **standard data**, the following recommendations should be considered:
 
 1. Each data asset in Azure Data Lake Storage should own a matching AAD Data Asset group.
-1. Data asset AAD registration should be automated via a script and restricted to [Domain Ops](team-functions.md#domain-ops).
-1. Teams should request access via a Security Group (SG) join request which is approved by Domain Ops.
-1. Once approved, teams should access data from a storage client (SSO authenticated), Azure Synapse Analytics, Azure Databricks etc.
+2. Data asset AAD registration should be automated via a script and restricted to [Domain Ops](team-functions.md#domain-ops).
+3. Teams should request access via a Security Group (SG) join request which is approved by Domain Ops.
+4. Once approved, teams should access data from a storage client (SSO authenticated), Azure Synapse Analytics, Azure Databricks etc.
 
 In the case of **secure and sensitive data**, the following recommendations should be considered:
 
 1. Access to a data asset group should only be granted to analytic services via Managed Identities or Service Principals, as opposed to individual teams.
-1. Teams with access to secure data must ensure members are vetted. This can be implemented via dynamic groups.
-1. Azure Synapse Analytics, like Azure Storage, should expose table-asset groups to control access.
+2. Teams with access to secure data must ensure members are vetted. This can be implemented via dynamic groups.
+3. Azure Synapse Analytics, like Azure Storage, should expose table-asset groups to control access.
     1. Project external tables via PolyBase and control filtering.
-    1. Data is copied into table enabling row and column filtering and masking.
-1. Teams should be given access to Azure Databricks (ADB) via Azure Active Directory Enterprise Application SCIM
+    2. Data is copied into table enabling row and column filtering and masking.
+4. Teams should be given access to Azure Databricks (ADB) via Azure Active Directory Enterprise Application SCIM
     1. Azure Databricks table is defined to external table, optionally.
-    1. Azure Databricks ACLs are mapped to groups.
+    2. Azure Databricks ACLs are mapped to groups.
 
 ### Example implementation
 
 The figure below shows how ACLs and Groups can be applied to an Enterprise Scale Analytics and AI deployment:
 
-![Data Access Model](./images/data_security_model.png)
+<!-- increase image size-->
+:::image type="content" source="./images/data-security-model.png" alt-text="Data Access Model" lightbox="./images/data-security-model.png":::
 
 *Figure 1: Data Access Model*

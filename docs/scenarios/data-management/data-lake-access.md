@@ -1,5 +1,5 @@
 ---
-title: Enterprise Scale Analytics and AI Teams Data Lake Access
+title: Azure Enterprise Scale Analytics and AI Teams Data Lake Access
 description: Understanding access control and data lake configurations in ADLS Gen2
 author:  mboswell
 ms.author:  mboswell # Microsoft employees only

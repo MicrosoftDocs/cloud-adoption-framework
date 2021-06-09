@@ -1,5 +1,5 @@
 ---
-title: "Enterprise-Scale Analytics and AI Deployment Models"
+title: Azure Enterprise-Scale Analytics and AI Deployment Models
 description: Enterprise-Scale Analytics and AI Deployment Models
 author: mboswell
 ms.author: mboswell
@@ -57,7 +57,7 @@ Over the standard configuration the Data Landing Zone has specific requirements:
 - Name of RGs
 - Key Vaults
 
-![Automation High Level Overview](./images/automationhl.png)
+:::image type="content" source="./images/automation-high-level.png" alt-text="Automation High Level Overview" lightbox="./images/automation-high-level.png":::
 
 *Figure 1: Automation High Level Principles*
 
@@ -86,7 +86,7 @@ For example, if a new Data Landing Zone needs to be created, the responsible Dat
 
 The workflow mentioned above needs to be orchestrated, which can be achieved through multiple sets of services on the Azure platform. Some of the steps should be handled through CI/CD pipelines, such as renaming parameters in parameter files, others can be executed in other workflow orchestration tools such as Logic Apps.
 
-![Forked DevOp Model](./images/forkeddevops.png)
+![Forked DevOp Model](./images/forked-dev-ops.png)
 
 *Figure 2: Forked DevOps Model with Enterprise Scale Analytics and AI*
 
@@ -104,7 +104,7 @@ Best practices for repositories should be adopted in order to enforce the use of
 >[!TIP]
 >Because code repositories are forked, ARM templates can be updated via 'pulls changes' whenever changes occur in the master templates and changes are to be replicated to all Data Landing Zone instances. This requires coordinated activities amongst the teams.
 
-![Data Landing Zone Automation Process](./images/dlzautoprocess.png)
+![Data Landing Zone Automation Process](./images/data-landing-zone-auto-process.png)
 
 *Figure 3: Data Landing Zone Automation Process*
 
@@ -119,7 +119,7 @@ As of now, there is no Git APIs available which would allow to clone/update/comm
 
 As mentioned, following this approach, we need to use Git specific functions, which are defined in the [`GitAutomation`](https://github.com/webmd-health-services/GitAutomation) Powershell module. By installing this module inside the Azure Automation Account, users are able to create, clone, query and even more with Git repositories.
 
-![GitAutomation Module for Automation](./images/gitautomation.png)
+:::image type="content" source="./images/git-automation.png" alt-text="GitAutomation Module for Automation" lightbox="./images/git-automation.png":::
 
 From this module, users can leverage the `Copy-GitRepository` function, which  clones the main Git repository from the URL specified by `URL` to the Data Platform Git path specified by `DestinationPath`.
 
@@ -131,7 +131,7 @@ After a Data Landing Zone has been created, Domain and Data Products can start o
 
 This process is done either directly using DevOps tooling or called via pipelines/workflows exposed as APIs. Similarly to the Data Landing Zone, it requires first for the code master code repo to be forked.
 
-![Domain and Product Deployment Automation](./images/domainandproductdeploymentautomation.png)
+![Domain and Product Deployment Automation](./images/domain-product-deployment-automation.png)
 
 *Figure 4 : Domain and Product Deployment Automation*
 
@@ -152,7 +152,7 @@ Figure 4 illustrates the process to onboard a new Domain or data product.
 
 By using the above patterns we can facilitate both control, agility, self service and a way to keep our policies up to date.
 
-![Overall Data Ops Model](./images/overalldataopsmodel.png)
+![Overall Data Ops Model](./images/overall-data-ops-model.png)
 
 *Figure 5: Data Ops Model*
 

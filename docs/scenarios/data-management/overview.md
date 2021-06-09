@@ -1,5 +1,5 @@
 ---
-title: Enterprise Scale Analytics and AI Intro
+title: Azure Enterprise Scale Analytics and AI Intro
 description: Enterprise Scale Analytics and AI Intro
 author: mboswell
 ms.author: mboswell  # Microsoft employees only

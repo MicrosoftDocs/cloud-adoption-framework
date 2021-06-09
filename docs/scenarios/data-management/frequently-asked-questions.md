@@ -1,5 +1,5 @@
 ---
-title: Frequently Asked Questions about Enterprise Scale Analytics and AI
+title: Frequently Asked Questions about Azure Enterprise Scale Analytics and AI
 description: Frequently Asked Questions about Enterprise Scale Analytics and AI
 author: abdale
 ms.author: hamoodaleem  # Microsoft employees only
@@ -13,6 +13,7 @@ ms.subservice: ready
 
 The following are common questions asked about Enterprise Scale Analytics and AI.
 
+<!-- 
 ## Data Management Landing Zone
 
 ### Topic Name (e.g., Data Domains)
@@ -24,7 +25,9 @@ The following are common questions asked about Enterprise Scale Analytics and AI
 #### Question 2
 
 [Answer here]
+-->
 
+<!-- 
 ## Data Landing Zone
 
 ### Topic Name (e.g., Data Domains)
@@ -36,3 +39,5 @@ The following are common questions asked about Enterprise Scale Analytics and AI
 #### Question 2
 
 [Answer here]
+
+-->

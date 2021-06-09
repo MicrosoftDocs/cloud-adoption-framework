@@ -1,5 +1,5 @@
 ---
-title: Enterprise Scale Analytics and AI Data Science Workflow and MLOps
+title: Azure Enterprise Scale Analytics and AI Data Science Workflow and MLOps
 description: Enterprise Scale Analytics and AI Data Science Workflow and MLOps
 author:  abdale
 ms.author: hamoodaleem # Microsoft employees only

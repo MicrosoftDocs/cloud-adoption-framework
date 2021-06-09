@@ -1,5 +1,5 @@
 ---
-title: Enterprise Scale Analytics and AI Automated Ingestion Framework
+title: Azure Enterprise Scale Analytics and AI Automated Ingestion Framework
 description: Enterprise Scale Analytics and AI Architecture Automated Ingestion Framework
 author:  mboswell
 ms.author:  mboswell # Microsoft employees only
@@ -20,7 +20,7 @@ This section provides guidance for services and processes that could be driven b
 
 ## Automated Data Source Application
 
-![Automated Ingestion Process](./images/automated_ingestion_process.png)
+![Automated Ingestion Process](./images/automated-ingest-process.png)
 
 Figure 1: Automated Ingestion Process
 
@@ -56,7 +56,7 @@ If the business requires, Data Landing Zone Ops and Domain Ops could build opera
 
 Figure 2 suggests a detailed registration process for automating the ingestion of new data sources.
 
-![New Dataset Registration(Automated)](./images/new_dataset_ingestion.png)
+![New Dataset Registration(Automated)](./images/new-dataset-ingestion.png)
 
 Figure 2: New Dataset Ingestion (Automated)
 
@@ -75,7 +75,7 @@ By entering data into the Azure Data Factory Metastore via a custom app, Logic A
 
 Figure 3 illustrates how the registered data sources in Azure Data Factory SQL DB Metastore are polled and how data is initially ingested.
 
-![New Data Source Ingestion](./images/new_datastore_ingestion.png)
+![New Data Source Ingestion](./images/new-datastore-ingestion.png)
 
 The Azure Data Factory ingestion master pipeline reads configuration from Azure Data Factory SQL DB Metastore and runs iteratively with respective parameters. Data is moved from source to raw layer in Azure Data Lake with minimal to no change. Data shape is validated based on the Azure Data Factory Metastore, and file formats are converted to a single common format (*e.g.* parquet) before being copied into the enriched layer.
 
