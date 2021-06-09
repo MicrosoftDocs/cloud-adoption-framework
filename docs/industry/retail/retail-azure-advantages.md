@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: overview
 ---
 
-# Azure for Retail
+# Azure for retail
 
 We are at an inflection point unlike any other that we’ve seen before. Retail is being reimagined. The challenges are real. Intense industry disruption, changing consumer expectations, and the need for differentiation to stay relevant. But the opportunities are endless.
 
@@ -17,7 +17,7 @@ Microsoft enables retail organizations to transform their business and deliver e
 
 [Microsoft Azure](https://azure.microsoft.com/services/) offers a wide range of products and services, all with the speed and scale of the cloud. Our databases and storage services make it possible to connect and combine data silos. This combination enables the creation of a digital feedback loop. Digital signals in this loop, such as customer demand, commerce, payments, and distribution, can be captured across the retail value chain. The data can then be connected and synthesized to drive improved business outcomes.
 
-We also have advanced analytics and AI solutions that help retailers gain actionable intelligence and develop intelligent applications. We have a leading position in key 21st century technologies like Internet of Things (IoT), blockchain, and mixed reality. For developers, we have a comprehensive set of tools. These tools can be used with any platform or language to build and manage cloud applications.
+We also have advanced analytics and AI solutions that help retailers gain actionable intelligence and develop intelligent applications. We have a leading position in key twenty-first century technologies like Internet of Things (IoT), blockchain, and mixed reality. For developers, we have a comprehensive set of tools. These tools can be used with any platform or language to build and manage cloud applications.
 
 We aren’t limited to the public cloud either. We provide unique hybrid capabilities that give you the flexibility to innovate in any environment. Microsoft is unique in offering cloud services delivered at the edge or on-premise. This edge computing environment is valuable for retail organizations. These organizations need both modern services and the resiliency on-site computing offers environments. For example, stores and distribution centers that operate around the clock. Security, privacy, compliance, and manageability are key differentiators across our portfolio.
 
@@ -49,13 +49,13 @@ The next step for each retailer depends on where they're at today in their cloud
 
 ## Next steps
 
-Learn more about the [organizational alignment for retail](./organize.md) to understand how to align various stakeholders and teams for increased success during cloud adoption.
+Understand how to align various stakeholders and teams for increased success during cloud adoption. To learn more, see [organizational alignment for retail](./organize.md).
 
 The following articles can guide your cloud adoption journey and help you succeed in the cloud adoption scenario.
 
 - [Cloud adoption strategy for the retail industry](./strategy.md)
 - [Cloud adoption plan for the retail industry](./plan.md)
-- [Review your environment or Azure landing zone(s)](./ready.md)
+- [Review your environment or Azure landing zones](./ready.md)
 - [Migrate common retail industry technologies](./migrate.md)
 - [Innovation in the retail industry](./innovate.md)
 - [Governance in the retail industry](./govern.md)
