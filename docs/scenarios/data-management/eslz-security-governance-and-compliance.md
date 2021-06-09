@@ -53,6 +53,32 @@ Advanced Threat Protection is part of the Advanced Data Security offering, which
 
 Where Advanced Threat Protection is available for the PaaS Services, we recommend enabling this feature by default.
 
+## Understanding the built-in RBAC roles
+
+Azure Storage has two layers of access: service management and data. Subscriptions and storage accounts are accessed through the management layer. Containers, blobs, and other data resources are accessed through the data layer. For example, if you want to get a list of your storage accounts from Azure, you send a request to the management endpoint. If you want a list of filesystems (containers), folders or files in a storage account, you send a request to the appropriate service endpoint.
+
+RBAC roles can contain permissions for management or data layer access. The Reader role, for example, grants read-only access to management layer resources but not read access to any of the data.
+
+Roles such as Owner, Contributor, Reader and Storage Account Contributor permit a security principal to manage a storage account, but do not provide access to the data within that account. Only roles explicitly defined for data access permit a security principal to access data,  however, the aforementioned roles (excluding Reader) can obtain access to the storage keys which can be used in various client tools to access the data.
+
+### Built-in Management Roles
+
+- [Owner](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner):Manage everything, including access to resources. This role will give you key access.
+- [Contributor](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor): Manage everything, excluding access to resources. This role will give you key access.
+- [Storage Account Contributor](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#storage-account-contributor): Full management of storage accounts. **Note**: this role will give you key access.
+- [Reader](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#reader): Read and list resources. This role does not permit key access.
+
+### Built-in Data Roles
+
+- [Storage Blob Data Owner](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#storage-blob-data-owner): Full access to Azure Storage blob containers and data including setting of ownership and managing POSIX access control (ACLs)
+- [Storage Blob Data Contributor](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor): Read, write, and delete Azure Storage containers and blobs.
+- [Storage Blob Data Reader](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#storage-blob-data-reader):  Read and list Azure Storage containers and blobs.
+
+Storage Blob Data Owner is considered a super-user and is granted full access to all mutating operations, including setting the owner of a directory or file as well as ACLs for directories and files for which they are not the owner. Super-user access is the only authorized manner to change the owner of a resource.
+
+>[!NOTE]
+> RBAC assignments can take up to 5 minutes to propagate and take affect.
+
 ## Azure Data Lake Gen 2 RBAC and ACLs
 
 Azure Data Lake Gen 2 is the predominant polyglot storage within the Enterprise Scale Analytics and AI pattern. Three data lake accounts are provisioned per Data Landing Zone.
