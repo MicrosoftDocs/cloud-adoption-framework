@@ -200,23 +200,23 @@ It is recommended that Azure AD groups are used to secure database objects inste
 When deploying an Azure Synapse workspace, a Data Lake Storage Gen 2 account is required from the subscription or manually using the storage account URL. The specified storage account will be set as **primary** for the deployed Azure Synapse workspace to store its data. Azure Synapse stores data in a container, that includes Apache Spark tables, spark application logs under a folder called /synapse/{workspacename}. It also uses container for managing libraries that you choose to install.
 
 During the Synapse workspace deployment through [Azure Portal](https://azure.microsoft.com/en-us/features/azure-portal/), you have the option to either provide an existing storage account or create a new one. The provided storage account will be set as the **primary storage account** for the Synapse workspace.  
-For any of the two options selected, the deployment process automatically grants the Synapse workspace identity data access to the specified Data Lake Storage Gen2 account, using the **Storage Blob Data Contributor** role.  
+For any of the two options selected, the deployment process automatically grants the Synapse workspace identity, access to the specified Data Lake Storage Gen2 account, using the **Storage Blob Data Contributor** role.  
 If the deployment of Synapse workspace happens outside of the Azure Portal, you will have to add Synapse workspace identity to the **Storage Blob Data Contributor** role manually later. It is recommended to assign the role **Storage Blob Data Contributor** on the file system level to follow the least privilege principle.  
 
 It is also possible to manually specify the storage account URL. However, in this case, you will need to contact the storage account owner, and ask them to grant the workspace identity access manually using the **Storage Blob Data Contributor.**
 
-The Synapse workspace identity permission context is used when executing Pipelines, workflows, and notebooks through jobs. If any of the jobs read and/or write to the workspace primary storage, the workspace identity will use the read/write permissions granted through the **Storage Blog Data Contributor**.
+When executing Pipelines, workflows, and notebooks through jobs, the Synapse workspace identity permission context is used . If any of the jobs read and/or write to the workspace primary storage, the workspace identity will use the read/write permissions granted through the **Storage Blog Data Contributor**.
 
 **Storage Blob Data Contributor** role is used to grant read/write/delete permissions to Blob storage resources such as folder and files.
 
 **Storage Account permissions required when using Synapse workspace interactively and for development.**  
-To allow read and write access to other users or groups on the primary storage account after it has been deployed, it will require you to grant access permissions using the **Storage Blob Data Contributor role** or **Access Control Lists** directly to the user or groups. When users log into the Synapse workspace to execute scripts or for development, the user's context permissions are used to allow read/write access on the primary storage.
+To allow read and write access on the primary storage account after it has been deployed, it will require you to grant access permissions using the **Storage Blob Data Contributor role** or **Access Control Lists** through groups. When users log into the Synapse workspace to execute scripts or for development, the user's context permissions are used to allow read/write access on the primary storage.
 
 #### Fine-grained data access control using Access Control Lists
 
-When setting-up Data Lake access control, some organizations require granular level access due to sensitive data stored that cannot be seen by some users or groups. Using Azure RBAC, it is only possible to give read and/or write at the container level. For example, assigning a user or group to Storage Blob Data Contributor role will allow read/write access to all folders in that container. With ACLs you can setup fine-grained access control at the folder and file level to allow read/write on the data that users or groups need access.
+When setting-up Data Lake access control, some organizations require granular level access due to sensitive data stored that cannot be seen by some groups. Using Azure RBAC, it is only possible to allow read and/or write at the storage account and container level. For example, assigning a group to Storage Blob Data Contributor role will allow read/write access to all folders in a container. With ACLs you can setup fine-grained access control at the folder and file level to allow read/write on subset of data for specific groups.
 
-To setup ACLs in Data Lake Storage Gen 2, you can use one of the following methods;  
+**The following methods can be used to setup ACLs in Data Lake Storage Gen 2:**
 
 **Azure CLI**  
 For detailed instructions on how to use **Azure CLI** to grant ACLs permissions in ADLS Gen2 refer to [Use Azure CLI to manage ACLs in Azure Data Lake Storage Gen2](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-acl-cli)
@@ -231,37 +231,36 @@ Consider using **Azure CLI** or **PowerShell** for automation to achieve better 
 
 #### Granting Azure RBAC Reader on the Storage Account
 
-Assigning Azure RBAC Reader role to users or groups in the Synapse workspace primary storage account is required for them to be able to list the storage account and containers when using Data Hub in Synapse Studio.
+Assigning Azure RBAC **Reader** role to groups in the Synapse workspace primary storage account is required to be able to list the storage account and containers when using Data Hub in Synapse Studio.
 
-Using Data Hub in Synapse Studio, users can browse folders and files before they start writing a query or spark code. Users also have some options available in Synapse Studio to help getting started with queries and reading the data from spark from a specific file. These options include Select Top 100 rows, Create External Table, Load to a Dataframe, New Spark Table.
+Using Data Hub in Synapse Studio, users can browse folders and files before they start writing a query or spark code. Users also have some options available in Synapse Studio to help getting started with queries and reading the data using spark from a specific file. These options include Select Top 100 rows, Create External Table, Load to a Dataframe, and create New Spark Table.
 
 Refer to the [Assign Azure roles using the Azure portal - Azure RBAC | Microsoft Docs](https://docs.microsoft.com/azure/role-based-access-control/role-assignments-portal) for detailed instructions on how assign Reader role on the storage account.
 
 #### Granting Read Access on Azure Data Lake Storage Gen 2 using ACLs
 
-The first step on this process, you will need to grant the appropriate ACL permissions for users or groups at the **container level** in the Storage account.
-There are situations where a user or group cannot read the folders or files in the container root. However, they can be granted read/write permissions in child folders of the root. In this case, It will be still required the users or groups to have `execute` permissions on the parent folders, including the root, to traverse these folders which the identity does not have read/write access.
+The first step on this process, you will need to grant the appropriate ACL permissions at the **container level** in the Storage account for the required groups.
+There are situations where certain groups should not be allowed to read the folders or files in the container root. Instead, these groups should be granted read/write permissions in child folders of the root, and each group may require different permission levels.  
 
-Please go through the following steps to get started.
+Follow the steps below to get started.
 
-1. Open Azure Storage Explorer, right click on storage container you want to setup fined-grained access with ACLs and choose Manage Access Control Lists.
+1. Open Azure Storage Explorer, right click on storage container you want to setup fined-grained access with ACLs and choose **Manage Access Control Lists**.
 
 ![Container Level ACLs](./images/container-level-acls.png)
 
-1. Click in Add to include users or groups that you want to grant permissions.
+1. Click **Add** to include groups that you want to grant permissions.
 
 ![Add Entity](./images/add-entity.png)
 
-1. In **Search for a user, group, or service principal.** Type the name of the user of group and click search. The users or groups should show-up. Select the user or group and choose **Add**.
+1. In **Search for a user, group, or service principal.** Type the name of the user of group and click search. The group names matching the search should show-up in the list. Select the desired group and choose **Add**.
 
 ![Add Entity](./images/search-add-entity.png)
 
-After adding the user or group. Select the identity added in the previous step. In Permission for: *name of user or group* check the option **Access**, followed by **Read** and **Execute** options on the right-hand side.
+After adding the group. Select the group added in the previous step. **In Permission for:** check the option **Access**, followed by **Read** and **Execute** options on the right-hand side.
 
 As per [ADLS Best Practices](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-best-practices#use-security-groups-versus-individual-users), it is strongly recommended to assign **Azure Active Directory security groups** instead of assigning individual users to directories and files. Using Security Groups, adding or removing users from the group does not requires updates to ADLS, consequently reduces the chance of exceeding the 32 access control entries per file or folder ACL.
 
-It is important to notice the informative message **"Read and Write permissions will only work for an entity if the entity also has execute permissions on all parent directories, including the container (root directory)"** It means that you will also need to grant Execute permissions on all parent folders, including the container which is the root directory, when granting read or write in a sub directory.
-
+It is important to pay attention to the informative message **"Read and Write permissions will only work for an entity if the entity also has execute permissions on all parent directories, including the container (root directory)"** It means that you will also need to grant **Execute** permission on all parent folders, including the container which is the root directory, when granting read or write in a sub directory. Consider using the [Nested ACL Group Approaches](##NestedACLGroupApproaches) or the **Default**  option to grant **Execute** permission automatic on parent folders.
 
 ![Manage Access](./images/read-execute-acl.png)
 
@@ -275,7 +274,7 @@ After granting permission at the container level, repeat the same steps for any 
 
 #### Granting Write Access on Azure Data Lake Storage Gen 2 using ACLs
 
-Select the folder you want to give users or groups write permission and choose **Manage ACLs.**
+Select the desired folder to give write permission and choose **Manage ACLs.**
 
 ![Manage Access](./images/acl-write.png)
 
@@ -285,7 +284,7 @@ After selecting the appropriate permissions, click **OK** to close.
 
 ![Manage Access](./images/acl-write-two.png)
 
-Repeat the same steps for any additional folders and subfolder you may want to grant access to users or groups.
+Repeat the same steps for any additional folders and subfolder you may want to grant access.
 
 #### Propagate ACLs permissions to children objects
 
@@ -307,7 +306,7 @@ When you use Spark Tables in Synapse Spark Pool, the following folder structure 
 
 synapse/workspaces/{workspacename}/**warehouse**
 
-If you plan to create spark tables in Synapse Spark Pool. It is required that you grant write permission on the **warehouse** folder for the users or group executing the command that creates the Spark Table. If the command is executed through triggered job in a pipeline, you will need to grant write permission to the Synapse workspace identity.
+If you plan to create spark tables in Synapse Spark Pool. It is required that you grant write permission on the **warehouse** folder for the group executing the command that creates the Spark Table. If the command is executed through triggered job in a pipeline, you will need to grant write permission to the Synapse workspace identity.
 
 Create Spark Table example
 
