@@ -1,6 +1,6 @@
 ---
 title: "Organizational structures in the retail industry"
-description: Understand organizational structures in the retail industry
+description: Understand organizational structures in the retail industry for cloud adoption. Create a cloud strategy team and understand common growth patterns.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/01/2021
@@ -9,73 +9,202 @@ ms.service: cloud-adoption-framework
 ms.subservice: govern
 ---
 
-# Organizational structures the Retail industry
+# Organizational structures the retail industry
 
-Organizational structures within the retail industry, like many other industries, tend to be the result of decades of organic or acquisition based growth. This article will build on the steps in the [Organize methodology of the cloud adoption framework](../../organize/index.md) understand how others in the retail industry have re-organized to capitalize on new technologies.
+Organizational structures in the retail industry tend to be the result of decades of organic or acquisition-based growth. This article builds on the Organize methodology in the Cloud Adoption Framework to understand how some companies in the retail industry have reorganized for new technologies. For more information, see [Manage organizational alignment](../../organize/index.md).
 
-## Cloud Strategy Team: Understanding retail decision makers
+## Cloud strategy team and retail decision makers
 
-As with any other industry, support of a [Cloud strategy team](../../organize/cloud-strategy.md) to represent the business needs throughout your cloud adoption journey is critical to long term business success. The following roles (or proxies for each) should be included in recurring meetings of the cloud strategy team.
+As with any other industry, a cloud strategy team is critical to long-term business success. The members of this team represent business needs throughout your cloud adoption. For more information, see [Cloud strategy functions](../../organize/cloud-strategy.md).
 
-|Business Decision Maker roles  |Desired outcomes  |
-|---------|---------|
-|<ul><li>Customer Experience Manager</li><li>Chief Marketing Officer</li></ul>|<ul><li>Deliver seamless, personalized experiences across all channels</li><li>Optimize advertising, marketing campaigns, channels, and purchase behavior with insights</li></ul>|
-|<ul><li>VP of Human Resources</li></ul>|<ul><li>Ensure remote access and collaboration</li></ul>|
-|<ul><li>Chief Financial Officer</li><li>Business Operations</li><li>Head of Supply Chain</li></ul>|<ul><li>Maintain optimal inventory levels</li><li>Make better forecasting decisions</li><li>Reduce loss by tracking assets throughout the logistics journey</li><li>Increase agility and responsiveness across the supply chain</li><li>Increase safety and security of goods/shipments</li></ul>|
-|<ul><li>Customer Experience Manager</li><li>Chief Marketing Officer</li></ul>|<ul><li>Optimize energy efficiency and cost savings</li><li>Reduce labor needs with automation</li><li>Facilitate contactless shopping and fulfillment</li><li>Comply with social distancing</li><li>Set up new fulfillment nodes with micro fulfillment centers</li><li>Use location-based personalized advertising</li></ul>|
+Be sure to include the following roles or proxies for each role in recurring meetings of the cloud strategy team:
 
-When aligning the cloud strategy team, it's important to understand these desired outcomes from various roles. By mapping those desired outcomes to your [cloud adoption strategy](./strategy.md), you can ensure that these roles are adequately represented and can provide feedback to guide and support your [cloud adoption plans](./plan.md).
+:::row:::
+    :::column:::
+        **Business Decision Maker roles**
+    :::column-end:::
+    :::column span="2":::
+        **Desired outcomes**
+    :::column-end:::
+:::row-end:::
 
-## Understand common growth patterns for retailers
+---
+:::row:::
+    :::column:::
+        Customer Experience Manager
+    :::column-end:::
+    :::column span="2":::
+       Deliver seamless, personalized experiences across all channels
+    :::column-end:::
+:::row-end:::
 
-Companies withing the retail industry tend to follow one of three growth patterns. Those corporate growth patterns tend to drive the growth and organization of technology teams.
+:::row:::
+    :::column:::
+        Chief Marketing Officer
+    :::column-end:::
+    :::column span="2":::
+        Optimize advertising, marketing campaigns, channels, and purchase behavior with insights
+    :::column-end:::
+:::row-end:::
 
-- Brick and mortar organization with an organically grown ecommerce presence
-- Rapid-growth startups with most (or all of revenue) coming from online growth
-- Brick and mortar organization which acquired one or more startups
+---
+:::row:::
+    :::column:::
+        VP of Human Resources
+    :::column-end:::
+    :::column span="2":::
+        Ensure remote access and collaboration
+    :::column-end:::
+:::row-end:::
 
-The organizational structures resulting from the above growth patterns has a direct impact on the company's ability to mature in the cloud. To organize around cloud strategies and cloud plans, it is important to understand your current organization. It is also important to compare and contrast between your current organization and the organization required to reach the desired [cloud maturity](./retail-cloud-maturity.md) pictured below.
+---
+:::row:::
+    :::column:::
+        Chief Financial Officer
+    :::column-end:::
+    :::column span="2":::
+        Maintain optimal inventory levels
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        Business Operations
+    :::column-end:::
+    :::column span="2":::
+        Make better forecasting decisions
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        Head of Supply Chain
+    :::column-end:::
+    :::column span="2":::
+        Reduce loss by tracking assets throughout the logistics journey
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+    :::column-end:::
+    :::column span="2":::
+        Increase agility and responsiveness across the supply chain
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+    :::column-end:::
+    :::column span="2":::
+        Increase safety and security of goods and shipments
+    :::column-end:::
+:::row-end:::
 
-[![Retail cloud maturity](./media/maturity-model.png)](./media/maturity-model.png#lightbox)
+---
 
-The following sections will help compare your current and future state objectives. It will also provide a customized course of action to reach the desired objectives.
+:::row:::
+    :::column:::
+        Customer Experience Manager
+    :::column-end:::
+    :::column span="2":::
+        Optimize energy efficiency and cost savings
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        Chief Marketing Officer
+    :::column-end:::
+    :::column span="2":::
+        Reduce labor needs with automation
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+    :::column-end:::
+    :::column span="2":::
+        Facilitate contact-less shopping and fulfillment
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+    :::column-end:::
+    :::column span="2":::
+        Comply with social distancing
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+    :::column-end:::
+    :::column span="2":::
+        Set up new fulfillment nodes with micro fulfillment centers
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+    :::column-end:::
+    :::column span="2":::
+        Use location-based personalized advertising
+    :::column-end:::
+:::row-end:::
 
-## Traditional, Central IT and Centralized operations
+When aligning your cloud strategy team, it's important to understand the desired outcomes for each of the various roles. By mapping these desired outcomes to your [cloud adoption strategy](./strategy.md), you can ensure these roles are adequately represented and can provide feedback to guide and support your [cloud adoption plans](./plan.md).
 
-When a retail companies foundation is based on brick and mortar business, the technology organization likely formed around specific goals: Keep the lights on and keep products moving. As a result, traditional retail organizations tend to focus on facility management and supply chain technologies. The technology organization tends to also prioritize security, stability, and operations over innovation. Technology teams that have grown in this type of organic growth model often operate as a Central IT organization with a focus on central operations.
+## Common growth patterns for retailers
 
-This type of technology team organization is well suited for the first two stages of [retail cloud maturity model](retail-cloud-maturity.md): Siloed retail and Connected retail. If your organization needs to go further in that maturity, be sure to read the next section about CCoE and Enterprise operations.
+Companies in the retail industry tend to follow one of three growth patterns:
 
-![Central IT team](../../_images/ready/org-ready-central-it.png)
+- Brick and mortar organization with an organically grown e-commerce presence
+- Rapid-growth startups with most or all of their revenue coming from online growth
+- Brick and mortar organization that acquired one or more startups
 
-Traditional Central IT teams tend to value consistency and strive to minimize risk, change, or experimentation. This operating model can be replicating in the cloud. To replicate this operating model, the IT organization should study the "Start, Small and Expand approach" to [Azure Landing Zones](./ready.md). From there, the guidance on [Governing](./govern.md) and [Managing](./manage.md) your portfolio will provide valuable information on developing change control practices in the cloud.
+The organizational structures that result from these growth patterns has a direct impact on a company's ability to mature in the cloud. To organize around cloud strategies and cloud plans, it's important to understand your current organization. Compare and contrast between your current organization and the organization required to reach the cloud maturity described below. For more information, see [Cloud maturity model for retail](./retail-cloud-maturity.md).
 
-To prepare for Central IT and central operations in Azure, the team should evaluate how the current organization structure aligns to the Central IT organizational structure pictured above. New virtual teams (V-teams) or adjustments to the org structure may prove useful to deliver your current operations approaches in Azure. specifically, it is critical that early cloud adoption projects focus on building [cloud governance](../../organize/cloud-governance.md) and [cloud platform](../../organize/cloud-platform.md) functions to extend your Central IT model. Those teams will also need to define a plan for extending or modernizing operations tools to support your overall operating model.
+[![Diagram of the stages of digital retail cloud maturity](./media/maturity-model.png)](./media/maturity-model.png#lightbox)
 
-## New paradigms in retail organizations: CCoE and enterprise operations
+The following sections will help compare your current and future state objectives. Use it to provide a customized course of action to reach your goals.
 
-As retail organizations expand into more mature phases of the [retail cloud maturity model](retail-cloud-maturity.md), Central IT models **could potentially** become an inhibitor to innovation for some organizations. It is possible for Central IT to evolve and support more mature models, but re-organization is common in the most successful of modern retailers.
+## Traditional IT, central IT, and centralized operations
 
-**Why?** The article on [Cloud Center of Excellence](../../organize/cloud-center-of-excellence.md) details this general paradigm shift in IT management. Summarizing that article & applying it to retail can be reduced to a few statements: Retail consumers are increasingly fickle. Retail competitors respond with rapid innovation to stay relevant. Rapid innovation requires systems and processes that can channel, not block, rapid change.
+When the foundation of a retail company is a brick and mortar business, the technology organization likely formed around specific goals. Such goals might include *keep the lights on* and *keep products moving*. Traditional retail organizations tend to focus on facility management and supply chain technologies. The technology organization tends to emphasize security, stability, and operations over innovation. Technology teams that have grown in this growth model often operate as a central IT organization, with a focus on central operations.
 
-Rapid growth startups often grow up in this fast pace of change & have processes to channel it. Brick and mortar organizations which have fully embraced & integrate startup acquisition often have some of those controls in place. In either case, innovation tends to have an equal or greater priority, compared to the priority of stability found in the more traditional retail organizations. These organizations tend to empower workload owner to make more decisions & focus on establishing guardrails to protect the company, should poor decisions make it to production. This is a paradigm shift in perspective for traditional Central IT operations teams.
+This type of technology team is well suited for the first two stages of the retail cloud maturity model. These stages are siloed retail and connected retail. If your organization needs to go further in that maturity, be sure to read the next section about Cloud Center of Excellence (CCoE) and enterprise operations.
 
-This type of technology team organization is well suited to achieve the latter two stages of [retail cloud maturity model](retail-cloud-maturity.md): analytics-driven retail and intelligent retail. We refer to these organizations as Cloud Center of Excellence (CCoE) teams. Those teams tend to align best with Enterprise Operations.
+![Central I T team](../../_images/ready/org-ready-central-it.png)
 
-![Cloud Center of Excellence (CCoE) team](../../_images/ready/org-ready-ccoe.png)
+Traditional central IT teams  value consistency and strive to minimize risk, change, or experimentation. This operating model can be replicating in the cloud. To replicate this operating model, study the "start small and expand" approach to Azure landing zones. For more information, see  [Azure landing zones for the retail industry](./ready.md). For more information about developing change control practices in the cloud, see [Governance for the retail industry](./govern.md) and [Managing the cloud for the retail industry](./manage.md).
 
-CCoE teams tend to value innovation and delegated responsibility. To replicate this operating model in the cloud, the CCoE team will need to enable advanced cloud capabilities to enable zero trust security, separation of duties, centralized monitoring and visibility, and policies to force adherence to compliance, security & operations guardrails. Those advanced controls can most easily be deployed using the Enterprise-Scale architecture and implementation options of [Azure Landing Zones](./ready.md). From there, the guidance on [Governing](./govern.md) and [Managing](./manage.md) your portfolio will provide valuable on the types of guardrails you will want to review, deploy, and maintain over time.
+To prepare for central IT and central operations in Azure, evaluate how the current organization structure aligns to the central IT organizational structure pictured above. New virtual teams or adjustments to the organization may be useful to deliver your current operations approaches in Azure. Specifically, early cloud adoption projects should focus on building cloud governance and cloud platform functions to extend your central IT model. Those teams also need to define a plan for extending or modernizing operations tools to support your overall operating model. For more information, see [Cloud governance functions](../../organize/cloud-governance.md) and [Cloud platform functions](../../organize/cloud-platform.md).
 
-To prepare for CCoE and enterprise operations in Azure, the team should evaluate how the current organization structure aligns to the CCoE organizational structure pictured above. New virtual teams (V-teams) or adjustments to the org structure will likely be necessary to deliver this advanced operations approach in Azure. Specifically, it is critical that early cloud adoption projects focus on building the [Cloud Center of Excellence](../../organize/cloud-center-of-excellence.md) functions to modernize any existing Central IT models. Those teams may also need to define a plan for replacing existing operations tools used to support any Central IT processes.
+## Cloud Center of Excellence and enterprise operations
 
-## Next step: The cloud adoption journey for the Retail industry
+As retail organizations expand into more mature phases of the retail cloud maturity model, central IT models could become an inhibitor to innovation for some organizations. It's possible for central IT to evolve and support more mature models. However, reorganization is common for modern retailers.
 
-This basic understanding of organizational structures and critical roles in the retail organization will provide enough information to prepare your cloud adoption strategy.
+Retail consumers are increasingly fickle. Retail competitors respond with rapid innovation to stay relevant. Rapid innovation requires systems and processes that can channel, not block, rapid change. For more information, see [Cloud Center of Excellence](../../organize/cloud-center-of-excellence.md).
 
-- [Cloud adoption strategy for the Retail industry](./strategy.md)
-- [Cloud adoption plan for the Retail industry](./plan.md)
-- [Review your environment or Azure Landing Zone(s)](./ready.md)
-- [Migrate common Retail industry technologies](./migrate.md)
-- [Innovation in the Retail industry](./innovate.md)
-- [Governance in the Retail industry](./govern.md)
-- [Management in the Retail industry](./manage.md)
+Rapid growth startups often begin with this fast pace of change. They have processes to channel the change. Brick and mortar organizations that fully embrace and integrate a startup acquisition often have some of those controls in place. In either case, innovation tends to have an equal or greater priority, compared to stability found in more traditional organizations.
+
+These organizations empower workload owners to make more decisions. They focus on establishing guardrails to protect the company against poor decisions. This approach is a shift in perspective for traditional central IT operations teams.
+
+This type of technology team organization is well suited to achieve the latter two stages of the retail cloud maturity model. These stages are analytics-driven retail and intelligent retail. We refer to these organizations as Cloud Center of Excellence (CCoE) teams. Those teams tend to align best with enterprise operations.
+
+![Cloud Center of Excellence team](../../_images/ready/org-ready-ccoe.png)
+
+CCoE teams tend to value innovation and delegated responsibility. To replicate this operating model in the cloud, the CCoE team enables advanced cloud capabilities:
+
+- Enable zero trust security
+- Separate duties
+- Centralize monitoring and visibility
+- Create policies to force adherence to compliance, security, and operations guardrails
+
+Those advanced controls can most easily be deployed using the enterprise-scale architecture and implementation options of Azure landing zones. For more information, see [Cloud governance functions](../../organize/cloud-governance.md) and [Cloud platform functions](../../organize/cloud-platform.md).
+
+To prepare for CCoE and enterprise operations in Azure, evaluate how the current organization structure aligns to the CCoE organizational structure pictured above. New virtual teams or adjustments to the organization may be useful to deliver this advanced operations approach in Azure. Specifically, early cloud adoption projects should focus on building the CCoE functions to modernize existing central IT models. Those teams may also need to define a plan for replacing existing operations tools used to support any central IT processes.
+
+## Next steps
+
+This basic understanding of organizational structures and critical roles in the retail organization provides information to prepare your cloud adoption strategy.
+
+- [Cloud adoption strategy for the retail industry](./strategy.md)
+- [Cloud adoption plan for the retail industry](./plan.md)
+- [Azure landing zones for the retail industry](./ready.md)
+- [Migrate common retail industry technologies](./migrate.md)
+- [Innovation in the retail industry](./innovate.md)
+- [Governance in the retail industry](./govern.md)
+- [Management in the retail industry](./manage.md)
