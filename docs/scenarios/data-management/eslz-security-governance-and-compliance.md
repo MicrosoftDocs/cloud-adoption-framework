@@ -107,6 +107,8 @@ During security principal-based authorization, permissions will be evaluated in 
 >This description excludes [Shared Key and SAS authentication](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control) methods in which no identity is associated with the operation and assumes that the storage account is accessible via appropriate networking configuration. It also excludes scenarios in which the security principal has been assigned the Storage Blob Data Owner built-in role which provides *super-user* access.
 >It is recommended to set allowSharedKeyAccess to false so that access can be audited by the identity.
 
+Please refer to the [Access control model for Azure Data Lake Storage Gen2 | Microsoft Docs](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control-model#how-permissions-are-evaluated) for more information.
+
 ![howaccessisevaluated](./images/howaccessisevaluatedv2.png)
 
 See [here](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control#common-scenarios-related-to-permissions) for another example of what ACL based permissions are required for a given operation.
@@ -193,7 +195,7 @@ It is recommended that Azure AD groups are used to secure database objects inste
 >[!NOTE]
 >Storing data inside an Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics Pools are one of the options for domains to store [Sensitive Data](eslz-data-privacy.md#sensitive-data).
 
-### Azure Synapse Data Access Control in Azure Data Lake Gen2
+## Azure Synapse Data Access Control in Azure Data Lake Gen2
 
 When deploying an Azure Synapse workspace, a Data Lake Storage Gen 2 account is required from the subscription or manually using the storage account URL. The specified storage account will be set as **primary** for the deployed Azure Synapse workspace to store its data. Azure Synapse stores data in a container, that includes Apache Spark tables, spark application logs under a folder called /synapse/{workspacename}. It also uses container for managing libraries that you choose to install.
 
@@ -213,16 +215,6 @@ To allow read and write access to other users or groups on the primary storage a
 #### Fine-grained data access control using Access Control Lists
 
 When setting-up Data Lake access control, some organizations require granular level access due to sensitive data stored that cannot be seen by some users or groups. Using Azure RBAC, it is only possible to give read and/or write at the container level. For example, assigning a user or group to Storage Blob Data Contributor role will allow read/write access to all folders in that container. With ACLs you can setup fine-grained access control at the folder and file level to allow read/write on the data that users or groups need access.
-
-Before you start implementing fined-grained access with ACLs, is important to understand how ACLs permissions are evaluated.
-
-1. Azure Role assignments are evaluated first and take priority over any ACL assignments.
-1. If the operation is fully authorized based on Azure role assignment, then ACLs are not evaluated at all.
-1. If the operation is not fully authorized, then ACLs are evaluated.
-
-![RBAC ACLs Evaluation](./images/RBAC-ACLsEvaluation.png)
-
-Please refer to the [Access control model for Azure Data Lake Storage Gen2 | Microsoft Docs](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control-model#how-permissions-are-evaluated) for more information.
 
 To setup ACLs in Data Lake Storage Gen 2, you can use one of the following methods;  
 
