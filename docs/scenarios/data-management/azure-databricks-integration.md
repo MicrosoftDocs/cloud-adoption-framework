@@ -102,7 +102,7 @@ For **Azure Databricks Analytics and Data Science**:
 1. Enable workspace options specific to **Azure Databricks Engineering Workspace**.
 
 >[!NOTE]
->During the creation of a new Domain we will alter the configuration of all Azure Databricks Workspaces within a Data Landing Zone. Please see [Domain & Data Product Deployment Process](eslz-deployment-models.md#domain--data-product-deployment-process) for how this is implemented with Azure Databricks shared Workspaces.
+>During the creation of a new Domain we will alter the configuration of all Azure Databricks Workspaces within a Data Landing Zone. Please see [Domain & Data Product Deployment Process](deployment-models.md#domain--data-product-deployment-process) for how this is implemented with Azure Databricks shared Workspaces.
 
 ### External Hive Metastore
 

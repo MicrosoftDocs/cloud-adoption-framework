@@ -34,21 +34,21 @@ items:
     - name: Design area considerations
       items:
       - name: Enterprise enrollment
-        href: ./eslz-enterprise-enrollment-and-azure-ad-tenants.md
+        href: ./enterprise-enrollment-and-azure-ad-tenants.md
       - name: Identity
-        href: ./eslz-identity-and-access-management.md
+        href: ./identity-and-access-management.md
       - name: Network topology and connectivity
-        href: ./eslz-network-topology-and-connectivity.md
+        href: ./network-topology-and-connectivity.md
       - name: Resource organization
-        href: ./eslz-management-group-and-subscription-organization.md
+        href: ./management-group-and-subscription-organization.md
       - name: Governance disciplines
-        href: ./eslz-security-governance-and-compliance.md
+        href: ./security-governance-and-compliance.md
       - name: Operations baseline
-        href: ./eslz-management-and-monitoring.md
+        href: ./management-and-monitoring.md
       - name: Business continuity and disaster recovery
-        href: ./eslz-business-continuity-and-disaster-recovery.md
+        href: ./business-continuity-and-disaster-recovery.md
       - name: Deployment options
-        href: ./eslz-platform-automation-and-devops.md
+        href: ./platform-automation-and-devops.md
 
   - name: Migrate to the cloud
     href: migrate.md
@@ -62,52 +62,52 @@ items:
   - name: Enterprise-Scale construction set
     items:
     - name: Overview
-      href: ./eslz-overview.md
+      href: ./overview.md
     - name: Identity and access management
-      href: ./eslz-identity-and-access-management.md
+      href: ./identity-and-access-management.md
     - name: Management group and subscription organization
       items:
        - name: Overview
-         href: ./eslz-management-group-and-subscription-organization.md
+         href: ./management-group-and-subscription-organization.md
        - name: Policies
-         href: ./eslz-policies.md
+         href: ./policies.md
        - name: Data Management Landing Zone
-         href: ./eslz-data-management-landing-zone.md
+         href: ./data-management-landing-zone.md
        - name: Data Landing Zone
          items:
           - name: Overview
-            href: ./eslz-data-landing-zone.md
+            href: ./data-landing-zone.md
           - name: Data Domains
-            href: ./eslz-data-landing-zone-domains.md
+            href: ./data-landing-zone-domains.md
           - name: Data Products
-            href: ./eslz-data-landing-zone-data-products.md
+            href: ./data-landing-zone-data-products.md
           - name: Division and Consumption
-            href: ./eslz-data-landing-zone-division-and-consumption.md
+            href: ./data-landing-zone-division-and-consumption.md
     - name: Network topology and connectivity
-      href: ./eslz-network-topology-and-connectivity.md
+      href: ./network-topology-and-connectivity.md
     - name: Management and monitoring
-      href: ./eslz-management-and-monitoring.md
+      href: ./management-and-monitoring.md
     - name: Business continuity and disaster recovery
-      href: ./eslz-business-continuity-and-disaster-recovery.md
+      href: ./business-continuity-and-disaster-recovery.md
     - name: Security governance and compliance
       items:
         - name: Security Overview
-          href: ./eslz-security-governance-and-compliance.md
+          href: ./security-governance-and-compliance.md
         - name: Data Privacy
-          href: ./eslz-data-privacy.md
+          href: ./data-privacy.md
         - name:  Security Provisioning
-          href: ./eslz-security-provisioning.md
+          href: ./security-provisioning.md
       
     - name: Platform automation and DevOps
       items:
         - name:  Overview
-          href: ./eslz-dataops.md
+          href: ./dataops.md
         - name: Personas and Teams
-          href: ./eslz-persona-and-teams.md
+          href: ./persona-and-teams.md
         - name: Teams Functions
-          href: ./eslz-team-functions.md
+          href: ./team-functions.md
         - name: Deployment Models
-          href: ./eslz-deployment-models.md
+          href: ./deployment-models.md
 
 
   - name: Well-Architected data workloads
@@ -118,55 +118,55 @@ items:
   - name: Architectures
     items:
        - name: Data Management Landing Zone
-         href: ./eslz-data-management-landing-zone.md
+         href: ./data-management-landing-zone.md
        - name: Data Landing Zone
          items:
           - name: Overview
-            href: ./eslz-data-landing-zone.md
+            href: ./data-landing-zone.md
           - name: Data Domains
-            href: ./eslz-data-landing-zone-domains.md
+            href: ./data-landing-zone-domains.md
           - name: Data Products
-            href: ./eslz-data-landing-zone-data-products.md
+            href: ./data-landing-zone-data-products.md
           - name: Frequently Asked Questions
-            href: ./eslz-faqs.md
+            href: ./faqs.md
        
 
   - name: Best practices
     items:
       - name: Platform Provisioning
-        href: ./eslz-platform-provisioning.md
+        href: ./platform-provisioning.md
       - name: Data Lake
         items:
           - name:  Managing Data Lake Access 
-            href: ./eslz-data-lake-access.md        
+            href: ./data-lake-access.md        
           - name:  Data Lake Services
-            href: ./eslz-data-lake-services.md
+            href: ./data-lake-services.md
       - name:  Azure Databricks Integration
-        href: ./eslz-azure-databricks-integration.md
+        href: ./azure-databricks-integration.md
       - name: Azure Synapse Analytics Integration
-        href: ./eslz-azure-synapse-analytics-integration.md
+        href: ./azure-synapse-analytics-integration.md
       - name: Azure Purview Integration
         items:
           - name: Readiness Checklist
-            href: ./eslz-purview-checklist.md 
+            href: ./purview-checklist.md 
           - name: Deployment Best Practices
-            href: ./eslz-purview-deployment.md       
+            href: ./purview-deployment.md       
       - name: Data Landing Zone Ingestion
         items:
           - name: Data Ingestion
-            href: ./eslz-data-ingestion.md
+            href: ./data-ingestion.md
           - name: SAP Data Ingestion
-            href: ./eslz-sap-data-ingestion.md
+            href: ./sap-data-ingestion.md
           - name: Automated Ingestion Pattern
-            href: ./eslz-automated-ingestion-pattern.md
+            href: ./automated-ingestion-pattern.md
       - name: Data Science Environment
         items:
           - name: Data Science Blueprint
-            href: ./eslz-data-science-blueprint.md
+            href: ./data-science-blueprint.md
           - name: Data Science Deployment
-            href: ./eslz-data-science-deployment.md
+            href: ./data-science-deployment.md
       - name: Data Science Workflow and MLOps
-        href: ./eslz-data-science-workflow-and-mlops.md
+        href: ./data-science-workflow-and-mlops.md
 
   - name: Featured Azure products
     items:

@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Enterprise-Scale support for 'data management and analytics'
   
-Copying ESLZ Specific implemntation references here as a placeholder
+Copying ESLZ Specific implementation references here as a placeholder
 
 
 ## Reference Architecture OR Technology Solution
