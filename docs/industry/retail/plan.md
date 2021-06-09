@@ -1,6 +1,6 @@
 ---
 title: "Cloud adoption plan for the retail industry"
-description: Develop a cloud adoption plan for organizations in the retail industry using the Plan methodology in the Cloud Adoption Framework.
+description: Develop a cloud adoption plan for the retail industry by using the Plan methodology in the Cloud Adoption Framework.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/01/2021
@@ -11,9 +11,9 @@ ms.subservice: strategy
 
 # Cloud adoption plan for the retail industry
 
-The Cloud Adoption Framework Plan methodology helps create an overall cloud adoption plan. A plan guides the programs and teams involved in your cloud-based digital transformation. This guidance provides templates for creating your backlog and plans for building skills across your teams. 
+The [Cloud Adoption Framework Plan methodology](../../plan/index.md), helps you develop an overall cloud adoption plan. A plan guides the programs and teams involved in your cloud-based digital transformation. This guidance provides templates to help create your backlog and plans for building skills across your teams, all based on what you're trying to do in the cloud.
 
-This article helps develop a refined plan that offers guidance for the retail industry. For more information, see [Develop a cloud adoption plan](../../plan/index.md).
+This article helps develop a refined plan that offers guidance for the retail industry.
 
 ## Plan for digital transformation outcomes
 
@@ -25,62 +25,44 @@ Retail domains can interact in the shopping process without creating a departmen
 
 Cloud adoption is a catalyst for digital transformation across the retail industry. Planning for digital transformation of a business requires more than basic project planning. Project management needs to organize several programs, which create waves or horizons of change.
 
-Retailers can connect those horizons to the maturity levels of the retail cloud maturity model. This model provides a program plan that aligns efforts across the business and IT. Using this model also allows your business to prepare for planned changes in manageable stages in the image below. For more information, see [Cloud maturity model for retail](./retail-cloud-maturity.md).
+Retailers can map these horizons to the maturity levels of the retail cloud maturity model. This model provides a program plan that aligns efforts across the business and IT. Using this model also allows your business to prepare for planned changes in manageable stages in the image below. For more information, see [Cloud maturity model for retail](./retail-cloud-maturity.md).
 
-[![Retail cloud maturity](./media/maturity-model.png)](./retail-cloud-maturity.md)
+[![Diagram of the stages of digital retail cloud maturity](./media/maturity-model.png)](./retail-cloud-maturity.md)
 
-- Connected retail
+- **Connected retail:** Migrate and modernize technology solutions to enable advanced innovations and reduce operational overhead.
 
-  Migrate and modernize technology solutions to enable advanced innovations and reduce operational overhead.
+- **Analytics-driven retail:** Align to a common data model, unlocking advanced analytics while improving data governance.
 
-- Analytics-driven retail
-
-  Align to a common data model, unlocking advanced analytics while improving data governance.
-
-- Intelligent retail
-
-  Deliver intelligent retail experiences that integrate AI and machine learning into custom applications and Microsoft retail cloud offerings.
+- **Intelligent retail:** Deliver intelligent retail experiences that integrate AI and machine learning into custom applications and Microsoft retail cloud offerings.
 
 ## Integrate actionable program plans
 
-To deliver the business promises of each cloud maturity horizon, integrate program plans. Successful programs require actionable plans. These plans should extend your strategy, project plans, environmental controls, adoption projects, and your overall operating model. 
+To deliver the business promises of each cloud maturity horizon requires integration of holistic program plans. Successful program execution requires actionable plans that extend your strategy, project plans, environmental controls, adoption projects, and your overall operating model.
 
 Use the following technology platform scenarios to extend the cloud adoption scenario for retail. These scenarios add the detailed plans for programs required to reach the target horizon.
 
 > [!IMPORTANT]
 > The resources here are multi-page guides that outline complex technology scenarios. These scenarios can be integrated into your cloud adoption plans to guide programs. Complete your cloud adoption strategy, cloud adoption plan, and define your target horizons before exploring the following scenarios.
 
-- Connected retail
+- **Connected retail:** You can add various migration scenarios to your migration process to help reach a connected retail maturity. Retailers often integrate the hybrid and multicloud scenario to include hosting options in the migration program. For more information, see [The One Migration approach to migrating the IT portfolio](../../scenarios/index.md) and [Introduction to hybrid and multicloud](../../scenarios/hybrid/index.md).
 
-  You can add various migration scenarios to your migration process to help reach a connected retail maturity. Retailers often integrate the hybrid and multicloud scenario to include hosting options in the migration program. For more information, see [The One Migration approach to migrating the IT portfolio](../../scenarios/index.md) and [Introduction to hybrid and multicloud](../../scenarios/hybrid/index.md).
+- **Analytics-driven retail:** The Data Management and Analytics scenario (coming soon) can help centralize, govern, and analyze your complex data portfolio.
 
-- Analytics-driven retail
-
-  The Data Management and Analytics scenario (coming soon) can help centralize, govern, and analyze your complex data portfolio.
-
-- Intelligent retail
-
-  The Modern Applications scenario (coming soon) guides citizen developers, professional developers, and DevOps teams as they improve retail workflows and functions.
+- **Intelligent retail:** The Modern Applications scenario guides citizen developers, professional developers, and DevOps teams as they improve retail workflows and functions.
 
 ## Build on planning basics
 
 Whatever your target horizon, basic cloud adoption planning helps prepare each program for success. Include the following tasks in your planning efforts:
 
-- Understand you current state
+- **Understand you current state:** Rationalize your digital estate against your planning horizons to understand how each program affects your portfolio. For more information, see [Gather inventory data for a digital estate](/azure/cloud-adoption-framework/digital-estate/inventory).
 
-  Rationalize your digital estate against your planning horizons to understand how each program affects your portfolio. For more information, see [Gather inventory data for a digital estate](/azure/cloud-adoption-framework/digital-estate/inventory).
+- **Build a plan:** Create a DevOps backlog and cloud adoption plan to track and manage each program. For more information, see [Cloud adoption plan and Azure DevOps](/azure/cloud-adoption-framework/plan/template).
 
-- Build a plan
-
-  Create a DevOps backlog and cloud adoption plan to track and manage each program. For more information, see [Cloud adoption plan and Azure DevOps](/azure/cloud-adoption-framework/plan/template).
-
-- Develop skills
-
-  Establish a skill plan to prepare your staff for success. For more information, see [Get started on a skills readiness path](/azure/cloud-adoption-framework/plan/suggested-skills).
+- **Develop skills:** Establish a skilling plan to prepare your staff for success. For more information, see [Get started on a skills readiness path](/azure/cloud-adoption-framework/plan/suggested-skills).
 
 ## Next steps
 
-The next step is to review your environment or Azure landing zone. These resources provide guidance found throughout cloud adoption.
+The next step is to review your environment or Azure landing zone. The following articles take you to guidance found at specific points in the cloud adoption journey. This guidance helps you succeed in your cloud adoption scenario.
 
 - [Cloud adoption plan for the retail industry](./plan.md)
 - [Azure landing zones for the retail industry](./ready.md)
