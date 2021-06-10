@@ -1,6 +1,6 @@
 ---
 title: "Omnichannel optimization in the retail industry"
-description: Learn about omnichannel optimization in the retail industry by using Azure services to integrate channels selling goods and services.
+description: Learn about omnichannel optimization in the retail industry by using Azure services to integrate channels that sell goods and services.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/07/2021
@@ -17,23 +17,11 @@ Retail businesses collect different types of customer data. This data includes w
 
 ## Business outcomes of omnichannel optimization
 
-Retailers gather, prepare, reason over, and act on data from all available sources. Retailers who use that data to optimize the customer experience across channels can improve the following factors:
-
-- Increasing customer loyalty
-
-  Insights into customer behavior deliver relevant offers at the right time to bring customers back to your brand repeatedly.
-
-- Growing revenue
-
-  Providing seamless shopping experiences in brick-and-mortar stores and digital channels offers a key competitive opportunity for growth.
-
-- Improving customer satisfaction
-
-  Visibility across channels can customize experiences. You can understand preferences and better serve customers to improve satisfaction.
-
-- Enhancing marketing effectiveness
-
-  Marketers can use the analytical power of AI to build smarter, more effective advertisements and campaigns. Marketing that resonates with customers can maximize marketing ROI.
+- Retailers that can gather, prepare, reason over, and act on the data from all available sources to optimize the customer experience across channels are set up for success when it comes to:
+- **Increasing customer loyalty:** Driving loyalty through insights into customer behavior to deliver relevant offers at the right time brings customers back to the brand repeatedly.
+- **Growing revenue:** Providing seamless shopping experiences and paths to purchase in brick-and-mortar stores and digital channels is key competitive differentiator to top-line growth.
+- **Improving customer satisfaction:** Visibility across channels means a more customized experience. Retailers that can understand preferences and better serve customers and gain insights into crafting offers based on needs.
+- **Enhancing marketing effectiveness:** Marketers that use the analytical power of AI build smarter, more effective advertisements and campaigns that resonate with customers and maximize marketing ROI.
 
 ## Omnichannel optimization challenges
 
@@ -45,37 +33,27 @@ This integration challenge causes problems across retail channels:
 - Pricing, promotion, product availability, and fulfillment strategies remain inconsistent.
 - Customers have fragmented, irrelevant, and inconsistent shopping experiences.
 
-To overcome these challenges, you need a simple, scalable approach to integrating the analytics and machine learning capabilities.
+To overcome these challenges, retailers need a simple, scalable approach to integrating the analytics and machine learning capabilities.
 
 ### How Microsoft enables retailers for omnichannel optimization
 
-Microsoft enables retailers to understand preferences, better serve customers, and gain insights into crafting offers based on needs. Microsoft tools provide visibility and a consistent experience across channels. Azure is a comprehensive cloud platform with the ability to analyze massive amounts of customer data using analytics to deliver better customer experiences both online and in store.
+Microsoft enables retailers to understand preferences, better serve customers, and gain insights into crafting offers based on needs, with tools that provide visibility and a consistent experience across channels. Azure is a comprehensive cloud platform with the ability to analyze massive amounts of customer data using analytics to deliver better customer experiences both online and in store.
 
 ### How it works
 
-- Identify data inputs
+- **Identify data inputs:** The first step is to determine data inputs. Azure can apply data from physical and virtual retail channels as input for analytics. These sources include on-premises customer, product, or transactional data. They also include sales and point of sales data, cost-efficiency data, and workforce optimization data.
 
-  The first step is to determine data inputs. Azure can apply data from physical and virtual retail channels as input for analytics. These sources include on-premises customer, product, or transactional data. They also include sales and point of sales data, cost-efficiency data, and workforce optimization data.
+- **Enable actionable, real-time analysis:** Azure Data Factory ingests data from input streams. Azure Databricks can process that data for actionable, real-time analysis. Azure Data Lake Storage stores the ingested data.
 
-- Enable actionable, real-time analysis
+- **Accelerate insights:** After data has been ingested and prepared, the Azure Synapse Analytics engine acts as a data warehouse. Data is modeled and delivered as actionable insights that drive business outcomes. Azure Synapse Analytics is up to 14 times faster and costs 94 percent less than other cloud providers. You can accelerate insights needed to support personalized offers and experiences while managing costs.
 
-  Azure Data Factory ingests data from input streams. Azure Databricks can process that data for actionable, real-time analysis. Azure Data Lake Storage stores the ingested data.
+- **Empower the entire business:** Power BI enables you to visualize data in a way that democratizes insights. Seeing the data helps the entire business to improve customer satisfaction, increase revenue, and increase customer loyalty.
 
-- Accelerate insights
-
-  After data has been ingested and prepared, the Azure Synapse Analytics engine acts as a data warehouse. Data is modeled and delivered as actionable insights that drive business outcomes. Azure Synapse Analytics is up to fourteen times faster and costs 94% less than other cloud providers.  You can accelerate insights needed to support personalized offers and experiences while managing costs.
-
-- Empower the entire business
-
-  Power BI enables you to visualize data in a way that democratizes insights. Seeing the data helps the entire business to improve customer satisfaction, increase revenue, and increase customer loyalty.
-
-- Build smarter, more effective advertisements
-
-  Using the AI capabilities Azure helps retailers build smarter, more effective advertisements that resonate with audiences across channels.
+- **Build smarter, more effective advertisements:** Using the AI capabilities Azure helps retailers build smarter, more effective advertisements that resonate with audiences across channels.
 
 ### Omnichannel success stories
 
-- See how Fabletics applied data to buck the retail rut.  
+- See how Fabletics used data to buck the retail rut.  
 - Learn how [Dick's Sporting Goods](https://customers.microsoft.com/en-us/story/857270-dickssportinggoods-vmware-azure) stayed in the game during COVID-19 lockdowns.
 
 ## Next steps
@@ -86,8 +64,8 @@ These resources offer guidance throughout the cloud adoption scenario.
 
 - [Cloud adoption strategy for the retail industry](./strategy.md)
 - [Cloud adoption plan for the retail industry](./plan.md)
-- [Azure Landing Zones for the retail industry](./ready.md)
-- [Migrate common Retail industry technologies](./migrate.md)
+- [Azure landing zones for the retail industry](./ready.md)
+- [Migrate common retail industry technologies](./migrate.md)
 - [Innovation in the retail industry](./innovate.md)
 - [Governance in the retail industry](./govern.md)
 - [Management in the retail industry](./manage.md)
