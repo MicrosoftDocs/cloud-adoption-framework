@@ -24,7 +24,7 @@ Domain Name System (DNS) is a critical design topic in the overall enterprise-sc
 
 - The maximum number of private DNS zones to which a virtual network can link with auto-registration is one.
 
-- Familiarize with [Azure Private DNS zone limits](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits#azure-dns-limits)
+- Familiarize with [Azure Private DNS zone limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#azure-dns-limits)
 
 **Design recommendations:**
 
@@ -32,12 +32,12 @@ Domain Name System (DNS) is a critical design topic in the overall enterprise-sc
 
 - For environments where name resolution across Azure and on-premises is required, use existing DNS infrastructure (for example, Active Directory integrated DNS) deployed onto at least two virtual machines (VMs). Configure DNS settings in virtual networks to use those DNS servers.
 
-- For environment with Azure Firewall, evaluate using it as [DNS proxy](https://docs.microsoft.com/en-us/azure/firewall/dns-settings)
+- For environment with Azure Firewall, evaluate using it as [DNS proxy](/azure/firewall/dns-settings)
 
 - Use a virtual machine as a resolver for cross-premises DNS resolution with Azure Private DNS.
 
-- You can still link an Azure Private DNS zone to the virtual networks and use DNS servers as hybrid resolvers with conditional forwarding to on-premises DNS names, such as `corporate.contoso.com`, by using on-premises DNS servers. You can configure on-premises servers with conditional forwarders to resolver VMs in Azure for the Azure Private DNS zone (for example, `azure.contoso.com`).
+- You can still link an Azure Private DNS zones to the virtual networks and use DNS servers as hybrid resolvers with conditional forwarding to on-premises DNS names, such as `corporate.contoso.com`, by using on-premises DNS servers. You can configure on-premises servers with conditional forwarders to resolver VMs in Azure for the Azure Private DNS zone (for example, `azure.contoso.com`).
 
 - Special workloads that require and deploy their own DNS (such as Red Hat OpenShift) should use their preferred DNS solution.
 
-- Create the Azure Private DNS zones within a global connectivity subscription. The Azure Private DNS zones that should be created include the zone required for accessing [Azure PaaS services](https://docs.microsoft.com/en-us/azure/private-link/private-endpoint-dns) via a private endpoint (for example, `privatelink.database.windows.net` or `privatelink.blob.core.windows.net`).
+- Create the Azure Private DNS zones within a global connectivity subscription. The Azure Private DNS zones that should be created include the zone required for accessing Azure PaaS services via a [private endpoint](/azure/private-link/private-endpoint-dns#azure-services-dns-zone-configuration) (for example, `privatelink.database.windows.net` or `privatelink.blob.core.windows.net`).
