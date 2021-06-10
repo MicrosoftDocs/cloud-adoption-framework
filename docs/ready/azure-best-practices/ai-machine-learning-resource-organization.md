@@ -129,3 +129,13 @@ To adhere to the above requirements, Contoso has set up their resources in the f
 - All resources are created in a single Azure region.
 
 ![Contoso reference implementation](./media/azure-ml-setup-contoso-reference-implementation.png)
+
+## Next steps
+
+To learn about best practices on Machine Learning DevOps with Azure Machine Learning, see [Machine learning DevOps guide](./ai-machine-learning-mlops.md).
+> [!div class="nextstepaction"]
+> [Machine learning DevOps guide](./ai-machine-learning-mlops.md)
+
+To learn about considerations when managing budgets, quota and cost with Azure Machine Learning, see [Manage budgets, costs, and quota for Azure Machine Learning at organizational scale](./optimize-ai-machine-learning-cost.md).
+> [!div class="nextstepaction"]
+> [Manage budgets, costs, and quota for Azure Machine Learning at organizational scale](./optimize-ai-machine-learning-cost.md)
