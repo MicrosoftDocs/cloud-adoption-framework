@@ -1,5 +1,5 @@
 ---
-title: "Azure Enterprise Scale Analytics security, governance, and compliance for 'data management and analytics'"
+title: "Enterprise-Scale security, governance, and compliance for 'data management and analytics'"
 description: Describe how this enterprise-scale scenario can improve security, governance, and compliance of 'data management and analytics'
 author: BrianBlanchard
 ms.author: brblanch
@@ -24,7 +24,7 @@ There are multiple services that support DaR encryption, including Storage Accou
 
 ## Networking
 
-The Enterprise Scale Analytics and AI prescribed view is to use Private Endpoints for all PaaS services and no public IPs for any IaaS (Infrastructure-as-a-Service). See [Enterprise Scale Analytics and AI Networking](./network-topology-and-connectivity.md).
+The Enterprise Scale Analytics and AI prescribed view is to use Private Endpoints for all PaaS services and no public IPs for any IaaS (Infrastructure-as-a-Service). See [Enterprise Scale Analytics and AI Networking](./eslz-network-topology-and-connectivity.md).
 
 ## Azure Defender
 
@@ -52,6 +52,32 @@ Each of these plans is explained separately in the Security Center documentation
 Advanced Threat Protection is part of the Advanced Data Security offering, which is a unified package for advanced security capabilities. Advanced Threat Protection can be accessed and managed via the Azure portal. The feature is available for General Purpose and Memory Optimized servers.
 
 Where Advanced Threat Protection is available for the PaaS Services, we recommend enabling this feature by default.
+
+## Understanding the built-in RBAC roles
+
+Azure Storage has two layers of access: service management and data. Subscriptions and storage accounts are accessed through the management layer. Containers, blobs, and other data resources are accessed through the data layer. For example, if you want to get a list of your storage accounts from Azure, you send a request to the management endpoint. If you want a list of filesystems (containers), folders or files in a storage account, you send a request to the appropriate service endpoint.
+
+RBAC roles can contain permissions for management or data layer access. The Reader role, for example, grants read-only access to management layer resources but not read access to any of the data.
+
+Roles such as Owner, Contributor, Reader and Storage Account Contributor permit a security principal to manage a storage account, but do not provide access to the data within that account. Only roles explicitly defined for data access permit a security principal to access data,  however, the aforementioned roles (excluding Reader) can obtain access to the storage keys which can be used in various client tools to access the data.
+
+### Built-in Management Roles
+
+- [Owner](/azure/role-based-access-control/built-in-roles#owner):Manage everything, including access to resources. This role will give you key access.
+- [Contributor](/azure/role-based-access-control/built-in-roles#contributor): Manage everything, excluding access to resources. This role will give you key access.
+- [Storage Account Contributor](/azure/role-based-access-control/built-in-roles#storage-account-contributor): Full management of storage accounts. **Note**: this role will give you key access.
+- [Reader](/azure/role-based-access-control/built-in-roles#reader): Read and list resources. This role does not permit key access.
+
+### Built-in Data Roles
+
+- [Storage Blob Data Owner](/azure/role-based-access-control/built-in-roles#storage-blob-data-owner): Full access to Azure Storage blob containers and data including setting of ownership and managing POSIX access control (ACLs)
+- [Storage Blob Data Contributor](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor): Read, write, and delete Azure Storage containers and blobs.
+- [Storage Blob Data Reader](/azure/role-based-access-control/built-in-roles#storage-blob-data-reader):  Read and list Azure Storage containers and blobs.
+
+Storage Blob Data Owner is considered a super-user and is granted full access to all mutating operations, including setting the owner of a directory or file as well as ACLs for directories and files for which they are not the owner. Super-user access is the only authorized manner to change the owner of a resource.
+
+>[!NOTE]
+> RBAC assignments can take up to 5 minutes to propagate and take affect.
 
 ## Azure Data Lake Gen 2 RBAC and ACLs
 
@@ -90,9 +116,74 @@ The table above gives an overview of how ACLs and RBAC can be used to manage per
 >[!CAUTION]
 >For every subdomain dataset two Azure AD Security Groups should be created: one for Read and Write and the other for Read-only.\
 \
-If the dataset is non-sensitive, Users Principal Names(UPNs) and Service Principal object can be added to these groups. If the dataset is SENSITIVE, we would recommend that only Service Principal object and/or Managed Service Identity (MSI) be added to these groups. Please see [Data Privacy](data-privacy.md) for further details on our sensitive data security pattern.
+If the dataset is non-sensitive, Users Principal Names(UPNs) and Service Principal object can be added to these groups. If the dataset is SENSITIVE, we would recommend that only Service Principal object and/or Managed Service Identity (MSI) be added to these groups. Please see [Data Privacy](eslz-data-privacy.md) for further details on our sensitive data security pattern.
 
 Resist the opportunity to directly assign individual users or service principals to ACLs. Using an Azure AD Security Group structure will allow you to add and remove users or service principals without the need to reapply ACLs to an entire directory structure. Instead, you can just add or remove users and service principals from the appropriate Azure AD security group.
+
+## How access is evaluated in ADLS
+
+During security principal-based authorization, permissions will be evaluated in the following order as depicted in the diagram below and described in [the documentation](/azure/storage/blobs/data-lake-storage-access-control-model#how-permissions-are-evaluated):
+
+- RBAC is evaluated first and takes priority over any ACL assignments.
+- If the operation is fully authorized based on RBAC then ACLs are not evaluated at all.
+- If the operation is not fully authorized then ACLs are evaluated.
+
+>[!NOTE]
+>The above permission model applies to ADLS only and not general purpose (blob) storage without HNS enabled which does not support ACLs.
+>This description excludes [Shared Key and SAS authentication](/azure/storage/blobs/data-lake-storage-access-control) methods in which no identity is associated with the operation and assumes that the storage account is accessible via appropriate networking configuration. It also excludes scenarios in which the security principal has been assigned the Storage Blob Data Owner built-in role which provides *super-user* access.
+>It is recommended to set allowSharedKeyAccess to false so that access can be audited by the identity.
+
+Please refer to the [Access control model for Azure Data Lake Storage Gen2 | Microsoft Docs](/azure/storage/blobs/data-lake-storage-access-control-model#how-permissions-are-evaluated) for more information.
+
+:::image type="content" source="./images/how-access-evaluated.png" alt-text="How access is evaluated" lightbox="./images/how-access-evaluated.png":::
+
+See [here](/azure/storage/blobs/data-lake-storage-access-control#common-scenarios-related-to-permissions) for another example of what ACL based permissions are required for a given operation.
+
+>[!NOTE]
+>
+> - ACLs apply only to security principals in the same tenant, including guest users.
+> - Azure Databricks mount points can be created by any user with permissions to attach to a cluster. The mount point will be configured using service principal credentials or the AAD passthrough option, but at the time of creation permissions are not evaluated. Only when an operation is performed using the mount point will permissions be evaluated and any user who can attach to a cluster can attempt to use the mount point. Securing access to ADLS from Azure Databricks is covered in more detail [here](https://github.com/hurtn/datalake-ADLS-access-patterns-with-Databricks).
+> - When creating a table definition in Databricks or Synapse, the user issuing the DDL needs to have read access to the underlying data.
+
+## Configuring access to ADLS and Data Lake Storage Configurations
+
+There are three possible approaches to implement access control in ADLS using RBAC or ACLs or a combination of both.
+
+### Configure access using RBAC only
+
+If container level access control is sufficient then RBAC assignments may offer a simpler management approach to securing data however be aware that role assignments are limited to 2000 per subscription therefore ACLs are recommended for a large number of restricted data assets or where more granular access control is required.
+
+### Configure access using ACLs only (Recommended for Enterprise Scale Analytics and AI)
+
+As per the [ADLS best practices](/azure/storage/blobs/data-lake-storage-best-practices#use-security-groups-versus-individual-users) it is recommended to assign access control entries to a security group rather than an individual user or service principal. When adding or removing users from the group no updates to ADLS are required and using groups also reduces the chance of exceeding the 32 access control entries per file or folder ACL. After the 4 default entries that leaves only 28 remaining for permission assignments.
+
+However, even when using groups, a proliferation of access control entries may occur at top levels of the directory tree, particularly when very granular permissions with many different groups are required. In order for each group to obtain read access to the files contained in their folder, they will need execute permissions from root, which is the container level, all the way down to the folder they are trying to access. It is likely that the 32 access control entry limit will be reached in the root or levels close to root. An example of this scenario is depicted below:
+
+![flat groups issue](./images/flat-groups-issue.png)
+
+### Configure access using both RBAC and ACLs
+
+Storage Blob Data Contributor/Reader only provides access to the data and not the storage account. It can be granted at the storage account or container level. When Storage Blob Data Contributor is assigned, ACLs __cannot__ be used to manage access. Where Storage Blob Data Reader is assigned, elevated write permissions can be granted using ACLs. Refer to the section above on [how access is evaluated in ADLS](#how-access-is-evaluated-in-adls).
+
+This approach favours scenarios where most users need read access to but only a few need write access. The data lake zones could be different storage accounts and data assets could be different containers, or the data lake zones could be represented by containers and data assets represented by folders.
+
+## Nested ACL Group Approaches
+
+There are two possible solutions to this outlined below but the recommended approach is to make use of nested groups.
+
+### Option 1: The Parent Execute Group
+
+Where possible before files and folders are created, begin with a parent group which is assigned execute permissions to both default and access ACLs at the container level. Then add the groups requiring data access to the parent group. This technique is known as nesting groups, and from an ADLS authorization perspective, the member group inherits the permissions of the parent group, providing "global" execute permissions to all member groups. The member group in this case will not need execute permissions as these permissions will be inherited because it belongs to the parent group.  Additional nesting may provide greater flexibility and agility if the security groups that represent teams or automated jobs are added to the data access reader and writer groups.
+
+![Nested Groups](./images/nested-groups.png)
+
+### Option 2: The Other ACL entry (Recommended)
+
+Another way to ensure that every part of the path from root to lowest level has execute permissions (--x) is to use the "Other" ACL entry set at the container/root, with defaults and access ACLs applied as shown in the first diagram below. This execute permission propagates down any subsequently added child folders until the depth/folder where the intended access group should have Read and Execute permissions (in the lowest part of the chain as depicted in the second image), which will grant that group access to read the data appropriately. This approach works similarly for write access.
+
+![root_acl](./images/acl-other-root.png)
+
+![folder_acl](./images/acl-other-lowest.png)
 
 #### Data Lake Zones Security
 
@@ -129,4 +220,127 @@ Other polyglot storage such as PostgreSQL, MySQL, Azure SQL Database, SQL Manage
 It is recommended that Azure AD groups are used to secure database objects instead of individual Azure AD user accounts. These AD Azure Groups would be used to authenticate users and protects database objects. Similar to the data lake pattern, you could use your Domain or Data Products onboarding to create these groups within you Azure AD service.
 
 >[!NOTE]
->Storing data inside an Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics Pools are one of the options for domains to store [Sensitive Data](data-privacy.md#sensitive-data).
+>Storing data inside an Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics Pools are one of the options for domains to store [Sensitive Data](eslz-data-privacy.md#sensitive-data).
+
+## Azure Synapse Data Access Control in Azure Data Lake Gen2
+
+When deploying an Azure Synapse workspace, a Data Lake Storage Gen 2 account is required from the subscription or manually using the storage account URL. The specified storage account will be set as **primary** for the deployed Azure Synapse workspace to store its data. Azure Synapse stores data in a container, that includes Apache Spark tables, spark application logs under a folder called /synapse/{workspacename}. It also uses container for managing libraries that you choose to install.
+
+During the Synapse workspace deployment through [Azure Portal](https://azure.microsoft.com/en-us/features/azure-portal/), you have the option to either provide an existing storage account or create a new one. The provided storage account will be set as the **primary storage account** for the Synapse workspace.  
+For any of the two options selected, the deployment process automatically grants the Synapse workspace identity, access to the specified Data Lake Storage Gen2 account, using the **Storage Blob Data Contributor** role.  
+If the deployment of Synapse workspace happens outside of the Azure Portal, you will have to add Synapse workspace identity to the **Storage Blob Data Contributor** role manually later. It is recommended to assign the role **Storage Blob Data Contributor** on the file system level to follow the least privilege principle.  
+
+It is also possible to manually specify the storage account URL. However, in this case, you will need to contact the storage account owner, and ask them to grant the workspace identity access manually using the **Storage Blob Data Contributor.**
+
+When executing Pipelines, workflows, and notebooks through jobs, the Synapse workspace identity permission context is used . If any of the jobs read and/or write to the workspace primary storage, the workspace identity will use the read/write permissions granted through the **Storage Blog Data Contributor**.
+
+**Storage Blob Data Contributor** role is used to grant read/write/delete permissions to Blob storage resources such as folder and files.
+
+**Storage Account permissions required when using Synapse workspace interactively and for development.**  
+To allow read and write access on the primary storage account after it has been deployed, it will require you to grant access permissions using the **Storage Blob Data Contributor role** or **Access Control Lists** through groups. When users log into the Synapse workspace to execute scripts or for development, the user's context permissions are used to allow read/write access on the primary storage.
+
+#### Fine-grained data access control using Access Control Lists
+
+When setting-up Data Lake access control, some organizations require granular level access due to sensitive data stored that cannot be seen by some groups. Using Azure RBAC, it is only possible to allow read and/or write at the storage account and container level. For example, assigning a group to Storage Blob Data Contributor role will allow read/write access to all folders in a container. With ACLs you can setup fine-grained access control at the folder and file level to allow read/write on subset of data for specific groups.
+
+**The following methods can be used to setup ACLs in Data Lake Storage Gen 2:**
+
+**Azure CLI**  
+For detailed instructions on how to use **Azure CLI** to grant ACLs permissions in ADLS Gen2 refer to [Use Azure CLI to manage ACLs in Azure Data Lake Storage Gen2](/en-us/azure/storage/blobs/data-lake-storage-acl-cli)
+
+**PowerShell**  
+For detailed instructions on how to use **PowerShell** to grant ACLs permissions in ADLS Gen2 refer to [Use PowerShell to manage ACLs in Azure Data Lake Storage Gen2](/en-us/azure/storage/blobs/data-lake-storage-acl-powershell)
+
+**Azure Storage Explorer**  
+For details instructions on how to use and install, refer to [Get started with Storage Explorer | Microsoft Docs.](/azure/vs-azure-tools-storage-manage-with-storage-explorer?tabs=windows)
+
+Consider using **Azure CLI** or **PowerShell** for automation to achieve better scalability when a large amount of folders and files are expected in the ACLs setup process.
+
+#### Granting Azure RBAC Reader on the Storage Account
+
+Assigning Azure RBAC **Reader** role to groups in the Synapse workspace primary storage account is required to be able to list the storage account and containers when using Data Hub in Synapse Studio.
+
+Using Data Hub in Synapse Studio, users can browse folders and files before they start writing a query or spark code. Users also have some options available in Synapse Studio to help getting started with queries and reading the data using spark from a specific file. These options include Select Top 100 rows, Create External Table, Load to a Dataframe, and create New Spark Table.
+
+Refer to the [Assign Azure roles using the Azure portal - Azure RBAC | Microsoft Docs](/azure/role-based-access-control/role-assignments-portal) for detailed instructions on how assign Reader role on the storage account.
+
+#### Granting Read Access on Azure Data Lake Storage Gen 2 using ACLs
+
+The first step on this process, you will need to grant the appropriate ACL permissions at the **container level** in the Storage account for the required groups.
+There are situations where certain groups should not be allowed to read the folders or files in the container root. Instead, these groups should be granted read/write permissions in child folders of the root, and each group may require different permission levels.  
+
+Follow the steps below to get started.
+
+1. Open Azure Storage Explorer, right click on storage container you want to setup fined-grained access with ACLs and choose **Manage Access Control Lists**.
+
+![Container Level ACLs](./images/container-level-acls.png)
+
+1. Click **Add** to include groups that you want to grant permissions.
+
+![Add Entity](./images/add-entity.png)
+
+1. In **Search for a user, group, or service principal.** Type the name of the user of group and click search. The group names matching the search should show-up in the list. Select the desired group and choose **Add**.
+
+![Add Entity](./images/search-add-entity.png)
+
+After adding the group. Select the group added in the previous step. **In Permission for:** check the option **Access**, followed by **Read** and **Execute** options on the right-hand side.
+
+As per [ADLS Best Practices](/en-us/azure/storage/blobs/data-lake-storage-best-practices#use-security-groups-versus-individual-users), it is strongly recommended to assign **Azure Active Directory security groups** instead of assigning individual users to directories and files. Using Security Groups, adding or removing users from the group does not requires updates to ADLS, consequently reduces the chance of exceeding the 32 access control entries per file or folder ACL.
+
+It is important to pay attention to the informative message **"Read and Write permissions will only work for an entity if the entity also has execute permissions on all parent directories, including the container (root directory)"** It means that you will also need to grant **Execute** permission on all parent folders, including the container which is the root directory, when granting read or write in a sub directory. Consider using the [Nested ACL Group Approaches](##NestedACLGroupApproaches) or the **Default**  option to grant **Execute** permission automatic on parent folders.
+
+![Manage Access](./images/read-execute-acl.png)
+
+**Granting permissions automatically to new children of the directory using the Default*** **option.**
+
+If you want to grant ACLs permissions automatically for new children of the directory, use the option **Default*** and select the required permissions read, write, or execute.
+
+![Manage Access](./images/read-write-child-objects.png)
+
+After granting permission at the container level, repeat the same steps for any subfolder you want to give access to users or groups.
+
+#### Granting Write Access on Azure Data Lake Storage Gen 2 using ACLs
+
+Select the desired folder to give write permission and choose **Manage ACLs.**
+
+![Manage Access](./images/acl-write.png)
+
+If you want to grant ACLs permissions automatically for new children of the directory, use the option **Default*** and select the appropriate permissions **Read/write** and **execute.**  As mentioned in the Granting Read Access on ADLS Gen 2 section, this option will automatically propagate parent folder permissions to newly created children's items, such as folder and files.
+
+After selecting the appropriate permissions, click **OK** to close.
+
+![Manage Access](./images/acl-write-two.png)
+
+Repeat the same steps for any additional folders and subfolder you may want to grant access.
+
+#### Propagate ACLs permissions to children objects
+
+When granting ACLs permissions to folders that already contain child objects such as folder and files, you may need to use the option **Propagate Access Control Lists option.** This option enables propagation of ACLs from the parent folder to its child objects. It is important to understand that ACLs propagation is not easily reversible. You will need to evaluate case by case to ensure you are propagating the correct ACL permissions to the right security group. If you use this option at the container level, it will propagate the permissions from the container level to all sub-folders within the container.
+
+To propagate ACL permissions, right-click on the parent folder you desire to propagate the ACL permissions. This action will propagate permissions for all users to the existing child objects from the parent folder you are performing the action.
+
+![Manage Access](./images/acl-propagate.png)
+
+In Propagate Access Control Lists, choose How to handle failures depending on the desired behavior you want in case of failures. You can choose from the two options: **Continue on Failure** or **Quit on failure.**
+
+Check the box I understand that propagating ACLs cannot be easily reversable and click OK.
+
+![Manage Access](./images/acl-propagate-two.png)
+
+#### Considerations when using Spark Tables in Synapse Spark Pool.
+
+When you use Spark Tables in Synapse Spark Pool, the following folder structure will be created automatically by Synapse workspace in the root of the container in the workspace primary storage.  
+
+synapse/workspaces/{workspacename}/**warehouse**
+
+If you plan to create spark tables in Synapse Spark Pool. It is required that you grant write permission on the **warehouse** folder for the group executing the command that creates the Spark Table. If the command is executed through triggered job in a pipeline, you will need to grant write permission to the Synapse workspace identity.
+
+Create Spark Table example
+
+```python
+df.write.saveAsTable("<tablename>")
+```
+
+## References
+
+[How to set up access control for your Synapse workspace - Azure Synapse Analytics | Microsoft Docs](/azure/synapse-analytics/security/how-to-set-up-access-control?WT.mc_id=Portal-Microsoft_Azure_Synapse)
