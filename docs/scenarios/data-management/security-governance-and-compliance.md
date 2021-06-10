@@ -1,9 +1,9 @@
 ---
-title: "Enterprise-Scale security, governance, and compliance for 'data management and analytics'"
+title: "Enterprise-Scale security, governance, and compliance for 'data management and analytics' in Azure"
 description: Describe how this enterprise-scale scenario can improve security, governance, and compliance of 'data management and analytics'
-author: BrianBlanchard
-ms.author: brblanch
-ms.date: 09/11/2020
+author: andrehass
+ms.author: andre.hass
+ms.date: 06/10/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -24,7 +24,7 @@ There are multiple services that support DaR encryption, including Storage Accou
 
 ## Networking
 
-The Enterprise Scale Analytics and AI prescribed view is to use Private Endpoints for all PaaS services and no public IPs for any IaaS (Infrastructure-as-a-Service). See [Enterprise Scale Analytics and AI Networking](./eslz-network-topology-and-connectivity.md).
+The Enterprise Scale Analytics and AI prescribed view is to use Private Endpoints for all PaaS services and no public IPs for any IaaS (Infrastructure-as-a-Service). See [Enterprise Scale Analytics and AI Networking](./network-topology-and-connectivity.md).
 
 ## Azure Defender
 
@@ -116,7 +116,7 @@ The table above gives an overview of how ACLs and RBAC can be used to manage per
 >[!CAUTION]
 >For every subdomain dataset two Azure AD Security Groups should be created: one for Read and Write and the other for Read-only.\
 \
-If the dataset is non-sensitive, Users Principal Names(UPNs) and Service Principal object can be added to these groups. If the dataset is SENSITIVE, we would recommend that only Service Principal object and/or Managed Service Identity (MSI) be added to these groups. Please see [Data Privacy](eslz-data-privacy.md) for further details on our sensitive data security pattern.
+If the dataset is non-sensitive, Users Principal Names(UPNs) and Service Principal object can be added to these groups. If the dataset is SENSITIVE, we would recommend that only Service Principal object and/or Managed Service Identity (MSI) be added to these groups. Please see [Data Privacy](data-privacy.md) for further details on our sensitive data security pattern.
 
 Resist the opportunity to directly assign individual users or service principals to ACLs. Using an Azure AD Security Group structure will allow you to add and remove users or service principals without the need to reapply ACLs to an entire directory structure. Instead, you can just add or remove users and service principals from the appropriate Azure AD security group.
 
@@ -220,7 +220,7 @@ Other polyglot storage such as PostgreSQL, MySQL, Azure SQL Database, SQL Manage
 It is recommended that Azure AD groups are used to secure database objects instead of individual Azure AD user accounts. These AD Azure Groups would be used to authenticate users and protects database objects. Similar to the data lake pattern, you could use your Domain or Data Products onboarding to create these groups within you Azure AD service.
 
 >[!NOTE]
->Storing data inside an Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics Pools are one of the options for domains to store [Sensitive Data](eslz-data-privacy.md#sensitive-data).
+>Storing data inside an Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics Pools are one of the options for domains to store [Sensitive Data](data-privacy.md#sensitive-data).
 
 ## Azure Synapse Data Access Control in Azure Data Lake Gen2
 
@@ -281,21 +281,21 @@ Follow the steps below to get started.
 
 1. In **Search for a user, group, or service principal.** Type the name of the user of group and click search. The group names matching the search should show-up in the list. Select the desired group and choose **Add**.
 
-![Add Entity](./images/search-add-entity.png)
+![Search Add Entity](./images/search-add-entity.png)
 
 After adding the group. Select the group added in the previous step. **In Permission for:** check the option **Access**, followed by **Read** and **Execute** options on the right-hand side.
 
 As per [ADLS Best Practices](/en-us/azure/storage/blobs/data-lake-storage-best-practices#use-security-groups-versus-individual-users), it is strongly recommended to assign **Azure Active Directory security groups** instead of assigning individual users to directories and files. Using Security Groups, adding or removing users from the group does not requires updates to ADLS, consequently reduces the chance of exceeding the 32 access control entries per file or folder ACL.
 
-It is important to pay attention to the informative message **"Read and Write permissions will only work for an entity if the entity also has execute permissions on all parent directories, including the container (root directory)"** It means that you will also need to grant **Execute** permission on all parent folders, including the container which is the root directory, when granting read or write in a sub directory. Consider using the [Nested ACL Group Approaches](##NestedACLGroupApproaches) or the **Default**  option to grant **Execute** permission automatic on parent folders.
+It is important to pay attention to the informative message **"Read and Write permissions will only work for an entity if the entity also has execute permissions on all parent directories, including the container (root directory)"** It means that you will also need to grant **Execute** permission on all parent folders, including the container which is the root directory, when granting read or write in a sub directory. Consider using the [nested ACL group approaches](#nested-acl-group-approaches) or the **Default**  option to grant **Execute** permission automatic on parent folders.
 
-![Manage Access](./images/read-execute-acl.png)
+![Read execute ACL](./images/read-execute-acl.png)
 
 **Granting permissions automatically to new children of the directory using the Default*** **option.**
 
 If you want to grant ACLs permissions automatically for new children of the directory, use the option **Default*** and select the required permissions read, write, or execute.
 
-![Manage Access](./images/read-write-child-objects.png)
+![Read and write child objects](./images/read-write-child-objects.png)
 
 After granting permission at the container level, repeat the same steps for any subfolder you want to give access to users or groups.
 
@@ -303,13 +303,13 @@ After granting permission at the container level, repeat the same steps for any 
 
 Select the desired folder to give write permission and choose **Manage ACLs.**
 
-![Manage Access](./images/acl-write.png)
+![Write ACL - 1](./images/acl-write.png)
 
 If you want to grant ACLs permissions automatically for new children of the directory, use the option **Default*** and select the appropriate permissions **Read/write** and **execute.**  As mentioned in the Granting Read Access on ADLS Gen 2 section, this option will automatically propagate parent folder permissions to newly created children's items, such as folder and files.
 
 After selecting the appropriate permissions, click **OK** to close.
 
-![Manage Access](./images/acl-write-two.png)
+![Write ACL - 2](./images/acl-write-two.png)
 
 Repeat the same steps for any additional folders and subfolder you may want to grant access.
 
@@ -319,13 +319,13 @@ When granting ACLs permissions to folders that already contain child objects suc
 
 To propagate ACL permissions, right-click on the parent folder you desire to propagate the ACL permissions. This action will propagate permissions for all users to the existing child objects from the parent folder you are performing the action.
 
-![Manage Access](./images/acl-propagate.png)
+![Propagate ACL permissions - 1](./images/acl-propagate.png)
 
 In Propagate Access Control Lists, choose How to handle failures depending on the desired behavior you want in case of failures. You can choose from the two options: **Continue on Failure** or **Quit on failure.**
 
 Check the box I understand that propagating ACLs cannot be easily reversable and click OK.
 
-![Manage Access](./images/acl-propagate-two.png)
+![Propagate ACL permissions - 2](./images/acl-propagate-two.png)
 
 #### Considerations when using Spark Tables in Synapse Spark Pool.
 
