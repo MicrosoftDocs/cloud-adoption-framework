@@ -18,7 +18,7 @@ In this article, we present best practices to optimize costs, manage budgets, an
 
 - [Optimize compute resources to meet workload requirements.](#optimize-compute-to-meet-workload-requirements)
 - [Drive the best use of a team's budget.](#drive-the-best-use-of-a-teams-budget)
-- [Plan, manage and share budgets, cost, and quota at enterprise-scale.](#plan-manage-and-share-budgets-cost-and-quota)
+- [Plan, manage and share budgets, cost, and quota at enterprise-scale.](#plan-manage-and-share-budgets-cost-and-quota) 
 
 ## Optimize compute to meet workload requirements
 
