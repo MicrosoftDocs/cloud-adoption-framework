@@ -32,6 +32,10 @@ The following diagram and table outline a number of scenarios that follow the sa
 | Technology platforms | SAP (Classic & HANA) | Kubernetes | [Mainframes](../infrastructure/mainframe-migration/index.md) |
 | Additional scenarios | [Secure workloads](../migrate/azure-best-practices/migrate-best-practices-security-management.md) | [Multitenant environments](/azure/lighthouse/how-to/migration-at-scale?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json) | NetApp |
 
+Watch this short video for more information about using the right tools to move, manage and optimize your cloud environment.
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4NHCS]
+
 ## Migrate methodology
 
 In each of the preceding migration scenarios, the same basic process will guide your efforts as you move your existing workloads to the cloud, as shown here:
