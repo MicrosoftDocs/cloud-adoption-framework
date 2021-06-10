@@ -228,3 +228,7 @@ When you [pick a region for your compute](https://azure.microsoft.com/global-inf
 ## Next steps
 
 To learn more about how to organize and set up Azure Machine Learning environments, see [Organize and set up Azure Machine Learning environments](./ai-machine-learning-resource-organization.md).
+
+To learn about best practices on Machine Learning DevOps with Azure Machine Learning, see [Machine learning DevOps guide](./ai-machine-learning-mlops.md).
+> [!div class="nextstepaction"]
+> [Machine learning DevOps guide](./ai-machine-learning-mlops.md)
