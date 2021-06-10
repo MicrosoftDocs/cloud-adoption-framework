@@ -1,7 +1,7 @@
 ---
 title: Enterprise-scale security governance and compliance for Azure Virtual Desktop infrastructure
 description: Learn key design considerations and recommendations for security governance and compliance in an enterprise-scale Azure Virtual Desktop infrastructure.
-author: AdamWhitlatch
+author: whitscripts
 ms.author: dawhitla
 ms.date: 05/18/2021
 ms.topic: conceptual
