@@ -40,4 +40,4 @@ Domain Name System (DNS) is a critical design topic in the overall enterprise-sc
 
 - Special workloads that require and deploy their own DNS (such as Red Hat OpenShift) should use their preferred DNS solution.
 
-- Create the Azure Private DNS zones within a global connectivity subscription. The Azure Private DNS zones that should be created include the zone required for accessing Azure PaaS services via a [private endpoint](/azure/private-link/private-endpoint-dns#azure-services-dns-zone-configuration) (for example, `privatelink.database.windows.net` or `privatelink.blob.core.windows.net`).
+- Create the Azure Private DNS zones within a global connectivity subscription. The Azure Private DNS zones that should be created include the zones required for accessing Azure PaaS services via a [private endpoint](/azure/private-link/private-endpoint-dns#azure-services-dns-zone-configuration) (for example, `privatelink.database.windows.net` or `privatelink.blob.core.windows.net`).
