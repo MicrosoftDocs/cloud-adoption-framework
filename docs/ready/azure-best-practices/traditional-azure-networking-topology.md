@@ -22,21 +22,21 @@ Explore key design considerations and recommendation surrounding network topolog
 
 **Design considerations:**
 
-- Various network topologies can connect multiple landing zone virtual networks. Examples are one large flat virtual network, multiple virtual networks connected with multiple ExpressRoute circuits or connections, hub and spoke, full mesh, and hybrid.
+- Various network topologies can connect multiple landing zone virtual networks. Examples are one large flat virtual network, multiple virtual networks connected with multiple Azure ExpressRoute circuits or connections, hub and spoke, full mesh, and hybrid.
 
-- Virtual networks cannot traverse subscription boundaries. However, you can achieve connectivity between virtual networks across different subscriptions by using virtual network peering, an ExpressRoute circuit, or VPN gateways.
+- Virtual networks can't traverse subscription boundaries. However, you can achieve connectivity between virtual networks across different subscriptions by using virtual network peering, an ExpressRoute circuit, or VPN gateways.
 
 - Virtual network peering is the preferred method to connect virtual networks in Azure. You can use virtual network peering to connect virtual networks in the same region, across different Azure regions, and across different Azure Active Directory (Azure AD) tenants.
 
-- Virtual network peering and global virtual network peering are not transitive. User-defined routes (UDRs) and network virtual appliances (NVAs) are required to enable a transit network. For more information, see [Hub-spoke network topology in Azure](/azure/architecture/reference-architectures/hybrid-networking/hub-spoke).
+- Virtual network peering and global virtual network peering aren't transitive. User-defined routes (UDRs) and network virtual appliances (NVAs) are required to enable a transit network. For more information, see [Hub-spoke network topology in Azure](/azure/architecture/reference-architectures/hybrid-networking/hub-spoke).
 
-- An Azure DDoS standard protection plan can be shared across all VNets in a single Azure AD Tenant to protect resources with public IP addresses. For more information, see [Azure DDoS Protection Standard](/azure/ddos-protection/ddos-protection-overview).
+- An Azure DDoS Protection standard protection plan can be shared across all VNets in a single Azure AD Tenant to protect resources with public IP addresses. For more information, see [Azure DDoS Protection Standard](/azure/ddos-protection/ddos-protection-overview).
 
-  - Only resources with Public IP addresses are covered by Azure DDoS standard protection plans.
+  - Only resources with Public IP addresses are covered by Azure DDoS Protection standard protection plans.
 
-    - 100 public IP addresses are included in the cost of an Azure DDoS standard protection plan across all protected VNets associated to the DDoS plan. Any additional public IP addresses over the 100 included with the plan, are charged separately in addition. For more information on Azure DDoS Standard Protection pricing see the [pricing page](https://azure.microsoft.com/pricing/details/ddos-protection/) or the [FAQ](/azure/ddos-protection/ddos-faq#how-does-pricing-work).
+    - 100 public IP addresses are included in the cost of an Azure DDoS Protection standard protection plan across all protected VNets associated to the DDoS Protection plan. Any other public IP addresses over the 100 included with the plan, are charged separately also. For more information on Azure DDoS Protection Standard Protection pricing, see the [pricing page](https://azure.microsoft.com/pricing/details/ddos-protection/) or the [FAQ](/azure/ddos-protection/ddos-faq#how-does-pricing-work).
 
-    - Review the [supported resources of Azure DDoS standard protection plans](/azure/ddos-protection/ddos-faq#what-are-the-supported-protected-resource-types)
+    - Review the [supported resources of Azure DDoS Protection standard protection plans](/azure/ddos-protection/ddos-faq#what-are-the-supported-protected-resource-types)
 
 - You can use ExpressRoute circuits to establish connectivity across virtual networks within the same geopolitical region or by using the premium add-on for connectivity across geopolitical regions. Keep these points in mind:
 
@@ -44,7 +44,7 @@ Explore key design considerations and recommendation surrounding network topolog
 
   - Bandwidth will be constrained to the ExpressRoute gateway SKU.
 
-  - You must still deploy and manage UDRs if they require inspection or logging for traffic across virtual networks.
+  - You must deploy and manage UDRs if they require inspection or logging for traffic across virtual networks.
 
 - VPN gateways with Border Gateway Protocol (BGP) are transitive within Azure and on-premises, but they do not provide transitive access to networks connected via ExpressRoute.
 
@@ -56,7 +56,7 @@ Explore key design considerations and recommendation surrounding network topolog
 
 - ExpressRoute is bound to certain limits, such as maximum number of ExpressRoute connections per ExpressRoute gateway, or maximum number of routes that can be advertised from Azure to on-premises via ExpressRoute private peering. Such limits are documented in the [ExpressRoute limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#expressroute-limits) article.
 
-- A VPN gateway's maximum aggregated throughput is 10 Gbps. It supports up to 30 Site-to-Site or network-to-network tunnels.
+- A VPN gateway's maximum aggregated throughput is 10 Gbps. It supports up to 30 site-to-site or network-to-network tunnels.
 
 **Design recommendations:**
 
@@ -64,9 +64,9 @@ Explore key design considerations and recommendation surrounding network topolog
 
   - A network architecture deployed within a single Azure region.
 
-  - A network architecture spanning multiple Azure regions, with no need for transitive connectivity between virtual networks for landing zones across regions.
+  - A network architecture that spans multiple Azure regions, with no need for transitive connectivity between virtual networks for landing zones across regions.
 
-  - A network architecture spanning multiple Azure regions, and global VNet peering can be used to connect virtual networks across Azure regions.
+  - A network architecture that spans multiple Azure regions, and global VNet peering can be used to connect virtual networks across Azure regions.
 
   - There's no need for transitive connectivity between VPN and ExpressRoute connections.
 
@@ -74,7 +74,7 @@ Explore key design considerations and recommendation surrounding network topolog
 
   - There's a dependency on centralized NVAs and granular routing.
 
-- For regional deployments, primarily use the hub-and-spoke topology. Use landing-zone virtual networks that connect with virtual network peering to a central-hub virtual network for cross-premises connectivity via ExpressRoute, VPN for branch connectivity, spoke-to-spoke connectivity via NVAs and UDRs, and internet-outbound protection via Azure Firewall or other third-party NVA. The following figure shows this topology. This allows for appropriate traffic control to meet most requirements for segmentation and inspection.
+- For regional deployments, primarily use the hub-and-spoke topology. Use landing zone virtual networks that connect with virtual network peering to a central hub virtual network for cross-premises connectivity via ExpressRoute, VPN for branch connectivity, spoke-to-spoke connectivity via NVAs and UDRs, and internet-outbound protection via Azure Firewall or other third-party NVA. The following diagram shows this topology. This configuration allows for appropriate traffic control to meet most requirements for segmentation and inspection.
 
   ![Diagram that illustrates a hub-and-spoke network topology.](./media/hub-and-spoke-topology.png)
 
@@ -112,7 +112,7 @@ The following figure shows this topology.
 
   - All Landing Zone and Platform VNets should use this plan.
 
-- Use your existing network, MPLS and SD-WAN, for connecting branch locations with corporate headquarters. Transit in Azure between ExpressRoute and VPN gateways isn't supported.
+- Use your existing network, MPLS, and SD-WAN, for connecting branch locations with corporate headquarters. Transit in Azure between ExpressRoute and VPN gateways isn't supported.
 
 - For network architectures with multiple hub-and-spoke topologies across Azure regions, use global virtual network peering to connect landing-zone virtual networks when a small number of landing zones need to communicate across regions. This approach offers benefits such as high network bandwidth with global virtual network peering, as allowed by the VM SKU. However, it will bypass the central NVA, in case traffic inspection or filtering is required. This would also be subject to [limitations on global virtual network peering](/azure/virtual-network/virtual-network-peering-overview#constraints-for-peered-virtual-networks).
 
@@ -122,7 +122,7 @@ The following figure shows this topology.
 
 *Figure 4: Landing zone connectivity design.*
 
-- When your organization requires hub-and-spoke network architectures across more than two Azure regions and global transit connectivity between landing zones, virtual networks across Azure regions are required. You can implement this architecture by interconnecting central-hub virtual networks with global virtual network peering and using UDRs and NVAs to enable global transit routing. Because the complexity and management overhead are high, it is recommend to evaluate a global transit network architecture with Virtual WAN.
+- When your organization requires hub-and-spoke network architectures across more than two Azure regions and global transit connectivity between landing zones, virtual networks across Azure regions are required. You can implement this architecture by interconnecting central-hub virtual networks with global virtual network peering and using UDRs and NVAs to enable global transit routing. Because the complexity and management overhead are high, it's recommended to evaluate a global transit network architecture with Virtual WAN.
 
 - Use [Azure Monitor for Networks (preview)](/azure/azure-monitor/insights/network-insights-overview) to monitor the end-to-end state of your networks on Azure.
 
@@ -131,4 +131,4 @@ The following figure shows this topology.
   - The maximum number of virtual network peering connections per virtual network.
   - The maximum number of prefixes advertised from Azure to on-premises via ExpressRoute with private peering.
 
-  Ensure that the number of spoke virtual networks connected to the hub virtual network do not exceed any of those limits.
+  Ensure that the number of spoke virtual networks connected to the hub virtual network don't exceed any of those limits.
