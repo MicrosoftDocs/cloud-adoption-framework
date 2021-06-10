@@ -1,6 +1,6 @@
 ---
 title: "Supply chain optimization in the retail industry"
-description: Learn how to use Azure for supply chain optimization. Gain visibility into the bottlenecks between procurement, logistics, and delivery.
+description: Learn how to use Azure for supply chain optimization in the retail industry. Gain visibility into the bottlenecks between procurement, logistics, and delivery.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/07/2021
@@ -11,29 +11,21 @@ ms.subservice: overview
 
 # Supply chain optimization in the retail industry
 
-The speed of retail is accelerating while customer demands evolve. An astonishing 74% of consumers say they're more likely to purchase again from a company after receiving same-day delivery. In the store, if a product isn't on the shelf, a customer can order from another retailer on their mobile phone.
+The speed of retail is accelerating while customer demands evolve. An astonishing 74 percent of consumers say they're more likely to purchase again from a company after receiving same-day delivery. In the store, if a product isn't on the shelf, a customer can order from another retailer on their mobile phone.
 
 Supply chain optimization is necessary for retailers to meet and exceed your customer expectations. In optimization, you gain visibility into the operational bottlenecks that exist between procurement, logistics, and delivery.
 
 ## Business outcomes of supply chain optimization
 
-Siloed sources provide information for a single source of data. Supply chain optimization requires creation of a modernized data environment to replace siloed sources. This approach bridges the gap between systems to provide a complete picture. You can use this visibility for the following activities:
+Supply chain optimization hinges on the creation of a modernized data environment that collects information from siloed sources, creates a single source of truth, and bridges the gap between systems to provide a complete picture. You can use this visibility for the following activities:
 
-- Improve demand forecasting
+- **Improve demand forecasting:** Real-time analytics enables retailers to optimize labor and logistics and effectively forecast demand.
 
-  Real-time analytics enables retailers to optimize labor and logistics and effectively forecast demand.
+- **Drive operational changes and efficiencies:** A unified view of the business allows you to optimize existing processes. You can turn operational data into actionable insights through data, analytics, and AI.
 
-- Drive operational changes and efficiencies
+- **Reduce costs and improve customer experience:** Analyzing supply chain data with analytics helps you put the right products in the hands of customers. Providing products to customers when they want them reduces unnecessary inventory.
 
-  A unified view of the business allows you to optimize existing processes. You can turn operational data into actionable insights through data, analytics, and AI.
-
-- Reduce costs and improve customer experience
-
-  Analyzing supply chain data with analytics helps you put the right products in the hands of customers. Providing products to customers when they want them reduces unnecessary inventory.
-
-- Increase safety and security of goods and shipments
-
-  A modernized data environment optimizes logistics. It reduces loss by tracking assets over the entire supply chain.
+- **Increase safety and security of goods and shipments:** A modernized data environment optimizes logistics. It reduces loss by tracking assets over the entire supply chain.
 
 ## Top supply chain optimization challenges
 
@@ -51,9 +43,7 @@ Microsoft Azure offers best-in-class analytics and IoT services. These offerings
 
 Our approach layers real-time IoT insights on a unified view of retail data.
 
-- Collect and ingest data
-
-  Use Azure IoT Hub and Azure Event Hubs to collect and ingest data from the following sources:
+- **Collect and ingest data:** Use Azure IoT Hub and Azure Event Hubs to collect and ingest data from the following sources:
 
   - Point-of-sale transactions
   - Online and mobile purchases
@@ -61,17 +51,11 @@ Our approach layers real-time IoT insights on a unified view of retail data.
   - Devices and IoT sensors
   - Supply chain or warehouse operations
 
-- Eliminate data silos
+- **Eliminate data silos:** Store data using Azure Data Lake Storage and Azure Cosmos DB. This approach removes data silos, which ensures that data is secure and available. This approach also enables scalability.
 
-  Store data using Azure Data Lake Storage and Azure Cosmos DB. This approach removes data silos, which ensures that data is secure and available. This approach also enables scalability.
+- **Conduct complex data analysis:** Use Azure Synapse Analytics to unify analytics across systems. Do complex queries on operational and transactional factory data rapidly.
 
-- Conduct complex data analysis
-
-  Use Azure Synapse Analytics to unify analytics across systems. Do complex queries on operational and transactional factory data rapidly.
-
-- Visualize analytics outputs
-
-  Integrate with Power BI to increase operational efficiencies, reduce costs, and optimize performance. You can visualize analytics outputs, such as the following information:
+- **Visualize analytics outputs:** Integrate with Power BI to increase operational efficiencies, reduce costs, and optimize performance. You can visualize analytics outputs, such as the following information:
 
   - Contract cycle optimization
   - Available-to-promise
@@ -85,13 +69,13 @@ Learn how [Anheuser-Busch InBev](https://customers.microsoft.com/en-us/story/ab-
 
 ## Next steps
 
-Learn about another strategic driver for retail customers: [Building management optimization](./retail-building-management-optimization.md).
+To learn more about another strategic driver for retail customers, see [Building management optimization](./retail-building-management-optimization.md).
 
-These resources offer guidance for the cloud adoption scenario.
+The following articles can guide your cloud adoption journey and help you succeed in the cloud adoption scenario for the retail industry.
 
 - [Cloud adoption strategy for the retail industry](./strategy.md)
 - [Cloud adoption plan for the retail industry](./plan.md)
-- [Azure Landing Zones for the retail industry](./ready.md)
+- [Azure landing zones for the retail industry](./ready.md)
 - [Migrate common retail industry technologies](./migrate.md)
 - [Innovation in the retail industry](./innovate.md)
 - [Governance in the retail industry](./govern.md)
