@@ -2,7 +2,7 @@
 title: "Enterprise-Scale security, governance, and compliance for 'data management and analytics' in Azure"
 description: Describe how this enterprise-scale scenario can improve security, governance, and compliance of 'data management and analytics'
 author: andrehass
-ms.author: andre.hass
+ms.author: anhass
 ms.date: 06/10/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
