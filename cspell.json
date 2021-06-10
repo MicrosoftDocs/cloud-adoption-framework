@@ -6,10 +6,14 @@
         ".\\docs\\cspell.json"
     ],
     "words": [
+        "ADLS",
         "DASG",
         "DASGs",
         "dataops",
         "eslz",
-        "leverage"
+        "leverage",
+        "leveraging",
+        "privatelink",
+        "UPNs"
     ]
 }

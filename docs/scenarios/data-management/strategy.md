@@ -1,5 +1,5 @@
 ---
-title: "Strategy for 'data management and analytics' adoption"
+title: "Strategy for 'data management and analytics' adoption in Azure"
 description: Integrate 'data management and analytics' into your cloud adoption strategy
 author: BrianBlanchard
 ms.author: brblanch
@@ -47,7 +47,7 @@ Throughout your BI, Analytics & AI maturity journey, there are *key themes* in u
 
 ## Key Themes
 
-![Key Themes](./images/keythemes.png)
+![Key Themes](./images/key-themes.png)
 
 If we carefully analyze the above key themes and how they relate to important facets of a coherent Data Strategy:
 
@@ -74,7 +74,7 @@ future holistic data strategy in an iterative way with validation, yet yielding 
 
 ### Iterative Data Strategy Validation Framework
 
-![Iterative Data Strategy Validation Framework](./images/datastratframework.png)
+![Iterative Data Strategy Validation Framework](./images/data-strategy-framework.png)
 
 Business & Technology Leaders need to develop the mindset and strategies required to generate value from data and scale quickly in a simplified structured manner.
 
@@ -150,7 +150,7 @@ To further collaboration, we also open-sourced many tools such as Interpret ML a
 
 The pivot to becoming a data-driven organization is fundamental to deliver competitive advantage in the new normal. We want to help our customers shift from an application only approach to an application and data-led approach, helping to create an end-to-end Data Strategy that can ensure repeatability and scalability across current and future use cases that impact business outcomes.
 
-![Unlocking Innovation](./images/datastratinnovation.png)
+![Unlocking Innovation](./images/data-strategy-innovation.png)
 
 ## Commitment
 
