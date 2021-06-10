@@ -36,21 +36,21 @@ It's important to integrate the data across all applications, systems, and exter
 
 ## How Microsoft Azure supports retailers in delivering personalization
 
-Along with our partners, Microsoft enables retailers to overcome the challenges associated with personalization. Azure makes it possible to provide consumers with coordinated, personalized messaging. Azure also provides offers through their preferred channel mix and touchpoints. These offers build deeper brand connections and extend customer lifetime value.
+Along with our partners, Microsoft enables retailers to overcome the challenges associated with personalization. Azure makes it possible to provide consumers with coordinated, personalized messaging. Azure also provides offers through their preferred channel mix and touch points. These offers build deeper brand connections and extend customer lifetime value.
 
 Here’s how our offerings use and augment retail data to enhance personalization:
 
 - **Determine data inputs**: Azure can use a wide variety of both structured and unstructured data.
   - Customer data
-  - Sales or point of sale (POS) data
+  - Sales or point-of-sale (POS) data
   - Online transaction data
   - Campaign or offer data
   - Product data
   - External data, like social media
-- **Ingest data**: Once inputs are determined, use Azure Data Factory to ingest data, and then Azure Databricks to prepare it. Ingested data is stored using Azure Data Lake Storage, a high-performance data lake available in all 54 Azure regions.
-- **Accelerate insights**: After data has been ingested and prepared, the Azure Synapse Analytics engine acts as a data warehouse. From this warehouse, data can be modeled and then served up as insights. Azure Synapse Analytics is up to 14-times faster and costs 94 percent less than other cloud providers. These advantages enable retailers to accelerate insights needed to support personalized offers and experiences while managing costs. The machine learning capabilities of Azure Databricks are also used at this step. These capabilities continuously train data and run up to 10-times faster than Spark.
+- **Ingest data**: Once inputs are determined, use Azure Data Factory to ingest data, and then Azure Databricks to prepare it. Ingested data is stored using Azure Data Lake Storage.
+- **Accelerate insights**: After data has been ingested and prepared, the Azure Synapse Analytics engine acts as a data warehouse. From this warehouse, data can be modeled and then served up as insights. Azure Synapse Analytics is up to 14 times faster and costs 94 percent less than other cloud providers. These advantages enable retailers to accelerate insights needed to support personalized offers and experiences while managing costs. The machine learning capabilities of Azure Databricks are also used at this step. These capabilities continuously train data and run up to 10 times faster than Spark.
 - **Visualize personalized recommendations**: Integrating with Power BI enables retailers to visually surface insights as personalized recommendations and promotions. These insights empower employees across the business to enhance customer service.
-- **Discover patterns and monetize strategies**: Finally, Azure’s AI and machine learning capabilities provide intelligence across large data sets, enabling retailers to discover patterns and monetize strategies. This intelligence provides the knowledge that retailers need to continuously grow revenue, enhance customer loyalty, and improve marketing campaign effectiveness.
+- **Discover patterns and monetize strategies**: Azure’s AI and machine learning capabilities provide intelligence across large data sets, enabling retailers to discover patterns and monetize strategies. This intelligence provides the knowledge that retailers need to continuously grow revenue, enhance customer loyalty, and improve marketing campaign effectiveness.
 
 ## Personalization success stories
 
@@ -60,9 +60,9 @@ Here’s how our offerings use and augment retail data to enhance personalizatio
 
 ## Next steps
 
-Learn about another strategic driver for retail customers, [Omnichannel optimization](./retail-omnichannel-optimization.md).
+To learn about another strategic driver for retail customers, see [Omnichannel optimization](./retail-omnichannel-optimization.md).
 
-The following articles can guide your cloud adoption journey and help you succeed in the cloud adoption scenario.
+The following articles can guide your cloud adoption journey and help you succeed in the cloud adoption scenario for the retail industry.
 
 - [Cloud adoption strategy for the retail industry](./strategy.md)
 - [Cloud adoption plan for the retail industry](./plan.md)
