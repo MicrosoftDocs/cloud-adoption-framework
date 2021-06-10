@@ -1,6 +1,6 @@
 ---
-title: Improve retail experience with retail recommender
-description: Improve the retail experience using the retail recommender solution in Azure. This article shows you how to build out the solution accelerator.
+title: Improve the retail experience with retail recommender
+description: Improve the retail experience by using the retail recommender solution in Azure. This article shows you how to build out the solution accelerator.
 author: wayneme75
 ms.author: brblanch
 ms.date: 05/29/2021
@@ -10,19 +10,19 @@ ms.subservice: innovate
 ms.custom: think-tank
 ---
 
-# Improving retail experience with a retail recommender solution accelerator
+# Improve the retail experience with a retail recommender solution accelerator
 
-In the retail world, digital channels drive improved customer engagement. Retailers are looking for ways to improve the connection between shopper and product to improve the attach rate of products.
+In the retail world digital channels have rapidly become the accelerator to driving improved customer engagement. Retailers are being pushed to re-imagine the way they communicate with, and share updates on their portfolio of products which they sell. They are having to get closer to the shopper to be in a position to better understand what they are looking for. Retailers are looking for ways to improve the connection between shopper and product ultimately improving the *attach* rate of products digital basket.
 
-In-person shopping can lead to impulse buying. Retailers have all their products on display. The online shopping experience is different. Shoppers look for specific products, add them to the cart, and then checkout. The retail recommender solution helps retailers highlight and expose associated products that might interest a shopper.
+In person shopping typically leads to impulse buying as shoppers have all products on display. This is not generally true in the online shopping experience. Shoppers look for specific products, add to their basket,and checkout.
 
-This solution accelerator creates a personalized online shopping experience. Applying AI and advanced data analytics technology present shoppers with relevant content and products in the following ways:
+The retail recommender solution helps retailers highlight and expose associated products that might interest a shopper. The purpose of this solution accelerator is to create a personalized online shopping experience. Using AI and advanced data analytics technology, the retail recommender solution presents shoppers with relevant content and products in the following ways:
 
 - A shopper visits a retailer online commercial page, which prompts the user with personalized selections, based on purchase history.
 - When the shopper adds items to the cart, the site offers more recommendations, based on what products would be purchased with these items.
 - As the shopper moves around the retailer's site, the site offers new recommendations based on what the shopper looks at.
 
-Here are some benefits of using the solution accelerator:
+## Benefits of using the solution accelerator
 
 - Easily launch using pre-configured GitHub code and architecture.
 - Reduce development time with unified analytics by using Azure Synapse Analytics, Azure Machine Learning, and other Azure services.
@@ -41,11 +41,11 @@ This article shows you how to build out a minimal product for the solution accel
 - [The Postman app](https://www.postman.com/downloads).
 - [Visual Studio Code](https://code.visualstudio.com/) (optional).
 
-## Azure and Analytics Platform  
+## Azure and analytics platform  
 
 You need basic working knowledge of Azure, Cosmos DB, Azure Machine Learning Services, and Azure Kubernetes.
 
-For information and support, see the following resources:
+For information, see:
 
 - [Azure Synapse Analytics](/azure/synapse-analytics/)
 - [Azure Kubernetes Services](/azure/aks/)
@@ -72,7 +72,7 @@ Use the PowerShell script in the [Resource_Deployment](https://github.com/micros
 
 ### Analytics deployment
 
-Use the Notebooks in the [Analytics_Deployment](https://github.com/microsoft/Azure-Synapse-Retail-Recommender-Solution-Accelerator/tree/main/Analytics_Deployment) folder to complete this solution accelerator. After you deploy all the required resources from the [Resource_Deployment](https://github.com/microsoft/Azure-Synapse-Retail-Recommender-Solution-Accelerator/blob/main/Resource_Deployment) folder, follow the instructions in `Resource_Deployment` for the Notebooks.  
+Use the notebooks in the [Analytics_Deployment](https://github.com/microsoft/Azure-Synapse-Retail-Recommender-Solution-Accelerator/tree/main/Analytics_Deployment) folder to complete this solution accelerator. After you deploy all the required resources from the [Resource_Deployment](https://github.com/microsoft/Azure-Synapse-Retail-Recommender-Solution-Accelerator/blob/main/Resource_Deployment) folder, follow the instructions in `Resource_Deployment` for the Notebooks.  
 
 ### Application front end web application deployment
 
@@ -98,9 +98,9 @@ Tractor Supply Company To Expand Relationship With Microsoft. The largest rural 
 
 ![Starbucks logo](../../_images/innovate/starbucks.png)
 
-Starbucks turns to technology to brew up a more personal connection with its customers. They have been using reinforcement learning technology—a type of machine learning in which a system learns to make decisions in complex, unpredictable environments based upon external feedback—to provide a more personalized experience for customers who use the Starbucks® mobile app.
+Starbucks turns to technology to brew up a more personal connection with its customers. They have been using reinforcement learning technology—a type of machine learning in which a system learns to make decisions in complex, unpredictable environments based upon external feedback—to provide a more personalized experience for customers who use the Starbucks® mobile application.
 
-Within the app, customers receive tailor-made order suggestions generated by using a reinforcement learning platform that is built and hosted in Microsoft Azure. Through this technology and the work of Starbucks data scientists, 16 million active Starbucks® Rewards members now receive thoughtful recommendations from the app for food and drinks based on local store inventory, popular selections, weather, time of day, community preferences, and previous orders.
+Within the application, customers receive tailor-made order suggestions generated by using a reinforcement learning platform that is built and hosted in Microsoft Azure. Through this technology and the work of Starbucks data scientists, 16 million active Starbucks® Rewards members now receive thoughtful recommendations from the application for food and drinks based on local store inventory, popular selections, weather, time of day, community preferences, and previous orders.
 
 "Everything we do in technology is centered around the customer connection in the store, the human connection, one person, one cup, one neighborhood at a time." — Gerri Martin-Flickinger, Starbucks executive vice president and chief technology officer.
 
