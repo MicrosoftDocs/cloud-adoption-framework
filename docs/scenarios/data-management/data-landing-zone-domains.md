@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Domains
 
-Previously, we explained the role of a Domain under [Enterprise Scale Analytics and AI Teams](persona-and-teams.md#domain-ops-per-domain)  and that Domains help understand [Data Landing Zone Division and Consumption](data-landing-zone-division-and-consumption.md).
+Previously, we explained the role of a Domain under [Enterprise Scale Analytics and AI Teams](persona-and-teams.md#domain-ops-per-domain)  and that Domains help understand [Data Landing Zone Division and Consumption](data-landing-zone-division-consumption.md).
 
 This section explains the infrastructure which is deployed for each Domain inside a Data Landing Zone.
 

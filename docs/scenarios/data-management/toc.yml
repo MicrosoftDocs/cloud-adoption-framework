@@ -128,7 +128,7 @@ items:
           - name: Data Products
             href: ./data-landing-zone-data-products.md
           - name: Frequently Asked Questions
-            href: ./faqs.md
+            href: ./frequently-asked-questions.md
        
 
   - name: Best practices
