@@ -185,7 +185,7 @@ items:
     - name: Azure Databricks
       href: /azure/databricks/
     - name: Azure Data Explorer
-      href: /      
+      href: /azure/data-explorer/     
     - name: Azure Data Lake
       href: /azure/storage/blobs/data-lake-storage-introduction
     - name: Azure Key Vault
@@ -205,7 +205,7 @@ items:
     - name: Data Factory
       href: /azure/data-factory/
     - name: Event Hubs
-      href: /en-us/azure/event-hubs/
+      href: /azure/event-hubs/
     - name: HDInsight
       href: /azure/hdinsight/           
     - name: Network Watcher
