@@ -18,7 +18,7 @@ High availability (HA) and disaster recovery (DR) can sometimes be combined, alt
 In a cloud world, instead of trying to prevent failures from happening acknowledge up front that failures can and do happen. The goal is to minimize the effects of any single failing component in the lifecycle. Your tolerance for cost, RPO, and RTO will have an impact on the type of solution implemented.
 
 ## Backup Strategies
-Microsoft has pre-published guidance on building Reliability and Resiliency into applications in the [Reliability Overview](https://docs.microsoft.com/azure/architecture/framework/resiliency/overview). Some additional considerations are below:
+Microsoft has pre-published guidance on building Reliability and Resiliency into applications in the [Reliability Overview](/azure/architecture/framework/resiliency/overview). Some additional considerations are below:
 
 Many alternative strategies are available for implementing distributed compute across regions. These must be tailored to the specific business requirements and circumstances of the application. At a high level, the approaches can be divided into the following categories:
 
@@ -62,12 +62,7 @@ For an overview of High Availability with Azure Cosmos DB, see [How does Azure C
 
 As Data Domains and Data Product are likely to have Azure DevOps (GitHub or any other code version control software) repositories linked to Azure Data Factory, it is possible to deploy pipelines to another Data Factory with minimal downtime. To use code version control softwares apart from GitHub and Azure DevOps Repo will require developers to use ADF SDK to author pipelines and other Azure data factory objects.
 
-<<<<<<< HEAD:docs/scenarios/data-management/business-continuity-and-disaster-recovery.md
 ## Azure Key Vault
-=======
-
-### Azure Key Vault
->>>>>>> b2737e05176ab48923119ca29c3a740b4a07c9d8:docs/scenarios/data-management/eslz-business-continuity-and-disaster-recovery.md
 
 Azure Key Vault automatically provides features to help you maintain availability and prevent data loss. Back up secrets ([Azure Key Vault Backup](/azure/key-vault/general/backup)) only if you have a critical business justification. Backing up secrets in your key vault may introduce operational challenges such as maintaining multiple sets of logs, permissions, and backups when secrets expire or rotate.
 

@@ -212,7 +212,7 @@ For information about how to set and clear legal holds or create a time-based re
 
 Immutable storage helps healthcare organization, financial institutions and related industries&mdash;particularly broker-dealer organizations&mdash;to store data securely. Immutable storage can also be leveraged in any scenario to protect critical data against modification or deletion.
 
-For further information see [How Immutable storage for Azure Blob storage works](azure/storage/blobs/storage-blob-immutable-storage#about-immutable-blob-storage)
+For further information see [How Immutable storage for Azure Blob storage works](/azure/storage/blobs/storage-blob-immutable-storage#about-immutable-blob-storage)
 
 Depending on your industry, it is recommended that immutable storage is assessed for use in the RAW Layer of the Data Lake.
 
