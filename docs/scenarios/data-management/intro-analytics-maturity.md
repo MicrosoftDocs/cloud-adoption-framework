@@ -1,5 +1,5 @@
 ---
-title: "Introduction to analytics maturity"
+title: "Introduction to analytics maturity in Azure"
 description: Introducing analytics maturity in the cloud
 author: BrianBlanchard
 ms.author: brblanch

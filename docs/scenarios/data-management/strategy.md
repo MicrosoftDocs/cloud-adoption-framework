@@ -1,5 +1,5 @@
 ---
-title: "Strategy for 'data management and analytics' adoption"
+title: "Strategy for 'data management and analytics' adoption in Azure"
 description: Integrate 'data management and analytics' into your cloud adoption strategy
 author: BrianBlanchard
 ms.author: brblanch

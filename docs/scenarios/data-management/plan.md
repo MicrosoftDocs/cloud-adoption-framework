@@ -1,5 +1,5 @@
 ---
-title: Building a plan for 'data management and analytics'
+title: Building a plan for 'data management and analytics' in Azure
 description: Building a plan for 'data management and analytics'
 author: pratimdas
 ms.author: prda # Microsoft employees only

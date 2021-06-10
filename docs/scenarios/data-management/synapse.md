@@ -1,5 +1,5 @@
 ---
-title: Building a plan for Synapse'
+title: Building a plan for Synapse in Azure
 description: Building a plan for 'Synapse
 author: pratimdas
 ms.author: prda # Microsoft employees only

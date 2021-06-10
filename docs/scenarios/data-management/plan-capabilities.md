@@ -1,5 +1,5 @@
 ---
-title: Building 'data management and analytics' capabilities
+title: Building 'data management and analytics' capabilities in Azure
 description: Building 'data management and analytics' capabilities
 author: pratimdas
 ms.author: prda # Microsoft employees only

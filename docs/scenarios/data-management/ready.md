@@ -1,5 +1,5 @@
 ---
-title: "Azure Landing Zone review for 'data management and analytics'"
+title: "Landing Zone review for 'data management and analytics' in Azure"
 description: Describe the scenario's impact on Azure Landing Zone design
 author: BrianBlanchard
 ms.author: brblanch
