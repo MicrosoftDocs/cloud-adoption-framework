@@ -1,5 +1,5 @@
 ---
-title: "Manage 'data management and analytics'"
+title: "Manage 'data management and analytics' in Azure"
 description: Describe the scenario's impact on operations management
 author: BrianBlanchard
 ms.author: brblanch

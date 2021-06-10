@@ -208,7 +208,7 @@ Cost management is very important. Microsoft offers various ways to optimize cos
 
 ### Automate SAP deployments
 
-Save time and reduce errors by automating SAP deployments. Deploying complex SAP landscapes into a public cloud is not an easy task. SAP basic teams might be very familiar with the traditional tasks of installing and configuring on-premises SAP systems. Designing, building, and testing cloud deployments often require additional domain knowledge. For more information, see [SAP enterprise-scale platform automation and DevOps](./eslz-platform-automation-and-devops.md).
+Save time and reduce errors by automating SAP deployments. Deploying complex SAP landscapes into a public cloud is not an easy task. SAP basic teams might be very familiar with the traditional tasks of installing and configuring on-premises SAP systems. Designing, building, and testing cloud deployments often require additional domain knowledge. For more information, see [SAP enterprise-scale platform automation and DevOps](./platform-automation-and-devops.md).
 
 ### Lock resources for production workloads
 

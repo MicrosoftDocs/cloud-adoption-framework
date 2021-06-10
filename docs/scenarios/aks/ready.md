@@ -24,12 +24,12 @@ If you haven't already selected an Azure landing zone implementation approach, r
 
 **Enterprise-scale options:** The enterprise-scale construction set for AKS includes a reference implementation to deploy an enterprise-scale landing zone to support your AKS platform. Included in the construction set documentation is a series of best practices that can be used to evaluate production readiness of any AKS environment. These considerations apply even if you select a start-small landing zone implementation. See the following articles to evaluate your AKS environment:
 
-- [Identity and access management](eslz-identity-and-access-management.md)
-- [Network topology and connectivity](eslz-network-topology-and-connectivity.md)
-- [Management and monitoring](eslz-management-and-monitoring.md)
-- [Business continuity and disaster recovery](eslz-business-continuity-and-disaster-recovery.md)
-- [Security governance and compliance](eslz-security-governance-and-compliance.md)
-- [Platform automation and DevOps](eslz-platform-automation-and-devops.md)
+- [Identity and access management](identity-and-access-management.md)
+- [Network topology and connectivity](network-topology-and-connectivity.md)
+- [Management and monitoring](management-and-monitoring.md)
+- [Business continuity and disaster recovery](business-continuity-and-disaster-recovery.md)
+- [Security governance and compliance](security-governance-and-compliance.md)
+- [Platform automation and DevOps](platform-automation-and-devops.md)
 
 The primary deference between the two options above resides in how separation of duties is expressed and implemented in terms of Azure resources, subscription topology, and usage of Azure Policy for governance. Understand your organization's plan around centralized versus decentralized operations and which work best for your organization's workloads. Both models can be flexed to provide the exact experience your organization and workloads require, but you'll want to start with the one most closely aligned with your defined strategy. Ensure all workload teams understand the operating model and duties required of all IT groups and members.
 

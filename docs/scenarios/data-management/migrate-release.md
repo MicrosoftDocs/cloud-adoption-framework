@@ -1,5 +1,5 @@
 ---
-title: "Plan for migrate release"
+title: "Plan for migrate release in Azure"
 description: Describe the scenario's impact on migrate release
 author: BrianBlanchard
 ms.author: brblanch

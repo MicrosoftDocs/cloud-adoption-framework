@@ -1,5 +1,5 @@
 ---
-title: "Introduction to the data governance"
+title: "Introduction to the data governance in Azure"
 description: Introducing the concept of data governance in the cloud
 author: BrianBlanchard
 ms.author: brblanch

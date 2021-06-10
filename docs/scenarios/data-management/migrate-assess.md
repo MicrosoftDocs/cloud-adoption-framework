@@ -1,5 +1,5 @@
 ---
-title: "Plan for migrate assess"
+title: "Plan for migrate assess in Azure"
 description: Describe the scenario's impact on migrate assess
 author: BrianBlanchard
 ms.author: brblanch
