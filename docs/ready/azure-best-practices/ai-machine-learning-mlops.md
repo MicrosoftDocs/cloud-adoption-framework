@@ -26,7 +26,7 @@ This article is subdivided into three sections:
 
 Modern machine learning algorithms and frameworks make it increasingly easy to develop models that can make accurate predictions.
 
-You might have built a machine learning model that exceeds all of your accuracy expectations and impresses your business sponsors. Now it’s time to deploy the model into production and it might not be as easy as you had expected. There are likely many things to put in place before your model can be used.
+You might have built a machine learning model that exceeds all of your accuracy expectations and impresses your business sponsors. Now it’s time to deploy the model into production and it might not be as easy as you had expected. There are likely many things to put in place before your model can be used. 
 
 Over time, you or one of your colleagues might develop a new model that can do better than the old model. The question you must ask is, can you implement it without disrupting your business? It might be necessary for regulatory purposes to re-create the model and explain the model's predictions if unusual or biased predictions are made. Data inputted to your training and model can change over time. Because of these changes, it might be necessary to retrain the model periodically to maintain the accuracy of its predictions. Who is responsible to feed the data, monitor the performance, retrain the model, and fix it should it fail?
 
