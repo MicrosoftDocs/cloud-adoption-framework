@@ -1,5 +1,5 @@
 ---
-title: Enterprise Scale Analytics and AI Teams
+title: Azure Enterprise Scale Analytics and AI Teams
 description: Enterprise Scale Analytics and AI Architecture Persona and Teams structure
 author: abdale
 ms.author: hamoodaleem # Microsoft employees only
@@ -13,7 +13,7 @@ ms.subservice: ready
 
 The Enterprise Scale Analytics and AI moves teams from working horizontally across each tier such as Ingest, Processing, Analysis, Consumption and Visualization to vertical Data Landing Zone Groups coexisting together in an agile team. Platform teams such as Data Platform Ops and Platform Ops are grouped together under a common Platform Group.
 
-![Enterprise Scale Analytics and AI Teams](./images/esaaiteams.png)
+![Enterprise Scale Analytics and AI Teams](./images/enterprise-scale-analytics-ai-teams.png)
 
 Figure 1: Enterprise Scale Analytics and AI Teams
 
@@ -94,7 +94,7 @@ Digital security spans the whole of the Enterprise Scale Analytics and AI soluti
 
 ### Data Governance Review Board
 
-![ Data Governance Review Board](./images/datagovernancereviewboard.png)
+![ Data Governance Review Board](./images/data-governance-review-board.png)
 
 Figure 2: Data Governance Review Board
 

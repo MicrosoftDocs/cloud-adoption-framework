@@ -1,5 +1,5 @@
 ---
-title: Enterprise Scale Analytics and AI Data Management Overview
+title: Azure Enterprise Scale Analytics and AI Data Management Overview
 description: Enterprise Scale Analytics and AI Architecture Data Management Landing Zone Overview
 author:  mboswell
 ms.author:  mboswell # Microsoft employees only
@@ -13,7 +13,7 @@ ms.subservice: ready
 
 The Data Management Landing Zone is classified as a management function and is at the heart of the Enterprise Scale Analytics and AI platform. It is responsible for the governance of the platform and enables communication to ingest data sources from Azure, third-party clouds, and on-premises data sources.
 
-![Data Management Landing Zone Overview](./images/datamanagementoverview.png)
+ :::image type="content" source="./images/data-management-overview.png" alt-text="Data Management Landing Zone Overview" lightbox="./images/data-management-overview.png":::
 
 *Figure 1: Data Management Landing Zone Overview*
 
@@ -40,9 +40,9 @@ The Enterprise Scale Analytics and AI solution pattern relies on [Azure Purview]
 * API for registering and reading data information.
 * compliance dashboard hub
 
-![Azure Purview Overview](./images/purviewoverview.png)
+![Azure Purview Overview](./images/purview-overview.png)
 
-*Figure 2: Azure Purview Overview*
+Figure 2: Azure Purview Overview
 
 Being part of the Data Management Landing Zone, the Data Catalog will be able to communicate with each Data Landing Zone via its VNet Peering and Self-Hosted Integration Runtimes. Discovery of datasets in on-premises stores and other public clouds is achieved by additional deployments of Self-Hosted Integration Runtimes.
 
@@ -79,7 +79,8 @@ Data Lineage plays an important component in an Enterprise Scale Analytics and A
 
 One of the primary features of a Data Catalog is the ability to show the lineage between datasets. Azure Purview supports capturing data lineage from three ADF activities: Copy Data, Data Flow, and Execute SSIS Package. In addition to the native integration, custom lineage reporting is also supported via Apache Atlas hooks or REST API.
 
-![Data Lineage](./images/datalineage.png)
+<!-- increase image size-->
+:::image type="content" source="./images/data-lineage.png" alt-text="Data Lineage" lightbox="./images/data-lineage.png":::
 
 *Figure 3: Data Lineage*
 

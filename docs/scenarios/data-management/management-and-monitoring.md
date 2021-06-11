@@ -1,5 +1,5 @@
 ---
-title: "Enterprise-Scale management and monitoring for 'data management and analytics'"
+title: "Azure Enterprise Scale Analytics management and monitoring for 'data management and analytics'"
 description: Describe how this enterprise-scale scenario can improve management and monitoring of 'data management and analytics'
 author: christophermschmidt
 ms.author: chrschm
@@ -25,6 +25,7 @@ Here are some design considerations for data analytics on Azure monitoring and m
 * Azure Monitor Log Analytics provides some [sample queries](/azure/azure-monitor/logs/queries) that can be used without modification or can be built upon as a starting point for your own queries. 
 
 ## Design Recommendations:
+
 When thinking about enterprise scale analytics, here are some design recommendations.
 
 * Implement threat protection with [Azure Sentinel](/azure/sentinel/overview).

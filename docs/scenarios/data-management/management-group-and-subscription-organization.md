@@ -1,5 +1,5 @@
 ---
-title: "Enterprise-Scale management group and subscription organization for 'data management and analytics'"
+title: "Azure Enterprise Scale Analytics management group and subscription organization for 'data management and analytics'"
 description: Describe how this enterprise-scale scenario can improve management group and subscription organization of 'data management and analytics'
 author: BrianBlanchard
 ms.author: brblanch

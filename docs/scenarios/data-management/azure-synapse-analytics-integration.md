@@ -1,5 +1,5 @@
 ---
-title: Enterprise Scale Analytics and AI Azure Synapse Pattern
+title: Azure Enterprise Scale Analytics and AI Azure Synapse Pattern
 description: Enterprise Scale Analytics and AI Azure Synapse Pattern
 author:  mboswell
 ms.author:  mboswell # Microsoft employees only
@@ -75,10 +75,11 @@ When setting-up Data Lake access control, some organizations require granular le
 Before you start implementing fined-grained access with ACLs, is important to understand how ACLs permissions are evaluated.
 
 1. Azure Role assignments are evaluated first and take priority over any ACL assignments.
-1. If the operation is fully authorized based on Azure role assignment, then ACLs are not evaluated at all.
-1. If the operation is not fully authorized, then ACLs are evaluated.
+2. If the operation is fully authorized based on Azure role assignment, then ACLs are not evaluated at all.
+3. If the operation is not fully authorized, then ACLs are evaluated.
 
-![RBAC ACLs Evaluation](./images/RBAC-ACLsEvaluation.png)
+<!-- increase image size -->
+:::image type="content" source="./images/rbac-acls-evaluation.png" alt-text="RBAC ACLs Evaluation" lightbox="./images/rbac-acls-evaluation.png":::
 
 Please refer to the [Access control model for Azure Data Lake Storage Gen2 | Microsoft Docs](/azure/storage/blobs/data-lake-storage-access-control-model#how-permissions-are-evaluated) for more information.
 
@@ -112,15 +113,15 @@ Please go through the following steps to get started.
 
 1. Open Azure Storage Explorer, right click on storage container you want to setup fined-grained access with ACLs and choose Manage Access Control Lists. 
 
-![Container Level ACLs](./images/ACLRead1.png)
+    ![Container Level ACLs](./images/acl-read-1.png)
 
-1. Click in Add to include users or groups that you want to grant permissions.
+2. Click in Add to include users or groups that you want to grant permissions.
 
-![Manage Access Window](./images/ACLRead2.png)
+    ![Manage Access Window](./images/acl-read-2.png)
 
-1. In **Search for a user, group, or service principal.** Type the name of the user of group and click search. The users or groups should show-up. Select the user or group and choose **Add**.
+3. In **Search for a user, group, or service principal.** Type the name of the user of group and click search. The users or groups should show-up. Select the user or group and choose **Add**.
 
-![Add Entity](./images/ACLRead3.png)
+    ![Add Entity](./images/acl-read-3.png)
 
 After adding the user or group. Select the identity added in the previous step. In Permission for: <name of user or group> check the option **Access**, followed by **Read** and **Execute** options on the right-hand side.
 
@@ -128,13 +129,13 @@ As per [ADLS Best Practices](/azure/storage/blobs/data-lake-storage-best-practic
 
 It is important to notice the informative message **"Read and Write permissions will only work for an entity if the entity also has execute permissions on all parent directories, including the container (root directory)"** It means that you will also need to grant Execute permissions on all parent folders, including the container which is the root directory, when granting read or write in a sub directory.
 
-![Manage Read Access User 1](./images/ACLRead4.png)
+![Manage Read Access User 1](./images/acl-read-4.png)
 
 **Granting permissions automatically to new children of the directory using the Default*** **option.**
 
 If you want to grant ACLs permissions automatically for new children of the directory, use the option **Default*** and select the required permissions read, write, or execute.  
 
-![Manage Access Default](./images/ACLRead5.png)
+![Manage Access Default](./images/acl-read-5.png)
 
 After granting permission at the container level, repeat the same steps for any subfolder you want to give access to users or groups.
 
@@ -142,13 +143,13 @@ After granting permission at the container level, repeat the same steps for any 
 
 Select the folder you want to give users or groups write permission and choose **Manage ACLs.**
 
-![Manage ACLs](./images/ACLWrite1.png)
+![Manage ACLs](./images/acl-write-1.png)
 
 If you want to grant ACLs permissions automatically for new children of the directory, use the option **Default*** and select the appropriate permissions **Read/write** and **execute.**  As mentioned in the Granting Read Access on ADLS Gen 2 section, this option will automatically propagate parent folder permissions to newly created children's items, such as folder and files.
 
 After selecting the appropriate permissions, click **OK** to close.
 
-![Manage Write Access](./images/ACLWrite2.png)
+![Manage Write Access](./images/acl-write-2.png)
 
 Repeat the same steps for any additional folders and subfolder you may want to grant access to users or groups.
 
@@ -158,25 +159,27 @@ When granting ACLs permissions to folders that already contain child objects suc
 
 To propagate ACL permissions, right-click on the parent folder you desire to propagate the ACL permissions. This action will propagate permissions for all users to the existing child objects from the parent folder you are performing the action. 
 
-![Propagate Access](./images/ACLPropag1.png)
+![Propagate Access](./images/acl-propagate-1.png)
 
 In Propagate Access Control Lists, choose How to handle failures depending on the desired behavior you want in case of failures. You can choose from the two options: **Continue on Failure** or **Quit on failure.**
 
 Check the box I understand that propagating ACLs cannot be easily reversable and click OK. 
 
-![Manage Access](./images/ACLPropag2.png)
+![Manage Access](./images/acl-propagate-2.png)
 
 #### Considerations when using Spark Tables in Synapse Spark Pool.
 
 When you use Spark Tables in Synapse Spark Pool, the following folder structure will be created automatically by Synapse workspace in the root of the container in the workspace primary storage.  
 
-synapse/workspaces/{workspacename}/**warehouse**
+```text
+synapse/workspaces/{workspacename}/warehouse
+```
 
-If you plan to create spark tables in Synapse Spark Pool. It is required that you grant write permission on the **warehouse** folder for the users or group executing the command that creates the Spark Table. If the command is executed through triggered job in a pipeline, you will need to grant write permission to the Synapse workspace identity. 
+If you plan to create spark tables in Synapse Spark Pool. It is required that you grant write permission on the **warehouse** folder for the users or group executing the command that creates the Spark Table. If the command is executed through triggered job in a pipeline, you will need to grant write permission to the Synapse workspace identity.
 
-Create Spark Table example 
+#### Create Spark Table example 
 
-```python 
+```python
 df.write.saveAsTable("<tablename>")
 ```
 

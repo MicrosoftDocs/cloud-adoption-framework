@@ -1,5 +1,5 @@
 ---
-title: "Migrate workloads for 'data management and analytics'"
+title: "Migrate workloads for 'data management and analytics' in Azure"
 description: Describe the scenario's impact on migration deployment
 author: BrianBlanchard
 ms.author: brblanch

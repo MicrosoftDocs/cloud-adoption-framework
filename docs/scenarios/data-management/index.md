@@ -1,5 +1,5 @@
 ---
-title: "Introduction to the 'data management and analytics' scenario"
+title: "Introduction to the 'data management and analytics' scenario in Azure"
 description: Introducing the end to end scenario for 'data management and analytics' in the cloud, with a focus on Azure implementation
 author: BrianBlanchard
 ms.author: brblanch

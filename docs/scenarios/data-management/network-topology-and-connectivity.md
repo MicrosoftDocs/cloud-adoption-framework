@@ -1,5 +1,5 @@
 ---
-title: Enterprise Scale Analytics and AI Networking
+title: Azure Enterprise Scale Analytics and AI Networking
 description: Enterprise Scale Analytics and AI Architecture Networking.
 author: BrianBlanchard
 ms.author: brblanch # Microsoft employees only
@@ -43,7 +43,7 @@ It is important that on-premises DNS Servers are configured correctly to forward
 - If you have Custom DNS already in Azure, you just need to setup conditional forwarders on your on-premises DNS server pointing to it.
 - If you do not have a Custom DNS VM in Azure, you can deploy the Azure Virtual Machine Scale Set that includes Nginx already configured to forward DNS requests to Azure-provided DNS IP **168.63.129.16**. Refer to [Deploy VMSS of a NGINX DNS Proxy into an existing Virtual Network](https://github.com/Microsoft/PL-DNS-Proxy).
 
-![Example of DNS Setup](./images/dns_setup.png)
+:::image type="content" source="./images/dns-setup.png" alt-text="Example of DNS Setup" lightbox="./images/dns-setup.png":::
 
 When Custom DNS servers are pointing to other DNS servers as forwarders, you may face similar name resolution challenges when dealing with on-premises DNS Servers to resolve Private Endpoints records stored in Azure Private DNS zones. Most of those challenges can be easily resolved by having your on-premises DNS Server use conditional forwarders for original PaaS service names (*e.g.* `blob.core.windows.net`).
 
@@ -69,7 +69,8 @@ The Data Management Landing Zone will connect to the Azure Networking Management
 
 Data Management Landing Zone services which support Private Link such as Azure Purview will be injected into the Data Management Landing Zone VNet.
 
-![High Level Overview of Networking for Enterprise Scale Analytics and AI](./images/networking_overview.png)
+:::image type="content" source="./images/networking-overview.png" alt-text="High Level Overview of Networking for Enterprise Scale Analytics and AI" lightbox="./images/networking-overview.png":::
+
 Figure 1: High Level Overview of Networking for Enterprise Scale Analytics and AI
 
 ## Data Management Landing Zone to Data Landing Zone

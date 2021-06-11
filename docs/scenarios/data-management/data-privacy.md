@@ -1,5 +1,5 @@
 ---
-title: "Enterprise Scale Analytics and AI Data Privacy"
+title: Azure Enterprise Scale Analytics and AI Data Privacy
 description: Enterprise Scale Analytics and AI Data Privacy
 author: abdale
 ms.author: hamoodaleem
@@ -66,15 +66,17 @@ Option two is to use Azure Databricks to explore sensitive data. By using a comb
 
 As the the blog post by Databricks on [Enforcing Column-level Encryption and Avoiding Data Duplication With PII](https://databricks.com/blog/2020/11/20/enforcing-column-level-encryption-and-avoiding-data-duplication-with-pii.html) describes:
 
-*The first step in this process is to protect the data by encrypting it during ingestion and one possible solution is the Fernet Python library. Fernet uses symmetric encryption, which is built with several standard cryptographic primitives. This library is used within an encryption UDF that will enable us to encrypt any given column in a dataframe. To store the encryption key, we use Databricks Secrets with access controls in place to only allow our data ingestion process to access it. Once the data is written to our Delta Lake tables, PII columns holding values such as social security number, phone number, credit card number, and other identifiers will be impossible for an unauthorized user to read.*
+>The first step in this process is to protect the data by encrypting it during ingestion and one possible solution is the Fernet Python library. Fernet uses symmetric encryption, which is built with several standard cryptographic primitives. This library is used within an encryption UDF that will enable us to encrypt any given column in a dataframe. To store the encryption key, we use Databricks Secrets with access controls in place to only allow our data ingestion process to access it. Once the data is written to our Delta Lake tables, PII columns holding values such as social security number, phone number, credit card number, and other identifiers will be impossible for an unauthorized user to read.
+>
+>Once we have the sensitive data written and protected, we need a way for privileged users to read the sensitive data. The first thing that needs to be done is to create a permanent UDF to add to the Hive instance running on Databricks. In order for a UDF to be permanent, it must be written in Scala. Fortunately, Fernet also has a Scala implementation that we can leverage for our decrypted reads. This UDF also accesses the same secret we used in the encrypted write to perform the decryption, and, in this case, it is added to the Spark configuration of the cluster. This requires us to add cluster access controls for privileged and non-privileged users to control their access to the key. Once the UDF is created, we can use it within our view definitions for privileged users to see the decrypted data.
 
-*Once we have the sensitive data written and protected, we need a way for privileged users to read the sensitive data. The first thing that needs to be done is to create a permanent UDF to add to the Hive instance running on Databricks. In order for a UDF to be permanent, it must be written in Scala. Fortunately, Fernet also has a Scala implementation that we can leverage for our decrypted reads. This UDF also accesses the same secret we used in the encrypted write to perform the decryption, and, in this case, it is added to the Spark configuration of the cluster. This requires us to add cluster access controls for privileged and non-privileged users to control their access to the key. Once the UDF is created, we can use it within our view definitions for privileged users to see the decrypted data.*
+
 
 Using [Dynamic view functions](/azure/databricks/security/access-control/table-acls/object-privileges#dynamic-view-functions), we are able to create only one view and easily return either the encrypted or decrypted values based on the Databricks group of which they are a member.
 
 In our example above, we would create two Dynamic view functions, one for North America and another for Europe, and implementing the encryption techniques in this [notebook](https://databricks.com/notebooks/enforcing-column-level-encryption.html).
 
-##### North America View
+##### North American View
 
 ```SQL
 -- Alias the field 'email' to itself (as 'email') to prevent the

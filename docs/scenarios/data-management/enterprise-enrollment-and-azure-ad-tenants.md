@@ -1,5 +1,5 @@
 ---
-title: "Enterprise-Scale enterprise enrollment and Azure AD tenants for 'data management and analytics'"
+title: Azure Enterprise-Scale enterprise enrollment and Azure AD tenants for 'data management and analytics'
 description: Describe how this enterprise-scale scenario can improve enterprise enrollment and Azure AD tenants of 'data management and analytics'
 author: BrianBlanchard
 ms.author: brblanch
@@ -11,4 +11,4 @@ ms.subservice: ready
 
 # Enterprise enrollment and Azure AD tenants for 'data management and analytics' Enterprise-Scale scenario
 
-Add content here
+<!-- Add content here -->

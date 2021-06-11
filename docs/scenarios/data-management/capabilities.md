@@ -11,10 +11,10 @@ ms.subservice: overview
 
 # Building Capabilities
 
-Describe 'data management and analytics' in a way that non-technical audiences can understand.
+<!-- Describe 'data management and analytics' in a way that non-technical audiences can understand. -->
 
 ![Analytics scope](./media/analytics.png)
 
-## 'Capability responsibilities
+## Capability responsibilities
 
-Scope scope
+<!-- Scope scope -->

@@ -1,5 +1,5 @@
 ---
-title: Building 'data management and analytics' capabilities
+title: Building 'data management and analytics' capabilities in Azure
 description: Building 'data management and analytics' capabilities
 author: pratimdas
 ms.author: prda # Microsoft employees only
@@ -17,13 +17,14 @@ The first step would be to look at all capabilities you need, either at an organ
 
 ### Capabilities to As Is Capabilities
 
-![A table showing guidance on building capabilities](./images/capablityasis.png)
+:::image type="content" source="./images/capablity-as-is.png" alt-text="A table showing guidance on building capabilities" lightbox="./images/capablity-as-is.png":::
 
 Figure 1: Exercise 1, assessing current capability.
 
 As a next step, look at Azure native services, and start mapping what you need to deliver success.
 
-![A table showing cloud-native capabilities for your data strategy](./images/capablitymapazure.png)
+:::image type="content" source="./images/capablity-map-azure.png" alt-text="A table showing cloud-native capabilities for your data strategy" lightbox="./images/capablity-map-azure.png":::
+
 Figure 2: Exercise 2, mapping to cloud native capabilities.
 
 ## Culture
@@ -50,7 +51,8 @@ Some of the characteristics of this level are a holistic approach to data and pr
 
 Here we see the entire company using a data-driven culture, frameworks and standards enterprise. We also see automation, centres of excellence around analytics and/or automation, and data-driven feedback loops in action. One of the outcomes of a data-driven culture, is the use of AI in a meaningful way, and here it is easy to define a maturity model as the one shown below.
 
-![Maturity evolution of organization](./images/datastratmaturity.png)
+:::image type="content" source="./images/data-strategy-maturity.png" alt-text="Maturity evolution of organization" lightbox="./images/data-strategy-maturity.png":::
+
 Figure 3: Maturity evolution of organization across reporting, deriving insights & decision support.
 
 ## Next step: Assess for 'data management and analytics'

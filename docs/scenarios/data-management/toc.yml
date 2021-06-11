@@ -82,7 +82,7 @@ items:
           - name: Data Products
             href: ./data-landing-zone-data-products.md
           - name: Division and Consumption
-            href: ./data-landing-zone-division-and-consumption.md
+            href: ./data-landing-zone-division-consumption.md
     - name: Network topology and connectivity
       href: ./network-topology-and-connectivity.md
     - name: Management and monitoring
@@ -128,7 +128,7 @@ items:
           - name: Data Products
             href: ./data-landing-zone-data-products.md
           - name: Frequently Asked Questions
-            href: ./faqs.md
+            href: ./frequently-asked-questions.md
        
 
   - name: Best practices
@@ -185,7 +185,7 @@ items:
     - name: Azure Databricks
       href: /azure/databricks/
     - name: Azure Data Explorer
-      href: https://docs.microsoft.com/      
+      href: /azure/data-explorer/     
     - name: Azure Data Lake
       href: /azure/storage/blobs/data-lake-storage-introduction
     - name: Azure Key Vault
@@ -205,7 +205,7 @@ items:
     - name: Data Factory
       href: /azure/data-factory/
     - name: Event Hubs
-      href: https://docs.microsoft.com/en-us/azure/event-hubs/
+      href: /azure/event-hubs/
     - name: HDInsight
       href: /azure/hdinsight/           
     - name: Network Watcher
@@ -216,4 +216,4 @@ items:
   - name: Learn modules (TBD)
     items:
     - name: Data analytics for developers
-      href: https://docs.microsoft.com/learn/paths/data-analytics-microsoft/?ocid=AID3020565
+      href: /learn/paths/data-analytics-microsoft/?ocid=AID3020565

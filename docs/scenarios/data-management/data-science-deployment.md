@@ -1,5 +1,5 @@
 ---
-title: Enterprise Scale Analytics and AI Data Science Deployment
+title: Azure Enterprise Scale Analytics and AI Data Science Deployment
 description: Enterprise Scale Analytics and AI Architecture Data Science Deployment
 author: abdale
 ms.author: hamoodaleem # Microsoft employees only
