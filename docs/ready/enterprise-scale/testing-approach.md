@@ -61,7 +61,7 @@ A similar scenario might be a change to the Azure RBAC role assignments and Azur
 
 [![Diagram of the management group hierarchy with the canary environment testing approach.](./media/canary-mgmt-groups.png)](./media/canary-mgmt-groups.png#lightbox)
 
-_Figure 1: Canary Management Group hierarchy._
+_Figure 1: Canary management group hierarchy._
 
 As the diagram shows, the entire enterprise-scale production environment management group hierarchy is duplicated under the `Tenant Root Group`. The *canary* name is appended to the management group display names and IDs. The IDs must be unique within a single Azure AD tenant.
 
@@ -100,7 +100,7 @@ However, this approach doesn't allow you to test with the inheritance of RBAC an
 
 Considerations to take into account when you use a single Azure AD tenant are:
 
-- Follows [Enterprise-scale design recommendations](./enterprise-enrollment-and-azure-ad-tenants.md#define-azure-ad-tenants) for Azure AD Tenants
+- Follows [Enterprise-scale design recommendations](./enterprise-enrollment-and-azure-ad-tenants.md#define-azure-ad-tenants) for Azure AD Tenants.
 - As per the [Cloud Adoption Framework Azure best practices, standardize on a single directory and identity](/azure/cloud-adoption-framework/security/security-top-10#9-architecture-standardize-on-a-single-directory-and-identity) guidance, single Azure AD tenants are best practice for most.
   - In a single Azure AD tenant, you can use the different Azure AD groups for both production environments and canary enterprise-scale environments, with the same users, assigned to their relevant management group hierarchy within the same Azure AD tenant.
 - Increased or duplicated Azure AD licensing costs because of multiple identities across different Azure AD tenants.
