@@ -33,8 +33,8 @@ items:
       items:
       - name: Enterprise scale for Azure Virtual Desktop
         href: enterprise-scale-landing-zone.md
-      - name: Start small and expand for Azure Virtual Desktop
-        href: start-small-wvd.md  
+      - name: Azure Architecture Center - Azure Virtual Desktop
+        href: /azure/architecture/example-scenario/wvd/windows-virtual-desktop  
   - name: Migrate your virtual desktop platform
     items:
     - name: Proof of concept
@@ -51,11 +51,6 @@ items:
     href: govern.md
   - name: Manage your portfolio
     href: manage.md
-
-  - name: Architectures
-    items:
-    - name: Azure Virtual Desktop architecture
-      href: /azure/architecture/example-scenario/wvd/windows-virtual-desktop
 
   - name: Best practices
     items:
