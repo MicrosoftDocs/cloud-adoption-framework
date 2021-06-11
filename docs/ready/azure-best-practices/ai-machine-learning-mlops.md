@@ -96,7 +96,7 @@ Azure Machine Learning offers several asset management, orchestration, and autom
 - Standardize on a project lifecycle and agile methodology. The [Team Data Science Process](/azure/machine-learning/team-data-science-process/overview) provides a reference lifecycle implementation.
 - Balanced teams can execute all MLOps stages from exploration to development to operations.
 
-### Process
+### Process 
 
 - Standardize on a code template to allow for code reuse and increase ramp up time at project start or when a new team member joins the project. [Azure Machine Learning pipelines](/azure/machine-learning/concept-ml-pipelines) and [job submissions script](/python/api/azureml-core/azureml.core.scriptrun), and [CI/CD pipelines](/azure/machine-learning/how-to-github-actions-machine-learning) lend themselves well for the creation of templates.
 - Use version control. Jobs that are submitted from a Git-backed folder [automatically track repo metadata](/azure/machine-learning/concept-train-model-git-integration) with the job in Azure Machine Learning for reproducibility.
