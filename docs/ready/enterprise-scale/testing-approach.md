@@ -61,7 +61,7 @@ A similar scenario might be a change to the Azure RBAC role assignments and Azur
 
 [![Diagram of the management group hierarchy with the canary environment testing approach.](./media/canary-mgmt-groups.png)](./media/canary-mgmt-groups.png#lightbox)
 
-_Figure 1: Canary Management Group hierarchy._
+_Figure 1: Canary management group hierarchy._
 
 As the diagram shows, the entire enterprise-scale production environment management group hierarchy is duplicated under the `Tenant Root Group`. The *canary* name is appended to the management group display names and IDs. The IDs must be unique within a single Azure AD tenant.
 
