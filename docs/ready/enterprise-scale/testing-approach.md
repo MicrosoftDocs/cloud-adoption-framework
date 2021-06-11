@@ -100,7 +100,7 @@ However, this approach doesn't allow you to test with the inheritance of RBAC an
 
 Considerations to take into account when you use a single Azure AD tenant are:
 
-- Follows [Enterprise-scale design recommendations](./enterprise-enrollment-and-azure-ad-tenants.md#define-azure-ad-tenants) for Azure AD Tenants
+- Follows [Enterprise-scale design recommendations](./enterprise-enrollment-and-azure-ad-tenants.md#define-azure-ad-tenants) for Azure AD Tenants.
 - As per the [Cloud Adoption Framework Azure best practices, standardize on a single directory and identity](/azure/cloud-adoption-framework/security/security-top-10#9-architecture-standardize-on-a-single-directory-and-identity) guidance, single Azure AD tenants are best practice for most.
   - In a single Azure AD tenant, you can use the different Azure AD groups for both production environments and canary enterprise-scale environments, with the same users, assigned to their relevant management group hierarchy within the same Azure AD tenant.
 - Increased or duplicated Azure AD licensing costs because of multiple identities across different Azure AD tenants.
