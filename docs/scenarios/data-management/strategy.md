@@ -102,7 +102,7 @@ Leveraging data to build better products and higher value services as a point of
 
 With data governance in mind, the following diagram shows the essential stages for data lifecycle:
 
-![data lifecycle](./images/Data-management-and-quality.png)
+![data lifecycle](./images/data-management-and-quality.png)
 
 An effective data strategy must have provisions for data governance, but they are mutually inclusive, but not the same thing.
 

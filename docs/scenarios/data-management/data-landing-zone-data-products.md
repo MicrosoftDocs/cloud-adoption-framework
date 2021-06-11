@@ -3,7 +3,7 @@ title: Azure Enterprise Scale Analytics and AI Data Products
 description: Enterprise Scale Analytics and AI Data Products
 author:  mboswell
 ms.author:  mboswell # Microsoft employees only
-ms.date: 08/06/2021
+ms.date: 06/08/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -55,7 +55,7 @@ Figure 1, illustrates products that could exist within a bank such as investment
 
 ### Define Data Product Architecture High Level
 
-:::image type="content" source="images/data-product-define-hl.png" alt-text="Define Data Product Architecture High Level":::
+:::image type="content" source="images/data-product-define-high-level.png" alt-text="Define Data Product Architecture High Level":::
 
 Figure 2: Define Data Product Architecture High Level
 
