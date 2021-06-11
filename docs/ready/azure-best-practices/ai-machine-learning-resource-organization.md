@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
-# Organize and set up Azure Machine Learning environments
+# Organize and set up Azure Machine Learning environments 
 
 When planning an Azure Machine Learning deployment for an enterprise environment, there are some common decision points that affect how you create the workspace:
 
