@@ -14,7 +14,7 @@ ms.custom: think-tank
 
 When planning an Azure Machine Learning deployment for an enterprise environment, there are some common decision points that affect how you create the workspace:
 
-- **Team structure:** The way your Machine Learning teams are organized and collaborate on projects given use case and data segregation, or cost management requirements.
+- **Team structure:** The way your Data Science teams are organized and collaborate on projects given use case and data segregation, or cost management requirements.
 
 - **Environments:** The environments used as part of your development and release workflow to segregate development from production.
 
