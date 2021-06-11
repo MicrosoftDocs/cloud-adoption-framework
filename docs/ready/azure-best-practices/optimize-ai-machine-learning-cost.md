@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: internal
 ---
 
-# Manage budgets, costs, and quota for Azure Machine Learning at organizational scale
+# Manage budgets, costs, and quota for Azure Machine Learning at organizational scale 
 
 When you manage compute costs incurred from Azure Machine Learning, at an organization scale with many workloads, many teams, and users, there are numerous management and optimization challenges to work through.
 
