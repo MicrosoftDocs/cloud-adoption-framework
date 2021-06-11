@@ -314,7 +314,7 @@ items:
             href: ready/enterprise-scale/platform-automation-and-devops.md
         - name: Implement enterprise-scale landing zones
           href: ready/enterprise-scale/implementation.md
-        - name: Testing approach for Enterprise Scale
+        - name: Testing approach for enterprise-scale
           href: ready/enterprise-scale/testing-approach.md
         - name: Terraform module for CAF enterprise-scale
           href: ready/enterprise-scale/terraform-module-caf-enterprise-scale.md
