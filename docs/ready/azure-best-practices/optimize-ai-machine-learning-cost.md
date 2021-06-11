@@ -69,7 +69,7 @@ A reminder on the importance for utilization is to sign up for a greater number 
 
 Compute requirements for inference scenarios differ from training scenarios. Available options differ based on whether your scenario demands offline inference in batch or requires online inference in real time.
 
-For real-time inference scenarios consider following the below suggestions:
+For real-time inference scenarios consider the following suggestions:
 
 - Use [profiling capabilities](/azure/machine-learning/how-to-deploy-profile-model?pivots=py-sdk) on your model with Azure Machine Learning to determine how much CPU and memory you need to allocate for the model when deploying it as a web service.
 - If you're doing real-time inference but don't need high availability, deploy to [Azure Container Instances](/azure/machine-learning/how-to-deploy-azure-container-instance) (no SKU selection).
