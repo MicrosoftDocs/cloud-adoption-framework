@@ -1,5 +1,5 @@
 ---
-title: "Enterprise-Scale support for 'data management and analytics'"
+title: "Azure Enterprise Scale Analytics support for 'data management and analytics'"
 description: Describe how enterprise-scale can accelerate adoption of 'data management and analytics'
 author: BrianBlanchard
 ms.author: brblanch
@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Enterprise-Scale support for 'data management and analytics'
   
-Copying ESLZ Specific implemntation references here as a placeholder
+<!-- Copying ESLZ Specific implementation references here as a placeholder -->
 
 
 ## Reference Architecture OR Technology Solution
@@ -28,7 +28,7 @@ The Enterprise Scale Analytics and AI architecture was designed with the same st
 
 After making all the capability provisions, and taking a principled architectural view as discussed in this section, you will most likely end up with the building blocks required for your cloud strategy journey which may look something like the below:
 
-![Building Blocks lifecycle](./images/datastratbuildingblock.png)
+:::image type="content" source="./images/data-strategy-building-block.png" alt-text="Manage credentials decision tree" lightbox="./images/data-strategy-building-block.png":::
 
 ## Describe the narrative
 

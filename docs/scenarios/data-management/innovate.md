@@ -1,5 +1,5 @@
 ---
-title: "Innovate with 'data management and analytics'"
+title: "Innovate with 'data management and analytics' in Azure"
 description: Describe the scenario's impact on empowering innovation
 author: BrianBlanchard
 ms.author: brblanch

@@ -205,17 +205,17 @@ items:
     - name: Construction set for AKS enterprise-scale scenario
       href: enterprise-scale-landing-zone.md
     - name: Identity and access management
-      href: eslz-identity-and-access-management.md
+      href: identity-and-access-management.md
     - name: Network topology and connectivity
-      href: eslz-network-topology-and-connectivity.md
+      href: network-topology-and-connectivity.md
     - name: Management and monitoring
-      href: eslz-management-and-monitoring.md
+      href: management-and-monitoring.md
     - name: Business continuity and disaster recovery
-      href: eslz-business-continuity-and-disaster-recovery.md
+      href: business-continuity-and-disaster-recovery.md
     - name: Security governance and compliance
-      href: eslz-security-governance-and-compliance.md
+      href: security-governance-and-compliance.md
     - name: Platform automation and DevOps
-      href: eslz-platform-automation-and-devops.md
+      href: platform-automation-and-devops.md
        
   - name: Azure container products
     items:

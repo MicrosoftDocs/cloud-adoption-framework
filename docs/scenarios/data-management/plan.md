@@ -1,5 +1,5 @@
 ---
-title: Building a plan for 'data management and analytics'
+title: Building a plan for 'data management and analytics' in Azure
 description: Building a plan for 'data management and analytics'
 author: pratimdas
 ms.author: prda # Microsoft employees only
@@ -21,7 +21,7 @@ Much of the guidance in the Plan methodology focuses on the [five rs of rational
 
 To properly rationalize your data estate, begin by aligning your business outcomes to each of your data initiatives. This will aid in prioritization and a clear understanding of the value your can derive from each data initiative. Initiatives which represent little business value and also present lesser complexity with regards to migration could easily be included in you cloud migration plan to deliver quick efficiency gains. Initiatives with greater business impact or those with greater technical complexity would likely require richer planning to enable long term innovation value.
 
-![Strategic Initiative](./images/strategicinitiative.png)
+:::image type="content" source="./images/strategic-initiative.png" alt-text="Strategic Initiative" lightbox="./images/strategic-initiative.png":::
 
 Figure 1: Strategic Initiatives
 
@@ -43,7 +43,7 @@ Once you're clear about the business outcomes you're looking to drive through yo
 
 Clear mapping of the Product, Services or Tools capabilities Maturity Assessment along with People skills, who will help deliver on the achieving the overall objectives.
 
-![Who Can Transform](./images/whocantransform.png)
+:::image type="content" source="./images/who-can-transform.png" alt-text="Who Can Transform" lightbox="./images/who-can-transform.png":::
 
 The above is not an exhaustive list by any means and could vary depending on the organization type/structure.
 
@@ -78,7 +78,7 @@ Center of Excellence would assist in:
 - Deep technical skills in key technologies
 - Active participation and evangelizing in Communities of Practice
 
-![Strategy Cycle](./images/strategycycle.png)
+![Strategy Cycle](./images/strategy-cycle.png)
 
 ### Adopting Agile Delivery Method
 

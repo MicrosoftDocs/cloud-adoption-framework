@@ -1,5 +1,5 @@
 ---
-title: "Plan for migrate deploy"
+title: "Plan for migrate deploy in Azure"
 description: Describe the scenario's impact on migrate deploy
 author: BrianBlanchard
 ms.author: brblanch

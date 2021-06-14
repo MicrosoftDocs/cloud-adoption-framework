@@ -1,5 +1,5 @@
 ---
-title: "Govern 'data management and analytics'"
+title: Govern 'data management and analytics' in Azure
 description: Describe the scenario's impact on Governance
 author: BrianBlanchard
 ms.author: brblanch

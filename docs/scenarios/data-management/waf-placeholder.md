@@ -1,5 +1,5 @@
 ---
-title: Enterprise Scale Analytics and AI Define Strategy
+title: Azure Enterprise Scale Analytics and AI Define Strategy
 description: Enterprise Scale Analytics and AI Define Strategy
 author: pratimdas
 ms.author: prda # Microsoft employees only
@@ -11,11 +11,11 @@ ms.subservice: ready
 
 # Well-architected framework for data workloads
 
-When building data workloads, it's important to focus on the architectural principals. Think about whether you want to continue to manage and maintain your current service or products, or undertake new ones. The five architectural constructs are detailed in the [Azure Well Architected Framework](https://docs.microsoft.com/azure/architecture/framework/) and summarized below.  
+When building data workloads, it's important to focus on the architectural principals. Think about whether you want to continue to manage and maintain your current service or products, or undertake new ones. The five architectural constructs are detailed in the [Azure Well Architected Framework](/azure/architecture/framework/) and summarized below.  
 
 ### Security
 
-This is about the [confidentiality and integrity of data, including privilege management, data privacy and establishing appropriate controls](https://azure.microsoft.com/resources/seven-key-principles-of-cloud-security-and-privacy/). For all data products and services, [consider network isolation](https://docs.microsoft.com/azure/security/fundamentals/network-best-practices), [end-to-end encryption](https://docs.microsoft.com/azure/security/fundamentals/encryption-overview), auditing and polices at platform level. For identity, consider single sign on integration, multi-factor authentication backed conditional access and managed service identities. It is essential to focus on separation of concerns, such as control pane versus data place, [role-based access control (RBAC)](https://docs.microsoft.com/azure/role-based-access-control/overview), and where possible, attribute-based access control (ABAC). Security and [data management](https://docs.microsoft.com/azure/architecture/patterns/category/data-management) must be baked into the architectural process at layers for every application and workload. In general, set up processes around regular or continuous vulnerability assessment, threat protection and compliance monitoring.
+This is about the [confidentiality and integrity of data, including privilege management, data privacy and establishing appropriate controls](https://azure.microsoft.com/resources/seven-key-principles-of-cloud-security-and-privacy/). For all data products and services, [consider network isolation](/azure/security/fundamentals/network-best-practices), [end-to-end encryption](/azure/security/fundamentals/encryption-overview), auditing and polices at platform level. For identity, consider single sign on integration, multi-factor authentication backed conditional access and managed service identities. It is essential to focus on separation of concerns, such as control pane versus data place, [role-based access control (RBAC)](/azure/role-based-access-control/overview), and where possible, attribute-based access control (ABAC). Security and [data management](/azure/architecture/patterns/category/data-management) must be baked into the architectural process at layers for every application and workload. In general, set up processes around regular or continuous vulnerability assessment, threat protection and compliance monitoring.
 
 ### Reliability
 
