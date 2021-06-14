@@ -1,5 +1,5 @@
 ---
-title: "Introduction to the data governance in Azure"
+title: "Introduction to the data governance"
 description: Introducing the concept of data governance in the cloud
 author: BrianBlanchard
 ms.author: brblanch
@@ -11,7 +11,10 @@ ms.subservice: overview
 
 # Introduction to the concept of data governance
 
-Describe data management in a way that non-technical audiences can understand.
+Priority of alignment on this topic:
+
+[white paper](https://gearup.microsoft.com/checklists/analytics?tab=net-new-analytics-workloads&selectedassetcontainerid=b24a3a9d-03bd-4c55-a0de-4451b7a52b1e)
+[Pitch deck](https://gearup.microsoft.com/checklists/analytics?tab=net-new-analytics-workloads&selectedassetcontainerid=067ac04c-d6e4-4613-a064-744b6fd510db)
 
 * [Driving effective data governance for improved quality and analytics](https://www.microsoft.com/itshowcase/driving-effective-data-governance-for-improved-quality-and-analytics)
 * [Designing a modern data catalog at Microsoft to enable business insights](https://www.microsoft.com/itshowcase/designing-a-modern-data-catalog-at-microsoft-to-enable-business-insights)
