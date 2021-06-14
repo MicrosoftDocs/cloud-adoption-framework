@@ -6,7 +6,7 @@ ms.author: brblanch
 ms.date: 01/29/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: operate
+ms.subservice: manage
 ms.custom: think-tank, e2e-hybrid
 ---
 
@@ -16,10 +16,10 @@ This article provides guidance for using an [Azure Resource Manager template (AR
 
 Azure VMs are using the [Azure Instance Metadata Service (IMDS)](/azure/virtual-machines/windows/instance-metadata-service) by default. By projecting an Azure VM as an Azure Arc enabled server, a *conflict* is created, which will not allow for the Azure Arc server resources to be represented as one when the IMDS is being used. Instead, the Azure Arc server will still "act" as a native Azure VM.
 
-This guide will allow you to use and onboard Azure VMs to Azure Arc **for demo purposes only**. You will have the ability to simulate a server deployed outside of Azure, for example, "on-premises" or in other cloud platforms.
+This guide will allow you to use and onboard Azure VMs to Azure Arc **for demo purposes only**. You will have the ability to simulate a server deployed outside of Azure, for example, on-premises or in other cloud platforms.
 
 > [!NOTE]
-> An Azure VM is not expected to be an Azure Arc enabled server. The below scenario is unsupported and should only be used for demo and testing purposes.
+> An Azure VM is not expected to be an Azure Arc enabled server. The following scenario is unsupported and should only be used for demo and testing purposes.
 
 ## Prerequisites
 
@@ -71,7 +71,7 @@ This guide will allow you to use and onboard Azure VMs to Azure Arc **for demo p
 
 For you to get familiar with the automation and deployment flow, below is an explanation.
 
-1. A user edits the ARM template parameters file (one time edit). These parameter values are being used throughout the deployment.
+1. A user edits the ARM template parameters file (a one-time edit). These parameter values are being used throughout the deployment.
 
 2. The ARM template includes an Azure VM custom script extension, which deploys the [`install_arc_agent.ps1`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/azure/windows/arm_template/scripts/install_arc_agent.ps1) PowerShell script.
 
@@ -114,6 +114,8 @@ As mentioned, this deployment will use ARM templates. You will deploy a single t
 
     > [!NOTE]
     > Make sure that you are using the same Azure resource group name as the one you used in the `azuredeploy.parameters.json` file.
+
+    <!-- cspell:ignore arcwinsrvdemo -->
 
     For example:
 

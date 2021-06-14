@@ -20,13 +20,13 @@ The process of promotion varies according to the workload's architecture. Howeve
 
 Each of the following processes should be executed, documented, and validated prior to production deployment:
 
-- **[Assess](../assess/index.md):** The workload has been assessed for cloud compatibility.
-- **[Architect](../assess/architect.md):** The structure of the workload has been properly designed to align with the chosen cloud provider.
-- **[Replicate](../migrate/replicate.md):** The assets have been replicated to the cloud environment.
-- **[Stage](../migrate/stage.md):** The replicated assets have been restored in a staged instance of the cloud environment.
-- **[Business testing](./business-test.md):** The workload has been fully tested and validated by business users.
-- **[Business change plan](./business-change-plan.md):** The business has shared a plan for the changes to be made in accordance with the production promotion; this should include a user adoption plan, changes to business processes, users that require training, and timelines for various activities.
-- **[Ready](./ready.md):** Generally, a series of technical changes must be made before promotion.
+- [Assess](../assess/index.md): The workload has been assessed for cloud compatibility.
+- [Architect](../assess/architect.md): The structure of the workload has been properly designed to align with the chosen cloud provider.
+- [Replicate](../migrate/replicate.md): The assets have been replicated to the cloud environment.
+- [Stage](../migrate/stage.md): The replicated assets have been restored in a staged instance of the cloud environment.
+- [Business testing](./business-test.md): The workload has been fully tested and validated by business users.
+- [Business change plan](./business-change-plan.md): The business has shared a plan for the changes to be made in accordance with the production promotion; this should include a user adoption plan, changes to business processes, users that require training, and timelines for various activities.
+- [Ready](./ready.md): Generally, a series of technical changes must be made before promotion.
 
 ## Best practices to execute prior to promotion
 

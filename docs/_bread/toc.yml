@@ -52,6 +52,9 @@ items:
       - name: Manage
         tocHref: /azure/cloud-adoption-framework/manage/
         topicHref: /azure/cloud-adoption-framework/manage
+      - name: Secure
+        tocHref: /azure/cloud-adoption-framework/secure/
+        topicHref: /azure/cloud-adoption-framework/secure
     - name: Technology Platform Scenarios (Lenses)
       tocHref: /azure/cloud-adoption-framework/scenarios/
       topicHref: /azure/cloud-adoption-framework/scenarios
@@ -62,6 +65,6 @@ items:
       tocHref: /azure/cloud-adoption-framework/reference/
       topicHref: /azure/cloud-adoption-framework/reference
       items:
-      - name: Decision guides 
+      - name: Decision guides
         tocHref: /azure/cloud-adoption-framework/decision-guides/
         topicHref: /azure/cloud-adoption-framework/decision-guides

@@ -6,7 +6,7 @@ ms.author: brblanch
 ms.date: 01/29/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: operate
+ms.subservice: manage
 ms.custom: think-tank, e2e-hybrid
 ---
 
@@ -14,7 +14,7 @@ ms.custom: think-tank, e2e-hybrid
 
 This article provides guidance on how to use Azure Arc enabled servers to assign Azure policies to VMs outside of Azure, whether they are on-premises or on other clouds. With this feature you can now use Azure Policy to audit settings in the operating system of an Azure Arc enabled server, if a setting is not compliant you can also trigger a remediation task.
 
-In this case, you will assign a policy to audit if the Azure Arc connected machine has the (Microsoft Monitoring Agent) MMA agent installed. If not, use the extensions feature to automatically deploy it to the VM, an enrollment experience that levels to Azure VMs. This approach can be used to make sure all your servers are onboard to services such as Azure Monitor, Azure Security Center, Azure Sentinel, and so on.
+In this case, you will assign a policy to audit if the Azure Arc connected machine has the Log Analytics agent installed. If not, use the extensions feature to automatically deploy it to the VM, an enrollment experience that levels to Azure VMs. This approach can be used to make sure all your servers are onboard to services such as Azure Monitor, Azure Security Center, Azure Sentinel, and so on.
 
 You can use the Azure portal, an Azure Resource Manager template (ARM template) or PowerShell script to assign policies to Azure subscriptions or resource groups. The following procedures use an ARM template to assign built-in policies.
 
@@ -30,7 +30,7 @@ You can use the Azure portal, an Azure Resource Manager template (ARM template) 
 - [Vagrant Ubuntu box](./local-vagrant-ubuntu.md)
 - [Vagrant Windows box](./local-vagrant-windows.md)
 
-Please review the [Azure Monitor supported OS documentation](/azure/azure-monitor/vm/vminsights-enable-overview#supported-operating-systems) and ensure that the VMs you use for these procedures are supported. For Linux VMs, check both the Linux distribution and kernel to ensure you are using a supported configuration.
+Review the [Azure Monitor supported OS documentation](/azure/azure-monitor/vm/vminsights-enable-overview#supported-operating-systems) and ensure that the VMs you use for these procedures are supported. For Linux VMs, check both the Linux distribution and kernel to ensure you are using a supported configuration.
 
 ## Prerequisites
 
@@ -120,7 +120,7 @@ After all the prerequisites are set, you can assign policies to the Azure Arc co
 
    ![A screenshot of an Azure Policy remediation action within a remediation task.](./media/arc-policies-mma/remediation-action.png)
 
-5. After you have assigned remediation task, the policy will be evaluated again. It should show that the server on GCP is compliant and that the Microsoft Monitoring Agent extension is installed on the Azure Arc machine.
+5. After you have assigned remediation task, the policy will be evaluated again. It should show that the server on GCP is compliant and that the Log Analytics agent is installed on the Azure Arc machine.
 
    ![A screenshot of a remediation task configuration.](./media/arc-policies-mma/task-config.png)
 

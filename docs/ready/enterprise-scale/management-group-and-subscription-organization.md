@@ -6,7 +6,7 @@ ms.author: brblanch
 ms.date: 04/02/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready 
+ms.subservice: ready
 ms.custom: think-tank
 ---
 
@@ -14,7 +14,7 @@ ms.custom: think-tank
 
 ![Diagram that shows management group hierarchy.](./media/sub-org.png)
 
-_Figure 1: Management group hierarchy._
+*Figure 1: Management group hierarchy.*
 
 ## Define a management group hierarchy
 
@@ -26,7 +26,7 @@ Management group structures within an Azure Active Directory (Azure AD) tenant s
 
 - A management group tree can support up to [six levels of depth](/azure/governance/management-groups/overview#hierarchy-of-management-groups-and-subscriptions). This limit doesn't include the tenant root level or the subscription level.
 
-- Any principal (user, service principal) within an Azure AD tenant can create new management groups since Azure role-based access control (RBAC) authorization for management group operations isn't enabled by default.
+- Any principal (user or service principal) within an Azure AD tenant can create new management groups since Azure role-based access control (RBAC) authorization for management group operations isn't enabled by default.
 
 - All new subscriptions will be placed under the root management group by default.
 
@@ -40,7 +40,7 @@ Management group structures within an Azure Active Directory (Azure AD) tenant s
 
 - Use resource tags, which can be enforced or appended through Azure Policy, to query and horizontally navigate across the management group hierarchy. Then you can group resources for search needs without having to use a complex management group hierarchy.
 
-- Create a top-level sandbox management group to allow users to immediately experiment with Azure. Users can then experiment with resources that might not yet be allowed in production environments. The sandbox provides isolation from your development, test, and production environments. For further guidance about the top-level sandbox management group, review the [implementation guidelines](./implementation-guidelines.md#sandbox-governance-guidance).
+- Create a top-level sandbox management group to allow users to immediately experiment with Azure. Users can then experiment with resources that might not yet be allowed in production environments. The sandbox provides isolation from your development, test, and production environments.
 
 - Use a dedicated service principal name (SPN) to execute management group management operations, subscription management operations, and role assignment. Using an SPN reduces the number of users who have elevated rights and follows least-privilege guidelines.
 
@@ -58,6 +58,9 @@ Management group structures within an Azure Active Directory (Azure AD) tenant s
 
 - [Configure](/azure/governance/management-groups/how-to/protect-resource-hierarchy#setting---default-management-group) a default, dedicated management group for new subscriptions to ensure that no subscriptions are placed under the root management group. This is especially important if there are users eligible for MSDN or Visual Studio benefits and subscriptions. A good candidate for this type of management group is a `Sandbox` management group.
 
+>[!NOTE]
+ > For testing guidance for enterprise-scale deployments, see [Testing approach for Enterprise Scale](./testing-approach.md).
+
 ## Subscription organization and governance
 
 Subscriptions are a unit of management, billing, and scale within Azure. They play a critical role when you're designing for large-scale Azure adoption. This section helps you capture subscription requirements and design target subscriptions based on critical factors. These factors are environment type, ownership and governance model, organizational structure, and application portfolios.
@@ -66,7 +69,7 @@ Subscriptions are a unit of management, billing, and scale within Azure. They pl
 
 - Subscriptions serve as boundaries for assigning Azure policies. For example, secure workloads such as Payment Card Industry (PCI) workloads typically require additional policies to achieve compliance. Instead of using a management group to group workloads that require PCI compliance, you can achieve the same isolation with a subscription. This way, you don't have too many management groups with a small number of subscriptions.
 
-- Subscriptions serve as a scale unit so that component workloads can scale within the platform [subscription limits](/azure/azure-subscription-service-limits). Make sure to consider subscription resource limits during your workload design sessions.
+- Subscriptions serve as a scale unit so that component workloads can scale within the platform [subscription limits](/azure/azure-resource-manager/management/azure-subscription-service-limits). Make sure to consider subscription resource limits during your workload design sessions.
 
 - Subscriptions provide a management boundary for governance and isolation, which clearly separates concerns.
 
@@ -80,13 +83,13 @@ Subscriptions are a unit of management, billing, and scale within Azure. They pl
   - Perform an access review in Azure AD Privileged Identity Management quarterly or twice a year to ensure that privileges don't proliferate as users move within the customer organization.
   - Take full ownership of budget spending and resource utilization.
   - Ensure policy compliance and remediate when necessary.
-  
+
 - Use the following principles when identifying requirements for new subscriptions:
   - **Scale limits:** Subscriptions serve as a scale unit for component workloads to scale within platform subscription limits. For example, large, specialized workloads such as high-performance computing, IoT, and SAP are all better suited to use separate subscriptions to avoid limits (such as a limit of 50 Azure Data Factory integrations).
   - **Management boundary:** Subscriptions provide a management boundary for governance and isolation, which allows for a clear separation of concerns. For example, different environments such as development, test, and production are often isolated from a management perspective.
   - **Policy boundary:** Subscriptions serve as a boundary for the assignment of Azure policies. For example, secure workloads such as PCI typically require additional policies to achieve compliance. This additional overhead doesn't need to be considered holistically if a separate subscription is used. Similarly, development environments might have more relaxed policy requirements relative to production environments.
   - **Target network topology:** Virtual networks can't be shared across subscriptions, but they can connect with different technologies such as virtual network peering or Azure ExpressRoute. Consider which workloads must communicate with each other when you decide whether a new subscription is required.
-  
+
 - Group subscriptions together under management groups aligned within the management group structure and policy requirements at scale. Grouping ensures that subscriptions with the same set of policies and Azure role assignments can inherit them from a management group, which avoids duplicate assignments.
 
 - Establish a dedicated management subscription in the `Platform` management group to support global management capabilities such as Azure Monitor Log Analytics workspaces and Azure Automation runbooks.
@@ -145,19 +148,19 @@ Organizations can use enterprise-scale Azure policies to enforce the following g
 
 - **Prevent Public IP-based services**
 
-    Most Azure platform-as-a-service (PaaS) services are created with a public IP address assigned to each service. This option can help developers who need to start using these services quickly.
+    Most Azure platform as a service (PaaS) services are created with a public IP address assigned to each service. This option can help developers who need to start using these services quickly.
 
-    Public endpoint accelerates the learning curve and supports developing pilots and small-scale proof-of-concept (POC) implementations, but developers sometimes overlook their public IP addresses when transitioning pilots/POCs to production-ready enterprise applications.
+    Public endpoint accelerates the learning curve and supports developing pilots and small-scale proof of concept (POC) implementations, but developers sometimes overlook their public IP addresses when transitioning pilots/POCs to production-ready enterprise applications.
 
     Security risks can increase when production workloads use public IPs without proper security measures. One type of threat is an actor using a public IP as a gateway to launch an attack. To minimize security risks, many enterprise compliance policies don't allow public IPs.
 
-    There is a custom policy that targets a scope and prevents a public IP address from being created there. Enterprises can also use this policy to create virtual machines (VMs) without public IPs. Similarly, there's a custom policy initiative/policy set that also helps enterprises to prevent Azure services from being created with public IP addresses.
+    There's a custom policy that targets a scope and prevents a public IP address from being created there. Enterprises can also use this policy to create virtual machines (VMs) without public IPs. Similarly, there's a custom policy initiative/policy set that also helps enterprises to prevent Azure services from being created with public IP addresses.
 
 - **Collect audit and log information**
 
     A lack of auditing and diagnostics information at a granular level can affect operational practices. Incomplete audit information makes it difficult to correlate logs from multiple Azure services and create cohesive debugging.
 
-    Once Azure services are provisioned, they should provide detailed information about how they interact with the Azure platform. This information can be broadly divided into logs and metrics, and each Azure service can be further grouped into its subcomponents (for example, an Azure public IP resource with `DDoSProtectionNotifications`, `DDoSMitigationReports`, and `DDoSMitigationFlowLogs` as its subcomponents). Collecting diagnostic information at these subcategories can also help organizations to enhance auditing and debugging.
+    Once Azure services are provisioned, they should provide detailed information about how they interact with the Azure platform. This information can be broadly divided into logs and metrics, and each Azure service can be further grouped into its subcomponents. Ror example, an Azure public IP resource with `DDoSProtectionNotifications`, `DDoSMitigationReports`, and `DDoSMitigationFlowLogs` as its subcomponents. Collecting diagnostic information at these subcategories can also help organizations to enhance auditing and debugging.
 
      A custom Azure policy initiative is available to help enterprises gather logs and metrics at a deeper level for each Azure service. This initiative includes a policy for every Azure service, and the policies collect key log categories and metrics automatically.
 
@@ -175,9 +178,9 @@ Organizations can use enterprise-scale Azure policies to enforce the following g
 
     Bad actors aim to access and exploit business-critical SQL databases. When enterprises don't acknowledge these attempts, their risk of not detecting and resolving these incidents increases. In a worst-case scenario, an enterprise might not know if its SQL database has been compromised.
 
-    SQL Database lets enterprises set up security alerts that report suspicious Microsoft SQL Server activity. These alerts reach a preconfigured email addresses and optionally, Azure subscription admins and owners. They can expose malicious activities like SQL injection attacks, brute-force attacks, and more.
+    SQL Database lets enterprises set up security alerts that report suspicious Microsoft SQL Server activity. These alerts reach a preconfigured email address and optionally, Azure subscription admins and owners. They can expose malicious activities like SQL injection attacks, brute-force attacks, and more.
 
-    A custom Azure policy is available to enable security alerts on SQL databases. Security alerts provide detailed information about every incident, which are visible in the Azure portal or emails from when alerts are triggered.
+    A custom Azure policy is available to enable security alerts on SQL databases. Security alerts provide detailed information about every incident, which is visible in the Azure portal or emails from when alerts are triggered.
 
   - **Examine an audit trail of operations**
 
@@ -185,23 +188,23 @@ Organizations can use enterprise-scale Azure policies to enforce the following g
 
     Enabling SQL auditing can help enterprises to gather important information about all database activities, and SQL auditing helps enterprises to create and analyze an audit trail of database events. This is also part of many industry/regional regulatory compliance requirements.
 
-    Enterprises can use a custom Azure policy to enforce SQL database auditing. This policy audits and reports on key database events like ownership, role membership, or schema changes; successful/failed logins; and more. Enterprises can use this policy's audit trail to gain insights about database operations and comply with industry or regional regulatory requirements.
+    Enterprises can use a custom Azure policy to enforce SQL database auditing. This policy audits and reports on key database events like ownership, role membership, or schema changes, successful/failed logins, and more. Enterprises can use this policy's audit trail to gain insights about database operations and comply with industry or regional regulatory requirements.
 
 - **Evaluate proven best practices**
 
-   An SQL database can experience a lot of of schema, permission, and configuration changes throughout its life cycle, and these changes can deviate from best practices. In turn, excessive permissions, orphaned roles, and other configurational drifts can be exploited by malicious actors.
+   An SQL database can experience a lot of schema, permission, and configuration changes throughout its lifecycle, and these changes can deviate from best practices. In turn, excessive permissions, orphaned roles, and other configurational drifts can be exploited by malicious actors.
 
    Microsoft best practices for SQL databases can help enterprises to assess their SQL databases, and SQL Database has a built-in vulnerability assessment service to assist. A vulnerability assessment scans and identifies database- and server-level security risks, and it offers remediation tasks that can fix vulnerabilities.
 
-    A custom Azure policy ensures that SQL databases are configured with vulnerability assessments. Assessment scans run periodically, reports are stored in an Azure Storage account, and an predefined email address shares the results for reporting.
+    A custom Azure policy ensures that SQL databases are configured with vulnerability assessments. Assessment scans run periodically, reports are stored in an Azure Storage account, and a predefined email address shares the results for reporting.
 
 - **Protect secrets from being deleted intentionally or accidentally**
 
     Azure Key Vault stores confidential information like keys, certificates, passwords, and more. A malicious user can abuse the service by deleting the secrets that it stores, and a standard user could accidentally delete the sensitive stored within. Without proper provisions, malicious or accidental deletion in Azure Key Vault could harm the business.
 
-    The **soft-delete** feature in Azure Key Vault can protect enterprises against intentional or accidental deletion. With **soft-delete** enabled, deleted keys are retained for a predefined time period. If the delete operation was intended, then key content can be deleted until an another purge, typically by a user with more access privileges. If the delete operation was an accident, then the deleted keys can be restored within the time defined.
+    The **soft-delete** feature in Azure Key Vault can protect enterprises against intentional or accidental deletion. With **soft-delete** enabled, deleted keys are retained for a predefined time period. If the delete operation was intended, then key content can be deleted until another purge, typically by a user with more access privileges. If the delete operation was an accident, then the deleted keys can be restored within the time defined.
 
-    Azure offers a a custom policy to ensure that **soft-delete** is enabled by default with Azure Key Vault. This policy provides an extra security layer if Azure Key Vault content is deleted maliciously, and enterprises gain more control if content is deleted accidentally.
+    Azure offers a custom policy to ensure that **soft-delete** is enabled by default with Azure Key Vault. This policy provides an extra security layer if Azure Key Vault content is deleted maliciously, and enterprises gain more control if content is deleted accidentally.
 
 - **Enforce Azure Application Gateway Web Application Firewall**
 
@@ -225,13 +228,13 @@ Organizations can use enterprise-scale Azure policies to enforce the following g
 
     Enterprises can deploy private Azure DNS zones centrally to manage DNS records clearly. Azure Virtual Network can link with private zones to help run domain controllers, which can streamline connectivity from on-premise sites. Azure services that support Azure Private Link/End Point can use centrally managed private DNS zones without creating them during each application deployment.
 
-    Azure offers a custom policy that can prevent the creation of a private DNS zone in the scope during which its applied. Enterprises can view this policy's compliance status even when the policy enforcement is disabled. This policy helps to streamline connectivity between on-premise sites and access to Azure PaaS services using Private Link/End Point.
+    Azure offers a custom policy that can prevent the creation of a private DNS zone in the scope during which it's applied. Enterprises can view this policy's compliance status even when the policy enforcement is disabled. This policy helps to streamline connectivity between on-premise sites and access to Azure PaaS services using Private Link/End Point.
 
 - **Enforce network traffic control**
 
     An Azure Virtual Network can be divided into multiple subnets. Since network access controls between these subnets don't exist by default, this can result in unsolicited network traffic in a subnet.
 
-    Azure network security groups (NSGs) helps to filter incoming and outgoing subnet traffic, and stateful packet inspections can allow or deny network traffic. Resources inside subnets can only receive traffic from allowed IP address range(s).
+    Azure network security groups (NSGs) help to filter incoming and outgoing subnet traffic, and stateful packet inspections can allow or deny network traffic. Resources inside subnets can only receive traffic from allowed IP address ranges.
 
     Azure offers a custom policy that pairs every subnet with an NSG. A combination of subnet and an NSG ensures that a default set of rules controls traffic to and from a subnet. Depending on their needs, enterprises can also add or modify rules to control traffic further.
 
@@ -241,7 +244,7 @@ Organizations can use enterprise-scale Azure policies to enforce the following g
 
     Azure Security Center is the Azure native security management system that assesses Azure resources' security posture against security best practices. It helps to detect and prevent threats against data and application services, and with multiple integration points, it can be deployed quickly.
 
-    Azure offers a custom policy that pairs Azure subscription(s) with Security Center, helping subscription(s) to quickly start receiving Security Center threat detection and protection. This policy automatically covers key Azure services like VMs, storage accounts, and seven others with Security Center. If deviation from security best practice occurs, enterprises benefit from continuous security assessments and actionable recommendations.
+    Azure offers a custom policy that pairs Azure subscriptions with Security Center, helping subscriptions to quickly start receiving Security Center threat detection and protection. This policy automatically covers key Azure services like VMs, storage accounts, and seven others with Security Center. If deviation from security best practice occurs, enterprises benefit from continuous security assessments and actionable recommendations.
 
 - **Protect against ransomware attacks and data loss**
 
@@ -253,7 +256,7 @@ Organizations can use enterprise-scale Azure policies to enforce the following g
 
 - **Protect against distributed denial of service attacks**
 
-    Publicly reachable Azure resources are vulnerable to distributed denial-of-service (DDoS) attacks. These attacks can affect an application's availability to its intended users, and prolonged attacks can exhaust all available resources and create downtime for business-critical application(s).
+    Publicly reachable Azure resources are vulnerable to distributed denial-of-service (DDoS) attacks. These attacks can affect an application's availability to its intended users, and prolonged attacks can exhaust all available resources and create downtime for business-critical applications.
 
     Azure DDoS Protection defends Azure resources against DDoS attacks by continuously monitoring incoming traffic to identify potential threats. During an active attack, enterprises can benefit from working with the Microsoft DDoS Rapid Response team.
 
@@ -261,7 +264,7 @@ Organizations can use enterprise-scale Azure policies to enforce the following g
 
 - **Auto-provision Private Link/Endpoint with private DNS zones**
 
-    One enterprise maintenance challenge is how to create private DNS zones for every application that needs access to Azure PaaS services. Azure Private Link and Private Endpoint use private IP addresses to provide access to Azure platform-as-a-service (PaaS) services, and private DNS zones resolve DNS records.Private DNS zone groups use categorizes from Azure services like blob, queue, table, SQL, etc. to group Private Link connections and use one private DNS zone per service.
+    One enterprise maintenance challenge is how to create private DNS zones for every application that needs access to Azure PaaS services. Azure Private Link and Private Endpoint use private IP addresses to provide access to Azure platform-as-a-service (PaaS) services, and private DNS zones resolve DNS records. Private DNS zone groups use categorizes from Azure services like blob, queue, table, SQL, etc. to group Private Link connections and use one private DNS zone per service.
 
     Enterprises can also create central private DNS zones, and custom Azure policies can automatically connect Private Link/Endpoint with private DNS zones for Azure services.
 
@@ -277,7 +280,7 @@ Organizations can use enterprise-scale Azure policies to enforce the following g
 
     As more workloads start to get deployed in Azure, they begin using a common set of services such as firewalls, VPN gateways, and others. If not carefully planned, common services can replicate per application deployment, creating unnecessary costs and operational overhead. In scenarios where on-premises connectivity is needed from Azure and connectivity is established per application deployment, network topology becomes more difficult to maintain.
 
-    Azure hub-and-spoke network topology helps to streamline needs for network connectivity. A hub virtual network (VNet) can host shared services while spoke VNets host application-specific Azure resources. Hub-and-spoke VNets use VNet peering to connected with each other, and the network topology promotes clean network design, easier management, and optimized costs.
+    Azure hub-and-spoke network topology helps to streamline needs for network connectivity. A hub virtual network (VNet) can host shared services while spoke VNets host application-specific Azure resources. Hub-and-spoke VNets use VNet peering to connect with each other, and the network topology promotes clean network design, easier management, and optimized costs.
 
     Azure offers a custom policy that uses Azure Firewall and gateways from VPNs and ExpressRoute to provisions hub VNets. Enterprises can configure all options for firewalls and gateways as part of the policy assignment. This policy simplifies the process to deploy Azure hub-and-spoke network topology.
 
@@ -285,7 +288,7 @@ Organizations can use enterprise-scale Azure policies to enforce the following g
 
 - **Provision default configurations for Azure Monitor**
 
-    The inability to identify and visualize the relationship between the Azure platform, its service(s), and application(s) can lead to an outage or undetected and degraded performance. Operations or support teams could miss opportunity to correct specific conditions, and an Azure application might not scale itself to respond to a surge or slump in the demand.
+    The inability to identify and visualize the relationship between the Azure platform, its services, and applications can lead to an outage or undetected and degraded performance. Operations or support teams could miss opportunity to correct specific conditions, and an Azure application might not scale itself to respond to a surge or slump in the demand.
 
     Azure Monitor Logs and Log Analytics workspaces use alerts to help enterprises understand and resolve critical conditions. They use dashboards, workbooks, and Microsoft Power BI to support enterprises to visualize and interact with a robust set of log information. Enterprises can use Azure Monitor Logs and Log Analytics workspaces together to configure VM autoscaling and automatically add or remove extra instances.
 
@@ -293,7 +296,7 @@ Organizations can use enterprise-scale Azure policies to enforce the following g
 
 - **Enable log storage and queries**
 
-    If not carefully planned, log information from multiple Azure sources can become unmanageable, as capturing, storing, and managing logs can consume resources, time, and costs. Identifying trends or patterns over a long period of time and a large amount of logs can also become challenging. Log Analytics queries use alerts and interactive reports to help enterprises to efficiently store and manage logs from multiple sources.
+    If not carefully planned, log information from multiple Azure sources can become unmanageable, as capturing, storing, and managing logs can consume resources, time, and costs. Identifying trends or patterns over a long period of time and a large number of logs can also become challenging. Log Analytics queries use alerts and interactive reports to help enterprises to efficiently store and manage logs from multiple sources.
 
     Azure offers a custom policy that creates a Log Analytics workspace to serve as a repository that stores data logs. An Azure Automation account is created, and it links to a Log Analytics workspace to automate tasks or deploy Azure Monitor solutions that could depend on those workspaces. The policy also helps to configure log retention periods, Azure regions, and other properties.
 
@@ -303,15 +306,15 @@ Organizations can use enterprise-scale Azure policies to enforce the following g
 
     Azure Arc simplifies how resources like servers, kubernetes clusters, and data services are governed and managed across heterogeneous. By projecting hybrid resources as native Azure resources, Azure Arc provides a single control pane for managing native and hybrid resources, bringing native and hybrid resources under a unified role-based-access-control solution.
 
-    Azure offers two custom policies that can help enterprises to set up Log Analytics agents on Azure-Arc-enabled Linux and Windows servers. A Log Analytics workspace is also configured to store and manage logs. When assigned successfully, the policy identifies the name of server(s) within its scope and assigns it to a Log Analytics agent.
+    Azure offers two custom policies that can help enterprises to set up Log Analytics agents on Azure-Arc-enabled Linux and Windows servers. A Log Analytics workspace is also configured to store and manage logs. When assigned successfully, the policy identifies the name of servers within its scope and assigns it to a Log Analytics agent.
 
 - **Enforce collecting network traffic logs**
 
     Even though Virtual Network and subnets provide logical private network boundaries, it's still necessary to monitor network traffic in Azure. Without proper monitoring, enterprise networks are vulnerable to malicious or unknown traffic from compromised IP addresses. Without an understanding of the current traffic, it can be challenging to provision extra capacity for increasing in network traffic.
 
-    Azure Network Watcher helps enterprises to monitor and repair network issue for infrastructure-as-a-service (IaaS) services in Azure. With this service, NSG flow logs provides a way to capture information about network traffic. Enterprises can benefit from traffic analysis and patterns, forecast future capacity needs, and enforce compliance with corporate governance policies.
+    Azure Network Watcher helps enterprises to monitor and repair network issue for infrastructure as a service (IaaS) services in Azure. With this service, NSG flow logs provide a way to capture information about network traffic. Enterprises can benefit from traffic analysis and patterns, forecast future capacity needs, and enforce compliance with corporate governance policies.
 
-    Azure offers a custom policy for setting up NSG flow logs in Network Watcher; here, a Storage account is provisioned as repository to store NSG flow logs. This policy also configuring the retention period to store the NSG flow logs.  
+    Azure offers a custom policy for setting up NSG flow logs in Network Watcher. Here, a storage account is provisioned as a repository to store NSG flow logs. This policy also configuring the retention period to store the NSG flow logs.
 
 - **Provision an at-scale network connectivity solution**
 
@@ -319,7 +322,7 @@ Organizations can use enterprise-scale Azure policies to enforce the following g
 
     Azure Virtual WAN is an enterprise-level network service that helps organizations to resolve connectivity challenges. The service provides higher aggregate throughput with network connectivity, optimal routing over the Azure backbone, and a unified Azure management experience.
 
-    Azure offers a custom policy to set up Virtual WAN and provision a virtual hub within the service. Enterprises can deploy virtual hubs to act as a central point for connections from multiple sources and destinations. ExpressRoute, VPN gateways, and Azure Firewall are also provisioned to address network connectivity requirements.  
+    Azure offers a custom policy to set up Virtual WAN and provision a virtual hub within the service. Enterprises can deploy virtual hubs to act as a central point for connections from multiple sources and destinations. ExpressRoute, Azure VPN Gateway, and Azure Firewall are also provisioned to address network connectivity requirements.
 
 - **Back up virtual machines**
 
@@ -339,8 +342,8 @@ Organizations can use enterprise-scale Azure policies to enforce the following g
 
 - **Enforce Windows VMs to join Azure AD domains**
 
-    Enterprises have been using domain joined VMs for a consistent management experience. When operations like corporate password policies, central authentication, and others are created as part of domain policies, a VM that doesn't join the domain is exposed to risks like weak passwords and an inability to connect with corporate devices, applications, and other limitations. When deployed on VMs that aren't joined to the domain, legacy applications relying on authentication protocols like Microsoft New technology LAN Manager or Kerberos could face authentication issues. 
+    Enterprises have been using domain-joined VMs for a consistent management experience. When operations like corporate password policies, central authentication, and others are created as part of domain policies, a VM that doesn't join the domain is exposed to risks like weak passwords and an inability to connect with corporate devices, applications, and other limitations. When deployed on VMs that aren't joined to the domain, legacy applications relying on authentication protocols like NTLM or Kerberos could face authentication issues.
 
     Azure provides managed and unmanaged solutions for implementing domain services. With self-managed Azure AD DS services, enterprises gain the same complete control of setups, configurations, and operations as with on-premises environment. The service frees enterprises of management overhead while providing essential domain services.
 
-    Azure offers a custom policy that helps new Windows VMs to automatically join domains. The 'JsonADDomainExtension' extension deployed on the VM uses configuration settings like the username, domain, OUPath, and more to ensure that the VM joins the specified domain. This policy uses Azure KeyVault to manage confidential domain username and password information.
+    Azure offers a custom policy that helps new Windows VMs to automatically join domains. The `JsonADDomainExtension` extension deployed on the VM uses configuration settings like the username, domain, OUPath, and more to ensure that the VM joins the specified domain. This policy uses Azure KeyVault to manage confidential domain username and password information.

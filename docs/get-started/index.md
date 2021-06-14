@@ -27,11 +27,11 @@ Each of the following links takes you to questions that are typically asked when
 
 ## Cloud adoption scenarios
 
-Your organization's cloud adoption effort will tend to align towards supporting the requirements of the long-term strategic goals of your cloud journey. Depending on whether you're considering a comprehensive hybrid and multicloud effort, or preparing for Kubernetes and container integration into your cloud strategy, we have updated guidance for a [hybrid and multicloud adoption scenario](../scenarios/hybrid/scenario-overview.md) and a [modern containers adoption scenario](../scenarios/aks/index.md).
+Your organization's cloud adoption effort will tend to align toward supporting the requirements of the long-term strategic goals of your cloud journey. Depending on whether you're considering a comprehensive hybrid and multicloud effort, or preparing for Kubernetes and container integration into your cloud strategy, we have updated guidance for a [hybrid and multicloud adoption scenario](../scenarios/hybrid/scenario-overview.md) and a [modern application platform scenario](../scenarios/aks/index.md).
 
 ## Cloud adoption antipatterns
 
-You may encounter missteps with design, planning, or implementation when migrating to the cloud. We have updated detailed guidance on [Antipatterns](../antipatterns/antipatterns-to-avoid.md), that can block innovation and prevent businesses from adopting and realizing goals.  
+You may encounter missteps with design, planning, or implementation when migrating to the cloud. We have updated detailed guidance on [antipatterns](../antipatterns/antipatterns-to-avoid.md), that can block innovation and prevent businesses from adopting and realizing goals.
 
 ## Align foundation
 

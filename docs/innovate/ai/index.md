@@ -1,23 +1,19 @@
 ---
-title: CAF Innovation with AI
-description: Find Cloud Adoption Framework (CAF) tools, programs, and configuration templates to simplify adoption of AI for applications and cloud-native practices at scale.
+title: Innovation with AI in the Cloud Adoption Framework
+description: Find Cloud Adoption Framework tools, programs, and configuration templates to simplify adoption of AI for applications and cloud-native practices at scale.
 author: v-hanki
 ms.author: janet
 ms.date: 07/14/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
-ms.custom:
- - think-tank
- - seo-caf-innovate
-keywords: What is the cloud adoption framework, CAF, cloud adoption framework, AI applications, cloud adoption lifecycle 
+ms.custom: think-tank, seo-caf-innovate
+keywords: What is the cloud adoption framework, CAF, cloud adoption framework, AI applications, cloud adoption lifecycle
 ---
 
-<!-- docutune:casing InterpretML FairLearn -->
+# Innovation with AI in the Cloud Adoption Framework
 
-# AI in the Cloud Adoption Framework
-
-The Cloud Adoption Framework (CAF) is a collection of documentation, implementation guidance, best practices, and tools that are proven guidance from Microsoft designed to accelerate your cloud adoption lifecycle.
+The Cloud Adoption Framework is a collection of documentation, implementation guidance, best practices, and tools that are proven guidance from Microsoft designed to accelerate your cloud adoption lifecycle.
 
 Review a prescriptive framework that includes the tools, programs, and content (best practices, configuration templates, and architecture guidance) to simplify adoption of AI and cloud-native practices at scale.
 

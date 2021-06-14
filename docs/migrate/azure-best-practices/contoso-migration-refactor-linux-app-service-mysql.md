@@ -305,7 +305,7 @@ Contoso admins create a new private GitHub repo and set up a connection to the o
 
 1. They browse to the osTicket software public GitHub repo and fork it to the Contoso GitHub account.
 
-    ![Screenshot of GitHub repo page, highlighting the Fork button.](./media/contoso-migration-refactor-linux-app-service-mysql/github1.png)
+    ![Screenshot of GitHub repo page, highlighting the **Fork** button.](./media/contoso-migration-refactor-linux-app-service-mysql/github1.png)
 
 2. After they fork the repo, they browse to the `include` folder and select the `ost-config.php` file.
 
@@ -362,7 +362,7 @@ As the final step in the migration process, Contoso admins configure the web app
 
 8. They configure both the `osticket-eus2` and `osticket-cus` web apps to allow the custom host names.
 
-    ![Screenshot of the **Ad hostname** pane, highlighting the Validate button.](./media/contoso-migration-refactor-linux-app-service-mysql/configure-app7.png)
+    ![Screenshot of the **Ad hostname** pane, highlighting the **Validate** button.](./media/contoso-migration-refactor-linux-app-service-mysql/configure-app7.png)
 
 ### Set up autoscaling
 

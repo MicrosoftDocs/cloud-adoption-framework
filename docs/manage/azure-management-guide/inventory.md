@@ -6,7 +6,7 @@ ms.author: brblanch
 ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: operate
+ms.subservice: manage
 ms.localizationpriority: high
 ms.custom: internal, fasttrack-edit, AQC
 ---
@@ -169,8 +169,8 @@ To enable solutions, you need to configure the Log Analytics workspace. Onboarde
 
 There are two approaches to onboarding:
 
-- [Single VM](../../manage/azure-server-management/onboard-single-vm.md)
-- [Entire subscription](../../manage/azure-server-management/onboard-at-scale.md)
+- [Single VM](../azure-server-management/onboard-single-vm.md)
+- [Entire subscription](../azure-server-management/onboard-at-scale.md)
 
 Each article guides you through a series of steps to onboard these solutions:
 

@@ -45,7 +45,7 @@ The following tasks are typically executed regularly:
 
 - Review:
   - [Business outcomes](../strategy/business-outcomes/index.md).
-  - [Financial models](../strategy/financial-models.md).
+  - [Financial models](../strategy/cloud-migration-business-case.md).
   - [Motivations for cloud adoption](../strategy/motivations.md).
   - [Business risks](../govern/policy-compliance/risk-tolerance.md).
   - [Rationalization of the digital estate](../digital-estate/index.md).

@@ -1,5 +1,5 @@
 ---
-title: Enterprise-scale platform automation and DevOps recommendations for SAP in Azure
+title: Deployment options for SAP in Azure
 description: Understand the dependencies between SAP systems, environments, and landscapes to automate application deployments and management.
 author: JefferyMitchell
 ms.author: brblanch
@@ -12,13 +12,13 @@ ms.custom: think-tank, e2e-sap
 
 <!-- docutune:casing Snow -->
 
-# Enterprise-scale platform automation and DevOps recommendations for SAP in Azure
+# Deployment options for SAP in Azure
 
-The principles in the Cloud Adoption Framework for Azure can help with automating SAP in Azure. When forming your automation strategy and determining your approach, it's important to identify an SAP application's key components and use those observations to guide the strategy.
+The principles in the Cloud Adoption Framework for Azure can help with automating SAP in Azure. When forming your automation strategy and determining your approach, it's important to identify an SAP application's key components and use those observations to guide the strategy. Specifically in enterprise environments, deployment option should consider manual configuration, platform automation, and DevOps approaches used to support the SAP platform.
 
-SAP applications are a critical technology backbone for many global enterprises, and Azure provides [guidance](/azure/cloud-adoption-framework/scenarios/sap/enterprise-scale-landing-zone) to ensure that solutions are certified, supported, and successfully implemented. Organizations can optimize Azure's agility to deploy SAP, automate deployment activities, configure systems, and perform other complex tasks for to ensure operational efficiency and controlled, code-malleable infrastructure deployments.
+SAP applications are a critical technology backbone for many global enterprises, and Azure provides [guidance](./enterprise-scale-landing-zone.md) to ensure that solutions are certified, supported, and successfully implemented. Organizations can optimize Azure's agility to deploy SAP, automate deployment activities, configure systems, and perform other complex tasks for to ensure operational efficiency and controlled, code-malleable infrastructure deployments.
 
-The [Microsoft SAP automation repo](https://github.com/Azure/sap-hana) supports Azure-SAP customers to integrate scripts with current DevOps practices or use the code in its current state and directly from a cloned repository.
+The [Microsoft SAP Automation repo](https://github.com/Azure/sap-hana) supports Azure-SAP customers to integrate scripts with current DevOps practices or use the code in its current state and directly from a cloned repository.
 
 ## SAP architecture
 
@@ -61,17 +61,18 @@ An SAP deployment automation should be implemented as a workflow that starts wit
 **Design considerations:**
 
 - Define the scope of automation needed:
+
   - Infrastructure
   - Configuring the operating system
   - Installing the application installation
   - Ongoing operations (run-state operations)
-  
+
 - Define the strategy for storing parameter files
 
 **Design recommendations:**
 
 - Store all parameter files in a source-control repository.
-- Back up state and parameter files to prevent file corruption. For example, you can store Terraform state files on read-access geo-redundant-storage-based Hot-tier storage accounts.
+- Back up state and parameter files to prevent file corruption. For example, you can store Terraform state files on read-access geo-redundant-storage-based hot-tier storage accounts.
 
 ### Region planning
 
@@ -93,7 +94,7 @@ The following illustration shows a deployment strategy for two Azure regions.
 
 ### Workload zone planning
 
-A workload zone, also called a deployment environment, combines the workload virtual network, the credentials for the systems in that workload, and the service principal used for deploying those systems. Workload zones are regional because they depend on the Azure Virtual Network. The naming convention for automation supports having workload zones in multiple Azure regions, each with their own virtual network.
+A workload zone, also called a deployment environment, combines the workload virtual network, the credentials for the systems in that workload, and the service principal used for deploying those systems. Workload zones are regional because they depend on the virtual network in Azure. The naming convention for automation supports having workload zones in multiple Azure regions, each with their own virtual network.
 
 The following are some common workload zone patterns:
 
@@ -139,17 +140,17 @@ The SAP system is the actual SAP application, as it contains all Azure Artifacts
 - Is the deployment a greenfield deployment lacking Azure infrastructure for the workload or a brownfield deployment where some or all of the artifacts supporting the workload zone already exist?
 - The IP allocation strategy (Azure or provided by the customer)
 - Naming Azure resources
-- Defining requirements for managing credentials: Can a workload zone's systems use the same credentials to access VMs?
+- Defining requirements for managing credentials: can a workload zone's systems use the same credentials to access VMs?
 
 **Design recommendations:**
 
-- Use standard [naming conventions for the SAP Automation Network](https://github.com/Azure/sap-hana/blob/master/documentation/SAP_Automation_on_Azure/Software_Documentation/standards-naming.md).
+- Use standard [naming conventions for the SAP Automation network](https://github.com/Azure/sap-hana/blob/master/documentation/SAP_Automation_on_Azure/Software_Documentation/standards-naming.md).
 
 - Use the same credentials for each system deployed to a workload zone. Use Azure Key Vault to manage and store keys.
 
 ## The SAP deployment automation framework
 
-The SAP deployment automation framework provides Terraform templates and Ansible playbooks, which can be used to build and configure environments to run SAP in Azure. The artifacts are hosted in the [Azure sap-hana](https://github.com/Azure/sap-hana) repository, and Azure supports open-source deployment scripts (code isn't customized) for SAP in Azure.
+The SAP deployment automation framework provides Terraform templates and Ansible playbooks, which can be used to build and configure environments to run SAP in Azure. The artifacts are hosted in the [Azure `sap-hana` repository](https://github.com/Azure/sap-hana), and Azure supports open-source deployment scripts (code isn't customized) for SAP in Azure.
 
 ### Automation capabilities
 
@@ -169,7 +170,7 @@ The SAP deployment automation framework capabilities matrix:
 |:-|:-|:-|
 | Accelerated networking | Y | Accelerated networking is enabled on VMs. |
 | Application security groups | N | These are on the roadmap. |
-| Anchor VM | Y | A VM that anchors the proximity placement group in an Availability Zone. |
+| Anchor VM | Y | A virtual machine that anchors the proximity placement group in an Availability Zone. |
 | Application configuration | N | An Ansible-based configuration; to be released shortly. |
 | Application installation | N | An Ansible-based installation; to be released shortly. |
 | Authentication | Y | The authentication supports SSH-based and username-/password-based authentication. |

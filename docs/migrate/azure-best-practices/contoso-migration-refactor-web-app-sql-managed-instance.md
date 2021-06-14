@@ -275,7 +275,7 @@ Contoso needs to build the DevOps infrastructure and pipelines for the applicati
 The Contoso admins make sure that the web apps and database can communicate with each other. To do this, they configure connection strings in the code and in the web apps.
 
 1. In the web app for the WCF service, `SHWCF-EUS2`, under **Settings** > **Application settings**, they add a new connection string named `DefaultConnection`.
-1. They pull the connection string from the SmartHotel-Registration database and then update it with the correct credentials.
+1. They pull the connection string from the `SmartHotel-Registration` database and then update it with the correct credentials.
 
     ![Screenshot of the connection string settings pane.](./media/contoso-migration-refactor-web-app-sql-managed-instance/string1.png)
 
@@ -342,7 +342,7 @@ The Contoso admins now configure Azure DevOps to perform the build and release p
 
 1. On the pipeline, they select **Artifacts**, select **+ Add an artifact**, select **Build** as the source type, and then build with the `ContosoSmarthotel360Refactor` pipeline.
 
-     ![Screenshot of the Build button on the **Add an artifact** pane.](./media/contoso-migration-refactor-web-app-sql-managed-instance/pipeline12.png)
+     ![Screenshot of the **Build** button on the **Add an artifact** pane.](./media/contoso-migration-refactor-web-app-sql-managed-instance/pipeline12.png)
 
 1. To enable the continuous deployment trigger, the admins select the lightning bolt icon on the artifact.
 

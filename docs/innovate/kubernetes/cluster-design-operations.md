@@ -2,13 +2,13 @@
 title: Cluster design and operations
 description: Learn about Kubernetes in the Cloud Adoption Framework for cluster design, network design, and operations.
 author: sabbour
-keywords: Network design, cluster design, infrastructure provisioning, kubernetes
 ms.author: brblanch
 ms.date: 04/02/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ms.custom: think-tank, seo-caf-innovate
+keywords: Network design, cluster design, infrastructure provisioning, kubernetes
 ---
 
 <!-- cSpell:ignore autoscaler PDBs -->
@@ -23,8 +23,8 @@ As you get started, the checklist and Kubernetes resources below will help you p
 
 > [!div class="checklist"]
 >
->- Have you identified the networking design requirements for your cluster?
->- Do you have services with varying requirements? How many node pools are you going to use?
+> - Have you identified the networking design requirements for your cluster?
+> - Do you have services with varying requirements? How many node pools are you going to use?
 
 **Checklist:**
 
@@ -38,8 +38,7 @@ As you get started, the checklist and Kubernetes resources below will help you p
 
 - **Create multiple node pools.** To support applications that have different compute or storage demands, you can optionally configure your cluster with multiple node pools. For example, use more node pools to provide GPUs for compute-intensive applications or access to high-performance SSD storage. For more information, see [Create and manage multiple node pools for a cluster in Azure Kubernetes Service](/azure/aks/use-multiple-node-pools).
 
-- **Decide on availability requirements.** A minimum of two pods behind Azure Kubernetes Service ensures high availability of your application if there is pod failures or restarts. Use three or more pods to handle load during pod failures and restarts.
-For the cluster configuration, a minimum of two nodes in an availability set or virtual machine scale set is required to meet the service-level agreement of 99.95%. Use at least three pods to ensure pod scheduling during node failures and reboots.
+- **Decide on availability requirements.** A minimum of two pods behind Azure Kubernetes Service ensures high availability of your application if there is pod failures or restarts. Use three or more pods to handle load during pod failures and restarts. For the cluster configuration, a minimum of two nodes in an availability set or virtual machine scale set is required to meet the service-level agreement of 99.95%. Use at least three pods to ensure pod scheduling during node failures and reboots.
 
   To provide a higher level of availability to your applications, clusters can be distributed across Availability Zones. These zones are physically separate datacenters within a given region. When the cluster components are distributed across multiple zones, your cluster can tolerate a failure in one of the zones. Your applications and management operations remain available even if an entire datacenter experiences an outage. For more information, see [Create an Azure Kubernetes Service (AKS) cluster that uses Availability Zones](/azure/aks/availability-zones).
 
@@ -49,8 +48,8 @@ As you prepare the application for production, implement a minimum set of best p
 
 > [!div class="checklist"]
 >
->- Are you able to confidently redeploy the cluster infrastructure?
->- Have you applied resource quotas?
+> - Are you able to confidently redeploy the cluster infrastructure?
+> - Have you applied resource quotas?
 
 **Checklist:**
 
@@ -66,9 +65,9 @@ Once the application is in production, how can you optimize your workflow and pr
 
 > [!div class="checklist"]
 >
->- Do you have a plan for business continuity and disaster recovery?
->- Can your cluster scale to meet application demands?
->- Are you able to monitor your cluster and application health and receive alerts?
+> - Do you have a plan for business continuity and disaster recovery?
+> - Can your cluster scale to meet application demands?
+> - Are you able to monitor your cluster and application health and receive alerts?
 
 **Checklist:**
 

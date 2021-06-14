@@ -36,7 +36,7 @@ When the plan project has been deployed, you can use Microsoft Excel to modify i
 
 To prepare your workstation for bulk editing, see [Bulk add or modify work items with Microsoft Excel](/azure/devops/boards/backlogs/office/bulk-add-modify-work-items-excel).
 
-Some users may want to use Microsoft Project to track their tasks, create backlog and assign resource. Here are the steps to [connect Microsoft Project to Azure DevOps](/azure/devops/boards/backlogs/office/create-your-backlog-tasks-using-project?view=tfs-2018).
+Some users may want to use Microsoft Project to track their tasks, create backlog and assign resource. Here are the steps to [connect Microsoft Project to Azure DevOps](/azure/devops/boards/backlogs/office/create-your-backlog-tasks-using-project).
 
 ## Use the cloud adoption plan
 
@@ -56,7 +56,7 @@ The clearest view of the cloud adoption plan comes from the **Epics** backlog vi
 
 ## Align the cloud adoption plan
 
-The overview pages for the Strategy methodology and the Plan methodology each refer to the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx). That template organizes the decisions and data points that will align the template for the cloud adoption plan with your specific plans for adoption. Considering completing the exercises in the [Strategy methodology](../strategy/index.md) and the [Plan methodology](../plan/index.md) before aligning your new project.
+The overview pages for the Strategy methodology and the Plan methodology each refer to the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx). That template organizes the decisions and data points that will align the template for the cloud adoption plan with your specific plans for adoption. Considering completing the exercises in the [Strategy methodology](../strategy/index.md) and the [Plan methodology](./index.md) before aligning your new project.
 
 The following articles support alignment of the cloud adoption plan:
 

@@ -22,7 +22,7 @@ The main components of how a machine learning system develops are outlined below
 
 <!-- docutune:disable -->
 
-_Sculley et al. 2015. Hidden technical debt in machine learning systems. Proceedings of the 28th International Conference on Neural Information Processing Systems, Volume 2 (NIPS 2015).*
+*Sculley, et al. 2015. Hidden technical debt in machine learning systems. Proceedings of the 28th International Conference on Neural Information Processing Systems, Volume 2 (NIPS 2015).*
 
 <!-- docutune:enable -->
 

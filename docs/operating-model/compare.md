@@ -6,7 +6,7 @@ ms.author: brblanch
 ms.date: 08/14/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: overview
+ms.subservice: general
 ms.custom: internal, operating-model
 ---
 
@@ -38,7 +38,7 @@ A cloud operating model is primarily driven by two factors:
 
 - **Strategic priorities or [motivations](../strategy/motivations.md):** Each operating model is capable of delivering the typical [strategic motivations for cloud adoption](../strategy/motivations.md). However, some operating models simplify realizing specific motivations.
 
-- **[Portfolio scope](../reference/fundamental-concepts/hosting-hierarchy.md):** The portfolio scope row below identifies the largest scope that a specific operating model is designed to support. For example, centralized operations is designed for a small number of landing zones. But that operating model decision could inject operational risks for an organization that's trying to manage a large, complex portfolio that might require many landing zones or variable complexity in landing zone design.
+- [Portfolio scope](../reference/fundamental-concepts/hosting-hierarchy.md): The portfolio scope row below identifies the largest scope that a specific operating model is designed to support. For example, centralized operations is designed for a small number of landing zones. But that operating model decision could inject operational risks for an organization that's trying to manage a large, complex portfolio that might require many landing zones or variable complexity in landing zone design.
 
 > [!IMPORTANT]
 > Adopting the cloud often triggers a reflection on the current operating model and might lead to a shift from one of the common operating models to another. But cloud adoption isn't the only trigger. As business priorities and the scope of cloud adoption change how the portfolio needs to be supported, there could be other shifts in the most-appropriately aligned operating model. When the board or other executive teams develop 5 to 10 year business plans, those plans often include a requirement (explicit or implied) to adjust the operating model. While these common models are a good reference for guiding decisions, keep in mind that your operating model might change or you might need to customize one of these models to meet your requirements and constraints.
@@ -126,7 +126,7 @@ Stable state environments might not require as much focus on the architecture or
 ### Disadvantages of centralized operations
 
 - **Cost management:** Central teams rarely have enough understanding of the workload architectures to produce impactful optimizations at the workload level. This limits the amount of cost savings that can come from well-tuned workload operations. Further, lack of workload architecture understanding can cause centralized cost optimizations to have a direct impact on performance, scale, or other pillars of a well-architected workload. Before applying enterprise-wide cost changes to high profile workloads, the Microsoft Azure Well-Architected Review should be completed and considered by the central IT team.
-- **Responsibilities:** Centralizing production support and access places a higher operational burden on a smaller number of people. It also places greater pressure on those individuals to perform deeper reviews of the deployed workloads to validate adherence to detailed security, governance, and compliance requirements.
+- **Responsibilities:** Centralizing production support and access places a higher operational burden on a smaller number of people. It also places greater pressure on those individuals to perform deeper reviews of the deployed workloads to validate adherence to detailed security governance and compliance requirements.
 - **Standardization:** Central IT approaches make it difficult to scale standardization without a linear scaling of central IT staff.
 - **Operations support:** Not the disadvantage and risks listed above. The greatest disadvantages of this approach are associated with significant scale and shifts that prioritize innovation.
 - **Expertise:** Developer and DevOps experts are at risk of being under-valued or too constrained in this type of environment.

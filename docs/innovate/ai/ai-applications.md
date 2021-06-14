@@ -7,9 +7,7 @@ ms.date: 07/14/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
-ms.custom:
- - think-tank
- - seo-caf-innovate
+ms.custom: think-tank, seo-caf-innovate
 keywords: AI applications, examples of AI applications, AI application checklist, applications of AI, AI agents
 ---
 
@@ -32,7 +30,7 @@ Common examples of AI applications include:
 Follow these guidelines to plan your AI application development and deployment:
 
 - Become familiar with the multitude of capabilities and services offered within Azure Cognitive Services, and determine which ones you'll be using.
-- Determine whether you have custom data with which you want to train and customize AI models. Certain Cognitive Services are customizable.
+- Determine whether you have custom data with which you want to train and customize AI models. Certain services can be customized.
 - Explore the Azure Cognitive Services quickstart tutorials to learn how to use SDK and REST APIs. The Cognitive Services SDKs are available for many popular dev languages, including C#, Python, Java, JavaScript, and Go.
 - Determine whether you need to deploy these Cognitive Services in containers.
 
@@ -69,7 +67,7 @@ Azure Bot Service and Microsoft Bot Framework have the following characteristics
 - Bot Framework is an open-source offering that provides an SDK to help you design, build, and test your bot. This SDK is available in C#, JavaScript, Python, and Java. It also offers a free visual authoring canvas in Bot Framework Composer and a testing tool in Bot Framework Emulator.
 - Azure Bot Service is a dedicated service within Azure that allows you to host or publish your bot in Azure and connect to popular channels.
 
-For more information about Bot Service and Bot Framework, see:
+For more information about Azure Bot Service and Bot Framework, see:
 
 - [Azure Bot Service and Bot Framework overview](/azure/bot-service/bot-service-overview-introduction)
 - [Principles of bot design](/azure/bot-service/bot-service-design-principles)

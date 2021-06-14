@@ -1,16 +1,14 @@
 ---
 title: CI/CD pipeline with digital invention
 description: Use the maturity model of the Innovate methodology to reduce friction that slows adoption in the CI/CD pipeline, while keeping best practices in place.
-keywords: continuous integration, continuous deployment, ci cd, digital invention, ci cd pipeline
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
-ms.custom: 
- - internal
- - seo-caf-innovate
+ms.custom: internal, seo-caf-innovate
+keywords: continuous integration, continuous deployment, ci cd, digital invention, ci cd pipeline
 ---
 
 # Empower adoption with digital invention
@@ -46,7 +44,7 @@ As described in [Measure for customer impact](./measure.md), positive validation
 
 When you're scaling digital invention and innovation, there's no more valuable tool than a shared code base for the solution. Unfortunately, there's no reliable way of predicting which iteration or which MVP will yield the winning combination. That's why it's never too early to establish a shared code base or repository. This is the one [technical spike](./build.md#reduce-complexity-and-delay-technical-spikes) that shouldn't be delayed. As the team iterates through various MVP solutions, a shared repo enables easy collaboration and accelerated development. When changes to the solution drag down learning metrics, version control lets you roll back to an earlier, more effective version of the solution.
 
-The most widely adopted CI/CD tool for managing code repositories is [GitHub](https://guides.github.com), which lets you create a shared code repository in just a few steps. Additionally, the [Azure Repos](/azure/devops/repos/get-started/what-is-repos?view=azure-devops) feature of Azure DevOps can be used to create a [Git](/azure/devops/repos/get-started/what-is-repos?view=azure-devops#git) or [TFVC](/azure/devops/repos/get-started/what-is-repos?view=azure-devops#tfvc) repository.
+The most widely adopted CI/CD tool for managing code repositories is [GitHub](https://guides.github.com), which lets you create a shared code repository in just a few steps. Additionally, the [Azure Repos](/azure/devops/repos/get-started/what-is-repos) feature of Azure DevOps can be used to create a [Git](/azure/devops/repos/get-started/what-is-repos#git) or [TFVC](/azure/devops/repos/get-started/what-is-repos#tfvc) repository.
 
 ## Feedback loops
 
@@ -62,7 +60,7 @@ Continuous integration is the automating of code multiple times per day to have 
 
 In continuous integration, code changes are frequently merged into the main branch. Automated build and test processes make sure that code in the main branch is always production quality. This ensures that developers are working together to develop shared solutions that provide accurate and reliable feedback loops.
 
-Azure DevOps and [Azure Pipelines](/azure/devops/pipelines/) provide continuous integration capabilities with just a few steps in GitHub or other repositories. For more information, see [What is continuous integration?](/azure/devops/learn/what-is-continuous-integration) or check out the [hands-on lab](https://www.azuredevopslabs.com/labs/azuredevops/continuousintegration/). Solution architectures are available that can accelerate creation of your [CI/CD pipelines via Azure DevOps](https://azure.microsoft.com/solutions/devops/).
+Azure DevOps and [Azure Pipelines](/azure/devops/pipelines/) provide continuous integration capabilities with just a few steps in GitHub or other repositories. For more information, see [What is continuous integration?](/devops/develop/what-is-continuous-integration) or try the [continuous integration hands-on lab](https://www.azuredevopslabs.com/labs/azuredevops/continuousintegration/). Solution architectures are available that can accelerate creation of your [CI/CD pipelines via Azure DevOps](https://azure.microsoft.com/solutions/devops/).
 
 ## Reliable testing
 
@@ -70,7 +68,7 @@ Defects in any solution can create false positives or false negatives. Unexpecte
 
 During early iterations of an MVP solution, defects are expected. Early adopters might even find them endearing. In early releases, acceptance testing is typically nonexistent. However, one aspect of building with empathy concerns the validation of the need and hypothesis. Both can be completed through unit tests at a code level and manual acceptance tests before deployment. Together, these provide some means of reliability in testing. You should try to automate a well-defined series of build, unit, and acceptance tests. These will ensure reliable metrics related to finer tweaks to the hypothesis and the resulting solution.
 
-The [Azure Test Plans](/azure/devops/test/track-test-status?view=azure-devops) feature provides tooling to develop and operate test plans during manual or automated test execution.
+The [Azure Test Plans](/azure/devops/test/track-test-status) feature provides tooling to develop and operate test plans during manual or automated test execution.
 
 ## Solution deployment
 
@@ -80,13 +78,13 @@ There are several methods for solution deployment. The three most common are:
 
 - **Continuous deployment** is the most advanced method, as it automatically deploys code changes into production. For mature teams that are testing mature hypotheses, continuous deployment can be extremely valuable.
 - During early stages of development, **continuous delivery** might be more appropriate. In continuous delivery, any code changes are automatically deployed to a production-like environment. Developers, business decision-makers, and others on the team can use this environment to verify that their work is production-ready. You can also use this method to test a hypothesis with customers without affecting ongoing business activities.
-- **Manual deployment** is the least sophisticated approach to release management. As the name suggests, someone on the team manually deploys the most recent code changes. This approach is error prone, unreliable, and considered an anti-pattern by most seasoned engineers.
+- **Manual deployment** is the least sophisticated approach to release management. As the name suggests, someone on the team manually deploys the most recent code changes. This approach is error prone, unreliable, and considered an antipattern by most seasoned engineers.
 
 During the first iteration of an MVP solution, manual deployment is common, despite the preceding assessment. When the solution is extremely fluid and customer feedback is unknown, there's a significant risk in resetting the entire solution (or even the core hypothesis). Here's the general rule for manual deployment: no customer proof, no deployment automation.
 
 Investing early can lead to lost time. More importantly, it can create dependencies on the release pipeline that make the team more resistant to an early pivot. After the first few iterations or when customer feedback suggests potential success, a more advanced model of deployment should be quickly adopted.
 
-At any stage of hypothesis validation, Azure DevOps and [Azure Pipelines](/azure/devops/pipelines/) provide continuous delivery and continuous deployment capabilities. Learn more about [continuous delivery](/azure/devops/learn/what-is-continuous-delivery), or check out the [hands-on lab](https://www.azuredevopslabs.com/labs/azuredevops/continuousdeployment/). Solution architecture can also accelerate creation of your [CI/CD pipelines through Azure DevOps](https://azure.microsoft.com/solutions/devops/).
+At any stage of hypothesis validation, Azure DevOps and [Azure Pipelines](/azure/devops/pipelines/) provide continuous delivery and continuous deployment capabilities. Learn more about [continuous delivery](/devops/deliver/what-is-continuous-delivery), or check out the [hands-on lab](https://www.azuredevopslabs.com/labs/azuredevops/continuousdeployment/). Solution architecture can also accelerate creation of your [CI/CD pipelines through Azure DevOps](https://azure.microsoft.com/solutions/devops/).
 
 ## Integrated measurements
 

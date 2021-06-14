@@ -6,7 +6,7 @@ ms.author: brblanch
 ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: operate
+ms.subservice: manage
 ms.localizationpriority: high
 ms.custom: internal, fasttrack-edit, AQC
 ---
@@ -38,7 +38,8 @@ However, you might need a greater commitment to the business beyond the standard
 
 Both workload operations and platform operations require changes to design and architecture principles. Those changes can take time and might result in increased operating expenses. To reduce the number of workloads that require such investments, an enhanced management baseline can provide enough of an improvement to the business commitment.
 
-<!-- docutune:casing "IT Service Management" "IT Service Management Connector" ITSMC "Free and Standard" -->
+<!-- cspell:ignore ITSMC -->
+<!-- docutune:casing "IT Service Management" "IT Service Management Connector" "Free and Standard" -->
 
 This table outlines a few processes, tools, and potential effects common in customers' enhanced management baselines:
 

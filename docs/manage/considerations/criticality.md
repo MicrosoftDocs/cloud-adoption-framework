@@ -6,7 +6,7 @@ ms.author: brblanch
 ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: operate
+ms.subservice: manage
 ms.custom: internal
 ---
 
@@ -50,6 +50,20 @@ Because there's a clear and direct cost to operations management in the cloud, i
 An initial review of every workload in the portfolio can be time consuming. To ensure that this effort doesn't block your broader cloud strategy, we recommend that your teams agree on a default criticality to apply to all workloads.
 
 Based on the preceding criticality-scale table, we recommend that you adopt *medium* criticality as the default. Doing so will allow your cloud strategy team to quickly identify workloads that require a higher level of criticality.
+
+## Review operational compliance requirements
+
+Understanding, identifying and designating business criticality is the first major step. The next management consideration topic is to ensure your operational compliance requirements, especially security compliances, are aligned. Performing the same methodologies for business criticality to your security compliance considerations will:
+
+- Reveal the complexities of your business systems and their compliance requirements, such as sovereignty, industry, or privacy.
+- Map any interdependencies with your development, operations, and security teams, ensuring that key point of contacts and subject matter experts are identified and well known across your organization.
+- Ensure that your compliance adheres to any compliance audit and reporting requirements.
+
+Apply the [operational compliance](./operational-compliance.md) content to ensure that your business requirements, criticality, and compliance requirements are aligned.
+
+Next, review and use the [overview of the Azure Security Benchmark](/security/benchmark/azure/overview) content to ensure the various control domains are identified and mapped to your operational-compliance.
+
+Lastly, ensure the incorporation of the governance and security content in [Security control v2: governance and strategy](/security/benchmark/azure/security-controls-v2-governance-strategy) is documented within your overall business operational methodologies.
 
 ## Use the template
 
