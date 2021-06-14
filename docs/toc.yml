@@ -246,6 +246,10 @@ items:
       items:
       - name: What is a landing zone?
         href: ready/landing-zone/index.md
+      - name: Conceptual architecture
+        href: ready/landing-zone/alz-concept-architecture.md
+      - name: Journey to the target architecture
+        href: ready/landing-zone/landing-zone-journey.md        
       - name: Design areas
         href: ready/landing-zone/design-areas.md
       - name: Choose a landing zone option
