@@ -11,7 +11,7 @@ ms.subservice: innovate
 
 # Innovation in the retail industry
 
-The [Innovate methodology](../../innovate/index.md) of the Microsoft Cloud Adoption Framework for Azure aligns innovation and DevOps practices to disciplines that drive repeatable innovation and increase customer impact. The steps outlined in the innovation methodology apply to retail industry innovations. This article points out ways to innovate even faster as you strive to improve your retail outcomes.
+The [Innovate methodology](../../innovate/index.md) of the Microsoft Cloud Adoption Framework for Azure aligns innovation and DevOps practices to disciplines that drive repeatable innovation and increase customer impact. The steps outlined in the Innovate methodology apply to retail industry innovations. This article points out ways to innovate even faster as you strive to improve your retail outcomes.
 
 ## Align to the retail industry maturity model
 
