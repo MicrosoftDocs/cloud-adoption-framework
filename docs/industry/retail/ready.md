@@ -17,7 +17,7 @@ Azure landing zones allow you to start with a small implementation and expand ov
 
 ## Organizational alignment impact
 
-For retail companies, IT operations are heavily influenced by the company's historical growth patterns. Specifically the impact those growth patterns have had on your organizational structures across your technology teams. To understand how this influences operations management, see [initial organizational alignment](./organize.md#understand-common-growth-patterns-for-retailers).
+For retail companies, IT operations are heavily influenced by the company's historical growth patterns. Specifically the impact those growth patterns have had on your organizational structures across your technology teams. To understand how this influences operations management, see [initial organizational alignment](./organize.md#common-growth-patterns-for-retailers).
 
 - Will Central IT, a Cloud Center of Excellence (CCoE), or other forms of centralized operations be responsible for operating all workloads?
 - Does your strategy and plan require your brick and mortar locations to be integrated into your cloud environment?

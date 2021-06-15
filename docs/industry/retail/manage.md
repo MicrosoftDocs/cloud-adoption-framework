@@ -13,11 +13,11 @@ ms.subservice: operate
 
 The Manage methodology in the Cloud Adoption Framework for Azure offers a path for implementing an operations baseline. You can develop that baseline throughout your cloud adoption lifecycle. For more information, see [Cloud management in the Cloud Adoption Framework](../../manage/index.md).
 
-For retail companies, IT operations are heavily influenced by the company's historical growth patterns. Those growth patterns influence your organizational structures across your technology teams. To understand how history affects operations management, see [Understand common growth patterns for retailers](./organize.md#understand-common-growth-patterns-for-retailers).
+For retail companies, IT operations are heavily influenced by the company's historical growth patterns. Those growth patterns influence your organizational structures across your technology teams. To understand how history affects operations management, see [Understand common growth patterns for retailers](./organize.md#common-growth-patterns-for-retailers).
 
 ## Operations management alignment questions
 
-The [org alignment article](./organize.md#understand-common-growth-patterns-for-retailers) prompts the following questions.
+The [org alignment article](./organize.md#common-growth-patterns-for-retailers) prompts the following questions.
 
 - Which is more important in the future?
 
