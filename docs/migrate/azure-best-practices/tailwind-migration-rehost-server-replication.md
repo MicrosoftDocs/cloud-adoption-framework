@@ -202,7 +202,7 @@ Nonetheless, Tailwind does find value in considering the remainder paths only fo
 
 *Figure 2: Testing and migration workflow.*
 
-## Step 3: Migration cutover preparation
+## Step 3: Final step
 
 As a final step, Tailwind is now ready to confidently perform the production migrations. The envision that during cutover all hands on deck will be required to ensure end-to-end support. Furthermore, after the soak period concludes, Tailwind is looking forward to close-out and call for a successful migration to Azure.
 
