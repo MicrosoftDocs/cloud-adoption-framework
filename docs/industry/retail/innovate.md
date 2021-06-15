@@ -23,10 +23,6 @@ One example of achieving intelligent retail maturity is the [retail recommender]
 
 The tools and techniques presented in this article can help you develop innovation and reach retail maturity.
 
-## Rapid innovation with Microsoft Cloud for Retail
-
-[![Microsoft cloud for retail](./media/mc4r.png)](./media/mc4r.png#lightbox)
-
 ## Democratize data
 
 The most important step to innovation is [democratizing data](../../innovate/best-practices/data.md), because data that's accessible *and* understandable across the organization fuels innovation.
@@ -44,7 +40,6 @@ To extend your common data model, use cloud native tools in Azure:
 
 Learn more about ways you can [build applications](../../innovate/best-practices/apps.md) to extend, improve, and automate your retail processes.
 
-- **Microsoft Cloud for Retail** provides many packaged solutions to extend your common data model and rapidly deliver innovative applications to improve customer engagement.
 - **Power Platform** empowers citizen developers from business teams across sales, payroll, finance, and so on. Extend your common data model by empowering teams to create their own Power Apps and Power Automate solutions.
 - **Intelligent experiences** build modern applications in the cloud with web apps or serverless functions. Infuse intelligence into the applications with speech, text, vision, and chat bots.
 
@@ -59,5 +54,5 @@ Learn more about using [device interactions](../../innovate/best-practices/devic
 
 The following articles will help you succeed in your cloud adoption journey.
 
-- [Governance in the Retail industry](./govern.md)
-- [Management in the Retail industry](./manage.md)
+- [Governance in the retail industry](./govern.md)
+- [Management in the retail industry](./manage.md)
