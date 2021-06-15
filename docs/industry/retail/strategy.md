@@ -63,7 +63,7 @@ There are [common business outcomes](../../strategy/business-outcomes/index.md) 
 The following articles can guide your cloud adoption journey and help you succeed in the cloud adoption scenario.
 
 - [Cloud adoption plan for the retail industry](./plan.md)
-- [Review your environment or Azure landing zone(s)](./ready.md)
+- [Review your environment or Azure landing zones](./ready.md)
 - [Migrate common retail industry technologies](./migrate.md)
 - [Innovation in the retail industry](./innovate.md)
 - [Governance in the retail industry](./govern.md)

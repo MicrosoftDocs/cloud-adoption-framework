@@ -32,10 +32,10 @@ The retail recommender solution helps retailers highlight and expose associated 
 
 ## Prerequisites
 
-This article shows you how to build out a minimal product for the solution accelerator. Before you begin, set up the following prerequisites:
+This article shows you how to build out a minimal product for the solution accelerator. Before you begin, set up the following prerequisites.
 
 - An Azure account with an active subscription. [Create an account for free.](https://azure.microsoft.com/free/)
-- [Visual Studio 2017 or Visual Studio 2019](https://azure.microsoft.com/downloads/). Ensure you select the **Azure development** workload during installation.
+- [Visual Studio 2017 or Visual Studio 2019](https://azure.microsoft.com/downloads/). Ensure you select the **Azure development** workload during installation
 - [Azure PowerShell](/azure/get-started-azureps).
 - [Azure CLI](/cli/azure/install-azure-cli).
 - [The Postman app](https://www.postman.com/downloads).
