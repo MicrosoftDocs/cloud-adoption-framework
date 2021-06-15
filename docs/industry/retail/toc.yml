@@ -82,13 +82,3 @@ items:
       href: https://docs.microsoft.com/azure/architecture/example-scenario/data/ecommerce-order-processing?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json
     - name: Retail - Buy online, pickup in store (BOPIS)
       href: https://docs.microsoft.com/azure/architecture/example-scenario/iot/vertical-buy-online-pickup-in-store?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json
-
-  - name: Microsoft Cloud for Retail products
-    items:
-    - name: Add MC4R links when released
-      href: innovate.md#rapid-innovation-with-the-microsoft-cloud-for-retail
-
-  - name: Learn Modules
-    items:
-    - name: Add MC4R modules when released
-      href: innovate.md#rapid-innovation-with-the-microsoft-cloud-for-retail

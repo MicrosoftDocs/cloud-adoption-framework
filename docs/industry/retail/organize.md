@@ -154,7 +154,7 @@ Companies in the retail industry tend to follow one of three growth patterns:
 - Rapid-growth startups with most or all of their revenue coming from online growth
 - Brick and mortar organization that acquired one or more startups
 
-The organizational structures that result from these growth patterns has a direct impact on a company's ability to mature in the cloud. To organize around cloud strategies and cloud plans, it's important to understand your current organization. Compare and contrast between your current organization and the organization required to reach the cloud maturity described below. For more information, see [Cloud maturity model for retail](./retail-cloud-maturity.md).
+The organizational structures that result from these growth patterns have a direct impact on a company's ability to mature in the cloud. To organize around cloud strategies and cloud plans, it's important to understand your current organization. Compare and contrast between your current organization and the organization required to reach the cloud maturity described below. For more information, see [Cloud maturity model for retail](./retail-cloud-maturity.md).
 
 [![Diagram of the stages of digital retail cloud maturity](./media/maturity-model.png)](./media/maturity-model.png#lightbox)
 
