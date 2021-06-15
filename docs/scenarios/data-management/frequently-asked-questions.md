@@ -31,6 +31,6 @@ The following are common questions asked about Enterprise Scale Analytics and AI
 
 ### Storage Accounts
 
-**Why do I need three separate storage accounts? Can't I just have one with 3 containers for each layer (raw, refined, curated)?**
+#### Why do I need three separate storage accounts? Can't I just have one with 3 containers for each layer (raw, refined, curated)?
 
 Most data analytics patterns today exist with the 3 layers (raw, refined, and curated). Although they can be kept in the same storage, when it comes to large scale implementations this creates issues with exceeding the number of allowed RBAC & ACL permissions that are available within a single storage account. By separating them most implementations can avoid this issue. With the evolution of technology it may change, as the refined/curated pieces are collapsed into other products such as Synapse and Databricks (under SQL Analytics).

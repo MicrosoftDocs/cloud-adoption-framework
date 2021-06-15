@@ -173,12 +173,30 @@ The Enterprise Analytics and AI solution pattern prescribes that you should impl
 ## Key Considerations
 
 When landing data into a data lake, it is important to pre-plan the structure of the data so that security, partitioning, and processing can be utilized effectively. Many of the following recommendations are applicable for all big data workloads. Every workload has different requirements on how the data is consumed.
-|Consideration | Raw data |Enriched data |Curated data| Workspace data|
-|-- | ----- | -- | -- | -- |
-|Write Data| Domains | Domains | Data Products | Data Scientists and BI Analysts|
-|Read Data| Domains | Domain and read access for others based on approval of Domain owner | Data Products, Analysts, Data Scientists, and Users | Data Scientists and Analysts|
-|Data Lifecycle Management |Once enriched data is generated, can be moved to a cooler tier of storage to manage costs.| Older data can be moved to a cooler tier. |Older data can be moved to a cooler tier.| While the end consumers have control of this workspace, ensure that there are processes and policies to clean up data that is not necessary. |
-|Folder Structure and Hierarchy| Folder structure to mirror Domain followed by source. | Folder structure to mirror Domain followed by sub-Domain | Folder structure mirrors data product structure |Folder structures mirror teams that the workspace is used by.|
+
+### Write data
+
+|Raw data |Enriched data |Curated data| Workspace data|
+|---------|---------|---------|---------|
+|Domains | Domains | Data Products | Data Scientists and BI Analysts|
+
+### Read data
+
+|Raw data |Enriched data |Curated data| Workspace data|
+|---------|---------|---------|---------|
+| Domains | Domain and read access for others based on approval of Domain owner | Data Products, Analysts, Data Scientists, and Users | Data Scientists and Analysts|
+
+### Data Lifecycle Management
+
+|Raw data |Enriched data |Curated data| Workspace data|
+|---------|---------|---------|---------|
+|Once enriched data is generated, can be moved to a cooler tier of storage to manage costs.| Older data can be moved to a cooler tier. |Older data can be moved to a cooler tier.| While the end consumers have control of this workspace, ensure that there are processes and policies to clean up data that is not necessary. |
+
+### Folder Structure and Hierarchy
+
+|Raw data |Enriched data |Curated data| Workspace data|
+|---------|---------|---------|---------|
+|Folder structure to mirror Domain followed by source. | Folder structure to mirror Domain followed by sub-Domain | Folder structure mirrors data product structure |Folder structures mirror teams that the workspace is used by.|
 
 >[!WARNING]
 >Because some products do not support mounting the root of a data lake container, each data lake container in Raw, Curated and Enriched, and Workspace should have a single folder before branching off to multiple folders. The folder permissions should be carefully set up as during the creation of a new folder, from the root, the default ACL on the parent directory determines a child directory's default ACL and access ACL; a child file's access ACL (files do not have a default ACL). See [Access control lists (ACLs) in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-access-control).

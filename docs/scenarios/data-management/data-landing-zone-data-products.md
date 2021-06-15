@@ -10,13 +10,19 @@ ms.subservice: ready
 ---
 # Data Products
 
-![Data Products Resource Group](./images/data-products-resource-group.png)
+## Overview
 
-## Multiple Resource Groups by Data Product
+At a high level, data products are computed or polyglot persistence services that may be required depending on the use case. A data product is anything that drives business value (e.g., reports, workbooks, bespoke database or data API). It can leverage additional services and technologies which are not part of [Data Landing Zone](data-landing-zone.md) core services such as:
 
-Data Products are computed or polyglot persistence services that may be required depending on the use case. We therefore expect multiple resource groups by data product.
+- Reporting with niche requirements such as compliance, tax reporting, HR, etc.
+- Specialized capabilities that address gaps in the baseline policies.
 
-Examples of Data Products include:
+A Data Landing Zone can have multiple data products which are created by ingesting data either inside the same Data Landing Zone or from across multiple Data Landing Zones (subject to approval). The resource group for a data product includes all the service required to make that data product.
+
+>[!IMPORTANT]
+>A **data product** is data from a READ data source which has had some data transformation applied. This could be a newly curated dataset or a BI report.
+
+Examples of data products include:
 
 * Functions
 * App Service
@@ -28,22 +34,26 @@ Examples of Data Products include:
 * Azure MySQL
 * Azure CosmosDB
 
-Azure Policy would drive the default configuration of these services within a Data Landing Zone.
+## Design recommendations
 
-We can consider operational analytics as multiple resource groups, which the Data Product Scrum Team can request from a standard service catalog. By using Azure Policy, we can configure the security boundary and required feature set.
+1. Deploy multiple resource groups: Since data products are compute or polyglot persistence services, they may only be required depending on certain use cases. When required, we expect multiple resource groups by data product as shown below.
+    
+    ![Data products resource groups](./images/data-products-resource-group.png)
 
-Data products manage, organize, and make sense of the data across domains and present the insights gained from the data products. A data product is a result of data from one or many data domains and/or other data products.
+2. Set guard rails: Azure Policy would drive the default configuration of these services within a Data Landing Zone. We can consider operational analytics as multiple resource groups which the Data Product Scrum Team can request from a standard service catalog. By using Azure Policy, we can configure the security boundary and required feature set.
 
-These services would be considered an incremental deployment to the Data Landing Zone.
+    >[!IMPORTANT]
+    >To drive consistency we recommend configuring an Azure Policy per Data Product.
 
-Data Products should be automatically registered in Azure Purview to allow scanning of data.
+3. Consume data from many places: Data products manage, organize, and make sense of the data across domains and present the insights gained from the data products. A data product is a result of data from one or many data domains and/or other data products.
 
->[!IMPORTANT]
->To drive consistency we recommend configuring an Azure Policy per Data Domain Product.
+4. Scale as needed: Services that make up a data product are considered an incremental deployment to the Data Landing Zone.
+
+5. Enable data discovery: Data products should be automatically registered in a data catalog such as Azure Purview to allow scanning of data.
 
 ## Building Data Products
 
-At the start of planning an Enterprise Scale Analytics and AI landing zone, you should have identified many data products, which will help drive the data product architecture. At the top of each decision should be conformity to implement platform governance.
+At the start of planning an Data Landing Zone, you should have identified many data products which will help drive the data product architecture. At the top of each decision should be conformity to implement platform governance.
 
 ### Banking Industry Example
 
