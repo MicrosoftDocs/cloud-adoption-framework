@@ -19,15 +19,15 @@ This article will build on that methodology with specific guidance for data esta
 
 Much of the guidance in the Plan methodology focuses on the [five rs of rationalizing your digital estate](../../digital-estate/5-rs-of-rationalization.md). This scenario narrows the primary focus of rationalization to the **data estate**, which is a subset of the overall digital estate. This plan will also look broader and deeper at the data estate than you might in other plans. Specifically, it must include plans for your overall [analytics maturity](./intro-analytics-maturity.md) and the [data governance practices](./intro-data-governance.md) required to support the desired maturity.
 
-To properly rationalize your data estate, begin by aligning your business outcomes to each of your data initiatives. This will aid in prioritization and a clear understanding of the value your can derive from each data initiative. Initiatives which represent little business value could easily be included in you cloud migration plan to deliver quick efficiency gains. Initiatives with greater business impact and greater technical complexity would likely require richer planning to enable long term innovation value.
+To properly rationalize your data estate, begin by aligning your business outcomes to each of your data initiatives. This will aid in prioritization and a clear understanding of the value your can derive from each data initiative. Initiatives which represent little business value and also present lesser complexity with regards to migration could easily be included in you cloud migration plan to deliver quick efficiency gains. Initiatives with greater business impact or those with greater technical complexity would likely require richer planning to enable long term innovation value.
 
 :::image type="content" source="./images/strategic-initiative.png" alt-text="Strategic Initiative" lightbox="./images/strategic-initiative.png":::
 
 Figure 1: Strategic Initiatives
 
-Benchmarking your current estate is critical to measure success. This allows you to quantify the exact investment needed in terms of people, process and technology. You'll be able to see where you are on the Maturity Model, and the gaps you need to bridge.
+Benchmarking your current estate and capability is critical in ensuring you can track progress and measure success. This allows you to quantify the exact investment needed in terms of people, process and technology. You'll be able to see where you are on the Maturity Model, and the gaps you need to bridge.
 
-To can help you get started. Here is a table showing the thought process:
+To help you get started, here is a table showing the thought process:
 
 |Category| Action Areas | Current Status focusing on 5 pillars of architecture |
 |----------|--------------|-------------------------------------|
@@ -35,13 +35,13 @@ To can help you get started. Here is a table showing the thought process:
 | **Agility**| Depending on the organizations there could be 5 to 10 topics here, such as strategy around Data Lake, Catalogue, Common Data Model etc. | ![2 0 1 0 1](./images/pillar-2.png) |
 | **Resilience**|10-20 topics are here starting from discovery, recovery and anomaly detection. | ![2 1 1 1 1](./images/pillar-3.png) |
 
-Table 1: Assessing your current estate and capability is key in ensuring you can track progress and celebrate success. Using the maturity level detailed further below, you can rate your current capability 0-4 and use the 5 pillars of architecture to guide those benchmarks.
+Table 1: Using the maturity level detailed further below, rate your current capability between 0-4 and use the 5 pillars of architecture to guide those benchmarks.
 
 Once you're clear about the business outcomes you're looking to drive through your data strategy, the next step is to build the capability to deliver them.
 
 ## Develop a skilling plan
 
-Clear mapping out the Product, Services or Tools capabilities Maturity Assessment along with People skills, who will help deliver on the achieving the overall objectives.
+Clear mapping of the Product, Services or Tools capabilities Maturity Assessment along with People skills, who will help deliver on the achieving the overall objectives.
 
 :::image type="content" source="./images/who-can-transform.png" alt-text="Who Can Transform" lightbox="./images/who-can-transform.png":::
 

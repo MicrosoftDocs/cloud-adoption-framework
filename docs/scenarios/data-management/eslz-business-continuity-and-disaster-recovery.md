@@ -38,9 +38,13 @@ Data Lake Storage Gen2 already handles 3x replication under the hood to guard ag
 If one of the Data Landing Zones requires geo-redundancy, with Data Lake Storage Gen2, it is recommended to geo-replicate your data via GRS or RA-GRS that satisfies your HA/DR requirements. Additionally, you should consider ways for the application using Data Lake Storage Gen2 to automatically fail over to the secondary region through monitoring triggers or length of failed attempts, or at least send a notification to admins for manual intervention. Keep in mind that there is trade-off of failing over versus waiting for a service to come back online.
 
 >[!Note]
->A storage account which is configured as RA-GRS or any other GRS technology does not qualifies as a response to DR and customers are encouraged to conduct appropriate due diligence in terms of what works best for them including a "dual load" sceanario i.e. copy data into 2 Azure regions respectively.
+>A storage account which is configured as RA-GRS or any other GRS technology does not qualifies as a response to DR and customers are encouraged to conduct appropriate due diligence in terms of what works best for them including a "dual load" scenario i.e. copy data into 2 Azure regions respectively.
 
 Each Data Landing Zone must decide on the Recovery Point Objective for their Data Domain(s) and defined a replication strategy for their use cases.
+
+## Azure Machine Learning
+
+For an overview of High Availability with Azure Machine Learning, see [Failover for business continuity and disaster recovery](/azure/machine-learning/how-to-high-availability-machine-learning).
 
 ### Azure Synapse Analytics
 
