@@ -30,13 +30,13 @@ Azure Landing Zones have been developed  in order to provide best practices, ref
 
 As part of this collection there are implementations that are ready 'out of the box' and can be deployed with a portal-driven experience, or with technologies such as ARM templates or Terraform for organizations who wish to use Infrastructure-as-Code (IaC) techniques.
 
-## Next steps
-
-### Azure Landing Zone accelerator
+## Azure Landing Zone accelerator
 
 For organizations where this conceptual architecture fits with the operating model and resource structure they plan to use, there is a ready-made deployment experience available which we call the **Azure Landing Zone accelerator**.
  
-[![DTA-Button-ALZ](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/adventureworks/README.md)
+[![DTA-Button-ALZ](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale%2Fmain%2Fdocs%2Freference%2Fadventureworks%2FarmTemplates%2Fes-hubspoke.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale%2Fmain%2Fdocs%2Freference%2Fadventureworks%2FarmTemplates%2Fes-portal.json)
+
+## Next steps
 
 ### Explore the Azure Landing Zone guidance
 
