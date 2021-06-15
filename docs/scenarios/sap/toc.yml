@@ -1,29 +1,53 @@
 #cSpell:ignore eslz
 
 items:
-  - name: SAP adoption scenario - Microsoft Cloud Adoption Framework for Azure
+  - name: SAP adoption - Microsoft Cloud Adoption Framework for Azure
     href: index.md
-    pdf_name: SAP adoption scenario - Microsoft Cloud Adoption Framework for Azure
-  - name: Strategy
+    pdf_name: SAP adoption - Microsoft Cloud Adoption Framework for Azure
+  - name: Strategic impact
     href: strategy.md
-  - name: Planning
+  - name: Technical planning
     href: plan.md
-  - name: Azure landing zone review
-    href: ready.md
+  - name: Prepare your environment
+    items:
+    - name: Azure landing zones
+      href: ready.md
+    - name: Design areas
+      items:
+      - name: Enterprise enrollment
+        href: eslz-enterprise-enrollment.md
+      - name: Identity and access management
+        href: eslz-identity-and-access-management.md
+      - name: Network topology and connectivity
+        href: eslz-network-topology-and-connectivity.md
+      - name: Resource organization
+        href: eslz-resource-organization.md
+      - name: Governance disciplines
+        href: eslz-security-governance-and-compliance.md
+      - name: Operations baseline
+        href: eslz-management-and-monitoring.md
+      - name: Business continuity and disaster recovery
+        href: eslz-business-continuity-and-disaster-recovery.md
+      - name: Deployment options
+        href: eslz-platform-automation-and-devops.md
+    - name: Implementation options
+      items:
+      - name: Start small and expand with SAP HANA scale-up on Linux
+        href: /azure/architecture/reference-architectures/sap/run-sap-hana-for-linux-virtual-machines?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+      - name: Enterprise-scale landing zone for SAP
+        href: enterprise-scale-landing-zone.md
   - name: Migrate SAP to Azure
     href: migrate.md
   - name: Innovate with SAP and Azure
     href: innovate.md
   - name: Manage SAP platform and workloads
     href: manage.md
-  - name: Well-Architected considerations
+  - name: Well-architected considerations
     href: /azure/architecture/reference-architectures/sap/sap-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-  - name: Accelerate with SAP architectures
+  - name: SAP architectures
     items:
     - name: SAP HANA on Azure (Large Instances)
       href: /azure/architecture/reference-architectures/sap/hana-large-instances?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-    - name: SAP HANA Scale-up on Linux
-      href: /azure/architecture/reference-architectures/sap/run-sap-hana-for-linux-virtual-machines?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
     - name: SAP NetWeaver on Windows on Azure
       href: /azure/architecture/reference-architectures/sap/sap-netweaver?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
     - name: SAP S/4HANA in Linux on Azure
@@ -36,19 +60,342 @@ items:
       href: /azure/architecture/example-scenario/apps/sap-production?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
     - name: Dev/test for SAP
       href: /azure/architecture/example-scenario/apps/sap-dev-test?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-  - name: Enterprise-scale construction set
+  - name: Azure product documentation
     items:
-    - name: Overview
-      href: enterprise-scale-landing-zone.md
-    - name: Identity and access management
-      href: identity-and-access-management.md
-    - name: Network topology and connectivity
-      href: network-topology-and-connectivity.md
-    - name: Management and monitoring
-      href: management-and-monitoring.md
-    - name: Business continuity and disaster recovery
-      href: business-continuity-and-disaster-recovery.md
-    - name: Security, governance, and compliance
-      href: security-governance-and-compliance.md
-    - name: Platform automation and DevOps
-      href: platform-automation-and-devops.md
+    - name: Get started
+      href: /azure/virtual-machines/workloads/sap/get-started?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+    - name: Certifications
+      href: /azure/virtual-machines/workloads/sap/sap-certifications?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+    - name: SAP HANA on Azure (Large Instances)
+      items:
+      - name: Overview
+        items:
+        - name: What is SAP HANA on Azure (Large Instances)?
+          href: /azure/virtual-machines/workloads/sap/hana-overview-architecture?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: Know the terms
+          href: /azure/virtual-machines/workloads/sap/hana-know-terms?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: Certification
+          href: /azure/virtual-machines/workloads/sap/hana-certification?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: Available SKUs for HLI
+          href: /azure/virtual-machines/workloads/sap/hana-available-skus?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: Sizing
+          href: /azure/virtual-machines/workloads/sap/hana-sizing?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: Onboarding requirements
+          href: /azure/virtual-machines/workloads/sap/hana-onboarding-requirements?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: SAP HANA data tiering and extension nodes
+          href: /azure/virtual-machines/workloads/sap/hana-data-tiering-extension-nodes?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: Operations model and responsibilities
+          href: /azure/virtual-machines/workloads/sap/hana-operations-model?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: Compatible operating systems
+          href: /azure/virtual-machines/workloads/sap/os-compatibility-matrix-hana-large-instance?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+      - name: Architecture
+        items:
+        - name: General architecture
+          href: /azure/virtual-machines/workloads/sap/hana-architecture?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: Network architecture
+          href: /azure/virtual-machines/workloads/sap/hana-network-architecture?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: Storage architecture
+          href: /azure/virtual-machines/workloads/sap/hana-storage-architecture?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: HLI supported scenarios
+          href: /azure/virtual-machines/workloads/sap/hana-supported-scenario?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+      - name: Infrastructure and connectivity
+        items:
+        - name: HLI deployment
+          href: /azure/virtual-machines/workloads/sap/hana-overview-infrastructure-connectivity?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: Connecting Azure VMs to HANA Large Instances
+          href: /azure/virtual-machines/workloads/sap/hana-connect-azure-vm-large-instances?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: Connecting a VNet to ExpressRoute for HANA Large Instances
+          href: /azure/virtual-machines/workloads/sap/hana-connect-vnet-express-route?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: Additional network requirements
+          href: /azure/virtual-machines/workloads/sap/hana-additional-network-requirements?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+      - name: Install SAP HANA
+        items:
+        - name: Validate the configuration
+          href: /azure/virtual-machines/workloads/sap/hana-installation?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: Sample HANA installation
+          href: /azure/virtual-machines/workloads/sap/hana-example-installation?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+      - name: High availability and disaster recovery
+        items:
+        - name: Options and considerations
+          href: /azure/virtual-machines/workloads/sap/hana-overview-high-availability-disaster-recovery?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: Backup and restore
+          href: /azure/virtual-machines/workloads/sap/hana-backup-restore?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: Principles and preparation
+          href: /azure/virtual-machines/workloads/sap/hana-concept-preparation?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: Disaster recovery failover procedure
+          href: /azure/virtual-machines/workloads/sap/hana-failover-procedure?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: Large instances HA for SAP on RHEL
+          href: /azure/virtual-machines/workloads/sap/large-instance-high-availability-rhel?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+      - name: Troubleshoot and monitor
+        items:
+        - name: Monitoring HLI
+          href: /azure/virtual-machines/workloads/sap/troubleshooting-monitoring?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: Monitoring and troubleshooting from HANA side
+          href: /azure/virtual-machines/workloads/sap/hana-monitor-troubleshoot?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+      - name: How to
+        items:
+        - name: Azure HANA Large Instances control through Azure portal
+          href: /azure/virtual-machines/workloads/sap/hana-li-portal?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: HA setup with STONITH
+          href: /azure/virtual-machines/workloads/sap/ha-setup-with-stonith?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: OS backup for Type II SKUs
+          href: /azure/virtual-machines/workloads/sap/os-backup-type-ii-skus?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: Enable kdump for HANA Large Instances
+          href: /azure/virtual-machines/workloads/sap/hana-large-instance-enable-kdump?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: OS upgrade for HANA Large Instances
+          href: /azure/virtual-machines/workloads/sap/os-upgrade-hana-large-instance?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: Setting up SMT server for SUSE Linux
+          href: /azure/virtual-machines/workloads/sap/hana-setup-smt?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: HLI to Azure VM migration
+          href: /azure/virtual-machines/workloads/sap/hana-large-instance-virtual-machine-migration?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: Buy an SAP HANA Large Instances reservation
+          href: /azure/cost-management-billing/reservations/prepay-hana-large-instances-reserved-capacity?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+    - name: SAP HANA on Azure Virtual Machines
+      items:
+      - name: Installation of SAP HANA on Azure VMs
+        href: /azure/virtual-machines/workloads/sap/hana-get-started?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+      - name: S/4 HANA or BW/4 HANA SAP CAL deployment guide
+        href: /azure/virtual-machines/workloads/sap/cal-s4h?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+      - name: SAP HANA infrastructure configurations and operations on Azure
+        href: /azure/virtual-machines/workloads/sap/hana-vm-operations?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+      - name: SAP HANA Azure virtual machine storage configurations
+        href: /azure/virtual-machines/workloads/sap/hana-vm-operations-storage?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+      - name: NFS v4.1 volumes on Azure NetApp Files for SAP HANA
+        href: /azure/virtual-machines/workloads/sap/hana-vm-operations-netapp?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+      - name: SAP HANA availability in Azure Virtual Machines
+        items:
+        - name: SAP HANA on Azure availability overview
+          href: /azure/virtual-machines/workloads/sap/sap-hana-availability-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: SAP HANA availability within one Azure region
+          href: /azure/virtual-machines/workloads/sap/sap-hana-availability-one-region?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: SAP HANA availability across Azure regions
+          href: /azure/virtual-machines/workloads/sap/sap-hana-availability-across-regions?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: Set up SAP HANA System Replication on SLES
+          href: /azure/virtual-machines/workloads/sap/sap-hana-high-availability?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: Set up SAP HANA System Replication on RHEL
+          href: /azure/virtual-machines/workloads/sap/sap-hana-high-availability-rhel?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: Set up SAP HANA System Replication with ANF on RHEL
+          href: /azure/virtual-machines/workloads/sap/sap-hana-high-availability-netapp-files-red-hat?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: SAP HANA scale-out HSR with Pacemaker on SLES
+          href: /azure/virtual-machines/workloads/sap/sap-hana-high-availability-scale-out-hsr-suse?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: Troubleshoot SAP HANA scale-out and Pacemaker on SLES
+          href: /azure/virtual-machines/workloads/sap/hana-vm-troubleshoot-scale-out-ha-on-sles?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: SAP HANA scale-out HSR with Pacemaker on RHEL
+          href: /azure/virtual-machines/workloads/sap/sap-hana-high-availability-scale-out-hsr-rhel?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: SAP HANA scale-out with standby node with Azure NetApp Files on SLES
+          href: /azure/virtual-machines/workloads/sap/sap-hana-scale-out-standby-netapp-files-suse?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: SAP HANA scale-out with standby node with Azure NetApp Files on RHEL
+          href: /azure/virtual-machines/workloads/sap/sap-hana-scale-out-standby-netapp-files-rhel?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+      - name: SAP HANA database backup with Azure Backup
+        items:
+        - name: SAP HANA database backup in Azure VMs
+          href: /azure/backup/sap-hana-db-about?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: Back up SAP HANA databases in Azure VMs
+          href: /azure/backup/backup-azure-sap-hana-database?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: Restore SAP HANA databases on Azure VMs
+          href: /azure/backup/sap-hana-db-restore?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: Manage and monitor
+          href: /azure/backup/sap-hana-db-manage?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: Support matrix for backup of SAP HANA databases
+          href: /azure/backup/sap-hana-backup-support-matrix?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: FAQ - back up SAP HANA databases on Azure VMs
+          href: /azure/backup/sap-hana-faq-backup-azure-vm?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: Troubleshoot backup of SAP HANA databases on Azure
+          href: /azure/backup/backup-azure-sap-hana-database-troubleshoot?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: Tutorial - back up SAP HANA databases in an Azure VM'
+          href: /azure/backup/tutorial-backup-sap-hana-db?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+    - name: SAP NetWeaver, S/4HANA, and SAP Business One on Azure Virtual Machines
+      items:
+      - name: SAP workload planning and deployment checklist
+        href: /azure/virtual-machines/workloads/sap/sap-deployment-checklist?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+      - name: Plan and implement SAP NetWeaver on Azure
+        href: /azure/virtual-machines/workloads/sap/planning-guide?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        items:
+        - name: Azure Storage types for SAP workload
+          href: /azure/virtual-machines/workloads/sap/planning-guide-storage?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: SAP workload on Azure virtual machine supported scenarios
+          href: /azure/virtual-machines/workloads/sap/sap-planning-supported-configurations?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: What SAP software is supported for Azure deployments
+          href: /azure/virtual-machines/workloads/sap/sap-supported-product-on-azure?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+      - name: SAP NetWeaver deployment guide
+        href: /azure/virtual-machines/workloads/sap/deployment-guide?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+      - name: DBMS deployment guides for SAP workload
+        items:
+        - name: General Azure Virtual Machines DBMS deployment for SAP workload
+          href: /azure/virtual-machines/workloads/sap/dbms_guide_general?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: SQL Server Azure Virtual Machines DBMS deployment for SAP workload
+          href: /azure/virtual-machines/workloads/sap/dbms_guide_sqlserver?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: Oracle Azure Virtual Machines DBMS deployment for SAP workload
+          href: /azure/virtual-machines/workloads/sap/dbms_guide_oracle?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: IBM DB2 Azure Virtual Machines DBMS deployment for SAP workload
+          href: /azure/virtual-machines/workloads/sap/dbms_guide_ibm?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: High availability of IBM DB2 LUW on Azure VMs on SUSE Linux Enterprise Server
+          href: /azure/virtual-machines/workloads/sap/dbms-guide-ha-ibm?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: High availability of IBM DB2 LUW on Azure VMs on Red Hat Enterprise Linux server
+          href: /azure/virtual-machines/workloads/sap/high-availability-guide-rhel-ibm-db2-luw?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: SAP ASE Azure Virtual Machines DBMS deployment for SAP workload
+          href: /azure/virtual-machines/workloads/sap/dbms_guide_sapase?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: SAP MaxDB, SAP liveCache, and SAP Content Server deployment on Azure
+          href: /azure/virtual-machines/workloads/sap/dbms_guide_maxdb?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: SAP HANA availability in Azure Virtual Machines
+          items:
+          - name: SAP HANA on Azure availability overview
+            href: /azure/virtual-machines/workloads/sap/sap-hana-availability-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+          - name: SAP HANA on Azure availability within one Azure region
+            href: /azure/virtual-machines/workloads/sap/sap-hana-availability-one-region?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+          - name: SAP HANA on Azure availability across Azure regions
+            href: /azure/virtual-machines/workloads/sap/sap-hana-availability-across-regions?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: SAP Business One on Azure Virtual Machines
+          href: /azure/virtual-machines/workloads/sap/business-one-azure?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: SAP IDES on Windows/SQL Server SAP CAL deployment guide
+          href: /azure/virtual-machines/workloads/sap/cal-ides-erp6-erp7-sp3-sql?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: SAP LaMa connector for Azure
+          href: /azure/virtual-machines/workloads/sap/lama-installation?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        - name: High availability (HA) on Windows and Linux
+          items:
+          - name: Overview
+            href: /azure/virtual-machines/workloads/sap/sap-high-availability-guide-start?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+          - name: High availability architecture
+            items:
+            - name: HA architecture and scenarios
+              href: /azure/virtual-machines/workloads/sap/sap-high-availability-architecture-scenarios?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: High availability architecture and scenarios
+              href: /azure/virtual-machines/workloads/sap/sap-higher-availability-architecture-scenarios?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: SAP workload configurations with Azure Availability Zones
+              href: /azure/virtual-machines/workloads/sap/sap-ha-availability-zones?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: HA on Windows with shared disk for ASCS/SCS instance
+              href: /azure/virtual-machines/workloads/sap/sap-high-availability-guide-wsfc-shared-disk?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: HA on Windows with Scale-Out File Server for ASCS/SCS instance
+              href: /azure/virtual-machines/workloads/sap/sap-high-availability-guide-wsfc-file-share?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: HA for SAP NetWeaver on Windows with Azure NetApp Files (SMB)
+              href: /azure/virtual-machines/workloads/sap/high-availability-guide-windows-netapp-files-smb?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: HA on SUSE Linux for ASCS/SCS instance
+              href: /azure/virtual-machines/workloads/sap/high-availability-guide-suse?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: HA on SUSE Linux for ASCS/SCS instance with Azure NetApp Files
+              href: /azure/virtual-machines/workloads/sap/high-availability-guide-suse-netapp-files?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: HA on Red Hat Enterprise Linux for ASCS/SCS instance
+              href: /azure/virtual-machines/workloads/sap/high-availability-guide-rhel?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: HA on Red Hat Enterprise Linux for ASCS/SCS instance with Azure NetApp Files
+              href: /azure/virtual-machines/workloads/sap/high-availability-guide-rhel-netapp-files?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+          - name: Azure infrastructure preparation
+            items:
+            - name: Windows with shared disk for ASCS/SCS instance
+              href: /azure/virtual-machines/workloads/sap/sap-high-availability-infrastructure-wsfc-shared-disk?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: Windows with Scale-Out File Server for ASCS/SCS instance
+              href: /azure/virtual-machines/workloads/sap/sap-high-availability-infrastructure-wsfc-file-share?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: High availability for NFS on Azure VMs on SLES
+              href: /azure/virtual-machines/workloads/sap/high-availability-guide-suse-nfs?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: GlusterFS on Azure VMs on Red Hat Enterprise Linux for SAP NetWeaver
+              href: /azure/virtual-machines/workloads/sap/high-availability-guide-rhel-glusterfs?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: Pacemaker on SLES
+              href: /azure/virtual-machines/workloads/sap/high-availability-guide-suse-pacemaker?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: Pacemaker on RHEL
+              href: /azure/virtual-machines/workloads/sap/high-availability-guide-rhel-pacemaker?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: Public endpoint connectivity for VMs using Azure Standard Load Balancer in SAP high-availability scenarios
+              href: /azure/virtual-machines/workloads/sap/high-availability-guide-standard-load-balancer-outbound-connections?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+          - name: SAP installation
+            items:
+            - name: Windows with shared disk for ASCS/SCS instance
+              href: /azure/virtual-machines/workloads/sap/sap-high-availability-installation-wsfc-shared-disk?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: Windows with Scale-Out File Server for ASCS/SCS instance
+              href: /azure/virtual-machines/workloads/sap/sap-high-availability-installation-wsfc-file-share?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: HA for SAP NetWeaver on Windows with Azure NetApp Files (SMB)
+              href: /azure/virtual-machines/workloads/sap/high-availability-guide-windows-netapp-files-smb?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: SUSE Linux with NFS for ASCS/SCS instance
+              href: /azure/virtual-machines/workloads/sap/high-availability-guide-suse?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: SUSE Linux with NFS for ASCS/SCS instance with Azure NetApp Files
+              href: /azure/virtual-machines/workloads/sap/high-availability-guide-suse-netapp-files?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: High availability for SAP NetWeaver on Red Hat Enterprise Linux
+              href: /azure/virtual-machines/workloads/sap/high-availability-guide-rhel?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: Red Hat Enterprise Linux with NFS for ASCS/SCS instance with Azure NetApp Files
+              href: /azure/virtual-machines/workloads/sap/high-availability-guide-rhel-netapp-files?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+          - name: SAP multi-SID
+            items:
+            - name: Windows with Azure shared disk for ASCS/SCS instance
+              href: /azure/virtual-machines/workloads/sap/sap-ascs-ha-multi-sid-wsfc-azure-shared-disk?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: Windows with shared disk for ASCS/SCS instance
+              href: /azure/virtual-machines/workloads/sap/sap-ascs-ha-multi-sid-wsfc-shared-disk?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: Windows with Scale-Out File Server for ASCS/SCS instance
+              href: /azure/virtual-machines/workloads/sap/sap-ascs-ha-multi-sid-wsfc-file-share?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: SLES with Pacemaker multi-SID for ASCS/SCS instance
+              href: /azure/virtual-machines/workloads/sap/high-availability-guide-suse-multi-sid?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+            - name: RHEL with Pacemaker multi-SID for ASCS/SCS instance
+              href: /azure/virtual-machines/workloads/sap/high-availability-guide-rhel-multi-sid?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+          - name: Azure Site Recovery for SAP disaster recovery
+            href: /azure/site-recovery/site-recovery-workload?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json#protect-sap
+          - name: Azure proximity placement groups for optimal network latency with SAP applications
+            href: /azure/virtual-machines/workloads/sap/sap-proximity-placement-scenarios?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+    - name: SAP BusinessObjects Business Intelligence platform on Azure
+      items:
+      - name: SAP BusinessObjects BI platform planning and implementation guide on Azure
+        href: /azure/virtual-machines/workloads/sap/businessobjects-deployment-guide?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+      - name: SAP BusinessObjects BI platform deployment guide for Linux on Azure
+        href: /azure/virtual-machines/workloads/sap/businessobjects-deployment-guide-linux?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+    - name: Integrate Azure AD with SAP applications
+      items:
+      - name: Provision users from SAP SuccessFactors to Active Directory
+        href: /azure/active-directory/saas-apps/sap-successfactors-inbound-provisioning-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+      - name: Provision users from SAP SuccessFactors to Azure AD
+        href: /azure/active-directory/saas-apps/sap-successfactors-inbound-provisioning-cloud-only-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+      - name: Write-back users from Azure AD to SAP SuccessFactors
+        href: /azure/active-directory/saas-apps/sap-successfactors-writeback-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+      - name: Provision users to SAP Cloud Platform Identity Authentication
+        href: /azure/active-directory/saas-apps/sap-cloud-platform-identity-authentication-provisioning-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+      - name: Configure SSO with SAP Cloud Platform Identity Authentication
+        href: /azure/active-directory/saas-apps/sap-hana-cloud-platform-identity-authentication-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+      - name: Configure SSO with SAP SuccessFactors
+        href: /azure/active-directory/saas-apps/successfactors-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+      - name: Configure SSO with SAP Analytics Cloud
+        href: /azure/active-directory/saas-apps/sapboc-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+      - name: Configure SSO with SAP Fiori
+        href: /azure/active-directory/saas-apps/sap-fiori-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+      - name: Configure SSO with SAP Qualtrics
+        href: /azure/active-directory/saas-apps/qualtrics-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+      - name: Configure SSO with SAP Ariba
+        href: /azure/active-directory/saas-apps/ariba-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+      - name: Configure SSO with SAP Concur Travel and Expense
+        href: /azure/active-directory/saas-apps/concur-travel-and-expense-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+      - name: Configure SSO with SAP Cloud Platform
+        href: /azure/active-directory/saas-apps/sap-hana-cloud-platform-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+      - name: Configure SSO with SAP NetWeaver
+        href: /azure/active-directory/saas-apps/sap-netweaver-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+      - name: Configure SSO with SAP Business ByDesign
+        href: /azure/active-directory/saas-apps/sapbusinessbydesign-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+      - name: Configure SSO with SAP HANA
+        href: /azure/active-directory/saas-apps/saphana-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+      - name: Configure SSO with SAP Cloud for Customer
+        href: /azure/active-directory/saas-apps/sap-customer-cloud-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+    - name: Azure services integration into SAP
+      items:
+      - name: Use SAP HANA in Power BI Desktop
+        href: /power-bi/desktop-sap-hana
+      - name: DirectQuery for SAP HANA
+        href: /power-bi/desktop-directquery-sap-hana
+      - name: Use the SAP BW connector in Power BI Desktop
+        href: /power-bi/desktop-sap-bw-connector
+    - name: Azure Monitor for SAP Solutions
+      items:
+      - name: Azure Monitor for SAP Solutions overview
+        href: /azure/virtual-machines/workloads/sap/azure-monitor-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+      - name: Azure Monitor for SAP Solutions providers
+        href: /azure/virtual-machines/workloads/sap/azure-monitor-providers?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+      - name: Configure Azure Monitor for SAP Solutions - Azure portal
+        href: /azure/virtual-machines/workloads/sap/azure-monitor-sap-quickstart?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+      - name: Configure Azure Monitor for SAP Solutions - PowerShell
+        href: /azure/virtual-machines/workloads/sap/azure-monitor-sap-quickstart-powershell?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+      - name: Azure Monitor for SAP Solutions FAQ
+        href: /azure/virtual-machines/workloads/sap/azure-monitor-faq?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+    - name: Reference
+      items:
+      - name: Azure CLI
+        href: /cli/azure/ext/sap-hana/hanainstance
+      - name: Azure PowerShell
+        href: /powershell/module/az.hanaonazure/#sap-hana-on-azure
+  - name: Build skills on Learn
+    items:
+    - name: Plan for SAP on Azure
+      href: /learn/paths/plan-azure-sap-workloads/
+    - name: Run SAP on Azure
+      href: /learn/paths/running-azure-sap-workloads/
+    - name: SAP certified offerings for Azure
+      href: /learn/paths/sap-certified-offerings/
