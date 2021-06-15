@@ -17,7 +17,7 @@ Azure landing zones allow you to start with a small implementation and expand ov
 
 ## Organizational alignment impact
 
-For retail companies, IT operations are heavily influenced by the company's historical growth patterns. Specifically the impact those growth patterns have had on your organizational structures across your technology teams. To understand how this influences operations management, see [initial organizational alignment](./organize.md#common-growth-patterns-for-retailers).
+For retail companies, IT operations are heavily influenced by the company's historical growth patterns. Specifically, the impact those growth patterns have had on your organizational structures across your technology teams. To understand how this influences operations management, see [initial organizational alignment](./organize.md#common-growth-patterns-for-retailers).
 
 - Will Central IT, a Cloud Center of Excellence (CCoE), or other forms of centralized operations be responsible for operating all workloads?
 - Does your strategy and plan require your brick and mortar locations to be integrated into your cloud environment?
@@ -37,7 +37,7 @@ Consider traffic patterns, advanced security controls, and other practices in ad
 
 ## Compliance: PCI DSS
 
-Your retail organization might require compliance with Payment Card Industry Data Security Standards (PCI DSS)](/[azure/compliance/offerings/offering-pci-dss). But PCI DSS is just one example of the compliance requirements commonly seen in retail cloud adoption requirements.
+Your retail organization might require compliance with Payment Card Industry Data Security Standards [PCI DSS](/azure/compliance/offerings/offering-pci-dss). But PCI DSS is just one example of the compliance requirements commonly seen in retail cloud adoption requirements.
 
 Your cloud adoption strategy and plan might require adherence to regulatory compliance standards. If so, review the compliance section of the [governance for retail](./govern.md) article before deploying your Azure landing zones.
 
@@ -46,7 +46,7 @@ Your cloud adoption strategy and plan might require adherence to regulatory comp
 The following articles can guide your cloud adoption journey and help you succeed in the cloud adoption scenario.
 
 - [Cloud adoption plan for the retail industry](./plan.md)
-- [Review your environment or Azure landing zone(s)](./ready.md)
+- [Review your environment or Azure landing zones](./ready.md)
 - [Migrate common retail industry technologies](./migrate.md)
 - [Innovation in the retail industry](./innovate.md)
 - [Governance in the retail industry](./govern.md)
