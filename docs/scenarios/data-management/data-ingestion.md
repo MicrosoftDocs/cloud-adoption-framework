@@ -11,14 +11,14 @@ ms.subservice: ready
 
 # Data Ingestion
 
-In the Enterprise Scale Analytics and AI solution pattern, Domain and Data Product will ingress, transform, and egest data.
+In the Enterprise Scale Analytics and AI solution pattern, Data Integrations and Data Product will ingress, transform, and egest data.
 
 >[!IMPORTANT]
->Domains do not carry out any transformation of data. However, if the business has multiple use cases where it requires the same data to be joined together, such as weather and location data, then the domain could be asked to create this in the curated layer. \
+>Data Integrations do not carry out any transformation of data. However, if the business has multiple use cases where it requires the same data to be joined together, such as weather and location data, then the Data Integration could be asked to create this in the curated layer. \
 \
 >Data Products teams can apply transformations and create their datasets in the curated layer of the Data Lake as well as the [Polygot Storage](https://techcommunity.microsoft.com/t5/data-architecture-blog/polyglot-persistence-with-azure-data-services/ba-p/1514912) they have chosen to use.
 
-Azure provides several services for ingesting and egesting data to various native and third-party platforms. Depending on volume, velocity, variety, and direction, different services can be leveraged. Some of these services are listed below.
+Azure provides several services for ingesting and egesting data to various native and third-party platforms. Depending on volume, velocity, variety, and direction, different services can be used. Some of these services are listed below.
 
 - [Azure Data Factory](/azure/data-factory/introduction) is a service built for all data integration needs and skill levels. Easily construct ETL and ELT processes code-free within the intuitive visual environment or write your own code. Visually integrate data sources using more than 90+ natively built and maintenance-free connectors at no added cost. Using private endpoints and private link services, engineers can securely connect to Azure PaaS resources without using any public endpoint of the PaaS resource. Using integration runtimes, engineers can extend pipelines to third-party environments, including on-premises data sources and other clouds.\
 \
@@ -33,13 +33,13 @@ Proprietary native and third-party tooling provides niche capabilities to integr
 - [Azure Data Share](/azure/data-share) enables organizations to securely share data with multiple external customers and partners. Once a data share account is created and datasets added, customers and partners can be invited to the data share. Data providers are always in control of the data that they have shared. Azure Data Share makes it simple to manage and monitor what data was shared, when, and by whom.
 
 >[!IMPORTANT]
->Every Data Landing Zone has an [Ingestion and Processing Resource Group](data-landing-zone.md#ingestion-and-processing-resource-group) which exists for the purpose of Enterprises who have an ingestion framework engine. If you do not have this framework engine, the only resource we would recommend deploying is the *Azure Databricks Engineering Workspace* which would be used by Domains to run complex ingestion. See [Automated Ingestion Framework](automated-ingestion-pattern.md#automated-ingestion-framework) for potential automation patterns.
+>Every Data Landing Zone has an [Ingestion and Processing Resource Group](data-landing-zone.md#ingestion-and-processing-resource-group) which exists for the purpose of Enterprises who have an ingestion framework engine. If you do not have this framework engine, the only resource we would recommend deploying is the *Azure Databricks Engineering Workspace* which would be used by Data Integrations to run complex ingestion. See [Automated Ingestion Framework](automated-ingestion-pattern.md#automated-ingestion-framework) for potential automation patterns.
 
 ## Azure Data Factory Ingest Considerations
 
 If you have an ingestion framework engine, you should deploy a single Azure Data Factory per Data Landing Zone in the production Ingest and Processing Resource Group. The Azure Data Factory workspace should be locked off to users, and only managed identity and service principals will have access to deploy. Data Landing Zone Ops should have Read access to allow debugging of pipelines.
 
-Each Domain will have their own Azure Data Factory which will be used by Domain Ops to move data from source to Raw to Enriched to Curated. By having an Azure Data Factory per domain we can enable a complete Continuos Integration(CI) and Continuos Development(CD) experience by only allowing pipelines to be deployed from Azure DevOps or GitHub.
+Each Data Integration will have their own Azure Data Factory which will be used by Integration Ops to move data from source to Raw to Enriched to Curated. By having an Azure Data Factory per Data Integration we can enable a complete Continuos Integration(CI) and Continuos Development(CD) experience by only allowing pipelines to be deployed from Azure DevOps or GitHub.
 
 All Azure Data Factory workspaces will predominately use the Managed VNET feature in ADF or [Self-Hosted Integration Runtime](/azure/data-factory/concepts-integration-runtime) for their Data Landing Zone within the Data Management Landing Zone. Engineers are encouraged to use the managed VNET feature to securely connect to Azure PaaS resource.
 
@@ -58,17 +58,17 @@ This guidance builds on top of:
 
 A single premium **Azure Databricks Data Engineering** Workspace should be deployed per Data Landing Zone in the production Ingest and Processing resource group. This will enable a complete CI/CD experience and only allow notebooks to be deployed from Azure DevOps or GitHub.
 
-For Development we would expect Domain Teams to have their own Databricks environments before checking in code to be deployed to the single Azure Databricks workspace in both Test and Production.
+For Development we would expect Integration Ops Teams to have their own Databricks environments before checking in code to be deployed to the single Azure Databricks workspace in both Test and Production.
 
 The test and production workspaces will be locked off to users, and only managed identity/service principals will have access to it. All workspace management will be handled via Rest API.
 
-Azure Data Factory in the Domain Resource Group should provide the orchestration for calling Azure Databricks jobs.
+Azure Data Factory in the Data Integrations Resource Group should provide the orchestration for calling Azure Databricks jobs.
 
 The Data Lakes will be mounted into this workspace using service principals. See [Access via Service Principal](https://github.com/hurtn/datalake-ADLS-access-patterns-with-Databricks/blob/master/readme.md#pattern-1---access-via-service-principal).
 
-Domain teams can deploy short, automated jobs on Databricks and expect their clusters to start quickly, execute the job, and terminate. Databricks Pools are recommended to be setup to reduce the time it takes for clusters to spin up for jobs.
+Integration Ops teams can deploy short, automated jobs on Databricks and expect their clusters to start quickly, execute the job, and terminate. Databricks Pools are recommended to be setup to reduce the time it takes for clusters to spin up for jobs.
 
-Pipeline created by the Domain Ops teams in Azure Databricks can take data from SOURCE to RAW to ENRICH  to CURATED. Domains must deploy their notebooks via a Domain Ops repo using the Domain Ops Service Principle which was created when onboarding their domain. The notebook is called from the Domain Azure Data Factory.
+Pipeline created by the Integration Ops teams in Azure Databricks can take data from SOURCE to RAW to ENRICH  to CURATED. Data Integrations must deploy their notebooks via a Integration Ops repo using the Integration Ops Service Principle which was created when onboarding their Data Integration. The notebook is called from the Data Integration Azure Data Factory.
 
 It is recommended that enterprises use Azure DevOps to implement a deployment framework for new pipelines which create the dataset folders, assign ACLs, and create a table with or without Databricks Table Access Controls enforced.
 
@@ -80,7 +80,7 @@ Both Event Hubs and IoT Hub are scalable event processing services that can inge
 
 From that point, data can either be exported out to a data lake at regular intervals (batch) and processed in near-real-time via Spark streaming (using Azure Databricks), Azure Data Explorer, Azure Stream Analytics, or Time Series Insights.
 
-The last Event Hub or Kafka Landing Zone, inside the use case specific Landing Zone, should send its aggregated data to both the Data Lake RAW layer in one of the Data Landing Zones and/or to an Event Hub related to the Domain in the Data Landing Zone.
+The last Event Hub or Kafka Landing Zone, inside the use case specific Landing Zone, should send its aggregated data to both the Data Lake RAW layer in one of the Data Landing Zones and/or to an Event Hub related to the Data Integration in the Data Landing Zone.
 
 ## Enforcing Data Quality
 
@@ -93,10 +93,9 @@ Figure 2: Implementing Data Quality during ingestion
 Figure 2 illustrates the process of data moving through integrity and data quality into the curated layer.
 
 - Before data is moved into the Enriched Layer, its schema and columns are checked against the metadata registered in the data catalog.
-  - If the data contains errors, the load will be aborted, and the domain should be notified of the failure.
+  - If the data contains errors, the load will be aborted, and Integration Ops should be notified of the failure.
   - If the schema and column checks pass, the data is loaded into the enriched layers with conformed data types.
-- Once in the Enriched layer, a Data Quality process checks for duplicate data, NULL values, and data type compliance. The Domain can configure additional checks. Any violations are reported to the domain.
-- The data is the merged into the Curated layer using DELTA.
+- Before moving into the Enriched layer, a Data Quality process checks for duplicate data, NULL values, and data type compliance. Integration Ops can configure additional checks. Any violations are reported to Integration Ops.
 
 ## Ingestion Monitoring
 
