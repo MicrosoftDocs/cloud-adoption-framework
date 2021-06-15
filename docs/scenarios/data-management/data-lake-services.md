@@ -178,7 +178,7 @@ When landing data into a data lake, it is important to pre-plan the structure of
 
 |Raw data |Enriched data |Curated data| Workspace data|
 |---------|---------|---------|---------|
-|Domains | Domains | Data Products | Data Scientists and BI Analysts|
+|Domains | Domains | Domains | Data Products, Data Scientists and BI Analysts|
 
 ### Read data
 
