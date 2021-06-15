@@ -11,7 +11,7 @@ ms.subservice: innovate
 
 # Innovation in the retail industry
 
-The [Innovate methodology](../../innovate/index.md) of the Microsoft Cloud Adoption Framework for Azure aligns innovation and DevOps practices to disciplines that drive repeatable innovation and increase customer impact. The steps outlined in the innovation methodology apply to retail industry innovations. This article points out ways to innovate even faster as you strive to improve your retail outcomes.
+The [Innovate methodology](../../innovate/index.md) of the Microsoft Cloud Adoption Framework for Azure aligns innovation and DevOps practices to disciplines that drive repeatable innovation and increase customer impact. The steps outlined in the Innovate methodology apply to retail industry innovations. This article points out ways to innovate even faster as you strive to improve your retail outcomes.
 
 ## Align to the retail industry maturity model
 
@@ -22,10 +22,6 @@ The [retail cloud maturity model](./retail-cloud-maturity.md) describes the stag
 One example of achieving intelligent retail maturity is the [retail recommender](./improve-retail-experience.md), which uses data, applications, analytics, and AI to enhance the retail experience.
 
 The tools and techniques presented in this article can help you develop innovation and reach retail maturity.
-
-## Rapid innovation with Microsoft Cloud for Retail
-
-[![Microsoft cloud for retail](./media/mc4r.png)](./media/mc4r.png#lightbox)
 
 ## Democratize data
 
@@ -44,7 +40,6 @@ To extend your common data model, use cloud native tools in Azure:
 
 Learn more about ways you can [build applications](../../innovate/best-practices/apps.md) to extend, improve, and automate your retail processes.
 
-- **Microsoft Cloud for Retail** provides many packaged solutions to extend your common data model and rapidly deliver innovative applications to improve customer engagement.
 - **Power Platform** empowers citizen developers from business teams across sales, payroll, finance, and so on. Extend your common data model by empowering teams to create their own Power Apps and Power Automate solutions.
 - **Intelligent experiences** build modern applications in the cloud with web apps or serverless functions. Infuse intelligence into the applications with speech, text, vision, and chat bots.
 
@@ -59,5 +54,5 @@ Learn more about using [device interactions](../../innovate/best-practices/devic
 
 The following articles will help you succeed in your cloud adoption journey.
 
-- [Governance in the Retail industry](./govern.md)
-- [Management in the Retail industry](./manage.md)
+- [Governance in the retail industry](./govern.md)
+- [Management in the retail industry](./manage.md)
