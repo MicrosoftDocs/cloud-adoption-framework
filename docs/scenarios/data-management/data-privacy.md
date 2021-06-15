@@ -1,5 +1,5 @@
 ---
-title: Azure Enterprise Scale Analytics and AI Data Privacy
+title: Enterprise Scale Analytics and AI Data Privacy in Azure
 description: Enterprise Scale Analytics and AI Data Privacy
 author: abdale
 ms.author: hamoodaleem
@@ -20,7 +20,7 @@ Before Domains ingest data into the solution pattern, they must be able to class
 
 ## Non-Sensitive
 
-For every domain which is on-boarded we create two data lake folders for each data lake layer (Non-Sensitive and Sensitive) and enable Azure AD Pass-through with ACLs. If a domain onboards a data asset which is non-sensitive then Users Principal Names(UPNs) and Service Principal objects can be added to two Azure AD Groups (one for read/write and the other for read-only). There two Azure AD groups are created as part of the onboarding process and assigned to the data asset folder the domains non-sensitive containers for RAW, Enriched and Curated.
+For every domain which is on-boarded we create two data lake folders for each data lake layer (Non-Sensitive and Sensitive) and enable Azure AD Pass-through with ACLs. If a domain onboards a data asset which is non-sensitive then Users Principal Names (UPNs) and Service Principal objects can be added to two Azure AD Groups (one for read/write and the other for read-only). There two Azure AD groups are created as part of the onboarding process and assigned to the data asset folder the domains non-sensitive containers for RAW, Enriched and Curated.
 
 This pattern enables any compute product which supports Azure AD Passthrough to connect to the data lake, authenticate with the user logged in, and, if the user is part of the data asset's Azure AD Group, access the data via Azure AD Passthrough. This would allow those inside the group to read all of the data asset without any policy filtering. Access can then be audited in detail in the appropriate logs as well as the Microsoft Graph.
 
@@ -153,3 +153,6 @@ As Domains and Data Products create read data sources, they would be registered 
 ## Highly Confidential Data
 
 In addition to the above options being implemented for Highly Confidential Data, also known as restricted, we recommend that Highly Confidential Data is hosted in a dedicated Data Landing Zone. This allows specific requirements such as just in time access, customer managed keys for encryption and putting inbound/outbound restrictions to the landing zone. The Data Management Landing Zone should be able to connect to catalogue the data, in the Data Landing Zone, but should restrict who can search for this data in the catalogue.
+
+> [!NOTE]
+> The California Consumer Privacy Act (CCPA) and the European Union General Data Protection Regulation (GDPR) provide privacy rights and obligations to consumers such as the right to erasure, access and receive their personal information. Please visit our guide for [Azure Data Subject Requests for the GDPR and CCPA](/compliance/regulatory/gdpr-dsr-azure) for further reading.
