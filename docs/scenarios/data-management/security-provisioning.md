@@ -62,7 +62,6 @@ We are able to delegate access governance to access package managers in Azure AD
 
 :::image type="content" source="./images/user-access-management.png" alt-text="User Access Management" lightbox="./images/user-access-management.png":::
 
-
 *Figure 2: Configuring Azure AD entitlement management*
 
 Figure 2 brings all of this together on how different personas would work together to control access to data assets.
@@ -71,6 +70,8 @@ Figure 2 brings all of this together on how different personas would work togeth
 
    >[!IMPORTANT]
    >Currently tenants can provision 500 catalogs with 500 access packages each (this can be increased by contacting Azure support).
+
+:::image type="content" source="./images/identity-governance-catalogs.png" alt-text="Identity Governance Catalogs" lightbox="./images/identity-governance-catalogs.png":::
 
 2. Domain Ops owns the creation and management of Data Asset Security Groups (DASG). This is mostly handled via automated scripts that manage the creating and updating of security groups.
 3. A Data Manager, part of Domain Ops, can curate access packages and define which access and applications are included. The Access Packages are published to their respective catalogs. Access Packages are typically aligned to user profiles (*e.g.* base package for finance users). Access Packages can include expiration policies and access review policies. Special policies also exist for external guest users.

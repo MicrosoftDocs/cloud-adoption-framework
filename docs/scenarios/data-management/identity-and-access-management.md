@@ -47,7 +47,7 @@ Granting access to datasets should be done only on an [ACL level of the data lak
 
 ### Design considerations for standard and sensitive data
 
-In the case of **standard data**, the following recommendations should be considered:
+In the case of **non sensitive data**, the following recommendations should be considered:
 
 1. Each data asset in Azure Data Lake Storage should own a matching AAD Data Asset group.
 2. Data asset AAD registration should be automated via a script and restricted to [Domain Ops](team-functions.md#domain-ops).
@@ -64,12 +64,3 @@ In the case of **secure and sensitive data**, the following recommendations shou
 4. Teams should be given access to Azure Databricks (ADB) via Azure Active Directory Enterprise Application SCIM
     1. Azure Databricks table is defined to external table, optionally.
     2. Azure Databricks ACLs are mapped to groups.
-
-### Example implementation
-
-The figure below shows how ACLs and Groups can be applied to an Enterprise Scale Analytics and AI deployment:
-
-<!-- increase image size-->
-:::image type="content" source="./images/data-security-model.png" alt-text="Data Access Model" lightbox="./images/data-security-model.png":::
-
-*Figure 1: Data Access Model*

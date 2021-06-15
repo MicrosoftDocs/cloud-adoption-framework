@@ -131,9 +131,9 @@ After a Data Landing Zone has been created, Domain and Data Products can start o
 
 This process is done either directly using DevOps tooling or called via pipelines/workflows exposed as APIs. Similarly to the Data Landing Zone, it requires first for the code master code repo to be forked.
 
-![Domain and Product Deployment Automation](./images/domain-product-deployment-automation.png)
+![Integration and Product Deployment Automation](./images/integration-product-deployment-automation.png)
 
-*Figure 4 : Domain and Product Deployment Automation*
+*Figure 4 : Integration and Product Deployment Automation*
 
 Figure 4 illustrates the process to onboard a new Domain or data product.
 
