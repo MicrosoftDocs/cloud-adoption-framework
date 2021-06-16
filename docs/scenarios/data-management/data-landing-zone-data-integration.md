@@ -12,7 +12,8 @@ ms.subservice: ready
 # Data Integrations
 
 
-Previously, we explained the role of Integrations Ops under [Integration Ops (per domain)](persona-and-teams.md#integration-ops-per-integration)
+
+Previously, we explained the role of Integrations Ops under [Integration Ops (per domain)](persona-and-teams.md#integration-ops-per-domain)
 
 This section explains the infrastructure which is deployed for each Integration inside a Data Landing Zone.
 
