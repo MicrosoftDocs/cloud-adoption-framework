@@ -15,10 +15,10 @@ The Enterprise Scale Analytics and AI solution pattern consists of:
 
 - A Data Management Landing Zone.
 - One or more Data Landing Zones.
-- One or more Domains in each Data Landing Zone.
+- One or more Data Integrations in each Data Landing Zone.
 - One or more Data Products in each Data Landing Zone.
 
-Each of these assets can evolve independently over time, because of different requirements and lifecycles (e.g. one of the Data Landing Zones may requires RA-GRS storage accounts at some point). Therefore it is important to have an IaC representation of each of these assets in a repository, so that changes can be implemented based on requirements in the respective Data Landing Zone, Domain or product.
+Each of these assets can evolve independently over time, because of different requirements and lifecycles (e.g. one of the Data Landing Zones may requires RA-GRS storage accounts at some point). Therefore it is important to have an IaC representation of each of these assets in a repository, so that changes can be implemented based on requirements in the respective Data Landing Zone, Data Integration or Data Product.
 
 Table 1, summarizes the teams involved in an Enterprise Scale Analytics and AI deployment.
 
@@ -26,8 +26,8 @@ Table 1, summarizes the teams involved in an Enterprise Scale Analytics and AI d
 |-|-|-|
 |Cloud Platform Ops| The Azure Cloud Platform team in your organization| One for the whole Azure platform |
 |Data Platform Ops|In charge of creating and maintaining ARM template repositories for the different levels of the Enterprise Scale Analytics and AI. Also maintains the Data Management Landing Zone and supports other ops teams in case of deployment issues or required enhancements.| One for the Enterprise Scale Analytics and AI |
-|Data Landing Zone Ops |In charge of deploying and maintaining a specific Data Landing Zone. Also, supports the deployment and enhancement of data Domains and Data Products. | One team per Data Landing Zone |
-|Domain Ops|In charge of Domain deployment and updates| One team per Domain |
+|Data Landing Zone Ops |In charge of deploying and maintaining a specific Data Landing Zone. Also, supports the deployment and enhancement of Data Integrations and Data Products. | One team per Data Landing Zone |
+|Integration Ops|In charge of Data Integration deployment and updates| One team per domain |
 |Data Product Team|In charge of Data Products deployment and updates| One team per Data Product |
 
 Table 1: Enterprise Scale Analytic and AI Teams
@@ -125,24 +125,24 @@ From this module, users can leverage the `Copy-GitRepository` function, which  c
 
 Overall, this approach gives the different teams much greater flexibility, while also making sure that performed actions are compliant with the requirements of the company and, in addition, a lifecycle management is introduced, which allows to leverage new feature enhancements or optimizations added to the original templates.
 
-## Domain & Data Product Deployment Process
+## Data Integration & Data Product Deployment Process
 
-After a Data Landing Zone has been created, Domain and Data Products can start onboarding. Deployment is requested by Domain Ops or Data Product Team which is the approved by the Data Landing Zone Ops.
+After a Data Landing Zone has been created, Data Integration and Data Products can start onboarding. Deployment is requested by Integration Ops or Data Product Team which is the approved by the Data Landing Zone Ops.
 
 This process is done either directly using DevOps tooling or called via pipelines/workflows exposed as APIs. Similarly to the Data Landing Zone, it requires first for the code master code repo to be forked.
 
-![Domain and Product Deployment Automation](./images/domain-product-deployment-automation.png)
+![Integration and Product Deployment Automation](./images/integration-product-deployment-automation.png)
 
-*Figure 4 : Domain and Product Deployment Automation*
+*Figure 4 : Integration and Product Deployment Automation*
 
-Figure 4 illustrates the process to onboard a new Domain or data product.
+Figure 4 illustrates the process to onboard a new Data Integration or Data Product.
 
-1. The user makes a request for a new Data Domain or Data Product
+1. The user makes a request for a new Data Integration or Data Product
 1. The workflow process sends a request to the Data Platform Ops for Approve/Decline.
 1. The workflow calls the SNOW CE API to create required CE/RGs. This includes the creation of ADO service connection and Team allocated to the ADO project.
 1. The workflow Forks the repository to the destination ADO project.
 1. The workflow creates an ARM Parameter file and Pipelines.
-1. The workflow then calls a 1st Pipeline to create the networking requirements and a 2nd ADO Pipeline to deploy the Data Domain/Products services
+1. The workflow then calls a 1st Pipeline to create the networking requirements and a 2nd ADO Pipeline to deploy the Data Integration or Data Products services
 1. On completion the user is notified
 
 >[!TIP]
@@ -160,26 +160,26 @@ At the start of the project, the Data Platform will have one Azure DevOps projec
 
 - One repository for the Data Management Landing Zone with pipelines and a service connection to the cloud environment
 - One template repository for the Data Landing Zone with pipelines to deploy a Data Landing Zone instance with corresponding ADO connections to cloud environments.
-- One template repository for a Data Domain with pipelines to deploy a Data Domain instance with corresponding ADO connections to cloud environments.  These are forked to Data Landing Zone ADO projects.
+- One template repository for a Data Integration with pipelines to deploy a Data Integration instance with corresponding ADO connections to cloud environments.  These are forked to Data Landing Zone ADO projects.
 - One template repository for Data Products with pipelines to deploy a Data Product instance with corresponding ADO connections to cloud environments. These are forked to Data Landing Zone ADO projects.
 
 Once Data Landing Zones have been deployed then the Enterprise Scale Analytics and AI solution pattern prescribes that:
 
 - Each Data Landing Zone wil have its own ADO Project with one or many ADO boards.
-- For each new Data Domain or Data Product, the respective template gets forked to the respective Data Landing Zone ADO Project after the request has been approved.
-- For each Data Domain or Data Product there is a:
+- For each new Data Integration or Data Product, the respective template gets forked to the respective Data Landing Zone ADO Project after the request has been approved.
+- For each Data Integration or Data Product there is a:
   - Service connection.
   - A registered Pipeline.
   - An ADO team with access to their ADO Board, and repository.
   - Different policies are defined for the forked repository.
 
-To control the deployment of Domain and Data Products we implement the principles of:
+To control the deployment of Data Integration and Data Products we implement the principles of:
 
 - Main branch is secured and owned by Data Landing Zone Ops team.
 - Only main branch can be used to deploy to test and prod environments.
 - Feature branches can deploy to dev environment.
-- Feature branches are owned by Domain and Data Product teams and should be used for updating the existing configuration and for testing feature updates.
-- Merging of feature branches into other feature branches can be handled by Data Domain and Data Product teams without approval.
+- Feature branches are owned by Integration Ops and Data Product teams and should be used for updating the existing configuration and for testing feature updates.
+- Merging of feature branches into other feature branches can be handled by Data Integration and Data Product teams without approval.
 - Merging feature branches into the main branch requires opening a pull request and an approval on that pull request from the Data Landing Zone Ops team.
 - Merging changes from template with forked repository possible to add features downstream over time.
 
@@ -191,8 +191,8 @@ The Enterprise Scale Analytic and AI solution has create the following core **st
 |-|-|-|-|
 |[Data Management Landing Zone Template](https://github.com/Azure/data-management-zone)| Central data management services as well as shared data services such as data catalog, SHIR etc. | Mandatory | One per Enterprise Scale Analytics and AI |
 |[Data Landing Zone Template](https://github.com/Azure/data-landing-zone)| Shared services for a Data Landing Zone like data storage and ingestion services as well as management services | Mandatory | One per Data Landing Zone |
-|[Domain Batch Template](https://github.com/Azure/data-domain-batch) | Additional services required for a Domain Batch | Optional | One or many per Data Landing Zone |
-|[Domain Streaming Template](https://github.com/Azure/data-domain-streaming) | Additional services required for a Domain Streaming | Optional | One or many per Data Landing Zone |
+|[Data Integration Batch Template](https://github.com/Azure/data-integration-batch) | Additional services required for a Data Integration Batch | Optional | One or many per Data Landing Zone |
+|[Data Integration Streaming Template](https://github.com/Azure/data-integration-streaming) | Additional services required for a Data Integration Streaming | Optional | One or many per Data Landing Zone |
 |[Data Product Template - Analytics and Data Science](https://github.com/Azure/data-product-analytics)| Additional services required for a data product analytics and AI| Optional | One or many per Data Landing Zone |
 | [Data Product Template - Reporting](https://github.com/Azure/data-product-reporting) | Additional services required for a data product reporting | Optional | One or many per Data Landing Zone|
 

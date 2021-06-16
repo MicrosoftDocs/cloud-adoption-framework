@@ -24,9 +24,9 @@ Many alternative strategies are available for implementing distributed compute a
 
 * **Backup and Restore**: In this approach, the database application is restored from the last backup copy before the disaster. This approach is commonly used following data corruption or accidental deletion. 
 
-* **Redeploy on disaster**: In this approach, the application is redeployed from scratch at the time of disaster. This is appropriate for non-critical applications that don’t require a guaranteed recovery time.
+* **Redeploy on disaster**: In this approach, the application is redeployed from scratch at the time of disaster. This is appropriate for non-critical applications that don't require a guaranteed recovery time.
 
-* **Warm Spare (Active/Passive)**: A secondary hosted service is created in an alternate region, and roles are deployed to guarantee minimal capacity; however, the roles don’t receive production traffic. This approach is useful for applications that have not been designed to distribute traffic across regions.
+* **Warm Spare (Active/Passive)**: A secondary hosted service is created in an alternate region, and roles are deployed to guarantee minimal capacity; however, the roles don't receive production traffic. This approach is useful for applications that have not been designed to distribute traffic across regions.
 
 * **Hot Spare (Active/Active)**: The application is designed to receive production load in multiple regions. The cloud services in each region might be configured for higher capacity than required for disaster recovery purposes. Alternatively, the cloud services might scale-out as necessary at the time of a disaster and failover. This approach requires substantial investment in application design, but it has significant benefits. These include low and guaranteed recovery time, continuous testing of all recovery locations, and efficient usage of capacity. For database applications, this includes a load balancer that sits over top of two databases that are kept in sync with a single connection point. This can be implemented in as many levels as required. 
 
@@ -40,7 +40,7 @@ If one of the Data Landing Zones requires geo-redundancy, with Data Lake Storage
 >[!Note]
 >A storage account which is configured as RA-GRS or any other GRS technology does not qualifies as a response to DR and customers are encouraged to conduct appropriate due diligence in terms of what works best for them including a "dual load" scenario i.e. copy data into 2 Azure regions respectively.
 
-Each Data Landing Zone must decide on the Recovery Point Objective for their Data Domain(s) and defined a replication strategy for their use cases.
+Each Data Landing Zone must decide on the Recovery Point Objective for their Data Integration(s) and Data Products and defined a replication strategy for their use cases.
 
 ## Azure Machine Learning
 
@@ -64,7 +64,7 @@ For an overview of High Availability with Azure Cosmos DB, see [How does Azure C
 
 ### Azure Data Factory
 
-As Data Domains and Data Product are likely to have Azure DevOps (GitHub or any other code version control software) repositories linked to Azure Data Factory, it is possible to deploy pipelines to another Data Factory with minimal downtime. To use code version control softwares apart from GitHub and Azure DevOps Repo will require developers to use ADF SDK to author pipelines and other Azure data factory objects.
+As Data Integrations and Data Product are likely to have Azure DevOps (GitHub or any other code version control software) repositories linked to Azure Data Factory, it is possible to deploy pipelines to another Data Factory with minimal downtime. To use code version control softwares apart from GitHub and Azure DevOps Repo will require developers to use ADF SDK to author pipelines and other Azure data factory objects.
 
 ## Azure Key Vault
 

@@ -18,14 +18,14 @@ Azure Synapse Analytics is the provisioned, integrated analytics service that ac
 
 ## Overview
 
-During the initial setup of a Data Landing Zone, a single Azure Synapse Analytics workspace may be deployed for use by all analysts and data scientists. Additional workspaces can be optionally created for specific Domains or Data Products.
+During the initial setup of a [Data Landing Zone](data-landing-zone.md), a single Azure Synapse Analytics workspace may be deployed for use by all analysts and data scientists. Additional workspaces can be optionally created for specific Data Integrations or Data Products.
 
 SQL Pools, formerly SQL DW, can be used as the data store for both enriched and curated data, which can serve for feature datasets needed by data science teams and for the datasets required for the analytical requirements. Azure Databricks can connect to these SQL Pools and update the data which resides inside the SQL Pools.
 
 SQL On-Demand is a serverless query service that will be used by the data scientists and engineers to run queries against files in the storage accounts.
 
 >[!TIP]
->Additional Azure Synapse Analytics workspaces may be needed if the Domain needs to provide access to the golden source with row- and column-level security, which can be provided by Azure Synapse Pools. Data Products teams might require their own workspace for creating Data Products and a separate workspace that allow only the product teams scoped development access.
+>Additional Azure Synapse Analytics workspaces may be needed if the Data Integration needs to provide access to the golden source with row- and column-level security, which can be provided by Azure Synapse Pools. Data Products teams might require their own workspace for creating Data Products and a separate workspace that allow only the product teams scoped development access.
 
 ## Azure Synapse Analytics Setup
 
@@ -47,7 +47,7 @@ At the network level, the Enterprise Scale Analytics and AI solution pattern use
 
 At the database level, in addition to the database roles, we recommend Row-Level Security (RLS) and Column-Level Security to restrict the data access on the tables in Synapse SQL Pool using security policy.
 
-For example, RLS is a great way to ensure users in a specific Domain or Data Product see only their own data even if the table contains data for all the enterprise.
+For example, RLS is a great way to ensure users in a specific Data Integration or Data Product see only their own data even if the table contains data for all the enterprise.
 
 By combining RLS with Column-Level Security (CLS) to restrict access to columns with sensitive data, both RLS and CLS apply the access restriction logic at the database tier rather than the application tier. The permission is evaluated every time the data access is attempted from any tier.
 
@@ -105,7 +105,7 @@ Using Data Hub in Synapse Studio, users can browse folders and files before they
 
 Refer to the [Assign Azure roles using the Azure portal - Azure RBAC | Microsoft Docs](/azure/role-based-access-control/role-assignments-portal) for detailed instructions on how assign Reader role on the storage account.
 
-#### Granting Read Access on Azure Data Lake Storage Gen 2 using ACLs.
+#### Granting Read Access on Azure Data Lake Storage Gen 2 using ACLs
 
 The first step on this process, you will need to grant the appropriate ACL permissions for users or groups at the **container level** in the Storage account. There are situations where a user or group cannot read the folders or files in the container root. However, they can be granted read/write permissions in child folders of the root. In this case, It will be still required the users or groups to have *execute* permissions on the parent folders, including the root, to traverse these folders which the identity does not have read/write access.
 
@@ -153,7 +153,7 @@ After selecting the appropriate permissions, click **OK** to close.
 
 Repeat the same steps for any additional folders and subfolder you may want to grant access to users or groups.
 
-#### Propagate ACLs permissions to children objects.  
+#### Propagate ACLs permissions to children objects  
 
 When granting ACLs permissions to folders that already contain child objects such as folder and files, you may need to use the option **Propagate Access Control Lists option.** This option enables propagation of ACLs from the parent folder to its child objects. It is important to understand that ACLs propagation is not easily reversible. You will need to evaluate case by case to ensure you are propagating the correct ACL permissions to the right security group. If you use this option at the container level, it will propagate the permissions from the container level to all sub-folders within the container.
 
@@ -167,7 +167,7 @@ Check the box I understand that propagating ACLs cannot be easily reversable and
 
 ![Manage Access](./images/acl-propagate-2.png)
 
-#### Considerations when using Spark Tables in Synapse Spark Pool.
+#### Considerations when using Spark Tables in Synapse Spark Pool
 
 When you use Spark Tables in Synapse Spark Pool, the following folder structure will be created automatically by Synapse workspace in the root of the container in the workspace primary storage.  
 

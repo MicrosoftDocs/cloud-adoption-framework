@@ -48,13 +48,13 @@ Three [Azure Data Lake Storage Gen V2 (ADLS)](/azure/storage/blobs/data-lake-sto
 
 ### Upload Ingest Storage Service
 
-Third-party data publishers require the ability to land their data into the platform so domains can pull it into their Data Lakes. The Upload Ingest Storage resource group enables provisioning of blob stores for third-parties. As the provisioning of Azure Storage Blobs is on an as-needed basis, an empty storage service resource group will be deployed in each new Data Landing Zone.
+Third-party data publishers require the ability to land their data into the platform so Integration Ops teams can pull it into their Data Lakes. The Upload Ingest Storage resource group enables provisioning of blob stores for third-parties. As the provisioning of Azure Storage Blobs is on an as-needed basis, an empty storage service resource group will be deployed in each new Data Landing Zone.
 
 ![Upload Ingest Storage Service](./images/data-landing-zone-ingest-storage.png)
 
 *Figure 2: Upload Ingest Storage Service*
 
-These storage blobs are requested by the Domain Ops Teams and approved by the Data Landing Zone Ops Team.
+These storage blobs are requested by the Integration Ops Teams and approved by the Data Landing Zone Ops Team.
 
 Once the data has been pulled from the storage blobs into RAW, the data should be removed from the source storage blob.
 
@@ -71,7 +71,7 @@ Ingest and Processing will be deployed into a single resource group.
 
 *Figure 3: Data Landing Zone Ingest and Processing*
 
-The ingestion framework engine should copy data through the layers of the data lake service from source to Raw to Enriched to Curated.
+The ingestion framework engine should copy data through the layers of the data lake service from source to Raw to Enriched.
 
 As data sources are registered and integrated into respective data lakes using a repeatable and consistent framework, the data should be registered with Azure Purview for discovery.
 
@@ -82,11 +82,11 @@ If you have an ingestion framework engine, we recommend using Azure Data Factory
 
 #### Azure Databricks
 
-Azure Databricks should always deployed because it would be used by the Domains for ingestion, transformation, and loading of data. See the [Azure Databricks](#shared-azure-databricks) section for details of workspace deployments.
+Azure Databricks should always deployed because it would be used by Integration Ops teams for ingestion, transformation, and loading of data. See the [Azure Databricks](#shared-azure-databricks) section for details of workspace deployments.
 
 An Azure Databricks workspace is provisioned for Ingestion and Processing which will connect to Azure Data Lake via Azure Service Principals. These are referred to as **Azure Databricks Engineering Workspaces**.
 
-The Databricks workspaces are locked down to only allow deployment of notebooks or jars from the Domains Azure DevOps Repo via a Data Domains Service Principal.
+The Databricks workspaces are locked down to only allow deployment of notebooks or jars from the Data Integration Azure DevOps Repo via a Data Integrations Service Principal.
 
 #### Real-Time Streaming
 
@@ -100,7 +100,7 @@ Across the Data Landing Zone there is the requirement for a number of shared met
 
 Figure 4: Data Landing Zone Metadata Services
 
-If you have decided to develop your own ingestion framework engine based on the recommendations in the Enterprise Scale Analytics and AI ingestion flow, using either a PowerApp or a .Net Application, in the Data Management Landing Zone, we would suggest deploying an Azure SQL DB to hold metadata for Azure Data Factory to use. Having this custom application will speed up the onboarding of data sources, allowing teams to create new data sources for ingestion for landing into the Raw to Enriched to Curated in the Data Landing Zone data lakes.
+If you have decided to develop your own ingestion framework engine based on the recommendations in the Enterprise Scale Analytics and AI ingestion flow, using either a PowerApp or a .Net Application, in the Data Management Landing Zone, we would suggest deploying an Azure SQL DB to hold metadata for Azure Data Factory to use. Having this custom application will speed up the onboarding of data sources, allowing teams to create new data sources for ingestion for landing into the Raw to Enriched in the Data Landing Zone data lakes.
 
 A Self-Hosted Integration Runtime will be deployed for use with Azure Purview to scan data inside the Data Landing Zone. Although the DevOps CI/CD process will handle the registration of these runtimes into Azure Purview, we recommend understanding [Create and manage a self-hosted integration runtime](/azure/purview/manage-integration-runtimes).
 
@@ -159,15 +159,15 @@ The Enterprise Scale Analytics and AI solution pattern takes into account the fo
 
 **Azure Synapse** is the provisioned integrated analytics service that accelerates time to insight across data warehouses and big data systems. Azure Synapse brings together the best of **SQL** technologies used in enterprise data warehousing, **Spark** technologies used for big data, and **Pipelines** for data integration and ETL/ELT. **Synapse Studio** provides a unified experience for management, monitoring, coding and security. Synapse has deep integration with other Azure services such as **Power BI**, **CosmosDB** and **Azure Machine Learning**.
 
-During the initial setup of a Data Landing Zone a single Azure Synapse Analytics Workspace will be deployed to for use by all Domains. Additional ones can be optionally setup for Domains should costs management and recharge be required. Domain and Data Products teams might make use of Synapse Analytics for creating dedicated SQL Pools, as a Read Data Store, which is used by the visualization layer.
+During the initial setup of a Data Landing Zone a single Azure Synapse Analytics Workspace will be deployed to for use by all Data Analysts and Scientists. Additional ones can be optionally setup for Data Integrations and Data Products should costs management and recharge be required. Integration and Data Products teams might make use of Synapse Analytics for creating dedicated SQL Pools, as a read data store, which is used by the visualization layer.
 
-## Domain *X*
+## Data Integration *X*
 
-The Domain resource groups are provisioned for each domain added to a Data Landing Zone. Further reading on onboarding [Domains](data-landing-zone-domains.md) explains the process for creating the services and resource groups.
+The Data Integration resource groups are provisioned for each integration added to a Data Landing Zone. Further reading on onboarding [Data Integrations](data-landing-zone-data-integration.md) explains the process for creating the services and resource groups.
 
 ## Data Products
 
-A Data Landing Zone can have multiple data products which are created by ingesting data from domains either inside the same Data Landing Zone or from across multiple Data Landing Zones (subject to approval of the domain). The resource group for a data product includes all the service required to make that data product.
+A Data Landing Zone can have multiple data products which are created by ingesting data from Data Integrations read data stores or other Data Products either inside the same Data Landing Zone or from across multiple Data Landing Zones (subject to approval of the data steward). The resource group for a data product includes all the service required to make that data product.
 
 For example, there is a requirement to have an Azure Database for MySQL which is used by a visualization tool. The data must be ingested and transformed before landing into the MySQL database. To achieve this, you would deploy both an Azure Data Factory and Azure Database for MySQL into the Data Product Resource Group.
 

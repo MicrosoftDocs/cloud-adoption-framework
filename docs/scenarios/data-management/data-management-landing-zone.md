@@ -91,13 +91,13 @@ One of the primary features of a Data Catalog is the ability to show the lineage
 
 Enterprises are advised to continue with their current solution.
 
-In Enterprise Scale Analytics and AI Domains will become responsible for producing datasets that are consumed by other data [Products. Domain owners are responsible for the business-aligned key performance indicators (KPIs) and the service level objectives around consumption of their read data sources. Moving data quality to the domain aligns definition and measurement of quality with the teams that have the domain knowledge.
+In Enterprise Scale Analytics and AI Data Integrations will become responsible for producing datasets that are consumed by other data [Products. Integration Ops owners are responsible for the business-aligned key performance indicators (KPIs) and the service level objectives around consumption of their read data sources.
 
-Data quality should happen as close to the source as possible to avoid quality issues replicating across the analytics and AI estate. Moving quality metrics and validation to the domain aligns the quality process with the team(s) that are closest to the data and have the deepest understanding of the domain. Data lineage also provides data quality confidence and should be provided for all datasets and products.
+Data quality should happen as close to the source as possible to avoid quality issues replicating across the analytics and AI estate. Moving quality metrics and validation to the data integration aligns the quality process with the team(s) that are closest to the data and have the deepest understanding of the data asset. Data lineage also provides data quality confidence and should be provided for all datasets and products.
 
 See how data quality can be implemented in [Enforcing Data Quality](data-ingestion.md#enforcing-data-quality).
 
-## Data Modelling Repository
+## Data Modeling Repository
 
 Entity relationship models should be captured and stored in a central location which should reside in the Data Management Landing Zone. This gives consumers of the data a single place to go for conceptual diagrams.
 
@@ -119,7 +119,7 @@ Enterprises have typically invested several years into building out a Master Dat
 
 Using Azure Data Factory, you can pull current master data via the Master Data Management's API and join with the data to be enriches or curated.
 
-A number of Master Data Management solutions are fully integrated with Azure Active Directory, which allows you to secure the domains and provide different views for different user groups.
+A number of Master Data Management solutions are fully integrated with Azure Active Directory, which allows you to secure the data and provide different views for different user groups.
 
 ### Approaches
 
@@ -188,7 +188,7 @@ The Enterprise Scale Analytics and AI solution pattern creates three resource gr
 
 Typically, user interfaces would reside in the "governance" resource group. The application layer and database would reside in the "automation" and "automationdb" respectively.
 
-You could use these resource groups to host an application that creates data landing zones, domains, and data products. You could develop a logic application to capture feedback and route to the correct teams.
+You could use these resource groups to host an application that creates data landing zones, data integrations, and data products. You could develop a logic application to capture feedback and route to the correct teams.
 
 ### Ingestion Framework Engine User Interface
 

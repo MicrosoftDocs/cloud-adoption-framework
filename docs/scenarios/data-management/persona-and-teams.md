@@ -48,7 +48,8 @@ The Data Landing Zone Group consists of three teams.
 * They are responsible for delivering new Data Products such as insights, reports, notebooks, and applications.
 * They partner closely with business analysts and stakeholders.
 
-### Domain Ops (per Domain)
+
+### Integration Ops (per domain)
 
 * They ingest and register new data sources.
 * Manage access hierarchy (groups) and approval requests.
@@ -57,7 +58,7 @@ The Data Landing Zone Group consists of three teams.
 ### Data Landing Zone Ops (One Group per Data Landing Zone)
 
 * Operate and maintain their Data Landing Zone instance.
-* Respond to new Domain and Data Product service requests.
+* Respond to new Data Integration and Data Product service requests.
 
 ### Central or Business Data Office?
 
@@ -65,16 +66,16 @@ The Data Landing Zone Group can be resourced in different ways depending on the 
 
 For example, you create one data landing zone where the business already has it's own set of data engineers, program managers and solution architects. We will call this a business data office. In this scenario, you could decide to provision a data landing zone and allow the business data office to operate the landing zone, based upon the governance from your central platform group.
 
-In another example, the owning business of a data landing zone doesn't have a business data office to build out their domains or data products. In this scenario the central data office should consider themselves a consultancy who would take people off the bench to work on the data landing zone. Those resources should be embedded into the business to collect and execute on use cases in either a SCRUM or AGILE manner. Once completed they would return to the central data office.
+In another example, the owning business of a data landing zone doesn't have a business data office to build out their data integrations or data products. In this scenario the central data office should consider themselves a consultancy who would take people off the bench to work on the data landing zone. Those resources should be embedded into the business to collect and execute on use cases in either a SCRUM or AGILE manner. Once completed they would return to the central data office.
 
 >[!NOTE]
->In the core services pattern of one data landing zone, it is likely that you will mix businesses into one data landing zone. You might then end up with a crossover of functions where Domain Ops or Data Product teams could be resourced from central and business data offices. However, in this scenario we would recommend that the function of Data Landing Zone Ops is all located in the central data office.
+>In the core services pattern of one data landing zone, it is likely that you will mix businesses into one data landing zone. You might then end up with a crossover of functions where Integration Ops or Data Product teams could be resourced from central and business data offices. However, in this scenario we would recommend that the function of Data Landing Zone Ops is all located in the central data office.
 
 ## Platform Group Teams
 
 ### Data Platform Ops
 
-* The Data Platform Ops Group defines common policies for Data Landing Zone and Domain services.
+* The Data Platform Ops Group defines common policies for Data Landing Zone, Data Integration and Data Product services.
 * They provision and operate Data Management services such as the data catalog and shared integration runtimes.
 * They instantiate Data Landing Zone scaffolding such as Data Lakes and Metadata Management configuration before passing it over to the Data Landing Zone Ops.
 * Provide support and concierge to stakeholders.
@@ -102,7 +103,7 @@ The Data Governance Review Board is the body that governs your organization's da
 
 ### Architecture Review Board
 
-The Architecture Review Board performs the primary function of reviewing and assessing architectures and creating and maintaining standards and references. The Board consists of individuals who are experts in their field; typically, these will be the Domain architects and other technical leaders invited to give opinions where required.
+The Architecture Review Board performs the primary function of reviewing and assessing architectures and creating and maintaining standards and references. The Board consists of individuals who are experts in their field; typically, these will be the domain architects and other technical leaders invited to give opinions where required.
 
 ### Feedback and Support Operating Board
 
