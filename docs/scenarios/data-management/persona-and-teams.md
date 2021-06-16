@@ -48,7 +48,8 @@ The Data Landing Zone Group consists of three teams.
 * They are responsible for delivering new Data Products such as insights, reports, notebooks, and applications.
 * They partner closely with business analysts and stakeholders.
 
-### Integration Ops (per integration)
+
+### Integration Ops (per domain)
 
 * They ingest and register new data sources.
 * Manage access hierarchy (groups) and approval requests.

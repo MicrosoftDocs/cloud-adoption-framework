@@ -27,7 +27,7 @@ Table 1, summarizes the teams involved in an Enterprise Scale Analytics and AI d
 |Cloud Platform Ops| The Azure Cloud Platform team in your organization| One for the whole Azure platform |
 |Data Platform Ops|In charge of creating and maintaining ARM template repositories for the different levels of the Enterprise Scale Analytics and AI. Also maintains the Data Management Landing Zone and supports other ops teams in case of deployment issues or required enhancements.| One for the Enterprise Scale Analytics and AI |
 |Data Landing Zone Ops |In charge of deploying and maintaining a specific Data Landing Zone. Also, supports the deployment and enhancement of Data Integrations and Data Products. | One team per Data Landing Zone |
-|Integration Ops|In charge of Data Integration deployment and updates| One team per integration |
+|Integration Ops|In charge of Data Integration deployment and updates| One team per domain |
 |Data Product Team|In charge of Data Products deployment and updates| One team per Data Product |
 
 Table 1: Enterprise Scale Analytic and AI Teams

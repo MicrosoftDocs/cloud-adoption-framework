@@ -24,7 +24,7 @@ There are multiple services that support DaR encryption, including Storage Accou
 
 ## Networking
 
-The Enterprise Scale Analytics and AI prescribed view is to use Private Endpoints for all PaaS services and no public IPs for any IaaS (Infrastructure-as-a-Service). See [Enterprise Scale Analytics and AI Networking](./network-topology-and-connectivity.md).
+The Enterprise Scale Analytics and AI prescribed view is to use Private Endpoints for all PaaS services and no public IPs for any IaaS (Infrastructure-as-a-Service). See [Enterprise Scale Analytics and AI Networking](./eslz-network-topology-and-connectivity.md).
 
 ## Azure Defender
 
@@ -226,7 +226,7 @@ It is recommended that Azure AD groups are used to secure database objects inste
 
 When deploying an Azure Synapse workspace, a Data Lake Storage Gen 2 account is required from the subscription or manually using the storage account URL. The specified storage account will be set as **primary** for the deployed Azure Synapse workspace to store its data. Azure Synapse stores data in a container, that includes Apache Spark tables, spark application logs under a folder called /synapse/{workspacename}. It also uses container for managing libraries that you choose to install.
 
-During the Synapse workspace deployment through [Azure Portal](https://azure.microsoft.com/en-us/features/azure-portal/), you have the option to either provide an existing storage account or create a new one. The provided storage account will be set as the **primary storage account** for the Synapse workspace.
+During the Synapse workspace deployment through [Azure Portal](/features/azure-portal/), you have the option to either provide an existing storage account or create a new one. The provided storage account will be set as the **primary storage account** for the Synapse workspace.
 
 For any of the two options selected, the deployment process automatically grants the Synapse workspace identity, access to the specified Data Lake Storage Gen2 account, using the **Storage Blob Data Contributor** role.
 
@@ -287,7 +287,7 @@ Follow the steps below to get started.
 
 After adding the group. Select the group added in the previous step. **In Permission for:** check the option **Access**, followed by **Read** and **Execute** options on the right-hand side.
 
-As per [ADLS Best Practices](/en-us/azure/storage/blobs/data-lake-storage-best-practices#use-security-groups-versus-individual-users), it is strongly recommended to assign **Azure Active Directory security groups** instead of assigning individual users to directories and files. Using Security Groups, adding or removing users from the group does not requires updates to ADLS, consequently reduces the chance of exceeding the 32 access control entries per file or folder ACL.
+As per [ADLS Best Practices](/azure/storage/blobs/data-lake-storage-best-practices#use-security-groups-versus-individual-users), it is strongly recommended to assign **Azure Active Directory security groups** instead of assigning individual users to directories and files. Using Security Groups, adding or removing users from the group does not requires updates to ADLS, consequently reduces the chance of exceeding the 32 access control entries per file or folder ACL.
 
 It is important to pay attention to the informative message **"Read and Write permissions will only work for an entity if the entity also has execute permissions on all parent directories, including the container (root directory)"** It means that you will also need to grant **Execute** permission on all parent folders, including the container which is the root directory, when granting read or write in a sub directory. Consider using the [nested ACL group approaches](#nested-acl-group-approaches) or the **Default**  option to grant **Execute** permission automatic on parent folders.
 
@@ -325,7 +325,7 @@ To propagate ACL permissions, right-click on the parent folder you desire to pro
 
 In Propagate Access Control Lists, choose How to handle failures depending on the desired behavior you want in case of failures. You can choose from the two options: **Continue on Failure** or **Quit on failure.**
 
-Check the box I understand that propagating ACLs cannot be easily reversable and click OK.
+Check the box I understand that propagating ACLs cannot be easily reversible and click OK.
 
 ![Propagate ACL permissions - 2](./images/acl-propagate-two.png)
 
