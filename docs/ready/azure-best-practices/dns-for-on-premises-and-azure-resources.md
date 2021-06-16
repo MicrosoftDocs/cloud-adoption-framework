@@ -24,7 +24,7 @@ Domain Name System (DNS) is a critical design topic in the overall enterprise-sc
 
 - The maximum number of private DNS zones to which a virtual network can link with auto-registration is one.
 
-- Familiarize with [Azure Private DNS zone limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#azure-dns-limits)
+- Familiarize yourself with [Azure Private DNS zone limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#azure-dns-limits).
 
 **Design recommendations:**
 
@@ -32,7 +32,7 @@ Domain Name System (DNS) is a critical design topic in the overall enterprise-sc
 
 - For environments where name resolution across Azure and on-premises is required, use existing DNS infrastructure (for example, Active Directory integrated DNS) deployed onto at least two virtual machines (VMs). Configure DNS settings in virtual networks to use those DNS servers.
 
-- For environment with Azure Firewall, evaluate using it as [DNS proxy](/azure/firewall/dns-settings)
+- For environments with Azure Firewall, evaluate using it as [DNS proxy](/azure/firewall/dns-settings).
 
 - Use a virtual machine as a resolver for cross-premises DNS resolution with Azure Private DNS.
 
