@@ -17,7 +17,7 @@ As retail companies address larger and more sophisticated forms of cloud adoptio
 
 This scenario is designed to guide a retail company's cloud adoption journey from beginning to end.
 
-![Graphic of the hybrid multicloud approach](../../_images/hybrid/hybrid-multicloud-approach.png)
+![Overview graphic for complete scenario guidance](./media/scenario-guidance-overview.png)
 
 Use the following information to guide you on your journey:
 
