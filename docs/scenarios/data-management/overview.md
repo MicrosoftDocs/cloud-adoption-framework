@@ -64,7 +64,7 @@ The **Data Management Landing Zone**, which is a subscription, is responsible fo
 
 For further reading, see [Data Management Landing Zone](data-management-landing-zone.md).
 
-The **Data Landing Zone(s)**, on the other hand, are subscriptions which may host multiple analytics and AI solutions relevant to their respective business domain. These subscriptions within the Enterprise Scale Analytics and AI solution pattern represent primary business groups, integrators, and enablers as these groups own, operate, and often provide innate understanding for the source systems. A few important points to keep in mind about Data Landing Zones:
+The **Data Landing Zone(s)**, on the other hand, are subscriptions which may host multiple analytics and AI solutions relevant to their respective  domain. These subscriptions within the Enterprise Scale Analytics and AI solution pattern represent primary business groups, integrators, and enablers as these groups own, operate, and often provide innate understanding for the source systems. A few important points to keep in mind about Data Landing Zones:
 
 - Ingestion capabilities exist in each Data Landing Zone to allow subject matter experts to pull in data sources from third-party clouds or on-premises environments if they wish to do so.
 - Data Landing Zone are instantiated based on the Data Landing Zone core architecture, including all key capabilities to host an analytics platform.

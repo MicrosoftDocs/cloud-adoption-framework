@@ -11,40 +11,55 @@ ms.subservice: ready
 
 # Data Landing Zone Division and Consumption
 
-If the enterprise has settled on implementing a harmonized mesh, they should give consideration on how they wish to separate the Data Landing Zones into business groups, integrators, and enablers. If they are going for a core service provider pattern, they should consider the [domains](#domain-division) which they will need to provision.
+Enterprise Scale Analytics and AI can be deployed with a single or multiple data landing zone.
 
-Data Landing Zones can be added and removed over time subject to business acquisitions and divestments. Consumption of data has some input into the division of Data Landing Zones. If a Data Landing Zone constantly accesses a high percentage of data from another Data Landing Zone, there might be a case to consolidate Data Landing Zones.
+If you have hundreds of data engineers and very large domains then it will make sense to have multiple landing zones. Multiple landing zone subscriptions should be used as a unit of management and scale aligned with business needs and priorities to support business areas and portfolio owners to accelerate development.
+
+If you are a smaller organization and are never likely to hit the limits of an Azure subscription then you may wish to look at deploying a single landing zone.
+
+Limits which should consider when deciding on single v multiple are:
+
+* [Azure Data Factory Limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#data-factory-limits)
+* [Data Lake Gen 2 Limits](/azure/storage/common/scalability-targets-standard-account?toc=/azure/storage/blobs/toc.json#scale-targets-for-standard-storage-accounts)
+* [Azure RBAC Limit](/azure/azure-resource-manager/management/azure-subscription-service-limits#azure-rbac-limits)
+
+Data Landing Zones can be added and removed over time subject to business acquisitions and divestment's.
 
 ## Principals for Data Landing Zone
 
-Contoso has identified the following business units to onboard to their Enterprise Scale Analytics and AI solution:
+If you wish to follow a multi landing zone pattern (our recommended path for large domains) this section gives recommendation on how to approach this separation.
+
+For example, Contoso has identified the following business units to onboard to their Enterprise Scale Analytics and AI solution:
 
 ![Contoso Business Units](./images/contoso-business-unit.png)
 
 Figure 1: Contoso Business Units
 
-- Customer Support
-- Sales and Marketing
-- Human Resources
-- Finance
-- Legal
-- IT
+* Human Resources
+* Finance
+* Legal
+* IT
+* Customer Support
+* Sales and Marketing
 
-Using the concepts of a [Domain-driven design (DDD)](/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/ddd-oriented-microservice), we can apply this to designing our Data Landing Zones using **data** Domain-driven design. This method advocates modeling based on the reality of the business and it is relevance to your use cases.  We focus first on the Domains residing within the business unit and then by any additional Sub-Domain(s).
+Looking at the previous list of Contoso business units, we should see if there are cases where:
+
+* Data would be highly shared between business units
+* Data ownership goes across multiple business units
+* Business units which span multiple regions and have requirements to keep certain data within a region.
+* How cost ownership is typically driven by where businesses sit within the enterprise organization.
+* Data programs and projects which can be realized via common services within the Data Landing Zone or as a data product extension. They should not warrant the instantiation of a new Data Landing Zone.
+
+### Landing Zone Division
+
+In our example, Human Resources, Finance, Legal, and the CEO business units use a common set of data and many of the Domains overlap. They could be put into a Corp Data Landing Zone with the Domains being split into Human Resources, Finance, Legal, and IT.
 
 >[!NOTE]
 >Domain separation allows you to separate data, processing, and tasks into logical groupings called Domains.
 
-Looking at the previous list of Contoso business units, we should see if there are cases where:
-
-- Data would be highly shared between business units
-- Data ownership goes across multiple business units
-
-In our example, Human Resources, Finance, Legal, and the CEO business units use a common set of data and many of the Domains overlap. They could be put into a Corp Data Landing Zone with the Domains being split into Human Resources, Finance, Legal, and IT.
-
 The other units are unlikely to have a high amount of data re-usage as they are very different business units and have vastly different Domains. From initial discussions with the business units, we have discovered the following Domains:
 
-| Business Unit       | Domains                              |
+| Data Landing Zone   | Domains                              |
 |---------------------|--------------------------------------|
 | Customer Support    | - Support <br /> - Feedback          |
 | Sales and Marketing | - Sales <br /> - Marketing           |
@@ -54,23 +69,12 @@ The difference of Domains would lead to us to create two Data Landing Zones with
 > [!TIP]
 >You should have an understanding of the amount of crossover of data requirements for each business unit. The higher the amount of data crossover then the more likely the business units should sit in the same Data Landing Zone.
 
-### Domain Division
-
-Having decided upon the number of Data Landing Zones, the business should work to split out the Domains into sub-Domains and delegate responsibility to those Domains for ingesting into the Enterprise Scale Analytics and AI solution pattern.
-
 ![Contoso Customer Support Domains](./images/contoso-business-unit-sub-domains.png)
 
 Figure 2: Contoso Customer Support Domains
 
 In the worked example, for our Customer Support business unit, we have identified a natural grouping for sub-Domains under the Support and Feedback Domains.
 
-## Other Inputs
-
-Other factors which can affect the number of Data Landing Zones required include:
-
-- Business units which span multiple regions and have requirements to keep certain data within a region.
-- How cost ownership is typically driven by where businesses sit within the enterprise organization.
-- Data programs and projects which can be realized via common services within the Data Landing Zone or as a data product extension. They should not warrant the instantiation of a new Data Landing Zone.
 
 ## Inter-Data Landing Zone Consumption
 
