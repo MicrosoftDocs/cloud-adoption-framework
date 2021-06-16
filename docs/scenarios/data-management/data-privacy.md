@@ -13,14 +13,14 @@ ms.subservice: ready
 
 The Enterprise Scale Analytics and AI solution pattern addresses PII (Personally Identifiable information) at multiple layers, whilst leaving it to the business to decide upon the best pattern to suit its requirements. Personally Identifiable Information (PII), is any data that can be used used to identify individuals, such as names, driver's license numbers, SSNs, bank account numbers, passport numbers, or email addresses. Many regulations from GDPR to HIPPA require strict protection of user privacy.
 
-Before Domains ingest data into the solution pattern, they must be able to classify the data as non-sensitive or sensitive.
+Before Data Integration ingests data into the solution pattern, they must be able to classify the data as non-sensitive or sensitive.
 
 * Data may be considered non-sensitive if we give a user access to the data asset in the Enriched or Curated, we are happy for them to see all the rows and columns.
 * Data might be deemed sensitive if we wish to restrict the columns and rows that different users can see.
 
 ## Non-Sensitive
 
-For every domain which is on-boarded we create two data lake folders for each data lake layer (Non-Sensitive and Sensitive) and enable Azure AD Pass-through with ACLs. If a domain onboards a data asset which is non-sensitive then Users Principal Names (UPNs) and Service Principal objects can be added to two Azure AD Groups (one for read/write and the other for read-only). There two Azure AD groups are created as part of the onboarding process and assigned to the data asset folder the domains non-sensitive containers for RAW, Enriched and Curated.
+For every Data Integration which is on-boarded we create two data lake folders for each data lake layer (Non-Sensitive and Sensitive) and enable Azure AD Pass-through with ACLs. If Integration Ops onboards a data asset which is non-sensitive then Users Principal Names (UPNs) and Service Principal objects can be added to two Azure AD Groups (one for read/write and the other for read-only). There two Azure AD groups are created as part of the onboarding process and assigned to the data asset folder the Data Integrations non-sensitive containers for RAW and Enriched.
 
 This pattern enables any compute product which supports Azure AD Passthrough to connect to the data lake, authenticate with the user logged in, and, if the user is part of the data asset's Azure AD Group, access the data via Azure AD Passthrough. This would allow those inside the group to read all of the data asset without any policy filtering. Access can then be audited in detail in the appropriate logs as well as the Microsoft Graph.
 
@@ -37,13 +37,13 @@ Within the Enterprise Scale Analytics and AI solution pattern, there are three o
 
 Using the following example, we are able to explore options for securing sensitive data.
 
-A domain ingests a Human Resources Personnel data asset for North America and Europe. The use case calls for European users to see only European personnel records and North American users to see only North American personnel records. This is further restricted such that only HR Managers can see columns containing salary data.
+A Data Integration ingests a Human Resources Personnel data asset for North America and Europe. The use case calls for European users to see only European personnel records and North American users to see only North American personnel records. This is further restricted such that only HR Managers can see columns containing salary data.
 
 #### Option One - Azure SQL Database, Managed Instance or Azure Synapse Analytics SQL Pools
 
-Using either Azure SQL Database, SQL Managed Instance, or Azure Synapse Analytics SQL Pools, the domains load the data asset into a database which supports Row-Level Security, Column-Level Security, and Dynamic Data Masking. The domains create different Azure AD Groups and assign permissions which align to the sensitivity of data.
+Using either Azure SQL Database, SQL Managed Instance, or Azure Synapse Analytics SQL Pools, the data integrations loads the data asset into a database which supports Row-Level Security, Column-Level Security, and Dynamic Data Masking. Integration Ops create different Azure AD Groups and assign permissions which align to the sensitivity of data.
 
-In the scenario use case, the domain would need to create four Azure AD Groups for read-only access:
+In the scenario use case, Integration Ops would need to create four Azure AD Groups for read-only access:
 
 | Group | Permission|
 |--|--|
@@ -124,7 +124,7 @@ As new datasets are deployed, part of the DevOps process would need to run scrip
 
 #### Option 3 - Policy Engine
 
-Whilst option 1 and 2 provide a way to handle sensitive data, they place a lot of control into the Domain and Data Products team to identify and restrict access.
+Whilst option 1 and 2 provide a way to handle sensitive data, they place a lot of control into the Integrations Ops and Data Products teams to identify and restrict access.
 
 For a small-scale analytics platform, this might just be enough. However a large enterprise with hundreds of datasets, a policy engine should be placed in the Data Management Landing Zone.
 
@@ -148,7 +148,7 @@ The expectation of any policy solution providing Data Privacy is to tokenize sen
 
 As mentioned, for a policy engine to succeed it is important that there is an integration into the Data Catalog and a REST API which can be used by the DevOps process when onboarding a new dataset.
 
-As Domains and Data Products create read data sources, they would be registered in the Data Catalog, which would help identify sensitive data. The policy engine should import this definition and deny any access to this data until the domain has set up its access policies. All of this should be done via a REST API workflow from the IT Service Management solution.
+As Data Integrations and Data Products create read data sources, they would be registered in the Data Catalog, which would help identify sensitive data. The policy engine should import this definition and deny any access to this data until the teams have set up its access policies. All of this should be done via a REST API workflow from the IT Service Management solution.
 
 ## Highly Confidential Data
 

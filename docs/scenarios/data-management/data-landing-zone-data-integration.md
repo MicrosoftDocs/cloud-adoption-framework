@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Data Integrations
 
-Previously, we explained the role of Integrations Ops under [Enterprise Scale Analytics and AI Teams](persona-and-teams.md#domain-ops-per-Integration).
+Previously, we explained the role of Integrations Ops under [Enterprise Scale Analytics and AI Teams](persona-and-teams.md#integration-ops-per-Integration).
 
 This section explains the infrastructure which is deployed for each Integration inside a Data Landing Zone.
 
@@ -24,7 +24,7 @@ This section explains the infrastructure which is deployed for each Integration 
 For each Integration in a Data Landing Zone, we will create:
 
 * An Azure Key Vault.
-* An Azure Data Factory for running developed engineering pipelines to transform from Raw to Enriched to Curated.
+* An Azure Data Factory for running developed engineering pipelines to transform from Raw to Enriched.
 * A Integration security user group which we use to give access to the Azure Databricks Analytics and Data Science workspace.
 * A Service Principal which is used by the Integration for deploying ingest jobs to the Azure Databricks Engineering workspace.
 
@@ -46,7 +46,7 @@ Each Data Landing Zone will have an Azure Key Vault per Integration. This functi
 
 ## Azure Data Factory
 
-An Azure Data Factory will be deployed to allow pipelines written by the Integration Ops team to take data from Raw to Enriched to Curated using developed pipelines. We prescribe using Mapping Data Flows for transformations and breaking out to use **Azure Databricks Engineering Workspace** for complex transformations.
+An Azure Data Factory will be deployed to allow pipelines written by the Integration Ops team to take data from Raw to Enriched using developed pipelines. We prescribe using Mapping Data Flows for transformations and breaking out to use **Azure Databricks Engineering Workspace** for complex transformations.
 
 ## Event Hubs (Optional)
 

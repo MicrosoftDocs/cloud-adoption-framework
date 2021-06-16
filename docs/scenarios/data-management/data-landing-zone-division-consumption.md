@@ -80,7 +80,7 @@ In a harmonized mesh pattern, data assets ingested by one Data Landing Zone can 
 
 The illustration above shows how data assets can be shared in-place between Data Landing Zones subject to the consumer/user being part of the correct "data-asset-security-group". Data assets are registered in the data catalog, for users to discover.
 
-- Users can request access to the particular security group, approved by the Domain Ops team responsible for the data asset.
+- Users can request access to the particular security group, approved by the Integration Ops team responsible for the data asset.
 
 - Users in one Data Landing Zone should be able query data from another Data Landing Zone in Synapse or Databricks leveraging credential passthrough and/or Databricks Table Access Control.
 

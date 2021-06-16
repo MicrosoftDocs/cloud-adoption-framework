@@ -42,4 +42,4 @@ In addition to the template, a process needs to be built in order to give the da
 
 ## Different AI Services
 
- Regarding different AI services such as Cognitive Services, it is highly recommended deploying these services on a project basis, which means deployment per data product or data domain resource group. This creates a clear separation from a data access standpoint and mitigates the risk of unauthorized data access by wrong teams.
+ Regarding different AI services such as Cognitive Services, it is highly recommended deploying these services on a project basis, which means deployment per data product resource group. This creates a clear separation from a data access standpoint and mitigates the risk of unauthorized data access by wrong teams.

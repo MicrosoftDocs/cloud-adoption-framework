@@ -45,7 +45,7 @@ Examples of data products include:
     >[!IMPORTANT]
     >To drive consistency we recommend configuring an Azure Policy per Data Product.
 
-3. Consume data from many places: Data products manage, organize, and make sense of the data across domains and present the insights gained from the data products. A data product is a result of data from one or many data domains and/or other data products.
+3. Consume data from many places: Data products manage, organize, and make sense of the data across data assets and present the insights gained from the data products. A data product is a result of data from one or many data integrations and/or other data products.
 
 4. Scale as needed: Services that make up a data product are considered an incremental deployment to the Data Landing Zone.
 
@@ -86,7 +86,7 @@ As Mortgage is consuming the Customer Interaction, we would want to make sure th
 
 Figure 3: Define Data Product Architecture Detail
 
-Figure 3, shows the next stage of defining a data product depending on the data product usage. For example, Credit Monitoring consumes data from a Read Data Store that has been ingested by the Domains Ops team and produces data assets for two other data products.
+Figure 3, shows the next stage of defining a data product depending on the data product usage. For example, Credit Monitoring consumes data from a Read Data Store that has been ingested by the Integration Ops team and produces data assets for two other data products.
 
 >[!Note]
 >A Read Data Source is also known as Golden Record Source, has been cleaned and hasn't had any transformation applied.
@@ -103,7 +103,7 @@ The Loan Approval Product team take a dependency on some of the Credit Monitorin
 
 Figure 4: Cross Data Landing Zone Data Products
 
-Figure 4, illustrates how a Data Product is created if you have deployed multiple Data Landing Zone subscriptions. It shows how a Data Landing Zone hosts multiple data domains and data products. A Domain logical boundary is driven by data ownership and knowledge. A Data Product is created by ingesting data from Domains or Data Products either inside the same Data Landing Zone or from across multiple Data Landing Zones subject to approval of the Domain.
+Figure 4, illustrates how a Data Product is created if you have deployed multiple Data Landing Zone subscriptions. It shows how a Data Landing Zone hosts multiple data integrations and data products. A Data Integration is a logical boundary which driven by data ownership and knowledge. A Data Product is created by ingesting data from Data Integrations or Data Products either inside the same Data Landing Zone or from across multiple Data Landing Zones subject to approval of the Integration Ops.
 
 ## Analytic product decision tree
 
@@ -155,7 +155,7 @@ For every Data Landing Zone, an empty Visualization Resource Group is created. V
 >[!NOTE]
 >Licensing costs might mean that is it more economical to deploy third-party products such as Spotfire and Tableau into the Data Management Landing Zone and for the products to connect across to the Data Landing Zone to pull data back.
 
-Whilst an initial Reporting and Visualization Resource Group would be deployed for a new Data Landing Zone, Data Products might require their own Reporting and Visualization Resource Group due to security boundaries or a requirement to cross-charge the Domain for usage. However, it is important to remember that using Azure Active Directory Passthrough authentication from services such as Power BI and Azure Analysis Services often reduces the need for a separated security boundary.
+Whilst an initial Reporting and Visualization Resource Group would be deployed for a new Data Landing Zone, Data Products might require their own Reporting and Visualization Resource Group due to security boundaries or a requirement to cross-charge for usage. However, it is important to remember that using Azure Active Directory Passthrough authentication from services such as Power BI and Azure Analysis Services often reduces the need for a separated security boundary.
 
 Power BI is the strategic visualization tool for self-service analytics and for citizen data scientists. Our recommendation is to use the current well-established processes for data refresh scheduling, security, compliance, and data confidentiality handling.
 

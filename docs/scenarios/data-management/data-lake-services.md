@@ -25,8 +25,6 @@ The three Data Lakes accounts should align to the typical layers within a data l
 
 There should be a single container per data lake layer. The exception to this recommendation would be be where immutable or different soft delete policies are required for the data held in the container. These requirements would drive additional containers.
 
-The folders within the containers lakes should be aligned to **Domains**, **Sub-Domains**, and **Data Products** to enable data exploration via an enterprise team's structure.
-
 The services should be enabled with the "Hierarchical Name Space" feature to allow efficient file management. [The hierarchical name space feature](/azure/storage/blobs/data-lake-storage-namespace) allows the collection of objects/files within an account to be organized into a hierarchy of directories and nested subdirectories in the same way that the file system on your computer is organized.
 
 >[!IMPORTANT]
@@ -39,12 +37,12 @@ Azure Data Lake Storage provides:
 
 Whilst the data lake sits across three data lake accounts, multiple containers, and folders, it represents one logical data lake for the Data Landing Zone. Provisioning three data lake accounts allows you to set different redundancy, retention, and access policies for each lake account. For example you might want your RAW data to be geo-redundant whereas Workspace is used for data exploration and requires locally redundant disaster recovery.
 
-Each **Domain** should have two folders on each data lake over which they should have ownership, following best practices for each data lake layer.
+Each **Data Integration** should have two folders on each data lake over which they should have ownership, following best practices for each data lake layer.
 
-The two folders per **Domain** should be divided by classification (non-sensitive and sensitive) with access controlled by ACLs.
+The two folders per **Data Integration** should be divided by classification (non-sensitive and sensitive) with access controlled by ACLs.
 
 >[!IMPORTANT]
->Access to the data is restricted by a combination of ACLs and AAD-groups. These control what can and cannot be accessed by other groups. **Domain teams** should approve or reject access to their data assets.
+>Access to the data is restricted by a combination of ACLs and AAD-groups. These control what can and cannot be accessed by other groups. **Integration Ops teams** should approve or reject access to their data assets.
 
 ## Data Lake Layers
 
@@ -52,22 +50,25 @@ With three data lake accounts in use, it is important to understand the context 
 
 ### Raw Data (Data Lake One)
 
-Raw Data from source systems for each **Domain** will land into either the non-sensitive or sensitive folder for each **Domain** on Data Lake One.
+Raw Data from source systems for each **Data Integration** will land into either the non-sensitive or sensitive folder for each **Data Integration** on Data Lake One.
 
 ### RAW Directory Layout
 
 ```markdown
 .
-|-Domain
-|-Domain
-|--Transactional
-|---Subdomain/Dataset
-|----Entity
-|-----LoadTS=YYMMDDHHMMSS
+|-General
+|--Source
+|--Source
+|---Entity
+|---LoadTS=YYMMDDHHMSS
 |       file001.parquet
 |       file001.parquet
-|--Master Data
-|----Subdomain/Dataset
+|-Sensitive
+|--Source
+|---Entity
+|---LoadTS=YYMMDDHHMSS
+|       file001.parquet
+|       file001.parquet
 ```
 
 This data is stored as-is in the data lake and is consumed by an analytics engine such as Spark to perform cleansing and enrichment operations to generate the curated data.
@@ -83,27 +84,28 @@ Depending on the retention policies of your enterprise, this data is either stor
 
 ### Enriched Data (Data Lake Two)
 
-Enriched data is the version where raw data (as-is or aggregated) has a defined schema, has been cleansed, and is available to analytics engines to extract high-value data. It will follow the same hierarchial directory structure as the raw layer and resides in either the non-sensitive or sensitive folder for **Domain** on Data Lake Two.
+Enriched data is the version where raw data (as-is or aggregated) has a defined schema, has been cleansed, and is available to analytics engines to extract high-value data. It will follow the same hierarchial directory structure as the raw layer and resides in either the non-sensitive or sensitive folder for **Data Integration** on Data Lake Two.
 
 #### Enriched Directory Layout
 
 ```markdown
+Enriched Directory Layout
 .
-|-Domain
-|-Domain
+|-Data Integration
+|-Data Integration
 |--Transactional
 |---Non-Sensitive
-|----Subdomain/Dataset
+|----Dataset
 |-----Entity
 |------LoadTS=YYMMDDHHMMSS
 |        file001.parquet
 |        file001.parquet
 |---Sensitive
-|----Subdomain/Dataset
+|----Dataset
 |-----Entity
 |------LoadTS=YYMMDDHHMMSS
 |--Master Data
-|----Subdomain/Dataset
+|----Dataset
 ```
 
 >[!NOTE]
@@ -111,37 +113,37 @@ Enriched data is the version where raw data (as-is or aggregated) has a defined 
 
 ### Curated Data (Data Lake Two)
 
-Data is taken from the golden layer, in Enriched Data, and transformed into high-value **Domain** or **Data Products** that is served to the consumers of the data (BI analysts and the data scientists). This data has structure and can be served to the consumers either as-is (*e.g.* data science notebooks) or through another read data store such as Azure Database for SQL.
+Data is taken from the golden layer, in Enriched Data, and transformed into high-value **Data Products** that is served to the consumers of the data (BI analysts and the data scientists). This data has structure and can be served to the consumers either as-is (*e.g.* data science notebooks) or through another read data store such as Azure Database for SQL.
 
 #### Curated Directory Layout
 
 ```markdown
 .
-|-Domain
-|-Domain
+|-Data Product
+|-Data Product
 |--Transactional
 |---Non-Sensitive
-|----Subdomain/Dataset
+|----Dataset
 |-----Entity
 |------LoadTS=YYMMDDHHMMSS
 |        file001.parquet
 |        file001.parquet
 |---Sensitive
-|----Subdomain/Dataset
+|----Dataset
 |-----Entity
 |------LoadTS=YYMMDDHHMMSS
 |--Master Data
-|----Subdomain/Dataset
+|----Dataset
 ```
 
 >[!TIP]
 >In the case where a decision is made to land the data into another read data store such as Azure Database for SQL, as a high speed serving layer, we would recommend having a copy of the data residing in the curated data. Although users of the **data product** will be guided to the main read data store (Azure Database for SQL), it will allow them to do further data exploration in a wider set of tools if the data is also available in the data lake.
 
-Data assets in this layer should be highly governed and well documented. For example, high-quality sales data might be data in the enriched data zone correlated with other demand forecasting signals such as social media trending patterns for a **Domain** that is used for predictive analytics on determining the sales projections for the next fiscal year.
+Data assets in this layer should be highly governed and well documented. For example, high-quality sales data might be data in the enriched data zone correlated with other demand forecasting signals such as social media trending patterns for a **Data Integration** that is used for predictive analytics on determining the sales projections for the next fiscal year.
 
 ### Workspace Data (Data Lake Three)
 
-In addition to the data that is ingested by the **Domain** team from the source, the consumers of the data can also choose to bring other useful datasets.
+In addition to the data that is ingested by the **Data Integration** team from the source, the consumers of the data can also choose to bring other useful datasets.
 
 In this case, the data platform should allocate a workspace for these consumers so they can use the curated data along with the other datasets they bring to generate valuable insights. For example, if a Data Science team is trying to determine the product placement strategy for a new region, they could bring other datasets such as customer demographics and usage data of similar products from that region. These high-value sales insights data could be used to analyze the product market fit and the offering strategy.
 
@@ -178,13 +180,15 @@ When landing data into a data lake, it is important to pre-plan the structure of
 
 |Raw data |Enriched data |Curated data| Workspace data|
 |---------|---------|---------|---------|
-|Domains | Domains | Domains | Data Products, Data Scientists and BI Analysts|
+
+|Data Integration(s) | Data Integration(s) | Data Products(s) | Data Products, Data Scientists and BI Analysts|
 
 ### Read data
 
 |Raw data |Enriched data |Curated data| Workspace data|
 |---------|---------|---------|---------|
-| Domains | Domain and read access for others based on approval of Domain owner | Data Products, Analysts, Data Scientists, and Users | Data Scientists and Analysts|
+
+| Data Integration | Data Integration and read access for others based on approval of Data Integration owner | Data Products, Analysts, Data Scientists, and Users | Data Scientists and Analysts|
 
 ### Data Lifecycle Management
 
@@ -196,7 +200,8 @@ When landing data into a data lake, it is important to pre-plan the structure of
 
 |Raw data |Enriched data |Curated data| Workspace data|
 |---------|---------|---------|---------|
-|Folder structure to mirror Domain followed by source. | Folder structure to mirror Domain followed by sub-Domain | Folder structure mirrors data product structure |Folder structures mirror teams that the workspace is used by.|
+
+|Folder structure to mirror sensitivity followed by source. | Folder structure to mirror data integration followed by data asset | Folder structure mirrors data product structure |Folder structures mirror teams that the workspace is used by.|
 
 >[!WARNING]
 >Because some products do not support mounting the root of a data lake container, each data lake container in Raw, Curated and Enriched, and Workspace should have a single folder before branching off to multiple folders. The folder permissions should be carefully set up as during the creation of a new folder, from the root, the default ACL on the parent directory determines a child directory's default ACL and access ACL; a child file's access ACL (files do not have a default ACL). See [Access control lists (ACLs) in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-access-control).

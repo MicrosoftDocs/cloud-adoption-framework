@@ -82,8 +82,8 @@ items:
       items:
       - name: Overview
         href: data-landing-zone.md
-      - name: Data Domains
-        href: data-landing-zone-domains.md
+      - name: Data Integrations
+        href: data-landing-zone-data-integration.md
       - name: Data Products
         href: data-landing-zone-data-products.md
       - name: Frequently Asked Questions

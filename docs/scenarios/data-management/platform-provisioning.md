@@ -24,14 +24,14 @@ Design considerations:
 ![Enterprise Scale Data Management and Single Data Landing Zone](./images/high-level-design-core-services.png)
 *Figure 1: Enterprise Scale Data Management with a single Data Landing Zone*
 
-Figure 1 gives an overview of an Enterprise Scale Analytics and AI platform with a central Data Management Landing Zone and a **single** spoke (i.e., the Data Landing Zone). For many environments this approach of deploying a central hub with a single spoke will be the starting point. An advantage of starting with this approach is that it allows you to conform to the principles of Enterprise Scale Analytics and AI whilst giving you the option to add additional Data Landing Zones at a later stage as needed. This is close to a core service provider pattern which builds out common core services with flexibility to bolt on domain specific customizations.
+Figure 1 gives an overview of an Enterprise Scale Analytics and AI platform with a central Data Management Landing Zone and a **single** spoke (i.e., the Data Landing Zone). For many environments this approach of deploying a central hub with a single spoke will be the starting point. An advantage of starting with this approach is that it allows you to conform to the principles of Enterprise Scale Analytics and AI whilst giving you the option to add additional Data Landing Zones at a later stage as needed. This pattern builds out common core services with flexibility to bolt on specific customizations.
 
-## Starting with Multiple Data Landing Zones
+## Starting with multiple Data Landing Zones
 
 ![Enterprise Scale Data Management and Multiple Data Landing Zones](./images/high-level-design-harmonized-mesh.png)
 *Figure 2: Enterprise Scale Data Management with multiple Data Landing Zones*
 
-Figure 2 gives an overview of an Enterprise Scale Analytics and AI platform with a central Data Management Landing Zone and **multiple** spokes (i.e., the [Data Landing Zones](data-landing-zone.md)). This is similar to a harmonized mesh pattern which leverages common policies that ensure baseline security and compatibility. Different groups within the enterprise can customize capabilities as they see fit using this pattern.
+Figure 2 gives an overview of an Enterprise Scale Analytics and AI platform with a central Data Management Landing Zone and **multiple** spokes (i.e., the [Data Landing Zones](data-landing-zone.md)).
 
 The Enterprise Scale Analytics and AI framework advocates consistent governance using a common architecture that defines baseline capabilities and policies. Thus, all Data Landing Zones adhere to the same controls and auditing. Crucially, however, teams operating within the Data Landing Zone have the freedom to create data pipelines, ingest sources, create data products (such as reports and dashboards), and perform *ad hoc* Spark/SQL analysis. Furthermore, Data Landing Zone capabilities can be augmented by adding services on top of the baseline capability set out in the policy. For instance, a team could add a third-party graph engine to address some niche business requirement.
 

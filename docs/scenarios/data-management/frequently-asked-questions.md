@@ -16,7 +16,7 @@ The following are common questions asked about Enterprise Scale Analytics and AI
 <!-- 
 ## Data Management Landing Zone
 
-### Topic Name (e.g., Data Domains)
+### Topic Name (e.g., Data Integrations)
 
 #### Question 1
 

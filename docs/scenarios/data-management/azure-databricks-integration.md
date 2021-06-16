@@ -24,9 +24,9 @@ For every Data Landing Zone deployed, two shared Azure Databricks Workspaces wil
 
 The **Azure Databricks Analytics and Data Science Workspace** is shared across the whole Data Landing Zone, with all users which have been given access to the Workspace. These workspaces should not be used for Data Ingestion, Transformation, and Load &mdash; the **Azure Databricks Engineering Workspace** should be used for this instead.
 
-If you have an automated ingestion framework engine, the **Azure Databricks Engineering Workspace** will use both an Azure Key Vault created in the Metadata Services Resource group, data ingestion pipelines from RAW into ENRICHED and an Azure Key Vault, per Data Integration, for running developed engineering pipelines to transform from Raw to Enriched to Curated.
+If you have an automated ingestion framework engine, the **Azure Databricks Engineering Workspace** will use both an Azure Key Vault created in the Metadata Services Resource group, data ingestion pipelines from RAW into ENRICHED and an Azure Key Vault, per Data Integration, for running developed engineering pipelines to transform from Raw to Enriched.
 
-If you don't have an automated ingestion framework engine, the **Azure Databricks Engineering Workspace** will use just the Azure Key Vault, per Data Integration, for running developed engineering pipelines to transform from Raw to Enriched to Curated.
+If you don't have an automated ingestion framework engine, the **Azure Databricks Engineering Workspace** will use just the Azure Key Vault, per Data Integration, for running developed engineering pipelines to transform from Raw to Enriched.
 
 The **Azure Databricks Data Engineering Workspace** should use Service Principals to access Data Lakes.
 
@@ -108,11 +108,11 @@ For **Azure Databricks Analytics and Data Science**:
 
 In a deployment of an Azure Databricks workspace:
 
-- A global init script is created that will configure Hive metastore settings for all clusters. This script is managed by the new
+* A global init script is created that will configure Hive metastore settings for all clusters. This script is managed by the new
 [Global Init Scripts](https://docs.databricks.com/clusters/init-scripts.html#global-init-scripts) API.
 As of January, 2021, the new global init scripts API is in public preview. However, Microsoft's official position is that public preview features in Azure Databricks are ready for production environments and are supported by the Support Team. For more details, see:
 [Azure Databricks Preview Releases](/azure/databricks/release-notes/release-types)
-- This solution uses [Azure Database for MySQL](https://azure.microsoft.com/services/mysql/) to store the Hive metastore. This database was chosen for its cost effectiveness and its high compatibility with Hive.
+* This solution uses [Azure Database for MySQL](https://azure.microsoft.com/services/mysql/) to store the Hive metastore. This database was chosen for its cost effectiveness and its high compatibility with Hive.
 
 ## Further Reading
 

@@ -39,7 +39,7 @@ Proprietary native and third-party tooling provides niche capabilities to integr
 
 If you have an ingestion framework engine, you should deploy a single Azure Data Factory per Data Landing Zone in the production Ingest and Processing Resource Group. The Azure Data Factory workspace should be locked off to users, and only managed identity and service principals will have access to deploy. Data Landing Zone Ops should have Read access to allow debugging of pipelines.
 
-Each Data Integration will have their own Azure Data Factory which will be used by Integration Ops to move data from source to Raw to Enriched to Curated. By having an Azure Data Factory per Data Integration we can enable a complete Continuos Integration(CI) and Continuos Development(CD) experience by only allowing pipelines to be deployed from Azure DevOps or GitHub.
+Each Data Integration will have their own Azure Data Factory which will be used by Integration Ops to move data from source to Raw to Enriched. By having an Azure Data Factory per Data Integration we can enable a complete Continuos Integration(CI) and Continuos Development(CD) experience by only allowing pipelines to be deployed from Azure DevOps or GitHub.
 
 All Azure Data Factory workspaces will predominately use the Managed VNET feature in ADF or [Self-Hosted Integration Runtime](/azure/data-factory/concepts-integration-runtime) for their Data Landing Zone within the Data Management Landing Zone. Engineers are encouraged to use the managed VNET feature to securely connect to Azure PaaS resource.
 
@@ -84,7 +84,7 @@ The last Event Hub or Kafka Landing Zone, inside the use case specific Landing Z
 
 ## Enforcing Data Quality
 
-As data is ingested, data quality checks should be implemented as close to the sources and before downstream subscribers make use of the datasets. In the case of batch ingestion from the the data lake, these checks should be done when moving from the Raw to Enriched to Curated.
+As data is ingested, data quality checks should be implemented as close to the sources and before downstream subscribers make use of the datasets. In the case of batch ingestion from the the data lake, these checks should be done when moving from the Raw to Enriched.
 
 ![Implementing Data Quality during ingestion](./images/adls-dq.png)
 
