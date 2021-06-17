@@ -13,7 +13,7 @@ ms.subservice: ready
 
 Today, customers are investing in moving data to the cloud and have been following a modern data warehouse (MDW) pattern published by multiple cloud vendors. This MDW pattern pushes for singular enterprise data lakes which focuses the organization on centralized analytics. These patterns are aligned to on-premises deployments as opposed to the agility and self-service of the cloud.
 
-The Enterprise Scale Analytics and AI solution pattern represents the strategic design path and targets the technical state for an Azure Analytics and AI environment. It addresses the challenges of a centralized and monolithic data lake by using either a core service provider or a harmonized data mesh pattern.
+In response to the challenges posed by a centralized and monolithic data lake, the Enterprise Scale Analytics and AI solution pattern represents a strategic design path and targets the technical state for an Azure Analytics and AI environment.
 
 The pattern relies upon distribution of the data and its pipelines across [domains](data-landing-zone-division-consumption.md) enabling ownership of accessibility, usability, and development. Largely based on these patterns, the Enterprise Scale Analytics and AI solution pattern includes capabilities such as storage, data lineage, data classification, data ingestion, networking, security, access management, encryption, resiliency, and monitoring.
 
