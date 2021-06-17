@@ -77,7 +77,12 @@ Figure 3 illustrates how the registered data sources in Azure Data Factory SQL D
 
 ![New Data Source Ingestion](./images/new-datastore-ingestion.png)
 
-The Azure Data Factory ingestion master pipeline reads configuration from Azure Data Factory SQL DB Metastore and runs iteratively with respective parameters. Data is moved from source to raw layer in Azure Data Lake with minimal to no change. Data shape is validated based on the Azure Data Factory Metastore, and file formats are converted to a single common format (*e.g.* parquet) before being copied into the enriched layer.
+The Azure Data Factory ingestion master pipeline reads configuration from Azure Data Factory SQL DB Metastore and runs iteratively with respective parameters. Data is moved from source to raw layer in Azure Data Lake with minimal to no change. Data shape is validated based on the Azure Data Factory Metastore, and file formats are converted to either Parquet or Avro formats before being copied into the enriched layer.
+
+> [!TIP]
+> We recommend Parquet format when the I/O patterns are more read heavy and/or when the query patterns are focused on a subset of columns in the records, where the read transactions can be optimized to retrieve specific columns instead of reading the entire record.\
+> \
+> We recommend Avro file format where the I/O patterns are more write heavy or the query patterns favor retrieving multiple rows of records in their entirety. E.g., Avro format is favored by message bus such as Event Hub or Kafka writes multiple events/messages in succession.
 
 If it is the first time the data has been ingested, it connects to Azure Databricks Engineering workspace, and a data definition is created within the Data Management Landing Zone Hive Metastore. This data definition needs to be protected so that only the automation process can create, alter, or drop data definitions.
 

@@ -245,7 +245,7 @@ Data Residency rules or the requirement to have data close to a user base will s
 
 ## Monitoring
 
-In a Data Landing Zone all the monitoring should be sent to the Data Management Landing Zone for analysis.
+In a Data Landing Zone all the monitoring should be sent to the [Enterprise-Scale Management Subscription](/azure/cloud-adoption-framework/ready/enterprise-scale/management-and-monitoring?branch=scenario-data-management) for analysis.
 
 Azure Storage collects the same kinds of monitoring data as other Azure resources, which are described in [Monitoring Azure resources with Azure Monitor](/azure/azure-monitor/insights/monitor-azure-resource). For more information on the logs and metrics created by Azure Storage, see [Monitoring Azure Blob storage](/azure/storage/blobs/monitor-blob-storage).
 
@@ -273,3 +273,11 @@ In a Data Landing Zone, all the monitoring is sent to the Data Management Landin
 
 >[!IMPORTANT]
 >Set default monitoring policy to audit storage and send logs to the Enterprise Scale Management Subscription.
+
+## What data format do I choose? 
+Data may arrive to your data lake account in a variety of formats – human readable formats such as JSON, CSV or XML files, compressed binary formats such as .tar.gz and a variety of sizes – huge files (a few TBs) such as an export of a SQL table from your on-premise systems or a large number of tiny files (a few KBs) such as real-time events from your IoT solution. While ADLS Gen2 supports storing all kinds of data without imposing any restrictions, it is better to think about data formats to maximize efficiency of your processing pipelines and optimize costs – you can achieve both of these by picking the right format and the right file sizes.
+Hadoop has a set of file formats it supports for optimized storage and processing of structured data. Let us look at some common file formats – [Avro](https://avro.apache.org/docs/current/), [Parquet](https://parquet.apache.org/documentation/latest/) and [ORC](https://orc.apache.org/docs/). All of these are machine-readable binary file formats, offer compression to manage the file size and are self-describing in nature with a schema embedded in the file. The difference between the formats is in how data is stored – Avro stores data in a row-based format and Parquet and ORC formats store data in a columnar format. 
+
+### Key considerations
+*	Avro file format is favored where the I/O patterns are more write heavy or the query patterns favor retrieving multiple rows of records in their entirety. E.g. Avro format is favored by message bus such as Event Hub or Kafka writes multiple events/messages in succession.
+*	Parquet and ORC file formats are favored when the I/O patterns are more read heavy and/or when the query patterns are focused on a subset of columns in the records – where the read transactions can be optimized to retrieve specific columns instead of reading the entire record.

@@ -142,7 +142,7 @@ Deploy and register [self-hosted integration runtime (IR)](/azure/purview/manage
 You might want to host an increasing concurrent workload or you might want to achieve higher performance in your present workload level. You can enhance the scale of processing by the following approaches:
 
 - Scale up when the processor and memory of the node are being less than fully utilized.
-- You can scale out the self-hosted IR by adding more nodes (virtual machines).
+- You can scale out the self-hosted IR by adding more nodes (virtual machine scale sets).
 
 #### Assign access to the data plane to scan data sources
 

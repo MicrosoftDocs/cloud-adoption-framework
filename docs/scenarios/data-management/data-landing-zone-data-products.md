@@ -40,7 +40,7 @@ Examples of data products include:
     
     ![Data products resource groups](./images/data-products-resource-group.png)
 
-2. Set guard rails: Azure Policy would drive the default configuration of these services within a Data Landing Zone. We can consider operational analytics as multiple resource groups which the Data Product Scrum Team can request from a standard service catalog. By using Azure Policy, we can configure the security boundary and required feature set.
+2. Set guard rails: Azure Policy would drive the default configuration of these services within a Data Landing Zone. We can consider operational analytics as multiple resource groups which the Data Product Team can request from a standard service catalog. By using Azure Policy, we can configure the security boundary and required feature set.
 
     >[!IMPORTANT]
     >To drive consistency we recommend configuring an Azure Policy per Data Product.
