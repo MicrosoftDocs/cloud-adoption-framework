@@ -1,5 +1,5 @@
 ---
-title: Azure Enterprise Scale Analytics and AI Databricks Pattern
+title: Enterprise Scale Analytics and AI Databricks Pattern in Azure
 description: Enterprise Scale Analytics and AI Databricks Pattern
 author:  mboswell
 ms.author:  mboswell # Microsoft employees only
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Azure Databricks Integration
+# Azure Databricks Implementation
 
 Azure Databricks is a data analytics platform optimized for the Microsoft Azure cloud services platform. Azure Databricks offers two environments for developing data intensive applications: Azure Databricks SQL Analytics and Azure Databricks Workspace.
 

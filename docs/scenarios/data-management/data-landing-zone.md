@@ -113,14 +113,14 @@ An Azure Key Vault will be provisioned to store secrets relating to Data Landing
 
 The types of data which you will store in the Data Landing Zone will help determine any additional services which should reside here. For example, if you are storing sensitive data, you may choose to include a tokenization engine to ensure that all sensitive data can be tokenized as it is ingested into the data lake.
 
-## Integration
+## Shared Integration
 
 To enable rapid onboarding of datasets, to the Data Landing Zone, we recommend deploying a pair of Self Hosted Integration Runtimes, into the Data Management Landing Zone. These should be hosted in the Integration Resource Group.
 
 To enable you would need to: -
 
 - Create at least one Azure Data Factory in the Integration RG, in the Data Landing Zone, which would only be used for link the Shared Integration Runtime and not for data pipelines.
-- Create at least two Virtual Machines, with a Self-Hosted Integration Runtime inside an availability zone using the [ARM template](https://github.com/Azure/Azure-quickstart-templates/tree/master/101-vms-with-selfhost-integration-runtime).
+- Create a [shared image for the Azure virtual machine scale set](/azure/virtual-machine-scale-sets/shared-images-powershell) with a Self-Hosted Integration Runtime configured.
 - [The Self Hosted Integration Runtimes should be setup in high availability mode](/azure/data-factory/create-self-hosted-integration-runtime#high-availability-and-scalability).
 - The Self Hosted Integration Runtimes should be associated with Azure Data Factories in the Data Landing Zone(s).
 - [Azure Automation should be setup to update the Self Hosted Integration Runtime periodically](/azure/data-factory/self-hosted-integration-runtime-automation-scripts)

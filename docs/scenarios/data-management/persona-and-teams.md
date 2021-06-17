@@ -43,17 +43,19 @@ There are multiple personas involved in an Enterprise Scale Analytics and AI dep
 
 The Data Landing Zone Group consists of three teams.
 
-### Data Product Scrum Teams (per Product)
+### Data Product Teams (per Product)
 
-* They are responsible for delivering new Data Products such as insights, reports, notebooks, and applications.
-* They partner closely with business analysts and stakeholders.
+- They are responsible for delivering new Data Products such as insights, reports, notebooks, and applications.
+- They partner closely with business analysts and stakeholders.
+- They transform data into new read data stores.
+- Manage access hierarchy (groups) and approval requests.
+- Furnish meta data in data catalogue.
 
+### Integration Ops (per integration)
 
-### Integration Ops (per domain)
-
-* They ingest and register new data sources.
-* Manage access hierarchy (groups) and approval requests.
-* Furnish metadata in Data Management Landing Zone Data Catalog.
+- They Ingests and Registers new read data sources.
+- Manage access hierarchy (groups) and approval requests.
+- Furnish meta data in data catalogue.
 
 ### Data Landing Zone Ops (One Group per Data Landing Zone)
 

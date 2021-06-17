@@ -272,7 +272,7 @@ Alongside encouraging participation in these user groups, analysts should log fe
 
 |Role |Cloud Environment|Data Management Landing Zone|Data Landing Zone|Data Integration|Data Products|
 |-|-|-|-|-|-|
-|ES-AAI Service owner|Informed|Accountable|Consulted Informed|Consulted Informed|Consulted Informed|
+|Service owner|Informed|Accountable|Consulted Informed|Consulted Informed|Consulted Informed|
 |Data Landing Zone Service owner|Informed|Consulted Informed|Accountable|Accountable|Accountable|
 |Cloud Platform Ops|Responsible|Consulted|Consulted|Consulted|Consulted|
 |Data Platform Ops|Consulted|Responsible|Responsible|Consulted|Consulted|

@@ -74,7 +74,7 @@ items:
     href: migrate.md
   - name: Govern your data estate
     items:
-    - name: overview
+    - name: Overview
       href: govern.md
     - name: Data Management Landing Zone
       href: data-management-landing-zone.md
@@ -122,11 +122,11 @@ items:
           href: data-lake-access.md        
         - name: Data Lake Services
           href: data-lake-services.md
-      - name: Azure Databricks Integration
-        href: azure-databricks-integration.md
-      - name: Azure Synapse Analytics Integration
-        href: azure-synapse-analytics-integration.md
-      - name: Azure Purview Integration
+      - name: Azure Databricks Implementation
+        href: azure-databricks-implementation.md
+      - name: Azure Synapse Analytics Implementation
+        href: azure-synapse-analytics-implementation.md
+      - name: Azure Purview Implementation
         items:
         - name: Readiness Checklist
           href: purview-checklist.md 
@@ -146,8 +146,8 @@ items:
           href: data-science-blueprint.md
         - name: Data Science Deployment
           href: data-science-deployment.md
-      - name: Data Science Workflow and MLOps
-        href: data-science-workflow-and-mlops.md
+        - name: Workflow and MLOps
+          href: data-science-workflow-and-mlops.md
 
   - name: Featured Azure products
     items:

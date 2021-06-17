@@ -1,5 +1,5 @@
 ---
-title: Azure Enterprise Scale Analytics and AI Azure Synapse Pattern
+title: Enterprise Scale Analytics and AI Azure Synapse Pattern in Azure
 description: Enterprise Scale Analytics and AI Azure Synapse Pattern
 author:  mboswell
 ms.author:  mboswell # Microsoft employees only
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Azure Synapse Analytics Integration
+# Azure Synapse Analytics Implementation
 
 Azure Synapse Analytics is the provisioned, integrated analytics service that accelerates time to insight across data warehouses and big data systems. Azure Synapse Analytics brings together the best of SQL technologies used in enterprise data warehousing, Spark technologies used for big data, and pipelines for data integration and ETL/ELT. Synapse Studio provides a unified experience for management, monitoring, coding, and security. Synapse has deep integration with other Azure services such as Power BI, Cosmos DB, and Azure Machine Learning.
 
@@ -31,7 +31,7 @@ SQL On-Demand is a serverless query service that will be used by the data scient
 
 The first step in the deployment Azure Synapse Analytics is to set up an Azure Synapse workspace.
 
-As an Azure Data Lake Gen 2 storage account is required and is used as primary storage to store Spark metadata, we recommend using the Enriched and Curated ADLS storage account created in the Data Landing Zone.
+As an Azure Data Lake Gen 2 storage account is required, we recommend using a dedicated container on the workspace data lake account, which is used as primary storage to store Spark metadata.
 
 For premium big data processing and data science capabilities, we recommend Azure Databricks.
 
