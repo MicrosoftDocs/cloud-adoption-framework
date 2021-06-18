@@ -13,7 +13,7 @@ metadata:
   services: cloud-adoption-framework
   author: JanetCThomas
   ms.author: janet
-  ms.date: 05/15/2020
+  ms.date: 06/17/2021
   ms.topic: hub-page
   ms.service: cloud-adoption-framework
   ms.subservice: overview
@@ -29,24 +29,26 @@ highlightedContent:
   items:
 
     # Card
-    - title: Start your cloud journey
-      itemType: get-started
-      url: ./get-started/index.md
+    - title: Security in the Cloud Adoption Framework
+      itemType: overview
+      url: ./secure/index.md
 
     # Card
-    - title: Find cloud adoption tools and templates
+    - title: Tools and templates
       itemType: download
       url: ./reference/tools-templates.md
 
     # Card
-    - title: What is the Cloud Adoption Framework?
+    - title: Newly published articles
+      itemType: whats-new
+      url: ./get-started/whats-new.md
+
+    # Card
+    - title: About the Cloud Adoption Framework
       itemType: overview
       url: ./overview.md
 
-    # Card
-    - title: What's new in the Cloud Adoption Framework
-      itemType: whats-new
-      url: ./get-started/whats-new.md
+
 
 # productDirectory section (optional)
 
@@ -61,14 +63,14 @@ productDirectory:
       # imageSrc should be square in ratio with no whitespace
       imageSrc: ./_images/caf-get-started.png
       links:
-        - url: ./get-started/cloud-concepts.md
-          text: Document foundational decisions
+        - url: ./get-started/index.md
+          text: Get started
         - url: ./get-started/migrate.md
           text: Accelerate migration
         - url: ./get-started/operational-excellence.md
           text: Deliver operational excellence
-        - url: ./get-started/org-alignment.md
-          text: Align your organization
+        - url: ./antipatterns/antipatterns-to-avoid.md
+          text: Antipatterns to avoid
 
     # Card
     - title: Strategy
@@ -128,12 +130,12 @@ productDirectory:
       links:
         - url: ./innovate/business-value.md
           text: Business value consensus
-        - url: ./innovate/innovation-guide/index.md
-          text: Azure innovation guide
-        - url: ./innovate/best-practices/index.md
-          text: Best practices
-        - url: ./innovate/considerations/adoption.md
-          text: Feedback loops
+        - url: ./innovate/considerations/build.md
+          text: Build your first MVP
+        - url: ./innovate/considerations/measure.md
+          text: Measure for customer impact
+        - url: ./innovate/considerations/invention.md
+          text: Expand digital inventions
 
     # Card
     - title: Govern
@@ -159,7 +161,7 @@ productDirectory:
         - url: ./manage/best-practices.md
           text: Expand the baseline
         - url: ./manage/design-principles.md
-          text: Evaluate design principles
+          text: Advance operations and design principles
 
     # Card
     - title: Organize
@@ -168,7 +170,7 @@ productDirectory:
         - url: ./organize/index.md
           text: Organizational alignment
         - url: ./organize/organization-structures.md
-          text: Establish teams
+          text: Team structures
         - url: ./organize/raci-alignment.md
           text: Align responsibilities
 
