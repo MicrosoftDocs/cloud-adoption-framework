@@ -121,6 +121,8 @@ The following figure shows this topology.
   - Create more specific route entries in the spoke user defined routes (UDRs), so that traffic across hubs is redirected via the firewall in the local-hub virtual network.
   - [Disable BGP propagation](/azure.microsoft.com/en-us/updates/disable-route-propagation-ga-udr) on the spokes, as this will simplify the route configuration in the UDR. 
   
+The following figure shows this design  
+ 
   ![Diagram that illustrates a landing zone connectivity design.](./media/vnet-dual-circuits.png)
 
 *Figure 4: Landing zone connectivity design.*
