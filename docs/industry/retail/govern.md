@@ -1,5 +1,5 @@
 ---
-title: "Governance for the retail industry"
+title: Governance for the retail industry
 description: Learn how to use the Cloud Adoption Framework methodology to improve governance of your cloud portfolio for the retail industry.
 author: BrianBlanchard
 ms.author: brblanch
@@ -21,19 +21,19 @@ When developing your cloud governance strategy, follow the approach in the stand
 
 Aside from online-only retailers, retail organizations operate from several distributed physical locations to deliver brick and mortar retail. Because of latency limitations, those locations can contain technology assets. You need to govern, operate, and secure those assets to help protect your business from risks.
 
-Your governance strategy might require distributed governance, but that might not be a part of your cloud adoption strategy. Does your cloud adoption strategy include digital transformation for [Supply chain optimization](./retail-supply-chain-optimization.md), [Building management optimization](./retail-building-management-optimization.md), or in-store experience for your customers?
+Your governance strategy might require distributed governance, but that might not be a part of your cloud adoption strategy. Does your cloud adoption strategy include digital transformation for [supply chain optimization](./retail-supply-chain-optimization.md), [building management optimization](./retail-building-management-optimization.md), or in-store experience for your customers?
 
 If you have distributed locations and need to drive a cloud adoption strategy for assets in those locations, consider a unified operations strategy. This strategy can deliver governance and operations across public cloud, private cloud, and edge locations. For more information, see [Introduction to unified operations](../../scenarios/hybrid/unified-operations.md).
 
 ## Compliance with payment card standards
 
-Most retail organizations require compliance with Payment Card Industry (PCI) Data Security Standards (DSS) to process credit cards. For more information, see [PCI DSS](/azure/compliance/offerings/offering-pci-dss).
+Most retail organizations require compliance with Payment Card Industry data security standards (PCI DSS) to process credit cards. For more information, see [PCI DSS](/azure/compliance/offerings/offering-pci-dss).
 
-Microsoft Azure maintains PCI-DSS validation, which can make it easier to govern PCI-DSS compliant deployments in the cloud. For more information, see [Azure and PCI DSS](/azure/compliance/offerings/offering-pci-dss#azure-and-pci-dss). Your organization also shares in responsibilities to fully comply with PCI-DSS standards.
+Microsoft Azure maintains PCI DSS validation, which can make it easier to govern PCI DSS compliant deployments in the cloud. For more information, see [Azure and PCI DSS](/azure/compliance/offerings/offering-pci-dss#azure-and-pci-dss). Your organization also shares in responsibilities to fully comply with PCI DSS standards.
 
-If your cloud deployments require PCI-DSS compliance, review the [control mapping of PCI-DSS v3.2.1](/azure/governance/blueprints/samples/pci-dss-3.2.1/control-mapping). You can deploy the blueprint sample and assign it to specific Azure environments. It can automate many of the required PCI controls. For more information, see [Deploy the PCI-DSS v3.2.1 blueprint sample](/azure/governance/blueprints/samples/pci-dss-3.2.1/deploy).
+If your cloud deployments require PCI DSS compliance, review the [control mapping of PCI DSS v3.2.1](/azure/governance/blueprints/samples/pci-dss-3.2.1/control-mapping). You can deploy the blueprint sample and assign it to specific Azure environments. It can automate many of the required PCI controls. For more information, see [Deploy the PCI DSS v3.2.1 blueprint sample](/azure/governance/blueprints/samples/pci-dss-3.2.1/deploy).
 
-For compliance standards that have been automated in a similar Azure blueprint approach, see [Azure Blueprint Samples](/azure/governance/blueprints/samples/). If you prefer to work with built-in Azure policy initiatives, see [Regulatory Compliance built-ins in Azure Policy](/azure/governance/policy/samples/iso-27001).
+For compliance standards that have been automated in a similar Azure blueprint approach, see [Azure blueprint samples](/azure/governance/blueprints/samples/). If you prefer to work with built-in Azure Policy initiatives, see [Regulatory compliance built-ins in Azure Policy](/azure/governance/policy/samples/iso-27001).
 
 ## Next steps
 

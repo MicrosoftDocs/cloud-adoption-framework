@@ -1,6 +1,6 @@
 ---
-title: The One Migration approach to Azure adoption
-description: Follow the One Migration approach of Azure Migrate to migrate and modernize entire IT portfolios.
+title: The One Migrate approach to Azure adoption
+description: Follow the One Migrate approach of Azure Migrate to migrate and modernize entire IT portfolios.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 07/21/2020
@@ -10,12 +10,9 @@ ms.subservice: migrate
 ms.custom: internal
 ---
 
-<!-- docutune:ignore "One Migration" -->
-<!-- cSpell:ignore HANA -->
+# The One Migrate approach to migrating the IT portfolio
 
-# The One Migration approach to migrating the IT portfolio
-
-Azure and Azure Migrate are both well known for hosting Microsoft technologies. But you might not be aware of Azure's ability to support migrations beyond Windows and SQL Server. The *One Migration* scenarios captured in the Migrate methodology demonstrate the same set of consistent guidelines and processes for migrating both Microsoft and third-party technologies.
+Azure and Azure Migrate are both well known for hosting Microsoft technologies. But you might not be aware of Azure's ability to support migrations beyond Windows and SQL Server. The *One Migrate* scenarios captured in the Migrate methodology demonstrate the same set of consistent guidelines and processes for migrating both Microsoft and third-party technologies.
 
 ## Migration scenarios
 
@@ -34,7 +31,11 @@ The following diagram and table outline a number of scenarios that follow the sa
 
 Watch this short video for more information about using the right tools to move, manage and optimize your cloud environment.
 
+<!-- markdownlint-disable MD034 -->
+
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4NHCS]
+
+<!-- markdownlint-enable MD034 -->
 
 ## Migrate methodology
 

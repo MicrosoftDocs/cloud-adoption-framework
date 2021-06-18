@@ -1,5 +1,5 @@
 ---
-title: "Introduction to cloud adoption for the retail industry"
+title: Introduction to cloud adoption for the retail industry
 description: Find out what guidance is available for you to learn about the cloud, and about planning a cloud-adoption journey for a retail company.
 author: BrianBlanchard
 ms.author: brblanch

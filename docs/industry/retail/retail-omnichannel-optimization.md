@@ -1,5 +1,5 @@
 ---
-title: "Omnichannel optimization in the retail industry"
+title: Omnichannel optimization in the retail industry
 description: Learn about omnichannel optimization in the retail industry by using Azure services to integrate channels that sell goods and services.
 author: BrianBlanchard
 ms.author: brblanch
@@ -53,12 +53,12 @@ Microsoft enables retailers to understand preferences, better serve customers, a
 
 ### Omnichannel success stories
 
-- See how Fabletics used data to buck the retail rut.  
-- Learn how [Dick's Sporting Goods](https://customers.microsoft.com/en-us/story/857270-dickssportinggoods-vmware-azure) stayed in the game during COVID-19 lockdowns.
+- See how Fabletics used data to buck the retail rut.
+- Learn how [Dick's Sporting Goods](https://customers.microsoft.com/story/857270-dickssportinggoods-vmware-azure) stayed in the game during COVID-19 lockdowns.
 
 ## Next steps
 
-Learn about another strategic driver for retail customers: [Supply chain optimization](./retail-supply-chain-optimization.md).
+Learn about another strategic driver for retail customers: [supply-chain optimization](./retail-supply-chain-optimization.md).
 
 These resources offer guidance throughout the cloud adoption scenario.
 

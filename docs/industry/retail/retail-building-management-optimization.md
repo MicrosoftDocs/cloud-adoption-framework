@@ -1,5 +1,5 @@
 ---
-title: "Building management optimization in the retail industry"
+title: Building management optimization in the retail industry
 description: Learn about optimizing your building management in the retail industry using Azure services and the challenges you might face.
 author: BrianBlanchard
 ms.author: brblanch
@@ -11,7 +11,7 @@ ms.subservice: overview
 
 # Building management optimization in the retail industry
 
-There are many moving parts in the retail industry. From customer movement, to the status of products and store devices, it’s important for you as a retailer to understand your retail space. This understanding can help you provide innovative customer experiences and optimize in-store operations.
+There are many moving parts in the retail industry. From customer movement to the status of products and store devices, it's important for you as a retailer to understand your retail space. This understanding can help you provide innovative customer experiences and optimize in-store operations.
 
 ## Business outcomes of building management
 
@@ -32,7 +32,7 @@ There are challenges that you must navigate as a result.
 
 - The inability to determine the store's busiest cash register. This problem makes it difficult to optimize customer flow for all registers.
 - The lack of visibility into occupancy levels inhibits the ability to comply with social distancing requirements.
-- The inability to effectively monitor energy consumption negatively impacts efforts to manage costs and advance sustainability initiatives. 
+- The inability to effectively monitor energy consumption negatively impacts efforts to manage costs and advance sustainability initiatives.
 
 Retailers must embrace advances in analytics, AI, IoT, and other technologies to overcome these challenges and join forces with the right technology partner.
 
@@ -48,7 +48,7 @@ Azure offerings support your efforts to optimize building management.
 
 - **Collect and ingest data:** Collect and ingest data from input sources using Azure App Service, Azure Functions, and Azure Event Hubs.
 
-- **Store data:** Store data on Azure Data Lake.
+- **Store data:** Store data in Azure Data Lake.
 
 - **Create virtual replicas of physical retail spaces:** Create digital models of stores using Azure Spatial Anchors and Azure Digital Twins. These models offer insights that drive optimized operations, reduced costs, and breakthrough customer experiences.
 

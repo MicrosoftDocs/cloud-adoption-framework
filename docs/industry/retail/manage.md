@@ -1,5 +1,5 @@
 ---
-title: "Managing the cloud in the retail industry"
+title: Managing the cloud in the retail industry
 description: Managing a portfolio of retail applications in the cloud. Use these questions to create a baseline from which to work.
 author: BrianBlanchard
 ms.author: brblanch
@@ -21,13 +21,13 @@ The [org alignment article](./organize.md#common-growth-patterns-for-retailers) 
 
 - Which is more important in the future?
 
-  - Innovation: Enable high pace of change.
-  - Control and stability: Limit pace of change to favor security, operations, and control.
+  - **Innovation:** Enable high pace of change.
+  - **Control and stability:** Limit pace of change to favor security, operations, and control.
 
 - Who is responsible for production changes?
 
-  - Cloud Center of Excellence (CCoE): A mix of central and workload teams.
-  - Central team: Central IT or central operations.
+  - **Cloud center of excellence (CCoE):** A mix of central and workload teams.
+  - **Central team:** Central IT or central operations.
 
 ## Build a baseline
 
@@ -37,31 +37,31 @@ You can deploy that baseline more quickly using Microsoft's solution, Azure Auto
 
 ### Align operations
 
-The management baseline sets the tone for all operations management. The baseline automates repetitive tasks that IT staff complete in on-premises datacenters. This change frees up valuable time to tackle other challenges and move toward your cloud maturity targets. For more information, see [Cloud maturity model for Retail](./retail-cloud-maturity.md).
+The management baseline sets the tone for all operations management. The baseline automates repetitive tasks that IT staff complete in on-premises datacenters. This change frees up valuable time to tackle other challenges and move toward your cloud maturity targets. For more information, see [Cloud maturity model for retail](./retail-cloud-maturity.md).
 
 Begin by finding tasks that aren't so easy to automate. The alignment questions above help determine what the IT staff focuses on next.
 
 IT is likely to be accountable for performance, reliability, and cost across your technology solutions. The responsibility of delivering the work, executing the processes, and carrying the financial burden can be shared in an enterprise operations model through a CCoE structure.
 
-Consider your answers from the questions above, as your review the following sections. Evaluate if you can shift some of the operational responsibilities to change the focus on central IT staff.
+Consider your answers from the questions above, as your review the following sections. Evaluate whether you can shift some of the operational responsibilities to change the focus on central IT staff.
 
 ## Workload operations
 
-If innovation and pace of change is a priority, workload teams and developers need shorter cycles from development to testing, and to production. In enterprise operations, separation of duty and landing zone segmentation allows workload teams to take a more active role in mission-critical workloads. This approach shifts the budget and responsibility for application performance to the line-of-business teams or workload teams. To ease this shift in responsibility, central IT focuses more heavily on development of guardrails through automated governance, platform operations, and enhanced baselines.
+If innovation and pace of change is a priority, workload teams and developers need shorter cycles from development to testing, and to production. In enterprise operations, separation of duties and landing zone segmentation allows workload teams to take a more active role in mission-critical workloads. This approach shifts the budget and responsibility for application performance to the line-of-business teams or workload teams. To ease this shift in responsibility, central IT focuses more heavily on development of guardrails through automated governance, platform operations, and enhanced baselines.
 
 If control is a priority, central operations maintains full responsibility for the production environment, control increases, and the pace of changes slows. For security conscious companies, this strategy might be the best. Such a strategy places a higher burden on central IT to deliver the processes for managing mission-critical workload operations. It also reduces the amount of reinvestment that can be made in your cloud maturity.
 
 ## Platform operations
 
-Aside from critical workloads, retail companies rely on common technology platforms. SQL database, containers, SAP, and virtual desktop are common examples of shared technology platforms in the retail industry. Your workloads might require other platforms to operate.
+Aside from critical workloads, retail companies rely on common technology platforms. SQL databases, containers, SAP, and virtual desktop infrastructure are common examples of shared technology platforms in the retail industry. Your workloads might require other platforms to operate.
 
 These platforms are shared across multiple workloads, so operational responsibility can be easily shifted to workload teams. The cloud offers different paths to reduce the amount of effort required to operate those technology platforms.
 
 To reduce overhead and minimize operational burden:
 
-- Consider platform as a service (PaaS)-based alternatives to modernize many of your shared platforms. This approach is common for platforms like SQL database or virtual desktop.
+- Consider platform as a service (PaaS)-based alternatives to modernize many of your shared platforms. This approach is common for platforms like SQL databases or virtual desktop infrastructure.
 - Evaluate options to use software as a service (SaaS)-based retail industry applications from the [Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps?search=retail&page=1).
-- Follow Cloud Adoption Framework scenarios to automate tasks for complex platforms, such as [SAP](../../scenarios/sap/index.md) or [Azure Virtual Desktop](../../scenarios/wvd/index.md).
+- Follow Cloud Adoption Framework scenarios to automate tasks for complex platforms, such as [SAP](../../scenarios/sap/index.md) or [Windows Virtual Desktop](../../scenarios/wvd/index.md).
 
 ## Enhanced baseline
 

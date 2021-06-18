@@ -1,5 +1,5 @@
 ---
-title: "Migrate workloads for the retail industry"
+title: Migrate workloads for the retail industry
 description: Learn about different options and services for migrating workloads to Azure, like Azure Marketplace for retail.
 author: BrianBlanchard
 ms.author: brblanch
@@ -11,9 +11,9 @@ ms.subservice: migrate
 
 # Migrate common retail industry technologies
 
-In the [Migrate methodology](../../migrate/index.md) of the Cloud Adoption Framework for Azure, the primary tool for migration is Azure Migrate. Use this tool to deliver a repeatable process to migrate existing infrastructure and workloads from existing data centers to the public cloud. The steps outlined in the migration methodology apply to any retail industry migration project.
+In the [Migrate methodology](../../migrate/index.md) of the Cloud Adoption Framework for Azure, the primary tool for migration is Azure Migrate. Use this tool to deliver a repeatable process to migrate existing infrastructure and workloads from existing datacenters to the public cloud. The steps outlined in the Migrate methodology apply to any retail industry migration project.
 
-There are many software as a service (SaaS) options available to retailers. These Saas options can accelerate innovation during the migration process. This article outlines considerations for the retail industry. These considerations might influence what and how you migrate specific workloads in your portfolio to Azure.
+There are many software as a service (SaaS) options available to retailers. These SaaS options can accelerate innovation during the migration process. This article outlines considerations for the retail industry. These considerations might influence what and how you migrate specific workloads in your portfolio to Azure.
 
 ## Migration for the retail industry
 
@@ -27,7 +27,7 @@ For companies trying to achieve higher states of maturity, it might include migr
 
 ## Azure Marketplace for retail
 
-The Azure Marketplace has the most convenient approach to application deployment and migration for many common retail industry applications. Before migrating, review the [retail industry applications in the Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps?search=retail&page=1) to see if your applications are already available.
+The Azure Marketplace has the most convenient approach to application deployment and migration for many common retail industry applications. Before migrating, review the [retail industry applications in the Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps?search=retail&page=1) to see whether your applications are already available.
 
 Migrating to an approved, pre-packaged deployment of your favorite applications can accelerate your migration process and significantly reduce the time to reach the *connected retail* horizon.
 

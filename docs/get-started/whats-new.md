@@ -10,8 +10,6 @@ ms.subservice: general
 ms.custom: internal
 ---
 
-<!-- docutune:casing "Getting Started module" "internal Microsoft teams" OneMigrate -->
-
 # What's new in the Microsoft Cloud Adoption Framework for Azure
 
 Here's a list of recent changes made to the Cloud Adoption Framework.
@@ -69,7 +67,7 @@ Most notable in this release is the addition of adoption journeys, which provide
 |--|--|
 | [Hybrid&nbsp;and&nbsp;multicloud](../scenarios/hybrid/index.md) | Lifecycle guide to integrate hybrid, multicloud, and unified operations into your cloud adoption journey. |
 | [Modern containers](../scenarios/aks/index.md) | Container modernization enables rapid innovation and workload portability. Learn how to integrate containers into your cloud adoption journey. |
-| [SAP on Azure](../scenarios/sap/index.md) | As part of our OneMigrate (migration scenarios) commitment, this journey bridges the gaps between the SAP migration process and other mainstream migration processes to deliver on full-scale adoption of SAP on Azure. |
+| [SAP on Azure](../scenarios/sap/index.md) | As part of our One Migrate (migration scenarios) commitment, this journey bridges the gaps between the SAP migration process and other mainstream migration processes to deliver on full-scale adoption of SAP on Azure. |
 
 ### Cloud economics
 
@@ -189,7 +187,7 @@ This release adds a number of new scenarios to make cloud adoption more actionab
 
 **Migration scenarios:**
 
-The new [migration scenarios overview page](../scenarios/index.md) builds on the Migrate methodology to demonstrate how Azure delivers on the #OneMigrate promise. It provides approaches to migrating multiple first and third-party scenarios to Azure. This includes new migration scenarios:
+The new [migration scenarios overview page](../scenarios/index.md) builds on the Migrate methodology to demonstrate how Azure delivers on the One Migrate promise. It provides approaches to migrating multiple first and third-party scenarios to Azure. This includes new migration scenarios:
 
 | Article | Description |
 |--|--|

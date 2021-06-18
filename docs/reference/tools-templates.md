@@ -25,11 +25,11 @@ The Cloud Adoption Framework includes tools that help you quickly implement tech
 
 | Resource | Description |
 |----------|-------------|
-| [Strategic Migration Assessment and Readiness Tool](/assessments/?mode=pre-assessment&id=Strategic-Migration-Assessment) | From business planning to training to security and governance, find out what you need to do to prepare for your Microsoft Azure migration with the Strategic Migration Assessment and Readiness Tool (SMART). |
+| [Strategic migration assessment and readiness tool](/assessments/?mode=pre-assessment&id=Strategic-Migration-Assessment) | From business planning to training to security and governance, find out what you need to do to prepare for your Microsoft Azure migration with the strategic migration assessment and readiness tool (SMART). |
 | [Cloud journey tracker](/assessments/?id=cloud-journey-tracker&mode=pre-assessment) | Identify your cloud adoption path based on the needs of your business. |
 | [Strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) | Document decisions, as you execute your cloud adoption strategy and plan. |
 | [Cloud adoption plan generator](../plan/template.md) | Standardize processes by deploying a backlog to [Azure Boards](/azure/devops/boards/get-started/what-is-azure-boards) using a template. |
-| [Using the Strategy-Plan-Ready-Govern ADO template](https://azuredevopsdemogenerator.azurewebsites.net/?name=strategyplan) | Standardize processes by deploying a backlog to [Azure Boards](/azure/devops/boards/get-started/what-is-azure-boards) using a template. |
+| [Using the `Strategy-Plan-Ready-Govern` Azure DevOps template](https://azuredevopsdemogenerator.azurewebsites.net/?name=strategyplan) | Standardize processes by deploying a backlog to [Azure Boards](/azure/devops/boards/get-started/what-is-azure-boards) using a template. |
 
 ## Ready
 
@@ -43,7 +43,6 @@ The Cloud Adoption Framework includes tools that help you quickly implement tech
 | [Terraform registry](https://registry.terraform.io/search?q=aztfmod) | The Terraform registry website, filtered to list all of the Cloud Adoption Framework modules needed to create a landing zone via Terraform. |
 | [Enterprise-scale landing zone](https://github.com/Azure/Enterprise-Scale/) | Open-source code base for the enterprise-scale implementation of the CAF Azure landing zones. |
 
-
 ## Govern
 
 | Resource | Description |
@@ -56,7 +55,7 @@ The Cloud Adoption Framework includes tools that help you quickly implement tech
 | [Identity Baseline discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/govern/identity-baseline-discipline-template.docx) | Define the policy statements and design guidance to mature the cloud governance in your organization. Focuses on identity requirements. |
 | [Resource Consistency discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/govern/resource-consistency-discipline-template.docx) | Define the policy statements and design guidance to mature the cloud governance in your organization. Focuses on resource consistency. |
 | [Security Baseline discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/govern/security-baseline-discipline-template.docx) | Define the policy statements and design guidance to mature the cloud governance in your organization. Focuses on the security baseline. |
-| [Azure Security Benchmark](/azure/security/benchmarks/overview) | The Azure Security Benchmark (ASB) provides prescriptive best practices and recommendations to help improve the security of workloads, data, and services on Azure. |
+| [Azure Security Benchmark](/security/benchmark/azure/overview) | The Azure Security Benchmark (ASB) provides prescriptive best practices and recommendations to help improve the security of workloads, data, and services on Azure. |
 | [Azure governance visualizer](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting) | The Azure governance visualizer is a PowerShell script that iterates through an Azure tenant's management group hierarchy down to the subscription level. It captures data from the most relevant Azure governance capabilities such as Azure Policy, Azure role-based access control (Azure RBAC), and Azure Blueprints. From the collected data, the visualizer shows your hierarchy map, creates a tenant summary, and builds granular scope insights about your management groups and subscriptions. |
 
 ## Migrate
@@ -64,7 +63,7 @@ The Cloud Adoption Framework includes tools that help you quickly implement tech
 | Resource | Description |
 |----------|-------------|
 | [Datacenter migration discovery checklist](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/migrate/datacenter-migration-discovery-checklist.docx) | Review this checklist for information that helps identify workloads, servers, and other assets in your datacenter. Use this information to help plan your migration.
-| [Migration templates](https://aka.ms/adopt/plan/generator) | In the Azure DevOps generator, we've built several templates that you can use to help streamline your projects. Templates have been created for [WVD](https://azuredevopsdemogenerator.azurewebsites.net/?name=wvdmigration), [Server Migration](https://azuredevopsdemogenerator.azurewebsites.net/?name=servermigration), [SQL Migration](https://azuredevopsdemogenerator.azurewebsites.net/?name=sqlmigration), and [AKS deployments](https://azuredevopsdemogenerator.azurewebsites.net/?name=cafaks).
+| [Migration templates](https://aka.ms/adopt/plan/generator) | In the Azure DevOps generator, we've built several templates that you can use to help streamline your projects. Templates have been created for [Windows Virtual Desktop](https://azuredevopsdemogenerator.azurewebsites.net/?name=wvdmigration), [server migration](https://azuredevopsdemogenerator.azurewebsites.net/?name=servermigration), [SQL migration](https://azuredevopsdemogenerator.azurewebsites.net/?name=sqlmigration), and [AKS deployments](https://azuredevopsdemogenerator.azurewebsites.net/?name=cafaks).
 
 ## Innovate
 

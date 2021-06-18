@@ -1,5 +1,5 @@
 ---
-title: "Retail industry context"
+title: Retail industry context
 description: Establish Microsoft view of the retail industry and what roles Azure and other technologies play in modern retail.
 author: BrianBlanchard
 ms.author: brblanch
@@ -25,7 +25,7 @@ Besides meeting customer expectations, you need to increase efficiency for your 
 
 Data and cloud-based services will play an indispensable role for retailers and consumer goods companies. You can optimize operations and create stronger customer experiences. To stay competitive, you need to connect data silos for customer behavior across channels, finances, supply chain, and more.
 
-To optimize operations and create stronger customer experiences, data and cloud-based services will play an indispensable role for retailers and consumer goods companies going forward. To stay competitive, they’ll need to connect data silos related to customer behavior across channels, finances, supply chain, and more. New technologies such as cloud computing, advanced analytics, machine learning, IoT, and mixed reality create endless opportunities for retailers to improve what they’re doing and reimagine the way they do business. Cloud-based capabilities can lay the foundation for you to survive in the short term and thrive in the future.
+To optimize operations and create stronger customer experiences, data and cloud-based services will play an indispensable role for retailers and consumer goods companies going forward. To stay competitive, they'll need to connect data silos related to customer behavior across channels, finances, supply chain, and more. New technologies such as cloud computing, advanced analytics, machine learning, IoT, and mixed reality create endless opportunities for retailers to improve what they're doing and reimagine the way they do business. Cloud-based capabilities can lay the foundation for you to survive in the short term and thrive in the future.
 
 ## COVID-19 context
 
@@ -43,15 +43,15 @@ If there's one thing to be learned following COVID-19, it's that agility is key.
 
 ## Sources
 
-- During COVID-19, disruption in the marketplace, whether driven by supply-chain challenges or by changes in shopping behaviors, have led 15 to 20 percent of consumers to switch stores. For more information, see [US small-business recovery after the COVID-19 crisis](https://www.mckinsey.com/industries/public-sector/our-insights/us-small-business-recovery-after-the-covid-19-crisis).
+- During COVID-19, disruption in the marketplace, whether driven by supply-chain challenges or by changes in shopping behaviors, have led 15 to 20 percent of consumers to switch stores. For more information, see [US small-business recovery after the COVID-19 crisis](https://www.mckinsey.com/industries/public-and-social-sector/our-insights/us-small-business-recovery-after-the-covid-19-crisis).
 
-- 68 percent of United States shoppers expect to buy essential goods online after the health threats of COVID-19 have subsided. For more information, see [COVID-19 has permanently changed shopping behavior](https://www.zdnet.com/article/covid-19-has-permanently-changed-shopping-behavior).
+- 68 percent of United States shoppers expect to buy essential goods online after the health threats of COVID-19 have subsided. For more information, see [COVID-19 has permanently changed shopping behavior](https://www.zdnet.com/article/covid-19-has-permanently-changed-shopping-behavior/).
 
-- 79 percent of worldwide respondents say they're using contact-less payments. Mastercard Consumer Polling Data. Online interviews of 17,000 consumers in 19 countries worldwide conducted April 10-12, 2020.
+- 79 percent of worldwide respondents say they're using contactless payments, according to Mastercard consumer polling data. Online interviews of 17,000 consumers in 19 countries worldwide conducted April 10-12, 2020.
 
-- 75 percent of United States companies' supply chain affected by China's production halt. For more information, see [Cascading Economic Impacts of the COVID-19 Outbreak in China](https://www.uscc.gov/sites/default/files/2020-04/Cascading_Economic_Impacts_of_the_Novel_Coronavirus_April_21_2020.pdf).
+- 75 percent of United States companies' supply chain affected by China's production halt. For more information, see [Cascading economic impacts of the COVID-19 outbreak in China](https://www.uscc.gov/sites/default/files/2020-04/Cascading_Economic_Impacts_of_the_Novel_Coronavirus_April_21_2020.pdf).
 
-- During COVID-19, for grocery shopping there was a spike of 210.1 percent of online ordering during March 12, 20 to March 15, 2020 compared with the same period in 2019. For general merchandise retailers, they also experienced 50 percent more online orders on March 13, 2020. For more information, see [The Impact Of Covid-19 On U.S. Brands And Retailers](https://www.forbes.com/sites/jasongoldberg/2020/03/29/the-impact-of-covid-19-on-us-brands-and-retailers/#55642cb71452).
+- During COVID-19, for grocery shopping there was a spike of 210.1 percent of online ordering during March 12, 20 to March 15, 2020 compared with the same period in 2019. For general merchandise retailers, they also experienced 50 percent more online orders on March 13, 2020. For more information, see [Impact of COVID-19 on US brands and retailers](https://www.forbes.com/sites/jasongoldberg/2020/03/29/the-impact-of-covid-19-on-us-brands-and-retailers/#55642cb71452).
 
 ## Next steps
 

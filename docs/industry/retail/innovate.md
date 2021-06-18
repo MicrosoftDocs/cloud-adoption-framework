@@ -1,5 +1,5 @@
 ---
-title: "Innovation in the retail industry"
+title: Innovation in the retail industry
 description: Learn how to drive innovation as you implement analytics-driven and intelligent techniques. Reach retail maturity and improve your results.
 author: BrianBlanchard
 ms.author: brblanch
@@ -27,7 +27,7 @@ The tools and techniques presented in this article can help you develop innovati
 
 The most important step to innovation is [democratizing data](../../innovate/best-practices/data.md), because data that's accessible *and* understandable across the organization fuels innovation.
 
-This step is accelerated through the  use of a common industry-specific data model. Maintaining a common model breaks down silos that stifle communication between applications and limit data democratization. When all employees, processes, and applications operate from a common data model, they can all apply technology to improve products and services.
+This step is accelerated through the use of a common industry-specific data model. Maintaining a common model breaks down silos that stifle communication between applications and limit data democratization. When all employees, processes, and applications operate from a common data model, they can all apply technology to improve products and services.
 
 To extend your common data model, use cloud native tools in Azure:
 

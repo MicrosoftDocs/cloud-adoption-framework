@@ -18,6 +18,7 @@ ms.custom: internal
 Though the impact and benefits of the cloud have been traditionally measured with financial and efficiency metrics, it's become more common for customers to seek understanding about how the cloud can help them to achieve their sustainability and environmental goals. Cloud computing can support your organization to reduce carbon emissions, use resources more efficiently, and lessen your environmental footprint.
 
 Watch the following video to learn more about sustainability and how cloud migration opens the door to sustainable solutions that are good for the planet and good for your business.
+
 <!-- markdownlint-disable MD034 -->
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWx4po]
@@ -29,7 +30,7 @@ Microsoft has been leading in many of these areas. The company has been operatin
 <!-- docutune:casing "Bühler Insights" -->
 <!-- cspell:ignore Bühler -->
 
-[Bühler Group's](https://customers.microsoft.com/story/730776-buhler-group-consumer-goods-azure-iot-germany)'s IoT platform, known as Bühler Insights and powered by Azure IoT Hub, generates vital data so customers can monitor machine performance and generate accurate records for every product batch, helping food producers optimize safety, sustainability, and transparency across the supply chain.
+[Bühler Group's](https://customers.microsoft.com/doclink/730776-buhler-group-consumer-goods-azure-iot-germany)'s IoT platform, known as Bühler Insights and powered by Azure IoT Hub, generates vital data so customers can monitor machine performance and generate accurate records for every product batch, helping food producers optimize safety, sustainability, and transparency across the supply chain.
 
 ## The Microsoft sustainability journey
 

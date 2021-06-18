@@ -1,5 +1,5 @@
 ---
-title: "Cloud maturity model for retail"
+title: Cloud maturity model for retail
 description: Learn about the cloud maturity model for retail organizations. Knowing what stage your organization's at helps guide your cloud adoption journey.
 author: BrianBlanchard
 ms.author: brblanch
@@ -29,13 +29,13 @@ Connected retail organizations are further along on their cloud journey. They've
 
 ## Analytics-driven retail
 
-Analytics-driven retailers focus on establishing a base for future transformation using big data, IoT, and industry-specific AI capabilities. The cloud groundwork that has been laid makes these retailers more data-driven and agile than retailers in earlier stages. It's in this stage that near-term innovation and actualization of the industry priority scenarios and use cases that lead the retail industry become available. These use cases, like personalization and supply chain optimization, become available across the Plan, Buy, Sell, and Move retail domains. Many retailers in this stage establish a new way to think about the data that drives their business. Microsoft recommends adopting a common data model that lets first- and third-party solutions interact with the retail value chain that is represented by their data.
+Analytics-driven retailers focus on establishing a base for future transformation using big data, IoT, and industry-specific AI capabilities. The cloud groundwork that has been laid makes these retailers more data-driven and agile than retailers in earlier stages. It's in this stage that near-term innovation and actualization of the industry priority scenarios and use cases that lead the retail industry become available. These use cases, like personalization and supply chain optimization, become available across the plan, buy, sell, and move retail domains. Many retailers in this stage establish a new way to think about the data that drives their business. Microsoft recommends adopting a common data model that lets first-party and third-party solutions interact with the retail value chain that is represented by their data.
 
 ## Intelligent retail
 
 Intelligent retail organizations are at the highest end of the cloud maturity spectrum. Their domains are fully digitized and they might have started taking advantage of advanced data and AI capabilities. They might also use platform as a service (PaaS) offerings to support mission-critical workloads, like point of sale services and logistics operations. PaaS builds on the IaaS offerings already described to provide a complete cloud-based web services development and deployment environment. This environment includes middleware, development tools, business intelligence (BI) services, database management systems, and more. These retailers reinvent their organizations, maximize their differentiated assets, and fully transform their workforces.
 
-The cloud migration journey might look difficult, but it doesn’t have to happen all at once. With the right partner and a sound strategy, cloud adoption prepares retail organizations for the next generation of technology.
+The cloud migration journey might look difficult, but it doesn't have to happen all at once. With the right partner and a sound strategy, cloud adoption prepares retail organizations for the next generation of technology.
 
 ## Next steps
 
