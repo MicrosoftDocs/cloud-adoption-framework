@@ -50,7 +50,7 @@ Cloud adoption requires technical change, but to digitally transform with the cl
 | Guide | Description |
 | ----- | ----------- |
 | [We want to migrate existing workloads to the cloud.](./migrate.md)                   | This guide is a great starting point if your primary focus is migrating on-premises workloads to the cloud. |
-| [We want to build new products and services in the cloud.](/azure/architecture/reference-architectures/containers/aks-start-here?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)             | This guide can help you prepare to deploy innovative solutions to the cloud.                                       |
+| [We want to build new products and services in the cloud.](./innovate.md)             | This guide can help you prepare to deploy innovative solutions to the cloud.                                       |
 | [We're blocked by environment design and configuration.](./design-and-configuration.md) | This guide provides a quick approach to designing and configuring your environment.                                           |
 
 ## Improve controls
