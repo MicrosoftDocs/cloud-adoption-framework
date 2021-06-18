@@ -245,7 +245,7 @@ Data Residency rules or the requirement to have data close to a user base will s
 
 ## Monitoring
 
-In a Data Landing Zone all the monitoring should be sent to the [Enterprise-Scale Management Subscription](/azure/cloud-adoption-framework/ready/enterprise-scale/management-and-monitoring?branch=scenario-data-management) for analysis.
+In a Data Landing Zone, all the monitoring should be sent to the [Enterprise-Scale Management Subscription](/azure/cloud-adoption-framework/ready/enterprise-scale/management-and-monitoring?branch=scenario-data-management) for analysis.
 
 Azure Storage collects the same kinds of monitoring data as other Azure resources, which are described in [Monitoring Azure resources with Azure Monitor](/azure/azure-monitor/insights/monitor-azure-resource). For more information on the logs and metrics created by Azure Storage, see [Monitoring Azure Blob storage](/azure/storage/blobs/monitor-blob-storage).
 
@@ -268,8 +268,6 @@ The following types of anonymous requests are logged:
 * Failed GET requests with the error code 304 (Not Modified)
 
 All other failed anonymous requests are not logged.
-
-In a Data Landing Zone, all the monitoring is sent to the Data Management Landing Zone for analysis.
 
 >[!IMPORTANT]
 >Set default monitoring policy to audit storage and send logs to the Enterprise Scale Management Subscription.

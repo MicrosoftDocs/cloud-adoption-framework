@@ -140,14 +140,8 @@ items:
           href: sap-data-ingestion.md
         - name: Automated Ingestion Pattern
           href: automated-ingestion-pattern.md
-      - name: Data Science Environment
-        items:
-        - name: Data Science Blueprint
-          href: data-science-blueprint.md
-        - name: Data Science Deployment
-          href: data-science-deployment.md
-        - name: Workflow and MLOps
-          href: data-science-workflow-and-mlops.md
+      - name: Data Science Best Practices
+        href: data-science.md
 
   - name: Featured Azure products
     items:

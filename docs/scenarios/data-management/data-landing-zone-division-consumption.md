@@ -78,7 +78,7 @@ In the worked example, for our Customer Support business unit, we have identifie
 
 ## Inter-Data Landing Zone Consumption
 
-In a harmonized mesh pattern, data assets ingested by one Data Landing Zone can be consumed via other Data Landing Zones as needed. For instance, the central corporate finance function resides in the Corp Data Landing Zone and can run *ad hoc* finance reports by consuming finance data assets distributed across other Data Landing Zones.
+In the scenario where multiple data landing zones are deployed, data assets ingested by one Data Landing Zone can be consumed via other Data Landing Zones as needed. For instance, the central corporate finance function resides in the Corp Data Landing Zone and can run *ad hoc* finance reports by consuming finance data assets distributed across other Data Landing Zones.
 
 ![Inter-Data Landing Zone Consumption](./images/inter-data-landing-zone-consumption.png)
 
