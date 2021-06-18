@@ -30,7 +30,7 @@ Microsoft has been leading in many of these areas. The company has been operatin
 <!-- docutune:casing "Bühler Insights" -->
 <!-- cspell:ignore Bühler -->
 
-[Bühler Group's](https://customers.microsoft.com/doclink/730776-buhler-group-consumer-goods-azure-iot-germany)'s IoT platform, known as Bühler Insights and powered by Azure IoT Hub, generates vital data so customers can monitor machine performance and generate accurate records for every product batch, helping food producers optimize safety, sustainability, and transparency across the supply chain.
+[Bühler Group's](https://customers.microsoft.com/story/730776-buhler-group-consumer-goods-azure-iot-germany)'s IoT platform, known as Bühler Insights and powered by Azure IoT Hub, generates vital data so customers can monitor machine performance and generate accurate records for every product batch, helping food producers optimize safety, sustainability, and transparency across the supply chain.
 
 ## The Microsoft sustainability journey
 
@@ -47,9 +47,9 @@ Read more about how Microsoft's [commitment to a planet-sized challenge](https:/
 
 Focusing on sustainability and protecting limited environmental resources is key to our future, and this focus also benefits business. Today, companies can draw from a broad range of assets and resources that can help them to expand into new geographic areas and develop innovative resource management solutions.
 
-AGL, one of Australia's leading integrated energy companies, built a solution on Azure that remotely manages networked solar batteries. Learn about how the company is [growing an innovative energy partnership across Australia](https://customers.microsoft.com/doclink/847171-agl-energy-azure-en-australia) to help local customers give back to the grid.
+AGL, one of Australia's leading integrated energy companies, built a solution on Azure that remotely manages networked solar batteries. Learn about how the company is [growing an innovative energy partnership across Australia](https://customers.microsoft.com/story/847171-agl-energy-azure-en-australia) to help local customers give back to the grid.
 
-Bee'ah is a sustainability pioneer in the Middle East that believes in technology and sustainability creating solutions for the future. Their services include waste management, environmental consulting, renewable energy, and sustainable transportation. Azure has supported the company to launch the first AI platform to digitize all operations and services. Read more about how the [cloud drives sustainable management and digital innovation](https://customers.microsoft.com/doclink/739894-beeah-sharjah-environment-professional-services-azure-united-arab-emirates) throughout the company's sustainability journey.
+Bee'ah is a sustainability pioneer in the Middle East that believes in technology and sustainability creating solutions for the future. Their services include waste management, environmental consulting, renewable energy, and sustainable transportation. Azure has supported the company to launch the first AI platform to digitize all operations and services. Read more about how the [cloud drives sustainable management and digital innovation](https://customers.microsoft.com/story/739894-beeah-sharjah-environment-professional-services-azure-united-arab-emirates) throughout the company's sustainability journey.
 
 These customer stories demonstrate how prioritizing sustainability and environmental solutions can help organizations to create new business opportunities.
 
@@ -61,7 +61,7 @@ An intentional approach can help organizations to navigate their sustainability 
 
 **Step 2:** Evaluate whether your vendors, partners, and providers are taking steps to reduce their emissions and if these steps align with yours.
 
-**Step 3:** Create an incentive for teams to reduce carbon emissions. The [Microsoft carbon fee: theory and practice](https://download.microsoft.com/documents/csr/environment/microsoft_carbon_fee_guide.pdf) guide can help your organization to drive alignment and accountability across your teams.
+**Step 3:** Create an incentive for teams to reduce carbon emissions. The [Microsoft carbon fee: theory and practice](https://download.microsoft.com/documents/en-us/csr/environment/microsoft_carbon_fee_guide.pdf) guide can help your organization to drive alignment and accountability across your teams.
 
 **Step 4:** Seek out teams in our business to enlist their support and generate ideas for areas for improvement. Build an innovation culture where individuals are participants with a sense of ownership.
 

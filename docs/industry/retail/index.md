@@ -25,7 +25,7 @@ Use the following information to guide you on your journey:
 |--|--|
 | <br> :::image type="icon" source="../../_images/hybrid/cloud-journey.png"::: | <br> **[Microsoft Cloud Adoption Framework for Azure](../../get-started/index.md):** These articles provide guidance for planning a cloud adoption journey. They are the right starting point for business decision makers, technology leaders, solution architects, and infrastructure architects. |
 | <br> :::image type="icon" source="../../_images/hybrid/hybrid-well-architected.png"::: | <br> **[Microsoft Azure Well-Architected Framework](/azure/architecture/framework/):** These articles outline what every retail workload owner should consider when deploying and managing workloads in the cloud. |
-| <br> :::image type="icon" source="../../_images/hybrid/hybrid-architectures.png"::: | <br> **[Retail solutions](/azure/architecture/industries/retail.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json):** These reference solutions can accelerate deployment for a number of common retail architectures. |
+| <br> :::image type="icon" source="../../_images/hybrid/hybrid-architectures.png"::: | <br> **[Retail solutions](/azure/architecture/industries/retail?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json):** These reference solutions can accelerate deployment for a number of common retail architectures. |
 | <br> :::image type="icon" source="../../_images/hybrid/hybrid-skills.png"::: | <br> **[Microsoft Learn modules](/learn/azure/):** Learn the skills to implement, maintain, and support your solution. |
 
 ## Common customer challenges and supporting guidance

@@ -36,7 +36,7 @@ This article shows you how to build out a minimal product for the solution accel
 
 - An Azure account with an active subscription. [Create an account for free.](https://azure.microsoft.com/free/)
 - [Visual Studio 2017 or Visual Studio 2019](https://azure.microsoft.com/downloads/). Ensure you select the **Azure development** workload during installation
-- [Azure PowerShell](/azure/get-started-azureps).
+- [Azure PowerShell](/powershell/azure/get-started-azureps).
 - [Azure CLI](/cli/azure/install-azure-cli).
 - [The Postman application](https://www.postman.com/downloads).
 - [Visual Studio Code](https://code.visualstudio.com/) (optional).
