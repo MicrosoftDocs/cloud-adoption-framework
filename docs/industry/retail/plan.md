@@ -46,8 +46,6 @@ Use the following technology platform scenarios to extend the cloud adoption sce
 
 - **Connected retail:** You can add various migration scenarios to your migration process to help reach a connected retail maturity. Retailers often integrate the hybrid and multicloud scenario to include hosting options in the migration program. For more information, see the [One Migrate approach to migrating the IT portfolio](../../scenarios/index.md) and the[introduction to hybrid and multicloud](../../scenarios/hybrid/index.md).
 
-- **Analytics-driven retail:** The data management and analytics scenario (coming soon) can help centralize, govern, and analyze your complex data portfolio.
-
 - **Intelligent retail:** The modern applications scenario guides citizen developers, professional developers, and DevOps teams as they improve retail workflows and functions.
 
 ## Build on planning basics
