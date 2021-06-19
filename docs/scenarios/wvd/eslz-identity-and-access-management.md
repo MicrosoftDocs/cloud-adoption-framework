@@ -38,8 +38,7 @@ Azure Virtual Desktop has custom Azure roles designed for each functional area. 
   > [!NOTE]
   > Azure Virtual Desktop does not support B2B or Microsoft accounts.
 - The account used for domain join can't have multifactor authentication or other interactive prompts, and there are other requirements. For more information, see [Virtual machine details](/azure/virtual-desktop/create-host-pools-azure-marketplace#virtual-machine-details).
-- Azure Virtual Desktop requires AD DS or Azure AD DS.
-- Choose a hosting strategy for domain services, either Azure AD DS or AD DS.
+- Azure Virtual Desktop requires a hosting strategy for domain services. Choose either [AD DS or Azure AD DS.](azure/active-directory-domain-services/compare-identity-solutions)
 - When joining to an Azure AD DS domain, the account must be part of the Azure AD DC administrators group and the account password must work in Azure AD DS. For more information, see [Virtual machine details](/azure/virtual-desktop/create-host-pools-azure-marketplace#virtual-machine-details).
 - Azure AD DS is a supported option, but there are limitations:
   - You must have password hash synchronization enabled (uncommon when federating Azure AD).
