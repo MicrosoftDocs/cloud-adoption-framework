@@ -3,7 +3,7 @@ title: Review your compute options
 description: Use the Cloud Adoption Framework for Azure to learn how to determine the compute requirements for hosting your workloads.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 05/15/2019
+ms.date: 06/21/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
