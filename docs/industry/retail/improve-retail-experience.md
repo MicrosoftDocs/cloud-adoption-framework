@@ -88,15 +88,15 @@ The [`ML_Model_Building`](https://github.com/microsoft/Azure-Synapse-Retail-Reco
 
 ## Customer examples
 
-![Tractor Supply Company](../../_images/innovate/tractor-supply-company.png)
+### Tractor Supply Company
 
 **Tractor Supply Company to expand its relationship with Microsoft:** Tractor Supply Company, the largest rural lifestyle retailer in the United States, announced the selection of Microsoft as its preferred and strategic cloud provider to support technology architecture and modernization for the company's e-commerce website and enterprise analytics platform.
 
 "As Tractor Supply is committed to providing legendary service to our customers, this partnership with Microsoft to enhance our analytics platform will deliver insights that help us better understand our customers, while offering products and services that truly meet their needs," said Rob Mills, Tractor Supply's executive vice president and chief technology, digital commerce, and strategy officer. "We believe that this collaboration with Microsoft will help us drive innovation and stay nimble when responding to market changes and our customers' ever-evolving needs."
 
-[Read the full story here.](https://corporate.tractorsupply.com/newsroom/news-releases/news-releases-details/2020/Tractor-Supply-Company-To-Expand-Relationship-With-Microsoft/default.aspx)
+[Read the full Tractor Supply Company story.](https://corporate.tractorsupply.com/newsroom/news-releases/news-releases-details/2020/Tractor-Supply-Company-To-Expand-Relationship-With-Microsoft/default.aspx)
 
-![Starbucks logo](../../_images/innovate/starbucks.png)
+### Starbucks
 
 **Starbucks turns to technology to brew up a more personal connection with its customers:** Starbucks has been using reinforcement learning technology, a type of machine learning in which a system learns to make decisions in complex, unpredictable environments based upon external feedback, to provide a more personalized experience for customers who use the Starbucks mobile application.
 
@@ -104,7 +104,7 @@ Within the application, customers receive tailor-made order suggestions generate
 
 "Everything we do in technology is centered around the customer connection in the store, the human connection, one person, one cup, one neighborhood at a time." - Gerri Martin-Flickinger, Starbucks executive vice president and chief technology officer.
 
-[Read the full story here.](https://news.microsoft.com/transform/starbucks-turns-to-technology-to-brew-up-a-more-personal-connection-with-its-customers/)
+[Read the full Starbucks story.](https://news.microsoft.com/transform/starbucks-turns-to-technology-to-brew-up-a-more-personal-connection-with-its-customers/)
 
 ## Next steps
 
