@@ -33,6 +33,18 @@ No single solution fits all technical environments. A few Azure landing zone imp
 
  Whether you're looking to deploy your first production application to Azure or you're operating a complex portfolio of tech platforms & workloads, the Azure landing zone implementation options can be tailored to your needs.
 
+## Azure Landing Zone accelerator
+
+For the majority of organizations, the **Azure Landing Zone conceptual architecture** shown below represents the destination in their cloud adoption journey - a mature, scaled-out target architecture intended to help organizations operate successful cloud environments that drive their business whilst maintaining best practice security and governance.
+
+This conceptual architecture represents scale and maturity decisions based on a wealth of lessons learned and feedback from customers who have adopted Azure as part of their digital estate.
+
+![Azure Landing Zone conceptual architecture diagram](../enterprise-scale/media/ns-arch-cust-expanded.png)
+
+For organizations where this conceptual architecture fits with the operating model and resource structure they plan to use, there is a ready-made deployment experience available which we call the **Azure Landing Zone accelerator**.
+ 
+[![DTA-Button-ALZ](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale%2Fmain%2Fdocs%2Freference%2Fadventureworks%2FarmTemplates%2Fes-hubspoke.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale%2Fmain%2Fdocs%2Freference%2Fadventureworks%2FarmTemplates%2Fes-portal.json)
+
 ## Next steps
 
 When you're choosing the right Azure landing zone implementation option, you should understand the [Azure landing zone design areas](./design-areas.md).
