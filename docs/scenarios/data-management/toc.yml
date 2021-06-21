@@ -140,9 +140,12 @@ items:
           href: sap-data-ingestion.md
         - name: Automated Ingestion Pattern
           href: automated-ingestion-pattern.md
-      - name: Data Science Best Practices
-        href: data-science.md
-
+      - name: Data Science Environment
+        items:
+        - name: Data Science Best Practices
+          href: data-science-best-practices.md
+        - name: Azure Machine Learning
+          href: azure-machine-learning.md
   - name: Featured Azure products
     items:
     - name: ARM Templates
