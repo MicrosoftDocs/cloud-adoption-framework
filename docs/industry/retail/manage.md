@@ -61,7 +61,7 @@ To reduce overhead and minimize operational burden:
 
 - Consider platform as a service (PaaS)-based alternatives to modernize many of your shared platforms. This approach is common for platforms like SQL databases or virtual desktop infrastructure.
 - Evaluate options to use software as a service (SaaS)-based retail industry applications from the [Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps?search=retail&page=1).
-- Follow Cloud Adoption Framework scenarios to automate tasks for complex platforms, such as [SAP](../../scenarios/sap/index.md) or [Windows Virtual Desktop](../../scenarios/wvd/index.md).
+- Follow Cloud Adoption Framework scenarios to automate tasks for complex platforms, such as [SAP](../../scenarios/sap/index.md) or [Azure Virtual Desktop](../../scenarios/wvd/index.md) (formerly Windows Virtual Desktop).
 
 ## Enhanced baseline
 
