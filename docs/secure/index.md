@@ -26,7 +26,7 @@ The Cloud Adoption Framework provides security guidance for this security journe
 
 ## Mapping to concepts, frameworks, and standards
 
-Security itself is both a standalone organizational discipline and a quality/attribute that is integrated or overlaid on other disciplines, which make it difficult to precisely define and map in detail. The security industry uses many different frameworks to capture risk, plan controls, and operate. Here is a quick summary of how the disciplines in the CAF Secure methodology disciplines relates to other security concepts and guidance:
+Security itself is both a standalone organizational discipline and a quality/attribute that is integrated or overlaid on other disciplines, which make it difficult to precisely define and map in detail. The security industry uses many different frameworks to capture risk, plan controls, and operate. Here is a quick summary of how the disciplines in the CAF Secure methodology relate to other security concepts and guidance:
 
 - **Zero trust:** Microsoft believes all security disciplines should follow the zero-trust principles of *assume breach*, *verify explicitly*, and *use least privilege access*. These principles underpin any sound [security strategy](../strategy/define-security-strategy.md) and also must be balanced with *business enablement* goals. The first and most visible part of zero trust is in access control, so it's highlighted in the description of access control security discipline.
 
