@@ -3,7 +3,7 @@ title: "Azure Enterprise Scale Analytics platform automation and devops Overview
 description: Enterprise-Scale platform automation and devops Overview
 author: abdale
 ms.author: hamoodaleem
-ms.date: 03/05/2021
+ms.date: 06/21/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready

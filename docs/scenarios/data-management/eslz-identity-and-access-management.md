@@ -1,6 +1,6 @@
 ---
-title: Azure Enterprise-Scale identity and access management for 'Enterprise Scale Analytics and AI'"
-description: Describe how this enterprise-scale scenario can improve identity and access management of 'Enterprise Scale Analytics and AI'
+title: Azure Enterprise-Scale identity and access management for 'data management and analytics'"
+description: Describe how this enterprise-scale scenario can improve identity and access management of 'data management and analytics'
 author: mboswell
 ms.author: mboswell
 ms.date: 09/11/2020
@@ -9,7 +9,8 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Identity and access management for SAP 'data management and analytics'
+
+# Identity and access management for 'data management and analytics'
 
 This article builds on a number of considerations and recommendations defined in the Azure landing zone article [enterprise-scale design area for identity and access management](../../ready/enterprise-scale/identity-and-access-management.md). Following the guidance in this article will help examine design considerations and recommendations that relate to identity and access management specific to the deployment of an data management and analytic platform on Microsoft Azure. Since data management and analytics is an mission-critical platform, the guidance on the enterprise-scale design areas should also be included in your design.
 
@@ -46,7 +47,12 @@ For a successful *data integration* and *product* deployment purposes, within a 
 
 ## Managing access to data
 
-Granting access to datasets should be done only on an [ACL level of the data lakes](/azure/storage/blobs/data-lake-storage-access-control-model) to allow for "finer grain" access. Most of our native services such as Azure Machine Learning, Azure Synapse Analytics and Azure Databricks already support this and more services will follow. This also gives a single pane of glass and allows reviewing access rights in a holistic way inside the Azure Graph.
+Managing access to data is should be done using Azure AD Groups and by adding user principle names or service principle names into these Azure AD Groups. This will allow for finer grain access by adding these groups to the services and granting permissions to the group. In the case of datasets residing in Azure Data Lake(s) then you should consider [Access control lists (ACLs)](/azure/storage/blobs/data-lake-storage-access-control-model?branch=main). Using Azure AD passthrough, with ACLs, is supported by most of our native services such as Azure Machine Learning, Azure Synapse Analytics and Azure Databricks  and more services will follow. 
+
+This also gives a single pane of glass and allows reviewing access rights in a holistic way inside the Azure Graph.
+
+More details on how to drive a security for Data Management Landing Zones and Data Landing Zones is covered under this constructions sets Governance Disciplines[Security, governance, and compliance for 'data management and analytics' Enterprise-Scale scenario](eslz-security-governance-and-compliance.md)
+
 
 <!--Not adding this as it is not GA yet.
  In addition to managing access using AAD identities using RBACs and ACLs, ADLS Gen2 also supports using SAS tokens and storage keys for managing access to data in your Gen2 account. In order to make sure that every request to Storage Account is authorized through AAD, there is a new feature (currently in preview) of disabling Key based access that permits to disallow requests to the specific storage account in case the requests were authorized with Shared Key. CAE Team is recommending enabling this feature once GA to enforce AAD level access. -->

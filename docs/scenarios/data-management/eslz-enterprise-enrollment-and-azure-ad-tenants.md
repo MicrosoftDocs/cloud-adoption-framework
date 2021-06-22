@@ -1,15 +1,15 @@
 ---
-title: Azure Enterprise-Scale enterprise enrollment and Azure AD tenants for 'Enterprise Scale Analytics and AI'
-description: Describe how this enterprise-scale scenario can improve enterprise enrollment and Azure AD tenants of 'Enterprise Scale Analytics and AI'
+title: Azure Enterprise-Scale enterprise enrollment and Azure AD tenants for 'data management and analytics'
+description: Describe how this enterprise-scale scenario can improve enterprise enrollment and Azure AD tenants of 'data management and analytics'
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 09/11/2020
+ms.date: 06/21/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Enterprise enrollment and Azure AD tenants for 'Enterprise Scale Analytics and AI' Enterprise-Scale scenario
+# Enterprise enrollment and Azure AD tenants for 'data management and analytics' Enterprise-Scale scenario
 
 Azure landing zones for 'data management and analytics' do not have any specific considerations or recommendations which would impact enterprise enrollment or Active Directory tenant decisions.
 

@@ -1,6 +1,6 @@
 ---
-title: "Azure Enterprise Scale Analytics management and monitoring for 'Enterprise Scale Analytics and AI'"
-description: Describe how this enterprise-scale scenario can improve management and monitoring of 'Enterprise Scale Analytics and AI'
+title: "Azure Enterprise Scale Analytics management and monitoring for 'data management and analytics'"
+description: Describe how this enterprise-scale scenario can improve management and monitoring of 'data management and analytics'
 author: christophermschmidt
 ms.author: chrschm
 ms.date: 06/02/2021
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Management and monitoring for 'Enterprise Scale Analytics and AI' Enterprise-Scale scenario
+# Management and monitoring for 'data management and analytics' Enterprise-Scale scenario
 
 This article builds on a number of considerations and recommendations defined in the Azure landing zone article [enterprise-scale design area for management and monitoring](/azure/cloud-adoption-framework/ready/enterprise-scale/management-and-monitoring). Following the guidance in this article will explore how to build on those principles to operationally maintain an Azure data analytics estate. 
 

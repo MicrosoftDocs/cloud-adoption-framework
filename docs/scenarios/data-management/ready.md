@@ -1,5 +1,5 @@
 ---
-title: "Landing Zone review for 'Enterprise Scale Analytics and AI' in Azure"
+title: "Landing Zone review for 'data management and analytics' in Azure"
 description: Describe the scenario's impact on Azure Landing Zone design
 author: BrianBlanchard
 ms.author: brblanch
@@ -9,11 +9,11 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Azure Landing Zone review for 'Enterprise Scale Analytics and AI'
+# Azure Landing Zone review for 'data management and analytics'
 
 The Enterprise Scale Analytics and AI construction set builds upon Enterprise Landing Zones for ease of deployment and governance. The principle purpose of the Enterprise Landing Zones is to ensure that when an application or workload lands on Azure, the required "plumbing" is already in place, providing greater agility and compliance with enterprise security and governance requirements. This needs to be in-place before deploying your first data management and analytics landing zones.
 
-## 'Enterprise Scale Analytics and AI' evaluation
+## 'data management and analytics' evaluation
 
 Often Enterprises seek clarity or prescriptive guidance before starting to carve out the technical details for a specific use case, project or an End-to-End Data Analytics & AI platform. This can be a stumbling block as how to ensure that all the strategic principles not only in the scope of current use case but also required for the formulation of the overall Data Strategy are considered.
 
@@ -60,7 +60,7 @@ If you have a partial implementation of Enterprise Scale Landing Zones then it i
 - There is an automation process in place for managing AD groups
 - There is an automation process in place for role assignments
 
-So, keeping this challenge in view and speed up the delivery of end-to-end insights journey, Microsoft has developed a prescriptive offering in the context of an Enterprise Scale Analytics and AI which marries up perfectly to the key themes discussed in [Develop a plan for 'Enterprise Scale Analytics and AI'](plan.md)
+So, keeping this challenge in view and speed up the delivery of end-to-end insights journey, Microsoft has developed a prescriptive offering in the context of an Enterprise Scale Analytics and AI which marries up perfectly to the key themes discussed in [Develop a plan for 'data management and analytics'](plan.md)
 
 Enterprise Scale Analytics and AI requires an understanding of landing zones and makes use of Infrastructure-as-code to deploy end to end solution templates. These solution templates are customizable and are a starter for most data management and analytics scenarios.
 
@@ -70,7 +70,7 @@ Enterprise Scale Analytics and AI requires an understanding of landing zones and
 
 The Enterprise Scale Analytics and AI architecture was designed with the same strategic principles in mind as mentioned above. To deliver effectively the Enterprise Scale Analytics and AI moves teams from working horizontally across each tier such as Ingest, Processing, Analysis, Consumption and Visualization to vertical Data Landing Zone Groups coexisting together in an agile team. Platform teams such as Data Platform Ops and Platform Ops are grouped together under a common Platform Group.
 
-## 'Enterprise Scale Analytics and AI' Azure Landing Zone acceleration
+## 'data management and analytics' Azure Landing Zone acceleration
 
 Enterprise Scale Analytics and AI requires an understanding of landing zones and makes use of Infrastructure-as-code to deploy end to end solution templates. These solution templates are customizable and are a starter for most data management and analytics scenarios.
 
@@ -78,15 +78,15 @@ Enterprise Scale Analytics and AI requires an understanding of landing zones and
 - [Choose a landing zone option](/azure/cloud-adoption-framework/ready/landing-zone/choose-landing-zone-option)
 - [Refactoring Landing Zones](/azure/cloud-adoption-framework/ready/landing-zone/refactor)
 
-## Next step: Assess for 'Enterprise Scale Analytics and AI'
+## Next step: Assess for 'data management and analytics'
 
 The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
 
-- [Plan for 'Enterprise Scale Analytics and AI'](./plan.md)
+- [Plan for 'data management and analytics'](./plan.md)
 - [Review your environment or Azure Landing Zone(s)](./ready.md)
-- [Assess for 'Enterprise Scale Analytics and AI' migration](./migrate-assess.md)
-- [Migrate 'Enterprise Scale Analytics and AI'](./migrate-deploy.md)
-- [Release 'Enterprise Scale Analytics and AI' to production](./migrate-release.md)
-- [Innovate with 'Enterprise Scale Analytics and AI'](./innovate.md)
-- [Govern 'Enterprise Scale Analytics and AI'](./govern.md)
-- [Manage 'Enterprise Scale Analytics and AI'](./manage.md)
+- [Assess for 'data management and analytics' migration](./migrate-assess.md)
+- [Migrate 'data management and analytics'](./migrate-deploy.md)
+- [Release 'data management and analytics' to production](./migrate-release.md)
+- [Innovate with 'data management and analytics'](./innovate.md)
+- [Govern 'data management and analytics'](./govern.md)
+- [Manage 'data management and analytics'](./manage.md)

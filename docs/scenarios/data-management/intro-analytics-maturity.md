@@ -11,14 +11,14 @@ ms.subservice: overview
 
 # Introduction to analytics maturity in the cloud
 
-Describe 'Enterprise Scale Analytics and AI' in a way that non-technical audiences can understand.
+Describe 'data management and analytics' in a way that non-technical audiences can understand.
 
 ![Analytics scope](./media/analytics.png)
 
-## 'Enterprise Scale Analytics and AI' responsibilities
+## 'data management and analytics' responsibilities
 
-Describe who is responsible for 'Enterprise Scale Analytics and AI'. See functions in the organize section & link to those functions for more details on each role. If there is a function that is not yet represented, lets discuss adding that function or augmenting one that is already there.
+Describe who is responsible for 'data management and analytics'. See functions in the organize section & link to those functions for more details on each role. If there is a function that is not yet represented, lets discuss adding that function or augmenting one that is already there.
 
-## 'Enterprise Scale Analytics and AI' in Azure
+## 'data management and analytics' in Azure
 
 Describe the tools used to manage data & how they help

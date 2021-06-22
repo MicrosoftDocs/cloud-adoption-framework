@@ -13,9 +13,9 @@ ms.subservice: ready
 
 In the late 80's we saw the introduction of the data warehouse (gen 1) which consolidated disparate data sources from across the enterprise. In the late 2000's came Gen 2 with the introduction of the big data ecosystem with the likes of Hadoop and the data lake. In the mid 2010's we had the cloud data platform which is similar to previous generations but with the introduction of the ingestion of streaming data i.e. Kappa/Lambda architectures and today, early 2020's we have the concept of the data lake house, data mesh, data fabric and data centric operational patterns.
 
-Understanding this evolution and looking forward, many organizations still have the current centralized monolithic platform (Gen 1). This works well up to a point, but you start running into bottlenecks due to interdependent processes, tightly coupled components, hyperspecialized teams and thousands of unmaintainable ETL jobs but it is a well-trodden path for many organizations. 
+Understanding this evolution and looking forward, many organizations still have the current centralized monolithic platform (Gen 1). This works well up to a point, but you start running into bottlenecks due to interdependent processes, tightly coupled components, hyperspecialized teams and thousands of unmaintainable ETL jobs but it is a well-trodden path for many organizations.
 
-The Data Warehouse and Data Lake is still hugely valuable and will play an important role in your overall architecture… But we're just highlighting some of the struggles that inevitably come forth when utilizing these traditional practices for any period of time, especially in a large complex organisation, where data sources and requirements change, teams change, outputs change, and so on…
+The Data Warehouse and Data Lake is still hugely valuable and will play an important role in your overall architecture, but we're just highlighting some of the struggles that inevitably come forth when utilizing these traditional practices for any period of time, especially in a large complex organization, where data sources and requirements change, teams change, outputs change, and so on.
 
 And even with the introduction of Cloud, most of the time, the centralized approach to Data Management remains largely unchanged.
 

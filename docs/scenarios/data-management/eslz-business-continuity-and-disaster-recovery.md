@@ -1,6 +1,6 @@
 ---
-title: Azure Enterprise-Scale business continuity and disaster recovery for 'Enterprise Scale Analytics and AI'
-description: Describe how this enterprise-scale scenario can improve business continuity and disaster recovery of 'Enterprise Scale Analytics and AI'
+title: Azure Enterprise-Scale business continuity and disaster recovery for 'data management and analytics'
+description: Describe how this enterprise-scale scenario can improve business continuity and disaster recovery of 'data management and analytics'
 author: christophermschmidt
 ms.author: chrschm
 ms.date: 06/03/2021
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Business continuity and disaster recovery for 'Enterprise Scale Analytics and AI' Enterprise-Scale scenario
+# Business continuity and disaster recovery for 'data management and analytics' Enterprise-Scale scenario
 
 When architecting any cloud service, you must consider your availability requirements and how to respond to potential interruptions in the service. An issue could be localized to the specific instance or even region-wide, so having a plan for both is important. Depending on the recovery time objective (RTO) and the recovery point objective (RPO) SLAs for your workload, you might choose an aggressive strategy for high availability and disaster recovery. 
 

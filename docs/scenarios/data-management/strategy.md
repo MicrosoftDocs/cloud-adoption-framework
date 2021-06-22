@@ -1,6 +1,6 @@
 ---
-title: "Strategy for 'Enterprise Scale Analytics and AI' adoption in Azure"
-description: Integrate 'Enterprise Scale Analytics and AI' into your cloud adoption strategy
+title: "Strategy for 'data management and analytics' adoption in Azure"
+description: Integrate 'data management and analytics' into your cloud adoption strategy
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/22/2021
@@ -9,11 +9,11 @@ ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---
 
-# Strategic impact of 'Enterprise Scale Analytics and AI'
+# Strategic impact of 'data management and analytics'
 
 Best practice encourages customers to create a single centralized cloud adoption strategy, using the [Cloud Adoption Framework's Strategy methodology](../../strategy/index.md). If you haven't already, use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record your cloud adoption strategy.
 
-This article will help expose a number of considerations regarding 'Enterprise Scale Analytics and AI' that will have an impact on your broader strategy.
+This article will help expose a number of considerations regarding 'data management and analytics' that will have an impact on your broader strategy.
 
 ## 'data management and analytics' motivations
 
@@ -182,15 +182,15 @@ There are couple of key strategic processes which would help in delivering succe
 Final Data product delivery against the set-out success criteria in a standardized & structured way is going to validate the above iterative framework. Additionally, taking the learning and continuously innovating will help in building business confidence and widening out of the Data Strategy strategic goals, for clearer and quicker adoption across
 business.
 
-## Next step: Plan for 'Enterprise Scale Analytics and AI'
+## Next step: Plan for 'data management and analytics'
 
 The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
 
-- [Plan for 'Enterprise Scale Analytics and AI'](./plan.md)
+- [Plan for 'data management and analytics'](./plan.md)
 - [Review your environment or Azure Landing Zone(s)](./ready.md)
-- [Assess for 'Enterprise Scale Analytics and AI' migration](./migrate-assess.md)
-- [Migrate 'Enterprise Scale Analytics and AI'](./migrate-deploy.md)
-- [Release 'Enterprise Scale Analytics and AI' to production](./migrate-release.md)
-- [Innovate with 'Enterprise Scale Analytics and AI'](./innovate.md)
-- [Govern 'Enterprise Scale Analytics and AI'](./govern.md)
-- [Manage 'Enterprise Scale Analytics and AI'](./manage.md)
+- [Assess for 'data management and analytics' migration](./migrate-assess.md)
+- [Migrate 'data management and analytics'](./migrate-deploy.md)
+- [Release 'data management and analytics' to production](./migrate-release.md)
+- [Innovate with 'data management and analytics'](./innovate.md)
+- [Govern 'data management and analytics'](./govern.md)
+- [Manage 'data management and analytics'](./manage.md)

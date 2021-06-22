@@ -1,6 +1,6 @@
 ---
-title: Building 'Enterprise Scale Analytics and AI' capabilities in Azure
-description: Building 'Enterprise Scale Analytics and AI' capabilities
+title: Building 'data management and analytics' capabilities in Azure
+description: Building 'data management and analytics' capabilities
 author: pratimdas
 ms.author: prda # Microsoft employees only
 ms.date: 01/27/2021
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Building 'Enterprise Scale Analytics and AI' capabilities
+# Building 'data management and analytics' capabilities
 
 Now that you have your key projects mapped with business outcomes and calibrated with impact and complexity, and your baseline, you can start looking at building the capability to deliver them.
 
@@ -55,14 +55,14 @@ Here we see the entire company using a data-driven culture, frameworks and stand
 
 Figure 3: Maturity evolution of organization across reporting, deriving insights & decision support.
 
-## Next step: Assess for 'Enterprise Scale Analytics and AI'
+## Next step: Assess for 'data management and analytics'
 
 The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
 
 * [Review your environment or Azure Landing Zone(s)](./ready.md)
-* [Assess for 'Enterprise Scale Analytics and AI' migration](./migrate-assess.md)
-* [Migrate 'Enterprise Scale Analytics and AI'](./migrate-deploy.md)
-* [Release 'Enterprise Scale Analytics and AI' to production](./migrate-release.md)
-* [Innovate with 'Enterprise Scale Analytics and AI'](./innovate.md)
-* [Govern 'Enterprise Scale Analytics and AI'](./govern.md)
-* [Manage 'Enterprise Scale Analytics and AI'](./manage.md)
+* [Assess for 'data management and analytics' migration](./migrate-assess.md)
+* [Migrate 'data management and analytics'](./migrate-deploy.md)
+* [Release 'data management and analytics' to production](./migrate-release.md)
+* [Innovate with 'data management and analytics'](./innovate.md)
+* [Govern 'data management and analytics'](./govern.md)
+* [Manage 'data management and analytics'](./manage.md)
