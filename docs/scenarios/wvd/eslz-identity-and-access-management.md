@@ -53,7 +53,7 @@ Azure Virtual Desktop has custom Azure roles designed for each functional area. 
 - When using smart cards, a direct connection (line of sight) with an Active Directory domain controller for Kerberos authentication is required. For more information, see [Configure a Kerberos Key Distribution Center proxy](/azure/virtual-desktop/key-distribution-center-proxy).
 - Using Windows Hello for Business requires the hybrid certificate trust model to be compatible with Azure Virtual Desktop. For more information, see [Hybrid Azure AD joined certificate trust deployment](/windows/security/identity-protection/hello-for-business/hello-hybrid-cert-trust).
 - When using Windows Hello for Business or smart-card authentication, the initiating client must be able to communicate with the domain controller because these authentication methods use Kerberos to sign in. For more information, see [Supported authentication methods](/azure/virtual-desktop/authentication).
-- Single sign-on can improve user experience but it requires additional configuration and is only supported using Active Directory Federation Services. For more information, see [Configure AD FS Single sign-on for Azure Virtual Desktop.](/azure/virtual-desktop/configure-adfs-sso)
+- Single sign-on can improve user experience, but it requires additional configuration and is only supported using Active Directory Federation Services. For more information, see [Configure AD FS Single sign-on for Azure Virtual Desktop.](/azure/virtual-desktop/configure-adfs-sso).
 
 ## Design recommendations
 
