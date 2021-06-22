@@ -1,0 +1,81 @@
+items:
+  - name: Retail industry scenario - Microsoft Cloud Adoption Framework for Azure
+    href: index.md
+    pdf_name: Retail industry scenario - Microsoft Cloud Adoption Framework for Azure
+
+  - name: Overview
+    items:
+    - name: Cloud maturity for the retail industry
+      href: retail-cloud-maturity.md
+    - name: Market context
+      href: retail-context.md
+    - name: Azure for Retail overview
+      href: retail-azure-advantages.md
+
+  - name: Strategic impact
+    items:
+    - name: Understand retail organizations
+      href: organize.md
+    - name: Retail specific strategies
+      href: strategy.md
+    - name: Personalization
+      href: retail-personalization.md
+    - name: Omnichannel optimization
+      href: retail-omnichannel-optimization.md
+    - name: Supply chain optimization
+      href: retail-supply-chain-optimization.md
+    - name: Building management optimization
+      href: retail-building-management-optimization.md
+
+  - name: Technical planning
+    items:
+    - name: Cloud adoption plan
+      href: plan.md
+    - name: Initial organizational alignment
+      href: organize.md
+  - name: Prepare your environment
+    items:
+    - name: Azure landing zones
+      href: ready.md
+  - name: Migrate existing workloads
+    href: migrate.md
+  - name: Innovate in the cloud
+    items:
+    - name: Overview
+      href: innovate.md
+    - name: Improve retail experience
+      href: improve-retail-experience.md
+  - name: Govern your portfolio
+    items:
+    - name: Overview
+      href: govern.md
+    - name: Unified operations
+      href: /azure/cloud-adoption-framework/scenarios/hybrid/unified-operations?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json
+  - name: Manage your assets
+    href: manage.md
+  - name: Retail solutions
+    items:
+    - name: Overview
+      href: /azure/architecture/industries/retail?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json
+    - name: Build a real-time recommendation API on Azure
+      href: /azure/architecture/reference-architectures/ai/real-time-recommendation?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json
+    - name: Movie recommendations on Azure
+      href: /azure/architecture/example-scenario/ai/movie-recommendations-with-machine-learning?bc=%2Fazure%2Fcloud-adoption-framework%2F_bread%2Ftoc.json&toc=%2Fazure%2Fcloud-adoption-framework%2Findustry%2Fretail%2Ftoc.json
+    - name: Scalable personalization on Azure
+      href: /azure/architecture/example-scenario/ai/scalable-personalization-with-content-based-recommendation-system?bc=%2Fazure%2Fcloud-adoption-framework%2F_bread%2Ftoc.json&toc=%2Fazure%2Fcloud-adoption-framework%2Findustry%2Fretail%2Ftoc.json
+    - name: Data warehousing and analytics
+      href: /azure/architecture/example-scenario/data/data-warehouse?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json
+    - name: Stream processing with Azure Databricks
+      href: /azure/architecture/reference-architectures/data/stream-processing-databricks?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json
+    - name: Stream processing with Azure Stream Analytics
+      href: /azure/architecture/reference-architectures/data/stream-processing-stream-analytics?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json
+    - name: E-commerce front end
+      href: /azure/architecture/example-scenario/apps/ecommerce-scenario?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json
+    - name: Intelligent product search engine for e-commerce
+      href: /azure/architecture/example-scenario/apps/ecommerce-search?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json
+    - name: Magento e-commerce platform in Azure Kubernetes Service
+      href: /azure/architecture/example-scenario/magento/magento-azure?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json
+    - name: Scalable order processing
+      href: /azure/architecture/example-scenario/data/ecommerce-order-processing?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json
+    - name: Buy online, pickup in store (BOPIS)
+      href: /azure/architecture/example-scenario/iot/vertical-buy-online-pickup-in-store?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json
