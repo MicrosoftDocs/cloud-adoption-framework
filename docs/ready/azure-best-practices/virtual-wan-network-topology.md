@@ -61,9 +61,11 @@ Explore key design considerations and recommendations surrounding virtual wide a
 
 - ExpressRoute Local is supported with Azure Virtual WAN hubs if the spoke VNets connected to a Virtual WAN hub are in the same region as the Virtual WAN hub.
 
-- Azure Firewall Manager, now generally available, allows the deployment of Azure Firewall in the Virtual WAN hub. Review the [Azure Firewall Manager overview](/azure/firewall-manager/overview) of secured virtual hubs and the latest [constraints](/azure/firewall-manager/overview#known-issues).
+- Azure Firewall Manager, now generally available, allows the deployment of Azure Firewall in the Virtual WAN hub (known as Secured Virtual Hubs). Review the [Azure Firewall Manager overview](/azure/firewall-manager/overview) of secured virtual hubs and the latest [constraints](/azure/firewall-manager/overview#known-issues).
 
 - Virtual WAN hub-to-hub traffic via Azure Firewall is currently not supported when the Azure Firewall is deployed inside of the Virtual WAN hub itself (secured virtual hub). Several workarounds exist depending on your requirements, including placing the [Azure Firewall in a spoke virtual network](/azure/virtual-wan/scenario-route-through-nva), or using NSGs for traffic filtering.
+
+- The Virtual WAN portal experience requires that all Virtual WAN resources are deployed into the same Resource Group together.
 
 - An Azure DDoS Protection standard protection plan can be shared across all VNets in a single Azure AD Tenant to protect resources with public IP addresses. For more information, see [Azure DDoS Protection Standard](/azure/ddos-protection/ddos-protection-overview).
 
@@ -86,6 +88,8 @@ Explore key design considerations and recommendations surrounding virtual wide a
  *Figure 3: Sample network topology.*
 
 - Use a Virtual WAN hub per Azure region to connect multiple landing zones together across Azure regions via a common global Azure Virtual WAN.
+
+- Deploy all Virtual WAN resources into a single Resource Group in the Connectivity subscription, including when deploying across multiple regions.
 
 - Use [virtual hub routing](/azure/virtual-wan/about-virtual-hub-routing) features to further segment traffic between VNets and branches.
 
@@ -110,6 +114,8 @@ Explore key design considerations and recommendations surrounding virtual wide a
 - Create Azure Virtual WAN and Azure Firewall resources within the connectivity subscription.
 
 - Don't create more than 500 virtual network connections per Virtual WAN virtual hub.
+
+  - If more than 500 virtual network connections per Virtual WAN virtual hub are required, deploy an additional Virtual WAN virtual hub in the same region as part of the same Virtual WAN and same Resource Group.
 
 - Plan your deployment carefully, and ensure that your network architecture is within the [Azure Virtual WAN limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#virtual-wan-limits).
 

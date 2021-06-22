@@ -124,6 +124,8 @@ The following figure shows this topology.
 
 - When your organization requires hub-and-spoke network architectures across more than two Azure regions and global transit connectivity between landing zones, virtual networks across Azure regions are required. You can implement this architecture by interconnecting central-hub virtual networks with global virtual network peering and using UDRs and NVAs to enable global transit routing. Because the complexity and management overhead are high, it's recommended to evaluate a global transit network architecture with Virtual WAN.
 
+- Deploy each region's hub network resources into separate Resource Groups located in each of the regions being deployed to.
+
 - Use [Azure Monitor for Networks (preview)](/azure/azure-monitor/insights/network-insights-overview) to monitor the end-to-end state of your networks on Azure.
 
 - When you connect spoke virtual networks to the central hub virtual network, there are two [limits](/azure/azure-resource-manager/management/azure-subscription-service-limits) that must be considered:
