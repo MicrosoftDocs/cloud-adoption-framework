@@ -28,9 +28,10 @@ The pattern relies upon distribution of the data and its pipelines across [domai
 
 ## Critical Design Areas
 
-Enterprise Scale Analytics and AI considers six critical design areas that help translate organizational requirements to Azure constructs and capabilities. Lack of attention to these design areas typically creates dissonance and friction between the enterprise-scale definition and Azure adoption. Enterprise Scale Analytics and AI uses these design areas to help address the mismatch between on-premises and cloud-design infrastructure as well as data monoliths:
+Enterprise Scale Analytics and AI considers five critical design areas that help translate organizational requirements to Azure constructs and capabilities. Lack of attention to these design areas typically creates dissonance and friction between the enterprise-scale definition and Azure adoption. Enterprise Scale Analytics and AI uses these design areas to help address the mismatch between on-premises and cloud-design infrastructure as well as data monoliths:
 
 1. [Data Management](#data-management)
+1. [Data Landing Zone](#data-laanding-zone)
 1. [Data Integrations](#data-integrations)
 1. [Data Products](#data-products)
 1. [Data Platform Operational Excellence](#data-platform-operational-excellence)
@@ -53,12 +54,13 @@ Enterprise Scale Analytics and AI considers six critical design areas that help 
 >- US East 2
 >- US West 2
 
-### Data Management
+### Data Management Landing Zone
 
 At the heart of Enterprise Scale Analytics and AI is its data management capability which is enabled through the Data Management Landing Zone.
 
 :::image type="content" source="images/data-management-overview-1.png" alt-text="Data Management Overview":::
 
+*Figure 1: Data Management Overview*
 
 The **Data Management Landing Zone**, which is a subscription, is responsible for the governance of the platform and allows for the following capabilities:
 
@@ -73,10 +75,18 @@ The **Data Management Landing Zone**, which is a subscription, is responsible fo
 
 For further reading, see [Data Management Landing Zone](data-management-landing-zone.md).
 
-The **Data Landing Zone(s)**, on the other hand, are subscriptions which may host multiple analytics and AI solutions relevant to their respective  domain. These subscriptions within the Enterprise Scale Analytics and AI construction set represent primary business groups, integrators, and enablers as these groups own, operate, and often provide innate understanding for the source systems. A few important points to keep in mind about Data Landing Zones:
+### Data Landing Zone
 
-- Ingestion capabilities exist in each Data Landing Zone to allow subject matter experts to pull in data sources from third-party clouds or on-premises environments if they wish to do so.
-- Data Landing Zone are instantiated based on the Data Landing Zone core architecture, including all key capabilities to host an analytics platform.
+The **Data Landing Zone(s)**, on the other hand, are subscriptions which may host multiple analytics and AI solutions relevant to their respective domain. These subscriptions within the Enterprise Scale Analytics and AI construction set represent primary business groups, integrators, and enablers as these groups own, operate, and often provide innate understanding for the source systems.
+
+:::image type="content" source="images/data-landing-zone-overview.png" alt-text="Data Landing Zone":::
+
+Figure 2: Data Landing Zone
+
+A few important points to keep in mind about Data Landing Zones:
+
+- Ingestion capabilities exist in each Data Landing Zone to allow subject matter experts to pull in data sources from external sources into the Data Landing Zone.
+- Data Landing Zone(s) are instantiated based on the Data Landing Zone core architecture, including all key capabilities to host an analytics platform.
 - A Data Landing Zone can host one or many [Data Integrations](#data-integrations).
 - A Data Landing Zone can also host one or many [Data Products](#data-products).
 
@@ -89,13 +99,12 @@ The responsibility of ingesting external data into Enterprise Analytics and AI l
 - A Azure Key Vault.
 - A Azure Data Factory for running developed engineering pipelines to transformations.
 - A security user group which we use to give access to the Azure Databricks Analytics and Data Science workspace.
-- A  sensitive security group which we use to give access to the Azure Databricks Sensitive workspace.
 - A Service Principal which is used by the Data Integration for deploying ingest jobs to the Azure Databricks Engineering workspace.
 
 Additional services such as Event Hubs, IoT Hubs, Stream Insight, and Machine Learning can optionally be created.
 
 >[!IMPORTANT]
->A **data integration** is responsible for ingestion of data into a read data source. The data should avoid having any data transformations applied to it apart from data quality checks and application of data types.
+>A **data integration** is responsible for ingestion of external data into a read data source. The data should avoid having any data transformations applied to it apart from data quality checks and application of data types.
 
 For further reading, see [Data Landing Zone Data Integrations](data-landing-zone-data-integration.md).
 
@@ -132,4 +141,3 @@ For further reading, see [Data Science Environment](data-science-environment.md)
 On Enterprise Scale Analytics and AI platform there is a rigor process in place that allows data science teams to structure their projects and leverage git to share code and other artifacts.
 
 For further reading, see [Data Science Workflow and MLOps](data-science-workflow-and-mlops.md). -->
-
