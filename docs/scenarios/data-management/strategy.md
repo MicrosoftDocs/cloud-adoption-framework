@@ -15,9 +15,9 @@ Best practice encourages customers to create a single centralized cloud adoption
 
 This article will help expose a number of considerations regarding 'Enterprise Scale Analytics and AI' that will have an impact on your broader strategy.
 
-## 'Enterprise Scale Analytics and AI' motivations
+## 'data management and analytics' motivations
 
-'Enterprise Scale Analytics and AI' is generally aligned to [innovation focused motivations](../../strategy/motivations.md). Customers who integrate this scenario into their cloud adoption strategy are motivated by the following common drivers:
+'data management and analytics' is generally aligned to [innovation focused motivations](../../strategy/motivations.md). Customers who integrate this scenario into their cloud adoption strategy are motivated by the following common drivers:
 
 - A scalable analytics framework designed to enable building an enterprise data platform
 - Self Service to empower the user in data exploration, data asset creation and product development

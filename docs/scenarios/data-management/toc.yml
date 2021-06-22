@@ -30,8 +30,8 @@ items:
       items:
       - name: Enterprise-scale landing zone for data management and analytics
         href: enterprise-scale-landing-zone.md
-      - name: ESLZ Overview (Why 2 overviews?)
-        href: overview.md
+      - name: Scaling data management and analytics
+        href: scale.md
 
     - name: Design area considerations
       items:
@@ -42,7 +42,7 @@ items:
       - name: Network topology and connectivity
         href: eslz-network-topology-and-connectivity.md
       - name: Resource organization
-        href: eslz-management-group-and-subscription-organization.md
+        href: eslz-resource-organization.md
       - name: Governance disciplines
         items:
         - name: Overview        

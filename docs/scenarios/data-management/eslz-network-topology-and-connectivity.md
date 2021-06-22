@@ -3,13 +3,15 @@ title: Azure Enterprise Scale Analytics and AI Networking
 description: Enterprise Scale Analytics and AI Architecture Networking.
 author: BrianBlanchard
 ms.author: brblanch # Microsoft employees only
-ms.date: 01/27/2021
+ms.date: 06/21/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Enterprise Scale Analytics and AI Networking
+# Network topology and connectivity for an data management and analytics
+
+This article builds on a number of considerations and recommendations defined in the Azure landing zone article [enterprise-scale design area for network topology and connectivity](../../ready/enterprise-scale/network-topology-and-connectivity.md). Following the guidance in this article will help examine key design considerations and best practices surrounding networking and connectivity to, from, and within Microsoft Azure and SAP deployments. Since SAP is an mission-critical platform, the guidance on the enterprise-scale design areas should also be included in your design.
 
 This section outlines the networking patterns to assist with:
 

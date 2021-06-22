@@ -248,7 +248,7 @@ Analysts can use the discovered dataset to build reports using tools such as Pow
 
 ### *Ad Hoc* Queries
 
-The Enterprise Scale Analytics and AI solution pattern has a number of shared workspaces where analysts can query data (subject to permissions). It is likely that Data Products would also provide dedicated compute to process *ad hoc* queries.
+The Enterprise Scale Analytics and AI construction set has a number of shared workspaces where analysts can query data (subject to permissions). It is likely that Data Products would also provide dedicated compute to process *ad hoc* queries.
 
 In both cases Analyst can run queries against data assets across Data Landing Zone(s) subject to their permissions. The results from *ad hoc* queries can be stored in Azure Data Lake workspace for re-use.
 

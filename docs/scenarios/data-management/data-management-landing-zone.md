@@ -31,7 +31,7 @@ It is recommended to have a catalog service provisioned for defining the metadat
 
 The catalog registers and maintains the data information in a centralized place and makes it available for the organization. This ensures that enterprises avoid duplicate datasets caused by redundant data ingestion by different project teams.
 
-The Enterprise Scale Analytics and AI solution pattern relies on [Azure Purview](/azure/purview/overview) to serves as:
+The Enterprise Scale Analytics and AI construction set relies on [Azure Purview](/azure/purview/overview) to serves as:
 
 * system of registration
 * discovery for enterprise data sources
@@ -184,7 +184,7 @@ For example, suppose a system has data that is used frequently during the first 
 
 ## Automation Interfaces (optional)
 
-The Enterprise Scale Analytics and AI solution pattern creates three resource groups to help with the creation of your custom onboarding solutions for your data estate.
+The Enterprise Scale Analytics and AI construction set creates three resource groups to help with the creation of your custom onboarding solutions for your data estate.
 
 Typically, user interfaces would reside in the "governance" resource group. The application layer and database would reside in the "automation" and "automationdb" respectively.
 
@@ -208,7 +208,7 @@ To allow the Data Platform Ops to deploy standard containers for use in data sci
 
 ## Global DNS
 
-The Enterprise Scale Analytics and AI solution pattern makes us of Private Links which relies on having a private DNS zone. Please check with your networking team before deploying another Private DNS as they might have already deployed the services.
+The Enterprise Scale Analytics and AI construction set makes us of Private Links which relies on having a private DNS zone. Please check with your networking team before deploying another Private DNS as they might have already deployed the services.
 
 ## Synapse Private Link Hub
 

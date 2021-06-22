@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Deployment Models
 
-The Enterprise Scale Analytics and AI solution pattern consists of:
+The Enterprise Scale Analytics and AI construction set consists of:
 
 - A Data Management Landing Zone.
 - One or more Data Landing Zones.
@@ -41,7 +41,7 @@ Users interaction, to Automation interaction, should focus on using User Interfa
 Automation to Runtime interaction is done via Azure DevOps Pipelines and scripted ARM Templates.
 
 >[!IMPORTANT]
->The Enterprise Scale Analytics and AI solution pattern uses [Azure policies](/azure/governance/policy/overview) to put boundaries in place and ensure that changes performed by the Data Landing Zone Ops teams are compliant.
+>The Enterprise Scale Analytics and AI construction set uses [Azure policies](/azure/governance/policy/overview) to put boundaries in place and ensure that changes performed by the Data Landing Zone Ops teams are compliant.
 
 Enterprise Scale Analytics and AI uses Policies to enforce:
 
@@ -163,7 +163,7 @@ At the start of the project, the Data Platform will have one Azure DevOps projec
 - One template repository for a Data Integration with pipelines to deploy a Data Integration instance with corresponding ADO connections to cloud environments.  These are forked to Data Landing Zone ADO projects.
 - One template repository for Data Products with pipelines to deploy a Data Product instance with corresponding ADO connections to cloud environments. These are forked to Data Landing Zone ADO projects.
 
-Once Data Landing Zones have been deployed then the Enterprise Scale Analytics and AI solution pattern prescribes that:
+Once Data Landing Zones have been deployed then the Enterprise Scale Analytics and AI construction set prescribes that:
 
 - Each Data Landing Zone wil have its own ADO Project with one or many ADO boards.
 - For each new Data Integration or Data Product, the respective template gets forked to the respective Data Landing Zone ADO Project after the request has been approved.

@@ -93,7 +93,7 @@ Across the whole operating model, companies have the option to run several small
 
 ### Digital Security Office
 
-Digital security spans the whole of the Enterprise Scale Analytics and AI solution pattern. It is usually a dedicated department lead by a Chief Information Security Officer (CISO). This department will work closely with the Data Platform Ops, Data Governance Review Board, and Architecture Review Board.
+Digital security spans the whole of the Enterprise Scale Analytics and AI construction set. It is usually a dedicated department lead by a Chief Information Security Officer (CISO). This department will work closely with the Data Platform Ops, Data Governance Review Board, and Architecture Review Board.
 
 ### Data Governance Review Board
 

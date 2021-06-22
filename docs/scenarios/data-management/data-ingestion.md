@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Data Ingestion
 
-In the Enterprise Scale Analytics and AI solution pattern, Data Integrations and Data Product will ingress, transform, and egest data.
+In the Enterprise Scale Analytics and AI construction set, Data Integrations and Data Product will ingress, transform, and egest data.
 
 >[!IMPORTANT]
 >Data Integrations do not carry out any transformation of data. However, if the business has multiple use cases where it requires the same data to be joined together, such as weather and location data, then the Data Integration could be asked to create this in the curated layer. \

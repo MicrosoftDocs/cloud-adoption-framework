@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Data Privacy
 
-The Enterprise Scale Analytics and AI solution pattern addresses PII (Personally Identifiable information) at multiple layers, whilst leaving it to the business to decide upon the best pattern to suit its requirements. Personally Identifiable Information (PII), is any data that can be used used to identify individuals, such as names, driver's license numbers, SSNs, bank account numbers, passport numbers, or email addresses. Many regulations from GDPR to HIPPA require strict protection of user privacy.
+The Enterprise Scale Analytics and AI construction set addresses PII (Personally Identifiable information) at multiple layers, whilst leaving it to the business to decide upon the best pattern to suit its requirements. Personally Identifiable Information (PII), is any data that can be used used to identify individuals, such as names, driver's license numbers, SSNs, bank account numbers, passport numbers, or email addresses. Many regulations from GDPR to HIPPA require strict protection of user privacy.
 
 Before Data Integration ingests data into the solution pattern, they must be able to classify the data as non-sensitive or sensitive.
 
@@ -31,7 +31,7 @@ This pattern enables any compute product which supports Azure AD Passthrough to 
 
 For sensitive data the enterprise needs to restrict what users could see via policy and/or compute. In this case we have to consider moving or injecting the access control into the compute layer.
 
-Within the Enterprise Scale Analytics and AI solution pattern, there are three options to approach the securing of data.
+Within the Enterprise Scale Analytics and AI construction set, there are three options to approach the securing of data.
 
 ### Example Scenario
 

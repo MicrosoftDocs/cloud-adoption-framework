@@ -13,7 +13,7 @@ ms.subservice: ready
 
 Azure Databricks is a data analytics platform optimized for the Microsoft Azure cloud services platform. Azure Databricks offers two environments for developing data intensive applications: Azure Databricks SQL Analytics and Azure Databricks Workspace.
 
-For the purpose of Enterprise Scale Analytics and AI, we have focused on Azure Databricks Workspaces. As Azure Databricks SQL Analytics moves to General Availability we will focus on how this can be integrated into the Enterprise Scale Analytics and AI solution pattern.
+For the purpose of Enterprise Scale Analytics and AI, we have focused on Azure Databricks Workspaces. As Azure Databricks SQL Analytics moves to General Availability we will focus on how this can be integrated into the Enterprise Scale Analytics and AI construction set.
 
 ## Overview
 
@@ -47,7 +47,7 @@ All Azure Databricks Workspaces should use the Premium Plan, which provides the 
 * Role-based access control for notebooks, clusters, jobs, tables
 * Audit Logs
 
-To align to the Enterprise Scale Analytics and AI solution pattern, we recommend that **ALL** Workspaces have the following default deployment options configured:
+To align to the Enterprise Scale Analytics and AI construction set, we recommend that **ALL** Workspaces have the following default deployment options configured:
 
 * The Azure Databricks Workspaces should connect to an external Hive Metastore which resides in the Data Landing Zone.
 * Each Workspace should be configured to send Databricks Diagnostic Logging to Azure Log Analytics.

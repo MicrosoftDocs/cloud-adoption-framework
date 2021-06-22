@@ -150,7 +150,7 @@ An Azure Databricks workspace provisioned for all Data Scientists and Data Ops c
 
 Depending on the use case Conditional Access can be configured as an additional security measure.
 
-The Enterprise Scale Analytics and AI solution pattern takes into account the following best practices for integrating Azure Databricks into the solution pattern:
+The Enterprise Scale Analytics and AI construction set takes into account the following best practices for integrating Azure Databricks into the solution pattern:
 
 - [Securing access to Azure Data Lake Gen 2 from Azure Databricks](https://github.com/hurtn/datalake-ADLS-access-patterns-with-Databricks/blob/master/readme.md)
 - [Azure Databricks Best Practices](https://github.com/Azure/AzureDatabricksBestPractices/blob/master/toc.md)

@@ -104,7 +104,7 @@ In ARM templates, the core provisioning is in the resources section, and the con
 ```
 
 >[!IMPORTANT]
->Every layer of the Enterprise Scale Analytics and AI solution pattern (Data Management Landing Zone, Data Landing Zones, Data Integrations or Data Products) should be defined through a declarative language such as ARM or Terraform, should be checked into a repository and deployed through CI/CD pipelines. This allows teams to keep track and version changes to the infrastructure and configuration of Azure scope and ultimately allows an agile self-service automation of different levels of the architecture.\
+>Every layer of the Enterprise Scale Analytics and AI construction set (Data Management Landing Zone, Data Landing Zones, Data Integrations or Data Products) should be defined through a declarative language such as ARM or Terraform, should be checked into a repository and deployed through CI/CD pipelines. This allows teams to keep track and version changes to the infrastructure and configuration of Azure scope and ultimately allows an agile self-service automation of different levels of the architecture.\
 \
 >This concept allows to always have a clear representation of the state inside a specific scope in Azure in a Git repository.
 

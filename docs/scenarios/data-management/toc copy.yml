@@ -46,7 +46,7 @@ items:
       - name: Network topology and connectivity
         href: eslz-network-topology-and-connectivity.md
       - name: Resource organization
-        href: eslz-management-group-and-subscription-organization.md
+        href: eslz-resource-organization.md
       - name: Governance disciplines
         items:
         - name: Overview        

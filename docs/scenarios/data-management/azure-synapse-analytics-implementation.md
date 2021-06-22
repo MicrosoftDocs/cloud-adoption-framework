@@ -39,7 +39,7 @@ For premium big data processing and data science capabilities, we recommend Azur
 
 A Data Landing Zone will create workspaces with a [Azure Synapse Analytics Managed Virtual Network](/azure/synapse-analytics/security/synapse-workspace-managed-vnet). Communication with Synapse will be through the three endpoints it exposes: SQL Pool, SQL On-Demand, and the Development Endpoint.
 
-At the network level, the Enterprise Scale Analytics and AI solution pattern uses [Synapse Managed private endpoints](/azure/synapse-analytics/security/synapse-workspace-managed-private-endpoints) to ensure all the traffic between Data Landing Zone vNet and Azure Synapse Workspace(s) traverses entirely over the Microsoft backbone network.
+At the network level, the Enterprise Scale Analytics and AI construction set uses [Synapse Managed private endpoints](/azure/synapse-analytics/security/synapse-workspace-managed-private-endpoints) to ensure all the traffic between Data Landing Zone vNet and Azure Synapse Workspace(s) traverses entirely over the Microsoft backbone network.
 
 ### Azure Synapse Data Access Control
 
