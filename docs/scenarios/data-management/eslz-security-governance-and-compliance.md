@@ -1,6 +1,6 @@
 ---
-title: "Enterprise-Scale security, governance, and compliance for 'data management and analytics' in Azure"
-description: Describe how this enterprise-scale scenario can improve security, governance, and compliance of 'data management and analytics'
+title: "Enterprise-Scale security, governance, and compliance for 'Enterprise Scale Analytics and AI' in Azure"
+description: Describe how this enterprise-scale scenario can improve security, governance, and compliance of 'Enterprise Scale Analytics and AI'
 author: andrehass
 ms.author: anhass
 ms.date: 06/10/2021
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Security, governance, and compliance for 'data management and analytics' Enterprise-Scale scenario
+# Security, governance, and compliance for 'Enterprise Scale Analytics and AI' Enterprise-Scale scenario
 
 The Enterprise Analytics and AI solution pattern relies on a number of security features which can be enabled on Azure. They include Encryption, Role-Based Access Control, Access Control Lists, and Networking restrictions.
 

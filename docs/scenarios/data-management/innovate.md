@@ -1,5 +1,5 @@
 ---
-title: "Innovate with 'data management and analytics' in Azure"
+title: "Innovate with 'Enterprise Scale Analytics and AI' in Azure"
 description: Describe the scenario's impact on empowering innovation
 author: BrianBlanchard
 ms.author: brblanch
@@ -9,15 +9,15 @@ ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ---
 
-# Innovate with 'data management and analytics'
+# Innovate with 'Enterprise Scale Analytics and AI'
 
 Describe how your scenario provides new abilities to innovate
 
-## Customer adoption of 'data management and analytics'
+## Customer adoption of 'Enterprise Scale Analytics and AI'
 
 How does this new innovation change the way customers will adopt our readers solution?
 
-## Digital innovation with 'data management and analytics'
+## Digital innovation with 'Enterprise Scale Analytics and AI'
 
 How does this new innovation impact digital invention disciplines: 
 
@@ -27,9 +27,9 @@ How does this new innovation impact digital invention disciplines:
 - Device interactions
 - Predict & influence (ML/AI)
 
-## Next step: Govern 'data management and analytics'
+## Next step: Govern 'Enterprise Scale Analytics and AI'
 
 The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
 
-- [Govern 'data management and analytics'](./govern.md)
-- [Manage 'data management and analytics'](./manage.md)
+- [Govern 'Enterprise Scale Analytics and AI'](./govern.md)
+- [Manage 'Enterprise Scale Analytics and AI'](./manage.md)

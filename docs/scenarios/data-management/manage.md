@@ -1,6 +1,6 @@
 ---
-title: "Manage 'data management and analytics' in Azure"
-description: Manage 'data management and analytics' in Azure
+title: "Manage 'Enterprise Scale Analytics and AI' in Azure"
+description: Manage 'Enterprise Scale Analytics and AI' in Azure
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 07/01/2010
@@ -9,36 +9,36 @@ ms.service: cloud-adoption-framework
 ms.subservice: operate
 ---
 
-# Manage 'data management and analytics'
+# Manage 'Enterprise Scale Analytics and AI'
 
 Describe how your scenario changes operations management
 
-## 'data management and analytics' business alignment
+## 'Enterprise Scale Analytics and AI' business alignment
 
 Does this scenario require the customer to rethink business alignment or how the platform is supported in operations management?
 
-## 'data management and analytics' operations baseline
+## 'Enterprise Scale Analytics and AI' operations baseline
 
 Does this workload have special requirements for Visibility, Operational Compliance, or BCDR?
 
-## 'data management and analytics' platform operations
+## 'Enterprise Scale Analytics and AI' platform operations
 
 Are there specific requirements for operations of the landing zone or platform for this scenario?
 
-## 'data management and analytics' workload operations
+## 'Enterprise Scale Analytics and AI' workload operations
 
 Are there specific requirements for operations of the individual workloads running on this platform?
 
 ## Next step: Your next migration iteration
 
-Once the 'data management and analytics' migration is complete, the cloud adoption team can begin your next scenario-specific migration. Alternatively, if there are addition platforms to be migrated, this article series can be used again to guide your next 'data management and analytics' migration or deployment.
+Once the 'Enterprise Scale Analytics and AI' migration is complete, the cloud adoption team can begin your next scenario-specific migration. Alternatively, if there are addition platforms to be migrated, this article series can be used again to guide your next 'Enterprise Scale Analytics and AI' migration or deployment.
 
-- [Strategy for 'data management and analytics'](./strategy.md)
-- [Plan for 'data management and analytics'](./plan.md)
+- [Strategy for 'Enterprise Scale Analytics and AI'](./strategy.md)
+- [Plan for 'Enterprise Scale Analytics and AI'](./plan.md)
 - [Review your environment or Azure Landing Zone(s)](./ready.md)
-- [Assess for 'data management and analytics' migration](./migrate-assess.md)
-- [Migrate 'data management and analytics'](./migrate-deploy.md)
-- [Release 'data management and analytics' to production](./migrate-release.md)
-- [Innovate with 'data management and analytics'](./innovate.md)
-- [Govern 'data management and analytics'](./govern.md)
-- [Manage 'data management and analytics'](./manage.md)
+- [Assess for 'Enterprise Scale Analytics and AI' migration](./migrate-assess.md)
+- [Migrate 'Enterprise Scale Analytics and AI'](./migrate-deploy.md)
+- [Release 'Enterprise Scale Analytics and AI' to production](./migrate-release.md)
+- [Innovate with 'Enterprise Scale Analytics and AI'](./innovate.md)
+- [Govern 'Enterprise Scale Analytics and AI'](./govern.md)
+- [Manage 'Enterprise Scale Analytics and AI'](./manage.md)

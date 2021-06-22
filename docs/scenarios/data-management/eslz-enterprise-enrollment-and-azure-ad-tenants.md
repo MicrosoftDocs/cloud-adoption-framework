@@ -1,6 +1,6 @@
 ---
-title: Azure Enterprise-Scale enterprise enrollment and Azure AD tenants for 'data management and analytics'
-description: Describe how this enterprise-scale scenario can improve enterprise enrollment and Azure AD tenants of 'data management and analytics'
+title: Azure Enterprise-Scale enterprise enrollment and Azure AD tenants for 'Enterprise Scale Analytics and AI'
+description: Describe how this enterprise-scale scenario can improve enterprise enrollment and Azure AD tenants of 'Enterprise Scale Analytics and AI'
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/11/2020
@@ -9,6 +9,6 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Enterprise enrollment and Azure AD tenants for 'data management and analytics' Enterprise-Scale scenario
+# Enterprise enrollment and Azure AD tenants for 'Enterprise Scale Analytics and AI' Enterprise-Scale scenario
 
 <!-- Add content here -->

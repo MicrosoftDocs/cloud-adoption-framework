@@ -19,7 +19,11 @@ items:
   - name: Build an initial strategy
     href: strategy.md
   - name: Define your plan
-    href: plan.md
+    items:
+    - name: Building your plan
+      href: plan.md
+    - name: Building capabilities
+      href: capabilities.md
 
   - name: Prepare your environment
     items:

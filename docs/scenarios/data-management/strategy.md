@@ -1,24 +1,28 @@
 ---
-title: "Strategy for 'data management and analytics' adoption in Azure"
-description: Integrate 'data management and analytics' into your cloud adoption strategy
+title: "Strategy for 'Enterprise Scale Analytics and AI' adoption in Azure"
+description: Integrate 'Enterprise Scale Analytics and AI' into your cloud adoption strategy
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 07/01/2010
+ms.date: 06/22/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---
 
-# Strategic impact of 'data management and analytics'
+# Strategic impact of 'Enterprise Scale Analytics and AI'
 
 Best practice encourages customers to create a single centralized cloud adoption strategy, using the [Cloud Adoption Framework's Strategy methodology](../../strategy/index.md). If you haven't already, use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record your cloud adoption strategy.
 
-This article will help expose a number of considerations regarding 'data management and analytics' that will have an impact on your broader strategy.
+This article will help expose a number of considerations regarding 'Enterprise Scale Analytics and AI' that will have an impact on your broader strategy.
 
-## 'Data management and analytics' motivations
+## 'Enterprise Scale Analytics and AI' motivations
 
-'Data management and analytics' is generally aligned to [innovation focused motivations](../../strategy/motivations.md). Customers who integrate this scenario into their cloud adoption strategy are motivated by the following common drivers:
+'Enterprise Scale Analytics and AI' is generally aligned to [innovation focused motivations](../../strategy/motivations.md). Customers who integrate this scenario into their cloud adoption strategy are motivated by the following common drivers:
 
+- A scalable analytics framework designed to enable building an enterprise data platform
+- Self Service to empower the user in data exploration, data asset creation and product development
+- Foster a data led culture with reusable data assets, data communities, secure third-party exchange and in-place sharing
+- Share data with confidence secured by policies, common identity, confidentiality and encryption
 - Improved customer experiences and engagements
 - Transformation of products or services
 - Market disruption with new products or services
@@ -134,7 +138,13 @@ Batch processing on Databricks, R, Python or for deep learning models are common
 
 Azure Enterprise Scale Analytics and AI Construction Set helps collate all the four layers together with people, process, security, and compliance. We also suggest using the recommended architectures from Azure Landing Zones to get started. It uses the Microsoft Cloud Adoption Framework and culminates our experience working through thousands of large scale enterprise deployments.
 
-Now that we have covered the four stages, the following representation shows the key capabilities needed on top of your data platform to provide end to end data governance capability.  
+Now that we have covered the four stages, the following representation shows the key capabilities needed on top of your data platform to provide end to end data governance capability.
+
+## Building Blocks
+
+After making all the capability provisions, and taking a principled architectural view as discussed in this section, you will most likely end up with the building blocks required for your cloud strategy journey which may look something like the below:
+
+:::image type="content" source="./images/data-strategy-building-block.png" alt-text="Manage credentials decision tree" lightbox="./images/data-strategy-building-block.png":::
 
 ## Data Strategy Summary
 
@@ -172,15 +182,15 @@ There are couple of key strategic processes which would help in delivering succe
 Final Data product delivery against the set-out success criteria in a standardized & structured way is going to validate the above iterative framework. Additionally, taking the learning and continuously innovating will help in building business confidence and widening out of the Data Strategy strategic goals, for clearer and quicker adoption across
 business.
 
-## Next step: Plan for 'data management and analytics'
+## Next step: Plan for 'Enterprise Scale Analytics and AI'
 
 The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
 
-- [Plan for 'data management and analytics'](./plan.md)
+- [Plan for 'Enterprise Scale Analytics and AI'](./plan.md)
 - [Review your environment or Azure Landing Zone(s)](./ready.md)
-- [Assess for 'data management and analytics' migration](./migrate-assess.md)
-- [Migrate 'data management and analytics'](./migrate-deploy.md)
-- [Release 'data management and analytics' to production](./migrate-release.md)
-- [Innovate with 'data management and analytics'](./innovate.md)
-- [Govern 'data management and analytics'](./govern.md)
-- [Manage 'data management and analytics'](./manage.md)
+- [Assess for 'Enterprise Scale Analytics and AI' migration](./migrate-assess.md)
+- [Migrate 'Enterprise Scale Analytics and AI'](./migrate-deploy.md)
+- [Release 'Enterprise Scale Analytics and AI' to production](./migrate-release.md)
+- [Innovate with 'Enterprise Scale Analytics and AI'](./innovate.md)
+- [Govern 'Enterprise Scale Analytics and AI'](./govern.md)
+- [Manage 'Enterprise Scale Analytics and AI'](./manage.md)
