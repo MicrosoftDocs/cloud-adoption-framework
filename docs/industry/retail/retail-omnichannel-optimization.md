@@ -53,7 +53,6 @@ Microsoft enables retailers to understand preferences, better serve customers, a
 
 ### Omnichannel success stories
 
-- See how Fabletics used data to buck the retail rut.
 - Learn how [Dick's Sporting Goods](https://customers.microsoft.com/story/857270-dickssportinggoods-vmware-azure) stayed in the game during COVID-19 lockdowns.
 
 ## Next steps

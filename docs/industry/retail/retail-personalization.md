@@ -54,7 +54,7 @@ Here's how our offerings use and augment retail data to enhance personalization:
 
 ## Personalization success stories
 
-- Discover how [home hardware](https://customers.microsoft.com/story/773156-homehardware_retailers_azure_canada) used Azure to unpack its data and create personalized customer experiences.
+- Discover how [Home Hardware](https://customers.microsoft.com/story/773156-homehardware_retailers_azure_canada) used Azure to unpack its data and create personalized customer experiences.
 - Read about how [ASOS](https://customers.microsoft.com/story/asos-retailers-azure) used Azure Machine Learning to surface targeted recommendations, combine solutions, and develop a collaboration structure for its data science teams.
 - Learn how [Walgreens Boots Alliance](https://customers.microsoft.com/story/733091-walgreens-boots-alliance-pharmaceuticals-azure) found the sweet spot for reaching customers.
 
