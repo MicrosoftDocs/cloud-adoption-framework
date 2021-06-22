@@ -141,7 +141,7 @@ When this is considered in the context of enterprise-scale, you may decide to re
 As part of the Subscription policy you can configure you can also provide a list of [exempted users](/azure/cost-management-billing/manage/manage-azure-subscription-policy#exempted-users) who will be permitted to bypass what is set in the policy.
 
 >[!IMPORTANT]
- > This is not an [Azure Policy](https://docs.microsoft.com/azure/governance/policy/overview).
+ > This is not an [Azure Policy](/azure/governance/policy/overview).
 
 **Design considerations:**
 
