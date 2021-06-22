@@ -34,9 +34,9 @@ Explore key design considerations and recommendation surrounding network topolog
 
   - Only resources with Public IP addresses are covered by Azure DDoS Protection standard protection plans.
 
-    - 100 public IP addresses are included in the cost of an Azure DDoS Protection standard protection plan across all protected VNets associated to the DDoS Protection plan. Any other public IP addresses over the 100 included with the plan, are charged separately. For more information on Azure DDoS Protection Standard Protection pricing, see the [pricing page](https://azure.microsoft.com/pricing/details/ddos-protection/) or the [FAQ](/azure/ddos-protection/ddos-faq#how-does-pricing-work).
+  - 100 public IP addresses are included in the cost of an Azure DDoS Protection standard protection plan across all protected VNets associated to the DDoS Protection plan. Any other public IP addresses over the 100 included with the plan, are charged separately. For more information on Azure DDoS Protection Standard Protection pricing, see the [pricing page](https://azure.microsoft.com/pricing/details/ddos-protection/) or the [FAQ](/azure/ddos-protection/ddos-faq#how-does-pricing-work).
 
-    - Review the [supported resources of Azure DDoS Protection standard protection plans](/azure/ddos-protection/ddos-faq#what-are-the-supported-protected-resource-types)
+  - Review the [supported resources of Azure DDoS Protection standard protection plans](/azure/ddos-protection/ddos-faq#what-are-the-supported-protected-resource-types)
 
 - You can use ExpressRoute circuits to establish connectivity across virtual networks within the same geopolitical region or by using the premium add-on for connectivity across geopolitical regions. Keep these points in mind:
 
@@ -120,8 +120,8 @@ The following figure shows this topology.
 
 If you require traffic across hubs to be inspected by the firewall in the hub, you must implement one of these options:
   
-  - Create more specific route entries in the spoke user defined routes (UDRs), so that traffic across hubs is redirected via the firewall in the local-hub virtual network.
-  - [Disable BGP propagation](https://azure.microsoft.com/updates/disable-route-propagation-ga-udr) on the spokes, which simplifies the route configuration in the UDR. 
+- Create more specific route entries in the spoke user defined routes (UDRs), so that traffic across hubs is redirected via the firewall in the local-hub virtual network.
+- [Disable BGP propagation](https://azure.microsoft.com/updates/disable-route-propagation-ga-udr) on the spokes, which simplifies the route configuration in the UDR. 
   
 The following figure shows this design:
  
