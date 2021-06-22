@@ -124,6 +124,57 @@ Each Azure region contains a finite number of resources. When you consider an en
 
 - Ensure required services and features are available within the chosen deployment regions.
 
+## Configure subscription tenant transfer restrictions
+
+Each Azure Subscription is linked to a single Azure AD Tenant, this acts as the identity provider (IdP) for the Azure Subscription which it will trust to authenticate users, services and devices.
+
+However, the Azure AD tenant that an Azure Subscription is linked to can be changed by a user with the required permissions that also exists in more than one Azure AD Tenant, again, with the required permissions. This process is detailed in the following articles:
+
+- [Associate or add an Azure subscription to your Azure Active Directory tenant](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory)
+- [Transfer an Azure subscription to a different Azure AD directory](/azure/role-based-access-control/transfer-subscription)
+
+>[!NOTE]
+ > For Azure Cloud Solution Providers (CSP) Subscriptions, transferring to another Azure AD Tenant is not supported.
+
+When this is considered in the context of enterprise-scale, you may decide to restrict and prevent users from being able to either; transfer Azure Subscriptions out of your organizations Azure AD Tenant or transfer Azure Subscriptions into your organizations Azure AD Tenant. This can be done by following the process detailed in the article [Manage Azure subscription policies](/azure/cost-management-billing/manage/manage-azure-subscription-policy).
+
+As part of the Subscription policy you can configure you can also provide a list of [exempted users](/azure/cost-management-billing/manage/manage-azure-subscription-policy#exempted-users) who will be permitted to bypass what is set in the policy.
+
+>[!IMPORTANT]
+ > This is not an [Azure Policy](https://docs.microsoft.com/azure/governance/policy/overview).
+
+**Design considerations:**
+
+- Consider whether users with [Visual Studio/MSDN Azure Subscriptions](https://azure.microsoft.com/en-gb/pricing/member-offers/credit-for-visual-studio-subscribers/) should be allowed to transfer their subscription to/from the Azure AD Tenant.
+
+- These settings are only configurable by users with the Azure AD [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) role assigned and they must have [elevated their access](/azure/role-based-access-control/elevate-access-global-admin) to be able to change the policy.
+
+  - Only individual user accounts can be specified as [exempted users](/azure/cost-management-billing/manage/manage-azure-subscription-policy#exempted-users). Azure AD Groups are not supported at this time.
+
+- All users with access to Azure will be able to view the policy defined for the Azure AD Tenant
+  
+  - They will not be able to view the [exempted users](/azure/cost-management-billing/manage/manage-azure-subscription-policy#exempted-users).
+
+  - They will be able to view the Global Administrators within the Azure AD Tenant.
+
+- Azure Subscriptions transferred into an Azure AD Tenant will be placed into the [default Management Group](/azure/governance/management-groups/how-to/protect-resource-hierarchy#setting---default-management-group) for that Tenant.
+
+- Define a process to allow Azure Subscriptions to be transferred to/from an Azure AD Tenant, if it is deemed as required by the application team and approved by the organization.
+
+**Design recommendations:**
+
+- Prevent all users, by default, from being able to transfer Azure Subscriptions to/from the Azure AD Tenant by configuring the following settings:
+
+  - 'Subscription leaving AAD directory' set to `Permit no one`.
+
+  - 'Subscription entering AAD directory' set to `Permit no one`.
+
+- Configure a limited set of [exempted users](/azure/cost-management-billing/manage/manage-azure-subscription-policy#exempted-users). 
+
+  - This would ideally be members of an Azure PlatformOps (platform operations) team.
+
+  - Include break-glass accounts in these list of [exempted users](/azure/cost-management-billing/manage/manage-azure-subscription-policy#exempted-users).
+
 ## Establish cost management
 
 Cost transparency across a technical estate is a critical management challenge faced by every large enterprise organization. This section explores key aspects associated with how cost transparency can be achieved across large Azure environments.
