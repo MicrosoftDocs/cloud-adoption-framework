@@ -26,8 +26,7 @@ To manage enterprise environments with more than 5,000 VMs per Azure subscriptio
 
 ### Which regions will the hosts be deployed in?
 
-Where in the world will users access the desktops from? 
-Consider using Azure regions that are closest in order to help with performance related to network connectivity and latency.
+Consider deploying your hosts to  Azure regions that are closest to your users in order to help with performance related to network connectivity and latency. Also consider compliance and data residency requirements when choosing a specific region. 
 
 ## Design recommendations
 
