@@ -35,7 +35,7 @@ Azure Data Lake Storage (ADLS) provides a common place to capture / ingest and i
 
 ## Microsoft Azure Data Factory (ADF)
 
-Microsoft Azure Data Factory is a fully managed, pay-as-you-use, hybrid data integration service for highly scalable ETL and ELT processing. It uses Spark to process and analyse data in parallel and in memory to maximise throughput.
+Microsoft Azure Data Factory is a fully managed, pay-as-you-use, hybrid data integration service for highly scalable ETL and ELT processing. It uses Spark to process and analyse data in parallel and in memory to maximize throughput.
 
 It supports over 80 connectors to external data sources and databases and has templates for common data integration tasks. A visual front-end browser-based GUI enables non- programmers to create and run process pipelines to ingest, transform and load data, while more experienced programmers have the option to incorporate custom code if required (e.g. Python programs).
 
@@ -66,7 +66,3 @@ Data in disparate registered data sources across the data landscape can be inges
 Figure 4: Common Infrastructure
 
 Everything that is underpinned by ADLS and can then make use of trusted, commonly understood CDM described data assets The objective is build once, publish in a data marketplace (Azure Purview) and reuse everywhere.
-
-
-
-
