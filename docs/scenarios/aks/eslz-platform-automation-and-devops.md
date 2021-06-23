@@ -61,7 +61,7 @@ Here are some design recommendations for AKS platform automation and DevOps:
 
 - Strive for maximized deployment concurrency by avoiding hardcoded configuration items and settings.
 
-- Rely on well-known conventions across infrastructure and application-related deployments. Use [admission controllers](https://kubernetes.io/blog/2019/03/21/a-guide-to-kubernetes-admission-controllers/) combined with [gatekeeper](https://github.com/open-policy-agent/gatekeeper) to validate and enforce conventions among the other defined policies.
+- Rely on well-known conventions across infrastructure and application-related deployments. Use [admission controllers](https://kubernetes.io/blog/2019/03/21/a-guide-to-kubernetes-admission-controllers/) combined with the [Azure Policy add-on for Kubernetes](/azure/aks/use-azure-policy) to validate and enforce conventions among the other defined policies.
 
 - Embrace [shift left](/devops/develop/shift-left-make-testing-fast-reliable) consistently with:
   - Security, by adding vulnerability scanning tools like container scanning early in the pipeline.
