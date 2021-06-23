@@ -19,7 +19,7 @@ Figure 1: Enterprise Scale Analytics and AI Teams
 
 ## Personas
 
-There are multiple personas involved in an Enterprise Scale Analytics and AI deployment. The following sections attempts to give a high insight to those which we see are key to the success.
+There are multiple personas involved in an Enterprise Scale Analytics and AI deployment. The following sections attempts to give a high insight to those which we see are key to the success. Data Governance roles are called out specifically further down this page.
 
 | Persona | Role |
 |-|-|
@@ -87,21 +87,35 @@ In another example, the owning business of a data landing zone doesn't have a bu
 - Operate and own the cloud platform all up.
 - They instantiate Data Management Landing Zone and Data Landing Zone scaffolding such as networking, peering, monitoring, and other core services.
 
-## Other Groups
-
-Across the whole operating model, companies have the option to run several smaller teams with key stakeholders and subject matter experts to maintain a centralized view of the analytics platform.
-
-### Digital Security Office
+## Digital Security Office
 
 Digital security spans the whole of the Enterprise Scale Analytics and AI construction set. It is usually a dedicated department lead by a Chief Information Security Officer (CISO). This department will work closely with the Data Platform Ops, Data Governance Review Board, and Architecture Review Board.
 
-### Data Governance Review Board
+## Data Governance Roles and Responsibilities
 
-![ Data Governance Review Board](./images/data-governance-review-board.png)
+With respect to people, there are a number of data governance roles and responsibilities.These can vary across organization and so the follow roles and responsibilities listed in the table below are provided as guidance only.
 
-Figure 2: Data Governance Review Board
+|Role |   Responsibility|
+|--|--|
+|Executive sponsor (e.g. CFO / CIO)  |  Senior business stakeholder with authority and budget who is accountable for ensuring data governance is established|
+|Data Governance program leader (e.g. CDO or appointed lead) |   The person with overall accountability and responsibility for implementing the data governance program.|
+|Data Governance Control Board |   Includes data governance lead and data owners. Sets success metrics, owns the data governance roadmap, selects working groups, holds the budget for the data governance program, arbitrates when conflicts occur on priorities and definitions of cross functional data|
+|Data Governance Working Group  |  Plan and progress data definition and improvement of a specific data domain (E.g. Customer or Supplier), update Data Governance Control Board on progress, manage stewardship across the enterprise for a specific domain|
+|Data owner   | Senior business stakeholder with authority and budget who is accountable for overseeing the quality and protection of a specific data subject area or data entity across the enterprise and make decisions on who has the right to access and maintain that data and on how it is used|
+|Business data steward |   Business professional responsible for overseeing the quality and protection of a data subject area or data entity. They are typically experts in the data domain and work in a team with other data stewards across the enterprise to monitor and make decisions to ensure data quality is maintained|
+|Data Protection Officer (DPO)   | Senior business stakeholder with authority and budget who is accountable for the protection of personal data specific to compliance legislation in all jurisdictions that the company operates|
+|Data security team  |  Responsible and accountable for data access security and data privacy policy enforcement|
+|Data Publishing Manager   | Responsible and accountable for quality assurance checking and publishing of newly created trusted data assets in a data marketplace for consumers to find and use|
 
-The Data Governance Review Board is the body that governs your organization's data governance policies, guides and advises your data strategy, prioritizes and approves your data governance initiatives and projects, and offers on-going support for these.
+:::image type="content" source="images/data-governance-review-board.png" alt-text="data governance review board":::
+
+Figure 1: Data governance organization structure
+
+The objective is to organize in a way that allows you to take a 'divide and conquer' approach to governing data throughout its lifecycle across a hybrid computing environment. One way of doing this is to have multiple working groups reporting into a Data Governance Control Board (Figure 6) with each working group responsible for a particular data domain / data entity (e.g. Customer) or a data subject area that consists of multiple data entities.
+
+## Other Groups
+
+Across the whole operating model, companies have the option to run several smaller teams with key stakeholders and subject matter experts to maintain a centralized view of the analytics platform.
 
 ### Architecture Review Board
 

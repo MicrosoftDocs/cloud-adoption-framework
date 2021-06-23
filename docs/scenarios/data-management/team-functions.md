@@ -17,7 +17,12 @@ The Enterprise Scale Analytics and AI moves teams from working horizontally acro
 
 *Figure 1: Enterprise Scale Analytics and AI Teams*
 
-## Platform Ops
+## Platform Group
+
+The platform group consists of two teams.
+
+### Platform Ops
+
 
 Platform Ops are part of the Platform Group team. They operate and own the cloud platform all up.
 
@@ -226,7 +231,7 @@ Once the team has ended up with promising ML models, they can start operationali
 
 The Data Science team will continue to work with the associated Data Product Owners to capture feedback, support and resolved/update models in production using a [M/L Ops methodology](/azure/machine-learning/concept-model-management-and-deployment).
 
-### Analyst
+## Analyst
 
 Analysts represents a large group including business analysts, power users, and generally anyone in the organization that has an interest in leveraging data to create new business insights.
 
