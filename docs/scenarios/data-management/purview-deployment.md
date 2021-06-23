@@ -62,7 +62,7 @@ As shown in the figure above, Enterprise Scale Analytics and AI uses [Azure Priv
 > [!IMPORTANT]
 > To successfully scan data sources in Azure Purview, a Self-hosted Integration Runtime must be deployed inside the private network either in the Data Management Landing Zone or the Data Landing Zone.
 
-For further reading, see [Enterprise Scale Analytics and AI Networking](./network-topology-and-connectivity.md).
+For further reading, see [Enterprise Scale Analytics and AI Networking](./eslz-network-topology-and-connectivity.md).
 
 #### Private Endpoint for Account and Portal
 
@@ -111,7 +111,7 @@ If you have a hybrid cloud, and cross-premises name resolution is required, it i
 >[!TIP]
 > To allow name resolution between the Data Management Landing Zone and the Data Landing Zones, use the same Private DNS Zones located inside `{prefix}-global-dns` resource group inside the Data Management Landing Zone.
 
-For more information related to Enterprise Scale Analytics and AI networking and name resolution, see [Enterprise Scale Analytics and AI Networking](./network-topology-and-connectivity.md)
+For more information related to Enterprise Scale Analytics and AI networking and name resolution, see [Enterprise Scale Analytics and AI Networking](./eslz-network-topology-and-connectivity.md)
 
 ## Manage authentication for data sources in Azure Purview
 

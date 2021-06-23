@@ -15,15 +15,15 @@ Now that you have your key projects mapped with business outcomes and calibrated
 
 The first step would be to look at all capabilities you need, either at an organizational level holistically, or at a project level. Start by mapping what you have.
 
-### Capabilities to As Is Capabilities
+## Capabilities to As Is Capabilities
 
-:::image type="content" source="./images/capablity-as-is.png" alt-text="A table showing guidance on building capabilities" lightbox="./images/capablity-as-is.png":::
+:::image type="content" source="./images/capability-as-is.png" alt-text="A table showing guidance on building capabilities" lightbox="./images/capability-as-is.png":::
 
 Figure 1: Exercise 1, assessing current capability.
 
 As a next step, look at Azure native services, and start mapping what you need to deliver success.
 
-:::image type="content" source="./images/capablity-map-azure.png" alt-text="A table showing cloud-native capabilities for your data strategy" lightbox="./images/capablity-map-azure.png":::
+:::image type="content" source="./images/capability-map-azure.png" alt-text="A table showing cloud-native capabilities for your data strategy" lightbox="./images/capability-map-azure.png":::
 
 Figure 2: Exercise 2, mapping to cloud native capabilities.
 

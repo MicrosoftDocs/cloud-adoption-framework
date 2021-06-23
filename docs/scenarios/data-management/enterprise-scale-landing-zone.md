@@ -30,8 +30,8 @@ The pattern relies upon distribution of the data and its pipelines across [domai
 
 Enterprise Scale Analytics and AI considers five critical design areas that help translate organizational requirements to Azure constructs and capabilities. Lack of attention to these design areas typically creates dissonance and friction between the enterprise-scale definition and Azure adoption. Enterprise Scale Analytics and AI uses these design areas to help address the mismatch between on-premises and cloud-design infrastructure as well as data monoliths:
 
-1. [Data Management](#data-management)
-1. [Data Landing Zone](#data-laanding-zone)
+1. [Data Management](#data-management-landing-zone)
+1. [Data Landing Zone](#data-landing-zone)
 1. [Data Integrations](#data-integrations)
 1. [Data Products](#data-products)
 1. [Data Platform Operational Excellence](#data-platform-operational-excellence)

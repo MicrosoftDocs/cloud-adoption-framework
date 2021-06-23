@@ -54,7 +54,7 @@ This guidance builds on top of:
 
 - [Securing access to Azure Data Lake Gen 2 from Azure Databricks](https://github.com/hurtn/datalake-ADLS-access-patterns-with-Databricks/blob/master/readme.md)
 - [Azure Databricks Best Practices](https://github.com/Azure/AzureDatabricksBestPractices/blob/master/toc.md)
-- [Azure Databricks Configuration in a Data Landing](azure-databricks-integration.md)
+- [Azure Databricks Implementation](azure-databricks-implementation.md)
 
 A single premium **Azure Databricks Data Engineering** Workspace should be deployed per Data Landing Zone in the production Ingest and Processing resource group. This will enable a complete CI/CD experience and only allow notebooks to be deployed from Azure DevOps or GitHub.
 

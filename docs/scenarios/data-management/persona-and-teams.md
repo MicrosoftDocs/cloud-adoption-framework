@@ -59,8 +59,8 @@ The Data Landing Zone Group consists of three teams.
 
 ### Data Landing Zone Ops (One Group per Data Landing Zone)
 
-* Operate and maintain their Data Landing Zone instance.
-* Respond to new Data Integration and Data Product service requests.
+- Operate and maintain their Data Landing Zone instance.
+- Respond to new Data Integration and Data Product service requests.
 
 ### Central or Business Data Office?
 
@@ -77,15 +77,15 @@ In another example, the owning business of a data landing zone doesn't have a bu
 
 ### Data Platform Ops
 
-* The Data Platform Ops Group defines common policies for Data Landing Zone, Data Integration and Data Product services.
-* They provision and operate Data Management services such as the data catalog and shared integration runtimes.
-* They instantiate Data Landing Zone scaffolding such as Data Lakes and Metadata Management configuration before passing it over to the Data Landing Zone Ops.
-* Provide support and concierge to stakeholders.
+- The Data Platform Ops Group defines common policies for Data Landing Zone, Data Integration and Data Product services.
+- They provision and operate Data Management services such as the data catalog and shared integration runtimes.
+- They instantiate Data Landing Zone scaffolding such as Data Lakes and Metadata Management configuration before passing it over to the Data Landing Zone Ops.
+- Provide support and concierge to stakeholders.
 
 ### Platform Ops
 
-* Operate and own the cloud platform all up.
-* They instantiate Data Management Landing Zone and Data Landing Zone scaffolding such as networking, peering, monitoring, and other core services.
+- Operate and own the cloud platform all up.
+- They instantiate Data Management Landing Zone and Data Landing Zone scaffolding such as networking, peering, monitoring, and other core services.
 
 ## Other Groups
 

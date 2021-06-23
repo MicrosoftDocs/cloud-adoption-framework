@@ -19,7 +19,7 @@ How does this new innovation change the way customers will adopt our readers sol
 
 ## Digital innovation with 'data management and analytics'
 
-How does this new innovation impact digital invention disciplines: 
+How does this new innovation impact digital invention disciplines:
 
 - Democratize data
 - Engage via apps

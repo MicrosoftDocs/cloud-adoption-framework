@@ -11,9 +11,7 @@ ms.subservice: ready
 
 # Data Integrations
 
-
-
-Previously, we explained the role of Integrations Ops under [Integration Ops (per domain)](persona-and-teams.md#integration-ops-per-domain)
+Previously, we explained the role of Integrations Ops under [Integration Ops (per integration)](persona-and-teams.md#integration-ops-per-integration)
 
 This section explains the infrastructure which is deployed for each Integration inside a Data Landing Zone.
 
@@ -42,7 +40,6 @@ This leads to a Resource Group per external integration.
 Enterprise Scale Analytics and AI will make use of Azure Key Vault functionality and store secrets within Azure whenever possible.
 
 Each Data Landing Zone will have an Azure Key Vault per Integration. This functionality will ensure that encryption key, secret, and certificate derivation meet the requirements of the environment. This is to allow better separation of administrative duties and reduce risk associated with mixing keys, secrets of differing classifications, and Integrations.
-
 
 >[!IMPORTANT]
 >Integration-specific key vaults should follow the least-privilege model and avoid secret sharing across environments as well as transaction scale limits.

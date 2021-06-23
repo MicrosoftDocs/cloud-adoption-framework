@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: overview
 ---
 
-# Introduction to the concept of data governance
+# Managing master data
 
 Priority of alignment on this topic:
 

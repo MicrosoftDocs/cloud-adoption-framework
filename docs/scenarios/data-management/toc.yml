@@ -9,10 +9,6 @@ items:
     items:
     - name: Intro to data management and analytics
       href: index.md
-    - name: Intro to the analytics maturity model
-      href: intro-analytics-maturity.md
-    - name: Intro to data governance
-      href: intro-data-governance.md
     - name: Technology to support analytics maturity
       href: synapse.md
 
@@ -71,7 +67,7 @@ items:
   - name: Govern your data estate
     items:
     - name: What is data governance?
-      href: what-is-data-governance.md
+      href: data-governance.md
     - name: Requirements for Governing Data in a Modern Enterprise
       href: requirements-for-governing-data-in-a-modern-enterprise.md
     - name: Components Needed for Data Governance
@@ -82,7 +78,8 @@ items:
       href: managing-master-data.md
     - name: Data Governance Maturity Model
       href: managing-master-data.md                 
-
+    - name: Data sharing contracts
+      href: data-sharing-contracts.md   
     - name: Data Privacy
       href: data-privacy.md      
   - name: Manage your data estate

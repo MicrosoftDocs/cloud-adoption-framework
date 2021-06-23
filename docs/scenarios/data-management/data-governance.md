@@ -1,15 +1,15 @@
 ---
-title: "Data governance maturity model"
-description: Introducing the concept of data governance in the cloud
-author: BrianBlanchard
-ms.author: brblanch
-ms.date: 02/01/2020
+title: "WData governance?"
+description: Data governance?
+author: mboswell
+ms.author: mboswell
+ms.date: 06/22/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
 ---
 
-# Data governance maturity model
+# Data governance
 
 Priority of alignment on this topic:
 
@@ -19,4 +19,3 @@ Priority of alignment on this topic:
 * [Driving effective data governance for improved quality and analytics](https://www.microsoft.com/itshowcase/driving-effective-data-governance-for-improved-quality-and-analytics)
 * [Designing a modern data catalog at Microsoft to enable business insights](https://www.microsoft.com/itshowcase/designing-a-modern-data-catalog-at-microsoft-to-enable-business-insights)
 * [Download: A Guide to Data Governance](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4GEtu)
-

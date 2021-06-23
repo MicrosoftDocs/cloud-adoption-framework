@@ -17,7 +17,7 @@ The Enterprise Scale Analytics and AI moves teams from working horizontally acro
 
 *Figure 1: Enterprise Scale Analytics and AI Teams*
 
-### Platform Ops
+## Platform Ops
 
 Platform Ops are part of the Platform Group team. They operate and own the cloud platform all up.
 

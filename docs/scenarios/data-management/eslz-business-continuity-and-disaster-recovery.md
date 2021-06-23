@@ -11,25 +11,25 @@ ms.subservice: ready
 
 # Business continuity and disaster recovery for 'data management and analytics' Enterprise-Scale scenario
 
-When architecting any cloud service, you must consider your availability requirements and how to respond to potential interruptions in the service. An issue could be localized to the specific instance or even region-wide, so having a plan for both is important. Depending on the recovery time objective (RTO) and the recovery point objective (RPO) SLAs for your workload, you might choose an aggressive strategy for high availability and disaster recovery. 
+When architecting any cloud service, you must consider your availability requirements and how to respond to potential interruptions in the service. An issue could be localized to the specific instance or even region-wide, so having a plan for both is important. Depending on the recovery time objective (RTO) and the recovery point objective (RPO) SLAs for your workload, you might choose an aggressive strategy for high availability and disaster recovery.
 
 High availability (HA) and disaster recovery (DR) can sometimes be combined, although each has a slightly different strategy, especially when it comes to data. Microsoft have published guidance using under the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/) and [Reliability Overview](/azure/architecture/framework/resiliency/overview).
 
 In a cloud world, instead of trying to prevent failures from happening acknowledge up front that failures can and do happen. The goal is to minimize the effects of any single failing component in the lifecycle. Your tolerance for cost, RPO, and RTO will have an impact on the type of solution implemented.
 
 ## Backup Strategies
+
 Microsoft has pre-published guidance on building Reliability and Resiliency into applications in the [Reliability Overview](/azure/architecture/framework/resiliency/overview). Some additional considerations are below:
 
 Many alternative strategies are available for implementing distributed compute across regions. These must be tailored to the specific business requirements and circumstances of the application. At a high level, the approaches can be divided into the following categories:
 
-* **Backup and Restore**: In this approach, the database application is restored from the last backup copy before the disaster. This approach is commonly used following data corruption or accidental deletion. 
+* **Backup and Restore**: In this approach, the database application is restored from the last backup copy before the disaster. This approach is commonly used following data corruption or accidental deletion.
 
 * **Redeploy on disaster**: In this approach, the application is redeployed from scratch at the time of disaster. This is appropriate for non-critical applications that don't require a guaranteed recovery time.
 
 * **Warm Spare (Active/Passive)**: A secondary hosted service is created in an alternate region, and roles are deployed to guarantee minimal capacity; however, the roles don't receive production traffic. This approach is useful for applications that have not been designed to distribute traffic across regions.
 
-* **Hot Spare (Active/Active)**: The application is designed to receive production load in multiple regions. The cloud services in each region might be configured for higher capacity than required for disaster recovery purposes. Alternatively, the cloud services might scale-out as necessary at the time of a disaster and failover. This approach requires substantial investment in application design, but it has significant benefits. These include low and guaranteed recovery time, continuous testing of all recovery locations, and efficient usage of capacity. For database applications, this includes a load balancer that sits over top of two databases that are kept in sync with a single connection point. This can be implemented in as many levels as required. 
-
+* **Hot Spare (Active/Active)**: The application is designed to receive production load in multiple regions. The cloud services in each region might be configured for higher capacity than required for disaster recovery purposes. Alternatively, the cloud services might scale-out as necessary at the time of a disaster and failover. This approach requires substantial investment in application design, but it has significant benefits. These include low and guaranteed recovery time, continuous testing of all recovery locations, and efficient usage of capacity. For database applications, this includes a load balancer that sits over top of two databases that are kept in sync with a single connection point. This can be implemented in as many levels as required.
 
 ## Data Lake
 

@@ -53,7 +53,7 @@ If you have a partial implementation of Enterprise Scale Landing Zones then it i
 
 - Operate as a Single tenant
 - Deployment of cloud services is controlled by policy driven governance as this allows you to add data specific policies.
-- Scalability with is via subscriptions and subscription democratization. 
+- Scalability with is via subscriptions and subscription democratization.
 
 ### Identity Access Management
 
