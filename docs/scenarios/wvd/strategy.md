@@ -35,7 +35,7 @@ Azure Virtual Desktop products form a mission-critical platform for many organiz
 
 This article uses the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) and other resources from the Cloud Adoption Framework to capture the strategic impact of Azure Virtual Desktop cloud adoption.
 
-## Reasons to move a Azure Virtual Desktop platform to the cloud
+## Reasons to move to an Azure Virtual Desktop platform in the cloud
 
 Azure Virtual Desktop is an influential platform, and organizations have several motivations to adopt Azure Virtual Desktop in the cloud. When an organization considers a cloud strategy for Azure Virtual Desktop, the following motivations tend to shape cloud adoption plans:
 
@@ -53,7 +53,7 @@ Azure Virtual Desktop is an influential platform, and organizations have several
 
 Azure Virtual Desktop customers are often motivated by all six categories above. To successfully implement a Azure Virtual Desktop platform in the cloud, it's imperative for a cloud strategy team, including business and IT leaders, to review and prioritize the motivations listed in [Cloud motivations](../../strategy/motivations.md). This input will help the cloud adoption team make informed decisions throughout the implementation process.
 
-Motivations to adopt a Azure Virtual Desktop platform in the cloud are often based on an organization's strategic objectives. The following topics are applicable for your organization if your team is reviewing this adoption scenario:
+Motivations to adopt an Azure Virtual Desktop platform in the cloud are often based on an organization's strategic objectives. The following topics are applicable for your organization if your team is reviewing this adoption scenario:
 
 1. Cycles to refresh on-premises virtual desktop infrastructure require significant capital expenditures. If your virtual desktop infrastructure is due for a refresh, the benefits of cloud adoption can unlock timely strategies to reduce costs.
 
@@ -86,7 +86,7 @@ In this scenario, desktop images are either migrated to Azure or new images are 
 
 When the migration to the cloud is finished, the overhead and costs of managing a virtual desktop farm are replaced with a cloud-native solution that manages the virtual desktop experience for your team. The team will only be responsible for support of the desktop images, available applications, Azure Active Directory, and user profiles.
 
-## How to measure progress during a Azure Virtual Desktop adoption
+## How to measure progress during an Azure Virtual Desktop adoption
 
 Once you understand the top motivations for this scenario, the cloud strategy team can define measurable outcomes to further guide adoption activities. Examples of business outcomes commonly seen during cloud adoption can be reviewed in [Business outcomes](../../strategy/business-outcomes/index.md).
 
