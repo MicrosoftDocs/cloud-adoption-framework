@@ -30,9 +30,9 @@ The following approach to the migration process is simplified to outline a proof
 
 The proof-of-concept approach could meet some production needs, but it's built on a number of assumptions.
 
-It's unlikely that all the following assumptions will prove to be true for every enterprise migration of Windows Virtual Desktop, but they serve as a reference point to determine where tailoring may be required.
+It's unlikely that all the following assumptions will prove to be true for every enterprise migration of Azure Virtual Desktop, but they serve as a reference point to determine where tailoring may be required.
 
-The adoption team should assume the production deployment will require a separate deployment that more closely aligns to the production requirements that it identifies during the Windows Virtual Desktop assessment. The assumptions are:
+The adoption team should assume the production deployment will require a separate deployment that more closely aligns to the production requirements that it identifies during the Azure Virtual Desktop assessment. The assumptions are:
 
 - End users have a low-latency connection to the assigned landing zone in Azure.
 - All users can work from a shared pool of desktops.
