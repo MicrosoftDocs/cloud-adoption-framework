@@ -13,9 +13,9 @@ ms.subservice: operate
 
 Data governance is often in between rigid security to restrict risk as much as possible and providing access to perform needed data analytics while maintaining balance among operations, maintenance, and control. Together with the underlying principle of our data lake solution architecture design which is Infrastructure-As-Code and Security-As-Code.
 
-A focus of the Enterprise Scale Anlaytics and AI construction set is based on items listed in Table 1.
+A focus of the Enterprise Scale Analytics and AI construction set is based on items listed in Table 1.
 
-||Description|
+| Principle  |Description|
 |--|--|
 | **Single authoritative source of identity**| Consistency and single authoritative source increases clarity and reduces risk from human errors, and configuration and automation complexity. |
 | **Automated approach to data security**| Automation enables auditability and the implementation of multiple control points as well as reducing human errors. Automation makes data governance easier and brings overhead under control.|

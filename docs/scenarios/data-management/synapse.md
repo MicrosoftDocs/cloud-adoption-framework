@@ -37,9 +37,6 @@ The following list of articles will take you to guidance found at specific point
 
 - [Plan for 'data management and analytics'](./plan.md)
 - [Review your environment or Azure Landing Zone(s)](./ready.md)
-- [Assess for 'data management and analytics' migration](./migrate-assess.md)
-- [Migrate 'data management and analytics'](./migrate-deploy.md)
-- [Release 'data management and analytics' to production](./migrate-release.md)
 - [Innovate with 'data management and analytics'](./innovate.md)
 - [Govern 'data management and analytics'](./govern.md)
 - [Manage 'data management and analytics'](./manage.md)

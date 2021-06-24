@@ -32,7 +32,6 @@ Azure Data Lake Storage Gen 2 (ADLS Gen 2) as well as Azure SQL Database (SQL DB
 >[!IMPORTANT]
 >Do not hardcode user credentials into an application for authentication purpose.
 
-
 ## Application and Service-to-Service Authentication
 
 This is the authentication flow when requests are not associated with a specific user, or there is no user available to enter credentials.
@@ -72,7 +71,7 @@ is the alternative for application and services which do not support managed ide
 
 **Note:** Both managed identities and service principals are created and maintain in Azure AD only.
 
-### Difference Between Managed Identity and Service Principal (to be updated) 
+### Difference Between Managed Identity and Service Principal
 
 | Service Principal                                                                                                               | Managed Identity                                                                                                                         |
 |---------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
@@ -81,7 +80,7 @@ is the alternative for application and services which do not support managed ide
 | This identity has an independent lifecycle. It must be deleted explicitly.                                                      | When the Azure service instance is deleted, the identity is deleted.                                                                     |
 | Password-based (secret-based) or certificate-based authentication                                                               | No explicit password to be provided for authentication.                                                                                  |
 
-### Enterprise Scale Analytics and AI authentication guidelines
+### Enterprise Scale Analytics and AI authentication guidelines (to be updated)
 
 | Data Service                                                                                                                            | Accessor                 | Authentication Provider                                       | Credential                     |
 |-----------------------------------------------------------------------------------------------------------------------------------------|--------------------------|---------------------------------------------------------------|--------------------------------|
@@ -104,8 +103,7 @@ is the alternative for application and services which do not support managed ide
 |                                                                                                                                         | Azure Data Factory (ADF) | Azure AD                                                      | Use Azure AD service principal |
 | *There is no managed identity for Databricks                                                                                            |
 
-
 Need to add... and update...
 
--  Azure Cosmos DB – Azure Cosmos DB does not support Azure AD authentication for access to database. Use Cosmos DB resource key to authenticate to Azure Cosmos DB.
--  Azure Analysis Services – Azure Analysis Services is the tabular semantic data model database in the cloud. Use Azure AD to authenticate to Azure Analysis Services.
+- Azure Cosmos DB – Azure Cosmos DB does not support Azure AD authentication for access to database. Use Cosmos DB resource key to authenticate to Azure Cosmos DB.
+- Azure Analysis Services – Azure Analysis Services is the tabular semantic data model database in the cloud. Use Azure AD to authenticate to Azure Analysis Services.

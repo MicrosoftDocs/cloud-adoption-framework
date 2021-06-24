@@ -34,18 +34,16 @@ Followings are fundamental built-in roles for all Azure resource types including
 Some services have specific RBAC roles such as Storage Blob Data Contributor or Data Factory Contributor which means for these services, specific RBAC roles should be used.
 RBAC is an additive model. Effective permissions are the addition of role assignments. RBAC also support "deny" assignments which take precedence over role assignments.
 
-## RBAC General Practices for Enterprise Scale Anlaytics and AI
+## RBAC General Practices for Enterprise Scale Analytics and AI
 
 - Use RBAC roles for service management and operations and use service-specific roles for data access and workload-specific tasks.
   - Use RBAC roles on Azure resources for granting permission to security principals that need to perform resource management and operations tasks. For security principals that need to access data in a storage, they do not need an RBAC role on the resource because they don't need to manage the resource. Instead, grant permission to data objects directly; for example, a read access on a folder in ADLS Gen 2 or a contained database user and table permission on a database in SQL DB.
 - Use built-in RBAC roles
   - Use the built-in RBAC roles for Azure resources for service management and operations role assignments to control access first. Create and use custom roles for Azure resources only when built-in roles do not meet specific needs.
 - Manage access using groups
-  - Assign access to Azure AD groups and manage membership of groups for on-going access management. Since BBL is integrating its on-premises directory with Azure AD and synchronizing both AD users and groups, it makes sense to maintain groups through its on-premises directory.
+  - Assign access to Azure AD groups and manage membership of groups for on-going access management.
 - Subscription and Resource Group Scopes
   - It makes sense to grant access at the resource group scope to segregate service management and operations access needs as opposed to granting access to individual resources especially in the non-prod environment but for workload-specific tasks such as data lake file system support and operations, do grant access to individual resources instead especially in the production environment. This is because in non-prod environment, developers and testers will need to be able to manage resources such as creating an ADF ingestion pipeline or creating a container in ADLS Gen 2 while in production, users only need to use resources such as viewing the status of a scheduled ADF ingestion pipeline or reading data files in ADLS Gen 2.
   - Never grant access at the subscription scope unnecessarily because this scope covers all resources within the subscription.
 - Least privilege
   - As always, pick the right and only needed role for the job
-
-
