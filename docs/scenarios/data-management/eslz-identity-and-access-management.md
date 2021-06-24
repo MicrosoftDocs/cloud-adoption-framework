@@ -47,16 +47,15 @@ For a successful *data integration* and *product* deployment purposes, within a 
 
 ## Managing access to data
 
-Managing access to data is should be done using Azure AD Groups and by adding user principle names or service principle names into these Azure AD Groups. This will allow for finer grain access by adding these groups to the services and granting permissions to the group. 
+Managing access to data is should be done using Azure AD Groups and by adding user principle names or service principle names into these Azure AD Groups. This will allow for finer grain access by adding these groups to the services and granting permissions to the group.
 
 In the case of datasets residing in Azure Data Lake(s) then you should consider [Access control lists (ACLs)](/azure/storage/blobs/data-lake-storage-access-control-model?branch=main). Using Azure AD passthrough, with ACLs, is supported by most of our native services such as Azure Machine Learning, Azure Synapse Analytics and Azure Databricks  and more services will follow.
 
-Other polyglot storage such as PostgreSQL, MySQL, Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics are likely to be used in the Enterprise Scale Analytic solution pattern. They could be used by Data Integrations to store their Read Data Stores or by Data Product Teams.
+Other polyglot storage such as PostgreSQL, MySQL, Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics are likely to be used in the Enterprise Scale Analytic construction set. They could be used by Data Integrations to store their Read Data Stores or by Data Product Teams.
 
 - [Use Azure Active Directory for authentication with PostgreSQL](/azure/postgresql/howto-configure-sign-in-aad-authentication)
 - [Use Azure Active Directory authentication with Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics](/azure/azure-sql/database/authentication-aad-overview)
 - [Use Azure Active Directory for authenticating with MySQL](/azure/mysql/concepts-azure-ad-authentication)
-
 
 Again, it is recommended that Azure AD groups are used to secure database objects instead of individual Azure AD user accounts. These AD Azure Groups would be used to authenticate users and protects database objects. Similar to the data lake pattern, you could use your Domain or Data Products onboarding to create these groups within you Azure AD service.
 

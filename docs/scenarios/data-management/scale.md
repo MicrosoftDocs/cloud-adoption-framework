@@ -39,4 +39,4 @@ The Enterprise Scale Analytics and AI framework advocates consistent governance 
 
 If you have multiple Data Landing Zones, these can connect to data lakes hosted in other zones, allowing groups to collaborate across the enterprise (subject to SSO access controls).
 
-The solution pattern places a strong emphasis on central cataloging and classification to protect data and allow various groups to discover datasets.
+The construction set places a strong emphasis on central cataloging and classification to protect data and allow various groups to discover datasets.

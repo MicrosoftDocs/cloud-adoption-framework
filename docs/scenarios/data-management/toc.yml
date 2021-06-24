@@ -50,7 +50,7 @@ items:
         - name: Provisioning the platform
           href: platform-provisioning.md
         - name: Deployment template
-          href: deployment-template.md
+          href: deployment-templates.md
 
   - name: Migrate to the cloud
     href: migrate.md
@@ -70,13 +70,17 @@ items:
       href: managing-master-data.md
     - name: Data Governance Maturity Model
       href: managing-master-data.md                 
-    - name: Data sharing contracts
+    - name: Data Sharing Contracts
       href: data-sharing-contracts.md       
   - name: Manage your data estate
     items:
     - name: Overview
-      href: manage.md  
-    - name: Provisioning the security baseline
+      href: manage.md
+    - name: Authentication
+      href: authentication.md
+    - name: Authorization
+      href: analytics-role-based-access-control.md
+    - name: Automating Security
       href: security-provisioning.md
     - name: Data Privacy
       href: data-privacy.md  
@@ -116,7 +120,7 @@ items:
 
   - name: Best practices
     items:
-      - name: Data Lake
+      - name: Data Lake Implementation
         items:
         - name: Managing Data Lake Access 
           href: data-lake-access.md        
@@ -125,7 +129,11 @@ items:
       - name: Azure Databricks Implementation
         href: azure-databricks-implementation.md
       - name: Azure Synapse Analytics Implementation
-        href: azure-synapse-analytics-implementation.md
+        items:
+        - name: Implementation
+          href: azure-synapse-analytics-implementation.md
+        - name: High Availability for Azure Synapse Analytics
+          href: /azure/cloud-adoption-framework/migrate/azure-best-practices/analytics/azure-synapse         
       - name: Azure Purview Implementation
         items:
         - name: Readiness Checklist

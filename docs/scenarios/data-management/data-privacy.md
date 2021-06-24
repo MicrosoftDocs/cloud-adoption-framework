@@ -13,7 +13,7 @@ ms.subservice: ready
 
 The Enterprise Scale Analytics and AI construction set addresses PII (Personally Identifiable information) at multiple layers, whilst leaving it to the business to decide upon the best pattern to suit its requirements. Personally Identifiable Information (PII), is any data that can be used used to identify individuals, such as names, driver's license numbers, SSNs, bank account numbers, passport numbers, or email addresses. Many regulations from GDPR to HIPPA require strict protection of user privacy.
 
-Before Data Integration ingests data into the solution pattern, they must be able to classify the data as non-sensitive or sensitive.
+Before Data Integration ingests data into the construction set, they must be able to classify the data as non-sensitive or sensitive.
 
 * Data may be considered non-sensitive if we give a user access to the data asset in the Enriched or Curated, we are happy for them to see all the rows and columns.
 * Data might be deemed sensitive if we wish to restrict the columns and rows that different users can see.

@@ -38,7 +38,7 @@ If a user in the service engineering team transfers to a different team, you cou
 
 ## Databases Authentication and Permissions
 
-Other polyglot storage such as PostgreSQL, MySQL, Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics are likely to be used in the Enterprise Scale Analytic solution pattern. They could be used by Data Integrations to store their Read Data Stores or by Data Products.
+Other polyglot storage such as PostgreSQL, MySQL, Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics are likely to be used in the Enterprise Scale Analytic construction set. They could be used by Data Integrations to store their Read Data Stores or by Data Products.
 
 - [Use Azure Active Directory for authentication with PostgreSQL](/azure/postgresql/howto-configure-sign-in-aad-authentication)
 - [Use Azure Active Directory authentication with Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics](/azure/azure-sql/database/authentication-aad-overview)
@@ -103,18 +103,17 @@ We are able to delegate access governance to access package managers in Azure AD
 
 Figure 2 brings all of this together on how different personas would work together to control access to data assets.
 
-1. Data Platform Ops would create a catalog for each individual Data Landing Zone, and each can have their own group to create packages and manage permissions.
-
-   >[!IMPORTANT]
-   >Currently tenants can provision 500 catalogs with 500 access packages each (this can be increased by contacting Azure support).
-
 :::image type="content" source="./images/identity-governance-catalogs.png" alt-text="Identity Governance Catalogs" lightbox="./images/identity-governance-catalogs.png":::
 
-2. Integration Ops owns the creation and management of Data Asset Security Groups (DASG). This is mostly handled via automated scripts that manage the creating and updating of security groups.
-3. A Data Manager, part of Integration Ops, can curate access packages and define which access and applications are included. The Access Packages are published to their respective catalogs. Access Packages are typically aligned to user profiles (*e.g.* base package for finance users). Access Packages can include expiration policies and access review policies. Special policies also exist for external guest users.
-4. Users browse packages in myaccess portal and can request access to these packages themselves. However a manager could also request that the AP-admin (requires assignment-manager role) grant their team access.
-5. Upon a request for access, the user must provide justification and submit.
-6. The delegated approver or Data Manager in Integration Ops can approve or reject the request.
+1. Data Platform Ops would create a catalog for each individual Data Landing Zone, and each can have their own group to create packages and manage permissions.
+1. Integration Ops owns the creation and management of Data Asset Security Groups (DASG). This is mostly handled via automated scripts that manage the creating and updating of security groups.
+1. A Data Manager, part of Integration Ops, can curate access packages and define which access and applications are included. The Access Packages are published to their respective catalogs. Access Packages are typically aligned to user profiles (*e.g.* base package for finance users). Access Packages can include expiration policies and access review policies. Special policies also exist for external guest users.
+1. Users browse packages in myaccess portal and can request access to these packages themselves. However a manager could also request that the AP-admin (requires assignment-manager role) grant their team access.
+1. Upon a request for access, the user must provide justification and submit.
+1. The delegated approver or Data Manager in Integration Ops can approve or reject the request.
+
+>[!IMPORTANT]
+>Currently tenants can provision 500 catalogs with 500 access packages each (this can be increased by contacting Azure support).
 
 ## Next Steps
 
