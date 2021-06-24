@@ -61,7 +61,7 @@ Things to note:
 
 ### Image location
 
-In Azure Virtual Desktop, you have more freedom around the geographic placement of your host pools than in a traditional desktop environment. This freedom exists because all Azure locations support Azure Virtual Desktop. To avoid creating VMs from an image across the WAN (Wide Area Network) make your gold image available in the same locations as your users.  
+In Azure Virtual Desktop, you have more freedom around the geographic placement of your host pools than in a traditional desktop environment. This freedom exists because all Azure locations support Azure Virtual Desktop. To avoid creating VMs from an image across the wide area network (WAN) make your gold image available in the same locations as your users.  
 
 ### Host Pool gold image updates
 
