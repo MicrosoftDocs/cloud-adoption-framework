@@ -19,7 +19,6 @@ A number of analytics products, and how to migrate to them, are already covered 
 
 The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
 
-- [Release 'data management and analytics' to production](./migrate-release.md)
 - [Innovate with 'data management and analytics'](./innovate.md)
 - [Govern 'data management and analytics'](./govern.md)
 - [Manage 'data management and analytics'](./manage.md)

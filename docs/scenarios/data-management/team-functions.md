@@ -23,7 +23,6 @@ The platform group consists of two teams.
 
 ### Platform Ops
 
-
 Platform Ops are part of the Platform Group team. They operate and own the cloud platform all up.
 
 Within Enterprise Scale Analytics they are responsible for instantiating Data Management Landing Zone and Data Landing Zone scaffolding such as networking, peering, core service and monitoring.

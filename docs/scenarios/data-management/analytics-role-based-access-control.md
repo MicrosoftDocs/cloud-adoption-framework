@@ -41,11 +41,10 @@ RBAC is an additive model. Effective permissions are the addition of role assign
 - Use built-in RBAC roles
   - Use the built-in RBAC roles for Azure resources for service management and operations role assignments to control access first. Create and use custom roles for Azure resources only when built-in roles do not meet specific needs.
 - Manage access using groups
-  - Assign access to Azure AD groups and manage membership of groups for on-going access management. Since BBL is integrating its on-premises directory with Azure AD and synchronizing both AD users and groups, it makes sense to maintain groups through its on-premises directory.
+  - Assign access to Azure AD groups and manage membership of groups for on-going access management.
 - Subscription and Resource Group Scopes
   - It makes sense to grant access at the resource group scope to segregate service management and operations access needs as opposed to granting access to individual resources especially in the non-prod environment but for workload-specific tasks such as data lake file system support and operations, do grant access to individual resources instead especially in the production environment. This is because in non-prod environment, developers and testers will need to be able to manage resources such as creating an ADF ingestion pipeline or creating a container in ADLS Gen 2 while in production, users only need to use resources such as viewing the status of a scheduled ADF ingestion pipeline or reading data files in ADLS Gen 2.
   - Never grant access at the subscription scope unnecessarily because this scope covers all resources within the subscription.
 - Least privilege
   - As always, pick the right and only needed role for the job
-
 

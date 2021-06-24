@@ -416,4 +416,3 @@ df.write.saveAsTable("<tablename>")
 ## References
 
 [How to set up access control for your Synapse workspace - Azure Synapse Analytics | Microsoft Docs](/azure/synapse-analytics/security/how-to-set-up-access-control?WT.mc_id=Portal-Microsoft_Azure_Synapse)-->
-
