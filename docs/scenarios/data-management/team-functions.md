@@ -108,7 +108,7 @@ The team monitor the Data Landing Zone for incidents and health events. They wil
 
 Integration Ops primary function is to ingest data from source and to provide a read data store version in the Data Landing Zone. The only change to the structure is to add conformed data types.
 
-Onboarding a data integration was covered in [Data Integration & Data Product Deployment Process](deployment-models.md#data-integration--data-product-deployment-process).
+Onboarding a data integration was covered in [Data Integration & Data Product Deployment Process](platform-provisioning.md#data-integration--data-product-deployment-process).
 
 Jordan is a Data Manager within the integration-ops team.
 
@@ -183,7 +183,7 @@ The Data Office assess the requirements and assembles a new Data Product Team ba
 
 The team identifies the data assets required for the data product and raises requests for permission to the data asset. If a new data asset is require Integration Ops would receive a ticket to ingest the new data asset.
 
-THe team identifies the common services which will be required for the new data product and raise a request for a new data product via [Data Integration & Data Product Deployment Process](deployment-models.md#data-integration--data-product-deployment-process).
+THe team identifies the common services which will be required for the new data product and raise a request for a new data product via [Data Integration & Data Product Deployment Process](platform-provisioning.md#data-integration--data-product-deployment-process).
 
 The Data Product team is given a forked repo from the master Data Products template to work with to deploy data product.
 

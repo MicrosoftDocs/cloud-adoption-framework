@@ -49,8 +49,8 @@ items:
           href: eslz-platform-automation-and-devops.md
         - name: Provisioning the platform
           href: platform-provisioning.md
-        - name: Deployment Models
-          href: deployment-models.md
+        - name: Deployment template
+          href: deployment-template.md
 
   - name: Migrate to the cloud
     href: migrate.md
@@ -74,7 +74,7 @@ items:
       href: data-sharing-contracts.md       
   - name: Manage your data estate
     items:
-    - name: Overview (TODO)
+    - name: Overview
       href: manage.md  
     - name: Provisioning the security baseline
       href: security-provisioning.md
@@ -82,7 +82,7 @@ items:
       href: data-privacy.md  
   - name: Organize people and teams
     items:
-      - name: Overview (TODO)
+      - name: Overview
         href: organize.md
       - name: Organize for effective data operations
         href: dataops.md
