@@ -12,13 +12,13 @@ ms.custom: think-tank
 
 # Management group and subscription organization
 
-![Diagram that shows management group hierarchy.](./media/sub-org.png)
+![Diagram of a management group hierarchy.](./media/sub-org.png)
 
 *Figure 1: Management group hierarchy.*
 
 ## Define a management group hierarchy
 
-Management group structures within an Azure Active Directory (Azure AD) tenant support organizational mapping and should be considered thoroughly when an organization plans Azure adoption at scale.
+Management group structures within an Azure Active Directory (Azure AD) tenant support organizational mapping. Consider your management group structure thoroughly as your organization plans Azure adoption at scale.
 
 **Design considerations:**
 
@@ -26,13 +26,13 @@ Management group structures within an Azure Active Directory (Azure AD) tenant s
 
 - A management group tree can support up to [six levels of depth](/azure/governance/management-groups/overview#hierarchy-of-management-groups-and-subscriptions). This limit doesn't include the tenant root level or the subscription level.
 
-- Any principal (user or service principal) within an Azure AD tenant can create new management groups since Azure role-based access control (RBAC) authorization for management group operations isn't enabled by default.
+- Any principal (user or service principal) within an Azure AD tenant can create new management groups, since Azure role-based access control (RBAC) authorization for management group operations isn't enabled by default.
 
 - All new subscriptions will be placed under the root management group by default.
 
 **Design recommendations:**
 
-- Keep the management group hierarchy reasonably flat with no more than three to four levels, ideally. This restriction reduces management overhead and complexity.
+- Keep the management group hierarchy reasonably flat, with no more than three to four levels ideally. This restriction reduces management overhead and complexity.
 
 - Avoid duplicating your organizational structure into a deeply nested management group hierarchy. Management groups should be used for policy assignment versus billing purposes. This approach necessitates using management groups for their intended purpose in enterprise-scale architecture, which is providing Azure policies for workloads that require the same type of security and compliance under the same management group level.
 
@@ -44,22 +44,22 @@ Management group structures within an Azure Active Directory (Azure AD) tenant s
 
 - Use a dedicated service principal name (SPN) to execute management group management operations, subscription management operations, and role assignment. Using an SPN reduces the number of users who have elevated rights and follows least-privilege guidelines.
 
-- Assign the `User Access Administrator` Azure role at the root management group scope (`/`) to grant the SPN just mentioned access at the root level. After the SPN is granted permissions, the `User Access Administrator` role can be safely removed. In this way, only the SPN is part of the `User Access Administrator` role.
+- Assign the User Access Administrator role at the root management group scope (`/`) to grant the SPN just mentioned access at the root level. After the SPN is granted permissions, the User Access Administrator role can be safely removed. In this way, only the SPN is part of the User Access Administrator role.
 
-- Assign `Contributor` permission to the SPN previously mentioned at the root management group scope (`/`), which allows tenant-level operations. This permission level ensures that the SPN can be used to deploy and manage resources to any subscription within your organization.
+- Assign the Contributor role to the SPN previously mentioned at the root management group scope (`/`), which allows tenant-level operations. This permission level ensures that the SPN can be used to deploy and manage resources to any subscription within your organization.
 
 - Create a `Platform` management group under the root management group to support common platform policy and Azure role assignment. This grouping structure ensures that different policies can be applied to the subscriptions used for your Azure foundation. It also ensures that the billing for common resources is centralized in one set of foundational subscriptions.
 
 - Limit the number of Azure Policy assignments made at the root management group scope (`/`). This limitation minimizes debugging inherited policies in lower-level management groups.
 
-- Use the policies available for enterprise-scale landing zones to enforce compliance requirements either at management group or subscription scope. Refer to guidance in the [policy-driven governance](#policy-driven-governance) section to learn more about the governance requirements that can be addressed.
+- Use the policies available for enterprise-scale landing zones to enforce compliance requirements either at management group or subscription scope. Refer to guidance in the [Policy-driven governance](#policy-driven-governance) section to learn more about the governance requirements that can be addressed.
 
 - Ensure that only privileged users can operate management groups in the tenant by enabling Azure RBAC authorization in the management group [hierarchy settings](/azure/governance/management-groups/how-to/protect-resource-hierarchy#setting---require-authorization) (by default, all users are authorized to create their own management groups under the root management group).
 
 - [Configure](/azure/governance/management-groups/how-to/protect-resource-hierarchy#setting---default-management-group) a default, dedicated management group for new subscriptions to ensure that no subscriptions are placed under the root management group. This is especially important if there are users eligible for MSDN or Visual Studio benefits and subscriptions. A good candidate for this type of management group is a `Sandbox` management group.
 
 > [!NOTE]
-> For testing guidance for enterprise-scale deployments, see [Testing approach for Enterprise Scale](./testing-approach.md).
+> For testing guidance for enterprise-scale deployments, see [Testing approach for enterprise-scale](./testing-approach.md).
 
 ## Subscription organization and governance
 
@@ -126,54 +126,54 @@ Each Azure region contains a finite number of resources. When you consider an en
 
 ## Configure subscription tenant transfer restrictions
 
-Each Azure Subscription is linked to a single Azure AD Tenant, this acts as the identity provider (IdP) for the Azure Subscription which it will trust to authenticate users, services and devices.
+Each Azure subscription is linked to a single Azure AD tenant, this acts as the identity provider (IdP) for the Azure subscription which it will trust to authenticate users, services and devices.
 
-However, the Azure AD tenant that an Azure Subscription is linked to can be changed by a user with the required permissions that also exists in more than one Azure AD Tenant, again, with the required permissions. This process is detailed in the following articles:
+However, the Azure AD tenant that an Azure subscription is linked to can be changed by a user with the required permissions that also exists in more than one Azure AD tenant, again, with the required permissions. This process is detailed in the following articles:
 
 - [Associate or add an Azure subscription to your Azure Active Directory tenant](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory)
 - [Transfer an Azure subscription to a different Azure AD directory](/azure/role-based-access-control/transfer-subscription)
 
 > [!NOTE]
-> For Azure Cloud Solution Providers (CSP) Subscriptions, transferring to another Azure AD Tenant is not supported.
+> For Azure cloud solution provider (CSP) subscriptions, transferring to another Azure AD tenant is not supported.
 
-When this is considered in the context of enterprise-scale, you may decide to restrict and prevent users from being able to either; transfer Azure Subscriptions out of your organizations Azure AD Tenant or transfer Azure Subscriptions into your organizations Azure AD Tenant. This can be done by following the process detailed in the article [Manage Azure subscription policies](/azure/cost-management-billing/manage/manage-azure-subscription-policy).
+When this is considered in the context of enterprise-scale, you may decide to restrict and prevent users from being able to either transfer Azure subscriptions out of your organization's Azure AD tenant or transfer Azure subscriptions into your organization's Azure AD tenant. This can be done by following the process detailed in  [Manage Azure subscription policies](/azure/cost-management-billing/manage/manage-azure-subscription-policy).
 
-As part of the Subscription policy you can configure you can also provide a list of [exempted users](/azure/cost-management-billing/manage/manage-azure-subscription-policy#exempted-users) who will be permitted to bypass what is set in the policy.
+As part of the subscription policy you can configure, you can also provide a list of [exempted users](/azure/cost-management-billing/manage/manage-azure-subscription-policy#exempted-users) who are permitted to bypass what's set in the policy.
 
 > [!IMPORTANT]
 > This is not an [Azure Policy](/azure/governance/policy/overview).
 
 **Design considerations:**
 
-- Consider whether users with [Visual Studio/MSDN Azure Subscriptions](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers/) should be allowed to transfer their subscription to/from the Azure AD Tenant.
+- Consider whether users with [Visual Studio/MSDN Azure subscriptions](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers/) should be allowed to transfer their subscription to or from the Azure AD tenant.
 
 - These settings are only configurable by users with the Azure AD [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) role assigned and they must have [elevated their access](/azure/role-based-access-control/elevate-access-global-admin) to be able to change the policy.
 
-  - Only individual user accounts can be specified as [exempted users](/azure/cost-management-billing/manage/manage-azure-subscription-policy#exempted-users). Azure AD Groups are not supported at this time.
+  - Only individual user accounts can be specified as [exempted users](/azure/cost-management-billing/manage/manage-azure-subscription-policy#exempted-users). Azure AD groups are not supported at this time.
 
-- All users with access to Azure will be able to view the policy defined for the Azure AD Tenant
+- All users with access to Azure will be able to view the policy defined for the Azure AD tenant.
 
   - They will not be able to view the [exempted users](/azure/cost-management-billing/manage/manage-azure-subscription-policy#exempted-users).
 
-  - They will be able to view the Global Administrators within the Azure AD Tenant.
+  - They will be able to view the global administrators within the Azure AD tenant.
 
-- Azure Subscriptions transferred into an Azure AD Tenant will be placed into the [default Management Group](/azure/governance/management-groups/how-to/protect-resource-hierarchy#setting---default-management-group) for that Tenant.
+- Azure subscriptions transferred into an Azure AD tenant will be placed into the [default management group](/azure/governance/management-groups/how-to/protect-resource-hierarchy#setting---default-management-group) for that tenant.
 
-- Define a process to allow Azure Subscriptions to be transferred to/from an Azure AD Tenant, if it is deemed as required by the application team and approved by the organization.
+- Define a process to allow Azure subscriptions to be transferred to or from an Azure AD tenant, if it's deemed necessary by the application team and approved by the organization.
 
 **Design recommendations:**
 
-- Prevent all users, by default, from being able to transfer Azure Subscriptions to/from the Azure AD Tenant by configuring the following settings:
+- Prevent all users, by default, from being able to transfer Azure subscriptions to or from the Azure AD tenant by configuring the following settings:
 
-  - 'Subscription leaving AAD directory' set to `Permit no one`.
+  - **Subscription leaving Azure AD directory** set to `Permit no one`.
 
-  - 'Subscription entering AAD directory' set to `Permit no one`.
+  - **Subscription entering Azure AD directory** set to `Permit no one`.
 
 - Configure a limited set of [exempted users](/azure/cost-management-billing/manage/manage-azure-subscription-policy#exempted-users).
 
   - This would ideally be members of an Azure PlatformOps (platform operations) team.
 
-  - Include break-glass accounts in these list of [exempted users](/azure/cost-management-billing/manage/manage-azure-subscription-policy#exempted-users).
+  - Include break-glass accounts in the list of [exempted users](/azure/cost-management-billing/manage/manage-azure-subscription-policy#exempted-users).
 
 ## Establish cost management
 
@@ -197,7 +197,7 @@ Cost transparency across a technical estate is a critical management challenge f
 
 Organizations can use enterprise-scale Azure policies to enforce the following governance requirements:
 
-- **Prevent Public IP-based services:**
+- **Prevent public IP-based services:**
 
     Most Azure platform as a service (PaaS) services are created with a public IP address assigned to each service. This option can help developers who need to start using these services quickly.
 
@@ -213,25 +213,25 @@ Organizations can use enterprise-scale Azure policies to enforce the following g
 
     Once Azure services are provisioned, they should provide detailed information about how they interact with the Azure platform. This information can be broadly divided into logs and metrics, and each Azure service can be further grouped into its subcomponents. Ror example, an Azure public IP resource with `DDoSProtectionNotifications`, `DDoSMitigationReports`, and `DDoSMitigationFlowLogs` as its subcomponents. Collecting diagnostic information at these subcategories can also help organizations to enhance auditing and debugging.
 
-     A custom Azure policy initiative is available to help enterprises gather logs and metrics at a deeper level for each Azure service. This initiative includes a policy for every Azure service, and the policies collect key log categories and metrics automatically.
+     A custom Azure Policy initiative is available to help enterprises gather logs and metrics at a deeper level for each Azure service. This initiative includes a policy for every Azure service, and the policies collect key log categories and metrics automatically.
 
 - **Provide comprehensive security for SQL databases:**
 
-     SQL databases are a common Azure service in most Azure deployments. Unfortunately, they're also target for malicious activity both inside and outside an enterprise. A custom Azure policy initiative for SQL databases helps organizations to apply the following key governance practices:
+     SQL databases are a common Azure service in most Azure deployments. Unfortunately, they're also target for malicious activity both inside and outside an enterprise. A custom Azure Policy initiative for SQL databases helps organizations to apply the following key governance practices:
 
   - **Encrypt SQL data at rest:**
 
     SQL databases and their backups are vulnerable to malicious actors. Since it's simple to restore SQL databases from database files or backups, malicious actors can gain access to this data if a proper defense system isn't in place.
 
-    One of the first steps of building an SQL database defense strategy is ensuring that an SQL database is encrypted at rest. Azure SQL Database transparent data encryption (TDE) encrypts database data at rest without changing an application's code and presents obstacles for malicious actors trying access the data, even if it's compromised. As SQL database deployments increase within an enterprise, it's important to create them with TDE. There's a custom policy to ensure TDE for SQL databases.
+    One of the first steps in building a SQL database defense strategy is ensuring that a SQL database is encrypted at rest. Azure SQL Database transparent data encryption (TDE) encrypts database data at rest without changing an application's code and presents obstacles for malicious actors trying access the data, even if it's compromised. As SQL Database deployments increase within an enterprise, it's important to create them with TDE. There's a custom policy to ensure TDE for SQL databases.
 
   - **Optimize alerts for suspicious activity:**
 
-    Bad actors aim to access and exploit business-critical SQL databases. When enterprises don't acknowledge these attempts, their risk of not detecting and resolving these incidents increases. In a worst-case scenario, an enterprise might not know if its SQL database has been compromised.
+    Bad actors aim to access and exploit business-critical SQL databases. When enterprises don't acknowledge these attempts, their risk of not detecting and resolving these incidents increases. In a worst-case scenario, an enterprise might not know whether its SQL database has been compromised.
 
     SQL Database lets enterprises set up security alerts that report suspicious Microsoft SQL Server activity. These alerts reach a preconfigured email address and optionally, Azure subscription admins and owners. They can expose malicious activities like SQL injection attacks, brute-force attacks, and more.
 
-    A custom Azure policy is available to enable security alerts on SQL databases. Security alerts provide detailed information about every incident, which is visible in the Azure portal or emails from when alerts are triggered.
+    A custom policy is available to enable security alerts on SQL databases. Security alerts provide detailed information about every incident, which is visible in the Azure portal or emails from when alerts are triggered.
 
   - **Examine an audit trail of operations:**
 
@@ -239,7 +239,7 @@ Organizations can use enterprise-scale Azure policies to enforce the following g
 
     Enabling SQL auditing can help enterprises to gather important information about all database activities, and SQL auditing helps enterprises to create and analyze an audit trail of database events. This is also part of many industry/regional regulatory compliance requirements.
 
-    Enterprises can use a custom Azure policy to enforce SQL database auditing. This policy audits and reports on key database events like ownership, role membership, or schema changes, successful/failed logins, and more. Enterprises can use this policy's audit trail to gain insights about database operations and comply with industry or regional regulatory requirements.
+    Enterprises can use a custom policy to enforce SQL database auditing. This policy audits and reports on key database events like ownership, role membership, or schema changes, successful and failed logins, and more. Enterprises can use this policy's audit trail to gain insights about database operations and comply with industry or regional regulatory requirements.
 
 - **Evaluate proven best practices:**
 
@@ -247,7 +247,7 @@ Organizations can use enterprise-scale Azure policies to enforce the following g
 
    Microsoft best practices for SQL databases can help enterprises to assess their SQL databases, and SQL Database has a built-in vulnerability assessment service to assist. A vulnerability assessment scans and identifies database- and server-level security risks, and it offers remediation tasks that can fix vulnerabilities.
 
-    A custom Azure policy ensures that SQL databases are configured with vulnerability assessments. Assessment scans run periodically, reports are stored in an Azure Storage account, and a predefined email address shares the results for reporting.
+    A custom policy ensures that SQL databases are configured with vulnerability assessments. Assessment scans run periodically, reports are stored in an Azure Storage account, and a predefined email address shares the results for reporting.
 
 - **Protect secrets from being deleted intentionally or accidentally:**
 
@@ -275,15 +275,15 @@ Organizations can use enterprise-scale Azure policies to enforce the following g
 
 - **Enforce centralized DNS record management:**
 
-    Private Azure DNS zones help to create and manage DNS records for Azure resources. Without controls for how these zones proliferate, management and network connectivity debugging issues can result. In hybrid environments where on-premise sites need to connect to Azure resources, fragmented DNS zones can create duplicate DNS records and maintenance challenges.
+    Private Azure DNS zones help to create and manage DNS records for Azure resources. Without controls for how these zones proliferate, management and network connectivity debugging issues can result. In hybrid environments where on-premises sites need to connect to Azure resources, fragmented DNS zones can create duplicate DNS records and maintenance challenges.
 
-    Enterprises can deploy private Azure DNS zones centrally to manage DNS records clearly. Azure Virtual Network can link with private zones to help run domain controllers, which can streamline connectivity from on-premise sites. Azure services that support Azure Private Link/End Point can use centrally managed private DNS zones without creating them during each application deployment.
+    Enterprises can deploy private Azure DNS zones centrally to manage DNS records clearly. Azure Virtual Network can link with private zones to help run domain controllers, which can streamline connectivity from on-premises sites. Azure services that support Azure Private Link and Private Endpoint can use centrally managed private DNS zones without creating them during each application deployment.
 
-    Azure offers a custom policy that can prevent the creation of a private DNS zone in the scope during which it's applied. Enterprises can view this policy's compliance status even when the policy enforcement is disabled. This policy helps to streamline connectivity between on-premise sites and access to Azure PaaS services using Private Link/End Point.
+    Azure offers a custom policy that can prevent the creation of a private DNS zone in the scope during which it's applied. Enterprises can view this policy's compliance status even when the policy enforcement is disabled. This policy helps to streamline connectivity between on-premises sites and access to Azure PaaS services using Private Link or Private Endpoint.
 
 - **Enforce network traffic control:**
 
-    An Azure Virtual Network can be divided into multiple subnets. Since network access controls between these subnets don't exist by default, this can result in unsolicited network traffic in a subnet.
+    An Azure virtual network can be divided into multiple subnets. Since network access controls between these subnets don't exist by default, this can result in unsolicited network traffic in a subnet.
 
     Azure network security groups (NSGs) help to filter incoming and outgoing subnet traffic, and stateful packet inspections can allow or deny network traffic. Resources inside subnets can only receive traffic from allowed IP address ranges.
 
@@ -301,21 +301,21 @@ Organizations can use enterprise-scale Azure policies to enforce the following g
 
     The increasing frequency of ransomware and intrusion attacks present another concern for enterprises. A successful ransomware attack can disrupt business-critical processes and applications, and attackers have held enterprises hostage for large amounts of money.
 
-    Azure Backup protects Azure Virtual Machine data from being destroyed maliciously or accidentally. Backups are easy to configure and scale, and Azure Recovery Vault backs up the data for simple management and protection.
+    Azure Backup protects Azure virtual machine data from being destroyed maliciously or accidentally. Backups are easy to configure and scale, and Azure Recovery Services backs up the data for simple management and protection.
 
-    Azure offers a custom policy that protects Virtual Machines by configuring them with Azure Backup. This policy automatically provisions an Azure Recovery Services vault and creates backup container for every Azure VM created.
+    Azure offers a custom policy that protects virtual machines by configuring them with Azure Backup. This policy automatically provisions an Azure Recovery Services vault and creates backup container for every Azure VM created.
 
 - **Protect against distributed denial of service attacks:**
 
     Publicly reachable Azure resources are vulnerable to distributed denial-of-service (DDoS) attacks. These attacks can affect an application's availability to its intended users, and prolonged attacks can exhaust all available resources and create downtime for business-critical applications.
 
-    Azure DDoS Protection defends Azure resources against DDoS attacks by continuously monitoring incoming traffic to identify potential threats. During an active attack, enterprises can benefit from working with the Microsoft DDoS Rapid Response team.
+    Azure DDoS protection defends Azure resources against DDoS attacks by continuously monitoring incoming traffic to identify potential threats. During an active attack, enterprises can benefit from working with the Microsoft DDoS rapid response team.
 
-    Azure offers a custom policy that automatically provisions an Azure DDoS Standard plan on all Azure subscriptions in its scope. This policy allows enterprises to select the Azure regions that will be covered by the service.
+    Azure offers a custom policy that automatically provisions an Azure DDoS Protection Standard plan on all Azure subscriptions in its scope. This policy allows enterprises to select the Azure regions that will be covered by the service.
 
 - **Auto-provision Private Link or Private Endpoint with private DNS zones:**
 
-    One enterprise maintenance challenge is how to create private DNS zones for every application that needs access to Azure PaaS services. Azure Private Link and Private Endpoint use private IP addresses to provide access to Azure platform-as-a-service (PaaS) services, and private DNS zones resolve DNS records. Private DNS zone groups use categorizes from Azure services like blob, queue, table, SQL, etc. to group Private Link connections and use one private DNS zone per service.
+    One enterprise maintenance challenge is how to create private DNS zones for every application that needs access to Azure PaaS services. Azure Private Link and Private Endpoint use private IP addresses to provide access to Azure platform as a service (PaaS) services, and private DNS zones resolve DNS records. Private DNS zone groups use categorizes from Azure services like blob, queue, table, and SQL to group Private Link connections and use one private DNS zone per service.
 
     Enterprises can also create central private DNS zones, and custom Azure policies can automatically connect Private Link or Private Endpoint with private DNS zones for Azure services.
 
@@ -397,4 +397,4 @@ Organizations can use enterprise-scale Azure policies to enforce the following g
 
     Azure provides managed and unmanaged solutions for implementing domain services. With self-managed Azure AD DS services, enterprises gain the same complete control of setups, configurations, and operations as with on-premises environment. The service frees enterprises of management overhead while providing essential domain services.
 
-    Azure offers a custom policy that helps new Windows VMs to automatically join domains. The `JsonADDomainExtension` extension deployed on the VM uses configuration settings like the username, domain, oupath, and more to ensure that the VM joins the specified domain. This policy uses Azure Key Vault to manage confidential domain username and password information.
+    Azure offers a custom policy that helps new Windows VMs to automatically join domains. The `JsonADDomainExtension` extension deployed on the VM uses configuration settings like the username, domain, OU path, and other settings to ensure that the VM joins the specified domain. This policy uses Azure Key Vault to manage confidential domain username and password information.
