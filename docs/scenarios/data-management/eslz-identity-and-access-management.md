@@ -57,6 +57,7 @@ Other polyglot storage such as PostgreSQL, MySQL, Azure SQL Database, SQL Manage
 - [Use Azure Active Directory authentication with Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics](/azure/azure-sql/database/authentication-aad-overview)
 - [Use Azure Active Directory for authenticating with MySQL](/azure/mysql/concepts-azure-ad-authentication)
 
+
 Again, it is recommended that Azure AD groups are used to secure database objects instead of individual Azure AD user accounts. These AD Azure Groups would be used to authenticate users and protects database objects. Similar to the data lake pattern, you could use your Domain or Data Products onboarding to create these groups within you Azure AD service.
 
 This also gives a single pane of glass and allows reviewing access rights in a holistic way inside the Azure Graph.
