@@ -11,34 +11,18 @@ ms.subservice: operate
 
 # Manage 'data management and analytics'
 
-Describe how your scenario changes operations management
+Data governance is often in between rigid security to restrict risk as much as possible and providing access to perform needed data analytics while maintaining balance among operations, maintenance, and control. Together with the underlying principle of our data lake solution architecture design which is Infrastructure-As-Code and Security-As-Code.
 
-## 'data management and analytics' business alignment
+A focus of the Enterprise Scale Anlaytics and AI construction set is based on items listed in Table 1.
 
-Does this scenario require the customer to rethink business alignment or how the platform is supported in operations management?
+||Description|
+|--|--|
+| **Single authoritative source of identity**| Consistency and single authoritative source increases clarity and reduces risk from human errors, and configuration and automation complexity. |
+| **Automated approach to data security**| Automation enables auditability and the implementation of multiple control points as well as reducing human errors. Automation makes data governance easier and brings overhead under control.|
+| **Only least privilege required to complete task**| Granting only the amount of access to users that they need to perform their jobs and only allow certain actions at a particular scope.| |
+|  **Simplified but yet secure permissions**| Customization leads to complexity that inhibits human understanding, security, automation and governance; for example, use build-in roles for assigning permissions to data services and avoid permissions specifically referencing individual resources or users.|
+| **Better clarity and enforceability of rules and definitions**| Clear segregation of data helps keep the environment organized while making it easy to enforce security rules and definitions. |
 
-## 'data management and analytics' operations baseline
+Table 1: Key Management Principle
 
-Does this workload have special requirements for Visibility, Operational Compliance, or BCDR?
-
-## 'data management and analytics' platform operations
-
-Are there specific requirements for operations of the landing zone or platform for this scenario?
-
-## 'data management and analytics' workload operations
-
-Are there specific requirements for operations of the individual workloads running on this platform?
-
-## Next step: Your next migration iteration
-
-Once the 'data management and analytics' migration is complete, the cloud adoption team can begin your next scenario-specific migration. Alternatively, if there are addition platforms to be migrated, this article series can be used again to guide your next 'data management and analytics' migration or deployment.
-
-- [Strategy for 'data management and analytics'](./strategy.md)
-- [Plan for 'data management and analytics'](./plan.md)
-- [Review your environment or Azure Landing Zone(s)](./ready.md)
-- [Assess for 'data management and analytics' migration](./migrate-assess.md)
-- [Migrate 'data management and analytics'](./migrate-deploy.md)
-- [Release 'data management and analytics' to production](./migrate-release.md)
-- [Innovate with 'data management and analytics'](./innovate.md)
-- [Govern 'data management and analytics'](./govern.md)
-- [Manage 'data management and analytics'](./manage.md)
+When deploying the Enterprise Scale Analytics and AI you should consider these principle around automation to enable security as opposed relying upon manually applying them via human interaction. The most interaction the person should have is to approve or deny an access request.

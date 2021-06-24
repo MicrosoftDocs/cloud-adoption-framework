@@ -14,7 +14,7 @@ ms.subservice: ready
 Azure Synapse Analytics is the provisioned, integrated analytics service that accelerates time to insight across data warehouses and big data systems. Azure Synapse Analytics brings together the best of SQL technologies used in enterprise data warehousing, Spark technologies used for big data, and pipelines for data integration and ETL/ELT. Synapse Studio provides a unified experience for management, monitoring, coding, and security. Synapse has deep integration with other Azure services such as Power BI, Cosmos DB, and Azure Machine Learning.
 
 > [!NOTE]
-> This section aims to describe prescribed configurations which are specific to the Enterprise Scale Analytic and AI solution pattern. It is a compliment to the official [Azure Synapse Analytics Documentation](/azure/synapse-analytics/).
+> This section aims to describe prescribed configurations which are specific to the Enterprise Scale Analytic and AI construction set. It is a compliment to the official [Azure Synapse Analytics Documentation](/azure/synapse-analytics/).
 
 ## Overview
 

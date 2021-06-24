@@ -99,14 +99,14 @@ It should then be possible to monitor data quality, privacy, access security, us
 
 ## Data Governance Technology
 
-In summary, this construction set focus on technologies needed for data governance are:
+In summary, this construction set focuses on technologies needed for data governance are:
 
 - A data catalog that includes:
   - A business glossary
   - Automated data discovery, profiling, tagging, cataloguing and mapping to a glossary
   - Automated sensitive data detection and governance classification
   - Interoperability with other catalogs, tools and applications to share metadata via APIs and open standards
-- A data lake to ingest and process data
+- data lakes to ingest and process data
 - Enterprise data software with built-in support for:
   - Data centre, multi-cloud and edge data connectivity
   - Data stewardship tooling

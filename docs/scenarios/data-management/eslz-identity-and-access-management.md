@@ -51,7 +51,7 @@ Managing access to data is should be done using Azure AD Groups and by adding us
 
 In the case of datasets residing in Azure Data Lake(s) then you should consider [Access control lists (ACLs)](/azure/storage/blobs/data-lake-storage-access-control-model?branch=main). Using Azure AD passthrough, with ACLs, is supported by most of our native services such as Azure Machine Learning, Azure Synapse Analytics and Azure Databricks  and more services will follow.
 
-Other polyglot storage such as PostgreSQL, MySQL, Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics are likely to be used in the Enterprise Scale Analytic solution pattern. They could be used by Data Integrations to store their Read Data Stores or by Data Product Teams.
+Other polyglot storage such as PostgreSQL, MySQL, Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics are likely to be used in the Enterprise Scale Analytic construction set. They could be used by Data Integrations to store their Read Data Stores or by Data Product Teams.
 
 - [Use Azure Active Directory for authentication with PostgreSQL](/azure/postgresql/howto-configure-sign-in-aad-authentication)
 - [Use Azure Active Directory authentication with Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics](/azure/azure-sql/database/authentication-aad-overview)
