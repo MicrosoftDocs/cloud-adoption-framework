@@ -18,13 +18,13 @@ Azure Virtual Desktop is a Microsoft managed service that provides a control pla
 
 A good BCDR strategy keeps your critical applications and workload up and running during planned and unplanned service or Azure outages. Your strategy should consider resources that are deployed in your subscription as part of the Azure Virtual Desktop data plane, like host pools and storage. 
 
-To ensure business continuity, Azure Virtual Desktop also preserves customer metadata during region outages. In case of an outage, the service infrastructure components fail over to the secondary location and continue functioning as normal.
+To ensure business continuity, Azure Virtual Desktop also preserves customer metadata during region outages. If there is an outage, the service infrastructure components fail over to the secondary location and continue functioning as normal.
 
 For more information on BCDR considerations for your Azure resources, see [Set up a business continuity and disaster recovery plan](/azure/virtual-desktop/disaster-recovery).
 
 ## Design considerations
 
-### Host pool *active-active* vs *active-passive*
+### Host pool *active-active* vs. *active-passive*
 
 For an Azure Virtual Desktop host pool, you can adopt either an *active-active* or *active-passive* BCDR approach. 
 
@@ -38,7 +38,7 @@ With *active-active*:
 * This configuration can be complex and isn't considered to be either a performance or cost optimization.
 
 With *active-passive*: 
-* [Azure Site Recovery](/azure/site-recovery/site-recovery-overview) or a secondary host pool (hot stand-by) can be utilised to maintain a backup environment.
+* [Azure Site Recovery](/azure/site-recovery/site-recovery-overview) or a secondary host pool (hot stand-by) can be utilized to maintain a backup environment.
 * [Azure Site Recovery](/azure/site-recovery/site-recovery-overview) is supported for both *Personal* (dedicated) and *Pooled* (shared) host pool types, and lets you maintain a single host pool entity.
 * You can create a new host pool in the failover region while keeping all of the resources turned off. For this method, set up new application groups in the failover region and assign users to them. You can then use a recovery plan in Azure Site Recovery to turn on host pools and create an orchestrated process.
 
@@ -134,7 +134,7 @@ We recommend storing FSLogix user profile and office containers on Azure Files o
 
 - Only use cloud cache when:
   - The user profile or office container data availability requires high-availability, or an SLA is critical and must be resilient to region failure.
-  - The selected storage option can't satisfy BCDR requirements. For example, GRS isn't available with Azure Files Premium tier or Standard tier with large file support enabled.
+  - The selected storage option can't satisfy BCDR requirements. For example, GRS isn't available with Azure Files premium tier or standard tier with large file support enabled.
   - Replication between disparate storage is required.
 
 - We recommend the following guidelines when using cloud cache:
