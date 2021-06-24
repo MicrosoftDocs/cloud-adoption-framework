@@ -3,7 +3,7 @@ title: Azure Enterprise-Scale identity and access management for 'data managemen
 description: Describe how this enterprise-scale scenario can improve identity and access management of 'data management and analytics'
 author: mboswell
 ms.author: mboswell
-ms.date: 09/11/2020
+ms.date: 06/24/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -47,12 +47,21 @@ For a successful *data integration* and *product* deployment purposes, within a 
 
 ## Managing access to data
 
-Managing access to data is should be done using Azure AD Groups and by adding user principle names or service principle names into these Azure AD Groups. This will allow for finer grain access by adding these groups to the services and granting permissions to the group. In the case of datasets residing in Azure Data Lake(s) then you should consider [Access control lists (ACLs)](/azure/storage/blobs/data-lake-storage-access-control-model?branch=main). Using Azure AD passthrough, with ACLs, is supported by most of our native services such as Azure Machine Learning, Azure Synapse Analytics and Azure Databricks  and more services will follow. 
+Managing access to data is should be done using Azure AD Groups and by adding user principle names or service principle names into these Azure AD Groups. This will allow for finer grain access by adding these groups to the services and granting permissions to the group. 
+
+In the case of datasets residing in Azure Data Lake(s) then you should consider [Access control lists (ACLs)](/azure/storage/blobs/data-lake-storage-access-control-model?branch=main). Using Azure AD passthrough, with ACLs, is supported by most of our native services such as Azure Machine Learning, Azure Synapse Analytics and Azure Databricks  and more services will follow.
+
+Other polyglot storage such as PostgreSQL, MySQL, Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics are likely to be used in the Enterprise Scale Analytic solution pattern. They could be used by Data Integrations to store their Read Data Stores or by Data Product Teams.
+
+- [Use Azure Active Directory for authentication with PostgreSQL](https://docs.microsoft.com/azure/postgresql/howto-configure-sign-in-aad-authentication)
+- [Use Azure Active Directory authentication with Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview)
+- [Use Azure Active Directory for authenticating with MySQL](https://docs.microsoft.com/azure/mysql/concepts-azure-ad-authentication)
+
+Again, it is recommended that Azure AD groups are used to secure database objects instead of individual Azure AD user accounts. These AD Azure Groups would be used to authenticate users and protects database objects. Similar to the data lake pattern, you could use your Domain or Data Products onboarding to create these groups within you Azure AD service.
 
 This also gives a single pane of glass and allows reviewing access rights in a holistic way inside the Azure Graph.
 
-More details on how to drive a security for Data Management Landing Zones and Data Landing Zones is covered under this constructions sets Governance Disciplines[Security, governance, and compliance for 'data management and analytics' Enterprise-Scale scenario](eslz-security-governance-and-compliance.md)
-
+More details on how to drive a security for Data Management Landing Zones and Data Landing Zones is Managing your data estate and [Security Provisioning](security-provisioning.md).
 
 <!--Not adding this as it is not GA yet.
  In addition to managing access using AAD identities using RBACs and ACLs, ADLS Gen2 also supports using SAS tokens and storage keys for managing access to data in your Gen2 account. In order to make sure that every request to Storage Account is authorized through AAD, there is a new feature (currently in preview) of disabling Key based access that permits to disallow requests to the specific storage account in case the requests were authorized with Shared Key. CAE Team is recommending enabling this feature once GA to enforce AAD level access. -->

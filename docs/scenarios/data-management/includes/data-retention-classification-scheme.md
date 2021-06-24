@@ -18,4 +18,3 @@ ms.subservice: overview
 |Fixed period   |Set number of years e.g. keep tax records for 7 years to comply with government laws after which it can be deleted
 |Permanent   | Never to be deleted e.g. Legal correspondence
 
-Automating the data confidentiality and data retention classification process using the classes defined in each scheme is needed to consistently label data across the distributed data landscape to enable it to be consistently and correctly governed. Rules and policies would then need to be defined for each class in the classification scheme to specify how to govern data according to its classification.

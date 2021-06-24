@@ -5,12 +5,6 @@ items:
   - name: Data management and analytics - Microsoft Cloud Adoption Framework for Azure
     href: index.md
     pdf_name: Data management and analytics - Microsoft Cloud Adoption Framework for Azure
-  - name: Overview
-    items:
-    - name: Intro to data management and analytics
-      href: index.md
-    - name: Technology to support analytics maturity
-      href: synapse.md
 
   - name: Build an initial strategy
     href: strategy.md
