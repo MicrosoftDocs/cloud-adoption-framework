@@ -63,7 +63,7 @@ Things to note:
 
 In Azure Virtual Desktop, you have more freedom around the geographic placement of your host pools than in a traditional desktop environment. This freedom exists because all Azure locations support Azure Virtual Desktop. To avoid creating VMs from an image across the wide area network (WAN) make your gold image available in the same locations as your users.  
 
-### Host Pool gold image updates
+### Host pool gold image updates
 
 There are two approaches to updating the gold image that VMs in a host pool are based on: 
 
@@ -76,7 +76,7 @@ or
 * Deploy new VMs from the updated gold image into the same host pool. 
 * Take care not to hit resource constraints or API throttling limits when doubling the number of VMs in a single host pool.
 
-## Design Recommendations
+## Design recommendations
 
 ### Creation of Azure Virtual Desktop images
 
@@ -120,7 +120,7 @@ When working with Packer in the deployment pipeline:
 * Additionally, store the Packer file name and account key in the Key Vault that's linked to the variable group in Azure DevOps. These credentials are accessed by pipelines to download the Packer files to the VM that's used to create the image. 
 * Like the storage account name and primary key, store the UNC path as a variable in the Azure DevOps variable group.
 
-### Shared Image Gallery Service
+### Shared Image Gallery service
 
 The Shared Image Gallery service in Azure is the simplest way to build structure and organization around your golden images. It provides: 
 
