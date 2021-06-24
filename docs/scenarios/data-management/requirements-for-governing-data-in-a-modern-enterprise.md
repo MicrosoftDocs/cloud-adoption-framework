@@ -117,7 +117,7 @@ To address these requirements, we need an end-to-end solution that is capable of
 
 Figure 5: data governance framework
 
-The solution consists of several components:
+Your data governance solution should of several components:
 
 - A data governance vision and strategy
 - The data itself e.g. customer data, supplier data, orders data etc.

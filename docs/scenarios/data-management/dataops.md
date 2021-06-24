@@ -87,7 +87,7 @@ In ARM templates, the core provisioning is in the resources section, and the con
 
 To ensure that developed code is free of errors and ready for production, it should always be provisioned through CI/CD pipelines using multiple stages. Common practice is to have a development environment, a testing environment, and a production environment. These stages should also be reflected in Azure, by using separate services for each environment.
 
-In order to scale quickly within an organization and simplify the deployment process for teams, which are not as familiar with the concept of IaC, the Platform Team has the responsibility to provide and maintain deployment templates. These templates are used as a baseline for new artifacts within the solution pattern and need to be maintained over time, in order to constantly represent best practices and common standards within the company.
+In order to scale quickly within an organization and simplify the deployment process for teams, which are not as familiar with the concept of IaC, the Platform Team has the responsibility to provide and maintain deployment templates. These templates are used as a baseline for new artifacts within the construction set and need to be maintained over time, in order to constantly represent best practices and common standards within the company.
 
 Deployments to test and production should only be manageable through a CI/CD pipeline and a service connection with elevated rights to enforce common best practices (e.g. ARM templates).
 

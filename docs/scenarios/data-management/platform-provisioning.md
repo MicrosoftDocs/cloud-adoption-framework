@@ -11,7 +11,6 @@ ms.subservice: ready
 
 # Provisioning the Enterprise Scale Analytics and AI platform
 
-
 ## Data Management Landing Zone Deployment Process
 
  The Data Platform Ops team are responsible for deploying a Data Management Landing Zone before any Data Landing Zones are created. The Data Management Landing Zone should have its own repository which is maintained by the Data Platform team.  
@@ -37,9 +36,9 @@ The workflow mentioned above needs to be orchestrated, which can be achieved thr
 
 ![Forked DevOp Model](./images/forked-dev-ops.png)
 
-*Figure 2: Forked DevOps Model with Enterprise Scale Analytics and AI*
+*Figure 1: Forked DevOps Model with Enterprise Scale Analytics and AI*
 
-As illustrated in Figure 2, a forking pattern should be chosen, because it allows the different ops teams to follow the lifecycle of the original templates that the repository were forked from and that were used for the initial deployment. If new enhancements or changes are implemented in the template repositories, ops teams get the possibility to pull changes back to their repository, to leverage improvements and new features.
+As illustrated in Figure 1, a forking pattern should be chosen, because it allows the different ops teams to follow the lifecycle of the original templates that the repository were forked from and that were used for the initial deployment. If new enhancements or changes are implemented in the template repositories, ops teams get the possibility to pull changes back to their repository, to leverage improvements and new features.
 
 Best practices for repositories should be adopted in order to enforce the use of branches and pull requests. This includes:
 
@@ -55,11 +54,11 @@ Best practices for repositories should be adopted in order to enforce the use of
 
 ![Data Landing Zone Automation Process](./images/data-landing-zone-auto-process.png)
 
-*Figure 3: Data Landing Zone Automation Process*
+*Figure 2: Data Landing Zone Automation Process*
 
-Figure 3 illustrates how the On-boarding process is separated from the Data Landing Zone deployment based on the assumption that most organization have a standard Azure subscription deployment process as part of their Cloud Operation Model. In this case, the first step process is used to deploy standard corporate components (e.g. via a 3rd party ITSM tool such as ServiceNow) and the second step to deploy the Data Landing Zone specific components.
+Figure 2 illustrates how the On-boarding process is separated from the Data Landing Zone deployment based on the assumption that most organization have a standard Azure subscription deployment process as part of their Cloud Operation Model. In this case, the first step process is used to deploy standard corporate components (e.g. via a 3rd party ITSM tool such as ServiceNow) and the second step to deploy the Data Landing Zone specific components.
 
-As of now, there is no Git APIs available which would allow to clone/update/commit/push in the proposed automation solution. Therefor, our approach is to use an [Azure Automation Account](/azure/automation/automation-intro), which will contain the PowerShell runbooks, where we can use specific PowerShell module for working with Git repositories. The Automation Account will contain the following runbooks:
+As of now, there is no Git APIs available which would allow to clone/update/commit/push in the proposed automation solution. Therefore, our approach is to use an [Azure Automation Account](/azure/automation/automation-intro), which will contain the PowerShell runbooks, where we can use specific PowerShell module for working with Git repositories. The Automation Account will contain the following runbooks:
 
 - Setting up Data Landing Zone
 - Forking the main repository to Data Platform Git Repo
@@ -82,9 +81,9 @@ This process is done either directly using DevOps tooling or called via pipeline
 
 ![Integration and Product Deployment Automation](./images/integration-product-deployment-automation.png)
 
-*Figure 4 : Integration and Product Deployment Automation*
+*Figure 3: Integration and Product Deployment Automation*
 
-Figure 4 illustrates the process to onboard a new Data Integration or Data Product.
+Figure 3 illustrates the process to onboard a new Data Integration or Data Product.
 
 1. The user makes a request for a new Data Integration or Data Product
 1. The workflow process sends a request to the Data Platform Ops for Approve/Decline.
@@ -103,7 +102,7 @@ By using the above patterns we can facilitate both control, agility, self servic
 
 ![Overall Data Ops Model](./images/overall-data-ops-model.png)
 
-*Figure 5: Data Ops Model*
+*Figure 4: Data Ops Model*
 
 At the start of the project, the Data Platform will have one Azure DevOps project with one or many ado boards. They will be formed into one AzureOps teams and will focus on:
 

@@ -22,7 +22,7 @@ Azure Purview is a unified data governance service that helps organizations to m
 > [!TIP]
 > We recommend using third-party tools of your choice to integrate the remaining capabilities of the [Data Management Landing Zone](data-management-landing-zone.md) with Azure that are currently not supported by Azure Purview.
 > [!NOTE]
-> This section aims to explain prescribed configurations which are specific to the Enterprise Scale Analytic and AI solution pattern and discusses a collection of Azure best practices to enhance your data governance using Azure Purview. It is a compliment to the official [Azure Purview Documentation](/azure/purview/).
+> This section aims to explain prescribed configurations which are specific to the Enterprise Scale Analytic and AI construction set and discusses a collection of Azure best practices to enhance your data governance using Azure Purview. It is a compliment to the official [Azure Purview Documentation](/azure/purview/).
 
 ## Overview
 

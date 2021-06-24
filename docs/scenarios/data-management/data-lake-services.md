@@ -170,7 +170,7 @@ Data stored in the cloud grows at an exponential pace. To manage costs for your 
 
 Each of these data access scenarios benefits from a different access tier that is optimized for a particular access pattern. With hot, cool, and archive access tiers, Azure Blob Storage addresses this need for differentiated access tiers with separate pricing models.
 
-The Enterprise Analytics and AI solution pattern prescribes that you should implement a tiering policy for all three Azure Data Lake accounts.
+The Enterprise Analytics and AI construction set prescribes that you should implement a tiering policy for all three Azure Data Lake accounts.
 
 ## Key Considerations
 
