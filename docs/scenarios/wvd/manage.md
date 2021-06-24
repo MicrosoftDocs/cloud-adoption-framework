@@ -1,5 +1,5 @@
 ---
-title: Manage a Azure Virtual Desktop environment
+title: Manage an Azure Virtual Desktop environment
 description: Explore management best practices for Azure Virtual Desktop
 author: DominicAllen
 ms.author: doalle
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Manage a Azure Virtual Desktop environment
+# Manage an Azure Virtual Desktop environment
 
 The [Cloud Adoption Framework provides a core methodology to define operation management processes](../../manage/index.md) for the cloud in an agnostic sense. Its guidance helps establish an operations management baseline and other specialized layers of operations. This article outlines what you need to integrate into your existing operations to prepare for virtual desktop management.
 
@@ -56,7 +56,7 @@ These metrics will enable operations teams to monitor and react to performance a
 
 ### Operations compliance
 
-Patching and scaling are key elements of the ongoing operational management of a Azure Virtual Desktop environment. The operators may sit in many different teams, depending on your desired operations approach.
+Patching and scaling are key elements of the ongoing operational management of an Azure Virtual Desktop environment. The operators may sit in many different teams, depending on your desired operations approach.
 
 To maintain operations compliance, an operator will monitor usage, resize assets to balance performance and cost, and patch the underlying systems to minimize risk and configuration drift.
 
