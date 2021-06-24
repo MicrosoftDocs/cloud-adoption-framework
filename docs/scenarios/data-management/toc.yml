@@ -45,8 +45,6 @@ items:
           href: eslz-security-governance-and-compliance.md
         - name: Policies
           href: policies.md
-        - name: Provisioning the security baseline
-          href: security-provisioning.md
       - name: Operations baseline
         href: eslz-management-and-monitoring.md
       - name: Business continuity and disaster recovery
@@ -79,11 +77,15 @@ items:
     - name: Data Governance Maturity Model
       href: managing-master-data.md                 
     - name: Data sharing contracts
-      href: data-sharing-contracts.md   
-    - name: Data Privacy
-      href: data-privacy.md      
+      href: data-sharing-contracts.md       
   - name: Manage your data estate
-    href: manage.md
+    items:
+    - name: Overview (TODO)
+      href: manage.md  
+    - name: Provisioning the security baseline
+      href: security-provisioning.md
+    - name: Data Privacy
+      href: data-privacy.md  
   - name: Organize people and teams
     items:
       - name: Overview (TODO)
@@ -112,8 +114,8 @@ items:
         href: data-landing-zone-data-integration.md
       - name: Data Products
         href: data-landing-zone-data-products.md
-      - name: Frequently Asked Questions
-        href: frequently-asked-questions.md
+    - name: Frequently Asked Questions
+      href: frequently-asked-questions.md
     - name: Placeholder (Rick to add AAC RAs)
       href: waf-placeholder.md
 

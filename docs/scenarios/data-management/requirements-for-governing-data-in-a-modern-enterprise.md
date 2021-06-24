@@ -40,26 +40,9 @@ In addition, there needs to be some way to classify data to understand its level
 
 An example of each of these schemes is:
 
-## Data confidentiality classification scheme
+[!INCLUDE [data-confidentiality-classification-scheme](includes/data-confidentiality-classification-scheme.md)]
 
-| Confidential | Description |
-|------------|---------------|
-|Public   |Anyone can access and it can be sent to anyone e.g. open government data|
-|Internal use only | Employees only can access but cannot be sent outside the company |
-|Confidential  |  Should be shared only if needed for a specific task and cannot be sent outside the company without a non-disclosure agreement|
-|Sensitive (PII) |Personally identifiable information which must be masked and shared only on a need to know basis for a limited time Cannot be sent to unauthorized personnel or outside the company |
-|Restricted  |  Only to be shared with named individuals who are accountable for its protection e.g. legal documents, Trade secret (Coca Cola recipe) |
-
-## Data retention classification scheme
-
-|Retention |   Description|
-|----|---|
-|None    |No need to keep the data
-|Temporary  |  Short lived e.g. keep twitter data for a week
-|Fixed period   |Set number of years e.g. keep tax records for 7 years to comply with government laws after which it can be deleted
-|Permanent   | Never to be deleted e.g. Legal correspondence
-
-Automating the data confidentiality and data retention classification process using the classes defined in each scheme is needed to consistently label data across the distributed data landscape to enable it to be consistently and correctly governed. Rules and policies would then need to be defined for each class in the classification scheme to specify how to govern data according to its classification.
+[!INCLUDE [data-retention-classification-scheme](includes/data-retention-classification-scheme.md)]
 
 ## Data Governance Roles and Responsibilities
 
