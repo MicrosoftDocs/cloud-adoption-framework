@@ -23,9 +23,10 @@ Design considerations:
 ## Starting with a single Data Landing Zone
 
 ![Enterprise Scale Data Management and Single Data Landing Zone](./images/high-level-design-single-data-landing-zone.png)
+
 *Figure 1: Enterprise Scale Data Management with a single Data Landing Zone*
 
-Figure 1 gives an overview of an Enterprise Scale Analytics and AI platform with a central Data Management Landing Zone and a **single** spoke (i.e., the Data Landing Zone). For many environments this approach of deploying a central hub with a single spoke will be the starting point. An advantage of starting with this approach is that it allows you to conform to the principles of Enterprise Scale Analytics and AI whilst giving you the option to add additional Data Landing Zones at a later stage as needed. This pattern builds out common core services with flexibility to bolt on specific customizations.
+Figure 1 gives an overview of an Enterprise Scale Analytics and AI platform with a central Data Management Landing Zone and a **single** spoke (i.e., the Data Landing Zone). For many environments this approach of deploying a central data management landing zone with a single data landing zone spoke will be the starting point. An advantage of starting with this approach is that it allows you to conform to the principles of Enterprise Scale Analytics and AI whilst giving you the option to add additional Data Landing Zones at a later stage as needed. This pattern builds out common core services with flexibility to bolt on specific customizations.
 
 ## Starting with multiple Data Landing Zones
 

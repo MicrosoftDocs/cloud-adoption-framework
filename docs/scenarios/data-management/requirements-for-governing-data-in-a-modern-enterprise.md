@@ -44,6 +44,8 @@ An example of each of these schemes is:
 
 [!INCLUDE [data-retention-classification-scheme](includes/data-retention-classification-scheme.md)]
 
+Automating the data confidentiality and data retention classification process using the classes defined in each scheme is needed to consistently label data across the distributed data landscape to enable it to be consistently and correctly governed. Rules and policies would then need to be defined for each class in the classification scheme to specify how to govern data according to its classification.
+
 ## Data Governance Roles and Responsibilities
 
 Another requirement is the need for accountability. Without this, confusion lingers as to who is accountable for governing data. If there is no accountability, how do you answer the following questions?
