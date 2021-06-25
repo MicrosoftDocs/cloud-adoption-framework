@@ -13,7 +13,7 @@ ms.subservice: ready
 
 Data Landing Zones (spokes) are connected to the Data Management Landing Zone by VNet Peering and are considered a Data Landing Zone in relation to the [Enterprise-Scale Architecture](/azure/cloud-adoption-framework/ready/enterprise-scale/).
 
-Before provisioning a Data Landing Zone, you should have your DevOps CI/CD operating model in place and a Data Management Landing Zone deployed. It is highly recommended that you also consider the number of initial Data Landing Zones you want to deploy.
+Before provisioning a Data Landing Zone, you should have your DevOps CI/CD operating model in place and a Data Management Landing Zone deployed. It is highly recommended that you also consider the number of initial Data Landing Zones you want to deploy. See [Scaling the 'data management and analytics'](scale.md) for input.
 
 :::image type="content" source="./images/data-landing-zone.png" alt-text="Data Landing Zone" lightbox="./images/data-landing-zone.png":::
 
@@ -44,7 +44,7 @@ The Enterprise Scale pattern recommends that all logs should be sent to a centra
 
 ### Data Lake Services
 
-Three [Azure Data Lake Storage Gen V2 (ADLS)](/azure/storage/blobs/data-lake-storage-introduction) accounts will be provisioned in the Data Lake Services Resource Group. The data transformed at different stages will be saved on one of the Data Landing Zone's three data lakes and will be available for the Analytics, Data Products, Data Science, and Visualizations teams to consume. These will be deployed into a single resource group.
+Three [Azure Data Lake Storage Gen V2 (ADLS)](/azure/storage/blobs/data-lake-storage-introduction) accounts will be provisioned in the Data Lake Services Resource Group. The data transformed at different stages will be saved on one of the Data Landing Zone's three data lakes and will be available for the Analytics, Data Products, Data Science, and Visualizations teams to consume. These will be deployed into a single resource group. See [Data Lake Services](data-lake-services.md) for information as to why we recommend three data lakes as a starter.
 
 ### Upload Ingest Storage Service
 
@@ -75,7 +75,7 @@ The ingestion framework engine should copy data through the layers of the data l
 
 As data sources are registered and integrated into respective data lakes using a repeatable and consistent framework, the data should be registered with Azure Purview for discovery.
 
-If you have an ingestion framework engine, we recommend using Azure Data Factory as the primary orchestration engine for getting data into RAW and to ENRICHED.
+If you have an ingestion framework engine, we recommend using Azure Data Factory as the primary orchestration engine for getting data into RAW to ENRICHED.
 
 >[!IMPORTANT]
 >Ingestion and Processing is discussed at length under [Data Ingestion](data-ingestion.md).
@@ -86,7 +86,7 @@ Azure Databricks should always deployed because it would be used by Integration 
 
 An Azure Databricks workspace is provisioned for Ingestion and Processing which will connect to Azure Data Lake via Azure Service Principals. These are referred to as **Azure Databricks Engineering Workspaces**.
 
-The Databricks workspaces are locked down to only allow deployment of notebooks or jars from the Data Integration Azure DevOps Repo via a Data Integrations Service Principal.
+The Databricks workspaces should be locked down to only allow deployment of notebooks or jars from the Data Integration Azure DevOps Repo via a Data Integrations Service Principal.
 
 #### Real-Time Streaming
 
@@ -111,11 +111,13 @@ An Azure Key Vault will be provisioned to store secrets relating to Data Landing
 - Service Principal Credentials for the automated ingestion process
 - Data Landing Zone Data Lake Services Keys
 
-The types of data which you will store in the Data Landing Zone will help determine any additional services which should reside here. For example, if you are storing sensitive data, you may choose to include a tokenization engine to ensure that all sensitive data can be tokenized as it is ingested into the data lake.
+The types of data which you will store in the Data Landing Zone will help determine any additional services which should reside here. For example, if you are storing *sensitive* data, you may choose to include a tokenization engine to ensure that all *sensitive* data can be tokenized as it is ingested into the data lake.
+
+A Azure MySQL database will be provisioned. The **Azure Databricks Engineering Workspaces** and **Azure Databricks Analytics and Data Science Workspace** will uses this as there Hive Metastore.
 
 ## Shared Integration
 
-To enable rapid onboarding of datasets, to the Data Landing Zone, we recommend deploying a pair of Self Hosted Integration Runtimes, into the Data Management Landing Zone. These should be hosted in the Integration Resource Group.
+To enable rapid onboarding of datasets, to the Data Landing Zone, we recommend deploying a virtual machine scale set with Self Hosted Integration Runtimes, into the Data Management Landing Zone. These should be hosted in the Integration Resource Group.
 
 To enable you would need to: -
 
@@ -128,21 +130,11 @@ To enable you would need to: -
 >[!NOTE]
 >This does not restrict the deployment of Integration Runtimes inside a Data Landing Zone or into 3rd party clouds.
 
-### Integration with Databricks and HDInsight
-
-To integrate data from both the Azure Databricks and HDInsight Hive Metastore, you will need to use the Atlas API to update Azure Purview.
-
-While it is possible to reverse engineer the table form by scanning all the Parquet files generated by Databricks and HDInsight, it is preferable to enable catalog updates by using the metadata which has been created in the Hive Metastore.
-
-The pattern is to have a single Hive Metadata Store in the Data Landing Zone for all Databricks Workspaces and HDInsight instances.
-
-This single database would be scanned by Azure Data Factory to extract the tables and paths to update the Event Data Management Landing Zone associated with Azure Purview.
-
-### Shared Products
+## Shared Products
 
 For each Data Landing Zone, a shared Synapse Analytics workspace and Azure Databricks workspaces will be provisioned for use by everybody in the Data Landing Zone for exploratory purposes.
 
-#### Shared Azure Databricks
+### Shared Azure Databricks
 
 Azure Databricks service is envisioned to be one of the key consumers of the data lake storage service. The atomic file operations are optimized for Spark Analytic Engines. This speeds up completion of Spark jobs issued from the Databricks service.
 
@@ -159,7 +151,7 @@ The Enterprise Scale Analytics and AI construction set takes into account the fo
 
 **Azure Synapse** is the provisioned integrated analytics service that accelerates time to insight across data warehouses and big data systems. Azure Synapse brings together the best of **SQL** technologies used in enterprise data warehousing, **Spark** technologies used for big data, and **Pipelines** for data integration and ETL/ELT. **Synapse Studio** provides a unified experience for management, monitoring, coding and security. Synapse has deep integration with other Azure services such as **Power BI**, **CosmosDB** and **Azure Machine Learning**.
 
-During the initial setup of a Data Landing Zone a single Azure Synapse Analytics Workspace will be deployed to for use by all Data Analysts and Scientists. Additional ones can be optionally setup for Data Integrations and Data Products should costs management and recharge be required. Integration and Data Products teams might make use of Synapse Analytics for creating dedicated SQL Pools, as a read data store, which is used by the visualization layer.
+During the initial setup of a Data Landing Zone a single Azure Synapse Analytics Workspace will be deployed to for use by all Data Analysts and Scientists. Additional ones can be optionally setup for Data Integrations and Data Products should costs management and recharge be required. Integration and Data Products teams might make use of dedicated Synapse Analytics workspaces for creating dedicated SQL Pools, as a read data store, which is used by the visualization layer.
 
 ## Data Integration *X*
 
