@@ -49,7 +49,7 @@ items:
           href: eslz-platform-automation-and-devops.md
         - name: Provisioning the platform
           href: platform-provisioning.md
-        - name: Deployment template
+        - name: Deployment templates
           href: deployment-templates.md
 
   - name: Migrate to the cloud
@@ -95,10 +95,8 @@ items:
       - name: Teams Functions
         href: team-functions.md
 
-  - name: Well-Architected data workloads
-    items:
-    - name: Placeholder
-      href: waf-placeholder.md
+  - name: Well-Architected considerations
+    href: waf-placeholder.md
 
   - name: Architectures
     items:
@@ -121,11 +119,15 @@ items:
   - name: Best practices
     items:
       - name: Data Lake Implementation
-        items:
-        - name: Managing Data Lake Access 
-          href: data-lake-access.md        
-        - name: Data Lake Services
+        items:  
+        - name: Data Lake Overview
+          href: data-lake-overview.md
+        - name: Data Lake Layers
           href: data-lake-services.md
+        - name: Data Lake Key Considerations
+          href: data-lake-key-considerations.md      
+        - name: Managing Data Lake Access 
+          href: data-lake-access.md    
       - name: Azure Databricks Implementation
         href: azure-databricks-implementation.md
       - name: Azure Synapse Analytics Implementation

@@ -64,7 +64,7 @@ By entering data into the Azure Data Factory Metastore via a custom app, Logic A
 
 - Source details are registered, including production and non-production environments.
 - Data shape, format, and quality constraints are captured.
-- Integration Ops indicate if the data is sensitive, and this classification drives the process upon which Data Lake folders are created for ingestion of raw and enriched. Raw is named by source. Enriched and curated is named by Data Asset.
+- Integration Ops indicate if the data is *sensitive*, and this classification drives the process upon which Data Lake folders are created for ingestion of raw and enriched. Raw is named by source. Enriched and curated is named by Data Asset.
 - Service Principal and Security Groups are created for ingesting and giving access to the dataset.
 - An ingestion job is created in the Data Landing Zone ADF Metastore.
 - The Data Definition is inserted in the Azure Purview via its API.

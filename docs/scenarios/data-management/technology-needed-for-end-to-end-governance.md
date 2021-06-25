@@ -76,4 +76,3 @@ Data in disparate registered data sources across the data landscape can be inges
 Figure 4: Common Infrastructure
 
 Everything that is underpinned by ADLS and can then make use of trusted, commonly understood CDM described data assets The objective is build once, publish in a data marketplace (Azure Purview) and reuse everywhere.
-

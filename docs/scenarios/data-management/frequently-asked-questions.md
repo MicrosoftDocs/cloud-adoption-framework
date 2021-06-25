@@ -37,10 +37,11 @@ Most data analytics patterns today exist with the 3 layers (raw, refined, and cu
 
 ### Databricks
 
-#### Should we deploy a databricks workspace per product?
 
-The recommendation is to use the shared product databricks workspace inside the landing zone.
+#### Should we deploy a Azure Databricks workspace per product?
 
-This decision has been made to reduce the management overhead for the (data) platform ops team. Databricks has a set of stand-alone policies which aren't integrated into the Azure policies. In a large environment the setup of additional databricks workspaces creates additional management overhead (maintaining policies, updating supported hive version, updating ADB versions, enforcing external hive metastore, etc.). Therefore, there is no way how a central platform team can enforce certain settings within any of the databricks workspaces. For this reason, we are recommending to have shared workspaces for product teams in the landing zones, where the data platform Ops teams can then define the necessary cluster policies and init scripts etc.
+The recommendation is to use the shared product **Azure Databricks Analytics and Data Science Workspace** inside the landing zone.
+
+This decision has been made to reduce the management overhead for the (data) platform ops team. Databricks has a set of stand-alone policies which aren't integrated into the Azure policies. In a large environment, the setup of additional databricks workspaces creates additional management overhead (maintaining policies, updating supported hive version, updating ADB versions, enforcing external hive metastore, etc.). Therefore, there is no way how a central platform team can enforce certain settings within any of the databricks workspaces. For this reason, we are recommending to have shared workspaces for product teams in the landing zones, where the data platform Ops teams can then define the necessary cluster policies and init scripts etc.
 
 We are recommending to use Vnet Peering between Landing Zones and Private Endpoints. For Databricks we have to use Vnet injection. As there is direct line of sight to all endpoints, there are no connectivity issues.
