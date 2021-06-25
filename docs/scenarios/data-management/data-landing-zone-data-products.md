@@ -12,116 +12,100 @@ ms.subservice: ready
 
 ## Overview
 
-At a high level, data products are computed or polyglot persistence services that may be required depending on the use case. A data product is anything that drives business value (e.g., reports, workbooks, bespoke database or data API). It can leverage additional services and technologies which are not part of [Data Landing Zone](data-landing-zone.md) core services such as:
+At a high level, data products are computed or polyglot persistence services that may be required depending on certain use cases. A data product is anything that drives business value (e.g., reports, workbooks, bespoke database or data API). It can leverage additional services and technologies which are not part of [Data Landing Zone](data-landing-zone.md) core services such as reporting with niche requirements like compliance and tax reporting or specialized capabilities that address gaps in the baseline policies.
 
-- Reporting with niche requirements such as compliance, tax reporting, HR, etc.
-- Specialized capabilities that address gaps in the baseline policies.
+## Design considerations
 
-A Data Landing Zone can have multiple data products which are created by ingesting data either inside the same Data Landing Zone or from across multiple Data Landing Zones (subject to approval). The resource group for a data product includes all the service required to make that data product.
-
->[!IMPORTANT]
->A **data product** is data from a READ data source which has had some data transformation applied. This could be a newly curated dataset or a BI report.
-
-Examples of data products include:
-
-* Functions
-* App Service
-* Logic Apps
-* Azure Analysis Services
-* Cognitive Services
-* Azure Machine Learning
-* Azure SQL DB
-* Azure MySQL
-* Azure CosmosDB
+- A Data Landing Zone can have multiple data products which are created by ingesting data either inside the same Data Landing Zone or from across multiple Data Landing Zones which are subject to approval.
+- The resource group for a data product would include all the service required to make that data product. Examples of services which may be part of a data product include Azure Functions, App Service, Logic Apps, Azure Analysis Services, Cognitive Services, Azure Machine Learning, Azure SQL DB, Azure MySQL and Azure CosmosDB.
+- A data product is data from a READ data source which has had some data transformation applied. This could be a newly curated dataset or a BI report, for example.
 
 ## Design recommendations
 
-1. Deploy multiple resource groups: Since data products are compute or polyglot persistence services, they may only be required depending on certain use cases. When required, we expect multiple resource groups by data product as shown below.
+We recommend building data products within your Data Landing Zone by adhering to design principles which allow you to scale with data governance. Following are design recommendations to help you plan your data products ecosystem.
+
+### Deploy multiple resource groups
+
+ Each data product is a resource group. Since data products are compute or polyglot persistence services, they may only be required depending on certain use cases. As such, they can be considered an optional component of your Data Landing Zone. In the case where data products are required, you should create multiple resource groups by data product as shown below.
     
-    ![Data products resource groups](./images/data-products-resource-group.png)
+![Data products resource groups](./images/data-products-resource-group.png)
 
-2. Set guard rails: Azure Policy would drive the default configuration of these services within a Data Landing Zone. We can consider operational analytics as multiple resource groups which the Data Product Team can request from a standard service catalog. By using Azure Policy, we can configure the security boundary and required feature set.
+### Set guard rails
 
-    >[!IMPORTANT]
-    >To drive consistency we recommend configuring an Azure Policy per Data Product.
+Azure Policy would drive the default configuration of services within a Data Landing Zone. We can consider operational analytics as multiple resource groups which the Data Product Team can request from a standard service catalog. By using Azure Policy, we can configure the security boundary and required feature set.
 
-3. Consume data from many places: Data products manage, organize, and make sense of the data across data assets and present the insights gained from the data products. A data product is a result of data from one or many data integrations and/or other data products.
+>[!IMPORTANT]
+>To drive consistency we recommend configuring an Azure Policy per Data Product.
 
-4. Scale as needed: Services that make up a data product are considered an incremental deployment to the Data Landing Zone.
+### Consume data from many places
 
-5. Enable data discovery: Data products should be automatically registered in a data catalog such as Azure Purview to allow scanning of data.
+Data products manage, organize, and make sense of the data across data assets and present the insights gained from the data products. A data product is a result of data from one or many data integrations and/or other data products.
 
-## Building Data Products
+#### Cross Data Landing Zone Data Products
 
-At the start of planning an Data Landing Zone, you should have identified many data products which will help drive the data product architecture. At the top of each decision should be conformity to implement platform governance.
+![Creating a Data Product](./images/data-product-cross-data-landing-zone.png)
 
-### Banking Industry Example
+The figure above illustrates how a Data Product is created if you have deployed multiple Data Landing Zone subscriptions. It shows how a Data Landing Zone hosts multiple data integrations and data products. A Data Integration is a logical boundary which driven by data ownership and knowledge. A Data Product is created by ingesting data from Data Integrations or Data Products either inside the same Data Landing Zone or from across multiple Data Landing Zones subject to approval of the Integration Ops.
 
-:::image type="content" source="images/data-products-banking-example.png" alt-text="Example of Data Products":::
+### Scale as needed
 
-Figure 1: Banking Industry Example of Data Products
+Services that make up a data product are considered an incremental deployment to the Data Landing Zone therefore we recommend you scale data products as needed.
 
-Figure 1, illustrates products that could exist within a bank such as investments, risk management, mortgage, loan approvals, and corporate budget.
+### Enable data discovery
 
-### Define Data Product Architecture High Level
+Data products should be automatically registered in a data catalog such as [Azure Purview](purview-deployment.md) to allow scanning of data.
 
-:::image type="content" source="images/data-product-define-high-level.png" alt-text="Define Data Product Architecture High Level":::
+### Identify your data products
 
-Figure 2: Define Data Product Architecture High Level
+At the start of planning a Data Landing Zone, you should have identified as many data products as you need to help drive the data product architecture. At the top of each decision should be conformity to implement platform governance.
 
-Figure 2, illustrate the next stage in defining these data products by focusing on how they are data producers and data consumers for others. Across the whole of this ecosystem we illustrate that governance and infrastructure as code should control the environment.
+For your data products, focus on how they are **data producers** and **data consumers** for others. To understand this further, let's assume you have identified a suite of data products (A, B, C and D) which produce and consume data. As shown below, you require data product A and D to produce data for data product B. Data product B consumes from data products A and D and in turn—acting as a data producer itself alongside being a data consumer—also produces data for data product C.
 
-For example, Customer Interaction produces data for mortgages and is termed a data producer. The Mortgage Data Product consumes from Customer Interactions and produces data for Risk Management.
+:::image type="content" source="images/data-producers-consumers.png" alt-text="data producer and consumers":::
 
-For each product, the Data Product teams must register the metadata they are producing in the data catalog. They must publish their data model in the modeling repository. Service Level Agreements and certification for the data product, should be updated the Data Sharing Contracts to set the right expectation for potential users of the data product.
+### Control the environment with Infrastructure-as-Code
 
-As Mortgage is consuming the Customer Interaction, we would want to make sure the lineage is capture from Customer Iteration to Mortgage. A further lineage would be captured for Risk Management consuming from Mortgage. This should be captured in the Data Lineage application before every release of a data product.
+Across the whole of your data products ecosystem, governance and infrastructure-as-code should control the environment as shown in the diagram above.
+
+### Publish data models
+
+Data product teams should publish their data model in a modeling repository.
+
+### Set expectations for data product users
+
+Service Level Agreements and certification for the data product, should update the Data Sharing Contracts to set the right expectation for potential users of the data product.
+
+### Capture lineage
+
+As data product B (in the diagram above) is consuming from data product A and D, we would want to make sure the lineage is captured from A and D to B. A further lineage would be captured for data product C consuming from data product B. This should be captured in a data lineage application before every release of a data product.
 
 >[!Note]
 > Using Azure DevOps Pipelines would allow building of approval gates to invoke functions to make sure metadata, lineage and SLAs are registered in the correct governance service.
 
-### Define Data Product Architecture Detail
+### Define your data product's architecture
+
+Fully defining a data product's relationship with other data products, its dependencies and access requirements requires a detailed architecture for a given data product.
+
+#### Example Scenario
+
+To explain the architecture definition process, we'll look at an example of a financial institution and its *credit monitoring* data product, as illustrated in the figure below.
 
 :::image type="content" source="images/data-product-define-detail.png" alt-text="Define Data Product Architecture Detail":::
 
-Figure 3: Define Data Product Architecture Detail
-
-Figure 3, shows the next stage of defining a data product depending on the data product usage. For example, Credit Monitoring consumes data from a Read Data Store that has been ingested by the Integration Ops team and produces data assets for two other data products.
+The credit monitoring data product shown above consumes data from a *read data store* that has been ingested by the [Integration Ops team](persona-and-teams.md#integration-ops-per-integration) and produces data assets for two other data products.
 
 >[!Note]
->A Read Data Source is also known as Golden Record Source, has been cleaned and hasn't had any transformation applied.
+>A read data source (or store) is also known as Golden Record Source. These types of data sources have been cleaned but haven't had any transformation applied to them.
 
-The Credit Monitoring data product team request read access to the read data stores they require for there data product. These requests are routed through to the owners of the data for approval. Upon approval, the product teams can start to build the Credit Monitoring Data Product.
+The credit monitoring data product team requests read access to the read data stores they require for their data product. These requests are routed through the owners of the data for approval. Upon approval, the product teams can start to build the credit monitoring data product.
 
-Data from the read data source is transformed into the Credit Monitoring Data Product and any new data assets are stored in the Data Lake Curated layer. These new data assets should be registered, alongside the new data lineage, as part of the DevOps deployment process. A function should check what has been registered metadata with the physical structure of the data asset and register the dependency on the read data source data assets.
+Data from the read data source is transformed into the credit monitoring data product and any new data assets are stored in the Data Lake's Curated layer (indicated in green above). These new data assets should be registered, alongside the new data lineage, as part of the DevOps deployment process. A function should check what has been registered metadata with the physical structure of the data asset and register the dependency on the read data source data assets.
 
-The Loan Approval Product team take a dependency on some of the Credit Monitoring data assets. They would request read access to the Credit Monitoring data product assets they require for there data product. Upon release of the Loan Approval data product, all data assets, lineage, and models should be registered in the relevant governance services.  
+The *loan approval* data product team (top right corner of the figure above) take a dependency on some of the credit monitoring data assets. They would request read access to the credit monitoring data product assets they require for their data product. Upon release of the loan approval data product, all data assets, lineage, and models should be registered in the relevant governance services.
 
-## Cross Data Landing Zone Data Products
+## Sample data products
 
-![Creating a Data Product](./images/data-product-cross-data-landing-zone.png)
-
-Figure 4: Cross Data Landing Zone Data Products
-
-Figure 4, illustrates how a Data Product is created if you have deployed multiple Data Landing Zone subscriptions. It shows how a Data Landing Zone hosts multiple data integrations and data products. A Data Integration is a logical boundary which driven by data ownership and knowledge. A Data Product is created by ingesting data from Data Integrations or Data Products either inside the same Data Landing Zone or from across multiple Data Landing Zones subject to approval of the Integration Ops.
-
-## Analytic product decision tree
-
-:::image type="content" source="./images/data-product-decision-tree.png" alt-text="Analytic product decision tree" lightbox="./images/data-product-decision-tree.png":::
-
-Figure 5: Analytic Product decision tree
-
-Figures 5, above presents a decision tree to help choose the components for an analytic product on Azure. You'll navigate it from top to bottom through the following layers to determine for each of them what is the best solution to fit your requirements:
-
-|Layer  |Description  |
-|---------|---------|
-|Data exploration     |The data exploration stage is meant to explore the data present in your data lakes and determine what data you need to access and its volume. On top of their current view of the business use cases, data project teams might also need an environment that allows them for ad-hoc queries on the data lake or data warehouse storage.         |
-|Self-service BI     |To cater to self-service requirements and offer flexibility for small scale projects, the option to give access to the data lake through Power BI should be investigated. This pattern is particularly fit for data sets under 10GB, as it is one of the current limitations of Power BI data store.         |
-|Orchestration and Ingestion layer    |The default solution for orchestrating the different data flows and transformations is Azure Data Factory (or its equivalent Synapse pipelines). Three options are today available to ingest data from the different sources, process it and store it in the right target. The choice boils down to the complexity of the transformation and some feature gaps between Azure Data Factory and Azure Synapse Pipelines.         |
-|Data warehousing storage    |For large scale project, there might be a need to store data in a data warehouse storage to obtain optimal performance. Multiple options are available to you, depending on the dataset size your project requires, a set of features only available in certain solutions and for cost purposes.         |
-|Semantic modeling     |This layer covers the need to store a subset of highly structured data and calculations for end-user consumption. This can be covered by Power BI premium or by having a dedicated Azure Analysis Services instance. The default option is to use the capabilities embedded in Power Bi premium, however some cases can only be covered by Azure Analysis Services to this day.         |
-
-## Reporting and Visualization
+### Reporting and Visualization
 
 For every Data Landing Zone, an empty Visualization Resource Group is created. Visualization is considered a **data product** and, depending on the complexity, can be created via a self-serve process or managed by a data product team.
 
