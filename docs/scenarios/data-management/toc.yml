@@ -122,7 +122,7 @@ items:
         items:  
         - name: Data Lake Overview
           href: data-lake-overview.md
-        - name: Data Lake Layers
+        - name: Data Lake Zones
           href: data-lake-services.md
         - name: Data Lake Key Considerations
           href: data-lake-key-considerations.md
