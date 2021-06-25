@@ -125,9 +125,9 @@ items:
         - name: Data Lake Layers
           href: data-lake-services.md
         - name: Data Lake Key Considerations
-          href: data-lake-key-considerations.md      
-        - name: Managing Data Lake Access 
-          href: data-lake-access.md    
+          href: data-lake-key-considerations.md
+        - name: Managing Data Lake Access
+          href: data-lake-access.md
       - name: Azure Databricks Implementation
         href: azure-databricks-implementation.md
       - name: Azure Synapse Analytics Implementation
