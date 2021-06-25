@@ -44,7 +44,7 @@ An enterprise-scale architecture is defined by a set of design considerations an
 
 Download the PDF or Visio files that contain the enterprise-scale architecture diagrams based on the [Virtual WAN (PDF)](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/enterprise-scale-architecture.pdf) network topology or a traditional Azure network topology based on the [hub and spoke (PDF)](https://github.com/microsoft/CloudAdoptionFramework/raw/master/ready/enterprise-scale-architecture-cust.pdf) architecture. A Visio file containing both the Virtual WAN and the hub and spoke architecture diagram can be downloaded as a [Visio diagram (VSDX)](https://github.com/microsoft/CloudAdoptionFramework/raw/master/ready/enterprise-scale-architecture.vsdx).
 
-> [!NOTE]
+> [!IMPORTANT]
 > It is possible to implement an enterprise-scale landing zone architecture with a single subscription for **platform resources**, if segregation of duties (SoD) are not the concern for the team managing platform resources. With scalability and security in mind, it is strongly recommended to have dedicated subscriptions for platform resources as depicted on figures 2 and 3.
 
 On figures 2 and 3 there are references to the enterprise-scale critical design areas, which are indicated with the letters A to I:
