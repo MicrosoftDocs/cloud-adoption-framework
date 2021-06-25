@@ -11,6 +11,8 @@ ms.subservice: ready
 
 # Azure Purview deployment best practices for 'data management and analytics' Enterprise-Scale scenario
 
+## Overview
+
 The [Data Management Landing Zone](data-management-landing-zone.md) is responsible for the governance of the Enterprise Scale Analytics and AI platform and relies on [Azure Purview](https://azure.microsoft.com/services/purview) to provide the following data management capabilities:
 
 - [Data Catalog](data-management-landing-zone.md#data-catalog)
@@ -21,12 +23,9 @@ Azure Purview is a unified data governance service that helps organizations to m
 
 > [!TIP]
 > We recommend using third-party tools of your choice to integrate the remaining capabilities of the [Data Management Landing Zone](data-management-landing-zone.md) with Azure that are currently not supported by Azure Purview.
+
 > [!NOTE]
 > This section aims to explain prescribed configurations which are specific to the Enterprise Scale Analytic and AI construction set and discusses a collection of Azure best practices to enhance your data governance using Azure Purview. It is a compliment to the official [Azure Purview Documentation](/azure/purview/).
-
-## Overview
-
-![Azure Purview Overview](./images/purview-overview.png)
 
 One Azure Purview account is deployed inside the Data Management Landing Zone which serves as a centralized data catalog as shown in the figure above. From the Data Management Landing Zone, Azure Purview will be able to communicate with each Data Landing Zone via private network connectivity using VNet Peering across Data Management and Data Landing Zones and [Self-Hosted Integration Runtimes](/azure/purview/manage-integration-runtimes#:~:text=On%20the%20home%20page%20of%20Purview%20Studio%2C%20select,a%20name%20for%20your%20IR%2C%20and%20select%20Create.). Discovery of datasets in on-premises data stores and other public clouds is achieved by additional deployments of Self-Hosted Integration Runtimes.
 
@@ -186,7 +185,7 @@ Before creating any credentials in Azure Purview, your Azure Purview Account mus
 
 Azure Purview has several built-in RBAC roles (such as *Purview Data Reader*, *Purview Data Curator* and *Purview Data Source Administrator*) to manage the data plane which can be combined to provide additional privileges as shown in the table below. For example the *Purview Data Reader* role is targeted for roles such as Data officers, Data Stewards and Chief Security Officers who require read-only access to the data estate such as classifications, lineage through search options and reports that are available in Azure Purview.
 
-:::image type="content" source="./images/purview-roles.png" alt-text="Azure Purview Roles" lightbox="./images/purview-roles.png":::
+:::image type="content" source="./images/purview-roles.png" alt-text="Azure Purview Roles" lightbox="./images/purview-roles-large.png":::
 
 For more information about Azure Purview catalog roles, see [Role-based access control in Azure Purview's Data Plane](/azure/purview/catalog-permissions)
 
@@ -199,8 +198,8 @@ Review the following list of personas involved in an Enterprise Scale Analytics 
 |Product Owners| Product Owners leverage Azure to transform your solutions and bring agility to the business and optimize business processes.|Purview Data Reader |
 | Solution Architects | Define solutions to drive across the boundaries of the enterprise business network. Learn how to deal with diagnosis, analysis, design, deployment, and integration of Azure services. |Purview Data Source Administrator + Data Curator    |
 |Developer/DevOps Engineers|Design, build, deploy, test, and maintain continuous integration and delivery process with Azure DevOps or GitHub.|N/A  |
-| Security Engineers <sup>1</sup> | Enable your teams to design and implement a secure infrastructure on Azure leveraging best practices. |Purview Data Reader  |
-| Technical/Business Managers <sup>1</sup>|Build an overall understanding of Azure services. Control your cloud costs and optimize your operations and the agility of your team.|N/A |
+| Security Engineers | Enable your teams to design and implement a secure infrastructure on Azure leveraging best practices. |Purview Data Reader  |
+| Technical/Business Managers |Build an overall understanding of Azure services. Control your cloud costs and optimize your operations and the agility of your team.|N/A |
 |Decision Makers / Business Users|Leverage Azure to access actionable insight, expecting it to be delivered in most relevant form. Leverage AI embedded in existing solutions to optimize business processes.|Purview Data Reader   |
 | Data Managers | Responsible for provisioning and managing access to data assets. |Purview Data Reader or Purview Data Curator |
 |Data Analysts / Performance Analysts |Leverage Azure to discover and share new insights from existing data assets or *ad hoc* data. Create one-click AI transformations, consume pre-built models, and generate ML models in clicks.|Purview Data Source Administrator + Data Reader   |
