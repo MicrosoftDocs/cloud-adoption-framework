@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Security operations
 
-This article provides strategic guidance for leaders establishing or modernizing a security operation function. For architecture and technology focused best practices, see [Best practices for security operations](https://aka.ms/secopstech).
+This article provides strategic guidance for leaders establishing or modernizing a security operation function. For architecture and technology focused best practices, see [Best practices for security operations](/security/compass/security-operations).
 
 Security operations reduce risk by limiting damage from attackers who gain access to your organization's resources. Security operations focus on reducing the time attackers have access to resources by detecting, responding to, and helping recover from active attacks.
 
@@ -52,7 +52,7 @@ Metrics drive behavior, so measuring success is a critical element to get right.
 
 We've learned that it's critical to consider what you measure, and the ways that you focus on and enforce those metrics. Recognize that security operations must manage significant variables that are out of their direct control, like attacks and attackers. Any deviations from targets should be viewed primarily as a learning opportunity for process or tool improvement, rather than assumed to be a failure by the SOC to meet a goal.
 
-Two main metrics to focus on that have a direct influence on organizational risk are:
+The main metrics to focus on that have a direct influence on organizational risk are:
 
 - **Mean time to acknowledge (MTTA):** Responsiveness is one of the few elements SecOps has more direct control over. Measure the time between an alert, like when the *light starts to blink*, and when an analyst sees that alert and begins the investigation. Improving this responsiveness requires that analysts don't waste time investigating false positives. It can be achieved with ruthless prioritization, ensuring that any alert feed that requires an analyst response must have a track record of 90 percent true positive detections.
 - **Mean time to remediate (MTTR):** Effectiveness of reducing risk measures the next period of time. That period is the time the analyst begins the investigation to when the incident is remediated. MTTR identifies how long it takes SecOps to remove the attacker's access from the environment. This information helps identify where to invest in processes and tools to help analysts reduce risk.
@@ -108,7 +108,7 @@ It's important to invest in updated SecOps tools and training to ensure security
 
 For more information on security operations roles and responsibilities, see [Security operations](../organize/cloud-security-operations-center.md).
 
-For more architecture and technology focused best practices, see [Microsoft security best practices for security operations](https://aka.ms/secopstech) and the [videos and slides](/security/compass/security-operations-videos-and-decks).
+For more architecture and technology focused best practices, see [Microsoft security best practices for security operations](/security/compass/security-operations) and the [videos and slides](/security/compass/security-operations-videos-and-decks).
 
 ## Next steps
 

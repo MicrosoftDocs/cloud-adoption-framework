@@ -10,7 +10,7 @@ ms.subservice: manage
 ms.custom: think-tank
 ---
 
-<!-- cSpell:ignore SIEM Nagios Zabbix DIKW -->
+<!-- cSpell:ignore DIKW Nagios Zabbix -->
 
 # Cloud monitoring guide: Formulate a monitoring strategy
 
@@ -259,15 +259,15 @@ Include in your strategy and operating model how you communicate monitoring plan
 
 As early as possible, establish how you intend to govern your cloud monitoring investment. Remember that Azure Monitor is a *tenant* service with visibility across management groups and subscriptions, and users can be scoped to limit their actions with Azure role-based access control.
 
-Define who will have what level of access in Azure to support their role and responsibility. We recommend you to set `Reader` role access for monitoring consumers as early as possible and then start controlling who are granted the `Contributor` role.
+Define who will have what level of access in Azure to support their role and responsibility. We recommend you to set Reader role access for monitoring consumers as early as possible and then start controlling who are granted the Contributor role.
 
 First, identify the roles who will own and manage resource groups in Azure as part of your governance framework:
 
-- Whether a monitoring team or one or more administrators of resources and resource groups will have privileged access to the `Monitoring Contributor` role.
+- Whether a monitoring team or one or more administrators of resources and resource groups will have privileged access to the Monitoring Contributor role.
 
-- The consumers who should be granted the `Monitoring Reader` role, which enables access to features in Azure Monitor, as well as investigate issues within the monitoring section that is included with each Azure resource.
+- The consumers who should be granted the Monitoring Reader role, which enables access to features in Azure Monitor, as well as investigate issues within the monitoring section that is included with each Azure resource.
 
-- What managers require access to other Azure reader roles such as `Reports Reader`.
+- Which managers require access to other Azure reader roles, such as the Reports Reader role.
 
 In summary, your monitoring consumer roles probably need broad access, versus your developers and system administrators who only need role-based access to certain Azure resources. As another restriction, ensure you exempt readers from access to sensitive monitoring data such as security, sign-in, and user activity logs.
 

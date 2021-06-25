@@ -57,7 +57,7 @@ The typical process of starting this transformation is:
      - **Apply data classifications, sensitivity labels, and role-based access control** to protect data from loss or compromise throughout its lifecycle. These efforts can't completely capture the dynamic nature and richness of business context and insight. But these key enablers are used to guide information protection and governance, limiting the potential impact of an attack.
 3. **Establish a healthy [security culture](../strategy/define-security-strategy.md#transformations-mindsets-and-expectations)** by explicitly practicing, communicating, and publicly modeling the right behavior. The culture should focus on open collaboration between business, IT, and security colleagues. Then apply that focus to a 'growth mindset' of continuous learning. Focus culture changes on removing silos from security, IT, and the larger business organization. These changes achieve greater knowledge sharing and resilience levels.
 
-For more information, see [Define a security strategy](https://aka.ms/securitystrategy).
+For more information, see [Define a security strategy](../strategy/define-security-strategy.md).
 
 ## Understanding cybersecurity risk
 

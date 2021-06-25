@@ -116,7 +116,7 @@ The following section provides some example names for common Azure resource type
 | **Azure Cache for Redis instance** | Global | *redis-\<app name>-\<environment>* <br><br> <li> `redis-navigator-prod` <li> `redis-emissions-dev` |
 | **MySQL database** | Global | *mysql-\<app name>-\<environment>* <br><br> <li> `mysql-navigator-prod` <li> `mysql-emissions-dev` |
 | **PostgreSQL database** | Global | *psql-\<app name>-\<environment>* <br><br> <li> `psql-navigator-prod` <li> `psql-emissions-dev` |
-| **Azure SQL Data Warehouse** | Global | *sqldw-\<app name>-\<environment>* <br><br> <li> `sqldw-navigator-prod` <li> `sqldw-emissions-dev` |
+| **Azure Synapse Analytics** | Global | *syn-\<app name>-\<environment>* <br><br> <li> `syn-navigator-prod` <li> `syn-emissions-dev` |
 | **SQL Server Stretch Database** | Azure SQL Database | *sqlstrdb-\<app name>-\<environment>* <br><br> <li> `sqlstrdb-navigator-prod` <li> `sqlstrdb-emissions-dev` |
 
 ## Example names: Storage

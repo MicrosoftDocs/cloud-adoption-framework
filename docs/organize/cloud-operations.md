@@ -25,7 +25,7 @@ The skills needed to provide cloud operations functions can be provided by:
 - DevOps teams
 
 > [!IMPORTANT]
-> The individuals or teams accountable for cloud operations are generally responsible for making reactive changes to configuration during remediation. They're also likely to be responsible for proactive configuration changes to minimize operational disruptions. Depending on the organizations cloud operating model, those changes could be delivered via infrastructure-as-code, Azure Pipelines, or direct configuration in the portal. Since operations team will likely have elevated permissions, it is extremely important that those who fill this role are following [identity and access control best practices](/azure/security/benchmarks/security-control-identity-access-control) to minimize unintended access or production changes.
+> The individuals or teams accountable for cloud operations are generally responsible for making reactive changes to configuration during remediation. They're also likely to be responsible for proactive configuration changes to minimize operational disruptions. Depending on the organizations cloud operating model, those changes could be delivered via infrastructure-as-code, Azure Pipelines, or direct configuration in the portal. Since operations team will likely have elevated permissions, it is extremely important that those who fill this role are following [identity and access control best practices](/security/benchmark/azure/security-control-identity-access-control) to minimize unintended access or production changes.
 
 ## Preparation
 
@@ -35,7 +35,7 @@ The skills needed to provide cloud operations functions can be provided by:
 Review the following:
 
 - [Business outcomes](../strategy/business-outcomes/index.md)
-- [Financial models](../strategy/financial-models.md)
+- [Financial models](../strategy/cloud-migration-business-case.md)
 - [Motivations for cloud adoption](../strategy/motivations.md)
 - [Business risks](../govern/policy-compliance/risk-tolerance.md)
 - [Rationalization of the digital estate](../digital-estate/index.md)
@@ -73,7 +73,7 @@ As adoption and operations scale, it's important to define and automate governan
 
 Learn more about:
 
-- [Cloud center of excellence](../organize/cloud-center-of-excellence.md) functions.
-- [Organizational antipatterns: silos and fiefdoms](../organize/fiefdoms-silos.md).
+- [Cloud center of excellence](./cloud-center-of-excellence.md) functions.
+- [Organizational antipatterns: silos and fiefdoms](./fiefdoms-silos.md).
 
 Learn to align responsibilities across teams by developing a cross-team matrix that identifies responsible, accountable, consulted, and informed (RACI) parties. Download and modify the [RACI template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx).

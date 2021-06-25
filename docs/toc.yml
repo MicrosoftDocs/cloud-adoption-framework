@@ -119,9 +119,9 @@ items:
       - name: Common finance vocabulary terms
         href: strategy/finance-vocabulary-terms.md
       - name: Understand cloud accounting
-        href: strategy/cloud-accounting.md    
+        href: strategy/cloud-accounting.md
     - name: Technical considerations
-      items: 
+      items:
       - name: Overview
         href: strategy/technical-considerations/index.md
       - name: Achieve more with your investment
@@ -302,6 +302,8 @@ items:
               href: ready/azure-best-practices/plan-for-traffic-inspection.md
             - name: Connectivity to other cloud providers
               href: ready/azure-best-practices/connectivity-to-other-providers.md
+            - name: Connectivity to Oracle Cloud Infrastructure
+              href: ready/azure-best-practices/connectivity-to-other-providers-oci.md
           - name: Management and monitoring
             href: ready/enterprise-scale/management-and-monitoring.md
           - name: Business continuity and disaster recovery
@@ -312,6 +314,8 @@ items:
             href: ready/enterprise-scale/platform-automation-and-devops.md
         - name: Implement enterprise-scale landing zones
           href: ready/enterprise-scale/implementation.md
+        - name: Testing approach for enterprise-scale
+          href: ready/enterprise-scale/testing-approach.md
         - name: Terraform module for CAF enterprise-scale
           href: ready/enterprise-scale/terraform-module-caf-enterprise-scale.md
         - name: Transition to enterprise-scale (brownfield)
@@ -352,17 +356,17 @@ items:
             - name: Overview
               href: ready/considerations/landing-zone-security.md
             - name: Onboard a subscription to Azure Security Center
-              href: /azure/security-center/security-center-get-started?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/security-center/security-center-get-started?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Onboard Azure Sentinel
-              href: /azure/sentinel/quickstart-onboard?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/sentinel/quickstart-onboard?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Implementing a secure hybrid network architecture in Azure
-              href: /azure/architecture/reference-architectures/dmz/secure-vnet-dmz?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/architecture/reference-architectures/dmz/secure-vnet-dmz?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Azure identity management and access control security best practices
-              href: /azure/security/fundamentals/identity-management-best-practices?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/security/fundamentals/identity-management-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Azure network security best practices
-              href: /azure/security/fundamentals/network-best-practices?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/security/fundamentals/network-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Azure operational security best practices
-              href: /azure/security/fundamentals/operational-best-practices?bc=%252fazure%252fcloud-adoption-framework%252f_bread%252ftoc.json&toc=%252fazure%252fcloud-adoption-framework%252ftoc.json
+              href: /azure/security/fundamentals/operational-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Partner landing zones
         href: ready/landing-zone/partner-landing-zone.md
       - name: Infrastructure-as-code theory
@@ -395,15 +399,15 @@ items:
         - name: Define your tagging strategy
           href: ready/azure-best-practices/resource-tagging.md
         - name: Move resources
-          href: /azure/azure-resource-manager/management/move-resource-group-and-subscription?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          href: /azure/azure-resource-manager/management/move-resource-group-and-subscription?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Networking
         items:
         - name: Network boundary security
           href: reference/networking-vdc.md
         - name: Plan virtual networks
-          href: /azure/virtual-network/virtual-network-vnet-plan-design-arm?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          href: /azure/virtual-network/virtual-network-vnet-plan-design-arm?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
         - name: Best practices for network security
-          href: /azure/security/fundamentals/network-best-practices?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          href: /azure/security/fundamentals/network-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
         - name: Perimeter networks
           href: ready/azure-best-practices/perimeter-networks.md
         - name: Hub and spoke network topology
@@ -411,39 +415,43 @@ items:
       - name: Identity and access controls
         items:
         - name: Identity management best practices
-          href: /azure/security/fundamentals/identity-management-best-practices?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          href: /azure/security/fundamentals/identity-management-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
         - name: Secure privileged access
-          href: /azure/active-directory/users-groups-roles/directory-admin-roles-secure?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          href: /azure/active-directory/users-groups-roles/directory-admin-roles-secure?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
         - name: Choose an authentication method
-          href: /azure/active-directory/hybrid/choose-ad-authn?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          href: /azure/active-directory/hybrid/choose-ad-authn?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Storage
         items:
         - name: Storage security guide
-          href: /azure/storage/blobs/security-recommendations?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          href: /azure/storage/blobs/security-recommendations?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Databases
         items:
         - name: Database security best practices
-          href: /azure/sql-database/sql-database-security-best-practice?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          href: /azure/sql-database/sql-database-security-best-practice?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
         - name: Choose a deployment option in Azure SQL Database
-          href: /azure/sql-database/sql-database-paas-vs-sql-server-iaas?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          href: /azure/sql-database/sql-database-paas-vs-sql-server-iaas?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: AI + Machine Learning
         items:
         - name: Organize and set up Azure Machine Learning environments
           href: ready/azure-best-practices/ai-machine-learning-resource-organization.md
+        - name: Budget, cost, and quota management with Azure Machine Learning
+          href: ready/azure-best-practices/optimize-ai-machine-learning-cost.md
+        - name: Machine learning DevOps (MLOps)
+          href: ready/azure-best-practices/ai-machine-learning-mlops.md
       - name: Cost management
         items:
         - name: Track costs
           href: ready/azure-best-practices/track-costs.md
         - name: Optimize your cloud investment
-          href: /azure/cost-management-billing/costs/cost-mgt-best-practices?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          href: /azure/cost-management-billing/costs/cost-mgt-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
         - name: Create and manage budgets
-          href: /azure/cost-management-billing/costs/tutorial-acm-create-budgets?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          href: /azure/cost-management-billing/costs/tutorial-acm-create-budgets?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
         - name: Export cost data
-          href: /azure/cost-management-billing/costs/tutorial-export-acm-data?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          href: /azure/cost-management-billing/costs/tutorial-export-acm-data?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
         - name: Optimize costs from recommendations
-          href: /azure/cost-management-billing/costs/tutorial-acm-opt-recommendations?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          href: /azure/cost-management-billing/costs/tutorial-acm-opt-recommendations?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
         - name: Monitor usage and spending
-          href: /azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          href: /azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Skills relevant to ready and landing zones
         href: ready/suggested-skills.md
 
@@ -477,6 +485,12 @@ items:
           href: scenarios/index.md
         - name: Contoso overview
           href: migrate/azure-best-practices/contoso-migration-overview.md
+        - name: Tailwind Traders case study
+          items:
+          - name: Assessment and migration planning with Azure Migrate for servers
+            href: migrate/azure-best-practices/tailwind-migration-assess-servers.md 
+          - name: Migration execution with Azure Migrate for servers
+            href: migrate/azure-best-practices/tailwind-migration-rehost-server-replication.md
         - name: Windows Server workloads
           items:
           - name: Rehost a Windows application on Azure VMs
@@ -494,9 +508,9 @@ items:
         - name: Storage migration
           items:
           - name: Storage migration overview
-            href: /azure/storage/common/storage-migration-overview?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+            href: /azure/storage/common/storage-migration-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
           - name: Tools for unstructured storage migration
-            href: /azure/storage/solution-integration/validated-partners/data-management/migration-tools-comparison?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+            href: /azure/storage/solution-integration/validated-partners/data-management/migration-tools-comparison?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
 
         - name: Linux and open-source databases
           items:
@@ -555,37 +569,37 @@ items:
         - name: Java applications
           items:
           - name: Migration overview
-            href: /azure/developer/java/migration/migration-overview?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+            href: /azure/developer/java/migration/migration-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
           - name: Spring Boot to Azure App Service
-            href: /azure/developer/java/migration/migrate-spring-boot-to-app-service?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+            href: /azure/developer/java/migration/migrate-spring-boot-to-app-service?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
           - name: Spring Boot to AKS
-            href: /azure/developer/java/migration/migrate-spring-boot-to-azure-kubernetes-service?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+            href: /azure/developer/java/migration/migrate-spring-boot-to-azure-kubernetes-service?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
           - name: Spring Boot to Azure Spring Cloud
-            href: /azure/developer/java/migration/migrate-spring-boot-to-azure-spring-cloud?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+            href: /azure/developer/java/migration/migrate-spring-boot-to-azure-spring-cloud?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
           - name: Spring Cloud to Azure Spring Cloud
-            href: /azure/developer/java/migration/migrate-spring-cloud-to-azure-spring-cloud?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+            href: /azure/developer/java/migration/migrate-spring-cloud-to-azure-spring-cloud?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
           - name: Tomcat to Azure App Service
-            href: /azure/developer/java/migration/migrate-tomcat-to-tomcat-app-service?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+            href: /azure/developer/java/migration/migrate-tomcat-to-tomcat-app-service?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
           - name: Tomcat to containers on AKS
-            href: /azure/developer/java/migration/migrate-tomcat-to-containers-on-azure-kubernetes-service?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+            href: /azure/developer/java/migration/migrate-tomcat-to-containers-on-azure-kubernetes-service?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
           - name: Tomcat to Azure Spring Cloud
-            href: /azure/developer/java/migration/migrate-tomcat-to-azure-spring-cloud?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+            href: /azure/developer/java/migration/migrate-tomcat-to-azure-spring-cloud?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
           - name: WebLogic to Azure
             items:
               - name: WebLogic to Azure Virtual Machines
-                href: /azure/developer/java/migration/migrate-weblogic-to-virtual-machines?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+                href: /azure/developer/java/migration/migrate-weblogic-to-virtual-machines?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
               - name: WebLogic with Azure AD via LDAP
-                href: /azure/developer/java/migration/migrate-weblogic-with-aad-ldap?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+                href: /azure/developer/java/migration/migrate-weblogic-with-aad-ldap?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
               - name: WebLogic with Application Gateway
-                href: /azure/developer/java/migration/migrate-weblogic-with-app-gateway?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+                href: /azure/developer/java/migration/migrate-weblogic-with-app-gateway?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
           - name: WildFly to WildFly on AKS
-            href: /azure/developer/java/migration/migrate-wildfly-to-wildfly-on-azure-kubernetes-service?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+            href: /azure/developer/java/migration/migrate-wildfly-to-wildfly-on-azure-kubernetes-service?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
           - name: WebLogic to WildFly on AKS
-            href: /azure/developer/java/migration/migrate-weblogic-to-wildfly-on-azure-kubernetes-service?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+            href: /azure/developer/java/migration/migrate-weblogic-to-wildfly-on-azure-kubernetes-service?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
           - name: WebSphere to WildFly on AKS
-            href: /azure/developer/java/migration/migrate-websphere-to-wildfly-on-azure-kubernetes-service?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+            href: /azure/developer/java/migration/migrate-websphere-to-wildfly-on-azure-kubernetes-service?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
           - name: JBoss EAP to WildFly on AKS
-            href: /azure/developer/java/migration/migrate-jboss-eap-to-wildfly-on-azure-kubernetes-service?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+            href: /azure/developer/java/migration/migrate-jboss-eap-to-wildfly-on-azure-kubernetes-service?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
 
         - name: SAP
           items:
@@ -616,55 +630,55 @@ items:
           - name: Prerequisites
             items:
             - name: Secure your environment
-              href: /azure/vmware-cloudsimple/private-cloud-secure?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/vmware-cloudsimple/private-cloud-secure?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Private cloud management
               items:
               - name: Escalate CloudSimple privileges
-                href: /azure/vmware-cloudsimple/escalate-privileges?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+                href: /azure/vmware-cloudsimple/escalate-privileges?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
               - name: Set up DNS and DHCP workloads
-                href: /azure/vmware-cloudsimple/dns-dhcp-setup?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+                href: /azure/vmware-cloudsimple/dns-dhcp-setup?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
               - name: Migrate workloads using Layer 2 stretched networks
-                href: /azure/vmware-cloudsimple/migration-layer-2-vpn?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+                href: /azure/vmware-cloudsimple/migration-layer-2-vpn?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Private cloud networking
               items:
               - name: On-premises network connection using VPN
-                href: /azure/vmware-cloudsimple/set-up-vpn?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+                href: /azure/vmware-cloudsimple/set-up-vpn?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
               - name: On-premises network connection using ExpressRoute
-                href: /azure/vmware-cloudsimple/on-premises-connection?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+                href: /azure/vmware-cloudsimple/on-premises-connection?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
               - name: Azure Virtual Network connection with ExpressRoute
-                href: /azure/vmware-cloudsimple/azure-expressroute-connection?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+                href: /azure/vmware-cloudsimple/azure-expressroute-connection?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
               - name: Configure DNS for name resolution
-                href: /azure/vmware-cloudsimple/on-premises-dns-setup?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+                href: /azure/vmware-cloudsimple/on-premises-dns-setup?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: VMware platform
               items:
               - name: CloudSimple Private Cloud permission model
-                href: /azure/vmware-cloudsimple/learn-private-cloud-permissions?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+                href: /azure/vmware-cloudsimple/learn-private-cloud-permissions?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
               - name: vCenter identity sources
-                href: /azure/vmware-cloudsimple/set-vcenter-identity?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+                href: /azure/vmware-cloudsimple/set-vcenter-identity?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
               - name: Azure Application Gateway with VMware VMs
-                href: /azure/vmware-cloudsimple/azure-application-gateway?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+                href: /azure/vmware-cloudsimple/azure-application-gateway?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
               - name: vCenter Server as vRealize Automation endpoint
-                href: /azure/vmware-cloudsimple/configure-server-vrealize-automation-endpoint?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+                href: /azure/vmware-cloudsimple/configure-server-vrealize-automation-endpoint?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
               - name: Ensure application high availability in VMware on Azure
-                href: /azure/vmware-cloudsimple/ensuring-high-availability?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+                href: /azure/vmware-cloudsimple/ensuring-high-availability?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
               - name: Choose a load balancing solution
-                href: /azure/vmware-cloudsimple/load-balancers?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+                href: /azure/vmware-cloudsimple/load-balancers?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Azure core integration
               items:
               - name: Azure AD as identity provider for vCenter
-                href: /azure/vmware-cloudsimple/azure-ad?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+                href: /azure/vmware-cloudsimple/azure-ad?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
           - name: Rehost and disaster recovery options
             items:
             - name: Rehost workload VMs to Private Cloud vCenter
-              href: /azure/vmware-cloudsimple/migrate-workloads?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/vmware-cloudsimple/migrate-workloads?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Rehost data using Azure Data Box
-              href: /azure/vmware-cloudsimple/migration-using-azure-data-box?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/vmware-cloudsimple/migration-using-azure-data-box?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Back up workload VMs
-              href: /azure/vmware-cloudsimple/backup-workloads-veeam?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/vmware-cloudsimple/backup-workloads-veeam?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Set up CloudSimple Private Cloud as disaster recovery site using Zerto
-              href: /azure/vmware-cloudsimple/disaster-recovery-zerto?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/vmware-cloudsimple/disaster-recovery-zerto?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Set up CloudSimple Private Cloud as disaster recovery site using VMware SRM
-              href: /azure/vmware-cloudsimple/disaster-recovery-site-recovery-manager?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/vmware-cloudsimple/disaster-recovery-site-recovery-manager?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
 
         - name: Data platforms
           items:
@@ -725,31 +739,31 @@ items:
           - name: Azure Database Migration Service tutorials
             items:
             - name: Azure Database Migration Service overview
-              href: /azure/dms/dms-overview?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/dms/dms-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Migrate SQL Server to Azure SQL Database offline
-              href: /azure/dms/tutorial-sql-server-to-azure-sql?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/dms/tutorial-sql-server-to-azure-sql?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Migrate SQL Server to Azure SQL Database online
-              href: /azure/dms/tutorial-sql-server-azure-sql-online?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/dms/tutorial-sql-server-azure-sql-online?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Migrate SQL Server to Azure SQL Managed Instance offline
-              href: /azure/dms/tutorial-sql-server-to-managed-instance?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/dms/tutorial-sql-server-to-managed-instance?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Migrate SQL Server to Azure SQL Managed Instance online
-              href: /azure/dms/tutorial-sql-server-managed-instance-online?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/dms/tutorial-sql-server-managed-instance-online?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Migrate Amazon RDS SQL Server to Azure SQL Database or Azure SQL Managed Instance online
-              href: /azure/dms/tutorial-rds-sql-server-azure-sql-and-managed-instance-online?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/dms/tutorial-rds-sql-server-azure-sql-and-managed-instance-online?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Migrate MySQL to Azure Database for MySQL online
-              href: /azure/dms/tutorial-mysql-azure-mysql-online?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/dms/tutorial-mysql-azure-mysql-online?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Migrate Amazon RDS MySQL to Azure Database for MySQL online
-              href: /azure/dms/tutorial-rds-mysql-server-azure-db-for-mysql-online?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/dms/tutorial-rds-mysql-server-azure-db-for-mysql-online?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Migrate PostgreSQL to Azure Database for PostgreSQL online
-              href: /azure/dms/tutorial-postgresql-azure-postgresql-online?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/dms/tutorial-postgresql-azure-postgresql-online?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Migrate Amazon RDS PostgreSQL to Azure Database for PostgreSQL online
-              href: /azure/dms/tutorial-rds-postgresql-server-azure-db-for-postgresql-online?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/dms/tutorial-rds-postgresql-server-azure-db-for-postgresql-online?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Migrate MongoDB to Azure Cosmos DB's API for MongoDB offline
-              href: /azure/dms/tutorial-mongodb-cosmos-db?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/dms/tutorial-mongodb-cosmos-db?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Migrate MongoDB to Azure Cosmos DB's API for MongoDB online
-              href: /azure/dms/tutorial-mongodb-cosmos-db-online?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/dms/tutorial-mongodb-cosmos-db-online?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Migrate Oracle to Azure Database for PostgreSQL online
-              href: /azure/dms/tutorial-oracle-azure-postgresql-online?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/dms/tutorial-oracle-azure-postgresql-online?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
 
         - name: Azure Stack
           items:
@@ -761,7 +775,7 @@ items:
             href: scenarios/azure-stack/ready.md
           - name: Assess
             href: scenarios/azure-stack/migrate-assess.md
-          - name: Migrate and Deploy
+          - name: Migrate and deploy
             href: scenarios/azure-stack/migrate-deploy.md
           - name: Govern
             href: scenarios/azure-stack/govern.md
@@ -782,7 +796,7 @@ items:
         - name: Multitenant migration
           items:
           - name: Azure Lighthouse for scale migration
-            href: /azure/lighthouse/how-to/migration-at-scale?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+            href: /azure/lighthouse/how-to/migration-at-scale?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
 
         - name: Mainframes
           items:
@@ -799,25 +813,25 @@ items:
           - name: Securing and managing workloads after migration
             href: migrate/azure-best-practices/migrate-best-practices-security-management.md
           - name: Azure database security best practices
-            href: /azure/sql-database/sql-database-security-best-practice?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+            href: /azure/sql-database/sql-database-security-best-practice?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
           - name: Azure data security and encryption best practices
-            href: /azure/security/fundamentals/data-encryption-best-practices?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+            href: /azure/security/fundamentals/data-encryption-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
           - name: Azure PaaS best practices
-            href: /azure/security/fundamentals/paas-deployments?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+            href: /azure/security/fundamentals/paas-deployments?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
           - name: Azure Service Fabric security best practices
-            href: /azure/security/fundamentals/service-fabric-best-practices?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+            href: /azure/security/fundamentals/service-fabric-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
           - name: Best practices for Azure VM security
-            href: /azure/security/fundamentals/iaas?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+            href: /azure/security/fundamentals/iaas?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
           - name: IoT security best practices
-            href: /azure/iot-fundamentals/iot-security-best-practices?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+            href: /azure/iot-fundamentals/iot-security-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
           - name: Securing PaaS databases in Azure
-            href: /azure/security/fundamentals/paas-applications-using-sql?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+            href: /azure/security/fundamentals/paas-applications-using-sql?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
           - name: Securing PaaS web and mobile applications using Azure App Service
-            href: /azure/security/fundamentals/paas-applications-using-app-services?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+            href: /azure/security/fundamentals/paas-applications-using-app-services?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
           - name: Securing PaaS web and mobile applications using Azure Storage
-            href: /azure/security/fundamentals/paas-applications-using-storage?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+            href: /azure/security/fundamentals/paas-applications-using-storage?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
           - name: Security best practices for IaaS workloads in Azure
-            href: /azure/security/fundamentals/iaas?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+            href: /azure/security/fundamentals/iaas?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
 
       - name: Best practices
         items:
@@ -976,53 +990,53 @@ items:
           - name: Share data with experts
             items:
             - name: Quickly generate data insights
-              href: /power-bi/service-insights?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /power-bi/service-insights?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Sharing data with coworkers and partners
-              href: /power-bi/service-share-dashboards?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /power-bi/service-share-dashboards?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Embed reports in a website or portal
-              href: /power-bi/service-embed-secure?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /power-bi/service-embed-secure?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Create new workspaces in Power BI
-              href: /power-bi/service-create-the-new-workspaces?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /power-bi/service-create-the-new-workspaces?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
           - name: Govern data
             items:
             - name: Classify data
               href: innovate/best-practices/data-classification.md
             - name: Secure data
-              href: /azure/architecture/data-guide/scenarios/securing-data-solutions?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/architecture/data-guide/scenarios/securing-data-solutions?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Annotate data with Azure Data Catalog
-              href: /azure/data-catalog/data-catalog-how-to-annotate?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/data-catalog/data-catalog-how-to-annotate?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Document data sources with Azure Data Catalog
-              href: /azure/data-catalog/data-catalog-how-to-documentation?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/data-catalog/data-catalog-how-to-documentation?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
           - name: Centralize data
             items:
             - name: Create and query an Azure Synapse Analytics SQL pool
-              href: /azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Best practices for loading data for data warehousing
-              href: /azure/synapse-analytics/sql-data-warehouse/guidance-for-loading-data?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/synapse-analytics/sql-data-warehouse/guidance-for-loading-data?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Visualize warehouse data with Power BI
-              href: /azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-get-started-visualize-with-power-bi?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-get-started-visualize-with-power-bi?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Reference architecture for enterprise BI with Azure Synapse Analytics
-              href: /azure/architecture/reference-architectures/data/enterprise-bi-synapse?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/architecture/reference-architectures/data/enterprise-bi-synapse?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Manage enterprise big data with Azure Data Lake Storage
-              href: /azure/storage/blobs/data-lake-storage-introduction?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/storage/blobs/data-lake-storage-introduction?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: What is a data lake?
-              href: /azure/architecture/data-guide/scenarios/data-lake?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/architecture/data-guide/scenarios/data-lake?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
           - name: Collect data
             items:
             - name: Migrate on-premises data to Azure from SQL, Oracle, or NoSQL platforms
               href: innovate/best-practices/data-dms.md
             - name: Integrate cloud data sources with a SQL Analytics data warehouse
-              href: /azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-integrate?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-integrate?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Load on-premises data into Azure Synapse Analytics
-              href: /sql/integration-services/load-data-to-sql-data-warehouse?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /sql/integration-services/load-data-to-sql-data-warehouse?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Integrate data - Azure Data Factory to OLAP
-              href: /azure/architecture/data-guide/scenarios/hybrid-on-premises-and-cloud?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/architecture/data-guide/scenarios/hybrid-on-premises-and-cloud?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Use Azure Stream Analytics with Azure Synapse Analytics
-              href: /azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-integrate-azure-stream-analytics?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-integrate-azure-stream-analytics?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Reference architecture for ingestion and analysis of new feeds
-              href: /azure/architecture/example-scenario/ai/newsfeed-ingestion?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/architecture/example-scenario/ai/newsfeed-ingestion?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Load data into Azure Synapse Analytics SQL pool
-              href: /azure/synapse-analytics/sql-data-warehouse/load-data-wideworldimportersdw?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/synapse-analytics/sql-data-warehouse/load-data-wideworldimportersdw?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
 
         - name: Engage via applications
           items:
@@ -1031,49 +1045,49 @@ items:
           - name: Citizen developers
             items:
             - name: Power Apps overview
-              href: /powerapps/powerapps-overview?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /powerapps/powerapps-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Creating applications in Power Apps
-              href: /powerapps/maker?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /powerapps/maker?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Create your first workflow with Power Automate
-              href: /power-automate/getting-started?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /power-automate/getting-started?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Using AI Builder
-              href: /powerapps/use-ai-builder?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /powerapps/use-ai-builder?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Compliance and data privacy for citizen developer solutions
-              href: /power-platform/admin/wp-compliance-data-privacy?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /power-platform/admin/wp-compliance-data-privacy?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Data loss prevention policies for citizen developer solutions
-              href: /power-platform/admin/wp-data-loss-prevention?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /power-platform/admin/wp-data-loss-prevention?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
           - name: Intelligent experiences
             items:
             - name: Modern web apps
               items:
               - name: Reference solutions for web apps
-                href: /azure/architecture/solution-ideas/articles/scalable-ecommerce-web-app?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+                href: /azure/architecture/solution-ideas/articles/scalable-ecommerce-web-app?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
               - name: Create a .NET Core application with Azure SQL Database
                 href: /azure/app-service/app-service-web-tutorial-dotnet-sqldatabase
               - name: Create a .NET application with Azure SQL Database
-                href: /azure/app-service/app-service-web-tutorial-dotnet-sqldatabase?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+                href: /azure/app-service/app-service-web-tutorial-dotnet-sqldatabase?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
               - name: Create a PHP application with MySQL
-                href: /azure/app-service/app-service-web-tutorial-php-mysql?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+                href: /azure/app-service/app-service-web-tutorial-php-mysql?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
               - name: Create a Node.js with MongoDB
-                href: /azure/app-service/app-service-web-tutorial-nodejs-mongodb-app?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+                href: /azure/app-service/app-service-web-tutorial-nodejs-mongodb-app?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Infusing intelligence
               items:
               - name: Computer Vision service
-                href: /azure/cognitive-services/computer-vision/home?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+                href: /azure/cognitive-services/computer-vision/home?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
               - name: Translate text in real time
-                href: /azure/cognitive-services/translator/quickstart-translator?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+                href: /azure/cognitive-services/translator/quickstart-translator?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
               - name: Understand sentiment using LUIS
-                href: /azure/cognitive-services/luis/tutorial-publish-settings?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+                href: /azure/cognitive-services/luis/tutorial-publish-settings?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
               - name: Recognize speech from a microphone
-                href: /azure/cognitive-services/speech-service/quickstarts/speech-to-text-from-microphone?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+                href: /azure/cognitive-services/speech-service/quickstarts/speech-to-text-from-microphone?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
               - name: Bing web search
-                href: /azure/cognitive-services/bing-web-search/tutorial-bing-web-search-single-page-app?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+                href: /azure/cognitive-services/bing-web-search/tutorial-bing-web-search-single-page-app?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
               - name: Visual search from an image
-                href: /azure/cognitive-services/bing-visual-search/tutorial-visual-search-image-upload?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+                href: /azure/cognitive-services/bing-visual-search/tutorial-visual-search-image-upload?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Chatbots
               items:
               - name: Create and deploy a basic bot
-                href: /azure/bot-service/bot-builder-tutorial-basic-deploy?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&tabs=csharp&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json&view=azure-bot-service-4.0
+                href: /azure/bot-service/bot-builder-tutorial-basic-deploy?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
               - name: "Learning path: Create bots with the Azure Bot Service"
                 href: /learn/paths/create-bots-with-the-azure-bot-service
               - name: Azure bot samples on GitHub
@@ -1083,37 +1097,37 @@ items:
             - name: Microservices architecture
               items:
               - name: Design, build, and operate microservices in Azure
-                href: /azure/architecture/guide/architecture-styles/microservices?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+                href: /azure/architecture/guide/architecture-styles/microservices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
               - name: Reference architecture for microservices with Azure Kubernetes Service (AKS)
                 href: /azure/architecture/reference-architectures/containers/aks-microservices/aks-microservices
-              - name: Reference architecture - serverless microservices sample
-                href: /samples/azure-samples/serverless-microservices-reference-architecture/serverless-microservices-reference-architecture/?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              - name: Reference architecture for serverless microservices
+                href: /samples/azure-samples/serverless-microservices-reference-architecture/serverless-microservices-reference-architecture/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Containers
               items:
               - name: What is Kubernetes?
                 href: https://azure.microsoft.com/topic/what-is-kubernetes/
               - name: Prepare an application for Azure Kubernetes Service (AKS)
-                href: /azure/aks/tutorial-kubernetes-prepare-app?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+                href: /azure/aks/tutorial-kubernetes-prepare-app?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
               - name: Create an Azure Red Hat OpenShift cluster
-                href: /azure/openshift/tutorial-create-cluster?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+                href: /azure/openshift/tutorial-create-cluster?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Spring Boot microservices
               items:
               - name: Launch an Azure Spring Cloud application
-                href: /azure/spring-cloud/spring-cloud-quickstart-launch-app-portal?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+                href: /azure/spring-cloud/spring-cloud-quickstart-launch-app-portal?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
               - name: Distributed tracing with Azure Spring Cloud
-                href: /azure/spring-cloud/spring-cloud-tutorial-distributed-tracing?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+                href: /azure/spring-cloud/spring-cloud-tutorial-distributed-tracing?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
               - name: Bind an Azure Cosmos DB to your Azure Spring Cloud application
-                href: /azure/spring-cloud/how-to-bind-cosmos?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+                href: /azure/spring-cloud/how-to-bind-cosmos?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Event-driven applications
               items:
               - name: Learning path for creating serverless applications
                 href: /learn/paths/create-serverless-applications
               - name: Azure Functions developer guide
-                href: /azure/azure-functions/functions-reference?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+                href: /azure/azure-functions/functions-reference?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
               - name: Azure Serverless Computing Cookbook
                 href: https://azure.microsoft.com/resources/azure-serverless-computing-cookbook
               - name: Azure Functions introduction
-                href: /azure/azure-functions/functions-overview?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+                href: /azure/azure-functions/functions-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
 
         - name: Empower adoption
           items:
@@ -1121,16 +1135,16 @@ items:
             href: innovate/best-practices/ci-cd.md
           - name: Shared solution
             items:
-            - name: Get started with a shared repository - GitHub and Git
+            - name: Get started with a shared repository via GitHub
               href: https://guides.github.com/introduction/git-handbook
             - name: Get started with a shared backlog
-              href: /azure/devops/boards/backlogs/backlogs-boards-plans?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json&view=azure-devops
+              href: /azure/devops/boards/backlogs/backlogs-boards-plans?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json&view=azure-devops
             - name: Synchronize Power Apps with Azure DevOps
-              href: /powerapps/developer/common-data-service/build-tools-overview?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /powerapps/developer/common-data-service/build-tools-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
           - name: Feedback loops
             items:
             - name: Manage feedback with Azure DevOps
-              href: /azure/devops/project/feedback?bc=%2fazure%2fcloud-adoption-framework%2ftoc.json&view=azure-devops
+              href: /azure/devops/project/feedback?bc=/azure/cloud-adoption-framework/toc.json
           - name: Continuous integration
             items:
             - name: Continuous integration with Azure Pipelines and GitHub
@@ -1140,7 +1154,7 @@ items:
           - name: Reliable testing
             items:
             - name: Manage and track test plans
-              href: /azure/devops/test/track-test-status?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json&view=azure-devops
+              href: /azure/devops/test/track-test-status?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json&view=azure-devops
           - name: Solution deployment
             items:
             - name: Continuous deployment with Azure Pipelines and GitHub
@@ -1148,17 +1162,17 @@ items:
           - name: Integrated metrics
             items:
             - name: Monitor ASP.NET applications
-              href: /azure/azure-monitor/learn/quick-monitor-portal?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/azure-monitor/learn/quick-monitor-portal?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Monitor ASP.NET Core web applications
-              href: /azure/azure-monitor/learn/dotnetcore-quick-start?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/azure-monitor/learn/dotnetcore-quick-start?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Monitor Node.js applications
-              href: /azure/azure-monitor/learn/nodejs-quick-start?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/azure-monitor/learn/nodejs-quick-start?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Monitor mobile applications
-              href: /azure/azure-monitor/learn/mobile-center-quickstart?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/azure-monitor/learn/mobile-center-quickstart?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Monitor web applications
-              href: /azure/azure-monitor/app/website-monitoring?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/azure-monitor/app/website-monitoring?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Monitor VMs hosting traditional applications
-              href: /azure/azure-monitor/learn/quick-collect-azurevm?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/azure-monitor/learn/quick-collect-azurevm?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
 
         - name: Interact with devices
           items:
@@ -1169,53 +1183,53 @@ items:
             - name: Extend a legacy claims-processing application with a web and mobile experience
               href: /azure/architecture/solution-ideas/articles/adding-a-modern-web-and-mobile-frontend-to-a-legacy-claims-processing-application
             - name: Optimize reports to share data on a mobile app
-              href: /power-bi/desktop-create-phone-report?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /power-bi/desktop-create-phone-report?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Extend Power Apps canvas application to a mobile experience
-              href: /powerapps/user/run-app-client?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /powerapps/user/run-app-client?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Extend Power Automate to add a mobile experience
-              href: /power-automate/create-mobile-task-flow?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /power-automate/create-mobile-task-flow?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Secure mobile experiences
               items:
               - name: Protect mobile reports with face, touch, or passcodes
-                href: /power-bi/consumer/mobile/mobile-native-secure-access?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+                href: /power-bi/consumer/mobile/mobile-native-secure-access?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
               - name: Secure mobile task flows with Intune
-                href: /power-automate/intune-support?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+                href: /power-automate/intune-support?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
               - name: Secure data in common data services
-                href: /power-platform/admin/wp-security?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+                href: /power-platform/admin/wp-security?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
           - name: Mixed reality
             items:
             - name: Develop mixed reality experiences with Unity
-              href: /windows/mixed-reality/unity-development-overview?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /windows/mixed-reality/unity-development-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Quickstarts to add Azure Spatial Anchors to a mixed reality solution
-              href: /azure/spatial-anchors/?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/spatial-anchors/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
           - name: Integrated reality and IoT
             items:
             - name: Visualize sensor data with Azure IoT in Power BI
-              href: /azure/iot-hub/iot-hub-live-data-visualization-in-power-bi?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/iot-hub/iot-hub-live-data-visualization-in-power-bi?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Visualize sensor data with Azure IoT Hub in a web solution
-              href: /azure/iot-hub/iot-hub-live-data-visualization-in-web-apps?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/iot-hub/iot-hub-live-data-visualization-in-web-apps?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Securing an IoT solution
-              href: /azure/iot-fundamentals/iot-security-architecture?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/iot-fundamentals/iot-security-architecture?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Get started with Azure Sphere
               href: https://azure.microsoft.com/services/azure-sphere/get-started/
             - name: Create a deployment with Azure Sphere
-              href: /azure-sphere/deployment/create-a-deployment?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure-sphere/deployment/create-a-deployment?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Get started with Azure Kinect DK
-              href: /azure/Kinect-dk/about-azure-kinect-dk?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/Kinect-dk/about-azure-kinect-dk?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Build your first Azure Kinect DK application
-              href: /azure/Kinect-dk/build-first-app?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/Kinect-dk/build-first-app?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
           - name: Adjusted reality
             items:
             - name: "Azure Digital Twins + HoloLens: Adjusting virtual reality"
               href: https://azure.microsoft.com/resources/videos/build-2019-azure-digital-twins-hololens-powering-the-next-generation-of-iot/
             - name: Get started with Azure Digital Twins
-              href: /azure/digital-twins/about-digital-twins?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/digital-twins/about-digital-twins?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Monitor a building with Azure Digital Twins
-              href: /azure/digital-twins/tutorial-facilities-setup?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/digital-twins/tutorial-facilities-setup?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Azure IoT for cloud-to-device communications guide
-              href: /azure/iot-hub/iot-hub-devguide-c2d-guidance?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/iot-hub/iot-hub-devguide-c2d-guidance?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Azure IoT configuration for cloud-to-device communications
-              href: /azure/iot-hub/iot-hub-devguide-c2d-guidance?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+              href: /azure/iot-hub/iot-hub-devguide-c2d-guidance?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
 
         - name: Innovate with AI
           items:
@@ -1558,13 +1572,13 @@ items:
       - name: Improving platform or workload reliability
         items:
         - name: Reliability checklist for Azure services
-          href: /azure/architecture/checklist/resiliency-per-service?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          href: /azure/architecture/checklist/resiliency-per-service?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
         - name: Failure mode analysis
-          href: /azure/architecture/resiliency/failure-mode-analysis?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          href: /azure/architecture/resiliency/failure-mode-analysis?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
         - name: Recover from a region wide service disruption
-          href: /azure/architecture/resiliency/recovery-loss-azure-region?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          href: /azure/architecture/resiliency/recovery-loss-azure-region?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
         - name: Recover from data corruption or accidental deletion
-          href: /azure/architecture/framework/resiliency/data-management?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+          href: /azure/architecture/framework/resiliency/data-management?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
     - name: Management considerations
       items:
       - name: Overview
@@ -1608,7 +1622,7 @@ items:
         href: secure/business-resilience.md
       - name: Access control
         href: secure/access-control.md
-      - name: Security operations 
+      - name: Security operations
         href: secure/security-operations.md
       - name: Asset protection
         href: secure/asset-protection.md
@@ -1624,11 +1638,11 @@ items:
       - name: Securing DevOps
         href: secure/best-practices/secure-devops.md
       - name: Secure DevOps governance
-        href: secure/best-practices/end-to-end-governance.md 
+        href: secure/best-practices/end-to-end-governance.md
       - name: Windows Virtual Desktop
         href: scenarios/wvd/eslz-security-governance-and-compliance.md
       - name: Managing secrets
-        href: secure/best-practices/manage-secrets.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: secure/best-practices/manage-secrets.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Network security
         href: /security/compass/network-security-containment
       - name: Toolchain
@@ -1645,11 +1659,11 @@ items:
       - name: Azure security top 10
         href: secure/security-top-10.md
       - name: Microsoft cybersecurity reference architectures
-        href: /security/cybersecurity-reference-architecture/mcra?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /security/cybersecurity-reference-architecture/mcra?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Security documentation
-        href: /security?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /security?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Azure security benchmarks
-        href: /security/benchmark/azure?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json
+        href: /security/benchmark/azure?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
 
   - name: Organize
     items:

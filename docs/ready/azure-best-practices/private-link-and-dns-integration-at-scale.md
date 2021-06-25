@@ -47,8 +47,13 @@ The following diagram shows a typical high-level architecture for enterprise env
 
 From the previous diagram, it is important to highlight that:
 
-- On-premises DNS servers have conditional forwarders configured for each private endpoint [public DNS zone forwarder][link-3] pointing to the DNS forwarders (`10.100.2.4` and `10.100.2.5`) hosted in the hub VNet.
-- All Azure VNets have the DNS forwarders (`10.100.2.4` and `10.100.2.5`) configured as the primary and secondary DNS servers.
+- On-premises DNS servers have conditional forwarders configured for each private endpoint public DNS zone, pointing to the DNS servers 10.100.2.4 and 10.100.2.5 hosted in the hub VNet.
+- The DNS servers 10.100.2.4 and 10.100.2.5 hosted in the hub VNet use the Azure-provided DNS resolver (168.63.129.16) as a forwarder. 
+- The hub VNet must be linked to the Private DNS zone names for Azure services (such as privatelink.blob.core.windows.net, as shown in the picture).
+- All Azure VNets use the DNS servers hosted in the hub VNet (10.100.2.4 and 10.100.2.5) as the primary and secondary DNS servers.
+- If the DNS servers 10.100.2.4 and 10.100.2.5 are not authoritative for customer’s corporate domains (for example, Active Directory domain names), they should have conditional forwarders for the customer’s corporate domains, pointing to the on-premises DNS Servers (172.16.1.10 & 172.16.1.11) or DNS servers deployed in Azure which are authoritative for such zones. 
+
+Please note that while the previous diagram depicts a single hub and spoke architecture, this guidance is applicable to scenarios where there are multiple hub and spoke networks across multiple Azure regions. In this case, the hub VNets in all regions should be linked to the same Azure Private DNS zones.
 
 There are two conditions that must be true to allow application teams the freedom to create any required Azure PaaS resources in their subscription:
 

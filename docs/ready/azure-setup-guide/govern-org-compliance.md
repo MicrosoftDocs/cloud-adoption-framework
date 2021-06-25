@@ -19,7 +19,7 @@ As you establish corporate policy and plan your governance strategies, you can u
 
 ## [Azure Blueprints](#tab/AzureBlueprints)
 
-Azure Blueprints enables cloud architects and central information technology groups to define a repeatable set of Azure resources that implements and adheres to an organization's standards, patterns, and requirements. Azure Blueprints makes it possible for development teams to rapidly build and stand up new environments and trust that they're building within organizational compliance using a set of built-in components like networking to speed up development and delivery.
+Azure Blueprints enables cloud architects and central information technology groups to define a repeatable set of Azure resources that implements and adheres to an organization's standards, patterns, and requirements. Azure Blueprints makes it possible for development teams to rapidly build and create new environments and trust that they're building within organizational compliance using a set of built-in components like networking to speed up development and delivery.
 
 Blueprints are a declarative way to orchestrate the deployment of various resource templates and other artifacts like:
 
@@ -58,7 +58,7 @@ To create a blueprint:
 
 ### Publish a blueprint
 
-To publish a blueprint artifacts to your subscription:
+To publish blueprint artifacts to your subscription:
 
 ::: zone target="chromeless"
 
