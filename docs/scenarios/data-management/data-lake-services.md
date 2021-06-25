@@ -151,6 +151,10 @@ These datasets are usually of unknown quality and accuracy. They are still categ
 
 Sometimes these datasets mature, and the enterprise should consider how they promote these **Data Products** from the Workspace to the Curated Data Layer. In order to keep Data Product teams responsible for new Data Products, it is recommended to provide these teams a dedicated folder on the Curated Data Layer in which they can then then store the new results and share them with other teams across the organization.
 
+## Data Lake Partitioning
+
+sss
+
 ## Lifecycle Management
 
 Azure storage offers different access tiers, which allow you to store blob object data in the most cost-effective manner. The available access tiers include:
@@ -174,20 +178,26 @@ The Enterprise Analytics and AI construction set prescribes that you should impl
 
 ## Key Considerations
 
-When landing data into a data lake, it is important to pre-plan the structure of the data so that security, partitioning, and processing can be utilized effectively. Many of the following recommendations are applicable for all big data workloads. Every workload has different requirements on how the data is consumed.
+When landing data into a data lake, it is important to pre-plan the structure of the data so that security, partitioning, and processing can be utilized effectively. Many of the following recommendations are applicable for all big data workloads. Every workload has different requirements on how the data is consumed, therefore the list below general recommendation. Please work with your system integrator on the right level of AD groups for your implementation of this construction set.
+
+### Data Lake Access Control Lists Guideline
+
+- Create AD Groups to represent data products, datasets, data integrations or job functions and assign access to AD groups instead of individual users. This method simplifies operations and maintenance tasks because most of the time, as will only add and remove users to and from AD groups. Modifying ACL on files and folders in the data lake should not happen very frequently - typically at the moment of dataset creation. 
+- The lowest granularity for ACL is the dataset (table name) level which is represented by a folder in the data lake storage.
+- It is likely that existing groups in Azure AD are based on organizational structure. However, not all members in the same organizational unit need access to data in the data lake. It's best to define new AD groups based on their data roles and dataset grouping.
+- Default ACL on each dataset folder must include Read and Execute permissions. Execute permission is required for users to be able to traverse folder partitions and files under it. Access ACL assigned to an AD group on each dataset folder will include Read and Execute permissions.
+- Write permission should be given to a system through managed identity or service principal only because any changes should only be made by an ingestion, transformation, or maintenance process.
 
 ### Write data
 
 |Raw data |Enriched data |Curated data| Workspace data|
 |---------|---------|---------|---------|
-
 |Data Integration(s) | Data Integration(s) | Data Products(s) | Data Products, Data Scientists and BI Analysts|
 
 ### Read data
 
 |Raw data |Enriched data |Curated data| Workspace data|
 |---------|---------|---------|---------|
-
 | Data Integration | Data Integration and read access for others based on approval of Data Integration owner | Data Products, Analysts, Data Scientists, and Users | Data Scientists and Analysts|
 
 ### Data Lifecycle Management
@@ -200,7 +210,6 @@ When landing data into a data lake, it is important to pre-plan the structure of
 
 |Raw data |Enriched data |Curated data| Workspace data|
 |---------|---------|---------|---------|
-
 |Folder structure to mirror sensitivity followed by source. | Folder structure to mirror data integration followed by data asset | Folder structure mirrors data product structure |Folder structures mirror teams that the workspace is used by.|
 
 >[!WARNING]

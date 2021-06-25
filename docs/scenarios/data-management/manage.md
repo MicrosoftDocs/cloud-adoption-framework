@@ -1,9 +1,9 @@
 ---
 title: "Manage 'data management and analytics' in Azure"
 description: Manage 'data management and analytics' in Azure
-author: BrianBlanchard
-ms.author: brblanch
-ms.date: 07/01/2010
+author: mboswell
+ms.author: mboswell
+ms.date: 06/25/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
@@ -25,4 +25,4 @@ A focus of the Enterprise Scale Analytics and AI construction set is based on it
 
 Table 1: Key Management Principle
 
-When deploying the Enterprise Scale Analytics and AI you should consider these principle around automation to enable security as opposed relying upon manually applying them via human interaction. The most interaction the person should have is to approve or deny an access request.
+When deploying the Enterprise Scale Analytics and AI you should consider these principles around automation to enable security as opposed relying upon manually applying them via human interaction. The most interaction the person should have is to approve or deny an access request.

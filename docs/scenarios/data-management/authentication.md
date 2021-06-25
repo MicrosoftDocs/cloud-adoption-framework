@@ -80,7 +80,30 @@ is the alternative for application and services which do not support managed ide
 | This identity has an independent lifecycle. It must be deleted explicitly.                                                      | When the Azure service instance is deleted, the identity is deleted.                                                                     |
 | Password-based (secret-based) or certificate-based authentication                                                               | No explicit password to be provided for authentication.                                                                                  |
 
-### Enterprise Scale Analytics and AI authentication guidelines (to be updated)
+## Databases Authentication and Permissions
+
+Polyglot storage such as PostgreSQL, MySQL, Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics are likely to be used in the Enterprise Scale Analytic construction set. They could be used by Data Integrations to store their Read Data Stores or by Data Products.
+
+- [Use Azure Active Directory for authentication with PostgreSQL](/azure/postgresql/howto-configure-sign-in-aad-authentication)
+- [Use Azure Active Directory authentication with Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics](/azure/azure-sql/database/authentication-aad-overview)
+- [Use Azure Active Directory for authenticating with MySQL](/azure/mysql/concepts-azure-ad-authentication)
+
+It is recommended that Azure AD groups are used to secure database objects instead of individual Azure AD user accounts. These AD Azure Groups would be used to authenticate users and protects database objects. Similar to the data lake pattern, you could use your Data Integration or Data Products onboarding to create these groups within you Azure AD service.
+
+>[!NOTE]
+>Storing data inside an Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics Pools are one of the options for Data Integrations and Data Products to store [Sensitive Data](data-privacy.md#sensitive-data).
+
+## Azure Data Lake Security with Enterprise Scale Analytics
+
+To control access to data in the data lake (ADLS Gen 2), we recommend using access control list (ACL) at the level of files and folders. ADLS Gen 2 also adopts POSIX-like access control list model. POSIX (Portable Operating System Interface) is the family of standards for operating systems, one of which defines a simple but yet powerful permission structure for accessing files and folders. POSIX has been adopted widely in network file shares and Unix computers.
+
+Similar to RBAC general practices, the following rules should apply to ACL
+
+- **Manage access using groups.** Assign access to Azure AD groups and manage membership of groups for on-going access management.
+- **Least privilege.** In most cases, users should have only Read permission to the folders and files they need in the data lake while a managed identity or service principal such as the one used by Azure Data Factory will have Read, Write and Execute permissions. Data users should not have access to the storage account container.
+- **Align with data partitioning scheme.** ACL and data partition design must align to ensure effective data access control. See [Data LakeData Partitioning](data-lake-services.md#data-lake-partitioning).
+
+<!-- ### Enterprise Scale Analytics and AI authentication guidelines (to be updated)
 
 | Data Service                                                                                                                            | Accessor                 | Authentication Provider                                       | Credential                     |
 |-----------------------------------------------------------------------------------------------------------------------------------------|--------------------------|---------------------------------------------------------------|--------------------------------|
@@ -107,3 +130,4 @@ Need to add... and update...
 
 - Azure Cosmos DB – Azure Cosmos DB does not support Azure AD authentication for access to database. Use Cosmos DB resource key to authenticate to Azure Cosmos DB.
 - Azure Analysis Services – Azure Analysis Services is the tabular semantic data model database in the cloud. Use Azure AD to authenticate to Azure Analysis Services.
+-->

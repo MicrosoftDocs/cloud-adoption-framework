@@ -13,7 +13,7 @@ ms.subservice: ready
 
 In previous topics [Azure Data Factory Ingest Considerations](data-ingestion.md#azure-data-factory-ingest-considerations) and [Ingestion and Processing Resource Group](data-landing-zone.md#ingestion-and-processing-resource-group), we have discussed enterprises building their own Custom Ingestion Framework.
 
-This section provides guidance for services and processes that could be driven by a Custom Ingestion Framework.
+This section provides guidance for services and processes that could be driven by a custom ingestion framework.
 
 >[!Note]
 >The processes described below do not constitute a Microsoft product nor are they a complete specification. They are suggestions for an Automated Ingestion Framework.

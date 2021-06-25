@@ -70,8 +70,8 @@ items:
       href: managing-master-data.md
     - name: Data Governance Maturity Model
       href: managing-master-data.md                 
-    - name: Data Sharing Contracts
-      href: data-sharing-contracts.md       
+    - name: Data Sharing Agreements
+      href: data-sharing-agreements.md       
   - name: Manage your data estate
     items:
     - name: Overview
