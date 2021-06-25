@@ -35,4 +35,4 @@ When thinking about enterprise scale analytics, here are some design recommendat
 
 * Use [Azure Site Recovery](/azure/site-recovery/site-recovery-overview) to recover virtual machines that support mission-critical workloads.
 
-* In a Data Landing Zone, all the monitoring should be sent to the [Enterprise-Scale Management Subscription](/azure/cloud-adoption-framework/ready/enterprise-scale/management-and-monitoring) for analysis. [Learn more about monitoring in the Data Landing Zone](data-lake-services.md#monitoring).
+* In a Data Landing Zone, all the monitoring should be sent to the [Enterprise-Scale Management Subscription](/azure/cloud-adoption-framework/ready/enterprise-scale/management-and-monitoring) for analysis.

@@ -44,7 +44,7 @@ The Enterprise Scale pattern recommends that all logs should be sent to a centra
 
 ### Data Lake Services
 
-Three [Azure Data Lake Storage Gen V2 (ADLS)](/azure/storage/blobs/data-lake-storage-introduction) accounts will be provisioned in the Data Lake Services Resource Group. The data transformed at different stages will be saved on one of the Data Landing Zone's three data lakes and will be available for the Analytics, Data Products, Data Science, and Visualizations teams to consume. These will be deployed into a single resource group. See [Data Lake Services](data-lake-services.md) for information as to why we recommend three data lakes as a starter.
+Three [Azure Data Lake Storage Gen V2 (ADLS)](/azure/storage/blobs/data-lake-storage-introduction) accounts will be provisioned in the Data Lake Services Resource Group. The data transformed at different stages will be saved on one of the Data Landing Zone's three data lakes and will be available for the Analytics, Data Products, Data Science, and Visualizations teams to consume. These will be deployed into a single resource group. See [Data Lake Services Overview](data-lake-overview.md) for information as to why we recommend three data lakes as a starter.
 
 ### Upload Ingest Storage Service
 
@@ -111,7 +111,7 @@ An Azure Key Vault will be provisioned to store secrets relating to Data Landing
 - Service Principal Credentials for the automated ingestion process
 - Data Landing Zone Data Lake Services Keys
 
-The types of data which you will store in the Data Landing Zone will help determine any additional services which should reside here. For example, if you are storing *sensitive* data, you may choose to include a tokenization engine to ensure that all *sensitive* data can be tokenized as it is ingested into the data lake.
+The types of data which you will store in the Data Landing Zone will help determine any additional services which should reside here. For example, if you are storing *sensitive (PII)* data, you may choose to include a tokenization engine to ensure that all *sensitive (PII)* data can be tokenized as it is ingested into the data lake.
 
 A Azure MySQL database will be provisioned. The **Azure Databricks Engineering Workspaces** and **Azure Databricks Analytics and Data Science Workspace** will uses this as there Hive Metastore.
 

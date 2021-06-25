@@ -67,16 +67,16 @@ More details on how to drive a security for Data Management Landing Zones and Da
  In addition to managing access using AAD identities using RBACs and ACLs, ADLS Gen2 also supports using SAS tokens and storage keys for managing access to data in your Gen2 account. In order to make sure that every request to Storage Account is authorized through AAD, there is a new feature (currently in preview) of disabling Key based access that permits to disallow requests to the specific storage account in case the requests were authorized with Shared Key. CAE Team is recommending enabling this feature once GA to enforce AAD level access. -->
 
 <!-- Removing and will add into security section for data
-### Design considerations for standard and *sensitive* data
+### Design considerations for standard and *sensitive (PII)* data
 
-In the case of **non *sensitive* data**, the following recommendations should be considered:
+In the case of **non *sensitive (PII)* data**, the following recommendations should be considered:
 
 1. Each data asset in Azure Data Lake Storage should own a matching AAD Data Asset group.
 2. Data asset AAD registration should be automated via a script and restricted to [Integration Ops](team-functions.md#integration-ops).
 3. Teams should request access via a Security Group (SG) join request which is approved by Integration Ops.
 4. Once approved, teams should access data from a storage client (SSO authenticated), Azure Synapse Analytics, Azure Databricks etc.
 
-In the case of **secure and *sensitive* data**, the following recommendations should be considered:
+In the case of **secure and *sensitive (PII)* data**, the following recommendations should be considered:
 
 1. Access to a data asset group should only be granted to analytic services via Managed Identities or Service Principals, as opposed to individual teams.
 2. Teams with access to secure data must ensure members are vetted. This can be implemented via dynamic groups.

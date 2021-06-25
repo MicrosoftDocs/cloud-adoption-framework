@@ -1,304 +1,68 @@
 ---
-title: Azure Enterprise Scale Analytics and AI Teams Data Lake Services
-description: Enterprise Scale Analytics and AI Architecture Data Lake Services
+title: Azure Enterprise Scale Analytics and AI Teams Data Lake Overview
+description: Enterprise Scale Analytics and AI Architecture Data Lake Overview
 author:  mboswell
 ms.author:  mboswell # Microsoft employees only
-ms.date: 03/03/2021
+ms.date: 06/25/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Data Lake Services
+# Data Lake Services Overview
 
 Three [Azure Data Lake Storage Gen2 (ADLS)](/azure/storage/blobs/data-lake-storage-introduction) accounts should be provisioned per [Data Landing Zone](data-landing-zone.md) in the "data lake services" resource group. As data passes through the different stages of transformation, it should be saved in one of the Data Landing Zone's three data lakes and available for the [data products](data-landing-zone-data-products.md) in the lake which serves as the enriched and curated data layer. Data products would consume from the enriched and curated data layer only. These data lake accounts should be deployed into a single resource group.
-
-## Overview
-
-The three Data Lakes accounts should align to the typical layers within a data lake.
-
-|Lake #|Layer|
-|---|---|
-| 1 | Raw Data|
-| 2 | Enriched and Curated Data|
-| 3 | Workspace Data|
-
-There should be a single container per data lake zone. The exception to this recommendation would be be where immutable or different soft delete policies are required for the data held in the container. These requirements would drive additional containers.
-
-The services should be enabled with the "Hierarchical Name Space" feature to allow efficient file management. [The hierarchical name space feature](/azure/storage/blobs/data-lake-storage-namespace) allows the collection of objects/files within an account to be organized into a hierarchy of directories and nested subdirectories in the same way that the file system on your computer is organized.
-
->[!IMPORTANT]
->The Azure Blob Storage Account must have "hierarchical name space" enabled to allow the efficient file management.
 
 Azure Data Lake Storage provides:
 
 * Support for fine-grained [Access Control Lists](/azure/storage/blobs/data-lake-storage-access-control) (ACLs), protecting data at the file and folder level, which helps enterprises to implement tight security measures around the datasets being stored in this service.
 * The data is encrypted at rest and integrates with Azure Active Directory integration for the authentication and authorization. It helps to store the data securely and to implement access controls for the AD users and security groups.
 
-Whilst the data lake sits across three data lake accounts, multiple containers, and folders, it represents one logical data lake for the Data Landing Zone. Provisioning three data lake accounts allows you to set different redundancy, retention, and access policies for each lake account. For example you might want your RAW data to be geo-redundant whereas Workspace is used for data exploration and requires locally redundant disaster recovery.
+## Data Lake Planning
 
-Each **Data Integration** should have two folders on each data lake over which they should have ownership, following best practices for each data lake zone.
+Structure, governance and security are key aspects which require an appropriate amount of planning relative to the potential size and complexity of your data lake. Consider what data is going to be stored in the lake, how it will get there, it's transformations, who will be accessing it, and the typical access patterns. This will influence the structure of the lake and how it will be organised. Then consider who will need access to which data, and how to group these consumers and producers of data. Planning how to implement and govern access control across the lake will be well worth the investment in the long run.
 
-The two folders per **Data Integration** should be divided by classification (*confidential or below* and *sensitive*) with access controlled by ACLs.
+If your data lake is likely to start out with a few data assets and only automated processes (such as ETL offloading) then this planning phase may a relatively simple task. Should your lake contain hundreds of data assets and have both automated and manual interaction then certainly planning is going to take longer and require more collaboration from the various data owners.
 
->[!IMPORTANT]
->Access to the data is restricted by a combination of ACLs and AAD-groups. These control what can and cannot be accessed by other groups. **Integration Ops teams** should approve or reject access to their data assets.
+Most people by now are probably all too familiar with the dreaded "data swamp" analogy. Governance and organization is the key to avoiding this situation. Of course, it may be impossible to plan for every eventuality in the beginning, but laying down solid foundations will increase the chance of continued data lake success and business value in the long run.
 
-## Data Lake Zones
+A robust data catalog system also becomes ever-more critical as the size (number of data assets) and complexity (number of users or departments) of the data lake increases. The catalog will ensure that data can be found, tagged and classified for those processing, consuming and governing the lake.
 
-With three data lake accounts in use, it is important to understand the context in which they should be used.
+## The Three Data Lakes
 
-### Raw Data (Data Lake One)
+A common design consideration is whether to have single or multiple data lakes, storage accounts and filesystems. The data lake itself may be considered a single logical entity yet it might comprise of multiple storage accounts in different subscriptions in different regions, with either centralized or decentralized management and governance. Whatever the physical implementation (# of data lakes), the benefit of using a single storage technology is the ability to standardize across the organization with numerous ways in which to access the data.
 
-Raw Data from source systems for each **Data Integration** will land into either the *confidential or below* or *sensitive* folder for each **Data Integration** on Data Lake One.
+Azure Data Lake Store is a PaaS fully managed service, and having multiple storage accounts or filesystems does not incur any monetary cost until you start to store and access data. There is an administrative and operational overhead associated with each resource in Azure to ensure that provisioning, security and governance (including backups and DR) are maintained appropriately. The question of whether to create one or multiple accounts has no definitive answer, it requires thought and planning based on your unique scenario.
 
-### RAW Directory Layout
+When designing the construction set we came back to our key principle of scale and felt that with a single data lake we were limiting some of this scale from the outset. We have focused on starting off with three data lake accounts which can be added to during your discovery and design phase. Some of the considerations we had were:
 
-```markdown
-.
-|-General
-|--Source
-|--Source
-|---Entity
-|---LoadTS=YYMMDDHHMSS
-|       file001.parquet
-|       file001.parquet
-|-Sensitive
-|--Source
-|---Entity
-|---LoadTS=YYMMDDHHMSS
-|       file001.parquet
-|       file001.parquet
-```
+* Planning large-scale enterprise workloads may require significant throughput and resources. We considered the various subscription and service quotas. From this we made the decision to split the lake physically across multiple storage accounts.
+  * Whilst quotas and limits will be an important consideration, some of these are not fixed and the Azure Storage Product Team will always try to accommodate your requirements for scale and throughput where possible. As of July 2021, here are the published quotas and items to consider:
+    * 5 PiB for all regions. These are default limits which normally can be raised through a support ticket.
+    * Max request rate 20,000 per second per storage account.
+    * Ingress rate 25 Gbps.
+    * Storage accounts per subscription 250.
+    * Max access & default ACLs per file or folder 32. This is a hard limit hence ACLs should be assigned to groups instead of individual users.
+    * See other limits [here](/azure/storage/common/storage-scalability-targets).
+* Environment isolation and predictability.Even though ADLS gen2 offers excellent throughput, there are still limits to consider. For example, one may wish to isolate the activities running in the laboratory zone from potential impact on the curated zone, which normally holds data with greater business value used in critical decision making.
+* Features and functionality at the storage account level. If you want to make use of options such as lifecycle management or firewall rules, consider whether these need to be applied at the zone or data lake level.
+* Whilst there were many good reasons to have multiple storage accounts, one should be careful not to create additional silos. Take care to avoid duplicate data projects due to lack of visibility or knowledge-sharing across the organization. This is even more reason to ensure that a data catalogue, good data governance and project tracking tools are in place.
+* Data processing tools and technologies, like ADF and Databricks (Spark) can easily interact with data across multiple lakes so long as permissions have been granted appropriately.
 
-This data is stored as-is in the data lake and is consumed by an analytics engine such as Spark to perform cleansing and enrichment operations to generate the curated data.
+Other areas which you should consider and which are outside the initial design of the constructions set were:
 
-For batch or micro-batch patterns, the data should be copied from the source system and landed as-is in the data lake without any transformations.
-
-For streaming use cases, the data in the raw zone should sometimes also be stored as an aggregated dataset. For example, data is ingested via a message bus such as Azure Event Hub and then aggregated via a real-time processing engine such as Azure Stream Analytics or Spark Streaming before it is stored in the data lake.
-
-Depending on the retention policies of your enterprise, this data is either stored as-is for the period required by the retention policy, or it can be deleted when you think the data is of no more use (*e.g.* raw sales data that is ingested from on-premises systems).
-
->[!TIP]
->Enterprises need to think about scenarios where they might need to rebuild an analytics platform from scratch and should always consider the most granular data they would require to rebuild downstream Read Data Stores.
-
-### Enriched Data (Data Lake Two)
-
-Enriched data is the version where raw data (as-is or aggregated) has a defined schema, has been cleansed, and is available to analytics engines to extract high-value data. It will follow the same hierarchial directory structure as the raw layer and resides in either the *confidential or below* or *sensitive* folder for **Data Integration** on Data Lake Two.
-
-#### Enriched Directory Layout
-
-```markdown
-Enriched Directory Layout
-.
-|-Data Integration
-|-Data Integration
-|--Transactional
-|---Confidential
-|----Dataset
-|-----Entity
-|------LoadTS=YYMMDDHHMMSS
-|        file001.parquet
-|        file001.parquet
-|---Sensitive (PII)
-|----Dataset
-|-----Entity
-|------LoadTS=YYMMDDHHMMSS
-|--Master Data
-|----Dataset
-```
-
->[!NOTE]
->This layer of data can be consider the golden layer and shouldn't have had any other transformations applied apart from aligning data types.
-
-### Curated Data (Data Lake Two)
-
-Data is taken from the golden layer, in Enriched Data, and transformed into high-value **Data Products** that is served to the consumers of the data (BI analysts and the data scientists). This data has structure and can be served to the consumers either as-is (*e.g.* data science notebooks) or through another read data store such as Azure Database for SQL.
-
-#### Curated Directory Layout
-
-```markdown
-.
-|-Data Product
-|-Data Product
-|--Transactional
-|---Confidential
-|----Dataset
-|-----Entity
-|------LoadTS=YYMMDDHHMMSS
-|        file001.parquet
-|        file001.parquet
-|---Sensitive(PII)
-|----Dataset
-|-----Entity
-|------LoadTS=YYMMDDHHMMSS
-|--Master Data
-|----Dataset
-```
-
->[!TIP]
->In the case where a decision is made to land the data into another read data store such as Azure Database for SQL, as a high speed serving layer, we would recommend having a copy of the data residing in the curated data. Although users of the **data product** will be guided to the main read data store (Azure Database for SQL), it will allow them to do further data exploration in a wider set of tools if the data is also available in the data lake.
-
-Data assets in this layer should be highly governed and well documented. For example, high-quality sales data might be data in the enriched data zone correlated with other demand forecasting signals such as social media trending patterns for a **Data Integration** that is used for predictive analytics on determining the sales projections for the next fiscal year.
-
-### Workspace Data (Data Lake Three)
-
-In addition to the data that is ingested by the **Data Integration** team from the source, the consumers of the data can also choose to bring other useful datasets.
-
-In this case, the data platform should allocate a workspace for these consumers so they can use the curated data along with the other datasets they bring to generate valuable insights. For example, if a Data Science team is trying to determine the product placement strategy for a new region, they could bring other datasets such as customer demographics and usage data of similar products from that region. These high-value sales insights data could be used to analyze the product market fit and the offering strategy.
-
-These datasets are usually of unknown quality and accuracy. They are still categorized as a **data product** but are temporary and only relevant to the user group using the data.
-
-Sometimes these datasets mature, and the enterprise should consider how they promote these **Data Products** from the Workspace to the Curated Data Layer. In order to keep Data Product teams responsible for new Data Products, it is recommended to provide these teams a dedicated folder on the Curated Data Layer in which they can then then store the new results and share them with other teams across the organization.
-
-## Data Lake Partitioning
-
-sss
-
-## Lifecycle Management
-
-Azure storage offers different access tiers, which allow you to store blob object data in the most cost-effective manner. The available access tiers include:
-
-* **Hot** - Optimized for storing data that is accessed frequently.
-* **Cool** - Optimized for storing data that is infrequently accessed and stored for at least 30 days.
-* **Archive** - Optimized for storing data that is rarely accessed and stored for at least 180 days with flexible latency requirements (on the order of hours).
-
-The following considerations apply to the different access tiers:
-
-* Only the hot and cool access tiers can be set at the account level. The archive access tier isn't available at the account level.
-* Hot, cool, and archive tiers can be set at the blob level during upload or after upload.
-* Data in the cool access tier can tolerate slightly lower availability but still requires high durability, retrieval latency, and throughput characteristics similar to hot data. For cool data, a slightly lower availability service-level agreement (SLA) and *higher access costs* compared to hot data are acceptable trade-offs for lower storage costs.
-* Archive storage stores data offline and offers the lowest storage costs but also the highest data rehydrate and access costs.
-
-Data stored in the cloud grows at an exponential pace. To manage costs for your expanding storage needs, it's helpful to organize your data based on attributes like frequency-of-access and planned retention period to optimize costs. Data stored in the cloud can be different based on how it's generated, processed, and accessed over its lifetime. Some data is actively accessed and modified throughout its lifetime. Some data is accessed frequently early in its lifetime, with access dropping drastically as the data ages. Some data remains idle in the cloud and is rarely, if ever, accessed after it's stored.
-
-Each of these data access scenarios benefits from a different access tier that is optimized for a particular access pattern. With hot, cool, and archive access tiers, Azure Blob Storage addresses this need for differentiated access tiers with separate pricing models.
-
-The Enterprise Analytics and AI construction set prescribes that you should implement a tiering policy for all three Azure Data Lake accounts.
-
-## Key Considerations
-
-When landing data into a data lake, it is important to pre-plan the structure of the data so that security, partitioning, and processing can be utilized effectively. Many of the following recommendations are applicable for all big data workloads. Every workload has different requirements on how the data is consumed, therefore the list below general recommendation. Please work with your system integrator on the right level of AD groups for your implementation of this construction set.
-
-### Data Lake Access Control Lists Guideline
-
-- Create AD Groups to represent data products, datasets, data integrations or job functions and assign access to AD groups instead of individual users. This method simplifies operations and maintenance tasks because most of the time, as will only add and remove users to and from AD groups. Modifying ACL on files and folders in the data lake should not happen very frequently - typically at the moment of dataset creation. 
-- The lowest granularity for ACL is the dataset (table name) level which is represented by a folder in the data lake storage.
-- It is likely that existing groups in Azure AD are based on organizational structure. However, not all members in the same organizational unit need access to data in the data lake. It's best to define new AD groups based on their data roles and dataset grouping.
-- Default ACL on each dataset folder must include Read and Execute permissions. Execute permission is required for users to be able to traverse folder partitions and files under it. Access ACL assigned to an AD group on each dataset folder will include Read and Execute permissions.
-- Write permission should be given to a system through managed identity or service principal only because any changes should only be made by an ingestion, transformation, or maintenance process.
-
-### Write data
-
-|Raw data |Enriched data |Curated data| Workspace data|
-|---------|---------|---------|---------|
-|Data Integration(s) | Data Integration(s) | Data Products(s) | Data Products, Data Scientists and BI Analysts|
-
-### Read data
-
-|Raw data |Enriched data |Curated data| Workspace data|
-|---------|---------|---------|---------|
-| Data Integration | Data Integration and read access for others based on approval of Data Integration owner | Data Products, Analysts, Data Scientists, and Users | Data Scientists and Analysts|
-
-### Data Lake Lifecycle Management
-
-|Raw data |Enriched data |Curated data| Workspace data|
-|---------|---------|---------|---------|
-|Once enriched data is generated, can be moved to a cooler tier of storage to manage costs.| Older data can be moved to a cooler tier. |Older data can be moved to a cooler tier.| While the end consumers have control of this workspace, ensure that there are processes and policies to clean up data that is not necessary. |
-
-Azure Blob Storage lifecycle management uses a rule-based policy. You should use the policy to transition your data to the appropriate access tiers or to expire at the end of the data's lifecycle.
-
-The lifecycle management policy lets you:
-
-* Transition blobs from cool to hot immediately if accessed to optimize for performance.
-* Transition blobs, blob versions, and blob snapshots to a cooler storage tier (hot to cool, hot to archive or cool to archive) if not accessed or modified for a period of time to optimize for cost.
-* Delete blobs, blob versions, and blob snapshots at the end of their lifecycle.
-* Define rules to be run once per day at the storage account level.
-* Apply rules to containers or a subset of blobs (using name prefixes or blob index tags as filters).
-
-For example, suppose a system has data that is used frequently during the first stages of the lifecycle but only occasionally after a month. After two months, the dataset is rarely used. In this scenario, hot storage is best during the first month. Cool storage is most cost optimal for occasional access. Archive storage is the best tier option after the data gets old. Use a lifecycle management policy rule to automatically move aging data to cooler tiers.
-
-### Folder Structure and Hierarchy
-
-|Raw data |Enriched data |Curated data| Workspace data|
-|---------|---------|---------|---------|
-|Folder structure to mirror sensitivity followed by source. | Folder structure to mirror data integration followed by data asset | Folder structure mirrors data product structure |Folder structures mirror teams that the workspace is used by.|
-
->[!WARNING]
->Because some products do not support mounting the root of a data lake container, each data lake container in Raw, Curated and Enriched, and Workspace should have a single folder before branching off to multiple folders. The folder permissions should be carefully set up as during the creation of a new folder, from the root, the default ACL on the parent directory determines a child directory's default ACL and access ACL; a child file's access ACL (files do not have a default ACL). See [Access control lists (ACLs) in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-access-control).
-
-## Data Lakes Connectivity
-
-Each of the data lakes should use Private Endpoints injected into the VNet of the Data Landing Zone. To allow access across landing zones, we propose connecting Data Landing Zones through VNet peering. This provides the optimal solution from both a cost perspective and an access control perspective.
-
-See [Private Endpoints](./eslz-network-topology-and-connectivity.md#private-endpoints) and [Data Management Landing Zone to Data Landing Zone](./eslz-network-topology-and-connectivity.md#data-management-landing-zone-to-data-landing-zone)
-
->[!IMPORTANT]
->Data from a Data Landing Zone can be accessed from another Data Landing Zone over the VNet Peering between the Data Landing Zones using the private endpoints associated with each data lake account. We recommend turning off all public access to the lakes and using private endpoints. Network connectivity across Data Landing Zones (*e.g.* private links) are controlled by the Platform Ops team.
-
-## Soft delete for containers (preview)
-
-Soft delete for containers (preview) protects your data from being accidentally or maliciously deleted. When container soft delete is enabled for a storage account, any deleted containers and their contents are retained in Azure Storage for the period that you specify. During the retention period, you can restore previously deleted containers. Restoring a container restores any blobs within that container when it was deleted.
-
-For end-to-end protection for your blob data, Microsoft recommends enabling the following data protection features:
-
-* Container soft delete, to restore a container that has been deleted. To learn how to enable container soft delete, see [Enable and manage soft delete for containers](/azure/storage/blobs/soft-delete-container-enable).
-* Blob soft delete, to restore a blob or version that has been deleted. To learn how to enable blob soft delete, see [Enable and manage soft delete for blobs](/azure/storage/blobs/soft-delete-blob-enable).
-
-> [!WARNING]
-> Deleting a storage account cannot be undone. Container soft delete does not protect against the deletion of a storage account but only against the deletion of containers in that account. To protect a storage account from deletion, configure a lock on the storage account resource. For more information about locking Azure Resource Manager resources, see [Lock resources to prevent unexpected changes](/azure/azure-resource-manager/management/lock-resources).
-
-## Store business-critical blob data with immutable storage (preview)
-
-Immutable storage for Azure Blob storage enables users to store business-critical data objects in a WORM (Write Once, Read Many) state. This state makes the data non-erasable and non-modifiable for a user-specified interval. For the duration of the retention interval, blobs can be created and read but cannot be modified or deleted. Immutable storage is available for general-purpose v1, general-purpose v2, BlobStorage, and BlockBlobStorage accounts in all Azure regions.
-
-For information about how to set and clear legal holds or create a time-based retention policy using the Azure portal, PowerShell, or Azure CLI, see [Set and manage immutability policies for Blob storage](/azure/storage/blobs/storage-blob-immutability-policies-manage).
-
-Immutable storage helps healthcare organization, financial institutions and related industries&mdash;particularly broker-dealer organizations&mdash;to store data securely. Immutable storage can also be leveraged in any scenario to protect critical data against modification or deletion.
-
-For further information see [How Immutable storage for Azure Blob storage works](/azure/storage/blobs/storage-blob-immutable-storage#about-immutable-blob-storage)
-
-Depending on your industry, it is recommended that immutable storage is assessed for use in the RAW Layer of the Data Lake.
+* Regional vs global lakes. Globally distributed consumers or processes on the lake may be sensitive to latency caused by geographic distances and therefore require the data to reside locally. Regulatory constraints or data sovereignty may often prevent data from leaving a particular region. See [Multi-Region Deployments](#multi-region-deployments).
 
 ## Multi-Region Deployments
 
 Data Residency rules or the requirement to have data close to a user base will sometimes drive the requirement to create Azure Data Lake accounts in other Azure regions. It is recommended that you create a Data Landing Zone in the region and replicate global data using third-party products, azcopy or Azure Data Factory to copy the deltas between the regions. Thus this would allow local data to remain in region whilst global data could be replicated around for us by Data Product teams.
 
-## Monitoring
+## Data Lake Access Control Lists Guideline
 
-In a Data Landing Zone, all the monitoring should be sent to the [Enterprise-Scale Management Subscription](/azure/cloud-adoption-framework/ready/enterprise-scale/management-and-monitoring?branch=scenario-data-management) for analysis.
+* Create AD Groups to represent data products, datasets, data integrations or job functions and assign access to AD groups instead of individual users. This method simplifies operations and maintenance tasks because most of the time, as will only add and remove users to and from AD groups. Modifying ACL on files and folders in the data lake should not happen very frequently - typically at the moment of dataset creation.
+* The lowest granularity for ACL is the dataset (table name) level which is represented by a folder in the data lake storage.
+* It is likely that existing groups in Azure AD are based on organizational structure. However, not all members in the same organizational unit need access to data in the data lake. It's best to define new AD groups based on their data roles and dataset grouping.
+* Default ACL on each dataset folder must include Read and Execute permissions. Execute permission is required for users to be able to traverse folder partitions and files under it. Access ACL assigned to an AD group on each dataset folder will include Read and Execute permissions.
+* Write permission should be given to a system through managed identity or service principal only because any changes should only be made by an ingestion, transformation, or maintenance process.
 
-Azure Storage collects the same kinds of monitoring data as other Azure resources, which are described in [Monitoring Azure resources with Azure Monitor](/azure/azure-monitor/insights/monitor-azure-resource). For more information on the logs and metrics created by Azure Storage, see [Monitoring Azure Blob storage](/azure/storage/blobs/monitor-blob-storage).
-
-Log entries are created only if there are requests made against the service endpoint.
-
-The following types of authenticated requests are logged:
-
-* Successful requests
-* Failed requests, including timeout, throttling, network, authorization, and other errors
-* Requests that use a shared access signature (SAS) or OAuth, including failed and successful requests
-* Requests to analytics data (classic log data in the `$logs` container and class metric data in the `$metric` tables)
-
-Requests made by the storage service itself, such as log creation or deletion, are not logged.
-
-The following types of anonymous requests are logged:
-
-* Successful requests
-* Server errors
-* Time-out errors for both client and server
-* Failed GET requests with the error code 304 (Not Modified)
-
-All other failed anonymous requests are not logged.
-
->[!IMPORTANT]
->Set default monitoring policy to audit storage and send logs to the Enterprise Scale Management Subscription.
-
-## What data format do I choose?
-
-Data may arrive to your data lake account in a variety of formats – human readable formats such as JSON, CSV or XML files, compressed binary formats such as .tar.gz and a variety of sizes – huge files (a few TBs) such as an export of a SQL table from your on-premise systems or a large number of tiny files (a few KBs) such as real-time events from your IoT solution. While ADLS Gen2 supports storing all kinds of data without imposing any restrictions, it is better to think about data formats to maximize efficiency of your processing pipelines and optimize costs – you can achieve both of these by picking the right format and the right file sizes.
-Hadoop has a set of file formats it supports for optimized storage and processing of structured data. Let us look at some common file formats – [Avro](https://avro.apache.org/docs/current/), [Parquet](https://parquet.apache.org/documentation/latest/) and [ORC](https://orc.apache.org/docs/). All of these are machine-readable binary file formats, offer compression to manage the file size and are self-describing in nature with a schema embedded in the file. The difference between the formats is in how data is stored – Avro stores data in a row-based format and Parquet and ORC formats store data in a columnar format.
-
-### Key considerations
-
-* Avro file format is favored where the I/O patterns are more write heavy or the query patterns favor retrieving multiple rows of records in their entirety. E.g. Avro format is favored by message bus such as Event Hub or Kafka writes multiple events/messages in succession.
-* Parquet and ORC file formats are favored when the I/O patterns are more read heavy and/or when the query patterns are focused on a subset of columns in the records – where the read transactions can be optimized to retrieve specific columns instead of reading the entire record.
+See [Understanding access control and data lake configurations in ADLS Gen2](data-lake-access.md#understanding-access-control-and-data-lake-configurations-in-adls-gen2) for further insight on how to best configure this.

@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Azure Data Lake Key Considerations
 
-When landing data into a data lake, it is important to pre-plan the structure of the data so that security, partitioning, and processing can be utilized effectively. Many of the following recommendations are applicable for all big data workloads. Every workload has different requirements on how the data is consumed, therefore the list below general recommendation. Please work with your system integrator on the right level of AD groups for your implementation of this construction set.
+In this section you will find additional key considerations for your Azure Data Lakes.
 
 ## Lifecycle Management
 
@@ -79,10 +79,6 @@ For further information see [How Immutable storage for Azure Blob storage works]
 
 Depending on your industry, it is recommended that immutable storage is assessed for use in the RAW Layer of the Data Lake.
 
-## Multi-Region Deployments
-
-Data Residency rules or the requirement to have data close to a user base will sometimes drive the requirement to create Azure Data Lake accounts in other Azure regions. It is recommended that you create a Data Landing Zone in the region and replicate global data using third-party products, azcopy or Azure Data Factory to copy the deltas between the regions. Thus this would allow local data to remain in region whilst global data could be replicated around for us by Data Product teams.
-
 ## Monitoring
 
 In a Data Landing Zone, all the monitoring should be sent to the [Enterprise-Scale Management Subscription](/azure/cloud-adoption-framework/ready/enterprise-scale/management-and-monitoring?branch=scenario-data-management) for analysis.
@@ -111,5 +107,3 @@ All other failed anonymous requests are not logged.
 
 >[!IMPORTANT]
 >Set default monitoring policy to audit storage and send logs to the Enterprise Scale Management Subscription.
-
-

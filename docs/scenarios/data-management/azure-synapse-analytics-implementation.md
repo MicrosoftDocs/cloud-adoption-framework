@@ -49,7 +49,7 @@ At the database level, in addition to the database roles, we recommend Row-Level
 
 For example, RLS is a great way to ensure users in a specific Data Integration or Data Product see only their own data even if the table contains data for all the enterprise.
 
-By combining RLS with Column-Level Security (CLS) to restrict access to columns with *sensitive* data, both RLS and CLS apply the access restriction logic at the database tier rather than the application tier. The permission is evaluated every time the data access is attempted from any tier.
+By combining RLS with Column-Level Security (CLS) to restrict access to columns with *sensitive (PII)* data, both RLS and CLS apply the access restriction logic at the database tier rather than the application tier. The permission is evaluated every time the data access is attempted from any tier.
 
 >[!TIP]
 >We highly recommend that features such as Azure Defender for SQL, Data Classification, Data Encryption, and Dynamic Data Masking are available for SQL Pool to support the data protection and limit sensitive data exposure.
@@ -70,7 +70,7 @@ The Synapse workspace identity permission context is used when executing Pipelin
 
 #### Fine-grained data access control using Access Control Lists
 
-When setting-up Data Lake access control, some organizations require granular level access due to *sensitive* data stored that cannot be seen by some users or groups. Using Azure RBAC, it is only possible to give read and/or write at the container level. For example, assigning a user or group to Storage Blob Data Contributor role will allow read/write access to all folders in that container. With ACLs you can setup fine-grained access control at the folder and file level to allow read/write on the data that users or groups need access.
+When setting-up Data Lake access control, some organizations require granular level access due to *sensitive (PII)* data stored that cannot be seen by some users or groups. Using Azure RBAC, it is only possible to give read and/or write at the container level. For example, assigning a user or group to Storage Blob Data Contributor role will allow read/write access to all folders in that container. With ACLs you can setup fine-grained access control at the folder and file level to allow read/write on the data that users or groups need access.
 
 Before you start implementing fined-grained access with ACLs, is important to understand how ACLs permissions are evaluated.
 

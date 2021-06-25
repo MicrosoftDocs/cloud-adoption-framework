@@ -15,17 +15,17 @@ The Enterprise Scale Analytics and AI construction set addresses PII (Personally
 
 [!INCLUDE [data-confidentiality-classification-scheme](includes/data-confidentiality-classification-scheme.md)]
 
-Before Data Integration ingests data into the construction set, they must be able to classify the data as *confidential or below* or *sensitive*.
+Before Data Integration ingests data into the construction set, they must be able to classify the data as *confidential or below* or *sensitive (PII)*.
 
 * Data may be considered *confidential or below* if we give a user access to the data asset in the Enriched or Curated, we are happy for them to see all the rows and columns.
-* Data might be deemed *sensitive* if we wish to restrict the columns and rows that different users can see.
+* Data might be deemed *sensitive (PII)* if we wish to restrict the columns and rows that different users can see.
 
 > [!IMPORTANT]
-> When combining data together a dataset can change from being *confidential or below* to *sensitive*. In this situation, where the data needs to be persisted, it should be copied to a separate folder which aligns to the data confidentiality classification and the process for onboarding a new data set should be followed.
+> When combining data together a dataset can change from being *confidential or below* to *sensitive (PII)*. In this situation, where the data needs to be persisted, it should be copied to a separate folder which aligns to the data confidentiality classification and the process for onboarding a new data set should be followed.
 
 ## Confidential or below
 
-For every Data Integration which is on-boarded we create two data lake folders for each data lake zone (*confidential or below* and *sensitive*) and enable Azure AD Pass-through with ACLs. If Integration Ops onboards a data asset which is *confidential or below* then Users Principal Names (UPNs) and Service Principal objects can be added to two Azure AD Groups (one for read/write and the other for read-only). These two Azure AD groups should be created as part of the onboarding process and assigned to the data asset folder the Data Integrations *confidential or below* containers for RAW and Enriched.
+For every Data Integration which is on-boarded we create two data lake folders for each data lake zone (*confidential or below* and *sensitive (PII)*) and enable Azure AD Pass-through with ACLs. If Integration Ops onboards a data asset which is *confidential or below* then Users Principal Names (UPNs) and Service Principal objects can be added to two Azure AD Groups (one for read/write and the other for read-only). These two Azure AD groups should be created as part of the onboarding process and assigned to the data asset folder the Data Integrations *confidential or below* containers for RAW and Enriched.
 
 This pattern enables any compute product which supports Azure AD Passthrough to connect to the data lake, authenticate with the user logged in, and, if the user is part of the data asset's Azure AD Group, they can access the data via Azure AD Passthrough. This would allow those inside the group to read all of the data asset without any policy filtering. Access can then be audited in detail in the appropriate logs as well as the Microsoft Graph.
 
@@ -36,13 +36,13 @@ For Data Products we follow the same pattern as above in the curated data lake z
 
 ## Sensitive Data
 
-For *sensitive* data the enterprise needs to restrict what users could see via policy and/or compute. In this case we have to consider moving or injecting the access control into the compute layer.
+For *sensitive (PII)* data the enterprise needs to restrict what users could see via policy and/or compute. In this case we have to consider moving or injecting the access control into the compute layer.
 
 Within the Enterprise Scale Analytics and AI construction set, there are three options to approach the securing of data.
 
 ### Example Scenario
 
-Using the following example, we are able to explore options for securing *sensitive* data.
+Using the following example, we are able to explore options for securing *sensitive (PII)* data.
 
 A Data Integration ingests a Human Resources Personnel data asset for North America and Europe. The use case calls for European users to see only European personnel records and North American users to see only North American personnel records. This is further restricted such that only HR Managers can see columns containing salary data.
 
@@ -69,7 +69,7 @@ The tables could be made available to Azure Databricks via the [Apache Spark con
 
 #### Option Two - Azure Databricks
 
-Option two is to use Azure Databricks to explore *sensitive* data. By using a combination of Fernet encryption libraries, user-defined functions (UDFs), Databricks secrets, Table Access Control, and Dynamic View Functions, we are able to encrypt and decrypt columns.
+Option two is to use Azure Databricks to explore *sensitive (PII)* data. By using a combination of Fernet encryption libraries, user-defined functions (UDFs), Databricks secrets, Table Access Control, and Dynamic View Functions, we are able to encrypt and decrypt columns.
 
 As the the blog post by Databricks on [Enforcing Column-level Encryption and Avoiding Data Duplication With PII](https://databricks.com/blog/2020/11/20/enforcing-column-level-encryption-and-avoiding-data-duplication-with-pii.html) describes:
 
@@ -129,7 +129,7 @@ As new datasets are deployed, part of the DevOps process would need to run scrip
 
 #### Option 3 - Policy Engine
 
-Whilst option 1 and 2 provide a way to handle *sensitive* data, they place a lot of control into the Integrations Ops and Data Products teams to identify and restrict access.
+Whilst option 1 and 2 provide a way to handle *sensitive (PII)* data, they place a lot of control into the Integrations Ops and Data Products teams to identify and restrict access.
 
 For a small-scale analytics platform, this might just be enough. However a large enterprise with hundreds of datasets, a policy engine should be placed in the Data Management Landing Zone.
 
@@ -139,7 +139,7 @@ A policy engine will allows a central way of managing, securing, and controlling
 * Data lifecycle management
 * Enforcing both internal and external policies and regulations (e.g., GDPR)
 * Data sharing policies
-* Identification of *sensitive* data
+* Identification of *sensitive (PII)* data
 * Protection and compliance insights
 * GDPR reporting policy
 
@@ -149,11 +149,11 @@ Some of vendors work with both Azure Synapse and Azure Databricks to encrypt and
 
 The Policy Engine should use Azure AD Groups to apply the policies to the datasets.
 
-The expectation of any policy solution providing Data Privacy is to tokenize *sensitive* data and to always check through attribute access control that the user has the ability to de-tokenize the columns they wish to access.
+The expectation of any policy solution providing Data Privacy is to tokenize *sensitive (PII)* data and to always check through attribute access control that the user has the ability to de-tokenize the columns they wish to access.
 
 As mentioned, for a policy engine to succeed it is important that there is an integration into the Data Catalog and a REST API which can be used by the DevOps process when onboarding a new dataset.
 
-As Data Integrations and Data Products create read data sources, they would be registered in the Data Catalog, which would help identify *sensitive* data. The policy engine should import this definition and deny any access to this data until the teams have set up its access policies. All of this should be done via a REST API workflow from the IT Service Management solution.
+As Data Integrations and Data Products create read data sources, they would be registered in the Data Catalog, which would help identify *sensitive (PII)* data. The policy engine should import this definition and deny any access to this data until the teams have set up its access policies. All of this should be done via a REST API workflow from the IT Service Management solution.
 
 ## Highly Confidential Data
 
