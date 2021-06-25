@@ -117,11 +117,10 @@ The following figure shows this topology.
 - For network architectures with multiple hub-and-spoke topologies across Azure regions, use global virtual network peering to connect landing-zone virtual networks when a small number of landing zones need to communicate across regions. This approach offers benefits such as high network bandwidth with global virtual network peering, as allowed by the VM SKU. However, it will bypass the central NVA, in case traffic inspection or filtering is required. This would also be subject to [limitations on global virtual network peering](/azure/virtual-network/virtual-network-peering-overview#constraints-for-peered-virtual-networks).
 
 - When you deploy a hub-and-spoke network architecture in two or more Azure regions and transit connectivity between all landing zones across regions is required, use ExpressRoute with dual circuits to provide transit connectivity for landing-zone virtual networks across Azure regions. In this scenario, landing zones can transit within a region via NVA in the local-hub virtual network and across regions via ExpressRoute circuit. Traffic must hairpin at the MSEE routers. With this configuration, spokes across hubs will communicate directly bypassing the firewall, as they will learn via BGP routes to the spokes on the remote-hub.
-
-If you require traffic across hubs to be inspected by the firewall in the hub, you must implement one of these options:
+  If you require traffic across hubs to be inspected by the firewall in the hub, you must implement one of these options:
   
-- Create more specific route entries in the spoke user defined routes (UDRs), so that traffic across hubs is redirected via the firewall in the local-hub virtual network.
-- [Disable BGP propagation](https://azure.microsoft.com/updates/disable-route-propagation-ga-udr) on the spokes, which simplifies the route configuration in the UDR. 
+  - Create more specific route entries in the spoke user defined routes (UDRs), so that traffic across hubs is redirected via the firewall in the local-hub virtual network.
+  - [Disable BGP propagation](https://azure.microsoft.com/updates/disable-route-propagation-ga-udr) on the spokes, which simplifies the route configuration in the UDR. 
   
 The following figure shows this design:
  
