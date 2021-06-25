@@ -68,6 +68,8 @@ The Synapse workspace identity permission context is used when executing Pipelin
 
 **Storage Account permissions are required when using Synapse workspace interactively and for development.** To allow read and write access to other users or groups on the primary storage account after it has been deployed, it will require you to grant access permissions using the **Storage Blob Data Contributor role** or **Access Control Lists** directly to the user or groups. When users log into the Synapse workspace to execute scripts or for development, the user's context permissions are used to allow read/write access on the primary storage.
 
+<!--
+
 #### Fine-grained data access control using Access Control Lists
 
 When setting-up Data Lake access control, some organizations require granular level access due to *sensitive (PII)* data stored that cannot be seen by some users or groups. Using Azure RBAC, it is only possible to give read and/or write at the container level. For example, assigning a user or group to Storage Blob Data Contributor role will allow read/write access to all folders in that container. With ACLs you can setup fine-grained access control at the folder and file level to allow read/write on the data that users or groups need access.
@@ -78,7 +80,7 @@ Before you start implementing fined-grained access with ACLs, is important to un
 2. If the operation is fully authorized based on Azure role assignment, then ACLs are not evaluated at all.
 3. If the operation is not fully authorized, then ACLs are evaluated.
 
-<!-- increase image size -->
+
 :::image type="content" source="./images/rbac-acls-evaluation.png" alt-text="RBAC ACLs Evaluation" lightbox="./images/rbac-acls-evaluation.png":::
 
 Please refer to the [Access control model for Azure Data Lake Storage Gen2 | Microsoft Docs](/azure/storage/blobs/data-lake-storage-access-control-model#how-permissions-are-evaluated) for more information.
@@ -185,4 +187,4 @@ df.write.saveAsTable("<tablename>")
 
 ## References
 
-[How to set up access control for your Synapse workspace - Azure Synapse Analytics | Microsoft Docs](/azure/synapse-analytics/security/how-to-set-up-access-control?WT.mc_id=Portal-Microsoft_Azure_Synapse)
+[How to set up access control for your Synapse workspace - Azure Synapse Analytics | Microsoft Docs](/azure/synapse-analytics/security/how-to-set-up-access-control?WT.mc_id=Portal-Microsoft_Azure_Synapse)-->
