@@ -1,7 +1,7 @@
 ---
 title: Enterprise-scale support for <<Token-LongName>>
 description: <<Describe how enterprise-scale can accelerate adoption of <<Token-Name>>.>>
-author: <<ContributorGithubId>>
+author: <<Token-ContributorGithubId>>
 ms.author: <<Token-Alias>>
 ms.date: <<Token-Date>>
 ms.topic: conceptual

@@ -1,7 +1,7 @@
 ---
 title: Innovate with <<Token-Name>>
 description: <<Describe the scenario's impact on empowering innovation.>>
-author: <<ContributorGithubId>>
+author: <<Token-ContributorGithubId>>
 ms.author: <<Token-Alias>>
 ms.date: <<Token-Date>>
 ms.topic: conceptual
