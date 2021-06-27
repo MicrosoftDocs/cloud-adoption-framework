@@ -1,34 +1,34 @@
 ---
-title: "Introduction to the <Insert Scenario Name> adoption scenario"
-description: Describe the scenario
-author: BrianBlanchard
-ms.author: brblanch
-ms.date: 07/01/2010
+title: Introduction to the <<Token-Name>> adoption scenario
+description: <<Describe the scenario.>>
+author: <<ContributorGithubId>>
+ms.author: <<Token-Alias>>
+ms.date: <<Token-Date>>
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
 ---
 
-# Introduction to the <Insert Scenario Name> scenario
+# Introduction to the <<Token-Name>> scenario
 
 Describe your scenario
 
-# Defining <Insert Scenario Name>
+# Defining <<Token-Name>>
 
-How should we define <Insert Scenario Name> to keep this conversation consistent?
+How should we define <<Token-Name>> to keep this conversation consistent?
 
-## <Insert Scenario Name> narrative
+## <<Token-Name>> narrative
 
 Use this section to tell the story & Microsoft's position on this story.
 
-## Next step: Integrate <Insert Scenario Name> into your cloud adoption journey
+## Next step: Integrate <<Token-Name>> into your cloud adoption journey
 
 The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
 
-- [Strategy for <Insert Scenario Name>](./strategy.md)
-- [Plan for <Insert Scenario Name>](./plan.md)
+- [Strategy for <<Token-Name>>](./strategy.md)
+- [Plan for <<Token-Name>>](./plan.md)
 - [Review your environment or Azure Landing Zone(s)](./ready.md)
-- [Migrate <Insert Scenario Name>](./migrate.md)
-- [Innovate with <Insert Scenario Name>](./innovate.md)
-- [Govern <Insert Scenario Name>](./govern.md)
-- [Manage <Insert Scenario Name>](./manage.md)
+- [Migrate <<Token-Name>>](./migrate.md)
+- [Innovate with <<Token-Name>>](./innovate.md)
+- [Govern <<Token-Name>>](./govern.md)
+- [Manage <<Token-Name>>](./manage.md)

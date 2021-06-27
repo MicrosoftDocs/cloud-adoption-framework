@@ -1,7 +1,7 @@
 items:
-  - name: <Insert Scenario Name> - Microsoft Cloud Adoption Framework for Azure
+  - name: <<Token-Name>> - Microsoft Cloud Adoption Framework for Azure
     href: index.md
-    pdf_name: <Insert Scenario Name> - Microsoft Cloud Adoption Framework for Azure
+    pdf_name: <<Token-Name>> - Microsoft Cloud Adoption Framework for Azure
   - name: Strategic impact
     href: strategy.md
   - name: Technical planning
@@ -28,18 +28,18 @@ items:
         href: eslz-platform-automation-and-devops.md
     - name: Implementation options
       items:
-      - name: Enterprise-scale for <Insert ESLZ Scenario Name>
+      - name: Enterprise-scale for <<Token-LongName>>
         href: enterprise-scale-landing-zone.md
       - name: TODO - Add reference to smaller RA from AAC here
         href: enterprise-scale-landing-zone.md?add-toc-and-breadcrumb-here
 
-  - name: Migrate <Insert Scenario Name> to Azure
+  - name: Migrate <<Token-Name>> to Azure
     href: migrate.md
-  - name: Innovate with <Insert Scenario Name> on Azure
+  - name: Innovate with <<Token-Name>> on Azure
     href: migrate.md
-  - name: Govern <Insert Scenario Name> in Azure
+  - name: Govern <<Token-Name>> in Azure
     href: govern.md
-  - name: Manage <Insert Scenario Name> platform and workloads
+  - name: Manage <<Token-Name>> platform and workloads
     href: manage.md
 
   - name: Well-architected - TBD
