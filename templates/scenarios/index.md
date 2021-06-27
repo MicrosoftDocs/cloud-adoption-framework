@@ -1,7 +1,7 @@
 ---
 title: Introduction to the <<Token-Name>> adoption scenario
 description: <<Describe the scenario.>>
-author: <<ContributorGithubId>>
+author: <<Token-ContributorGithubId>>
 ms.author: <<Token-Alias>>
 ms.date: <<Token-Date>>
 ms.topic: conceptual

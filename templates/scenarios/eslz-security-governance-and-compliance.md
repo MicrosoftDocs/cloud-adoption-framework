@@ -1,7 +1,7 @@
 ---
 title: Governance disciplines for <<Token-LongName>>
 description: <<Describe how this enterprise-scale scenario can improve security, governance, and compliance of <<Token-Name>>.>>
-author: <<ContributorGithubId>>
+author: <<Token-ContributorGithubId>>
 ms.author: <<Token-Alias>>
 ms.date: <<Token-Date>>
 ms.topic: conceptual

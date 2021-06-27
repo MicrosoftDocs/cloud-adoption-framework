@@ -1,7 +1,7 @@
 ---
 title: Enterprise-scale identity and access management for <<Token-LongName>>
 description: <<Describe how this enterprise-scale scenario can improve identity and access management of <<Token-Name>>.>>
-author: <<ContributorGithubId>>
+author: <<Token-ContributorGithubId>>
 ms.author: <<Token-Alias>>
 ms.date: <<Token-Date>>
 ms.topic: conceptual
