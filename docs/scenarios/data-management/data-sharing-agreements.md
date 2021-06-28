@@ -25,7 +25,7 @@ Service contracts are one of the most important aspects of an enterprise-scale a
 
 To enable discoverability and reuse it is recommended to make all contract discoverable, for example via source control. This allows domains to automate test routines in their continuous integration and deployment pipelines. By knowing what parts of the interfaces are consumed (such as columns and objects), teams can test routines to validate against any data that will be delivered or exposed. Test validating against the structure (columns names and types of values) guarantees compatibility and stable consumption at large.
 
-## Usage and restrictions
+## Compliance and Governance
 
 The second aspect of data sharing agreements is to capture the usage aspects, such as intended usage, privacy and sensitivity, and purpose (including limitations). This information is interface independent and gives insights into what data is used for what particular purpose.
 
@@ -33,6 +33,6 @@ Data sharing agreements also prevent miscommunication on the usage of data. Befo
 
 The process of capturing metadata within source control can also be applied on the data consuming side. You might require users to register and publish the purpose of their data consumption for the various use cases and agree not to distribute data further. This, for example, is important not only from a regulatory perspective, but also because it gives the data providers valuable information. It additionally will enable data security enforcement. For example, Azure Synapse Analytics can use all metadata to apply dynamic data masking, preventing unauthorized access to sensitive labeled data.
 
-## Compliance
+## Scalability
 
 Data sharing agreements are key because they provide insights about the data supply chain and make service level contracts, controls, data quality rules, and data usage transparent to the organization. These contracts are typically stored in a (central) code repository or source control. Publishing these contracts centrally allows providers and consumers to resolve their data delivery and consumption issues themselves, without the support of a central team. This becomes essential once we start moving away from a siloed data-platform approach and empower autonomous teams.
