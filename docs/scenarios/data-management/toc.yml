@@ -5,25 +5,11 @@ items:
   - name: Data management and analytics - Microsoft Cloud Adoption Framework for Azure
     href: index.md
     pdf_name: Data management and analytics - Microsoft Cloud Adoption Framework for Azure
-  - name: Overview
-    items:
-    - name: Intro to data management and analytics
-      href: index.md
-    - name: Intro to the analytics maturity model
-      href: intro-analytics-maturity.md
-    - name: Intro to data governance
-      href: intro-data-governance.md
-    - name: Technology to support analytics maturity
-      href: synapse.md
 
   - name: Build an initial strategy
     href: strategy.md
   - name: Define your plan
-    items:
-    - name: Building your plan
-      href: plan.md
-    - name: Building capabilities
-      href: capabilities.md
+    href: plan.md
 
   - name: Prepare your environment
     items:
@@ -34,8 +20,8 @@ items:
       items:
       - name: Enterprise-scale landing zone for data management and analytics
         href: enterprise-scale-landing-zone.md
-      - name: ESLZ Overview (Why 2 overviews?)
-        href: overview.md
+      - name: Scaling data management and analytics
+        href: scale.md
 
     - name: Design area considerations
       items:
@@ -46,15 +32,13 @@ items:
       - name: Network topology and connectivity
         href: eslz-network-topology-and-connectivity.md
       - name: Resource organization
-        href: eslz-management-group-and-subscription-organization.md
+        href: eslz-resource-organization.md
       - name: Governance disciplines
         items:
         - name: Overview        
           href: eslz-security-governance-and-compliance.md
         - name: Policies
           href: policies.md
-        - name: Provisioning the security baseline
-          href: security-provisioning.md
       - name: Operations baseline
         href: eslz-management-and-monitoring.md
       - name: Business continuity and disaster recovery
@@ -65,8 +49,8 @@ items:
           href: eslz-platform-automation-and-devops.md
         - name: Provisioning the platform
           href: platform-provisioning.md
-        - name: Deployment Models
-          href: deployment-models.md
+        - name: Deployment templates
+          href: deployment-templates.md
 
   - name: Migrate to the cloud
     href: migrate.md
@@ -74,8 +58,48 @@ items:
     href: migrate.md
   - name: Govern your data estate
     items:
-    - name: overview
-      href: govern.md
+    - name: What is data governance?
+      href: data-governance.md
+    - name: Requirements for Governing Data in a Modern Enterprise
+      href: requirements-for-governing-data-in-a-modern-enterprise.md
+    - name: Components Needed for Data Governance
+      href: components-needed-for-data-governance.md
+    - name: Technology needed for end to end governance
+      href: technology-needed-for-end-to-end-governance.md
+    - name: Mastering Master Data
+      href: managing-master-data.md
+    - name: Data Governance Maturity Model
+      href: managing-master-data.md                 
+    - name: Data Sharing Agreements
+      href: data-sharing-agreements.md       
+  - name: Manage your data estate
+    items:
+    - name: Overview
+      href: manage.md
+    - name: Authentication
+      href: authentication.md
+    - name: Authorization
+      href: analytics-role-based-access-control.md
+    - name: Automating Security
+      href: security-provisioning.md
+    - name: Data Privacy
+      href: data-privacy.md  
+  - name: Organize people and teams
+    items:
+      - name: Overview
+        href: organize.md
+      - name: Organize for effective data operations
+        href: dataops.md
+      - name: Personas and Teams
+        href: persona-and-teams.md
+      - name: Teams Functions
+        href: team-functions.md
+
+  - name: Well-Architected considerations
+    href: waf-placeholder.md
+
+  - name: Architectures
+    items:
     - name: Data Management Landing Zone
       href: data-management-landing-zone.md
     - name: Data Landing Zone
@@ -86,47 +110,33 @@ items:
         href: data-landing-zone-data-integration.md
       - name: Data Products
         href: data-landing-zone-data-products.md
-      - name: Frequently Asked Questions
-        href: frequently-asked-questions.md
-    - name: Data Privacy
-      href: data-privacy.md
-  - name: Manage your data estate
-    href: manage.md
-  - name: Organize people and teams
-    items:
-      - name: Overview (TODO)
-        href: organize.md
-      - name: Organize for effective data operations
-        href: dataops.md
-      - name: Personas and Teams
-        href: persona-and-teams.md
-      - name: Teams Functions
-        href: team-functions.md
-
-  - name: Well-Architected data workloads
-    items:
-    - name: Placeholder
-      href: waf-placeholder.md
-
-  - name: Architectures
-    items:
+    - name: Frequently Asked Questions
+      href: frequently-asked-questions.md
     - name: Placeholder (Rick to add AAC RAs)
       href: waf-placeholder.md
 
 
   - name: Best practices
     items:
-      - name: Data Lake
-        items:
-        - name: Managing Data Lake Access 
-          href: data-lake-access.md        
-        - name: Data Lake Services
+      - name: Data Lake Implementation
+        items:  
+        - name: Data Lake Overview
+          href: data-lake-overview.md
+        - name: Data Lake Zones
           href: data-lake-services.md
-      - name: Azure Databricks Integration
-        href: azure-databricks-integration.md
-      - name: Azure Synapse Analytics Integration
-        href: azure-synapse-analytics-integration.md
-      - name: Azure Purview Integration
+        - name: Data Lake Key Considerations
+          href: data-lake-key-considerations.md
+        - name: Managing Data Lake Access
+          href: data-lake-access.md
+      - name: Azure Databricks Implementation
+        href: azure-databricks-implementation.md
+      - name: Azure Synapse Analytics Implementation
+        items:
+        - name: Implementation
+          href: azure-synapse-analytics-implementation.md
+        - name: High Availability for Azure Synapse Analytics
+          href: /azure/cloud-adoption-framework/migrate/azure-best-practices/analytics/azure-synapse         
+      - name: Azure Purview Implementation
         items:
         - name: Readiness Checklist
           href: purview-checklist.md 
@@ -142,13 +152,10 @@ items:
           href: automated-ingestion-pattern.md
       - name: Data Science Environment
         items:
-        - name: Data Science Blueprint
-          href: data-science-blueprint.md
-        - name: Data Science Deployment
-          href: data-science-deployment.md
-      - name: Data Science Workflow and MLOps
-        href: data-science-workflow-and-mlops.md
-
+        - name: Data Science Best Practices
+          href: data-science-best-practices.md
+        - name: Azure Machine Learning
+          href: azure-machine-learning.md
   - name: Featured Azure products
     items:
     - name: ARM Templates

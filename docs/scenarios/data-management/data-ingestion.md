@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Data Ingestion
 
-In the Enterprise Scale Analytics and AI solution pattern, Data Integrations and Data Product will ingress, transform, and egest data.
+In the Enterprise Scale Analytics and AI construction set, Data Integrations and Data Product will ingress, transform, and egest data.
 
 >[!IMPORTANT]
 >Data Integrations do not carry out any transformation of data. However, if the business has multiple use cases where it requires the same data to be joined together, such as weather and location data, then the Data Integration could be asked to create this in the curated layer. \
@@ -54,7 +54,7 @@ This guidance builds on top of:
 
 - [Securing access to Azure Data Lake Gen 2 from Azure Databricks](https://github.com/hurtn/datalake-ADLS-access-patterns-with-Databricks/blob/master/readme.md)
 - [Azure Databricks Best Practices](https://github.com/Azure/AzureDatabricksBestPractices/blob/master/toc.md)
-- [Azure Databricks Configuration in a Data Landing](azure-databricks-integration.md)
+- [Azure Databricks Implementation](azure-databricks-implementation.md)
 
 A single premium **Azure Databricks Data Engineering** Workspace should be deployed per Data Landing Zone in the production Ingest and Processing resource group. This will enable a complete CI/CD experience and only allow notebooks to be deployed from Azure DevOps or GitHub.
 

@@ -1,5 +1,5 @@
 ---
-title: Azure Enterprise Scale Analytics and AI Databricks Pattern
+title: Enterprise Scale Analytics and AI Databricks Pattern in Azure
 description: Enterprise Scale Analytics and AI Databricks Pattern
 author:  mboswell
 ms.author:  mboswell # Microsoft employees only
@@ -9,11 +9,11 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Azure Databricks Integration
+# Azure Databricks Implementation
 
 Azure Databricks is a data analytics platform optimized for the Microsoft Azure cloud services platform. Azure Databricks offers two environments for developing data intensive applications: Azure Databricks SQL Analytics and Azure Databricks Workspace.
 
-For the purpose of Enterprise Scale Analytics and AI, we have focused on Azure Databricks Workspaces. As Azure Databricks SQL Analytics moves to General Availability we will focus on how this can be integrated into the Enterprise Scale Analytics and AI solution pattern.
+For the purpose of Enterprise Scale Analytics and AI, we have focused on Azure Databricks Workspaces. As Azure Databricks SQL Analytics moves to General Availability we will focus on how this can be integrated into the Enterprise Scale Analytics and AI construction set.
 
 ## Overview
 
@@ -47,7 +47,7 @@ All Azure Databricks Workspaces should use the Premium Plan, which provides the 
 * Role-based access control for notebooks, clusters, jobs, tables
 * Audit Logs
 
-To align to the Enterprise Scale Analytics and AI solution pattern, we recommend that **ALL** Workspaces have the following default deployment options configured:
+To align to the Enterprise Scale Analytics and AI construction set, we recommend that **ALL** Workspaces have the following default deployment options configured:
 
 * The Azure Databricks Workspaces should connect to an external Hive Metastore which resides in the Data Landing Zone.
 * Each Workspace should be configured to send Databricks Diagnostic Logging to Azure Log Analytics.
@@ -102,7 +102,7 @@ For **Azure Databricks Analytics and Data Science**:
 3. Enable workspace options specific to **Azure Databricks Engineering Workspace**.
 
 >[!NOTE]
->During the creation of a new Data Integration we will alter the configuration of all Azure Databricks Workspaces within a Data Landing Zone. Please see [Data Integration & Data Product Deployment Process](deployment-models.md#data-integration--data-product-deployment-process) for how this is implemented with Azure Databricks shared Workspaces.
+>During the creation of a new Data Integration we will alter the configuration of all Azure Databricks Workspaces within a Data Landing Zone. Please see [Data Integration & Data Product Deployment Process](platform-provisioning.md#data-integration--data-product-deployment-process) for how this is implemented with Azure Databricks shared Workspaces.
 
 ### External Hive Metastore
 
@@ -116,7 +116,7 @@ As of January, 2021, the new global init scripts API is in public preview. Howev
 
 ## Further Reading
 
-The Enterprise Scale Analytics and AI takes into account the following best practices for integrating Azure Databricks into the solution pattern:
+The Enterprise Scale Analytics and AI takes into account the following best practices for integrating Azure Databricks into the construction set:
 
 * [Securing access to Azure Data Lake Gen 2 from Azure Databricks](https://github.com/hurtn/datalake-ADLS-access-patterns-with-Databricks/blob/master/readme.md)
 * [Azure Databricks Best Practices](https://github.com/Azure/AzureDatabricksBestPractices/blob/master/toc.md)

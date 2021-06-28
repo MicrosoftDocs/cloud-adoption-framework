@@ -3,7 +3,7 @@ title: "Strategy for 'data management and analytics' adoption in Azure"
 description: Integrate 'data management and analytics' into your cloud adoption strategy
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 07/01/2010
+ms.date: 06/22/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
@@ -15,10 +15,14 @@ Best practice encourages customers to create a single centralized cloud adoption
 
 This article will help expose a number of considerations regarding 'data management and analytics' that will have an impact on your broader strategy.
 
-## 'Data management and analytics' motivations
+## 'data management and analytics' motivations
 
-'Data management and analytics' is generally aligned to [innovation focused motivations](../../strategy/motivations.md). Customers who integrate this scenario into their cloud adoption strategy are motivated by the following common drivers:
+'data management and analytics' is generally aligned to [innovation focused motivations](../../strategy/motivations.md). Customers who integrate this scenario into their cloud adoption strategy are motivated by the following common drivers:
 
+- A scalable analytics framework designed to enable building an enterprise data platform
+- Self Service to empower the user in data exploration, data asset creation and product development
+- Foster a data led culture with reusable data assets, data communities, secure third-party exchange and in-place sharing
+- Share data with confidence secured by policies, common identity, confidentiality and encryption
 - Improved customer experiences and engagements
 - Transformation of products or services
 - Market disruption with new products or services
@@ -69,8 +73,9 @@ Data Democratization is the key to delivering that value back to business and ac
 
 In relation to Data Governance there has to be a right balance in the decentralized world of data democratization approach. If governance is enforced too hard it can stifle innovation. However, not having some core principles and processes in place create data silos. This could result in damaging organizations reputation and potential revenues. Hence a holistic Data Governance approach is fundamental to unlocking strategic value of data in a consistent manner.
 
-In the absence of a well thought-out Data Strategy, there is a clear need to just "get going" and quickly start demonstrating value back to business. In this pursuit, acting on the above key themes or using them as strategic principles wrapped in a framework could not only lead to addressing current business problems but even assist in the formation of
-future holistic data strategy in an iterative way with validation, yet yielding quick timely results.
+In the absence of a well thought-out Data Strategy, there is a clear need to just "get going" and quickly start demonstrating value back to business. In this pursuit, acting on the above key themes or using them as strategic principles wrapped in a framework could not only lead to addressing current business problems but even assist in the formation of future holistic data strategy in an iterative way with validation, yet yielding quick timely results.
+
+This is discussed in more details under [What is data governance?](data-governance.md).
 
 ### Iterative Data Strategy Validation Framework
 
@@ -87,12 +92,12 @@ Identifying key priorities in line with business vision and keeping **"think big
 To build a strong data strategy, you first need to understand how data works. Understanding these core characteristics will help you build a principled practice around how to deal with data.
 
 1. Data travels fast, but the velocity of data movement cannot defy the laws of physics. It must conform to the laws of the land or the industry that created it.
-2. Data never changes by itself, but it is prone to changes and accidental loss, unless explicit measures are in place to mitigate such challenges. Ensure controls, databases and storage anti-corruption measures, monitoring, audits, alerts and downstream processes are in place to deal planned or unforeseen changes.
-3. Data by itself, and simply though the act of storing it, does not produce any insights or yield any value. In order to discover insights or extract value, most (if not all) data, independent of the volume, velocity, variety and veracity, has to go through four discrete steps: ingestion, storage, processing, and analytics. These each have their own set of principles, processes, tools, and technologies. Withholding data assets and related insights may affect socio-economic, political, research and investment decisions, hence it is of paramount importance for organizations to build the capability to provide insights in a secure and responsible manner.
-4. All data generated or procured must go through a data classification exercise, unless otherwise explicitly stated. Where needed, the gold standard for dealing with confidential data is encryption at rest and in transit.
-5. Data has gravity. This means that data, applications, and services all have their own gravitational pull. But data is the heaviest here, and therefore has the most gravitational pull. Unlike Newton's apple, data doesn't have a physical mass to draw in surrounding objects; instead, latency and throughput act as accelerators to the analytics process.
-6. Latency, throughput, and ease of access often warrants that data is duplicated even when that is not the desired outcome. Set up people, processes, tools, and technologies appropriately to balance such requirements against organization's data polices.
-7. The speed at which data can be processed is governed by architectural constructs, and facilitated through innovations in software, hardware, and networking. Some of the key architectural considerations are: setting up data distribution, partitioning, cache technologies, batch vs stream-processing, and balancing backend vs client-side processing.
+1. Data never changes by itself, but it is prone to changes and accidental loss, unless explicit measures are in place to mitigate such challenges. Ensure controls, databases and storage anti-corruption measures, monitoring, audits, alerts and downstream processes are in place to deal planned or unforeseen changes.
+1. Data by itself, and simply though the act of storing it, does not produce any insights or yield any value. In order to discover insights or extract value, most (if not all) data, independent of the volume, velocity, variety and veracity, has to go through four discrete steps: ingestion, storage, processing, and analytics. These each have their own set of principles, processes, tools, and technologies. Withholding data assets and related insights may affect sociol-economic, political, research and investment decisions, hence it is of paramount importance for organizations to build the capability to provide insights in a secure and responsible manner.
+1. All data generated or procured must go through a data classification exercise, unless otherwise explicitly stated. Where needed, the gold standard for dealing with confidential data is encryption at rest and in transit.
+1. Data has gravity. This means that data, applications, and services all have their own gravitational pull. But data is the heaviest here, and therefore has the most gravitational pull. Unlike Newton's apple, data doesn't have a physical mass to draw in surrounding objects; instead, latency and throughput act as accelerators to the analytics process.
+1. Latency, throughput, and ease of access often warrants that data is duplicated even when that is not the desired outcome. Set up people, processes, tools, and technologies appropriately to balance such requirements against organization's data polices.
+1. The speed at which data can be processed is governed by architectural constructs, and facilitated through innovations in software, hardware, and networking. Some of the key architectural considerations are: setting up data distribution, partitioning, cache technologies, batch vs stream-processing, and balancing backend vs client-side processing.
 
 ## Defining a Data Strategy
 
@@ -134,7 +139,13 @@ Batch processing on Databricks, R, Python or for deep learning models are common
 
 Azure Enterprise Scale Analytics and AI Construction Set helps collate all the four layers together with people, process, security, and compliance. We also suggest using the recommended architectures from Azure Landing Zones to get started. It uses the Microsoft Cloud Adoption Framework and culminates our experience working through thousands of large scale enterprise deployments.
 
-Now that we have covered the four stages, the following representation shows the key capabilities needed on top of your data platform to provide end to end data governance capability.  
+Now that we have covered the four stages, the following representation shows the key capabilities needed on top of your data platform to provide end to end data governance capability.
+
+## Building Blocks
+
+After making all the capability provisions, and taking a principled architectural view as discussed in this section, you will most likely end up with the building blocks required for your cloud strategy journey which may look something like the below:
+
+:::image type="content" source="./images/data-strategy-building-block.png" alt-text="Manage credentials decision tree" lightbox="./images/data-strategy-building-block.png":::
 
 ## Data Strategy Summary
 
@@ -169,8 +180,7 @@ There are couple of key strategic processes which would help in delivering succe
 
 ## Deliver Value
 
-Final Data product delivery against the set-out success criteria in a standardized & structured way is going to validate the above iterative framework. Additionally, taking the learning and continuously innovating will help in building business confidence and widening out of the Data Strategy strategic goals, for clearer and quicker adoption across
-business.
+Finally, data product delivery against the set-out success criteria in a standardized & structured way is going to validate the above iterative framework. Additionally, taking the learning and continuously innovating will help in building business confidence and widening out of the Data Strategy strategic goals, for clearer and quicker adoption across business.
 
 ## Next step: Plan for 'data management and analytics'
 
@@ -178,9 +188,6 @@ The following list of articles will take you to guidance found at specific point
 
 - [Plan for 'data management and analytics'](./plan.md)
 - [Review your environment or Azure Landing Zone(s)](./ready.md)
-- [Assess for 'data management and analytics' migration](./migrate-assess.md)
-- [Migrate 'data management and analytics'](./migrate-deploy.md)
-- [Release 'data management and analytics' to production](./migrate-release.md)
 - [Innovate with 'data management and analytics'](./innovate.md)
 - [Govern 'data management and analytics'](./govern.md)
 - [Manage 'data management and analytics'](./manage.md)

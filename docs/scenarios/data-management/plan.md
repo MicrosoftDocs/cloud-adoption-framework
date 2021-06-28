@@ -11,13 +11,13 @@ ms.subservice: ready
 
 # Develop a plan for 'data management and analytics'
 
-[Cloud Adoption Framework's Plan methodology](../../plan/index.md) helps create an overall cloud adoption plan to guide the programs and teams involved in your cloud-based digital transformation. The Plan methodology also provides templates for creating your backlog and plans for building necessary skills across your teams, all based on what you are trying to do in the cloud. 
+[Cloud Adoption Framework's Plan methodology](../../plan/index.md) helps create an overall cloud adoption plan to guide the programs and teams involved in your cloud-based digital transformation. The Plan methodology also provides templates for creating your backlog and plans for building necessary skills across your teams, all based on what you are trying to do in the cloud.
 
 This article will build on that methodology with specific guidance for data estate rationalization and skilling plans specific to 'data management and analytics'
 
 ## Data estate rationalization
 
-Much of the guidance in the Plan methodology focuses on the [five rs of rationalizing your digital estate](../../digital-estate/5-rs-of-rationalization.md). This scenario narrows the primary focus of rationalization to the **data estate**, which is a subset of the overall digital estate. This plan will also look broader and deeper at the data estate than you might in other plans. Specifically, it must include plans for your overall [analytics maturity](./intro-analytics-maturity.md) and the [data governance practices](./intro-data-governance.md) required to support the desired maturity.
+Much of the guidance in the Plan methodology focuses on the [five rs of rationalizing your digital estate](../../digital-estate/5-rs-of-rationalization.md). This scenario narrows the primary focus of rationalization to the **data estate**, which is a subset of the overall digital estate. This plan will also look broader and deeper at the data estate than you might in other plans. Specifically, it must include plans for your overall analytics and [data governance](data-governance.md) required to support the desired maturity.
 
 To properly rationalize your data estate, begin by aligning your business outcomes to each of your data initiatives. This will aid in prioritization and a clear understanding of the value your can derive from each data initiative. Initiatives which represent little business value and also present lesser complexity with regards to migration could easily be included in you cloud migration plan to deliver quick efficiency gains. Initiatives with greater business impact or those with greater technical complexity would likely require richer planning to enable long term innovation value.
 
@@ -91,10 +91,7 @@ It's really about thinking through how you can understand what's going on in the
 
 The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
 
-* [Review your environment or Azure Landing Zone(s)](./ready.md)
-* [Assess for 'data management and analytics' migration](./migrate-assess.md)
-* [Migrate 'data management and analytics'](./migrate-deploy.md)
-* [Release 'data management and analytics' to production](./migrate-release.md)
-* [Innovate with 'data management and analytics'](./innovate.md)
-* [Govern 'data management and analytics'](./govern.md)
-* [Manage 'data management and analytics'](./manage.md)
+- [Review your environment or Azure Landing Zone(s)](./ready.md)
+- [Innovate with 'data management and analytics'](./innovate.md)
+- [Govern 'data management and analytics'](./govern.md)
+- [Manage 'data management and analytics'](./manage.md)

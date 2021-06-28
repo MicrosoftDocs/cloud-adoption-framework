@@ -31,7 +31,7 @@ It is recommended to have a catalog service provisioned for defining the metadat
 
 The catalog registers and maintains the data information in a centralized place and makes it available for the organization. This ensures that enterprises avoid duplicate datasets caused by redundant data ingestion by different project teams.
 
-The Enterprise Scale Analytics and AI solution pattern relies on [Azure Purview](/azure/purview/overview) to serves as:
+The Enterprise Scale Analytics and AI construction set relies on [Azure Purview](/azure/purview/overview) to serves as:
 
 * system of registration
 * discovery for enterprise data sources
@@ -39,10 +39,6 @@ The Enterprise Scale Analytics and AI solution pattern relies on [Azure Purview]
 * policy store
 * API for registering and reading data information.
 * compliance dashboard hub
-
-![Azure Purview Overview](./images/purview-overview.png)
-
-Figure 2: Azure Purview Overview
 
 Being part of the Data Management Landing Zone, the Data Catalog will be able to communicate with each Data Landing Zone via its VNet Peering and Self-Hosted Integration Runtimes. Discovery of datasets in on-premises stores and other public clouds is achieved by additional deployments of Self-Hosted Integration Runtimes.
 
@@ -91,7 +87,7 @@ One of the primary features of a Data Catalog is the ability to show the lineage
 
 Enterprises are advised to continue with their current solution.
 
-In Enterprise Scale Analytics and AI Data Integrations will become responsible for producing datasets that are consumed by other data [Products. Integration Ops owners are responsible for the business-aligned key performance indicators (KPIs) and the service level objectives around consumption of their read data sources.
+In Enterprise Scale Analytics and AI Data Integrations will become responsible for producing datasets that are consumed by other data products. Integration Ops owners are responsible for the business-aligned key performance indicators (KPIs) and the service level objectives around consumption of their read data sources.
 
 Data quality should happen as close to the source as possible to avoid quality issues replicating across the analytics and AI estate. Moving quality metrics and validation to the data integration aligns the quality process with the team(s) that are closest to the data and have the deepest understanding of the data asset. Data lineage also provides data quality confidence and should be provided for all datasets and products.
 
@@ -111,7 +107,7 @@ With the Common Data Model (CDM), organizations can use a data format that provi
 
 ## Master Data Management
 
-Enterprises have typically invested several years into building out a Master Data Management system. Some of the vendors in this space are:
+Enterprises have typically invested several years into building out a [Master Data Management system](managing-master-data.md). Some of the vendors in this space are:
 
 * [SAP Master Data Governance](https://www.sap.com/products/master-data-governance.html)
 * [Semarchy](https://www.semarchy.com/)
@@ -160,7 +156,7 @@ Although Enterprise Scale Analytics and AI uses
 [Azure AD Entitlement management](/azure/active-directory/governance/entitlement-management-overview)
 to control access and sharing of data, the enterprise might require a sharing and contract repository. As this is an organizational function, this repository should reside in the Data Management Landing Zone.
 
-These contracts should give information on data validation, model, and security policies.
+These contracts should give information on data validation, model, and security policies. See [Data Sharing Agreements](data-sharing-agreements.md).
 
 ## Data Lifecycle
 
@@ -168,23 +164,11 @@ Data products may have different lifecycles. We recommend applying policies to r
 
 In Azure this data lifecycle is handled by each relevant service containing persisted data.
 
-Azure Blob Storage lifecycle management uses a rule-based policy. You should use the policy to transition your data to the appropriate access tiers or to expire at the end of the data's lifecycle.
-
-The lifecycle management policy lets you:
-
-* Transition blobs from cool to hot immediately if accessed to optimize for performance.
-* Transition blobs, blob versions, and blob snapshots to a cooler storage tier (hot to cool, hot to archive or cool to archive) if not accessed or modified for a period of time to optimize for cost.
-* Delete blobs, blob versions, and blob snapshots at the end of their lifecycle.
-* Define rules to be run once per day at the storage account level.
-* Apply rules to containers or a subset of blobs (using name prefixes or blob index tags as filters).
-
-For example, suppose a system has data that is used frequently during the first stages of the lifecycle but only occasionally after a month. After two months, the dataset is rarely used. In this scenario, hot storage is best during the first month. Cool storage is most cost optimal for occasional access. Archive storage is the best tier option after the data gets old. Use a lifecycle management policy rule to automatically move aging data to cooler tiers.
-
-[Data Lake Lifecycle Management](data-lake-services.md#lifecycle-management) for Enterprise Scale Analytics and AI outlines additional considerations around the different layers in a Data Lake.
+[Lifecycle Management](data-lake-key-considerations.md#lifecycle-management) for Enterprise Scale Analytics and AI outlines additional considerations around the different layers in a Data Lake.
 
 ## Automation Interfaces (optional)
 
-The Enterprise Scale Analytics and AI solution pattern creates three resource groups to help with the creation of your custom onboarding solutions for your data estate.
+The Enterprise Scale Analytics and AI construction set creates three resource groups to help with the creation of your custom onboarding solutions for your data estate.
 
 Typically, user interfaces would reside in the "governance" resource group. The application layer and database would reside in the "automation" and "automationdb" respectively.
 
@@ -208,7 +192,7 @@ To allow the Data Platform Ops to deploy standard containers for use in data sci
 
 ## Global DNS
 
-The Enterprise Scale Analytics and AI solution pattern makes us of Private Links which relies on having a private DNS zone. Please check with your networking team before deploying another Private DNS as they might have already deployed the services.
+The Enterprise Scale Analytics and AI construction set makes us of Private Links which relies on having a private DNS zone. Please check with your networking team before deploying another Private DNS as they might have already deployed the services.
 
 ## Synapse Private Link Hub
 

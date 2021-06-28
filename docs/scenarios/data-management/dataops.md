@@ -3,44 +3,19 @@ title: "Azure Enterprise Scale Analytics platform automation and devops Overview
 description: Enterprise-Scale platform automation and devops Overview
 author: abdale
 ms.author: hamoodaleem
-ms.date: 03/05/2021
+ms.date: 06/21/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# DataOps Overview
-
-The Enterprise Scale Analytics and AI architecture was designed with the following core principles in mind:
-
-1. Self-Service Enablement: Enable project teams to work on their own in order to allow agile development methods.
-2. Governance: Enforce guardrails on the whole Azure platform, in order to ensure that project teams are only allowed to see, change, and execute what they are supposed to.
-3. Streamlined Deployments: Ensure that common policies are available and can be used across the organization to scale quickly and to enable teams which are not as experienced with some of core designs and artifacts.
-
-The deployment process and Data Ops working model is an essential part and enable for some of these core principles. In order to fulfill these concepts, we prescribe the following design guidelines:
-
-1. Use of Infrastructure as Code (IaC).
-2. Deployment templates covering the core use cases within the company
-3. Deployment process that includes a forking and branching strategy
-4. Central repository and deployment of Data Management Landing Zone
-
-A Platform Group team should be put in place to centrally govern the data platform infrastructure and not duplicate skills required to build and deploy common data infrastructure pieces required for the Data Management Landing Zone as well as the various Data Landing Zones.
-
-The Platform Group team can build, own, and provide the necessary agnostic technology that the Data Integration and Data Products need to capture, process, store, and serve their datasets.
-
-The team should provide the services in a self-service manner, which should include tools for big data storage, data product versioning, data pipeline implementation and orchestration, data de-identification, etc. This is key to remove bottlenecks in the workflow and reduce the lead time to create new Data Products.
-
-The Platform Group team should follow existing best practices outlined in this section to achieve their objective.
-
-Other data product teams should also use the following best practices for proper testing and automation.
-
-## Intro to DevOps and Automation
+# Intro to DevOps and Automation
 
 The term *DevOps* is more of a cultural movement that changes the way of thinking and working, enabling individuals and organizations to develop and maintain sustainable work practices by accelerating the rate at which businesses realize value.
 
 DevOps represents the combination of development and operations and is often associated with tools that enable continuous integration (CI) and continuous delivery (CD) practices. These software engineering practices and tools include source code managers (Git, SVN, Team Foundation Source Control) and automatic build and delivery manager (Azure DevOps Pipelines, GitHub Actions, etc.).
 
-### Source Control
+## Source Control
 
 Source Control ensures that code and configuration is persisted and that changes are tracked and versioned. Most source control systems also have built in processes for review and working in different branches of a code repository. The most popular source control type currently is Git which is a distributed version controls system, allowing individuals to work offline and sync to central repositories. Git vendors typically also implement branches and pull request concepts to support the change and review flow.
 
@@ -104,7 +79,7 @@ In ARM templates, the core provisioning is in the resources section, and the con
 ```
 
 >[!IMPORTANT]
->Every layer of the Enterprise Scale Analytics and AI solution pattern (Data Management Landing Zone, Data Landing Zones, Data Integrations or Data Products) should be defined through a declarative language such as ARM or Terraform, should be checked into a repository and deployed through CI/CD pipelines. This allows teams to keep track and version changes to the infrastructure and configuration of Azure scope and ultimately allows an agile self-service automation of different levels of the architecture.\
+>Every layer of the Enterprise Scale Analytics and AI construction set (Data Management Landing Zone, Data Landing Zones, Data Integrations or Data Products) should be defined through a declarative language such as ARM or Terraform, should be checked into a repository and deployed through CI/CD pipelines. This allows teams to keep track and version changes to the infrastructure and configuration of Azure scope and ultimately allows an agile self-service automation of different levels of the architecture.\
 \
 >This concept allows to always have a clear representation of the state inside a specific scope in Azure in a Git repository.
 
@@ -112,7 +87,7 @@ In ARM templates, the core provisioning is in the resources section, and the con
 
 To ensure that developed code is free of errors and ready for production, it should always be provisioned through CI/CD pipelines using multiple stages. Common practice is to have a development environment, a testing environment, and a production environment. These stages should also be reflected in Azure, by using separate services for each environment.
 
-In order to scale quickly within an organization and simplify the deployment process for teams, which are not as familiar with the concept of IaC, the Platform Team has the responsibility to provide and maintain deployment templates. These templates are used as a baseline for new artifacts within the solution pattern and need to be maintained over time, in order to constantly represent best practices and common standards within the company.
+In order to scale quickly within an organization and simplify the deployment process for teams, which are not as familiar with the concept of IaC, the Platform Team has the responsibility to provide and maintain deployment templates. These templates are used as a baseline for new artifacts within the construction set and need to be maintained over time, in order to constantly represent best practices and common standards within the company.
 
 Deployments to test and production should only be manageable through a CI/CD pipeline and a service connection with elevated rights to enforce common best practices (e.g. ARM templates).
 

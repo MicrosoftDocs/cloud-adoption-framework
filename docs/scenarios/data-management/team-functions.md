@@ -17,6 +17,10 @@ The Enterprise Scale Analytics and AI moves teams from working horizontally acro
 
 *Figure 1: Enterprise Scale Analytics and AI Teams*
 
+## Platform Group
+
+The platform group consists of two teams.
+
 ### Platform Ops
 
 Platform Ops are part of the Platform Group team. They operate and own the cloud platform all up.
@@ -103,7 +107,7 @@ The team monitor the Data Landing Zone for incidents and health events. They wil
 
 Integration Ops primary function is to ingest data from source and to provide a read data store version in the Data Landing Zone. The only change to the structure is to add conformed data types.
 
-Onboarding a data integration was covered in [Data Integration & Data Product Deployment Process](deployment-models.md#data-integration--data-product-deployment-process).
+Onboarding a data integration was covered in [Data Integration & Data Product Deployment Process](platform-provisioning.md#data-integration--data-product-deployment-process).
 
 Jordan is a Data Manager within the integration-ops team.
 
@@ -178,7 +182,7 @@ The Data Office assess the requirements and assembles a new Data Product Team ba
 
 The team identifies the data assets required for the data product and raises requests for permission to the data asset. If a new data asset is require Integration Ops would receive a ticket to ingest the new data asset.
 
-THe team identifies the common services which will be required for the new data product and raise a request for a new data product via [Data Integration & Data Product Deployment Process](deployment-models.md#data-integration--data-product-deployment-process).
+THe team identifies the common services which will be required for the new data product and raise a request for a new data product via [Data Integration & Data Product Deployment Process](platform-provisioning.md#data-integration--data-product-deployment-process).
 
 The Data Product team is given a forked repo from the master Data Products template to work with to deploy data product.
 
@@ -226,7 +230,7 @@ Once the team has ended up with promising ML models, they can start operationali
 
 The Data Science team will continue to work with the associated Data Product Owners to capture feedback, support and resolved/update models in production using a [M/L Ops methodology](/azure/machine-learning/concept-model-management-and-deployment).
 
-### Analyst
+## Analyst
 
 Analysts represents a large group including business analysts, power users, and generally anyone in the organization that has an interest in leveraging data to create new business insights.
 
@@ -248,7 +252,7 @@ Analysts can use the discovered dataset to build reports using tools such as Pow
 
 ### *Ad Hoc* Queries
 
-The Enterprise Scale Analytics and AI solution pattern has a number of shared workspaces where analysts can query data (subject to permissions). It is likely that Data Products would also provide dedicated compute to process *ad hoc* queries.
+The Enterprise Scale Analytics and AI construction set has a number of shared workspaces where analysts can query data (subject to permissions). It is likely that Data Products would also provide dedicated compute to process *ad hoc* queries.
 
 In both cases Analyst can run queries against data assets across Data Landing Zone(s) subject to their permissions. The results from *ad hoc* queries can be stored in Azure Data Lake workspace for re-use.
 
@@ -272,7 +276,7 @@ Alongside encouraging participation in these user groups, analysts should log fe
 
 |Role |Cloud Environment|Data Management Landing Zone|Data Landing Zone|Data Integration|Data Products|
 |-|-|-|-|-|-|
-|ES-AAI Service owner|Informed|Accountable|Consulted Informed|Consulted Informed|Consulted Informed|
+|Service owner|Informed|Accountable|Consulted Informed|Consulted Informed|Consulted Informed|
 |Data Landing Zone Service owner|Informed|Consulted Informed|Accountable|Accountable|Accountable|
 |Cloud Platform Ops|Responsible|Consulted|Consulted|Consulted|Consulted|
 |Data Platform Ops|Consulted|Responsible|Responsible|Consulted|Consulted|

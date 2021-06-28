@@ -1,9 +1,9 @@
 ---
 title: "Introduction to the 'data management and analytics' scenario in Azure"
 description: Introducing the end to end scenario for 'data management and analytics' in the cloud, with a focus on Azure implementation
-author: BrianBlanchard
-ms.author: brblanch
-ms.date: 02/01/2020
+author: mboswell
+ms.author: mboswell
+ms.date: 06/24/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
@@ -15,10 +15,8 @@ As customers address larger, more sophisticated forms of cloud adoption, their j
 
 This scenario focuses on enabling two targeted outcomes:
 
-!['Data management and analytics' outcomes](./media/scenario-scope.png)
-
-- [Analytics maturity](./intro-analytics-maturity.md): Use the cloud to deliver increasingly more mature analytics solutions. Migrate data platforms to the cloud. Democratize data using advanced visualization tools. Answer complex analytical questions with cloud based analytics tools. Extend workloads with machine learning.
-- [Data governance](./intro-data-governance.md): Properly manage your data estate to ensure x,y,&z across all cloud deployments of your data. Govern how data is classified, categorized, and used to ensure your data is protected and reliable across all cloud deployments.
+- Analytics: Use the cloud to deliver increasingly more mature analytics solutions. Migrate data platforms to the cloud. Democratize data using advanced visualization tools. Answer complex analytical questions with cloud based analytics tools. Extend workloads with machine learning.
+- [Data governance](./data-governance.md): Properly manage your data estate to ensure x,y,&z across all cloud deployments of your data. Govern how data is classified, categorized, and used to ensure your data is protected and reliable across all cloud deployments.
 
 ## Components of the scenario
 
