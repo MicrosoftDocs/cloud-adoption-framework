@@ -2,7 +2,7 @@
 title: Enterprise-scale management group and subscription organization for Azure VMware Solution
 description: <<Describe how this enterprise-scale scenario can improve management group and subscription organization of Azure VMware Solution.>>
 author: mhenry
-ms.author: mhenry
+ms.author: janet
 ms.date: 06/28/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

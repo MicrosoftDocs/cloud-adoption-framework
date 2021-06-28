@@ -2,7 +2,7 @@
 title: Enterprise-scale business continuity and disaster recovery for Azure VMware Solution
 description: Describe how this enterprise-scale scenario can improve business continuity and disaster recovery of Azure VMware Solution.
 author: mhenry
-ms.author: mhenry
+ms.author: janet
 ms.date: 06/28/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

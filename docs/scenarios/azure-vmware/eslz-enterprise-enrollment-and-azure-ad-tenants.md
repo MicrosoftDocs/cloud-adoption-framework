@@ -2,7 +2,7 @@
 title: Enterprise-scale enterprise enrollment and Azure AD tenants for Azure VMware Solution
 description: <<Describe how this enterprise-scale scenario can improve enterprise enrollment and Azure AD tenants of Azure VMware Solution.>>
 author: mhenry
-ms.author: mhenry
+ms.author: janet
 ms.date: 06/28/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

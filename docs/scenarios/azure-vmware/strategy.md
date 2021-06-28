@@ -2,7 +2,7 @@
 title: Strategy for Azure VMware Solution adoption
 description: <<Describe the scenario's impact on strategy.>>
 author: mhenry
-ms.author: mhenry
+ms.author: janet
 ms.date: 06/28/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

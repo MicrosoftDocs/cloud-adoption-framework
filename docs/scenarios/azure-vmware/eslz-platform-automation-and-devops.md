@@ -2,7 +2,7 @@
 title: Enterprise-scale platform automation and DevOps for Azure VMware Solution
 description: <<Describe how this enterprise-scale scenario can improve platform automation and devops of Azure VMware Solution.>>
 author: mhenry
-ms.author: mhenry
+ms.author: janet
 ms.date: 06/28/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
