@@ -60,7 +60,7 @@ At the heart of Enterprise Scale Analytics and AI is its data management capabil
 
 :::image type="content" source="images/data-management-overview-1.png" alt-text="Data Management Overview":::
 
-*Figure 1: Data Management Overview*
+Figure 1: Data Management Overview
 
 The **Data Management Landing Zone**, which is a subscription, is responsible for the governance of the platform and allows for the following capabilities:
 
