@@ -23,7 +23,7 @@ Enterprise Scale is part of Microsoft's Cloud Adoption Framework which provides 
 
 The Enterprise Scale Analytics and AI architecture was designed with the same strategic principles in mind as mentioned above. To deliver effectively the Enterprise Scale Analytics and AI moves teams from working horizontally across each tier such as Ingest, Processing, Analysis, Consumption and Visualization to vertical Data Landing Zone Groups coexisting together in an agile team. Platform teams such as Data Platform Ops and Platform Ops are grouped together under a common Platform Group.
 
-### Alignment to Enterprise Scale Landing Zone
+### Building on Enterprise Scale Landing Zone
 
 Before you consider deploying Enterprise Scale Analytics and AI construction set you need to understand how close you are to agility within your organization today.
 
@@ -40,25 +40,7 @@ Central to your business thinking is how to:
 - Drive a way to enforce Data Governance and security by default.
 - Drive teams to always prioritize outcomes to the business instead of obsessing over the underlying technology.
 
-If you have a partial implementation of Enterprise Scale Landing Zones then it is important that you check with your cloud teams that the following pre-requisites can be met:-
-
-### Networking
-
-- You should be operating in a hub and spoke architecture
-- Allow vnet peerings between spokes
-- Private Link/Private endpoint is a supported pattern in your deployment (Vnet injection when not supported)
-- Support for Global DNS Zones for Data Services (Synapse, Purview, Data Factory, Azure Machine Learning, Key Vault, Storage, etc.)
-
-### Management Group and Subscription Organization
-
-- Operate as a Single tenant
-- Deployment of cloud services is controlled by policy driven governance as this allows you to add data specific policies.
-- Scalability with is via subscriptions and subscription democratization.
-
-### Identity Access Management
-
-- There is an automation process in place for managing AD groups
-- There is an automation process in place for role assignments
+If you do not have an implementation of Enterprise Scale Landing Zones then it is important that you check with your cloud teams that the following pre-requisites can be met: - [Ensure the environment is prepared for the cloud adoption plan](/azure/cloud-adoption-framework/ready/)
 
 So, keeping this challenge in view and speed up the delivery of end-to-end insights journey, Microsoft has developed a prescriptive offering in the context of an Enterprise Scale Analytics and AI which marries up perfectly to the key themes discussed in [Develop a plan for 'data management and analytics'](plan.md)
 

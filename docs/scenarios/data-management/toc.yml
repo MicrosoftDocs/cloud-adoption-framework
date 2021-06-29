@@ -123,19 +123,17 @@ items:
         - name: Data Lake Overview
           href: data-lake-overview.md
         - name: Data Lake Zones
-          href: data-lake-services.md
-        - name: Data Lake Key Considerations
-          href: data-lake-key-considerations.md
+          href: data-lake-zones.md
         - name: Managing Data Lake Access
           href: data-lake-access.md
+        - name: Data Lake Key Considerations
+          href: data-lake-key-considerations.md
       - name: Azure Databricks Implementation
         href: azure-databricks-implementation.md
       - name: Azure Synapse Analytics Implementation
         items:
         - name: Implementation
-          href: azure-synapse-analytics-implementation.md
-        - name: High Availability for Azure Synapse Analytics
-          href: /azure/cloud-adoption-framework/migrate/azure-best-practices/analytics/azure-synapse         
+          href: azure-synapse-analytics-implementation.md      
       - name: Azure Purview Implementation
         items:
         - name: Readiness Checklist
