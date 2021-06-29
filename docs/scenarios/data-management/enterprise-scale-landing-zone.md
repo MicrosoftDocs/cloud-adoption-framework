@@ -40,7 +40,7 @@ Enterprise Scale Analytics and AI considers five critical design areas that help
 1. [Data Science Workflow and MLOps](#data-science-workflow-and-mlops) -->
 
 >[!IMPORTANT]
->The Enterprise Scale Analytics and AI construction set is support for deployment, in one of the below **Supported Regions** list.
+>The Enterprise Scale Analytics and AI construction set is recommending to use zone redundant storage. ZRS is currently supported for deployment, in one of the below **Supported Regions** list.
 >
 >- Asia Southeast
 >- Europe North
