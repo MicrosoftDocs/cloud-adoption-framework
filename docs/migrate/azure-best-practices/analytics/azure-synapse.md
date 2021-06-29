@@ -28,4 +28,4 @@ The service also supports user-defined restore points. Manually triggering snaps
 
 In addition to the snapshots described earlier, Azure Synapse Analytics performs a standard geo-backup once per day to a paired datacenter. The RPO for a geo-restore is 24 hours. The dedicated SQL pool is backed up. You can restore the geo-backup to a server in any other region where Azure Synapse Analytics is supported. A geo-backup ensures that a data warehouse can be restored in case the restore points in the primary region are not available.
 
-For more details about database backup and recovery, see [Backup and restore in Azure Synapse Dedicated SQL pool](azure/synapse-analytics/sql-data-warehouse/backup-and-restore).
+For more details about database backup and recovery, see [Backup and restore in Azure Synapse Dedicated SQL pool](/azure/synapse-analytics/sql-data-warehouse/backup-and-restore).
