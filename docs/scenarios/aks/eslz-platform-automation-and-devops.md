@@ -57,7 +57,7 @@ Here are some design recommendations for AKS platform automation and DevOps:
 
 - Use [GitOps](/azure/azure-arc/kubernetes/tutorial-use-gitops-connected-cluster) to deploy and maintain applications. GitOps uses the Git repository as a single source of truth, avoiding configuration drift and increasing productivity and reliability during rollbacks and related procedures.
 
-- Store secrets and other sensitive artifacts in GitHub secrets, allowing actions and other workflow parts to read them if needed while executing.
+- Use [pod-managed identities](/azure/aks/operator-best-practices-identity#use-pod-managed-identities) and [Azure Key Vault provider for Secrets Store CSI Driver](/azure/aks/csi-secrets-store-driver) to protect secrets, certificates, and connection strings.
 
 - Strive for maximized deployment concurrency by avoiding hardcoded configuration items and settings.
 
