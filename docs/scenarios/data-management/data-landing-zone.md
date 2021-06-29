@@ -155,7 +155,7 @@ During the initial setup of a Data Landing Zone a single Azure Synapse Analytics
 
 ## Data Integration *X*
 
-The Data Integration resource groups are provisioned for each integration added to a Data Landing Zone. Further reading on onboarding [Data Integrations](data-landing-zone-data-integration.md) explains the process for creating the services and resource groups.
+Data Integration resource groups are provisioned for each integration added to a Data Landing Zone. Further reading on onboarding [Data Integrations](data-landing-zone-data-integration.md) explains the process for creating the services and resource groups.
 
 ## Data Products
 
