@@ -188,5 +188,7 @@ Here are some other design considerations for AKS security governance and compli
 - Use [Azure Defender for Kubernetes](/azure/security-center/defender-for-kubernetes-introduction)
 - Deploy a dedicated and private instance of [Azure Container Registry](/azure/container-registry/) to each landing zone subscription.
 - Use [Private Link for Azure Container Registry](/azure/container-registry/container-registry-private-link) to connect it to AKS.
-- Use [Azure Defender for container registries](/azure/security-center/defender-for-container-registries-introduction) to scan your images for vulnerabilities.
+- Scan your images for vulnerabilities with [Azure Defender for container registries](/azure/security-center/defender-for-container-registries-introduction), or any other image scanning solution. 
+> [!IMPORTANT]
+> Azure Defender image scanning is not compatible with Container Registry endpoints. For more information, see [Connect privately to an Azure Container Registry using Private Link](/azure/container-registry/container-registry-private-link).
 - Monitor and enforce configuration by using the [Azure Policy add-on for Kubernetes](/azure/aks/use-azure-policy).
