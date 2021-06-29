@@ -40,7 +40,7 @@ Enterprise Scale Analytics and AI considers five critical design areas that help
 1. [Data Science Workflow and MLOps](#data-science-workflow-and-mlops) -->
 
 >[!IMPORTANT]
->The Enterprise Scale Analytics and AI construction set is support for deployment, in one of the below **Supported Regions** list.
+>The Enterprise Scale Analytics and AI construction set is recommending to use zone redundant storage. ZRS is currently supported for deployment, in one of the below **Supported Regions** list.
 >
 >- Asia Southeast
 >- Europe North
@@ -60,7 +60,7 @@ At the heart of Enterprise Scale Analytics and AI is its data management capabil
 
 :::image type="content" source="images/data-management-overview-1.png" alt-text="Data Management Overview":::
 
-*Figure 1: Data Management Overview*
+Figure 1: Data Management Overview
 
 The **Data Management Landing Zone**, which is a subscription, is responsible for the governance of the platform and allows for the following capabilities:
 

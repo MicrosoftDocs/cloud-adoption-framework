@@ -21,9 +21,9 @@ Developing a blueprint for your data science projects which bundles a set of ser
 
 Following are guidelines on developing a data science template for your organization:
 
-1. Develop a set of ARM templates to deploy an Azure Machine Learning workspace with resources such as a key vault, storage account, Application Insights and Container Registry.
+1. Develop a set of Infrastructure as Code (IaC) templates to deploy an Azure Machine Learning workspace with resources such as a key vault, storage account, Application Insights and Container Registry.
 2. Include the setup of compute targets in these templates such as Compute Instances, Compute Clusters and Databricks, and the setup of data stores.
-3. Include a Data Factory deployment in templates as a general Cognitive Services instance.
+3. Include a Data Factory or Synapse deployment in templates as well as Cognitive Services.
 4. The templates should provide all the necessary tools to execute the data science exploration phase as well as the initial operationalization of the model.
 
 ### Initial setup considerations
@@ -44,9 +44,9 @@ With regards to different AI services such as Cognitive Services, it is highly r
 
 ### Real Time Streaming Scenario
 
-For streaming and real-time use cases, deployments should be tested on [Azure Container Instances](/azure/container-instances/container-instances-overview) (ACI) before deploying them onto any other platform like [Azure Kubernetes Service](/azure/aks/) (AKS), Functions or App Services for Containers. Simple input and output tests should be performed in order to make sure that the response of the services is as expected.
+For streaming and real-time use cases, deployments should be tested on a downsized [Azure Kubernetes Service](/azure/aks/) (AKS) in the dev environment to save cost before deploying them onto the production [Azure Kubernetes Service](/azure/aks/) (AKS) or App Services for Containers. Simple input and output tests should be performed in order to make sure that the response of the services is as expected.
 
-As a next step, models can be deployed to a desired service. The only deployment compute target today that is GA and is recommended for production workloads is an AKS cluster. This even more holds true if GPU or FPGA support is required. There is currently no other native deployment option available in Azure Machine Learning that supports these hardware requirements. In order to minimize the management overhead, it is advised to deploy central AKS clusters as shared resource and attach them to the respective workspaces. An additional test AKS instance should also be hosted if stress tests should be performed before moving a model onto the production AKS.
+As a next step, models can be deployed to a desired service. The only deployment compute target today that is GA and is recommended for production workloads is an AKS cluster. This even more holds true if GPU or FPGA support is required. There is currently no other native deployment option available in Azure Machine Learning that supports these hardware requirements. Today, Azure Machine Learning requires a one to one mapping to AKS clusters. Every new connection to an Azure Machine Learning workspace breaks the previous connection between AKS and Azure Machine Learning. Once that limitation is mitigated, it is advised to deploy central AKS clusters as shared resource and attach them to to the respective workspaces. An additional central test AKS instance should then also be hosted if stress tests should be performed before moving a model onto the production AKS. The test environment should provide the same compute resource as the production environment to ensure that the results are as close as possible to the production environment. 
 
 ### Batch Scenario
 
@@ -56,7 +56,7 @@ For these kind of scenarios, Azure Machine Learning pipelines in combination wit
 
 ### Identifying the right compute resources
 
-Before deploying a model in Azure Machine Learning to an AKS or ACI, the user needs to specify the resources (CPU, RAM, GPU) that should be allocated for the respective model. Defining these parameters can be a complex and tedious process. Stress tests with different configurations need to be performed to identify a good set of parameters.
+Before deploying a model in Azure Machine Learning to an AKS, the user needs to specify the resources (CPU, RAM, GPU) that should be allocated for the respective model. Defining these parameters can be a complex and tedious process. Stress tests with different configurations need to be performed to identify a good set of parameters.
 
 This process can be simplified with the Model Profiling feature in Azure Machine Learning which is a long running job that tests different combinations of resource allocations and identifies an optimal combination based on the identified latency and RTT. This information can then be used for the actual model deployment on AKS.
 
