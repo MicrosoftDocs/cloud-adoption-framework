@@ -25,7 +25,7 @@ The Azure subscription associated with the Data Landing Zone is structured as fo
 
 |Layer  |Required  |Resource group(s)  |
 |---------|---------|---------|
-|Standard services     |Yes         |<ul><li>[Network](#network)</li><li>[Monitoring](#monitoring)</li><li>[Data Lake Services](#data-lake-services)</li><li>[Upload Ingest Storage](#upload-ingest-storage)</li><li>[Metadata Services](#metadata-services)</li><li>[Ingest and Processing](#ingestion-and-processing)</li></ul>         |
+|Standard services     |Yes         |<ul><li>[Network](#network)</li><li>[Monitoring](#monitoring)</li><li>[Data Lake Services](#data-lake-zones)</li><li>[Upload Ingest Storage](#upload-ingest-storage)</li><li>[Metadata Services](#metadata-services)</li><li>[Ingest and Processing](#ingestion-and-processing)</li></ul>         |
 |Data integrations     |Yes         |<ul><li>[Data Integration](#data-integration-resource-group) (1 or more)</li><li>[Shared Integration](#shared-integration)</li></ul>         |
 |Data products     |Optional         |<ul><li>[Data Products](#data-product-resource-group) (1 or more)</li><li>[Shared Products](#shared-products)</li><li>[Reporting and Visualization](#reporting-and-visualization)</li></ul>         |
 

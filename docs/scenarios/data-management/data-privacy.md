@@ -155,7 +155,7 @@ As mentioned, for a policy engine to succeed it is important that there is an in
 
 As Data Integrations and Data Products create read data sources, they would be registered in the Data Catalog, which would help identify *sensitive (PII)* data. The policy engine should import this definition and deny any access to this data until the teams have set up its access policies. All of this should be done via a REST API workflow from the IT Service Management solution.
 
-## Highly Confidential Data
+## Restricted Data
 
 In addition to the above options being implemented for Highly Confidential Data, also known as restricted, we recommend that Highly Confidential Data is hosted in a dedicated Data Landing Zone. This allows specific requirements such as just in time access, customer managed keys for encryption and putting inbound/outbound restrictions to the landing zone. The construction set have evaluated putting this type of data into the same data landing zone, but different storage accounts. However, this can make the solution very complicated on the networking layer (NSGs etc.)
 
