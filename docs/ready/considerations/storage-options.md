@@ -32,7 +32,7 @@ Answer the following questions about your workloads to help you make decisions a
 - **Do your workloads require disk storage to support the deployment of infrastructure as a service (IaaS) virtual machines?** [Azure managed disks](/azure/virtual-machines/windows/managed-disks-overview) provide virtual disk capabilities for IaaS virtual machines.
 - **Will you need to provide downloadable images, documents, or other media as part of your workloads?** [Azure Blob Storage](/azure/storage/blobs/storage-blobs-introduction) hosts static files, which are then accessible for download over the internet. For more information, see [Static website hosting in Azure Storage](/azure/storage/blobs/storage-blob-static-website).
 - **Will you need a location to store virtual machine logs, application logs, and analytics data?** You can use Blob Storage to store Azure Monitor log data. See [Storage Analytics](/azure/storage/common/storage-analytics).
-- **Will you need to provide a location for backup, disaster recovery, or archiving workload-related data?** Blob Storage provides [backup and disaster recovery capabilities](/azure/virtual-machines/windows/backup-and-disaster-recovery-for-azure-iaas-disks). For more information, see 
+- **Will you need to provide a location for backup, disaster recovery, or archiving workload-related data?** Blob Storage provides backup and disaster recovery capabilities. For more information, see [Backup and disaster recovery for Azure IaaS disks](/azure/virtual-machines/windows/backup-and-disaster-recovery-for-azure-iaas-disks).
 
   You can also use Blob Storage to back up other resources, like on-premises or IaaS virtual machine-hosted SQL Server data. See [SQL Server Backup and Restore](/sql/relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service).
 - **Will you need to support big data analytics workloads?** [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction) is built on Azure Blob Storage. Data Lake Storage Gen2 supports large-enterprise data lake functionality. It also can handle storing petabytes of information while sustaining hundreds of gigabits of throughput.
@@ -148,13 +148,13 @@ Azure Disk Encryption allows you to encrypt managed disks that are attached to I
 
 ## Regional availability
 
-You can use Azure to deliver services at the scale that you need to reach your customers and partners wherever they are. Checking the regional availability of a service beforehand can help you make the right decision for your workload and customer needs. To check availability, see [managed disks](https://azure.microsoft.com/global-infrastructure/services/?products=managed-disks) and [Azure Storage](https://azure.microsoft.com/global-infrastructure/services/?products=storage).
+You can use Azure to deliver services at the scale that you need to reach your customers and partners wherever they are. Checking the regional availability of a service beforehand can help you make the right decision for your workload and customer needs. To check availability, see [managed disks available by region](https://azure.microsoft.com/global-infrastructure/services/?products=managed-disks) and [Azure Storage available by region](https://azure.microsoft.com/global-infrastructure/services/?products=storage).
 
 Managed disks are available in all Azure regions that have Premium SSD and Standard SSD offerings. Ultra Disk Storage is offered in several Availability Zones. Verify the regional availability when you plan mission-critical, top-tier workloads that require Ultra Disk Storage.
 
 Hot and cool Blob Storage, Data Lake Storage Gen2, and Azure Files storage are available in all Azure regions. Archival blob storage, premium file shares, and premium lock Blob Storage are limited to certain regions. Refer to the regions page to check the current status.
 
-To learn more about Azure global infrastructure, see the [Azure regions page](https://azure.microsoft.com/global-infrastructure/regions). Consult [Products available by region](https://azure.microsoft.com/global-infrastructure/services/?products=storage) for what's available in each Azure region.
+To learn more about Azure global infrastructure, see [Azure geographies](https://azure.microsoft.com/global-infrastructure/regions). Consult [Products available by region](https://azure.microsoft.com/global-infrastructure/services/?products=storage) for storage options available in each Azure region.
 
 ## Data residency and compliance requirements
 
