@@ -37,7 +37,7 @@ Additional required role assignments for Data Landing Zone deployment include:
 
 ### Role assignments - Data Integration and Data Products
 
-For a successful *data integration* and *product* deployment purposes, within a Data Landing Zone, the following role assignments are required for each of the options:
+For the purpose of a successful deployment of a *data integration* and *data product* within a Data Landing Zone, the following role assignments are required for each of the options:
 
 | Role Name | Description | Scope |
 |:----------|:------------|:------|

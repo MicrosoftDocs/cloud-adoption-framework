@@ -108,7 +108,7 @@ At the start of the project, the Data Platform will have one Azure DevOps projec
 
 - One repository for the Data Management Landing Zone with pipelines and a service connection to the cloud environment
 - One template repository for the Data Landing Zone with pipelines to deploy a Data Landing Zone instance with corresponding ADO connections to cloud environments.
-- One template repository for a Data Integration with pipelines to deploy a Data Integration instance with corresponding ADO connections to cloud environments.  These are forked to Data Landing Zone ADO projects.
+- One template repository for a Data Integration with pipelines to deploy a Data Integration resource group with corresponding ADO connections to cloud environments.  These are forked to Data Landing Zone ADO projects.
 - One template repository for Data Products with pipelines to deploy a Data Product instance with corresponding ADO connections to cloud environments. These are forked to Data Landing Zone ADO projects.
 
 Once Data Landing Zones have been deployed then the Enterprise Scale Analytics and AI construction set prescribes that:
@@ -121,7 +121,7 @@ Once Data Landing Zones have been deployed then the Enterprise Scale Analytics a
   - An ADO team with access to their ADO Board, and repository.
   - Different policies are defined for the forked repository.
 
-To control the deployment of Data Integration and Data Products we implement the principles of:
+To control the deployment of Data Integrations and Data Products we implement the principles of:
 
 - Main branch is secured and owned by Data Landing Zone Ops team.
 - Only main branch can be used to deploy to test and prod environments.

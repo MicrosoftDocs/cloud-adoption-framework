@@ -24,9 +24,9 @@ For every Data Landing Zone deployed, two shared Azure Databricks Workspaces wil
 
 The **Azure Databricks Analytics and Data Science Workspace** is shared across the whole Data Landing Zone, with all users which have been given access to the Workspace. These workspaces should not be used for Data Ingestion, Transformation, and Load &mdash; the **Azure Databricks Engineering Workspace** should be used for this instead.
 
-If you have an automated ingestion framework engine, the **Azure Databricks Engineering Workspace** will use both an Azure Key Vault created in the Metadata Services Resource group, data ingestion pipelines from RAW into ENRICHED and an Azure Key Vault, per Data Integration, for running developed engineering pipelines to transform from Raw to Enriched.
+If you have an automated ingestion framework engine, the **Azure Databricks Engineering Workspace** will use both an Azure Key Vault created in the Metadata Services Resource group, data ingestion pipelines from RAW into ENRICHED and an Azure Key Vault, per Data Integration resource group, for running developed engineering pipelines to transform from Raw to Enriched.
 
-If you don't have an automated ingestion framework engine, the **Azure Databricks Engineering Workspace** will use just the Azure Key Vault, per Data Integration, for running developed engineering pipelines to transform from Raw to Enriched.
+If you don't have an automated ingestion framework engine, the **Azure Databricks Engineering Workspace** will use just the Azure Key Vault, per Data Integration resource group, for running developed engineering pipelines to transform from Raw to Enriched.
 
 The **Azure Databricks Data Engineering Workspace** should use Service Principals to access Data Lakes.
 
@@ -102,7 +102,7 @@ For **Azure Databricks Analytics and Data Science**:
 3. Enable workspace options specific to **Azure Databricks Engineering Workspace**.
 
 >[!NOTE]
->During the creation of a new Data Integration we will alter the configuration of all Azure Databricks Workspaces within a Data Landing Zone. Please see [Data Integration & Data Product Deployment Process](platform-provisioning.md#data-integration--data-product-deployment-process) for how this is implemented with Azure Databricks shared Workspaces.
+>During the creation of a new Data Integration resource group we will alter the configuration of all Azure Databricks Workspaces within a Data Landing Zone. Please see [Data Integration & Data Product Deployment Process](platform-provisioning.md#data-integration--data-product-deployment-process) for how this is implemented with Azure Databricks shared Workspaces.
 
 ### External Hive Metastore
 

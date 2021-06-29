@@ -39,7 +39,7 @@ Proprietary native and third-party tooling provides niche capabilities to integr
 
 If you have an ingestion framework engine, you should deploy a single Azure Data Factory per Data Landing Zone in the production Ingest and Processing Resource Group. The Azure Data Factory workspace should be locked off to users, and only managed identity and service principals will have access to deploy. Data Landing Zone Ops should have Read access to allow debugging of pipelines.
 
-Each Data Integration will have their own Azure Data Factory which will be used by Integration Ops to move data from source to Raw to Enriched. By having an Azure Data Factory per Data Integration we can enable a complete Continuos Integration(CI) and Continuos Development(CD) experience by only allowing pipelines to be deployed from Azure DevOps or GitHub.
+Each Data Integration resource group will have their own Azure Data Factory which will be used by Integration Ops to move data from source to Raw to Enriched. By having an Azure Data Factory per Data Integration resource group we can enable a complete Continuos Integration(CI) and Continuos Development(CD) experience by only allowing pipelines to be deployed from Azure DevOps or GitHub.
 
 All Azure Data Factory workspaces will predominately use the Managed VNET feature in ADF or [Self-Hosted Integration Runtime](/azure/data-factory/concepts-integration-runtime) for their Data Landing Zone within the Data Management Landing Zone. Engineers are encouraged to use the managed VNET feature to securely connect to Azure PaaS resource.
 
@@ -68,7 +68,7 @@ The Data Lakes will be mounted into this workspace using service principals. See
 
 Integration Ops teams can deploy short, automated jobs on Databricks and expect their clusters to start quickly, execute the job, and terminate. Databricks Pools are recommended to be setup to reduce the time it takes for clusters to spin up for jobs.
 
-Pipeline created by the Integration Ops teams in Azure Databricks can take data from SOURCE to RAW to ENRICH  to CURATED. Data Integrations must deploy their notebooks via a Integration Ops repo using the Integration Ops Service Principle which was created when onboarding their Data Integration. The notebook is called from the Data Integration Azure Data Factory.
+Pipeline created by the Integration Ops teams in Azure Databricks can take data from SOURCE to RAW to ENRICH  to CURATED. Data Integrations must deploy their notebooks via a Integration Ops repo using the Integration Ops Service Principle which was created when onboarding their Data Integration. The notebook is called from the Data Integration resource group Azure Data Factory.
 
 It is recommended that enterprises use Azure DevOps to implement a deployment framework for new pipelines which create the dataset folders, assign ACLs, and create a table with or without Databricks Table Access Controls enforced.
 
@@ -80,7 +80,7 @@ Both Event Hubs and IoT Hub are scalable event processing services that can inge
 
 From that point, data can either be exported out to a data lake at regular intervals (batch) and processed in near-real-time via Spark streaming (using Azure Databricks), Azure Data Explorer, Azure Stream Analytics, or Time Series Insights.
 
-The last Event Hub or Kafka Landing Zone, inside the use case specific Landing Zone, should send its aggregated data to both the Data Lake RAW layer in one of the Data Landing Zones and/or to an Event Hub related to the Data Integration in the Data Landing Zone.
+The last Event Hub or Kafka Landing Zone, inside the use case specific Landing Zone, should send its aggregated data to both the Data Lake RAW layer in one of the Data Landing Zones and/or to an Event Hub related to the Data Integration resource group in the Data Landing Zone.
 
 ## Enforcing Data Quality
 
