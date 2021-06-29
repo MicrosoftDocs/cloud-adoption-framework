@@ -16,12 +16,21 @@ At a high level, data products are computed or polyglot persistence services tha
 
 ## Design considerations
 
-- A Data Landing Zone can have multiple data products which are created by ingesting data either inside the same Data Landing Zone or from across multiple Data Landing Zones as shown in the example below.
+- A Data Landing Zone can have multiple data products which are created by ingesting data either inside the same Data Landing Zone or from across multiple Data Landing Zones as shown below.
 
-    :::image type="content" source="images/cross-data-landing-zone-consumption.png" alt-text="cross data landing zone consumption":::
+    :::image type="content" source="images/data-product-cross-data-landing-zone.png" alt-text="cross data landing zone consumption":::
 
-    > [!NOTE]
-    > In the case where a data product would need to read from another Data Landing Zone, this would require approval from the [Data Landing Zone Ops](persona-and-teams.md#data-landing-zone-ops-one-group-per-data-landing-zone) and [Integration Ops](persona-and-teams.md#integration-ops-per-integration) team of that particular Data Landing Zone.
+     The example above shows: 
+     1. Intra-data landing zone consumption: 
+         1. Data product B consumes from data product A and the data lake within its data landing zone (i.e., Data Landing Zone 1).
+         1. Data products C and D only consume from within their own respective data landing zones. 
+     1. Inter-data landing zone consumption: Data product B also consumes from data product C and the data lake in Data Landing Zone 3.
+
+    > [!IMPORTANT]
+    > In the case of inter-data landing zone consumption, since data product B reads from Data Landing Zone 3, this would require approval from the [Data Landing Zone Ops](persona-and-teams.md#data-landing-zone-ops-one-group-per-data-landing-zone) and [Integration Ops](persona-and-teams.md#integration-ops-per-integration) team of Data Landing Zone 3.
+
+    > [!IMPORTANT]
+    > Data product B consumes from data products A and C. Before this can happen, data product B must register it's consumption of a data product via a data sharing agreement. This data sharing agreement should update the lineage from data product A to data product B and from data product C to data product B.
 
 - The resource group for a data product would include all the service required to make that data product. Examples of services which may be part of a data product include Azure Functions, App Service, Logic Apps, Azure Analysis Services, Cognitive Services, Azure Machine Learning, Azure SQL DB, Azure MySQL and Azure CosmosDB. See [data product samples](#sample-data-products) for common use cases.
 - A data product has data from a *READ* data source which has had some data transformation applied. This could be a newly curated dataset or a BI report, for example.
@@ -30,7 +39,7 @@ At a high level, data products are computed or polyglot persistence services tha
 
 We recommend building data products within your Data Landing Zone by adhering to design principles which allow you to scale with data governance. Following are design recommendations to help you plan your data products ecosystem.
 
-### Deploy multiple resource groups
+### Deploy multiple resource groups (as needed)
 
  Each data product is a resource group. Since data products are compute or polyglot persistence services, they may only be required depending on certain use cases. As such, they can be considered an optional component of your Data Landing Zone. In the case where data products are required, you should create multiple resource groups by data product as shown below.
     
