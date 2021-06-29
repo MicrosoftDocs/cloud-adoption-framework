@@ -25,7 +25,7 @@ The Azure subscription associated with the Data Landing Zone is structured as fo
 
 |Layer  |Required  |Resource group(s)  |
 |---------|---------|---------|
-|[Core Services ](#core-services-layer)    |Yes         |<ul><li>[Network](#network)</li><li>[Monitoring](#monitoring)</li><li>[Data Lake Services](#data-lake-services)</li><li>[Upload Ingest Storage](#upload-ingest-storage)</li><li>[Metadata Services](#metadata-services)</li><li>[Ingest and Processing](#ingestion-and-processing)</li><li>[Shared Products](#shared-products)</li><li>[Shared Integration](#shared-integration)</li></ul>         |
+|[Core Services ](#core-services-layer)    |Yes         |<ul><li>[Network](#network)</li><li>[Monitoring](#monitoring)</li><li>[Data Lake Services](#data-lake-services)</li><li>[Upload Ingest Storage](#upload-ingest-storage)</li><li>[Metadata Services](#metadata-services)</li><li>[Ingest and Processing](#ingest-and-processing)</li><li>[Shared Products](#shared-products)</li><li>[Shared Integration](#shared-integration)</li></ul>         |
 |[Data Integration](#data-integration-layer)     |Yes         |<ul><li>[Data Integration](#data-integration-resource-group) (1 or more)</li></ul>         |
 |[Data Products](#data-products-layer)     |Optional         |<ul><li>[Data Products](#data-product-resource-group) (1 or more)</li></ul>         |
 |[Visualization](#visualization-layer)    |Optional         |<ul><li>[Reporting and Visualization](#reporting-and-visualization)</li></ul>         |
@@ -106,7 +106,7 @@ Services included in the ingest and processing resource group include:
 
 |Service  |Required  |Guidelines  |
 |---------|---------|---------|
-|Azure Databricks     |Yes         |<ul><li>Azure Databricks should always deployed because it would be used by Integration Ops teams for ingestion, transformation, and loading of data. See the [Azure Databricks](#shared-azure-databricks) section for details of workspace deployments.</li><li>An Azure Databricks workspace is provisioned for Ingestion and Processing which will connect to Azure Data Lake via Azure Service Principals. These are referred to as **Azure Databricks Engineering Workspaces**.</li><li>The Databricks workspaces should be locked down to only allow deployment of notebooks or jars from the Data Integration Azure DevOps Repo via a Data Integrations Service Principal.</li></ul>         |
+|Azure Databricks     |Yes         |<ul><li>Azure Databricks should always deployed because it would be used by Integration Ops teams for ingestion, transformation, and loading of data. See the [Azure Databricks section](#azure-databricks-in-shared-products) for details of workspace deployments.</li><li>An Azure Databricks workspace is provisioned for Ingestion and Processing which will connect to Azure Data Lake via Azure Service Principals. These are referred to as **Azure Databricks Engineering Workspaces**.</li><li>The Databricks workspaces should be locked down to only allow deployment of notebooks or jars from the Data Integration Azure DevOps Repo via a Data Integrations Service Principal.</li></ul>         |
 |Event Hubs (or IoT Hub)     |Optional         |<ul><li>Event Hubs or IoT Hub could be used by your ingestion framework engine for real-time streaming to Event Hubs and for processing of both batch and streaming via a Databricks Engineering Workspace.</li></ul>|
 |Azure Data Factory    |Optional         | |
 
