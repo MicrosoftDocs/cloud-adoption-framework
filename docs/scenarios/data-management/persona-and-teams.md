@@ -115,7 +115,7 @@ The objective is to organize in a way that allows you to take a 'divide and conq
 
 :::image type="content" source="images/data-governance-review-board-example.png" alt-text="data governance board example":::
 
-Figure 3: Data governance board example
+Figure 3: Data Governance Board example
 
 In the figure 3, the Data Governance Control board has an approval processes for data naming, integrity rules, policies etc. The operating model is independent of location and line of business. There should be a dispute resolution process to overcome disagreements.
 
