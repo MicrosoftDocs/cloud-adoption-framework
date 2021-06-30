@@ -30,13 +30,3 @@ Data product teams have access to a single integrated platform for BI, AI and Co
 Figure 4: Azure Synapse Analytics for integrated data platform experience for BI, AI and continuous intelligence.
 
 This principled approach will help you shift from an application-only approach to an application and data-led approach. This will help your organization build an end-to-end data strategy that can ensure repeatability and scalability across current and future use cases that impact business outcomes.
-
-## Next step: Assess for 'data management and analytics'
-
-The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
-
-- [Plan for 'data management and analytics'](./plan.md)
-- [Review your environment or Azure Landing Zone(s)](./ready.md)
-- [Innovate with 'data management and analytics'](./innovate.md)
-- [Govern 'data management and analytics'](./govern.md)
-- [Manage 'data management and analytics'](./manage.md)

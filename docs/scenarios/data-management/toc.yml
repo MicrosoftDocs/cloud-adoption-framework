@@ -6,6 +6,14 @@ items:
     href: index.md
     pdf_name: Data management and analytics - Microsoft Cloud Adoption Framework for Azure
 
+  - name: Overview
+    items:
+    - name: Data Governance
+      href: overview-data-governance.md                 
+    - name: Data Sharing Agreements
+      href: overview-data-sharing-agreements.md       
+
+
   - name: Build an initial strategy
     href: strategy.md
   - name: Define your plan
@@ -58,42 +66,42 @@ items:
     href: migrate.md
   - name: Govern your data estate
     items:
-    - name: What is data governance?
-      href: data-governance.md
+    - name: Overview
+      href: govern-maturity-model.md                 
     - name: Requirements for Governing Data in a Modern Enterprise
-      href: requirements-for-governing-data-in-a-modern-enterprise.md
+      href: govern-requirements.md
     - name: Components Needed for Data Governance
-      href: components-needed-for-data-governance.md
+      href: govern-components.md
     - name: Technology needed for end to end governance
-      href: technology-needed-for-end-to-end-governance.md
-    - name: Mastering Master Data
-      href: managing-master-data.md
-    - name: Data Governance Maturity Model
-      href: managing-master-data.md                 
-    - name: Data Sharing Agreements
-      href: data-sharing-agreements.md       
+      href: govern-technology.md
   - name: Manage your data estate
     items:
     - name: Overview
       href: manage.md
+    - name: Mastering Master Data
+      href: manage-master-data.md
+
+  - name: Secure your data estate
+    items:
     - name: Authentication
-      href: authentication.md
+      href: secure-authentication.md
     - name: Authorization
-      href: analytics-role-based-access-control.md
+      href: secure-analytics-role-based-access-control.md
     - name: Automating Security
       href: security-provisioning.md
     - name: Data Privacy
-      href: data-privacy.md  
+      href: secure-data-privacy.md  
+
   - name: Organize people and teams
     items:
       - name: Overview
         href: organize.md
       - name: Organize for effective data operations
-        href: dataops.md
+        href: organize-data-operations.md
       - name: Personas and Teams
-        href: persona-and-teams.md
+        href: organize-persona-and-teams.md
       - name: Teams Functions
-        href: team-functions.md
+        href: organize-team-functions.md
 
   - name: Well-Architected considerations
     href: waf-placeholder.md
@@ -101,17 +109,18 @@ items:
   - name: Architectures
     items:
     - name: Data Management Landing Zone
-      href: data-management-landing-zone.md
+      href: architectures/data-management-landing-zone.md
     - name: Data Landing Zone
       items:
       - name: Overview
-        href: data-landing-zone.md
+        href: architectures/data-landing-zone.md
       - name: Data Integrations
-        href: data-landing-zone-data-integration.md
+        href: architectures/data-landing-zone-data-integration.md
       - name: Data Products
-        href: data-landing-zone-data-products.md
+        href: architectures/data-landing-zone-data-products.md
     - name: Frequently Asked Questions
-      href: frequently-asked-questions.md
+      href: architectures/frequently-asked-questions.md
+
     - name: Placeholder (Rick to add AAC RAs)
       href: waf-placeholder.md
 
@@ -120,42 +129,45 @@ items:
     items:
       - name: Data Lake Implementation
         items:  
-        - name: Data Lake Overview
-          href: data-lake-overview.md
+        - name: Data Lake Overview     
+          href: best-practices/data-lake-overview.md
         - name: Data Lake Zones
-          href: data-lake-services.md
+          href: best-practices/data-lake-services.md
         - name: Data Lake Key Considerations
-          href: data-lake-key-considerations.md
+          href: best-practices/data-lake-key-considerations.md
         - name: Managing Data Lake Access
-          href: data-lake-access.md
+          href: best-practices/data-lake-access.md
       - name: Azure Databricks Implementation
-        href: azure-databricks-implementation.md
+        href: best-practices/azure-databricks-implementation.md
       - name: Azure Synapse Analytics Implementation
         items:
+        - name: Overview
+          href: best-practices/synapse.md
         - name: Implementation
-          href: azure-synapse-analytics-implementation.md
+          href: best-practices/azure-synapse-analytics-implementation.md
         - name: High Availability for Azure Synapse Analytics
-          href: /azure/cloud-adoption-framework/migrate/azure-best-practices/analytics/azure-synapse         
+          href: ../../migrate/azure-best-practices/analytics/azure-synapse.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json 
       - name: Azure Purview Implementation
         items:
         - name: Readiness Checklist
-          href: purview-checklist.md 
+          href: best-practices/purview-checklist.md 
         - name: Deployment Best Practices
-          href: purview-deployment.md       
+          href: best-practices/purview-deployment.md       
       - name: Data Landing Zone Ingestion
         items:
         - name: Data Ingestion
-          href: data-ingestion.md
+          href: best-practices/data-ingestion.md
         - name: SAP Data Ingestion
-          href: sap-data-ingestion.md
+          href: best-practices/sap-data-ingestion.md
         - name: Automated Ingestion Pattern
-          href: automated-ingestion-pattern.md
+          href: best-practices/automated-ingestion-pattern.md
       - name: Data Science Environment
         items:
         - name: Data Science Best Practices
-          href: data-science-best-practices.md
+          href: best-practices/data-science-best-practices.md
         - name: Azure Machine Learning
-          href: azure-machine-learning.md
+          href: best-practices/azure-machine-learning.md
+
   - name: Featured Azure products
     items:
     - name: ARM Templates
