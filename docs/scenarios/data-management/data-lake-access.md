@@ -183,9 +183,9 @@ Azure Synapse Analytics leverages the primary storage account for several integr
 
 During the Synapse workspace deployment through [Azure Portal](/features/azure-portal/), you have the option to either provide an existing storage account or create a new one. The provided storage account will be set as the **primary storage account** for the Synapse workspace.
 
-For any of the two options selected, the deployment process automatically grants the Synapse workspace identity, access to the specified Data Lake Storage Gen2 account, using the **Storage Blob Data Contributor** role.
+For any of the two options selected, the deployment process automatically grants the Synapse workspace identity access to the specified Data Lake Storage Gen2 account, using the **Storage Blob Data Contributor** role.
 
-If the deployment of Synapse workspace happens outside of the Azure Portal, you will have to add Synapse workspace identity to the **Storage Blob Data Contributor** role manually later. It is recommended to assign the role **Storage Blob Data Contributor** on the file system level to follow the least privilege principle.  
+If the deployment of Synapse workspace happens outside of the Azure Portal, you will have to add Synapse workspace identity to the **Storage Blob Data Contributor** role manually later. It is recommended to assign the role **Storage Blob Data Contributor** on the container level to follow the least privilege principle.  
 
 When executing Pipelines, workflows, and notebooks through jobs, the Synapse workspace identity permission context is used . If any of the jobs read and/or write to the workspace primary storage, the workspace identity will use the read/write permissions granted through the **Storage Blog Data Contributor**.
 
@@ -193,34 +193,25 @@ When executing Pipelines, workflows, and notebooks through jobs, the Synapse wor
 
 ### Azure Synapse Analytics fine-grained data access control using ACLs
 
-When setting-up Data Lake access control, some organizations require granular level access due to sensitive data stored that cannot be seen by some groups in the organization. Azure RBAC allows read and/or write at the storage account and container level only. For example, assigning a group to Storage Blob Data Contributor role will allow read/write access to all folders in a container. With ACLs you can setup fine-grained access control at the folder and file level to allow read/write on subset of data for specific groups.
+When setting-up Data Lake access control, some organizations require granular level access due to sensitive data stored that cannot be seen by some groups in the organization. Azure RBAC allows read and/or write at the storage account and container level only. With ACLs you can setup fine-grained access control at the folder and file level to allow read/write on subset of data for specific groups.
 
 >[!NOTE]
 >
-> - Assigning Azure RBAC **Reader** role to groups in the Synapse workspace primary storage account is required to be able to list the storage account and containers when using Data Hub in Synapse Studio.
->
-> - Using Data Hub in Synapse Studio, users can browse folders and files before they start writing a query or spark code. Users also have some options available in Synapse Studio to help getting started with queries and reading the data using spark from a specific file. These options include Select Top 100 rows, Create External Table, Load to a Dataframe, and create New Spark Table.
+> - Assigning Azure RBAC **Reader** role to groups in the Synapse workspace primary storage account is required to be able to list the storage account and containers when using Data Hub in Synapse Studio. When using Data Hub in Synapse Studio, users can browse folders and files before they start writing a query or spark code. Users also have some options available in Synapse Studio to help getting started with queries and reading the data using spark from a  file. These options include Select Top 100 rows, Create External Table, Load to a Dataframe, and create New Spark Table.
 
 Refer to the [Assign Azure roles using the Azure portal - Azure RBAC | Microsoft Docs](/azure/role-based-access-control/role-assignments-portal) for detailed instructions on how assign Reader role on the storage account.
 
 #### Granting Read Access on Azure Data Lake Storage Gen 2 using ACLs
 
-The first step on this process, you will need to grant the appropriate ACL permissions at the **container level** in the Storage account for the required groups.
-There are situations where certain groups should not be allowed to read the folders or files in the container root. Instead, these groups should be granted read/write permissions in child folders of the root, and each group may require different permission levels.  
-
-To configure Azure Synapse Analytics data access control with ACLS, please follow the steps in [Configure access using ACLs only](###ConfigureaccessusingACLsonly(RecommendedforEnterpriseScaleAnalyticsandAI))
+The first step on this process, you will need to grant the appropriate ACL permissions at the **container level** in the Storage account for the required groups. To configure Azure Synapse Analytics data access control with ACLs, please refer to [Configure access using ACLs only](###ConfigureaccessusingACLsonly(RecommendedforEnterpriseScaleAnalyticsandAI))
 
 #### Considerations when using Spark Tables in Synapse Spark Pool.
 
 When you use Spark Tables in Synapse Spark Pool, the following folder structure will be created automatically by Synapse workspace in the root of the container in the workspace primary storage.  
 
-synapse/workspaces/{workspacename}/**warehouse**
+"synapse/workspaces/{workspacename}/**warehouse**"
 
-The warehouse container is where the Spark table metadata is stored so these permissions allow the user to leverage Spark SQL. The default permission on the warehouse folder allows for any Spark tables created to inherit RWX permissions for the AAD users and workspace MSI.
-
-![synapse sparkpool acls](./images/synapse-sparkpool-acls.png)
-
-If you plan to create spark tables in Synapse Spark Pool. It is required that you grant write permission on the **warehouse** folder for the group executing the command that creates the Spark Table. If the command is executed through triggered job in a pipeline, you will need to grant write permission to the Synapse workspace identity.
+If you plan to create spark tables in Synapse Spark Pool. It is required that you grant write permission on the **warehouse** folder for the group executing the command that creates the Spark Table. If the command is executed through triggered job in a pipeline, you will need to grant write permission to the Synapse workspace MSI.
 
 Create Spark Table example
 
