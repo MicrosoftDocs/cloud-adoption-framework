@@ -62,6 +62,10 @@ For an overview of business continuity with Azure SQL Database, see [Overview of
 
 For an overview of High Availability with Azure Cosmos DB, see [How does Azure Cosmos DB provide high availability](/azure/cosmos-db/high-availability).
 
+## Azure Machine Learning
+
+For an overview of High Availability with Azure Machine Learning, see [Failover for business continuity and disaster recovery](/azure/machine-learning/how-to-high-availability-machine-learning).
+
 ### Azure Data Factory
 
 As Data Integrations and Data Product are likely to have Azure DevOps (GitHub or any other code version control software) repositories linked to Azure Data Factory, it is possible to deploy pipelines to another Data Factory with minimal downtime. To use code version control softwares apart from GitHub and Azure DevOps Repo will require developers to use ADF SDK to author pipelines and other Azure data factory objects.
