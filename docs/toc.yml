@@ -853,7 +853,7 @@ items:
           href: migrate/azure-best-practices/contoso-migration-scale.md
         - name: Schema migration and DDL commands
           href: migrate/azure-best-practices/analytics/schema-migration-ddl.md
-        - name: High availability for Azure Synapse
+        - name: Database restore points for Azure Synapse
           href: migrate/azure-best-practices/analytics/azure-synapse.md
         - name: Governance or compliance
           href: migrate/azure-best-practices/governance-or-compliance.md
