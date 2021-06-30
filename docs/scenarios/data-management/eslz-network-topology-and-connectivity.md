@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Network topology and connectivity for an data management and analytics
 
-This article builds on a number of considerations and recommendations defined in the Azure landing zone article [enterprise-scale design area for network topology and connectivity](../../ready/enterprise-scale/network-topology-and-connectivity.md). Following the guidance in this article will help examine key design considerations and best practices surrounding networking and connectivity to, from, and within Microsoft Azure and SAP deployments. Since SAP is an mission-critical platform, the guidance on the enterprise-scale design areas should also be included in your design.
+This article builds on a number of considerations and recommendations defined in the Azure landing zone article [enterprise-scale design area for network topology and connectivity](../../ready/enterprise-scale/network-topology-and-connectivity.md). Following the guidance in this article will help examine key design considerations and best practices surrounding networking and connectivity to, from, and data management zones and data landing zones . Since he data management  and data landing zones are mission-critical, the guidance on the enterprise-scale design areas should also be included in your design.
 
 This section outlines the networking patterns to assist with:
 
