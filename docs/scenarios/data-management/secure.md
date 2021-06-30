@@ -1,5 +1,5 @@
 ---
-title: "Manage 'data management and analytics' in Azure"
+title: "Secure 'data management and analytics' in Azure"
 description: Manage 'data management and analytics' in Azure
 author: mboswell
 ms.author: mboswell
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: operate
 ---
 
-# Manage 'data management and analytics'
+# Secure 'data management and analytics'
 
 Data governance is often in between rigid security to restrict risk as much as possible and providing access to perform needed data analytics while maintaining balance among operations, maintenance, and control. Together with the underlying principle of our data lake solution architecture design which is Infrastructure-As-Code and Security-As-Code.
 
