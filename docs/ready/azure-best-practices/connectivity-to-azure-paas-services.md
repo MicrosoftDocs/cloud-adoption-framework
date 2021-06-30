@@ -3,7 +3,7 @@ title: Connectivity to Azure PaaS services
 description: Examine key design considerations and recommendations surrounding connectivity to Azure platform as a service technologies.
 author: JefferyMitchell
 ms.author: brblanch
-ms.date: 02/18/2021
+ms.date: 06/30/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -22,11 +22,18 @@ Building on the previous connectivity sections, this section explores recommende
 
   - [Private Link](/azure/private-link/private-endpoint-overview#private-link-resource) provides dedicated access by using private IP addresses to Azure PaaS instances or custom services behind Azure Load Balancer Standard tier.
 
-  - Virtual network service endpoints provide service-level access from selected subnets to selected PaaS services.
+  - [Virtual network service endpoints](/azure/virtual-network/virtual-network-service-endpoints-overview) provide service-level access from selected subnets to selected PaaS services.
+
+>[!NOTE]
+ > An explanation of the differences between Private Link/Endpoints and VNet Service Endpoints can be found [here.](/azure/private-link/private-link-faq#what-is-the-difference-between-service-endpoints-and-private-endpoints-)
+ >
+ > The key benefits of Private Link can also be found [here.](/azure/private-link/private-link-overview#key-benefits) 
+ >
+ > Private Endpoints are also available for more services than VNet Service Endpoints, as detailed [here.](/azure/private-link/private-link-overview#availability)
 
 - Enterprises often have concerns about public endpoints for PaaS services that must be appropriately mitigated.
 
-- For [supported services](/azure/private-link/private-link-overview#availability), Private Link addresses data exfiltration concerns associated with service endpoints. As an alternative, you can use outbound filtering via NVAs to provide steps to mitigate data exfiltration.
+- For [supported services](/azure/private-link/private-link-overview#availability), Private Link addresses data exfiltration concerns associated with VNet service endpoints. As an alternative, you can use outbound filtering via NVAs to provide steps to mitigate data exfiltration.
 
 **Design recommendations:**
 
