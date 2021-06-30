@@ -111,7 +111,7 @@ With data governance in mind, the following diagram shows the essential stages f
 
 An effective data strategy must have provisions for data governance, but they are mutually inclusive, but not the same thing.
 
-For the purpose of this blog, let's take a closer look at the considerations to take when building design principles for the four layers that are key in your data strategy, focused towards delivering business outcome and value from data.
+For the purpose of this article, let's take a closer look at the considerations to take when building design principles for the four layers that are key in your data strategy, focused towards delivering business outcome and value from data.
 
 ### Data ingestion
 
@@ -167,11 +167,11 @@ The pivot to becoming a data-driven organization is fundamental to deliver compe
 
 There has to be clear understanding around the adopted approach and desired common business objectives among all the key roles involved in making this a success i.e. Leadership Team (C -- Level), Business Unit, IT, Ops etc.
 
-## Communication
+## Communication & Engagement
 
-Communication being one of the most important elements of this framework and requires communication process to be devised between Leadership, Business, IT & Delivery Teams.
+Communication being one of the most important elements of this framework and requires communication process to be devised between Leadership, Business, IT & Delivery Teams. Communication assists in delivering effectively in the context of current project but establishing a forum to stay in line, up-to date and focused on the overall objective of formulating a Holistic Data Strategy for future.
 
-As this would not only assist in delivering effectively in the context of current project but establishing a forum to stay in line, up-to date and focused on the overall objective of formulating a Holistic Data Strategy for future.
+Engagement is essential between those designing (and implementing) the data strategy and those contributing, consuming and exploiting the data - e.g. the business units who will make decisions and build outcomes based upon the data. Put another way, data strategies and associated data platforms that are built without engagement of the "end users" of such platforms risk challenges in relevance and adoption.       
 
 There are couple of key strategic processes which would help in delivering successfully in the context of this framework, both of which are discussed in greater detail when [building your plan](./plan.md):
 
