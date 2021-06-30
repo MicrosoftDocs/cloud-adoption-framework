@@ -9,13 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Personas and Teams
-
-The Enterprise Scale Analytics and AI moves teams from working horizontally across each tier such as Ingest, Processing, Analysis, Consumption and Visualization to vertical Data Landing Zone Groups coexisting together in an agile team. Platform teams such as Data Platform Ops and Platform Ops are grouped together under a common Platform Group.
-
-![Enterprise Scale Analytics and AI Teams](./images/enterprise-scale-analytics-ai-teams.png)
-
-Figure 1: Enterprise Scale Analytics and AI Teams
+# Personas and Teams (Guidance only)
 
 ## Personas
 
@@ -38,6 +32,12 @@ There are multiple personas involved in an Enterprise Scale Analytics and AI dep
 
 >[!NOTE]
 > <sup>1</sup> These roles are assisted by using Azure Policies to control some of the scope over which they would have guidance and control.
+
+The Enterprise Scale Analytics and AI moves teams from working horizontally across each tier such as Ingest, Processing, Analysis, Consumption and Visualization to vertical Data Landing Zone Groups coexisting together in an agile team. Platform teams such as Data Platform Ops and Platform Ops are grouped together under a common Platform Group.
+
+![Enterprise Scale Analytics and AI Teams](./images/enterprise-scale-analytics-ai-teams.png)
+
+Figure 1: Enterprise Scale Analytics and AI Teams
 
 ## Data Landing Zone Teams
 
@@ -111,9 +111,15 @@ With respect to people, there are a number of data governance roles and responsi
 
 :::image type="content" source="images/data-governance-review-board.png" alt-text="data governance review board":::
 
-Figure 1: Data governance organization structure
+Figure 2: Data governance organization structure
 
-The objective is to organize in a way that allows you to take a 'divide and conquer' approach to governing data throughout its lifecycle across a hybrid computing environment. One way of doing this is to have multiple working groups reporting into a Data Governance Control Board (Figure 6) with each working group responsible for a particular data domain / data entity (e.g. Customer) or a data subject area that consists of multiple data entities.
+The objective is to organize in a way that allows you to take a 'divide and conquer' approach to governing data throughout its lifecycle across a hybrid computing environment. One way of doing this is to have multiple working groups reporting into a Data Governance Control Board (Figure 3) with each working group responsible for a particular data domain / data entity (e.g. Customer) or a data subject area that consists of multiple data entities.
+
+:::image type="content" source="images/data-governance-review-board-example.png" alt-text="data governance board example":::
+
+Figure 3: Data Governance Board example
+
+In the figure 3, the Data Governance Control board has an approval processes for data naming, integrity rules, policies etc. The operating model is independent of location and line of business. There should be a dispute resolution process to overcome disagreements.
 
 ## Other Groups
 
