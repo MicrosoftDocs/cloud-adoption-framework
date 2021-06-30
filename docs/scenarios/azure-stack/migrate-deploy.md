@@ -20,9 +20,9 @@ By using Azure Stack, your organization can run its own instance of Azure in its
 
 ## Infrastructure as a service deployment
 
-Regardless of the reason to deploy infrastructure as a service (IaaS), deployment to Azure Stack Hub is similar to any other IaaS deployment. People often think of IaaS only as virtual machines (VMs), but IaaS is more than that. When you deploy a VM in Azure or Azure Stack, the machine comes with a software-defined network, including Domain Name System, public IPs, firewall rules (also called network security groups), and many other capabilities. The VM deployment also creates disks for your VMs on software-defined storage by using Azure Blob storage.
+Regardless of the reason to deploy infrastructure as a service (IaaS), deployment to Azure Stack Hub is similar to any other IaaS deployment. People often think of IaaS only as virtual machines (VMs), but IaaS is more than that. When you deploy a VM in Azure or Azure Stack, the machine comes with a software-defined network, including Domain Name System, public IPs, firewall rules (also called network security groups), and many other capabilities. The VM deployment also creates disks for your VMs on software-defined storage by using Azure Blob Storage.
 
-For deeper guidance on deploying VMs to Azure Stack, see the [Azure Stack compute overview](/azure-stack/user/azure-stack-compute-overview?view=azs-2002).
+For deeper guidance on deploying VMs to Azure Stack, see the [Azure Stack compute overview](/azure-stack/user/azure-stack-compute-overview).
 
 ## Platform as a service deployment
 
@@ -34,12 +34,12 @@ When the cloud runs in your datacenter, your stack hub administrators will need 
 
 After the Azure Stack Hub administrator has properly configured your stack instance, migrations can continue as they would with most other Azure migration efforts. By using Azure Stack, your team can run any of the following types of migration:
 
-- [Ethereum blockchain network](/azure-stack/user/azure-stack-ethereum?view=azs-2002)
-- [AKS engine](/azure-stack/user/azure-stack-kubernetes-aks-engine-overview?view=azs-2002)
-- [Azure Cognitive Services](/azure-stack/user/azure-stack-solution-template-cognitive-services?view=azs-2002)
-- [C# ASP.NET web app](/azure-stack/user/azure-stack-dev-start-howto-vm-dotnet?view=azs-2002)
-- [Linux VM](/azure-stack/user/azure-stack-dev-start-howto-deploy-linux?view=azs-2002)
-- [Java web app](/azure-stack/user/azure-stack-dev-start-howto-vm-java?view=azs-2002)
+- [Ethereum blockchain network](/azure-stack/user/azure-stack-ethereum)
+- [AKS engine](/azure-stack/user/azure-stack-kubernetes-aks-engine-overview)
+- [Azure Cognitive Services](/azure-stack/user/azure-stack-solution-template-cognitive-services)
+- [C# ASP.NET web app](/azure-stack/user/azure-stack-dev-start-howto-vm-dotnet)
+- [Linux VM](/azure-stack/user/azure-stack-dev-start-howto-deploy-linux)
+- [Java web app](/azure-stack/user/azure-stack-dev-start-howto-vm-java)
 
 ## Additional considerations during migration
 

@@ -30,7 +30,7 @@ Common examples of AI applications include:
 Follow these guidelines to plan your AI application development and deployment:
 
 - Become familiar with the multitude of capabilities and services offered within Azure Cognitive Services, and determine which ones you'll be using.
-- Determine whether you have custom data with which you want to train and customize AI models. Certain Cognitive Services are customizable.
+- Determine whether you have custom data with which you want to train and customize AI models. Certain services can be customized.
 - Explore the Azure Cognitive Services quickstart tutorials to learn how to use SDK and REST APIs. The Cognitive Services SDKs are available for many popular dev languages, including C#, Python, Java, JavaScript, and Go.
 - Determine whether you need to deploy these Cognitive Services in containers.
 

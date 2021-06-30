@@ -79,7 +79,7 @@ For several reasons, the CCoE then has trouble providing a monolithic managed se
 
 ### Preferred outcome: Provide guardrails
 
-When adopting cloud technologies, have the IT department gain firsthand experience with the cloud by starting with IT workloads. Use the [Microsoft Cloud Adoption Framework for Azure](../index.yml) to identify your [first adoption project](../strategy/first-adoption-project.md).
+When adopting cloud technologies, have the IT department gain firsthand experience with the cloud by starting with IT workloads. Use the [Microsoft Cloud Adoption Framework for Azure](../index.yml) to identify your [first adoption project](../strategy/motivations.md).
 
 Use a mature [cloud operating model](../operating-model/compare.md) such as [centralized operations](../operating-model/compare.md#centralized-operations) that makes IT responsible for defining platform guardrails like governance. Then business units can adopt cloud projects in a secure and consistent manner, within the guardrails that IT defines.
 
@@ -96,4 +96,4 @@ For cloud workloads, advise IT to use familiar procedures that operate safely an
 ## Next steps
 
 - [Overview of the reliability pillar](/azure/architecture/framework/resiliency/overview)
-- [First adoption project](../strategy/first-adoption-project.md)
+- [First adoption project](../strategy/motivations.md)

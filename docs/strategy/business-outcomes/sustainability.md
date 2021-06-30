@@ -18,6 +18,7 @@ ms.custom: internal
 Though the impact and benefits of the cloud have been traditionally measured with financial and efficiency metrics, it's become more common for customers to seek understanding about how the cloud can help them to achieve their sustainability and environmental goals. Cloud computing can support your organization to reduce carbon emissions, use resources more efficiently, and lessen your environmental footprint.
 
 Watch the following video to learn more about sustainability and how cloud migration opens the door to sustainable solutions that are good for the planet and good for your business.
+
 <!-- markdownlint-disable MD034 -->
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWx4po]
@@ -27,6 +28,7 @@ Watch the following video to learn more about sustainability and how cloud migra
 Microsoft has been leading in many of these areas. The company has been operating as carbon-neutral since 2012 and has made a commitment to be carbon-negative by 2030. [The carbon benefits of cloud computing](https://download.microsoft.com/download/7/3/9/739BC4AD-A855-436E-961D-9C95EB51DAF9/Microsoft_Cloud_Carbon_Study_2018.pdf), a study on the Microsoft cloud in partnership with WSP, supports research on how moving on-premises datacenters to the Microsoft cloud can significantly reduce carbon footprints.
 
 <!-- docutune:casing "Bühler Insights" -->
+<!-- cspell:ignore Bühler -->
 
 [Bühler Group's](https://customers.microsoft.com/story/730776-buhler-group-consumer-goods-azure-iot-germany)'s IoT platform, known as Bühler Insights and powered by Azure IoT Hub, generates vital data so customers can monitor machine performance and generate accurate records for every product batch, helping food producers optimize safety, sustainability, and transparency across the supply chain.
 
@@ -45,9 +47,9 @@ Read more about how Microsoft's [commitment to a planet-sized challenge](https:/
 
 Focusing on sustainability and protecting limited environmental resources is key to our future, and this focus also benefits business. Today, companies can draw from a broad range of assets and resources that can help them to expand into new geographic areas and develop innovative resource management solutions.
 
-AGL, one of Australia's leading integrated energy companies, built a solution on Azure that remotely manages networked solar batteries. Learn about how the company is [growing an innovative energy partnership across Australia](https://customers.microsoft.com/doclink/847171-agl-energy-azure-en-australia) to help local customers give back to the grid.
+AGL, one of Australia's leading integrated energy companies, built a solution on Azure that remotely manages networked solar batteries. Learn about how the company is [growing an innovative energy partnership across Australia](https://customers.microsoft.com/story/847171-agl-energy-azure-en-australia) to help local customers give back to the grid.
 
-Bee'ah is a sustainability pioneer in the Middle East that believes in technology and sustainability creating solutions for the future. Their services include waste management, environmental consulting, renewable energy, and sustainable transportation. Azure has supported the company to launch the first AI platform to digitize all operations and services. Read more about how the [cloud drives sustainable management and digital innovation](https://customers.microsoft.com/doclink/739894-beeah-sharjah-environment-professional-services-azure-united-arab-emirates) throughout the company's sustainability journey.
+Bee'ah is a sustainability pioneer in the Middle East that believes in technology and sustainability creating solutions for the future. Their services include waste management, environmental consulting, renewable energy, and sustainable transportation. Azure has supported the company to launch the first AI platform to digitize all operations and services. Read more about how the [cloud drives sustainable management and digital innovation](https://customers.microsoft.com/story/739894-beeah-sharjah-environment-professional-services-azure-united-arab-emirates) throughout the company's sustainability journey.
 
 These customer stories demonstrate how prioritizing sustainability and environmental solutions can help organizations to create new business opportunities.
 

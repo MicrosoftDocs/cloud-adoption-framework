@@ -11,6 +11,7 @@ ms.custom: internal
 ---
 
 <!-- docutune:casing ExakTime "Descartes MacroPoint" -->
+<!-- cspell:ignore Exak -->
 
 # Examples of customer engagement outcomes
 

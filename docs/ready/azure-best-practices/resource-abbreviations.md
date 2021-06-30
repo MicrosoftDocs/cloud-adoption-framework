@@ -41,6 +41,7 @@ This list provides recommended abbreviations for various Azure resource types to
 | DNS | `Microsoft.Network/dnsZones` | `dnsz-` |
 | DNS zone | `Microsoft.Network/privateDnsZones` | `pdnsz-` |
 | Firewall | `Microsoft.Network/azureFirewalls` | `afw-` |
+| Firewall policy | `Microsoft.Network/firewallPolicies` | `afwp-` |
 | ExpressRoute circuit | `Microsoft.Network/expressRouteCircuits` | `erc-` |
 | Front Door instance | `Microsoft.Network/frontDoors` | `fd-` |
 | Front Door firewall policy | `Microsoft.Network/frontdoorWebApplicationFirewallPolicies` | `fdfp-`|
@@ -65,8 +66,8 @@ This list provides recommended abbreviations for various Azure resource types to
 | Virtual network subnet | `Microsoft.Network/virtualNetworks/subnets` | `snet-`|
 | Virtual WAN | `Microsoft.Network/virtualWans` | `vwan-`|
 | VPN Gateway| `Microsoft.Network/vpnGateways` | `vpng-`|
-| VPN connection | `Microsoft.Network/vpnGateways/vpnConnections` | `cn-` |
-| VPN site | `Microsoft.Network/vpnGateways/vpnSites` | `st-` |
+| VPN connection | `Microsoft.Network/vpnGateways/vpnConnections` | `vcn-` |
+| VPN site | `Microsoft.Network/vpnGateways/vpnSites` | `vst-` |
 | Virtual network gateway | `Microsoft.Network/virtualNetworkGateways` | `vgw-` |
 | Web Application Firewall (WAF) policy | `Microsoft.Network/firewallPolicies` | `waf` |
 | Web Application Firewall (WAF) policy rule group | `Microsoft.Network/firewallPolicies/ruleGroups` | `wafrg` |
@@ -89,7 +90,7 @@ This list provides recommended abbreviations for various Azure resource types to
 | Notification Hubs | `Microsoft.NotificationHubs/namespaces/notificationHubs` | `ntf-` |
 | Notification Hubs namespace | `Microsoft.NotificationHubs/namespaces` | `ntfns-` |
 | Snapshot | `Microsoft.Compute/snapshots` | `snap-` |
-| Static web app | `Microsoft.Web/sites` | `stapp` |
+| Static web app | `Microsoft.Web/staticSites` | `stapp-` |
 | Virtual machine | `Microsoft.Compute/virtualMachines` | `vm` |
 | Virtual machine scale set | `Microsoft.Compute/virtualMachineScaleSets` | `vmss-` |
 | VM storage account | `Microsoft.Storage/storageAccounts` | `stvm` |
@@ -113,7 +114,7 @@ This list provides recommended abbreviations for various Azure resource types to
 | Azure SQL Database server | `Microsoft.Sql/servers` | `sql-` |
 | Azure SQL database | `Microsoft.Sql/servers/databases` | `sqldb-` |
 | Azure Synapse Analytics | `Microsoft.Synapse/workspaces` | `syn-` |
-| Azure Synapse Analytics Workspaces | `Microsoft.Synapse/workspaces` | `syn-` |
+| Azure Synapse Analytics Workspaces | `Microsoft.Synapse/workspaces` | `synw-` |
 | Azure Synapse Analytics SQL Dedicated Pool | `Microsoft.Synapse/workspaces/sqlPools` | `syndw-` |
 | Azure Synapse Analytics Spark Pool | `Microsoft.Synapse/workspaces/sqlPools` | `synspark-` |
 | MySQL database | `Microsoft.DBforMySQL/servers` | `mysql-` |
@@ -151,6 +152,7 @@ This list provides recommended abbreviations for various Azure resource types to
 | Event Hubs namespace | `Microsoft.EventHub/namespaces` | `evhns-` |
 | Event hub | `Microsoft.EventHub/namespaces/eventHubs` | `evh-` |
 | Event Grid domain | `Microsoft.EventGrid/domains` | `evgd-` |
+| Event Grid subscriptions | `Microsoft.EventGrid/eventSubscriptions` | `evgs-` |
 | Event Grid topic | `Microsoft.EventGrid/domains/topics` | `evgt-` |
 | HDInsight - Hadoop cluster | `Microsoft.HDInsight/clusters` | `hadoop-` |
 | HDInsight - HBase cluster | `Microsoft.HDInsight/clusters` | `hbase-` |
@@ -169,7 +171,6 @@ This list provides recommended abbreviations for various Azure resource types to
 | Asset type | Resource provider namespace/Entity | Abbreviation |
 |--|--|--|
 | App Configuration store | `Microsoft.AppConfiguration/configurationStores` | `appcs-` |
-| Azure Static Web Apps | `Microsoft.Web/sites` | `stap-` |
 | SignalR | `Microsoft.SignalRService/SignalR` | `sigr` |
 
 ## Integration

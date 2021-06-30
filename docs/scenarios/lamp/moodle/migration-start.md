@@ -45,6 +45,8 @@ The first step in the migration process is to copy the Moodle backup archive fro
 
 For more information about PuTTY, see [PuTTY general FAQ/troubleshooting questions](https://documentation.help/PuTTY/faq.html).
 
+<!-- cspell:ignore downloadazcopy -->
+
 ### Download and install AzCopy on the controller VM
 
 After you sign in to the controller VM, run the following commands to install AzCopy:
@@ -76,6 +78,8 @@ Before you start the import process, it's recommended to back up the default or 
    mv /moodle/html/moodle /home/azureadmin/backup/moodle/html/moodle
    mv /moodle/moodledata /home/azureadmin/backup/moodle/moodledata
    ```
+
+<!-- cspell:ignore zxvf -->
 
 ### Copy the Moodle archive to the controller VM
 
@@ -261,6 +265,8 @@ Update the Azure cloud DNS name to the on-premises Moodle application's DNS name
    The on-premises root directory can be at any location.
 
 1. After making the changes, press Ctrl+O to save the file and Ctrl+X to exit.
+
+<!-- cspell:ignore mbstring mcrypt bcmath -->
 
 ### Install any missing PHP extensions
 

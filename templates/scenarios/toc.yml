@@ -1,0 +1,68 @@
+items:
+  - name: <<Token-Name>> - Microsoft Cloud Adoption Framework for Azure
+    href: index.md
+    pdf_name: <<Token-Name>> - Microsoft Cloud Adoption Framework for Azure
+  - name: Strategic impact
+    href: strategy.md
+  - name: Technical planning
+    href: plan.md
+  - name: Prepare your environments
+    items: 
+    - name: Azure Landing Zones
+      href: ready.md
+    - name: Design areas
+      items:
+      - name: Identity and access management
+        href: eslz-identity-and-access-management.md
+      - name: Network topology and connectivity
+        href: eslz-network-topology-and-connectivity.md
+      - name: Resource organization
+        href: eslz-resource-organization.md
+      - name: Governance discipline
+        href: eslz-security-governance-and-compliance.md
+      - name: Operations baseline
+        href: eslz-management-and-monitoring.md
+      - name: Business continuity and disaster recovery
+        href: eslz-business-continuity-and-disaster-recovery.md
+      - name: Platform automation and DevOps
+        href: eslz-platform-automation-and-devops.md
+    - name: Implementation options
+      items:
+      - name: Enterprise-scale for <<Token-LongName>>
+        href: enterprise-scale-landing-zone.md
+      - name: TODO - Add reference to smaller RA from AAC here
+        href: enterprise-scale-landing-zone.md?add-toc-and-breadcrumb-here
+
+  - name: Migrate <<Token-Name>> to Azure
+    href: migrate.md
+  - name: Innovate with <<Token-Name>> on Azure
+    href: migrate.md
+  - name: Govern <<Token-Name>> in Azure
+    href: govern.md
+  - name: Manage <<Token-Name>> platform and workloads
+    href: manage.md
+
+  - name: Well-architected - TBD
+    items:
+    - name: Example
+      href: /azure
+
+  - name: Architectures - TBD
+    items:
+    - name: Example
+      href: /azure
+
+  - name: Best practices - TBD
+    items:
+    - name: Example
+      href: /azure
+       
+  - name: Microsoft products - Add links to product docs
+    items:
+    - name: Example
+      href: /azure
+
+  - name: Learn modules - TBD
+    items:
+    - name: Example
+      href: /azure

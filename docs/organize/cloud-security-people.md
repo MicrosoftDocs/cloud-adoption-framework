@@ -23,7 +23,7 @@ Modernization of this function includes:
 - **Realistic expectations:** Accept that users will sometimes open phishing emails, and instead focus success metrics on reducing the rate versus expecting to stop 100 percent of opening.
 - **Organizational culture change:** Organizational leadership must drive an intentional culture change to make security a priority for each member of the organization.
 - **Increased insider risk focus** to help organizations protect valuable trade secrets and other data with highly profitable illicit use cases (such as customer locations or communication records).
-- **Improved insider risk detection** which takes advantage of cloud capabilities for activity logging, behavior analytics, and machine learning (machine learning).
+- **Improved insider risk detection** which takes advantage of cloud capabilities for activity logging, behavior analytics, and machine learning.
 
 ## Team composition and key relationships
 
