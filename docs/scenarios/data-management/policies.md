@@ -29,7 +29,7 @@ Azure Policy is essential to ensuring security and compliance within Enterprise 
 Azure policies in Enterprise Scale Analytics And AI were developed with the following design considerations in mind:
 
 - Azure Policy are used to implement governance and enforce rules for resource consistency, regulatory compliance, security, cost, and management.
-- Built in policies which are available should be used to save time.
+- Pre-built policies which are available should be used to save time.
 - Policies are assigned to the highest level possible in the management group tree to simplify the management of policies.
 - The number of Azure Policy assignments made at the root management group scope are limited to avoid managing through exclusions at inherited scopes.
 - Policy exceptions are only be used if required and should require global admin approval.
@@ -40,7 +40,7 @@ Azure policies in Enterprise Scale Analytics And AI were developed with the foll
 
 Enterprise Scale Analytics and AI contains custom policies pertaining to **resource and cost management, authentication, encryption, network isolation, logging, resilience and more**. An updated list of policies can be found here:
 
-[Data service policies](https://github.com/Azure/data-management-zone/docs/EnterpriseScaleAnalytics-Policies.md)
+[Data service policies](https://github.com/Azure/data-management-zone/tree/main/infra/Policies/readme.md)
 
 > [!NOTE]
 > The policies provided are not applied by default during deployment. They should be viewed as guidance-only and can be applied depending on business requirements. Policies should always be applied to the highest level possible and in most cases this will be a [management group](/azure/governance/management-groups/overview). All the policies are available in our GitHub repository.

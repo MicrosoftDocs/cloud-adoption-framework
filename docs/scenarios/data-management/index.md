@@ -35,7 +35,7 @@ This scenario is designed to guide the end-2-end customer journey, throughout th
 
 **Improve controls across your data estate:** Focus on the Govern and Manage articles to integrate 'data management and analytics' into your existing operations processes. Use the Ready article to deploy controls across all of your cloud environments.
 
-**Influence changes to individual workloads (Central IT & governance):** As your 'data management and analytics' processes improve, the central data governance teams will encounter requirements that depend on knowledge of the architecture behind individual workloads. Use the Well-architected guidance to help workload owners understand potential improvements to their workloads that will improve data operations.
+**Influence changes to individual workloads (Central IT & governance):** As your 'data management and analytics' processes improve improve, the central data governance teams will encounter requirements that depend on knowledge of the architecture behind individual workloads. Use the Well-architected guidance to help workload owners understand potential improvements to their workloads that will improve data operations.
 
 **Optimize individual workloads (Workload teams):** Workload owners should start with the well-architected guidance to understand the best ways to integrate 'data management and analytics' strategies into their workloads. If the team is also supported by central IT and governance teams, this guidance will provide insights into best practices and architectures that the those teams are typically accountable to deliver to accelerate your workload development.
 

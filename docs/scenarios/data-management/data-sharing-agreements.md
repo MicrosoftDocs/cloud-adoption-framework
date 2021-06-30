@@ -1,8 +1,8 @@
 ---
 title: "Data Sharing Agreements"
 description: Data Sharing Agreements
-author: pietheinstrengholt
-ms.author: pstrengholt
+author: pstrengholt
+ms.author: pietheinstrengholt
 ms.date: 06/21/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
