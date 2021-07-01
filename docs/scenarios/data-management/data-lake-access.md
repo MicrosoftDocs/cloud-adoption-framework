@@ -139,8 +139,6 @@ The recommended security pattern for each of the of the Data Lake Zones is:
 
 There is no single approach to managing data lake access that will suit everyone. One of the major benefits of a data lake is to democratize and provide friction-free access to data however in reality different organizations will have different levels of governance and control over their data. Some have a centralized team which manages access and the provisioning of AAD groups with rigorous internal controls. Some are more agile and have decentralized control. The approach chosen should meet the required level of governance but should not result in undue delays or friction in gaining access to data, otherwise the value of the data lake may be diminished, or even worse may result in silos, the very thing data lakes are designed to prevent.
 
-
-
 ![Data Lake Zones Security](./images/adls-security-zones.png)
 
 The recommended security pattern for each of the of the Data Lake Zones is:
@@ -203,9 +201,9 @@ Refer to the [Assign Azure roles using the Azure portal - Azure RBAC | Microsoft
 
 #### Granting Read Access on Azure Data Lake Storage Gen 2 using ACLs
 
-The first step on this process, you will need to grant the appropriate ACL permissions at the **container level** in the Storage account for the required groups. To configure Azure Synapse Analytics data access control with ACLs, please refer to [Configure access using ACLs only](###ConfigureaccessusingACLsonly(RecommendedforEnterpriseScaleAnalyticsandAI))
+The first step on this process, you will need to grant the appropriate ACL permissions at the **container level** in the Storage account for the required groups. To configure Azure Synapse Analytics data access control with ACLs, please refer to [Configure access using ACLs only (Recommended for Enterprise Scale Analytics and AI)](#configure-access-using-acls-only-recommended-for-enterprise-scale-analytics-and-ai)
 
-#### Considerations when using Spark Tables in Synapse Spark Pool.
+#### Considerations when using Spark Tables in Synapse Spark Pool
 
 When you use Spark Tables in Synapse Spark Pool, the following folder structure will be created automatically by Synapse workspace in the root of the container in the workspace primary storage.  
 
