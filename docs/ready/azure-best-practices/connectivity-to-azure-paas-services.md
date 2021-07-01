@@ -42,7 +42,7 @@ Building on the previous connectivity sections, this section explores recommende
 
   - Accessing Azure PaaS Services from on-premises via ExpressRoute with Microsoft Peering does not prevent access to the public endpoints of the PaaS service. This must be configured and restricted as required separately.
 
-  - ExpressRoute with Microsoft Peering has IP addressing and routing requirements that must be met before using as documented [here](/azure/expressroute/expressroute-routing#ip-addresses-used-for-microsoft-peering), which may not be able to be met by all. Using Private Link with ExpressRoute with Private Peering, as recommended and listed as a key benefit of Private Link avoids these requirements.
+  - ExpressRoute with Microsoft Peering has IP addressing and routing requirements that must be met before using as documented [here](/azure/expressroute/expressroute-routing#ip-addresses-used-for-microsoft-peering), which may not be able to be met by all. Using Private Link with ExpressRoute with Private Peering, as recommended and listed as a key benefit of Private Link, avoids these requirements.
 
 - Use virtual network service endpoints to secure access to Azure PaaS services from within your virtual network, but only when Private Link isn't available and there are no data exfiltration concerns. To address data exfiltration concerns with service endpoints, use NVA filtering or use virtual network service endpoint policies for Azure Storage.
 
