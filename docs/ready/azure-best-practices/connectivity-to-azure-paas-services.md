@@ -3,7 +3,7 @@ title: Connectivity to Azure PaaS services
 description: Examine key design considerations and recommendations surrounding connectivity to Azure platform as a service technologies.
 author: JefferyMitchell
 ms.author: brblanch
-ms.date: 06/30/2021
+ms.date: 07/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -41,8 +41,6 @@ Building on the previous connectivity sections, this section explores recommende
 - Access Azure PaaS services from on-premises via [ExpressRoute with Private peering](/azure/expressroute/expressroute-circuit-peerings#privatepeering). Use either virtual network injection for dedicated Azure services or Azure Private Link for available shared Azure services. To access Azure PaaS services from on-premises when virtual network injection or Private Link isn't available, use [ExpressRoute with Microsoft peering](/azure/expressroute/expressroute-circuit-peerings#microsoftpeering). This method avoids transiting over the public internet.
 
   - Accessing Azure PaaS Services from on-premises via ExpressRoute with Microsoft Peering does not prevent access to the public endpoints of the PaaS service. This must be configured and restricted as required separately.
-
-  - ExpressRoute with Microsoft Peering has IP addressing and routing requirements that must be met before using as documented [here](/azure/expressroute/expressroute-routing#ip-addresses-used-for-microsoft-peering), which may not be able to be met by all. Using Private Link with ExpressRoute with Private Peering, as recommended and listed as a key benefit of Private Link, avoids these requirements.
 
 - Use virtual network service endpoints to secure access to Azure PaaS services from within your virtual network, but only when Private Link isn't available and there are no data exfiltration concerns. To address data exfiltration concerns with service endpoints, use NVA filtering or use virtual network service endpoint policies for Azure Storage.
 
