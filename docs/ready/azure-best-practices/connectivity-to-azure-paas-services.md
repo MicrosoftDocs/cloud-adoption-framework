@@ -20,16 +20,11 @@ Building on the previous connectivity sections, this section explores recommende
 
   - Virtual network injection provides dedicated private deployments for supported services. Management plane traffic still flows through public IP addresses.
 
-  - [Private Link](/azure/private-link/private-endpoint-overview#private-link-resource) provides dedicated access by using private IP addresses to Azure PaaS instances or custom services behind Azure Load Balancer Standard tier.
+  - [Private Link](/azure/private-link/private-endpoint-overview#private-link-resource) provides dedicated access by using private IP addresses to Azure PaaS instances or custom services behind Azure Load Balancer Standard tier. The key benefits of Private Link can be found [here.](/azure/private-link/private-link-overview#key-benefits)
 
-  - [Virtual network service endpoints](/azure/virtual-network/virtual-network-service-endpoints-overview) provide service-level access from selected subnets to selected PaaS services.
+  - [Virtual network service endpoints](/azure/virtual-network/virtual-network-service-endpoints-overview) provide service-level access from selected subnets to selected PaaS services. Review the list of supported services on the link provided.
 
->[!NOTE]
- > An explanation of the differences between Private Link/Endpoints and VNet Service Endpoints can be found [here.](/azure/private-link/private-link-faq#what-is-the-difference-between-service-endpoints-and-private-endpoints-)
- >
- > The key benefits of Private Link can also be found [here.](/azure/private-link/private-link-overview#key-benefits) 
- >
- > Private Endpoints are also available for more services than VNet Service Endpoints, as detailed [here.](/azure/private-link/private-link-overview#availability)
+  - An explanation of the differences between Private Link/Endpoints and VNet Service Endpoints can be found [here.](/azure/private-link/private-link-faq#what-is-the-difference-between-service-endpoints-and-private-endpoints-)
 
 - Enterprises often have concerns about public endpoints for PaaS services that must be appropriately mitigated.
 
