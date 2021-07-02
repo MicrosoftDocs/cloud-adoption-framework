@@ -14,7 +14,7 @@ ms.custom: think-tank, e2e-aks
 
 This article walks through aspects of Azure Kubernetes Service (AKS) security governance to think about before implementing any solution.
 
-Most of this content is technology-agnostic, because implementation varies among customers. The article focuses on how to implement solutions using Azure and some open-source software.
+Most of this content is technology-agnostic, because implementation varies among customers. The article focuses on how to implement solutions using Azure and some open-source software. On the other side, part of the governance building will be predefined by the decisions taken when building the Enterprise-Scale Landing Zone, as described in [Enterprise-scale security governance and compliance](/azure/cloud-adoption-framework/ready/enterprise-scale/security-governance-and-compliance), so make sure you understand the overall governance principles described in that document.
 
 ## Attack surfaces
 
@@ -169,10 +169,11 @@ AKS has several interfaces to other Azure services like Azure Active Directory, 
 
 Here are some other design considerations for AKS security governance and compliance:
 
-- Decide whether the cluster's control plane is accessible via the internet, which is the default, or only within a specific virtual network as a private cluster.
-- Evaluate using the built-in [AppArmor](/azure/aks/operator-best-practices-cluster-security#app-armor) Linux security module to limit actions that containers can perform, like read, write, execute, or system functions like mounting file systems.
-- Evaluate using [secure computing (seccomp)](/azure/aks/operator-best-practices-cluster-security#secure-computing) at the process level to limit the process calls that containers can perform.
-- Decide whether your private Container Registry instance is accessible via the internet, or only within a specific virtual network.
+- If creating an AKS cluster in a subscription deployed according to Enterprise-Scale Landing Zone best practices, get familiar with the Azure Policies that will be inherited by the clusters, as described in [Policies included in Enterprise-Scale Landing Zones reference implementations](https://github.com/Azure/Enterprise-Scale/blob/main/docs/ESLZ-Policies.md).
+- Decide whether the cluster's control plane is accessible via the internet, which is the default, or only within a specific virtual network as a private cluster. Note that as described in [Policies included in Enterprise-Scale Landing Zones reference implementations](https://github.com/Azure/Enterprise-Scale/blob/main/docs/ESLZ-Policies.md), if your organization is following ESLZ best practices the "corp" Management Group will have an Azure Policy associated that force clusters to be private.
+- Evaluate using the built-in [AppArmor](/azure/aks/operator-best-practices-cluster-security#app-armor) Linux security module to limit actions that containers can perform, like read, write, execute, or system functions like mounting file systems. For example, as described in [Policies included in Enterprise-Scale Landing Zones reference implementations](https://github.com/Azure/Enterprise-Scale/blob/main/docs/ESLZ-Policies.md), all subscriptions will have Azure Policies that prevent pods in all AKS clusters from creating privileged containers.
+- Evaluate using [secure computing (seccomp)](/azure/aks/operator-best-practices-cluster-security#secure-computing) at the process level to limit the process calls that containers can perform. For example, the Azure Policy applied as part of the generic ESLZ implmentation in the Landing Zones Management Group to prevent container privilege escalation to root leverages seccomp through Azure Policies for Kubernetes
+- Decide whether your Azure Container Registry is accessible via the Internet, or only within a specific virtual network. Note that disabling Internet access in an Azure Container Registry can have negative effects on other systems that rely on public connectivity to access it, such as Continuous Integration pipelines or Azure Defender for image scanning (see [Connect privately to an Azure container registry using Azure Private Link](/azure/container-registry/container-registry-private-link) for more information).
 - Decide whether your private Container Registry instance is being shared across multiple landing zones or if you deploy a dedicated container registry to each landing zone subscription.
 - Consider using a security solution like [Azure Defender for Kubernetes](/azure/security-center/defender-for-kubernetes-introduction) for threat detection.
 - Consider scanning your container images for vulnerabilities.
@@ -183,12 +184,11 @@ Here are some other design considerations for AKS security governance and compli
 - [Secure pod access to resources](/azure/aks/developer-best-practices-pod-security#secure-pod-access-to-resources). Provide the least number of permissions, and avoid using root or privileged escalation.
 - Use [pod-managed identities](/azure/aks/operator-best-practices-identity#use-pod-managed-identities) and [Azure Key Vault provider for Secrets Store CSI Driver](/azure/aks/csi-secrets-store-driver) to protect secrets, certificates, and connection strings.
 - Use [AKS node image upgrade](/azure/aks/node-image-upgrade) to update AKS cluster node images if possible, or [kured](/azure/aks/node-updates-kured) to automate node reboots after applying updates.
-- Monitor and enforce configuration by using the [Azure Policy add-on for Kubernetes](/azure/aks/use-azure-policy).
+- Monitor and enforce configuration by using the [Azure Policy add-on for Kubernetes](/azure/aks/use-azure-policy). In subscriptions deployed according to Enterprise-Scale Landing Zones best practices, this will happen automatically through an Azure Policy deployed at the Management Group level.
 - View AKS recommendations in [Azure Security Center](/azure/security-center/security-center-introduction).
-- Use [Azure Defender for Kubernetes](/azure/security-center/defender-for-kubernetes-introduction)
+- Use [Azure Defender for Kubernetes](/azure/security-center/defender-for-kubernetes-introduction). Note that this is configured automatically in AKS clusters created in subscriptions deployed according to Enterprise-Scale Landing Zones best practices, which foresee an Azure Policy to automatically onboard AKS clusters to Azure Defender at the Management Group level.
 - Deploy a dedicated and private instance of [Azure Container Registry](/azure/container-registry/) to each landing zone subscription.
 - Use [Private Link for Azure Container Registry](/azure/container-registry/container-registry-private-link) to connect it to AKS.
 - Scan your images for vulnerabilities with [Azure Defender for container registries](/azure/security-center/defender-for-container-registries-introduction), or any other image scanning solution. 
 > [!IMPORTANT]
 > Azure Defender image scanning is not compatible with Container Registry endpoints. For more information, see [Connect privately to an Azure Container Registry using Private Link](/azure/container-registry/container-registry-private-link).
-- Monitor and enforce configuration by using the [Azure Policy add-on for Kubernetes](/azure/aks/use-azure-policy).
