@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Data Integrations
 
-The role of Integrations Ops is explained under [Integration Ops (per integration)](persona-and-teams.md#integration-ops-per-integration). 
+The role of Integrations Ops is explained under [Integration Ops (per integration)](../organize-persona-and-teams.md#integration-ops-per-integration). 
 
 A Data Integration resource group is responsible for data ingestion and enrichment only from external sources such a telemetry, finance, CRM etc. This layer can operate in both real-time, batch and micro-batch.
 
@@ -19,7 +19,7 @@ This section explains the infrastructure which is deployed for each Data Integra
 
 ## Overview
 
-![Integrations](./images/integration-resource-group.png)
+![Integrations](../images/integration-resource-group.png)
 
 *Figure 1: Data Integration resource group*
 
@@ -60,7 +60,7 @@ If the Integration has a requirement to stream data in, it is possible to deploy
 
 ## Configuration specific to Databricks of adding a Integration to a Data Landing Zone
 
-![Adding Permissions to Databricks Workspaces](./images/adding-permissions-databricks-workspaces.png)
+![Adding Permissions to Databricks Workspaces](../images/adding-permissions-databricks-workspaces.png)
 
 *Figure 2: Adding Permissions to Databricks Workspaces*
 

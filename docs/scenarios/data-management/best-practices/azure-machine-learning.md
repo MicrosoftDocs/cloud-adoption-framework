@@ -11,14 +11,14 @@ ms.subservice: ready
 
 # Azure Machine Learning as a data product
 
-Azure Machine Learning should be considered a [data product](data-landing-zone-data-products.md) and can be used to enable the end-to-end data science development activities. Data Product and Science teams will interact with this workspace to explore and pre-process data, iterate through the machine learning model development cycle and operationalize models.
+Azure Machine Learning should be considered a [data product](../architectures/data-landing-zone-data-products.md) and can be used to enable the end-to-end data science development activities. Data Product and Science teams will interact with this workspace to explore and pre-process data, iterate through the machine learning model development cycle and operationalize models.
 
 Azure Machine Learning will cover all aspects of the data science lifecycle from datastore and dataset registration to model deployment. It can be used for any kind of machine learning, from classical ML to deep learning, including both supervised and unsupervised learning. Whether you prefer to write Python or R code or use zero-code/low-code options such as the designer, you can build, train, and track highly accurate machine learning and deep learning models in an Azure Machine Learning workspace.
 
 >[!IMPORTANT]
 >Deploy three Azure Machine Learning workspaces per project and use Azure Data Factory for orchestrating workflows and triggering registered machine learning pipelines.
 
-:::image type="content" source="./images/sample-data-science-flow.png" alt-text="Sample data science workflow" lightbox="./images/sample-data-science-flow.png":::
+:::image type="content" source="../images/sample-data-science-flow.png" alt-text="Sample data science workflow" lightbox="../images/sample-data-science-flow.png":::
 
 For a production-grade deployment, it is advised to use three workspaces as shown in figure outlining a sample data science workflow above:
 

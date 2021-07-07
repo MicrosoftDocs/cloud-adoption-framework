@@ -25,7 +25,7 @@ For example, we see [Azure Synapse Analytics](https://azure.microsoft.com/servic
 
 Data product teams have access to a single integrated platform for BI, AI and Continuous Intelligence. This is wrapped under four foundational capabilities of: management, security, monitoring and a metastore. Underpinning this is a decoupled storage layer, data integration layer, analytics runtimes (either on-demand as serverless, or provisioned) which reside in the construction set. The runtimes provide choice, such as SQL with T-SQL for batch and interactive processing, or Spark for big data, and support of most languages such as SQL, Python, .NET, Java, Scala and are all made available through a single interface called Synapse Analytics Studio.
 
-![Azure Synapse Analytics for integrated data platform experience, BI, AI, and continuous intelligence as part of your data strategy](./images/data-strategy-synapse.png)
+![Azure Synapse Analytics for integrated data platform experience, BI, AI, and continuous intelligence as part of your data strategy](../images/data-strategy-synapse.png)
 
 Figure 4: Azure Synapse Analytics for integrated data platform experience for BI, AI and continuous intelligence.
 

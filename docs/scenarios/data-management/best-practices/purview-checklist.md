@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Azure Purview readiness checklist for 'data management and analytics' Enterprise-Scale scenario
 
-As your organization starts its data governance journey with Azure Purview and Enterprise Scale Analytics and AI, you realize that there are multiple stages in the adoption lifecycle. A well-planned deployment of **Azure Purview** in the [Data Management Landing Zone](data-management-landing-zone.md) can provide the following benefits:
+As your organization starts its data governance journey with Azure Purview and Enterprise Scale Analytics and AI, you realize that there are multiple stages in the adoption lifecycle. A well-planned deployment of **Azure Purview** in the [Data Management Landing Zone](../architectures/data-management-landing-zone.md) can provide the following benefits:
 
 - Unified data discovery across the entire organization  
 - Improved analytic collaboration
@@ -24,10 +24,10 @@ The **Azure Purview Readiness Checklist** aims to provide high-level guidance th
 
 |Phase |Description |
 |--|--|
-|![Phase 1](./images/icons/1.png) | [Planning and Organizational Readiness](#phase-1-planning-and-organizational-readiness): Plan for unified data governance, learn the pre-requisite tools and approaches needed for creating a data management environment, and [develop a plan for data management and analytics](./plan.md) |
-|![Phase 2](./images/icons/2.png) | [Build your Data Governance and Management Foundation](#phase-2-build-your-data-governance-and-management-foundation): Deploy your Enterprise Scale Analytics [Data Management Landing Zone](data-management-landing-zone.md) with Azure Purview as a unified enterprise Data Management and Data Governance solution. |
-|![Phase 3](./images/icons/3.png) | [Onboard the first Data Landing Zone](#phase-3-onboard-first-data-landing-zone): Start with your first [Data Landing Zone](./data-landing-zone.md) by starting small then expanding to quickly enable low-risk adoption and build toward security, governance, and compliance over time. |
-|![Phase 4](./images/icons/4.png)| [Onboard additional Data Landing Zones](#phase-4-onboard-additional-data-landing-zones): Once the baseline architecture is fully deployed and evaluated, and your operating model is aligned with cloud-native operations, move forward by enabling additional Data Landing Zones.
+|![Phase 1](../images/icons/1.png) | [Planning and Organizational Readiness](#phase-1-planning-and-organizational-readiness): Plan for unified data governance, learn the pre-requisite tools and approaches needed for creating a data management environment, and [develop a plan for data management and analytics](../plan.md) |
+|![Phase 2](../images/icons/2.png) | [Build your Data Governance and Management Foundation](#phase-2-build-your-data-governance-and-management-foundation): Deploy your Enterprise Scale Analytics [Data Management Landing Zone](../architectures/data-management-landing-zone.md) with Azure Purview as a unified enterprise Data Management and Data Governance solution. |
+|![Phase 3](../images/icons/3.png) | [Onboard the first Data Landing Zone](#phase-3-onboard-first-data-landing-zone): Start with your first [Data Landing Zone](../architecture/../architectures/data-landing-zone.md) by starting small then expanding to quickly enable low-risk adoption and build toward security, governance, and compliance over time. |
+|![Phase 4](../images/icons/4.png)| [Onboard additional Data Landing Zones](#phase-4-onboard-additional-data-landing-zones): Once the baseline architecture is fully deployed and evaluated, and your operating model is aligned with cloud-native operations, move forward by enabling additional Data Landing Zones.
 
 ## Phase 1: Planning and Organizational Readiness
 
@@ -57,7 +57,7 @@ The **Azure Purview Readiness Checklist** aims to provide high-level guidance th
     |M365 Administrators     |Microsoft M365 Information Protection if M365 Sensitivity Labels will be used.         |
     |Data Source Owners     |Mapped to roles in Azure Purview         |
 
-3. Define whether there is an existing Enterprise Scale Analytics and AI [Data Management Landing Zone](data-management-landing-zone.md) in the environment or if there is a need to deploy a *new* Data Management Landing Zone. The Data Management Landing Zone is a centralized subscription to deploy services such as Azure Purview.
+3. Define whether there is an existing Enterprise Scale Analytics and AI [Data Management Landing Zone](../architectures/data-management-landing-zone.md) in the environment or if there is a need to deploy a *new* Data Management Landing Zone. The Data Management Landing Zone is a centralized subscription to deploy services such as Azure Purview.
 
 4. Manage budget, costs and licensing.
    - Understand how the Azure Purview billing model works, and define how to control costs. Currently, Microsoft offers Azure Purview in a [pay-as-you-go model](https://aka.ms/purviewpricing).
@@ -105,7 +105,7 @@ The **Azure Purview Readiness Checklist** aims to provide high-level guidance th
 
 1. Make sure deployment of the Data Management Landing Zone is completed.
 
-2. Deploy your first [Data Landing Zone](data-landing-zone.md).
+2. Deploy your first [Data Landing Zone](../architecture/../architectures/data-landing-zone.md).
 
 3. Adjust Azure Purview automatic scan rules.
 

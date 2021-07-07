@@ -75,7 +75,7 @@ During security principal-based authorization, permissions will be evaluated in 
 >This description excludes [Shared Key and SAS authentication](/azure/storage/blobs/data-lake-storage-access-control) methods in which no identity is associated with the operation and assumes that the storage account is accessible via appropriate networking configuration. It also excludes scenarios in which the security principal has been assigned the Storage Blob Data Owner built-in role which provides *super-user* access.
 >It is recommended to set `allowSharedKeyAccess` to false so that access can be audited by the identity.
 
-:::image type="content" source="./images/how-access-evaluated.png" alt-text="How Access Is Evaluated" lightbox="./images/how-access-evaluated.png":::
+:::image type="content" source="../images/how-access-evaluated.png" alt-text="How Access Is Evaluated" lightbox="../images/how-access-evaluated.png":::
 
 See [here](/azure/storage/blobs/data-lake-storage-access-control#common-scenarios-related-to-permissions) for another example of what ACL based permissions are required for a given operation.
 
@@ -99,7 +99,7 @@ As per the [ADLS best practices](/azure/storage/blobs/data-lake-storage-best-pra
 
 However, even when using groups, a proliferation of access control entries may occur at top levels of the directory tree, particularly when very granular permissions with many different groups are required. In order for each group to obtain read access to the files contained in their folder, they will need execute permissions from root, which is the container level, all the way down to the folder they are trying to access. It is likely that the 32 access control entry limit will be reached in the root or levels close to root. An example of this scenario is depicted below:
 
-![flat groups issue](./images/flat-groups-issue.png)
+![flat groups issue](../images/flat-groups-issue.png)
 
 ### Configure access using both RBAC and ACLs
 
@@ -115,19 +115,19 @@ There are two possible solutions to this outlined below but the recommended appr
 
 Where possible before files and folders are created, begin with a parent group which is assigned execute permissions to both default and access ACLs at the container level. Then add the groups requiring data access to the parent group. This technique is known as nesting groups, and from an ADLS authorization perspective, the member group inherits the permissions of the parent group, providing "global" execute permissions to all member groups. The member group in this case will not need execute permissions as these permissions will be inherited because it belongs to the parent group.  Additional nesting may provide greater flexibility and agility if the security groups that represent teams or automated jobs are added to the data access reader and writer groups.
 
-![Nested Groups](./images/nested-groups.png)
+![Nested Groups](../images/nested-groups.png)
 
 ### Option 2: The Other ACL entry (Recommended)
 
 Another way to ensure that every part of the path from root to lowest level has execute permissions (--x) is to use the "Other" ACL entry set at the container/root, with defaults and access ACLs applied as shown in the first diagram below. This execute permission propagates down any subsequently added child folders until the depth/folder where the intended access group should have Read and Execute permissions (in the lowest part of the chain as depicted in the second image), which will grant that group access to read the data appropriately. This approach works similarly for write access.
 
-![root_acl](./images/acl-other-root.png)
+![root_acl](../images/acl-other-root.png)
 
-![folder_acl](./images/acl-other-lowest.png)
+![folder_acl](../images/acl-other-lowest.png)
 
 ## Recommended Data Lake Zones Security
 
-![Data Lake Zones Security](./images/adls-security-zones.png)
+![Data Lake Zones Security](../images/adls-security-zones.png)
 
 The recommended security pattern for each of the of the Data Lake Zones is:
 
@@ -139,7 +139,7 @@ The recommended security pattern for each of the of the Data Lake Zones is:
 
 There is no single approach to managing data lake access that will suit everyone. One of the major benefits of a data lake is to democratize and provide friction-free access to data however in reality different organizations will have different levels of governance and control over their data. Some have a centralized team which manages access and the provisioning of AAD groups with rigorous internal controls. Some are more agile and have decentralized control. The approach chosen should meet the required level of governance but should not result in undue delays or friction in gaining access to data, otherwise the value of the data lake may be diminished, or even worse may result in silos, the very thing data lakes are designed to prevent.
 
-![Data Lake Zones Security](./images/adls-security-zones.png)
+![Data Lake Zones Security](../images/adls-security-zones.png)
 
 The recommended security pattern for each of the of the Data Lake Zones is:
 
@@ -172,7 +172,7 @@ Other polyglot storage such as PostgreSQL, MySQL, Azure SQL Database, SQL Manage
 It is recommended that Azure AD groups are used to secure database objects instead of individual Azure AD user accounts. These AD Azure Groups would be used to authenticate users and protects database objects. Similar to the data lake pattern, you could use your Data Integration or Data Products onboarding to create these groups within you Azure AD service.
 
 >[!NOTE]
->Storing data inside an Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics Pools are one of the options for Data Integrations and Data Products to store [*sensitive (PII)* Data](data-privacy.md#sensitive-data).
+>Storing data inside an Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics Pools are one of the options for Data Integrations and Data Products to store [*sensitive (PII)* Data](../data-privacy.md#sensitive-data).
 
 ## Azure Synapse Analytics Data Access Control in ADLS 2
 

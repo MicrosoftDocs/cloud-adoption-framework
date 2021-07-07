@@ -17,7 +17,7 @@ SAP systems are complex due to their inherently monolithic structure that cuts a
 
 Our recommended pattern is that each business group ingests their data from SAP into their Data Landing Zone. Data is presented in the enriched layer (having passed through raw), accessible subject to AAD group access controls. Central finance teams can curate and ingest the finance objects into a single data asset conducive to their requirements in their Data Landing Zone.
 
-![Example SAP Ingestion](./images/example-sap-ingestion.png)
+![Example SAP Ingestion](../images/example-sap-ingestion.png)
 
 *Figure 1: SAP Ingestion*
 

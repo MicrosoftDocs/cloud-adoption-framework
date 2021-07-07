@@ -13,7 +13,7 @@ ms.subservice: ready
 
 The Data Management Landing Zone is classified as a management function and is at the heart of the Enterprise Scale Analytics and AI platform. It is responsible for the governance of the platform and enables communication to ingest data sources from Azure, third-party clouds, and on-premises data sources.
 
- :::image type="content" source="./images/data-management-overview.png" alt-text="Data Management Landing Zone Overview" lightbox="./images/data-management-overview.png":::
+ :::image type="content" source="../images/data-management-overview.png" alt-text="Data Management Landing Zone Overview" lightbox="../images/data-management-overview.png":::
 
 *Figure 1: Data Management Landing Zone Overview*
 
@@ -76,7 +76,7 @@ Data Lineage plays an important component in an Enterprise Scale Analytics and A
 One of the primary features of a Data Catalog is the ability to show the lineage between datasets. Azure Purview supports capturing data lineage from three ADF activities: Copy Data, Data Flow, and Execute SSIS Package. In addition to the native integration, custom lineage reporting is also supported via Apache Atlas hooks or REST API.
 
 <!-- increase image size-->
-:::image type="content" source="./images/data-lineage.png" alt-text="Data Lineage" lightbox="./images/data-lineage.png":::
+:::image type="content" source="../images/data-lineage.png" alt-text="Data Lineage" lightbox="../images/data-lineage.png":::
 
 *Figure 3: Data Lineage*
 
@@ -91,7 +91,7 @@ In Enterprise Scale Analytics and AI Data Integrations will become responsible f
 
 Data quality should happen as close to the source as possible to avoid quality issues replicating across the analytics and AI estate. Moving quality metrics and validation to the data integration aligns the quality process with the team(s) that are closest to the data and have the deepest understanding of the data asset. Data lineage also provides data quality confidence and should be provided for all datasets and products.
 
-See how data quality can be implemented in [Enforcing Data Quality](data-ingestion.md#enforcing-data-quality).
+See how data quality can be implemented in [Enforcing Data Quality](../best-practices/data-ingestion.md#enforcing-data-quality).
 
 ## Data Modeling Repository
 
@@ -107,7 +107,7 @@ With the Common Data Model (CDM), organizations can use a data format that provi
 
 ## Master Data Management
 
-Enterprises have typically invested several years into building out a [Master Data Management system](managing-master-data.md). Some of the vendors in this space are:
+Enterprises have typically invested several years into building out a [Master Data Management system](../govern-master-data.md). Some of the vendors in this space are:
 
 * [SAP Master Data Governance](https://www.sap.com/products/master-data-governance.html)
 * [Semarchy](https://www.semarchy.com/)

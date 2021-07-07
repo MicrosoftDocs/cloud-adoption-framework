@@ -18,7 +18,7 @@ At a high level, data products are computed or polyglot persistence services tha
 
 - A Data Landing Zone can have multiple data products which are created by ingesting data either inside the same Data Landing Zone or from across multiple Data Landing Zones as shown below.
 
-    :::image type="content" source="images/data-product-cross-data-landing-zone.png" alt-text="cross data landing zone consumption":::
+    :::image type="content" source="../images/data-product-cross-data-landing-zone.png" alt-text="cross data landing zone consumption":::
 
      The example above shows: 
      1. Intra-data landing zone consumption: 
@@ -27,7 +27,7 @@ At a high level, data products are computed or polyglot persistence services tha
      1. Inter-data landing zone consumption: Data product B also consumes from data product C and the data lake in Data Landing Zone 3.
 
     > [!IMPORTANT]
-    > In the case of inter-data landing zone consumption, since data product B reads from Data Landing Zone 3, this would require approval from the [Data Landing Zone Ops](persona-and-teams.md#data-landing-zone-ops-one-group-per-data-landing-zone) and [Integration Ops](persona-and-teams.md#integration-ops-per-integration) team of Data Landing Zone 3.
+    > In the case of inter-data landing zone consumption, since data product B reads from Data Landing Zone 3, this would require approval from the [Data Landing Zone Ops](../organize-persona-and-teams.md#data-landing-zone-ops-one-group-per-data-landing-zone) and [Integration Ops](../organize-persona-and-teams.md#integration-ops-per-integration) team of Data Landing Zone 3.
 
     > [!IMPORTANT]
     > Data product B consumes from data products A and C. Before this can happen, data product B must register it's consumption of a data product via a data sharing agreement. This data sharing agreement should update the lineage from data product A to data product B and from data product C to data product B.
@@ -43,7 +43,7 @@ We recommend building data products within your Data Landing Zone by adhering to
 
  Each data product is a resource group. Since data products are compute or polyglot persistence services, they may only be required depending on certain use cases. As such, they can be considered an optional component of your Data Landing Zone. In the case where data products are required, you should create multiple resource groups by data product as shown below.
     
-![Data products resource groups](./images/data-products-resource-group.png)
+![Data products resource groups](../images/data-products-resource-group.png)
 
 ### Set guard rails
 
@@ -62,7 +62,7 @@ Services that make up a data product are considered an incremental deployment to
 
 ### Enable data discovery
 
-Data products should be automatically registered in a data catalog such as [Azure Purview](purview-deployment.md) to allow scanning of data.
+Data products should be automatically registered in a data catalog such as [Azure Purview](../best-practices/purview-deployment.md) to allow scanning of data.
 
 ### Identify your data products
 
@@ -70,7 +70,7 @@ At the start of planning a Data Landing Zone, you should have identified as many
 
 For your data products, focus on how they are **data producers** and **data consumers** for others. To understand this further, let's assume you have identified a suite of data products (A, B, C and D) which produce and consume data. As shown below, you require data product A and D to produce data for data product B. Data product B consumes from data products A and D and in turn—acting as a data producer itself alongside being a data consumer—also produces data for data product C.
 
-:::image type="content" source="images/data-producers-consumers.png" alt-text="data producer and consumers":::
+:::image type="content" source="../images/data-producers-consumers.png" alt-text="data producer and consumers":::
 
 ### Control the environment with Infrastructure-as-Code
 
@@ -99,9 +99,9 @@ Fully defining a data product's relationship with other data products, its depen
 
 To explain the architecture definition process, we'll look at an example of a financial institution and its *credit monitoring* data product, as illustrated in the figure below.
 
-:::image type="content" source="images/data-product-define-detail.png" alt-text="Define Data Product Architecture Detail":::
+:::image type="content" source="../images/data-product-define-detail.png" alt-text="Define Data Product Architecture Detail":::
 
-The credit monitoring data product shown above consumes data from a *read data store* that has been ingested by the [Integration Ops team](persona-and-teams.md#integration-ops-per-integration) and produces data assets for two other data products.
+The credit monitoring data product shown above consumes data from a *read data store* that has been ingested by the [Integration Ops team](../organize-persona-and-teams.md#integration-ops-per-integration) and produces data assets for two other data products.
 
 >[!Note]
 >A read data source (or store) is also known as Golden Record Source. These types of data sources have been cleaned but haven't had any transformation applied to them.
@@ -118,7 +118,7 @@ The *loan approval* data product team (top right corner of the figure above) tak
 
 For every Data Landing Zone, an empty Visualization Resource Group is created. Visualization is considered a **data product** and, depending on the complexity, can be created via a self-serve process or managed by a data product team.
 
-![Visualization Resource Group](./images/visualization-resource-group.png)
+![Visualization Resource Group](../images/visualization-resource-group.png)
 
 >[!NOTE]
 >Licensing costs might mean that is it more economical to deploy third-party products such as Spotfire and Tableau into the Data Management Landing Zone and for the products to connect across to the Data Landing Zone to pull data back.
@@ -137,7 +137,7 @@ Therefore, as part of low-level design, we recommend enterprises consider an app
 
 A data product for analytics and data science may contain the services shown in sample data product (`product-analytics-rg`) below.
 
-:::image type="content" source="images/data-product-analytics-data-science.png" alt-text="data analytics and data science":::
+:::image type="content" source="../images/data-product-analytics-data-science.png" alt-text="data analytics and data science":::
 
 > [!NOTE]
 > The data product above is [available as a template](https://github.com/Azure/data-product-analytics) that deploys a set of services which can be used for data analytics and data science. Like all our templates, this data product template is a blueprint which can be used to quickly spin up environments for cross-functional teams. Any services not required must be explicitly disabled.

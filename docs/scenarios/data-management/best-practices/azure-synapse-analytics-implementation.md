@@ -18,7 +18,7 @@ Azure Synapse Analytics is the provisioned, integrated analytics service that ac
 
 ## Overview
 
-During the initial setup of a [Data Landing Zone](data-landing-zone.md), a single Azure Synapse Analytics workspace may be deployed for use by all analysts and data scientists. Additional workspaces can be optionally created for specific Data Integrations or Data Products.
+During the initial setup of a [Data Landing Zone](../architecture/../architectures/data-landing-zone.md), a single Azure Synapse Analytics workspace may be deployed for use by all analysts and data scientists. Additional workspaces can be optionally created for specific Data Integrations or Data Products.
 
 SQL Pools, formerly SQL DW, can be used as the data store for both enriched and curated data, which can serve for feature datasets needed by data science teams and for the datasets required for the analytical requirements. Azure Databricks can connect to these SQL Pools and update the data which resides inside the SQL Pools.
 
@@ -81,7 +81,7 @@ Before you start implementing fined-grained access with ACLs, is important to un
 3. If the operation is not fully authorized, then ACLs are evaluated.
 
 
-:::image type="content" source="./images/rbac-acls-evaluation.png" alt-text="RBAC ACLs Evaluation" lightbox="./images/rbac-acls-evaluation.png":::
+:::image type="content" source="../images/rbac-acls-evaluation.png" alt-text="RBAC ACLs Evaluation" lightbox="../images/rbac-acls-evaluation.png":::
 
 Please refer to the [Access control model for Azure Data Lake Storage Gen2 | Microsoft Docs](/azure/storage/blobs/data-lake-storage-access-control-model#how-permissions-are-evaluated) for more information.
 
@@ -115,15 +115,15 @@ Please go through the following steps to get started.
 
 1. Open Azure Storage Explorer, right click on storage container you want to setup fined-grained access with ACLs and choose Manage Access Control Lists.
 
-    ![Container Level ACLs](./images/acl-read-1.png)
+    ![Container Level ACLs](../images/acl-read-1.png)
 
 2. Click in Add to include users or groups that you want to grant permissions.
 
-    ![Manage Access Window](./images/acl-read-2.png)
+    ![Manage Access Window](../images/acl-read-2.png)
 
 3. In **Search for a user, group, or service principal.** Type the name of the user of group and click search. The users or groups should show-up. Select the user or group and choose **Add**.
 
-    ![Add Entity](./images/acl-read-3.png)
+    ![Add Entity](../images/acl-read-3.png)
 
 After adding the user or group. Select the identity added in the previous step. In Permission for: <name of user or group> check the option **Access**, followed by **Read** and **Execute** options on the right-hand side.
 
@@ -131,13 +131,13 @@ As per [ADLS Best Practices](/azure/storage/blobs/data-lake-storage-best-practic
 
 It is important to notice the informative message **"Read and Write permissions will only work for an entity if the entity also has execute permissions on all parent directories, including the container (root directory)"** It means that you will also need to grant Execute permissions on all parent folders, including the container which is the root directory, when granting read or write in a sub directory.
 
-![Manage Read Access User 1](./images/acl-read-4.png)
+![Manage Read Access User 1](../images/acl-read-4.png)
 
 **Granting permissions automatically to new children of the directory using the Default*** **option.**
 
 If you want to grant ACLs permissions automatically for new children of the directory, use the option **Default*** and select the required permissions read, write, or execute.  
 
-![Manage Access Default](./images/acl-read-5.png)
+![Manage Access Default](../images/acl-read-5.png)
 
 After granting permission at the container level, repeat the same steps for any subfolder you want to give access to users or groups.
 
@@ -145,13 +145,13 @@ After granting permission at the container level, repeat the same steps for any 
 
 Select the folder you want to give users or groups write permission and choose **Manage ACLs.**
 
-![Manage ACLs](./images/acl-write-1.png)
+![Manage ACLs](../images/acl-write-1.png)
 
 If you want to grant ACLs permissions automatically for new children of the directory, use the option **Default*** and select the appropriate permissions **Read/write** and **execute.**  As mentioned in the Granting Read Access on ADLS Gen 2 section, this option will automatically propagate parent folder permissions to newly created children's items, such as folder and files.
 
 After selecting the appropriate permissions, click **OK** to close.
 
-![Manage Write Access](./images/acl-write-2.png)
+![Manage Write Access](../images/acl-write-2.png)
 
 Repeat the same steps for any additional folders and subfolder you may want to grant access to users or groups.
 
@@ -161,13 +161,13 @@ When granting ACLs permissions to folders that already contain child objects suc
 
 To propagate ACL permissions, right-click on the parent folder you desire to propagate the ACL permissions. This action will propagate permissions for all users to the existing child objects from the parent folder you are performing the action.
 
-![Propagate Access](./images/acl-propagate-1.png)
+![Propagate Access](../images/acl-propagate-1.png)
 
 In Propagate Access Control Lists, choose How to handle failures depending on the desired behavior you want in case of failures. You can choose from the two options: **Continue on Failure** or **Quit on failure.**
 
 Check the box I understand that propagating ACLs cannot be easily reversable and click OK.
 
-![Manage Access](./images/acl-propagate-2.png)
+![Manage Access](../images/acl-propagate-2.png)
 
 #### Considerations when using Spark Tables in Synapse Spark Pool
 

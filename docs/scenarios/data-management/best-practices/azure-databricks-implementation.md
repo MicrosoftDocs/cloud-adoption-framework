@@ -77,7 +77,7 @@ Depending on your use case you might wish to enable the following options for th
 
 The two Azure Databricks Workspaces are deployed as part of a new Data Landing Zone deployment. Figure 1 shows the overall workflow of deploying an Azure Databricks environment in Enterprise Scale Analytics and AI.
 
-![Azure Databricks Deployment into a Data Landing Zone](./images/databricks-deploy.png)
+![Azure Databricks Deployment into a Data Landing Zone](../images/databricks-deploy.png)
 
 Figure 1: Azure Databricks Deployment into a Data Landing Zone
 
@@ -102,7 +102,7 @@ For **Azure Databricks Analytics and Data Science**:
 3. Enable workspace options specific to **Azure Databricks Engineering Workspace**.
 
 >[!NOTE]
->During the creation of a new Data Integration resource group we will alter the configuration of all Azure Databricks Workspaces within a Data Landing Zone. Please see [Data Integration & Data Product Deployment Process](platform-provisioning.md#data-integration--data-product-deployment-process) for how this is implemented with Azure Databricks shared Workspaces.
+>During the creation of a new Data Integration resource group we will alter the configuration of all Azure Databricks Workspaces within a Data Landing Zone. Please see [Data Integration & Data Product Deployment Process](../platform-provisioning.md#data-integration--data-product-deployment-process) for how this is implemented with Azure Databricks shared Workspaces.
 
 ### External Hive Metastore
 

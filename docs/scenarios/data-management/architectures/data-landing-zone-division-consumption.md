@@ -31,7 +31,7 @@ If you wish to follow a multi landing zone pattern (our recommended path for lar
 
 For example, Contoso has identified the following business units to onboard to their Enterprise Scale Analytics and AI solution:
 
-![Contoso Business Units](./images/contoso-business-unit.png)
+![Contoso Business Units](../images/contoso-business-unit.png)
 
 Figure 1: Contoso Business Units
 
@@ -69,7 +69,7 @@ The difference of Domains would lead to us to create two Data Landing Zones with
 > [!TIP]
 >You should have an understanding of the amount of crossover of data requirements for each business unit. The higher the amount of data crossover then the more likely the business units should sit in the same Data Landing Zone.
 
-![Contoso Customer Support Domains](./images/contoso-business-unit-sub-domains.png)
+![Contoso Customer Support Domains](../images/contoso-business-unit-sub-domains.png)
 
 Figure 2: Contoso Customer Support Domains
 
@@ -80,7 +80,7 @@ In the worked example, for our Customer Support business unit, we have identifie
 
 In the scenario where multiple data landing zones are deployed, data assets ingested by one Data Landing Zone can be consumed via other Data Landing Zones as needed. For instance, the central corporate finance function resides in the Corp Data Landing Zone and can run *ad hoc* finance reports by consuming finance data assets distributed across other Data Landing Zones.
 
-![Inter-Data Landing Zone Consumption](./images/inter-data-landing-zone-consumption.png)
+![Inter-Data Landing Zone Consumption](../images/inter-data-landing-zone-consumption.png)
 
 The illustration above shows how data assets can be shared in-place between Data Landing Zones subject to the consumer/user being part of the correct "data-asset-security-group". Data assets are registered in the data catalog, for users to discover.
 

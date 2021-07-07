@@ -34,7 +34,7 @@ The Azure subscription associated with the Data Landing Zone is structured as fo
 
 The architecture of the data landing zone below illustrates the above-mentioned layers, their respective resource groups and services which are contained within each resource group. It also provides an overview of the groups and roles associated with the data landing zone and the extent of their access to the control and data planes.
 
-:::image type="content" source="./images/data-landing-zone-2.png" alt-text="Data Landing Zone" lightbox="./images/data-landing-zone-2.png":::
+:::image type="content" source="../images/data-landing-zone-2.png" alt-text="Data Landing Zone" lightbox="../images/data-landing-zone-2.png":::
 
  > [!TIP]
 > Before getting started with deploying a Data Landing Zone, it is highly recommended that you first [consider the number of initial Data Landing Zones you want to deploy](/azure/cloud-adoption-framework/scenarios/data-management/scale?branch=scenario-data-management).
@@ -54,13 +54,13 @@ In this layer, all the required services to enable the Data Landing Zone within 
 
 ### Network
 
-:::image type="content" source="images/data-landing-zone-network-rg.png" alt-text="data landing zone network rg":::
+:::image type="content" source="../images/data-landing-zone-network-rg.png" alt-text="data landing zone network rg":::
 
 The network resource group, as shown above, contains core enterprise components such as [network security groups](/azure/virtual-network/network-security-groups-overview) (NSG), Azure  [Network Watcher](/azure/network-watcher/network-watcher-monitoring-overview) and Virtual Network. All of these services are deployed into a single resource group. As part of the deployment, the virtual network of a Data Landing Zone is [automatically peered with the Data Management Landing Zone's VNet](/azure/cloud-adoption-framework/scenarios/data-management/eslz-network-topology-and-connectivity) and the [Connectivity Subscription's VNet](/azure/cloud-adoption-framework/ready/enterprise-scale/architecture).
 
 ### Monitoring
 
-:::image type="content" source="images/data-landing-zone-monitoring-rg.png" alt-text="data landing zone monitoring rg":::
+:::image type="content" source="../images/data-landing-zone-monitoring-rg.png" alt-text="data landing zone monitoring rg":::
 
 The Enterprise-Scale pattern recommends that all logs should be sent to a central Log Analytics workspace. However, we also have a monitoring resource group, as shown above, in each Data Landing Zone for the purpose of capturing Spark logs from Databricks. The resource group contains a shared Log Analytics workspace and Key Vault to store the Log Analytics keys.
 
@@ -69,18 +69,18 @@ The Enterprise-Scale pattern recommends that all logs should be sent to a centra
 
 ### Data Lake Services
 
-:::image type="content" source="images/data-landing-zone-data-lake-services-rg.png" alt-text="data landing zone data lake services rg":::
+:::image type="content" source="../images/data-landing-zone-data-lake-services-rg.png" alt-text="data landing zone data lake services rg":::
 
 Three [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction) accounts will be provisioned in the single Data Lake Services resource group as shown above. The data transformed at different stages will be saved on one of the Data Landing Zone's three data lakes and will be available for analytics, data science and visualizations teams to consume. 
 
 > [!IMPORTANT]
-> Why do we recommend three data lakes? Please visit [Data Lake Services Overview](data-lake-overview.md) to learn more.
+> Why do we recommend three data lakes? Please visit [Data Lake Services Overview](../best-practices/data-lake-overview.md) to learn more.
 
 ### Upload Ingest Storage
 
 Third-party data publishers require the ability to land their data into the platform so Integration Ops teams can pull it into their data lakes. The Upload Ingest Storage resource group, shown below, enables provisioning of blob stores for third-parties.
 
-![Upload Ingest Storage Service](./images/data-landing-zone-ingest-storage.png)
+![Upload Ingest Storage Service](../images/data-landing-zone-ingest-storage.png)
 
 These storage blobs are requested by the Integration Ops Teams and approved by the Data Landing Zone Ops Team. Once the data has been pulled from the storage blobs into RAW, the data should be removed from the source storage blob.
 
@@ -89,18 +89,18 @@ These storage blobs are requested by the Integration Ops Teams and approved by t
 
 ### Ingest and Processing
 
-:::image type="content" source="images/data-landing-zone-ingest-processing-rg.png" alt-text="data landing zone ingest and processing rg":::
+:::image type="content" source="../images/data-landing-zone-ingest-processing-rg.png" alt-text="data landing zone ingest and processing rg":::
 
 All services related to ingesting source data will be deployed into a the ingest and processing resource group as shown above. If your enterprise has already developed an ingestion framework engine for automatically ingesting data based on registering metadata which includes connection strings, path to copy data from and to, and ingestion schedule, the ingestion and processing resource group has key services to leverage such a framework.
 
 Consider the following guidelines for ingestion and processing:
 
 1. The ingestion framework engine should copy data through the layers of the data lake service from source to *Raw* to *Enriched and Curated*.
-2. As data sources are registered and integrated into respective data lakes using a repeatable and consistent framework, the data should be registered with [Azure Purview](purview-deployment.md) for discovery.
+2. As data sources are registered and integrated into respective data lakes using a repeatable and consistent framework, the data should be registered with [Azure Purview](../best-practices/purview-deployment.md) for discovery.
 3. If you have an ingestion framework engine, we recommend using Azure Data Factory as the primary orchestration engine for getting data into *Raw* to *Enriched and Curated*.
 
 >[!TIP]
->Ingestion and processing is discussed at length under [Data Ingestion](data-ingestion.md).
+>Ingestion and processing is discussed at length under [Data Ingestion](../best-practices/data-ingestion.md).
 
 Services included in the ingest and processing resource group include:
 
@@ -114,7 +114,7 @@ Services included in the ingest and processing resource group include:
 
 Across the Data Landing Zone there is a requirement for a number of shared metadata services which provide functionality to other shared services. These will be deployed into a single resource group as shown below.
 
-![Data Landing Zone Metadata Services](./images/data-landing-zone-shared-services.png)
+![Data Landing Zone Metadata Services](../images/data-landing-zone-shared-services.png)
 
 > [!TIP]
 > If your organization has decided to develop your own ingestion framework engine based on the recommendations in the Enterprise Scale Analytics and AI ingestion flow, using either a PowerApp or a .Net Application, in the Data Management Landing Zone, we would suggest deploying an Azure SQL DB to hold metadata for Azure Data Factory to use. Having this custom application will speed up the onboarding of data sources, allowing teams to create new data sources for ingestion for landing into the Raw to Enriched in the Data Landing Zone data lakes.
@@ -137,7 +137,7 @@ A Azure MySQL database will be provisioned. The **Azure Databricks Engineering W
 
 To enable rapid onboarding of datasets, to the Data Landing Zone, we recommend deploying a virtual machine scale set with Self Hosted Integration Runtimes, into the Data Management Landing Zone. These should be hosted in the Integration Resource Group as shown below.
 
-:::image type="content" source="images/data-landing-zone-shared-integration-rg.png" alt-text="data landing zone shared integration rg":::
+:::image type="content" source="../images/data-landing-zone-shared-integration-rg.png" alt-text="data landing zone shared integration rg":::
 
 To enable this resource group you would need to:
 
@@ -154,7 +154,7 @@ To enable this resource group you would need to:
 
 For each Data Landing Zone, a shared Synapse Analytics workspace and Azure Databricks workspaces will be provisioned for use by everybody in the Data Landing Zone for exploratory purposes as shown below.
 
-:::image type="content" source="images/data-landing-zone-shared-products-rg.png" alt-text="data landing zone shared products rg":::
+:::image type="content" source="../images/data-landing-zone-shared-products-rg.png" alt-text="data landing zone shared products rg":::
 
 #### Azure Databricks in Shared Products
 
@@ -181,7 +181,7 @@ The Enterprise Scale Analytics and AI construction set takes into account the fo
 
 ### Data integration (resource group)
 
-:::image type="content" source="images/data-landing-zone-data-integration-rg.png" alt-text="data landing zone data integration rg":::
+:::image type="content" source="../images/data-landing-zone-data-integration-rg.png" alt-text="data landing zone data integration rg":::
 
 A Data Integration resource group, as shown above, is responsible for data ingestion and enrichment only from external sources such a telemetry, finance, CRM, etc. This layer can operate in both real-time, batch and micro-batch.
 
@@ -204,7 +204,7 @@ Further reading on onboarding [Data Products](data-landing-zone-data-products.md
 
 For every Data Landing Zone, an empty visualization resource group will be created. This group can be filled with services required to implement your visualization solution. Using the existing VNet will enable your solution to connect to Data Products.
 
-![Visualization Resource Group](./images/visualization-resource-group.png)
+![Visualization Resource Group](../images/visualization-resource-group.png)
 
 This resource group could host third-party Virtual Machines for services such as Spotfire or Tableau.
 

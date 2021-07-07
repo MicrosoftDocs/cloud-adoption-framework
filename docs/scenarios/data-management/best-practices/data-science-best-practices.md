@@ -108,7 +108,7 @@ In order to avoid situations where users can lose track of where different artif
 
 The proposed top-level folder structure for a MLOps repository is illustrated in the following image:
 
-![MLOps Repository Structure](./images/repository-structure.png)
+![MLOps Repository Structure](../images/repository-structure.png)
 
 Following is a description of the purpose of each of the folders that make up the repository:
 
