@@ -18,7 +18,7 @@ An Enterprise Agreement (EA) enrollment represents the commercial relationship b
 
 ![Diagram that shows Azure EA hierarchies.](./media/ea.png)
 
-_Figure 1: An Azure EA enrollment hierarchy._
+*Figure 1: An Azure EA enrollment hierarchy.*
 
 - Departments help to segment costs into logical groupings and to set a budget or quota at the department level. The quota isn't enforced firmly and is used for reporting purposes.
 - Accounts are organizational units in the Azure EA portal. They can be used to manage subscriptions and access reports.
@@ -73,5 +73,4 @@ Ask basic security questions during the Azure AD design phase, such as how your 
 - Multi-factor authentication provides another layer of security and a second barrier of authentication. Enforce [multi-factor authentication](/azure/active-directory/authentication/concept-mfa-howitworks) and [conditional access policies](/azure/active-directory/conditional-access/overview) for all privileged accounts for greater security.
 - Plan and implement for [emergency access](/azure/active-directory/users-groups-roles/directory-emergency-access) or break-glass accounts to prevent tenant-wide account lockout.
 - Use [Azure AD Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) for identity and access management.
-- If dev/test and production are going to be isolated environments from an identity perspective, separate them at a tenant level via multiple tenants.
-- Avoid creating a new Azure AD tenant unless there's a strong identity and access management justification and processes are already in place.
+- Avoid creating multiple Azure AD Tenants as per the guidance in [Testing approach for enterprise scale](./testing-approach.md) and [Cloud Adoption Framework Azure best practices guidance to standardize on a single directory and identity](/azure/cloud-adoption-framework/security/security-top-10#9-architecture-standardize-on-a-single-directory-and-identity).

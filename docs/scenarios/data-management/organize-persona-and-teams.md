@@ -45,17 +45,17 @@ The Data Landing Zone Group consists of three teams.
 
 ### Data Product Teams (per Product)
 
-- They are responsible for delivering new Data Products such as insights, reports, notebooks, and applications.
-- They partner closely with business analysts and stakeholders.
-- They transform data into new read data stores.
+- Are responsible for delivering new Data Products such as insights, reports, notebooks, and applications.
+- Partner closely with business analysts and busienss unit stakeholders.
+- Transform data into new read data stores.
 - Manage access hierarchy (groups) and approval requests.
 - Furnish meta data in data catalogue.
 
 ### Integration Ops (per integration)
 
-- They Ingests and Registers new read data sources.
+- Ingest and Register new read data sources.
 - Manage access hierarchy (groups) and approval requests.
-- Furnish meta data in data catalogue.
+- Furnish meta data in data catalogues.
 
 ### Data Landing Zone Ops (One Group per Data Landing Zone)
 
@@ -69,6 +69,8 @@ The Data Landing Zone Group can be resourced in different ways depending on the 
 For example, you create one data landing zone where the business already has it's own set of data engineers, program managers and solution architects. We will call this a business data office. In this scenario, you could decide to provision a data landing zone and allow the business data office to operate the landing zone, based upon the governance from your central platform group.
 
 In another example, the owning business of a data landing zone doesn't have a business data office to build out their data integrations or data products. In this scenario the central data office should consider themselves a consultancy who would take people off the bench to work on the data landing zone. Those resources should be embedded into the business to collect and execute on use cases in either a SCRUM or AGILE manner. Once completed they would return to the central data office.
+
+In both of these models, these groups of individuals should be working as "multi-disciplinary teams", with shared goals, where the diversity of experience, skills and approaches they bring enablesmore  effective outcomes that if they operated "in silos". 
 
 >[!NOTE]
 >In the scenario where only a single data landing zone is deployed, it is likely that you will mix businesses into one data landing zone. You might then end up with a crossover of functions where Integration Ops or Data Product teams could be resourced from central and business data offices. However, in this scenario we would recommend that the function of Data Landing Zone Ops is all located in the central data office.

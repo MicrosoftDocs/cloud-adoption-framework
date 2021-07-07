@@ -34,7 +34,7 @@ Reuse of components is a fundamental principle of infrastructure as code. Module
 
 The [Terraform module for Cloud Adoption Framework enterprise-scale](https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest) deploys the following components from the enterprise scale [reference architecture](./architecture.md#high-level-architecture):
 
-![Overview of resources deployed by the Terraform module for Cloud Adoption Framework enterprise-scale](media/terraform-caf-enterprise-scale-overview.png)
+![Overview of resources deployed by the Terraform module for Cloud Adoption Framework enterprise-scale](./media/terraform-caf-enterprise-scale-overview.png)
 *Figure 1: Overview of resources deployed by the Terraform module for Cloud Adoption Framework enterprise-scale.*
 
 ## Capabilities
@@ -107,7 +107,7 @@ module "enterprise_scale" {
 This example code will deploy the minimum recommended [management group and subscription organization](./management-group-and-subscription-organization.md) from the enterprise-scale reference architecture. You can then start to customize your deployment once you've got this up and running.
 
 > [!TIP]
-> If you are new to Terraform, please refer to this [tutorial on HashiCorp Learn](https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/azure-get-started), covering installation and use of Terraform, and the [AzureRM provider guides](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs#authenticating-to-azure) for information on how to configure the provider and authenticate with Azure.
+> If you are new to Terraform, refer to this [tutorial on HashiCorp Learn](https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/azure-get-started), covering installation and use of Terraform, and the [AzureRM provider guides](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs#authenticating-to-azure) for information on how to configure the provider and authenticate with Azure.
 
 ## Next steps
 

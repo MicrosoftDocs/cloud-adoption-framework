@@ -10,6 +10,7 @@ ms.subservice: plan
 ms.custom: think-tank
 ---
 
+<!-- cspell:ignore SCORM newkey keyout mydomain httpd sitelog sitelogs -->
 <!--docutune:casing SCP WinSCP SCORM -->
 
 # How to follow up after a Moodle migration
@@ -230,11 +231,11 @@ When a *403: Forbidden* error occurs, the PHP `memory_limit` value isn't large e
 
   `memory_limit 40M`
 
-An alternative to increasing the `memory_limit` value is to turn off the memory limit by entering this command:
+  An alternative to increasing the `memory_limit` value is to turn off the memory limit by entering this command:
 
   ```bash
-memory_limit 0
-```
+  memory_limit 0
+  ```
 
 ### Sign-in errors
 

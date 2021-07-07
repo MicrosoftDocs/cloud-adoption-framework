@@ -10,7 +10,7 @@ ms.subservice: strategy
 ms.custom: think-tank
 ---
 
-<!-- docutune:ignore InterpretML FairLearn -->
+<!-- cspell:ignore datasheets -->
 
 # Responsible AI
 
@@ -48,8 +48,8 @@ Put responsible AI into practice with these guidelines, designed to help you ant
 
 Tools are available to help developers and data scientists understand, protect, and control AI systems. These tools can come from a variety of sources, including Azure Machine Learning, open-source projects, and research.
 
-- **Understand:** AI systems can behave unexpectedly for a variety of reasons. Software tools can help you understand the behavior of your AI systems so that you can better tailor them to your needs. Examples of this type of tool include InterpretML and Fairlearn.
-- **Protect:** AI systems rely on data. Software tools can help you protect that data by preserving privacy and ensuring confidentiality. Examples of this type of tool include confidential computing for machine learning, white noise differential privacy, seal homomorphic encryption, and Presidio.
+- **Understand:** AI systems can behave unexpectedly for a variety of reasons. Software tools can help you understand the behavior of your AI systems so that you can better tailor them to your needs. Examples of this type of tool include [InterpretML](https://github.com/interpretml/interpret), [Error Analysis](https://erroranalysis.ai/) and [Fairlearn](https://fairlearn.org/).
+- **Protect:** AI systems rely on data. Software tools can help you protect that data by preserving privacy and ensuring confidentiality. Examples of this type of tool include [Confidential Computing for Machine Learning](https://azure.microsoft.com/solutions/confidential-compute/), [SmartNoise differential privacy toolkit](https://smartnoise.org/), [SEAL Homomorphic Encryption toolkit](https://www.microsoft.com/research/project/microsoft-seal/), and the [Presidio data de-identification toolkit](https://microsoft.github.io/presidio).
 - **Control:** Responsible AI needs governance and control through the development cycle. Azure Machine Learning enables an audit trail for better traceability, lineage, and control to meet regulatory requirements. Examples include audit trail and traceability.
 
 ## Next steps

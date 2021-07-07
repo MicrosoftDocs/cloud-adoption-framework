@@ -1,9 +1,10 @@
 ---
 title: Connectivity to other cloud providers
-description: Examine key design considerations and recommendations surrounding different connectivity approaches to integrate an Azure enterprise-scale landing zone architecture to Oracle Cloud Infrastructure (OCI).
-author: alexandreweiss
+
+description: Integrate an Azure enterprise-scale landing zone architecture to other cloud providers such as Amazon Web Services (AWS) and Google Cloud Platform (GCP). 
+author: daltondhcp
 ms.author: brblanch
-ms.date: 02/18/2021
+ms.date: 05/26/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -12,60 +13,62 @@ ms.custom: think-tank
 
 # Connectivity to other cloud providers
 
-Examine key design considerations and recommendations surrounding different connectivity approaches to integrate an Azure enterprise-scale landing zone architecture into other cloud providers.
+This guidance discusses ways to connect an Azure enterprise-scale landing zone architecture to other cloud providers, such as Amazon Web Services (AWS) and Google Cloud Platform (GCP).
 
-## Oracle Cloud Infrastructure (OCI)
+The various options differ in speed, latency, reliability, service level agreements (SLAs), complexity, and costs. This article considers options and makes recommendations.
 
-This section provides different connectivity approaches to integrate an Azure enterprise-scale landing zone architecture to Oracle Cloud Infrastructure (OCI).
+> [!Note]
+> Microsoft and Oracle partnered to provide high-throughput, low-latency cross-connections between Azure and Oracle Cloud Infrastructure (OCI). For more information, see [Connectivity to Oracle Cloud Infrastructure](connectivity-to-other-providers-oci.md).
 
-**Design considerations:**
+## Design considerations
 
-- Using ExpressRoute and FastConnect, customers can connect a virtual network in Azure with a virtual cloud network in OCI, if the private IP address space does not overlap. Once this connectivity is established, resources in the Azure virtual network can communicate with resources in the OCI virtual cloud network as if they were both in the same network.
+- We consider the following options to connect Azure to another cloud:
+  - **Option 1** - Connect Azure ExpressRoute and the other cloud provider's equivalent private connection. The customer manages routing.
+  - **Option 2** - Connect ExpressRoute and the other cloud provider's equivalent private connection. A cloud exchange provider handles routing.
+  - **Option 3** - Use site-to-site VPN over the Internet. For more information, see [Connect on-premises networks to Azure by using site-to-site VPN gateways (Learn)](/learn/modules/connect-on-premises-network-with-vpn-gateway/2-connect-on-premises-networks-to-azure-using-site-to-site-vpn-gateways).
 
-- Azure ExpressRoute [FastPath](/azure/expressroute/about-fastpath) is designed to improve the data path performance between two networks (on-premises and Azure), and for this scenario, between OCI and Azure. When enabled, FastPath sends network traffic directly to virtual machines in the virtual network, bypassing the ExpressRoute gateway.
+   You can use the following cross-cloud connectivity flow chart as an aid to choosing an option:
 
-  - FastPath is available on all ExpressRoute circuits.
+    ![Diagram of cross-cloud connectivity flow chart](./media/cloud-interconnect-decision-tree.png)
+    
+    *Figure 1: Cross-cloud connectivity flow chart*
 
-  - FastPath still requires a virtual network gateway to be created for route exchange purposes. The virtual network gateway must use either the Ultra Performance SKU or the ErGw3AZ SKU for the ExpressRoute gateway to enable route management.
+- You can only connect an Azure virtual network to another cloud provider's virtual private cloud (VPC) if the private IP address spaces don't overlap.
+- Site-to-site VPN might have lower throughput and higher latency than the ExpressRoute options.
+- Site-to-site VPN is the fastest deployment option if Azure ExpressRoute and the other cloud provider equivalent aren't already in use.
+- Routing complexity of Azure ExpressRoute and other cloud provider equivalent with customer-managed routing can be high if not done through a cloud exchange     provider.
+- You might need to provide DNS resolution between Azure and the other cloud provider. This configuration might incur extra costs.
+- The FastPath feature of ExpressRoute improves data path performance between Azure and on-premises networks, and between Azure and other cloud providers. When enabled, FastPath sends network traffic directly to virtual machines in the virtual network, bypassing the ExpressRoute gateway. For more information, see [About ExpressRoute FastPath](/azure/expressroute/about-fastpath).
+- FastPath is available on all ExpressRoute circuits.
+- FastPath still requires a virtual network gateway to be created for route exchange purposes. The virtual network gateway must use either the Ultra Performance SKU or the ErGw3AZ SKU for the ExpressRoute gateway to enable route management.
+- There are configurations that FastPath doesn't support, such as virtual network peering. For more information, see [Limitations](/azure/expressroute/about-fastpath#limitations) in About ExpressRoute FastPath.
 
-- There are features that are currently [not supported](/azure/expressroute/about-fastpath#supported-features) in ExpressRoute FastPath, such as Azure Virtual WAN hubs or VNet peering.
+## Design recommendations
 
-- While you can use [ExpressRoute Global Reach](/azure/expressroute/expressroute-global-reach) to enable communication from on-premises to OCI via ExpressRoute circuits, this may incur additional bandwidth costs that can be calculated by using the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator/). This is a particularly important consideration when you migrate large amounts of data from on-premises to Oracle by using ExpressRoute circuits.
+- Use option 1 or option 2 to avoid use of the public internet, if you require an SLA, if you want predictable throughput, or need to handle heavy data traffic. Consider whether to use a customer-managed routing or a cloud exchange provider if you haven't implemented ExpressRoute already.
+- Create the ExpressRoute circuits for option 1 and option 2 in the connectivity subscription.
+- Use the ExpressRoute circuit of option 1 or option 2 to connect to the hub of a hub-and-spoke architecture, or to the hub virtual network or virtual WAN hub of an Azure virtual WAN-based network. For more information, see Figure 2 and Figure 3.
 
-- In Azure regions that support [Availability Zones](/azure/availability-zones/az-overview#availability-zones), placing your Azure workloads in one zone or the other can have a small impact on latency. Design your application to balance availability and performances requirements.
+    ![Figure 2: Cross-cloud connectivity with customer-managed routing (Option 1)](./media/eslz-other-cloud-providers.png)
+    
+    *Figure 2: Cross-cloud connectivity with customer-managed routing (Option 1)*
 
-- Interconnectivity between Azure and OCI is only available for [specific regions](/azure/virtual-machines/workloads/oracle/oracle-oci-overview#region-availability).
+    ![Figure 3: Cross-cloud connectivity with a cloud exchange provider (Option 2).](./media/other-cloud-exchange-provider.png)
+    
+    *Figure 3: Cross-cloud connectivity with a cloud exchange provider (Option 2)*
 
-- For more in-depth documentation about interconnectivity between Azure and OCI, refer to [Oracle application solutions integrating Microsoft Azure and Oracle Cloud Infrastructure](/azure/virtual-machines/workloads/oracle/oracle-oci-overview) or refer to the [Oracle documentation](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/azure.htm).
+- If you need to minimize latency between Azure and another cloud provider, consider deploying your application in a single virtual network with an ExpressRoute gateway, and enable FastPath.
 
-**Design recommendations:**
+    ![Figure 4: Cross-cloud connectivity with FastPath enabled](./media/other-cloud-fast-path.png))
 
-- Create the ExpressRoute circuit(s) that will be used to interconnect Azure with OCI in the **connectivity** subscription.
+    *Figure 4: Cross-cloud connectivity with FastPath enabled*
 
-- You can interconnect an Azure network architecture based on the traditional hub and spoke architecture or Azure Virtual WAN-based network topologies by connecting the ExpressRoute circuit that will be used to interconnect Azure to OCI to the hub VNet or Virtual WAN hub as depicted in the following figure.
+- If ExpressRoute isn't required or not available, you can use site-to-site VPN over the internet to connect between Azure and another cloud provider.
 
-  ![Diagram that shows Azure to OCI - Hub and Spoke.](./media/azure-oci-hub-and-spoke.png)
+    ![Cross-cloud connectivity using site-to-site VPN over the Internet.](./media/other-cloud-s2s-vpn.png)
 
-  *Figure 1: Interconnectivity between Azure and OCI via ExpressRoute.*
+    *Figure 5: Cross-cloud connectivity using site-to-site VPN over the Internet*
 
-- If your application requires the lowest possible latency between Azure and OCI, consider deploying your application in a single VNet with an ExpressRoute gateway and FastPath enabled.
+## Next steps
 
-  ![Diagram that shows Azure to OCI - single vNet.](./media/azure-oci-one-vnet.png)
-
-  *Figure 2: Interconnectivity between Azure and OCI with a single VNet.*
-
-- When deploying your Azure resources across Availability Zones, perform latency tests from Azure VMs located in different Availability Zones to OCI resources to understand which of the three Availability Zones provides the lowest latency to the OCI resources.
-
-- To operate Oracle resources hosted in OCI by using Azure resources and technologies, you could:
-
-  - **From Azure:** Deploy a jumpbox in a spoke VNet. The jumpbox provides access to the virtual cloud network in OCI as depicted in the following picture:
-
-    ![Diagram that shows Azure to OCI - Jumpbox one VNet.](./media/azure-oci-jumpbox-one-vnet.png)
-
-    *Figure 3: Managing OCI resources from Azure via a jumpbox.*
-
-  - **From on-premises:** Use ExpressRoute Global Reach to bind existing ExpressRoute circuit (that connects on-premises to Azure) to OCI ExpressRoute circuit (that interconnects Azure to OCI). In this way, the Microsoft Enterprise Edge (MSEE) router becomes the central routing point between both ExpressRoute circuits.
-
-    ![Diagram that shows Azure to OCI - via Global Reach.](./media/azure-oci-gr-hub-and-spoke.png)
-
-  *Figure 4: Managing OCI resources from on-premises via ExpressRoute Global Reach.*
+To learn more about connectivity to Oracle Cloud Infrastructure (OCI), see [Connectivity to Oracle Cloud Infrastructure](connectivity-to-other-providers-oci.md).

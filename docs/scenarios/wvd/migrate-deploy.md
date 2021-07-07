@@ -1,27 +1,27 @@
 ---
 title: Deploy Windows Virtual Desktop to Azure
 description: Use the Cloud Adoption Framework for Azure to deploy Windows Virtual Desktop using best practices that reduce complexity and standardize the migration process.
-author: BrianBlanchard
-ms.author: brblanch
-ms.date: 07/17/2020
+author: DominicAllen
+ms.author: doalle
+ms.date: 05/18/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
-ms.custom: internal
+ms.custom: think-tank
 ---
 
 <!-- cSpell:ignore NTFS Logix -->
 
 # Windows Virtual Desktop deployment or migration
 
-The guidance in this article assumes that you've [established a plan for Windows Virtual Desktop)](./plan.md), [assessed the desktop deployment requirements](./migrate-assess.md), [completed a proof of concept](./proof-of-concept.md), and are now ready to migrate or deploy your Windows Virtual Desktop instances.
+The guidance in this article assumes that you've [established a plan for Windows Virtual Desktop](./plan.md), [assessed the desktop deployment requirements](./migrate-assess.md), [completed a proof of concept](./proof-of-concept.md), and are now ready to migrate or deploy your Windows Virtual Desktop instances.
 
 ## Initial scope
 
 The deployment of Windows Virtual Desktop instances follows a process that's similar to the [proof of concept](./proof-of-concept.md) process. Use this initial scope as a baseline to explain the various scope changes that are required by the output of the assessment.
 
-- [Create a host pool](/azure/virtual-desktop/create-host-pools-azure-marketplace) for pooled desktops by using a Windows&nbsp;10 gallery image from Azure Marketplace and the sizing from step 1 of that procedure.
-- [Create RemoteApp application groups](/azure/virtual-desktop/manage-app-groups#create-a-remoteapp-group) for workloads that have already been migrated.
+- [Create a host pool](/azure/virtual-desktop/create-host-pools-azure-marketplace) for pooled desktops by using a Windows&nbsp;10 gallery image from Azure Marketplace and the sizing from the first step of that procedure.
+- Create desktop or [RemoteApp application groups](/azure/virtual-desktop/manage-app-groups#create-a-remoteapp-group) for workloads that have already been migrated.
 - [Create an FSLogix profile container](/azure/virtual-desktop/create-host-pools-user-profile) to store user profiles.
 
 Deployment and migration consist of persona migration, application migration, and user profile migration. Depending on the results of the workload assessment, there will likely be changes to each of those migration tasks. This article helps identify ways that the scope would change based on the assessment feedback.
@@ -36,7 +36,7 @@ Each of the following sets of considerations should be included in the design do
 
 ### Azure landing zone considerations
 
-Before you deploy the persona groups, a landing zone should be created in the Azure region that's required to support each persona to be deployed. Each assigned landing zone should be evaluated against the [landing zone review requirements](./ready.md).
+Before you deploy the persona groups, a landing zone should be created in the Azure regions required to support each persona to be deployed. Each assigned landing zone should be evaluated against the [landing zone review requirements](./ready.md).
 
 If the assigned Azure landing zone doesn't meet your requirements, scope should be added for any modifications to be made to the environment.
 
@@ -60,7 +60,7 @@ You can use [Azure NetApp Files to host user profiles](/azure/virtual-desktop/cr
 
 You can also use [Azure Files to host user profiles](/azure/virtual-desktop/create-file-share). Doing so will require a few extra steps in the scope, including:
 
-- **Per Azure Files instance:** Configure the storage account, disk type, and Active Directory connection ([Active Directory Domain Services (AD DS) is also supported](/azure/virtual-desktop/create-profile-container-adds), assign Azure role-based access control access for an Active Directory user group, apply new technology file system permissions, and get the storage account access key.
+- **Per Azure Files instance:** Configure the storage account, disk type, and Azure Active Directory connection ([Azure Active Directory Domain Services (AD DS) is also supported](/azure/virtual-desktop/create-profile-container-adds), assign Azure role-based access control access for an Active Directory user group, apply new technology file system permissions, and get the storage account access key.
 - **Per host/persona:** Configure FSLogix on session host virtual machines.
 - **Per user:** Assign users to the host session.
 

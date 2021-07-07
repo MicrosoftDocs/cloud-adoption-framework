@@ -36,7 +36,7 @@ The itemized assumptions can create roadblocks that could slow progress or cause
 - **Performance requirements.** When workload performance has a direct business impact, extra architectural consideration may be required.
 - **Secure applications.** Security requirements tend to be implemented centrally and applied to all workloads in the portfolio. But, some workloads may have specific security requirements that could lead to architectural changes.
 
-Each of the above criteria serve as indicators of potential migration roadblocks. The above criteria is usually addressed after a workload is migrated. But if any of those criteria are required before a workload is migrated, it should be removed from the migration wave and evaluated individually. 
+Each of the above criteria serve as indicators of potential migration roadblocks. The above criteria is usually addressed after a workload is migrated. But if any of those criteria are required before a workload is migrated, it should be removed from the migration wave and evaluated individually.
 
 The [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/) and [Microsoft Azure Well-Architected Review](/assessments/?id=azure-architecture-review) can help guide those conversations with the technical owner of a specific workload to consider alternative options for deploying the workload. Those workloads would then be classified as a rearchitecture effort in your cloud adoption plan. Given the extra time required to rearchitect a workload, these alternative workload adoption paths should not be considered part of the migration process.
 

@@ -13,17 +13,17 @@ ms.subservice: ready
 
 The role of Integrations Ops is explained under [Integration Ops (per integration)](persona-and-teams.md#integration-ops-per-integration). 
 
-A Data Integration is responsible for data ingestion and enrichment only from external sources such a telemetry, finance, CRM etc. This layer can operate in both real-time, batch and micro-batch.
+A Data Integration resource group is responsible for data ingestion and enrichment only from external sources such a telemetry, finance, CRM etc. This layer can operate in both real-time, batch and micro-batch.
 
-This section explains the infrastructure which is deployed for each Data Integration inside a Data Landing Zone.
+This section explains the infrastructure which is deployed for each Data Integration resource group inside a Data Landing Zone.
 
 ## Overview
 
 ![Integrations](./images/integration-resource-group.png)
 
-*Figure 1: Data Integration Resource Group*
+*Figure 1: Data Integration resource group*
 
-For each Data Integration in a Data Landing Zone, we will create:
+For each Data Integration resource group in a Data Landing Zone, we will create:
 
 * An Azure Key Vault.
 * An Azure Data Factory for running developed engineering pipelines to transform from Raw to Enriched.

@@ -24,7 +24,7 @@ Using a hybrid cloud solution allows organizations to scale computing resources.
 
 ![Creating hybrid cloud consistency across identity, management, security, data, development, and DevOps](../../_images/hybrid-consistency.png)
 
-_Figure 1: Creating hybrid cloud consistency across identity, management, security, data, development, and DevOps._
+*Figure 1: Creating hybrid cloud consistency across identity, management, security, data, development, and DevOps.*
 
 A true hybrid cloud solution must provide four components, each of which brings significant benefits:
 

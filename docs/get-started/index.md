@@ -27,7 +27,7 @@ Each of the following links takes you to questions that are typically asked when
 
 ## Cloud adoption scenarios
 
-Your organization's cloud adoption effort will tend to align toward supporting the requirements of the long-term strategic goals of your cloud journey. Depending on whether you're considering a comprehensive hybrid and multicloud effort, or preparing for Kubernetes and container integration into your cloud strategy, we have updated guidance for a [hybrid and multicloud adoption scenario](../scenarios/hybrid/scenario-overview.md) and a [modern containers adoption scenario](../scenarios/aks/index.md).
+Your organization's cloud adoption effort will tend to align toward supporting the requirements of the long-term strategic goals of your cloud journey. Depending on whether you're considering a comprehensive hybrid and multicloud effort, or preparing for Kubernetes and container integration into your cloud strategy, we have updated guidance for a [hybrid and multicloud adoption scenario](../scenarios/hybrid/scenario-overview.md) and a [modern application platform scenario](../scenarios/aks/index.md).
 
 ## Cloud adoption antipatterns
 
@@ -50,7 +50,7 @@ Cloud adoption requires technical change, but to digitally transform with the cl
 | Guide | Description |
 | ----- | ----------- |
 | [We want to migrate existing workloads to the cloud.](./migrate.md)                   | This guide is a great starting point if your primary focus is migrating on-premises workloads to the cloud. |
-| [We want to build new products and services in the cloud.](/azure/architecture/reference-architectures/containers/aks-start-here?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)             | This guide can help you prepare to deploy innovative solutions to the cloud.                                       |
+| [We want to build new products and services in the cloud.](./innovate.md)             | This guide can help you prepare to deploy innovative solutions to the cloud.                                       |
 | [We're blocked by environment design and configuration.](./design-and-configuration.md) | This guide provides a quick approach to designing and configuring your environment.                                           |
 
 ## Improve controls
