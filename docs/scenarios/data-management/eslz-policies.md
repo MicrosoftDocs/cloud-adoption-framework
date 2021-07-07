@@ -19,7 +19,7 @@ A core principle of the Enterprise Scale Analytics and AI construction set is to
 
 The [Enterprise-Scale Architecture](/azure/cloud-adoption-framework/ready/enterprise-scale/) already uses this concept, and Enterprise Scale Analytics and AI construction set builds upon these standards by adding [custom Azure Policies](#azure-policies-for-enterprise-scale-analytics-and-ai) which are applied to our Data Management Landing Zone and Data Landing Zones.
 
-![How Azure Governance works](./images/azure-governance.png)
+![How Azure Governance works](images/azure-governance.png)
 *Figure 1: How Azure Governance Works*
 
 Azure Policy is essential to ensuring security and compliance within Enterprise Scale Analytics and AI. It helps to enforce standards and to assess compliance at-scale. Policies can be used to evaluate resources in Azure and compare them to the desired properties. Several policies (business rules) can be grouped into an initiative. Individual policies or initiatives can be assigned to different scopes in Azure, such as management groups, subscriptions, resource groups, or individual resources. The assignment applies to all resources within the scope, and sub-scopes can be excluded with exceptions if necessary.

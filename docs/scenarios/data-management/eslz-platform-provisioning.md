@@ -34,7 +34,7 @@ For example, if a new Data Landing Zone needs to be created, the responsible Dat
 
 The workflow mentioned above needs to be orchestrated, which can be achieved through multiple sets of services on the Azure platform. Some of the steps should be handled through CI/CD pipelines, such as renaming parameters in parameter files, others can be executed in other workflow orchestration tools such as Logic Apps.
 
-![Forked DevOp Model](./images/forked-dev-ops.png)
+![Forked DevOp Model](images/forked-dev-ops.png)
 
 *Figure 1: Forked DevOps Model with Enterprise Scale Analytics and AI*
 
@@ -52,7 +52,7 @@ Best practices for repositories should be adopted in order to enforce the use of
 >[!TIP]
 >Because code repositories are forked, ARM templates can be updated via 'pulls changes' whenever changes occur in the master templates and changes are to be replicated to all Data Landing Zone instances. This requires coordinated activities amongst the teams.
 
-![Data Landing Zone Automation Process](./images/data-landing-zone-auto-process.png)
+![Data Landing Zone Automation Process](images/data-landing-zone-auto-process.png)
 
 *Figure 2: Data Landing Zone Automation Process*
 
@@ -79,7 +79,7 @@ After a Data Landing Zone has been created, Data Integration and Data Products c
 
 This process is done either directly using DevOps tooling or called via pipelines/workflows exposed as APIs. Similarly to the Data Landing Zone, it requires first for the code master code repo to be forked.
 
-![Integration and Product Deployment Automation](./images/integration-product-deployment-automation.png)
+![Integration and Product Deployment Automation](images/integration-product-deployment-automation.png)
 
 *Figure 3: Integration and Product Deployment Automation*
 
@@ -100,7 +100,7 @@ Figure 3 illustrates the process to onboard a new Data Integration or Data Produ
 
 By using the above patterns we can facilitate both control, agility, self service and a way to keep our policies up to date.
 
-![Overall Data Ops Model](./images/overall-data-ops-model.png)
+![Overall Data Ops Model](images/overall-data-ops-model.png)
 
 *Figure 4: Data Ops Model*
 

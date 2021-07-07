@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Data Lake Zones
 
-When landing data into a data lake, it is important to pre-plan the structure of the data so that security, partitioning, and processing can be utilized effectively. As outlined in [The Three Data Lakes](data-lake-overview.md#the-three-data-lakes) we have three data lakes as a starting point for Enterprise Scale Analytics and AI.
+When landing data into a data lake, it is important to pre-plan the structure of the data so that security, partitioning, and processing can be utilized effectively. As outlined in [The Three Data Lakes](best-practices/data-lake-overview.md#the-three-data-lakes) we have three data lakes as a starting point for Enterprise Scale Analytics and AI.
 
 ## Overview
 
@@ -42,7 +42,7 @@ The two folders per **Data Integration** or **Data Product** should be divided b
 Access to the data is restricted by a combination of ACLs and AAD-groups. These control what can and cannot be accessed by other groups. **Integration Ops teams** and **Data Product teams** should approve or reject access to their data assets.
 
 > [!NOTE]
-> For handling restricted data please see [Restricted Data](data-privacy.md#restricted-data).
+> For handling restricted data please see [Restricted Data](secure-data-privacy.md#restricted-data).
 
 ## Raw Zone (Data Lake One)
 

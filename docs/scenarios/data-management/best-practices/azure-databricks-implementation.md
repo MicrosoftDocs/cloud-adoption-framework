@@ -102,7 +102,7 @@ For **Azure Databricks Analytics and Data Science**:
 3. Enable workspace options specific to **Azure Databricks Engineering Workspace**.
 
 >[!NOTE]
->During the creation of a new Data Integration resource group we will alter the configuration of all Azure Databricks Workspaces within a Data Landing Zone. Please see [Data Integration & Data Product Deployment Process](../platform-provisioning.md#data-integration--data-product-deployment-process) for how this is implemented with Azure Databricks shared Workspaces.
+>During the creation of a new Data Integration resource group we will alter the configuration of all Azure Databricks Workspaces within a Data Landing Zone. Please see [Data Integration & Data Product Deployment Process](../eslz-platform-provisioning.md#data-integration--data-product-deployment-process) for how this is implemented with Azure Databricks shared Workspaces.
 
 ### External Hive Metastore
 

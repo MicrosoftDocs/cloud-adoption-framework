@@ -80,7 +80,7 @@ Use any of the following options to manage your data using Azure Purview through
 
 - **Option 1**: Use a jump machine which is connected to CorpNet. To use this connectivity model, you must have connectivity between the VNet where Azure Purview Portal Private Endpoint is created which your corporate network.
   
-  Review Cloud Adoption Framework Networking for more information [Network topology and connectivity overview](.../ready/enterprise-scale/network-topology-and-connectivity.md)
+  Review Cloud Adoption Framework Networking for more information [Network topology and connectivity overview](../../../ready/enterprise-scale/network-topology-and-connectivity.md)
 
 - **Option 2**: If hybrid connectivity is not available in your organization, [deploy a Virtual Machine](/azure/virtual-machines/windows/quick-create-portal) inside the Data Management Landing Zone and [deploy Azure Bastion](/azure/bastion/quickstart-host-portal) to connect to Azure Purview using a secure connection.
 
@@ -208,4 +208,4 @@ Review the following list of personas involved in an Enterprise Scale Analytics 
 | Data Scientists | Use your preferred tools and machine learning frameworks to build scalable data science solutions. Accelerate end-to-end ML lifecycle.|Purview Data Source Administrator + Data Curator |
 | ML Engineers | Enable right processes and infrastructure for easy model deployment and model management. |Purview Data Source Administrator + Data Curator    |
 
-For more information about Data Personas, see [Personas and Teams](persona-and-teams.md#personas).
+For more information about Data Personas, see [Personas and Teams](organize-persona-and-teams.md#personas).

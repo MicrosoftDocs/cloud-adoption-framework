@@ -18,7 +18,7 @@ Azure Synapse Analytics is the provisioned, integrated analytics service that ac
 
 ## Overview
 
-During the initial setup of a [Data Landing Zone](../architecture/../architectures/data-landing-zone.md), a single Azure Synapse Analytics workspace may be deployed for use by all analysts and data scientists. Additional workspaces can be optionally created for specific Data Integrations or Data Products.
+During the initial setup of a [Data Landing Zone](../architectures/data-landing-zone.md), a single Azure Synapse Analytics workspace may be deployed for use by all analysts and data scientists. Additional workspaces can be optionally created for specific Data Integrations or Data Products.
 
 SQL Pools, formerly SQL DW, can be used as the data store for both enriched and curated data, which can serve for feature datasets needed by data science teams and for the datasets required for the analytical requirements. Azure Databricks can connect to these SQL Pools and update the data which resides inside the SQL Pools.
 

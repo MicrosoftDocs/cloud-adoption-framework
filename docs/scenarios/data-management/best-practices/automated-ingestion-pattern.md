@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Automated Ingestion Framework
 
-In previous topics of [Azure Data Factory Ingest Considerations](data-ingestion.md#azure-data-factory-ingest-considerations) and [Ingest and Processing resource group](../architecture/../architectures/data-landing-zone.md#ingest-and-processing), we have discussed enterprises building their own Custom Ingestion Framework.
+In previous topics of [Azure Data Factory Ingest Considerations](data-ingestion.md#azure-data-factory-ingest-considerations) and [Ingest and Processing resource group](../architectures/data-landing-zone.md#ingest-and-processing), we have discussed enterprises building their own Custom Ingestion Framework.
 
 This section provides guidance for services and processes that could be driven by a custom ingestion framework.
 

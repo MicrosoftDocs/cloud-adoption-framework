@@ -156,7 +156,7 @@ Although Enterprise Scale Analytics and AI uses
 [Azure AD Entitlement management](/azure/active-directory/governance/entitlement-management-overview)
 to control access and sharing of data, the enterprise might require a sharing and contract repository. As this is an organizational function, this repository should reside in the Data Management Landing Zone.
 
-These contracts should give information on data validation, model, and security policies. See [Data Sharing Agreements](data-sharing-agreements.md).
+These contracts should give information on data validation, model, and security policies. See [Data Sharing Agreements](govern-data-sharing-agreements.md).
 
 ## Data Lifecycle
 
@@ -164,7 +164,7 @@ Data products may have different lifecycles. We recommend applying policies to r
 
 In Azure this data lifecycle is handled by each relevant service containing persisted data.
 
-[Lifecycle Management](data-lake-key-considerations.md#lifecycle-management) for Enterprise Scale Analytics and AI outlines additional considerations around the different layers in a Data Lake.
+[Lifecycle Management](best-practices/data-lake-key-considerations.md#lifecycle-management) for Enterprise Scale Analytics and AI outlines additional considerations around the different layers in a Data Lake.
 
 ## Automation Interfaces (optional)
 

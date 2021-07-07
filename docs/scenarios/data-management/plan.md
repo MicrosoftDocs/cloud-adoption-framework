@@ -31,9 +31,9 @@ To help you get started, here is a table showing the thought process:
 
 |Category| Action Areas | Current Status focusing on 5 pillars of architecture |
 |----------|--------------|-------------------------------------|
-|**Preparation**| There are about 8-10 topics here starting from Strategy, Charter, Ethics, etc.| ![1 3 2 0 0](./images/pillar-1.png)|
-| **Agility**| Depending on the organizations there could be 5 to 10 topics here, such as strategy around Data Lake, Catalogue, Common Data Model etc. | ![2 0 1 0 1](./images/pillar-2.png) |
-| **Resilience**|10-20 topics are here starting from discovery, recovery and anomaly detection. | ![2 1 1 1 1](./images/pillar-3.png) |
+|**Preparation**| There are about 8-10 topics here starting from Strategy, Charter, Ethics, etc.| ![1 3 2 0 0](images/pillar-1.png)|
+| **Agility**| Depending on the organizations there could be 5 to 10 topics here, such as strategy around Data Lake, Catalogue, Common Data Model etc. | ![2 0 1 0 1](images/pillar-2.png) |
+| **Resilience**|10-20 topics are here starting from discovery, recovery and anomaly detection. | ![2 1 1 1 1](images/pillar-3.png) |
 
 Table 1: Using the maturity level detailed further below, rate your current capability between 0-4 and use the 5 pillars of architecture to guide those benchmarks.
 
@@ -78,7 +78,7 @@ Center of Excellence would assist in:
 - Deep technical skills in key technologies
 - Active participation and evangelizing in Communities of Practice
 
-![Strategy Cycle](./images/strategy-cycle.png)
+![Strategy Cycle](images/strategy-cycle.png)
 
 ### Adopting Agile Delivery Method
 
@@ -91,7 +91,7 @@ It's really about thinking through how you can understand what's going on in the
 
 The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
 
-- [Review your environment or Azure Landing Zone(s)](./ready.md)
-- [Innovate with 'data management and analytics'](./innovate.md)
-- [Govern 'data management and analytics'](./govern.md)
-- [Manage 'data management and analytics'](./manage.md)
+- [Review your environment or Azure Landing Zone(s)](ready.md)
+- [Innovate with 'data management and analytics'](innovate.md)
+- [Govern 'data management and analytics'](govern.md)
+- [Manage 'data management and analytics'](manage.md)

@@ -53,7 +53,7 @@ The data governance solution should enable you to govern data throughout the lif
 
 ## Data Governance Roles and Responsibilities Guidance (people)
 
-With respect to people, there are a number of data governance roles and responsibilities. These are covered in [Data Governance Roles and Responsibilities](persona-and-teams.md#data-governance-roles-and-responsibilities).
+With respect to people, there are a number of data governance roles and responsibilities. These are covered in [Data Governance Roles and Responsibilities](organize-persona-and-teams.md#data-governance-roles-and-responsibilities).
 
 ## Data Governance Processes
 
@@ -89,7 +89,7 @@ Data governance policies describe a set of rules to control the integrity, quali
 - Data protection policies with access security and data privacy rules
 - Data retention policies to manage the lifecycle with retention, archive and backup rules Note that multiple versions of a policy may be needed to govern the same data across different legal jurisdictions.
 
-Looking back to the [Data confidentiality classification scheme](requirements-for-governing-data-in-a-modern-enterprise.md#data-confidentiality-classification-scheme) , the data confidentiality classification scheme has five classification levels. These are Public, Internal Use Only, Confidential, Sensitive PII and Restricted.
+Looking back to the [Data confidentiality classification scheme](govern-requirements.md#data-confidentiality-classification-scheme) , the data confidentiality classification scheme has five classification levels. These are Public, Internal Use Only, Confidential, Sensitive PII and Restricted.
 
 The way to govern data is to combine this data governance classification scheme with policies and rules. So, for example, consider each of the five levels as a label that can be used to label data. Take for example 'Sensitive PII'. By creating rules for Sensitive PII data and attach these rules to a policy you create a policy for Sensitive PII data. You can then attach the policy to the Sensitive PII label and then attach the Sensitive PII label to the data. In this way all data labelled as Sensitive PII is subject to the same policies and rules. This is known as tag-based policy management. It is flexible because an individual rule or a policy can be independently changed, and all data labelled Sensitive PII would then be governed by the new rules. Equally, a Sensitive PII label can be detached from data and a Confidential label used instead. In this case the data instantly becomes governed by a new set of policies and rules associated with the Confidential label.
 

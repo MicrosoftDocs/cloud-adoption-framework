@@ -13,9 +13,9 @@ ms.subservice: ready
 
 To align with the [Ready methodology](../../ready/index.md) of the Cloud Adoption Framework, implement a naming and tagging strategy that includes business and operational details as components of resource names and metadata tags.
 
-Enterprise Scale Analytics and AI includes a Data Management Landing Zone subscription which has the standard services of an [Enterprise Scale framework](/azure/cloud-adoption-framework/ready/enterprise-scale/). It is  connected to the Data Landing Zone(s) and connectivity subscriptions via Virtual Network Peering. For further reading on the subscriptions in Enterprise Scale Analytics and AI, see the [Data Management Landing Zone](data-management-landing-zone.md) and [Data Landing Zone](data-landing-zone.md) sections.
+Enterprise Scale Analytics and AI includes a Data Management Landing Zone subscription which has the standard services of an [Enterprise Scale framework](/azure/cloud-adoption-framework/ready/enterprise-scale/). It is  connected to the Data Landing Zone(s) and connectivity subscriptions via Virtual Network Peering. For further reading on the subscriptions in Enterprise Scale Analytics and AI, see the [Data Management Landing Zone](architectures/data-management-landing-zone.md) and [Data Landing Zone](architectures/data-landing-zone.md) sections.
 
-Organizational standards can be further enforced by implementing guard rails that are based on business rules by using **Azure Policies**. These policies can be assigned to a scope of resources such as management groups, subscriptions, resource groups or individual resources. Enterprise Scale Analytics and AI contains custom Azure Policies which apply to the Data Management Landing Zone and Data Landing Zone subscriptions. For further reading, see [Policies](policies.md).
+Organizational standards can be further enforced by implementing guard rails that are based on business rules by using **Azure Policies**. These policies can be assigned to a scope of resources such as management groups, subscriptions, resource groups or individual resources. Enterprise Scale Analytics and AI contains custom Azure Policies which apply to the Data Management Landing Zone and Data Landing Zone subscriptions. For further reading, see [Policies](eslz-policies.md).
 
 ## Use Azure resource naming and tagging conventions
 

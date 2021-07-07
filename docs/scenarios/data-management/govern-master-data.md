@@ -13,7 +13,7 @@ ms.subservice: overview
 
 Central to any data governance program is master data management. Creating trusted master data is therefore critical. This can be done by defining master data entities in the business glossary within Azure Data Catalog and then using the data catalog to register data sources and discover where disparate master data is located across multiple data stores in the distributed data landscape.
 
-By mapping the physical data names of discovered disparate master data to the common business vocabulary in Azure Purview, it then becomes possible to know how to clean, match and integrate the data discovered to create golden master data records stored in a central MDM system. This can be done using Azure Data Lake Storage and Azure Data Factory as shown in [Combining Microsoft Technologies to Help Govern Data](technology-needed-for-end-to-end-governance.md#combining-microsoft-technologies-to-help-govern-data).
+By mapping the physical data names of discovered disparate master data to the common business vocabulary in Azure Purview, it then becomes possible to know how to clean, match and integrate the data discovered to create golden master data records stored in a central MDM system. This can be done using Azure Data Lake Storage and Azure Data Factory as shown in [Combining Microsoft Technologies to Help Govern Data](govern-technology.md#combining-microsoft-technologies-to-help-govern-data).
 
 :::image type="content" source="images/central-master-data-management.png" alt-text="central master data management":::
 

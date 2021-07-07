@@ -13,7 +13,7 @@ ms.subservice: ready
 
 The Enterprise Scale Analytics and AI moves teams from working horizontally across each tier such as Ingest, Processing, Analysis, Consumption and Visualization to vertical Data Landing Zone Groups coexisting together in an agile team. Platform teams such as Data Platform Ops and Platform Ops are grouped together under a common Platform Group.
 
-![Enterprise Scale Analytics and AI Teams](./images/enterprise-scale-analytics-ai-teams.png)
+![Enterprise Scale Analytics and AI Teams](images/enterprise-scale-analytics-ai-teams.png)
 
 Figure 1: Enterprise Scale Analytics and AI Teams
 

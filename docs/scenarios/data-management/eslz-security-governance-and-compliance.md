@@ -79,7 +79,7 @@ Where Advanced Threat Protection is available for the PaaS Services, we recommen
 
 ## Networking
 
-The Enterprise Scale Analytics and AI prescribed view is to use Private Endpoints for all PaaS services and no public IPs for any IaaS (Infrastructure-as-a-Service). See [Enterprise Scale Analytics and AI Networking](./eslz-network-topology-and-connectivity.md).
+The Enterprise Scale Analytics and AI prescribed view is to use Private Endpoints for all PaaS services and no public IPs for any IaaS (Infrastructure-as-a-Service). See [Enterprise Scale Analytics and AI Networking](eslz-network-topology-and-connectivity.md).
 
 ## Compliance and governance design recommendations
 
@@ -93,7 +93,7 @@ Azure Policy also helps bring your resources to compliance through bulk remediat
 
 ### Automate deployments
 
-Save time and reduce errors by automating deployments. Reduce the complexity of deploying end to end data landing zones, data integrations and data products by creating reuseable code templates. This will lessen the time to deploy or redeploy solutions.  For more information, see [DataOps Overview](dataops.md)
+Save time and reduce errors by automating deployments. Reduce the complexity of deploying end to end data landing zones, data integrations and data products by creating reuseable code templates. This will lessen the time to deploy or redeploy solutions.  For more information, see [DataOps Overview](organize-data-operations.md)
 
 ### Lock resources for production workloads
 

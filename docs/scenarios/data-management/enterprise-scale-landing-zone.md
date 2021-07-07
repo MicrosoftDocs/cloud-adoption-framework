@@ -21,7 +21,7 @@ And even with the introduction of Cloud, most of the time, the centralized appro
 
 In response to the challenges posed by a centralized data warehouse, the Enterprise Scale Analytics and AI construction set represents a strategic design path and targets the technical state for an Azure Analytics and AI environment.
 
-The pattern relies upon distribution of the data and its pipelines across [domains](data-landing-zone-division-consumption.md) enabling ownership of accessibility, usability, and development. Largely based on these patterns, the Enterprise Scale Analytics and AI construction set includes capabilities such as storage, data lineage, data classification, data ingestion, networking, security, access management, encryption, resiliency, and monitoring.
+The pattern relies upon distribution of the data and its pipelines across [domains](architectures/data-landing-zone-division-consumption.md) enabling ownership of accessibility, usability, and development. Largely based on these patterns, the Enterprise Scale Analytics and AI construction set includes capabilities such as storage, data lineage, data classification, data ingestion, networking, security, access management, encryption, resiliency, and monitoring.
 
 > [!NOTE]
 > The Enterprise Scale Analytics and AI framework builds on our [Enterprise-Scale Architecture](/azure/cloud-adoption-framework/ready/enterprise-scale/) and should be considered a supplement to it.
@@ -64,16 +64,16 @@ Figure 1: Data Management Overview
 
 The **Data Management Landing Zone**, which is a subscription, is responsible for the governance of the platform and allows for the following capabilities:
 
-- [Data Catalog](data-management-landing-zone.md#data-catalog)
-- [Data Classification](data-management-landing-zone.md#data-classification)
-- [Data Lineage](data-management-landing-zone.md#data-lineage)
-- [Data Quality Management](data-management-landing-zone.md#data-quality-management)
-- [Data Modeling Repository](data-management-landing-zone.md#data-modeling-repository)
-- [Master Data Management](data-management-landing-zone.md#master-data-management)
-- [API Catalog](data-management-landing-zone.md#api-catalog)
+- [Data Catalog](architectures/data-management-landing-zone.md#data-catalog)
+- [Data Classification](architectures/data-management-landing-zone.md#data-classification)
+- [Data Lineage](architectures/data-management-landing-zone.md#data-lineage)
+- [Data Quality Management](architectures/data-management-landing-zone.md#data-quality-management)
+- [Data Modeling Repository](architectures/data-management-landing-zone.md#data-modeling-repository)
+- [Master Data Management](architectures/data-management-landing-zone.md#master-data-management)
+- [API Catalog](architectures/data-management-landing-zone.md#api-catalog)
 - Data Sharing and Contracts
 
-For further reading, see [Data Management Landing Zone](data-management-landing-zone.md).
+For further reading, see [Data Management Landing Zone](architectures/data-management-landing-zone.md).
 
 ### Data Landing Zone
 
@@ -90,7 +90,7 @@ A few important points to keep in mind about Data Landing Zones:
 - A Data Landing Zone can host one or many [Data Integrations](#data-integrations).
 - A Data Landing Zone can also host one or many [Data Products](#data-products).
 
-For further reading, see [Data Landing Zone](data-landing-zone.md).
+For further reading, see [Data Landing Zone](architectures/data-landing-zone.md).
 
 ### Data Integrations
 
@@ -106,7 +106,7 @@ Additional services such as Event Hubs, IoT Hubs, Stream Insight, and Machine Le
 >[!IMPORTANT]
 >A **data integration** is responsible for ingestion of external data into a read data source. The data should avoid having any data transformations applied to it apart from data quality checks and application of data types.
 
-For further reading, see [Data Landing Zone Data Integrations](data-landing-zone-data-integration.md).
+For further reading, see [Data Landing Zone Data Integrations](architectures/data-landing-zone-data-integration.md).
 
 ### Data Products
 
@@ -122,13 +122,13 @@ Examples of Data Products include Azure Functions, App Service, Logic Apps, Azur
 >[!IMPORTANT]
 >A **data product** fulfil a specific need within a business using data. Data products manage, organize and make sense of the data across domains and present the insights gained from the data products. A data product is a result of data from one or many data integrations and/or other data products.
 
-For further reading, see [Data Landing Zone Data Products](data-landing-zone-data-products.md).
+For further reading, see [Data Landing Zone Data Products](architectures/data-landing-zone-data-products.md).
 
 ### Data Platform Operational Excellence
 
 The Enterprise Scale Analytics and AI platform was designed with data platform operational excellence at its core through self-service enablement, governance and streamlined deployments. The working model for data operations enables these core principles through the use of Infrastructure as Code, deployment templates, deployment processes that includes a forking and branching strategy and a central repository.
 
-For further reading, see [Platform automation and DevOps](dataops.md).
+For further reading, see [Platform automation and DevOps](organize-data-operations.md).
 
 <!-- ### Data Science Environment
 

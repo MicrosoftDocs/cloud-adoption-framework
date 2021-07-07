@@ -17,7 +17,7 @@ As outlined in both [Authentication](authentication.md) and [Authorization](anal
 >[!Note]
 >Every business needs to define it's data governance process for the granularity of data access per data integration and data product.\
 >\
->For example, data with a classification of *public* or *internal use only* might be secured by sources. Where as anything which is *confidential* or above is secured at dataset (table name) level. See [Data Governance Classification](requirements-for-governing-data-in-a-modern-enterprise.md#data-governance-classification) for classification types.
+>For example, data with a classification of *public* or *internal use only* might be secured by sources. Where as anything which is *confidential* or above is secured at dataset (table name) level. See [Data Governance Classification](govern-requirements.md#data-governance-classification) for classification types.
 
 ## Automating Security
 

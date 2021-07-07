@@ -51,7 +51,7 @@ Throughout your BI, Analytics & AI maturity journey, there are *key themes* in u
 
 ## Key Themes
 
-![Key Themes](./images/key-themes.png)
+![Key Themes](images/key-themes.png)
 
 If we carefully analyze the above key themes and how they relate to important facets of a coherent Data Strategy:
 
@@ -79,7 +79,7 @@ This is discussed in more details under [What is data governance?](data-governan
 
 ### Iterative Data Strategy Validation Framework
 
-![Iterative Data Strategy Validation Framework](./images/data-strategy-framework.png)
+![Iterative Data Strategy Validation Framework](images/data-strategy-framework.png)
 
 Business & Technology Leaders need to develop the mindset and strategies required to generate value from data and scale quickly in a simplified structured manner.
 
@@ -107,7 +107,7 @@ Leveraging data to build better products and higher value services as a point of
 
 With data governance in mind, the following diagram shows the essential stages for data lifecycle:
 
-![data lifecycle](./images/data-management-and-quality.png)
+![data lifecycle](images/data-management-and-quality.png)
 
 An effective data strategy must have provisions for data governance, but they are mutually inclusive, but not the same thing.
 
@@ -161,7 +161,7 @@ To further collaboration, we also open-sourced many tools such as Interpret ML a
 
 The pivot to becoming a data-driven organization is fundamental to deliver competitive advantage in the new normal. We want to help our customers shift from an application only approach to an application and data-led approach, helping to create an end-to-end Data Strategy that can ensure repeatability and scalability across current and future use cases that impact business outcomes.
 
-![Unlocking Innovation](./images/data-strategy-innovation.png)
+![Unlocking Innovation](images/data-strategy-innovation.png)
 
 ## Commitment
 
@@ -173,7 +173,7 @@ Communication being one of the most important elements of this framework and req
 
 Engagement is essential between those designing (and implementing) the data strategy and those contributing, consuming and exploiting the data - e.g. the business units who will make decisions and build outcomes based upon the data. Put another way, data strategies and associated data platforms that are built without engagement of the "end users" of such platforms risk challenges in relevance and adoption.       
 
-There are couple of key strategic processes which would help in delivering successfully in the context of this framework, both of which are discussed in greater detail when [building your plan](./plan.md):
+There are couple of key strategic processes which would help in delivering successfully in the context of this framework, both of which are discussed in greater detail when [building your plan](plan.md):
 
 1. Formation of Center of Excellence
 1. Adopting Agile Delivery Method
@@ -186,8 +186,8 @@ Finally, data product delivery against the set-out success criteria in a standar
 
 The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
 
-- [Plan for 'data management and analytics'](./plan.md)
-- [Review your environment or Azure Landing Zone(s)](./ready.md)
-- [Innovate with 'data management and analytics'](./innovate.md)
-- [Govern 'data management and analytics'](./govern.md)
-- [Manage 'data management and analytics'](./manage.md)
+- [Plan for 'data management and analytics'](plan.md)
+- [Review your environment or Azure Landing Zone(s)](ready.md)
+- [Innovate with 'data management and analytics'](innovate.md)
+- [Govern 'data management and analytics'](govern.md)
+- [Manage 'data management and analytics'](manage.md)
