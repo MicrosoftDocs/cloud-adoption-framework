@@ -12,7 +12,7 @@ ms.subservice: ready
 
 # Security Provisioning
 
-As outlined in both [Authentication](authentication.md) and [Authorization](analytics-role-based-access-control.md) are used to control access to services with the construction set. Specific guidance on setting up security, for a particular service, is contained in the best practice section for each product. For example the best practices section for Azure Data Lakes, gives insight how to think of granting access to datasets.
+As outlined in both [Authentication](secure-authentication.md) and [Authorization](secure-analytics-role-based-access-control.md) are used to control access to services with the construction set. Specific guidance on setting up security, for a particular service, is contained in the best practice section for each product. For example the best practices section for Azure Data Lakes, gives insight how to think of granting access to datasets.
 
 >[!Note]
 >Every business needs to define it's data governance process for the granularity of data access per data integration and data product.\

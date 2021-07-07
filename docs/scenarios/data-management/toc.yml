@@ -60,7 +60,7 @@ items:
   - name: Govern your data estate
     items:
     - name: Overview
-      href: govern-maturity-model.md                 
+      href: govern.md                 
     - name: Requirements for Governing Data in a Modern Enterprise
       href: govern-requirements.md
     - name: Components Needed for Data Governance

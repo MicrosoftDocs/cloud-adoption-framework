@@ -208,4 +208,4 @@ Review the following list of personas involved in an Enterprise Scale Analytics 
 | Data Scientists | Use your preferred tools and machine learning frameworks to build scalable data science solutions. Accelerate end-to-end ML lifecycle.|Purview Data Source Administrator + Data Curator |
 | ML Engineers | Enable right processes and infrastructure for easy model deployment and model management. |Purview Data Source Administrator + Data Curator    |
 
-For more information about Data Personas, see [Personas and Teams](organize-persona-and-teams.md#personas).
+For more information about Data Personas, see [Personas and Teams](../organize-persona-and-teams.md#personas).

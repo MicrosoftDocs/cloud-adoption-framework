@@ -72,7 +72,7 @@ More details on how to drive a security for Data Management Landing Zones and Da
 In the case of **non *sensitive (PII)* data**, the following recommendations should be considered:
 
 1. Each data asset in Azure Data Lake Storage should own a matching AAD Data Asset group.
-2. Data asset AAD registration should be automated via a script and restricted to [Integration Ops](team-functions.md#integration-ops).
+2. Data asset AAD registration should be automated via a script and restricted to [Integration Ops](organize-team-functions.md#integration-ops).
 3. Teams should request access via a Security Group (SG) join request which is approved by Integration Ops.
 4. Once approved, teams should access data from a storage client (SSO authenticated), Azure Synapse Analytics, Azure Databricks etc.
 

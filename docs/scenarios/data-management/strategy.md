@@ -75,7 +75,7 @@ In relation to Data Governance there has to be a right balance in the decentrali
 
 In the absence of a well thought-out Data Strategy, there is a clear need to just "get going" and quickly start demonstrating value back to business. In this pursuit, acting on the above key themes or using them as strategic principles wrapped in a framework could not only lead to addressing current business problems but even assist in the formation of future holistic data strategy in an iterative way with validation, yet yielding quick timely results.
 
-This is discussed in more details under [What is data governance?](data-governance.md).
+This is discussed in more details under [What is data governance?](govern.md).
 
 ### Iterative Data Strategy Validation Framework
 
@@ -188,6 +188,5 @@ The following list of articles will take you to guidance found at specific point
 
 - [Plan for 'data management and analytics'](plan.md)
 - [Review your environment or Azure Landing Zone(s)](ready.md)
-- [Innovate with 'data management and analytics'](innovate.md)
 - [Govern 'data management and analytics'](govern.md)
-- [Manage 'data management and analytics'](manage.md)
+- [Secure 'data management and analytics'](secure.md)

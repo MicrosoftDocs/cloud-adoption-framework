@@ -13,7 +13,7 @@ ms.subservice: ready
 
 ## Overview
 
-Data Landing Zones are connected to the [Data Management Landing Zone](architectures/data-management-landing-zone.md) by virtual network (VNet) peering and are considered a [landing zone](/azure/cloud-adoption-framework/ready/landing-zone/) in relation to the Enterprise-Scale Architecture.
+Data Landing Zones are connected to the [Data Management Landing Zone](data-management-landing-zone.md) by virtual network (VNet) peering and are considered a [landing zone](/azure/cloud-adoption-framework/ready/landing-zone/) in relation to the Enterprise-Scale Architecture.
 
 > [!IMPORTANT]
 > Before provisioning a Data Landing Zone, you should have your DevOps and CI/CD operating model in place and a Data Management Landing Zone deployed. 
