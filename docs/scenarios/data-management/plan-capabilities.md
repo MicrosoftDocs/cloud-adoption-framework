@@ -60,6 +60,5 @@ Figure 3: Maturity evolution of organization across reporting, deriving insights
 The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
 
 * [Review your environment or Azure Landing Zone(s)](ready.md)
-* [Innovate with 'data management and analytics'](innovate.md)
 * [Govern 'data management and analytics'](govern.md)
-* [Manage 'data management and analytics'](manage.md)
+* [Secure 'data management and analytics'](secure.md)
