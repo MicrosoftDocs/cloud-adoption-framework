@@ -52,10 +52,6 @@ items:
         - name: Deployment templates
           href: deployment-templates.md
 
-  - name: Migrate to the cloud
-    href: migrate.md
-  - name: Innovate in the cloud
-    href: migrate.md
   - name: Govern your data estate
     items:
     - name: What is data governance?
@@ -69,7 +65,7 @@ items:
     - name: Mastering Master Data
       href: managing-master-data.md
     - name: Data Governance Maturity Model
-      href: managing-master-data.md                 
+      href: data-governance-maturity-model.md                 
     - name: Data Sharing Agreements
       href: data-sharing-agreements.md       
   - name: Manage your data estate
