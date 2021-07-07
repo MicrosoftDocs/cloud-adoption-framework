@@ -19,8 +19,8 @@ ms.custom: think-tank, e2e-aks
 - AKS supports two networking models: kubenet and Azure Container Networking Interface (CNI).
   - CNI requires extra planning for IP addresses.
   - Only CNI supports Windows Server node and network policies pool.
-  - UDR for kubenet is automatically set up by AKS
-  - kubenet only supports up to 400 nodes
+  - UDR for kubenet is automatically set up by AKS.
+  - kubenet only supports up to 400 nodes.
   - Verify the current list of [capabilities supported by each CNI plug-in](/azure/aks/concepts-network#compare-network-models).
 - IP addressing and the size of the virtual network subnet must be carefully planned to support the scaling of the cluster. For example, you can add more nodes.
 - Virtual nodes can be used for quick cluster scaling, but there are some [known limitations](/azure/aks/virtual-nodes-portal).
@@ -73,7 +73,7 @@ Incoming (ingress) controllers can be used to expose applications running in the
 
 Ingress controllers can expose applications and APIs with a public or a private IP address.
 
-- The configuration should be aligned with the egress filtering design to avoid asymmetric routing. UDRs can cause asymmetric routing (potentially), but not necessarily. Application Gateway can SNAT on traffic, meaning return traffic will go back to Application Gateway node and not to UDR route if UDR is only set up for internet traffic
+- The configuration should be aligned with the egress filtering design to avoid asymmetric routing. UDRs can cause asymmetric routing (potentially), but not necessarily. Application Gateway can SNAT on traffic, meaning return traffic will go back to Application Gateway node and not to UDR route if UDR is only set up for internet traffic.
 - If TLS termination is required, management of TLS certificates must be considered.
 
 Application traffic can come from either on-premises or the public internet. The following picture describes an example where an [Azure Application Gateway](/azure/application-gateway/overview) is configured to reverse-proxy connections to the clusters both from on-premises and from the public internet.
