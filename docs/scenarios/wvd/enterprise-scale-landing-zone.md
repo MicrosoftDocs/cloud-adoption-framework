@@ -32,7 +32,7 @@ Learn about guidelines that drive the design of the Cloud Adoption Framework for
 
 The following image shows a conceptual reference architecture that demonstrates design areas and best practices.
 
-[![A diagram of a reference architecture for a Azure Virtual Desktop environment.](./media/windows-virtual-desktop-architecture.png)](./media/windows-virtual-desktop-architecture.png#lightbox)
+[![A diagram of a reference architecture for a Azure Virtual Desktop environment.](./media/azure-virtual-desktop-architecture.png)](./media/azure-virtual-desktop-architecture.png#lightbox)
 
 ### Implementation with Azure Resource Manager (ARM) templates for Remote Desktop Services
 
