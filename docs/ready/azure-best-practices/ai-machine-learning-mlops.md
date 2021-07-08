@@ -196,6 +196,11 @@ Everyone has a unique learning style, so a mixture of the following types of doc
 - How-to videos
 - Readiness assessments
 
+#### Azure MLOps Video Series
+
+In this section, these [Azure MLOps video series](https://www.youtube.com/playlist?list=PLiQS6N-W1p3m9squzZ2cPgGdH5SBhjY6f) show how to enable MLOps for your machine learning solution from your initial developemnt to production.
+
+
 ### Ethics
 
 Ethics play an instrumental role in the design of an AI solution. If ethical principles aren't implemented, trained models can exhibit the same bias present in the data they were trained on. This issue can result in the project being discontinued and more importantly, it can risk the organization's reputation.
@@ -214,6 +219,6 @@ Not every organization's machine learning DevOps (MLOps) requirements are the sa
 
 ## Next steps
 
-To learn more about how to organize and set up Azure Machine Learning environments, see [Organize and set up Azure Machine Learning environments](./ai-machine-learning-resource-organization.md).
+To learn more about how to organize and set up Azure Machine Learning environments, see [Organize and set up Azure Machine Learning environments](./ai-machine-learning-resource-organization.md). Also, you can watch hands-on [Azure MLOps video series](https://www.youtube.com/playlist?list=PLiQS6N-W1p3m9squzZ2cPgGdH5SBhjY6f).
 > [!div class="nextstepaction"]
 > [Organize and set up Azure Machine Learning environments](./ai-machine-learning-resource-organization.md)
