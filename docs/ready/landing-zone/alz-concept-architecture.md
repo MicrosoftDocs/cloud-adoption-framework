@@ -18,8 +18,6 @@ These zones consider all platform resources that are required to support the cus
 
 ![Diagram that shows a landing zone design.](../enterprise-scale/media/lz-design.png)
 
-## Target architecture
-
 For the majority of organizations, the **Azure Landing Zone conceptual architecture** shown below is the destination - a mature, scaled-out target architecture intended to help organizations operate successful cloud environments that drive their business whilst maintaining best practice security and governance.
 
 This conceptual architecture represents scale and maturity decisions based on a wealth of lessons learned and feedback from customers who have adopted Azure as part of their digital estate.
