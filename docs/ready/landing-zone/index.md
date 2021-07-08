@@ -16,6 +16,8 @@ ms.custom: internal
 
 Azure landing zones are the output of a multisubscription Azure environment that accounts for scale, security governance, networking, and identity. Azure landing zones enable application migration, modernization and innovation at enterprise-scale in Azure. These zones consider all platform resources that are required to support the customer's application portfolio and don't differentiate between infrastructure as a service or platform as a service.
 
+![Diagram that shows a landing zone design.](../enterprise-scale/media/lz-design.png)
+
 A landing zone is an environment for hosting your workloads, preprovisioned through code. Watch the following video to learn more.
 
 <!-- markdownlint-disable MD034 -->
@@ -33,13 +35,15 @@ No single solution fits all technical environments. A few Azure landing zone imp
 
  Whether you're looking to deploy your first production application to Azure or you're operating a complex portfolio of tech platforms & workloads, the Azure landing zone implementation options can be tailored to your needs.
 
-## Azure Landing Zone accelerator
+## Azure Landing Zone conceptual architecture
 
 For the majority of organizations, the **Azure Landing Zone conceptual architecture** shown below represents the destination in their cloud adoption journey - a mature, scaled-out target architecture intended to help organizations operate successful cloud environments that drive their business whilst maintaining best practice security and governance.
 
 This conceptual architecture represents scale and maturity decisions based on a wealth of lessons learned and feedback from customers who have adopted Azure as part of their digital estate.
 
 ![Azure Landing Zone conceptual architecture diagram](../enterprise-scale/media/ns-arch-cust-expanded.png)
+
+## Azure Landing Zone accelerator
 
 For organizations where this conceptual architecture fits with the operating model and resource structure they plan to use, there is a ready-made deployment experience available which we call the **Azure Landing Zone accelerator**.
  
