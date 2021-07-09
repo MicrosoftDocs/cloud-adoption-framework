@@ -69,7 +69,7 @@ Explore key design considerations and recommendations surrounding virtual wide a
 
 - An Azure DDoS Protection standard protection plan can be shared across all VNets in a single Azure AD Tenant to protect resources with public IP addresses. For more information, see [Azure DDoS Protection Standard](/azure/ddos-protection/ddos-protection-overview).
 
-  - At this time Virtual WAN Secure Virtual Hubs don't support Azure DDoS standard protection plans as documented [here](/azure/firewall-manager/overview#known-issues) and [here](/azure/firewall-manager/vhubs-and-vnets#comparison).
+  - At this time, Virtual WAN Secure Virtual Hubs don't support Azure DDoS standard protection plans. For more information, see [Azure Firewall Manager known issues](/azure/firewall-manager/overview#known-issues) and [hub virtual network and secured virtual hub comparison](/azure/firewall-manager/vhubs-and-vnets#comparison).
 
   - Only resources with Public IP addresses are covered by Azure DDoS Protection standard protection plans.
 
@@ -105,7 +105,7 @@ Explore key design considerations and recommendations surrounding virtual wide a
 
 - For internet outbound protection and filtering, consider deploying Azure Firewall in the virtual hub.
 
-- If partner NVAs are required for east/west or south/north traffic protection and filtering, as Azure Virtual WAN doesn't allow deploying such security NVAs in the virtual hub, evaluate whether deploying those NVAs to a separate spoke virtual network and configuring static routing as described [here](/azure/virtual-wan/scenario-route-through-nva) would meet your requirements. As an alternative, consider a traditional network topology based on the hub and spoke model, as partner NVAs can be deployed in a regular hub virtual network.
+- If partner NVAs are required for east/west or south/north traffic protection and filtering, as Azure Virtual WAN doesn't allow deploying such security NVAs in the virtual hub, evaluate whether deploying those NVAs to a separate spoke virtual network and configuring static routing as described in [Scenario: Route traffic through an NVA](/azure/virtual-wan/scenario-route-through-nva) will meet your requirements. As an alternative, consider a traditional network topology based on the hub and spoke model, as partner NVAs can be deployed in a regular hub virtual network.
 
 - When you're deploying partner networking technologies and NVAs, follow the partner vendor's guidance to ensure there are no conflicting configurations with Azure networking.
 
