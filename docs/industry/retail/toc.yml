@@ -50,7 +50,7 @@ items:
     - name: Overview
       href: govern.md
     - name: Unified operations
-      href: /azure/cloud-adoption-framework/scenarios/hybrid/unified-operations?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json
+      href: ../../scenarios/hybrid/unified-operations.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2findustry%2fretail%2ftoc.json
   - name: Manage your assets
     href: manage.md
   - name: Retail solutions
