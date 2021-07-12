@@ -52,11 +52,11 @@ Use the following technology platform scenarios to extend the cloud adoption sce
 
 Whatever your target horizon, basic cloud adoption planning helps prepare each program for success. Include the following tasks in your planning efforts:
 
-- **Understand you current state:** Rationalize your digital estate against your planning horizons to understand how each program affects your portfolio. For more information, see [Gather inventory data for a digital estate](/azure/cloud-adoption-framework/digital-estate/inventory).
+- **Understand you current state:** Rationalize your digital estate against your planning horizons to understand how each program affects your portfolio. For more information, see [Gather inventory data for a digital estate](../../digital-estate/inventory.md).
 
-- **Build a plan:** Create a DevOps backlog and cloud adoption plan to track and manage each program. For more information, see [Cloud adoption plan and Azure DevOps](/azure/cloud-adoption-framework/plan/template).
+- **Build a plan:** Create a DevOps backlog and cloud adoption plan to track and manage each program. For more information, see [Cloud adoption plan and Azure DevOps](../../plan/template.md).
 
-- **Develop skills:** Establish a skilling plan to prepare your staff for success. For more information, see [Get started on a skills readiness path](/azure/cloud-adoption-framework/plan/suggested-skills).
+- **Develop skills:** Establish a skilling plan to prepare your staff for success. For more information, see [Get started on a skills readiness path](../../plan/suggested-skills.md).
 
 ## Next steps
 
