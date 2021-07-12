@@ -37,7 +37,7 @@ Alongside the controls that help maintain and demonstrate compliance, the tools 
 
 | Design areas | Objective | Relevant methodologies |
 |---|---|---|
-| Governance and compliance | Automate auditing and enforcement of governance, and compliance policies. | Govern |
+| Governance | Automate auditing and enforcement of governance policies. | Govern |
 | Security | Implement controls and process to protect your cloud environments | Secure |
 | Management | For stable, ongoing operations in the cloud, a management baseline is required to provide visibility, operations compliance, and protect and recover capabilities. | Manage |
 | Platform automation and DevOps | Align the best tools and templates to deploy your landing zones and supporting resources. | Ready |
