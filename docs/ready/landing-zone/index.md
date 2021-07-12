@@ -41,6 +41,8 @@ For the majority of organizations, the **Azure Landing Zone conceptual architect
 
 This conceptual architecture represents scale and maturity decisions based on a wealth of lessons learned and feedback from customers who have adopted Azure as part of their digital estate.
 
+While your specific implementation may vary, as a result of specific business decisions or existing investments in tools that need to persist in your cloud environment, this conceptual architecture will help set a direction for the overall approach your organization takes to designing and implementing a landing zone.
+
 ![Azure Landing Zone conceptual architecture diagram](../enterprise-scale/media/ns-arch-cust-expanded.png)
 
 ## Azure Landing Zone accelerator
