@@ -4,10 +4,10 @@ The files in this folder are designed to start a new tech platform scenario with
 
 ## CAF work to finalize the scenarios
 
-- For each ESLZ page, the headers & metadata need to look more like the corresponding file in the AKS scenario
-- CAF team to review the articles & identify any additional requirements for each page
-- CAF team to review the articles for quality to ensure we don't start with known errors
-- CAF team to update the Ready article to match AKS scenario flow
+- For each ESLZ page, the headers & metadata need to look more like the corresponding file in the AKS scenario.
+- CAF team to review the articles & identify any additional requirements for each page.
+- CAF team to review the articles for quality to ensure we don't start with known errors.
+- CAF team to update the Ready article to match AKS scenario flow.
 
 ## ThinkTank team steps to use this template
 
