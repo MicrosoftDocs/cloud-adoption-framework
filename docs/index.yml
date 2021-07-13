@@ -256,8 +256,8 @@ additionalContent:
           url: https://azure.microsoft.com/programs/azure-fasttrack
 
         # Card
-        - title: Azure Migration Program
-          summary: Get help migrating workloads to the cloud
+        - title: Azure Migration and Modernization Program
+          summary: Get help migrating and modernizing workloads to the cloud
           url: https://azure.microsoft.com/migration/migration-program
 
         # Card
