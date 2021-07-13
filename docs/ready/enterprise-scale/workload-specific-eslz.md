@@ -32,7 +32,7 @@ Enterprise-scale for AKS represents the strategic design path and target technic
 
 Learn more about Enterprise for AKS in the Modern Application Platform page
 
-- [Enterprise-scale for AKS - Cloud Adoption Framework | Microsoft Docs](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/aks/enterprise-scale-landing-zone)
+- [Enterprise-scale for AKS - Cloud Adoption Framework | Microsoft Docs](https://docs.microsoft.com/azure/cloud-adoption-framework/scenarios/aks/enterprise-scale-landing-zone)
 
 ## Enterprise Scale for SAP
 
@@ -40,7 +40,7 @@ Enterprise-scale for SAP on Azure provide specific architectural approach and re
 
 Learn more about Enterprise for SAP Adoption page
 
-- [Enterprise-scale for SAP on Azure - Cloud Adoption Framework | Microsoft Docs](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/sap/enterprise-scale-landing-zone)
+- [Enterprise-scale for SAP on Azure - Cloud Adoption Framework | Microsoft Docs](https://docs.microsoft.com/azure/cloud-adoption-framework/scenarios/sap/enterprise-scale-landing-zone)
 
 ## Next steps
 
