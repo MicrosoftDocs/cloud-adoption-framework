@@ -80,7 +80,7 @@ The Calculator creates a match from Azure Services to create a high-level initia
 
 **Solution assessments:** Get assistance from a Microsoft solutions assessment expert or qualified partner as part of a [Solution Assessment engagement](https://www.microsoft.com/solutionassessments/solutionassessments.aspx).
 
-**Azure Migration Program:** Join the  [Azure Migration Program](https://azure.microsoft.com/migration/migration-program/) to get the guidance and expert help you need at every stage of the cloud migration journey. Migrate infrastructure, databases, and apps—and move forward with confidence.
+**Azure Migration and Modernization Program:** Join the  [Azure Migration and Modernization Program](https://azure.microsoft.com/migration/migration-program/) to get the guidance and expert help you need at every stage of the cloud migration journey. Migrate infrastructure, databases, and apps—and move forward with confidence.
 
 ### Learn about Azure with Microsoft Learn
 
