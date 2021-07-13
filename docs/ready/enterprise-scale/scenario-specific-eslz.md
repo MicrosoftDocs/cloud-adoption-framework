@@ -1,6 +1,6 @@
 ---
-title: Workload Specific Enterprise Scale Landing Zones
-description: Learn about construction sets and workload specific enterprise scale landing zones
+title: Scenario Specific Enterprise Scale Landing Zones
+description: Learn about construction sets and scenario specific enterprise scale landing zones
 author: mosabami
 ms.author: aayodeji
 ms.date: 07/13/2021
@@ -10,13 +10,13 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
-# Workload Specific Enterprise Scale Landing Zones
+# Scenario Specific Enterprise Scale Landing Zones
 
 **Enterprise-scale** is an **architecture approach and** **reference implementation** that enables effective **construction** and **operationalization** of landing zones on Azure, at scale and **aligned** with **Azure** **Roadmap** and **Microsoft** **Cloud Adoption Framework for Azure**. An enterprise scale landing zone is a reference implementation of the workload environment conforming to enterprise scale architecture (opinionated way to implement, code). 
 
-In addition to that we have Workload or scenario specific Enterprise Scale Landing Zones that enables effective **workload** and **scenario operationalization** of landing zones on Azure, at scale and **aligned** with **Azure Roadmap** and **Microsoft** **Cloud Adoption Framework for Azure**. 
+In addition to that, we have scenario specific Enterprise Scale Landing Zones that enables effective **workload** and **scenario operationalization** of landing zones on Azure, at scale and **aligned** with **Azure Roadmap** and **Microsoft** **Cloud Adoption Framework for Azure**. 
 
-These workload specific scenarios are 
+These scenario specific scenarios are 
 
 **Authoritative:** Provides holistic design decision framework for Azure Platform
 
@@ -24,7 +24,7 @@ These workload specific scenarios are
 
 **Prescriptive:** Apply it to clearly plan and design your Azure environment
 
-Each Workload specific Enterprise Scale Landing Zone has its own relevant Architecture and its own Reference Implementation.
+Each scenario specific Enterprise Scale Landing Zone has its own relevant Architecture and its own Reference Implementation.
 
 ## Enterprise Scale for AKS
 
@@ -44,4 +44,4 @@ Learn more about Enterprise for SAP Adoption page
 
 ## Next steps
 
-Workload specific Enterprise-Scale Landing Zones provides an accelerated path to building out your enterprise-scale landing zones. Click on one of the links above to get started on your workload specific enterprise-scale landing zone.
+Scenario specific Enterprise-Scale Landing Zones provides an accelerated path to building out your enterprise-scale landing zones. Click on one of the links above to get started on your scenario specific enterprise-scale landing zone.
