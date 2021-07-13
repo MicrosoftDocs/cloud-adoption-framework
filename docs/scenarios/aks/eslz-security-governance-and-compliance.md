@@ -126,6 +126,8 @@ Restrict node access by limiting SSH access.
 
 Using the container-specific OS in AKS nodes typically reduces their attack surfaces since other services and functionalities are disabled. They also have read-only file systems and employ other cluster hardening practices by default. The Azure platform automatically applies OS security patches to Linux and Windows nodes on a nightly basis. If a Linux OS security update requires a host reboot, it won't automatically reboot. AKS provides mechanisms to reboot to apply those specific patches.
 
+Note that Azure Defender for Servers is not applicable for AKS Linux and Windows nodes, since their Operating System is managed by Microsoft. If there are no other virtual machines in the subscription where AKS is deployed, Azure Defender for Servers can be safely disabled. If the environment has been deployed including the [ESLZ recommended Azure policies](https://github.com/Azure/Enterprise-Scale/blob/main/docs/ESLZ-Policies.md), an exclusion can be configured to the policy assignment in the Management Group that automatically enables Azure Defender for Servers, to avoid unnecessary costs.
+
 ### Application security
 
 Application security is about:
@@ -177,6 +179,7 @@ Here are some other design considerations for AKS security governance and compli
 - Decide if your private Container Registry instance will be shared across multiple landing zones or if you'll deploy a dedicated container registry to each landing zone subscription.
 - Consider using a security solution like [Azure Defender for Kubernetes](/azure/security-center/defender-for-kubernetes-introduction) for threat detection.
 - Consider scanning your container images for vulnerabilities.
+- Consider disabling Azure Defender for Servers in the AKS subscription if there are no non-AKS virtual machines, to avoid unnecessary costs.
 
 ## Design recommendations
 
