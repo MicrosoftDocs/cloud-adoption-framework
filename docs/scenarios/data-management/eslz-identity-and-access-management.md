@@ -23,7 +23,7 @@ Review the Azure administration and management activities your teams to do. Cons
 
 ### Role assignments
 
-For automation purposes of deploying Data Landing Zones, required role assignments are listed here:
+For automation purposes of deploying Data Landing Zones, you need these roles:
 
 :::row:::
     :::column span="1":::
@@ -126,7 +126,7 @@ The following role assignments are required for a deployment of a data integrati
 
 ## Managing access to data
 
-Managing access to data should be done using Azure AD Groups. Add user principle names or service principle names to the Azure AD Groups. Add the groups to the services and grant permissions to the group. This approach allows for fine grain access control.
+Managing access to data should be done using Azure AD Groups. Add user principle names or service principle names to the Azure AD Groups. Add the groups to the services and grant permissions to the group. This approach allows for fine-grained access control.
 
 For datasets in Azure Data Lakes, consider using ACLs. For more information, see [Access control model in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-access-control-model). Using Azure AD passthrough with ACLs is supported by most native Azure services, including Azure Machine Learning, Azure Synapse Analytics, and Azure Databricks.
 
