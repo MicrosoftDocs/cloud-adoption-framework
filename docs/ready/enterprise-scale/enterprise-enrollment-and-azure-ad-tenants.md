@@ -36,7 +36,8 @@ An Enterprise Agreement (EA) enrollment represents the commercial relationship b
 - Multiple environments can be separated at an EA-account level to support holistic isolation.
 - There can be multiple administrators appointed to a single enrollment.
 - Each subscription must have an associated Account Owner.
-- Each Account Owner will be made a subscription owner for any subscriptions provisioned under that account.
+- Each Account Owner will be made a subscription owner and Service Administrator for any subscriptions provisioned under that account.
+- The Service Administrator has the equivalent access of a user who is assigned the Owner role at the subscription scope.
 - A subscription can belong to only one account at any given time.
 - A subscription can be suspended based on a specified set of criteria.
 
@@ -52,6 +53,7 @@ An Enterprise Agreement (EA) enrollment represents the commercial relationship b
 - Set up Enterprise Dev/Test and production environments at an EA account level to support holistic isolation.
 - Don't ignore notification emails sent to the notification account email address. Microsoft sends important EA-wide communications to this account.
 - Don't move or rename an EA account in Azure AD.
+ - Treat account owners like [emergency access](/azure/active-directory/users-groups-roles/directory-emergency-access) or break-glass accounts to avoid rename or delete in case an individual leaves organization or changes roles.
 - Periodically audit the EA portal to review who has access and avoid using a Microsoft account where possible.
 
 ## Define Azure AD tenants
