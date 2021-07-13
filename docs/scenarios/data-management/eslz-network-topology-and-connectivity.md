@@ -22,8 +22,6 @@ This section outlines the networking patterns to assist with:
 - Creating access for remote workers.
 - Interfacing with on-premises and software as a service (SaaS) solutions.
 
-It builds upon the Cloud Adoption Framework for [network topology and connectivity](/azure/cloud-adoption-framework/ready/enterprise-scale/network-topology-and-connectivity).
-
 :::image type="content" source="./images/networking-overview.png" alt-text="Diagram that shows a high-level overview of networking for enterprise-scale analytics and AI." lightbox="./images/networking-overview.png":::
 
 ## Data management landing zone networking
