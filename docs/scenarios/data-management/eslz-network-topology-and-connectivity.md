@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Network topology and connectivity for a data management and analytics landing zone
 
-This article has design considerations and guidelines for networking and connectivity to or from data management and data landing zones. It builds on information that's found in the [enterprise-scale design area for network topology and connectivity](../../ready/enterprise-scale/network-topology-and-connectivity.md) article.
+This article has design considerations and guidelines for networking and connectivity to or from data management landing zones and data landing zones. It builds on information that's found in the [enterprise-scale design area for network topology and connectivity](../../ready/enterprise-scale/network-topology-and-connectivity.md) article.
 
 Since data management and data landing zones are important, you should also include the guidance for the enterprise-scale design areas in your design.
 
