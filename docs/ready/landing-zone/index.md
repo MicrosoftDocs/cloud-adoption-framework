@@ -51,11 +51,19 @@ For organizations where this conceptual architecture fits with the operating mod
 
 The accelerator is an Azure portal-based deployment that will provide a full implementation of the conceptual architecture, along with opinionated configurations for key components such as management groups and policies.
 
-There are other deployment options available - some that deliver the full architecture using 3rd party deployment technologies, and others that start from a smaller footprint - these can be found under the **implementation options** section of this content.
  
 [![DTA-Button-ALZ](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale%2Fmain%2Fdocs%2Freference%2Fadventureworks%2FarmTemplates%2Fes-hubspoke.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale%2Fmain%2Fdocs%2Freference%2Fadventureworks%2FarmTemplates%2Fes-portal.json)
 
+There are other deployment options available - some that deliver the full architecture using 3rd party deployment technologies, and others that start from a smaller footprint - these can be found under the **implementation options** section of this content.
+
 ## Next steps
+
+Organizations may be at different stages of their cloud journey when reviewing this guidance. 
+As a result, the actions and recommendations required to progress towards the outcome detailed above may vary.
+To understand best next actions in relation to where you are in your cloud adoption, review the journey to the target architecture content.
+
+> [!div class="nextstepaction"]
+> [Journey to the target architecture](./landing-zone-journey.md)
 
 When you're choosing the right Azure landing zone implementation option, you should understand the [Azure landing zone design areas](./design-areas.md).
 
