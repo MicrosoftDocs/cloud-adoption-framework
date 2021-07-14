@@ -213,7 +213,7 @@ For Azure Container Registry, the determining factors for cost optimization incl
 
 For production scenarios where high throughput or enterprise security is required, the Premium SKU of Azure Container Registry is recommended.
 
-For dev and test scenarios where throughput and security are less critical, we recommend either Standard SKU or Premium SKU.
+For dev/test scenarios where throughput and security are less critical, we recommend either Standard SKU or Premium SKU.
 
 The Basic SKU of Azure Container Registry isn't recommended for Azure Machine Learning. It's not recommended because of its low throughput and low included storage, which can be quickly exceeded by Azure Machine Learning's relatively large sized (1+ GB) Docker images.
 
