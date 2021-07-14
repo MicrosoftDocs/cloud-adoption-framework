@@ -36,12 +36,20 @@ Learn more about Enterprise for AKS in the Modern Application Platform page
 
 ## Enterprise Scale for SAP
 
-Enterprise-scale for SAP on Azure provide specific architectural approach and reference implementation that enables effective construction and operationalization of platform workload landing zones within the Cloud Adoption Framework enterprise-scale landing zone. 
+Enterprise-scale for SAP on Azure provide specific architectural approach and reference implementation that enables effective construction and operationalization of SAP workload landing zones within the Cloud Adoption Framework enterprise-scale landing zone. 
 
 Learn more about Enterprise for SAP Adoption page
 
 - [Enterprise-scale for SAP on Azure - Cloud Adoption Framework | Microsoft Docs](https://docs.microsoft.com/azure/cloud-adoption-framework/scenarios/sap/enterprise-scale-landing-zone)
 
+## Enterprise Scale for WVD
+
+The Windows Virtual Desktop Enterprise-scale Landing zone is used after you've implemented an enterprise-scale landing zone. Enterprise-scale for WVD on Azure provide specific architectural approach and reference implementation that enables effective construction and operationalization of WVD workload landing zones within the Cloud Adoption Framework enterprise-scale landing zone. 
+
+Learn more about Enterprise for WVD Adoption page
+
+- [Enterprise-scale for WVD on Azure - Cloud Adoption Framework | Microsoft Docs](https://docs.microsoft.com/azure/cloud-adoption-framework/scenarios/wvd/enterprise-scale-landing-zone)
+
 ## Next steps
 
-Scenario specific Enterprise-Scale Landing Zones provides an accelerated path to building out your enterprise-scale landing zones. Click on one of the links above to get started on your scenario specific enterprise-scale landing zone.
+Scenario specific Enterprise-scale landing zones provide an accelerated path to building out your scalable, secure landing zones for various workloads. Click on one of the links above to get started.
