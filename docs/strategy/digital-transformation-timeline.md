@@ -62,7 +62,7 @@ This reference customer developed horizons aligned to the following target sched
 ## Next steps
 
 Developing a similar set of cloud horizons can help refine your technical and financial considerations. This approach could also make it easier to share your priorities and objectives with stakeholders and technical staff to ensure their efforts align with the desired outcomes.
-With defined cloud adoption horizons and updated considerations, you're now ready to [create a business case](./financial-models.md).
+With defined cloud adoption horizons and updated considerations, you're now ready to [create a business case](./cloud-migration-business-case.md).
 
 > [!div class="nextstepaction"]
-> [Create a business case](./financial-models.md)
+> [Create a business case](./cloud-migration-business-case.md)

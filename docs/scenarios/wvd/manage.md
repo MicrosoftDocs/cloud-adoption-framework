@@ -82,4 +82,4 @@ The platform operations section above illustrates a common conversation when man
 
 Workload operations can build on your existing operations baseline and platform-specific operations. You can also safely operate a Azure Virtual Desktop environment using completely decentralized workload operations.
 
-In either case, when you need to elevate operations to focus on specific outcomes for a specific workload, you can use the [Azure Well-Architected Framework](/azure/architecture/framework/) and [Microsoft Azure Well-Architected Review](https://aka.ms/architecture/review) to get specific on the types of operational processes and tools to use for your workload.
+In either case, when you need to elevate operations to focus on specific outcomes for a specific workload, you can use the [Azure Well-Architected Framework](/azure/architecture/framework/) and [Microsoft Azure Well-Architected Review](/assessments/?id=azure-architecture-review&mode=pre-assessment) to get specific on the types of operational processes and tools to use for your workload.

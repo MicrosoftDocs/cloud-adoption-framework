@@ -16,9 +16,9 @@ Your organization or enterprise needs to design suitable security settings to me
 
 ## Design considerations
 
-- Decide what cluster identity is being used ([managed identity](/azure/aks/use-managed-identity.md) and [service principal](/aks/kubernetes-service-principal)).
+- Decide what cluster identity is being used ([managed identity](/azure/aks/use-managed-identity) and [service principal](/azure/aks/kubernetes-service-principal?tabs=azure-cli)).
 - Decide how to authenticate cluster access (client certificate-based or [Azure Active Directory](/azure/aks/managed-aad)).
-- Decide on a [multitenancy cluster](/aks/operator-best-practices-cluster-isolation) and how to set up role-based access control (RBAC) in Kubernetes.
+- Decide on a [multitenancy cluster](/azure/aks/operator-best-practices-cluster-isolation) and how to set up role-based access control (RBAC) in Kubernetes.
   - Decide on a method for isolation (namespace, network policy, compute (node pool), or cluster).
   - Decide about Kubernetes RBAC roles and compute allocation per application team for isolation.
   - Decide whether application teams can read other workloads in their cluster or in other clusters.
@@ -27,7 +27,7 @@ Your organization or enterprise needs to design suitable security settings to me
   - Decide what permissions are needed for SecOps.
   - Decide what permissions are needed for the landing zone owner.
   - Decide what permissions are needed for the application teams to deploy into the cluster.
-- Decide whether you need workload identities ([Azure AD pod identities](/aks/use-azure-ad-pod-identity)). They might be needed for Azure services like Azure Key Vault integration, Azure Cosmos DB, and others.
+- Decide whether you need workload identities ([Azure AD pod identities](/azure/aks/use-azure-ad-pod-identity)). They might be needed for Azure services like Azure Key Vault integration, Azure Cosmos DB, and others.
 
 ## Design recommendations
 

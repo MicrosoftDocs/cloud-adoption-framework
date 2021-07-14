@@ -48,7 +48,7 @@ This scenario is designed to guide the end-to-end customer journey, throughout t
 
 **Centralize deployment and management of containers:** The first set of articles in the left pane provides rich guidance on centralization of your container strategy. This article series intends to help central IT or cloud center of excellence teams understand how containers affect your cloud strategy and how to provide consistent centralized support.
 
-**Prepare for governance and operation of containers at scale:** Enterprise-scale for AKS demonstrates how you can use enterprise-scale landing zones to ensure consistent governance, security, and operations across multiple landing zones for centralized management of containers at scale.
+**Prepare for governance and operation of containers at scale:** [Enterprise-scale for AKS](./enterprise-scale-landing-zone.md) demonstrates how you can use enterprise-scale landing zones to ensure consistent governance, security, and operations across multiple landing zones for centralized management of containers at scale.
 
 **Implement specific Azure products:** Accelerate and improve container and Kubernetes capabilities using different kinds of Azure products outlined in the featured products section.
 

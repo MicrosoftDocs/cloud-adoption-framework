@@ -55,9 +55,12 @@ items:
       - name: Secure
         tocHref: /azure/cloud-adoption-framework/secure/
         topicHref: /azure/cloud-adoption-framework/secure
-    - name: Scenarios (lenses)
+    - name: Technology platform scenarios (lenses)
       tocHref: /azure/cloud-adoption-framework/scenarios/
       topicHref: /azure/cloud-adoption-framework/scenarios
+    - name: Industry scenarios (lenses)
+      tocHref: /azure/cloud-adoption-framework/industry/retail/
+      topicHref: /azure/cloud-adoption-framework/industry/retail
     - name: Reference
       tocHref: /azure/cloud-adoption-framework/reference/
       topicHref: /azure/cloud-adoption-framework/reference
