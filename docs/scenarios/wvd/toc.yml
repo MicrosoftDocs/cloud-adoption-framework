@@ -54,7 +54,7 @@ items:
 
   - name: Best practices
     items:
-    - name: WVD security best practices
+    - name: Azure Virtual Desktop security best practices
       href: /azure/virtual-desktop/security-guide
     - name: Azure security baseline for Azure Virtual Desktop
       href: /security/benchmark/azure/baselines/windows-virtual-desktop-security-baseline

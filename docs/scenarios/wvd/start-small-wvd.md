@@ -1,6 +1,6 @@
 ---
 title: Start small and expand approach for Azure Virtual Desktop
-description: Explore the start small approach and how to apply it to a WVD implementation
+description: Explore the start small approach and how to apply it to an Azure Virtual Desktop implementation.
 author: DominicAllen
 ms.author: doalle
 ms.date: 06/18/2021

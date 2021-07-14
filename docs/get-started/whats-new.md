@@ -35,9 +35,9 @@ We've added a new retail industry scenario in this release, designed to guide a 
 
 This release of the Cloud Adoption Framework introduces the new Secure methodology, which will centralize the theme of security best practices and provide end-to-end guidance for customers looking to adopt Microsoft guidance for their cloud environments. Security concerns have surged to the forefront of many top priorities lists recently, building on feedback requesting a more security-centric view, the [Secure methodology](../secure/index.md) will assist in defining the security aspect of the cloud journey.
 
-### Windows Virtual Desktop adoption journey
+### Azure Virtual Desktop adoption journey
 
-As part of the ongoing series of adoption journeys, this release includes expanded guidance for [integrating Windows Virtual Desktop (WVD) into your cloud adoption journey](../scenarios/wvd/index.md). This rich guidance shows how each methodology in the Cloud Adoption Framework helps provide structure and best practices to your implementation approach.
+As part of the ongoing series of adoption journeys, this release includes expanded guidance for [integrating Azure Virtual Desktop (formerly Windows Virtual Desktop) into your cloud adoption journey](../scenarios/wvd/index.md). This rich guidance shows how each methodology in the Cloud Adoption Framework helps provide structure and best practices to your implementation approach.
 
 ### Cloud economics
 

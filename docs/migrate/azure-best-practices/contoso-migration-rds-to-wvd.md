@@ -260,7 +260,7 @@ The next step in the migration process for Contoso is to migrate its persistent 
    *Figure 17: Prerequisites for replicating to Azure.*
 
 1. The replication of the hosts into Azure Blob Storage is now started. Contoso can continue to let the replication occur until it's ready to test the VMs and then migrate them into production.
-   - As machines start running in Azure, Contoso makes sure to install the [Windows Virtual Desktop VM agent](https://aka.ms/WVDVMAgent) on each machine.
+   - As machines start running in Azure, Contoso makes sure to install the [Windows Virtual Desktop VM agent](https://aka.ms/wvdvmagent) on each machine.
    - As a part of the installation, enter the registration token for the Windows Virtual Desktop environment to associate the server with the correct environment.
 
 1. The registration token can be obtained by using the following commands:
