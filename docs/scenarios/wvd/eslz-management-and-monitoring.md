@@ -1,6 +1,6 @@
 ---
-title: Enterprise-scale management and monitoring for Windows Virtual Desktop
-description: Learn how this enterprise-scale scenario can improve the management and monitoring of Windows Virtual Desktop.
+title: Enterprise-scale management and monitoring for Azure Virtual Desktop
+description: Learn how this enterprise-scale scenario can improve the management and monitoring of Azure Virtual Desktop.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/18/2021
@@ -9,13 +9,13 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Management and monitoring for a Windows Virtual Desktop enterprise-scale scenario
+# Management and monitoring for a Azure Virtual Desktop enterprise-scale scenario
 
-Achieve operational excellence and customer success by properly designing your Windows Virtual Desktop environment with management and monitoring in mind.
+Achieve operational excellence and customer success by properly designing your Azure Virtual Desktop environment with management and monitoring in mind.
 
 ## Platform management and monitoring
 
-Review the following considerations and recommendation for platform management and monitoring of Windows Virtual Desktop.
+Review the following considerations and recommendation for platform management and monitoring of Azure Virtual Desktop.
 
 ### Design considerations
 
@@ -26,15 +26,15 @@ Review the following considerations and recommendation for platform management a
 - Performance counters should be collected.
 - Windows event logs should be collected.
 - Create a dashboard from the platform logs to centralize visuals for reporting operations.
-- Learn to [use Azure Monitor for Windows Virtual Desktop to monitor your deployment](/azure/virtual-desktop/azure-monitor).
+- Learn to [use Azure Monitor for Azure Virtual Desktop to monitor your deployment](/azure/virtual-desktop/azure-monitor).
 
 ### Design recommendations
 
-- Use a separate dedicated Azure Monitor Log Analytics workspace for Windows Virtual Desktop.
-- Centralize your Azure Monitor Log Analytics workspace in the region of your Windows Virtual Desktop deployment.
+- Use a separate dedicated Azure Monitor Log Analytics workspace for Azure Virtual Desktop.
+- Centralize your Azure Monitor Log Analytics workspace in the region of your Azure Virtual Desktop deployment.
 - Export diagnostic settings to a storage account if there's a need to go beyond the two-year retention period.
 - Enable the platform service diagnostic telemetry stated in the considerations to go to the Azure Monitor Log Analytics workspace.
-- The following Windows performance counters should be collected by Log Analytics for Windows Virtual Desktop monitoring:
+- The following Windows performance counters should be collected by Log Analytics for Azure Virtual Desktop monitoring:
 
   <!-- docutune:disable -->
 
@@ -74,7 +74,7 @@ Review the following considerations and recommendation for platform management a
     - `Microsoft-Windows-TerminalServices-RemoteConnectionManager/Admin`
     - `Microsoft-FSLogix-Apps/Admin`
 
-- Use [Azure Monitor for Windows Virtual Desktop](/azure/virtual-desktop/azure-monitor) for ease of configuration.
+- Use [Azure Monitor for Azure Virtual Desktop](/azure/virtual-desktop/azure-monitor) for ease of configuration.
 
 - Assign application groups to user groups to ease your administration overhead.
 
@@ -84,11 +84,11 @@ For a glossary, data storage cost estimations, and additional troubleshooting gu
 
 ## Infrastructure management and monitoring
 
-Review the following considerations and recommendation for infrastructure management and monitoring of Windows Virtual Desktop.
+Review the following considerations and recommendation for infrastructure management and monitoring of Azure Virtual Desktop.
 
 ### Design considerations: Infrastructure
 
-- Use the same Log Analytics workspace that's used for the Windows Virtual Desktop platform.
+- Use the same Log Analytics workspace that's used for the Azure Virtual Desktop platform.
 - The session host performance counters are collected and logged.
 - Use network performance monitoring for user experience management.
 - Set up an alerting model around the collected logs and metrics.
@@ -99,4 +99,4 @@ Review the following considerations and recommendation for infrastructure manage
 - Use a centralized Azure Monitor Log Analytics workspace in the region of your session hosts.
 - Set up the performance counters according to the [documentation](/azure/virtual-desktop/azure-monitor#set-up-performance-counters).
 - Set up the Network Performance Monitor in the same region as your Azure Virtual Network and session hosts.
-- Incorporate Azure policies and governance for enterprise-scale into the Windows Virtual Desktop landing zone.
+- Incorporate Azure policies and governance for enterprise-scale into the Azure Virtual Desktop landing zone.

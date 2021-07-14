@@ -37,8 +37,8 @@ This scenario is designed to guide the end-to-end customer journey, throughout t
 
 The following list of articles will take you to guidance at specific points in the cloud adoption journey to help you be successful in the cloud adoption scenario.
 
-- [Strategy for Desktop](./strategy.md)
-- [Plan for Windows Virtual Desktop](./plan.md)
-- [Migrate to Windows Virtual Desktop](./migrate-assess.md)
-- [Manage a Windows Virtual Desktop environment](./manage.md)
-- [Govern a Windows Virtual Desktop environment](./govern.md)
+- [Strategy for Azure Virtual Desktop](./strategy.md)
+- [Plan for Azure Virtual Desktop](./plan.md)
+- [Migrate to Azure Virtual Desktop](./migrate-assess.md)
+- [Manage a Azure Virtual Desktop environment](./manage.md)
+- [Govern a Azure Virtual Desktop environment](./govern.md)
