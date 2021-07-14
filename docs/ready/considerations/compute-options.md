@@ -26,8 +26,8 @@ For each application or service you'll deploy to your landing zone environment, 
 
 Definitions:
 
-- "Lift and shift" is a strategy for migrating a workload to the cloud without redesigning the application or making code changes. Also called rehosting. For more information, see [Azure migration and modernization center](https://azure.microsoft.com/migration/).
-- "Cloud-optimized" is a strategy for migrating to the cloud by refactoring an application to take advantage of cloud-native features and capabilities.
+- *Lift and shift* is a strategy for migrating a workload to the cloud without redesigning the application or making code changes. Also called rehosting. For more information, visit the [Azure migration and modernization center](https://azure.microsoft.com/migration/).
+- *Cloud-optimized* is a strategy for migrating to the cloud by refactoring an application to take advantage of cloud-native features and capabilities.
 
 The output from this flowchart is a starting point for consideration. Next, perform a more detailed evaluation of the service to see if it meets your needs.
 
