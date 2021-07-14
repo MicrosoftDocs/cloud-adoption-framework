@@ -77,6 +77,11 @@ items:
       - name: Virtual desktops
         href: scenarios/wvd/index.md
 
+    - name: Industry scenarios
+      items:
+      - name: Retail
+        href: industry/retail/index.md
+
     - name: Antipatterns to avoid
       href: antipatterns/antipatterns-to-avoid.md
 
