@@ -78,9 +78,9 @@ Advanced Threat Protection is part of the Advanced Data Security offering, which
 
 [Azure Sentinel](/azure/sentinel/overview) is a scalable, cloud-native, security information event management (SIEM), and security orchestration automated response (SOAR) solution. Azure Sentinel delivers intelligent security analytics and threat intelligence across the enterprise, providing a single solution for alert detection, threat visibility, proactive hunting, and threat response.
 
-## Networking recommendation
+## Networking
 
-The Enterprise scale analytics and AI prescribed view is to use Azure Private Endpoints for all PaaS services and not use public IPs for all infrastructure as a service (IaaS) services. See [Enterprise Scale Analytics and AI Networking](eslz-network-topology-and-connectivity.md) for more information.
+The enterprise-scale analytics and AI prescribed view is to use Azure Private Endpoints for all PaaS services and not use public IPs for all infrastructure as a service (IaaS) services. See [Enterprise-Scale Analytics and AI Networking](eslz-network-topology-and-connectivity.md) for more information.
 
 ## Compliance and governance design recommendations
 
@@ -94,7 +94,7 @@ Azure Policy helps bring your resources into compliance through bulk remediation
 
 ### Automate deployments
 
-You can save time and reduce errors by automating deployments. Reduce the deployment complexity of end-to-end data landing zones, data integrations, and data products by creating reuseable code templates. This minimizes the time to deploy or redeploy solutions. For more information, see [DataOps Overview](organize-data-operations.md)
+You can save time and reduce errors by automating deployments. Reduce the deployment complexity of end-to-end data landing zones, data integrations, and data products by creating reuseable code templates. This minimizes the time to deploy or redeploy solutions. For more information, see [Intro to DevOps and Automation](organize-data-operations.md)
 
 ### Lock resources for production workloads
 
@@ -102,11 +102,11 @@ Create required core data management and data landing zone Azure resources at th
 
 ### Implement role-based access control
 
-Customize role-based access control (RBAC) on Azure subscriptions to help you manage who has access to Azure resources, what they can do with those resources, and what areas they have access to. For example, you can allow team members to deploy core assets to an data landing zone, but prevent them from altering any of the network components.
+You can customize role-based access control (RBAC) on Azure subscriptions to manage who has access to Azure resources, what they can do with those resources, and what areas they have access to. For example, you can allow team members to deploy core assets to a data landing zone, but prevent them from altering any of the network components.
 
 ### Compliance and governance scenarios
 
-The following recommendations apply to various compliance and governance scenarios. These scenarios are for a cost-effective and scalable solution.
+The following recommendations apply to various compliance and governance scenarios. These scenarios represent a cost-effective and scalable solution.
 
 | Scenario | Recommendation |
 |-|-|
