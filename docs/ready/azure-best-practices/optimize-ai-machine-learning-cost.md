@@ -194,7 +194,7 @@ Azure Machine Learning supports reserved compute instances. Discounts are automa
 
 Every time a machine learning pipeline is executed, intermediate datasets can be generated at each pipeline step for data caching and reuse. The growth of data as an output of these machine learning pipelines can become a pain point for an organization that is running many machine learning experiments.
 
-Data scientists typically don't spend their time to clean up the intermediate datasets that are generated. Over time, the amount of data that is generated will add up. Azure Storage comes with a capability to enhance the management of the data lifecycle. Using [blob lifecycle management](/azure/storage/blobs/storage-lifecycle-management-concepts?tabs=azure-portal), you can set up general policies to move data that is unused into colder storage tiers and save costs.
+Data scientists typically don't spend their time to clean up the intermediate datasets that are generated. Over time, the amount of data that is generated will add up. Azure Storage comes with a capability to enhance the management of the data lifecycle. Using [Azure Blob Storage lifecycle management](/azure/storage/blobs/storage-lifecycle-management-concepts?tabs=azure-portal), you can set up general policies to move data that is unused into colder storage tiers and save costs.
 
 ### Infrastructure cost optimization considerations
 
