@@ -51,7 +51,7 @@ You are not alone in your cloud journey. There are several options to support yo
 
 - **Azure solution providers (partners):** Get connected with Azure expert-managed services providers (MSP) and other Microsoft partners who have service offerings aligned to the Cloud Adoption Framework methodologies.
 - **FastTrack for Azure:** Use the Microsoft FastTrack for Azure program to accelerate migration.
-- **Azure Migration and Modernization Program (AMMP):** The AMP program aligns a mixture of partners and Microsoft employees to accelerate and support your migration.
+- **Azure Migration and Modernization Program (AMMP):** The AMMP program aligns a mixture of partners and Microsoft employees to accelerate and support your migration.
 - **Solution assessments:** Get assistance from a Microsoft solutions assessment expert or qualified partner as part of a [Solution Assessment engagement](https://www.microsoft.com/solutionassessments/solutionassessments.aspx?rtc=1).
 
 ### Azure solution providers
