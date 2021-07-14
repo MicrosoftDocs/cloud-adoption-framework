@@ -1,6 +1,6 @@
 ---
 title: Deployment templates
-description: Learn about enterprise-scale deployment templates
+description: Learn about the core starter templates for enterprise-scale analytics and AI deployment. 
 author: mboswell
 ms.author: mboswell
 ms.date: 07/13/2021
@@ -11,9 +11,9 @@ ms.subservice: ready
 
 # Deployment templates
 
-The Enterprise Scale Analytic and AI solution has the following core **starter** templates:
+The Enterprise Scale Analytic and AI solution has the following core starter templates:
 
-|Repo|Content|Required|Deployment model|
+|Repository|Content|Required|Deployment model|
 |-|-|-|-|
 |[Data Management Template](https://github.com/Azure/data-management-zone)| Central data management services and shared data services, such as data catalog and self-hosted integration runtime | Yes | One per Enterprise Scale Analytics and AI |
 |[Data Landing Zone Template](https://github.com/Azure/data-landing-zone)| Data Landing Zone shared services, such as data storage, ingestion services, and management services | Yes | One per Data Landing Zone |
@@ -22,6 +22,6 @@ The Enterprise Scale Analytic and AI solution has the following core **starter**
 |[Data Product Template - Analytics and Data Science](https://github.com/Azure/data-product-analytics)| Additional services required for data analytics and AI| No | One or more per Data Landing Zone |
 | [Data Product Template - Reporting](https://github.com/Azure/data-product-reporting) | Additional services required for data product reporting | No | One or more per Data Landing Zone|
 
-These templates not only contain Azure Resource Manager templates and their parameter files, but also CI/CD pipeline definitions for resource deployment. The templates may evolve over time because of new Azure services and requirements.
+These templates not only contain Azure Resource Manager templates and their parameter files, but also CI/CD pipeline definitions for resource deployment.
 
-The `main` branch of these repositories needs to be secured to ensure that it remains error-free and ready for consumption and deployment. Use a development subscription to test template configuration changes before merging feature enhancements back into the `main` branch.
+The templates can change over time because of new Azure services and requirements. The `main` branch of these repositories needs to be secured to ensure that it remains error-free and ready for consumption and deployment. Use a development subscription to test template configuration changes before you merge feature enhancements back into the `main` branch.
