@@ -29,9 +29,9 @@ Enterprise-scale for AKS assumes that an enterprise-scale landing zone has been 
 
 The enterprise-scale approach for AKS provides these assets to support your project:
 
-- A modular approach, so you can customize your environment variables.
-- Design guidelines to evaluate critical decisions.
-- The landing zone architecture
+- A modular approach that allows you to customize your environment variables.
+- Design guidelines for evaluating critical decisions.
+- The landing zone architecture.
 - A Microsoft-recommended AKS reference implementation based on the [AKS secure baseline](https://github.com/mspnp/aks-secure-baseline).
 
 ## Design areas
@@ -58,12 +58,12 @@ The following conceptual reference architecture is an example that shows a golde
 Enterprise-scale for AKS is an open-source collection of Terraform templates, available in the [`caf-terraform-landingzones-starter`
  repo](https://github.com/Azure/caf-terraform-landingzones-starter/tree/starter/enterprise_scale/construction_sets/aks/online/aks_secure_baseline).
 
-Terraform templates to deploy infrastructure components such as virtual machines, networks, or storage to Azure. To get the templates, see the [enterprise-scale construction set for Azure Kubernetes services using Terraform](https://github.com/Azure/caf-terraform-landingzones-starter/tree/starter/enterprise_scale/construction_sets/aks/online/aks_secure_baseline). This reference implementation currently deploys a simplistic version of an AKS implementation that can sit in its own subscription within the online management group of an enterprise-scale landing zone. An application deployed in the subscription for an online landing zone will be internet-facing, and does not require hybrid connectivity.
+Terraform templates are used to deploy infrastructure components such as virtual machines, networks, or storage to Azure. To get the templates, see the [enterprise-scale construction set for Azure Kubernetes services using Terraform](https://github.com/Azure/caf-terraform-landingzones-starter/tree/starter/enterprise_scale/construction_sets/aks/online/aks_secure_baseline). This reference implementation currently deploys a simplistic version of an AKS implementation that resides in its own subscription within the online management group of an enterprise-scale landing zone. An application deployed in the subscription for an online landing zone is internet-facing and doesn't require hybrid connectivity.
 
 [![Reference implementation](./media/aks-eslz-reference-implementation.png)](./media/aks-eslz-reference-implementation.png#lightbox)
 
 ## Next steps
 
-Learn about design considerations for the identity and access management for your Azure landing zones.
+Learn about design considerations for identity and access management in your Azure landing zones.
 
 - [Identity and access management for Azure Kubernetes Service (AKS) enterprise-scale scenario](./eslz-identity-and-access-management.md)
