@@ -24,4 +24,4 @@ The Enterprise Scale Analytic and AI solution has the following core starter tem
 
 These templates not only contain Azure Resource Manager templates and their parameter files, but also CI/CD pipeline definitions for resource deployment.
 
-The templates can change over time because of new Azure services and requirements. The `main` branch of these repositories needs to be secured to ensure that it remains error-free and ready for consumption and deployment. Use a development subscription to test template configuration changes before you merge feature enhancements back into the `main` branch.
+The templates can change over time because of new Azure services and requirements. Secure the `main` branch of these repositories to ensure that it remains error-free and ready for consumption and deployment. Use a development subscription to test template configuration changes before you merge feature enhancements back into the `main` branch.
