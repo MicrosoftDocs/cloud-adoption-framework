@@ -15,11 +15,11 @@ This article examines design considerations and recommendations for identity and
 
 This article builds on considerations and recommendations about Azure landing zones. For more information, see  [Identity and access management](../../ready/enterprise-scale/identity-and-access-management.md).
 
-## Data Landing Zone design 
+## Data Landing Zone design
 
 Enterprise Scale Analytics and AI supports an access control model using Azure Active Directory (Azure AD) identities. The model uses both Azure role-based access control (Azure RBAC) and access control lists (ACLs).
 
-Review the Azure administration and management activities your teams to do. Consider your data management and analytics on Azure. Determine the best possible distribution of responsibilities within your organization.
+Review the Azure administration and management activities your teams perform. Consider your data management and analytics on Azure. Determine the best possible distribution of responsibilities within your organization.
 
 ### Role assignments
 
@@ -95,7 +95,7 @@ The following role assignments are required for a deployment of a data integrati
         [Private DNS Zone Contributor](/azure/role-based-access-control/built-in-roles#private-dns-zone-contributor)
     :::column-end:::
     :::column span="3":::
-        Deploy all Private DNS Zones for all data services into a single subscription and resource group. The service principal needs to be `Private DNS Zone Contributor` on the global dns resource group that was created during the Data Management Zone deployment. This role is required to deploy A-records for the respective private endpoints.
+        Deploy all Private DNS Zones for all data services into a single subscription and resource group. The service principal needs to be `Private DNS Zone Contributor` on the global DNS resource group that was created during the Data Management Zone deployment. This role is required to deploy A-records for the respective private endpoints.
     :::column-end:::
     :::column span="2":::
         (Resource Group Scope) `/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}`
