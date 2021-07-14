@@ -1,6 +1,6 @@
 ---
 title: Scenario Specific Enterprise Scale Landing Zones
-description: Learn about construction sets and scenario specific enterprise scale landing zones
+description: Learn how to implement enterprise scale for workload scenarios
 author: mosabami
 ms.author: aayodeji
 ms.date: 07/13/2021
