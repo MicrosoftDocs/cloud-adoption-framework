@@ -1,6 +1,6 @@
 ---
 title: Resource organization for data management and analytics on Azure
-description: Describe how this enterprise-scale scenario can improve management group and subscription organization of data management and analytics.
+description: Learn how this enterprise-scale scenario can improve management group and subscription organization of data management and analytics.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 07/19/2021
