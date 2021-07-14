@@ -44,7 +44,7 @@ Azure Virtual Desktop has custom Azure roles designed for each functional area. 
 - Azure AD DS is a supported option, but there are limitations:
   - You must have password hash synchronization enabled (uncommon when federating Azure AD).
   - You can only project Azure AD DS into a single virtual network (and single Azure region) that uses a non-public IP address range. You can't add domain controllers to an Azure AD DS domain.
-  - You can't fail over Azure AD DS to another region for disaster recovery.
+  - You cannot leverage hybrid join for Azure Virtual Desktop VMs to enable Seamless Single Sign On to Microsoft 365 services
 
    For more information, see [Frequently asked questions (FAQ) about Azure Active Directory Domain Services (Azure AD DS)](/azure/active-directory-domain-services/faqs).
 - When specifying an organizational unit, use the distinguished name without quotation marks.
