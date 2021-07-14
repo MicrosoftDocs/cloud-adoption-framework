@@ -25,7 +25,7 @@ This scenario is designed to guide the end-to-end customer journey, throughout t
 
 ## Common customer journeys
 
-- **Azure Virtual Desktop reference architecture:** The reference architecture listed in the left pane demonstrates how to deploy a proven architecture for Azure Virtual Desktop in your environment. This architecture is a suggested starting point for Azure Virtual Desktop in Azure.
+- **Azure Virtual Desktop reference architecture:** The reference architecture listed in the left pane demonstrates how to deploy a proven architecture for Azure Virtual Desktop in your environment. This architecture is a suggested starting point for Azure Virtual Desktop.
 
 - **Migrate existing virtual desktops to Azure:** A common use case for Azure Virtual Desktop is to modernize and existing virtual desktop environment. While the process can vary, there are several components to a successful migration, such as session hosts, user profiles, images and applications. If you're migrating existing VMs, articles on migration outline how tools such as Movere and Azure Migrate can accelerate the migration as part of a standard migration process. However your migration may consist of bringing your golden image into Azure and provisioning a new Azure Virtual Desktop host pool with new session hosts. Additionally you may migrate your existing user profiles into Azure and build new host pools and session hosts as well. A final migration scenario may also include migrating your applications into MSIX app attach format. In all these migration scenarios, customers need to provision a new host pool since there is currently no direct migration of other VDI solutions into Azure Virtual Desktop.
 
@@ -40,5 +40,5 @@ The following list of articles will take you to guidance at specific points in t
 - [Strategy for Azure Virtual Desktop](./strategy.md)
 - [Plan for Azure Virtual Desktop](./plan.md)
 - [Migrate to Azure Virtual Desktop](./migrate-assess.md)
-- [Manage a Azure Virtual Desktop environment](./manage.md)
-- [Govern a Azure Virtual Desktop environment](./govern.md)
+- [Manage an Azure Virtual Desktop environment](./manage.md)
+- [Govern an Azure Virtual Desktop environment](./govern.md)

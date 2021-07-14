@@ -6,7 +6,7 @@ items:
     href: strategy.md
   - name: Technical planning
     href: plan.md
-    
+
   - name: Prepare your environments
     items:
     - name: Azure landing zones
@@ -16,7 +16,7 @@ items:
       - name: Enterprise enrollment
         href: design-area-enterprise-enrollment.md
       - name: Identity and access management
-        href: eslz-identity-and-access-management.md  
+        href: eslz-identity-and-access-management.md
       - name: Network topology and connectivity
         href: eslz-network-topology-and-connectivity.md
       - name: Resource organization
@@ -28,13 +28,13 @@ items:
       - name: Business continuity and disaster recovery
         href: eslz-business-continuity-and-disaster-recovery.md
       - name: Platform automation and DevOps
-        href: eslz-platform-automation-and-devops.md      
-    - name: Implementation Options
+        href: eslz-platform-automation-and-devops.md
+    - name: Implementation options
       items:
-      - name: Enterprise scale for Azure Virtual Desktop
+      - name: Enterprise-scale landing zone for Azure Virtual Desktop
         href: enterprise-scale-landing-zone.md
       - name: Azure Architecture Center - Azure Virtual Desktop
-        href: /azure/architecture/example-scenario/wvd/windows-virtual-desktop  
+        href: /azure/architecture/example-scenario/wvd/windows-virtual-desktop
   - name: Migrate your virtual desktop platform
     items:
     - name: Proof of concept
@@ -86,5 +86,5 @@ items:
       href: /learn/modules/m365-optimize-wvd/
     - name: Deploy applications by using MSIX app attach for Azure Virtual Desktop
       href: /learn/modules/m365-wvd-application-management/
-    - name: Secure a Azure Virtual Desktop deployment
+    - name: Secure an Azure Virtual Desktop deployment
       href: /learn/modules/m365-wvd-security/

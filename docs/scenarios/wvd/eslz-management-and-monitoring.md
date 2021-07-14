@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Management baseline considerations for a Azure Virtual Desktop
+# Management baseline considerations for an Azure Virtual Desktop
 
 Achieve operational excellence and customer success by properly designing your Azure Virtual Desktop environment with management and monitoring in mind.
 
@@ -55,7 +55,7 @@ Review the following considerations and recommendation for platform management a
   | RemoteFX Network | Current UDP Bandwidth | * | 30 | RemoteFX Network, Current UDP Bandwidth, * |
   | LogicalDisk | Avg. Disk sec/Transfer | C: | 60 | LogicalDisk, Avg. Disk sec/Transfer, C: |
   | LogicalDisk | Current Disk Queue Length | C: | 30 | LogicalDisk, Current Disk Queue Length, C: |
-  | Memory | Available Mbytes | * | 30 | Memory, Available Mbytes, * |
+  | Memory | Available MB | * | 30 | Memory, Available MB, * |
   | Memory | Page Faults/sec | * | 30 |Memory, Page Faults/sec, * |
   | Memory | Pages/sec | * | 30 | Memory, Pages/sec, * |
   | Memory | % Committed Bytes In Use | * |30 | Memory, % Committed Bytes In Use, * |

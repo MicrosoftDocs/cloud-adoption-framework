@@ -21,7 +21,7 @@ Azure Virtual Desktop has custom Azure roles designed for each functional area. 
 
 - **Desktop Virtualization Contributor:** This role lets you manage all aspects of the deployment but doesn't grant access to compute resources.
 - **Desktop Virtualization Reader:** This role lets you view everything in the deployment but doesn't let you make changes.
-- **Desktop Virtualization Host Pool Contributor:** This role lets you manage all aspects of host pools, including access to resources. To create virtual machines you need another role, Virtual Machine Contributor. You will also need AppGroup and Workspace contributor roles to create host pools using the portal or you can use Desktop Virtualization Contributor role.
+- **Desktop Virtualization Host Pool Contributor:** This role lets you manage all aspects of host pools, including access to resources. To create virtual machines you need another role, Virtual Machine Contributor. You will also need Application Group Contributor and Workspace Contributor roles to create host pools using the portal, or you can use the Desktop Virtualization Contributor role.
 - **Desktop Virtualization Host Pool Reader:** This role lets you view everything in the host pool, but doesn't let you make changes.
 - **Desktop Virtualization Application Group Contributor:** This role lets you manage all aspects of application groups. To publish application groups to users, or to user groups, you need the User Access Administrator role.
 - **Desktop Virtualization Application Group Reader:** This role lets you view everything in the application group, but doesn't let you make changes.
@@ -52,7 +52,7 @@ Azure Virtual Desktop has custom Azure roles designed for each functional area. 
 - When using smart cards, a direct connection (line of sight) with an Active Directory domain controller for Kerberos authentication is required. For more information, see [Configure a Kerberos Key Distribution Center proxy](/azure/virtual-desktop/key-distribution-center-proxy).
 - Using Windows Hello for Business requires the hybrid certificate trust model to be compatible with Azure Virtual Desktop. For more information, see [Hybrid Azure AD joined certificate trust deployment](/windows/security/identity-protection/hello-for-business/hello-hybrid-cert-trust).
 - When using Windows Hello for Business or smart-card authentication, the initiating client must be able to communicate with the domain controller because these authentication methods use Kerberos to sign in. For more information, see [Supported authentication methods](/azure/virtual-desktop/authentication).
-- Single sign-on can improve user experience, but it requires additional configuration and is only supported using Active Directory Federation Services. For more information, see [Configure AD FS Single sign-on for Azure Virtual Desktop.](/azure/virtual-desktop/configure-adfs-sso).
+- Single sign-on can improve user experience, but it requires additional configuration and is only supported using Active Directory Federation Services. For more information, see [Configure AD FS single sign-on for Azure Virtual Desktop](/azure/virtual-desktop/configure-adfs-sso).
 
 ## Design recommendations
 

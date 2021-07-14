@@ -53,7 +53,7 @@ The following list includes items to be used in a business case:
 For guidance on specific elements of the cloud adoption journey, see:
 
 - [Review your environment or Azure landing zones](./ready.md)
-- [Complete a Azure Virtual Desktop proof of concept](./proof-of-concept.md)
+- [Complete an Azure Virtual Desktop proof of concept](./proof-of-concept.md)
 - [Assess Azure Virtual Desktop migration or deployment](./migrate-assess.md)
 - [Deploy or migrate Azure Virtual Desktop instances](./migrate-deploy.md)
 - [Release your Azure Virtual Desktop deployment to production](./migrate-release.md)
