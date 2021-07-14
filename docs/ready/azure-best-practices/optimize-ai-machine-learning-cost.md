@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: internal
 ---
 
-# Manage budgets, costs, and quota for Azure Machine Learning at organizational scale
+# Manage budgets, costs, and quota for Azure Machine Learning at organizational scale 
 
 When you manage compute costs incurred from Azure Machine Learning, at an organization scale with many workloads, many teams, and users, there are numerous management and optimization challenges to work through.
 
@@ -18,7 +18,7 @@ In this article, we present best practices to optimize costs, manage budgets, an
 
 - [Optimize compute resources to meet workload requirements.](#optimize-compute-to-meet-workload-requirements)
 - [Drive the best use of a team's budget.](#drive-the-best-use-of-a-teams-budget)
-- [Plan, manage and share budgets, cost, and quota at enterprise-scale.](#plan-manage-and-share-budgets-cost-and-quota)
+- [Plan, manage and share budgets, cost, and quota at enterprise-scale.](#plan-manage-and-share-budgets-cost-and-quota) 
 
 ## Optimize compute to meet workload requirements
 
@@ -69,7 +69,7 @@ A reminder on the importance for utilization is to sign up for a greater number 
 
 Compute requirements for inference scenarios differ from training scenarios. Available options differ based on whether your scenario demands offline inference in batch or requires online inference in real time.
 
-For real-time inference scenarios consider following the below suggestions:
+For real-time inference scenarios consider the following suggestions:
 
 - Use [profiling capabilities](/azure/machine-learning/how-to-deploy-profile-model?pivots=py-sdk) on your model with Azure Machine Learning to determine how much CPU and memory you need to allocate for the model when deploying it as a web service.
 - If you're doing real-time inference but don't need high availability, deploy to [Azure Container Instances](/azure/machine-learning/how-to-deploy-azure-container-instance) (no SKU selection).
@@ -228,3 +228,9 @@ When you [pick a region for your compute](https://azure.microsoft.com/global-inf
 ## Next steps
 
 To learn more about how to organize and set up Azure Machine Learning environments, see [Organize and set up Azure Machine Learning environments](./ai-machine-learning-resource-organization.md).
+> [!div class="nextstepaction"]
+> [Organize and set up Azure Machine Learning environments](./ai-machine-learning-resource-organization.md)
+
+To learn about best practices on Machine Learning DevOps with Azure Machine Learning, see [Machine learning DevOps guide](./ai-machine-learning-mlops.md).
+> [!div class="nextstepaction"]
+> [Machine learning DevOps guide](./ai-machine-learning-mlops.md)
