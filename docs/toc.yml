@@ -79,7 +79,7 @@ items:
 
     - name: Industry scenarios
       items:
-      - name: retail
+      - name: Retail
         href: industry/retail/index.md
 
     - name: Antipatterns to avoid
