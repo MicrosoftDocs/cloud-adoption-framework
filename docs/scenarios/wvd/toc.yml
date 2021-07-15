@@ -32,7 +32,7 @@ items:
 
   - name: Best practices
     items:
-    - name: WVD security best practices
+    - name: Azure Virtual Desktop security best practices
       href: /azure/virtual-desktop/security-guide
     - name: Azure security baseline for Azure Virtual Desktop
       href: /security/benchmark/azure/baselines/windows-virtual-desktop-security-baseline
@@ -45,7 +45,7 @@ items:
 
   - name: Enterprise-scale construction set
     items:
-    - name: Construction set for enterprise-scale WVD
+    - name: Construction set for enterprise-scale Azure Virtual Desktop
       href: enterprise-scale-landing-zone.md
     - name: Identity and access management
       href: eslz-identity-and-access-management.md
