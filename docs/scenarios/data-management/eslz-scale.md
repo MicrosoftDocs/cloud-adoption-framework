@@ -10,7 +10,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
-# Scaling data management and analytics
+# Scaling data management and analytics in Azure
 
 A scalable data platform is critical for your enterprise to accommodate the rapid growth of data. Vast amounts of data are generated every second. The amount of data to deal with is expected to grow exponentially over the next few years. The speed at which new data is generated and the speed at which data moves will increase. Even with more data, users expect that they'll get fast query results. Users expect to wait minutes rather than hours for results.
 
