@@ -17,7 +17,7 @@ Enterprise Scale Analytics and AI includes a Data Management Landing Zone subscr
 
 You can further enforce organizational standards based on business rules by using the Azure Policy service. Assign these policies to a scope of resources, such as management groups, subscriptions, resource groups, or individual resources. Enterprise Scale Analytics and AI contains custom policies that apply to the Data Management Landing Zone and Data Landing Zone subscriptions. For more information, see [Policies](eslz-policies.md).
 
-## Use Azure resource naming and tagging conventions
+## Resource naming and tagging conventions
 
 On the business side, ensure resource names and tags include the organizational information. These names identify your teams. Use a resource name along with the business owners who are responsible for resource costs. The operational side ensures names and tags include information for IT teams. These names identify the workload, application, environment, criticality, and other useful information for managing resources.
 
