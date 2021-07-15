@@ -9,12 +9,12 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
+# Business continuity and disaster recovery (BCDR) considerations for Azure Virtual Desktop
+
 Azure Virtual Desktop is a Microsoft managed service that provides a control plane for your desktop virtualization environment. The service is free of charge and Microsoft doesn't offer a financially backed [service-level agreement (SLA)](https://azure.microsoft.com/support/legal/sla/virtual-desktop). Despite having no SLA, we try to achieve at least 99.9% availability for the Azure Virtual Desktop service URLs.
 
 > [!NOTE]
 > The availability of the session host virtual machines in your subscription is covered by the [Azure Virtual Machines SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines).
-
-# Business continuity and disaster recovery (BCDR) considerations for Azure Virtual Desktop
 
 A good BCDR strategy keeps your critical applications and workload up and running during planned and unplanned service or Azure outages. Your strategy should consider resources that are deployed in your subscription as part of the Azure Virtual Desktop data plane, like host pools and storage.
 
