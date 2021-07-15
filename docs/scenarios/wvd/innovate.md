@@ -19,9 +19,9 @@ The following guidance provides information on how Azure Virtual Desktop can hel
 
 - **Provide desktop environments for temporary workers:** Azure Virtual Desktop instances can be deployed and configured quickly and at scale. Similarly, they can be shut down quickly. This technology provides a standardized access method to corporate applications and information for temporary workers.
 
-    By using Azure Virtual Desktop, virtual desktops can be used to securely provide productivity environments without the need to build, ship, and manage physical devices. A Azure Virtual Desktop approach also provides enterprise-level security and access management.
+    By using Azure Virtual Desktop, virtual desktops can be used to securely provide productivity environments without the need to build, ship, and manage physical devices. An Azure Virtual Desktop approach also provides enterprise-level security and access management.
 
-- **Deliver latency sensitive applications to remote workers:** Remote working is most effective for asynchronous or latency-tolerant applications, where performance isn't degraded significantly by inconsistent network quality or round-trip latency. For those applications that do require short ping times from client to server, a Azure Virtual Desktop environment can help provide a performant experience.
+- **Deliver latency sensitive applications to remote workers:** Remote working is most effective for asynchronous or latency-tolerant applications, where performance isn't degraded significantly by inconsistent network quality or round-trip latency. For those applications that do require short ping times from client to server, an Azure Virtual Desktop environment can help provide a performant experience.
 
     By hosting the desktop session in Azure alongside the application, organizations can use the Azure network to connect the application client and server. This configuration results in a lower-latency connection than a traditional VPN connection over a public network.
 
@@ -37,7 +37,7 @@ The following resources provide guidance for specific points throughout the clou
 
 - [Plan for Azure Virtual Desktop migration or deployment](./plan.md)
 - [Review your environment or Azure landing zones](./ready.md)
-- [Complete a Azure Virtual Desktop proof-of-concept](./proof-of-concept.md)
+- [Complete an Azure Virtual Desktop proof-of-concept](./proof-of-concept.md)
 - [Assess for Azure Virtual Desktop migration or deployment](./migrate-assess.md)
 - [Deploy or migrate Azure Virtual Desktop instances](./migrate-deploy.md)
 - [Release your Azure Virtual Desktop deployment to production](./migrate-release.md)

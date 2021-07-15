@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Management and monitoring for a Azure Virtual Desktop enterprise-scale scenario
+# Management and monitoring for an Azure Virtual Desktop enterprise-scale scenario
 
 Achieve operational excellence and customer success by properly designing your Azure Virtual Desktop environment with management and monitoring in mind.
 
