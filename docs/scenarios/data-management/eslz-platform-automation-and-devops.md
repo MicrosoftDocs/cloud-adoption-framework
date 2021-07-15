@@ -36,7 +36,7 @@ The data landing zone has specific requirements over the standard configuration.
 - The names of resource groups.
 - Key vaults.
 
-The following diagram shows an example of how automation principles are implemented for a data landing zone.
+The following diagram shows how automation principles are implemented for a data landing zone.
 
 :::image type="content" source="./images/automation-high-level.png" alt-text="Diagram that shows a high-level overview of automation." lightbox="./images/automation-high-level.png":::
 
@@ -56,7 +56,7 @@ The following table summarizes the teams involved in an enterprise-scale analyti
 | Name | Role | # of teams |
 |-|-|-|
 | Cloud platform team | The Azure cloud platform team in your organization. | One for the whole Azure platform. |
-| Data platform team | In charge of creating and maintaining ARM template repositories for different levels of the enterprise-scale for analytics and AI set. Also maintains the data management landing zone and supports other ops teams if there are deployment issues or required enhancements. | One for the enterprise-scale for analytics and AI set. |
+| Data platform team | In charge of creating and maintaining ARM template repositories for different levels of the enterprise-scale for analytics and AI set. Also maintains the data management landing zone and supports other teams if there are deployment issues or required enhancements. | One for the enterprise-scale for analytics and AI set. |
 | Data landing zone team | In charge of deploying and maintaining a specific data landing zone. Also supports the deployment and enhancement of data integrations and data products. | One team per data landing zone. |
 | Integration team | In charge of data integration deployment and updates. | One team per domain. |
 | Data product team |In charge of data products deployment and updates. | One team per data product. |
