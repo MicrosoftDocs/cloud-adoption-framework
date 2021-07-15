@@ -1,5 +1,5 @@
 ---
-title: Azure enterprise-scale analytics and AI networking
+title: Azure enterprise-scale for analytics and AI networking
 description: Learn about the network topology and connectivity for a data management and analytics Azure landing zone.
 author: BrianBlanchard
 ms.author: brblanch # Microsoft employees only
@@ -22,7 +22,7 @@ This section outlines the networking patterns to assist with:
 - Creating access for remote workers.
 - Interfacing with on-premises and software as a service (SaaS) solutions.
 
-:::image type="content" source="./images/networking-overview.png" alt-text="Diagram that shows a high-level overview of networking for enterprise-scale analytics and AI." lightbox="./images/networking-overview.png":::
+:::image type="content" source="./images/networking-overview.png" alt-text="Diagram that shows a high-level overview of networking for enterprise-scale for analytics and AI." lightbox="./images/networking-overview.png":::
 
 ## Data management landing zone networking
 
@@ -54,12 +54,12 @@ Site-to-site VPNs can provide better continuity for your workloads in a hybrid c
 
 ## Private endpoints
 
-The enterprise-scale analytics and AI framework uses [Private Link](/azure/private-link/private-link-service-overview), where available, for shared platform as a service (PaaS) services. Private Link is available for several services and is in public preview for more services. Private Link addresses data exfiltration concerns related to service endpoints.
+The enterprise-scale for analytics and AI framework uses [Private Link](/azure/private-link/private-link-service-overview), where available, for shared platform as a service (PaaS) services. Private Link is available for several services and is in public preview for more services. Private Link addresses data exfiltration concerns related to service endpoints.
 
 For the current list of supported products, see [Private Link resources](/azure/private-link/private-endpoint-overview#private-link-resource).
 
 > [!CAUTION]
-> By design, enterprise-scale analytics and AI networking uses Private Endpoints where available for connectivity to PaaS services.
+> By design, enterprise-scale for analytics and AI networking uses Private Endpoints where available for connectivity to PaaS services.
 
 ### Azure DNS resolver implementation for private endpoints
 
