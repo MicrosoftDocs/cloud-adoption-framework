@@ -1644,7 +1644,7 @@ items:
         href: secure/best-practices/secure-devops.md
       - name: Secure DevOps governance
         href: secure/best-practices/end-to-end-governance.md
-      - name: Windows Virtual Desktop
+      - name: Azure Virtual Desktop
         href: scenarios/wvd/eslz-security-governance-and-compliance.md
       - name: Managing secrets
         href: secure/best-practices/manage-secrets.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json

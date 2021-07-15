@@ -1,6 +1,6 @@
 ---
 title: Outline a strategy for an Azure Virtual Desktop environment
-description: Explore strategic benefits of a Windows Virtual Desktop
+description: Explore the strategic benefits of an Azure Virtual Desktop environment.
 author: DominicAllen
 ms.author: doalle
 ms.date: 05/18/2021
@@ -31,9 +31,9 @@ Virtualization of your end users' desktops in the cloud can help your team reali
 
 ## The strategic impact of Azure Virtual Desktop in the cloud
 
-Azure Virtual Desktop products form a mission-critical platform for many organizations. When these products are foundational to an organization's business processes, the dependencies on Azure Virtual Desktop can be seen throughout the portfolio. The cloud adoption plan for this platform can directly and indirectly impact cloud adoption for all related workloads. While Azure Virtual Desktop isn't typically the first platform that an organization moves to the cloud, it can be the most important. To understand the strategy for a Windows Virtual Desktop cloud migration and the future-state innovation targets is critical to the success of all other cloud adoption plans.
+Azure Virtual Desktop products form a mission-critical platform for many organizations. When these products are foundational to an organization's business processes, the dependencies on Azure Virtual Desktop can be seen throughout the portfolio. The cloud adoption plan for this platform can directly and indirectly impact cloud adoption for all related workloads. While Azure Virtual Desktop isn't typically the first platform that an organization moves to the cloud, it can be the most important. To understand the strategy for an Azure Virtual Desktop cloud migration and the future-state innovation targets is critical to the success of all other cloud adoption plans.
 
-This article uses the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) and other resources from the Cloud Adoption Framework to capture the strategic impact of Windows Virtual Desktop cloud adoption.
+This article uses the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) and other resources from the Cloud Adoption Framework to capture the strategic impact of an Azure Virtual Desktop cloud adoption.
 
 ## Reasons to move to Azure Virtual Desktop platform to the cloud
 
@@ -94,7 +94,7 @@ Given the impact of an Azure Virtual Desktop platform, you need to create many d
 
 ## Next step: Plan for a virtual desktop environment
 
-The following resources provide guidance for specific points throughout the cloud adoption journey to help you be successful in the adoption of Windows Virtual Desktop, as part of your cloud environment.
+The following resources provide guidance for specific points throughout the cloud adoption journey to help you be successful in the adoption of Azure Virtual Desktop, as part of your cloud environment.
 
 - [Plan for Azure Virtual Desktop migration or deployment](./plan.md)
 - [Review your environment or Azure landing zones](./ready.md)
