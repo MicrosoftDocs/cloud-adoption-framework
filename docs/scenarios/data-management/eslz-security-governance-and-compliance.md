@@ -23,9 +23,9 @@ The enterprise analytics and AI construction set pattern relies on several secur
 
 Both Microsoft and customers share responsibility for security. For generally accepted security guidance, refer to [Cybersecurity Best Practices](https://www.cisecurity.org/cybersecurity-best-practices/) by the Center for Internet Security. The following sections are security design recommendations.
 
-### Data at rest encryption
+### Data-at-rest encryption
 
-Data at rest (DaR) encryption refers to the encryption of data as it persists in storage, and addresses the security risks related to direct physical access of storage media. DaR is a critical security control since the underlying data is unrecoverable and cannot be changed without its decryption key. DaR is an important layer in the defense-in-depth strategy of Microsoft data centers. Often, there are compliance and governance reasons to deploy DaR encryption.
+Data-at-rest (DaR) encryption refers to the encryption of data as it persists in storage, and addresses the security risks related to direct physical access of storage media. DaR is a critical security control since the underlying data is unrecoverable and cannot be changed without its decryption key. DaR is an important layer in the defense-in-depth strategy of Microsoft data centers. Often, there are compliance and governance reasons to deploy DaR encryption.
 
 Several Azure services support DaR encryption, including Azure Storage and Azure SQL Databases. Although common concepts and models influence the design of Azure services, each service may apply DaR encryption at different stack layers or have different encryption requirements.
 
