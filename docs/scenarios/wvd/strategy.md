@@ -1,5 +1,5 @@
 ---
-title: Outline a strategy for a Azure Virtual Desktop environment
+title: Outline a strategy for an Azure Virtual Desktop environment
 description: Explore strategic benefits of a Windows Virtual Desktop
 author: DominicAllen
 ms.author: doalle
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Strategic impact of a Azure Virtual Desktop environment
+# Strategic impact of an Azure Virtual Desktop environment
 
 Best practice guidance encourages customers to create a single centralized cloud adoption strategy, using the [Cloud Adoption Framework's Strategy methodology](../../strategy/index.md). If you haven't already, use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record your cloud adoption strategy.
 
@@ -51,9 +51,9 @@ Azure Virtual Desktop is an influential platform, and organizations have several
 
 - **Potential cost savings:** Customers can take advantage of Azure as an operational cost rather than upfront cost, because it's a consumption-based service. For example, virtual machines charge costs only for the time they are powered on, providing the capability to realize cost savings back to their organizations.
 
-Azure Virtual Desktop customers are often motivated by all six categories above. To successfully implement a Azure Virtual Desktop platform in the cloud, it's imperative for a cloud strategy team, including business and IT leaders, to review and prioritize the motivations listed in [Cloud motivations](../../strategy/motivations.md). This input will help the cloud adoption team make informed decisions throughout the implementation process.
+Azure Virtual Desktop customers are often motivated by all six categories above. To successfully implement an Azure Virtual Desktop platform in the cloud, it's imperative for a cloud strategy team, including business and IT leaders, to review and prioritize the motivations listed in [Cloud motivations](../../strategy/motivations.md). This input will help the cloud adoption team make informed decisions throughout the implementation process.
 
-Motivations to adopt a Azure Virtual Desktop platform in the cloud are often based on an organization's strategic objectives. The following topics are applicable for your organization if your team is reviewing this adoption scenario:
+Motivations to adopt an Azure Virtual Desktop platform in the cloud are often based on an organization's strategic objectives. The following topics are applicable for your organization if your team is reviewing this adoption scenario:
 
 1. Cycles to refresh on-premises virtual desktop infrastructure require significant capital expenditures. If your virtual desktop infrastructure is due for a refresh, the benefits of cloud adoption can unlock timely strategies to reduce costs.
 
@@ -86,11 +86,11 @@ In this scenario, desktop images are either migrated to Azure or new images are 
 
 When the migration to the cloud is finished, the overhead and costs of managing a virtual desktop farm are replaced with a cloud-native solution that manages the virtual desktop experience for your team. The team will only be responsible for support of the desktop images, available applications, Azure Active Directory, and user profiles.
 
-## How to measure progress during a Azure Virtual Desktop adoption
+## How to measure progress during an Azure Virtual Desktop adoption
 
 Once you understand the top motivations for this scenario, the cloud strategy team can define measurable outcomes to further guide adoption activities. Examples of business outcomes commonly seen during cloud adoption can be reviewed in [Business outcomes](../../strategy/business-outcomes/index.md).
 
-Given the impact of a Azure Virtual Desktop platform, you need to create many defined objectives and measurable key results. Commonly known as OKRs, objectives and key results can help you break down Azure Virtual Desktop adoption into manageable efforts. For more information, see [Objectives and key results](../../strategy/business-outcomes/okr.md) to understand OKRs in more detail.
+Given the impact of an Azure Virtual Desktop platform, you need to create many defined objectives and measurable key results. Commonly known as OKRs, objectives and key results can help you break down Azure Virtual Desktop adoption into manageable efforts. For more information, see [Objectives and key results](../../strategy/business-outcomes/okr.md) to understand OKRs in more detail.
 
 ## Next step: Plan for a virtual desktop environment
 
@@ -98,7 +98,7 @@ The following resources provide guidance for specific points throughout the clou
 
 - [Plan for Azure Virtual Desktop migration or deployment](./plan.md)
 - [Review your environment or Azure landing zones](./ready.md)
-- [Complete a Azure Virtual Desktop proof-of-concept](./proof-of-concept.md)
+- [Complete an Azure Virtual Desktop proof-of-concept](./proof-of-concept.md)
 - [Assess for Azure Virtual Desktop migration or deployment](./migrate-assess.md)
 - [Deploy or migrate Azure Virtual Desktop instances](./migrate-deploy.md)
 - [Release your Azure Virtual Desktop deployment to production](./migrate-release.md)
