@@ -1,5 +1,5 @@
 ---
-title: Governing a Azure Virtual Desktop environment
+title: Governing an Azure Virtual Desktop environment
 description: Explore governance best practice for Azure Virtual Desktop
 author: DominicAllen
 ms.author: doalle
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Governing a Azure Virtual Desktop environment
+# Governing an Azure Virtual Desktop environment
 
 The [Cloud Adoption Framework provides a methodology](../../govern/index.md) to systematically and incrementally improve governance of your cloud portfolio. This article demonstrates how you can extend your governance approach to Azure Virtual Desktop environments deployed to Azure.
 

@@ -40,5 +40,5 @@ The following list of articles will take you to guidance at specific points in t
 - [Strategy for Azure Virtual Desktop](./strategy.md)
 - [Plan for Azure Virtual Desktop](./plan.md)
 - [Migrate to Azure Virtual Desktop](./migrate-assess.md)
-- [Manage a Azure Virtual Desktop environment](./manage.md)
-- [Govern a Azure Virtual Desktop environment](./govern.md)
+- [Manage an Azure Virtual Desktop environment](./manage.md)
+- [Govern an Azure Virtual Desktop environment](./govern.md)

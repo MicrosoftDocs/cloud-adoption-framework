@@ -55,7 +55,7 @@ If an organization is planning an Azure migration on its own, Microsoft is alway
 - Data modernization to Azure
 - Security and management
 - Globally distributed data
-- Windows Virtual Desktop
+- Azure Virtual Desktop
 - Azure Marketplace
 - Fundamentals and governance
 

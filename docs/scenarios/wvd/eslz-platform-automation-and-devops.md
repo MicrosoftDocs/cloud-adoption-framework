@@ -9,11 +9,11 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Platform automation and DevOps for a Azure Virtual Desktop enterprise-scale scenario
+# Platform automation and DevOps for an Azure Virtual Desktop enterprise-scale scenario
 
 Azure Virtual Desktop is a managed service that provides a Microsoft control plane for your desktop virtualization environment.
 
-This article on automation focuses on the operational tasks you need to run a Azure Virtual Desktop environment. Each recommendation can be applied individually, and not all recommendations need to be implemented for automation to be worthwhile.
+This article on automation focuses on the operational tasks you need to run an Azure Virtual Desktop environment. Each recommendation can be applied individually, and not all recommendations need to be implemented for automation to be worthwhile.
 
 ## Design considerations
 
