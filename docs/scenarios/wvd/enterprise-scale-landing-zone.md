@@ -32,11 +32,11 @@ Learn about guidelines that drive the design of the Cloud Adoption Framework for
 
 The following image shows a conceptual reference architecture that demonstrates design areas and best practices.
 
-[![A diagram of a reference architecture for a Azure Virtual Desktop environment.](./media/azure-virtual-desktop-architecture.png)](./media/azure-virtual-desktop-architecture.png#lightbox)
+[![A diagram of a reference architecture for an Azure Virtual Desktop environment](./media/azure-virtual-desktop-architecture.png).](./media/azure-virtual-desktop-architecture.png#lightbox)
 
 ### Implementation with Azure Resource Manager (ARM) templates for Remote Desktop Services
 
-ARM Azure Virtual Desktop templates provide a collection of infrastructure-as-code ARM templates to deploy a Azure Virtual Desktop environment on Azure.
+ARM Azure Virtual Desktop templates provide a collection of infrastructure-as-code ARM templates to deploy an Azure Virtual Desktop environment on Azure.
 
 The [automate Azure Virtual Desktop deployments in Azure](https://github.com/Azure/RDS-Templates/tree/master/ARM-wvd-templates) GitHub repository contains code that lets you automatically deploy Azure Virtual Desktop environments in the Azure cloud.
 

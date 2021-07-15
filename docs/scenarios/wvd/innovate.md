@@ -37,7 +37,7 @@ The following resources provide guidance for specific points throughout the clou
 
 - [Plan for Azure Virtual Desktop migration or deployment](./plan.md)
 - [Review your environment or Azure landing zones](./ready.md)
-- [Complete a Azure Virtual Desktop proof-of-concept](./proof-of-concept.md)
+- [Complete an Azure Virtual Desktop proof-of-concept](./proof-of-concept.md)
 - [Assess for Azure Virtual Desktop migration or deployment](./migrate-assess.md)
 - [Deploy or migrate Azure Virtual Desktop instances](./migrate-deploy.md)
 - [Release your Azure Virtual Desktop deployment to production](./migrate-release.md)
