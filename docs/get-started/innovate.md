@@ -1,5 +1,5 @@
 ---
-title: "Get started: Build new products and services in the cloud"
+title: 'Get started: Build new products and services in the cloud'
 description: Learn about the Innovate methodology as an approach to guide the development of new cloud products and services.
 author: JanetCThomas
 ms.author: janet
@@ -192,15 +192,15 @@ The Innovate methodology provides guidance on the tools and product management a
   - Custom-built applications.
   - Technology-based experiences.
   - Integration of physical products and technology by using IoT.
-  - Ambient intelligence: Integration of nonintrusive technology into an environment.
-  - Azure Cognitive Services: Big data, AI, machine learning, and predictive solutions.
+  - Ambient intelligence: integration of nonintrusive technology into an environment.
+  - Azure Cognitive Services: big data, AI, machine learning, and predictive solutions.
 
 **Guidance to support deliverable completion:**
 
 - [Create hypothesis with business value consensus](../innovate/business-value.md): Before you decide on technical solutions, identify how new innovations can drive business value and come up with a hypothesis about customer needs.
 - [Build your first MVP](../innovate/considerations/build.md): Once a hypothesis has enough value potential to be built into your application, the build process starts. Development sprints should be as quick as possible, to allow quick verification or rejection of the hypothesis, or to fine tune the way in which the required functionality is to be integrated in the application.
-- [Measure](../innovate/considerations/measure.md) and [learn](../innovate/considerations/learn.md): You want to verify the accuracy of your hypothesis as soon as possible. A Minimum Viable Product (MVP) is a preliminary version of the new functionality, that offers just enough functionality to gather feedback that confirms if you are moving in the right direction.
-- [Expand digital innovation](../innovate/considerations/invention.md): To refine your hypothesis using the innovation disciplines or the digital inventions which include Democratize data, Engage via apps, Empower adoption, Interact with devices and Predict and Influence. These inventions are a core part of the Innovation methodology.
+- [Measure](../innovate/considerations/measure.md) and [learn](../innovate/considerations/learn.md): You want to verify the accuracy of your hypothesis as soon as possible. A minimum viable product (MVP) is a preliminary version of the new functionality, that offers just enough functionality to gather feedback that confirms if you are moving in the right direction.
+- [Expand digital innovation](../innovate/considerations/invention.md): To refine your hypothesis using the innovation disciplines or the digital inventions which include democratize data, engage via applications, empower adoption, interact with devices, and predict and influence. These inventions are a core part of the Innovate methodology.
 
 ## Step 9: Assess the innovation maturity of your organization
 
