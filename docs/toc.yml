@@ -320,7 +320,7 @@ items:
           href: ready/enterprise-scale/terraform-module-caf-enterprise-scale.md
         - name: Transition to enterprise-scale (brownfield)
           href: ready/enterprise-scale/transition.md
-        - name: Scenario Specific Enterprise Scale Landing Zones
+        - name: Scenario-specific enterprise-scale landing zones
           href: ready/enterprise-scale/scenario-specific-eslz.md
       - name: Start small and expand
         items:
@@ -490,7 +490,7 @@ items:
         - name: Tailwind Traders case study
           items:
           - name: Assessment and migration planning with Azure Migrate for servers
-            href: migrate/azure-best-practices/tailwind-migration-assess-servers.md 
+            href: migrate/azure-best-practices/tailwind-migration-assess-servers.md
           - name: Migration execution with Azure Migrate for servers
             href: migrate/azure-best-practices/tailwind-migration-rehost-server-replication.md
         - name: Windows Server workloads
@@ -1641,7 +1641,7 @@ items:
         href: secure/best-practices/secure-devops.md
       - name: Secure DevOps governance
         href: secure/best-practices/end-to-end-governance.md
-      - name: Windows Virtual Desktop
+      - name: Azure Virtual Desktop
         href: scenarios/wvd/eslz-security-governance-and-compliance.md
       - name: Managing secrets
         href: secure/best-practices/manage-secrets.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
