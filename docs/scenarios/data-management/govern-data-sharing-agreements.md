@@ -1,8 +1,8 @@
 ---
 title: Data sharing agreements
 description: Learn how data sharing agreements ensure stable delivery of data and manage compliance and governance.
-author: pstrengholt
-ms.author: pietheinstrengholt
+author: pietheinstrengholt
+ms.author: pstrengholt
 ms.date: 7/20/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
