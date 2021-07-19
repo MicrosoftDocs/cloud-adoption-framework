@@ -15,15 +15,15 @@ This article examines design considerations and recommendations for identity and
 
 This article builds on considerations and recommendations about Azure landing zones. For more information, see  [Identity and access management](../../ready/enterprise-scale/identity-and-access-management.md).
 
-## Data Landing Zone design
+## Data landing zone design
 
-Enterprise Scale Analytics and AI supports an access control model using Azure Active Directory (Azure AD) identities. The model uses both Azure role-based access control (Azure RBAC) and access control lists (ACLs).
+Enterprise-scale for analytics and AI supports an access control model using Azure Active Directory (Azure AD) identities. The model uses both Azure role-based access control (Azure RBAC) and access control lists (ACLs).
 
 Review the Azure administration and management activities your teams perform. Consider your data management and analytics on Azure. Determine the best possible distribution of responsibilities within your organization.
 
 ### Role assignments
 
-For automation purposes of deploying Data Landing Zones, you need these roles:
+For automation purposes of deploying data landing zones, you need these roles:
 
 :::row:::
     :::column span="1":::
@@ -38,10 +38,10 @@ For automation purposes of deploying Data Landing Zones, you need these roles:
 :::row-end:::
 :::row:::
     :::column span="1":::
-        [Private DNS Zone Contributor](/azure/role-based-access-control/built-in-roles#private-dns-zone-contributor)
+        [Private DNS zone Contributor](/azure/role-based-access-control/built-in-roles#private-dns-zone-contributor)
     :::column-end:::
     :::column span="3":::
-        Deploy all private DNS zones for all data services into a single subscription and resource group. The service principal needs to be `Private DNS Zone Contributor` on the global DNS resource group that was created during the Data Management Zone deployment. This role is required to deploy A-records for the private endpoints.
+        Deploy all private DNS zones for all data services into a single subscription and resource group. The service principal needs to be `Private DNS Zone Contributor` on the global DNS resource group that was created during the data management zone deployment. This role is required to deploy A-records for the private endpoints.
     :::column-end:::
     :::column span="2":::
         (Resource Group Scope) `/subscriptions/{{datamanagement}subscriptionId}/resourceGroups/{resourceGroupName}`
@@ -52,7 +52,7 @@ For automation purposes of deploying Data Landing Zones, you need these roles:
         [Network Contributor](/azure/role-based-access-control/built-in-roles#network-contributor)
     :::column-end:::
     :::column span="3":::
-        In order to set up virtual network peering between the Data Landing Zone network and the Data Management Landing Zone network, the service principal needs `Network Contributor` access rights on the resource group of the remote virtual network.
+        In order to set up virtual network peering between the data landing zone network and the data management landing zone network, the service principal needs `Network Contributor` access rights on the resource group of the remote virtual network.
     :::column-end:::
     :::column span="2":::
         (Resource Group Scope) `/subscriptions/{{datamanagement}subscriptionId}/resourceGroups/{resourceGroupName}`
@@ -77,7 +77,7 @@ For automation purposes of deploying Data Landing Zones, you need these roles:
 
 ### Role assignments for data integration and data products
 
-The following role assignments are required for a deployment of a data integration and data product within a Data Landing Zone:
+The following role assignments are required for a deployment of a data integration and data product within a data landing zone:
 
 :::row:::
     :::column span="1":::
@@ -95,7 +95,7 @@ The following role assignments are required for a deployment of a data integrati
         [Private DNS Zone Contributor](/azure/role-based-access-control/built-in-roles#private-dns-zone-contributor)
     :::column-end:::
     :::column span="3":::
-        Deploy all Private DNS Zones for all data services into a single subscription and resource group. The service principal needs to be `Private DNS Zone Contributor` on the global DNS resource group that was created during the Data Management Zone deployment. This role is required to deploy A-records for the respective private endpoints.
+        Deploy all Private DNS Zones for all data services into a single subscription and resource group. The service principal needs to be `Private DNS Zone Contributor` on the global DNS resource group that was created during the data management zone deployment. This role is required to deploy A-records for the respective private endpoints.
     :::column-end:::
     :::column span="2":::
         (Resource Group Scope) `/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}`
@@ -106,7 +106,7 @@ The following role assignments are required for a deployment of a data integrati
         [Contributor](/azure/role-based-access-control/built-in-roles#contributor)
     :::column-end:::
     :::column span="3":::
-        Deploy all data-integration-streaming services into a single resource group within the Data Landing Zone subscription. The service principal requires a `Contributor` role-assignment on that resource group.
+        Deploy all data-integration-streaming services into a single resource group within the data landing zone subscription. The service principal requires a `Contributor` role-assignment on that resource group.
     :::column-end:::
     :::column span="2":::
         (Resource Group Scope)  `/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}`
@@ -117,7 +117,7 @@ The following role assignments are required for a deployment of a data integrati
         [Network Contributor](/azure/role-based-access-control/built-in-roles#network-contributor)
     :::column-end:::
     :::column span="3":::
-        In order to deploy private endpoints to the specified private link subnet, which was created during the Data Landing Zone deployment, the service principal requires `Network Contributor` access on that subnet.
+        In order to deploy private endpoints to the specified private link subnet, which was created during the data landing zone deployment, the service principal requires `Network Contributor` access on that subnet.
     :::column-end:::
     :::column span="2":::
         (Child-Resource Scope) `/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName} /providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}"`
@@ -128,19 +128,19 @@ The following role assignments are required for a deployment of a data integrati
 
 Managing access to data should be done using Azure AD Groups. Add user principle names or service principle names to the Azure AD Groups. Add the groups to the services and grant permissions to the group. This approach allows for fine-grained access control.
 
-For datasets in Azure Data Lakes, consider using ACLs. For more information, see [Access control model in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-access-control-model). Using Azure AD passthrough with ACLs is supported by most native Azure services, including Azure Machine Learning, Azure Synapse Analytics, and Azure Databricks.
+For datasets in Azure Data Lakes, consider using ACLs. For more information, see [Access control model in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-access-control-model). Using Azure AD passthrough with access control lists is supported by most native Azure services, including Azure Machine Learning, Azure Synapse Analytics, and Azure Databricks.
 
-Other polyglot storage is likely to be used in the Enterprise Scale Analytic construction set. Examples include PostgreSQL, MySQL, Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics. They could be used by data integrations to store Read Data Stores or by data product teams.
+Other polyglot storage is likely to be used in the enterprise-scale for analytics construction set. Examples include Azure Database for PostgreSQL, Azure Database for MySQL, Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics. They could be used by data integrations to store read data stores or by data product teams.
 
-- [Use Azure Active Directory for authentication with PostgreSQL](/azure/postgresql/howto-configure-sign-in-aad-authentication)
+- [Use Azure Active Directory for authentication with Azure Database for PostgreSQL](/azure/postgresql/howto-configure-sign-in-aad-authentication)
 - [Use Azure Active Directory authentication](/azure/azure-sql/database/authentication-aad-overview) with Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics
-- [Use Azure Active Directory for authenticating with MySQL](/azure/mysql/concepts-azure-ad-authentication)
+- [Use Azure Active Directory for authenticating with Azure Database for MySQL](/azure/mysql/concepts-azure-ad-authentication)
 
 We recommend that you use Azure AD groups to secure database objects instead of individual Azure AD user accounts. These AD Azure Groups are used to authenticate users and help protect database objects. Similar to the data lake pattern, you could use your domain or data products onboarding to create these groups within your Azure AD service.
 
 This approach also gives a single management location and allows reviewing access rights inside the Azure Graph.
 
-For more details on how to drive a security for Data Management Landing Zones and Data Landing Zones is Managing your data estate, see [Security Provisioning](security-provisioning.md).
+For more details on how to drive a security for data management landing zones and data landing zones is managing your data estate, see [Security provisioning](security-provisioning.md).
 
 ## Next steps
 
