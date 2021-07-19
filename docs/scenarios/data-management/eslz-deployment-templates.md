@@ -1,6 +1,6 @@
 ---
-title: Deployment templates
-description: Learn about the core starter templates for enterprise-scale analytics and AI deployment. 
+title: Deployment templates 
+description: Learn about the core starter templates for enterprise-scale for analytics and AI deployment. 
 author: mboswell
 ms.author: mboswell
 ms.date: 07/13/2021
@@ -11,11 +11,11 @@ ms.subservice: ready
 
 # Deployment templates
 
-The enterprise-scale analytics and AI solution has the following core starter templates:
+The enterprise-scale for analytics and AI solution has the following core starter templates:
 
 |Repository|Content|Required|Deployment model|
 |-|-|-|-|
-|[Data management template](https://github.com/Azure/data-management-zone)| Central data management services and shared data services, such as data catalog and self-hosted integration runtime | Yes | One per enterprise-scale analytics and AI |
+|[Data management template](https://github.com/Azure/data-management-zone)| Central data management services and shared data services, such as data catalog and self-hosted integration runtime | Yes | One per enterprise-scale for analytics and AI |
 |[Data landing zone template](https://github.com/Azure/data-landing-zone)| Data landing zone shared services, such as data storage, ingestion services, and management services | Yes | One per data landing zone |
 |[Data integration template - Batch processing](https://github.com/Azure/data-integration-batch) | Additional services required for batch data processing | No | One or more per data landing zone |
 |[Data integration template - Stream processing](https://github.com/Azure/data-integration-streaming) | Additional services required for processing data streams | No | One or more per data landing zone |
