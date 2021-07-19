@@ -1,5 +1,5 @@
 ---
-title: Deployment templates 
+title: Deployment templates for enterprise-scale for analytics and AI deployment
 description: Learn about the core starter templates for enterprise-scale for analytics and AI deployment. 
 author: mboswell
 ms.author: mboswell
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Deployment templates
+# Deployment templates for enterprise-scale for analytics and AI deployment
 
 The enterprise-scale for analytics and AI solution has the following core starter templates:
 
