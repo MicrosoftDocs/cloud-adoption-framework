@@ -18,7 +18,7 @@ Effective subscription design helps organizations establish a structure to organ
 
 Adopting Azure begins by creating an Azure subscription, associating it with an account, and deploying resources like virtual machines and databases to the subscription. For an overview of these concepts, see [Azure fundamental concepts](../../ready/considerations/fundamental-concepts.md).
 
-- [Create your initial subscriptions.](../../ready/azure-best-practices/initial-subscriptions.md)
+- [Create your initial subscriptions](../../ready/azure-best-practices/initial-subscriptions.md).
 - [Create additional subscriptions](../../ready/azure-best-practices/scale-subscriptions.md) to scale your Azure environment.
 - [Organize and manage your subscriptions](../../ready/azure-best-practices/organize-subscriptions.md) using Azure management groups.
 
