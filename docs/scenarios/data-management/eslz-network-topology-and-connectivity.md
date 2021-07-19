@@ -1,0 +1,68 @@
+---
+title: Azure Enterprise Scale Analytics and AI Networking
+description: Enterprise Scale Analytics and AI Architecture Networking.
+author: BrianBlanchard
+ms.author: brblanch # Microsoft employees only
+ms.date: 06/21/2021
+ms.topic: conceptual
+ms.service: cloud-adoption-framework
+ms.subservice: ready
+---
+
+# Network topology and connectivity for an data management and analytics
+
+This article builds on a number of considerations and recommendations defined in the Azure landing zone article [enterprise-scale design area for network topology and connectivity](../../ready/enterprise-scale/network-topology-and-connectivity.md). Following the guidance in this article will help examine key design considerations and best practices surrounding networking and connectivity to, from, and data management zones and data landing zones . Since he data management  and data landing zones are mission-critical, the guidance on the enterprise-scale design areas should also be included in your design.
+
+This section outlines the networking patterns to assist with:
+
+- integrating across clouds
+- restricting data exfiltration
+- facilitating remote workers
+- interfacing with on-premises and Software-as-a-Service solutions
+
+It builds upon the Cloud Adoption Framework for [Network topology and connectivity](/azure/cloud-adoption-framework/ready/enterprise-scale/network-topology-and-connectivity).
+
+:::image type="content" source="./images/networking-overview.png" alt-text="High Level Overview of Networking for Enterprise Scale Analytics and AI" lightbox="./images/networking-overview.png":::
+
+Figure 1: High Level Overview of Networking for Enterprise Scale Analytics and AI
+
+## Data Management Landing Zone Networking
+
+The Data Management Landing Zone will connect to the Azure Networking Management Subscription via VNet Peering, which will connect to on-premises resources via ExpressRoute circuits and third-party clouds.
+
+Data Management Landing Zone services which support Private Link such as Azure Purview will be injected into the Data Management Landing Zone VNet.
+
+## Data Management Landing Zone to Data Landing Zone
+
+For every new Data Landing Zone, you should create a VNet peering from the Data Management Landing Zone to the Data Landing Zone.
+
+You can connect virtual networks to each other with virtual network peering. These virtual networks can be in the same region or different regions (also known as Global VNet peering). Once virtual networks are peered, resources in both virtual networks can communicate with each other with the same latency and bandwidth as if the resources were in the same virtual network.
+
+>[!IMPORTANT]
+>Data Management Landing Zone will connect to Analytics and AI Landing Zone(s) via Virtual Network Peering
+
+## Data Landing Zones to Data Landing Zones
+
+Data Landing Zones are connected to the other Data Landing Zones via VNet Peering.
+
+## Data Management Landing Zone to Third-Party Clouds
+
+To enable connectivity between a Data Management Landing Zone and a third-party cloud, a [Site-to-Site VPN](/azure/vpn-gateway/vpn-gateway-tutorial-vpnconnection-powershell) gateway connection is used. It can connect your on-premises or third-party cloud Landing Zone to an Azure Virtual Network over an IPsec or Internet Key Exchange (IKEv1 or IKEv2) VPN tunnel.
+
+Site-to-Site VPN can provide better continuity for your workloads in a hybrid cloud setup with Azure.
+
+>[!IMPORTANT]
+>For connections to a third-party cloud, we recommend implementing a Site-to-Site VPN between Azure Connectivity Subscription and the third-party cloud Connectivity Subscription.
+
+## Private Endpoints
+
+The Enterprise Scale Analytics and AI Framework uses [Private Link](/azure/private-link/private-link-service-overview), where available, for shared PaaS services. Private Link is generally available for several services and is in public preview for numerous additional services. Private Link addresses data exfiltration concerns associated with service endpoints.
+
+For the current list of supported products, see [Private Link Resources](/azure/private-link/private-endpoint-overview#private-link-resource).
+
+>[!CAUTION]
+>By design, Enterprise Scale Analytics and AI Networking uses Private Endpoints where available for connectivity to PaaS services.
+
+### Azure DNS Resolver Implementation for Private Endpoints
+
+DNS resolution for private endpoints should be handled through central [Azure Private DNS](/azure/dns/private-dns-overview) zones. Required DNS records for private endpoints can be automatically created using Azure Policy to allow access through FQDNs (Fully Qualified Domain Name). The lifecycle of the DNS records will follow the lifecycle of the private endpoints and will be automatically removed when the private endpoint is deleted.

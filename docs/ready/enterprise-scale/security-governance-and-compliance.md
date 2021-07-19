@@ -160,7 +160,7 @@ You must maintain a healthy security posture as you adopt Azure. Besides visibil
 
 - High availability and disaster recovery.
 
-- Consistent security across Azure services in terms of data management and control plane operations.
+- Consistent security across Azure services in terms of 'data management and analytics' and control plane operations.
 
 - Multitenancy for key platform components. This includes Hyper-V, the HSMs underpinning Key Vault, and database engines.
 
