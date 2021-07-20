@@ -20,6 +20,7 @@ Define your naming and tagging strategy as early as possible. Use the following 
 - [Recommended abbreviations for Azure resource types](./resource-abbreviations.md)
 - [Define your tagging strategy](./resource-tagging.md)
 - [Resource naming and tagging decision guide](../../decision-guides/resource-tagging/index.md)
+- [Naming rules and restrictions for Azure resources](/azure/azure-resource-manager/management/resource-name-rules)
 
 > [!NOTE]
 > Every business has its own organizational and management requirements. These recommendations help start a discussion with your cloud adoption teams. As the discussion proceeds, use the template below to document the naming and tagging decisions you make when aligning these recommendations to your specific business needs.
