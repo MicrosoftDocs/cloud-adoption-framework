@@ -25,7 +25,7 @@ Regardless of the deployment option, you should carefully consider each design a
 
 | Design areas | Objective | Relevant methodologies |
 |---|---|---|
-| Enterprise enrollment | For enterprise customers with an Azure commitment, proper tenant creation and enrollment is an important early step. | Ready |
+| Azure billing and Active Directory tenant | Proper tenant creation, enrollment, and billing setup are important early steps. | Ready |
 | Identity and access management| Identity and access management is a primary security boundary in the public cloud. It's the foundation for any secure and fully compliant architecture. | Ready |
 | Network topology and connectivity | Networking and connectivity decisions are an equally important foundational aspect of any cloud architecture. | Ready |
 | Resource organization | As cloud adoption scales, considerations for subscription design and management group hierarchy have an impact on governance, operations management, and adoption patterns. | Govern |
