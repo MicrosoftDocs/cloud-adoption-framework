@@ -6,7 +6,8 @@ ms.author: brblanch
 ms.date: 06/07/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: overview
+ms.subservice: strategy
+ms.custom: internal, e2e-retail
 ---
 
 # Omnichannel optimization in the retail industry
