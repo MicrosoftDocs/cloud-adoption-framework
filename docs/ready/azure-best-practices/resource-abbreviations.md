@@ -167,6 +167,14 @@ This list provides recommended abbreviations for various Azure resource types to
 | Power BI Embedded | `Microsoft.PowerBIDedicated/capacities` | `pbi-` |
 | Time Series Insights environment | `Microsoft.TimeSeriesInsights/environments` | `tsi-` |
 
+## Azure Virtual Desktop
+
+| Asset type | Resource provider namespace/Entity | Abbreviation |
+|--|--|--|
+| Virtual desktop host pool | | vdpool- |
+| Virtual desktop application group | | vdag- |
+| Virtual desktop workspace | | vdws- |
+
 ## Developer tools
 
 | Asset type | Resource provider namespace/Entity | Abbreviation |
