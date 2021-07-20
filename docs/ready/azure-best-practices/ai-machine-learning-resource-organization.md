@@ -10,11 +10,11 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
-# Organize and set up Azure Machine Learning environments
+# Organize and set up Azure Machine Learning environments 
 
 When planning an Azure Machine Learning deployment for an enterprise environment, there are some common decision points that affect how you create the workspace:
 
-- **Team structure:** The way your Machine Learning teams are organized and collaborate on projects given use case and data segregation, or cost management requirements.
+- **Team structure:** The way your Data Science teams are organized and collaborate on projects given use case and data segregation, or cost management requirements.
 
 - **Environments:** The environments used as part of your development and release workflow to segregate development from production.
 
@@ -126,6 +126,16 @@ To adhere to the above requirements, Contoso has set up their resources in the f
 - A multiple-environment setup for Azure Machine Learning and associated resources to address cost management, RBAC, and data access requirements.
 - A single resource group and Machine Learning workspace that is dedicated for exploration.
 - Azure Active Directory groups that are different per user role and environment, for example operations that a data scientist can do in a production environment are different than in the development environment, and access levels might differ per solution.
-- All resources are created in a single Azure region.
+- All resources are created in a single Azure region. 
 
 ![Contoso reference implementation](./media/azure-ml-setup-contoso-reference-implementation.png)
+
+## Next steps
+
+To learn about best practices on Machine Learning DevOps with Azure Machine Learning, see [Machine learning DevOps guide](./ai-machine-learning-mlops.md).
+> [!div class="nextstepaction"]
+> [Machine learning DevOps guide](./ai-machine-learning-mlops.md)
+
+To learn about considerations when managing budgets, quota and cost with Azure Machine Learning, see [Manage budgets, costs, and quota for Azure Machine Learning at organizational scale](./optimize-ai-machine-learning-cost.md).
+> [!div class="nextstepaction"]
+> [Manage budgets, costs, and quota for Azure Machine Learning at organizational scale](./optimize-ai-machine-learning-cost.md)

@@ -33,7 +33,7 @@ Use terms and acronyms familiar to the finance team, for example, capital expend
 
 Show the finance team your business case that includes a financial roadmap and multi-year plan. Your plan should reiterate your organization's business and financial goals, and demonstrate how cloud economics aligns to their financial considerations.
 
-Your business case should be tailored to your organization's goals and business outcomes. For help with building your business case, see [Create your business case](financial-models.md) and [Strategy for partner alignment](partner-alignment.md).
+Your business case should be tailored to your organization's goals and business outcomes. For help with building your business case, see [Create your business case](./cloud-migration-business-case.md) and [Strategy for partner alignment](partner-alignment.md).
 
 ## Answer questions
 

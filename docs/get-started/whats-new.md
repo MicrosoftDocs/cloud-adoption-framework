@@ -10,13 +10,24 @@ ms.subservice: general
 ms.custom: internal
 ---
 
-<!-- docutune:casing "Getting Started module" "internal Microsoft teams" OneMigrate -->
-
 # What's new in the Microsoft Cloud Adoption Framework for Azure
 
 Here's a list of recent changes made to the Cloud Adoption Framework.
 
 This framework is built collaboratively with customers, partners, and internal Microsoft teams. New and updated content is released when it becomes available. These releases allow you to test, validate, and refine the guidance along with us. We encourage you to partner with us to build the Cloud Adoption Framework.
+
+## June 2021
+
+We've added a new retail industry scenario in this release, designed to guide a retail company's cloud adoption journey from beginning to end.
+
+| Article | Description |
+|--|--|
+| [Retail industry scenario](../industry/retail/index.md) | Review a summary of the retail scenario components, common challenges, and supporting guidance. |
+| [Cloud adoption strategy for the retail industry](../industry/retail/strategy.md) | Learn about how the priorities of retailers are shifting, and the strategic impact of cloud adoption for the retail industry. |
+| [Cloud adoption plan for the retail industry](../industry/retail/plan.md) | Use this guidance to develop a refined cloud adoption plan for the retail industry. |
+| [Innovation in the retail industry](../industry/retail/innovate.md) | Learn how to innovate even faster and improve your retail outcomes by using the steps outlined in the Innovate methodology. |
+| [Governance in the retail industry](../industry/retail/govern.md) | Use the Cloud Adoption Framework methodology to systematically and incrementally improve governance of your cloud portfolio across the five governance disciplines. This article refines the methodology for governance needs specific to the retail industry. |
+| [Management in the retail industry](../industry/retail/manage.md) | Learn how to use the Manage methodology in the Cloud Adoption Framework for Azure to manage the cloud for the retail industry. |
 
 ## May 2021
 
@@ -24,11 +35,11 @@ This framework is built collaboratively with customers, partners, and internal M
 
 This release of the Cloud Adoption Framework introduces the new Secure methodology, which will centralize the theme of security best practices and provide end-to-end guidance for customers looking to adopt Microsoft guidance for their cloud environments. Security concerns have surged to the forefront of many top priorities lists recently, building on feedback requesting a more security-centric view, the [Secure methodology](../secure/index.md) will assist in defining the security aspect of the cloud journey.
 
-### Windows Virtual Desktop adoption journey
+### Azure Virtual Desktop adoption journey
 
-As part of the ongoing series of adoption journeys, this release includes expanded guidance for [integrating Windows Virtual Desktop (WVD) into your cloud adoption journey](../scenarios/wvd/index.md). This rich guidance shows how each methodology in the Cloud Adoption Framework helps provide structure and best practices to your implementation approach.
+As part of the ongoing series of adoption journeys, this release includes expanded guidance for [integrating Azure Virtual Desktop (formerly Windows Virtual Desktop) into your cloud adoption journey](../scenarios/wvd/index.md). This rich guidance shows how each methodology in the Cloud Adoption Framework helps provide structure and best practices to your implementation approach.
 
-### Cloud economics
+### Cloud economics updates
 
 This release continues the refresh of the [Strategy methodology](../strategy/index.md) by integrating Microsoft's [cloud economics program](https://azure.microsoft.com/overview/cloud-economics/).
 
@@ -39,6 +50,10 @@ We've added new content that includes the financial and technical considerations
 - [Build a digital transformation timeline](../strategy/digital-transformation-timeline.md)
 - [Create a business case](../strategy/cloud-migration-business-case.md)
 - [Share your strategy](../strategy/share-your-strategy.md)
+
+### Modern application platform
+
+We expanded and revised the modern application platform content in this release. Commonly, customers need to provide their developers with a consistent application platform. This article series outlines how you can use orchestrated containers to manage pools of workloads in one or more centralized clusters, thus providing that consistent application platform. The articles in this series for [modern application platform](../scenarios/aks/index.md) combine technical and non-technical considerations required to prepare for Kubernetes and container integration into centralized operations and your broader cloud strategy.
 
 ## April 2021
 
@@ -65,7 +80,7 @@ Most notable in this release is the addition of adoption journeys, which provide
 |--|--|
 | [Hybrid&nbsp;and&nbsp;multicloud](../scenarios/hybrid/index.md) | Lifecycle guide to integrate hybrid, multicloud, and unified operations into your cloud adoption journey. |
 | [Modern containers](../scenarios/aks/index.md) | Container modernization enables rapid innovation and workload portability. Learn how to integrate containers into your cloud adoption journey. |
-| [SAP on Azure](../scenarios/sap/index.md) | As part of our OneMigrate (migration scenarios) commitment, this journey bridges the gaps between the SAP migration process and other mainstream migration processes to deliver on full-scale adoption of SAP on Azure. |
+| [SAP on Azure](../scenarios/sap/index.md) | As part of our One Migrate (migration scenarios) commitment, this journey bridges the gaps between the SAP migration process and other mainstream migration processes to deliver on full-scale adoption of SAP on Azure. |
 
 ### Cloud economics
 
@@ -82,7 +97,7 @@ We've updated the introduction to each category of business outcomes with refere
 
 ### Enterprise-scale updates
 
-The critical design area of [network topology and connectivity](../ready/azure-best-practices/define-an-azure-network-topology.md) includes new articles that simplify rationalizing individual components of your network design. Those design aspects now include guidance on [connecting to multicloud providers](../ready/azure-best-practices/connectivity-to-other-providers.md) like Oracle Cloud Infrastructure. We've also released the new enterprise-scale Terraform module to demonstrate Microsoft's continued investment in open-source approaches to Azure landing zone configuration. Lastly, we've updated guidance on how enterprises can [optimize management groups and organize subscriptions](../ready/enterprise-scale/management-group-and-subscription-organization] in Azure to meet cloud governance requirements.
+The critical design area of [network topology and connectivity](../ready/azure-best-practices/define-an-azure-network-topology.md) includes new articles that simplify rationalizing individual components of your network design. Those design aspects now include guidance on [connecting to multicloud providers](../ready/azure-best-practices/connectivity-to-other-providers.md) like Oracle Cloud Infrastructure. We've also released the new enterprise-scale Terraform module to demonstrate Microsoft's continued investment in open-source approaches to Azure landing zone configuration. Lastly, we've updated guidance on how enterprises can [optimize management groups and organize subscriptions](../ready/enterprise-scale/management-group-and-subscription-organization.md) in Azure to meet cloud governance requirements.
 
 ### Antipatterns
 
@@ -97,13 +112,6 @@ When planning an Azure Machine Learning deployment for an enterprise environment
 - **Region:** The location of your data and the audience you need to serve your Machine Learning solution to.
 
 We added a reference implementation example to help illustrate the deployment of Azure Machine Learning in a larger setting. It outlines how the organization 'Contoso' set up Azure Machine Learning given their organizational constraints, reporting, and budgeting requirements.
-
-### Azure Storage migration overview
-
-To help you plan your Azure Storage migration, we've provided guidance in a new article, [Azure Storage migration overview](/windows-server/storage/storage-migration-service/overview), for two migration scenarios:
-
-- Migration of unstructured data, such as files and objects
-- Migration of block-based devices, such as disks and storage area networks
 
 ## January 2021
 
@@ -185,11 +193,11 @@ This release adds a number of new scenarios to make cloud adoption more actionab
 
 **Migration scenarios:**
 
-The new [migration scenarios overview page](../scenarios/index.md) builds on the Migrate methodology to demonstrate how Azure delivers on the #OneMigrate promise. It provides approaches to migrating multiple first and third-party scenarios to Azure. This includes new migration scenarios:
+The new [migration scenarios overview page](../scenarios/index.md) builds on the Migrate methodology to demonstrate how Azure delivers on the One Migrate promise. It provides approaches to migrating multiple first and third-party scenarios to Azure. This includes new migration scenarios:
 
 | Article | Description |
 |--|--|
-| [Windows Virtual Desktop](../scenarios/wvd/index.md) | This scenario enables productivity boosts and accelerates the migration of various workloads to support the end-user experience. |
+| [Azure Virtual Desktop](../scenarios/wvd/index.md) | This scenario enables productivity boosts and accelerates the migration of various workloads to support the end-user experience. |
 | [Azure Stack](../scenarios/azure-stack/index.md) | Learn about deploying Azure in your datacenter using Azure Stack Hub. |
 
 **Analytics in the Cloud Adoption Framework:**
@@ -221,7 +229,7 @@ Proper configuration of the cloud environment is often the first and most common
 | Article | Description |
 |--|--|
 | [Azure landing zones](../ready/landing-zone/index.md) | Azure landing zones create a common set of design areas and implementation options to accelerate environment creation aligned to the cloud adoption plan and cloud operating model. This new article defines Azure landing zones more clearly. |
-| [Azure landing zones: design areas](../ready/landing-zone/design-areas.md) | All Azure landing zones share a common set of 8 design areas. Before deploying any of the Azure landing zones, customers should consider each of these design to make critical decisions. |
+| [Azure landing zones: design areas](../ready/landing-zone/design-areas.md) | All Azure landing zones share a common set of eight design areas. Before deploying any of the Azure landing zones, customers should consider these design areas to make critical decisions. |
 | [Azure landing zones: implementation options](../ready/landing-zone/implementation-options.md) | Choose the best Azure landing zone implementation option, depending on your cloud adoption plan and cloud operating model. |
 
 The existing CAF blueprint definitions and CAF Terraform modules provide a starting point for Azure landing zone implementation. However, some customers need a richer implementation option that can meet the demands of enterprise-scale cloud adoption plans. This release adds **CAF enterprise-scale** to the Azure landing zone implementation options to fill that need. The following lists a few of the articles to get you started with the CAF enterprise-scale architecture and reference implementations.

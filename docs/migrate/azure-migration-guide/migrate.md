@@ -51,7 +51,7 @@ To perform a migration using Azure Migrate, follow these steps:
 #### Learn more
 
 - [About Azure Migrate](/azure/migrate/migrate-services-overview)
-- [Azure Migrate tutorial - migrate physical or virtualized servers to Azure](/azure/migrate/tutorial-migrate-physical-virtual-machines)
+- [Azure Migrate tutorial: Migrate physical or virtualized servers to Azure](/azure/migrate/tutorial-migrate-physical-virtual-machines)
 
 ### Azure Database Migration Service
 
@@ -226,9 +226,9 @@ You can choose from a variety of experienced systems integrator partners and too
 
 [Learn more](/azure/cosmos-db/partners-migration-cosmosdb#migration-tools)
 
-Visit the [Azure migration center](https://azure.microsoft.com/migration/migration-partners/) to discover organizations offering ready-to-use partner technology solutions to fit your migration scenarios and learn more about additional third-party migration tools and support services.
+Visit the [Azure migration and modernization center](https://azure.microsoft.com/migration/) to discover organizations offering ready-to-use partner technology solutions to fit your migration scenarios and learn more about additional third-party migration tools and support services.
 
-Visit the [Azure Database Migration Guide](https://datamigration.microsoft.com) to see a range of database migration options and step-by-step guidance with native and partners.
+Visit the [Azure Database Migration Guide](/data-migration/) to see a range of database migration options and step-by-step guidance with native and partners.
 
 ## [Project management tools](#tab/project-management-tools)
 

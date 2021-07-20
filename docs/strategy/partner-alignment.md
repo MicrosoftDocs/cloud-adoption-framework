@@ -51,7 +51,7 @@ You are not alone in your cloud journey. There are several options to support yo
 
 - **Azure solution providers (partners):** Get connected with Azure expert-managed services providers (MSP) and other Microsoft partners who have service offerings aligned to the Cloud Adoption Framework methodologies.
 - **FastTrack for Azure:** Use the Microsoft FastTrack for Azure program to accelerate migration.
-- **Azure Migration Program (AMP):** The AMP program aligns a mixture of partners and Microsoft employees to accelerate and support your migration.
+- **Azure Migration and Modernization Program (AMMP):** The AMMP program aligns a mixture of partners and Microsoft employees to accelerate and support your migration.
 - **Solution assessments:** Get assistance from a Microsoft solutions assessment expert or qualified partner as part of a [Solution Assessment engagement](https://www.microsoft.com/solutionassessments/solutionassessments.aspx?rtc=1).
 
 ### Azure solution providers
@@ -72,13 +72,13 @@ In parallel to the development of the cloud adoption strategy, the cloud strateg
 
 During a typical FastTrack for Azure engagement, Microsoft helps to define the business vision to plan and develop Azure solutions successfully. The team assesses architectural needs and provides guidance, design principles, tools, and resources to help build, deploy, and manage Azure solutions. The team matches skilled partners for deployment services on request and periodically checks in to ensure that deployment is on track and to help remove blockers.
 
-### Azure Migration Program (AMP)
+### Azure Migration and Modernization Program (AMMP)
 
-The [Azure Migration Program (AMP)](https://azure.microsoft.com/migration/migration-program) provides a mixture of technical skill building, step-by-step guidance, free migration tools, and potential offers to reduce migration costs.
+The [Azure Migration and Modernization Program (AMMP)](https://azure.microsoft.com/migration/migration-program) provides a mixture of technical skill building, step-by-step guidance, free migration tools, and potential offers to reduce migration costs.
 
 The program uses FastTrack for Azure and Azure solution providers to improve customer success during migration.
 
-Watch this short video to get an overview of how the Azure Migration Program can help you.
+Watch this short video to get an overview of how the Azure Migration and Modernization Program (AMMP) can help you.
 
 <!-- markdownlint-disable MD034 -->
 

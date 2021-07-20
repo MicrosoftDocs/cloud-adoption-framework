@@ -25,11 +25,17 @@ For each application or service you'll deploy to your landing zone, use the foll
 
 The following questions help you make decisions based on the Azure networking services decision tree:
 
+- Is a virtual network needed for Azure Virtual Desktop ?
+
+  Yes, Azure Virtual Desktop virtual machines are Azure Virtual Machines and must be deployed in a virtual network.
+
 - What is the size of your virtual network?
 
-  In Azure, Virtual Desktop virtual machines are part of virtual networks. Your virtual network needs to be the right size. Use appropriate address ranges as defined in your existing networking architecture.
+  The number of IP addresses needed in the virtual network will mainly depend on the load you want to handle. Use appropriate address ranges as defined in your existing networking architecture to be able to scale out your Azure Virtual Network infrastructure.
 
 - Will your workloads require connectivity between virtual networks and your on-premises datacenter?
+
+  Several reasons can require that you connect your virtual network to you on-premises datacenter, such as extending your Active Directory on-premises domain in Azure or allowing an application that runs on your Azure Virtual Desktop deployment to reach on-premises resources.
 
   Azure provides two solutions for establishing hybrid networking capabilities:
 
@@ -38,16 +44,13 @@ The following questions help you make decisions based on the Azure networking se
 
 - Will you need to inspect and audit outgoing traffic by using on-premises network devices?
 
-  Cloud-native workloads can use Azure Firewall or third-party network virtual appliances for internet traffic. For more information, see [What is Azure Firewall?](/azure/firewall/overview)
+  Cloud-native workloads can use Azure Firewall or third-party network virtual appliances for internet traffic. For more information, see [What is Azure Firewall?](/azure/firewall/overview). Additionally, Microsoft Defender for Endpoint can provide insights for per-session traffic analysis when using Windows 10 Enterprise multi-session devices. For more information, see [Onboard Windows 10 Enterprise multi-session devices in Azure Virtual Desktop](/microsoft-365/security/defender-endpoint/onboard-windows-10-multi-session-device).
 
-  Your security policies might require internet-bound outgoing traffic to pass through centrally managed devices in the on-premises environment. Forced tunneling supports these scenarios, but not all managed services support forced tunneling. For more information, see [Virtual network traffic routing](/azure/virtual-network/virtual-networks-udr-overview). The following services and features support this configuration inside a virtual network:
+  Your security policies might require internet-bound outgoing traffic to pass through centrally managed devices in the on-premises environment. Forced tunneling supports these scenarios, but not all managed services support forced tunneling. For more information, see [Virtual network traffic routing](/azure/virtual-network/virtual-networks-udr-overview).
 
-  - [App Service Environment in Azure App Service](/azure/app-service/environment/intro)
-  - [Azure API Management](/azure/api-management/api-management-key-concepts)
-  - [Azure Kubernetes Service](/azure/aks/intro-kubernetes)
-  - [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview)
-  - [Azure Databricks](/azure/databricks/scenarios/what-is-azure-databricks)
-  - [Azure HDInsight](/azure/hdinsight/)
+  Azure Virtual Desktop supports forced tunneling, as long as all traffic form the virtual machines to the Azure Virtual Desktop management plane doesn't go back on-premises. For more information on Azure Virtual Desktop safe URLs list, see [Azure Virtual Desktop required URL list](/azure/virtual-desktop/safe-url-list#virtual-machines)
+
+  We recommend bypassing proxies for Azure Virtual Desktop traffic. Proxies don't make Azure Virtual Desktop more secure because the traffic is already encrypted. However, some organizations require that all user traffic goes through a proxy server for tracking or packet inspection. For more information on proxy server guidelines for Azure Virtual Desktop, see [Proxy server guidelines for Azure Virtual Desktop](/azure/virtual-desktop/proxy-server-support)
 
 - Do you need to connect multiple virtual networks?
 
@@ -62,7 +65,7 @@ The following questions help you make decisions based on the Azure networking se
 
   Azure DNS is a hosting service for DNS domains. Azure DNS provides name resolution by using the Azure infrastructure. For more information, see [What is Azure DNS?](/azure/dns/dns-overview)
 
-  Your workloads might require name resolution support beyond Azure DNS. If your workloads also require Active Directory services, consider using Azure Active Directory Domain Services to augment Azure DNS capabilities. To add capabilities, deploy custom IaaS virtual machines. For more information, see:
+  Your workloads might require name resolution support beyond Azure DNS. Since Azure Virtual Desktop requires Active Directory services, consider using Azure Active Directory Domain Services to augment Azure DNS capabilities or deploy custom IaaS virtual machines. For more information, see:
 
 - [What is Azure Active Directory Domain Services?](/azure/active-directory-domain-services/overview)
   - [Name resolution for resources in Azure Virtual Network](/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances)
@@ -79,7 +82,7 @@ Azure networking includes products and services that provide different networkin
 | I need to securely use the internet to access Azure Virtual Network through high-performance VPN gateways. | [Azure VPN Gateway](/azure/vpn-gateway/) |
 | I need ultra-fast DNS responses and ultra-high availability for all my domain needs. | [Azure DNS](/azure/dns/) |
 | I need to accelerate the delivery of high-bandwidth content to customers worldwide. This content includes applications, stored content, and streaming video. | [Azure Content Delivery Network (CDN)](/azure/cdn/) |
-| I need to protect my Azure applications from DDoS attacks. | [Azure DDoS protection](/azure/ddos-protection/ddos-protection-overview) |
+| I need to protect my Azure applications from DDoS attacks. | [Azure DDoS Protection](/azure/ddos-protection/ddos-protection-overview) |
 | I need to distribute traffic optimally to services globally across Azure regions, while providing high availability and responsiveness. | [Azure Traffic Manager](/azure/traffic-manager/) and [Azure Front Door](/azure/frontdoor/) |
 | I need to add private network connectivity to access Microsoft cloud services from my corporate networks as if they were on-premises. | [Azure ExpressRoute](/azure/expressroute/) |
 | I want to monitor and diagnose conditions at a network level. | [Azure Network Watcher](/azure/network-watcher/) |
@@ -122,7 +125,7 @@ As part of your networking design process, see these articles:
 
 - [Plan virtual networks](/azure/virtual-network/virtual-network-vnet-plan-design-arm). Learn how to plan for virtual networks based on your isolation, connectivity, and location requirements.
 - [Azure best practices for network security](/azure/security/fundamentals/network-best-practices). Learn about Azure best practices that can help you enhance your network security.
-- [Best practices for networking when you migrate workloads to Azure](/azure/cloud-adoption-framework/migrate/azure-best-practices/migrate-best-practices-networking). Get more guidance about how to implement Azure networking to support workloads.
+- [Best practices for networking when you migrate workloads to Azure](../../migrate/azure-best-practices/migrate-best-practices-networking.md). Get more guidance about how to implement Azure networking to support workloads.
 
 ## Next steps
 

@@ -125,13 +125,13 @@ Security's primary mission is to rapidly respond to the following situations:
   - A new attacker group.
   - A new attack technique that was demonstrated at a conference.
 
-- **Design and implement mitigation:** Lessons learned must be integrated into the technical environment and both security and business processes. Teams should work together to integrate lessons into architecture, policy, and standards. For example, the theft of administrative credentials in a recent internal or public incident might spur the organization to adopt the controls in Microsoft's privilege access. For more information, see [Security rapid modernization plan](https://aka.ms/SPA-RAMP).
+- **Design and implement mitigation:** Lessons learned must be integrated into the technical environment and both security and business processes. Teams should work together to integrate lessons into architecture, policy, and standards. For example, the theft of administrative credentials in a recent internal or public incident might spur the organization to adopt the controls in Microsoft's privilege access. For more information, see [Security rapid modernization plan](/security/compass/security-rapid-modernization-plan).
 
 ## Next steps
 
 As you plan your cloud adoption, focus on integrating security functions together. Integrate security with your larger organization. Pay close attention to the friction that security generates. Be sure the friction is healthy. Healthy friction reduces risk for the organization without creating slowdowns that erode more value than they protect.
 
-- Review [define a security strategy](https://aka.ms/securitystrategy)
-- Review [cloud security functions](https://aka.ms/securityroles)
+- Review [define a security strategy](../strategy/define-security-strategy.md)
+- Review [cloud security functions](../organize/cloud-security.md)
 
 - Review [business resilience](./business-resilience.md), which is the next focus area of security.

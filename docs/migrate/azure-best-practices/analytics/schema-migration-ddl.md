@@ -226,7 +226,7 @@ Temporary tables are commonly used within ETL/ELT processing, where transient in
 
 Azure Synapse Analytics is an MPP database system that achieves performance and scalability by running in parallel across multiple processing nodes.
 
-The ideal processing scenario for running an SQL query in a multinode environment is to balance the workload and give all nodes an equal amount of data to process. This approach also allows you to minimize or eliminate the amount of data that has to be moved between nodes to satisfy the query.
+The ideal processing scenario for running an SQL query in a multi-node environment is to balance the workload and give all nodes an equal amount of data to process. This approach also allows you to minimize or eliminate the amount of data that has to be moved between nodes to satisfy the query.
 
 It can be challenging to achieve the ideal scenario because there are often aggregations in typical analytics queries and multiple joins between several tables, as between fact and dimension tables.
 
