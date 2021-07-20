@@ -14,7 +14,7 @@ ms.custom: internal
 
 # Refactor a Team Foundation Server deployment to Azure DevOps Services
 
-This article shows how the fictional company Contoso refactors its on-premises Visual Studio Team Foundation Server deployment by migrating it to Azure DevOps Services in Azure. The Contoso development team has used Team Foundation Server for team collaboration and source control for the past five years. Now, the team wants to move to a cloud-based solution for dev and test work and for source control. Azure DevOps Services will play a role as the Contoso team moves to an Azure DevOps model and develops new cloud-native applications.
+This article shows how the fictional company Contoso refactors its on-premises Visual Studio Team Foundation Server deployment by migrating it to Azure DevOps Services in Azure. The Contoso development team has used Team Foundation Server for team collaboration and source control for the past five years. Now, the team wants to move to a cloud-based solution for dev/test work and for source control. Azure DevOps Services will play a role as the Contoso team moves to an Azure DevOps model and develops new cloud-native applications.
 
 ## Business drivers
 

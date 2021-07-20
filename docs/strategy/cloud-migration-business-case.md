@@ -53,11 +53,11 @@ Cloud billing models and offers differ from on-premises however, they can create
 
 **Azure Hybrid Benefit:** Reduce the costs of running your workloads in the cloud by using this licensing benefit. You can use your on-premises Software Assurance-enabled Windows Server and SQL Server licenses on Azure. This benefit applies to RedHat and SUSE Linux subscriptions, too. To learn more, see [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/).
 
-**Spot virtual machines:** You can use spot virtual machines with deep discounts for workloads that can be interrupted and don't need to complete within a specific time frame. For example, high-performance computing scenarios, batch processing jobs, visual rendering applications, dev and test environments, including continuous integration and continuous delivery workloads, or large-scale stateless applications. To learn more, see [Spot virtual machines](https://azure.microsoft.com/pricing/spot/).
+**Spot virtual machines:** You can use spot virtual machines with deep discounts for workloads that can be interrupted and don't need to complete within a specific time frame. For example, high-performance computing scenarios, batch processing jobs, visual rendering applications, dev/test environments including continuous integration and continuous delivery workloads, or large-scale stateless applications. To learn more, see [Spot virtual machines](https://azure.microsoft.com/pricing/spot/).
 
 **Reservations:** Receive a discount on your workloads when you reserve your resources in advance. In return, Microsoft passes the savings onto you as discounts of up to 72 percent. For more information, see [Azure reservations](https://azure.microsoft.com/reservations/).
 
-**Azure Dev/Test pricing:** Take advantage of discounted rates for your development and testing, including the Microsoft software charges on Azure Virtual Machines and special dev and test pricing on other services. For more information, see [Azure Dev/Test pricing](https://azure.microsoft.com/pricing/dev-test/).
+**Azure Dev/Test pricing:** Take advantage of discounted rates for your development and testing, including the Microsoft software charges on Azure Virtual Machines and special dev/test pricing on other services. For more information, see [Azure Dev/Test pricing](https://azure.microsoft.com/pricing/dev-test/).
 
 **Extended security updates:** Receive continued support for SQL Server 2008 and SQL Server 2008 R2 in the cloud, which has reached the end of their support lifecycle. You can migrate your on-premises SQL Server instances to Azure Virtual Machines, Azure SQL Database, or stay on-premises and purchase extended security updates. You'll receive free extended security patches by migrating to an Azure Virtual Machine. To learn more, see [Lifecycle FAQ: Extended security updates](/lifecycle/faq/extended-security-updates).
 
@@ -80,7 +80,7 @@ The Calculator creates a match from Azure Services to create a high-level initia
 
 **Solution assessments:** Get assistance from a Microsoft solutions assessment expert or qualified partner as part of a [Solution Assessment engagement](https://www.microsoft.com/solutionassessments/solutionassessments.aspx).
 
-**Azure Migration Program:** Join the  [Azure Migration Program](https://azure.microsoft.com/migration/migration-program/) to get the guidance and expert help you need at every stage of the cloud migration journey. Migrate infrastructure, databases, and apps—and move forward with confidence.
+**Azure Migration and Modernization Program:** Join the  [Azure Migration and Modernization Program](https://azure.microsoft.com/migration/migration-program/) to get the guidance and expert help you need at every stage of the cloud migration journey. Migrate infrastructure, databases, and apps—and move forward with confidence.
 
 ### Learn about Azure with Microsoft Learn
 

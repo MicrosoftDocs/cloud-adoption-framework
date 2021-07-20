@@ -34,6 +34,7 @@ To extend your common data model, use cloud native tools in Azure:
 - **Microsoft Power BI** to create rich visualizations and build business insights from your data models. Build and share reports and dashboards, and provide notifications, to bring the power of your data to your workforce.
 - **Azure Purview** to classify and add metadata to data sources, making it easier for all users to the find the data they need.
 - **Azure Data Factory** to move and transform data for use by various applications and reports.
+- **Azure Synapse Analytics** for a unified data integration, enterprise data warehousing, and big data analytics experience. Use Azure Synapse Analytics to ingest, explore, prepare, manage, and serve data for immediate BI and machine learning needs.
 - Other **big data** sources, such as **Hadoop**, **HDInsight**, and **Databricks**, to allow data scientists to build advanced analytics solutions from existing data.
 
 ## Engage via applications
