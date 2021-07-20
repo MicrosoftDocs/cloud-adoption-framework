@@ -1,38 +1,38 @@
 ---
-title: "Azure Enterprise Scale Analytics management and monitoring for 'data management and analytics'"
-description: Describe how this enterprise-scale scenario can improve management and monitoring of 'data management and analytics'
+title: Management and monitoring for data management and analytics
+description: Learn how this enterprise-scale scenario can improve management and monitoring of data management and analytics.
 author: christophermschmidt
 ms.author: chrschm
-ms.date: 06/02/2021
+ms.date: 07/19/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Management and monitoring for 'data management and analytics' Enterprise-Scale scenario
+# Management and monitoring for data management and analytics
 
-This article builds on a number of considerations and recommendations defined in the Azure landing zone article [enterprise-scale design area for management and monitoring](/azure/cloud-adoption-framework/ready/enterprise-scale/management-and-monitoring). Following the guidance in this article will explore how to build on those principles to operationally maintain an Azure data analytics estate. 
+This article provides guidance about maintaining an Azure data analytics estate. It builds on considerations and recommendations of the Azure landing zones. For more information, see [Management and monitoring](/azure/cloud-adoption-framework/ready/enterprise-scale/management-and-monitoring).
 
-## Design Considerations
+## Design considerations
 
 Here are some design considerations for data analytics on Azure monitoring and management:
 
-* Consider a centralized Azure Log Analytics workspace with Azure Monitor and Application Insights for platform and application layer monitoring
+- Consider a centralized Azure Log Analytics workspace with Azure Monitor and Application Insights for platform and application layer monitoring. See [Create a Log Analytics workspace in the Azure portal](/azure/azure-monitor/logs/quick-create-workspace).
+- Consider if individual data landing zones can query the centralized Log Analytics workspace with appropriate permissions. Each landing zone might also need its own Log Analytics workspace.
+- Configure Azure Databricks to send monitoring information to Log Analytics. See [Monitoring Azure Databricks](/azure/architecture/databricks-monitoring/).
+- Review sample queries. You can use some without modification or build on them for your own queries. See [Using queries in Azure Monitor Log Analytics](/azure/azure-monitor/logs/queries).
 
-* Consider if individual data landing zones can query the centralized Log Analytics workspace with appropriate permissions or if each landing zone will also need its own Log Analytics workspace
+## Design recommendations
 
-* Use the [documentation](/azure/architecture/databricks-monitoring/) to configure Azure Databricks to send telemetry to Log Analytics. 
+When thinking about enterprise-scale analytics, consider these design recommendations:
 
-* Azure Monitor Log Analytics provides some [sample queries](/azure/azure-monitor/logs/queries) that can be used without modification or can be built upon as a starting point for your own queries.
+- Implement threat protection. For more information, see [Azure Sentinel](/azure/sentinel/overview).
+- Monitor all services deployed in the data landing zone to a log analytics workspace.
+- Use Azure Site Recovery to recover virtual machines that support mission-critical workloads. For more information, see [About Site Recovery](/azure/site-recovery/site-recovery-overview).
+- In a data landing zone, all the monitoring should be sent to the enterprise-scale management subscription for analysis.
 
-## Design Recommendations
+## Next steps
 
-When thinking about enterprise scale analytics, here are some design recommendations.
-
-* Implement threat protection with [Azure Sentinel](/azure/sentinel/overview).
-
-* Monitor all services deployed as part of the data landing zone to a log analytics workspace.
-
-* Use [Azure Site Recovery](/azure/site-recovery/site-recovery-overview) to recover virtual machines that support mission-critical workloads.
-
-* In a Data Landing Zone, all the monitoring should be sent to the [Enterprise-Scale Management Subscription](/azure/cloud-adoption-framework/ready/enterprise-scale/management-and-monitoring) for analysis.
+- [Management and monitoring](/azure/cloud-adoption-framework/ready/enterprise-scale/management-and-monitoring)
+- [Create a Log Analytics workspace in the Azure portal](/azure/azure-monitor/logs/quick-create-workspace)
+- [Management and monitoring for data management and analytics](eslz-business-continuity-and-disaster-recovery.md)
