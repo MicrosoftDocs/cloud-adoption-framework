@@ -11,7 +11,7 @@ ms.subservice: overview
 
 # Data sharing agreements in data management and analytics
 
-Enterprise Scale Analytics and AI uses Azure Active Directory (Azure AD) entitlement management to control access and sharing of data. Your enterprise might also require a sharing and contract repository. This repository should be in the Data Management Landing Zone.
+Enterprise-scale for analytics and AI uses Azure Active Directory (Azure AD) entitlement management to control access and sharing of data. Your enterprise might also require a sharing and contract repository. This repository should be in the data management landing zone.
 
 The data usage phase is important to understanding how data is consumed or distributed in your organization. In this phase, ensure accountability and transparency by using data sharing agreements. A data sharing agreement is a formal contract that defines the shared data and how that data can be used.
 
@@ -42,7 +42,7 @@ The data consuming side can also apply the process of capturing metadata in sour
 
 ## Scalability
 
-Data sharing agreements provide insights about the data supply chain. These agreements make service level contracts, controls, data quality rules, and data usage transparent to the organization. Contracts are typically stored in a central code repository or source control. 
+Data sharing agreements provide insights about the data supply chain. These agreements make service level contracts, controls, data quality rules, and data usage transparent to the organization. Contracts are typically stored in a central code repository or source control.
 
 Publishing contracts centrally allows providers and consumers to resolve their data delivery and consumption issues themselves, without the support of a central team. This approach becomes essential once you start moving away from a siloed data-platform approach. It empowers autonomous teams.
 
