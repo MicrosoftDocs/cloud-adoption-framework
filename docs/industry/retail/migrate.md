@@ -7,6 +7,7 @@ ms.date: 05/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
+ms.custom: internal, e2e-retail
 ---
 
 # Migrate common retail industry technologies
