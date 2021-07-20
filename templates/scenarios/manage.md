@@ -6,7 +6,7 @@ ms.author: <<Token-Alias>>
 ms.date: <<Token-Date>>
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: operate
+ms.subservice: manage
 ---
 
 # Manage <<Token-Name>>
