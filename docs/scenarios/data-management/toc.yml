@@ -67,7 +67,7 @@ items:
       href: govern-components.md
     - name: Technology needed for end to end governance
       href: govern-technology.md
-    - name: Mastering Master Data
+    - name: Manage master data
       href: govern-master-data.md
     - name: Data Sharing Agreements
       href: govern-data-sharing-agreements.md  
