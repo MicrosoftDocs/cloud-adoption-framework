@@ -1,5 +1,5 @@
 ---
-title: Resource organization for data management and analytics on Azure
+title: Resource organization for enterprise-scale data management and analytics on Azure
 description: Learn how this enterprise-scale scenario can improve management group and subscription organization of data management and analytics.
 author: BrianBlanchard
 ms.author: brblanch
@@ -13,9 +13,9 @@ ms.subservice: ready
 
 To align with the Ready methodology of the Cloud Adoption Framework, implement a naming and tagging strategy. Your strategy should include business and operational details as components of resource names and metadata tags. For more information, see [Ensure the environment is prepared for the cloud adoption plan](../../ready/index.md).
 
-Enterprise Scale Analytics and AI includes a Data Management Landing Zone subscription. This subscription has the standard services of an [Enterprise Scale framework](/azure/cloud-adoption-framework/ready/enterprise-scale/). It's connected to the Data Landing Zones and connectivity subscriptions by using virtual network peering. For more information on the subscriptions in Enterprise Scale Analytics and AI, see [Data Management Landing Zone](architectures/data-management-landing-zone.md) and [Data Landing Zone](architectures/data-landing-zone.md).
+Enterprise-scale for analytics and AI includes a data management landing zone subscription. This subscription has the standard services of an [Enterprise-scale framework](/azure/cloud-adoption-framework/ready/enterprise-scale/). It's connected to the data landing zones and connectivity subscriptions by using virtual network peering. For more information on the subscriptions in enterprise-scale Analytics and AI, see [data management landing zone](architectures/data-management-landing-zone.md) and [data landing zone](architectures/data-landing-zone.md).
 
-You can further enforce organizational standards based on business rules by using the Azure Policy service. Assign these policies to a scope of resources, such as management groups, subscriptions, resource groups, or individual resources. Enterprise Scale Analytics and AI contains custom policies that apply to the Data Management Landing Zone and Data Landing Zone subscriptions. For more information, see [Policies](eslz-policies.md).
+You can further enforce organizational standards based on business rules by using the Azure Policy service. Assign these policies to a scope of resources, such as management groups, subscriptions, resource groups, or individual resources. Enterprise-scale for analytics and AI contains custom policies that apply to the data management landing zone and data landing zone subscriptions. For more information, see [Policies](eslz-policies.md).
 
 ## Resource naming and tagging conventions
 
