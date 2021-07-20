@@ -24,11 +24,11 @@ Here are some design considerations for data analytics on Azure monitoring and m
 
 ## Design recommendations
 
-When thinking about enterprise scale analytics, consider these design recommendations:
+When thinking about enterprise-scale analytics, consider these design recommendations:
 
 - Implement threat protection. For more information, see [Azure Sentinel](/azure/sentinel/overview).
 - Monitor all services deployed in the data landing zone to a log analytics workspace.
-- Use Azure Site Recovery to recover virtual machines that support mission-critical workloads. See [About Site Recovery](/azure/site-recovery/site-recovery-overview).
+- Use Azure Site Recovery to recover virtual machines that support mission-critical workloads. For more information, see [About Site Recovery](/azure/site-recovery/site-recovery-overview).
 - In a data landing zone, all the monitoring should be sent to the enterprise-scale management subscription for analysis.
 
 ## Next steps
