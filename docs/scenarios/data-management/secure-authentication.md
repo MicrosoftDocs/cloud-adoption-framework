@@ -1,108 +1,105 @@
 ---
-title: "'data management and analytics' authentication"
-description: data management and analytics' authentication
+title: Authentication for data management and analytics
+description: Learn about authentication techniques for data management and analytics, including user, application, and service-to-service authentication.
 author: mboswell
 ms.author: mboswell
-ms.date: 06/24/2021
+ms.date: 07/20/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 ---
 
-# Authentication
+# Authentication for data management and analytics
 
-Authentication is the process of verifying the identity of the user or application that accesses the system. In principle, a single source of identity provider which handles identity management and authentication is preferred. This is known as a directory service which provides the methods for storing directory data and making this data available to network users and administrators. Any data lake solution should look to leverage and integrate with the directory service that's already in use
-as much as possible. For most organizations, Active Directory (AD) is the directory for all identity-related services. It's the primary and centralized database for all service and user accounts.
+Authentication is the process of verifying the identity of the user or application. A single source identity provider is preferred, which handles identity management and authentication. This provider is known as a directory service. It provides methods for storing directory data and making this data available to network users and administrators.
 
-In the cloud, Azure AD is a centralized identify provider and it is the preferred source for identity management. Delegating authentication and authorization to it enables scenarios such as conditional access policies that require a user to be in a specific location, and the use of multi-factor authentication that increases the level of access security. All data lake data store services must be configured with Azure Active Directory (Azure AD or AAD) integration when possible.
+Any data lake solution should use and integrate with the directory service that's already in use. For most organizations, Active Directory is the directory service for all identity-related services. It's the primary and centralized database for all service and user accounts.
 
-For data services which do not support Azure AD, the access key or token may be used for authentication given the client stores the access key in a key management store such as Azure Key Vault.
+In the cloud, Azure Active Directory (Azure AD) is a centralized identity provider and the preferred source for identity management. Delegating authentication and authorization to Azure AD enables scenarios such as conditional access policies that require a user to be in a specific location. It supports multifactor authentication to increase the level of access security. Configure data lake data store services with Azure AD integration when possible.
 
-Authentication Scenarios for the construction set are:
+For data services that don't support Azure AD, use access key or token for authentication. The client should store the access key in a key management store such as Azure Key Vault.
 
-1. User authentication
-1. Application and Service-to-Service Authentication
+Authentication scenarios for the construction set are:
 
-## User Authentication
+- User authentication
+- Application and service-to-service authentication
 
-Any users who connect to a data service or resource must be required to present a credential to prove that they are who they claim they are before they can gain access to the service or resource. Authentication also allows the service to know the identity of the users so that it can dictates what users can see and do after their identities are verified.
+## User authentication
 
-Azure Data Lake Storage Gen 2 (ADLS Gen 2) as well as Azure SQL Database (SQL DB) and Azure Synapse do support Azure AD integration to require users accessing data to present their own credentials to Azure AD. The interactive user authentication mode requires users to interactively provide credentials on the popup logon user interface.
+Users who connect to a data service or resource must present a credential. This credential proves that users are who they claim. Then they can access the service or resource. Authentication also allows the service to know the identity of the users. The service decides what a user can see and do after the identity is verified.
 
->[!IMPORTANT]
->Do not hardcode user credentials into an application for authentication purpose.
+Azure Data Lake Storage Gen 2, Azure SQL Database, and Azure Synapse support Azure AD integration. The interactive user authentication mode requires users to provide credentials in a dialog box.
 
-## Application and Service-to-Service Authentication
+> [!IMPORTANT]
+> Do not hard-code user credentials into an application for authentication purpose.
 
-This is the authentication flow when requests are not associated with a specific user, or there is no user available to enter credentials.
+## Application and service-to-service authentication
 
-### Service-to-Service
+These requests aren't associated with a specific user or there's no user available to enter credentials.
 
-Even in the scenario which a service is accessing another service directly without human interactions, the accessor service must still present its valid identity to the service being accessed to prove that the accessor service is the real one and the service being accessed can use this identity to dictate what the accessor service and do.
+### Service-to-service authentication
 
-For service-to-service authentication, [Managed identities](/azure/active-directory/managed-identities-azure-resources/overview) is the preferred method of authenticating the Azure services.
+Even if a service accesses another service without human interactions, the service must present a valid identity. This identity proves that the service is real. The accessed service can use the identity to decide what the service can do.
 
-The managed identities for Azure resources feature allow for authentication to any service that supports Azure AD authentication
-without any explicit credentials. Authentication process for managed identities is very implicit because it's between Azure services only.
+For service-to-service authentication, the preferred method for authenticating Azure services is managed identities. Managed identities for Azure resources allow for authentication to any service that supports Azure AD authentication without any explicit credentials. For more information, see [What are managed identities for Azure resources](/azure/active-directory/managed-identities-azure-resources/overview).
 
-Managed identities are, in fact, service principals *(also described later in this section)* which are locked to only be used with Azure resources. For example, a managed identity can be created directly for an Azure Data Factory instance. This automatically managed identity is an object registered to Azure AD and it represents this specific data factory. This identity can then be used to authenticate to any service such as Data Lake Storage without any credential in the code. Azure
-takes care of rolling the credentials that are used by the service instance. Later, this managed identity can be used to grant authorization to Azure service resources such as a folder in the Azure Data Lake Storage. When this specific data factory instance is deleted, Azure automatically cleans up the identity in Azure AD; There will be no existence of the identity in Azure AD to be worried about.
+Managed identities are service principals, which can only be used with Azure resources. For example, a managed identity can be created directly for an Azure Data Factory instance. This managed identity is an object registered to Azure AD. It represents this data factory. This identity can then be used to authenticate to any service, such as Data Lake Storage, without any credential in the code. Azure takes care of the credentials that are used by the service instance. The identity can grant authorization to Azure service resources, such as a folder in the Azure Data Lake Storage. When you delete this data factory instance, Azure cleans up the identity in Azure AD.
 
 #### Benefits of using managed identities
 
-Managed identities provide the following benefit and protection and they should be used to authenticate an Azure service to another Azure service
-or resource.
+Managed identities should be used to authenticate an Azure service to another Azure service or resource. They provide the following benefits:
 
-1. A Managed identity represents the specific service for which it is created. It does not represent an interactive user. Neither is it meant to be used by an interactive user.
-1. Managed identity credentials are maintained, managed and stored within Azure AD. There's no explicit password to be maintained by a user.
-1. With managed identities, explicit passwords are not needed in the client service. Using the data factory example mentioned earlier, when a data factory's linked service is configured to use data factory's managed identity to authenticate to ADLS Gen 2 storage account, there is no need to specify a password or a client secret. In fact, there is no password or client secret to be specified anyway.
-1. The system-assigned managed identity is deleted when the service instance is deleted.
+- A managed identity represents the service for which it's created. It doesn't represent an interactive user.
+- Managed identity credentials are maintained, managed, and stored in Azure AD. There's no password for a user to keep.
+- With managed identities, the client services don't use passwords.
+- The system-assigned managed identity is deleted when the service instance is deleted.
 
-The above benefits mean the credential is more protected and security comprise is less likely.
+These benefits mean that the credential is better protected and security compromise is less likely.
 
-### Application-to-Service
+### Application-to-service authentication
 
-In addition to human users accessing an Azure service, an Azure service accessing another Azure service, another access is scenario is an application such as a mobile Web application accessing an Azure service. Regardless of who is accessing an Azure service, the accessor must provide its identity and that identity must be verified before it can be allowed access.
+Another access scenario is an application, such as a mobile web application, accessing an Azure service. Whoever is accessing an Azure service, the accessor must provide its identity and that identity must be verified.
 
-In the previous section which discusses about service-to-service authentication, the scenario requires that Azure can support the managed identity for the accessor service, for the accessor service which doesn't have managed identity, it can be treated as if it's an application and use an Azure Service Principal that is described in this section as the identity to access another Azure service.
+An Azure service principal is the alternative for applications and services that don't support managed identities to authenticate to Azure resources. An Azure service principal is an identity created for use with applications, hosted services, and automated tools to access Azure resources. This access is restricted by the roles assigned to the service principal. For security reasons, we recommend using service principals with automated tools or applications rather than allowing them to sign in with a user identity. For more information, see [Application and service principal objects in Azure Active Directory](/azure/active-directory/develop/app-objects-and-service-principals).
 
-[An Azure Service Principal](/azure/active-directory/develop/app-objects-and-service-principals)
-is the alternative for application and services which do not support managed identities to authenticate to Azure resources. An Azure service principal is an identity created for use with applications, hosted services, and automated tools to access Azure resources. This access is restricted by the roles assigned to the service principal; thus, allowing control over which resources can be accessed and at which level. For security reasons, it's always recommended to use service principals with automated tools or application rather than allowing them to log in with a user identity.
+> [!NOTE]
+> Both managed identities and service principals are created and maintained only in Azure AD.
 
-**Note:** Both managed identities and service principals are created and maintain in Azure AD only.
+### Difference between managed identity and service principal
 
-### Difference Between Managed Identity and Service Principal
+| Service principal | Managed identity |
+|-------------------|------------------|
+| A security identity manually created in Azure AD for use by applications, services, and tools to access specific Azure resources. | A special type of service principal. It's an automatic identity that is created when an Azure service is created. |
+| Can be used by any application or service. It isn't tied to a specific Azure service. | Represents an Azure service instance itself. It cannot be used to represent other Azure services. |
+| Has an independent lifecycle. You must delete it explicitly. | Deletes automatically when the Azure service instance is deleted. |
+| Password-based or certificate-based authentication. | No explicit password to be provided for authentication. |
 
-| Service Principal                                                                                                               | Managed Identity                                                                                                                         |
-|---------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| A security identity manually created in Azure AD for use by application, services and tools to access specific Azure Resources. | A managed identity is a special type of service principal. It is an automatic identity that gets created when Azure service is created.  |
-| This identity can be used by any application, services. It does not tie to a specific Azure service.                            | This identity represents an Azure service instance itself and it cannot be used to represent other Azure services.                       |
-| This identity has an independent lifecycle. It must be deleted explicitly.                                                      | When the Azure service instance is deleted, the identity is deleted.                                                                     |
-| Password-based (secret-based) or certificate-based authentication                                                               | No explicit password to be provided for authentication.                                                                                  |
+## Database authentication and permissions
 
-## Databases Authentication and Permissions
-
-Polyglot storage such as PostgreSQL, MySQL, Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics are likely to be used in the Enterprise Scale Analytic construction set. They could be used by Data Integrations to store their Read Data Stores or by Data Products.
+Th enterprise scale analytic construction set probably contains polyglot storage. Examples include PostgreSQL, MySQL, Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics. Data integrations could use them to store their read data stores. Data products could use polyglot storage.
 
 - [Use Azure Active Directory for authentication with PostgreSQL](/azure/postgresql/howto-configure-sign-in-aad-authentication)
 - [Use Azure Active Directory authentication with Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics](/azure/azure-sql/database/authentication-aad-overview)
 - [Use Azure Active Directory for authenticating with MySQL](/azure/mysql/concepts-azure-ad-authentication)
 
-It is recommended that Azure AD groups are used to secure database objects instead of individual Azure AD user accounts. These AD Azure Groups would be used to authenticate users and protects database objects. Similar to the data lake pattern, you could use your Data Integration or Data Products onboarding to create these groups within you Azure AD service.
+We recommend that you use Azure AD groups to secure database objects instead of individual Azure AD user accounts. Use these AD Azure groups to authenticate users and protects database objects. Similar to the data lake pattern, you could use your data integration or data products onboarding to create these groups.
 
->[!NOTE]
->Storing data inside an Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics Pools are one of the options for Data Integrations and Data Products to store [Sensitive Data](secure-data-privacy.md#sensitive-data).
+> [!NOTE]
+> Data integrations and data products can store sensitive data in Azure SQL Database, SQL Managed Instance, or Azure Synapse Analytics pools. For more information, see [Sensitive Data](secure-data-privacy.md#sensitive-data).
 
-## Azure Data Lake Security with Enterprise Scale Analytics
+## Azure Data Lake security with enterprise scale analytics
 
-To control access to data in the data lake (ADLS Gen 2), we recommend using access control list (ACL) at the level of files and folders. ADLS Gen 2 also adopts POSIX-like access control list model. POSIX (Portable Operating System Interface) is the family of standards for operating systems, one of which defines a simple but yet powerful permission structure for accessing files and folders. POSIX has been adopted widely in network file shares and Unix computers.
+To control access to data in the data lake, we recommend using access control list (ACL) at the level of files and folders. Azure Data Lake also adopts a Portable Operating System Interface (POSIX)-like access control list model. POSIX is the family of standards for operating systems. One standard defines a simple but yet powerful permission structure for accessing files and folders. POSIX has been adopted widely in network file shares and Unix computers.
 
-Similar to RBAC general practices, the following rules should apply to ACL
+Similar to Azure RBAC general practices, the following rules should apply to ACL:
 
 - **Manage access using groups.** Assign access to Azure AD groups and manage membership of groups for on-going access management.
-- **Least privilege.** In most cases, users should have only Read permission to the folders and files they need in the data lake while a managed identity or service principal such as the one used by Azure Data Factory will have Read, Write and Execute permissions. Data users should not have access to the storage account container.
-
+- **Least privilege.** In most cases, users should have only read permission to the folders and files they need in the data lake. A managed identity or service principal, such as the one used by Azure Data Factory, has read, write, and execute permissions. Data users shouldn't have access to the storage account container.
 - **Align with data partitioning scheme.** ACL and data partition design must align to ensure effective data access control. See [Data Lake Partitioning](data-lake-zones.md#data-lake-partitioning).
+
+## Next steps
+
+[Authorization for data management and analytics](secure-analytics-role-based-access-control.md)
 
 <!-- ### Enterprise Scale Analytics and AI authentication guidelines (to be updated)
 
