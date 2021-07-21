@@ -6,7 +6,7 @@ ms.author: janet
 ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: overview
+ms.subservice: general
 ms.custom: internal
 ---
 

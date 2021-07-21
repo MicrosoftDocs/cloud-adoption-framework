@@ -19,7 +19,7 @@ Azure Virtual Desktop is a comprehensive desktop and application virtualization 
 
 | Migration options | Outcome |
 |--- | --- |
-| [Azure Migrate](/azure/migrate/migrate-services-overview) | Assess and migrate on-premises RDS environments. <br><br> Run workloads by using Azure Azure Virtual Desktop. <br><br> Manage Azure Virtual Desktop with [Azure Virtual Desktop management UX](https://github.com/Azure/RDS-Templates/tree/master/wvd-templates/wvd-management-ux). |
+| [Azure Migrate](/azure/migrate/migrate-services-overview) | Assess and migrate on-premises RDS environments. <br><br> Run workloads via Azure Virtual Desktop. <br><br> Manage Azure Virtual Desktop with [Azure Virtual Desktop management UX](https://github.com/Azure/RDS-Templates/tree/master/wvd-templates/wvd-management-ux). |
 
 > [!NOTE]
 > This article focuses on using Azure Virtual Desktop to move an on-premises RDS environment to Azure.
@@ -45,9 +45,9 @@ With the business drivers in mind, Contoso has pinned down goals for this migrat
 
 These goals support the decision to use Azure Virtual Desktop and validate it as the best migration method for Contoso.
 
-## Benefits of running Azure Virtual Desktop in Azure
+## Benefits of running Azure Virtual Desktop
 
-Using Azure Virtual Desktop in Azure, Contoso can now seamlessly run, manage, and scale its VDI solution quickly and easily. The company also can provide an optimized multi-session Windows 10 environment to its users.
+Using Azure Virtual Desktop, Contoso can now seamlessly run, manage, and scale its VDI solution quickly and easily. The company also can provide an optimized multi-session Windows 10 environment to its users.
 
 Contoso will capitalize on existing Microsoft 365 licenses while using the scale, performance, security, and innovation of Azure.
 
@@ -68,7 +68,7 @@ RDS is deployed to an on-premises datacenter. Microsoft 365 is licensed and in u
 ### Proposed architecture
 
 - Sync Active Directory or Azure Active Directory Domain Services.
-- Deploy Azure Virtual Desktop to Azure.
+- Deploy Azure Virtual Desktop.
 - Migrate on-premises RDS servers to Azure.
 - Convert user profile disks (UPDs) to FSLogix profile containers.
 
@@ -86,7 +86,7 @@ Contoso evaluates the proposed design by putting together a list of pros and con
 
 ## Migration process
 
-Contoso will move VMs to Azure Virtual Desktop in Azure by using the Lakeside assessment tool and Azure Migrate. Contoso will need to:
+Contoso will move VMs to Azure Virtual Desktop by using the Lakeside assessment tool and Azure Migrate. Contoso will need to:
 
 - Run the assessment tool against its on-premises RDS infrastructure to establish the scale of the Azure Virtual Desktop deployment in Azure.
 - Migrate to Azure Virtual Desktop via either Windows 10 Enterprise multi-session or persistent virtual machines.
@@ -272,7 +272,7 @@ The next step in the migration process for Contoso is to migrate its persistent 
     > [!NOTE]
     > Contoso can also automate this process by using `msiexec` commands and passing in the registration token as a variable.
 
-1. As the last step before the final migration, Contoso selects the **Users** item in the Azure Azure Virtual Desktop settings to map the servers to their respective users and groups.
+1. As the last step before the final migration, Contoso selects the **Users** item in the Azure Virtual Desktop settings to map the servers to their respective users and groups.
 
    ![Screenshot that shows assigning Azure Virtual Desktop resources to users and groups.](./media/contoso-migration-rds-to-wvd/wvd-persistent-user-mapping.png)
    *Figure 18: The last step prior to the final migration.*
