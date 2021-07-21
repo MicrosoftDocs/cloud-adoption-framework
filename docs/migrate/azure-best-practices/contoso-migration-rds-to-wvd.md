@@ -19,7 +19,7 @@ Azure Virtual Desktop is a comprehensive desktop and application virtualization 
 
 | Migration options | Outcome |
 |--- | --- |
-| [Azure Migrate](/azure/migrate/migrate-services-overview) | Assess and migrate on-premises RDS environments. <br><br> Run workloads by using Azure Azure Virtual Desktop. <br><br> Manage Azure Virtual Desktop with [Azure Virtual Desktop management UX](https://github.com/Azure/RDS-Templates/tree/master/wvd-templates/wvd-management-ux). |
+| [Azure Migrate](/azure/migrate/migrate-services-overview) | Assess and migrate on-premises RDS environments. <br><br> Run workloads via Azure Virtual Desktop. <br><br> Manage Azure Virtual Desktop with [Azure Virtual Desktop management UX](https://github.com/Azure/RDS-Templates/tree/master/wvd-templates/wvd-management-ux). |
 
 > [!NOTE]
 > This article focuses on using Azure Virtual Desktop to move an on-premises RDS environment to Azure.
@@ -272,7 +272,7 @@ The next step in the migration process for Contoso is to migrate its persistent 
     > [!NOTE]
     > Contoso can also automate this process by using `msiexec` commands and passing in the registration token as a variable.
 
-1. As the last step before the final migration, Contoso selects the **Users** item in the Azure Azure Virtual Desktop settings to map the servers to their respective users and groups.
+1. As the last step before the final migration, Contoso selects the **Users** item in the Azure Virtual Desktop settings to map the servers to their respective users and groups.
 
    ![Screenshot that shows assigning Azure Virtual Desktop resources to users and groups.](./media/contoso-migration-rds-to-wvd/wvd-persistent-user-mapping.png)
    *Figure 18: The last step prior to the final migration.*
