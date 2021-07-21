@@ -204,7 +204,7 @@ The new [migration scenarios overview page](../scenarios/index.md) builds on the
 
 | Article | Description |
 |--|--|
-| [Azure Virtual Desktop](../scenarios/wvd/index.md) | This scenario enables productivity boosts and accelerates the migration of various workloads to support the end-user experience. |
+| [Virtual desktops](../scenarios/wvd/index.md) | This scenario enables productivity boosts and accelerates the migration of various workloads to support the end-user experience. |
 | [Azure Stack](../scenarios/azure-stack/index.md) | Learn about deploying Azure in your datacenter using Azure Stack Hub. |
 
 **Analytics in the Cloud Adoption Framework:**
