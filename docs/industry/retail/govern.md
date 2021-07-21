@@ -7,6 +7,7 @@ ms.date: 05/28/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
+ms.custom: internal, e2e-retail
 ---
 
 # Governance for the retail industry

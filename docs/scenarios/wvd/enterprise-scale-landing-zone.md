@@ -15,7 +15,7 @@ Enterprise-scale construction sets provide you with a specific architectural app
 
 ## Getting started with the Azure Virtual Desktop construction set
 
-Not everyone adopts Azure Virtual Desktop on Azure in the same way. The Cloud Adoption Framework for Azure enterprise-scale construction set architecture varies between organizations. The technical considerations and design recommendations of the construction set might result in trade-offs based on your organization's needs. Some variation happens, but if you follow the core recommendations, the resulting architecture prepares your organization for sustainable scale. The construction set is modular by design so that you can customize environmental variables. The construction set approach to landing zones includes three sets of assets to support cloud teams.
+Not everyone adopts Azure Virtual Desktop in the same way. The Cloud Adoption Framework for Azure enterprise-scale construction set architecture varies between organizations. The technical considerations and design recommendations of the construction set might result in trade-offs based on your organization's needs. Some variation happens, but if you follow the core recommendations, the resulting architecture prepares your organization for sustainable scale. The construction set is modular by design so that you can customize environmental variables. The construction set approach to landing zones includes three sets of assets to support cloud teams.
 
 ### Design guidelines
 
@@ -32,7 +32,7 @@ Learn about guidelines that drive the design of the Cloud Adoption Framework for
 
 The following image shows a conceptual reference architecture that demonstrates design areas and best practices.
 
-[![A diagram of a reference architecture for an Azure Virtual Desktop environment](./media/azure-virtual-desktop-architecture.png).](./media/azure-virtual-desktop-architecture.png#lightbox)
+[![A diagram of a reference architecture for an Azure Virtual Desktop environment.](./media/azure-virtual-desktop-architecture.png)](./media/azure-virtual-desktop-architecture.png#lightbox)
 
 ### Implementation with Azure Resource Manager (ARM) templates for Remote Desktop Services
 

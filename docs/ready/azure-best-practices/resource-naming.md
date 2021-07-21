@@ -75,7 +75,7 @@ The following section provides some example names for common Azure resource type
 | **Subscription** | Account / enterprise agreement | *\<business&nbsp;unit>-\<subscription&nbsp;type>-\<###>* <br><br> <li> `mktg-prod-001` <li> `corp-shared-001` <li> `fin-client-001` |
 | **Resource group** | Subscription | *rg-\<app&nbsp;or&nbsp;service&nbsp;name>-<subscription&nbsp;type>-\<###>* <br><br> <li> `rg-mktgsharepoint-prod-001` <li> `rg-acctlookupsvc-shared-001` <li> `rg-ad-dir-services-shared-001` |
 | **API management service instance** | Global | *apim-\<app&nbsp;or&nbsp;service&nbsp;name>* <br><br> `apim-navigator-prod` |
-| **Managed identity** | Resource group | *id-\<app&nbsp;or&nbsp;service&nbsp;name>* <br><br> <li> `id-appcn-keda-prod-eastus2-001` |
+| **Managed identity** | Resource group | *id-\<app&nbsp;or&nbsp;service&nbsp;name>-\<environment type>-\<region name>-\<###>* <br><br> <li> `id-appcn-keda-prod-eastus2-001` |
 
 ## Example names: Networking
 
@@ -140,7 +140,7 @@ The following section provides some example names for common Azure resource type
 
 | Asset type | Scope | Format and examples |
 |--|--|--|
-| **Azure Data Factory** | Global | *adf-\<app name>\<environment>* <br><br> <li> `adf-navigator-prod` <li> `adf-emissions-dev` |
+| **Azure Data Factory** | Global | *adf-\<app name>-\<environment>* <br><br> <li> `adf-navigator-prod` <li> `adf-emissions-dev` |
 | **Azure Stream Analytics** | Resource group | *asa-\<app name>-\<environment>* <br><br> <li> `asa-navigator-prod` <li> `asa-emissions-dev` |
 | **Data Lake Analytics account** | Global | *dla\<app name>\<environment>* <br><br> <li> `dlanavigatorprod` <li> `dlanavigatorprod` |
 | **Data Lake Storage account** | Global | *dls\<app name>\<environment>* <br><br> <li> `dlsnavigatorprod` <li> `dlsemissionsdev` |

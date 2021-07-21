@@ -19,7 +19,7 @@ Azure Virtual Desktop is a comprehensive desktop and application virtualization 
 
 | Migration options | Outcome |
 |--- | --- |
-| [Azure Migrate](/azure/migrate/migrate-services-overview) | Assess and migrate on-premises RDS environments. <br><br> Run workloads by using Azure Virtual Desktop. <br><br> Manage Azure Virtual Desktop with [Azure Virtual Desktop management UX](https://github.com/Azure/RDS-Templates/tree/master/wvd-templates/wvd-management-ux). |
+| [Azure Migrate](/azure/migrate/migrate-services-overview) | Assess and migrate on-premises RDS environments. <br><br> Run workloads in an Azure Virtual Desktop environment. <br><br> Manage Azure Virtual Desktop with [Azure Virtual Desktop management UX](https://github.com/Azure/RDS-Templates/tree/master/wvd-templates/wvd-management-ux). |
 
 > [!NOTE]
 > This article focuses on using Azure Virtual Desktop to move an on-premises RDS environment to Azure.
@@ -186,7 +186,7 @@ Using the Azure portal, Contoso will create an Azure Virtual Desktop environment
 1. Contoso selects the correct subscription, and creates a new Azure Virtual Desktop host pool.
 
    ![Screenshot of provisioning an Azure Virtual Desktop host pool.](./media/contoso-migration-rds-to-wvd/wvd-new-host-pool.png)
-  *Figure 11: A new Windows Virtual Desktop host pool.*
+  *Figure 11: A new Azure Virtual Desktop host pool.*
 
 1. Specify the subscription, resource group, and region. Then select the name for the host pool, desktop type, and default desktop users. Desktop type is set to **Pooled** because Contoso is starting with a new shared environment for some of its users. Default desktop users can be left blank. Move on to configure the virtual machines.
 
@@ -260,7 +260,7 @@ The next step in the migration process for Contoso is to migrate its persistent 
    *Figure 17: Prerequisites for replicating to Azure.*
 
 1. The replication of the hosts into Azure Blob Storage is now started. Contoso can continue to let the replication occur until it's ready to test the VMs and then migrate them into production.
-   - As machines start running in Azure, Contoso makes sure to install the [Azure Virtual Desktop VM agent](https://aka.ms/wvdvmagent) on each machine.
+   - As machines start running in Azure, Contoso installs the [Azure Virtual Desktop VM agent](https://aka.ms/wvdvmagent) on each machine.
    - As a part of the installation, enter the registration token for the Azure Virtual Desktop environment to associate the server with the correct environment.
 
 1. The registration token can be obtained by using the following commands:

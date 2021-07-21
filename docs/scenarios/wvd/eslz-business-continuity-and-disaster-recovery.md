@@ -1,6 +1,6 @@
 ---
 title: BCDR for Azure Virtual Desktop
-description: Learn how this design area can improve business continuity and disaster recovery (BCDR) of the Azure Virtual Desktop.
+description: Learn how this design area can improve business continuity and disaster recovery (BCDR) for an Azure Virtual Desktop environment.
 author: igorpag
 ms.author: brblanch
 ms.date: 05/18/2021
@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Business continuity and disaster recovery (BCDR) considerations for Azure Virtual Desktop
 
-Azure Virtual Desktop is a Microsoft managed service that provides a control plane for your desktop virtualization environment. The service is free of charge and Microsoft doesn't offer a financially backed [service-level agreement (SLA)](https://azure.microsoft.com/support/legal/sla/virtual-desktop). Despite having no SLA, we try to achieve at least 99.9% availability for the Azure Virtual Desktop service URLs.
+Azure Virtual Desktop is a Microsoft-managed service that provides a control plane for your desktop virtualization environment. The service is free of charge and Microsoft doesn't offer a financially backed [service-level agreement (SLA)](https://azure.microsoft.com/support/legal/sla/virtual-desktop). Despite having no SLA, we try to achieve at least 99.9% availability for the Azure Virtual Desktop service URLs.
 
 > [!NOTE]
 > The availability of the session host virtual machines in your subscription is covered by the [Azure Virtual Machines SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines).
@@ -41,7 +41,7 @@ An *active-active* approach:
 With *active-passive*:
 
 - [Azure Site Recovery](/azure/site-recovery/site-recovery-overview) or a secondary host pool (hot stand-by) can be used to maintain a backup environment.
-- [Azure Site Recovery](/azure/site-recovery/site-recovery-overview) is supported for both *Personal* (dedicated) and *Pooled* (shared) host pool types, and lets you maintain a single host pool entity.
+- Azure Site Recovery is supported for both *personal* (dedicated) and *pooled* (shared) host pool types, and lets you maintain a single host pool entity.
 - You can create a new host pool in the failover region while keeping all of the resources turned off. For this method, set up new application groups in the failover region and assign users to them. You can then use a recovery plan in Azure Site Recovery to turn on host pools and create an orchestrated process.
 
 ### Host pool resiliency
@@ -60,9 +60,7 @@ For host pool VM resiliency:
      > [!NOTE]
      > An Azure Resource Manager (ARM) template must be used to specify zones. This option isn't available yet in the Azure portal.
 
-### Critical applications and multiple host pools
-
-Before approaching Azure Virtual Desktop BCDR planning and design, it's important to consider which applications consumed through Azure Virtual Desktop are critical. You might want to separate them from non-critical applications so you can provision multiple host pools with a different disaster recovery approaches and capabilities.
+Before approaching BCDR planning and design for Azure Virtual Desktop, consider which applications accessed via Azure Virtual Desktop are critical. You might want to separate them from non-critical applications so you can provision multiple host pools with a different disaster recovery approaches and capabilities.
 
 ### Optimal storage for profile and office containers
 
@@ -76,7 +74,7 @@ Azure offers multiple storage solutions that you can use to store your FSLogix p
 
 #### User data storage replication and resiliency
 
-In case of an outage, it's possible to reduce the time taken to back up, restore, and replicate data by:
+In case of an outage, you can reduce the time required to back up, restore, and replicate data by:
 
 - Separating the user profile and office container disks. FSLogix offers the option to place disks in separate storage locations.
 - In normal usage, the office disk can consume many more gigabytes than the profile disk and the office disk isn't required to be resilient. It's a cache of data and can be downloaded again from Microsoft 365 online services.
@@ -118,8 +116,7 @@ The following are best practices for your design:
 
 - For the Azure Virtual Desktop host pool compute deployment model BCDR, use the *active-passive* option if it satisfies your requirements for recovery point objective (RPO) and recovery time objective (RTO).
 - Azure Site Recovery is recommended for personal (*dedicated*) host pools. The target region should be aligned with the disaster recovery of the storage backend used by FSLogix.
-  - Azure Site Recovery is also supported for pooled (*shared*) host pools. This option can be evaluated and compared to the deployment of another host pool in the secondary disaster recovery region.
-
+- Azure Site Recovery is also supported for pooled (*shared*) host pools. This option can be evaluated and compared to the deployment of another host pool in the secondary disaster recovery region.
 - When maximum resiliency of the host pool is required in a single region, use *Availability Zones*. Verify the *Availability Zones* feature availability in the specific region, and availability of the specific VM SKU inside all the zones.
 
 We recommend storing FSLogix user profile and office containers on Azure Files or Azure NetApp Files for most scenarios.

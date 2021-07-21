@@ -29,7 +29,7 @@ Automation doesn't have to mean integration with DevOps, but there are many adva
 
 ### Pooled vs. personal
 
-As organizations scale out their environment, most of the workload falls under a *pooled* configuration instead of *personal*. Personal is often more expensive to run than a pooled configuration but is suitable for specific workloads like developers, since developers usually need elevated permissions. If you run host pools in personal mode, try to maintain the machines like you maintain your physical desktops. This method reduces the amount of tooling in your environment.
+As organizations scale out their environment, most of the workload falls under a *pooled* configuration rather than a *personal* configuration. A personal configuration is often more expensive to run than a pooled configuration, but it's suitable for specific workload users like developers, since developers usually require elevated permissions. If you run host pools in personal mode, try to maintain the machines like you maintain your physical desktops. This method reduces the amount of tooling required in your environment.
 
 Since pooled is the most popular configuration for desktop virtualization, it's the focus of this article.
 
@@ -37,7 +37,7 @@ You'll update pooled environments differently than in a traditional environment.
 
 ### Image creation
 
-When scaling up your Azure Virtual Desktop environment, your host pools are created from a gold image which ideally, you create using an automated process.
+When scaling up your Azure Virtual Desktop environment, your host pools are created from a gold image, which is ideally created using an automated process.
 
 Another option is to use a build checklist. In large environments, this process should only be part of the initial dev/test setup. The more you automate your gold image creation, the more secure you'll be in the accuracy of your build and environment stability.
 
@@ -51,7 +51,7 @@ Applications are made available to your users in two ways: installed in the imag
 
 - Applications installed in the image should be universal to your users. For example, security products and the Microsoft 365 suite. These applications should be a part of your automated image creation process.
 
-- Applications dynamically delivered per user should include everything else that requires a more flexible approach. For example, applications that are restricted to a specific group or aren't compatible with other applications.
+- Applications dynamically delivered per user should include everything else that requires a more flexible approach, such as applications that are restricted to a specific group or aren't compatible with other applications.
 
 ### Language deployment
 
@@ -59,7 +59,7 @@ As Azure Virtual Desktop environments start to scale out, your images may need t
 
 Things to note:
 
-- If you're using Windows 10 Enterprise multi-session, this cannot be built using a different language so in this instance, you must adapt the provided gallery image.
+- If you're using Windows 10 Enterprise multi-session, this cannot be built using a different language. In this case, you must adapt the provided gallery image.
 - To adapt the existing en-US gallery image, install the additional languages before you install other applications.
 
 ### Image location
@@ -112,7 +112,7 @@ When working with Packer in the deployment pipeline:
 - We recommend creating a validation stage in the pipeline to validate that the build works.
 - After validation, clone the validation stage and set the deployment mode to **Incremental**.
 
-### Variables and Key Vault
+### Variables and Azure Key Vault
 
 - When working in Azure Pipelines, use variable groups.
 - Variable groups let you have repeatable parameters in your pipelines, such as secrets and file locations.
@@ -151,7 +151,7 @@ For more information on installing language packs in Windows 10 Enterprise multi
 
 ### Create Azure Virtual Desktop host pools using ARM templates from images in shared image galleries
 
-Using ARM templates allows for an infrastructure as code (IaC) approach to the deployment and customization of Azure Virtual Desktop resources. They should be used when possible, to ensure consistency in deployments. ARM templates can be used to deploy Azure Virtual Desktop resources as part of a DevOps pipeline task. You can also use them when using the Azure portal, Azure PowerShell, or Azure CLI.
+Using ARM templates allows for an infrastructure as code (IaC) approach to the deployment and customization of Azure Virtual Desktop resources. They should be used whenever possible to ensure consistency in deployments. ARM templates can be used to deploy Azure Virtual Desktop resources as part of a DevOps pipeline task. You can also use them when using the Azure portal, Azure PowerShell, or Azure CLI.
 
 The example above shows one method of image automation using Azure DevOps and a Packer continuous integration and continuous delivery (CI/CD) pipeline. Part of the underlying technology in the process is an ARM template.
 
