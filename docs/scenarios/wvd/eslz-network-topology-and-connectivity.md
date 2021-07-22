@@ -1,6 +1,6 @@
 ---
-title: Networking for Windows Virtual Desktop at enterprise scale
-description: Use the Cloud Adoption Framework for Azure to identify networking capabilities that your landing zone needs to support Azure Windows Virtual Desktop workloads.
+title: Networking for Azure Virtual Desktop at enterprise scale
+description: Use the Cloud Adoption Framework for Azure to identify networking capabilities that your landing zone needs to support Azure Virtual Desktop workloads.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/07/2021
@@ -9,11 +9,11 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Network topology and connectivity for Windows Virtual Desktop at enterprise scale
+# Network topology and connectivity for Azure Virtual Desktop at enterprise scale
 
 ## Review network options
 
-Designing and implementing Windows Virtual Desktop Azure networking capabilities is critical for your Windows Virtual Desktop landing zone. Azure networking products and services support a wide variety of networking capabilities. How you structure these services and the networking architectures you choose depends on your organization's workload, governance, and connectivity requirements.
+Designing and implementing Azure Virtual Desktop Azure networking capabilities is critical for your Azure Virtual Desktop landing zone. Azure networking products and services support a wide variety of networking capabilities. How you structure these services and the networking architectures you choose depends on your organization's workload, governance, and connectivity requirements.
 
 ## Identify workload networking requirements
 
@@ -27,7 +27,7 @@ The following questions help you make decisions based on the Azure networking se
 
 - What is the size of your virtual network?
 
-  In Azure, Windows Virtual Desktop virtual machines are part of virtual networks. Your virtual network needs to be the right size. Use appropriate address ranges as defined in your existing networking architecture.
+  In Azure, Azure Virtual Desktop virtual machines are part of virtual networks. Your virtual network needs to be the right size. Use appropriate address ranges as defined in your existing networking architecture.
 
 - Will your workloads require connectivity between virtual networks and your on-premises datacenter?
 

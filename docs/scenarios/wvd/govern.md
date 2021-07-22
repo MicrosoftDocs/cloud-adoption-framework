@@ -1,6 +1,6 @@
 ---
-title: Governing a Windows Virtual Desktop environment
-description: Explore governance best practice for Windows Virtual Desktop
+title: Governing an Azure Virtual Desktop environment
+description: Explore governance best practice for Azure Virtual Desktop
 author: DominicAllen
 ms.author: doalle
 ms.date: 05/18/2021
@@ -9,9 +9,9 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Governing a Windows Virtual Desktop environment
+# Governing an Azure Virtual Desktop environment
 
-The [Cloud Adoption Framework provides a methodology](../../govern/index.md) to systematically and incrementally improve governance of your cloud portfolio. This article demonstrates how you can extend your governance approach to Windows Virtual Desktop environments deployed to Azure.
+The [Cloud Adoption Framework provides a methodology](../../govern/index.md) to systematically and incrementally improve governance of your cloud portfolio. This article demonstrates how you can extend your governance approach to Azure Virtual Desktop environments deployed to Azure.
 
 ## Initial governance foundation
 
@@ -27,7 +27,7 @@ The initial governance foundation focuses on the following aspects of governance
 
 ## Expanding on governance disciplines
 
-For Windows Virtual Desktop, the baseline needs to expand to include controls for functions specific to virtual desktops:
+For Azure Virtual Desktop, the baseline needs to expand to include controls for functions specific to virtual desktops:
 
 - User device used to access the virtual desktop
 - Application security
@@ -36,8 +36,8 @@ For Windows Virtual Desktop, the baseline needs to expand to include controls fo
 
 ## Security baseline
 
-The following guides provide best practices for implementing security controls for Windows Virtual Desktop environments:
+The following guides provide best practices for implementing security controls for Azure Virtual Desktop environments:
 
-- [Windows Virtual Desktop security baseline](/security/benchmark/azure/baselines/windows-virtual-desktop-security-baseline).
+- [Azure Virtual Desktop security baseline](/security/benchmark/azure/baselines/windows-virtual-desktop-security-baseline).
 
-- [Windows Virtual Desktop security guide](/azure/virtual-desktop/security-guide).
+- [Azure Virtual Desktop security guide](/azure/virtual-desktop/security-guide).

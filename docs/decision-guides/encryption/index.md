@@ -26,7 +26,7 @@ Corporate policy and third-party compliance are the biggest drivers when plannin
 
 Encryption of data in the cloud depends on the secure storage, management, and operational use of encryption keys. A key management system is critical to your organization's ability to create, store, and manage cryptographic keys, as well important passwords, connection strings, and other IT confidential information.
 
-Modern key management systems such as Azure Key Vault support storage and management of software protected keys for dev and test usage and hardware security module (HSM) protected keys for maximum protection of production workloads or sensitive data.
+Modern key management systems such as Azure Key Vault support storage and management of software protected keys for dev/test usage and hardware security module (HSM) protected keys for maximum protection of production workloads or sensitive data.
 
 When planning a cloud migration, the following table can help you decide how to store and manage encryption keys, certificates, and secrets that are critical for creating secure and manageable cloud deployments:
 

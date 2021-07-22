@@ -1,6 +1,6 @@
 ---
-title: Enterprise-scale BCDR for Windows Virtual Desktop
-description: Learn how this enterprise-scale scenario can improve business continuity and disaster recovery (BCDR) of the Windows Virtual Desktop.
+title: Enterprise-scale BCDR for Azure Virtual Desktop
+description: Learn how this enterprise-scale scenario can improve business continuity and disaster recovery (BCDR) of the Azure Virtual Desktop.
 author: igorpag
 ms.author: brblanch
 ms.date: 05/18/2021
@@ -9,16 +9,16 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Business continuity and disaster recovery (BCDR) for Windows Virtual Desktop enterprise-scale scenario
+# Business continuity and disaster recovery (BCDR) for Azure Virtual Desktop enterprise-scale scenario
 
-Windows Virtual Desktop is a managed service that provides Microsoft a control plane for your desktop virtualization environment. The service is free of charge, and Microsoft doesn't offer a financially backed [service-level agreement (SLA)](https://azure.microsoft.com/support/legal/sla/virtual-desktop). Despite having no SLA, we try to achieve at least 99.9% availability for the Windows Virtual Desktop service URLs.
+Azure Virtual Desktop is a managed service that provides Microsoft a control plane for your desktop virtualization environment. The service is free of charge, and Microsoft doesn't offer a financially backed [service-level agreement (SLA)](https://azure.microsoft.com/support/legal/sla/virtual-desktop). Despite having no SLA, we try to achieve at least 99.9% availability for the Azure Virtual Desktop service URLs.
 
 > [!NOTE]
 > The availability of the session host virtual machines in your subscription is covered by the [Azure Virtual Machines SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines).
 
-Windows Virtual Desktop offers BCDR to preserve customer metadata during outages. When an outage happens in a region, the service infrastructure components fail over to the secondary location and continue functioning as normal.
+Azure Virtual Desktop offers BCDR to preserve customer metadata during outages. When an outage happens in a region, the service infrastructure components fail over to the secondary location and continue functioning as normal.
 
-To keep your organization's data safe, you might adopt a BCDR strategy. This strategy is for resources that are deployed in your subscription as part of the Windows Virtual Desktop data plane, like host pools and storage.
+To keep your organization's data safe, you might adopt a BCDR strategy. This strategy is for resources that are deployed in your subscription as part of the Azure Virtual Desktop data plane, like host pools and storage.
 
 A good BCDR strategy keeps your critical applications and workload up and running during planned and unplanned service or Azure outages.
 
@@ -28,30 +28,30 @@ For more information, see [Set up a business continuity and disaster recovery pl
 
 ### Host pool compute strategy
 
-- For Windows Virtual Desktop host pool, both *active-active* and *active-passive* can be good BCDR approaches, depending on the requirements.
+- For Azure Virtual Desktop host pool, both *active-active* and *active-passive* can be good BCDR approaches, depending on the requirements.
   - With *active-active*, a single host pool can have VMs from multiple regions. In this scenario, usage of [cloud cache](/fslogix/cloud-cache-resiliency-availability-cncpt) is required to actively replicate the user's FSLogix profile and office containers between the regions. For virtual machines (VMs) in each region, the cloud cache registry entry specifying locations needs to be inverted to give precedence to the local one.
     - This configuration is complex. *active-active* protects against storage outages without requiring the user to log in again. It then enables continuous testing of the disaster recovery location. This configuration isn't considered either a performance or cost optimization.
-    - Load balancing of incoming user connection can't take proximity into account; all hosts will be equal, and users may be directed to a remote (not optimal) Windows Virtual Desktop host pool VM.
+    - Load balancing of incoming user connection can't take proximity into account; all hosts will be equal, and users may be directed to a remote (not optimal) Azure Virtual Desktop host pool VM.
     - This configuration is limited to a *Pooled* (shared) host pool type. For a *Personal* (dedicated) type, once a desktop is assigned to a user on a certain session host VM, it sticks and doesn't change, even if not available.
 
   - With *active-passive*, [Azure Site Recovery](/azure/site-recovery/site-recovery-overview), or a secondary host pool (hot stand-by), you can use the disaster recovery region options.
     - Azure Site Recovery is supported for both *Personal* (dedicated) and *Pooled* (shared) host pool types, and lets you maintain a single host pool entity.
     - You can create a new host pool in the failover region while keeping all of the resources turned off. For this method, set up new application groups in the failover region and assign users to them. You can then use a recovery plan in Azure Site Recovery to turn on host pools and create an orchestrated process.
 
-- For host pool VM resiliency, different [options](/azure/virtual-machines/availability) are available when creating a new Windows Virtual Desktop host pool. It's important to select the right option based on your requirements during creation. These options can't be changed later.
+- For host pool VM resiliency, different [options](/azure/virtual-machines/availability) are available when creating a new Azure Virtual Desktop host pool. It's important to select the right option based on your requirements during creation. These options can't be changed later.
 
-  - The default resiliency option for Windows Virtual Desktop host pool deployment is **Availability Set**. This option only ensures host pool resiliency at the single Azure datacenter level, with formal 99.95 percent high-availability [SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines).
+  - The default resiliency option for Azure Virtual Desktop host pool deployment is **Availability Set**. This option only ensures host pool resiliency at the single Azure datacenter level, with formal 99.95 percent high-availability [SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines).
 
      > [!NOTE]
      > The maximum number of VMs inside an **Availability Set** is 200, as documented in [Subscription and service limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#virtual-machines-limits---azure-resource-manager).
 
-  - Using [Availability Zones](/azure/availability-zones/az-overview), VMs in the host pool are distributed across different datacenters. VMs are still inside the same region, and have higher resiliency and higher formal 99.99 percent high-availability [SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines). Your capacity planning should take into account enough extra compute capacity to ensure Windows Virtual Desktop continues to operate even if a single zone is lost.
+  - Using [Availability Zones](/azure/availability-zones/az-overview), VMs in the host pool are distributed across different datacenters. VMs are still inside the same region, and have higher resiliency and higher formal 99.99 percent high-availability [SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines). Your capacity planning should take into account enough extra compute capacity to ensure Azure Virtual Desktop continues to operate even if a single zone is lost.
 
      > [!NOTE]
      > An Azure Resource Manager (ARM) template must be used to specify zones. This option isn't available yet in the Azure portal.
 
 - Critical applications and multiple host pools
-  - Before approaching Windows Virtual Desktop BCDR planning and design, it's important to consider which applications consumed through Windows Virtual Desktop are critical. You might want to separate them from non-critical applications. After separating them, use another host pool with a different disaster recovery approach and capabilities.
+  - Before approaching Azure Virtual Desktop BCDR planning and design, it's important to consider which applications consumed through Azure Virtual Desktop are critical. You might want to separate them from non-critical applications. After separating them, use another host pool with a different disaster recovery approach and capabilities.
 
 ### Optimal storage for profile and office containers
 
@@ -64,13 +64,13 @@ For more information, see [Set up a business continuity and disaster recovery pl
 
 - OneDrive can be used to redirect [well known folders](/onedrive/redirect-known-folders) (`Desktop`, `Documents`, `Pictures`, `Screenshots`, and `Camera Roll`) if present. This redirection enables the resilience of these special folders. The folders can be handled by OneDrive rather than need special consideration in a BCDR scenario.
 
-- Azure offers multiple storage solutions that you can use to store your FSLogix profile and office container. [Storage options for FSLogix profile containers in Windows Virtual Desktop](/azure/virtual-desktop/store-fslogix-profile) compares the different managed storage solutions Azure offers for the Windows Virtual Desktop FSLogix user profile container. Storage Spaces Direct is also supported with FSLogix and Windows Virtual Desktop. It's a self-managed storage solution that's out of scope for this article. Customers can get the most value out of either Azure Files or Azure NetApp Files while simplifying management of Windows Virtual Desktop. They're the recommended storage solutions for this workload.
+- Azure offers multiple storage solutions that you can use to store your FSLogix profile and office container. [Storage options for FSLogix profile containers in Azure Virtual Desktop](/azure/virtual-desktop/store-fslogix-profile) compares the different managed storage solutions Azure offers for the Azure Virtual Desktop FSLogix user profile container. Storage Spaces Direct is also supported with FSLogix and Azure Virtual Desktop. It's a self-managed storage solution that's out of scope for this article. Customers can get the most value out of either Azure Files or Azure NetApp Files while simplifying management of Azure Virtual Desktop. They're the recommended storage solutions for this workload.
 
 - The FSLogix agent can support multiple profile locations for higher resiliency if you configure the `VHDLocations` registry entry. In this case, a proper [replication mechanism](/azure/virtual-desktop/disaster-recovery#fslogix-configuration) must be in place based on the storage type used. You can use cloud cache instead.
 
 #### User data storage replication and resiliency
 
-In Windows Virtual Desktop, multiple replication mechanisms and strategies can be used for user data in [FSLogix](/azure/architecture/example-scenario/wvd/windows-virtual-desktop-fslogix) containers:
+In Azure Virtual Desktop, multiple replication mechanisms and strategies can be used for user data in [FSLogix](/azure/architecture/example-scenario/wvd/windows-virtual-desktop-fslogix) containers:
 
 - **Profile pattern #1:** Native Azure Storage replication mechanisms. For example [geo-redundant storage (GRS)](/azure/storage/common/storage-redundancy#redundancy-in-a-secondary-region) for standard file shares, [cross-region replication](/azure/azure-netapp-files/cross-region-replication-introduction) of Azure NetApp Files, or [Azure File Sync](/azure/storage/file-sync/file-sync-deployment-guide) for VM-based file servers.
 
@@ -80,7 +80,7 @@ In Windows Virtual Desktop, multiple replication mechanisms and strategies can b
 
 ### Golden image availability
 
-If you use custom images to deploy Windows Virtual Desktop host pool VMs, it's important to ensure those artifacts are available in all regions if there's a major disaster. Use the [Azure Shared Image Gallery](/azure/virtual-machines/shared-image-galleries) service to replicate images across all regions where a host pool is deployed with redundant storage and multiple copies.
+If you use custom images to deploy Azure Virtual Desktop host pool VMs, it's important to ensure those artifacts are available in all regions if there's a major disaster. Use the [Azure Shared Image Gallery](/azure/virtual-machines/shared-image-galleries) service to replicate images across all regions where a host pool is deployed with redundant storage and multiple copies.
 
 ### Backup protection
 
@@ -96,7 +96,7 @@ Preventing data loss for critical user data is important.
 
 ### Infrastructure and application dependencies
 
-- If users of the Windows Virtual Desktop infrastructure need on-premises resource access, it's critical that you consider the high availability of network infrastructure required to connect.
+- If users of the Azure Virtual Desktop infrastructure need on-premises resource access, it's critical that you consider the high availability of network infrastructure required to connect.
 - Assess and evaluate the resiliency of authentication infrastructure.
 - Consider BCDR aspects for dependent applications and other resources. These aspects ensure availability in the secondary disaster recovery location.
 
@@ -104,7 +104,7 @@ Preventing data loss for critical user data is important.
 
 The following are best practices for your design:
 
-- For the Windows Virtual Desktop host pool compute deployment model BCDR, use the *active-passive* option if it satisfies your requirements for recovery point objective (RPO) and recovery time objective (RTO).
+- For the Azure Virtual Desktop host pool compute deployment model BCDR, use the *active-passive* option if it satisfies your requirements for recovery point objective (RPO) and recovery time objective (RTO).
 
 - Azure Site Recovery is recommended for personal (*dedicated*) host pools. The target region should be aligned with the disaster recovery of the storage backend used by FSLogix.
   - Azure Site Recovery is also supported for pooled (*shared*) host pools. This option can be evaluated and compared to the deployment of another host pool in the secondary disaster recovery region.
@@ -130,7 +130,7 @@ The following are best practices for your design:
   - Replication between disparate storage is required.
 
 - We recommend the following guidelines when using cloud cache:
-  - Use a solid-state drive (SSD) for the managed disk of the Windows Virtual Desktop host pool VMs.
+  - Use a solid-state drive (SSD) for the managed disk of the Azure Virtual Desktop host pool VMs.
   - Have a backup solution in place to protect user profile and office containers.
   - Make sure that the managed disk for the local VM is large enough to accommodate the local cache of all user's FSLogix profile and office containers.
 
