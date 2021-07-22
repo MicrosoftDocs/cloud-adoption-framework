@@ -32,10 +32,10 @@ Regardless of the deployment option, you should carefully consider each design a
 
 ## Compliance design areas
 
-Security, governance, and compliance are key topics when designing and building an Azure environment - both to start from strong foundations but also to ensure solid ongoing processes and controls are in place. Alongside the controls that help maintain and demonstrate compliance, the tools and processes implemented for managing environments play an important role in detecting and responding to issues that require action.
+Security, governance, and compliance are key topics when designing and building an Azure environment, not only to start from strong foundations, but also to ensure solid ongoing processes and controls are in place. Alongside the controls that help maintain and demonstrate compliance, the tools and processes implemented for managing environments play an important role in detecting and responding to issues that require action.
 
 | Design areas | Objective | Relevant methodologies |
-|---|---|---|
+|--|--|--|
 | Governance | Automate auditing and enforcement of governance policies. | Govern |
 | Security | Implement controls and process to protect your cloud environments | Secure |
 | Management | For stable, ongoing operations in the cloud, a management baseline is required to provide visibility, operations compliance, and protect and recover capabilities. | Manage |
