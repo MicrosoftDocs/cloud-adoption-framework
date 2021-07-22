@@ -25,9 +25,9 @@ For each application or service you'll deploy to your landing zone, use the foll
 
 The following questions help you make decisions based on the Azure networking services decision tree:
 
-- Is a virtual network needed for Azure Virtual Desktop ?
+- Is a virtual network needed for Azure Virtual Desktop?
 
-  Yes, Azure Virtual Desktop virtual machines are Azure Virtual Machines and must be deployed in a virtual network.
+  Yes, Azure Virtual Desktop virtual machines must be deployed in an Azure virtual network.
 
 - What is the size of your virtual network?
 
