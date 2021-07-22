@@ -37,4 +37,4 @@ These on-ramps represent where organizations are today in their cloud adoption p
 To understand the decisions you need to make when implementing an Azure landing zone, explore the Azure landing zone design areas in order to understand the specific technical topics to consider.
 
 > [!div class="nextstepaction"]
-> [Azure Landing Zone design areas](./design-areas.md)
+> [Azure landing zone design areas](./design-areas.md)

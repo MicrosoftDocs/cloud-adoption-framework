@@ -47,7 +47,7 @@ While your specific implementation may vary, as a result of specific business de
 
 ## Azure landing zone accelerator
 
-For organizations where this conceptual architecture fits with the operating model and resource structure they plan to use, there is a ready-made deployment experience available which we call the **Azure Landing Zone accelerator**.
+For organizations where this conceptual architecture fits with the operating model and resource structure they plan to use, there is a ready-made deployment experience available which we call the **Azure landing zone accelerator**.
 
 The accelerator is an Azure portal-based deployment that will provide a full implementation of the conceptual architecture, along with opinionated configurations for key components such as management groups and policies.
 
