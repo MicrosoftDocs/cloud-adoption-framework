@@ -24,9 +24,9 @@ Each Azure landing zone implementation option provides a deployment approach and
 Regardless of the deployment option, you should carefully consider each design area. Your decisions affect the platform foundation on which each landing zone depends.
 
 | Design areas | Objective | Relevant methodologies |
-|---|---|---|
+|--|--|--|
 | Azure billing and Active Directory tenant | Proper tenant creation, enrollment, and billing setup are important early steps. | Ready |
-| Identity and access management| Identity and access management is a primary security boundary in the public cloud. It's the foundation for any secure and fully compliant architecture. | Ready |
+| Identity and access management | Identity and access management is a primary security boundary in the public cloud. It's the foundation for any secure and fully compliant architecture. | Ready |
 | Network topology and connectivity | Networking and connectivity decisions are an equally important foundational aspect of any cloud architecture. | Ready |
 | Resource organization | As cloud adoption scales, considerations for subscription design and management group hierarchy have an impact on governance, operations management, and adoption patterns. | Govern |
 
