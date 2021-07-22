@@ -16,6 +16,8 @@ Adopting cloud technologies is a journey. Business priorities and the need to br
 
 Over time, the organization iterates and matures the deployed technologies, processes, and skilling needed to progress toward that destination. However, this doesn't mean you arrive at the destination immediately. The journey takes time, which varies depending on the size of the organization, the current technical footprint, and the skilling maturity within technical teams.
 
+## On-ramps
+
 Consider an analogy of a trip along a freeway. There might be multiple *on-ramps* you can use to join the freeway, but the *destination* is the same.
 
 ![Diagram of Azure landing zone journey on-ramps.](../../_images/ready/alz-journey.png)
