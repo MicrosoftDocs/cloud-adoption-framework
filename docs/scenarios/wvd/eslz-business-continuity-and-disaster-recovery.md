@@ -32,7 +32,7 @@ An *active-active* approach:
 
 - Storage outages are mitigated without requiring the user to reauthenticate.
 - Continuous testing of the disaster recovery location is enabled.
-- A single host pool can contain contain VMs from multiple regions. In this scenario, usage of [cloud cache](/fslogix/cloud-cache-resiliency-availability-cncpt) is required to actively replicate the user's FSLogix profile and office containers between the regions.
+- A single host pool can contain VMs from multiple regions. In this scenario, usage of [cloud cache](/fslogix/cloud-cache-resiliency-availability-cncpt) is required to actively replicate the user's FSLogix profile and office containers between the regions.
 - For virtual machines (VMs) in each region, the cloud cache registry entry specifying locations needs to be inverted to give precedence to the local one.
 - Load balancing of incoming user connection can't take proximity into account; all hosts will be equal and users may be directed to a remote (not optimal) Azure Virtual Desktop host pool VM.
 - This configuration is limited to a *pooled* (shared) host pool type. For a *personal* (dedicated) type, once a desktop is assigned to a user on a certain session host VM, it sticks and doesn't change, even if not available.
