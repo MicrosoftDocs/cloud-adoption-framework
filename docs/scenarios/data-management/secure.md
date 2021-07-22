@@ -13,7 +13,7 @@ ms.subservice: operate
 
 To limit security risk as much as possible while also providing access to do data analytics, use data governance. Data governance provides balance among operations, maintenance, and control. It follows the underlying principle of data lake solution architecture design, which uses Infrastructure as Code and Security as Code.
 
-The focus of the Enterprise Scale Analytics and AI construction set is based on the items in the following table of key management principles:
+The focus of the enterprise-scale for analytics and AI construction set is based on key management principles:
 
 | Principle  |Description|
 |--|--|
@@ -23,7 +23,7 @@ The focus of the Enterprise Scale Analytics and AI construction set is based on 
 |  **Simplified yet secure permissions**| Avoid customization. Customization leads to complexity, which inhibits human understanding, security, automation, and governance. For example, use built-in roles to assign permissions to data services and avoid permissions that specifically reference individual resources or users.|
 | **Better clarity and enforceability of rules and definitions**| Clearly separate data to help keep the environment organized, while making it easy to enforce security rules and definitions. |
 
-When you deploy Enterprise Scale Analytics and AI, consider using these automation principles to enable security, as opposed to manually applying them. Ideally, a user should do manual interaction only to approve or deny an access request.
+When you deploy enterprise-scale for analytics and AI, consider using these automation principles to enable security, as opposed to manually applying them. Ideally, a user should do manual interaction only to approve or deny an access request.
 
 ## Next steps
 
