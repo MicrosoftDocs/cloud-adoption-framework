@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Data Integrations
 
-The role of Integrations Ops is explained under [Integration Ops (per integration)](../organize-persona-and-teams.md#integration-ops-per-integration). 
+The role of Integrations Ops is explained under [Integration Ops (per integration)](../organize-persona-and-teams.md#data-landing-zone-teams). 
 
 A Data Integration resource group is responsible for data ingestion and enrichment only from external sources such a telemetry, finance, CRM etc. This layer can operate in both real-time, batch and micro-batch.
 
