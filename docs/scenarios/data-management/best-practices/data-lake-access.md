@@ -172,7 +172,7 @@ Other polyglot storage such as PostgreSQL, MySQL, Azure SQL Database, SQL Manage
 It is recommended that Azure AD groups are used to secure database objects instead of individual Azure AD user accounts. These AD Azure Groups would be used to authenticate users and protects database objects. Similar to the data lake pattern, you could use your Data Integration or Data Products onboarding to create these groups within you Azure AD service.
 
 >[!NOTE]
->Storing data inside an Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics Pools are one of the options for Data Integrations and Data Products to store [*sensitive (PII)* Data](../secure-data-privacy.md#sensitive-data).
+>Storing data inside an Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics Pools are one of the options for Data Integrations and Data Products to store [*sensitive (PII)* Data](../secure-data-privacy.md#sensitive-pii-data).
 
 ## Azure Synapse Analytics Data Access Control in ADLS 2
 
