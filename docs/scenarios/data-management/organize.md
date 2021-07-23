@@ -20,7 +20,7 @@ The enterprise scale analytics and AI architecture was designed with the followi
 
 1. Streamlined deployments: Ensure that common policies are available within the organization to help teams scale quickly and support teams with less experience in some core designs and artifacts.
 
-The deployment process and data operations (DataOps) model is an essential part that supports some of these core principles. We recommend the following design guidelines to fulfill these concepts:
+The deployment process and data operations, DataOps, model is an essential part that supports some of these core principles. To align with these principles, the following design guidelines should be followed:
 
 1. Using infrastructure as code, IaC
 2. Deploying templates that cover core use cases within the company

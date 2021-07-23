@@ -27,7 +27,7 @@ At a high level, data products are computed or polyglot persistence services tha
      1. Inter-data landing zone consumption: Data product B also consumes from data product C and the data lake in Data Landing Zone 3.
 
     > [!IMPORTANT]
-    > In the case of inter-data landing zone consumption, since data product B reads from Data Landing Zone 3, this would require approval from the [Data Landing Zone Ops](../organize-persona-and-teams.md#data-landing-zone-ops-one-group-per-data-landing-zone) and [Integration Ops](../organize-persona-and-teams.md#integration-ops-per-integration) team of Data Landing Zone 3.
+    > In the case of inter-data landing zone consumption, since data product B reads from Data Landing Zone 3, this would require approval from the [Data Landing Zone Ops](../organize-persona-and-teams.md#data-landing-zone-teams) and [Integration Ops](../organize-persona-and-teams.md#data-landing-zone-teams) team of Data Landing Zone 3.
 
     > [!IMPORTANT]
     > Data product B consumes from data products A and C. Before this can happen, data product B must register it's consumption of a data product via a data sharing agreement. This data sharing agreement should update the lineage from data product A to data product B and from data product C to data product B.
@@ -101,7 +101,7 @@ To explain the architecture definition process, we'll look at an example of a fi
 
 :::image type="content" source="../images/data-product-define-detail.png" alt-text="Define Data Product Architecture Detail":::
 
-The credit monitoring data product shown above consumes data from a *read data store* that has been ingested by the [Integration Ops team](../organize-persona-and-teams.md#integration-ops-per-integration) and produces data assets for two other data products.
+The credit monitoring data product shown above consumes data from a *read data store* that has been ingested by the [Integration Ops team](../organize-persona-and-teams.md#data-landing-zone-teams) and produces data assets for two other data products.
 
 >[!Note]
 >A read data source (or store) is also known as Golden Record Source. These types of data sources have been cleaned but haven't had any transformation applied to them.

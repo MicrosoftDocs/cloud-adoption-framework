@@ -76,7 +76,7 @@ Data Landing Zone Ops supports Integration Ops and Data Product teams to create 
 
 ### Adhere to the Azure Well-Architected Framework
 
-Data Landing Zone Ops is responsible for the data landing zone, and it's recommended for the team to be proficient in the [Azure Well-Architected Framework](/azure/architecture/framework/), which provides guidance on cost optimization, reliability, and security.
+Data Landing Zone Ops is responsible for the data landing zone, and it's recommended for the team to be proficient in the [Azure Well-Architected Framework](/azure/architecture/framework), which provides guidance on cost optimization, reliability, and security.
 
 ### Business as usual
 
@@ -92,9 +92,9 @@ Integration Ops' main task is to ingest data from the source and provide a read 
 
 IT service management solutions field dataset onboarding requests from the business to Integration Ops. The team reviews the data catalog for existing assets and source systems and collects metadata such as schema, location, privacy requirements, and ingest patterns to be associated with the source. They use their forked repo to develop ingestion pipelines and deploy to their data integration resource groups. The final part of the business' dataset onboarding process is to register the dataset and:
 
-1. Register the dataset in the data catalog.
-1. Create Azure Data Lake folders for the dataset.
-1. Notify Integration Ops and data product teams of the new dataset.
+- Register the dataset in the data catalog.
+- Create Azure Data Lake folders for the dataset.
+- Notify Integration Ops and data product teams of the new dataset.
 
 ### Update existing datasets
 
@@ -102,7 +102,7 @@ IT service management solutions field dataset update requests from the business 
 
 ### Manage access requests to datasets
 
-As previously described [Granting access](./security-provisioning.md#granting-access), Integration Ops is responsible for approving access to datasets.
+As previously described in [Understand security provisioning with enterprise-scale for analytics and AI in Azure](./security-provisioning.md#grant-access), Integration Ops is responsible for approving access to datasets.
 
 ### Review dataset telemetry
 

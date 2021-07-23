@@ -38,7 +38,7 @@ Multiple personas involved in an enterprise scale analytics and AI deployment. T
 | ML engineers | They support the right processes and infrastructure models to be deployed and managed easily. |
 
 >[!NOTE]
-> <sup>1</sup> Azure policies assist these roles to control some of the scope that they oversee.
+> Azure policies assist these roles to control some of the scope that they oversee.
 
 ## Data Landing Zone teams
 
@@ -72,9 +72,9 @@ In another example, a data landing zone's business doesn't have a business data 
 Individuals should work within multidisciplinary teams in both of these scenarios, sharing goals and diverse experience, skills, and approaches that support more effective outcomes than if everyone is siloed.
 
 >[!NOTE]
->In the scenario where only one data landing zone is deployed, it's common to mix businesses into one data landing zone. This could create crossover functions where Integration Operations or Data Product teams are sourced from central and business data offices. However, we recommend Data Landing Zone Ops functions to be located in the central data office for this scenario.
+>In the scenario where only one data landing zone is deployed, it's common to mix businesses into one data landing zone. This could create crossover functions where Integration Operations or Data Product teams are sourced from central and business data offices. However, Data Landing Zone Ops functions to be located in the central data office for this scenario.
 
-## Teams within the Platform group 
+## Teams within the Platform group
 
 The Platform group consists of two teams:
 
