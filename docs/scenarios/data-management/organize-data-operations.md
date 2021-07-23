@@ -31,11 +31,11 @@ Branches isolate changes or feature developments without affecting other work th
 
 CI allows teams to automatically test and build source code and enables quick iterations and feedback loops to ensure high code quality in CD. Pipelines are ways to configure the CI of changes (software code or infrastructure code) and CD of the packaged/compiled changes. This is also referred to as *build and release*. CD describes the automatic deployment of applications to one or more environments. CD usually follows a CI process and uses integration tests to validate the entire application.
 
-Pipelines can contain multiple stages with various tasks and can have simple to complex approval flows to ensure compliance and validation. Based on preference, pipelines can also be configured with various automatic triggers. For Enterprise-scale and AI deployment, the production steps should always have human pre-approval, and this is built into the operation model. CI/CD pipelines should be built with GitHub Actions or Azure DevOps pipelines, and they should be automated triggers.
+Pipelines can contain multiple stages with various tasks and can have simple to complex approval flows to ensure compliance and validation. Based on preference, pipelines can also be configured with various automatic triggers. For Enterprise-scale and AI deployment, the production steps should always have human preapproval, and this is built into the operation model. CI/CD pipelines should be built with GitHub Actions or Azure DevOps pipelines, and they should be automated triggers.
 
 ### Infrastructure as Code, IaC
 
-The term *code* in IaC often raises concerns for IT staff without a developer background, but IaC don't refer to writing code the way in which typical software developers do it. However, it adopts many of the same tools and principles from the software development processes to deliver infrastructure in a prescriptive format.
+The term *code* in IaC often raises concerns for IT staff without a developer background, but IaC don't refer to writing code the way in which typical software developers do it. However, it adopts many of the same tools and principles from the software development processes to deliver infrastructure in a predictable format.
 
 IaC helps infrastructure to be provisioned, configured, and managed as part of a DevOps pipeline with full change controls, audit history, tests, validations, and approval processes, ensuring that tasks can be delegated to the appropriate roles for the project without compromising security and compliance.
 
@@ -81,7 +81,7 @@ In Azure Resource Manager templates, the core provisioning is in the **resources
 
 Teams should use CI/CD pipelines in multiple stages to ensure that developed code is without errors and ready for production. Some best practices are to have a development environment, a testing environment, and a production environment. These stages should also be reflected in Azure by using separate services for each environment.
 
-The Platform team is responsible for providing and maintaining deployment templates to scale quickly within an organization and simplify the deployment process for teams that aren't familiar with IaC. These templates are used as a baseline for new artifacts within the construction set and need to be maintained over time to represent best practices and common standards within the company.
+The Platform team is responsible for providing and maintaining deployment templates to scale quickly within an organization and simplify deployments for teams unfamiliar with with IaC. These templates serve as a baseline for new artifacts within the construction set and need to be maintained over time to represent best practices and common standards within the company.
 
 Deployments to test and production should only be managed through a CI/CD pipeline and a service connection with elevated permissions to enforce common best practices (for example, Azure Resource Manager templates).
 
