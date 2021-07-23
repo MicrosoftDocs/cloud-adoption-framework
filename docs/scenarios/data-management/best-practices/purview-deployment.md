@@ -196,7 +196,7 @@ Review the following list of personas involved in an Enterprise Scale Analytics 
 | Persona | Role |Recommended Azure Purview Role  |
 |-|-|-|
 |Product Owners| Product Owners leverage Azure to transform your solutions and bring agility to the business and optimize business processes.|Purview Data Reader |
-| Solution Architects | Define solutions to drive across the boundaries of the enterprise business network. Learn how to deal with diagnosis, analysis, design, deployment, and integration of Azure services. |Purview Data Source Administrator + Data Curator    |
+| Solution architects | Define solutions to drive across the boundaries of the enterprise business network. Learn how to deal with diagnosis, analysis, design, deployment, and integration of Azure services. |Purview Data Source Administrator + Data Curator    |
 |Developer/DevOps Engineers|Design, build, deploy, test, and maintain continuous integration and delivery process with Azure DevOps or GitHub.|N/A  |
 | Security Engineers | Enable your teams to design and implement a secure infrastructure on Azure leveraging best practices. |Purview Data Reader  |
 | Technical/Business Managers |Build an overall understanding of Azure services. Control your cloud costs and optimize your operations and the agility of your team.|N/A |

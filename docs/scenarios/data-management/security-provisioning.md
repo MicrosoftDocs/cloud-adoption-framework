@@ -117,7 +117,7 @@ Figure 2 summarizes how different personas work together to control access to da
 >[!IMPORTANT]
 >Tenants can currently provision 500 catalogs with 500 access packages; to increase this number, contact [Azure support](https://azure.microsoft.com/support/options/).
 
-## Next Steps
+## Next steps
 
 - Video: [How to deploy Azure Active Directory entitlement management](https://www.youtube.com/watch?v=zaaKvaaYwI4&feature=youtu.be).
 - Explore [common scenarios in Azure AD entitlement management](/azure/active-directory/governance/entitlement-management-scenarios) for more information about how to manage entitlement.

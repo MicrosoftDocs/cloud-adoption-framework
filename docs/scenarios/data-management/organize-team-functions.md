@@ -62,7 +62,7 @@ They work out of the forked repo that's created when a data landing zone is crea
 
 ### Support the Data Product team to customize products
 
-Data Landing Zone Ops teams support the Data Product team by using pull requests to submit new product templates to their respective data product repositories.
+The Data Landing Zone Ops team supports the Data Product team by using pull requests to submit new product templates to their respective data product repositories.
 
 As the owner of the landing zone, Azure DevOps would route the approval for changes to Data Landing Zone Ops:
 
@@ -90,11 +90,11 @@ Integration Ops' main task is to ingest data from the source and provide a read 
 
 ### Triage new dataset requests
 
-IT service management solutions field dataset onboarding requests from the business to Integration Ops. The team reviews the data catalog for existing assets and source systems and collects metadata such as schema, location, privacy requirements, and ingest patterns to be associated with the source. They use their forked repo to develop ingestion pipelines and deploy to their data integration resource groups. The final part of the business' dataset onboarding process is to register the dataset and:
+IT service management solutions field dataset onboarding requests from the business to Integration Ops. The team reviews the data catalog for existing assets and source systems and collects metadata such as schema, location, privacy requirements, and ingest patterns to be associated with the source. They use their forked repo to develop ingestion pipelines and deploy to their data integration resource groups. The final part of the business' dataset onboarding process is to register the dataset by:
 
-- Register the dataset in the data catalog.
-- Create Azure Data Lake folders for the dataset.
-- Notify Integration Ops and data product teams of the new dataset.
+- Registering it in the data catalog.
+- Creating Azure Data Lake folders for the dataset.
+- Notifying Integration Ops and data product teams of the new dataset.
 
 ### Update existing datasets
 
@@ -117,7 +117,7 @@ Feedback portals and other channels (DL, open office hours, and others) provide 
 
 ## The Data Product team
 
-The Data Product team delivers new data products to the business. They source from data integrations' read data stores and transform them into business solutions. Anything that transforms data for use is classified as a **data product**. This team is often a blend of technical specialists and subject matter experts who can help the business to achieve value quickly. Data products can range from simple reports and new data assets to custom setups with data-driven Kubernetes web apps.
+The Data Product team delivers new data products to the business. They source from data integrations' read data stores and transform them into business solutions. Anything that transforms data for use is classified as a **data product**. This team is often a mix of technical specialists and subject matter experts who can help the business to achieve value quickly. Data products can range from simple reports and new data assets to custom setups with data-driven Kubernetes web apps.
 
 ### New data products
 
@@ -151,7 +151,7 @@ Before processing all data, the team uses local or remote compute to process and
 
 When the team has developed machine learning models, they start operationalizing them. For this, they expand the team to include Data Ops and machine learning engineers who can assist with moving the models into a new data product, as outlined in a data products team role.
 
-The Data Science team will continue to work with the associated Data Product Owners to capture feedback, support and resolved/update models in production using a [M/L Ops methodology](/azure/machine-learning/concept-model-management-and-deployment).
+The Data Science team will continue to work with the associated Data Product Owners to capture feedback, support and resolved/update models in production using an [ML Ops methodology](/azure/machine-learning/concept-model-management-and-deployment).
 
 ## Analyst
 

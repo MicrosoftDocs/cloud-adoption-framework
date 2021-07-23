@@ -25,7 +25,7 @@ Multiple personas involved in an enterprise scale analytics and AI deployment. T
 | Persona | Role |
 |-|-|
 |Product owners| They optimize Azure to transform solutions, bring agility to the business, and optimize business processes.|
-| Solution Architects | They propose solutions for the boundaries of the enterprise business network and learn how to diagnose, analyze, design, deploy, and integrate Azure services. |
+| Solution architects | They propose solutions for the boundaries of the enterprise business network and learn how to diagnose, analyze, design, deploy, and integrate Azure services. |
 |Developer/DevOps engineers|They use Azure DevOps or GitHub to design, build, deploy, test, and maintain continuous integration and delivery processes.|
 | Security engineers <sup>1</sup> | They support teams to design and implement secure Azure infrastructure with best practices. |
 | Technical/business managers <sup>1</sup>|They help to develop an understanding of Azure services, control costs, and optimize your team's operations and agility.|
@@ -42,9 +42,9 @@ Multiple personas involved in an enterprise scale analytics and AI deployment. T
 
 ## Data Landing Zone teams
 
-The Data Landing Zone group consists of three teams.
+The Data Landing Zone group consists of three teams:
 
-**Data Product teams (per product)**:
+**Data Product teams (one team per product)**:
 
 - Are responsible for delivering new data products such as insights, reports, notebooks, and applications.
 - Partner closely with business analysts and business unit stakeholders.
@@ -52,7 +52,7 @@ The Data Landing Zone group consists of three teams.
 - Manage access hierarchy (groups) and approval requests.
 - Furnish metadata in data catalogs.
 
-**Integration Ops (per integration)**:
+**Integration Ops (one team per integration)**:
 
 - Ingest and register new read data sources.
 - Manage access hierarchy (groups) and approval requests.
@@ -65,14 +65,14 @@ The Data Landing Zone group consists of three teams.
 
 ### Decide between a central or business data office
 
-Based your organization's size and structure, the Data Landing Zone group can be assembled in different ways. For example, you create one data landing zone where the business already has its own set of data engineers, program managers, and solution architects (for example, a business data office). In this scenario, you could provision a data landing zone and allow the business data office to operate the landing zone based on governance from your central platform group.
+Depending on your organization's size and structure, a Data Landing Zone group can be assembled in different ways. For example, if you create one data landing zone where the business already has its own set of data engineers, program managers, and solution architects (for example, a business data office), you could provision a data landing zone and allow the business data office to operate the landing zone based on governance from your central platform group.
 
-In another example, a data landing zone's business doesn't have a business data office to build out their data integrations or data products. In this scenario, the central data office should consider themselves a consultancy that would take people off the bench to work on the data landing zone. Those resources should be embedded into the business to collect and execute on use cases with SCRUM or AGILE methods. Once completed, they would return to the central data office.
+Another option is for when a data landing zone's business doesn't have a business data office to build out their data integrations or data products. In this scenario, the central data office can consider itself a consultancy that shifts people from the bench to work on the data landing zone. Those resources should be embedded into the business to collect and execute on use cases with SCRUM or AGILE methods. Once completed, they would return to the central data office.
 
 Individuals should work within multidisciplinary teams in both of these scenarios, sharing goals and diverse experience, skills, and approaches that support more effective outcomes than if everyone is siloed.
 
 >[!NOTE]
->In the scenario where only one data landing zone is deployed, it's common to mix businesses into one data landing zone. This could create crossover functions where Integration Operations or Data Product teams are sourced from central and business data offices. However, Data Landing Zone Ops functions to be located in the central data office for this scenario.
+>In the scenario where only one data landing zone is deployed, it's common for businesses to overlap in one data landing zone. This could create crossover functions where Integration Operations or Data Product teams are sourced from central and business data offices. However, Data Landing Zone Ops functions to be located in the central data office for this scenario.
 
 ## Teams within the Platform group
 
@@ -94,7 +94,7 @@ The Platform group consists of two teams:
 
 - Instantiate data management landing zone and data landing zone scaffolding, including networking, peering, monitoring, and other core services.
 
-## Digital security office
+## The digital security office
 
 Digital security deals with the entire enterprise scale analytics and AI construction set. It is usually a dedicated department lead by a Chief Information Security Officer. This department works closely with Data Platform Ops, the data governance review board, and the architecture review board.
 

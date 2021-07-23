@@ -20,15 +20,15 @@ The enterprise scale analytics and AI architecture was designed with the followi
 
 1. Streamlined deployments: Ensure that common policies are available within the organization to help teams scale quickly and support teams with less experience in some core designs and artifacts.
 
-The deployment process and data operations, DataOps, model is an essential part that supports some of these core principles. To align with these principles, the following design guidelines should be followed:
+The deployment process and data operations, DataOps, model is an essential part that supports some of these core principles. The following guidelines are recommended for organizations to align with the principles:
 
-1. Using infrastructure as code, IaC
-2. Deploying templates that cover core use cases within the company
-3. Following a deployment process that includes a strategy for GitHub forks and branches
-4. Maintaining a central repository and deploying data management landing zones
+1. Use infrastructure as code, IaC.
+2. Deploy templates that cover core use cases within the company.
+3. Follow a deployment process that includes a strategy for GitHub forks and branches.
+4. Maintain a central repository and deploying data management landing zones.
 
- Contributors with identifiable and individual skills should establish a Platform group to centrally govern data platform infrastructure and build and deploy common data infrastructure pieces for the data management landing zone, plus various data landing zones. The Platform group can also build, own, and provide agnostic technology that helps data integration and data products teams to capture, process, store, and maintain their datasets.
+Contributors with identifiable and individual skills should establish a Platform group to centrally govern data platform infrastructure and build and deploy common data infrastructure pieces for the data management landing zone, plus various data landing zones. The Platform group can also build, own, and provide agnostic technology that helps data integration and data products teams to capture, process, store, and maintain their datasets.
 
 The team should present its services in a self-service manner, which can include tools for storing big data, versioning product data, organizing/implementing the data pipeline, de-identifying data, and more. These types of tools are key to minimizing bottlenecks in the workflow and reducing lead time for creating new data products.
 
-The Platform group should follow the best practices outlined in this section to achieve their objectives. Other data product teams should use the following best practices to test and automate their data.
+The Platform group should follow the best practices outlined in this section to achieve their objectives. Other data product teams should use the best practices in the forthcoming articles to test and automate their data.

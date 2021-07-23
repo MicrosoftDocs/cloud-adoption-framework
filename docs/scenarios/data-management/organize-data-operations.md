@@ -24,7 +24,7 @@ Branches isolate changes or feature developments without affecting other work th
 >We recommend the following guidelines for all enterprise scale analytics and AI repositories:
 >
 > - Secure the repository's main branch by enforcing branches and pull requests to ensure a controlled review processes.
-> - Azure-DevOps- or GitHub-based repositories should be used for source control to track changes to the source code and allow multiple team members to develop code at the same time.
+> - Azure DevOps or GitHub repositories should be used for source control to track changes to the source code and allow multiple team members to develop code at the same time.
 > - Application code and infrastructure configurations should be checked into a repository.
 
 ## CI/CD pipelines
@@ -33,7 +33,7 @@ CI allows teams to automatically test and build source code and enables quick it
 
 Pipelines can contain multiple stages with various tasks and can have simple to complex approval flows to ensure compliance and validation. Based on preference, pipelines can also be configured with various automatic triggers. For Enterprise-scale and AI deployment, the production steps should always have human preapproval, and this is built into the operation model. CI/CD pipelines should be built with GitHub Actions or Azure DevOps pipelines, and they should be automated triggers.
 
-### Infrastructure as Code, IaC
+### Infrastructure as code, IaC
 
 The term *code* in IaC often raises concerns for IT staff without a developer background, but IaC don't refer to writing code the way in which typical software developers do it. However, it adopts many of the same tools and principles from the software development processes to deliver infrastructure in a predictable format.
 
@@ -86,4 +86,4 @@ The Platform team is responsible for providing and maintaining deployment templa
 Deployments to test and production should only be managed through a CI/CD pipeline and a service connection with elevated permissions to enforce common best practices (for example, Azure Resource Manager templates).
 
 >[!CAUTION]
->Integration Operations (Integration Ops) and Data Product teams should only have read access to test and production environments, and deployments to these environments should only be executed through CI/CD pipelines and service connections with elevated permissions. However, to speed up the time to production, Integration Ops and Data Product teams should have write access to the development environment.
+>Integration Operations (Integration Ops) and Data Product teams should only have read access to test and production environments, and deployments to these environments should only be executed through CI/CD pipelines and service connections with elevated permissions. To accelerate the path to production, Integration Ops and Data Product teams should have write access to the development environment.
