@@ -85,7 +85,7 @@ Th enterprise scale analytic construction set probably contains polyglot storage
 We recommend that you use Azure AD groups to secure database objects instead of individual Azure AD user accounts. Use these AD Azure groups to authenticate users and protects database objects. Similar to the data lake pattern, you could use your data integration or data products onboarding to create these groups.
 
 > [!NOTE]
-> Data integrations and data products can store sensitive data in Azure SQL Database, SQL Managed Instance, or Azure Synapse Analytics pools. For more information, see [Sensitive Data](secure-data-privacy.md#sensitive-data).
+> Data integrations and data products can store sensitive data in Azure SQL Database, SQL Managed Instance, or Azure Synapse Analytics pools. For more information, see [Sensitive Data](./secure-data-privacy.md#sensitive-pii-data).
 
 ## Azure Data Lake security with enterprise scale analytics
 
