@@ -190,7 +190,7 @@ In addition to participating in these user groups, analysts should submit data a
 - Responsible: Who is completing the task?
 - Accountable: Who is making decisions and taking actions on the tasks(s)?
 - Consulted: Who will receive communication about decisions and tasks?
-- Informed: Who will be updated on the decisions and actions during the project?
+- Informed: Who will be updated about the decisions and actions during the project?
 
 |Role |Cloud environment|Data management landing zone|Data landing zone|Data integration|Data products|
 |-|-|-|-|-|-|

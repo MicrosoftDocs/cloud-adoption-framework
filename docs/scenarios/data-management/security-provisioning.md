@@ -35,11 +35,11 @@ The final step of creating an access package allows users to request access to t
 
 Enterprise scale analytics and AI construction set has centered around onboarding new Data Integration uses cases or Data Products via Azure Active Directory entitlement management.
 
-Azure Active Directory (Azure AD) entitlement management is an identity governance feature that automates workflows for access requests, access assignments, reviews, and expiration, supporting organizations to manage identity and the access life cycle at scale. For guidance about configuring access, see [What is Azure AD entitlement management?](/azure/active-directory/governance/entitlement-management-overview).
+Azure Active Directory (Azure AD) entitlement management is an identity governance feature that automates workflows for access requests, access assignments, reviews, and expiration, supporting organizations to manage identity and the access life cycle at scale. For guidance about configuring access, see an [overview of Azure AD entitlement management](/azure/active-directory/governance/entitlement-management-overview).
 
 The decision is based upon seeing scenarios where users receive access to a resource, they may hold on to access longer than is required for business purposes. Moving the entitlement packages allows delegate to non-administrators the ability to create access packages. These access packages contain resources, such as access to datasets, that users can request, and the delegated access package managers can define policies with rules for which users can request, who must approve their access, and when access expires.
 
-This video provides an overview of entitlement management and its value:
+This video recaps entitlement management and its value:
 
 >[!VIDEO <https://www.youtube.com/embed/_Lss6bFrnQ8>]
 
@@ -75,6 +75,8 @@ The following Azure AD group naming conventions are suggested for table access c
 - Schema or table tame
 - RW for read-write and R for read-only
 
+## The Azure AD entitlement process
+
 1. Azure AD entitlement management creates access packages in the data landing zone access packages catalog. The access packages can contain multiple Azure AD groups. The **Finance Analysis** package above gives access to Finance and LOB A while the **Finance Writers** package gives access to Schema F and LOB A. It's recommended to only grant write access to those who are creating the dataset. Read-only should be the default otherwise.
 
 1. Users browse an access package catalog or request access to the packages from a direct link (a docs link or a data catalog).
@@ -83,10 +85,10 @@ The following Azure AD group naming conventions are suggested for table access c
 
 1. If approved, the user is notified and given access to the dataset.
 
-1. If the enterprise wants to grant user permissions based on metadata (for example, a user's division, title, or location), then [creating or update a dynamic group in Azure AD](/azure/active-directory/enterprise-users/groups-create-rule) could help, and this dynamic group could be added as an approved group to the access package.
+1. If the enterprise wants to grant user permissions based on metadata (for example, a user's division, title, or location), then [dynamic groups in Azure AD](/azure/active-directory/enterprise-users/groups-create-rule) could be added as an approved group to the access package.
 
 > [!IMPORTANT]
-> Figure 1 illustrates adding Azure AD user groups, but the same process could help with adding Azure service principals, which are used by Data Product teams for ingestion pipelines and more. It is recommended that you set up two life cycle settings, one for users to request short-term access (30 days) and another for requesting longer access periods (90 days).
+> Figure 1 illustrates adding Azure AD user groups, and the same process could help with adding Azure service principals, which are used by Data Product teams for ingestion pipelines and more. It is recommended that you set up two life cycle settings, one for users to request short-term access (30 days) and another for requesting longer access periods (90 days).
 
 ## Configure Azure AD entitlement management
 
@@ -106,7 +108,7 @@ Figure 2 summarizes how different personas work together to control access to da
 
 1. Integration Ops and Data Product create and manage data asset security groups. They use automated scripts that manage how the security groups are created and updated.
 
-1. A Data manager part of Integration Ops or Data Product can curate access packages and define which access and applications are included. The access packages are published to their corresponding catalogs. Accessp packages typically to user profiles (for example, a base package for finance users) and can include expiration and access review policies. Special policies also exist for external guest users.
+1. A Data manager part of Integration Ops or Data Product can curate access packages and define which access and applications are included. The access packages are published to their corresponding catalogs. Access packages typically correspond to user profiles (for example, a base package for finance users) and can include expiration and access review policies. Special policies also exist for external guest users.
 
 1. Users browse packages in a MyAccess portal and can request access to these packages themselves. However, a manager could also request that for an AP-admin (requires assignment-manager role) to grant their team access.
 
