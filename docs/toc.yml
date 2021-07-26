@@ -255,6 +255,61 @@ items:
         href: ready/landing-zone/landing-zone-journey.md        
       - name: Design areas
         href: ready/landing-zone/design-areas.md
+        items:
+        - name: Azure billing and AD tenant 
+          href: ready/landing-zone/design-area/azure-billing-ad-tenant.md
+        - name: Identity and access management 
+          href: ready/landing-zone/design-area/identity-access-management.md  
+        - name: Network topology and connectivity
+          items:
+            - name: Overview
+              href: ready/enterprise-scale/network-topology-and-connectivity.md
+            - name: Plan for IP addressing
+              href: ready/azure-best-practices/plan-for-ip-addressing.md
+            - name: DNS for on-premises and Azure resources
+              href: ready/azure-best-practices/dns-for-on-premises-and-azure-resources.md
+            - name: Private Link and DNS integration at scale
+              href: ready/azure-best-practices/private-link-and-dns-integration-at-scale.md
+            - name: Define an Azure network topology
+              href: ready/azure-best-practices/define-an-azure-network-topology.md
+            - name: Virtual WAN network topology (Microsoft-managed)
+              href: ready/azure-best-practices/virtual-wan-network-topology.md
+            - name: Traditional Azure networking topology
+              href: ready/azure-best-practices/traditional-azure-networking-topology.md
+            - name: Connectivity to Azure
+              href: ready/azure-best-practices/connectivity-to-azure.md
+            - name: Connectivity to Azure PaaS services
+              href: ready/azure-best-practices/connectivity-to-azure-paas-services.md
+            - name: Plan for inbound and outbound internet connectivity
+              href: ready/azure-best-practices/plan-for-inbound-and-outbound-internet-connectivity.md
+            - name: Plan for application delivery
+              href: ready/azure-best-practices/plan-for-app-delivery.md
+            - name: Plan for landing zone network segmentation
+              href: ready/azure-best-practices/plan-for-landing-zone-network-segmentation.md
+            - name: Define network encryption requirements
+              href: ready/azure-best-practices/define-network-encryption-requirements.md
+            - name: Plan for traffic inspection
+              href: ready/azure-best-practices/plan-for-traffic-inspection.md
+            - name: Connectivity to other cloud providers
+              href: ready/azure-best-practices/connectivity-to-other-providers.md
+            - name: Connectivity to Oracle Cloud Infrastructure
+              href: ready/azure-best-practices/connectivity-to-other-providers-oci.md   
+        - name: Resource organization
+          items:
+          - name: Considerations
+            href: ready/landing-zone/design-area/resource-org-consideration.md     
+          - name: Best practices
+            href: ready/landing-zone/design-area/resource-org-best-practices.md
+          - name: Accelerator configuration
+            href: ready/landing-zone/design-area/resource-org-accelerator.md      
+        - name: Governance
+          href: ready/landing-zone/design-area/governance.md
+        - name: Security
+          href: ready/landing-zone/design-area/security.md  
+        - name: Management
+          href: ready/landing-zone/design-area/identity-access-management.md
+        - name: Platform automation and DevOps
+          href: ready/landing-zone/design-area/platform-ops-devops.md      
       - name: Choose a landing zone option
         href: ready/landing-zone/choose-landing-zone-option.md
       - name: Implementation options
