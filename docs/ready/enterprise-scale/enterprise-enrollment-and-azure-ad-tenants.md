@@ -93,7 +93,8 @@ An MCA often represents an organization's hierarchy, which is constructed from b
   - However, Subscriptions across multiple Azure AD Tenants are supported on a single MCA as detailed [here](/azure/cost-management-billing/microsoft-customer-agreement/manage-tenants#how-tenants-and-subscriptions-relate-to-billing-account) and [here.](/azure/cost-management-billing/microsoft-customer-agreement/manage-tenants#manage-subscriptions-under-multiple-tenants-in-a-single-microsoft-customer-agreement)
 - New Azure Subscriptions provisioned upon an MCA are always associated to the Azure AD Tenant to which the MCA billing account is located in.
 - MCAs utilize the RBAC model and therefore multiple users can be assigned with the required roles at the same scopes (e.g. Billing Account, Billing Profile, Invoice Section)
-  - These billing roles and assignments are outside of the standard Azure RBAC roles and assignments. E.g. They cannot be assigned at a Management Group or Resource Group scope.
+  - These billing roles and assignments are outside of the standard Azure RBAC roles and assignments. 
+    - E.g. They cannot be assigned at a Management Group or Resource Group scope.
 - A subscription can belong to only one Invoice Section at any given time.
   - Subscriptions can only be moved between Invoice Sections within the same Billing Profile.
 - An optional Purchase Order (PO) number can be set on a Billing Profile.
