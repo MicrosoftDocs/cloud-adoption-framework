@@ -1,9 +1,9 @@
 ---
 title: Enterprise Agreement enrollment and Azure Active Directory tenants
 description: Enterprise enrollment and Azure Active Directory tenants.
-author: BrianBlanchard
-ms.author: brblanch
-ms.date: 06/15/2020
+author: jtracey93
+ms.author: jatracey
+ms.date: 07/26/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -12,18 +12,31 @@ ms.custom: think-tank
 
 # Enterprise Agreement enrollment and Azure Active Directory tenants
 
+Azure can be consumed via Subscriptions that may be from multiple [offer types](https://azure.microsoft.com/support/legal/offer-details/) (e.g. EA, MCA, CSP etc.). All of these various [offer types](https://azure.microsoft.com/support/legal/offer-details/) can be used together with each other to provide customers flexibility in their billing options when consuming Azure.
+
+![Diagram that shows Azure Scopes within a single Azure AD Tenant with multiple billing offer Subscriptions.](./media/az-scopes-billing.png)
+
+*Figure 1: The Azure Scopes in a single Azure AD Tenant with Subscriptions of different offer types.*
+
+An Enterprise Scale architecture supports Azure Subscriptions from any [offer type](https://azure.microsoft.com/support/legal/offer-details/). This is due to the fact that an Enterprise Scale architecture only requires Azure Subscriptions to be within a single Azure AD Tenant to then be brought into the Management Group hierarchy within that Tenant. They then can be managed by the various controls implemented as part of the Enterprise Scale platform; like Azure Policies and Role-Based Access Controls (RBAC).
+
+>[!NOTE]
+> Enterprise Scale is only scoped and deployed into a single Azure AD Tenant, however the billing options used may span multiple Azure AD Tenants. 
+>  
+> For example an EA Enrollment supports Azure Subscriptions across multiple Azure AD Tenant's.
+
 ## Plan for enterprise enrollment
 
-An Enterprise Agreement (EA) enrollment represents the commercial relationship between Microsoft and how your organization uses Azure. It provides the basis for billing across all your subscriptions and affects administration of your digital estate. Your EA enrollment is managed via the Azure EA portal. An enrollment often represents an organization's hierarchy, which includes departments, accounts, and subscriptions. This hierarchy represents cost-enrollment groups within an organization.
+An Enterprise Agreement (EA) enrollment represents the commercial relationship between Microsoft and how your organization uses Azure. It provides the basis for billing across all your subscriptions and affects administration of your digital estate. Your EA enrollment is managed via the Azure EA portal (https://ea.azure.com). An enrollment often represents an organization's hierarchy, which includes departments, accounts, and subscriptions. This hierarchy represents cost centres groups within an organization.
 
 ![Diagram that shows Azure EA hierarchies.](./media/ea.png)
 
-*Figure 1: An Azure EA enrollment hierarchy.*
+*Figure 2: An Azure EA enrollment hierarchy.*
 
 - Departments help to segment costs into logical groupings and to set a budget or quota at the department level. The quota isn't enforced firmly and is used for reporting purposes.
 - Accounts are organizational units in the Azure EA portal. They can be used to manage subscriptions and access reports.
 - Subscriptions are the smallest unit in the Azure EA portal. They're containers for Azure services managed by the Service Administrator. They're where your organization deploys Azure services.
-- EA enrollment roles link users with their functional role. These roles are:
+- [EA enrollment roles](/azure/cost-management-billing/manage/understand-ea-roles#enterprise-user-roles) link users with their functional role. These roles are:
   - Enterprise Administrator
   - Department Administrator
   - Account Owner
@@ -32,7 +45,7 @@ An Enterprise Agreement (EA) enrollment represents the commercial relationship b
 
 **Design considerations:**
 
-- The enrollment provides a hierarchical organizational structure to govern the management of subscriptions.
+- The enrollment provides a hierarchical organizational structure to govern the management of subscriptions as detailed further [here.](/azure/cost-management-billing/manage/understand-ea-roles#azure-enterprise-portal-hierarchy)
 - Multiple environments can be separated at an EA-account level to support holistic isolation.
 - There can be multiple administrators appointed to a single enrollment.
 - Each subscription must have an associated Account Owner.
@@ -50,9 +63,54 @@ An Enterprise Agreement (EA) enrollment represents the commercial relationship b
 - Restrict and minimize the number of account owners within the enrollment to avoid the proliferation of admin access to subscriptions and associated Azure resources.
 - If multiple Azure Active Directory (Azure AD) tenants are used, verify that the Account Owner is associated with the same tenant as where subscriptions for the account are provisioned.
 - Set up Enterprise Dev/Test and production environments at an EA account level to support holistic isolation.
+- Utilize the [Enterprise Dev/Test Offer](/azure/cost-management-billing/manage/ea-portal-administration#enterprise-devtest-offer) for Dev/Test workloads.
+  - Ensure you comply with the usage terms as detailed [here.](https://azure.microsoft.com/offers/ms-azr-0148p/)
 - Don't ignore notification emails sent to the notification account email address. Microsoft sends important EA-wide communications to this account.
 - Don't move or rename an EA account in Azure AD.
 - Periodically audit the EA portal to review who has access and avoid using a Microsoft account where possible.
+- Enable both **DA View Charges** and **AO View Charges** on every EA enrollment, as per [these instructions](/azure/cost-management-billing/costs/assign-access-acm-data#enable-access-to-costs-in-the-azure-portal), to allow Azure Cost Management data to be visible in the Azure Portal to users with required permissions. 
+
+## Plan for Microsoft Customer Agreement (MCA)
+
+A Microsoft Customer Agreement (MCA) is the new modern commerce platform offering for Azure which represents the commercial relationship between Microsoft and how your organization uses Azure. The Microsoft Customer Agreement enables a streamlined, electronic transaction in an eleven-page agreement that doesn’t expire. It provides the basis for billing across all your subscriptions and affects administration of your digital estate. Your MCA is managed via the Azure portal (https://portal.azure.com).
+
+An MCA often represents an organization's hierarchy, which is constructed from billing profiles, invoice sections and subscriptions. This hierarchy represents cost centres groups within an organization.
+
+![Diagram that shows an MCA hierarchy.](./media/mca-hierarchy.png)
+
+*Figure 3: An MCA hierarchy using Invoice Sections.*
+
+>[!IMPORTANT]
+> If migrating from an EA to an MCA, please review the following pages:
+>  
+> - [Complete Enterprise Agreement tasks in your billing account for a Microsoft Customer Agreement](/azure/cost-management-billing/manage/mca-enterprise-operations)
+> - [Set up your billing account for a Microsoft Customer Agreement](/azure/cost-management-billing/manage/mca-setup-account)
+
+**Design considerations:**
+
+- The MCA provides a hierarchical organizational structure to govern the management of subscriptions as detailed further [here.](/azure/cost-management-billing/manage/mca-section-invoice)
+- An MCA billing account is managed by a single Azure AD Tenant only.
+  - However, Subscriptions across multiple Azure AD Tenants are supported on a single MCA as detailed [here](/azure/cost-management-billing/microsoft-customer-agreement/manage-tenants#how-tenants-and-subscriptions-relate-to-billing-account) and [here.](/azure/cost-management-billing/microsoft-customer-agreement/manage-tenants#manage-subscriptions-under-multiple-tenants-in-a-single-microsoft-customer-agreement)
+- New Azure Subscriptions provisioned upon an MCA are always associated to the Azure AD Tenant to which the MCA billing account is located in.
+- MCAs utilize the RBAC model and therefore multiple users can be assigned with the required roles at the same scopes (e.g. Billing Account, Billing Profile, Invoice Section)
+  - These billing roles and assignments are outside of the standard Azure RBAC roles and assignments. E.g. They cannot be assigned at a Management Group or Resource Group scope.
+- A subscription can belong to only one Invoice Section at any given time.
+  - Subscriptions can only be moved between Invoice Sections within the same Billing Profile.
+- An optional Purchase Order (PO) number can be set on a Billing Profile.
+- A subscription can be suspended based on a specified set of criteria.
+- Before provisioning additional Billing Profiles review the potential impacts to charges and reservations detailed [here.](/azure/cost-management-billing/manage/mca-section-invoice#things-to-consider-when-adding-new-billing-profiles)
+
+**Design recommendations:**
+
+- Set up the **Contact** email address on the MCA Billing Account to ensure notifications are sent to an appropriate group mailbox.
+- Assign a budget for each Invoice Section and/or Billing Profile, and establish an alert associated with the budget.
+- An organization can have a variety of structures, such as functional, divisional, geographic, matrix, or team structure. Use organizational structure to map your organization structure to your MCA hierarchy.
+  - Invoice Sections are suitable in most scenarios.
+- Create a new Invoice Section for IT, if business domains have independent IT capabilities.
+- Don't ignore notification emails sent to the **Contact** email address. Microsoft sends important communications to this address.
+- Periodically audit the MCA Billing RBAC role assignments to review who has access.
+- Utilize the Azure Plan Dev/Test Offer for Dev/Test workloads.
+  - Ensure you comply with the usage terms as detailed [here.](https://azure.microsoft.com/en-gb/offers/ms-azr-0148g/)
 
 ## Define Azure AD tenants
 
