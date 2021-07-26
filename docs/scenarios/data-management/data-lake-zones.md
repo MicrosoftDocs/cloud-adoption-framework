@@ -1,6 +1,6 @@
 ---
-title: Azure Enterprise Scale Analytics and AI Teams Data Lake Services
-description: Enterprise Scale Analytics and AI Architecture Data Lake Services
+title: Azure Enterprise-scale analytics and AI Teams Data Lake Services zones
+description: Enterprise Scale Analytics and AI Architecture Data Lake Services zones
 author:  mboswell
 ms.author:  mboswell # Microsoft employees only
 ms.date: 03/03/2021
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Data Lake Zones
+# Data Lake landing zones
 
 When landing data into a data lake, it is important to pre-plan the structure of the data so that security, partitioning, and processing can be utilized effectively. As outlined in [The Three Data Lakes](best-practices/data-lake-overview.md#the-three-data-lakes) we have three data lakes as a starting point for Enterprise Scale Analytics and AI.
 
