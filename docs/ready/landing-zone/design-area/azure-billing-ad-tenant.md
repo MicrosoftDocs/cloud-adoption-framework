@@ -11,3 +11,9 @@ ms.custom: internal
 ---
 
 # Design area: Azure Billing and Active Directory tenant
+
+## Considerations
+
+## Best Practices
+
+## Azure Accelerator configuration
