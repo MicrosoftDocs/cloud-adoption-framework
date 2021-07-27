@@ -47,7 +47,7 @@ Since scalability is a key concept and a single data lake may limit scalability 
 * Isolation of data environments and predictability. For example, you wish to isolate activities running in the laboratory zone to avoid potential impact on the curated zone, which holds data with greater business value that is used for critical decision making.
 * Features and functionality at the storage account level. Consider whether lifecycle management options or firewall rules need to be applied at the data landing zone level or data lake level.
 * Whilst there are good reasons to have multiple storage accounts, be careful not to create unnecessary silos. Avoid creating duplicate data projects due to lack of visibility or knowledge-sharing across the organization. Ensure that a data catalog, good data governance and project tracking tools are in place.
-* Data processing tools and technologies, such as Azure Data Factory and Azure Databricks (Apache Spark), can easily interact with data across multiple lakes if permissions are appropriately configured.
+* Data processing tools and technologies, such as Azure Data Factory and Azure Databricks (for Apache Spark), can easily interact with data across multiple lakes if permissions are appropriately configured.
 * Regional vs global lakes. Globally distributed consumers or processes on the lake may be sensitive to latency caused by geographic distances and so require data to reside locally. Regulatory constraints or data sovereignty may require data to remain within a particular region. See [Multiregion deployments](#multiregion-deployments) for more information.
 
 ## Multiregion deployments
