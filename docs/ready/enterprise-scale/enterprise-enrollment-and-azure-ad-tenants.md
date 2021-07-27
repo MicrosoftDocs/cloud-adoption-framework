@@ -111,7 +111,35 @@ An MCA often represents an organization's hierarchy, which is constructed from b
 - Don't ignore notification emails sent to the **Contact** email address. Microsoft sends important communications to this address.
 - Periodically audit the MCA Billing RBAC role assignments to review who has access.
 - Utilize the Azure Plan Dev/Test Offer for Dev/Test workloads.
-  - Ensure you comply with the usage terms as detailed [here.](https://azure.microsoft.com/en-gb/offers/ms-azr-0148g/)
+  - Ensure you comply with the usage terms as detailed [here.](https://azure.microsoft.com/offers/ms-azr-0148g/)
+
+## Plan for Cloud Solutions Provider (CSP)
+
+The Cloud Solutions Provider (CSP) is available for Microsoft partners to enable them to transact across Microsoft Cloud services (i.e. Azure, O365, Enterprise Mobility Suite and Dynamics CRM Online) through a single platform. CSP enables partners to: own the customer lifecycle and relationship end-to-end; set the price and terms and directly bill customers; directly provision and manage subscriptions; attach value-added services; and be the first point of contact for customer support.
+
+[CSP for Azure](https://azure.microsoft.com/offers/ms-azr-0145p/) comes in the form of Azure Plan in CSP subscriptions that are hosted upon the partner's [Microsoft Partner Agreement (MPA)](/azure/cost-management-billing/understand/mpa-overview). The MPA is similar to the MCA, mentioned above, as they are both hosted on the modern commerce platform and also both use the [Microsoft Customer Agreement](https://www.microsoft.com/licensing/docs/customeragreement) simplified purchase agreement.
+
+![Diagram that shows an MPA hierarchy.](./media/mpa-hierarchy.png)
+
+*Figure 3: An MPA hierarchy.*
+
+>[!IMPORTANT]
+> An MPA is managed completely by the partner (CSP).
+
+**Design considerations:**
+
+- A CSP reseller relationship must be established between the partner and each Azure AD Tenant that the customer wishes to provision Azure Plan in CSP Subscriptions in.
+- New Azure Plan in CSP Subscriptions can only be provisioned by the partner.
+- A subscription can be suspended based on a specified set of criteria and also by the partner.
+- Azure Reservations can, by default, only be purchased by the partner for their customer.
+  - Customers can however be granted permission to purchase their own Azure Reservations from their CSP via the [**Customer Permissions** feature.](/partner-center/give-customers-permission)
+
+**Design recommendations:**
+
+- Work with your CSP partner to ensure Azure Lighthouse is utilized for their access over Administer on Behalf of (AOBO) for most support scenarios.
+  - As per the guidance, [Azure Lighthouse and the Cloud Solution Provider program.](/lighthouse/concepts/cloud-solution-provider)
+- Work with your CSP partner to understand support case creation and escalation processes.
+- Discuss Subscription self-service creation possibilities with your CSP partner.
 
 ## Define Azure AD tenants
 
@@ -133,3 +161,6 @@ Ask basic security questions during the Azure AD design phase, such as how your 
 - Plan and implement for [emergency access](/azure/active-directory/users-groups-roles/directory-emergency-access) or break-glass accounts to prevent tenant-wide account lockout.
 - Use [Azure AD Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) for identity and access management.
 - Avoid creating multiple Azure AD Tenants as per the guidance in [Testing approach for enterprise scale](./testing-approach.md) and [Cloud Adoption Framework Azure best practices guidance to standardize on a single directory and identity](../../secure/security-top-10.md#9-architecture-standardize-on-a-single-directory-and-identity).
+- Use [Azure Lighthouse](/azure/lighthouse/overview) where appropriate, in the following scenarios:
+  - 3rd Party/Partner access to Azure resources in customer Azure AD Tenants.
+  - Centralized access to Azure resources in Azure AD Multi-Tenant architectures.
