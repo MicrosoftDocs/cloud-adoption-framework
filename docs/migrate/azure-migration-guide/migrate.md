@@ -31,7 +31,7 @@ Azure Migrate is a centralized hub to assess and migrate on-premises servers, in
   - Agentless migration of VMware virtual machines to Azure.
   - Assess on-premises databases and migrate them to Azure SQL Database or to SQL Managed Instance.
   - Assess on-premises web applications and migrate them to Azure App Service by using the Azure App Service Migration Assistant.
-  - Assess your on-premises virtual desktop infrastructure (VDI) and migrate it to Windows Virtual Desktop in Azure.
+  - Assess your on-premises virtual desktop infrastructure (VDI) and migrate it to Azure Virtual Desktop.
   - Migrate large amounts of data to Azure quickly and cost-effectively using Azure Data Box products.
 - Extensible approach with ISV integration (such as Cloudamize).
 
@@ -226,7 +226,7 @@ You can choose from a variety of experienced systems integrator partners and too
 
 [Learn more](/azure/cosmos-db/partners-migration-cosmosdb#migration-tools)
 
-Visit the [Azure migration center](https://azure.microsoft.com/migration/migration-partners/) to discover organizations offering ready-to-use partner technology solutions to fit your migration scenarios and learn more about additional third-party migration tools and support services.
+Visit the [Azure migration and modernization center](https://azure.microsoft.com/migration/) to discover organizations offering ready-to-use partner technology solutions to fit your migration scenarios and learn more about additional third-party migration tools and support services.
 
 Visit the [Azure Database Migration Guide](/data-migration/) to see a range of database migration options and step-by-step guidance with native and partners.
 

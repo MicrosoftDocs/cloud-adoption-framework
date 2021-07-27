@@ -6,7 +6,7 @@ ms.author: brblanch
 ms.date: 09/18/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: reference
+ms.subservice: secure
 ms.custom: internal
 ---
 
@@ -16,7 +16,7 @@ These are the top Azure security best practices that Microsoft recommends based 
 
 For a video presentation of these best practices, see [Top 10 best practices for Azure security](https://techcommunity.microsoft.com/t5/video-hub/top-10-best-practices-for-azure-security/m-p/1698837).
 
-## 1. people: Educate teams about the cloud security journey
+## 1. People: Educate teams about the cloud security journey
 
 *The team needs to understand the journey they're on.*
 
@@ -43,7 +43,7 @@ Microsoft has published lessons learned by our customers and our own IT organiza
 
 Also see the Azure Security Benchmark [gs-3: align organization roles, responsibilities, and accountabilities](/security/benchmark/azure/security-controls-v2-governance-strategy#gs-3-align-organization-roles-responsibilities-and-accountabilities).
 
-## 2. people: Educate teams on cloud security technology
+## 2. People: Educate teams on cloud security technology
 
 *People need to understand where they're going.*
 
@@ -82,7 +82,7 @@ Microsoft provides extensive resources to help technical professionals ramp up o
 
 Also see the Azure Security Benchmark [gs-3: align organization roles, responsibilities, and accountabilities](/security/benchmark/azure/security-controls-v2-governance-strategy#gs-3-align-organization-roles-responsibilities-and-accountabilities)
 
-## 3. process: Assign accountability for cloud security decisions
+## 3. Process: Assign accountability for cloud security decisions
 
 *If nobody is accountable for making security decisions, they won't get made.*
 
@@ -117,7 +117,7 @@ These are the typical areas where security decisions are needed, descriptions, a
 
 Also see the Azure Security Benchmark [gs-3: align organization roles, responsibilities, and accountabilities](/security/benchmark/azure/security-controls-v2-governance-strategy#gs-3-align-organization-roles-responsibilities-and-accountabilities)
 
-## 4. process: Update incident response processes for cloud
+## 4. Process: Update incident response processes for cloud
 
 *You don't have time to plan for a crisis during a crisis.*
 
@@ -164,7 +164,7 @@ While similar in many ways, cloud platforms have important technical difference 
 
 Also see the Azure Security Benchmark [IR-1: preparation - update incident response process for Azure](/security/benchmark/azure/security-controls-v2-incident-response#ir-1-preparation--update-incident-response-process-for-azure).
 
-## 5. process: Establish security posture management
+## 5. Process: Establish security posture management
 
 *First, know thyself.*
 
@@ -219,7 +219,7 @@ These new capabilities offer new possibilities, but realizing value from them re
 
 Also see the Azure Security Benchmark [gs-2: define security posture management strategy](/security/benchmark/azure/security-controls-v2-governance-strategy#gs-2-define-security-posture-management-strategy).
 
-## 6. technology: Require passwordless or multifactor authentication
+## 6. Technology: Require passwordless or multifactor authentication
 
 *Are you willing to bet the security of your enterprise that professional attackers can't guess or steal your administrator's password?*
 
@@ -249,7 +249,7 @@ While multifactor authentication was once a burdensome extra step, passwordless 
 
 Also see the Azure Security Benchmark [ID-4: use strong authentication controls for all Azure Active Directory-based access](/security/benchmark/azure/security-controls-v2-identity-management#id-4-use-strong-authentication-controls-for-all-azure-active-directory-based-access).
 
-## 7. technology: Integrate native firewall and network security
+## 7. Technology: Integrate native firewall and network security
 
 *Simplify protection of systems and data against network attacks.*
 
@@ -287,7 +287,7 @@ Documentation on Azure native network security capabilities can be found at:
 
 Also see the Azure Security Benchmark [ns-4: protect applications and services from external network attacks](/security/benchmark/azure/security-controls-v2-network-security#ns-4-protect-applications-and-services-from-external-network-attacks).
 
-## 8. technology: Integrate native threat detection
+## 8. Technology: Integrate native threat detection
 
 *Simplify detection and response of attacks against Azure systems and data.*
 
@@ -314,7 +314,7 @@ These native solutions also enable security operations teams to focus on inciden
 
 Also see the Azure Security Benchmark [LT-1: enable threat detection for Azure resources](/security/benchmark/azure/security-controls-v2-logging-threat-detection#lt-1-enable-threat-detection-for-azure-resources).
 
-## 9. architecture: Standardize on a single directory and identity
+## 9. Architecture: Standardize on a single directory and identity
 
 *Nobody wants to deal with multiple identities and directories.*
 

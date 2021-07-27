@@ -68,7 +68,7 @@ After pinning down goals and requirements, Contoso designs and reviews a deploym
 - Contoso will use an [Azure Dev/Test subscription](https://azure.microsoft.com/offers/ms-azr-0023p/) to reduce costs for Azure resources. This subscription offers significant savings, including VMs that don't incur licensing fees for Microsoft software.
 - Contoso will use DevTest Labs for managing the environments. New VMs will be created in DevTest Labs to support the move to new tools for development and testing in the cloud.
 - The on-premises dev/test VMs in the Contoso datacenter will be decommissioned after the migration is done.
-- Developers and testers will have access to Windows Virtual Desktop for their workstations.
+- Developers and testers will have access to Azure Virtual Desktop for their workstations.
 
 ![Diagram of the scenario architecture.](./media/contoso-migration-devtest-to-labs/architecture.png)
 *Figure 1: Scenario architecture.*
@@ -95,7 +95,7 @@ Contoso will migrate its development application and database VMs to new Azure V
 - Contoso already has the [Azure infrastructure](./contoso-migration-infrastructure.md) in place, including the development virtual network.
 - With everything prepared, Contoso will provision and configure DevTest Labs.
 - Contoso will configure the development virtual network, assign a resource group, and set policies.
-- Contoso will create Windows Virtual Desktop instances for developers to use at remote locations.
+- Contoso will create Azure Virtual Desktop instances for developers to use at remote locations.
 - Contoso will create VMs within DevTest Labs for development and migrate databases.
 
 ![Diagram that illustrates the migration process.](./media/contoso-migration-devtest-to-labs/migration-process-devtest-labs.png)
@@ -127,7 +127,7 @@ Contoso admins first need to provision a new subscription by using the Azure Dev
 
 They set these up as follows:
 
-The admins follow the link to the [Azure Dev/Test subscription offer](https://azure.microsoft.com/offers/ms-azr-0023p/) and provision a new subscription, which saves them up to 80 percent on their systems. This offer allows them to run Windows 10 images on Azure for dev/test. They will gain access to [Windows Virtual Desktop](/azure/virtual-desktop/overview) to simplify the management experience of the remote developers.
+The admins follow the link to the [Azure Dev/Test subscription offer](https://azure.microsoft.com/offers/ms-azr-0023p/) and provision a new subscription, which saves them up to 80 percent on their systems. This offer allows them to run Windows 10 images on Azure for dev/test. They will gain access to [Azure Virtual Desktop](/azure/virtual-desktop/overview) to simplify the management experience of the remote developers.
 
 ![Screenshot of a Pay-As-You-Go Dev/Test offer, with an **Activate** button.](./media/contoso-migration-devtest-to-labs/devtest-subscription.png)
 *Figure 3: An Azure Dev/Test subscription offer.*
@@ -196,7 +196,7 @@ With the DevTest Labs instance created, Contoso performs the following configura
 
 ## Step 3: Create Windows 10 Enterprise multi-session virtual desktops for developers to use from remote locations
 
-Contoso needs to create a Windows Virtual Desktop base for remote developers.
+Contoso needs to create an Azure Virtual Desktop base for remote developers.
 
 1. Contoso selects **All virtual machines** > **+ Add** and chooses a Windows 10 Enterprise multi-session base for a VM.
 
@@ -317,7 +317,7 @@ The Contoso security team reviews the Azure VMs to determine any security issues
 
 ## Conclusion
 
-In this article, Contoso moved its development environments to DevTest Labs. It also implemented Windows Virtual Desktop as a platform for remote and contract developers.
+In this article, Contoso moved its development environments to DevTest Labs. It also implemented Azure Virtual Desktop as a platform for remote and contract developers.
 
 **Need more help?**
 
