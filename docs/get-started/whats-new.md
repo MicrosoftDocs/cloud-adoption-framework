@@ -16,6 +16,14 @@ Here's a list of recent changes made to the Cloud Adoption Framework.
 
 This framework is built collaboratively with customers, partners, and internal Microsoft teams. New and updated content is released when it becomes available. These releases allow you to test, validate, and refine the guidance along with us. We encourage you to partner with us to build the Cloud Adoption Framework.
 
+## July 2021
+
+This release of the Cloud Adoption Framework includes updates to the Azure landing zone content in the Ready methodology.
+
+- Expanded the [What is a landing zone](../ready/landing-zone/index.md) article to include a conceptual architecture and Azure landing zone accelerator, aimed at helping customers plan their cloud environments and get to best practice implementation quickly and easily
+- Added new content for the [Journey to the target architecture](../ready/landing-zone/landing-zone-journey.md) aimed at helping organizations determine which guidance is best suited to their current position on their cloud journey
+- Updated the [Azure landing zone design areas](../ready/landing-zone/design-areas.md) to help distinguish between considerations for implementation and considerations for operating a landing zone
+
 ## June 2021
 
 We've added a new retail industry scenario in this release, designed to guide a retail company's cloud adoption journey from beginning to end.
