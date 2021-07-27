@@ -1,17 +1,17 @@
 ---
-title: Azure Enterprise Scale Analytics and AI Teams Data Lake Services
-description: Enterprise Scale Analytics and AI Architecture Data Lake Services
+title: Azure Data Lake zones
+description: This article describes the three Data Lakes accounts that should be provisioned for each Data Landing zone. 
 author:  mboswell
 ms.author:  mboswell # Microsoft employees only
-ms.date: 03/03/2021
+ms.date: 07/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Data Lake Zones
+# Data Lake zones
 
-Three [Azure Data Lake Storage Gen2 (ADLS)](/azure/storage/blobs/data-lake-storage-introduction) accounts should be provisioned per [Data Landing Zone](../architectures/data-landing-zone.md) in the "data lake services" resource group. As data passes through the different stages of transformation, it should be saved in one of the Data Landing Zone's three data lakes and available for the [data products](../architectures/data-landing-zone-data-products.md) in the lake which serves as the enriched and curated data layer. Data products would consume from the enriched and curated data layer only. These data lake accounts should be deployed into a single resource group.
+You should provision three [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction) accounts for each [data landing zone](../architectures/data-landing-zone.md) in the "data lake services" resource group. As data passes through the different stages of transformation, it should be saved in one of the Data Landing Zone's three data lakes and available for the [data products](../architectures/data-landing-zone-data-products.md) in the lake which serves as the enriched and curated data layer. Data products would consume from the enriched and curated data layer only. These data lake accounts should be deployed into a single resource group.
 
 ## Overview
 
