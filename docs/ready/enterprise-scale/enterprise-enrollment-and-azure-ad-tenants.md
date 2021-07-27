@@ -128,7 +128,7 @@ The Cloud Solutions Provider (CSP) is available for Microsoft partners to enable
 
 **Design considerations:**
 
-- A CSP reseller relationship must be established between the partner and each Azure AD Tenant that the customer wishes to provision Azure Plan in CSP Subscriptions in.
+- A [CSP reseller relationship](/partner-center/request-a-relationship-with-a-customer) must be established between the partner and each Azure AD Tenant that the customer wishes to provision Azure Plan in CSP Subscriptions in.
 - New Azure Plan in CSP Subscriptions can only be provisioned by the partner.
 - A subscription can be suspended based on a specified set of criteria and also by the partner.
 - Azure Reservations can, by default, only be purchased by the partner for their customer.
