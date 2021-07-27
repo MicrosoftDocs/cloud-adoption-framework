@@ -19,11 +19,15 @@ This article builds on the Plan methodology. It has specific guidance for data e
 
 Much of the guidance in the Plan methodology focuses on the [five Rs of rationalizing your digital estate](../../digital-estate/5-rs-of-rationalization.md). This scenario narrows the primary focus of rationalization to the **data estate**, which is a subset of the overall digital estate. This plan will also look broader and deeper at the data estate than you might in other plans. Specifically, it must include plans for your overall analytics and [data governance](govern.md) required to support the desired maturity.
 
+### Strategic initiatives
+
 To properly rationalize your data estate, begin by aligning your business outcomes to each of your data initiatives. This alignment will aid in prioritization and a clear understanding of the value your can derive from each data initiative. Initiatives that represent little business value and present lesser complexity for migration, can easily be included in your cloud migration plan to deliver quick efficiency gains. Initiatives with the greatest business impact or technical complexity typically require richer planning to enable long-term innovation value.
 
 :::image type="content" source="./images/strategic-initiative.png" alt-text=" Diagram of strategic initiative." lightbox="./images/strategic-initiative.png":::
 
-To prioritize projects, it is critical to begin with an [inventory and benchmark of your data estate](../../digital-estate/inventory). Tools like Azure Migrate can be used to capture rich benchmarking data from the infrastructure and data assets in your estate. This data can aid in tracking progress and measuring success. With this data, you can also quantify the exact investment needed for people, process, and technology.
+### Prioritization
+
+To prioritize projects (like those pictured in the prior section), it is critical to begin with an [inventory and benchmark of your data estate](../../digital-estate/inventory.md). Tools like Azure Migrate can be used to capture rich benchmarking data from the infrastructure and data assets in your estate. This data can aid in tracking progress and measuring success. With this data, you can also quantify the exact investment needed for people, process, and technology.
 
 A mapping of the business impact (from your strategic business outcomes) and technical complexity (from your data estate inventory) will identify waves of cloud adoption efforts to aid in prioritization of data projects.
 
@@ -33,7 +37,18 @@ A mapping of the business impact (from your strategic business outcomes) and tec
 |**Transform & Modernize**| Rehost & Refactor | When business value increases, so may the complexity of data estate management. These data assets will likely require a degree of transmission, transformation, & synchronization to keep on-prem processes running, while also enabling richer functions in the cloud. Tools like Azure Data Factory can help with the ongoing transformation after the data asset is migrated & modernized.|
 |**Innovate with confidence**| Rearchitect or Rebuild | Achieving high business value requires the ability to innovate with confidence. Use cloud-native data tools to democratize data, analyze information, and predict outcomes. |
 
-Rationalizing your data estate across these three waves will help develop a clearer plan to achieve business outcomes. It will also develop a better understanding of the skills your team(s) will need to be successful.
+### Workload identification
+
+Strategic initiatives are delivered by the workloads which run on top of your data environment. To properly architect workloads, you must first identify the workloads running within your data estate. At times, this process can be complex. Data workloads can include one or more data sources. They may also include one or more processes for preparing data, analyzing information, or predicting outcomes. 
+
+To simplify workload identification, start with wave planning approach described in the prior two sections. For each wave, identify the data sources, applications, and infrastructure required to deliver the strategic initiative. Evalaute their dependencies to see workload groupings more clearly, using the Azure Migrate tool. 
+
+- Transactional data assets will typically be associated with an existing application, making workload identification easier. 
+- Analysis and AI/ML solutions may be a bit more complex, requiring a more granular review of the outcomes delivered by each. When possible, associate analysis and AI solutions with the business processes which consumes their outputs (often times creating an application level mapping). For cross-application BI, AI, or ML solutions, create new workload names to map the data assets to the business processes they impact.
+
+Workloads identified in the digital estate assessment will be used throughout adoption to drive business impact classification. The derived values should be recorded using the same [namming and tagging standards](/ready/azure-best-practices/naming-and-tagging.md) used for other cloud adoption efforts.
+
+It will also develop a better understanding of the skills your team(s) will need to be successful.
 
 ## Develop a skilling plan
 
