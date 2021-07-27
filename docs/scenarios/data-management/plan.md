@@ -23,19 +23,17 @@ To properly rationalize your data estate, begin by aligning your business outcom
 
 :::image type="content" source="./images/strategic-initiative.png" alt-text=" Diagram of strategic initiative." lightbox="./images/strategic-initiative.png":::
 
-Benchmarking your current estate and capability is critical to ensure you can track progress and measure success. With this data, you can quantify the exact investment needed for people, process, and technology. You can see where you are on the maturity model, and the gaps you need to bridge.
+To prioritize projects, it is critical to begin with an [inventory and benchmark of your data estate](../../digital-estate/inventory). Tools like Azure Migrate can be used to capture rich benchmarking data from the infrastructure and data assets in your estate. This data can aid in tracking progress and measuring success. With this data, you can also quantify the exact investment needed for people, process, and technology.
 
-To help you get started, here's a table that shows the thought process:
+A mapping of the business impact (from your strategic business outcomes) and technical complexity (from your data estate inventory) will identify waves of cloud adoption efforts to aid in prioritization of data projects.
 
-|Category| Action areas | Current status focusing on five pillars of architecture |
-|----------|--------------|-------------------------------------|
-|**Preparation**| There are about eight to 10 areas here starting from strategy, charter, and ethics| ![Diagram of the current capability for preparation 1 3 2 0 0](images/pillar-1.png)|
-| **Agility**| There might be five to 10 areas here, such as strategy around data lake, catalog, and Common Data Model, dependent on the organization. | ![2 0 1 0 1](images/pillar-2.png) |
-| **Resilience**|10 to 20 areas are here starting from discovery, recovery, and anomaly detection. | ![Diagram of the current capability for agility 2 1 1 1 1](images/pillar-3.png) |
+|Wave| Rationalization | Outcomes |
+|----------|--------------|
+|**Migrate & Modernize**| Rehost & Refactor | Tactical, quick wins can be included in a standard migration projects alongside other apps & infrastructure. Tools like Azure Migrate can automated this type of one-time migration to the cloud. When possible, this approach allows for modernization of the data platform to Azure SQL, Cosmos DB, or other transactional data structures.|
+|**Transform & Modernize**| Rehost & Refactor | When business value increases, so may the complexity of data estate management. These data assets will likely require a degree of transmission, transformation, & synchronization to keep on-prem processes running, while also enabling richer functions in the cloud. Tools like Azure Data Factory can help with the ongoing transformation after the data asset is migrated & modernized.|
+|**Innovate with confidence**| Rearchitect or Rebuild | Achieving high business value requires the ability to innovate with confidence. Use cloud-native data tools to democratize data, analyze information, and predict outcomes. |
 
-As shown in the table, use the maturity level to rate your current capability between zero through four and use the five pillars of architecture to guide those benchmarks.
-
-Once the business outcomes that will drive your data strategy are clear, the next step is to build the capability to deliver them.
+Rationalizing your data estate across these three waves will help develop a clearer plan to achieve business outcomes. It will also develop a better understanding of the skills your team(s) will need to be successful.
 
 ## Develop a skilling plan
 
