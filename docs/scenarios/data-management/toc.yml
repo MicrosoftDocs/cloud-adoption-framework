@@ -114,10 +114,6 @@ items:
     - name: Frequently Asked Questions
       href: architectures/frequently-asked-questions.md
 
-    - name: Placeholder (Rick to add AAC RAs)
-      href: waf-placeholder.md
-
-
   - name: Best practices
     items:
       - name: Data Lake Implementation
