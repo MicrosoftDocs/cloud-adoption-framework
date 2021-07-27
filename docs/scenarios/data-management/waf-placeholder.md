@@ -1,6 +1,6 @@
 ---
-title: Azure Enterprise Scale Analytics and AI Define Strategy
-description: Enterprise Scale Analytics and AI Define Strategy
+title: Well-architected framework for data workloads
+description: Leverage the architecture principals of the Azure Well Architected Framework to design and optimized workloads running in your data estate.
 author: pratimdas
 ms.author: prda # Microsoft employees only
 ms.date: 01/27/2021
