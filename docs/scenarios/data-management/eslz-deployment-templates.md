@@ -20,7 +20,6 @@ The enterprise-scale for analytics and AI solution has the following core starte
 |[Data integration template - Batch processing](https://github.com/Azure/data-integration-batch) | Additional services required for batch data processing | No | One or more per data landing zone |
 |[Data integration template - Stream processing](https://github.com/Azure/data-integration-streaming) | Additional services required for processing data streams | No | One or more per data landing zone |
 |[Data product template - Analytics and data science](https://github.com/Azure/data-product-analytics)| Additional services required for data analytics and AI| No | One or more per data landing zone |
-| [Data product template - Reporting](https://github.com/Azure/data-product-reporting) | Additional services required for data product reporting | No | One or more per data landing zone|
 
 These templates not only contain Azure Resource Manager templates and their parameter files, but also CI/CD pipeline definitions for resource deployment.
 
