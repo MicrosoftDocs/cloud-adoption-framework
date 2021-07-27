@@ -19,23 +19,36 @@ This article builds on the Plan methodology. It has specific guidance for data e
 
 Much of the guidance in the Plan methodology focuses on the [five Rs of rationalizing your digital estate](../../digital-estate/5-rs-of-rationalization.md). This scenario narrows the primary focus of rationalization to the **data estate**, which is a subset of the overall digital estate. This plan will also look broader and deeper at the data estate than you might in other plans. Specifically, it must include plans for your overall analytics and [data governance](govern.md) required to support the desired maturity.
 
+### Strategic initiatives
+
 To properly rationalize your data estate, begin by aligning your business outcomes to each of your data initiatives. This alignment will aid in prioritization and a clear understanding of the value your can derive from each data initiative. Initiatives that represent little business value and present lesser complexity for migration, can easily be included in your cloud migration plan to deliver quick efficiency gains. Initiatives with the greatest business impact or technical complexity typically require richer planning to enable long-term innovation value.
 
 :::image type="content" source="./images/strategic-initiative.png" alt-text=" Diagram of strategic initiative." lightbox="./images/strategic-initiative.png":::
 
-Benchmarking your current estate and capability is critical to ensure you can track progress and measure success. With this data, you can quantify the exact investment needed for people, process, and technology. You can see where you are on the maturity model, and the gaps you need to bridge.
+### Prioritization
 
-To help you get started, here's a table that shows the thought process:
+To prioritize projects (like those pictured in the prior section), it is critical to begin with an [inventory and benchmark of your data estate](../../digital-estate/inventory.md). Tools like Azure Migrate can be used to capture rich benchmarking data from the infrastructure and data assets in your estate. This data can aid in tracking progress and measuring success. With this data, you can also quantify the exact investment needed for people, process, and technology.
 
-|Category| Action areas | Current status focusing on five pillars of architecture |
-|----------|--------------|-------------------------------------|
-|**Preparation**| There are about eight to 10 areas here starting from strategy, charter, and ethics| ![Diagram of the current capability for preparation 1 3 2 0 0](images/pillar-1.png)|
-| **Agility**| There might be five to 10 areas here, such as strategy around data lake, catalog, and Common Data Model, dependent on the organization. | ![2 0 1 0 1](images/pillar-2.png) |
-| **Resilience**|10 to 20 areas are here starting from discovery, recovery, and anomaly detection. | ![Diagram of the current capability for agility 2 1 1 1 1](images/pillar-3.png) |
+A mapping of the business impact (from your strategic business outcomes) and technical complexity (from your data estate inventory) will identify waves of cloud adoption efforts to aid in prioritization of data projects.
 
-As shown in the table, use the maturity level to rate your current capability between zero through four and use the five pillars of architecture to guide those benchmarks.
+|Wave| Rationalization | Outcomes |
+|----------|--------------|
+|**Migrate & Modernize**| Rehost & Refactor | Tactical, quick wins can be included in a standard migration projects alongside other apps & infrastructure. Tools like Azure Migrate can automated this type of one-time migration to the cloud. When possible, this approach allows for modernization of the data platform to Azure SQL, Cosmos DB, or other transactional data structures.|
+|**Transform & Modernize**| Rehost & Refactor | When business value increases, so may the complexity of data estate management. These data assets will likely require a degree of transmission, transformation, & synchronization to keep on-prem processes running, while also enabling richer functions in the cloud. Tools like Azure Data Factory can help with the ongoing transformation after the data asset is migrated & modernized.|
+|**Innovate with confidence**| Rearchitect or Rebuild | Achieving high business value requires the ability to innovate with confidence. Use cloud-native data tools to democratize data, analyze information, and predict outcomes. |
 
-Once the business outcomes that will drive your data strategy are clear, the next step is to build the capability to deliver them.
+### Workload identification
+
+Strategic initiatives are delivered by the workloads which run on top of your data environment. To properly architect workloads, you must first identify the workloads running within your data estate. At times, this process can be complex. Data workloads can include one or more data sources. They may also include one or more processes for preparing data, analyzing information, or predicting outcomes. 
+
+To simplify workload identification, start with wave planning approach described in the prior two sections. For each wave, identify the data sources, applications, and infrastructure required to deliver the strategic initiative. Evalaute their dependencies to see workload groupings more clearly, using the Azure Migrate tool. 
+
+- Transactional data assets will typically be associated with an existing application, making workload identification easier. 
+- Analysis and AI/ML solutions may be a bit more complex, requiring a more granular review of the outcomes delivered by each. When possible, associate analysis and AI solutions with the business processes which consumes their outputs (often times creating an application level mapping). For cross-application BI, AI, or ML solutions, create new workload names to map the data assets to the business processes they impact.
+
+Workloads identified in the digital estate assessment will be used throughout adoption to drive business impact classification. The derived values should be recorded using the same [namming and tagging standards](/ready/azure-best-practices/naming-and-tagging.md) used for other cloud adoption efforts.
+
+It will also develop a better understanding of the skills your team(s) will need to be successful.
 
 ## Develop a skilling plan
 
