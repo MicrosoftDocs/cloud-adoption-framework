@@ -6,7 +6,6 @@ items:
     href: strategy.md
   - name: Technical planning
     href: plan.md
-
   - name: Prepare your environments
     items:
     - name: Azure landing zones
