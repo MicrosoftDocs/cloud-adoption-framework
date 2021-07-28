@@ -31,7 +31,7 @@ When scaling up your Azure Virtual Desktop environment, your host pools are crea
 
 Another option is to start a process where checklists are used. In large environments, this process should only be part of the initial dev/test setup. The more you automate your gold image creation, the more secure you'll be in the accuracy of your build and environment stability.
 
-It's possible to take the "old" image, and then use it to create a VM. You can update that VM with the applications and configuration changes for that update, and then capture that to your "new" image. We don't recommend this process for creating gold images, as it's risky to maintain. It's the major cause of desktop virtualization environments becoming static and fragile. Windows is limited to running [Sysprep](/windows-hardware/manufacture/desktop/sysprep--generalize--a-windows-installation) 1001 times, which limits how many times you can create a gold image.
+It's possible to take the "old" image, and then use it to create a VM. You can update that VM with the applications and configuration changes for that update, and then capture that to your "new" image. We don't recommend this process for creating gold images, as it's risky to maintain. It's the major cause of desktop virtualization environments becoming static and fragile.
 
 There are many automation tools available to create gold images. Use the tool set that's most appropriate for your organization. You can choose the tool set based on the existing skill set and process, or cost considerations.
 
