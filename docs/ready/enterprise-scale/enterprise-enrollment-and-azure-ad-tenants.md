@@ -27,7 +27,7 @@ An Enterprise Scale architecture supports Azure Subscriptions from any [offer ty
 
 ## Plan for enterprise enrollment
 
-An Enterprise Agreement (EA) enrollment represents the commercial relationship between Microsoft and how your organization uses Azure. It provides the basis for billing across all your subscriptions and affects administration of your digital estate. Your EA enrollment is managed via the Azure EA portal (https://ea.azure.com). An enrollment often represents an organization's hierarchy, which includes departments, accounts, and subscriptions. This hierarchy represents cost centers groups within an organization.
+An Enterprise Agreement (EA) enrollment represents the commercial relationship between Microsoft and how your organization uses Azure. It provides the basis for billing across all your subscriptions and affects administration of your digital estate. Your EA enrollment is managed via the Azure EA portal (https://ea.azure.com). An enrollment often represents an organization's hierarchy, which includes departments, accounts, and subscriptions. This hierarchy represents cost centers within an organization.
 
 ![Diagram that shows Azure EA hierarchies.](./media/ea.png)
 
@@ -63,7 +63,7 @@ An Enterprise Agreement (EA) enrollment represents the commercial relationship b
 - Restrict and minimize the number of account owners within the enrollment to avoid the proliferation of admin access to subscriptions and associated Azure resources.
 - If multiple Azure Active Directory (Azure AD) tenants are used, verify that the Account Owner is associated with the same tenant as where subscriptions for the account are provisioned.
 - Set up Enterprise Dev/Test and production environments at an EA account level to support holistic isolation.
-- Utilize the [Enterprise Dev/Test Offer](/azure/cost-management-billing/manage/ea-portal-administration#enterprise-devtest-offer) for Dev/Test workloads.
+- Utilize the [Enterprise Dev/Test Offer](/azure/cost-management-billing/manage/ea-portal-administration#enterprise-devtest-offer) for Dev/Test workloads, where available. (see sub-bullet point)
   - Ensure you comply with the usage terms as detailed [here.](https://azure.microsoft.com/offers/ms-azr-0148p/)
 - Don't ignore notification emails sent to the notification account email address. Microsoft sends important EA-wide communications to this account.
 - Don't move or rename an EA account in Azure AD.
@@ -74,7 +74,7 @@ An Enterprise Agreement (EA) enrollment represents the commercial relationship b
 
 A Microsoft Customer Agreement (MCA) is the new modern commerce platform offering for Azure, which represents the commercial relationship between Microsoft and how your organization uses Azure. The Microsoft Customer Agreement enables a streamlined, electronic transaction in an 11 page agreement that doesn’t expire. It provides the basis for billing across all your subscriptions and affects administration of your digital estate. Your MCA is managed via the Azure portal (https://portal.azure.com).
 
-An MCA often represents an organization's hierarchy, which is constructed from billing profiles, invoice sections and subscriptions. This hierarchy represents cost centers groups within an organization.
+An MCA often represents an organization's hierarchy, which is constructed from billing profiles, invoice sections and subscriptions. This hierarchy represents cost centers within an organization.
 
 ![Diagram that shows an MCA hierarchy.](./media/mca-hierarchy.png)
 
@@ -110,7 +110,7 @@ An MCA often represents an organization's hierarchy, which is constructed from b
 - Create a new Invoice Section for IT, if business domains have independent IT capabilities.
 - Don't ignore notification emails sent to the **Contact** email address. Microsoft sends important communications to this address.
 - Periodically audit the MCA Billing RBAC role assignments to review who has access.
-- Utilize the Azure Plan Dev/Test Offer for Dev/Test workloads.
+- Utilize the Azure Plan Dev/Test Offer for Dev/Test workloads, where available. (see sub-bullet point)
   - Ensure you comply with the usage terms as detailed [here.](https://azure.microsoft.com/offers/ms-azr-0148g/)
 
 ## Plan for Cloud Solutions Provider (CSP)
@@ -152,6 +152,7 @@ Ask basic security questions during the Azure AD design phase, such as how your 
 **Design considerations:**
 
 - Multiple Azure AD tenants can function in the same enrollment.
+- Azure Lighthouse, currently, only supports delegation at the Subscription and Resource Group scopes.
 
 **Design recommendations:**
 
