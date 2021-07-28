@@ -43,26 +43,44 @@ An Enterprise Agreement (EA) enrollment represents the commercial relationship b
   - Service Administrator
   - Notification Contact
 
+### Enterprise Enrollment Relationship with Azure AD and Azure RBAC 
+
+When using an Enterprise Enrollment to provide Azure Subscriptions there are multiple authentication and authorization boundaries that are important to understand and more importantly the relationship between these boundaries.
+
+There is a inherent trust relationship between Azure Subscriptions and an Azure AD Tenant, which is detailed further [here](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory). An Enterprise Enrollment can also use Azure AD Tenants as Identity Provider (IdP), based on the [authentication level](/azure/cost-management-billing/manage/ea-portal-troubleshoot#authentication-level-types) set on the enrollment, and what option was selected when the enrollment Account Owner was created. 
+
+However, the EA enrollment roles, apart from the account owner, provide no access to an Azure AD or the Azure Subscriptions within that enrollment.
+
+For example, a finance user is granted the Enterprise Administrator role on the Enterprise Enrollment. The same finance user is a standard users with no elevated permissions/roles assigned to them in Azure AD or on any Azure Management Group, Subscription, Resource Group or Resource. The finance user will only be able to perform the roles as listed [here](/azure/cost-management-billing/manage/understand-ea-roles#enterprise-administrator) and will have no access to the Azure Subscriptions on the enrollment.
+
+The only EA enrollment role that has access to Azure Subscriptions is the Account Owner, as this is created when the Subscription is created to allow them access to it.
+
+![Diagram that shows Azure EA relationship with Azure AD and Azure RBAC.](./media/ea-azure-relationship.png)
+
+*Figure 3: An Azure EA relationship with Azure AD and Azure RBAC.*
+
 **Design considerations:**
 
 - The enrollment provides a hierarchical organizational structure to govern the management of subscriptions as detailed further [here.](/azure/cost-management-billing/manage/understand-ea-roles#azure-enterprise-portal-hierarchy)
-- Multiple environments can be separated at an EA-account level to support holistic isolation.
 - There can be multiple administrators appointed to a single enrollment.
 - Each subscription must have an associated Account Owner.
 - Each Account Owner will be made a subscription owner for any subscriptions provisioned under that account.
 - A subscription can belong to only one account at any given time.
 - A subscription can be suspended based on a specified set of criteria.
+- Enrollment billing and usage reports can be filtered by Departments and Accounts.
+- Review the limitations [detailed here](/azure/cost-management-billing/manage/programmatically-create-subscription-enterprise-agreement?tabs=rest#limitations-of-azure-enterprise-subscription-creation-api) relating to the EA Subscription creation API.
 
 **Design recommendations:**
 
 - Only use the authentication type `Work or school account` for all account types. Avoid using the `Microsoft account (MSA)` account type.
 - Set up the Notification Contact email address to ensure notifications are sent to an appropriate group mailbox.
-- Assign a budget for each account, and establish an alert associated with the budget.
-- An organization can have a variety of structures, such as functional, divisional, geographic, matrix, or team structure. Use organizational structure to map your organization structure to your enrollment hierarchy.
-- Create a new department for IT if business domains have independent IT capabilities.
+- An organization can have a variety of structures, such as functional, divisional, geographic, matrix, or team structure.
+  - Use Departments and Accounts to map your organizations structure to your enrollment hierarchy to assist with billing separation.
+- Utilize [Azure Cost Management](/azure/cost-management-billing/cost-management-billing-overview) reports and views, that can use Azure metadata (for example: tags and location), to explore and analyze your organizations costs.
 - Restrict and minimize the number of account owners within the enrollment to avoid the proliferation of admin access to subscriptions and associated Azure resources.
+- Assign a budget for each Department and Account, and establish an alert associated with the budget.
+- Create a new department for IT if business domains have independent IT capabilities.
 - If multiple Azure Active Directory (Azure AD) tenants are used, verify that the Account Owner is associated with the same tenant as where subscriptions for the account are provisioned.
-- Set up Enterprise Dev/Test and production environments at an EA account level to support holistic isolation.
 - Utilize the [Enterprise Dev/Test Offer](/azure/cost-management-billing/manage/ea-portal-administration#enterprise-devtest-offer) for Dev/Test workloads, where available. (see sub-bullet point)
   - Ensure you comply with the usage terms as detailed [here.](https://azure.microsoft.com/offers/ms-azr-0148p/)
 - Don't ignore notification emails sent to the notification account email address. Microsoft sends important EA-wide communications to this account.
@@ -78,7 +96,7 @@ An MCA often represents an organization's hierarchy, which is constructed from b
 
 ![Diagram that shows an MCA hierarchy.](./media/mca-hierarchy.png)
 
-*Figure 3: An MCA hierarchy using Invoice Sections.*
+*Figure 4: An MCA hierarchy using Invoice Sections.*
 
 >[!IMPORTANT]
 > If migrating from an EA to an MCA, please review the following pages:
@@ -100,6 +118,7 @@ An MCA often represents an organization's hierarchy, which is constructed from b
 - An optional Purchase Order (PO) number can be set on a Billing Profile.
 - A subscription can be suspended based on a specified set of criteria.
 - Before provisioning additional Billing Profiles review the potential impacts to charges and reservations detailed [here.](/azure/cost-management-billing/manage/mca-section-invoice#things-to-consider-when-adding-new-billing-profiles)
+- Utilize [Azure Cost Management](/azure/cost-management-billing/cost-management-billing-overview) reports and views, that can use Azure metadata (for example: tags and location), to explore and analyze your organizations costs.
 
 **Design recommendations:**
 
@@ -121,7 +140,7 @@ The Cloud Solutions Provider (CSP) is available for Microsoft partners to enable
 
 ![Diagram that shows an MPA hierarchy.](./media/mpa-hierarchy.png)
 
-*Figure 3: An MPA hierarchy.*
+*Figure 5: An MPA hierarchy.*
 
 >[!IMPORTANT]
 > An MPA is managed completely by the partner (CSP).
@@ -131,6 +150,8 @@ The Cloud Solutions Provider (CSP) is available for Microsoft partners to enable
 - A [CSP reseller relationship](/partner-center/request-a-relationship-with-a-customer) must be established between the partner and each Azure AD Tenant that the customer wishes to provision Azure Plan in CSP Subscriptions in.
 - New Azure Plan in CSP Subscriptions can only be provisioned by the partner.
 - A subscription can be suspended based on a specified set of criteria and also by the partner.
+- Azure usage charges access can be enabled by the partner for their customers, on a per customer basis, as per: [Enable the policy to view Azure usage charges](/azure/cost-management-billing/costs/get-started-partners#enable-cost-management-for-customer-tenant-subscriptions)
+  - Partners may provide access to Azure usage charges via other tools.
 - Azure Reservations can, by default, only be purchased by the partner for their customer.
   - Customers can however be granted permission to purchase their own Azure Reservations from their CSP via the [**Customer Permissions** feature.](/partner-center/give-customers-permission)
 
@@ -140,6 +161,7 @@ The Cloud Solutions Provider (CSP) is available for Microsoft partners to enable
   - As per the guidance, [Azure Lighthouse and the Cloud Solution Provider program.](/lighthouse/concepts/cloud-solution-provider)
 - Work with your CSP partner to understand support case creation and escalation processes.
 - Discuss Subscription self-service creation possibilities with your CSP partner.
+- Utilize [Azure Cost Management](/azure/cost-management-billing/cost-management-billing-overview) reports and views, that can use Azure metadata (for example: tags and location), to explore and analyze your organizations costs.
 
 ## Define Azure AD tenants
 
