@@ -206,7 +206,7 @@ items:
     - name: Virtual Network
       href: /azure/virtual-network/ 
 
-  - name: Learn modules (TBD)
+  - name: Learn modules
     items:
     - name: Data analytics for developers
       href: /learn/paths/data-analytics-microsoft/?ocid=AID3020565
