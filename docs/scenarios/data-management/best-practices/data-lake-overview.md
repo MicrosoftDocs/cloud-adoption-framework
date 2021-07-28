@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Data lake services overview
 
-We recommend provisioning three [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction) accounts within a single resource group, similar to the Data Lake Services resource group described in [Enterprise Scale Analytics and AI Architecture data landing zone](../architectures/data-landing-zone.md). Each of the three data lakes within a data landing zone stores data in one of its three transformation stages: raw data, enriched and curated data, and workspace data. [Data products](../architectures/data-landing-zone-data-products.md) should only consume from the data lake that contains enriched and curated data.
+We recommend provisioning three [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction) accounts within a single resource group, similar to the "Data Lake Services" resource group described in [Enterprise Scale Analytics and AI Architecture data landing zone](../architectures/data-landing-zone.md). Each of the three data lakes within a data landing zone stores data in one of its three transformation stages: raw data, enriched and curated data, and workspace data. [Data products](../architectures/data-landing-zone-data-products.md) should only consume from the data lake that contains enriched and curated data.
 
 Data Lake Storage Gen2 supports:
 
@@ -21,7 +21,7 @@ Data Lake Storage Gen2 supports:
 
 ## Data lake planning
 
-Structure, governance and security are key considerations that require planning commensurate with the size and complexity of each data lake. Consider what data will be stored in a lake, how it will get there, it's transformations, who will be accessing it, and the typical access patterns. This will influence the structure of the lake and how it will be organized. Group consumers and producers of data based on who will need access to which data. Planning how to implement and govern access control across the lake is a worthwhile investment.
+Structure, governance, and security are key considerations that require planning commensurate with the size and complexity of each data lake. Consider what data will be stored in a lake, how it will get there, its transformations, who will be accessing it, and the typical access patterns. This will influence the structure of the lake and how it will be organized. Group consumers and producers of data based on who will need access to which data. Planning how to implement and govern access control across the lake is a worthwhile investment.
 
 If your data lake will contain just a few data assets and only have automated processes (such as ETL offloading), then the planning phase could be a relatively simple task. If your lake will contain hundreds of data assets and have both automated and manual interaction, then planning is going to take longer and require more collaboration from the various data owners.
 
@@ -31,7 +31,7 @@ A robust data catalog system is increasingly critical as the size (number of dat
 
 ## The three data lakes
 
-A common design consideration is whether to have one or more data lakes, storage accounts, and filesystems. Although a data lake is considered a single logical entity, it can contain multiple storage accounts in different subscriptions and regions, with either centralized or decentralized management and governance. Regardless of the number of data lakes, the benefit of using a single storage technology is the ability to standardize across an organization and several ways to access data.
+A common design consideration is whether to have a single or multiple data lakes, storage accounts, and filesystems. Although a data lake is considered a single logical entity, it can contain multiple storage accounts in different subscriptions and regions, with either centralized or decentralized management and governance. Whatever the number of data lakes, the benefit of using a single storage technology is the ability to standardize across an organization and several ways to access data.
 
 Data Lake Storage Gen2 is a PaaS fully managed service, so multiple storage accounts or filesystems will not incur a monetary cost until you start to store and access data. When planning provisioning, security and governance (including backups and disaster recovery), keep in mind that there is an administrative and operational overhead associated with each resource in Azure. The question of whether to create one or multiple accounts has no definitive answer, and requires thought and planning based on your unique scenario.
 
@@ -43,10 +43,10 @@ Since scalability is a key concept and a single data lake may limit scalability 
   * Maximum ingress rate per storage account: 25 Gbps
   * Maximum storage accounts per subscription: 250
   * Maximum *access* and *default* ACLs per file or folder (this is a hard limit so assign ACLs to groups not individual users): 32
-  * See [Scalability and performance targets](/azure/storage/common/storage-scalability-targets) for more information on limits.
+  * For more information about limits, see [Scalability and performance targets](/azure/storage/common/storage-scalability-targets).
 * Isolation of data environments and predictability. For example, you wish to isolate activities running in the laboratory zone to avoid potential impact on the curated zone, which holds data with greater business value that is used for critical decision making.
 * Features and functionality at the storage account level. Consider whether lifecycle management options or firewall rules need to be applied at the data landing zone level or data lake level.
-* Whilst there are good reasons to have multiple storage accounts, be careful not to create unnecessary silos. Avoid creating duplicate data projects due to lack of visibility or knowledge-sharing across the organization. Ensure that a data catalog, good data governance and project tracking tools are in place.
+* Whilst there are good reasons to have multiple storage accounts, be careful not to create unnecessary silos. Avoid creating duplicate data projects due to lack of visibility or knowledge-sharing across the organization. Ensure that a data catalog, good data governance, and project tracking tools are in place.
 * Data processing tools and technologies, such as Azure Data Factory and Azure Databricks (for Apache Spark), can easily interact with data across multiple lakes if permissions are appropriately configured.
 * Regional vs global lakes. Globally distributed consumers or processes on the lake may be sensitive to latency caused by geographic distances and so require data to reside locally. Regulatory constraints or data sovereignty may require data to remain within a particular region. See [Multiregion deployments](#multiregion-deployments) for more information.
 
@@ -62,4 +62,4 @@ Data residency rules, or a requirement to have data close to a user base, will s
 * Default ACL on every dataset folder must include *read* and *execute* permissions. Execute permission is required for users to be able to traverse a restricted folder and access files under it. Access ACL assigned to an Azure AD group will include read and execute permissions on each dataset folder.
 * Only a managed identity or a service principal should grant *write* permission to a system, as changes should only be made by an ingestion, transformation, or maintenance process.
 
-See [Understanding access control and data lake configurations in Azure Data Lake Storage Gen2](data-lake-access.md#understanding-access-control-and-data-lake-configurations-in-adls-gen2) for more information on access control mechanisms.
+For more information about access control mechanisms, see [Understanding access control and data lake configurations in Azure Data Lake Storage Gen2](data-lake-access.md#understanding-access-control-and-data-lake-configurations-in-adls-gen2).
