@@ -174,7 +174,7 @@ We recommend you use Azure AD groups to secure database objects instead of indiv
 
 To deploy an Azure Synapse workspace, a Data Lake Storage Gen 2 account is required. Azure Synapse Analytics uses the primary storage account for several integration scenarios and stores data in a container. The container includes Apache Spark tables and application logs under a folder called **/synapse/{workspacename}**. The workspace also uses container for managing libraries that you choose to install.
 
-During the workspace deployment through the [Azure portal](/features/azure-portal/), provide an existing storage account or create a new one. The provided storage account is the primary storage account for the workspace. The deployment process grants the workspace identity access to the specified Data Lake Storage Gen2 account, using the **Storage Blob Data Contributor** role.
+During the workspace deployment through the [Azure portal](/azure/azure-portal/), provide an existing storage account or create a new one. The provided storage account is the primary storage account for the workspace. The deployment process grants the workspace identity access to the specified Data Lake Storage Gen2 account, using the **Storage Blob Data Contributor** role.
 
 If you deploy the workspace outside of the Azure portal, add Azure Synapse Analytics workspace identity to the **Storage Blob Data Contributor** role manually. We recommend you assign the role **Storage Blob Data Contributor** on the container level to follow the least privilege principle.  
 
@@ -196,7 +196,7 @@ For more information about how to assign the Reader role on the storage account,
 
 #### Granting read access on Azure Data Lake Storage Gen 2 using ACLs
 
-Start by granting the appropriate ACL permissions. Grant permissions at the container level in the storage account for the required groups. To configure Azure Synapse Analytics data access control with ACLs, see [Configure access using ACLs only (Recommended for Enterprise Scale Analytics and AI)](#configure-access-using-acls-only).
+Start by granting the appropriate ACL permissions. Grant permissions at the container level in the storage account for the required groups. To configure Azure Synapse Analytics data access control with ACLs, see [Configure access using ACLs only](#configure-access-using-acls-only).
 
 #### Considerations when using Spark Tables
 
