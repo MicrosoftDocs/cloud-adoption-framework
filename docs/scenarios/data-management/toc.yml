@@ -141,7 +141,9 @@ items:
         - name: Readiness Checklist
           href: best-practices/purview-checklist.md 
         - name: Deployment Best Practices
-          href: best-practices/purview-deployment.md       
+          href: best-practices/purview-deployment.md
+      - name: Azure Machine Learning Implementation
+        href: best-practices/azure-machine-learning.md
       - name: Data Landing Zone Ingestion
         items:
         - name: Data Ingestion
@@ -154,8 +156,6 @@ items:
         items:
         - name: Data Science Best Practices
           href: best-practices/data-science-best-practices.md
-        - name: Azure Machine Learning
-          href: best-practices/azure-machine-learning.md
 
   - name: Featured Azure products
     items:
