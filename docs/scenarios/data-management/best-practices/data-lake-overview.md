@@ -1,6 +1,6 @@
 ---
-title: Azure data management and analytics scenario data lake services overview
-description: Learn how to configure the data management and analytics scenario data lakes within your data landing zone.
+title: Azure enterprise-scale for analytics and AI data lake overview
+description: Learn about enterprise-scale for analytics and AI architecture data lake overview
 author:  mboswell
 ms.author:  mboswell # Microsoft employees only
 ms.date: 07/27/2021
