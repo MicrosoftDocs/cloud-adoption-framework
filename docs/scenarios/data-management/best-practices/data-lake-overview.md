@@ -67,3 +67,10 @@ Data residency rules, or a requirement to have data close to a user base, can dr
 * Only a managed identity or a service principal should grant *write* permission to a system. Changes can be made by an ingestion, transformation, or maintenance process.
 
 For more information about access control mechanisms, see [Understanding access control and data lake configurations in Azure Data Lake Storage Gen2](data-lake-access.md#understanding-access-control-and-data-lake-configurations-in-adls-gen2).
+
+## Next steps
+
+The next step is to review guidance about data lake zones.
+
+> [!div class="nextstepaction"]
+> [Data lake zones](.data-lake-services.md)
