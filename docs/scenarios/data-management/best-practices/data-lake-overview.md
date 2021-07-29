@@ -65,4 +65,4 @@ Data Residency rules or the requirement to have data close to a user base will s
 * Default ACL on each dataset folder must include Read and Execute permissions. Execute permission is required for users to be able to traverse folder partitions and files under it. Access ACL assigned to an AD group on each dataset folder will include Read and Execute permissions.
 * Write permission should be given to a system through managed identity or service principal only because any changes should only be made by an ingestion, transformation, or maintenance process.
 
-See [Understanding access control and data lake configurations in ADLS Gen2](data-lake-access.md#understanding-access-control-and-data-lake-configurations-in-adls-gen2) for further insight on how to best configure this.
+See [Understanding access control and data lake configurations in ADLS Gen2](data-lake-access.md) for further insight on how to best configure this.

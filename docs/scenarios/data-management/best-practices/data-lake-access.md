@@ -71,8 +71,6 @@ For more information, see [How permissions are evaluated](/azure/storage/blobs/d
 > This description excludes Shared Key and SAS authentication methods. It also excludes scenarios in which the security principal has been assigned the Storage Blob Data Owner built-in role, which provides super-user access.
 > We recommend you set `allowSharedKeyAccess` to false so that access can be audited by identity.
 
-START WITH THIS GRAPHIC
-
 :::image type="content" source="../images/how-access-evaluated.png" alt-text="This diagram provides a flow chard that describes how access is evaluated." lightbox="../images/how-access-evaluated.png":::
 
 For more information about what ACL-based permissions are required for a given operation, see [Access control lists in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-access-control#common-scenarios-related-to-permissions)
