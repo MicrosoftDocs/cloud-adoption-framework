@@ -37,7 +37,7 @@ Specific to Azure Machine Learning’s implementation in enterprise-scale landin
 * **Observability** through central logging and reference configurations to monitor the environment.
 
 ## Implementation overview
->[!IMPORTANT]
+>[!NOTE]
 >This section aims to describe prescribed configurations which are specific to the Enterprise Scale Analytic and AI construction set. It is a complement to the Azure Machine Learning documentation and Cloud Adoption Framework set of best practices.
 
 **Workspace organization and set up** - For every data landing zone that you deploy, you can choose to deploy zero up to as many machine learning workspaces to meet your workloads’ requirements.
