@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Azure Machine Learning as a data product
+# Azure Machine Learning implementation
 
 Azure Machine Learning provides an integrated platform for the end-to-end machine learning lifecycle including creation, operation, and consumption of machine learning models and workflows. 
 
