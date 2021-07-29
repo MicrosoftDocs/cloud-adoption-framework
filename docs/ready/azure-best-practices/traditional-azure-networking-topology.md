@@ -114,21 +114,26 @@ The following figure shows this topology.
 
 - Use your existing network, MPLS, and SD-WAN, to connect branch locations with corporate headquarters. Transit in Azure between ExpressRoute and VPN gateways isn't supported.
 
-- For network architectures with multiple hub-and-spoke topologies across Azure regions, use global virtual network peering to connect landing-zone virtual networks when a small number of landing zones need to communicate across regions. This approach offers benefits such as high network bandwidth with global virtual network peering, as allowed by the VM SKU. However, it will bypass the central NVA, in case traffic inspection or filtering is required. This would also be subject to [limitations on global virtual network peering](/azure/virtual-network/virtual-network-peering-overview#constraints-for-peered-virtual-networks).
+- When you have hub-and-spoke networks in multiple Azure regions, and only a small number of landing zones require cross-region connectivity, use global virtual network peering to directly connect landing-zone virtual networks that need to route traffic to each other. Global virtual network peering provides high network throughput, as allowed by the communicating VMs’ SKU. Traffic between the directly peered landing-zone virtual networks will bypass the NVAs in the hub VNets. This would also be subject to [limitations on global virtual network peering](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-peering-overview#constraints-for-peered-virtual-networks).
 
-- When you deploy a hub-and-spoke network architecture in two or more Azure regions and transit connectivity between all landing zones across regions is required, use ExpressRoute with dual circuits to provide transit connectivity for landing-zone virtual networks across Azure regions. In this scenario, landing zones can transit within a region via NVA in the local-hub virtual network and across regions via ExpressRoute circuit. Traffic must hairpin at the MSEE routers. With this configuration, spokes across hubs will communicate directly bypassing the firewall, as they will learn via BGP routes to the spokes on the remote-hub.
-  If you require traffic across hubs to be inspected by the firewall in the hub, you must implement one of these options:
-  
-  - Create more specific route entries in the spoke user defined routes (UDRs), so that traffic across hubs is redirected via the firewall in the local-hub virtual network.
-  - [Disable BGP propagation](https://azure.microsoft.com/updates/disable-route-propagation-ga-udr) on the spokes, which simplifies the route configuration in the UDR. 
-  
-The following figure shows this design:
- 
-  ![Diagram that illustrates a landing zone connectivity design.](./media/vnet-dual-circuits.png)
+- When you have hub-and-spoke networks in multiple Azure regions and most of the landing zones require cross-region connectivity (or bypassing the hub NVAs with direct peerings is not compatible with your security requirements), connect hub VNets in each region with each other and route cross-region traffic via the hub NVAs. Hub VNets can be connected using global virtual network peering or ExpressRoute circuits, as described below.
+  - Global virtual network peering provides a low latency and high throughput connection, but generates [traffic fees](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-peering-overview#pricing). 
+  - Routing via ExpressRoute may lead to increased latency (due to MSEE hairpin) and throughput will be constrained to the [ExpressRoute Gateway SKU](https://docs.microsoft.com/en-us/azure/expressroute/expressroute-about-virtual-network-gateways#gwsku). 
+The following figure shows both options:
 
-*Figure 4: Landing zone connectivity design.*
+ ![Diagram that illustrates options for hub-to-hub connectivity](./media/hub-to-hub-via-er-or-peering.png)
 
-- When your organization requires hub-and-spoke network architectures across more than two Azure regions and global transit connectivity between landing zones, virtual networks across Azure regions are required. You can implement this architecture by interconnecting central-hub virtual networks with global virtual network peering and using UDRs and NVAs to enable global transit routing. Because the complexity and management overhead are high, it's recommended to evaluate a global transit network architecture with Virtual WAN.
+- When cross-region connectivity is required across two Azure region, evaluate and use global virtual network peering or the same ExpressRoute circuit(s) to connect both hub VNets.
+
+- When cross-region connectivity is required across more than two Azure regions, connecting hub VNets in each region to the same ExpressRoute circuit(s) is the preferred option. Global virtual network peering would require managing a large number of peering relationships and a complex set of User-Defined routes across multiple VNets. The following picture shows how to connect hub and spoke networks in three regions:
+
+![Diagram that illustrates multi-region hub-to-hub connectivity with ExpressRoute](./media/multiregion-hub-to-hub-via-er.png)
+
+- When using ExpressRoute circuits for cross-region connectivity, spokes in different regions will communicate directly and bypass the firewall, as they will learn via BGP routes to the spokes of the remote hub. If you require traffic across spokes to be inspected by the firewall NVAs in the hub VNets, you must implement one of these options:
+  - Create more specific route entries in the spoke user defined routes (UDRs), so that traffic across hubs is redirected via the firewall in the local-hub virtual network. 
+  - [Disable BGP propagation](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-udr-overview#border-gateway-protocol) on the spoke route tables, which simplifies the route configuration.
+
+- When your organization requires hub-and-spoke network architectures across more than two Azure regions, global transit connectivity between landing zones virtual networks across Azure regions is required and you want to minimize network management overhead, it's recommended to evaluate a [managed global transit network architecture](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/virtual-wan-network-topology) based on Virtual WAN.
 
 - Deploy each region's hub network resources into separate resource groups, located in each of the regions being deployed to.
 
