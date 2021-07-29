@@ -1,6 +1,6 @@
 ---
-title: Enterprise-scale analytics and AI Databricks Pattern in Azure
-description: Enterprise Scale Analytics and AI Databricks Pattern
+title: Enterprise-scale analytics and AI Databricks pattern in Azure
+description: Learn about the enterprise-scale for analytics and AI Azure Databricks pattern.
 author:  mboswell
 ms.author:  mboswell # Microsoft employees only
 ms.date: 07/30/2021
@@ -13,7 +13,7 @@ ms.subservice: ready
 
 Azure Databricks is a data analytics platform optimized for the Microsoft Azure Cloud Services platform. Azure Databricks offers two environments for developing data-intensive applications: Azure Databricks SQL Analytics and Azure Databricks Workspace.
 
-For enterprise-scale analytics and AI, we'll focus on Azure Databricks Workspace.
+For enterprise-scale for analytics and AI, we'll focus on Azure Databricks Workspace.
 
 ## Overview
 
@@ -44,7 +44,7 @@ All Azure Databricks workspaces should use the Premium Plan, which provides the 
 * Role-based access control for notebooks, clusters, jobs, and tables
 * Audit logs
 
-To align to the enterprise-scale analytics and AI construction set, we recommend that all workspaces have the following default deployment options configured:
+To align to the enterprise-scale for analytics and AI construction set, we recommend that all workspaces have the following default deployment options configured:
 
 * The Azure Databricks workspaces connects to an external Hive Metastore instance in the data landing zone.
 * Configure each workspace to send Databricks diagnostic logging to Azure Log Analytics.
@@ -72,7 +72,7 @@ Depending on your use case, you might want to enable the following options for t
 
 ## Deploy Azure Databricks
 
-The two Azure Databricks workspaces are deployed as part of a new data landing zone deployment. This image shows the overall workflow of deploying an Azure Databricks environment in enterprise-scale analytics and AI.
+The two Azure Databricks workspaces are deployed as part of a new data landing zone deployment. This image shows the overall workflow of deploying an Azure Databricks environment in enterprise-scale for analytics and AI.
 
 ![Screenshot that shows Azure Databricks deployment into a data landing zone.](../images/databricks-deploy.png)
 
@@ -109,9 +109,12 @@ In an Azure Databricks workspace deployment:
 
 * This solution uses [Azure Database for MySQL](https://azure.microsoft.com/services/mysql/) to store the Hive Metastore instance. This database was chosen for its cost effectiveness and its high compatibility with Hive.
 
-## Further reading
+## Next steps
 
-The enterprise-scale analytics and AI takes into account the following best practices for integrating Azure Databricks into the construction set:
+The enterprise-scale for analytics and AI takes into account the following best practices for integrating Azure Databricks into the construction set:
 
 * [Securing access to Azure Data Lake Gen 2 from Azure Databricks](https://github.com/hurtn/datalake-ADLS-access-patterns-with-Databricks/blob/master/readme.md)
 * [Azure Databricks Best Practices](https://github.com/Azure/AzureDatabricksBestPractices/blob/master/toc.md)
+
+> [!div class="nextstepaction"]
+> [Tools and technology to power your data strategy](./synapse.md)
