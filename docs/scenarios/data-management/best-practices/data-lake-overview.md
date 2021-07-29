@@ -73,4 +73,4 @@ For more information about access control mechanisms, see [Understanding access 
 The next step is to review guidance about data lake zones.
 
 > [!div class="nextstepaction"]
-> [Data lake zones](.data-lake-services.md)
+> [Data lake zones](data-lake-services.md)
