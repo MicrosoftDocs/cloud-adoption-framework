@@ -40,3 +40,10 @@ Azure Synapse has several key features and capabilities:
 Figure 1: Azure Synapse Analytics, an integrated data platform experience for BI, AI, and CI.
 
 Build a strong data strategy by choosing the right tools and technology as the backbone for your data products and services. Design your data strategy for repeatability and scalability across all current and future use cases that affect business outcomes.
+
+## Next steps
+
+The next step is to review guidance on Azure Synapse Analytics implementation.
+
+> [!div class="nextstepaction"]
+> [Azure Synapse Analytics Implementation](azure-synapse-analytics-implementation.md)
