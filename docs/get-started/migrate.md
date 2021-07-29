@@ -214,10 +214,10 @@ Governance is a key factor to the long-term success of any migration effort. Spe
 
 Operations management is another requirement to reach migration success. Migrating individual workloads to the cloud without an understanding of ongoing enterprise operations is a risky decision. In parallel with migration, you should start planning for longer-term operations.
 
-- [Establish a management baseline](../manage/index.md)
 - [Define business commitments](../manage/considerations/business-alignment.md)
+- [Establish a management baseline](../manage/azure-management-guide/index.md)
 - [Expand the management baseline](../manage/best-practices.md)
-- [Get specific with advanced operations](../manage/design-principles.md)
+- [Advanced operations and design principles](../manage/design-principles.md)
 
 **Deliverables:**
 
