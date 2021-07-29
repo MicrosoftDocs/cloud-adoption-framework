@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Enterprise-scale support for the Azure Virtual Desktop construction set
 
-Enterprise-scale construction sets provide you with a specific architectural approach and reference implementation. These construction sets enable effective construction and start-up of platform workload landing zones. These landing zones are within the Cloud Adoption Framework enterprise-scale landing zone. The Azure Virtual Desktop construction set is used after you've implemented an enterprise-scale landing zone. Review the [enterprise-scale overview](../../ready/enterprise-scale/index.md) and [implementation guidance](../../ready/enterprise-scale/implementation.md) before deploying the Azure Virtual Desktop construction set.
+Enterprise-scale construction sets provide you with a specific architectural approach and reference implementation. These construction sets enable effective construction and start-up of platform workload landing zones. These landing zones are within the Cloud Adoption Framework enterprise-scale landing zone. The Azure Virtual Desktop construction set is used after you've implemented an enterprise-scale landing zone. Review the [enterprise-scale overview](/azure/cloud-adoption-framework/ready/enterprise-scale/) and [implementation guidance](/azure/cloud-adoption-framework/ready/enterprise-scale/implementation) before deploying the Azure Virtual Desktop construction set.
 
 ## Getting started with the Azure Virtual Desktop construction set
 
@@ -32,7 +32,7 @@ Learn about guidelines that drive the design of the Cloud Adoption Framework for
 
 The following image shows a conceptual reference architecture that demonstrates design areas and best practices.
 
-[![A diagram of a reference architecture for an Azure Virtual Desktop environment.](./media/windows-virtual-desktop-architecture.png)](./media/windows-virtual-desktop-architecture.png#lightbox)
+[![A diagram of a reference architecture for an Azure Virtual Desktop environment.](./media/azure-virtual-desktop-architecture.png)](./media/azure-virtual-desktop-architecture.png#lightbox)
 
 ### Implementation with Azure Resource Manager (ARM) templates for Remote Desktop Services
 
