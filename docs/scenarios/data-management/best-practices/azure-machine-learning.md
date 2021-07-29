@@ -63,13 +63,13 @@ Per default resource configuration of the enterprise-scale data landing zone, th
 
 ![Azure Machine Learning Data Product Analytics](../images/machinelearning-dataproductanalytics-overview.png)
 
-*Network connectivity* for Azure Machine Learning’s implementation in enterprise-scale landing zones is set up in accordance with [security best practices for Azure Machine Learning](/azure/machine-learning/concept-enterprise-security) and [networking best practices](/azure/security/fundamentals/network-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json) provided in CAF landing zones. In more detail this entails the following configuration: 
+**Network connectivity** for Azure Machine Learning’s implementation in enterprise-scale landing zones is set up in accordance with [security best practices for Azure Machine Learning](/azure/machine-learning/concept-enterprise-security) and [networking best practices](/azure/security/fundamentals/network-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json) provided in CAF landing zones. In more detail this entails the following configuration: 
 
 * Azure Machine Learning and its dependent resources are configured to use private link endpoints.
 * Managed compute resources are deployed only with private IP addresses. 
 * Network connectivity to Azure Machine Learning’s public base image repository, and partner-services like Azure Artifacts are configurable at a network level.
 
-*Identity and access management* considerations for Azure Machine Learning are as follows:
+**Identity and access management** considerations for Azure Machine Learning are as follows:
 •	Datastores in Azure Machine Learning can be configured to use credential-based authentication or identity-based authentication. When you use [Access Control Lists on Azure Data Lake Storage to manage data access](/azure/cloud-adoption-framework/scenarios/data-management/best-practices/data-lake-access?branch=scenario-data-management#configure-access-using-acls-only-recommended-for-enterprise-scale-analytics-and-ai), datastores should be configured to use identity-based authentication so user’s access permissions on storage are leveraged by Azure ML services.  
 •	It is recommended using Azure AD groups to manage access permissions on storage and to the machine learning resources.
 •	Azure Machine Learning can use [user-assigned managed identities for access control](/azure/machine-learning/how-to-use-managed-identities?tabs=python) to associated resources: Azure Container Registry, Azure Key Vault, Azure Storage, and Azure Application Insights. It is recommended to create a user-assigned managed identity to limit scope of access.
