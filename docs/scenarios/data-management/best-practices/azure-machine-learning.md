@@ -59,7 +59,7 @@ Per default resource configuration of the enterprise-scale data landing zone, th
 **Integration with data landing zone core services** – The enterprise-scale data landing zone comes with a default set of services that are deployed in the [core services layer](/azure/cloud-adoption-framework/scenarios/data-management/architectures/data-landing-zone?branch=scenario-data-management#core-services-layer). When you deploy Azure Machine Learning in enterprise-scale, these core services can be configured at time of deployment.
 
 * You can choose to connect an Azure Synapse Analytics workspace or Azure Databricks workspace as linked service for data integration and big data processing. 
-* Data lake services are provisioned by default in the data landing zone. Azure Machine Learning product deployments will by default come with connections (`Datastores`) pre-configured to these storage accounts. 
+* Data lake services are provisioned by default in the data landing zone. Azure Machine Learning product deployments will by default come with connections (Datastores) pre-configured to these storage accounts. 
 
 ![Azure Machine Learning Data Product Analytics](../images/machinelearning-dataproductanalytics-overview.png)
 
