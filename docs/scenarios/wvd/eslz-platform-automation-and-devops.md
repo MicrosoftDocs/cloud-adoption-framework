@@ -57,10 +57,8 @@ Applications are made available to your users in two ways: installed in the imag
 
 As Azure Virtual Desktop environments start to scale out, your images may need to be localized into the native language for your users. You can start from the local language if you prefer or you can add additional languages to your image on build. Consider this requirement when selecting your base image. The pre-optimized Windows 10 gallery image for example, both with and without Microsoft 365, is only supplied in United States English (en-US).
 
-Things to note:
-
-- If you're using Windows 10 Enterprise multi-session, this cannot be built using a different language. In this case, you must adapt the provided gallery image.
-- To adapt the existing en-US gallery image, install the additional languages before you install other applications.
+> [!NOTE]
+> If you're using Windows 10 Enterprise multi-session, this cannot be built using a different language. In this case, you must adapt the provided gallery image. To adapt the existing en-US gallery image, install the additional languages before you install other applications.
 
 ### Image location
 
