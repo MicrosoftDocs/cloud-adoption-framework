@@ -114,10 +114,6 @@ items:
     - name: Frequently Asked Questions
       href: architectures/frequently-asked-questions.md
 
-    - name: Placeholder (Rick to add AAC RAs)
-      href: waf-placeholder.md
-
-
   - name: Best practices
     items:
       - name: Data Lake Implementation
@@ -210,7 +206,7 @@ items:
     - name: Virtual Network
       href: /azure/virtual-network/ 
 
-  - name: Learn modules (TBD)
+  - name: Learn modules
     items:
     - name: Data analytics for developers
       href: /learn/paths/data-analytics-microsoft/?ocid=AID3020565
