@@ -1,6 +1,6 @@
 ---
-title: Azure enterprise-scale analytics and AI data lake services overview
-description: Learn how to configure enterprise-scale analytics and AI architecture data lakes within your data landing zone.
+title: Azure data management and analytics scenario data lake services overview
+description: Learn how to configure the data management and analytics scenario data lakes within your data landing zone.
 author:  mboswell
 ms.author:  mboswell # Microsoft employees only
 ms.date: 07/27/2021
@@ -9,9 +9,9 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Data lake services overview
+# Data management and analytics scenario data lake services overview
 
-We recommend you provision three [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction) accounts within a single resource group, similar to the `data lake services` resource group described in [enterprise-scale for analytics and AI architecture data landing zone](../architectures/data-landing-zone.md). Each of the three data lakes within a data landing zone stores data in one of its three transformation stages: raw data, enriched and curated data, and workspace data. [Data products](../architectures/data-landing-zone-data-products.md) should only consume from the data lake that contains enriched and curated data.
+We recommend you provision three [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction) accounts within a single resource group, similar to the `data lake services` resource group described in [Azure data management and analytics scenario architecture data landing zone overview](../architectures/data-landing-zone.md). Each of the three data lakes within a data landing zone stores data in one of its three transformation stages: raw data, enriched and curated data, and workspace data. [Data products](../architectures/data-landing-zone-data-products.md) should only consume from the data lake that contains enriched and curated data.
 
 Data Lake Storage Gen2 supports:
 
