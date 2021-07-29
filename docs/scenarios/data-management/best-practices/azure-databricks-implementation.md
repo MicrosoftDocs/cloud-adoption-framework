@@ -38,7 +38,7 @@ The Azure Databricks deployment is partly parameter-based via an ARM template an
 
 All Azure Databricks workspaces should use the Premium Plan, which provides the following required features:
 
-* Optimized auto-scaling of compute
+* Optimized autoscaling of compute
 * Azure AD Credential Pass-through
 * Conditional authentication
 * Role-based access control for notebooks, clusters, jobs, and tables
@@ -50,9 +50,9 @@ To align to the enterprise-scale analytics and AI construction set, we recommend
 * Configure each workspace to send Databricks diagnostic logging to Azure Log Analytics.
 * Implement cluster policies to limit the ability to create clusters based on a set of rules. See [Manage cluster policies](/azure/databricks/administration-guide/clusters/policies).
   * Define multiple cluster policies. As part of the onboarding process, each target group is assigned permissions to use by the data landing zone ops team. By default, cluster creation permission is given only to the ops team, but different teams or groups are given permission to use cluster policies.
-  * Use cluster policies in combination with Azure Databricks pools to reduce cluster start and auto-scaling times by maintaining a set of idle, ready-to-use instances. See [Pools](/azure/databricks/clusters/instance-pools/).
+  * Use cluster policies in combination with Azure Databricks pools to reduce cluster start and autoscaling times by maintaining a set of idle, ready-to-use instances. See [Pools](/azure/databricks/clusters/instance-pools/).
 * Retrieve all Azure Databricks operational secrets, such as SPN credentials and connection strings, from an Azure Key Vault instance.
-* Configure a separate Enterprise ppplication per workspace for use with SCIM (System for Cross-domain Identity Management). Link to Azure Databricks Workspace to control access and permissions to each workspace. See [Provision users and groups using SCIM](/azure/databricks/administration-guide/users-groups/scim/) and [Configure SCIM provisioning for Microsoft Azure Active Directory](/azure/databricks/administration-guide/users-groups/scim/aad).
+* Configure a separate Enterprise application per workspace for use with SCIM (System for Cross-domain Identity Management). Link to Azure Databricks Workspace to control access and permissions to each workspace. See [Provision users and groups using SCIM](/azure/databricks/administration-guide/users-groups/scim/) and [Configure SCIM provisioning for Microsoft Azure Active Directory](/azure/databricks/administration-guide/users-groups/scim/aad).
 
 >[!WARNING]
 >Failure to configure Azure Databricks Workspace to use the Azure Databricks SCIM interface impacts how you provide security controls. It moves from an automated to a manual process and breaks all deployment CI/CD pipelines.
