@@ -29,7 +29,7 @@ Figure 1 illustrates how Integration Ops can use custom applications, Azure Logi
 
 The application can talk to an Azure Data Factory SQL Database metastore within each data landing zone to create new data sources and ingest them into data landing zones. Once ingestion requests are approved, it uses the Azure Purview REST API to insert the sources into Azure Purview.
 
-The metadata triggers Data Factory jobs and will have most of the parameters required for running pipelines. A Data Factory master pipeline pulls parameters from the Data Factory SQL Database metastore to transfer data from the source into the Data Lake and enrich it with conformed data types before creating a table definition in the Azure Databricks Apache Hive metastore.
+The metadata triggers Data Factory jobs and will have most of the parameters required for running pipelines. A Data Factory master pipeline pulls parameters from the Data Factory SQL Database metastore to transfer data from the source into the data lake and enrich it with conformed data types before creating a table definition in the Azure Databricks Apache Hive metastore.
 
 For all job types (including indirect ingestion from sources like SAP), areas, and functions, the app should store the jobs' technical and operational metadata in a SQL Database. Technical metadata can drive jobs because it has have most of the parameters required for this task. Data Platform, Data Landing Zone, and Integration Ops can use the metadata to:
 
