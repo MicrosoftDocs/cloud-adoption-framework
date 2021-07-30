@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-data
 
 # Understand the automated ingestion framework with enterprise-scale for analytics and AI in Azure
 
-[The ingest process with enterprise-scale for analytics and AI in Azure](./data-ingestion.md#ingest-considerations-for-azure-data-factory) and [ingest and processing resource group](../architectures/data-landing-zone.md#ingest-and-processing) describe how enterprises can build their own custom ingestion framework.
+[The ingest process with enterprise-scale for analytics and AI in Azure](./data-ingestion.md#ingest-considerations-for-data-factory) and [ingest and processing resource group](../architectures/data-landing-zone.md#ingest-and-processing) describe how enterprises can build their own custom ingestion framework.
 
 This section provides guidance for how custom ingestion frameworks can drive services and processes.
 

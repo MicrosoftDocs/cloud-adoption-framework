@@ -12,12 +12,12 @@ ms.custom: think-tank, e2e-data
 
 # Understand the ingest process with enterprise-scale for analytics and AI in Azure
 
-In the enterprise scale analytics and AI construction set, the Data Integrations and Data Products teams examine, transform, and release data.
+In the enterprise scale analytics and AI construction set, the Data Integration and Data Product teams examine, transform, and release data.
 
 >[!IMPORTANT]
 >Data Integrations don't transform data. However, if the business has multiple use cases that require data to be joined together (for example, weather and location data) , then the team could be asked to create this in the curated layer.\
 \
->Data Products teams can apply transformations and create their datasets in the curated layer of the data lake as well as the [polyglot storage](https://techcommunity.microsoft.com/t5/data-architecture-blog/polyglot-persistence-with-azure-data-services/ba-p/1514912) they've chosen to use.
+>Data Product teams can apply transformations and create their datasets in the curated layer of the data lake as well as the [polyglot storage](https://techcommunity.microsoft.com/t5/data-architecture-blog/polyglot-persistence-with-azure-data-services/ba-p/1514912) they've chosen to use.
 
 Azure provides several services for ingesting and releasing data to various native and third-party platforms. Depending on volume, velocity, variety, and direction, different services can be used. Some of these services are listed below.
 

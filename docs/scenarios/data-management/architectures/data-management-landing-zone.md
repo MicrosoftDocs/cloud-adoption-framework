@@ -91,7 +91,7 @@ In Enterprise Scale Analytics and AI Data Integrations will become responsible f
 
 Data quality should happen as close to the source as possible to avoid quality issues replicating across the analytics and AI estate. Moving quality metrics and validation to the data integration aligns the quality process with the team(s) that are closest to the data and have the deepest understanding of the data asset. Data lineage also provides data quality confidence and should be provided for all datasets and products.
 
-See how data quality can be implemented in [Enforcing Data Quality](../best-practices/data-ingestion.md#enforcing-data-quality).
+See how data quality can be implemented in [Enforcing Data Quality](../best-practices/data-ingestion.md#enforce-data-quality).
 
 ## Data Modeling Repository
 
