@@ -2,12 +2,42 @@ items:
   - name: Desktop virtualization - Microsoft Cloud Adoption Framework for Azure
     href: index.md
     pdf_name: Desktop Virtualization - Microsoft Cloud Adoption Framework for Azure
+    
   - name: Strategic impact
     href: strategy.md
+
   - name: Technical planning
     href: plan.md
+
   - name: Prepare your environments
-    href: ready.md
+    items:
+    - name: Azure landing zones
+      href: ready.md
+    - name: Design areas
+      items:
+      - name: Enterprise enrollment
+        href: design-area-enterprise-enrollment.md
+      - name: Identity and access management
+        href: eslz-identity-and-access-management.md
+      - name: Network topology and connectivity
+        href: eslz-network-topology-and-connectivity.md
+      - name: Resource organization
+        href: design-area-resource-organization.md
+      - name: Governance disciplines
+        href: eslz-security-governance-and-compliance.md
+      - name: Management baseline
+        href: eslz-management-and-monitoring.md
+      - name: Business continuity and disaster recovery
+        href: eslz-business-continuity-and-disaster-recovery.md
+      - name: Platform automation and DevOps
+        href: eslz-platform-automation-and-devops.md
+    - name: Implementation options
+      items:
+      - name: Enterprise-scale landing zone for Azure Virtual Desktop
+        href: enterprise-scale-landing-zone.md
+      - name: Azure Architecture Center - Azure Virtual Desktop
+        href: /azure/architecture/example-scenario/wvd/windows-virtual-desktop
+
   - name: Migrate your virtual desktop platform
     items:
     - name: Proof of concept
@@ -25,11 +55,6 @@ items:
   - name: Manage your portfolio
     href: manage.md
 
-  - name: Architectures
-    items:
-    - name: Azure Virtual Desktop architecture
-      href: /azure/architecture/example-scenario/wvd/windows-virtual-desktop
-
   - name: Best practices
     items:
     - name: Azure Virtual Desktop security best practices
@@ -42,23 +67,6 @@ items:
       href: /azure/virtual-desktop/configure-device-redirections
     - name: Scale session hosts
       href: /azure/virtual-desktop/set-up-scaling-script
-
-  - name: Enterprise-scale construction set
-    items:
-    - name: Construction set for enterprise-scale Azure Virtual Desktop
-      href: enterprise-scale-landing-zone.md
-    - name: Identity and access management
-      href: eslz-identity-and-access-management.md
-    - name: Network topology and connectivity
-      href: eslz-network-topology-and-connectivity.md
-    - name: Management and monitoring
-      href: eslz-management-and-monitoring.md
-    - name: Business continuity and disaster recovery
-      href: eslz-business-continuity-and-disaster-recovery.md
-    - name: Security governance and compliance
-      href: eslz-security-governance-and-compliance.md
-    - name: Platform automation and DevOps
-      href: eslz-platform-automation-and-devops.md
 
   - name: Microsoft products
     items:

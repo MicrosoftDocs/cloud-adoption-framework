@@ -1,6 +1,6 @@
 ---
-title: Enterprise-scale identity and access management for Azure Virtual Desktop
-description: Learn how to use Azure role-based access control for identity and access management in your enterprise-scale virtual desktop infrastructure.
+title: Identity and access management for Azure Virtual Desktop
+description: Learn how to use Azure role-based access control for identity and access management in your virtual desktop infrastructure.
 author: wahidsaleemi
 ms.author: wasaleem
 ms.date: 05/18/2021
@@ -9,9 +9,9 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Identity and access management for Azure Virtual Desktop
+# Identity and access management considerations for Azure Virtual Desktop
 
-Azure Virtual Desktop is a managed service that provides a Microsoft control plane for your virtual desktop infrastructure. Identity and access management for Azure Virtual Desktop uses role-based access control (RBAC) with certain conditions outlined in this article.
+Azure Virtual Desktop is a managed service that provides a Microsoft control plane for your virtual desktop infrastructure. Identity and access management for Azure Virtual Desktop uses Azure role-based access control (RBAC) with certain conditions outlined in this article.
 
 ## RBAC design
 
@@ -21,7 +21,7 @@ Azure Virtual Desktop has custom Azure roles designed for each functional area. 
 
 - **Desktop Virtualization Contributor:** This role lets you manage all aspects of the deployment but doesn't grant access to compute resources.
 - **Desktop Virtualization Reader:** This role lets you view everything in the deployment but doesn't let you make changes.
-- **Desktop Virtualization Host Pool Contributor:** This role lets you manage all aspects of host pools, including access to resources. To create virtual machines you need another role, Virtual Machine Contributor.
+- **Desktop Virtualization Host Pool Contributor:** This role lets you manage all aspects of host pools, including access to resources. To create virtual machines you need another role, Virtual Machine Contributor. You will also need Application Group Contributor and Workspace Contributor roles to create host pools using the portal, or you can use the Desktop Virtualization Contributor role.
 - **Desktop Virtualization Host Pool Reader:** This role lets you view everything in the host pool, but doesn't let you make changes.
 - **Desktop Virtualization Application Group Contributor:** This role lets you manage all aspects of application groups. To publish application groups to users, or to user groups, you need the User Access Administrator role.
 - **Desktop Virtualization Application Group Reader:** This role lets you view everything in the application group, but doesn't let you make changes.
@@ -38,13 +38,12 @@ Azure Virtual Desktop has custom Azure roles designed for each functional area. 
   > [!NOTE]
   > Azure Virtual Desktop does not support B2B or Microsoft accounts.
 - The account used for domain join can't have multifactor authentication or other interactive prompts, and there are other requirements. For more information, see [Virtual machine details](/azure/virtual-desktop/create-host-pools-azure-marketplace#virtual-machine-details).
-- Azure Virtual Desktop requires AD DS or Azure AD DS.
-- Choose a hosting strategy for domain services, either Azure AD DS or AD DS.
+- Azure Virtual Desktop requires a hosting strategy for domain services. Choose either [AD DS or Azure AD DS](/azure/active-directory-domain-services/compare-identity-solutions).
 - When joining to an Azure AD DS domain, the account must be part of the Azure AD DC administrators group and the account password must work in Azure AD DS. For more information, see [Virtual machine details](/azure/virtual-desktop/create-host-pools-azure-marketplace#virtual-machine-details).
 - Azure AD DS is a supported option, but there are limitations:
   - You must have password hash synchronization enabled (uncommon when federating Azure AD).
   - You can only project Azure AD DS into a single virtual network (and single Azure region) that uses a non-public IP address range. You can't add domain controllers to an Azure AD DS domain.
-  - You cannot leverage hybrid join for Azure Virtual Desktop VMs to enable Seamless Single Sign On to Microsoft 365 services
+  - You cannot use hybrid join for Azure Virtual Desktop VMs to enable Azure Active Directory Seamless Single Sign-On for Microsoft 365 services.
 
    For more information, see [Frequently asked questions (FAQ) about Azure Active Directory Domain Services (Azure AD DS)](/azure/active-directory-domain-services/faqs).
 - When specifying an organizational unit, use the distinguished name without quotation marks.
@@ -53,7 +52,7 @@ Azure Virtual Desktop has custom Azure roles designed for each functional area. 
 - When using smart cards, a direct connection (line of sight) with an Active Directory domain controller for Kerberos authentication is required. For more information, see [Configure a Kerberos Key Distribution Center proxy](/azure/virtual-desktop/key-distribution-center-proxy).
 - Using Windows Hello for Business requires the hybrid certificate trust model to be compatible with Azure Virtual Desktop. For more information, see [Hybrid Azure AD joined certificate trust deployment](/windows/security/identity-protection/hello-for-business/hello-hybrid-cert-trust).
 - When using Windows Hello for Business or smart-card authentication, the initiating client must be able to communicate with the domain controller because these authentication methods use Kerberos to sign in. For more information, see [Supported authentication methods](/azure/virtual-desktop/authentication).
-- Single sign-on can improve user experience but it requires additional configuration and is only supported using Active Directory Federation Services.
+- Single sign-on can improve user experience, but it requires additional configuration and is only supported using Active Directory Federation Services. For more information, see [Configure AD FS single sign-on for Azure Virtual Desktop](/azure/virtual-desktop/configure-adfs-sso).
 
 ## Design recommendations
 
