@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-data
 
 # Understand the automated ingestion framework with enterprise-scale for analytics and AI in Azure
 
-[The ingest process with enterprise-scale for analytics and AI in Azure](./data-ingestion.md#ingest-considerations-for-data-factory) and [ingest and processing resource group](../architectures/data-landing-zone.md#ingest-and-processing) describe how enterprises can build their own custom ingestion framework.
+[The ingest process with enterprise-scale for analytics and AI in Azure](./data-ingestion.md#ingest-considerations-for-data-factory) and [ingest and processing resource group](../architectures/data-landing-zone.md#ingest-and-processing) guide enterprises through how to build their own custom ingestion framework.
 
 This section provides guidance for how custom ingestion frameworks can drive services and processes.
 
@@ -31,16 +31,14 @@ The application can talk to an Azure Data Factory SQL Database metastore within 
 
 The metadata triggers Data Factory jobs and will have most of the parameters required for running pipelines. A Data Factory master pipeline pulls parameters from the Data Factory SQL Database metastore to transfer data from the source into the Data Lake and enrich it with conformed data types before creating a table definition in the Azure Databricks Apache Hive metastore.
 
-For all job types (including indirect ingestion from sources like SAP), areas, and functions, the app should store the jobs' technical and operational metadata in a SQL Database. The metadata can be used by Data Platform, Data Landing Zone, and Integration Ops for:
+For all job types (including indirect ingestion from sources like SAP), areas, and functions, the app should store the jobs' technical and operational metadata in a SQL Database. Technical metadata can drive jobs because it has have most of the parameters required for this task. Data Platform, Data Landing Zone, and Integration Ops can use the metadata to:
 
-- Tracking jobs and the latest data loading timestamps for datasets related to their functions.
-- Tracking available datasets.
-- Data volume growth.
-- Real-time updates on job failures.
+- Track jobs and the latest data-loading timestamps for datasets related to their functions.
+- Track available datasets.
+- Grow data volumes.
+- Obtain real-time updates about job failures.
 
-Since technical metadata will have most of the parameters required for jobs, it can drive them.
-
-Operational metadata can be used for tracking:
+Operational metadata can be used to track:
 
 - Jobs, job steps, and their dependencies.
 - Job performance and performance history.
@@ -49,22 +47,22 @@ Operational metadata can be used for tracking:
 - Source metadata changes.
 - Business functions that depend on datasets.
 
-If the business needs operational reports and event notifications, Data Landing Zone Ops and Integration Ops could use Microsoft Power BI to build them by querying the SQL Database.
+If the business needs operational reports and event notifications, Data Landing Zone Ops and Integration Ops can use Microsoft Power BI to query the SQL Database to build them.
 
 ## Register a new dataset (automated)
 
-Figure 2 suggests the following registration process for automating the ingestion of new data sources:
+Figure 2 recommends the following registration process for automating the ingestion of new data sources:
 
 ![How new datasets are ingested (automated).](../images/new-dataset-ingestion.png)
 
 *Figure 2: How new datasets are ingested (automated).*
 
-Enterpises can use custom applications, Azure Logic Apps, or Microsoft Power Apps in the data management landing zone to enter data into the Data Factory metastore and gain the following benefits:
+Enterprises can use custom applications, Azure Logic Apps, or Microsoft Power Apps in the data management landing zone to enter data into the Data Factory metastore and gain the following benefits:
 
 - Source details are registered, including production and Data Factory environments.
 - Data shape, format, and quality constraints are captured.
 - Integration Ops indicate if the data is **sensitive (PII)**, and this classification drives the process during which data lake folders are created to ingest raw and enriched data. The source names raw data, and the data asset names enriched and curated data.
-- Service Principal and Security Groups are created for ingesting and giving access to the dataset.
+- Service principal and security groups are created for ingesting and giving access to the dataset.
 - An ingestion job is created in the data landing zone Data Factory metastore.
 - An API inserts the data definition into Azure Purview.
 - Details are validated and tested in development/testing environments.
@@ -72,7 +70,7 @@ Enterpises can use custom applications, Azure Logic Apps, or Microsoft Power App
 
 ## Ingest new data sources (automated)
 
-Figure 3 illustrates how registered data sources in a Data Factory SQL Database metastore are polled and how data is initially ingested:
+Figure 3 illustrates how registered data sources in a Data Factory SQL Database metastore are polled and how data is ingested initially:
 
 ![Figure 3: How new data sources are ingested.](../images/new-datastore-ingestion.png)
 
@@ -81,13 +79,13 @@ Figure 3 illustrates how registered data sources in a Data Factory SQL Database 
 The Data Factory ingestion master pipeline reads configurations from a Data Factory SQL Database metastore and runs iteratively with the correct parameters. Data moves with little to no change from the source to the raw layer in Azure Data Lake. The data shape is validated based on the Data Factory metastore, and file formats are converted to either Apache Parquet or Avro formats before being copied into the enriched layer.
 
 > [!TIP]
-> The Parquet format is recommended when the I/O patterns are more read-heavy and/or when the query patterns are focused on a subset of columns in the records where the read transactions can be optimized to retrieve specific columns instead of reading the entire record.\
+> The Parquet format is recommended when the input/output (I/O) patterns are more read-heavy and/or when the query patterns focus on a subset of columns in the records where read transactions can be optimized to retrieve specific columns instead of reading the entire record.\
 > \
-> The Avro file format is recommended where I/O patterns are more write-heavy or query patterns favor retrieving multiple and whole rows of records (for example, the Avro format is favored by a message bus like Apache Event Hubs or Kafka, which write multiple events/messages in succession).
+> The Apache Avro file format is recommended where I/O patterns are more write-heavy or when query patterns retrieve multiple and whole rows of records (for example, the Avro format is favored by a message bus like Apache Event Hubs or Kafka, which write multiple events/messages in succession).
 
-If the data is ingested, it connects to an Azure Databricks Engineering workspace, and a data definition is created within the data management landing zone Hive metastore. This data definition needs to be protected so that only the automation process can create, alter, or drop data definitions.
+If the data is ingested, it connects to an Azure Databricks Data Science & Engineering workspace, and a data definition is created within the data management landing zone Hive metastore. This data definition needs to be protected so that only the automation process can create, alter, or drop data definitions.
 
-If Integration Ops wants to use SQL pools to expose data, then the custom solution is to create external tables or ingest data directly into SQL pools' internal tables.
+If Integration Ops needs to use SQL pools to expose data, then the custom solution is to create external tables or ingest data directly into the SQL pools' internal tables.
 
 ## Use the Azure Purview REST API to discover data
 
@@ -108,9 +106,9 @@ PUT https://{accountName}.scan.purview.azure.com/datasources/{dataSourceName}
 |`accountName`    | True       | string        | Name of the Azure Purview account         |
 |`dataSourceName` | True       | string        | Name of the data source         |
 
-### Request payloads for sample data source
+### Use the Azure Purview REST API
 
-The following payloads are a few examples of how to use the Azure Purview REST API to register data sources:
+The following examples show how to use the Azure Purview REST API to register data sources with payloads:
 
 **Register an Azure Data Lake Storage Gen2 data source**:
 
@@ -151,7 +149,7 @@ The following payloads are a few examples of how to use the Azure Purview REST A
 ```
 
 >[!NOTE]
->The `<collection-name>` is a current collection that exists in an Azure Purview account.
+>The **`<collection-name>`** is a current collection that exists in an Azure Purview account.
 
 ### Create a scan
 
@@ -163,7 +161,7 @@ Use the following API call to scan data sources:
 PUT https://{accountName}.scan.purview.azure.com/datasources/{dataSourceName}/scans/{newScanName}/
 ````
 
-### Scan URI parameters
+**URI parameters for a scan**:
 
 |Name  |Required  |Type  |Description  |
 |---------|---------|---------|---------|
@@ -171,9 +169,9 @@ PUT https://{accountName}.scan.purview.azure.com/datasources/{dataSourceName}/sc
 |`dataSourceName` | True        | string        | Name of the data source         |
 |`newScanName`    | True        | string        | Name of the new scan         |
 
-### Sample Scan Request Payloads
+### Use the Azure Purview REST API
 
-The following payloads are a few examples of how to use the Azure Purview REST API to scan data sources:
+The following examples show how to use the Azure Purview REST API to scan data sources with payloads:
 
 **Scan an Azure Data Lake Storage Gen2 data source**:
 
