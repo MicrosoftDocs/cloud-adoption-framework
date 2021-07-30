@@ -1,6 +1,6 @@
 ---
-title: Azure Enterprise Scale Analytics and AI Define Strategy
-description: Enterprise Scale Analytics and AI Define Strategy
+title: Well-Architected Framework for data workloads
+description: Use the architecture principals of the Azure Well-Architected Framework to design and optimize workloads running in your data estate.
 author: pratimdas
 ms.author: prda # Microsoft employees only
 ms.date: 01/27/2021
@@ -9,26 +9,47 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Well-architected framework for data workloads
+# Well-Architected Framework for data workloads
 
-When building data workloads, it's important to focus on the architectural principals. Think about whether you want to continue to manage and maintain your current service or products, or undertake new ones. The five architectural constructs are detailed in the [Azure Well Architected Framework](/azure/architecture/framework/) and summarized below.  
+The [Plan methodology of this scenario](./plan.md) outlines a process for you to rationalize your data estate, prioritize technical efforts, and identify data workloads. For many of the named workloads, it's important to adhere to a set of architectural principals. These principals help guide development and optimization of the workloads. The five architectural constructs are detailed in the [Azure Well-Architected Framework](/azure/architecture/framework/). This guidance provides a summary of how you can apply these principals to the management of your data workloads.
 
-### Security
+## Cost optimization
 
-This is about the [confidentiality and integrity of data, including privilege management, data privacy and establishing appropriate controls](https://azure.microsoft.com/resources/seven-key-principles-of-cloud-security-and-privacy/). For all data products and services, [consider network isolation](/azure/security/fundamentals/network-best-practices), [end-to-end encryption](/azure/security/fundamentals/encryption-overview), auditing and polices at platform level. For identity, consider single sign on integration, multi-factor authentication backed conditional access and managed service identities. It is essential to focus on separation of concerns, such as control pane versus data place, [role-based access control (RBAC)](/azure/role-based-access-control/overview), and where possible, attribute-based access control (ABAC). Security and [data management](/azure/architecture/patterns/category/data-management) must be baked into the architectural process at layers for every application and workload. In general, set up processes around regular or continuous vulnerability assessment, threat protection and compliance monitoring.
+It's critical to architect with the right tool for the right solution in mind. This principal can help you analyze spend over time. It can also help you analyze your ability to scale out versus scale in when needed. For your data workloads, consider reusability, on-demand scaling, reduced data duplication, and take advantage of the Azure Advisor service.  
 
-### Reliability
+## Performance efficiency
 
-Everything has the potential to break and data pipelines are no exception. Hence, great architectures are designed with availability and resiliency in mind. The key considerations are how quickly you can detect change, and how quickly you can resume operations. When building your data platform, consider resilient architectures, cross region redundancies, service level SLAs and critical support. Set up auditing, monitoring, and alerting by using integrated monitoring, and a notification framework.
+User delight comes from performance of your workloads. Performance can vary based on external factors. It's key to continuously gather performance telemetry and react as quickly as possible. Build on the shared environmental controls for management and monitoring to create alerts, dashboards, and notifications specific to the performance of your workload. The key considerations are:
 
-### Performance efficiency
+- Storage and compute abstraction
+- Dynamic scaling
+- Partitioning
+- Storage pruning
+- Enhanced drivers
+- Multilayer cache
 
-User delight comes from the architectural constructs of performance and scalability. Performance can vary based on external factors. It is key to continuously gather performance telemetry and react as quickly as possible, i.e. using the architectural constructs for management and monitoring. The key considerations here are storage and compute abstraction, dynamic scaling, partitioning, storage pruning, enhanced drivers, and multi-layer cache. Take advantage of hardware acceleration such as FPGA network where possible.
+## Operational excellence
 
-### Cost optimization
+Operational management of your data workloads can include advanced automation that improves your ability to quickly respond to events. Build on top of centralized data operations through workload-specific process automation, automated testing, and consistency. For AI, consider using the shared MLOps framework as part of your normal release cycle.
 
-Every bit of your platform investment must yield value. It is critical to architect with the right tool for the right solution in mind. This will help you analyse spend over time and the ability to scale out versus scale in when needed. For your data and analytics platform, consider reusability, on-demand scaling, reduced data duplication and certainly take advantage of the Azure advisor service.  
+## Security
 
-### Operational excellence
+Security and [data management](/azure/architecture/patterns/category/data-management) must be built into the architectural process at layers for every application and workload. The data management and analytics scenario focuses on establishing a foundation for security. This foundation is built when you configure your Azure landing zones and you manage them separate from the workload. However, the workload team is still responsible for validating the following minimum requirements. If necessary, workload-specific solutions might be required to augment the configuration of the environment.
 
-This is about making the operational management of your data products and service as seamless as possible through automation and your ability to quickly respond to events. Focus on data ops though process automation, automated testing, and consistency. For AI, considering building in a MLOps framework as part of your normal release cycle.
+- Ensure [confidentiality and integrity of data, including privilege management, data privacy, and establishing appropriate controls](https://azure.microsoft.com/resources/seven-key-principles-of-cloud-security-and-privacy/).
+- Implement appropriate [network isolation](/azure/security/fundamentals/network-best-practices) and [end-to-end encryption](/azure/security/fundamentals/encryption-overview), auditing, and policies at the platform level.
+- Use single sign-on (SSO) integration, multifactor authentication backed conditional access, and managed service identities.
+- Adhere to separation of concerns, such as control pane versus data plane, through proper application of [role-based access control (RBAC)](/azure/role-based-access-control/overview), and where possible, attribute-based access control (ABAC).
+- Ensure the workload team is involved in regular or continuous vulnerability assessment, threat protection, and compliance monitoring.
+
+## Reliability
+
+Everything has the potential to break and data pipelines are no exception. Because of this, great architectures are designed with availability and resiliency in mind. The key considerations are how quickly you can detect change, and how quickly you can resume operations.
+
+Your data environment should consider resilient architectures, cross region redundancies, service level, service-level agreements (SLAs), and critical support. The existing environment should also include auditing, monitoring, and alerting by using integrated monitoring and a notification framework.
+
+On top of these environmental controls, the workload team should consider:
+
+- More architecture modification to improve service level SLAs
+- Redundancy of workload-specific architecture
+- Processes for monitoring and notification beyond what is provided by the cloud operations teams
