@@ -32,7 +32,7 @@ Following are guidelines on developing a data science template for your organiza
 
 ### Considerations for an initial setup
 
-In some cases, data scientists in your organization might require an environment for a quick ad-hoc analysis. This is often the case when a data science project isn't formally set up; for example, a project manager, cost code, or cost center (that could be required for cross-charging within Azure) might be missing because it has yet to be approved. Users in your organization or team might need to access a data science environment to understand the data and possibly evaluate a project's feasibility. Also, some projects might not require a full data science environment because of the small number of datasets.
+In some cases, data scientists in your organization might require an environment for quick ad-hoc analyses. This is common when a data science project isn't formally set up; for example, a project manager, cost code, or cost center (that could be required for cross-charging within Azure) might be missing because it has yet to be approved. Users in your organization or team might need to access a data science environment to understand the data and possibly evaluate a project's feasibility. Also, some projects might not require a full data science environment because of the small number of datasets.
 
 In other cases, a full data science project might be required, complete with a dedicated environment, project management, cost code, and cost center. These types of project setups are typically required when multiple team members want to collaborate, share results, and need to operationalize models after the exploration phase succeeds.
 
@@ -46,9 +46,9 @@ It's recommended to set up different AI services like Azure Cognitive Services o
 
 ### Real-time streaming scenario
 
-For streaming and real-time use cases, deployments should be tested on a downsized [Azure Kubernetes Service (AKS)](/azure/aks/) in the development environment to save costs before deploying them to the production AKS or Azure App Service for containers. Simple input and output tests should be performed to make sure that the services respond as expected.
+For streaming and real-time use cases, deployments should be tested on a downsized [Azure Kubernetes Service (AKS)](/azure/aks/) in the development environment to save on costs before deploying them to the production AKS or Azure App Service for containers. Simple input and output tests should be performed to make sure that the services respond as expected.
 
-Next, models can be deployed to a desired service. The only deployment compute target today that is GA and is recommended for production workloads in an AKS cluster. This is more necessary if graphics processing unit (GPU) or field-programmable gate array support is required. Other native deployment options that supports these hardware requirements aren't currently available in Azure Machine Learning. Today, Azure Machine Learning requires one-to-one mapping to AKS clusters. Every new connection to an Azure Machine Learning workspace breaks the previous connection between AKS and Azure Machine Learning. Once that limitation is mitigated, it's recommended to deploy central AKS clusters as shared resources and attach them to their respective workspaces. An additional central test AKS instance should then also be hosted if stress tests need to be performed before moving a model to the production AKS. The test environment should provide the same compute resource as the production environment to ensure that the results are as similar as possible to the production environment.
+Next, models can be deployed to a desired service; this is the only deployment compute target that's generally available and recommended today for production workloads in an AKS cluster. This is more necessary if graphics processing unit (GPU) or field-programmable gate array support is required. Other native deployment options that support these hardware requirements aren't currently available in Azure Machine Learning. Azure Machine Learning currently requires one-to-one mapping to AKS clusters. Every new connection to an Azure Machine Learning workspace breaks the previous connection between AKS and Azure Machine Learning. Once that limitation is mitigated, it's recommended to deploy central AKS clusters as shared resources and attach them to their respective workspaces. An additional central test AKS instance should then be hosted also if stress tests need to be performed before moving a model to the production AKS. The test environment should provide the same compute resource as the production environment to ensure that the results are as similar as possible to the production environment.
 
 ### Batch scenario
 
@@ -58,7 +58,7 @@ Not all use cases require AKS cluster deployments, especially if large data amou
 
 Before deploying a model in Azure Machine Learning to an AKS, the user needs to specify the resources (CPU, RAM, GPU) that should be allocated for the respective model. Defining these parameters can be a complex and tedious process. Stress tests with different configurations need to be performed to identify a good set of parameters. This process can be simplified with the **Model Profiling** feature in Azure Machine Learning, which is a long-running job that tests different resource allocation combinations and uses an identified latency and RTT to recommend an optimal combination. This information can assist the actual model deployment on AKS.
 
-To safely update models in Azure Machine Learning, teams should use the controlled rollout feature (preview) to minimize the downtime and keep the model REST endpoint consistent.
+To safely update models in Azure Machine Learning, teams should use the controlled rollout feature (preview) to minimize downtime and keep the model's REST endpoint consistent.
 
 ## Best practices and the workflow for Machine Learning Operations
 
@@ -89,7 +89,7 @@ Artifacts can speed up data science projects' exploration and operationalization
 > [!TIP]
 > Azure Machine Learning sample pipelines should built with the Python software developer kit (SDK) or based on the YAML language. The new YAML experience will be more future-proof, as the Azure Machine Learning product team is currently working on a new SDK and command line interface (CLI). They are confident that YAML will serve as the definition language for all artifacts within Azure Machine Learning.
 
-It is understood that any sample pipelines won't work out of the box for each project, but they can be used as a baseline and be adjusted for projects. A pipeline should include the most relevant aspects of each project, like such as referencing a compute target, referencing datasets, defining parameters, defining inputs, and defining the execution steps. The same should be done for Azure DevOps pipelines, and DevOps pipelines should also use the Azure Machine Learning SDK or CLI. 
+It is understood that any sample pipelines won't work out of the box for each project, but they can be used as a baseline and be adjusted for projects. A pipeline should include the most relevant aspects of each project, like such as referencing a compute target, referencing datasets, defining parameters, defining inputs, and defining the execution steps. The same should be done for Azure DevOps pipelines, and DevOps pipelines should also use the Azure Machine Learning SDK or CLI.
 
 Pipelines should demonstrate how to:
  
@@ -102,12 +102,12 @@ Artifacts won't suit all projects all the time and may require customization, bu
 
 ### Structure the Machine Learning Operations repository
 
-To avoid situations where users might lose track of where different artifacts are stored, it's recommended to request additional time to communicate and understand folder structure and construct a top-level folder structure for the standard repository where all projects should follow. This can be bundled with the previous recommendations in the sections above.
+To avoid situations where users might lose track of where different artifacts are stored, it's recommended to request additional time to communicate and construct a top-level folder structure for the standard repository where all projects should follow. This can be bundled with the previous recommendations in the sections above.
 
 > [!NOTE]
 > The concepts mentioned in this section can be used across on-premises, Amazon Web Services, Palantir, and Azure environments.
 
-The proposed top-level folder structure for Machine Learning Operations repository is illustrated in Figure one:
+The proposed top-level folder structure for a Machine Learning Operations repository is illustrated in Figure one:
 
 ![The repository structure for Machine Learning Operations.](../images/repository-structure.png)
 

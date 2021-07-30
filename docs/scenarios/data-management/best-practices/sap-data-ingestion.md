@@ -34,7 +34,7 @@ Described as the **PUSH** option, this SAP-based option facilitates trigger-base
 
 ## Third-party tools
 
-There are many third-party tools that can provide value-added extraction and ingestion from SAP sources in real time. Microsoft recommends [Qlik Replicate](https://www.qlik.com/us/products/technology/sap) (previously known as Attunity), [Simplement Data Liberator](https://www.simplement.us/), and [Kagool Velocity](https://www.kagool.com/). Each provides similar functionality, each service able to extract data from SAP in almost real time and provide business context and intelligence out of the box.
+There are many third-party tools that can provide value-added extraction and ingestion from SAP sources in real time. Microsoft recommends [Qlik Replicate](https://www.qlik.com/us/products/technology/sap) (previously known as Attunity), [Simplement Data Liberator](https://www.simplement.us/), and [Kagool Velocity](https://www.kagool.com/). Each provides similar functionality and is able to extract data from SAP in almost real time and provide business context and intelligence out of the box.
 
 These services differ in their technical architecture. Qlik Replicate and Simplement Data Liberator provide near-real-time replication by identifying changes in source database logs. Kagool Velocity uses an add-on to SAP NetWeaver and submits a Request for Comments to the application layer to expose data. Compared to options mentioned earlier, these options provide better out-of-the-box functionality and near-real-time support, but they require third-party technologies.
 
