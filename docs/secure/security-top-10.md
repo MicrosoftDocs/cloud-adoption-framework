@@ -301,7 +301,7 @@ These native solutions also enable security operations teams to focus on inciden
 
 **Who**: this is typically driven by the [security operations](../organize/cloud-security-operations-center.md) team.
 
-- **Sponsorship:** This is typically sponsored by the security operations director (or equivalent)..
+- **Sponsorship:** This is typically sponsored by the security operations director or equivalent role.
 - **Execution:** Integrating native threat detection is a collaborative effort involving those with:
   - [Security operations](../organize/cloud-security-operations-center.md): Integrate alerts into SIEM and incident investigation processes, educate analysts on cloud alerts and what they mean, and how to use the native cloud tools.
   - [Incident preparation](../organize/cloud-security-incident-preparation.md): Integrate cloud incidents into practice exercises and ensure practice exercises are conducted to drive team readiness.
