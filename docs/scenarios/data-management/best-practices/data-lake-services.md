@@ -1,6 +1,6 @@
 ---
-title: Azure Enterprise Scale Analytics and AI Teams Data Lake Services
-description: Enterprise Scale Analytics and AI Architecture Data Lake Services
+title: Azure Enterprise Scale for analytics and AI Data Lake Services
+description: Learn more about enterprise-scale for analytics and AI architecture for Data Lake Services
 author:  mboswell
 ms.author:  mboswell # Microsoft employees only
 ms.date: 03/03/2021
@@ -9,51 +9,51 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Data Lake Zones
+# Data lake landing zones
 
-Three [Azure Data Lake Storage Gen2 (ADLS)](/azure/storage/blobs/data-lake-storage-introduction) accounts should be provisioned per [Data Landing Zone](../architectures/data-landing-zone.md) in the "data lake services" resource group. As data passes through the different stages of transformation, it should be saved in one of the Data Landing Zone's three data lakes and available for the [data products](../architectures/data-landing-zone-data-products.md) in the lake which serves as the enriched and curated data layer. Data products would consume from the enriched and curated data layer only. These data lake accounts should be deployed into a single resource group.
+Three [Azure Data Lake Storage Gen2 (ADLS)](/azure/storage/blobs/data-lake-storage-introduction) accounts should be provisioned per [data landing zone](../architectures/data-landing-zone.md) in the "data lake services" resource group. As data passes through the different stages of transformation, it should be saved in one of the data landing zone's three data lakes and available for the [data products](../architectures/data-landing-zone-data-products.md) in the lake that serves as the enriched and curated data layer. Data products would consume from the enriched and curated data layer only. These data lake accounts should be deployed into a single resource group.
 
 ## Overview
 
-The three Data Lakes accounts should align to the typical layers within a data lake.
+The three data lake accounts should align to the typical layers within a data lake.
 
-|Lake #|Layer|
+|Lake number|Layer|
 |---|---|
-| 1 | Raw Data|
-| 2 | Enriched and Curated Data|
-| 3 | Workspace Data|
+| 1 | Raw data|
+| 2 | Enriched and curated data|
+| 3 | Workspace data|
 
-There should be a single container per data lake zone. The exception to this recommendation would be be where immutable or different soft delete policies are required for the data held in the container. These requirements would drive additional containers.
+There should be a single container per data lake zone. The exception to this recommendation would be where immutable or different soft delete policies are required for the data held in the container. These requirements will drive more containers.
 
-The services should be enabled with the "Hierarchical Name Space" feature to allow efficient file management. [The hierarchical name space feature](/azure/storage/blobs/data-lake-storage-namespace) allows the collection of objects/files within an account to be organized into a hierarchy of directories and nested subdirectories in the same way that the file system on your computer is organized.
+The services should be enabled with the "Hierarchical Name Space" feature to allow efficient file management. [The hierarchical name space feature](/azure/storage/blobs/data-lake-storage-namespace) allows you to organize the collection of objects and files within an account into a hierarchy of directories and nested subdirectories in the same way that the file system on your computer is organized.
 
 >[!IMPORTANT]
->The Azure Blob Storage Account must have "hierarchical name space" enabled to allow the efficient file management.
+>The Azure Blob Storage Account must have **hierarchical name space** enabled to allow the efficient file management.
 
-Whilst the data lake sits across three data lake accounts, multiple containers, and folders, it represents one logical data lake for the Data Landing Zone. Provisioning three data lake accounts allows you to set different redundancy, retention, and access policies for each lake account. For example you might want your RAW data to be geo-redundant whereas Workspace is used for data exploration and requires locally redundant disaster recovery.
+The data lake sits across three data lake accounts, multiple containers, and folders, but it represents one logical data lake for the data landing zone. Provisioning three data lake accounts allows you to set different redundancy, retention, and access policies for each lake account. For example, you might want your RAW data to be geo-redundant whereas Workspace is used for data exploration and requires locally redundant disaster recovery.
 
-Each **Data Integration** should have two folders on each data lake over which they should have ownership, following best practices for each data lake zone.
+Each **data integration** should have two folders on each data lake over which they should have ownership, following best practices for each data lake zone.
 
-The two folders per **Data Integration** should be divided by classification (*confidential or below* and *sensitive (PII)*) with access controlled by ACLs.
+The two folders per **data integration** should be divided by classification (*confidential or below* and *sensitive (personal data)*) with access controlled by ACLs.
 
 >[!IMPORTANT]
 >Access to the data is restricted by a combination of ACLs and AAD-groups. These control what can and cannot be accessed by other groups. **Integration Ops teams** should approve or reject access to their data assets.
 
-## Data Lake Zones
+## Data lake zones
 
 With three data lake accounts in use, it is important to understand the context in which they should be used.
 
-### Raw Data (Data Lake One)
+### Raw data (Data lake one)
 
-Using the water based analogy, think of this layer as a reservoir which stores data in it's natural originating state — unfiltered and unpurified. You may choose to store it in original format (such as json or csv) but there may be scenarios where it makes more sense to store it as a column in compressed format such as avro, parquet or Databricks Delta Lake. 
+Using the water-based analogy, think of this layer as a reservoir that stores data in its natural originating state, unfiltered and unpurified. You might choose to store it in original format like json or csv. However, there might be scenarios where it makes more sense to store it as a column in compressed format, such as avro, parquet, or Databricks Delta Lake.
 
-This data is always immutable -it should be locked down and permissioned as read-only to any consumers (automated or human). The zone may be organised using a folder per source system, each ingestion processes having write access to only their associated folder.
+This data is always immutable. It should be locked down and the permissions given as read-only to any consumers, automated, or human. The zone may be organized using a folder per source system, each ingestion processes having write access to only their associated folder.
 
-As this layer usually stores the largest amount of data, consider using lifecycle management to reduce long term storage costs. ADLS gen2 supports moving data to the cool access tier either programmatically or through a lifecycle management policy. The policy defines a set of rules which run once a day and can be assigned to the account, filesystem or folder level. The feature is free although the operations will incur a cost.
+As this layer usually stores the largest amount of data, consider using lifecycle management to reduce long term storage costs. ADLS gen2 supports moving data to the cool access tier either programmatically or through a lifecycle management policy. The policy defines a set of rules that run once a day and can be assigned to the account, filesystem, or folder level. The feature is free although the operations will incur a cost.
 
-Raw Data from source systems for each **Data Integration** will land into either the General folder, for *confidential or below*, or *sensitive (PII)* folder for each **Data Integration** on Data Lake One.
+Raw Data from source systems for each **data integration** will land into either the General folder, for *confidential or below*, or *sensitive (personal data)* folder for each **data integration** on data lake one.
 
-### RAW Directory Layout
+### RAW directory layout
 
 ```markdown
 .
@@ -78,22 +78,22 @@ For batch or micro-batch patterns, the data should be copied from the source sys
 
 For streaming use cases, the data in the raw zone should sometimes also be stored as an aggregated dataset. For example, data is ingested via a message bus such as Azure Event Hub and then aggregated via a real-time processing engine such as Azure Stream Analytics or Spark Streaming before it is stored in the data lake.
 
-Depending on the retention policies of your enterprise, this data is either stored as-is for the period required by the retention policy, or it can be deleted when you think the data is of no more use (*e.g.* raw sales data that is ingested from on-premises systems).
+Depending on the retention policies of your enterprise, this data can be stored as-is for the period required by the retention policy. Or it can be deleted when you think the data is of no more use. An example is sales data that is ingested from on-premises systems.
 
 >[!TIP]
->Enterprises need to think about scenarios where they might need to rebuild an analytics platform from scratch and should always consider the most granular data they would require to rebuild downstream Read Data Stores.
+>Enterprises must think about scenarios where they might need to rebuild an analytics platform from scratch. You should consider the most granular data you require to rebuild downstream read data stores.
 
-### Enriched Data (Data Lake Two)
+### Enriched data (data lake two)
 
-Enriched data is the version where raw data (as-is or aggregated) has a defined schema, has been cleansed, and is available to analytics engines to extract high-value data. It will follow the same hierarchial directory structure as the raw layer and resides in either the *confidential or below* or *sensitive (PII)* folder for **Data Integration** on Data Lake Two.
+Enriched data is the version where raw data (as-is or aggregated) has a defined schema, has been cleansed, and is available to analytics engines to extract high-value data. It will follow the same hierarchical directory structure as the raw layer and resides in either the *confidential or below* or *sensitive (personal data)* folder for **data integration** on data lake two.
 
-#### Enriched Directory Layout
+#### Enriched directory layout
 
 ```markdown
-Enriched Directory Layout
+Enriched directory layout
 .
-|-Data Integration
-|-Data Integration
+|-Data integration
+|-Data integration
 |--Transactional
 |---Confidential
 |----Dataset
@@ -101,7 +101,7 @@ Enriched Directory Layout
 |------LoadTS=YYMMDDHHMMSS
 |        file001.parquet
 |        file001.parquet
-|---Sensitive (PII)
+|---Sensitive (personal data)
 |----Dataset
 |-----Entity
 |------LoadTS=YYMMDDHHMMSS
@@ -112,11 +112,11 @@ Enriched Directory Layout
 >[!NOTE]
 >This layer of data can be consider the golden layer and shouldn't have had any other transformations applied apart from aligning data types.
 
-### Curated Data (Data Lake Two)
+### Curated data (data lake two)
 
-Data is taken from the golden layer, in Enriched Data, and transformed into high-value **Data Products** that is served to the consumers of the data (BI analysts and the data scientists). This data has structure and can be served to the consumers either as-is (*e.g.* data science notebooks) or through another read data store such as Azure Database for SQL.
+Data is taken from the golden layer, in enriched data, and transformed into high-value **data products**. These data products are served to the consumers of the data, such as BI analysts and the data scientists. This data has structure and can be served to the consumers either as-is, like data science notebooks or through another read data store such as Azure Database for SQL.
 
-#### Curated Directory Layout
+#### Curated directory layout
 
 ```markdown
 .
@@ -140,23 +140,23 @@ Data is taken from the golden layer, in Enriched Data, and transformed into high
 >[!TIP]
 >In the case where a decision is made to land the data into another read data store such as Azure Database for SQL, as a high speed serving layer, we would recommend having a copy of the data residing in the curated data. Although users of the **data product** will be guided to the main read data store (Azure Database for SQL), it will allow them to do further data exploration in a wider set of tools if the data is also available in the data lake.
 
-Data assets in this layer should be highly governed and well documented. For example, high-quality sales data might be data in the enriched data zone correlated with other demand forecasting signals such as social media trending patterns for a **Data Integration** that is used for predictive analytics on determining the sales projections for the next fiscal year.
+Data assets in this layer should be highly governed and well documented. For example, high-quality sales data might be data in the enriched data zone correlated with other demand forecasting signals such as social media trending patterns for a **data integration** that is used for predictive analytics on determining the sales projections for the next fiscal year.
 
-### Workspace Data (Data Lake Three)
+### Workspace data (data lake three)
 
-In addition to the data that is ingested by the **Data Integration** team from the source, the consumers of the data can also choose to bring other useful datasets.
+In addition to the data that is ingested by the **data integration** team from the source, the consumers of the data can also choose to bring other useful datasets.
 
-In this case, the data platform should allocate a workspace for these consumers so they can use the curated data along with the other datasets they bring to generate valuable insights. For example, if a Data Science team is trying to determine the product placement strategy for a new region, they could bring other datasets such as customer demographics and usage data of similar products from that region. These high-value sales insights data could be used to analyze the product market fit and the offering strategy.
+In this case, the data platform should allocate a workspace for these consumers so they can use the curated data along with the other datasets they bring to generate valuable insights. For example, if a data science team is trying to determine the product placement strategy for a new region, they could bring other datasets such as customer demographics and usage data of similar products from that region. These high-value sales insights data could be used to analyze the product market fit and the offering strategy.
 
 These datasets are usually of unknown quality and accuracy. They are still categorized as a **data product** but are temporary and only relevant to the user group using the data.
 
-Sometimes these datasets mature, and the enterprise should consider how they promote these **Data Products** from the Workspace to the Curated Data Layer. In order to keep Data Product teams responsible for new Data Products, it is recommended to provide these teams a dedicated folder on the Curated Data Layer in which they can then then store the new results and share them with other teams across the organization.
+Sometimes these datasets mature, and the enterprise should consider how they promote these **data products** from the Workspace to the Curated Data Layer. In order to keep Data Product teams responsible for new Data Products, it is recommended to provide these teams a dedicated folder on the Curated Data Layer in which they can then then store the new results and share them with other teams across the organization.
 
-## Data Lake Partitioning
+## Data lake partitioning
 
 sss
 
-## Lifecycle Management
+## Lifecycle management
 
 Azure storage offers different access tiers, which allow you to store blob object data in the most cost-effective manner. The available access tiers include:
 
@@ -175,41 +175,39 @@ Data stored in the cloud grows at an exponential pace. To manage costs for your 
 
 Each of these data access scenarios benefits from a different access tier that is optimized for a particular access pattern. With hot, cool, and archive access tiers, Azure Blob Storage addresses this need for differentiated access tiers with separate pricing models.
 
-The Enterprise Analytics and AI construction set prescribes that you should implement a tiering policy for all three Azure Data Lake accounts.
+The Enterprise analytics and AI construction set prescribes that you should implement a tiering policy for all three Azure Data Lake accounts.
 
-## Key Considerations
+## Considerations
 
-When landing data into a data lake, it is important to pre-plan the structure of the data so that security, partitioning, and processing can be utilized effectively. Many of the following recommendations are applicable for all big data workloads. Every workload has different requirements on how the data is consumed, therefore the list below general recommendation. Please work with your system integrator on the right level of AD groups for your implementation of this construction set.
-
-
+When landing data into a data lake, it is important to pre-plan the structure of the data so that security, partitioning, and processing can be utilized effectively. Many of the following recommendations are applicable for all big data workloads. Every workload has different requirements on how the data is consumed, therefore the list below general recommendation. Work with your system integrator on the right level of AD groups for your implementation of this construction set.
 
 ### Write data
 
 |Raw data |Enriched data |Curated data| Workspace data|
 |---------|---------|---------|---------|
-|Data Integration(s) | Data Integration(s) | Data Products(s) | Data Products, Data Scientists and BI Analysts|
+|Data integrations | Data integrations | Data products | Data products, data scientists, and BI analysts|
 
 ### Read data
 
 |Raw data |Enriched data |Curated data| Workspace data|
 |---------|---------|---------|---------|
-| Data Integration | Data Integration and read access for others based on approval of Data Integration owner | Data Products, Analysts, Data Scientists, and Users | Data Scientists and Analysts|
+| Data integration | Data integration and read access for others based on approval of data integration owner | Data products, analysts, data scientists, and users | Data scientists and analysts|
 
-### Folder Structure and Hierarchy
+### Folder structure and hierarchy
 
 |Raw data |Enriched data |Curated data| Workspace data|
 |---------|---------|---------|---------|
 |Folder structure to mirror sensitivity followed by source. | Folder structure to mirror data integration followed by data asset | Folder structure mirrors data product structure |Folder structures mirror teams that the workspace is used by.|
 
 >[!WARNING]
->Because some products do not support mounting the root of a data lake container, each data lake container in Raw, Curated and Enriched, and Workspace should have a single folder before branching off to multiple folders. The folder permissions should be carefully set up as during the creation of a new folder, from the root, the default ACL on the parent directory determines a child directory's default ACL and access ACL; a child file's access ACL (files do not have a default ACL). See [Access control lists (ACLs) in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-access-control).
+>Because some products do not support mounting the root of a data lake container, each data lake container in raw, curated, and enriched, and Workspace should have a single folder before branching off to multiple folders. The folder permissions should be carefully set up as during the creation of a new folder, from the root, the default ACL on the parent directory determines a child directory's default ACL and access ACL. A child file's access ACL (files do not have a default ACL). See [Access control lists (ACLs) in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-access-control).
 
 ## What data format do I choose?
 
-Data may arrive to your data lake account in a variety of formats – human readable formats such as JSON, CSV or XML files, compressed binary formats such as .tar.gz and a variety of sizes – huge files (a few TBs) such as an export of a SQL table from your on-premise systems or a large number of tiny files (a few KBs) such as real-time events from your IoT solution. While ADLS Gen2 supports storing all kinds of data without imposing any restrictions, it is better to think about data formats to maximize efficiency of your processing pipelines and optimize costs – you can achieve both of these by picking the right format and the right file sizes.
-Hadoop has a set of file formats it supports for optimized storage and processing of structured data. Let us look at some common file formats – [Avro](https://avro.apache.org/docs/current/), [Parquet](https://parquet.apache.org/documentation/latest/) and [ORC](https://orc.apache.org/docs/). All of these are machine-readable binary file formats, offer compression to manage the file size and are self-describing in nature with a schema embedded in the file. The difference between the formats is in how data is stored – Avro stores data in a row-based format and Parquet and ORC formats store data in a columnar format.
+Data may arrive to your data lake account in various formats like human readable formats such as JSON, CSV or XML files, compressed binary formats such as .tar.gz and a variety of sizes – huge files (a few TBs) such as an export of a SQL table from your on-premise systems or a large number of tiny files (a few KBs) such as real-time events from your IoT solution. While ADLS Gen2 supports storing all kinds of data without imposing any restrictions, it is better to think about data formats to maximize efficiency of your processing pipelines and optimize costs – you can achieve both of these by picking the right format and the right file sizes.
+Hadoop has a set of file formats it supports for optimized storage and processing of structured data. Let us look at some common file formats – [Avro](https://avro.apache.org/docs/current/), [Parquet](https://parquet.apache.org/documentation/latest/) and [ORC](https://orc.apache.org/docs/). All of these are machine-readable binary file formats, offer compression to manage the file size and are self-describing in nature with a schema embedded in the file. The difference between the formats is in how data is stored. Avro stores data in a row-based format and Parquet and ORC formats store data in a columnar format.
 
 ### Key considerations
 
-* Avro file format is favored where the I/O patterns are more write heavy or the query patterns favor retrieving multiple rows of records in their entirety. E.g. Avro format is favored by message bus such as Event Hub or Kafka writes multiple events/messages in succession.
+* Avro file format is favored where the I/O patterns are more write heavy or the query patterns favor retrieving multiple rows of records in their entirety. For example, Avro format is favored by message bus such as Event Hub or Kafka writes multiple events/messages in succession.
 * Parquet and ORC file formats are favored when the I/O patterns are more read heavy and/or when the query patterns are focused on a subset of columns in the records – where the read transactions can be optimized to retrieve specific columns instead of reading the entire record.
