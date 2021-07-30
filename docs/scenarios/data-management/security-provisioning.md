@@ -3,7 +3,7 @@ title: Understand security provisioning with enterprise-scale for analytics and 
 description: Learn about security provisioning with Enterprise-scale for analytics and AI in Azure.
 author: mboswell
 ms.author: mboswell
-ms.date: 07/23/2021
+ms.date: 08/06/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready

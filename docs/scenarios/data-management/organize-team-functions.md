@@ -3,7 +3,7 @@ title: Understand teams and functions for Enterprise scale analytics and AI in A
 description: Learn about teams and functions for Enterprise scale analytics and AI in Azure.
 author: mboswell
 ms.author: mboswell
-ms.date: 07/23/2021
+ms.date: 08/06/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -149,7 +149,7 @@ The Data Science Products team starts by searching and finding relevant datasets
 
 Before processing all data, the team uses local or remote compute to process and analyze sample datasets. They can optimize remote compute targets with larger datasets to train and develop machine learning models with runs, outputs, and models that are tracked inside Azure Machine Learning.
 
-When the team has developed machine learning models, they start operationalizing them. For this, they expand the team to include Data Ops and machine learning engineers who can assist with moving the models into a new data product, as outlined in a data products team role.
+When the team has developed machine learning models, they start operationalizing them. For this, they expand the team to include Data Ops and machine learning engineers who can assist with moving the models into a new data product, as outlined in a Data Product team role.
 
 The Data Science team will continue to work with the associated Data Product Owners to capture feedback, support and resolved/update models in production using an [ML Ops methodology](/azure/machine-learning/concept-model-management-and-deployment).
 
@@ -200,4 +200,4 @@ In addition to participating in these user groups, analysts should submit data a
 |Data Platform Ops|Consulted|Responsible|Responsible|Consulted|Consulted|
 |Data Landing Zone Ops|Informed|Responsible|Responsible|Responsible|Responsible|
 |Integration Ops||Informed|Informed|Responsible|Consulted|
-|Data Products team||Informed|Informed|Informed|Responsible|
+|Data Product team||Informed|Informed|Informed|Responsible|

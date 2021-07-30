@@ -3,7 +3,7 @@ title: Understand DevOps automation for enterprise scale analytics and AI in Azu
 description: Learn about DevOps automation for enterprise scale analytics and AI in Azure. 
 author: abdale
 ms.author: hamoodaleem
-ms.date: 07/23/2021
+ms.date: 08/06/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready

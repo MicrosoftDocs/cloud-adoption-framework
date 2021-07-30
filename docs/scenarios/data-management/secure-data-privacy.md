@@ -3,7 +3,7 @@ title: Understand data privacy for enterprise scale analytics and AI in Azure
 description: Learn about data privacy for enterprise scale analytics and AI in Azure.
 author: abdale
 ms.author: hamoodaleem
-ms.date: 07/23/2021
+ms.date: 08/06/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -129,7 +129,7 @@ As new datasets are deployed, part of the DevOps process would need to run scrip
 
 #### Option 3: Policy engine
 
-The first two options provide a way to handle **sensitive (PII)** data, and they also grant control to Integrations Ops and Data Products teams to identify and restrict access. This might be enough for a small-scale analytics platform, but a policy engine should be placed in the data management landing zone for a large enterprise with hundreds of datasets. Policy engines support a central way of managing, securing, and controlling:
+The first two options provide a way to handle **sensitive (PII)** data, and they also grant control to Integrations Ops and Data Product teams to identify and restrict access. This might be enough for a small-scale analytics platform, but a policy engine should be placed in the data management landing zone for a large enterprise with hundreds of datasets. Policy engines support a central way of managing, securing, and controlling:
 
 - Access to data
 - Managing the data life cycle
@@ -143,7 +143,7 @@ Typically, a policy engine would integrate with a data catalog like Azure Purvie
 
 The policy engine should use Azure AD groups to apply policies to datasets. The expectation for any policy solution providing data privacy is to tokenize **sensitive (PII)** data and to always check through attribute access control so that the user has can detokenize the columns they need to access.
 
-As mentioned, for a policy engine to succeed, it's important for it to integrate into the data catalog and for DevOps to use a REST API to onboard a new dataset. As Data Integrations and Data Products teams create read data sources, they would be registered in the data catalog and help identify **sensitive (PII)** data. The policy engine should import this definition and deny all access to data until the teams have set up its access policies. All of this should be done via a REST API workflow from the IT service management solution.
+As mentioned, for a policy engine to succeed, it's important for it to integrate into the data catalog and for DevOps to use a REST API to onboard a new dataset. As Data Integration and Data Product teams create read data sources, they would be registered in the data catalog and help identify **sensitive (PII)** data. The policy engine should import this definition and deny all access to data until the teams have set up its access policies. All of this should be done via a REST API workflow from the IT service management solution.
 
 ## Restricted data
 

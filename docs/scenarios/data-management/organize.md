@@ -3,7 +3,7 @@ title: Understand how to organize Data Operations team members for enterprise sc
 description: Learn how to organize Data Operations team members for enterprise scale analytics and AI in Azure.
 author: abdale
 ms.author: hamoodaleem
-ms.date: 07/23/2021
+ms.date: 08/06/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -27,7 +27,7 @@ The deployment process and data operations, DataOps, model is an essential part 
 3. Follow a deployment process that includes a strategy for GitHub forks and branches.
 4. Maintain a central repository and deploying data management landing zones.
 
-Contributors with identifiable and individual skills should establish a Platform group to centrally govern data platform infrastructure and build and deploy common data infrastructure pieces for the data management landing zone, plus various data landing zones. The Platform group can also build, own, and provide agnostic technology that helps data integration and data products teams to capture, process, store, and maintain their datasets.
+Contributors with identifiable and individual skills should establish a Platform group to centrally govern data platform infrastructure and build and deploy common data infrastructure pieces for the data management landing zone, plus various data landing zones. The Platform group can also build, own, and provide agnostic technology that helps Data Integration and Data Product teams to capture, process, store, and maintain their datasets.
 
 The team should present its services in a self-service manner, which can include tools for storing big data, versioning product data, organizing/implementing the data pipeline, de-identifying data, and more. These types of tools are key to minimizing bottlenecks in the workflow and reducing lead time for creating new data products.
 
