@@ -1,6 +1,6 @@
 ---
 title: Understand best practices for data science projects with enterprise-scale for analytics and AI in Azure
-description: Learn about best practices for data science projects with enterprise-scale for analytics and AI in Azure
+description: Learn about best practices for data science projects with enterprise-scale for analytics and AI in Azure.
 author:  abdale
 ms.author: hamoodaleem 
 ms.date: 08/06/2021

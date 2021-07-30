@@ -1,6 +1,6 @@
 ---
 title: Understand the automated ingestion framework with enterprise-scale for analytics and AI in Azure
-description: Learn about the automated ingestion framework with enterprise-scale for analytics and AI in Azure
+description: Learn about the automated ingestion framework with enterprise-scale for analytics and AI in Azure.
 author:  mboswell
 ms.author:  mboswell 
 ms.date: 08/06/2021

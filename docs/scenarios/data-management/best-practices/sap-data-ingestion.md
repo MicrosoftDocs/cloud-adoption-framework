@@ -1,6 +1,6 @@
 ---
 title: Understand SAP ingestion with enterprise scale analytics and AI for Azure
-description: Learn about SAP ingestion with enterprise scale analytics and AI for Azure
+description: Learn about SAP ingestion with enterprise scale analytics and AI for Azure.
 author:  mboswell
 ms.author:  mboswell 
 ms.date: 08/06/2021
@@ -22,9 +22,9 @@ Depending on your organization's data volumes and latency requirements, one of t
 
 ## Azure Data Factory
 
-[Data Factory](/azure/data-factory/connector-overview) provides several connectors to SAP systems and various databases (including SAP HANA). These can be used to build simple, code-free data transformations in minutes. Delta replication isn't available out of the box but can be achieved with some programming. Azure Data Factory is only supported for batch processing or micro-batches at a minimum of 15-minute intervals.
+[Data Factory](/azure/data-factory/connector-overview) provides several connectors to SAP systems and various databases (including SAP HANA). These can be used to build simple, code-free data transformations in minutes. Delta replication isn't available out of the box but can be achieved with some programming. Azure Data Factory is only supported for batch processing or microbatches at a minimum of 15-minute intervals.
 
-Described as the **PULL** option, this Data Factory option supports single sign-on and secure network communication authentication into SAP. It also provides the ability to use code-free data transformations to build resilient data flowsthat can be integrate with Azure Databricks for flexible data preparation and enrichment coding. It is limited to batch processing and requires coding logic to support delta extracts.
+Described as the **PULL** option, this Data Factory option supports single sign-on and secure network communication authentication into SAP. It also provides the option to use code-free data transformations to build resilient data flows that can integrate with Azure Databricks for flexible data preparation and enrichment coding. It is limited to batch processing and requires coding logic to support delta extracts.
 
 ## SAP Landscape Transformation Replication Server and Business Objects Data Services
 
@@ -34,11 +34,9 @@ Described as the **PUSH** option, this SAP-based option facilitates trigger-base
 
 ## Third-party tools
 
-There are many third-party tools that can provide value-added extraction and ingestion from SAP sources in real time. Microsoft recommends [Qlik Replicate](https://www.qlik.com/us/products/technology/sap) (formerly known as Attunity), [Simplement Data Liberator](https://www.simplement.us/), and [Kagool Velocity](https://www.kagool.com/). Each provides similar functionality, being able to extract data from SAP in near real time and provide business context and intelligence out of the box. However, they differ in their technical architectures.
+There are many third-party tools that can provide value-added extraction and ingestion from SAP sources in real time. Microsoft recommends [Qlik Replicate](https://www.qlik.com/us/products/technology/sap) (previously known as Attunity), [Simplement Data Liberator](https://www.simplement.us/), and [Kagool Velocity](https://www.kagool.com/). Each provides similar functionality, each service able to extract data from SAP in almost real time and provide business context and intelligence out of the box.
 
-Qlik Replicate and Simplement Data Liberator provide near-real-time replication by identifying changes in the source database logs. Kagool Velocity uses an add-on to SAP NetWeaver to expose data using RFC from the application layer.
-
-Compared to the previous options, the options above provide better out-of-the-box functionality and near-real-time support, but they require third-party technologies.
+These services differ in their technical architecture. Qlik Replicate and Simplement Data Liberator provide near-real-time replication by identifying changes in source database logs. Kagool Velocity uses an add-on to SAP NetWeaver and submits a Request for Comments to the application layer to expose data. Compared to options mentioned earlier, these options provide better out-of-the-box functionality and near-real-time support, but they require third-party technologies.
 
 ## Recommendation
 
