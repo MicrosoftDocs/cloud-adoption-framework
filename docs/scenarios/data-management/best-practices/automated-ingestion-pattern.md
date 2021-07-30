@@ -21,24 +21,24 @@ This section provides guidance for how custom ingestion frameworks can drive ser
 
 ## Automated data source application
 
-Figure 1 illustrates how Integration Ops could use custom applications, Azure Logic Apps, or Microsoft Power Apps to register new data sources.
+Figure 1 illustrates how Integration Ops could use custom applications, Azure Logic Apps, or Microsoft Power Apps to register new data sources:
 
 ![The automated ingestion process.](../images/automated-ingest-process.png)
 
 *Figure 1: The automated ingestion process.*
 
-The application could talk to an Azure Data Factory SQL Database metastore within each data landing zone to create new data sources and ingest them into the data landing zones. Once ingestion requests are approved, it uses the Azure Purview Rest API to insert the sources into Azure Purview.
+The application can talk to an Azure Data Factory SQL Database metastore within each data landing zone to create new data sources and ingest them into data landing zones. Once ingestion requests are approved, it uses the Azure Purview REST API to insert the sources into Azure Purview.
 
 The metadata triggers Data Factory jobs and will have most of the parameters required for running pipelines. A Data Factory master pipeline pulls parameters from the Data Factory SQL Database metastore to transfer data from the source into the Data Lake and enrich it with conformed data types before creating a table definition in the Azure Databricks Apache Hive metastore.
 
-For all job types (including indirect ingestion from sources like SAP), areas, and functions, the app should store the jobs' technical and operational metadata in an Azure SQL DB Database. The metadata can be used by Data Platform Ops, Data Landing Zone Ops, and Integration Ops for:
+For all job types (including indirect ingestion from sources like SAP), areas, and functions, the app should store the jobs' technical and operational metadata in a SQL Database. The metadata can be used by Data Platform, Data Landing Zone, and Integration Ops for:
 
 - Tracking jobs and the latest data loading timestamps for datasets related to their functions.
 - Tracking available datasets.
 - Data volume growth.
 - Real-time updates on job failures.
 
-The technical metadata could be used as a driver for various jobs, and it will have most of the parameters required for running the jobs.
+Since technical metadata will have most of the parameters required for jobs, it can drive them.
 
 Operational metadata can be used for tracking:
 
@@ -49,7 +49,7 @@ Operational metadata can be used for tracking:
 - Source metadata changes.
 - Business functions that depend on datasets.
 
-If the business requires, Data Landing Zone Ops and Integration Ops could use Microsoft Power BI to build operational reports and event notifications by querying the Azure SQL DB Database.
+If the business needs operational reports and event notifications, Data Landing Zone Ops and Integration Ops could use Microsoft Power BI to build them by querying the SQL Database.
 
 ## Register a new dataset (automated)
 
@@ -131,7 +131,7 @@ The following payloads are a few examples of how to use the Azure Purview REST A
 }
 ```
 
-**Register an Azure SQL Database data source**:
+**Register a SQL Database data source**:
 
 ```JSON
 {
@@ -189,7 +189,7 @@ The following payloads are a few examples of how to use the Azure Purview REST A
 }
 ```
 
-**Scan an Azure SQL Database data source**:
+**Scan a SQL Database data source**:
 
 ```JSON
 {

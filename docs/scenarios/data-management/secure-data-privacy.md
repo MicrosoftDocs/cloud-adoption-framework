@@ -46,9 +46,9 @@ The following example describes options for securing **sensitive (PII)** data:
 
 A data integration ingests a human resources (HR) personnel data asset for North America and Europe. The use case calls for European users to see only European personnel records and North American users to see only North American personnel records. This is further restricted so that only HR managers see columns containing salary data.
 
-#### Option 1: Azure SQL Database, Managed Instance, or Azure Synapse Analytics SQL pools
+#### Option 1: Azure SQL Database, Managed Instance, or Synapse Analytics SQL pools
 
-A data integration uses Azure SQL Database, SQL Managed Instance, or Synapse Analytics SQL pools to load the data asset into a database that supports row-level security, column-level security, and dynamic data masking. Integration Ops create different Azure AD groups and assign permissions that support the data's sensitivity.
+A data integration uses SQL Database, SQL Managed Instance, or Synapse Analytics SQL pools to load the data asset into a database that supports row-level security, column-level security, and dynamic data masking. Integration Ops create different Azure AD groups and assign permissions that support the data's sensitivity.
 
 For this scenario's use case, Integration Ops would need to create the following four Azure AD groups with read-only access: 
 
