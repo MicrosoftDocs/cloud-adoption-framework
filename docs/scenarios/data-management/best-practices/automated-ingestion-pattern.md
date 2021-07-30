@@ -23,9 +23,9 @@ This section provides guidance for how custom ingestion frameworks can drive ser
 
 Figure 1 illustrates how Integration Ops can use custom applications, Azure Logic Apps, or Microsoft Power Apps to register new data sources:
 
-![The automated ingestion process.](../images/automated-ingest-process.png)
+![An automated ingestion process.](../images/automated-ingest-process.png)
 
-*Figure 1: The automated ingestion process.*
+*Figure 1: An automated ingestion process.*
 
 The application can talk to an Azure Data Factory SQL Database metastore within each data landing zone to create new data sources and ingest them into data landing zones. Once ingestion requests are approved, it uses the Azure Purview REST API to insert the sources into Azure Purview.
 
@@ -70,7 +70,7 @@ Enterprises can use custom applications, Azure Logic Apps, or Microsoft Power Ap
 
 ## Ingest new data sources (automated)
 
-Figure 3 illustrates how registered data sources in a Data Factory SQL Database metastore are polled and how data is ingested initially:
+Figure 3 illustrates how registered data sources in a Data Factory SQL Database metastore are pulled and how data is ingested at first:
 
 ![Figure 3: How new data sources are ingested.](../images/new-datastore-ingestion.png)
 
@@ -204,7 +204,7 @@ The following examples show how to use the Azure Purview REST API to scan data s
 
 ```
 
-Use the following API call to scan data sources:
+**Use the following API call to scan data sources**:
 
 ```HTTP
 POST https://{accountName}.scan.purview.azure.com/datasources/{dataSourceName}/scans/{newScanName}/run
