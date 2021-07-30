@@ -12,21 +12,21 @@ ms.custom: think-tank, e2e-data
 
 # Understand security provisioning with enterprise-scale for analytics and AI in Azure
 
-Organizations can use [authentication](./secure-authentication.md) and [authorization](./secure-analytics-role-based-access-control.md) to control access to the construction set's services. Each product's best practice section contains guidance about how to set up security for a particular service. For example, the best practices section for Azure Data Lake describes how to grant access to datasets.
+Organizations can use [authentication](./secure-authentication.md) and [authorization](./secure-analytics-role-based-access-control.md) to control access to the construction set's services. Each product's best practice section features guidance about how to set up security for a particular service. For example, the Azure Data Lake best practices section describes how to grant access to datasets.
 
 >[!Note]
 >Every business needs to define its data governance process in detail for each data integration and data product. For example, data with a **public** classification or **internal use only** might be secured by resources, but anything **confidential** or above is secured at a dataset (table name) level. For more classification types, see [data governance classification](./govern-requirements.md#data-governance-classification).
 
 ## Automate security
 
-In previous sections we have focused on ingesting different types of data and how we onboard data integrations and data products. The focus has been predominantly on using automation as much as possible.
+In previous sections, we've focused on how to ingest different data types and how to onboard data integrations and data products. The focus has been predominantly on using automation as much as possible.
 
 The story for self-service access to data relies upon automation, which starts when a new dataset is registered. Even if your organization doesn't yet have an automated ingestion framework, we still recommend that you create a Custom App, IT Service Management Process, or PowerApp to allow Integration Operations (Integration Ops) and Data Product teams to register datasets.
 
 The high-level registration process should provide REST APIs to at least support:
 
-- Creating folders inside the data integration's Data Lake containers.
-- Creating the required Azure AD groups for access. Each data asset in Azure Data Lake Store owns two matching Azure AD groups.
+- Creating folders inside the data integration's Azure Data Lake containers.
+- Creating the required Azure AD groups for access. Each data asset in Azure Data Lake Storage owns two matching Azure AD groups.
 - Creating an access package within [Azure AD entitlement management](/azure/active-directory/governance/entitlement-management-overview).
 
 The final step of creating an access package allows users to request access to the package and is based on features available within Azure AD Identity Governance.

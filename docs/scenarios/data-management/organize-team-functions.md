@@ -125,7 +125,7 @@ Product owners and business representatives create requests for new data product
 
 ### Certify data products
 
-In a self-service platform, anyone can create reports, curate datasets in a data lake workspace account, and release data products for the business to use. Data product review requests occur when:
+In a self-service platform, anyone can create reports, curate datasets in an Azure Data Lake workspace account, and release data products for the business to use. Data product review requests occur when:
 
 - Business sponsors log tickets to certify data products.
 - Data Platform Ops nominates data products based on popularity.

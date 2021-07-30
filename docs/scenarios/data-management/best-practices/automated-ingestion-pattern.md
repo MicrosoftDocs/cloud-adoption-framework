@@ -21,7 +21,7 @@ This section provides guidance for how custom ingestion frameworks can drive ser
 
 ## Automated data source application
 
-Figure 1 illustrates how Integration Ops could use custom applications, Azure Logic Apps, or Microsoft Power Apps to register new data sources:
+Figure 1 illustrates how Integration Ops can use custom applications, Azure Logic Apps, or Microsoft Power Apps to register new data sources:
 
 ![The automated ingestion process.](../images/automated-ingest-process.png)
 
@@ -59,7 +59,7 @@ Figure 2 suggests the following registration process for automating the ingestio
 
 *Figure 2: How new datasets are ingested (automated).*
 
-Enterpises could use custom applications, Azure Logic Apps, or Microsoft Power Apps in the data management landing zone to enter data into the Data Factory metastore and gain the following benefits:
+Enterpises can use custom applications, Azure Logic Apps, or Microsoft Power Apps in the data management landing zone to enter data into the Data Factory metastore and gain the following benefits:
 
 - Source details are registered, including production and Data Factory environments.
 - Data shape, format, and quality constraints are captured.
@@ -87,7 +87,7 @@ The Data Factory ingestion master pipeline reads configurations from a Data Fact
 
 If the data is ingested, it connects to an Azure Databricks Engineering workspace, and a data definition is created within the data management landing zone Hive metastore. This data definition needs to be protected so that only the automation process can create, alter, or drop data definitions.
 
-If Integration Ops wants to use SQL pools to expose data, then the custom solution should create external tables or ingest data directly into SQL pools' internal tables.
+If Integration Ops wants to use SQL pools to expose data, then the custom solution is to create external tables or ingest data directly into SQL pools' internal tables.
 
 ## Use the Azure Purview REST API to discover data
 
@@ -155,7 +155,7 @@ The following payloads are a few examples of how to use the Azure Purview REST A
 
 ### Create a scan
 
-[Learn how you can create credentials](/azure/purview/manage-credentials) to authenticate sources in Azure Purview before setting up and running a scan.
+[Learn how to can create credentials](/azure/purview/manage-credentials) to authenticate sources in Azure Purview before setting up and running a scan.
 
 Use the following API call to scan data sources:
 
