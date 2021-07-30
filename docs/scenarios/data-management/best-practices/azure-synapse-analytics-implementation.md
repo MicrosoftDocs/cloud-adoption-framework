@@ -1,72 +1,82 @@
 ---
-title: Enterprise Scale Analytics and AI Azure Synapse Pattern in Azure
-description: Enterprise Scale Analytics and AI Azure Synapse Pattern
+title: Enterprise-scale for analytics and AI Azure Synapse pattern
+description: Learn how to implement Azure Synapse Analytics with the enterprise-scale for analytics and AI construction set.
 author:  mboswell
 ms.author:  mboswell # Microsoft employees only
-ms.date: 03/03/2021
+ms.date: 08/03/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Azure Synapse Analytics Implementation
+# Azure Synapse Analytics implementation
 
-Azure Synapse Analytics is the provisioned, integrated analytics service that accelerates time to insight across data warehouses and big data systems. Azure Synapse Analytics brings together the best of SQL technologies used in enterprise data warehousing, Spark technologies used for big data, and pipelines for data integration and ETL/ELT. Synapse Studio provides a unified experience for management, monitoring, coding, and security. Synapse has deep integration with other Azure services such as Power BI, Cosmos DB, and Azure Machine Learning.
+Azure Synapse Analytics is the provisioned, integrated analytics service that accelerates time to insight across data warehouses and big data systems. Azure Synapse Analytics brings together:
+
+- The best of SQL technologies used in enterprise data warehousing.
+- Spark technologies used for big data.
+- Pipelines for data integration and extract, transform, and load/extract, load, and transform (ETL/ELT).
+
+Azure Synapse Studio is a tool in Azure Synapse that provides a unified experience for management, monitoring, coding, and security. Synapse Studio has deep integration with other Azure services like Power BI, Cosmos DB, and Azure Machine Learning.
 
 > [!NOTE]
-> This section aims to describe prescribed configurations which are specific to the Enterprise Scale Analytic and AI construction set. It is a compliment to the official [Azure Synapse Analytics Documentation](/azure/synapse-analytics/).
+> This section aims to describe prescribed configurations which are specific to the enterprise-scale for analytic and AI construction set. It's a compliment to the official [Azure Synapse Analytics documentation](/azure/synapse-analytics/).
 
 ## Overview
 
-During the initial setup of a [Data Landing Zone](../architectures/data-landing-zone.md), a single Azure Synapse Analytics workspace may be deployed for use by all analysts and data scientists. Additional workspaces can be optionally created for specific Data Integrations or Data Products.
+During the initial setup of a [data landing zone](../architectures/data-landing-zone.md), you can deploy a single Azure Synapse Analytics workspace for use by all analysts and data scientists. You can create more workspaces for specific data integrations or data products.
 
-SQL Pools, formerly SQL DW, can be used as the data store for both enriched and curated data, which can serve for feature datasets needed by data science teams and for the datasets required for the analytical requirements. Azure Databricks can connect to these SQL Pools and update the data which resides inside the SQL Pools.
+Use SQL Pools, formerly SQL DW, as the data store for both enriched and curated data. This data store serves the data science team's need for feature datasets and datasets for analytical requirements. Azure Databricks can connect to these SQL Pools and update the data, which is in the SQL pools.
 
-SQL On-Demand is a serverless query service that will be used by the data scientists and engineers to run queries against files in the storage accounts.
+SQL On-Demand is a serverless query service that's used by data scientists and engineers to run queries against files in the storage accounts.
 
->[!TIP]
->Additional Azure Synapse Analytics workspaces may be needed if the Data Integration needs to provide access to the golden source with row- and column-level security, which can be provided by Azure Synapse Pools. Data Products teams might require their own workspace for creating Data Products and a separate workspace that allow only the product teams scoped development access.
+> [!TIP]
+> You might need additional Azure Synapse Analytics workspaces if your data integration needs to provide access to the golden source with row- and column-level security. You can provide these workspaces with Azure Synapse Pools. Data products teams might require their own workspace for creating data products and a separate workspace that's only for product teams with scoped development access.
 
-## Azure Synapse Analytics Setup
+## Azure Synapse Analytics setup
 
 The first step in the deployment Azure Synapse Analytics is to set up an Azure Synapse workspace.
 
-As an Azure Data Lake Gen 2 storage account is required, we recommend using a dedicated container on the workspace data lake account, which is used as primary storage to store Spark metadata.
+As you need an Azure Data Lake storage account, we recommend using a dedicated container on the workspace data lake account. This container is used as primary storage to store Spark metadata.
 
-For premium big data processing and data science capabilities, we recommend Azure Databricks.
+We recommend Azure Databricks for premium big data processing and data science capabilities.
 
-### Azure Synapse Analytics Networking
+### Azure Synapse Analytics networking
 
-A Data Landing Zone will create workspaces with a [Azure Synapse Analytics Managed Virtual Network](/azure/synapse-analytics/security/synapse-workspace-managed-vnet). Communication with Synapse will be through the three endpoints it exposes: SQL Pool, SQL On-Demand, and the Development Endpoint.
+A data landing zone creates workspaces with an [Azure Synapse Analytics managed virtual network](/azure/synapse-analytics/security/synapse-workspace-managed-vnet). Communication with Azure Synapse happens through the three endpoints it exposes: SQL Pool, SQL On-Demand, and the development endpoint.
 
-At the network level, the Enterprise Scale Analytics and AI construction set uses [Synapse Managed private endpoints](/azure/synapse-analytics/security/synapse-workspace-managed-private-endpoints) to ensure all the traffic between Data Landing Zone vNet and Azure Synapse Workspace(s) traverses entirely over the Microsoft backbone network.
+At the network level, the enterprise-scale for analytics and AI construction set uses [Synapse Managed private endpoints](/azure/synapse-analytics/security/synapse-workspace-managed-private-endpoints). These endpoints ensure all of the traffic between the data landing zone virtual network and Azure Synapse workspaces moves entirely over the Microsoft backbone network.
 
-### Azure Synapse Data Access Control
+### Azure Synapse data access control
 
-[Azure AD pass-through in Azure Synapse Analytics](/azure/synapse-analytics/sql/active-directory-authentication#azure-ad-pass-through-in-azure-synapse-analytics) should use Access Control Lists to manage the access to the files in the data lake.
+Use access control lists with [Azure Active Directory (Azure AD) pass-through in Azure Synapse Analytics](/azure/synapse-analytics/sql/active-directory-authentication#azure-ad-pass-through-in-azure-synapse-analytics) to manage access to the files in the data lake.
 
-At the database level, in addition to the database roles, we recommend Row-Level Security (RLS) and Column-Level Security to restrict the data access on the tables in Synapse SQL Pool using security policy.
+We recommend Row-Level Security (RLS) and Column-Level Security (CLS) to restrict the data access on the tables in Synapse SQL Pool using security policy. RLS and CLS are used at the database level and in addition to the database roles.
 
-For example, RLS is a great way to ensure users in a specific Data Integration or Data Product see only their own data even if the table contains data for all the enterprise.
+For example, RLS ensures that users in a specific data integration or data product only see their own data. Even if the table contains data for the entire enterprise.
 
-By combining RLS with Column-Level Security (CLS) to restrict access to columns with *sensitive (PII)* data, both RLS and CLS apply the access restriction logic at the database tier rather than the application tier. The permission is evaluated every time the data access is attempted from any tier.
+You can combine RLS with CLS to restrict access to columns with sensitive data. This way, both RLS and CLS apply the access restriction logic at the database tier rather than the application tier. The permission is evaluated every time data access is attempted from any tier.
 
->[!TIP]
->We highly recommend that features such as Azure Defender for SQL, Data Classification, Data Encryption, and Dynamic Data Masking are available for SQL Pool to support the data protection and limit sensitive data exposure.
+> [!TIP]
+> We recommend that features such as Azure Defender for SQL, Data Classification, Data Encryption, and Dynamic Data Masking are available for SQL Pool to support data protection and limit sensitive data exposure.
 
-### Azure Synapse Data Access Control in Azure Data Lake Gen2
+### Azure Synapse data access control in Azure Data Lake
 
-When deploying an Azure Synapse workspace, a Data Lake Storage Gen 2 account is required from the subscription or manually using the storage account URL. The specified storage account will be set as **primary** for the deployed Azure Synapse workspace to store its data. Azure Synapse stores data in a container, that includes Apache Spark tables, spark application logs under a folder called `/synapse/{workspacename}`. It also uses container for managing libraries that you choose to install.
+When deploying an Azure Synapse Analytics workspace, you need a Data Lake Storage account from the subscription or by manually using the storage account URL. The specified storage account is set as **primary** for the deployed Azure Synapse workspace to store its data. Azure Synapse stores data in a container that includes Apache Spark tables and Spark application logs in a folder called **/synapse/{workspacename}**. It also has a container for managing any libraries that you choose to install.
 
-During the Synapse workspace deployment through [Azure Portal](/features/azure-portal/) you have the option to either provide an existing storage account or create a new one. The provided storage account will be set as the **primary storage account** for the Synapse workspace. For any of the two options selected, the deployment process automatically grants the Synapse workspace identity data access to the specified Data Lake Storage Gen2 account, using the **Storage Blob Data Contributor** role. If the deployment of Synapse workspace happens outside of the Azure Portal, you will have to add Synapse workspace identity to the **Storage Blob Data Contributor** role manually later. It is recommended to assign the role **Storage Blob Data Contributor** on the file system level to follow the least privilege principle.
+During the Azure Synapse workspace deployment through [Azure portal](/features/azure-portal/), you can either provide an existing storage account or create a new one. The provided storage account is set as the **primary storage account** for the Azure Synapse workspace. For either account option, the deployment process automatically grants the Azure Synapse workspace identity data access to the specified Data Lake Storage account using the **Storage Blob Data Contributor** role. If the deployment of Synapse workspace happens outside of the Azure portal, you need to manually add an Azure Synapse workspace identity to the **Storage Blob Data Contributor** role later. We recommend assigning the role **Storage Blob Data Contributor** on the file system level to follow the least privilege principle.
 
-It is also possible to manually specify the storage account URL. However, in this case, you will need to contact the storage account owner, and ask them to grant the workspace identity access manually using the **Storage Blob Data Contributor.**
+It's also possible to manually specify the storage account URL. However, you need to contact the storage account owner and ask them to grant the workspace identity access manually using the **Storage Blob Data Contributor.**
 
-The Synapse workspace identity permission context is used when executing Pipelines, workflows, and notebooks through jobs. If any of the jobs read and/or write to the workspace primary storage, the workspace identity will use the read/write permissions granted through the **Storage Blog Data Contributor**.
+The Azure Synapse workspace identity permission context is used when executing pipelines, workflows, and notebooks through jobs. If any of the jobs read or write to the workspace primary storage, the workspace identity uses the read/write permissions granted through the **Storage Blog Data Contributor**.
 
-**Storage Blob Data Contributor** role is used to grant read/write/delete permissions to Blob storage resources such as folder and files.
+Use the **Storage Blob Data Contributor** role to grant read/write/delete permissions to blob storage resources like folders and files.
 
-**Storage Account permissions are required when using Synapse workspace interactively and for development.** To allow read and write access to other users or groups on the primary storage account after it has been deployed, it will require you to grant access permissions using the **Storage Blob Data Contributor role** or **Access Control Lists** directly to the user or groups. When users log into the Synapse workspace to execute scripts or for development, the user's context permissions are used to allow read/write access on the primary storage.
+**Storage Account permissions are required when using Azure Synapse workspaces interactively and for development.** You can provide read/write permissions to other users or groups on the primary storage account after it's been deployed. However, the account requires you to grant access permissions using the **Storage Blob Data Contributor role** or **Access Control Lists** directly to the user or groups. When users log in to the Azure Synapse workspace to execute scripts or for development, the user's context permissions are used to allow read/write permissions on the primary storage.
+
+## Next steps
+
+- [High availability for Azure Synapse Analytics](../../../migrate/azure-best-practices/analytics/azure-synapse.md)
 
 <!--
 
