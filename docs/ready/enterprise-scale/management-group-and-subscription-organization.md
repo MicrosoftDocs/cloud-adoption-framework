@@ -333,7 +333,7 @@ Organizations can use enterprise-scale Azure policies to enforce the following g
 
     Azure hub-and-spoke network topology helps to streamline needs for network connectivity. A hub virtual network (VNet) can host shared services while spoke VNets host application-specific Azure resources. Hub-and-spoke VNets use VNet peering to connect with each other, and the network topology promotes clean network design, easier management, and optimized costs.
 
-    Azure offers a custom policy that uses Azure Firewall and gateways from VPNs and ExpressRoute to provisions hub VNets. Enterprises can configure all options for firewalls and gateways as part of the policy assignment. This policy simplifies the process to deploy Azure hub-and-spoke network topology.
+    Azure offers a custom policy that uses Azure Firewall and gateways from VPNs and ExpressRoute to provision hub VNets. Enterprises can configure all options for firewalls and gateways as part of the policy assignment. This policy simplifies the process to deploy Azure hub-and-spoke network topology.
 
     Another custom policy prevents two VNets from peering with each other to instead communicate with each other via a hub VNet. Configuring VNets to communicate with each other through with hubs makes it possible to control and monitor network connections. Network topology is simplified from a maintenance perspective as well.
 
