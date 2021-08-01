@@ -191,7 +191,7 @@ Cost transparency across a technical estate is a critical management challenge f
 
 - Use Azure Cost Management + Billing to aggregate costs. Make it available to application owners.
 
-- Use Azure resource tags categorize costs and group resources. Using tags allows you to have a chargeback mechanism for workloads that share a subscription or for a given workload that spans across multiple subscriptions.
+- Use Azure resource tags to categorize costs and group resources. Using tags allows you to have a chargeback mechanism for workloads that share a subscription or for a given workload that spans across multiple subscriptions.
 
 ## Policy-driven governance
 
@@ -211,7 +211,7 @@ Organizations can use enterprise-scale Azure policies to enforce the following g
 
     A lack of auditing and diagnostics information at a granular level can affect operational practices. Incomplete audit information makes it difficult to correlate logs from multiple Azure services and create cohesive debugging.
 
-    Once Azure services are provisioned, they should provide detailed information about how they interact with the Azure platform. This information can be broadly divided into logs and metrics, and each Azure service can be further grouped into its subcomponents. Ror example, an Azure public IP resource with `DDoSProtectionNotifications`, `DDoSMitigationReports`, and `DDoSMitigationFlowLogs` as its subcomponents. Collecting diagnostic information at these subcategories can also help organizations to enhance auditing and debugging.
+    Once Azure services are provisioned, they should provide detailed information about how they interact with the Azure platform. This information can be broadly divided into logs and metrics, and each Azure service can be further grouped into its subcomponents. For example, an Azure public IP resource with `DDoSProtectionNotifications`, `DDoSMitigationReports`, and `DDoSMitigationFlowLogs` as its subcomponents. Collecting diagnostic information at these subcategories can also help organizations to enhance auditing and debugging.
 
      A custom Azure Policy initiative is available to help enterprises gather logs and metrics at a deeper level for each Azure service. This initiative includes a policy for every Azure service, and the policies collect key log categories and metrics automatically.
 
