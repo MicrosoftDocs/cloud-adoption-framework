@@ -45,7 +45,7 @@ Scalability is a key concept and a single data lake might limit scalability from
   * Maximum *access* and *default* ACLs per file or folder (this quota is a hard limit so assign ACLs to groups, not individual users): 32
   * For more information about limits, see [Scalability and performance targets](/azure/storage/common/storage-scalability-targets).
 
-[!TIP]
+> [!TIP]
 > Contact [Azure Support](https://azure.microsoft.com/support/faq/) to request higher capacity and ingress limits.
 
 * Isolation of data environments and predictability. For example, if you want to isolate activities that run in the laboratory zone to avoid potential effect on the curated zone. The curated zone holds data with greater business value that's used for critical decision making.
@@ -73,4 +73,4 @@ For more information about access control mechanisms, see [Understanding access 
 The next step is to review guidance about data lake zones.
 
 > [!div class="nextstepaction"]
-> [Data lake zones](.data-lake-services.md)
+> [Data lake zones](data-lake-services.md)
