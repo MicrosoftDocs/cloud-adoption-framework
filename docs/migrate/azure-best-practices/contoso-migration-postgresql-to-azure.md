@@ -26,6 +26,9 @@ The IT leadership team has worked closely with business partners to understand w
 - **Scale.** As the business grows successfully, Contoso IT must provide systems that can grow at the same pace.
 - **Increase security.** Contoso realizes that regulatory issues will cause the company to adjust its on-premises strategy based on auditing, logging, and compliance requirements.
 
+> [!NOTE]
+> For detailed guidance on migrations to Azure Database for PostgreSQL with labs, see [Azure Postgres Migration Guide](aka.ms/migrate/postgres). 
+
 ## Migration goals
 
 The Contoso cloud team has pinned down goals for this migration and will use them to determine the best migration method.
