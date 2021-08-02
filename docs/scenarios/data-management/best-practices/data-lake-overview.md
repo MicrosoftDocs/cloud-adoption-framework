@@ -66,7 +66,7 @@ Data residency rules, or a requirement to have data close to a user base, can dr
 * Default ACL on every dataset folder must include *read* and *execute* permissions. Execute permission is required for users to traverse a restricted folder and access files under it. Access ACL assigned to an Azure AD group will include read and execute permissions on each dataset folder.
 * Only a managed identity or a service principal should grant *write* permission to a system. Changes can be made by an ingestion, transformation, or maintenance process.
 
-For more information about access control mechanisms, see [Understanding access control and data lake configurations in Azure Data Lake Storage Gen2](data-lake-access.md).
+For more information about access control mechanisms, see [Managing data lake access](data-lake-access.md).
 
 ## Next steps
 

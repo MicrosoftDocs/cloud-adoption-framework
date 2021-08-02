@@ -17,14 +17,7 @@ Use this article is to help assess and understand the access control mechanisms 
 - How to configure access control using either or both of these mechanisms
 - How to apply these access control mechanisms to data lake implementation patterns
 
-You need a basic knowledge of storage containers, security groups, Azure RBAC, and ACLs. To frame the discussion, we reference a generic data lake structure of raw, cleansed, and curated layers. For further ideas on data lake structure and design, see [Building your Data Lake on Azure Data Lake Storage gen2 – Part 1](https://cloudblogs.microsoft.com/industry-blog/en-gb/technetuk/2020/04/09/building-your-data-lake-on-azure-data-lake-storage-gen2-part-1/).
-
-> [!NOTE]
-> Creating security groups requires permissions to your Azure Active Directory (Azure AD) tenant or the Microsoft Graph API. To follow along with this article, consider the following options:
->
-> - Use a [free account](https://azure.microsoft.com/free/).
-> - Use a personal account with a [Visual Studio subscription](/visualstudio/subscriptions/vs-azure).
-> - Ask your Azure administrator to create a new Azure AD tenant and add a subscription to the new directory. For more information, see [Associate or add an Azure subscription to your Azure Active Directory tenant](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory).
+You need a basic knowledge of storage containers, security groups, Azure RBAC, and ACLs. To frame the discussion, we reference a generic data lake structure of raw, enriched, and curated zones.
 
 ## Using the built-in Azure RBAC roles
 
@@ -67,7 +60,7 @@ During security principal-based authorization, permissions are evaluated in the 
 For more information, see [How permissions are evaluated](/azure/storage/blobs/data-lake-storage-access-control-model#how-permissions-are-evaluated).
 
 > [!NOTE]
-> This permission model applies to Data Lake Storage only. It doesn't apply to general purpose, or blob, storage without Host Network Service enabled.
+> This permission model applies to Data Lake Storage only. It doesn't apply to general purpose, or blob, storage without hierarchical namespace enabled.
 > This description excludes Shared Key and SAS authentication methods. It also excludes scenarios in which the security principal has been assigned the Storage Blob Data Owner built-in role, which provides super-user access.
 > We recommend you set `allowSharedKeyAccess` to false so that access can be audited by identity.
 
@@ -127,11 +120,7 @@ This run permission propagates down any added child folders. The permission prop
 
 ![Screen capture shows the Manage Access dialog box with businessgrp 1 highlighted and Access and Default selected.](../images/acl-other-lowest.png)
 
-## Summary of Data Lake Access
-
-No single approach to managing data lake access suits everyone. A major benefit of a data lake is to provide friction-free access to data. In practice, different organizations want different levels of governance and control over their data. Some organizations have a centralized team to manage access and provision groups under rigorous internal controls. Other organizations are more agile and have decentralized control. Choose the approach that meets your level of governance. Your choice shouldn't result in undue delays or friction in gaining access to data.
-
-### Recommended Data Lake Zones Security
+## Recommended Data Lake Zones Security
 
 These usages are the recommended security patterns for each of the Data Lake Zones:
 
@@ -157,18 +146,9 @@ If a user in the service engineering team transfers to a different team, just re
 
 If you didn't add that user to a group, but instead, added a dedicated ACL entry for that user, you would have to remove that ACL entry from the **/LogData** directory. You would also have to remove the entry from all subdirectories and files in the entire directory hierarchy of the **/LogData** directory.
 
-## Databases Authentication and Permissions
+### Summary of Data Lake Access
 
-Other polyglot storage might be used in the enterprise-scale analytic construction set. Examples include PostgreSQL, MySQL, Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics. They could be used by data integrations to store their read data stores or by data products.
-
-- [Use Azure Active Directory for authentication with PostgreSQL](/azure/postgresql/howto-configure-sign-in-aad-authentication)
-- [Use Azure Active Directory authentication with Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics](/azure/azure-sql/database/authentication-aad-overview)
-- [Use Azure Active Directory for authenticating with MySQL](/azure/mysql/concepts-azure-ad-authentication)
-
-We recommend you use Azure AD groups to secure database objects instead of individual Azure AD user accounts. Use these groups to authenticate users and protects database objects. Similar to the data lake pattern, you can use your data integration or data products onboarding to create these groups in your Azure AD service.
-
-> [!NOTE]
-> Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics Pools are options to store personally identifiable information. For more information, see [Sensitive Data](../secure-data-privacy.md#sensitive-data).
+No single approach to managing data lake access suits everyone. A major benefit of a data lake is to provide friction-free access to data. In practice, different organizations want different levels of governance and control over their data. Some organizations have a centralized team to manage access and provision groups under rigorous internal controls. Other organizations are more agile and have decentralized control. Choose the approach that meets your level of governance. Your choice shouldn't result in undue delays or friction in gaining access to data.
 
 ## Azure Synapse Analytics data access control
 
@@ -185,18 +165,6 @@ When users sign in to the workspace to run scripts or for development, the user'
 ### Azure Synapse Analytics fine-grained data access control using ACLs
 
 When setting-up data lake access control, some organizations require granular level access. They may have sensitive data that cannot be seen by some groups in the organization. Azure RBAC allows read or write at the storage account and container level only. With ACLs, you can set up fine-grained access control at the folder and file level to allow read/write on subset of data for specific groups.
-
->[!NOTE]
->
-> Assigning Azure RBAC Reader role to groups in the Azure Synapse Analytics workspace primary storage account is required to be able to list the storage account and containers when using Data Hub in Synapse Studio. When using Data Hub in Synapse Studio, users can browse folders and files before they start writing a query or spark code.
->
-> Users also have some options available in Synapse Studio to help getting started with queries and reading the data using spark from a file. These options include **Select Top 100 rows**, **Create External Table**, **Load to a Dataframe**, and **Create New Spark Table**.
-
-For more information about how to assign the Reader role on the storage account, see [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal).
-
-#### Granting read access on Azure Data Lake Storage Gen 2 using ACLs
-
-Start by granting the appropriate ACL permissions. Grant permissions at the container level in the storage account for the required groups. To configure Azure Synapse Analytics data access control with ACLs, see [Configure access using ACLs only](#configure-access-using-acls-only).
 
 #### Considerations when using Spark Tables
 
