@@ -1,5 +1,5 @@
 ---
-title:  Azure enterprise-scale for analytics and AI teams Data Lake services
+title:  Azure enterprise-scale for analytics and AI teams data lake services
 description: Learn about the three data lake accounts that should be provisioned for each data landing zone. 
 author:  mboswell
 ms.author:  mboswell # Microsoft employees only
@@ -35,9 +35,9 @@ While the data lake sits across three data lake accounts, multiple containers, a
 
 Provisioning three data lake accounts allows you to set different redundancy, retention, and access policies for each lake account. For example, you might want your Raw data to be geo-redundant. Workspace might be used for data exploration and require locally redundant disaster recovery.
 
-Each **data integration** should have two folders on the Raw and enriched data lake zones over which they should have ownership. Each **Data Product** should have two folders on the Curated data lake zones over which they should have ownership.
+Each **data integration** should have two folders on the Raw and enriched data lake zones over which they should have ownership. Each **data product** should have two folders on the Curated data lake zones over which they should have ownership.
 
-The two folders per **data integration** or **data product** should be divided by classification. This classification leads to a general folder, for *confidential or below*, and a *sensitive* personal information folder with access controlled by access control lists (ACLs). By having these two folders below the **data integration** or **data product**, you can choose to create a dataset with all the personal information data removed, located in the general folder, and then have another dataset with all personal information data, in the *sensitive* personal information folder.
+The two folders per **data integration** or **data product** should be divided by classification. This classification leads to a general folder, for *confidential or below*, and a *sensitive* personal data folder with access controlled by access control lists (ACLs). By having these two folders below **data integration** or **data product**, you can choose to create a dataset with all the personal data removed located in the general folder. You can then have another dataset with all personal data in the *sensitive* personal data folder.
 
 Access to the data is restricted by a combination of access control lists (ACLs) and Azure Active Directory (AAD)-groups. These lists and groups control what can and can't be accessed by other groups. Integration operations teams** and data product teams can approve or reject access to their data assets.
 
@@ -46,15 +46,15 @@ Access to the data is restricted by a combination of access control lists (ACLs)
 
 ## Raw zone or data lake one
 
-Using the water-based analogy, think of this layer as a reservoir that stores data in its natural and original state. It's unfiltered and unpurified. You might choose to store the data in it's original format, such as JSON or .csv. But there might be scenarios where it makes sense to store it as a column in compressed format such as avro, parquet, or Databricks Delta Lake.
+Using the water-based analogy, think of this layer as a reservoir that stores data in its natural and original state. It's unfiltered and unpurified. You might choose to store the data in its original format, such as JSON or .csv. But there might be scenarios where it makes sense to store it as a column in compressed format such as avro, parquet, or Databricks Delta Lake.
 
 This data is always immutable. It should be locked down and the permissions given to any consumers, whether they're automated or human, should be read-only. The zone might be organized by using a folder per source system. Each ingestion process has write access to only its associated folder.
 
-Consider using lifecycle management to reduce long-term storage costs. This recommendation is because this layer usually stores the largest amount of data. ADLS gen2 supports moving data to the cool access tier either programmatically or through a lifecycle management policy. The policy defines a set of rules that run once a day and can be assigned to the account, filesystem, or folder level. The feature is free although the operations will incur a cost.
+Consider using lifecycle management to reduce long-term storage costs. This recommendation is because this layer usually stores the largest amount of data. Azure Data Lake Storage gen2 supports moving data to the cool access tier either programmatically or through a lifecycle management policy. The policy defines a set of rules that run once a day and can be assigned to the account, filesystem, or folder level. The feature is free although the operations will incur a cost.
 
-Raw Data from source systems for each **data integration** or source will land into either the General folder, for *confidential or below*, or *sensitive* personal information folder for each **Data Integration** on data lake one. Each ingestion process should have write access to only their associated folder.
+Raw Data from source systems for each **data integration** or source will land into either the General folder, for *confidential or below*, or *sensitive* personal data folder for each **data integration** on data lake one. Each ingestion process should have write access to only their associated folder.
 
-### RAW directory layout
+### Raw directory layout
 
 ```markdown
 .
@@ -65,7 +65,7 @@ Raw Data from source systems for each **data integration** or source will land i
 |---LoadTS=YYMMDDHHMSS
 |       file001.parquet
 |       file001.parquet
-|-Sensitive(PII)
+|-Sensitive(Personal data)
 |--Source
 |---Entity
 |---LoadTS=YYMMDDHHMSS
@@ -79,20 +79,20 @@ For batch or micro-batch patterns, the data should be copied from the source sys
 
 For streaming use cases, the data in the raw zone should sometimes be stored as an aggregated dataset. For example, data is ingested via a message bus such as Azure Event Hub. It's then aggregated via a real-time processing engine such as Azure Stream Analytics or Spark Streaming before it's stored in the data lake.
 
-As this layer usually stores the largest amount of data, consider using lifecycle management to reduce long-term storage costs. At the time of writing ADLS gen2 supports moving data to the cool access tier either programmatically or through a lifecycle management policy. The policy defines a set of rules that run once a day and can be assigned to the account, filesystem, or folder level.
+As this layer usually stores the largest amount of data, consider using lifecycle management to reduce long-term storage costs. At the time of writing Azure Data Lake Storage Gen2 supports moving data to the cool access tier either programmatically or through a lifecycle management policy. The policy defines a set of rules that run once a day and can be assigned to the account, filesystem, or folder level.
 
 >[!TIP]
 >Enterprises need to think about scenarios where they might need to rebuild an analytics platform from scratch and should always consider the most granular data they would require to rebuild downstream read data stores.
 
-## Enriched zone (data lake two)
+## Enriched zone or data lake two
 
 The next layer can be thought of as a filtration zone that removes impurities but may also involve enrichment.
 
 Typical activities found in this layer are schema and data type definition, removal of unnecessary columns, and application of cleaning rules whether it be validation, standardization, harmonization. Enrichment processes may also combine data sets to further improve the value of insights.
 
-The organization of this zone is more business driven rather than by source system. Typically, it might be a folder per department or project. Some might consider this zone a staging zone that's normally permissioned by the automated jobs that run against it. Should data analysts or scientists need access to the data in this form, they can be granted read-only access only.
+The organization of this zone is more business driven rather than by source system. Typically, it might be a folder per department or project. Some consider this zone a staging zone where you grant permissions only to the automated jobs that run against it. if data analysts or scientists need access to the data in this form, you can grant them read-only access only.
 
-The enriched zone follows the same hierarchical directory structure as the raw zone and resides in either the general folder, for *confidential or below*, or *sensitive* personal information folder for each **data integration** * folder on data lake two.
+The enriched zone follows the same hierarchical directory structure as the raw zone and is located in either the general folder, for *confidential or below*, or *sensitive* personal data folder for each **data integration** * folder on data lake two.
 
 ### Enriched directory layout
 
@@ -108,7 +108,7 @@ Enriched Directory Layout
 |------LoadTS=YYMMDDHHMMSS
 |        file001.parquet
 |        file001.parquet
-|---Sensitive (PII)
+|---Sensitive (Personal data)
 |----Dataset
 |-----Entity
 |------LoadTS=YYMMDDHHMMSS
@@ -123,7 +123,7 @@ Enriched Directory Layout
 
 The curated zone or data lake two is the consumption layer. It's optimized for analytics rather than data ingestion or data processing. It might store data in de-normalized data marts or star schemas.
 
-Data is taken from the golden layer, in enriched Data, and transformed into high-value **data products** that are served to the consumers of the data. Consumers of the data might include BI analysts and data scientists. This data has structure and can be served to the consumers either as-is such as data science notebooks, or through another read data store such as Azure Database for SQL.
+Data is taken from the golden layer, in enriched data, and transformed into high-value **data products** that are served to the consumers of the data. Consumers of the data might include BI analysts and data scientists. This data has structure and can be served to the consumers either as-is such as data science notebooks, or through another read data store such as Azure Database for SQL.
 
 The dimensional modeling is preferably done by using tools like Spark or Data Factory rather than inside the database engine. If you want to make the lake the single source of truth, then this use of tools becomes a key point.
 
@@ -144,7 +144,7 @@ Data assets in this zone are typically highly governed and well-documented. Perm
 |------LoadTS=YYMMDDHHMMSS
 |        file001.parquet
 |        file001.parquet
-|---Sensitive(PII)
+|---Sensitive(Personal data)
 |----Dataset
 |-----Entity
 |------LoadTS=YYMMDDHHMMSS
@@ -157,7 +157,7 @@ Data assets in this zone are typically highly governed and well-documented. Perm
 
 Data assets in this zone should be highly governed and well-documented. For example, high-quality sales data might be data in the enriched data zone correlated with other demand forecasting signals such as social media trending patterns for a **data integration** that's used for predictive analytics on determining the sales projections for the next fiscal year.
 
-## Workspace zone (data lake three)
+## Workspace zone or data lake three
 
 Along with the data that's ingested by the **data integration** team from the source, the consumers of the data can also bring other useful datasets.
 
@@ -218,7 +218,7 @@ Below are general practices for data partitioning design.
 
 ### File format
 
-Data might arrive to your data lake account in different kinds of formats. Human readable formats might be used like JSON, .csv, or XML files. Or compressed binary formats might be used like .tar or .gz. The data might be in variety of sizes that includes large files that are TBs, such as an export of a SQL table from your on-premises systems. Or the data might be in a large number of small files that are a few KBs like real-time events from your IoT solution. While ADLS Gen2 supports storing all kinds of data without imposing any restrictions, it's better to think about data formats to maximize efficiency of your processing pipelines and optimize costs. You can achieve both by picking the right format and the right file sizes.
+Data might arrive to your data lake account in different kinds of formats. Human readable formats might be used like JSON, .csv, or XML files. Or compressed binary formats might be used like .tar or .gz. The data might be in variety of sizes that includes large files that are TB's in size, such as an export of a SQL table from your on-premises systems. Or the data might be in a large number of small files that are a few KBs like real-time events from your IoT solution. While Azure Data Lake Storage Gen2 supports storing all kinds of data without imposing any restrictions, it's better to think about data formats to maximize efficiency of your processing pipelines and optimize costs. You can achieve both by picking the right format and the right file sizes.
 Hadoop has a set of file formats it supports for optimized storage and processing of structured data.
 
 - [Avro](https://avro.apache.org/docs/current/)
@@ -227,13 +227,13 @@ Hadoop has a set of file formats it supports for optimized storage and processin
 
 All of these formats are machine-readable binary file formats, offer compression to manage the file size, and are self-describing in nature with a schema embedded in the file. The difference between the formats is in how data is stored. Avro stores data in a row-based format and Parquet and ORC formats store data in a columnar format.
 
-- Avro file format is best where the I/O patterns are write heavy or the query patterns favor retrieving multiple rows of records in their entirety. For example, the Avro format is favored by message bus such as Event Hub or Kafka writes multiple events/messages in succession.
-- Parquet and ORC file formats are best when the I/O patterns are more read heavy and/or when the query patterns are focused on a subset of columns in the records. For example, where the read transactions can be optimized to retrieve specific columns instead of reading the entire record.
+- Avro file format is best where the I/O patterns are write heavy or the query patterns favor retrieving multiple rows of records in their entirety. For example, the Avro format is favored by message bus such as Azure Event Hub or Apache Kafka writes multiple events or messages in succession.
+- Parquet and ORC file formats are best when the I/O patterns are more read heavy and when the query patterns are focused on a subset of columns in the records. For example, where the read transactions can be optimized to retrieve specific columns instead of reading the entire record.
 
 ### File size
 
-Lots of small files (kbs) generally lead to suboptimal performance and potentially higher costs because of increased read/list operations. Azure Data Lake Storage Gen2 is optimized to perform better on larger files. Analytics jobs will run faster and at a lower cost.
+Lots of small files generally lead to suboptimal performance and potentially higher costs because of increased read/list operations. Azure Data Lake Storage Gen2 is optimized to perform better on larger files. Analytics jobs will run faster and at a lower cost.
 
 Costs are reduced because of the shorter compute (Spark or Data Factory) times but also because of optimal read operations. For example, files greater than 4 MB in size incur a lower price for every 4-MB block of data read beyond the first 4 MB. For example, to read a single file that is 16 MB is cheaper than reading four files that are 4 MB each.
 
-When processing data with Spark, the typical guidance is around 64 MB to 1 GB per file. It's well known in the Spark community that thousands of small files (kb in size) are a challenge to performance. In the raw zone, streaming data will typically have smaller files and messages at high velocity. Files will need to be regularly compacted and consolidated. For those using the Delta format, then OPTIMIZE or AUTO OPTIMIZE can help.
+When processing data with Spark, the typical guidance is around 64 MB to 1 GB per file. It's well known in the Spark community that thousands of small files, or files KB in size, are a challenge to performance. In the raw zone, streaming data will typically have smaller files and messages at high velocity. Files will need to be regularly compacted and consolidated. If you're using the Delta format, then OPTIMIZE or AUTO OPTIMIZE can help.
