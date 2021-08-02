@@ -26,7 +26,7 @@ The IT leadership team has worked closely with business partners to understand w
 - **Scale.** As the business grows successfully, Contoso IT must provide systems that grow at the same pace.
 
 > [!NOTE]
-> For detailed guidance on migrations to Azure Database for MySQL with labs, see [Azure MySQL Migration Guide](aka.ms/migrate/mysql). 
+> For detailed guidance on migrations to Azure Database for MySQL with labs, see [Azure MySQL Migration Guide](https://aka.ms/migrate/mysql). 
 
 ## Migration goals
 
