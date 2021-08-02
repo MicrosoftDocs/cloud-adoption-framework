@@ -1,7 +1,7 @@
 ---
 title: Strategic migration and readiness tool (SMART) assessment
 description: Learn how to use the strategic migration and readiness tool (SMART) assessment to accelerate your cloud adoption efforts.
-author: janetcthomas
+author: microsoftsonny
 ms.author: janet
 ms.date: 08/02/2021
 ms.topic: conceptual
