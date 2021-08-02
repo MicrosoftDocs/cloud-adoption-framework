@@ -1,5 +1,5 @@
 ---
-title:  Azure enterprise-scale for analytics and AI teams data lake services
+title:  Azure enterprise-scale for analytics and AI teams Azure Data Lake services
 description: Learn about the three data lake accounts that should be provisioned for each data landing zone. 
 author:  mboswell
 ms.author:  mboswell # Microsoft employees only
@@ -237,3 +237,10 @@ Lots of small files generally lead to suboptimal performance and potentially hig
 Costs are reduced because of the shorter compute (Spark or Data Factory) times but also because of optimal read operations. For example, files greater than 4 MB in size incur a lower price for every 4-MB block of data read beyond the first 4 MB. For example, to read a single file that is 16 MB is cheaper than reading four files that are 4 MB each.
 
 When processing data with Spark, the typical guidance is around 64 MB to 1 GB per file. It's well known in the Spark community that thousands of small files, or files KB in size, are a challenge to performance. In the raw zone, streaming data will typically have smaller files and messages at high velocity. Files will need to be regularly compacted and consolidated. If you're using the Delta format, then OPTIMIZE or AUTO OPTIMIZE can help.
+
+## Next steps
+
+The next step is to review considerations for your data lakes.  
+
+> [!div class="nextstepaction"]
+> [Data lake considerations](./data-lake-key-considerations.md)
