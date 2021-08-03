@@ -72,19 +72,7 @@ Azure VMware Solution provides one or more Private Clouds that contain vSphere c
 ![Diagram](../_images/eslz-bcdr-6.png)
 
 - Azure Site Recovery should be used if Azure IaaS is the DR target for the AVS private cloud
-
-![Protect AVS site using ASR](../_images/eslz-bcdr-7.png)
-
 - When working with either VMware Site Recovery Manager or Azure Site Recovery to provide DR for the AVS private cloud, manual input should be minimized as much as possible by leveraging automated Recovery plans within each of the respective solutions. A recovery plan gathers machines into recovery groups for the purpose of failover and helps to define a systematic recovery process by creating small independent units that can fail over.
 - Utilizing the geopolitical region pair as the secondary DR environment is recommended for proximity of regions and cost reductions.
 - Keep address spaces completely different (i.e., 192.168.0.0/16 for Region 1 and 10.0.0.0/16 for Region 2) to reduce risk of IP address overlap 
 - Leverage ExpressRoute Global Reach connectivity between the primary and secondary AVS private clouds. 
-
-## Enterprise-scale assumptions
-
-The following are assumptions that went into the development of the deployable asset: Enterprise-scale for Azure VMware Solution.
-
-## Additional considerations
-
-Create as many H2 "##" headers as is required to educate the customer on this topic.
-
