@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Business continuity and disaster recovery for Azure VMware Solution enterprise-scale scenario
 
-Azure VMware Solution provides one or more Private Clouds that contain vSphere clusters which are built from dedicated bare-metal Azure infrastructure. The solution provides a minimum of three ESXi hosts   , up to a maximum of 16 hosts per cluster. Up to 96 hosts can be run in one private cloud. vCenter Server, vSAN, vSphere and NSX-T are all provided as part of the private cloud solution. Although Azure VMware Solution has a SLA of 99.9%, it is always wise to consider additional BCDR factors.
+Azure VMware Solution provides one or more Private Clouds that contain vSphere clusters which are built from dedicated bare-metal Azure infrastructure. The solution provides a minimum of three ESXi hosts, up to a maximum of 16 hosts per cluster. Up to 96 hosts can be run in one private cloud. vCenter Server, vSAN, vSphere and NSX-T are all provided as part of the private cloud solution. Although Azure VMware Solution has an SLA of 99.9%, it is always wise to consider additional BCDR factors.
 
 ![BCDR - Flow Chart](../_images/eslz-bcdr-1.png)
 
@@ -45,10 +45,10 @@ Azure VMware Solution provides one or more Private Clouds that contain vSphere c
 ![Azure Site Recovery High Level](../_images/eslz-bcdr-4.png)
 
 - [Azure Site Recovery Deployment Planner](https://docs.microsoft.com/azure/site-recovery/site-recovery-deployment-planner) can be used to begin planning DR to Azure Native.
-- When planning the workloads to start after Azure Site Recovery failover, the recovery plan should include the correct startup order for workloads.
+- When planning the workloads to start after Azure Site Recovery failover, the recovery plan should include the correct start up order for workloads.
 - Partner Solutions like JetStream Software and [HCX (testing purposes only)](https://docs.microsoft.com/en-us/azure/azure-vmware/deploy-disaster-recovery-using-vmware-hcx#:~:text=%20Deploy%20disaster%20recovery%20using%20VMware%20HCX%20,VMware%20Solution%20private%20cloud%2C%20and%20access...%20More%20) support disaster recovery scenarios for AVS as well.
 - An analysis and decision should be made which (sub-)set of AVS workloads require protection in case of a DR event. Consider protecting only those workloads critical to business operations to control the costs associated with the DR implementation.
-- Functional domain roles (e.g. Active Directory Domain Controllers, DNS) should be set up in the secondary environment
+- Functional domain roles (e.g., Active Directory Domain Controllers, DNS) should be set up in the secondary environment
 - Necessary sites, services, and connectivity to treat as another site in estate for disaster recovery environment.
 - To enable DR between AVS private clouds in distinct Azure regions, ExpressRoute Global Reach needs to be enabled between both (back-end) ExpressRoute circuits to allow AVS-to-AVS connectivity when required for solutions like VMware SRM and VMware HCX for DR.
 - DR overlapping vs non-overlapping IP addressing.
@@ -56,7 +56,7 @@ Azure VMware Solution provides one or more Private Clouds that contain vSphere c
   - Use different IP address: A different IP address can be used for the recovered VMs. If the VM is moved to a secondary site, the recovery plan within the SRM will detail out the custom IP map that will need to be selected for the change of IP address and in case of ASR a defined VNET will be chosen for new IP allocation.
 - Understanding Partial vs. Full Disaster Recovery (DR).
   - When working with Azure Site Recovery, preparing for full disaster recovery should be understood. This means failing over from AVS into an Azure Native environment.
-  - Utilising VMware SRM partial and full DR are supported. This means that running AVS in Region 1 and Region 2, the option to fail some or all of the VMs from primary to secondary regions are supported. 
+  - Utilising VMware SRM partial and full DR are supported. This means that running AVS in Region 1 and Region 2, the option to fail some or all the VMs from primary to secondary regions are supported. 
   - The requirement for VM recovery and the IP address retention requirements will define if Partial vs Full DR is possible or not. 
   - In order to maintain the IP address and achieve a partial disaster recovery in SRM, gateway of the subnet will need to move to the secondary AVS.
   - Active-Standby DR doesn’t require L2 stretching.
