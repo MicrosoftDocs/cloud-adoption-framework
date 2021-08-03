@@ -85,7 +85,7 @@ The data management and analytics scenario probably contains polyglot storage. E
 We recommend that you use Azure AD groups to secure database objects instead of individual Azure AD user accounts. Use these AD Azure groups to authenticate users and protects database objects. Similar to the data lake pattern, you could use your data integration or data products onboarding to create these groups.
 
 > [!NOTE]
-> Data integrations and data products can store sensitive data in Azure SQL Database, SQL Managed Instance, or Azure Synapse Analytics pools. For more information, see [Sensitive Data](./secure-data-privacy.md#sensitive-pii-data).
+> Data integrations and data products can store sensitive data in Azure SQL Database, SQL Managed Instance, or Azure Synapse Analytics pools. For more information, see [Sensitive Data](./secure-data-privacy.md#sensitive-data-personal-data).
 
 ## Azure Data Lake security in the data management and analytics scenario
 
