@@ -1,6 +1,6 @@
 ---
-title: Understand security provisioning with enterprise-scale for analytics and AI in Azure
-description: Learn about security provisioning with Enterprise-scale for analytics and AI in Azure.
+title: Understand security provisioning for the data management and analytics scenario in Azure
+description: Learn about security provisioning for the data management and analytics scenario in Azure.
 author: mboswell
 ms.author: mboswell
 ms.date: 08/06/2021
@@ -10,9 +10,9 @@ ms.subservice: ready
 ms.custom: think-tank, e2e-data
 ---
 
-# Understand security provisioning with enterprise-scale for analytics and AI in Azure
+# Understand security provisioning for the data management and analytics scenario in Azure
 
-Organizations can use [authentication](./secure-authentication.md) and [authorization](./secure-analytics-role-based-access-control.md) to control access to the construction set's services. Each product's best practice section features guidance about how to set up security for a particular service. For example, the Azure Data Lake best practices section describes how to grant access to datasets.
+Organizations can use [authentication](./secure-authentication.md) and [authorization](./secure-analytics-role-based-access-control.md) to control access to the scenario's services. Each product's best practice section features guidance about how to set up security for a particular service. For example, the Azure Data Lake best practices section describes how to grant access to datasets.
 
 >[!Note]
 >Every business needs to define its data governance process in detail for each data integration and data product. For example, data with a **public** classification or **internal use only** might be secured by resources, but anything **confidential** or above is secured at a dataset (table name) level. For more classification types, see [data governance classification](./govern-requirements.md#data-governance-classification).
@@ -33,7 +33,7 @@ The final step of creating an access package allows users to request access to t
 
 ### Grant access
 
-Enterprise scale analytics and AI construction set has centered around onboarding new Data Integration uses cases or Data Products via Azure Active Directory entitlement management.
+The data management and analytics scenario is centered around onboarding new data integration uses cases or data products via Azure Active Directory entitlement management.
 
 Azure Active Directory (Azure AD) entitlement management is an identity governance feature that automates workflows for access requests, access assignments, reviews, and expiration, supporting organizations to manage identity and the access life cycle at scale. For guidance about configuring access, see an [overview of Azure AD entitlement management](/azure/active-directory/governance/entitlement-management-overview).
 
@@ -90,7 +90,7 @@ The following Azure AD group naming conventions are suggested for table access c
 
 ## Configure Azure AD entitlement management
 
-Enterprise scale analytics and AI roles map to the configurations and maintenance of an Azure AD entitlement management solution.
+The data management and analytics scenario roles map to the configurations and maintenance of an Azure AD entitlement management solution.
 
 An organization can use Azure AD entitlement management to delegate access governance to access package managers, which frees data landing zone staff to support themselves without deferring to Platform teams.
 

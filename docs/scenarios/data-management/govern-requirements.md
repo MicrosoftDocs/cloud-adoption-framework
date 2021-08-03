@@ -119,3 +119,7 @@ Your data governance solution should have several components:
 - Data governance processes and activities and how they apply to the data lifecycle
 - Policies and rules to govern data at different points in the lifecycle
 - Data governance technologies to help make data governance possible
+
+## Next steps
+
+[Components needed for data governance](govern-components.md)

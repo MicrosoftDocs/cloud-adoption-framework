@@ -1,6 +1,6 @@
 ---
-title: Understand the personas and teams for enterprise scale analytics and AI in Azure
-description: Learn about the personas and teams for enterprise scale analytics and AI in Azure.
+title: Understand the personas and teams for the data management and analytics scenario in Azure
+description: Learn about the personas and teams for the data management and analytics scenario in Azure.
 author: abdale
 ms.author: hamoodaleem 
 ms.date: 08/06/2021
@@ -10,17 +10,17 @@ ms.subservice: ready
 ms.custom: think-tank, e2e-data
 ---
 
-# Understand the personas and teams for enterprise scale analytics and AI in Azure
+# Understand the personas and teams for the data management and analytics scenario in Azure
 
-Enterprise scale analytics and AI creates the landing zone groups that coexist in agile teams by moving teams like Ingest, Processing, Analysis, Consumption, and Visualization from working horizontally to vertically in each tier. Platform teams like Data Platform Operations (Ops) and Platform Ops are grouped together in a common platform group.
+The data management and analytics scenario creates the landing zone groups that coexist in agile teams by moving teams like Ingest, Processing, Analysis, Consumption, and Visualization from working horizontally to vertically in each tier. Platform teams like Data Platform Operations (Ops) and Platform Ops are grouped together in a common platform group.
 
-![Overview of enterprise scale analytics and AI teams.](./images/enterprise-scale-analytics-ai-teams.png)
+![Overview of the data management and analytics scenario teams.](./images/enterprise-scale-analytics-ai-teams.png)
 
-*Figure 1: Overview of enterprise scale analytics and AI teams.*
+*Figure 1: Overview of the data management and analytics scenario teams.*
 
 ## Personas
 
-Multiple personas involved in an enterprise scale analytics and AI deployment. The following sections outline the personas that are key to a successful deployment, and data governance roles are described further down this page.
+Multiple personas are involved a data management and analytics scenario deployment. The following sections outline the personas that are key to a successful deployment, and data governance roles are described further down this page.
 
 | Persona | Role |
 |-|-|
@@ -96,7 +96,7 @@ The Platform group consists of two teams:
 
 ## The digital security office
 
-Digital security deals with the entire enterprise scale analytics and AI construction set. It is usually a dedicated department lead by a Chief Information Security Officer. This department works closely with Data Platform Ops, the data governance review board, and the architecture review board.
+Digital security deals with the entire management and analytics scenario. It is usually a dedicated department lead by a Chief Information Security Officer. This department works closely with Data Platform Ops, the data governance review board, and the architecture review board.
 
 ## Data governance roles and responsibilities
 
@@ -132,4 +132,8 @@ The architecture review board's main functions are to review and assess architec
 
 The feedback and support operating board receives feedback about processes and works with the other groups to create backlog items to address gaps and improve the solution.
 
-For more information about how groups align within a data management landing zone and data landing zone(s), view [enterprise scale analytics and AI DevOps models](./organize-team-functions.md).
+For more information about how groups align within a data management landing zone and data landing zones, see [the data management and analytics scenario DevOps models](./organize-team-functions.md).
+
+## Next steps
+
+[Team functions](organize-teams-functions.md)

@@ -1,6 +1,6 @@
 ---
-title: Understand data management and role-based access control for enterprise scale analytics and AI in Azure
-description: Learn about data management and role-based access control for enterprise scale analytics and AI in Azure.
+title: Understand data management and role-based access control for the data management and analytics scenario in Azure
+description: Learn about data management and role-based access control for the data management and analytics scenario in Azure.
 author: mboswell
 ms.author: mboswell
 ms.date: 08/06/2021
@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank, e2e-data
 ---
 
-# Understand data management and role-based access control for enterprise scale analytics and AI in Azure
+# Understand data management and role-based access control for the data management and analytics scenario in Azure
 
 Authorization is the act of granting an authenticated party permission to perform an action. The key principle of access control is giving users only the amount of access that they need to do their jobs and only allowing certain actions at a particular scope. Role-based security/role-based access control (RBAC) corresponds to access control and is used by many organizations to control access based on defined roles or job functions versus individual users. Users are then assigned one or more security roles, each of which is given authorized permissions to perform specific tasks. For example, data engineers with the *data ingestion developer* job function will be assigned the **Contributor** role within data lake storage in the development environment. This **Contributor** gains permission to manage all data lake storage settings except granting access.
 
@@ -31,7 +31,7 @@ The following built-in roles are fundamental for all Azure resource types, inclu
 Some services have specific RBAC roles like **Storage Blob Data Contributor** or **Data Factory Contributor**, which means that specific RBAC roles should be used for these services.
 RBAC is an additive model where adding role assignments is an active permission. RBAC also supports *deny* assignments which take precedence over *role* assignments.
 
-## RBAC general practices for enterprise scale analytics and AI
+## RBAC general practices for the data management and analytics scenario in Azure
 
 The following best practices can help you to get started with RBAC:
 
@@ -46,3 +46,7 @@ The following best practices can help you to get started with RBAC:
 - **Don't grant unnecessary access at the subscription scope**: This scope covers all resources within the subscription.
 
 - **Opt for least-privilege access**: Select the right and only role for the job.
+
+## Next steps
+
+[Automating security](security-provisioning.md)

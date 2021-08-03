@@ -1,6 +1,6 @@
 ---
-title: Understand how to organize Data Operations team members for enterprise scale analytics and AI in Azure
-description: Learn how to organize Data Operations team members for enterprise scale analytics and AI in Azure.
+title: Understand how to organize Data Operations team members for the data management and analytics scenario in Azure
+description: Learn how to organize Data Operations team members for the data management and analytics scenario in Azure.
 author: abdale
 ms.author: hamoodaleem
 ms.date: 08/06/2021
@@ -10,9 +10,9 @@ ms.subservice: ready
 ms.custom: think-tank, e2e-data
 ---
 
-# Understand how to organize Data Operations team members for enterprise scale analytics and AI in Azure
+# Understand how to organize Data Operations team members for the data management and analytics scenario in Azure
 
-The enterprise scale analytics and AI architecture was designed with the following core principles:
+The data management and analytics scenario architecture was designed with the following core principles:
 
 1. Self-service enablement: Enable project teams to work on their own to allow agile development methods.
 
@@ -32,3 +32,7 @@ Contributors with identifiable and individual skills should establish a Platform
 The team should present its services in a self-service manner, which can include tools for storing big data, versioning product data, organizing/implementing the data pipeline, de-identifying data, and more. These types of tools are key to minimizing bottlenecks in the workflow and reducing lead time for creating new data products.
 
 The Platform group should follow the best practices outlined in this section to achieve their objectives. Other data product teams should use the best practices in the forthcoming articles to test and automate their data.
+
+## Next steps
+
+[Organize for effective data operations](organize-data-operations.md)
