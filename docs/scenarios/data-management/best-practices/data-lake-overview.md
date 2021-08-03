@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Data management and analytics scenario data lake services overview
+# Data management and analytics scenario Azure Data Lake services overview
 
 We recommend you provision three [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction) accounts within a single resource group, similar to the `data lake services` resource group described in [Azure data management and analytics scenario architecture data landing zone overview](../architectures/data-landing-zone.md). Each of the three data lakes within a data landing zone stores data in one of its three transformation stages: raw data, enriched and curated data, and workspace data. [Data products](../architectures/data-landing-zone-data-products.md) should only consume from the data lake that contains enriched and curated data.
 
@@ -45,7 +45,7 @@ Scalability is a key concept and a single data lake might limit scalability from
   * Maximum *access* and *default* ACLs per file or folder (this quota is a hard limit so assign ACLs to groups, not individual users): 32
   * For more information about limits, see [Scalability and performance targets](/azure/storage/common/storage-scalability-targets).
 
-[!TIP]
+> [!TIP]
 > Contact [Azure Support](https://azure.microsoft.com/support/faq/) to request higher capacity and ingress limits.
 
 * Isolation of data environments and predictability. For example, if you want to isolate activities that run in the laboratory zone to avoid potential effect on the curated zone. The curated zone holds data with greater business value that's used for critical decision making.
@@ -66,11 +66,11 @@ Data residency rules, or a requirement to have data close to a user base, can dr
 * Default ACL on every dataset folder must include *read* and *execute* permissions. Execute permission is required for users to traverse a restricted folder and access files under it. Access ACL assigned to an Azure AD group will include read and execute permissions on each dataset folder.
 * Only a managed identity or a service principal should grant *write* permission to a system. Changes can be made by an ingestion, transformation, or maintenance process.
 
-For more information about access control mechanisms, see [Understanding access control and data lake configurations in Azure Data Lake Storage Gen2](data-lake-access.md#understanding-access-control-and-data-lake-configurations-in-adls-gen2).
+For more information about access control mechanisms, see [Managing data lake access](data-lake-access.md).
 
 ## Next steps
 
 The next step is to review guidance about data lake zones.
 
 > [!div class="nextstepaction"]
-> [Data lake zones](.data-lake-services.md)
+> [Data lake zones](data-lake-services.md)
