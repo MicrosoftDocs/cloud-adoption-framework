@@ -39,7 +39,7 @@ Azure Active Directory (Azure AD) entitlement management is an identity governan
 
 The decision is based upon seeing scenarios where users receive access to a resource, they may hold on to access longer than is required for business purposes. Moving the entitlement packages allows delegate to non-administrators the ability to create access packages. These access packages contain resources, such as access to datasets, that users can request, and the delegated access package managers can define policies with rules for which users can request, who must approve their access, and when access expires.
 
-This video, [What is Azure Active Directory entitlement management?](https://www.youtube.com/watch?v=_Lss6bFrnQ8) recaps entitlement management and its value.
+This video, [What is Azure Active Directory entitlement management?](https://www.youtube.com/watch?v=_Lss6bFrnQ8), recaps entitlement management and its value.
 
 Data access management is divided into the following tiers:
 
