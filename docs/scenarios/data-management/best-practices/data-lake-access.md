@@ -150,12 +150,7 @@ If you didn't add that user to a group, but instead, added a dedicated ACL entry
 
 No single approach to managing data lake access suits everyone. A major benefit of a data lake is to provide friction-free access to data. In practice, different organizations want different levels of governance and control over their data. Some organizations have a centralized team to manage access and provision groups under rigorous internal controls. Other organizations are more agile and have decentralized control. Choose the approach that meets your level of governance. Your choice shouldn't result in undue delays or friction in gaining access to data.
 
-<<<<<<< HEAD
->[!NOTE]
->Storing data inside an Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics Pools are one of the options for Data Integrations and Data Products to store [*sensitive (PII)* Data](../secure-data-privacy.md#sensitive-pii-data).
-=======
 ## Azure Synapse Analytics data access control
->>>>>>> a0e40e32f3a68c8ee8e392d3c6e1a7a8fa945c0f
 
 To deploy an Azure Synapse workspace, a Data Lake Storage Gen 2 account is required. Azure Synapse Analytics uses the primary storage account for several integration scenarios and stores data in a container. The container includes Apache Spark tables and application logs under a folder called **/synapse/{workspacename}**. The workspace also uses container for managing libraries that you choose to install.
 
