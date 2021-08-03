@@ -12,39 +12,25 @@ ms.custom: think-tank
 
 # Scenario specific enterprise-scale landing zones
 
-_Enterprise-scale_ is an architecture approach and reference implementation that enables effective construction and operationalization of landing zones on Azure, at scale and aligned with the Azure roadmap and the Microsoft Cloud Adoption Framework for Azure. An enterprise-scale landing zone is a reference implementation of the workload environment conforming to enterprise-scale architecture (an opinionated way to implement and code).
+Enterprise-scale landing zones provide a proven foundation for organizations as part of their cloud adoption journey.
+As part of that cloud adoption, organizations may identify business or technical requirements that require the addition of specific Tier 1 technology platforms to their environments.
+These technologies are often required to support mission critical workloads or business processes and are the basis for a specific scenario.
 
-Additionally, we have scenario-specific enterprise-scale landing zones that enables effective workload and scenario operationalization of landing zones on Azure, at scale and aligned with the Azure roadmap and the Microsoft Cloud Adoption Framework for Azure.
+We refer to these as **scenarios**.
 
-These scenario-specific landing zones are:
+To support these scenarios, we have specific enterprise-scale landing zone guidance and implementations that enables effective adoption and operationalization of these key technologies on Azure, at scale and aligned with the Azure roadmap and the Microsoft Cloud Adoption Framework for Azure. 
 
-**Authoritative:** Provides a holistic design decision framework for the Azure platform.
+This guidance provides specific, refined deployments which can be run on top of existing enterprise-scale landing zones.
 
-**Proven:** Based on success of large-scale migration projects deployed at scale.
 
-**Prescriptive:** Apply it to clearly plan and design your Azure environment.
+These landing zones have been developed in the broader context of common scenarios, such as:
 
-Each scenario specific enterprise-scale landing zone has its own relevant architecture and its own reference implementation.
-
-## Enterprise-scale for AKS
-
-Enterprise-scale for AKS represents the strategic design path and target technical state for an Azure Kubernetes Service (AKS) deployment. This solution provides an architectural approach and reference implementation to prepare landing zone subscriptions for a scalable Azure Kubernetes Service (AKS) cluster.
-
-Learn more about enterprise-scale for AKS in the modern application platform page.
-
-For more information, see [Enterprise-scale for AKS](/azure/cloud-adoption-framework/scenarios/aks/enterprise-scale-landing-zone).
-
-## Enterprise-scale for SAP
-
-Enterprise-scale for SAP on Azure provides a specific architectural approach and reference implementation that enables effective construction and operationalization of SAP workload landing zones within the Cloud Adoption Framework enterprise-scale landing zone.
-
-For more information, see [Enterprise-scale for SAP on Azure](/azure/cloud-adoption-framework/scenarios/sap/enterprise-scale-landing-zone).
-
-## Enterprise-scale for Azure Virtual Desktop
-
-The Azure Virtual Desktop enterprise-scale landing zone is used after you've implemented an enterprise-scale landing zone. Enterprise-scale for Azure Virtual Desktop provides a specific architectural approach and reference implementation that enables effective construction and operationalization of Azure Virtual Desktop workload landing zones within the Cloud Adoption Framework enterprise-scale landing zone.
-
-For more information, see[Enterprise-scale for Azure Virtual Desktop](/azure/cloud-adoption-framework/scenarios/wvd/enterprise-scale-landing-zone).
+| Scenario | Description | Landing Zone |
+|---|---|---|
+|[Hybrid and multicloud](../scenarios/hybrid/index.md)| Guidance on shaping an organizations approach to implementing a hybrid cloud strategy | [Enterprise-scale for hybrid](../scenarios/hybrid/enterprise-scale-landing-zone.md)
+|[SAP](../scenarios/SAP/index.md)| Guidance for migrating or adopting SAP workloads as part of your cloud strategy | [Enterprise-scale for SAP on Azure](/azure/cloud-adoption-framework/scenarios/sap/enterprise-scale-landing-zone) |
+|[Virtual Desktop](../scenarios/wvd/index.md)| Guidance for migrating virtual desktops, or creating new as part of a cloud-focussed productivity strategy | [Enterprise-scale for Azure Virtual Desktop](/azure/cloud-adoption-framework/scenarios/wvd/enterprise-scale-landing-zone) |
+| [Modern Application Platform](../scenarios/aks/index.md) | Guidance for how application services and containers can be integrated into your cloud adoption strategy |  [Enterprise-scale for AKS](/azure/cloud-adoption-framework/scenarios/aks/enterprise-scale-landing-zone) |
 
 ## Next steps
 
