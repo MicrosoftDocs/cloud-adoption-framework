@@ -1,118 +1,123 @@
 ---
-title: "Azure Enterprise Scale Analytics Analytics and AI Security Provisioning"
-description: Enterprise-Scale Analytics and AI Security Provisioning
+title: Understand security provisioning with enterprise-scale for analytics and AI in Azure
+description: Learn about security provisioning with Enterprise-scale for analytics and AI in Azure.
 author: mboswell
 ms.author: mboswell
-ms.date: 03/03/2021
+ms.date: 08/06/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: think-tank, e2e-data
 ---
 
+# Understand security provisioning with enterprise-scale for analytics and AI in Azure
 
-# Security Provisioning
-
-As outlined in both [Authentication](secure-authentication.md) and [Authorization](secure-analytics-role-based-access-control.md) are used to control access to services with the construction set. Specific guidance on setting up security, for a particular service, is contained in the best practice section for each product. For example the best practices section for Azure Data Lakes, gives insight how to think of granting access to datasets.
+Organizations can use [authentication](./secure-authentication.md) and [authorization](./secure-analytics-role-based-access-control.md) to control access to the construction set's services. Each product's best practice section features guidance about how to set up security for a particular service. For example, the Azure Data Lake best practices section describes how to grant access to datasets.
 
 >[!Note]
->Every business needs to define it's data governance process for the granularity of data access per data integration and data product.\
->\
->For example, data with a classification of *public* or *internal use only* might be secured by sources. Where as anything which is *confidential* or above is secured at dataset (table name) level. See [Data Governance Classification](govern-requirements.md#data-governance-classification) for classification types.
+>Every business needs to define its data governance process in detail for each data integration and data product. For example, data with a **public** classification or **internal use only** might be secured by resources, but anything **confidential** or above is secured at a dataset (table name) level. For more classification types, see [data governance classification](./govern-requirements.md#data-governance-classification).
 
-## Automating Security
+## Automate security
 
-In previous sections we have focused on ingesting different types of data and how we onboard data integrations and data products. The focus has been predominantly on using automation as much as possible.
+In previous sections, we've focused on how to ingest different data types and how to onboard data integrations and data products. The focus has been predominantly on using automation as much as possible.
 
-The story for self-service access to data relies upon automation, which starts when a new dataset is registered. Even if your organization doesn't yet have an automated ingestion framework, we still recommend that you create a Custom App, IT Service Management Process, or PowerApp to allow Integration Ops teams and Data Product teams to register datasets.
+The story for self-service access to data relies upon automation, which starts when a new dataset is registered. Even if your organization doesn't yet have an automated ingestion framework, we still recommend that you create a Custom App, IT Service Management Process, or PowerApp to allow Integration Operations (Integration Ops) and Data Product teams to register datasets.
 
-At a minimum, the high level registration process should provide REST APIs to support the following actions:
+The high-level registration process should provide REST APIs to at least support:
 
-1. Create the folders inside the data integrations Data Lake Containers
-2. Create the required Azure AD Groups for access. Each data asset in Azure Data Lake Store owns two matching Azure Active Directory Groups.
-3. Create an Access Package within [Azure AD entitlement management](/azure/active-directory/governance/entitlement-management-overview)
+- Creating folders inside the data integration's Azure Data Lake containers.
+- Creating the required Azure AD groups for access. Each data asset in Azure Data Lake Storage owns two matching Azure AD groups.
+- Creating an access package within [Azure AD entitlement management](/azure/active-directory/governance/entitlement-management-overview).
 
 The final step of creating an access package allows users to request access to the package and is based on features available within Azure AD Identity Governance.
 
-### Granting Access
+### Grant access
 
-Enterprise Scale Analytics and AI construction set has centered around onboarding new Data Integration uses cases or Data Products via Azure Active Directory entitlement management.
+Enterprise scale analytics and AI construction set has centered around onboarding new Data Integration uses cases or Data Products via Azure Active Directory entitlement management.
 
-Azure Active Directory (Azure AD) entitlement management is an identity governance feature that enables organizations to manage identity and access lifecycle at scale, by automating access request workflows, access assignments, reviews, and expiration. For further insights and guidance on configuring this please see [What is Azure AD entitlement management?](/azure/active-directory/governance/entitlement-management-overview).
+Azure Active Directory (Azure AD) entitlement management is an identity governance feature that automates workflows for access requests, access assignments, reviews, and expiration, supporting organizations to manage identity and the access life cycle at scale. For guidance about configuring access, see an [overview of Azure AD entitlement management](/azure/active-directory/governance/entitlement-management-overview).
 
 The decision is based upon seeing scenarios where users receive access to a resource, they may hold on to access longer than is required for business purposes. Moving the entitlement packages allows delegate to non-administrators the ability to create access packages. These access packages contain resources, such as access to datasets, that users can request, and the delegated access package managers can define policies with rules for which users can request, who must approve their access, and when access expires.
 
-This video provides an overview of entitlement management and its value:
+This video, [What is Azure Active Directory entitlement management?](https://www.youtube.com/watch?v=_Lss6bFrnQ8), recaps entitlement management and its value.
 
->[!VIDEO <https://www.youtube.com/embed/_Lss6bFrnQ8>]
+Data access management is divided into the following tiers:
 
-We have to break our data access management into multiple tiers:
+- The physical layer (for example, the polyglot storing the dataset)
+- Azure AD groups (see the previous note about granularity)
+- Access packages, a bundle of resources that a team or project needs and is governed by policies
+- Users and teams who try to access the dataset by requesting access or joining a dynamic group based on their user metadata.
 
-- Physical layer such as the polygot which is storing the dataset
-- Azure Active Directory Groups (see above note on granularity)
-- Access Packages are a bundle of resources that a team or project needs and is governed with policies.
-- Users and Teams who wish to gain access to the dataset. Either by explicitly requesting or dynamic group membership based on there user metadata.
+:::image type="content" source="./images/granting-access.png" alt-text="Granting access to datasets." lightbox="./images/granting-access.png":::
 
-:::image type="content" source="./images/granting-access.png" alt-text="Granting Access" lightbox="./images/granting-access.png":::
+*Figure 1: Access granted to datasets.*
 
-*Figure 1: Granting Access to Datasets*
+Figure 1 above summarizes how:
 
-As Figure 1 above illustrates:
+- Integration Ops or Data Product onboard the new dataset and/or product to a data landing zone.
+- An Azure AD group is created and assigned to the dataset. Access can be granted with Azure AD Pass-through Authentication or table access control in Azure Databricks or Synapse Analytics.
 
-1. Integration Ops or Data Products onboard the new dataset and/or product to a Data Landing Zone.
-2. An Azure Active Directory Group will be created and assigned to the dataset. This could been granted access to the data via AD Passthrough or via Table Access Control in Azure Databricks or Azure Synapse Analytics.
+The following Azure AD group naming conventions are suggested for Azure AD Pass-through Authentication:
 
-    A suggested naming convention, for the AD Group, in the case of AD passthrough is:
-
-   - Data Landing Zone Name
-   - Data Integration
-   - RAW for RAW, ENR for Enriched, CUR for Curated
-   - Schema or Table Name
-   - RW for Read Write and R for read only
+- Data landing zone name
+- Data integration
+- RAW for RAW, ENR for Enriched, CUR for Curated
+- Schema or table name
+- RW for read-write and R for read-only
   
-    A suggested naming convention, for the AD Group, in the case of table access control is:
+The following Azure AD group naming conventions are suggested for table access control:
 
-   - Data Landing Zone Name
-   - Data Product
-   - CUR for Curated
-   - Schema or Table Name
-   - RW for Read Write and R for read only
+- Data landing zone name
+- Data product
+- CUR for Curated
+- Schema or table tame
+- RW for read-write and R for read-only
 
-3. Using Azure Active Directory entitlement management, we create Access Packages in the Data Landing Zone Access Packages Catalog. These Access Packages can contain multiple Azure Active Directory Groups. In the figure above, the Finance Analysis Package gives access to Finance and LOB A. Whilst, the Finance Writers Package gives access to Schema F and LOB A. Typically write should only be given to those who are creating the dataset. At all  other times read should be the default.
-4. Users request access to use these packages via Self-Service by browsing an access-package catalog or uses a direct link (from docs or the data catalog) to request access.
-5. Subject to policy and account, an approver is notified and reviews request via access management portal.
-6. If approved, the user will be notified and given access to the dataset.
-7. If the enterprise wants to grant permissions to user based on their metadata (*e.g.* division, title, or location), then [Creating or update a dynamic group in Azure Active Directory](/azure/active-directory/enterprise-users/groups-create-rule) could be used and this Dynamic Group could be added as an approved group to the access package.
+## The Azure AD entitlement process
+
+1. Azure AD entitlement management creates access packages in the data landing zone access packages catalog. The access packages can contain multiple Azure AD groups. The **Finance Analysis** package above gives access to Finance and LOB A while the **Finance Writers** package gives access to Schema F and LOB A. It's recommended to only grant write access to those who are creating the dataset. Read-only should be the default otherwise.
+
+1. Users browse an access package catalog or request access to the packages from a direct link (a docs link or a data catalog).
+
+1. Subject to policy and account, an approver is notified and reviews the request in an access management portal.
+
+1. If approved, the user is notified and given access to the dataset.
+
+1. If the enterprise wants to grant user permissions based on metadata (for example, a user's division, title, or location), then [dynamic groups in Azure AD](/azure/active-directory/enterprise-users/groups-create-rule) could be added as an approved group to the access package.
 
 > [!IMPORTANT]
-> Although Figure 1 illustrates adding Azure AD User Groups, the same process could be achieved for adding Azure Service Principals which would be used by Data Product teams for ingestion pipelines etc.\
->\
->It is recommended that you set up two lifecycle settings. One for users to ask for access for a short time period (30 days) and another for requesting a longer period of access (90 days).
+> Figure 1 illustrates adding Azure AD user groups, and the same process could help with adding Azure service principals, which are used by Data Product teams for ingestion pipelines and more. It is recommended that you set up two life cycle settings, one for users to request short-term access (30 days) and another for requesting longer access periods (90 days).
 
-## Configuring Azure AD entitlement management
+## Configure Azure AD entitlement management
 
-Enterprise Scale Analytics and AI roles map to the configuration and maintenance of an Azure AD entitlement management solution.
+Enterprise scale analytics and AI roles map to the configurations and maintenance of an Azure AD entitlement management solution.
 
-We are able to delegate access governance to access package managers in Azure AD entitlement management so that Data Landing Zone can look after themselves without having to go back to the Platform teams.
+An organization can use Azure AD entitlement management to delegate access governance to access package managers, which frees data landing zone staff to support themselves without deferring to Platform teams.
 
-:::image type="content" source="./images/user-access-management.png" alt-text="User Access Management" lightbox="./images/user-access-management.png":::
+:::image type="content" source="./images/user-access-management.png" alt-text="User access management." lightbox="./images/user-access-management.png":::
 
-*Figure 2: Configuring Azure AD entitlement management*
-
-Figure 2 brings all of this together on how different personas would work together to control access to data assets.
+*Figure 2: Configuring Azure AD entitlement management.*
 
 :::image type="content" source="./images/identity-governance-catalogs.png" alt-text="Identity Governance Catalogs" lightbox="./images/identity-governance-catalogs.png":::
 
-1. Data Platform Ops would create a catalog for each individual Data Landing Zone, and each can have their own group to create packages and manage permissions.
-1. Integration Ops and Data Product owns the creation and management of Data Asset Security Groups (DASG). This is mostly handled via automated scripts that manage the creating and updating of security groups.
-1. A Data Manager, part of Integration Ops or Data Product, can curate access packages and define which access and applications are included. The Access Packages are published to their respective catalogs. Access Packages are typically aligned to user profiles (*e.g.* base package for finance users). Access Packages can include expiration policies and access review policies. Special policies also exist for external guest users.
-1. Users browse packages in myaccess portal and can request access to these packages themselves. However a manager could also request that the AP-admin (requires assignment-manager role) grant their team access.
+Figure 2 summarizes how different personas work together to control access to data assets:
+
+1. Data Platform Ops creates a catalog for each individual data landing zone, and each can have their own group to create packages and manage permissions.
+
+1. Integration Ops and Data Product create and manage data asset security groups. They use automated scripts that manage how the security groups are created and updated.
+
+1. A Data manager part of Integration Ops or Data Product can curate access packages and define which access and applications are included. The access packages are published to their corresponding catalogs. Access packages typically correspond to user profiles (for example, a base package for finance users) and can include expiration and access review policies. Special policies also exist for external guest users.
+
+1. Users browse packages in a MyAccess portal and can request access to these packages themselves. However, a manager could also request that for an AP-admin (requires assignment-manager role) to grant their team access.
+
 1. Upon a request for access, the user must provide justification and submit.
-1. The delegated approver or Data Manager in Integration Ops can approve or reject the request.
+
+1. The delegated approver or data manager in Integration Ops can approve or reject the request.
 
 >[!IMPORTANT]
->Currently tenants can provision 500 catalogs with 500 access packages each (this can be increased by contacting Azure support).
+>Tenants can currently provision 500 catalogs with 500 access packages; to increase this number, contact [Azure support](https://azure.microsoft.com/support/options/).
 
-## Next Steps
+## Next steps
 
 - Video: [How to deploy Azure Active Directory entitlement management](https://www.youtube.com/watch?v=zaaKvaaYwI4&feature=youtu.be).
-- [Common scenarios in Azure AD entitlement management](/azure/active-directory/governance/entitlement-management-scenarios).
+- Explore [common scenarios in Azure AD entitlement management](/azure/active-directory/governance/entitlement-management-scenarios) for more information about how to manage entitlement.

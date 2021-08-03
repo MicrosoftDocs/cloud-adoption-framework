@@ -1,55 +1,51 @@
 ---
-title: "Azure Enterprise Scale Analytics platform automation and devops Overview"
-description: Enterprise-Scale platform automation and devops Overview
+title: Understand DevOps automation for enterprise scale analytics and AI in Azure
+description: Learn about DevOps automation for enterprise scale analytics and AI in Azure. 
 author: abdale
 ms.author: hamoodaleem
-ms.date: 06/21/2021
+ms.date: 08/06/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: think-tank, e2e-data
 ---
 
-# Intro to DevOps and Automation
+# Understand DevOps automation for enterprise scale analytics and AI in Azure
 
-The term *DevOps* is more of a cultural movement that changes the way of thinking and working, enabling individuals and organizations to develop and maintain sustainable work practices by accelerating the rate at which businesses realize value.
+*DevOps*, the term for Development Operations, has culturally shifted how people think and work, accelerating the rate at which businesses realize value by helping individuals and organizations to develop and maintain sustainable work practices. DevOps combines development and operations, and is often associated with software engineering tools that support continuous integration (CI) and continuous delivery (CD) practices. These tools and practices include source code managers (Git, Apache Subversion, or Team Foundation Source Control) and automatic build and delivery managers (Azure DevOps pipelines, GitHub Actions, and others).
 
-DevOps represents the combination of development and operations and is often associated with tools that enable continuous integration (CI) and continuous delivery (CD) practices. These software engineering practices and tools include source code managers (Git, SVN, Team Foundation Source Control) and automatic build and delivery manager (Azure DevOps Pipelines, GitHub Actions, etc.).
+## Source control
 
-## Source Control
+Source control ensures that code and configurations persist and that changes are tracked and versioned. Most source control systems also have built-in processes for review and working in different branches of a code repository. Currently, the most popular source control type currently is Git, which is a distributed version controls system that allows individuals to work offline and sync to central repositories. Git vendors typically also use branches and follow pull request guidance to support the change and review flow.
 
-Source Control ensures that code and configuration is persisted and that changes are tracked and versioned. Most source control systems also have built in processes for review and working in different branches of a code repository. The most popular source control type currently is Git which is a distributed version controls system, allowing individuals to work offline and sync to central repositories. Git vendors typically also implement branches and pull request concepts to support the change and review flow.
-
-Branches are used to isolate changes or feature developments without affecting other work that is done in parallel. The use of branches should be emphasized to develop features, fix bugs and safely experiment with new ideas. Changes made to one branch can be merged back into the default branch by using pull requests. These allow a controlled review process. The main branch should be secured to ensure code reviews via pull requests.
+Branches isolate changes or feature developments without affecting other work that happens at the same time. The use of branches should be promoted to develop features, fix bugs, and safely experiment with new ideas. Pull requests merge the changes made from one branch into the default branch, and they support a controlled review process. For security purposes, the main branch should use pull requests to ensure code reviews.
 
 >[!IMPORTANT]
->For all of the repositories in Enterprise Scale Analytics and AI we recommend:
+>We recommend the following guidelines for all enterprise scale analytics and AI repositories:
 >
-> - The main branch of a repository should be secured in order to enforce the use of branches and ensure controlled review processes via pull requests.
-> - Azure DevOps or GitHub based repositories should be used for source control to track changes to source code and to allow simultaneous code development by multiple team members.
-> - Application code as well as infrastructure configuration should be checked into a repository.
+> - Secure the repository's main branch by enforcing branches and pull requests to ensure a controlled review processes.
+> - Azure DevOps or GitHub repositories should be used for source control to track changes to the source code and allow multiple team members to develop code at the same time.
+> - Application code and infrastructure configurations should be checked into a repository.
 
-## CI/CD Pipelines
+## CI/CD pipelines
 
-Pipelines are ways to configure Continuous Integration (CI) of changes (software code or infrastructure code) and Continuous Deployment (CD) of the packaged/compiled changes. This is also referred to as Build and Release.
+CI allows teams to automatically test and build source code and enables quick iterations and feedback loops to ensure high code quality in CD. Pipelines are ways to configure the CI of changes (software code or infrastructure code) and CD of the packaged/compiled changes. This is also referred to as *build and release*. CD describes the automatic deployment of applications to one or more environments. CD usually follows a CI process and uses integration tests to validate the entire application.
 
-CI allows to automatically test and build source code and enables quick iterations and feedback loops to ensure high code quality in CD. CD describes the automatic deployment of applications in one or more environments. CI is usually followed by a CD process and it allows to validate the entire application by using integration tests.
+Pipelines can contain multiple stages with various tasks and can have simple to complex approval flows to ensure compliance and validation. Based on preference, pipelines can also be configured with various automatic triggers. For Enterprise-scale and AI deployment, the production steps should always have human preapproval, and this is built into the operation model. CI/CD pipelines should be built with GitHub Actions or Azure DevOps pipelines, and they should be automated triggers.
 
-Pipelines can contain multiple stages with various tasks and can have simple to complex approval flows to ensure compliance and validation. It can also be configured in various degrees of automatic triggering based on preference.
+### Infrastructure as code, IaC
 
-For Enterprise Scale and AI deployment stages to production should always have human pre-approval and this is built into the operation model. CI/CD pipelines should be build using GitHub Actions or Azure DevOps Pipelines and should be automated using appropriate triggers.
+The term *code* in IaC often raises concerns for IT staff without a developer background, but IaC don't refer to writing code the way in which typical software developers do it. However, it adopts many of the same tools and principles from the software development processes to deliver infrastructure in a predictable format.
 
-### Infrastructure as Code (IaC)
+IaC helps infrastructure to be provisioned, configured, and managed as part of a DevOps pipeline with full change controls, audit history, tests, validations, and approval processes, ensuring that tasks can be delegated to the appropriate roles for the project without compromising security and compliance.
 
-The inclusion of the word "Code" in IaC often raises concern at seasoned IT staff without a developer background, but IaC does not refer to writing code the way typical software developers do. However, it adopts many of the same tools and principals from the software development processes to deliver infrastructure in a prescriptive format.
+The two approaches to IaC are declarative and imperative:
 
-IaC enables infrastructure to be provisioned, configured and managed as part of a DevOps Pipeline with full change control, audit history, tests, validations and approval processes ensuring that the tasks can be delegated to the appropriate role for the project without compromising security and compliance.
+- Declarative refers to specifying the desired state of the infrastructure and having an orchestration engine execute the necessary actions to achieve the desired state. In Azure, this is done with Azure Resource Manager templates. Third-party abstraction layers like Terraform are also available for this approach.
 
-There are two approaches to IaC (declarative and imperative):
+- The imperative approach refers to executing specific commands in a defined order. For Azure, this can be achieved with the command-line interface or PowerShell, but native programming language software developer kits (for example, .Net, Python, and Java ) are also available if integrated solutions are required.
 
-- Declarative refers to specifying the desired state of the infrastructure and having an orchestration engine execute the necessary actions to achieve the desired state. In Azure this is done by Azure Resource Manager (ARM) using Azure Resource Manager templates. Third-party abstraction layers like Terraform is also available for this approach.
-- The imperative approach refers to executing specific commands in a defined order. For Azure this can be achieved using Azure CLI or Azure PowerShell, but native programming language SDKs also exists for e.g. .Net, Python and Java if integrated solutions are required.
-
-In ARM templates, the core provisioning is in the resources section, and the configuration of the individual resources is defined in a properties section. For an Azure Data Lake Gen 2, it would look like this:
+In Azure Resource Manager templates, the core provisioning is in the **resources** section, and the configuration of the individual resources is defined in a **properties** section. For an Azure Data Lake Storage Gen2, the configuration looks like the following:
 
 ```json
 {
@@ -79,19 +75,15 @@ In ARM templates, the core provisioning is in the resources section, and the con
 ```
 
 >[!IMPORTANT]
->Every layer of the Enterprise Scale Analytics and AI construction set (Data Management Landing Zone, Data Landing Zones, Data Integrations or Data Products) should be defined through a declarative language such as ARM or Terraform, should be checked into a repository and deployed through CI/CD pipelines. This allows teams to keep track and version changes to the infrastructure and configuration of Azure scope and ultimately allows an agile self-service automation of different levels of the architecture.\
-\
->This concept allows to always have a clear representation of the state inside a specific scope in Azure in a Git repository.
+>Every layer of the enterprise scale analytics and AI construction set (data management landing zone, data landing zones, data integrations, or data products) should be defined with a declarative language like Azure Resource Manager or Terraform, checked into a repository, and deployed through CI/CD pipelines. This allows teams to track and version changes to the infrastructure and configuration of Azure scope while supporting different architecture levels to be automated in an agile way. This guidance leads teams to use Git repositories to always have visibility into the state of specific specific Azure scopes.
 
-## Workflow and Automation
+## Workflows and automation
 
-To ensure that developed code is free of errors and ready for production, it should always be provisioned through CI/CD pipelines using multiple stages. Common practice is to have a development environment, a testing environment, and a production environment. These stages should also be reflected in Azure, by using separate services for each environment.
+Teams should use CI/CD pipelines in multiple stages to ensure that developed code is without errors and ready for production. Some best practices are to have a development environment, a testing environment, and a production environment. These stages should also be reflected in Azure by using separate services for each environment.
 
-In order to scale quickly within an organization and simplify the deployment process for teams, which are not as familiar with the concept of IaC, the Platform Team has the responsibility to provide and maintain deployment templates. These templates are used as a baseline for new artifacts within the construction set and need to be maintained over time, in order to constantly represent best practices and common standards within the company.
+The Platform team is responsible for providing and maintaining deployment templates to scale quickly within an organization and simplify deployments for teams unfamiliar with with IaC. These templates serve as a baseline for new artifacts within the construction set and need to be maintained over time to represent best practices and common standards within the company.
 
-Deployments to test and production should only be manageable through a CI/CD pipeline and a service connection with elevated rights to enforce common best practices (e.g. ARM templates).
+Deployments to test and production should only be managed through a CI/CD pipeline and a service connection with elevated permissions to enforce common best practices (for example, Azure Resource Manager templates).
 
 >[!CAUTION]
->Integration Ops and Data Product teams should only have read access to have read access to test and production environments. Deployments to these environments should only be executable through CI/CD pipelines and service connections with elevated rights. \
-\
->However, Integration Ops and Data Product teams should have write access to the development environment to speed up time to production.
+>Integration Operations (Integration Ops) and Data Product teams should only have read access to test and production environments, and deployments to these environments should only be executed through CI/CD pipelines and service connections with elevated permissions. To accelerate the path to production, Integration Ops and Data Product teams should have write access to the development environment.
