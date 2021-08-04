@@ -41,9 +41,6 @@ The two folders per **data integration** or **data product** should be divided b
 
 Access to the data is restricted by a combination of access control lists (ACLs) and Azure Active Directory (AAD)-groups. These lists and groups control what can and can't be accessed by other groups. Integration operations teams** and data product teams can approve or reject access to their data assets.
 
-> [!NOTE]
-> For more information about handling restricted data, see [restricted data](./secure-data-privacy.md#restricted-data).
-
 ## Raw zone or data lake one
 
 Using the water-based analogy, think of this layer as a reservoir that stores data in its natural and original state. It's unfiltered and unpurified. You might choose to store the data in its original format, such as JSON or .csv. But there might be scenarios where it makes sense to store it as a column in compressed format such as avro, parquet, or Databricks Delta Lake.
