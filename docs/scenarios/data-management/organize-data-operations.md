@@ -1,6 +1,6 @@
 ---
-title: Understand DevOps automation for enterprise scale analytics and AI in Azure
-description: Learn about DevOps automation for enterprise scale analytics and AI in Azure. 
+title: Understand DevOps automation for the data management and analytics scenario in Azure
+description: Learn about DevOps automation for the data management and analytics scenario in Azure. 
 author: abdale
 ms.author: hamoodaleem
 ms.date: 08/06/2021
@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank, e2e-data
 ---
 
-# Understand DevOps automation for enterprise scale analytics and AI in Azure
+# Understand DevOps automation for the data management and analytics scenario in Azure
 
 *DevOps*, the term for Development Operations, has culturally shifted how people think and work, accelerating the rate at which businesses realize value by helping individuals and organizations to develop and maintain sustainable work practices. DevOps combines development and operations, and is often associated with software engineering tools that support continuous integration (CI) and continuous delivery (CD) practices. These tools and practices include source code managers (Git, Apache Subversion, or Team Foundation Source Control) and automatic build and delivery managers (Azure DevOps pipelines, GitHub Actions, and others).
 
@@ -21,7 +21,7 @@ Source control ensures that code and configurations persist and that changes are
 Branches isolate changes or feature developments without affecting other work that happens at the same time. The use of branches should be promoted to develop features, fix bugs, and safely experiment with new ideas. Pull requests merge the changes made from one branch into the default branch, and they support a controlled review process. For security purposes, the main branch should use pull requests to ensure code reviews.
 
 >[!IMPORTANT]
->We recommend the following guidelines for all enterprise scale analytics and AI repositories:
+>We recommend the following guidelines for the data management and analytics scenario repositories:
 >
 > - Secure the repository's main branch by enforcing branches and pull requests to ensure a controlled review processes.
 > - Azure DevOps or GitHub repositories should be used for source control to track changes to the source code and allow multiple team members to develop code at the same time.
@@ -75,15 +75,19 @@ In Azure Resource Manager templates, the core provisioning is in the **resources
 ```
 
 >[!IMPORTANT]
->Every layer of the enterprise scale analytics and AI construction set (data management landing zone, data landing zones, data integrations, or data products) should be defined with a declarative language like Azure Resource Manager or Terraform, checked into a repository, and deployed through CI/CD pipelines. This allows teams to track and version changes to the infrastructure and configuration of Azure scope while supporting different architecture levels to be automated in an agile way. This guidance leads teams to use Git repositories to always have visibility into the state of specific specific Azure scopes.
+>Every layer of the enterprise-scale for analytics and AI such as data management landing zone, data landing zones, data integrations, or data products, should be defined with a declarative language like Azure Resource Manager or Terraform, checked into a repository, and deployed through CI/CD pipelines. This allows teams to track and version changes to the infrastructure and configuration of Azure scope while supporting different architecture levels to be automated in an agile way. This guidance leads teams to use Git repositories to always have visibility into the state of specific specific Azure scopes.
 
 ## Workflows and automation
 
 Teams should use CI/CD pipelines in multiple stages to ensure that developed code is without errors and ready for production. Some best practices are to have a development environment, a testing environment, and a production environment. These stages should also be reflected in Azure by using separate services for each environment.
 
-The Platform team is responsible for providing and maintaining deployment templates to scale quickly within an organization and simplify deployments for teams unfamiliar with with IaC. These templates serve as a baseline for new artifacts within the construction set and need to be maintained over time to represent best practices and common standards within the company.
+The Platform team is responsible for providing and maintaining deployment templates to scale quickly within an organization and simplify deployments for teams unfamiliar with with IaC. These templates serve as a baseline for new artifacts within the scenario and need to be maintained over time to represent best practices and common standards within the company.
 
 Deployments to test and production should only be managed through a CI/CD pipeline and a service connection with elevated permissions to enforce common best practices (for example, Azure Resource Manager templates).
 
 >[!CAUTION]
 >Integration Operations (Integration Ops) and Data Product teams should only have read access to test and production environments, and deployments to these environments should only be executed through CI/CD pipelines and service connections with elevated permissions. To accelerate the path to production, Integration Ops and Data Product teams should have write access to the development environment.
+
+## Next steps
+
+[Personas and teams](organize-persona-and-teams.md)

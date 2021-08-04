@@ -76,7 +76,7 @@ An Azure service principal is the alternative for applications and services that
 
 ## Database authentication and permissions
 
-Th enterprise-scale for analytics and AI probably contains polyglot storage. Examples include PostgreSQL, MySQL, Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics. Data integrations could use them to store their read data stores. Data products could use polyglot storage.
+The data management and analytics scenario probably contains polyglot storage. Examples include PostgreSQL, MySQL, Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics. Data integrations could use them to store their read data stores. Data products could use polyglot storage.
 
 - [Use Azure Active Directory for authentication with PostgreSQL](/azure/postgresql/howto-configure-sign-in-aad-authentication)
 - [Use Azure Active Directory authentication with Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics](/azure/azure-sql/database/authentication-aad-overview)
@@ -85,9 +85,9 @@ Th enterprise-scale for analytics and AI probably contains polyglot storage. Exa
 We recommend that you use Azure AD groups to secure database objects instead of individual Azure AD user accounts. Use these AD Azure groups to authenticate users and protects database objects. Similar to the data lake pattern, you could use your data integration or data products onboarding to create these groups.
 
 > [!NOTE]
-> Data integrations and data products can store sensitive data in Azure SQL Database, SQL Managed Instance, or Azure Synapse Analytics pools. For more information, see [Sensitive Data](./secure-data-privacy.md#sensitive-pii-data).
+> Data integrations and data products can store sensitive data in Azure SQL Database, SQL Managed Instance, or Azure Synapse Analytics pools. For more information, see [Sensitive Data](./secure-data-privacy.md#sensitive-data-personal-data).
 
-## Azure Data Lake security with enterprise scale analytics
+## Azure Data Lake security in the data management and analytics scenario
 
 To control access to data in the data lake, we recommend using access control list (ACL) at the level of files and folders. Azure Data Lake also adopts a Portable Operating System Interface (POSIX)-like access control list model. POSIX is the family of standards for operating systems. One standard defines a simple but yet powerful permission structure for accessing files and folders. POSIX has been adopted widely in network file shares and Unix computers.
 

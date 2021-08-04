@@ -87,7 +87,7 @@ Integration of the catalog business glossary with other technologies is then nee
 - Data virtualization tools
 - Software development tools
 
-A good practice to create a common business vocabulary is to create a data concept model. The model is a top-down approach that identifies data concepts that can be used as data entities in a common business vocabulary. It's then possible to assign a different data governance working group to each data concept (entity) or group of related data concepts (subject area). Different working groups are assigned to govern different data entities across the landscape. 
+A good practice to create a common business vocabulary is to create a data concept model. The model is a top-down approach that identifies data concepts that can be used as data entities in a common business vocabulary. It's then possible to assign a different data governance working group to each data concept (entity) or group of related data concepts (subject area). Different working groups are assigned to govern different data entities across the landscape.
 
 When you build a common business vocabulary, you can use data catalog software to automatically discover what data exists across multiple data stores. It helps identify all the attributes associated with specific data entities. This is a bottom-up approach. By using a top-down approach of a data concept model to get you started, and a bottom-up automated data discovery approach to identify the attributes of a data entity, it's possible for multiple working groups to incrementally build up a common business vocabulary quickly.
 
@@ -112,7 +112,7 @@ It should then be possible to monitor data quality, privacy, access security, us
 
 ## Data governance technology
 
-In summary, this construction set focuses on technologies needed for data governance.
+In summary, this guidance focuses on technologies needed for data governance.
 
 - A data catalog that includes:
   - A business glossary
@@ -130,3 +130,7 @@ In summary, this construction set focuses on technologies needed for data govern
 - Data stores that support data encryption, dynamic data masking, and integration with the data catalog
 - AI assisted data governance
 - Master and reference data management
+
+- ## Next steps
+
+[Technology needed for end-to-end governance](govern-technology.md)
