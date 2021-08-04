@@ -51,4 +51,4 @@ Subscriptions provide a management boundary for governance and isolation, which 
 
 [Further reading on recommendations for Azure Virtual Desktop resource organization](/azure/architecture/example-scenario/wvd/windows-virtual-desktop#azure-limitations)
 
-[Further reading on recommendations for naming and tagging in Azure](/decision-guides/resource-tagging/)
+[Further reading on recommendations for naming and tagging in Azure](/azure/cloud-adoption-framework/decision-guides/resource-tagging/)
