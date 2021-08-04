@@ -44,13 +44,13 @@ Two options are available to enhance the templates:
 
 - Other data landing zone teams should be able to create improvement and backlog tickets that would enhance templates based on how the tickets are prioritized.
 
-### Azure policies for the data management and analytics scenario
+### Azure policies for the enterprise-scale for analytics and AI
 
-The data management and analytics scenario principles emphasize self-service agility and guardrails to protect data, costs, and patterns. Data Platform Ops works with Platform Ops to define quality, and these teams collaborate to implement specific data policies. Data Platform Ops should follow a review process to update and maintain new features that are added to products.
+The enterprise-scale for analytics and AI principles emphasize self-service agility and guardrails to protect data, costs, and patterns. Data Platform Ops works with Platform Ops to define quality, and these teams collaborate to implement specific data policies. Data Platform Ops should follow a review process to update and maintain new features that are added to products.
 
 ### Deploy and operate data management landing zones
 
-Data Platform Ops and Platform Ops work together to deploy and operate data management landing zones. A data management landing zone provides shared services to data landing zones, making it a central piece of the data management and analytics scenario.
+Data Platform Ops and Platform Ops work together to deploy and operate data management landing zones. A data management landing zone provides shared services to data landing zones, making it a central piece of enterprise-scale for analytics and AI.
 
 ## Data Landing Zone Ops
 
@@ -119,7 +119,7 @@ The Data Product team delivers new data products to the business. They source fr
 
 ### New data products
 
-Product owners and business representatives create requests for new data product when they're needed. The data office assess the requirements and assembles a new Data Product team with a range of expertise. The team identifies the data assets required for the data product and requests permission to the data asset. If a new data asset is needed, Integration Ops receives a ticket to ingest it. The team identifies the services required for the new data product and requests a new data product via the [Data integration and data product deployment process](./eslz-platform-provisioning.md#data-integration--data-product-deployment-process). The Data Product team receives a forked repo from the master data products template to deploy the data product.
+Product owners and business representatives create requests for new data product when they're needed. The data office assesses the requirements and assembles a new Data Product team with a range of expertise. The team identifies the data assets required for the data product and requests permission to the data asset. If a new data asset is needed, Integration Ops receives a ticket to ingest it. The team identifies the services required for the new data product and requests a new data product via the [Data integration and data product deployment process](./eslz-platform-provisioning.md#data-integration--data-product-deployment-process). The Data Product team receives a forked repo from the master data products template to deploy the data product.
 
 ### Certify data products
 
@@ -143,17 +143,17 @@ Users can submit feedback with an IT service management solution or directly wit
 
 While the Data Science Products team creates data products, it's distinct because their functions lead to data integrations, assets, or products. This results in published models becoming data products for others to use, and the pattern follows a Machine Learning Ops model that's associated with the data landing zone.
 
-The Data Science Products team starts by searching and finding relevant datasets for their use case. Data governance solutions can reveal additional details like data quality, lineage, or a similar dataset or profile. They research if a sample dataset is available and if the data is relevant to the project. Once data access is granted via a data catalog or an Azure AD access package, the team uses the services in the data landing zone to explore and analyze the data.
+The Data Science Products team starts by searching and finding relevant datasets for their use case. Data governance solutions can reveal more details like data quality, lineage, or a similar dataset or profile. They research if a sample dataset is available and if the data is relevant to the project. Once data access is granted via a data catalog or an Azure AD access package, the team uses the services in the data landing zone to explore and analyze the data.
 
 Before processing all data, the team uses local or remote compute to process and analyze sample datasets. They can optimize remote compute targets with larger datasets to train and develop machine learning models with runs, outputs, and models that are tracked inside Azure Machine Learning.
 
 When the team has developed machine learning models, they start operationalizing them. For this, they expand the team to include Data Ops and machine learning engineers who can assist with moving the models into a new data product, as outlined in a Data Product team role.
 
-The Data Science team will continue to work with the associated Data Product Owners to capture feedback, support and resolved/update models in production using an [ML Ops methodology](/azure/machine-learning/concept-model-management-and-deployment).
+The Data Science team will continue to work with the associated Data Product Owners to capture feedback, support, and resolved and update models in production using an [ML Ops methodology](/azure/machine-learning/concept-model-management-and-deployment).
 
 ## Analyst
 
-Analysts represents a large group that includes business analysts, power users, and generally anyone in the organization with an interest in optimizing data to create new business insights. Self-service enablement is a key principle that supports analysts to access analytics and data without having to secure formal IT budget and resources.
+Analysts represent a large group that includes business analysts, power users, and generally anyone in the organization with an interest in optimizing data to create new business insights. Self-service enablement is a key principle that supports analysts to access analytics and data without having to secure formal IT budget and resources.
 
 >[!TIP]
 >Enterprises should view insights created by analysts as the next set of potential data products to be certified for others to use within the business.
@@ -172,7 +172,7 @@ Analysts can use tools like Microsoft Power BI to integrate datasets into report
 
 ### Run as-needed queries
 
-The the data management and analytics scenario has shared workspaces where analysts can query data, subject to permissions. It is common for data products to provide dedicated compute to run queries as they're needed. In both cases, analyst can run queries against data assets in the data landing zone(s); this is also subject to permissions. The results from the queries can be stored in Azure Data Lake workspaces to be used again.
+Enterprise-scale for analytics and AI has shared workspaces where analysts can query data, subject to permissions. It is common for data products to provide dedicated compute to run queries as they're needed. In both cases, analyst can run queries against data assets in the data landing zones. It's also subject to permissions. The results from the queries can be stored in Azure Data Lake workspaces to be used again.
 
 ### User feedback
 

@@ -1,6 +1,6 @@
 ---
-title: Understand data privacy for data management and analytics scenario analytics and AI in Azure
-description: Learn about data privacy for data management and analytics scenario analytics and AI in Azure.
+title: Understand data privacy for the data management and analytics scenario in Azure
+description: Learn about data privacy for the data management and analytics scenario in Azure.
 author: abdale
 ms.author: hamoodaleem
 ms.date: 08/06/2021
@@ -10,13 +10,13 @@ ms.subservice: ready
 ms.custom: think-tank, e2e-data
 ---
 
-# Understand data privacy for data management and analytics scenario in Azure
+# Understand data privacy for the data management and analytics scenario in Azure
 
-The data management and analytics scenario frees organizations to determine the best patterns to suit their requirements while guarding personally identifiable information (personal data) at multiple levels. personal data is any data that can be used used to identify individuals, such as driver's license numbers, social security numbers, bank account numbers, passport numbers, or email addresses. From the General Data Protection Regulation (GDPR) to the Health Insurance Portability and Accountability Act, many regulations exist today to protect user privacy.
+The data management and analytics scenario frees organizations to determine the best patterns to suit their requirements while guarding personally identifiable information (personal data) at multiple levels. personal data is any data that can be used to identify individuals, such as driver's license numbers, social security numbers, bank account numbers, passport numbers, or email addresses. From the General Data Protection Regulation (GDPR) to the Health Insurance Portability and Accountability Act, many regulations exist today to protect user privacy.
 
 [!INCLUDE [data-confidentiality-classification-scheme](includes/data-confidentiality-classification-scheme.md)]
 
-Before data management and analytics uses data integration to ingest data, it must be able to categorize the data as **confidential or below** or **sensitive (personal data)**:
+Before ingesting data, you must be able to categorize the data as **confidential or below** or **sensitive (personal data)**:
 
 - Data might be sorted into **confidential or below** if a user gains access to the data asset in **Enriched** or **Curated**; users would be able to view all columns and rows.
 
@@ -63,7 +63,7 @@ The first level of restrictions would support [dynamic data masking](/azure/azur
 
 The second level is to add [column-level security](/azure/synapse-analytics/sql-data-warehouse/column-level-security) to restrict non-HR managers from seeing salaries and [row-level security](/sql/relational-databases/security/row-level-security) to restrict which rows European and North American team members can see.
 
-In addition to transparent data encryption, an additional security layer would be to [encrypt the column of data](/sql/relational-databases/security/encryption/encrypt-a-column-of-data) and decrypt upon read.
+In addition to transparent data encryption,  security layer would be to [encrypt the column of data](/sql/relational-databases/security/encryption/encrypt-a-column-of-data) and decrypt upon read.
 
 The tables can be made available to Azure Databricks with [Apache Spark connector: SQL Server & Azure SQL](/sql/connect/spark/connector).
 
@@ -75,7 +75,7 @@ As blog post, [Enforcing Column-level Encryption and Avoiding Data Duplication W
 
 *The first step in this process is to protect the data by encrypting it during ingestion and one possible solution is the Fernet Python library. Fernet uses symmetric encryption, which is built with several standard cryptographic primitives. This library is used within an encryption UDF that will enable us to encrypt any given column in a dataframe. To store the encryption key, we use Databricks Secrets with access controls in place to only allow our data ingestion process to access it. Once the data is written to our Delta Lake tables, personal data columns holding values such as social security number, phone number, credit card number, and other identifiers will be impossible for an unauthorized user to read.*
 
-*Once we have the sensitive data written and protected, we need a way for privileged users to read the sensitive data. The first thing that needs to be done is to create a permanent UDF to add to the Hive instance running on Databricks. In order for a UDF to be permanent, it must be written in Scala. Fortunately, Fernet also has a Scala implementation that we can leverage for our decrypted reads. This UDF also accesses the same secret we used in the encrypted write to perform the decryption, and, in this case, it is added to the Spark configuration of the cluster. This requires us to add cluster access controls for privileged and non-privileged users to control their access to the key. Once the UDF is created, we can use it within our view definitions for privileged users to see the decrypted data.*
+*Once you have the sensitive data written and protected, you need a way for privileged users to read the sensitive data. The first thing that needs to be done is to create a permanent UDF to add to the Hive instance running on Databricks. In order for a UDF to be permanent, it must be written in Scala. Fortunately, Fernet also has a Scala implementation that you can use for your decrypted reads. This UDF also accesses the same secret used in the encrypted write to do the decryption, and, in this case, it's added to the Spark configuration of the cluster. This requires us to add cluster access controls for privileged and non-privileged users to control their access to the key. Once the UDF is created, we can use it within our view definitions for privileged users to see the decrypted data.*
 
 With [dynamic view functions](/azure/databricks/security/access-control/table-acls/object-privileges#dynamic-view-functions), you can create only one view and return the encrypted or decrypted values based on the Databricks group to which they belong.
 
@@ -122,7 +122,7 @@ Since columns are encrypted and can't be decrypted in the **confidential or belo
 
 Where table access is used, teams that require access are added to the Azure Databricks workspace. Azure Databricks would use service principals to map to Azure Data Lake Storage, but the data would be secured with Azure Databricks table access control.
 
-As new datasets are deployed, part of the DevOps process would need to run scripts to set up the table permissions in the an Azure Databricks workspace and add the correct Azure AD groups to those permissions.
+As new datasets are deployed, part of the DevOps process would need to run scripts to set up the table permissions in the Azure Databricks workspace and add the correct Azure AD groups to those permissions.
 
 >[!NOTE]
 >Azure Databricks table access control can't be combined Azure AD Pass-through Authentication. Therefore, you could use only one Azure Databricks workspace and use table access control instead.
@@ -147,7 +147,7 @@ As mentioned, for a policy engine to succeed, it's important for it to integrate
 
 ## Restricted data
 
-In addition to implementing the previous options for confidential or restricted data, we also recommend that highly confidential data is hosted in a dedicated data landing zone. This allows specific requirements like just-in-time access, customer-managed keys for encryption, and inbound/outbound restrictions applied to the landing zone. The guidance has evaluated putting this type of data into the same data landing zone but different storage accounts. However, this can make the solution very complicated on the networking layer (for example, with network security groups and others).
+In addition to implementing the previous options for confidential or restricted data, we also recommend that highly confidential data is hosted in a dedicated data landing zone. It allows specific requirements like just-in-time access, customer-managed keys for encryption, and inbound/outbound restrictions applied to the landing zone. The guidance has evaluated putting data of this type into the same data landing zone but different storage accounts. However, this can make the solution complicated on the networking layer (for example, with network security groups and others).
 
 The data management landing zone should connect to catalog the data in the data landing zone, but it should restrict who can search for this data in the catalog.
 

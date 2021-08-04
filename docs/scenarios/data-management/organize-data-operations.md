@@ -75,7 +75,7 @@ In Azure Resource Manager templates, the core provisioning is in the **resources
 ```
 
 >[!IMPORTANT]
->Every layer of the data management and analytics scenario such as data management landing zone, data landing zones, data integrations, or data products, should be defined with a declarative language like Azure Resource Manager or Terraform, checked into a repository, and deployed through CI/CD pipelines. This allows teams to track and version changes to the infrastructure and configuration of Azure scope while supporting different architecture levels to be automated in an agile way. This guidance leads teams to use Git repositories to always have visibility into the state of specific specific Azure scopes.
+>Every layer of the enterprise-scale for analytics and AI such as data management landing zone, data landing zones, data integrations, or data products, should be defined with a declarative language like Azure Resource Manager or Terraform, checked into a repository, and deployed through CI/CD pipelines. This allows teams to track and version changes to the infrastructure and configuration of Azure scope while supporting different architecture levels to be automated in an agile way. This guidance leads teams to use Git repositories to always have visibility into the state of specific specific Azure scopes.
 
 ## Workflows and automation
 
