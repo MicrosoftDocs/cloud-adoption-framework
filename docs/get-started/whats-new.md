@@ -16,6 +16,23 @@ Here's a list of recent changes made to the Cloud Adoption Framework.
 
 This framework is built collaboratively with customers, partners, and internal Microsoft teams. New and updated content is released when it becomes available. These releases allow you to test, validate, and refine the guidance along with us. We encourage you to partner with us to build the Cloud Adoption Framework.
 
+## August 2021
+
+### Data management and analytics scenario
+
+This release of the Cloud Adoption Framework provides considerations to help you prepare for data management and analytics in the cloud. This scenario focuses on enabling two targeted outcomes: analytics and data governance.
+
+| Article | Description |
+|--|--|
+| [Introduction to the data management and analytics scenario](../scenarios/data-management/index.md) | In this article we introduce the principles of the data management and analytics scenario.|
+| [Data governance](../scenarios/data-management/overview-data-governance.md) | This guidance reviews how data governance ensures data that's used by your business is discoverable, accurate, trusted, and can be protected. |
+| [Build an initial strategy](../scenarios/data-management/strategy.md) | In this article, we review considerations for data management and analytics that will have an impact on your cloud adoption strategy.
+| [Azure landing zones for data management and analytics](../scenarios/data-management/ready.md) | This guidance provides an overview of the data management landing zone. A data management landing zone is responsible for the governance of the platform and enables communication to ingest data sources from Azure, third-party clouds, and on-premises.
+| [Govern your data estate](../scenarios/data-management/govern.md) | This article reviews a data governance solution to surround the specific data entities and data subject areas with people, processes, policies, and technology.
+| [Secure your data estate](../scenarios/data-management/secure.md) | We provide guidance on how to use governance to limit security risk while providing access for data analytics.
+| [Organize people and teams](../scenarios/data-management/organize.md) |Learn about how to organize data operations team members for the data management and analytics scenario in Azure.
+| [Well-architected framework for data workloads](../scenarios/data-management/waf-placeholder.md) | In this article, we review how you can apply principals of the Well-Architected Framework, to the management of your data workloads.
+
 ## July 2021
 
 This release of the Cloud Adoption Framework includes updates to the Azure landing zone content in the Ready methodology.
