@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Azure landing zone review for data management and analytics
 
-The enterprise-scale for analytics and AI construction set builds upon enterprise landing zones for ease of deployment and governance. The principle purpose of the enterprise landing zones is to ensure that when an application or workload lands on Azure, the required "plumbing" is already in place. It provides greater agility and compliance with enterprise security and governance requirements. Enterprise-scale landing zones must be in place before you deploy your first data management and analytics landing zones.
+Enterprise-scale for analytics and AI builds upon enterprise landing zones for ease of deployment and governance. The principle purpose of the enterprise landing zones is to ensure that when an application or workload lands on Azure, the required "plumbing" is already in place. It provides greater agility and compliance with enterprise security and governance requirements. Enterprise-scale landing zones must be in place before you deploy your first data management and analytics landing zones.
 
 ## Data management and analytics evaluation
 
@@ -25,13 +25,13 @@ The enterprise-scale for analytics and AI architecture was designed with the sam
 
 ### Building on enterprise-scale landing zone
 
-Before you consider deploying the enterprise-scale for analytics and AI construction set, you need to understand how close you're to agility within your organization today.
+Before you consider deploying enterprise-scale for analytics and AI, you need to understand how close you're to agility within your organization today.
 
 Many enterprises have outdated data architectures that don't scale to the needs of large multi-disciplinary organizations. Centralized knowledge and capabilities introduce a bottleneck on a linear process workflow.
 
 If you're a small enterprise with limited staff, then having a centralized model, mixed with some business subject matter experts, can likely fit your operations model.
 
-If you're a large multinational enterprise with hundreds of data engineers and analysts spread around the business, a distributed operating model such as Data Lakehouse, Data Mesh, Data Fabric, Data Centric, and others, has potential to fit your business better. What enterprise-scale for analytics and AI construction set provides is guidance to deploy the infrastructure to underpin any of these operation models.
+If you're a large multinational enterprise with hundreds of data engineers and analysts spread around the business, a distributed operating model such as Data Lakehouse, Data Mesh, Data Fabric, Data Centric, and others, has potential to fit your business better. What enterprise-scale for analytics and AI provides is guidance to deploy the infrastructure to underpin any of these operation models.
 
 Central to your business thinking must be how to:
 

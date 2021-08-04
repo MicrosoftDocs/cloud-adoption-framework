@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-data
 
 # Understand the ingest process with enterprise-scale for analytics and AI in Azure
 
-Data Integrations and Data Products teams examine, transform, and release data in the enterprise scale analytics and AI construction set. 
+Data integrations and data products teams examine, transform, and release data in enterprise scale for analytics and AI.
 
 >[!IMPORTANT]
 >Data Integrations don't transform data, but if the business has several use cases whose data needs to be joined together (for example, weather and location data), then the team could be asked to create this in the curated layer.\

@@ -48,7 +48,7 @@ If you have multiple data landing zones, the zones can connect to data lakes hos
 
 When designing for multiple data landing zones, ensure direct communication between workloads with large amounts of traffic. For large workloads across multiple subscriptions, we recommend peering the virtual networks.
 
-The construction set places a strong emphasis on central cataloging and classification to protect data and allow various groups to discover datasets.
+Enterprise-scale for analytics and AI places a strong emphasis on central cataloging and classification to protect data and allow various groups to discover datasets.
 
 ## Next steps
 
