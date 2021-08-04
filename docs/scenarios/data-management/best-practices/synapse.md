@@ -32,7 +32,7 @@ Azure Synapse has several key features and capabilities:
 - Apache Spark for big data processing.
 - Multiple languages suited to different analytic workloads, available through a single interface called Azure Synapse Analytics Studio. Languages include Python, .NET, Java, Scala, and R.
 - Integration options for both your own and third-party ISV applications and solutions.
-- Can be integrated into a data management and analytics construction set as a shared workspace. Data product teams can access the shared workspace to run exploitative analytics.
+- Can be integrated into a data management and analytics scenario as a shared workspace. Data product teams can access the shared workspace to run exploitative analytics.
 - Can be deployed as a data product for relevant use cases.
 
 ![Screenshot showing the various components and features of the Azure Synapse Analytics integrated data platform.](../images/data-strategy-synapse.png)

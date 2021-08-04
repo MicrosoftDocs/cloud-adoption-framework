@@ -84,7 +84,7 @@ If container-level access control is sufficient, Azure RBAC assignments offer a 
 
 ### Configure access using ACLs only
 
-We recommend the ACL's configuration for enterprise-scale analytics and AI.
+We recommend the ACL's configuration for enterprise-scale for analytics and AI.
 
 We recommend that you assign access control entries to a security group rather than an individual user or service principal. For more information, see [Use security groups versus individual users](/azure/storage/blobs/data-lake-storage-best-practices#use-security-groups-versus-individual-users). When adding or removing users from the group, no updates to Data Lake Storage are required. Using groups also reduces the chance of exceeding the 32 access control entries per file or folder ACL. After the four default entries, there are only 28 remaining for permission assignments.
 
