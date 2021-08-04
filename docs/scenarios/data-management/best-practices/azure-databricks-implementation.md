@@ -1,5 +1,5 @@
 ---
-title: Enterprise-scale analytics and AI Databricks pattern in Azure
+title: Enterprise-scale for analytics and AI Azure Databricks pattern
 description: Learn about the enterprise-scale for analytics and AI Azure Databricks pattern.
 author:  mboswell
 ms.author:  mboswell # Microsoft employees only
@@ -44,7 +44,7 @@ All Azure Databricks workspaces should use the Premium Plan, which provides the 
 * Role-based access control for notebooks, clusters, jobs, and tables
 * Audit logs
 
-To align to the enterprise-scale for analytics and AI construction set, we recommend that all workspaces have the following default deployment options configured:
+To align to enterprise-scale for analytics and AI, we recommend that all workspaces have the following default deployment options configured:
 
 * The Azure Databricks workspaces connects to an external Hive Metastore instance in the data landing zone.
 * Configure each workspace to send Databricks diagnostic logging to Azure Log Analytics.
@@ -111,7 +111,7 @@ In an Azure Databricks workspace deployment:
 
 ## Next steps
 
-The enterprise-scale for analytics and AI takes into account the following best practices for integrating Azure Databricks into the construction set:
+Enterprise-scale for analytics and AI takes into account the following best practices for integrating Azure Databricks:
 
 * [Securing access to Azure Data Lake Gen 2 from Azure Databricks](https://github.com/hurtn/datalake-ADLS-access-patterns-with-Databricks/blob/master/readme.md)
 * [Azure Databricks Best Practices](https://github.com/Azure/AzureDatabricksBestPractices/blob/master/toc.md)

@@ -32,7 +32,7 @@ Data stored in the cloud grows at an exponential rate. To manage costs for your 
 
 Each of these data access scenarios benefits from a different access tier that's optimized for a particular access pattern. With hot, cool, and archive access tiers, Azure Blob Storage addresses this need for differentiated access tiers with separate pricing models.
 
-The enterprise-scale for analytics and AI construction set recommends that you implement a tiering policy for all three Data Lake Storage accounts.
+Enterprise-scale for analytics and AI recommends that you implement a tiering policy for all three Data Lake Storage accounts.
 
 Lifecycle management uses a rule-based policy. Use this policy to transition your data to the appropriate access tiers or to expire at the end of the data's lifecycle.
 

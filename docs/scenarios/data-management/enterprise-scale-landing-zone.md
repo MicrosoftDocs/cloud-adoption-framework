@@ -19,9 +19,9 @@ The data warehouse and data lake is still valuable, and will play an important r
 
 Even with the introduction of the cloud, the centralized approach to data management remains largely unchanged most of the time.
 
-In response to the centralized data warehouse challenges, the enterprise-scale for analytics and AI construction set represents a strategic design path and targets the technical state for an Azure analytics and AI environment.
+In response to the centralized data warehouse challenges, enterprise-scale for analytics and AI represents a strategic design path and targets the technical state for an Azure analytics and AI environment.
 
-The pattern relies upon distribution of the data and its pipelines across [domains](architectures/data-landing-zone-division-consumption.md). This pattern enables ownership of accessibility, usability, and development. Largely based on these patterns, the enterprise-scale for analytics and AI construction set includes capabilities such as:
+The pattern relies upon distribution of the data and its pipelines across [domains](architectures/data-landing-zone-division-consumption.md). This pattern enables ownership of accessibility, usability, and development. Largely based on these patterns, enterprise-scale for analytics and AI includes capabilities such as:
 
 - Storage
 
@@ -66,7 +66,7 @@ To learn more, see:
 1. [Data science workflow and MLOps](#data-science-workflow-and-mlops) -->
 
 >[!IMPORTANT]
->The enterprise-scale for analytics and AI construction set recommends to use zone redundant storage. ZRS is currently supported for deployment, in the **Supported Regions** list.
+>Enterprise-scale for analytics and AI recommends to use zone redundant storage. ZRS is currently supported for deployment, in the **Supported Regions** list.
 >
 >- Asia Southeast
 >- Europe North
@@ -101,7 +101,7 @@ For more information, see [Data management landing zone](architectures/data-mana
 
 ### Data landing zone
 
-**Data landing zones** are subscriptions that might host multiple analytics and AI solutions relevant to their respective domain. These subscriptions within the enterprise-scale for analytics and AI construction set represent primary business groups, integrators, and enablers. These groups own, operate, and often provide innate understanding for the source systems.
+**Data landing zones** are subscriptions that might host multiple analytics and AI solutions relevant to their respective domain. These subscriptions within enterprise-scale for analytics and AI represent primary business groups, integrators, and enablers. These groups own, operate, and often provide innate understanding for the source systems.
 
 :::image type="content" source="images/data-landing-zone-overview.png" alt-text="Diagram of a data landing zone.":::
 
@@ -172,7 +172,7 @@ For more information, see [Platform automation and DevOps](organize-data-operati
 
 <!-- ### Data Science Environment
 
-A **data science environment** following the enterprise-scale for analytics and AI construction set, enables data scientists, business analyst and developers to benefit from many types of services, which can be quickly deployed to a [Data Product](#data-products).
+A **data science environment** following the enterprise-scale for analytics and AI, enables data scientists, business analyst and developers to benefit from many types of services, which can be quickly deployed to a [Data Product](#data-products).
 
 For further reading, see [Data Science Environment](data-science-environment.md).
 

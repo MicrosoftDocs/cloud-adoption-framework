@@ -19,7 +19,7 @@ In the cloud, Azure Active Directory (Azure AD) is a centralized identity provid
 
 For data services that don't support Azure AD, use access key or token for authentication. The client should store the access key in a key management store such as Azure Key Vault.
 
-Authentication scenarios for the construction set are:
+Authentication scenarios for the data management and analytics scenario are:
 
 - User authentication
 - Application and service-to-service authentication
@@ -76,7 +76,7 @@ An Azure service principal is the alternative for applications and services that
 
 ## Database authentication and permissions
 
-Th enterprise scale analytic construction set probably contains polyglot storage. Examples include PostgreSQL, MySQL, Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics. Data integrations could use them to store their read data stores. Data products could use polyglot storage.
+Th enterprise-scale for analytics and AI probably contains polyglot storage. Examples include PostgreSQL, MySQL, Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics. Data integrations could use them to store their read data stores. Data products could use polyglot storage.
 
 - [Use Azure Active Directory for authentication with PostgreSQL](/azure/postgresql/howto-configure-sign-in-aad-authentication)
 - [Use Azure Active Directory authentication with Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics](/azure/azure-sql/database/authentication-aad-overview)

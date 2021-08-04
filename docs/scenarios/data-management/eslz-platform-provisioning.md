@@ -101,7 +101,7 @@ At the start of the project, the data platform has one Azure DevOps Project with
 - One template repository for a data integration service, pipelines to deploy a data integration resource group, and service connections to cloud environments. These connections are forked from data landing zone Azure DevOps Projects.
 - One template repository for data product services, pipelines to deploy a data product instance, and service connections to cloud environments. These connections are forked from data landing zone Azure DevOps Projects.
 
-Once data landing zones have been deployed, the enterprise-scale for analytics and AI construction set prescribes that:
+Once data landing zones have been deployed, enterprise-scale for analytics and AI prescribes that:
 
 - Each data landing zone will have its own Azure DevOps Project with one or more Azure Boards.
 - For each new data integration or data product service, its data landing zone Azure DevOps Project fork is created after request approval.

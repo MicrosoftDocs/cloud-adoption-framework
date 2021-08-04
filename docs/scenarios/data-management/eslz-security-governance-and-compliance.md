@@ -11,13 +11,13 @@ ms.subservice: ready
 
 # Security, governance, and compliance for enterprise-scale data management and analytics
 
-When planning data management and analytics architecture, pay special attention to ensure that the architecture is robust and secure. This article addresses security, compliance, and governance design criteria for enterprise-scale data management and analytics. This article also discusses design recommendations and best practices for deployment of an enterprise-scale construction set on Azure. Review [Enterprise-scale security governance and compliance](../../ready/enterprise-scale/security-governance-and-compliance.md) to fully prepare for governance of an enterprise solution.
+When planning data management and analytics architecture, pay special attention to ensure that the architecture is robust and secure. This article addresses security, compliance, and governance design criteria for enterprise-scale data management and analytics. This article also discusses design recommendations and best practices for deployment of an enterprise-scale for analytics and AI on Azure. Review [Enterprise-scale security governance and compliance](../../ready/enterprise-scale/security-governance-and-compliance.md) to fully prepare for governance of an enterprise solution.
 
 Cloud solutions initially hosted single, relatively isolated applications. As the benefits of cloud solutions became clear, larger-scale workloads were hosted in the cloud, such as SAP on Azure. So it became vital to address the security, reliability, performance, and cost of regional deployments throughout the lifecycle of cloud services.
 
 The vision for data management and analytics landing zone security, compliance, and governance on Azure is to provide tools and processes that help you minimize risk and make effective decisions. The enterprise-scale landing zones define security governance and compliance roles and responsibilities.
 
-The enterprise analytics and AI construction set pattern relies on several security features that can be enabled in Azure. These features include encryption, role-based access control, access control lists, and networking restrictions.
+The enterprise-scale for analytics and AI pattern relies on several security features that can be enabled in Azure. These features include encryption, role-based access control, access control lists, and networking restrictions.
 
 ## Security design recommendations
 
@@ -44,7 +44,7 @@ Encryption using Media Access Control Security (MACsec), an IEEE standard at the
 
 ### Manage keys and secrets
 
-To control and manage disk encryption keys and secrets for the construction set, use Azure Key Vault. Key Vault has capabilities for provisioning and managing SSL/TLS certificates. You can also protect secrets with hardware security modules (HSMs).
+To control and manage disk encryption keys and secrets for enterprise-scale for analytics and AI, use Azure Key Vault. Key Vault has capabilities for provisioning and managing SSL/TLS certificates. You can also protect secrets with hardware security modules (HSMs).
 
 ### Azure Defender
 
@@ -80,7 +80,7 @@ Advanced Threat Protection is part of the Advanced Data Security offering, which
 
 ## Networking
 
-The enterprise-scale analytics and AI prescribed view is to use Azure Private Endpoints for all PaaS services and not use public IPs for all infrastructure as a service (IaaS) services. See [Enterprise-Scale Analytics and AI Networking](eslz-network-topology-and-connectivity.md) for more information.
+The enterprise-scale for analytics and AI prescribed view is to use Azure Private Endpoints for all PaaS services and not use public IPs for all infrastructure as a service (IaaS) services. See [Enterprise-Scale for analytics and AI networking](eslz-network-topology-and-connectivity.md) for more information.
 
 ## Compliance and governance design recommendations
 
