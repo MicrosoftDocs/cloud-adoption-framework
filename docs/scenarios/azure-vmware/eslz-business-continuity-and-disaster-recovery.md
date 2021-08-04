@@ -52,14 +52,14 @@ Azure VMware Solution provides one or more Private Clouds that contain vSphere c
 - Necessary sites, services, and connectivity to treat as another site in estate for disaster recovery environment.
 - To enable DR between AVS private clouds in distinct Azure regions, ExpressRoute Global Reach needs to be enabled between both (back-end) ExpressRoute circuits to allow AVS-to-AVS connectivity when required for solutions like VMware SRM and VMware HCX for DR.
 - DR overlapping vs non-overlapping IP addressing.
-  - Retain same IP address: The same IP address can be used on the recovered VM as the one allocated to the AVS VMs. For this isolated VLANS / segments in the secondary site will need to be created and ensure none of these isolated VLANS / segments are connected to the environment. DR routes will need to be modified to reflect that the subnet has moved to the secondary site, and new IP address locations. 
+  - Retain same IP address: The same IP address can be used on the recovered VM as the one allocated to the AVS VMs. For this isolated VLANS / segments in the secondary site will need to be created and ensure none of these isolated VLANS / segments are connected to the environment. DR routes will need to be modified to reflect that the subnet has moved to the secondary site, and new IP address locations. Whilst this does work, this provides engineering overhead when aiming for minimal interaction.
   - Use different IP address: A different IP address can be used for the recovered VMs. If the VM is moved to a secondary site, the recovery plan within the SRM will detail out the custom IP map that will need to be selected for the change of IP address and in case of ASR a defined VNET will be chosen for new IP allocation.
 - Understanding Partial vs. Full Disaster Recovery (DR).
   - When working with Azure Site Recovery, preparing for full disaster recovery should be understood. This means failing over from AVS into an Azure Native environment.
   - Utilising VMware SRM partial and full DR are supported. This means that running AVS in Region 1 and Region 2, the option to fail some or all the VMs from primary to secondary regions are supported. 
   - The requirement for VM recovery and the IP address retention requirements will define if Partial vs Full DR is possible or not. 
   - In order to maintain the IP address and achieve a partial disaster recovery in SRM, gateway of the subnet will need to move to the secondary AVS.
-  - Active-Standby DR doesn’t require L2 stretching.
+  - Active-Standby DR does not require L2 stretching.
 
 ## Disaster Recovery (DR) design recommendations
 
