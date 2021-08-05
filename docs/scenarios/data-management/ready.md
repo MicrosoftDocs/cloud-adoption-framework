@@ -25,7 +25,7 @@ The enterprise-scale for analytics and AI architecture was designed with the sam
 
 ### Building on enterprise-scale landing zone
 
-Before you consider deploying enterprise-scale for analytics and AI, you need to understand how close you're to agility within your organization today.
+Before you consider deploying enterprise-scale for analytics and AI, you need to understand how close you are to agility within your organization today.
 
 Many enterprises have outdated data architectures that don't scale to the needs of large multi-disciplinary organizations. Centralized knowledge and capabilities introduce a bottleneck on a linear process workflow.
 
@@ -42,12 +42,6 @@ Central to your business thinking must be how to:
 
 If you don't have an implementation of enterprise-scale landing zones, then it's important that you check with your cloud teams to be sure the pre-requisites can be met. For more information, see [Ensure the environment is prepared for the cloud adoption plan](/azure/cloud-adoption-framework/ready/).
 
-Enterprise-scale for analytics and AI requires an understanding of landing zones and makes use of infrastructure-as-code to deploy end-to-end solution templates. These solution templates are customizable and are a starter for most data management and analytics scenarios. For more information, see:
-
-- [What is a landing zone?](/azure/cloud-adoption-framework/ready/landing-zone/)
-- [Choose a landing zone option](/azure/cloud-adoption-framework/ready/landing-zone/choose-landing-zone-option)
-- [Refactoring landing zones](/azure/cloud-adoption-framework/ready/landing-zone/refactor)
-
 ## Data management and analytics Azure landing zone acceleration
 
 Enterprise-scale for analytics and AI requires an understanding of landing zones and makes use of infrastructure-as-code to deploy end to end solution templates. These solution templates are customizable and are a starter for most data management and analytics scenarios.
@@ -55,12 +49,14 @@ Enterprise-scale for analytics and AI requires an understanding of landing zones
 - [What is a landing zone?](/azure/cloud-adoption-framework/ready/landing-zone/)
 - [Choose a landing zone option](/azure/cloud-adoption-framework/ready/landing-zone/choose-landing-zone-option)
 - [Refactoring landing zones](/azure/cloud-adoption-framework/ready/landing-zone/refactor)
+- [Refactoring landing zones](/azure/cloud-adoption-framework/ready/landing-zone/refactor)
+- [Data management and analytics landing zone](enterprise-scale-landing-zone.md)
 
-## Next step: Assess for data management and analytics
+## Next step: assess for data management and analytics
 
 The following articles can guide your cloud adoption journey and help you succeed in the cloud adoption scenario.
 
 - [Plan for data management and analytics](plan.md)
-- [Review your environment or Azure landing zone(s)](ready.md)
+- [Review your environment or Azure landing zone](ready.md)
 - [Govern data management and analytics](govern.md)
 - [Secure data management and analytics](secure.md)

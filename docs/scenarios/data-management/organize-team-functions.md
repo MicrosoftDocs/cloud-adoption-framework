@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-data
 
 # Understand teams and functions for the data management and analytics scenario in Azure
 
-The data management and analytics scenario creates the landing zone groups that coexist in agile teams by moving teams like Ingest, Processing, Analysis, Consumption, and Visualization from working horizontally to vertically in each tier. Platform teams like Data Platform Operations (Ops) and Platform Ops are grouped together under a common platform group.
+For the data management and analytics scenario, we recommend by moving teams like Ingest, Processing, Analysis, Consumption, and Visualization from working in horizontally siloed teams to agile vertical cross domain teams in each tier. Platform teams like Data Platform Operations (Ops) and Platform Ops are grouped together in a common platform group.
 
 ![Diagram of the data management and analytics scenario teams.](images/enterprise-scale-analytics-ai-teams.png)
 

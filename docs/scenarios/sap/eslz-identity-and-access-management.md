@@ -1,6 +1,6 @@
 ---
 title: Identity and access management for SAP on Azure
-description: Learn about design considerations and recommendations that relate to identity and access management in an SAP deployment on Microsoft Azure.
+description: Learn more about design considerations and recommendations that relate to identity and access management in an SAP deployment on Microsoft Azure.
 author: JefferyMitchell
 ms.author: brblanch
 ms.date: 02/12/2021

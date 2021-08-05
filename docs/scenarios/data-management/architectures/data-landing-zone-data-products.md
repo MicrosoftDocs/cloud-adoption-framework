@@ -22,7 +22,7 @@ At a high level, data products are computed or polyglot persistence services tha
 
      The example above shows:
      1. Intra-data landing zone consumption:
-         1. Data product B consumes from data product A and the data lake within its data landing zone, for example, data landing zone 1).
+         1. Data product B consumes from data product A and the data lake within its data landing zone, for example, data landing zone 1.
          1. Data products C and D only consume from within their own respective data landing zones.
      1. Inter-data landing zone consumption: Data product B also consumes from data product C and the data lake in data landing zone 3.
 
@@ -32,7 +32,7 @@ At a high level, data products are computed or polyglot persistence services tha
     > Data product B consumes from data products A and C. Before this can happen, data product B must register it's consumption of a data product via a data sharing agreement. This data sharing agreement should update the lineage from data product A to data product B and from data product C to data product B.
 
 - The resource group for a data product would include all the service required to make that data product. Examples of services that might be part of a data product include Azure Functions, Azure App Service, Logic Apps, Azure Analysis Services, Cognitive Services, Azure Machine Learning, Azure SQL database, Azure MySQL, and Azure Cosmos DB. For more information, see [data product samples](#sample-data-products).
-- A data product has data from a *READ* data source that has had some data transformation applied. It can be a newly curated dataset or a BI report. for example.
+- A data product has data from a *READ* data source that has had some data transformation applied. For example, tt can be a newly curated dataset or a BI report.
 
 ## Design recommendations
 
@@ -42,7 +42,7 @@ We recommend building data products within your data landing zone by adhering to
 
  Each data product is a resource group. Since data products are compute or polyglot persistence services, they may only be required depending on certain use cases. As such, they can be considered an optional component of your data landing zone. In the case where data products are required, you should create multiple resource groups by data product as shown below.
 
-![Data products resource groups](../images/data-products-resource-group.png)
+![Diagram of a data products resource groups](../images/data-products-resource-group.png)
 
 ### Set guard rails
 
@@ -117,7 +117,7 @@ The loan approval data product team take a dependency on some of the credit moni
 
 For every data landing zone, an empty visualization resource group is created. Visualization is a data product, and depending on the complexity, can be created via a self-serve process or managed by a data product team.
 
-![Visualization resource group](../images/visualization-resource-group.png)
+![Diagram of a visualization resource group](../images/visualization-resource-group.png)
 
 >[!NOTE]
 >Licensing costs might mean that is it more economical to deploy third-party products such as Spotfire and Tableau into the data management landing zone and for the products to connect across to the data landing zone to pull data back.

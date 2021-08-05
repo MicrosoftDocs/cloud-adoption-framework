@@ -1,6 +1,6 @@
 ---
-title: Enrollment and Azure AD tenants for data management and analytics
-description: Learn how this enterprise-scale scenario can improve enterprise enrollment and Azure AD tenants for data management and analytics landing zones.
+title: Enrollment and Azure AD tenants for enterprise-scale for analytics and AI
+description: Learn how enterprise-scale for analytics and AI can improve enterprise enrollment and Azure AD tenants.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/21/2021

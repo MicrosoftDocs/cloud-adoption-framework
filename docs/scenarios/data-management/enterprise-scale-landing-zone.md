@@ -9,9 +9,9 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Introduction to enterprise scale for analytics and AI
+# Introduction to enterprise-scale for analytics and AI
 
-In the late 1980s, there was the introduction of the data warehouse, generation 1, which combined disparate data sources from across the enterprise. In the late 2000s came generation 2, with the introduction of the big data ecosystem like Hadoop and the data lake. In the mid 2010s, we had the cloud data platform. It was similar to previous generations, but with the introduction of the ingestion of streaming data, like Kappa or Lambda architectures. In the early 2020s, we have the concept of the data lakehouse, data mesh, data fabric, and data centric operational patterns.
+In the late 1980s, there was the introduction of the data warehouse Gen1, which combined disparate data sources from across the enterprise. In the late 2000s came Gen2, with the introduction of the big data ecosystem like Hadoop and the data lake. In the mid 2010s, we had the cloud data platform. It was similar to previous generations, but with the introduction of the ingestion of streaming data, like Kappa or Lambda architectures. In the early 2020s, we have the concept of the data lakehouse, data mesh, data fabric, and data centric operational patterns.
 
 Understanding the evolution and looking forward, many organizations still have the centralized monolithic platform, generation 1. This system works well, up to a point. Bottlenecks because of interdependent processes, tightly coupled components, hyperspecialized teams, and thousands of extract, transform, load (ETL) jobs.
 
@@ -139,7 +139,7 @@ A data product is anything that drives business value, such as reports, workbook
 
 Since data products are compute or polyglot persistence services, they might only be required depending on certain use cases.
 
-Examples of data products include: 
+Examples of data products include:
 
 - Azure Functions
 
