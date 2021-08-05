@@ -26,12 +26,12 @@ Not all customers adopt SAP on Azure in the same way. The enterprise-scale for S
 
 You have to make critical decisions that drive the design of the Cloud Adoption Framework for Azure enterprise-scale landing zone. Consider these six critical design areas:
 
-- [Identity and access management](./identity-and-access-management.md)
-- [Network topology and connectivity](./network-topology-and-connectivity.md)
-- [Management and monitoring](./management-and-monitoring.md)
-- [Business continuity and disaster recovery](./business-continuity-and-disaster-recovery.md)
-- [Security, governance,  and compliance](./security-governance-and-compliance.md)
-- [Platform automation and DevOps](./platform-automation-and-devops.md)
+- [Identity and access management](./eslz-identity-and-access-management.md)
+- [Network topology and connectivity](./eslz-network-topology-and-connectivity.md)
+- [Management and monitoring](./eslz-management-and-monitoring.md)
+- [Business continuity and disaster recovery](./eslz-business-continuity-and-disaster-recovery.md)
+- [Security, governance, and compliance](./eslz-security-governance-and-compliance.md)
+- [Platform automation and DevOps](./eslz-platform-automation-and-devops.md)
 
 ## Architecture
 
@@ -62,4 +62,4 @@ Deploy and install the Ansible playbook components on the infrastructure that th
 
 Review the design areas of enterprise-scale for SAP on Azure that are critical to making complete considerations and recommendations for your enterprise-scale for SAP on Azure architecture:
 
-- [Identity and access management](./identity-and-access-management.md)
+- [Identity and access management](./eslz-identity-and-access-management.md)
