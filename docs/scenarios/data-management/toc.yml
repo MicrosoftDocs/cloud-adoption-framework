@@ -7,10 +7,7 @@ items:
     pdf_name: Data management and analytics - Microsoft Cloud Adoption Framework for Azure
 
   - name: Overview
-    items:
-    - name: Data Governance
-      href: overview-data-governance.md                 
-     
+    href: overview-data-governance.md                 
   - name: Build an initial strategy
     href: strategy.md
   - name: Define your plan
@@ -111,6 +108,8 @@ items:
         href: architectures/data-landing-zone-data-integration.md
       - name: Data Products
         href: architectures/data-landing-zone-data-products.md
+      - name: Analytics product decision tree
+        href: analytic-product-decision-tree.md       
     - name: Frequently Asked Questions
       href: architectures/frequently-asked-questions.md
 
@@ -159,8 +158,6 @@ items:
 
   - name: Featured Azure products
     items:
-    - name: Analytics product decision tree
-      href: analytic-product-decision-tree.md
     - name: ARM Templates
       href: /azure/azure-resource-manager/templates/
     - name: Blob Storage
@@ -206,7 +203,3 @@ items:
     - name: Virtual Network
       href: /azure/virtual-network/ 
 
-  - name: Learn modules
-    items:
-    - name: Data analytics for developers
-      href: /learn/paths/data-analytics-microsoft/?ocid=AID3020565

@@ -39,7 +39,10 @@ Each **data integration** should have two folders on the Raw and enriched data l
 
 The two folders per **data integration** or **data product** should be divided by classification. This classification leads to a general folder, for *confidential or below*, and a *sensitive* personal data folder with access controlled by access control lists (ACLs). By having these two folders below **data integration** or **data product**, you can choose to create a dataset with all the personal data removed located in the general folder. You can then have another dataset with all personal data in the *sensitive* personal data folder.
 
-Access to the data is restricted by a combination of access control lists (ACLs) and Azure Active Directory (AAD)-groups. These lists and groups control what can and can't be accessed by other groups. Integration operations teams** and data product teams can approve or reject access to their data assets.
+Access to the data is restricted by a combination of access control lists (ACLs) and Azure Active Directory (AAD) groups. These lists and groups control what can and can't be accessed by other groups. Integration operations teams** and data product teams can approve or reject access to their data assets.
+
+> [!NOTE]
+> For more information about handling restricted data, see [Restricted data](../secure-data-privacy.md#restricted-data).
 
 ## Raw zone or data lake one
 
@@ -220,7 +223,7 @@ Hadoop has a set of file formats it supports for optimized storage and processin
 
 - [Avro](https://avro.apache.org/docs/current/)
 - [Parquet](https://parquet.apache.org/documentation/latest/)
-- [ORC](https://orc.apache.org/docs/).
+- [ORC](https://orc.apache.org/docs/)
 
 All of these formats are machine-readable binary file formats, offer compression to manage the file size, and are self-describing in nature with a schema embedded in the file. The difference between the formats is in how data is stored. Avro stores data in a row-based format and Parquet and ORC formats store data in a columnar format.
 
