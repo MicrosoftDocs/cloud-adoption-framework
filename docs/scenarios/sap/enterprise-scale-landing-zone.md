@@ -62,4 +62,4 @@ Deploy and install the Ansible playbook components on the infrastructure that th
 
 Review the design areas of enterprise-scale for SAP on Azure that are critical to making complete considerations and recommendations for your enterprise-scale for SAP on Azure architecture:
 
-- [Identity and access management](./identity-and-access-management.md)
+- [Identity and access management](./eslz-identity-and-access-management.md)
