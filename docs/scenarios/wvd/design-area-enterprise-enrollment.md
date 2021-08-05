@@ -6,7 +6,8 @@ ms.author: doalle
 ms.date: 06/18/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
+ms.custom: think-tank, e2e-avd
 ---
 
 # Enterprise enrollment considerations for an Azure Virtual Desktop implementation
