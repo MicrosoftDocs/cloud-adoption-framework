@@ -202,4 +202,4 @@ In addition to participating in these user groups, analysts should submit data a
 
 ## Next steps
 
-[Well-architected framework for data workloads](waf-placeholder.md)
+[Well-architected framework for data workloads](./well-architected-framework.md)

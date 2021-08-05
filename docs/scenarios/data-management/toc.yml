@@ -94,7 +94,7 @@ items:
         href: organize-team-functions.md
 
   - name: Well-Architected considerations
-    href: waf-placeholder.md
+    href: well-architected-framework.md
 
   - name: Architectures
     items:
