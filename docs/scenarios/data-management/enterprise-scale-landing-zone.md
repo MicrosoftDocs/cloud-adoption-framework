@@ -21,7 +21,7 @@ Even with the introduction of the cloud, the centralized approach to data manage
 
 In response to the centralized data warehouse challenges, enterprise-scale for analytics and AI represents a strategic design path and targets the technical state for an Azure analytics and AI environment.
 
-The pattern relies upon distribution of the data and its pipelines across [domains](architectures/data-landing-zone-division-consumption.md). This pattern enables ownership of accessibility, usability, and development. Largely based on these patterns, enterprise-scale for analytics and AI includes capabilities such as:
+The pattern relies upon distribution of the data and its pipelines across domains. This pattern enables ownership of accessibility, usability, and development. Largely based on these patterns, enterprise-scale for analytics and AI includes capabilities such as:
 
 - Storage
 
