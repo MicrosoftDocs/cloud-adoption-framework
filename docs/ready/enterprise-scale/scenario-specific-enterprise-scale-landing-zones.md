@@ -1,5 +1,5 @@
 ---
-title: Scenario-specific enterprise-scale landing zones
+title: Scenario-specific enterprise-scale landing zones in Azure
 description: Learn how to implement enterprise-scale landing zones for workload scenarios.
 author: mosabami
 ms.author: aayodeji
@@ -10,15 +10,15 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
-# Scenario-specific enterprise-scale landing zones
+# Scenario-specific enterprise-scale landing zones in Azure
 
 Enterprise-scale landing zones provide a proven foundation for organizations as part of their cloud adoption journey.
 
 As part of that cloud adoption, organizations may identify business or technical requirements that require the addition of specific tier-1 technology platforms to their environments.
 
-These technologies are often required to support mission critical workloads or business processes and are the basis for a specific scenario.
+These technologies are often required to support mission-critical workloads or business processes and are the basis for a specific *scenario*.
 
-We refer to these as **scenarios**.
+## Scenario guidance
 
 To support these scenarios, we have specific enterprise-scale landing zone guidance and implementations that enables effective adoption and operationalization of these key technologies on Azure, at scale and aligned with the Azure roadmap and the Microsoft Cloud Adoption Framework for Azure.
 
