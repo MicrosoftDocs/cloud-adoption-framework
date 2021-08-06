@@ -6,7 +6,8 @@ ms.author: brblanch
 ms.date: 05/07/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
+ms.custom: think-tank, e2e-avd
 ---
 
 # Network topology and connectivity considerations for Azure Virtual Desktop
