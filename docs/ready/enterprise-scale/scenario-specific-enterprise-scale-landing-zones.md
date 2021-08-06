@@ -1,6 +1,6 @@
 ---
 title: Scenario-specific enterprise-scale landing zones in Azure
-description: Learn how to implement enterprise-scale landing zones for workload scenarios.
+description: Find technology-specific Azure enterprise-scale landing zone scenarios.
 author: mosabami
 ms.author: aayodeji
 ms.date: 07/13/2021
@@ -12,17 +12,13 @@ ms.custom: think-tank
 
 # Scenario-specific enterprise-scale landing zones in Azure
 
-Enterprise-scale landing zones provide a proven foundation for organizations as part of their cloud adoption journey.
+Scenarios for enterprise-scale landing zones enable effective adoption and operationalization of key technologies on Azure. These specific scenarios can be used to accelerate adoption when your organization identifies business or technical requirements that require additional tier-1 technology platforms to support mission-critical workloads or business processes.
 
-As part of that cloud adoption, organizations may identify business or technical requirements that require the addition of specific tier-1 technology platforms to their environments.
+Scenarios for enterprise-scale landing zones provide specific, refined deployments which can be run on top of existing enterprise-scale landing zones.
 
-These technologies are often required to support mission-critical workloads or business processes and are the basis for a specific *scenario*.
+Use the following information to prepare your landing zones for mission-critical technology platforms and any supported workloads.
 
-## Scenario guidance
-
-To support these scenarios, we have specific enterprise-scale landing zone guidance and implementations that enables effective adoption and operationalization of these key technologies on Azure, at scale and aligned with the Azure roadmap and the Microsoft Cloud Adoption Framework for Azure.
-
-This guidance provides specific, refined deployments which can be run on top of existing enterprise-scale landing zones.
+## Scenarios
 
 These landing zones have been developed in the broader context of common scenarios, such as:
 
