@@ -21,17 +21,17 @@ To speed up the delivery of this end-to-end insights journey, while still keepin
 
 Enterprise-scale is part of Microsoft's Cloud Adoption Framework. It provides prescriptive guidance, coupled with best practices, on cloud operating model, reference architecture, and platform templates. It's based on real-world learnings from some of our most challenging, sophisticated, and complex environments. Enterprise-scale for analytics and AI paves the way for customers to build and operationalize landing zones to host and run analytics workloads. You build the landing zones on the foundations of security, governance, and compliance. They're scalable and modular, supporting autonomy and innovation.
 
-The enterprise-scale for analytics and AI architecture was designed with the same strategic principles in mind. To deliver effectively, enterprise-scale for analytics and AI moves teams from working horizontally across each tier such as ingest, processing, analysis, consumption, and visualization, to vertical data landing zone groups, coexisting together in an agile team. Platform teams such as data platform Operations and platform operations are grouped together under a common platform group.
+The enterprise-scale for analytics and AI architecture was designed with the same strategic principles in mind. To deliver effectively, enterprise-scale for analytics and AI moves teams from working horizontally across each tier such as ingest, processing, analysis, consumption, and visualization, to vertical data landing zone groups, coexisting together in an agile team. Platform teams such as data platform operations and platform operations are grouped together under a common platform group.
 
 ### Building on enterprise-scale landing zone
 
 Before you consider deploying enterprise-scale for analytics and AI, you need to understand how close you are to agility within your organization today.
 
-Many enterprises have outdated data architectures that don't scale to the needs of large multi-disciplinary organizations. Centralized knowledge and capabilities introduce a bottleneck on a linear process workflow.
+Many enterprises have outdated data architectures that don't scale to the needs of large multidisciplinary organizations. Centralized knowledge and capabilities introduce a bottleneck on a linear process workflow.
 
 If you're a small enterprise with limited staff, then having a centralized model, mixed with some business subject matter experts, can likely fit your operations model.
 
-If you're a large multinational enterprise with hundreds of data engineers and analysts spread around the business, a distributed operating model such as Data Lakehouse, Data Mesh, Data Fabric, Data Centric, and others, has potential to fit your business better. What enterprise-scale for analytics and AI provides is guidance to deploy the infrastructure to underpin any of these operation models.
+If you're a large multinational enterprise with hundreds of data engineers and analysts spread around the business, a distributed operating model such as data lakehouse, data mesh, data fabric, data-centric, and others, has potential to fit your business better. What enterprise-scale for analytics and AI provides is guidance to deploy the infrastructure to underpin any of these operation models.
 
 Central to your business thinking must be how to:
 
@@ -52,7 +52,7 @@ Enterprise-scale for analytics and AI requires an understanding of landing zones
 - [Refactoring landing zones](/azure/cloud-adoption-framework/ready/landing-zone/refactor)
 - [Data management and analytics landing zone](enterprise-scale-landing-zone.md)
 
-## Next step: assess for data management and analytics
+## Next steps
 
 The following articles can guide your cloud adoption journey and help you succeed in the cloud adoption scenario.
 

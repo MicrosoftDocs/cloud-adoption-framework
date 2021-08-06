@@ -11,8 +11,7 @@ ms.subservice: overview
 
 # Technology needed for end-to-end governance
 
-In the context of technology needed for end-to-end data governance, Microsoft provides its own technologies and also partner technologies on Azure.
-Microsoft provides the following technology components to assist you in governing data:
+In the context of technology needed for end-to-end data governance, Microsoft provides its own technologies and also partner technologies on Azure. Microsoft provides the following technology components to assist you in governing data:
 
 - Common Data Model
 - Azure Data Lake Storage
@@ -25,7 +24,7 @@ The first step in data governance is to create a common business vocabulary of c
 
 :::image type="content" source="images/common-data-model.png" alt-text="Diagram of Common Data Model.":::
 
-The Common Data Model is an open, pre-built set of common business entities and activities used across a business. The Common Data Model can be used to shortcut the creation of your common business vocabulary.
+The Common Data Model is an open, prebuilt set of common business entities and activities used across a business. The Common Data Model can be used to shortcut the creation of your common business vocabulary.
 
 ## Azure Data Lake Storage
 
@@ -49,17 +48,17 @@ Azure Data Factory can be used to implement and manage a hybrid environment, whi
 
 :::image type="content" source="images/data-factory-wrangling-data-flows.png" alt-text="Diagram of data factory wrangling data flows." lightbox="images/data-factory-wrangling-data-flows-zoom.png":::
 
-Azure Data Factory wrangling data flows enable business users to make use of the platform to visually discover, explore, and prepare data at scale without writing code. The Azure Data Factory capability is similar to Microsoft Excel Power Query or Microsoft Power BI dataflows. Business users use a spreadsheet style user interface with drop-down transforms to prepare and integrate data.
+Azure Data Factory wrangling data flows enable business users to make use of the platform to visually discover, explore, and prepare data at scale without writing code. The Azure Data Factory capability is similar to Microsoft Excel Power Query or Microsoft Power BI data flows. Business users use a spreadsheet style user interface with dropdown lists to transform, prepare, and integrate data.
 
 ## Azure Purview
 
-Azure Purview is a unified data governance service that helps you manage and govern your on-premises, multi-cloud, and SaaS data. You can easily create a holistic, up-to-date map of your data landscape with automated data discovery, sensitive data classification, and end-to-end data lineage. Azure Purview empowers data consumers to find valuable and trustworthy data.
+Azure Purview is a unified data governance service that helps you manage and govern your on-premises, multicloud, and SaaS data. You can easily create a holistic, up-to-date map of your data landscape with automated data discovery, sensitive data classification, and end-to-end data lineage. Azure Purview empowers data consumers to find valuable and trustworthy data.
 
-Azure Purview Data Map provides the foundation for data discovery and effective data governance. Azure Purview Data Map is a cloud native PaaS service that captures metadata about enterprise data present in analytics and operation systems on-premises and cloud. Azure Purview Data Map is automatically kept up to date with built-in automated scanning and classification system. Business users can configure and use the Azure Purview Data Map through an intuitive UI. Developers can programmatically interact with the Data Map using open-source Apache Atlas 2.0 APIs.
+Azure Purview data map provides the foundation for data discovery and effective data governance. Azure Purview data map is a cloud native PaaS service that captures metadata about enterprise data present in analytics and operation systems on-premises and cloud. Azure Purview data map is automatically kept up to date with built-in automated scanning and classification system. Business users can configure and use the Azure Purview data map through an intuitive UI. Developers can programmatically interact with the data map using open-source Apache Atlas 2.0 APIs.
 
-Azure Purview Data Map powers the Azure Purview Data Catalog and Azure Purview data insights as unified experiences within the Azure Purview Studio.
+Azure Purview data map powers the Azure Purview data catalog and Azure Purview data insights as unified experiences within the Azure Purview Studio.
 
-With the Azure Purview Data Catalog, business and technical users can quickly and easily find relevant data using a search experience with filters based on various lenses like glossary terms, classifications, and sensitivity labels. For subject matter experts, data stewards and officers, the Azure Purview Data Catalog provides data curation features like business glossary management and the ability to automate tagging of data assets with glossary terms. Data consumers and producers can visually trace the lineage of data assets. This trace start from the operational systems on-premises, through movement, transformation, and enrichment with various data storage and processing systems in the cloud to consumption in an analytics system like Power BI.
+With the Azure Purview data catalog, business and technical users can quickly and easily find relevant data using a search experience with filters based on various lenses like glossary terms, classifications, and sensitivity labels. For subject matter experts, data stewards and officers, the Azure Purview data catalog provides data curation features like business glossary management and the ability to automate tagging of data assets with glossary terms. Data consumers and producers can visually trace the lineage of data assets. This trace start from the operational systems on-premises, through movement, transformation, and enrichment with various data storage and processing systems in the cloud to consumption in an analytics system like Power BI.
 
 With the Azure Purview data insights, data officers and security officers can get a bird's eye view and at a glance understand what data is actively scanned, where sensitive data is located, and how it moves.
 

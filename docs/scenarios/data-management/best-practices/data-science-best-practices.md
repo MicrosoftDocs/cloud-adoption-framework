@@ -1,7 +1,7 @@
 ---
 title: Understand best practices for data science projects with enterprise-scale for analytics and AI in Azure
 description: Learn about best practices for data science projects with enterprise-scale for analytics and AI in Azure.
-author:  abdale
+author: abdale
 ms.author: hamoodaleem 
 ms.date: 08/06/2021
 ms.topic: conceptual
@@ -22,17 +22,17 @@ It's essential to develop a blueprint that bundles a set of services for your da
 
 Following are guidelines on developing a data science template for your organization:
 
-1. Develop a set of infrastructure-as-code templates to deploy an Azure Machine Learning workspace. Include resources like a key vault, storage account, Azure Application Insights, and Container Registry.
+1. Develop a set of infrastructure as code templates to deploy an Azure Machine Learning workspace. Include resources like a key vault, storage account, Azure Application Insights, and container registry.
 
 1. Include the setup of data stores and compute targets in these templates like compute instances, compute clusters, and Azure Databricks.
 
-1. Include an Azure Data Factory or Synapse deployment in templates and Cognitive Services.
+1. Include an Azure Data Factory or Azure Synapse deployment in templates and Cognitive Services.
 
 1. The templates should provide all necessary tools to execute the data science exploration phase and the initial operationalization of the model.
 
 ### Considerations for an initial setup
 
-In some cases, data scientists in your organization might require an environment for quick ad-hoc analyses. It's common when a data science project isn't formally set up. For example, a project manager, cost code, or cost center, that might be required for cross-charging within Azure, might be missing because it needs approval. Users in your organization or team might need to access a data science environment to understand the data and possibly evaluate a project's feasibility. Also, some projects might not require a full data science environment because of the small number of datasets.
+In some cases, data scientists in your organization might require an environment for quick ad hoc analysis. It's common when a data science project isn't formally set up. For example, a project manager, cost code, or cost center, that might be required for cross-charging within Azure, might be missing because it needs approval. Users in your organization or team might need to access a data science environment to understand the data and possibly evaluate a project's feasibility. Also, some projects might not require a full data science environment because of the small number of datasets.
 
 In other cases, a full data science project might be required, complete with a dedicated environment, project management, cost code, and cost center. Projects that are set up like this are typically required when multiple team members want to collaborate, share results, and need to operationalize models after the exploration phase succeeds.
 
@@ -40,7 +40,7 @@ In other cases, a full data science project might be required, complete with a d
 
 Templates should be deployed on a per-project basis after they've been set up. Each project should receive at least two instances for development and production environments to be separated. In the production environment, no individual person should have access, and everything should be deployed through continuous integration/continuous development pipelines and a service principal. It's important because Azure Machine Learning doesn't provide a granular role-based access control model within a workspace. User access can't be limited to a specific set of experiments, endpoints, or pipelines.
 
-The same access rights typically apply to different types of artifacts. So, it's important to separate development from production to prevent production pipelines or endpoints from being deleted within a workspace. Along with the template, a process needs to be built to give Data Product teams the option to request new environments.
+The same access rights typically apply to different types of artifacts. So, it's important to separate development from production to prevent production pipelines or endpoints from being deleted within a workspace. Along with the template, a process needs to be built to give data product teams the option to request new environments.
 
 We recommend setting up different AI services like Azure Cognitive Services on a per-project basis. The result is deployments occur for each data product resource group. It creates a clear separation from a data access standpoint and mitigates the risk of unauthorized data access by the wrong teams.
 
@@ -113,9 +113,9 @@ To avoid situations where users might lose track of where you store artifacts, w
 > [!NOTE]
 > The concepts mentioned in this section can be used across on-premises, Amazon Web Services, Palantir, and Azure environments.
 
-The proposed top-level folder structure for a Machine Learning Operations repository is illustrated in Figure one:
+The proposed top-level folder structure for a Machine Learning operations repository is illustrated in the following:
 
-![The repository structure for Machine Learning operations.](../images/repository-structure.png)
+![Diagram of the repository structure for Machine Learning operations.](../images/repository-structure.png)
 
 The following purposes apply to each folder in the repository:
 

@@ -1,6 +1,6 @@
 ---
-title: Azure enterprise-scale analytics platform automation and devops
-description: Learn how this enterprise-scale scenario can improve platform automation and devops of data management and analytics.
+title: Azure enterprise-scale analytics platform automation and DevOps
+description: Learn how this enterprise-scale scenario can improve platform automation and DevOps of data management and analytics.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 07/15/2021
@@ -9,13 +9,13 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Platform automation and devops for a data management and analytics enterprise-scale scenario
+# Platform automation and DevOps for a data management and analytics enterprise-scale scenario
 
 ## Overview
 
 Enterprise-scale for analytics and AI is focused on separating the runtime, automation, and user layers.
 
-User interaction to automation interaction should focus on using user interfaces (UIs) like PowerApps, Custom WebApp, and the ITSM tool. These UIs should integrate with REST APIs and a workflow engine for approval process and sequencing of deployment steps.
+User interaction to automation interaction should focus on using user interfaces (UIs) like Power Apps, custom web applications, and the IT Service Management (ITSM) tool. These UIs should integrate with REST APIs and a workflow engine for approval process and sequencing of deployment steps.
 
 Automation to runtime interaction is done using Azure Pipelines and scripted Azure Resource Manager (ARM) templates.
 
@@ -53,7 +53,7 @@ Each asset can evolve independently over time because of different requirements 
 
 The following table summarizes the teams involved in an enterprise-scale for analytics and AI deployment.
 
-| Name | Role | # of teams |
+| Name | Role | Number of teams |
 |-|-|-|
 | Cloud platform team | The Azure cloud platform team in your organization. | One for the whole Azure platform. |
 | Data platform team | In charge of creating and maintaining ARM template repositories for different levels of enterprise-scale for analytics and AI. Also maintains the data management landing zone and supports other teams if there are deployment issues or required enhancements. | One for enterprise-scale for analytics and AI. |

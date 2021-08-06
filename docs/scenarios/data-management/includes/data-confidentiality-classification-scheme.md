@@ -1,6 +1,6 @@
 ---
-title: "data confidentiality classification scheme"
-description: data confidentiality classification scheme
+title: Data confidentiality classification scheme
+description: Data confidentiality classification scheme
 author: mboswell
 ms.author: mboswell
 ms.date: 06/21/2021
@@ -13,8 +13,8 @@ ms.subservice: overview
 
 | Confidential | Description |
 |------------|---------------|
-|Public   |Anyone can access and it can be sent to anyone e.g. open government data|
+|Public   |Anyone can access and it can be sent to anyone such as open government data|
 |Internal use only | Employees only can access but cannot be sent outside the company |
 |Confidential  |  Should be shared only if needed for a specific task and cannot be sent outside the company without a non-disclosure agreement|
-|Sensitive (PII) |Personally identifiable information which must be masked and shared only on a need to know basis for a limited time Cannot be sent to unauthorized personnel or outside the company |
-|Restricted  |  Only to be shared with named individuals who are accountable for its protection e.g. legal documents, Trade secret (Coca Cola recipe) |
+|Sensitive (PII) |Personally identifiable information which must be masked and shared only on a need to know basis for a limited time can't be sent to unauthorized personnel or outside the company |
+|Restricted  |  Only to be shared with named individuals who are accountable for its protection such as legal documents or trade secrets |

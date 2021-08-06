@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Azure Purview readiness checklist for data management and analytics enterprise-scale scenario
 
-During your data governance journey with Azure Purview and enterprise-scale for analytics and AI, you'll find there are multiple stages in the adoption lifecycle. A well-planned deployment of **Azure Purview** in the [Data management landing zone](../architectures/data-management-landing-zone.md) can provide the following benefits:
+During your data governance journey with Azure Purview and enterprise-scale for analytics and AI, you'll find there are multiple stages in the adoption lifecycle. A well-planned deployment of **Azure Purview** in the [data management landing zone](../architectures/data-management-landing-zone.md) can provide the following benefits:
 
 - Unified data discovery across the entire organization  
 - Improved analytic collaboration
@@ -41,21 +41,21 @@ The **Azure Purview readiness checklist** provides high-level guidance that can 
 
     |Role  |Description  |
     |---------|---------|
-    |Data Curators     |Manage classifications and glossary terms         |
-    |Data Readers     |Requires read-only access for search and insights reports         |
-    |Data Source Administrators and Curators     |Register and scan data sources, and manage catalog         |
-    |Data Source Administrators and Readers     |Register and scan data sources         |
+    |Data curators     |Manage classifications and glossary terms         |
+    |Data readers     |Requires read-only access for search and insights reports         |
+    |Data source administrators and curators     |Register and scan data sources, and manage catalog         |
+    |Data source administrators and readers     |Register and scan data sources         |
 
 - Consider the following supporting roles for building an end-to-end data governance solution using Azure Purview:
 
     |Role  |Description  |
     |---------|---------|
-    |Azure Subscription Administrators     |Manage Azure resources, policies, role-based access control (RBAC), and resource providers         |
-    |Azure AD Administrators     |Manage identity and application registration.        |
-    |NetOps Administrators     |Prepare the network to support Azure Purview connectivity requirements        |
-    |SecOps Administrators     |Manage Azure Key Vaults and secrets         |
-    |Microsoft 365 Administrators     |Microsoft Information Protection in Microsoft 365 if Microsoft 365 sensitivity labels will be used         |
-    |Data Source Owners     |Mapped to roles in Azure Purview         |
+    |Azure subscription administrators     |Manage Azure resources, policies, role-based access control (RBAC), and resource providers         |
+    |Azure AD administrators     |Manage identity and application registration.        |
+    |NetOps administrators     |Prepare the network to support Azure Purview connectivity requirements        |
+    |SecOps administrators     |Manage Azure key vaults and secrets         |
+    |Microsoft 365 administrators     |Microsoft Information Protection in Microsoft 365 if Microsoft 365 sensitivity labels will be used         |
+    |Data source owners     |Mapped to roles in Azure Purview         |
 
 - Define whether there's an existing enterprise-scale for analytics and AI [data management landing zone](../architectures/data-management-landing-zone.md) in the environment or if there is a need to deploy a *new* data management landing zone. The data management landing zone is a centralized subscription to deploy services such as Azure Purview.
 
@@ -77,13 +77,13 @@ The **Azure Purview readiness checklist** provides high-level guidance that can 
 
 - Prepare your Azure subscription to deploy the data management landing zone with Azure Purview.
   - Define which subscription will be used.
-  - Register required Azure Resource Providers.
-  - Review and update the Azure Policy assigned to allow deployment of Azure Storage, Azure EventHub namespace, and Azure Purview Accounts.
+  - Register required Azure resource providers.
+  - Review and update the Azure Policy assigned to allow deployment of Azure Storage, Azure eventhub namespace, and Azure Purview accounts.
   - Validate if the Azure Purview account has access to a data source subscription to register and scan data sources.
-  - If needed, assign required access to key vault secrets to Azure Purview account's managed identity.
-  - For on-premises and infrastructure as a service (IaaS) data sources, create credentials and map to key vault's secrets in Azure Purview.
-  - Generate and register Integration Runtime for data sources inside IaaS or on-premises VMs.
-  - If there's multiple environments, such as production and non-production, prepare to deploy the respective data management landing zones with Azure Purview accounts.
+  - If needed, assign required access to Key Vault secrets to Azure Purview account's managed identity.
+  - For on-premises and infrastructure as a service (IaaS) data sources, create credentials and map to Key Vault's secrets in Azure Purview.
+  - Generate and register integration runtime for data sources inside IaaS or on-premises VMs.
+  - If there's multiple environments, such as production and nonproduction, prepare to deploy the respective data management landing zones with Azure Purview accounts.
 
 - Import your glossary terms to Azure Purview and define the formatting. Use an Azure Purview default template or create new term templates in Azure Purview.
 
@@ -113,7 +113,7 @@ The **Azure Purview readiness checklist** provides high-level guidance that can 
 
 - Validate and update your Azure Purview [collections architecture](/azure/purview/manage-data-sources#manage-collections).
 
-- Validate and update the collection hierarchy inside Azure Purview Account.
+- Validate and update the collection hierarchy inside the Azure Purview account.
 
 - Validate data sources in collections by testing connectivity and doing initial scans.
 

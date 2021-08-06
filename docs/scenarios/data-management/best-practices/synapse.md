@@ -2,7 +2,6 @@
 title: Power your data strategy with Azure Synapse Analytics service
 description: Learn how Azure Synapse Analytics can power your data strategy. Choosing the right set of tools and technologies is essential for a successful business outcome.
 author: pratimdas
-ms.author: prda # Microsoft employees only
 ms.date: 07/28/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -21,7 +20,7 @@ Even if you haven't identified all design features, it's important to deliver bu
 
 At Microsoft, we've been innovating for our customers and have many services for data procurement, storage, analytics, visualization, and data science. Along with offering flexibility and options, we understand that simplicity is key. Simplicity helps get you started early, so you see a quicker return on investment.
 
-For example, [Azure Synapse Analytics](https://azure.microsoft.com/services/synapse-analytics/) unifies a broad category of services. Data product teams have access to a single integrated platform for Business Intelligence (BI), AI, and Continuous Intelligence (CI). Azure Synapse is designed for analytics workloads of any scale.
+For example, [Azure Synapse Analytics](https://azure.microsoft.com/services/synapse-analytics/) unifies a broad category of services. Data product teams have access to a single integrated platform for business intelligence (BI), AI, and continuous intelligence (CI). Azure Synapse is designed for analytics workloads of any scale.
 
 Azure Synapse has several key features and capabilities:
 
@@ -30,12 +29,12 @@ Azure Synapse has several key features and capabilities:
 - Integrated analytics runtimes, either provisioned or serverless on-demand.
 - Azure SQL Analytics using T-SQL for batch, streaming, and interactive processing.
 - Apache Spark for big data processing.
-- Multiple languages suited to different analytic workloads, available through a single interface called Azure Synapse Analytics Studio. Languages include Python, .NET, Java, Scala, and R.
+- Multiple languages suited to different analytic workloads, available through a single interface called Azure Synapse Analytics studio. Languages include Python, .NET, Java, Scala, and R.
 - Integration options for both your own and third-party ISV applications and solutions.
 - Can be integrated into a data management and analytics scenario as a shared workspace. Data product teams can access the shared workspace to run exploitative analytics.
 - Can be deployed as a data product for relevant use cases.
 
-![Screenshot showing the various components and features of the Azure Synapse Analytics integrated data platform.](../images/data-strategy-synapse.png)
+![Diagram of the various components and features of the Azure Synapse Analytics integrated data platform.](../images/data-strategy-synapse.png)
 
 Build a strong data strategy. Choose the right tools and technology as the backbone for your data products and services. Design your data strategy for repeatability and scalability across all current and future use cases that affect business outcomes.
 

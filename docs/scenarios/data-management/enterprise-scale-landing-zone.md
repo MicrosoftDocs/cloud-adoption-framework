@@ -1,6 +1,6 @@
 ---
 title: Enterprise-scale for analytics and AI introduction for Azure
-description: Enterprise-scale for analytics and AI Introduction
+description: Enterprise-scale for analytics and AI introduction
 author: mboswell
 ms.author: brblanch
 ms.date: 06/22/2021
@@ -44,7 +44,7 @@ The pattern relies upon distribution of the data and its pipelines across domain
 - Monitoring
 
 > [!NOTE]
-> The enterprise-scale for analytics and AI framework builds on our [Enterprise-scale architecture](/azure/cloud-adoption-framework/ready/enterprise-scale/) and should be considered a supplement to it.
+> The enterprise-scale for analytics and AI framework builds on our [enterprise-scale architecture](/azure/cloud-adoption-framework/ready/enterprise-scale/) and should be considered a supplement to it.
 
 ## Critical design areas
 
@@ -65,8 +65,8 @@ To learn more, see:
 <!-- 1. [Data science environment](#data-science-environment)
 1. [Data science workflow and MLOps](#data-science-workflow-and-mlops) -->
 
->[!IMPORTANT]
->Enterprise-scale for analytics and AI recommends to use zone redundant storage. ZRS is currently supported for deployment, in the **Supported Regions** list.
+> [!IMPORTANT]
+> Enterprise-scale for analytics and AI recommends to use zone-redundant storage (ZRS). Zone-redundant storage (ZRS)is supported for deployment, in the **supported regions** list.
 >
 >- Asia Southeast
 >- Europe North
@@ -95,7 +95,7 @@ The **Data management landing zone**, which is a subscription, is responsible fo
 - [Data modeling repository](architectures/data-management-landing-zone.md#data-modeling-repository)
 - [Master data management](architectures/data-management-landing-zone.md#master-data-management)
 - [API catalog](architectures/data-management-landing-zone.md#api-catalog)
-- Data Sharing and contracts
+- Data sharing and contracts
 
 For more information, see [Data management landing zone](architectures/data-management-landing-zone.md).
 
@@ -120,13 +120,13 @@ The responsibility of ingesting external data into enterprise for analytics and 
 
 - Azure Key Vault
 - Azure Data Factory for running developed engineering pipelines to transformations
-- A security user group that you give access to the Azure Databricks Analytics and Data Science workspace
+- A security user group that you give access to the Azure Databricks analytics and data science workspace
 - A service principal that's used by the data integration to deploy ingest jobs to the Azure Databricks engineering workspace
 
-Additional services such as Azure Event Hub, Azure IoT Hub, Stream Insight, and Azure Machine Learning can optionally be created.
+Additional services such as Azure Event Hub, Azure IoT Hub, Azure Stream Analytics, and Azure Machine Learning can optionally be created.
 
->[!IMPORTANT]
->A **data integration** is responsible for ingestion of external data into a read data source. The data should avoid having any data transformations applied to it apart from data quality checks and application of data types.
+> [!IMPORTANT]
+> A **data integration** is responsible for ingestion of external data into a read data source. The data should avoid having any data transformations applied to it apart from data quality checks and application of data types.
 
 For more information, see [Data landing zone data integrations](architectures/data-landing-zone-data-integration.md).
 
@@ -157,10 +157,10 @@ Examples of data products include:
 
 - Azure Database for MySQL
 
-- Azure CosmosDB
+- Azure Cosmos DB
 
->[!IMPORTANT]
->A **data product** fulfills a specific need within a business using data. Data products manage, organize and make sense of the data across domains and present the insights gained from the data products. A data product is a result of data from one or many data integrations or other data products.
+> [!IMPORTANT]
+> A **data product** fulfills a specific need within a business using data. Data products manage, organize and make sense of the data across domains and present the insights gained from the data products. A data product is a result of data from one or many data integrations or other data products.
 
 For more information, see [Data landing zone data products](architectures/data-landing-zone-data-products.md).
 
@@ -170,6 +170,10 @@ The enterprise-scale for analytics and AI platform is designed with data platfor
 
 For more information, see [Platform automation and DevOps](organize-data-operations.md).
 
+## Next steps
+
+[Scale data management and analytics](eslz-scale.md)
+
 <!-- ### Data Science Environment
 
 A **data science environment** following the enterprise-scale for analytics and AI, enables data scientists, business analyst and developers to benefit from many types of services, which can be quickly deployed to a [Data Product](#data-products).
@@ -178,6 +182,6 @@ For further reading, see [Data Science Environment](data-science-environment.md)
 
 ### Data Science Workflow and MLOps
 
-On enterprise-scale for analytics and AI platform there is a rigor process in place that allows data science teams to structure their projects and leverage git to share code and other artifacts.
+On enterprise-scale for analytics and AI platform there is a rigor process in place that allows data science teams to structure their projects and  git to share code and other artifacts.
 
 For further reading, see [Data Science Workflow and MLOps](data-science-workflow-and-mlops.md). -->

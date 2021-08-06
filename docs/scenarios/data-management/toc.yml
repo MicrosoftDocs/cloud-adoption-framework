@@ -7,7 +7,7 @@ items:
     pdf_name: Data management and analytics - Microsoft Cloud Adoption Framework for Azure
 
   - name: Overview
-    href: overview-data-governance.md                 
+    href: overview-data-governance.md
   - name: Build an initial strategy
     href: strategy.md
   - name: Define your plan
@@ -15,7 +15,7 @@ items:
 
   - name: Prepare your environment
     items:
-    - name: Azure Landing Zones for data management and analytics
+    - name: Azure landing zones for data management and analytics
       href: ready.md
 
     - name: Implementation options
@@ -37,7 +37,7 @@ items:
         href: eslz-resource-organization.md
       - name: Governance disciplines
         items:
-        - name: Overview        
+        - name: Overview
           href: eslz-security-governance-and-compliance.md
         - name: Policies
           href: eslz-policies.md
@@ -57,17 +57,17 @@ items:
   - name: Govern your data estate
     items:
     - name: Overview
-      href: govern.md                 
-    - name: Requirements for Governing Data in a Modern Enterprise
+      href: govern.md
+    - name: Requirements for governing data in a modern enterprise
       href: govern-requirements.md
-    - name: Components Needed for Data Governance
+    - name: Components needed for data governance
       href: govern-components.md
     - name: Technology needed for end to end governance
       href: govern-technology.md
     - name: Manage master data
       href: govern-master-data.md
-    - name: Data Sharing Agreements
-      href: govern-data-sharing-agreements.md  
+    - name: Data sharing agreements
+      href: govern-data-sharing-agreements.md
 
   - name: Secure your data estate
     items:
@@ -77,10 +77,10 @@ items:
       href: secure-authentication.md
     - name: Authorization
       href: secure-analytics-role-based-access-control.md
-    - name: Automating Security
+    - name: Automating security
       href: security-provisioning.md
-    - name: Data Privacy
-      href: secure-data-privacy.md  
+    - name: Data privacy
+      href: secure-data-privacy.md
 
   - name: Organize people and teams
     items:
@@ -88,9 +88,9 @@ items:
         href: organize.md
       - name: Organize for effective data operations
         href: organize-data-operations.md
-      - name: Personas and Teams
+      - name: Personas and teams
         href: organize-persona-and-teams.md
-      - name: Teams Functions
+      - name: Teams functions
         href: organize-team-functions.md
 
   - name: Well-Architected considerations
@@ -98,82 +98,81 @@ items:
 
   - name: Architectures
     items:
-    - name: Data Management Landing Zone
+    - name: Data management landing zone
       href: architectures/data-management-landing-zone.md
-    - name: Data Landing Zone
+    - name: Data landing zone
       items:
       - name: Overview
         href: architectures/data-landing-zone.md
-      - name: Data Integrations
+      - name: Data integrations
         href: architectures/data-landing-zone-data-integration.md
-      - name: Data Products
+      - name: Data products
         href: architectures/data-landing-zone-data-products.md
-      - name: Analytics product decision tree
-        href: analytic-product-decision-tree.md       
-    - name: Frequently Asked Questions
+        
+    - name: Frequently asked questions
       href: architectures/frequently-asked-questions.md
 
   - name: Best practices
     items:
-      - name: Data Lake Implementation
-        items:  
-        - name: Data Lake Overview     
+      - name: Data lake implementation
+        items:
+        - name: Data lake overview
           href: best-practices/data-lake-overview.md
-        - name: Data Lake Zones
+        - name: Data lake zones
           href: best-practices/data-lake-services.md
-        - name: Data Lake Key Considerations
+        - name: Data lake key considerations
           href: best-practices/data-lake-key-considerations.md
-        - name: Managing Data Lake Access
+        - name: Managing data lake access
           href: best-practices/data-lake-access.md
-      - name: Azure Databricks Implementation
+      - name: Azure Databricks implementation
         href: best-practices/azure-databricks-implementation.md
-      - name: Azure Synapse Analytics Implementation
+      - name: Azure Synapse Analytics implementation
         items:
         - name: Overview
           href: best-practices/synapse.md
         - name: Implementation
           href: best-practices/azure-synapse-analytics-implementation.md
-        - name: High Availability for Azure Synapse Analytics
-          href: ../../migrate/azure-best-practices/analytics/azure-synapse.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json 
-      - name: Azure Purview Implementation
+        - name: High availability for Azure Synapse Analytics
+          href: ../../migrate/azure-best-practices/analytics/azure-synapse.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
+      - name: Azure Purview implementation
         items:
-        - name: Readiness Checklist
-          href: best-practices/purview-checklist.md 
-        - name: Deployment Best Practices
-          href: best-practices/purview-deployment.md       
-      - name: Data Landing Zone Ingestion
+        - name: Readiness checklist
+          href: best-practices/purview-checklist.md
+        - name: Deployment best practices
+          href: best-practices/purview-deployment.md
+      - name: Data landing zone ingestion
         items:
-        - name: Data Ingestion
+        - name: Data ingestion
           href: best-practices/data-ingestion.md
-        - name: SAP Data Ingestion
+        - name: SAP data ingestion
           href: best-practices/sap-data-ingestion.md
-        - name: Automated Ingestion Pattern
+        - name: Automated ingestion pattern
           href: best-practices/automated-ingestion-pattern.md
-      - name: Data Science Environment
+      - name: Data science environment
         items:
-        - name: Data Science Best Practices
+        - name: Data science best practices
           href: best-practices/data-science-best-practices.md
         - name: Azure Machine Learning
           href: best-practices/azure-machine-learning.md
 
   - name: Featured Azure products
     items:
-    - name: ARM Templates
+    - name: ARM templates
       href: /azure/azure-resource-manager/templates/
     - name: Blob Storage
       href: /azure/storage/blobs/
     - name: Azure Cosmos DB
       href: /azure/cosmos-db/
-    - name: Azure Database for Maria DB
+    - name: Azure Database for MariaDB
       href: /azure/mariadb/
     - name: Azure Database for MySQL
       href: /azure/mysql/
     - name: Azure Database for PostgreSQL
-      href: /azure/data-explorer       
+      href: /azure/data-explorer
     - name: Azure Databricks
       href: /azure/databricks/
     - name: Azure Data Explorer
-      href: /azure/data-explorer/     
+      href: /azure/data-explorer/
     - name: Azure Data Lake
       href: /azure/storage/blobs/data-lake-storage-introduction
     - name: Azure Key Vault
@@ -181,14 +180,14 @@ items:
     - name: Azure Machine Learning
       href: /azure/machine-learning/
     - name: Azure Policy
-      href: /azure/governance/policy/      
+      href: /azure/governance/policy/
     - name: Azure Private Link
       href: /azure/private-link/
     - name: Azure Purview
       href: /azure/purview/
     - name: Azure Stream Analytics
       href: /azure/stream-analytics/
-    - name: Azure SQL
+    - name: Azure SQL Database
       href: /azure/azure-sql/
     - name: Azure Synapse Analytics
       href: /azure/synapse-analytics/
@@ -197,9 +196,8 @@ items:
     - name: Event Hubs
       href: /azure/event-hubs/
     - name: HDInsight
-      href: /azure/hdinsight/           
+      href: /azure/hdinsight/
     - name: Network Watcher
       href: /azure/network-watcher/
-    - name: Virtual Network
-      href: /azure/virtual-network/ 
-
+    - name: Virtual network
+      href: /azure/virtual-network/

@@ -20,10 +20,8 @@ There are two types of metrics to be considered.
 - **Value creation metrics:** Value creation metrics help to monitor how data governance contributes to improving business value through the creation and use of trusted data. Business value might mean:
 
 - Reducing risk, such as protecting against a data breach
-- Reducing costs, for example, by eliminating data errors in business processes that cause
-unplanned costs to mount as people step in to fix them
-- Increasing revenue, such as providing high quality integrated and trusted data that
-improves accuracy of next best offer recommendations to drive up revenue
+- Reducing costs, for example, by eliminating data errors in business processes that cause unplanned costs to mount as people step in to fix them
+- Increasing revenue, such as providing high quality integrated and trusted data that improves accuracy of next best offer recommendations to drive up revenue
 
 The data governance strategy should include business cases where you describe the impact that ungoverned data is having on the business. Describing the business problems caused by ungoverned data helps to systematically identify candidate business cases. It also allows you to rank the business problems in order of severity and return on investment (ROI) when you solve the problems. Prioritizing problems where ungoverned data has the greatest business impact, is an effective way to get stakeholder sponsorship. It's effective because the priorities pinpoint the greatest opportunities to drive value.
 
@@ -61,7 +59,7 @@ The data governance solution should enable you to govern data throughout the lif
 
 ## Data governance roles and responsibilities guidance for people
 
-There are many data governance roles and responsibilities for people. To learn more, see [Data Governance Roles and Responsibilities](organize-persona-and-teams.md#data-governance-roles-and-responsibilities).
+There are many data governance roles and responsibilities for people. To learn more, see [Data governance roles and responsibilities](organize-persona-and-teams.md#data-governance-roles-and-responsibilities).
 
 ## Data governance processes
 
@@ -69,7 +67,7 @@ There are four categories of data governance processes.
 
 |Process category|  Processes|
 |--|--|
-|**Data discovery processes,to understand the data landscape** | A data and data entity discovery, mapping and cataloging process </br> A data profiling discovery process to determine the quality of data </br> A sensitive data discovery and governance classification process </br>A data maintenance discovery process for CRUD3 analysis, for example, from log files) to understand usage and maintenance of data such as master data across the enterprise|
+|**Data discovery processes,to understand the data landscape** | A data and data entity discovery, mapping and cataloging process </br> A data profiling discovery process to determine the quality of data </br> A sensitive data discovery and governance classification process </br>A data maintenance discovery process for CRUD3 analysis, for example, from log files to understand usage and maintenance of data such as master data across the enterprise|
 |**Data governance definition processes** | Create and maintain a common business vocabulary in a business glossary Define data entities, including master data, data attributes names, data integrity rules and valid formats </br> Define reference data to standardize code sets across the enterprise </br> Define data governance classifications schemes to label data to determine how to govern it </br> Define data governance policies and rules to govern data entity and document lifecycles </br> Define success metrics and threshold|
 |**Data governance policy and rule enforcement processes** | A process to automate application / enforcement of data governance policies and rules </br> A process to manually apply and enforce policies and rules </br> Event-driven, on-demand and timer-driven (batch) data governance processes published as services that can be invoked to govern: </br> Data ingestion - cataloging, classification, owner assignment, and storing </br>  Data quality </br>  Data access security </br>  Data privacy </br>  Data usage, for example, including sharing and to ensure licensed data is only used for approved purposes </br>  Data maintenance, for example of master data </br>  Data retention </br>  Master data and reference data synchronization |
 | **Monitoring processes** | Monitor and audit data usage activity, data quality, data access security, data privacy, data maintenance, and data retention </br> Monitor policy rule violation detection and resolution|
@@ -119,9 +117,9 @@ In summary, this guidance focuses on technologies needed for data governance.
   - Automated data discovery, profiling, tagging, cataloging, and mapping to a glossary
   - Automated sensitive data detection and governance classification
   - Interoperability with other catalogs, tools, and applications to share metadata via APIs and open standards
-- data lakes to ingest and process data
+- Data lakes to ingest and process data
 - Enterprise data software with built-in support for:
-  - Data center, multicloud, and edge data connectivity
+  - Datacenter, multicloud, and edge data connectivity
   - Data stewardship tooling
   - Data cleansing and integration
   - Metadata lineage

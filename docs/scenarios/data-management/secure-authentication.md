@@ -82,10 +82,10 @@ The data management and analytics scenario probably contains polyglot storage. E
 - [Use Azure Active Directory authentication with Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics](/azure/azure-sql/database/authentication-aad-overview)
 - [Use Azure Active Directory for authenticating with MySQL](/azure/mysql/concepts-azure-ad-authentication)
 
-We recommend that you use Azure AD groups to secure database objects instead of individual Azure AD user accounts. Use these AD Azure groups to authenticate users and protects database objects. Similar to the data lake pattern, you could use your data integration or data products onboarding to create these groups.
+We recommend that you use Azure AD groups to secure database objects instead of individual Azure AD user accounts. Use these Azure AD groups to authenticate users and protects database objects. Similar to the data lake pattern, you could use your data integration or data products onboarding to create these groups.
 
 > [!NOTE]
-> Data integrations and data products can store sensitive data in Azure SQL Database, SQL Managed Instance, or Azure Synapse Analytics pools. For more information, see [Sensitive Data](./secure-data-privacy.md#sensitive-data-personal-data).
+> Data integrations and data products can store sensitive data in Azure SQL Database, SQL Managed Instance, or Azure Synapse Analytics pools. For more information, see [Sensitive data](./secure-data-privacy.md#sensitive-data-personal-data).
 
 ## Azure Data Lake security in the data management and analytics scenario
 
@@ -93,39 +93,10 @@ To control access to data in the data lake, we recommend using access control li
 
 Similar to Azure RBAC general practices, the following rules should apply to ACL:
 
-- **Manage access using groups.** Assign access to Azure AD groups and manage membership of groups for on-going access management.
+- **Manage access using groups.** Assign access to Azure AD groups and manage membership of groups for ongoing access management.
 - **Least privilege.** In most cases, users should have only read permission to the folders and files they need in the data lake. A managed identity or service principal, such as the one used by Azure Data Factory, has read, write, and execute permissions. Data users shouldn't have access to the storage account container.
-- **Align with data partitioning scheme.** ACL and data partition design must align to ensure effective data access control. See [Data Lake Partitioning](data-lake-zones.md#data-lake-partitioning).
+- **Align with data partitioning scheme.** ACL and data partition design must align to ensure effective data access control. For more information, see [Data lake partitioning](data-lake-zones.md#data-lake-partitioning).
 
 ## Next steps
 
 [Authorization for data management and analytics](secure-analytics-role-based-access-control.md)
-
-<!-- ### Enterprise Scale Analytics and AI authentication guidelines (to be updated)
-
-| Data Service                                                                                                                            | Accessor                 | Authentication Provider                                       | Credential                     |
-|-----------------------------------------------------------------------------------------------------------------------------------------|--------------------------|---------------------------------------------------------------|--------------------------------|
-| ADLS Gen 2                                                                                                                              | User access              | Azure AD                                                      | User account in Azure AD       |
-|                                                                                                                                         | Azure Data Factory (ADF) | Azure AD                                                      | ADF's managed identity         |
-| Note: The managed identity must be granted at least the Storage Blob Data Contributor role in Access Control (IAM) of ADLS Gen 2.       |
-|                                                                                                                                         | SQL DW or SQL DB         | Azure AD                                                      | SQL Server's managed identity  |
-| Note: The managed identity must be granted at least the Storage Blob Data Contributor role in Access Control (IAM) of ADLS Gen 2.       |
-|                                                                                                                                         | Azure Databricks         |
-| (Interactive users)                                                                                                                     | Azure AD                 | For pass-through authentication, use user account in Azure AD |
-|                                                                                                                                         | Azure Databricks         |
-| (Jobs and shared access)                                                                                                                | Azure AD                 | Use Azure AD service principal                                |
-| *There is no managed identity for Databricks                                                                                            |
-| SQL DW or SQL DB                                                                                                                        |
-| (If required)                                                                                                                           | User access              | Azure AD                                                      | User account in Azure AD       |
-|                                                                                                                                         | Azure Data Factory (ADF) | Azure AD                                                      | ADF's managed identity         |
-| Note: The ADF's managed identity must be granted at least the Storage Blob Data Contributor role in Access Control (IAM) of ADLS Gen 2. |
-| Azure Databricks                                                                                                                        |
-| (if required)                                                                                                                           | User access              | Azure AD                                                      | User account in Azure AD       |
-|                                                                                                                                         | Azure Data Factory (ADF) | Azure AD                                                      | Use Azure AD service principal |
-| *There is no managed identity for Databricks                                                                                            |
-
-Need to add... and update...
-
-- Azure Cosmos DB – Azure Cosmos DB does not support Azure AD authentication for access to database. Use Cosmos DB resource key to authenticate to Azure Cosmos DB.
-- Azure Analysis Services – Azure Analysis Services is the tabular semantic data model database in the cloud. Use Azure AD to authenticate to Azure Analysis Services.
--->

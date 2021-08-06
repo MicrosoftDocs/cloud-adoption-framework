@@ -1,13 +1,14 @@
 ---
 title: Azure enterprise-scale for analytics and AI data products
 description: Learn about Azure enterprise-scale for analytics and AI data products
-author:  mboswell
-ms.author:  mboswell # Microsoft employees only
+author: mboswell
+ms.author: mboswell # Microsoft employees only
 ms.date: 06/08/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
+
 # Data products
 
 ## Overview
@@ -31,7 +32,7 @@ At a high level, data products are computed or polyglot persistence services tha
     > [!IMPORTANT]
     > Data product B consumes from data products A and C. Before this can happen, data product B must register it's consumption of a data product via a data sharing agreement. This data sharing agreement should update the lineage from data product A to data product B and from data product C to data product B.
 
-- The resource group for a data product would include all the service required to make that data product. Examples of services that might be part of a data product include Azure Functions, Azure App Service, Logic Apps, Azure Analysis Services, Cognitive Services, Azure Machine Learning, Azure SQL database, Azure MySQL, and Azure Cosmos DB. For more information, see [data product samples](#sample-data-products).
+- The resource group for a data product would include all the service required to make that data product. Examples of services that might be part of a data product include Azure Functions, Azure App Service, Logic Apps, Azure Analysis Services, Cognitive Services, Azure Machine Learning, Azure SQL Database, Azure Database for MySQL, and Azure Cosmos DB. For more information, see [Data product samples](#sample-data-products).
 - A data product has data from a *READ* data source that has had some data transformation applied. For example, tt can be a newly curated dataset or a BI report.
 
 ## Design recommendations
@@ -44,12 +45,12 @@ We recommend building data products within your data landing zone by adhering to
 
 ![Diagram of a data products resource groups](../images/data-products-resource-group.png)
 
-### Set guard rails
+### Set guardrails
 
-Azure Policy would drive the default configuration of services within a data landing zone. Consider operational analytics as multiple resource groups that the Data Product Team can request from a standard service catalog. By using Azure Policy, we can configure the security boundary and required feature set.
+Azure Policy would drive the default configuration of services within a data landing zone. Consider operational analytics as multiple resource groups that the data product team can request from a standard service catalog. By using Azure Policy, we can configure the security boundary and required feature set.
 
->[!IMPORTANT]
->To drive consistency we recommend configuring an Azure Policy per Data Product.
+> [!IMPORTANT]
+> To drive consistency we recommend configuring an Azure Policy per data product.
 
 ### Consume data from many places
 
@@ -67,11 +68,11 @@ Data products should be automatically registered in a data catalog such as [Azur
 
 At the start of planning a data landing zone, you should have identified as many data products as you need to help drive the data product architecture. At the top of each decision should be conformity to implement platform governance.
 
-For your data products, focus on how they're **data producers** and **data consumers** for others. To understand further, let's assume you have identified a suite of data products (A, B, C, and D) which produce and consume data. As shown below, you require data product A and D to produce data for data product B. Data product B consumes from data products A and D and in turn—acting as a data producer itself alongside being a data consumer—also produces data for data product C.
+For your data products, focus on how they're data producers and consumers for others. To understand further, let's assume you have identified a suite of data products (A, B, C, and D) which produce and consume data. You require data product A and D to produce data for data product B. Data product B consumes from data products A and D, and acts as a data producer itself. It also produces data for data product C.
 
 :::image type="content" source="../images/data-producers-consumers.png" alt-text="Diagram of a data producer and consumers.":::
 
-### Control the environment with Infrastructure-as-Code
+### Control the environment with infrastructure as code
 
 Across the whole of your data products ecosystem, governance and infrastructure as code should control the environment as shown in the diagram above.
 
@@ -81,14 +82,14 @@ Data product teams should publish their data model in a modeling repository.
 
 ### Set expectations for data product users
 
-Service Level Agreements and certification for the data product, should update the Data Sharing Contracts to set the right expectation for potential users of the data product.
+Service-level agreements and certification for the data product, should update the data sharing contracts to set the right expectation for potential users of the data product.
 
 ### Capture lineage
 
 As data product B is consuming from data product A and D, we want to make sure the lineage is captured from A and D to B. A further lineage would be captured for data product C consuming from data product B. It should be captured in a data lineage application before every release of a data product.
 
->[!Note]
-> Using Azure DevOps Pipelines would allow building of approval gates to invoke functions to make sure metadata, lineage and SLAs are registered in the correct governance service.
+> [!NOTE]
+> Using Azure Pipelines would allow building of approval gates to invoke functions to make sure metadata, lineage and SLAs are registered in the correct governance service.
 
 ### Define your data product's architecture
 
@@ -126,11 +127,11 @@ While an initial visualization resource group will be deployed for a new data la
 
 Power BI is the strategic visualization tool for self-service analytics and for citizen data scientists. Our recommendation is to use the current well-established processes for data refresh scheduling, security, compliance, and data confidentiality handling.
 
-Aligned to Microsoft investments and roadmap, we recommend using Power BI Premium as the primary option for specific cases where refresh frequency, performance, or users licensing can't be met by Power BI Professional.
+Aligned to Microsoft investments and roadmap, we recommend using Power BI premium as the primary option for specific cases where refresh frequency, performance, or users licensing can't be met by Power BI professional.
 
-Azure Analysis Services should  be used on an exception basis. There are specific use cases where it might be required such as multi-dimensional models, and CI/CD advanced requirements.
+Azure Analysis Services should be used on an exception basis. There are specific use cases where it might be required such as multidimensional models, and CI/CD advanced requirements.
 
-As part of low-level design, we recommend enterprises consider an approach that allows access to a trial PBI Premium capacity by business users who want to evaluate if it is a good fit for their use cases.
+As part of low-level design, we recommend enterprises consider an approach that allows access to a trial Power BI premium capacity by business users who want to evaluate whether it's a good fit for their use cases.
 
 ### Data analytics and data science data product
 

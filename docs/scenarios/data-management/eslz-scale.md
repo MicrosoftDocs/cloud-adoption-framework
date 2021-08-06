@@ -1,6 +1,4 @@
 ---
-
-title: Scale data management and analytics in Azure
 description: Learn about data management and analytics in Azure. Decide whether to use a single or multiple data landing zones to design a scalable platform.
 author: esbran
 ms.author: espen
@@ -34,7 +32,7 @@ This figure gives an overview of an enterprise-scale for analytics and AI platfo
 
 ![Diagram of enterprise-scale data management and single data landing zone.](images/high-level-design-single-data-landing-zone.png)
 
-This approach allows you to conform to the principles of enterprise-scale for analytics and AI. It gives you the option to add data landing zones as needed. This pattern builds out common core services with flexibility to add customizations. If you start with a single data landing zone, plan for expanding into multiple Landing Zones. Such planning avoids having to migrate data later.
+This approach allows you to conform to the principles of enterprise-scale for analytics and AI. It gives you the option to add data landing zones as needed. This pattern builds out common core services with flexibility to add customizations. If you start with a single data landing zone, plan for expanding into multiple landing zones. Such planning avoids having to migrate data later.
 
 ## Multiple data landing zones
 

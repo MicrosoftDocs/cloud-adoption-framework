@@ -22,9 +22,9 @@ The requirements for governing data include:
 - Policy enforcement across data stores in the distributed data landscape
 - Master data management to make the data consistent. This might be across operational and analytical systems like customer, product, and supplier
 - Metadata lineage
-- Technology to make it possible to govern structured, multi-structured, and unstructured data. The governance might span across the data center, multiple clouds, and the edge
+- Technology to make it possible to govern structured, multistructured, and unstructured data. The governance might span across the datacenter, multiple clouds, and the edge
 
-The other challenge is that data is being collected and stored in multiple places across the enterprise. The data might include data collected and stored in different geographies and different legal jurisdictions. As a result, different legislation may apply to governing the same data in different jurisdictions. Discover what data exists across the hybrid multi-cloud distributed data landscape, including geographic location, to:
+The other challenge is that data is being collected and stored in multiple places across the enterprise. The data might include data collected and stored in different geographies and different legal jurisdictions. As a result, different legislation may apply to governing the same data in different jurisdictions. Discover what data exists across the hybrid multicloud distributed data landscape, including geographic location, to:
 
 - Understand what data attributes, data entities, and data relationships exist across the distributed data landscape
 - Classify the data to know how to govern it
@@ -38,7 +38,7 @@ There needs to be a way to classify data to understand its level of confidential
 - A data confidentiality classification scheme
 - A data retention classification scheme
 
-An example of each of these schemes is:
+An example of these schemes is:
 
 [!INCLUDE [data-confidentiality-classification-scheme](includes/data-confidentiality-classification-scheme.md)]
 
@@ -57,8 +57,8 @@ Another requirement is the need for accountability. Without accountability, conf
 - Who is protecting personal data privacy for compliance?
 - Who is looking after the quality of product data across all brochures and partner websites?
 - Who ensures customer data is consistent across all systems?
-- Who is policing external subscription data usage Vs the license?
-- Who is policing privileged users like DBAs and data scientists?
+- Who is policing external subscription data usage versus the license?
+- Who is policing privileged users like dbas and data scientists?
 
 Is it a C-level executive? Is it a department head? Is it the head of governance, risk, and compliance? What about the legal department? Or is it IT's responsibility? Roles and responsibilities are needed to avoid confusion and to set the foundation upon which a data culture can materialize.
 
@@ -67,7 +67,7 @@ Is it a C-level executive? Is it a department head? Is it the head of governance
 Processes are needed, along with roles and responsibilities to:
 
 - Govern the definition and maintenance of a common business vocabulary
-- Discover and identify what data you have, what it means. and where it's stored
+- Discover and identify what data you have, what it means. And where it's stored
 - Classify data to know how to govern it
 - Govern the definition and maintenance of data access security policies
 - Govern the definition and maintenance of data privacy policies
@@ -91,10 +91,9 @@ Associate these policies and rules with each class in the data governance classi
 
 ## Master data management
 
-Another central requirement in governing data is master data management. Master data is the most widely shared data in any organization and includes core data entities. Core data entities include customer, supplier, materials, employee, and asset. It also includes financial Chart of Accounts data that is found in different financial applications.
-Because master data is so widely shared, its application agnostic. It's needed by both operational transaction processing applications and analytical systems. Keeping this data synchronized can resolve so many data errors and process errors. So, maintaining it centrally via a common process and synchronizing every system that needs it, is the ideal situation. Also, governance is needed over who is allowed to maintain it and where that maintenance needs to happen.
+Another central requirement in governing data is master data management. Master data is the most widely shared data in any organization and includes core data entities. Core data entities include customer, supplier, materials, employee, and asset. It also includes financial chart of accounts data that is found in different financial applications. Because master data is so widely shared, its application agnostic. It's needed by both operational transaction processing applications and analytical systems. Keeping this data synchronized can resolve so many data errors and process errors. So, maintaining it centrally via a common process and synchronizing every system that needs it, is the ideal situation. Also, governance is needed over who is allowed to maintain it and where that maintenance needs to happen.
 
-:::image type="content" source="images/master-data-management.png" alt-text="Diagram of master data management.":::
+:::image type="content" source=`images/master-data-management.png` alt-text="Diagram of master data management.":::
 
 The same applies to reference data such as code sets and financial markets data. In this case, standardization and synchronization of code sets is known as reference data management, which is also a requirement.
 
@@ -102,13 +101,13 @@ The same applies to reference data such as code sets and financial markets data.
 
 Finally, there's a requirement for metadata lineage. You can use an audit trail to know where data originated and how it has been transformed on route to a report or a data store. You can use metadata to trace who or what is maintaining data, including when and where it occurs.
 
-:::image type="content" source="images/data-lineage.png" alt-text="Diagram of data lineage.":::
+:::image type="content" source=`images/data-lineage.png` alt-text="Diagram of data lineage.":::
 
 ## Summary of what is needed for end-to-end data governance
 
-You need an end-to-end solution that can govern data throughout its lifecycle across data stores in the edge, multiple clouds, and the data center.
+You need an end-to-end solution that can govern data throughout its lifecycle across data stores in the edge, multiple clouds, and the datacenter.
 
-:::image type="content" source="images/data-governance-framework.png" alt-text="Diagram of data governance framework.":::
+:::image type="content" source=`images/data-governance-framework.png` alt-text="Diagram of data governance framework.":::
 
 Your data governance solution should have several components:
 

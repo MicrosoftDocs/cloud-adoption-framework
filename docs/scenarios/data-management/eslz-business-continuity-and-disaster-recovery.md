@@ -13,7 +13,7 @@ ms.subservice: ready
 
 When you design architecture for a cloud service, consider your availability requirements and how to respond to potential interruptions in the service. An issue could be localized to the specific instance or region-wide. Having plans for both is important. Depending on your recovery time objective and the recovery point objective, you might choose an aggressive strategy for high availability and disaster recovery.
 
-High availability and disaster recovery can sometimes be combined. The two areas have slightly different strategies, especially when it comes to data. For guidance, see [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/) and [Reliability overview](/azure/architecture/framework/resiliency/overview).
+High availability and disaster recovery can sometimes be combined. The two areas have slightly different strategies, especially when it comes to data. To learn more, see [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/) and [reliability overview](/azure/architecture/framework/resiliency/overview).
 
 Instead of trying to prevent failures, accept up front that failures can and do happen. Minimize the effects of any single failing component in the lifecycle. Your tolerance for cost, recovery point objective, and recovery time objective determine the type of solution to implement.
 
@@ -38,16 +38,16 @@ For an overview of high availability with Azure Cosmos DB, see [How does Azure C
 
 ### Azure Data Factory
 
-Data integrations and data product are likely to have Azure DevOps repositories linked to Azure Data Factory. You can deploy pipelines to another data factory with minimal downtime. To use code version control software apart from GitHub and Azure DevOps Repo, use the Azure Data Factory SDK to author pipelines and other Azure Data Factory objects.
+Data integrations and data product are likely to have Azure DevOps repositories linked to Azure Data Factory. You can deploy pipelines to another Data Factory with minimal downtime. To use code version control software apart from GitHub and Azure DevOps repo, use the Azure Data Factory SDK to author pipelines and other Azure Data Factory objects.
 
 ### Azure Data Lake
 
-Azure Data Lake Storage Gen2 already supports 3x replication to guard against localized hardware failures. Other replication options, such as zone redundant storage (ZRS) or geo-zone redundant storage (GZRS), improve high availability. Geo-redundant storage (GRS) and read-access geo-redundant storage (RA-GRS) improve disaster recovery. For high availability, if there's a service interruption, the workload needs access to the latest data as quickly as possible. The workload can switch over to a replicated instance locally or to a new region.
+Azure Data Lake Storage Gen2 already supports 3x replication to guard against localized hardware failures. Other replication options, such as zone-redundant storage (ZRS) or geo-zone-redundant storage (GZRS), improve high availability. Geo-redundant storage (GRS) and read-access geo-redundant storage (RA-GRS) improve disaster recovery. For high availability, if there's a service interruption, the workload needs access to the latest data as quickly as possible. The workload can switch over to a replicated instance locally or to a new region.
 
 If one of the data landing zones requires geo-redundancy, with Data Lake Storage Gen2, we recommend you geo-replicate your data by using GRS or RA-GRS. Consider ways for the application using Data Lake Storage Gen2 to automatically fail over to the secondary region. You could use monitoring triggers or length of failed attempts. Otherwise, at least send a notification to administrators for manual intervention. Keep in mind that there's trade-off of failing over versus waiting for a service to come back online.
 
->[!Note]
->A storage account which is configured as RA-GRS or any other GRS technology does not qualifies as a response to disaster recovery. Conduct appropriate due diligence in terms of what works best, including a dual load scenario, which copies data into two Azure regions.
+> [!NOTE]
+> A storage account which is configured as RA-GRS or any other GRS technology does not qualifies as a response to disaster recovery. Conduct appropriate due diligence in terms of what works best, including a dual load scenario, which copies data into two Azure regions.
 
 Each data landing zone must have a recovery point objective for its data integrations and data products. Each data landing zone must have a defined replication strategy for its use cases.
 

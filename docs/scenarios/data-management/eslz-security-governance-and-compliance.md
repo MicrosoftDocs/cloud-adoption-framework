@@ -3,7 +3,7 @@ title: Security, governance, and compliance for enterprise-scale data management
 description: Learn how to improve security, governance, and compliance for enterprise-scale data management and analytics.
 author: andrehass
 ms.author: anhass
-ms.date: 07/14/2021
+ms.date: 08/06/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Security, governance, and compliance for enterprise-scale data management and analytics
 
-When planning data management and analytics architecture, pay special attention to ensure that the architecture is robust and secure. This article addresses security, compliance, and governance design criteria for enterprise-scale data management and analytics. This article also discusses design recommendations and best practices for deployment of an enterprise-scale for analytics and AI on Azure. Review [Enterprise-scale security governance and compliance](../../ready/enterprise-scale/security-governance-and-compliance.md) to fully prepare for governance of an enterprise solution.
+When planning data management and analytics architecture, pay special attention to ensure that the architecture is robust and secure. This article addresses security, compliance, and governance design criteria for enterprise-scale data management and analytics. This article also discusses design recommendations and best practices for deployment of an enterprise-scale for analytics and AI on Azure. Review [enterprise-scale security governance and compliance](../../ready/enterprise-scale/security-governance-and-compliance.md) to fully prepare for governance of an enterprise solution.
 
 Cloud solutions initially hosted single, relatively isolated applications. As the benefits of cloud solutions became clear, larger-scale workloads were hosted in the cloud, such as SAP on Azure. So it became vital to address the security, reliability, performance, and cost of regional deployments throughout the lifecycle of cloud services.
 
@@ -25,12 +25,12 @@ Both Microsoft and customers share responsibility for security. For generally ac
 
 ### Data-at-rest encryption
 
-Data-at-rest (DaR) encryption refers to the encryption of data as it persists in storage, and addresses the security risks related to direct physical access of storage media. DaR is a critical security control since the underlying data is unrecoverable and cannot be changed without its decryption key. DaR is an important layer in the defense-in-depth strategy of Microsoft data centers. Often, there are compliance and governance reasons to deploy DaR encryption.
+Data-at-rest encryption refers to the encryption of data as it persists in storage, and addresses the security risks related to direct physical access of storage media. Dar is a critical security control since the underlying data is unrecoverable and cannot be changed without its decryption key. Dar is an important layer in the defense-in-depth strategy of Microsoft datacenters. Often, there are compliance and governance reasons to deploy data-at-rest encryption.
 
-Several Azure services support DaR encryption, including Azure Storage and Azure SQL Databases. Although common concepts and models influence the design of Azure services, each service may apply DaR encryption at different stack layers or have different encryption requirements.
+Several Azure services support data-at-rest encryption, including Azure Storage and Azure SQL databases. Although common concepts and models influence the design of Azure services, each service may apply data-at-rest encryption at different stack layers or have different encryption requirements.
 
->[!IMPORTANT]
->All services that support DaR encryption should have it enabled by default.
+> [!IMPORTANT]
+> All services that support data-at-rest encryption should have it enabled by default.
 
 ### Secure data in transit
 
@@ -50,7 +50,7 @@ To control and manage disk encryption keys and secrets for enterprise-scale for 
 
 Azure Defender provides security alerts and advanced threat protection for virtual machines, SQL databases, containers, web applications, virtual networks, and more.
 
-When you enable Azure Defender from the **Pricing and settings** area of Azure Security Center, the following Defender plans are enabled simultaneously and provide comprehensive defenses for the compute, data, and service layers of your environment:
+When you enable Azure Defender from the Pricing & settings area of Azure Security Center, the following defender plans are enabled simultaneously and provide comprehensive defenses for the compute, data, and service layers of your environment:
 
 - [Azure Defender for servers](/azure/security-center/defender-for-servers-introduction?branch=master)
 - [Azure Defender for App Service](/azure/security-center/defender-for-app-service-introduction)
@@ -62,14 +62,14 @@ When you enable Azure Defender from the **Pricing and settings** area of Azure S
 - [Azure Defender for Resource Manager](/azure/security-center/defender-for-resource-manager-introduction)
 - [Azure Defender for DNS](/azure/security-center/defender-for-dns-introduction)
 
-Each of these plans is explained separately in the Security Center documentation.
+These plans are explained separately in the Security Center documentation.
 
->[!IMPORTANT]
->Where Azure Defender is available for platform as a service (PaaS) services, we recommend enabling this feature by default, especially for Azure Data Lake Storage accounts. See [Introduction to Azure Defender](/azure/security-center/azure-defender) and [Configure Azure Defender for Storage](/azure/storage/common/azure-defender-storage-configure?tabs=azure-security-center) for further details.
+> [!IMPORTANT]
+> Where Azure Defender is available for platform as a service (PaaS) services, we recommend enabling this feature by default, especially for Azure Data Lake Storage accounts. See [Introduction to Azure Defender](/azure/security-center/azure-defender) and [Configure Azure Defender for Storage](/azure/storage/common/azure-defender-storage-configure?tabs=azure-security-center) for further details.
 
-### Advanced Threat Protection
+### Advanced threat protection
 
-Advanced Threat Protection is part of the Advanced Data Security offering, which is a unified package for advanced security capabilities. Advanced Threat Protection can be accessed and managed via the Azure portal.
+Advanced Threat Protection is part of the advanced data security offering, which is a unified package for advanced security capabilities. Advanced Threat Protection can be accessed and managed via the Azure portal.
 
 >[!IMPORTANT]
 >Where Advanced Threat Protection is available for PaaS Services, we recommend enabling this feature by default.
@@ -80,7 +80,7 @@ Advanced Threat Protection is part of the Advanced Data Security offering, which
 
 ## Networking
 
-The enterprise-scale for analytics and AI prescribed view is to use Azure Private Endpoints for all PaaS services and not use public IPs for all infrastructure as a service (IaaS) services. See [Enterprise-Scale for analytics and AI networking](eslz-network-topology-and-connectivity.md) for more information.
+The enterprise-scale for analytics and AI prescribed view is to use Azure private endpoints for all PaaS services and not use public IPs for all infrastructure as a service (IaaS) services. For more information, see [Enterprise-scale for analytics and AI networking](eslz-network-topology-and-connectivity.md).
 
 ## Compliance and governance design recommendations
 
@@ -94,7 +94,7 @@ Azure Policy helps bring your resources into compliance through bulk remediation
 
 ### Automate deployments
 
-You can save time and reduce errors by automating deployments. Reduce the deployment complexity of end-to-end data landing zones, data integrations, and data products by creating reuseable code templates. This minimizes the time to deploy or redeploy solutions. For more information, see [Intro to DevOps and Automation](organize-data-operations.md)
+You can save time and reduce errors by automating deployments. Reduce the deployment complexity of end-to-end data landing zones, data integrations, and data products by creating reuseable code templates. This minimizes the time to deploy or redeploy solutions. For more information, see [Understand DevOps automation for the data management and analytics scenario in Azure](organize-data-operations.md)
 
 ### Lock resources for production workloads
 
@@ -114,7 +114,7 @@ The following recommendations apply to various compliance and governance scenari
 | Avoid accidental deletion of Azure resources. | Use Azure resource locks to prevent accidental deletion. |
 | Get a consolidated view of opportunity areas for cost optimization, resiliency, security, operational excellence, and performance for Azure resources. | Use Azure Advisor to get a consolidated view across SAP on Azure subscriptions. |
 
-## Next Steps
+## Next steps
 
 - [Policies](eslz-policies.md)
 - [Network topology and connectivity for data management and analytics](eslz-network-topology-and-connectivity.md)

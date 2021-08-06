@@ -22,12 +22,12 @@ This scenario focuses on enabling two targeted outcomes:
 
 This scenario is designed to guide the end-to-end customer journey, throughout the cloud adoption lifecycle. Delivery of the full journey requires a few key components, or guidance sets:
 
-- Cloud Adoption Framework: Managing and governing data is a lifecycle process, that starts by building on your existing cloud strategy and carries all the way through to ongoing operations management. The Cloud Adoption Framework will aid in guiding the full lifecycle for your data estate.
-- Well-Architected Framework: Workload architecture and operations have a direct impact on data. Understand how your architecture can improve management and governance of the data used by your workload.
-- Reference architectures: These reference solutions aid in accelerating deployment for many common data management and analytics solutions.
-- Best Practices: These level 300+ articles help central IT teams deploy the tools and manage the processes to ensure proper management and governance of your data.
+- Cloud Adoption Framework: managing and governing data is a lifecycle process, that starts by building on your existing cloud strategy and carries all the way through to ongoing operations management. The Cloud Adoption Framework will aid in guiding the full lifecycle for your data estate.
+- Azure Well-Architected Framework: workload architecture and operations have a direct impact on data. Understand how your architecture can improve management and governance of the data used by your workload.
+- Reference architectures: these reference solutions aid in accelerating deployment for many common data management and analytics solutions.
+- Best practices: these level 300+ articles help central IT teams deploy the tools and manage the processes to ensure proper management and governance of your data.
 - Feature Azure products: Learn more about the products that support data management and analytics in Azure.
-- Learn modules: Gain the hands-on skills required to implement, maintain, and support data management and analytics solutions.
+- Learn modules: gain the hands-on skills required to implement, maintain, and support data management and analytics solutions.
 
 ## Common customer journeys
 
@@ -39,6 +39,6 @@ This scenario is designed to guide the end-to-end customer journey, throughout t
 
 **Optimize individual workloads (Workload teams):** Workload owners should start with the Well-Architected guidance to understand the best ways to integrate data management and analytics strategies into their workloads. If the team is also supported by central IT and governance teams, this guidance will provide insights into best practices and architectures that these teams are typically accountable to deliver to accelerate your workload development.
 
-**Processes to onboard individual assets:** Use the best practices section to execute a series of processes to onboard all of your data estate into a single data management and analytics control plane.
+**Processes to onboard individual assets:** Use best practices section to execute a series of processes to onboard all of your data estate into a single data management and analytics control plane.
 
 **Implement specific Azure products:** Accelerate and improve data management and analytics capabilities by using various Azure products outlined in the featured products section.
