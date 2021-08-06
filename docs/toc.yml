@@ -321,7 +321,7 @@ items:
         - name: Transition to enterprise-scale (brownfield)
           href: ready/enterprise-scale/transition.md
         - name: Scenario-specific enterprise-scale landing zones
-          href: ready/enterprise-scale/scenario-specific-eslz.md
+          href: ready/enterprise-scale/scenario-specific-enterprise-scale-landing-zones.md
       - name: Start small and expand
         items:
         - name: CAF Migration landing zone blueprint
