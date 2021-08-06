@@ -28,7 +28,7 @@ These landing zones have been developed in the broader context of common scenari
 
 | Scenario | Description | Landing Zone |
 |---|---|---|
-|[Hybrid and multicloud](../../scenarios/hybrid/index.md)| Guidance on shaping an organizations approach to implementing a hybrid cloud strategy | [Enterprise-scale for hybrid](../../scenarios/hybrid/enterprise-scale-landing-zone.md)
+|[Hybrid and multicloud](../../scenarios/hybrid/index.md)| Guidance on shaping an organizations approach to implementing a hybrid cloud strategy | [Enterprise-scale for hybrid with Azure Arc](../../scenarios/hybrid/enterprise-scale-landing-zone.md)
 |[SAP](../../scenarios/SAP/index.md)| Guidance for migrating or adopting SAP workloads as part of your cloud strategy | [Enterprise-scale for SAP on Azure](../../scenarios/sap/enterprise-scale-landing-zone.md) |
 |[Virtual Desktop](../../scenarios/wvd/index.md)| Guidance for migrating virtual desktops, or creating new as part of a cloud-focussed productivity strategy | [Enterprise-scale for Azure Virtual Desktop](../../scenarios/wvd/enterprise-scale-landing-zone.md) |
 | [Modern Application Platform](../../scenarios/aks/index.md) | Guidance for how application services and containers can be integrated into your cloud adoption strategy |  [Enterprise-scale for AKS](../../scenarios/aks/enterprise-scale-landing-zone.md) |
