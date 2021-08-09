@@ -2,7 +2,7 @@
 title: Azure enterprise-scale for analytics and AI data lake overview
 description: Learn about enterprise-scale for analytics and AI architecture data lake overview
 author: mboswell
-ms.author: mboswell # Microsoft employees only
+ms.author: mboswell
 ms.date: 07/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

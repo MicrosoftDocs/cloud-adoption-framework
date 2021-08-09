@@ -2,7 +2,7 @@
 title: Azure Machine Learning as a data product for enterprise-scale for analytics and AI
 description: Azure Machine Learning as a data product for enterprise-scale for analytics and AI
 author: abdale
-ms.author: hamoodaleem # Microsoft employees only
+ms.author: hamoodaleem
 ms.date: 06/21/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

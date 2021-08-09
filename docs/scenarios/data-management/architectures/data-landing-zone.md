@@ -2,7 +2,7 @@
 title: Azure enterprise-scale for analytics and AI architecture data landing zone overview
 description: Learn about the Azure enterprise-scale for analytics and AI architecture data landing zone overview
 author: mboswell
-ms.author: mboswell # Microsoft employees only
+ms.author: mboswell
 ms.date: 03/03/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -131,7 +131,7 @@ An Azure Key Vault will be provisioned to store secrets relating to data landing
 
 The types of data that you'll store in the data landing zone will help determine any other services that should be here. For example, if you're storing *sensitive (personal data)* data, you might include a tokenization engine. The tokenization engine will ensure that all *sensitive (personal data)* data can be tokenized as it's ingested into the data lake.
 
-An Azure Database for MySQL database will be provisioned. The Azure Databricks engineering workspaces and Azure Databricks Analytics and Data Science workspace use it as their Hive metastore.
+An Azure Database for MySQL database will be provisioned. The Azure Databricks engineering workspaces and Azure Databricks Analytics and Data Science workspace use it as their external Apache Hive metastore.
 
 ### Shared integration
 

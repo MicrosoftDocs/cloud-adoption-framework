@@ -62,9 +62,6 @@ To learn more, see:
 
 - [Data platform operational excellence](#data-platform-operational-excellence)
 
-<!-- 1. [Data science environment](#data-science-environment)
-1. [Data science workflow and MLOps](#data-science-workflow-and-mlops) -->
-
 > [!IMPORTANT]
 > Enterprise-scale for analytics and AI recommends to use zone-redundant storage (ZRS). Zone-redundant storage (ZRS)is supported for deployment, in the **supported regions** list.
 >
@@ -173,15 +170,3 @@ For more information, see [Platform automation and DevOps](organize-data-operati
 ## Next steps
 
 [Scale data management and analytics](eslz-scale.md)
-
-<!-- ### Data Science Environment
-
-A **data science environment** following the enterprise-scale for analytics and AI, enables data scientists, business analyst and developers to benefit from many types of services, which can be quickly deployed to a [Data Product](#data-products).
-
-For further reading, see [Data Science Environment](data-science-environment.md).
-
-### Data Science Workflow and MLOps
-
-On enterprise-scale for analytics and AI platform there is a rigor process in place that allows data science teams to structure their projects and  git to share code and other artifacts.
-
-For further reading, see [Data Science Workflow and MLOps](data-science-workflow-and-mlops.md). -->

@@ -2,7 +2,7 @@
 title: Azure enterprise-scale for analytics and AI data management overview
 description: Enterprise-scale for analytics and AI architecture data management landing zone overview
 author: mboswell
-ms.author: mboswell # Microsoft employees only
+ms.author: mboswell
 ms.date: 03/03/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -71,7 +71,6 @@ Data lineage plays an important component in an enterprise-scale for analytics a
 
 One of the primary features of a data catalog is the ability to show the lineage between datasets. Azure Purview supports capturing data lineage from three adf activities: copy data, data flow, and execute SSIS package. In addition to the native integration, custom lineage reporting is also supported via Apache Atlas hooks or REST API.
 
-<!-- increase image size-->
 :::image type="content" source="../images/data-lineage.png" alt-text="Diagram of data lineage." lightbox="../images/data-lineage.png":::
 
 > [!IMPORTANT]
@@ -153,7 +152,7 @@ These contracts should give information on data validation, model, and security 
 
 ## Data lifecycle
 
-Data products may have different lifecycles. We recommend applying policies to regulate the data lifecycle. A typical pattern is that newly ingested data is used and accessed often. As the age since ingesting increases, the rate of data access decreases. Older data will see a drastic drop in usage. Your data products and entities in these products may have different lifecycles. Some data can stay unused after the initial ingestion or is rarely accessed once stored. Some datasets may expire days or months after creation, while other datasets are actively used and modified throughout their lifetimes. Most countries have regulations related to how long you are required to store data such as PII and accounting data. For example, a country might require retention of primary documentation for five years, like incoming and outgoing invoices, cash book balances, bank vouchers, and salary slips. Retention of secondary documentation for three to five years, like letters, agreements, and notes.
+Data products may have different lifecycles. We recommend applying policies to regulate the data lifecycle. A typical pattern is that newly ingested data is used and accessed often. As the age since ingesting increases, the rate of data access decreases. Older data will see a drastic drop in usage. Your data products and entities in these products may have different lifecycles. Some data can stay unused after the initial ingestion or is rarely accessed once stored. Some datasets may expire days or months after creation, while other datasets are actively used and modified throughout their lifetimes. Most countries have regulations related to how long you are required to store data such as personal data and accounting data. For example, a country might require retention of primary documentation for five years, like incoming and outgoing invoices, cash book balances, bank vouchers, and salary slips. Retention of secondary documentation for three to five years, like letters, agreements, and notes.
 
 In Azure, the data lifecycle is handled by each relevant service containing persisted data.
 

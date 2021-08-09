@@ -2,7 +2,7 @@
 title: Azure enterprise-scale for analytics and AI teams Azure Data Lake services
 description: Learn about the three data lake accounts that should be provisioned for each data landing zone. 
 author: mboswell
-ms.author: 'mboswell # Microsoft employees only'
+ms.author: mboswell
 ms.date: 08/06/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

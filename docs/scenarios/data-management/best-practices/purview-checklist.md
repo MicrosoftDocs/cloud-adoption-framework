@@ -2,7 +2,7 @@
 title: Azure Purview readiness checklist for the data management and analytics enterprise-scale scenario 
 description: Learn about the enterprise-scale for analytics and AI Azure Purview readiness checklist 
 author: zeinam
-ms.author: zeinam # Microsoft employees only
+ms.author: zeinam
 ms.date: 05/21/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

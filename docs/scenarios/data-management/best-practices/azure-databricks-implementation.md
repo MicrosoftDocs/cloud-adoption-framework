@@ -2,7 +2,7 @@
 title: Enterprise-scale for analytics and AI Azure Databricks pattern
 description: Learn about the enterprise-scale for analytics and AI Azure Databricks pattern.
 author: mboswell
-ms.author: mboswell # Microsoft employees only
+ms.author: mboswell
 ms.date: 07/30/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -104,7 +104,7 @@ In an Azure Databricks workspace deployment:
 
   As of January 2021, the new global init scripts API is in public preview. Public preview features in Azure Databricks are ready for production environments and are supported by the support team. For more information, see [Azure Databricks preview releases](/azure/databricks/release-notes/release-types).
 
-- This solution uses [Azure Database for MySQL](https://azure.microsoft.com/services/mysql/) to store the Apache ive metastore instance. This database was chosen for its cost effectiveness and its high compatibility with Apache Hive.
+- This solution uses [Azure Database for MySQL](https://azure.microsoft.com/services/mysql/) to store the Apache Hive metastore instance. This database was chosen for its cost effectiveness and its high compatibility with Apache Hive.
 
 ## Next steps
 

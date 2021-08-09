@@ -2,7 +2,7 @@
 title: Azure enterprise-scale for analytics and AI data products
 description: Learn about Azure enterprise-scale for analytics and AI data products
 author: mboswell
-ms.author: mboswell # Microsoft employees only
+ms.author: mboswell 
 ms.date: 06/08/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

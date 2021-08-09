@@ -2,7 +2,7 @@
 title: Frequently asked questions about Azure enterprise-scale for analytics and AI
 description: Frequently asked questions about enterprise-scale analytics and AI
 author: abdale
-ms.author: hamoodaleem  # Microsoft employees only
+ms.author: hamoodaleem
 ms.date: 03/03/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

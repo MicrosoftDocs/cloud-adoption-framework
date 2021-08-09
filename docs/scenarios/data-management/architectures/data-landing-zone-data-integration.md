@@ -2,7 +2,7 @@
 title: Azure enterprise-scale for analytics and AI integrations
 description: Enterprise-scale for analytics and AI integrations
 author: mboswell
-ms.author: mboswell # Microsoft employees only
+ms.author: mboswell
 ms.date: 03/03/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

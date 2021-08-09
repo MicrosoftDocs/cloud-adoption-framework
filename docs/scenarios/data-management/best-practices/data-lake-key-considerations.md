@@ -2,7 +2,7 @@
 title: Azure enterprise-scale data lake key considerations
 description: Learn about key considerations for enterprise-scale for analytics and AI architecture for Azure Data Lake Storage.
 author: mboswell
-ms.author: mboswell # Microsoft employees only
+ms.author: mboswell
 ms.date: 08/03/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

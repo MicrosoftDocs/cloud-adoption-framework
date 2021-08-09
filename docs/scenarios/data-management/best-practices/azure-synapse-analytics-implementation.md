@@ -2,7 +2,7 @@
 title: Enterprise-scale for analytics and AI Azure Synapse pattern
 description: Learn how to implement Azure Synapse Analytics with enterprise-scale for analytics and AI.
 author: mboswell
-ms.author: mboswell # Microsoft employees only
+ms.author: mboswell
 ms.date: 08/03/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

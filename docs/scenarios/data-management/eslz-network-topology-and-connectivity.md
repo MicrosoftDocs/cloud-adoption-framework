@@ -2,7 +2,7 @@
 title: Azure enterprise-scale for analytics and AI networking
 description: Learn about the network topology and connectivity for a data management and analytics Azure landing zone.
 author: BrianBlanchard
-ms.author: 'brblanch # Microsoft employees only'
+ms.author: 'brblanch
 ms.date: 06/21/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

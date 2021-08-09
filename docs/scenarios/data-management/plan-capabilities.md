@@ -2,7 +2,7 @@
 title: Building data management and analytics capabilities in Azure
 description: Building data management and analytics capabilities
 author: pratimdas
-ms.author: prda # Microsoft employees only
+ms.author: prda
 ms.date: 01/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
