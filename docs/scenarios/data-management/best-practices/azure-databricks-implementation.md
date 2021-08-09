@@ -94,7 +94,7 @@ For the Azure Databricks analytics and data science workspace:
 3. It enables workspace options specific to the Azure Databricks engineering workspace.
 
 > [!NOTE]
-> During the creation of a new data integration resource group, we'll alter the configuration of all Azure Databricks workspaces within a data landing zone. See [Data integration and data product deployment process](../eslz-platform-provisioning.md#data-integration--data-product-deployment-process) for how this is implemented with Azure Databricks shared workspaces.
+> During the creation of a new data integration resource group, we'll alter the configuration of all Azure Databricks workspaces within a data landing zone. See [Data integration and data product deployment process](../eslz-platform-provisioning.md#data-integration-and-data-product-deployment-process) for how this is implemented with Azure Databricks shared workspaces.
 
 ### External Hive metastore
 

@@ -1,4 +1,5 @@
 ---
+title: Scaling data management and analytics in Azure
 description: Learn about data management and analytics in Azure. Decide whether to use a single or multiple data landing zones to design a scalable platform.
 author: esbran
 ms.author: espen
@@ -48,7 +49,8 @@ When designing for multiple data landing zones, ensure direct communication betw
 
 Enterprise-scale for analytics and AI places a strong emphasis on central cataloging and classification to protect data and allow various groups to discover datasets.
 
-## Next steps
+## Next st
+eps
 
 - [Enterprise enrollment and Azure AD tenants for data management and analytics enterprise-scale scenario](eslz-enterprise-enrollment-and-azure-ad-tenants.md)
 - [Network topology and connectivity for data management and analytics](eslz-network-topology-and-connectivity.md)

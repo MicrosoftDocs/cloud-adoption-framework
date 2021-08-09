@@ -205,7 +205,8 @@ The following examples show how to use the Azure Purview REST API to scan data s
 
 ```HTTP
 POST https://{accountName}.scan.purview.azure.com/datasources/{dataSourceName}/scans/{newScanName}/run
-``
+```
+
 ## Next steps
 
 [Data science best practices](data-science-best-practices.md)
