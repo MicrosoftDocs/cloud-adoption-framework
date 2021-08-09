@@ -19,7 +19,7 @@ For enterprise-scale for analytics and AI, we'll focus on Azure Databricks works
 
 For every data landing zone you deploy, two shared workspaces are created.
 
-- The Azure Databricks Engineering workspace is   for ingestion and processing. This workspace connects to Azure Data Lake via Azure service principals.
+- The Azure Databricks Engineering workspace is for ingestion and processing. This workspace connects to Azure Data Lake via Azure service principals.
 - The Azure Databricks Analytics and Data Science workspace is provisioned for all data scientists and dataops teams. This workspace connects to Azure Data Lake by using Azure Active Directory (Azure AD) Pass-through Authentication. The Azure Databricks analytics and data science workspace is shared across the data landing zone with all users who have access to the workspace. Don't use this workspace for data ingestion, transformation, or load. Use the Azure Databricks engineering workspace instead.
 
 If you have an automated ingestion framework engine, the Azure Databricks engineering workspace uses both an Azure Key Vault instance created in the Azure metadata service resource group for running data ingestion pipelines from **raw** into **enriched** and an Azure Key Vault instance created in the data integration resource group for running developed engineering pipelines to transform from **raw** to **enriched**.
