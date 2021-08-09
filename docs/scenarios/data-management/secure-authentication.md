@@ -95,7 +95,7 @@ Similar to Azure RBAC general practices, the following rules should apply to ACL
 
 - **Manage access using groups.** Assign access to Azure AD groups and manage membership of groups for ongoing access management.
 - **Least privilege.** In most cases, users should have only read permission to the folders and files they need in the data lake. A managed identity or service principal, such as the one used by Azure Data Factory, has read, write, and execute permissions. Data users shouldn't have access to the storage account container.
-- **Align with data partitioning scheme.** ACL and data partition design must align to ensure effective data access control. For more information, see [Data lake partitioning](../data-lake-services.md#data-lake-partitioning).
+- **Align with data partitioning scheme.** ACL and data partition design must align to ensure effective data access control. For more information, see [Data lake partitioning](./best-practices/data-lake-services.md#data-lake-partitioning).
 
 ## Next steps
 
