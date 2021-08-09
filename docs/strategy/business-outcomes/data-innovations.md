@@ -53,7 +53,7 @@ Use cases, business cases, and technology advances all support how Azure Synapse
 ## Business cases
 
 - Build end-to-end analytics solutions with a single analytics service.
-- Use the Azure Synapse Analytics studio, which provides a unified workspace for data prep, data management, data warehousing, big data, and AI tasks.
+- Use the Azure Synapse Analytics studio, which provides a unified workspace for data prep, data management and analytics, data warehousing, big data, and AI tasks.
 - Build and manage pipeline with a no-code visual environment, automate query optimization, build proofs of concept, and use Power BI, all from the same analytics service.
 - Deliver your data insights to data warehouses and big data analytics systems.
 - For mission-critical workloads, optimize the performance of all queries with intelligent workload management, workload isolation, and limitless concurrency.
