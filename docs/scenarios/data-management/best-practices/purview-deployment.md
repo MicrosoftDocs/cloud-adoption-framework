@@ -24,7 +24,7 @@ Azure Purview is a unified data governance service. It helps organizations manag
 > [!NOTE]
 > This guidance in this section explains configurations specific to enterprise-scale for analytics and AI. It's a collection of Azure best practices to enhance your data governance using Azure Purview. The guidance compliments the official [Azure Purview documentation](/azure/purview/).
 
-One Azure Purview account is deployed inside the data management landing zone, which serves as a centralized data catalog. From the data management landing zone, Azure Purview can communicate with each data landing zone via private network connectivity using VNet peering across data management, data landing zones, and [self-hosted integration runtimes](/azure/purview/manage-integration-runtimes#:~:text=On%20the%20home%20page%20of%20Purview%20Studio%2C%20select, a%20name%20for%20your%20ir%2c%20and%20select%20create). Discovery of datasets in on-premises data stores and other public clouds is achieved by more deployments of self-hosted integration runtimes.
+One Azure Purview account is deployed inside the data management landing zone, which serves as a centralized data catalog. From the data management landing zone, Azure Purview can communicate with each data landing zone via private network connectivity using VNet peering across data management, data landing zones, and [self-hosted integration runtimes](/azure/purview/manage-integration-runtimes). Discovery of datasets in on-premises data stores and other public clouds is achieved by more deployments of self-hosted integration runtimes.
 
 ## Account setup
 
