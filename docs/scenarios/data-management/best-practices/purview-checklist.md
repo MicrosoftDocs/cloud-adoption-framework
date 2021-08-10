@@ -25,9 +25,9 @@ The **Azure Purview readiness checklist** provides high-level guidance that can 
 |Phase |Description |
 |--|--|
 |![Phase 1](../images/icons/1.png) | Plan for unified data governance, learn the pre-requisite tools and approaches needed for creating a data management environment, and [develop a plan for data management and analytics](../plan.md). |
-|![Phase 2](../images/icons/2.png) | [Build your data governance and management foundation]: Deploy your enterprise-scale for analytics [data management landing zone](../architectures/data-management-landing-zone.md) with Azure Purview. This foundation is a unified enterprise data management and data governance solution. |
-|![Phase 3](../images/icons/3.png) | [Onboard the first data landing zone]: Start with your first [data landing zone](../architectures/data-landing-zone.md) and start small. Then expand to quickly enable low-risk adoption and build toward security, governance, and compliance over time. |
-|![Phase 4](../images/icons/4.png)| [Onboard more data landing zones]: Once you deploy and evaluate your baseline architecture and align your operating model with cloud-native operations, you can enable more data landing zones.
+|![Phase 2](../images/icons/2.png) | Build your data governance and management foundation: Deploy your enterprise-scale for analytics [data management landing zone](../architectures/data-management-landing-zone.md) with Azure Purview. This foundation is a unified enterprise data management and data governance solution. |
+|![Phase 3](../images/icons/3.png) | Onboard the first data landing zone: Start with your first [data landing zone](../architectures/data-landing-zone.md) and start small. Then expand to quickly enable low-risk adoption and build toward security, governance, and compliance over time. |
+|![Phase 4](../images/icons/4.png)| Onboard more data landing zones: Once you deploy and evaluate your baseline architecture and align your operating model with cloud-native operations, you can enable more data landing zones.
 
 ## Phase 1: Planning and organizational readiness
 
