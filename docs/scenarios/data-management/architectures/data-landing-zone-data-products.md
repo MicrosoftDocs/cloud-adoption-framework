@@ -2,7 +2,7 @@
 title: Azure enterprise-scale for analytics and AI data products
 description: Learn about Azure enterprise-scale for analytics and AI data products
 author: mboswell
-ms.author: mboswell 
+ms.author: mboswell
 ms.date: 06/08/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Data products
 
-At a high level, data products are computed or polyglot persistence services that might be required depending on certain use cases. A data product is anything that drives business value, for example, reports, workbooks, bespoke database, or data API. It can use other services and technologies that aren't part of [data landing zone](data-landing-zone.md) core services. One example is reporting with niche requirements, such as compliance and tax reporting or specialized capabilities that address gaps in the baseline policies.
+At a high level, data products are computed or polyglot persistence services that might be required depending on certain use cases. A data product is anything that drives business value, for example, reports, workbooks, bespoke database, or data API. It can use other services and technologies that aren't part of [data landing zone](./data-landing-zone.md) core services. One example is reporting with niche requirements, such as compliance and tax reporting or specialized capabilities that address gaps in the baseline policies.
 
 ## Design considerations
 
@@ -143,4 +143,4 @@ A data product for analytics and data science might contain the services shown i
 
 ## Next steps
 
-[Frequently asked questions](frequently-asked-questions.md)
+[Frequently asked questions](./frequently-asked-questions.md)

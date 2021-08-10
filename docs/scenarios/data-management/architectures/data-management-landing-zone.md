@@ -90,7 +90,7 @@ See how data quality can be implemented in [Enforcing data quality](../best-prac
 
 Entity relationship models should be captured and stored in a central location, that is in the data management landing zone. It gives consumers of the data a single place to go for conceptual diagrams.
 
-[ER Studio](https://www.idera.com/er-studio-enterprise-data-modeling-and-architecture-tools) and [iServer](https://www.orbussoftware.com/data-architecture/) are used by many enterprise customers to model their datasets before ingesting.
+[ER Studio](https://www.idera.com/products/er-studio/enterprise-data-modeling) and [iServer](https://www.orbussoftware.com/solutions/enterprise-architecture/data-architecture) are used by many enterprise customers to model their datasets before ingesting.
 
 ### Industry-specific data models and Common Data Model with data lake
 
@@ -196,4 +196,4 @@ For more information, see [Connect to Azure Synapse studio using private links](
 
 ## Next steps
 
-[Enterprise-scale for analytics and AI architecture data landing zone](data-landing-zone.md)
+[Enterprise-scale for analytics and AI architecture data landing zone](./data-landing-zone.md)

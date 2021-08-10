@@ -39,7 +39,7 @@ Scalability is a key concept and a single data lake might limit scalability from
 
 - Large-scale enterprise workloads generally require significant throughput and resources. Splitting the lake physically across multiple storage accounts helps you stay within the various subscription and service quotas.
 
-  - For more information about limits, see [Scalability and performance targets](/azure/storage/common/storage-scalability-targets).
+  - For more information about limits, see [Scalability and performance targets](/azure/storage/common/scalability-targets-standard-account).
 
 > [!TIP]
 > Contact [Azure Support](https://azure.microsoft.com/support/faq/) to request higher capacity and ingress limits.
@@ -62,11 +62,11 @@ Data residency rules, or a requirement to have data close to a user base, can dr
 - Default access control list (ACL) on every dataset folder must include *read* and *execute* permissions. Execute permission is required for users to traverse a restricted folder and access files under it. Access ACL assigned to an Azure AD group will include read and execute permissions on each dataset folder.
 - Only a managed identity or a service principal should grant *write* permission to a system. Changes can be made by an ingestion, transformation, or maintenance process.
 
-For more information about access control mechanisms, see [Managing data lake access](data-lake-access.md).
+For more information about access control mechanisms, see [Managing data lake access](./data-lake-access.md).
 
 ## Next steps
 
 The next step is to review guidance about data lake zones.
 
 > [!div class="nextstepaction"]
-> [Data lake zones](data-lake-services.md)
+> [Data lake zones](./data-lake-services.md)
