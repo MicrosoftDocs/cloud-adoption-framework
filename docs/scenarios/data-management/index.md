@@ -16,7 +16,7 @@ As customers address larger, more sophisticated forms of cloud adoption, their j
 This scenario focuses on enabling two targeted outcomes:
 
 - **Analytics:** Use the cloud to deliver increasingly more mature analytics solutions. Migrate data platforms to the cloud. Democratize data using advanced visualization tools. Answer complex analytical questions with cloud-based analytics tools. Extend workloads with machine learning.
-- **Data governance:** Properly manage your data estate to ensure data quality and maturity across all cloud deployments of your data. Govern how data is classified, categorized, and used to ensure your data is protected and reliable across all cloud deployments. For more information, see [Data governance](govern.md).
+- **Data governance:** Properly manage your data estate to ensure data quality and maturity across all cloud deployments of your data. Govern how data is classified, categorized, and used to ensure your data is protected and reliable across all cloud deployments. For more information, see [Data governance](./govern.md).
 
 ## Components of the scenario
 

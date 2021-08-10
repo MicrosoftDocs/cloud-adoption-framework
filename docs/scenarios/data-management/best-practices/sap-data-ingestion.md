@@ -40,4 +40,4 @@ Our recommendation is a hybrid option comprised of several options that serve as
 
 ## Next steps
 
-[Understand the automated ingestion framework with enterprise-scale for analytics and AI in Azure](automated-ingestion-pattern.md)
+[Understand the automated ingestion framework with enterprise-scale for analytics and AI in Azure](./automated-ingestion-pattern.md)

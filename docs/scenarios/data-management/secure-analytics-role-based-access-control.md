@@ -48,4 +48,4 @@ The following best practices can help you to get started with RBAC:
 
 ## Next steps
 
-[Automating security](security-provisioning.md)
+[Automating security](./security-provisioning.md)

@@ -17,8 +17,8 @@ However, it's important to understand the decisions made by the cloud platform t
 
 ## Identity and access management
 
-Review [identity and access management considerations](eslz-identity-and-access-management.md). These considerations can help you understand how the Azure AD tenant is applied in the design of authentication and authorization solutions. You can also evaluate the [resource organization considerations](eslz-resource-organization.md) to understand how the enrollment might be organized into management groups, subscriptions, and resource groups.
+Review [identity and access management considerations](./eslz-identity-and-access-management.md). These considerations can help you understand how the Azure AD tenant is applied in the design of authentication and authorization solutions. You can also evaluate the [resource organization considerations](./eslz-resource-organization.md) to understand how the enrollment might be organized into management groups, subscriptions, and resource groups.
 
 ## Next steps
 
-[Identity and access management](eslz-identity-and-access-management.md)
+[Identity and access management](./eslz-identity-and-access-management.md)

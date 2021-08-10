@@ -161,4 +161,4 @@ The data management landing zone should connect to catalog the data in the data 
 
 - ## Next steps
 
-[Understand how to organize data operations team members](organize.md)
+[Understand how to organize data operations team members](./organize.md)

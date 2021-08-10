@@ -44,4 +44,4 @@ Build a strong data strategy. Choose the right tools and technology as the backb
 The next step is to review guidance on Azure Synapse Analytics implementation.
 
 > [!div class="nextstepaction"]
-> [Azure Synapse Analytics implementation](azure-synapse-analytics-implementation.md)
+> [Azure Synapse Analytics implementation](./azure-synapse-analytics-implementation.md)

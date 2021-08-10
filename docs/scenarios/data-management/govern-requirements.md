@@ -40,9 +40,9 @@ There needs to be a way to classify data to understand its level of confidential
 
 An example of these schemes is:
 
-[!INCLUDE [data-confidentiality-classification-scheme](includes/data-confidentiality-classification-scheme.md)]
+[!INCLUDE [data-confidentiality-classification-scheme](./includes/data-confidentiality-classification-scheme.md)]
 
-[!INCLUDE [data-retention-classification-scheme](includes/data-retention-classification-scheme.md)]
+[!INCLUDE [data-retention-classification-scheme](./includes/data-retention-classification-scheme.md)]
 
 Automate the data confidentiality and data retention classification process using the classes defined in each scheme is needed to consistently label data across the distributed data landscape. The automation will enable it to be consistently and correctly governed. Then, define rules and policies for each class in the classification scheme to specify how to govern data according to its classification.
 
@@ -93,7 +93,7 @@ Associate these policies and rules with each class in the data governance classi
 
 Another central requirement in governing data is master data management. Master data is the most widely shared data in any organization and includes core data entities. Core data entities include customer, supplier, materials, employee, and asset. It also includes financial chart of accounts data that is found in different financial applications. Because master data is so widely shared, its application agnostic. It's needed by both operational transaction processing applications and analytical systems. Keeping this data synchronized can resolve so many data errors and process errors. So, maintaining it centrally via a common process and synchronizing every system that needs it, is the ideal situation. Also, governance is needed over who is allowed to maintain it and where that maintenance needs to happen.
 
-:::image type="content" source="images/master-data-management.png" alt-text="Diagram of master data management.":::
+:::image type="content" source="./images/master-data-management.png" alt-text="Diagram of master data management.":::
 
 The same applies to reference data such as code sets and financial markets data. In this case, standardization and synchronization of code sets is known as reference data management, which is also a requirement.
 
@@ -101,13 +101,13 @@ The same applies to reference data such as code sets and financial markets data.
 
 Finally, there's a requirement for metadata lineage. You can use an audit trail to know where data originated and how it has been transformed on route to a report or a data store. You can use metadata to trace who or what is maintaining data, including when and where it occurs.
 
-:::image type="content" source="images/data-lineage.png" alt-text="Diagram of data lineage.":::
+:::image type="content" source="./images/data-lineage.png" alt-text="Diagram of data lineage.":::
 
 ## Summary of what is needed for end-to-end data governance
 
 You need an end-to-end solution that can govern data throughout its lifecycle across data stores in the edge, multiple clouds, and the datacenter.
 
-:::image type="content" source="images/data-governance-framework.png" alt-text="Diagram of data governance framework.":::
+:::image type="content" source="./images/data-governance-framework.png" alt-text="Diagram of data governance framework.":::
 
 Your data governance solution should have several components:
 
@@ -121,4 +121,4 @@ Your data governance solution should have several components:
 
 ## Next steps
 
-[Components needed for data governance](govern-components.md)
+[Components needed for data governance](./govern-components.md)

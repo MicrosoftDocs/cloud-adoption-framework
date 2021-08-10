@@ -99,4 +99,4 @@ Similar to Azure RBAC general practices, the following rules should apply to ACL
 
 ## Next steps
 
-[Authorization for data management and analytics](secure-analytics-role-based-access-control.md)
+[Authorization for data management and analytics](./secure-analytics-role-based-access-control.md)

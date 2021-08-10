@@ -2,7 +2,7 @@
 title: Azure Purview deployment best practices for data management and analytics enterprise-scale scenario
 description: Azure Purview best practices for account setup, networking, name resolution, authentication of data sources, roles, and access control.
 author: zeinam
-ms.author: zeinam 
+ms.author: zeinam
 ms.date: 05/21/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Azure Purview deployment best practices for data management and analytics enterprise-scale scenario
 
-The [data management landing zone](../architectures/data-management-landing-zone.md) is responsible for the governance of the enterprise-scale for analytics and AI platform. It relies on [Azure Purview](https://azure.microsoft.com/services/purview) to provide data management capabilities:
+The [data management landing zone](../architectures/data-management-landing-zone.md) is responsible for the governance of the enterprise-scale for analytics and AI platform. It relies on [Azure Purview](https://azure.microsoft.com/services/purview/) to provide data management capabilities:
 
 - [Data catalog](../architectures/data-management-landing-zone.md#data-catalog)
 - [Data classification](../architectures/data-management-landing-zone.md#data-classification)
@@ -91,10 +91,10 @@ We recommend enabling private endpoints for other [data sources inside your land
 
 DNS resolution for private endpoints should be handled through central Azure Private DNS zones. The following private DNS zones are deployed automatically in the Azure Purview deployment in the data management landing zone:
 
-- privatelink.purview.azure.com
-- privatelink.blob.core.windows.net
-- privatelink.queue.core.windows.net
-- privatelink.servicebus.windows.net
+- `privatelink.purview.azure.com`
+- `privatelink.blob.core.windows.net`
+- `privatelink.queue.core.windows.net`
+- `privatelink.servicebus.windows.net`
 
 :::image type="content" source="../images/purview-name-resolution.png" alt-text="Diagram of high Level name resolution architecture." lightbox="../images/purview-name-resolution.png":::
 
@@ -185,7 +185,7 @@ Azure Purview has several built-in RBAC roles such as *Purview Data Reader*, *Pu
 
 For more information about Azure Purview catalog roles, see [Role-based access control in Azure Purview's data plane](/azure/purview/catalog-permissions)
 
-Once the data management landing zone deployment is complete, use the least privilege model to provide access to view and manage data in Azure Purview. Assign roles to Azure Purview resource using [Azure role-based access control (RBAC)](/azure/role-based-access-control).
+Once the data management landing zone deployment is complete, use the least privilege model to provide access to view and manage data in Azure Purview. Assign roles to Azure Purview resource using [Azure role-based access control (RBAC)](/azure/role-based-access-control/).
 
 Review the following list of personas involved in an enterprise-scale for analytics and AI deployment. Assign them the relevant Azure Purview roles so they can contribute in the success of the program:
 

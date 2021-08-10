@@ -17,7 +17,7 @@ This article builds on the Plan methodology. It has specific guidance for data e
 
 ## Data estate rationalization
 
-Much of the guidance in the Plan methodology focuses on the [five Rs of rationalizing your digital estate](../../digital-estate/5-rs-of-rationalization.md). This scenario narrows the primary focus of rationalization to the **data estate**, which is a subset of the overall digital estate. This plan will also look broader and deeper at the data estate than you might in other plans. Specifically, it must include plans for your overall analytics and [data governance](govern.md) required to support the desired maturity.
+Much of the guidance in the Plan methodology focuses on the [five Rs of rationalizing your digital estate](../../digital-estate/5-rs-of-rationalization.md). This scenario narrows the primary focus of rationalization to the **data estate**, which is a subset of the overall digital estate. This plan will also look broader and deeper at the data estate than you might in other plans. Specifically, it must include plans for your overall analytics and [data governance](./govern.md) required to support the desired maturity.
 
 ### Strategic initiatives
 
@@ -89,7 +89,7 @@ Center of excellence can assist with:
 - Deep technical skills in key technologies
 - Active participation and evangelizing in communities of practice
 
-![Diagram of the strategy cycle.](images/strategy-cycle.png)
+![Diagram of the strategy cycle.](./images/strategy-cycle.png)
 
 ### Adopting agile delivery method
 
@@ -101,6 +101,6 @@ Agility is about thinking through how to understand what's going on in your curr
 
 The following articles can guide your cloud adoption journey and help you succeed in the cloud adoption scenario.
 
-- [Review your environment or Azure landing zones](ready.md)
-- [Govern data management and analytics](govern.md)
-- [Secure data management and analytics](secure.md)
+- [Review your environment or Azure landing zones](./ready.md)
+- [Govern data management and analytics](./govern.md)
+- [Secure data management and analytics](./secure.md)

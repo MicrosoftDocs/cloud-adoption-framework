@@ -53,6 +53,6 @@ Here we see the entire company using a data-driven culture, frameworks and stand
 
 The following list of articles will take you to guidance to help you be successful in the cloud adoption scenario.
 
-- [Review your environment or Azure landing zones](ready.md)
-- [Govern data management and analytics](govern.md)
-- [Secure data management and analytics](secure.md)
+- [Review your environment or Azure landing zones](./ready.md)
+- [Govern data management and analytics](./govern.md)
+- [Secure data management and analytics](./secure.md)
