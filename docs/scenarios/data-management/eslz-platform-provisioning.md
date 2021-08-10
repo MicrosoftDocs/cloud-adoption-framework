@@ -35,7 +35,7 @@ The data landing zone operations team can now change or add Azure Resource Manag
 
 This workflow can be automated using multiple service sets on the Azure platform. Handle some of the steps, such as renaming parameters in parameter files, using CI/CD pipelines. Other steps can be executed using other workflow orchestration tools such as Logic Apps.
 
-![Diagram of forked DevOps model.](images/forked-dev-ops.png)
+![Diagram of forked DevOps model.](./images/forked-dev-ops.png)
 
 The forking pattern allows teams to update their templates from the original templates used to fork them. Also, if improvements or new features are implemented in the template repositories, operations teams can pull them into their fork.
 
@@ -50,7 +50,7 @@ Adopt best practices for repositories, such as:
 > [!TIP]
 > Coordinate activities between teams to ensure that improvements or new features in the original templates are replicated in all data landing zone instances. Operations teams can pull original template changes into their fork.
 
-![Diagram of a data landing zone automation process.](images/data-landing-zone-auto-process.png)
+![Diagram of a data landing zone automation process.](./images/data-landing-zone-auto-process.png)
 
 The onboarding process is separate from the data landing zone deployment process. This separation is based on the assumption that most organizations have a standard Azure subscription deployment process as part of their cloud operating model. The onboarding process deploys standard corporate components (for example using a third-party IT Service Management tool). Data landing zone-specific components are deployed next.
 
@@ -75,7 +75,7 @@ After a data landing zone has been created, onboarding can start for the data in
 
 Deployment is done either directly using DevOps tooling or called via pipelines/workflows exposed as APIs. Similar to the data landing zone, deployment begins with forking the original data integration or data product repository.
 
-![Diagram of the integration and product deployment automation.](images/integration-product-deployment-automation.png)
+![Diagram of the integration and product deployment automation.](./images/integration-product-deployment-automation.png)
 
 1. The user makes a request for new data integration or data product services.
 1. The workflow process requests approval from the data platform or data landing zone operations team.
@@ -92,7 +92,7 @@ Deployment is done either directly using DevOps tooling or called via pipelines/
 
 The above patterns provide control, agility, self-service, and lifecycle management of policies.
 
-![Diagram of the overall DataOps model.](images/overall-data-ops-model.png)
+![Diagram of the overall DataOps model.](./images/overall-data-ops-model.png)
 
 At the start of the project, the data platform has one Azure DevOps project with one or more Azure Boards. Individual DevOps teams focus on:
 
@@ -123,5 +123,5 @@ To control the deployment of data integration and data product services, follow 
 
 ## Next steps
 
-- [Deployment templates](eslz-deployment-templates.md)
+- [Deployment templates](./eslz-deployment-templates.md)
 - [An introduction to Azure Automation](/azure/automation/automation-intro)

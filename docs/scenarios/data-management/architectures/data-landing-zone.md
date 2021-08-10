@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Enterprise-scale for analytics and AI architecture data landing zone
 
-Data landing zones are connected to the [data management landing zone](data-management-landing-zone.md) by virtual network (VNet) peering. They're considered a [landing zone](/azure/cloud-adoption-framework/ready/landing-zone/) related to the enterprise-scale architecture.
+Data landing zones are connected to the [data management landing zone](./data-management-landing-zone.md) by virtual network (VNet) peering. They're considered a [landing zone](/azure/cloud-adoption-framework/ready/landing-zone/) related to the enterprise-scale architecture.
 
 > [!IMPORTANT]
 > Before provisioning a data landing zone, you should have your DevOps and CI/CD operating model in place and a data management landing zone deployed.
@@ -152,7 +152,7 @@ To enable the resource group, you need to:
 
 For each data landing zone, a shared Synapse Analytics workspace and Azure Databricks workspaces get provisioned. The workspaces are for use by everyone in the data landing zone for exploratory purposes.
 
-:::image type="content" source="../images/data-landing-zone-shared-products-rg.png" alt-text="Diagram of data landing zone shared products resoure group.":::
+:::image type="content" source="../images/data-landing-zone-shared-products-rg.png" alt-text="Diagram of data landing zone shared products resource group.":::
 
 #### Azure Databricks in shared products
 
@@ -183,7 +183,7 @@ Azure Synapse Analytics is the provisioned integrated analytics service that acc
 A data integration resource group, is responsible for data ingestion and enrichment only from external sources such as metrics, finance, and CRM. This layer can operate in both real-time, batch and micro-batch.
 
 > [!IMPORTANT]
-> To learn more about each of the services deployed in the data integration resource group, see [Data integrations](data-landing-zone-data-integration.md).
+> To learn more about each of the services deployed in the data integration resource group, see [Data integrations](./data-landing-zone-data-integration.md).
 >
 
 ## Data products layer
@@ -194,7 +194,7 @@ A data landing zone can have multiple data products. You can create the data pro
 
 The resource group for a data product includes all the service required to make that data product. For example, there's a requirement to have an Azure Database for MySQL, that's used by a visualization tool. The data must be ingested and transformed before landing into the MySQL database. You can deploy an Azure Data Factory and Azure Database for MySQL into the data product resource group.
 
-For more information on how to onboard data products, see [Data products](data-landing-zone-data-products.md). The guidance explains the process to create the services and resource groups.
+For more information on how to onboard data products, see [Data products](./data-landing-zone-data-products.md). The guidance explains the process to create the services and resource groups.
 
 ## Visualization layer
 
@@ -211,4 +211,4 @@ This resource group could host third-party virtual machines for services such as
 
 ## Next steps
 
-[Data integrations](data-landing-zone-data-integration.md)
+[Data integrations](./data-landing-zone-data-integration.md)

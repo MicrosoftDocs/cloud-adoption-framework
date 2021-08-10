@@ -35,4 +35,4 @@ When thinking about enterprise-scale analytics, consider these design recommenda
 
 - [Management and monitoring](/azure/cloud-adoption-framework/ready/enterprise-scale/management-and-monitoring)
 - [Create a Log Analytics workspace in the Azure portal](/azure/azure-monitor/logs/quick-create-workspace)
-- [Management and monitoring for data management and analytics](eslz-business-continuity-and-disaster-recovery.md)
+- [Management and monitoring for data management and analytics](./eslz-business-continuity-and-disaster-recovery.md)

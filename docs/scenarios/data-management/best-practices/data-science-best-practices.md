@@ -2,7 +2,7 @@
 title: Understand best practices for data science projects with enterprise-scale for analytics and AI in Azure
 description: Learn about best practices for data science projects with enterprise-scale for analytics and AI in Azure.
 author: abdale
-ms.author: hamoodaleem 
+ms.author: hamoodaleem
 ms.date: 08/06/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -74,19 +74,19 @@ Data science projects can be simplified and accelerated if certain artifacts and
 
 These artifacts should include:
 
-**Sample notebooks.** that show how to:
+- Sample notebooks that show how to:
 
-    - Load, mount, and work with datasets.
-    - Log metrics and parameters.
-    - Submit training jobs to compute clusters.
+  - Load, mount, and work with datasets.
+  - Log metrics and parameters.
+  - Submit training jobs to compute clusters.
 
-**Artifacts.** required for operationalization:
+- Artifacts required for operationalization:
 
-    - Sample Azure Machine Learning pipelines
-    - Sample Azure Pipelines
-    - More scripts required to execute pipelines
+  - Sample Azure Machine Learning pipelines
+  - Sample Azure Pipelines
+  - More scripts required to execute pipelines
 
-**Documentation.**
+- Documentation.
 
 ### Use well-designed artifacts to operationalize pipelines
 
@@ -131,4 +131,4 @@ The following purposes apply to each folder in the repository:
 
 ## Next steps
 
-[Azure Machine Learning as a data product](azure-machine-learning.md)
+[Azure Machine Learning as a data product](./azure-machine-learning.md)

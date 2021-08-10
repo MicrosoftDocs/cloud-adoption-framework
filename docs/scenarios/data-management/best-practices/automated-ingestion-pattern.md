@@ -209,4 +209,4 @@ POST https://{accountName}.scan.purview.azure.com/datasources/{dataSourceName}/s
 
 ## Next steps
 
-[Data science best practices](data-science-best-practices.md)
+[Data science best practices](./data-science-best-practices.md)

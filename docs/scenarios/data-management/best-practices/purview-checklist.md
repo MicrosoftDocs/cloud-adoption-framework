@@ -1,6 +1,6 @@
 ---
-title: Azure Purview readiness checklist for the data management and analytics enterprise-scale scenario 
-description: Learn about the enterprise-scale for analytics and AI Azure Purview readiness checklist 
+title: Azure Purview readiness checklist for the data management and analytics enterprise-scale scenario
+description: Learn about the enterprise-scale for analytics and AI Azure Purview readiness checklist
 author: zeinam
 ms.author: zeinam
 ms.date: 05/21/2021
@@ -78,7 +78,7 @@ The **Azure Purview readiness checklist** provides high-level guidance that can 
 - Prepare your Azure subscription to deploy the data management landing zone with Azure Purview.
   - Define which subscription will be used.
   - Register required Azure resource providers.
-  - Review and update the Azure Policy assigned to allow deployment of Azure Storage, Azure eventhub namespace, and Azure Purview accounts.
+  - Review and update the Azure Policy assigned to allow deployment of Azure Storage, Azure Event Hubs namespace, and Azure Purview accounts.
   - Validate if the Azure Purview account has access to a data source subscription to register and scan data sources.
   - If needed, assign required access to Key Vault secrets to Azure Purview account's managed identity.
   - For on-premises and infrastructure as a service (IaaS) data sources, create credentials and map to Key Vault's secrets in Azure Purview.

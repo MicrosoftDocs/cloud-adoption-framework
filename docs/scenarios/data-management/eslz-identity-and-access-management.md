@@ -140,8 +140,8 @@ We recommend that you use Azure AD groups to secure database objects instead of 
 
 This approach also gives a single management location and allows reviewing access rights inside the Azure Graph.
 
-For more details on how to drive a security for data management landing zones and data landing zones is managing your data estate, see [Security provisioning](security-provisioning.md).
+For more details on how to drive a security for data management landing zones and data landing zones is managing your data estate, see [Security provisioning](./security-provisioning.md).
 
 ## Next steps
 
-[Network topology and connectivity for an data management and analytics](eslz-network-topology-and-connectivity.md)
+[Network topology and connectivity for an data management and analytics](./eslz-network-topology-and-connectivity.md)

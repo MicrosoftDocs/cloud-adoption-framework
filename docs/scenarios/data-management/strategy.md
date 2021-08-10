@@ -47,7 +47,7 @@ Throughout your business intelligence, analytics and AI maturity journey, there 
 
 ## Key themes
 
-![Diagram of key themes.](images/key-themes.png)
+![Diagram of key themes.](./images/key-themes.png)
 
 Carefully analyze the above key themes and how they relate to important facets of a coherent data strategy:
 
@@ -71,11 +71,11 @@ With data governance, there has to be the right balance in the decentralized wor
 
 In the absence of a well thought-out data strategy, there's a clear need to just "get going" and quickly start demonstrating value back to business. In this pursuit, acting on the above key themes or using them as strategic principles wrapped in a framework can address current business problems. It can also help the formation of a holistic data strategy, in an iterative way with validation, and still yield timely results.
 
-For more information, see [What is data governance?](govern.md).
+For more information, see [What is data governance?](./govern.md).
 
 ### Iterative data strategy validation framework
 
-![Diagram of the iterative data strategy validation framework.](images/data-strategy-framework.png)
+![Diagram of the iterative data strategy validation framework.](./images/data-strategy-framework.png)
 
 Business and technology leaders need to develop the mindset and strategies required to generate value from data and scale quickly in a simplified structured manner.
 
@@ -107,7 +107,7 @@ Using data to build better products and higher value services as a point of comp
 
 With data governance in mind, the following diagram shows the essential stages for the data lifecycle:
 
-![Diagram of the data lifecycle.](images/data-management-and-quality.png)
+![Diagram of the data lifecycle.](./images/data-management-and-quality.png)
 
 An effective data strategy must have provisions for data governance. They're mutually inclusive, but not the same thing.
 
@@ -161,7 +161,7 @@ To further collaboration, we also open-sourced many tools such as interpret mach
 
 The pivot to becoming a data-driven organization is fundamental to deliver competitive advantage in the new normal. We want to help our customers shift from an application only approach to an application and data-led approach, helping to create an end-to-end data strategy that can ensure repeatability and scalability across current and future use cases that impact business outcomes.
 
-![Diagram of unlocking innovation.](images/data-strategy-innovation.png)
+![Diagram of unlocking innovation.](./images/data-strategy-innovation.png)
 
 ## Commitment
 
@@ -178,7 +178,7 @@ There are two key strategic processes that will help to deliver successfully in 
 - Formation of a center of excellence
 - Adoption of an agile delivery method
 
-For more information, see [Building your plan](plan.md).
+For more information, see [Building your plan](./plan.md).
 
 ## Deliver value
 
@@ -188,7 +188,7 @@ When you deliver data products against the set-out success criteria in a standar
 
 The following articles can guide your cloud adoption journey and help you succeed in the cloud adoption scenario.
 
-- [Plan for data management and analytics](plan.md)
-- [Review your environment or Azure landing zones](ready.md)
-- [Govern data management and analytics](govern.md)
-- [Secure data management and analytics](secure.md)
+- [Plan for data management and analytics](./plan.md)
+- [Review your environment or Azure landing zones](./ready.md)
+- [Govern data management and analytics](./govern.md)
+- [Secure data management and analytics](./secure.md)

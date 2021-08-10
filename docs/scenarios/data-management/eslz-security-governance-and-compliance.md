@@ -80,7 +80,7 @@ Advanced Threat Protection is part of the advanced data security offering, which
 
 ## Networking
 
-The enterprise-scale for analytics and AI prescribed view is to use Azure private endpoints for all PaaS services and not use public IPs for all infrastructure as a service (IaaS) services. For more information, see [Enterprise-scale for analytics and AI networking](eslz-network-topology-and-connectivity.md).
+The enterprise-scale for analytics and AI prescribed view is to use Azure private endpoints for all PaaS services and not use public IPs for all infrastructure as a service (IaaS) services. For more information, see [Enterprise-scale for analytics and AI networking](./eslz-network-topology-and-connectivity.md).
 
 ## Compliance and governance design recommendations
 
@@ -94,7 +94,7 @@ Azure Policy helps bring your resources into compliance through bulk remediation
 
 ### Automate deployments
 
-You can save time and reduce errors by automating deployments. Reduce the deployment complexity of end-to-end data landing zones, data integrations, and data products by creating reuseable code templates. This minimizes the time to deploy or redeploy solutions. For more information, see [Understand DevOps automation for the data management and analytics scenario in Azure](organize-data-operations.md)
+You can save time and reduce errors by automating deployments. Reduce the deployment complexity of end-to-end data landing zones, data integrations, and data products by creating reuseable code templates. This minimizes the time to deploy or redeploy solutions. For more information, see [Understand DevOps automation for the data management and analytics scenario in Azure](./organize-data-operations.md)
 
 ### Lock resources for production workloads
 
@@ -116,5 +116,5 @@ The following recommendations apply to various compliance and governance scenari
 
 ## Next steps
 
-- [Policies](eslz-policies.md)
-- [Network topology and connectivity for data management and analytics](eslz-network-topology-and-connectivity.md)
+- [Policies](./eslz-policies.md)
+- [Network topology and connectivity for data management and analytics](./eslz-network-topology-and-connectivity.md)

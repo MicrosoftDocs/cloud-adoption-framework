@@ -48,4 +48,4 @@ Publishing contracts centrally allows providers and consumers to resolve their d
 
 ## Next steps
 
-[Secure data management and analytics](secure.md)
+[Secure data management and analytics](./secure.md)

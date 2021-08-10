@@ -71,11 +71,11 @@ For end-to-end protection of your blob data, we recommend enabling the following
 
 Store business-critical data objects in a write once, read many (WORM) state with Azure Blob Storage. This state makes the data non-erasable and non-modifiable for a user-specified interval. During the retention interval, blobs can be created and read but can't be modified or deleted. Immutable storage is available for general-purpose v1, general-purpose v2, BlobStorage, and BlockBlobStorage accounts in all Azure regions.
 
-For information about how to set and clear legal holds or create a time-based retention policy using the Azure portal, PowerShell, or Azure CLI, see [Set and manage immutability policies for Blob Storage](/azure/storage/blobs/storage-blob-immutability-policies-manage).
+For information about how to set and clear legal holds or create a time-based retention policy using the Azure portal, PowerShell, or Azure CLI, see [Set and manage immutability policies for Blob Storage](/azure/storage/blobs/immutable-policy-configure-version-scope).
 
 Immutable storage helps healthcare organizations, financial institutions, and related industries. Particularly for broker-dealer organizations to store data securely. Immutable storage can also be used in any scenario to protect critical data against modification or deletion.
 
-For more information, see [How immutable storage for Azure Blob Storage works](/azure/storage/blobs/storage-blob-immutable-storage#about-immutable-blob-storage).
+For more information, see [How immutable storage for Azure Blob Storage works](/azure/storage/blobs/immutable-storage-overview#about-immutable-blob-storage#about-immutable-blob-storage).
 
 Depending on your industry, we recommend that you assess immutable storage for use in the raw layer of the data lake.
 
@@ -83,7 +83,7 @@ Depending on your industry, we recommend that you assess immutable storage for u
 
 In a data landing zone, all the monitoring should be sent to the [enterprise-scale management subscription](../../../ready/enterprise-scale/management-and-monitoring.md) for analysis.
 
-Learn how Azure Storage collects the same kinds of monitoring data as other Azure resources in [Monitoring Azure resources with Azure Monitor](/azure/azure-monitor/insights/monitor-azure-resource). For more information on the logs and metrics created by Azure Storage, see [Monitoring Azure Blob Storage](/azure/storage/blobs/monitor-blob-storage).
+Learn how Azure Storage collects the same kinds of monitoring data as other Azure resources in [Monitoring Azure resources with Azure Monitor](/azure/azure-monitor/essentials/monitor-azure-resource). For more information on the logs and metrics created by Azure Storage, see [Monitoring Azure Blob Storage](/azure/storage/blobs/monitor-blob-storage).
 
 Log entries are created only if there are requests made against the service endpoint.
 
@@ -110,4 +110,4 @@ All other failed anonymous requests aren't logged.
 
 ## Next steps
 
-- [Understanding access control and data lake configurations in Azure Data Lake Storage Gen2](data-lake-access.md)
+- [Understanding access control and data lake configurations in Azure Data Lake Storage Gen2](./data-lake-access.md)

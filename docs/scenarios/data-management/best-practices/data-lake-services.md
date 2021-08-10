@@ -1,6 +1,6 @@
 ---
 title: Azure enterprise-scale for analytics and AI teams Azure Data Lake services
-description: Learn about the three data lake accounts that should be provisioned for each data landing zone. 
+description: Learn about the three data lake accounts that should be provisioned for each data landing zone.
 author: mboswell
 ms.author: mboswell
 ms.date: 08/06/2021
@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Data lake landing zones
 
-It's important to pre-plan the structure of your data before you land it into a data lake. This planning then allows security, partitioning, and processing to be used effectively. The [three data lakes](data-lake-overview.md#the-three-data-lakes) outlines a starting point for enterprise-scale for analytics and AI.
+It's important to pre-plan the structure of your data before you land it into a data lake. This planning then allows security, partitioning, and processing to be used effectively. The [three data lakes](./data-lake-overview.md#the-three-data-lakes) outlines a starting point for enterprise-scale for analytics and AI.
 
 ## Overview
 

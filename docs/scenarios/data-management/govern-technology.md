@@ -22,7 +22,7 @@ In the context of technology needed for end-to-end data governance, Microsoft pr
 
 The first step in data governance is to create a common business vocabulary of common data names and definitions describing logical data entities that can be shared across the enterprise. For example, customer, account, product, supplier, orders, payments, and returns. Once you've created a common business vocabulary, it becomes possible to create these common data assets. You can store them where their reuse can be maximized to drive consistency everywhere.
 
-:::image type="content" source="images/common-data-model.png" alt-text="Diagram of Common Data Model." lightbox="images/common-data-model.png":::
+:::image type="content" source="./images/common-data-model.png" alt-text="Diagram of Common Data Model." lightbox="images/common-data-model.png":::
 
 The Common Data Model is an open, prebuilt set of common business entities and activities used across a business. The Common Data Model can be used to shortcut the creation of your common business vocabulary.
 
@@ -46,7 +46,7 @@ Development of simple or comprehensive extract, transform, load (ETL) and extrac
 
 Azure Data Factory can be used to implement and manage a hybrid environment, which includes connectivity to on-premises, cloud, edge streaming, and software as a service (SaaS) data, in a secure and consistent way.
 
-:::image type="content" source="images/data-factory-wrangling-data-flows.png" alt-text="Diagram of data factory wrangling data flows." lightbox="images/data-factory-wrangling-data-flows-zoom.png":::
+:::image type="content" source="./images/data-factory-wrangling-data-flows.png" alt-text="Diagram of data factory wrangling data flows." lightbox="images/data-factory-wrangling-data-flows-zoom.png":::
 
 Azure Data Factory wrangling data flows enable business users to make use of the platform to visually discover, explore, and prepare data at scale without writing code. The Azure Data Factory capability is similar to Microsoft Excel Power Query or Microsoft Power BI data flows. Business users use a spreadsheet style user interface with dropdown lists to transform, prepare, and integrate data.
 
@@ -66,14 +66,14 @@ With the Azure Purview data insights, data officers and security officers can ge
 
 In the context of data governance, these technologies can be combined to produce trusted reusable data assets.
 
-:::image type="content" source="images/data-cataloging.png" alt-text="Diagram of data landing zones in enterprise-scale for analytics and AI.":::
+:::image type="content" source="./images/data-cataloging.png" alt-text="Diagram of data landing zones in enterprise-scale for analytics and AI.":::
 
 Data in disparate registered data sources across the data landscape can be ingested into Azure Data Lake Storage. It can be integrated using Azure Data Factory to create trusted, commonly understood, reusable Common Data Model data assets. The assets can be persisted back in the data lake published in Azure Purview.
 
-:::image type="content" source="images/common-infrastructure.png" alt-text="Diagram of common infrastructure.":::
+:::image type="content" source="./images/common-infrastructure.png" alt-text="Diagram of common infrastructure.":::
 
 Everything that is underpinned by Azure Data Lake Storage and can then make use of trusted, commonly understood Common Data Model described data assets. The goal is build once, publish in a data marketplace (Azure Purview), and reuse everywhere.
 
 ## Next steps
 
-[Manage master data](govern-master-data.md)
+[Manage master data](./govern-master-data.md)

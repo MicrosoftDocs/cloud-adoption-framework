@@ -59,4 +59,4 @@ The following table summarizes the teams involved in an enterprise-scale for ana
 
 ## Next steps
 
-[Provisioning the enterprise-scale for analytics and AI platform](eslz-platform-provisioning.md)
+[Provisioning the enterprise-scale for analytics and AI platform](./eslz-platform-provisioning.md)

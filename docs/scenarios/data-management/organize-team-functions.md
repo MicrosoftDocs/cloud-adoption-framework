@@ -14,7 +14,7 @@ ms.custom: think-tank, e2e-data
 
 For the data management and analytics scenario, we recommend by moving teams like ingest, processing, analysis, consumption, and visualization from working in horizontally siloed teams to agile vertical cross domain teams in each tier. Platform teams like data platform operations and platform operations are grouped together in a common platform group.
 
-![Diagram of the data management and analytics scenario teams.](images/enterprise-scale-analytics-ai-teams.png)
+![Diagram of the data management and analytics scenario teams.](./images/enterprise-scale-analytics-ai-teams.png)
 
 ## Platform group
 
@@ -74,7 +74,7 @@ Data landing zone ops supports integration ops and data product teams to create 
 
 ### Adhere to the Azure Well-Architected Framework
 
-Data landing zone ops is responsible for the data landing zone, and it's recommended for the team to be proficient in the [Azure Well-Architected Framework](/azure/architecture/framework), which provides guidance on cost optimization, reliability, and security.
+Data landing zone ops is responsible for the data landing zone, and it's recommended for the team to be proficient in the [Azure Well-Architected Framework](/azure/architecture/framework/), which provides guidance on cost optimization, reliability, and security.
 
 ### Business as usual
 

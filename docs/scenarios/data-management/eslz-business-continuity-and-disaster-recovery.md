@@ -13,7 +13,7 @@ ms.subservice: ready
 
 When you design architecture for a cloud service, consider your availability requirements and how to respond to potential interruptions in the service. An issue could be localized to the specific instance or region-wide. Having plans for both is important. Depending on your recovery time objective and the recovery point objective, you might choose an aggressive strategy for high availability and disaster recovery.
 
-High availability and disaster recovery can sometimes be combined. The two areas have slightly different strategies, especially when it comes to data. To learn more, see [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/) and [reliability overview](/azure/architecture/framework/resiliency/overview).
+High availability and disaster recovery can sometimes be combined. The two areas have slightly different strategies, especially when it comes to data. To learn more, see the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/) and its [reliability principles](/azure/architecture/framework/reliability/principles).
 
 Instead of trying to prevent failures, accept up front that failures can and do happen. Minimize the effects of any single failing component in the lifecycle. Your tolerance for cost, recovery point objective, and recovery time objective determine the type of solution to implement.
 
@@ -75,4 +75,4 @@ For an overview of business continuity with Azure Synapse Analytics, see [High a
 
 ## Next steps
 
-[Platform automation and Azure DevOps data management and analytics](eslz-platform-automation-and-devops.md)
+[Platform automation and Azure DevOps data management and analytics](./eslz-platform-automation-and-devops.md)

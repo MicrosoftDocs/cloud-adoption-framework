@@ -39,4 +39,4 @@ The platform group should follow the best practices outlined in this section to 
 
 ## Next steps
 
-[Organize for effective data operations](organize-data-operations.md)
+[Organize for effective data operations](./organize-data-operations.md)

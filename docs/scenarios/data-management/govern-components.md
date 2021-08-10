@@ -35,7 +35,7 @@ The data governance strategy should include the projects and initiatives needed 
 
 Data means data entities, documents, unstructured images, video, and audio. Examples of data entities are customer, product, employee, supplier, order, invoice, payment, and asset.
 
-:::image type="content" source="images/data-lifecycle.png" alt-text="Diagram of the data lifecycle.":::
+:::image type="content" source="./images/data-lifecycle.png" alt-text="Diagram of the data lifecycle.":::
 
 Examples of data entity include:
 
@@ -59,7 +59,7 @@ The data governance solution should enable you to govern data throughout the lif
 
 ## Data governance roles and responsibilities guidance for people
 
-There are many data governance roles and responsibilities for people. To learn more, see [Data governance roles and responsibilities](organize-persona-and-teams.md#data-governance-roles-and-responsibilities).
+There are many data governance roles and responsibilities for people. To learn more, see [Data governance roles and responsibilities](./organize-persona-and-teams.md#data-governance-roles-and-responsibilities).
 
 ## Data governance processes
 
@@ -74,7 +74,7 @@ There are four categories of data governance processes.
 
 The common business vocabulary should be defined in a business glossary within a data catalog. Each working group should take responsibility to define a specific data entity or data subject area, such as multiple related entities. Multiple data entities in the vocabulary, along with the policies and rules, can then be worked on in parallel.
 
-:::image type="content" source="images/defining-entities-in-a-common-business-vocabulary.png" alt-text="Diagram of defining entities in a common business vocabulary.":::
+:::image type="content" source="./images/defining-entities-in-a-common-business-vocabulary.png" alt-text="Diagram of defining entities in a common business vocabulary.":::
 
 Integration of the catalog business glossary with other technologies is then needed to get consistent common data names into all technologies. Examples of other technologies to integrate with include:
 
@@ -100,7 +100,7 @@ Data governance policies describe a set of rules to control the integrity, quali
 - Data protection policies with access security and data privacy rules.
 - Data retention policies to manage the lifecycle with retention, archive, and backup rules. Multiple versions of a policy may be needed to govern the same data across different legal jurisdictions.
 
-The [Data confidentiality classification scheme](govern-requirements.md#data-confidentiality-classification-scheme) has five classification levels. The levels are public, internal use only, confidential, sensitive personal data, and restricted.
+The [Data confidentiality classification scheme](./govern-requirements.md#data-confidentiality-classification-scheme) has five classification levels. The levels are public, internal use only, confidential, sensitive personal data, and restricted.
 
 The way to govern data is to combine this data governance classification scheme with policies and rules. Consider each of the five levels as a label that can be used to label data, for example, sensitive personal data. By creating rules for sensitive personal data, and attaching these rules to a policy, you create a policy for sensitive personal data. You can attach the policy to the sensitive personal data label and then attach the sensitive personal data label to the data. In this way, all data labeled as sensitive personal data is subject to the same policies and rules. This process is known as **tag-based policy management**. It's flexible because an individual rule or a policy can be independently changed. All data labeled sensitive personal data is governed by the new rules. Equally, a sensitive personal data label can be detached from data and a confidential label used instead. In this case, the data instantly becomes governed by a new set of policies and rules associated with the confidential label.
 
@@ -131,4 +131,4 @@ In summary, this guidance focuses on technologies needed for data governance.
 
 - ## Next steps
 
-[Technology needed for end-to-end governance](govern-technology.md)
+[Technology needed for end-to-end governance](./govern-technology.md)

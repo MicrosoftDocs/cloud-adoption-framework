@@ -1,6 +1,6 @@
 ---
 title: Understand DevOps automation for the data management and analytics scenario in Azure
-description: Learn about DevOps automation for the data management and analytics scenario in Azure. 
+description: Learn about DevOps automation for the data management and analytics scenario in Azure.
 author: abdale
 ms.author: hamoodaleem
 ms.date: 08/06/2021
@@ -90,4 +90,4 @@ Deployments to test and production should only be managed through a CI/CD pipeli
 
 ## Next steps
 
-[Personas and teams](organize-persona-and-teams.md)
+[Personas and teams](./organize-persona-and-teams.md)

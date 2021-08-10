@@ -17,7 +17,7 @@ Enterprise-scale for analytics and AI builds upon enterprise landing zones for e
 
 Often enterprises seek clarity or prescriptive guidance before they start to carve out the technical details for a specific use case, project, or an end-to-end data analytics and AI platform. It can be challenging to ensure the consideration of all strategic principles in the scope of the current use case, and required for the formulation of the overall data strategy.
 
-To speed up the delivery of this end-to-end insights journey, while still keeping these challenges in mind, Microsoft has developed a prescriptive offering for enterprise-scale for analytics and AI. It aligns to the key themes discussed in [Develop a plan for data management and analytics](plan.md).
+To speed up the delivery of this end-to-end insights journey, while still keeping these challenges in mind, Microsoft has developed a prescriptive offering for enterprise-scale for analytics and AI. It aligns to the key themes discussed in [Develop a plan for data management and analytics](./plan.md).
 
 Enterprise-scale is part of Microsoft's Cloud Adoption Framework. It provides prescriptive guidance, coupled with best practices, on cloud operating model, reference architecture, and platform templates. It's based on real-world learnings from some of our most challenging, sophisticated, and complex environments. Enterprise-scale for analytics and AI paves the way for customers to build and operationalize landing zones to host and run analytics workloads. You build the landing zones on the foundations of security, governance, and compliance. They're scalable and modular, supporting autonomy and innovation.
 
@@ -50,13 +50,13 @@ Enterprise-scale for analytics and AI requires an understanding of landing zones
 - [Choose a landing zone option](/azure/cloud-adoption-framework/ready/landing-zone/choose-landing-zone-option)
 - [Refactoring landing zones](/azure/cloud-adoption-framework/ready/landing-zone/refactor)
 - [Refactoring landing zones](/azure/cloud-adoption-framework/ready/landing-zone/refactor)
-- [Data management and analytics landing zone](enterprise-scale-landing-zone.md)
+- [Data management and analytics landing zone](./enterprise-scale-landing-zone.md)
 
 ## Next steps
 
 The following articles can guide your cloud adoption journey and help you succeed in the cloud adoption scenario.
 
-- [Plan for data management and analytics](plan.md)
-- [Review your environment or Azure landing zone](ready.md)
-- [Govern data management and analytics](govern.md)
-- [Secure data management and analytics](secure.md)
+- [Plan for data management and analytics](./plan.md)
+- [Review your environment or Azure landing zone](./ready.md)
+- [Govern data management and analytics](./govern.md)
+- [Secure data management and analytics](./secure.md)

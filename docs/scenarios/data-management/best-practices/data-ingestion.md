@@ -31,7 +31,7 @@ Some of these connectors support being used as a source (read) or as a sink (wri
 
 Proprietary native and third-party tooling provides niche capabilities to integrate with specialized systems and near-real-time replication.
 
-- [Azure Data Share](/azure/data-share) supports organizations to securely share data with multiple external customers and partners. Once you create a data share account and add datasets, customers and partners can be invited to the data share. Data providers are always in control of the data that they've shared. Azure Data Share makes it simple to manage and monitor what data is shared, when it was shared, and who shared it.
+- [Azure Data Share](/azure/data-share/) supports organizations to securely share data with multiple external customers and partners. Once you create a data share account and add datasets, customers and partners can be invited to the data share. Data providers are always in control of the data that they've shared. Azure Data Share makes it simple to manage and monitor what data is shared, when it was shared, and who shared it.
 
 > [!IMPORTANT]
 > Every data landing zone has an [ingest and processing resource group](../architectures/data-landing-zone.md#ingest-and-processing) that exists for enterprises with an ingestion framework engine. If you don't have this framework engine, the only recommended resource is deploying an Azure Databricks data science and engineering workspace, which would be used by data integrations to run complex ingestion. See the [automated ingestion framework](./automated-ingestion-pattern.md#ingest-new-data-sources-automated) for potential automation patterns.
@@ -127,10 +127,10 @@ The guidance in this section maps ingestion and processing services to sources t
 | Apache Impala | Tabular | IaaS | Database | - | A, B | A, B | - | B | B | - |
 | Microsoft SharePoint | List | SaaS | Record Store | - | A, E | A, E | E | A, E | A, E | E |
 | REST | REST | Various | REST | XML, JSON, CSV | A, B, E | A, B, E | A, B, E | A, B, E | A, B, E | A, B, E |
-| Micosoft Outlook | Email | SaaS | REST | XML, JSON, CSV | E | E | E | E | E | E |
+| Microsoft Outlook | Email | SaaS | REST | XML, JSON, CSV | E | E | E | E | E | E |
 
 Depending on the destination, Azure Database Migration Service can replicate from on-premises and third-party databases such as Microsoft SQL Server, PostgreSQL, MySQL, or Oracle, to an Azure-based data store.
 
 ## Next steps
 
-[SAP data ingestion](sap-data-ingestion.md)
+[SAP data ingestion](./sap-data-ingestion.md)

@@ -40,7 +40,7 @@ The following are the built-in management roles.
 
 The following are the built-in data roles.
 
-- [Storage Blob Data Owner](/azure/role-based-access-control/built-in-roles#storage-blob-data-owner): Full access to Azure Storage blob containers and data, including setting of ownership and managing posix access control.
+- [Storage Blob Data Owner](/azure/role-based-access-control/built-in-roles#storage-blob-data-owner): Full access to Azure Storage blob containers and data, including setting of ownership and managing POSIX access control.
 - [Storage Blob Data Contributor](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor): Read, write, and delete Azure Storage containers and blobs.
 - [Storage Blob Data Reader](/azure/role-based-access-control/built-in-roles#storage-blob-data-reader): Read and list Azure Storage containers and blobs.
 
@@ -71,7 +71,7 @@ For more information about what ACL-based permissions are required for a given o
 > [!NOTE]
 >
 > - Access control lists apply only to security principals in the same tenant, including guest users.
-> - Any user with permissions to attach to a cluster can create Azure Databricks mount points. The mount point is configured using service principal credentials or the Azure AD passthrough option. At the time of creation, permissions are not evaluated. Permissions are evaluated when an operation uses the mount point. Any user who can attach to a cluster can attempt to use the mount point. For more information, see [Securing access to Azure Data Lake Gen 2 from Azure Databricks](https:/d/github.com/hurtn/datalake-ADLS-access-patterns-with-Databricks).
+> - Any user with permissions to attach to a cluster can create Azure Databricks mount points. The mount point is configured using service principal credentials or the Azure AD passthrough option. At the time of creation, permissions are not evaluated. Permissions are evaluated when an operation uses the mount point. Any user who can attach to a cluster can attempt to use the mount point.
 > - When creating a table definition in Azure Databricks or Azure Synapse Analytics, the user needs to have read access to the underlying data.
 
 ## Configuring access to Azure Data Lake Storage
@@ -186,4 +186,4 @@ For more information, see [How to set up access control for your synapse workspa
 
 ## Next steps
 
-[Azure Databricks implementation](azure-databricks-implementation.md)
+[Azure Databricks implementation](./azure-databricks-implementation.md)
