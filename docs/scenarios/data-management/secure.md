@@ -13,6 +13,8 @@ ms.subservice: operate
 
 To limit security risk as much as possible while also providing access to do data analytics, use data governance. Data governance provides balance among operations, maintenance, and control. It follows the underlying principle of data lake solution architecture design, which uses infrastructure as code and security as code.
 
+## Security principles
+
 The focus of the data management and analytics scenario is based on key management principles:
 
 | Principle  |Description|

@@ -13,17 +13,15 @@ ms.subservice: ready
 
 The following are common questions asked about enterprise-scale for analytics and AI.
 
-## Data landing zone
+## Storage accounts
 
-### Storage accounts
-
-#### Why do I need three separate storage accounts? Can't I just have one with three containers for each layer (raw, refined, and curated)?
+### Why do I need three separate storage accounts? Can't I just have one with three containers for each layer (raw, refined, and curated)?
 
 Most data analytics patterns today exist with the three layers of raw, refined, and curated. Although they can be kept in the same storage, when it comes to large-scale implementations it creates issues with exceeding the number of allowed role-based access control (RBAC) and access control list (ACL) permissions that are available within a single storage account. When you use separate storage accounts, most implementations can avoid this issue.
 
-### Databricks
+## Databricks
 
-#### Should we deploy an Azure Databricks workspace per product?
+### Should we deploy an Azure Databricks workspace per product?
 
 The recommendation is to use the shared product **Azure Databricks Analytics and Data Science workspace** inside the landing zone.
 

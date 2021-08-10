@@ -11,8 +11,6 @@ ms.subservice: ready
 
 # Data products
 
-## Overview
-
 At a high level, data products are computed or polyglot persistence services that might be required depending on certain use cases. A data product is anything that drives business value, for example, reports, workbooks, bespoke database, or data API. It can use other services and technologies that aren't part of [data landing zone](data-landing-zone.md) core services. One example is reporting with niche requirements, such as compliance and tax reporting or specialized capabilities that address gaps in the baseline policies.
 
 ## Design considerations

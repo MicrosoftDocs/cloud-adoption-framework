@@ -12,13 +12,17 @@ ms.custom: think-tank, e2e-data
 
 # Understand how to organize data operations team members for the data management and analytics scenario in Azure
 
-The data management and analytics scenario architecture was designed with the following core principles:
+The data management and analytics scenario architecture was designed with a set of core principles.
+
+## Core principles
 
 1. Self-service enablement: enable project teams to work on their own to allow agile development methods.
 
 1. Governance: enforce guardrails across the Azure platform to ensure that project teams only see, change, and execute the functions within their permissions.
 
 1. Streamlined deployments: ensure that common policies are available within the organization to help teams scale quickly and support teams with less experience in some core designs and artifacts.
+
+## Deployment and operations
 
 The deployment process and data operations, dataops, model is an essential part that supports some of these core principles. The following guidelines are recommended for organizations to align with the principles:
 

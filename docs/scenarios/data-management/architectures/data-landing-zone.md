@@ -11,8 +11,6 @@ ms.subservice: ready
 
 # Enterprise-scale for analytics and AI architecture data landing zone
 
-## Overview
-
 Data landing zones are connected to the [data management landing zone](data-management-landing-zone.md) by virtual network (VNet) peering. They're considered a [landing zone](/azure/cloud-adoption-framework/ready/landing-zone/) related to the enterprise-scale architecture.
 
 > [!IMPORTANT]
