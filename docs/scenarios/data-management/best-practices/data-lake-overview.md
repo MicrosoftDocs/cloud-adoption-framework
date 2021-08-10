@@ -41,8 +41,8 @@ Scalability is a key concept and a single data lake might limit scalability from
 
   - For more information about limits, see [Scalability and performance targets](/azure/storage/common/scalability-targets-standard-account).
 
-> [!TIP]
-> Contact [Azure Support](https://azure.microsoft.com/support/faq/) to request higher capacity and ingress limits.
+    > [!TIP]
+    > Contact [Azure Support](https://azure.microsoft.com/support/faq/) to request higher capacity and ingress limits.
 
 - Isolation of data environments and predictability. For example, if you want to isolate activities that run in the laboratory zone to avoid potential effect on the curated zone. The curated zone holds data with greater business value that's used for critical decision making.
 - Features and functionality at the storage account level. Consider whether lifecycle management options or firewall rules must be applied at the data landing zone or data lake level.
