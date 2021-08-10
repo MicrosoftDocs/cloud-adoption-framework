@@ -49,8 +49,7 @@ When designing for multiple data landing zones, ensure direct communication betw
 
 Enterprise-scale for analytics and AI places a strong emphasis on central cataloging and classification to protect data and allow various groups to discover datasets.
 
-## Next st
-eps
+## Next steps
 
 - [Enterprise enrollment and Azure AD tenants for data management and analytics enterprise-scale scenario](eslz-enterprise-enrollment-and-azure-ad-tenants.md)
 - [Network topology and connectivity for data management and analytics](eslz-network-topology-and-connectivity.md)

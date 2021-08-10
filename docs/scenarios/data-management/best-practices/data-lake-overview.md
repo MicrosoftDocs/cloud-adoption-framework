@@ -37,12 +37,8 @@ Data Lake Storage Gen2 is a platform as a service (PaaS) fully managed service. 
 
 Scalability is a key concept and a single data lake might limit scalability from the outset. We recommend you add three data lake accounts during your discovery and design phase. The following considerations factor into our recommendation:
 
-- Large-scale enterprise workloads generally require significant throughput and resources. Splitting the lake physically across multiple storage accounts helps you stay within the various subscription and service quotas. The published quotas as of July 2021:
-  - Maximum storage account capacity for all regions: 5 PiB
-  - Maximum requests per second per storage account: 20,000
-  - Maximum ingress rate per storage account: 25 Gbps
-  - Maximum storage accounts per subscription: 250
-  - Maximum *access* and *default* access control lists ACLs per file or folder. This quota is a hard limit, so assign access control lists ACLs to groups, not individual users.: 32
+- Large-scale enterprise workloads generally require significant throughput and resources. Splitting the lake physically across multiple storage accounts helps you stay within the various subscription and service quotas.
+
   - For more information about limits, see [Scalability and performance targets](/azure/storage/common/storage-scalability-targets).
 
 > [!TIP]

@@ -1,6 +1,6 @@
 ---
-title: What is data governance?
-description: What is data governance?
+title: What is data governance for Azure?
+description: Learn about data governance for Azure.
 author: mboswell
 ms.author: mboswell
 ms.date: 06/22/2021
@@ -40,14 +40,14 @@ With data spread out across a hybrid multicloud and a distributed-data landscape
 - Data quality
 
 - Policy creation
--
+
 - Data sharing
 
 - Metadata
 
 ### The need to protect data
 
-The other major driver for data governance is data protection. Data protection can help you be compliant with regulatory legislation such as the European Union General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA). It can help you prevent data breaches. Data privacy, and the growing number of data breaches, has made data protection a top priority in the boardroom. These breaches highlight the risk to sensitive data, such as personally identifiable customer data. The consequences of data privacy violation or a data security breach are many, and can include:
+The other major driver for data governance is data protection. Data protection can help you be compliant with regulatory legislation. It can help you prevent data breaches. Data privacy, and the growing number of data breaches, has made data protection a top priority in the boardroom. These breaches highlight the risk to sensitive data, such as personally identifiable customer data. The consequences of data privacy violation or a data security breach are many, and can include:
 
 - Loss or serious damage to brand image
 
@@ -65,7 +65,7 @@ In most cases, publicly quoted companies must declare these breaches.
 
 If breaches occur, customers are more likely to blame the company first, rather than the hacker. The customer might boycott the company for several months or might never return.
 
-Failure to comply with regulatory legislation like GDPR and CCPA on data privacy might result in significant financial penalties. Governing your data will help you avoid such risks.
+Failure to comply with regulatory legislation on data privacy might result in significant financial penalties. Governing your data will help you avoid such risks.
 
 ## Next steps
 

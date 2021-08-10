@@ -1,6 +1,6 @@
 ---
-title: Manage master data
-description: Learn about managing master data, including creation, storage, synchronization between systems, and governance.
+title: Manage master data in Azure
+description: Learn about managing master data, including creation, storage, synchronization between systems, and governance in Azure.
 author: mboswell
 ms.author: mboswell
 ms.date: 07/21/2021
@@ -21,9 +21,9 @@ Once created and stored centrally, master data can be synchronized with all othe
 
 It's important to govern your master data maintenance. The challenge is identifying in which tasks of which business processes that maintenance happens. This identification can be done using business process identification and create, read, update, or delete (CRUD) analysis. It's often a manual task to work out this governance. But now it's helped by the emergence of process mining and analyzing database log files. Once you identify the tasks within a process that maintains master data, it can be governed.
 
-## Governing General Data Protection Regulation (GDPR) consent management using master data
+## Govern consent management using master data
 
-MDM provides the ideal place for GDPR customer consent management. Collect consents from all applications that request it. Then match them with customer master data, and store all consents in extra tables along with the master data record in the MDM system.
+MDM provides the ideal place for customer consent management. Collect consents from all applications that request it. Then match them with customer master data, and store all consents in extra tables along with the master data record in the MDM system.
 
 ## Next steps
 
