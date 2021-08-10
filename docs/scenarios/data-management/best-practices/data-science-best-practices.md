@@ -74,19 +74,19 @@ Data science projects can be simplified and accelerated if certain artifacts and
 
 These artifacts should include:
 
-**Sample notebooks.** that show how to:
+- Sample notebooks that show how to:
 
-    - Load, mount, and work with datasets.
-    - Log metrics and parameters.
-    - Submit training jobs to compute clusters.
+  - Load, mount, and work with datasets.
+  - Log metrics and parameters.
+  - Submit training jobs to compute clusters.
 
-**Artifacts.** required for operationalization:
+- Artifacts required for operationalization:
 
-    - Sample Azure Machine Learning pipelines
-    - Sample Azure Pipelines
-    - More scripts required to execute pipelines
+  - Sample Azure Machine Learning pipelines
+  - Sample Azure Pipelines
+  - More scripts required to execute pipelines
 
-**Documentation.**
+- Documentation.
 
 ### Use well-designed artifacts to operationalize pipelines
 
