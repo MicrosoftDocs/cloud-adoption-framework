@@ -11,8 +11,6 @@ ms.subservice: ready
 
 # Platform automation and DevOps for a data management and analytics enterprise-scale scenario
 
-## Overview
-
 Enterprise-scale for analytics and AI is focused on separating the runtime, automation, and user layers.
 
 User interaction to automation interaction should focus on using user interfaces (UIs) like Power Apps, custom web applications, and the IT Service Management (ITSM) tool. These UIs should integrate with REST APIs and a workflow engine for approval process and sequencing of deployment steps.

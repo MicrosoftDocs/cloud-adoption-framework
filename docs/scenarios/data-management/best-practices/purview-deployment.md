@@ -11,8 +11,6 @@ ms.subservice: ready
 
 # Azure Purview deployment best practices for data management and analytics enterprise-scale scenario
 
-## Overview
-
 The [data management landing zone](../architectures/data-management-landing-zone.md) is responsible for the governance of the enterprise-scale for analytics and AI platform. It relies on [Azure Purview](https://azure.microsoft.com/services/purview) to provide data management capabilities:
 
 - [Data catalog](../architectures/data-management-landing-zone.md#data-catalog)
