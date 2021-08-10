@@ -4,7 +4,7 @@ description: Data retention classification scheme
 author: mboswell
 ms.author: mboswell
 ms.date: 06/21/2021
-ms.topic: conceptual
+ms.topic: include
 ms.service: cloud-adoption-framework
 ms.subservice: overview
 ---
