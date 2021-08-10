@@ -147,7 +147,7 @@ The data science products team starts by searching and finding relevant datasets
 
 Before processing all data, the team uses local or remote compute to process and analyze sample datasets. They can optimize remote compute targets with larger datasets to train and develop machine learning models with runs, outputs, and models that are tracked inside Azure Machine Learning.
 
-When the team has developed machine learning models, they start operationalizing them. For this, they expand the team to include data ops and machine learning engineers who can assist with moving the models into a new data product, as outlined in a data product team role.
+When the team has developed machine learning models, they start operationalizing them. For this, they expand the team to include DataOps and machine learning engineers who can assist with moving the models into a new data product, as outlined in a data product team role.
 
 The data science team will continue to work with the associated data product owners to capture feedback, support, and resolved and update models in production using a [machine learning ops methodology](/azure/machine-learning/concept-model-management-and-deployment).
 

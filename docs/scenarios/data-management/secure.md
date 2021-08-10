@@ -1,6 +1,6 @@
 ---
-title: Secure data management and analytics
-description: Learn about the principles of secure data management and analytics.
+title: Secure data management and analytics for Azure
+description: Learn about the principles of secure data management and analytics for Azure.
 author: mboswell
 ms.author: mboswell
 ms.date: 07/20/2021

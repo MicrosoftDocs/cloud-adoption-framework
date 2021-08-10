@@ -1,6 +1,6 @@
 ---
-title: Security, governance, and compliance for enterprise-scale data management and analytics
-description: Learn how to improve security, governance, and compliance for enterprise-scale data management and analytics.
+title: Security, governance, and compliance for enterprise-scale data management and analytics in Azure
+description: Learn how to improve security, governance, and compliance for enterprise-scale data management and analytics in Azure.
 author: andrehass
 ms.author: anhass
 ms.date: 08/06/2021

@@ -1,6 +1,6 @@
 ---
 title: Enterprise-scale for analytics and AI introduction for Azure
-description: Enterprise-scale for analytics and AI introduction
+description: Enterprise-scale for analytics and AI introduction for Azure
 author: mboswell
 ms.author: brblanch
 ms.date: 06/22/2021
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Introduction to enterprise-scale for analytics and AI
+# Introduction to enterprise-scale for analytics and AI for Azure
 
 In the late 1980s, there was the introduction of the data warehouse Gen1, which combined disparate data sources from across the enterprise. In the late 2000s came Gen2, with the introduction of the big data ecosystem like Hadoop and the data lake. In the mid 2010s, we had the cloud data platform. It was similar to previous generations, but with the introduction of the ingestion of streaming data, like Kappa or Lambda architectures. In the early 2020s, we have the concept of the data lakehouse, data mesh, data fabric, and data centric operational patterns.
 
@@ -63,19 +63,7 @@ To learn more, see:
 - [Data platform operational excellence](#data-platform-operational-excellence)
 
 > [!IMPORTANT]
-> Enterprise-scale for analytics and AI recommends to use zone-redundant storage (ZRS). Zone-redundant storage (ZRS)is supported for deployment, in the **supported regions** list.
->
->- Asia Southeast
->- Europe North
->- Europe West
->- France Central
->- Japan East
->- South Africa North
->- UK South
->- US Central
->- US East
->- US East 2
->- US West 2
+> Enterprise-scale for analytics and AI recommends to use zone-redundant storage (ZRS).
 
 ### Data management landing zone
 

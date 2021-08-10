@@ -143,9 +143,9 @@ The first two options provide a way to handle **sensitive (personal data)**, and
 - Managing the data lifecycle
 - Internal and external policies and regulations
 - Data-sharing policies
-- Identifying **sensitive (personal data)** 
+- Identifying **sensitive (personal data)**
 - Insights about protection and compliance
-- Policies for GDPR reporting
+- Policies for data protection reporting
 
 Typically, a policy engine would integrate with a data catalog like Azure Purview. The Azure Marketplace features third-party vendor solutions, and some vendors work with Azure Synapse and Azure Databricks to encrypt and decrypt information while also providing row- and column-level security.
 
@@ -155,12 +155,9 @@ As mentioned, for a policy engine to succeed, it's important for it to integrate
 
 ## Restricted data
 
-Along with implementing options for confidential or restricted data, we also recommend you host highly confidential data in a dedicated data landing zone. It allows specific requirements like just-in-time access, customer-managed keys for encryption, and inbound/outbound restrictions applied to the landing zone. The guidance has evaluated putting data of this type into the same data landing zone but different storage accounts. However, it can make the solution complicated on the networking layer, for example, with network security groups and others.
+Along with implementing options for confidential or restricted data, we also recommend you host highly confidential data in a dedicated data landing zone. It allows specific requirements like just-in-time access, customer-managed keys for encryption, and inbound or outbound restrictions applied to the landing zone. The guidance has evaluated putting data of this type into the same data landing zone but different storage accounts. However, it can make the solution complicated on the networking layer, for example, with network security groups and others.
 
 The data management landing zone should connect to catalog the data in the data landing zone. It should restrict who can search for this data in the catalog.
-
-> [!NOTE]
-> For more information about The California Consumer Privacy Act (CCPA) and the European Union General Data Protection Regulation (GDPR), see [Azure Data Subject Requests for the GDPR and CCPA](/compliance/regulatory/gdpr-dsr-azure).
 
 - ## Next steps
 
