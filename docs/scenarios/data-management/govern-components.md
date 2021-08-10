@@ -129,6 +129,6 @@ In summary, this guidance focuses on technologies needed for data governance.
 - AI assisted data governance
 - Master and reference data management
 
-- ## Next steps
+## Next steps
 
 [Technology needed for end-to-end governance](./govern-technology.md)
