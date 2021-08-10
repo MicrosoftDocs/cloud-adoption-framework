@@ -159,6 +159,6 @@ Along with implementing options for confidential or restricted data, we also rec
 
 The data management landing zone should connect to catalog the data in the data landing zone. It should restrict who can search for this data in the catalog.
 
-- ## Next steps
+## Next steps
 
 [Understand how to organize data operations team members](./organize.md)
