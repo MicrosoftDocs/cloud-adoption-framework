@@ -15,9 +15,7 @@ ms.subservice: ready
 
 Enterprise-scale for analytics and AI is focused on separating the runtime, automation, and user layers.
 
-User interaction to automation interaction should focus on using user interfaces (UIs) like Power Apps, custom web applications, and the IT Service Management (ITSM) tool. These UIs should integrate with REST APIs and a workflow engine for approval process and sequencing of deployment steps.
-
-Automation to runtime interaction is done using Azure Pipelines and scripted Azure Resource Manager (ARM) templates.
+Automation to runtime interaction is done using Azure Pipelines and scripted Azure Resource Manager templates.
 
 > [!IMPORTANT]
 > Enterprise-scale for analytics and AI uses [Azure policies](/azure/governance/policy/overview) to put boundaries in place and ensure that changes performed by the data landing zone operations teams are compliant.
@@ -56,7 +54,7 @@ The following table summarizes the teams involved in an enterprise-scale for ana
 | Name | Role | Number of teams |
 |-|-|-|
 | Cloud platform team | The Azure cloud platform team in your organization. | One for the whole Azure platform. |
-| Data platform team | In charge of creating and maintaining ARM template repositories for different levels of enterprise-scale for analytics and AI. Also maintains the data management landing zone and supports other teams if there are deployment issues or required enhancements. | One for enterprise-scale for analytics and AI. |
+| Data platform team | In charge of creating and maintaining Azure Resource Manager template repositories for different levels of enterprise-scale for analytics and AI. Also maintains the data management landing zone and supports other teams if there are deployment issues or required enhancements. | One for enterprise-scale for analytics and AI. |
 | Data landing zone team | In charge of deploying and maintaining a specific data landing zone. Also supports the deployment and enhancement of data integrations and data products. | One team per data landing zone. |
 | Integration team | In charge of data integration deployment and updates. | One team per domain. |
 | Data product team |In charge of data products deployment and updates. | One team per data product. |

@@ -23,7 +23,6 @@ Azure Purview is a unified data governance service. It helps organizations manag
 
 > [!TIP]
 > We recommend using third-party tools of your choice to integrate the remaining capabilities of the [data management landing zone](../architectures/data-management-landing-zone.md) with Azure that are currently not supported by Azure Purview.
-
 > [!NOTE]
 > This guidance in this section explains configurations specific to enterprise-scale for analytics and AI. It's a collection of Azure best practices to enhance your data governance using Azure Purview. The guidance compliments the official [Azure Purview documentation](/azure/purview/).
 
@@ -153,7 +152,6 @@ To provide access to Azure Purview at data plane and to data sources, there are 
 
 > [!IMPORTANT]
 > To scan data sources through Azure Private Link in Azure Purview, you must deploy a self-hosted integration runtime and use **key vault** or **service principal** from the options for authentication to data sources.
-
 > [!TIP]
 > When a data source can't use Azure Private Link, we recommend to use Azure Purview managed identity to scan data sources.
 

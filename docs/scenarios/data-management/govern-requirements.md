@@ -1,6 +1,6 @@
 ---
-title: Requirements for governing data in a modern enterprise
-description: Requirements for governing data in a modern enterprise
+title: Requirements for governing data in Azure in a modern enterprise
+description: Learn about requirements for governing data in Azure in a modern enterprise.
 author: mboswell
 ms.author: mboswell
 ms.date: 06/23/2021

@@ -1,6 +1,6 @@
 ---
-title: Data summary and maturity model
-description: Introducing the concept of data governance in the cloud
+title: Data summary and maturity model for Azure
+description: Introducing the concept of data governance in the cloud and for Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 02/01/2020
