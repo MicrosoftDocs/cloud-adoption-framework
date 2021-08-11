@@ -88,8 +88,8 @@ An AVS private cloud can also leverage several different Azure native services. 
 An AVS private cloud exists as a resource within the Azure Resource Management (ARM), allowing interaction via several different automation tools. First-party Microsoft tooling generated from the ARM specifications tends to support features shortly after being released. From an automation perspective, the considerations provided within this document are provided in a way that can be applied across different toolsets.
 #### Considerations:
 - Utilizing declarative tooling such as ARM Templates & Bicep Templates allows you to define configuration as a single artifact. Command-line and script-based tooling such as Azure CLI & PowerShell requires a step-by-step approach to execution which is more in line with manual deployment.
-- Third-party automation tooling such as Terraform can also be used to deploy AVS and Azure Native services. It is important to check if the features you are looking to leverage within AVS are currently included within the available resources.
-- When taking a script-based approach to deployment, always consider the implications of failure to deploy & monitor appropriately. For AVS specifically, you should consider not only monitoring the deployment but also the private cloud status. For more information on monitoring AVS please visit the MONITORING CDA LINK.
+- Third-party automation tooling such as [Terraform](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/vmware_private_cloud) can also be used to deploy AVS and Azure Native services. It is important to check if the features you are looking to leverage within AVS are currently included within the available resources.
+- When taking a script-based approach to deployment, always consider the implications of failure to deploy & monitor appropriately. For AVS specifically, you should consider not only monitoring the deployment but also the private cloud status. For more information on monitoring AVS please visit [management and monitoring for AVS](eslz-management-and-monitoring.md).
 #### Recommendations: 
 - Utilize [Azure CLI](/cli/azure/vmware), [PowerShell](/powershell/module/az.vmware), or a declaritivae template such as [ARM Templates or Bicep Templates](/azure/templates) to deploy AVS in an automated manner.
 - Where possible, utilize ‘what-if’ to confirm changes before execution, pausing on resource deletion for verification.
@@ -104,7 +104,7 @@ AVS deployment automation should be implemented as a series of repeatable steps,
 Post private cloud deployment, you can then look to deploy resources within the private cloud. For further details on this, see the "VMware Platform Automation" section below.
 #### Considerations:
 - If you have an existing automation practice or have built a DevOps strategy as part of the Enterprise Scale Landing Zone, consider reusing the same patterns for AVS deployments to keep a consistent automation style across the board.
-- For more information please visit the Enterprise Scale Landing Zone [Platfrom automation and DevOps documentation](/azure/cloud-adoption-framework/ready/enterprise-scale/platform-automation-and-devops).
+- For more information please visit the Enterprise Scale Landing Zone [Platform automation and DevOps documentation](/azure/cloud-adoption-framework/ready/enterprise-scale/platform-automation-and-devops).
 
 ## VMware Platform Automation
 - Within an AVS private cloud, you may also choose to automate the creation of resources within vCenter & NSX-T manager. A series of considerations are listed below to assist in designing VMware-level automation.
