@@ -19,7 +19,7 @@ Azure can be consumed via Azure subscriptions that might be from multiple [offer
 An enterprise-scale architecture supports subscriptions from any [offer type](https://azure.microsoft.com/support/legal/offer-details/). Azure subscriptions have to be within a single Azure Active Directory (Azure AD) tenant to then be brought into the Management Group hierarchy within that tenant. From there, they can be managed by the various controls in an enterprise-scale platform such as Azure Policies and Role-Based Access Controls (RBAC).
 
 >[!NOTE]
-> Enterprise-scale architecture is only scoped and deployed into a single Azure AD tenant; however, the billing optionsmight span multiple Azure AD tenants. 
+> Enterprise-scale architecture is only scoped and deployed into a single Azure AD tenant; however, the billing options might span multiple Azure AD tenants. 
 >  
 > For example, an Enterprise Agreement (EA) enrollment supports Azure subscriptions across multiple Azure AD tenants.
 
