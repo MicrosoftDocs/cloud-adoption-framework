@@ -84,7 +84,7 @@ Data landing zone ops is responsible for business tasks that include gathering f
 
 Integration ops' main task is to ingest data from the source and provide a read data store version in the data landing zone. The only change that they make to the structure is to add conformed data types.
 
-[Data integration and data product deployment process](./eslz-platform-provisioning.md#data-integration-and-data-product-deployment-process) describes onboarding integration. Jordan is a data manager within integration ops. This team provides access to reusable data assets and must carefully assess access controls, reviews data attributes (compliance), and supports the wider community.
+[Data integration and data product deployment process](./eslz-provision-platform.md#data-integration-and-data-product-deployment-process) describes onboarding integration. Jordan is a data manager within integration ops. This team provides access to reusable data assets and must carefully assess access controls, reviews data attributes (compliance), and supports the wider community.
 
 ### Triage new dataset requests
 
@@ -119,7 +119,7 @@ The data product team delivers new data products to the business. They source fr
 
 ### New data products
 
-Product owners and business representatives create requests for new data product when they're needed. The data office assesses the requirements and assembles a new data product team with a range of expertise. The team identifies the data assets required for the data product and requests permission to the data asset. If a new data asset is needed, integration ops receives a ticket to ingest it. The team identifies the services required for the new data product and requests a new data product via the [data integration and data product deployment process](./eslz-platform-provisioning.md#data-integration-and-data-product-deployment-process). The data product team receives a forked repo from the master data products template to deploy the data product.
+Product owners and business representatives create requests for new data product when they're needed. The data office assesses the requirements and assembles a new data product team with a range of expertise. The team identifies the data assets required for the data product and requests permission to the data asset. If a new data asset is needed, integration ops receives a ticket to ingest it. The team identifies the services required for the new data product and requests a new data product via the [data integration and data product deployment process](./eslz-provision-platform.md#data-integration-and-data-product-deployment-process). The data product team receives a forked repo from the master data products template to deploy the data product.
 
 ### Certify data products
 

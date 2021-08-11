@@ -49,8 +49,8 @@ items:
         items:
         - name: Overview
           href: ./eslz-platform-automation-and-devops.md
-        - name: Provisioning the platform
-          href: ./eslz-platform-provisioning.md
+        - name: Provision the platform
+          href: ./eslz-provision-platform.md
         - name: Deployment templates
           href: ./eslz-deployment-templates.md
 
