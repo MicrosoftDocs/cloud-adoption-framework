@@ -1,0 +1,203 @@
+# docsTest:ignore "NET Core" "Cloud Operating Model" "Virtual Datacenter" Framework app
+#cSpell:ignore devtest mariadb
+
+items:
+  - name: Data management and analytics - Microsoft Cloud Adoption Framework for Azure
+    href: ./index.md
+    pdf_name: Data management and analytics - Microsoft Cloud Adoption Framework for Azure
+
+  - name: Overview
+    href: ./overview-data-governance.md
+  - name: Build an initial strategy
+    href: ./strategy.md
+  - name: Define your plan
+    href: ./plan.md
+
+  - name: Prepare your environment
+    items:
+    - name: Azure landing zones for data management and analytics
+      href: ./ready.md
+
+    - name: Implementation options
+      items:
+      - name: Enterprise-scale landing zone for data management and analytics
+        href: ./enterprise-scale-landing-zone.md
+      - name: Scaling data management and analytics
+        href: ./eslz-scale.md
+
+    - name: Design area considerations
+      items:
+      - name: Enterprise enrollment
+        href: ./eslz-enterprise-enrollment-and-azure-ad-tenants.md
+      - name: Identity and access management
+        href: ./eslz-identity-and-access-management.md
+      - name: Network topology and connectivity
+        href: ./eslz-network-topology-and-connectivity.md
+      - name: Resource organization
+        href: ./eslz-resource-organization.md
+      - name: Governance disciplines
+        items:
+        - name: Overview
+          href: ./eslz-security-governance-and-compliance.md
+        - name: Policies
+          href: ./eslz-policies.md
+      - name: Operations baseline
+        href: ./eslz-management-and-monitoring.md
+      - name: Business continuity and disaster recovery
+        href: ./eslz-business-continuity-and-disaster-recovery.md
+      - name: Platform automation and DevOps
+        items:
+        - name: Overview
+          href: ./eslz-platform-automation-and-devops.md
+        - name: Provision the platform
+          href: ./eslz-provision-platform.md
+        - name: Deployment templates
+          href: ./eslz-deployment-templates.md
+
+  - name: Govern your data estate
+    items:
+    - name: Overview
+      href: ./govern.md
+    - name: Requirements for governing data in a modern enterprise
+      href: ./govern-requirements.md
+    - name: Components needed for data governance
+      href: ./govern-components.md
+    - name: Technology needed for end to end governance
+      href: ./govern-technology.md
+    - name: Manage master data
+      href: ./govern-master-data.md
+    - name: Data sharing agreements
+      href: ./govern-data-sharing-agreements.md
+
+  - name: Secure your data estate
+    items:
+    - name: Overview
+      href: ./secure.md
+    - name: Authentication
+      href: ./secure-authentication.md
+    - name: Authorization
+      href: ./secure-analytics-role-based-access-control.md
+    - name: Automating security
+      href: ./security-provisioning.md
+    - name: Data privacy
+      href: ./secure-data-privacy.md
+
+  - name: Organize people and teams
+    items:
+      - name: Overview
+        href: ./organize.md
+      - name: Organize for effective data operations
+        href: ./organize-data-operations.md
+      - name: Personas and teams
+        href: ./organize-persona-and-teams.md
+      - name: Teams functions
+        href: ./organize-team-functions.md
+
+  - name: Well-Architected considerations
+    href: ./well-architected-framework.md
+
+  - name: Architectures
+    items:
+    - name: Data management landing zone
+      href: ./architectures/data-management-landing-zone.md
+    - name: Data landing zone
+      items:
+      - name: Overview
+        href: ./architectures/data-landing-zone.md
+      - name: Data integrations
+        href: ./architectures/data-landing-zone-data-integration.md
+      - name: Data products
+        href: ./architectures/data-landing-zone-data-products.md
+        
+    - name: Frequently asked questions
+      href: ./architectures/frequently-asked-questions.md
+
+  - name: Best practices
+    items:
+      - name: Data lake implementation
+        items:
+        - name: Data lake overview
+          href: ./best-practices/data-lake-overview.md
+        - name: Data lake zones
+          href: ./best-practices/data-lake-services.md
+        - name: Data lake key considerations
+          href: ./best-practices/data-lake-key-considerations.md
+        - name: Managing data lake access
+          href: ./best-practices/data-lake-access.md
+      - name: Azure Databricks implementation
+        href: ./best-practices/azure-databricks-implementation.md
+      - name: Azure Synapse Analytics implementation
+        items:
+        - name: Overview
+          href: ./best-practices/synapse.md
+        - name: Implementation
+          href: ./best-practices/azure-synapse-analytics-implementation.md
+        - name: High availability for Azure Synapse Analytics
+          href: ../../migrate/azure-best-practices/analytics/azure-synapse.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
+      - name: Azure Purview implementation
+        items:
+        - name: Readiness checklist
+          href: ./best-practices/purview-checklist.md
+        - name: Deployment best practices
+          href: ./best-practices/purview-deployment.md
+      - name: Data landing zone ingestion
+        items:
+        - name: Data ingestion
+          href: ./best-practices/data-ingestion.md
+        - name: SAP data ingestion
+          href: ./best-practices/sap-data-ingestion.md
+        - name: Automated ingestion pattern
+          href: ./best-practices/automated-ingestion-pattern.md
+      - name: Data science environment
+        items:
+        - name: Data science best practices
+          href: ./best-practices/data-science-best-practices.md
+        - name: Azure Machine Learning
+          href: ./best-practices/azure-machine-learning.md
+
+  - name: Featured Azure products
+    items:
+    - name: ARM templates
+      href: /azure/azure-resource-manager/templates/
+    - name: Blob Storage
+      href: /azure/storage/blobs/
+    - name: Azure Cosmos DB
+      href: /azure/cosmos-db/
+    - name: Azure Database for MariaDB
+      href: /azure/mariadb/
+    - name: Azure Database for MySQL
+      href: /azure/mysql/
+    - name: Azure Database for PostgreSQL
+      href: /azure/data-explorer/
+    - name: Azure Databricks
+      href: /azure/databricks/
+    - name: Azure Data Explorer
+      href: /azure/data-explorer/
+    - name: Azure Data Lake
+      href: /azure/storage/blobs/data-lake-storage-introduction
+    - name: Azure Key Vault
+      href: /azure/key-vault/
+    - name: Azure Machine Learning
+      href: /azure/machine-learning/
+    - name: Azure Policy
+      href: /azure/governance/policy/
+    - name: Azure Private Link
+      href: /azure/private-link/
+    - name: Azure Purview
+      href: /azure/purview/
+    - name: Azure Stream Analytics
+      href: /azure/stream-analytics/
+    - name: Azure SQL Database
+      href: /azure/azure-sql/
+    - name: Azure Synapse Analytics
+      href: /azure/synapse-analytics/
+    - name: Data Factory
+      href: /azure/data-factory/
+    - name: Event Hubs
+      href: /azure/event-hubs/
+    - name: HDInsight
+      href: /azure/hdinsight/
+    - name: Network Watcher
+      href: /azure/network-watcher/
+    - name: Virtual network
+      href: /azure/virtual-network/
