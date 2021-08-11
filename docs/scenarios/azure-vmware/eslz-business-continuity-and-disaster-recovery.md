@@ -29,9 +29,10 @@ ms.subservice: ready
 - Deploy the Azure Backup Server in the same Azure region as the Azure VMWare Solution private cloud. This will reduce traffic costs, ease administration and keep the primary/secondary topology. Best practices for Azure region deployments can be found [in this document](https://docs.microsoft.com/azure/cloud-adoption-framework/migrate/azure-best-practices/multiple-regions).
 - MABS can be deployed as an Azure IaaS VM or within the Azure VMWare Solution private cloud. It is highly recommended to deploy it outside of the Azure VMWare Solution private cloud in an Azure Virtual Network that is connected to the same ExpressRoute to reduce vSAN consumption as this is a ‘limited capacity’ resource within the Azure VMWare Solution private cloud. 
 
-![MABS deployed as Azure IaaS VM](../_images/eslz-bcdr-2.png)
+![MABSv1](../_images/eslz-bcdr-2.png)
 
-![MABS deployed as Azure VMWare Solution VM](../_images/eslz-bcdr-3.png)
+![MABSv2](../_images/eslz-bcdr-3.png)
+
 
 - If restoration from a backup is needed for Azure VMWare Solution platform components like vCenter, NSX manager or HCX manager, a support ticket should be opened from the [Azure Portal Help + Support section](https://docs.microsoft.com/azure/azure-portal/supportability/how-to-create-azure-support-request). 
 
@@ -43,7 +44,7 @@ ms.subservice: ready
 - VMware Site Recovery Manager can be used to provide DR for Azure VMWare Solution private cloud to a secondary Azure VMWare Solution private cloud.
 - Azure Site Recovery can be leveraged as a DR solution for Azure VMWare Solution private cloud to Azure IaaS. See more at: [Prepare Azure Site Recovery resources for disaster recovery of Azure VMware Solution VMs](https://docs.microsoft.com/azure/site-recovery/avs-tutorial-prepare-azure)
 
-![Azure Site Recovery High Level](../_images/eslz-bcdr-4.png)
+![ASRHighLevel](../_images/eslz-bcdr-4.png)
 
 - [Azure Site Recovery Deployment Planner](https://docs.microsoft.com/azure/site-recovery/site-recovery-deployment-planner) can be used to begin planning DR to Azure Native.
 - When planning the workloads to start after Azure Site Recovery failover, the recovery plan should include the correct start up order for workloads.
