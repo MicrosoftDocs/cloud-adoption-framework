@@ -36,11 +36,11 @@ ms.subservice: ready
 
 ## Disaster Recovery (DR) design considerations
 
-- Business requirements need to align with RTCPOs (Recovery time, capacity, and point objectives) for Apps/VMs tiers. Plan and design accordingly to achieve them using the most adequate replication technology; App Native (e.g., SQL Always On availability group), or non-native (for better orchestration) like VMware SRM (Site Recovery Manager) and [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/).
+- Business requirements need to align with RTCPOs (Recovery time, capacity, and point objectives) for Apps/VMs tiers. Plan and design accordingly to achieve them using the most appropriate replication technology; App Native (e.g., SQL Always On availability group), or non-native (for better orchestration) like VMware SRM (Site Recovery Manager) and [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/).
 - A decision should be made as to what the target DR site for the AVS private cloud will be as this will influence which DR tooling is suitable to the environment.
 - Migration from third party locations into AVS will have support through Site Recovery Manager through scale.
-- As of time of writing, VMware Site Recovery Manager is supported to provide DR for AVS private cloud to a secondary AVS private cloud in private preview only.
-- As of time of writing, Azure Site Recovery is the primary DR service that is native to Microsoft and supported to provide DR for AVS private cloud to Azure IaaS. See more at: [Prepare Azure Site Recovery resources for disaster recovery of Azure VMware Solution VMs](https://docs.microsoft.com/en-us/azure/site-recovery/avs-tutorial-prepare-azure)
+- VMware Site Recovery Manager can be used to provide DR for Azure VMWare Solution private cloud to a secondary Azure VMWare Solution private cloud.
+- Azure Site Recovery can be leveraged as a DR solution for Azure VMWare Solution private cloud to Azure IaaS. See more at: [Prepare Azure Site Recovery resources for disaster recovery of Azure VMware Solution VMs](https://docs.microsoft.com/en-us/azure/site-recovery/avs-tutorial-prepare-azure)
 
 ![Azure Site Recovery High Level](../_images/eslz-bcdr-4.png)
 
@@ -55,7 +55,7 @@ ms.subservice: ready
   - **Using different IP address(es)**: A different IP address can be used for the recovered VMs. If the VM is moved to a secondary site, the recovery plan within the SRM will detail out the custom IP map that will need to be selected for the change of IP address and in case of ASR a defined VNET will be chosen for new IP allocation.
 - Understanding Partial vs. Full Disaster Recovery (DR).
   - When working with Azure Site Recovery, preparing for full disaster recovery should be understood. This means failing over from AVS into an Azure Native environment.
-  - Utilising VMware SRM partial and full DR are supported. This means that running AVS in Region 1 and Region 2, the option to fail some or all the VMs from primary to secondary regions are supported. 
+  - Utilising VMware SRM for partial and full DR is supported. This means that running AVS in Region 1 and Region 2, the option to fail some or all the VMs from primary to secondary regions is supported. 
   - The requirement for VM recovery and the IP address retention requirements will define if Partial vs Full DR is possible or not. 
   - In order to maintain the IP address and achieve a partial disaster recovery in SRM, gateway of the subnet will need to move to the secondary AVS.
   - Active-Standby DR does not require L2 stretching.
