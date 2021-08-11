@@ -49,7 +49,7 @@ However, the EA enrollment roles, apart from the account owner, provide no acces
 
 For example, a finance user is granted the enterprise administrator role on the EA enrollment. The finance user is a standard user with no elevated permissions or roles assigned to them in Azure AD or on any Azure Management Group, subscription, resource group, or resource. The finance user can only perform the roles listed at [Managing Azure Enterprise Agreement roles](/azure/cost-management-billing/manage/understand-ea-roles#enterprise-administrator) and can't access the Azure subscriptions on the enrollment.
 
-The only Enterprise Agreement role that has access to Azure subscriptions is the account owner because this role was created when the subscription was created.
+The only Enterprise Agreement role that has access to Azure subscriptions is the account owner because this permission was granted when the subscription was created.
 
 ![Diagram that shows Azure E A relationship with Azure A D and Azure R B A C.](./media/ea-azure-relationship.png)
 
