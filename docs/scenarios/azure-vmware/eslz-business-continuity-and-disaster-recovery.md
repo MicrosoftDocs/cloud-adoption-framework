@@ -30,6 +30,7 @@ ms.subservice: ready
 - MABS can be deployed as an Azure IaaS VM or within the Azure VMWare Solution private cloud. It is highly recommended to deploy it outside of the Azure VMWare Solution private cloud in an Azure Virtual Network that is connected to the same ExpressRoute to reduce vSAN consumption as this is a ‘limited capacity’ resource within the Azure VMWare Solution private cloud. 
 
 ![MABS deployed as Azure IaaS VM](../_images/eslz-bcdr-2.png)
+
 ![MABS deployed as Azure VMWare Solution VM](../_images/eslz-bcdr-3.png)
 
 - If restoration from a backup is needed for Azure VMWare Solution platform components like vCenter, NSX manager or HCX manager, a support ticket should be opened from the [Azure Portal Help + Support section](https://docs.microsoft.com/azure/azure-portal/supportability/how-to-create-azure-support-request). 
