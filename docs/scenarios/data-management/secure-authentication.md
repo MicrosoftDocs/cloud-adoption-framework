@@ -1,6 +1,6 @@
 ---
-title: Authentication for data management and analytics
-description: Learn about authentication techniques for data management and analytics, including user, application, and service-to-service authentication.
+title: Authentication for data management and analytics for Azure
+description: Learn about authentication techniques for data management and analytics, including user, application, and service-to-service authentication for Azure.
 author: mboswell
 ms.author: mboswell
 ms.date: 07/20/2021
@@ -99,4 +99,4 @@ Similar to Azure RBAC general practices, the following rules should apply to ACL
 
 ## Next steps
 
-[Authorization for data management and analytics](secure-analytics-role-based-access-control.md)
+[Authorization for data management and analytics](./secure-analytics-role-based-access-control.md)

@@ -1,6 +1,6 @@
 ---
-title: Management and monitoring for data management and analytics
-description: Learn how this enterprise-scale scenario can improve management and monitoring of data management and analytics.
+title: Management and monitoring for data management and analytics in Azure
+description: Learn how this enterprise-scale scenario can improve management and monitoring of data management and analytics in Azure.
 author: christophermschmidt
 ms.author: chrschm
 ms.date: 07/19/2021
@@ -35,4 +35,4 @@ When thinking about enterprise-scale analytics, consider these design recommenda
 
 - [Management and monitoring](/azure/cloud-adoption-framework/ready/enterprise-scale/management-and-monitoring)
 - [Create a Log Analytics workspace in the Azure portal](/azure/azure-monitor/logs/quick-create-workspace)
-- [Management and monitoring for data management and analytics](eslz-business-continuity-and-disaster-recovery.md)
+- [Management and monitoring for data management and analytics](./eslz-business-continuity-and-disaster-recovery.md)

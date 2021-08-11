@@ -25,13 +25,13 @@ You can start with single or multiple data landing zones:
 
 - For a more advanced environment that requires the ability to scale out using consistent patterns, consider [multiple data landing zones](#multiple-data-landing-zones).
 
-For more information, see [Enterprise-scale for analytics and AI architecture data landing zone](architectures/data-landing-zone.md).
+For more information, see [Enterprise-scale for analytics and AI architecture data landing zone](./architectures/data-landing-zone.md).
 
 ## Single data landing zone
 
 This figure gives an overview of an enterprise-scale for analytics and AI platform with a data management landing zone and a single data landing zone.
 
-![Diagram of enterprise-scale data management and single data landing zone.](images/high-level-design-single-data-landing-zone.png)
+![Diagram of enterprise-scale data management and single data landing zone.](./images/high-level-design-single-data-landing-zone.png)
 
 This approach allows you to conform to the principles of enterprise-scale for analytics and AI. It gives you the option to add data landing zones as needed. This pattern builds out common core services with flexibility to add customizations. If you start with a single data landing zone, plan for expanding into multiple landing zones. Such planning avoids having to migrate data later.
 
@@ -39,7 +39,7 @@ This approach allows you to conform to the principles of enterprise-scale for an
 
 This diagram is an overview of an enterprise-scale for analytics and AI platform with a central data management landing zone and multiple data landing zones:
 
-![Diagram of enterprise-scale data management and multiple data landing zones.](images/high-level-design-multiple-landing-zones.png)
+![Diagram of enterprise-scale data management and multiple data landing zones.](./images/high-level-design-multiple-landing-zones.png)
 
 Enterprise-scale for analytics advocates consistent governance using a common architecture. The architecture defines baseline capabilities and policies. All data landing zones adhere to the same controls and auditing. Teams can create data pipelines, ingest sources, and create data products, such as reports and dashboards. Teams can do Spark/SQL analysis as needed. You can augment data landing zone capabilities by adding services to the capability in the policy. For instance, a team could add a third-party graph engine to address a niche business requirement.
 
@@ -49,8 +49,7 @@ When designing for multiple data landing zones, ensure direct communication betw
 
 Enterprise-scale for analytics and AI places a strong emphasis on central cataloging and classification to protect data and allow various groups to discover datasets.
 
-## Next st
-eps
+## Next steps
 
-- [Enterprise enrollment and Azure AD tenants for data management and analytics enterprise-scale scenario](eslz-enterprise-enrollment-and-azure-ad-tenants.md)
-- [Network topology and connectivity for data management and analytics](eslz-network-topology-and-connectivity.md)
+- [Enterprise enrollment and Azure AD tenants for data management and analytics enterprise-scale scenario](./eslz-enterprise-enrollment-and-azure-ad-tenants.md)
+- [Network topology and connectivity for data management and analytics](./eslz-network-topology-and-connectivity.md)

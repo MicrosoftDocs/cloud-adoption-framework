@@ -1,6 +1,6 @@
 ---
-title: Secure data management and analytics
-description: Learn about the principles of secure data management and analytics.
+title: Secure data management and analytics for Azure
+description: Learn about the principles of secure data management and analytics for Azure.
 author: mboswell
 ms.author: mboswell
 ms.date: 07/20/2021
@@ -13,6 +13,8 @@ ms.subservice: operate
 
 To limit security risk as much as possible while also providing access to do data analytics, use data governance. Data governance provides balance among operations, maintenance, and control. It follows the underlying principle of data lake solution architecture design, which uses infrastructure as code and security as code.
 
+## Security principles
+
 The focus of the data management and analytics scenario is based on key management principles:
 
 | Principle  |Description|
@@ -24,9 +26,9 @@ The focus of the data management and analytics scenario is based on key manageme
 | **Better clarity and enforceability of rules and definitions**| Clearly separate data to help keep the environment organized, while making it easy to enforce security rules and definitions. |
 
 > [!TIP]
-> When you deploy enterprise-scale for analytics and AI, consider using these automation principles to enable security, as opposed to manually applying them. Ideally, a user should do manual interaction only to approve or deny an access request. For more information, see [Deployment templates for enterprise-scale for analytics and AI deployment](eslz-deployment-templates.md).
+> When you deploy enterprise-scale for analytics and AI, consider using these automation principles to enable security, as opposed to manually applying them. Ideally, a user should do manual interaction only to approve or deny an access request. For more information, see [Deployment templates for enterprise-scale for analytics and AI deployment](./eslz-deployment-templates.md).
 
 ## Next steps
 
-- [Authentication](secure-authentication.md)
-- [Authorization](secure-analytics-role-based-access-control.md)
+- [Authentication](./secure-authentication.md)
+- [Authorization](./secure-analytics-role-based-access-control.md)

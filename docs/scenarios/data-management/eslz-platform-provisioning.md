@@ -31,11 +31,11 @@ For example, a data landing zone operations team requests a new data landing zon
 1. Create a deployment pipeline to deploy the services, triggered by check-in of the updated parameters.
 1. Notify the data landing zone operations team that the new landing zone is available.
 
-The data landing zone operations team can now change or add Azure Resource Manager (ARM) templates.
+The data landing zone operations team can now change or add Azure Resource Manager templates.
 
 This workflow can be automated using multiple service sets on the Azure platform. Handle some of the steps, such as renaming parameters in parameter files, using CI/CD pipelines. Other steps can be executed using other workflow orchestration tools such as Logic Apps.
 
-![Diagram of forked DevOps model.](images/forked-dev-ops.png)
+![Diagram of forked DevOps model.](./images/forked-dev-ops.png)
 
 The forking pattern allows teams to update their templates from the original templates used to fork them. Also, if improvements or new features are implemented in the template repositories, operations teams can pull them into their fork.
 
@@ -50,18 +50,18 @@ Adopt best practices for repositories, such as:
 > [!TIP]
 > Coordinate activities between teams to ensure that improvements or new features in the original templates are replicated in all data landing zone instances. Operations teams can pull original template changes into their fork.
 
-![Diagram of a data landing zone automation process.](images/data-landing-zone-auto-process.png)
+![Diagram of a data landing zone automation process.](./images/data-landing-zone-auto-process.png)
 
 The onboarding process is separate from the data landing zone deployment process. This separation is based on the assumption that most organizations have a standard Azure subscription deployment process as part of their cloud operating model. The onboarding process deploys standard corporate components (for example using a third-party IT Service Management tool). Data landing zone-specific components are deployed next.
 
-As of now, there are no Git APIs available to clone/update/commit/push in the proposed automation solution. So our approach is to use an [Azure Automation account](/azure/automation/automation-intro) containing PowerShell runbooks that:
+There are no Git APIs available to clone/update/commit/push in the proposed automation solution. So our approach is to use an [Azure Automation account](/azure/automation/automation-intro) containing PowerShell runbooks that:
 
 - Set up a data landing zone
 - Fork the main repository to a data platform Git repository
 - Set up the subnet configurations for the data landing zone
 - Set up Azure Active Directory
 
-The runbooks use Git functions from the [`GitAutomation`](https://github.com/webmd-health-services/GitAutomation) PowerShell module for working with Git repositories. By installing this module inside an Azure Automation account, users can perform create, clone, query, push, pull, and commit operations in Git repositories. The following image shows the GitAutomation module installed inside an automation account:
+The runbooks use Git functions from the [`GitAutomation`](https://github.com/webmd-health-services/GitAutomation) PowerShell module for working with Git repositories. By installing this module inside an Azure Automation account, users can do create, clone, query, push, pull, and commit operations in Git repositories. The following image shows the GitAutomation module installed inside an automation account:
 
 :::image type="content" source="./images/git-automation.png" alt-text="Diagram of GitAutomation Module for working with Git repositories." lightbox="./images/git-automation.png":::
 
@@ -75,13 +75,13 @@ After a data landing zone has been created, onboarding can start for the data in
 
 Deployment is done either directly using DevOps tooling or called via pipelines/workflows exposed as APIs. Similar to the data landing zone, deployment begins with forking the original data integration or data product repository.
 
-![Diagram of the integration and product deployment automation.](images/integration-product-deployment-automation.png)
+![Diagram of the integration and product deployment automation.](./images/integration-product-deployment-automation.png)
 
 1. The user makes a request for new data integration or data product services.
 1. The workflow process requests approval from the data platform or data landing zone operations team.
 1. The workflow calls the IT Service Management API to create required resource groups, and creation of an Azure DevOps service connection. The workflow assigns a team to the Azure DevOps project.
 1. The workflow forks the original data integration or data product repository to create the destination Azure DevOps Project.
-1. The workflow creates an ARM template parameter file and pipelines.
+1. The workflow creates an Azure Resource Manager template parameter file and pipelines.
 1. The workflow then starts an Azure pipeline to create the networking requirements, and another Azure pipeline to deploy the data integration or data products services.
 1. The workflow notifies the user on completion.
 
@@ -92,14 +92,14 @@ Deployment is done either directly using DevOps tooling or called via pipelines/
 
 The above patterns provide control, agility, self-service, and lifecycle management of policies.
 
-![Diagram of the overall DataOps model.](images/overall-data-ops-model.png)
+![Diagram of the overall DataOps model.](./images/overall-data-ops-model.png)
 
 At the start of the project, the data platform has one Azure DevOps project with one or more Azure Boards. Individual DevOps teams focus on:
 
 - One repository for the data management landing zone, pipelines, and a service connection to the cloud environment.
 - One template repository for the data landing zone, pipelines to deploy a data landing zone instance, and service connections to cloud environments.
-- One template repository for a data integration service, pipelines to deploy a data integration resource group, and service connections to cloud environments. These connections are forked from data landing zone Azure DevOps projects.
-- One template repository for data product services, pipelines to deploy a data product instance, and service connections to cloud environments. These connections are forked from data landing zone Azure DevOps projects.
+- One template repository for a data integration service, pipelines to deploy a data integration resource group, and service connections to cloud environments. These connections are forked from data landing zone Azure DevOps Projects.
+- One template repository for data product services, pipelines to deploy a data product instance, and service connections to cloud environments. These connections are forked from data landing zone Azure DevOps Projects.
 
 Once data landing zones have been deployed, enterprise-scale for analytics and AI prescribes that:
 
@@ -123,5 +123,5 @@ To control the deployment of data integration and data product services, follow 
 
 ## Next steps
 
-- [Deployment templates](eslz-deployment-templates.md)
+- [Deployment templates](./eslz-deployment-templates.md)
 - [An introduction to Azure Automation](/azure/automation/automation-intro)

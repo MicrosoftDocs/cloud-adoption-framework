@@ -37,16 +37,12 @@ Data Lake Storage Gen2 is a platform as a service (PaaS) fully managed service. 
 
 Scalability is a key concept and a single data lake might limit scalability from the outset. We recommend you add three data lake accounts during your discovery and design phase. The following considerations factor into our recommendation:
 
-- Large-scale enterprise workloads generally require significant throughput and resources. Splitting the lake physically across multiple storage accounts helps you stay within the various subscription and service quotas. The published quotas as of July 2021:
-  - Maximum storage account capacity for all regions: 5 PiB
-  - Maximum requests per second per storage account: 20,000
-  - Maximum ingress rate per storage account: 25 Gbps
-  - Maximum storage accounts per subscription: 250
-  - Maximum *access* and *default* access control lists ACLs per file or folder. This quota is a hard limit, so assign access control lists ACLs to groups, not individual users.: 32
-  - For more information about limits, see [Scalability and performance targets](/azure/storage/common/storage-scalability-targets).
+- Large-scale enterprise workloads generally require significant throughput and resources. Splitting the lake physically across multiple storage accounts helps you stay within the various subscription and service quotas.
 
-> [!TIP]
-> Contact [Azure Support](https://azure.microsoft.com/support/faq/) to request higher capacity and ingress limits.
+  - For more information about limits, see [Scalability and performance targets](/azure/storage/common/scalability-targets-standard-account).
+
+    > [!TIP]
+    > Contact [Azure Support](https://azure.microsoft.com/support/faq/) to request higher capacity and ingress limits.
 
 - Isolation of data environments and predictability. For example, if you want to isolate activities that run in the laboratory zone to avoid potential effect on the curated zone. The curated zone holds data with greater business value that's used for critical decision making.
 - Features and functionality at the storage account level. Consider whether lifecycle management options or firewall rules must be applied at the data landing zone or data lake level.
@@ -66,11 +62,11 @@ Data residency rules, or a requirement to have data close to a user base, can dr
 - Default access control list (ACL) on every dataset folder must include *read* and *execute* permissions. Execute permission is required for users to traverse a restricted folder and access files under it. Access ACL assigned to an Azure AD group will include read and execute permissions on each dataset folder.
 - Only a managed identity or a service principal should grant *write* permission to a system. Changes can be made by an ingestion, transformation, or maintenance process.
 
-For more information about access control mechanisms, see [Managing data lake access](data-lake-access.md).
+For more information about access control mechanisms, see [Managing data lake access](./data-lake-access.md).
 
 ## Next steps
 
 The next step is to review guidance about data lake zones.
 
 > [!div class="nextstepaction"]
-> [Data lake zones](data-lake-services.md)
+> [Data lake zones](./data-lake-services.md)

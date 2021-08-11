@@ -1,6 +1,6 @@
 ---
-title: Data sharing agreements in data management and analytics
-description: Learn how data sharing agreements ensure stable delivery of data and manage compliance and governance.
+title: Data sharing agreements in data management and analytics in Azure
+description: Learn how data sharing agreements ensure stable delivery of data and manage compliance and governance in Azure.
 author: pietheinstrengholt
 ms.author: pstrengholt
 ms.date: 7/20/2021
@@ -48,4 +48,4 @@ Publishing contracts centrally allows providers and consumers to resolve their d
 
 ## Next steps
 
-[Secure data management and analytics](secure.md)
+[Secure data management and analytics](./secure.md)

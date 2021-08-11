@@ -11,11 +11,11 @@ ms.subservice: ready
 
 # Data management landing zone
 
-The data management landing zone is classified as a management function and is at the heart of the enterprise-scale for analytics and AI platform. It's responsible for the governance of the platform and enables communication to ingest data sources from Azure, third-party clouds, and on-premises data sources.
+The data management landing zone is classified as a management function and is central to the enterprise-scale for analytics and AI platform. It's responsible for the governance of the platform and enables communication to ingest data sources from Azure, third-party clouds, and on-premises data sources.
 
- :::image type="content" source="../images/data-management-overview.png" alt-text="Diagram of data management landing zone overview" lightbox="../images/data-management-overview.png":::
+ :::image type="content" source="../images/data-management-overview.png" alt-text="Diagram of data management landing zone overview." lightbox="../images/data-management-overview.png":::
 
-The data management landing zone is a separate subscription that has the standard services of an enterprise-scale framework, but are connected to the data landing zones and connectivity subscription via virtual network peering. It allows the data governance of the data, via crawlers, which connect to the data lakes and polyglot storage in the data landing zones.
+The data management landing zone is a separate subscription that has the standard services of an enterprise-scale framework. They're connected to the data landing zones and connectivity subscription via virtual network peering. It allows the data governance of the data, via crawlers, which connect to the data lakes and polyglot storage in the data landing zones.
 
 > [!NOTE]
 > Polyglot persistence is an enterprise storage term used to describe choosing different data storage/data stores technologies to support the various data types and their storage needs. Polyglot persistence is essentially the idea that an application can use more than one core database or storage technology.
@@ -24,9 +24,9 @@ The data management landing zone is a separate subscription that has the standar
 
 ## Data catalog
 
-We recommend having a catalog service provisioned for defining the metadata of the datasets stored across the data landing zones.
+We recommend you have a catalog service provisioned to define the metadata of the datasets stored across the data landing zones.
 
-The catalog registers and maintains the data information in a centralized place and makes it available for the organization. This ensures that enterprises avoid duplicate datasets caused by redundant data ingestion by different project teams.
+The catalog registers and maintains the data information in a centralized place and makes it available for the organization. It ensures that enterprises avoid duplicate datasets caused by redundant data ingestion by different project teams.
 
 Enterprise-scale for analytics and AI relies on [Azure Purview](/azure/purview/overview) to serve as:
 
@@ -37,7 +37,7 @@ Enterprise-scale for analytics and AI relies on [Azure Purview](/azure/purview/o
 - API for registering and reading data information.
 - Compliance dashboard hub
 
-Being part of the data management landing zone, the data catalog will be able to communicate with each data landing zone via its VNet peering and self-hosted integration runtimes. Discovery of datasets in on-premises stores and other public clouds is achieved by more deployments of self-hosted integration runtimes.
+The data catalog can communicate with each data landing zone via its VNet peering and self-hosted integration runtimes since it's part of the data management landing zone. Discovery of datasets in on-premises stores and other public clouds is achieved by more deployments of self-hosted integration runtimes.
 
 >[!NOTE]
 >Although this section of the documentation primarily focuses on using Azure Purview for data catalog capabilities combined with the data classification, labeling, and compliance policy enforcement capabilities of Azure Information Protection, we appreciate that many enterprises may have invested in other products such as Alation, Okera, and Collibra. If this is the case, please work with your vendor to apply the principles described for a data management landing zone and get as close as you can. Be aware that some custom integration might be required.
@@ -48,9 +48,9 @@ The data discovery or catalog reflects the state of all the data that the enterp
 
 The scanning process connects directly to a data source on a schedule.
 
-As a new data landing zone is added to the environment, the associated data lakes and polyglot persistence sources will be registered as sources for the data catalog crawlers to scan.
+As you add a new data landing zone to the environment, the associated data lakes and polyglot persistence sources will be registered as sources for the data catalog crawlers to scan.
 
-With this automated discovery of your data estate to populate the catalog, you can crawl metadata from Azure and on-premises data sources, scan your data lakes, blobs, and other supported targets to extract schema for XML, TSV/CSV/PSV/SSV, JSON, Parquet, Avro, and Orc file types. It also allows automated catalog updates through configurable scheduling of scans and scan rule sets.
+With automated discovery of your data estate to populate the catalog, you can crawl metadata from Azure and on-premises data sources, scan your data lakes, blobs, and other supported targets to extract schema for XML, TSV, CSV, PSV, SSV, JSON, Parquet, Avro, and ORC file types. It also allows automated catalog updates through configurable scheduling of scans and scan rule sets.
 
 > [!IMPORTANT]
 > As a new data landing zone is added to the environment, the associated data lakes and Polyglot storage should be registered through Azure DevOps as a source for the data catalog crawlers to scan.
@@ -59,17 +59,17 @@ With this automated discovery of your data estate to populate the catalog, you c
 
 Azure Purview allows you to apply system or custom classifications on file, table, or column assets.
 
-Classifications are like subject tags and are used to mark and identify content of a specific type found within your data estate during scanning. Sensitivity labels are used to identify the categories of classification types within your organizational data and to group the policies you wish to apply to each category. It makes use of the same sensitive information types as Microsoft 365, allowing you to stretch your existing security policies and protections across your entire content and data estate.
+Classifications are like subject tags. They're used to mark and identify content of a specific type found within your data estate during scanning. Sensitivity labels are used to identify the categories of classification types within your organizational data. The labels are also used to group the policies you wish to apply to each category. It makes use of the same sensitive information types as Microsoft 365, allowing you to stretch your existing security policies and protections across your entire content and data estate.
 
 Azure Purview can scan and automatically classify documents. For example, if you have a file named `multiple.docx` and it has a national ID number in its content, Azure Purview will add a classification such as `EU National Identification Number` in the asset detail page.
 
-[Azure Defender for SQL](/azure/azure-sql/database/azure-defender-for-sql) is a feature available for Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics. It includes functionality for discovering and classifying sensitive data, surfacing and mitigating potential database vulnerabilities, and detecting anomalous activities that could indicate a threat to your database. It provides a single go-to location for enabling and managing these capabilities.
+[Azure Defender for SQL](/azure/azure-sql/database/azure-defender-for-sql) is a feature available for Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics. It includes functionality for discovering and classifying sensitive data, surfacing and mitigating potential database vulnerabilities, and detecting anomalous activities that could indicate a threat to your database. Azure Defender for SQL provides a single go-to location for enabling and managing these capabilities.
 
 ## Data lineage
 
-Data lineage plays an important component in an enterprise-scale for analytics and AI solution. Lineage is a factor in ascertaining data quality and validating compliance. Lineage also adds context to datasets and products that allows for discoverable and self-serviceable data products.
+Data lineage plays an important component in an enterprise-scale for analytics and AI solution. Lineage is a factor in understanding data quality and validating compliance. Lineage also adds context to datasets and products that allows for discoverable and self-serviceable data products.
 
-One of the primary features of a data catalog is the ability to show the lineage between datasets. Azure Purview supports capturing data lineage from three adf activities: copy data, data flow, and execute SSIS package. In addition to the native integration, custom lineage reporting is also supported via Apache Atlas hooks or REST API.
+One of the primary features of a data catalog is the ability to show the lineage between datasets. Azure Purview supports capturing data lineage from three adf activities: copy data, data flow, and execute SSIS package. Along with the native integration, custom lineage reporting is also supported via Apache Atlas hooks or REST API.
 
 :::image type="content" source="../images/data-lineage.png" alt-text="Diagram of data lineage." lightbox="../images/data-lineage.png":::
 
@@ -80,19 +80,19 @@ One of the primary features of a data catalog is the ability to show the lineage
 
 Enterprises are advised to continue with their current solution.
 
-In enterprise-scale for analytics and AI data integrations will become responsible for producing datasets that are consumed by other data products. Integration ops owners are responsible for the business-aligned key performance indicators (KPIs) and the service-level objectives around consumption of their read data sources.
+In enterprise-scale for analytics and AI data, integrations become responsible for producing datasets that are consumed by other data products. Integration ops owners are responsible for the business-aligned key performance indicators (KPIs) and the service-level goals around consumption of their read data sources.
 
-Data quality should happen as close to the source as possible to avoid quality issues replicating across the analytics and AI estate. Moving quality metrics and validation to the data integration aligns the quality process with the team(s) that are closest to the data and have the deepest understanding of the data asset. Data lineage also provides data quality confidence and should be provided for all datasets and products.
+Data quality should happen as close to the source as possible to avoid quality issues replicating across the analytics and AI estate. Moving quality metrics and validation to the data integration aligns the quality process with the teams that are closest to the data. These teams have the deepest understanding of the data asset. Data lineage also provides data quality confidence and should be provided for all datasets and products.
 
 See how data quality can be implemented in [Enforcing data quality](../best-practices/data-ingestion.md#enforce-data-quality).
 
 ## Data modeling repository
 
-Entity relationship models should be captured and stored in a central location, that resides in the data management landing zone. It gives consumers of the data a single place to go for conceptual diagrams.
+Entity relationship models should be captured and stored in a central location, that is in the data management landing zone. It gives consumers of the data a single place to go for conceptual diagrams.
 
-[ER Studio](https://www.idera.com/er-studio-enterprise-data-modeling-and-architecture-tools) and [iServer](https://www.orbussoftware.com/data-architecture/) are used by many enterprise customers to model their datasets prior to ingesting.
+[ER Studio](https://www.idera.com/products/er-studio/enterprise-data-modeling) and [iServer](https://www.orbussoftware.com/solutions/enterprise-architecture/data-architecture) are used by many enterprise customers to model their datasets before ingesting.
 
-### Industry specific data models and Common Data Model with data lake
+### Industry-specific data models and Common Data Model with data lake
 
 An industry data model enables organizations to more holistically capture and define business concepts, refine and integrate processes, and build interoperability in their ecosystem. [Microsoft acquired ADRM Software, a leader in large-scale, industry-specific data models](https://blogs.microsoft.com/blog/2020/06/18/microsoft-acquires-adrm-software-leader-in-large-scale-industry-specific-data-models/) to support this requirement on Azure.
 
@@ -108,7 +108,7 @@ Enterprises have typically invested several years into building out a [master da
 
 Using Azure Data Factory, you can pull current master data via the master data management's API and join with the data to be enriches or curated.
 
-Many master data management solutions are fully integrated with Azure Active Directory, which allows you to secure the data and provide different views for different user groups.
+Many master data management solutions fully integrate with Azure Active Directory. The integration allows you to secure the data and provide different views for different user groups.
 
 ### Approaches
 
@@ -122,17 +122,17 @@ Changes to master data continue to be made in the source systems. It allows sour
 
 #### Consolidation
 
-Master data from across the data landing zones is consolidated into one hub in the data management landing zone. Updates made to source master data are written back to the source system. It's the quickest and simplest model if you have no existing master data management system.
+Master data from across the data landing zones is combined into one hub in the data management landing zone. Updates made to source master data are written back to the source system. It's the quickest and simplest model if you have no existing master data management system.
 
 #### Coexistence
 
 This approach allows you to establish a single version of the truth in the same way the consolidation style does. The difference is that the data management landing zone stores master data while updates can also take place in the source systems. All of the master data model attributes must have consistency. Cleansing must take place before uploading them into the MDM system. Master data changes can happen in both the MDS system and application systems. Data from the hub can be published back to sources.
 
-Master data is consolidated into one hub in the data management landing zone. Master data from data landing zones is consolidated into the central hub. Updates made to source master data are written back to the source system. It's the quickest and simplest model if you have no existing master data management system.
+Master data is combined into one hub in the data management landing zone. Master data from data landing zones is combined into the central hub. Updates made to source master data are written back to the source system. It's the quickest and simplest model if you have no existing master data management system.
 
 #### Centralized
 
-Centralized builds on the coexistence approach. There exists a central master data management repository in the data management landing zone representing the truth, also known as **the Golden Record**. Master data can be pulled from various systems and consolidated into a central hub. Applications and systems use this as the source of master data. Source systems can subscribe to updates published by the central hub.
+Centralized builds on the coexistence approach. There exists a central master data management repository in the data management landing zone representing the truth, also known as **the Golden Record**. Master data can be pulled from various systems and combined into a central hub. Applications and systems use it as the source of master data. Source systems can subscribe to updates published by the central hub.
 
 > [!IMPORTANT]
 > Regardless the master data management approach chosen, we recommend that the master data management hub or registry be hosted in the data management landing zone. The sources of the master data should be distributed among data landing zones as architecturally appropriate.
@@ -145,14 +145,14 @@ The API catalog can help standardize documentation and offers a place for intern
 
 ### Data sharing and contracts
 
-Although enterprise-scale for analytics and AI uses
-[Azure AD entitlement management](/azure/active-directory/governance/entitlement-management-overview) to control access and sharing of data, the enterprise might require a sharing and contract repository. As this is an organizational function, the repository should reside in the data management landing zone.
+Enterprise-scale for analytics and AI uses
+[Azure AD entitlement management](/azure/active-directory/governance/entitlement-management-overview) to control access and sharing of data. Your enterprise still might require a sharing and contract repository. The repository is an organizational function. It should be in the data management landing zone.
 
 These contracts should give information on data validation, model, and security policies. For more information, see [Data sharing agreements](../govern-data-sharing-agreements.md).
 
 ## Data lifecycle
 
-Data products may have different lifecycles. We recommend applying policies to regulate the data lifecycle. A typical pattern is that newly ingested data is used and accessed often. As the age since ingesting increases, the rate of data access decreases. Older data will see a drastic drop in usage. Your data products and entities in these products may have different lifecycles. Some data can stay unused after the initial ingestion or is rarely accessed once stored. Some datasets may expire days or months after creation, while other datasets are actively used and modified throughout their lifetimes. Most countries have regulations related to how long you are required to store data such as personal data and accounting data. For example, a country might require retention of primary documentation for five years, like incoming and outgoing invoices, cash book balances, bank vouchers, and salary slips. Retention of secondary documentation for three to five years, like letters, agreements, and notes.
+Data products may have different lifecycles. We recommend applying policies to regulate the data lifecycle. A typical pattern is that newly ingested data is used and accessed often. As the age since ingesting increases, the rate of data access decreases. Older data will see a drastic drop in usage. Your data products and entities in these products may have different lifecycles. Some data can stay unused after the initial ingestion or is rarely accessed once stored. Some datasets may expire days or months after creation, while other datasets are actively used and modified throughout their lifetimes. Most countries have regulations related to how long you're required to store data such as personal data and accounting data. For example, a country might require retention of primary documentation for five years, like incoming and outgoing invoices, cash book balances, bank vouchers, and salary slips. Retention of secondary documentation for three to five years, like letters, agreements, and notes.
 
 In Azure, the data lifecycle is handled by each relevant service containing persisted data.
 
@@ -162,7 +162,7 @@ In Azure, the data lifecycle is handled by each relevant service containing pers
 
 Enterprise-scale for analytics and AI creates three resource groups to help with the creation of your custom onboarding solutions for your data estate.
 
-Typically, user interfaces would reside in the "governance" resource group. The application layer and database would reside in the "automation" and "automationdb" respectively.
+Typically, user interfaces are in the "governance" resource group. The application layer and database are in the "automation" and "automationdb" respectively.
 
 You could use these resource groups to host an application that creates data landing zones, data integrations, and data products. You could develop a logic application to capture feedback and route to the correct teams.
 
@@ -170,7 +170,7 @@ You could use these resource groups to host an application that creates data lan
 
 If your enterprise has already developed an ingestion framework engine for automatically ingesting data based on registering metadata, which includes connection strings, path to copy data from and to, and ingestion schedule, we suggest this application should reside in the data management landing zone.
 
-For example, you could implement the following workflow for an ingestion framework engine:
+For example, you can implement the following workflow for an ingestion framework engine:
 
 1. The ingestion engines framework UI is deployed to the data management landing zone.
 1. The application communicates with an Azure Data Factory SQL Database metastore in each data landing zone to create new data sources for ingestion for landing into the data landing zones.
@@ -180,7 +180,7 @@ For example, you could implement the following workflow for an ingestion framewo
 
 ## Container registry
 
-To allow the data platform operations to deploy standard containers for use in data science projects, the data management landing zone hosts an Azure Container Registry.
+ The data management landing zone hosts an Azure Container Registry. It allows the data platform operations to deploy standard containers for use in data science projects.
 
 ## Global DNS
 
@@ -196,4 +196,4 @@ For more information, see [Connect to Azure Synapse studio using private links](
 
 ## Next steps
 
-[Enterprise-scale for analytics and AI architecture data landing zone](data-landing-zone.md)
+[Enterprise-scale for analytics and AI architecture data landing zone](./data-landing-zone.md)

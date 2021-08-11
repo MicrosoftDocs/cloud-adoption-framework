@@ -132,4 +132,4 @@ For more information about how groups align within a data management landing zon
 
 ## Next steps
 
-[Team functions](organize-team-functions.md)
+[Team functions](./organize-team-functions.md)

@@ -14,7 +14,7 @@ ms.custom: think-tank, e2e-data
 
 For the data management and analytics scenario, we recommend by moving teams like ingest, processing, analysis, consumption, and visualization from working in horizontally siloed teams to agile vertical cross domain teams in each tier. Platform teams like data platform operations and platform operations are grouped together in a common platform group.
 
-![Diagram of the data management and analytics scenario teams.](images/enterprise-scale-analytics-ai-teams.png)
+![Diagram of the data management and analytics scenario teams.](./images/enterprise-scale-analytics-ai-teams.png)
 
 ## Platform group
 
@@ -74,7 +74,7 @@ Data landing zone ops supports integration ops and data product teams to create 
 
 ### Adhere to the Azure Well-Architected Framework
 
-Data landing zone ops is responsible for the data landing zone, and it's recommended for the team to be proficient in the [Azure Well-Architected Framework](/azure/architecture/framework), which provides guidance on cost optimization, reliability, and security.
+Data landing zone ops is responsible for the data landing zone, and it's recommended for the team to be proficient in the [Azure Well-Architected Framework](/azure/architecture/framework/), which provides guidance on cost optimization, reliability, and security.
 
 ### Business as usual
 
@@ -147,7 +147,7 @@ The data science products team starts by searching and finding relevant datasets
 
 Before processing all data, the team uses local or remote compute to process and analyze sample datasets. They can optimize remote compute targets with larger datasets to train and develop machine learning models with runs, outputs, and models that are tracked inside Azure Machine Learning.
 
-When the team has developed machine learning models, they start operationalizing them. For this, they expand the team to include data ops and machine learning engineers who can assist with moving the models into a new data product, as outlined in a data product team role.
+When the team has developed machine learning models, they start operationalizing them. For this, they expand the team to include DataOps and machine learning engineers who can assist with moving the models into a new data product, as outlined in a data product team role.
 
 The data science team will continue to work with the associated data product owners to capture feedback, support, and resolved and update models in production using a [machine learning ops methodology](/azure/machine-learning/concept-model-management-and-deployment).
 

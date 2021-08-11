@@ -2,7 +2,7 @@
 title: Understand best practices for data science projects with enterprise-scale for analytics and AI in Azure
 description: Learn about best practices for data science projects with enterprise-scale for analytics and AI in Azure.
 author: abdale
-ms.author: hamoodaleem 
+ms.author: hamoodaleem
 ms.date: 08/06/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -22,13 +22,13 @@ It's essential to develop a blueprint that bundles a set of services for your da
 
 Following are guidelines on developing a data science template for your organization:
 
-1. Develop a set of infrastructure as code templates to deploy an Azure Machine Learning workspace. Include resources like a key vault, storage account, Azure Application Insights, and container registry.
+- Develop a set of infrastructure as code templates to deploy an Azure Machine Learning workspace. Include resources like a key vault, storage account, Azure Application Insights, and container registry.
 
-1. Include the setup of data stores and compute targets in these templates like compute instances, compute clusters, and Azure Databricks.
+- Include the setup of data stores and compute targets in these templates like compute instances, compute clusters, and Azure Databricks.
 
-1. Include an Azure Data Factory or Azure Synapse deployment in templates and Cognitive Services.
+- Include an Azure Data Factory or Azure Synapse deployment in templates and Cognitive Services.
 
-1. The templates should provide all necessary tools to execute the data science exploration phase and the initial operationalization of the model.
+- The templates should provide all necessary tools to execute the data science exploration phase and the initial operationalization of the model.
 
 ### Considerations for an initial setup
 
@@ -74,19 +74,19 @@ Data science projects can be simplified and accelerated if certain artifacts and
 
 These artifacts should include:
 
-1. **Sample notebooks** that show how to:
+- Sample notebooks that show how to:
 
-    - Load, mount, and work with datasets.
-    - Log metrics and parameters.
-    - Submit training jobs to compute clusters.
+  - Load, mount, and work with datasets.
+  - Log metrics and parameters.
+  - Submit training jobs to compute clusters.
 
-2. **Artifacts** required for operationalization:
+- Artifacts required for operationalization:
 
-    - Sample Azure Machine Learning pipelines
-    - Sample Azure Pipelines
-    - More scripts required to execute pipelines
+  - Sample Azure Machine Learning pipelines
+  - Sample Azure Pipelines
+  - More scripts required to execute pipelines
 
-3. **Documentation**
+- Documentation.
 
 ### Use well-designed artifacts to operationalize pipelines
 
@@ -131,4 +131,4 @@ The following purposes apply to each folder in the repository:
 
 ## Next steps
 
-[Azure Machine Learning as a data product](azure-machine-learning.md)
+[Azure Machine Learning as a data product](./azure-machine-learning.md)

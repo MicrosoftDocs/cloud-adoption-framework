@@ -72,4 +72,4 @@ Figure 2 shows the subprocess of adding an integration to a pre-existing Azure D
 
 ## Next steps
 
-[Data products](data-landing-zone-data-products.md)
+[Data products](./data-landing-zone-data-products.md)

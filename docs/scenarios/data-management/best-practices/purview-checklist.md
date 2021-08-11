@@ -1,6 +1,6 @@
 ---
-title: Azure Purview readiness checklist for the data management and analytics enterprise-scale scenario 
-description: Learn about the enterprise-scale for analytics and AI Azure Purview readiness checklist 
+title: Azure Purview readiness checklist for the data management and analytics enterprise-scale scenario
+description: Learn about the enterprise-scale for analytics and AI Azure Purview readiness checklist
 author: zeinam
 ms.author: zeinam
 ms.date: 05/21/2021
@@ -24,10 +24,10 @@ The **Azure Purview readiness checklist** provides high-level guidance that can 
 
 |Phase |Description |
 |--|--|
-|![Phase 1](../images/icons/1.png) | [Planning and organizational readiness](#phase-1-planning-and-organizational-readiness): Plan for unified data governance, learn the pre-requisite tools and approaches needed for creating a data management environment, and [develop a plan for data management and analytics](../plan.md). |
-|![Phase 2](../images/icons/2.png) | [Build your data governance and management foundation](#phase-2-build-your-data-governance-and-management-foundation): Deploy your enterprise-scale for analytics [data management landing zone](../architectures/data-management-landing-zone.md) with Azure Purview. This foundation is a unified enterprise data management and data governance solution. |
-|![Phase 3](../images/icons/3.png) | [Onboard the first data landing zone](#phase-3-onboard-your-first-data-landing-zone): Start with your first [data landing zone](../architectures/data-landing-zone.md) and start small. Then expand to quickly enable low-risk adoption and build toward security, governance, and compliance over time. |
-|![Phase 4](../images/icons/4.png)| [Onboard more data landing zones](#phase-4-onboard-more-data-landing-zones): Once you deploy and evaluate your baseline architecture and align your operating model with cloud-native operations, you can enable more data landing zones.
+|![Phase 1](../images/icons/1.png) | Plan for unified data governance, learn the pre-requisite tools and approaches needed for creating a data management environment, and [develop a plan for data management and analytics](../plan.md). |
+|![Phase 2](../images/icons/2.png) | Build your data governance and management foundation: Deploy your enterprise-scale for analytics [data management landing zone](../architectures/data-management-landing-zone.md) with Azure Purview. This foundation is a unified enterprise data management and data governance solution. |
+|![Phase 3](../images/icons/3.png) | Onboard the first data landing zone: Start with your first [data landing zone](../architectures/data-landing-zone.md) and start small. Then expand to quickly enable low-risk adoption and build toward security, governance, and compliance over time. |
+|![Phase 4](../images/icons/4.png)| Onboard more data landing zones: Once you deploy and evaluate your baseline architecture and align your operating model with cloud-native operations, you can enable more data landing zones.
 
 ## Phase 1: Planning and organizational readiness
 
@@ -78,7 +78,7 @@ The **Azure Purview readiness checklist** provides high-level guidance that can 
 - Prepare your Azure subscription to deploy the data management landing zone with Azure Purview.
   - Define which subscription will be used.
   - Register required Azure resource providers.
-  - Review and update the Azure Policy assigned to allow deployment of Azure Storage, Azure eventhub namespace, and Azure Purview accounts.
+  - Review and update the Azure Policy assigned to allow deployment of Azure Storage, Azure Event Hubs namespace, and Azure Purview accounts.
   - Validate if the Azure Purview account has access to a data source subscription to register and scan data sources.
   - If needed, assign required access to Key Vault secrets to Azure Purview account's managed identity.
   - For on-premises and infrastructure as a service (IaaS) data sources, create credentials and map to Key Vault's secrets in Azure Purview.
