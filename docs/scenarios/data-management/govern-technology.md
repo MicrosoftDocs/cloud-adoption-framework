@@ -22,7 +22,11 @@ In the context of technology needed for end-to-end data governance, Microsoft pr
 
 The first step in data governance is to create a common business vocabulary of common data names and definitions describing logical data entities that can be shared across the enterprise. For example, customer, account, product, supplier, orders, payments, and returns. Once you've created a common business vocabulary, it becomes possible to create these common data assets. You can store them where their reuse can be maximized to drive consistency everywhere.
 
-:::image type="content" source="./images/common-data-model.png" alt-text="Diagram of Common Data Model." lightbox="images/common-data-model.png":::
+The graphic below shows some elements of the [standard entities](https://github.com/microsoft/CDM/tree/master/schemaDocuments/core/applicationCommon) available within Common Data Model. More information: [Common Data Model repository on GitHub](https://aka.ms/cdmrepo).
+
+:::image type="content" source="images/cdm-entities-v1.png" alt-text="Common Data Model poster" lightbox="images/cdm-entities-v1.png":::
+
+[Download the Common Data Model poster](https://aka.ms/cdmposter)
 
 The Common Data Model is an open, prebuilt set of common business entities and activities used across a business. The Common Data Model can be used to shortcut the creation of your common business vocabulary.
 
