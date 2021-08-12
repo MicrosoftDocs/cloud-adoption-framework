@@ -63,7 +63,7 @@ The Cloud Adoption Framework includes tools that help you quickly implement tech
 | Resource | Description |
 |----------|-------------|
 | [Datacenter migration discovery checklist](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/migrate/datacenter-migration-discovery-checklist.docx) | Review this checklist for information that helps identify workloads, servers, and other assets in your datacenter. Use this information to help plan your migration.
-| [Migration templates](https://aka.ms/adopt/plan/generator) | In the Azure DevOps generator, we've built several templates that you can use to help streamline your projects. Templates have been created for [Windows Virtual Desktop](https://azuredevopsdemogenerator.azurewebsites.net/?name=wvdmigration), [server migration](https://azuredevopsdemogenerator.azurewebsites.net/?name=servermigration), [SQL migration](https://azuredevopsdemogenerator.azurewebsites.net/?name=sqlmigration), and [AKS deployments](https://azuredevopsdemogenerator.azurewebsites.net/?name=cafaks).
+| [Migration templates](https://aka.ms/adopt/plan/generator) | In the Azure DevOps generator, we've built several templates that you can use to help streamline your projects. Templates have been created for [Azure Virtual Desktop](https://azuredevopsdemogenerator.azurewebsites.net/?name=wvdmigration), [server migration](https://azuredevopsdemogenerator.azurewebsites.net/?name=servermigration), [SQL migration](https://azuredevopsdemogenerator.azurewebsites.net/?name=sqlmigration), and [AKS deployments](https://azuredevopsdemogenerator.azurewebsites.net/?name=cafaks).
 
 ## Innovate
 
