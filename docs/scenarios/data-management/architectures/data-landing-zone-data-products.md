@@ -119,11 +119,11 @@ For every data landing zone, an empty visualization resource group is created. V
 ![Diagram of a visualization resource group](../images/visualization-resource-group.png)
 
 >[!NOTE]
->Licensing costs might mean that is it more economical to deploy third-party products such as Spotfire and Tableau into the data management landing zone and for the products to connect across to the data landing zone to pull data back.
+>Licensing costs might mean that is it more economical to deploy third-party visualization products into the data management landing zone and for the products to connect across to the data landing zone to pull data back.
 
 While an initial visualization resource group will be deployed for a new data landing zone, data products might require their own reporting and visualization resource group. Security boundaries or a requirement to cross-charge for usage are the reason. It's important to remember that using Azure Active Directory passthrough authentication from services such as Power BI and Azure Analysis Services often reduces the need for a separated security boundary.
 
-Power BI is the strategic visualization tool for self-service analytics and for citizen data scientists. Our recommendation is to use the current well-established processes for data refresh scheduling, security, compliance, and data confidentiality handling.
+Power BI is Microsoft's strategic visualization tool for self-service analytics and for citizen data scientists.
 
 Aligned to Microsoft investments and roadmap, we recommend using Power BI premium as the primary option for specific cases where refresh frequency, performance, or users licensing can't be met by Power BI professional.
 
