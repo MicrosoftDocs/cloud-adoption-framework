@@ -82,7 +82,7 @@ items:
   - name: Resources 
     items:
     - name: Cloud Adoption Framework
-      href: /get-started/index.md
+      href: ../get-started/index.md
     - name: Azure Well-Architected Framework
       href: /azure/architecture/framework/
     - name: Learn modules
