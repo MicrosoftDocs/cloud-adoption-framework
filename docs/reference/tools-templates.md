@@ -90,5 +90,5 @@ The Cloud Adoption Framework includes tools that help you quickly implement tech
 
 | Resource | Description |
 |----------|-------------|
-| [Deploy STIG compliant Windows VM](https://docs.microsoft.com/en-us/azure/azure-government/documentation-government-stig-windows-vm) | This quickstart shows how to deploy a STIG-compliant Linux virtual machine (Preview) on Azure or Azure Government using the corresponding portal.
-| [Deploy STIG compliant Linux VM](https://docs.microsoft.com/en-us/azure/azure-government/documentation-government-stig-linux-vm) | This quickstart shows how to deploy a STIG-compliant Linux virtual machine (Preview) on Azure or Azure Government using the corresponding portal.
+| [Deploy STIG compliant Windows VM](https://docs.microsoft.com/azure/azure-government/documentation-government-stig-windows-vm) | This quickstart shows how to deploy a STIG-compliant Linux virtual machine (Preview) on Azure or Azure Government using the corresponding portal.
+| [Deploy STIG compliant Linux VM](https://docs.microsoft.com/azure/azure-government/documentation-government-stig-linux-vm) | This quickstart shows how to deploy a STIG-compliant Linux virtual machine (Preview) on Azure or Azure Government using the corresponding portal.
