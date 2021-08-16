@@ -32,9 +32,9 @@ When a response to critical business events is the highest priority, it's import
 
 When migration is the highest priority, strategy and planning will play a vital role early in the process. We recommend that you implement the first workload in parallel with planning efforts, to help the team understand and anticipate any learning curves that are associated with cloud adoption.
 
-When innovation is the highest priority, strategy and planning require additional investments early in the process to ensure balance in the portfolio and wise alignment of the investment made during cloud adoption. For further information and guidance, see [Understand the innovation journey](../get-started/innovate.md).
+When innovation is the highest priority, strategy and planning require more investments early in the process to ensure balance in the portfolio and wise alignment of the investment made during cloud adoption. For more information and guidance, see [Understand the innovation journey](../get-started/innovate.md).
 
-To ensure wiser decision-making, all participants in the migration process should have a clear awareness of their motivations. The following section outlines how customers can guide and effect wiser decisions through consistent, strategic methodologies.
+To ensure wiser decision-making, all participants in the migration process should have a clear awareness of their motivations. The following section outlines how customers can guide and affect wiser decisions through consistent, strategic methodologies.
 
 ## Motivation-driven strategies and business outcomes
 
@@ -44,7 +44,7 @@ This section highlights the *migration* and *innovation* motivations and their c
 
 The *migration* motivations listed near the top of the motivations table are the most common, but not necessarily the most significant, reasons for adopting the cloud. These outcomes are important to achieve, but they're most effectively used to transition to other, more useful worldviews. This important first step to cloud adoption is often called a *cloud migration*. The [Migrate methodology](../get-started/migrate.md) in the Cloud Adoption Framework outlines the *strategy for executing a cloud migration*.
 
-Some motivations align well with a migrate strategy. Motivations at the top of this list will likely have significantly less business impact than those toward the bottom. **Migration motivation-driven strategies** have helped to produce successful business outcomes, like:
+Some motivations align well with a migrate strategy. Motivations at the top of this list can have less business impact than those toward the bottom. **Migration motivation-driven strategies** have helped organizations to create the following successful business outcomes:
 
 - Increasing cost savings. Read the [customer story](https://customers.microsoft.com/story/canadian-power-generator-shines-light-on-numbers).
 - Reducing vendor or technical complexity.

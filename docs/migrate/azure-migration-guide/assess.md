@@ -34,7 +34,7 @@ If you're considering a lift-and-shift approach or are in the early assessment s
 
 #### Create a new project
 
-Begin server discovery, assessment and migration using Azure Migrate via these steps:
+Begin server discovery, assessment, and migration using Azure Migrate via these steps:
 
 1. Select **Azure Migrate**.
 1. In **Overview**, select **Discover, assess and migrate**.

@@ -97,7 +97,7 @@ With some Azure features, you can associate service endpoints to a [public IP][p
 
 ## Azure DDoS Protection Standard
 
-[Azure DDoS Protection Standard][ddos] provides additional mitigation capabilities over the [basic service][ddos] tier that are tuned specifically to Azure Virtual Network resources. DDoS protection standard is simple to enable and requires no application changes.
+[Azure DDoS Protection Standard][ddos] provides extra mitigation capabilities over the [basic service][ddos] tier that are tuned specifically to Azure Virtual Network resources. DDoS protection standard is simple to enable and requires no application changes.
 
 You can tune protection policies through dedicated traffic monitoring and machine-learning algorithms. Policies are applied to public IP addresses associated to resources deployed in virtual networks. Examples include Azure Load Balancer, Application Gateway, and Service Fabric instances.
 

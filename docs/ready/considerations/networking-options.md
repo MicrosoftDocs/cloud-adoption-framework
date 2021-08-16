@@ -39,7 +39,7 @@ Answer the following questions about your workloads to help you make decisions b
   - [Azure Front Door](/azure/frontdoor/front-door-overview)
   - [Azure Application Gateway](/azure/application-gateway/)
   - [Azure Traffic Manager](/azure/traffic-manager/traffic-manager-overview)
-- **Will you need to support custom DNS management?** [Azure DNS](/azure/dns/dns-overview) is a hosting service for DNS domains. Azure DNS provides name resolution by using the Azure infrastructure. If your workloads require name resolution that goes beyond the features that are provided by Azure DNS, you might need to deploy additional solutions. If your workloads also require Active Directory services, consider using [Azure Active Directory Domain Services](/azure/active-directory-domain-services/overview) to augment Azure DNS capabilities. For more capabilities, you can also [deploy custom IaaS virtual machines](/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances) to support your requirements.
+- **Will you need to support custom DNS management?** [Azure DNS](/azure/dns/dns-overview) is a hosting service for DNS domains. Azure DNS provides name resolution by using the Azure infrastructure. If your workloads require name resolution that goes beyond the features that are provided by Azure DNS, you might need to deploy other solutions. If your workloads also require Active Directory services, consider using [Azure Active Directory Domain Services](/azure/active-directory-domain-services/overview) to augment Azure DNS capabilities. For more capabilities, you can also [deploy custom IaaS virtual machines](/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances) to support your requirements.
 
 ## Common networking scenarios
 
@@ -87,7 +87,7 @@ For organizations that meet the following criteria, you may also want to start w
 
 - Your enterprise is subject to regulatory compliance requirements that require centralized monitoring and audit capabilities.
 - You need to maintain common policy and governance compliance and centralized IT control over core services.
-- Your industry depends on a complex platform which requires complex controls and deep domain expertise to govern the platform. This is most common in large enterprises within finance, oil and gas, or manufacturing.
+- Your industry depends on a complex platform that requires complex controls and deep domain expertise to govern the platform. This is most common in large enterprises within finance, oil and gas, or manufacturing.
 - Your existing IT governance policies require tighter parity with existing features, even during early stage adoption.
 
 ## Follow Azure networking best practices
@@ -96,4 +96,4 @@ As part of your networking design process, see these articles:
 
 - [Virtual network planning](/azure/virtual-network/virtual-network-vnet-plan-design-arm?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json). Learn how to plan for virtual networks based on your isolation, connectivity, and location requirements.
 - [Azure best practices for network security](/azure/security/fundamentals/network-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json). Learn about Azure best practices that can help you enhance your network security.
-- [Best practices for networking when you migrate workloads to Azure](../../migrate/azure-best-practices/migrate-best-practices-networking.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json). Get additional guidance about how to implement Azure networking to support IaaS-based and PaaS-based workloads.
+- [Best practices for networking when you migrate workloads to Azure](../../migrate/azure-best-practices/migrate-best-practices-networking.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json). Get more guidance about how to implement Azure networking to support IaaS-based and PaaS-based workloads.
