@@ -3,7 +3,7 @@ title: Review your network options
 description: Use the Cloud Adoption Framework for Azure to learn how to identify the networking capabilities that your landing zone needs to support Azure workloads.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 05/15/2019
+ms.date: 08/23/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready

@@ -3,7 +3,7 @@ title: Assess each workload and refine plans
 description: Use the Cloud Adoption Framework for Azure to assess your environment's suitability for migration and which methods to consider.
 author: matticusau
 ms.author: brblanch
-ms.date: 02/25/2020
+ms.date: 08/23/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
