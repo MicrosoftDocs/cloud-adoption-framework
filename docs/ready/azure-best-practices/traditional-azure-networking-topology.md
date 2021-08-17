@@ -126,11 +126,15 @@ The following figure shows both options:
 
  ![Diagram that illustrates options for hub-to-hub connectivity.](./media/hub-to-hub-er-or-peering.png)
 
+*Figure 4: Options for hub-to-hub connectivity.*
+
 - When two Azure regions need to connect, evaluate and use global VNet peering or the same ExpressRoute circuit(s) to connect both hub VNets.
 
-- When more than two Azure regions need to connect, then the recommendation is for hub VNets in each region to connect to the same ExpressRoute circuit(s). Global VNet peering would require managing a large number of peering relationships and a complex set of user-defined routes (UDRs) across multiple VNets. The following diagram shows how to connect hub and spoke networks in three regions:
+- When more than two Azure regions need to connect, then the recommendation is for hub VNets in each region to connect to the same ExpressRoute circuit(s). Global VNet peering would require managing a large number of peering relationships and a complex set of user-defined routes (UDRs) across multiple VNets. The following diagram shows how to connect hub-and-poke networks in three regions:
 
-![Diagram that illustrates multi-region hub-to-hub connectivity with ExpressRoute](./media/multiregion-hub-to-hub-er.png)
+![Diagram that illustrates hub-to-hub connectivity between multiple regions with ExpressRoute.](./media/multiregion-hub-to-hub-er.png)
+
+*Figure 5: Hub-to-hub connectivity between multiple regions with ExpressRoute.*
 
 - When using ExpressRoute circuits for cross-region connectivity, spokes in different regions will communicate directly and bypass the firewall, as they will learn via BGP routes to the spokes of the remote hub. If you require traffic across spokes to be inspected by the firewall NVAs in the hub VNets, you must implement one of these options:
 
