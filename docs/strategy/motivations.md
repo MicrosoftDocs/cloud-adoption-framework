@@ -44,11 +44,11 @@ This section highlights the *migration* and *innovation* motivations and their c
 
 The *migration* motivations listed near the top of the motivations table are the most common, but not necessarily the most significant, reasons for adopting the cloud. These outcomes are important to achieve, but they're most effectively used to transition to other, more useful worldviews. This important first step to cloud adoption is often called a *cloud migration*. The [Migrate methodology](../get-started/migrate.md) in the Cloud Adoption Framework outlines the *strategy for executing a cloud migration*.
 
-Some motivations align well with a migrate strategy. Motivations at the top of this list can have less business impact than those toward the bottom. **Migration motivation-driven strategies** have helped organizations to successfully:
+Some motivations align well with a migrate strategy. Motivations at the top of this list can have less business impact than those toward the bottom. **Strategies with migration driving motivations** have helped organizations to successfully create business outcomes that:
 
 - Increase cost savings. Read the [customer story](https://customers.microsoft.com/story/canadian-power-generator-shines-light-on-numbers).
 - Reduce vendor or technical complexity.
-- Optimizeinternal operations.
+- Optimize internal operations.
 - Increase business agility. Read the [customer story](https://customers.microsoft.com/story/845185-academy-motion-picture-arts-sciences-media-entertainment-azure).
 - Prepare for new technical capabilities.
 - Scale to market demand.
@@ -58,7 +58,7 @@ Some motivations align well with a migrate strategy. Motivations at the top of t
 
 Data is the new commodity, and modern applications are the supply chain driving that data into various experiences. In today's business market, it's hard to find a transformative product or service that isn't built on top of data, insights, and customer experiences. The [Innovate methodology](../get-started/innovate.md) in the Cloud Adoption Framework includes *motivations aligned to a technology strategy* that appear lower in the *Innovation* column of the motivation list above.
 
-The motivations listed below focus an IT organization more on an innovate strategy than a migrate strategy. **Innovation motivation-driven strategies** have helped organizations to successfully:
+The motivations below help IT organizations to focus more on innovation than a migration strategy. **Strategies with innovation driving motivations** have helped organizations to successfully create business outcomes that:
 
 - Increase business agility.
 - Prepare for new technical capabilities.
