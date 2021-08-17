@@ -204,10 +204,10 @@ For every data landing zone, an empty visualization resource group will be creat
 
 ![Visualization resource group](../images/visualization-resource-group.png)
 
-This resource group could host third-party virtual machines for services such as Spotfire or Tableau.
+This resource group could host virtual machines for third-party visualization services.
 
 >[!TIP]
->It might be more economical to deploy third-party products such as Spotfire and Tableau into the data management landing zone due to licensing costs, and for the products to connect across data landing zones to pull data back.
+>It might be more economical to deploy third-party visualization products into the data management landing zone due to licensing costs, and for the products to connect across data landing zones to pull data back.
 
 ## Next steps
 
