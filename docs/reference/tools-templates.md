@@ -3,7 +3,7 @@ title: Tools and templates
 description: Find the tools and templates that are available in the Cloud Adoption Framework to help you accelerate your cloud adoption.
 author: JanetCThomas
 ms.author: janet
-ms.date: 04/14/2020
+ms.date: 08/17/2021
 ms.topic: article
 ms.service: cloud-adoption-framework
 ms.subservice: general
@@ -90,5 +90,5 @@ The Cloud Adoption Framework includes tools that help you quickly implement tech
 
 | Resource | Description |
 |----------|-------------|
-| [Deploy STIG compliant Windows VM](https://docs.microsoft.com/azure/azure-government/documentation-government-stig-windows-vm) | This quickstart shows how to deploy a STIG-compliant Linux virtual machine (Preview) on Azure or Azure Government using the corresponding portal.
-| [Deploy STIG compliant Linux VM](https://docs.microsoft.com/azure/azure-government/documentation-government-stig-linux-vm) | This quickstart shows how to deploy a STIG-compliant Linux virtual machine (Preview) on Azure or Azure Government using the corresponding portal.
+| [Deploy STIG compliant Windows VM](/azure/azure-government/documentation-government-stig-windows-vm) | This quickstart shows how to deploy a STIG-compliant Linux virtual machine (Preview) on Azure or Azure Government using the corresponding portal.
+| [Deploy STIG compliant Linux VM](/azure/azure-government/documentation-government-stig-linux-vm) | This quickstart shows how to deploy a STIG-compliant Linux virtual machine (Preview) on Azure or Azure Government using the corresponding portal.
