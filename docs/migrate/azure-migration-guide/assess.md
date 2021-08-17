@@ -63,10 +63,10 @@ Begin server discovery, assessment, and migration using Azure Migrate via these 
 
 Dependency analysis identifies dependencies between discovered on-premises servers. It provides these advantages:
 
-- Gather servers into groups for assessment, more accurately, with greater confidence.
-- Identify servers that must be migrated together. This is especially useful if you're not sure which servers are part of an app deployment that you want to migrate to Azure.
-- Identify whether servers are in use, and which servers can be decommissioned instead of migrated.
-- Analyzing dependencies helps ensure that nothing is left behind, and thus avoids surprise outages after migration.
+- Gather servers into groups for assessment, more accurately, and with greater confidence.
+- Identify servers that should be migrated together. This step is especially useful if you're unsure which servers are part of an app deployment that you want to migrate to Azure.
+- Identify whether servers are in use and which servers can be decommissioned instead of migrated.
+- Analyze dependencies to ensure that nothing is left behind and avoid surprise outages after migration.
 
 <!-- markdownlint-disable MD024 -->
 
