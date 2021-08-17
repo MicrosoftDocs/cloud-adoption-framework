@@ -46,6 +46,4 @@ This section explores key recommendations to achieve network encryption between 
   - Establish a VPN tunnel over ExpressRoute with Microsoft peering.
   - Evaluate the capability to configure a Site-to-Site VPN connection over ExpressRoute private peering ([in preview](/azure/vpn-gateway/site-to-site-vpn-private-peering).
 
-- If traffic between Azure regions must be encrypted, use global VNet peering to connect virtual networks across regions.
-
 - If native Azure solutions (as shown in flows `B` and `C` in the diagram) don't meet your requirements, use partner NVAs in Azure to encrypt traffic over ExpressRoute private peering.
