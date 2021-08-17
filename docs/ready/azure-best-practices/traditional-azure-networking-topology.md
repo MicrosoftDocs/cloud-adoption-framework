@@ -112,7 +112,7 @@ The following figure shows this topology.
 
   - All Landing Zone and Platform VNets should use this plan.
 
-- Use your existing network, MPLS, and SD-WAN, to connect branch locations with corporate headquarters. Transit in Azure between ExpressRoute and VPN gateways isn't supported.
+- Use your existing network, multiprotocol label switching, and SD-WAN to connect branch locations with corporate headquarters. Transit in Azure between ExpressRoute and VPN gateways isn't supported.
 
 - When you have hub-and-spoke networks in multiple Azure regions and a few landing zones need to connect across regions, use global VNet peering to directly connect landing zone VNets that need to route traffic to each other. Depending on the communicating VM's SKU, global VNet peering can provide high network throughput. Traffic between directly peered landing zone VNets will bypass NVAs within hub VNets. This would also be subject to [limitations on global VNet peering](/azure/virtual-network/virtual-network-peering-overview#constraints-for-peered-virtual-networks).
 
@@ -148,7 +148,7 @@ The following figure shows both options:
 
 - Use [Azure Monitor for Networks (preview)](/azure/azure-monitor/insights/network-insights-overview) to monitor the end-to-end state of your networks on Azure.
 
-- When you connect spoke VNets to the central hub VNet, there are two [limits](/azure/azure-resource-manager/management/azure-subscription-service-limits) that must be considered:
+- Two [limits](/azure/azure-resource-manager/management/azure-subscription-service-limits) must be considered when you connect spoke VNets to the central hub VNet:
 
   - The maximum number of VNet peering connections per VNet.
   - The maximum number of prefixes that ExpressRoute with private peering advertises from Azure to on-premises.
