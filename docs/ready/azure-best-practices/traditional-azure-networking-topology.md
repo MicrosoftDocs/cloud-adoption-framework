@@ -44,7 +44,7 @@ Explore key design considerations and recommendation surrounding network topolog
 
   - Bandwidth will be constrained to the ExpressRoute gateway SKU.
 
-  - You must deploy and manage UDRs if they require inspection or logging for traffic across VNets.
+  - You should deploy and manage UDRs if they need to be inspected or logged for traffic across VNets.
 
 - VPN gateways with Border Gateway Protocol (BGP) are transitive within Azure and on-premises, but they don't provide transitive access to networks connected via ExpressRoute.
 
@@ -114,7 +114,7 @@ The following figure shows this topology.
 
 - Use your existing network, MPLS, and SD-WAN, to connect branch locations with corporate headquarters. Transit in Azure between ExpressRoute and VPN gateways isn't supported.
 
-- When you have hub-and-spoke networks in multiple Azure regions and a small number of landing zones need to connect across regions, use global VNet peering to directly connect landing zone VNets that need to route traffic to each other. Depending on the communicating VM's SKU, global VNet peering can provide high network throughput. Traffic between directly peered landing zone VNets will bypass NVAs within hub VNets. This would also be subject to [limitations on global VNet peering](/azure/virtual-network/virtual-network-peering-overview#constraints-for-peered-virtual-networks).
+- When you have hub-and-spoke networks in multiple Azure regions and a few landing zones need to connect across regions, use global VNet peering to directly connect landing zone VNets that need to route traffic to each other. Depending on the communicating VM's SKU, global VNet peering can provide high network throughput. Traffic between directly peered landing zone VNets will bypass NVAs within hub VNets. This would also be subject to [limitations on global VNet peering](/azure/virtual-network/virtual-network-peering-overview#constraints-for-peered-virtual-networks).
 
 - When you have hub-and-spoke networks in multiple Azure regions and most landing zones need to connect across regions (or when using direct peering to bypass hub NVAs isn't compatible with your security requirements), use hub NVAs to connect hub VNets in each region to each other and route traffic across regions. Global VNet peering or ExpressRoute circuits can help to connect Hub VNets in the following ways:
 
@@ -136,7 +136,7 @@ The following figure shows both options:
 
   - Create more specific route entries in the spoke UDRs for the firewall in the local hub VNet to redirect traffic across hubs.
   
-  - [Disable BGP propagation](/azure/virtual-network/virtual-networks-udr-overview#border-gateway-protocol) on the spoke route tables, which simplifies the route configuration.
+  - To simplify route configuration, [disable BGP propagation](/azure/virtual-network/virtual-networks-udr-overview#border-gateway-protocol) on the spoke route tables.
 
 - When your organization requires hub-and-spoke network architectures across more than two Azure regions, global transit connectivity between landing zones VNets across Azure regions is required, and you want to minimize network management overhead, it's recommended to evaluate a [managed global transit network architecture](/azure/cloud-adoption-framework/ready/azure-best-practices/virtual-wan-network-topology) that's based on Virtual WAN.
 
