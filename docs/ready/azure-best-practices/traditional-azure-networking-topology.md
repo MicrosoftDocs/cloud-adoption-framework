@@ -1,6 +1,6 @@
 ---
 title: Traditional Azure networking topology
-description: Examine key design considerations and recommendations surrounding network topologies in Azure.
+description: Understand key design considerations and recommendations surrounding network topologies in Azure.
 author: sitarant
 ms.author: sitarant
 ms.date: 08/18/2021
@@ -44,7 +44,7 @@ Explore key design considerations and recommendation surrounding network topolog
 
   - Bandwidth will be constrained to the ExpressRoute gateway SKU.
 
-  - You should deploy and manage UDRs if they need to be inspected or logged for traffic across VNets.
+  - Deploy and manage UDRs if they need to be inspected or logged for traffic across VNets.
 
 - VPN gateways with Border Gateway Protocol (BGP) are transitive within Azure and on-premises, but they don't provide transitive access to networks connected via ExpressRoute.
 
@@ -150,7 +150,7 @@ The following figure shows both options:
 
 - Two [limits](/azure/azure-resource-manager/management/azure-subscription-service-limits) must be considered when you connect spoke VNets to the central hub VNet:
 
-  - The maximum number of VNet peering connections per VNet.
-  - The maximum number of prefixes that ExpressRoute with private peering advertises from Azure to on-premises.
+  - The maximum number of VNet peering connections per VNet
+  - The maximum number of prefixes that ExpressRoute with private peering advertises from Azure to on-premises
 
-  Ensure that the number of spoke VNets connected to the hub VNet don't exceed those limits.
+  Ensure that the number of spoke VNets connected to the hub VNet don't exceed these limits.
