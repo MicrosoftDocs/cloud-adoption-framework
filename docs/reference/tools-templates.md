@@ -3,7 +3,7 @@ title: Tools and templates
 description: Find the tools and templates that are available in the Cloud Adoption Framework to help you accelerate your cloud adoption.
 author: JanetCThomas
 ms.author: janet
-ms.date: 04/14/2020
+ms.date: 08/17/2021
 ms.topic: article
 ms.service: cloud-adoption-framework
 ms.subservice: general
@@ -70,6 +70,7 @@ The Cloud Adoption Framework includes tools that help you quickly implement tech
 | Resource | Description |
 |----------|-------------|
 | [Deployment templates](https://aka.ms/adopt/plan/generator) | The Azure DevOps generator has project checklists to help you build your [knowledge mining](https://azuredevopsdemogenerator.azurewebsites.net/?name=kmine), [modern data warehouse](https://azuredevopsdemogenerator.azurewebsites.net/?name=moddw), and industry focused accelerators like the [retail recommender](https://azuredevopsdemogenerator.azurewebsites.net/?name=retai) using AI and [modern IoT](https://azuredevopsdemogenerator.azurewebsites.net/?name=modiot). The templates give you a structured approach and checklist to follow. Each template and work item has links to required content, assets, and code samples that can help you get started.
+| [Solution Accelerators](https://aka.ms/adopt/plan/generator) | The Cloud Adoption Framework Solution Accelerators are intended to help you rapidly deploy applications and workloads to address business challenges. Today we have solution accelerators for, [Retail Recommendation](https://github.com/microsoft/Azure-Synapse-Retail-Recommender-Solution-Accelerator), [Demand Forecasting](https://github.com/microsoft/solution-accelerator-many-models), [Modern Finance](https://github.com/microsoft/Azure-Synapse-Solution-Accelerator-Financial-Analytics-Customer-Revenue-Growth-Factor) and  Workplace Intelligence for IT. |
 
 ## Manage
 
@@ -84,3 +85,10 @@ The Cloud Adoption Framework includes tools that help you quickly implement tech
 | Resource | Description |
 |----------|-------------|
 | [Cross-team responsible, accountable, consulted, and informed (RACI) diagram](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx) | Download and modify the RACI spreadsheet template to track organizational structure decisions over time. |
+
+## Secure
+
+| Resource | Description |
+|----------|-------------|
+| [Deploy STIG compliant Windows VM](/azure/azure-government/documentation-government-stig-windows-vm) | This quickstart shows how to deploy a STIG-compliant Windows virtual machine (Preview) on Azure or Azure Government using the corresponding portal.
+| [Deploy STIG compliant Linux VM](/azure/azure-government/documentation-government-stig-linux-vm) | This quickstart shows how to deploy a STIG-compliant Linux virtual machine (Preview) on Azure or Azure Government using the corresponding portal.
