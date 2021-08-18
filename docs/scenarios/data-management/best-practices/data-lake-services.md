@@ -197,7 +197,7 @@ Below are general practices for data partitioning design.
 
 ## Alignment of personas to write and reading of data
 
-:::image type="content" source="../images/data-lake-zones.png" alt-text="Diagram of an example of data lake zones." lightbox="../images/data-lake-zones.png":::
+:::image type="content" source="../images/data-lake-zones-quality.png" alt-text="Diagram showing an example of data lake zones." lightbox="../images/data-lake-zones-quality.png":::
 
 ### Write data
 
