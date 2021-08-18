@@ -12,28 +12,28 @@ ms.custom: think-tank
 
 # Enterprise Agreement enrollment and Azure Active Directory tenants
 
-The Azure service presents a range of [active subscription offers](https://azure.microsoft.com/support/legal/offer-details/), and customers can use these offers at the same time to gain flexible billing options. Example subscriptions include Enterprise Agreement (EA) Support, Microsoft Customer Agreement, Cloud Service Provider, and others.  
+The Azure service presents a range of [active subscription offers](https://azure.microsoft.com/support/legal/offer-details/), and customers can use these offers at the same time to gain flexible billing options. Example subscriptions include Enterprise Agreement (Enterprise Agreement) Support, Microsoft Customer Agreement, Cloud Service Provider, and others.  
 
 ![Diagram that shows Azure scopes within one Azure Active Directory (Azure AD) tenant with various billing offers and subscriptions.](./media/az-scopes-billing.png)
 
 Enterprise-scale architecture supports subscriptions from any Azure offer. Subscriptions should exist within one Azure Active Directory (Azure AD) tenant to then relocate into the management group hierarchy within that tenant. They can then be managed by the various controls with enterprise-scale platforms like Azure Policy and role-based access control (RBAC).
 
 >[!NOTE]
-> Enterprise-scale architecture is only scoped and deployed to one Azure AD tenant; however, billing options can span across multiple Azure AD tenants. For example, an Enterprise Agreement (EA) enrollment supports Azure subscriptions across different Azure AD tenants.
+> Enterprise-scale architecture is only scoped and deployed to one Azure AD tenant; however, billing options can span across multiple Azure AD tenants. For example, an Enterprise Agreement (Enterprise Agreement) enrollment supports Azure subscriptions across different Azure AD tenants.
 
-## Plan for EA enrollment
+## Plan for Enterprise Agreement enrollment
 
-EA enrollment represents the commercial relationship between Microsoft and how your organization uses Azure. It provides billing foundation for your subscriptions and how your digital estate is administered. The Azure EA portal (https://ea.azure.com) helps you to manage your EA enrollment. An enrollment often represents an organization's hierarchy, including departments, accounts, and subscriptions. This hierarchy represents cost centers within an organization.
+Enterprise Agreement enrollment represents the commercial relationship between Microsoft and how your organization uses Azure. It provides billing foundation for your subscriptions and how your digital estate is administered. The Azure enterprise portal (https://ea.azure.com) helps you to manage your Enterprise Agreement enrollment. An enrollment often represents an organization's hierarchy, including departments, accounts, and subscriptions. This hierarchy represents cost centers within an organization.
 
-![Diagram that shows Azure EA hierarchies.](./media/ea.png)
+![Diagram that shows Azure Enterprise Agreement hierarchies.](./media/ea.png)
 
 - Departments help to segment costs into logical groupings and set a budget or quota at the department level. The quota isn't firmly enforced; it's used for reporting purposes.
 
-- Accounts are organizational units in the Azure EA portal. They can be used to manage subscriptions and access reports.
+- Accounts are organizational units in the Azure enterprise portal. They can be used to manage subscriptions and access reports.
 
-- Subscriptions are the smallest units in the Azure EA portal. They're containers for Azure services that are managed by a service administrator. This is where your organization deploys Azure services.
+- Subscriptions are the smallest units in the Azure enterprise portal. They're containers for Azure services that are managed by a service administrator. This is where your organization deploys Azure services.
 
-- [EA enrollment roles](/azure/cost-management-billing/manage/understand-ea-roles#enterprise-user-roles) link users with their functional role. These roles are:
+- [Enterprise Agreement enrollment roles](/azure/cost-management-billing/manage/understand-ea-roles#enterprise-user-roles) link users with their functional role. These roles are:
 
   - Enterprise administrator
   - Department administrator
@@ -41,19 +41,19 @@ EA enrollment represents the commercial relationship between Microsoft and how y
   - Service administrator
   - Notification contact
 
-### How an EA enrollment relates to Azure AD and Azure RBAC
+### How an Enterprise Agreement enrollment relates to Azure AD and Azure RBAC
 
-When your organization uses an EA enrollment for Azure subscriptions, it's important to understand the various authentication and authorization boundaries and the relationship between these boundaries.
+When your organization uses an Enterprise Agreement enrollment for Azure subscriptions, it's important to understand the various authentication and authorization boundaries and the relationship between these boundaries.
 
-There is an inherent trust relationship between Azure subscriptions and an Azure AD tenant, which is described further in [Associate or add an Azure subscription to your Azure AD tenant](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory). An EA enrollment can also use an Azure AD tenant as an identity provider, depending on the [authentication level](/azure/cost-management-billing/manage/ea-portal-troubleshoot#authentication-level-types) set on the enrollment and which option was selected when the enrollment account owner was created. However, apart from the account owner, EA enrollment roles don't provide access to Azure AD or the Azure subscriptions within that enrollment.
+There is an inherent trust relationship between Azure subscriptions and an Azure AD tenant, which is described further in [Associate or add an Azure subscription to your Azure AD tenant](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory). An Enterprise Agreement enrollment can also use an Azure AD tenant as an identity provider, depending on the [authentication level](/azure/cost-management-billing/manage/ea-portal-troubleshoot#authentication-level-types) set on the enrollment and which option was selected when the enrollment account owner was created. However, apart from the account owner, Enterprise Agreement enrollment roles don't provide access to Azure AD or the Azure subscriptions within that enrollment.
 
-For example, a finance user is granted an enterprise administrator role on the EA enrollment. They're a standard user without elevated permissions or roles assigned to them in Azure AD or on any Azure management group, subscription, resource group, or resource. The finance user can only perform the roles listed at [Managing Azure EA roles](/azure/cost-management-billing/manage/understand-ea-roles#enterprise-administrator) and can't access the Azure subscriptions on the enrollment. The only EA role with access to Azure subscriptions is the account owner because this permission was granted when the subscription was created.
+For example, a finance user is granted an enterprise administrator role on the Enterprise Agreement enrollment. They're a standard user without elevated permissions or roles assigned to them in Azure AD or on any Azure management group, subscription, resource group, or resource. The finance user can only perform the roles listed at [Managing Azure Enterprise Agreement roles](/azure/cost-management-billing/manage/understand-ea-roles#enterprise-administrator) and can't access the Azure subscriptions on the enrollment. The only Enterprise Agreement role with access to Azure subscriptions is the account owner because this permission was granted when the subscription was created.
 
-![Diagram that shows Azure EA relationship with Azure AD and RBAC.](./media/ea-azure-relationship.png)
+![Diagram that shows Azure Enterprise Agreement relationship with Azure AD and RBAC.](./media/ea-azure-relationship.png)
 
 **Design considerations:**
 
-- The enrollment provides a hierarchical organizational structure to govern how subscriptions are managed. See [Managing Azure EA roles](/azure/cost-management-billing/manage/understand-ea-roles#azure-enterprise-portal-hierarchy).
+- The enrollment provides a hierarchical organizational structure to govern how subscriptions are managed. See [Managing Azure Enterprise Agreement roles](/azure/cost-management-billing/manage/understand-ea-roles#azure-enterprise-portal-hierarchy).
 
 - A range of administrators can be assigned to a single enrollment.
 
@@ -67,7 +67,7 @@ For example, a finance user is granted an enterprise administrator role on the E
 
 - Departments and accounts can filter enrollment billing and usage reports.
 
-- Review [Programmatically create Azure EA subscriptions with the latest APIs](/azure/cost-management-billing/manage/programmatically-create-subscription-enterprise-agreement?tabs=rest#limitations-of-azure-enterprise-subscription-creation-api) for more information about EA subscription limitations.
+- Review [Programmatically create Azure Enterprise Agreement subscriptions with the latest APIs](/azure/cost-management-billing/manage/programmatically-create-subscription-enterprise-agreement?tabs=rest#limitations-of-azure-enterprise-subscription-creation-api) for more information about Enterprise Agreement subscription limitations.
 
 **Design recommendations:**
 
@@ -89,13 +89,13 @@ For example, a finance user is granted an enterprise administrator role on the E
 
 - For development/testing (dev/test) workloads, use the [Enterprise Dev/Test](/azure/cost-management-billing/manage/ea-portal-administration#enterprise-devtest-offer) offer, where available. Ensure you comply with the [terms of use](https://azure.microsoft.com/offers/ms-azr-0148p/).
 
-- Don't ignore notification emails sent to the notification account email address. Microsoft sends important EA prompts to this account.
+- Don't ignore notification emails sent to the notification account email address. Microsoft sends important Enterprise Agreement prompts to this account.
 
-- Don't move or rename an EA account in Azure AD.
+- Don't move or rename an Enterprise Agreement account in Azure AD.
 
-- Periodically audit the Azure EA portal to review who has access, and when possible, avoid using a Microsoft account.
+- Periodically audit the Azure enterprise portal to review who has access, and when possible, avoid using a Microsoft account.
 
-- [Enable both **DA View Charges** and **AO View Charges** on every EA enrollment](/azure/cost-management-billing/costs/assign-access-acm-data#enable-access-to-costs-in-the-azure-portal) to allow users with the correct permissions to view Azure cost management data.
+- [Enable both **DA View Charges** and **AO View Charges** on every Enterprise Agreement enrollment](/azure/cost-management-billing/costs/assign-access-acm-data#enable-access-to-costs-in-the-azure-portal) to allow users with the correct permissions to view Azure cost management data.
 
 ## Plan for the Microsoft Customer Agreement service
 
@@ -106,9 +106,9 @@ The Microsoft Customer Agreement often represents an organization's hierarchy, w
 ![Diagram that shows the hierarchy of a Microsoft Customer Agreement.](./media/mca-hierarchy.png)
 
 >[!IMPORTANT]
-> If migrating from an EA to a Microsoft Customer Agreement, please review the following articles:
+> If migrating from an Enterprise Agreement to a Microsoft Customer Agreement, please review the following articles:
 >  
-> - [Complete EA tasks in your billing account for a Microsoft Customer Agreement](/azure/cost-management-billing/manage/mca-enterprise-operations)
+> - [Complete Enterprise Agreement tasks in your billing account for a Microsoft Customer Agreement](/azure/cost-management-billing/manage/mca-enterprise-operations)
 > - [Set up your billing account for a Microsoft Customer Agreement](/azure/cost-management-billing/manage/mca-setup-account)
 
 **Design considerations:**
