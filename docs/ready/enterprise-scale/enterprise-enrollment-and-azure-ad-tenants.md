@@ -45,7 +45,7 @@ EA enrollment represents the commercial relationship between Microsoft and how y
 
 When your organization uses an EA enrollment for Azure subscriptions, it's important to understand the various authentication and authorization boundaries and the relationship between these boundaries.
 
-There is a inherent trust relationship between Azure subscriptions and an Azure AD tenant, which is described further in [Associate or add an Azure subscription to your Azure AD tenant](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory). An EA enrollment can also use an Azure AD tenant as an identity provider, depending on the [authentication level](/azure/cost-management-billing/manage/ea-portal-troubleshoot#authentication-level-types) set on the enrollment and which option was selected when the enrollment account owner was created. However, apart from the account owner, EA enrollment roles don't provide access to Azure AD or the Azure subscriptions within that enrollment.
+There is an inherent trust relationship between Azure subscriptions and an Azure AD tenant, which is described further in [Associate or add an Azure subscription to your Azure AD tenant](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory). An EA enrollment can also use an Azure AD tenant as an identity provider, depending on the [authentication level](/azure/cost-management-billing/manage/ea-portal-troubleshoot#authentication-level-types) set on the enrollment and which option was selected when the enrollment account owner was created. However, apart from the account owner, EA enrollment roles don't provide access to Azure AD or the Azure subscriptions within that enrollment.
 
 For example, a finance user is granted an enterprise administrator role on the EA enrollment. They're a standard user without elevated permissions or roles assigned to them in Azure AD or on any Azure management group, subscription, resource group, or resource. The finance user can only perform the roles listed at [Managing Azure EA roles](/azure/cost-management-billing/manage/understand-ea-roles#enterprise-administrator) and can't access the Azure subscriptions on the enrollment. The only EA role with access to Azure subscriptions is the account owner because this permission was granted when the subscription was created.
 
@@ -67,7 +67,7 @@ For example, a finance user is granted an enterprise administrator role on the E
 
 - Departments and accounts can filter enrollment billing and usage reports.
 
-- Review [Programmatically create Azure EA subscriptions with the latest APIs](/azure/cost-management-billing/manage/programmatically-create-subscription-enterprise-agreement?tabs=rest#limitations-of-azure-enterprise-subscription-creation-api) for more information about about EA subscription limitations creation API.
+- Review [Programmatically create Azure EA subscriptions with the latest APIs](/azure/cost-management-billing/manage/programmatically-create-subscription-enterprise-agreement?tabs=rest#limitations-of-azure-enterprise-subscription-creation-api) for more information about EA subscription limitations.
 
 **Design recommendations:**
 
@@ -75,7 +75,7 @@ For example, a finance user is granted an enterprise administrator role on the E
 
 - Set up a Notification Contact email address to ensure notifications are sent to an appropriate group mailbox.
 
-- An organization can have a variety of structures, including functional, divisional, geographic, matrix, or team structures. Using departments and accounts to map your organization's structure to your enrollment hierarchy can help with separating billing.
+- An organization can have various structures, including functional, divisional, geographic, matrix, or team structures. Using departments and accounts to map your organization's structure to your enrollment hierarchy can help with separating billing.
 
 - Use [Azure Cost Management](/azure/cost-management-billing/cost-management-billing-overview) reports and views, which can use Azure metadata (for example, tags and location) to explore and analyze your organization's costs.
 
@@ -127,7 +127,7 @@ The Microsoft Customer Agreement often represents an organization's hierarchy, w
 
 - A specific set of criteria can be used to determine if a subscription should be suspended.
 
-- Before you provision additional billing profiles, [review the potential impacts to charges and reservations](/azure/cost-management-billing/manage/mca-section-invoice#things-to-consider-when-adding-new-billing-profiles).
+- Before you provision more billing profiles, [review the potential impact to charges and reservations](/azure/cost-management-billing/manage/mca-section-invoice#things-to-consider-when-adding-new-billing-profiles).
 
 - Use [Azure Cost Management](/azure/cost-management-billing/cost-management-billing-overview) reports and views, which explore and analyze your organization's costs with Azure metadata.
 
@@ -172,7 +172,7 @@ The Cloud Solution Provider (CSP) service gives Microsoft partners access to Mic
 
 - A specific set of criteria can be used to determine if a subscription should be suspended; a partner can also suspend a subscription.
 
-- The partner can allow customers to view their Azure usage fees on a per customer basis. For more information, see [Enable the policy to view Azure usage charges](/azure/cost-management-billing/costs/get-started-partners#enable-cost-management-for-customer-tenant-subscriptions). Partners can also use other tools to provide customerse with access to their charges.
+- The partner can allow customers to view their Azure usage fees on a per customer basis. For more information, see [Enable the policy to view Azure usage charges](/azure/cost-management-billing/costs/get-started-partners#enable-cost-management-for-customer-tenant-subscriptions). Partners can also use other tools to provide customers with access to their charges.
 
 - By default, only the partner Azure reservations can only be purchased by the partner for their customer. However, the [**Customer Permissions** feature](/partner-center/give-customers-permission) grants customers permission to purchase Azure reservations from their CSP.
 
@@ -211,6 +211,6 @@ Ask basic security questions during the Azure AD design phase, such as how your 
 
 - Use [Azure AD Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) to manage identities and access.
 
-- Avoid creating multiple Azure AD tenants. For further guidance, see [Testing approach for enterprise scale](./testing-approach.md) and [Cloud Adoption Framework Azure best practices guidance to standardize on a single directory and identity](../../secure/security-top-10.md#9-architecture-standardize-on-a-single-directory-and-identity).
+- Avoid creating multiple Azure AD tenants. For further information, see [Testing approach for enterprise scale](./testing-approach.md) and [Cloud Adoption Framework Azure best practices guidance to standardize on a single directory and identity](../../secure/security-top-10.md#9-architecture-standardize-on-a-single-directory-and-identity).
 
 - Use [Azure Lighthouse](/azure/lighthouse/overview) to grant third parties/partners access to Azure resources in customer Azure AD tenants and centralized access to Azure resources in multitenant Azure AD architectures.
