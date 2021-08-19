@@ -18,7 +18,7 @@ Designing and implementing Azure networking capabilities is a critical part of y
 
 ## Identify workload networking requirements
 
-As part of your landing zone evaluation and preparation, you need to identify the networking capabilities that your landing zone needs to support. This process involves assessing each of the applications and services that make up your workloads to determine their connectivity network control requirements. After you identify and document the requirements, you can create policies for your landing zone to control the allowed networking resources and configuration based on your workload needs.
+As part of your landing zone evaluation and preparation, you need to identify the networking capabilities that your landing zone should support. This process involves assessing each of the applications and services that make up your workloads to determine their connectivity network control requirements. After you identify and document the requirements, you can create policies for your landing zone to control the allowed networking resources and configuration based on your workload needs.
 
 For each application or service you'll deploy to your landing zone environment, use the following decision tree as a starting point to help you determine the networking tools or services to use:
 

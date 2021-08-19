@@ -45,7 +45,7 @@ As you plan your compliance strategy, work with people in your organization with
 
 ### Create a management level
 
-You can create a management group, additional subscriptions, or resource groups.
+You can create a management group, more subscriptions, or resource groups.
 
 #### Create a management group
 
