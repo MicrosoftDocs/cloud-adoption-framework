@@ -1,7 +1,7 @@
 ---
 title: Enterprise-scale management and monitoring for Azure VMware Solution
 description: <<Describe how this enterprise-scale scenario can improve management and monitoring of Azure VMware Solution.>>
-author: mhenry
+author: pgandham
 ms.author: janet
 ms.date: 06/28/2021
 ms.topic: conceptual
