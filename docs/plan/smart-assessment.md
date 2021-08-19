@@ -41,9 +41,6 @@ The milestone feature in SMART allows you to measure your growth and improvement
 You can compare across all 10 dimensions and it gives you a better idea of what were some of the resources that really helped and contributed to that evolution.	
 
 ----------------------------------------------------------------------------------------
-For more information on the tool, you can take a look at it using any of the onscreen resources.	
-Thank you all so much for your time and super excited for the next demo.	
-
 
 ## Sub heading
 
