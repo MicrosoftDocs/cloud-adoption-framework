@@ -3,7 +3,7 @@ title: Prepare for cloud adoption
 description: Learn how to create a landing zone to host the workloads that you plan to build in the cloud or migrate to the cloud.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 05/04/2019
+ms.date: 08/23/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
