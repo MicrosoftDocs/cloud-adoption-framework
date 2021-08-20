@@ -217,4 +217,4 @@ Ask basic security questions during the Azure AD design phase, such as how your 
 
 ## Next steps
 
-[Identity and access management](identity-and-access-managemen.md)
+[Identity and access management](identity-and-access-management.md)
