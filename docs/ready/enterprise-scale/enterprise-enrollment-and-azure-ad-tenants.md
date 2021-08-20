@@ -19,7 +19,7 @@ The Azure service presents a range of [active subscription offers](https://azure
 Enterprise-scale architecture supports subscriptions from any Azure offer. Subscriptions should exist within one Azure Active Directory (Azure AD) tenant to then relocate into the management group hierarchy within that tenant. They can then be managed by the various controls with enterprise-scale platforms like Azure Policy and role-based access control (RBAC).
 
 >[!NOTE]
-> Enterprise-scale architecture is only scoped and deployed to one Azure AD tenant; however, billing options can span across multiple Azure AD tenants. For example, an Enterprise Agreement (Enterprise Agreement) enrollment supports Azure subscriptions across different Azure AD tenants.
+> Enterprise-scale architecture is only scoped and deployed to one Azure AD tenant; however, billing options can span across multiple Azure AD tenants. For example, an Enterprise Agreement enrollment supports Azure subscriptions across different Azure AD tenants.
 
 ## Plan for Enterprise Agreement enrollment
 
@@ -135,7 +135,7 @@ The Microsoft Customer Agreement often represents an organization's hierarchy, w
 
 - Set up a Notification Contact email address on the agreement billing account to ensure notifications are sent to an appropriate group mailbox.
 
-- Assign a budget for each invoice section and/or billing profile, and establish an alert associated with the budget.
+- Assign a budget for each invoice section or billing profile, and establish an alert associated with the budget.
 
 - An organization can have a variety of structures, such as functional, divisional, geographic, matrix, or team. Use organizational structures to map your organization to your agreement hierarchy. Invoice sections are suitable for most scenarios.
 
