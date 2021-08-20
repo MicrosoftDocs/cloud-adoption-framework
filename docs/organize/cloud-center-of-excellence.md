@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Cloud center of excellence (CCoE) functions
 
-Business and technical agility are core objectives of most IT organizations. A cloud center of excellence (CCoE) is a function that creates a balance between speed and stability.
+Mary IT organizations share the core objectives of achieving business and technical agility. A cloud center of excellence (CCoE) is a function that helps organizations to balance speed and stability while they pursue these objectives.
 
 ## Function structure
 
@@ -30,11 +30,11 @@ When this function is properly structured and supported, the participants can ac
 
 When successful, a CCoE model will create a significant cultural shift in IT. The fundamental premise of a CCoE approach is that IT serves as a broker, partner, or representative to the business. This model is a paradigm shift away from the traditional view of IT as an operations unit or abstraction layer between the business and IT assets.
 
-The following image provides an analogy for this cultural change. Without a CCoE approach, IT tends to focus on providing control and central responsibility, acting like the stoplights at an intersection. When the CCoE is successful, the focus is on freedom and delegated responsibility, which is more like a roundabout at an intersection.
+The following image provides an analogy for this cultural change. Without a CCoE approach, IT tends to focus on providing control and central responsibility, acting like the stoplights at an intersection. When the CCoE is successful, this resembles a roundabout at an intersection where the focus is on freedom and delegated responsibility.
 
-![Analogy for a CCoE paradigm shift](../_images/ready/ccoe-paradigm-shift.png)
+![An analogy for a CCoE paradigm shift.](../_images/ready/ccoe-paradigm-shift.png)
 
-Neither of the approaches illustrated in the analogy image above is right or wrong, they're just alternative views of responsibility and management. If the desire is to establish a self-service model that allows business units to make their own decisions while adhering to a set of guidelines and established, repeatable controls, then a CCoE model could fit within the technology strategy.
+Neither approach illustrated in the analogy image above is right or wrong; they're alternative views of responsibility and management. If the desire is to establish a self-service model that allows business units to make their own decisions while adhering to a set of guidelines and established, repeatable controls, then a CCoE model could fit within the technology strategy.
 
 ## Key responsibilities
 
@@ -66,23 +66,23 @@ Examples of this transition:
 
 ## Negotiations
 
-At the root of any CCoE effort is an ongoing negotiation process. The CCoE team negotiates with existing IT functions to reduce central control. The trade-offs for the business in this negotiation are freedom, agility, and speed. The value of the trade-off for existing IT teams is delivered as new solutions. The new solutions provide the existing IT team with one or more of the following benefits:
+An ongoing negotiation process is at the root of CCoE efforts. A CCoE team negotiates with existing IT functions to reduce central control. The trade-offs for the business in this negotiation are freedom, agility, and speed, and the value of the trade-off for existing IT teams is delivered as new solutions. New solutions provide the existing IT team with one or more of the following benefits:
 
-- Ability to automate common issues.
-- Improvements in consistency (reduction in day-to-day frustrations).
-- Opportunity to learn and deploy new technical solutions.
-- Reductions in high severity incidents (fewer quick fixes or late-night pager-duty responses).
-- Ability to broaden their technical scope, addressing broader topics.
-- Participation in higher-level business solutions, addressing the impact of technology.
-- Reduction in menial maintenance tasks.
-- Increase in technology strategy and automation.
+- Ability to automate common issues
+- Improvements in consistency (reduction in day-to-day frustrations)
+- Opportunity to learn and deploy new technical solutions
+- Reductions in high severity incidents (fewer quick fixes or late-night pager-duty responses)
+- Ability to broaden their technical scope, addressing broader topics
+- Participation in higher-level business solutions, addressing the impact of technology
+- Reduction in menial maintenance tasks
+- Increase in technology strategy and automation
 
 In exchange for these benefits, the existing IT function may be trading the following values, whether real or perceived:
 
-- Sense of control from manual approval processes.
-- Sense of stability from change control.
-- Sense of job security from completion of necessary yet repetitive tasks.
-- Sense of consistency that comes from adherence to existing IT solution vendors.
+- Sense of control from manual approval processes
+- Sense of stability from change control
+- Sense of job security from completion of necessary yet repetitive tasks
+- Sense of consistency that comes from adherence to existing IT solution vendors
 
 In healthy cloud-forward companies, this negotiation process is a dynamic conversation between peers and partnering IT teams. The technical details may be complex, but are manageable when IT understands the objective and is supportive of the CCoE efforts. When IT is less than supportive, the following section on enabling CCoE success can help overcome cultural blockers.
 
@@ -103,9 +103,13 @@ Less obvious is the need for business stakeholders. Business agility and time-to
 CCoE efforts can be accelerated with support from the business stakeholders. Much of the focus of CCoE efforts is centered around making long-term improvements to business agility and speed. Defining the impact of current operating models and the value of improvements is valuable as a guide and negotiation tool for the CCoE. Documenting the following items is suggested for CCoE support:
 
 - Establish a set of business outcomes and goals that are expected as a result of business agility and speed.
+
 - Clearly define pain points created by current IT processes (such as speed, agility, stability, and cost challenges).
+
 - Clearly define the historical impact of those pain points (such as lost market share, competitor gains in features and functions, poor customer experiences, and budget increases).
+
 - Define business improvement opportunities that are blocked by the current pain points and operating models.
+
 - Establish timelines and metrics related to those opportunities.
 
 These data points are not an attack on IT. Instead, they help CCoE learn from the past and establish a realistic backlog and plan for improvement.
