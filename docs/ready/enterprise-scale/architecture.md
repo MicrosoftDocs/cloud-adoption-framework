@@ -32,7 +32,7 @@ An example is how city utilities such as water, gas, and electricity are accessi
 
 ## High-level architecture
 
-An enterprise-scale architecture is defined by a set of design considerations and recommendations across eight [critical design areas](./design-guidelines.md), with two network topologies recommended: an enterprise-scale architecture based on an Azure Virtual WAN network topology (depicted in figure 2), or based on a traditional Azure network topology based on the hub and spoke architecture (depicted in figure 3).
+An enterprise-scale architecture is defined by a set of design considerations and recommendations across eight [critical design areas](./design-guidelines.md) with two recommended network topologies: an enterprise-scale architecture based on an Azure Virtual WAN network topology (shown in figure 2) or based on a traditional Azure network topology that's on the hub-amd-spoke architecture (shown in figure 3).
 
 [![Diagram that shows Cloud Adoption Framework enterprise-scale landing zone architecture based on an Azure Virtual WAN network topology.](./media/ns-arch-inline.png)](./media/ns-arch-expanded.png#lightbox)
 
@@ -42,12 +42,12 @@ An enterprise-scale architecture is defined by a set of design considerations an
 
 *Figure 3: Cloud Adoption Framework enterprise-scale landing zone architecture based on a traditional Azure networking topology. The connectivity subscription uses a hub VNet.*
 
-Download the PDF or Visio files that contain the enterprise-scale architecture diagrams based on the [Virtual WAN (PDF)](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/enterprise-scale-architecture.pdf) network topology or a traditional Azure network topology based on the [hub and spoke (PDF)](https://github.com/microsoft/CloudAdoptionFramework/raw/master/ready/enterprise-scale-architecture-cust.pdf) architecture. A Visio file containing both the Virtual WAN and the hub and spoke architecture diagram can be downloaded as a [Visio diagram (VSDX)](https://github.com/microsoft/CloudAdoptionFramework/raw/master/ready/enterprise-scale-architecture.vsdx).
+Download the PDF or Visio files that contain the enterprise-scale architecture diagrams based on the [Virtual WAN (PDF)](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/enterprise-scale-architecture.pdf) network topology or a traditional Azure network topology based on the [hub-amd-spoke (PDF)](https://github.com/microsoft/CloudAdoptionFramework/raw/master/ready/enterprise-scale-architecture-cust.pdf) architecture. A Visio file containing both the Virtual WAN and the hub-amd-spoke architecture diagram can be downloaded as a [Visio diagram (VSDX)](https://github.com/microsoft/CloudAdoptionFramework/raw/master/ready/enterprise-scale-architecture.vsdx).
 
 > [!IMPORTANT]
-> It's possible to implement an enterprise-scale landing zone architecture with a single subscription for **platform resources**, if segregation of duties aren't a concern for the team managing platform resources. With scalability and security in mind, it's strongly recommended to have dedicated subscriptions for platform resources as depicted on figure 2 and figure 3.
+> It's possible to implement an enterprise-scale landing zone architecture with a single subscription for **platform resources** if segregation of duties aren't a concern for the team managing platform resources. With scalability and security in mind, it's strongly recommended to have dedicated subscriptions for platform resources, as shown in figures 2 and 3.
 
-On figures 2 and figure 3, there are references to the enterprise-scale critical design areas, which are indicated with the letters A to I:
+In figures 2 and 3, there are references to the enterprise-scale critical design areas, which are outlined by the letters A to I:
 
 ![The letter A](./media/a.png) [Enterprise Agreement (EA) enrollment and Azure Active Directory (Azure AD) tenants](./enterprise-enrollment-and-azure-ad-tenants.md). An Enterprise Agreement (EA) enrollment represents the commercial relationship between Microsoft and how your organization uses Azure. It provides the basis for billing across all your subscriptions and affects administration of your digital estate. Your EA enrollment is managed via the Azure EA portal. An enrollment often represents an organization's hierarchy, which includes departments, accounts, and subscriptions. An Azure AD tenant provides identity and access management, which is an important part of your security posture. An Azure AD tenant ensures that authenticated and authorized users have access to only the resources for which they have access permissions.
 
