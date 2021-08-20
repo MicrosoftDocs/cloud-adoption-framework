@@ -214,3 +214,7 @@ Ask basic security questions during the Azure AD design phase, such as how your 
 - Avoid creating multiple Azure AD tenants. For further information, see [Testing approach for enterprise scale](./testing-approach.md) and [Cloud Adoption Framework Azure best practices guidance to standardize on a single directory and identity](../../secure/security-top-10.md#9-architecture-standardize-on-a-single-directory-and-identity).
 
 - Use [Azure Lighthouse](/azure/lighthouse/overview) to grant third parties/partners access to Azure resources in customer Azure AD tenants and centralized access to Azure resources in multitenant Azure AD architectures.
+
+## Next steps
+
+[Identity and access management](identity-and-access-managemen.md)
