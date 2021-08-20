@@ -90,7 +90,7 @@ Explore key design considerations and recommendation surrounding network topolog
 
 The following figure shows this topology.
 
-  ![Diagram that illustrates multiple virtual networks connected with multiple ExpressRoute circuits.](./media/virtual network-multiple-circuits.png)
+  ![Diagram that illustrates multiple virtual networks connected with multiple ExpressRoute circuits.](./media/vnet-multiple-circuits.png)
 
  *Figure 3: Multiple virtual networks connected with multiple ExpressRoute circuits.*
 
