@@ -41,12 +41,12 @@ A hub is a central network zone that controls and inspects ingress or egress tra
 
 The hub often contains the common service components that the spokes consume. The following examples are common central services:
 
-- The Windows Server Active Directory infrastructure, which is required to authenticate third-party users who access from untrusted networks before they access workloads in the spoke. It includes the related Active Directory Federation Services (AD FS).
-- A DNS service to resolve naming for the workload in the spokes, to access resources on-premises and on the internet if [Azure DNS](/azure/dns/dns-overview) isn't used.
-- A public key infrastructure to implement single sign-on on workloads.
-- Flow control of TCP and UDP traffic between the spoke network zones and the internet.
-- Flow control between the spokes and on-premises.
-- If needed, flow control between one spoke and another.
+- The Windows Server Active Directory infrastructure is required to authenticate third-party users who access untrusted networks before they access workloads in the spoke. It includes the related Active Directory Federation Services (AD FS).
+- A DNS service resolves naming the workload in the spokes to access resources on-premises and on the internet if [Azure DNS](/azure/dns/dns-overview) isn't used.
+- A public key infrastructure implements single sign-on for workloads.
+- TCP and UDP traffic flow is controlled between the spoke network zones and the internet.
+- Flow is controlled between the spokes and on-premises.
+- Flow is controlled control between one spoke and another, if needed.
 
 You can minimize redundancy, simplify management, and reduce overall cost by using the shared hub infrastructure to support multiple spokes.
 
@@ -56,13 +56,13 @@ The spokes can also segregate and enable different groups within your organizati
 
 ## Subscription limits and multiple hubs
 
-In Azure, every component, whatever the type, is deployed in an Azure subscription. The isolation of Azure components in different Azure subscriptions can satisfy the requirements of different lines of business, such as setting up differentiated levels of access and authorization.
+In Azure, every type of component is deployed in an Azure subscription. The isolation of Azure components in different Azure subscriptions can satisfy the requirements of different lines of business, such as setting up differentiated levels of access and authorization.
 
-A single hub-and-spoke implementation can scale up to a large number of spokes. But as with every IT system, there are platform limits. The hub deployment is bound to a specific Azure subscription, which has restrictions and limits. One example is a maximum number of virtual network peerings. For more information, see [Azure subscription and service limits](/azure/azure-resource-manager/management/azure-subscription-service-limits).
+A single hub-and-spoke implementation can scale up to a large number of spokes, but as with every IT system, there are platform limits. The hub deployment is bound to a specific Azure subscription, which has restrictions and limits. One example is a maximum number of virtual network peerings. For more information, see [Azure subscription and service limits](/azure/azure-resource-manager/management/azure-subscription-service-limits).
 
-In cases where limits might be an issue, you can scale up the architecture further by extending the model from a single hub-and-spoke to a cluster of hubs and spokes. You can interconnect multiple hubs in one or more Azure regions by using virtual network peering, Azure ExpressRoute, Azure Virtual WAN, or a Site-to-Site VPN.
+In cases where limits might be an issue, you can scale up the architecture further by extending the model from a single hub-and-spoke to a cluster of hubs and spokes. You can connect multiple hubs in one or more Azure regions by using virtual network peering, Azure ExpressRoute, Azure Virtual WAN, or a site-to-site VPN.
 
-![Cluster of hubs and spokes](../../_images/azure-best-practices/network-hub-spokes-cluster.png)
+![A cluster of hubs and spokes.](../../_images/azure-best-practices/network-hub-spokes-cluster.png)
 
 *Figure 2: A cluster of hubs and spokes.*
 
