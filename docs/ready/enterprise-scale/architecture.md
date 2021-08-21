@@ -61,7 +61,7 @@ Figures 2 and 3 reference the enterprise-scale critical design areas, which are 
 
 ![The letter F](./media/f.png), ![The letter G](./media/g.png), ![The letter H](./media/h.png) [Business continuity and disaster recovery](./business-continuity-and-disaster-recovery.md) and [Security governance and compliance](./security-governance-and-compliance.md). Holistic and landing-zone-specific policies must be identified, described, built, and deployed onto the target Azure platform to ensure corporate, regulatory, and line-of-business controls are in place. Ultimately, policies should be used to guarantee the compliance of applications and underlying resources without any abstraction provisioning or administration capability.
 
-![The letter I](./media/i.png) [Platform automation and DevOps](./platform-automation-and-devops.md). An end-to-end DevOps experience with robust software development lifecycle practices must be designed, built, and deployed to ensure a safe, repeatable, and consistent delivery of infrastructure-as-code artifacts. Such artifacts are to be developed, tested, and deployed by using dedicated integration, release, and deployment pipelines with strong source control and traceability.
+![The letter I](./media/i.png) [Platform automation and DevOps](./platform-automation-and-devops.md). An end-to-end DevOps experience with robust software development life cycle practices must be designed, built, and deployed to ensure a safe, repeatable, and consistent delivery of infrastructure-as-code artifacts. Such artifacts are to be developed, tested, and deployed by using dedicated integration, release, and deployment pipelines with strong source control and traceability.
 
 ## Next steps
 
