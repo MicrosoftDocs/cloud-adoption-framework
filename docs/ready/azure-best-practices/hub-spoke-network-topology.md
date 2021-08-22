@@ -52,6 +52,8 @@ The role of each spoke can be to host different types of workloads. The spokes a
 
 The spokes can also segregate and enable different groups within your organization. An example is Azure DevOps groups. Inside a spoke, it's possible to deploy a basic workload or complex multitier workloads with traffic control between the tiers.
 
+In many cases the Application Gateway shown in the diagram above can live in spoke with the application it’s serving for better management and scale, however corporate policy may dictate the Application Gateway be placed in the hub for centralized management and segregation of duty.
+
 ## Subscription limits and multiple hubs
 
 In Azure, every component, whatever the type, is deployed in an Azure subscription. The isolation of Azure components in different Azure subscriptions can satisfy the requirements of different lines of business, such as setting up differentiated levels of access and authorization.
