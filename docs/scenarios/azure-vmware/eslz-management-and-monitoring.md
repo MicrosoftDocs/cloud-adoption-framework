@@ -21,7 +21,7 @@ Review the following considerations for platform management and monitoring of Az
 
 1. Consider licensing VMware eco-system solutions like vRealize Operations Manager and vRealize Network Insights. These solutions provide a detailed understanding of the Azure VMware Solution platform. Customers can see monitoring data like vCenter events and flow logs for the NSX-T Distributed Firewall. vRealize Log Insights for Azure VMware Solution currently only supports "pull" logging. Only events, tasks, and alarms can be captured. Syslog pushing unstructured data from hosts to vRealize is not currently supported.
 
-1. vRealize Operations doesn't support in-guest memory collection using VMware tools. Active and consumed memory utilizations will continue to work. This feature is currently under review and may be available in the future for Azure VMware Solution.
+1. vRealize Operations doesn't support in-guest memory collection using VMware tools. Active and consumed memory utilizations will continue to work. 
 
 1. vSAN storage is a finite resource, so customers need to manage vSAN capacity. Customers should use vSAN storage for guest virtual machine workloads only. The following design considerations should be examined closely to help alleviate unnecessary storage on vSAN. 
     1. [Configure content libraries on Azure Blob storage](https://avs.ms/centralized-avs-content-library-on-azure-blob/) to move virtual machine template storage off of vSAN.
@@ -76,6 +76,6 @@ Review the following considerations and recommendations for guest management and
 
 ## Additional considerations
 
-1. If using a network virtual appliance, consider monitoring trace logs between both on-premises and Azure. Ensure monitoring is in place between Azure and Azure VMware Solution as well.
+- If using a network virtual appliance, consider monitoring trace logs between both on-premises and Azure. Ensure monitoring is in place between Azure and Azure VMware Solution as well.
 
-1. To help with storage concerns on the vSAN, consider using [Azure Disk Pools](/azure/virtual-machines/disks-pools-deploy) or [NetApp Files](/azure/azure-netapp-files/) to extend your storage footprint into Azure native storage services.
+- To help with storage concerns on the vSAN, consider using [Azure Disk Pools](/azure/virtual-machines/disks-pools-deploy) or [NetApp Files](/azure/azure-netapp-files/) to extend your storage footprint into Azure native storage services.
