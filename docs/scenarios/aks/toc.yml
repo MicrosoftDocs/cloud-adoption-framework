@@ -1,5 +1,4 @@
-# docsTest:ignore "NET Core" "Cloud Operating Model" "Virtual Datacenter" Framework app
-#cSpell:ignore devtest mariadb
+# docsTest:ignore "NET Core" Framework app
 
 items:
   - name: Modern application platform - Microsoft Cloud Adoption Framework for Azure
@@ -61,21 +60,20 @@ items:
     items:
     - name: Container product decision tree
       href: /azure/architecture/guide/technology-choices/compute-decision-tree?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
-    - name: Microservices architecture on AKS
+    - name: AKS Baseline for microservices
       href: /azure/architecture/reference-architectures/containers/aks-microservices/aks-microservices-advanced?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
-    - name: Microservices with AKS and Azure DevOps
-      href: /azure/architecture/solution-ideas/articles/microservices-with-aks?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
+    - name: AKS Baseline for multi-region clusters
+      href: /azure/architecture/reference-architectures/containers/aks-multi-region/aks-multi-cluster?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
+    - name: AKS Baseline for PCI-DSS 3.2.1
+      href: /azure/architecture/reference-architectures/containers/aks-pci/aks-pci-intro?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
     - name: Secure DevOps for AKS
       href: /azure/architecture/solution-ideas/articles/secure-devops-for-kubernetes?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
     - name: Build a telehealth system
       href: /azure/architecture/example-scenario/apps/telehealth-system?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
-    - name: CI/CD pipeline for container-based workloads
-      href: /azure/architecture/example-scenario/apps/devops-with-aks?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
+    - name: Browse more
+      href: /azure/architecture/browse/?azure_categories=containers
   - name: Best practices
     items:
-    - name: Overview
-      href: /azure/architecture/browse/hybrid_index?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
-
     - name: Multitenancy
       items:
       - name: Cluster isolation
