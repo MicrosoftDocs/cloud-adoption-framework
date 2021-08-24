@@ -13,7 +13,7 @@ ms.subservice: ready
 
 [Azure VMware Solution](https://docs.microsoft.com/azure/azure-vmware/) provides one or more [private clouds](https://docs.microsoft.com/azure/azure-vmware/concepts-private-clouds-clusters) that contain vSphere clusters which are built from dedicated bare-metal Azure infrastructure. The solution provides a minimum of three ESXi hosts, up to a maximum of 16 hosts per cluster. Up to 96 hosts can be run in one private cloud. vCenter Server, vSAN, vSphere and NSX-T are all provided as part of the private cloud solution. Although Azure VMware Solution has an SLA of 99.9%, it is always wise to consider additional BCDR factors.
 
-![BCDR - Flow Chart](../_images/eslz-bcdr-1.png)
+![BCDR - flow chart](../_images/eslz-bcdr-1.png)
 
 ## Business Continuity (BC) Design considerations
 
