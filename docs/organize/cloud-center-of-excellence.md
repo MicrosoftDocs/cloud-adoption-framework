@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Cloud center of excellence (CCoE) functions
 
-Mary IT organizations share the core objectives of achieving business and technical agility. A cloud center of excellence (CCoE) is a function that helps organizations to balance speed and stability while they pursue these objectives.
+Many IT organizations share the core objectives of achieving business and technical agility. A cloud center of excellence (CCoE) is a function that helps organizations to balance speed and stability while they pursue these objectives.
 
 ## Function structure
 
