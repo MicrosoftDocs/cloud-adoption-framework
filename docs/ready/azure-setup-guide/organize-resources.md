@@ -3,7 +3,7 @@ title: Organize your Azure resources effectively
 description: Understand best practices for effectively organizing your Azure resources to simplify resource management.
 author: laraaleite
 ms.author: brblanch
-ms.date: 04/09/2019
+ms.date: 08/23/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -45,7 +45,7 @@ As you plan your compliance strategy, work with people in your organization with
 
 ### Create a management level
 
-You can create a management group, additional subscriptions, or resource groups.
+You can create a management group, more subscriptions, or resource groups.
 
 #### Create a management group
 
