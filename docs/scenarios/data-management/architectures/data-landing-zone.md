@@ -35,7 +35,7 @@ The architecture of the data landing zone illustrates the layers, their respecti
 :::image type="content" source="../images/data-landing-zone-2.png" alt-text="Diagram of the data landing zone architecture." lightbox="../images/data-landing-zone-2.png":::
 
  > [!TIP]
-> Before getting started with deploying a data landing zone, it's highly recommended that you first [consider the number of initial data landing zones you want to deploy](/azure/cloud-adoption-framework/scenarios/data-management/eslz-scale?branch=scenario-data-management).
+> Before getting started with deploying a data landing zone, it's highly recommended that you first [consider the number of initial data landing zones you want to deploy](/azure/cloud-adoption-framework/scenarios/data-management/eslz-scale).
 
 ## Core services layer
 
