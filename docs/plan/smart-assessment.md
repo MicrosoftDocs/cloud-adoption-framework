@@ -13,39 +13,31 @@ ms.custom: think-tank
 # Strategic migration and readiness tool (SMART) assessment
 
 From business planning to training to security and governance, find out what you need to do to prepare for your Microsoft Azure migration with the strategic migration assessment and readiness tool (SMART).
-## 1. Accessing the assessment
-You can initiate the assessment by visiting [aka.ms/SMARTTool](/assessments/?id=strategic-migration-assessment)
 
-![Diagram that shows SMART results matrix.](../_images/start-smart.png)
+## Access the assessment
 
-The skills necessary to fill the gaps in your organization's digital transformation are typically not confined to a single role or even a single department. Skills will have relationships and dependencies that can span a single role or multiple roles. Those roles might exist in several departments. For example, a workload owner might require someone in an IT role to provision core resources like subscriptions and resource groups. 
+You can start the assessment by visiting [aka.ms/SMARTTool](/assessments/?id=strategic-migration-assessment).
 
-Thus, to ensure quality results, there are two routes we suggest taking when considering how to approach the 17 questions to ensure a smooth experience. The first is with a Microsoft Account Member. The second is to set aside about 30 minutes with experts in each respective category and take it yourself.	
+![Diagram that shows the strategic migration and readiness tool (SMART) assessment.](../_images/start-smart.png)
 
-## 2. Results
-After completing SMART, a results page will generate that offers tailored recommendations and next steps you can take to improve your score in each respective category. There is a tool to export the results to CSV that allows one to see scores offline.	
+The skills necessary to fill the gaps in your organization's digital transformation typically won't be confined to a single role or even a single department. Skills will have relationships and dependencies that can span a single role or multiple roles. Those roles might exist in several departments. For example, a workload owner might require someone in an IT role to create core resources like subscriptions and resource groups.
 
-![Diagram that shows SMART results matrix.](../_images/smart-matrix.png)
+To ensure quality results, there are two ways we recommend you approach the 17 questions to ensure a smooth experience. The first option is to complete the assessment with a Microsoft account member. The second option is to set aside about 30 minutes with experts in each respective category and then complete the assessment yourself.
 
-There's a matrix that shows your areas of strength and opportunities for growth across the spectrum along the recommended actions based on how you scored in each area.	
-We grade you across all 10 dimensions, so you have a better understanding of what to do next, so here's three recommended steps and now we have individual recommendations within each respective category.	
+## Results
 
-If you want to go and revisit some of your answers to figure out why exactly you're getting these recommendations or what contributed to those individuals scores, just go over to answer summary and we have all of the Answers right there.	
+After you complete the strategic migration assessment and readiness tool (SMART) assessment, a results page will generate. The results page offers tailored recommendations and next steps to improve your score in each category. There's a tool to export the results to a CSV file that allows you to see scores offline.
 
-## 3. Assessment Milestones
+![Diagram that shows the strategic migration and readiness tool (SMART) results matrix.](../_images/smart-matrix.png)
 
-The milestone feature in SMART allows you to measure your growth and improvement as you take the assessment multiple times. By clicking new milestone you have the opportunity to look at how you improved individually in each area.		
+There's a matrix that shows your areas of strength and your opportunities for growth based on how you score in each area. You receive a grade across all 10 dimensions that give you a better understanding of what to do next. There's a **Recommended next steps** and individual recommendations for each category.
+
+To review your answers, you can go to the answer summary. The answer summary can help you understand why you received specific recommendations or what contributed to the individual scores.
+
+## Assessment milestones
+
+The milestone feature in the strategic migration assessment and readiness tool (SMART) allows you to measure your growth and improvement as you take the assessment multiple times. When you use the new milestone feature, you can look at how you improved individually in each area.
 
 ![Diagram that shows SMART evolution.](../_images/evolution.png)
 
-You can compare across all 10 dimensions and it gives you a better idea of what were some of the resources that really helped and contributed to that evolution.	
-
-----------------------------------------------------------------------------------------
-
-## Sub heading
-
-Break your article into logical chunks.
-
-## Next steps
-
-Add a link at the end of the article to the logical next steps.
+You can compare across all 10 dimensions to see resources that contributed to your evolution.
