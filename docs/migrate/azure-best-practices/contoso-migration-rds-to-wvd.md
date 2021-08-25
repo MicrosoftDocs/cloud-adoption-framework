@@ -3,7 +3,7 @@ title: Move on-premises Remote Desktop Services to Azure Virtual Desktop scenari
 description: Learn how Contoso migrated its on-premises Remote Desktop Services environment to Azure Virtual Desktop.
 author: benstegink
 ms.author: abuck
-ms.date: 07/01/2020
+ms.date: 08/23/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
