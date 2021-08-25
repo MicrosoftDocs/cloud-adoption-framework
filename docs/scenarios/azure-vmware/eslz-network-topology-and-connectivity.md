@@ -11,14 +11,14 @@ ms.subservice: ready
 
 # Network topology and connectivity for Azure VMware Solution enterprise-scale scenario
 
-Leveraging VMWare's Software Defined Data Center with Azure's Cloud ecosystem presents a unique set of design considerations for establishing and maintaining connectivity at scale for both cloud native and hybrid scenarios. This article builds on several architecture principles and recommendations defined in the Cloud Adoption Framework [Enterprise-Scale Landing Zones (ESLZ)](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/network-topology-and-connectivity) design area for [network topology and connectivity](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/enterprise-scale/network-topology-and-connectivity).
+Leveraging VMWare's Software Defined Data Center with Azure's Cloud ecosystem presents a unique set of design considerations for establishing and maintaining connectivity at scale for both cloud native and hybrid scenarios. This article builds on several architecture principles and recommendations defined in the Cloud Adoption Framework [Enterprise-Scale Landing Zones (ESLZ)](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/network-topology-and-connectivity) design area for [network topology and connectivity](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/network-topology-and-connectivity).
 
 Following the guidance in this article will help examine key design considerations and best practices surrounding networking and connectivity to, from, and within Microsoft Azure and [Azure VMware Solution (AVS)](https://docs.microsoft.com/azure/azure-vmware/introduction) deployments. For mission-critical AVS platforms, leverage the guidance on the enterprise-scale design areas as the design foundations including:
 
-**Hybrid integration** - Connectivity between on-premises, multi-cloud, edge, and global users [Enterprise-Scale support for hybrid and multicloud](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/hybrid/enterprise-scale-landing-zone)
+**Hybrid integration** - Connectivity between on-premises, multi-cloud, edge, and global users [Enterprise-Scale support for hybrid and multicloud](https://docs.microsoft.com/azure/cloud-adoption-framework/scenarios/hybrid/enterprise-scale-landing-zone)
 **Performance and reliability at scale** - Consistent, low-latency experience and scalability
 for workloads
-**Zero-trust based network security** - Securing network perimeter and traffic flows [Network security strategies on Azure](https://docs.microsoft.com/en-us/azure/architecture/framework/security/design-network)
+**Zero-trust based network security** - Securing network perimeter and traffic flows [Network security strategies on Azure](https://docs.microsoft.com/azure/architecture/framework/security/design-network)
 **Extensibility** - Ease of expanding network footprint without design rework
 
 ## Terminology used in this document
@@ -86,7 +86,7 @@ This section describes the four most common scenarios used in an AVS Private clo
   
   Azure firewall in secured vWAN Hub would advertise the 0.0.0.0/0 route to AVS. Note that this 0.0.0.0/0 will also get advertised to on-prem via Global Reach. Customer should implement a route filter on-premises to prevent the 0.0.0.0/0 learnt on-premises. If using SD-WAN or VPN, this issue will not come up.
 
-  If you are currently utilizing a VNet based Hub & Spoke topology that is connected to via an Express Route VNet Gateway rather than connected to vWAN directly, you will need to consider that the default route (0.0.0.0/0) from the secure vWAN Hub will be propagated to the VNet Gateway and take precedence over the in-built Internet System-route within the VNet.   To work around this, implement a 0.0.0.0/0 [User Defined Routes](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-udr-overview#default-route) in the VNets to override the learned default route.
+  If you are currently utilizing a VNet based Hub & Spoke topology that is connected to via an Express Route VNet Gateway rather than connected to vWAN directly, you will need to consider that the default route (0.0.0.0/0) from the secure vWAN Hub will be propagated to the VNet Gateway and take precedence over the in-built Internet System-route within the VNet.   To work around this, implement a 0.0.0.0/0 [User Defined Routes](https://docs.microsoft.com/azure/virtual-network/virtual-networks-udr-overview#default-route) in the VNets to override the learned default route.
 
   If there are VPN or ExpressRoute connections already established to the secure vWAN hub that do not require 0.0.0.0/0 advertisement from secure vWAN hub, those connections will also receive the 0.0.0.0/0 advertisement. To overcome that, either filter out the 0.0.0.0/0 with the on-premises edge device, or disconnect the ExpressRoute/VPN, enable 0.0.0.0/0 propagation, then disable 0.0.0.0/0 propagation on those specific connections, then re-connect those connections.
 
@@ -119,7 +119,7 @@ This section describes the four most common scenarios used in an AVS Private clo
   > [!NOTE]
   > Azure Route Server is currently in public preview.
   
-  If High-Availability for the NVAs is required, deploy the NVAs in an Active-Standby configuration to preserve symmetric routing. Further details can be found [here](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/dmz/nva-ha?tabs=cli) and review your NVA vendor documentation for best practices guidance.
+  If High-Availability for the NVAs is required, deploy the NVAs in an Active-Standby configuration to preserve symmetric routing. Further details can be found [here](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/nva-ha?tabs=cli) and review your NVA vendor documentation for best practices guidance.
 
   The architecture diagram below shows NVA with VXLAN support. For use case with NVA without VXLAN support refer the documentation [here](https://github.com/Azure/AzureCAT-AVS/tree/main/networking/deploy-non-integrated-nvas-without-vxlan-in-vwan-with-transit-vnet-and-route-server).
 
@@ -157,7 +157,7 @@ This section describes the four most common scenarios used in an AVS Private clo
 
   With this design the outbound Public IPs reside on-premises with the on-premises NVA.
 
-  Customer is currently utilizing a VNET based Hub & Spoke topology that is connected to via an Express Route VNet Gateway rather than connected to vWAN directly, you will need to consider that the default route (0.0.0.0/0) from the secure vWAN Hub will be propagated to the VNet Gateway and take precedence over the in-built Internet System-route within the VNET. To work around this implement a 0.0.0.0/0 [User Defined Routes](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-udr-overview#default-route) in the VNets to override the learned default route.
+  Customer is currently utilizing a VNET based Hub & Spoke topology that is connected to via an Express Route VNet Gateway rather than connected to vWAN directly, you will need to consider that the default route (0.0.0.0/0) from the secure vWAN Hub will be propagated to the VNet Gateway and take precedence over the in-built Internet System-route within the VNET. To work around this implement a 0.0.0.0/0 [User Defined Routes](https://docs.microsoft.com/azure/virtual-network/virtual-networks-udr-overview#default-route) in the VNets to override the learned default route.
 
 ## General Design Considerations and Recommendations
 
@@ -166,8 +166,8 @@ This section describes the four most common scenarios used in an AVS Private clo
   - All Clusters can talk to each other within the same AVS Private Cloud, as they all share the same /22 Address Space.
   - Another important consideration is that all Clusters will also share the same Connectivity Settings such as: internet, ExpressRoute, HCX, Public IP, and ExpressRoute Global Reach. Application workloads can also share some basic Networking settings such as: Network Segments, DHCP, and DNS.
   - Recommended references:
-    - [Define the IP address segment for private cloud management](https://docs.microsoft.com/en-us/azure/azure-vmware/production-ready-deployment-steps#determine-the-number-of-clusters-and-hosts)
-    - [Define the IP address segment for VM workloads](https://docs.microsoft.com/en-us/azure/azure-vmware/production-ready-deployment-steps#define-the-ip-address-segment-for-vm-workloads)
+    - [Define the IP address segment for private cloud management](https://docs.microsoft.com/azure/azure-vmware/production-ready-deployment-steps#determine-the-number-of-clusters-and-hosts)
+    - [Define the IP address segment for VM workloads](https://docs.microsoft.com/azure/azure-vmware/production-ready-deployment-steps#define-the-ip-address-segment-for-vm-workloads)
 - Bandwidth
   - Choose an adequate [Virtual Network Gateway SKUs](https://docs.microsoft.com/azure/expressroute/expressroute-about-virtual-network-gateways) for optimal bandwidth between AVS to Azure Virtual Networks. Currently, AVS supports a maximum of 4 ExpressRoute circuits in one region to an ExpressRoute gateway.
 - DNS and DHCP
@@ -175,14 +175,14 @@ This section describes the four most common scenarios used in an AVS Private clo
   - DNS: Depending on the scenario you are adopting, and the requirements that you have, you may have different options, see the examples below according to the different connectivity options:
     - AVS environment only: Deploy a new DNS Infrastructure inside your AVS Private Cloud.
     - AVS connected to on-premises: Use existing DNS infrastructure, extending it to inside Azure VNet or AVS (preferred) if required by deploying DNS Forwarders. Recommended VMware reference: [Add a DNS Forwarder Service](https://docs.vmware.com/en/VMware-NSX-T-Data-Center/2.5/administration/GUID-A0172881-BB25-4992-A499-14F9BE3BE7F2.html)
-    - AVS connected to on-premises and Azure Environments and Services: Extend existing on-premises DNS infrastructure to the Azure Hub or Identity VNet (See [Enterprise Scale Landing Zones diagram](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/enterprise-scale/architecture#high-level-architecture)), or use existing DNS infrastructure if already available. They are usually DNS Servers or simply DNS Forwarders deployed in your Hub Vnet.
+    - AVS connected to on-premises and Azure Environments and Services: Extend existing on-premises DNS infrastructure to the Azure Hub or Identity VNet (See [Enterprise Scale Landing Zones diagram](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/architecture#high-level-architecture)), or use existing DNS infrastructure if already available. They are usually DNS Servers or simply DNS Forwarders deployed in your Hub Vnet.
   - Recommended references:
-    - [DHCP and DNS resolution considerations](https://docs.microsoft.com/en-us/azure/azure-vmware/tutorial-network-checklist#dhcp-and-dns-resolution-considerations)
-    - [Configure DHCP for Azure VMware Solution](https://docs.microsoft.com/en-us/azure/azure-vmware/configure-dhcp-azure-vmware-solution)
-    - [Configure DHCP on L2 stretched VMware HCX networks](https://docs.microsoft.com/en-us/azure/azure-vmware/configure-l2-stretched-vmware-hcx-networks)
-    - [Configure a DNS forwarder in the Azure portal](https://docs.microsoft.com/en-us/azure/azure-vmware/configure-nsx-network-components-azure-portal#configure-a-dns-forwarder-in-the-azure-portal)
+    - [DHCP and DNS resolution considerations](https://docs.microsoft.com/azure/azure-vmware/tutorial-network-checklist#dhcp-and-dns-resolution-considerations)
+    - [Configure DHCP for Azure VMware Solution](https://docs.microsoft.com/azure/azure-vmware/configure-dhcp-azure-vmware-solution)
+    - [Configure DHCP on L2 stretched VMware HCX networks](https://docs.microsoft.com/azure/azure-vmware/configure-l2-stretched-vmware-hcx-networks)
+    - [Configure a DNS forwarder in the Azure portal](https://docs.microsoft.com/azure/azure-vmware/configure-nsx-network-components-azure-portal#configure-a-dns-forwarder-in-the-azure-portal)
 - Ports and Protocols requirements
-  - It is important to ensure all necessary ports are configured if there is a firewall on-premises to ensure all different components of the AVS private cloud can be accessed properly. See [Tutorial – Network planning checklist – Azure Vmware Solution](https://docs.microsoft.com/en-us/azure/azure-vmware/tutorial-network-checklist#required-network-ports).
+  - It is important to ensure all necessary ports are configured if there is a firewall on-premises to ensure all different components of the AVS private cloud can be accessed properly. See [Tutorial – Network planning checklist – Azure Vmware Solution](https://docs.microsoft.com/azure/azure-vmware/tutorial-network-checklist#required-network-ports).
 - Network Topology ([Hub Spoke](https://docs.microsoft.com/azure/azure-vmware/concepts-hub-and-spoke) vs vWAN)
   - For scenarios where [transit routing between Site-2Site VPN ExpressRoute](https://docs.microsoft.com/azure/virtual-wan/virtual-wan-about#transit-er) is required, it is supported with the use of vWAN but Hub-Spoke topology is not supported.
   - Use the scenarios presented in the beginning of this document to decide which deployment model is the best for your needs.
@@ -199,7 +199,7 @@ This section describes the four most common scenarios used in an AVS Private clo
     - vWAN Secured Hub with Azure Firewall (L4, DNAT)
     - vWAN Secured Hub with NVA (various scenarios)
 - On-premises Networks
-  - It is possible to stretch on-premises networks to AVS, see the following reference for more details: [Configure DHCP on L2 stretched Vmware HCX networks – Azure Vmware Solution](https://docs.microsoft.com/en-us/azure/azure-vmware/configure-l2-stretched-vmware-hcx-networks)
+  - It is possible to stretch on-premises networks to AVS, see the following reference for more details: [Configure DHCP on L2 stretched Vmware HCX networks – Azure Vmware Solution](https://docs.microsoft.com/azure/azure-vmware/configure-l2-stretched-vmware-hcx-networks)
 - ExpressRoute
   - Location
     - Consider deploying AVS on [paired regions](https://docs.microsoft.com/azure/best-practices-availability-paired-regions), near to your Datacenters.
@@ -212,7 +212,7 @@ This section describes the four most common scenarios used in an AVS Private clo
       - You can peer the ExpressRoute circuit for AVS with other ExpressRoute circuits using Global Reach without charges.
       - Exceptions may apply, e.g.: Brazil, and other Locations where Global Reach is not available yet.
 - VMware NSX network segments
-  - [Configure NSX network components using Azure Vmware Solution – Azure Vmware Solution](https://docs.microsoft.com/en-us/azure/azure-vmware/configure-nsx-network-components-azure-portal#create-an-nsx-t-segment-in-the-azure-portal)
+  - [Configure NSX network components using Azure Vmware Solution – Azure Vmware Solution](https://docs.microsoft.com/azure/azure-vmware/configure-nsx-network-components-azure-portal#create-an-nsx-t-segment-in-the-azure-portal)
 - Network Security
   - Traffic Inspection
     - East / West within the SDDC (NVA vs NSX-T)
@@ -227,7 +227,7 @@ This section describes the four most common scenarios used in an AVS Private clo
   - During the deployment, consider using a bastion host in Azure vNET to access the AVS environment.  Once the routing to the on-premises environment is established, AVS management  network does not honor the 0.0.0.0/0 routes from on-premises so you have to advertise more specific routes for the on-prem networks.
 - BCDR & Migrations
   - VMware HCX – Migration
-    - [Deploy and configure VMware HCX – Azure VMware Solution](https://docs.microsoft.com/en-us/azure/azure-vmware/tutorial-deploy-vmware-hcx)
+    - [Deploy and configure VMware HCX – Azure VMware Solution](https://docs.microsoft.com/azure/azure-vmware/tutorial-deploy-vmware-hcx)
     - HCX L2 extension.
     - Default gateway remains on-premises.
   - Layer-2 Extension Design
