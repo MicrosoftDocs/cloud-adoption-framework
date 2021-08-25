@@ -67,7 +67,7 @@ Consider the following when deciding who (system, user, or device) is allowed to
 
    Use Azure firewall or an approved NVA that maintains audit logs for incoming requests to guest VMs. Include those logs as an input to your Security Incident and Event Management (SIEM) solution to ensure appropriate monitoring and alerting.
 
-   Use Azure Sentinel for Azure-side processing of event information and logging sourced from Azure before integration into existing SIEM solutions.
+   Use Azure Sentinel for Azure-side processing of event information and logging sourced from Azure before integration into existing SIEM solutions. Refer to guidance available on [Integrate Azure Security Center with Azure VMware Solution](https://docs.microsoft.com/azure/azure-vmware/azure-security-integration).
 
 * **Outbound Connection Security - Session auditing for outbound internet connectivity** - Lack of rule control or session auditing of outbound internet connectivity from Azure VMware Solution can result in missed opportunities in identifying unexpected/suspicious outbound internet activity.
 
@@ -75,7 +75,7 @@ Consider the following when deciding who (system, user, or device) is allowed to
 
    Use specialized services (Firewall, NVA, vWAN) for outbound internet connectivity instead of relying on Azure VMware Solution’s default internet connectivity service. Use article on [Inspecting Azure VMware Solution traffic with Network Virtual Appliance in Azure vNet](https://avs.ms/nva/) for design recommendations.
 
-   Use Service Tags and FQDN tags to whitelist egress traffic when performing egress filtering using Azure Firewall or a similar capability if using NVA.
+   Use Service Tags such as `Virtual Network` and FQDN tags to whitelist egress traffic when performing egress filtering using Azure Firewall or a similar capability if using NVA.
 
 * **Centrally manage and secure backups** - Using RBAC and delayed delete capabilities can help prevent intentional and accidental deletion of backup data that would be needed to recover the environment.
 
@@ -114,7 +114,7 @@ Consider the following when deciding who (system, user, or device) is allowed to
    Use native database monitoring (e.g., Activity Monitor) or an Azure VMware Solution certified partner solution. Consider using Azure Database Services for enhanced auditing controls.
 
    Use Azure Key Vault for customer-managed keys in scenarios where Bring Your Own Key
-   (BYOK) is appropriate(e.g. [BYOK for Azure SQL TDE](https://docs.microsoft.com/azure/azure-sql/database/transparent-dataencryption-byok-overview)). Implement separation of duties for key management and data management where possible.
+   (BYOK) is appropriate(e.g. [BYOK for Azure SQL TDE](https://docs.microsoft.com/azure/azure-sql/database/transparent-dataencryption-byok-overview)). Refer to this [guidance](https://docs.microsoft.com/sql/connect/ado-net/sql/azure-key-vault-enclave-example?view=sql-server-ver15) on how SQL Server 2019 uses Azure Key Vault provider. Implement separation of duties for key management and data management where possible. 
 
 * **Code Security** - Lack of security considerations in DevOps workflow can introduce security vulnerabilities in Azure VMware Solution workloads.
 
