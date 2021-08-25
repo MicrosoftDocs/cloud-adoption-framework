@@ -18,8 +18,7 @@ This article will help examine design considerations and recommendations related
 identity and access management specific to the deployment of Azure VMWare Solution (AVS).
 
 We understand that identity requirements for AVS vary according to the AVS
-implementation in Azure; therefore, we will work based on the most common
-scenarios.
+implementation in Azure; therefore, we will work based on the most common scenarios.
 
 ## Design considerations
 
