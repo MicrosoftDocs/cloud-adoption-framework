@@ -14,7 +14,7 @@ ms.custom: think-tank
 
 From business planning to training to security and governance, find out what you need to do to prepare for your Microsoft Azure migration with the Strategic Migration Assessment and Readiness Tool (SMART).
 
-The assessment walks you thru a series of questions to help assess your readiness in regards to:
+The assessment walks you through a series of questions to help assess your readiness in regards to:
 
 - Your current business strategy
 - Your partner support system
