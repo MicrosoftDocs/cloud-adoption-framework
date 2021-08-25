@@ -60,7 +60,7 @@ These are some **key considerations** that affect your AVS deployment:
 
 This section describes the four most common scenarios used in an AVS Private cloud. This is not an exhaustive list. For additional scenarios outside of the scope of this document, see [Deploy NVAs that support VXLAN with Route Server and Transit VNET](https://github.com/Azure/AzureCAT-AVS/tree/main/networking/deploy-nva-with-vxlan-in-transit-vnet-and-route-server).
 
-![Most Common Scenarios](../_images/eslz-net-table.png)
+![Most Common Scenarios](media/eslz-net-table.png)
 
 ** Ingress patterns via App GW and Azure Firewall/NVA are similar for all scenarios. L4-L7 Load Balancer NVAs can be used in AVS however is not in the scope of this document.
 
@@ -78,7 +78,7 @@ This section describes the four most common scenarios used in an AVS Private clo
 
   This customer profile can be achieved with Azure firewall in secured vWAN Hub for firewalling, Application Gateway for L7 load balancing, L4 DNAT using Azure firewall, outbound internet via Azure firewall in vWAN hub, ExR, VPN, or SD-WAN for connectivity between On-Prem and AVS.
 
-  ![Scenario 1](../_images/eslz-net-scenario1.png)
+  ![Scenario 1](media/eslz-net-scenario1.png)
 
 - **Considerations**
 
@@ -110,7 +110,7 @@ This section describes the four most common scenarios used in an AVS Private clo
   
   This Customer requirements can be achieved with 3rd party NVAs hosted in VNet for firewalling and some other networking functionalities. [Azure Route Server](https://docs.microsoft.com/azure/route-server/overview) is required to route the traffic between AVS, on-premises and VNets, and in this scenario, Azure ExpressRoute Global Reach must be disabled. The NVAs are responsible for providing Outbound internet to AVS. Application Gateway is the preferred solution for L7 HTTP(s) Load Balancing.
 
-  ![Scenario 2](../_images/eslz-net-scenario2.png)
+  ![Scenario 2](media/eslz-net-scenario2.png)
 
 - **Considerations**
   
@@ -133,7 +133,7 @@ This section describes the four most common scenarios used in an AVS Private clo
 
   This customer profile can be leveraged with NSX DFW (Distributed firewall) or with NVA behind tier-1 in AVS, Application Gateway for L7 load balancing, L4 DNAT using Azure firewall and using internet breakout from AVS.
 
-  ![Scenario 3](../_images/eslz-net-scenario3.png)
+  ![Scenario 3](media/eslz-net-scenario3.png)
 
 - **Considerations**
 
@@ -151,7 +151,7 @@ This section describes the four most common scenarios used in an AVS Private clo
 
   Application Gateway for L7 load balancing, L4 DNAT using Azure firewall, internet breakout on-premises and ExpressRoute for connectivity between on-premises and AVS.
 
-  ![Scenario 4](../_images/eslz-net-scenario4.png)
+  ![Scenario 4](media/eslz-net-scenario4.png)
 
 - **Considerations**
 
