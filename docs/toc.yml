@@ -214,6 +214,9 @@ items:
       - name: Plan a data warehouse migration
         href: plan/data-warehouse-migration.md
 
+    - name: Strategic migration assessment and readiness tool
+      href: plan/smart-assessment.md
+
     - name: Plan antipatterns
       href: antipatterns/plan-antipatterns.md
 
