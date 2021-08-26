@@ -31,13 +31,13 @@ This scenario is designed to guide the end-to-end customer journey throughout th
 
 - **[Best practices](./best-practices/data-lake-overview.md):** These level-300+ articles in the table of contents help central IT teams to deploy tools and manage the processes to ensure proper management and governance of your data.
 
-- **Featured Azure products:** Explore this section in the table of contents to learn more about the products that support data management and analytics in Azure.
+- **Featured Azure products:** Expand this section in the table of contents to learn more about the products that support data management and analytics in Azure.
 
 - **[Microsoft Learn modules](/learn):** Gain the hands-on skills required to implement, maintain, and support data management and analytics solutions.
 
 ## Common customer journeys
 
-**Prepare for centralized operations:** Use the Cloud Adoption Framework articles to establish the processes and approaches required to support an entire portfolio of workloads across your data estate.
+**Prepare for centralized operations:** Use Cloud Adoption Framework articles to establish the processes and approaches required to support an entire portfolio of workloads across your data estate.
 
 **Improve controls across your data estate:** Focus on the [Govern](/azure/cloud-adoption-framework/govern) and [Manage](/azure/cloud-adoption-framework/manage) articles to integrate data management and analytics into your existing operations processes. Use the [Ready](/azure/cloud-adoption-framework/ready) articles to deploy controls across all of your cloud environments.
 
@@ -45,7 +45,7 @@ This scenario is designed to guide the end-to-end customer journey throughout th
 
 **Optimize individual workloads (workload teams):** Workload owners should start with the Well-Architected guidance to understand the best ways to integrate data management and analytics strategies into their workloads. If the team is also supported by central IT and governance teams, this guidance will provide insights into best practices and architectures that these teams are typically accountable to deliver to accelerate your workload development.
 
-**Processes to onboard individual assets:** Use the Best practices section in the table of contents to execute a series of processes to onboard all of your data estate into a single data management and analytics control plane.
+**Processes to onboard individual assets:** Expand the Best practices section in the table of contents to execute a series of processes to onboard all of your data estate into a single data management and analytics control plane.
 
 **Implement specific Azure products:** Accelerate and improve data management and analytics capabilities by using various Azure products outlined in the Featured Azure products section of the table of contents.
 
