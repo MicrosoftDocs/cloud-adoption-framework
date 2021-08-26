@@ -1,5 +1,5 @@
 ---
-title: Access control in Azure Data Lake Storage
+title: Access control and data lake configurations in Azure Data Lake Storage Gen2
 description: Learn about access control and data lake configurations in Azure Data Lake Storage Gen2. This article describes using role-based access control and access control lists.
 author: mboswell
 ms.author: mboswell
@@ -11,11 +11,11 @@ ms.subservice: ready
 
 # Access control and data lake configurations in Azure Data Lake Storage
 
-Use this article is to help assess and understand the access control mechanisms in Azure Data Lake Storage Gen2. These mechanisms include role-based access control (Azure RBAC) and access control lists (ACLs). This article addresses the following issues:
+Use this article is to help assess and understand the access control mechanisms in Azure Data Lake Storage Gen2. These mechanisms include Azure role-based access control (RBAC) and access control lists (ACLs). This article addresses:
 
-- How access is evaluated between Azure RBAC and access control lists (ACLs)
-- How to configure access control using either or both of these mechanisms
-- How to apply these access control mechanisms to data lake implementation patterns
+- How access is evaluated between Azure RBAC and ACLs.
+- How to configure access control using one or both of these mechanisms.
+- How to apply these access control mechanisms to data lake implementation patterns.
 
 You need a basic knowledge of storage containers, security groups, Azure RBAC, and ACLs. To frame the discussion, we reference a generic data lake structure of raw, enriched, and curated zones.
 
@@ -74,7 +74,7 @@ For more information about what ACL-based permissions are required for a given o
 > - Any user with permissions to attach to a cluster can create Azure Databricks mount points. The mount point is configured using service principal credentials or the Azure AD passthrough option. At the time of creation, permissions are not evaluated. Permissions are evaluated when an operation uses the mount point. Any user who can attach to a cluster can attempt to use the mount point.
 > - When creating a table definition in Azure Databricks or Azure Synapse Analytics, the user needs to have read access to the underlying data.
 
-## Configuring access to Azure Data Lake Storage
+## Configure access to Azure Data Lake Storage
 
 Implement access control in Azure Data Lake Storage using Azure RBAC, ACLs, or a combination of both.
 
@@ -152,7 +152,7 @@ No single approach to managing data lake access suits everyone. A major benefit 
 
 ## Azure Synapse Analytics data access control
 
-To deploy an Azure Synapse workspace, a Data Lake Storage Gen 2 account is required. Azure Synapse Analytics uses the primary storage account for several integration scenarios and stores data in a container. The container includes Apache Spark tables and application logs under a folder called **/synapse/{workspacename}**. The workspace also uses container for managing libraries that you choose to install.
+To deploy an Azure Synapse workspace, an Azure Data Lake Storage Gen2 account is required. Azure Synapse Analytics uses the primary storage account for several integration scenarios and stores data in a container. The container includes Apache Spark tables and application logs under a folder called **/synapse/{workspacename}**. The workspace also uses container for managing libraries that you choose to install.
 
 During the workspace deployment through the [Azure portal](/azure/azure-portal/), provide an existing storage account or create a new one. The provided storage account is the primary storage account for the workspace. The deployment process grants the workspace identity access to the specified Data Lake Storage Gen2 account, using the **Storage Blob Data Contributor** role.
 
@@ -186,4 +186,4 @@ For more information, see [How to set up access control for your synapse workspa
 
 ## Next steps
 
-[Azure Databricks implementation](./azure-databricks-implementation.md)
+[Use Azure Databricks within enterprise-scale for analytics and AI in Azure](./azure-databricks-implementation.md)

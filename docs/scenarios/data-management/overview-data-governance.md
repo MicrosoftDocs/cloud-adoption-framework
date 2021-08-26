@@ -67,6 +67,6 @@ If breaches occur, customers are more likely to blame the company first, rather 
 
 Failure to comply with regulatory legislation on data privacy might result in significant financial penalties. Governing your data will help you avoid such risks.
 
-## Next step
+## Next steps
 
 [Integrate data management and analytics into your cloud adoption strategy](./strategy.md)

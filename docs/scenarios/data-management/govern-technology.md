@@ -1,6 +1,6 @@
 ---
-title: Technology needed for end-to-end governance in Azure
-description: Learn about the technology needed for end to end governance in Azure.
+title: Technology for end-to-end governance in Azure
+description: Learn about the technology needed for end-to-end governance in Azure.
 author: mboswell
 ms.author: mboswell
 ms.date: 06/21/2021
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: overview
 ---
 
-# Technology needed for end-to-end governance
+# Technology for end-to-end governance in Azure
 
 In the context of technology needed for end-to-end data governance, Microsoft provides its own technologies and also partner technologies on Azure. Microsoft provides the following technology components to assist you in governing data:
 

@@ -1,6 +1,6 @@
 ---
-title: Identity and access management for data management and analytics in Azure
-description: Learn how this enterprise-scale scenario can improve identity and access management of data management and analytics in Azure.
+title: Identity and access management for data management and analytics 
+description: Learn how this enterprise-scale scenario can improve identity and access management for data management and analytics in Azure.
 author: mboswell
 ms.author: mboswell
 ms.date: 07/19/2021
@@ -142,6 +142,6 @@ This approach also gives a single management location and allows reviewing acces
 
 For more details on how to drive a security for data management landing zones and data landing zones is managing your data estate, see [Security provisioning](./security-provisioning.md).
 
-## Next step
+## Next steps
 
-[Network topology and connectivity for a data management and analytics landing zone](./eslz-network-topology-and-connectivity.md)
+[Network topology and connectivity for data management and analytics landing zones](./eslz-network-topology-and-connectivity.md)

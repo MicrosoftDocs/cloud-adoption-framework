@@ -1,6 +1,6 @@
 ---
-title: Azure enterprise-scale for analytics and AI data products
-description: Learn about Azure enterprise-scale for analytics and AI data products
+title: Enterprise-scale for analytics and AI data products in Azure
+description: Learn about enterprise-scale for analytics and AI data products in Azure.
 author: mboswell
 ms.author: mboswell
 ms.date: 06/08/2021
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Data products
+# Enterprise-scale for analytics and AI data products in Azure
 
 At a high level, data products are computed or polyglot persistence services that might be required depending on certain use cases. A data product is anything that drives business value, for example, reports, workbooks, bespoke database, or data API. It can use other services and technologies that aren't part of [data landing zone](./data-landing-zone.md) core services. One example is reporting with niche requirements, such as compliance and tax reporting or specialized capabilities that address gaps in the baseline policies.
 
@@ -21,7 +21,7 @@ At a high level, data products are computed or polyglot persistence services tha
 
      The example above shows:
      1. Intra-data landing zone consumption:
-         1. Data product B consumes from data product A and the data lake within its data landing zone, for example, data landing zone 1.
+         1. Data product B consumes from data product A and the data lake within its data landing zone; for example, data landing zone 1.
          1. Data products C and D only consume from within their own respective data landing zones.
      1. Inter-data landing zone consumption: Data product B also consumes from data product C and the data lake in data landing zone 3.
 
@@ -143,4 +143,4 @@ A data product for analytics and data science might contain the services shown i
 
 ## Next steps
 
-[Frequently asked questions](./frequently-asked-questions.md)
+[Frequently asked questions about enterprise-scale for analytics and AI in Azure](./frequently-asked-questions.md)

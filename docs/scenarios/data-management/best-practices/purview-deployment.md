@@ -201,7 +201,7 @@ Review the following list of personas involved in an enterprise-scale for analyt
 |Data analysts and performance analysts |Use Azure to discover and share new insights from existing data assets or *ad hoc* data. Create one-click AI transformations, consume prebuilt models, and easily generate machine learning models.|Purview Data Source Administrator and data reader   |
 |Data engineers | Use Azure to build, integrate, and manage data and analytics products. Create AI enabled applications and solutions when applicable.|Purview Data Source Administrator and data curator|
 |Citizen data scientists |Create machine learning models via powerful visual, drag-and-drop, no-code tools where no coding is necessary |Purview Data Source Administrator and data curator |
-| Data scientists | Use your preferred tools and machine learning frameworks to build scalable data science solutions. Accelerate end-to-end machine learning lifecycle.|Purview Data Source Administrator and data curator |
+| Data scientists | Use your preferred tools and machine learning frameworks to build scalable data science solutions. Accelerate end-to-end machine learning life cycle.|Purview Data Source Administrator and data curator |
 | Machine learning engineers | Enable right processes and infrastructure for easy model deployment and model management. |Purview Data Source Administrator and data curator    |
 
 For more information about data personas, see [Personas and teams](../organize-persona-and-teams.md#personas).

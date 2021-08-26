@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Azure Purview readiness checklist for data management and analytics enterprise-scale scenario
 
-During your data governance journey with Azure Purview and enterprise-scale for analytics and AI, you'll find there are multiple stages in the adoption lifecycle. A well-planned deployment of **Azure Purview** in the [data management landing zone](../architectures/data-management-landing-zone.md) can provide the following benefits:
+During your data governance journey with Azure Purview and enterprise-scale for analytics and AI, you'll find there are multiple stages in the adoption life cycle. A well-planned deployment of **Azure Purview** in the [data management landing zone](../architectures/data-management-landing-zone.md) can provide the following benefits:
 
 - Unified data discovery across the entire organization  
 - Improved analytic collaboration

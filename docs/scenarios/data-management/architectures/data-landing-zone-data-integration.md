@@ -1,6 +1,6 @@
 ---
-title: Azure enterprise-scale for analytics and AI integrations
-description: Enterprise-scale for analytics and AI integrations
+title: Enterprise-scale for analytics and AI data integrations in Azure
+description: Learn about enterprise-scale for analytics and AI data integrations in Azure.
 author: mboswell
 ms.author: mboswell
 ms.date: 03/03/2021
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Data integrations
+# Enterprise-scale for analytics and AI data integrations in Azure
 
 The role of integrations operations is explained under [integration ops (per integration)](../organize-persona-and-teams.md#data-landing-zone-teams).
 
@@ -72,4 +72,4 @@ Figure 2 shows the subprocess of adding an integration to a pre-existing Azure D
 
 ## Next steps
 
-[Data products](./data-landing-zone-data-products.md)
+[Enterprise-scale for analytics and AI data products in Azure](./data-landing-zone-data-products.md)

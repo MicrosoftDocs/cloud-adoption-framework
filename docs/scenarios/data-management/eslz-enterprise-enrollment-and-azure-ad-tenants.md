@@ -1,6 +1,6 @@
 ---
-title: Enrollment and Azure Active Directory tenants for enterprise-scale for analytics and AI
-description: Learn how enterprise-scale for analytics and AI can improve enterprise enrollment and Azure Active Directory tenants.
+title: Enterprise enrollment and Azure Active Directory tenants for enterprise-scale for analytics and AI
+description: Learn how enterprise-scale for analytics and AI can improve enterprise enrollment and Azure Active Directory tenant decisions.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/21/2021
@@ -19,6 +19,6 @@ However, it's important to understand the decisions made by the cloud platform t
 
 Review [identity and access management considerations](./eslz-identity-and-access-management.md). These considerations can help you understand how the Azure AD tenant is applied in the design of authentication and authorization solutions. You can also evaluate the [resource organization considerations](./eslz-resource-organization.md) to understand how the enrollment might be organized into management groups, subscriptions, and resource groups.
 
-## Next step
+## Next steps
 
 [Identity and access management for data management and analytics](./eslz-identity-and-access-management.md)

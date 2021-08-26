@@ -1,5 +1,5 @@
 ---
-title: Understand best practices for data science projects with enterprise-scale for analytics and AI in Azure
+title: Best practices for data science projects with enterprise-scale for analytics and AI 
 description: Learn about best practices for data science projects with enterprise-scale for analytics and AI in Azure.
 author: abdale
 ms.author: hamoodaleem
@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank, e2e-data
 ---
 
-# Understand best practices for data science projects with enterprise-scale for analytics and AI in Azure
+# Best practices for data science projects with enterprise-scale for analytics and AI 
 
 We recommend these best practices for how to use enterprise-scale for analytics and AI in Azure to operationalize data science projects.
 
@@ -131,4 +131,4 @@ The following purposes apply to each folder in the repository:
 
 ## Next steps
 
-[Azure Machine Learning as a data product](./azure-machine-learning.md)
+[Azure Machine Learning as a data product for enterprise-scale for analytics and AI](./azure-machine-learning.md)

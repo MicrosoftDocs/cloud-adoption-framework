@@ -9,9 +9,9 @@ ms.service: cloud-adoption-framework
 ms.subservice: overview
 ---
 
-# Data governance summary and maturity model
+# Data summary and maturity model for Azure
 
-The key to successful data governance is to break down structured data into data entities and data subject areas. Then use a data governance solution to surround the specific data entities and data subject areas with people, processes, policies, and technology. This solution will help govern the lifecycle of these data entities. Establishing a common business vocabulary in a business glossary within a data catalog can help.
+The key to successful data governance is to break down structured data into data entities and data subject areas. Then use a data governance solution to surround the specific data entities and data subject areas with people, processes, policies, and technology. This solution will help govern the life cycle of these data entities. Establishing a common business vocabulary in a business glossary within a data catalog can help.
 
 The data catalog is critical technology. You can't govern data if you don't know where the data is or what it means. Data catalog software provides automatic data discovery, automatic profiling to determine its quality, and automatic sensitive data detection. It also helps map disparate data to your common vocabulary data names and definitions in the catalog business glossary to understand what data means.
 
@@ -79,6 +79,6 @@ When you look at the data governance challenge, you might wonder how mature you 
 | No data privacy enforcement software                                           | No data privacy enforcement software                                                                     | Data privacy enforcement in some database management systems                                                                   | Data privacy enforcement in all data stores                                                              |
 | No master data management system                                               | Single entity master data management system                                                              | Multientity master data management system                                                               | Multientity master data management system                                                               |
 
-## Next step
+## Next steps
 
 [Requirements for governing data in a modern enterprise](./govern-requirements.md)

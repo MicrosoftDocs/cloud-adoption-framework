@@ -51,6 +51,6 @@ Enterprise-scale for analytics and AI requires an understanding of landing zones
 - [Refactor landing zones](/azure/cloud-adoption-framework/ready/landing-zone/refactor)
 - [Data management and analytics landing zone](./enterprise-scale-landing-zone.md)
 
-## Next step
+## Next steps
 
-[Introduction to enterprise-scale for analytics and AI for Azure](./enterprise-scale-landing-zone.md)
+[Introduction to enterprise-scale for analytics and AI in Azure](./enterprise-scale-landing-zone.md)

@@ -1,6 +1,6 @@
 ---
-title: Understand the automated ingestion framework with enterprise-scale for analytics and AI in Azure
-description: Learn about the automated ingestion framework with enterprise-scale for analytics and AI in Azure.
+title: How automated ingestion frameworks support enterprise-scale for analytics and AI in Azure
+description: Learn about how automated ingestion frameworks support enterprise-scale for analytics and AI in Azure.
 author: mboswell
 ms.author: mboswell
 ms.date: 08/06/2021
@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank, e2e-data
 ---
 
-# Understand the automated ingestion framework with enterprise-scale for analytics and AI in Azure
+# How automated ingestion frameworks support enterprise-scale for analytics and AI in Azure
 
 The [ingest process with enterprise-scale for analytics and AI in Azure](./data-ingestion.md#ingest-considerations-for-azure-data-factory) and [ingest and processing resource group](../architectures/data-landing-zone.md#ingest-and-processing) guide enterprises through how to build their own custom ingestion framework.
 
@@ -209,4 +209,4 @@ POST https://{accountName}.scan.purview.azure.com/datasources/{dataSourceName}/s
 
 ## Next steps
 
-[Data science best practices](./data-science-best-practices.md)
+[Best practices for data science projects with enterprise-scale for analytics and AI](./data-science-best-practices.md)
