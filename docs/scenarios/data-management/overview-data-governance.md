@@ -1,5 +1,5 @@
 ---
-title: What is data governance for Azure?
+title: What is data governance?
 description: Learn about data governance for Azure.
 author: mboswell
 ms.author: mboswell
@@ -67,6 +67,6 @@ If breaches occur, customers are more likely to blame the company first, rather 
 
 Failure to comply with regulatory legislation on data privacy might result in significant financial penalties. Governing your data will help you avoid such risks.
 
-## Next steps
+## Next step
 
-[Strategy for data management and analytics adoption in Azure](./strategy.md)
+[Integrate data management and analytics into your cloud adoption strategy](./strategy.md)

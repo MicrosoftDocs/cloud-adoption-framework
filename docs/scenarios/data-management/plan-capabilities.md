@@ -1,6 +1,6 @@
 ---
-title: Building data management and analytics capabilities in Azure
-description: Building data management and analytics capabilities
+title: Build data management and analytics capabilities in Azure
+description: Understand how to build data management and analytics capabilities in Azure.
 author: pratimdas
 ms.author: prda
 ms.date: 01/27/2021
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Building data management and analytics capabilities
+# Build data management and analytics capabilities in Azure
 
 Now that you have your key projects mapped with business outcomes and calibrated with impact and complexity, and your baseline, you can start looking at building the capability to deliver them.
 
@@ -51,8 +51,8 @@ Here we see the entire company using a data-driven culture, frameworks and stand
 
 ## Next steps
 
-The following list of articles will take you to guidance to help you be successful in the cloud adoption scenario.
+The following articles can guide your cloud adoption journey and help your cloud adoption scenario to succeed:
 
-- [Review your environment or Azure landing zones](./ready.md)
+- [Review your environment for Azure landing zones](./ready.md)
 - [Govern data management and analytics](./govern.md)
 - [Secure data management and analytics](./secure.md)

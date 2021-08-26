@@ -142,6 +142,6 @@ This approach also gives a single management location and allows reviewing acces
 
 For more details on how to drive a security for data management landing zones and data landing zones is managing your data estate, see [Security provisioning](./security-provisioning.md).
 
-## Next steps
+## Next step
 
-[Network topology and connectivity for an data management and analytics](./eslz-network-topology-and-connectivity.md)
+[Network topology and connectivity for a data management and analytics landing zone](./eslz-network-topology-and-connectivity.md)

@@ -1,6 +1,6 @@
 ---
 title: Data summary and maturity model for Azure
-description: Introducing the concept of data governance in the cloud and for Azure.
+description: Understand the concept of data governance in the cloud and for Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 02/01/2020
@@ -79,6 +79,6 @@ When you look at the data governance challenge, you might wonder how mature you 
 | No data privacy enforcement software                                           | No data privacy enforcement software                                                                     | Data privacy enforcement in some database management systems                                                                   | Data privacy enforcement in all data stores                                                              |
 | No master data management system                                               | Single entity master data management system                                                              | Multientity master data management system                                                               | Multientity master data management system                                                               |
 
-## Next steps
+## Next step
 
-[Requirements for governing data](./govern-requirements.md)
+[Requirements for governing data in a modern enterprise](./govern-requirements.md)
