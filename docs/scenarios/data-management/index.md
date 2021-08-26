@@ -17,37 +17,37 @@ This scenario focuses on supporting two targeted outcomes:
 
 - **Analytics:** Use the cloud to deliver increasingly more mature analytics solutions. Migrate data platforms to the cloud. Democratize data using advanced visualization tools. Answer complex analytical questions with cloud-based analytics tools. Extend workloads with machine learning.
 
-- **Data governance:** Properly manage your data estate to ensure data quality and maturity across all cloud deployments of your data. Govern how data is classified, categorized, and used to ensure your data is protected and reliable across all cloud deployments. For more information, see [Data governance](./govern.md).
+- **Data governance:** Properly manage your data estate to ensure data quality and maturity across all cloud deployments of your data. Govern how data is classified, categorized, and used to ensure your data is protected and reliable across all cloud deployments. For more information, see [Data summary and maturity model for Azure](./govern.md).
 
 ## Components of the scenario
 
-This scenario is designed to guide the end-to-end customer journey, throughout the cloud adoption life cycle. Delivery of the full journey requires the following key components, or guidance sets:
+This scenario is designed to guide the end-to-end customer journey throughout the cloud adoption life cycle. Delivery of the full journey requires the following key components, or guidance sets:
 
-- **[Cloud Adoption Framework](https://docs.microsoft.com/azure/cloud-adoption-framework):** Managing and governing data is a life cycle process that starts by building on your existing cloud strategy and carries all the way through to ongoing operations management. The Cloud Adoption Framework will help to guide the full life cycle for your data estate.
+- **[Cloud Adoption Framework](/azure/cloud-adoption-framework):** Managing and governing data is a life cycle process that starts by building on your existing cloud strategy and carries all the way through to ongoing operations management. The Cloud Adoption Framework will help to guide the full life cycle for your data estate.
 
-- **[Azure Well-Architected Framework](/azure/architecture/framework):** Workload architecture and operations have a direct impact on data. Understand how your architecture can improve management and governance of the data used by your workload.
+- **[Azure Well-Architected Framework](./well-architected-framework.md):** Workload architecture and operations have a direct impact on data. Understand how your architecture can improve management and governance of the data used by your workload.
 
-- **[Reference architectures](/azure/architecture):** These reference solutions help to accelerate deployment for many common data management and analytics solutions.
+- **[Reference architectures](./architectures/data-management-landing-zone.md):** These reference solutions help to accelerate deployment for many common data management and analytics solutions.
 
-- **[Best practices](azure/architecture/guide):** These level-300+ articles help central IT teams to deploy tools and manage the processes to ensure proper management and governance of your data.
+- **[Best practices](../best-practices/data-lake-overview.md):** These level-300+ articles in the table of contents help central IT teams to deploy tools and manage the processes to ensure proper management and governance of your data.
 
-- **[Featured Azure products](/azure/architecture/changelog):** Learn more about the products that support data management and analytics in Azure.
+- **Featured Azure products:** Explore this section in the table of contents to learn more about the products that support data management and analytics in Azure.
 
-- **[Microsoft Learn modules](https://docs.microsoft.com/learn):** Gain the hands-on skills required to implement, maintain, and support data management and analytics solutions.
+- **[Microsoft Learn modules](/learn):** Gain the hands-on skills required to implement, maintain, and support data management and analytics solutions.
 
 ## Common customer journeys
 
 **Prepare for centralized operations:** Use the Cloud Adoption Framework articles to establish the processes and approaches required to support an entire portfolio of workloads across your data estate.
 
-**Improve controls across your data estate:** Focus on the Govern and Manage articles to integrate data management and analytics into your existing operations processes. Use the Ready article to deploy controls across all of your cloud environments.
+**Improve controls across your data estate:** Focus on the [Govern](/azure/cloud-adoption-framework/govern) and [Manage](/azure/cloud-adoption-framework/manage) articles to integrate data management and analytics into your existing operations processes. Use the [Ready](/azure/cloud-adoption-framework/ready) articles to deploy controls across all of your cloud environments.
 
 **Influence changes to individual workloads (central IT and governance):** As your data management and analytics processes improve, the central data governance teams will find requirements that depend on knowledge of the architecture behind individual workloads. Use the Well-Architected Framework guidance to help workload owners understand potential improvements to their workloads that will improve data operations.
 
 **Optimize individual workloads (workload teams):** Workload owners should start with the Well-Architected guidance to understand the best ways to integrate data management and analytics strategies into their workloads. If the team is also supported by central IT and governance teams, this guidance will provide insights into best practices and architectures that these teams are typically accountable to deliver to accelerate your workload development.
 
-**Processes to onboard individual assets:** Use best practices section to execute a series of processes to onboard all of your data estate into a single data management and analytics control plane.
+**Processes to onboard individual assets:** Use the Best practices section in the table of contents to execute a series of processes to onboard all of your data estate into a single data management and analytics control plane.
 
-**Implement specific Azure products:** Accelerate and improve data management and analytics capabilities by using various Azure products outlined in the featured products section.
+**Implement specific Azure products:** Accelerate and improve data management and analytics capabilities by using various Azure products outlined in the Featured Azure Products section of the table of contents.
 
 ## Next steps
 

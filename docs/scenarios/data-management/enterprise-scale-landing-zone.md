@@ -126,7 +126,7 @@ Examples of data products include:
 > [!IMPORTANT]
 > A **data product** fulfills a specific need within a business using data. Data products manage, organize, and make sense of the data across domains and present the insights gained from the data products. A data product is a result of data from one or many data integrations or other data products.
 
-For more information, see [enterprise-scale for analytics and AI data products in Azure](./architectures/data-landing-zone-data-products.md).
+For more information, see [Enterprise-scale for analytics and AI data products in Azure](./architectures/data-landing-zone-data-products.md).
 
 ### Data platform operational excellence
 

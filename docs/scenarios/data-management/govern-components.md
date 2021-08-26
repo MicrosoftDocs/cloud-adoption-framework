@@ -35,7 +35,7 @@ The data governance strategy should include the projects and initiatives needed 
 
 Data means data entities, documents, unstructured images, video, and audio. Examples of data entities are customer, product, employee, supplier, order, invoice, payment, and asset.
 
-:::image type="content" source="./images/data-life cycle.png" alt-text="Diagram of the data life cycle.":::
+:::image type="content" source="./images/data-life-cycle.png" alt-text="Diagram of the data life cycle.":::
 
 Examples of data entity include:
 
