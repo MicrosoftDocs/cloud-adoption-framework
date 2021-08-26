@@ -108,13 +108,13 @@ Before you create files and folders, begin with a parent group. Assign that grou
 
 This technique called nesting groups. The member group inherits the permissions of the parent group, which provides global run permissions to all member groups. The member group doesn't need run permissions because these permissions are inherited. More nesting may provide greater flexibility and agility. Add security groups that represent teams or automated jobs to the data access reader and writer groups.
 
-![Diagram shows nested groups, where global execute includes data assets for readers and writers, which includes analysis team and engineering jobs respectively.](../images/nested-groups.png)
+![Diagram that shows nested groups where global execute includes data assets for readers and writers and includes analysis team and engineering jobs.](../images/nested-groups.png)
 
 ### Option 2: the access control list other entry
 
 The recommended approach is to use the ACL other entry set at the container or root. Specify defaults and access ACLs as shown in the following screen. This approach ensures that every part of the path from root to lowest level has run permissions.
 
-![Screen capture shows the manage access dialog box with other highlighted and access and default selected.](../images/acl-other-root.png)
+![Screen capture shows the manage access dialog box with other highlighted, access, and default selected.](../images/acl-other-root.png)
 
 This run permission propagates down any added child folders. The permission propagates to the depth where the intended access group needs permissions to read and run. This level is in the lowest part of the chain, as shown image below. This approach grants group access to read the data. The approach works similarly for write access.
 

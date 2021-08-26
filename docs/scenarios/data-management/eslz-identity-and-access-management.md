@@ -77,7 +77,7 @@ For automation purposes of deploying data landing zones, you need these roles:
 
 ### Role assignments for data integration and data products
 
-The following role assignments are required for a deployment of a data integration and data product within a data landing zone:
+The following role assignments are required for deploying a data integration and data product within a data landing zone:
 
 :::row:::
     :::column span="1":::
@@ -140,7 +140,7 @@ We recommend that you use Azure AD groups to secure database objects instead of 
 
 This approach also gives a single management location and allows reviewing access rights inside the Azure Graph.
 
-For more details on how to drive a security for data management landing zones and data landing zones is managing your data estate, see [Security provisioning](./security-provisioning.md).
+For more details on how to drive security for data management landing zones and data landing zones managing your data estate, see [Provision security for data management and analytics in Azure](./security-provisioning.md).
 
 ## Next steps
 

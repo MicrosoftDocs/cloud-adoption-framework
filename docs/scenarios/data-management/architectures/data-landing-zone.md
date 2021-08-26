@@ -78,7 +78,7 @@ Three [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-intr
 
 Third-party data publishers require the ability to land their data into the platform so integration ops teams can pull it into their data lakes. The upload ingest storage resource group, shown below, enables provisioning of blob stores for third-parties.
 
-![Diagram of upload ingest storage service](../images/data-landing-zone-ingest-storage.png)
+![Diagram of upload ingest storage service.](../images/data-landing-zone-ingest-storage.png)
 
 These storage blobs are requested by the integration operations t and approved by the data landing zone operations team. Once the data has been pulled from the storage blobs into raw, the data should be removed from the source storage blob.
 
@@ -202,7 +202,7 @@ For more information on how to onboard data products, see [Enterprise-scale for 
 
 For every data landing zone, an empty visualization resource group will be created. This group can be filled with services required to implement your visualization solution. Using the existing VNet will enable your solution to connect to data products.
 
-![Visualization resource group](../images/visualization-resource-group.png)
+![A visualization resource group.](../images/visualization-resource-group.png)
 
 This resource group could host virtual machines for third-party visualization services.
 

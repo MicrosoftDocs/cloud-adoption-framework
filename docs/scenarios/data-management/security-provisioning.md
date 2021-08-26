@@ -96,7 +96,7 @@ An organization can use Azure AD entitlement management to delegate access gover
 
 *Figure 2: Configuring Azure AD entitlement management.*
 
-:::image type="content" source="./images/identity-governance-catalogs.png" alt-text="Identity Governance Catalogs" lightbox="./images/identity-governance-catalogs.png":::
+:::image type="content" source="./images/identity-governance-catalogs.png" alt-text="Screen capture of Identity Governance Catalogs." lightbox="./images/identity-governance-catalogs.png":::
 
 Figure 2 summarizes how different personas work together to control access to data assets:
 

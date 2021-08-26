@@ -145,7 +145,7 @@ Now that we've covered the four stages, the following representation shows the k
 
 After making all the capability provisions, and taking a principled architectural view as discussed in this section, you'll most likely end up with the building blocks required for your cloud strategy journey.
 
-:::image type="content" source="./images/data-strategy-building-block.png" alt-text="Diagram of the manage credentials decision tree." lightbox="./images/data-strategy-building-block.png":::
+:::image type="content" source="./images/data-strategy-building-block.png" alt-text="Diagram of a decision tree for managing credentials." lightbox="./images/data-strategy-building-block.png":::
 
 ## Data strategy summary
 

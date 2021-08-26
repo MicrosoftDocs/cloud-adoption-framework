@@ -19,7 +19,7 @@ This section explains the infrastructure that's deployed for each data integrati
 
 ## Overview
 
-![Integrations](../images/integration-resource-group.png)
+![Screen capture of data integrations.](../images/integration-resource-group.png)
 
 For each data integration resource group in a data landing zone, create:
 
@@ -58,7 +58,7 @@ If the integration has a requirement to stream data in, it's possible to deploy 
 
 ## Configuration specific to Azure Databricks of adding an integration to a data landing zone
 
-![Adding permissions to Azure Databricks workspaces](../images/adding-permissions-databricks-workspaces.png)
+![Adding permissions to Azure Databricks workspaces.](../images/adding-permissions-databricks-workspaces.png)
 
 Figure 2 shows the subprocess of adding an integration to a pre-existing Azure Databricks engineering workspace within the data landing zone. The subprocess should add the security groups to the Azure enterprise application and then into the workspace. The integration service principal personal access token (PAT) is stored in an Azure Key Vault-backed scope in the data integration resource group for use with the developed engineering pipelines.
 

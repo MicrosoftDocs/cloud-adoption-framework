@@ -51,7 +51,7 @@ The Azure Purview account is deployed inside the Azure virtual network (VNet) wi
 
 ### Azure Private Endpoint deployment
 
-:::image type="content" source="../images/purview-private-endpoint-2.png" alt-text="Diagram of Azure Purview Networking." lightbox="../images/purview-private-endpoint-2.png":::
+:::image type="content" source="../images/purview-private-endpoint-2.png" alt-text="Diagram of Azure Purview networking." lightbox="../images/purview-private-endpoint-2.png":::
 
 Enterprise-scale for analytics and AI uses [Azure Private Endpoint](/azure/private-link/private-endpoint-overview) to enable secure access to the catalog powered by [Azure Private Link](/azure/private-link/private-link-overview). The private endpoint uses IP addresses from the VNet address space for your Azure Purview account. Network traffic between the clients on the VNet and the Azure Purview account traverses over the VNet and a Private Link on the Microsoft backbone network. The VNet and Private Link eliminate exposure from the public internet. To enable network isolation for end-to-end scan scenarios, more private endpoints are deployed. The private endpoints allow data sources in Azure and on-premises sources to be connected through Azure Private Link.
 
@@ -96,7 +96,7 @@ DNS resolution for private endpoints should be handled through central Azure Pri
 - `privatelink.queue.core.windows.net`
 - `privatelink.servicebus.windows.net`
 
-:::image type="content" source="../images/purview-name-resolution.png" alt-text="Diagram of high Level name resolution architecture." lightbox="../images/purview-name-resolution.png":::
+:::image type="content" source="../images/purview-name-resolution.png" alt-text="Diagram of high-level name-resolution architecture." lightbox="../images/purview-name-resolution.png":::
 
 If you have a hybrid cloud, and cross-premises name resolution is required, it's important to configure on-premises DNS servers correctly to forward the appropriate requests to the custom DNS server in Azure.
 

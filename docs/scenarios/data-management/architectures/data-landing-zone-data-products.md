@@ -17,7 +17,7 @@ At a high level, data products are computed or polyglot persistence services tha
 
 - A data landing zone can have multiple data products that are created by ingesting data either inside the same data landing zone or from across multiple data landing zones as shown below.
 
-    :::image type="content" source="../images/data-product-cross-data-landing-zone.png" alt-text="Diagram of cross data landing zone consumption.":::
+    :::image type="content" source="../images/data-product-cross-data-landing-zone.png" alt-text="Diagram of cross-data landing zone consumption.":::
 
      The example above shows:
      1. Intra-data landing zone consumption:
@@ -41,7 +41,7 @@ We recommend building data products within your data landing zone by adhering to
 
  Each data product is a resource group. Since data products are compute or polyglot persistence services, they may only be required depending on certain use cases. As such, they can be considered an optional component of your data landing zone. In the case where data products are required, you should create multiple resource groups by data product as shown below.
 
-![Diagram of a data products resource groups](../images/data-products-resource-group.png)
+![Diagram of data product resource groups.](../images/data-products-resource-group.png)
 
 ### Set guardrails
 
@@ -97,7 +97,7 @@ Fully defining a data product's relationship with other data products, its depen
 
 To explain the architecture definition process, we'll look at an example of a financial institution and its credit monitoring data product.
 
-:::image type="content" source="../images/data-product-define-detail.png" alt-text="Diagram of define data product architecture detail.":::
+:::image type="content" source="../images/data-product-define-detail.png" alt-text="Diagram of define-data-product architecture in detail.":::
 
 The credit monitoring data product shown above consumes data from a *read data store* that has been ingested by the [integration operations team](../organize-persona-and-teams.md#data-landing-zone-teams) and produces data assets for two other data products.
 
@@ -116,7 +116,7 @@ The loan approval data product team take a dependency on some of the credit moni
 
 For every data landing zone, an empty visualization resource group is created. Visualization is a data product, and depending on the complexity, can be created via a self-serve process or managed by a data product team.
 
-![Diagram of a visualization resource group](../images/visualization-resource-group.png)
+![Diagram of a visualization resource group.](../images/visualization-resource-group.png)
 
 >[!NOTE]
 >Licensing costs might mean that is it more economical to deploy third-party visualization products into the data management landing zone and for the products to connect across to the data landing zone to pull data back.

@@ -70,7 +70,7 @@ Enterprises can use custom applications, Azure Logic Apps, or Microsoft Power Ap
 
 The following illustrates how registered data sources in a Data Factory SQL Database metastore are pulled and how data is ingested at first:
 
-![Diagram of  how new data sources are ingested.](../images/new-datastore-ingestion.png)
+![Diagram of how new data sources are ingested.](../images/new-datastore-ingestion.png)
 
 
 The Data Factory ingestion master pipeline reads configurations from a Data Factory SQL Database metastore and runs iteratively with the correct parameters. Data moves with little to no change from the source to the raw layer in Azure Data Lake. The data shape is validated based on the Data Factory metastore, and file formats are converted to either Apache Parquet or Avro formats before being copied into the enriched layer.

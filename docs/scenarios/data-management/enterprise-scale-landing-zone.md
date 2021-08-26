@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Introduction to enterprise-scale for analytics and AI in Azure
 
-In the late 1980s, there was the introduction of the data warehouse Gen1, which combined disparate data sources from across the enterprise. In the late 2000s came Gen2, with the introduction of the big data ecosystem like Hadoop and the data lake. In the mid 2010s, we had the cloud data platform. It was similar to previous generations, but with the introduction of the ingestion of streaming data, like Kappa or Lambda architectures. In the early 2020s, we have the concept of the data lakehouse, data mesh, data fabric, and data-centric operational patterns.
+In the late 1980s, there was the introduction of the data warehouse Gen1, which combined disparate data sources from across the enterprise. In the late 2000s came Gen2, with the introduction of the big data ecosystem like Hadoop and the data lake. In the mid 2010s, we had the cloud data platform. It was similar to previous generations, but with the introduction of the ingestion of streaming data, like Kappa or Lambda architectures. The early 2020s introduced the concepts of the data lakehouse, data mesh, data fabric, and data-centric operational patterns.
 
 Understanding the evolution and looking forward, many organizations still have the centralized monolithic platform, generation 1. This system works well, up to a point. Bottlenecks because of interdependent processes, tightly coupled components, hyperspecialized teams, and thousands of extract, transform, load (ETL) jobs.
 
@@ -19,7 +19,7 @@ The data warehouse and data lake is still valuable, and will play an important r
 
 Even with the introduction of the cloud, the centralized approach to data management remains largely unchanged most of the time.
 
-In response to the centralized data warehouse challenges, enterprise-scale for analytics and AI represents a strategic design path and targets the technical state for an Azure analytics and AI environment.
+In response to the challenges of centralized data warehouses, enterprise-scale for analytics and AI represents a strategic design path and targets the technical state for an Azure analytics and AI environment.
 
 The pattern relies upon distribution of the data and its pipelines across domains. This pattern enables ownership of accessibility, usability, and development. Largely based on these patterns, enterprise-scale for analytics and AI includes the following capabilities:
 
@@ -95,7 +95,7 @@ The responsibility of ingesting external data into enterprise for analytics and 
 - A security user group that you give access to the Azure Databricks analytics and data science workspace
 - A service principal that's used by the data integration to deploy ingest jobs to the Azure Databricks engineering workspace
 
-Additional services such as Azure Event Hub, Azure IoT Hub, Azure Stream Analytics, and Azure Machine Learning can optionally be created.
+Other services like Azure Event Hub, Azure IoT Hub, Azure Stream Analytics, and Azure Machine Learning can be created if they're needed.
 
 > [!IMPORTANT]
 > A **data integration** is responsible for ingesting external data into a read data source. Apart from data quality checks and other applied data, the data should avoid having other data transformations applied to it.

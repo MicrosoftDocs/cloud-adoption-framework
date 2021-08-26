@@ -73,7 +73,7 @@ You might want to enable the following options for the Azure Databricks analytic
 
 The two Azure Databricks workspaces are deployed as part of a new data landing zone deployment. This following image shows the workflow of deploying an Azure Databricks environment in enterprise-scale for analytics and AI.
 
-![Diagram of of Azure Databricks deployment into a data landing zone.](../images/databricks-deploy.png)
+![Diagram of a Azure Databricks deployment into a data landing zone.](../images/databricks-deploy.png)
 
 1. The provisioning process first makes sure an Apache Hive metastore instance exists in the data landing zone. If it fails to find Apache Hive metastore, it quits and raises an error.
 2. Upon successfully finding Apache Hive metastore, a workspace is created.

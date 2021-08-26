@@ -23,7 +23,7 @@ Much of the guidance in the Plan methodology focuses on the [five Rs of rational
 
 To properly rationalize your data estate, begin by aligning your business outcomes to each of your data initiatives. This alignment will aid in prioritization and a clear understanding of the value your can derive from each data initiative. Initiatives that represent little business value and present lesser complexity for migration, can easily be included in your cloud migration plan to deliver quick efficiency gains. Initiatives with the greatest business impact or technical complexity typically require richer planning to enable long-term innovation value.
 
-:::image type="content" source="./images/strategic-initiative.png" alt-text=" Diagram of strategic initiative." lightbox="./images/strategic-initiative.png":::
+:::image type="content" source="./images/strategic-initiative.png" alt-text=" Diagram of strategic initiatives." lightbox="./images/strategic-initiative.png":::
 
 ### Prioritization
 
