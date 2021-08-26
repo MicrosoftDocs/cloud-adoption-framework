@@ -41,4 +41,4 @@ Build a strong data strategy. Choose the right tools and technology as the backb
 
 ## Next steps
 
-Review guidance for how to [use Azure Synapse Analytics in enterprise-scale for analytics and AI](./azure-synapse-analytics-implementation.md).
+[Use Azure Synapse Analytics with enterprise-scale for analytics and AI](./azure-synapse-analytics-implementation.md).

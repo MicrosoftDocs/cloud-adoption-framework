@@ -1,5 +1,5 @@
 ---
-title: Azure Machine Learning as a data product for enterprise-scale for analytics and AI
+title: Azure Machine Learning as a data product for enterprise-scale for analytics and AI 
 description: Learn about Azure Machine Learning as a data product for enterprise-scale for analytics and AI.
 author: abdale
 ms.author: hamoodaleem

@@ -110,8 +110,6 @@ The new global init scripts API is in public preview. Public preview features in
 
 Enterprise-scale for analytics and AI takes the guidelines below into account for integrating Azure Databricks:
 
+- [Power your data strategy with Azure Synapse Analytics](./synapse.md)
 - [Securing access to Azure Data Lake Gen2 from Azure Databricks](https://github.com/hurtn/datalake-ADLS-access-patterns-with-Databricks/blob/master/readme.md)
 - [Azure Databricks Best Practices](https://github.com/Azure/AzureDatabricksBestPractices/blob/master/toc.md)
-
-> [!div class="nextstepaction"]
-> [Tools and technology to power your data strategy](./synapse.md)

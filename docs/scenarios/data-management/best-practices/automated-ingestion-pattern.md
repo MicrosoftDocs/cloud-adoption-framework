@@ -209,4 +209,4 @@ POST https://{accountName}.scan.purview.azure.com/datasources/{dataSourceName}/s
 
 ## Next steps
 
-[Best practices for data science projects with enterprise-scale for analytics and AI](./data-science-best-practices.md)
+[Best practices for data science projects with enterprise-scale for analytics and AI in Azure](./data-science-best-practices.md)

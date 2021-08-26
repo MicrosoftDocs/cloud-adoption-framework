@@ -29,7 +29,7 @@ This scenario is designed to guide the end-to-end customer journey throughout th
 
 - **[Reference architectures](./architectures/data-management-landing-zone.md):** These reference solutions help to accelerate deployment for many common data management and analytics solutions.
 
-- **[Best practices](../best-practices/data-lake-overview.md):** These level-300+ articles in the table of contents help central IT teams to deploy tools and manage the processes to ensure proper management and governance of your data.
+- **[Best practices](./best-practices/data-lake-overview.md):** These level-300+ articles in the table of contents help central IT teams to deploy tools and manage the processes to ensure proper management and governance of your data.
 
 - **Featured Azure products:** Explore this section in the table of contents to learn more about the products that support data management and analytics in Azure.
 
@@ -47,7 +47,7 @@ This scenario is designed to guide the end-to-end customer journey throughout th
 
 **Processes to onboard individual assets:** Use the Best practices section in the table of contents to execute a series of processes to onboard all of your data estate into a single data management and analytics control plane.
 
-**Implement specific Azure products:** Accelerate and improve data management and analytics capabilities by using various Azure products outlined in the Featured Azure Products section of the table of contents.
+**Implement specific Azure products:** Accelerate and improve data management and analytics capabilities by using various Azure products outlined in the Featured Azure products section of the table of contents.
 
 ## Next steps
 

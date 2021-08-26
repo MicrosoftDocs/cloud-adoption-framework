@@ -1,5 +1,5 @@
 ---
-title: Overview of Azure Data Lake Storage for the data management and analytics scenario 
+title: Overview of Azure Data Lake Storage for the data management and analytics scenario
 description: Gain an overview of Azure Data Lake Storage for the data management and analytics scenario.
 author: mboswell
 ms.author: mboswell
@@ -66,4 +66,4 @@ For more information about access control mechanisms, see [Access control and da
 
 ## Next steps
 
-[Provision three data lake accounts for each data landing zone](./data-lake-services.md)
+[Provision three Azure Data Lake Storage Gen2 accounts for each data landing zone](./data-lake-services.md)

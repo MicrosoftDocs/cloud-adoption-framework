@@ -1,5 +1,5 @@
 ---
-title: Azure Purview deployment best practices for data management and analytics enterprise-scale scenario
+title: Azure Purview deployment best practices for data management and analytics 
 description: Azure Purview best practices for account setup, networking, name resolution, authentication of data sources, roles, and access control.
 author: zeinam
 ms.author: zeinam
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Azure Purview deployment best practices for data management and analytics enterprise-scale scenario
+# Azure Purview deployment best practices for data management and analytics
 
 The [data management landing zone](../architectures/data-management-landing-zone.md) is responsible for the governance of the enterprise-scale for analytics and AI platform. It relies on [Azure Purview](https://azure.microsoft.com/services/purview/) to provide data management capabilities:
 
@@ -205,3 +205,7 @@ Review the following list of personas involved in an enterprise-scale for analyt
 | Machine learning engineers | Enable right processes and infrastructure for easy model deployment and model management. |Purview Data Source Administrator and data curator    |
 
 For more information about data personas, see [Personas and teams](../organize-persona-and-teams.md#personas).
+
+## Next steps
+
+[The ingest process with enterprise-scale for analytics and AI in Azure](./data-ingestion.md)

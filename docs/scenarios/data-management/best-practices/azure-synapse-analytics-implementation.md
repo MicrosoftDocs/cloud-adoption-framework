@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Use Azure Synapse Analytics with enterprise-scale for analytics and AI 
+# Use Azure Synapse Analytics with enterprise-scale for analytics and AI
 
 Azure Synapse Analytics is the provisioned, integrated analytics service that accelerates time to insight across data warehouses and big data systems. Azure Synapse Analytics brings together:
 
