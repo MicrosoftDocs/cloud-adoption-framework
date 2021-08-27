@@ -1,5 +1,5 @@
 ---
-title: Data data privacy for data management and analytics in Azure
+title: Data privacy for data management and analytics in Azure
 description: Learn about data privacy for the data management and analytics scenario in Azure.
 author: abdale
 ms.author: hamoodaleem
@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank, e2e-data
 ---
 
-# Data data privacy for data management and analytics in Azure
+# Data privacy for data management and analytics in Azure
 
 The data management and analytics scenario frees organizations to determine the best patterns to suit their requirements while guarding personal data at multiple levels. Personal data is any data that can be used to identify individuals, for example, driver's license numbers, social security numbers, bank account numbers, passport numbers, email addresses, and more. Many regulations exist today to protect user privacy.
 
