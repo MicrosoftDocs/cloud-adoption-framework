@@ -57,9 +57,9 @@ Design your identity and access control infrastructure to improve the security a
 ## AI + Machine Learning
 
 - [Organize and set up Azure Machine Learning environments](./ai-machine-learning-resource-organization.md). Learn about key decision points in setting up Azure Machine Learning for your organization.
-- [Budget, cost, and quota management for Azure Machine Learning at organizational scale](./optimize-ai-machine-learning-cost.md)
+- [Budget, cost, and quota management for Azure Machine Learning at organizational scale](./optimize-ai-machine-learning-cost.md).
   When you manage compute costs incurred from Azure Machine Learning, at an organization scale with many workloads, many teams, and users, there are many management and optimization challenges to work through.
-- [Machine learning DevOps (Machine Learning Operations)](./ai-machine-learning-mlops.md)
+- [Machine learning DevOps (Machine Learning Operations)](./ai-machine-learning-mlops.md).
   Machine learning DevOps is an organizational change that relies on a combination of people, process, and technology to deliver machine learning solutions in a robust, scalable, reliable, and automated way. This guide summarizes best practices and learnings from adopting machine learning DevOps in the enterprise with Azure Machine Learning.
 
 ## Cost management
