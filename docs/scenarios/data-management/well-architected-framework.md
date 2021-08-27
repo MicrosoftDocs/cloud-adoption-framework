@@ -1,6 +1,6 @@
 ---
 title: The Azure Well-Architected Framework for data workloads
-description: Use the Azure Well-Architected Framework architecture principals to design and optimize workloads running in your data estate.
+description: Use the Azure Well-Architected Framework architecture principles to design and optimize workloads running in your data estate.
 author: pratimdas
 ms.author: prda
 ms.date: 01/27/2021
@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # The Azure Well-Architected Framework for data workloads
 
-The [Plan methodology of this scenario](./plan.md) outlines a process for you to rationalize your data estate, prioritize technical efforts, and identify data workloads. For many of the named workloads, it's important to adhere to a set of architectural principals. These principals help guide development and optimization of the workloads. The five architectural constructs are detailed in the [Azure Well-Architected Framework](/azure/architecture/framework/). This guidance provides a summary of how you can apply these principals to the management of your data workloads.
+The [Plan methodology of this scenario](./plan.md) outlines a process for you to rationalize your data estate, prioritize technical efforts, and identify data workloads. For many of the named workloads, it's important to adhere to a set of architectural principles. These principles help guide development and optimization of the workloads. The five architectural constructs are detailed in the [Azure Well-Architected Framework](/azure/architecture/framework/). This guidance provides a summary of how you can apply these principles to the management of your data workloads.
 
 ## Cost optimization
 
