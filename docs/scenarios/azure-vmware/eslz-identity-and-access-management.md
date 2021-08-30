@@ -13,7 +13,7 @@ ms.subservice: ready
 
 This article builds on several considerations and recommendations defined in the
 Azure landing zone article [enterprise-scale design area for identity and access
-management](https://microsoft-my.sharepoint.com/personal/egonzalez_microsoft_com/ready/enterprise-scale/identity-and-access-management.md).
+management](/azure/cloud-adoption-framework/ready/enterprise-scale/identity-and-access-management).
 This article will help examine design considerations and recommendations related to 
 identity and access management specific to the deployment of Azure VMware Solution (AVS).
 
@@ -40,7 +40,7 @@ using the principle of least privilege.
     Connector passwords are updated with password changes to avoid lockouts.
     [Rotate the cloudadmin credentials for Azure VMware Solution - Azure VMware
     Solution \| Microsoft
-    Docs](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Fazure-vmware%2Frotate-cloudadmin-credentials&data=04%7C01%7Cscogru%40microsoft.com%7Cd15dc72f8fc24648641708d958f2b38b%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637638621784981685%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=RfK0iN7qqykgltsgEN8N26LGFzbrmEYIhkdVtsar70w%3D&reserved=0)
+    Docs](/azure/azure-vmware/rotate-cloudadmin-credentials)
 
 -   Limit AVS RBAC permissions in Azure to the Resource Group where it is
     deployed, as well as the users who need to manage AVS.
@@ -48,7 +48,7 @@ using the principle of least privilege.
 -   vSphere Permissions with Custom Roles should only be configured at the
     hierarchy level if needed. It is better to apply permissions at the
     [appropriate VM
-    Folder](https://docs.microsoft.com/en-us/azure/azure-vmware/concepts-identity)
+    Folder](/azure/azure-vmware/concepts-identity)
     or Resource Pool. Application of vSphere Permissions at or above the
     Datacenter level should be avoided.
 
