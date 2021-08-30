@@ -1,5 +1,5 @@
 ---
-title: Understand data privacy for the data management and analytics scenario in Azure
+title: Data privacy for data management and analytics in Azure
 description: Learn about data privacy for the data management and analytics scenario in Azure.
 author: abdale
 ms.author: hamoodaleem
@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank, e2e-data
 ---
 
-# Understand data privacy for the data management and analytics scenario in Azure
+# Data privacy for data management and analytics in Azure
 
 The data management and analytics scenario frees organizations to determine the best patterns to suit their requirements while guarding personal data at multiple levels. Personal data is any data that can be used to identify individuals, for example, driver's license numbers, social security numbers, bank account numbers, passport numbers, email addresses, and more. Many regulations exist today to protect user privacy.
 
@@ -140,7 +140,7 @@ As new datasets are deployed, part of the DevOps process would need to run scrip
 The first two options provide a way to handle **sensitive (personal data)**, and they also grant control to integrations ops and data product teams to identify and restrict access. It might be enough for a small-scale analytics platform, but a policy engine should be placed in the data management landing zone for a large enterprise with hundreds of datasets. Policy engines support a central way of managing, securing, and controlling:
 
 - Access to data
-- Managing the data lifecycle
+- Managing the data life cycle
 - Internal and external policies and regulations
 - Data-sharing policies
 - Identifying **sensitive (personal data)**
@@ -161,4 +161,4 @@ The data management landing zone should connect to catalog the data in the data 
 
 ## Next steps
 
-[Understand how to organize data operations team members](./organize.md)
+[Organize data operations team members for data management and analytics in Azure](./organize.md)

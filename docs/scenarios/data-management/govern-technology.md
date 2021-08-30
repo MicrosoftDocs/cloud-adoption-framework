@@ -1,6 +1,6 @@
 ---
-title: Technology needed for end-to-end governance in Azure
-description: Learn about the technology needed for end to end governance in Azure.
+title: Technology for end-to-end governance in Azure
+description: Learn about the technology needed for end-to-end governance in Azure.
 author: mboswell
 ms.author: mboswell
 ms.date: 06/21/2021
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: overview
 ---
 
-# Technology needed for end-to-end governance
+# Technology for end-to-end governance in Azure
 
 In the context of technology needed for end-to-end data governance, Microsoft provides its own technologies and also partner technologies on Azure. Microsoft provides the following technology components to assist you in governing data:
 
@@ -24,7 +24,7 @@ The first step in data governance is to create a common business vocabulary of c
 
 The graphic below shows some elements of the [standard entities](https://github.com/microsoft/CDM/tree/master/schemaDocuments/core/applicationCommon) available within Common Data Model. More information: [Common Data Model repository on GitHub](https://aka.ms/cdmrepo).
 
-:::image type="content" source="images/cdm-entities-v1.png" alt-text="Common Data Model poster" lightbox="images/cdm-entities-v1.png":::
+:::image type="content" source="images/cdm-entities-v1.png" alt-text="Poster of the Common Data Model." lightbox="images/cdm-entities-v1.png":::
 
 [Download the Common Data Model poster](https://aka.ms/cdmposter)
 

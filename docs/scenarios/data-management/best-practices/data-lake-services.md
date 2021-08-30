@@ -1,6 +1,6 @@
 ---
-title: Azure enterprise-scale for analytics and AI teams Azure Data Lake services
-description: Learn about the three data lake accounts that should be provisioned for each data landing zone.
+title: Provision three Azure Data Lake Storage Gen2 accounts for each data landing zone
+description: Learn about the three Azure Data Lake Storage Gen2 accounts that should be provisioned for each data landing zone.
 author: mboswell
 ms.author: mboswell
 ms.date: 08/06/2021
@@ -9,9 +9,9 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Data lake landing zones
+# Provision three Azure Data Lake Storage Gen2 accounts for each data landing zone
 
-It's important to pre-plan the structure of your data before you land it into a data lake. This planning then allows security, partitioning, and processing to be used effectively. The [three data lakes](./data-lake-overview.md#the-three-data-lakes) outlines a starting point for enterprise-scale for analytics and AI.
+It's important to plan the structure of your data before you land it into a data lake. This planning then allows security, partitioning, and processing to be used effectively. The [three data lakes](./data-lake-overview.md#the-three-data-lakes) outlines a starting point for enterprise-scale for analytics and AI.
 
 ## Overview
 
@@ -50,7 +50,7 @@ Using the water-based analogy, think of this layer as a reservoir that stores da
 
 This data is always immutable. It should be locked down and the permissions given to any consumers, whether they're automated or human, should be read-only. The zone might be organized by using a folder per source system. Each ingestion process has write access to only its associated folder.
 
-Consider using lifecycle management to reduce long-term storage costs. This recommendation is because this layer usually stores the largest amount of data. Azure Data Lake Storage Gen2 supports moving data to the cool access tier either programmatically or through a lifecycle management policy. The policy defines a set of rules that run once a day and can be assigned to the account, filesystem, or folder level. The feature is free although the operations will incur a cost.
+Consider using life cycle management to reduce long-term storage costs. This recommendation is because this layer usually stores the largest amount of data. Azure Data Lake Storage Gen2 supports moving data to the cool access tier either programmatically or through a life cycle management policy. The policy defines a set of rules that run once a day and can be assigned to the account, filesystem, or folder level. The feature is free although the operations will incur a cost.
 
 Raw data from source systems for each **data integration** or source will land into either the general folder, for *confidential or below*, or *sensitive* personal data folder for each **data integration** on data lake one. Each ingestion process should have write access to only their associated folder.
 
@@ -79,7 +79,7 @@ For batch or micro-batch patterns, the data should be copied from the source sys
 
 For streaming use cases, the data in the raw zone should sometimes be stored as an aggregated dataset. For example, data is ingested via a message bus such as Azure event hub. It's then aggregated via a real-time processing engine such as Azure Stream Analytics or Spark Streaming before it's stored in the data lake.
 
-As this layer usually stores the largest amount of data, consider using lifecycle management to reduce long-term storage costs. At the time of writing Azure Data Lake Storage Gen2 supports moving data to the cool access tier either programmatically or through a lifecycle management policy. The policy defines a set of rules that run once a day and can be assigned to the account, filesystem, or folder level.
+As this layer usually stores the largest amount of data, consider using life cycle management to reduce long-term storage costs. At the time of writing Azure Data Lake Storage Gen2 supports moving data to the cool access tier either programmatically or through a life cycle management policy. The policy defines a set of rules that run once a day and can be assigned to the account, filesystem, or folder level.
 
 > [!TIP]
 > Enterprises need to think about scenarios where they might need to rebuild an analytics platform from scratch and should always consider the most granular data they would require to rebuild downstream read data stores.
@@ -174,23 +174,23 @@ Sometimes these datasets mature, and the enterprise should consider how they pro
 
 Data partitioning is the process of organizing data in the data store so that large-scale data can be managed, and data access can be controlled. Partitioning can improve scalability, reduce contention, and optimize performance. This section describes guideline and strategy for partitioning data in the Data Lake Storage. When partitioning the data lake, have a setup that:
 
-- Doesn't compromise security
-- Has clear isolation and aligns with the data authorization model
-- Fits well with data ingestion process
-- Has a well-defined path for optimal data access
-- Supports management and maintenance tasks
+- Doesn't compromise security.
+- Has clear isolation and aligns with the data authorization model.
+- Fits well with data ingestion process.
+- Has a well-defined path for optimal data access.
+- Supports management and maintenance tasks.
 
 ### General practices
 
 Below are general practices for data partitioning design.
 
-- Focus on security implication early and design data partitions together with authorization
-- Data redundancy might be allowed in exchange for security
-- Multiple nesting of folders is acceptable, but keep it consistent
-- Don't combine mixed file formats or different datasets in a single folder structure
+- Focus on security implication early and design data partitions together with authorization.
+- Data redundancy might be allowed in exchange for security.
+- Multiple nesting of folders is acceptable, but keep it consistent.
+- Don't combine mixed file formats or different datasets in a single folder structure.
 - Don't start the folder structure with date partitions. It's better to keep dates at the lower folder level.
-- Define a naming convention and adhere to it
-- Include time element in the folder structure and file name
+- Define a naming convention and adhere to it.
+- Include time element in the folder structure and file name.
 
 > [!TIP]
 > Folder structures should have partitioning strategies that can optimize access patterns and appropriate file sizes. In the curated zones, plan the structure based on optimal retrieval, be cautious of choosing a partition key with high cardinality, which leads to over partitioning, which in turn leads to suboptimal file sizes.
@@ -239,7 +239,4 @@ When processing data with Apache Spark, the typical guidance is around 64 MB to 
 
 ## Next steps
 
-The next step is to review considerations for your data lakes.  
-
-> [!div class="nextstepaction"]
-> [Data lake considerations](./data-lake-key-considerations.md)
+[Key considerations for Azure Data Lake Storage](./data-lake-key-considerations.md)

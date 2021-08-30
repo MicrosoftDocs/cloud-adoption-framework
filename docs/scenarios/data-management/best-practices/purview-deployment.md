@@ -1,5 +1,5 @@
 ---
-title: Azure Purview deployment best practices for data management and analytics enterprise-scale scenario
+title: Azure Purview deployment best practices for data management and analytics 
 description: Azure Purview best practices for account setup, networking, name resolution, authentication of data sources, roles, and access control.
 author: zeinam
 ms.author: zeinam
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Azure Purview deployment best practices for data management and analytics enterprise-scale scenario
+# Azure Purview deployment best practices for data management and analytics
 
 The [data management landing zone](../architectures/data-management-landing-zone.md) is responsible for the governance of the enterprise-scale for analytics and AI platform. It relies on [Azure Purview](https://azure.microsoft.com/services/purview/) to provide data management capabilities:
 
@@ -51,7 +51,7 @@ The Azure Purview account is deployed inside the Azure virtual network (VNet) wi
 
 ### Azure Private Endpoint deployment
 
-:::image type="content" source="../images/purview-private-endpoint-2.png" alt-text="Diagram of Azure Purview Networking." lightbox="../images/purview-private-endpoint-2.png":::
+:::image type="content" source="../images/purview-private-endpoint-2.png" alt-text="Diagram of Azure Purview networking." lightbox="../images/purview-private-endpoint-2.png":::
 
 Enterprise-scale for analytics and AI uses [Azure Private Endpoint](/azure/private-link/private-endpoint-overview) to enable secure access to the catalog powered by [Azure Private Link](/azure/private-link/private-link-overview). The private endpoint uses IP addresses from the VNet address space for your Azure Purview account. Network traffic between the clients on the VNet and the Azure Purview account traverses over the VNet and a Private Link on the Microsoft backbone network. The VNet and Private Link eliminate exposure from the public internet. To enable network isolation for end-to-end scan scenarios, more private endpoints are deployed. The private endpoints allow data sources in Azure and on-premises sources to be connected through Azure Private Link.
 
@@ -96,7 +96,7 @@ DNS resolution for private endpoints should be handled through central Azure Pri
 - `privatelink.queue.core.windows.net`
 - `privatelink.servicebus.windows.net`
 
-:::image type="content" source="../images/purview-name-resolution.png" alt-text="Diagram of high Level name resolution architecture." lightbox="../images/purview-name-resolution.png":::
+:::image type="content" source="../images/purview-name-resolution.png" alt-text="Diagram of high-level name-resolution architecture." lightbox="../images/purview-name-resolution.png":::
 
 If you have a hybrid cloud, and cross-premises name resolution is required, it's important to configure on-premises DNS servers correctly to forward the appropriate requests to the custom DNS server in Azure.
 
@@ -201,7 +201,11 @@ Review the following list of personas involved in an enterprise-scale for analyt
 |Data analysts and performance analysts |Use Azure to discover and share new insights from existing data assets or *ad hoc* data. Create one-click AI transformations, consume prebuilt models, and easily generate machine learning models.|Purview Data Source Administrator and data reader   |
 |Data engineers | Use Azure to build, integrate, and manage data and analytics products. Create AI enabled applications and solutions when applicable.|Purview Data Source Administrator and data curator|
 |Citizen data scientists |Create machine learning models via powerful visual, drag-and-drop, no-code tools where no coding is necessary |Purview Data Source Administrator and data curator |
-| Data scientists | Use your preferred tools and machine learning frameworks to build scalable data science solutions. Accelerate end-to-end machine learning lifecycle.|Purview Data Source Administrator and data curator |
+| Data scientists | Use your preferred tools and machine learning frameworks to build scalable data science solutions. Accelerate end-to-end machine learning life cycle.|Purview Data Source Administrator and data curator |
 | Machine learning engineers | Enable right processes and infrastructure for easy model deployment and model management. |Purview Data Source Administrator and data curator    |
 
 For more information about data personas, see [Personas and teams](../organize-persona-and-teams.md#personas).
+
+## Next steps
+
+[The ingest process with enterprise-scale for analytics and AI in Azure](./data-ingestion.md)

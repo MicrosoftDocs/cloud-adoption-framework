@@ -1,6 +1,6 @@
 ---
-title: Enterprise-scale for analytics and AI Azure Databricks pattern
-description: Learn about the enterprise-scale for analytics and AI Azure Databricks pattern.
+title: Use Azure Databricks within enterprise-scale for analytics and AI in Azure
+description: Learn how to use Azure Databricks for enterprise-scale for analytics and AI in Azure.
 author: mboswell
 ms.author: mboswell
 ms.date: 07/30/2021
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Implement Azure Databricks
+# Use Azure Databricks within enterprise-scale for analytics and AI in Azure
 
 Azure Databricks is a data analytics platform optimized for the Microsoft Azure Cloud Services platform. Azure Databricks offers two environments for developing data-intensive applications: Azure Databricks SQL Analytics and Azure Databricks workspace.
 
@@ -73,7 +73,7 @@ You might want to enable the following options for the Azure Databricks analytic
 
 The two Azure Databricks workspaces are deployed as part of a new data landing zone deployment. This following image shows the workflow of deploying an Azure Databricks environment in enterprise-scale for analytics and AI.
 
-![Diagram of of Azure Databricks deployment into a data landing zone.](../images/databricks-deploy.png)
+![Diagram of a Azure Databricks deployment into a data landing zone.](../images/databricks-deploy.png)
 
 1. The provisioning process first makes sure an Apache Hive metastore instance exists in the data landing zone. If it fails to find Apache Hive metastore, it quits and raises an error.
 2. Upon successfully finding Apache Hive metastore, a workspace is created.
@@ -110,8 +110,6 @@ The new global init scripts API is in public preview. Public preview features in
 
 Enterprise-scale for analytics and AI takes the guidelines below into account for integrating Azure Databricks:
 
-- [Securing access to Azure Data Lake Gen 2 from Azure Databricks](https://github.com/hurtn/datalake-ADLS-access-patterns-with-Databricks/blob/master/readme.md)
-- [Azure Databricks best practices](https://github.com/Azure/AzureDatabricksBestPractices/blob/master/toc.md)
-
-> [!div class="nextstepaction"]
-> [Tools and technology to power your data strategy](./synapse.md)
+- [Power your data strategy with Azure Synapse Analytics](./synapse.md)
+- [Securing access to Azure Data Lake Gen2 from Azure Databricks](https://github.com/hurtn/datalake-ADLS-access-patterns-with-Databricks/blob/master/readme.md)
+- [Azure Databricks Best Practices](https://github.com/Azure/AzureDatabricksBestPractices/blob/master/toc.md)
