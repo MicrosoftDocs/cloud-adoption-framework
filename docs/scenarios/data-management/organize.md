@@ -1,35 +1,42 @@
 ---
-title: "Organize people"
-description: people
+title: Understand how to organize data operations team members for the data management and analytics scenario in Azure
+description: Learn how to organize data operations team members for the data management and analytics scenario in Azure.
 author: abdale
 ms.author: hamoodaleem
-ms.date: 06/21/2021
+ms.date: 08/06/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: think-tank, e2e-data
 ---
 
-# DataOps Overview
+# Understand how to organize data operations team members for the data management and analytics scenario in Azure
 
-The Enterprise Scale Analytics and AI architecture was designed with the following core principles in mind:
+The data management and analytics scenario architecture was designed with a set of core principles.
 
-1. Self-Service Enablement: Enable project teams to work on their own in order to allow agile development methods.
-2. Governance: Enforce guardrails on the whole Azure platform, in order to ensure that project teams are only allowed to see, change, and execute what they are supposed to.
-3. Streamlined Deployments: Ensure that common policies are available and can be used across the organization to scale quickly and to enable teams which are not as experienced with some of core designs and artifacts.
+## Core principles
 
-The deployment process and Data Ops working model is an essential part and enable for some of these core principles. In order to fulfill these concepts, we prescribe the following design guidelines:
+- **Self-service enablement:** enable project teams to work on their own to allow agile development methods.
 
-1. Use of Infrastructure as Code (IaC).
-2. Deployment templates covering the core use cases within the company
-3. Deployment process that includes a forking and branching strategy
-4. Central repository and deployment of Data Management Landing Zone
+- **Governance:** enforce guardrails across the Azure platform to ensure that project teams only see, change, and execute the functions within their permissions.
 
-A Platform Group team should be put in place to centrally govern the data platform infrastructure and not duplicate skills required to build and deploy common data infrastructure pieces required for the Data Management Landing Zone as well as the various Data Landing Zones.
+- **Streamlined deployments:** ensure that common policies are available within the organization to help teams scale quickly and support teams with less experience in some core designs and artifacts.
 
-The Platform Group team can build, own, and provide the necessary agnostic technology that the Data Integration and Data Products need to capture, process, store, and serve their datasets.
+## Deployment and operations
 
-The team should provide the services in a self-service manner, which should include tools for big data storage, data product versioning, data pipeline implementation and orchestration, data de-identification, etc. This is key to remove bottlenecks in the workflow and reduce the lead time to create new Data Products.
+The deployment process and data operations (DataOps) model is an essential part that supports some of these core principles. The following guidelines are recommended for organizations to align with the principles:
 
-The Platform Group team should follow existing best practices outlined in this section to achieve their objective.
+- Use infrastructure as code.
+- Deploy templates that cover core use cases within the company.
+- Follow a deployment process that includes a strategy for GitHub forks and branches.
+- Maintain a central repository and deploying data management landing zones.
 
-Other data product teams should also use the following best practices for proper testing and automation.
+Contributors with identifiable and individual skills should establish a platform group to centrally govern data platform infrastructure and build and deploy common data infrastructure pieces for the data management landing zone, plus various data landing zones. The platform group can also build, own, and provide agnostic technology that helps data integration and data product teams to capture, process, store, and maintain their datasets.
+
+The team should present its services in a self-service manner, which can include tools for storing big data, versioning product data, organizing/implementing the data pipeline, de-identifying data, and more. These types of tools are key to minimizing bottlenecks in the workflow and reducing lead time for creating new data products.
+
+The platform group should follow the best practices outlined in this section to achieve their objectives. Other data product teams should use the best practices in the forthcoming articles to test and automate their data.
+
+## Next steps
+
+[Organize for effective data operations](./organize-data-operations.md)

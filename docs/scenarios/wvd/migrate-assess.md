@@ -6,8 +6,8 @@ ms.author: doalle
 ms.date: 05/18/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: migrate
-ms.custom: think-tank
+ms.subservice: scenario
+ms.custom: think-tank, e2e-avd
 ---
 
 # Azure Virtual Desktop assessment
@@ -20,7 +20,7 @@ The Azure Virtual Desktop assessment exercise serves as a focused means of testi
 
 Each Azure Virtual Desktop assessment will evaluate a combination of a user persona, a consistent host pool of virtual machines (VMs), end-user applications and data, and user profiles (data). During the assessment, the team's objective is to use data to answer the questions in this section. The answers will shape the actual scope of the deployment and release of the Azure Virtual Desktop migration.
 
-The answers to these questions start with data. In the Plan methodology, specifically [best practices](../../plan/index.md) and [digital estate assessment](../../digital-estate/index.md), data should already be collected and analyzed to create a migration plan. However, the questions in this specific workload assessment will likely require additional data. Data about the desktops, users, and workloads to be used by each user is required to develop an Azure Virtual Desktop deployment plan.
+The answers to these questions start with data. In the Plan methodology, specifically [best practices](../../plan/contoso-migration-assessment.md) and [digital estate assessment](../../digital-estate/index.md), data should already be collected and analyzed to create a migration plan. However, the questions in this specific workload assessment will likely require additional data. Data about the desktops, users, and workloads to be used by each user is required to develop an Azure Virtual Desktop deployment plan.
 
 If you use [Movere](/azure/migrate/migrate-services-overview#movere) as your data collection tool, you'll likely have the data you need to develop personas and answer these questions by using data in [Azure Migrate](/azure/migrate/), just like any other migration scenario.
 

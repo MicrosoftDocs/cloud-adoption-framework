@@ -1,28 +1,34 @@
 ---
-title: "Secure 'data management and analytics' in Azure"
-description: Manage 'data management and analytics' in Azure
+title: Secure data management and analytics for Azure
+description: Learn about the principles of secure data management and analytics for Azure.
 author: mboswell
 ms.author: mboswell
-ms.date: 06/25/2021
+ms.date: 07/20/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 ---
 
-# Secure 'data management and analytics'
+# Secure data management and analytics
 
-Data governance is often in between rigid security to restrict risk as much as possible and providing access to perform needed data analytics while maintaining balance among operations, maintenance, and control. Together with the underlying principle of our data lake solution architecture design which is Infrastructure-As-Code and Security-As-Code.
+To limit security risk as much as possible while also providing access to do data analytics, use data governance. Data governance provides balance among operations, maintenance, and control. It follows the underlying principle of data lake solution architecture design, which uses infrastructure as code and security as code.
 
-A focus of the Enterprise Scale Analytics and AI construction set is based on items listed in Table 1.
+## Security principles
+
+The focus of the data management and analytics scenario is based on key management principles:
 
 | Principle  |Description|
 |--|--|
-| **Single authoritative source of identity**| Consistency and single authoritative source increases clarity and reduces risk from human errors, and configuration and automation complexity. |
-| **Automated approach to data security**| Automation enables auditability and the implementation of multiple control points as well as reducing human errors. Automation makes data governance easier and brings overhead under control.|
-| **Only least privilege required to complete task**| Granting only the amount of access to users that they need to perform their jobs and only allow certain actions at a particular scope.| |
-|  **Simplified but yet secure permissions**| Customization leads to complexity that inhibits human understanding, security, automation and governance; for example, use build-in roles for assigning permissions to data services and avoid permissions specifically referencing individual resources or users.|
-| **Better clarity and enforceability of rules and definitions**| Clear segregation of data helps keep the environment organized while making it easy to enforce security rules and definitions. |
+| **Single authoritative source of identity**| Use consistency and a single authoritative source to increase clarity, and reduce the risk from human error and configuration and automation complexity. |
+| **Automated approach to data security**| Use automation to enable auditability, implement multiple control points, and reduce human errors. Automation also makes data governance easier and limits overhead.|
+| **Grant least privilege required to complete task**| Grant only the amount of access to users that they need to do their jobs and limit the allowed actions for a particular scope.|
+|  **Simplified yet secure permissions**| Avoid customization. Customization leads to complexity, which inhibits human understanding, security, automation, and governance. For example, use built-in roles to assign permissions to data services and avoid permissions that specifically reference individual resources or users.|
+| **Better clarity and enforceability of rules and definitions**| Clearly separate data to help keep the environment organized, while making it easy to enforce security rules and definitions. |
 
-Table 1: Key Management Principle
+> [!TIP]
+> When you deploy enterprise-scale for analytics and AI, consider using these automation principles to enable security, as opposed to manually applying them. Ideally, a user should do manual interaction only to approve or deny an access request. For more information, see [Deployment templates for enterprise-scale for analytics and AI deployment](./eslz-deployment-templates.md).
 
-When deploying the Enterprise Scale Analytics and AI you should consider these principles around automation to enable security as opposed relying upon manually applying them via human interaction. The most interaction the person should have is to approve or deny an access request.
+## Next steps
+
+- [Authentication](./secure-authentication.md)
+- [Authorization](./secure-analytics-role-based-access-control.md)

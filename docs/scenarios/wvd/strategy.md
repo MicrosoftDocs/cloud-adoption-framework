@@ -6,10 +6,11 @@ ms.author: doalle
 ms.date: 05/18/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
+ms.custom: think-tank, e2e-avd
 ---
 
-# Strategic impact of an Azure Virtual Desktop environment
+# Strategic benefits of an Azure Virtual Desktop environment
 
 Best practice guidance encourages customers to create a single centralized cloud adoption strategy, using the [Cloud Adoption Framework's Strategy methodology](../../strategy/index.md). If you haven't already, use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record your cloud adoption strategy.
 
@@ -27,15 +28,15 @@ Virtual desktop migrations are motivated by a few common target outcomes, as sho
 - The costs of current or proposed virtual desktop experiences need to be optimized to help organizations scale their remote work more effectively.
 - The IT team wants to transform the workplace, which often starts with transforming employees' user experience.
 
-Virtualization of your end users' desktops in the cloud can help your team realize each of these outcomes.
+Virtualization of your end users' desktops in the cloud can help your team realize these outcomes.
 
 ## The strategic impact of Azure Virtual Desktop in the cloud
 
 Azure Virtual Desktop products form a mission-critical platform for many organizations. When these products are foundational to an organization's business processes, the dependencies on Azure Virtual Desktop can be seen throughout the portfolio. The cloud adoption plan for this platform can directly and indirectly impact cloud adoption for all related workloads. While Azure Virtual Desktop isn't typically the first platform that an organization moves to the cloud, it can be the most important. To understand the strategy for an Azure Virtual Desktop cloud migration and the future-state innovation targets is critical to the success of all other cloud adoption plans.
 
-This article uses the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) and other resources from the Cloud Adoption Framework to capture the strategic impact of an Azure Virtual Desktop cloud adoption.
+This article uses the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) and other resources from the Cloud Adoption Framework to capture the strategic impact of Azure Virtual Desktop cloud adoption.
 
-## Reasons to move to Azure Virtual Desktop platform to the cloud
+## Reasons to move to an Azure Virtual Desktop platform in the cloud
 
 Azure Virtual Desktop is an influential platform, and organizations have several motivations to adopt Azure Virtual Desktop in the cloud. When an organization considers a cloud strategy for Azure Virtual Desktop, the following motivations tend to shape cloud adoption plans:
 
@@ -65,7 +66,7 @@ Motivations to adopt an Azure Virtual Desktop platform in the cloud are often ba
 
 [Building a business justification for cloud migration](../../strategy/cloud-migration-business-case.md) can dispel many common myths for your team's financial plan. However, your finance team might need to develop a detailed financial model to account for all parts associated with Azure Virtual Desktop cloud adoption.
 
-The [Forrester study on the total economic impact of Microsoft Azure for Azure Virtual Desktop](https://azure.microsoft.com/resources/the-total-economic-impact-of-microsoft-windows-virtual-desktop-a-commissioned-study-conducted-by-forrester-consulting/) offers an analysis where the following justifications are typically defendable:
+The [Forrester study on the total economic impact of Microsoft Azure for Azure Virtual Desktop](https://azure.microsoft.com/resources/the-total-economic-impact-of-microsoft-azure-virtual-desktop-a-commissioned-study-conducted-by-forrester-consulting/) offers an analysis where the following justifications are typically defendable:
 
 - Time to market benefits exceed $3 million USD
 - Cost avoidance exceeds $7 million USD

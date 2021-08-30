@@ -1,75 +1,75 @@
 ---
-title: Azure Enterprise Scale Analytics and AI Integrations
-description: Enterprise Scale Analytics and AI Integrations
-author:  mboswell
-ms.author:  mboswell # Microsoft employees only
+title: Azure enterprise-scale for analytics and AI integrations
+description: Enterprise-scale for analytics and AI integrations
+author: mboswell
+ms.author: mboswell
 ms.date: 03/03/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Data Integrations
+# Data integrations
 
-The role of Integrations Ops is explained under [Integration Ops (per integration)](../organize-persona-and-teams.md#integration-ops-per-integration). 
+The role of integrations operations is explained under [integration ops (per integration)](../organize-persona-and-teams.md#data-landing-zone-teams).
 
-A Data Integration resource group is responsible for data ingestion and enrichment only from external sources such a telemetry, finance, CRM etc. This layer can operate in both real-time, batch and micro-batch.
+A data integration resource group is responsible for data ingestion and enrichment only from external sources such a telemetry, finance, and CRM. This layer can operate in both real-time, batch and micro-batch.
 
-This section explains the infrastructure which is deployed for each Data Integration resource group inside a Data Landing Zone.
+This section explains the infrastructure that's deployed for each data integration resource group inside a data landing zone.
 
 ## Overview
 
 ![Integrations](../images/integration-resource-group.png)
 
-*Figure 1: Data Integration resource group*
+For each data integration resource group in a data landing zone, create:
 
-For each Data Integration resource group in a Data Landing Zone, we will create:
+- An Azure Key Vault.
+- An Azure Data Factory for running developed engineering pipelines to transform from raw to enriched.
+- An integration security user group used to give access to the Azure Databricks analytics and data science workspace.
+- A service principal used by the integration for deploying ingest jobs to the Azure Databricks engineering workspace.
 
-* An Azure Key Vault.
-* An Azure Data Factory for running developed engineering pipelines to transform from Raw to Enriched.
-* A Integration security user group which we use to give access to the Azure Databricks Analytics and Data Science workspace.
-* A Service Principal which is used by the Integration for deploying ingest jobs to the Azure Databricks Engineering workspace.
+Other services such as Event Hubs, IoT Hubs, stream insight, and Machine Learning can optionally be created.
 
-Additional services such as Event Hubs, IoT Hubs, Stream Insight, and Machine Learning can optionally be created.
+There should be a data integration resource group per external integration.
 
-This leads to a Data Integration Resource Group per external integration.
-
->[!NOTE]
->Our prescribed view is to deploy Azure Data Factory instead of Azure Synapse Analytics workspace, for Data Integrations. Our adopted policy is to reduce the surface area to required features. Azure Synapse Analytics is more suited to our data product layer, large feature set and surface area.
+> [!NOTE]
+> Our prescribed view is to deploy Azure Data Factory instead of Azure Synapse Analytics workspace, for data integrations. Our adopted policy is to reduce the surface area to required features. Azure Synapse Analytics is more suited to our data product layer, large feature set and surface area.
 
 ## Azure Key Vault
 
-Enterprise Scale Analytics and AI will make use of Azure Key Vault functionality and store secrets within Azure whenever possible.
+Enterprise-scale for analytics and AI will make use of Azure Key Vault functionality and store secrets within Azure whenever possible.
 
-Each Data Landing Zone will have an Azure Key Vault per Integration. This functionality will ensure that encryption key, secret, and certificate derivation meet the requirements of the environment. This is to allow better separation of administrative duties and reduce risk associated with mixing keys, secrets of differing classifications, and Integrations.
+Each data landing zone will have an Azure Key Vault per integration. This functionality will ensure that encryption key, secret, and certificate derivation meet the requirements of the environment. This is to allow better separation of administrative duties and reduce risk associated with mixing keys, secrets of differing classifications, and integrations.
 
-All keys relating to the Data Integration should be held in this Azure Key Vault.
+All keys relating to the data integration should be held in this Azure Key Vault.
 
->[!IMPORTANT]
->Data Integration-specific key vaults should follow the least-privilege model and avoid secret sharing across environments as well as transaction scale limits.
+> [!IMPORTANT]
+> Data integration-specific key vaults should follow the least-privilege model and avoid secret sharing across environments as well as transaction scale limits.
 
 ## Azure Data Factory
 
-An Azure Data Factory will be deployed to allow pipelines written by the Integration Ops team to take data from Raw to Enriched using developed pipelines. We prescribe using Mapping Data Flows for transformations and breaking out to use **Azure Databricks Engineering Workspace** for complex transformations.
+An Azure Data Factory will be deployed to allow pipelines written by the integration operations team to take data from raw to enriched using developed pipelines. We prescribe using mapping data flows for transformations and breaking out to use Azure Databricks engineering workspace for complex transformations.
 
-This should be connected to the DevOps instance of the Integration Ops repo responsible for the Data Integration to allow CI/CD deployments.
+It should be connected to the DevOps instance of the integration ops repo responsible for the data integration to allow CI/CD deployments.
 
-## Event Hubs (Optional)
+## Event Hubs
 
-If the Integration has a requirement to stream data in, it is possible to deploy downstream Event Hubs in the Integrations resource group.
+If the integration has a requirement to stream data in, it's possible to deploy downstream Event Hubs in the integrations resource group.
 
-## Configuration specific to Databricks of adding a Integration to a Data Landing Zone
+## Configuration specific to Azure Databricks of adding an integration to a data landing zone
 
-![Adding Permissions to Databricks Workspaces](../images/adding-permissions-databricks-workspaces.png)
+![Adding permissions to Azure Databricks workspaces](../images/adding-permissions-databricks-workspaces.png)
 
-*Figure 2: Adding Permissions to Databricks Workspaces*
+Figure 2 shows the subprocess of adding an integration to a pre-existing Azure Databricks engineering workspace within the data landing zone. The subprocess should add the security groups to the Azure enterprise application and then into the workspace. The integration service principal personal access token (PAT) is stored in an Azure Key Vault-backed scope in the data integration resource group for use with the developed engineering pipelines.
 
-Figure 2 shows the subprocess of adding a Integration to a pre-existing Azure Databricks Engineering Workspace within the Data Landing Zone. The subprocess should add the security groups to the Azure Enterprise Application and then into the workspace. The Integration Service Principal PAT is stored in an Azure Key Vault-backed scope in the Data Integration Resource Group for use with the developed engineering pipelines.
+### Azure Databricks engineering workspace process
 
-### Azure Databricks Engineering Workspace Process
+1. Add the integration service principal to the workspace.
+1. Obtain the personal access token (PAT) for the integration's service principal to be used with tools such as Azure Data Factory.
+1. Store the personal access token (PAT) in the integration Key Vault.
+1. Assign the integration service principal access to the cluster policies.
+1. Assign appropriate workspace permissions to integration service principal.
 
-1. Add the Integration Service Principal to the workspace.
-1. Obtain the Personal Access Token (PAT) for the Integration's Service Principal to be used with tools such as Azure Data Factory.
-1. Store the PAT in the Integration Key Vault.
-1. Assign the Integration Service Principal access to the Cluster Policies.
-1. Assign appropriate workspace permissions to Integration Service Principal.
+## Next steps
+
+[Data products](./data-landing-zone-data-products.md)

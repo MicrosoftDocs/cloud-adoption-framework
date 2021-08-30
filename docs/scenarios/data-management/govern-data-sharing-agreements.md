@@ -1,38 +1,51 @@
 ---
-title: "Data Sharing Agreements"
-description: Data Sharing Agreements
-author: pstrengholt
-ms.author: pietheinstrengholt
-ms.date: 06/21/2020
+title: Data sharing agreements in data management and analytics in Azure
+description: Learn how data sharing agreements ensure stable delivery of data and manage compliance and governance in Azure.
+author: pietheinstrengholt
+ms.author: pstrengholt
+ms.date: 7/20/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
 ---
 
-# Data Sharing Agreements
+# Data sharing agreements in data management and analytics
 
-Although Enterprise Scale Analytics and AI uses Azure AD Entitlement management to control access and sharing of data, the enterprise might require a sharing and contract repository. As this is an organizational function, this repository should reside in the Data Management Landing Zone.
+The data management and analytics scenario recommends using Azure Active Directory (Azure AD) entitlement management to control access and sharing of data. Your organization might also require a sharing and contract repository. This repository should be in the data management landing zone.
 
-The data usage phase is important to understanding how data is consumed or distributed within an organization to support the organization's objectives. In this phase, accountability and transparency must be ensured via data-sharing agreements. A data-sharing agreement is a formal contract that captures what data are being shared and how the data can be used. Such an agreement serves two purposes.
+The data usage phase is important to understanding how data is consumed or distributed in your organization. In this phase, ensure accountability and transparency by using data sharing agreements. A data sharing agreement is a formal contract that defines the shared data and how that data can be used.
 
-## Ensuring stable delivery
+A data-sharing agreement serves two purposes:
 
-The first purpose of a data sharing agreement is to ensure stable delivery of data. The contract works like a service contract, which provides assurances to both data providers and data consumers. The data provider promises to make the delivery and describes the data format, such as schema. The contract guarantees interface compatibility and includes the terms of service and service level agreement (SLA). It describes how the data can be used, for example, only for development, testing, or production. A good SLA typically also describes the quality of data delivery and interface. This might include uptime, error rates, and availability, as well deprecation, a roadmap, and version numbers. The metadata capturing these details can be part of your [source control](/azure/data-factory/source-control) to allow programmatically triggering validations and deployments.
+- Ensure stable data delivery
+- Manage compliance and governance
 
-The benefit of data delivery contracts is that they provide insight into the amount of coupling and the number of dependencies between domains and applications. It also allows for [contract testing](/azure/data-factory/continuous-integration-deployment#cicd-lifecycle) to ensure all application and interface changes are validated against the consumer's data requirements. For example, you can detect schema drift to detect data flows become vulnerable to upstream data source changes. For more information see [concepts data flow schema drift](/en-us/azure/data-factory/concepts-data-flow-schema-drift)
+## Ensure stable delivery
 
-Service contracts are one of the most important aspects of an enterprise-scale architecture. Once data products become popular and widely used, the need will quickly arise to implement versioning and manage compatibility and deployment. Without these disciplines in place, reusability can be low, and interfaces can break. On the most basic level it is recommended documenting contracts for all interfaces, including schemas (message formats and data) and transportation types, and their relationship to the applications.
+A data sharing agreement ensures stable delivery of data. The agreement works like a service contract. It provides assurances to both data providers and data consumers. The data provider promises to make the delivery and describes the data format. The contract guarantees interface compatibility and includes the terms of service and service-level agreement (SLA). The agreement describes how the data can be used. For example, data might be used only for development, testing, or production.
 
-To enable discoverability and reuse it is recommended to make all contract discoverable, for example via source control. This allows domains to automate test routines in their continuous integration and deployment pipelines. By knowing what parts of the interfaces are consumed (such as columns and objects), teams can test routines to validate against any data that will be delivered or exposed. Test validating against the structure (columns names and types of values) guarantees compatibility and stable consumption at large.
+A good SLA typically describes the quality of data delivery and interface. This part of the SLA might include uptime, error rates, and availability. It could also include deprecation, a roadmap, and version numbers. The metadata that capture these details can be under source control. That approach allows automatic triggering validations and deployments. For more information, see [Source control in Azure Data Factory](/azure/data-factory/source-control).
 
-## Compliance and Governance
+Data delivery contracts provide insight into coupling and dependencies between domains and applications. A contract also allows for [contract testing](/azure/data-factory/continuous-integration-deployment#cicd-lifecycle). Testing ensures all application and interface changes are validated against the consumer's data requirements. You can detect schema drift to detect when data flows become vulnerable to upstream data source changes. For more information, see [Schema drift in mapping data flow](/en-us/azure/data-factory/concepts-data-flow-schema-drift).
 
-The second aspect of data sharing agreements is to capture the usage aspects, such as intended usage, privacy and sensitivity, and purpose (including limitations). This information is interface independent and gives insights into what data is used for what particular purpose.
+When data products become popular and widely used, you need to implement versioning and manage compatibility and deployment. Without these disciplines, reusability can be low and interfaces can break. We recommend documenting contracts for all interfaces. Document message-format schemas, data schemas, transportation types, and their relationship to the applications.
 
-Data sharing agreements also prevent miscommunication on the usage of data. Before data is shared, domains should talk in person to discuss data sharing and data usage issues and come to a collaborative understanding that will then be documented in a data sharing agreement. It is important to recognize that contexts between domains typically differ, so you might want to apply both ![classifications and conditions](/azure/purview/create-sensitivity-label) to consistently apply sensitivity labels across the organization.
+To enable discoverability and reuse, we recommend that you make all contract discoverable. You could use source control. This approach allows domains to automate test routines in their continuous integration and deployment pipelines. Knowing what parts of the interfaces are consumed allows teams to test data to be delivered or exposed. Validating against the structure offers compatibility and stable consumption at large.
 
-The process of capturing metadata within source control can also be applied on the data consuming side. You might require users to register and publish the purpose of their data consumption for the various use cases and agree not to distribute data further. This, for example, is important not only from a regulatory perspective, but also because it gives the data providers valuable information. It additionally will enable data security enforcement. For example, Azure Synapse Analytics can use all metadata to apply dynamic data masking, preventing unauthorized access to sensitive labeled data.
+## Compliance and governance
+
+Data sharing agreements capture usage aspects, such as intended usage, privacy and sensitivity, and purpose. This information is interface independent. It gives insights into what data is used for what purpose.
+
+Data sharing agreements also prevent miscommunication on the usage of data. Before data is shared, domains should discuss data sharing and data usage issues. They should come to a collaborative understanding, documented in a data sharing agreement. Contexts between domains typically differ. You might want to apply both classifications and conditions to consistently apply sensitivity labels across the organization. For more information, see [Automatically label your data in Azure Purview](/azure/purview/create-sensitivity-label).
+
+The data consuming side can also apply the process of capturing metadata in source control. You might require users to register and publish the purpose of their data consumption and agree not to distribute data further. This restriction is important not only from a regulatory perspective, but also because it gives the data providers valuable information. It also enables data security enforcement. For example, Azure Synapse Analytics can use metadata to apply dynamic data masking. This approach prevents unauthorized access to sensitive labeled data.
 
 ## Scalability
 
-Data sharing agreements are key because they provide insights about the data supply chain and make service level contracts, controls, data quality rules, and data usage transparent to the organization. These contracts are typically stored in a (central) code repository or source control. Publishing these contracts centrally allows providers and consumers to resolve their data delivery and consumption issues themselves, without the support of a central team. This becomes essential once we start moving away from a siloed data-platform approach and empower autonomous teams.
+Data sharing agreements provide insights about the data supply chain. These agreements make service level contracts, controls, data quality rules, and data usage transparent to the organization. Contracts are typically stored in a central code repository or source control.
+
+Publishing contracts centrally allows providers and consumers to resolve their data delivery and consumption issues themselves, without the support of a central team. This approach becomes essential once you start moving away from a siloed data-platform approach. It empowers autonomous teams.
+
+## Next steps
+
+[Secure data management and analytics](./secure.md)

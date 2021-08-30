@@ -1,12 +1,12 @@
 ---
 title: Governance disciplines for Azure Kubernetes Service (AKS)
-description: Learn about the cloud security control lifecycle, and how to set up AKS security controls, Azure Policy, and AKS cost management.
+description: Learn more about the cloud security control lifecycle, and how to set up AKS security controls, Azure Policy, and AKS cost management.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/30/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
 ms.custom: think-tank, e2e-aks
 ---
 
@@ -14,7 +14,7 @@ ms.custom: think-tank, e2e-aks
 
 This article walks through aspects of Azure Kubernetes Service (AKS) security governance to think about before implementing any solution.
 
-Most of this content is technology-agnostic, because implementation varies among customers. The article focuses on how to implement solutions using Azure and open-source software. Part of the governance building is predefined by the decisions made when you create an enterprise-scale landing zone, as described in [Enterprise-scale security governance and compliance](../../ready/enterprise-scale/security-governance-and-compliance.md). It's important to understand governance principles because of the effect of the decisions made.
+Most of this content is technology-agnostic, because implementation varies among customers. The article focuses on how to implement solutions using Azure and open-source software. The decisions made when you create an enterprise-scale landing zone can partially predefine your governance, as described in [Enterprise-scale security governance and compliance](../../ready/enterprise-scale/security-governance-and-compliance.md). It's important to understand governance principles because of the effect of the decisions made.
 
 ## Attack surfaces
 
@@ -26,25 +26,25 @@ Build security is about the proper use of DevSecOps with container images.
 
 **Major risks:**
 
-Poor image configuration can lead to security vulnerabilities down the pipeline, for example having containers that are built running with greater privileges than needed. They might also be configured to allow certain network access, which might put the system at risk. Not limiting the allowed system calls to those required for the safe operation of containers can increase risk from a compromised container. Another vulnerability could be allowing the container get access to sensitive directory of the host or allowing the containers change the locations that control the basic function of the host.
+Poor image configuration can lead to security vulnerabilities down the pipeline, for example having containers that are built running with greater privileges than needed. The containers might also be configured to allow certain network access, which might put the system at risk. Not limiting the allowed system calls to those required for the safe operation of containers can increase risk from a compromised container. Another vulnerability could be allowing the container get access to sensitive directory of the host or allowing the containers change the locations that control the basic function of the host.
 
 Rogue containers, which are unplanned containers in an environment can be a result of developers testing their code in test environments. These containers might not have gone through vigorous scanning for vulnerabilities or be properly configured. These vulnerabilities might open up an entry point for attackers.
 
-Using base images that aren't from trusted sources or not up to date with security updates could also lead to vulnerabilities in the containers they use them to build.
+Using base images that aren't from trusted sources or aren't to date with security updates, can lead to vulnerabilities in the containers they use to build.
 
 **Risk countermeasures:**
 
 Build security is about the implementation of DevSecOps to shift security left and remediate most issues before they start moving down the pipeline. It's not about putting all the ownership on developers, but sharing the ownership with operations. Developers can then see and remediate vulnerabilities and compliance issues that they can actually address.
 
-Instead of building a pipeline that scans and fails builds because it has one or 10 critical vulnerabilities, look at the next layer down and you can start to segment the point of responsibility based on vendor status. By setting a threshold at the status layer of the vulnerability, anything with an *Open*, *Will not fix*, or *Deferred* status will continue to flow down the pipeline where SecOps can access the risk as they do today. If the vulnerability has a status of *Vendor fix available*, that is something the developer can address. Along with this, enterprises should use grace periods to allow time for the developers to remediate.
+You can build a pipeline that scans and fails builds because it has one or 10 critical vulnerabilities. However, a better approach might be to look at the next layer down. You can start to segment the point of responsibility based on vendor status. By setting a threshold at the status layer of the vulnerability, anything with an *Open*, *Will not fix*, or *Deferred* status will continue to flow down the pipeline where SecOps can access the risk as they do today. If the vulnerability has a status of *Vendor fix available*, that is something the developer can address. Along with this, enterprises should use grace periods to allow time for the developers to remediate.
 
-Along with the vulnerability assessment is the compliance assessment. For example, allowing an image to *Run as root* or exposing SSH will break the compliance posture of most enterprises. This issue should be addressed during build instead of during deployment, typically by scanning your images against the Docker CIS benchmark. When you use these types of flows, you won't break development by introducing security remediation, but you can improve your enterprise's security posture overall inline.
+Along with the vulnerability assessment, is the compliance assessment. For example, allowing an image to *Run as root* or exposing SSH will break the compliance posture of most enterprises. This issue should be addressed during build instead of during deployment, typically by scanning your images against the Docker CIS benchmark. When you use these types of flows, you won't break development by introducing security remediation, but you can improve your enterprise's security posture overall inline.
 
-Utilization of a tool that enables these capabilities is critical in order to effectively implement the right strategy for your enterprise. Traditional tools are often unable to detect vulnerabilities within containers, which lead to a false sense of security. Tools that take the pipeline-based build approach and the immutable and declarative nature of container technologies into consideration would be needed to properly secure your container ecosystem. These tools should have the following properties:
+Use of a tool that enables these capabilities is critical to effectively implement the right strategy for your enterprise. Traditional tools are often unable to detect vulnerabilities within containers, which lead to a false sense of security. Tools that take the pipeline-based build approach and the immutable and declarative nature of container technologies into consideration would be needed to properly secure your container ecosystem. These tools should have the following properties:
 
-- They integrate with the entire lifetime of the images from the beginning of the build process to the registry to the runtime.
-- They need to have visibility into vulnerabilities at all layers of the image, including the base layer of the image, application frameworks, and custom software.
-- They use policy-driven enforcement with the right level of granularity, which allows the organization to create quality gates at each stage of the build and deployment processes.
+- Integrate with the entire lifetime of the images from the beginning of the build process to the registry to the runtime.
+- Visibility into vulnerabilities at all layers of the image, including the base layer of the image, application frameworks, and custom software.
+- Use policy-driven enforcement with the right level of granularity. It allows the organization to create quality gates at each stage of the build and deployment processes.
 
 ### Registry security
 
@@ -60,18 +60,18 @@ Images often contain proprietary information including an organization's source 
 
 Another security vulnerability might include insufficient authentication and authorization restrictions to container registries, which might house sensitive proprietary assets in the images.
 
-Additionally, as content is built and deployed, the distribution of this content is one of the many attack vectors. How do you assure the content that's staged for distribution, is the same content that was delivered to an intended endpoint?
+Additionally, as content is built and deployed, the distribution of this content is one of the many attack vectors. How do you assure the content that's staged for distribution, is the same content that's delivered to an intended endpoint?
 
 **Risk countermeasures:**
 
-Organizations should set up their deployment processes to ensure that their development tools, networks, and container runtimes are connected to registries only over encrypted channels, and that the content is coming from a trusted source. Organizations can reduce risks from the use of stale images by:
+Organizations should set up their deployment processes to ensure that their development tools, networks, and container runtimes are connected to registries only over encrypted channels. Also be sure the content is coming from a trusted source. Organizations can reduce risks from the use of stale images by:
 
 - Removing unsafe, vulnerable images that should no longer be used from container registries
-- Enforcing accessing images using immutable names that specify specific versions of images to be used. This configuration can be implemented by using a *latest* tag or a specific version of the images. However since a tag does not guarantee freshness, a process should be put in place to ensure that the Kubernetes orchestrator is using the most recent unique numbers or that the *latest* tag represents the most up-to-date versions.
+- Enforcing accessing images using immutable names that specify specific versions of images to be used. This configuration can be implemented by using a *latest* tag or a specific version of the images. A tag doesn't guarantee freshness. Because of this, a process should be put in place to ensure that the Kubernetes orchestrator is using the most recent unique numbers or that the *latest* tag represents the most up-to-date versions.
 
-Organizations should also ensure that all access to registries that contain sensitive images should require authentication and authorization. All write access should also require authentication. An example could be a policy whereby developers can only push images to the specific repositories they are responsible for. Access to these registries should be federated and take advantage of business line level access policies. For example, organizations can configure their CI/CD pipeline so that images are pushed to repositories only after they have passed vulnerability scanning compliance assessment and quality control tests.
+Organizations should require that all access to registries that contain sensitive images should require authentication and authorization. All write access should also require authentication. An example could be a policy whereby developers can only push images to the specific repositories they're responsible for. Access to these registries should be federated and take advantage of business line level access policies. For example, organizations can configure their CI/CD pipeline to push images to repositories only after they have passed vulnerability scanning compliance assessment and quality control tests.
 
-Lastly, container registries now considered artifact registries are becoming a primary means to deploy any content type, not just container images. Every cloud provides a registry, with open-source projects, and vendor products available for on-premises or privately hosted within cloud providers. Content is promoted within and across registries from their initial build to their production deployment. The question users ask is how can they ensure the integrity of the content that went into the registry is the same content that comes out of the registry? Adopting an image signing solution will ensure deployments are only coming from trusted registries and are deploying trusted content.
+Lastly, container registries now considered artifact registries are becoming a primary means to deploy any content type, not just container images. Every cloud provides a registry with open-source projects and vendor products available for on-premises or privately hosted within cloud providers. Content is promoted within and across registries from their initial build to their production deployment. The question users ask is how can they ensure the integrity of the content that went into the registry is the same content that comes out of the registry? Adopting an image signing solution will ensure deployments are only coming from trusted registries and are deploying trusted content.
 
 ### Cluster security
 
@@ -83,11 +83,11 @@ Cluster security is about:
 
 **Major risks:**
 
-Sometimes, a single Kubernetes cluster might be used to run different applications managed by different teams with different access level requirements. If access is provided to individuals without restrictions or only according to their needs, a malicious or careless user could compromise not just the workloads they should have access to but other assets on the cluster as well. Another security vulnerability might occur when authorization and authentication are managed by the cluster's own user directory as opposed to being managed directly by the often more rigorously controlled organizational authentication directory. Because these accounts are highly privileged, and more often orphaned, this increases the chances of a compromised account, leading to cluster or even system-wide vulnerabilities since data stored by container volumes are managed by orchestrators, which need to have access to the data no matter which node it's hosted on.
+Sometimes, a single Kubernetes cluster might be used to run different applications managed by different teams with different access level requirements. If access is provided to individuals without restrictions or only according to their needs, a malicious or careless user could compromise workloads they have access to and other assets on the cluster. Another security vulnerability might occur when authorization and authentication are managed by the cluster's own user directory as opposed to being managed directly by the often more rigorously controlled organizational authentication directory. Because these accounts are highly privileged, and more often orphaned, it increases the chances of a compromised account, leading to cluster or even system-wide vulnerabilities since data stored by container volumes are managed by orchestrators, which need to have access to the data no matter which node it's hosted on.
 
-In addition to that, traditional network filters might have a security blindness because of a network overlay designed to encrypt data in transit making it difficult to monitor traffic within the cluster so special provisions might be required to monitor Kubernetes clusters. Traffic from different applications sharing the same cluster might have different sensitivity levels such as a public-facing website and an internal application running critical sensitive business processes. Sharing the same virtual network within the cluster can lead to sensitive data getting compromised, for example, when an attacker uses the shared network exposed to the internet to attack the internal applications.
+In addition to that, traditional network filters might have a security blindness because of a network overlay designed to encrypt data in transit. This makes it difficult to monitor traffic within the cluster so special provisions might be required to monitor Kubernetes clusters. Traffic from different applications that share the same cluster might have different sensitivity levels such as a public-facing website and an internal application running critical sensitive business processes. Sharing the same virtual network within the cluster can lead to compromised sensitive data. For example, when an attacker uses the shared network exposed to the internet to attack the internal applications.
 
-Protect components running the cluster itself from vulnerabilities and compliance issues. Ensure you are running on the latest possible version of Kubernetes to take advantage of the remediation.
+Protect components running the cluster itself from vulnerabilities and compliance issues. Ensure you're running on the latest possible version of Kubernetes to take advantage of the remediation.
 
 **Risk countermeasures:**
 
@@ -97,9 +97,16 @@ Organizations should use encryption methods that allow containers to properly ac
 
 Kubernetes clusters should be configured to separate network traffic into discrete virtual networks or subnets by sensitivity level. Per-application segmentation might also be possible but at minimum, simply defining networks by sensitivity levels might be sufficient. For example, having virtual networks for customer facing applications separate from those serving internal applications with sensitive traffic should be implemented at a minimum.
 
-Taints and tolerances can be used to isolate deployments to specific sets of nodes by sensitivity levels. Organizations should avoid hosting highly sensitive workloads within the same node as those workloads with lower sensitivities. Using separate managed clusters is an even safer option. Segmenting containers by purpose, sensitivity and thread posture provides additional protection for sensitive workloads. By segmenting containers this way, it is more difficult for an attacker who has gained access to one segment, to gain access to other segments. This also has the added advantage of ensuring residual data such as caches or volume mounts are isolated by sensitivity level.
+Taints and tolerances can be used to isolate deployments to specific sets of nodes by sensitivity levels. Organizations should avoid hosting highly sensitive workloads within the same node as those workloads with lower sensitivities. Using separate managed clusters is a safer option. Segmenting containers by purpose, sensitivity and thread posture provides extra protection for sensitive workloads. By segmenting containers this way, it's more difficult for an attacker who has gained access to one segment, to gain access to other segments. This configuration has the added advantage of ensuring residual data such as caches or volume mounts are isolated by sensitivity level.
 
-Kubernetes clusters should be configured to provide a secure environment for applications that run on them, ensure nodes are securely added to the cluster, have persistent identities to help ensure security throughout their lifecycle and provide live, accurate information on the state of the cluster, including networking and the nodes within it. It must be easy for a compromised node to be isolated and removed from the cluster without affecting the performance of the cluster. AKS makes that simple.
+Kubernetes clusters should be configured to:
+
+- Provide a secure environment for applications that run on them
+- Ensure nodes are securely added to the cluster
+- Have persistent identities to help ensure security throughout their lifecycle
+- Provide live, accurate information on the state of the cluster, including networking and the nodes within it.
+
+It must be easy for a compromised node to be isolated and removed from the cluster without affecting the performance of the cluster. AKS makes that simple.
 
 Organizations should automatically ensure compliance with container runtime configuration standards defined. There are many policies within Azure that makes this process easy and users can create their own policies as well. Use Azure security features to continuously assess configuration settings across the environment and actively enforce them.
 
@@ -114,9 +121,9 @@ Node security is about:
 
 **Major risks:**
 
-A worker node has privileged access to all components on the node. Any network accessible service can be used as an entry point for attackers so providing access to the host from multiple points can seriously increase its attack surface. The larger the attack surface the more chances for an attacker to gaining access to the node and its operating system. In addition to that, container-specific operating systems like those used in AKS nodes have a smaller attack surface because they do not contain libraries that enable regular operating systems to directly run databases and web servers. However, the use of a shared kernel results in a larger attack surface for containers running in the same environment than those in separate virtual machines, even when container-specific operating systems running on AKS nodes are in use.
+A worker node has privileged access to all components on the node. Any network accessible service can be used as an entry point for attackers so providing access to the host from multiple points can seriously increase its attack surface. The larger the attack surface the more chances for an attacker to gaining access to the node and its operating system. Also, container-specific operating systems like those used in AKS nodes have a smaller attack surface because they don't contain libraries that enable regular operating systems to directly run databases and web servers. However, the use of a shared kernel results in a larger attack surface for containers running in the same environment than containers in separate virtual machines, even when container-specific operating systems running on AKS nodes are in use.
 
-Host operating systems provide foundational system components that can have vulnerabilities and compliance risk. Since these are low-level components, their vulnerabilities and configuration can affect all containers being hosted. AKS protects users by ensuring these vulnerabilities are taken care of via regular operating system updates on nodes running on AKS, and the compliance posture of the worker node is maintained.
+Host operating systems provide foundational system components that can have vulnerabilities and compliance risk. Since they're low-level components, their vulnerabilities and configuration can affect all containers being hosted. AKS protects users by ensuring these vulnerabilities are taken care of via regular operating system updates on nodes running on AKS, and the compliance posture of the worker node is maintained.
 
 Improper user access rights might also lead to security risks when users log directly into the nodes to manage the containers as opposed to through the AKS control plane. Signing in directly can allow the user to make changes to applications beyond the ones they should have access to. Also, malicious containers might lead to host OS file system tampering. For example, if a container is allowed to mount a sensitive directory in the host OS, that container might make changes to the files, which can affect the security of other containers running on the host.
 
@@ -125,6 +132,8 @@ Improper user access rights might also lead to security risks when users log dir
 Restrict node access by limiting SSH access.
 
 Using the container-specific OS in AKS nodes typically reduces their attack surfaces since other services and functionalities are disabled. They also have read-only file systems and employ other cluster hardening practices by default. The Azure platform automatically applies OS security patches to Linux and Windows nodes on a nightly basis. If a Linux OS security update requires a host reboot, it won't automatically reboot. AKS provides mechanisms to reboot to apply those specific patches.
+
+Azure Defender for Servers isn't applicable for AKS Linux and Windows nodes, since their Operating System is managed by Microsoft. If there are no other virtual machines in the subscription where AKS is deployed, Azure Defender for Servers can be safely disabled. If the environment has been deployed including the [ESLZ recommended Azure policies](https://github.com/Azure/Enterprise-Scale/blob/main/docs/ESLZ-Policies.md), an exclusion can be configured to the policy assignment in the management group that automatically enables Azure Defender for Servers, to avoid unnecessary costs.
 
 ### Application security
 
@@ -135,7 +144,7 @@ Application security is about:
 
 **Major risks:**
 
-Images are files that include all the components required to run an application. When the latest versions of these components are used to create the images, they might be free of known vulnerabilities at the time, but can change quickly. These files need to be kept up to date with the latest versions, because package developers identify the security vulnerabilities. Make container updates further upstream by updating the images used to create the containers, unlike traditional applications, which are typically updated at the host.
+Images are files that include all the components required to run an application. When the latest versions of these components are used to create the images, they might be free of known vulnerabilities at the time, but can change quickly. These files must be kept up to date with the latest versions, because package developers identify the security vulnerabilities. Make container updates further upstream by updating the images used to create the containers, unlike traditional applications, which are typically updated at the host.
 
 Malicious files can also be embedded in the image, which can then be used to attack other containers or components of the system as well. A possible attack vector is in the use of third-party containers, for which specific details might be unknown, could leak data or which haven't been kept up to date with required security updates themselves. Another attack vector is the use embedding secrets like passwords and connection strings directly within image file system. This can cause a security risk, since anyone with access to the image can get access to the secrets.
 
@@ -149,7 +158,7 @@ By default, Kubernetes schedulers focus on driving scale and maximizing density 
 
 Never store secrets in application code or file systems. Secrets should be stored in key stores and provided to containers at runtime as needed. AKS can ensure that only containers that need access to certain keys have access to them and that these secrets aren't persisted on disk. For example, Azure Key Vault can securely store these secrets and provide them to the AKS cluster as needed. It's also simple to ensure that these secrets are encrypted both in storage and in transit.
 
-Organizations should avoid the use of untrusted images and registries, and ensure that only images from trusted sets are allowed to run in their clusters. A multilayered approach should be used that includes the following:
+Organizations should avoid the use of untrusted images and registries, and ensure that only images from trusted sets are allowed to run in their clusters. A multilayered approach should be used that includes:
 
 - Centrally control exactly what images and registries are trusted.
 - Discretely identify each image by cryptographic signature.
@@ -159,9 +168,9 @@ Organizations should avoid the use of untrusted images and registries, and ensur
 
 Secure computing profiles should be used to constrain containers and should be allocated at runtime. Custom profiles can be created and passed to container runtimes to further limit their capabilities. At minimum, ensure that containers are run with the default profiles and should consider using custom, more restricted profiles for containers running high-risk applications.
 
-Tools that can automatically profile applications using behavioral learning and detect anomalies. Currently third-party solutions can be used to detect anomalies at runtime, including events like invalid or unexpected process execution or system calls, changes to protected configuration files and binaries, writes to unexpected locations and file types, creation of unexpected network listeners, traffic sent to unexpected network destinations and malware storage and execution. Azure Defender for Kubernetes is currently investing in this area.
+Tools that can automatically profile applications using behavioral learning and detect anomalies. Third-party solutions can be used to detect anomalies at runtime. This includes events like invalid or unexpected process execution or system calls, changes to protected configuration files and binaries, writes to unexpected locations and file types, creation of unexpected network listeners, traffic sent to unexpected network destinations and malware storage and execution. Azure Defender for Kubernetes is currently investing in this area.
 
-Containers should run with their root filesystem in read-only mode to isolate writes to defined directories, which can easily be monitored by those tools. This configuration makes containers more resilient to compromise since tampering is isolated to these specific locations and can easily be separated from the rest of the application.
+Containers should run with their root filesystem in read-only mode to isolate writes to defined directories, which can easily be monitored by those tools. This configuration makes containers more resilient to compromise since you isolate tampering to these specific locations and can easily be separated from the rest of the application.
 
 ## Design considerations
 
@@ -177,6 +186,7 @@ Here are some other design considerations for AKS security governance and compli
 - Decide if your private Container Registry instance will be shared across multiple landing zones or if you'll deploy a dedicated container registry to each landing zone subscription.
 - Consider using a security solution like [Azure Defender for Kubernetes](/azure/security-center/defender-for-kubernetes-introduction) for threat detection.
 - Consider scanning your container images for vulnerabilities.
+- Consider disabling Azure Defender for Servers in the AKS subscription if there are no non-AKS virtual machines, to avoid unnecessary costs.
 
 ## Design recommendations
 

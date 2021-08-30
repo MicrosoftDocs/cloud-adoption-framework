@@ -4,7 +4,7 @@ description: Learn how to choose the right landing zone for your organization. Y
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 01/20/2021
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: internal

@@ -126,7 +126,7 @@ The following section provides some example names for common Azure resource type
 | **Storage account (general use)** | Global | *st\<storage name>\<###>* <br><br> <li> `stnavigatordata001` <li> `stemissionsoutput001` |
 | **Storage account (diagnostic logs)** | Global | *stdiag\<first 2 letters of subscription name and number>\<region>\<###>* <br><br> <li> `stdiagsh001eastus2001` <li> `stdiagsh001westus001` |
 | **Azure StorSimple** | Global | *ssimp\<app name>-\<environment>* <br><br> <li> `ssimpnavigatorprod` <li> `ssimpemissionsdev` |
-| **Azure Container Registry** | Global | *acr\<app name>\<environment>\<###>* <br><br> <li> `acrnavigatorprod001` |
+| **Azure Container Registry** | Global | *cr\<app name>\<environment>\<###>* <br><br> <li> `crnavigatorprod001` |
 
 ## Example names: AI and machine learning
 
