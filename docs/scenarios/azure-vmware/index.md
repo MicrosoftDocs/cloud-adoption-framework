@@ -13,7 +13,7 @@ ms.subservice: overview
 
 Describe your scenario
 
-# Defining Azure VMware Solution
+## Defining Azure VMware Solution
 
 How should we define Azure VMware Solution to keep this conversation consistent?
 
