@@ -58,7 +58,7 @@ ms.subservice: ready
 - Understanding partial and full disaster recovery (DR) solutions:
   - When working with Azure Site Recovery, preparing for full disaster recovery should be understood. This means failing over from Azure VMWare Solution into an Azure Native environment.
   - Utilising VMware SRM for partial and full DR is supported. This means that running Azure VMWare Solution in Region 1 and Region 2, the option to fail some or all the VMs from primary to secondary regions is supported. 
-  - The requirement for VM recovery and the IP address retention requirements will define if Partial vs Full DR is possible or not. 
+  - The requirement for VM recovery and the IP address retention requirements will define if Partial vs. Full DR is possible or not. 
   - In order to maintain the IP address and achieve a partial disaster recovery in SRM, gateway of the subnet will need to move to the secondary Azure VMWare Solution.
   - Active-Standby DR does not require L2 stretching.
 
