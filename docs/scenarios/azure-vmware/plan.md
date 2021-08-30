@@ -19,7 +19,7 @@ Application of the Plan methodology focuses on the [five Rs of rationalizing you
 
 Azure VMware Solution is dedicated infrastructure packaged with VMware vSphere clusters, provisioned as a private cloud on Azure. The minimum initial deployment is three hosts, but additional hosts can be added one at a time, up to a maximum of 16 hosts per cluster. All provisioned private clouds include vCenter Server, vSAN, vSphere, and NSX-T. As a result, you can seamlessly migrate or extend workloads from your on-premises VMware environments to Azure VMware Solution. Your Azure VMware Solution estate can extend on-premises resources, private cloud resources, and other Azure public cloud resources. For more details on connectivity between environments and across virtual networks, please refer to the [AVS Hub and Spoke topology here](https://docs.microsoft.com/azure/azure-vmware/concepts-hub-and-spoke). 
 
-:::image type="content" source="./media/Running vmware natively on azure.jpg" alt-text="Diagram of running vmware natively on azure.":::
+:::image type="content" source="./media/running-vmware-natively-on-azure.jpg" alt-text="Diagram of running vmware natively on azure.":::
 
 ## Azure VMware Solution adoption plan
 
@@ -105,7 +105,7 @@ The following list is a variety of resources that help organizations skill and g
 
 The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
 
-- [Plan for Azure VMware Solution](./plan.md)
+
 - [Review your environment or Azure Landing Zone(s)](./ready.md)
 - [Migrate Azure VMware Solution](./migrate.md)
 - [Innovate with Azure VMware Solution](./innovate.md)
