@@ -57,6 +57,11 @@ Design your identity and access control infrastructure to improve the security a
 ## AI + Machine Learning
 
 - [Organize and set up Azure Machine Learning environments](./ai-machine-learning-resource-organization.md). Learn about key decision points in setting up Azure Machine Learning for your organization.
+- [Budget, cost, and quota management for Azure ML at organizational scale](/azure/cloud-adoption-framework/ready/azure-best-practices/optimize-ai-machine-learning-cost)
+  When you manage compute costs incurred from Azure ML, at an organization scale with many workloads, many teams, and users, there are numerous management and optimization challenges to work through. 
+- [Machine learning DevOps (MLOps)](/azure/cloud-adoption-framework/ready/azure-best-practices/ai-machine-learning-mlops)
+  Machine learning DevOps is an organizational change that relies on a combination of people, process, and technology to deliver machine learning solutions in a robust, scalable, reliable, and automated way. This guide summarizes best practices and learnings from adopting machine learning DevOps in the enterprise with Azure ML.
+
 
 ## Cost management
 
