@@ -13,7 +13,7 @@ ms.subservice: ready
 
 This article builds on several considerations and recommendations defined in the
 Azure landing zone article [enterprise-scale design area for identity and access
-management](/azure/cloud-adoption-framework/ready/enterprise-scale/identity-and-access-management).
+management](/azure/cloud-adoption-framework/ready/enterprise-scale/identity-and-access-management) and [Azure VMware Solution identity concepts](/azure/azure-vmware/concepts-identity).
 This article will help examine design considerations and recommendations related to 
 identity and access management specific to the deployment of Azure VMware Solution (AVS).
 
