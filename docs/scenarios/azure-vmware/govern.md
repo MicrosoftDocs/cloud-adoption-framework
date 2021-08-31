@@ -6,7 +6,8 @@ ms.author: janet
 ms.date: 08/30/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: govern
+ms.subservice: scenario
+ms.custom: think-tank, e2e-avs
 ---
 
 # Govern Azure VMware Solution
@@ -26,11 +27,11 @@ All provisioned private clouds have vCenter Server, vSAN, vSphere, and NSX-T, so
 
  VMware vSphere clusters reside on top of "share nothing" hyper-converged, bare-metal infrastructure. Azure VMware cluster architecture is dedicated and isolated—meaning that networking, storage, or compute is not shared with any other tenant. VSphere clusters are managed by Microsoft to meet performance, availability, security, and compliance requirements, at scale in Azure, providing unified management, networking, and operational controls.
 
-Because Azure VMware solutions run hybrid workloads across on-premises and private cloud, unified operations is the best approach to providing a single pane of glass for incrementally deploying required governance and operational management controls. Read [Introduction to unified operations](https://docs.microsoft.com/azure/cloud-adoption-framework/scenarios/hybrid/unified-operations) to get started.
+Because Azure VMware solutions run hybrid workloads across on-premises and private cloud, unified operations is the best approach to providing a single pane of glass for incrementally deploying required governance and operational management controls. Read [Introduction to unified operations](/azure/cloud-adoption-framework/scenarios/hybrid/unified-operations) to get started.
 
 ## Unified security and compliance
 
-On Azure, you can run, manage, and secure applications across VMware environments with a common operating framework. Utilize your existing VMware tools, like VMware vSphere, vSAN, and vCenter, combined with the scale, performance and innovation of Azure. In terms of access and security, Azure VMware Solution private clouds use vSphere role-based access control for enhanced security. You can integrate vSphere SSO LDAP capabilities with Azure Active Directory. Read more about [Access and Identity concepts](https://docs.microsoft.com/azure/azure-vmware/concepts-identity).
+On Azure, you can run, manage, and secure applications across VMware environments with a common operating framework. Utilize your existing VMware tools, like VMware vSphere, vSAN, and vCenter, combined with the scale, performance and innovation of Azure. In terms of access and security, Azure VMware Solution private clouds use vSphere role-based access control for enhanced security. You can integrate vSphere SSO LDAP capabilities with Azure Active Directory. Read more about [Access and Identity concepts](/azure/azure-vmware/concepts-identity).
 
 Using a unified operations approach that uses familiar Azure tools to manage and govern your VMware hybrid workloads across on-premises and private cloud. Monitor, manage, and protect virtual machines in a hybrid environment (Azure, Azure VMware Solution, and on-premises). Read more about how you can [Start small with basic VM management](https://docs.microsoft.com/azure/architecture/hybrid/azure-arc-hybrid-config?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json).
 
@@ -50,16 +51,16 @@ Integrating with Azure-native services in your Azure VMware Solution private clo
 
 ### Unified operational management controls
 
-We recommend a [unified operations](https://docs.microsoft.com/azure/cloud-adoption-framework/scenarios/hybrid/unified-operations) approach, so you can extend consistent Azure governance and operational management controls across your Vsphere cluster, and seamlessly modernize your VMware workloads with native Azure services:
+We recommend a [unified operations](/azure/cloud-adoption-framework/scenarios/hybrid/unified-operations) approach, so you can extend consistent Azure governance and operational management controls across your Vsphere cluster, and seamlessly modernize your VMware workloads with native Azure services:
 
-- Monitoring, managing, and protecting VMs with Azure native services. [Learn more](https://docs.microsoft.com/azure/azure-vmware/integrate-azure-native-services)
-- Integrating Azure Security Center. [Learn more](https://docs.microsoft.com/azure/azure-vmware/azure-security-integration)
-- Integrating Azure NetApp Files. [Learn more](https://docs.microsoft.com/azure/azure-vmware/netapp-files-with-azure-vmware-solution)
-- Protecting web apps with Azure Application Gateway. [Learn more](https://docs.microsoft.com/azure/azure-vmware/protect-azure-vmware-solution-with-application-gateway)
-- Deploying Traffic Manager to balance workloads. [Learn more](https://docs.microsoft.com/azure/azure-vmware/deploy-traffic-manager-balance-workloads)
-- Configuring Azure alerts and work with metrics. [Learn more](https://docs.microsoft.com/azure/azure-vmware/configure-alerts-for-azure-vmware-solution)
-- Attaching disk pools to Azure VMware Solution hosts. [Learn more](https://docs.microsoft.com/azure/azure-vmware/attach-disk-pools-to-azure-vmware-solution-hosts)
-- Setting up Azure Backup Server. [Learn more](https://docs.microsoft.com/azure/azure-vmware/attach-disk-pools-to-azure-vmware-solution-hosts)
+- Monitoring, managing, and protecting VMs with Azure native services. [Learn more](/azure/azure-vmware/integrate-azure-native-services)
+- Integrating Azure Security Center. [Learn more](/azure/azure-vmware/azure-security-integration)
+- Integrating Azure NetApp Files. [Learn more](/azure/azure-vmware/netapp-files-with-azure-vmware-solution)
+- Protecting web apps with Azure Application Gateway. [Learn more](/azure/azure-vmware/protect-azure-vmware-solution-with-application-gateway)
+- Deploying Traffic Manager to balance workloads. [Learn more](/azure/azure-vmware/deploy-traffic-manager-balance-workloads)
+- Configuring Azure alerts and work with metrics. [Learn more](/azure/azure-vmware/configure-alerts-for-azure-vmware-solution)
+- Attaching disk pools to Azure VMware Solution hosts. [Learn more](/azure/azure-vmware/attach-disk-pools-to-azure-vmware-solution-hosts)
+- Setting up Azure Backup Server. [Learn more](/azure/azure-vmware/attach-disk-pools-to-azure-vmware-solution-hosts)
 - Preparing Azure Site Recovery resources for disaster recovery. [Learn more](https://docs.microsoft.com/azure/site-recovery/avs-tutorial-prepare-azure?context=/azure/azure-vmware/context/context)
 
 Learn more about Azure VMware solution's [Integration with native Azure services](https://docs.microsoft.com/learn/modules/intro-azure-vmware-solution/2-what-is-azure-vmware-solution)
@@ -81,28 +82,28 @@ An initial governance foundation should consider:
 
 These are the main focus areas of governance in an initial AVS implementation:
 
-- Automation Account [Learn more](https://docs.microsoft.com/azure/automation/)
-- Usage and Quota [Learn more](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits)
-- Backup Center [Learn more](https://docs.microsoft.com/azure/backup/backup-center-overview)
-- Role (AzureAD) [Learn more](https://docs.microsoft.com/azure/active-directory/roles/concept-understand-roles)
-- Azure Active Directory Privileged Identity Management [Learn more](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-configure)
-- Azure Monitor [Learn more](https://docs.microsoft.com/azure/azure-monitor/overview)
-- Log Analytics Workspace [Learn more](https://docs.microsoft.com/azure/azure-monitor/logs/quick-create-workspace)
+- Automation Account [Learn more](/azure/automation/)
+- Usage and Quota [Learn more](/azure/azure-resource-manager/management/azure-subscription-service-limits)
+- Backup Center [Learn more](/azure/backup/backup-center-overview)
+- Role (AzureAD) [Learn more](/azure/active-directory/roles/concept-understand-roles)
+- Azure Active Directory Privileged Identity Management [Learn more](/azure/active-directory/privileged-identity-management/pim-configure)
+- Azure Monitor [Learn more](/azure/azure-monitor/overview)
+- Log Analytics Workspace [Learn more](/azure/azure-monitor/logs/quick-create-workspace)
 - Extended Security Updates [Learn more](https://docs.microsoft.com/lifecycle/faq/extended-security-updates)
-- Security Alert [Learn more](https://docs.microsoft.com/azure/security-center/security-center-alerts-overview)
-- Azure AD Identity Governance [Learn more](https://docs.microsoft.com/azure/active-directory/governance/identity-governance-overview)
+- Security Alert [Learn more](/azure/security-center/security-center-alerts-overview)
+- Azure AD Identity Governance [Learn more](/azure/active-directory/governance/identity-governance-overview)
 
 We recommend implementing an AVS solution that is secure—implementing solid governance in your environment for the whole lifecycle. This will help your organization to meet compliance requirements, and explore specifically recommended design elements during your implementation.
 
-For more recommendations regarding security, governance, and overall design, (including guidance on Enterprise-Scale Landing Zone (ESLZ) and Azure services) read [Security, governance and compliance disciplines for Azure VMware Solution](https://review.docs.microsoft.com/azure/cloud-adoption-framework/scenarios/azure-vmware/eslz-security-governance-and-compliance?branch=pr-en-us-2156)
+For more recommendations regarding security, governance, and overall design, (including guidance on Enterprise-Scale Landing Zone (ESLZ) and Azure services) read [Security, governance and compliance disciplines for Azure VMware Solution](./eslz-security-governance-and-compliance.md)
 
 ## Expanding hybrid governance
 
-- Cost optimization: Learn more about [using Azure Reservations to save costs with a reserved instance](https://docs.microsoft.com/azure/azure-vmware/reserved-instance)
+- Cost optimization: Learn more about [using Azure Reservations to save costs with a reserved instance](/azure/azure-vmware/reserved-instance)
 - Security baseline: Learn more about [how to secure your private cloud environment](https://docs.microsoft.com/azure/vmware-cloudsimple/private-cloud-secure?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)
-- Identity baseline: Learn more about [using Azure AD as an identify provider for vCenter on CloudSimple private cloud](https://docs.microsoft.com/azure/vmware-cloudsimple/azure-ad)
+- Identity baseline: Learn more about [using Azure AD as an identify provider for vCenter on CloudSimple private cloud](/azure/vmware-cloudsimple/azure-ad)
 - Resource consistency: Learn more about using Azure Security Benchmark to [ensure security visibility and governance over Azure resources](https://docs.microsoft.com/security/benchmark/azure/security-controls-v2-asset-management)
-- Deployment acceleration: Learn more about using an ARM Azure Security Benchmark Foundation blueprint providing [baseline infrastructure patterns to build a secure and compliant Azure environment](https://docs.microsoft.com/azure/governance/blueprints/samples/azure-security-benchmark-foundation/)
+- Deployment acceleration: Learn more about using an ARM Azure Security Benchmark Foundation blueprint providing [baseline infrastructure patterns to build a secure and compliant Azure environment](/azure/governance/blueprints/samples/azure-security-benchmark-foundation/)
 
 ### Azure VMware infrastructure hybridity
 
