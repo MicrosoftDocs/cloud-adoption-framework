@@ -19,7 +19,7 @@ Application of the Plan methodology focuses on the [five Rs of rationalizing you
 
 Azure VMware Solution is dedicated infrastructure packaged with VMware vSphere clusters, provisioned as a private cloud on Azure. The minimum initial deployment is three hosts, but additional hosts can be added one at a time, up to a maximum of 16 hosts per cluster. All provisioned private clouds include vCenter Server, vSAN, vSphere, and NSX-T. As a result, you can seamlessly migrate or extend workloads from your on-premises VMware environments to Azure VMware Solution. Your Azure VMware Solution estate can extend on-premises resources, private cloud resources, and other Azure public cloud resources. For more details on connectivity between environments and across virtual networks, please refer to the [AVS Hub and Spoke topology here](https://docs.microsoft.com/azure/azure-vmware/concepts-hub-and-spoke). 
 
-:::image type="content" source="./media/Running vmware natively on azure.jpg" alt-text="Diagram of running vmware natively on azure.":::
+:::image type="content" source="./media/running-vmware-natively-on-azure.jpg" alt-text="Diagram of running vmware natively on azure.":::
 
 ## Azure VMware Solution adoption plan
 
@@ -88,7 +88,7 @@ The focus here is to ensure all domain owners within your organization understan
 
 **Extend and Modernize:** Once you have established your Azure VMware Solution environment, the hub and spoke network connection ensures extension to other Azure public cloud services is seamless. Customers will often look to optimize through resource management, monitoring and security, storage, and other integrations to modernize the application in current infrastructure design.
 
-:::image type="content" source="./media/migration made easy.jpg" alt-text="Diagram of migration made easy.":::
+:::image type="content" source="./media/migration-made-easy.jpg" alt-text="Diagram of migration made easy.":::
 
 ## Azure VMware Solution readiness plan
 
@@ -96,16 +96,13 @@ The following list is a variety of resources that help organizations skill and g
 - [Tech Community Blog](https://techcommunity.microsoft.com/t5/azure-migration-and/bg-p/AzureMigrationBlog)
 - [AVS Quick Start Guides](https://docs.microsoft.com/azure/azure-vmware/plan-private-cloud-deployment)
 - [AVS Hands On Labs](https://web.hol.vmware.com/landingPages/index.aspx?id=PN5RRQA9)
-- [AVS MS Learn Path (Module 1, 2,3)](https://docs.microsoft.com/learn/paths/run-vmware-workloads-azure-vmware-solution/)
-- [AVS Networking Skilling Video](https://www.youtube.com/watch?v=6_LYsYicacs)
-- [AVS Business Continuity and DR Video](https://www.youtube.com/watch?v=rhTgVqR4pps)
 
 
 ## Next step: Review your environment or Azure Landing Zone
 
 The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
 
-- [Plan for Azure VMware Solution](./plan.md)
+
 - [Review your environment or Azure Landing Zone(s)](./ready.md)
 - [Migrate Azure VMware Solution](./migrate.md)
 - [Innovate with Azure VMware Solution](./innovate.md)
