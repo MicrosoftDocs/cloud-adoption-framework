@@ -88,7 +88,7 @@ The focus here is to ensure all domain owners within your organization understan
 
 **Extend and Modernize:** Once you have established your Azure VMware Solution environment, the hub and spoke network connection ensures extension to other Azure public cloud services is seamless. Customers will often look to optimize through resource management, monitoring and security, storage, and other integrations to modernize the application in current infrastructure design.
 
-:::image type="content" source="./media/migration made easy.jpg" alt-text="Diagram of migration made easy.":::
+:::image type="content" source="./media/migration-made-easy.jpg" alt-text="Diagram of migration made easy.":::
 
 ## Azure VMware Solution readiness plan
 
@@ -96,9 +96,6 @@ The following list is a variety of resources that help organizations skill and g
 - [Tech Community Blog](https://techcommunity.microsoft.com/t5/azure-migration-and/bg-p/AzureMigrationBlog)
 - [AVS Quick Start Guides](https://docs.microsoft.com/azure/azure-vmware/plan-private-cloud-deployment)
 - [AVS Hands On Labs](https://web.hol.vmware.com/landingPages/index.aspx?id=PN5RRQA9)
-- [AVS MS Learn Path (Module 1, 2,3)](https://docs.microsoft.com/learn/paths/run-vmware-workloads-azure-vmware-solution/)
-- [AVS Networking Skilling Video](https://www.youtube.com/watch?v=6_LYsYicacs)
-- [AVS Business Continuity and DR Video](https://www.youtube.com/watch?v=rhTgVqR4pps)
 
 
 ## Next step: Review your environment or Azure Landing Zone
