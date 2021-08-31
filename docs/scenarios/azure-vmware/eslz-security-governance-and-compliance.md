@@ -239,15 +239,15 @@ Consider and implement the following recommendations when planning for Azure VMw
 
 The following are assumptions that went into the development of the deployable asset: Enterprise-scale for Azure VMware Solution.
 
-1. [Enterprise-scale Design Principles](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/design-principles)
-1. [Enterprise-scale Design Guidelines](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/design-guidelines)
+- [Enterprise-scale Design Principles](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/design-principles)
+- [Enterprise-scale Design Guidelines](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/design-guidelines)
 
 ## Additional considerations
 
 Refer to following guidance available for more critical design areas.
 
-1. [Enterprise-scale identity and access management for Azure VMware Solution](./eslz-identity-and-access-management.md)
-2. [Enterprise-scale management and monitoring for Azure VMware Solution](./eslz-management-and-monitoring.md)
-3. [Enterprise-scale network topology and connectivity for Azure VMware Solution](./eslz-network-topology-and-connectivity.md)
-4. [Enterprise-scale platform automation and DevOps for Azure VMware Solution](./eslz-platform-automation-and-devops.md)
-5. [Enterprise-scale business continuity and disaster recovery for Azure VMware Solution](./eslz-business-continuity-and-disaster-recovery.md)
+- [Enterprise-scale identity and access management for Azure VMware Solution](./eslz-identity-and-access-management.md)
+- [Enterprise-scale management and monitoring for Azure VMware Solution](./eslz-management-and-monitoring.md)
+- [Enterprise-scale network topology and connectivity for Azure VMware Solution](./eslz-network-topology-and-connectivity.md)
+- [Enterprise-scale platform automation and DevOps for Azure VMware Solution](./eslz-platform-automation-and-devops.md)
+- [Enterprise-scale business continuity and disaster recovery for Azure VMware Solution](./eslz-business-continuity-and-disaster-recovery.md)
