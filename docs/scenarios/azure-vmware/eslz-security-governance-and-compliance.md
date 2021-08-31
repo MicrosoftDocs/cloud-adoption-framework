@@ -239,6 +239,9 @@ Consider and implement the following recommendations when planning for Azure VMw
 
 The following are assumptions that went into the development of the deployable asset: Enterprise-scale for Azure VMware Solution.
 
+1. [Enterprise-scale Design Principles](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/design-principles)
+1. [Enterprise-scale Design Guidelines](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/design-guidelines)
+
 ## Additional considerations
 
 Refer to following guidance available for more critical design areas.
