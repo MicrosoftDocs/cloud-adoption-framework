@@ -57,6 +57,7 @@ When you deploy AVS you get SDDC, software defined data center that has vCenter 
 AVS lets you seamlessly move VMware workloads from your datacenter to Azure and integrate additional Azure services with ease—all while continuing to manage your IT environments with the same VMware tools you already know. On this route, you have the choice and flexibility to determine what workloads to migrate, and you decide the right time to migrate them. With platform symmetry, you have complete control to transform based on how your organization defines its unique cloud journey.
 
 You can take the tooling the operational best practices that you’re already using and repurpose them in Azure with the azure VMWare solution platform.
+
 The hardware and software specifications should familiar if you are a VMWare admin. If you're deploying VMWare solutions it should match up to something that you've got on prem, or maybe it's a version ahead. 
 
 What’s important to note is that you’ll need three nodes per vsphere cluster. That's the minimum. There's a maximum of 16 nodes per vsphere cluster, and then a maximum of 96 nodes in an Azure private cloud instance.
