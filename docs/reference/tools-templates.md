@@ -42,7 +42,7 @@ The Cloud Adoption Framework includes tools that help you quickly implement tech
 | [Terraform modules](../ready/landing-zone/terraform-landing-zone.md) | Open-source code base for the Terraform version of the CAF Azure landing zones. |
 | [Terraform registry](https://registry.terraform.io/search?q=aztfmod) | The Terraform registry website, filtered to list all of the Cloud Adoption Framework modules needed to create a landing zone via Terraform. |
 | [Enterprise-scale landing zone](https://github.com/Azure/Enterprise-Scale/) | Open-source code base for the enterprise-scale implementation of the CAF Azure landing zones. |
-| [Data landing zone](https://github.com/Azure/data-landing-zone) | Expand your landing zone with data. ata landing zone shared services, such as data storage, ingestion services, and management services. |
+| [Data landing zone](https://github.com/Azure/data-landing-zone) | Expand your landing zone with data. Data landing zone shared services, such as data storage, ingestion services, and management services. |
 
 ## Govern
 
