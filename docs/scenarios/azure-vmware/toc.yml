@@ -15,7 +15,7 @@ items:
       - name: Identity and access management
         href: eslz-identity-and-access-management.md
       - name: Network topology and connectivity
-        href: eslz-network-topology-and-connectivity.md
+        href: eslz-network-topology-connectivity.md
       - name: Governance discipline
         href: eslz-security-governance-and-compliance.md
       - name: Operations baseline

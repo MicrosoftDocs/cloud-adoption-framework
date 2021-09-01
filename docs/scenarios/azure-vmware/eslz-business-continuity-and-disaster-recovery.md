@@ -6,7 +6,8 @@ ms.author: janet
 ms.date: 06/28/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
+ms.custom: think-tank, e2e-avs
 ---
 
 # Business continuity and disaster recovery for Azure VMware Solution enterprise-scale scenario
@@ -76,4 +77,4 @@ ms.subservice: ready
 - When working with either VMware Site Recovery Manager or Azure Site Recovery to provide DR for the Azure VMWare Solution private cloud, manual input should be minimized as much as possible by leveraging automated Recovery plans within each of the respective solutions. A recovery plan gathers machines into recovery groups for the purpose of failover and helps to define a systematic recovery process by creating small independent units that can fail over.
 - Utilizing the geopolitical region pair as the secondary DR environment is recommended for proximity of regions and cost reductions.
 - Keep address spaces completely different (i.e., 192.168.0.0/16 for Region 1 and 10.0.0.0/16 for Region 2) to reduce risk of IP address overlap 
-- Leverage ExpressRoute Global Reach connectivity between the primary and secondary Azure VMWare Solution private clouds. [Further networking considerations and recommendations in the relevant design area](eslz-network-topology-and-connectivity.md).
+- Leverage ExpressRoute Global Reach connectivity between the primary and secondary Azure VMWare Solution private clouds. [Further networking considerations and recommendations in the relevant design area](./eslz-network-topology-connectivity.md).

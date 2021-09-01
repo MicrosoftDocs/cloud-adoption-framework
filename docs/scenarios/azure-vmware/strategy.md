@@ -55,9 +55,9 @@ Modernize applications running on VMware overtime through integration to Azure n
 
 ## Azure VMware Solution business justification
 
-[Building a business justification for cloud migration](https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/cloud-migration-business-case) can dispel many common myths for your team's financial plan. However, your finance team might need to develop a detailed financial model to account for all parts associated with Azure VMware Solution adoption.
+[Building a business justification for cloud migration](/azure/cloud-adoption-framework/strategy/cloud-migration-business-case) can dispel many common myths for your team's financial plan. However, your finance team might need to develop a detailed financial model to account for all parts associated with Azure VMware Solution adoption.
 
-Understand that your initial business justification is a directional estimate that can help to drive strategic alignment. Your organization can create transparency between the cloud strategy team and other stakeholders by affirming that this justification can change significantly throughout planning activities. Look for consensus that there's enough value to [gather inventory and develop a plan](https://docs.microsoft.com/azure/azure-vmware/plan-private-cloud-deployment). Once your digital estate is cataloged and assessed, you can refine your business case and present clear plans for financial returns.
+Understand that your initial business justification is a directional estimate that can help to drive strategic alignment. Your organization can create transparency between the cloud strategy team and other stakeholders by affirming that this justification can change significantly throughout planning activities. Look for consensus that there's enough value to [gather inventory and develop a plan](/azure/azure-vmware/plan-private-cloud-deployment). Once your digital estate is cataloged and assessed, you can refine your business case and present clear plans for financial returns.
 
 
 ## Next step: Plan for Azure VMware Solution
