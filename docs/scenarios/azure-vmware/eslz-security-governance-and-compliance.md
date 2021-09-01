@@ -28,7 +28,7 @@ Consider the following when deciding who (system, user, or device) is allowed to
    Create an Azure Active Directory (AAD) privileged access group within Azure Privileged Identity Management (PIM). Azure Active Directory accounts (users and service principals) can be managed with a PIM group. Use these accounts to create and manage the Azure VMware Solution cluster using time-bound, justification-based access.For more information, see [Assign eligible owners and members for privileged access groups - Azure Active Directory](/azure/active-directory/privileged-identity-management/groups-assign-member-owner).
 
    Use Azure AD PIM audit history reports. These reports can include all Azure VMware Solution administrative activities (operations, assignments, etc.). They can be archived in Azure storage for any long-term retention consistent with audit needs. For more information, see [View audit report for privileged
-   access group assignments in Privileged Identity Management (PIM) - Azure AD](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/groups-audit).
+   access group assignments in Privileged Identity Management (PIM) - Azure AD](/azure/active-directory/privileged-identity-management/groups-audit).
 
 * **Centralize Identity Management** - Azure VMware Solution provided  administration accounts are visible to all contributors with RBAC access to Azure VMware Solution resources. Lack of multiple targeted identity objects (users, groups, etc.) can result in overuse/abuse of the built-in ***cloudadmin*** user when accessing the VMware control plane.  
 
@@ -76,7 +76,7 @@ Consider the following when deciding who (system, user, or device) is allowed to
 
    Use specialized services (Firewall, NVA, vWAN) for outbound internet connectivity instead of relying on Azure VMware Solution’s default internet connectivity service. Use article on [Inspecting Azure VMware Solution traffic with Network Virtual Appliance in Azure vNet](https://avs.ms/nva/) for design recommendations.
 
-   Use Service Tags such as `Virtual Network` and FQDN tags to whitelist egress traffic when performing egress filtering using Azure Firewall or a similar capability if using NVA.
+   Use Service Tags such as `Virtual Network` and FQDN tags to identify egress traffic when performing egress filtering using Azure Firewall or a similar capability if using NVA.
 
 * **Centrally manage and secure backups** - Using RBAC and delayed delete capabilities can help prevent intentional and accidental deletion of backup data that would be needed to recover the environment.
 
@@ -115,7 +115,7 @@ Consider the following when deciding who (system, user, or device) is allowed to
    Use native database monitoring (e.g., Activity Monitor) or an Azure VMware Solution certified partner solution. Consider using Azure Database Services for enhanced auditing controls.
 
    Use Azure Key Vault for customer-managed keys in scenarios where Bring Your Own Key
-   (BYOK) is appropriate(e.g. [BYOK for Azure SQL TDE](/azure/azure-sql/database/transparent-dataencryption-byok-overview)). Refer to this [guidance](/sql/connect/ado-net/sql/azure-key-vault-enclave-example?view=sql-server-ver15) on how SQL Server 2019 uses Azure Key Vault provider. Implement separation of duties for key management and data management where possible. 
+   (BYOK) is appropriate(e.g. [BYOK for Azure SQL TDE](/azure/azure-sql/database/transparent-dataencryption-byok-overview)). Refer to this [guidance](/sql/connect/ado-net/sql/azure-key-vault-enclave-example) on how SQL Server 2019 uses Azure Key Vault provider. Implement separation of duties for key management and data management where possible. 
 
 * **Code Security** - Lack of security considerations in DevOps workflow can introduce security vulnerabilities in Azure VMware Solution workloads.
 
@@ -129,7 +129,7 @@ Consider and implement the following recommendations when planning for environme
 
 * **FTT (Failure to Tolerate) governance** - Maintaining FTT setting commensurate to the cluster size is needed for maintaining [SLA for Azure VMware Solution](https://azure.microsoft.com/support/legal/sla/azure-vmware/v1_1/).  
 
-   Adjust the vSAN [storage policy](https://docs.microsoft.com/azure/azure-vmware/concepts-storage#storage-policies-and-fault-tolerance) to the appropriate FTT setting when changing the cluster size to ensure SLA compliance.
+   Adjust the vSAN [storage policy](/azure/azure-vmware/concepts-storage#storage-policies-and-fault-tolerance) to the appropriate FTT setting when changing the cluster size to ensure SLA compliance.
 
 * **Network governance** - Inability to monitor internal network traffic can lead to malicious or unknown traffic and/or compromised networks.  
 
@@ -171,7 +171,7 @@ Consider and implement the following recommendations when planning for environme
 
 * **Guest VM’s security posture governance** - Lack of security compliance awareness for Azure VMware Solution guest VMs makes it difficult to understand cybersecurity readiness and response, leading to gaps in security coverage for Azure VMware Solution guest VMs and applications.
 
-   Enable [Azure Defender](https://docs.microsoft.com/azure/security-center/azure-defender) features in Azure Security Center associated with running Azure services and Azure VMware Solution guest VM workloads and use Azure Security Center’s regulatory compliance view to monitor compliance against security and regulatory benchmarks. Configure Azure Security Center’s workflow automation for tracking any deviation against the expected compliance posture. For more information, see [Azure Arc enabled servers Overview](/azure/azure-arc/servers/overview).
+   Enable [Azure Defender](/azure/security-center/azure-defender) features in Azure Security Center associated with running Azure services and Azure VMware Solution guest VM workloads and use Azure Security Center’s regulatory compliance view to monitor compliance against security and regulatory benchmarks. Configure Azure Security Center’s workflow automation for tracking any deviation against the expected compliance posture. For more information, see [Azure Arc enabled servers Overview](/azure/azure-arc/servers/overview).
 
 * **DR governance** - Lack of Disaster Recovery (DR) orchestration can result in unexpected delays in ensuring business continuity during DR events. Undocumented RPO and RTO requirements can result in poor customer experiences and unmet operational goals during DR and Business Continuity (BC) events. 
 
