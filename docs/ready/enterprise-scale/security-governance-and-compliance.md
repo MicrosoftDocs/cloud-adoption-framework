@@ -193,9 +193,7 @@ The Azure Security Benchmark documentation specifies security controls and servi
 
 As business units request to deploy workloads to Azure, you need more visibility into a workload to determine how to achieve appropriate levels of governance, security, and compliance.
 
-When a new service is required, you need to allow it and create a process for onboarding services securely to Azure.
-
-The onboarding process should include reviewing the configuration options to determine what logging and monitoring needs to be established, and how to properly harden a resource before it goes into production.
+When a new service is required, you need to allow it and create a process for onboarding services securely to Azure. The onboarding process should include reviewing the configuration options to determine what logging and monitoring needs to be established, and how to properly harden a resource before it goes into production.
 
 The following table provides a framework to assess enterprise security readiness of Azure services:
 
