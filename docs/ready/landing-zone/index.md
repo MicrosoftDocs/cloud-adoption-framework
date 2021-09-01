@@ -53,6 +53,9 @@ The accelerator is an Azure-portal-based deployment that will provide a full imp
 
 [![`DTA-Button-ALZ`](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://aka.ms/caf/ready/accelerator)
 
+>[!NOTE]
+> To deploy the Azure landing zone accelerator you will require permissions to create resources at the 'Tenant' scope. These can be assigned/granted by following the [guidance here.](/azure/azure-resource-manager/templates/deploy-to-tenant?tabs=azure-powershell#required-access)
+
 There are other deployment options available, some that deliver the full architecture using third-party deployment technologies, and others that start from a smaller footprint. For more information, see [Implementation options](./implementation-options.md).
 
 ## Next steps
