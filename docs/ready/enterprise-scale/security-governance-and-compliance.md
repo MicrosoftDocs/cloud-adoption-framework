@@ -261,4 +261,4 @@ The following table provides a framework to assess enterprise security readiness
 
 ## Suggested actions
 
-Involve the security team into the development process to apply a [SecDevOps](https://www.microsoft.com/en-us/securityengineering/devsecops) approach.
+Involve the security team in the development process to apply a [SecDevOps](https://www.microsoft.com/en-us/securityengineering/devsecops) approach.
