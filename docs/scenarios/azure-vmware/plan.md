@@ -17,7 +17,7 @@ Application of the Plan methodology focuses on the [five Rs of rationalizing you
 
 ## Azure VMware Solution estate
 
-Azure VMware Solution is dedicated infrastructure packaged with VMware vSphere clusters, provisioned as a private cloud on Azure. The minimum initial deployment is three hosts, but additional hosts can be added one at a time, up to a maximum of 16 hosts per cluster. All provisioned private clouds include vCenter Server, vSAN, vSphere, and NSX-T. As a result, you can seamlessly migrate or extend workloads from your on-premises VMware environments to Azure VMware Solution. Your Azure VMware Solution estate can extend on-premises resources, private cloud resources, and other Azure public cloud resources. For more details on connectivity between environments and across virtual networks, please refer to the [AVS Hub and Spoke topology here](https://docs.microsoft.com/azure/azure-vmware/concepts-hub-and-spoke). 
+Azure VMware Solution is dedicated infrastructure packaged with VMware vSphere clusters, provisioned as a private cloud on Azure. The minimum initial deployment is three hosts, but additional hosts can be added one at a time, up to a maximum of 16 hosts per cluster. All provisioned private clouds include vCenter Server, vSAN, vSphere, and NSX-T. As a result, you can seamlessly migrate or extend workloads from your on-premises VMware environments to Azure VMware Solution. Your Azure VMware Solution estate can extend on-premises resources, private cloud resources, and other Azure public cloud resources. For more details on connectivity between environments and across virtual networks, please refer to the [AVS Hub and Spoke topology here](/azure/azure-vmware/concepts-hub-and-spoke). 
 
 :::image type="content" source="./media/running-vmware-natively-on-azure.jpg" alt-text="Diagram of running vmware natively on azure.":::
 
@@ -82,8 +82,8 @@ The focus here is to ensure all domain owners within your organization understan
 **Pilot Validation:** Review pilot against established business and technical requirements of the Azure VMware Solution project and confirm success criteria is met.
 
 **Production:** Plan business for transition of production VMware workloads to the new AVS environment. Set forth migration ramp up plan on node capacity requirements for Azure VMware Solution private cloud. To investigate the number of nodes your environment will require leverage the resources here for Azure migrations:
-- [Create your first Azure VMware Solution (AVS) assessment](https://docs.microsoft.com/azure/migrate/how-to-create-azure-vmware-solution-assessment?WT.mc_id=Portal-VMCP)
-- [How to review an Azure VMware Solution assessment](https://docs.microsoft.com/azure/migrate/tutorial-assess-vmware-azure-vmware-solution?WT.mc_id=Portal-VMCP#review-an-assessment)
+- [Create your first Azure VMware Solution (AVS) assessment](/azure/migrate/how-to-create-azure-vmware-solution-assessment)
+- [How to review an Azure VMware Solution assessment](/azure/migrate/tutorial-assess-vmware-azure-vmware-solution)
 - [Azure migration center](https://azure.microsoft.com/migration/)
 
 **Extend and Modernize:** Once you have established your Azure VMware Solution environment, the hub and spoke network connection ensures extension to other Azure public cloud services is seamless. Customers will often look to optimize through resource management, monitoring and security, storage, and other integrations to modernize the application in current infrastructure design.
@@ -94,7 +94,7 @@ The focus here is to ensure all domain owners within your organization understan
 
 The following list is a variety of resources that help organizations skill and get familiar with the technical components of Azure VMware Solution.
 - [Tech Community Blog](https://techcommunity.microsoft.com/t5/azure-migration-and/bg-p/AzureMigrationBlog)
-- [AVS Quick Start Guides](https://docs.microsoft.com/azure/azure-vmware/plan-private-cloud-deployment)
+- [AVS Quick Start Guides](/azure/azure-vmware/plan-private-cloud-deployment)
 - [AVS Hands On Labs](https://web.hol.vmware.com/landingPages/index.aspx?id=PN5RRQA9)
 
 
