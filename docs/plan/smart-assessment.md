@@ -30,7 +30,7 @@ You have the ability to pick an area of focus, or answer all the assessment ques
 
 ## Access the assessment
 
-You can start the assessment by visiting [aka.ms/SMARTTool](/assessments/?id=strategic-migration-assessment).
+You can start the assessment by visiting [`https://aka.ms/smarttool`](https://aka.ms/smarttool).
 
 :::image type="content" source="../_images/start-smart.png" alt-text="Diagram that shows the Strategic Migration Assessment and Readiness Tool (SMART).":::
 
@@ -40,7 +40,7 @@ To ensure quality results, there are two ways we recommend you approach the 17 q
 
 ## Results
 
-After you complete the Strategic Migration Assessment and Readiness Tool (SMART), a results page will generate. The results page offers tailored recommendations and next steps to improve your score in each category. There's a tool to export the results to a CSV file that allows you to see scores offline.
+After you finish running the SMART tool, a results page is generated. The results page offers tailored recommendations and next steps to improve your score in each category. There's a tool to export the results to a CSV file that allows you to see scores offline.
 
 :::image type="content" source="../_images/smart-matrix.png" alt-text="Diagram that shows the Strategic Migration Assessment and Readiness Tool (SMART) results matrix.":::
 
@@ -50,7 +50,7 @@ To review your answers, you can go to the answer summary. The answer summary can
 
 ## Assessment milestones
 
-The milestone feature in the Strategic Migration Assessment and Readiness Tool (SMART) allows you to measure your growth and improvement as you take the assessment multiple times. When you use the new milestone feature, you can look at how you improved individually in each area.
+The milestone feature of the SMART tool allows you to measure your growth and improvement as you take the assessment multiple times. When you use the new milestone feature, you can look at how you improved individually in each area.
 
 :::image type="content" source="../_images/evolution.png" alt-text="Diagram that shows SMART evolution.":::
 
@@ -59,4 +59,4 @@ You can compare across all 10 dimensions to see resources that contributed to yo
 ## Next steps
 
 - [Strategic Migration Assessment and Readiness Tool (SMART)](/assessments/?id=strategic-migration-assessment)
-- [Find out how ready you are to start migrating—the SMART way](https://azure.microsoft.com/migration/#overview)
+- [Find out how ready you are to start migrating - the SMART way](https://azure.microsoft.com/migration/#overview)
