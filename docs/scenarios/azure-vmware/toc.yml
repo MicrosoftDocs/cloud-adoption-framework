@@ -16,8 +16,6 @@ items:
         href: eslz-identity-and-access-management.md
       - name: Network topology and connectivity
         href: eslz-network-topology-and-connectivity.md
-      - name: Resource organization
-        href: eslz-resource-organization.md
       - name: Governance discipline
         href: eslz-security-governance-and-compliance.md
       - name: Operations baseline
@@ -30,40 +28,35 @@ items:
       items:
       - name: Enterprise-scale for Azure VMware Solution
         href: enterprise-scale-landing-zone.md
-      - name: TODO - Add reference to smaller RA from AAC here
-        href: enterprise-scale-landing-zone.md?add-toc-and-breadcrumb-here
 
   - name: Migrate Azure VMware Solution to Azure
-    href: migrate.md
-  - name: Innovate with Azure VMware Solution on Azure
     href: migrate.md
   - name: Govern Azure VMware Solution in Azure
     href: govern.md
   - name: Manage Azure VMware Solution platform and workloads
     href: manage.md
 
-  - name: Well-architected - TBD
+  - name: Well-architected
     items:
-    - name: Example
-      href: /azure
+    - name: Compute services on Azure and AWS
+      href: /azure/architecture/aws-professional/compute?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/azure-vmware/toc.json
+    - name: AWS to Azure services comparison
+      href: /azure/architecture/aws-professional/services?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/azure-vmware/toc.json
+    - name: Azure for AWS professionals
+      href: /azure/architecture/aws-professional/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/azure-vmware/toc.json
 
-  - name: Architectures - TBD
+  - name: Best practices
     items:
-    - name: Example
-      href: /azure
-
-  - name: Best practices - TBD
-    items:
-    - name: Example
-      href: /azure
+    - name: Assessment overview (migrate to Azure VMware Solution)
+      href: /azure/migrate/concepts-azure-vmware-solution-assessment-calculation?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/azure-vmware/toc.json
        
-  - name: Microsoft products - Add links to product docs
+  - name: Microsoft products
     items:
-    - name: Example
-      href: /azure
+    - name: Azure VMware Solution documentation
+      href: /azure/azure-vmware/
 
-  - name: Learn modules - TBD
+  - name: Learn modules
     items:
-    - name: Example
-      href: /azure
+    - name: Run VMware workloads on Azure VMware Solution
+      href: /learn/paths/run-vmware-workloads-azure-vmware-solution/
 
