@@ -19,21 +19,21 @@ Migrating VMware workloads to Azure can accelerate the standard methodology outl
 ![Diagram of Cloud Adoption Framework migration model.](../../_images/migrate/methodology.png)
 *Figure 1*
 
-Planning and preparing your environment for Azure VMware Solution deployment is critical for a successful migration. Use your documented plan as a reference during deployment and migration, and make sure you've created a landing zone to host the workloads you plan to build in or migrate to the cloud. A successful deployment results in a production-ready environment for creating or migrating Azure VMware Solution.
+Planning and preparing your environment for Azure VMware Solution deployment is critical for a successful migration. Use your documented plan as a reference during deployment and migration, and make sure you've created a landing zone to host the workloads you plan to build in, or migrate to the cloud. A successful deployment results in a production-ready environment for creating or migrating Azure VMware Solution.
 
 ## Azure VMware Solution process details
 
-Are there data points outside of a standard Azure Migrate assessment that you need to prepare for buildout and migration.
+There are data points outside of a standard Azure Migrate assessment that you need to prepare for build out and migration.
 
 - Identify the Azure subscription, resource group, region, and resource name
-- Identify the number hosts required for deployment 
+- Identify the number hosts required for deployment
 - Request a host quota for a subscription with an eligible Azure plan
 - Identify a minimum of a non-overlapping /22 CIDR IP segment for private cloud management
 - Identify or deploy a single Azure virtual network
 - Deploy the virtual network gateway in the virtual network to peer with the Azure VMware Solution ExpressRoute
 - Define VMware NSX network segments for various administrative tasks like vMotioning servers from on-premises into Azure VMware Solution
 
-From a technical point of view, it's important to get the core foundations right around networking and migration methodology. 
+From a technical point of view, it's important to get the core foundations right around networking and migration methodology.
 
 - Using the right IP address space for networking will ensure that you can move workloads seamlessly between on-premises and Azure VMware Solution.
 - Upfront planning on migration methodology: live, cold, and bulk.
@@ -41,9 +41,9 @@ From a technical point of view, it's important to get the core foundations right
 
 ## Azure VMware Solution process flow
 
-Microsoft has a network of Azure VMware Solution certified partners. These companies can help you out with assessing, deploying, and migration your on-premises workloads into Azure VMware Solution. 
+Microsoft has a network of Azure VMware Solution certified partners. These companies can help you out with assessing, deploying, and migration your on-premises workloads into Azure VMware Solution.
 
-There are multiple ways to deploy Azure VMware Solution. 
+There are multiple ways to deploy Azure VMware Solution.
 
 - Azure portal - VMware Solution can be deployed like any other service.
 - Azure command line interface
@@ -57,22 +57,23 @@ Azure VMware Solution lets you seamlessly move VMware workloads from your datace
 
 You can take the tooling the operational best practices that you’re already using and repurpose them in Azure with the azure VMware Solution platform.
 
-The hardware and software specifications should familiar if you are a VMware admin. If you're deploying VMware Solution it should match up to something that you've got on premises, or maybe it's a version ahead. 
+The hardware and software specifications should be familiar if you are a VMware admin. If you're deploying VMware Solution it should match up to something that you've got on premises, or maybe it's a version ahead.
 
 What’s important to note is that you’ll need three nodes per vsphere cluster. That's the minimum. There's a maximum of 16 nodes per vsphere cluster, and then a maximum of 96 nodes in an Azure private cloud instance.
-When you deploy Azure VMware Solution, at a minimum, you get three nodes and an ExpressRoute circuit. Because your Azure VMware environment is deployed on bare metal servers, it needs to be peered into Azure for network connectivity. After Azure VMware Solution deploys, you'll peer the ExpressRoute into an Azure virtual network. Then you can enable Global Reach between the Azure VMware Solution ExpressRoute and on-premises ExpressRoute circuits. TGlobal Reach handles the east-west traffic routing between the two circuits using BGP. This is how you can think about migrating your VMs from on-premises all the way into the Azure VMware Solution private cloud. See the following illustration.
 
-ADD CONCEPTUAL GRAPHIC HERE
+When you deploy Azure VMware Solution, at a minimum, you get three nodes and an ExpressRoute circuit. Because your Azure VMware environment is deployed on bare metal servers, it needs to be peered into Azure for network connectivity. After Azure VMware Solution deploys, you'll peer the ExpressRoute into an Azure virtual network. Then you can enable Global Reach between the Azure VMware Solution ExpressRoute and on-premises ExpressRoute circuits. Global Reach handles the east-west traffic routing between the two circuits using BGP. This is how you can think about migrating your VMs from on-premises all the way into the Azure VMware Solution private cloud. See the following illustration.
+
+![Diagram of the Azure VMware Solution deployment.](./media/avs-solution-deployment.png)
 
 After you deploy Azure VMware Solution, it will look like any other Azure service in the Azure portal. But when you’re building the service, you'll need to provide a management IP address, which is different than the virtual network you're connecting the environment to. The management IP address requires a minimum of /22 CIDR block. You don't have to worry about subnetting your environment, Azure VMware Solution will do it for you. You can also enable the Internet. This is where you can think about azure virtual LAN, and application gateway.
 
-Once you get your on-premises VMware environment into Azure, you get a chance to be much closer to the Azure Resouce Manager APIs, versus trying to think about that in a hybrid scenario. On the ExpressRoute circuit you request your authorization keys, but some of the configuration is done for you. You’ll also need to configure the HCX environment. That's what performs the migrations from on-premises into Azure. Then configure your public IP and the ExpressRoute Global Reach.
+Once you get your on-premises VMware environment into Azure, you get a chance to be much closer to the Azure Resource Manager APIs, versus trying to think about that in a hybrid scenario. On the ExpressRoute circuit you request your authorization keys, but some of the configuration is done for you. You’ll also need to configure the HCX environment. That's what performs the migrations from on-premises into Azure. Then configure your public IP and the ExpressRoute Global Reach.
 
 The vCenter credentials and the NXS-T Manager credentials are set up for you during deployment. You can add segments to the NSX-T, and setup DHCP or DNS if you need it.
 
 You can think about Azure VMware Solution as VMware-as-a-service. The offering is kind of in between IaaS and PaaS. It’s not one over the other. You can configure a jump host within the environment to access Azure VMware Solution. The jump host can be behind an Azure Bastion resource or configured with a public IP and just in time access. The Azure Bastion host is a way to provide secure access into that VM without having to expose the RDP port on a public IP. A VM with just in time configured allows administrators to access an environment on a timed basis, so the RDP port is not exposed and not a security vulnerability. Configuring everything in this manner allows access your VM if there’s ever an issue with ExpressRoute circuit coming from on-premises into Azure.
 
-When you go into your Azure VMware Solution environment, it should look just like it did when it was running on-premises. You can also integrate with Azure. For example, you could build content libraries on Azure Blob storage so when you templatize your VMs, you can spin up new VMs quickly. 
+When you go into your Azure VMware Solution environment, it should look just like it did when it was running on-premises. You can also integrate with Azure. For example, you could build content libraries on Azure Blob storage so when you templatize your VMs, you can spin up new VMs quickly.
 
 You also have the ability to use the web vCenter interface and VMware's PowerShell components (PowerCLI).
 
@@ -89,7 +90,7 @@ Additional resources:
 
 ## Azure VMware Solution workload specific activities
 
-An Azure Migrate assessment will provide a way for you to analyze all workloads running in an on-premises VMware environment. Running the assessment over a period of 30 days (or longer) will provide an opportunity to right size the Azure VMware Solution node size deployment. Additionally, it will help you prioritize the flow for your production migration. 
+An Azure Migrate assessment will provide a way for you to analyze all workloads running in an on-premises VMware environment. Running the assessment over a period of 30 days (or longer) will provide an opportunity to right size the Azure VMware Solution node size deployment. Additionally, it will help you prioritize the flow for your production migration.
 
 ## Next step: Release Azure VMware Solution
 
