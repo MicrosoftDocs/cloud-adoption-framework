@@ -33,7 +33,7 @@ using the principle of least privilege.
     (ESLZ), an Active Directory Domain Services Domain Controller is deployed in
     the Identity Subscription.
 
--  Use of cloudadmin account for connected services is not recommended.
+-  Use of the cloudadmin account for connected services is not recommended.
 
 -  When rotating the cloudadmin password, all services using this account 
    should be shut down prior to credential rotation.
