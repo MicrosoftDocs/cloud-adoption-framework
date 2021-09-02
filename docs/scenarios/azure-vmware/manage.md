@@ -1,35 +1,48 @@
 ---
 title: Manage Azure VMware Solution
 description: <<Describe the scenario's impact on operations management.>>
-author: mhenry
+author: sbkuehn
 ms.author: janet
-ms.date: 06/28/2021
+ms.date: 08/28/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: operate
+ms.subservice: migrate
+ms.custom: e2e-avs, think-tank
 ---
 
 # Manage Azure VMware Solution
 
 The [Manage methodology](../../manage/index.md) in the Microsoft Cloud Adoption Framework for Azure outlines a path for implementing an operations baseline, and maturing that baseline throughout your cloud adoption lifecycle.
 
-Describe how your scenario changes operations management
+Azure VMware Solution is a VMware validated solution with ongoing verification and testing related to vSphere enhancements and upgrades. Microsoft manages and maintains the private cloud infrastructure and software on behalf of a customer. Transitioning that responsibility to Microsoft allows you to focus on developing and running workloads within your private cloud as well as running within Azure native resources. Regular upgrades of the Azure VMware Solution private cloud and VMware software ensures you have the latest security, stability, and feature sets running in your deployed private cloud.
+
+Microsoft regularly shows the shared responsibility matrix for IaaS, PaaS, and SaaS based products. There's also a shared responsibility matrix for Azure VMware Solution. As you can see, Microsoft abstracts a lot of the ongoing maintenance, security, and management, leaving your company in charge of the things that matter most, like guest OS provisioning, applications, and virtual machines. You're also able to think through your own lifecycle process and configuration management techniques which can be brought to Azure. By using this model, certain types of operational responsibilities disappear as Microsoft holds more responsibility for the overall Azure VMware Solution infrastructure.
+
+![Shared responsibility matrix for Azure VMware Solution.](./media/avs-shared-responsibility-matrix.png)
 
 ## Azure VMware Solution business alignment
 
-Does this scenario require the customer to rethink business alignment or how the platform is supported in operations management?
+With Azure VMware Solution, Microsoft holds responsibility for the underlying infrastructure when the solution deploys in Azure. IT departments do not have access to perform specific tasks like gaining root access to the individual ESXi hosts, or joining vCenter to a domain, unless a ticket is opened for support. This changes standard operating procedures and process flows a bit for IT departments where central IT personnel have complete control of the on-premises VMware environment. Operating a traditional VMware environment in this manner frees up operations engineers to focus on innovation within the applications and workloads that define their business charter. It allows for a comprehensive digital transformation that spans across more than Azure VMware Solution.
 
 ## Azure VMware Solution operations baseline
 
-Does this workload have special requirements for Visibility, Operational Compliance, or BCDR?
+Many times VMware environments on-premises have sprawled. Individual business units might have deployed a number of different workloads on servers that may not meet a standard baseline. If Azure VMware Solution becomes the first workload placed in Azure, IT engineers can make use of additional Azure native resources to help streamline the operations baseline of VMs being migrated into Azure. Customers can onboard a combination of Azure Policy, Azure Security Center, Azure Monitor, and Azure Automation to ensure both state and infrastructure configuration remains consistent for each application or workload migrated into Azure VMware Solution.
 
 ## Azure VMware Solution platform operations
 
-Are there specific requirements for operations of the landing zone or platform for this scenario?
+Before deploying Azure VMware Solution, customers need to account for the following components for a landing zone:
+
+1. Establish hybrid network connectivity with an ExpressRoute circuit and a non-overlapping Azure virtual network.
+2. Establish hybrid replica domain controllers for legacy authentication and authorization if required.
+3. Deploy a Log Analytics workspace to capture log data from each VM resource within Azure VMware Solution.
+4. Plan to Azure Arc enable all servers within Azure VMware Solution so you can see each VM as a resource within the Azure portal.
+5. Deploy Azure Security Center and configure with the Standard SKU so you can see how the VMs are reporting into the environment and measure the baselines.
+6. Deploy and configure Azure Policy to adhere to Azure specific requirements for the VMs within Azure VMware Solution.
+7. Deploy and configure an Azure Automation account to manage desired state configuration within the guest VMs for Azure VMware Solution.
 
 ## Azure VMware Solution workload operations
 
-Are there specific requirements for operations of the individual workloads running on this platform?
+Legacy operating systems need to be avoided. Microsoft will support all current Windows server operating systems listed in the [product and services lifecycle information](/lifecycle/products/?products=microsoft-servers). For Linux based workloads, the recommendation is to follow the latest supported information from whatever distribution you choose to deploy or migrate into Azure VMware Solution.
 
 ## Next step: Your next migration iteration
 
@@ -39,6 +52,4 @@ Once the Azure VMware Solution migration is complete, the cloud adoption team ca
 - [Plan for Azure VMware Solution](./plan.md)
 - [Review your environment or Azure Landing Zone(s)](./ready.md)
 - [Migrate Azure VMware Solution](./migrate.md)
-- [Innovate with Azure VMware Solution](./innovate.md)
 - [Govern Azure VMware Solution](./govern.md)
-- [Manage Azure VMware Solution](./manage.md)
