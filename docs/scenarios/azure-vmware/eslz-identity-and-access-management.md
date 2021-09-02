@@ -31,12 +31,17 @@ using the principle of least privilege.
 
 -   As part of the Identity and Access Management Enterprise Scale Landing Zone
     (ESLZ), an Active Directory Domain Services Domain Controller is deployed in
-    the Identity Subscription
+    the Identity Subscription.
+
+-  Use of cloudadmin account for connected services is not recommended.
+
+-  When rotating the cloudadmin password, all services using this account 
+   should be shut down prior to credential rotation.
 
 -   Limit the number of users that you assign CloudAdmin role. Use custom roles
     and least privilege to assign users to AVS.
 
--   Use caution when rotating cloudadmin/NSX admin passwords. Ensure HCX
+-   Use caution when rotating cloudadmin. Ensure HCX
     Connector passwords are updated with password changes to avoid lockouts.
     [Rotate the cloudadmin credentials for Azure VMware Solution - Azure VMware
     Solution \| Microsoft
