@@ -15,7 +15,9 @@ ms.custom: think-tank, e2e-avs
 Azure VMware Solution combines its Software-Defined Data Center (SDDC) software with Azure's global cloud platform. Using the [Govern methodology](../../govern/index.md) to incrementally improve governance of your cloud portfolio. Microsoft manages Azure VMware Solution to meet performance, availability, security, and compliance requirements. Microsoft provides the following components to run Azure VMware Solution at scale in Azure—across management systems, networking services, operating platform, and back-end infrastructure operations.
 
 To extend your governance approach across the Azure VMware solution, evaluate and manage risk tolerance by identifying high-risk areas for business—converting risk vectors into governing corporate policies—and extend governance policies across Cost, Security baseline, Identity baseline, Resource consistency, and Deployment acceleration disciplines.
-**rewrite to add journey to AlZ conceptual architecture**
+
+![Diagram of enterprise-scale security, governance, and compliance.](../azure-vmware/media/enterprise-scale-security-governance-compliance.png)
+*Figure 1*
 
 ## Azure VMware solution management
 
@@ -49,9 +51,14 @@ Integrating with Azure-native services in your Azure VMware Solution private clo
 
 **Azure Hybrid Use Benefits**: maximize the value of existing Windows Server and SQL Server licenses. Save up to 80% with Azure Hybrid Use Benefits and Azure Reserved Instances.
 
+![Diagram of enterprise-scale security, governance, and compliance.](../azure-vmware/media/on-premises-environments-Azure-private-clouds-networks-services.png)
+*Figure 2*
+
 ### Unified operational management controls
 
-We recommend a [unified operations](/azure/cloud-adoption-framework/scenarios/hybrid/unified-operations) approach, so you can extend consistent Azure governance and operational management controls across your Vsphere cluster, and seamlessly modernize your VMware workloads with native Azure services:
+We recommend a [unified operations](/azure/cloud-adoption-framework/scenarios/hybrid/unified-operations) approach, so you can extend consistent Azure governance and operational management controls across your Vsphere cluster, and seamlessly modernize your VMware workloads with native Azure services. 
+
+Azure Resource Manager (ARM) is the operating system of Azure which, stretching across VMware resources, extends Azure-native governance and operational management controls across clusters, resource pools and  private clouds by:
 
 - Monitoring, managing, and protecting VMs with Azure native services. [Learn more](/azure/azure-vmware/integrate-azure-native-services)
 - Integrating Azure Security Center. [Learn more](/azure/azure-vmware/azure-security-integration)
@@ -123,6 +130,12 @@ VMware HCX Enterprise can speed up your organization's hybrid cloud adoption wit
 
 ## Next step: Manage Azure VMware Solution
 
-The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you succeed in the cloud adoption scenario.
+These articles will take you to specific points of guidance along your cloud adoption journey—and help you succeed in the cloud adoption scenario:
 
+- [Strategy for Azure VMware Solution](./strategy.md)
+- [Plan for Azure VMware Solution](./plan.md)
+- [Review your environment or Azure Landing Zone(s)](./ready.md)
+- [Migrate Azure VMware Solution](./migrate.md)
+- [Innovate with Azure VMware Solution](./innovate.md)
+- [Govern Azure VMware Solution](./govern.md)
 - [Manage Azure VMware Solution](./manage.md)
