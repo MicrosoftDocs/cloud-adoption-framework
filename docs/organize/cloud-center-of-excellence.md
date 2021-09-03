@@ -16,7 +16,7 @@ Many IT organizations share the core objective of achieving business and technic
 
 ## Function structure
 
-A CCoE model requires collaboration between each of the following:
+A CCoE model requires collaboration between each of the following resources:
 
 - Cloud adoption (solution architects)
 - Cloud strategy (the program and project managers)
@@ -34,7 +34,7 @@ The following image provides an analogy for this change. Without a CCoE approach
 
 ![Diagram that shows an analogy for a C C o E paradigm shift.](../_images/ready/ccoe-paradigm-shift.png)
 
-Neither approach is right or wrong; they're alternative views of responsibility and management. A CCoE model can fit within the technology strategy if you want to establish a self-service model that allows business units to make their own decisions while adhering to a set of guidelines and established, repeatable controls.
+Both approaches are valid; they're alternative views of responsibility and management. A CCoE model can fit within the technology strategy if you want to establish a self-service model that allows business units to make their own decisions while adhering to a set of guidelines and established, repeatable controls.
 
 ## Key responsibilities
 
@@ -43,7 +43,7 @@ The primary duty of the CCoE team is to accelerate cloud adoption through cloud-
 The objective of the CCoE is to:
 
 - Help build a modern IT organization through agile approaches to capture and implement business requirements.
-- Use reusable deployment packages that align with security, compliance, and service management policies.
+- Use reusable deployment packages that align with security, compliance, and management policies.
 - Maintain a functional Azure platform in alignment with operational procedures.
 - Review and approve the use of cloud-native tools.
 - Standardize and automate commonly needed platform components and solutions over time.
