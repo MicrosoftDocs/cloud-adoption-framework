@@ -51,7 +51,8 @@ Take advantage of price benefits for Windows and SQL Server with:
 
 - Free [**Extended Security Updates**](https://docs.microsoft.com/lifecycle/faq/extended-security-updates) for Windows Server 2012, and SQL Server 2012 when transitioning to Azure, including Azure VMware Solution.
 - **Azure Hybrid Benefit** for both [Windows](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing) and [SQL Server](https://docs.microsoft.com/azure/azure-sql/azure-hybrid-benefit?tabs=azure-powershell). Azure Hybrid Benefit allows you to bring your existing licenses to Azure and reduce costs.
-- **Azure Reservations** [discounts for reserved instances](https://docs.microsoft.com/azure/azure-vmware/reserved-instance) (and no cancellation fees). Azure VMware Solution offers 1-year and 3-year reserved instances for dedicated hosts, saving around 30-50% of the total cost of a node.  
+- **Azure Reservations** [discounts for reserved instances](https://docs.microsoft.com/azure/azure-vmware/reserved-instance) (and no cancellation fees). Azure VMware Solution offers 1-year and 3-year reserved instances for dedicated hosts, saving around 30-50% of the total cost of a node. 
+
 
 ### **Modernize apps**
 
