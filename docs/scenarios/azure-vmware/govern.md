@@ -43,7 +43,7 @@ Integrating with Azure-native services in your Azure VMware Solution private clo
 
 **Unified VM management**: single pane of glass to manage vSphere-based and Azure native VMs, with uniform identities, access control and monitoring.
 
- **Native Azure integration**: connect to Azure services endpoints. For example, leverage Azure Active Directory as VMware vCenter SSO identity source.
+ **Native Azure integration**: connect to Azure services endpoints. For example, deploy Azure Active Directory as VMware vCenter SSO identity source.
 
 **Single point of support**: Azure VMware Solution is Microsoft-developed, operated, and supported. Microsoft is first and only contact and coordinates support with VMware as required.
 
@@ -56,7 +56,7 @@ Integrating with Azure-native services in your Azure VMware Solution private clo
 
 ### Unified operational management controls
 
-We recommend a [unified operations](/azure/cloud-adoption-framework/scenarios/hybrid/unified-operations) approach, so you can extend consistent Azure governance and operational management controls across your Vsphere cluster, and seamlessly modernize your VMware workloads with native Azure services. 
+We recommend a [unified operations](/azure/cloud-adoption-framework/scenarios/hybrid/unified-operations) approach, so you can extend consistent Azure governance and operational management controls across your Vsphere cluster, and seamlessly modernize your VMware workloads with native Azure services.
 
 Azure Resource Manager (ARM) is the operating system of Azure which, stretching across VMware resources, extends Azure-native governance and operational management controls across clusters, resource pools and  private clouds by:
 
