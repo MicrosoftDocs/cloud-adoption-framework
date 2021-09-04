@@ -1,5 +1,5 @@
 ---
-title: "Get started: Environment design and configuration"
+title: 'Get started: Environment design and configuration'
 description: Get started with unblocking the design and configuration of your cloud environment.
 author: JanetCThomas
 ms.author: janet
