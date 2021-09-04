@@ -1,9 +1,9 @@
 ---
 title: Introduction to the Azure VMware Solution adoption scenario
 description: <<Describe the scenario.>>
-author: mhenry
+author: mpvenables
 ms.author: janet
-ms.date: 06/28/2021
+ms.date: 09/02/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
@@ -11,32 +11,31 @@ ms.subservice: overview
 
 # Migrate to Azure with Azure VMware Solution
 
-Azure VMware Solution gives you options when migrating to Azure. “Lifting and shifting” the VMware technology stack to a dedicated cloud environment on Azure can reduce complexity, impacts to business continuity, and the time required for migration. Moreover, it enables the business to adopt cloud technology at a pace that best suits your requirements, expanding to more cloud services over time.
+Azure VMware Solution provides your organization with options when migrating to Azure. Migrating VMware resources from on-premises datacenters to a dedicated cloud environment on Azure can lower complexity, help you to minimize negative impacts to business continuity, and reduce the time required for your migration. Azure VMware Solution enables you to adopt cloud technology at a pace that matches your organization's requirements, adding cloud services incrementally as your business evolves.
 
 ## Microsoft Azure VMWare Solution
 
-Azure VMware Solution is a first party Microsoft Azure service, built with VMware, that delivers a familiar vSphere-based, single-tenant, private cloud on Azure. A VMware technology stack including vSphere, NSX-T, vSAN and HCX, runs natively on dedicated infrastructure within Azure data centers, giving a consistent experience to on-premises VMware environments. Customers can stand up the environment in hours and quickly migrate VM resources. Microsoft operates and supports the Azure VMware Solution environment, and all the necessary networking, storage and management services. 
-
+Azure VMware Solution is a first party Microsoft Azure service built with VMware that delivers a familiar vSphere-based, single-tenant, private cloud on Azure. The VMware technology stack includes vSphere, NSX-T, vSAN and HCX. Running natively on dedicated infrastructure in Azure datacenters, Azure VMware Solution provides a consistent experience to customers with existing on-premises VMware environments. Customers can stand up the environment in hours, and quickly migrate virtual machine (VM) resources. Microsoft operates and supports the Azure VMware Solution environment—and all necessary networking, storage and management services.
 
 ## Common customer journeys
 
-- **Azure Migration for VMware workloads:** Cloud migration is a focus for almost all organizations in some way, and often the driving force behind the timeline for migration is a need to exit a data center quickly and/or need to scale exiting business capabilities beyond current infrastructure. However, how an organization chooses to approach the migration can vary significantly. For many large businesses with existing VMware investments the ability to maintain operational consistency for their VMware environment in Azure is paramount.
-- **Extending hybrid and multicloud agility:** Hybrid VMware architectures are one of the most common configurations we see customers looking for when adopting Azure VMware Solution. Organizations are looking to gain agility between on-premises resources and cloud resources by extending VMware vSphere-based environments to Azure. Hybrid and multi cloud capabilities enable consistency of resource management across on-premises and cloud environments, and the added benefit of connecting and modernize through other Azure services.
-- **Benefits of cost optimization for licensing and billing:** Often a large consideration for customers in their migration journey is how to best leverage their on-premises licensing and billing, in the cloud. Microsoft offers Azure Hybrid Benefits, as well as Extended Security Updates, for certain versions of Windows Server and SQL Server, and these benefits are extended to Azure VMware Solution too. With a large portion of VMware workloads running on Windows Server and SQL Server, customers are recognizing the mobility of these licenses as an efficient way to reduce the economic impact of a cloud migration project. With centralized billing and support on Azure VMware Solution, simplifies the tracking and management of cloud spend. 
-- **Developing cloud skilling:** An organizations’ IT team has a great deal of expertise across on-premises systems like VMware. With the addition of cloud, many of these roles need retraining and additional process improvements to adopt and manage new technologies. Developing these cloud competencies can be a significant investment in time and resources for any business. Because Azure VMware Solution provides consistency with how VMware resources are managed on premises, there is little to no change required. Additionally, through a seamless connection to other Azure services, such as Azure storage solutions, Azure hybrid identity, monitoring and security services, organizations can incrementally grow competencies in cloud-related skills.
+- **Migrating VMware workloads to Azure**: the market reality is that organizations are moving to the cloud. The driving force for this migration timeline may be a need to quickly exit a datacenter, or scale your business capabilities beyond existing infrastructure. However, how your organization chooses to approach migration can vary significantly. For large businesses with existing VMware investments, it's important to maintain operational consistency for VMware environments in Azure.
+- **Extending hybrid and multicloud agility**: customers seek common configurations like hybrid VMware architectures when adopting Azure VMware Solution. Organizations are looking to increase agility between resources on-premises and in the cloud by extending vSphere-based VMware environments to Azure. Hybrid and multicloud capabilities enable resource management consistency across on-premises and cloud environments—and modernize applications by connecting them to Azure-native cloud services.
+- **Cost-optimizing licensing and billing**: in their migration journey, customers should consider how to best take advantage of on-premises licensing and billing to maximize their cloud investment. Microsoft offers Azure Hybrid Benefits, as well as Extended Security Updates for some versions of Windows and SQL Server. These extended security updates and licensing benefits are extended to Azure VMware Solution. With many VMware workloads now running on Windows and SQL Server, customers can benefit from license mobility—and reduce the economic impact of a cloud migration project. Centralized billing and support on Azure VMware Solution simplifies the tracking and management of cloud spend.
+- **Developing cloud skilling**: Your organization's IT team has a great deal of expertise across on-premises systems like VMware. With the addition of cloud, many of these roles need retraining and additional process improvements to adopt and manage new technologies. Developing these cloud competencies can be a significant investment in your time and resources. Because Azure VMware Solution provides consistency with how VMware resources are managed on premises, there is little to no change required. Through a seamless connection to other Azure services, such as Azure storage solutions, Azure hybrid identity, and monitoring and security services— organizations can grow competencies incrementally in necessary cloud-focused upskilling and cross-skilling.
 
 ## Components of the scenario
   
 This scenario is designed to guide the end-to-end customer journey, throughout the cloud adoption lifecycle. Completing the journey requires a few key guidance sets:
   
-  - **Cloud Adoption Framework:** These articles walk through the considerations and recommendations of each CAF methodology. Use these articles to prepare decision makers, central IT, and the cloud center of excellence for adoption of Azure VMware Solution.
-- **Reference architectures:** These reference solutions aid in accelerating deployment of Azure VMware Solution.
-- **Featured Azure products:** Learn more about the products that support your VMware strategy in Azure.
-- **Microsoft Learn modules:** Gain the hands-on skills required to implement, maintain, and support Azure VMware Solution.
+- **Cloud Adoption Framework:** These articles walk through the [considerations and recommendations of each CAF methodology](https://docs.microsoft.com/azure/cloud-adoption-framework/overview). Use these articles to prepare decision makers, central IT, and the cloud center of excellence for adoption of Azure VMware Solution.
+- **Reference architectures:** These [reference solutions](https://docs.microsoft.com/azure/architecture/browse/) help to accelerate the deployment of Azure VMware Solution.
+- **Featured Azure products:** Learn more about the [products that support your VMware strategy](https://docs.microsoft.com/azure/azure-vmware/integrate-azure-native-services) in Azure.
+- **Microsoft Learn modules:** Get the [hands-on skilling required](https://docs.microsoft.com/learn/paths/run-vmware-workloads-azure-vmware-solution/) to implement, maintain, and support Azure VMware Solution.
 
 ## Next step: Integrate Azure VMware Solution into your cloud adoption journey
 
-The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
+These articles will take you to specific points of guidance along your cloud adoption journey—and help you succeed in the cloud adoption scenario:
 
 - [Strategy for Azure VMware Solution](./strategy.md)
 - [Plan for Azure VMware Solution](./plan.md)
