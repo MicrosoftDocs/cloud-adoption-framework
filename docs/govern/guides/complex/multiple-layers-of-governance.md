@@ -1,5 +1,5 @@
 ---
-title: "Complex enterprise governance: Multiple governance layers"
+title: 'Complex enterprise governance: Multiple governance layers'
 description: Use the Cloud Adoption Framework for Azure to learn about greater levels of complexity with multiple layers of governance in large enterprises.
 author: BrianBlanchard
 ms.author: brblanch
@@ -38,13 +38,13 @@ The first requirement of a multilayer governance model is to understand of the g
 
 - How is cloud accounting (billing for cloud services) allocated across business units?
 - How are governance responsibilities allocated across corporate IT and each business unit?
-- What types of environments do each of those units of IT manage?
+- What types of environments do those units of IT manage?
 
 ## Central governance of a distributed governance hierarchy
 
-Tools like management groups allow corporate IT to create a hierarchy structure that matches the governance hierarchy. Tools like Azure Blueprints can apply assets to different layers of that hierarchy. Azure Blueprints can be versioned and various versions can be applied to management groups, subscriptions, or resource groups. Each of these concepts is described in more detail in the governance MVP.
+Tools like management groups allow corporate IT to create a hierarchy structure that matches the governance hierarchy. Tools like Azure Blueprints can apply assets to different layers of that hierarchy. Azure Blueprints can be versioned and various versions can be applied to management groups, subscriptions, or resource groups. These concepts are described in more detail in the governance MVP.
 
-The important aspect of each of these tools is the ability to apply multiple blueprints to a hierarchy. This allows governance to be a layered process. The following is one example of this hierarchical application of governance:
+The important aspect of these tools is their ability to apply multiple blueprints to a hierarchy. This allows governance to be a layered process. The following is one example of this hierarchical application of governance:
 
 - **Corporate IT:** Corporate IT creates a set of standards and policies that apply to all cloud adoption. This is materialized in a *baseline* blueprint. Corporate IT then owns the management group hierarchy, ensuring that a version of the baseline is applied to all subscriptions in the hierarchy.
 - **Regional or business unit IT:** Various IT teams can apply an additional layer of governance by creating their own blueprint. Those blueprints would create additive policies and standards. Once developed, corporate IT could apply those blueprints to the applicable nodes within the management group hierarchy.

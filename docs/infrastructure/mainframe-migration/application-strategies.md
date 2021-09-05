@@ -91,7 +91,7 @@ Use:
 
 Use:
 
-- [Azure premium SSDs](/azure/virtual-machines/disks-types#premium-ssd) or [Azure ultra disks](/azure/virtual-machines/disks-types#ultra-ssd-preview) for maximum available IOPS.
+- [Azure Premium SSDs](/azure/virtual-machines/disks-types#premium-ssd) or [Azure Ultra Disk Storage](/azure/virtual-machines/disks-types#ultra-ssd-preview) for maximum available IOPS.
 
 - Striping with multiple disks for more IOPS per storage size.
 
