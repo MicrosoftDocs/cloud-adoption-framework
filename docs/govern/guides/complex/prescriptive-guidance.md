@@ -1,5 +1,5 @@
 ---
-title: "Complex enterprise governance: Best practices explained"
+title: 'Complex enterprise governance: Best practices explained'
 description: Use the Cloud Adoption Framework for Azure to establish a minimum viable product (MVP) for governance that reflects best practices for a complex enterprise.
 author: BrianBlanchard
 ms.author: brblanch
@@ -129,7 +129,7 @@ If any of the patterns chosen in this governance guide don't align with the read
 
 Once this guidance is implemented, each cloud adoption team can proceed with a solid governance foundation. At the same time, the cloud governance team will work to continually update the corporate policies and governance disciplines.
 
-Both teams will use the tolerance indicators to identify the next set of improvements needed to continue supporting cloud adoption. The next step for this company is incremental improvement of their governance baseline to support applications with legacy or third-party multi-factor authentication requirements.
+Both teams will use the tolerance indicators to identify the next set of improvements needed to continue supporting cloud adoption. The next step for this company is incremental improvement of their governance baseline to support applications with legacy or third-party multifactor authentication requirements.
 
 > [!div class="nextstepaction"]
 > [Improve the Identity Baseline discipline](./identity-baseline-improvement.md)
