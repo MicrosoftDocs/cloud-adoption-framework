@@ -1,5 +1,5 @@
 ---
-title: "Get started: Secure the enterprise environment"
+title: 'Get started: Secure the enterprise environment'
 description: Get started integrating security at critical points during your cloud adoption efforts and operations.
 author: JanetCThomas
 ms.author: janet

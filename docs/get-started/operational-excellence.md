@@ -1,5 +1,5 @@
 ---
-title: "Get started: Deliver operational excellence"
+title: 'Get started: Deliver operational excellence'
 description: Learn the basics of operational excellence during digital transformation.
 author: JanetCThomas
 ms.author: janet

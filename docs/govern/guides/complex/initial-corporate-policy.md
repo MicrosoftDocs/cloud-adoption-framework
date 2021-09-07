@@ -1,5 +1,5 @@
 ---
-title: "Complex enterprise governance: Initial corporate policy"
+title: 'Complex enterprise governance: Initial corporate policy'
 description: Use the Cloud Adoption Framework for Azure to define initial complex governance position, early-stage risks, initial policy statements, and early enforcement processes.
 author: BrianBlanchard
 ms.author: brblanch
@@ -30,7 +30,7 @@ After the meeting, two members of the IT governance team requested permission to
 The current risk tolerance is high and the appetite for investing in cloud governance is low. As such, the tolerance indicators act as an early warning system to trigger the investment of time and energy. If the following indicators are observed, it would be wise to advance the governance strategy.
 
 - **Cost Management discipline:** Scale of deployment exceeds 1,000 assets to the cloud, or monthly spending exceeds $10,000 USD per month.
-- **Identity Baseline discipline:** Inclusion of applications with legacy or third-party multi-factor authentication requirements.
+- **Identity Baseline discipline:** Inclusion of applications with legacy or third-party multifactor authentication requirements.
 - **Security Baseline discipline:** Inclusion of protected data in defined cloud adoption plans.
 - **Resource Consistency discipline:** Inclusion of any mission-critical applications in defined cloud adoption plans.
 
