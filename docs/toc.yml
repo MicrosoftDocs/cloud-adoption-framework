@@ -256,7 +256,7 @@ items:
       - name: Design areas
         href: ready/landing-zone/design-areas.md
         items:
-        - name: Azure billing and AD tenant 
+        - name: Azure billing and Active Directory tenant 
           href: ready/landing-zone/design-area/azure-billing-ad-tenant.md
         - name: Identity and access management 
           href: ready/landing-zone/design-area/identity-access-management.md  
