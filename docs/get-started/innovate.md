@@ -16,7 +16,7 @@ Creating new products and services in the cloud requires a different approach th
 
 This guide uses the sections of the Cloud Adoption Framework that are highlighted in the following illustration. Innovation is less predictable than a standard migration, but it still fits within the context of the broader cloud adoption plan. This guide can help your enterprise provide the support needed to innovate and provide a structure for creating a balanced portfolio throughout cloud adoption.
 
-![The Cloud Adoption Framework methodologies, including the Innovate methodology.](../_images/get-started/innovation-map.png)
+![Diagram of the Cloud Adoption Framework methodologies, including the Innovate methodology.](../_images/get-started/innovation-map.png)
 
 *Figure 1: The Cloud Adoption Framework methodologies, including the Innovate methodology.*
 
