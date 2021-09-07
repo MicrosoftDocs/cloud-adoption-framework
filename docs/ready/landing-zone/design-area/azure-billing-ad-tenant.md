@@ -14,6 +14,6 @@ ms.custom: internal
 
 ## Considerations
 
-## Best Practices
+## Recommendations
 
 ## Azure Accelerator configuration
