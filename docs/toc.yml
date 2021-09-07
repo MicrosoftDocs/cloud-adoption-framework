@@ -298,7 +298,7 @@ items:
           items:
           - name: Considerations
             href: ready/landing-zone/design-area/resource-org-consideration.md     
-          - name: Recommendations
+          - name: Recommendation
             href: ready/landing-zone/design-area/resource-org-recommendations.md
           - name: Accelerator configuration
             href: ready/landing-zone/design-area/resource-org-accelerator.md      
