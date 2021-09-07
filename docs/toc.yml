@@ -298,8 +298,8 @@ items:
           items:
           - name: Considerations
             href: ready/landing-zone/design-area/resource-org-consideration.md     
-          - name: Best practices
-            href: ready/landing-zone/design-area/resource-org-best-practices.md
+          - name: Recommendations
+            href: ready/landing-zone/design-area/resource-org-recommendations.md
           - name: Accelerator configuration
             href: ready/landing-zone/design-area/resource-org-accelerator.md      
         - name: Governance
