@@ -23,7 +23,9 @@ Private Endpoints can be used to control the traffic within a customer’s Azure
 
 These two scenarios are depicted in figure 1 below:
 
-![Data exfiltration scenarios](./media/cross-tenant-pe-provisioning.png)
+![Cross-tenant private endpoint scenarios](./media/cross-tenant-pe-provisioning.png)
+
+*Figure 1: Ilustration of private endpoint cross-tenant scenarios.*
 
 For both scenarios, it is as simple as specifying the resource ID of the service and manually approving the private endpoint connection on the respective service. In addition, the user requires some RBAC access to execute these actions. This will be further described in the sections below.
 
