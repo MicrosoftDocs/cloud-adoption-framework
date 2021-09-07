@@ -51,8 +51,6 @@ items:
           href: ./eslz-platform-automation-and-devops.md
         - name: Provision the platform
           href: ./eslz-provision-platform.md
-        - name: Deployment templates
-          href: ./eslz-deployment-templates.md
 
   - name: Govern your data estate
     items:
@@ -108,7 +106,9 @@ items:
         href: ./architectures/data-landing-zone-data-integration.md
       - name: Data products
         href: ./architectures/data-landing-zone-data-products.md
-        
+  
+    - name: Deployment templates
+      href: ./eslz-deployment-templates.md    
     - name: Frequently asked questions
       href: ./architectures/frequently-asked-questions.md
 
