@@ -3,7 +3,7 @@ title: Network topology and connectivity overview
 description: Examine key design considerations and best practice surrounding networking and connectivity to, from, and within Microsoft Azure.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 02/18/2021
+ms.date: 09/07/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -50,6 +50,10 @@ Network topology is a critical element of the enterprise-scale architecture beca
 ## Connectivity to Azure PaaS services
 
 Building on the previous connectivity sections, [this section explores recommended connectivity approaches for using Azure PaaS services.](../azure-best-practices/connectivity-to-azure-paas-services.md)
+
+## Limiting cross-tenant prrivate endpoint connections
+
+Building on the Connectivity to Azure PaaS services section, [this section explores recommended approaches to limit private endpoint connections across Azure AD tenants.](../azure-best-practices/limiting-cross-tenant-pe-connections.md)
 
 ## Plan for inbound and outbound internet connectivity
 
