@@ -19,7 +19,7 @@ Customers often experience cloud adoption antipatterns within their organization
 - Engineers
 - Misaligned IT departments
 
-It's important to understand the role of each of these factors in a successful cloud adoption scenario.
+It's important to understand the role of these factors in a successful cloud adoption scenario.
 
 ## Antipattern: Treat IT as a cost center
 

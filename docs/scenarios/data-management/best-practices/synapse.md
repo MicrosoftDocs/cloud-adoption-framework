@@ -1,32 +1,44 @@
 ---
-title: Building a plan for Synapse in Azure
-description: Building a plan for 'Synapse
+title: Power your data strategy with Azure Synapse Analytics 
+description: Learn how Azure Synapse Analytics can power your data strategy. Choosing the right set of tools and technologies is essential for a successful business outcome.
 author: pratimdas
-ms.author: prda # Microsoft employees only
-ms.date: 06/22/2021
+ms.author: mboswell
+ms.date: 07/28/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Tools and technology to power your data strategy
+# Power your data strategy with Azure Synapse Analytics
 
-The right set of tools and technologies will be the backbone for your data products and services. Here are some of the key considerations to take.
-
-Avoid getting stuck in a never-ending learning or design loop, otherwise known as analysis paralysis, or building PoC after PoC. Beyond a certain point, additional time spent in this cycle does not add equivalent value to your organization's business objectives.
+Choosing the right set of tools and technologies to power your data strategy is essential for success. Here are some key considerations when selecting an analytics service, such as Azure Synapse Analytics.
 
 ## Think big, start small, and act fast
 
-Even if you don't have 100 percent of the features from the get-go, it is more important to get started in delivering business value iteratively. Leave the rest to product innovation from vendors and the capability you going to build with each iteration. Growth mindset is cultivated best when we accomplish more with less. This balance is an art, it fosters creativity and innovation.
+Avoid getting stuck in a never-ending design loop. This loop, known as analysis paralysis, is where you repeatedly rebuild your proof of concept. Beyond a certain point, extra time spent in this cycle doesn't add equivalent value to your organization's business objectives.
 
-Simplification is key. At Microsoft, we have been innovating on behalf of our customers. We have many services for data procurement and many more for storage – depending on the volume, variety, velocity, and veracity. Similarly, an array of services for analytics, visualization, and data science. Despite the flexibility and options, we understand that simplicity is important. A holistic solution that you can get started with immediately makes it easy to see return of investment quicker.
+Even if you haven't identified all design features, it's important to deliver business value early. Leave the rest to product innovation by vendors and new capabilities that you add with each build iteration. A growth mindset is best cultivated when we accomplish more with less using creativity and innovation.
 
-For example, we see [Azure Synapse Analytics](https://azure.microsoft.com/services/synapse-analytics/) as a category in its own right. It has ample integration options in your current estate, as well as ISV solutions. It can be integrated into the data management and analytics construction set as a shared workspace for teams to do exploitative analytics or deployed as a data product for relevant use cases.
+At Microsoft, we've been innovating for our customers and have many services for data procurement, storage, analytics, visualization, and data science. Along with offering flexibility and options, we understand that simplicity is key. Simplicity helps get you started early, so you see a quicker return on investment.
 
-Data product teams have access to a single integrated platform for BI, AI and Continuous Intelligence. This is wrapped under four foundational capabilities of: management, security, monitoring and a metastore. Underpinning this is a decoupled storage layer, data integration layer, analytics runtimes (either on-demand as serverless, or provisioned) which reside in the construction set. The runtimes provide choice, such as SQL with T-SQL for batch and interactive processing, or Spark for big data, and support of most languages such as SQL, Python, .NET, Java, Scala and are all made available through a single interface called Synapse Analytics Studio.
+For example, [Azure Synapse Analytics](https://azure.microsoft.com/services/synapse-analytics/) unifies a broad category of services. Data product teams have access to a single integrated platform for business intelligence (BI), AI, and continuous intelligence (CI). Azure Synapse is designed for analytics workloads of any scale.
 
-![Azure Synapse Analytics for integrated data platform experience, BI, AI, and continuous intelligence as part of your data strategy](../images/data-strategy-synapse.png)
+Azure Synapse has several key features and capabilities:
 
-Figure 4: Azure Synapse Analytics for integrated data platform experience for BI, AI and continuous intelligence.
+- Integrated platform services for management, security, monitoring, and metastore.
+- A data integration layer that interfaces with a decoupled storage layer.
+- Integrated analytics runtimes, either provisioned or serverless on-demand.
+- Azure SQL Analytics using T-SQL for batch, streaming, and interactive processing.
+- Apache Spark for big data processing.
+- Multiple languages suited to different analytic workloads, available through a single interface called Azure Synapse Analytics studio. Languages include Python, .NET, Java, Scala, and R.
+- Integration options for both your own and third-party ISV applications and solutions.
+- Can be integrated into a data management and analytics scenario as a shared workspace. Data product teams can access the shared workspace to run exploitative analytics.
+- Can be deployed as a data product for relevant use cases.
 
-This principled approach will help you shift from an application-only approach to an application and data-led approach. This will help your organization build an end-to-end data strategy that can ensure repeatability and scalability across current and future use cases that impact business outcomes.
+![Diagram of the various components and features of the Azure Synapse Analytics integrated data platform.](../images/data-strategy-synapse.png)
+
+Build a strong data strategy. Choose the right tools and technology as the backbone for your data products and services. Design your data strategy for repeatability and scalability across all current and future use cases that affect business outcomes.
+
+## Next steps
+
+[Use Azure Synapse Analytics with enterprise-scale for analytics and AI](./azure-synapse-analytics-implementation.md).

@@ -77,6 +77,11 @@ items:
       - name: Virtual desktops
         href: scenarios/wvd/index.md
 
+    - name: Industry scenarios
+      items:
+      - name: Retail
+        href: industry/retail/index.md
+
     - name: Antipatterns to avoid
       href: antipatterns/antipatterns-to-avoid.md
 
@@ -246,6 +251,8 @@ items:
       items:
       - name: What is a landing zone?
         href: ready/landing-zone/index.md
+      - name: Journey to the target architecture
+        href: ready/landing-zone/landing-zone-journey.md        
       - name: Design areas
         href: ready/landing-zone/design-areas.md
       - name: Choose a landing zone option
@@ -320,6 +327,8 @@ items:
           href: ready/enterprise-scale/terraform-module-caf-enterprise-scale.md
         - name: Transition to enterprise-scale (brownfield)
           href: ready/enterprise-scale/transition.md
+        - name: Scenario-specific enterprise-scale landing zones
+          href: ready/enterprise-scale/scenario-specific-enterprise-scale-landing-zones.md
       - name: Start small and expand
         items:
         - name: CAF Migration landing zone blueprint
@@ -488,7 +497,7 @@ items:
         - name: Tailwind Traders case study
           items:
           - name: Assessment and migration planning with Azure Migrate for servers
-            href: migrate/azure-best-practices/tailwind-migration-assess-servers.md 
+            href: migrate/azure-best-practices/tailwind-migration-assess-servers.md
           - name: Migration execution with Azure Migrate for servers
             href: migrate/azure-best-practices/tailwind-migration-rehost-server-replication.md
         - name: Windows Server workloads
@@ -853,7 +862,7 @@ items:
           href: migrate/azure-best-practices/contoso-migration-scale.md
         - name: Schema migration and DDL commands
           href: migrate/azure-best-practices/analytics/schema-migration-ddl.md
-        - name: High availability for Azure Synapse
+        - name: Database restore points for Azure Synapse
           href: migrate/azure-best-practices/analytics/azure-synapse.md
         - name: Governance or compliance
           href: migrate/azure-best-practices/governance-or-compliance.md
@@ -1639,7 +1648,7 @@ items:
         href: secure/best-practices/secure-devops.md
       - name: Secure DevOps governance
         href: secure/best-practices/end-to-end-governance.md
-      - name: Windows Virtual Desktop
+      - name: Azure Virtual Desktop
         href: scenarios/wvd/eslz-security-governance-and-compliance.md
       - name: Managing secrets
         href: secure/best-practices/manage-secrets.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
@@ -1738,8 +1747,6 @@ items:
     items:
     - name: Tools and templates
       href: reference/tools-templates.md
-    - name: Azure security best practices
-      href: ./secure/security-top-10.md
     - name: Decision guides
       items:
       - name: Overview

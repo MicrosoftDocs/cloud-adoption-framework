@@ -1,23 +1,23 @@
 ---
-title: Azure enterprise-scale for analytics and AI data lake overview
-description: Learn about enterprise-scale for analytics and AI architecture data lake overview
-author:  mboswell
-ms.author:  mboswell # Microsoft employees only
+title: Overview of Azure Data Lake Storage for the data management and analytics scenario
+description: Gain an overview of Azure Data Lake Storage for the data management and analytics scenario.
+author: mboswell
+ms.author: mboswell
 ms.date: 07/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Data management and analytics scenario data lake services overview
+# Overview of Azure Data Lake Storage for the data management and analytics scenario
 
 We recommend you provision three [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction) accounts within a single resource group, similar to the `data lake services` resource group described in [Azure data management and analytics scenario architecture data landing zone overview](../architectures/data-landing-zone.md). Each of the three data lakes within a data landing zone stores data in one of its three transformation stages: raw data, enriched and curated data, and workspace data. [Data products](../architectures/data-landing-zone-data-products.md) should only consume from the data lake that contains enriched and curated data.
 
 Data Lake Storage Gen2 supports:
 
-* Fine-grained [access control lists](/azure/storage/blobs/data-lake-storage-access-control) (ACLs), which protect data at the file and folder level. ACLs help enterprises implement tight security measures around datasets.
-* Secure data storage through encryption at rest, which helps store the data securely.
-* Access controls for Azure Active Directory (Azure AD) users and security groups, through integration with Azure AD for authentication and authorization.
+- Fine-grained [access control lists](/azure/storage/blobs/data-lake-storage-access-control) (ACLs), which protect data at the file and folder level. ACLs help enterprises implement tight security measures around datasets.
+- Secure data storage through encryption at rest, which helps store the data securely.
+- Access controls for Azure Active Directory (Azure AD) users and security groups, through integration with Azure AD for authentication and authorization.
 
 ## Data lake planning
 
@@ -37,40 +37,33 @@ Data Lake Storage Gen2 is a platform as a service (PaaS) fully managed service. 
 
 Scalability is a key concept and a single data lake might limit scalability from the outset. We recommend you add three data lake accounts during your discovery and design phase. The following considerations factor into our recommendation:
 
-* Large-scale enterprise workloads generally require significant throughput and resources. Splitting the lake physically across multiple storage accounts helps you stay within the various subscription and service quotas. The published quotas as of July 2021:
-  * Maximum storage account capacity for all regions: 5 PiB
-  * Maximum requests per second per storage account: 20,000
-  * Maximum ingress rate per storage account: 25 Gbps
-  * Maximum storage accounts per subscription: 250
-  * Maximum *access* and *default* ACLs per file or folder (this quota is a hard limit so assign ACLs to groups, not individual users): 32
-  * For more information about limits, see [Scalability and performance targets](/azure/storage/common/storage-scalability-targets).
+- Large-scale enterprise workloads generally require significant throughput and resources. Splitting the lake physically across multiple storage accounts helps you stay within the various subscription and service quotas.
 
-[!TIP]
-> Contact [Azure Support](https://azure.microsoft.com/support/faq/) to request higher capacity and ingress limits.
+  - For more information about limits, see [Scalability and performance targets](/azure/storage/common/scalability-targets-standard-account).
 
-* Isolation of data environments and predictability. For example, if you want to isolate activities that run in the laboratory zone to avoid potential effect on the curated zone. The curated zone holds data with greater business value that's used for critical decision making.
-* Features and functionality at the storage account level. Consider if lifecycle management options or firewall rules must be applied at the data landing zone or data lake level.
-* There are good reasons to have multiple storage accounts, but be careful not to create unnecessary silos. Avoid creating duplicate data projects because of lack of visibility or knowledge-sharing across the organization. Ensure that a data catalog, good data governance, and project tracking tools are in place.
-* Data processing tools and technologies, like Azure Data Factory and Azure Databricks for Apache Spark, can easily interact with data across multiple lakes if permissions are appropriately configured.
-* Regional versus global lakes. Globally distributed consumers or processes on the lake might be sensitive to latency caused by geographic distances. Require data to be stored locally. Regulatory constraints or data sovereignty might require data to remain within a particular region. For more information, see [Multiregion deployments](#multiregion-deployments).
+    > [!TIP]
+    > Contact [Azure Support](https://azure.microsoft.com/support/faq/) to request higher capacity and ingress limits.
+
+- Isolation of data environments and predictability. For example, if you want to isolate activities that run in the laboratory zone to avoid potential effect on the curated zone. The curated zone holds data with greater business value that's used for critical decision making.
+- Features and functionality at the storage account level. Consider whether life cycle management options or firewall rules must be applied at the data landing zone or data lake level.
+- There are good reasons to have multiple storage accounts, but be careful not to create unnecessary silos. Avoid creating duplicate data projects because of lack of visibility or knowledge-sharing across the organization. Ensure that a data catalog, good data governance, and project tracking tools are in place.
+- Data processing tools and technologies, like Azure Data Factory and Azure Databricks for Apache Spark, can easily interact with data across multiple lakes if permissions are appropriately configured.
+- Regional versus global lakes. Globally distributed consumers or processes on the lake might be sensitive to latency caused by geographic distances. Require data to be stored locally. Regulatory constraints or data sovereignty might require data to remain within a particular region. For more information, see [Multiregion deployments](#multiregion-deployments).
 
 ## Multiregion deployments
 
-Data residency rules, or a requirement to have data close to a user base, can drive the requirement to create Azure data lake accounts in multiple Azure regions. We recommend you create a data landing zone in one region and then replicate global data using third-party products like AzCopy or Azure Data Factory. Local data remains in-region while global data is replicated across multiple regions.
+Data residency rules, or a requirement to have data close to a user base, can drive the requirement to create Azure Data Lake accounts in multiple Azure regions. We recommend you create a data landing zone in one region and then replicate global data using third-party products like AzCopy or Azure Data Factory. Local data remains in-region while global data is replicated across multiple regions.
 
 ## Data lake access control list guidelines
 
-* Create Azure AD groups to represent data products, datasets, data integrations, or job functions. Assign access to Azure AD groups instead of individual users. This configuration will simplify operation and maintenance tasks as you'll only add and remove users from Azure AD groups. Modifying ACLs on files and folders in a data lake should happen infrequently, typically only at dataset creation.
-* Set the lowest granularity for an ACL at the dataset or table name level. A folder can represent this configuration in data lake storage.
-* Define new Azure AD groups based on data roles and dataset groupings. Existing Azure AD groups might follow organizational structure, even though not all members in the same organizational unit need access to a data lake.
-* Default ACL on every dataset folder must include *read* and *execute* permissions. Execute permission is required for users to traverse a restricted folder and access files under it. Access ACL assigned to an Azure AD group will include read and execute permissions on each dataset folder.
-* Only a managed identity or a service principal should grant *write* permission to a system. Changes can be made by an ingestion, transformation, or maintenance process.
+- Create Azure AD groups to represent data products, datasets, data integrations, or job functions. Assign access to Azure AD groups instead of individual users. This configuration will simplify operation and maintenance tasks as you'll only add and remove users from Azure AD groups. Modifying ACLs on files and folders in a data lake should happen infrequently, typically only at dataset creation.
+- Set the lowest granularity for an access control list (ACL) at the dataset or table name level. A folder can represent this configuration in Data Lake Storage.
+- Define new Azure AD groups based on data roles and dataset groupings. Existing Azure AD groups might follow organizational structure, even though not all members in the same organizational unit need access to a data lake.
+- Default access control list (ACL) on every dataset folder must include *read* and *execute* permissions. Execute permission is required for users to traverse a restricted folder and access files under it. Access ACL assigned to an Azure AD group will include read and execute permissions on each dataset folder.
+- Only a managed identity or a service principal should grant *write* permission to a system. Changes can be made by an ingestion, transformation, or maintenance process.
 
-For more information about access control mechanisms, see [Understanding access control and data lake configurations in Azure Data Lake Storage Gen2](data-lake-access.md#understanding-access-control-and-data-lake-configurations-in-adls-gen2).
+For more information about access control mechanisms, see [Access control and data lake configurations in Azure Data Lake Storage](./data-lake-access.md).
 
 ## Next steps
 
-The next step is to review guidance about data lake zones.
-
-> [!div class="nextstepaction"]
-> [Data lake zones](.data-lake-services.md)
+[Provision three Azure Data Lake Storage Gen2 accounts for each data landing zone](./data-lake-services.md)

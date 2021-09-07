@@ -1,8 +1,8 @@
 ---
-title: Azure Machine Learning implementation
-description: Azure Machine Learning as a Data Product for Enterprise Scale Analytics and AI
-author:  abdale
-ms.author: hamoodaleem # Microsoft employees only
+title: Azure Machine Learning as a data product for enterprise-scale for analytics and AI 
+description: Learn about Azure Machine Learning as a data product for enterprise-scale for analytics and AI.
+author: abdale
+ms.author: deeikele
 ms.date: 06/21/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

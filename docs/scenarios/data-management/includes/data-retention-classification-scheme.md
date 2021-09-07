@@ -1,10 +1,10 @@
 ---
-title: "data retention classification scheme"
-description: data retention classification scheme
+title: Data retention classification scheme
+description: Data retention classification scheme
 author: mboswell
 ms.author: mboswell
 ms.date: 06/21/2021
-ms.topic: conceptual
+ms.topic: include
 ms.service: cloud-adoption-framework
 ms.subservice: overview
 ---
@@ -14,7 +14,6 @@ ms.subservice: overview
 |Retention |   Description|
 |----|---|
 |None    |No need to keep the data
-|Temporary  |  Short lived e.g. keep twitter data for a week
-|Fixed period   |Set number of years e.g. keep tax records for 7 years to comply with government laws after which it can be deleted
-|Permanent   | Never to be deleted e.g. Legal correspondence
-
+|Temporary  |  Short lived such as keep Twitter data for a week
+|Fixed period   |Set number of years such as keep tax records for seven years to comply with government laws after which it can be deleted
+|Permanent   | Never to be deleted such as legal correspondence

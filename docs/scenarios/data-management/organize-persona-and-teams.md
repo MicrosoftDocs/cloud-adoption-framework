@@ -1,130 +1,133 @@
 ---
-title: Azure Enterprise Scale Analytics and AI Teams
-description: Enterprise Scale Analytics and AI Architecture Persona and Teams structure
+title: Understand the personas and teams for data management and analytics in Azure
+description: Learn about the personas and teams for the data management and analytics scenario in Azure.
 author: abdale
-ms.author: hamoodaleem # Microsoft employees only
-ms.date: 03/03/2021
+ms.author: hamoodaleem
+ms.date: 08/06/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: think-tank, e2e-data
 ---
 
-# Personas and Teams
+# Understand the personas and teams for data management and analytics in Azure
 
-The Enterprise Scale Analytics and AI moves teams from working horizontally across each tier such as Ingest, Processing, Analysis, Consumption and Visualization to vertical Data Landing Zone Groups coexisting together in an agile team. Platform teams such as Data Platform Ops and Platform Ops are grouped together under a common Platform Group.
+For the data management and analytics scenario, we recommend moving teams like ingest, processing, analysis, consumption, and visualization from working in horizontally siloed teams, to agile vertical cross domain teams in each tier. Platform teams like data platform operations and platform operations are grouped together in a common platform group.
 
-![Enterprise Scale Analytics and AI Teams](images/enterprise-scale-analytics-ai-teams.png)
-
-Figure 1: Enterprise Scale Analytics and AI Teams
+![Overview of the data management and analytics scenario teams.](./images/enterprise-scale-analytics-ai-teams.png)
 
 ## Personas
 
-There are multiple personas involved in an Enterprise Scale Analytics and AI deployment. The following sections attempts to give a high insight to those which we see are key to the success. Data Governance roles are called out specifically further down this page.
+Multiple personas are involved a data management and analytics scenario deployment. The following sections outline the personas that are key to a successful deployment, and data governance roles are described further down this page.
 
 | Persona | Role |
 |-|-|
-|Product Owners| Product Owners leverage Azure to transform your solutions and bring agility to the business and optimize business processes.|
-| Solution Architects | Define solutions to drive across the boundaries of the enterprise business network. Learn how to deal with diagnosis, analysis, design, deployment, and integration of Azure services. |
-|Developer/DevOps Engineers|Design, build, deploy, test, and maintain continuous integration and delivery process with Azure DevOps or GitHub.|
-| Security Engineers <sup>1</sup> | Enable your teams to design and implement a secure infrastructure on Azure leveraging best practices. |
-| Technical/Business Managers <sup>1</sup>|Build an overall understanding of Azure services. Control your cloud costs and optimize your operations and the agility of your team.|
-|Decision Makers / Business Users|Leverage Azure to access actionable insight, expecting it to be delivered in most relevant form. Leverage AI embedded in existing solutions to optimize business processes.|
-| Data Managers | Responsible for provisioning and managing access to data assets. |
-|Data Analysts / Performance Analysts |Leverage Azure to discover and share new insights from existing data assets or *ad hoc* data. Create one-click AI transformations, consume pre-built models, and generate ML models in clicks.|
-|Data Engineers | Leverage Azure to build, integrate, and manage data and analytics products. Create AI enabled applications / solutions when applicable.|
-|Citizen Data Scientists |Create ML models via powerful visual, drag-and-drop, no-code tools where no coding is necessary |
-| Data Scientists | Use your preferred tools and machine learning frameworks to build scalable data science solutions. Accelerate end-to-end ML lifecycle.|
-| ML Engineers | Enable right processes and infrastructure for easy model deployment and model management. |
+|Product owners| They optimize Azure to transform solutions, bring agility to the business, and optimize business processes.|
+| Solution architects | They propose solutions for the boundaries of the enterprise business network and learn how to diagnose, analyze, design, deploy, and integrate Azure services. |
+|Developer/DevOps engineers|They use Azure DevOps or GitHub to design, build, deploy, test, and maintain continuous integration and delivery processes.|
+| Security engineers <sup>1</sup> | They support teams to design and implement secure Azure infrastructure with best practices. |
+| Technical/business managers <sup>1</sup>|They help to develop an understanding of Azure services, control costs, and optimize your team's operations and agility.|
+|Decision makers/business users|They optimize Azure to gain actionable insights in their most relevant forms and identify AI embedded in current solutions to streamline business processes.|
+| Data managers | They provision and manage access to data assets. |
+|Data/performance analysts |They use Azure to discover and share new insights from existing data assets or as-needed data queries. They create one-click AI transformations, consume prebuilt models, and generate machine learning models quickly.|
+|Data engineers | They use Azure to build, integrate, and manage data and analytics products. When necessary, they also create AI-enabled applications/solutions.|
+|Citizen data scientists |They create machine learning models with powerful visual, drag-and-drop, and no-code tools where coding isn't necessary. |
+| Data scientists | They use preferred tools and machine learning frameworks to build scalable data science solutions. They also accelerate the end-to-end machine learning life cycle.|
+| Machine learning engineers | They support the right processes and infrastructure models to be deployed and managed easily. |
 
->[!NOTE]
-> <sup>1</sup> These roles are assisted by using Azure Policies to control some of the scope over which they would have guidance and control.
+> [!NOTE]
+> Azure policies assist these roles to control some of the scope that they oversee.
 
-## Data Landing Zone Teams
+## Data landing zone teams
 
-The Data Landing Zone Group consists of three teams.
+The data landing zone group consists of three teams:
 
-### Data Product Teams (per Product)
+**Data Product teams (one team per product)**:
 
-- Are responsible for delivering new Data Products such as insights, reports, notebooks, and applications.
-- Partner closely with business analysts and busienss unit stakeholders.
+- Are responsible for delivering new data products such as insights, reports, notebooks, and applications.
+- Partner closely with business analysts and business unit stakeholders.
 - Transform data into new read data stores.
 - Manage access hierarchy (groups) and approval requests.
-- Furnish meta data in data catalogue.
+- Furnish metadata in data catalogs.
 
-### Integration Ops (per integration)
+**Integration ops (one team per integration)**:
 
-- Ingest and Register new read data sources.
+- Ingest and register new read data sources.
 - Manage access hierarchy (groups) and approval requests.
-- Furnish meta data in data catalogues.
+- Furnish metadata in data catalogs.
 
-### Data Landing Zone Ops (One Group per Data Landing Zone)
+**Data landing zone ops (one group per data landing zone)**:
 
-- Operate and maintain their Data Landing Zone instance.
-- Respond to new Data Integration and Data Product service requests.
+- Operate and maintain their data landing zone instance.
+- Respond to new data integration and data product service requests.
 
-### Central or Business Data Office?
+### Decide between a central or business data office
 
-The Data Landing Zone Group can be resourced in different ways depending on the size and organizational structure of your business.
+Depending on your organization's size and structure, a data landing zone group can be assembled in different ways. For example, if you create one data landing zone where the business already has its own set of data engineers, program managers, and solution architects, like a business data office. You can provision a data landing zone and allow the business data office to operate the landing zone based on governance from your central platform group.
 
-For example, you create one data landing zone where the business already has it's own set of data engineers, program managers and solution architects. We will call this a business data office. In this scenario, you could decide to provision a data landing zone and allow the business data office to operate the landing zone, based upon the governance from your central platform group.
+Another option is for when a data landing zone's business doesn't have a business data office to build out their data integrations or data products. In this scenario, the central data office can consider itself a consultancy that shifts people from the bench to work on the data landing zone. Those resources should be embedded into the business to collect and execute on use cases with Scrum or agile methods. Once completed, they would return to the central data office.
 
-In another example, the owning business of a data landing zone doesn't have a business data office to build out their data integrations or data products. In this scenario the central data office should consider themselves a consultancy who would take people off the bench to work on the data landing zone. Those resources should be embedded into the business to collect and execute on use cases in either a SCRUM or AGILE manner. Once completed they would return to the central data office.
+Individuals should work within multidisciplinary teams in both of these scenarios, sharing goals and diverse experience, skills, and approaches that support more effective outcomes than if everyone is in a silo.
 
-In both of these models, these groups of individuals should be working as "multi-disciplinary teams", with shared goals, where the diversity of experience, skills and approaches they bring enablesmore  effective outcomes that if they operated "in silos". 
+> [!NOTE]
+> In the scenario where only one data landing zone is deployed, it's common for businesses to overlap in one data landing zone. This could create crossover functions where integration operations or data product teams are sourced from central and business data offices. However, data landing zone operations functions to be located in the central data office for this scenario.
 
->[!NOTE]
->In the scenario where only a single data landing zone is deployed, it is likely that you will mix businesses into one data landing zone. You might then end up with a crossover of functions where Integration Ops or Data Product teams could be resourced from central and business data offices. However, in this scenario we would recommend that the function of Data Landing Zone Ops is all located in the central data office.
+## Teams within the platform group
 
-## Platform Group Teams
+The platform group consists of two teams:
 
-### Data Platform Ops
+**Data Platform Ops:**
 
-- The Data Platform Ops Group defines common policies for Data Landing Zone, Data Integration and Data Product services.
-- They provision and operate Data Management services such as the data catalog and shared integration runtimes.
-- They instantiate Data Landing Zone scaffolding such as Data Lakes and Metadata Management configuration before passing it over to the Data Landing Zone Ops.
-- Provide support and concierge to stakeholders.
+- Define common policies for data landing zone, integration, and product services.
 
-### Platform Ops
+- Provision and operate data management services like the data catalog and runtimes for shared integration.
 
-- Operate and own the cloud platform all up.
-- They instantiate Data Management Landing Zone and Data Landing Zone scaffolding such as networking, peering, monitoring, and other core services.
+- Instantiate data landing zone scaffolding, including data lakes and configuring how metadata is managed before passing it to data landing zone operations.
 
-## Digital Security Office
+- Support stakeholders.
 
-Digital security spans the whole of the Enterprise Scale Analytics and AI construction set. It is usually a dedicated department lead by a Chief Information Security Officer (CISO). This department will work closely with the Data Platform Ops, Data Governance Review Board, and Architecture Review Board.
+**Platform Operations:**
 
-## Data Governance Roles and Responsibilities
+- Operate and own the cloud platform.
 
-With respect to people, there are a number of data governance roles and responsibilities.These can vary across organization and so the follow roles and responsibilities listed in the table below are provided as guidance only.
+- Instantiate data management landing zone and data landing zone scaffolding, including networking, peering, monitoring, and other core services.
+
+## The digital security office
+
+Digital security deals with the entire management and analytics scenario. It's usually a dedicated department lead by a chief information security officer. This department works closely with data platform ops, the data governance review board, and the architecture review board.
+
+## Data governance roles and responsibilities
+
+There are many data governance roles and responsibilities related to people. The roles and responsibilities can vary across organization. The roles and responsibilities in the table are provided as guidance only.
 
 |Role |   Responsibility|
 |--|--|
-|Executive sponsor (e.g. CFO / CIO)  |  Senior business stakeholder with authority and budget who is accountable for ensuring data governance is established|
-|Data Governance program leader (e.g. CDO or appointed lead) |   The person with overall accountability and responsibility for implementing the data governance program.|
-|Data Governance Control Board |   Includes data governance lead and data owners. Sets success metrics, owns the data governance roadmap, selects working groups, holds the budget for the data governance program, arbitrates when conflicts occur on priorities and definitions of cross functional data|
-|Data Governance Working Group  |  Plan and progress data definition and improvement of a specific data domain (E.g. Customer or Supplier), update Data Governance Control Board on progress, manage stewardship across the enterprise for a specific domain|
-|Data owner   | Senior business stakeholder with authority and budget who is accountable for overseeing the quality and protection of a specific data subject area or data entity across the enterprise and make decisions on who has the right to access and maintain that data and on how it is used|
-|Business data steward |   Business professional responsible for overseeing the quality and protection of a data subject area or data entity. They are typically experts in the data domain and work in a team with other data stewards across the enterprise to monitor and make decisions to ensure data quality is maintained|
-|Data Protection Officer (DPO)   | Senior business stakeholder with authority and budget who is accountable for the protection of personal data specific to compliance legislation in all jurisdictions that the company operates|
-|Data security team  |  Responsible and accountable for data access security and data privacy policy enforcement|
-|Data Publishing Manager   | Responsible and accountable for quality assurance checking and publishing of newly created trusted data assets in a data marketplace for consumers to find and use|
+|Executive sponsor, for example, the CFO or CIO. |  This is a senior business stakeholder with authority and budget. They're accountable for establishing data governance.|
+|Data governance program leader, for example, the chief development officer, or the appointed lead. | This person is accountable and responsible for implementing the data governance program.|
+|Data governance control board |   This board includes a data governance lead and data owners. They establish metrics for success, own the data governance roadmap, select working groups, hold the budget for the data governance program, and mediate during conflicts about prioritizing and defining cross-functional data.|
+|Data governance working group  |  They plan and develop defining data and improving specific data domains (for example, customer, or supplier); update the data governance control board on progress; and manage stewardship across the enterprise for a specific domain.|
+|Data owner   | This is a senior business stakeholder with authority and budget. They're accountable for quality assurance (QA) and protecting a specific data subject area or entity across the enterprise. They decide who can access and maintain that data and how it's used.|
+|Business data steward |   This business professional responsible oversees QA and protects a data subject area or entity. They're often experts in the data domain, work in a team with other data stewards across the enterprise, and monitor and decide how to maintain data quality.|
+|Data protection officer  | This is a senior business stakeholder with authority and budget, accountable for protecting personal data. Their tasks are specific to compliance legislation in all jurisdictions where company operates.|
+|Data security team  |  This team is responsible and accountable for enforcing data access security and a data privacy policy.|
+|Data publishing manager   | This person is responsible and accountable for checking QA and publishing new, trusted data assets in a data marketplace for consumer use.|
 
-:::image type="content" source="images/data-governance-review-board.png" alt-text="data governance review board":::
+:::image type="content" source="./images/data-governance-review-board.png" alt-text="Diagram of the structure of how to organize data governance.":::
 
-Figure 1: Data governance organization structure
+The goal is for businesses to organize governance in a way that allows them to divide and conquer when governing data throughout its life cycle across a hybrid computing environment. One way is to have multiple working groups reporting to a data governance control board, with each working group responsible for a particular data domain or entity, for example, the customer, or a data subject area that consists of multiple data entities.
 
-The objective is to organize in a way that allows you to take a 'divide and conquer' approach to governing data throughout its lifecycle across a hybrid computing environment. One way of doing this is to have multiple working groups reporting into a Data Governance Control Board (Figure 6) with each working group responsible for a particular data domain / data entity (e.g. Customer) or a data subject area that consists of multiple data entities.
+## Other groups
 
-## Other Groups
+Companies can run several smaller teams with key stakeholders and subject matter experts across the entire operating model to maintain a centralized view of the analytics platform.
 
-Across the whole operating model, companies have the option to run several smaller teams with key stakeholders and subject matter experts to maintain a centralized view of the analytics platform.
+### Architecture review board
 
-### Architecture Review Board
+The architecture review board's main functions are to review and assess architectures, and create and maintain standards and references. The board consists of individuals who are experts in their field. Typically, the individuals are domain architects and other technical leaders invited to give opinions when needed.
 
-The Architecture Review Board performs the primary function of reviewing and assessing architectures and creating and maintaining standards and references. The Board consists of individuals who are experts in their field; typically, these will be the domain architects and other technical leaders invited to give opinions where required.
+### Feedback and support operating board
 
-### Feedback and Support Operating Board
+The feedback and support operating board receives feedback about processes and works with the other groups to create backlog items to address gaps and improve the solution.
 
-The Feedback and Support Operating Board are responsible for taking feedback on processes and working with the other groups to create backlog items to address gaps and improvements to the solution.
+## Next steps
 
-For further details on all how the groups align inside the Data Management Landing Zone and Data Landing Zone(s) please see [Enterprise Scale Analytics and AI DevOps Models](organize-team-functions.md).
+For more information about how groups align within a data management landing zone and data landing zones, see [Understand teams and functions for data management and analytics in Azure](./organize-team-functions.md).

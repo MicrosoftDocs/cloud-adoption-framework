@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Workload classification before migration
 
-During each iteration of any migration process, one or more workloads will be migrated and promoted to production. Prior to either of those migration activities, it is important to classify each workload. Classification helps clarify governance, security, operations, and 'data management and analytics' requirements.
+During each iteration of any migration process, one or more workloads will be migrated and promoted to production. Prior to either of those migration activities, it is important to classify each workload. Classification helps clarify governance, security, operations, and data management and analytics requirements.
 
 The following guidance builds on the suggested tagging requirements outlined in [Define your tagging strategy](../../../ready/azure-best-practices/resource-tagging.md) by adding important [operations](../../../manage/considerations/criticality.md#criticality-scale) and [governance](../../../govern/guides/complex/prescriptive-guidance.md#resource-tagging) elements.
 

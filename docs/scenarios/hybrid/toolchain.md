@@ -6,7 +6,7 @@ ms.author: brblanch
 ms.date: 01/11/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: general
+ms.subservice: scenario
 ms.custom: e2e-hybrid
 ---
 
@@ -32,6 +32,12 @@ This article series helps to integrate these tools into relevant processes that 
 - [Azure Arc-enabled SQL Server](/sql/sql-server/azure-arc/overview?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json) is a part of the Azure Arc-enabled servers that extends Azure services to SQL Server instances, hosted outside of Azure in the customer's datacenter, on the edge or in a multicloud environment.
 - [Azure Arc-enabled data services](/azure/azure-arc/data/overview?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json) is a hybrid service that makes it possible to run Azure data services on-premises, at the edge, and in public clouds by using Kubernetes and the infrastructure of your choice.
 - [Azure Arc-enabled SQL Managed Instance](/azure/azure-arc/data/managed-instance-overview?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json) is an Azure SQL Database data service that can be created on your choice of infrastructure that hosts Azure Arc-enabled data services.
+- Azure Arc-enabled application services is a hybrid service that makes it possible to run Azure application services on-premises, at the edge, and in public clouds by using Kubernetes and the infrastructure of your choice.
+  - [Web Apps](/azure/app-service/overview-arc-integration?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
+  - [Functions](/azure/app-service/overview-arc-integration?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
+  - [Logic Apps](/azure/app-service/overview-arc-integration?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
+  - [Event Grid](/azure/event-grid/kubernetes/?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
+  - [Azure API Management gateway](/azure/api-management/how-to-deploy-self-hosted-gateway-azure-arc?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
 
 ## Deploy hybrid and multicloud solutions
 

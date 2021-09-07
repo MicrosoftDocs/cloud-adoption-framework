@@ -3,10 +3,10 @@ title: Get started with the Cloud Adoption Framework
 description: Find the most relevant getting started guide for your cloud adoption needs
 author: JanetCThomas
 ms.author: janet
-ms.date: 08/27/2020
+ms.date: 07/29/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: overview
+ms.subservice: general
 ms.custom: internal
 ---
 
@@ -27,15 +27,21 @@ Each of the following links takes you to questions that are typically asked when
 
 ## Cloud adoption scenarios
 
-Your organization's cloud adoption effort will tend to align toward supporting the requirements of the long-term strategic goals of your cloud journey. Depending on whether you're considering a comprehensive hybrid and multicloud effort, or preparing for Kubernetes and container integration into your cloud strategy, we have updated guidance for a [hybrid and multicloud adoption scenario](../scenarios/hybrid/scenario-overview.md) and a [modern application platform scenario](../scenarios/aks/index.md).
+Your organization's cloud adoption effort should support long-term strategic goals for your cloud journey. Depending on whether you're considering a comprehensive hybrid and multicloud effort, preparing for Kubernetes and container integration into your cloud strategy, or designing a cloud adoption journey for a retail business, we have updated guidance for these scenarios and more.
+
+- [Hybrid and multicloud adoption scenario](../scenarios/hybrid/scenario-overview.md)
+- [Modern application platform scenario](../scenarios/aks/index.md)
+- [SAP adoption scenario](../scenarios/sap/index.md)
+- [Desktop virtualization](../scenarios/wvd/index.md)
+- [Cloud adoption for the retail industry](../industry/retail/index.md)
 
 ## Cloud adoption antipatterns
 
-You may encounter missteps with design, planning, or implementation when migrating to the cloud. We have updated detailed guidance on [antipatterns](../antipatterns/antipatterns-to-avoid.md), that can block innovation and prevent businesses from adopting and realizing goals.
+You might encounter missteps with design, planning, or implementation when migrating to the cloud. We have updated detailed guidance on [antipatterns](../antipatterns/antipatterns-to-avoid.md), that can block innovation and prevent businesses from adopting and realizing goals.
 
 ## Align foundation
 
-Your company's cloud adoption journey is typically guided with foundational decisions that will affect the outcomes of your cloud adoption journey. The following information can help you make core decisions, and record them as a reference to be used during the cloud adoption lifecycle.
+Your company's cloud adoption journey is guided with foundational decisions that affect the outcomes of your cloud adoption journey. The following information can help you make core decisions, and record them as a reference to be used during the cloud adoption lifecycle.
 
 - [Get started aligning foundation decisions](./cloud-concepts.md)
 - [How does Azure work](./what-is-azure.md)
@@ -48,14 +54,14 @@ Your company's cloud adoption journey is typically guided with foundational deci
 Cloud adoption requires technical change, but to digitally transform with the cloud, it requires more than just IT. Use these guides to start aligning various teams to accelerate migration and innovation efforts.
 
 | Guide | Description |
-| ----- | ----------- |
-| [We want to migrate existing workloads to the cloud.](./migrate.md)                   | This guide is a great starting point if your primary focus is migrating on-premises workloads to the cloud. |
-| [We want to build new products and services in the cloud.](./innovate.md)             | This guide can help you prepare to deploy innovative solutions to the cloud.                                       |
-| [We're blocked by environment design and configuration.](./design-and-configuration.md) | This guide provides a quick approach to designing and configuring your environment.                                           |
+|--|--|
+| [We want to migrate existing workloads to the cloud](./migrate.md). | This guide is a great starting point if your primary focus is migrating on-premises workloads to the cloud. |
+| [We want to build new products and services in the cloud](./innovate.md). | This guide can help you prepare to deploy innovative solutions to the cloud. |
+| [We're blocked by environment design and configuration](./design-and-configuration.md). | This guide provides a quick approach to designing and configuring your environment. |
 
 ## Improve controls
 
-As your cloud adoption journey progresses, a solid operating model can help ensure that wise decisions are made. You'll also want to consider organizational change. These guides can help you align people and improve operations to develop your cloud operating model.
+As your cloud adoption journey progresses, a solid operating model can help ensure that wise decisions are made. You'll also want to consider organizational change. These guides help you align people and improve operations to develop your cloud operating model.
 
 | Guide | Description |
 | ----- | ----------- |

@@ -4,7 +4,7 @@ description: Gain an understanding of how observability helps drive maturity in 
 author: mgoedtel
 ms.author: magoedte
 ms.date: 03/22/2021
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: manage
 ---

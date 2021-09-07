@@ -4,7 +4,7 @@ description: Gain an understanding of how to define an effective cloud monitorin
 author: mgoedtel
 ms.author: brblanch
 ms.date: 03/22/2021
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: manage
 ms.custom: think-tank

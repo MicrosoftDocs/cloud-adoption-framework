@@ -6,7 +6,8 @@ ms.author: brblanch
 ms.date: 05/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
+ms.custom: internal, e2e-retail
 ---
 
 # Azure landing zones for the retail industry
@@ -31,7 +32,7 @@ If you plan to focus on central operations, the *start small* approach might be 
 
 ## Network: Branch strategy
 
-Connectivity to your edge locations, specifically brick and mortar retail locations, might be a part of your cloud adoption plan. In that plan, an understanding of [perimeter networks](/azure/cloud-adoption-framework/ready/azure-best-practices/perimeter-networks) is a required part of your overall Azure landing zone strategy.
+Connectivity to your edge locations, specifically brick and mortar retail locations, might be a part of your cloud adoption plan. In that plan, an understanding of [perimeter networks](../../ready/azure-best-practices/perimeter-networks.md) is a required part of your overall Azure landing zone strategy.
 
 Consider traffic patterns, advanced security controls, and other practices in addition to perimeter network connections. It's easier to deploy these practices using an enterprise-scale landing zone implementation option from the Azure landing zones.
 

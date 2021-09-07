@@ -1,6 +1,6 @@
 ---
 title: What is data governance?
-description: What is data governance?
+description: Learn about data governance for Azure.
 author: mboswell
 ms.author: mboswell
 ms.date: 06/22/2021
@@ -23,11 +23,11 @@ There are many reasons why data governance is needed. These reasons include the 
 
 ## Trusted data
 
-For many companies, the expectation in the boardroom is that data and artificial intelligence (AI) will drive competitive advantage. As a result, executives are eager to sponsor AI initiatives in their determination to become data driven. For AI to become effective, the data it's using must be trusted. Otherwise, decision accuracy might be compromised, decisions might be delayed, or actions might be missed, which can affect on the bottom line. Companies don't want the quality of their data to be "garbage in, garbage out". It might seem simple to fix data quality, until you look at the effect that digital transformation has had on data.
+For many companies, the expectation in the boardroom is that data and AI will drive competitive advantage. As a result, executives are eager to sponsor AI initiatives in their determination to become data-driven. For AI to become effective, the data it's using must be trusted. Otherwise, decision accuracy might be compromised, decisions might be delayed, or actions might be missed, which can affect on the bottom line. Companies don't want the quality of their data to be "garbage in, garbage out". It might seem simple to fix data quality, until you look at the effect that digital transformation has had on data.
 
-For many companies, the introduction of digital transformation has resulted in a more complex operating environment. The environment spans the edge, multiple clouds, and data centers. One survey showed that 81 percent of companies surveyed had systems running in multiple public clouds, and one or more private or dedicated clouds. This data can mean that both operational and analytical systems are running in the cloud and the data center. Examples of operational transaction processing systems that run in the cloud include Microsoft Dynamics, Workday, SalesForce, ServiceNow, and Marketo. Analytical systems that run in the cloud might include data warehouses, graph databases, data lakes used by data scientists, and real-time IoT streaming analytic applications. The result is that companies have a hybrid environment with data in multiple data stores, spread across their digital landscape.
+For many companies, the introduction of digital transformation has resulted in a more complex operating environment. The environment spans the edge, multiple clouds, and datacenters. This can mean that both operational and analytical systems are running in the cloud and the datacenter. Examples of operational transaction processing systems that run in the cloud include Microsoft Dynamics, Workday, SalesForce, ServiceNow, and Marketo. Analytical systems that run in the cloud might include data warehouses, graph databases, data lakes used by data scientists, and real-time IoT streaming analytic applications. The result is that companies have a hybrid environment with data in multiple data stores, spread across their digital landscape.
 
-:::image type="content" source="images/distributed-data-estate.png" alt-text="Diagram of distributed data estate":::
+:::image type="content" source="./images/distributed-data-estate.png" alt-text="Diagram of the distributed data estate.":::
 
 These data stores include data stored in edge databases, relational or NoSQL database management systems, files, cloud storage, Hadoop systems, and scalable message queuing systems, like Kafka.
 
@@ -40,14 +40,14 @@ With data spread out across a hybrid multicloud and a distributed-data landscape
 - Data quality
 
 - Policy creation
--
+
 - Data sharing
 
 - Metadata
 
 ### The need to protect data
 
-The other major driver for data governance is data protection. Data protection can help you be compliant with regulatory legislation such as the European Union General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA). It can help you prevent data breaches. Data privacy, and the growing number of data breaches, has made data protection a top priority in the boardroom. These breaches highlight the risk to sensitive data, such as personally identifiable customer data. The consequences of data privacy violation or a data security breach are many, and can include:
+The other major driver for data governance is data protection. Data protection can help you be compliant with regulatory legislation. It can help you prevent data breaches. Data privacy, and the growing number of data breaches, has made data protection a top priority in the boardroom. These breaches highlight the risk to sensitive data, such as personally identifiable customer data. The consequences of data privacy violation or a data security breach are many, and can include:
 
 - Loss or serious damage to brand image
 
@@ -59,10 +59,14 @@ The other major driver for data governance is data protection. Data protection c
 
 - Legal action
 
-- The "Domino effect" of the breach, for example, customers might fall victim to identity theft
+- The "domino effect" of the breach, for example, customers might fall victim to identity theft
 
 In most cases, publicly quoted companies must declare these breaches.
 
 If breaches occur, customers are more likely to blame the company first, rather than the hacker. The customer might boycott the company for several months or might never return.
 
-Failure to comply with regulatory legislation like GDPR and CCPA on data privacy might result in significant financial penalties. Governing your data will help you avoid such risks.
+Failure to comply with regulatory legislation on data privacy might result in significant financial penalties. Governing your data will help you avoid such risks.
+
+## Next steps
+
+[Integrate data management and analytics into your cloud adoption strategy](./strategy.md)
