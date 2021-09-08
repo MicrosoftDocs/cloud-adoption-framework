@@ -13,8 +13,18 @@ ms.custom: internal, e2e-retail
 # Industry Priority Scenarios
 
 Industry Priority Scenarios (IPS) represent Microsoft’s approach to current addressable needs within the retail industry. Each scenario is backed by products and services within our portfolio that enable retail organizations to solve those challenges and drive digital transformation forward. 
-There are four Industry Priority Scenarios for retail:
 
+
+There are four Industry Priority Scenarios for retail:
+- Know your customers 
+- Empower your employees
+- Deliver intelligent supply chain
+- Reimagine retail
+
+
+|Industry Priority Scenario (IPS)|Know your customers|Empower your employees|Build a resilient supply chain|Reimagine retail|
+|--------------------------------|-------------------|----------------------|------------------------------|----------------|
+|Key message|                    Create digital experiences,and use AI and predictive analytics to anticipate evolving customer needs and deliver individualized interactions across channels|Enable secure digital collaboration across your business and reduce costs|Gain visibility across your end-to-end supply chain using technology solutions|Create innovative customer experiences, optimize in-store operations, and use technology to evolve products, services, and business models|
 
 ## Organizational alignment impact
 
