@@ -112,7 +112,7 @@ It is recommended to assign the policy to the top-level management group and use
 
 ### Considerations when assigning this policy definition
 
-The policy shown above blocks the creation of private endpoints in a different subscription than the service itself (represented as connections A and D in Figure 1). If this is a requirement for certain use-cases, we are recommending using.
+The policy shown above blocks the creation of private endpoints in a different subscription than the service itself (represented as connections A and D in Figure 1). If this is a requirement for certain use-cases, we recommend using policy exemptions.
 
 ## Scenario 2: Deny connections from private endpoints created in other tenants
 
