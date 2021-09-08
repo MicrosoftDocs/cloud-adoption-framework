@@ -37,7 +37,7 @@ Cloud policy reviews align existing IT governance and IT security policies with 
 - [Resource Consistency discipline](../resource-consistency/index.md)
 - [Deployment Acceleration discipline](../deployment-acceleration/index.md).
 
-For each of these disciplines, the review process follows these steps:
+For these disciplines, the review process follows these steps:
 
 1. Review existing on-premises policies related to the specific discipline, looking for two key data points: legacy dependencies and identified business risks.
 2. Evaluate each business risk by asking a simple question: does the business risk still exist in a cloud model?
