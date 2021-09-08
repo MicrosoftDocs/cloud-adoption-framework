@@ -48,11 +48,13 @@ The clock speed in retail is getting faster. The average consumer now expects ne
 The ability to successfully leverage vast, multi-variate, real-time, and trusted data and algorithms to best find correlations and make predictions is key to gaining agility and resilience in the end-to-end supply chain and fulfilling customer demand at scale. The use case information that follows is a helpful example of how Delivering intelligent supply chain changes the game for retailers.  
 
 
-## Compliance: PCI DSS
+## Reimagine retail
 
-Your retail organization might require compliance with Payment Card Industry data security standards [PCI DSS](/azure/compliance/offerings/offering-pci-dss). But PCI DSS is just one example of the compliance requirements commonly seen in retail cloud adoption requirements.
+While there’s no crystal ball to help us predict what customers will demand next, there are actions that retailers can take today to evolve their products, services and business models in ways that are likely to stick. 
 
-Your cloud adoption strategy and plan might require adherence to regulatory compliance standards. If so, review the compliance section of the [governance for retail](./govern.md) article before deploying your Azure landing zones.
+The retailers who will be successful tomorrow are embracing digital transformation today to reimagine retail and plan for their future today. This means not just adopting the latest technology (AI, IoT, Open APIs, and more), but implementing business models that are truly transformative and building in-house digital capabilities on top of that technology. It’s these digital capabilities that will form the foundation for continued viability. 
+To illustrate just one aspect of what’s possible when reimagining retail, the rest of this section will detail a use case.
+
 
 ## Next steps
 
