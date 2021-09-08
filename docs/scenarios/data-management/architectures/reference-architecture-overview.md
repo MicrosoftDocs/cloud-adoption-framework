@@ -34,6 +34,6 @@ This reference architecture is written for customers that want to use enterprise
 
 ## Next Steps
 
-[Learn about Adatum Corporation scenario](reference-architecture-adatum.md)
-[Learn about Relecloud scenario](reference-architecture-relecloud.md)
-[Learn about Lamna Healthcare](reference-architecture-lamna.md)
+* [Learn about Adatum Corporation scenario](reference-architecture-adatum.md)
+* [Learn about Relecloud scenario](reference-architecture-relecloud.md)
+* [Learn about Lamna Healthcare](reference-architecture-lamna.md)
