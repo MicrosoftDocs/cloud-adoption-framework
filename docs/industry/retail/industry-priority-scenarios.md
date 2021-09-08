@@ -26,9 +26,9 @@ There are four Industry Priority Scenarios for retail:
 |--------------------------------|-------------------|----------------------|------------------------------|----------------|
 |Key message|                    Create digital experiences,and use AI and predictive analytics to anticipate evolving customer needs and deliver individualized interactions across channels|Enable secure digital collaboration across your business and reduce costs|Gain visibility across your end-to-end supply chain using technology solutions|Create innovative customer experiences, optimize in-store operations, and use technology to evolve products, services, and business models|
 
-## Organizational alignment impact
+## Know your customers
 
-For retail companies, IT operations are heavily influenced by the company's historical growth patterns. Specifically, the impact those growth patterns have had on your organizational structures across your technology teams. To understand how this influences operations management, see [Initial organizational alignment](./organize.md#common-growth-patterns-for-retailers).
+Great customer service is—and has long been—the core art of retail. But the way consumers engage with retailers has changed, and the way retailers get to know them along with it. Fortunately, data and predictive AI offers retailers the opportunity to create digital customer experiences that take customer service to the next level while unlocking new business opportunities.
 
 - Will central IT, a cloud center of excellence (CCoE), or other forms of centralized operations be responsible for operating all workloads?
 - Does your strategy and plan require your brick and mortar locations to be integrated into your cloud environment?
