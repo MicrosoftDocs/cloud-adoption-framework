@@ -14,6 +14,8 @@ ms.subservice: ready
 
 This reference architecture is written for customers that want to use enterprise-scale for analytics and AI not only for scalability but also for security of their data.  It demonstrates how access to sensitive data can be controlled and how appropriately desensitized data can be shared with analysts.
 
+## Customer profile
+
 **Lamna Healthcare** offers patient management services to healthcare providers.  Through the normal course of their business, they handle highly sensitive patient data.  Access to the detailed data must be carefully restricted.  However, Lamna would also like to safely use some version of this data to inform its business practices.  They need a mechanism to share the data with analysts that does not violate the patients' trust or data protection laws.
 
 ## Current situation

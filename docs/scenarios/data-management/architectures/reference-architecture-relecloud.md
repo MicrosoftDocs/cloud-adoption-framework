@@ -14,6 +14,8 @@ ms.subservice: ready
 
 This reference architecture is relevant to customers that have already implemented a basic version of enterprise-scale for analytics and AI and are now ready to host a new business unit that is modernizing its analytics operations.  It demonstrates a more complex scenario with multiple landing zones, multiple data integrations, and multiple data products.
 
+## Customer profile
+
 **Relecloud** is a private cloud provider offering shared computing and storage resources to companies around the globe.  Data analysts in the operations group use telemetry data from the cloud services to understand how their customers are utilizing the platform.  A separate team of analysts in the billing group studies invoicing data to provide insights on which services generate the most revenue.
 
 ## Current situation
