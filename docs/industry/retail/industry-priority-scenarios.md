@@ -34,17 +34,19 @@ Great customer service is—and has long been—the core art of retail. But the 
 - Does your strategy and plan require your brick and mortar locations to be integrated into your cloud environment?
 - Does your strategy and plan include any deployments that require adherence to regulatory compliance standards, such as the Payment Card Industry Data Security Standard (PCI DSS)?
 
-## Operating model alignment
+## Empower your employees
 
-Do you plan to enable enterprise operations, and need to enable a separation of duties between IT and workload teams? Then the enterprise-scale implementation options might work best to accelerate your environmental configuration.
+The retail industry is undergoing unprecedented change. As the pace of business continues to quicken, the importance of arming employees at every level with secure, compliant tools only grows. Retailers that embrace analytics, AI, and virtual desktop technology to address this need position themselves to ensure secure digital collaboration while reducing costs.
 
-If you plan to focus on central operations, the *start small* approach might be a better implementation option. With this approach, make sure you execute the [Govern methodology](./govern.md) and [the Manage methodology](./manage.md) in parallel with your cloud adoption plan.
+A large part of empowering employees is equipping them with helpful tools and insights—regardless of their role or location. Whether they’re a line-of-business contributor working from home or a firstline worker helping a customer in-store, the right equipment and information are critical to delivering impeccable customer service, building customer trust and loyalty, and ultimately growing sales. 
 
-## Network: Branch strategy
 
-Connectivity to your edge locations, specifically brick and mortar retail locations, might be a part of your cloud adoption plan. In that plan, an understanding of [perimeter networks](../../ready/azure-best-practices/perimeter-networks.md) is a required part of your overall Azure landing zone strategy.
+## Build a resilient supply chain
 
-Consider traffic patterns, advanced security controls, and other practices in addition to perimeter network connections. It's easier to deploy these practices using an enterprise-scale landing zone implementation option from the Azure landing zones.
+The clock speed in retail is getting faster. The average consumer now expects near-instant gratification from both their online and in-store shopping experiences. For retailers, this means that working toward a more resilient supply chain is critical. They must be able to respond to customer demand for fast and flexible delivery and get the right product, to the right place, at the right time. And if anything goes wrong, they must be able to quickly determine potential end-customer exposure as well as the fault point in the supply chain to build and maintain customer loyalty. 
+
+The ability to successfully leverage vast, multi-variate, real-time, and trusted data and algorithms to best find correlations and make predictions is key to gaining agility and resilience in the end-to-end supply chain and fulfilling customer demand at scale. The use case information that follows is a helpful example of how Delivering intelligent supply chain changes the game for retailers.  
+
 
 ## Compliance: PCI DSS
 
