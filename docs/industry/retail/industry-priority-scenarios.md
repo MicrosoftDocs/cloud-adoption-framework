@@ -1,20 +1,20 @@
 ---
-title: Azure landing zones for the retail industry
-description: Learn how to prepare Microsoft Azure environments for retail industry cloud adoption using Azure landing zones.
-author: BrianBlanchard
-ms.author: brblanch
-ms.date: 05/01/2021
+title: Retail Industry Priority Scenarios
+description: Learn how Microsoft approach to Retail Industry Priority Scenarios.
+author: Jamin Almond
+ms.author: jaalmond
+ms.date: 09/08/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: internal, e2e-retail
 ---
 
-# Azure landing zones for the retail industry
+# Industry Priority Scenarios
 
-The [Ready methodology](../../ready/index.md) in the Cloud Adoption Framework for Azure guides the creation of Azure environments using [Azure landing zones](../../ready/landing-zone/index.md). Azure landing zones give you many [implementation options](../../ready/landing-zone/implementation-options.md) built around a set of [common design areas](../../ready/landing-zone/design-areas.md).
+Industry Priority Scenarios (IPS) represent Microsoft’s approach to current addressable needs within the retail industry. Each scenario is backed by products and services within our portfolio that enable retail organizations to solve those challenges and drive digital transformation forward. 
+There are four Industry Priority Scenarios for retail:
 
-Azure landing zones allow you to start with a small implementation and expand over time. For more sophisticated environments, you can start with enterprise-scale implementation options. The variety of implementation options ensure that you can start with an Azure environment that meets your short term needs. Over time, these same environments can be extended to meet your long term operational needs.
 
 ## Organizational alignment impact
 
