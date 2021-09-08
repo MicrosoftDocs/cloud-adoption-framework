@@ -29,8 +29,6 @@ These two scenarios are depicted in figure 1 below:
 
 For both scenarios, it is as simple as specifying the resource ID of the service and manually approving the private endpoint connection on the respective service. In addition, the user requires some RBAC access to execute these actions. This will be further described in the sections below.
 
-Limiting or blocking these scenarios are of high interest to companies within highly regulated industries such as health care and finance who are required to enforce stricter levels of control on internal users administering their cloud service provider (CSP) environments.
-
 The following sections on this article will describe options to prevent the provisioning of private endpoints across Azure AD tenants as explained on the respective scenarios mentioned above.
 
 ## Scenario 1: Deny private endpoints linked to services in other tenants
