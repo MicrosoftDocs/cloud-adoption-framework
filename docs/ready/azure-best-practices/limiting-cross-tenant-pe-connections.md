@@ -18,8 +18,8 @@ Customers are increasingly using private endpoints in their tenants to connect t
 
 Private Endpoints can be used to control the traffic within a customer’s Azure environment using an existing network perimeter, however there are scenarios where customers are required to ensure that private endpoint connections are kept within the corporate Azure AD tenant only. These scenarios are summarized below and arise  from the fact that a rogue admin could:
 
-1. **Scenario 1**: Create private endpoints on the customer virtual network, which are linked to services that are hosted outside the customer environment (another Azure AD tenant).
-2. **Scenario 2**: Create private endpoints in other Azure AD tenants that are linked to services hosted in the customers Azure AD tenant.
+1. **Scenario 1** (represented as connection A in Figure 1): Create private endpoints on the customer virtual network, which are linked to services that are hosted outside the customer environment (another Azure AD tenant).
+2. **Scenario 2** (represented as connection B in Figure 1): Create private endpoints in other Azure AD tenants that are linked to services hosted in the customers Azure AD tenant.
 
 These two scenarios are depicted in figure 1 below:
 
@@ -114,7 +114,7 @@ It is recommended to assign the policy to the top-level management group and use
 
 ### Considerations when assigning this policy definition
 
-The policy shown above blocks the creation of private endpoints in a different subscription than the service itself (represented as connections A and D in Figure 1). If this is a requirement for certain use-cases, we are recommending using . There are no other known patterns that are blocked by this policy definition.
+The policy shown above blocks the creation of private endpoints in a different subscription than the service itself (represented as connections A and D in Figure 1). If this is a requirement for certain use-cases, we are recommending using.
 
 ## Scenario 2: Deny connections from private endpoints created in other tenants
 
@@ -132,7 +132,7 @@ Once the private endpoint is approved by the rogue admin or service owner, data 
 
 ### Mitigation
 
-Service specific policies should be used to deny these scenarios across the customer tenant. Private endpoint connections are sub-resources of the respective services and therefore show up under the properties section of the respective service. Incompliant connections can be denied using the [following policy definition (example for Azure Storage)](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/Storage/params.policyDefinition.Deny-Storage-PrivateEndpointConnections.json):
+Service specific policies should be used to deny these scenarios across the customer tenant. Private endpoint connections are sub-resources of the respective services and therefore show up under their properties section. Incompliant connections can be denied using the [following policy definition (example for Azure Storage)](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/Storage/params.policyDefinition.Deny-Storage-PrivateEndpointConnections.json):
 
 ```json
 "if": {
