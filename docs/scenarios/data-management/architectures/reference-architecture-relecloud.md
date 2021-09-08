@@ -70,7 +70,7 @@ The billing analysts will create a new data product called "Revenue by Service" 
 
 Like the data integrations, the data product will also rely on a shared Azure Synapse workspace.
 
-![Architectural Diagram](images/relecloud.svg)
+:::image type="content" source="../images/relecloud.svg" alt-text="architectural diagram" lightbox="../images/relecloud.svg":::
 
 **Figure 1: Architectural Diagram**  Note that not all Azure services are represented in the diagram.  It has been simplified to accentuate the core concepts of how resources are organized within the architecture.</sub>
 
@@ -87,8 +87,6 @@ The customer scenario outlined above can be deployed by referencing the architec
 :::image type="content" source="../images/relecloud-billing-data-landing-zone.png" alt-text="Relecloud Corporation Billing Data Landing Zone" lightbox="../images/relecloud-billing-data-landing-zone.png":::
 
 ### Operations Data Landing Zone Deployment
-
-![Relecloud Corporation Operations Data Landing Zone](images/relecloud-operations-data-landing-zone.png)
 
 :::image type="content" source="../images/relecloud-operations-data-landing-zone.png" alt-text="Relecloud Corporation Operations Data Landing Zone" lightbox="../images/relecloud-operations-data-landing-zone.png":::
 
@@ -113,5 +111,5 @@ Use the following templates to deploy the other data integrations and data produ
 
 ## Next steps
 
-- [Learn more about using Azure Machine Learning as a data product](https://docs.microsoft.com/azure/cloud-adoption-framework/scenarios/data-management/best-practices/azure-machine-learning)
-- [Learn how to power your data strategy with Azure Synapse Analytics](https://docs.microsoft.com/azure/cloud-adoption-framework/scenarios/data-management/best-practices/synapse)
+- [Learn more about using Azure Machine Learning as a data product](/azure/cloud-adoption-framework/scenarios/data-management/best-practices/azure-machine-learning)
+- [Learn how to power your data strategy with Azure Synapse Analytics](/azure/cloud-adoption-framework/scenarios/data-management/best-practices/synapse)
