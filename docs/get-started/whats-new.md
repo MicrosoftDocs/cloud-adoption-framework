@@ -20,18 +20,30 @@ This framework is built collaboratively with customers, partners, and internal M
 
 ### Data management and analytics scenario
 
-This release of the Cloud Adoption Framework provides considerations to help you prepare for data management and analytics in the cloud. This scenario focuses on enabling two targeted outcomes: analytics and data governance.
+This release of the Cloud Adoption Framework provides considerations to help you prepare for [data management and analytics in the cloud](../scenarios/data-management/index.md) . 
+
+This scenario focuses on enabling a few targeted outcomes: 
+
+- Mature your analytics, AI/ML, and IoT capabilities in the cloud
+- Establish appropriate data governance across all data initiatives to move forward with confidence
+- Minimize technical debt by considering Well-Architected principles across all data workloads
+- Automate all three of the above with the codebase for Enterprise-Scale for Analytics
+- Quickly access skilling resources in documentation or learning modules for the various Azure services required across this scenario
+
+Get started with this scenario using the links below:
 
 | Article | Description |
 |--|--|
 | [Introduction to the data management and analytics scenario](../scenarios/data-management/index.md) | In this article we introduce the principles of the data management and analytics scenario.|
 | [Data governance](../scenarios/data-management/overview-data-governance.md) | This guidance reviews how data governance ensures data that's used by your business is discoverable, accurate, trusted, and can be protected. |
-| [Build an initial strategy](../scenarios/data-management/strategy.md) | In this article, we review considerations for data management and analytics that will have an impact on your cloud adoption strategy.
+| [Build an initial strategy](../scenarios/data-management/strategy.md) | In this article, review considerations for data management and analytics that will have an impact on your cloud adoption strategy.
+| [Define a plan](../scenarios/data-management/plan.md) | Establish a clear plan for rationalizing data, skilling people, and tips for ensuring success.
 | [Azure landing zones for data management and analytics](../scenarios/data-management/ready.md) | This guidance provides an overview of the data management landing zone. A data management landing zone is responsible for the governance of the platform and enables communication to ingest data sources from Azure, third-party clouds, and on-premises.
+| [Enterprise-scale for analytics](../scenarios/data-management/enterprise-scale.md) | Automation to accelerate realization of this scenario.
 | [Govern your data estate](../scenarios/data-management/govern.md) | This article reviews a data governance solution to surround the specific data entities and data subject areas with people, processes, policies, and technology.
-| [Secure your data estate](../scenarios/data-management/secure.md) | We provide guidance on how to use governance to limit security risk while providing access for data analytics.
+| [Secure your data estate](../scenarios/data-management/secure.md) | Best practices to improve security of your entire data estate.
 | [Organize people and teams](../scenarios/data-management/organize.md) |Learn about how to organize data operations team members for the data management and analytics scenario in Azure.
-| [Well-architected framework for data workloads](../scenarios/data-management/waf-placeholder.md) | In this article, we review how you can apply principals of the Well-Architected Framework, to the management of your data workloads.
+| [Well-architected framework for data workloads](../scenarios/data-management/waf-placeholder.md) | In this article, we review how you can apply principals of the Well-Architected Framework, to each of the data workloads within your data estate to minimize technical debt from the beginning.
 
 ## July 2021
 
