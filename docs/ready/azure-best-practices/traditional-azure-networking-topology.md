@@ -142,7 +142,7 @@ The following figure shows both options:
   
   - To simplify route configuration, [disable BGP propagation](/azure/virtual-network/virtual-networks-udr-overview#border-gateway-protocol) on the spoke route tables.
 
-- When your organization requires hub-and-spoke network architectures across more than two Azure regions, global transit connectivity between landing zones virtual networks across Azure regions is required, and you want to minimize network management overhead, it's recommended to evaluate a [managed global transit network architecture](/azure/cloud-adoption-framework/ready/azure-best-practices/virtual-wan-network-topology) that's based on Virtual WAN.
+- When your organization requires hub-and-spoke network architectures across more than two Azure regions, global transit connectivity between landing zones virtual networks across Azure regions is required, and you want to minimize network management overhead, it's recommended to evaluate a [managed global transit network architecture](./virtual-wan-network-topology.md) that's based on Virtual WAN.
 
 - Deploy each region's hub network resources into separate resource groups, and sort them into each deployed region.
 
