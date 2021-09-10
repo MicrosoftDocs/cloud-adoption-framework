@@ -40,16 +40,16 @@ Central to your business thinking must be how to:
 - Drive a way to enforce data governance and security by default
 - Drive teams to always prioritize outcomes to the business, instead of obsessing over the underlying technology
 
-If you don't have an implementation of enterprise-scale landing zones, then it's important that you check with your cloud teams to be sure the pre-requisites can be met. For more information, see [Ensure the environment is prepared for the cloud adoption plan](/azure/cloud-adoption-framework/ready/).
+If you don't have an implementation of enterprise-scale landing zones, then it's important that you check with your cloud teams to be sure the pre-requisites can be met. For more information, see [Ensure the environment is prepared for the cloud adoption plan](../../ready/index.md).
 
 ## Data management and analytics Azure landing zone acceleration
 
 Enterprise-scale for analytics and AI requires an understanding of landing zones and makes use of infrastructure-as-code to deploy end to end solution templates. These solution templates are customizable and are a starter for most data management and analytics scenarios.
 
-- [What is a landing zone?](/azure/cloud-adoption-framework/ready/landing-zone/)
-- [Choose a landing zone option](/azure/cloud-adoption-framework/ready/landing-zone/choose-landing-zone-option)
-- [Refactoring landing zones](/azure/cloud-adoption-framework/ready/landing-zone/refactor)
-- [Refactoring landing zones](/azure/cloud-adoption-framework/ready/landing-zone/refactor)
+- [What is a landing zone?](../../ready/landing-zone/index.md)
+- [Choose a landing zone option](../../ready/landing-zone/choose-landing-zone-option.md)
+- [Refactoring landing zones](../../ready/landing-zone/refactor.md)
+- [Refactoring landing zones](../../ready/landing-zone/refactor.md)
 - [Data management and analytics landing zone](./enterprise-scale-landing-zone.md)
 
 ## Next steps
