@@ -71,7 +71,7 @@ For an overview of business continuity with Azure SQL Database, see [Overview of
 
 ### Azure Synapse Analytics
 
-For an overview of business continuity with Azure Synapse Analytics, see [High availability for Azure Synapse Analytics](/azure/cloud-adoption-framework/migrate/azure-best-practices/analytics/azure-synapse).
+For an overview of business continuity with Azure Synapse Analytics, see [High availability for Azure Synapse Analytics](../../migrate/azure-best-practices/analytics/azure-synapse.md).
 
 ## Next steps
 

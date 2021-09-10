@@ -1,5 +1,5 @@
 ---
-title: "Standard enterprise governance: Best practices explained"
+title: 'Standard enterprise governance: Best practices explained'
 description: Use the Cloud Adoption Framework for Azure to establish a minimum viable product (MVP) for governance that reflects best practices for a standard enterprise.
 author: BrianBlanchard
 ms.author: brblanch
@@ -85,7 +85,7 @@ Logging and reporting decisions determine how your store log data and how the mo
 
 As governance changes, some policy statements can't or shouldn't be controlled by automated tooling. Other policies will result in effort by the IT security team and the on-premises identity management team over time. To help manage new risks as they arise, the cloud governance team will oversee the following processes.
 
-**Adoption acceleration:** The cloud governance team has been reviewing deployment scripts across multiple teams. They maintain a set of scripts that serve as deployment templates. Those templates are used by the cloud adoption and DevOps teams to define deployments more quickly. Each of those scripts contains the necessary requirements to enforce a set of governance policies with no additional effort from cloud adoption engineers. As the curators of these scripts, the cloud governance team can more quickly implement policy changes. As a result of script curation, the cloud governance team is seen as a source of adoption acceleration. This creates consistency among deployments, without strictly forcing adherence.
+**Adoption acceleration:** The cloud governance team has been reviewing deployment scripts across multiple teams. They maintain a set of scripts that serve as deployment templates. Those templates are used by the cloud adoption and DevOps teams to define deployments more quickly. Those scripts contain the necessary requirements to enforce a set of governance policies with no additional effort from cloud adoption engineers. As the curators of these scripts, the cloud governance team can more quickly implement policy changes. As a result of script curation, the cloud governance team is seen as a source of adoption acceleration. This creates consistency among deployments, without strictly forcing adherence.
 
 **Engineer training:** The cloud governance team offers bimonthly training sessions and has created two videos for engineers. These materials help engineers quickly learn the governance culture and how things are done during deployments. The team is adding training assets that show the difference between production and nonproduction deployments, so that engineers will understand how the new policies will affect adoption. This creates consistency among deployments, without strictly forcing adherence.
 

@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Overview of the enterprise-scale for analytics and AI architecture data landing zone in Azure
 
-Data landing zones are connected to the [data management landing zone](./data-management-landing-zone.md) by virtual network (VNet) peering. They're considered a [landing zone](/azure/cloud-adoption-framework/ready/landing-zone/) related to the enterprise-scale architecture.
+Data landing zones are connected to the [data management landing zone](./data-management-landing-zone.md) by virtual network (VNet) peering. They're considered a [landing zone](../../../ready/landing-zone/index.md) related to the enterprise-scale architecture.
 
 > [!IMPORTANT]
 > Before provisioning a data landing zone, you should have your DevOps and CI/CD operating model in place and a data management landing zone deployed.
@@ -35,7 +35,7 @@ The architecture of the data landing zone illustrates the layers, their respecti
 :::image type="content" source="../images/data-landing-zone-2.png" alt-text="Diagram of the data landing zone architecture." lightbox="../images/data-landing-zone-2.png":::
 
  > [!TIP]
-> Before getting started with deploying a data landing zone, it's highly recommended that you first [consider the number of initial data landing zones you want to deploy](/azure/cloud-adoption-framework/scenarios/data-management/eslz-scale).
+> Before getting started with deploying a data landing zone, it's highly recommended that you first [consider the number of initial data landing zones you want to deploy](../eslz-scale.md).
 
 ## Core services layer
 
@@ -54,7 +54,7 @@ Included are all the required services to enable the data landing zone within th
 
 :::image type="content" source="../images/data-landing-zone-network-rg.png" alt-text="Diagram of a data landing zone network resource group.":::
 
-The network resource group, contains core enterprise components such as [network security groups](/azure/virtual-network/network-security-groups-overview) (NSG), Azure [Network Watcher](/azure/network-watcher/network-watcher-monitoring-overview), and virtual network. All of these services are deployed into a single resource group. As part of the deployment, the virtual network of a data landing zone is [automatically peered with the data management landing zone's VNet](/azure/cloud-adoption-framework/scenarios/data-management/eslz-network-topology-and-connectivity) and the [connectivity subscription's VNet](/azure/cloud-adoption-framework/ready/enterprise-scale/architecture).
+The network resource group, contains core enterprise components such as [network security groups](/azure/virtual-network/network-security-groups-overview) (NSG), Azure [Network Watcher](/azure/network-watcher/network-watcher-monitoring-overview), and virtual network. All of these services are deployed into a single resource group. As part of the deployment, the virtual network of a data landing zone is [automatically peered with the data management landing zone's VNet](../eslz-network-topology-and-connectivity.md) and the [connectivity subscription's VNet](../../../ready/enterprise-scale/architecture.md).
 
 ### Monitoring
 

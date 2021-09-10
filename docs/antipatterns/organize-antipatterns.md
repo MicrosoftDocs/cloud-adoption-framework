@@ -95,5 +95,5 @@ Remember that engineers are essential for properly implementing cloud automation
 ## Next steps
 
 - [Align responsibilities across teams](../organize/raci-alignment.md)
-- [Organizational antipatterns: silos and fiefdoms](../organize/fiefdoms-silos.md)
+- [Organizational antipatterns: Silos and fiefdoms](../organize/fiefdoms-silos.md)
 - [Build a cost-conscious organization](../organize/cost-conscious-organization.md)
