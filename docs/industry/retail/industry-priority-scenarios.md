@@ -29,7 +29,7 @@ There are four industry priority scenarios within the retail industry:
 - Deliver intelligent supply chain
 - Reimagine retail
 
-|Industry priority scenario (IPS)|Know your customers|Empower your employees|Build a resilient supply chain|Reimagine retail|
+|Industry priority scenario (IPS)|Know your customers|Empower your employees|Deliver intelligent supply chain|Reimagine retail|
 |--------------------------------|---------|----------------------|------------------------------|----------------|
 ||                    Create digital experiences,and use AI and predictive analytics to anticipate evolving customer needs and deliver individualized interactions across channels|Enable secure digital collaboration across your business and reduce costs|Gain visibility across your end-to-end supply chain using technology solutions|Create innovative customer experiences, optimize in-store operations, and use technology to evolve products, services, and business models|
 
@@ -42,7 +42,7 @@ Microsoft is addressing existing challenges in the retail sector to unlock Intel
 
 ## Know your customers
 
-Great customer service is—and has long been—the core art of retail. But the way consumers engage with retailers has changed, and the way retailers get to know them along with it. Data and predictive AI offers retailers the opportunity to create digital customer experiences that take customer service to the next level, while unlocking new business opportunities.
+Great customer service is—and has long been—the core art of retail. But the way consumers engage with retailers has changed, and the way retailers get to know you along with it. Data and predictive AI offers retailers the opportunity to create digital customer experiences that take customer service to the next level, while unlocking new business opportunities.
 
 In your strategy and plan document—do you require that your:
 
@@ -50,17 +50,17 @@ In your strategy and plan document—do you require that your:
 - on-premises datacenter locations be integrated into your cloud environment?
 - certain deployments be included—that require adherence to regulatory compliance standards, such as the Payment Card Industry Data Security Standard (PCI DSS)?
 
-The two use cases for Know your customer are personalization and omnichannel optimization. Personalization is the use of customer behavioral data across channels to tailor shopping experiences and offer the right product, in the right place, at the right time. Omnichannel optimization enables customers to switch platforms, devices, and channels, maintaining a coherent experience.
+The two use cases for Know your customer are personalization and omnichannel optimization. Personalization is the use of customer behavioral data across channels to tailor shopping experiences and offer the right product, in the right place, at the right time. Omnichannel optimization enables customers to switch platforms, devices, and channels—maintaining a coherent experience.
 
-With a personalized consumer experience, customers expect businesses to instantly react to their needs and wants on digital channels, anywhere, at any time—and are concerned about privacy in the wake of recent data breaches. Retailers must seek new ways of understanding and engaging with customer behaviors—delivering personalization across multiple channels to increase the relevance of offers, and improve customer experiences.
+With individualized experiences offered in today's consumer marketplace, customers expect businesses to instantly react to their needs and wants on digital channels, anywhere, at any time. And, customers are concerned about privacy in the wake of recent data breaches. Retailers must seek new ways of understanding and engaging with customer behaviors—delivering personalization across multiple channels to increase the relevance of offerings, and improve the holistic customer experience.
 
 ### Business outcomes of personalization
 
-Enabling a consistent, comprehensive pane of glass into customer behavior data, your organization can gain tools to engage customers at the right time, in the right place, with the right content, context, messaging, and offers—positively affecting your business by:
+Enabling a consistent, comprehensive pane of glass into customer behavioral data, your organization can gain tools to engage customers at the right time, in the right place, with the right content, context, messaging, and offers—positively affecting your business by:
 
-- democratizing insights—to empower retailers to put products in front of the people most likely to buy them.
+- democratizing insights—to empower retailers to put products before people most likely to buy them.
 - growing revenue and customer lifetime value—to help cross-sell products based on unified data.
-- enhancing customer loyalty—responding to consumer behaviors and individualized customer interactions
+- enhancing customer loyalty—responding to consumer behaviors and individualized customer interactions.
 - improving marketing effectiveness—to boost engagement from understanding customer needs and unique preferences
 
 ### Challenges of personalization
@@ -123,7 +123,7 @@ The retail industry is seeing unprecedented change. As global business increases
 
 Equipping employees with helpful tools and insights unlocks their potential—regardless of role or geographic location. Whether a line-of-business contributor working from home, or frontline worker helping a customer onsite, the right equipment and information are critical to delivering impeccable customer service, building customer trust and loyalty, and ultimately growing sales.
 
-## Build a resilient supply chain
+## Deliver intelligent supply chain
 
 The retail sales cycle is increasing its turnaround time. The average consumer expects near-instant gratification from online and in-store shopping experiences. For retailers, working toward a more resilient supply chain becomes critical. The retail sector must be able to respond to customer demand for fast, flexible delivery—and get the right product, to the right place, at the right time. They must be able to react to any disruptions, and quickly determine end-customer exposure and the supply chain fault point to build and maintain customer loyalty.
 
