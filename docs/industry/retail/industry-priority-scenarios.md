@@ -3,7 +3,7 @@ title: Industry priority scenarios in the retail industry
 description: Learn the Microsoft approach to the retail industry's priority scenarios.
 author: mpvenables
 ms.author: jaalmond
-ms.date: 09/09/2021
+ms.date: 09/10/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -35,8 +35,8 @@ There are four industry priority scenarios within the retail industry:
 
 Microsoft is addressing existing challenges in the retail sector to unlock Intelligent retail—the highest stage of digital retail maturity in the cloud by:
 
-- [anticipating evolving customer needs](..\retail\retail-personalization.md) and [deliver individualized interactions across channels](..\retail\retail-omnichannel-optimization.md)
-- enabling secure digital collaboration across your organization and reduce your costs
+- [anticipating evolving customer needs](..\retail\retail-personalization.md) and [delivering individualized interactions across channels](..\retail\retail-omnichannel-optimization.md)
+- enabling secure digital collaboration across your organization and reducing your costs
 - [gaining end-to-end supply chain visibility](..\retail\retail-supply-chain-optimization.md) with technology solutions
 - [deploying technologies to modernize products, services, and business models](..\retail\retail-building-management-optimization.md)
 
