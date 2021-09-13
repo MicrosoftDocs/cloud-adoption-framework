@@ -1,6 +1,6 @@
 ---
-title: Frequently asked questions about Azure enterprise-scale for analytics and AI
-description: Frequently asked questions about enterprise-scale analytics and AI
+title: Frequently asked questions about enterprise-scale for analytics and AI in Azure
+description: Explore frequently asked questions about enterprise-scale for analytics and AI in Azure.
 author: abdale
 ms.author: hamoodaleem
 ms.date: 03/03/2021
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Frequently asked questions
+# Frequently asked questions about enterprise-scale for analytics and AI in Azure
 
 The following are common questions asked about enterprise-scale for analytics and AI.
 
@@ -28,3 +28,7 @@ The recommendation is to use the shared product **Azure Databricks Analytics and
 This decision has been made to reduce the management overhead for the data platform operations team. Azure Databricks has a set of stand-alone policies that aren't integrated into the Azure policies. In a large environment, the setup of more Azure Databricks workspaces creates more management overhead. For example, maintaining policies and supported Apache Hive versions, updating ADB versions, and enforcing external Apache Hive metastore. There's no way a central platform team can enforce certain settings within any of the databricks workspaces. We recommend having shared workspaces for product teams in the landing zones, where the data platform ops teams can then define the necessary cluster policies and init scripts.
 
 We recommends to use VNet peering between landing zones and private endpoints. For Azure Databricks, use VNet injection. As there's direct line of sight to all endpoints, there are no connectivity issues.
+
+## Next steps
+
+[Overview of Azure Data Lake Storage for the data management and analytics scenario](../best-practices/data-lake-overview.md)

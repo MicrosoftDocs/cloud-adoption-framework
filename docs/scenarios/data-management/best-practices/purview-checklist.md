@@ -1,6 +1,6 @@
 ---
-title: Azure Purview readiness checklist for the data management and analytics enterprise-scale scenario
-description: Learn about the enterprise-scale for analytics and AI Azure Purview readiness checklist
+title: Azure Purview readiness checklist for data management and analytics 
+description: Learn about the Azure Purview readiness checklist for the data management and analytics enterprise-scale scenario.
 author: zeinam
 ms.author: zeinam
 ms.date: 05/21/2021
@@ -9,9 +9,9 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Azure Purview readiness checklist for data management and analytics enterprise-scale scenario
+# Azure Purview readiness checklist for data management and analytics
 
-During your data governance journey with Azure Purview and enterprise-scale for analytics and AI, you'll find there are multiple stages in the adoption lifecycle. A well-planned deployment of **Azure Purview** in the [data management landing zone](../architectures/data-management-landing-zone.md) can provide the following benefits:
+During your data governance journey with Azure Purview and enterprise-scale for analytics and AI, you'll find there are multiple stages in the adoption life cycle. A well-planned deployment of **Azure Purview** in the [data management landing zone](../architectures/data-management-landing-zone.md) can provide the following benefits:
 
 - Unified data discovery across the entire organization  
 - Improved analytic collaboration
@@ -57,7 +57,7 @@ The **Azure Purview readiness checklist** provides high-level guidance that can 
     |Microsoft 365 administrators     |Microsoft Information Protection in Microsoft 365 if Microsoft 365 sensitivity labels will be used         |
     |Data source owners     |Mapped to roles in Azure Purview         |
 
-- Define whether there's an existing enterprise-scale for analytics and AI [data management landing zone](../architectures/data-management-landing-zone.md) in the environment or if there is a need to deploy a *new* data management landing zone. The data management landing zone is a centralized subscription to deploy services such as Azure Purview.
+- Define whether there's an existing enterprise-scale for analytics and AI [data management landing zone](../architectures/data-management-landing-zone.md) in the environment or if there's a need to deploy a *new* data management landing zone. The data management landing zone is a centralized subscription to deploy services such as Azure Purview.
 
 - Manage budgets, costs, and licensing.
   - Understand how the Azure Purview billing model works, and define how to control costs. Microsoft offers Azure Purview in a [pay-as-you-go model](https://aka.ms/purviewpricing).
@@ -136,13 +136,12 @@ The **Azure Purview readiness checklist** provides high-level guidance that can 
 ## Phase 4: Onboard more data landing zones
 
 - Deploy more data landing zones as needed.
-
 - Adjust Azure Purview automatic scan rules.
-
 - Onboard more data sources into data landing zones.
-
 - Optimize glossary terms.
-
 - Optimize classifications rules.
-
 - Use Azure RBAC model to manage access to metadata and optimize the Azure Purview access model.
+
+## Next steps
+
+[Azure Purview deployment best practices for data management and analytics](./purview-deployment.md)
