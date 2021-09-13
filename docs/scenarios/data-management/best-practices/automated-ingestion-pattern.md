@@ -1,6 +1,6 @@
 ---
-title: Understand the automated ingestion framework with enterprise-scale for analytics and AI in Azure
-description: Learn about the automated ingestion framework with enterprise-scale for analytics and AI in Azure.
+title: How automated ingestion frameworks support enterprise-scale for analytics and AI in Azure
+description: Learn about how automated ingestion frameworks support enterprise-scale for analytics and AI in Azure.
 author: mboswell
 ms.author: mboswell
 ms.date: 08/06/2021
@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank, e2e-data
 ---
 
-# Understand the automated ingestion framework with enterprise-scale for analytics and AI in Azure
+# How automated ingestion frameworks support enterprise-scale for analytics and AI in Azure
 
 The [ingest process with enterprise-scale for analytics and AI in Azure](./data-ingestion.md#ingest-considerations-for-azure-data-factory) and [ingest and processing resource group](../architectures/data-landing-zone.md#ingest-and-processing) guide enterprises through how to build their own custom ingestion framework.
 
@@ -70,7 +70,7 @@ Enterprises can use custom applications, Azure Logic Apps, or Microsoft Power Ap
 
 The following illustrates how registered data sources in a Data Factory SQL Database metastore are pulled and how data is ingested at first:
 
-![Diagram of  how new data sources are ingested.](../images/new-datastore-ingestion.png)
+![Diagram of how new data sources are ingested.](../images/new-datastore-ingestion.png)
 
 
 The Data Factory ingestion master pipeline reads configurations from a Data Factory SQL Database metastore and runs iteratively with the correct parameters. Data moves with little to no change from the source to the raw layer in Azure Data Lake. The data shape is validated based on the Data Factory metastore, and file formats are converted to either Apache Parquet or Avro formats before being copied into the enriched layer.
@@ -209,4 +209,4 @@ POST https://{accountName}.scan.purview.azure.com/datasources/{dataSourceName}/s
 
 ## Next steps
 
-[Data science best practices](./data-science-best-practices.md)
+[Best practices for data science projects with enterprise-scale for analytics and AI in Azure](./data-science-best-practices.md)
