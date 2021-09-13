@@ -3,7 +3,7 @@ title: Resource naming and tagging decision guide
 description: Learn about naming and tagging approaches and options when organizing cloud-based resources, as part of the Cloud Adoption Framework for Azure.
 author: alexbuckgit
 ms.author: abuck
-ms.date: 02/11/2019
+ms.date: 08/23/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: decision-guide
@@ -25,7 +25,7 @@ Organizing cloud-based resources is a crucial task for IT, unless you only have 
   - [Recurring spend tracking and reporting](../../govern/cost-management/compliance-processes.md)
   - [Post-implementation optimizations](../../govern/cost-management/discipline-improvement.md#operate-and-post-implementation)
   - [Cost-optimization tactics](../../govern/guides/complex/cost-management-improvement.md#incremental-improvement-of-best-practices)
-- **Operations management:** Visibility for the operations management team regarding business commitments and SLAs is an important aspect of ongoing operations. To be well-managed, tagging for [mission criticality](../../manage/considerations/criticality.md) tagging is a requirement.
+- **Operations management:** Visibility for the operations management team regarding business commitments and SLAs is an important aspect of ongoing operations. For operations to be managed well, tagging for [mission criticality](../../manage/considerations/criticality.md) is required.
 - **Security:** Classification of data and security impact is a vital data point for the team, when breaches or other security issues arise. To operate securely, tagging for [data classification](../../govern/policy-compliance/data-classification.md) is required.
 - **Governance and regulatory compliance:** Maintaining consistency across resources helps identify deviation from agreed-upon policies. [Prescriptive guidance for resource tagging](../../govern/guides/complex/prescriptive-guidance.md#resource-tagging) demonstrates how one of the following patterns can help when deploying governance practices. Similar patterns are available to evaluate regulatory compliance using tags.
 - **Automation:** In addition to making resources easier for IT to manage, a proper organizational scheme allows you to take advantage of automation as part of resource creation, operational monitoring, and the creation of DevOps processes.

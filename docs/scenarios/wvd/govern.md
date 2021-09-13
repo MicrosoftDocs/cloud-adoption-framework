@@ -6,7 +6,8 @@ ms.author: doalle
 ms.date: 05/18/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
+ms.custom: think-tank, e2e-avd
 ---
 
 # Governing an Azure Virtual Desktop environment
@@ -40,4 +41,4 @@ The following guides provide best practices for implementing security controls f
 
 - [Azure Virtual Desktop security baseline](/security/benchmark/azure/baselines/windows-virtual-desktop-security-baseline).
 
-- [Azure Virtual Desktop security guide](/azure/virtual-desktop/security-guide).
+- [Azure Virtual Desktop security guide: best practices](/azure/virtual-desktop/security-guide#azure-virtual-desktop-security-best-practices).

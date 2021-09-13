@@ -6,8 +6,8 @@ ms.author: doalle
 ms.date: 05/18/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: migrate
-ms.custom: think-tank
+ms.subservice: scenario
+ms.custom: think-tank, e2e-avd
 ---
 
 <!-- cSpell:ignore NTFS Logix -->
@@ -24,7 +24,7 @@ The deployment of Azure Virtual Desktop instances follows a process that's simil
 - Create desktop or [RemoteApp application groups](/azure/virtual-desktop/manage-app-groups#create-a-remoteapp-group) for workloads that have already been migrated.
 - [Create an FSLogix profile container](/azure/virtual-desktop/create-host-pools-user-profile) to store user profiles.
 
-Deployment and migration consist of persona migration, application migration, and user profile migration. Depending on the results of the workload assessment, there will likely be changes to each of those migration tasks. This article helps identify ways that the scope would change based on the assessment feedback.
+Deployment and migration consist of persona migration, application migration, and user profile migration. Depending on the results of the workload assessment, there will likely be changes to those migration tasks. This article helps identify ways that the scope would change based on the assessment feedback.
 
 ## Iterative methodology
 
@@ -60,7 +60,7 @@ You can use [Azure NetApp Files to host user profiles](/azure/virtual-desktop/cr
 
 You can also use [Azure Files to host user profiles](/azure/virtual-desktop/create-file-share). Doing so will require a few extra steps in the scope, including:
 
-- **Per Azure Files instance:** Configure the storage account, disk type, and Azure Active Directory connection ([Azure Active Directory Domain Services (AD DS) is also supported](/azure/virtual-desktop/create-profile-container-adds), assign Azure role-based access control access for an Active Directory user group, apply new technology file system permissions, and get the storage account access key.
+- **Per Azure Files instance:** Configure the storage account, disk type, and Azure Active Directory connection ([Azure Active Directory Domain Services (AD DS) is also supported](/azure/virtual-desktop/create-profile-container-adds), assign Azure role-based access control access for an Active Directory user group, apply [NTFS permissions on Azure Files](/azure/storage/files/storage-files-identity-ad-ds-configure-permissions), and get the storage account access key.
 - **Per host/persona:** Configure FSLogix on session host virtual machines.
 - **Per user:** Assign users to the host session.
 

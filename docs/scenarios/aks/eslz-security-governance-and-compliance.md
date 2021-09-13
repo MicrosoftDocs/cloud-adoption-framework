@@ -1,12 +1,12 @@
 ---
 title: Governance disciplines for Azure Kubernetes Service (AKS)
-description: Learn about the cloud security control lifecycle, and how to set up AKS security controls, Azure Policy, and AKS cost management.
+description: Learn more about the cloud security control lifecycle, and how to set up AKS security controls, Azure Policy, and AKS cost management.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/30/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
 ms.custom: think-tank, e2e-aks
 ---
 

@@ -35,7 +35,7 @@ Identity is becoming the new boundary control plane for security, taking over th
 
 A sample cloud-native policy for identity across cloud and on-premises directories, could include requirements like the following:
 
-- Authorized access to resources with Azure role-based access control (Azure RBAC), multi-factor authentication, and single sign-on (SSO).
+- Authorized access to resources with Azure role-based access control (Azure RBAC), multifactor authentication, and single sign-on (SSO).
 - Quick mitigation of user identities suspected of compromise.
 - Just-in-time (JIT), just-enough access granted on a task-by-task basis to limit exposure of overprivileged admin credentials.
 - Extended user identity and access to policies across multiple environments through Azure Active Directory.
@@ -51,7 +51,7 @@ A cloud-native policy for network controls may include requirements like the fol
 - Hybrid connections to on-premises resources, might not be allowed in a cloud-native policy. Should a hybrid connection prove necessary, a more robust enterprise security policy sample would be a more relevant reference.
 - Users can establish secure connections to and within Azure using virtual networks and network security groups.
 - The native Windows Azure Firewall protects hosts from malicious network traffic by limiting port access. A good example of this policy is a requirement to block or not enable traffic directly to a VM over SSH/RDP.
-- Services like the Azure Web Application Firewall (WAF) on Azure Application Gateway and Azure DDoS protection safeguard applications and ensure availability for virtual machines running in Azure. These features should not be disabled.
+- Services like the Azure Web Application Firewall (WAF) on Azure Application Gateway and Azure DDoS Protection safeguard applications and ensure availability for virtual machines running in Azure. These features should not be disabled.
 
 ### Data protection
 

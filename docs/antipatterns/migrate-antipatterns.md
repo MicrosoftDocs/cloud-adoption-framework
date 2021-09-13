@@ -42,7 +42,7 @@ A team member plans to migrate applications to the cloud to reduce the company's
 
 ### Preferred outcome: Assess infrastructure before migrating or modernizing
 
-For a large-scale migration or modernization project, perform an infrastructure assessment before migration starts. This assessment helps you identify dependencies and compatibility issues. See [Azure migration guide](../migrate/azure-migration-guide/index.md) for detailed information that the [Microsoft Cloud Adoption Framework for Azure](../overview.md) provides on [migration best practices](../migrate/azure-best-practices/index.md).
+For a large-scale migration or modernization project, perform an infrastructure assessment before migration starts. This assessment helps you identify dependencies and compatibility issues. For detailed information, see the [Azure migration guide](../migrate/azure-migration-guide/index.md) and review [migration best practices](../migrate/azure-best-practices/index.md).
 
 In modernization projects, use additional application assessments to identify coding antipatterns, compatibility issues, and technical debt. For more information about modernization aspects, see [Overview of application migration examples for Azure](../migrate/azure-best-practices/contoso-migration-overview.md).
 

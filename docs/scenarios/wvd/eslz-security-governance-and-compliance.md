@@ -1,21 +1,24 @@
 ---
-title: Enterprise-scale security governance and compliance for Azure Virtual Desktop infrastructure
-description: Learn key design considerations and recommendations for security governance and compliance in an enterprise-scale Azure Virtual Desktop infrastructure.
+title: Security, governance, and compliance for Azure Virtual Desktop infrastructure
+description: Learn key design considerations and recommendations for a governance baseline in an Azure Virtual Desktop infrastructure.
 author: AdamWhitlatch
-ms.author: dawhitla
+ms.author: brblanch
 ms.date: 05/18/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
----
+ms.subservice: scenario
+ms.custom: think-tank, e2e-avd
+--- 
 
-# Security governance and compliance for Azure Virtual Desktop enterprise-scale scenario
+<!-- cspell:ignore hostpool -->
 
-This article covers key design considerations and recommendations for security governance and compliance in a [Cloud Adoption Framework enterprise-scale landing zone architecture](../../ready/enterprise-scale/architecture.md) for [Azure Virtual Desktop](/azure/virtual-desktop/overview).
+# Governance baseline considerations for Azure Virtual Desktop
+
+This article covers key design considerations and recommendations for security, governance, and compliance in a [Cloud Adoption Framework enterprise-scale landing zone architecture](../../ready/enterprise-scale/architecture.md) for [Azure Virtual Desktop](/azure/virtual-desktop/overview).
 
  As with any IT service, it's important to build the environment to scale, secure it, and be able to operate your environment simply and efficiently. While the Azure Virtual Desktop service does most of the front-end work, you still need to have the right control mechanisms to keep your systems and data safe. You also need processes to continually review those controls, report changes and, if necessary, remediate. At the end of this article, you'll understand the critical design areas for security, governance, and compliance, and you'll have clear guidance on Microsoft recommendations in each area.
 
-In most cases Azure Virtual Desktop is deployed into a landing zone as part of the [Microsoft Cloud Adoption Framework](../../overview.md) for Azure. Microsoft recommends reviewing the Cloud Adoption Framework to ensure that your environment has the right foundation for security, compliance, governance, and cost management.
+In most cases, Azure Virtual Desktop is deployed into a landing zone as part of the [Microsoft Cloud Adoption Framework](../../overview.md) for Azure. Microsoft recommends reviewing the Cloud Adoption Framework to ensure that your environment has the right foundation for security, compliance, governance, and cost management.
 
 ## Design considerations
 
@@ -49,7 +52,7 @@ In most cases Azure Virtual Desktop is deployed into a landing zone as part of t
 - **Disk encryption:** Enable Azure Disk Encryption for your VMs. This option is configured by default with Azure-provided keys. In many cases, this configuration is acceptable to security teams and auditors. However, if you have a security practice or regulatory requirement that requires you to maintain your own keys, you can implement that practice for Azure Virtual Desktop VMs.
 - **Key Vault:** Enable Key Vault to protect security principal accounts and encryption keys.
 - **Security best practices:** Review [security best practices for Azure Virtual Desktop](/azure/virtual-desktop/security-guide) as a starting point to security within your environment, and implement as appropriate.
-- **Azure Virtual Desktop service and internet traffic routing and inspection:** By using reverse connect, built into the Azure Virtual Desktop platform, VMs do not need a public IP. VMs communicate outbound securely to Azure Virtual Desktop service URLs over port 443. It's good practice to enable an Azure Firewall or a partner firewall appliance for traffic logging, routing, and/or inspection. Having a web proxy filter to monitor and log internet traffic is also good practice.
+- **Azure Virtual Desktop service and internet traffic routing and inspection:** By using reverse connect, built into the Azure Virtual Desktop platform, VMs do not need a public IP. VMs communicate outbound securely to Azure Virtual Desktop service URLs over port 443. It's good practice to enable Azure Firewall or a partner firewall appliance for traffic logging, routing, or inspection. Having a web proxy filter to monitor and log internet traffic is also recommended.
 - **Azure Virtual Desktop metadata:** A good resource group design for Azure Virtual Desktop can help protect against accidental deletion of workspace and host pool objects, can separate VM machine types, and can allow for administrators from different departments. Outside the Cloud Adoption Framework best practice for RBAC, security controls and landing zone design, here is a sample resource group structure for Azure Virtual Desktop.
 
 > [!NOTE]

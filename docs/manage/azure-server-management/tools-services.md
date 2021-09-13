@@ -35,7 +35,7 @@ Migration services can help you migrate your workloads into Azure. To provide th
 
 To protect your data, you need to plan for backup, high availability, encryption, authorization, and related operational issues. These topics are covered extensively online, so here we'll focus on building a business continuity and disaster recovery (BCDR) plan. We'll include references to documentation that describes in detail how to implement and deploy this type of plan.
 
-When you build data-protection strategies, first consider breaking down your workload applications into their different tiers. This approach helps because each tier typically requires its own unique protection plan. To learn more about designing applications to be resilient, see [Designing resilient applications for Azure](/azure/architecture/framework/resiliency/overview).
+When you build data-protection strategies, first consider breaking down your workload applications into their different tiers. This approach helps because each tier typically requires its own unique protection plan. To learn more about designing applications to be resilient, see [Designing resilient applications for Azure](/azure/architecture/framework/resiliency/design-resiliency).
 
 The most basic data protection is backup. To speed up the recovery process if servers are lost, back up not just data but also server configurations. Backup is an effective mechanism to handle accidental data deletion and ransomware attacks. [Azure Backup](/azure/backup/) can help you protect your data on Azure and on-premises servers running Windows or Linux. For details about what Azure Backup can do and for how-to guides, see the [Azure Backup service overview](/azure/backup/backup-overview).
 

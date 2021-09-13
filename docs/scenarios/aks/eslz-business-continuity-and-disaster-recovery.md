@@ -1,12 +1,12 @@
 ---
 title: Business continuity and disaster recovery considerations for Azure Kubernetes Service
-description: Describe how this enterprise-scale scenario can improve business continuity and disaster recovery of Azure Kubernetes Service.
+description: Learn how this enterprise-scale scenario can improve business continuity and disaster recovery of Azure Kubernetes Service.
 author: JeffMitchell
 ms.author: jemitche
 ms.date: 02/18/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
 ms.custom: think-tank, e2e-aks
 ---
 
