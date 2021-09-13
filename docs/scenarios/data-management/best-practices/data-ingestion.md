@@ -1,6 +1,6 @@
 ---
-title: Understand the ingest process with enterprise-scale for analytics and AI in Azure
-description: Learn about the ingest process with enterprise-scale for analytics and AI in Azure.
+title: The ingest process with enterprise-scale for analytics and AI in Azure
+description: Understand the ingest process with enterprise-scale for analytics and AI in Azure.
 author: mboswell
 ms.author: mboswell
 ms.date: 08/06/2021
@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank, e2e-data
 ---
 
-# Understand the ingest process with enterprise-scale for analytics and AI in Azure
+# The ingest process with enterprise-scale for analytics and AI in Azure
 
 Data integrations and data products teams examine, transform, and release data in enterprise-scale for analytics and AI.
 
@@ -51,11 +51,11 @@ However, it's possible to create more integration runtimes to ingest from on-pre
 
 ## Ingest considerations for Azure Databricks
 
-This guidance elaborates on the guidance in:
+This guidance elaborates on the information within:
 
-- [Securing access to Azure Data Lake Gen2 from Azure Databricks](https://github.com/hurtn/datalake-ADLS-access-patterns-with-Databricks/blob/master/readme.md)
-- [Azure Databricks best practices](https://github.com/Azure/AzureDatabricksBestPractices/blob/master/toc.md)
-- [Azure Databricks implementation](./azure-databricks-implementation.md)
+- [Securing access to Azure Data Lake Gen 2 from Azure Databricks](https://github.com/hurtn/datalake-ADLS-access-patterns-with-Databricks/blob/master/readme.md)
+- [Azure Databricks Best Practices](https://github.com/Azure/AzureDatabricksBestPractices/blob/master/toc.md)
+- [Use Azure Databricks within enterprise-scale for analytics and AI in Azure](./azure-databricks-implementation.md)
 
 - One premium Azure Databricks data engineering workspace should be deployed per data landing zone in the production ingest and processing resource group. It will enable a complete CI/CD experience and only allow notebooks to be deployed from Azure DevOps or GitHub.
 
@@ -129,8 +129,8 @@ The guidance in this section maps ingestion and processing services to sources t
 | REST | REST | Various | REST | XML, JSON, CSV | A, B, E | A, B, E | A, B, E | A, B, E | A, B, E | A, B, E |
 | Microsoft Outlook | Email | SaaS | REST | XML, JSON, CSV | E | E | E | E | E | E |
 
-Depending on the destination, Azure Database Migration Service can replicate from on-premises and third-party databases such as Microsoft SQL Server, PostgreSQL, MySQL, or Oracle, to an Azure-based data store.
+Depending on the destination, Azure Database Migration Service can replicate from on-premises and third-party databases such as Microsoft SQL Server, PostgreSQL, MySQL, or Oracle to an Azure-based data store.
 
 ## Next steps
 
-[SAP data ingestion](./sap-data-ingestion.md)
+[SAP ingestion with enterprise-scale for analytics and AI in Azure](./sap-data-ingestion.md)

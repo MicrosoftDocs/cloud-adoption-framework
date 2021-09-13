@@ -1,5 +1,5 @@
 ---
-title: Understand data management and role-based access control for the data management and analytics scenario in Azure
+title: Data management and role-based access control for the data management and analytics scenario in Azure
 description: Learn about data management and role-based access control for the data management and analytics scenario in Azure.
 author: mboswell
 ms.author: mboswell
@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank, e2e-data
 ---
 
-# Understand data management and role-based access control for the data management and analytics scenario in Azure
+# Data management and role-based access control for the data management and analytics scenario in Azure
 
 Authorization is the act of granting an authenticated party permission to perform an action. The key principle of access control is giving users only the amount of access that they need to do their jobs and only allowing certain actions at a particular scope. Role-based security/role-based access control (RBAC) corresponds to access control and is used by many organizations to control access based on defined roles or job functions versus individual users. Users are then assigned one or more security roles, each of which is given authorized permissions to perform specific tasks. For example, data engineers with the *data ingestion developer* job function will be assigned the Contributor role within Data Lake Storage in the development environment. This contributor gains permission to manage all Azure Data Lake Storage settings except granting access.
 
@@ -48,4 +48,4 @@ The following best practices can help you to get started with RBAC:
 
 ## Next steps
 
-[Automating security](./security-provisioning.md)
+[Provision security for data management and analytics in Azure](./security-provisioning.md)
