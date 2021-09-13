@@ -6,7 +6,7 @@ ms.author: brblanch
 ms.date: 06/06/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: general
+ms.subservice: scenario
 ms.custom: internal, e2e-retail
 ---
 

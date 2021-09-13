@@ -6,8 +6,8 @@ ms.author: doalle
 ms.date: 05/18/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: migrate
-ms.custom: think-tank
+ms.subservice: scenario
+ms.custom: think-tank, e2e-avd
 ---
 
 # Azure Virtual Desktop planning

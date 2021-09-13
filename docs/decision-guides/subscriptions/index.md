@@ -3,7 +3,7 @@ title: Subscription decision guide
 description: Understand subscription design strategies and management group hierarchy to organize your Azure assets.
 author: alexbuckgit
 ms.author: abuck
-ms.date: 10/17/2019
+ms.date: 08/23/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: decision-guide
@@ -50,7 +50,7 @@ As an organization's cloud footprint grows, additional subscriptions are typical
 Each organization will categorize their applications differently, often separating subscriptions based on specific applications or services or along the lines of application archetypes. This categorization is often designed to support workloads that are likely to consume most of the resource limits of a subscription, or separate mission-critical workloads to ensure they don't compete with other workloads under these limits. Some workloads that might justify a separate subscription include:
 
 - Mission-critical workloads.
-- Applications that are part of cost of goods sold (COGS) within your company. For example, every widget manufactured by a company contains an Azure IoT module that sends telemetry. This may require a dedicated subscription for accounting or governance purposes as part of COGS.
+- Applications that are part of cost of goods sold (COGS) within your company. For example, every widget manufactured by a company contains an Azure IoT module that sends telemetry. This may require a dedicated subscription for accounting or governance purposes to be part of COGS.
 - Applications subject to regulatory requirements such as HIPAA or FedRAMP.
 
 ### Functional strategy

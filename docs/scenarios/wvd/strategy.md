@@ -6,7 +6,8 @@ ms.author: doalle
 ms.date: 05/18/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
+ms.custom: think-tank, e2e-avd
 ---
 
 # Strategic benefits of an Azure Virtual Desktop environment
@@ -65,7 +66,7 @@ Motivations to adopt an Azure Virtual Desktop platform in the cloud are often ba
 
 [Building a business justification for cloud migration](../../strategy/cloud-migration-business-case.md) can dispel many common myths for your team's financial plan. However, your finance team might need to develop a detailed financial model to account for all parts associated with Azure Virtual Desktop cloud adoption.
 
-The [Forrester study on the total economic impact of Microsoft Azure for Azure Virtual Desktop](https://azure.microsoft.com/resources/the-total-economic-impact-of-microsoft-windows-virtual-desktop-a-commissioned-study-conducted-by-forrester-consulting/) offers an analysis where the following justifications are typically defendable:
+The [Forrester study on the total economic impact of Microsoft Azure for Azure Virtual Desktop](https://azure.microsoft.com/resources/the-total-economic-impact-of-microsoft-azure-virtual-desktop-a-commissioned-study-conducted-by-forrester-consulting/) offers an analysis where the following justifications are typically defendable:
 
 - Time to market benefits exceed $3 million USD
 - Cost avoidance exceeds $7 million USD

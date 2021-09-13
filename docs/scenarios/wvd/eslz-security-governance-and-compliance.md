@@ -2,22 +2,23 @@
 title: Security, governance, and compliance for Azure Virtual Desktop infrastructure
 description: Learn key design considerations and recommendations for a governance baseline in an Azure Virtual Desktop infrastructure.
 author: AdamWhitlatch
-ms.author: dawhitla
+ms.author: brblanch
 ms.date: 05/18/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
----
+ms.subservice: scenario
+ms.custom: think-tank, e2e-avd
+--- 
 
 <!-- cspell:ignore hostpool -->
 
 # Governance baseline considerations for Azure Virtual Desktop
 
-This article covers key design considerations and recommendations for security, governance, and compliance in a [Cloud Adoption Framework enterprise-scale landing zone architecture](/azure/cloud-adoption-framework/ready/enterprise-scale/architecture) for [Azure Virtual Desktop](/azure/virtual-desktop/overview).
+This article covers key design considerations and recommendations for security, governance, and compliance in a [Cloud Adoption Framework enterprise-scale landing zone architecture](../../ready/enterprise-scale/architecture.md) for [Azure Virtual Desktop](/azure/virtual-desktop/overview).
 
  As with any IT service, it's important to build the environment to scale, secure it, and be able to operate your environment simply and efficiently. While the Azure Virtual Desktop service does most of the front-end work, you still need to have the right control mechanisms to keep your systems and data safe. You also need processes to continually review those controls, report changes and, if necessary, remediate. At the end of this article, you'll understand the critical design areas for security, governance, and compliance, and you'll have clear guidance on Microsoft recommendations in each area.
 
-In most cases, Azure Virtual Desktop is deployed into a landing zone as part of the [Microsoft Cloud Adoption Framework](/azure/cloud-adoption-framework/overview) for Azure. Microsoft recommends reviewing the Cloud Adoption Framework to ensure that your environment has the right foundation for security, compliance, governance, and cost management.
+In most cases, Azure Virtual Desktop is deployed into a landing zone as part of the [Microsoft Cloud Adoption Framework](../../overview.md) for Azure. Microsoft recommends reviewing the Cloud Adoption Framework to ensure that your environment has the right foundation for security, compliance, governance, and cost management.
 
 ## Design considerations
 

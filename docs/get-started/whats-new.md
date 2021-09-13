@@ -49,8 +49,8 @@ Get started with this scenario using the links below:
 
 This release of the Cloud Adoption Framework includes updates to the Azure landing zone content in the Ready methodology.
 
-- Expanded the [What is a landing zone](../ready/landing-zone/index.md) article to include a conceptual architecture and Azure landing zone accelerator, aimed at helping customers plan their cloud environments and get to best practice implementation quickly and easily
-- Added new content for the [Journey to the target architecture](../ready/landing-zone/landing-zone-journey.md) aimed at helping organizations determine which guidance is best suited to their current position on their cloud journey
+- [What is a landing zone?](../ready/landing-zone/index.md) now includes a conceptual architecture and Azure landing zone accelerator, intended to help customers plan their cloud environments and begin best practice implementation quickly and easily.
+- [Journey to the target architecture](../ready/landing-zone/landing-zone-journey.md) includes new content that helps organizations determine which guidance is best suited to their current position on their cloud journey.
 - Updated the [Azure landing zone design areas](../ready/landing-zone/design-areas.md) to help distinguish between considerations for implementation and considerations for operating a landing zone
 
 ## June 2021
@@ -254,7 +254,7 @@ AI solutions and best practices are now integrated into the Microsoft Cloud Adop
 | Article | Description |
 |--|--|
 | [Responsible AI](../strategy/responsible-ai.md) | Learn about the AI principles you should consider when implementing AI solutions and learn how to establish a responsible AI strategy. |
-| [Azure innovation guide: innovate with AI](../innovate/innovation-guide/predict.md) | Learn about how you can innovate with AI and find the best solution based on your implementation needs. |
+| [Azure innovation guide: Innovate with AI](../innovate/innovation-guide/predict.md) | Learn about how you can innovate with AI and find the best solution based on your implementation needs. |
 | [AI in the Cloud Adoption Framework](../innovate/ai/index.md) | Review a prescriptive framework that includes the tools, programs, and content (best practices, configuration templates, and architecture guidance) to simplify adoption of AI and cloud-native practices at scale. |
 | [MLOps with Azure Machine Learning](../manage/mlops-machine-learning.md) | Learn about machine learning operations (MLOps) best practices. |
 | [Innovate with AI](../innovate/best-practices/predict.md) | Learn about AI solutions (machine learning, AI applications and agents, knowledge mining) and best practices that can accelerate digital invention. |
