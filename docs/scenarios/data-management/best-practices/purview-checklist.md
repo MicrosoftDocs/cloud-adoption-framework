@@ -46,7 +46,7 @@ The **Azure Purview readiness checklist** provides high-level guidance that can 
     |Data curators     |Search and browse assets, manage classifications and glossary terms         |
     |Data readers     |Have read-only access to search, browse, classifications and insights reports         |
 
-  For more information related to Purview roles, see [Access control in Azure Purview](https://docs.microsoft.com/azure/purview/catalog-permissions#roles)
+  For more information related to Purview roles, see [Access control in Azure Purview](/azure/purview/catalog-permissions#roles).
   
 - Consider the following supporting roles for building an end-to-end data governance solution using Azure Purview:
 
