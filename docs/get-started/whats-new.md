@@ -45,6 +45,10 @@ Get started with this scenario using the links below:
 | [Organize people and teams](../scenarios/data-management/organize.md) |Learn about how to organize data operations team members for the data management and analytics scenario in Azure.
 | [Well-architected framework for data workloads](../scenarios/data-management/waf-placeholder.md) | In this article, we review how you can apply principals of the Well-Architected Framework, to each of the data workloads within your data estate to minimize technical debt from the beginning.
 
+### Strategic Migration Assessment and Readiness Tool (SMART)
+
+We've added an article to help you use the [Strategic Migration Assessment and Readiness Tool (SMART)](../plan/smart-assessment). This assessment can help you find out what you need to do to prepare for your Azure migration. 
+
 ## July 2021
 
 This release of the Cloud Adoption Framework includes updates to the Azure landing zone content in the Ready methodology.
