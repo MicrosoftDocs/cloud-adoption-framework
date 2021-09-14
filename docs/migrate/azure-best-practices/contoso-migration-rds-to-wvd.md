@@ -3,7 +3,7 @@ title: Move on-premises Remote Desktop Services to Azure Virtual Desktop scenari
 description: Learn how Contoso migrated its on-premises Remote Desktop Services environment to Azure Virtual Desktop.
 author: benstegink
 ms.author: abuck
-ms.date: 07/01/2020
+ms.date: 08/23/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -19,7 +19,7 @@ Azure Virtual Desktop is a comprehensive desktop and application virtualization 
 
 | Migration options | Outcome |
 |--- | --- |
-| [Azure Migrate](/azure/migrate/migrate-services-overview) | Assess and migrate on-premises RDS environments. <br><br> Run workloads via Azure Virtual Desktop. <br><br> Manage Azure Virtual Desktop with [Azure Virtual Desktop management UX](https://github.com/Azure/RDS-Templates/tree/master/wvd-templates/wvd-management-ux). |
+| [Azure Migrate](/azure/migrate/migrate-services-overview) | Assess and migrate on-premises RDS environments. <br><br> Run workloads in an Azure Virtual Desktop environment. <br><br> Manage Azure Virtual Desktop with [Azure Virtual Desktop management UX](https://github.com/Azure/RDS-Templates/tree/master/wvd-templates/wvd-management-ux). |
 
 > [!NOTE]
 > This article focuses on using Azure Virtual Desktop to move an on-premises RDS environment to Azure.
@@ -122,17 +122,17 @@ Contoso will provision the Azure Virtual Desktop service in the `East US 2` Azur
 
 1. Create a new Azure Migrate project.
 
-   ![Screenshot that shows creating a new Azure Migrate project.](./media/contoso-migration-rds-to-wvd/new-azure-migrate.png)
+   ![Screenshot of creating a new Azure Migrate project.](./media/contoso-migration-rds-to-wvd/new-azure-migrate.png)
    *Figure 3: Creating a new Azure Migrate project.*
 
 1. Select the option to assess and migrate servers, select **VDI**, and add a tool.
 
-   ![Screenshot that shows Azure Migrate goals of VDI.](./media/contoso-migration-rds-to-wvd/azure-migrate-goals-vdi.png)
+   ![Screenshot of Azure Migrate goals of VDI.](./media/contoso-migration-rds-to-wvd/azure-migrate-goals-vdi.png)
    *Figure 4: Target Azure Migrate goals.*
 
 1. Set the subscription, resource group, project name, and geography for the migrate job data.
 
-   ![Screenshot that shows adding job data to the Azure Migrate project.](./media/contoso-migration-rds-to-wvd/add-a-tool.png)
+   ![Screenshot of adding job data to the Azure Migrate project.](./media/contoso-migration-rds-to-wvd/add-a-tool.png)
    *Figure 5: Adding job data to the migration.*
 
     > [!IMPORTANT]
@@ -144,22 +144,22 @@ Contoso will provision the Azure Virtual Desktop service in the `East US 2` Azur
 
 1. Add the tools to the migration project.
 
-   ![Screenshot that shows adding tools to the project.](./media/contoso-migration-rds-to-wvd/add-tools.png)
+   ![Screenshot of adding tools to the project.](./media/contoso-migration-rds-to-wvd/add-tools.png)
    *Figure 6: Adding tools to the migration.*
 
 1. Start the assessment of the current environment by selecting **Register with Azure Migrate** in the Lakeside tool.
 
-   ![Screenshot that shows Lakeside registration with Azure Migrate.](./media/contoso-migration-rds-to-wvd/lakeside-register-with-azure-migrate.png)
+   ![Screenshot of Lakeside registration with Azure Migrate.](./media/contoso-migration-rds-to-wvd/lakeside-register-with-azure-migrate.png)
    *Figure 7: Assessing the current environment.*
 
 1. Contoso connects Azure Migrate and Lakeside, and accepts any requested permissions.
 
-   ![Screenshot that shows signing in to connect Azure and Lakeside.](./media/contoso-migration-rds-to-wvd/lakeside-login.png)
+   ![Screenshot of signing in to connect Azure and Lakeside.](./media/contoso-migration-rds-to-wvd/lakeside-login.png)
    *Figure 8: Connecting Azure to Lakeside.*
 
 1. Contoso continues with the Lakeside tool to create a new tenant and start assessing the current on-premises RDS environment. From the dashboard, Contoso can access the deployment guide, download the assessment client to deploy to the current environment, and review the data collected from these agents.
 
-   ![Screenshot shows the Lakeside dashboard.](./media/contoso-migration-rds-to-wvd/lakeside-new-tenant-dashboard.png)
+   ![Screenshot of the Lakeside dashboard.](./media/contoso-migration-rds-to-wvd/lakeside-new-tenant-dashboard.png)
    *Figure 9: The Lakeside dashboard.*
 1. After an adequate amount of data is captured, Contoso reviews the assessment data to determine the best migration path. This assessment data includes the raw assessment data from the desktops data and the data broken into different user personas. This information includes the:
 
@@ -171,7 +171,7 @@ Contoso will provision the Azure Virtual Desktop service in the `East US 2` Azur
 - Concurrent user reports.
 - Top software packages in use.
 
-    ![Screenshot that shows Lakeside dashboard reports.](./media/contoso-migration-rds-to-wvd/lakeside-dashboard-reports.png)
+    ![Screenshot of Lakeside dashboard reports.](./media/contoso-migration-rds-to-wvd/lakeside-dashboard-reports.png)
     *Figure 10: Lakeside dashboard reports.*
 
 The data is analyzed by Contoso to determine the most cost-effective use of both pooled Azure Virtual Desktop resources and personal Azure Virtual Desktop resources.
@@ -185,12 +185,12 @@ Using the Azure portal, Contoso will create an Azure Virtual Desktop environment
 
 1. Contoso selects the correct subscription, and creates a new Azure Virtual Desktop host pool.
 
-   ![Screenshot that shows provisioning an Azure Virtual Desktop host pool.](./media/contoso-migration-rds-to-wvd/wvd-new-host-pool.png)
+   ![Screenshot of provisioning an Azure Virtual Desktop host pool.](./media/contoso-migration-rds-to-wvd/wvd-new-host-pool.png)
   *Figure 11: A new Azure Virtual Desktop host pool.*
 
 1. Specify the subscription, resource group, and region. Then select the name for the host pool, desktop type, and default desktop users. Desktop type is set to **Pooled** because Contoso is starting with a new shared environment for some of its users. Default desktop users can be left blank. Move on to configure the virtual machines.
 
-   ![Screenshot that shows prerequisites for configuring virtual machines.](./media/contoso-migration-rds-to-wvd/wvd-new-host-pool-basics-alt.png)
+   ![Screenshot of prerequisites for configuring virtual machines.](./media/contoso-migration-rds-to-wvd/wvd-new-host-pool-basics-alt.png)
    *Figure 12: Prerequisites for configuring virtual machines.*
 
    - Contoso configures the VM and chooses a custom size by selecting **Change size** or using the default.
@@ -199,18 +199,18 @@ Using the Azure portal, Contoso will create an Azure Virtual Desktop environment
    - Based on the personas of the users from the Lakeside assessment, Contoso sets the total users to **150**.
    - Other settings include the disk type, an Active Directory domain join UPN field, an admin password, an optional OU path to which machines are added, the virtual network, and a subnet for adding servers.
 
-   ![Screenshot that shows configuring virtual machines.](./media/contoso-migration-rds-to-wvd/wvd-new-host-pool-configure-virtual-machines-alt.png)
+   ![Screenshot of configuring virtual machines.](./media/contoso-migration-rds-to-wvd/wvd-new-host-pool-configure-virtual-machines-alt.png)
    *Figure 13: Configuring virtual machines.*
 
     > [!NOTE]
     > Contoso can't create a new virtual network at this step. Before reaching this step, Contoso should have already created a virtual network that has access to Active Directory.
     <!-- -->
     > [!NOTE]
-    > Contoso can't use a user account that requires multi-factor authentication in this step. If Contoso plans to use multi-factor authentication for its users, it will need to create a service principal for this purpose.
+    > Contoso can't use a user account that requires multifactor authentication in this step. If Contoso plans to use multifactor authentication for its users, it will need to create a service principal for this purpose.
 
 1. Contoso performs one more validation of the Azure Virtual Desktop settings, and creates the new environment of pooled Azure Virtual Desktop virtual machines.
 
-   ![Screenshot that shows reviewing and creating virtual machines.](./media/contoso-migration-rds-to-wvd/wvd-new-host-pool-review-create.png)
+   ![Screenshot of reviewing and creating virtual machines.](./media/contoso-migration-rds-to-wvd/wvd-new-host-pool-review-create.png)
    *Figure 14: Reviewing and creating virtual machines.*
 
 ## Step 3: Convert the UPDs to FSLogix profile containers
@@ -246,21 +246,21 @@ The next step in the migration process for Contoso is to migrate its persistent 
 
 1. Contoso starts by selecting **Discover** in the Azure Migrate: Server Migration tools.
 
-   ![Screenshot that shows the Azure Migrate: Server Migration Discover option.](./media/contoso-migration-rds-to-wvd/wvd-persistent-discover.png)
+   ![Screenshot of the Azure Migrate: Server Migration discover option.](./media/contoso-migration-rds-to-wvd/wvd-persistent-discover.png)
    *Figure 15: Discovering a server migration.*
 
 1. Contoso converts an appliance in its environment that's going to manage the replication of the machines to Azure Virtual Desktop. Ensure that the target region is set to `East US 2`, where the Azure Virtual Desktop environment was created.
 
-   ![Screenshot that shows creating an appliance for managing the replication.](./media/contoso-migration-rds-to-wvd/wvd-persistent-appliance.png)
+   ![Screenshot of creating an appliance for managing the replication.](./media/contoso-migration-rds-to-wvd/wvd-persistent-appliance.png)
    *Figure 16: Converting an appliance.*
 
 1. The replication provider is downloaded, installed, and registered to the Azure Migrate project to start the replication to Azure.
 
-   ![Screenshot that shows downloading and configuring replication.](./media/contoso-migration-rds-to-wvd/wvd-persistent-replication.png)
+   ![Screenshot of downloading and configuring replication.](./media/contoso-migration-rds-to-wvd/wvd-persistent-replication.png)
    *Figure 17: Prerequisites for replicating to Azure.*
 
 1. The replication of the hosts into Azure Blob Storage is now started. Contoso can continue to let the replication occur until it's ready to test the VMs and then migrate them into production.
-   - As machines start running in Azure, Contoso makes sure to install the [Azure Virtual Desktop VM agent](https://aka.ms/WVDVMAgent) on each machine.
+   - As machines start running in Azure, Contoso installs the [Azure Virtual Desktop VM agent](https://aka.ms/wvdvmagent) on each machine.
    - As a part of the installation, enter the registration token for the Azure Virtual Desktop environment to associate the server with the correct environment.
 
 1. The registration token can be obtained by using the following commands:

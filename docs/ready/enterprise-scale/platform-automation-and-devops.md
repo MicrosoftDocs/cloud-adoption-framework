@@ -86,7 +86,7 @@ Establish a cross-functional DevOps platform team to build, manage, and maintain
 
   - To accelerate Azure adoption, the central platform team should establish a common set of templates and libraries for application teams to draw upon. For example, horizontal (cross-function) guidance can help to support migrations through subject matter expertise and to ensure alignment with the overall target enterprise-scale architecture.
 
-  - Don't restrict application teams to use central artifacts or approaches because it hinders their agility. You can enforce consistent baseline configurations through a policy-driven infrastructure approach and Azure RBAC. This ensures that application (business unit) teams are flexible enough to innovate while still able to draw from a predefined set of templates.
+  - Don't restrict application teams to use central artifacts or approaches because it hinders their agility. This includes enforcing the use of specific tooling for development and Infrastructure-As-Code, either directly or indirectly. You can enforce consistent baseline configurations through a policy-driven infrastructure approach and Azure RBAC. This ensures that application (business unit) teams are flexible enough to innovate while still able to draw from a predefined set of templates.
 
   - Don't force application teams to use a central process or provisioning pipeline for the instantiation or management of application resources. Existing teams that already rely on a DevOps pipeline for application delivery should still be able to use the same tools they have been using. Remember that you can still use Azure Policy to maintain guardrails, independent of how resources are deployed in Azure.
 

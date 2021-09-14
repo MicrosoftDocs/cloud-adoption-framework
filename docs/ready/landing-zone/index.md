@@ -3,7 +3,7 @@ title: What is an Azure landing zone?
 description: Learn how a landing zone provides the basic building block of any cloud adoption environment.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 02/25/2020
+ms.date: 08/23/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -14,7 +14,7 @@ ms.custom: internal
 
 # What is an Azure landing zone?
 
-Azure landing zones are the output of a multisubscription Azure environment that accounts for scale, security governance, networking, and identity. Azure landing zones enable application migration, modernization and innovation at enterprise-scale in Azure. These zones consider all platform resources that are required to support the customer's application portfolio and don't differentiate between infrastructure as a service or platform as a service.
+Azure landing zones are the output of a multisubscription Azure environment that accounts for scale, security governance, networking, and identity. Azure landing zones enable application migration, modernization, and innovation at enterprise-scale in Azure. These zones consider all platform resources that are required to support the customer's application portfolio and don't differentiate between infrastructure as a service or platform as a service.
 
 ![Diagram that shows a landing zone design.](../enterprise-scale/media/lz-design.png)
 
@@ -37,19 +37,19 @@ No single solution fits all technical environments. A few Azure landing zone imp
 
 ## Azure landing zone conceptual architecture
 
-For the majority of organizations, the Azure landing zone conceptual architecture shown below represents the destination in their cloud adoption journey. It's a mature, scaled-out target architecture intended to help organizations operate successful cloud environments that drive their business whilst maintaining best practice security and governance.
+For many organizations, the Azure landing zone conceptual architecture below represents the destination in their cloud adoption journey. It's a mature, scaled-out target architecture intended to help organizations operate successful cloud environments that drive their business while maintaining best practices for security and governance.
 
 This conceptual architecture represents scale and maturity decisions based on a wealth of lessons learned and feedback from customers who have adopted Azure as part of their digital estate.
 
-While your specific implementation may vary, as a result of specific business decisions or existing investments in tools that need to persist in your cloud environment, this conceptual architecture will help set a direction for the overall approach your organization takes to designing and implementing a landing zone.
+While your specific implementation might vary, as a result of specific business decisions or existing investments in tools that need to persist in your cloud environment, this conceptual architecture will help set a direction for the overall approach your organization takes to designing and implementing a landing zone.
 
-![Azure landing zone conceptual architecture diagram](../enterprise-scale/media/ns-arch-cust-expanded.png)
+![A conceptual architecture diagram of an Azure landing zone.](../enterprise-scale/media/ns-arch-cust-expanded.png)
 
 ## Azure landing zone accelerator
 
-For organizations where this conceptual architecture fits with the operating model and resource structure they plan to use, there is a ready-made deployment experience available which we call the **Azure landing zone accelerator**.
+For organizations where this conceptual architecture fits with the operating model and resource structure they plan to use, there's a ready-made deployment experience called the **Azure landing zone accelerator**.
 
-The accelerator is an Azure portal-based deployment that will provide a full implementation of the conceptual architecture, along with opinionated configurations for key components such as management groups and policies.
+The accelerator is an Azure-portal-based deployment that will provide a full implementation of the conceptual architecture, along with opinionated configurations for key components such as management groups and policies.
 
 [![`DTA-Button-ALZ`](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://aka.ms/caf/ready/accelerator)
 

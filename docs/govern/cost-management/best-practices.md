@@ -6,7 +6,7 @@ ms.author: brblanch
 ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: migrate
+ms.subservice: govern
 ms.custom: internal
 ---
 
@@ -125,7 +125,7 @@ Azure provides different types of storage data.
 | ---|---|---|
 | **Blobs** | Optimized to store massive amounts of unstructured objects, such as text or binary data. | Access data from everywhere over HTTP/HTTPS. <br><br> Use for streaming and random access scenarios. For example, to serve images and documents directly to a browser, stream video and audio, and store backup and disaster recovery data. |
 | **Files** | Managed file shares accessed over SMB 3.0. | Use when migrating on-premises file shares, and to provide multiple access and connections to file data. |
-| **Disks** | Based on page blobs. <br><br> Disk type (speed): Standard HDD, standard SSD, premium SSD, or ultra disks. <br><br> Disk management: unmanaged (you manage disk settings and storage) or managed (you select the disk type and Azure manages the disk for you). | Use premium disks for VMs. Use managed disks for simple management and scaling. |
+| **Disks** | Based on page blobs. <br><br> Disk type (speed): Standard HDD, Standard SSD, Premium SSD, or Ultra Disk Storage. <br><br> Disk management: Unmanaged (you manage disk settings and storage) or managed (you select the disk type and Azure manages the disk for you). | Use premium disks for VMs. Use managed disks for simple management and scaling. |
 | **Queues** | Store and retrieve large numbers of messages accessed via authenticated calls (HTTP or HTTPS). | Connect application components with asynchronous message queuing. |
 | **Tables** | Store tables. | Now part of Azure Cosmos DB Table API. |
 
