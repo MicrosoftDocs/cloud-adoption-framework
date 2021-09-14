@@ -137,7 +137,7 @@ In addition to the private DNS zones, we also need to [create a set of custom Az
            },
            {
              "field": "name",
-             "like": "privatelink*"
+             "contains": "privatelink."
            }
          ]
        },
