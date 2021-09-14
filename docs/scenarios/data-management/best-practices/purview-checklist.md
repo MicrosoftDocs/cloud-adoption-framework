@@ -1,17 +1,17 @@
 ---
-title: Azure Purview readiness checklist for data management and analytics 
-description: Learn about the Azure Purview readiness checklist for the data management and analytics enterprise-scale scenario.
+title: Azure Purview readiness checklist for the data management and analytics enterprise-scale scenario
+description: Learn about the enterprise-scale for analytics and AI Azure Purview readiness checklist
 author: zeinam
 ms.author: zeinam
-ms.date: 05/21/2021
+ms.date: 09/13/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Azure Purview readiness checklist for data management and analytics
+# Azure Purview readiness checklist for data management and analytics enterprise-scale scenario
 
-During your data governance journey with Azure Purview and enterprise-scale for analytics and AI, you'll find there are multiple stages in the adoption life cycle. A well-planned deployment of **Azure Purview** in the [data management landing zone](../architectures/data-management-landing-zone.md) can provide the following benefits:
+During your data governance journey with Azure Purview and enterprise-scale for analytics and AI, you'll find there are multiple stages in the adoption lifecycle. A well-planned deployment of **Azure Purview** in the [data management landing zone](../architectures/data-management-landing-zone.md) can provide the following benefits:
 
 - Unified data discovery across the entire organization  
 - Improved analytic collaboration
@@ -41,11 +41,13 @@ The **Azure Purview readiness checklist** provides high-level guidance that can 
 
     |Role  |Description  |
     |---------|---------|
-    |Data curators     |Manage classifications and glossary terms         |
-    |Data readers     |Requires read-only access for search and insights reports         |
-    |Data source administrators and curators     |Register and scan data sources, and manage catalog         |
-    |Data source administrators and readers     |Register and scan data sources         |
+    |Data source admins  | Register and scan data sources. Manage credentials, runtimes and external connections |
+    |Collection admins | Manage collections and access control |
+    |Data curators     |Search and browse assets, manage classifications and glossary terms         |
+    |Data readers     |Have read-only access to search, browse, classifications and insights reports         |
 
+  For more information related to Purview roles, see [Access control in Azure Purview](/azure/purview/catalog-permissions#roles).
+  
 - Consider the following supporting roles for building an end-to-end data governance solution using Azure Purview:
 
     |Role  |Description  |
@@ -57,7 +59,7 @@ The **Azure Purview readiness checklist** provides high-level guidance that can 
     |Microsoft 365 administrators     |Microsoft Information Protection in Microsoft 365 if Microsoft 365 sensitivity labels will be used         |
     |Data source owners     |Mapped to roles in Azure Purview         |
 
-- Define whether there's an existing enterprise-scale for analytics and AI [data management landing zone](../architectures/data-management-landing-zone.md) in the environment or if there's a need to deploy a *new* data management landing zone. The data management landing zone is a centralized subscription to deploy services such as Azure Purview.
+- Define whether there's an existing enterprise-scale for analytics and AI [data management landing zone](../architectures/data-management-landing-zone.md) in the environment or if there is a need to deploy a *new* data management landing zone. The data management landing zone is a centralized subscription to deploy services such as Azure Purview.
 
 - Manage budgets, costs, and licensing.
   - Understand how the Azure Purview billing model works, and define how to control costs. Microsoft offers Azure Purview in a [pay-as-you-go model](https://aka.ms/purviewpricing).
@@ -95,7 +97,7 @@ The **Azure Purview readiness checklist** provides high-level guidance that can 
 
 - Create autolabeling rules in Microsoft 365.
 
-- Grant *Data Reader* or *Data Curator* access in Azure Purview to data governance and security teams in the organization.
+- Grant Purview roles in Azure Purview to data governance and security teams in the organization to corresponding collections.
 
 - Do an initial security review.
 
@@ -136,12 +138,13 @@ The **Azure Purview readiness checklist** provides high-level guidance that can 
 ## Phase 4: Onboard more data landing zones
 
 - Deploy more data landing zones as needed.
+
 - Adjust Azure Purview automatic scan rules.
+
 - Onboard more data sources into data landing zones.
+
 - Optimize glossary terms.
+
 - Optimize classifications rules.
+
 - Use Azure RBAC model to manage access to metadata and optimize the Azure Purview access model.
-
-## Next steps
-
-[Azure Purview deployment best practices for data management and analytics](./purview-deployment.md)
