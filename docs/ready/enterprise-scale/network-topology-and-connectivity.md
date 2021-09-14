@@ -19,7 +19,7 @@ The following series of articles examines key design considerations and best pra
 
 ## Plan for IP addressing
 
-Planning for IP addressing in Azure ensures that IP address spaces don't overlap across on-premises locations and Azure regions. For guidance on planning IP addressing for a hybrid implementation, see [Plan for IP addressing](../azure-best-practices/plan-for-ip-addressing.md).
+Plan for IP addressing in Azure to ensure that IP address spaces don't overlap across on-premises locations and Azure regions. For guidance on planning IP addressing for a hybrid implementation, see [Plan for IP addressing](../azure-best-practices/plan-for-ip-addressing.md).
 
 ## Configure DNS and name resolution for on-premises and Azure resources
 
