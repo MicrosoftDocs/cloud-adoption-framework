@@ -18,9 +18,9 @@ Enterprise-scale for AKS represents the strategic design path and target technic
 
 This solution is open source. You can adapt the templates to create an architecture that meets your needs. The following guidance provides design considerations for implementing a scalable AKS cluster in your landing zone. The design decisions your organization makes, based on this guidance, can lay the groundwork for scalability.
 
-## To begin, implement an enterprise-scale landing zone
+## Implement a Platform Foundation
 
-Enterprise-scale for AKS assumes that an enterprise-scale landing zone has been successfully implemented. For more information on this prerequisite, review these articles:
+Enterprise-scale for AKS assumes that a platform foundation that takes care of the shared services (network, security, identity, and governance) required to effectively construct and operationalize a landing zone has been successfully implemented. This is not mandatory to implement Enterprise scale for AKS but it does take care of a lot of the security and management required to safely manage your cloud environment. If you already have one, you can skip this step. For more information on this, review these articles:
 
 - [Start with Cloud Adoption Framework enterprise-scale landing zones](../../ready/enterprise-scale/index.md)
 - [Implement Cloud Adoption Framework enterprise-scale landing zones in Azure](../../ready/enterprise-scale/implementation.md)
@@ -55,12 +55,9 @@ The following conceptual reference architecture is an example that shows a golde
 
 [![Enterprise-scale for AKS architecture](./media/aks-eslz-architecture.png)](./media/aks-eslz-architecture.png#lightbox)
 
-Enterprise-scale for AKS is an open-source collection of Terraform templates, available in the [`caf-terraform-landingzones-starter`
- repo](https://github.com/Azure/caf-terraform-landingzones-starter/tree/starter/enterprise_scale/construction_sets/aks/online/aks_secure_baseline).
+Enterprise-scale for AKS is an open-source collection of ARM, Bicep and Terraform templates, available in the [Enterprise Scale for AKS]([Azure/Enterprise-Scale-for-AKS: Enterprise Scale for AKS Reference Implementation Repo (github.com)](https://github.com/Azure/Enterprise-Scale-for-AKS)) repo.
 
-Terraform templates are used to deploy infrastructure components such as virtual machines, networks, or storage to Azure. To get the templates, see the [enterprise-scale construction set for Azure Kubernetes services using Terraform](https://github.com/Azure/caf-terraform-landingzones-starter/tree/starter/enterprise_scale/construction_sets/aks/online/aks_secure_baseline). This reference implementation currently deploys a simplistic version of an AKS implementation that resides in its own subscription within the online management group of an enterprise-scale landing zone. An application deployed in the subscription for an online landing zone is internet-facing and doesn't require hybrid connectivity.
-
-[![Reference implementation](./media/aks-eslz-reference-implementation.png)](./media/aks-eslz-reference-implementation.png#lightbox)
+These templates are used to deploy infrastructure components such as virtual machines, networks, or storage to Azure. To get the templates, see the  [Enterprise Scale for AKS]([Azure/Enterprise-Scale-for-AKS: Enterprise Scale for AKS Reference Implementation Repo (github.com)](https://github.com/Azure/Enterprise-Scale-for-AKS)) repo. There, you will find various scenarios to help get you started on setting up your AKS environment quickly. Conceptually, this workload should sit in the landing zones management group of an enterprise-scale platform foundation as indicated in the image above. 
 
 ## Next steps
 
