@@ -259,8 +259,19 @@ items:
       - name: Design areas
         href: ready/landing-zone/design-areas.md
         items:
-        - name: Azure billing and Active Directory tenant 
-          href: ready/landing-zone/design-area/azure-billing-ad-tenant.md
+        - name: Azure billing and Active Directory tenant
+          items:
+          - name: Azure Billing and Active Directory tenant overview 
+            href: ready/landing-zone/design-area/azure-billing-ad-tenant.md
+          - name: Azure Billing - Enterprise Agreement
+            href: ready/landing-zone/design-area/azure-billing-ea.md
+          - name: Azure Billing - Microsoft Customer Agreement
+            href: ready/landing-zone/design-area/azure-billing-mca.md
+          - name: Azure Billing - Cloud Service provider
+            href: ready/landing-zone/design-area/azure-billing-csp.md
+          - name: Define an Azure Active Directory tenant
+            href: ready/landing-zone/design-area/azure-ad-define.md  
+
         - name: Identity and access management 
           href: ready/landing-zone/design-area/identity-access-management.md  
         - name: Network topology and connectivity
