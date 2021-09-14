@@ -21,22 +21,22 @@ The following series of articles examines key design considerations and best pra
 
 Plan for IP addressing in Azure to ensure that IP address spaces don't overlap across on-premises locations and Azure regions. For guidance on planning IP addressing for a hybrid implementation, see [Plan for IP addressing](../azure-best-practices/plan-for-ip-addressing.md).
 
-## Configure DNS and name resolution for on-premises and Azure resources
+## Configure DNS and name resolution
 
-Domain Name System (DNS) is a critical design factor in enterprise-scale architecture. Some organizations might want to use their existing investments in DNS. Other organizations might see cloud adoption as an opportunity to modernize their internal DNS infrastructure to use native Azure capabilities.
+Domain Name System (DNS) is an important design factor in enterprise-scale architecture. Some organizations might want to use their existing investments in DNS. Other organizations might see cloud adoption as an opportunity to modernize their internal DNS infrastructure to use native Azure capabilities.
 
 For guidance on planning DNS and name resolution for hybrid implementations, see [DNS for on-premises and Azure resources](../azure-best-practices/dns-for-on-premises-and-azure-resources.md).
 
 ## Define an Azure network topology
 
-Network topology is a critical element of enterprise-scale architecture that defines how applications can communicate with each other. For information about technologies and topologies for Azure deployments, see [Define an Azure network topology](../azure-best-practices/define-an-azure-network-topology.md). This article focuses on two core approaches: topologies based on Azure Virtual WAN, and traditional topologies.
+Network topology is a critical element of enterprise-scale architecture that defines how applications can communicate with each other. For information about technologies and topologies for Azure deployments, see [Define an Azure network topology](../azure-best-practices/define-an-azure-network-topology.md). The article discusses two core approaches: topologies based on Azure Virtual WAN, and traditional topologies.
 
-- [Virtual WAN network topology (Microsoft-managed)](../azure-best-practices/virtual-wan-network-topology.md) explores implementing an Azure Virtual WAN network topology.
-- [Traditional Azure networking topology](../azure-best-practices/traditional-azure-networking-topology.md) discusses implementing a traditional Azure networking topology.
+- The article [Virtual WAN network topology (Microsoft-managed)](../azure-best-practices/virtual-wan-network-topology.md) explores implementing an Azure Virtual WAN network topology.
+- The article [Traditional Azure networking topology](../azure-best-practices/traditional-azure-networking-topology.md) covers implementing a traditional Azure networking topology.
 
 ## Connect to Azure
 
-[Connectivity to Azure](../azure-best-practices/connectivity-to-azure.md) expands on network topology to describe recommended models for connecting on-premises locations to Azure.
+[Connectivity to Azure](../azure-best-practices/connectivity-to-azure.md) expands on network topology to describe recommended models to connect on-premises locations to Azure.
 
 ## Integrate Private Link and DNS zones
 
@@ -48,7 +48,7 @@ Building on the previous connectivity articles, [Connectivity to Azure PaaS serv
 
 ## Limit cross-tenant private endpoint connections
 
-Building on the previous article, [Limit cross-tenant Private Endpoint connections](../azure-best-practices/limiting-cross-tenant-pe-connections.md) explores recommended approaches to limit private endpoint connections across Azure Active Directory (Azure AD) tenants.
+To add to the previous article, [Limit cross-tenant Private Endpoint connections](../azure-best-practices/limiting-cross-tenant-pe-connections.md) explores recommended methods to limit private endpoint connections across Azure Active Directory (Azure AD) tenants.
 
 ## Plan for inbound and outbound internet connectivity
 
@@ -56,11 +56,11 @@ Building on the previous article, [Limit cross-tenant Private Endpoint connectio
 
 ## Plan for application delivery
 
-[Plan for application delivery](../azure-best-practices/plan-for-app-delivery.md) explores key recommendations for delivering internal- and external-facing applications in a secure, scalable, and highly available way.
+[Plan for application delivery](../azure-best-practices/plan-for-app-delivery.md) explores key recommendations to deliver internal- and external-facing applications in a secure, scalable, and highly available way.
 
 ## Plan for landing zone network segmentation
 
-[Plan for landing zone network segmentation](../azure-best-practices/plan-for-landing-zone-network-segmentation.md) explores key recommendations to deliver highly secure internal network segmentation within a landing zone to drive a network zero-trust implementation.
+[Plan for landing zone network segmentation](../azure-best-practices/plan-for-landing-zone-network-segmentation.md) explores key recommendations to deliver highly secure internal network segmentation within a landing zone. This strategy supports a network zero-trust implementation.
 
 ## Define network encryption requirements
 
@@ -72,4 +72,4 @@ Many industries require Azure traffic to be mirrored to a network packet collect
 
 ## Connect to other cloud providers
 
-[Connectivity to other cloud providers](../azure-best-practices/connectivity-to-other-providers.md) describes different connectivity approaches to integrate an Azure enterprise-scale landing zone architecture to other cloud providers.
+[Connectivity to other cloud providers](../azure-best-practices/connectivity-to-other-providers.md) describes different connectivity approaches to integrate an Azure enterprise-scale landing zone architecture with other cloud providers.
