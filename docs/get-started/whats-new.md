@@ -47,7 +47,7 @@ Get started with this scenario using the links below:
 
 ### Strategic Migration Assessment and Readiness Tool (SMART)
 
-We've added an article to help you use the [Strategic Migration Assessment and Readiness Tool (SMART)](../plan/smart-assessment). This assessment can help you find out what you need to do to prepare for your Azure migration. 
+We've added an article to help you use the [Strategic Migration Assessment and Readiness Tool (SMART)](../plan/smart-assessment.md). This assessment can help you find out what you need to do to prepare for your Azure migration. 
 
 ## July 2021
 
