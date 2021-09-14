@@ -48,7 +48,7 @@ Building on the previous connectivity articles, [Connectivity to Azure PaaS serv
 
 ## Limit cross-tenant private endpoint connections
 
-To add to the previous article, [Limit cross-tenant Private Endpoint connections](../azure-best-practices/limiting-cross-tenant-pe-connections.md) explores recommended methods to limit private endpoint connections across Azure Active Directory (Azure AD) tenants.
+To extend the previous article, [Limit cross-tenant Private Endpoint connections](../azure-best-practices/limiting-cross-tenant-pe-connections.md) explores recommended methods to limit private endpoint connections across Azure Active Directory (Azure AD) tenants.
 
 ## Plan for inbound and outbound internet connectivity
 
