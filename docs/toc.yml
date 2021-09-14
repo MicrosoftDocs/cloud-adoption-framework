@@ -273,7 +273,15 @@ items:
             href: ready/landing-zone/design-area/azure-ad-define.md  
 
         - name: Identity and access management 
-          href: ready/landing-zone/design-area/identity-access-management.md  
+          items:
+          - name: Overview
+            href: ready/landing-zone/design-area/identity-access-management.md  
+          - name: Considerations
+            href: ready/landing-zone/design-area/iam-considerations.md
+          - name: recommendations
+            href: ready/landing-zone/design-area/iam-recommendations.md
+          - name: Azure landing zone accelerator 
+            href: ready/landing-zone/design-area/iam-accelerator.md
         - name: Network topology and connectivity
           items:
             - name: Overview
