@@ -43,7 +43,7 @@ ms.custom: think-tank, e2e-avs
 - A decision should be made as to what the target DR site for the Azure VMWare Solution private cloud will be as this will influence which DR tooling is suitable to the environment.
 - Migration from third party locations into Azure VMWare Solution will have support through Site Recovery Manager through scale.
 - VMware Site Recovery Manager can be used to provide DR for Azure VMWare Solution private cloud to a secondary Azure VMWare Solution private cloud.
-- Azure Site Recovery can be leveraged as a DR solution for Azure VMWare Solution private cloud to Azure IaaS. See more at: [Prepare Azure Site Recovery resources for disaster recovery of Azure VMware Solution VMs](/azure/site-recovery/avs-tutorial-prepare-azure)
+- Azure Site Recovery can be leveraged as a DR solution for Azure VMWare Solution private cloud to Azure IaaS. See more at: [Prepare Azure Site Recovery resources for disaster recovery of Azure VMware Solution VMs](/azure/site-recovery/avs-tutorial-prepare-azure).
 
 ![ASRHighLevel](../_images/eslz-bcdr-4.png)
 
@@ -51,7 +51,7 @@ ms.custom: think-tank, e2e-avs
 - When planning the workloads to start after Azure Site Recovery failover, the recovery plan should include the correct start up order for workloads.
 - Partner Solutions like JetStream Software and [HCX (testing purposes only)](/azure/azure-vmware/deploy-disaster-recovery-using-vmware-hcx#:~:text=%20Deploy%20disaster%20recovery%20using%20VMware%20HCX%20,VMware%20Solution%20private%20cloud%2C%20and%20access...%20More%20) support disaster recovery scenarios for Azure VMWare Solution as well.
 - An analysis and decision should be made which (sub-)set of Azure VMWare Solution workloads require protection in case of a DR event. Consider protecting only those workloads critical to business operations to control the costs associated with the DR implementation.
-- Functional domain roles (e.g., Active Directory Domain Controllers, DNS) should be set up in the secondary environment
+- Functional domain roles (e.g., Active Directory Domain Controllers, DNS) should be set up in the secondary environment.
 - To enable DR between Azure VMWare Solution private clouds in distinct Azure regions, ExpressRoute Global Reach needs to be enabled between both (back-end) ExpressRoute circuits to allow primary to secondary private cloud connectivity when required for solutions like VMware SRM and VMware HCX for DR.
 - When working with disaster recovery there is the ability to leverage the same IP address space(s) from the primary Azure region in the secondary Azure region. Using the same address space(s) from the primary Azure region to the secondary Azure region requires further engineering overhead incorporation to the solution foundation compared to two separate address spaces for the primary and secondary Azure regions. 
   - **Retaining the same IP address(es)**: The same IP address(es) can be used on the recovered VM as the one allocated to the Azure VMWare Solution VMs. Isolated VLANS/segments in the secondary site will need to be created and ensure none of the isolated VLANS/segments are connected. DR routes will need to be modified to reflect that the subnet has moved to the secondary site, and new IP address locations. Whilst this does work, this provides engineering overhead when aiming for minimal interaction.
