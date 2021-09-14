@@ -11,9 +11,9 @@ ms.subservice: ready
 
 # Enterprise Scale for Azure VMware Solution
 
-Enterprise-scale for AVS represents the strategic design path and target technical state for an Azure VMware Solution (AVS) deployment. This solution provides an architectural approach and reference implementation to prepare landing zone subscriptions for a scalable Azure VMware Solution (AVS). The implementation adheres to the architecture and best practices of the Cloud Adoption Framework's Azure landing zones with a focus on the design principles of enterprise-scale. Review the enterprise-scale overview and implementation guidance before deploying enterprise-scale for SAP on Azure.
+Enterprise-scale for AVS represents the strategic design path and target technical state for an Azure VMware Solution (AVS) deployment. This solution provides an architectural approach and reference implementation to prepare landing zone subscriptions for a scalable Azure VMware Solution (AVS). The implementation adheres to the architecture and best practices of the Cloud Adoption Framework's Azure landing zones with a focus on the design principles of enterprise-scale. Review the enterprise-scale overview and implementation guidance before deploying enterprise-scale for AVS.
 
-This solution is open source. The following guidance provides design considerations for implementing a scalable AVS  in your landing zone. The design decisions your organization makes, based on this guidance, can lay the groundwork for scalability.
+This solution is open source. The following guidance provides design considerations for implementing a scalable AVS in your landing zone. The design decisions your organization makes, based on this guidance, can lay the groundwork for scalability.
 
 Customers adopt Azure VMware Solution in various ways. The Enterprise-Scale for AVS set can be adapted to produce an architecture that fits **your** way and puts your organization on a path to sustainable scale.
 
@@ -51,15 +51,15 @@ The following conceptual reference architecture is an example that shows design 
 
 [![Enterprise-scale for AVS architecture](./media/avs-eslz-architecture.png)](./media/avs-eslz-architecture.png#lightbox)
 
-Enterprise-scale for AVS is an open-source collection of ARM, BiCep templates, available in the [enterprise-scale for AVS
+Enterprise-scale for AVS is an open-source collection of ARM, Bicep templates, available in the [enterprise-scale for AVS
  repo](https://github.com/Azure/Enterprise-Scale-for-AVS)
 
-BiCep  templates are used to deploy infrastructure components such as AVS,virtual machines, networks, or storage to Azure. To get the templates, see the [enterprise-scale for Azure VMware Solution using BiCep](https://github.com/Azure/Enterprise-Scale-for-AVS) using BiCep. This reference implementation currently deploys a simplistic version of an AVS implementation that resides in its own subscription within the online management group of an enterprise-scale landing zone. 
+Bicep templates are used to deploy infrastructure components such as AVS,virtual machines, networks, or storage to Azure. To get the templates,see the [enterprise-scale for Azure VMware Solution deployment template](https://github.com/Azure/Enterprise-Scale-for-AVS) using Bicep. This reference implementation currently deploys a simplistic version of an AVS implementation that resides in its own subscription within the online management group of an enterprise-scale landing zone. 
 
 ## Implementation with Bicep/Azure Resource Manager (ARM) templates for Remote Desktop Services
 ARM Azure VMware Solution templates provide a collection of infrastructure-as-code Bicep/ARM templates to deploy an Azure VMware Solution environment on Azure.
 
-The automate Azure VMware Solution deployments in Azure GitHub repository contains code that lets you automatically deploy Azure Virtual Desktop environments in the Azure cloud.
+The automate Azure VMware Solution deployments in Azure GitHub repository contains code that lets you automatically deploy Azure VMware solution in the Azure cloud.
 
 
 ## Next steps
