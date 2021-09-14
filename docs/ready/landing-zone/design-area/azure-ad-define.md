@@ -39,6 +39,3 @@ Ask basic security questions during the Azure AD design phase, such as how your 
 
 - Use [Azure Lighthouse](/azure/lighthouse/overview) to grant third parties/partners access to Azure resources in customer Azure AD tenants and centralized access to Azure resources in multitenant Azure AD architectures.
 
-## Next steps
-
-[Identity and access management](identity-and-access-management.md)
