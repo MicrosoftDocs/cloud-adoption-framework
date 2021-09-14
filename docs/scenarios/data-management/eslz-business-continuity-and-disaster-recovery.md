@@ -1,6 +1,6 @@
 ---
-title: Business continuity and disaster recovery for data management and analytics in Azure
-description: Learn how this enterprise-scale scenario can improve business continuity and disaster recovery of data management and analytics in Azure.
+title: Business continuity and disaster recovery for data management and analytics 
+description: Learn how this enterprise-scale scenario can improve business continuity and disaster recovery for data management and analytics in Azure.
 author: christophermschmidt
 ms.author: chrschm
 ms.date: 07/19/2021
@@ -15,7 +15,7 @@ When you design architecture for a cloud service, consider your availability req
 
 High availability and disaster recovery can sometimes be combined. The two areas have slightly different strategies, especially when it comes to data. To learn more, see the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/) and its [reliability principles](/azure/architecture/framework/resiliency/principles).
 
-Instead of trying to prevent failures, accept up front that failures can and do happen. Minimize the effects of any single failing component in the lifecycle. Your tolerance for cost, recovery point objective, and recovery time objective determine the type of solution to implement.
+Instead of trying to prevent failures, accept up front that failures can and do happen. Minimize the effects of any single failing component in the life cycle. Your tolerance for cost, recovery point objective, and recovery time objective determine the type of solution to implement.
 
 ## Backup strategies
 
@@ -71,8 +71,8 @@ For an overview of business continuity with Azure SQL Database, see [Overview of
 
 ### Azure Synapse Analytics
 
-For an overview of business continuity with Azure Synapse Analytics, see [High availability for Azure Synapse Analytics](/azure/cloud-adoption-framework/migrate/azure-best-practices/analytics/azure-synapse).
+For an overview of business continuity with Azure Synapse Analytics, see [High availability for Azure Synapse Analytics](../../migrate/azure-best-practices/analytics/azure-synapse.md).
 
 ## Next steps
 
-[Platform automation and Azure DevOps data management and analytics](./eslz-platform-automation-and-devops.md)
+[Platform automation and DevOps for a data management and analytics enterprise-scale scenario](./eslz-platform-automation-and-devops.md)

@@ -127,7 +127,7 @@ Now that the application is in production, how can you optimize your workflow an
   For more information, see:
   - [How&nbsp;service&nbsp;meshes&nbsp;work&nbsp;in&nbsp;Kubernetes&nbsp;(video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&v=izVWk7rYqWI&index=15) <br>
   - [Learn about service meshes](/azure/aks/servicemesh-about)
-  - [Use Open Service Mesh with Azure Kubernetes Service](/azure/aks/servicemesh-osm-about)
+  - [Use Open Service Mesh with Azure Kubernetes Service](/azure/aks/open-service-mesh-about)
   - [Use Istio with Azure Kubernetes Service](/azure/aks/servicemesh-istio-about)
   - [Use Linkerd with Azure Kubernetes Service](/azure/aks/servicemesh-linkerd-about)
   - [Use Consul with Azure Kubernetes Service](/azure/aks/servicemesh-consul-about)

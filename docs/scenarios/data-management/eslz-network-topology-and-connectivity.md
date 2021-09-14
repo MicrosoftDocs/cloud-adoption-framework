@@ -1,6 +1,6 @@
 ---
-title: Azure enterprise-scale for analytics and AI networking
-description: Learn about the network topology and connectivity for a data management and analytics Azure landing zone.
+title: Network topology and connectivity for data management and analytics landing zones
+description: Learn about the network topology and connectivity for data management and analytics landing zones in Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/21/2021
@@ -9,13 +9,13 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Network topology and connectivity for a data management and analytics landing zone
+# Network topology and connectivity for data management and analytics landing zones
 
-This article has design considerations and guidelines for networking and connectivity to or from data management landing zones and data landing zones. It builds on information that's found in the [enterprise-scale design area for network topology and connectivity](../../ready/enterprise-scale/network-topology-and-connectivity.md) article.
+This article has design considerations and guidelines for networking and connectivity to or from data management landing zones and data landing zones. It builds on information in the [enterprise-scale design area for network topology and connectivity](../../ready/enterprise-scale/network-topology-and-connectivity.md) article.
 
 Since data management and data landing zones are important, you should also include the guidance for the enterprise-scale design areas in your design.
 
-This section outlines the networking patterns to assist with:
+This section outlines networking patterns that can help with:
 
 - Integrating across clouds.
 - Restricting data exfiltration.
@@ -45,7 +45,7 @@ Data landing zones connect to other data landing zones using virtual network pee
 
 ## Data management landing zone to third-party clouds
 
-To set up connectivity between a data management landing zone and a third-party cloud, use a [Site-to-Site VPN](/azure/vpn-gateway/vpn-gateway-create-site-to-site-rm-powershell) gateway connection. This VPN can connect your on-premises or third-party cloud landing zone to an Azure virtual network. This connection is created over an IPsec or internet key exchange v1 or v2 (IKEv1 or IKEv2) VPN tunnel.
+To set up connectivity between a data management landing zone and a third-party cloud, use a [site-to-site VPN](/azure/vpn-gateway/vpn-gateway-create-site-to-site-rm-powershell) gateway connection. This VPN can connect your on-premises or third-party cloud landing zone to an Azure virtual network. This connection is created over an IPsec or internet key exchange v1 or v2 (IKEv1 or IKEv2) VPN tunnel.
 
 Site-to-Site VPNs can provide better continuity for your workloads in a hybrid cloud setup with Azure.
 
@@ -54,13 +54,17 @@ Site-to-Site VPNs can provide better continuity for your workloads in a hybrid c
 
 ## Private endpoints
 
-The enterprise-scale for analytics and AI framework uses [Private Link](/azure/private-link/private-link-service-overview), where available, for shared platform as a service (PaaS) services. Private Link is available for several services and is in public preview for more services. Private Link addresses data exfiltration concerns related to service endpoints.
+The enterprise-scale for analytics and AI framework uses [Private Link](/azure/private-link/private-link-service-overview), where available, for shared platform-as-a-service (PaaS) services. Private Link is available for several services and is in public preview for more services. Private Link addresses data exfiltration concerns related to service endpoints.
 
 For the current list of supported products, see [Private Link resources](/azure/private-link/private-endpoint-overview#private-link-resource).
 
 > [!CAUTION]
-> By design, enterprise-scale for analytics and AI networking uses private endpoints where available for connectivity to PaaS services.
+> By design, enterprise-scale for analytics and AI networking uses private endpoints where available to connect to PaaS services.
 
-### Azure DNS resolver implementation for private endpoints
+### Implement Azure DNS resolver for private endpoints
 
-Handle DNS resolution for private endpoints through central [Azure Private DNS](/azure/dns/private-dns-overview) zones. Required DNS records for private endpoints can be automatically created using Azure Policy to allow access through fully qualified domain names (FQDNs). The lifecycle of the DNS records follows the lifecycle of the private endpoints. It's automatically removed when the private endpoint is deleted.
+Handle DNS resolution for private endpoints through central [Azure Private DNS](/azure/dns/private-dns-overview) zones. Required DNS records for private endpoints can be automatically created using Azure Policy to allow access through fully qualified domain names (FQDNs). The life cycle of the DNS records follows the life cycle of the private endpoints. It's automatically removed when the private endpoint is deleted.
+
+## Next steps
+
+[Resource organization for enterprise-scale data management and analytics](./eslz-resource-organization.md)

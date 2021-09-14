@@ -1,6 +1,6 @@
 ---
-title: Strategy for data management and analytics adoption in Azure
-description: Integrate data management and analytics into your cloud adoption strategy
+title: Integrate data management and analytics into your cloud adoption strategy
+description: Understand how to integrate data management and analytics into your cloud adoption strategy.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/22/2021
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---
 
-# Strategic impact of data management and analytics
+# Integrate data management and analytics into your cloud adoption strategy
 
 Best practice encourages customers to create a single centralized cloud adoption strategy, using the [Cloud Adoption Framework's Strategy methodology](../../strategy/index.md). If you haven't already, use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record your cloud adoption strategy.
 
@@ -35,9 +35,12 @@ There are a number key themes that outline how these motivations can be realized
 It's key to align your data strategy with your business outcomes. Having a successful data strategy will give you a competitive advantage. In essence, most business outcomes can be classified under one or more of these four categories:
 
 **Empower your employees:** Consider enabling your workforce with real-time knowledge of customers, devices, and machines, to efficiently collaborate to meet customer or business needs with agility.
+
 **Engage with customers:** Deliver a personalized, rich, connected experience, inspired through your brand. Drive loyalty along every step of the customer journey by harnessing the power of data and insights.
+
 **Optimize operations:** Increase the flow of information across your entire business operation. Keep your business processes synchronized and make every interaction valuable through a data-driven approach.
-**Transform your products and development lifecycle:** Gather telemetry data about your services and offerings. Use the data to prioritize a release or create a new feature, and evaluate effectiveness and adoption continuously.
+
+**Transform your products and development life cycle:** Gather telemetry data about your services and offerings. Use the data to prioritize a release or create a new feature, and evaluate effectiveness and adoption continuously.
 
 Once you have prioritized your business outcomes, it's key to look at your current projects and long-term strategic initiatives, and classify them accordingly. Consider combining the four business outcomes in a matrix format, based on complexity and impact. Also, think about adding the architectural pillars to help you dive deeper into the scenario.
 
@@ -47,9 +50,9 @@ Throughout your business intelligence, analytics and AI maturity journey, there 
 
 ## Key themes
 
-![Diagram of key themes.](./images/key-themes.png)
+Carefully analyze the following key themes and how they relate to the important aspects of a coherent data strategy:
 
-Carefully analyze the above key themes and how they relate to important facets of a coherent data strategy:
+![Diagram of key themes.](./images/key-themes.png)
 
 *"A **data strategy** is the foundation to using **data** as an asset and driving business forward. It's not a patch job for **data** problems. It's a long-term, guiding plan that defines the people, processes, and technology to put in place to solve **data** challenges."*
 
@@ -90,11 +93,8 @@ To build a strong data strategy, you first need to understand how data works. Un
 Data travels fast, but the velocity of data movement can't defy the laws of physics. It must conform to the laws of the land or the industry that created it. Data never changes by itself, but it's prone to changes and accidental loss, unless explicit measures are in place to mitigate such challenges. Ensure controls, databases and storage anti-corruption measures, monitoring, audits, alerts, and downstream processes are in place to deal planned or unforeseen changes. Data by itself, and simply through the act of storing it, doesn't produce any insights or yield any value. To discover insights or extract value, most or all of the data, independent of the volume, velocity, variety, and veracity, has to go through four discrete steps:
 
 - Ingestion
-
 - Storage
-
 - Processing
-
 - Analytics
 
 These steps each have their own set of principles, processes, tools, and technologies. Withholding data assets and related insights might affect sociol-economic, political, research, and investment decisions. That's why it's of paramount importance for organizations to build the capability to provide insights in a secure and responsible manner. All data generated or acquired must go through a data classification exercise, unless otherwise explicitly stated. Where needed, the gold standard for dealing with confidential data is encryption at rest and in transit. Data has gravity and data, applications, and services all have their own gravitational pull. But data is the heaviest here, and so it has the most gravitational pull. Unlike newton's Apple, data doesn't have a physical mass to draw in surrounding objects. Instead, latency and throughput act as accelerators to the analytics process. Latency, throughput, and ease of access often requires that data is duplicated even when that isn't the desired outcome. Set up people, processes, tools, and technologies appropriately to balance such requirements against the organization's data policies. The speed at which data can be processed is governed by architectural constructs, and facilitated through innovations in software, hardware, and networking. Some of the key architectural considerations are: setting up data distribution, partitioning, cache technologies, batch versus stream-processing, and balancing backend versus client-side processing.
@@ -105,9 +105,9 @@ Using data to build better products and higher value services as a point of comp
 
 ## A principled approach to your data strategy
 
-With data governance in mind, the following diagram shows the essential stages for the data lifecycle:
+With data governance as the focus, the following diagram shows the key stages of a data life cycle:
 
-![Diagram of the data lifecycle.](./images/data-management-and-quality.png)
+![Diagram of a data life cycle.](./images/data-management-and-quality.png)
 
 An effective data strategy must have provisions for data governance. They're mutually inclusive, but not the same thing.
 
@@ -145,7 +145,7 @@ Now that we've covered the four stages, the following representation shows the k
 
 After making all the capability provisions, and taking a principled architectural view as discussed in this section, you'll most likely end up with the building blocks required for your cloud strategy journey.
 
-:::image type="content" source="./images/data-strategy-building-block.png" alt-text="Diagram of the manage credentials decision tree." lightbox="./images/data-strategy-building-block.png":::
+:::image type="content" source="./images/data-strategy-building-block.png" alt-text="Diagram of a decision tree for managing credentials." lightbox="./images/data-strategy-building-block.png":::
 
 ## Data strategy summary
 
@@ -186,9 +186,9 @@ When you deliver data products against the set-out success criteria in a standar
 
 ## Next steps
 
-The following articles can guide your cloud adoption journey and help you succeed in the cloud adoption scenario.
+The following articles can guide your cloud adoption journey and help your cloud adoption scenario to succeed: 
 
-- [Plan for data management and analytics](./plan.md)
-- [Review your environment or Azure landing zones](./ready.md)
+- [Develop a plan for data management and analytics](./plan.md)
+- [Review your environment for Azure landing zones](./ready.md)
 - [Govern data management and analytics](./govern.md)
 - [Secure data management and analytics](./secure.md)

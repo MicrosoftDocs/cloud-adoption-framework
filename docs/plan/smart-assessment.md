@@ -30,7 +30,7 @@ You have the ability to pick an area of focus, or answer all the assessment ques
 
 ## Access the assessment
 
-You can start the assessment by visiting [`https://aka.ms/smarttool`](https://aka.ms/smarttool).
+You can start the assessment by visiting [`https://aka.ms/smarttool`](/assessments/?id=Strategic-Migration-Assessment&mode=pre-assessment).
 
 :::image type="content" source="../_images/start-smart.png" alt-text="Diagram that shows the Strategic Migration Assessment and Readiness Tool (SMART).":::
 

@@ -1,6 +1,6 @@
 ---
-title: Manage master data in Azure
-description: Learn about managing master data, including creation, storage, synchronization between systems, and governance in Azure.
+title: Manage master data 
+description: Learn about managing master data in Azure, including how to create, store, and synchronize between systems, and governance.
 author: mboswell
 ms.author: mboswell
 ms.date: 07/21/2021
@@ -27,4 +27,4 @@ MDM provides the ideal place for customer consent management. Collect consents f
 
 ## Next steps
 
-- [Data sharing agreements](./govern-data-sharing-agreements.md)
+[Data sharing agreements in data management and analytics](./govern-data-sharing-agreements.md)

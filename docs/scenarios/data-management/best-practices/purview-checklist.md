@@ -3,7 +3,7 @@ title: Azure Purview readiness checklist for the data management and analytics e
 description: Learn about the enterprise-scale for analytics and AI Azure Purview readiness checklist
 author: zeinam
 ms.author: zeinam
-ms.date: 05/21/2021
+ms.date: 09/13/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -41,11 +41,13 @@ The **Azure Purview readiness checklist** provides high-level guidance that can 
 
     |Role  |Description  |
     |---------|---------|
-    |Data curators     |Manage classifications and glossary terms         |
-    |Data readers     |Requires read-only access for search and insights reports         |
-    |Data source administrators and curators     |Register and scan data sources, and manage catalog         |
-    |Data source administrators and readers     |Register and scan data sources         |
+    |Data source admins  | Register and scan data sources. Manage credentials, runtimes and external connections |
+    |Collection admins | Manage collections and access control |
+    |Data curators     |Search and browse assets, manage classifications and glossary terms         |
+    |Data readers     |Have read-only access to search, browse, classifications and insights reports         |
 
+  For more information related to Purview roles, see [Access control in Azure Purview](/azure/purview/catalog-permissions#roles).
+  
 - Consider the following supporting roles for building an end-to-end data governance solution using Azure Purview:
 
     |Role  |Description  |
@@ -95,7 +97,7 @@ The **Azure Purview readiness checklist** provides high-level guidance that can 
 
 - Create autolabeling rules in Microsoft 365.
 
-- Grant *Data Reader* or *Data Curator* access in Azure Purview to data governance and security teams in the organization.
+- Grant Purview roles in Azure Purview to data governance and security teams in the organization to corresponding collections.
 
 - Do an initial security review.
 
