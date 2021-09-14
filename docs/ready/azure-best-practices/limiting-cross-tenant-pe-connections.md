@@ -253,3 +253,7 @@ We also recommend assigning the policy to the top-level management group and use
 Managed virtual networks and managed private endpoints have been introduced in Azure Synapse Analytics and Azure Data Factory. Because of this introduction, the policy blocks the secure and private usage of these services. This feature change means the development of data solutions on top of these services are blocked across the tenant.
 
 We recommend the use of an **Audit** effect instead of a **Deny** affect in the policy definition used in the [scenario two mitigation](#mitigation-for-scenario-two). This effect change can help you keep track of private endpoints being created in separate subscriptions and tenants. You can also use policy exemptions for the respective data platform scopes.
+
+## Next steps
+
+Learn about recommended [inbound and outbound connectivity](../enterprise-scale/network-topology-and-connectivity.md) models to and from the public internet.
