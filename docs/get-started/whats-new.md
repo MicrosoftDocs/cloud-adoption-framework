@@ -39,11 +39,11 @@ Get started with this scenario using the links below:
 | [Build an initial strategy](../scenarios/data-management/strategy.md) | In this article, review considerations for data management and analytics that will have an impact on your cloud adoption strategy.
 | [Define a plan](../scenarios/data-management/plan.md) | Establish a clear plan for rationalizing data, skilling people, and tips for ensuring success.
 | [Azure landing zones for data management and analytics](../scenarios/data-management/ready.md) | This guidance provides an overview of the data management landing zone. A data management landing zone is responsible for the governance of the platform and enables communication to ingest data sources from Azure, third-party clouds, and on-premises.
-| [Enterprise-scale for analytics](../scenarios/data-management/enterprise-scale.md) | Automation to accelerate realization of this scenario.
+| [Enterprise-scale for analytics](../scenarios/data-management/enterprise-scale-landing-zone.md) | Automation to accelerate realization of this scenario.
 | [Govern your data estate](../scenarios/data-management/govern.md) | This article reviews a data governance solution to surround the specific data entities and data subject areas with people, processes, policies, and technology.
 | [Secure your data estate](../scenarios/data-management/secure.md) | Best practices to improve security of your entire data estate.
 | [Organize people and teams](../scenarios/data-management/organize.md) |Learn about how to organize data operations team members for the data management and analytics scenario in Azure.
-| [Well-architected framework for data workloads](../scenarios/data-management/waf-placeholder.md) | In this article, we review how you can apply principals of the Well-Architected Framework, to each of the data workloads within your data estate to minimize technical debt from the beginning.
+| [Well-architected framework for data workloads](../scenarios/data-management/well-architected-framework.md) | In this article, we review how you can apply principals of the Well-Architected Framework, to each of the data workloads within your data estate to minimize technical debt from the beginning.
 
 ### Strategic Migration Assessment and Readiness Tool (SMART)
 
