@@ -261,13 +261,13 @@ items:
         items:
         - name: Azure billing and Active Directory tenant
           items:
-          - name: Azure Billing and Active Directory tenant overview 
+          - name: Overview 
             href: ready/landing-zone/design-area/azure-billing-ad-tenant.md
-          - name: Azure Billing - Enterprise Agreement
+          - name: Enterprise Agreement
             href: ready/landing-zone/design-area/azure-billing-ea.md
-          - name: Azure Billing - Microsoft Customer Agreement
+          - name: Microsoft Customer Agreement
             href: ready/landing-zone/design-area/azure-billing-mca.md
-          - name: Azure Billing - Cloud Service provider
+          - name: Cloud Service provider
             href: ready/landing-zone/design-area/azure-billing-csp.md
           - name: Define an Azure Active Directory tenant
             href: ready/landing-zone/design-area/azure-ad-define.md  
