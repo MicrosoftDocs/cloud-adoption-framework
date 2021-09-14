@@ -54,14 +54,14 @@ ms.custom: think-tank, e2e-avs
 - Functional domain roles (e.g., Active Directory Domain Controllers, DNS) should be set up in the secondary environment
 - To enable DR between Azure VMWare Solution private clouds in distinct Azure regions, ExpressRoute Global Reach needs to be enabled between both (back-end) ExpressRoute circuits to allow primary to secondary private cloud connectivity when required for solutions like VMware SRM and VMware HCX for DR.
 - When working with disaster recovery there is the ability to leverage the same IP address space(s) from the primary Azure region in the secondary Azure region. Using the same address space(s) from the primary Azure region to the secondary Azure region requires further engineering overhead incorporation to the solution foundation compared to two separate address spaces for the primary and secondary Azure regions. 
-  - **Retaining the same IP address(es)**: The same IP address(es) can be used on the recovered VM as the one allocated to the Azure VMWare Solution VMs. For this isolated VLANS/segments in the secondary site will need to be created and ensure none of these isolated VLANS/segments are connected to the environment. DR routes will need to be modified to reflect that the subnet has moved to the secondary site, and new IP address locations. Whilst this does work, this provides engineering overhead when aiming for minimal interaction.
-  - **Using different IP address(es)**: A different IP address can be used for the recovered VMs. If the VM is moved to a secondary site, the recovery plan within the SRM will detail out the custom IP map that will need to be selected for the change of IP address and in case of ASR a defined VNET will be chosen for new IP allocation.
+  - **Retaining the same IP address(es)**: The same IP address(es) can be used on the recovered VM as the one allocated to the Azure VMWare Solution VMs. Isolated VLANS/segments in the secondary site will need to be created and ensure none of the isolated VLANS/segments are connected. DR routes will need to be modified to reflect that the subnet has moved to the secondary site, and new IP address locations. Whilst this does work, this provides engineering overhead when aiming for minimal interaction.
+  - **Using different IP address(es)**: A different IP address can be used for the recovered VMs. If the VM is moved to a secondary site, the recovery plan within the SRM will detail out the custom IP map that will need to be selected for the change of IP address and in the case of using ASR, a defined VNET will be chosen for new IP allocation.
 - Understanding partial and full disaster recovery (DR) solutions:
-  - When working with Azure Site Recovery, preparing for full disaster recovery should be understood. This means failing over from Azure VMWare Solution into an Azure Native environment.
+  - When working with Azure Site Recovery, preparing for full disaster recovery should be understood. The definition of full disaster recovery is to fail over all workloads from Azure VMWare Solution into an Azure Native environment.
   - Utilising VMware SRM for partial and full DR is supported. This means that running Azure VMWare Solution in Region 1 and Region 2, the option to fail some or all the VMs from primary to secondary regions is supported. 
-  - The requirement for VM recovery and the IP address retention requirements will define if Partial vs. Full DR is possible or not. 
-  - In order to maintain the IP address and achieve a partial disaster recovery in SRM, gateway of the subnet will need to move to the secondary Azure VMWare Solution.
-  - Active-Standby DR does not require L2 stretching.
+  - The target requirement for source workloads and the IP address retention requirements will define if Partial vs. Full DR is possible or not. 
+  - In order to maintain the IP address and achieve a partial disaster recovery in SRM, the gateway subnet will need to move to the secondary Azure VMWare Solution.
+  - **NOTE:** Active-Standby DR does not require L2 stretching. 
 
 ## Disaster Recovery (DR) design recommendations
 
@@ -76,5 +76,5 @@ ms.custom: think-tank, e2e-avs
 - Azure Site Recovery should be used if Azure IaaS is the DR target for the Azure VMWare Solution private cloud
 - When working with either VMware Site Recovery Manager or Azure Site Recovery to provide DR for the Azure VMWare Solution private cloud, manual input should be minimized as much as possible by leveraging automated Recovery plans within each of the respective solutions. A recovery plan gathers machines into recovery groups for the purpose of failover and helps to define a systematic recovery process by creating small independent units that can fail over.
 - Utilizing the geopolitical region pair as the secondary DR environment is recommended for proximity of regions and cost reductions.
-- Keep address spaces completely different (i.e., 192.168.0.0/16 for Region 1 and 10.0.0.0/16 for Region 2) to reduce risk of IP address overlap 
+- Keep address spaces completely different (i.e., 192.168.0.0/16 for Region 1 and 10.0.0.0/16 for Region 2) to reduce risk of IP address overlap.
 - Leverage ExpressRoute Global Reach connectivity between the primary and secondary Azure VMWare Solution private clouds. [Further networking considerations and recommendations in the relevant design area](./eslz-network-topology-connectivity.md).
