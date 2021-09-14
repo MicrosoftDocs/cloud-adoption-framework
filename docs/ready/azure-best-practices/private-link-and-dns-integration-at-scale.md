@@ -184,15 +184,7 @@ In addition to the private DNS zones, we also need to [create a set of custom Az
            "type": "Microsoft.Network/privateEndpoints/privateDnsZoneGroups",
            "roleDefinitionIds": [
              "/providers/Microsoft.Authorization/roleDefinitions/b24988ac-6180-42a0-ab88-20f7382dd24c"
-           ],
-           "existenceCondition": {
-             "allOf": [
-               {
-                 "field": "Microsoft.Network/privateEndpoints/privateDnsZoneGroups/privateDnsZoneConfigs[*].privateDnsZoneId",
-                 "equals": "[parameters('privateDnsZoneId')]"
-               }
-             ]
-           },
+           ],           
            "deployment": {
              "properties": {
                "mode": "incremental",
