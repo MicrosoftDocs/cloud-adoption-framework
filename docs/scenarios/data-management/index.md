@@ -13,27 +13,57 @@ ms.subservice: overview
 
 As customers address larger, more sophisticated forms of cloud adoption, their journey to the cloud becomes more complex. This article series includes technical and non-technical considerations required to prepare for data management and analytics in the cloud. While this guidance strives to be cloud agnostic to allow for hybrid and multicloud adoption, the technical implementation examples focus on Azure products.
 
+## Objectives
+
 This scenario focuses on supporting two targeted outcomes:
 
 - **Analytics:** Use the cloud to deliver increasingly more mature analytics solutions. Migrate data platforms to the cloud. Democratize data using advanced visualization tools. Answer complex analytical questions with cloud-based analytics tools. Extend workloads with machine learning.
 
 - **Data governance:** Properly manage your data estate to ensure data quality and maturity across all cloud deployments of your data. Govern how data is classified, categorized, and used to ensure your data is protected and reliable across all cloud deployments. For more information, see [Data summary and maturity model for Azure](./govern.md).
 
+This scenario also provides a framework built on the following principles to address challenges with complex data architectures that do not scale to the needs of  enterprises:
+
+|  |  |
+|---------|---------|
+|**Allow**     |<ul><li>Scale without increased complexity</li><li>Separation of concerns to facilitate governance</li><li>Self-serve data infrastructure</li></ul>|
+|**Follow**     |<ul><li>Best practices for Well-Architected cloud services</li></ul>|
+|**Support**     |<ul><li>On-premise and multi-cloud scenarios</li></ul>         |
+|**Adopt**     |<ul><li>Product and vendor agnostic approach</li><li>Cloud Adoption Framework</li></ul>|
+|**Commit**     |<ul><li>Azure landing zones as the baseline infrastructure for all workloads</li><li>Operational model</li></ul>|
+|**Enable**     | <ul><li>Common data infrastructure</li><li>Distributed architecture under centralized governance</li><li>Secure network line-of-sight</li></ul>|
+
 ## Components of the scenario
 
-This scenario is designed to guide the end-to-end customer journey throughout the cloud adoption life cycle. Delivery of the full journey requires the following key components, or guidance sets:
+This scenario is designed to guide the end-to-end customer journey throughout the cloud adoption lifecycle. Delivery of the full journey requires the key components, or guidance sets described below.
 
-- **[Cloud Adoption Framework](/azure/cloud-adoption-framework):** Managing and governing data is a life cycle process that starts by building on your existing cloud strategy and carries all the way through to ongoing operations management. The Cloud Adoption Framework will help to guide the full life cycle for your data estate.
+### Implementation guidance
 
+- **[Cloud Adoption Framework](/azure/cloud-adoption-framework):** Managing and governing data is a lifecycle process that starts by building on your existing cloud strategy and carries all the way through to ongoing operations management. The Cloud Adoption Framework will help to guide the full lifecycle for your data estate.
 - **[Azure Well-Architected Framework](./well-architected-framework.md):** Workload architecture and operations have a direct impact on data. Understand how your architecture can improve management and governance of the data used by your workload.
+- **[Azure landing zones](/azure/cloud-adoption-framework/ready/)**: Choosing a landing zone as the environment to host your workloads, preprovisioned through code establishes a code-based starting point for your Azure environment. Ensure the environment is prepared for the cloud adoption plan through Azure landing zones by starting with Cloud Adoption Framework [enterprise-scale landing zones](/azure/cloud-adoption-framework/ready/enterprise-scale/) to create the infrastructure of your data platform.
+- **[Enterprise-scale for analytics and AI](enterprise-scale-landing-zone.md):** Representing a strategic design path for an Azure analytics and AI environment, the enterprise-scale for analytics and AI pattern relies upon distribution of the data and its pipelines across domains. This pattern includes the capabilities such as storage, data lineage, data classification, data ingestion, networking, security, access management, encryption, resiliency and monitoring.
 
-- **[Reference architectures](./architectures/data-management-landing-zone.md):** These reference solutions help to accelerate deployment for many common data management and analytics solutions.
+### Reference architectures
 
-- **[Best practices](./best-practices/data-lake-overview.md):** These level-300+ articles in the table of contents help central IT teams to deploy tools and manage the processes to ensure proper management and governance of your data.
+These architectures help to accelerate deployment for many common data management and analytics solutions and form the building blocks of the data managements and analytics scenario in Azure.
 
-- **Featured Azure products:** Expand this section in the table of contents to learn more about the products that support data management and analytics in Azure.
+- [Data management landing zone](./architectures/data-management-landing-zone.md)
+- [Data landing zone](./architectures/data-management-landing-zone.md)
 
-- **[Microsoft Learn modules](/learn):** Gain the hands-on skills required to implement, maintain, and support data management and analytics solutions.
+### Best practices
+
+These level-300+ articles in the table of contents help central IT teams to deploy tools and manage the processes to ensure proper management and governance of your data.
+
+- [Data lake implementation](best-practices/data-lake-overview.md)
+- [Azure Synapse Analytics implementation](best-practices/synapse.md)
+- [Azure Databricks implementation](best-practices/azure-databricks-implementation.md)
+- [Azure Purview implementation](best-practices/purview-checklist.md) 
+- [Data landing zone ingestion](best-practices/data-ingestion.md)
+- [Data science environment](best-practices/data-science-best-practices.md)
+
+### Featured Azure products
+
+Expand the **Featured Azure products** section in the table of contents to learn more about the products that support data management and analytics in Azure.
 
 ## Common customer journeys
 
@@ -51,4 +81,7 @@ This scenario is designed to guide the end-to-end customer journey throughout th
 
 ## Next steps
 
-[What is data governance?][./overview-data-governance.md]
+- [What is data governance?](./overview-data-governance.md)
+- [Develop a plan for data management and analytics](plan.md)
+- [Review your environment for Azure landing zones](ready.md)
+- [Introduction to enterprise-scale for analytics and AI in Azure](enterprise-scale-landing-zone.md)
