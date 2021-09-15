@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Identity and access management for Azure VMware Solution enterprise-scale scenario
 
-This article builds on the information found in [Enterprise-scale design area for identity and access management](/azure/cloud-adoption-framework/ready/enterprise-scale/identity-and-access-management) and [Azure VMware Solution identity concepts](/azure/azure-vmware/concepts-identity).
+This article builds on the information found in [Identity and access management](/azure/cloud-adoption-framework/ready/enterprise-scale/identity-and-access-management) and [Azure VMware Solution identity concepts](/azure/azure-vmware/concepts-identity).
 
 Use this information to examine design considerations and recommendations for identity and access management that's specific to the deployment of Azure VMware Solution.
 
@@ -45,4 +45,7 @@ After you deploy Azure VMware Solution, the new environment's vCenter contains a
 
 ## Next steps
 
-Learn about [network topology and connectivity](eslz-network-topology-connectivity.md) for an Azure VMware Solution enterprise-scale scenario.
+Learn about network topology and connectivity for an Azure VMware Solution enterprise-scale scenario. Examine design considerations and best practices about networking and connectivity with Microsoft Azure and Azure VMware Solution.
+
+> [!div class="nextstepaction"]
+> [Network topology and connectivity](eslz-network-topology-connectivity.md)
