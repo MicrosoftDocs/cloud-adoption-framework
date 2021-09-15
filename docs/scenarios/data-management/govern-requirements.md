@@ -7,6 +7,7 @@ ms.date: 06/23/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Requirements for governing Azure data in a modern enterprise
