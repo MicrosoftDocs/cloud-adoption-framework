@@ -60,7 +60,7 @@ using the principle of least privilege.
 -   Active Directory Sites and Services should be updated to direct Azure and
     AVS AD DS traffic to the appropriate Domain Controllers.
 
--   Use Run Command to:
+-   Use [Run Command](/azure/azure-vmware/configure-identity-source-vcenter) to:
 
     -   Add Active Directory Domain Services (Domain Controller) as an identity
         source for vCenter and NSX-T.
