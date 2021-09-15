@@ -6,7 +6,7 @@ ms.author: brblanch
 ms.date: 12/27/2018
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: migrate
+ms.subservice: ready
 ms.custom: internal
 ---
 

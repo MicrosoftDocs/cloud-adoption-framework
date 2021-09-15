@@ -107,7 +107,7 @@ Visual Studio App Center also provides a notification service that lets you use 
 ### Learn more
 
 - [App Service overview](/azure/app-service/overview)
-- [Web App for Containers: run a custom container](/azure/app-service/quickstart-custom-container?pivots=platform-linux)
+- [Web App for Containers: Run a custom container](/azure/app-service/quickstart-custom-container?pivots=platform-linux)
 - [Introduction to Azure Functions](/azure/azure-functions/functions-overview)
 - [Azure for .NET and .NET Core developers](/dotnet/azure/)
 - [Azure SDK for Python documentation](/azure/developer/python/)
