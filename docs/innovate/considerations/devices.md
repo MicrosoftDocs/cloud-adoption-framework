@@ -36,7 +36,7 @@ Types of interactive devices for ambient user experiences:
 - [Integrated reality](#integrated-reality): Moving closer to true ambience, integrated reality solutions focus on the use of a device that exists within the customer's reality to integrate the solution into their natural behaviors. A Virtual Assistant is a great example of integrating reality into the surrounding environment. A less well-known option concerns Internet of Things (IoT) technologies, which integrate devices that already exist in the customer's surroundings.
 - [Adjusted reality](#adjusted-reality): When any of these ambient solutions use predictive analysis in the cloud to define and provide an interaction with the customer through the natural surroundings, the solution has adjusted reality.
 
-Understanding the customer need and measuring customer impact help you determine whether a device interaction or ambient user experience are necessary to validate your hypothesis. With each of those data points, the following sections will help you find the best digital experience solution.
+Understanding the customer need and measuring customer impact help you determine whether a device interaction or ambient user experience are necessary to validate your hypothesis. With those data points, the following sections will help you find the best digital experience solution.
 
 ## Mobile experience
 

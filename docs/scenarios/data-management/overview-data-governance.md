@@ -7,6 +7,7 @@ ms.date: 06/22/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
+ms.custom: e2e-data-management, think-tank
 ---
 
 # What is data governance?

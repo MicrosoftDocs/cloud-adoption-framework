@@ -42,7 +42,7 @@ As you get started, use the checklist and application development resources in t
 
   To learn more, see:
   - [Get up and running with Kubernetes (e-book collection)](https://azure.microsoft.com/resources/containerize-your-apps-with-docker-and-kubernetes/)
-  - [Containerize Your Applications with Kubernetes on Azure (webinar)](https://info.microsoft.com/AU-AzureApp-WBNR-FY20-11Nov-12-ContainerizeYourApplicationswithKubernetesonAzure-SRDEM10557_LP02OnDemandRegistration-ForminBody.html)
+  - [`Containerize Your Applications with Kubernetes on Azure` (webinar)](https://info.microsoft.com/AU-AzureApp-WBNR-FY20-11Nov-12-ContainerizeYourApplicationswithKubernetesonAzure-SRDEM10557_LP02OnDemandRegistration-ForminBody.html)
 
 - **Review common Kubernetes scenarios.** Although Kubernetes is often thought of as a platform for delivering microservices, it's becoming a much broader platform. Watch this video to learn about common Kubernetes scenarios such as batch analytics and workflow: [Overview of common Kubernetes scenarios (video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&v=zd8vYhrFXp4&index=7).
 
@@ -64,7 +64,7 @@ As you get started, use the checklist and application development resources in t
 - **Manage application secrets.** Use a key vault to store and retrieve keys and credentials. Don't store credentials in your application code.
 
   For more information, see:
-  - [How Kubernetes and Configuration Management works (video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&v=vRcQOZLnKUk&index=11)
+  - [`How Kubernetes and Configuration Management works` (video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&v=vRcQOZLnKUk&index=11)
   - [Understand secrets management in Kubernetes (video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&v=KmhM33j5WYk&index=10)
   - [Use Azure Key Vault with Kubernetes](https://github.com/azure/kubernetes-keyvault-flexvol)
   - [Use Azure AD pod identity to authenticate and access Azure resources](https://github.com/azure/aad-pod-identity)
@@ -126,7 +126,7 @@ Now that the application is in production, how can you optimize your workflow an
 
   For more information, see:
   - [How&nbsp;service&nbsp;meshes&nbsp;work&nbsp;in&nbsp;Kubernetes&nbsp;(video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&v=izVWk7rYqWI&index=15) <br>
-  - [Learn about service meshes](/azure/aks/servicemesh-about)
+  - Learn about [service meshes](/azure/aks/servicemesh-about)
   - [Use Open Service Mesh with Azure Kubernetes Service](/azure/aks/open-service-mesh-about)
   - [Use Istio with Azure Kubernetes Service](/azure/aks/servicemesh-istio-about)
   - [Use Linkerd with Azure Kubernetes Service](/azure/aks/servicemesh-linkerd-about)
@@ -136,4 +136,4 @@ Now that the application is in production, how can you optimize your workflow an
 
   To learn more, see:
   - [Introduction to site reliability engineering (SRE)](/learn/modules/intro-to-site-reliability-engineering/)
-  - [DevOps at Microsoft: game streaming SRE](https://azure.microsoft.com/resources/devops-at-microsoft-game-streaming-sre/)
+  - [DevOps at Microsoft: Game streaming SRE](https://azure.microsoft.com/resources/devops-at-microsoft-game-streaming-sre/)
