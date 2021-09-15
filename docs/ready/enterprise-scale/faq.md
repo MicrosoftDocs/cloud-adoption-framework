@@ -16,6 +16,14 @@ This article answers frequently asked questions relating to Enterprise-scale.
 
 <!-- GENERAL -->
 
+## Whats is the Azure Landing Zone Accelerator?
+
+The Azure Landing Zone Accelerator is an Azure portal based deployment experience that will deploy the [Azure landing zone conceptual architecture](/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-conceptual-architecture).
+
+## What is the Azure Landing Zone Conceptual Architecture?
+
+The Azure landing zone conceptual architecture is the new name for Enterprise-scale. The conceptual architecture represents scale and maturity decisions based on a wealth of lessons learned and feedback from customers who have adopted Azure as part of their digital estate, in which we provide prescriptive guidance and recommendations for your implementation.
+
 ## What does a "Landing Zone" map to in Azure in the context of Enterprise-scale?
 
 From an Enterprise-Scale point of view, "Landing Zones" are individual Azure Subscriptions.
@@ -61,11 +69,11 @@ All of the ARM templates for the Enterprise-Scale are developed for, and optimiz
 
 Finally, taking the same templates for day 2 and onwards operations, will require you to re-deploy to the entire tenant for any change, and also require permanent Owner RBAC assignment on the tenant root "`/`" scope.
 
-However, if you wish to deploy and manage Enterprise-scale via infrastructure-as-code, please see the question: [What if we don't want to deploy using the Azure Landing Zone Accelerator portal based experience, but want to deploy with infrastructure-as-code?](#what-if-we-dont-want-to-deploy-using-the-azure-landing-zone-accelerator-portal-based-experience-but-want-to-deploy-with-infrastructure-as-code)
+However, if you wish to deploy and manage Enterprise-scale via infrastructure-as-code, please see the question: [What if we don't want to deploy using the Azure Landing Zone Accelerator portal based experience, but want to deploy via infrastructure-as-code?](#what-if-we-dont-want-to-deploy-using-the-azure-landing-zone-accelerator-portal-based-experience-but-want-to-deploy-with-infrastructure-as-code)
 
-## What if we cannot deploy using the Azure Landing Zone Accelerator portal based experience, but can deploy with infrastructure-as-code?
+## What if we cannot deploy using the Azure Landing Zone Accelerator portal based experience, but can deploy via infrastructure-as-code?
 
-We have a number of implementation options available:
+We have a number of implementation options available using infrastructure-as-code:
 
 - The [Azure Landing Zone Accelerator](/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-accelerator) portal based experience
   - This can, optionally, integrate and bootstrap a CI/CD pipeline using GitHub with [AzOps](https://github.com/Azure/AzOps) as documented [here.](https://github.com/Azure/Enterprise-Scale/wiki/Deploying-Enterprise-Scale)
@@ -74,3 +82,6 @@ We have a number of implementation options available:
 
 >[!NOTE]
 > The Bicep implementation option for Enterprise-scale is coming soon!
+
+# What if we have already deployed Enterprise-scale Landing Zones without the CI/CD integration, do I have to start over to have infrastructure as code?
+
