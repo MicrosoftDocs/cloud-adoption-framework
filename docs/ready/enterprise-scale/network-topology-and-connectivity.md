@@ -73,3 +73,11 @@ Many industries require Azure traffic to be mirrored to a network packet collect
 ## Connect to other cloud providers
 
 [Connectivity to other cloud providers](../azure-best-practices/connectivity-to-other-providers.md) describes different connectivity approaches to integrate an Azure enterprise-scale landing zone architecture with other cloud providers.
+
+## Next steps
+
+This overview summarized articles about key networking topology and connectivity considerations. Start your deeper investigation with the first article in the series:
+
+> [!div class="nextstepaction"]
+> [Plan for IP addressing](../azure-best-practices/plan-for-ip-addressing.md)
+
