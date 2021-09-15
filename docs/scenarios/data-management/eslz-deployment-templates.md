@@ -7,6 +7,7 @@ ms.date: 07/13/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Deployment templates for enterprise-scale for analytics and AI deployments
