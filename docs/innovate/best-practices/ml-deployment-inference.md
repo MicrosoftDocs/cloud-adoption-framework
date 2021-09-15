@@ -85,7 +85,7 @@ During batch inference for many models, predictions are typically scheduled, rec
 
 [![Diagram of the reference pattern for many-models batch inference.](./media/many-models-batch-inference.png)](./media/many-models-batch-inference.png#lightbox)
 
-The core purpose of this pattern is to observe the model and run multiple models simultaneously to achieve a highly scalable inference solution that can handle large data volumes. To achieve hierarchical model inference, many models can be split into categories. Each category can have its own inference storage, like an Azure Data Lake. When implementing this pattern, one needs to balance scaling the models horizontally and vertically, as this would impact the cost and performance. Running too many model instances might increase performance but impact the cost. Too few instances with high spec nodes might be more cost effective but could cause issues with scaling.
+The core purpose of this pattern is to observe the model and run multiple models simultaneously to achieve a highly scalable inference solution that can handle large data volumes. To achieve hierarchical model inference, many models can be split into categories. Each category can have its own inference storage, like a data lake in Azure. When implementing this pattern, one needs to balance scaling the models horizontally and vertically, as this would impact the cost and performance. Running too many model instances might increase performance but impact the cost. Too few instances with high spec nodes might be more cost effective but could cause issues with scaling.
 
 ## Real-time inference for many models
 
