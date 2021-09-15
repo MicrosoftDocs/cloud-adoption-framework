@@ -169,9 +169,15 @@ This type of technology team is well suited for the first two stages of the reta
 
 ![Central I T team](../../_images/ready/org-ready-central-it.png)
 
-Traditional central IT teams value consistency and strive to minimize risk, change, or experimentation. This operating model can be replicating in the cloud. To replicate this operating model, study the "start small and expand" approach to Azure landing zones. For more information, see [Azure landing zones for the retail industry](./ready.md). For more information about developing change control practices in the cloud, see [Governance for the retail industry](./govern.md) and [Manage the cloud for the retail industry](./manage.md).
+Traditional central IT teams value consistency and strive to minimize risk, change, or experimentation. This operating model can be replicating in the cloud. To replicate this operating model, study the "start small and expand" approach to Azure landing zones. For more information, see [Azure landing zones for the retail industry](./ready.md). For more information about developing change control practices in the cloud, see:
 
-To prepare for central IT and central operations in Azure, evaluate how the current organization structure aligns to the central IT organizational structure pictured above. New virtual teams or adjustments to the organization may be useful to deliver your current operations approaches in Azure. Specifically, early cloud adoption projects should focus on building cloud governance and cloud platform functions to extend your central IT model. Those teams also need to define a plan for extending or modernizing operations tools to support your overall operating model. For more information, see [Cloud governance functions](../../organize/cloud-governance.md) and [Cloud platform functions](../../organize/cloud-platform.md).
+- [Governance for the retail industry](./govern.md)
+- [Manage the cloud for the retail industry](./manage.md).
+
+To prepare for central IT and central operations in Azure, evaluate how the current organization structure aligns to the central IT organizational structure pictured above. New virtual teams or adjustments to the organization may be useful to deliver your current operations approaches in Azure. Specifically, early cloud adoption projects should focus on building cloud governance and cloud platform functions to extend your central IT model. Those teams also need to define a plan for extending or modernizing operations tools to support your overall operating model. For more information, see:
+
+- [Cloud governance functions](../../organize/cloud-governance.md)
+- [Cloud platform functions](../../organize/cloud-platform.md)
 
 ## Cloud center of excellence and enterprise operations
 
@@ -185,7 +191,7 @@ These organizations empower workload owners to make more decisions. They focus o
 
 This type of technology team organization is well suited to achieve the latter two stages of the retail cloud maturity model. These stages are analytics-driven retail and intelligent retail. We refer to these organizations as cloud center of excellence (CCoE) teams. Those teams tend to align best with enterprise operations.
 
-![Cloud Center of Excellence team](../../_images/ready/org-ready-ccoe.png)
+![Diagram showing a cloud center of excellence team.](../../_images/ready/org-ready-ccoe.png)
 
 CCoE teams tend to value innovation and delegated responsibility. To replicate this operating model in the cloud, the CCoE team enables advanced cloud capabilities:
 
@@ -194,7 +200,10 @@ CCoE teams tend to value innovation and delegated responsibility. To replicate t
 - Centralize monitoring and visibility
 - Create policies to force adherence to compliance, security, and operations guardrails
 
-Those advanced controls can most easily be deployed using the enterprise-scale architecture and implementation options of Azure landing zones. For more information, see [Cloud governance functions](../../organize/cloud-governance.md) and [Cloud platform functions](../../organize/cloud-platform.md).
+Those advanced controls can most easily be deployed using the enterprise-scale architecture and implementation options of Azure landing zones. For more information, see:
+
+- [Cloud governance functions](../../organize/cloud-governance.md)
+- [Cloud platform functions](../../organize/cloud-platform.md)
 
 To prepare for CCoE and enterprise operations in Azure, evaluate how the current organization structure aligns to the CCoE organizational structure pictured above. New virtual teams or adjustments to the organization may be useful to deliver this advanced operations approach in Azure. Specifically, early cloud adoption projects should focus on building the CCoE functions to modernize existing central IT models. Those teams may also need to define a plan for replacing existing operations tools used to support any central IT processes.
 

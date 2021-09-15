@@ -79,7 +79,7 @@ items:
       href: /azure/architecture/example-scenario/data/ecommerce-order-processing?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json
     - name: Buy online, pickup in store (BOPIS)
       href: /azure/architecture/example-scenario/iot/vertical-buy-online-pickup-in-store?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json
-  - name: Resources 
+  - name: Resources
     items:
     - name: Cloud Adoption Framework
       href: ../../get-started/index.md
