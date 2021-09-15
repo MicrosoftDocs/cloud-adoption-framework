@@ -15,7 +15,7 @@ This article builds on the information found in [Enterprise-scale design area fo
 
 Use this information to examine design considerations and recommendations for identity and access management that's specific to the deployment of Azure VMware Solution.
 
-We understand that identity requirements for Azure VMware Solution vary according to its implementation in Azure. So, we'll work based on the most common scenarios.
+Identity requirements for Azure VMware Solution vary according to its implementation in Azure. The information provided in this article is based on the most common scenarios.
 
 ## Design considerations
 
