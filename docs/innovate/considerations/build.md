@@ -102,7 +102,7 @@ There are many legal, compliance, and industry requirements that might necessita
 
 ## References
 
-Some of the concepts in this article build on topics discussed in [The Lean Startup](http://theleanstartup.com/book) by Eric Ries.
+Some of the concepts in this article build on topics discussed in [`The Lean Startup`](http://theleanstartup.com/book) by Eric Ries.
 
 ## Next steps
 

@@ -29,7 +29,7 @@ Consider the following questions to evaluate your model, compare the two process
 
 The following decision tree can help you to determine which deployment model best fits your use case:
 
-[![A diagram of the real-time or batch inference decision tree.](./media/inference-decision-tree.png)](./media/inference-decision-tree.png#lightbox)
+[![A diagram of the real-time or batch inference decision tree](./media/inference-decision-tree.png).](./media/inference-decision-tree.png#lightbox)
 
 ## Batch inference
 
@@ -41,7 +41,7 @@ Consider the following best practices for batch inference:
 
 - **Compute options for batch inference:** Since batch inference processes don't run continuously, it's recommended to automatically start, stop, and scale reusable clusters that can handle a range of workloads. Different models require different environments, and your solution needs to be able to deploy a specific environment and remove it when inference is over for the compute to be available for the next model. See the following decision tree to identify the right compute instance for your model:
 
-  [![A diagram of the compute decision tree.](./media/compute-decision-tree.png)](./media/compute-decision-tree.png#lightbox)
+  [![A diagram of the compute decision tree](./media/compute-decision-tree.png).](./media/compute-decision-tree.png#lightbox)
 
 - **Implement batch inference:** Azure supports multiple features for batch inference. One feature is `ParallelRunStep` in Azure Machine Learning, which allows customers to gain insights from terabytes of structured or unstructured data stored in Azure. `ParallelRunStep` provides out-of-the-box parallelism and works within Azure Machine Learning pipelines.
 
@@ -71,7 +71,7 @@ A singular model might not be able to capture the complex nature of real-world p
 
 At a high level, a many-models scenario occurs in three stages: data source, data science, and many models.
 
-[![A diagram of a many-models scenario.](./media/many-models-scenario.png)](./media/many-models-scenario.png#lightbox)
+[![A diagram of a many-models scenario](./media/many-models-scenario.png).](./media/many-models-scenario.png#lightbox)
 
 **Data source:** It's important to segment data without too many cardinalities in the data source stage. The product ID or barcode shouldn't be factored into the main partition, as this will produce too many segments and could inhibit meaningful models. The brand, SKU, or locality could be more fitting features. It's also important to homogenize the data by removing anomalies that would skew data distribution.
 
@@ -83,15 +83,15 @@ At a high level, a many-models scenario occurs in three stages: data source, dat
 
 During batch inference for many models, predictions are typically scheduled, recurring, and they can handle large volumes of data running at the same time. Unlike in a single-model scenario, many models inference at the same time, and it's important to select the correct ones. The following diagram shows the reference pattern for many-models batch inference:
 
-[![A diagram of the reference pattern for many-models batch inference.](./media/many-models-batch-inference.png)](./media/many-models-batch-inference.png#lightbox)
+[![A diagram of the reference pattern for many-models batch inference](./media/many-models-batch-inference.png).](./media/many-models-batch-inference.png#lightbox)
 
-The core purpose of this pattern is to observe the model and run multiple models simultaneously to achieve a highly scalable inference solution that can handle large data volumes. To achieve hierarchical model inference, many models can be split into categories. Each category can have its own inference storage, like an Azure data lake. When implementing this pattern, one needs to balance scaling the models horizontally and vertically, as this would impact the cost and performance. Running too many model instances might increase performance but impact the cost. Too few instances with high spec nodes might be more cost effective but could cause issues with scaling.
+The core purpose of this pattern is to observe the model and run multiple models simultaneously to achieve a highly scalable inference solution that can handle large data volumes. To achieve hierarchical model inference, many models can be split into categories. Each category can have its own inference storage, like an Azure Data Lake. When implementing this pattern, one needs to balance scaling the models horizontally and vertically, as this would impact the cost and performance. Running too many model instances might increase performance but impact the cost. Too few instances with high spec nodes might be more cost effective but could cause issues with scaling.
 
 ## Real-time inference for many models
 
 Real-time many-models inference requires low latency and on-demand requests, typically via a REST endpoint. This is useful when external applications or services require a standard interface to interact with the model, typically via a REST interface with a JSON payload.
 
-[![A diagram of many-models real-time inference.](./media/many-models-real-time-inference.png)](./media/many-models-real-time-inference.png#lightbox)
+[![A diagram of many-models real-time inference](./media/many-models-real-time-inference.png).](./media/many-models-real-time-inference.png#lightbox)
 
 The core purpose of this pattern is to use the discovery service to identify a list of services and their metadata. This can be implemented as an Azure function and enables clients to obtain relevant service details of service, that can be invoked with a secure REST URI. A JSON payload be sent to the service, which would summon the relevant model and provide a JSON response back to the client.
 
