@@ -36,7 +36,7 @@ Review the following recommendations for platform management and monitoring of A
 
 - Conduct baseline performance monitoring of Azure VMware Solution infrastructure through the [Azure portal](/azure/azure-vmware/configure-alerts-for-azure-vmware-solution#supported-metrics-and-activities).
 
-- Set the following alerts when the cluster is nearing capacity for disk, CPU, or RAM.
+- Set the following alerts when the cluster is nearing capacity for disk, CPU, or RAM:
 
     | Metric  | Alert  |
     |---------|---------|
@@ -66,7 +66,7 @@ Review the following recommendations for guest management and monitoring of work
 
 - Decide between thick or thin provisioned disks. Each VM's disk configuration and individual disks can vary. A VM can have thick or thin disks, or both, dependent on the requirements for the workload. These two extra components make evaluating the storage configuration a firm requirement to ensure the vSAN storage is never over capacity.
 
-- Configure guest monitoring for VMs running in Azure VMware Solution by following the hybrid guidance for [Windows](/azure/azure-monitor/vm/quick-collect-windows-computer) and [Linux](/azure/azure-monitor/vm/quick-collect-linux-computer). Configure both Windows and Linux this way for the following Azure integrations:
+- Configure guest monitoring for VMs running in Azure VMware Solution by following the [hybrid guidance](/azure/azure-monitor/vm/monitor-virtual-machine) for Windows and Linux. Configure both Windows and Linux this way for the following Azure integrations:
 
     |Integration | Description  |
     |---------|---------|
@@ -80,11 +80,11 @@ Review the following recommendations for guest management and monitoring of work
 
 - If you're using a network virtual appliance, consider monitoring trace logs between both on-premises and Azure. Ensure monitoring is in place between Azure and Azure VMware Solution.
 
-- To help with storage concerns on the vSAN, consider using [Azure Disk Pools](/azure/virtual-machines/disks-pools-deploy) or [NetApp Files](/azure/azure-netapp-files/) to extend your storage footprint into Azure native storage services.
+- To help with storage concerns on the vSAN, consider using [Azure Disk Pools (preview)](/azure/virtual-machines/disks-pools-deploy) or [NetApp Files](/azure/azure-netapp-files/) to extend your storage footprint into Azure native storage services.
 
 ## Next steps
 
 Learn about design considerations for Azure VMware Solution business continuity and disaster recovery in an enterprise-scale scenario.
 
 > [!div class="nextstepaction"]
-> [Business continuity and disaster recovery for Azure VMware Solution enterprise-scale scenario](eslz-business-continuity-and-disaster-recovery.md)
+> [Business continuity and disaster recovery for Azure VMware Solution](eslz-business-continuity-and-disaster-recovery.md)
