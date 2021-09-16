@@ -27,4 +27,4 @@ The templates can change over time because of new Azure services and requirement
 
 ## Next steps
 
-[Frequently asked questions about enterprise-scale for analytics and AI in Azure](./frequently-asked-questions.md)
+[Frequently asked questions about enterprise-scale for analytics and AI in Azure](./architectures/frequently-asked-questions.md)

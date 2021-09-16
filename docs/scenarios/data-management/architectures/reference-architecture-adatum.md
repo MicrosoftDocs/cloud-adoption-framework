@@ -107,7 +107,7 @@ Continue to the [Relecloud scenario for data management and analytics in Azure](
 
 Learn more in:
 
-- [Overview of the enterprise-scale for analytics and AI architecture data landing zone in Azure](.data-landing-zone.md)
-- [Enterprise-scale for analytics and AI data integrations in Azure](.data-landing-zone-data-integration.md)
-- [Overview of the enterprise-scale for analytics and AI data management landing zone in Azure](.data-management-landing-zone.md)
-- [Enterprise-scale for analytics and AI data products in Azure](.data-landing-zone-data-products.md)
+- [Overview of the enterprise-scale for analytics and AI architecture data landing zone in Azure](./data-landing-zone.md)
+- [Enterprise-scale for analytics and AI data integrations in Azure](./data-landing-zone-data-integration.md)
+- [Overview of the enterprise-scale for analytics and AI data management landing zone in Azure](./data-management-landing-zone.md)
+- [Enterprise-scale for analytics and AI data products in Azure](./data-landing-zone-data-products.md)
