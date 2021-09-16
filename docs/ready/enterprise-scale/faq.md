@@ -41,7 +41,16 @@ For example:
 
 We work with, and learn from our customers and partners, this ensures that we evolve and enhance the reference implementations to meet customers and partners requirements. As part of this interaction with our customers and partners we may notice a policy that is required that is not available from the built-in definitions yet, so we will create and test a definition to meet the requirement and include it in Enterprise-scale for everyone to use.
 
-We will then work with the Azure Policy and associated product/service engineering teams to convert the custom policy that has been created into a built-in definition over time.
+We then work with the Azure Policy and associated product/service engineering teams to convert the custom policy that has been created into a built-in definition over time.
+
+## What does Policy Driven Governance mean, and how does it work?
+
+## Should we use Azure Policy for workload deployments?
+
+## What if I already have resources in my landing zones, and later add a policy?
+
+## Where can I see the policies used by Enterprise-Scale Landing Zones reference implementation?
+
 
 <!-- IMPLEMENTATION -->
 
@@ -83,5 +92,30 @@ We have a number of implementation options available using infrastructure-as-cod
 >[!NOTE]
 > The Bicep implementation option for Enterprise-scale is coming soon!
 
-# What if we have already deployed Enterprise-scale Landing Zones without the CI/CD integration, do I have to start over to have infrastructure as code?
+## What if we have already deployed Enterprise-scale without using infrastructure-as-code, do we have to delete everything and start again to use infrastructure-as-code?
 
+Assuming you have used the Azure Landing Zone Accelerator portal based experience to deploy Enterprise-scale into your Azure Tenant. This will depend on the infrastructure-as-code tooling you wish to use.
+
+### ARM Templates
+
+If you wish to use ARM templates to deploy, manage and operate your Enterprise-scale deployment then you do not have to delete everything and start again. You can simply configure and connect up our [AzOps](https://github.com/Azure/AzOps) tooling, using the [AzOps Accelerator](https://github.com/Azure/AzOps-Accelerator) and associated instructions, regardless of the stage/state your Azure Tenant is at.
+
+Once configured AzOps, vis the pipelines deployed, will connect to your Azure Tenant, scan it and then pull down individual ARM templates into your repository into a structure that represents the [4 Azure scopes](/azure/azure-resource-manager/management/overview#understand-scope).
+
+To see a demo of AzOps being used, checkout this YouTube video on the Microsoft DevRadio channel: [Enterprise Scale Landing Zones DevOps and Automation Step by Step](https://www.youtube.com/watch?v=wWLxxj-uMsY)
+
+### Bicep
+
+Today the [AzOps](https://github.com/Azure/AzOps) tooling supports deploying Bicep files at the [4 Azure scopes](/azure/azure-resource-manager/management/overview#understand-scope), however it's pull process will only store the scan of your Azure Tenants resources in ARM templates (that utilizes JSON).
+
+Please leave us feedback, [via GitHub issues, on the AzOps repository](https://github.com/Azure/AzOps/issues) if this is something you would like to see add to AzOps.
+
+### Terraform
+
+As Terraform builds its own [state](https://www.terraform.io/docs/language/state/index.html) file to track the resources, and the configuration of these, to know what it manages as part of your Terraform code; if you have already deployed Enterprise-scale to your Azure Tenant then you must [import](https://www.terraform.io/docs/cli/import/index.html) each resource into the state file, before you can deploy, manage and operate your Enterprise-scale deployment via Terraform.
+
+As of today Terraform import is done on a per resource basis and can be time consuming and complex to do at scale. Therefore it is generally easier to delete and redeploy via Terraform than to import everything that has been deployed by the Azure Landing Zone Accelerator portal based experience.
+
+However, must customers are aware from the start that they would like to use Terraform to manage their Azure Tenant and therefore this is a fairly uncommon scenario.
+
+To deploy Enterprise-scale using Terraform you may wish to utilise the Terraform module we have provided that deploys everything the Azure Landing Zone Accelerator portal based experience does. The module is called [Terraform Module for Cloud Adoption Framework Enterprise-scale](https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/0.0.4-preview) and is available from the Terraform Registry.
