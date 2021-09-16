@@ -1,5 +1,5 @@
 ---
-title: Limit cross-tenant private endpoint connections
+title: Limit cross-tenant private endpoint connections in Azure
 description: Learn how to limit cross-tenant private endpoint connections to prevent data leakage and meet security and compliance goals.
 author: MarvinBuss
 ms.author: mabuss
@@ -10,37 +10,37 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
-# Limit cross-tenant private endpoint connections
+# Limit cross-tenant private endpoint connections in Azure
 
-Customers are increasingly using private endpoints in their tenants to connect to their Azure platform as a service (PaaS) services privately and securely. You might not know that private endpoints can connect to services across Azure Active Directory (Azure AD) tenants. For security and compliance, you might need to block your Azure AD tenants' cross-tenant connections on their private endpoints.  This article shows you recommended configuration options to limit or prevent cross-tenant private endpoint connections. These options can help you create data leakage prevention (DLP) controls inside your Azure environment.
+Customers are increasingly using private endpoints in their tenants to connect to their Azure platform as a service (PaaS) services privately and securely. Private endpoints can connect to services across Azure Active Directory (Azure AD) tenants. For security and compliance, you might need to block your Azure AD tenants' cross-tenant connections on their private endpoints. This guidance shows you recommended configuration options to limit or prevent cross-tenant private endpoint connections. These options can help you create data leakage prevention (DLP) controls inside your Azure environment.
 
 ## Introduction
 
 Private endpoints can be used to control the traffic within your Azure environment using an existing network perimeter. However, there are scenarios where you need to ensure that private endpoint connections are kept within the corporate Azure AD tenant only. The following examples show connections that can create security risks.
 
-- **Connection A:** A rogue admin creates private endpoints on the customer virtual network. These endpoints are linked to services that are hosted outside the customer environment, like another Azure AD tenant.
-- **Connection B:** A rogue admin creates private endpoints in other Azure AD tenants that are linked to services hosted in the customers Azure AD tenant.
+- **Connection A:** A rogue administrator creates private endpoints on the customer virtual network. These endpoints are linked to services that are hosted outside the customer environment, like another Azure AD tenant.
+- **Connection B:** A rogue administrator creates private endpoints in other Azure AD tenants that are linked to services hosted in the customers Azure AD tenant.
 
 ![Diagram that shows cross-tenant private endpoint connection scenarios.](./media/cross-tenant-pe-provisioning.png)
 
 *Figure 1: Illustration of private endpoint cross-tenant scenarios.*
 
-For both scenarios, it's as simple as specifying the resource ID of the service and manually approving the private endpoint connection. The user also requires some role-based action control (RBAC) access to execute these actions.
+For both scenarios, it's as simple as specifying the resource ID of the service and manually approving the private endpoint connection. The user also requires some role-based access control (RBAC) access to execute these actions.
 
 The following information gives you options to prevent the provisioning of private endpoints across Azure AD tenants.
 
 ## Scenario one: Deny private endpoints linked to services in other tenants
 
-For the first scenario, a rogue admin requires the following rights in a subscription in the customers Azure AD tenant.
+For the first scenario, a rogue administrator requires the following rights in a subscription in the customers Azure AD tenant.
 
 1. **Microsoft.Network/virtualNetworks/join/action** rights on a subnet with **privateEndpointNetworkPolicies** set to **Disabled**.
 2. **Microsoft.Network/privateEndpoints/write** access to a resource group in the customer environment.
 
-With these rights, a rogue admin can create a private endpoint in the customers Azure AD tenant. This private endpoint is linked to a service in a separate subscription and Azure AD tenant. This scenario is illustrated in figure 1 as connection **A**.
+With these rights, a rogue administrator can create a private endpoint in the customers Azure AD tenant. This private endpoint is linked to a service in a separate subscription and Azure AD tenant. This scenario is illustrated in Figure 1 as connection A.
 
-For this scenario, the user sets up an external Azure AD tenant and Azure subscription. Next, the private endpoint is created in the customer environment by manually specifying the resource ID of the service. Finally, the rogue admin approves the private endpoint on the linked service hosted in the external Azure AD tenant to allow traffic over the connection.
+For this scenario, the user sets up an external Azure AD tenant and Azure subscription. Next, the private endpoint is created in the customer environment by manually specifying the resource ID of the service. Finally, the rogue administrator approves the private endpoint on the linked service hosted in the external Azure AD tenant to allow traffic over the connection.
 
-Once the rogue admin approves the private endpoint connection, corporate data could be copied from the corporate virtual network to an Azure service on an external Azure AD tenant. This security risk can only occur if access was granted using Azure RBAC.
+Once the rogue administrator approves the private endpoint connection, corporate data could be copied from the corporate virtual network to an Azure service on an external Azure AD tenant. This security risk can only occur if access was granted using Azure RBAC.
 
 ### Mitigation for scenario one
 
@@ -100,9 +100,9 @@ Use the following [Azure policy](https://github.com/Azure/data-management-zone/b
 }
 ```
 
-This policy denies any private endpoints that are created outside of the subscription of the linked service, like connections **A** and **D** . The policy also provides the flexibility to use *manualprivateLinkServiceConnections* and *privateLinkServiceConnections*.
+This policy denies any private endpoints created outside of the subscription of the linked service, like connections A and D. The policy also provides the flexibility to use *manualprivateLinkServiceConnections* and *privateLinkServiceConnections*.
 
-You can update this policy so that private endpoints can only be created in a certain set of subscriptions. This change can be done by adding a `list` parameter and by using the `"notIn": "[parameters('allowedSubscriptions')]"` construct. However, this approach isn't recommended, as it means that you would have to constantly maintain the list of subscriptions for this policy. Whenever a new subscription gets created inside your tenant, the subscription ID must be added to the parameter.
+You can update this policy so private endpoints can only be created in a certain set of subscriptions. This change can be done by adding a `list` parameter and by using the `"notIn": "[parameters('allowedSubscriptions')]"` construct. However, this approach isn't recommended, as it means that you would have to constantly maintain the list of subscriptions for this policy. Whenever a new subscription gets created inside your tenant, the subscription ID must be added to the parameter.
 
 We recommend assigning the policy to the top-level management group, and then use exemptions where required.
 
@@ -200,13 +200,13 @@ We recommend that you assign the policy to the top-level management group and us
 
 ## Scenario two: Deny connections from private endpoints created in other tenants
 
-In this scenario, a rogue admin requires **write** rights on the service in the customer environment for which a private endpoint should be created.
+In this scenario, a rogue administrator requires **write** rights on the service in the customer environment for which a private endpoint should be created.
 
-With this right, a rogue admin has the possibility to create a private endpoint in an external Azure AD tenant and subscription. This endpoint is linked to a service in the customer’s Azure AD tenant. This scenario is illustrated in figure one as connection **B**.
+With this right, a rogue administrator has the possibility to create a private endpoint in an external Azure AD tenant and subscription. This endpoint is linked to a service in the customer’s Azure AD tenant. This scenario is illustrated in Figure 1 as connection B.
 
-In this scenario, the rogue admin needs to first set up an external private Azure AD tenant and Azure subscription. Next, they create a private endpoint in their environment by manually specifying the resource ID and group ID of the service in the corporate Azure AD tenant. Finally, they approve the private endpoint on the linked service to allow traffic over the connection across Azure AD tenants.
+In this scenario, the rogue administrator needs to first set up an external private Azure AD tenant and Azure subscription. Next, they create a private endpoint in their environment by manually specifying the resource ID and group ID of the service in the corporate Azure AD tenant. Finally, they approve the private endpoint on the linked service to allow traffic over the connection across Azure AD tenants.
 
-Once the private endpoint is approved by the rogue admin or service owner, data can be accessed from the external virtual network.
+Once the private endpoint is approved by the rogue administrator or service owner, data can be accessed from the external virtual network.
 
 ### Mitigation for scenario two
 
@@ -242,9 +242,9 @@ Use service-specific policies to prevent this scenario across the customer tenan
 }
 ```
 
-This policy shows an example for Azure Storage. The same policy definition should be replicated for other services like [Key Vault](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/KeyVault/params.policyDefinition.Deny-KeyVault-PrivateEndpointConnections.json), [Cognitive Services](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/CognitiveServices/params.policyDefinition.Deny-CognitiveServices-PrivateEndpointConnections.json), and [SQL Server](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/Sql/params.policyDefinition.Deny-Sql-PrivateEndpointConnections.json). To further improve manageability, we suggest bundling the service-specific policies into an initiative. The policy denies the approval of private endpoint connections to private endpoints that are hosted outside of the subscription of the respective service. It doesn't deny the rejection or removal of private endpoint connections, which is the behavior customers want. Auto-approval workflows, such as connection **C**, aren't affected by this policy.
+This policy shows an example for Azure Storage. The same policy definition should be replicated for other services like [Key Vault](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/KeyVault/params.policyDefinition.Deny-KeyVault-PrivateEndpointConnections.json), [Cognitive Services](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/CognitiveServices/params.policyDefinition.Deny-CognitiveServices-PrivateEndpointConnections.json), and [SQL Server](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/Sql/params.policyDefinition.Deny-Sql-PrivateEndpointConnections.json). To further improve manageability, we suggest bundling the service-specific policies into an initiative. The policy denies the approval of private endpoint connections to private endpoints that are hosted outside of the subscription of the respective service. It doesn't deny the rejection or removal of private endpoint connections, which is the behavior customers want. Auto-approval workflows, such as connection C, aren't affected by this policy.
 
-However, the approval of compliant private endpoint connections within the portal is blocked with this method. This block occurs because the portal UI doesn't send the resource ID of the connected private endpoint in their payload. We advise you to use [ARM](https://github.com/Azure/data-management-zone/tree/main/infra/Policies/PolicyDefinitions/Storage/SampleDeployPrivateEndpointConnection), [Azure PowerShell](/powershell/module/az.network/approve-azprivateendpointconnection?view=azps-6.3.0), or [Azure CLI](/cli/azure/network/private-link-service/connection#az_network_private_link_service_connection_update) to approve the private endpoint connection.
+However, the approval of compliant private endpoint connections within the portal is blocked with this method. This block occurs because the portal UI doesn't send the resource ID of the connected private endpoint in their payload. We advise you to use [Azure Resource Manager](https://github.com/Azure/data-management-zone/tree/main/infra/Policies/PolicyDefinitions/Storage/SampleDeployPrivateEndpointConnection), [Azure PowerShell](/powershell/module/az.network/approve-azprivateendpointconnection?view=azps-6.3.0), or [Azure CLI](/cli/azure/network/private-link-service/connection#az_network_private_link_service_connection_update) to approve the private endpoint connection.
 
 We also recommend assigning the policy to the top-level management group and use exemptions where required.
 
@@ -256,4 +256,7 @@ We recommend the use of an **Audit** effect instead of a **Deny** affect in the 
 
 ## Next steps
 
-Learn about recommended [inbound and outbound connectivity](../enterprise-scale/network-topology-and-connectivity.md) models to and from the public internet.
+It's important to understand the recommended connectivity models for inbound and outbound connectivity to and from the public internet. The next article reviews design considerations, design recommendations, and recommended content for further reading.
+
+> [!div class="nextstepaction"]
+> [Inbound and outbound connectivity](../enterprise-scale/network-topology-and-connectivity.md)
