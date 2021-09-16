@@ -1,5 +1,5 @@
 ---
-title: Network topology and connectivity overview
+title: Network topology and connectivity overview in Azure
 description: Examine key design considerations and best practice surrounding networking and connectivity to, from, and within Microsoft Azure.
 author: BrianBlanchard
 ms.author: brblanch
@@ -13,7 +13,7 @@ ms.custom: internal
 <!-- docutune:casing "Azure VPN Gateway" L7 -->
 <!-- cSpell:ignore autoregistration BGPs MACsec MPLS MSEE onprem privatelink VPNs -->
 
-# Network topology and connectivity overview
+# Network topology and connectivity overview in Azure
 
 The following series of articles examines key design considerations and best practices for Azure networking and connectivity.
 
@@ -42,7 +42,7 @@ Network topology is a critical element of enterprise-scale architecture that def
 
 [Private Link and DNS integration at scale](../azure-best-practices/private-link-and-dns-integration-at-scale.md) describes how to integrate Azure Private Link for platform-as-a-service (PaaS) services with Azure Private DNS zones in hub-and-spoke network architectures.
 
-## Connect to Azure PaaS services
+## Connect to Azure platform as a service (PaaS) services
 
 Building on the previous connectivity articles, [Connectivity to Azure PaaS services](../azure-best-practices/connectivity-to-azure-paas-services.md) explores recommended connectivity approaches for Azure PaaS services.
 
