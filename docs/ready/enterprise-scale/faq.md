@@ -143,3 +143,9 @@ However, must customers are aware from the start that they would like to use Ter
 To deploy Enterprise-scale using Terraform you may wish to utilise the Terraform module we have provided that deploys everything the Azure Landing Zone Accelerator portal based experience does. The module is called [Terraform Module for Cloud Adoption Framework Enterprise-scale](https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/0.0.4-preview) and is available from the Terraform Registry.
 
 To see a demo of AzOps being used, checkout this YouTube video on the Microsoft DevRadio channel: [Terraform Module for Cloud Adoption Framework Enterprise-scale Walkthrough](https://www.youtube.com/watch?v=5pJxM1O4bys)
+
+## How should we handle "dev/test/production" workload Landing Zones in Enterprise-scale?
+
+If an application or service workload requires segregation of "dev/test/production" then this should be done via separate Subscriptions for each of these per workload. However, it is important to work with the application or service workload owners to determine if this is the best way for them to build, manage, operate and deliver their workload and should not be mandatory for all workloads.
+
+A good example of this is workloads that use [Azure App Service](/azure/app-service/overview). When using Azure App Service a [best practice](/azure/app-service/deploy-best-practices#use-deployment-slots) is to use [Deployment Slots](/azure/app-service/deploy-staging-slots) to manage changes and/or updates to the web app. However, this feature can only be used on the same app on an App Service Plan, which can only live within a single Subscription.
