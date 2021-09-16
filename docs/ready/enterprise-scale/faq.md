@@ -43,14 +43,36 @@ We work with, and learn from our customers and partners, this ensures that we ev
 
 We then work with the Azure Policy and associated product/service engineering teams to convert the custom policy that has been created into a built-in definition over time.
 
-## What does Policy Driven Governance mean, and how does it work?
+## What does policy-driven governance mean, and how does it work?
 
-## Should we use Azure Policy for workload deployments?
+Policy-driven governance is one of the key design principles of Enterprise-scale, as documented [here.](/azure/cloud-adoption-framework/ready/enterprise-scale/design-principles#policy-driven-governance) 
 
-## What if I already have resources in my landing zones, and later add a policy?
+Policy-driven governance, in short, means utilizing Azure Policy to reduce the time taken to perform common and repeated operational tasks across your Azure Tenant. This can be achieved using most of the [Azure Policy effects](/azure/governance/policy/concepts/effects) apart from: `Audit`, `Disabled` and `AuditIfNotExists` (this is because they do not prevent or take actions, only audit and report on non-compliance). Where as the effects: `Append`, `Deny`, `DeployIfNotExists` and `Modify` either prevent non-compliance by restricting those resources that are non-compliant, as defined by the policy, from being created or updated; or actually deploy resources or amend/modify settings of the resource creation or update request to make them compliant automatically.
+
+Some examples of policy-driven governance are:
+
+- Preventing Subnets from being created or updated to have no Network Security Groups associated to them - Using the `Deny` policy effect
+
+- A new subscription (landing zone) is created and placed into a Management Group within your Enterprise-scale deployment. Azure Policy will then ensure that Azure Defender (previously known as Azure Security Center Standard) is enabled on the Subscription, the Diagnostic Settings for the Activity Log is configured to send its logs to the Log Analytics Workspace in the Management Subscription. - Using the `DeployIfNotExists` policy effect
+  - Instead of repeating code or manual activities when a new Subscription is created the `DeployIfNotExists` policy automatically deploys and configures these for you consistently and effortlessly.
+
+## Should we use Azure Policy for deploying workloads?
+
+In short, **no**. Azure Policy should be used to control, govern and keep your workloads and landing zones compliant. It is not designed, nor suited, to deploying entire workloads and other tooling like the Azure Portal or infrastructure-as-code offerings (ARM Templates, Bicep, Terraform etc.) should be used by landing zones owners to deploy and manage their workload as they see fit; giving them the autonomy they need.
+
+## What if we already have resources in our Landing Zones and later assign Azure Policies that will include them in its scope?
+
+Please review the following documentation sections:
+
+- [Transition existing Azure environments to enterprise-scale - "Policy" section](/azure/cloud-adoption-framework/ready/enterprise-scale/transition#policy)
+- [Quickstart: Create a policy assignment to identify non-compliant resources - "Identify non-compliant resources"
+ section](/azure/governance/policy/assign-policy-portal#identify-non-compliant-resources)
 
 ## Where can I see the policies used by Enterprise-Scale Landing Zones reference implementation?
 
+We maintain a list of policies here: [Policies included in Enterprise-Scale Landing Zones reference implementations](https://github.com/Azure/Enterprise-Scale/blob/main/docs/ESLZ-Policies.md)
+
+We will also add changes to our [What's New? wiki page](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new).
 
 <!-- IMPLEMENTATION -->
 
@@ -94,7 +116,7 @@ We have a number of implementation options available using infrastructure-as-cod
 
 ## What if we have already deployed Enterprise-scale without using infrastructure-as-code, do we have to delete everything and start again to use infrastructure-as-code?
 
-Assuming you have used the Azure Landing Zone Accelerator portal based experience to deploy Enterprise-scale into your Azure Tenant. This will depend on the infrastructure-as-code tooling you wish to use.
+Assuming you have used the Azure Landing Zone Accelerator portal based experience to deploy Enterprise-scale into your Azure Tenant. This will depend on the infrastructure-as-code tooling you wish to use going forward. See the below guidance depending on the infrastructure-as-code tooling you wish to use:
 
 ### ARM Templates
 
@@ -119,3 +141,5 @@ As of today Terraform import is done on a per resource basis and can be time con
 However, must customers are aware from the start that they would like to use Terraform to manage their Azure Tenant and therefore this is a fairly uncommon scenario.
 
 To deploy Enterprise-scale using Terraform you may wish to utilise the Terraform module we have provided that deploys everything the Azure Landing Zone Accelerator portal based experience does. The module is called [Terraform Module for Cloud Adoption Framework Enterprise-scale](https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/0.0.4-preview) and is available from the Terraform Registry.
+
+To see a demo of AzOps being used, checkout this YouTube video on the Microsoft DevRadio channel: [Terraform Module for Cloud Adoption Framework Enterprise-scale Walkthrough](https://www.youtube.com/watch?v=5pJxM1O4bys)
