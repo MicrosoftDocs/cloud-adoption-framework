@@ -27,4 +27,4 @@ The templates can change over time because of new Azure services and requirement
 
 ## Next steps
 
-[Data summary and maturity model for Azure](./govern.md)
+[Frequently asked questions about enterprise-scale for analytics and AI in Azure](./frequently-asked-questions.md)

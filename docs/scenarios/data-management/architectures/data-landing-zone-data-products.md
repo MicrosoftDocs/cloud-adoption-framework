@@ -143,4 +143,4 @@ A data product for analytics and data science might contain the services shown i
 
 ## Next steps
 
-[Frequently asked questions about enterprise-scale for analytics and AI in Azure](./frequently-asked-questions.md)
+[Overview of reference architectures for data management and analytics in Azure](./reference-architecture-overview.md)
