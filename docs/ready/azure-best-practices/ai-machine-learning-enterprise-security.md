@@ -121,7 +121,7 @@ In **self-service pattern**, data scientists can create and manage workspaces. T
 
 - Create a resource group for holding the workspaces, and grant data scientists a contributor role on it.
 
-- Data scientists can then create workspaces and associate resources under the resource group in self service manner.
+- Data scientists can then create workspaces and associate resources under the resource group in self-service manner.
 
 - To access data storages, create user-assigned managed identities, and grant them read-access roles on the storage.
 
@@ -138,7 +138,7 @@ The disadvantage is that data access is not compartmentalized or restricted on p
 
 - When data scientist needs access to the data for given project, grant the compute managed identity read-access role on the data
 
-    - Also grant workspace managed identity read-access role on the data to enable data preview
+    - Also grant the workspace's managed identity the read-access role on the data to enable data preview
 
     - Optionally, create AAD security group and grant it reader access to data, then add managed identities to the security group. This approach reduces the number of direct role assignments on resources, to avoid reaching subscription limit on role assignments
 
@@ -148,25 +148,25 @@ The disadvantage is that data access is not compartmentalized or restricted on p
 
 - Data scientist can now create data stores to access data required for projects and submit training runs that use the data
 
-In **project-centric pattern**, Azure ML workspace is created for specific project, and many data scientists collaborate within the same workspace. The data access is restricted to specific project, making the approach better suited for working with sensitive data. Also, it is straightforward to add or remove data scientists from the project.
+In a **project-centric pattern**, an Azure ML workspace is created for specific project, and many data scientists collaborate within the same workspace. The data access is restricted to specific project, making the approach well suited for working with sensitive data. Also, it is straightforward to add or remove data scientists from the project.
 
 The disadvantage of this approach is that sharing assets across projects can be difficult. Also, tracing data access to specific user during audits is difficult.
 
 - Create workspace
 
-- Identify data storages required for the project, create user-assigned managed identity and grant it read-access role to them
+- Identify data storage instances required for the project, create a user-assigned managed identity, and grant it read-access role to them
 
 - Create compute resources within the workspace and assign the managed identity to the computes
 
 - Create credential-less data stores for the storages
 
-    - Optionally, grant workspace managed identity access to data storage to allow data preview. You may omit this step for sensitive data not suitable for preview.
+    - Optionally, grant workspace's managed identity access to data storage to allow data preview. You may omit this step for sensitive data not suitable for preview.
 
 - Grant compute managed identity access to any other resources that may be required, such as ACR with custom Docker images for training.
 
 - Grant data scientist working on the project a role on the workspace
 
-    - By using RBAC roles, you can restrict data scientists from creating new datastores or new computes with different managed identity, thus preventing access to data not specific to project
+    - By using Azure RBAC roles, you can restrict data scientists from creating new datastores or new computes with different managed identity, thus preventing access to data not specific to project
 
     - Optionally, to simplify project membership management, you can create an AAD security group for project members and grant the group access to workspace.
 
@@ -174,7 +174,7 @@ The disadvantage of this approach is that sharing assets across projects can be 
 
 Currently, you can use user AAD identity to for interactive storage access from Azure ML Studio. With Azure Data Lake Store (ADLS) Gen 2 with hierarchical namespace enabled, you can compartmentalize data access by giving different users ACL-based access to different folders and files. For example, you can grant access to confidential data to only a subset of users.
 
-Credential pass-through support for ADLS Gen2 storage and blob storage for remote training on MLCompute is planned for late September public preview.
+Credential pass-through support for ADLS Gen2 storage and blob storage for remote training on Azure Machine Learning computes is planned for late September public preview.
 
 ADLS Gen2 with hierarchical namespace enabled will be supported as default storage for the workspace later this fall, allowing for enhanced organization of data assets on storage and collaboration.
 
@@ -192,7 +192,7 @@ ADLS Gen2 with hierarchical namespace enabled will be supported as default stora
 
 - Tailor-make built-in roles to custom roles that work for you
 
-Azure Machine Learning has several default roles: owner, contributor, reader and data scientist. However, we recommend creating more granular customer roles. For more information, see [Manage access to a workspace](/azure/machine-learning/how-to-assign-roles#example-custom-roles).
+Azure Machine Learning has several default roles: owner, contributor, reader, and data scientist. However, we recommend creating more granular customer roles. For more information, see [Manage access to a workspace](/azure/machine-learning/how-to-assign-roles#example-custom-roles).
 
 ### Managing Docker images centrally
 
@@ -208,7 +208,7 @@ We have two data sources to store your data.
 
 1. Your Storage. It has all your data such as training data, trained model data, except for the metadata. You are responsible for its encryption.
 
-1. CosmosDB. It has your metadata such as run history information. E.g.) Experiment name, Experiment submission date/time, etc. We have two ways to encrypt this.
+1. Azure Cosmos DB. It has your metadata such as run history information. For example, experiment name, experiment submission date/time, etc. We have two ways to encrypt this information:
 
     - In a normal workspace, Azure Cosmos DB is in a Microsoft subscription and encrypted by Microsoft Managed Key.
 
@@ -226,7 +226,7 @@ Once Azure Machine Learning resources are deployed, it is important to set up lo
 
 -  Machine learning practitioners or ops teams looking to **monitor machine learning pipeline health** to understand whether there are issues in scheduled execution, problems with data quality or expected training performance. You can build Azure dashboards using data that is [captured by Azure Machine Learning using Azure Monitor](/azure/machine-learning/monitor-azure-machine-learning) or [create event-driven workflows](/azure/machine-learning/how-to-use-event-grid).
 
-- Capacity managers, machine learning practitioners or ops teams may be interested in [creating a dashboard](/azure/machine-learning/monitor-azure-machine-learning) to observe compute and quota utilization. When managing a deployment with multiple Azure ML workspaces, consider creating a central dashboard to understand quota utilization. Since quota are managed on a subscription-level, it is important to have the environment-wide view to drive optimization.
+- Capacity managers, machine learning practitioners, or ops teams may be interested in [creating a dashboard](/azure/machine-learning/monitor-azure-machine-learning) to observe compute and quota utilization. When managing a deployment with multiple Azure ML workspaces, consider creating a central dashboard to understand quota utilization. Since quotas are managed on a subscription-level, it is important to have the environment-wide view to drive optimization.
 
 - IT and Ops teams can set up [diagnostic logging](/azure/machine-learning/monitor-azure-machine-learning#collection-and-routing) to audit resource access and altering events within the workspace.
 
@@ -240,11 +240,11 @@ Platform metrics and the Activity log are collected and stored automatically but
 
 ### Images and container registry
 
-We recommend onboarding of resources like ACR, AKV and any of the supported resources to Azure Security Center (ASC) for keeping track and flag of potential security vulnerabilities that your resources might be exposed to and recommend the corrective action.
+We recommend onboarding of resources like ACR, Key Vault and any of the supported resources to Azure Security Center (ASC) for keeping track and flag of potential security vulnerabilities that your resources might be exposed to and recommend the corrective action.
 
-We recommend the following --
+We recommend the following:
 
-1. Images go obsolete very soon and needs to be updated and the nodesHave a good "Tagging" practice for your images. When you push a Docker image, make sure you tag it appropriately instead of tagging it "latest". Put "tagging" to use, to help discover. This will speedup at the time of action for easy discovery. Eg: Tag with certain details like "July2021buid" that would help identifying when you have to take action later
+1. Images eventually go obsolete and must to be updated. Have a good "Tagging" practice for your images. When you push a Docker image, make sure you tag it appropriately instead of tagging it "latest". Put "tagging" to use, to help discover. This will speed up at the time of action for easy discovery. for example, tag with details like "July2021buid". Tagging will help you identify the image when you have to take action later.
 
 2. To cover the scan of images, allowlisting of the source packages, not to use AML managed images/use their own images.
 
