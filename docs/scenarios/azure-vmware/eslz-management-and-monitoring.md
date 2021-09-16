@@ -53,8 +53,8 @@ Review the following recommendations for platform management and monitoring of A
 
 - Configure two connection monitors in [Azure Network Watcher](/azure/network-watcher/network-watcher-monitoring-overview) to monitor connectivity.
 
-    1. [Configure the first connection monitor](/azure/network-watcher/connection-monitor-create-using-portal) between an Azure-based resource and an Azure VMware Solution based VM. This monitor lets you see the availability and performance of the network connection between Azure and Azure VMware Solution over ExpressRoute.
-    2. [Configure the second connection monitor](/azure/network-watcher/connection-monitor-create-using-portal) between an on-premises based VM and an Azure VMware Solution based VM. This monitor lets you see the availability and performance of network connections between on-premises and Azure VMware Solution over ExpressRoute Global Reach.
+  - [Configure the first connection monitor](/azure/network-watcher/connection-monitor-create-using-portal) between an Azure-based resource and an Azure VMware Solution based VM. This monitor lets you see the availability and performance of the network connection between Azure and Azure VMware Solution over ExpressRoute.
+  - [Configure the second connection monitor](/azure/network-watcher/connection-monitor-create-using-portal) between an on-premises based VM and an Azure VMware Solution based VM. This monitor lets you see the availability and performance of network connections between on-premises and Azure VMware Solution over ExpressRoute Global Reach.
 
 ## Guest workload management and monitoring
 
