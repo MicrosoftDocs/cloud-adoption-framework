@@ -110,6 +110,6 @@ Once the transformation is complete, governance and operations must live on for 
 Now that you understand the concept of cloud security governance, move on to learn more about [what security and best practices guidance Microsoft provides](./azure-security-guidance.md) for Azure.
 
 > [!div class="nextstepaction"]
-> [Learn about security guidance for Azure](./azure-security-guidance.md)
+> Learn about [security guidance for Azure](./azure-security-guidance.md)
 > [Introduction to Azure security](/azure/security/fundamentals/overview)
-> [Learn about logging, reporting, and monitoring](../../decision-guides/logging-and-reporting/index.md)
+> Learn about [logging, reporting, and monitoring](../../decision-guides/logging-and-reporting/index.md)

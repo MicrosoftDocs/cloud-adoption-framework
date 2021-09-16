@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Management and monitoring for data management and analytics
 
-This article provides guidance about maintaining an Azure data analytics estate. It builds on considerations and recommendations of the Azure landing zones. For more information, see [Management and monitoring](/azure/cloud-adoption-framework/ready/enterprise-scale/management-and-monitoring).
+This article provides guidance about maintaining an Azure data analytics estate. It builds on considerations and recommendations of the Azure landing zones. For more information, see [Management and monitoring](../../ready/enterprise-scale/management-and-monitoring.md).
 
 ## Design considerations
 
@@ -39,6 +39,6 @@ When evaluating enterprise-scale analytics, consider the following design recomm
 
 ## Next steps
 
-- [Management and monitoring](/azure/cloud-adoption-framework/ready/enterprise-scale/management-and-monitoring)
+- [Management and monitoring](../../ready/enterprise-scale/management-and-monitoring.md)
 - [Create a Log Analytics workspace in the Azure portal](/azure/azure-monitor/logs/quick-create-workspace)
 - [Management and monitoring for data management and analytics](./eslz-business-continuity-and-disaster-recovery.md)

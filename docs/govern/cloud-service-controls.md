@@ -18,7 +18,7 @@ The following process outlines a possible governance implementation, allowing fo
 
 ## Layers of governance
 
-Determine the controls and measures to implement as part of your organization's governance process as outlined in [Define Corporate Cloud Policy](policy-compliance/policy-definition.md).
+Determine the controls and measures to implement as part of your organization's governance process as outlined in [Define corporate cloud policy](policy-compliance/policy-definition.md).
 
 ![Diagram that shows the service review process.](../_images/govern/cloud-policy-breakdown.png)
 
@@ -44,7 +44,7 @@ This level of implementation can be delivered in several layers. The governance 
 
 While classifying the different approaches lists out the extreme ends of the spectrum, many organizations will choose an approach between these models. For example, most organizations will allow some cloud services with a few controls, some will just be allowed without controls, and access to others will be denied.
 
-Whatever the approach taken to service governance is, the key input is the corporate [Cloud policy statements](./policy-compliance/policy-definition.md#create-cloud-policy-statements) defined by the governance team.
+Whatever the approach to service governance, the key input is the [corporate cloud policy statements](./policy-compliance/policy-definition.md#create-cloud-policy-statements) defined by the governance team.
 
 ## Basic governance
 
@@ -164,7 +164,7 @@ There are four key artifacts developed throughout this process.
 
    Cloud adoption teams refer to these documents for services they can pick up and use, and then plan the implementation of their project around the controls and components. The service guidance should also list any Azure policies and supporting functions that have been implemented. This guidance ensures that a reference can be enforced between the policy and service controls.
 
-- **Azure policy and supporting functions**, are the components or technical implementation of the controls that go into the platform. This code is version-controlled and deployed. These code items must act in enforcing the policy and include the code for reporting compliance of the policy.
+- **Azure policies and supporting functions** are the components or technical implementation of the controls that go into the platform. This code is version-controlled and deployed. These code items must act in enforcing the policy and include the code for reporting compliance of the policy.
 
 ### Starting with a baseline
 

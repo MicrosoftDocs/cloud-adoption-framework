@@ -166,7 +166,7 @@ The Cloud Solution Provider (CSP) service gives Microsoft partners access to Mic
 
 **Design considerations:**
 
-- A [CSP reseller relationship](/partner-center/request-a-relationship-with-a-customer) must exist between the partner and each Azure AD tenant in whic the customer wants to provision a new Azure plan and CSP subscriptions.
+- A [CSP reseller relationship](/partner-center/request-a-relationship-with-a-customer) must exist between the partner and each Azure AD tenant in which the customer wants to provision a new Azure plan and CSP subscriptions.
 
 - Only the partner can provision an Azure plan and CSP subscriptions.
 
@@ -178,7 +178,7 @@ The Cloud Solution Provider (CSP) service gives Microsoft partners access to Mic
 
 **Design recommendations:**
 
-- Work with your CSP partner to ensure that Azure Lighthouse is used for Administer on Behalf of (AOBO) access for most support scenarios. See [Azure Lighthouse and the Cloud Solution Provider program](/lighthouse/concepts/cloud-solution-provider).
+- Work with your CSP partner to ensure that Azure Lighthouse is used for Administer on Behalf of (AOBO) access for most support scenarios. See [Azure Lighthouse and the Cloud Solution Provider program](/azure/lighthouse/concepts/cloud-solution-provider).
 
 - Work with your CSP partner to understand how to create support cases and escalation processes.
 

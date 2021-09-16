@@ -123,6 +123,6 @@ Once the transformation is complete, governance and operations must live on for 
 Now that you understand the concept of cloud resource governance, move on to learn more about [how resource access is managed](./resource-access-management.md) in Azure in preparation for learning how to design a governance model for a [simple workload](./governance-simple-workload.md) or for [multiple teams](./governance-multiple-teams.md).
 
 > [!div class="nextstepaction"]
-> [Learn about resource access management in Azure](./resource-access-management.md)
-> [Learn about service-level agreements for Azure](https://azure.microsoft.com/support/legal/sla/)
-> [Learn about logging, reporting, and monitoring](../../decision-guides/logging-and-reporting/index.md)
+> Learn more about [resource access management in Azure](./resource-access-management.md)
+> Learn more about [service-level agreements for Azure](https://azure.microsoft.com/support/legal/sla/)
+> Learn more about [logging, reporting, and monitoring](../../decision-guides/logging-and-reporting/index.md)

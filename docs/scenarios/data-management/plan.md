@@ -46,7 +46,7 @@ To simplify workload identification, start with wave planning approach described
 - Transactional data assets will typically be associated with an existing application, making workload identification easier.
 - Analysis and AI/machine learning solutions may be a bit more complex, requiring a more granular review of the outcomes delivered by each. When possible, associate analysis and AI solutions with the business processes which consumes their outputs, often creating an application level mapping. For cross-application BI, AI, or machine learning solutions, create new workload names to map the data assets to the business processes they impact.
 
-Workloads identified in the digital estate assessment will be used throughout adoption to drive business impact classification. The derived values should be recorded using the same [naming and tagging standards](/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging) used for other cloud adoption efforts.
+Workloads identified in the digital estate assessment will be used throughout adoption to drive business impact classification. The derived values should be recorded using the same [naming and tagging standards](../../ready/azure-best-practices/naming-and-tagging.md) used for other cloud adoption efforts.
 
 It will also develop a better understanding of the skills your teams will need to be successful.
 

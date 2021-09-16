@@ -214,6 +214,9 @@ items:
       - name: Plan a data warehouse migration
         href: plan/data-warehouse-migration.md
 
+    - name: Strategic Migration Assessment and Readiness Tool (SMART)
+      href: plan/smart-assessment.md
+
     - name: Plan antipatterns
       href: antipatterns/plan-antipatterns.md
 
@@ -252,7 +255,7 @@ items:
       - name: What is a landing zone?
         href: ready/landing-zone/index.md
       - name: Journey to the target architecture
-        href: ready/landing-zone/landing-zone-journey.md        
+        href: ready/landing-zone/landing-zone-journey.md
       - name: Design areas
         href: ready/landing-zone/design-areas.md
       - name: Choose a landing zone option

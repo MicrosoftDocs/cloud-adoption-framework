@@ -68,7 +68,7 @@ Several technical and nontechnical prerequisites are required to successfully mi
   - [Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) access model.
 - Finalize all preintegration details and review [identity management and access control security best practices](/azure/security/fundamentals/identity-management-best-practices).
   - Enable single-identity single-sign-on (SSO), also called seamless SSO.
-  - Configure multi-factor authentication for administrators.
+  - Configure multifactor authentication for administrators.
   - Consolidate or integrate identity providers, where necessary.
   - Implement tooling necessary to centralize management of identities.
   - Enable just-in-time (JIT) access and role change alerting.
@@ -115,7 +115,7 @@ Once the transformation is complete, governance and operations must live on for 
 **Potential activities:**
 
 - Conduct periodic audits of identity policies and adherence practices.
-- Ensure sensitive user accounts (such as accounts of corporate executives) are always enabled for multi-factor authentication and anomalous login detection.
+- Ensure sensitive user accounts (such as accounts of corporate executives) are always enabled for multifactor authentication and anomalous login detection.
 - Scan for malicious actors and data breaches regularly, particularly those related to identity fraud, such as potential admin account takeovers.
 - Configure a monitoring and reporting tool.
 - Consider integrating more closely with security and fraud-prevention systems.

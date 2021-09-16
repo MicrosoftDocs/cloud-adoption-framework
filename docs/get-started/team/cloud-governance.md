@@ -1,5 +1,5 @@
 ---
-title: "Get started: Build a cloud governance team"
+title: 'Get started: Build a cloud governance team'
 description: Establish a governance team's scope, deliverables, and capabilities to prepare for successful cloud governance.
 author: JanetCThomas
 ms.author: janet
