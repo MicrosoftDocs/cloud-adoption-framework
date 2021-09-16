@@ -3,7 +3,7 @@ title: Resource naming and tagging decision guide
 description: Learn about naming and tagging approaches and options when organizing cloud-based resources, as part of the Cloud Adoption Framework for Azure.
 author: alexbuckgit
 ms.author: abuck
-ms.date: 09/01/2021
+ms.date: 09/16/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: decision-guide
@@ -74,10 +74,6 @@ The common tagging patterns listed below provide examples of how tagging can be 
 | Accounting | `department` = `finance` <br> `program` = `business-initiative` <br> `region` = `northamerica` | Allows a resource to be associated with specific groups within an organization for billing purposes. |
 | Partnership | `owner` = `jsmith` <br> `contactalias` = `catsearchowners` <br> `stakeholders` = `user1;user2;user3` | Provides information about what people (outside of IT) are related or otherwise affected by the resource. |
 | Purpose | `businessprocess` = `support` <br> `businessimpact` = `moderate` <br> `revenueimpact` = `high` | Aligns resources to business functions to better support investment decisions. |
-
-## Suggested actions
-
-Enforce naming conventions for resource tagging.
 
 ## Learn more
 
