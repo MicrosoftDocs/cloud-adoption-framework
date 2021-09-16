@@ -450,6 +450,8 @@ items:
           href: ready/azure-best-practices/optimize-ai-machine-learning-cost.md
         - name: Machine learning DevOps (MLOps)
           href: ready/azure-best-practices/ai-machine-learning-mlops.md
+        - name: Best practices for enterprise security
+          href: ready/azure-best-practices/ai-machine-learning-enterprise-security.md
       - name: Cost management
         items:
         - name: Track costs
