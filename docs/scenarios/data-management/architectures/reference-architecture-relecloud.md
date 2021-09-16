@@ -72,7 +72,7 @@ The billing analysts will create a new data product called "Revenue by Service" 
 
 Like the data integrations, the data product will also rely on a shared Azure Synapse workspace.
 
-:::image type="content" source="../images/relecloud.svg" alt-text="architectural diagram" lightbox="../images/relecloud.svg":::
+:::image type="content" source="../images/relecloud.png" alt-text="architectural diagram" lightbox="../images/relecloud.png":::
 
 **Figure 1: Architectural Diagram**  Note that not all Azure services are represented in the diagram.  It has been simplified to accentuate the core concepts of how resources are organized within the architecture.</sub>
 

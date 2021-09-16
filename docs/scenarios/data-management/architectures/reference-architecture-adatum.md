@@ -49,7 +49,7 @@ These integrations will not transform or enrich the data.  They only copy the da
 
 In this example, Adatum has one data product.  This product combines raw data from the two data integrations and transforms them into a new dataset. From there, it can be picked up by business users for extra analysis and reporting with tools like Power BI.
 
-:::image type="content" source="../images/adatum.svg" alt-text="Architectural diagram" lightbox="../images/adatum.svg":::
+:::image type="content" source="../images/adatum.png" alt-text="Architectural diagram" lightbox="../images/adatum.png":::
 
 **Figure 1: Architectural Diagram**  Not all Azure services are represented in the diagram.  It has been simplified to accentuate the core concepts of how resources are organized within the architecture.
 

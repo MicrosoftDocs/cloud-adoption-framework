@@ -62,7 +62,7 @@ To support this new effort, researchers in the marketing group will need to acce
 
 To meet this need, the marketing team creates aggregated datasets from the "Tokenized Patients Dataset" created by the operations team.  These datasets do not contain individual health records.  Instead, they group together records along different axes.  This enables researchers to conduct studies of the population as a whole without risking access to any single individual's health information.
 
-:::image type="content" source="../images/lamna.svg" alt-text="architectural diagram" lightbox="../images/lamna.svg":::
+:::image type="content" source="../images/lamna.png" alt-text="architectural diagram" lightbox="../images/lamna.png":::
 
 **Figure 1: Architectural Diagram**  Note that not all Azure services are represented in the diagram.  It has been simplified to accentuate the core concepts of how resources are organized within the architecture.
 
