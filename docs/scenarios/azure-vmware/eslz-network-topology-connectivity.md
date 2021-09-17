@@ -3,7 +3,7 @@ title: Enterprise-scale network topology and connectivity for Azure VMware Solut
 description: Examine key design considerations and best practices around networking and connectivity for Azure and Azure VMware Solution deployments.
 author: rodrigosantosms
 ms.author: janet
-ms.date: 09/15/2021
+ms.date: 09/17/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -12,7 +12,7 @@ ms.custom: think-tank
 
 # Network topology and connectivity for Azure VMware Solution
 
-Using the VMWare Software Defined datacenter with the Azure cloud ecosystem presents a unique set of design considerations for both cloud-native and hybrid scenarios. This article examines key considerations and best practices around networking and connectivity to, from, and within Azure and [Azure VMware Solution](/azure/azure-vmware/introduction) deployments.
+Using the VMware software-defined datacenter (SDDC) with the Azure cloud ecosystem presents a unique set of design considerations for both cloud-native and hybrid scenarios. This article examines key considerations and best practices around networking and connectivity to, from, and within Azure and [Azure VMware Solution](/azure/azure-vmware/introduction) deployments.
 
 The article builds on several Cloud Adoption Framework [Enterprise-Scale Landing Zones (ESLZ)](/azure/cloud-adoption-framework/ready/enterprise-scale/network-topology-and-connectivity) architectural principles and recommendations for managing network topology and connectivity at scale. You can use this enterprise-scale design area guidance for mission-critical Azure VMware Solution platforms. Design foundations include:
 
@@ -83,7 +83,7 @@ The following table provides recommendations and considerations for the four mos
 |Scenario|Traffic inspection requirements|Recommended solution design|Considerations
 |-------|-------|------|------
 |1|• Internet ingress<br><br>• Internet egress|• Use Virtual WAN secured hub with default gateway propagation.<br><br>• Use Azure Application Gateway for HTTP(s), or Azure Firewall for non-HTTP(s) traffic.<br><br>• Deploy the secured Virtual WAN hub and enable Public IP in Azure VMware Solution.|• This solution doesn't work for on-premises filtering. Global Reach bypasses the Virtual WAN hub.
-|2|• Internet ingress<br><br>• Internet egress<br><br>• To on-premises datacenter<br><br>• To Azure Virtual Network|• Use third-party firewall NVA solutions in the hub virtual network with Azure Route Server.<br><br>• Disable Global Reach.<br><br>• Use Application Gateway for HTTP(s), or third-party firewall NVA for non-HTTP(s) traffic.|• This is the most common option if you want to use your existing NVA and centralize all traffic inspection in the hub virtual network.
+|2|• Internet ingress<br><br>• Internet egress<br><br>• To on-premises datacenter<br><br>• To Azure Virtual Network|• Use third-party firewall NVA solutions in the hub virtual network with Azure Route Server.<br><br>• Disable Global Reach.<br><br>• Use Application Gateway for HTTP(s), or third-party firewall NVA for non-HTTP(s) traffic.|• This option is the most common for customers who want to use their existing NVA and centralize all traffic inspection in the hub virtual network.
 |3|• Internet ingress<br><br>• Internet egress<br><br>• To on-premises datacenter<br><br>• To Azure Virtual Network<br><br>• Within Azure VMware Solution|• Use NSX-T or a third-party NVA firewall in Azure VMware Solution.<br><br>• Use Application Gateway for HTTP(s), or Azure Firewall for non-HTTP(s) traffic.<br><br>• Deploy the secured Virtual WAN hub and enable Public IP in Azure VMware Solution.|• Use this option if you need to inspect traffic from two or more Azure VMware Solutions.<br><br>• This option can use NSX-T native features, or be combined with NVAs running on Azure VMware Solution between L1 and L0.
 |4|• Internet ingress<br><br>• To Azure Virtual Network|• Use Virtual WAN secured hub.<br><br>• Use Azure Application Gateway for HTTP(s), or Azure Firewall for non-HTTP(s) traffic.<br><br>• Deploy the secured Virtual WAN hub and enable Public IP in Azure VMware Solution.|• Use this option to advertise the 0.0.0.0./0 route from on-premises datacenters.
 
@@ -91,7 +91,7 @@ The following table provides recommendations and considerations for the four mos
 - You can use L4-L7 load balancer NVAs in Azure VMware Solution.
 - You can use NSX-T firewall with any of these scenarios.
 
-The following sections describe the four most common networking scenarios for Azure VMware Solution private clouds. This isn't an exhaustive list. For more scenarios, see [Deploy NVAs that support VXLAN with Route Server and Transit virtual network](https://github.com/Azure/AzureCAT-AVS/tree/main/networking/deploy-nva-with-vxlan-in-transit-vnet-and-route-server).
+The following sections describe the four most common networking scenarios for Azure VMware Solution private clouds. This list isn't  exhaustive. For more scenarios, see [Deploy NVAs that support VXLAN with Route Server and Transit virtual network](https://github.com/Azure/AzureCAT-AVS/tree/main/networking/deploy-nva-with-vxlan-in-transit-vnet-and-route-server).
 
 ## Scenario 1: Secured Virtual WAN hub with default route propagation
 
@@ -121,9 +121,9 @@ You can implement this scenario with:
 
 ### Considerations
 
-If you don't want to receive the default route 0.0.0.0/0 advertisement from Azure VMware Solution because it conflicts with your existing environment, you need to take additional actions.
+If you don't want to receive the default route 0.0.0.0/0 advertisement from Azure VMware Solution because it conflicts with your existing environment, you need to take more action.
 
-Azure Firewall in the secured Virtual WAN hub advertises the 0.0.0.0/0 route to Azure VMware Solution. The 0.0.0.0/0 route is also advertised on premises via Global Reach. You should implement an on-premises route filter to prevent 0.0.0.0/0 route learning. If you're using SD-WAN or VPN, this issue won't occur.
+Azure Firewall in the secured Virtual WAN hub advertises the 0.0.0.0/0 route to Azure VMware Solution. The 0.0.0.0/0 route is also advertised on premises via Global Reach. Implement an on-premises route filter to prevent 0.0.0.0/0 route learning. If you're using SD-WAN or VPN, this issue won't occur.
 
 If you currently connect to a virtual network-based hub-and-spoke topology via an ExpressRoute gateway rather than directly, the default 0.0.0.0/0 route from the Virtual WAN hub propagates to the gateway and takes precedence over the internet system route built into the virtual network. To work around this issue, implement a 0.0.0.0/0 [user-defined route](/azure/virtual-network/virtual-networks-udr-overview#user-defined) in the virtual network to override the learned default route.
 
@@ -148,9 +148,9 @@ This scenario has the following customer profile, architectural components, and 
 This scenario is ideal if:
 
 - You need fine-grained control over firewalling outside of the Azure VMware Solution private cloud.
-- You need to implement a security appliance from your current vendor in on-premises or other Azure environments.
+- You need to use a security appliance from your current vendor in on-premises or other Azure environments.
 - You need multiple Public IP addresses for inbound services, and need a block of predefined IP addresses in Azure. In this scenario, you don't own the public IPs.
-- You need to inspect traffic between Azure VMware Solution and on-premises datacenters by using NVAs, and can't use Global Reach for geopolitical reasons.
+- You want to inspect traffic between Azure VMware Solution and on-premises datacenters by using NVAs, and can't use Global Reach for geopolitical reasons.
 - Usually, you need public-facing L4 and L7 inbound services for Azure VMware Solution services, and also need outbound internet connectivity.
 
 In this scenario, you already have ExpressRoute connectivity between on-premises datacenters and Azure.
@@ -188,7 +188,7 @@ This scenario has the following customer profile, architectural components, and 
 
 This scenario is ideal if:
 
-- You have to use the native NSX platform, so you need a PaaS deployment for Azure VMware Solution.
+- You must use the native NSX platform, so you need a PaaS deployment for Azure VMware Solution.
 - Or, you need to bring your own license (BYOL) NVA within Azure VMware Solution for traffic inspection.
 - You might or might not already have ExpressRoute connectivity between on-premises datacenters and Azure.
 - You need inbound HTTP(s) or L4 services.
@@ -306,7 +306,7 @@ Inbound options to deliver content and applications include:
 
 The Azure VMware Solution out-of-the-box private cloud deployment automatically provisions one free ExpressRoute circuit. This circuit connects Azure VMware Solution to the D-MSEE.
 
-Consider deploying Azure VMware Solution on [Azure paired regions](/azure/best-practices-availability-paired-regions) near your datacenters.
+For location, consider deploying Azure VMware Solution on [Azure paired regions](/azure/best-practices-availability-paired-regions) near your datacenters.
 
 #### Global Reach
 
@@ -327,7 +327,7 @@ Choose an adequate [Virtual Network Gateway SKU](/azure/expressroute/expressrout
 
 Network security uses traffic inspection and port mirroring.
 
-*East-West traffic inspection* within the software-defined data center (SDDC) uses NSX-T or NVAs to inspect traffic to Azure virtual networks across regions.
+*East-West traffic inspection* within the SDDC uses NSX-T or NVAs to inspect traffic to Azure virtual networks across regions.
 
 *North-South traffic inspection* inspects bidirectional traffic flow between Azure VMware Solution and datacenters. North-South traffic inspection can use:
 
@@ -355,4 +355,7 @@ VMware HCX Migration can use HCX L2 extension. Migrations that require Layer 2 e
 
 - For more information about Azure VMware Solution in hub-and-spoke networks, see [Integrate Azure VMware Solution in a hub and spoke architecture](/azure/azure-vmware/concepts-hub-and-spoke).
 - For more information on VMware NSX network segments, see [Configure NSX network components using Azure VMware Solution](/azure/azure-vmware/configure-nsx-network-components-azure-portal#create-an-nsx-t-segment-in-the-azure-portal).
-
+- To continue learning about the Cloud Adoption Framework ESLZ architectural principles, design considerations, and best practices for Azure VMware Solution, see the next article in the series:
+  
+  > [!div class="nextstepaction"]
+  > [Security, governance, and compliance disciplines for Azure VMware Solution](eslz-security-governance-and-compliance.md)
