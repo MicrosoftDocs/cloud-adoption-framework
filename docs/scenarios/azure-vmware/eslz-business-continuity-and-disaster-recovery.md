@@ -51,7 +51,7 @@ ms.custom: think-tank, e2e-avs
 
 - You can use the [Azure Site Recovery Deployment Planner](/azure/site-recovery/site-recovery-deployment-planner) to begin planning disaster recovery to Azure Native.
 - When planning the workloads to start after Azure Site Recovery failover, include the correct startup order for workloads in the recovery plan.
-- Partner Solutions like JetStream Software and [HCX (testing purposes only)](/azure/azure-vmware/deploy-disaster-recovery-using-vmware-hcx#:~:text=%20Deploy%20disaster%20recovery%20using%20VMware%20HCX%20,VMware%20Solution%20private%20cloud%2C%20and%20access...%20More%20) also support disaster recovery scenarios for Azure VMware Solution.
+- Partner Solutions like JetStream Software and [HCX](/azure/azure-vmware/deploy-disaster-recovery-using-vmware-hcx) also support disaster recovery scenarios for Azure VMware Solution.
 - Analyze and decide which set or subset of Azure VMware Solution workloads require protection if there's a disaster recovery event. Consider protecting only those workloads critical to business operations to control the costs associated with the disaster recovery implementation.
 - Set up functional domain roles, like Active Directory Domain Controllers, in the secondary environment.
 - To enable disaster recovery between Azure VMware Solution private clouds in distinct Azure regions, you need to enable ExpressRoute Global Reach between both back-end ExpressRoute circuits. These circuits create primary to secondary private cloud connectivity when required for solutions like VMware SRM and VMware HCX for disaster recovery.
@@ -69,7 +69,7 @@ ms.custom: think-tank, e2e-avs
 
 ## Disaster recovery design recommendations
 
-- Use VMware Site Recovery Manager when working with Azure VMware Solution in both primary and secondary sites. Primary and secondary sites are also known as protected and recovery sites, respectively. The following diagrams show a high-level overview of continuous vSphere replication, followed by a more detailed diagram.
+- Use VMware Site Recovery Manager when working with Azure VMware Solution in both primary and secondary sites. Primary and secondary sites are also known as protected and recovery sites, respectively. The first diagram shows a high-level overview of continuous vSphere replication. The second diagram shows the primary and secondary site components in detail.
 
 :::image type="content" source="../_images/eslz-bcdr-5.png" alt-text="Diagram that shows a high-level example of continuous vSphere replication between two Azure VMware Solution sites.":::
 
