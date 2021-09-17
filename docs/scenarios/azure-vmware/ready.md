@@ -73,5 +73,7 @@ Azure VMware Solution requires an understanding of Azure landing zones and makes
 
 ## Next steps
 
+Examine design considerations and recommendations related to identity and access management that are specific to the deployment of Azure VMware Solution.
+
 > [!div class="nextstepaction"]
 > [Identity and access management](./eslz-identity-and-access-management.md)
