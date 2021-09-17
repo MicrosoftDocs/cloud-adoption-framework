@@ -1,6 +1,6 @@
 ---
 title: Enterprise Agreement enrollment and Azure Active Directory tenants
-description: Understand Enterprise Agreement enrollment and Azure Active Directory tenants.
+description: Understand Enterprise Agreement enrollments and Azure Active Directory tenants.
 author: jtracey93
 ms.author: jatracey
 ms.date: 08/23/2021

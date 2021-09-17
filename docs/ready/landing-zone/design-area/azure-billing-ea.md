@@ -11,11 +11,11 @@ ms.custom: think-tank
 ---
 
 
-## Plan for Enterprise Agreement enrollment
+# Plan for Enterprise Agreement enrollment
 
 Enterprise Agreement enrollment represents the commercial relationship between Microsoft and how your organization uses Azure. It provides billing foundation for your subscriptions and how your digital estate is administered. The Azure enterprise portal (https://ea.azure.com) helps you to manage your Enterprise Agreement enrollment. An enrollment often represents an organization's hierarchy, including departments, accounts, and subscriptions. This hierarchy represents cost centers within an organization.
 
-![Diagram that shows Azure Enterprise Agreement hierarchies.](./media/ea.png)
+![Diagram that shows Azure Enterprise Agreement hierarchies.](../../enterprise-scale/media/ea.png)
 
 - Departments help to segment costs into logical groupings and set a budget or quota at the department level. The quota isn't firmly enforced; it's used for reporting purposes.
 
@@ -39,7 +39,7 @@ There is an inherent trust relationship between Azure subscriptions and an Azure
 
 For example, a finance user is granted an enterprise administrator role on the Enterprise Agreement enrollment. They're a standard user without elevated permissions or roles assigned to them in Azure AD or on any Azure management group, subscription, resource group, or resource. The finance user can only perform the roles listed at [Managing Azure Enterprise Agreement roles](/azure/cost-management-billing/manage/understand-ea-roles#enterprise-administrator) and can't access the Azure subscriptions on the enrollment. The only Enterprise Agreement role with access to Azure subscriptions is the account owner because this permission was granted when the subscription was created.
 
-![Diagram that shows Azure Enterprise Agreement relationship with Azure AD and RBAC.](./media/ea-azure-relationship.png)
+![Diagram that shows Azure Enterprise Agreement relationship with Azure AD and RBAC.](../../enterprise-scale/media/ea-azure-relationship.png)
 
 **Design considerations:**
 

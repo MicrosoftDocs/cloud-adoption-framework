@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
-## Plan for the Cloud Solution Provider service
+# Plan for the Cloud Solution Provider service
 
 The Cloud Solution Provider (CSP) service gives Microsoft partners access to Microsoft cloud services within one platform. It supports partners to:
 
