@@ -12,6 +12,12 @@ ms.custom: internal
 
 # Design area: Security
 
+## Overview
+
+Security is a core consideration for all customers, in every environment.
+When designing and implementing an Azure landing zone, security should be a consideration throughout the process.
+
+... add more here ....
 
 
 ## Azure Security Benchmark

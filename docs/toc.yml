@@ -344,13 +344,13 @@ items:
             href: ready/landing-zone/design-area/security-accelerator.md
         - name: Management
           items:
-          - name: Management overview
-            href: ready/landing-zone/design-area/identity-access-management.md
-          - name: Management considerations
+          - name: Overview
+            href: ready/landing-zone/design-area/management.md
+          - name: Considerations
             href: ready/landing-zone/design-area/management-considerations.md
-          - name: Management recommendations
+          - name: Recommendations
             href: ready/landing-zone/design-area/management-recommendations.md
-          - name: Management - Azure landing zone Accelerator
+          - name: Accelerator configuration
             href: ready/landing-zone/design-area/management-accelerator.md
         - name: Platform automation and DevOps
           href: ready/landing-zone/design-area/platform-ops-devops.md      
