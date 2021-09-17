@@ -11,3 +11,13 @@ ms.custom: internal
 ---
 
 # Design area: Management for Azure environments
+
+For stable, ongoing operations in the cloud, a management baseline is required to provide visibility, operations compliance, and protect and recover capabilities.
+
+## Next steps
+
+Explore the following guidance to gain a deeper understanding of the management design area:
+
+- [Management design area considerations](./management-considerations.md)
+- [Management design area recommendations](./management-recommendations.md)
+- [Management design area - Azure landing zone accelerator implementation](./management-accelerator.md)
