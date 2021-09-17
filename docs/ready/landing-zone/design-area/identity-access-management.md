@@ -28,4 +28,4 @@ Organizations typically follow a least-privileged approach to operational access
 
 Identity and access management is a multistep process that involves careful planning for identity integration and other security considerations, such as blocking legacy authentication and planning for modern passwords. Staging planning also involves selection of business-to-business or business-to-consumer identity and access management. While these requirements vary, there are common design considerations and recommendations to consider for an enterprise landing zone.
 
-![Diagram that shows identity and access management.](./media/iam.png)
+![Diagram that shows identity and access management.](../../enterprise-scale/media/iam.png)

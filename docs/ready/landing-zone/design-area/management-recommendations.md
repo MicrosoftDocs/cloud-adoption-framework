@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: internal
 ---
 
-## Recommendations
+# Management recommendations
 
 ### Platform management and monitoring recommendations
 

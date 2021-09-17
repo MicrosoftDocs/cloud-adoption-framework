@@ -1,5 +1,5 @@
 ---
-title: Enterprise Agreement enrollment and Azure Active Directory tenants
+title: Enterprise Agreement enrollments and Azure Active Directory tenants
 description: Understand Enterprise Agreement enrollments and Azure Active Directory tenants.
 author: jtracey93
 ms.author: jatracey
@@ -10,11 +10,11 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
-# Enterprise Agreement enrollment and Azure Active Directory tenants
+# Enterprise Agreement enrollments and Azure Active Directory tenants
 
 The Azure service presents a range of [active subscription offers](https://azure.microsoft.com/support/legal/offer-details/), and customers can use these offers at the same time to gain flexible billing options. Example subscriptions include Enterprise Agreement (Enterprise Agreement) Support, Microsoft Customer Agreement, Cloud Service Provider, and others.  
 
-![Diagram that shows Azure scopes within one Azure Active Directory (Azure AD) tenant with various billing offers and subscriptions.](./media/az-scopes-billing.png)
+![Diagram that shows Azure scopes within one Azure Active Directory (Azure AD) tenant with various billing offers and subscriptions.](../../enterprise-scale/media/az-scopes-billing.png)
 
 The Azure landing zone architecture supports subscriptions from any Azure offer. Subscriptions should exist within one Azure Active Directory (Azure AD) tenant to then relocate into the management group hierarchy within that tenant. They can then be managed by the various controls with enterprise-scale platforms like Azure Policy and role-based access control (RBAC).
 

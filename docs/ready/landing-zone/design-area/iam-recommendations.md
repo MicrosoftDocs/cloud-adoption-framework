@@ -11,7 +11,7 @@ ms.custom: think-tank
 ---
 
 
-**identity and access management design recommendations:**
+# Identity and access management design recommendations
 
 - Use [Azure RBAC](/azure/role-based-access-control/overview) to manage data-plane access to resources, where possible. Examples are Azure Key Vault, a storage account, or a SQL database.
 - Deploy Azure AD conditional-access policies for any user with rights to Azure environments. Doing so provides another mechanism to help protect a controlled Azure environment from unauthorized access.

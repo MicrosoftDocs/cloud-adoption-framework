@@ -10,4 +10,4 @@ ms.subservice: ready
 ms.custom: internal
 ---
 
-## Networking recommendations
+# Networking recommendations

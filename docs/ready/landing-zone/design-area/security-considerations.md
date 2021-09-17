@@ -10,7 +10,8 @@ ms.subservice: ready
 ms.custom: internal
 ---
 
-**Security design considerations:**
+# Security design considerations
+
 An enterprise must have visibility into what's happening within their technical cloud estate. Security monitoring and audit logging of Azure platform services is a key component of a scalable framework.
 
 - Data retention periods for audit data. Azure AD Premium reports have a 30-day retention period.

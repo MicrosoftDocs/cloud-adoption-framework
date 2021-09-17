@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: internal
 ---
 
-## How the Azure landing zone accelerator implements management capabilities
+# How the Azure landing zone accelerator implements management capabilities
 
 The Azure landing zone accelerator includes opinionated configuration that deploys key Azure management capabilities to help organizations get to scale and maturity quickly.
 

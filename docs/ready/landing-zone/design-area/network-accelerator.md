@@ -10,4 +10,4 @@ ms.subservice: ready
 ms.custom: internal
 ---
 
-## Networking in the Azure landing zone accelerator
+# Networking in the Azure landing zone accelerator

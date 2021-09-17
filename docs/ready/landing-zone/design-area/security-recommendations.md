@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: internal
 ---
 
-**Security monitoring design recommendations:**
+# Security monitoring design recommendations
 
 - Use Azure AD reporting capabilities to generate access control audit reports.
 

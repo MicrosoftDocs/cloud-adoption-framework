@@ -22,7 +22,7 @@ The Cloud Solution Provider (CSP) service gives Microsoft partners access to Mic
 
 [Azure in CSP](https://azure.microsoft.com/offers/ms-azr-0145p/) is an Azure plan with various subscriptions that are hosted by the partner's [Microsoft Partner Agreement (MPA)](/azure/cost-management-billing/understand/mpa-overview). The MPA is similar to the Microsoft Customer Agreement; both are hosted on the modern commerce platform and use a [simplified purchase agreement](https://www.microsoft.com/licensing/docs/customeragreement).
 
-![Diagram that shows an MPA hierarchy.](./media/mpa-hierarchy.png)
+![Diagram that shows an MPA hierarchy.](../../enterprise-scale/media/mpa-hierarchy.png)
 
 >[!IMPORTANT]
 > The partner CSP completely manages an MPA.

@@ -9,3 +9,5 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: internal
 ---
+
+# Security in the Azure landing zone accelerator

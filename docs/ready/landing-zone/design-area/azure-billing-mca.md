@@ -10,13 +10,13 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
-## Plan for the Microsoft Customer Agreement service
+# Plan for the Microsoft Customer Agreement service
 
 The [Microsoft Customer Agreement](https://www.microsoft.com/licensing/how-to-buy/microsoft-customer-agreement) is a recent and modern Azure service and commerce platform. It represents the commercial relationship between Microsoft and how your organization uses Azure. The agreement enables a streamlined, electronic transaction in an 11-page agreement that doesn't expire. It provides a billing foundation for your subscriptions and affects how your digital estate is administered. You can manage your agreement is managed in the [Azure portal](https://portal.azure.com).
 
 The Microsoft Customer Agreement often represents an organization's hierarchy, which consists of billing profiles, invoice sections, and subscriptions. This hierarchy represents cost centers within an organization.
 
-![Diagram that shows the hierarchy of a Microsoft Customer Agreement.](./media/mca-hierarchy.png)
+![Diagram that shows the hierarchy of a Microsoft Customer Agreement.](../../enterprise-scale/media/mca-hierarchy.png)
 
 >[!IMPORTANT]
 > If migrating from an Enterprise Agreement to a Microsoft Customer Agreement, please review the following articles:

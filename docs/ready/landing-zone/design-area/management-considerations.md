@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: internal
 ---
 
-## Management considerations
+# Management considerations
 
 Use the following items as discussion points within your cloud architecture and operations teams in order to explore and agree on the requirements and features that need to be included in your management design.
 
