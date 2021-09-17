@@ -3,7 +3,7 @@ title: Resource naming and tagging decision guide
 description: Learn about naming and tagging approaches and options when organizing cloud-based resources, as part of the Cloud Adoption Framework for Azure.
 author: alexbuckgit
 ms.author: abuck
-ms.date: 08/23/2021
+ms.date: 09/16/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: decision-guide
@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Resource naming and tagging decision guide
 
-Organizing cloud-based resources is a crucial task for IT, unless you only have simple deployments. Use naming and tagging standards to organize your resources for these reasons:
+Organizing cloud-based resources is a crucial task for IT, unless you only have simple deployments. Naming and tagging standards help associate cloud usage costs with business teams via chargeback and show back accounting mechanisms. These conventions can be used as part of security orchestration, automation, and response (SOAR). Use naming and tagging standards to organize your resources for these reasons:
 
 - **Resource management:** Your IT teams will need to quickly locate resources associated with specific workloads, environments, ownership groups, or other important information. Organizing resources is critical to assigning organizational roles and access permissions for resource management.
 - **Cost management and optimization:** Making business groups aware of cloud resource consumption requires IT to understand the resources and workloads each team is using. The following topics are supported by cost-related tags:
