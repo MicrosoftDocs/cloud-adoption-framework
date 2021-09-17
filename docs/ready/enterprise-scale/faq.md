@@ -146,6 +146,47 @@ To see a demo of AzOps being used, checkout this YouTube video on the Microsoft 
 
 ## How should we handle "dev/test/production" workload Landing Zones in Enterprise-scale?
 
+>[!NOTE]
+> This is for workload Landing Zones only. For testing and environment segregation for the Enterprise-scale platform itself please review the [Testing approach for enterprise-scale.](/azure/cloud-adoption-framework/ready/enterprise-scale/testing-approach)
+
 If an application or service workload requires segregation of "dev/test/production" then this should be done via separate Subscriptions for each of these per workload. However, it is important to work with the application or service workload owners to determine if this is the best way for them to build, manage, operate and deliver their workload and should not be mandatory for all workloads.
 
-A good example of this is workloads that use [Azure App Service](/azure/app-service/overview). When using Azure App Service a [best practice](/azure/app-service/deploy-best-practices#use-deployment-slots) is to use [Deployment Slots](/azure/app-service/deploy-staging-slots) to manage changes and/or updates to the web app. However, this feature can only be used on the same app on an App Service Plan, which can only live within a single Subscription.
+A good example of this is a workload that uses [Azure App Service](/azure/app-service/overview). When using Azure App Service a [best practice](/azure/app-service/deploy-best-practices#use-deployment-slots) is to use [Deployment Slots](/azure/app-service/deploy-staging-slots) to help you manage changes and/or updates to the web app. However, this feature can only be used on the same app on an App Service Plan, which can only live within a single Subscription. So by mandating or enforcing your application/service workloads owners to use separate Subscriptions for "dev/test/production" you may actually restrict and make their deployment lifecycle harder to manage. In this example a single Subscription for the application/service workload may be the best fit and using RBAC and optionally with [Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) at the Resource Group scope within the single Subscription for increased security.
+
+Instead we suggest working with each application/service workload team (landing zone owners) to understand the requirements and then provide the required amount of Subscriptions based on their requirements and plans. You may also decide to build "product lines" for different styles/types of workloads so that you can build Subscription vending/creation processes and tooling easily based on common requirements from application/service workload teams.
+
+### What about our Management Group hierarchy?
+
+Great question! What we want to avoid with Enterprise-scale are complicated and volatile Management Group hierarchies that require constant amendment and also don't scale efficiently whilst providing no added value to configuring them. This is why in Enterprise-scale Management Groups are workload archetype aligned. Refer to the [Management group and subscription organization](/azure/cloud-adoption-framework/ready/enterprise-scale/management-group-and-subscription-organization) for further information.
+
+By this we mean that Management Groups are only created for differing workload archetypes. For example, beneath the "Landing Zones" Management Group in the conceptual architecture we have a "Corp" and "Online" child Management Groups. These both align to two distinct archetype patterns for the workloads they will hold, mainly focussed around hybrid connectivity (VPN/ExpressRoute). But all environments ("dev/test/production"), whether separate Subscriptions or a single Subscription will all be held within the same single Management Group depending on its archetype and requirements.
+
+Scaling and also management of this scale is something that the following equation helps to highlight why Management Groups per environment and/or per workload doesn't scale well:
+
+- If you have 30 different workloads that each require a Management Group and a child Management Group for "dev/test/production" you are left with the following equation:
+  - **30** (no. of workloads) X **4** (no. of Management Groups per workload) = **120** Management Groups
+    - *N apps X (N+3) = Total Management Groups*
+
+#### Example of a Sub-Optimal Management Group Hierarchy
+
+![An example of a sub-optimal Management Group hierarchy for Enterprise-scale when handling dev/test/production Landing Zones](./media/eslz-dev-test-prod-bad.png)
+
+To summarize there should be no difference in policies applied between "dev/test/production" environments as all should develop and be built to production standard from the start. There is little value of having to change the configuration of a workload as it is promoted through the different environments and this will only make for a poor development experience for Landing Zone users and owners. You should also consider utilizing "Sandbox" subscriptions for true development purposes where a less restricted environment is required; for example when a application/service workload team are trying out different Azure services to see what works best to deliver their requirements. Once the services are known a Landing Zone, in the correct workload archetype aligned Management Group beneath the "Landing Zones" Management Group hierarchy, can be provisioned for the team.
+
+A common challenge to this approach is that you may require some policies to apply differently, depending on the environment. For this you have a few options:
+
+1. Utilize tags in your policy definitions to help filter and apply to the correct environment.
+    >[!IMPORTANT]
+    > Tags can be changed by users with appropriate RBAC permissions, therefore for security focussed policies it is advised not to use tags in policies as user could change the tags on a resource and potentially bypass or have another policy apply to the resources.
+
+2. Apply policies at a Subscription level as required, ideally during the Subscription creation/vending process (as talked about above).
+
+
+#### Example of a Optimal Management Group Hierarchy Aligned to Enterprise-Scale
+![An example of a optimal Management Group hierarchy for Enterprise-scale when handling dev/test/production Landing Zones](./media/eslz-dev-test-prod-good.png)
+
+*Some Management Groups have been removed for illustration clarity purposes.*
+
+
+
+
