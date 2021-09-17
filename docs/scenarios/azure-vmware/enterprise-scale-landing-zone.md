@@ -1,7 +1,7 @@
 ---
 title: Enterprise-scale support for Azure VMware Solution
 description: <<Describe how enterprise-scale can accelerate adoption of Azure VMware Solution.>>
-author: mhenry
+author: pgandham
 ms.author: janet
 ms.date: 06/28/2021
 ms.topic: conceptual
@@ -9,11 +9,13 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Construction set for Azure VMware Solution enterprise-scale scenario
+# Enterprise Scale for Azure VMware Solution
 
-The Azure VMware Solution construction set is an open-source collection of Terraform templates that you can use to automate the deployment of an environment capable of hosting Azure VMware Solution. It can provide a specific architectural approach and reference implementation to prepare your enterprise-scale landing zones. The landing zones adhere to the architecture and best practices of the Cloud Adoption Framework.
+Enterprise-scale for AVS represents the strategic design path and target technical state for an Azure VMware Solution (AVS) deployment. This solution provides an architectural approach and reference implementation to prepare landing zone subscriptions for a scalable Azure VMware Solution (AVS). The implementation adheres to the architecture and best practices of the Cloud Adoption Framework's Azure landing zones with a focus on the design principles of enterprise-scale. Review the enterprise-scale overview and implementation guidance before deploying enterprise-scale for AVS.
 
-Customers adopt Azure VMware Solution in various ways. The construction set can be adapted to produce an architecture that fits **your** way and puts your organization on a path to sustainable scale.
+This solution is open source. The following guidance provides design considerations for implementing a scalable AVS in your landing zone. The design decisions your organization makes, based on this guidance, can lay the groundwork for scalability.
+
+Customers adopt Azure VMware Solution in various ways. The Enterprise-Scale for AVS set can be adapted to produce an architecture that fits **your** way and puts your organization on a path to sustainable scale.
 
 ## To begin, implement an enterprise-scale landing zone
 
@@ -22,10 +24,9 @@ The Azure VMware Solution construction set assumes that an enterprise-scale land
 - [Start with Cloud Adoption Framework enterprise-scale landing zones](../../ready/enterprise-scale/index.md)
 - [Implement Cloud Adoption Framework enterprise-scale landing zones in Azure](../../ready/enterprise-scale/implementation.md)
 
-## What the AKS construction set provides
+## What enterprise-scale for AVS provides
 
-The construction set approach to landing zones provides these assets to support your project:
-
+The enterprise-scale approach for AVS provides these assets to support your project:
 - A modular approach, so that you can customize environment variables
 - Design guidelines to aid in evaluating critical decisions
 - The landing zone architecture
@@ -48,11 +49,18 @@ These articles provide guidelines for creating your landing zone:
 
 The following conceptual reference architecture is an example that shows design areas and best practices.
 
-TODO: Include RA image here
+[![Enterprise-scale for AVS architecture](./media/avs-eslz-architecture.png)](./media/avs-eslz-architecture.png#lightbox)
 
-## Obtain the Azure VMware Solution construction set
+Enterprise-scale for AVS is an open-source collection of ARM, Bicep templates, available in the [enterprise-scale for AVS
+ repo](https://github.com/Azure/Enterprise-Scale-for-AVS)
 
-The Azure VMware Solution construction set is available here...
+Bicep templates are used to deploy infrastructure components such as AVS,virtual machines, networks, or storage to Azure. To get the templates,see the [enterprise-scale for Azure VMware Solution deployment template](https://github.com/Azure/Enterprise-Scale-for-AVS) using Bicep. This reference implementation currently deploys a simplistic version of an AVS implementation that resides in its own subscription within the online management group of an enterprise-scale landing zone. 
+
+## Implementation with Bicep/Azure Resource Manager (ARM) templates for Remote Desktop Services
+ARM Azure VMware Solution templates provide a collection of infrastructure-as-code Bicep/ARM templates to deploy an Azure VMware Solution environment on Azure.
+
+The automate Azure VMware Solution deployments in Azure GitHub repository contains code that lets you automatically deploy Azure VMware solution in the Azure cloud.
+
 
 ## Next steps
 

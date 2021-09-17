@@ -63,7 +63,9 @@ ms.custom: think-tank, e2e-avs
   - You can use VMware SRM for partial and full disaster recovery. When running Azure VMware Solution in Region 1 and Region 2, you can fail some or all the VMs from primary to secondary regions.
   - The requirement for VM recovery and the IP address retention requirements dictate if partial versus full disaster recovery is possible.
   - Maintain the IP address and achieve a partial disaster recovery in SRM by moving the gateway of the subnet to the secondary Azure VMware Solution.
-  - Active-Standby disaster recovery doesn't require L2 stretching.
+
+  > [!NOTE]
+  > Active-Standby disaster recovery doesn't require L2 stretching.
 
 ## Disaster recovery design recommendations
 
