@@ -1,254 +1,194 @@
 ---
-title: Security, Governance & Compliance disciplines for Azure VMware Solution
-description: Get started with Security, Governance & Compliance considerations for Azure VMware Solution. Understand the potential risks if some important design considerations are ignored. Learn to mitigate those risks by using design recommendations as suggested in this article. 
+title: Security, governance, and compliance disciplines for Azure VMware Solution
+description: Understand security, governance, and compliance considerations for Azure VMware Solution, and design recommendations and best practices to mitigate risks.
 author: Mahesh-MSFT
 ms.author: janet
-ms.date: 07/16/2021
+ms.date: 09/17/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank, e2e-avs
 ---
 
-# Security, Governance & Compliance disciplines for Azure VMware Solution
+# Security, governance, and compliance disciplines for Azure VMware Solution
 
-This article covers implementing an Azure VMware Solution that is secure while holistically governing the solution for the duration of its lifecycle. It does this with the goal of assisting organizations meet their compliance requirements and by exploring specific design elements that should be considered when implementing Azure VMware Solution. The document also provides targeted recommendations regarding security, governance, and overall
-design. Because there is significant value in the existing Enterprise Scale Landing Zone (ESLZ) and Azure services guidance, cross links to that documentation is included.
+This article describes how to implement a secure Azure VMware Solution and holistically govern the solution throughout its life cycle. The article explores specific design elements and provides targeted recommendations for Azure VMware Solution security, governance, and compliance design.
 
 ## Security
 
-Consider the following when deciding who (system, user, or device) is allowed to perform functions within Azure VMware Solution and how to secure the overall platform.
+Consider the following factors when deciding which systems, users, or devices can perform functions within Azure VMware Solution, and how to secure the overall platform.
 
-### Identity Security
+### Identity security
 
-* **Limit Permanent Access** - Azure VMware Solution makes use of the contributor role at Azure resource group scope which hosts the Azure VMware Solution private cloud. A standing permanent access may result in intentional or unintentional contributor rights abuse.  
+- **Permanent access limits.** Azure VMware Solution uses the contributor role in the Azure resource group that hosts the Azure VMware Solution private cloud. Limit permanent access to prevent intentional or unintentional contributor rights abuse. Use a privileged account management solution to audit and limit the time usage of highly privileged accounts.
 
-   Use a privileged account management solution to limit the time usage of highly privileged accounts as well as audit the usage of such accounts.
+  Create an Azure Active Directory (Azure AD) privileged access group within Azure Privileged Identity Management (PIM). You can manage Azure AD user and service principal accounts with a PIM group. Use these accounts to create and manage the Azure VMware Solution cluster with time-bound, justification-based access. For more information, see [Assign eligible owners and members for privileged access groups](/azure/active-directory/privileged-identity-management/groups-assign-member-owner).
 
-   Create an Azure Active Directory (AAD) privileged access group within Azure Privileged Identity Management (PIM). Azure Active Directory accounts (users and service principals) can be managed with a PIM group. Use these accounts to create and manage the Azure VMware Solution cluster using time-bound, justification-based access.For more information, see [Assign eligible owners and members for privileged access groups - Azure Active Directory](/azure/active-directory/privileged-identity-management/groups-assign-member-owner).
+  Use Azure AD PIM audit history reports. These reports include Azure VMware Solution administrative activities, operations, and assignments. You can archive the reports in Azure Storage for long-term audit retention needs. For more information, see [View audit report for privileged access group assignments in Privileged Identity Management (PIM)](/azure/active-directory/privileged-identity-management/groups-audit).
 
-   Use Azure AD PIM audit history reports. These reports can include all Azure VMware Solution administrative activities (operations, assignments, etc.). They can be archived in Azure storage for any long-term retention consistent with audit needs. For more information, see [View audit report for privileged
-   access group assignments in Privileged Identity Management (PIM) - Azure AD](/azure/active-directory/privileged-identity-management/groups-audit).
+- **Centralized identity management.** Azure VMware Solution-provided administrative accounts are visible to all contributors that have role-based access control (RBAC) access to Azure VMware Solution. To prevent overuse or abuse of the built-in *CloudAdmin* user when accessing the VMware control plane, create multiple targeted identity objects like users and groups. Use the RBAC capabilities within the VMware control plane to properly manage role and account access using least-privilege principles.
 
-* **Centralize Identity Management** - Azure VMware Solution provided  administration accounts are visible to all contributors with RBAC access to Azure VMware Solution resources. Lack of multiple targeted identity objects (users, groups, etc.) can result in overuse/abuse of the built-in ***cloudadmin*** user when accessing the VMware control plane.  
+  Azure VMware Solution provides cloud administrator and network administrator credentials for configuring the VMware environment. Limit access to the Azure VMware Solution-provided CloudAdmin and network administrator accounts, and configure the accounts in a break-glass configuration. Use the built-in accounts only when all other administrative accounts are unusable.
 
-   Use the RBAC capabilities within the VMWare control plane to properly manage role and account access using principles of least-privilege.
+  Use the provided CloudAdmin account to integrate Active Directory Domain Services (AD DS) or Azure AD Domain Services (Azure AD DS) with the VMware vCenter and NSX-T control applications and domain services source administrative identities. Use the domain services-sourced users and groups for Azure VMware Solution management and operations, and don't allow account sharing. Create vCenter custom roles and associate them with AD DS groups for fine-grained privileged access control to VMware control surfaces.
 
-   Azure VMware Solution provides a ***cloudadmin*** and network ***admin*** credential for configuring the VMware environment. Limit access to the Azure VMware Solution provided cloudadmin and network admin accounts and configure them in a break-glass type configuration. Only use the built-in accounts when all other administration accounts become unusable.
+  Azure VMware Solution provides options to rotate and reset vCenter and NSX-T administrative account passwords. Configure a regular rotation of these accounts, and rotate the accounts anytime you use the break-glass configuration. For more information, see [Rotate the cloud admin credentials for Azure VMware Solution](/azure/azure-vmware/rotate-cloudadmin-credentials).
 
-   Using the provided cloudadmin account, integrate Active Directory Domain Services or Azure Active Directory Domain Services with the VMware VCenter and NSX-T control applications and source administrative identities from Domain Services. Use the Domain Services sourced users and/or groups for Azure VMware Solution management and operational activities and do not allow account sharing.
+- **Guest virtual machine (VM) identity management.** Provide centralized authentication and authorization for Azure VMware Solution guests to prevent unauthorized access to business data and processes and inefficient application management. Manage Azure VMware Solution guests and applications as part of their life cycle. Configure guest VMs to use a centralized identity management solution when authenticating and authorizing for management and application use.
 
-   Create vCenter custom roles and associate them with Active Directory Domain Services groups for fine-grained privileged access control to the VMware control surfaces.
+  Use a centralized AD DS or Lightweight Directory Access Protocol (LDAP) service for Azure VMware Solution guest VMs and application identity management. Be sure the domain services architecture accounts for any outage scenarios, to ensure continued functionality during outages. Connect the AD DS implementation with Azure AD for a seamless authentication and authorization experience and for advanced management.
 
-   Azure VMware Solution provides options to rotate/reset vCenter and NSX-T admin account passwords. Configure a regular rotation of these accounts and rotate them any time the break-glass configuration is used. For more information, see [Rotate the cloudadmin credentials for Azure VMware Solution](/azure/azure-vmware/rotate-cloudadmin-credentials).
+### Environment and network security
 
-* **Centralize Guest VMs Identity Management** - Lack of centralized authentication and/or authorization for Azure VMware Solution Guests can contribute to unauthorized access to business data/processes and inefficient application management. Azure VMware Solution guests and applications must be managed as part of their lifecycle.  
+- **Controlled vCenter access.** Uncontrolled access to the Azure VMware Solution vCenter can increase attack surface area. Use a dedicated Privileged Access Workstation (PAW) to securely access Azure VMware Solution vCenter and NSX Manager. Create a user group and add individual user account to that group. Provision access to this user group.
 
-   Configure guest VMs to take advantage of a centralized identity management solution when authenticating and authorizing for management and application use.
+- **Azure native network security capabilities.** Provide traffic filtering to control traffic between segments. Comply with the Open Web Application Security Project (OWASP) core rule set to protect Azure VMware Solution guest web application workloads from generic web attacks. Implement unified firewall rule management to prevent duplicate or missing firewall rules from increasing the risk of unauthorized access. Implement distributed denial of service (DDoS) protection to protect Azure VMware Solution workloads from attacks that cause financial loss or poor user experience.
 
-   Use a centralized Active Directory Domain Services and/or LDAP service for Azure VMware Solution Guest VM and application identity management needs. Ensure that the Domain Services implementation accounts for any outage scenarios within the architecture to ensure continued functionality during outage events. Connect the AD DS implementation with Azure Active Directory for a seamless authentication and authorization experience and for advanced management.
+  Use a stateful managed firewall architecture that allows for traffic flow, inspection, centralized rule management, and event collection. The firewall architecture contributes to the larger network management and environment security posture for Azure VMware Solution.
 
-### Environment and Network Security
+  Implement guest network traffic filtering devices by using [NSX](https://docs.vmware.com/en/VMware-NSX-T-Data-Center/3.1/administration/GUID-6AB240DB-949C-4E95-A9A7-4AC6EF5E3036.html) or network virtual appliance (NVA) capabilities to limit access between guest network segments.
 
-* **vCenter Access** - Uncontrolled access to Azure VMware Solution vCenter can increase attack surface area.
+  Use the Web Application Firewall (WAF) OWASP capabilities of Azure Application Gateway to protect web applications hosted on Azure VMware Solution guests. Enable prevention mode using the latest policy, and make sure to integrate WAF logs into your logging strategy. For more information, see [Introduction to Azure Web Application Firewall](/azure/web-application-firewall/overview).
 
-   Use a dedicated Privileged Access Workstation to securely access Azure VMware Solution vCenter and NSX Manager. Create a user group and add individual user account in that group. Provision access to this user group.
+  Apply DDoS protection on the Azure virtual network that hosts the ExpressRoute termination gateway for the Azure VMware Solution connection. Consider using Azure Policy for automatic enforcement of DDoS protection.
 
-* **Use Azure Native Network Security Capabilities** - Lack of traffic filtering can result in unobstructed traffic between segments. Additionally, lack of compliance against OWASP Core rule set can expose Azure VMware Solution guest web application workloads to generic web attacks. Missing unified firewall rule management can result in duplicate or missing firewall rules increasing risk of unauthorized access. Missing DDoS protection can result in Azure VMware Solution workload exposed to attack resulting in financial loss and/or poor user experience.
+- **Inbound internet requests for guest workloads.** Implement firewall audit reporting on HTTP(s) and non-HTTP(s) endpoints to comply with regulatory requirements like Sarbanes-Oxley (SOX) and Payment Card Industry (PCI) standards.
 
-   Use a stateful managed firewall architecture that allows for traffic flow, inspection, centralized rule management, and event collection. This will contribute to the larger network management and environment security posture for the Azure VMware Solution.
+  Use Azure Firewall or an approved NVA that maintains audit logs for incoming requests to guest VMs. Import those logs into your Security Incident and Event Management (SIEM) solution for appropriate monitoring and alerting. Use Azure Sentinel to process Azure event information and logging before integration into existing SIEM solutions. For more information, see [Integrate Azure Security Center with Azure VMware Solution](/azure/azure-vmware/azure-security-integration).
 
-   Implement guest network traffic filtering devices by using [NSX](https://docs.vmware.com/en/VMware-NSX-T-Data-Center/3.1/administration/GUID-6AB240DB-949C-4E95-A9A7-4AC6EF5E3036.html) and/or Network Virtual Appliance (NVA) capabilities to limit access between guest network segments appropriately.
+- **Session monitoring for outbound internet connection security.** Use rule control or session auditing of outbound internet connectivity from Azure VMware Solution to identify unexpected or suspicious outbound internet activity. Decide when and where to position outbound network inspection to ensure maximum security. For more information, see [Enterprise-scale network topology and connectivity for Azure VMware Solution](./eslz-network-topology-connectivity.md).
 
-   Use the Web Application Firewall (WAF) Open Web Application Security Project (OWASP) capabilities included with Azure Application Gateway to protect web applications hosted on Azure VMware Solution Guests. Enable prevention mode using the latest policy and ensure WAF logs are integrated into your logging strategy. For more information, see [Introduction to Azure Web Application Firewall](/azure/web-application-firewall/overview).
+  Use specialized firewall, NVA, and virtual wide-area network (vWAN) services for outbound internet connectivity instead of relying on Azure VMware Solution's default internet connectivity. For more information and design recommendations, see [Inspecting Azure VMware Solution traffic with Network Virtual Appliance in Azure vNet](https://avs.ms/nva/).
 
-   Apply DdoS protection on Azure Virtual Network hosting the ER Gateway used to terminate Azure VMware Solution ER connection. Consider to use Azure Policy for automatic enforcement of DdoS protection.
+  Use Service Tags like `Virtual Network` and fully qualified domain name (FQDN) tags for identification when filtering egress traffic with Azure Firewall. Use a similar capability for other NVAs.
 
-* **Inbound internet requests auditing for guest workloads** - Missing firewall audit reporting on HTTP and non-HTTP endpoints can result in non-compliance with regulatory standards (SOX, PCI, etc.)  
+- **Centrally managed and secure backups.** Use RBAC and delayed delete capabilities to help prevent intentional or accidental deletion of backup data needed to recover the environment. Use Azure Key Vault for managing encryption keys, and restrict access to the backup data storage location to minimize risk of deletion.
 
-   Use Azure firewall or an approved NVA that maintains audit logs for incoming requests to guest VMs. Include those logs as an input to your Security Incident and Event Management (SIEM) solution to ensure appropriate monitoring and alerting.
+  Use Azure Backup or an Azure VMware Solution-validated backup solution that provides encryption in transit and at rest. When using Azure Recovery Services vaults, use resource locks and the soft-delete features to protect against accidental or intentional backup deletion. For more information, see [Enterprise-scale business continuity and disaster recovery for Azure VMware Solution](./eslz-business-continuity-and-disaster-recovery.md).
 
-   Use Azure Sentinel for Azure-side processing of event information and logging sourced from Azure before integration into existing SIEM solutions. Refer to guidance available on [Integrate Azure Security Center with Azure VMware Solution](/azure/azure-vmware/azure-security-integration).
+### Guest application and VM security
 
-* **Outbound Connection Security - Session auditing for outbound internet connectivity** - Lack of rule control or session auditing of outbound internet connectivity from Azure VMware Solution can result in missed opportunities in identifying unexpected/suspicious outbound internet activity.
+- **Extended Security Update (ESU) keys.** Provide and configure ESU keys to push and install security updates on Azure VMware Solution VMs. Use the Volume Activation Management Tool for configuring ESU keys for the Azure VMware Solution cluster. For more information, see [Obtaining Extended Security Updates for eligible Windows devices](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/obtaining-extended-security-updates-for-eligible-windows-devices/ba-p/1167091).
 
-   Decide when and where to position outbound network inspection to ensure maximum security. Refer to [Enterprise-scale network topology and connectivity for Azure VMware Solution](./eslz-network-topology-connectivity.md) for further guidance.
+- **Advanced threat detection.** To prevent various security risks and data breaches, use endpoint security protection, security alert configuration, change control processes, and vulnerability assessments.
 
-   Use specialized services (Firewall, NVA, vWAN) for outbound internet connectivity instead of relying on Azure VMware Solution’s default internet connectivity service. Use article on [Inspecting Azure VMware Solution traffic with Network Virtual Appliance in Azure vNet](https://avs.ms/nva/) for design recommendations.
+  Use Azure Security Center for threat management, endpoint protection, security alerting, OS patching, and a centralized view into regulatory compliance enforcement.
 
-   Use Service Tags such as `Virtual Network` and FQDN tags to identify egress traffic when performing egress filtering using Azure Firewall or a similar capability if using NVA.
+  Deploy the Microsoft Monitoring Agent (MMA) on VMware VMs before starting a migration. Configure the MMA agent to send metrics and logs to an Azure Log Analytics workspace. After the migration, verify that the Azure VMware Solution VM reports alerts in Azure Monitor and Azure Security Center. For more information, see [see Integrate Azure Security Center with Azure VMware Solution](/azure/azure-vmware/azure-security-integration).
 
-* **Centrally manage and secure backups** - Using RBAC and delayed delete capabilities can help prevent intentional and accidental deletion of backup data that would be needed to recover the environment.
+  Use Azure Arc for servers to onboard your guest VMs.  Once onboarded, use Azure Log Analytics, Azure Monitor, and Azure Security Center to collect logs and metrics and create dashboards and alerts. Use Security Center Defender to protect and alert on threats associated with VM guests. For more information, see [Integrate and deploy Azure native services in Azure VMware Solution](/azure/azure-vmware/integrate-azure-native-services#onboard-vms-to-azure-arc-enabled-servers).
 
-   Use Azure Key Vault for managing encryption keys and restrict access to the backup data storage location to minimize risk of deletion.
+  Alternatively, use a solution from an Azure VMware Solution certified partner to assess VM security postures and provide regulatory compliance against Center for Internet Security (CIS) requirements.
 
-   Use Azure Backup or an Azure VMware Solution validated backup solution that provides encryption in transit as well as at rest. When using Azure recovery services vaults, usse resource locks and the soft-delete features to protect against accidental or intentional deletion of backups. Refer to [Enterprise-scale business continuity and disaster recovery for Azure VMware Solution](./eslz-business-continuity-and-disaster-recovery.md) for additional considerations.
+- **Security analytics.** Use cohesive security event collection, correlation, and analytics from Azure VMware Solution VMs and other sources to detect cyberattacks.
 
-### Guest Application and VM Security
+  Use Azure Security Center as a data source for Azure Sentinel. Configure Azure Defender for Storage, Azure Resource Manager, Domain Name System (DNS), and other Azure services applicable to Azure VMware Solution deployment. Consider using an Azure VMware Solution data connector from an Azure VMware Solution certified partner.
 
-* **Extended Security Update (ESU) Keys** - Missing/misconfigured ESU keys can prevent getting security updates pushed and installed on Azure VMware Solution VMs.
+- **Guest VM encryption.** Azure VMware Solution provides data-at-rest encryption for the underlying vSAN storage platform. Some workloads and environments with file system access might require more encryption to protect data. In these situations, consider enabling encryption of the guest VM operating system (OS) and data.
 
-   Use Volume Activation Management Tool for configuring ESU keys for Azure VMware Solution cluster. Use guidance on [Obtaining Extended Security Updates for eligible Windows devices](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/obtaining-extended-security-updates-for-eligible-windows-devices/ba-p/1167091) for more details.
+  Use the [native guest OS encryption](/azure/virtual-machines/windows/disk-encryption-overview) tools to encrypt guest VMs. Use Azure Key Vault to store and protect the encryption keys.
 
-* **Advanced Threat Detection** - Lack of endpoint security protection, security alert configuration, change control processes, vulnerability assessment, etc. can lead to various security risks and data breaches.
+- **Database encryption and activity monitoring.** Implement encryption for SQL and other databases in Azure VMware Solution to prevent easy data access in case of a data breach. Monitor for unusual database activities to reduce the risk of an insider attack.
 
-   Use Azure Security Center for threat management, endpoint protection, security alerting, OS patching, and a centralized view into enforcement of regulatory compliance.
+  For database workloads, use encryption-at-rest methods such as Transparent Data Encryption (TDE) or an equivalent native database feature. Ensure workloads are using encrypted disks, and that sensitive secrets are stored in a key vault dedicated to the resource group.
 
-   Deploy the Microsoft Monitoring Agent (MMA) on VMware VMs before starting a migration. Configure the MMA agent to send metrics and logs to an Azure Log Analytics Workspace. After the migration is complete, validate that the corresponding Azure VMware Solution VM reports alerts in Azure Monitor and Azure Security Center. For more information, see [see Integrate Azure Security Center with Azure VMware Solution](/azure/azure-vmware/azure-security-integration).
+  Use native database monitoring like Activity Monitor or an Azure VMware Solution certified partner solution. Consider using Azure database services for enhanced auditing controls.
 
-   Use Azure Arc for servers to onboard your guest VM’s.  Once onboarded, take advantage of Azure Log Analytics, Azure Monitor, and Azure Security Center to collect logs and metrics, create dashboards and alerts, and use Security Center’s Defender features to protect and alert on threats associated with VM guests. For more information, see [Integrate and deploy Azure native services in Azure VMware Solution](/azure/azure-vmware/integrate-azure-native-services#onboard-vms-to-azure-arc-enabled-servers).
+  Use Azure Key Vault for customer-managed keys in Bring Your Own Key (BYOK) scenarios, such as [BYOK for Azure SQL TDE](/azure/azure-sql/database/transparent-dataencryption-byok-overview). For an example of how SQL Server 2019 uses Key Vault, see [Use Azure Key Vault with Always Encrypted with secure enclaves](/sql/connect/ado-net/sql/azure-key-vault-enclave-example). Separate key management and data management duties where possible. 
 
-   Alternatively use a solution capable of providing regulatory compliance against Center for Internet Security (CIS) requirements from an Azure VMware Solution certified Partner to assess security posture for VM Configurations.
-
-* **Security Analytics** - Lack of cohesive security event collection, corelation and analytics from Azure VMware Solution VMs as well as other sources can lead to cyber-attacks going unnoticed/undetected.
-
-   Use Azure Security Center as a data source for Azure Sentinel. Configure Azure Defender for Storage, Resource Manager, DNS and other relevant Azure services applicable in Azure VMware Solution deployment. Consider using a data connector for Azure VMware Solution from an Azure VMware Solution certified Partner.
-
-* **Guest VM Encryption** - Azure VMware Solution provides data at rest encryption for the underlying VSAN storage platform. However, some workloads and environments may require additional encryption to protect data in the cases where filesystem access occurs. In these situations, consider enabling guest VM encryption to provide encryption of the guest OS and data.
-
-   Use the [native guest OS encryption](/azure/virtual-machines/windows/disk-encryption-overview) tools to encrypt guest VMs. Use Azure Key Vault to store and protect the encryption keys.
-
-* **Database Encryption & activity monitoring** - Lack of encryption for SQL and other database on Azure VMware Solution can result in easy access to data in case of a data breach. Lack of monitoring for unusual database activities can increase risk of an insider attack.
-
-   For database workloads, look to encryption at rest methods such as Transparent Data Encryption (TDE) or equivalent native database feature. Ensure workloads are using encrypted disks, and that sensitive secrets are stored in a key vault dedicated to that resource group.
-
-   Use native database monitoring (e.g., Activity Monitor) or an Azure VMware Solution certified partner solution. Consider using Azure Database Services for enhanced auditing controls.
-
-   Use Azure Key Vault for customer-managed keys in scenarios where Bring Your Own Key
-   (BYOK) is appropriate(e.g. [BYOK for Azure SQL TDE](/azure/azure-sql/database/transparent-dataencryption-byok-overview)). Refer to this [guidance](/sql/connect/ado-net/sql/azure-key-vault-enclave-example) on how SQL Server 2019 uses Azure Key Vault provider. Implement separation of duties for key management and data management where possible. 
-
-* **Code Security** - Lack of security considerations in DevOps workflow can introduce security vulnerabilities in Azure VMware Solution workloads.
-
-   Use [GitHub Enterprise Server on Azure VMware Solution](/azure/azure-vmware/configure-github-enterprise-server) to have a versioned repository ensuring the integrity of the codebase. Run build/run agents either in Azure VMware Solution or in a secure Azure environment. Use modern authentication/authorization workflows such as OAuth/OIDC for Azure VMware Solution workloads.
+- **Code security.** Implement security measure in DevOps workflows to prevent security vulnerabilities in Azure VMware Solution workloads. Use [GitHub Enterprise Server on Azure VMware Solution](/azure/azure-vmware/configure-github-enterprise-server) for a versioned repository that ensures the integrity of the code base. Deploy build and run agents either in Azure VMware Solution or in a secure Azure environment. Use modern authentication and authorization workflows such as Open Authorization (OAuth) and OpenID Connect (OIDC) for Azure VMware Solution workloads.
 
 ## Governance
 
 Consider and implement the following recommendations when planning for environment and guest VM governance.
 
-### Environment Governance
+### Environment governance
 
-* **FTT (Failure to Tolerate) governance** - Maintaining FTT setting commensurate to the cluster size is needed for maintaining [SLA for Azure VMware Solution](https://azure.microsoft.com/support/legal/sla/azure-vmware/v1_1/).  
+- **Failure to Tolerate (FTT) governance.** Establish FTT settings commensurate to the cluster size to maintain the [SLA for Azure VMware Solution](https://azure.microsoft.com/support/legal/sla/azure-vmware/v1_1/). Adjust the vSAN [storage policy](/azure/azure-vmware/concepts-storage#storage-policies-and-fault-tolerance) to the appropriate FTT setting when changing the cluster size to ensure SLA compliance.
 
-   Adjust the vSAN [storage policy](/azure/azure-vmware/concepts-storage#storage-policies-and-fault-tolerance) to the appropriate FTT setting when changing the cluster size to ensure SLA compliance.
+- **Network governance.** Monitor internal network traffic for malicious or unknown traffic or compromised networks. Implement vRealize Network Insights (VRNI) and VRealize Operations Manager for detailed insights into Azure VMware Solution networking operations.
 
-* **Network governance** - Inability to monitor internal network traffic can lead to malicious or unknown traffic and/or compromised networks.  
+- **vSAN slack storage space governance.** Insufficient vSAN storage space can impact SLA guarantees. Review and understand customer and partner responsibilities in the [SLA for Azure VMware Solution documentation](https://azure.microsoft.com/support/legal/sla/azure-vmware/v1_1/). Assign appropriate priorities and owners for alerts on the Percentage Datastore Disk Used metric. For more information and guidance, see [Configure alerts and work with metrics in Azure VMware Solution](/azure/azure-vmware/configure-alerts-for-azure-vmware-solution).
 
-   Implement vRealize Network Insights (VRNI) and VRealize Operations Manager for detailed insights into the Azure VMware Solution networking operations.
+- **VM templates Storage policy governance.** A default thick-provisioned storage policy can result in reserving too much vSAN storage. Create VM templates that use a thin-provisioned storage policy where space reservations aren't required. VMs that don't reserve the full amount of storage upfront can allow for more efficient storage resources.
 
-* **vSAN slack storage space governance** - Insufficient vSAN storage space can impact SLA guarantees.  
+- **ESXI config governance.** Access to Azure VMware Solution ESXi hosts is limited. Third-party software that requires ESXi host access might not work. Identify any Azure VMware Solution-supported third-party software in the source environment that needs access to the ESXi host. Become familiar with and use Azure VMware Solution [support request process](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportrequest) in the Azure portal for situations that require ESXi host access.
 
-   Review and understand customer/partner responsibilities as documented in the [SLA for Azure VMware Solution documentation](https://azure.microsoft.com/support/legal/sla/azure-vmware/v1_1/). Assign appropriate priorities and owners for alerts on “Percentage Datastore Disk Used” metric. For more information and guidance, see [Configure alerts and work with metrics in Azure VMware Solution](/azure/azure-vmware/configure-alerts-for-azure-vmware-solution).
+- **Security, planned maintenance, and service health governance alerts.** Understand and view service health to plan and respond to outages and issues appropriately. Configure [Service Health Alerts](https://portal.azure.com/#blade/Microsoft_Azure_Health/AzureHealthBrowseBlade/serviceIssues) for Azure VMware Solution service issues, planned maintenance, health advisories, and security advisories. Schedule and plan Azure VMware Solution workload activities outside of Microsoft-suggested maintenance windows.
 
-* **VM templates Storage policy governance** - Default thick-provisioned storage policy can result in reserving high amounts of vSAN storage.  
+- **Host quota governance.** Insufficient host quotas can lead to 5-7 day delays in getting more host capacity for growth or disaster recovery (DR) needs. Factor growth and DR requirements into solution design when requesting the host quota, and periodically review environment growth and maximums to ensure proper lead time for expansion requests. For example, if a three-node Azure VMware Solution cluster needs another three nodes for DR, request a host quota of six nodes. Host quota doesn't incur extra costs.
 
-   Create VM templates that use a thin-provisioned storage policy where space reservations are not required. This creates VMs that do not reserve the full amount of storage upfront and allow for more efficient storage resources.
+- **Cost governance.** Monitor costs for good financial accountability and budget allocation. Use a cost management solution for cost tracking, cost allocation, budget creation, cost alerts, and good financial governance. For Azure billed charges, use [Azure Cost Management](/azure/cost-management-billing/cost-management-billing-overview) tools to create budgets, generate alerts, allocate costs, and produce reports for financial stakeholders.
 
-* **ESXI config governance** - Access to Azure VMware Solution ESXi hosts is limited and can result in 3rd party software not working if access is required.
+- **ESXi hosts density/efficiency.** For a good Return on Investment (ROI), understand ESXi host utilization. Define a healthy density of guest VMs to maximize Azure VMware Solution investments, and monitor overall node utilization against that threshold. Resize the Azure VMware Solution environment when monitoring indicates, and allow sufficient lead time for node additions.
 
-   Identify any Azure VMware Solution-supported 3rd party software running in the source environment that needs access to the ESXi host. Become familiar with and use the process of [raising a support request](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportrequest) for Azure VMware Solution from the Azure portal for situations where access to the ESXi host is required.
+- **Azure services integration governance** Avoid using the public endpoint of the Azure PaaS service, which can lead to traffic leaving the desired network boundaries. To ensure that traffic remains within a defined virtual network boundary, use a private endpoint to access Azure services like Azure SQL Database and Azure Blob Storage.
 
-* **Alerts for security, planned maintenance, and service health governance** - Limited understanding and visibility of service health can result in the inability to plan and/or respond to outages and issues appropriately.
+### Guest application and VM governance
 
-   Configure [Service Health Alerts](https://portal.azure.com/#blade/Microsoft_Azure_Health/AzureHealthBrowseBlade/serviceIssues) for Azure VMware Solution service issues, planned maintenance, health advisories, and security advisories. Schedule and plan Azure VMware Solution workload activities outside of maintenance window suggested by Microsoft.
+- **Guest VM security posture governance**. Security compliance awareness for Azure VMware Solution guest VMs helps you understand cybersecurity readiness and response and provide complete security coverage for Azure VMware Solution guest VMs and applications. Enable [Azure Defender](/azure/security-center/azure-defender) in Azure Security Center for running Azure services and Azure VMware Solution guest VM workloads. Use Security Center's regulatory compliance view to monitor compliance against security and regulatory benchmarks. Use Azure Security Center workflow automation for tracking any deviation against the expected compliance posture. For more information, see [Azure Arc enabled servers overview](/azure/azure-arc/servers/overview).
 
-* **Host quota governance** - Insufficient host quota can lead to longer delays (5-7 days) in procuring any additional host capacity needed for growth and/or Disaster Recovery (DR) requirements.
+- **DR governance**. Implement DR orchestration to prevent delays in business continuity during DR events. Undocumented Recovery Point Objective (RPO) and Recovery Time Objective (RTO) requirements can cause poor customer experiences and unmet operational goals during Business Continuity and Disaster Recovery (BCDR) events. 
 
-   Factor growth and DR requirements into the solution design when requesting the host quota and periodically review environment growth and maximums to ensure proper lead time for expansion requests. E.g., If an Azure VMware Solution cluster of 3 nodes needs an additional 3 nodes for DR purposes then a host quota of 6 nodes should be requested. Host quota doesn’t incur extra costs.
+  Use a DR solution for Azure VMware Solution that provides DR orchestration, and detects and reports on any failure or issues with successful continuous replication to a DR site. Document RPO and RTO requirements for applications running in Azure and Azure VMware Solution. Choose a [Disaster Recovery and Business Continuity solution](./eslz-business-continuity-and-disaster-recovery.md) design to meet verifiable RPO and RTO requirements through orchestration.
 
-* **Cost governance** - Inability to monitor costs can lead to poor financial accountability and budget allocation.
+- **Backup governance**. Schedule regular backups to prevent missed backups or reliance on old backups that can lead to data loss. Use a backup solution that can take scheduled backups and monitor backup success. Monitor and alert on backup events to ensure scheduled backups run successfully.
 
-   Use a cost management solution for cost tracking, cost allocation, budget creation, cost alerts, and improved financial governance. For Azure billed charges, Use [Azure Cost Management](/azure/cost-management-billing/cost-management-billing-overview) tools to create budgets, generate alerts, allocate costs, and produce reports for financial stakeholders.
+- **Logging governance**. Implement log collection and querying capabilities that provide a debugging and troubleshooting experience with a quick response times. Enable [VM insights](/azure/azure-monitor/vm/vminsights-overview) on Azure VMware Solution guest VMs. Configure [log alerts](/azure/azure-monitor/alerts/alerts-log) to capture boundary conditions for guest VMs.
 
-* **ESXi hosts density/efficiency** - Inability to understand utilization of ESXi hosts can result in a poor Return on Investment (ROI.
+- **Domain governance**. Autojoin Azure VMware Solution VMs to avoid error-prone manual processes. Use extensions like the [JsonADDomainExtension](https://github.com/Azure/azure-quickstart-templates/blob/master/201-vm-domain-join-existing/azuredeploy.json) or equivalent automation options to enable Azure VMware Solution guest VMs to autojoin an Active Directory domain.
 
-   Define a healthy density of guest VMs to maximize Azure VMware Solution investments and then monitor the overall utilization of nodes against that threshold. Resize the Azure VMware Solution environment when indicated by the monitoring and allowing sufficient lead time for node additions.
+- **Guest VM governance**. Have a solution in place to manage the timely update installation. Delayed or incomplete updates or patching are top attack vectors, and can result in Azure VMware Solution guest VMs and applications being exposed or compromised. Implement near real-time insights for prompt detection of performance bottlenecks and operational issues. Enable diagnostics metrics and logging on guest VMs to more easily debug guest and application issues.
 
-* **Azure services integration governance** - Using the public endpoint of the Azure PaaS service can lead to traffic leaving the desired network boundaries.
+  Deploy the Microsoft Monitoring Agent (MMA) on VMware guest VMs before migration, or when deploying new guest VMs in the Azure VMware Solution environment. Configure the MMA with an Azure Log Analytics Workspace, and [link the Azure Log Analytics Workspace with Azure Automation](/azure/automation/how-to/region-mappings). Validate the status of any guest VM MMA agents deployed before migration with Azure Monitor after migration.
 
-   Access Azure services (SQL Database, Azure Blob, etc.) using a private endpoint to ensure that traffic remains within a defined virtual network boundary.
+  Use [Azure Arc-enabled servers](/azure/azure-arc/servers/overview) to manage Azure VMware Solution guest VMs with tools that replicate Azure native resource tooling, including:
 
-### Guest Application and VM Governance
-
-* **Guest VM’s security posture governance** - Lack of security compliance awareness for Azure VMware Solution guest VMs makes it difficult to understand cybersecurity readiness and response, leading to gaps in security coverage for Azure VMware Solution guest VMs and applications.
-
-   Enable [Azure Defender](/azure/security-center/azure-defender) features in Azure Security Center associated with running Azure services and Azure VMware Solution guest VM workloads and use Azure Security Center’s regulatory compliance view to monitor compliance against security and regulatory benchmarks. Configure Azure Security Center’s workflow automation for tracking any deviation against the expected compliance posture. For more information, see [Azure Arc enabled servers Overview](/azure/azure-arc/servers/overview).
-
-* **DR governance** - Lack of Disaster Recovery (DR) orchestration can result in unexpected delays in ensuring business continuity during DR events. Undocumented RPO and RTO requirements can result in poor customer experiences and unmet operational goals during DR and Business Continuity (BC) events. 
-
-   Use a DR solution for Azure VMware Solution, which provides DR orchestration capabilities while also providing the ability to detect and report on any failure and/or issues in the successful continuous replication to a DR site. Document RPO/RTO requirements for applications running in Azure and Azure VMware Solution. Choose a [Disaster Recovery and Business Continuity solution](./eslz-business-continuity-and-disaster-recovery.md) design to meet verifiable RPO/RTO requirements through orchestration.
-
-* **Backup governance** - Inability to schedule regular backups can result in missed backups or reliance on old backups, leading to data loss.
-
-   Use a backup solution that can take scheduled backups and can monitor the success of backups. Monitor and alert on backup events to ensure scheduled backups run successfully.
-
-* **Logging governance** - Lack of log collection and querying capability can result in a poor debugging and troubleshooting experience leading to extended response times.
-
-   Enable [VM insights](/azure/azure-monitor/vm/vminsights-overview) on Azure VMware Solution guest VMs.
-  
-   Configure [log alerts](/azure/azure-monitor/alerts/alerts-log) to capture boundary conditions for guest VMs.
-
-* **Domain governance** - Inability to auto-join Azure VMware Solution VMs can result in manual and error-prone processes.
-
-   Use Extensions such as [JsonADDomainExtension](https://github.com/Azure/azure-quickstart-templates/blob/master/201-vm-domain-join-existing/azuredeploy.json) or equivalent automation options to enable Azure VMware Solution guest VMs to auto-join an Active Directory domain.
-
-* **Guest VM Governance** - Delayed or incomplete updates and/or patching is one of the top vectors for attack and not having a solution in place to manage the timely installation of updates can result in Azure VMware Solution guest VMs and applications being exposed or compromised. Lack of near real-time insights can lead to undetected or late detection of performance bottlenecks and operational issues, and not having diagnostics metrics and logging enabled on guest VMs can make it difficult to debug guest and application issues.
-
-   Deploy the Microsoft Monitoring Agent (MMA) on VMware guest VMs before migration or when deploying new guest VM’s in the Azure VMware Solution environment.  Configure this agent with an Azure Log Analytics Workspace and [link](/azure/automation/how-to/region-mappings) the Azure Log Analytics Workspace with Azure Automation. For any guest VM MMA agents deployed before migration, validate their status after migration in Azure Monitor.
-
-   Use Azure Arc for Servers to enable the ability to manage Azure VMware Solution guest VM’s with tools that replicate the Azure native resource tooling. ([Azure Arc enabled servers Overview](/azure/azure-arc/servers/overview) including:
-
-  * Use Azure Policy to govern, report, and audit Guest configurations and settings.
-  * Use Azure Automation State Configuration and supported extensions to simplify deployments.
-  * Use Update Management to manage updates for Azure VMware Solution guest VM landscape.
-  * Use Tags to manage and organize Azure VMware Solution guest VM inventory.
+  - Azure Policy to govern, report, and audit guest configurations and settings.
+  - Azure Automation state configuration and supported extensions to simplify deployments.
+  - Update Management to manage updates for the Azure VMware Solution guest VM landscape.
+  - Tags to manage and organize Azure VMware Solution guest VM inventory.
 
 ## Compliance
 
-Consider and implement the following recommendations when planning for Azure VMware Solution environment and Guest VM compliance.
+Consider and implement the following recommendations when planning for Azure VMware Solution environment and guest VM compliance.
 
-### Environment and Guest Compliance
+- **Guest VM DR compliance**. DR configuration compliance tracking for Azure VMware Solution guest VMs ensures that mission-critical applications and workloads running on those VMs remain available during a disaster. Use Azure Site Recovery or an Azure VMware Solution certified BCDR solution, which provides at-scale replication provisioning, non-compliance status monitoring, and automatic remediation functionality.
 
-* **Guest VM’s DR compliance** - Not having a working DR configuration compliance tracking for Azure VMware Solution guest VMs can result in the mission-critical applications and workloads running on those VMs remaining unavailable during a disaster.
+- **Guest VM backup compliance**. Compliance tracking and monitoring for guest VM backups in a large Azure VMware Solution VM estate ensures that Azure VMware Solution VMs are being backed up. Use an [Azure VMware Solution certified Partner solution](/azure/azure-vmware/ecosystem-back-up-vms) that provides at-scale perspective, drill-down analysis, and an actionable interface for tracking and monitoring guest VM backup.
 
-   Use Azure Site Recovery or an Azure VMware Solution certified BCDR solution, which provides at-scale replication provisioning, non-compliance status monitoring, and automatic remediation functionality.
+- **Country or industry-specific regulatory compliance**. Ensure Azure VMware Solution guest workload compliance with country and industry-specific regulations to avoid costly legal actions and fines.
 
-* **Guest VM’s backup compliance** - Lack of compliance tracking and monitoring for guest VM backups in a large Azure VMware Solution VM estate can result in Azure VMware Solution VMs not being backed up.
+   Understand the cloud [shared responsibility](https://azure.microsoft.com/resources/shared-responsibility-for-cloud-computing/) model for industry or region-based regulatory compliance. Use the [Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/MSComplianceGuideV3) to view or download Azure VMware Solution and Azure Audit reports that support the whole compliance story.
 
-   Use an [Azure VMware Solution certified Partner solution](/azure/azure-vmware/ecosystem-back-up-vms) which provides at-scale perspective, drill-down analysis and actionable interface for tracking/monitoring guest VM backup.
+   Enable the [Azure Defender](/azure/security-center/azure-defender) features of Azure Security Center for Azure services that support Defender and any applicable Azure VMware Solution guest VM workloads.
 
-* **Country and/or industry-specific regulatory compliance** - Missing or incomplete compliance for of Azure VMware Solution guest workloads against country and/or industry-specific regulations can result in costly legal actions and fines.
+   Use Azure Security Center's regulatory compliance view to monitor compliance against security and regulatory benchmarks. Configure Azure Security Center workflow automation for tracking any deviation from the expected compliance posture. For more information, see the [Azure Security Center documentation](/azure/security-center/security-center-introduction).
 
-   Understand the [shared responsibility](https://azure.microsoft.com/resources/shared-responsibility-for-cloud-computing/) model in the cloud for industry and/or region-based regulatory compliance. Use the [Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/MSComplianceGuideV3) to view and/or download Azure VMware Solution and Azure Audit reports supporting the whole compliance story.
+- **Corporate policy compliance**. Monitor Azure VMware Solution guest workload compliance with corporate policies to prevent breaches of company rules and regulations. Use [Azure Arc-enabled servers](/azure/azure-arc/servers/overview) and Azure Policy or an equivalent third-party solution. Routinely assess and manage Azure VMware Solution guest VMs and applications for regulatory compliance with applicable internal and external regulations.
 
-   Enable the [Azure Defender](/azure/security-center/azure-defender) features of Azure Security Center for any consumed Azure services that support Defender and any applicable Azure VMware Solution guest VM workloads.  
+- **Data retention and residency requirements**. Azure VMware Solution doesn't support retention or extraction of data stored in clusters. Deleting a cluster terminates all running workloads and components, and destroys all cluster data and configuration settings, including public IP addresses. The data can't be recovered.
 
-   Use Azure Security Center’s regulatory compliance view to monitor compliance against security and regulatory benchmarks and configure Azure Security Center’s workflow automation for tracking any deviation against the expected compliance posture. For more information, see the [Azure Security Center documentation](/azure/security-center/security-center-introduction).  
+   Azure VMware Solution doesn't guarantee that all metadata and configuration data for running the service exists only in the deployed geographical region. If your data residency requirements require all data to exist in the deployed region, contact Azure VMware Solution support for assistance.
 
-* **Corporate policy compliance** - Lack of compliance monitoring of Azure VMware Solution guest workloads against corporate policies can result in a breach of company rules and regulations.
+- **Data processing**. Read and understand the legal terms when you sign up. Pay attention to the [VMware Data Processing Agreement for Microsoft Azure VMware Solution Customers Transferred for L3 Support](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/privacy/vmware-data-processing-agreement.pdf). For any support issue that needs VMware support, professional service data along with associated personal data will be shared with VMware. From that point on, Microsoft and VMware act as two independent data processors.
 
-   Use [Azure Arc for Servers](/azure/azure-arc/servers/overview) and Azure Policy or an equivalent third-party solution to routinely assess and manage regulatory compliance for Azure VMware Solution guest VMs and applications against applicable internal and external regulations.
+## Next steps
 
-* **Data Retention/Residency requirements** - Azure VMware Solution does not currently support retention or extraction of data stored in clusters. Once cluster is deleted, the data cannot be recovered as it terminates all running workloads, components, and destroys all cluster data and configuration settings, including public IP addresses.
+This article is based on the Cloud Adoption Framework Enterprise Scale Landing Zone (ESLZ) architectural design principles and guidelines. For more information, see:
 
-   Azure VMware Solution does not currently guarantee that all metadata and configuration data for running the service will exist only in the deployed geographical region. If this is required to meet your data residency requirements, please reach out to Azure VMware Solution support so that Microsoft can assist with your needs.
+- [Enterprise-scale Design Principles](../../ready/enterprise-scale/design-principles.md)
+- [Enterprise-scale Design Guidelines](../../ready/enterprise-scale/design-guidelines.md)
 
-* **Data Processing** - Read and understand the legal terms at the time of sign-up. Pay attention to [VMware Data Processing Agreement for Microsoft Azure VMware Solution Customers Transferred for L3 Support](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/privacy/vmware-data-processing-agreement.pdf). 
-
-   Any support issue that may need VMware support, professional service data along with associated personal data will be shared with VMware. From that point onwards, Microsoft and VMware become two independent processors of data.
-
-## Enterprise-scale assumptions
-
-The following are assumptions that went into the development of the deployable asset: Enterprise-scale for Azure VMware Solution.
-
-- [Enterprise-scale Design Principles](/azure/cloud-adoption-framework/ready/enterprise-scale/design-principles)
-- [Enterprise-scale Design Guidelines](/azure/cloud-adoption-framework/ready/enterprise-scale/design-guidelines)
-
-## Additional considerations
-
-Refer to following guidance available for more critical design areas.
+The article is part of a series that applies ESLZ principles and recommendations to Azure VMware Solution deployments. Other articles in the series include:
 
 - [Enterprise-scale identity and access management for Azure VMware Solution](./eslz-identity-and-access-management.md)
-- [Enterprise-scale management and monitoring for Azure VMware Solution](./eslz-management-and-monitoring.md)
 - [Enterprise-scale network topology and connectivity for Azure VMware Solution](./eslz-network-topology-connectivity.md)
 - [Enterprise-scale platform automation and DevOps for Azure VMware Solution](./eslz-platform-automation-and-devops.md)
 - [Enterprise-scale business continuity and disaster recovery for Azure VMware Solution](./eslz-business-continuity-and-disaster-recovery.md)
+
+Read the next article in the series:
+
+> [!div class="nextstepaction"]
+> [Enterprise-scale management and monitoring for Azure VMware Solution](./eslz-management-and-monitoring.md)
+
