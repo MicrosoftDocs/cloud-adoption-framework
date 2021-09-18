@@ -157,11 +157,11 @@ Instead we suggest working with each application/service workload team (landing 
 
 ### What about our Management Group hierarchy?
 
-Great question! What we want to avoid with Enterprise-scale are complicated and volatile Management Group hierarchies that require constant amendment and also don't scale efficiently whilst providing no added value to configuring them. This is why in Enterprise-scale Management Groups are workload archetype aligned. Refer to the [Management group and subscription organization](/azure/cloud-adoption-framework/ready/enterprise-scale/management-group-and-subscription-organization) for further information.
+Great question! What we want to avoid with Enterprise-scale are complicated and volatile Management Group hierarchies that require constant amendment and also don't scale efficiently whilst providing no added value to configuring them. This is why in Enterprise-scale, Management Groups are workload archetype aligned. Refer to the [Management group and subscription organization](/azure/cloud-adoption-framework/ready/enterprise-scale/management-group-and-subscription-organization) for further information.
 
-By this we mean that Management Groups are only created for differing workload archetypes. For example, beneath the "Landing Zones" Management Group in the conceptual architecture we have a "Corp" and "Online" child Management Groups. These both align to two distinct archetype patterns for the workloads they will hold, mainly focussed around hybrid connectivity (VPN/ExpressRoute). But all environments ("dev/test/production"), whether separate Subscriptions or a single Subscription will all be held within the same single Management Group depending on its archetype and requirements.
+By this we mean that Management Groups are only created for differing workload archetypes. For example, beneath the "Landing Zones" Management Group in the conceptual architecture we have a "Corp" and "Online" child Management Groups. These both align to two distinct archetype patterns for the workloads they will hold, mainly focussed around hybrid connectivity (VPN/ExpressRoute) requirements (internal only vs public facing applications/services). But all environments ("dev/test/production"), whether split across separate Subscriptions or in a single Subscription, will all be held within the same single Management Group ("Corp" or "Online") depending on its archetype and requirements.
 
-Scaling and also management of this scale is something that the following equation helps to highlight why Management Groups per environment and/or per workload doesn't scale well:
+Scaling, and also management of this scale, is something that the following equation helps to highlight why Management Groups per environment and/or per workload doesn't scale well:
 
 - If you have 30 different workloads that each require a Management Group and a child Management Group for "dev/test/production" you are left with the following equation:
   - **30** (no. of workloads) X **4** (no. of Management Groups per workload) = **120** Management Groups
@@ -180,13 +180,18 @@ A common challenge to this approach is that you may require some policies to app
     > Tags can be changed by users with appropriate RBAC permissions, therefore for security focussed policies it is advised not to use tags in policies as user could change the tags on a resource and potentially bypass or have another policy apply to the resources.
 
 2. Apply policies at a Subscription level as required, ideally during the Subscription creation/vending process (as talked about above).
-
+3. For policies that are put implemented to help keep costs controlled (e.g. restrict certain VM SKUs from being used) consider applying these at a Subscription level where required, as per point 2. Or take the approach to make costs a responsibility of the Landing Zone owners as defined in the critical design area: [Platform automation and DevOps](/azure/cloud-adoption-framework/ready/enterprise-scale/platform-automation-and-devops#define-central-and-federated-responsibilities), enabling true autonomy.
+4. Utilize sandbox Subscriptions for true development activities, as the sandboxes will have a less restrictive policy set applied.
 
 #### Example of a Optimal Management Group Hierarchy Aligned to Enterprise-Scale
+
 ![An example of a optimal Management Group hierarchy for Enterprise-scale when handling dev/test/production Landing Zones](./media/eslz-dev-test-prod-good.png)
 
 *Some Management Groups have been removed for illustration clarity purposes.*
 
+>[!NOTE]
+> We discussed this topic in our Enterprise-scale community call in August 2021. You can find the recording on [YouTube here.](https://youtu.be/Zx_gHevekm0?t=1954)
 
+## How do we enable additional Azure Regions when using Enterprise-scale?
 
-
+Coming soon! In progress and will be added to this PR.
