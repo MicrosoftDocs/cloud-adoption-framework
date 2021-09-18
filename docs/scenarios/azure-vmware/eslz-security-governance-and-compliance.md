@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-avs
 ---
 
-# Security, governance, and compliance disciplines for Azure VMware Solution
+# Security, governance, and compliance for Azure VMware Solution
 
 This article describes how to implement a secure Azure VMware Solution and holistically govern the solution throughout its life cycle. The article explores specific design elements and provides targeted recommendations for Azure VMware Solution security, governance, and compliance design.
 
