@@ -1,15 +1,16 @@
 ---
-title: Azure enterprise-scale for analytics and AI data management overview
-description: Enterprise-scale for analytics and AI architecture data management landing zone overview
+title: Overview of the enterprise-scale for analytics and AI data management landing zone in Azure
+description: Gain an overview of the enterprise-scale for analytics and AI data management landing zone in Azure
 author: mboswell
 ms.author: mboswell
 ms.date: 03/03/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: e2e-data-management, think-tank
 ---
 
-# Data management landing zone
+# Overview of the Azure enterprise-scale for analytics and AI data management landing zone
 
 The data management landing zone is classified as a management function and is central to the enterprise-scale for analytics and AI platform. It's responsible for the governance of the platform and enables communication to ingest data sources from Azure, third-party clouds, and on-premises data sources.
 
@@ -150,13 +151,13 @@ Enterprise-scale for analytics and AI uses
 
 These contracts should give information on data validation, model, and security policies. For more information, see [Data sharing agreements](../govern-data-sharing-agreements.md).
 
-## Data lifecycle
+## Data life cycle
 
-Data products may have different lifecycles. We recommend applying policies to regulate the data lifecycle. A typical pattern is that newly ingested data is used and accessed often. As the age since ingesting increases, the rate of data access decreases. Older data will see a drastic drop in usage. Your data products and entities in these products may have different lifecycles. Some data can stay unused after the initial ingestion or is rarely accessed once stored. Some datasets may expire days or months after creation, while other datasets are actively used and modified throughout their lifetimes. Most countries have regulations related to how long you're required to store data such as personal data and accounting data. For example, a country might require retention of primary documentation for five years, like incoming and outgoing invoices, cash book balances, bank vouchers, and salary slips. Retention of secondary documentation for three to five years, like letters, agreements, and notes.
+Data products may have different lifecycles. We recommend applying policies to regulate the data life cycle. A typical pattern is that newly ingested data is used and accessed often. As the age since ingesting increases, the rate of data access decreases. Older data will see a drastic drop in usage. Your data products and entities in these products may have different lifecycles. Some data can stay unused after the initial ingestion or is rarely accessed once stored. Some datasets may expire days or months after creation, while other datasets are actively used and modified throughout their lifetimes. Most countries have regulations related to how long you're required to store data such as personal data and accounting data. For example, a country might require retention of primary documentation for five years, like incoming and outgoing invoices, cash book balances, bank vouchers, and salary slips. Retention of secondary documentation for three to five years, like letters, agreements, and notes.
 
-In Azure, the data lifecycle is handled by each relevant service containing persisted data.
+In Azure, the data life cycle is handled by each relevant service containing persisted data.
 
-[Lifecycle management](../best-practices/data-lake-key-considerations.md#lifecycle-management) for enterprise-scale for analytics and AI outlines more considerations around the different layers in a data lake.
+[Life cycle management](../best-practices/data-lake-key-considerations.md#life cycle-management) for enterprise-scale for analytics and AI outlines more considerations around the different layers in a data lake.
 
 ## Automation interfaces (optional)
 
@@ -196,4 +197,4 @@ For more information, see [Connect to Azure Synapse studio using private links](
 
 ## Next steps
 
-[Enterprise-scale for analytics and AI architecture data landing zone](./data-landing-zone.md)
+[Overview of the enterprise-scale for analytics and AI architecture data landing zone in Azure](./data-landing-zone.md)

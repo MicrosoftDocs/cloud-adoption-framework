@@ -68,6 +68,8 @@ items:
 
     - name: Adoption scenarios
       items:
+      - name: Data management and analytics
+        href: scenarios/data-management/index.md
       - name: Hybrid and multicloud
         href: scenarios/hybrid/index.md
       - name: Modern application platform

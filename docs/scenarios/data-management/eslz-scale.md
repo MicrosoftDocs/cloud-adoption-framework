@@ -1,12 +1,13 @@
 ---
 title: Scaling data management and analytics in Azure
-description: Learn about data management and analytics in Azure. Decide whether to use a single or multiple data landing zones to design a scalable platform.
+description: Learn how to scale data management and analytics in Azure. Decide whether to use a single or multiple data landing zones to design a scalable platform.
 author: esbran
 ms.author: espen
 ms.date: 07/16/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Scaling data management and analytics in Azure
@@ -29,7 +30,7 @@ For more information, see [Enterprise-scale for analytics and AI architecture da
 
 ## Single data landing zone
 
-This figure gives an overview of an enterprise-scale for analytics and AI platform with a data management landing zone and a single data landing zone.
+This figure shows an overview of an enterprise-scale for analytics and AI platform with a data management landing zone and a single data landing zone.
 
 ![Diagram of enterprise-scale data management and single data landing zone.](./images/high-level-design-single-data-landing-zone.png)
 
@@ -51,5 +52,4 @@ Enterprise-scale for analytics and AI places a strong emphasis on central catalo
 
 ## Next steps
 
-- [Enterprise enrollment and Azure AD tenants for data management and analytics enterprise-scale scenario](./eslz-enterprise-enrollment-and-azure-ad-tenants.md)
-- [Network topology and connectivity for data management and analytics](./eslz-network-topology-and-connectivity.md)
+[Enterprise enrollment and Azure Active Directory tenants for enterprise-scale for analytics and AI](./eslz-enterprise-enrollment-and-azure-ad-tenants.md)

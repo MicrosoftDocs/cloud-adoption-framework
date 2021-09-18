@@ -48,8 +48,6 @@ highlightedContent:
       itemType: overview
       url: ./overview.md
 
-
-
 # productDirectory section (optional)
 
 productDirectory:
@@ -218,7 +216,7 @@ conceptualContent:
           text: Identify your cloud adoption path based on the needs of your business.
 
     # Card
-    - title: Strategic migration assessment and readiness tool (SMART)
+    - title: Strategic Migration Assessment and Readiness Tool (SMART)
       links:
         - url: /assessments/?id=Strategic-Migration-Assessment&mode=pre-assessment
           itemType: get-started

@@ -1,12 +1,13 @@
 ---
 title: Components needed for data governance
-description: Components needed for data governance
+description: Understand the components for data governance.
 author: mboswell
 ms.author: mboswell
 ms.date: 06/21/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Components needed for data governance
@@ -31,11 +32,11 @@ The data governance strategy should include the projects and initiatives needed 
 
 - Data is the property of the company and should be shared
 
-## Data and the data lifecycle that needs to be governed
+## Data and the data life cycle that needs to be governed
 
 Data means data entities, documents, unstructured images, video, and audio. Examples of data entities are customer, product, employee, supplier, order, invoice, payment, and asset.
 
-:::image type="content" source="./images/data-lifecycle.png" alt-text="Diagram of the data lifecycle.":::
+:::image type="content" source="./images/data-life-cycle.png" alt-text="Diagram of the data life cycle.":::
 
 Examples of data entity include:
 
@@ -55,7 +56,7 @@ Examples of documents include:
 - Annual report
 - Product brochure
 
-The data governance solution should enable you to govern data throughout the lifecycle. That means governing data creation / ingestion protection, storage, use, maintenance, archiving, and destruction.
+The data governance solution should enable you to govern data throughout the life cycle. That means governing data creation / ingestion protection, storage, use, maintenance, archiving, and destruction.
 
 ## Data governance roles and responsibilities guidance for people
 
@@ -91,14 +92,14 @@ When you build a common business vocabulary, you can use data catalog software t
 
 Using a data catalog for automated data discovery enables the mapping of disparate data to a common vocabulary. The data catalog can help you understand where the data for each particular data entity in the business glossary is located across the enterprise.
 
-## Policies and rules to govern data at different points in the lifecycle
+## Policies and rules to govern data at different points in the life cycle
 
 Data governance policies describe a set of rules to control the integrity, quality, access security, privacy, and retention of data. There are different types of policy that include:
 
 - Data integrity policies such as valid values, referential integrity.
 - Data quality policies with data standardization, cleansing and matching rules.
 - Data protection policies with access security and data privacy rules.
-- Data retention policies to manage the lifecycle with retention, archive, and backup rules. Multiple versions of a policy may be needed to govern the same data across different legal jurisdictions.
+- Data retention policies to manage the life cycle with retention, archive, and backup rules. Multiple versions of a policy may be needed to govern the same data across different legal jurisdictions.
 
 The [Data confidentiality classification scheme](./govern-requirements.md#data-confidentiality-classification-scheme) has five classification levels. The levels are public, internal use only, confidential, sensitive personal data, and restricted.
 
@@ -106,7 +107,7 @@ The way to govern data is to combine this data governance classification scheme 
 
 Once you define policies and rules in a data catalog for each class in a data governance classification scheme, they can be passed to other technologies from a data catalog, via APIs, for them to enforce. Instead, a common data management platform that can connect to multiple data stores could potentially enforce them.
 
-It should then be possible to monitor data quality, privacy, access security, usage, maintenance, and retention of specific data entities through their lifecycle.
+It should then be possible to monitor data quality, privacy, access security, usage, maintenance, and retention of specific data entities through their life cycle.
 
 ## Data governance technology
 

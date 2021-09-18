@@ -42,7 +42,7 @@ To get started, first familiarize yourself with the various categories and servi
 - Explore [interactive demos across the product/service pages](https://azure.microsoft.com/services/cognitive-services/).
 - Read the e-book, [Building Intelligent Apps with Cognitive APIs](https://azure.microsoft.com/resources/building-intelligent-apps-with-cognitive-apis/).
 - Download the [Intelligent Kiosk](https://github.com/Microsoft/Cognitive-Samples-IntelligentKiosk) to experience and demo the services. <!-- docutune:casing "Intelligent Kiosk" -->
-- Learn more about [Container support in Azure Cognitive Services](/azure/cognitive-services/cognitive-services-container-support).
+- Learn more about [container support in Azure Cognitive Services](/azure/cognitive-services/cognitive-services-container-support).
 - Review [reference architectures for AI solutions](/azure/architecture/browse/#ai--machine-learning).
 
 ## AI agents
@@ -88,7 +88,7 @@ To learn how to add Cognitive Services to make your bot even more intelligent, s
 - [A Developer's Guide to Building AI Applications (e-book)](https://www.oreilly.com/library/view/a-developers-guide/9781492080619/)
 - [Cognitive Services documentation](/azure/cognitive-services/)
 
-To learn how to build your own Virtual Assistant with Bot Framework solution accelerators, and select a common set of skills such as calendar, e-mail, point of interest, and to-do, see the [Bot Framework Solutions Documentation](https://microsoft.github.io/botframework-solutions/index).
+To learn how to build your own Virtual Assistant with Bot Framework solution accelerators, and select a common set of skills such as calendar, e-mail, point of interest, and to-do, see the [Bot Framework solutions documentation](https://microsoft.github.io/botframework-solutions/index).
 
 ## Next steps
 

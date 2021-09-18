@@ -1,12 +1,13 @@
 ---
-title: Provision the Azure enterprise-scale for analytics and AI platform
-description: Learn how to provision the enterprise-scale for analytics and AI platform through deployment of landing zones and DevOps services.
+title: Provision the enterprise-scale for analytics and AI platform
+description: Learn how to provision the enterprise-scale for analytics and AI platform by deploying landing zones and DevOps services.
 author: abdale
 ms.author: hamoodaleem
 ms.date: 07/15/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Provision the Azure enterprise-scale for analytics and AI platform
@@ -67,7 +68,7 @@ The runbooks use Git functions from the [`GitAutomation`](https://github.com/web
 
 Use the `Copy-GitRepository` function from the GitAutomation module to clone the main Git repository from the URL specified by `URL` to the data platform Git path specified by `DestinationPath`.
 
-This approach to data landing zone deployment is flexible, while ensuring that actions are compliant with organizational requirements. Lifecycle management is possible through the ability to apply new features or optimizations from the original templates.
+This approach to data landing zone deployment is flexible, while ensuring that actions are compliant with organizational requirements. Life cycle management is possible through the ability to apply new features or optimizations from the original templates.
 
 ## Data integration and data product deployment process
 
@@ -90,7 +91,7 @@ Deployment is done either directly using DevOps tooling or called via pipelines/
 
 ## Summary
 
-The above patterns provide control, agility, self-service, and lifecycle management of policies.
+The above patterns provide control, agility, self-service, and life cycle management of policies.
 
 ![Diagram of the overall DataOps model.](./images/overall-data-ops-model.png)
 
@@ -123,5 +124,5 @@ To control the deployment of data integration and data product services, follow 
 
 ## Next steps
 
-- [Deployment templates](./eslz-deployment-templates.md)
+- [Deployment templates for enterprise-scale for analytics and AI deployments](./eslz-deployment-templates.md)
 - [An introduction to Azure Automation](/azure/automation/automation-intro)

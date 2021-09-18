@@ -1,12 +1,13 @@
 ---
-title: Identity and access management for data management and analytics in Azure
-description: Learn how this enterprise-scale scenario can improve identity and access management of data management and analytics in Azure.
+title: Identity and access management for data management and analytics
+description: Learn how this enterprise-scale scenario can improve identity and access management for data management and analytics in Azure.
 author: mboswell
 ms.author: mboswell
 ms.date: 07/19/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Identity and access management for data management and analytics
@@ -77,7 +78,7 @@ For automation purposes of deploying data landing zones, you need these roles:
 
 ### Role assignments for data integration and data products
 
-The following role assignments are required for a deployment of a data integration and data product within a data landing zone:
+The following role assignments are required for deploying a data integration and data product within a data landing zone:
 
 :::row:::
     :::column span="1":::
@@ -140,8 +141,8 @@ We recommend that you use Azure AD groups to secure database objects instead of 
 
 This approach also gives a single management location and allows reviewing access rights inside the Azure Graph.
 
-For more details on how to drive a security for data management landing zones and data landing zones is managing your data estate, see [Security provisioning](./security-provisioning.md).
+For more details on how to drive security for data management landing zones and data landing zones managing your data estate, see [Provision security for data management and analytics in Azure](./security-provisioning.md).
 
 ## Next steps
 
-[Network topology and connectivity for an data management and analytics](./eslz-network-topology-and-connectivity.md)
+[Network topology and connectivity for data management and analytics landing zones](./eslz-network-topology-and-connectivity.md)

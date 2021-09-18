@@ -1,5 +1,5 @@
 ---
-title: Understand best practices for data science projects with enterprise-scale for analytics and AI in Azure
+title: Best practices for data science projects with enterprise-scale for analytics and AI in Azure
 description: Learn about best practices for data science projects with enterprise-scale for analytics and AI in Azure.
 author: abdale
 ms.author: hamoodaleem
@@ -7,10 +7,10 @@ ms.date: 08/06/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: think-tank, e2e-data
+ms.custom: e2e-data-management, think-tank
 ---
 
-# Understand best practices for data science projects with enterprise-scale for analytics and AI in Azure
+# Best practices for data science projects with enterprise-scale for analytics and AI in Azure
 
 We recommend these best practices for how to use enterprise-scale for analytics and AI in Azure to operationalize data science projects.
 
@@ -25,6 +25,10 @@ Following are guidelines on developing a data science template for your organiza
 - Develop a set of infrastructure as code templates to deploy an Azure Machine Learning workspace. Include resources like a key vault, storage account, Azure Application Insights, and container registry.
 
 - Include the setup of data stores and compute targets in these templates like compute instances, compute clusters, and Azure Databricks.
+
+## Deployment best practices
+
+### Real-time
 
 - Include an Azure Data Factory or Azure Synapse deployment in templates and Cognitive Services.
 
@@ -44,9 +48,7 @@ The same access rights typically apply to different types of artifacts. So, it's
 
 We recommend setting up different AI services like Azure Cognitive Services on a per-project basis. The result is deployments occur for each data product resource group. It creates a clear separation from a data access standpoint and mitigates the risk of unauthorized data access by the wrong teams.
 
-## Deployment best practices
-
-### Real-time streaming scenario
+### Streaming scenario
 
 For streaming and real-time use cases, deployments should be tested on a downsized [Azure Kubernetes Service (AKS)](/azure/aks/). The testing can be in the development environment to save on costs before you deploy to the production AKS or Azure App Service for containers. Simple input and output tests should be performed to make sure that the services respond as expected.
 
@@ -131,4 +133,4 @@ The following purposes apply to each folder in the repository:
 
 ## Next steps
 
-[Azure Machine Learning as a data product](./azure-machine-learning.md)
+[Azure Machine Learning as a data product for enterprise-scale for analytics and AI](./azure-machine-learning.md)

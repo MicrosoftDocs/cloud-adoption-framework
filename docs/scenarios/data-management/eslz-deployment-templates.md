@@ -1,15 +1,16 @@
 ---
-title: Deployment templates for enterprise-scale for analytics and AI deployment
-description: Learn about the core starter templates for enterprise-scale for analytics and AI deployment.
+title: Deployment templates for enterprise-scale for analytics and AI deployments
+description: Learn about the core starter templates for enterprise-scale for analytics and AI deployments.
 author: mboswell
 ms.author: mboswell
 ms.date: 07/13/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: e2e-data-management, think-tank
 ---
 
-# Deployment templates for enterprise-scale for analytics and AI deployment
+# Deployment templates for enterprise-scale for analytics and AI deployments
 
 The enterprise-scale for analytics and AI solution has the following core starter templates:
 
@@ -24,3 +25,7 @@ The enterprise-scale for analytics and AI solution has the following core starte
 These templates not only contain Azure Resource Manager templates and their parameter files, but also CI/CD pipeline definitions for resource deployment.
 
 The templates can change over time because of new Azure services and requirements. Secure the `main` branch of these repositories to ensure that it remains error-free and ready for consumption and deployment. Use a development subscription to test template configuration changes before you merge feature enhancements back into the `main` branch.
+
+## Next steps
+
+[Data summary and maturity model for Azure](./govern.md)

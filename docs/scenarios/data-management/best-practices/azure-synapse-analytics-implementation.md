@@ -1,19 +1,20 @@
 ---
-title: Enterprise-scale for analytics and AI Azure Synapse pattern
-description: Learn how to implement Azure Synapse Analytics with enterprise-scale for analytics and AI.
+title: Use Azure Synapse Analytics with enterprise-scale for analytics and AI
+description: Learn how to use Azure Synapse Analytics with enterprise-scale for analytics and AI.
 author: mboswell
 ms.author: mboswell
 ms.date: 08/03/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: e2e-data-management, think-tank
 ---
 
-# Azure Synapse Analytics implementation
+# Use Azure Synapse Analytics with enterprise-scale for analytics and AI
 
 Azure Synapse Analytics is the provisioned, integrated analytics service that accelerates time to insight across data warehouses and big data systems. Azure Synapse Analytics brings together:
 
-- The best of SQL technologies used in enterprise data warehousing.
+- The best SQL technologies used in enterprise data warehousing.
 - Spark technologies used for big data.
 - Pipelines for data integration and extract, transform, and load (ETL) or extract, load, and transform (ELT).
 
@@ -76,4 +77,4 @@ Storage Account permissions are required when using Azure Synapse workspaces int
 
 ## Next steps
 
-- [High availability for Azure Synapse Analytics](../../../migrate/azure-best-practices/analytics/azure-synapse.md)
+[High availability for Azure Synapse Analytics](../../../migrate/azure-best-practices/analytics/azure-synapse.md)

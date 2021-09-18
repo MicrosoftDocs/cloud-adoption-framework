@@ -1,15 +1,16 @@
 ---
-title: Azure enterprise-scale for analytics and AI data products
-description: Learn about Azure enterprise-scale for analytics and AI data products
+title: Enterprise-scale for analytics and AI data products in Azure
+description: Learn about enterprise-scale for analytics and AI data products in Azure.
 author: mboswell
 ms.author: mboswell
 ms.date: 06/08/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: e2e-data-management, think-tank
 ---
 
-# Data products
+# Enterprise-scale for analytics and AI data products in Azure
 
 At a high level, data products are computed or polyglot persistence services that might be required depending on certain use cases. A data product is anything that drives business value, for example, reports, workbooks, bespoke database, or data API. It can use other services and technologies that aren't part of [data landing zone](./data-landing-zone.md) core services. One example is reporting with niche requirements, such as compliance and tax reporting or specialized capabilities that address gaps in the baseline policies.
 
@@ -17,11 +18,11 @@ At a high level, data products are computed or polyglot persistence services tha
 
 - A data landing zone can have multiple data products that are created by ingesting data either inside the same data landing zone or from across multiple data landing zones as shown below.
 
-    :::image type="content" source="../images/data-product-cross-data-landing-zone.png" alt-text="Diagram of cross data landing zone consumption.":::
+    :::image type="content" source="../images/data-product-cross-data-landing-zone.png" alt-text="Diagram of cross-data landing zone consumption.":::
 
      The example above shows:
      1. Intra-data landing zone consumption:
-         1. Data product B consumes from data product A and the data lake within its data landing zone, for example, data landing zone 1.
+         1. Data product B consumes from data product A and the data lake within its data landing zone; for example, data landing zone 1.
          1. Data products C and D only consume from within their own respective data landing zones.
      1. Inter-data landing zone consumption: Data product B also consumes from data product C and the data lake in data landing zone 3.
 
@@ -41,7 +42,7 @@ We recommend building data products within your data landing zone by adhering to
 
  Each data product is a resource group. Since data products are compute or polyglot persistence services, they may only be required depending on certain use cases. As such, they can be considered an optional component of your data landing zone. In the case where data products are required, you should create multiple resource groups by data product as shown below.
 
-![Diagram of a data products resource groups](../images/data-products-resource-group.png)
+![Diagram of data product resource groups.](../images/data-products-resource-group.png)
 
 ### Set guardrails
 
@@ -97,7 +98,7 @@ Fully defining a data product's relationship with other data products, its depen
 
 To explain the architecture definition process, we'll look at an example of a financial institution and its credit monitoring data product.
 
-:::image type="content" source="../images/data-product-define-detail.png" alt-text="Diagram of define data product architecture detail.":::
+:::image type="content" source="../images/data-product-define-detail.png" alt-text="Diagram of define-data-product architecture in detail.":::
 
 The credit monitoring data product shown above consumes data from a *read data store* that has been ingested by the [integration operations team](../organize-persona-and-teams.md#data-landing-zone-teams) and produces data assets for two other data products.
 
@@ -116,7 +117,7 @@ The loan approval data product team take a dependency on some of the credit moni
 
 For every data landing zone, an empty visualization resource group is created. Visualization is a data product, and depending on the complexity, can be created via a self-serve process or managed by a data product team.
 
-![Diagram of a visualization resource group](../images/visualization-resource-group.png)
+![Diagram of a visualization resource group.](../images/visualization-resource-group.png)
 
 >[!NOTE]
 >Licensing costs might mean that is it more economical to deploy third-party visualization products into the data management landing zone and for the products to connect across to the data landing zone to pull data back.
@@ -143,4 +144,4 @@ A data product for analytics and data science might contain the services shown i
 
 ## Next steps
 
-[Frequently asked questions](./frequently-asked-questions.md)
+[Frequently asked questions about enterprise-scale for analytics and AI in Azure](./frequently-asked-questions.md)
