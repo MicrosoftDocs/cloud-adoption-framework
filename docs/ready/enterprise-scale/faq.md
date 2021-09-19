@@ -2,7 +2,7 @@
 title: Enterprise-scale FAQ
 description: The Enterprise-scale FAQ provides answers to common questions asked about the Enterprise-scale architecture.
 author: jtracey93
-ms.author: jtracey93
+ms.author: jatracey
 ms.date: 09/13/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -45,7 +45,7 @@ We then work with the Azure Policy and associated product/service engineering te
 
 ## What does policy-driven governance mean, and how does it work?
 
-Policy-driven governance is one of the key design principles of Enterprise-scale, as documented [here.](/azure/cloud-adoption-framework/ready/enterprise-scale/design-principles#policy-driven-governance) 
+Policy-driven governance is one of the key design principles of Enterprise-scale, as documented [here.](/azure/cloud-adoption-framework/ready/enterprise-scale/design-principles#policy-driven-governance)
 
 Policy-driven governance, in short, means utilizing Azure Policy to reduce the time taken to perform common and repeated operational tasks across your Azure Tenant. This can be achieved using most of the [Azure Policy effects](/azure/governance/policy/concepts/effects) apart from: `Audit`, `Disabled` and `AuditIfNotExists` (this is because they do not prevent or take actions, only audit and report on non-compliance). Where as the effects: `Append`, `Deny`, `DeployIfNotExists` and `Modify` either prevent non-compliance by restricting those resources that are non-compliant, as defined by the policy, from being created or updated; or actually deploy resources or amend/modify settings of the resource creation or update request to make them compliant automatically.
 
@@ -100,7 +100,7 @@ All of the ARM templates for the Enterprise-Scale are developed for, and optimiz
 
 Finally, taking the same templates for day 2 and onwards operations, will require you to re-deploy to the entire tenant for any change, and also require permanent Owner RBAC assignment on the tenant root "`/`" scope.
 
-However, if you wish to deploy and manage Enterprise-scale via infrastructure-as-code, please see the question: [What if we don't want to deploy using the Azure Landing Zone Accelerator portal based experience, but want to deploy via infrastructure-as-code?](#what-if-we-dont-want-to-deploy-using-the-azure-landing-zone-accelerator-portal-based-experience-but-want-to-deploy-with-infrastructure-as-code)
+However, if you wish to deploy and manage Enterprise-scale via infrastructure-as-code, please see the question: [What if we don't want to deploy using the Azure Landing Zone Accelerator portal based experience, but want to deploy via infrastructure-as-code?](#what-if-we-cannot-deploy-using-the-azure-landing-zone-accelerator-portal-based-experience-but-can-deploy-via-infrastructure-as-code)
 
 ## What if we cannot deploy using the Azure Landing Zone Accelerator portal based experience, but can deploy via infrastructure-as-code?
 

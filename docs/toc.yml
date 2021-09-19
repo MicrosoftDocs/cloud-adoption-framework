@@ -335,7 +335,7 @@ items:
         - name: Scenario-specific enterprise-scale landing zones
           href: ready/enterprise-scale/scenario-specific-enterprise-scale-landing-zones.md
         - name: Enterprise-scale FAQ
-          href: ready/enterprise-scale/frequently-asked-questions.md
+          href: ready/enterprise-scale/faq.md
       - name: Start small and expand
         items:
         - name: CAF Migration landing zone blueprint
