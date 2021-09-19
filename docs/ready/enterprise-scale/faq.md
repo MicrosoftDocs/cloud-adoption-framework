@@ -192,6 +192,40 @@ A common challenge to this approach is that you may require some policies to app
 >[!NOTE]
 > We discussed this topic in our Enterprise-scale community call in August 2021. You can find the recording on [YouTube here.](https://youtu.be/Zx_gHevekm0?t=1954)
 
+## Why are we asked to specify Azure Regions during the Azure Landing Zone Accelerator deployment and what are they used for?
+
+When deploying Enterprise-scale using the Azure Landing Zone Accelerator portal based experience you will select an Azure region to deploy into on the first tab named "Deployment location" which determines where the deployment data is stored, as detailed further in [Tenant deployments with ARM templates](/azure/azure-resource-manager/templates/deploy-to-tenant#deployment-location-and-name). 
+
+As Management Groups, Policies and RBAC are all stored at either a tenant or Management Group level within Enterprise-scale, these resources are not "deployed" to a particular region, just the metadata regarding their deployment is stored in the Azure region selected on the "Deployment location" tab.
+
+The region selector on the "Deployment location" tab is also used to select which region the following resources are deployed to (if selected to be enabled):
+
+- Log Analytics Workspace (including selected solutions)
+- Automation Account
+- Resource Groups (for the above resources)
+
+Then, if you chose to deploy a networking topology on the "Network topology and connectivity" tab you will also be asked to select an Azure region, this time to decide where the networking resources will be deployed into. This can be different to the region selected on the "Deployment location" tab, if required. The networking resources to be deployed, depending on the topology selected, could be:
+
+- Azure Virtual WAN (including Virtual WAN Hub)
+- Azure Virtual Network
+- VPN Gateway
+- ExpressRoute Gateway
+- Azure Firewall
+- Azure DDoS Standard Protection Plan
+- Azure Private DNS Zones for Private Link
+- Resource Groups (for the above resources)
+
 ## How do we enable additional Azure Regions when using Enterprise-scale?
 
-Coming soon! In progress and will be added to this PR.
+Enterprise-scale itself is region agnostic. However, as detailed in the question [Why are we asked to specify Azure Regions during the Azure Landing Zone Accelerator deployment and what are they used for](#why-are-we-asked-to-specify-azure-regions-during-the-azure-landing-zone-accelerator-deployment-and-what-are-they-used-for) you are asked to specify Azure regions to deploy Enterprise-scale.
+
+We realise that you may wish to expand into or use additional Azure regions once you have completed the initial deployment of Enterprise-scale, for example to enable disaster recovery for your virtual machines using Azure Site Recovery to replicate them to a different Azure region. To achieve this within Enterprise-scale you should consider the following areas and recommendations:
+
+| Area | Recommendation |
+| ---- | -------------- |
+| Management Groups | Nothing to do here as Management Groups are not tied to a region. |
+| Azure Policy | Only required to make changes here if you have assigned policies to deny resource deployment to all regions by specifying a list of "allowed" Azure regions. These assignments will need updating to allow resource deployments to the new region you are wanting to enable. |
+| RBAC | Nothing to do here as RBAC is not tied to a region. |
+| Logging | Nothing to do here logs should continue to be sent to and stored in the central Log Analytics Workspace in the Management Subscription. As per the recommendations in the Enterprise-scale critical design area for [Management and monitoring](/azure/cloud-adoption-framework/ready/enterprise-scale/management-and-monitoring) |
+| Networking | If you have deployed a networking topology, [Virtual WAN](/azure/cloud-adoption-framework/ready/azure-best-practices/virtual-wan-network-topology) or [traditional Hub and Spoke](/azure/cloud-adoption-framework/ready/azure-best-practices/traditional-azure-networking-topology), then you should expand the networking to the new Azure region by deploying the required networking resources into the existing Connectivity Subscription in the new Azure region, to create an additional networking hub. From a DNS perspective you may wish to deploy forwarders, if used, into the new Azure region also; and use these for spoke VNETs in the new region for resolution. However, remember that Azure DNS Zones are global resources and not tied to a single Azure region, so nothing needs to be done to these. |
+| Identity | If you have deployed Active Directory Domain Services or Azure Active Directory Domain Services into your Identity Subscription/spoke, then it is advised you also expand the service into the new additional Azure region. |
