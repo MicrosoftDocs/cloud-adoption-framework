@@ -86,13 +86,13 @@ Private IP is recommended to minimize your Azure resources' exposure to the Inte
 | AML Load Balancer on AKS | Private Load Balancer | [Secure inferencing environments](/azure/machine-learning/how-to-secure-inferencing-vnet?tabs=python#secure-vnet-traffic) |
 | Container Instance | Private Endpoint | Cannot use a private endpoint with container instance if the Container Registry also uses a private endpoint. |
 
-## Control inbound and outbound of your virtual network for your workspace
+## Control VNet inbound and outbound traffic
 
-Use a firewall or Azure Network Security Group to minimize the inbound and outbound of your virtual network. For more information on inbound and outbound requirements, see [Configure inbound and outbound network traffic](/azure/machine-learning/how-to-access-azureml-behind-firewall?tabs=ipaddress). For more information on how traffic flows between components, see [Network traffic flow in a secured workspace](/azure/machine-learning/concept-secure-network-traffic-flow).
+Use a firewall or Azure Network Security Group to minimize the inbound and outbound traffic of your virtual network. For more information on inbound and outbound requirements, see [Configure inbound and outbound network traffic](/azure/machine-learning/how-to-access-azureml-behind-firewall?tabs=ipaddress). For more information on how traffic flows between components, see [Network traffic flow in a secured workspace](/azure/machine-learning/concept-secure-network-traffic-flow).
 
-## Ensure access to your virtual network and configure your dns server
+## Ensure access to your virtual network
 
-To access your Azure Machine Learning workspace with the private endpoint, use the following steps:
+To access your Azure Machine Learning workspace with a private endpoint, use the following steps:
 
 1. Make sure to have access to your virtual network using the VPN connection, ExpressRoute, and a Jumpbox VM with Bastion access. The public user cannot use the Azure Machine Learning workspace with the private endpoint because it can be accessed only from your virtual network. For more information, see [Secure your workspace with virtual networks](/azure/machine-learning/how-to-secure-workspace-vnet#securely-connect-to-your-workspace).
 
