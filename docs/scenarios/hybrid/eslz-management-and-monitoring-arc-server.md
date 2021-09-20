@@ -37,6 +37,6 @@ Here are some general design recommendations for Azure Arc monitoring and manage
 - Use Update management in Azure automation to automatically update the agent on windows arc-enabled servers via windows updates.
 - For Linux arc-enabled servers, review the connected machine agent [upgrade methods](https://docs.microsoft.com/en-us/azure/azure-arc/servers/manage-agent#upgrading-agent).
 
-Learn before you start:
+## Learn before you start:
 
 Check for [Azure Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/) scenarios that may help you with proof of concept and basic understanding.
