@@ -111,7 +111,7 @@ access management patterns:
 
 1. Self-service
 
-1. User-centric
+1. Data-centric
 
 1. Project-centric
 
@@ -127,7 +127,7 @@ In **self-service pattern**, data scientists can create and manage workspaces. T
 
     - When data scientists create compute resources, they can assign the managed identities to computes to gain data access.
 
-In **user-centric pattern**, the workspace belongs to single data scientists who may be working on multiple projects. The advantage of this approach is that the data scientist can reuse code or training pipelines across projects. As long as workspace is limited to single user, data access can be traced back to that user when auditing storage logs.
+In **data-centric pattern**, the workspace belongs to single data scientists who may be working on multiple projects. The advantage of this approach is that the data scientist can reuse code or training pipelines across projects. As long as workspace is limited to single user, data access can be traced back to that user when auditing storage logs.
 
 The disadvantage is that data access is not compartmentalized or restricted on per-project basis, as any added user to the workspace will have access to the same assets.
 
