@@ -94,11 +94,11 @@ Use a firewall or Azure Network Security Group to minimize the inbound and outbo
 
 ### Ensure access to your virtual network and configure your dns server
 
-T access your Azure Machine Learning workspace with the private endpoint, use the following steps:
+To access your Azure Machine Learning workspace with the private endpoint, use the following steps:
 
 1. Make sure to have access to your virtual network using the VPN connection, ExpressRoute, and a Jumpbox VM with Bastion access. The public user cannot use the Azure Machine Learning workspace with the private endpoint because it can be accessed only from your virtual network. For more information, see [Secure your workspace with virtual networks](/azure/machine-learning/how-to-secure-workspace-vnet#securely-connect-to-your-workspace).
 
-1. Make sure you can resolve the workspace FQDNs with your private IP. If you use your DNS server, you need to configure DNS forwarder. For more information, see [How to use your workspace with a custom DNS server](/azure/machine-learning/how-to-custom-dns).
+1. Make sure you can resolve the workspace FQDNs with your private IP. If you use your own DNS server or a [centralized DNS infrastructure](/azure/cloud-adoption-framework/ready/azure-best-practices/private-link-and-dns-integration-at-scale#private-link-and-dns-integration-in-hub-and-spoke-network-architectures), you need to configure DNS forwarder. For more information, see [How to use your workspace with a custom DNS server](/azure/machine-learning/how-to-custom-dns).
 
 ## Identity and access management
 
@@ -125,7 +125,8 @@ In **self-service pattern**, data scientists can create and manage workspaces. T
 
 - To access data storages, create user-assigned managed identities, and grant them read-access roles on the storage.
 
-    - When data scientists create compute resources, they can assign the managed identities to computes to gain data access.
+    - When data scientists create compute resources, they can assign the managed identities to the computes to gain data access.
+    - For best practices, see [Authentication for data management and analytics](/azure/cloud-adoption-framework/scenarios/data-management/secure-authentication).
 
 In **data-centric pattern**, the workspace belongs to single data scientists who may be working on multiple projects. The advantage of this approach is that the data scientist can reuse code or training pipelines across projects. As long as workspace is limited to single user, data access can be traced back to that user when auditing storage logs.
 
@@ -196,9 +197,12 @@ Azure Machine Learning has several default roles: owner, contributor, reader, an
 
 ### Managing Docker images centrally
 
-- Driven by what requirement?
+Azure Machine Learning provides curated Docker images that you can use for training and deployment purposes. However, your enterprise compliance requirements may mandate the use of images from a private repository that your company manages. With Azure Machine Learning, there are two ways that you can use a central repository:
 
-- How to enable Azure Machine Learning resources to use security-hardened Docker images from a central repository.
+- Use the images from a central repository as base images. The Azure Machine Learning environment management will install packages and create a Python environment where the training or inferencing code runs. With this approach, you can update package dependencies easily without having to modify the base image.
+- Use the images as-is, without using Azure Machine Learning environment management. This approach gives you a higher degree of control, but also requires you to carefully construct the Python environment as part of the image. All the dependencies needed to run the code must be met, and any new dependencies require re-building the image.
+
+For more information, see [Train a model using a custom Docker image](/azure/machine-learning/how-to-train-with-custom-image).
 
 ## Data security
 
@@ -218,19 +222,17 @@ We have two data sources to store your data.
 
 For information on how Azure Machine Learning encrypts data in transit, see [Data encryption with Azure Machine Learning](/azure/machine-learning/concept-data-encryption#encryption-in-transit).
 
-## Other security items
-
-### Monitoring
+## Monitoring
 
 Once Azure Machine Learning resources are deployed, it is important to set up logging and auditing controls for observability. Motivations for observability may be different based on who is looking at the data, and scenarios may include:
 
--  Machine learning practitioners or ops teams looking to **monitor machine learning pipeline health** to understand whether there are issues in scheduled execution, problems with data quality or expected training performance. You can build Azure dashboards using data that is [captured by Azure Machine Learning using Azure Monitor](/azure/machine-learning/monitor-azure-machine-learning) or [create event-driven workflows](/azure/machine-learning/how-to-use-event-grid).
+- Machine learning practitioners or ops teams looking to **monitor machine learning pipeline health** to understand whether there are issues in scheduled execution, problems with data quality or expected training performance. You can build Azure dashboards using data that is [captured by Azure Machine Learning using Azure Monitor](/azure/machine-learning/monitor-azure-machine-learning) or [create event-driven workflows](/azure/machine-learning/how-to-use-event-grid).
 
 - Capacity managers, machine learning practitioners, or ops teams may be interested in [creating a dashboard](/azure/machine-learning/monitor-azure-machine-learning) to observe compute and quota utilization. When managing a deployment with multiple Azure ML workspaces, consider creating a central dashboard to understand quota utilization. Since quotas are managed on a subscription-level, it is important to have the environment-wide view to drive optimization.
 
 - IT and Ops teams can set up [diagnostic logging](/azure/machine-learning/monitor-azure-machine-learning#collection-and-routing) to audit resource access and altering events within the workspace.
 
-- Consider creating dashboards that monitor overall infrastructure health for Azure Machine Learning, and also for dependent resources such as storage. For instance, by combining Azure storage metrics with machine learning pipeline execution failure, you may be able to optimize infrastructure configurations for better performance or increase your ability to root case problems.
+- Consider creating dashboards that monitor overall infrastructure health for Azure Machine Learning, and also for dependent resources such as storage. For example, by combining Azure storage metrics with machine learning pipeline execution failure, you may be able to optimize infrastructure configurations for better performance or increase your ability to root case problems.
 
 Platform metrics and the Activity log are collected and stored automatically but can be routed to other locations by using a diagnostic setting.
 
@@ -238,17 +240,7 @@ Platform metrics and the Activity log are collected and stored automatically but
 
 - Make use of Azure Policy to automatically set up diagnostic logging to this central log analytics workspace when a new machine learning workspace gets deployed.
 
-### Images and container registry
-
-We recommend onboarding of resources like ACR, Key Vault and any of the supported resources to Azure Security Center (ASC) for keeping track and flag of potential security vulnerabilities that your resources might be exposed to and recommend the corrective action.
-
-We recommend the following:
-
-1. Images eventually go obsolete and must to be updated. Have a good "Tagging" practice for your images. When you push a Docker image, make sure you tag it appropriately instead of tagging it "latest". Put "tagging" to use, to help discover. This will speed up at the time of action for easy discovery. for example, tag with details like "July2021buid". Tagging will help you identify the image when you have to take action later.
-
-2. To cover the scan of images, allowlisting of the source packages, not to use AML managed images/use their own images.
-
-### Policy
+## Policy
 
 You can enforce and audit the usage of different security features on workspaces through Azure Policy, including
 
@@ -258,25 +250,37 @@ You can enforce and audit the usage of different security features on workspaces
 
 - Enforce private DNS zones
 
-- Disable non-AAD authentication, such as ssh.
+- Disable non-AAD authentication, such as SSH
 
 For more information, see [Built-in policy definitions for Azure Machine Learning](/azure/machine-learning/policy-reference)
 
 Furthermore, you can use custom policy definitions to govern the security of your workspace in a flexible manner
 
-### Compute
+## Compute
 
-Ideas
+### Compute cluster/instance disk encryption
 
-- Use setup scripts
+The OS disk for a compute instance or each node in a compute cluster is stored in Azure Storage, and are encrypted with Microsoft-managed keys. Each node also has a local temporary disk. If the workspace was created with the `hbi_workspace = True` parameter, the temporary disk is also encrypted with Microsoft-managed keys. For more information, see [Data encryption with Azure Machine Learning](/azure/machine-learning/concept-data-encryption#encryption-at-rest).
 
-- Auto shutdown
+### Compute cluster managed identity
 
-- Disable SSH using built-in policy
+Compute clusters support using managed identities to authenticate to Azure resources. This allows authentication to resources without including credentials in your code. For more information, see [Create an Azure Machine Learning compute cluster](/azure/machine-learning/how-to-create-attach-compute-cluster#managed-identity).
 
-- Encryption and HBI flag
+### Compute instance setup script
 
-- Disable the root access (private preview)
+You can use a setup script to automate customization and configuration of a compute instance when it is created. As an administrator, you can write a customization script that is used when creating all compute instances in a workspace. You can use an Azure Policy to enforce that the setup script is ran for every compute instance during creation. For more information, see [Create and manage an Azure Machine Learning compute instance](/azure/machine-learning/how-to-create-manage-compute-instance#setup-script).
+
+### Compute instance create on behalf of
+
+If you don't want your Data Scientists to create compute resources, you can create a compute instance on their behalf and then assign it to them. For more information, see [Create and manage An Azure Machine Learning compute instance](/azure/machine-learning/how-to-create-manage-compute-instance#on-behalf).
+
+### Compute instance with a private endpoint enabled workspace
+
+When using a compute instance with a private endpoint enabled workspace, the compute instance rejects all public access from outside the VNet. This configuration also prevents packet filtering.
+
+### Azure Policy support
+
+You can use Azure Policy to ensure that every compute cluster/instance is created in a VNet, including specifying the default VNet and subnet. You can also use a policy to disable non-AAD authentication, such as SSH.
 
 ## Next steps
 
