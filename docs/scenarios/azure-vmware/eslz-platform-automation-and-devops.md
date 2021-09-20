@@ -16,7 +16,7 @@ The enterprise-scale landing zone uses a series of best practices for automation
 
 This solution is made up of two key parts. The first part is guidance around deployment and automation practices for Azure VMware Solution. The second part is a set of open-source artifacts that can be adapted to help with the deployment of your private cloud. While this solution aims to start an end-to-end automation journey, your organization can decide what components to deploy manually based on the considerations in this article.
 
-This article covers the following areas with a set of considerations and recommendations:
+This article covers considerations and recommendations in the following areas:
 
 - Deployment options for Azure VMware Solution, including manual and automated.
 - Automated scale considerations and implementation details.
@@ -109,7 +109,7 @@ An Azure VMware Solution private cloud can also use several different Azure nati
 
 **Considerations:**
 
-- Consider the deployment lifecycle of each component you plan to automate. Group components tightly bound by their lifecycle should be grouped together, allowing for deployment as a single unit. Separate components with different lifecycles.
+Consider the deployment lifecycle of each component you plan to automate. Group components tightly bound by their lifecycle should be grouped together, allowing for deployment as a single unit. Separate components with different lifecycles.
 
 ## Automation tooling
 
@@ -145,7 +145,7 @@ After you deploy your private cloud, you can deploy resources within the private
 
 ## VMware platform automation
 
-- Within an Azure VMware Solution private cloud, you might also choose to automate the creation of resources within vCenter and NSX-T manager. The following series of considerations are listed to help design VMware-level automation.
+Within an Azure VMware Solution private cloud, you might also choose to automate the creation of resources within vCenter and NSX-T manager. The following series of considerations are listed to help design VMware-level automation.
 
 ### vCenter automation – PowerCLI
 
