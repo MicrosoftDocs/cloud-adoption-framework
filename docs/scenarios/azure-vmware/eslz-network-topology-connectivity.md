@@ -235,7 +235,7 @@ You can implement this scenario with:
 - Application Gateway for L7 load balancing
 - L4 DNAT using Azure Firewall
 - Internet breakout on premises
-- ExpressRoute for connectivity between on-premises datacenters and Azure VMware Solution.
+- ExpressRoute for connectivity between on-premises datacenters and Azure VMware Solution
 
  [ ![Diagram of egress from Azure VMWare Solutions via on-premises.](media/eslz-net-scenario-4.png) ](media/eslz-net-scenario-4.png#lightbox)
 
@@ -349,9 +349,9 @@ Configure all necessary ports for an on-premises firewall to ensure proper acces
 
 ### Business Continuity and Disaster Recovery (BCDR) and migrations
 
-With VMware HCX Migrations, the default gateway remains on premises. For more information, see [Deploy and configure VMware HCX](/azure/azure-vmware/tutorial-deploy-vmware-hcx).
+- With VMware HCX Migrations, the default gateway remains on premises. For more information, see [Deploy and configure VMware HCX](/azure/azure-vmware/tutorial-deploy-vmware-hcx).
 
-VMware HCX Migration can use HCX L2 extension. Migrations that require Layer 2 extension require ExpressRoute. VPN isn't supported. Maximum transmission unit (MTU) size should be 1350 to accommodate the overhead of HCX. For more information about Layer-2 extension design, see [Layer 2 Bridging in Manager Mode (vmware.com)](https://docs.vmware.com/en/VMware-NSX-T-Data-Center/3.1/administration/GUID-7B21DF3D-C9DB-4C10-A32F-B16642266538.html).
+- VMware HCX Migration can use HCX L2 extension. Migrations that require Layer 2 extension require ExpressRoute. VPN isn't supported. Maximum transmission unit (MTU) size should be 1350 to accommodate the overhead of HCX. For more information about Layer-2 extension design, see [Layer 2 Bridging in Manager Mode (vmware.com)](https://docs.vmware.com/en/VMware-NSX-T-Data-Center/3.1/administration/GUID-7B21DF3D-C9DB-4C10-A32F-B16642266538.html).
 
 ## Next steps
 
