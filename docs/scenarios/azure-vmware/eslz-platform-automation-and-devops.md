@@ -168,7 +168,7 @@ Within an Azure VMware Solution private cloud, you might also choose to automate
 
 **Considerations:**
 
-- You can use [vSphere](https://registry.terraform.io/providers/vmware/nsxt/latest/docs) and [NSX-T](https://registry.terraform.io/providers/hashicorp/vsphere/latest/docs) providers for Terraform to deploy resources. These resources are deployed within the scope of the private cloud in a declarative fashion.
+- You can use [vSphere](https://registry.terraform.io/providers/hashicorp/vsphere/latest/docs) and [NSX-T](https://registry.terraform.io/providers/vmware/nsxt/latest/docs) providers for Terraform to deploy resources. These resources are deployed within the scope of the private cloud in a declarative fashion.
 - As Terraform needs to talk to the API endpoints within vCenter and NSX-T manager, it needs to have private connectivity to the private cloud management network. Consider deploying from an Azure Virtual Machine that can route to the private cloud.
 
 ### vRealize automation and vRealize operations
