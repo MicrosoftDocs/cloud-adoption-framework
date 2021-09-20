@@ -29,5 +29,5 @@ The following table provides links to the overview page for each of the adoption
 | <br> [Modern application platform](./aks/index.md) | <br> Enable rapid innovation and workload portability with Kubernetes and container integration. |
 | <br> [SAP](./sap/index.md) | <br> These level 300+ articles help central IT teams onboard assets to a unified operations solution using Azure Arc, ARM templates, and other relevant Azure products. |
 | <br> [Virtual desktops](./wvd/index.md) | <br> Integrate Azure Virtual Desktop (formerly Windows Virtual Desktop) into your cloud adoption journey. |
-| <br> [Retail industry](../retail/index.md) | <br> Retail industry cloud adoption components, common challenges, and supporting guidance. |
+| <br> [Retail industry](../industry/retail/index.md) | <br> Retail industry cloud adoption components, common challenges, and supporting guidance. |
 
