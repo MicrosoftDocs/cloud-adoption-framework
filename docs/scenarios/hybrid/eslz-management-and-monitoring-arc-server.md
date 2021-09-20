@@ -16,7 +16,7 @@ Azure Arc-enabled servers enables you to manage your Windows and Linux physical 
 
 ## Design considerations
 
-Here are some general design considerations for Azure Arc monitoring and management: 
+Here are some general design considerations for Azure Arc-enabled servers monitoring and management: 
 
 - Review the [supported list of operating systems](https://docs.microsoft.com/en-us/azure/azure-monitor/agents/agents-overview#supported-operating-systems) for the monitoring agents.
 - Review the [network requirements](https://docs.microsoft.com/en-us/azure/azure-monitor/agents/log-analytics-agent#network-requirements) for the agents to communicate with Azure Monitor.
