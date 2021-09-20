@@ -55,9 +55,9 @@ The following conceptual reference architecture is an example that shows a golde
 
 [![Enterprise-scale for AKS architecture](./media/aks-eslz-architecture.png)](./media/aks-eslz-architecture.png#lightbox)
 
-Enterprise-scale for AKS is an open-source collection of ARM, Bicep and Terraform templates, available in the [Enterprise Scale for AKS]([Azure/Enterprise-Scale-for-AKS: Enterprise Scale for AKS Reference Implementation Repo (github.com)](https://github.com/Azure/Enterprise-Scale-for-AKS) repo.
+Enterprise-scale for AKS is an open-source collection of ARM, Bicep and Terraform templates, available in the [Enterprise Scale for AKS](https://github.com/Azure/Enterprise-Scale-for-AKS) repo.
 
-These templates are used to deploy infrastructure components such as virtual machines, networks, or storage to Azure. To get the templates, see the  [Enterprise Scale for AKS]([Azure/Enterprise-Scale-for-AKS: Enterprise Scale for AKS Reference Implementation Repo (github.com)](https://github.com/Azure/Enterprise-Scale-for-AKS)) repo. There, you will find various scenarios to help get you started on setting up your AKS environment quickly. Conceptually, this workload should sit in the landing zones management group of an enterprise-scale platform foundation as indicated in the image above. 
+These templates are used to deploy infrastructure components such as virtual machines, networks, or storage to Azure. To get the templates, see the  [Enterprise Scale for AKS](https://github.com/Azure/Enterprise-Scale-for-AKS) repo. There, you will find various scenarios to help get you started on setting up your AKS environment quickly. Conceptually, this workload should sit in the landing zones management group of an enterprise-scale platform foundation as indicated in the image above. 
 
 ## Next steps
 
