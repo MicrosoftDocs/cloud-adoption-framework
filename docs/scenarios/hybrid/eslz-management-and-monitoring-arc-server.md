@@ -34,7 +34,7 @@ Here are some general design recommendations for Azure Arc monitoring and manage
 - Configure the logs that need to be collected for the arc-enabled Windows and Linux VMs on the dedicated log analytics workspace.
 - Create a [resource health alert](https://docs.microsoft.com/en-us/azure/azure-arc/servers/plan-at-scale-deployment#phase-3-manage-and-operate) to monitor servers not sending heartbeats.
 - Create an [Azure Advisor alert](https://docs.microsoft.com/en-us/azure/azure-arc/servers/plan-at-scale-deployment#phase-3-manage-and-operate) to identify arc-enabled servers that are not using the latest version of the connected machine agent. 
-- Use Update management in Azure automation to automatically update the agent on windows arc-enabled servers via windows updates.
+- Use Update management in Azure automation to automatically upgrade the agent on Windows arc-enabled servers via Windows updates.
 - For Linux arc-enabled servers, review the connected machine agent [upgrade methods](https://docs.microsoft.com/en-us/azure/azure-arc/servers/manage-agent#upgrading-agent).
 
 ## Learn before you start:
