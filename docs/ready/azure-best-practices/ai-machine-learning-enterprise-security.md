@@ -22,9 +22,7 @@ Each best practice explains:
 
 - Reference documentation to learn how to enable the best practice
 
-## Network security
-
-### Recommended network security architecture
+## Recommended network security architecture
 
 The recommended network security architecture for Azure Machine Learning is to create a virtual network (VNet) with the following subnets:
 
@@ -51,7 +49,7 @@ Remote clients connect to the VNet using either Azure ExpressRoute or a VPN conn
 
 :::image type="content" source="./media/azure-ml-recommended-secure-network-architecture.png" alt-text="A diagram of the recommended secure architecture":::
 
-### Virtual network and private endpoint design
+## Virtual network and private endpoint design
 
 Consider the following items:
 
@@ -68,7 +66,7 @@ Consider the following items:
 
 If you plan to have multiple workspaces, we recommend creating a virtual network for each workspace to have the explicit network boundary between workspaces.
 
-### Adopt private IP everywhere
+## Adopt private IP everywhere
 
 Private IP is recommended to minimize your Azure resources' exposure to the Internet. Azure Machine Learning uses multiple Azure resources, and the private endpoint for Azure Machine Learning is not enough for end-to-end private IP. Below is the list of major resources and enable private IP with all resources. Compute instance and compute cluster are the only resources that do not have the private IP feature.
 
@@ -88,11 +86,11 @@ Private IP is recommended to minimize your Azure resources' exposure to the Inte
 | AML Load Balancer on AKS | Private Load Balancer | [Secure inferencing environments](/azure/machine-learning/how-to-secure-inferencing-vnet?tabs=python#secure-vnet-traffic) |
 | Container Instance | Private Endpoint | Cannot use a private endpoint with container instance if the Container Registry also uses a private endpoint. |
 
-### Control inbound and outbound of your virtual network for your workspace
+## Control inbound and outbound of your virtual network for your workspace
 
 Use a firewall or Azure Network Security Group to minimize the inbound and outbound of your virtual network. For more information on inbound and outbound requirements, see [Configure inbound and outbound network traffic](/azure/machine-learning/how-to-access-azureml-behind-firewall?tabs=ipaddress). For more information on how traffic flows between components, see [Network traffic flow in a secured workspace](/azure/machine-learning/concept-secure-network-traffic-flow).
 
-### Ensure access to your virtual network and configure your dns server
+## Ensure access to your virtual network and configure your dns server
 
 To access your Azure Machine Learning workspace with the private endpoint, use the following steps:
 
@@ -204,9 +202,7 @@ Azure Machine Learning provides curated Docker images that you can use for train
 
 For more information, see [Train a model using a custom Docker image](/azure/machine-learning/how-to-train-with-custom-image).
 
-## Data security
-
-### Encryption at rest
+## Encryption at rest
 
 We have two data sources to store your data.
 
@@ -218,7 +214,7 @@ We have two data sources to store your data.
 
     - If you want to encrypt your metadata by your key, use customer-managed-key workspace. Downside is you need to have an Azure Cosmos DB in your subscription and pay its cost. For more information, see [Data encryption with Azure Machine Learning](/azure/machine-learning/concept-data-encryption#azure-cosmos-db).
 
-### Encryption in transit
+## Encryption in transit
 
 For information on how Azure Machine Learning encrypts data in transit, see [Data encryption with Azure Machine Learning](/azure/machine-learning/concept-data-encryption#encryption-in-transit).
 
@@ -256,7 +252,7 @@ For more information, see [Built-in policy definitions for Azure Machine Learnin
 
 Furthermore, you can use custom policy definitions to govern the security of your workspace in a flexible manner
 
-## Compute
+## Compute cluster and instance
 
 ### Compute cluster/instance disk encryption
 
