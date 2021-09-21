@@ -120,9 +120,9 @@ Consider implementing the following recommendations when planning for environmen
 
 Security posture awareness for Azure VMware Solution guest VMs helps you understand cybersecurity readiness and response and provide complete security coverage for guest VMs and applications.
 
-- Enable [Azure Defender](/azure/security-center/azure-defender) in Azure Security Center for running Azure services and Azure VMware Solution guest VM workloads.
+- **Enable [Azure Defender](/azure/security-center/azure-defender)** in Azure Security Center for running Azure services and Azure VMware Solution guest VM workloads.
 
-- Use [Azure Arc-enabled servers](/azure/azure-arc/servers/overview) to manage Azure VMware Solution guest VMs with tools that replicate Azure native resource tooling, including:
+- **Use [Azure Arc-enabled servers](/azure/azure-arc/servers/overview)** to manage Azure VMware Solution guest VMs with tools that replicate Azure native resource tooling, including:
   
   - Azure Policy to govern, report, and audit guest configurations and settings
   - Azure Automation state configuration and supported extensions to simplify deployments
