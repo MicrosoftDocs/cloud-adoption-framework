@@ -6,7 +6,7 @@ ms.author: zeinam
 ms.date: 05/21/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.custom: think-tank, e2e-data
 ---
 
 # Azure Purview deployment best practices for data management and analytics

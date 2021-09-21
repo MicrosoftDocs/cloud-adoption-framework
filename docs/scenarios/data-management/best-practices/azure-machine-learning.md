@@ -6,7 +6,7 @@ ms.author: deeikele
 ms.date: 09/22/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.custom: think-tank, e2e-data
 ---
 
 # Azure Machine Learning as a data product for enterprise-scale for analytics and AI
@@ -19,7 +19,7 @@ Azure Machine Learning is an integrated platform for managing the machine learni
 
 - Managed inference capabilities and robust integration with Azure compute and data services can help to simplify how the service is consumed.
 
-Azure Machine Learning, the Azure platform, and Azure AI services can work together to manage the machine learning life cycle. A machine learning practitioner can use Azure Synapse Analytics, Azure SQL, or Microsoft Power BI to start analyzing data and transition to Azure Machine Learning for prototyping, managing experimentation, and operationalization. In enterprise-scale landing zones, Azure Machine Learning can be considered a [data product](../architectures/data-landing-zone-data-products.md).
+Azure Machine Learning, the Azure platform, and Azure AI services can work together to manage the machine learning life cycle. A machine learning practitioner can use Azure Synapse Analytics, Azure SQL, or Microsoft Power BI to start analyzing data and transition to Azure Machine Learning for prototyping, managing experimentation, and operationalization. In enterprise-scale landing zones, Azure Machine Learning can be considered a [data product](./architectures/data-landing-zone-data-products.md).
 
 ## Azure Machine Learning in enterprise-scale
 
@@ -60,15 +60,10 @@ You can deploy the number of machine learning workspaces that your workloads req
 For each default resource configuration in an enterprise-scale data landing zone, an Azure Machine Learning service is deployed in a dedicated resource group with the following configurations and dependent resources:
 
 - Azure Key Vault
-
 - Application Insights
-
 - Azure Container Registry
-
 - Use Azure Machine Learning to connect to an Azure Storage account and Azure Active Directory (Azure AD) identity-based authentication to help users connect to the account.
-
 - Diagnostic logging is set up for each workspace and configured to a central log analytics resource in enterprise-scale; this can help Azure Machine Learning job health and resource statuses to be analyzed centrally within and across landing zones.
-
 - See [What is an Azure Machine Learning workspace?](/azure/machine-learning/concept-workspace) to learn more about Azure Machine Learning resources and dependencies.
 
 ### Integration with data landing zone core services
@@ -97,7 +92,7 @@ Consider the following recommendations for managing user identities and access w
 
 - Use Azure AD groups to manage user permissions for storage and machine learning resources.
 
-- Azure Machine Learning can use [user-assigned managed identities for access control](/azure/machine-learning/how-to-use-managed-identities?tabs=python) to limit the range of access to Azure Container Registry, Key Vault, Storage, and Application Insights.
+- Azure Machine Learning can use [user-assigned managed identities for access control](/azure/machine-learning/how-to-use-managed-identities?tabs=python) and limit the range of access to Azure Container Registry, Key Vault, Storage, and Application Insights.
 
 - Create user-assigned managed identities to managed compute clusters created in Azure Machine Learning.
 
@@ -150,4 +145,3 @@ See the following CAF documentation to learn more about Azure Machine Learning d
 ## Next steps
 
 [SAP ingestion with enterprise-scale for analytics and AI in Azure](./sap-data-ingestion.md)
-
