@@ -67,11 +67,11 @@ By separating the customer data and the sales transaction data in their own data
 
 For example, the team that has expertise with the CRM system will be responsible for the customer data integration. Based on the team's skillset and the technologies used by the CRM system, they'll decide which tools best suit their needs. They won't have to worry if these decisions will also work for the sales transactions team. That team will be using their own toolset and won't have to compromise to meet the requirements of the customers team.
 
-### Why move just the sales team to the new data platform?
+### Why move the sales team to the new data platform?
 
 In this example, the corporate sales team is the first to move to the new enterprise-scale for analytics and AI platform. The solution is designed to be scalable above all else. As other business units are ready to migrate, more landing zones can be added to accommodate their workloads.
 
-## How to evolve later
+## How to evolve in the future
 
 Scaling is accomplished by adding more landing zones to the architecture. These landing zones will use VNet peering to connect to the data management zone and all of the other landing zones. This mesh pattern allows datasets and resources to be shared across zones. By splitting into different zones, the workloads are spread across Azure subscriptions and resources. This allows enterprises to avoid reaching the limits of the Azure services and continuing to grow their data estates.
 

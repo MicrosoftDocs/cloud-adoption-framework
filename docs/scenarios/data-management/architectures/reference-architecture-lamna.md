@@ -3,7 +3,7 @@ title: Lamna Healthcare scenario for data management and analytics in Azure
 description: Learn about the Lamna Healthcare scenario for data management and analytics in Azure.
 author: AnalyticJeremy
 ms.author: jepeach
-ms.date: 09/20/2021
+ms.date: 09/21/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.custom: think-tank, e2e-data

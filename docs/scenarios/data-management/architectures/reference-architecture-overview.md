@@ -14,7 +14,7 @@ ms.custom: think-tank, e2e-data
 The Cloud Adoption Framework for data management and analytics is designed to be modular. It allows customers to start with a small footprint and grow over time. Customers should decide ahead how to organize data domains across data landing zones. The building blocks can be deployed through the Azure portal, GitHub Actions workflows, and Azure Pipelines. The template repositories for the data management landing zone, data landing zone, and data integrations/products contain sample YAML pipelines to help you get started faster with setting up your environments.
 
 > [!NOTE]
-> The template repositories can be used to deploy the reference architectures listed in this article. Links to the relevant repositories are provided in the detailed description of each architecture.
+> The template repositories can be used to deploy the reference architectures listed in this article. Links to these repositories are provided in the detailed description of each architecture.
 
 ## Reference architectures examples
 

@@ -23,7 +23,7 @@ Although Relecloud provides compute resources of their own, they don't want to c
 
 Today, the billing group has outgrown its current analytics solution. The volume of invoices they must analyze has become too large for their on-premises server. They have decided to follow the lead of the operations group and modernize their platform in Azure.
 
-However, analysts in the billing group have a different set of skills than the analysts in the operations group. The billing analysts don't want to be constrained to use the same tools chosen by operations. The billing group is also in a different part of the organization, and they want to the flexibility to implement the policies and procedures that meet their needs.
+However, analysts in the billing group have different skills than the analysts in the operations group. The billing analysts don't want to be constrained to use the same tools chosen by operations. The billing group is also in a different part of the organization, and they want the flexibility to implement the policies and procedures that meet their needs.
 
 ## Architectural solution
 
@@ -73,11 +73,11 @@ Like with data integrations, the data product will also rely on a shared Azure S
 
 :::image type="content" source="../images/relecloud.png" alt-text="Diagram of architecture." lightbox="../images/relecloud.png":::
 
-*Figure 1: Diagram of architecture. Not all Azure services are represented in the diagram. It has been simplified to hilight the core concepts of how resources are organized within the architecture.*
+*Figure 1: Diagram of architecture. Not all Azure services are represented in the diagram. It has been simplified to highlight the core concepts of how resources are organized within the architecture.*
 
 ## Deployment guidelines
 
-The customer scenario outlined above can be deployed by referencing the following architectures for the Relecloud data management zanding zone and data landing zone:
+The customer scenario outlined above can be deployed by referencing the following architectures for the Relecloud data management landing zone and data landing zone:
 
 ### Data management landing zone deployment
 
