@@ -448,6 +448,8 @@ items:
         items:
         - name: Organize and set up Azure Machine Learning environments
           href: ready/azure-best-practices/ai-machine-learning-resource-organization.md
+        - name: Best practices for enterprise security
+          href: ready/azure-best-practices/ai-machine-learning-enterprise-security.md
         - name: Budget, cost, and quota management with Azure Machine Learning
           href: ready/azure-best-practices/optimize-ai-machine-learning-cost.md
         - name: Machine learning DevOps (MLOps)
