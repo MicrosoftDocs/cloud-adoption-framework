@@ -131,4 +131,4 @@ The following purposes apply to each folder in the repository:
 
 ## Next steps
 
-[Azure Machine Learning as a data product for enterprise-scale for analytics and AI](./azure-machine-learning.md)
+[Enterprise-scale for analytics and AI data products in Azure](./data-landing-zone-data-products.md)

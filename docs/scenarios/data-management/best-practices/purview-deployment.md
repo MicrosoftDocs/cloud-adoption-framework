@@ -204,8 +204,8 @@ Review the following list of personas involved in an enterprise-scale for analyt
 | Data scientists | Use your preferred tools and machine learning frameworks to build scalable data science solutions. Accelerate end-to-end machine learning life cycle.|Purview Data Source Administrator and data curator |
 | Machine learning engineers | Enable right processes and infrastructure for easy model deployment and model management. |Purview Data Source Administrator and data curator    |
 
-For more information about data personas, see [Personas and teams](../organize-persona-and-teams.md#personas).
+For more information about data personas, see [personas and teams](../organize-persona-and-teams.md#personas).
 
 ## Next steps
 
-[The ingest process with enterprise-scale for analytics and AI in Azure](./data-ingestion.md)
+[Azure Machine Learning as a data product for enterprise-scale for analytics and AI](./azure-machine-learning.md)
