@@ -63,7 +63,7 @@ To meet this need, the marketing team creates aggregated datasets from the token
 
 :::image type="content" source="../images/lamna.png" alt-text="Diagram of architecture." lightbox="../images/lamna.png":::
 
-*Figure 1: Diagram of architecture. Not all Azure services are represented in the diagram. It has been simplified to hilight the core concepts of how resources are organized within the architecture.*
+*Figure 1: Diagram of architecture. Not all Azure services are represented in the diagram. It has been simplified to highlight the core concepts of how resources are organized within the architecture.*
 
 ## Rationale
 

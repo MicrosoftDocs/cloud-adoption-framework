@@ -51,7 +51,7 @@ In this example, Adatum has one data product. This product combines raw data fro
 
 :::image type="content" source="../images/adatum.png" alt-text="Diagram of architecture." lightbox="../images/adatum.png":::
 
-*Figure 1: Diagram of architecture. Not all Azure services are represented in the diagram above. It has been simplified to hilight the core concepts of how resources are organized within the architecture.*
+*Figure 1: Diagram of architecture. Not all Azure services are represented in the diagram above. It has been simplified to highlight the core concepts of how resources are organized within the architecture.*
 
 ## Rationale
 
@@ -73,7 +73,7 @@ In this example, the corporate sales team is the first to move to the new enterp
 
 ## How to evolve in the future
 
-Scaling is accomplished by adding more landing zones to the architecture. These landing zones will use VNet peering to connect to the data management zone and all of the other landing zones. This mesh pattern allows datasets and resources to be shared across zones. By splitting into different zones, the workloads are spread across Azure subscriptions and resources. This allows enterprises to avoid reaching the limits of the Azure services and continuing to grow their data estates.
+Scaling is accomplished by adding more landing zones to the architecture. These landing zones will use VNet peering to connect to the data management zone and all of the other landing zones. This mesh pattern allows datasets and resources to be shared across zones. By splitting into different zones, the workloads are spread across Azure subscriptions and resources. This allows enterprises to avoid reaching the limits of the Azure services and continue to grow their data estates.
 
 ## Deployment guidelines
 
