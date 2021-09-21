@@ -150,7 +150,7 @@ items:
           href: ./best-practices/sap-data-ingestion.md
         - name: Automated ingestion pattern
           href: ./best-practices/automated-ingestion-pattern.md
-      - name: Data Science Best Practices
+      - name: Data science best practices
         href: best-practices/data-science-best-practices.md
 
   - name: Featured Azure products
