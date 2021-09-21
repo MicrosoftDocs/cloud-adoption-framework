@@ -140,7 +140,7 @@ items:
           href: ./best-practices/purview-checklist.md
         - name: Deployment best practices
           href: ./best-practices/purview-deployment.md
-      - name: Azure Machine Learning Implementation
+      - name: Azure Machine Learning implementation
         href: best-practices/azure-machine-learning.md
       - name: Data landing zone ingestion
         items:
