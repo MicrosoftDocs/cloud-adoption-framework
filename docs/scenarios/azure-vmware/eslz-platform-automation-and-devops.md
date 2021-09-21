@@ -185,7 +185,7 @@ Within individual workloads on Azure VMware Solution, you can choose to set up a
 
 ## Next steps
 
-Now that you've read through the design areas, learn about your implementation options for Azure VMware Solutions in an enterprise-scale scenario.
+Now that you've read through the design areas, learn about the architectural approach and implementation for Azure VMware Solutions in an enterprise-scale scenario.
 
 > [!div class="nextstepaction"]
-> [Implementation options for Azure VMware Solution](enterprise-scale-landing-zone.md)
+> [Enterprise-scale for Azure VMware Solution](enterprise-scale-landing-zone.md)
