@@ -32,7 +32,15 @@ items:
       - name: Identity and access management
         href: ./eslz-identity-and-access-management.md
       - name: Network topology and connectivity
-        href: ./eslz-network-topology-and-connectivity.md
+        items:
+        - name: Overview
+          href: ./eslz-network-topology-and-connectivity.md
+        - name: Network Architecture
+          href: ./eslz-network-architecture.md
+        - name: Connect to environments privately
+          href: ./eslz-connect-to-environments-privately.md
+        - name: Cross tenant private endpoint provisioning
+          href: ./eslz-limiting-cross-tenant-private-endpoint-provisioning.md    
       - name: Resource organization
         href: ./eslz-resource-organization.md
       - name: Governance disciplines
@@ -108,6 +116,10 @@ items:
         href: ./architectures/data-landing-zone-data-products.md
     - name: Deployment templates
       href: ./eslz-deployment-templates.md
+    - name: Costing for Deployment templates
+      href: ./architectures/cost-estimates.md
+    - name: Policies
+      href: ./architectures/policies.md
 
     - name: Frequently asked questions
       href: ./architectures/frequently-asked-questions.md

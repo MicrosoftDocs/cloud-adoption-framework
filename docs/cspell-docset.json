@@ -2,15 +2,19 @@
   "version": "0.1",
   "language": "en",
   "words": [
-      "deprioritize",
-      "financials",
-      "inexhaustive",
-      "offboarding",
-      "passwordless",
-      "personalizer",
-      "preintegration",
-      "reauthenticate",
-      "replatform"
+    "deprioritize",
+    "financials",
+    "inexhaustive",
+    "offboarding",
+    "passwordless",
+    "personalizer",
+    "preintegration",
+    "reauthenticate",
+    "replatform",
+    "SHIR",
+    "SKU's",
+    "subscopes",
+    "VMSS"
   ],
   "ignoreRegExpList": [
     "\\b(acr|admin|aks|app|arc|azure|cloud|cloudwitness|config|contoso|data|db|demo|dev|devops|dc|east|europe|file|host|linux|migration|moodle|my|name|osticket|pass|petchecker|pets|resourcegroup|server|settings|smarthotel|sql|tfs|tfvars|url|us|user|vagrant|vm|web|west|winsrv){1,3}((eus)?\\d*\\b)",
@@ -18,21 +22,20 @@
     "/(whitepapers?|azureml)\b"
   ],
   "ignoreWords": [
-      "arnaud",
-      "bpchar",
-      "byteint",
-      "ccoe",
-      "customscript",
-      "dataslice",
-      "eslz",
-      "hostnamectl",
-      "phpinfo",
-      "phpver",
-      "timespan",
-      "timetz",
-      "transactionid",
-      "wget"
+    "arnaud",
+    "bpchar",
+    "byteint",
+    "ccoe",
+    "customscript",
+    "dataslice",
+    "eslz",
+    "hostnamectl",
+    "phpinfo",
+    "phpver",
+    "timespan",
+    "timetz",
+    "transactionid",
+    "wget"
   ],
-  "flagWords": [
-  ]
+  "flagWords": []
 }

@@ -9,5 +9,8 @@
         "**/.git/objects/**",
         ".vscode",
         "**/cspell*.json"
+    ],
+    "cSpell.words": [
+        "Ipfilterrules"
     ]
 }
