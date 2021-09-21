@@ -68,7 +68,7 @@ If you plan to have multiple workspaces, we recommend creating a virtual network
 
 ## Adopt private IP everywhere
 
-Private IP is recommended to minimize your Azure resources' exposure to the Internet. Azure Machine Learning uses multiple Azure resources, and the private endpoint for Azure Machine Learning is not enough for end-to-end private IP. Below is the list of major resources and enable private IP with all resources. Compute instance and compute cluster are the only resources that do not have the private IP feature.
+Private IP is recommended to minimize your Azure resources' exposure to the Internet. Azure Machine Learning uses multiple Azure resources, and the private endpoint for Azure Machine Learning workspace is not enough for end-to-end private IP. Below is the list of major resources and enable private IP with all resources. Compute instance and compute cluster are the only resources that do not have the private IP feature.
 
 | Resources | Solutions to enable Private IP | Documentation |
 | ----- | ----- | ----- |
@@ -98,13 +98,9 @@ To access your Azure Machine Learning workspace with a private endpoint, use the
 
 1. Make sure you can resolve the workspace FQDNs with your private IP. If you use your own DNS server or a [centralized DNS infrastructure](/azure/cloud-adoption-framework/ready/azure-best-practices/private-link-and-dns-integration-at-scale#private-link-and-dns-integration-in-hub-and-spoke-network-architectures), you need to configure DNS forwarder. For more information, see [How to use your workspace with a custom DNS server](/azure/machine-learning/how-to-custom-dns).
 
-## Identity and access management
+## Workspace access management architectures and patterns
 
-When defining identity and access management controls for Azure Machine Learning, you can distinguish between controls that define access to Azure resources, and controls that manage access to data assets. In this section, we discuss common access management architectures and patterns when using Azure Machine Learning.
-
-### Workspace access management architectures and patterns
-
-Depending on your use case, consider one of the following identity and
+When defining identity and access management controls for Azure Machine Learning, you can distinguish between controls that define access to Azure resources, and controls that manage access to data assets. Depending on your use case, consider one of the following identity and
 access management patterns:
 
 1. Self-service
@@ -169,7 +165,7 @@ The disadvantage of this approach is that sharing assets across projects can be 
 
     - Optionally, to simplify project membership management, you can create an AAD security group for project members and grant the group access to workspace.
 
-### Use Azure Data Lake Store Gen2 with credential pass-through access
+## Use Azure Data Lake Store Gen2 with credential pass-through access
 
 Currently, you can use user AAD identity to for interactive storage access from Azure ML Studio. With Azure Data Lake Store (ADLS) Gen 2 with hierarchical namespace enabled, you can compartmentalize data access by giving different users ACL-based access to different folders and files. For example, you can grant access to confidential data to only a subset of users.
 
@@ -177,23 +173,17 @@ Credential pass-through support for ADLS Gen2 storage and blob storage for remot
 
 ADLS Gen2 with hierarchical namespace enabled will be supported as default storage for the workspace later this fall, allowing for enhanced organization of data assets on storage and collaboration.
 
-### Use role-based access control and custom roles
+## Use role-based access control and custom roles
 
-- Why create multiple roles?
+Azure Role-Based Access Control (Azure RBAC) helps you manage who has access to machine learning resources, and configure who can perform operations. For example, you may want to allow only specific users to manage compute resources (workspace administrator role).
 
-- Assign role to Azure AD group?
+The scope of access can differ per environment. In a production environment, you may want to limit the ability of users to update inference endpoints. Instead, that permission might be granted to an authorized service principal.
 
-- Azure RBAC for service principals
+Azure Machine Learning has several default roles: owner, contributor, reader, and data scientist. You can also create your own custom roles. For example, to create permissions that follow your own organizational structure. For more information, see [Manage access to Azure Machine Learning workspace](/azure/machine-learning/how-to-assign-roles#example-custom-roles).
 
-    - Triggering machine learning pipelines from another solution component like Azure Data Factory.
+Over time, the composition of your team may change. You might find it useful to create an Azure AD group for each team role and workspace. In this way, you can manage resource access and assign an Azure RBAC role to the Azure AD group while managing user groups separately. User principal and service principals may be part of the same Azure AD group. For example, when you create a user-assigned managed identity that is used in Azure Data Factory to trigger a pipeline in Azure Machine Learning, you might include this managed identity in a "ML pipelines executor" Azure AD group.
 
-    - Advised set and scope of Azure RBAC permissions for workspace and compute resources.
-
-- Tailor-make built-in roles to custom roles that work for you
-
-Azure Machine Learning has several default roles: owner, contributor, reader, and data scientist. However, we recommend creating more granular customer roles. For more information, see [Manage access to a workspace](/azure/machine-learning/how-to-assign-roles#example-custom-roles).
-
-### Managing Docker images centrally
+## Managing Docker images centrally
 
 Azure Machine Learning provides curated Docker images that you can use for training and deployment purposes. However, your enterprise compliance requirements may mandate the use of images from a private repository that your company manages. With Azure Machine Learning, there are two ways that you can use a central repository:
 
