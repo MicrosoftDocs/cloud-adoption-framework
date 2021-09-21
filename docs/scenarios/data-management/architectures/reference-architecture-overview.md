@@ -3,10 +3,10 @@ title: Overview of reference architectures for data management and analytics in 
 description: Understand various reference architectures for data management and analytics in Azure.
 author: AnalyticJeremy
 ms.author: jepeach
-ms.date: 09/20/2021
+ms.date: 09/21/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.custom: think-tank, e2e-data
 ---
 
 # Overview of reference architectures for data management and analytics in Azure

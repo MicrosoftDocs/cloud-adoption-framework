@@ -6,7 +6,7 @@ ms.author: jepeach
 ms.date: 09/20/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.custom: think-tank, e2e-data
 ---
 
 # Lamna Healthcare scenario for data management and analytics in Azure
