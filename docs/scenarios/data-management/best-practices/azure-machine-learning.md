@@ -19,7 +19,7 @@ Azure Machine Learning is an integrated platform for managing the machine learni
 
 - Managed inference capabilities and robust integration with Azure compute and data services can help to simplify how the service is consumed.
 
-Azure Machine Learning, the Azure platform, and Azure AI services can work together to manage the machine learning life cycle. A machine learning practitioner can use Azure Synapse Analytics, Azure SQL, or Microsoft Power BI to start analyzing data and transition to Azure Machine Learning for prototyping, managing experimentation, and operationalization. In enterprise-scale landing zones, Azure Machine Learning can be considered a [data product](./architectures/data-landing-zone-data-products.md).
+Azure Machine Learning, the Azure platform, and Azure AI services can work together to manage the machine learning life cycle. A machine learning practitioner can use Azure Synapse Analytics, Azure SQL, or Microsoft Power BI to start analyzing data and transition to Azure Machine Learning for prototyping, managing experimentation, and operationalization. In enterprise-scale landing zones, Azure Machine Learning can be considered a [data product](/architectures/data-landing-zone-data-products.md).
 
 ## Azure Machine Learning in enterprise-scale
 
