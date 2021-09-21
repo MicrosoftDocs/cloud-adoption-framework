@@ -3,7 +3,7 @@ title: Machine learning enterprise security
 description: This article provides best practices when planning or managing a secure Azure Machine Learning deployment.
 author: jhirono
 ms.author: jhirono
-ms.date: 09/15/2021
+ms.date: 09/21/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -188,7 +188,7 @@ Over time, the composition of your team may change. You might find it useful to 
 Azure Machine Learning provides curated Docker images that you can use for training and deployment purposes. However, your enterprise compliance requirements may mandate the use of images from a private repository that your company manages. With Azure Machine Learning, there are two ways that you can use a central repository:
 
 - Use the images from a central repository as base images. The Azure Machine Learning environment management will install packages and create a Python environment where the training or inferencing code runs. With this approach, you can update package dependencies easily without having to modify the base image.
-- Use the images as-is, without using Azure Machine Learning environment management. This approach gives you a higher degree of control, but also requires you to carefully construct the Python environment as part of the image. All the dependencies needed to run the code must be met, and any new dependencies require re-building the image.
+- Use the images as-is, without using Azure Machine Learning environment management. This approach gives you a higher degree of control, but also requires you to carefully construct the Python environment as part of the image. All the dependencies needed to run the code must be met, and any new dependencies require rebuilding the image.
 
 For more information, see [Train a model using a custom Docker image](/azure/machine-learning/how-to-train-with-custom-image).
 
@@ -250,15 +250,15 @@ The OS disk for a compute instance or each node in a compute cluster is stored i
 
 ### Compute cluster managed identity
 
-Compute clusters support using managed identities to authenticate to Azure resources. This allows authentication to resources without including credentials in your code. For more information, see [Create an Azure Machine Learning compute cluster](/azure/machine-learning/how-to-create-attach-compute-cluster#managed-identity).
+Compute clusters support using managed identities to authenticate to Azure resources. Using a managed identity for the cluster allows authentication to resources without including credentials in your code. For more information, see [Create an Azure Machine Learning compute cluster](/azure/machine-learning/how-to-create-attach-compute-cluster#managed-identity).
 
 ### Compute instance setup script
 
-You can use a setup script to automate customization and configuration of a compute instance when it is created. As an administrator, you can write a customization script that is used when creating all compute instances in a workspace. You can use an Azure Policy to enforce that the setup script is ran for every compute instance during creation. For more information, see [Create and manage an Azure Machine Learning compute instance](/azure/machine-learning/how-to-create-manage-compute-instance#setup-script).
+You can use a setup script to automate customization and configuration of a compute instance when it is created. As an administrator, you can write a customization script that is used when creating all compute instances in a workspace. You can use an Azure Policy to enforce that the setup script is used for every compute instance during creation. For more information, see [Create and manage an Azure Machine Learning compute instance](/azure/machine-learning/how-to-create-manage-compute-instance#setup-script).
 
 ### Compute instance create on behalf of
 
-If you don't want your Data Scientists to create compute resources, you can create a compute instance on their behalf and then assign it to them. For more information, see [Create and manage An Azure Machine Learning compute instance](/azure/machine-learning/how-to-create-manage-compute-instance#on-behalf).
+If you don't want your Data Scientists to provision compute resources, you can create a compute instance on their behalf and then assign it to them. For more information, see [Create and manage An Azure Machine Learning compute instance](/azure/machine-learning/how-to-create-manage-compute-instance#on-behalf).
 
 ### Compute instance with a private endpoint enabled workspace
 
