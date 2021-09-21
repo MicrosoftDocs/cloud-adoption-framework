@@ -68,7 +68,7 @@ For each default resource configuration in an enterprise-scale data landing zone
 
 ### Integration with data landing zone core services
 
-The enterprise-scale data landing zone comes with a default set of services that are deployed in the [core services layer](../architectures/data-landing-zone?branch=scenario-data-management#core-services-layer). These core services can be configured when Azure Machine Learning is deployed in enterprise-scale.
+The enterprise-scale data landing zone comes with a default set of services that are deployed in the [core services layer](/architectures/data-landing-zone?branch=scenario-data-management#core-services-layer). These core services can be configured when Azure Machine Learning is deployed in enterprise-scale.
 
 - Connect Azure Synapse Analytics or Databricks workspaces as linked services to integrate data and process big data.
 
