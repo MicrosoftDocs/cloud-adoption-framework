@@ -12,7 +12,7 @@ ms.custom: think-tank
 
 # Limit cross-tenant private endpoint connections in Azure
 
-Customers are increasingly using private endpoints in their tenants to connect to their Azure platform as a service (PaaS) services privately and securely. Private endpoints can connect to services across Azure Active Directory (Azure AD) tenants. For security and compliance, you might need to block your Azure AD tenants' cross-tenant connections on their private endpoints. This guidance shows you recommended configuration options to limit or prevent cross-tenant private endpoint connections. These options can help you create data leakage prevention (DLP) controls inside your Azure environment.
+Customers are increasingly using private endpoints in their tenants to connect to their Azure platform as a service (PaaS) services privately and securely. Private endpoints can connect to services across Azure Active Directory (Azure AD) tenants. For security and compliance, you might need to block cross Azure AD tenant connections on your private endpoints. This guidance shows you recommended configuration options to limit or prevent cross-tenant private endpoint connections. These options can help you create data leakage prevention (DLP) controls inside your Azure environment.
 
 ## Introduction
 
@@ -162,7 +162,7 @@ We also recommend assigning the policy to the top-level management group and use
 
 ### Considerations for scenario two
 
-Managed virtual networks and managed private endpoints have been introduced in Azure Synapse Analytics and Azure Data Factory. Because of this introduction, the policy blocks the secure and private usage of these services. This feature change means the development of data solutions on top of these services are blocked across the tenant.
+Managed virtual networks and managed private endpoints have been introduced in Azure Synapse Analytics and Azure Data Factory. Because of these new capabilities, the policy will block the secure and private usage of these services.
 
 We recommend the use of an **Audit** effect instead of a **Deny** affect in the policy definition used in the [scenario two mitigation](#mitigation-for-scenario-two). This effect change can help you keep track of private endpoints being created in separate subscriptions and tenants. You can also use policy exemptions for the respective data platform scopes. Create more policies for Data Factory and Azure Synapse to make sure that managed private endpoints hosted on the managed virtual network can only connect to services hosted within your Azure AD tenant.
 
