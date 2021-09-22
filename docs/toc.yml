@@ -355,13 +355,13 @@ items:
         - name: Platform automation and DevOps
           items:
           - name: Overview
-            href: ready/landing-zone/design-area/platform-ops-devops.md      
+            href: ready/landing-zone/design-area/platform-automation-devops.md      
           - name: Considerations
-            href: ready/landing-zone/design-area/platform-ops-devops-considerations.md
+            href: ready/landing-zone/design-area/platform-automation-devops-considerations.md
           - name: Recommendations
-            href: ready/landing-zone/design-area/platform-ops-devops-recommendations.md
+            href: ready/landing-zone/design-area/platform-automation-devops-recommendations.md
           - name: Accelerator configuration
-            href: ready/landing-zone/design-area/platform-ops-devops-accelerator.md
+            href: ready/landing-zone/design-area/platform-automation-devops-accelerator.md
       - name: Choose a landing zone option
         href: ready/landing-zone/choose-landing-zone-option.md
       - name: Implementation options
