@@ -68,7 +68,7 @@ The Azure Purview account is deployed inside the Azure virtual network (VNet) wi
 
 For more information about Data management landing zone networking, see [Enterprise-scale for analytics and AI networking](../eslz-network-topology-and-connectivity.md).
 
-For more information about Azure Purview private endpoints, see [Use private endpoints for your Azure Purview account](/azure/purview/catalog-private-link.md).
+For more information about Azure Purview private endpoints, see [Use private endpoints for your Azure Purview account](/azure/purview/catalog-private-link).
 
 #### Private Endpoint for account and portal
 
