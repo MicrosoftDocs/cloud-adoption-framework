@@ -12,9 +12,11 @@ ms.custom: internal
 
 # Recommendations for Platform automation and DevOps
 
+An Azure DevOps model that's based on these recommendations provides the desired control for central teams and the migration agility required by application teams.
+
 ## Platform automation and DevOps - Design recommendations
 
-Establish a cross-functional DevOps platform team to build, manage, and maintain your enterprise-scale architecture. This team should include members from your central IT team, security, compliance, and business units to ensure that a wide spectrum of your enterprise is represented. The following list presents a recommended set of DevOps roles for a central platform team:
+Establish a cross-functional DevOps platform team to build, manage, and maintain your environments. This team should include members from your central IT team, security, compliance, and business units to ensure that a wide spectrum of your enterprise is represented. The following list presents a recommended set of DevOps roles for a central platform team:
 
 - **PlatformOps** (platform operations) for:
 
@@ -112,4 +114,3 @@ The following list presents a recommended distribution of responsibilities betwe
 
   - Cost management (holistic).
 
-An Azure DevOps model that's based on these recommendations provides the desired control for central teams and the migration agility required by application teams.
