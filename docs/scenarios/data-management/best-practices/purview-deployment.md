@@ -87,8 +87,6 @@ Use any of these options to manage your data using Azure Purview through Azure P
 
 - **Option 2:** if hybrid connectivity isn't available in your organization, [deploy a virtual machine](/azure/virtual-machines/windows/quick-create-portal) inside the data management landing zone. [Deploy Azure Bastion](/azure/bastion/quickstart-host-portal) to connect to Azure Purview using a secure connection.
 
-For more information see, [Connecting to Environments Privately](/azure/data-management-zone/docs/guidance/EnterpriseScaleAnalytics-ConnectToEnvironmentsPrivately.md).
-
 #### Private endpoints for ingestion
 
 Azure Purview can scan data sources in Azure or on-premises environments using private or public endpoints. The network of a data landing zone is peered automatically with the data management landing zone VNet and the connectivity subscription VNet. So the data sources inside data landing zones can be scanned using private connectivity.
