@@ -12,4 +12,4 @@ ms.custom: internal
 
 # Platform automation and DevOps in the Azure landing zone accelerator
 
-![Diagram of platform automation and DevOps.](../..enterprise-scale/media/devops.png)
+![Diagram of platform automation and DevOps.](../../enterprise-scale/media/devops.png)
