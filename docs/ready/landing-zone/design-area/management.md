@@ -14,6 +14,14 @@ ms.custom: internal
 
 For stable, ongoing operations in the cloud, a management baseline is required to provide visibility, operations compliance, and protect and recover capabilities.
 
+## Platform management
+
+## Application management
+
+## Business continuity and disaster recovery
+
+Your organization or enterprise needs to design suitable, platform-level capabilities that application workloads can consume to meet their specific requirements. Specifically, these application workloads have requirements pertaining to recover time objective (RTO) and recovery point objective (RPO). Be sure that you capture disaster recovery (DR) requirements in order to design capabilities appropriately for these workloads.
+
 ## Next steps
 
 Explore the following guidance to gain a deeper understanding of the management design area:
