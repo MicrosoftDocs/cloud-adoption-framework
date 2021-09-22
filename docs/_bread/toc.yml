@@ -58,7 +58,7 @@ items:
     - name: Adoption scenarios
       tocHref: /azure/cloud-adoption-framework/scenarios/
       topicHref: /azure/cloud-adoption-framework/scenarios/overview
-    - items:
+      items:
       - name: Data management
         tocHref: /azure/cloud-adoption-framework/scenarios/data-management
         topicHref: /azure/cloud-adoption-framework/scenarios/data-management/
