@@ -12,6 +12,8 @@ ms.custom: internal
 
 # Azure Landing Zone accelerator configuration for resource organization
 
+## Azure landing zone accelerator resource organization implementation
+
 As part of the Azure landing zone accelerator the following decisions have been made and included in the implementation for management group structure:
 
 **Top-level Management Group** (directly under the tenant root group) is created with a prefix provided by the organization, which purposely will avoid the usage of the root group to allow organizations to move existing Azure subscriptions into the hierarchy, and also enables future scenarios. This Management Group is parent to all the other Management Groups created by the Azure Landing Zone accelerator.
