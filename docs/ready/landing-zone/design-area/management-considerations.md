@@ -47,7 +47,7 @@ To expand on the previous section, this section will consider a federated model 
 - For applications that are deployed to virtual machines, logs should be stored centrally to the dedicated Log Analytics workspace from a platform perspective. Application teams can access the logs subject to the Azure RBAC they have on their applications or virtual machines.
 - Application performance and health monitoring for both infrastructure as a service (IaaS) and platform as a service (PaaS) resources.
 - Data aggregation across all application components.
-- [Health modeling and operationalization](../../manage/monitor/cloud-models-monitor-overview.md):
+- [Health modeling and operationalization](/manage/monitor/cloud-models-monitor-overview.md):
   - How to measure the health of the workload and its subsystems
   - A traffic-light model to represent health
   - How to respond to failures across application components
