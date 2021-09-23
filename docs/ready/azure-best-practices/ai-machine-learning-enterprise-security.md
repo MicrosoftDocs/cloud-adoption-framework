@@ -45,11 +45,13 @@ Remote clients connect to the virtual network by using either Azure ExpressRoute
 
 When designing virtual networks, subnets, and private endpoints, consider the following requirements:
 
-- Number of required IPs. Compute instances need one private IP each. Compute clusters needs one private IP per node. AKS clusters need many private IP addresses, which are described in [Plan IP addressing for your AKS cluster](/azure/aks/configure-azure-cni#plan-ip-addressing-for-your-cluster). A separate subnet for at least AKS helps prevent IP address exhaustion.
+- In general, create separate subnets for Training and Scoring, and use the Training subnet for all private endpoints. Create private endpoints for the Storage account, Key Vault, and Container Registry.
+
+- Number of IP addresses. Compute instances need one private IP each. Compute clusters needs one private IP per node. AKS clusters need many private IP addresses, which are described in [Plan IP addressing for your AKS cluster](/azure/aks/configure-azure-cni#plan-ip-addressing-for-your-cluster). A separate subnet for at least AKS helps prevent IP address exhaustion.
 
 - The compute resources in the Training and Scoring subnets need access to the Storage account, Key Vault, and Container Registry.
 
-- Use the Training subnet for all private endpoints. Create private endpoints for the Storage account, Key Vault, and Container Registry.
+- 
 
 - For your Machine Learning workspace default storage, you need two private endpoints, one for Azure Blob storage, and another for Azure File storage. The workspace and Storage private endpoints should be in the same subnet if you use Azure Machine Learning studio.
 
@@ -57,9 +59,9 @@ When designing virtual networks, subnets, and private endpoints, consider the fo
 
 ### Use private IP addresses
 
-Private IP addresses minimize your Azure resources' exposure to the internet. Machine Learning uses many Azure resources, and the Machine Learning workspace private endpoint isn't enough for end-to-end private IP. The following table shows the major resources Machine Learning uses, and how to enable private IP for the resources. Compute instances and compute clusters are the only resources that don't use private IP.
+Private IP addresses minimize your Azure resources' exposure to the internet. Machine Learning uses many Azure resources, and the Machine Learning workspace private endpoint isn't enough for end-to-end private IP. The following table shows the major resources Machine Learning uses, and how to enable private IP for the resources. Compute instances and compute clusters are the only resources that don't have private IPs.
 
-| Resources | Private IP solutions | Documentation |
+| Resources | Private IP solution | Documentation |
 | ----- | ----- | ----- |
 | Workspace | Private endpoint | [Configure a private endpoint for an Azure Machine Learning workspace](/azure/machine-learning/how-to-configure-private-link?tabs=python)
 | **Associated resources** |
@@ -72,7 +74,7 @@ Private IP addresses minimize your Azure resources' exposure to the internet. Ma
 | **More hosting resources** |
 | Kubernetes cluster | Private endpoint | [Secure inferencing environments](/azure/machine-learning/how-to-secure-inferencing-vnet?tabs=python#secure-vnet-traffic) |
 | Machine Learning Load Balancer on AKS | Private load balancer | [Secure inferencing environments](/azure/machine-learning/how-to-secure-inferencing-vnet?tabs=python#secure-vnet-traffic) |
-| Azure Container Instance | Private endpoint | Can't use a private endpoint with Container Instance if the Container Registry also uses a private endpoint. |
+| Azure Container Instance | Private endpoint | You can't use a private endpoint with Container Instance if the Container Registry also uses a private endpoint. |
 
 ### Control virtual network inbound and outbound traffic
 
@@ -88,7 +90,7 @@ To ensure that your private endpoint can access your Machine Learning workspace,
 
 ## Workspace access management
 
-When defining Machine Learning identity and access management controls, you can separate controls that define access to Azure resources and controls that manage access to data assets. Depending on your use case, consider whether to use a *self-service*, *data-centric*, or *project-centric* identity and access management pattern.
+When defining Machine Learning identity and access management controls, you can separate controls that define access to Azure resources from controls that manage access to data assets. Depending on your use case, consider whether to use *self-service*, *data-centric*, or *project-centric* identity and access management.
 
 ### Self-service pattern
 
@@ -127,7 +129,7 @@ The disadvantage is that data access isn't compartmentalized or restricted on pe
 
 Optionally, create an Azure AD security group and grant it read access to data, then add managed identities to the security group. This approach reduces the number of direct role assignments on resources, to avoid reaching the subscription limit on role assignments.
 
-## Project-centric pattern
+### Project-centric pattern
 
 A project-centric pattern creates a Machine Learning workspace for a specific project, and many data scientists collaborate within the same workspace. Data access is restricted to the specific project, making the approach well suited for working with sensitive data. Also, it's straightforward to add or remove data scientists from the project.
 
@@ -155,7 +157,10 @@ The disadvantage of this approach is that sharing assets across projects can be 
 
 You can use Azure AD user identity for interactive storage access from Machine Learning studio. Data Lake Storage with hierarchical namespace enabled allows for enhanced organization of data assets for storage and collaboration. With Data Lake Storage hierarchical namespace, you can compartmentalize data access by giving different users access control list (ACL)-based access to different folders and files. For example, you can grant only a subset of users access to confidential data.
 
-Credential passthrough support for Data Lake Storage and Blob storage for remote training on Azure Machine Learning computes is planned for a later release.
+The following features are planned for future Machine Learning releases:
+
+- Credential passthrough support for Data Lake Storage and Blob storage for remote training on Machine Learning computes.
+- Data Lake Storage with hierarchical namespace enabled as default storage for Machine Learning workspaces.
 
 ### RBAC and custom roles
 
@@ -165,7 +170,9 @@ Access scope can differ between environments. In a production environment, you m
 
 Machine Learning has several default roles: Owner, Contributor, Reader, and Data Scientist. You can also create your own custom roles, for example to create permissions that reflect your organizational structure. For more information, see [Manage access to Azure Machine Learning workspace](/azure/machine-learning/how-to-assign-roles#example-custom-roles).
 
-Over time, the composition of your team might change. If you create an Azure AD group for each team role and workspace, you can assign an Azure RBAC role to the Azure AD group and manage resource access and user groups separately. User principals and service principals might be part of the same Azure AD group. For example, when you create a user-assigned managed identity that Azure Data Factory uses to trigger a Machine Learning pipeline, you might include this managed identity in a **ML pipelines executor** Azure AD group.
+Over time, the composition of your team might change. If you create an Azure AD group for each team role and workspace, you can assign an Azure RBAC role to the Azure AD group, and manage resource access and user groups separately.
+
+User principals and service principals can be part of the same Azure AD group. For example, when you create a user-assigned managed identity that Azure Data Factory uses to trigger a Machine Learning pipeline, you might include the managed identity in a **ML pipelines executor** Azure AD group.
 
 ## Central Docker image management
 
@@ -201,7 +208,9 @@ Once you deploy Machine Learning resources, set up logging and auditing controls
 
 - Consider creating dashboards that **monitor overall infrastructure health** for Machine Learning and dependent resources such as storage. For example, combining Azure storage metrics with pipeline execution data can help you optimize infrastructure for better performance, or better discover root causes of problems.
 
-Azure collects and stores platform metrics and activity logs automatically. You can route the data to other locations by using a diagnostic setting. To enable observability across several workspace instances, set up diagnostic logging into a centralized Log Analytics workspace. Use Azure Policy to automatically set up logging for new Machine Learning workspaces into this central Log Analytics workspace.
+Azure collects and stores platform metrics and activity logs automatically. You can route the data to other locations by using a diagnostic setting.
+
+To enable observability across several workspace instances, set up diagnostic logging into a centralized Log Analytics workspace. Use Azure Policy to automatically set up logging for new Machine Learning workspaces into this central Log Analytics workspace.
 
 ## Policy
 
@@ -230,11 +239,11 @@ Compute clusters support using managed identities to authenticate to Azure resou
 
 ### Setup script
 
-You can use a setup script to automate customization and configuration of a compute instance at creation. As an administrator, you can write a customization script to use when creating all compute instances in a workspace. You can use Azure Policy to enforce that the setup script is used for creating every compute instance. For more information, see [Create and manage an Azure Machine Learning compute instance](/azure/machine-learning/how-to-create-manage-compute-instance#setup-script).
+You can use a setup script to automate customization and configuration of compute instances at creation. As an administrator, you can write a customization script to use when creating all compute instances in a workspace. You can use Azure Policy to enforce that the setup script is used for creating every compute instance. For more information, see [Create and manage an Azure Machine Learning compute instance](/azure/machine-learning/how-to-create-manage-compute-instance#setup-script).
 
 ### Create on behalf of
 
-If you don't want data scientists to provision compute resources, you can create compute instances on their behalf, and then assign the instances to the data scientists. For more information, see [Create and manage An Azure Machine Learning compute instance](/azure/machine-learning/how-to-create-manage-compute-instance#on-behalf).
+If you don't want data scientists to provision compute resources, you can create compute instances on their behalf, and then assign the instances to the data scientists. For more information, see [Create and manage an Azure Machine Learning compute instance](/azure/machine-learning/how-to-create-manage-compute-instance#on-behalf).
 
 ### Private endpoint-enabled workspace
 
@@ -253,11 +262,11 @@ Read more about Machine Learning security configurations:
 
 Read more about architectural considerations for deploying Machine Learning:
 
-- How team structure, environment, or regional constraints affects the workspace setup: [Organize and set up Azure ML workspaces](/azure/cloud-adoption-framework/ready/azure-best-practices/ai-machine-learning-resource-organization)
+- How team structure, environment, or regional constraints affect workspace setup: [Organize and set up Azure ML workspaces](/azure/cloud-adoption-framework/ready/azure-best-practices/ai-machine-learning-resource-organization)
 
 - Optimizations to manage compute costs and budget across teams and users: [Budget, cost, and quota management for Azure ML at organizational scale](/azure/cloud-adoption-framework/ready/azure-best-practices/optimize-ai-machine-learning-cost) 
 
-Learn more about [Machine Learning DevOps (MLOps)](/azure/cloud-adoption-framework/ready/azure-best-practices/ai-machine-learning-mlops), an organizational change that relies on a combination of people, process, and technology. The goal of MLOps is to deliver machine learning solutions in a more robust, reliable, and automated way. This guide summarizes learnings from adopting machine learning DevOps for enterprises using Azure Machine Learning.
+Learn about machine learning DevOps (MLOps), an organizational change that relies on a combination of people, process, and technology. The goal of MLOps is to deliver machine learning solutions in a more robust, reliable, and automated way. The [Machine learning DevOps guide](/azure/cloud-adoption-framework/ready/azure-best-practices/ai-machine-learning-mlops) summarizes learning from enterprises that adopted MLOps for Machine Learning.
 
 Get started with a Machine Learning template-based deployment:
 
