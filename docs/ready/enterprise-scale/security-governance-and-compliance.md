@@ -3,7 +3,7 @@ title: Enterprise-scale security governance and compliance
 description: Learn about enterprise-scale security governance and compliance in the Microsoft Cloud Adoption Framework for Azure.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 06/15/2020
+ms.date: 09/15/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Enterprise-scale security governance and compliance
 
-This article covers defining encryption and key management, planning for governance, defining security monitoring and an audit policy, and planning for platform security. At the end of the article, you can refer to a table that describes a framework to assess enterprise security readiness of Azure services.
+This article defines encryption and key management, helps plan for governance, defines security monitoring and an audit policy, and helps plan for platform security. At the end of this guidance, you can refer to a table that describes a framework to assess enterprise security readiness of Azure services.
 
 ## Define encryption and key management
 
@@ -76,7 +76,7 @@ Encryption is a vital step toward ensuring data privacy, compliance, and data re
 
 ## Plan for governance
 
-Governance provides mechanisms and processes to maintain control over your applications and resources in Azure. Azure Policy is essential to ensuring security and compliance within enterprise technical estates. It can enforce vital management and security conventions across Azure platform services and supplement Azure role-based access control (Azure RBAC) that controls what actions authorized users can perform.
+Governance provides mechanisms and processes to maintain control over your applications and resources in Azure. Azure Policy is essential to ensuring security and compliance within enterprise technical estates. It can enforce vital management and security conventions across Azure platform services. It can also supplement Azure role-based access control that controls what actions authorized users can do.
 
 **Design considerations:**
 
@@ -90,7 +90,7 @@ Governance provides mechanisms and processes to maintain control over your appli
 
 - Understand that Azure Policy has limits, such as the restriction of definitions at any particular scope: [policy limits](/azure/azure-resource-manager/management/azure-subscription-service-limits).
 
-- Understand regulatory compliance policies. These might include HIPAA, PCI DSS, or SOC 2 Trust Services Criteria.
+- Understand regulatory compliance policies. The policies might include HIPAA, PCI DSS, or SOC 2 Trust Services Criteria.
 
 **Design recommendations:**
 
@@ -100,9 +100,9 @@ Governance provides mechanisms and processes to maintain control over your appli
 
 - Establish Azure Policy definitions at the top-level root management group so that they can be assigned at inherited scopes.
 
-- Manage policy assignments at the highest appropriate level with exclusions at bottom levels, if required.
+- Manage policy assignments at the highest appropriate level with exclusions at bottom levels, if necessary.
 
-- Use Azure Policy to control resource provider registrations at the subscription and/or management group levels.
+- Use Azure Policy to control resource provider registrations at the subscription or management group levels.
 
 - Use built-in policies where possible to minimize operational overhead.
 
@@ -152,7 +152,7 @@ An enterprise must have visibility into what's happening within their technical 
 
 ## Plan for platform security
 
-You must maintain a healthy security posture as you adopt Azure. Besides visibility, you have to be able to control the initial settings and changes as the Azure services evolve. Therefore, planning for platform security is key.
+Maintain a healthy security posture as you adopt Azure. Besides visibility, you can control the initial settings and changes as the Azure services evolve. Therefore, planning for platform security is key.
 
 **Design considerations:**
 
@@ -160,15 +160,15 @@ You must maintain a healthy security posture as you adopt Azure. Besides visibil
 
 - High availability and disaster recovery.
 
-- Consistent security across Azure services in terms of data management and control plane operations.
+- Consistent security across Azure services for data management and analytics and control plane operations.
 
-- Multitenancy for key platform components. This includes Hyper-V, the HSMs underpinning Key Vault, and database engines.
+- Multitenancy for key platform components. The multitenancy includes Hyper-V, the HSMs underpinning Key Vault, and database engines.
 
 **Design recommendations:**
 
-- In the context of your underlying requirements, conduct a joint examination of each required service. If you want to bring your own keys, this might not be supported across all considered services. Implement relevant mitigation so that inconsistencies don't hinder desired outcomes. Choose appropriate region pairs and disaster recovery regions that minimize latency.
+- In the context of your underlying requirements, conduct a joint examination of each required service. If you want to bring your own keys, it might not be supported across all considered services. Implement relevant mitigation so that inconsistencies don't hinder desired outcomes. Choose appropriate region pairs and disaster recovery regions that minimize latency.
 
-- Develop a security allow-list plan to assess services security configuration, monitoring, alerts, and how to integrate these with existing systems.
+- Develop a security allowlist plan to assess services security configuration, monitoring, alerts, and how to integrate them with existing systems.
 
 - Determine the incident response plan for Azure services before allowing it into production.
 
@@ -182,7 +182,7 @@ You must maintain a healthy security posture as you adopt Azure. Besides visibil
 
 ## Azure Security Benchmark
 
-The Azure Security Benchmark includes a collection of high-impact security recommendations you can use to help secure most of the services you use in Azure. You can think of these recommendations as "general" or "organizational" as they are applicable to most Azure services. The Azure Security Benchmark recommendations are then customized for each Azure service, and this customized guidance is contained in service recommendations articles.
+The Azure Security Benchmark includes a collection of high-impact security recommendations to help you secure most of the services you use in Azure. You can think of these recommendations as "general" or "organizational" as they are applicable to most Azure services. The Azure Security Benchmark recommendations are then customized for each Azure service, and this customized guidance is contained in service recommendations articles.
 
 The Azure Security Benchmark documentation specifies security controls and service recommendations.
 
@@ -191,7 +191,11 @@ The Azure Security Benchmark documentation specifies security controls and servi
 
 ## Service enablement framework
 
-As business units request to deploy workloads to Azure, you need additional visibility into a workload to determine how to achieve appropriate levels of governance, security, and compliance. When a new service is required, you need to allow it. The following table provides a framework to assess enterprise security readiness of Azure services:
+As business units request to deploy workloads to Azure, you need more visibility into a workload to determine how to achieve appropriate levels of governance, security, and compliance.
+
+When a new service is required, you need to allow it and create a process for onboarding services securely to Azure. The onboarding process should include reviewing the configuration options to determine what logging and monitoring needs to be established, and how to properly harden a resource before it can be used by the workload/application team.
+
+The following table provides a framework to assess enterprise security readiness of Azure services:
 
 | Assessment | Category | Criteria |
 |--|--|--|
@@ -207,13 +211,13 @@ As business units request to deploy workloads to Azure, you need additional visi
 |  |  | Is management traffic directed via a link-local endpoint exposed on the host? |
 |  | Data encryption at-rest | Is encryption applied by default? |
 |  |  | Can encryption be disabled? |
-|  |  | Is encryption performed with Microsoft-managed keys or customer-managed keys? |
+|  |  | Is encryption done with Microsoft-managed keys or customer-managed keys? |
 |  | Data encryption in-transit | Is traffic to the service encrypted at a protocol level (SSL/TLS)? |
 |  |  | Are there any HTTP endpoints, and can they be disabled? |
 |  |  | Is underlying service communication also encrypted? |
-|  |  | Is encryption performed with Microsoft-managed keys or customer-managed keys? (Is bring your own encryption supported?) |
+|  |  | Is encryption done with Microsoft-managed keys or customer-managed keys? (Is brought your own encryption supported?) |
 |  | Software deployment | Can application software or third-party products be deployed to the service? |
-|  |  | How is software deployment performed and managed? |
+|  |  | How is software deployment done and managed? |
 |  |  | Can policies be enforced to control source or code integrity? |
 |  |  | If software is deployable, can antimalware capability, vulnerability management, and security monitoring tools be used? |
 |  |  | Does the service provide such capabilities natively, such as with Azure Kubernetes Service? |
@@ -234,7 +238,7 @@ As business units request to deploy workloads to Azure, you need additional visi
 |  | Backup management | Which workload data need to be backed up? |
 |  |  | How are backups captured? |
 |  |  | How frequently can backups be taken? |
-|  |  | How long can backups be retained for? |
+|  |  | How long can backups be kept for? |
 |  |  | Are backups encrypted? |
 |  |  | Is backup encryption performed with Microsoft-managed keys or customer-managed keys? |
 |  | Disaster recovery | How can the service be used in a regional redundant fashion? |
@@ -249,8 +253,12 @@ As business units request to deploy workloads to Azure, you need additional visi
 |  |  | Are key data plane activities recorded? |
 |  | Configuration management | Does it support tags and provide a `put` schema for all resources? |
 | Azure service compliance | Service attestation, certification, and external audits | Is the service PCI/ISO/SOC compliant? |
-|  | Service availability | Is the service a private preview, a public preview, or generally available? |
+|  | Service availability | Is the service generally available? |
 |  |  | In what regions is the service available? |
 |  |  | What is the deployment scope of the service? Is it a regional or global service? |
 |  | Service-level agreements (SLAs) | What is the SLA for service availability? |
 |  |  | If applicable, what is the SLA for performance? |
+
+## Suggested actions
+
+Involve the security team in the development process to apply a [SecDevOps](https://www.microsoft.com/en-us/securityengineering/devsecops) approach.

@@ -6,8 +6,8 @@ ms.author: brblanch
 ms.date: 04/13/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
-ms.custom: e2e-hybrid
+ms.subservice: scenario
+ms.custom: e2e-hybrid, think-tank
 ---
 
 <!-- docutune:casing "Harry's Harvesters" "Angie's Applications" "Mary's Markets" -->

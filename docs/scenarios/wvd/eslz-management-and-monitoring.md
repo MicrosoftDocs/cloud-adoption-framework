@@ -1,15 +1,16 @@
 ---
-title: Enterprise-scale management and monitoring for Azure Virtual Desktop
-description: Learn how this enterprise-scale scenario can improve the management and monitoring of Azure Virtual Desktop.
+title: Management baseline for Azure Virtual Desktop
+description: Learn how the management baseline can improve the management and monitoring of Azure Virtual Desktop.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/18/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
+ms.custom: think-tank, e2e-avd
 ---
 
-# Management and monitoring for an Azure Virtual Desktop enterprise-scale scenario
+# Management baseline considerations for an Azure Virtual Desktop
 
 Achieve operational excellence and customer success by properly designing your Azure Virtual Desktop environment with management and monitoring in mind.
 
@@ -24,7 +25,7 @@ Review the following considerations and recommendation for platform management a
   - Workspaces
   - Host pools
 - Performance counters should be collected.
-- Windows event logs should be collected.
+- Azure event logs should be collected.
 - Create a dashboard from the platform logs to centralize visuals for reporting operations.
 - Learn to [use Azure Monitor for Azure Virtual Desktop to monitor your deployment](/azure/virtual-desktop/azure-monitor).
 
@@ -55,7 +56,7 @@ Review the following considerations and recommendation for platform management a
   | RemoteFX Network | Current UDP Bandwidth | * | 30 | RemoteFX Network, Current UDP Bandwidth, * |
   | LogicalDisk | Avg. Disk sec/Transfer | C: | 60 | LogicalDisk, Avg. Disk sec/Transfer, C: |
   | LogicalDisk | Current Disk Queue Length | C: | 30 | LogicalDisk, Current Disk Queue Length, C: |
-  | Memory | Available Mbytes | * | 30 | Memory, Available Mbytes, * |
+  | Memory | Available MB | * | 30 | Memory, Available MB, * |
   | Memory | Page Faults/sec | * | 30 |Memory, Page Faults/sec, * |
   | Memory | Pages/sec | * | 30 | Memory, Pages/sec, * |
   | Memory | % Committed Bytes In Use | * |30 | Memory, % Committed Bytes In Use, * |

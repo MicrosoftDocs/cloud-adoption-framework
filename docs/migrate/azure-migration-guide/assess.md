@@ -3,7 +3,7 @@ title: Assess each workload and refine plans
 description: Use the Cloud Adoption Framework for Azure to assess your environment's suitability for migration and which methods to consider.
 author: matticusau
 ms.author: brblanch
-ms.date: 02/25/2020
+ms.date: 08/23/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -34,7 +34,7 @@ If you're considering a lift-and-shift approach or are in the early assessment s
 
 #### Create a new project
 
-Begin server discovery, assessment and migration using Azure Migrate via these steps:
+Begin server discovery, assessment, and migration using Azure Migrate via these steps:
 
 1. Select **Azure Migrate**.
 1. In **Overview**, select **Discover, assess and migrate**.
@@ -63,10 +63,10 @@ Begin server discovery, assessment and migration using Azure Migrate via these s
 
 Dependency analysis identifies dependencies between discovered on-premises servers. It provides these advantages:
 
-- Gather servers into groups for assessment, more accurately, with greater confidence.
-- Identify servers that must be migrated together. This is especially useful if you're not sure which servers are part of an app deployment that you want to migrate to Azure.
-- Identify whether servers are in use, and which servers can be decommissioned instead of migrated.
-- Analyzing dependencies helps ensure that nothing is left behind, and thus avoids surprise outages after migration.
+- Gather servers into groups for assessment, more accurately, and with greater confidence.
+- Identify servers that should be migrated together. This step is especially useful if you're unsure which servers are part of an app deployment that you want to migrate to Azure.
+- Identify whether servers are in use and which servers can be decommissioned instead of migrated.
+- Analyze dependencies to ensure that nothing is left behind and avoid surprise outages after migration.
 
 <!-- markdownlint-disable MD024 -->
 

@@ -6,7 +6,7 @@ ms.author: brblanch
 ms.date: 02/15/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
 ms.custom: think-tank, e2e-sap
 ---
 
@@ -30,7 +30,7 @@ You have to make critical decisions that drive the design of the Cloud Adoption 
 - [Network topology and connectivity](./eslz-network-topology-and-connectivity.md)
 - [Management and monitoring](./eslz-management-and-monitoring.md)
 - [Business continuity and disaster recovery](./eslz-business-continuity-and-disaster-recovery.md)
-- [Security, governance,  and compliance](./eslz-security-governance-and-compliance.md)
+- [Security, governance, and compliance](./eslz-security-governance-and-compliance.md)
 - [Platform automation and DevOps](./eslz-platform-automation-and-devops.md)
 
 ## Architecture

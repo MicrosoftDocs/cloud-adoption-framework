@@ -19,7 +19,7 @@ As described in [Engage via applications](../considerations/apps.md), applicatio
 
 ![Diagram that shows the Cloud Adoption Framework approach to engaging via applications.](../../_images/innovate/engage-via-apps.png)
 
-## Alignment to the innovation methodology
+## Alignment with the Innovate methodology
 
 You can accelerate this type of digital invention through each of the following approaches. Technical guidance for accelerating digital invention is listed in the table of contents on the left side of this page. Those articles are grouped by their approaches to aligning guidance with the overall Innovate methodology.
 

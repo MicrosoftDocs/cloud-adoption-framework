@@ -6,7 +6,7 @@ ms.author: brblanch
 ms.date: 06/06/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: general
+ms.subservice: scenario
 ms.custom: internal, e2e-retail
 ---
 
@@ -56,7 +56,7 @@ If there's one thing to be learned following COVID-19, it's that agility is key.
 
 ## Next steps
 
-To learn more about how Azure supports retail organizations, see [Azure for retail](./retail-azure-advantages.md).
+To learn more about how Azure supports retail organizations, see [Azure for Retail](./retail-azure-advantages.md).
 
 These resources offer guidance in the cloud adoption scenario.
 

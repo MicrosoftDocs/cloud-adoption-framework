@@ -68,6 +68,8 @@ items:
 
     - name: Adoption scenarios
       items:
+      - name: Data management and analytics
+        href: scenarios/data-management/index.md
       - name: Hybrid and multicloud
         href: scenarios/hybrid/index.md
       - name: Modern application platform
@@ -214,6 +216,9 @@ items:
       - name: Plan a data warehouse migration
         href: plan/data-warehouse-migration.md
 
+    - name: Strategic Migration Assessment and Readiness Tool (SMART)
+      href: plan/smart-assessment.md
+
     - name: Plan antipatterns
       href: antipatterns/plan-antipatterns.md
 
@@ -251,6 +256,8 @@ items:
       items:
       - name: What is a landing zone?
         href: ready/landing-zone/index.md
+      - name: Journey to the target architecture
+        href: ready/landing-zone/landing-zone-journey.md
       - name: Design areas
         href: ready/landing-zone/design-areas.md
       - name: Choose a landing zone option
@@ -325,6 +332,8 @@ items:
           href: ready/enterprise-scale/terraform-module-caf-enterprise-scale.md
         - name: Transition to enterprise-scale (brownfield)
           href: ready/enterprise-scale/transition.md
+        - name: Scenario-specific enterprise-scale landing zones
+          href: ready/enterprise-scale/scenario-specific-enterprise-scale-landing-zones.md
       - name: Start small and expand
         items:
         - name: CAF Migration landing zone blueprint
@@ -439,6 +448,8 @@ items:
         items:
         - name: Organize and set up Azure Machine Learning environments
           href: ready/azure-best-practices/ai-machine-learning-resource-organization.md
+        - name: Best practices for enterprise security
+          href: ready/azure-best-practices/ai-machine-learning-enterprise-security.md
         - name: Budget, cost, and quota management with Azure Machine Learning
           href: ready/azure-best-practices/optimize-ai-machine-learning-cost.md
         - name: Machine learning DevOps (MLOps)
@@ -493,7 +504,7 @@ items:
         - name: Tailwind Traders case study
           items:
           - name: Assessment and migration planning with Azure Migrate for servers
-            href: migrate/azure-best-practices/tailwind-migration-assess-servers.md 
+            href: migrate/azure-best-practices/tailwind-migration-assess-servers.md
           - name: Migration execution with Azure Migrate for servers
             href: migrate/azure-best-practices/tailwind-migration-rehost-server-replication.md
         - name: Windows Server workloads

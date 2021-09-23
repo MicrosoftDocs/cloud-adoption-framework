@@ -1,5 +1,5 @@
 ---
-title: "Get started: Manage cloud costs"
+title: 'Get started: Manage cloud costs'
 description: Learn the basics of managing costs associated with cloud adoption.
 author: JanetCThomas
 ms.author: janet

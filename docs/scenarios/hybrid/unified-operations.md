@@ -6,8 +6,8 @@ ms.author: brblanch
 ms.date: 01/12/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: strategy
-ms.custom: e2e-hybrid
+ms.subservice: scenario
+ms.custom: e2e-hybrid, think-tank
 ---
 
 # Introduction to unified operations

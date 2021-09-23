@@ -14,8 +14,6 @@ items:
 
   - name: Strategic impact
     items:
-    - name: Understand retail organizations
-      href: organize.md
     - name: Retail specific strategies
       href: strategy.md
     - name: Personalization
@@ -29,10 +27,8 @@ items:
 
   - name: Technical planning
     items:
-    - name: Cloud adoption plan
+    - name: Azure landing zones
       href: plan.md
-    - name: Initial organizational alignment
-      href: organize.md
   - name: Prepare your environment
     items:
     - name: Azure landing zones
@@ -53,6 +49,8 @@ items:
       href: ../../scenarios/hybrid/unified-operations.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2findustry%2fretail%2ftoc.json
   - name: Manage your assets
     href: manage.md
+  - name: Understand retail organizations
+    href: organize.md
   - name: Retail solutions
     items:
     - name: Overview
@@ -79,3 +77,11 @@ items:
       href: /azure/architecture/example-scenario/data/ecommerce-order-processing?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json
     - name: Buy online, pickup in store (BOPIS)
       href: /azure/architecture/example-scenario/iot/vertical-buy-online-pickup-in-store?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json
+  - name: Resources
+    items:
+    - name: Cloud Adoption Framework
+      href: ../../get-started/index.md
+    - name: Azure Well-Architected Framework
+      href: /azure/architecture/framework/
+    - name: Learn modules
+      href: /learn/azure/
