@@ -7,6 +7,7 @@ ms.date: 06/08/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Enterprise-scale for analytics and AI data products in Azure

@@ -7,6 +7,7 @@ ms.date: 07/15/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Platform automation and DevOps for a data management and analytics enterprise-scale scenario

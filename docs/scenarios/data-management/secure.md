@@ -7,6 +7,7 @@ ms.date: 07/20/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Secure data management and analytics in Azure

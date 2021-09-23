@@ -24,7 +24,7 @@ Automated machine learning forecasts or predictions can make applications and de
 Azure Machine Learning provides all the tools developers and data scientists need for their machine learning workflows, including:
 
 - The [Azure Machine Learning designer (preview)](/azure/machine-learning/tutorial-designer-automobile-price-train-score): Drag-n-drop modules to build your experiments and then deploy pipelines
-- Jupyter notebooks: Use our [example notebooks](https://github.com/Azure/MachineLearningNotebooks) or create your own notebooks to use our SDK for Python samples.
+- Jupyter notebooks: use our [example notebooks](https://github.com/Azure/MachineLearningNotebooks) or create your own notebooks to use our SDK for Python samples.
 - R scripts or notebooks in which you use the [SDK for R](https://azure.github.io/azureml-sdk-for-r/reference/index.html) to write your own code, or use the R modules in the designer.
 - The [many models solution accelerator (preview)](https://github.com/microsoft/solution-accelerator-many-models) builds on Azure Machine Learning and enables you to train, operate, and manage hundreds or even thousands of machine learning models.
 - [Visual Studio Code extension](/azure/machine-learning/tutorial-setup-vscode-extension).
