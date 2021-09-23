@@ -91,7 +91,7 @@ Use the data collected in the Azure portal to identify opportunities to improve 
 
 There are common patterns used for implementation of a conversational AI application:
 
-- **Knowledge base:** A knowledge bot can be designed to provide information about virtually any subject. For example, one knowledge bot might answer questions about events such as "what bot events are there at this conference?" Or "when is the next reggae show?" Another bot might answer IT-related questions such as "how do I update my operating system?" Yet another bot might answer questions about contacts such as "who is john doe?" Or "what is jane doe's email address?"
+- **Knowledge base:** A knowledge bot can be designed to provide information about virtually any subject. For example, one knowledge bot might answer questions about events such as "What bot events are there at this conference?" or "When is the next reggae show?" Another bot might answer IT-related questions such as "How do I update my operating system?" Yet another bot might answer questions about contacts such as "Who is John Doe?" or "What is Jane Doe's email address?"
 
    For information on the design elements for knowledge bots, see [Design knowledge bots](/azure/bot-service/bot-service-design-pattern-knowledge-base).
 

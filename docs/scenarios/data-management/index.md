@@ -7,6 +7,7 @@ ms.date: 06/24/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Introduction to the data management and analytics scenario in Azure

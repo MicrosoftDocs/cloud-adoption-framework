@@ -1,5 +1,5 @@
 ---
-title: Use Azure Synapse Analytics with enterprise-scale for analytics and AI 
+title: Use Azure Synapse Analytics with enterprise-scale for analytics and AI
 description: Learn how to use Azure Synapse Analytics with enterprise-scale for analytics and AI.
 author: mboswell
 ms.author: mboswell
@@ -7,6 +7,7 @@ ms.date: 08/03/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Use Azure Synapse Analytics with enterprise-scale for analytics and AI

@@ -7,6 +7,7 @@ ms.date: 03/03/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Overview of the enterprise-scale for analytics and AI architecture data landing zone in Azure
@@ -140,7 +141,7 @@ We recommend you deploy a virtual machine scale set with self-hosted integration
 To enable the resource group, you need to:
 
 - Create at least one Azure Data Factory in the shared integration resource group in the data landing zone. It will only be used for linking the shared self-hosted integration runtime and not for data pipelines.
-- Create a [shared image for the Azure virtual machine scale set](/azure/virtual-machine-scale-sets/shared-images-powershell) with a self-hosted integration runtime configured.
+- Create a [shared image for the Azure virtual machine scale set](/azure/virtual-machine-scale-sets/tutorial-use-custom-image-powershell) with a self-hosted integration runtime configured.
 - The [self hosted integration runtimes should be setup in high availability mode](/azure/data-factory/create-self-hosted-integration-runtime#high-availability-and-scalability).
 - The self-hosted integration runtimes should be associated with Azure data factories in the data landing zone(s).
 - [Azure Automation should be setup to update the self hosted integration runtime periodically](/azure/data-factory/self-hosted-integration-runtime-automation-scripts)

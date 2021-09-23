@@ -69,4 +69,4 @@ Each phase of the process helps you build better solutions with your customers.
 
 As a next step to understanding this methodology, see [Common blockers and challenges to innovation](./challenges.md) to prepare for the changes ahead.
 
-Some of the concepts in this article build on topics first described in [The Lean Startup](http://theleanstartup.com/book), written by Eric Ries.
+Some of the concepts in this article build on topics first described in [`The Lean Startup`](http://theleanstartup.com/book), written by Eric Ries.
