@@ -29,7 +29,7 @@ Here are some general design considerations for Azure Arc-enabled servers monito
 
 Here are some general design recommendations for Azure Arc monitoring and management:
 
-- Logs should be stored centrally to the dedicated platform Log Analytics workspace and [control log access with Azure Role-based access control](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/design-logs-deployment#access-control-overview) . If there is a requirement for a separate workspace due to management/data sovereignty/compliance requirements , this can impact the ability to have a single pane of glass and event correleation of your arc-enabled servers across the envrionment.
+- Logs should be stored centrally to the dedicated platform Log Analytics workspace and [control log access with Azure Role-based access control](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/design-logs-deployment#access-control-overview) . If there is a requirement for a separate workspace due to management/data sovereignty/compliance requirements , this can impact the ability to have a single pane of glass and event correlation of your arc-enabled servers across the envrionment.
 - Use VM insights to analyze the performance of your Windows and Linux VMs and monitor their processes and dependencies on other resources and external processes.
 - Configure the needed performance counters for the arc-enabled Windows and Linux VMs on the dedicated log analytics workspace.
 - Configure the logs that need to be collected for the arc-enabled Windows and Linux VMs on the dedicated log analytics workspace.
