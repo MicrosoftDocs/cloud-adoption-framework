@@ -41,18 +41,18 @@ As your hybrid and multicloud resources become part of Azure Resource Manager, t
 
 ### Resource consistency and inventory management
 
-Before onboarding any machine onto Azure Arc it is important to define a structure on how these resources will map to Azure management scopes: management groups, subscriptions and resource groups.  This mapping is key as it will how you will be able to interacy with these resources when applying RBAC roles and while assigning Azure policies as part of your governance model. Review the Cloud Adoption Framework recommendations on how to [organize resources](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources?tabs=AzureManagementGroupsAndHierarchy)
+Before onboarding any machine onto Azure Arc it is important to define a structure on how these resources will map to Azure management scopes: management groups, subscriptions and resource groups.  This mapping is key as it will determine how you will be able to interacy with these resources when applying RBAC roles and while assigning Azure policies as part of your governance model. Review the Cloud Adoption Framework recommendations on how to [organize resources](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources?tabs=AzureManagementGroupsAndHierarchy)
 
-When designing your Be aware of subscription and service limits: https://docs.microsoft.com/en-us/azure/azure-arc/servers/agent-overview#azure-subscription-and-service-limits
+When designing this structure be aware of [Azure Resource Manager service limits](https://docs.microsoft.com/en-us/azure/azure-arc/servers/agent-overview#azure-subscription-and-service-limits), as they are also applicable to Azure Arc enabled servers and it is important to plan for the number of machines to be connected to an specific [resource group](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits#resource-group-limits) or s[ubscription](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits#subscription-limits).
 
-As part of your cloud adoption journey you should also have a well-designed [naming standard](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources?tabs=NamingStandards) that enables you to identify resources easily, make sure to align this naming standard with your already existing hybrid infrastructure as those resources will be part of your inventory in Azure. Be aware that the Linux hostname or Windows computer name of your hybrid resources cannot use [Azure's reserved words or trademarks](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/error-reserved-resource-name) as Azure Arc registration with Azure will fail.
+An effective and well-designed [naming standard](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources?tabs=NamingStandards) that enables you to identify resources easily is key in any inventory management strategy. Make sure to align this naming standard with your already existing hybrid infrastructure as those resources will be part of your global inventory in Azure. Verify that the Linux hostname or Windows computer name of your hybrid resources do not use [Azure's reserved words or trademarks](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/error-reserved-resource-name) as attempting to register the connected machine with Azure will fail.
 
+After you have created a taxonomy structure and agreed on naming standards it is recommended to apply tags to the Azure Arc enabled server resources. Once a server is registered in Azure it has a resource ID, it becomes part of a resource group within a subscription, and can benefit from standard Azure constructs such as [tags](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/arc-inventory-tagging). They provide the ability to add metadata to a resource to quickly locate it and automate operational tasks, as such they should be relevant to your day to day tasks as described in the [Cloud Adoption Framework tagging strategy](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging). However, it is a good practice to include a tag that reflects the hosting platform for the Azure Arc enabled resource.
+
+### Policy management and reporting
 https://docs.microsoft.com/en-us/azure/role-based-access-control/scope-overview
 
 Creare a resource health alert and azure advisor alert https://docs.microsoft.com/en-us/azure/azure-arc/servers/plan-at-scale-deployment#phase-3-manage-and-operate
-
-### Policy management and reporting
-
 Policy:
 
 - Guest Configuration
