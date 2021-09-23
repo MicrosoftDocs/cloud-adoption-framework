@@ -3,10 +3,10 @@ title: Deployment templates for enterprise-scale for analytics and AI deployment
 description: Learn about the core starter templates for enterprise-scale for analytics and AI deployments.
 author: mboswell
 ms.author: mboswell
-ms.date: 07/13/2021
+ms.date: 09/21/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.custom: think-tank, e2e-data
 ---
 
 # Deployment templates for enterprise-scale for analytics and AI deployments
@@ -27,4 +27,4 @@ The templates can change over time because of new Azure services and requirement
 
 ## Next steps
 
-[Data summary and maturity model for Azure](./govern.md)
+[Frequently asked questions about enterprise-scale for analytics and AI in Azure](./architectures/frequently-asked-questions.md)
