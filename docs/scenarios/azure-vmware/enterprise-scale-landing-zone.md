@@ -1,6 +1,6 @@
 ---
-title: Enterprise scale for Microsoft Azure VMware Solution
-description: Learn how enterprise scale can accelerate the adoption of Microsoft Azure VMware Solution.
+title: Enterprise-scale for Microsoft Azure VMware Solution
+description: Learn how enterprise-scale can accelerate the adoption of Microsoft Azure VMware Solution.
 author: pgandham
 ms.author: janet
 ms.date: 09/22/2021
@@ -9,15 +9,15 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Enterprise scale for Microsoft Azure VMware Solution
+# Enterprise-scale for Microsoft Azure VMware Solution
 
-Enterprise scale for Azure VMware Solution is an open-source collection of Azure Resource Manager and Bicep templates. It represents the strategic design path and target technical state for an Azure VMware Solution deployment. This open-source solution provides an architectural approach and reference implementation to prepare Azure landing zone subscriptions for a scalable Azure VMware Solution. The implementation adheres to the architecture and best practices of the Cloud Adoption Framework's Azure landing zones, with a focus on the design principles of enterprise scale.
+Enterprise-scale for Azure VMware Solution is an open-source collection of Azure Resource Manager and Bicep templates. It represents the strategic design path and target technical state for an Azure VMware Solution deployment. This open-source solution provides an architectural approach and reference implementation to prepare Azure landing zone subscriptions for a scalable Azure VMware Solution. The implementation adheres to the architecture and best practices of the Cloud Adoption Framework's Azure landing zones, with a focus on the design principles of enterprise-scale.
 
 The following guidance provides design considerations for implementing a scalable Azure VMware Solution in your landing zone. The design decisions your organization makes, based on this guidance, lays the groundwork for scalability.
 
-Customers adopt Azure VMware Solution in various ways. You can adopt the enterprise scale for your Azure VMware Solution set to produce an architecture that fits your needs and puts your organization on a path to sustainable scale.
+Customers adopt Azure VMware Solution in various ways. You can adopt the enterprise-scale for your Azure VMware Solution set to produce an architecture that fits your needs and puts your organization on a path to sustainable scale.
 
-Enterprise scale for Azure VMware Solution provides these assets to support your project:
+Enterprise-scale for Azure VMware Solution provides these assets to support your project:
 
 - A modular approach, so that you can customize environment variables
 - Design guidelines to aid in evaluating critical decisions
@@ -48,13 +48,13 @@ The following articles provide guidelines for creating your landing zone:
 
 The Azure Resource Manager templates for Azure VMware Solution provide a collection of infrastructure-as-code templates for Azure Resource Manager and Bicep to deploy an Azure VMware Solution environment on Azure.
 
-You use Bicep templates to deploy infrastructure components such as Azure VMware Solution, virtual machines, networks, or storage to Azure. To get the templates, see the [Enterprise scale for Azure VMware Solution GitHub repository](https://github.com/Azure/Enterprise-Scale-for-AVS). This reference implementation deploys a simple version of an Azure VMware Solution implementation that resides in its own subscription. This subscription is within the online management group of an enterprise scale landing zone.
+You use Bicep templates to deploy infrastructure components such as Azure VMware Solution, virtual machines, networks, or storage to Azure. To get the templates, see the [Enterprise-scale for Azure VMware Solution GitHub repository](https://github.com/Azure/Enterprise-Scale-for-AVS). This reference implementation deploys a simple version of an Azure VMware Solution implementation that resides in its own subscription. This subscription is within the online management group of an enterprise-scale landing zone.
 
 ## Architecture
 
 The following architecture diagram is an example that shows design areas and best practices.
 
-[![Enterprise scale for Azure VMware Solution architecture](./media/avs-eslz-architecture.png)](./media/avs-eslz-architecture.png#lightbox)
+[![Enterprise-scale for Azure VMware Solution architecture](./media/avs-eslz-architecture.png)](./media/avs-eslz-architecture.png#lightbox)
 
 ## Next steps
 
