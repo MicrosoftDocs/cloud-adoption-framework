@@ -1,41 +1,41 @@
 ---
-title: Enterprise-scale support for Azure VMware Solution
-description: <<Describe how enterprise-scale can accelerate adoption of Azure VMware Solution.>>
-author: mhenry
+title: Enterprise scale for Microsoft Azure VMware Solution
+description: Learn how enterprise scale can accelerate the adoption of Microsoft Azure VMware Solution.
+author: pgandham
 ms.author: janet
-ms.date: 06/28/2021
+ms.date: 09/22/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Construction set for Azure VMware Solution enterprise-scale scenario
+# Enterprise scale for Microsoft Azure VMware Solution
 
-The Azure VMware Solution construction set is an open-source collection of Terraform templates that you can use to automate the deployment of an environment capable of hosting Azure VMware Solution. It can provide a specific architectural approach and reference implementation to prepare your enterprise-scale landing zones. The landing zones adhere to the architecture and best practices of the Cloud Adoption Framework.
+Enterprise scale for Azure VMware Solution is an open-source collection of Azure Resource Manager and Bicep templates. It represents the strategic design path and target technical state for an Azure VMware Solution deployment. This open-source solution provides an architectural approach and reference implementation to prepare Azure landing zone subscriptions for a scalable Azure VMware Solution. The implementation adheres to the architecture and best practices of the Cloud Adoption Framework's Azure landing zones, with a focus on the design principles of enterprise scale.
 
-Customers adopt Azure VMware Solution in various ways. The construction set can be adapted to produce an architecture that fits **your** way and puts your organization on a path to sustainable scale.
+The following guidance provides design considerations for implementing a scalable Azure VMware Solution in your landing zone. The design decisions your organization makes, based on this guidance, lays the groundwork for scalability.
 
-## To begin, implement an enterprise-scale landing zone
+Customers adopt Azure VMware Solution in various ways. You can adopt the enterprise scale for your Azure VMware Solution set to produce an architecture that fits *your* way and puts your organization on a path to sustainable scale.
 
-The Azure VMware Solution construction set assumes that an enterprise-scale landing zone has been successfully implemented. For more information on this prerequisite, review these articles:
+Enterprise scale for Azure VMware Solution provides these assets to support your project:
+
+- A modular approach, so that you can customize environment variables
+- Design guidelines to aid in evaluating critical decisions
+- Landing zone architecture
+- An implementation that includes:
+  - A deployable reference that can create the environment for your Azure VMware Solution deployment
+  - A Microsoft-approved Azure VMware Solution reference implementation to test the deployed environment
+
+## Prerequisites
+
+The Azure VMware Solution construction set assumes that you've successfully implemented an enterprise-scale landing zone. For more information on this prerequisite, see:
 
 - [Start with Cloud Adoption Framework enterprise-scale landing zones](../../ready/enterprise-scale/index.md)
 - [Implement Cloud Adoption Framework enterprise-scale landing zones in Azure](../../ready/enterprise-scale/implementation.md)
 
-## What the AKS construction set provides
-
-The construction set approach to landing zones provides these assets to support your project:
-
-- A modular approach, so that you can customize environment variables
-- Design guidelines to aid in evaluating critical decisions
-- The landing zone architecture
-- An implementation that includes:
-  - A deployable reference capable of creating the environment for your Azure VMware Solution deployment
-  - A Microsoft-approved Azure VMware Solution reference implementation to test the deployed environment
-
 ## Design guidelines
 
-These articles provide guidelines for creating your landing zone:
+The following articles provide guidelines for creating your landing zone:
 
 - [Azure VMware Solution enterprise-scale scenario](./eslz-identity-and-access-management.md)
 - [Network topology and connectivity for Azure VMware Solution enterprise-scale scenario](./eslz-network-topology-and-connectivity.md)
@@ -44,17 +44,21 @@ These articles provide guidelines for creating your landing zone:
 - [Security, governance, and compliance for Azure VMware Solution enterprise-scale scenario](./eslz-security-governance-and-compliance.md)
 - [Platform automation and DevOps for Azure VMware Solution enterprise-scale scenario](./eslz-platform-automation-and-devops.md)
 
-## Example conceptual reference architecture
+## Bicep and Azure Resource Manager templates
 
-The following conceptual reference architecture is an example that shows design areas and best practices.
+The Azure Resource Manager templates for Azure VMware Solution provide a collection of infrastructure-as-code templates for Azure Resource Manager and Bicep to deploy an Azure VMware Solution environment on Azure.
 
-TODO: Include RA image here
+You use Bicep templates to deploy infrastructure components such as Azure VMware Solution, virtual machines, networks, or storage to Azure. To get the templates, see the [Enterprise scale for Azure VMware Solution GitHub repository](https://github.com/Azure/Enterprise-Scale-for-AVS). This reference implementation deploys a simple version of an Azure VMware Solution implementation that resides in its own subscription. This subscription is within the online management group of an enterprise scale landing zone.
 
-## Obtain the Azure VMware Solution construction set
+## Architecture
 
-The Azure VMware Solution construction set is available here...
+The following architecture diagram is an example that shows design areas and best practices.
+
+[![Enterprise scale for Azure VMware Solution architecture](./media/avs-eslz-architecture.png)](./media/avs-eslz-architecture.png#lightbox)
 
 ## Next steps
 
-- Review the Azure VMware Solution construction set critical design areas to make complete considerations and recommendations for your Azure VMware Solution construction set architecture. See [Azure VMware Solution enterprise-scale scenario](./eslz-identity-and-access-management.md).
+Review the Azure VMware Solution construction set design recommendations to make considerations and recommendations for your Azure VMware Solution construction set architecture.
 
+> [!div class="nextstepaction"]
+> [Azure VMware Solution enterprise-scale scenario](./eslz-identity-and-access-management.md).

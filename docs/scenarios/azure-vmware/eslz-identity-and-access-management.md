@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Identity and access management for Azure VMware Solution enterprise-scale scenario
+# Enterprise-scale identity and access management for Azure VMware Solution
 
 This article builds on the information found in [Identity and access management](/azure/cloud-adoption-framework/ready/enterprise-scale/identity-and-access-management) and [Azure VMware Solution identity concepts](/azure/azure-vmware/concepts-identity).
 
