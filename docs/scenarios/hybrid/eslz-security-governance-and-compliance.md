@@ -49,7 +49,22 @@ An effective and well-designed [naming standard](https://docs.microsoft.com/en-u
 
 After you have created a taxonomy structure and agreed on naming standards it is recommended to apply tags to the Azure Arc enabled server resources. Once a server is registered in Azure it has a resource ID, it becomes part of a resource group within a subscription, and can benefit from standard Azure constructs such as [tags](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/arc-inventory-tagging). They provide the ability to add metadata to a resource to quickly locate it and automate operational tasks, as such they should be relevant to your day to day tasks as described in the [Cloud Adoption Framework tagging strategy](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging). However, it is a good practice to include a tag that reflects the hosting platform for the Azure Arc enabled resource.
 
+### Agent Health Management
+
+The Connected Machine agent is the key piece for Azure Arc-enabled servers, it contains several logical components that play a role in security, governance and management operations:
+
+- Hybrid Instance Metadata service that manages the connection to Azure and the connected machine's Azure identity.
+
+- Guest configuration agent used for policy enforcement and assessment.
+
+- Extension agent manages VM extensions, including install, uninstall, and upgrade.
+
+If a Connected Machine agent stops sending heartbeats to Azure and it becomes offline you will not be able to perform operational tasks on it. Hence, it is necessary to develop a plan to get notified and how you will respond.
+
+Azure Activity Log can be used to set up [resource health notifications](https://docs.microsoft.com/en-us/azure/service-health/resource-health-alert-monitor-guide) and be informed on current and historical health status of the Connected Machine agent by implementing a [query](https://docs.microsoft.com/en-us/azure/azure-arc/servers/plan-at-scale-deployment#phase-3-manage-and-operate).
+
 ### Policy management and reporting
+
 https://docs.microsoft.com/en-us/azure/role-based-access-control/scope-overview
 
 Create a resource health alert and azure advisor alert https://docs.microsoft.com/en-us/azure/azure-arc/servers/plan-at-scale-deployment#phase-3-manage-and-operate
