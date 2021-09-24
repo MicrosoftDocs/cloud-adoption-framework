@@ -1,5 +1,5 @@
 ---
-title: Platform automation and DevOps
+title: Platform automation and DevOps design area
 description: Design area guidance for platform automation and DevOps
 author: DominicAllen
 ms.author: doalle
@@ -11,3 +11,4 @@ ms.custom: internal
 ---
 
 # Design area: Platform automation and DevOps
+
