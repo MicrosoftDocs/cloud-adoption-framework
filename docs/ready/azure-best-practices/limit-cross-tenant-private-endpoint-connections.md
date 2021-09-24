@@ -112,7 +112,7 @@ This policy blocks the creation of private endpoints that are in a different sub
 
 #### Azure Data Factory
 
-To overcome [scenario one](#scenario-one-deny-private-endpoints-linked-to-services-in-other-tenants) on the managed virtual network of Data Factory, use the following [policy definition](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/DataFactory/params.policyDefinition.Deny-DataFactory-ManagedPrivateEndpoints.json):
+To overcome [scenario one](#deny-private-endpoints-linked-to-services-in-other-tenants) on the managed virtual network of Data Factory, use the following [policy definition](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/DataFactory/params.policyDefinition.Deny-DataFactory-ManagedPrivateEndpoints.json):
 
 ```json
 "if": {
@@ -146,7 +146,7 @@ We recommend assigning this policy to the top-level management group and use exe
 
 #### Azure Synapse
 
-Azure Synapse also uses managed virtual networks. We recommend applying a similar policy to the Data Factory policy for [scenario one](#scenario-one-deny-private-endpoints-linked-to-services-in-other-tenants). Azure Synapse doesn't provide a policy alias for managed private endpoints. However, there's a data exfiltration prevention feature, which can be enforced for workspaces using the following policy:
+Azure Synapse also uses managed virtual networks. We recommend applying a similar policy to the Data Factory policy for [scenario one](#deny-private-endpoints-linked-to-services-in-other-tenants). Azure Synapse doesn't provide a policy alias for managed private endpoints. However, there's a data exfiltration prevention feature, which can be enforced for workspaces using the following policy:
 
 ```json
 "if": {
