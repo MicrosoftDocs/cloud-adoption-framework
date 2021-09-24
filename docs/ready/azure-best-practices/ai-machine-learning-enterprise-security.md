@@ -47,7 +47,7 @@ When designing virtual networks, subnets, and private endpoints, consider the fo
 
 - In general, create separate subnets for Training and Scoring, and use the Training subnet for all private endpoints.
 
-- IP addressing: Compute instances need one private IP each. Compute clusters needs one private IP per node. AKS clusters need many private IP addresses, which are described in [Plan IP addressing for your AKS cluster](/azure/aks/configure-azure-cni#plan-ip-addressing-for-your-cluster). A separate subnet for at least AKS helps prevent IP address exhaustion.
+- IP addressing: Compute instances need one private IP each. Compute clusters need one private IP per node. AKS clusters need many private IP addresses, which are described in [Plan IP addressing for your AKS cluster](/azure/aks/configure-azure-cni#plan-ip-addressing-for-your-cluster). A separate subnet for at least AKS helps prevent IP address exhaustion.
 
 - The compute resources in the Training and Scoring subnets need to access the Storage account, Key Vault, and Container Registry. Create private endpoints for the Storage account, Key Vault, and Container Registry.
 
