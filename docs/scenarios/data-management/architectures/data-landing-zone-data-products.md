@@ -3,10 +3,10 @@ title: Enterprise-scale for analytics and AI data products in Azure
 description: Learn about enterprise-scale for analytics and AI data products in Azure.
 author: mboswell
 ms.author: mboswell
-ms.date: 06/08/2021
+ms.date: 09/21/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.custom: think-tank, e2e-data
 ---
 
 # Enterprise-scale for analytics and AI data products in Azure
@@ -143,4 +143,4 @@ A data product for analytics and data science might contain the services shown i
 
 ## Next steps
 
-[Frequently asked questions about enterprise-scale for analytics and AI in Azure](./frequently-asked-questions.md)
+[Overview of reference architectures for data management and analytics in Azure](./reference-architecture-overview.md)

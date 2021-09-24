@@ -49,7 +49,7 @@ Here are a few features you'll find:
 
 - [Azure IoT Hub](/azure/iot-hub)
 - [Azure IoT Hub Device Provisioning Service (DPS)](/azure/iot-dps)
-- [use our modern IoT Azure DevOps project to help with your work item management](https://azuredevopsdemogenerator.azurewebsites.net/?name=modiot)
+- [Use our modern IoT Azure DevOps project to help with your work item management](https://azuredevopsdemogenerator.azurewebsites.net/?name=modiot)
 
 ::: zone-end
 

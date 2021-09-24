@@ -7,6 +7,7 @@ ms.date: 06/21/2021
 ms.topic: include
 ms.service: cloud-adoption-framework
 ms.subservice: overview
+ms.custom: e2e-data-management, think-tank
 ---
 
 ## Data confidentiality classification scheme

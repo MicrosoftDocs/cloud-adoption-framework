@@ -4,9 +4,10 @@ description: Learn how to communicate your team's cloud strategy, such as a fina
 author: WendyRing
 ms.author: wering
 ms.service: cloud-adoption-framework
-ms.topic: conceptual 
+ms.topic: conceptual
 ms.date: 4/15/2021
-ms.custom: template-concept 
+ms.custom: template-concept
+ms.subservice: strategy
 ---
 
 # Share your strategy

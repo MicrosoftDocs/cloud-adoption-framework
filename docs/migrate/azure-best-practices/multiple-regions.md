@@ -6,7 +6,7 @@ ms.author: dermar
 ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: decision-guide
+ms.subservice: migrate
 ms.custom: internal
 ---
 
