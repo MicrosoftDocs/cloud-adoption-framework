@@ -29,12 +29,12 @@ For both scenarios, it's as simple as specifying the resource ID of the service 
 
 The following information gives you options to prevent the provisioning of private endpoints across Azure AD tenants.
 
-## Scenario one: Deny private endpoints linked to services in other tenants
+## Deny private endpoints linked to services in other tenants
 
-For the first scenario, a rogue administrator requires the following rights in a subscription in the customers Azure AD tenant.
+**Scenario one**: a rogue administrator requires the following rights in a subscription in the customers Azure AD tenant.
 
-1. **Microsoft.Network/virtualNetworks/join/action** rights on a subnet with **privateEndpointNetworkPolicies** set to **Disabled**.
-2. **Microsoft.Network/privateEndpoints/write** access to a resource group in the customer environment.
+- **Microsoft.Network/virtualNetworks/join/action** rights on a subnet with **privateEndpointNetworkPolicies** set to **Disabled**.
+- **Microsoft.Network/privateEndpoints/write** access to a resource group in the customer environment.
 
 With these rights, a rogue administrator can create a private endpoint in the customers Azure AD tenant. This private endpoint is linked to a service in a separate subscription and Azure AD tenant. This scenario is illustrated in Figure 1 as connection A.
 
@@ -198,9 +198,9 @@ These policies are now available as built-in.
 
 We recommend that you assign the policy to the top-level management group and use exemptions where required.
 
-## Scenario two: Deny connections from private endpoints created in other tenants
+## Deny connections from private endpoints created in other tenants
 
-In this scenario, a rogue administrator requires **write** rights on the service in the customer environment for which a private endpoint should be created.
+**Scenario two**: a rogue administrator requires **write** rights on the service in the customer environment for which a private endpoint should be created.
 
 With this right, a rogue administrator has the possibility to create a private endpoint in an external Azure AD tenant and subscription. This endpoint is linked to a service in the customer’s Azure AD tenant. This scenario is illustrated in Figure 1 as connection B.
 
