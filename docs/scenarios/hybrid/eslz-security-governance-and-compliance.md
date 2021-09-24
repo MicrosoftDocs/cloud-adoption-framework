@@ -49,6 +49,8 @@ An effective and well-designed [naming standard](https://docs.microsoft.com/en-u
 
 After you have created a taxonomy structure and agreed on naming standards it is recommended to apply tags to the Azure Arc enabled server resources. Once a server is registered in Azure it has a resource ID, it becomes part of a resource group within a subscription, and can benefit from standard Azure constructs such as [tags](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/arc-inventory-tagging). They provide the ability to add metadata to a resource to quickly locate it and automate operational tasks, as such they should be relevant to your day to day tasks as described in the [Cloud Adoption Framework tagging strategy](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging). However, it is a good practice to include a tag that reflects the hosting platform for the Azure Arc enabled resource.
 
+As part of a Landing Zone implementation, translate this naming conventions and structure into Azure Policies that can enforce the implemented tags and standard.
+
 ### Agent Health Management
 
 The Connected Machine agent is the key piece for Azure Arc-enabled servers, it contains several logical components that play a role in security, governance and management operations:
@@ -88,7 +90,7 @@ After you establish your tagging standards and bring on some of your assets, you
 
 ### Managed Identity
 
-Whilst the Azure Active Directory system assigned identity can only be used the update the status of the Azure Arc-enabled server (for example, the 'last seen' heartbeat), it is possible to allow an application on your server to use the system assigned identity to access Azure resources (for example, to request secrets from a key vault.) Consider which legitimate use-cases exist for server applications to access Azure resources and plan to control access for to these resources. 
+Whilst the Azure Active Directory system assigned identity can only be used the update the status of the Azure Arc-enabled server (for example, the 'last seen' heartbeat), it is possible to allow an application on your server to use the system assigned identity to access Azure resources (for example, to request secrets from a key vault.) Consider which legitimate use-cases exist for server applications to access Azure resources and plan to control access for to these resources.
 
 [Control which server applications can obtain access tokens](https://docs.microsoft.com/en-us/azure/azure-arc/servers/managed-identity-authentication)
 
@@ -107,6 +109,14 @@ The Azure Connected Machine agent uses public key authentication to communicate 
 ### Agent Provisioning
 
 - if using a [service principal](https://docs.microsoft.com/en-us/azure/azure-arc/servers/onboard-service-principal) to provision Azure arc-enabled servers, consider how to securely store and distribute the service principle secret. Consider using [Azure Key vault](https://docs.microsoft.com/en-us/azure/key-vault/) for this purpose.
+
+### Update Management
+
+With Azure Arc-enabled server it is possible to manage in Azure your enterprise estate with centralized management and monitoring at scale. More specifically, it provides alerts and recommendations to IT teams with full operational visibility that includes managing the updates of your Windows and Linux VM.
+
+Assessing and updating your operating systems should be part of your overall management strategy to maintain security compliance with Critical and Security updates as they are released. Use Update Management in Azure Automation as a long-term patching mechanism for both Azure and hybrid resources and leverage Azure Policy to ensure and enforce the Update Management configurations to all VMs, including your [Azure Arc-enabled servers](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/arc-update-management).
+
+You can also leverage [Azure Automanage](https://docs.microsoft.com/en-us/azure/automanage/automanage-virtual-machines), so there is no need to worry about the details of onboarding and maintaining best practices for Update Management on your Arc resources.
 
 ## Governance disciplines
 
