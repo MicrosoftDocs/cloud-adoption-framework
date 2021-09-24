@@ -95,7 +95,7 @@ The Azure Connected Machine agent uses public key authentication to communicate 
 
 ### Certificate Management
 
-Consider using Azure key vault to manage certificates on your Azure Arc-enabled servers. Azure arc-enabled servers have a managed identity which you can use for accessing Azure resources such a [Key Vault](https://docs.microsoft.com/en-us/azure/key-vault/general/overview) and for installing Azure VM extensions. The [Key Vault VM extension](https://techcommunity.microsoft.com/t5/itops-talk-blog/manage-certificates-on-your-hybrid-servers-using-azure-arc-key/ba-p/2142265) allows you to manage the certificate lifecycle on [Windows](https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/key-vault-windows) and [Linux](https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/key-vault-linux) machines
+Consider using Azure key vault to manage certificates on your Azure Arc-enabled servers. Azure arc-enabled servers have a managed identity which you can use for accessing Azure resources such a [Key Vault](https://docs.microsoft.com/en-us/azure/key-vault/general/overview) and for installing Azure VM extensions. The [Key Vault VM extension](https://techcommunity.microsoft.com/t5/itops-talk-blog/manage-certificates-on-your-hybrid-servers-using-azure-arc-key/ba-p/2142265) allows you to manage the certificate lifecycle on [Windows](https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/key-vault-windows) and [Linux}](https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/key-vault-linux) machines
 
 ## Governance disciplines
 
