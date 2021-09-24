@@ -47,11 +47,9 @@ When designing virtual networks, subnets, and private endpoints, consider the fo
 
 - In general, create separate subnets for Training and Scoring, and use the Training subnet for all private endpoints. Create private endpoints for the Storage account, Key Vault, and Container Registry.
 
-- Number of IP addresses. Compute instances need one private IP each. Compute clusters needs one private IP per node. AKS clusters need many private IP addresses, which are described in [Plan IP addressing for your AKS cluster](/azure/aks/configure-azure-cni#plan-ip-addressing-for-your-cluster). A separate subnet for at least AKS helps prevent IP address exhaustion.
+- Number of IP addresses: Compute instances need one private IP each. Compute clusters needs one private IP per node. AKS clusters need many private IP addresses, which are described in [Plan IP addressing for your AKS cluster](/azure/aks/configure-azure-cni#plan-ip-addressing-for-your-cluster). A separate subnet for at least AKS helps prevent IP address exhaustion.
 
 - The compute resources in the Training and Scoring subnets need access to the Storage account, Key Vault, and Container Registry.
-
-- 
 
 - For your Machine Learning workspace default storage, you need two private endpoints, one for Azure Blob storage, and another for Azure File storage. The workspace and Storage private endpoints should be in the same subnet if you use Azure Machine Learning studio.
 
@@ -263,7 +261,6 @@ Read more about Machine Learning security configurations:
 Read more about architectural considerations for deploying Machine Learning:
 
 - How team structure, environment, or regional constraints affect workspace setup: [Organize and set up Azure ML workspaces](/azure/cloud-adoption-framework/ready/azure-best-practices/ai-machine-learning-resource-organization)
-
 - Optimizations to manage compute costs and budget across teams and users: [Budget, cost, and quota management for Azure ML at organizational scale](/azure/cloud-adoption-framework/ready/azure-best-practices/optimize-ai-machine-learning-cost) 
 
 Learn about machine learning DevOps (MLOps), an organizational change that relies on a combination of people, process, and technology. The goal of MLOps is to deliver machine learning solutions in a more robust, reliable, and automated way. The [Machine learning DevOps guide](/azure/cloud-adoption-framework/ready/azure-best-practices/ai-machine-learning-mlops) summarizes learning from enterprises that adopted MLOps for Machine Learning.
