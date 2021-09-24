@@ -49,9 +49,11 @@ When designing virtual networks, subnets, and private endpoints, consider the fo
 
 - IP addressing: Compute instances need one private IP each. Compute clusters needs one private IP per node. AKS clusters need many private IP addresses, which are described in [Plan IP addressing for your AKS cluster](/azure/aks/configure-azure-cni#plan-ip-addressing-for-your-cluster). A separate subnet for at least AKS helps prevent IP address exhaustion.
 
-- The compute resources in the Training and Scoring subnets need access to the Storage account, Key Vault, and Container Registry. Create private endpoints for the Storage account, Key Vault, and Container Registry.
+- The compute resources in the Training and Scoring subnets need to access the Storage account, Key Vault, and Container Registry. Create private endpoints for the Storage account, Key Vault, and Container Registry.
 
-- Machine Learning workspace default storage needs two private endpoints, one for Azure Blob storage and another for Azure File storage. If you use Azure Machine Learning studio, the workspace and storage private endpoints should be in the same subnet.
+- Machine Learning workspace default storage needs two private endpoints, one for Azure Blob storage and another for Azure File storage.
+
+- If you use Azure Machine Learning studio, the workspace and storage private endpoints should be in the same subnet.
 
 - If you have multiple workspaces, use a virtual network for each workspace to create an explicit network boundary between workspaces.
 
@@ -243,7 +245,7 @@ If you don't want data scientists to provision compute resources, you can create
 
 ### Private endpoint-enabled workspace
 
-When using a compute instance with a private endpoint-enabled workspace, the compute instance rejects all public access from outside the virtual network. This configuration also prevents packet filtering.
+Use compute instances with a private endpoint-enabled workspace. The compute instance rejects all public access from outside the virtual network. This configuration also prevents packet filtering.
 
 ### Azure Policy support
 
