@@ -300,7 +300,7 @@ items:
               href: ready/azure-best-practices/connectivity-to-azure.md
             - name: Connectivity to Azure PaaS services
               href: ready/azure-best-practices/connectivity-to-azure-paas-services.md
-            - name: Limiting cross-tenant private endpoint connections
+            - name: Limit cross-tenant private endpoint connections
               href: ready/azure-best-practices/limiting-cross-tenant-pe-connections.md
             - name: Plan for inbound and outbound internet connectivity
               href: ready/azure-best-practices/plan-for-inbound-and-outbound-internet-connectivity.md
