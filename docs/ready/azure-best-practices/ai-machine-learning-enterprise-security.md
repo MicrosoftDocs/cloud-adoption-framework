@@ -275,5 +275,5 @@ Read more articles about architectural considerations for deploying Machine Lear
 
 - Learn about machine learning DevOps (MLOps), which uses a combination of people, process, and technology to deliver robust, reliable, and automated machine learning solutions.
   > [!div class="nextstepaction"]
-  > [Machine learning DevOps guide](/azure/cloud-adoption-framework/ready/azure-best-practices/ai-machine-learning-mlops). 
+  > [Machine learning DevOps guide](ai-machine-learning-mlops.md)
 
