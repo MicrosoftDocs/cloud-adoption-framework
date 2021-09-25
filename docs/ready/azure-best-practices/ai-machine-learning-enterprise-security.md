@@ -253,19 +253,27 @@ You can use Azure Policy to ensure that every compute cluster or instance is cre
 
 ## Next steps
 
-Read more about Machine Learning security configurations:
+Learn more about Machine Learning security configurations:
 
 - [Enterprise security and governance](/azure/machine-learning/concept-enterprise-security)
 - [Secure workspace resources using virtual networks](/azure/machine-learning/how-to-network-security-overview)
-
-Read more about architectural considerations for deploying Machine Learning:
-
-- How team structure, environment, or regional constraints affect workspace setup: [Organize and set up Azure ML workspaces](/azure/cloud-adoption-framework/ready/azure-best-practices/ai-machine-learning-resource-organization)
-- Optimizations to manage compute costs and budget across teams and users: [Budget, cost, and quota management for Azure ML at organizational scale](/azure/cloud-adoption-framework/ready/azure-best-practices/optimize-ai-machine-learning-cost) 
-
-Read the [Machine learning DevOps guide](/azure/cloud-adoption-framework/ready/azure-best-practices/ai-machine-learning-mlops) to learn about machine learning DevOps (MLOps). MLOps is an organizational change that relies on a combination of people, process, and technology. The goal of MLOps is to deliver machine learning solutions in a more robust, reliable, and automated way. The guide summarizes learning from organizations that adopted MLOps for enterprise-scale Machine Learning deployments.
 
 Get started with a Machine Learning template-based deployment:
 
 - [Azure Quickstart Templates (microsoft.com)](https://azure.microsoft.com/resources/templates/?resourceType=Microsoft.Machinelearningservices)
 - [Enterprise-Scale Analytics and AI - Data Landing Zone](https://github.com/Azure/data-landing-zone)
+
+Read more articles about architectural considerations for deploying Machine Learning:
+
+- Learn how team structure, environment, or regional constraints affect workspace setup.
+  > [!div class="nextstepaction"]
+  > [Organize and set up Azure Machine Learning environments](ai-machine-learning-resource-organization.md)
+
+- See how to manage compute costs and budget across teams and users.
+  > [!div class="nextstepaction"]
+  > [Budget, cost, and quota management for Azure ML at organizational scale](optimize-ai-machine-learning-cost.md) 
+
+- Learn about machine learning DevOps (MLOps), which uses a combination of people, process, and technology to deliver robust, reliable, and automated machine learning solutions.
+  > [!div class="nextstepaction"]
+  > [Machine learning DevOps guide](/azure/cloud-adoption-framework/ready/azure-best-practices/ai-machine-learning-mlops). 
+
