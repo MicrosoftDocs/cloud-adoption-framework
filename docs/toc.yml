@@ -278,7 +278,7 @@ items:
             href: ready/landing-zone/design-area/identity-access-management.md  
           - name: Considerations
             href: ready/landing-zone/design-area/iam-considerations.md
-          - name: recommendations
+          - name: Recommendations
             href: ready/landing-zone/design-area/iam-recommendations.md
           - name: Azure landing zone accelerator 
             href: ready/landing-zone/design-area/iam-accelerator.md
@@ -324,6 +324,8 @@ items:
               href: ready/azure-best-practices/connectivity-to-other-providers-oci.md   
         - name: Resource organization
           items:
+          - name: Overview
+            href: ready/landing-zone/design-area/resource-org-overview.md
           - name: Considerations
             href: ready/landing-zone/design-area/resource-org-consideration.md     
           - name: Recommendation

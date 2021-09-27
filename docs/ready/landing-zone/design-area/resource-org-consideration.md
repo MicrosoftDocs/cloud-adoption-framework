@@ -10,7 +10,8 @@ ms.subservice: ready
 ms.custom: internal
 ---
 
-# Design area: Resource organization
+# Resource organization considerations
+
 
 ## Define a management group hierarchy
 
