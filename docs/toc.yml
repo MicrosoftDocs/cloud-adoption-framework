@@ -80,9 +80,7 @@ items:
         href: scenarios/sap/index.md
       - name: Virtual desktops
         href: scenarios/wvd/index.md
-      - name: Adoption scenarios
-        href: scenarios/overview.md
-      - name: Retail industry scenario
+      - name: Retail industry
         href: industry/retail/index.md
 
     - name: Antipatterns to avoid
