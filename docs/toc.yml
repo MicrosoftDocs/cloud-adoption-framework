@@ -67,7 +67,23 @@ items:
         href: get-started/team/cloud-operations.md
 
     - name: Adoption scenarios
-      href: scenarios/overview.md
+      items:
+      - name: Overview
+        href: scenarios/overview.md
+      - name: Data management and analytics
+        href: scenarios/data-management/index.md
+      - name: Hybrid and multicloud
+        href: scenarios/hybrid/index.md
+      - name: Modern application platform
+        href: scenarios/aks/index.md
+      - name: SAP
+        href: scenarios/sap/index.md
+      - name: Virtual desktops
+        href: scenarios/wvd/index.md
+      - name: Adoption scenarios
+        href: scenarios/overview.md
+      - name: Retail
+        href: industry/retail/index.md
 
     - name: Antipatterns to avoid
       href: antipatterns/antipatterns-to-avoid.md
