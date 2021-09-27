@@ -24,16 +24,14 @@ As your hybrid and multicloud resources become part of Azure Resource Manager, t
 
 - **Resource consistency and inventory management:** organize your hybrid resources using Azure scopes of management and to locally organize them into a taxonomy. Apply tags to your non Azure deployments to add additional context that is relevant for your operations.
 - **Agent Health Management:** the Connected Machine Agent plays a critical role in your hybrid operations as it enables you to manage your Windows and Linux machines hosted outside of Azure and enforce governance policies, it is important to implement solutions that keep track of unresponsive agents.
-- **Agent Provisioning:** Define a strategy for provisioning the Azure arc-enabled servers agent secret management and consider the level and method of automation for [bulk enrollment](https://docs.microsoft.com/en-us/azure/azure-arc/servers/learn/quick-enable-hybrid-vm). Consider how to structure [pilot and production deployments](https://docs.microsoft.com/en-us/azure/azure-arc/servers/plan-at-scale-deployment) and establish a formal plan that considers the scope and plan for a deployment including objectives, selection criteria, success criteria, training plans, rollback and risks.
+- **Agent Provisioning:** Define a strategy for provisioning the Azure Arc-enabled servers agent secret management and consider the level and method of automation for [bulk enrollment](https://docs.microsoft.com/en-us/azure/azure-arc/servers/learn/quick-enable-hybrid-vm). Consider how to structure [pilot and production deployments](https://docs.microsoft.com/en-us/azure/azure-arc/servers/plan-at-scale-deployment) and establish a formal plan that considers the scope and plan for a deployment including objectives, selection criteria, success criteria, training plans, rollback and risks.
 - **Secret and certificate management:** Enable Key Vault to protect security principal accounts and encryption keys. Consider using Azure Key vault for certificate management on your Arc-enabled Servers
 - **Policy management and reporting:** define a governance plan for your hybrid servers and machines that translates into Azure Policies and remediation tasks.
-- **Data Residency:** Consider which Azure region you wish your Azure arc-enabled machines to be provisioned into, and understand the [metadata that is collected](https://docs.microsoft.com/en-us/azure/azure-arc/servers/data-residency) from theses machines.
-- **Network Security:** Private Link, point to network security?
+- **Data Residency:** Consider which Azure region you wish your Azure Arc-enabled machines to be provisioned into, and understand the [metadata that is collected](https://docs.microsoft.com/en-us/azure/azure-arc/servers/data-residency) from theses machines.
 - **Log management strategy:** plan for metrics and log collection of your hybrid resources into a Log Analytics workspace for further analysis and auditing.
 - **Threat protection and cloud security posture management:** introduce controls to detect security misconfigurations and track compliance. Also, use Azure's intelligence to protect your hybrid workloads against threats.
 - **Configuration management:** track changes on the operating system, application files and registry to identify operational and security issues on your on-premises and other clouds environments.
 - **Software Updates:** define a strategy to assess the status of available updates to maintain security compliance with critical and security updates of your operating systems.
-- **Backup and recovery strategy:**
 - **Role based access controls:** define administrative, operations, and engineering roles within the organization that will take care of day-two operations in the hybrid environment. Mapping each team to actions and responsibilities will  determine Azure role-based access control (RBAC) roles and configuration. Consider using a RACI matrix to support this effort and build controls into the management scope hierarchy that you define following the resource consistency and inventory management guidance.
 - **Identity:** Use a managed identity with Azure Arc-enabled servers and define a strategy for identifying which applications running on Arc-enabled servers can use the Azure service assigned identity to request an Azure AD token.
 
@@ -55,13 +53,14 @@ Azure Activity Log can be used to set up [resource health notifications](https:/
 
 ### Policy management and reporting
 
-https://docs.microsoft.com/en-us/azure/role-based-access-control/scope-overview
+Having a policy-driven governance is a foundational principal of cloud-native operations and Cloud Adoption Framework. [Azure Policy](https://docs.microsoft.com/en-us/azure/governance/policy/) provides the mechanism to enforce corporate standards and to assess compliance at scale. Through it, you can implement governance for consistency of deployments, compliance, control costs, and improve your security posture; with its compliance dashboard, you will get an aggregated view of the overall state as well as remediation capabilities. With Azure Arc you can even take it a step further as now Azure Policies can be assigned to Azure Arc-enabled infrastructure, this way you can apply the same set of policies across hybrid and multi-cloud resources to entirely manage governance and guarantee corporate compliance.
 
-Create a resource health alert and azure advisor alert https://docs.microsoft.com/en-us/azure/azure-arc/servers/plan-at-scale-deployment#phase-3-manage-and-operate
-Policy:
+After you have defined your tagging standards as well as your operational tooling, you should translate these decisions into policies to be assigned to your hybrid and multicloud resources, as described on [managing Azure Arc enabled servers with Azure Policy](../../manage/hybrid/server/best-practices/arc-policies-mma.md) and following best practices:
 
-- Guest Configuration
-- ARM policies
+- Enforce tagging and implement a remediation task.
+- Use an Azure Policy and Remediation tasks to onboard management services agents via the extention management feature.
+- Audit settins inside the machine using Azure Policy guest configuration.
+- [Azure Enforce organization standards and assess compliance at scale](https://docs.microsoft.com/en-us/azure/azure-arc/servers/security-controls-policy)
 
 ### Log management and reporting
 
@@ -89,11 +88,11 @@ The Azure Connected Machine agent uses public key authentication to communicate 
 
 ### Agent Provisioning
 
-- if using a [service principal](https://docs.microsoft.com/en-us/azure/azure-arc/servers/onboard-service-principal) to provision Azure arc-enabled servers, consider how to securely store and distribute the service principle secret. Consider using [Azure Key vault](https://docs.microsoft.com/en-us/azure/key-vault/) for this purpose.
+If using a [service principal](https://docs.microsoft.com/en-us/azure/azure-arc/servers/onboard-service-principal) to provision Azure Arc-enabled servers, consider how to securely store and distribute the service principle secret. Consider using [Azure Key vault](https://docs.microsoft.com/en-us/azure/key-vault/) for this purpose.
 
 ### Certificate Management
 
-Consider using Azure key vault to manage certificates on your Azure Arc-enabled servers. Azure arc-enabled servers have a managed identity which you can use for accessing Azure resources such a [Key Vault](https://docs.microsoft.com/en-us/azure/key-vault/general/overview) and for installing Azure VM extensions. The [Key Vault VM extension](https://techcommunity.microsoft.com/t5/itops-talk-blog/manage-certificates-on-your-hybrid-servers-using-azure-arc-key/ba-p/2142265) allows you to manage the certificate lifecycle on [Windows](https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/key-vault-windows) and [Linux}](https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/key-vault-linux) machines
+Consider using Azure key vault to manage certificates on your Azure Arc-enabled servers. Azure Arc-enabled servers have a managed identity which you can use for accessing Azure resources such a [Key Vault](https://docs.microsoft.com/en-us/azure/key-vault/general/overview) and for installing Azure VM extensions. The [Key Vault VM extension](https://techcommunity.microsoft.com/t5/itops-talk-blog/manage-certificates-on-your-hybrid-servers-using-azure-arc-key/ba-p/2142265) allows you to manage the certificate lifecycle on [Windows](https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/key-vault-windows) and [Linux}](https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/key-vault-linux) machines
 
 ### Update Management
 
@@ -102,17 +101,6 @@ With Azure Arc-enabled server it is possible to manage in Azure your enterprise 
 Assessing and updating your operating systems should be part of your overall management strategy to maintain security compliance with Critical and Security updates as they are released. Use Update Management in Azure Automation as a long-term patching mechanism for both Azure and hybrid resources and leverage Azure Policy to ensure and enforce the Update Management configurations to all VMs, including your [Azure Arc-enabled servers](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/arc-update-management).
 
 You can also leverage [Azure Automanage](https://docs.microsoft.com/en-us/azure/automanage/automanage-virtual-machines), so there is no need to worry about the details of onboarding and maintaining best practices for Update Management on your Arc resources.
-
-## Governance disciplines
-
-With a basic understanding of unified operations and Azure Arc, you can extend your disciplines of cloud governance to deployments hosted outside of your Azure environments.
-
-Security baselines are among the most common ways that you can expand your governance disciplines in a unified operations scenario. The following best practices will help preserve your security baseline across all environments:
-
-- [Collect and detect security data across clouds with Azure Security Center](/azure/security-center/quickstart-onboard-machines)
-- [Investigate and respond to security threats with Azure Sentinel](/azure/sentinel/tutorial-investigate-cases)
-- [Connect AWS accounts to Azure Defender](/azure/security-center/quickstart-onboard-aws)
-- [Connect GCP accounts to Azure Defender](/azure/security-center/quickstart-onboard-gcp)
 
 ## Next steps
 
