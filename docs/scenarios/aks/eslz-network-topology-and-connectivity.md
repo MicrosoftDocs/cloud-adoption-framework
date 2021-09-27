@@ -39,7 +39,7 @@ ms.custom: think-tank, e2e-aks
 - A service mesh provides capabilities like traffic management, resiliency, policy, security, strong identity, and observability. For more information, see the [selection criteria](/azure/aks/servicemesh-about#selection-criteria).
 - Global load-balancing mechanisms such as [Azure Traffic Manager](/azure/traffic-manager/traffic-manager-overview) and [Azure Front Door](/azure/frontdoor/front-door-overview) increase resiliency by routing traffic across multiple clusters, potentially in different Azure regions.
 - AKS sets up a network security group (NSG) on the subnet in which the cluster is deployed. Don't manually edit this NSG, but you can influence by configuring the services you deploy in AKS.
-- Consider using [NodeLocal DNSCache](https://kubernetes.io/docs/tasks/administer-cluster/nodelocaldns/) in Kubernetes clusters.
+
 
 ### Private clusters
 
