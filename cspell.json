@@ -7,5 +7,8 @@
     ],
     "words": [
         "migratable"
+    ],
+    "ignoreWords": [
+        "himds"
     ]
 }
