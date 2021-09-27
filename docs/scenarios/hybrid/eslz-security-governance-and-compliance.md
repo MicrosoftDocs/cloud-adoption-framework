@@ -53,14 +53,20 @@ Azure Activity Log can be used to set up [resource health notifications](https:/
 
 ### Policy management and reporting
 
-Having a policy-driven governance is a foundational principal of cloud-native operations and Cloud Adoption Framework. [Azure Policy](https://docs.microsoft.com/en-us/azure/governance/policy/) provides the mechanism to enforce corporate standards and to assess compliance at scale. Through it, you can implement governance for consistency of deployments, compliance, control costs, and improve your security posture; with its compliance dashboard, you will get an aggregated view of the overall state as well as remediation capabilities. With Azure Arc you can even take it a step further as now Azure Policies can be assigned to Azure Arc-enabled infrastructure, this way you can apply the same set of policies across hybrid and multi-cloud resources to entirely manage governance and guarantee corporate compliance.
+Having a policy-driven governance is a foundational principal of cloud-native operations and Cloud Adoption Framework. [Azure Policy](https://docs.microsoft.com/en-us/azure/governance/policy/) provides the mechanism to enforce corporate standards and to assess compliance at scale. Through it, you can implement governance for consistency of deployments, compliance, control costs, and improve your security posture; with its compliance dashboard, you will get an aggregated view of the overall state as well as remediation capabilities. Azure Arc-enabled servers support [Azure Policy](https://docs.microsoft.com/en-us/azure/governance/policy/overview) at the Azure Resource Management layer, and also within the individual server machine using [Guest Configuration Policies](https://docs.microsoft.com/en-us/azure/governance/policy/concepts/guest-configuration).
 
-After you have defined your tagging standards as well as your operational tooling, you should translate these decisions into policies to be assigned to your hybrid and multicloud resources, as described on [managing Azure Arc enabled servers with Azure Policy](../../manage/hybrid/server/best-practices/arc-policies-mma.md) and following best practices:
+Understand the [scope of Azure policy](https://docs.microsoft.com/en-us/azure/role-based-access-control/scope-overview) and where it can be applied (Management Group, subscription, resource group or individual resource level). Create a Management Group design in accordance with the recommended practices outlined in the [Cloud Adoption Framework Enterprise Scale](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/enterprise-scale/management-group-and-subscription-organization)
 
+- Determine what Azure policies are required by defining business, regulatory and security requirements for Azure Arc-enabled servers.
 - Enforce tagging and implement a remediation task.
+- Understand and evaluate the [Azure Policy built-in definitions for Azure Arc-enabled servers](https://docs.microsoft.com/en-us/azure/azure-arc/servers/policy-reference)
+- Understand and evaluate the built-in [Guest Configuration policies](https://docs.microsoft.com/en-us/azure/governance/policy/samples/built-in-policies#guest-configuration) and [initiatives](https://docs.microsoft.com/en-us/azure/governance/policy/samples/built-in-initiatives#guest-configuration).
+- Evaluate the need for creating [custom Guest configuration policies](https://docs.microsoft.com/en-us/azure/governance/policy/how-to/guest-configuration-create)
+- Define a monitoring and alerting policy that identifies [unhealthy Azure arc-enabled servers](https://docs.microsoft.com/en-us/azure/azure-arc/servers/plan-at-scale-deployment#phase-3-manage-and-operate).
+- Enable Azure Advisor alerts to identify Azure arc-enabled servers with [outdated agents installed](https://docs.microsoft.com/en-us/azure/azure-arc/servers/plan-at-scale-deployment#phase-3-manage-and-operate).
+- [Azure Enforce organization standards and assess compliance at scale](https://docs.microsoft.com/en-us/azure/azure-arc/servers/security-controls-policy).
 - Use an Azure Policy and Remediation tasks to onboard management services agents via the extention management feature.
-- Audit settins inside the machine using Azure Policy guest configuration.
-- [Azure Enforce organization standards and assess compliance at scale](https://docs.microsoft.com/en-us/azure/azure-arc/servers/security-controls-policy)
+- Enable [Azure Monitor](https://techcommunity.microsoft.com/t5/itops-talk-blog/azure-monitor-for-azure-arc-enabled-servers/ba-p/1566654) for compliance and operational monitoring of Azure Arc-enabled servers.
 
 ### Log management and reporting
 
