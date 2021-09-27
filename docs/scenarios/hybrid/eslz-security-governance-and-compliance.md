@@ -103,6 +103,15 @@ Design and plan your Log Analytics Workspace deployment, as it will be the conta
 
 ### Threat protection and cloud security posture management
 
+Azure Security Center provides an unified security-management platform segmented as a cloud security posture management (CSPM) and cloud workload protection platform (CWPP). As your security is only as strong as your weakest link it is important to protect the data and assets hosted in Azure and elsewhere, Azure Defender for servers extends these capabilities to Azure Arc-enabled servers and together with Microsoft Defender for Endpoint provide a comprehensice EDR.  To heighten security on your hybrid landing zone consider:
+
+- Use Azure Arc-enabled servers to onboard hybrid resources in Azure Defender.
+- Implement an Azure Policy to make sure all resources are compliant and its security data is collected into the Log Analytics workspaces.
+- Enable Azure Defender for all subscriptions, and use Azure Policy to ensure compliance.
+- Leverage security information and event management integration with Azure Security Center and Azure Sentinel.
+
+[Connect your non-Azure machines to Security Center](https://docs.microsoft.com/en-us/azure/security-center/quickstart-onboard-machines?pivots=azure-portal)
+
 ### Change Tracking and Inventory
 
 Centralizing logs drives additional reports that can be leveraged as additional layers of security and reduces the chances for gaps in observability. [Change Tracking and Inventory in Azure Automation](https://docs.microsoft.com/en-us/azure/automation/change-tracking/overview) forwards and collects the data in a Log Analytics workspace. When using  Azure Defender for servers you get File Integrity Monitoring (FIM) to examine and track software changes, Windows services and Linux daemos on your Azure Arc-enabled servers.
