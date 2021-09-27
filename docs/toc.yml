@@ -82,7 +82,7 @@ items:
         href: scenarios/wvd/index.md
       - name: Adoption scenarios
         href: scenarios/overview.md
-      - name: Retail
+      - name: Retail industry scenario
         href: industry/retail/index.md
 
     - name: Antipatterns to avoid
