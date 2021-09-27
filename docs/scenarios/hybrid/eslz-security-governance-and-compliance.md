@@ -66,13 +66,20 @@ If a Connected Machine agent stops sending heartbeats to Azure and it becomes of
 Azure Activity Log can be used to set up [resource health notifications](https://docs.microsoft.com/en-us/azure/service-health/resource-health-alert-monitor-guide) and be informed on current and historical health status of the Connected Machine agent by implementing a [query](https://docs.microsoft.com/en-us/azure/azure-arc/servers/plan-at-scale-deployment#phase-3-manage-and-operate).
 
 ### Policy management and reporting
-https://docs.microsoft.com/en-us/azure/role-based-access-control/scope-overview
 
-Create a resource health alert and azure advisor alert https://docs.microsoft.com/en-us/azure/azure-arc/servers/plan-at-scale-deployment#phase-3-manage-and-operate
-Policy:
+Azure Arc-enabled servers support [Azure Policy](https://docs.microsoft.com/en-us/azure/governance/policy/overview) at the Azure Resource Management layer, and also within the individual server machine using [Guest Configuration Policies](https://docs.microsoft.com/en-us/azure/governance/policy/concepts/guest-configuration). Azure Policy enables organisations to enforce standards and assess compliance at scale, and provides a governance mechanism for Azure arc-enabled servers.
 
-- Guest Configuration
-- ARM policies
+Understand the [scope of Azure policy](https://docs.microsoft.com/en-us/azure/role-based-access-control/scope-overview) and where it can be applied (Management Group, subscription, resource group or individual resource level). Create a Mangement Group design in accordance with the recommended practices outlined in the [Cloud Adoption Framework Enterpise Scale](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/enterprise-scale/management-group-and-subscription-organization)
+
+- Detemine what Azure policies are required by defining business, regulatory and security requirements for Azure arc-enabled servers
+- Understand and evaluate the [Azure Policy built-in defintions for Azure arc-enabled servers](https://docs.microsoft.com/en-us/azure/azure-arc/servers/policy-reference)
+- Understand and evaluate the built-in [Guest Configuration policies](https://docs.microsoft.com/en-us/azure/governance/policy/samples/built-in-policies#guest-configuration) and [initiatives](https://docs.microsoft.com/en-us/azure/governance/policy/samples/built-in-initiatives#guest-configuration)
+- evaulate the need for creating [custom Guest configuration policies](https://docs.microsoft.com/en-us/azure/governance/policy/how-to/guest-configuration-create)
+- Define a monitoring and alerting policy that identifies [unhealthy Azure arc-enabled servers](https://docs.microsoft.com/en-us/azure/azure-arc/servers/plan-at-scale-deployment#phase-3-manage-and-operate)
+- Enable Azure Advisor alerts to identify Azure arc-enabled servers with [outdated agents installed}(https://docs.microsoft.com/en-us/azure/azure-arc/servers/plan-at-scale-deployment#phase-3-manage-and-operate)
+- Evaluate which Azure [Virtual machine extensions](https://docs.microsoft.com/en-us/azure/azure-arc/servers/manage-vm-extensions) should be deployed to Azure arc-enabled servers
+- Enable [Azure monitor](https://techcommunity.microsoft.com/t5/itops-talk-blog/azure-monitor-for-azure-arc-enabled-servers/ba-p/1566654) for compliance and operational monitoring of Azure arc-enabled servers
+
 
 ### Log management and reporting
 
