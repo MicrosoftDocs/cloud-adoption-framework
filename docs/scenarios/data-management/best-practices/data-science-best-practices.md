@@ -7,7 +7,7 @@ ms.date: 08/06/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: think-tank, e2e-data
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Best practices for data science projects with enterprise-scale for analytics and AI in Azure
@@ -28,7 +28,8 @@ Following are guidelines on developing a data science template for your organiza
 
 ## Deployment best practices
 
-### Real-time 
+### Real-time
+
 - Include an Azure Data Factory or Azure Synapse deployment in templates and Cognitive Services.
 
 - The templates should provide all necessary tools to execute the data science exploration phase and the initial operationalization of the model.
@@ -46,7 +47,8 @@ Templates should be deployed on a per-project basis after they've been set up. E
 The same access rights typically apply to different types of artifacts. So, it's important to separate development from production to prevent production pipelines or endpoints from being deleted within a workspace. Along with the template, a process needs to be built to give data product teams the option to request new environments.
 
 We recommend setting up different AI services like Azure Cognitive Services on a per-project basis. The result is deployments occur for each data product resource group. It creates a clear separation from a data access standpoint and mitigates the risk of unauthorized data access by the wrong teams.
-streaming scenario
+
+### Streaming scenario
 
 For streaming and real-time use cases, deployments should be tested on a downsized [Azure Kubernetes Service (AKS)](/azure/aks/). The testing can be in the development environment to save on costs before you deploy to the production AKS or Azure App Service for containers. Simple input and output tests should be performed to make sure that the services respond as expected.
 

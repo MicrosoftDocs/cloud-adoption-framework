@@ -6,7 +6,7 @@ ms.author: brblanch
 ms.date: 03/22/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: manage
+ms.subservice: strategy
 ms.custom: think-tank
 ---
 

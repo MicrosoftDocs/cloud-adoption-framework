@@ -1,12 +1,14 @@
 ---
-title: Azure Machine Learning as a data product for enterprise-scale for analytics and AI 
+title: Azure Machine Learning as a data product for enterprise-scale for analytics and AI
 description: Learn about Azure Machine Learning as a data product for enterprise-scale for analytics and AI.
 author: abdale
 ms.author: deeikele
 ms.date: 09/22/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
+ms.subservice: ready
 ms.custom: think-tank, e2e-data
+
 ---
 
 # Azure Machine Learning as a data product for enterprise-scale for analytics and AI
@@ -145,3 +147,4 @@ See the following CAF documentation to learn more about Azure Machine Learning d
 ## Next steps
 
 [SAP ingestion with enterprise-scale for analytics and AI in Azure](./sap-data-ingestion.md)
+

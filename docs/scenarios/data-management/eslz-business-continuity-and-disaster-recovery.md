@@ -1,5 +1,5 @@
 ---
-title: Business continuity and disaster recovery for data management and analytics 
+title: Business continuity and disaster recovery for data management and analytics
 description: Learn how this enterprise-scale scenario can improve business continuity and disaster recovery for data management and analytics in Azure.
 author: christophermschmidt
 ms.author: chrschm
@@ -7,6 +7,7 @@ ms.date: 07/19/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Business continuity and disaster recovery for data management and analytics
@@ -71,7 +72,7 @@ For an overview of business continuity with Azure SQL Database, see [Overview of
 
 ### Azure Synapse Analytics
 
-For an overview of business continuity with Azure Synapse Analytics, see [High availability for Azure Synapse Analytics](/azure/cloud-adoption-framework/migrate/azure-best-practices/analytics/azure-synapse).
+For an overview of business continuity with Azure Synapse Analytics, see [High availability for Azure Synapse Analytics](../../migrate/azure-best-practices/analytics/azure-synapse.md).
 
 ## Next steps
 

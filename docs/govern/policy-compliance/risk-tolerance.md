@@ -21,7 +21,7 @@ This article is not focused on cloud risks. Instead it discusses the business ri
 True business risks are based on the details of specific transformations. Several common risks provide a conversation starter to understand business-specific risks.
 
 > [!IMPORTANT]
-> Before reading the following, be aware that each of these risks can be managed. The goal of this article is to inform and prepare readers for more productive risk management discussions.
+> Before reading the following guidance, be aware that these risks can be managed. This article is intended to inform and prepare readers for more productive risk management discussions.
 
 - **Data breach:** The top risk associated with any transformation is a data breach. Data leaks can cause significant damage to your company, leading to loss of customers, decrease in business, or even legal liability. Any changes to the way data is stored, processed, or used creates risk. Cloud transformations create a high degree of change regarding data management and analytics, so the risk should not be taken lightly. The [Security Baseline discipline](../security-baseline/index.md), [data classification](./data-classification.md), and [incremental rationalization](../../digital-estate/rationalize.md#incremental-rationalization) can each help manage this risk.
 
@@ -47,7 +47,7 @@ The next section shares a few sample questions that could help the business dete
 
 ## Risk tolerance questions
 
-This section lists conversation provoking questions in three categories: loss impact, probability of loss, and remediation costs. When business and IT partner to address each of these areas, the decision to expend effort on managing risks and the overall tolerance to a particular risk can easily be determined.
+This section lists conversation provoking questions in three categories: loss impact, probability of loss, and remediation costs. When business and IT partner to address these areas, the decision to expend effort on managing risks and the overall tolerance to a particular risk can easily be determined.
 
 **Loss impact:** Questions to determine the impact of a risk. These questions can be difficult to answer. Quantifying the impact is best, but sometimes the conversation alone is enough to understand tolerance. Ranges are also acceptable, especially if they include assumptions that determined those ranges.
 
