@@ -45,54 +45,34 @@ Before onboarding any machine onto Azure Arc it is important to define a structu
 
 When designing this structure be aware of [Azure Resource Manager service limits](https://docs.microsoft.com/en-us/azure/azure-arc/servers/agent-overview#azure-subscription-and-service-limits), as they are also applicable to Azure Arc enabled servers and it is important to plan for the number of machines to be connected to an specific [resource group](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits#resource-group-limits) or [subscription](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits#subscription-limits).
 
-An effective and well-designed [naming standard](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources?tabs=NamingStandards) that enables you to identify resources easily is key in any inventory management strategy. Make sure to align this naming standard with your already existing hybrid infrastructure as those resources will be part of your global inventory in Azure. Verify that the Linux hostname or Windows computer name of your hybrid resources do not use [Azure's reserved words or trademarks](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/error-reserved-resource-name) as attempting to register the connected machine with Azure will fail.
-
-After you have created a taxonomy structure and agreed on naming standards it is recommended to apply tags to the Azure Arc enabled server resources. Once a server is registered in Azure it has a resource ID, it becomes part of a resource group within a subscription, and can benefit from standard Azure constructs such as [tags](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/arc-inventory-tagging). They provide the ability to add metadata to a resource to quickly locate it and automate operational tasks, as such they should be relevant to your day to day tasks as described in the [Cloud Adoption Framework tagging strategy](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging). However, it is a good practice to include a tag that reflects the hosting platform for the Azure Arc enabled resource.
-
-As part of a Landing Zone implementation, translate this naming conventions and structure into Azure Policies that can enforce the implemented tags and standard.
+After you have created a taxonomy structure and agreed on naming standards it is recommended to apply tags to the Azure Arc enabled server resources. Once a server is registered in Azure it has a resource ID, it becomes part of a resource group within a subscription, and can benefit from standard Azure constructs such as [tags](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/arc-inventory-tagging). They provide the ability to add metadata to a resource to quickly locate it and automate operational tasks, as such they should be relevant to your day to day tasks as described in the [Cloud Adoption Framework tagging strategy](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging). However, it is a good practice to include a tag that reflects the `hosting platform` for the Azure Arc enabled resource.
 
 ### Agent Health Management
 
-The Connected Machine agent is the key piece for Azure Arc-enabled servers, it contains several logical components that play a role in security, governance and management operations:
-
-- Hybrid Instance Metadata service that manages the connection to Azure and the connected machine's Azure identity.
-
-- Guest configuration agent used for policy enforcement and assessment.
-
-- Extension agent manages VM extensions, including install, uninstall, and upgrade.
-
-If a Connected Machine agent stops sending heartbeats to Azure and it becomes offline you will not be able to perform operational tasks on it. Hence, it is necessary to develop a plan to get notified and how you will respond.
+The Connected Machine agent is the key piece for Azure Arc-enabled servers, it contains several logical components that play a role in security, governance and management operations. If a Connected Machine agent stops sending heartbeats to Azure and it becomes offline you will not be able to perform operational tasks on it. Hence, it is necessary to develop a plan to get notified and how you will respond.
 
 Azure Activity Log can be used to set up [resource health notifications](https://docs.microsoft.com/en-us/azure/service-health/resource-health-alert-monitor-guide) and be informed on current and historical health status of the Connected Machine agent by implementing a [query](https://docs.microsoft.com/en-us/azure/azure-arc/servers/plan-at-scale-deployment#phase-3-manage-and-operate).
 
 ### Policy management and reporting
 
-Azure Arc-enabled servers support [Azure Policy](https://docs.microsoft.com/en-us/azure/governance/policy/overview) at the Azure Resource Management layer, and also within the individual server machine using [Guest Configuration Policies](https://docs.microsoft.com/en-us/azure/governance/policy/concepts/guest-configuration). Azure Policy enables organisations to enforce standards and assess compliance at scale, and provides a governance mechanism for Azure arc-enabled servers.
+Azure Arc-enabled servers support [Azure Policy](https://docs.microsoft.com/en-us/azure/governance/policy/overview) at the Azure Resource Management layer, and also within the individual server machine using [Guest Configuration Policies](https://docs.microsoft.com/en-us/azure/governance/policy/concepts/guest-configuration). Azure Policy enables organizations to enforce standards and assess compliance at scale, and provides a governance mechanism for Azure arc-enabled servers.
 
-Understand the [scope of Azure policy](https://docs.microsoft.com/en-us/azure/role-based-access-control/scope-overview) and where it can be applied (Management Group, subscription, resource group or individual resource level). Create a Mangement Group design in accordance with the recommended practices outlined in the [Cloud Adoption Framework Enterpise Scale](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/enterprise-scale/management-group-and-subscription-organization)
+Understand the [scope of Azure policy](https://docs.microsoft.com/en-us/azure/role-based-access-control/scope-overview) and where it can be applied (Management Group, subscription, resource group or individual resource level). Create a Management Group design in accordance with the recommended practices outlined in the [Cloud Adoption Framework Enterprise Scale](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/enterprise-scale/management-group-and-subscription-organization)
 
-- Detemine what Azure policies are required by defining business, regulatory and security requirements for Azure arc-enabled servers
-- Understand and evaluate the [Azure Policy built-in defintions for Azure arc-enabled servers](https://docs.microsoft.com/en-us/azure/azure-arc/servers/policy-reference)
+- Determine what Azure policies are required by defining business, regulatory and security requirements for Azure arc-enabled servers
+- Understand and evaluate the [Azure Policy built-in definitions for Azure arc-enabled servers](https://docs.microsoft.com/en-us/azure/azure-arc/servers/policy-reference)
 - Understand and evaluate the built-in [Guest Configuration policies](https://docs.microsoft.com/en-us/azure/governance/policy/samples/built-in-policies#guest-configuration) and [initiatives](https://docs.microsoft.com/en-us/azure/governance/policy/samples/built-in-initiatives#guest-configuration)
-- evaulate the need for creating [custom Guest configuration policies](https://docs.microsoft.com/en-us/azure/governance/policy/how-to/guest-configuration-create)
+- evaluate the need for creating [custom Guest configuration policies](https://docs.microsoft.com/en-us/azure/governance/policy/how-to/guest-configuration-create)
 - Define a monitoring and alerting policy that identifies [unhealthy Azure arc-enabled servers](https://docs.microsoft.com/en-us/azure/azure-arc/servers/plan-at-scale-deployment#phase-3-manage-and-operate)
-- Enable Azure Advisor alerts to identify Azure arc-enabled servers with [outdated agents installed}(https://docs.microsoft.com/en-us/azure/azure-arc/servers/plan-at-scale-deployment#phase-3-manage-and-operate)
+- Enable Azure Advisor alerts to identify Azure arc-enabled servers with [outdated agents installed](https://docs.microsoft.com/en-us/azure/azure-arc/servers/plan-at-scale-deployment#phase-3-manage-and-operate)
 - Evaluate which Azure [Virtual machine extensions](https://docs.microsoft.com/en-us/azure/azure-arc/servers/manage-vm-extensions) should be deployed to Azure arc-enabled servers
 - Enable [Azure monitor](https://techcommunity.microsoft.com/t5/itops-talk-blog/azure-monitor-for-azure-arc-enabled-servers/ba-p/1566654) for compliance and operational monitoring of Azure arc-enabled servers
 
-
 ### Log management and reporting
 
-https://docs.microsoft.com/en-us/azure/azure-monitor/logs/design-logs-deployment
-Well-defined governance starts with sound resource consistency practices. Organizing resources, resource groups, subscriptions, and [management groups allows for ease of governance](/azure/governance/management-groups/overview). Expand your cloud governance practices with a few steps:
+Design and plan your Log Analytics Workspace deployment, as it will be the container where data is collected, aggregated and later analyzed. As the Log Analytics Workspace represents a geographical location of your data, a level of isolation and a scope for configurations like data retention you will have to identify the number of workspaces needed and how it maps to your organizational structure.
 
-- Add a tag for `hosting platform` to all hybrid, multicloud, and edge assets.
-- Tag resources from AWS, GCP, and so on.
-- Query your resources to see where each is hosted.
-
-To get started, [inventory and tag your hybrid and multicloud resources](../../manage/hybrid/server/best-practices/arc-inventory-tagging.md).
-
-After you establish your tagging standards and bring on some of your assets, you can begin governing those resources by using familiar governance tools like Azure Policy. To assign policies to your hybrid and multicloud resources, see the recommended practices on [managing Azure Arc enabled servers with Azure Policy](../../manage/hybrid/server/best-practices/arc-policies-mma.md).
+[Designing your Azure Monitor Logs deployment](https://docs.microsoft.com/en-us/azure/azure-monitor/logs/design-logs-deployment)
 
 ### Managed Identity
 
