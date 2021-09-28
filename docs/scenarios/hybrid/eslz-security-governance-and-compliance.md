@@ -22,21 +22,21 @@ By the end of this article, you will understand the critical design areas for se
 
 As your hybrid and multicloud resources become part of Azure Resource Manager, they can be managed and governed with Azure tools just as Azure native VMs.
 
-- **Resource consistency and inventory management:** organize your hybrid resources using [Azure scopes of management](https://docs.microsoft.com/en-us/azure/role-based-access-control/scope-overview) and to locally organize them into a [taxonomy](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources?tabs=json). Apply tags to your non Azure deployments to add additional context that is relevant for your operations.
+- **Resource consistency and inventory management:** Organize your hybrid resources using [Azure scopes of management](https://docs.microsoft.com/en-us/azure/role-based-access-control/scope-overview) and to locally organize them into a [taxonomy](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources?tabs=json). Apply tags to your non Azure deployments to add additional context that is relevant for your operations.
 - **Agent Provisioning:** Define a strategy for provisioning the Azure Arc-enabled servers and for agent secret management. Consider the level and method of automation for [bulk enrollment](https://docs.microsoft.com/en-us/azure/azure-arc/servers/learn/quick-enable-hybrid-vm). Consider how to structure [pilot and production deployments](https://docs.microsoft.com/en-us/azure/azure-arc/servers/plan-at-scale-deployment) and establish a formal plan that takes into account the scope and plan for a deployment including objectives, selection criteria, success criteria, training plans, rollback and risks.
-- **Agent Management:** the Connected Machine Agent plays a critical role in your hybrid operations as it enables you to manage your Windows and Linux machines hosted outside of Azure and enforce governance policies, it is important to implement solutions that keep track of unresponsive agents.
-- **Agent Security permissions:** secure access to the Connected Machine agent
+- **Agent Management:** The Connected Machine Agent plays a critical role in your hybrid operations as it enables you to manage your Windows and Linux machines hosted outside of Azure and enforce governance policies, it is important to implement solutions that keep track of unresponsive agents.
+- **Agent Security permissions:** Secure access to the Connected Machine agent
 - **Managed Identity:** Use a managed identity with Azure Arc-enabled servers and define a strategy for identifying which applications running on Arc-enabled servers can use the Azure service assigned identity to request an Azure AD token.
 - **Secret and certificate management:** Enable Key Vault to protect security principal accounts and encryption keys. Consider using Azure Key vault for certificate management on your Arc-enabled Servers
-- **Policy management and reporting:** define a governance plan for your hybrid servers and machines that translates into Azure Policies and remediation tasks.
+- **Policy management and reporting:** Define a governance plan for your hybrid servers and machines that translates into Azure Policies and remediation tasks.
 - **Data Residency:** consider which Azure region you wish your Azure Arc-enabled machines to be provisioned into, and understand the [metadata that is collected](https://docs.microsoft.com/en-us/azure/azure-arc/servers/data-residency) from theses machines.
-- **Log management strategy:** plan for metrics and log collection of your hybrid resources into a Log Analytics workspace for further analysis and auditing.
-- **Threat protection and cloud security posture management:** introduce controls to detect security misconfigurations and track compliance. Also, use [Azure's intelligence](https://docs.microsoft.com/en-us/azure/sentinel/overview) to protect your hybrid workloads against threats. [Enable Azure Security Center](https://docs.microsoft.com/en-us/azure/security-center/security-center-get-started) for all subscriptions containing Azure Arc-enabled servers for security baseline monitoring, security posture management and threat protection.
-- **Change Tracking and Inventory:** track changes on the operating system, application files and registry to identify operational and security issues on your on-premises and other clouds environments.
-- **Software Updates:** define a strategy to assess the status of available updates to maintain security compliance with critical and security updates of your operating systems.
-- **Role based access controls:** define administrative, operations, and engineering roles within the organization that will take care of day-to-day operations in the hybrid environment. Mapping each team to actions and responsibilities will  determine Azure role-based access control (RBAC) roles and configuration. Consider using a [RACI](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/organize/raci-alignment) matrix to support this effort and build controls into the management scope hierarchy that you define following the resource consistency and inventory management guidance.
+- **Log management strategy:** Plan for metrics and log collection of your hybrid resources into a Log Analytics workspace for further analysis and auditing.
+- **Threat protection and cloud security posture management:** Introduce controls to detect security misconfigurations and track compliance. Also, use [Azure's intelligence](https://docs.microsoft.com/en-us/azure/sentinel/overview) to protect your hybrid workloads against threats. [Enable Azure Security Center](https://docs.microsoft.com/en-us/azure/security-center/security-center-get-started) for all subscriptions containing Azure Arc-enabled servers for security baseline monitoring, security posture management and threat protection.
+- **Change Tracking and Inventory:** Track changes on the operating system, application files and registry to identify operational and security issues on your on-premises and other clouds environments.
+- **Software Updates:** Define a strategy to assess the status of available updates to maintain security compliance with critical and security updates of your operating systems.
+- **Role based access controls:** Define administrative, operations, and engineering roles within the organization that will take care of day-to-day operations in the hybrid environment. Mapping each team to actions and responsibilities will  determine Azure role-based access control (RBAC) roles and configuration. Consider using a [RACI](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/organize/raci-alignment) matrix to support this effort and build controls into the management scope hierarchy that you define following the resource consistency and inventory management guidance.
 - **Business continuity and disaster recovery:** Review the [business continuity and disaster recovery](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/enterprise-scale/business-continuity-and-disaster-recovery) guidance for Enterprise scale landing zones to determine if your enterprise requirements are met.
-- **Disk Encryption:** secure the Connected Machine agent public key authentication to communicate with the Azure service.
+- **Disk Encryption:** Secure the Connected Machine agent public key authentication to communicate with the Azure service.
 
 ## Design recommendations
 
@@ -93,8 +93,6 @@ Understand the [scope of Azure policy](https://docs.microsoft.com/en-us/azure/ro
 - Use an Azure Policy and Remediation tasks to onboard management services agents via the extension management feature.
 - Enable [Azure Monitor](https://techcommunity.microsoft.com/t5/itops-talk-blog/azure-monitor-for-azure-arc-enabled-servers/ba-p/1566654) for compliance and operational monitoring of Azure Arc-enabled servers.
 
-### Data residency
-
 ### Log management strategy
 
 Design and plan your Log Analytics Workspace deployment, as it will be the container where data is collected, aggregated and later analyzed. As the Log Analytics Workspace represents a geographical location of your data, a level of isolation and a scope for configurations like data retention you will have to identify the number of workspaces needed and how it maps to your organizational structure.
@@ -125,8 +123,6 @@ Assessing and updating your operating systems should be part of your overall man
 You can also use [Azure Automanage](https://docs.microsoft.com/en-us/azure/automanage/automanage-virtual-machines), so there is no need to worry about the details of onboarding and maintaining best practices for Update Management on your Arc resources.
 
 ### Role based access controls
-
-### Business continuity and disaster recovery
 
 ### Disk encryption
 
