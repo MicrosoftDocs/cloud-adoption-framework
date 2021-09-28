@@ -6,7 +6,8 @@ ms.author: janet
 ms.date: 09/15/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
+ms.custom: e2e-azure-vmware, think-tank
 ---
 
 # Management and monitoring for an Azure VMware Solution enterprise-scale scenario
@@ -25,8 +26,8 @@ Review the following considerations for platform management and monitoring of Az
 
 - vSAN storage is a finite resource, so you need to manage vSAN capacity. Use vSAN storage for guest virtual machine (VM) workloads only. Examine the following design considerations to help reduce unnecessary storage on vSAN.
 
-  - [Configure content libraries on Azure Blob storage](https://avs.ms/centralized-avs-content-library-on-azure-blob/) to move VM template storage off of vSAN.
-  - Store backups on an Azure virtual machine, either with [first party tooling](/azure/azure-vmware/set-up-backup-server-for-azure-vmware-solution) or choose a [third party vendor](/azure/azure-vmware/ecosystem-back-up-vms).
+  - [Configure content libraries on Azure Blob Storage](https://avs.ms/centralized-avs-content-library-on-azure-blob/) to move VM template storage off of vSAN.
+  - Store backups on an Azure virtual machine, either with [Microsoft tooling](/azure/azure-vmware/set-up-backup-server-for-azure-vmware-solution) or choose a [partner vendor](/azure/azure-vmware/ecosystem-back-up-vms).
 
 - Azure VMware Solution uses a local identity provider. After deployment, use a single administrative user account for the initial Azure VMware Solution configurations. Integrating Azure VMware Solution with [Active Directory](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.psc.doc/GUID-B23B1360-8838-4FF2-B074-71643C4CB040.html) enables traceability of actions to users. Review guidance from the identity portion <!-- link to CDA for identity after finalized --> of the enterprise-scale landing zone documentation.
 
@@ -45,7 +46,7 @@ Review the following recommendations for platform management and monitoring of A
     | Monitor and alert on % CPU | >80% warning |
     | Monitor and alert on average memory usage | >80% warning |
 
-- For service-level agreement (SLA) purposes, Azure VMware Solution requires that the cluster keeps a slack space of 25 percent available on vSAN.
+- For service-level agreement (SLA) purposes, Azure VMware Solution requires that the cluster keep slack space of 25 percent available on vSAN.
 
 - Integrate the Azure VMware Solution vCenter with an existing identity provider<!-- link to identity CDA after completed -->.
 
@@ -53,8 +54,8 @@ Review the following recommendations for platform management and monitoring of A
 
 - Configure two connection monitors in [Azure Network Watcher](/azure/network-watcher/network-watcher-monitoring-overview) to monitor connectivity.
 
-  - [Configure the first connection monitor](/azure/network-watcher/connection-monitor-create-using-portal) between an Azure-based resource and an Azure VMware Solution based VM. This monitor lets you see the availability and performance of the network connection between Azure and Azure VMware Solution over ExpressRoute.
-  - [Configure the second connection monitor](/azure/network-watcher/connection-monitor-create-using-portal) between an on-premises based VM and an Azure VMware Solution based VM. This monitor lets you see the availability and performance of network connections between on-premises and Azure VMware Solution over ExpressRoute Global Reach.
+  - [Configure the first Connection Monitor](/azure/network-watcher/connection-monitor-create-using-portal) between an Azure-based resource and an Azure VMware Solution-based VM. This monitor lets you see the availability and performance of the network connection between Azure and Azure VMware Solution over ExpressRoute.
+  - [Configure the second Connection Monitor](/azure/network-watcher/connection-monitor-create-using-portal) between an on-premises-based VM and an Azure VMware Solution-based VM. This monitor lets you see the availability and performance of network connections between on-premises and Azure VMware Solution over ExpressRoute Global Reach.
 
 ## Guest workload management and monitoring
 

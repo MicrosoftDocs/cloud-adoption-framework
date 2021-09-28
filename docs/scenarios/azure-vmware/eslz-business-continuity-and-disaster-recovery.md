@@ -7,14 +7,14 @@ ms.date: 09/16/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
-ms.custom: think-tank, e2e-avs
+ms.custom: think-tank, e2e-azure-vmware
 ---
 
 # Business continuity and disaster recovery (BCDR) for Azure VMware Solution enterprise-scale scenario
 
-[Azure VMware Solution](/azure/azure-vmware/) provides one or more [private clouds](/azure/azure-vmware/concepts-private-clouds-clusters) that contain vSphere clusters. These clusters are built from dedicated bare-metal Azure infrastructure. The solution provides a minimum of three ESXi hosts, up to a maximum of 16 hosts per cluster. Up to 96 hosts can be run in one private cloud. vCenter Server, vSAN, vSphere, and NSX-T are all provided as part of the private cloud solution. Although Azure VMware Solution has a service-level agreement (SLA) of 99.9 percent, it's always wise to consider other BCDR factors.
+[Azure VMware Solution](/azure/azure-vmware/) provides one or more [private clouds](/azure/azure-vmware/concepts-private-clouds-clusters) that contain vSphere clusters. These clusters are built from dedicated bare-metal Azure infrastructure. The solution provides a minimum of three ESXi hosts, up to a maximum of 16 hosts per cluster. Up to 96 hosts can be run in one private cloud. vCenter Server, vSAN, vSphere, and NSX-T are all provided as part of the private cloud solution. To learn about the SLA for Azure VMware Solution, see [SLA for Azure VMware Solution](/support/legal/sla/azure-vmware/v1_1/). You'll still want to consider other BCDR factors.
 
-:::image type="content" source="../_images/eslz-bcdr-1.png" alt-text="Diagram that shows a BCDR flow chart." border="false":::
+:::image type="content" source="../_images/eslz-bcdr-1.png" alt-text="Diagram that shows a BCDR flow chart." border="false"lightbox="../_images/eslz-bcdr-1.png":::
 
 ## Business continuity design considerations
 
@@ -31,7 +31,7 @@ ms.custom: think-tank, e2e-avs
 
 - Use MABS to back up the Azure VMware Solution private cloud. For more information, see [Back up VMware VMs with MABS](/azure/backup/backup-azure-backup-server-vmware?context=/azure/azure-vmware/context/context).
 - Deploy the Azure Backup Server in the same Azure region as the Azure VMware Solution private cloud. This deployment method reduces traffic costs, eases administration, and keeps the primary/secondary topology. See the [Azure regions decision guide](/azure/cloud-adoption-framework/migrate/azure-best-practices/multiple-regions) for Azure region deployment best practices.
-- MABS can be deployed as an Azure infrastructure as a service (IaaS) VM or within the Azure VMware Solution private cloud. It's highly recommended to deploy it outside of the Azure VMware Solution private cloud in an Azure Virtual Network. This virtual network is connected to the same ExpressRoute to reduce vSAN consumption, as vSAN is a *limited capacity* resource within the Azure VMware Solution private cloud.
+- MABS can be deployed as an Azure infrastructure as a service (IaaS) VM or within the Azure VMware Solution private cloud. It's highly recommended to deploy it outside of the Azure VMware Solution private cloud in an Azure virtual network. This virtual network is connected to the same ExpressRoute to reduce vSAN consumption, as vSAN is a *limited capacity* resource within the Azure VMware Solution private cloud.
 
 :::image type="content" source="../_images/eslz-bcdr-2.png" alt-text="Diagram that shows the MABS backup server deployed as an Azure IaaS VM.":::
 
@@ -41,7 +41,7 @@ ms.custom: think-tank, e2e-avs
 
 ## Disaster recovery design considerations
 
-- Align business requirements with recovery time, capacity, and point objectives (RTCPOs) for Apps/VMs tiers. Plan and design accordingly to achieve them using the most appropriate replication technology. App-native, like SQL Always On availability group, or non-native like VMware Site Recovery Manager (SRM) and [Azure Site Recovery](/azure/site-recovery/).
+- Align business requirements with recovery time, capacity, and point objectives for applications and VM tiers. Plan and design accordingly to achieve them using the most appropriate replication technology. Application-native, like SQL Always On availability group, or non-native like VMware Site Recovery Manager (SRM) and [Azure Site Recovery](/azure/site-recovery/).
 - Make a decision as to what the target disaster recovery site for the Azure VMware Solution private cloud will be. This site influences which disaster recovery tooling is suitable to the environment.
 - Migration from third-party locations into Azure VMware Solution has support through Site Recovery Manager through scale.
 - You can use VMware Site Recovery Manager to provide disaster recovery for your Azure VMware Solution private cloud to a secondary Azure VMware Solution private cloud.
@@ -56,8 +56,8 @@ ms.custom: think-tank, e2e-avs
 - Set up functional domain roles, like Active Directory Domain Controllers, in the secondary environment.
 - To enable disaster recovery between Azure VMware Solution private clouds in distinct Azure regions, you need to enable ExpressRoute Global Reach between both back-end ExpressRoute circuits. These circuits create primary to secondary private cloud connectivity when required for solutions like VMware SRM and VMware HCX for disaster recovery.
 - When working with disaster recovery, you can use the same IP address spaces from the primary Azure region in the secondary Azure region. However, it requires engineering more overhead incorporation into the solution foundation.
-  - **Retain the same IP addresses**: You can use the same IP addresses on the recovered VM as the ones allocated to the Azure VMware Solution VMs. For this method, create isolated VLANS/segments in the secondary site and ensure none of these isolated VLANS/segments is connected to the environment. Modify your disaster recovery routes to reflect that the subnet has moved to the secondary site and new IP address locations. While this method works, it also creates engineering overhead when aiming for minimal interaction.
-  - **Use different IP addresses**: You can also use different IP addresses for recovered VMs. If the VM is moved to a secondary site, the recovery plan within the VMware Site Recovery Manager will detail the custom IP map. Select this map for the change of IP address. If you're using Azure Site Recovery, a defined virtual network is chosen for the new IP allocation.
+  - **Retain the same IP addresses:** You can use the same IP addresses on the recovered VM as the ones allocated to the Azure VMware Solution VMs. For this method, create isolated VLANS/segments in the secondary site and ensure none of these isolated VLANS/segments is connected to the environment. Modify your disaster recovery routes to reflect that the subnet has moved to the secondary site and new IP address locations. While this method works, it also creates engineering overhead when aiming for minimal interaction.
+  - **Use different IP addresses:** You can also use different IP addresses for recovered VMs. If the VM is moved to a secondary site, the recovery plan within the VMware Site Recovery Manager will detail the custom IP map. Select this map for the change of IP address. If you're using Azure Site Recovery, a defined virtual network is chosen for the new IP allocation.
 - Understand partial and full disaster recovery solutions:
   - When you work with Azure Site Recovery, know how to prepare for full disaster recovery. Specifically, how to fail over from Azure VMware Solution into an Azure Native environment.
   - You can use VMware SRM for partial and full disaster recovery. When running Azure VMware Solution in Region 1 and Region 2, you can fail some or all the VMs from primary to secondary regions.
@@ -78,7 +78,7 @@ ms.custom: think-tank, e2e-avs
 - Use Azure Site Recovery if Azure IaaS is the disaster recovery target for the Azure VMware Solution private cloud.
 - Minimize manual input by using automated recovery plans within each of the respective solutions. These plans are helpful when working with either VMware Site Recovery Manager or Azure Site Recovery to provide disaster recovery for the Azure VMware Solution private cloud. A recovery plan gathers machines into recovery groups for failover. It then helps to define a systematic recovery process by creating small independent units that can fail over.
 - We recommend using the geopolitical region pair as the secondary disaster recovery environment for proximity of regions and cost reductions.
-- Keep address spaces different. For example, use 192.168.0.0/16 for Region 1 and 10.0.0.0/16 for Region 2. This difference reduces the risk of IP address overlap.
+- Keep address spaces different. For example, use `192.168.0.0/16` for Region 1 and `10.0.0.0/16` for Region 2. This difference reduces the risk of IP address overlap.
 - Use ExpressRoute Global Reach connectivity between the primary and secondary Azure VMware Solution private clouds. See more networking considerations and recommendations in the [relevant design area](./eslz-network-topology-connectivity.md).
 
 ## Next steps

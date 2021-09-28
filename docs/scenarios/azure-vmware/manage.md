@@ -6,8 +6,8 @@ ms.author: janet
 ms.date: 08/28/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: migrate
-ms.custom: e2e-avs, think-tank
+ms.subservice: scenario
+ms.custom: think-tank, e2e-azure-vmware
 ---
 
 # Manage Azure VMware Solution
@@ -32,17 +32,17 @@ Many times VMware environments on-premises have sprawled. Individual business un
 
 Before deploying Azure VMware Solution, customers need to account for the following components for a landing zone:
 
-1. Establish hybrid network connectivity with an ExpressRoute circuit and a non-overlapping Azure virtual network.
+1. Establish hybrid network connectivity with an ExpressRoute circuit and a non-overlapping Azure Virtual Network.
 2. Establish hybrid replica domain controllers for legacy authentication and authorization if necessary.
 3. Deploy a Log Analytics workspace to capture log data from each VM resource within Azure VMware Solution.
 4. Plans to Azure Arc enable all servers within Azure VMware Solution so you can see each VM as a resource within the Azure portal.
 5. Deploy Azure Security Center and configure with the Standard SKU so you can see how the VMs are reporting into the environment and measure the baselines.
 6. Deploy and configure Azure Policy to adhere to Azure specific requirements for the VMs within Azure VMware Solution.
-7. Deploy and configure an Azure Automation account to manage desired state configuration within the guest VMs for Azure VMware Solution.
+7. Deploy and configure an Azure Automation account to manage Desired State Configuration within the guest VMs for Azure VMware Solution.
 
 ## Azure VMware Solution workload operations
 
-Legacy operating systems must be avoided. Microsoft will support all current Windows server operating systems listed in the [product and services lifecycle information](/lifecycle/products/?products=microsoft-servers). For Linux based workloads, the recommendation is to follow the latest supported information from whatever distribution you choose to deploy or migrate into Azure VMware Solution.
+Legacy operating systems must be avoided. Microsoft will support all current Windows Server operating systems listed in the [product and services lifecycle information](/lifecycle/products/?products=microsoft-servers). For Linux-based workloads, the recommendation is to follow the latest supported information from whatever distribution you choose to deploy or migrate into Azure VMware Solution.
 
 ## Your next migration iteration
 

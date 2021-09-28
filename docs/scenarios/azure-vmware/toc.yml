@@ -7,13 +7,13 @@ items:
   - name: Technical planning
     href: plan.md
   - name: Prepare your environments
-    items: 
-    - name: Azure Landing Zones
+    items:
+    - name: Azure landing zones
       href: ready.md
     - name: Design areas
       items:
       - name: Identity and access management
-        href: eslz-identity-and-access-management.md
+        href: eslz-identity-and-access-management.md`
       - name: Network topology and connectivity
         href: eslz-network-topology-connectivity.md
       - name: Governance discipline
@@ -49,7 +49,7 @@ items:
     items:
     - name: Assessment overview (migrate to Azure VMware Solution)
       href: /azure/migrate/concepts-azure-vmware-solution-assessment-calculation?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/azure-vmware/toc.json
-       
+
   - name: Microsoft products
     items:
     - name: Azure VMware Solution documentation
@@ -59,4 +59,3 @@ items:
     items:
     - name: Run VMware workloads on Azure VMware Solution
       href: /learn/paths/run-vmware-workloads-azure-vmware-solution/
-

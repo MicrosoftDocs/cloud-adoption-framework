@@ -6,7 +6,8 @@ ms.author: janet
 ms.date: 09/15/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
+ms.custom: e2e-azure-vmware, think-tank
 ---
 
 # Enterprise-scale identity and access management for Azure VMware Solution
