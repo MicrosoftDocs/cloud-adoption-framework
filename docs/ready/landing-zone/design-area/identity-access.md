@@ -81,3 +81,9 @@ A critical design decision that an enterprise organization must make when adopti
 ## Identity and access management in the Azure landing zone accelerator
 
 ![Diagram that shows identity and access management.](../../enterprise-scale/media/iam.png)
+
+Identity and access management are core features of the Azure landing zone accelerator implementation.
+The deployment includes a subscription dedicated to identity, where customers can deploy the Active Directory domain controllers required for their environment. 
+
+The implementation also ....
+
