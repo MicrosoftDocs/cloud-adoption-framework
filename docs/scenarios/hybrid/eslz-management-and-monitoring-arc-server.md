@@ -23,7 +23,7 @@ Here are some general design considerations for Azure Arc enabled servers monito
 - The Azure Monitor agents should be automatically deployed to arc-enabled servers through Azure Policy as part of the Enterprise scale landing zone.
 - The Connected Machine agent should be monitored for heartbeat connectivity to the platform.
 - The Connected Machine agent is updated regularly to address bug fixes, stability enhancements, and new functionality. Updates should be monitored and deployed automatically.
-- Management of updates to the Azure Arc enabled servers should be automated to install the latest operating system updates.
+- Update management of the Azure Arc enabled servers should be automated to install the latest operating system updates.
 
 ## Design recommendations
 
