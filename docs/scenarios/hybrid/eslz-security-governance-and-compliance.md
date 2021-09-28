@@ -124,6 +124,14 @@ You can also use [Azure Automanage](https://docs.microsoft.com/en-us/azure/autom
 
 ### Role based access controls
 
+Applying RBAC on Azure Arc enabled servers has several considerations.
+
+Follow the [least-privilege principal](https://docs.microsoft.com/en-us/security/benchmark/azure/baselines/arc-enabled-security-baseline#pa-7-follow-just-enough-administration-least-privilege-principle) users or applications assigned with roles like "Contributor" or "Owner" or "Azure Connected Machine Resource Administrator" are able to execute operations like deploying extensions which basically has the power to do anything on Arc-enabled server. These roles needs to be carefully assigned.
+
+To limit the privilege of a user and let only onboard server to Azure "Azure Connected Machine Onboarding" is suitable, this role can only be used to onboard servers and can not re-onboard or delete the resource. Make sure to review the [Azure Arc for servers security overview](https://docs.microsoft.com/en-us/azure/azure-arc/servers/security-overview) for more information about access controls.
+
+Consider also the sensitive data that is sent to the Azure Monitor Log Analytics workspace, the same RBAC principle shoudl be applied to the data itself. Azure Arc-enabled Servers provides RBAC access to log data collected by the Log Analytics agent, stored in the Log Analytics workspace the machine is registered to. Review how to implement granular Log Analytics Workspace access in the [designing your Azure Monitor Logs deployment documentation](https://docs.microsoft.com/en-us/azure/azure-monitor/logs/design-logs-deployment#access-control-overview).
+
 ### Disk encryption
 
 The Azure Connected Machine agent uses public key authentication to communicate with the Azure service. After you onboard a server to Azure Arc, a private key is saved to the disk and used whenever the agent communicates with Azure. If stolen, the private key can be used on another server to communicate with the service and act as if it were the original server. This includes getting access to the system assigned identity and any resources that identity has access to. The private key file is protected to only allow the himds account access to read it. To prevent offline attacks, we strongly recommend the use of full disk encryption (for example, BitLocker, dm-crypt, etc.) on the operating system volume of your server.
