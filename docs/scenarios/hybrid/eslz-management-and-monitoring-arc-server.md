@@ -39,7 +39,7 @@ Monitoring:
 
 Management:
 - Create an [Azure Advisor alert](https://docs.microsoft.com/en-us/azure/azure-arc/servers/plan-at-scale-deployment#phase-3-manage-and-operate) to identify Azure Arc enabled servers that are not using the latest version of the Connected Machine agent.
-- Use Update Management in Azure Automation as a long-term patching mechanism for both Azure Arc enabled Windows and Linux servers. Update Management will allow you to automate the Connected Machine agent upgrade via Windows Updates on Azure Arc enabled Windows servres.
+- Use [Update Management](https://docs.microsoft.com/en-us/azure/automation/update-management/overview) in Azure Automation as a long-term patching mechanism for both Azure Arc enabled Windows and Linux servers. Update Management will allow you to automate the Connected Machine agent upgrade via Windows Updates on Azure Arc enabled Windows servres.
 - For Linux arc-enabled servers, review the Connected Machine agent [upgrade methods](https://docs.microsoft.com/en-us/azure/azure-arc/servers/manage-agent#upgrading-agent).
 - You can also leverage [Virtual machine extensions](https://docs.microsoft.com/en-us/azure/azure-arc/servers/manage-vm-extensions) to automate the Connected Machine agent upgrade process across Azure Arc enabled Windows and Linux servers.
 
