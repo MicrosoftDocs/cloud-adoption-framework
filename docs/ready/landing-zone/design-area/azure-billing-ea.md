@@ -31,7 +31,7 @@ Enterprise Agreement enrollment represents the commercial relationship between M
   - Service administrator
   - Notification contact
 
-### How an Enterprise Agreement enrollment relates to Azure AD and Azure RBAC
+## How an Enterprise Agreement enrollment relates to Azure AD and Azure RBAC
 
 When your organization uses an Enterprise Agreement enrollment for Azure subscriptions, it's important to understand the various authentication and authorization boundaries and the relationship between these boundaries.
 
@@ -41,7 +41,7 @@ For example, a finance user is granted an enterprise administrator role on the E
 
 ![Diagram that shows Azure Enterprise Agreement relationship with Azure AD and RBAC.](../../enterprise-scale/media/ea-azure-relationship.png)
 
-**Design considerations:**
+## Design considerations
 
 - The enrollment provides a hierarchical organizational structure to govern how subscriptions are managed. See [Managing Azure Enterprise Agreement roles](/azure/cost-management-billing/manage/understand-ea-roles#azure-enterprise-portal-hierarchy).
 
@@ -59,7 +59,7 @@ For example, a finance user is granted an enterprise administrator role on the E
 
 - Review [Programmatically create Azure Enterprise Agreement subscriptions with the latest APIs](/azure/cost-management-billing/manage/programmatically-create-subscription-enterprise-agreement?tabs=rest#limitations-of-azure-enterprise-subscription-creation-api) for more information about Enterprise Agreement subscription limitations.
 
-**Design recommendations:**
+## Design recommendations
 
 - Only use the authentication type `Work or school account` for all account types. Avoid using the `Microsoft account (MSA)` account type.
 

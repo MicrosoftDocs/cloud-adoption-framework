@@ -24,7 +24,7 @@ The Microsoft Customer Agreement often represents an organization's hierarchy, w
 > - [Complete Enterprise Agreement tasks in your billing account for a Microsoft Customer Agreement](/azure/cost-management-billing/manage/mca-enterprise-operations)
 > - [Set up your billing account for a Microsoft Customer Agreement](/azure/cost-management-billing/manage/mca-setup-account)
 
-**Design considerations:**
+## Design considerations
 
 - The agreement provides a hierarchical organizational structure to govern how subscriptions are managed. See [Organize costs by customizing your billing account](/azure/cost-management-billing/manage/mca-section-invoice).
 
@@ -44,7 +44,7 @@ The Microsoft Customer Agreement often represents an organization's hierarchy, w
 
 - Use [Azure Cost Management](/azure/cost-management-billing/cost-management-billing-overview) reports and views, which explore and analyze your organization's costs with Azure metadata.
 
-**Design recommendations:**
+## Design recommendations
 
 - Set up a Notification Contact email address on the agreement billing account to ensure notifications are sent to an appropriate group mailbox.
 
