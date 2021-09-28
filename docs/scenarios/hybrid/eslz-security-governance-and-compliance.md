@@ -124,8 +124,6 @@ You can also use [Azure Automanage](https://docs.microsoft.com/en-us/azure/autom
 
 ### Role based access controls
 
-Applying RBAC on Azure Arc enabled servers has several considerations.
-
 Follow the [least-privilege principal](https://docs.microsoft.com/en-us/security/benchmark/azure/baselines/arc-enabled-security-baseline#pa-7-follow-just-enough-administration-least-privilege-principle) users or applications assigned with roles like "Contributor" or "Owner" or "Azure Connected Machine Resource Administrator" are able to execute operations like deploying extensions which basically has the power to do anything on Arc-enabled server. These roles needs to be carefully assigned.
 
 To limit the privilege of a user and let only onboard server to Azure "Azure Connected Machine Onboarding" is suitable, this role can only be used to onboard servers and can not re-onboard or delete the resource. Make sure to review the [Azure Arc for servers security overview](https://docs.microsoft.com/en-us/azure/azure-arc/servers/security-overview) for more information about access controls.
