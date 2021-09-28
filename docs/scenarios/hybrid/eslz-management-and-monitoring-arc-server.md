@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-arc
 
 # Management and monitoring for Azure Arc enabled servers enterprise-scale scenario
 
-Azure Arc-enabled servers enables you to manage your Windows and Linux physical servers and virtual machines hosted outside of Azure, on your corporate network, or other cloud provider.  This document is written to help you operationally maintain Azure Arc resources on Azure enterprise estate, with centralized management and monitoring at the platform level. The article presents key recommendations for operations teams to maintain Azure Arc systems.
+Azure Arc-enabled servers allows you to manage your Windows and Linux physical servers and virtual machines hosted outside of Azure, on your corporate network, or other cloud provider.  This document is written to help you operationally maintain Azure Arc resources on Azure enterprise estate, with centralized management and monitoring at the platform level. The article presents key recommendations for operations teams to maintain Azure Arc systems.
 
 ## Design considerations
 
@@ -29,7 +29,7 @@ Here are some general design considerations for Azure Arc-enabled servers monito
 
 Here are some general design recommendations for Azure Arc monitoring and management:
 
-- Logs should be stored centrally to the dedicated platform Log Analytics workspace and [control log access with Azure Role-based access control](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/design-logs-deployment#access-control-overview) . If there is a requirement for a separate workspace due to management/data sovereignty/compliance requirements , this can impact the ability to have a single pane of glass and event correlation of your arc-enabled servers across the envrionment.
+- Logs should be stored centrally to the dedicated platform Log Analytics workspace and [control log access with Azure Role-based access control](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/design-logs-deployment#access-control-overview) . If there is a requirement for a separate workspace due to management, data sovereignty or compliance requirements, this can affect the ability to have a single pane of glass and event correlation of your arc-enabled servers across the environment.
 - Use VM insights to analyze the performance of your Windows and Linux VMs and monitor their processes and dependencies on other resources and external processes.
 - Configure the needed performance counters for the arc-enabled Windows and Linux VMs on the dedicated log analytics workspace.
 - Configure the logs that need to be collected for the arc-enabled Windows and Linux VMs on the dedicated log analytics workspace.
