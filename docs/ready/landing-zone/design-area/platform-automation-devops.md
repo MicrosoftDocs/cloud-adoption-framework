@@ -42,45 +42,12 @@ An Azure DevOps model that's based on these recommendations provides the desired
 
 Establish a cross-functional DevOps platform team to build, manage, and maintain your environments. This team should include members from your central IT team, security, compliance, and business units to ensure that a wide spectrum of your enterprise is represented. The following list presents a recommended set of DevOps roles for a central platform team:
 
-- **PlatformOps** (platform operations) for:
-
-  - Subscription provisioning and delegation of required network, identity and access management, and policies.
-
-  - Platform management and monitoring (holistic).
-
-  - Cost management (holistic).
-
-  - Platform-as-code (managing templates, scripts, and other assets).
-
-  - Responsible for overall operations on Microsoft Azure within the Azure Active Directory tenant (managing service principals, registering the Microsoft Graph API, and defining roles).
-
-- **SecOps** (security operations)
-
-  - Azure role-based access control (Azure RBAC) (holistic).
-
-  - Key management (for central services, simple mail-transfer protocol, and domain controller).
-
-  - Policy management and enforcement (holistic).
-
-  - Security monitoring and audit (holistic).
-
-- **NetOps** (network operations)
-
-  - Network management (holistic).
-
-- **AppDevOps.** Allow application owners to create and manage application resources through a DevOps model. The following list presents a recommended DevOps role for application teams:
-
-  - Application migration or transformation.
-
-  - Application management and monitoring.
-
-  - Azure RBAC (application resources).
-
-  - Security monitoring and audit (application resources).
-
-  - Cost management (application resources).
-
-  - Network management (application resources).
+| Function | Responsibilities|
+|--|--|
+|**PlatformOps** (platform operations)|Subscription provisioning and delegation of required network, identity and access management, and policies <br> Platform management and monitoring (holistic) <br> Platform management and monitoring (holistic) <br> Platform management and monitoring (holistic) <br> Cost management (holistic) <br> Platform-as-code (managing templates, scripts, and other assets) <br> Responsible for overall operations on Microsoft Azure within the Azure Active Directory tenant (managing service principals, registering the Microsoft Graph API, and defining roles) |
+|**SecOps** (security operations)|Azure role-based access control (Azure RBAC) (holistic) <br> Key management (for central services, simple mail-transfer protocol, and domain controller) <br> Policy management and enforcement (holistic) <br> Security monitoring and audit (holistic) |
+|**NetOps** (network operations)| Network management (holistic) |
+|**AppDevOps**| Allow application owners to create and manage application resources through a DevOps model <br> Application migration or transformation <br> Application management and monitoring <br> Azure RBAC (application resources) <br> Security monitoring and audit (application resources) <br> Cost management (application resources) <br> Network management (application resources)| 
 
   - In some instances, you might want to break AppDevOps into more granular roles such as AppDataOps for database management or AppSecOps for more security-sensitive applications.
 
@@ -98,46 +65,12 @@ Establish a cross-functional DevOps platform team to build, manage, and maintain
 
 The distribution of roles, responsibilities, and trust between central IT teams and applications teams is paramount to the operational transformation your organization must undergo when adopting the cloud at scale.
 
-The following list presents a recommended distribution of responsibilities between the central IT team and application teams. You're striving to empower migration and transformation activities with minimal central dependencies. At the same time, you want to support the centralized governance of security and operability across the entire estate.
+The following table presents a recommended distribution of responsibilities between the central IT team and application teams. You're striving to empower migration and transformation activities with minimal central dependencies. At the same time, you want to support the centralized governance of security and operability across the entire estate.
 
-- **Application functions**
-
-  - Application migration and transformation.
-
-  - Application management and monitoring (application resources).
-
-  - Key management (application keys).
-
-  - Azure RBAC (application resources).
-
-  - Security monitoring and audit (application resources).
-
-  - Cost management (application resources).
-
-  - Network management (application resources).
-
-- **Central functions**
-
-  - Architecture governance.
-
-  - Subscription management.
-
-  - Platform as code (management of templates, scripts, and other assets).
-
-  - Policy management and enforcement (holistic).
-
-  - Platform management and monitoring (holistic).
-
-  - Azure RBAC (holistic).
-
-  - Key management (central services).
-
-  - Network management (including networks and network virtual appliances).
-
-  - Security monitoring and audit (holistic).
-
-  - Cost management (holistic).
-
+| Function | Responsibilities|
+|--|--|
+|**Application functions**|Application migration and transformation. <br> Application management and monitoring (application resources) <br> Key management (application keys) <br> Azure RBAC (application resources) <br> Security monitoring and audit (application resources) <br> Cost management (application resources) <br> Network management (application resources) |
+|**Central functions**| Architecture governance <br> Subscription management <br> Platform as code (management of templates, scripts, and other assets) <br> Policy management and enforcement (holistic) <br> Platform management and monitoring (holistic) <br> Azure RBAC (holistic) <br> Key management (central services) <br> Network management (including networks and network virtual appliances) <br> Security monitoring and audit (holistic) <br> Cost management (holistic)   |
 
 ## Platform automation and DevOps in the Azure landing zone accelerator
 
