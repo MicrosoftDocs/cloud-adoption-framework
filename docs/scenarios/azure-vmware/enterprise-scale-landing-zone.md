@@ -51,10 +51,7 @@ The following conceptual reference architecture is an example that shows design 
 
 [![Enterprise-scale for AVS architecture](./media/avs-eslz-architecture.png)](./media/avs-eslz-architecture.png#lightbox)
 
-Enterprise-scale for AVS is an open-source collection of ARM, Bicep templates, available in the [enterprise-scale for AVS
- repo](https://github.com/Azure/Enterprise-Scale-for-AVS)
 
-Bicep templates are used to deploy infrastructure components such as AVS,virtual machines, networks, or storage to Azure. To get the templates,see the [enterprise-scale for Azure VMware Solution deployment template](https://github.com/Azure/Enterprise-Scale-for-AVS) using Bicep. This reference implementation currently deploys a simplistic version of an AVS implementation that resides in its own subscription within the online management group of an enterprise-scale landing zone. 
 
 ## Implementation with Bicep/Azure Resource Manager (ARM) templates for Remote Desktop Services
 ARM Azure VMware Solution templates provide a collection of infrastructure-as-code Bicep/ARM templates to deploy an Azure VMware Solution environment on Azure.
