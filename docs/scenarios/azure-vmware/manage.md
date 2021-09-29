@@ -18,7 +18,7 @@ Azure VMware Solution is a VMware validated solution with ongoing verification a
 
 Microsoft regularly shows the shared responsibility matrix for infrastructure as a service (IaaS), platform as a service (PaaS), and software as a service (SaaS) based products. There's also a shared responsibility matrix for Azure VMware Solution. As you can see, Microsoft abstracts much of the ongoing maintenance, security, and management, leaving your company in charge of the things that matter most, like guest OS provisioning, applications, and virtual machines. You're also able to think through your own lifecycle process and configuration management techniques that can be brought to Azure. By using this model, certain types of operational responsibilities disappear as Microsoft holds more responsibility for the overall Azure VMware Solution infrastructure.
 
-![Diagram of shared responsibility matrix for Azure VMware Solution.](./media/avs-shared-responsibility-matrix.png)
+![Diagram of shared responsibility matrix for Azure VMware Solution.](./media/azure-vmware-shared-responsibility-matrix.png)
 
 ## Azure VMware Solution business alignment
 

@@ -63,7 +63,7 @@ What’s important to note is that you’ll need a minimum of three nodes per vs
 
 When you deploy Azure VMware Solution, at a minimum, you get three nodes and an ExpressRoute circuit. Because your Azure VMware environment is deployed on bare metal servers, it needs to be peered into Azure for network connectivity. After you deploy Azure VMware Solution, you'll peer the ExpressRoute into an Azure virtual network. Then you can enable Global Reach between the Azure VMware Solution ExpressRoute and on-premises ExpressRoute circuits. Global Reach handles the east-west traffic routing between the two circuits using BGP. This is how you can think about migrating your VMs from on-premises all the way into the Azure VMware Solution private cloud.
 
-![Diagram of the Azure VMware Solution deployment.](./media/avs-solution-deployment.png)
+![Diagram of the Azure VMware Solution deployment.](./media/azure-vmware-solution-deployment.png)
 
 After you deploy Azure VMware Solution, it will look like any other Azure service in the Azure portal. But when you’re building the service, you'll need to provide a management IP address, which is different than the virtual network you're connecting the environment to. The management IP address requires a minimum of /22 CIDR block. You don't have to worry about subnetting your environment, Azure VMware Solution will do it for you. You can also enable the Internet. This is where you might think about using Azure virtual LAN and application gateway.
 

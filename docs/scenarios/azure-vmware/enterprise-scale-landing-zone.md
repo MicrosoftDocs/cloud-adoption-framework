@@ -54,7 +54,7 @@ You use Bicep templates to deploy infrastructure components such as Azure VMware
 
 The following architecture diagram is an example that shows design areas and best practices.
 
-[![Enterprise-scale for Azure VMware Solution architecture](./media/avs-eslz-architecture.png)](./media/avs-eslz-architecture.png#lightbox)
+[![Enterprise-scale for Azure VMware Solution architecture](./media/azure-vmware-eslz-architecture.png)](./media/azure-vmware-eslz-architecture.png#lightbox)
 
 ## Next steps
 
