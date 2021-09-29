@@ -39,7 +39,7 @@ We recommend building data products within your data landing zone by adhering to
 
 ### Deploy multiple resource groups
 
- Each data product is a resource group. Since data products are compute or polyglot persistence services, they may only be required depending on certain use cases. As such, they can be considered an optional component of your data landing zone. In the case where data products are required, you should create multiple resource groups by data product as shown below.
+Each data product is a resource group. Since data products are compute or polyglot persistence services, they may only be required depending on certain use cases. As such, they can be considered an optional component of your data landing zone. In the case where data products are required, you should create multiple resource groups by data product as shown below.
 
 ![Diagram of data product resource groups.](../images/data-products-resource-group.png)
 
@@ -101,8 +101,8 @@ To explain the architecture definition process, we'll look at an example of a fi
 
 The credit monitoring data product shown above consumes data from a *read data store* that has been ingested by the [integration operations team](../organize-persona-and-teams.md#data-landing-zone-teams) and produces data assets for two other data products.
 
->[!Note]
->A read data source or store is also known as Golden Record Source. These types of data sources have been cleaned but haven't had any transformation applied to them.
+> [!NOTE]
+> A read data source or store is also known as *golden record source*. These types of data sources have been cleaned but haven't had any transformation applied to them.
 
 The credit monitoring data product team requests read access to the read data stores they require for their data product. These requests are routed through the owners of the data for approval. Upon approval, the product teams can start to build the credit monitoring data product.
 
@@ -118,8 +118,8 @@ For every data landing zone, an empty visualization resource group is created. V
 
 ![Diagram of a visualization resource group.](../images/visualization-resource-group.png)
 
->[!NOTE]
->Licensing costs might mean that is it more economical to deploy third-party visualization products into the data management landing zone and for the products to connect across to the data landing zone to pull data back.
+> [!NOTE]
+> Licensing costs might mean that is it more economical to deploy third-party visualization products into the data management landing zone and for the products to connect across to the data landing zone to pull data back.
 
 While an initial visualization resource group will be deployed for a new data landing zone, data products might require their own reporting and visualization resource group. Security boundaries or a requirement to cross-charge for usage are the reason. It's important to remember that using Azure Active Directory passthrough authentication from services such as Power BI and Azure Analysis Services often reduces the need for a separated security boundary.
 

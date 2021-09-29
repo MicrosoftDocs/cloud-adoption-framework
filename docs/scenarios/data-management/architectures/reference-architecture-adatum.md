@@ -35,11 +35,11 @@ In this reference architecture, we will deploy a data management zone, which is 
 
 ### Data management zone
 
-A critical concept for every enterprise-scale for analytics and AI implementation is having one data management zone. This subscription contains resources that will be shared across all of the landing zones. This includes shared networking components like a firewall and private DNS zones. It also includes resources for data and cloud governance, such as Azure Policies and Azure Purview.
+A critical concept for every enterprise-scale for analytics and AI implementation is having one data management zone. This subscription contains resources that will be shared across all of the landing zones. This includes shared networking components like a firewall and private DNS zones. It also includes resources for data and cloud governance, such as Azure Policy and Azure Purview.
 
 ### Data integrations
 
-The landing zone will have two data integrations. The first integration will ingest data related to customers. This includes the customer records and their related records (like addresses, contacts, territory assignments, and contact history). This data will be imported from a the Adatum CRM system.
+The landing zone will have two data integrations. The first integration will ingest data related to customers. This includes the customer records and their related records (like addresses, contacts, territory assignments, and contact history). This data will be imported from the Adatum CRM system.
 
 The second data integration will ingest sales transactions. This includes transaction headers, line item details, shipping records, and payments. All of these records will be ingested from the Adatum ERP system.
 
@@ -57,7 +57,7 @@ In this example, Adatum has one data product. This product combines raw data fro
 
 ### Why not put sales transactions and customers in their own data landing zones?
 
-One of the first decisions enterprises must make about their enterprise-scale for analytics and AI implementation is how to divide the entire data estate into landing zones. Data solutions that will frequently communicate with one another are strong candidates for inclusion in the same landing zone. This allows enterprises to reduce the costs associated with moving data across peered Vnets. In this example, sales transaction data will frequently be linked to customer data. Therefore, it makes sense to store these related data integrations in the same data landing zone.
+One of the first decisions enterprises must make about their enterprise-scale for analytics and AI implementation is how to divide the entire data estate into landing zones. Data solutions that will frequently communicate with one another are strong candidates for inclusion in the same landing zone. This allows enterprises to reduce the costs associated with moving data across peered VNets. In this example, sales transaction data will frequently be linked to customer data. Therefore, it makes sense to store these related data integrations in the same data landing zone.
 
 An extra consideration for landing zones is how the teams responsible for the data are aligned within the organization. In this case, the two data integrations are owned by different teams, but those teams are both part of the sales and marketing division at Adatum.
 
@@ -65,7 +65,7 @@ An extra consideration for landing zones is how the teams responsible for the da
 
 By separating the customer data and the sales transaction data in their own data integrations, we allow the subject matter experts for those domains to make the best decisions for their particular datasets. They can choose the access patterns, ingestion engines, and storage options that best meet their needs without conflicting with one another.
 
-For example, the team that has expertise with the CRM system will be responsible for the customer data integration. Based on the team's skillset and the technologies used by the CRM system, they'll decide which tools best suit their needs. They won't have to worry if these decisions will also work for the sales transactions team. That team will be using their own toolset and won't have to compromise to meet the requirements of the customers team.
+For example, the team that has expertise with the CRM system will be responsible for the customer data integration. Based on the team's skill set and the technologies used by the CRM system, they'll decide which tools best suit their needs. They won't have to worry if these decisions will also work for the sales transactions team. That team will be using their own toolset and won't have to compromise to meet the requirements of the customers team.
 
 ### Why move the sales team to the new data platform?
 
@@ -91,7 +91,7 @@ The customer scenario outlined above can be deployed by referencing the followin
 
 To deploy the architecture baselines above, use the data management landing zone and the data landing zone reference implementation templates in the following GitHub repositories:
 
-- [Data management zanding zone template](https://github.com/Azure/data-management-zone)
+- [Data management landing zone template](https://github.com/Azure/data-management-zone)
 - [Data landing zone template](https://github.com/Azure/data-landing-zone)
 
 Use the following template to deploy sales transactions, customer data integrations, and **Summary** data products in the Adatum sales data landing zones:
