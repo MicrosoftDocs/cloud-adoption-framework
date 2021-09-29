@@ -14,7 +14,7 @@ ms.custom: think-tank, e2e-hybrid
 
 This article provides guidance on how to onboard an Azure Arc enabled server to [Azure Security Center (Azure Security Center)](/azure/security-center/). This helps you start collecting security-related configurations and event logs so you can recommend actions and improve your overall Azure security posture.
 
-In the following procedures, you enable and configure Azure Security Center Standard tier on your Azure subscription. This provides advanced threat protection (ATP) and detection capabilities. The process includes:
+In the following procedures, you enable and configure Azure Security Center Standard tier on your Azure subscription. This provides advanced threat protection and detection capabilities. The process includes:
 
 - Setup a Log Analytics workspace where logs and events are aggregated for analysis.
 - Assign Security Center's default security policies.

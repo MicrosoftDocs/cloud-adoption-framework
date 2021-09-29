@@ -11,8 +11,6 @@ ms.localizationpriority: high
 ms.custom: internal, fasttrack-edit, AQC
 ---
 
-<!-- docutune:ignore "provide advanced threat protection" -->
-
 # Protect and recover in Azure
 
 *Protect and recover* is the third and final discipline in any cloud-management baseline.
