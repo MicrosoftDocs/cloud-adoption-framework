@@ -22,7 +22,7 @@ By the end of this article, you will understand the critical design areas for se
 
 As your hybrid and multicloud resources become part of Azure Resource Manager, they can be managed and governed with Azure tools just as Azure native VMs.
 
-- **Resource consistency and inventory management:** Organize your hybrid resources using [Azure scopes of management](https://docs.microsoft.com/en-us/azure/role-based-access-control/scope-overview) and to locally organize them into a [taxonomy](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources?tabs=json). Apply tags to your non Azure deployments to add additional context that is relevant for your operations.
+- **Resource consistency and inventory management:** Organize your hybrid resources using [Azure scopes of management](https://docs.microsoft.com/en-us/azure/role-based-access-control/scope-overview) and to locally organize them into a [taxonomy](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources?tabs=json). Apply tags to your non-Azure deployments to add additional context that is relevant for your operations.
 - **Agent Provisioning:** Define a strategy for provisioning the Azure Arc-enabled servers and for agent secret management. Consider the level and method of automation for [bulk enrollment](https://docs.microsoft.com/en-us/azure/azure-arc/servers/learn/quick-enable-hybrid-vm). Consider how to structure [pilot and production deployments](https://docs.microsoft.com/en-us/azure/azure-arc/servers/plan-at-scale-deployment) and establish a formal plan that takes into account the scope and plan for a deployment including objectives, selection criteria, success criteria, training plans, rollback and risks.
 - **Agent Management:** The Connected Machine Agent plays a critical role in your hybrid operations as it enables you to manage your Windows and Linux machines hosted outside of Azure and enforce governance policies, it is important to implement solutions that keep track of unresponsive agents.
 - **Agent Security permissions:** Secure access to the Connected Machine agent
@@ -34,7 +34,7 @@ As your hybrid and multicloud resources become part of Azure Resource Manager, t
 - **Threat protection and cloud security posture management:** Introduce controls to detect security misconfigurations and track compliance. Also, use [Azure's intelligence](https://docs.microsoft.com/en-us/azure/sentinel/overview) to protect your hybrid workloads against threats. [Enable Azure Security Center](https://docs.microsoft.com/en-us/azure/security-center/security-center-get-started) for all subscriptions containing Azure Arc-enabled servers for security baseline monitoring, security posture management and threat protection.
 - **Change Tracking and Inventory:** Track changes on the operating system, application files and registry to identify operational and security issues on your on-premises and other clouds environments.
 - **Software Updates:** Define a strategy to assess the status of available updates to maintain security compliance with critical and security updates of your operating systems.
-- **Role based access controls:** Define administrative, operations, and engineering roles within the organization that will take care of day-to-day operations in the hybrid environment. Mapping each team to actions and responsibilities will  determine Azure role-based access control (RBAC) roles and configuration. Consider using a [RACI](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/organize/raci-alignment) matrix to support this effort and build controls into the management scope hierarchy that you define following the resource consistency and inventory management guidance.
+- **Role based access controls:** Define administrative, operations, and engineering roles within the organization that will take care of day-to-day operations in the hybrid environment. Mapping each team to actions and responsibilities will determine Azure role-based access control (RBAC) roles and configuration. Consider using a [RACI](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/organize/raci-alignment) matrix to support this effort and build controls into the management scope hierarchy that you define following the resource consistency and inventory management guidance.
 - **Business continuity and disaster recovery:** Review the [business continuity and disaster recovery](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/enterprise-scale/business-continuity-and-disaster-recovery) guidance for Enterprise scale landing zones to determine if your enterprise requirements are met.
 - **Disk Encryption:** Secure the Connected Machine agent public key authentication to communicate with the Azure service.
 
@@ -64,13 +64,13 @@ Control who has access to the Azure connected machine agent on Azure Arc-enabled
 
 ### Managed Identity
 
-Whilst the Azure Active Directory system assigned identity can only be used to update the status of the Azure Arc-enabled server (for example, the 'last seen' heartbeat), it is possible to allow an applications on your server to use the system assigned identity to access Azure resources (for example, to request secrets from a key vault.) Consider which legitimate use-cases exist for server applications to access Azure resources and plan to control access for to these resources.
+Whilst the Azure Active Directory system assigned identity can only be used to update the status of the Azure Arc-enabled server (for example, the 'last seen' heartbeat), it is possible to allow an application on your server to use the system assigned identity to access Azure resources (for example, to request secrets from a key vault.) Consider which legitimate use-cases exist for server applications to access Azure resources and plan to control access for to these resources.
 
 [Control which server applications can obtain access tokens](https://docs.microsoft.com/en-us/azure/azure-arc/servers/managed-identity-authentication)
 
-- Control privileged user roles on Azure Arc-enabled servers (On Windows, members of the local administrators or Hybrid Agent Extensions Applications group, On Linux, members of the himds group) to avoid system managed identities being misused to gain unauthorized access to Azure resources.
+- Control privileged user roles on Azure Arc-enabled servers (On Windows, members of the local administrators or Hybrid Agent Extensions Applications group, on Linux, members of the himds group) to avoid system managed identities being misused to gain unauthorized access to Azure resources.
 
-- Use Azure RBAC to control and and manage the permission for Azure Arc-enabled servers managed identities, and perform periodic access reviews for these identities.
+- Use Azure RBAC to control and manage the permission for Azure Arc-enabled servers managed identities and perform periodic access reviews for these identities.
 
 ### Secret and certificate management
 
@@ -105,14 +105,14 @@ Azure Security Center provides an unified security-management platform segmented
 
 - Use Azure Arc-enabled servers to onboard hybrid resources in Azure Defender.
 - Implement an Azure Policy to make sure all resources are compliant and its security data is collected into the Log Analytics workspaces.
-- Enable Azure Defender for all subscriptions, and use Azure Policy to ensure compliance.
+- Enable Azure Defender for all subscriptions and use Azure Policy to ensure compliance.
 - Leverage security information and event management integration with Azure Security Center and Azure Sentinel.
 
 [Connect your non-Azure machines to Security Center](https://docs.microsoft.com/en-us/azure/security-center/quickstart-onboard-machines?pivots=azure-portal)
 
 ### Change Tracking and Inventory
 
-Centralizing logs drives additional reports that can be leveraged as additional layers of security and reduces the chances for gaps in observability. [Change Tracking and Inventory in Azure Automation](https://docs.microsoft.com/en-us/azure/automation/change-tracking/overview) forwards and collects the data in a Log Analytics workspace. When using  Azure Defender for servers you get File Integrity Monitoring (FIM) to examine and track software changes, Windows services and Linux daemos on your Azure Arc-enabled servers.
+Centralizing logs drives additional reports that can be leveraged as additional layers of security and reduces the chances for gaps in observability. [Change Tracking and Inventory in Azure Automation](https://docs.microsoft.com/en-us/azure/automation/change-tracking/overview) forwards and collects the data in a Log Analytics workspace. When using  Azure Defender for servers you get File Integrity Monitoring (FIM) to examine and track software changes, Windows services and Linux daemons on your Azure Arc-enabled servers.
 
 ### Software Updates
 
@@ -124,11 +124,11 @@ You can also use [Azure Automanage](https://docs.microsoft.com/en-us/azure/autom
 
 ### Role based access controls
 
-Follow the [least-privilege principal](https://docs.microsoft.com/en-us/security/benchmark/azure/baselines/arc-enabled-security-baseline#pa-7-follow-just-enough-administration-least-privilege-principle) users or applications assigned with roles like "Contributor" or "Owner" or "Azure Connected Machine Resource Administrator" are able to execute operations like deploying extensions which basically has the power to do anything on Arc-enabled server. These roles needs to be carefully assigned.
+Follow the [least-privilege principal](https://docs.microsoft.com/en-us/security/benchmark/azure/baselines/arc-enabled-security-baseline#pa-7-follow-just-enough-administration-least-privilege-principle) users or applications assigned with roles like "Contributor" or "Owner" or "Azure Connected Machine Resource Administrator" are able to execute operations like deploying extensions which basically has the power to do anything on Arc-enabled server. These roles need to be carefully assigned.
 
-To limit the privilege of a user and let only onboard server to Azure "Azure Connected Machine Onboarding" is suitable, this role can only be used to onboard servers and can not re-onboard or delete the resource. Make sure to review the [Azure Arc-enabled servers security overview](https://docs.microsoft.com/en-us/azure/azure-arc/servers/security-overview) for more information about access controls.
+To limit the privilege of a user and let only onboard server to Azure "Azure Connected Machine Onboarding" is suitable, this role can only be used to onboard servers and cannot re-onboard or delete the resource. Make sure to review the [Azure Arc-enabled servers security overview](https://docs.microsoft.com/en-us/azure/azure-arc/servers/security-overview) for more information about access controls.
 
-Consider also the sensitive data that is sent to the Azure Monitor Log Analytics workspace, the same RBAC principle shoudl be applied to the data itself. Azure Arc-enabled Servers provides RBAC access to log data collected by the Log Analytics agent, stored in the Log Analytics workspace the machine is registered to. Review how to implement granular Log Analytics Workspace access in the [designing your Azure Monitor Logs deployment documentation](https://docs.microsoft.com/en-us/azure/azure-monitor/logs/design-logs-deployment#access-control-overview).
+Also consider the sensitive data that is sent to the Azure Monitor Log Analytics workspace, the same RBAC principle should be applied to the data itself. Azure Arc-enabled Servers provides RBAC access to log data collected by the Log Analytics agent, stored in the Log Analytics workspace the machine is registered to. Review how to implement granular Log Analytics Workspace access in the [designing your Azure Monitor Logs deployment documentation](https://docs.microsoft.com/en-us/azure/azure-monitor/logs/design-logs-deployment#access-control-overview).
 
 ### Disk encryption
 
