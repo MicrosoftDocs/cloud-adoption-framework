@@ -3,7 +3,7 @@ title: Innovation application development tools
 description: Find out about Azure application development tools that align to the Innovate methodology of the Cloud Adoption Framework.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 10/17/2019
+ms.date: 09/17/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
@@ -11,7 +11,7 @@ ms.custom: internal, seo-caf-innovate
 keywords: application development services, application development tools, innovation methodologies
 ---
 
-# Tools to engage via applications in Azure
+# Tools to engage with applications in Azure
 
 Build cloud-native applications to connect customers in new ways. Cloud-native applications are built from the ground up, optimized for cloud scale and performance. They are based on microservices architecture, use managed services, and take advantage of continuous delivery to achieve reliability and faster time to market.
 
