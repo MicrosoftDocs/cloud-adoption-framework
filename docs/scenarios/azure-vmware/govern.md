@@ -17,7 +17,6 @@ Azure VMware Solution combines its software-defined datacenter (SDDC) software w
 To extend your governance approach across the Azure VMware Solution, evaluate and manage risk tolerance by identifying high-risk areas for business, convert risk vectors into governing corporate policies, and extend governance policies across Cost, Security Baseline, Identity Baseline, Resource consistency, and Deployment Acceleration disciplines.
 
 ![Diagram of enterprise-scale security, governance, and compliance.](../azure-vmware/media/enterprise-scale-security-governance-compliance.png)
-*Figure 1*
 
 ## Azure VMware Solution management
 
@@ -51,8 +50,7 @@ Integrating with Azure-native services in your Azure VMware Solution private clo
 
 **Azure Hybrid Use Benefits:** maximize the value of existing Windows Server and SQL Server licenses. Save up to 80 percent with Azure Hybrid Use Benefits and Azure Reserved VM Instances.
 
-![Diagram of enterprise-scale security, governance, and compliance.](../azure-vmware/media/on-premises-environments-Azure-private-clouds-networks-services.png)
-*Figure 2*
+![Diagram of on-premises environment and Azure private cloud network services.](../azure-vmware/media/on-premises-environments-Azure-private-clouds-networks-services.png)
 
 ### Unified operational management controls
 
@@ -73,8 +71,6 @@ Azure Resource Manager (ARM) is the operating system of Azure that, stretching a
 To learn more about how Azure VMware Solution integrates with native Azure services, see [What is Azure VMware Solution](/learn/modules/intro-azure-vmware-solution/2-what-is-azure-vmware-solution)
 
 ## Governance MVP for hybrid workloads
-
- .
 
 An initial governance foundation should consider:
 
@@ -108,7 +104,7 @@ For more recommendations about security, governance, and overall design, includi
 
 For more information on how to expand your hybrid governance, see:
 
-- [Save costs with Azure VMware Solution](./reserved-instance.md)
+- [Save costs with Azure VMware Solution](/azure-docs/blob/master/articles/azure-vmware/reserved-instance.md)
 - [How to secure your private cloud environment](/azure/vmware-cloudsimple/private-cloud-secure?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)
 - [Using Azure AD as an identify provider for vCenter on CloudSimple Private Cloud](/azure/vmware-cloudsimple/azure-ad)
 - [Security Control V2: Asset Management](/security/benchmark/azure/security-controls-v2-asset-management)

@@ -13,7 +13,7 @@ items:
     - name: Design areas
       items:
       - name: Identity and access management
-        href: eslz-identity-and-access-management.md`
+        href: eslz-identity-and-access-management.md
       - name: Network topology and connectivity
         href: eslz-network-topology-connectivity.md
       - name: Governance discipline
