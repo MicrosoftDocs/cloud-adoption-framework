@@ -27,14 +27,14 @@ Here are some general design considerations for Azure Arc-enabled servers monito
 
 ## Design recommendations
 
-Here are some general design recommendations for Azure Arc monitoring and management:
+Here are some general design recommendations for Azure Arc-enabled servers monitoring and management:
 
 ### Monitoring:
 - Logs should be stored centrally to the dedicated platform Log Analytics workspace and [control log access with Azure Role-based access control](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/design-logs-deployment#access-control-overview) . If there is a requirement for a separate workspace due to management, data sovereignty or compliance requirements, this can affect the ability to have a single pane of glass and event correlation of your Azure Arc-enabled servers across the environment.
 - Use VM insights to analyze the performance of your Azure Arc-enabled Windows and Linux servers and monitor their processes and dependencies on other resources and external processes.
 - Configure the needed performance counters for the Azure Arc-enabled Windows and Linux servers on the dedicated log analytics workspace.
 - Configure the logs that need to be collected for the Azure Arc-enabled Windows and Linux servers on the dedicated log analytics workspace.
-- Create a [resource health alert](https://docs.microsoft.com/en-us/azure/azure-arc/servers/plan-at-scale-deployment#phase-3-manage-and-operate) to monitor servers not sending heartbeats.
+- Create a [resource health alert](https://docs.microsoft.com/en-us/azure/azure-arc/servers/plan-at-scale-deployment#phase-3-manage-and-operate) to monitor Azure Arc-enabled servers not sending heartbeats.
 - Create [dashboards](https://docs.microsoft.com/en-us/azure/azure-portal/azure-portal-dashboards) or [Azure Monitor workbooks](https://docs.microsoft.com/en-us/azure/azure-monitor/visualize/workbooks-overview) to monitor the relevant metrics and events across your Azure Arc-enabled servers.
 
 ### Management:
