@@ -1,5 +1,5 @@
 ---
-title: Azure enterprise-scale analytics platform automation and DevOps
+title: Platform automation and DevOps for a data management and analytics enterprise-scale scenario
 description: Learn how this enterprise-scale scenario can improve platform automation and DevOps of data management and analytics.
 author: BrianBlanchard
 ms.author: brblanch
@@ -7,6 +7,7 @@ ms.date: 07/15/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Platform automation and DevOps for a data management and analytics enterprise-scale scenario
@@ -59,4 +60,4 @@ The following table summarizes the teams involved in an enterprise-scale for ana
 
 ## Next steps
 
-[Provisioning the enterprise-scale for analytics and AI platform](./eslz-provision-platform.md)
+[Provision the enterprise-scale for analytics and AI platform](./eslz-provision-platform.md)

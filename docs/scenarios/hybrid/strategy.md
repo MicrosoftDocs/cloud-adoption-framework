@@ -7,7 +7,7 @@ ms.date: 04/21/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
-ms.custom: e2e-hybrid
+ms.custom: e2e-hybrid, think-tank
 ---
 
 # Strategic considerations of hybrid and multicloud operations

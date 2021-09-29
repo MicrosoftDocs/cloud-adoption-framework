@@ -1,15 +1,16 @@
 ---
-title: Building data management and analytics capabilities in Azure
-description: Building data management and analytics capabilities
+title: Build data management and analytics capabilities in Azure
+description: Understand how to build data management and analytics capabilities in Azure.
 author: pratimdas
 ms.author: prda
 ms.date: 01/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: e2e-data-management, think-tank
 ---
 
-# Building data management and analytics capabilities
+# Build data management and analytics capabilities in Azure
 
 Now that you have your key projects mapped with business outcomes and calibrated with impact and complexity, and your baseline, you can start looking at building the capability to deliver them.
 
@@ -17,11 +18,11 @@ The first step would be to look at all capabilities you need, either at an organ
 
 ## Capabilities
 
-:::image type="content" source="./images/capability-as-is.png" alt-text="Diagram of a table showing guidance on building capabilities" lightbox="./images/capability-as-is.png":::
+:::image type="content" source="./images/capability-as-is.png" alt-text="A table showing guidance on building capabilities." lightbox="./images/capability-as-is.png":::
 
 As a next step, look at Azure native services, and start mapping what you need to deliver success.
 
-:::image type="content" source="./images/capability-map-azure.png" alt-text="A table showing cloud-native capabilities for your data strategy" lightbox="./images/capability-map-azure.png":::
+:::image type="content" source="./images/capability-map-azure.png" alt-text="A table showing cloud-native capabilities for your data strategy." lightbox="./images/capability-map-azure.png":::
 
 ## Culture
 
@@ -47,12 +48,12 @@ Some of the characteristics of this level are a holistic approach to data and pr
 
 Here we see the entire company using a data-driven culture, frameworks and standards enterprise. We also see automation, centers of excellence around analytics or automation, and data-driven feedback loops in action. One of the outcomes of a data-driven culture, is the use of AI in a meaningful way, and here it's easy to define a maturity model as the one shown below.
 
-:::image type="content" source="./images/data-strategy-maturity.png" alt-text="Diagram of maturity evolution of an organization." lightbox="./images/data-strategy-maturity.png":::
+:::image type="content" source="./images/data-strategy-maturity.png" alt-text="Diagram of an organization's maturity evolving." lightbox="./images/data-strategy-maturity.png":::
 
 ## Next steps
 
-The following list of articles will take you to guidance to help you be successful in the cloud adoption scenario.
+The following articles can guide your cloud adoption journey and help your cloud adoption scenario to succeed:
 
-- [Review your environment or Azure landing zones](./ready.md)
+- [Review your environment for Azure landing zones](./ready.md)
 - [Govern data management and analytics](./govern.md)
 - [Secure data management and analytics](./secure.md)

@@ -85,6 +85,9 @@ Here is a high-level diagram of operations through Azure Data Lake Storage Gen2 
 
 Working knowledge of Azure, Azure Cosmos DB, Azure Machine Learning, and Azure Kubernetes.
 
+[Read the full Tractor Supply Company story](https://corporate.tractorsupply.com/newsroom/news-releases/news-releases-details/2020/Tractor-Supply-Company-To-Expand-Relationship-With-Microsoft/default.aspx).
+
+
 Read more about:
 
 - [Azure Synapse Analytics](/azure/synapse-analytics/)
@@ -93,6 +96,8 @@ Read more about:
 - [Azure Synapse content on Microsoft Learn](/learn/browse/?terms=synapse)
 - [Azure Kubernetes on Microsoft Learn](/learn/browse/?terms=kubernetes)
 - [Data scientist learning path on Microsoft Learn](/learn/browse/?roles=data-scientist)
+
+**Starbucks turns to technology to brew up a more personal connection with its customers:** Starbucks has been using reinforcement learning technology, a type of machine learning in which a system learns to make decisions in complex, unpredictable environments based on external feedback, to provide a more personalized experience for customers who use the Starbucks mobile application.
 
 For comprehensive technical guidance, including a deployment guide, see the [Retail Recommender Solution Accelerator GitHub page](https://github.com/microsoft/Azure-Synapse-Retail-Recommender-Solution-Accelerator).
 
@@ -105,6 +110,9 @@ Tractor Supply Company, the largest rural lifestyle retailer in the United State
 Starbucks
 
 Starbucks has been using reinforcement learning technology, a type of machine learning in which a system learns to make decisions in complex, unpredictable environments based upon external feedback, to provide a more personalized experience for customers who use the Starbucks mobile application. [Read the full Starbucks customer story.](https://news.microsoft.com/transform/starbucks-turns-to-technology-to-brew-up-a-more-personal-connection-with-its-customers/)
+=======
+[Read the full Starbucks story](https://news.microsoft.com/transform/starbucks-turns-to-technology-to-brew-up-a-more-personal-connection-with-its-customers/).
+
 
 ## Next steps
 

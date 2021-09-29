@@ -1,17 +1,18 @@
 ---
 title: Data summary and maturity model for Azure
-description: Introducing the concept of data governance in the cloud and for Azure.
+description: Understand the concept of data governance in the cloud and for Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 02/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
+ms.custom: e2e-data-management, think-tank
 ---
 
-# Data governance summary and maturity model
+# Data summary and maturity model for Azure
 
-The key to successful data governance is to break down structured data into data entities and data subject areas. Then use a data governance solution to surround the specific data entities and data subject areas with people, processes, policies, and technology. This solution will help govern the lifecycle of these data entities. Establishing a common business vocabulary in a business glossary within a data catalog can help.
+The key to successful data governance is to break down structured data into data entities and data subject areas. Then use a data governance solution to surround the specific data entities and data subject areas with people, processes, policies, and technology. This solution will help govern the life cycle of these data entities. Establishing a common business vocabulary in a business glossary within a data catalog can help.
 
 The data catalog is critical technology. You can't govern data if you don't know where the data is or what it means. Data catalog software provides automatic data discovery, automatic profiling to determine its quality, and automatic sensitive data detection. It also helps map disparate data to your common vocabulary data names and definitions in the catalog business glossary to understand what data means.
 
@@ -38,7 +39,7 @@ When you look at the data governance challenge, you might wonder how mature you 
 | No data owners accountable for data                             | No data owners accountable for data                                    | Some data owners in place                                                  | All data owners in place                                                   |
 | No data stewards appointed with responsibility for data quality | Some data stewards in place for DQ but scope too broad, for example, whole dept | Data stewards in place and assigned to DG working groups for specific data | Data stewards in place assigned to DG working groups for specific data     |
 | No one accountable for data privacy                             | No one accountable for data privacy                                    | CPO accountable for privacy (no tools)                                     | CPO accountable for privacy with tools                                     |
-| No one accountable for access security                          | IT accountable for access security                                     | IT Sec accountable for access security                                     | IT Sec accountable for access security and responsible for enforcing privacy |
+| No one accountable for access security                          | IT accountable for access security                                     | IT Security accountable for access security                                     | IT Security accountable for access security and responsible for enforcing privacy |
 | No one to produce trusted data assets                           | Data publisher identified and accountable for producing trusted data   | Data publisher identified and accountable for producing trusted data       | Data publisher identified and accountable for producing trusted data       |
 | No SMEs identified for data entities                            | Some SMEs identified but not engaged                                   | SMEs identified and in DG working groups                                     | SMEs identified and in DG working group                                      |
 
@@ -64,7 +65,7 @@ When you look at the data governance challenge, you might wonder how mature you 
 | No policies and rules to govern data quality                               | Policies and rules to govern data quality started in common vocabulary in business glossary | Policies and rules to govern data quality defined in common vocabulary in catalog biz glossary                                | Policies and rules to govern data quality defined in common vocabulary in catalog biz glossary                                      |
 | No policies and rules to govern data access security                       | Some policies and rules to govern data access security created in different technologies    | Policies and rules to govern data access security and data privacy consolidated in the data catalog using classification scheme | Policies and rules to govern data access security, data privacy, and retention consolidated in the data catalog using classification schemes and enforced everywhere  |
 | No policies and rules to govern data privacy                               | Some policies and rules to govern data privacy                                              | Policies and rules to govern data access security and data privacy consolidated in the data catalog using classification scheme | Policies and rules to govern data access security, data privacy, and retention consolidated in the data catalog using classification schemes and enforced everywhere   |
-| No policies and rules to govern data retention                             | No policies and rules to govern data retention                                              | Some policies and rules to govern data retention                                                                              | Policies and rules to govern data access security, data privacy and retention consolidated in the data catalog using classification schemes and enforced everywhere  |
+| No policies and rules to govern data retention                             | No policies and rules to govern data retention                                              | Some policies and rules to govern data retention                                                                              | Policies and rules to govern data access security, data privacy, and retention consolidated in the data catalog using classification schemes and enforced everywhere  |
 | No policies and rules to govern master data maintenance                    | Policies and rules to govern master data maintenance for a single master data entity        | Policies and rules to govern master data maintenance for some master data entities                                            | Policies and rules to govern master data maintenance for all master data entities                                                   |
 
 ## Technology
@@ -81,4 +82,4 @@ When you look at the data governance challenge, you might wonder how mature you 
 
 ## Next steps
 
-[Requirements for governing data](./govern-requirements.md)
+[Requirements for governing data in a modern enterprise](./govern-requirements.md)

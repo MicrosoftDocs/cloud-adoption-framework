@@ -1,5 +1,5 @@
 ---
-title: Understand the personas and teams for the data management and analytics scenario in Azure
+title: Understand the personas and teams for data management and analytics in Azure
 description: Learn about the personas and teams for the data management and analytics scenario in Azure.
 author: abdale
 ms.author: hamoodaleem
@@ -7,10 +7,10 @@ ms.date: 08/06/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: think-tank, e2e-data
+ms.custom: e2e-data-management, think-tank
 ---
 
-# Understand the personas and teams for the data management and analytics scenario in Azure
+# Understand the personas and teams for data management and analytics in Azure
 
 For the data management and analytics scenario, we recommend moving teams like ingest, processing, analysis, consumption, and visualization from working in horizontally siloed teams, to agile vertical cross domain teams in each tier. Platform teams like data platform operations and platform operations are grouped together in a common platform group.
 
@@ -32,7 +32,7 @@ Multiple personas are involved a data management and analytics scenario deployme
 |Data/performance analysts |They use Azure to discover and share new insights from existing data assets or as-needed data queries. They create one-click AI transformations, consume prebuilt models, and generate machine learning models quickly.|
 |Data engineers | They use Azure to build, integrate, and manage data and analytics products. When necessary, they also create AI-enabled applications/solutions.|
 |Citizen data scientists |They create machine learning models with powerful visual, drag-and-drop, and no-code tools where coding isn't necessary. |
-| Data scientists | They use preferred tools and machine learning frameworks to build scalable data science solutions. They also accelerate the end-to-end machine learning lifecycle.|
+| Data scientists | They use preferred tools and machine learning frameworks to build scalable data science solutions. They also accelerate the end-to-end machine learning life cycle.|
 | Machine learning engineers | They support the right processes and infrastructure models to be deployed and managed easily. |
 
 > [!NOTE]
@@ -50,13 +50,13 @@ The data landing zone group consists of three teams:
 - Manage access hierarchy (groups) and approval requests.
 - Furnish metadata in data catalogs.
 
-**Integration Ops (one team per integration)**:
+**Integration ops (one team per integration)**:
 
 - Ingest and register new read data sources.
 - Manage access hierarchy (groups) and approval requests.
 - Furnish metadata in data catalogs.
 
-**Data Landing Zone Ops (one group per data landing zone)**:
+**Data landing zone ops (one group per data landing zone)**:
 
 - Operate and maintain their data landing zone instance.
 - Respond to new data integration and data product service requests.
@@ -114,7 +114,7 @@ There are many data governance roles and responsibilities related to people. The
 
 :::image type="content" source="./images/data-governance-review-board.png" alt-text="Diagram of the structure of how to organize data governance.":::
 
-The goal is for businesses to organize governance in a way that allows them to divide and conquer when governing data throughout its lifecycle across a hybrid computing environment. One way is to have multiple working groups reporting to a data governance control board, with each working group responsible for a particular data domain or entity, for example, the customer, or a data subject area that consists of multiple data entities.
+The goal is for businesses to organize governance in a way that allows them to divide and conquer when governing data throughout its life cycle across a hybrid computing environment. One way is to have multiple working groups reporting to a data governance control board, with each working group responsible for a particular data domain or entity, for example, the customer, or a data subject area that consists of multiple data entities.
 
 ## Other groups
 
@@ -128,8 +128,6 @@ The architecture review board's main functions are to review and assess architec
 
 The feedback and support operating board receives feedback about processes and works with the other groups to create backlog items to address gaps and improve the solution.
 
-For more information about how groups align within a data management landing zone and data landing zones, see the [data management and analytics scenario DevOps models](./organize-team-functions.md).
-
 ## Next steps
 
-[Team functions](./organize-team-functions.md)
+For more information about how groups align within a data management landing zone and data landing zones, see [Understand teams and functions for data management and analytics in Azure](./organize-team-functions.md).

@@ -12,9 +12,9 @@ ms.custom: think-tank, e2e-aks
 
 <!-- docutune:casing "HPA" -->
 
-# Enterprise enrollment considerations for AKS
+# Enterprise enrollment considerations for AKS (Optional)
 
-For most customer implementations, standard best practices around enterprise enrollment and Active Directory tenants are unchanged when deploying Azure landing zones for AKS. There are seldom specific considerations or recommendations that would impact enterprise enrollment or Active Directory tenant decisions. See the following considerations to determine whether AKS requirements would impact existing tenant decisions.
+Enterprise enrollment is not a requirement for Enterprise-scale for AKS. For most customer implementations, standard best practices around enterprise enrollment and Active Directory tenants are unchanged when deploying Azure landing zones for AKS. There are seldom specific considerations or recommendations that would impact enterprise enrollment or Active Directory tenant decisions. See the following considerations to determine whether AKS requirements would impact existing tenant decisions. 
 
 However, it could be important to understand any decisions previously made by the cloud platform team to be aware of existing [enterprise enrollment or Active Directory tenant decisions](../../ready/enterprise-scale/enterprise-enrollment-and-azure-ad-tenants.md).
 

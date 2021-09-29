@@ -1,15 +1,16 @@
 ---
-title: Authentication for data management and analytics for Azure
-description: Learn about authentication techniques for data management and analytics, including user, application, and service-to-service authentication for Azure.
+title: Authentication for data management and analytics in Azure
+description: Learn about authentication techniques for the data management and analytics scenario in Azure, including user, application, and service-to-service authentication.
 author: mboswell
 ms.author: mboswell
 ms.date: 07/20/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
+ms.custom: e2e-data-management, think-tank
 ---
 
-# Authentication for data management and analytics
+# Authentication for data management and analytics in Azure
 
 Authentication is the process of verifying the identity of the user or application. A single source identity provider is preferred, which handles identity management and authentication. This provider is known as a directory service. It provides methods for storing directory data and making this data available to network users and administrators.
 
@@ -28,7 +29,7 @@ Authentication scenarios for the data management and analytics scenario are:
 
 Users who connect to a data service or resource must present a credential. This credential proves that users are who they claim. Then they can access the service or resource. Authentication also allows the service to know the identity of the users. The service decides what a user can see and do after the identity is verified.
 
-Azure Data Lake Storage Gen 2, Azure SQL Database, and Azure Synapse support Azure AD integration. The interactive user authentication mode requires users to provide credentials in a dialog box.
+Azure Data Lake Storage Gen2, Azure SQL Database, and Azure Synapse support Azure AD integration. The interactive user authentication mode requires users to provide credentials in a dialog box.
 
 > [!IMPORTANT]
 > Do not hard-code user credentials into an application for authentication purpose.
@@ -71,7 +72,7 @@ An Azure service principal is the alternative for applications and services that
 |-------------------|------------------|
 | A security identity manually created in Azure AD for use by applications, services, and tools to access specific Azure resources. | A special type of service principal. It's an automatic identity that is created when an Azure service is created. |
 | Can be used by any application or service. It isn't tied to a specific Azure service. | Represents an Azure service instance itself. It cannot be used to represent other Azure services. |
-| Has an independent lifecycle. You must delete it explicitly. | Deletes automatically when the Azure service instance is deleted. |
+| Has an independent life cycle. You must delete it explicitly. | Deletes automatically when the Azure service instance is deleted. |
 | Password-based or certificate-based authentication. | No explicit password to be provided for authentication. |
 
 ## Database authentication and permissions
@@ -94,9 +95,11 @@ To control access to data in the data lake, we recommend using access control li
 Similar to Azure RBAC general practices, the following rules should apply to ACL:
 
 - **Manage access using groups.** Assign access to Azure AD groups and manage membership of groups for ongoing access management.
+
 - **Least privilege.** In most cases, users should have only read permission to the folders and files they need in the data lake. A managed identity or service principal, such as the one used by Azure Data Factory, has read, write, and execute permissions. Data users shouldn't have access to the storage account container.
+
 - **Align with data partitioning scheme.** ACL and data partition design must align to ensure effective data access control. For more information, see [Data lake partitioning](./best-practices/data-lake-services.md#data-lake-partitioning).
 
 ## Next steps
 
-[Authorization for data management and analytics](./secure-analytics-role-based-access-control.md)
+[Data management and role-based access control for the data management and analytics scenario in Azure](./secure-analytics-role-based-access-control.md)

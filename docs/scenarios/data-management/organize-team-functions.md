@@ -1,5 +1,5 @@
 ---
-title: Understand teams and functions for the data management and analytics scenario in Azure
+title: Understand teams and functions for data management and analytics in Azure
 description: Learn about teams and functions for the data management and analytics scenario in Azure.
 author: mboswell
 ms.author: mboswell
@@ -7,10 +7,10 @@ ms.date: 08/06/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: think-tank, e2e-data
+ms.custom: e2e-data-management, think-tank
 ---
 
-# Understand teams and functions for the data management and analytics scenario in Azure
+# Understand teams and functions for data management and analytics in Azure
 
 For the data management and analytics scenario, we recommend by moving teams like ingest, processing, analysis, consumption, and visualization from working in horizontally siloed teams to agile vertical cross domain teams in each tier. Platform teams like data platform operations and platform operations are grouped together in a common platform group.
 
@@ -100,7 +100,7 @@ IT service management solutions field dataset update requests from the business 
 
 ### Manage access requests to datasets
 
-As previously described in [Understand security provisioning for the data management and analytics scenario in Azure](./security-provisioning.md#grant-access), integration operations is responsible for approving access to datasets.
+As previously described in [Understand security provisioning for data management and analytics in Azure](./security-provisioning.md#grant-access), integration operations is responsible for approving access to datasets.
 
 ### Review dataset telemetry
 
@@ -185,10 +185,10 @@ In addition to participating in these user groups, analysts should submit data a
 
 ## Responsibility assignment matrix
 
-- Responsible: who is completing the task?
-- Accountable: who is making decisions and taking actions on the tasks(s)?
-- Consulted: who will receive communication about decisions and tasks?
-- Informed: who will be updated about the decisions and actions during the project?
+- Responsible: Who is completing the task?
+- Accountable: Who is making decisions and taking actions on the tasks(s)?
+- Consulted: Who will receive communication about decisions and tasks?
+- Informed: Who will be updated about the decisions and actions during the project?
 
 |Role |Cloud environment|Data management landing zone|Data landing zone|Data integration|Data products|
 |-|-|-|-|-|-|
@@ -202,4 +202,4 @@ In addition to participating in these user groups, analysts should submit data a
 
 ## Next steps
 
-[Azure Well-Architected Framework for data workloads](./well-architected-framework.md)
+[The Azure Well-Architected Framework for data workloads](./well-architected-framework.md)
