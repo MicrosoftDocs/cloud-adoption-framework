@@ -1,7 +1,7 @@
 ---
 title: Innovation in the retail industry
 description: Learn how to drive innovation as you implement analytics-driven and intelligent techniques. Reach retail maturity and improve your results.
-author: BrianBlanchard
+author: mpvenables
 ms.author: brblanch
 ms.date: 09/23/2021
 ms.topic: conceptual
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: internal, e2e-retail
 ---
 
-## Innovative disciplines and modernization
+# Innovate disciplines and modernizing your organization
 
 Building innovative practices by using data to create guided customer solutions allows you to better engage customers based on their needs. Unlocking insights into customer needs with innovative disciplines like [democratizing data](../../innovate/considerations/data) and [innovative application development](../../innovate/considerations/apps), widens efficiencies in how data is stored, analyzed, managed, and governed. Enable the move to Intelligent retail maturity by fully modernizing your organization with SaaS apps and service. Quickly and reliably provision SaaS solutions that lever AI and ML services to deliver customer insights that maximize your business value.
 

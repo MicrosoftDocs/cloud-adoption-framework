@@ -39,8 +39,12 @@ items:
     items:
     - name: Overview
       href: innovate.md
-    - name: Improve retail experience
+    - name: Improve the retail experience
       href: improve-retail-experience.md
+    - name: Forecast customer demand
+      href: retail-demand-forecasting-solution-accelerator.md
+    - name: Identify key revenue factors
+      href: retail-modern-finance-solution-accelerator.md
   - name: Govern your portfolio
     items:
     - name: Overview

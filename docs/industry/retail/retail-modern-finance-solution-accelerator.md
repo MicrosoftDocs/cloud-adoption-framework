@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: internal, e2e-retail
 ---
 
-# Modern Finance Solution Accelerator
+# Identify key revenue factors with a Modern Finance Solution Accelerator
 
 ## Modern Finance Solution Accelerator introduction
 

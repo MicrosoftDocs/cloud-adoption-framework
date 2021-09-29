@@ -1,9 +1,9 @@
 ---
-title: Improve the retail experience with retail recommender
+title: Improve the retail experience with retail recommender solution accelerator
 description: Improve the retail experience by using the retail recommender solution in Azure. This article shows you how to build out the solution accelerator.
 author: mpvenables
 ms.author: brblanch
-ms.date: 09/17/2021
+ms.date: 09/29/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -110,9 +110,8 @@ Tractor Supply Company, the largest rural lifestyle retailer in the United State
 Starbucks
 
 Starbucks has been using reinforcement learning technology, a type of machine learning in which a system learns to make decisions in complex, unpredictable environments based upon external feedback, to provide a more personalized experience for customers who use the Starbucks mobile application. [Read the full Starbucks customer story.](https://news.microsoft.com/transform/starbucks-turns-to-technology-to-brew-up-a-more-personal-connection-with-its-customers/)
-=======
-[Read the full Starbucks story](https://news.microsoft.com/transform/starbucks-turns-to-technology-to-brew-up-a-more-personal-connection-with-its-customers/).
 
+[Read the full Starbucks story](https://news.microsoft.com/transform/starbucks-turns-to-technology-to-brew-up-a-more-personal-connection-with-its-customers/).
 
 ## Next steps
 

@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: internal, e2e-retail
 ---
 
-# Demand Forecasting Solution Accelerator
+# Forecast customer demand with a Demand Forecasting Solution Accelerator
 
 ## End-to-end solution with consolidated machine learning models
 
