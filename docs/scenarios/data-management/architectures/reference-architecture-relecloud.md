@@ -6,7 +6,7 @@ ms.author: jepeach
 ms.date: 09/21/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.custom: think-tank, e2e-data
+ms.custom: think-tank, e2e-data-management
 ---
 
 # Relecloud scenario for data management and analytics in Azure
@@ -95,7 +95,7 @@ The customer scenario outlined above can be deployed by referencing the followin
 
 To deploy the architectures, use the data management landing zone and the data landing zone reference implementation templates in the following GitHub repositories:
 
-- [Data management zanding zone template](https://github.com/Azure/data-management-zone)
+- [Data management landing zone template](https://github.com/Azure/data-management-zone)
 - [Data landing zone template](https://github.com/Azure/data-landing-zone)
 
 Use the following templates to deploy other data integrations and data products in the Relecloud billing and operations data landing zones:
