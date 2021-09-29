@@ -12,15 +12,31 @@ ms.custom: internal
 
 # Design area: Management for Azure environments
 
+## Overview
+
 For stable, ongoing operations in the cloud, a management baseline is required to provide visibility, operations compliance, and protect and recover capabilities.
+
+The management design area focusses on the considerations and recommendations for design decisions as part of the landing zone. In addition to this, the [Manage methodology](/manage/index.md) in the Cloud Adoption Framework provides further in-depth guidance for holistic management processes and tools. 
 
 ### Platform management
 
+As cloud environments are implemented and scaled out, management controls that span the environment become increasingly important.
+Irrespective of the services that are running on top of the landing zone, there is a need for the management of fundamental elements of the platform to ensure stable, ongoing operations.
+These management tools should be capable of scaling as the environments do. They may include a mix of first party and third party tools, depending on your existing investments.
+
 ### Application management
+
+Applications and services built on top of the landing zone platform may have specific management requirements that are in addition to the tools and processes put in place for the platform services. 
+
+These should be considered in the context of the platform management, to ensure additions or exceptions are known and documented. It is also important to look at these requirements in the broader context as what is thought to be a requirement for a single application may become a common patterns and should be considered as part of the overall platform toolset to avoid unnecessary duplication of effort.
+
+For further information on considerations for application-specific management, review the [Operational excellence](/azure/architecture/framework/#operational-excellence) of the Well-architected Framework
 
 ### Business continuity and disaster recovery
 
-Your organization or enterprise needs to design suitable, platform-level capabilities that application workloads can consume to meet their specific requirements. Specifically, these application workloads have requirements pertaining to recover time objective (RTO) and recovery point objective (RPO). Be sure that you capture disaster recovery (DR) requirements in order to design capabilities appropriately for these workloads.
+Your organization needs to design suitable, platform-level capabilities that application workloads can consume to meet their specific requirements. 
+
+Specifically, these application workloads have requirements pertaining to recover time objective (RTO) and recovery point objective (RPO). Be sure that you capture disaster recovery (DR) requirements in order to design capabilities appropriately for these workloads.
 
 ## Management considerations
 
@@ -114,8 +130,6 @@ Consider the following factors:
 
 - Use a single [monitor logs workspace](/azure/azure-monitor/platform/design-logs-deployment) to manage platforms centrally except where Azure role-based access control (Azure RBAC), data sovereignty requirements and data retention policies mandate separate workspaces. Centralized logging is critical to the visibility required by operations management teams. Logging centralization drives reports about change management, service health, configuration, and most other aspects of IT operations. Converging on a centralized workspace model reduces administrative effort and the chances for gaps in observability.
 
-    In the context of the enterprise-scale architecture, centralized logging is primarily concerned with platform operations. This emphasis doesn't prevent the use of the same workspace for VM-based application logging. With a workspace configured in resource-centric access control mode, granular Azure RBAC is enforced to ensure application teams will only have access to the logs from their resources. In this model, application teams benefit from the use of existing platform infrastructure by reducing their management overhead. For any non-compute resources such as web apps or Azure Cosmos DB databases, application teams can use their own Log Analytics workspaces and configure diagnostics and metrics to be routed here.
-
 - Export logs to Azure Storage if log retention requirements exceed two years. Use immutable storage with a write-once, read-many policy to make data non-erasable and non-modifiable for a user-specified interval.
 - Use Azure Policy for access control and compliance reporting. Azure Policy provides the ability to enforce organization-wide settings to ensure consistent policy adherence and fast violation detection. For more information, see [Understand Azure Policy effects](/azure/governance/policy/concepts/effects).
 - Monitor in-guest virtual machine (VM) configuration drift using Azure Policy. Enabling [guest configuration](/azure/governance/policy/concepts/guest-configuration) audit capabilities through policy helps application team workloads to immediately consume feature capabilities with little effort.
@@ -168,3 +182,13 @@ Included in the Azure landing zone accelerator deployment are:
 |--|--|
 Azure Monitor| Insert specifics |
 Network watcher| Insert specifics | 
+
+### Centralized logging in the Azure landing zone accelerator
+
+In the context of the Azure landing zone accelerator, centralized logging is primarily concerned with platform operations. 
+
+This emphasis doesn't prevent the use of the same workspace for VM-based application logging. With a workspace configured in resource-centric access control mode, granular Azure RBAC is enforced to ensure application teams will only have access to the logs from their resources. 
+
+In this model, application teams benefit from the use of existing platform infrastructure by reducing their management overhead. 
+
+For any non-compute resources such as web apps or Azure Cosmos DB databases, application teams can use their own Log Analytics workspaces and configure diagnostics and metrics to be routed here.

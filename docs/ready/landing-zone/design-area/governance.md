@@ -12,7 +12,13 @@ ms.custom: internal
 
 # Design area: Azure governance
 
-Governance provides mechanisms and processes to maintain control over your applications and resources in Azure. 
+As organizations begin their cloud adoption journey, starting with strong controls in place to government environments is an important success criteria.
+
+Governance provides mechanisms and processes to maintain control over your applications and resources in Azure.
+
+At part of the design area review, explore the considerations and recommendations outlined here in order to make informed decisions as you plan your landing zone. 
+
+The governance design area focusses on the considerations and recommendations for design decisions as part of the landing zone. In addition to this, the [Govern methodology](/govern/index.md) in the Cloud Adoption Framework provides further in-depth guidance for holistic governance processes and tools. 
 
 ## Azure governance considerations
 

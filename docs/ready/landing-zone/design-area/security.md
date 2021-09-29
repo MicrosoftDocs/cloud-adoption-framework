@@ -19,6 +19,7 @@ When designing and implementing an Azure landing zone, security should be a cons
 
 ... add more here ....
 
+The security design area focusses on the considerations and recommendations for design decisions as part of the landing zone. In addition to this, the [Secure methodology](/secure/index.md) in the Cloud Adoption Framework provides further in-depth guidance for holistic security processes and tools. 
 
 ## Azure Security Benchmark
 

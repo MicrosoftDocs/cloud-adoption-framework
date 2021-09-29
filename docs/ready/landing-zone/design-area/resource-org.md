@@ -25,7 +25,6 @@ In the resource organization design area, we will explore the considerations and
 
 ## Resource organization considerations
 
-
 ### Define a management group hierarchy design considerations
 
 Management group structures within an Azure Active Directory (Azure AD) tenant support organizational mapping. Consider your management group structure thoroughly as your organization plans Azure adoption at scale.

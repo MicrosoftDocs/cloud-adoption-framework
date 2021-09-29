@@ -14,11 +14,14 @@ ms.custom: internal
 
 ## Platform automation and DevOps considerations
 
-Many traditional IT operating models aren't compatible with the cloud, and organizations must undergo operational and organizational transformation to deliver against enterprise migration targets. You should use a DevOps approach for both application and central teams.
+As organizations move into cloud technologies, the scale, agility and flexibility offered can lead to opportunities for new ways of working and modern approaches for delivering services. 
+
+Many traditional IT operating models aren't compatible with the cloud, and organizations must undergo operational and organizational transformation to deliver against enterprise migration targets. Evaluate using DevOps processes and tools for both application and central teams.
 
 ### Design considerations
 
-- Where central teams are concerned, you should use pipelines for continuous integration and continuous deployment. Use the pipelines to manage policy definitions, role definitions, policy assignments, management group hierarchies, and subscriptions. These pipelines help ensure that you can operationally manage multiple subscriptions while still conforming to a desired state.
+- Where central teams are concerned, consider using pipelines for continuous integration and continuous deployment
+- Pipelines can be used to manage policy definitions, role definitions, policy assignments, management group hierarchies, and subscriptions. These pipelines help ensure that you can operationally manage multiple subscriptions while still conforming to a desired state.
 
 - The blanket application of a DevOps model won't instantly establish capable DevOps teams.
 
@@ -44,7 +47,7 @@ Establish a cross-functional DevOps platform team to build, manage, and maintain
 
 | Function | Responsibilities|
 |--|--|
-|**PlatformOps** (platform operations)|Subscription provisioning and delegation of required network, identity and access management, and policies <br> Platform management and monitoring (holistic) <br> Platform management and monitoring (holistic) <br> Platform management and monitoring (holistic) <br> Cost management (holistic) <br> Platform-as-code (managing templates, scripts, and other assets) <br> Responsible for overall operations on Microsoft Azure within the Azure Active Directory tenant (managing service principals, registering the Microsoft Graph API, and defining roles) |
+|**PlatformOps** (platform operations)|Subscription provisioning and delegation of required network, identity and access management, and policies <br> Platform management and monitoring (holistic) <br>  Cost management (holistic) <br> Platform-as-code (managing templates, scripts, and other assets) <br> Responsible for overall operations on Microsoft Azure within the Azure Active Directory tenant (managing service principals, registering the Microsoft Graph API, and defining roles) |
 |**SecOps** (security operations)|Azure role-based access control (Azure RBAC) (holistic) <br> Key management (for central services, simple mail-transfer protocol, and domain controller) <br> Policy management and enforcement (holistic) <br> Security monitoring and audit (holistic) |
 |**NetOps** (network operations)| Network management (holistic) |
 |**AppDevOps**| Allow application owners to create and manage application resources through a DevOps model <br> Application migration or transformation <br> Application management and monitoring <br> Azure RBAC (application resources) <br> Security monitoring and audit (application resources) <br> Cost management (application resources) <br> Network management (application resources)| 
