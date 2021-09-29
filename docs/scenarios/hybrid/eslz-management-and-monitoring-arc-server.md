@@ -29,7 +29,7 @@ Here are some general design considerations for Azure Arc-enabled servers monito
 
 Here are some general design recommendations for Azure Arc monitoring and management:
 
-Monitoring:
+### Monitoring:
 - Logs should be stored centrally to the dedicated platform Log Analytics workspace and [control log access with Azure Role-based access control](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/design-logs-deployment#access-control-overview) . If there is a requirement for a separate workspace due to management, data sovereignty or compliance requirements, this can affect the ability to have a single pane of glass and event correlation of your Azure Arc-enabled servers across the environment.
 - Use VM insights to analyze the performance of your Azure Arc-enabled Windows and Linux servers and monitor their processes and dependencies on other resources and external processes.
 - Configure the needed performance counters for the Azure Arc-enabled Windows and Linux servers on the dedicated log analytics workspace.
@@ -37,7 +37,7 @@ Monitoring:
 - Create a [resource health alert](https://docs.microsoft.com/en-us/azure/azure-arc/servers/plan-at-scale-deployment#phase-3-manage-and-operate) to monitor servers not sending heartbeats.
 - Create [dashboards](https://docs.microsoft.com/en-us/azure/azure-portal/azure-portal-dashboards) or [Azure Monitor workbooks](https://docs.microsoft.com/en-us/azure/azure-monitor/visualize/workbooks-overview) to monitor the relevant metrics and events across your Azure Arc-enabled servers.
 
-Management:
+### Management:
 - Create an [Azure Advisor alert](https://docs.microsoft.com/en-us/azure/azure-arc/servers/plan-at-scale-deployment#phase-3-manage-and-operate) to identify Azure Arc-enabled servers that are not using the latest version of the Connected Machine agent.
 - Use [Update Management](https://docs.microsoft.com/en-us/azure/automation/update-management/overview) in Azure Automation as a long-term patching mechanism for both Azure Arc-enabled Windows and Linux servers. Update Management will allow you to automate the Connected Machine agent upgrade via Windows Updates on Azure Arc-enabled Windows servres.
 - For Linux Arc-enabled servers, review the Connected Machine agent [upgrade methods](https://docs.microsoft.com/en-us/azure/azure-arc/servers/manage-agent#upgrading-agent).
