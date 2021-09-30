@@ -46,10 +46,6 @@ The following articles provide guidelines for creating your landing zone:
 
 ## Bicep and Azure Resource Manager templates
 
-The Azure Resource Manager templates for Azure VMware Solution provide a collection of infrastructure-as-code templates for Azure Resource Manager and Bicep to deploy an Azure VMware Solution environment on Azure.
-
-You use Bicep templates to deploy infrastructure components such as Azure VMware Solution, virtual machines, networks, or storage to Azure. To get the templates, see the [Enterprise-scale for Azure VMware Solution GitHub repository](https://github.com/Azure/Enterprise-Scale-for-AVS). This reference implementation deploys a simple version of an Azure VMware Solution implementation that resides in its own subscription. This subscription is within the online management group of an enterprise-scale landing zone.
-
 ## Architecture
 
 The following architecture diagram is an example that shows design areas and best practices.
