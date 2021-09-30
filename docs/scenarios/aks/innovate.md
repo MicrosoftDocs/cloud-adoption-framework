@@ -6,8 +6,8 @@ ms.author: brblanch
 ms.date: 05/14/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: migrate
-ms.custom: e2e-hybrid
+ms.subservice: scenario
+ms.custom: e2e-aks, think-tank
 ---
 
 # Innovation on modern application platforms

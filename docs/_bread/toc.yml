@@ -59,8 +59,8 @@ items:
       tocHref: /azure/cloud-adoption-framework/scenarios/
       topicHref: /azure/cloud-adoption-framework/scenarios
     - name: Industry scenarios (lenses)
-      tocHref: /azure/cloud-adoption-framework/industry/
-      topicHref: /azure/cloud-adoption-framework/industry
+      tocHref: /azure/cloud-adoption-framework/industry/retail/
+      topicHref: /azure/cloud-adoption-framework/industry/retail
     - name: Reference
       tocHref: /azure/cloud-adoption-framework/reference/
       topicHref: /azure/cloud-adoption-framework/reference

@@ -1,12 +1,12 @@
 ---
-title: "Get started: Build a cloud operations team"
+title: 'Get started: Build a cloud operations team'
 description: This guide helps a cloud operations team understand scope, deliverables, and the functionality that the team is responsible for.
 author: JanetCThomas
 ms.author: janet
 ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: overview
+ms.subservice: general
 ms.custom: internal
 ---
 
@@ -194,6 +194,6 @@ As adoption and operations scale, it's important to define and automate governan
 Learn more about:
 
 - [Cloud center of excellence functions](../../organize/cloud-center-of-excellence.md)
-- [Organizational antipatterns: silos and fiefdoms](../../organize/fiefdoms-silos.md)
+- [Organizational antipatterns: Silos and fiefdoms](../../organize/fiefdoms-silos.md)
 
 Align responsibilities across teams by developing a cross-team matrix that identifies RACI parties. Download and modify the [RACI template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx).

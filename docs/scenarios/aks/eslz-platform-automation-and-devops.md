@@ -1,12 +1,12 @@
 ---
 title: Deployment option considerations for Azure Kubernetes Service (AKS)
-description: Understand design recommendations and considerations for Azure Kubernetes Service (AKS) platform automation and DevOps.
+description: Learn more about design recommendations and considerations for Azure Kubernetes Service (AKS) platform automation and DevOps.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 03/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
 ms.custom: think-tank, e2e-aks
 ---
 
@@ -57,11 +57,11 @@ Here are some design recommendations for AKS platform automation and DevOps:
 
 - Use [GitOps](/azure/azure-arc/kubernetes/tutorial-use-gitops-connected-cluster) to deploy and maintain applications. GitOps uses the Git repository as a single source of truth, avoiding configuration drift and increasing productivity and reliability during rollbacks and related procedures.
 
-- Store secrets and other sensitive artifacts in GitHub secrets, allowing actions and other workflow parts to read them if needed while executing.
+- Use [pod-managed identities](/azure/aks/operator-best-practices-identity#use-pod-managed-identities) and [Azure Key Vault provider for Secrets Store CSI Driver](/azure/aks/csi-secrets-store-driver) to protect secrets, certificates, and connection strings.
 
 - Strive for maximized deployment concurrency by avoiding hardcoded configuration items and settings.
 
-- Rely on well-known conventions across infrastructure and application-related deployments. Use [admission controllers](https://kubernetes.io/blog/2019/03/21/a-guide-to-kubernetes-admission-controllers/) combined with [gatekeeper](https://github.com/open-policy-agent/gatekeeper) to validate and enforce conventions among the other defined policies.
+- Rely on well-known conventions across infrastructure and application-related deployments. Use [admission controllers](https://kubernetes.io/blog/2019/03/21/a-guide-to-kubernetes-admission-controllers/) combined with the [Azure Policy add-on for Kubernetes](/azure/aks/use-azure-policy) to validate and enforce conventions among the other defined policies.
 
 - Embrace [shift left](/devops/develop/shift-left-make-testing-fast-reliable) consistently with:
   - Security, by adding vulnerability scanning tools like container scanning early in the pipeline.

@@ -26,7 +26,7 @@ This article is subdivided into three sections:
 
 Modern machine learning algorithms and frameworks make it increasingly easy to develop models that can make accurate predictions.
 
-You might have built a machine learning model that exceeds all of your accuracy expectations and impresses your business sponsors. Now it’s time to deploy the model into production and it might not be as easy as you had expected. There are likely many things to put in place before your model can be used.
+You might have built a machine learning model that exceeds all of your accuracy expectations and impresses your business sponsors. Now it’s time to deploy the model into production and it might not be as easy as you had expected. There are likely many things to put in place before your model can be used. 
 
 Over time, you or one of your colleagues might develop a new model that can do better than the old model. The question you must ask is, can you implement it without disrupting your business? It might be necessary for regulatory purposes to re-create the model and explain the model's predictions if unusual or biased predictions are made. Data inputted to your training and model can change over time. Because of these changes, it might be necessary to retrain the model periodically to maintain the accuracy of its predictions. Who is responsible to feed the data, monitor the performance, retrain the model, and fix it should it fail?
 
@@ -43,7 +43,7 @@ Ultimately, the goal of MLOps is to close the gap between development and produc
 
 #### Exploration precedes development and operations
 
-Data science projects are different from application development or data engineering projects. Data science projects might or might not make it to production. After an initial analysis, it might become clear that the business outcome can’t be achieved with the available datasets. Because of this reason, an exploration phase is usually the first step in a data science project. The goal in this phase is to define and refine the problem and run exploratory data analysis, in which statistics and visualizations are used to confirm or falsify the problem hypotheses. There needs to be a common understanding that the project might not extend beyond this phase. It’s important to make this phase as seamless as possible to have a quick turnaround. Unless there's an element of security, which enforces processes and procedures, they should be avoided and the Data Scientist should be allowed to work with the tool and data of their choice. Real data is needed for data exploration work.
+Data science projects are different from application development or data engineering projects. Data science projects may or may not make it to production. After an initial analysis, it might become clear that the business outcome can’t be achieved with the available datasets. Because of this reason, an exploration phase is usually the first step in a data science project. The goal in this phase is to define and refine the problem and run exploratory data analysis, in which statistics and visualizations are used to confirm or falsify the problem hypotheses. There needs to be a common understanding that the project might not extend beyond this phase. It’s important to make this phase as seamless as possible to have a quick turnaround. Unless there's an element of security, which enforces processes and procedures, they should be avoided and the Data Scientist should be allowed to work with the tool and data of their choice. Real data is needed for data exploration work.
 
 The experimentation and development stage usually begins when there is enough confidence that the data science project is feasible and can provide real business value. This stage is when development practices become increasingly important. It’s a good practice to capture metrics for all of the experiments that are done at this stage. It’s also important to incorporate source control so that it’s possible to compare models and toggle between different versions of the code if needed. Development activities include the refactoring, testing, and automation of exploration code into repeatable experimentation pipelines, and the creation of model serving applications and pipelines. Refactoring code into more modular components and libraries helps increase reusability and testability, and it allows for performance optimization. Finally, what is deployed into staging and production environments is the model serving application or batch inference pipelines. Next to monitoring of infrastructure reliability and performance, similar to what's done for a regular application with traditional DevOps, the quality of the data, the data profile, and the model must be continuously monitored at the risk of degradation or drift. Machine learning models require retraining over time to stay relevant in a changing environment.
 
@@ -96,7 +96,7 @@ Azure Machine Learning offers several asset management, orchestration, and autom
 - Standardize on a project lifecycle and agile methodology. The [Team Data Science Process](/azure/machine-learning/team-data-science-process/overview) provides a reference lifecycle implementation.
 - Balanced teams can execute all MLOps stages from exploration to development to operations.
 
-### Process
+### Process 
 
 - Standardize on a code template to allow for code reuse and increase ramp up time at project start or when a new team member joins the project. [Azure Machine Learning pipelines](/azure/machine-learning/concept-ml-pipelines) and [job submissions script](/python/api/azureml-core/azureml.core.scriptrun), and [CI/CD pipelines](/azure/machine-learning/how-to-github-actions-machine-learning) lend themselves well for the creation of templates.
 - Use version control. Jobs that are submitted from a Git-backed folder [automatically track repo metadata](/azure/machine-learning/concept-train-model-git-integration) with the job in Azure Machine Learning for reproducibility.
@@ -196,6 +196,11 @@ Everyone has a unique learning style, so a mixture of the following types of doc
 - How-to videos
 - Readiness assessments
 
+#### Azure MLOps Video Series
+
+In this section, these [Azure MLOps video series](https://www.youtube.com/playlist?list=PLiQS6N-W1p3m9squzZ2cPgGdH5SBhjY6f) show how to enable MLOps for your machine learning solution from your initial developemnt to production.
+
+
 ### Ethics
 
 Ethics play an instrumental role in the design of an AI solution. If ethical principles aren't implemented, trained models can exhibit the same bias present in the data they were trained on. This issue can result in the project being discontinued and more importantly, it can risk the organization's reputation.
@@ -214,6 +219,12 @@ Not every organization's machine learning DevOps (MLOps) requirements are the sa
 
 ## Next steps
 
-To learn more about how to organize and set up Azure Machine Learning environments, see [Organize and set up Azure Machine Learning environments](./ai-machine-learning-resource-organization.md).
+To learn more about how to organize and set up Azure Machine Learning environments, see [Organize and set up Azure Machine Learning environments](./ai-machine-learning-resource-organization.md). Also, you can watch hands-on [Azure MLOps video series](https://www.youtube.com/playlist?list=PLiQS6N-W1p3m9squzZ2cPgGdH5SBhjY6f).
+
 > [!div class="nextstepaction"]
 > [Organize and set up Azure Machine Learning environments](./ai-machine-learning-resource-organization.md)
+
+To learn more about how to manage budgets, quota and cost with Azure Machine Learning, see [Manage budgets, costs, and quota for Azure Machine Learning at organizational scale](./optimize-ai-machine-learning-cost.md).
+
+> [!div class="nextstepaction"]
+> [Manage budgets, costs, and quota for Azure Machine Learning at organizational scale](./optimize-ai-machine-learning-cost.md)

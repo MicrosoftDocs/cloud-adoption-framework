@@ -6,7 +6,8 @@ ms.author: brblanch
 ms.date: 05/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
+ms.custom: internal, e2e-retail
 ---
 
 # Azure landing zones for the retail industry
@@ -27,11 +28,11 @@ For retail companies, IT operations are heavily influenced by the company's hist
 
 Do you plan to enable enterprise operations, and need to enable a separation of duties between IT and workload teams? Then the enterprise-scale implementation options might work best to accelerate your environmental configuration.
 
-If you plan to focus on central operations, the *start small* approach might be a better implementation option. With this approach, make sure you execute the [Govern methodology](./govern.md) and [the Manage methodology](./manage.md) in parallel with your cloud adoption plan.
+If you plan to focus on central operations, the *start small* approach might be a better implementation option. With this approach, make sure you execute the [Govern methodology](./govern.md) and the [Manage methodology](./manage.md) in parallel with your cloud adoption plan.
 
 ## Network: Branch strategy
 
-Connectivity to your edge locations, specifically brick and mortar retail locations, might be a part of your cloud adoption plan. In that plan, an understanding of [perimeter networks](/azure/cloud-adoption-framework/ready/azure-best-practices/perimeter-networks) is a required part of your overall Azure landing zone strategy.
+Connectivity to your edge locations, specifically brick and mortar retail locations, might be a part of your cloud adoption plan. In that plan, an understanding of [perimeter networks](../../ready/azure-best-practices/perimeter-networks.md) is a required part of your overall Azure landing zone strategy.
 
 Consider traffic patterns, advanced security controls, and other practices in addition to perimeter network connections. It's easier to deploy these practices using an enterprise-scale landing zone implementation option from the Azure landing zones.
 

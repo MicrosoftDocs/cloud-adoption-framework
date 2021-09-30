@@ -6,7 +6,8 @@ ms.author: brblanch
 ms.date: 05/28/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: operate
+ms.subservice: scenario
+ms.custom: internal, e2e-retail
 ---
 
 # Managing the cloud for the retail industry

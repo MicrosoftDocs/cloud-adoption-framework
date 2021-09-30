@@ -75,7 +75,7 @@ The following section provides some example names for common Azure resource type
 | **Subscription** | Account / enterprise agreement | *\<business&nbsp;unit>-\<subscription&nbsp;type>-\<###>* <br><br> <li> `mktg-prod-001` <li> `corp-shared-001` <li> `fin-client-001` |
 | **Resource group** | Subscription | *rg-\<app&nbsp;or&nbsp;service&nbsp;name>-<subscription&nbsp;type>-\<###>* <br><br> <li> `rg-mktgsharepoint-prod-001` <li> `rg-acctlookupsvc-shared-001` <li> `rg-ad-dir-services-shared-001` |
 | **API management service instance** | Global | *apim-\<app&nbsp;or&nbsp;service&nbsp;name>* <br><br> `apim-navigator-prod` |
-| **Managed identity** | Resource group | *id-\<app&nbsp;or&nbsp;service&nbsp;name>* <br><br> <li> `id-appcn-keda-prod-eastus2-001` |
+| **Managed identity** | Resource group | *id-\<app&nbsp;or&nbsp;service&nbsp;name>-\<environment type>-\<region name>-\<###>* <br><br> <li> `id-appcn-keda-prod-eastus2-001` |
 
 ## Example names: Networking
 
@@ -126,7 +126,7 @@ The following section provides some example names for common Azure resource type
 | **Storage account (general use)** | Global | *st\<storage name>\<###>* <br><br> <li> `stnavigatordata001` <li> `stemissionsoutput001` |
 | **Storage account (diagnostic logs)** | Global | *stdiag\<first 2 letters of subscription name and number>\<region>\<###>* <br><br> <li> `stdiagsh001eastus2001` <li> `stdiagsh001westus001` |
 | **Azure StorSimple** | Global | *ssimp\<app name>-\<environment>* <br><br> <li> `ssimpnavigatorprod` <li> `ssimpemissionsdev` |
-| **Azure Container Registry** | Global | *acr\<app name>\<environment>\<###>* <br><br> <li> `acrnavigatorprod001` |
+| **Azure Container Registry** | Global | *cr\<app name>\<environment>\<###>* <br><br> <li> `crnavigatorprod001` |
 
 ## Example names: AI and machine learning
 
@@ -140,7 +140,7 @@ The following section provides some example names for common Azure resource type
 
 | Asset type | Scope | Format and examples |
 |--|--|--|
-| **Azure Data Factory** | Global | *adf-\<app name>\<environment>* <br><br> <li> `adf-navigator-prod` <li> `adf-emissions-dev` |
+| **Azure Data Factory** | Global | *adf-\<app name>-\<environment>* <br><br> <li> `adf-navigator-prod` <li> `adf-emissions-dev` |
 | **Azure Stream Analytics** | Resource group | *asa-\<app name>-\<environment>* <br><br> <li> `asa-navigator-prod` <li> `asa-emissions-dev` |
 | **Data Lake Analytics account** | Global | *dla\<app name>\<environment>* <br><br> <li> `dlanavigatorprod` <li> `dlanavigatorprod` |
 | **Data Lake Storage account** | Global | *dls\<app name>\<environment>* <br><br> <li> `dlsnavigatorprod` <li> `dlsemissionsdev` |

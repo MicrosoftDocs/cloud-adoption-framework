@@ -6,8 +6,8 @@ ms.author: brblanch
 ms.date: 02/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: manage
-ms.custom: e2e-hybrid
+ms.subservice: scenario
+ms.custom: e2e-hybrid, think-tank
 ---
 
 # Manage your portfolio across hybrid and multicloud operations
