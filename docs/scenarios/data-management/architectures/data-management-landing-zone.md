@@ -70,7 +70,7 @@ Azure Purview can scan and automatically classify documents. For example, if you
 
 Data lineage plays an important component in an enterprise-scale for analytics and AI solution. Lineage is a factor in understanding data quality and validating compliance. Lineage also adds context to datasets and products that allows for discoverable and self-serviceable data products.
 
-One of the primary features of a data catalog is the ability to show the lineage between datasets. Azure Purview supports capturing data lineage from three adf activities: copy data, data flow, and execute SSIS package. Along with the native integration, custom lineage reporting is also supported via Apache Atlas hooks or REST API.
+One of the primary features of a data catalog is the ability to show the lineage between datasets. Azure Purview supports capturing data lineage from three Azure Data Factory activities: copy data, data flow, and execute SSIS package. Along with the native integration, custom lineage reporting is also supported via Apache Atlas hooks or REST API.
 
 :::image type="content" source="../images/data-lineage.png" alt-text="Diagram of data lineage." lightbox="../images/data-lineage.png":::
 
