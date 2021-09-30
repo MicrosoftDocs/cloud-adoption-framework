@@ -25,7 +25,7 @@ The first step in data governance is to create a common business vocabulary of c
 
 The following graphic shows some elements of the [standard entities](https://github.com/microsoft/CDM/tree/master/schemaDocuments/core/applicationCommon) available within the Common Data Model. For more information, see the [Common Data Model repository on GitHub](https://aka.ms/cdmrepo).
 
-:::image type="content" source="./images/cdm-entities-v1.png" alt-text="Poster of the Common Data Model." lightbox=".images/cdm-entities-v1.png":::
+:::image type="content" source="./images/cdm-entities-v1.png" alt-text="Poster of the Common Data Model." lightbox="./images/cdm-entities-v1.png":::
 
 [Download a poster of the Common Data Model](https://aka.ms/cdmposter)
 
