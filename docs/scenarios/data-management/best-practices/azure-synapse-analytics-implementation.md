@@ -6,7 +6,7 @@ ms.author: mboswell
 ms.date: 08/03/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
@@ -63,7 +63,7 @@ You can combine row-level security with column-level security to restrict access
 
 ### Azure Synapse data access control in Azure Data Lake
 
-When deploying an Azure Synapse Analytics workspace, you need an AzureData Lake Storage account from the subscription or by manually using the storage account URL. The specified storage account is set as **primary** for the deployed Azure Synapse workspace to store its data. Azure Synapse stores data in a container that includes Apache Spark tables and Spark application logs in a folder called **/synapse/{workspacename}**. It also has a container for managing any libraries that you choose to install.
+When deploying an Azure Synapse Analytics workspace, you need an Azure Data Lake Storage account from the subscription or by manually using the storage account URL. The specified storage account is set as **primary** for the deployed Azure Synapse workspace to store its data. Azure Synapse stores data in a container that includes Apache Spark tables and Spark application logs in a folder called `/synapse/{workspacename}`. It also has a container for managing any libraries that you choose to install.
 
 During the Azure Synapse workspace deployment through [Azure portal](https://ms.portal.azure.com/), you can either provide an existing storage account or create a new one. The provided storage account is set as the primary storage account for the Azure Synapse workspace. For either account option, the deployment process automatically grants the Azure Synapse workspace identity data access to the specified Data Lake Storage account using the Storage Blob Data Contributor role. If the deployment of Azure Synapse workspace happens outside of the Azure portal, you need to manually add an Azure Synapse workspace identity to the Storage Blob Data Contributor role later. We recommend assigning the role Storage Blob Data Contributor on the file system level to follow the least privilege principle.
 
@@ -73,7 +73,7 @@ The Azure Synapse workspace identity permission context is used when executing p
 
 Use the Storage Blob Data Contributor role to grant read/write/delete permissions to Blob Storage resources like folders and files.
 
-Storage Account permissions are required when using Azure Synapse workspaces interactively and for development. You can provide read/write permissions to other users or groups on the primary storage account after it's been deployed. However, the account requires you to grant access permissions by using the Storage Blob Data Contributor role or access control lists directly to the user or groups. When users sign in to the Azure Synapse workspace to execute scripts or for development, the user's context permissions are used to allow read/write permissions on the primary storage.
+Storage account permissions are required when using Azure Synapse workspaces interactively and for development. You can provide read/write permissions to other users or groups on the primary storage account after it's been deployed. However, the account requires you to grant access permissions by using the Storage Blob Data Contributor role or access control lists directly to the user or groups. When users sign in to the Azure Synapse workspace to execute scripts or for development, the user's context permissions are used to allow read/write permissions on the primary storage.
 
 ## Next steps
 
