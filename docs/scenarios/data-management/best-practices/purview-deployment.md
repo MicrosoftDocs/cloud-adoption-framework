@@ -68,7 +68,7 @@ The Azure Purview account is deployed inside the Azure virtual network (VNet) wi
 
 For more information about data management landing zone networking, see [Enterprise-scale for analytics and AI networking](../eslz-network-topology-and-connectivity.md).
 
-For more information about Azure Purview private endpoints, see [Use private endpoints for your Azure Purview account](/azure/purview/catalog-private-link.md).
+For more information about Azure Purview private endpoints, see [Use private endpoints for your Azure Purview account](/azure/purview/catalog-private-link).
 
 #### Private endpoint for account and portal
 
@@ -86,8 +86,6 @@ Use any of these options to manage your data using Azure Purview through Azure P
   Review Cloud Adoption Framework networking for more information [network topology and connectivity overview](../../../ready/enterprise-scale/network-topology-and-connectivity.md)
 
 - **Option 2:** If hybrid connectivity isn't available in your organization, [deploy a virtual machine](/azure/virtual-machines/windows/quick-create-portal) inside the data management landing zone. [Deploy Azure Bastion](/azure/bastion/quickstart-host-portal) to connect to Azure Purview using a secure connection.
-
-For more information, see [Connecting to environments privately](/azure/data-management-zone/docs/guidance/EnterpriseScaleAnalytics-ConnectToEnvironmentsPrivately.md).
 
 #### Private endpoints for ingestion
 
