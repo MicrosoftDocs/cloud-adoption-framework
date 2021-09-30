@@ -1,12 +1,13 @@
 ---
 title: Strategy for Azure VMware Solution adoption
-description: Learn about  technical considerations of Azure VMware Solution that might affect your strategy.
+description: Learn about technical considerations of Azure VMware Solution that might affect your strategy.
 author: mhenry
 ms.author: jaalmond
 ms.date: 09/03/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: strategy
+ms.subservice: scenario
+ms.custom: e2e-azure-vmware, think-tank
 ---
 
 # Strategy for Azure VMware Solution adoption
@@ -18,13 +19,13 @@ Cloud adoption best practices encourage customers to create a single, centralize
 Common motivations for choosing Azure VMware Solution are:
 
 - **Business needs:** to accelerate the migration of VMware-based workloads, support your [Total Cost of Ownership (TCO) reduction](https://azure.microsoft.com/pricing/tco/calculator/), and rapidly expand capacity. This includes your need to reduce costs, complexity, and risk associated with larger-scale migration projects.
-- **IT needs:** to create business continuity, deploy disaster recovery solutions, and scale traditional on-premises VMware environments—with little to no change to applications (including VDI environments where modernization of VDI is not needed).
-- **Operational needs:** to make use of the skills and processes you've established across IT teams—while affording team members the ability to grow and adopt cloud competencies over time.
+- **IT needs:** to create business continuity, deploy disaster recovery solutions, and scale traditional on-premises VMware environments - with little to no change to applications (including VDI environments where modernization of VDI is not needed).
+- **Operational needs:** to make use of the skills and processes you've established across IT teams, while you give team members the ability to grow and adopt cloud competencies over time.
 - **Strategic needs:** to incrementally modernize your VMware-based applications with other Azure services as business requirements evolve.
 
 ## Azure VMware Solution outcomes
 
-### **Accelerate migration and lower your TCO**
+### Accelerate migration and lower your TCO
 
 Reduce the time and complexity of migrating your VMware workloads to Azure. Take advantage of existing VMware investments, maintain operational consistency, and avoid downtime with live bulk virtual machine (VM) migration.
 
@@ -32,10 +33,10 @@ Reduce the time and complexity of migrating your VMware workloads to Azure. Take
 - **Maintain operational consistency** with direct administrative access to vSphere interfaces.
 - **Reduce impacts of change management** and maintain operational consistency for the business. Develop cloud skills incrementally, as your administrators become familiar with Azure.
 - **Accelerate migration and minimize downtime** using the latest HCX Enterprise functionality for large-scale, live migration from on-premises to Azure.
-- **Achieve seamless workload mobility** without changing IP addresses—extending your on-premises layer 2 network to Azure.
+- **Achieve seamless workload mobility** without changing IP addresses, extending your on-premises Layer 2 network to Azure.
 - **Migrate live VMs from on-premises to Azure** without any downtime using vMotion from vCenter.
 
-### **Gain reliability and scale**
+### Gain reliability and scale
 
 Gain continuity, scale, and automated provisioning for your VMware workloads on global Azure infrastructure.
 
@@ -45,33 +46,33 @@ Gain continuity, scale, and automated provisioning for your VMware workloads on 
 - **Manage dedicated, isolated, private, domains in Azure**, residing on bare metal hyperconverged, all flash, infrastructure. Robust hardware infrastructure that can run the most demanding workloads.
 - **Deploy fully automated self-service provisioning** of the environment and additions/removal of capacity.
 
-### **Optimize licensing costs**
+### Optimize licensing costs
 
 Take advantage of price benefits for Windows and SQL Server with:
 
-- Free [**Extended Security Updates**](https://docs.microsoft.com/lifecycle/faq/extended-security-updates) for Windows Server 2012, and SQL Server 2012 when transitioning to Azure, including Azure VMware Solution.
-- **Azure Hybrid Benefit** for both [Windows](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing) and [SQL Server](https://docs.microsoft.com/azure/azure-sql/azure-hybrid-benefit?tabs=azure-powershell). Azure Hybrid Benefit allows you to bring your existing licenses to Azure and reduce costs.
-- **Azure Reservations** [discounts for reserved instances](https://docs.microsoft.com/azure/azure-vmware/reserved-instance) (and no cancellation fees). Azure VMware Solution offers 1-year and 3-year reserved instances for dedicated hosts, saving around 30-50% of the total cost of a node.
+- Free [**Extended Security Updates**](/lifecycle/faq/extended-security-updates) for Windows Server 2012, and SQL Server 2012 when transitioning to Azure, including Azure VMware Solution.
+- **Azure Hybrid Benefit** for both [Windows](/azure/virtual-machines/windows/hybrid-use-benefit-licensing) and [SQL Server](/azure/azure-sql/azure-hybrid-benefit?tabs=azure-powershell). Azure Hybrid Benefit allows you to bring your existing licenses to Azure and reduce costs.
+- **Azure Reservations** [discounts for reserved instances](/azure/azure-vmware/reserved-instance) (and no cancellation fees). Azure VMware Solution offers 1-year and 3-year reserved instances for dedicated hosts, saving around 30-50% of the total cost of a node.
 
-### **Modernize apps**
+### Modernize apps
 
 Modernize applications running on VMware overtime through integration to [Azure native management, security, and services](..\azure-vmware\govern.md).
 
-- **Deploy unified hybrid management and operational controls** using [Azure Arc-enabled servers](https://docs.microsoft.com/azure/azure-arc/servers/overview) across Azure, VMware, and other cloud infrastructures (availability coming soon).
-- **Modernize applications** with the ability to connect them to Azure services such as Azure AD, SQL managed instances, and analytics.
+- **Deploy unified hybrid management and operational controls** using [Azure Arc enabled servers](/azure/azure-arc/servers/overview) across Azure, VMware, and other cloud infrastructures (availability coming soon).
+- **Modernize applications** with the ability to connect them to Azure services such as Azure AD, SQL Managed Instance, and analytics.
 - **Deploy native Azure management controls**with Azure Monitor and Azure Security Center solutions to operate your VMware environments.
-- **Deploy native Azure public cloud capabilities** and take advantage of built-in security controls and compliance enforcement with Azure backup and Azure Site Recovery.
-- **Achieve identity and access management consistency** with unified permissions and access control—using Azure Active Directory (Azure AD) as a single sign-on (SSO) identity source for VMware vCenter.
+- **Deploy native Azure public cloud capabilities** and take advantage of built-in security controls and compliance enforcement with Azure Backup and Azure Site Recovery.
+- **Achieve identity and access management consistency** with unified permissions and access control - using Azure Active Directory (Azure AD) as a single sign-on (SSO) identity source for VMware vCenter.
 
 ## Azure VMware Solution business justification
 
-[Building a business justification for cloud migration](https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/cloud-migration-business-case) can dispel cloud rationalization myths that surface from your team's financial plan. Your finance team might need to develop a detailed financial model to account for components associated with the adoption of Azure VMware Solution.
+[Building a business justification for cloud migration](/azure/cloud-adoption-framework/strategy/cloud-migration-business-case) can dispel cloud rationalization myths that surface from your team's financial plan. Your finance team might need to develop a detailed financial model to account for components associated with the adoption of Azure VMware Solution.
 
-Initial business justification is a directional estimate that can help drive your strategic alignment. Your organization can create transparency between the cloud strategy team and other stakeholders by affirming the business justification can change significantly throughout planning activities. Seek a cross-team consensus of sufficient value in order to [gather inventory and develop a plan](./plan-private-cloud-deployment). Once your digital estate is cataloged and assessed, you can refine your business case, and present clear plans for cloud value ROI.
+Initial business justification is a directional estimate that can help drive your strategic alignment. Your organization can create transparency between the cloud strategy team and other stakeholders by affirming the business justification can change significantly throughout planning activities. Seek a cross-team consensus of sufficient value in order to [gather inventory and develop a plan](/azure-docs/blob/master/articles/azure-vmware/plan-private-cloud-deployment.md). Once your digital estate is cataloged and assessed, you can refine your business case, and present clear plans for cloud value ROI.
 
 ## Next steps
 
-When you adopt Azure VMware Solution, there are many business and technical considerations needed for scoping, architectural design, evaluation, and deployment. The plan for Azure VMWare Solution guidance helps you build your Azure VMWare Solution adoption plan.
+When you adopt Azure VMware Solution, there are many business and technical considerations needed for scoping, architectural design, evaluation, and deployment. The plan for Azure VMware Solution guidance helps you build your Azure VMware Solution adoption plan.
 
 > [!div class="nextstepaction"]
 > [Plan for Azure VMware Solution](./plan.md)
