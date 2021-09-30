@@ -24,6 +24,8 @@ The governance design area focusses on the considerations and recommendations fo
 
 ### Cost management considerations
 
+- How is the organizations cost and recharging model structured? What are the key data points required in order to accurately reflect spend on cloud services?
+- Tagging resources can make the process of tracking and allocating cloud spend easier, find the structure of tags that best fits your cost and recharging model
 
 Add text.....
 

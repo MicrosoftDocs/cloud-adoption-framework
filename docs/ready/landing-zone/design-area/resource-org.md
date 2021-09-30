@@ -21,13 +21,17 @@ In either scenario, there should be an assumption that the environment will grow
 
 A key consideration, therefore, is how to organize resources to enable simplified management across the environment as the number of workloads increases.
 
-In the resource organization design area, we will explore the considerations and recommendations associated with the techniques and technologies than can help maintain good structures to resource topologies within your cloud environments.
+In addition, as part of designing and implementing an organization's landing zone it is important to consider and decide on the foundational structure of management groups and subscriptions in order to avoid create constraints when scaling later.
+
+The resource organization design area explores the considerations and recommendations associated with the techniques and technologies than can help maintain good structures to resource topologies within your cloud environments.
 
 ## Resource organization considerations
 
 ### Define a management group hierarchy design considerations
 
 Management group structures within an Azure Active Directory (Azure AD) tenant support organizational mapping. Consider your management group structure thoroughly as your organization plans Azure adoption at scale.
+
+- How will your organization separate out services owned or operated by specific teams? Are there specific functions that need to be kept separate for business or operational compliance reasons? Reflect these considerations in your management group structure in order to design in, from the beginning, a structure that reflects how your organization intends to operate
 
 - Management groups can be used to aggregate policy and initiative assignments via Azure Policy.
 

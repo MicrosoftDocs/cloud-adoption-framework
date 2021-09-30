@@ -21,7 +21,7 @@ When designing and implementing an Azure landing zone, security should be a cons
 
 The security design area focusses on the considerations and recommendations for design decisions as part of the landing zone. In addition to this, the [Secure methodology](/secure/index.md) in the Cloud Adoption Framework provides further in-depth guidance for holistic security processes and tools. 
 
-## Azure Security Benchmark
+### Azure Security Benchmark
 
 The Azure Security Benchmark includes a collection of high-impact security recommendations to help you secure most of the services you use in Azure. You can think of these recommendations as "general" or "organizational" as they are applicable to most Azure services. The Azure Security Benchmark recommendations are then customized for each Azure service, and this customized guidance is contained in service recommendations articles.
 
