@@ -117,7 +117,7 @@ You can implement this scenario with:
 - Outbound internet via Azure Firewall in the Virtual WAN hub
 - ExR, VPN, or SD-WAN for connectivity between on-premises datacenters and Azure VMware Solution
 
-[Diagram of secure Virtual WAN hub with default route propagation.](media/eslz-net-scenario-1.png).](media/eslz-net-scenario-1.png#lightbox)
+[ ![Diagram of secure Virtual WAN hub with default route propagation.](media/eslz-net-scenario-1.png) ](media/eslz-net-scenario-1.png#lightbox)
 
 ### Considerations
 
