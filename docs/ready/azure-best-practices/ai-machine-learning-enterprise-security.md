@@ -157,11 +157,6 @@ The disadvantage of this approach is that sharing assets across projects can be 
 
 You can use Azure AD user identity for interactive storage access from Machine Learning studio. Data Lake Storage with hierarchical namespace enabled allows for enhanced organization of data assets for storage and collaboration. With Data Lake Storage hierarchical namespace, you can compartmentalize data access by giving different users access control list (ACL)-based access to different folders and files. For example, you can grant only a subset of users access to confidential data.
 
-The following features are planned for future Machine Learning releases:
-
-- Credential passthrough support for Data Lake Storage and Blob storage for remote training on Machine Learning computes.
-- Data Lake Storage with hierarchical namespace enabled as default storage for Machine Learning workspaces.
-
 ### RBAC and custom roles
 
 Azure RBAC helps you manage who has access to Machine Learning resources, and configure who can perform operations. For example, you might want to grant only specific users the Workspace Administrator role to manage compute resources.
