@@ -66,7 +66,7 @@ When you enable Azure Defender from the pricing and settings area of Azure Secur
 These plans are explained separately in the Security Center documentation.
 
 > [!IMPORTANT]
-> Where Azure Defender is available for platform as a service (PaaS) offerings, you should enable this feature by default, especially for Azure Data Lake Storage accounts. For more information, see [Introduction to Azure Defender](/azure/security-center/azure-defender) and [Configure Azure Defender for Storage](/azure/storage/common/azure-defender-storage-configure?tabs=azure-security-center).
+> Where Azure Defender is available for platform as a service (PaaS) offerings, you should enable this feature by default, especially for Azure Data Lake Storage accounts. For more information, see [Introduction to Azure Defender](/azure/security-center/azure-defender) and [configure Azure Defender for Storage](/azure/storage/common/azure-defender-storage-configure?tabs=azure-security-center).
 
 ### Microsoft Defender for Identity
 
@@ -77,7 +77,7 @@ Microsoft Defender for Identity is part of the advanced data security offering, 
 
 ### Enable Azure Sentinel
 
-[Azure Sentinel](/azure/sentinel/overview) is a scalable, cloud-native, security information event management (SIEM), and security orchestration automated response (soar) solution. Azure Sentinel delivers intelligent security analytics and threat intelligence across the enterprise, providing a single solution for alert detection, threat visibility, proactive hunting, and threat response.
+[Azure Sentinel](/azure/sentinel/overview) is a scalable, cloud-native, security information event management (SIEM), and security orchestration automated response (SOAR) solution. Azure Sentinel delivers intelligent security analytics and threat intelligence across the enterprise, providing a single solution for alert detection, threat visibility, proactive hunting, and threat response.
 
 ## Networking
 
