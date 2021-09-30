@@ -1,6 +1,6 @@
 ---
 title: Strategy for Azure VMware Solution adoption
-description: <<Describe the scenario's impact on strategy.>>
+description: Learn about  technical considerations of Azure VMware Solution that might affect your strategy.
 author: mhenry
 ms.author: jaalmond
 ms.date: 09/03/2021
@@ -9,18 +9,18 @@ ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---
 
-# Strategic impact of Azure VMware Solution
+# Strategy for Azure VMware Solution adoption
 
-Cloud adoption best practices encourage customers to create a single, centralized cloud adoption strategy using the [Cloud Adoption Framework's Strategy methodology](../../strategy/index.md). If you haven't already, use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to track the progress of your cloud adoption strategy. This article outlines technical considerations of Azure VMware Solution that may impact your strategy.
+Cloud adoption best practices encourage customers to create a single, centralized cloud adoption strategy using the [Cloud Adoption Framework's Strategy methodology](../../strategy/index.md). If you haven't already, use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to track the progress of your cloud adoption strategy. This article outlines technical considerations of Azure VMware Solution that might affect your strategy.
 
 ## Azure VMware Solution motivations
 
 Common motivations for choosing Azure VMware Solution are:
 
-- **Business needs**: to accelerate the migration of VMware-based workloads, support your [Total Cost of Ownership (TCO) reduction](https://azure.microsoft.com/pricing/tco/calculator/), and rapidly expand capacity. This includes your need to reduce costs, complexity, and risk associated with larger-scale migration projects.
-- **IT needs**: to create business continuity, deploy disaster recovery solutions, and scale traditional on-premises VMware environments—with little to no change to applications (including VDI environments where modernization of VDI is not needed).
-- **Operational needs**: to make use of the skills and processes you've established across IT teams—while affording team members the ability to grow and adopt cloud competencies over time.
-- **Strategic needs**: to incrementally modernize your VMware-based applications with other Azure services as business requirements evolve.
+- **Business needs:** to accelerate the migration of VMware-based workloads, support your [Total Cost of Ownership (TCO) reduction](https://azure.microsoft.com/pricing/tco/calculator/), and rapidly expand capacity. This includes your need to reduce costs, complexity, and risk associated with larger-scale migration projects.
+- **IT needs:** to create business continuity, deploy disaster recovery solutions, and scale traditional on-premises VMware environments—with little to no change to applications (including VDI environments where modernization of VDI is not needed).
+- **Operational needs:** to make use of the skills and processes you've established across IT teams—while affording team members the ability to grow and adopt cloud competencies over time.
+- **Strategic needs:** to incrementally modernize your VMware-based applications with other Azure services as business requirements evolve.
 
 ## Azure VMware Solution outcomes
 
@@ -51,8 +51,7 @@ Take advantage of price benefits for Windows and SQL Server with:
 
 - Free [**Extended Security Updates**](https://docs.microsoft.com/lifecycle/faq/extended-security-updates) for Windows Server 2012, and SQL Server 2012 when transitioning to Azure, including Azure VMware Solution.
 - **Azure Hybrid Benefit** for both [Windows](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing) and [SQL Server](https://docs.microsoft.com/azure/azure-sql/azure-hybrid-benefit?tabs=azure-powershell). Azure Hybrid Benefit allows you to bring your existing licenses to Azure and reduce costs.
-- **Azure Reservations** [discounts for reserved instances](https://docs.microsoft.com/azure/azure-vmware/reserved-instance) (and no cancellation fees). Azure VMware Solution offers 1-year and 3-year reserved instances for dedicated hosts, saving around 30-50% of the total cost of a node. 
-
+- **Azure Reservations** [discounts for reserved instances](https://docs.microsoft.com/azure/azure-vmware/reserved-instance) (and no cancellation fees). Azure VMware Solution offers 1-year and 3-year reserved instances for dedicated hosts, saving around 30-50% of the total cost of a node.
 
 ### **Modernize apps**
 
@@ -60,23 +59,19 @@ Modernize applications running on VMware overtime through integration to [Azure 
 
 - **Deploy unified hybrid management and operational controls** using [Azure Arc-enabled servers](https://docs.microsoft.com/azure/azure-arc/servers/overview) across Azure, VMware, and other cloud infrastructures (availability coming soon).
 - **Modernize applications** with the ability to connect them to Azure services such as Azure AD, SQL managed instances, and analytics.
-- **Deploy native Azure management controls**, with Azure Monitor, and Azure Security Center solutions to operate your VMware environments.
-- **Deploy native Azure public cloud capabilities** and take advantage of built-in security controls and compliance enforcement (with Azure backup and Azure site recovery).
+- **Deploy native Azure management controls**with Azure Monitor and Azure Security Center solutions to operate your VMware environments.
+- **Deploy native Azure public cloud capabilities** and take advantage of built-in security controls and compliance enforcement with Azure backup and Azure Site Recovery.
 - **Achieve identity and access management consistency** with unified permissions and access control—using Azure Active Directory (Azure AD) as a single sign-on (SSO) identity source for VMware vCenter.
 
 ## Azure VMware Solution business justification
 
 [Building a business justification for cloud migration](https://docs.microsoft.com/azure/cloud-adoption-framework/strategy/cloud-migration-business-case) can dispel cloud rationalization myths that surface from your team's financial plan. Your finance team might need to develop a detailed financial model to account for components associated with the adoption of Azure VMware Solution.
 
-Initial business justification is a directional estimate that can help drive your strategic alignment. Your organization can create transparency between the cloud strategy team and other stakeholders by affirming the business justification can change significantly throughout planning activities. Seek a cross-team consensus of sufficient value in order to [gather inventory and develop a plan](https://docs.microsoft.com/azure/azure-vmware/plan-private-cloud-deployment). Once your digital estate is cataloged and assessed, you can refine your business case, and present clear plans for cloud value ROI.
+Initial business justification is a directional estimate that can help drive your strategic alignment. Your organization can create transparency between the cloud strategy team and other stakeholders by affirming the business justification can change significantly throughout planning activities. Seek a cross-team consensus of sufficient value in order to [gather inventory and develop a plan](./plan-private-cloud-deployment). Once your digital estate is cataloged and assessed, you can refine your business case, and present clear plans for cloud value ROI.
 
-## Next step: Plan for Azure VMware Solution
+## Next steps
 
-These articles will take you to specific points of guidance along your cloud adoption journey—and help you succeed in the cloud adoption scenario:
+When you adopt Azure VMware Solution, there are many business and technical considerations needed for scoping, architectural design, evaluation, and deployment. The plan for Azure VMWare Solution guidance helps you build your Azure VMWare Solution adoption plan.
 
-- [Plan for Azure VMware Solution](./plan.md)
-- [Review your environment or Azure Landing Zone(s)](./ready.md)
-- [Migrate Azure VMware Solution](./migrate.md)
-- [Innovate with Azure VMware Solution](./innovate.md)
-- [Govern Azure VMware Solution](./govern.md)
-- [Manage Azure VMware Solution](./manage.md)
+> [!div class="nextstepaction"]
+> [Plan for Azure VMware Solution](./plan.md)
