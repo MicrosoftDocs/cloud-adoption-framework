@@ -1,16 +1,19 @@
 {
-  "version": "0.1",
+  "version": "0.2",
   "language": "en",
   "words": [
       "deprioritize",
       "financials",
       "inexhaustive",
+      "migratable",
       "offboarding",
       "passwordless",
       "personalizer",
       "preintegration",
       "reauthenticate",
-      "replatform"
+      "replatform",
+      "subscope",
+      "subscopes"
   ],
   "ignoreRegExpList": [
     "\\b(acr|admin|aks|app|arc|azure|cloud|cloudwitness|config|contoso|data|db|demo|dev|devops|dc|east|europe|file|host|linux|migration|moodle|my|name|osticket|pass|petchecker|pets|resourcegroup|server|settings|smarthotel|sql|tfs|tfvars|url|us|user|vagrant|vm|web|west|winsrv){1,3}((eus)?\\d*\\b)",
@@ -26,6 +29,7 @@
       "dataslice",
       "eslz",
       "hostnamectl",
+      "lamna",
       "phpinfo",
       "phpver",
       "timespan",
