@@ -92,7 +92,7 @@ The focus is to ensure all domain owners within your organization understand sco
 
 **Extend and modernize:** Once you have established your Azure VMware Solution environment, the hub and spoke network connection ensures extension to other Azure public cloud services is seamless. Customers will often look to optimize through resource management, monitoring and security, storage, and other integrations to modernize the application in current infrastructure design.
 
-:::image type="content" source="./media/migration-made-easy.jpg" alt-text="Diagram of migration made easy.":::
+:::image type="content" source="./media/migration-made-easy.png" alt-text="Diagram of migration made easy.":::
 
 ## Azure VMware Solution readiness plan
 
