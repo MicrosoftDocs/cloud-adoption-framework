@@ -34,7 +34,7 @@ Any access or policy that's applied at one level in the hierarchy is inherited b
 
 This inheritance model lets you arrange the subscriptions in your hierarchy so that each subscription follows appropriate policies and security controls.
 
-:::image type="content" source="../azure-setup-guide/media/organize-resources/scope-levels.png" alt-text="Diagram that shows the four scope levels for organizing your Azure resources.":::
+:::image type="content" source="../azure-setup-guide/media/organize-resources/scope-levels.png" alt-text="Diagram that shows the four scope levels for organizing your Azure resources.":::\
 *Figure 1: The four scope levels for organizing your Azure resources.*
 
 Any access or policy assignment on the root management group applies to all resources in the directory. Carefully consider which items you define at this scope. Include only the assignments you must have.
@@ -47,7 +47,7 @@ What happens when you move a subscription to an existing management group? The s
 
 Do you expect your Azure environment to grow? Then create management groups for production and nonproduction now, and apply appropriate policies and access controls at the management group level. New subscriptions will inherit the appropriate controls as they're added to each management group.
 
-:::image type="content" source="../../_images/ready/management-group-hierarchy-v2.png" alt-text="Diagram that shows an example of a management group hierarchy.":::
+:::image type="content" source="../../_images/ready/management-group-hierarchy-v2.png" alt-text="Diagram that shows an example of a management group hierarchy.":::\
 *Figure 2: An example of a management group hierarchy.*
 
 ## Example use cases
