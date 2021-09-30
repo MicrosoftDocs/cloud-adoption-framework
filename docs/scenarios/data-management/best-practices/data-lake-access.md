@@ -95,7 +95,7 @@ Even using groups, you may have many access control entries at top levels of the
 
 ### Configure access using both Azure RBAC and access control lists
 
-The Storage Blob Data Contributor and Storage Blob Data Contributor permissions provide access to the data and not the storage account. It can be granted at the storage account level or container level. If Storage Blob Data Contributor is assigned, ACLs cannot be used to manage access. Where Storage Blob Data Reader is assigned, elevated write permissions can be granted using ACLs. For more information, see [How access is evaluated](#how-access-is-evaluated).
+The Storage Blob Data Contributor and Storage Blob Data Reader permissions provide access to the data and not the storage account. It can be granted at the storage account level or container level. If Storage Blob Data Contributor is assigned, ACLs cannot be used to manage access. Where Storage Blob Data Reader is assigned, elevated write permissions can be granted using ACLs. For more information, see [How access is evaluated](#how-access-is-evaluated).
 
 This approach favors scenarios where most users need read access but only a few users need write access. The data lake zones could be different storage accounts and data assets could be different containers. The data lake zones could be represented by containers and data assets represented by folders.
 

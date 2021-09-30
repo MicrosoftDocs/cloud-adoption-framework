@@ -78,7 +78,7 @@ This data is stored as-is in the data lake. It's consumed by an analytics engine
 
 For batch or micro-batch patterns, the data should be copied from the source system and landed as-is in the data lake without any transformations.
 
-For streaming use cases, the data in the raw zone should sometimes be stored as an aggregated dataset. For example, data is ingested via a message bus such as Azure event hub. It's then aggregated via a real-time processing engine such as Azure Stream Analytics or Spark streaming before it's stored in the data lake.
+For streaming use cases, the data in the raw zone should sometimes be stored as an aggregated dataset. For example, data is ingested via a message bus such as Azure event hub. It's then aggregated via a real-time processing engine such as Azure Stream Analytics or Spark Streaming before it's stored in the data lake.
 
 As this layer usually stores the largest amount of data, consider using lifecycle management to reduce long-term storage costs. At the time of writing Azure Data Lake Storage Gen2 supports moving data to the cool access tier either programmatically or through a lifecycle management policy. The policy defines a set of rules that run once a day and can be assigned to the account, filesystem, or folder level.
 

@@ -109,7 +109,7 @@ The types of anonymous requests logged are:
 - Successful requests.
 - Server errors.
 - Time out errors for both client and server.
-- Failed get requests with the error code 304, not modified.
+- Failed HTTP GET requests with the error code 304 (`Not Modified`).
 
 All other failed anonymous requests aren't logged.
 
