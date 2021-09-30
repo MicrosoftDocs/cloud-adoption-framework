@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Organize and manage multiple Azure subscriptions
 
-If you have only a few subscriptions, then managing them independently is relatively simple. But what if you have many subscriptions? Then you can create a management group hierarchy to help manage your subscriptions and resources.
+If you have only a few subscriptions, it's fairly easy to manage them independently. But what if you have many subscriptions? Then you can create a management group hierarchy to help manage your subscriptions and resources.
 
 ## Azure management groups
 
