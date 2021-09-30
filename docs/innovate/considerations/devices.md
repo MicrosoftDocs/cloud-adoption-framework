@@ -37,6 +37,8 @@ Types of interactive devices for ambient user experiences:
 - [Adjusted reality](#adjusted-reality): When any of these ambient solutions use predictive analysis in the cloud to define and provide an interaction with the customer through the natural surroundings, the solution has adjusted reality.
 
 Understanding customer need and measuring customer impact help you determine whether a device interaction or ambient user experience are necessary to validate your hypothesis. With each of those data points, use the following sections to help you find the best digital experience solution.
+=======
+Understanding the customer need and measuring customer impact help you determine whether a device interaction or ambient user experience are necessary to validate your hypothesis. With those data points, the following sections will help you find the best digital experience solution.
 
 ## Mobile experience
 

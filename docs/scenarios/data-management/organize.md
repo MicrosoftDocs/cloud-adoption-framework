@@ -1,5 +1,5 @@
 ---
-title: Understand how to organize data operations team members for the data management and analytics scenario in Azure
+title: Organize data operations team members for data management and analytics in Azure
 description: Learn how to organize data operations team members for the data management and analytics scenario in Azure.
 author: abdale
 ms.author: hamoodaleem
@@ -7,20 +7,20 @@ ms.date: 08/06/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: think-tank, e2e-data
+ms.custom: e2e-data-management, think-tank
 ---
 
-# Understand how to organize data operations team members for the data management and analytics scenario in Azure
+# Organize data operations team members for data management and analytics in Azure
 
 The data management and analytics scenario architecture was designed with a set of core principles.
 
 ## Core principles
 
-- **Self-service enablement:** enable project teams to work on their own to allow agile development methods.
+- **Self-service enablement:** Enable project teams to work on their own to allow agile development methods.
 
-- **Governance:** enforce guardrails across the Azure platform to ensure that project teams only see, change, and execute the functions within their permissions.
+- **Governance:** Enforce guardrails across the Azure platform to ensure that project teams only see, change, and execute the functions within their permissions.
 
-- **Streamlined deployments:** ensure that common policies are available within the organization to help teams scale quickly and support teams with less experience in some core designs and artifacts.
+- **Streamlined deployments:** Ensure that common policies are available within the organization to help teams scale quickly and support teams with less experience in some core designs and artifacts.
 
 ## Deployment and operations
 
@@ -39,4 +39,4 @@ The platform group should follow the best practices outlined in this section to 
 
 ## Next steps
 
-[Organize for effective data operations](./organize-data-operations.md)
+[DevOps automation for data management and analytics in Azure](./organize-data-operations.md)

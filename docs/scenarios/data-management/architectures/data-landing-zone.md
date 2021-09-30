@@ -1,15 +1,16 @@
 ---
-title: Azure enterprise-scale for analytics and AI architecture data landing zone overview
-description: Learn about the Azure enterprise-scale for analytics and AI architecture data landing zone overview
+title: Overview of the enterprise-scale for analytics and AI architecture data landing zone in Azure
+description: Learn about the enterprise-scale for analytics and AI architecture data landing zone in Azure.
 author: mboswell
 ms.author: mboswell
 ms.date: 03/03/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: e2e-data-management, think-tank
 ---
 
-# Enterprise-scale for analytics and AI architecture data landing zone
+# Overview of the enterprise-scale for analytics and AI architecture data landing zone in Azure
 
 Data landing zones are connected to the [data management landing zone](./data-management-landing-zone.md) by virtual network (VNet) peering. They're considered a [landing zone](../../../ready/landing-zone/index.md) related to the enterprise-scale architecture.
 
@@ -78,7 +79,7 @@ Three [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-intr
 
 Third-party data publishers require the ability to land their data into the platform so integration ops teams can pull it into their data lakes. The upload ingest storage resource group, shown below, enables provisioning of blob stores for third-parties.
 
-![Diagram of upload ingest storage service](../images/data-landing-zone-ingest-storage.png)
+![Diagram of upload ingest storage service.](../images/data-landing-zone-ingest-storage.png)
 
 These storage blobs are requested by the integration operations t and approved by the data landing zone operations team. Once the data has been pulled from the storage blobs into raw, the data should be removed from the source storage blob.
 
@@ -140,7 +141,7 @@ We recommend you deploy a virtual machine scale set with self-hosted integration
 To enable the resource group, you need to:
 
 - Create at least one Azure Data Factory in the shared integration resource group in the data landing zone. It will only be used for linking the shared self-hosted integration runtime and not for data pipelines.
-- Create a [shared image for the Azure virtual machine scale set](/azure/virtual-machine-scale-sets/shared-images-powershell) with a self-hosted integration runtime configured.
+- Create a [shared image for the Azure virtual machine scale set](/azure/virtual-machine-scale-sets/tutorial-use-custom-image-powershell) with a self-hosted integration runtime configured.
 - The [self hosted integration runtimes should be setup in high availability mode](/azure/data-factory/create-self-hosted-integration-runtime#high-availability-and-scalability).
 - The self-hosted integration runtimes should be associated with Azure data factories in the data landing zone(s).
 - [Azure Automation should be setup to update the self hosted integration runtime periodically](/azure/data-factory/self-hosted-integration-runtime-automation-scripts)
@@ -164,8 +165,8 @@ Azure Databricks service is envisioned to be one of the key consumers of the Azu
 
 The enterprise-scale for analytics and AI guidance follows best practices to integrate Azure Databricks:
 
-- [Securing access to Azure Data Lake gen 2 from Azure Databricks](https://github.com/hurtn/datalake-ADLS-access-patterns-with-Databricks/blob/master/readme.md)
-- [Azure Databricks best practices](https://github.com/Azure/AzureDatabricksBestPractices/blob/master/toc.md)
+- [Securing access to Azure Data Lake Gen2 from Azure Databricks](https://github.com/hurtn/datalake-ADLS-access-patterns-with-Databricks/blob/master/readme.md)
+- [Azure Databricks Best Practices](https://github.com/Azure/AzureDatabricksBestPractices/blob/master/toc.md)
 
 #### Azure Synapse Analytics in shared products
 
@@ -183,7 +184,7 @@ Azure Synapse Analytics is the provisioned integrated analytics service that acc
 A data integration resource group, is responsible for data ingestion and enrichment only from external sources such as metrics, finance, and CRM. This layer can operate in both real-time, batch and micro-batch.
 
 > [!IMPORTANT]
-> To learn more about each of the services deployed in the data integration resource group, see [Data integrations](./data-landing-zone-data-integration.md).
+> To learn more about each of the services deployed in the data integration resource group, see [Enterprise-scale for analytics and AI data integrations in Azure](./data-landing-zone-data-integration.md).
 >
 
 ## Data products layer
@@ -194,7 +195,7 @@ A data landing zone can have multiple data products. You can create the data pro
 
 The resource group for a data product includes all the service required to make that data product. For example, there's a requirement to have an Azure Database for MySQL, that's used by a visualization tool. The data must be ingested and transformed before landing into the MySQL database. You can deploy an Azure Data Factory and Azure Database for MySQL into the data product resource group.
 
-For more information on how to onboard data products, see [Data products](./data-landing-zone-data-products.md). The guidance explains the process to create the services and resource groups.
+For more information on how to onboard data products, see [Enterprise-scale for analytics and AI data products in Azure](./data-landing-zone-data-products.md). The guidance explains the process to create the services and resource groups.
 
 ## Visualization layer
 
@@ -202,7 +203,7 @@ For more information on how to onboard data products, see [Data products](./data
 
 For every data landing zone, an empty visualization resource group will be created. This group can be filled with services required to implement your visualization solution. Using the existing VNet will enable your solution to connect to data products.
 
-![Visualization resource group](../images/visualization-resource-group.png)
+![A visualization resource group.](../images/visualization-resource-group.png)
 
 This resource group could host virtual machines for third-party visualization services.
 
@@ -211,4 +212,4 @@ This resource group could host virtual machines for third-party visualization se
 
 ## Next steps
 
-[Data integrations](./data-landing-zone-data-integration.md)
+[Enterprise-scale for analytics and AI data integrations in Azure](./data-landing-zone-data-integration.md)

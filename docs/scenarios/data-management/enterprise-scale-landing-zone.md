@@ -1,17 +1,18 @@
 ---
-title: Enterprise-scale for analytics and AI introduction for Azure
-description: Enterprise-scale for analytics and AI introduction for Azure
+title: Introduction to enterprise-scale for analytics and AI in Azure
+description: Gain an overview of enterprise-scale for analytics and AI in Azure.
 author: mboswell
 ms.author: brblanch
 ms.date: 06/22/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: e2e-data-management, think-tank
 ---
 
-# Introduction to enterprise-scale for analytics and AI for Azure
+# Introduction to enterprise-scale for analytics and AI in Azure
 
-In the late 1980s, there was the introduction of the data warehouse Gen1, which combined disparate data sources from across the enterprise. In the late 2000s came Gen2, with the introduction of the big data ecosystem like Hadoop and the data lake. In the mid 2010s, we had the cloud data platform. It was similar to previous generations, but with the introduction of the ingestion of streaming data, like Kappa or Lambda architectures. In the early 2020s, we have the concept of the data lakehouse, data mesh, data fabric, and data centric operational patterns.
+In the late 1980s, there was the introduction of the data warehouse Gen1, which combined disparate data sources from across the enterprise. In the late 2000s came Gen2, with the introduction of the big data ecosystem like Hadoop and the data lake. In the mid 2010s, we had the cloud data platform. It was similar to previous generations, but with the introduction of the ingestion of streaming data, like Kappa or Lambda architectures. The early 2020s introduced the concepts of the data lakehouse, data mesh, data fabric, and data-centric operational patterns.
 
 Understanding the evolution and looking forward, many organizations still have the centralized monolithic platform, generation 1. This system works well, up to a point. Bottlenecks because of interdependent processes, tightly coupled components, hyperspecialized teams, and thousands of extract, transform, load (ETL) jobs.
 
@@ -19,32 +20,23 @@ The data warehouse and data lake is still valuable, and will play an important r
 
 Even with the introduction of the cloud, the centralized approach to data management remains largely unchanged most of the time.
 
-In response to the centralized data warehouse challenges, enterprise-scale for analytics and AI represents a strategic design path and targets the technical state for an Azure analytics and AI environment.
+In response to the challenges of centralized data warehouses, enterprise-scale for analytics and AI represents a strategic design path and targets the technical state for an Azure analytics and AI environment.
 
-The pattern relies upon distribution of the data and its pipelines across domains. This pattern enables ownership of accessibility, usability, and development. Largely based on these patterns, enterprise-scale for analytics and AI includes capabilities such as:
+The pattern relies upon distribution of the data and its pipelines across domains. This pattern enables ownership of accessibility, usability, and development. Largely based on these patterns, enterprise-scale for analytics and AI includes the following capabilities:
 
 - Storage
-
 - Data lineage
-
 - Data classification
-
 - Data ingestion
-
 - Networking
-
 - Security
-
 - Access management
-
 - Encryption
-
 - Resiliency
-
 - Monitoring
 
 > [!NOTE]
-> The enterprise-scale for analytics and AI framework builds on our [enterprise-scale architecture](../../ready/enterprise-scale/index.md) and should be considered a supplement to it.
+> The enterprise-scale for analytics and AI framework builds on the Cloud Adoption Framework [enterprise-scale architecture](/azure/cloud-adoption-framework/ready/enterprise-scale/) and should be considered a supplement to it.
 
 ## Critical design areas
 
@@ -53,13 +45,9 @@ Enterprise-scale for analytics and AI considers five critical design areas that 
 To learn more, see:
 
 - [Data management](#data-management-landing-zone)
-
 - [Data landing zone](#data-landing-zone)
-
 - [Data integrations](#data-integrations)
-
 - [Data products](#data-products)
-
 - [Data platform operational excellence](#data-platform-operational-excellence)
 
 > [!IMPORTANT]
@@ -71,7 +59,7 @@ At the heart of enterprise-scale for analytics and AI, is its data management ca
 
 :::image type="content" source="./images/data-management-overview-1.png" alt-text="Diagram of a Data management overview.":::
 
-The **Data management landing zone**, which is a subscription, is responsible for the governance of the platform and allows for the following capabilities:
+The **Data management landing zone** is a subscription that governs the platform and supports the following capabilities:
 
 - [Data catalog](./architectures/data-management-landing-zone.md#data-catalog)
 - [Data classification](./architectures/data-management-landing-zone.md#data-classification)
@@ -82,7 +70,7 @@ The **Data management landing zone**, which is a subscription, is responsible fo
 - [API catalog](./architectures/data-management-landing-zone.md#api-catalog)
 - Data sharing and contracts
 
-For more information, see [Data management landing zone](./architectures/data-management-landing-zone.md).
+For more information, see [Overview of the Azure enterprise-scale for analytics and AI data management landing zone](./architectures/data-management-landing-zone.md).
 
 ### Data landing zone
 
@@ -108,16 +96,16 @@ The responsibility of ingesting external data into enterprise for analytics and 
 - A security user group that you give access to the Azure Databricks analytics and data science workspace
 - A service principal that's used by the data integration to deploy ingest jobs to the Azure Databricks engineering workspace
 
-Additional services such as Azure Event Hub, Azure IoT Hub, Azure Stream Analytics, and Azure Machine Learning can optionally be created.
+Other services like Azure Event Hub, Azure IoT Hub, Azure Stream Analytics, and Azure Machine Learning can be created if they're needed.
 
 > [!IMPORTANT]
-> A **data integration** is responsible for ingestion of external data into a read data source. The data should avoid having any data transformations applied to it apart from data quality checks and application of data types.
+> A **data integration** is responsible for ingesting external data into a read data source. Apart from data quality checks and other applied data, the data should avoid having other data transformations applied to it.
 
-For more information, see [Data landing zone data integrations](./architectures/data-landing-zone-data-integration.md).
+For more information, see [enterprise-scale for analytics and AI data integrations in Azure](./architectures/data-landing-zone-data-integration.md).
 
 ### Data products
 
-A data product is anything that drives business value, such as reports, workbooks, a bespoke database, or a data API. It can use other services and technologies that aren't part of data landing zone core architecture such as:
+A data product is anything that drives business value, including reports, workbooks, a distinct database, or a data API. It can use the following services and technologies that don't belong to a data landing zone's core architecture:
 
 - Reporting with niche requirements, like compliance, tax reporting, HR, and others.
 - Specialized capabilities that address gaps in the baseline policies.
@@ -127,34 +115,26 @@ Since data products are compute or polyglot persistence services, they might onl
 Examples of data products include:
 
 - Azure Functions
-
 - Azure App Service
-
 - Azure Logic Apps
-
 - Azure Analysis Services
-
-- Cognitive Services
-
+- Azure Cognitive Services
 - Azure Machine Learning
-
 - Azure SQL Database
-
 - Azure Database for MySQL
-
 - Azure Cosmos DB
 
 > [!IMPORTANT]
-> A **data product** fulfills a specific need within a business using data. Data products manage, organize and make sense of the data across domains and present the insights gained from the data products. A data product is a result of data from one or many data integrations or other data products.
+> A **data product** fulfills a specific need within a business using data. Data products manage, organize, and make sense of the data across domains and present the insights gained from the data products. A data product is a result of data from one or many data integrations or other data products.
 
-For more information, see [Data landing zone data products](./architectures/data-landing-zone-data-products.md).
+For more information, see [Enterprise-scale for analytics and AI data products in Azure](./architectures/data-landing-zone-data-products.md).
 
 ### Data platform operational excellence
 
-The enterprise-scale for analytics and AI platform is designed with data platform operational excellence at its core through self-service enablement, governance, and streamlined deployments. The working model for data operations enables these core principles by using infrastructure as code (IaC) and deployment templates. It also uses deployment processes that include a forking and branching strategy and a central repository.
+The enterprise-scale for analytics and AI platform is designed with data platform operational excellence at its core through self-service enablement, governance, and streamlined deployments. The working model for data operations enables these core principles by using infrastructure-as-code and deployment templates. It also uses deployment processes that include a forking and branching strategy and a central repository.
 
-For more information, see [Platform automation and DevOps](./organize-data-operations.md).
+For more information, see [Understand DevOps automation for data management and analytics in Azure](./organize-data-operations.md).
 
 ## Next steps
 
-[Scale data management and analytics](./eslz-scale.md)
+[Scaling data management and analytics in Azure](./eslz-scale.md)

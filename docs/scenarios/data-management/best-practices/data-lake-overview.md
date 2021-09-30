@@ -1,15 +1,16 @@
 ---
-title: Azure enterprise-scale for analytics and AI data lake overview
-description: Learn about enterprise-scale for analytics and AI architecture data lake overview
+title: Overview of Azure Data Lake Storage for the data management and analytics scenario
+description: Gain an overview of Azure Data Lake Storage for the data management and analytics scenario.
 author: mboswell
 ms.author: mboswell
 ms.date: 07/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: e2e-data-management, think-tank
 ---
 
-# Data management and analytics scenario Azure Data Lake services overview
+# Overview of Azure Data Lake Storage for the data management and analytics scenario
 
 We recommend you provision three [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction) accounts within a single resource group, similar to the `data lake services` resource group described in [Azure data management and analytics scenario architecture data landing zone overview](../architectures/data-landing-zone.md). Each of the three data lakes within a data landing zone stores data in one of its three transformation stages: raw data, enriched and curated data, and workspace data. [Data products](../architectures/data-landing-zone-data-products.md) should only consume from the data lake that contains enriched and curated data.
 
@@ -45,7 +46,7 @@ Scalability is a key concept and a single data lake might limit scalability from
     > Contact [Azure Support](https://azure.microsoft.com/support/faq/) to request higher capacity and ingress limits.
 
 - Isolation of data environments and predictability. For example, if you want to isolate activities that run in the laboratory zone to avoid potential effect on the curated zone. The curated zone holds data with greater business value that's used for critical decision making.
-- Features and functionality at the storage account level. Consider whether lifecycle management options or firewall rules must be applied at the data landing zone or data lake level.
+- Features and functionality at the storage account level. Consider whether life cycle management options or firewall rules must be applied at the data landing zone or data lake level.
 - There are good reasons to have multiple storage accounts, but be careful not to create unnecessary silos. Avoid creating duplicate data projects because of lack of visibility or knowledge-sharing across the organization. Ensure that a data catalog, good data governance, and project tracking tools are in place.
 - Data processing tools and technologies, like Azure Data Factory and Azure Databricks for Apache Spark, can easily interact with data across multiple lakes if permissions are appropriately configured.
 - Regional versus global lakes. Globally distributed consumers or processes on the lake might be sensitive to latency caused by geographic distances. Require data to be stored locally. Regulatory constraints or data sovereignty might require data to remain within a particular region. For more information, see [Multiregion deployments](#multiregion-deployments).
@@ -62,11 +63,8 @@ Data residency rules, or a requirement to have data close to a user base, can dr
 - Default access control list (ACL) on every dataset folder must include *read* and *execute* permissions. Execute permission is required for users to traverse a restricted folder and access files under it. Access ACL assigned to an Azure AD group will include read and execute permissions on each dataset folder.
 - Only a managed identity or a service principal should grant *write* permission to a system. Changes can be made by an ingestion, transformation, or maintenance process.
 
-For more information about access control mechanisms, see [Managing data lake access](./data-lake-access.md).
+For more information about access control mechanisms, see [Access control and data lake configurations in Azure Data Lake Storage](./data-lake-access.md).
 
 ## Next steps
 
-The next step is to review guidance about data lake zones.
-
-> [!div class="nextstepaction"]
-> [Data lake zones](./data-lake-services.md)
+[Provision three Azure Data Lake Storage Gen2 accounts for each data landing zone](./data-lake-services.md)

@@ -3,7 +3,7 @@ title: What is an Azure landing zone?
 description: Learn how a landing zone provides the basic building block of any cloud adoption environment.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 08/23/2021
+ms.date: 09/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -49,7 +49,9 @@ While your specific implementation might vary, as a result of specific business 
 
 For organizations where this conceptual architecture fits with the operating model and resource structure they plan to use, there's a ready-made deployment experience called the **Azure landing zone accelerator**.
 
-The accelerator is an Azure-portal-based deployment that will provide a full implementation of the conceptual architecture, along with opinionated configurations for key components such as management groups and policies.
+The accelerator is an Azure-portal-based deployment that will provide a full implementation of the conceptual architecture, along with opinionated configurations for key components such as management groups and policies. 
+
+To deploy the Azure landing zone accelerator you will require permissions to create resources at the tenant (`/`) scope. These can be assigned/granted by following the [guidance here.](/azure/azure-resource-manager/templates/deploy-to-tenant?tabs=azure-powershell#required-access)
 
 [![`DTA-Button-ALZ`](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://aka.ms/caf/ready/accelerator)
 

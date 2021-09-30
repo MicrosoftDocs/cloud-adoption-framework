@@ -67,7 +67,7 @@ Go directly to Azure Machine Learning resources in the [Azure portal](https://po
 
 ## AI applications and agents
 
-Azure provides a set of pre-built AI services called Cognitive Services to build AI applications. Additionally, Azure offers bot service, which allows developers to build conversational AI agents that improve customer and employee engagement.
+Azure provides a set of prebuilt AI services called Cognitive Services to build AI applications. Additionally, Azure offers bot service, which allows developers to build conversational AI agents that improve customer and employee engagement.
 
 ### AI applications
 

@@ -20,7 +20,7 @@ Organize and deploy your assets in the Azure environment.
 
 - [Azure fundamental concepts](../considerations/fundamental-concepts.md). Learn key Azure concepts and terms, and how these concepts relate to one another.
 - [Create your initial subscriptions](./initial-subscriptions.md). Establish an initial set of Azure subscriptions to begin your cloud adoption.
-- [Scale your Azure environment using multiple subscriptions](../azure-best-practices/scale-subscriptions.md). Understand reasons and strategies for creating additional subscriptions to scale your Azure environment.
+- [Scale your Azure environment using multiple subscriptions](../azure-best-practices/scale-subscriptions.md). Understand reasons and strategies for creating more subscriptions to scale your Azure environment.
 - [Organize your resources with Azure management groups](../azure-best-practices/organize-subscriptions.md). Learn how Azure management groups can manage resources, roles, policies, and deployment across multiple subscriptions.
 - [Follow recommended naming and tagging conventions](../azure-best-practices/naming-and-tagging.md). Review detailed recommendations for naming and tagging your resources. These recommendations support enterprise cloud adoption efforts.
 - [Create hybrid cloud consistency](../considerations/hybrid-consistency.md). Create hybrid cloud solutions that provide the benefits of cloud innovation while maintaining many of the conveniences of on-premises management.
@@ -57,6 +57,10 @@ Design your identity and access control infrastructure to improve the security a
 ## AI + Machine Learning
 
 - [Organize and set up Azure Machine Learning environments](./ai-machine-learning-resource-organization.md). Learn about key decision points in setting up Azure Machine Learning for your organization.
+- [Budget, cost, and quota management for Azure Machine Learning at organizational scale](./optimize-ai-machine-learning-cost.md).
+  When you manage compute costs incurred from Azure Machine Learning, at an organization scale with many workloads, many teams, and users, there are many management and optimization challenges to work through.
+- [Machine learning DevOps (Machine Learning Operations)](./ai-machine-learning-mlops.md).
+  Machine learning DevOps is an organizational change that relies on a combination of people, process, and technology to deliver machine learning solutions in a robust, scalable, reliable, and automated way. This guide summarizes best practices and learnings from adopting machine learning DevOps in the enterprise with Azure Machine Learning.
 
 ## Cost management
 

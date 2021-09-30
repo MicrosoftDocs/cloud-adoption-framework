@@ -1,5 +1,5 @@
 ---
-title: What is data governance for Azure?
+title: What is data governance?
 description: Learn about data governance for Azure.
 author: mboswell
 ms.author: mboswell
@@ -7,6 +7,7 @@ ms.date: 06/22/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
+ms.custom: e2e-data-management, think-tank
 ---
 
 # What is data governance?
@@ -27,7 +28,7 @@ For many companies, the expectation in the boardroom is that data and AI will dr
 
 For many companies, the introduction of digital transformation has resulted in a more complex operating environment. The environment spans the edge, multiple clouds, and datacenters. This can mean that both operational and analytical systems are running in the cloud and the datacenter. Examples of operational transaction processing systems that run in the cloud include Microsoft Dynamics, Workday, SalesForce, ServiceNow, and Marketo. Analytical systems that run in the cloud might include data warehouses, graph databases, data lakes used by data scientists, and real-time IoT streaming analytic applications. The result is that companies have a hybrid environment with data in multiple data stores, spread across their digital landscape.
 
-:::image type="content" source="./images/distributed-data-estate.png" alt-text="Diagram of distributed data estate":::
+:::image type="content" source="./images/distributed-data-estate.png" alt-text="Diagram of the distributed data estate.":::
 
 These data stores include data stored in edge databases, relational or NoSQL database management systems, files, cloud storage, Hadoop systems, and scalable message queuing systems, like Kafka.
 
@@ -69,4 +70,4 @@ Failure to comply with regulatory legislation on data privacy might result in si
 
 ## Next steps
 
-[Strategy for data management and analytics adoption in Azure](./strategy.md)
+[Integrate data management and analytics into your cloud adoption strategy](./strategy.md)

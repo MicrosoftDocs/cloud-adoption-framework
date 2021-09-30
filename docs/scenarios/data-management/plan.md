@@ -1,17 +1,18 @@
 ---
-title: Building a plan for data management and analytics in Azure
-description: Building a plan for data management and analytics
+title: Develop a plan for data management and analytics
+description: Understand how to build a plan for data management and analytics in Azure.
 author: pratimdas
 ms.author: brblanch
 ms.date: 01/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Develop a plan for data management and analytics
 
-[Cloud Adoption Framework's Plan methodology](../../plan/index.md) helps create an overall cloud adoption plan to guide the programs and teams involved in your cloud-based digital transformation. The Plan methodology also provides templates to create your backlog and plans to build necessary skills across your teams. The backlog and plans you create are all based on what you are trying to do in the cloud.
+[The Cloud Adoption Framework Plan methodology](../../plan/index.md) helps to create an overall cloud adoption plan to guide the programs and teams involved in your cloud-based digital transformation. The Plan methodology also provides templates to create your backlog and plans to build necessary skills across your teams. The backlog and plans you create are all based on what you are trying to do in the cloud.
 
 This article builds on the Plan methodology. It has specific guidance for data estate rationalization and skilling plans, specific to data management and analytics.
 
@@ -23,7 +24,7 @@ Much of the guidance in the Plan methodology focuses on the [five Rs of rational
 
 To properly rationalize your data estate, begin by aligning your business outcomes to each of your data initiatives. This alignment will aid in prioritization and a clear understanding of the value your can derive from each data initiative. Initiatives that represent little business value and present lesser complexity for migration, can easily be included in your cloud migration plan to deliver quick efficiency gains. Initiatives with the greatest business impact or technical complexity typically require richer planning to enable long-term innovation value.
 
-:::image type="content" source="./images/strategic-initiative.png" alt-text=" Diagram of strategic initiative." lightbox="./images/strategic-initiative.png":::
+:::image type="content" source="./images/strategic-initiative.png" alt-text=" Diagram of strategic initiatives." lightbox="./images/strategic-initiative.png":::
 
 ### Prioritization
 
@@ -97,10 +98,10 @@ Agile is the ability to create and respond to change. It's a way of dealing with
 
 Agility is about thinking through how to understand what's going on in your current environment, identify what uncertainty you're facing, and plan how to adapt as you go.
 
-## Next step
+## Next steps
 
-The following articles can guide your cloud adoption journey and help you succeed in the cloud adoption scenario.
+The following articles can guide your cloud adoption journey and help your cloud adoption scenario to succeed:
 
-- [Review your environment or Azure landing zones](./ready.md)
+- [Review your environment for Azure landing zones](./ready.md)
 - [Govern data management and analytics](./govern.md)
 - [Secure data management and analytics](./secure.md)

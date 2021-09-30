@@ -1,5 +1,5 @@
 ---
-title: Understand DevOps automation for the data management and analytics scenario in Azure
+title: DevOps automation for data management and analytics in Azure
 description: Learn about DevOps automation for the data management and analytics scenario in Azure.
 author: abdale
 ms.author: hamoodaleem
@@ -7,10 +7,10 @@ ms.date: 08/06/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: think-tank, e2e-data
+ms.custom: e2e-data-management, think-tank
 ---
 
-# Understand DevOps automation for the data management and analytics scenario in Azure
+# DevOps automation for data management and analytics in Azure
 
 DevOps, the term for Development Operations, has culturally shifted how people think and work, accelerating the rate at which businesses realize value by helping individuals and organizations to develop and maintain sustainable work practices. DevOps combines development and operations, and is often associated with software engineering tools that support continuous integration (CI) and continuous delivery (CD) practices. These tools and practices include source code managers (Git, Apache Subversion, or Team Foundation Source Control) and automatic build and delivery managers (Azure pipelines, GitHub actions, and others).
 
@@ -90,4 +90,4 @@ Deployments to test and production should only be managed through a CI/CD pipeli
 
 ## Next steps
 
-[Personas and teams](./organize-persona-and-teams.md)
+[Understand the personas and teams for data management and analytics in Azure](./organize-persona-and-teams.md)
