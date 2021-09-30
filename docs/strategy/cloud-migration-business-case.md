@@ -76,7 +76,7 @@ The Calculator creates a match from Azure Services to create a high-level initia
 
 **Azure Virtual Machine cost estimator:** This Power BI template allows you to estimate your cost savings against pay-as-you-go pricing by optimizing Azure offers and benefits for VMs like Azure Hybrid Benefit and reserved instances. Download the following files to use the Power BI model:
 
-- [Power BI template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/strategy/vm-cost-comparison-power-bi-template.pbix)
+- [Power BI template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/strategy/azure-virtual-machine-cost-estimator.pbix)
 - [Excel file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/strategy/on-premises-compute-unit-lists.xlsx)
 
 **Azure Pricing Calculator:** Use the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) to configure and estimate the costs for Azure products.
