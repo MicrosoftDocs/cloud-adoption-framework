@@ -91,7 +91,7 @@ See how data quality can be implemented in [Enforcing data quality](../best-prac
 
 Entity relationship models should be captured and stored in a central location, that is in the data management landing zone. It gives consumers of the data a single place to go for conceptual diagrams.
 
-[Er studio](https://www.idera.com/products/er-studio/enterprise-data-modeling) and [iserver](https://www.orbussoftware.com/solutions/enterprise-architecture/data-architecture) are used by many enterprise customers to model their datasets before ingesting.
+[ER Studio](https://www.idera.com/products/er-studio/enterprise-data-modeling) and [iServer](https://www.orbussoftware.com/solutions/enterprise-architecture/data-architecture) are used by many enterprise customers to model their datasets before ingesting.
 
 ### Industry-specific data models and Common Data Model with data lake
 

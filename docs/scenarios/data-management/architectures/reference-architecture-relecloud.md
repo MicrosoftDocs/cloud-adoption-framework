@@ -1,6 +1,6 @@
 ---
 title: Relecloud scenario for data management and analytics in Azure
-description: Learn about the relecloud scenario for data management and analytics in Azure.
+description: Learn about the Relecloud scenario for data management and analytics in Azure.
 author: AnalyticJeremy
 ms.author: jepeach
 ms.date: 09/21/2021
@@ -19,7 +19,7 @@ Relecloud is a private cloud provider offering shared computing and storage reso
 
 ## Current situation
 
-Although relecloud provides compute resources of their own, they don't want to constrain their platform with their own internal operations. Therefore, they rely on Microsoft Azure for their internal computing needs. Last quarter, as the operations team was pursuing new analytics projects, the team modernized its analytics platform by migrating it to Azure. They chose to implement enterprise-scale for analytics and AI to maximize the potential for scaling the platform and adding new workloads from the organization.
+Although Relecloud provides compute resources of their own, they don't want to constrain their platform with their own internal operations. Therefore, they rely on Microsoft Azure for their internal computing needs. Last quarter, as the operations team was pursuing new analytics projects, the team modernized its analytics platform by migrating it to Azure. They chose to implement enterprise-scale for analytics and AI to maximize the potential for scaling the platform and adding new workloads from the organization.
 
 Today, the billing group has outgrown its current analytics solution. The volume of invoices they must analyze has become too large for their on-premises server. They have decided to follow the lead of the operations group and modernize their platform in Azure.
 
@@ -67,7 +67,7 @@ Both of these integrations will be powered by pipelines in a shared Azure Synaps
 
 #### Billing data products
 
-The billing analysts will create a new data product called **Revenue by service** that'll analyze how much each cloud service generates for relecloud. This product will rely on the data in the **Invoices** ingestion. It will also connect across to the operations landing zone and read the service usage data.
+The billing analysts will create a new data product called **Revenue by service** that'll analyze how much each cloud service generates for Relecloud. This product will rely on the data in the **Invoices** ingestion. It will also connect across to the operations landing zone and read the service usage data.
 
 Like with data integrations, the data product will also rely on a shared Azure Synapse workspace.
 
@@ -77,7 +77,7 @@ Like with data integrations, the data product will also rely on a shared Azure S
 
 ## Deployment guidelines
 
-The customer scenario outlined above can be deployed by referencing the following architectures for the relecloud data management landing zone and data landing zone:
+The customer scenario outlined above can be deployed by referencing the following architectures for the Relecloud data management landing zone and data landing zone:
 
 ### Data management landing zone deployment
 
@@ -98,7 +98,7 @@ To deploy the architectures, use the data management landing zone and the data l
 - [Data management landing zone template](https://github.com/Azure/data-management-zone)
 - [Data landing zone template](https://github.com/Azure/data-landing-zone)
 
-Use the following templates to deploy other data integrations and data products in the relecloud billing and operations data landing zones:
+Use the following templates to deploy other data integrations and data products in the Relecloud billing and operations data landing zones:
 
 |Name  |Data landing zone  |Type  |Template  |
 |---------|---------|---------|---------|
@@ -108,7 +108,7 @@ Use the following templates to deploy other data integrations and data products 
 |Revenue by product     |Billing         |Data product         |[Data product batch template](https://github.com/Azure/data-product-batch)         |
 
 > [!IMPORTANT]
-> Not everything in the reference implementation templates above will need to be deployed to meet the needs of relecloud. Some level of customization will be required for the templates. Services that aren't needed should be removed from the templates prior to deployment.
+> Not everything in the reference implementation templates above will need to be deployed to meet the needs of Relecloud. Some level of customization will be required for the templates. Services that aren't needed should be removed from the templates prior to deployment.
 
 ## Next steps
 
