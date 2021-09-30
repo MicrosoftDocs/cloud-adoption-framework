@@ -134,7 +134,7 @@ For specific recommendations, like in the following screenshot, you will also ge
 
   ![A screenshot of an Azure Security Center recommendation to install Log Analytics.](./media/arc-security-center/recommendation-remediate.png)
 
-The following remediation **Quick Fix** is using an ARM template to deploy the Microsoft Monitoring Agent extension on the Azure Arc machine.
+The following remediation **Quick Fix** is using an ARM template to deploy the Log Analytics agent extension on the Azure Arc machine.
 
   ![A screenshot of an Azure Security Center **Quick Fix** ARM template.](./media/arc-security-center/quick-fix-template.png)
 

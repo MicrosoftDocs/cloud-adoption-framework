@@ -15,7 +15,7 @@ ms.custom: internal, fasttrack-edit, AQC
 
 *Protect and recover* is the third and final discipline in any cloud-management baseline.
 
-![Cloud Management Baseline](../../_images/manage/management-baseline.png)
+![Diagram showing a cloud management baseline.](../../_images/manage/management-baseline.png)
 
 In [Operational compliance in Azure](./operational-compliance.md) the objective is to reduce the likelihood of a business interruption. The current article aims to reduce the duration and impact of outages that can't be prevented.
 

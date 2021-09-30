@@ -6,7 +6,7 @@ ms.author: mboswell
 ms.date: 08/03/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
@@ -14,7 +14,7 @@ ms.custom: e2e-data-management, think-tank
 
 Learn about important considerations for your Azure data lakes.
 
-## Life cycle management
+## Lifecycle management
 
 Azure Storage offers different access tiers, which allow you to store blob object data in the most cost-effective manner. The available access tiers include:
 
@@ -38,21 +38,21 @@ These data access scenarios benefits from a different access tier that's optimiz
 
 Enterprise-scale for analytics and AI recommends that you implement a tiering policy for all three Data Lake Storage accounts.
 
-Life cycle management uses a rule-based policy. Use this policy to transition your data to the appropriate access tiers or to expire at the end of the data's life cycle.
+Lifecycle management uses a rule-based policy. Use this policy to transition your data to the appropriate access tiers or to expire at the end of the data's lifecycle.
 
-With the life cycle management policy, you can:
+With the lifecycle management policy, you can:
 
 - Transition blobs from cool to hot immediately if accessed to optimize for performance.
 
 - Transition blobs, blob versions, and blob snapshots to a cooler storage tier to optimize for cost. This transition is useful if the blobs are not accessed or modified for a period of time. For example, hot to cool, hot to archive, or cool to archive.
 
-- Delete blobs, blob versions, and blob snapshots at the end of their life cycle.
+- Delete blobs, blob versions, and blob snapshots at the end of their lifecycle.
 
 - Define rules to be run once per day at the storage account level.
 
 - Apply rules to containers or a subset of blobs by using name prefixes or blob index tags as filters.
 
-For example, suppose a system has data that's used frequently during the first stages of the life cycle, but then only occasionally after a month. After two months, the dataset is rarely used. In this scenario, hot storage is best during the first month. Cool storage is the most cost optimal for occasional access. Archive storage is the best tier option after the data gets old. You can use a life cycle management policy rule to automatically move aging data to cooler tiers.
+For example, suppose a system has data that's used frequently during the first stages of the lifecycle, but then only occasionally after a month. After two months, the dataset is rarely used. In this scenario, hot storage is best during the first month. Cool storage is the most cost optimal for occasional access. Archive storage is the best tier option after the data gets old. You can use a lifecycle management policy rule to automatically move aging data to cooler tiers.
 
 ## Data lakes connectivity
 
@@ -109,7 +109,7 @@ The types of anonymous requests logged are:
 - Successful requests.
 - Server errors.
 - Time out errors for both client and server.
-- Failed GET requests with the error code 304, Not Modified.
+- Failed get requests with the error code 304, not modified.
 
 All other failed anonymous requests aren't logged.
 

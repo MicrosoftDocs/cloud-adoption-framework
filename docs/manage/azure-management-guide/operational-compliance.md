@@ -18,7 +18,7 @@ ms.custom: internal, fasttrack-edit, AQC
 
 *Operational compliance* is the second discipline in any cloud management baseline.
 
-![Cloud Management Baseline](../../_images/manage/management-baseline.png)
+![Diagram showing a cloud management baseline.](../../_images/manage/management-baseline.png)
 
 Improving operational compliance reduces the likelihood of an outage related to configuration drift or vulnerabilities related to systems being improperly patched.
 
