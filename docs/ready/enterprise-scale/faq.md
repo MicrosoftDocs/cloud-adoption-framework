@@ -18,11 +18,11 @@ This article answers frequently asked questions relating to Enterprise-scale.
 
 ## Whats is the Azure Landing Zone Accelerator?
 
-The Azure Landing Zone Accelerator is an Azure portal based deployment experience that will deploy the [Azure landing zone conceptual architecture](/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-conceptual-architecture).
+The Azure Landing Zone Accelerator is an Azure portal based deployment experience that will deploy an opinionated implementation, based on the [Azure landing zone conceptual architecture](/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-conceptual-architecture).
 
 ## What is the Azure Landing Zone Conceptual Architecture?
 
-The Azure landing zone conceptual architecture is the new name for Enterprise-scale. The conceptual architecture represents scale and maturity decisions based on a wealth of lessons learned and feedback from customers who have adopted Azure as part of their digital estate, in which we provide prescriptive guidance and recommendations for your implementation.
+The Azure landing zone conceptual architecture represents scale and maturity decisions based on a wealth of lessons learned and feedback from customers who have adopted Azure as part of their digital estate, in which we provide prescriptive guidance and recommendations for your implementation.
 
 ## What does a "Landing Zone" map to in Azure in the context of Enterprise-scale?
 
@@ -138,7 +138,7 @@ As Terraform builds its own [state](https://www.terraform.io/docs/language/state
 
 As of today Terraform import is done on a per resource basis and can be time consuming and complex to do at scale. Therefore it is generally easier to delete and redeploy via Terraform than to import everything that has been deployed by the Azure Landing Zone Accelerator portal based experience.
 
-However, must customers are aware from the start that they would like to use Terraform to manage their Azure Tenant and therefore this is a fairly uncommon scenario.
+However, most customers are aware from the start that they would like to use Terraform to manage their Azure Tenant and therefore this is a fairly uncommon scenario.
 
 To deploy Enterprise-scale using Terraform you may wish to utilise the Terraform module we have provided that deploys everything the Azure Landing Zone Accelerator portal based experience does. The module is called [Terraform Module for Cloud Adoption Framework Enterprise-scale](https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/0.0.4-preview) and is available from the Terraform Registry.
 
