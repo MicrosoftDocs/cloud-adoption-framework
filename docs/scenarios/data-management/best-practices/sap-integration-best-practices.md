@@ -201,7 +201,7 @@ has the option to utilize predefined templates for SAP areas like Business Partn
 
 Before designing the specifics of data lake zones and folder structures, the first design of zones and folders should follow the best practices, defined for data lake services:
 
-[Data Lake landing zones](../data-lake-services.md)
+[Data Lake landing zones](data-lake-services.md)
 
 Specific to consider about SAP is the fact, that initial application developments will have to take place on data provided by the SAP development system. Which is typically a small set of developer generated data.
 
