@@ -101,7 +101,7 @@ Other services like Azure Event Hubs, Azure IoT Hub, Azure Stream Analytics, and
 > [!IMPORTANT]
 > A **data integration** is responsible for ingesting external data into a read data source. Apart from data quality checks and other applied data, the data should avoid having other data transformations applied to it.
 
-For more information, see [enterprise-scale for analytics and AI data integrations in Azure](./architectures/data-landing-zone-data-integration.md).
+For more information, see [Enterprise-scale for analytics and AI data integrations in Azure](./architectures/data-landing-zone-data-integration.md).
 
 ### Data products
 
