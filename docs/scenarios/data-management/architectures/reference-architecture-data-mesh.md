@@ -82,7 +82,7 @@ By using data integration, aligning data domains and Purview’s collections you
 
 The following diagram illustrates a cross-domain data mesh architecture using CAF’s data integration.
 
-:::image type="content" source="../images/data-mesh-integration.png" alt-text="Diagram showing data product" lightbox="../images/data-mesh-integration.png":::
+:::image type="content" source="../images/data-mesh-integration.png" alt-text="Diagram showing data integration" lightbox="../images/data-mesh-integration.png":::
 
 The network design allows simple sharing of datasets across domains without bandwidth limitations, single point of failures and minimal cost. For security you can leverage Microsoft’s Zero Trust security model. CAF proposes the use of network isolation through private endpoints and private network communication, an identity driven data access model using MIs, UMIs and nested security groups following the least privilege principle. You can use managed identities to ensure a least privilege access model is followed. Applications and services in this model will have limited access to data products. Azure Policies in conjunction with the upcoming data policies are used to enable self-service and enforce compliant resources within all data products at scale. With this design you can have uniform data access, while staying fully in control via centralized data governance and auditing.
 
