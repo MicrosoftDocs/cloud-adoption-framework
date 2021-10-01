@@ -10,8 +10,6 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
-<!--docutune:casing "Layer-7 inbound" -->
-
 # Traditional Azure networking topology
 
 Explore key design considerations and recommendation surrounding network topologies in Microsoft Azure.
@@ -106,7 +104,7 @@ The following figure shows this topology.
 
   - There are no conflicting configurations with Azure networking.
 
-- Don't deploy Layer-7 inbound NVAs, such as Azure Application Gateway, as a shared service in the central-hub virtual network. Instead, deploy them together with the application in their respective landing zones.
+- Don't deploy Layer 7 inbound NVAs, such as Azure Application Gateway, as a shared service in the central-hub virtual network. Instead, deploy them together with the application in their respective landing zones.
 
 - Deploy a single Azure DDoS standard protection plan in the Connectivity subscription.
 
