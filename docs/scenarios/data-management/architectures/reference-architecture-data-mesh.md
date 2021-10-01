@@ -2,7 +2,7 @@
 title: Financial institution scenario for data mesh
 description: Learn about data mesh scenario for data management and analytics in Azure.
 author: PietheinStrengholt
-ms.author: pietheinstrengholt
+ms.author: piethein.strengholt
 ms.date: 10/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
