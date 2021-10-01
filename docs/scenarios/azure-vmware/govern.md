@@ -104,7 +104,7 @@ For more recommendations about security, governance, and overall design, includi
 
 For more information on how to expand your hybrid governance, see:
 
-- [Save costs with Azure VMware Solution](/azure/azure-vmware/reserved-instance.md)
+- [Save costs with Azure VMware Solution](/azure/azure-vmware/reserved-instance)
 - [How to secure your private cloud environment](/azure/vmware-cloudsimple/private-cloud-secure?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)
 - [Using Azure AD as an identify provider for vCenter on CloudSimple Private Cloud](/azure/vmware-cloudsimple/azure-ad)
 - [Security Control V2: Asset Management](/security/benchmark/azure/security-controls-v2-asset-management)
