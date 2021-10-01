@@ -80,7 +80,7 @@ Consider the following factors when deciding which systems, users, or devices ca
 
 - **Database encryption and activity monitoring:** Encrypt SQL and other databases in Azure VMware Solution to prevent easy data access in case of a data breach. For database workloads, use encryption-at-rest methods such as transparent data encryption (TDE) or an equivalent native database feature. Ensure workloads are using encrypted disks, and that sensitive secrets are stored in a key vault dedicated to the resource group.
 
-  Use Azure Key Vault for customer-managed keys in bring-your-own-key (BYOK) scenarios, such as [BYOK for Azure SQL Database transparent data encryption (TDE)](/azure/azure-sql/database/transparent-dataencryption-byok-overview). Separate key management and data management duties where possible. For an example of how SQL Server 2019 uses Key Vault, see [Use Azure Key Vault with Always Encrypted with secure enclaves](/sql/connect/ado-net/sql/azure-key-vault-enclave-example).
+  Use Azure Key Vault for customer-managed keys in bring-your-own-key (BYOK) scenarios, such as [BYOK for Azure SQL Database transparent data encryption (TDE)](/azure/azure-sql/database/transparent-data-encryption-byok-overview). Separate key management and data management duties where possible. For an example of how SQL Server 2019 uses Key Vault, see [Use Azure Key Vault with Always Encrypted with secure enclaves](/sql/connect/ado-net/sql/azure-key-vault-enclave-example).
 
   Monitor for unusual database activities to reduce the risk of an insider attack. Use native database monitoring like Activity Monitor or an Azure VMware Solution certified partner solution. Consider using Azure database services for enhanced auditing controls.
 
@@ -131,7 +131,7 @@ Security posture awareness for Azure VMware Solution guest VMs helps you underst
 
   For more information, see [Azure Arc enabled servers overview](/azure/azure-arc/servers/overview).
 
-- **Guest VM domain governance:** To avoid error-prone manual processes, use extensions like the [`JsonADDomainExtension`](https://github.com/Azure/azure-quickstart-templates/blob/master/201-vm-domain-join-existing/azuredeploy.json) or equivalent automation options to enable Azure VMware Solution guest VMs to auto join an Active Directory domain.
+- **Guest VM domain governance:** To avoid error-prone manual processes, use extensions like the [`JsonADDomainExtension`](https://github.com/Azure/azure-quickstart-templates/blob/master/quickstarts/microsoft.compute/vm-domain-join-existing/azuredeploy.json) or equivalent automation options to enable Azure VMware Solution guest VMs to auto join an Active Directory domain.
 
 - **Guest VM logging and monitoring:** Enable diagnostics metrics and logging on guest VMs to more easily debug guest and application issues. Implement log collection and querying capabilities that provide quick response times for debugging and troubleshooting. Enable near-real time [VM insights](/azure/azure-monitor/vm/vminsights-overview) on guest VMs for prompt detection of performance bottlenecks and operational issues. Configure [log alerts](/azure/azure-monitor/alerts/alerts-log) to capture boundary conditions for guest VMs.
 

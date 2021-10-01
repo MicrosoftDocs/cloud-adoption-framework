@@ -35,7 +35,7 @@ You can configure and deploy an Azure VMware Solution private cloud graphically 
 - You can use [manual deployments](/azure/azure-vmware/tutorial-create-private-cloud) for initial pilots and small-scale environments. You can also use them where you don't have an existing automation or infrastructure-as-code practice in place.
 - When you deploy Azure VMware Solution via the Azure portal, [Azure CLI](/cli/azure/vmware/private-cloud#az_vmware_private_cloud_create), or [Azure PowerShell modules](/powershell/module/az.vmware/new-azvmwareprivatecloud), you'll see a series of terms and conditions about data protection in the solution. If you're using the ARM APIs directly or deploying via an ARM or Bicep template, consider reviewing these [terms and conditions](https://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.AVS?tab=Overview) before deploying automation.
 - For on-demand environments that are spun-up as required, consider automating the Azure VMware Solution private cloud creation process to limit the amount of manual interaction.
-- You can use the deployments blade of the target resource group within the Azure portal to monitor the private cloud creation process. Once you've deployed the private cloud, confirm that it's in the *Succeeded* status before proceeding. If the private cloud shows a [*Failed* status](/azure/azure-vmware/fix-deployment-provisioning-failures), you might be unable to connect to vCenter. Removal and redeployment of the private cloud might be required.
+- You can use the deployments blade of the target resource group within the Azure portal to monitor the private cloud creation process. Once you've deployed the private cloud, confirm that it's in the *Succeeded* status before proceeding. If the private cloud shows a [*Failed* status](/azure/azure-vmware/fix-deployment-failures), you might be unable to connect to vCenter. Removal and redeployment of the private cloud might be required.
 
 **Recommendations:**
 
@@ -57,7 +57,7 @@ You can use automated deployments to deploy Azure VMware Solution environments i
 
 - Deploy a minimal private cloud and then scale as required.
 - [Request host quota](/azure/azure-vmware/request-host-quota-azure-vmware-solution) or capacity ahead of time to ensure a successful deployment.
-- Monitor both the private cloud deployment process and the status of the private cloud before deploying subresources. Further configuration updates to the private cloud can only be processed once the private cloud is in a *Succeeded* status. For private clouds that are in a [*Failed* status](/azure/azure-vmware/fix-deployment-provisioning-failures), we recommend you stop any further operations and raise a support ticket.
+- Monitor both the private cloud deployment process and the status of the private cloud before deploying subresources. Further configuration updates to the private cloud can only be processed once the private cloud is in a *Succeeded* status. For private clouds that are in a [*Failed* status](/azure/azure-vmware/fix-deployment-failures), we recommend you stop any further operations and raise a support ticket.
 - Include relevant resource locks within the automated deployment or ensure they're applied via policy.
 
 ### Automated connectivity
@@ -81,7 +81,7 @@ For more information about recommended network topologies, see [Network topology
 
 **Recommendations:**
 
-- If you're using separate service principals for Azure VMware Solution deployment instead of ExpressRoute configuration, use [Azure Key Vault](/azure/key-vault) or a similar secret store to pass authorization keys between deployments if necessary.
+- If you're using separate service principals for Azure VMware Solution deployment instead of ExpressRoute configuration, use [Azure Key Vault](/azure/key-vault/) or a similar secret store to pass authorization keys between deployments if necessary.
 - There are [limits](/azure/azure-vmware/concepts-networking#limitations) to the number of parallel operations that can be done over an Azure VMware Solution private cloud at any moment. For templates that define many Azure VMware Solution private cloud subresources, we recommend using dependencies to deploy in a serial fashion.
 
 ### Automated scale
@@ -123,7 +123,7 @@ An Azure VMware Solution private cloud exists as a resource within the ARM, prov
 
 **Recommendations:**
 
-- Use [Azure CLI](/cli/azure/vmware), [PowerShell](/powershell/module/az.vmware), or a declarative template like [ARM or Bicep](/azure/templates) to deploy Azure VMware Solution in an automated manner.
+- Use [Azure CLI](/cli/azure/vmware), [PowerShell](/powershell/module/az.vmware/), or a declarative template like [ARM or Bicep](/azure/templates/) to deploy Azure VMware Solution in an automated manner.
 - Where possible, use *what-if* to confirm changes before execution, pausing on resource deletion for verification.
 - For operations that are single deployment, but still require infrastructure as code, use Azure Blueprints. Azure Blueprints provides stamped and repeatable deployments without the need for automation pipelines.
 

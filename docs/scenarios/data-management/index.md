@@ -34,13 +34,13 @@ This scenario is designed to guide the end-to-end customer journey throughout th
 
 - **Featured Azure products:** Expand this section in the table of contents to learn more about the products that support data management and analytics in Azure.
 
-- [Microsoft Learn modules](/learn): Gain the hands-on skills required to implement, maintain, and support data management and analytics solutions.
+- [Microsoft Learn modules](/learn/): Gain the hands-on skills required to implement, maintain, and support data management and analytics solutions.
 
 ## Common customer journeys
 
 **Prepare for centralized operations:** Use Cloud Adoption Framework articles to establish the processes and approaches required to support an entire portfolio of workloads across your data estate.
 
-**Improve controls across your data estate:** Focus on the [Govern methodology](/azure/cloud-adoption-framework/govern) and [Manage methodology](/azure/cloud-adoption-framework/manage) articles to integrate data management and analytics into your existing operations processes. Use the [Ready methodology](/azure/cloud-adoption-framework/ready) articles to deploy controls across all of your cloud environments.
+**Improve controls across your data estate:** Focus on the [Govern methodology](/azure/cloud-adoption-framework/govern/) and [Manage methodology](/azure/cloud-adoption-framework/manage/) articles to integrate data management and analytics into your existing operations processes. Use the [Ready methodology](/azure/cloud-adoption-framework/ready/) articles to deploy controls across all of your cloud environments.
 
 **Influence changes to individual workloads (central IT and governance):** As your data management and analytics processes improve, the central data governance teams will find requirements that depend on knowledge of the architecture behind individual workloads. Use the Azure Well-Architected Framework guidance to help workload owners understand potential improvements to their workloads that will improve data operations.
 
