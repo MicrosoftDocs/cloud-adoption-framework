@@ -157,7 +157,7 @@ Data products may have different lifecycles. We recommend applying policies to r
 
 In Azure, the data lifecycle is handled by each relevant service containing persisted data.
 
-[Lifecycle management](../best-practices/data-lake-key-considerations.md#life cycle-management) for enterprise-scale for analytics and AI outlines more considerations around the different layers in a data lake.
+[Lifecycle management](../best-practices/data-lake-key-considerations.md#lifecycle-management) for enterprise-scale for analytics and AI outlines more considerations around the different layers in a data lake.
 
 ## Automation interfaces (optional)
 

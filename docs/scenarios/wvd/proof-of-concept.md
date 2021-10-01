@@ -29,7 +29,7 @@ The following approach to the migration process is simplified to outline a proof
 - **[Step 3: Release](migrate-release.md):**
 
   - The team tests the performance and latency of application groups and deployed desktops for a sampling of users.
-  - The team onboards its end users to teach them how to connect through [Windows desktop client](/azure/virtual-desktop/connect-windows-7-10), [web client](/azure/virtual-desktop/connect-web), [Android client](/azure/virtual-desktop/connect-android), [macOS client](/azure/virtual-desktop/connect-macos), or [iOS client](/azure/virtual-desktop/connect-ios).
+  - The team onboards its end users to teach them how to connect through [Windows desktop client](/azure/virtual-desktop/user-documentation/connect-windows-7-10), [web client](/azure/virtual-desktop/user-documentation/connect-web), [Android client](/azure/virtual-desktop/user-documentation/connect-android), [macOS client](/azure/virtual-desktop/user-documentation/connect-macos), or [iOS client](/azure/virtual-desktop/user-documentation/connect-ios).
 
 ## Assumptions
 

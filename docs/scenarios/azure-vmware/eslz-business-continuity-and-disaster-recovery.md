@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-azure-vmware
 
 # Business continuity and disaster recovery (BCDR) for Azure VMware Solution enterprise-scale scenario
 
-[Azure VMware Solution](/azure/azure-vmware/) provides one or more [private clouds](/azure/azure-vmware/concepts-private-clouds-clusters) that contain vSphere clusters. These clusters are built from dedicated bare-metal Azure infrastructure. The solution provides a minimum of three ESXi hosts, up to a maximum of 16 hosts per cluster. Up to 96 hosts can be run in one private cloud. vCenter Server, vSAN, vSphere, and NSX-T are all provided as part of the private cloud solution. To learn about the SLA for Azure VMware Solution, see [SLA for Azure VMware Solution](/support/legal/sla/azure-vmware/v1_1/). You'll still want to consider other BCDR factors.
+[Azure VMware Solution](/azure/azure-vmware/) provides one or more [private clouds](/azure/azure-vmware/concepts-private-clouds-clusters) that contain vSphere clusters. These clusters are built from dedicated bare-metal Azure infrastructure. The solution provides a minimum of three ESXi hosts, up to a maximum of 16 hosts per cluster. Up to 96 hosts can be run in one private cloud. vCenter Server, vSAN, vSphere, and NSX-T are all provided as part of the private cloud solution. To learn about the SLA for Azure VMware Solution, see [SLA for Azure VMware Solution](https://azure.microsoft.com/support/legal/sla/azure-vmware/v1_1/). You'll still want to consider other BCDR factors.
 
 :::image type="content" source="../_images/eslz-bcdr-1.png" alt-text="Diagram that shows a BCDR flow chart." border="false" Lightbox="../_images/eslz-bcdr-1.png":::
 
