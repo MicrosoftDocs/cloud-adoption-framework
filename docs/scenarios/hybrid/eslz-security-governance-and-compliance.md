@@ -1,5 +1,5 @@
 ---
-title: Governance, security and compliance baseline for hybrid, multicloud, and edge deployments
+title: Security, governance and compliance baseline for hybrid, multicloud, and edge deployments
 description: Expand Azure governance, security and compliance capabilities to hybrid, multicloud, and edge deployments.
 author: brianblanchard
 ms.author: brblanch
@@ -10,24 +10,24 @@ ms.subservice: scenario
 ms.custom: e2e-hybrid
 ---
 
-# Governance, security and compliance baseline for hybrid, multicloud, and edge deployments
+# Security, governance and compliance baseline for hybrid, multicloud, and edge deployments
 
 This article walks through the key design considerations and best practices for security, governance, and compliance in hybrid, multicloud and edge deployments managed by Azure Arc that should be in place as part of a CAF enterprise-scale landing zone implementation.
 
-Defining and applying the proper control mechanisms is key in any cloud implementation as it is the foundational element to stay secured and compliant. In a traditional environment these mechanisms usually involve review processes and manual controls, however the cloud has introduced a new approach to IT governance with automated guardrails and checks. Azure Policy, Azure Blueprints and Azure Security Center are cloud native tools that allow the implementation of these controls, reports, and remediation tasks in an automated fashion. By combining them with Azure Arc, your governance policies and security checks are extended to any resource in public or private clouds.
+Defining and applying the proper control mechanisms is key in any cloud implementation as it is the foundational element to stay secured and compliant. In a traditional environment these mechanisms usually involve review processes and manual controls, however the cloud has introduced a new approach to IT governance with automated guardrails and checks. Azure Policy and Azure Security Center are cloud native tools that allow the implementation of these controls, reports, and remediation tasks in an automated fashion. By combining them with Azure Arc, your governance policies and security checks are extended to any resource in public or private clouds.
 
 By the end of this article, you will understand the critical design areas for security, governance, and compliance with clear Microsoft's guidance.
 
-## Design areas
+## Design considerations
 
 As your hybrid and multicloud resources become part of Azure Resource Manager, they can be managed and governed with Azure tools just as Azure native VMs.
 
-- **Resource consistency and inventory management:** Organize your hybrid resources using [Azure scopes of management](https://docs.microsoft.com/en-us/azure/role-based-access-control/scope-overview) and to locally organize them into a [taxonomy](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources?tabs=json). Apply tags to your non-Azure deployments to add additional context that is relevant for your operations.
+- **Resource consistency and inventory management:** Group your hybrid resources using [Azure scopes of management](https://docs.microsoft.com/en-us/azure/role-based-access-control/scope-overview) into a [taxonomy](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources?tabs=json) that matches your organization. Apply tags to your non-Azure deployments to add additional context that is relevant for your operations.
 - **Agent Provisioning:** Define a strategy for provisioning the Azure Arc-enabled servers and for agent secret management. Consider the level and method of automation for [bulk enrollment](https://docs.microsoft.com/en-us/azure/azure-arc/servers/learn/quick-enable-hybrid-vm). Consider how to structure [pilot and production deployments](https://docs.microsoft.com/en-us/azure/azure-arc/servers/plan-at-scale-deployment) and establish a formal plan that takes into account the scope and plan for a deployment including objectives, selection criteria, success criteria, training plans, rollback and risks.
 - **Agent Management:** The Connected Machine Agent plays a critical role in your hybrid operations as it enables you to manage your Windows and Linux machines hosted outside of Azure and enforce governance policies, it is important to implement solutions that keep track of unresponsive agents.
 - **Agent Security permissions:** Secure access to the Connected Machine agent
 - **Managed Identity:** Use a managed identity with Azure Arc-enabled servers and define a strategy for identifying which applications running on Arc-enabled servers can use the Azure service assigned identity to request an Azure AD token.
-- **Secret and certificate management:** Enable Key Vault to protect security principal accounts and encryption keys. Consider using Azure Key vault for certificate management on your Arc-enabled Servers
+- **Secret and certificate management:** Enable Key Vault to protect security principle accounts and encryption keys. Consider using Azure Key vault for certificate management on your Arc-enabled Servers
 - **Policy management and reporting:** Define a governance plan for your hybrid servers and machines that translates into Azure Policies and remediation tasks.
 - **Data Residency:** consider which Azure region you wish your Azure Arc-enabled machines to be provisioned into, and understand the [metadata that is collected](https://docs.microsoft.com/en-us/azure/azure-arc/servers/data-residency) from theses machines.
 - **Log management strategy:** Plan for metrics and log collection of your hybrid resources into a Log Analytics workspace for further analysis and auditing.
@@ -95,13 +95,13 @@ Understand the [scope of Azure policy](https://docs.microsoft.com/en-us/azure/ro
 
 ### Log management strategy
 
-Design and plan your Log Analytics Workspace deployment, as it will be the container where data is collected, aggregated and later analyzed. As the Log Analytics Workspace represents a geographical location of your data, a level of isolation and a scope for configurations like data retention you will have to identify the number of workspaces needed and how it maps to your organizational structure.
+Design and plan your Log Analytics Workspace deployment, as it will be the container where data is collected, aggregated and later analyzed. As the Log Analytics Workspace represents a geographical location of your data, a level of isolation and a scope for configurations like data retention you will have to identify the number of workspaces needed and how it maps to your organizational structure. It is recommended to use a single Azure Monitor Log Analytics workspace to manage centrally RBAC, visibility and reporting as it is described in the [Management and monitoring best practices of Clouf Adoption Framework](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/enterprise-scale/management-and-monitoring).
 
 [Designing your Azure Monitor Logs deployment](https://docs.microsoft.com/en-us/azure/azure-monitor/logs/design-logs-deployment)
 
 ### Threat protection and cloud security posture management
 
-Azure Security Center provides an unified security-management platform segmented as a cloud security posture management (CSPM) and cloud workload protection platform (CWPP). As your security is only as strong as your weakest link it is important to protect the data and assets hosted in Azure and elsewhere, Azure Defender for servers extends these capabilities to Azure Arc-enabled servers and together with Microsoft Defender for Endpoint provide a comprehensice EDR.  To heighten security on your hybrid landing zone consider:
+Azure Security Center provides an unified security-management platform segmented as a cloud security posture management (CSPM) and cloud workload protection platform (CWPP). To increase security on your hybrid landing zone it is important to protect the data and assets hosted in Azure and elsewhere, Azure Defender for servers extends these capabilities to Azure Arc-enabled servers and together with Microsoft Defender for Endpoint provide a comprehensice EDR.  To heighten security on your hybrid landing zone consider:
 
 - Use Azure Arc-enabled servers to onboard hybrid resources in Azure Defender.
 - Implement an Azure Policy to make sure all resources are compliant and its security data is collected into the Log Analytics workspaces.
@@ -124,7 +124,7 @@ You can also use [Azure Automanage](https://docs.microsoft.com/en-us/azure/autom
 
 ### Role based access controls
 
-Follow the [least-privilege principal](https://docs.microsoft.com/en-us/security/benchmark/azure/baselines/arc-enabled-security-baseline#pa-7-follow-just-enough-administration-least-privilege-principle) users or applications assigned with roles like "Contributor" or "Owner" or "Azure Connected Machine Resource Administrator" are able to execute operations like deploying extensions which basically has the power to do anything on Arc-enabled server. These roles need to be carefully assigned.
+Follow the [least privilege principal](https://docs.microsoft.com/en-us/security/benchmark/azure/baselines/arc-enabled-security-baseline#pa-7-follow-just-enough-administration-least-privilege-principle) users, groups or applications assigned with roles like "Contributor" or "Owner" or "Azure Connected Machine Resource Administrator" are able to execute operations like deploying extensions which basically has the power to do anything on Arc-enabled server. These roles should be used with caution to limit possible blast radius or eventually replaced by custom roles.
 
 To limit the privilege of a user and let only onboard server to Azure "Azure Connected Machine Onboarding" is suitable, this role can only be used to onboard servers and cannot re-onboard or delete the resource. Make sure to review the [Azure Arc-enabled servers security overview](https://docs.microsoft.com/en-us/azure/azure-arc/servers/security-overview) for more information about access controls.
 
