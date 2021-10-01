@@ -6,13 +6,13 @@ ms.author: brblanch
 ms.date: 01/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
 # Develop a plan for data management and analytics
 
-[The Cloud Adoption Framework Plan methodology](../../plan/index.md) helps to create an overall cloud adoption plan to guide the programs and teams involved in your cloud-based digital transformation. The Plan methodology also provides templates to create your backlog and plans to build necessary skills across your teams. The backlog and plans you create are all based on what you are trying to do in the cloud.
+The [Plan methodology](../../plan/index.md) of the Cloud Adoption Framework helps to create an overall cloud adoption plan to guide the programs and teams involved in your cloud-based digital transformation. The Plan methodology also provides templates to create your backlog and plans to build necessary skills across your teams. The backlog and plans you create are all based on what you are trying to do in the cloud.
 
 This article builds on the Plan methodology. It has specific guidance for data estate rationalization and skilling plans, specific to data management and analytics.
 
@@ -35,7 +35,7 @@ A mapping of the business impact (from your strategic business outcomes) and tec
 |Wave| Rationalization | Outcomes |
 |----------|--------------|
 |**Migrate & Modernize**| Rehost and refactor | Tactical, quick wins can be included in a standard migration projects alongside other applications and infrastructure. Tools like Azure Migrate can automated this type of one-time migration to the cloud. When possible, this approach allows for modernization of the data platform to Azure SQL Database, Azure Cosmos DB, or other transactional data structures.|
-|**Transform & Modernize**| Rehost and refactor | When business value increases, so may the complexity of data estate management. These data assets will likely require a degree of transmission, transformation, & synchronization to keep on-premises processes running, while also enabling richer functions in the cloud. Tools like Azure Data Factory can help with the ongoing transformation after the data asset is migrated and modernized.|
+|**Transform & Modernize**| Rehost and refactor | When business value increases, so may the complexity of data estate management. These data assets will likely require a degree of transmission, transformation, and synchronization to keep on-premises processes running, while also enabling richer functions in the cloud. Tools like Azure Data Factory can help with the ongoing transformation after the data asset is migrated and modernized.|
 |**Innovate with confidence**| Rearchitect or rebuild | Achieving high business value requires the ability to innovate with confidence. Use cloud-native data tools to democratize data, analyze information, and predict outcomes. |
 
 ### Workload identification
@@ -81,9 +81,9 @@ This section provides an overview of the critical tips that can improve your ove
 
 It's challenging to harness the power of data in a secure and compliant manner. You might run into challenges like organizational silos, building a data-driven culture, and the use of multiple tools and technologies across the organization. Time-to-market is one of the most critical factors for all businesses. Organizations can have great ideas and data can be an enabler. But because of challenges, it might take weeks or months before you start gaining insights and ultimately deliver business value from data. It's important to prepare for potential challenges early.
 
-### Initial organization alignment: center of excellence
+### Initial organization alignment: Center of excellence
 
-Center of excellence can assist with:
+A center of excellence can assist with:
 
 - Driving adoption, standards, best practices, and innovation
 - Funded team for full delivery and specialist skills provision

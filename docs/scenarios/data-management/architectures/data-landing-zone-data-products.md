@@ -6,7 +6,7 @@ ms.author: mboswell
 ms.date: 09/21/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.custom: think-tank, e2e-data
+ms.custom: think-tank, e2e-data-management
 ---
 
 # Enterprise-scale for analytics and AI data products in Azure
@@ -20,19 +20,21 @@ At a high level, data products are computed or polyglot persistence services tha
   :::image type="content" source="../images/data-product-cross-data-landing-zone.png" alt-text="Diagram of cross-data landing zone consumption.":::
 
   The example above shows:
-  1. Intrazone data consumption:
-     1. Data product B consumes from data product A and the data lake within its data landing zone; for example, data landing zone 1.
-     1. Data products C and D only consume from within their own respective data landing zones.
-  1. Interzone data consumption: Data product B also consumes from data product C and the data lake in data landing zone 3.
+
+  - Intrazone data consumption:
+    - Data product B consumes from data product A and the data lake within its data landing zone; for example, data landing zone 1.
+    - Data products C and D only consume from within their own respective data landing zones.
+  - Interzone data consumption:
+    - Data product B also consumes from data product C and the data lake in data landing zone 3.
 
   > [!IMPORTANT]
-  > In the case of inter-data landing zone consumption, since data product B reads from data landing zone 3, this would require approval from the [data landing zone operations](../organize-persona-and-teams.md#data-landing-zone-teams) and [integration operations](../organize-persona-and-teams.md#data-landing-zone-teams) team of data landing zone 3.
+  > In the case of interzone data consumption, since data product B reads from data landing zone 3, this would require approval from the [data landing zone operations](../organize-persona-and-teams.md#data-landing-zone-teams) and [integration operations](../organize-persona-and-teams.md#data-landing-zone-teams) team of data landing zone 3.
 
   > [!IMPORTANT]
   > Data product B consumes from data products A and C. Before this can happen, data product B must register its consumption of a data product via a data sharing agreement. This data sharing agreement should update the lineage from data product A to data product B and from data product C to data product B.
 
-- The resource group for a data product would include all the service required to make that data product. Examples of services that might be part of a data product include Azure Functions, Azure App Service, Logic Apps, Azure Analysis Services, Cognitive Services, Azure Machine Learning, Azure SQL Database, Azure Database for MySQL, and Azure Cosmos DB. For more information, see [Data product samples](#sample-data-products).
-- A data product has data from a *READ* data source that has had some data transformation applied. For example, it can be a newly curated dataset or a BI report.
+- The resource group for a data product would include all the service required to make that data product. Examples of services that might be part of a data product include Azure Functions, Azure App Service, Logic Apps, Azure Analysis Services, Azure Cognitive Services, Azure Machine Learning, Azure SQL Database, Azure Database for MySQL, and Azure Cosmos DB. For more information, see [Data product samples](#sample-data-products).
+- A data product has data from a *READ* data source that has had some data transformation applied. For example, tt can be a newly curated dataset or a BI report.
 
 ## Design recommendations
 

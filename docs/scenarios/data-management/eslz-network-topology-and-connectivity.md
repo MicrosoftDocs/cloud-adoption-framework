@@ -6,7 +6,7 @@ ms.author: brblanch
 ms.date: 06/21/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
@@ -55,7 +55,7 @@ Site-to-Site VPNs can provide better continuity for your workloads in a hybrid c
 
 ## Private endpoints
 
-The enterprise-scale for analytics and AI framework uses [Private Link](/azure/private-link/private-link-service-overview), where available, for shared platform-as-a-service (PaaS) services. Private Link is available for several services and is in public preview for more services. Private Link addresses data exfiltration concerns related to service endpoints.
+The enterprise-scale for analytics and AI framework uses [Private Link](/azure/private-link/private-link-service-overview), where available, for shared platform as a service (PaaS) functionality. Private Link is available for several services and is in public preview for other services. Private Link addresses data exfiltration concerns related to service endpoints.
 
 For the current list of supported products, see [Private Link resources](/azure/private-link/private-endpoint-overview#private-link-resource).
 
@@ -64,7 +64,7 @@ For the current list of supported products, see [Private Link resources](/azure/
 
 ### Implement Azure DNS resolver for private endpoints
 
-Handle DNS resolution for private endpoints through central [Azure Private DNS](/azure/dns/private-dns-overview) zones. Required DNS records for private endpoints can be automatically created using Azure Policy to allow access through fully qualified domain names (FQDNs). The life cycle of the DNS records follows the life cycle of the private endpoints. It's automatically removed when the private endpoint is deleted.
+Handle DNS resolution for private endpoints through central [Azure Private DNS](/azure/dns/private-dns-overview) zones. Required DNS records for private endpoints can be automatically created using Azure Policy to allow access through fully qualified domain names (FQDNs). The lifecycle of the DNS records follows the lifecycle of the private endpoints. It's automatically removed when the private endpoint is deleted.
 
 ## Next steps
 

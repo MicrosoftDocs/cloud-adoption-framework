@@ -1,0 +1,61 @@
+items:
+  - name: Azure VMware Solution - Microsoft Cloud Adoption Framework for Azure
+    href: index.md
+    pdf_name: Azure VMware Solution - Microsoft Cloud Adoption Framework for Azure
+  - name: Strategic impact
+    href: strategy.md
+  - name: Technical planning
+    href: plan.md
+  - name: Prepare your environments
+    items:
+    - name: Azure landing zones
+      href: ready.md
+    - name: Design areas
+      items:
+      - name: Identity and access management
+        href: eslz-identity-and-access-management.md
+      - name: Network topology and connectivity
+        href: eslz-network-topology-connectivity.md
+      - name: Governance discipline
+        href: eslz-security-governance-and-compliance.md
+      - name: Operations baseline
+        href: eslz-management-and-monitoring.md
+      - name: Business continuity and disaster recovery
+        href: eslz-business-continuity-and-disaster-recovery.md
+      - name: Platform automation and DevOps
+        href: eslz-platform-automation-and-devops.md
+    - name: Implementation options
+      items:
+      - name: Enterprise-scale for Azure VMware Solution
+        href: enterprise-scale-landing-zone.md
+
+  - name: Migrate Azure VMware Solution to Azure
+    href: migrate.md
+  - name: Govern Azure VMware Solution in Azure
+    href: govern.md
+  - name: Manage Azure VMware Solution platform and workloads
+    href: manage.md
+
+  - name: Well-architected
+    items:
+    - name: Compute services on Azure and AWS
+      href: /azure/architecture/aws-professional/compute?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/azure-vmware/toc.json
+    - name: AWS to Azure services comparison
+      href: /azure/architecture/aws-professional/services?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/azure-vmware/toc.json
+    - name: Azure for AWS professionals
+      href: /azure/architecture/aws-professional/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/azure-vmware/toc.json
+
+  - name: Best practices
+    items:
+    - name: Assessment overview (migrate to Azure VMware Solution)
+      href: /azure/migrate/concepts-azure-vmware-solution-assessment-calculation?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/azure-vmware/toc.json
+
+  - name: Microsoft products
+    items:
+    - name: Azure VMware Solution documentation
+      href: /azure/azure-vmware/
+
+  - name: Learn modules
+    items:
+    - name: Run VMware workloads on Azure VMware Solution
+      href: /learn/paths/run-vmware-workloads-azure-vmware-solution/

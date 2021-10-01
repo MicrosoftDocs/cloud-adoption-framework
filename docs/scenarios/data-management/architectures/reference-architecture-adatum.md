@@ -6,7 +6,7 @@ ms.author: jepeach
 ms.date: 09/21/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.custom: think-tank, e2e-data
+ms.custom: think-tank, e2e-data-management
 ---
 
 # Adatum Corporation scenario for data management and analytics in Azure
@@ -17,7 +17,7 @@ The Cloud Adoption Framework for data management and analytics is modular by des
 
 This reference architecture is ideal for customers that have identified a unit of their business that's ready to deploy analytics workloads to Azure. This architecture deploys a single landing zone that can be used by the business unit to manage their data estate. It provides the flexibility to add more landing zones for other business units when they're ready to move to Azure.
 
-Adatum Corporation (Adatum) is a large, international enterprise. In addition to the centralized business units at their headquarters, they also have subsidiaries around the globe that have their own business units, including accounting, marketing, sales, support, and operations.
+Adatum Corporation is a large, international enterprise. In addition to the centralized business units at their headquarters, they also have subsidiaries around the globe that have their own business units, including accounting, marketing, sales, support, and operations.
 
 All of these disparate groups are producing their own data. Many of the business units have embedded analytics teams. The central IT organization has provided most of the data platform that's in use, but a few business units have gone rogue and implemented their own solutions. The data platform is comprised of various cloud services and on-premises solutions.
 
