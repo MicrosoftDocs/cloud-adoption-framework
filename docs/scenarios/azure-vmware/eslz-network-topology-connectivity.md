@@ -91,7 +91,7 @@ The following table provides recommendations and considerations for the four mos
 - You can use L4-L7 load balancer NVAs in Azure VMware Solution.
 - You can use NSX-T firewall with any of these scenarios.
 
-The following sections describe the four most common networking scenarios for Azure VMware Solution private clouds. This list isn't exhaustive. For more scenarios, see [Deploy NVAs that support VXLAN with route server and transit VNet](https://github.com/Azure/AzureCAT-AVS/tree/main/networking/deploy-nva-with-vxlan-in-transit-vnet-and-route-server).
+The following sections describe the four most common networking scenarios for Azure VMware Solution private clouds. This list isn't exhaustive. For more scenarios, see [Deploy NVAs that support VXLAN with Azure Route Server and transit VNet](https://github.com/Azure/AzureCAT-AVS/tree/main/networking/deploy-nva-with-vxlan-in-transit-vnet-and-route-server).
 
 ## Scenario 1: Secured Virtual WAN hub with default route propagation
 
@@ -139,7 +139,7 @@ Established VPN, ExpressRoute, or virtual network connections to the secure Virt
 
 You can host Application Gateway on a spoke virtual network connected to the hub or on the hub virtual network.
 
-## Scenario 2: Third-party NVA in virtual network with route server, with Global Reach disabled
+## Scenario 2: Third-party NVA in Azure Virtual Network with Azure Route Server, with Global Reach disabled
 
 This scenario has the following customer profile, architectural components, and considerations:
 
@@ -224,7 +224,7 @@ This scenario is ideal if:
 
 - You want to use the on-premises NVA and advertise `0.0.0.0/0` from the on-premises environment.
 - You already have or will have ExpressRoute between on-premises datacenters and Azure, with Global Reach enabled.
-- You need public-facing http(s) or L4 inbound services.
+- You need public-facing HTTP/S or L4 inbound services.
 
 Internet egress traffic inspection is handled on-premises. The secured Azure Virtual WAN hub does the traffic inspection between Azure VMware Solution and Azure Virtual Network.
 
@@ -290,7 +290,7 @@ The following list is a quick reference:
 
 Outbound options to enable internet and filter and inspect traffic include:
 
-- Virtual network, NVA, and route server using Azure internet access
+- Azure Virtual Network, NVA, and Azure Route Server using Azure internet access
 - On-premises default route using on-premises internet access
 - Virtual WAN secured hub with Azure Firewall or NVA, using Azure internet access
 
@@ -298,30 +298,30 @@ Inbound options to deliver content and applications include:
 
 - Azure Application Gateway with L7, Secure Sockets Layer (SSL) termination, and Web Application Firewall
 - DNAT and load balancer via on-premises
-- Virtual network, NVA, and route server in various scenarios
+- Azure Virtual Network, NVA, and Azure Route Server in various scenarios
 - Virtual WAN secured hub with Azure Firewall, with L4 and DNAT
 - Virtual WAN secured hub with NVA in various scenarios
 
 ### ExpressRoute
 
-The Azure VMware Solution out-of-the-box private cloud deployment automatically provisions one free ExpressRoute circuit. This circuit connects Azure VMware Solution to the d-MSEE.
+The Azure VMware Solution out-of-the-box private cloud deployment automatically provisions one free ExpressRoute circuit. This circuit connects Azure VMware Solution to the D-MSEE.
 
 For location, consider deploying Azure VMware Solution on [Azure paired regions](/azure/best-practices-availability-paired-regions) near your datacenters.
 
 #### Global Reach
 
-- Global Reach is a required ExpressRoute add-on for Azure VMware Solution to communicate with on-premises datacenters, virtual network, and Virtual WAN. The alternative is to design your network connectivity with Azure Route Server.
+- Global Reach is a required ExpressRoute add-on for Azure VMware Solution to communicate with on-premises datacenters, Azure Virtual Network, and Virtual WAN. The alternative is to design your network connectivity with Azure Route Server.
 
 - You can peer the Azure VMware Solution ExpressRoute circuit with other ExpressRoute circuits using Global Reach at no charge.
 
-- You can use Global Reach for peering ExpressRoute circuits through an isp, and for ExpressRoute Direct circuits.
+- You can use Global Reach for peering ExpressRoute circuits through an ISP, and for ExpressRoute Direct circuits.
 
 - Global Reach isn't supported for ExpressRoute Local circuits. For ExpressRoute Local, transit from Azure VMware Solution to on-premises datacenters via third-party NVAs in an Azure virtual network.
 - Global Reach isn't available in all locations.
 
 ### Bandwidth
 
-Choose an adequate [virtual network gateway SKU](/azure/expressroute/expressroute-about-virtual-network-gateways) for optimal bandwidth between Azure VMware Solution and Azure Virtual Network. Azure VMware Solution supports a maximum of four ExpressRoute circuits to an ExpressRoute gateway in one region.
+Choose an appropriate [Virtual Network Gateway SKU](/azure/expressroute/expressroute-about-virtual-network-gateways) for optimal bandwidth between Azure VMware Solution and Azure Virtual Network. Azure VMware Solution supports a maximum of four ExpressRoute circuits to an ExpressRoute gateway in one region.
 
 ### Network security
 
@@ -331,7 +331,7 @@ Network security uses traffic inspection and port mirroring.
 
 *North-South traffic inspection* inspects bidirectional traffic flow between Azure VMware Solution and datacenters. North-south traffic inspection can use:
 
-- NVA and route server over Azure internet
+- NVA and Azure Route Server over Azure internet
 - On-premises default route over on-premises internet
 - Azure Firewall and Virtual WAN over Azure internet
 - NSX-T within the SDDC over Azure VMware Solution internet
@@ -351,7 +351,7 @@ Configure all necessary ports for an on-premises firewall to ensure proper acces
 
 - With VMware HCX migrations, the default gateway remains on-premises. For more information, see [Deploy and configure VMware HCX](/azure/azure-vmware/tutorial-deploy-vmware-hcx).
 
-- VMware HCX migration can use HCX L2 extension. Migrations that require Layer 2 extension require ExpressRoute. VPN isn't supported. Maximum transmission unit (mtu) size should be 1350 to accommodate the overhead of HCX. For more information about layer-2 extension design, see [Layer 2 bridging in manager mode (VMware.com)](https://docs.vmware.com/en/VMware-NSX-T-Data-Center/3.1/administration/GUID-7B21DF3D-C9DB-4C10-A32F-B16642266538.html).
+- VMware HCX migration can use HCX L2 extension. Migrations that require Layer 2 extension require ExpressRoute. VPN isn't supported. Maximum transmission unit (MTU) size should be 1350 to accommodate the overhead of HCX. For more information about Layer 2 extension design, see [Layer 2 bridging in manager mode (VMware.com)](https://docs.vmware.com/en/VMware-NSX-T-Data-Center/3.1/administration/GUID-7B21DF3D-C9DB-4C10-A32F-B16642266538.html).
 
 ## Next steps
 
