@@ -40,6 +40,8 @@ To help streamline the application migration process before it begins, the follo
 - Management
 - Monitoring
 
+Figure 1 shows this architecture.
+
 :::image type="content" source="./media/lz-design.png" alt-text="Diagram that shows a landing zone design. The needed services are for network, identity and access management, policies, management, and monitoring.":::  
 *Figure 1: Landing zone design.*
 
