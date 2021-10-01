@@ -29,7 +29,7 @@ As your hybrid and multicloud resources become part of Azure Resource Manager, t
 - **Managed Identity:** Use a managed identity with Azure Arc-enabled servers and define a strategy for identifying which applications running on Arc-enabled servers can use the Azure service assigned identity to request an Azure AD token.
 - **Secret and certificate management:** Enable Key Vault to protect security principal accounts and encryption keys. Consider using Azure Key Vault for certificate management on your Arc-enabled servers
 - **Policy management and reporting:** Define a governance plan for your hybrid servers and machines that translates into Azure Policies and remediation tasks.
-- **Data Residency:** consider which Azure region you wish your Azure Arc-enabled machines to be provisioned into, and understand the [metadata that is collected](https://docs.microsoft.com/en-us/azure/azure-arc/servers/data-residency) from theses machines.
+- **Data Residency:** Consider which Azure region you wish your Azure Arc-enabled machines to be provisioned into, and understand the [metadata that is collected](https://docs.microsoft.com/en-us/azure/azure-arc/servers/data-residency) from theses machines.
 - **Log management strategy:** Plan for metrics and log collection of your hybrid resources into a Log Analytics workspace for further analysis and auditing.
 - **Threat protection and cloud security posture management:** Introduce controls to detect security misconfigurations and track compliance. Also, use [Azure's intelligence](https://docs.microsoft.com/en-us/azure/sentinel/overview) to protect your hybrid workloads against threats. [Enable Azure Security Center](https://docs.microsoft.com/en-us/azure/security-center/security-center-get-started) for all subscriptions containing Azure Arc-enabled servers for security baseline monitoring, security posture management and threat protection.
 - **Change Tracking and Inventory:** Track changes on the operating system, application files and registry to identify operational and security issues on your on-premises and other clouds environments.
@@ -64,7 +64,7 @@ Control who has access to the Azure connected machine agent on Azure Arc-enabled
 
 ### Managed Identity
 
-Whilst the Azure Active Directory system assigned identity can only be used to update the status of the Azure Arc-enabled server (for example, the 'last seen' heartbeat), it is possible to allow an application on your server to use the system assigned identity to access Azure resources (for example, to request secrets from a key vault.) Consider which legitimate use-cases exist for server applications to access Azure resources and plan to control access for to these resources.
+Whilst the Azure Active Directory system assigned identity can only be used to update the status of the Azure Arc-enabled server (for example, the 'last seen' heartbeat), it is possible to allow an application on your server to use the system assigned identity to access Azure resources (for example, to request secrets from a Key Vault.) Consider which legitimate use-cases exist for server applications to access Azure resources and plan to control access for to these resources.
 
 [Control which server applications can obtain access tokens](https://docs.microsoft.com/en-us/azure/azure-arc/servers/managed-identity-authentication)
 
