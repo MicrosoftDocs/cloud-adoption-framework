@@ -10,9 +10,6 @@ ms.subservice: migrate
 ms.custom: think-tank
 ---
 
-<!-- docutune:casing GDGs "GT Software" "NTT Data" -->
-<!-- cSpell:ignore Attunity Codit DRDA ISAM ISQL LPARS VSAM ODBC JDBC GDGs REXX dbextents Raincode Tmax -->
-
 # Mainframe application migration
 
 When migrating applications from mainframe environments to Azure, most teams follow a pragmatic approach: reuse wherever and whenever possible, and then start a phased deployment where applications are rewritten or replaced.

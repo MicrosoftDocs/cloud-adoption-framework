@@ -48,8 +48,6 @@ In modernization projects, use additional application assessments to identify co
 
 For innovation projects, see [Azure innovative solutions guide overview](../innovate/innovation-guide/index.md) for help with identifying the correct way to plan and develop an innovative cloud solution.
 
-<!-- docutune:casing ADS -->
-
 For mission-critical workloads or workloads which require architectural change, use the [Azure Well-Architected Framework](/azure/architecture/framework/) or an [architectural design session (ADS)](/azure/architecture/serverless-quest/ads) to help design, build, and deploy a high-quality, robust architecture that scales within an enterprise. Use ADS whiteboards to discover, envision, and plan the solution.
 
 ## Antipattern: Dictate an architecture
