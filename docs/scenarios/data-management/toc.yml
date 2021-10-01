@@ -116,11 +116,8 @@ items:
         href: ./architectures/data-landing-zone-data-products.md
     - name: Deployment templates
       href: ./eslz-deployment-templates.md
-    - name: Costing for Deployment templates
-      href: ./architectures/cost-estimates.md
     - name: Policies
       href: ./architectures/policies.md
-
     - name: Frequently asked questions
       href: ./architectures/frequently-asked-questions.md
 
