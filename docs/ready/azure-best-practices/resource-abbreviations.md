@@ -22,13 +22,13 @@ This list provides recommended abbreviations for various Azure resource types to
 
 ### AnalysisServices
 
- | Resource provider namespace/Entity | Abbreviation |  
+ | Resource Provider Entity | Abbreviation |  
 |--|--|
  | `servers` | `assvr` |
  
 ### ApiManagement
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `service` | `apims` |
  | `service/apis` | `apis` |
@@ -66,13 +66,13 @@ This list provides recommended abbreviations for various Azure resource types to
  
 ### AppConfiguration
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `configurationStores` | `accs` |
  
 ### Authorization
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `locks` | `locks` |
  | `policyAssignments` | `polas` |
@@ -90,7 +90,7 @@ This list provides recommended abbreviations for various Azure resource types to
  
 ### Batch
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `batchAccounts` | `ba` |
  | `batchAccounts/applications` | `appl` |
@@ -99,13 +99,13 @@ This list provides recommended abbreviations for various Azure resource types to
  
 ### Blockchain
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `blockchainMembers` | `blchm` |
  
 ### Blueprint
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `blueprintAssignments` | `bpas` |
  | `blueprints` | `bp` |
@@ -114,7 +114,7 @@ This list provides recommended abbreviations for various Azure resource types to
  
 ### BotService
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `botServices` | `botsvc` |
  | `botServices/channels` | `chan` |
@@ -123,33 +123,33 @@ This list provides recommended abbreviations for various Azure resource types to
  
 ### Cache
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `Redis` | `redis` |
  | `Redis/firewallRules` | `rule` |
  
 ### Cdn
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `profiles` | `cdnp` |
  | `profiles/endpoints` | `cdnep` |
  
 ### CertificateRegistration
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `certificateOrders` | `cerco` |
  
 ### CognitiveServices
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `accounts` | `coga` |
  
 ### Compute
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `availabilitySets` | `avset` |
  | `cloudServices` | `cldsvc` |
@@ -168,7 +168,7 @@ This list provides recommended abbreviations for various Azure resource types to
  
 ### ContainerRegistry
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `registries` | `conrg` |
  | `registries/buildTasks` | `btsks` |
@@ -181,19 +181,19 @@ This list provides recommended abbreviations for various Azure resource types to
  
 ### ContainerService
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `managedClusters` | `aks` |
  
 ### ContainerServiceopenShiftManagedClusters
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `ContainerServiceopenShiftManagedClusters` | `osmc` |
  
 ### CustomerInsights
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `hubs` | `cihub` |
  | `hubs/authorizationPolicies` | `authp` |
@@ -211,26 +211,26 @@ This list provides recommended abbreviations for various Azure resource types to
  
 ### CustomProviders
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `associations` | `cpass` |
  | `resourceProviders` | `cprep` |
  
 ### DataBox
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `jobs` | `dbjob` |
  
 ### Databricks
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `workspaces` | `dbws` |
  
 ### DataFactory
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `factories` | `adf` |
  | `factories/dataflows` | `flows` |
@@ -243,7 +243,7 @@ This list provides recommended abbreviations for various Azure resource types to
  
 ### DataLakeAnalytics
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `accounts` | `dlaac` |
  | `accounts/computePolicies` | `cmpol` |
@@ -253,7 +253,7 @@ This list provides recommended abbreviations for various Azure resource types to
  
 ### DataLakeStore
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `accounts` | `dlsa` |
  | `accounts/firewallRules` | `frule` |
@@ -261,14 +261,14 @@ This list provides recommended abbreviations for various Azure resource types to
  
 ### DataMigration
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `services` | `dms` |
  | `services/projects` | `proj` |
  
 ### DBforMariaDB
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `servers` | `mdbsv` |
  | `servers/databases` | `mdbdb` |
@@ -277,7 +277,7 @@ This list provides recommended abbreviations for various Azure resource types to
  
 ### DBforMySQL
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `servers` | `mysql` |
  | `servers/databases` | `db` |
@@ -286,7 +286,7 @@ This list provides recommended abbreviations for various Azure resource types to
  
 ### DBforPostgreSQL
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `servers` | `psql` |
  | `servers/databases` | `db` |
@@ -295,7 +295,7 @@ This list provides recommended abbreviations for various Azure resource types to
  
 ### Devices
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `IotHubs` | `iot` |
  | `IotHubs/certificates` | `cert` |
@@ -305,7 +305,7 @@ This list provides recommended abbreviations for various Azure resource types to
  
 ### DevTestLab
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `labs` | `dtlab` |
  | `labs/customimages` | `img` |
@@ -316,7 +316,7 @@ This list provides recommended abbreviations for various Azure resource types to
  
 ### EventGrid
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `domains` | `evgd` |
  | `domains/topics` | `egdt` |
@@ -325,7 +325,7 @@ This list provides recommended abbreviations for various Azure resource types to
  
 ### EventHub
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `clusters` | `evhcl` |
  | `namespaces` | `evhns` |
@@ -337,7 +337,7 @@ This list provides recommended abbreviations for various Azure resource types to
  
 ### HDInsight
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `clusters` | `hadoop` |
  | `clusters` | `hbase` |
@@ -348,19 +348,19 @@ This list provides recommended abbreviations for various Azure resource types to
  
 ### HybridCompute
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `machines` | `arcm` |
  
 ### ImportExport
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `jobs` | `iejob` |
  
 ### Insights
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `actionGroups` | `inag` |
  | `activityLogAlerts` | `inala` |
@@ -370,26 +370,26 @@ This list provides recommended abbreviations for various Azure resource types to
  
 ### IoTCentral
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `IoTApps` | `iotapp` |
  
 ### KeyVault
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `vaults` | `kv` |
  | `vaults/secrets` | `kvs` |
  
 ### Kubernetes
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `connectedClusters` | `kubcc` |
  
 ### Kusto
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `clusters` | `kucl` |
  | `clusters/databases` | `kcdb` |
@@ -398,7 +398,7 @@ This list provides recommended abbreviations for various Azure resource types to
  
 ### Logic
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `integrationAccounts` | `liact` |
  | `integrationAccounts/assemblies` | `assem` |
@@ -415,7 +415,7 @@ This list provides recommended abbreviations for various Azure resource types to
  
 ### MachineLearning
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `commitmentPlans` | `mlcp` |
  | `webServices` | `mlweb` |
@@ -423,32 +423,32 @@ This list provides recommended abbreviations for various Azure resource types to
  
 ### MachineLearningServices
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `workspaces` | `mlsw` |
  | `workspaces/computes` | `mlswc` |
  
 ### ManagedIdentity
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `userAssignedIdentities` | `miuai` |
  
 ### Management
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `managementGroups` | `mg` |
  
 ### Maps
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `accounts` | `macc` |
  
 ### Media
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `mediaservices` | `mms` |
  | `mediaservices/liveEvents` | `lievt` |
@@ -457,13 +457,13 @@ This list provides recommended abbreviations for various Azure resource types to
  
 ### Migrate
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `assessmentProjects` | `migap` |
  
 ### Network
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `applicationGateways` | `agw` |
  | `applicationSecurityGroups` | `asg` |
@@ -506,7 +506,7 @@ This list provides recommended abbreviations for various Azure resource types to
  
 ### NotificationHubs
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `namespaces` | `nhns` |
  | `namespaces/AuthorizationRules` | `nrule` |
@@ -515,45 +515,45 @@ This list provides recommended abbreviations for various Azure resource types to
  
 ### OperationalInsights
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `clusters` | `opic` |
  | `workspaces` | `opiw` |
  
 ### OperationsManagement
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `dashboards` | `pdash` |
  
 ### PowerBI
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `workspaceCollections` | `pbiwc` |
  
 ### PowerBIDedicated
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `capacities` | `pbidc` |
  
 ### Purview
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `accounts` | `pva` |
  
 ### RecoveryServices
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `vaults` | `rsv ` |
  | `vaults/backupPolicies` | `rsvbp` |
  
 ### Relay
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `namespaces` | `rns` |
  | `namespaces/AuthorizationRules` | `rule` |
@@ -564,7 +564,7 @@ This list provides recommended abbreviations for various Azure resource types to
  
 ### Resources
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `deployments` | `deloy` |
  | `resourcegroups` | `rg` |
@@ -572,13 +572,13 @@ This list provides recommended abbreviations for various Azure resource types to
  
 ### Search
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `searchServices` | `ssvc` |
  
 ### ServiceBus
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `namespaces` | `sbn` |
  | `namespaces/AuthorizationRules` | `rule` |
@@ -593,19 +593,19 @@ This list provides recommended abbreviations for various Azure resource types to
  
 ### ServiceFabric
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `clusters` | `sfc` |
  
 ### SignalRService
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `signalR` | `sssr` |
  
 ### Sql
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `managedInstances` | `sqlmi` |
  | `servers` | `sqlds` |
@@ -618,7 +618,7 @@ This list provides recommended abbreviations for various Azure resource types to
  
 ### Storage
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `storageAccounts` | `sa` |
  | `storageAccounts` | `savm` |
@@ -627,13 +627,13 @@ This list provides recommended abbreviations for various Azure resource types to
  
 ### StorSimple
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `managers` | `ssm` |
  
 ### StreamAnalytics
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `cluster` | `sac` |
  | `streamingjobs` | `sasj` |
@@ -644,13 +644,13 @@ This list provides recommended abbreviations for various Azure resource types to
  
 ### Subscription
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `subscriptions` | `subcr` |
  
 ### Synapse
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `workspaces` | `synws` |
  | `workspaces/sqlPools` | `syndp` |
@@ -658,7 +658,7 @@ This list provides recommended abbreviations for various Azure resource types to
  
 ### TimeSeriesInsights
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `environments` | `tsie` |
  | `environments/accessPolicies` | `tsiea` |
@@ -667,7 +667,7 @@ This list provides recommended abbreviations for various Azure resource types to
  
 ### Web
  
-| Resource provider namespace/Entity | Abbreviation |  
+| Resource Provider Entity | Abbreviation |  
 |--|--|
  | `certificates` | `wbcer` |
  | `serverfarms` | `wbsvf` |
