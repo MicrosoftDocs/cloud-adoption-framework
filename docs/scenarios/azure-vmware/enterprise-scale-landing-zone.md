@@ -45,8 +45,6 @@ The following articles provide guidelines for creating your landing zone:
 - [Security, governance, and compliance for Azure VMware Solution](./eslz-security-governance-and-compliance.md)
 - [Platform automation for Azure VMware Solution enterprise-scale scenario](./eslz-platform-automation-and-devops.md)
 
-## Bicep and Azure Resource Manager templates
-
 ## Architecture
 
 The following architecture diagram is an example that shows design areas and best practices.
@@ -58,4 +56,4 @@ The following architecture diagram is an example that shows design areas and bes
 Review design considerations and recommendations related to identity and access management specific to the deployment of Azure VMware Solution.
 
 > [!div class="nextstepaction"]
-> [Enterprise-scale identity and access management for Azure VMware Solution](./eslz-identity-and-access-management.md).
+> [Enterprise-scale identity and access management for Azure VMware Solution](./eslz-identity-and-access-management.md)

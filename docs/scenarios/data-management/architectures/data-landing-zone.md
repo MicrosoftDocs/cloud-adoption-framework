@@ -99,7 +99,7 @@ Consider the following guidelines for ingestion and processing:
 3. If you have an ingestion framework engine, we recommend using Azure Data Factory as the primary orchestration engine for getting data into *Raw* to *Enriched and Curated*.
 
 > [!TIP]
-> To learn more about ingestion and processing, see [data ingestion](../best-practices/data-ingestion.md).
+> To learn more about ingestion and processing, see [Data ingestion](../best-practices/data-ingestion.md).
 
 Services included in the ingest and processing resource group include:
 

@@ -30,7 +30,7 @@ Some resource names, such as PaaS services with public endpoints or virtual mach
 
 *Diagram 2: Scope levels for Azure resource names.*
 
-Resource names have length limits. Balancing the context embedded in a name with its scope and length limit is important when you develop your naming conventions. For more information, see [naming rules and restrictions for Azure resources](/azure/azure-resource-manager/management/resource-name-rules).
+Resource names have length limits. Balancing the context embedded in a name with its scope and length limit is important when you develop your naming conventions. For more information, see [Naming rules and restrictions for Azure resources](/azure/azure-resource-manager/management/resource-name-rules).
 
 ### Recommended naming components
 
