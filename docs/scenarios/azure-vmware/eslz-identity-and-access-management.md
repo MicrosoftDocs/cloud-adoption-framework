@@ -28,7 +28,7 @@ After you deploy Azure VMware Solution, the new environment's vCenter contains a
 
 - Limit the number of users that you assign the CloudAdmin role. Use custom roles and least privilege to assign users to Azure VMware Solution.
 
-- Use caution when [rotating cloudadmin and NSX admin passwords](/azure/azure-vmware/rotate-cloudadmin-credentials). Ensure HCX Connector passwords are updated with password changes to avoid lockouts.
+- Use caution when [rotating cloudadmin and NSX admin passwords](/azure/azure-vmware/rotate-cloudadmin-credentials).
 
 - Limit Azure VMware Solution role-based access control (RBAC) permissions in Azure to the resource group where it's deployed, and the users who need to manage Azure VMware Solution.
 
@@ -36,7 +36,7 @@ After you deploy Azure VMware Solution, the new environment's vCenter contains a
 
 - Update Active Directory Sites and Services to direct Azure and Azure VMware Solution AD DS traffic to the appropriate domain controllers.
 
-- Use the `Run` command to:
+- Use the [Run command](/azure/azure-vmware/concepts-run-command) in your private cloud to:
 
   - Add an AD DS domain controller as an identity source for vCenter and NSX-T.
 
