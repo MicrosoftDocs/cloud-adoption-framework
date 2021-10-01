@@ -27,7 +27,7 @@ As your hybrid and multicloud resources become part of Azure Resource Manager, t
 - **Agent Management:** The Connected Machine Agent plays a critical role in your hybrid operations as it enables you to manage your Windows and Linux machines hosted outside of Azure and enforce governance policies, it is important to implement solutions that keep track of unresponsive agents.
 - **Agent Security permissions:** Secure access to the Connected Machine agent
 - **Managed Identity:** Use a managed identity with Azure Arc-enabled servers and define a strategy for identifying which applications running on Arc-enabled servers can use the Azure service assigned identity to request an Azure AD token.
-- **Secret and certificate management:** Enable Key Vault to protect security principle accounts and encryption keys. Consider using Azure Key Vault for certificate management on your Arc-enabled servers
+- **Secret and certificate management:** Enable Key Vault to protect security principal accounts and encryption keys. Consider using Azure Key Vault for certificate management on your Arc-enabled servers
 - **Policy management and reporting:** Define a governance plan for your hybrid servers and machines that translates into Azure Policies and remediation tasks.
 - **Data Residency:** consider which Azure region you wish your Azure Arc-enabled machines to be provisioned into, and understand the [metadata that is collected](https://docs.microsoft.com/en-us/azure/azure-arc/servers/data-residency) from theses machines.
 - **Log management strategy:** Plan for metrics and log collection of your hybrid resources into a Log Analytics workspace for further analysis and auditing.
@@ -50,7 +50,7 @@ After you have created a taxonomy structure and agreed on naming standards it is
 
 ### Agent Provisioning
 
-If using a [service principal](https://docs.microsoft.com/en-us/azure/azure-arc/servers/onboard-service-principal) to provision Azure Arc-enabled servers, consider how to securely store and distribute the service principle secret.
+If using a [service principal](https://docs.microsoft.com/en-us/azure/azure-arc/servers/onboard-service-principal) to provision Azure Arc-enabled servers, consider how to securely store and distribute the service principal secret.
 
 ### Agent Management
 
@@ -78,7 +78,7 @@ Consider using Azure Key Vault to manage certificates on your Azure Arc-enabled 
 
 ### Policy management and reporting
 
-Having a policy-driven governance is a foundational principal of cloud-native operations and Cloud Adoption Framework. [Azure Policy](https://docs.microsoft.com/en-us/azure/governance/policy/) provides the mechanism to enforce corporate standards and to assess compliance at scale. Through it, you can implement governance for consistency of deployments, compliance, control costs, and improve your security posture; with its compliance dashboard, you will get an aggregated view of the overall state as well as remediation capabilities. Azure Arc-enabled servers support [Azure Policy](https://docs.microsoft.com/en-us/azure/governance/policy/overview) at the Azure Resource Management layer, and also within the individual server machine using [Guest Configuration Policies](https://docs.microsoft.com/en-us/azure/governance/policy/concepts/guest-configuration).
+Having a policy-driven governance is a foundational principle of cloud-native operations and Cloud Adoption Framework. [Azure Policy](https://docs.microsoft.com/en-us/azure/governance/policy/) provides the mechanism to enforce corporate standards and to assess compliance at scale. Through it, you can implement governance for consistency of deployments, compliance, control costs, and improve your security posture; with its compliance dashboard, you will get an aggregated view of the overall state as well as remediation capabilities. Azure Arc-enabled servers support [Azure Policy](https://docs.microsoft.com/en-us/azure/governance/policy/overview) at the Azure Resource Management layer, and also within the individual server machine using [Guest Configuration Policies](https://docs.microsoft.com/en-us/azure/governance/policy/concepts/guest-configuration).
 
 Understand the [scope of Azure policy](https://docs.microsoft.com/en-us/azure/role-based-access-control/scope-overview) and where it can be applied (Management Group, subscription, resource group or individual resource level). Create a Management Group design in accordance with the recommended practices outlined in the [Cloud Adoption Framework Enterprise Scale](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/enterprise-scale/management-group-and-subscription-organization)
 
@@ -124,7 +124,7 @@ You can also use [Azure Automanage](https://docs.microsoft.com/en-us/azure/autom
 
 ### Role based access controls
 
-Follow the [least privilege principal](https://docs.microsoft.com/en-us/security/benchmark/azure/baselines/arc-enabled-security-baseline#pa-7-follow-just-enough-administration-least-privilege-principle) users, groups or applications assigned with roles like "Contributor" or "Owner" or "Azure Connected Machine Resource Administrator" are able to execute operations like deploying extensions which basically has the power to do anything on Arc-enabled server. These roles should be used with caution to limit possible blast radius or eventually replaced by custom roles.
+Follow the [least privilege principle](https://docs.microsoft.com/en-us/security/benchmark/azure/baselines/arc-enabled-security-baseline#pa-7-follow-just-enough-administration-least-privilege-principle) users, groups or applications assigned with roles like "Contributor" or "Owner" or "Azure Connected Machine Resource Administrator" are able to execute operations like deploying extensions which basically has the power to do anything on Arc-enabled server. These roles should be used with caution to limit possible blast radius or eventually replaced by custom roles.
 
 To limit the privilege of a user and let only onboard server to Azure "Azure Connected Machine Onboarding" is suitable, this role can only be used to onboard servers and cannot re-onboard or delete the resource. Make sure to review the [Azure Arc-enabled servers security overview](https://docs.microsoft.com/en-us/azure/azure-arc/servers/security-overview) for more information about access controls.
 
