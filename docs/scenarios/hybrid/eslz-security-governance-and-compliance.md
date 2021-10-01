@@ -27,7 +27,7 @@ As your hybrid and multicloud resources become part of Azure Resource Manager, t
 - **Agent Management:** The Connected Machine Agent plays a critical role in your hybrid operations as it enables you to manage your Windows and Linux machines hosted outside of Azure and enforce governance policies, it is important to implement solutions that keep track of unresponsive agents.
 - **Agent Security permissions:** Secure access to the Connected Machine agent
 - **Managed Identity:** Use a managed identity with Azure Arc-enabled servers and define a strategy for identifying which applications running on Arc-enabled servers can use the Azure service assigned identity to request an Azure AD token.
-- **Secret and certificate management:** Enable Key Vault to protect security principle accounts and encryption keys. Consider using Azure Key vault for certificate management on your Arc-enabled Servers
+- **Secret and certificate management:** Enable Key Vault to protect security principle accounts and encryption keys. Consider using Azure Key Vault for certificate management on your Arc-enabled servers
 - **Policy management and reporting:** Define a governance plan for your hybrid servers and machines that translates into Azure Policies and remediation tasks.
 - **Data Residency:** consider which Azure region you wish your Azure Arc-enabled machines to be provisioned into, and understand the [metadata that is collected](https://docs.microsoft.com/en-us/azure/azure-arc/servers/data-residency) from theses machines.
 - **Log management strategy:** Plan for metrics and log collection of your hybrid resources into a Log Analytics workspace for further analysis and auditing.
@@ -128,7 +128,7 @@ Follow the [least privilege principal](https://docs.microsoft.com/en-us/security
 
 To limit the privilege of a user and let only onboard server to Azure "Azure Connected Machine Onboarding" is suitable, this role can only be used to onboard servers and cannot re-onboard or delete the resource. Make sure to review the [Azure Arc-enabled servers security overview](https://docs.microsoft.com/en-us/azure/azure-arc/servers/security-overview) for more information about access controls.
 
-Also consider the sensitive data that is sent to the Azure Monitor Log Analytics workspace, the same RBAC principle should be applied to the data itself. Azure Arc-enabled Servers provides RBAC access to log data collected by the Log Analytics agent, stored in the Log Analytics workspace the machine is registered to. Review how to implement granular Log Analytics Workspace access in the [designing your Azure Monitor Logs deployment documentation](https://docs.microsoft.com/en-us/azure/azure-monitor/logs/design-logs-deployment#access-control-overview).
+Also consider the sensitive data that is sent to the Azure Monitor Log Analytics workspace, the same RBAC principle should be applied to the data itself. Azure Arc-enabled servers provides RBAC access to log data collected by the Log Analytics agent, stored in the Log Analytics workspace the machine is registered to. Review how to implement granular Log Analytics Workspace access in the [designing your Azure Monitor Logs deployment documentation](https://docs.microsoft.com/en-us/azure/azure-monitor/logs/design-logs-deployment#access-control-overview).
 
 ### Disk encryption
 
