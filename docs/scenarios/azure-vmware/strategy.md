@@ -58,9 +58,9 @@ Take advantage of price benefits for Windows and SQL Server with:
 
 Modernize applications running on VMware overtime through integration to [Azure native management, security, and services](..\azure-vmware\govern.md).
 
-- **Deploy unified hybrid management and operational controls** using [Azure Arc enabled servers](/azure/azure-arc/servers/overview) across Azure, VMware, and other cloud infrastructures (availability coming soon).
+- **Deploy unified hybrid management and operational controls** using [Azure Arc-enabled servers](/azure/azure-arc/servers/overview) across Azure, VMware, and other cloud infrastructures.
 - **Modernize applications** with the ability to connect them to Azure services such as Azure AD, SQL Managed Instance, and analytics.
-- **Deploy native Azure management controls**with Azure Monitor and Azure Security Center solutions to operate your VMware environments.
+- **Deploy native Azure management controls** with Azure Monitor and Azure Security Center solutions to operate your VMware environments.
 - **Deploy native Azure public cloud capabilities** and take advantage of built-in security controls and compliance enforcement with Azure Backup and Azure Site Recovery.
 - **Achieve identity and access management consistency** with unified permissions and access control, using Azure Active Directory (Azure AD) as a single sign-on (SSO) identity source for VMware vCenter.
 
