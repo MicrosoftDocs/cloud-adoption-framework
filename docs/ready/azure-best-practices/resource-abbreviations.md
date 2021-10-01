@@ -14,210 +14,669 @@ ms.custom: internal, readiness, fasttrack-edit
 
 Azure workloads are typically composed of multiple resources and services. Including a naming component in your resource names that represents the type of the Azure resource makes it easier to visually recognize application or service components.
 
-This list provides recommended abbreviations for various Azure resource types to include in your naming conventions. These abbreviations are often used as prefixes in resource names, so each abbreviation is shown below followed by a hyphen (`-`), except for resource types that disallow hyphens in the resource name. Your naming convention might place the resource type abbreviation in a different location of the name if it's more suitable for your organization's needs.
+This list provides recommended abbreviations for various Azure resource types to include in your naming conventions. These abbreviations are often used as prefixes in resource names, so each abbreviation is shown below followed by a hyphen (-), except for resource types that disallow hyphens in the resource name. Your naming convention might place the resource type abbreviation in a different location of the name if it's more suitable for your organization's needs.
 
-<!-- cSpell:ignoreRegExp `[a-z]+-?` -->
+<!-- cSpell:ignoreRegExp [a-z]+-? -->
 
-## General
+## Resource List in Alphabetical Order
 
-| Asset type | Resource provider namespace/Entity | Abbreviation |
-|--|--|--|
-| API management service instance | `Microsoft.ApiManagement/service` | `apim-` |
-| Managed Identity | `Microsoft.ManagedIdentity/userAssignedIdentities` | `id-` |
-| Management group | `Microsoft.Management/managementGroups` | `mg-` |
-| Policy definition | `Microsoft.Authorization/policyDefinitions` | `policy-` |
-| Resource group | `Microsoft.Resources/resourceGroups` | `rg-` |
+### AnalysisServices
 
-## Networking
-
-| Asset type | Resource provider namespace/Entity | Abbreviation |
-|--|--|--|
-| Application gateway | `Microsoft.Network/applicationGateways` | `agw-` |
-| Application security group (ASG) | `Microsoft.Network/applicationSecurityGroups` | `asg-` |
-| Bastion | `Microsoft.Network/bastionHosts` | `bas-` |
-| CDN profile | `Microsoft.Cdn/profiles` | `cdnp-` |
-| CDN endpoint | `Microsoft.Cdn/profiles/endpoints` | `cdne-` |
-| Connections | `Microsoft.Network/connections`| `con-` |
-| DNS | `Microsoft.Network/dnsZones` | `dnsz-` |
-| DNS zone | `Microsoft.Network/privateDnsZones` | `pdnsz-` |
-| Firewall | `Microsoft.Network/azureFirewalls` | `afw-` |
-| Firewall policy | `Microsoft.Network/firewallPolicies` | `afwp-` |
-| ExpressRoute circuit | `Microsoft.Network/expressRouteCircuits` | `erc-` |
-| Front Door instance | `Microsoft.Network/frontDoors` | `fd-` |
-| Front Door firewall policy | `Microsoft.Network/frontdoorWebApplicationFirewallPolicies` | `fdfp-`|
-| Load balancer (internal) | `Microsoft.Network/loadBalancers` | `lbi-`|
-| Load balancer (external) | `Microsoft.Network/loadBalancers` | `lbe-`|
-| Load balancer rule | `Microsoft.Network/loadBalancers/inboundNatRules` | `rule-`|
-| Local network gateway | `Microsoft.Network/localNetworkGateways` | `lgw-` |
-| NAT gateway | Microsoft.Network/natGateways | `ng` |
-| Network interface (NIC) | `Microsoft.Network/networkInterfaces` | `nic-`|
-| Network security group (NSG) | `Microsoft.Network/networkSecurityGroups` | `nsg-` |
-| Network security group (NSG) security rules | `Microsoft.Network/networkSecurityGroups/securityRules` | `nsgsr-` |
-| Network Watcher | `Microsoft.Network/networkWatchers` | `nw-` |
-| Private Link | `"Microsoft.Network/privateLinkServices` | `pl-` |
-| Public IP address | `Microsoft.Network/publicIPAddresses` | `pip-`|
-| Public IP address prefix | `Microsoft.Network/publicIPPrefixes` | `ippre-`|
-| Route filter | `Microsoft.Network/routeFilters` | `rf-` |
-| Route table | `Microsoft.Network/routeTables` | `rt-` |
-| Service endpoint | `Microsoft.serviceEndPointPolicies` | `se-` |
-| Traffic Manager profile | `Microsoft.Network/trafficManagerProfiles` | `traf-` |
-| User defined route (UDR) | `Microsoft.Network/routeTables/routes` | `udr-` |
-| Virtual network | `Microsoft.Network/virtualNetworks` | `vnet-`|
-| Virtual network peering | `Microsoft.Network/virtualNetworks/virtualNetworkPeerings` | `peer-`|
-| Virtual network subnet | `Microsoft.Network/virtualNetworks/subnets` | `snet-`|
-| Virtual WAN | `Microsoft.Network/virtualWans` | `vwan-`|
-| VPN Gateway| `Microsoft.Network/vpnGateways` | `vpng-`|
-| VPN connection | `Microsoft.Network/vpnGateways/vpnConnections` | `vcn-` |
-| VPN site | `Microsoft.Network/vpnGateways/vpnSites` | `vst-` |
-| Virtual network gateway | `Microsoft.Network/virtualNetworkGateways` | `vgw-` |
-| Web Application Firewall (WAF) policy | `Microsoft.Network/firewallPolicies` | `waf` |
-| Web Application Firewall (WAF) policy rule group | `Microsoft.Network/firewallPolicies/ruleGroups` | `wafrg` |
-
-## Compute and Web
-
-| Asset type | Resource provider namespace/entity | Abbreviation |
-|--|--|--|
-| App Service environment | `Microsoft.Web/sites` | `ase-` |
-| App Service plan | `Microsoft.Web/serverFarms` | `plan-` |
-| Availability set | `Microsoft.Compute/availabilitySets` | `avail-` |
-| Azure Arc enabled server | `Microsoft.HybridCompute/machines` | `arcs-` |
-| Azure Arc enabled Kubernetes cluster | `Microsoft.Kubernetes/connectedClusters` | `arck` |
-| Cloud service | `Microsoft.Compute/cloudServices` | `cld-` |
-| Disk encryption set | `Microsoft.Compute/diskEncryptionSets` | `des` |
-| Function app | `Microsoft.Web/sites` | `func-` |
-| Gallery | `Microsoft.Compute/galleries` | `gal` |
-| Managed disk (OS) | `Microsoft.Compute/disks` | `osdisk` |
-| Managed disk (data) | `Microsoft.Compute/disks` | `disk` |
-| Notification Hubs | `Microsoft.NotificationHubs/namespaces/notificationHubs` | `ntf-` |
-| Notification Hubs namespace | `Microsoft.NotificationHubs/namespaces` | `ntfns-` |
-| Snapshot | `Microsoft.Compute/snapshots` | `snap-` |
-| Static web app | `Microsoft.Web/staticSites` | `stapp-` |
-| Virtual machine | `Microsoft.Compute/virtualMachines` | `vm` |
-| Virtual machine scale set | `Microsoft.Compute/virtualMachineScaleSets` | `vmss-` |
-| VM storage account | `Microsoft.Storage/storageAccounts` | `stvm` |
-| Web app | `Microsoft.Web/sites` | `app-` |
-
-## Containers
-
-| Asset type | Resource provider namespace/entity | Abbreviation |
-|--|--|--|
-| AKS cluster | `Microsoft.ContainerService/managedClusters` | `aks-` |
-| Container registry | `Microsoft.ContainerRegistry/registries` | `cr` |
-| Container instance | `Microsoft.ContainerInstance/containerGroups` | `ci` |
-| Service Fabric cluster | `Microsoft.ServiceFabric/clusters` | `sf-` |
-
-## Databases
-
-| Asset type | Resource provider namespace/Entity | Abbreviation |
-|--|--|--|
-| Azure Cosmos DB database | `Microsoft.DocumentDB/databaseAccounts/sqlDatabases` | `cosmos-` |
-| Azure Cache for Redis instance | `Microsoft.Cache/Redis` | `redis-` |
-| Azure SQL Database server | `Microsoft.Sql/servers` | `sql-` |
-| Azure SQL database | `Microsoft.Sql/servers/databases` | `sqldb-` |
-| Azure Synapse Analytics | `Microsoft.Synapse/workspaces` | `syn` |
-| Azure Synapse Analytics Workspaces | `Microsoft.Synapse/workspaces` | `synw` |
-| Azure Synapse Analytics SQL Dedicated Pool | `Microsoft.Synapse/workspaces/sqlPools` | `syndp` |
-| Azure Synapse Analytics Spark Pool | `Microsoft.Synapse/workspaces/sqlPools` | `synsp` |
-| MySQL database | `Microsoft.DBforMySQL/servers` | `mysql-` |
-| PostgreSQL database | `Microsoft.DBforPostgreSQL/servers` | `psql-` |
-| SQL Server Stretch Database | `Microsoft.Sql/servers/databases` | `sqlstrdb-` |
-| SQL Managed Instance | `Microsoft.Sql/managedInstances` | `sqlmi-` |
-
-## Storage
-
-| Asset type | Resource provider namespace/Entity | Abbreviation |
-|--|--|--|
-| Storage account | `Microsoft.Storage/storageAccounts` | `st` |
-| Azure StorSimple | `Microsoft.StorSimple/managers` | `ssimp` |
-
-## AI and Machine Learning
-
-| Asset type | Resource provider namespace/Entity | Abbreviation |
-|--|--|--|
-| Azure Cognitive Search | `Microsoft.Search/searchServices` | `srch-` |
-| Azure Cognitive Services | `Microsoft.CognitiveServices/accounts` | `cog-` |
-| Azure Machine Learning workspace | `Microsoft.MachineLearningServices/workspaces` | `mlw-` |
-
-## Analytics and IoT
-
-| Asset type | Resource provider namespace/Entity | Abbreviation |
-|--|--|--|
-| Azure Analysis Services server | `Microsoft.AnalysisServices/servers` | `as` |
-| Azure Databricks workspace | `Microsoft.Databricks/workspaces` | `dbw-` |
-| Azure Stream Analytics | `Microsoft.StreamAnalytics/cluster` | `asa-` |
-| Azure Data Explorer cluster | `Microsoft.Kusto/clusters` | `dec` |
-| Azure Data Explorer cluster database | `Microsoft.Kusto/clusters/databases` | `dedb` |
-| Azure Data Factory | `Microsoft.DataFactory/factories` | `adf-` |
-| Data Lake Store account | `Microsoft.DataLakeStore/accounts` | `dls` |
-| Data Lake Analytics account | `Microsoft.DataLakeAnalytics/accounts` | `dla` |
-| Event Hubs namespace | `Microsoft.EventHub/namespaces` | `evhns-` |
-| Event hub | `Microsoft.EventHub/namespaces/eventHubs` | `evh-` |
-| Event Grid domain | `Microsoft.EventGrid/domains` | `evgd-` |
-| Event Grid subscriptions | `Microsoft.EventGrid/eventSubscriptions` | `evgs-` |
-| Event Grid topic | `Microsoft.EventGrid/domains/topics` | `evgt-` |
-| HDInsight - Hadoop cluster | `Microsoft.HDInsight/clusters` | `hadoop-` |
-| HDInsight - HBase cluster | `Microsoft.HDInsight/clusters` | `hbase-` |
-| HDInsight - Kafka cluster | `Microsoft.HDInsight/clusters` | `kafka-` |
-| HDInsight - Spark cluster | `Microsoft.HDInsight/clusters` | `spark-` |
-| HDInsight - Storm cluster | `Microsoft.HDInsight/clusters` | `storm-` |
-| HDInsight - ML Services cluster | `Microsoft.HDInsight/clusters` | `mls-` |
-| IoT hub | `Microsoft.Devices/IotHubs` | `iot-` |
-| Provisioning services | `Microsoft.Devices/provisioningServices` | `provs-` |
-| Provisioning services certificate | `Microsoft.Devices/provisioningServices/certificates` | `pcert-` |
-| Power BI Embedded | `Microsoft.PowerBIDedicated/capacities` | `pbi-` |
-| Time Series Insights environment | `Microsoft.TimeSeriesInsights/environments` | `tsi-` |
-
-## Azure Virtual Desktop
-
-| Asset type | Resource provider namespace/Entity | Abbreviation |
-|--|--|--|
-| Virtual desktop host pool | | `vdpool-` |
-| Virtual desktop application group | | `vdag-` |
-| Virtual desktop workspace | | `vdws-` |
-
-## Developer tools
-
-| Asset type | Resource provider namespace/Entity | Abbreviation |
-|--|--|--|
-| App Configuration store | `Microsoft.AppConfiguration/configurationStores` | `appcs-` |
-| SignalR | `Microsoft.SignalRService/SignalR` | `sigr` |
-
-## Integration
-
-| Asset type | Resource provider namespace/Entity | Abbreviation |
-|--|--|--|
-| Integration account | `Microsoft.Logic/integrationAccounts` | `ia-` |
-| Logic apps | `Microsoft.Logic/workflows` | `logic-` |
-| Service Bus | `Microsoft.ServiceBus/namespaces` | `sb-` |
-| Service Bus queue | `Microsoft.ServiceBus/namespaces/queues` | `sbq-` |
-| Service Bus topic | `Microsoft.ServiceBus/namespaces/topics` | `sbt-` |
-
-## Management and governance
-
-| Asset type | Resource provider namespace/Entity | Abbreviation |
-|--|--|--|
-| Automation account | `Microsoft.Automation/automationAccounts` | `aa-` |
-| Application Insights | `Microsoft.Insights/components` | `appi-` |
-| Azure Monitor action group | `Microsoft.Insights/actionGroups` | `ag-` |
-| Azure Purview instance | `Microsoft.Purview/accounts` | `pview-` |
-| Blueprint | `Microsoft.Blueprint/blueprints` | `bp-` |
-| Blueprint assignment | `Microsoft.Blueprint/blueprints/artifacts` | `bpa-` |
-| Key vault | `Microsoft.KeyVault/vaults` | `kv-` |
-| Log Analytics workspace | `Microsoft.OperationalInsights/workspaces` | `log-` |
-
-## Migration
-
-| Asset type | Resource provider namespace/Entity | Abbreviation |
-|--|--|--|
-| Azure Migrate project | `Microsoft.Migrate/assessmentProjects` | `migr-` |
-| Database Migration Service instance | `Microsoft.DataMigration/services` | `dms-` |
-| Recovery Services vault | `Microsoft.RecoveryServices/vaults` | `rsv-` |
-
-## Deprecated product names
-
-| Asset type | Resource provider namespace/Entity | Abbreviation |
-|--|--|--|
-| Azure SQL Data Warehouse | `Microsoft.Sql/servers` | `sqldw-` |
+ | Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `servers` | `assvr` |
+ 
+### ApiManagement
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `service` | `apims` |
+ | `service/apis` | `apis` |
+ | `service/apis/issues` | `apii` |
+ | `service/apis/issues/attachments` | `apiia` |
+ | `service/apis/issues/comments` | `apiic` |
+ | `service/apis/operations` | `apio` |
+ | `service/apis/operations/tags` | `apiot` |
+ | `service/apis/releases` | `apir` |
+ | `service/apis/schemas` | `apis` |
+ | `service/apis/tagDescriptions` | `apitd` |
+ | `service/apis/tags` | `apitg` |
+ | `service/api-version-sets` | `apivs` |
+ | `service/authorizationServers` | `apias` |
+ | `service/backends` | `apib` |
+ | `service/certificates` | `apic` |
+ | `service/diagnostics` | `apid` |
+ | `service/groups` | `apig` |
+ | `service/groups/users` | `apigu` |
+ | `service/identityProviders` | `apiip` |
+ | `service/loggers` | `apil` |
+ | `service/notifications` | `apin` |
+ | `service/notifications/recipientEmails` | `recem` |
+ | `service/openidConnectProviders` | `apioi` |
+ | `service/policies` | `apipo` |
+ | `service/products` | `apipr` |
+ | `service/products/apis` | `api` |
+ | `service/products/groups` | `grp` |
+ | `service/products/tags` | `tags` |
+ | `service/properties` | `prop` |
+ | `service/subscriptions` | `subsr` |
+ | `service/tags` | `tags` |
+ | `service/templates` | `temp` |
+ | `service/users` | `user` |
+ 
+### AppConfiguration
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `configurationStores` | `accs` |
+ 
+### Authorization
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `locks` | `locks` |
+ | `policyAssignments` | `polas` |
+ | `policyDefinitions` | `polde` |
+ | `policySetDefinitions` | `psd` |
+ | `automationAccounts` | `aa` |
+ | `automationAccounts/certificates` | `cert` |
+ | `automationAccounts/connections` | `conn` |
+ | `automationAccounts/credentials` | `cred` |
+ | `automationAccounts/runbooks` | `runbk` |
+ | `automationAccounts/schedules` | `sched` |
+ | `automationAccounts/variables` | `var` |
+ | `automationAccounts/watchers` | `watch` |
+ | `automationAccounts/webhooks` | `wbhk` |
+ 
+### Batch
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `batchAccounts` | `ba` |
+ | `batchAccounts/applications` | `appl` |
+ | `batchAccounts/certificates` | `cert` |
+ | `batchAccounts/pools` | `pool` |
+ 
+### Blockchain
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `blockchainMembers` | `blchm` |
+ 
+### Blueprint
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `blueprintAssignments` | `bpas` |
+ | `blueprints` | `bp` |
+ | `blueprints/artifacts` | `bpa` |
+ | `blueprints/versions` | `bpv` |
+ 
+### BotService
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `botServices` | `botsvc` |
+ | `botServices/channels` | `chan` |
+ | `botServices/Connections` | `conn` |
+ | `enterpriseChannels` | `botec` |
+ 
+### Cache
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `Redis` | `redis` |
+ | `Redis/firewallRules` | `rule` |
+ 
+### Cdn
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `profiles` | `cdnp` |
+ | `profiles/endpoints` | `cdnep` |
+ 
+### CertificateRegistration
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `certificateOrders` | `cerco` |
+ 
+### CognitiveServices
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `accounts` | `coga` |
+ 
+### Compute
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `availabilitySets` | `avset` |
+ | `cloudServices` | `cldsvc` |
+ | `diskEncryptionSets` | `dskes` |
+ | `disks` | `dsk` |
+ | `disks` | `osdsk` |
+ | `galleries` | `gal` |
+ | `galleries/applications` | `app` |
+ | `galleries/applications/versions` | `apver` |
+ | `galleries/images` | `gimg` |
+ | `images` | `cimg` |
+ | `snapshots` | `snap` |
+ | `virtualMachines` | `vm` |
+ | `virtualMachineScaleSets` | `vmss` |
+ | `containerGroups` | `congp` |
+ 
+### ContainerRegistry
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `registries` | `conrg` |
+ | `registries/buildTasks` | `btsks` |
+ | `registries/buildTasks/steps` | `steps` |
+ | `registries/replications` | `rep` |
+ | `registries/scopeMaps` | `scmap` |
+ | `registries/tasks` | `tasks` |
+ | `registries/tokens` | `tokn` |
+ | `registries/webhooks` | `webhk` |
+ 
+### ContainerService
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `managedClusters` | `aks` |
+ 
+### ContainerServiceopenShiftManagedClusters
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `ContainerServiceopenShiftManagedClusters` | `osmc` |
+ 
+### CustomerInsights
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `hubs` | `cihub` |
+ | `hubs/authorizationPolicies` | `authp` |
+ | `hubs/connectors` | `conn` |
+ | `hubs/connectors/mappings` | `map` |
+ | `hubs/interactions` | `int` |
+ | `hubs/kpi` | `kpi` |
+ | `hubs/links` | `link` |
+ | `hubs/predictions` | `pred` |
+ | `hubs/profiles` | `prof` |
+ | `hubs/relationshipLinks` | `rlink` |
+ | `hubs/relationships` | `rel` |
+ | `hubs/roleAssignments` | `role` |
+ | `hubs/views` | `views` |
+ 
+### CustomProviders
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `associations` | `cpass` |
+ | `resourceProviders` | `cprep` |
+ 
+### DataBox
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `jobs` | `dbjob` |
+ 
+### Databricks
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `workspaces` | `dbws` |
+ 
+### DataFactory
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `factories` | `adf` |
+ | `factories/dataflows` | `flows` |
+ | `factories/datasets` | `dsets` |
+ | `factories/integrationRuntimes` | `run` |
+ | `factories/linkedservices` | `lksvc` |
+ | `factories/pipelines` | `pipe` |
+ | `factories/triggers` | `trig` |
+ | `factories/triggers/rerunTriggers` | `rerun` |
+ 
+### DataLakeAnalytics
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `accounts` | `dlaac` |
+ | `accounts/computePolicies` | `cmpol` |
+ | `accounts/dataLakeStoreAccounts` | `dlsta` |
+ | `accounts/firewallRules` | `fwrul` |
+ | `accounts/storageAccounts` | `sa` |
+ 
+### DataLakeStore
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `accounts` | `dlsa` |
+ | `accounts/firewallRules` | `frule` |
+ | `accounts/virtualNetworkRules` | `vrule` |
+ 
+### DataMigration
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `services` | `dms` |
+ | `services/projects` | `proj` |
+ 
+### DBforMariaDB
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `servers` | `mdbsv` |
+ | `servers/databases` | `mdbdb` |
+ | `servers/firewallRules` | `fwrul` |
+ | `servers/virtualNetworkRules` | `vnetr` |
+ 
+### DBforMySQL
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `servers` | `mysql` |
+ | `servers/databases` | `db` |
+ | `servers/firewallRules` | `frule` |
+ | `servers/virtualNetworkRules` | `vrule` |
+ 
+### DBforPostgreSQL
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `servers` | `psql` |
+ | `servers/databases` | `db` |
+ | `servers/firewallRules` | `fwrul` |
+ | `servers/virtualNetworkRules` | `vnetr` |
+ 
+### Devices
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `IotHubs` | `iot` |
+ | `IotHubs/certificates` | `cert` |
+ | `IotHubs/eventHubEndpoints/ConsumerGroups` | `congp` |
+ | `provisioningServices` | `provs` |
+ | `provisioningServices/certificates` | `cert` |
+ 
+### DevTestLab
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `labs` | `dtlab` |
+ | `labs/customimages` | `img` |
+ | `labs/formulas` | `form` |
+ | `labs/virtualmachines` | `vm` |
+ | `databaseAccounts` | `dbact` |
+ | `databaseAccounts/sqlDatabases	` | `cosdb` |
+ 
+### EventGrid
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `domains` | `evgd` |
+ | `domains/topics` | `egdt` |
+ | `eventSubscriptions` | `egesu` |
+ | `topics` | `egtp` |
+ 
+### EventHub
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `clusters` | `evhcl` |
+ | `namespaces` | `evhns` |
+ | `namespaces/AuthorizationRules` | `rule` |
+ | `namespaces/disasterRecoveryConfigs` | `drcfg` |
+ | `namespaces/eventhubs` | `evh` |
+ | `namespaces/eventhubs/authorizationRules` | `rule` |
+ | `namespaces/eventhubs/consumergroups` | `cgrp` |
+ 
+### HDInsight
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `clusters` | `hadoop` |
+ | `clusters` | `hbase` |
+ | `clusters` | `kafka` |
+ | `clusters` | `mls` |
+ | `clusters` | `spark` |
+ | `clusters` | `storm` |
+ 
+### HybridCompute
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `machines` | `arcm` |
+ 
+### ImportExport
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `jobs` | `iejob` |
+ 
+### Insights
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `actionGroups` | `inag` |
+ | `activityLogAlerts` | `inala` |
+ | `components` | `incom` |
+ | `metricAlerts` | `inma` |
+ | `scheduledQueryRules` | `insqr` |
+ 
+### IoTCentral
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `IoTApps` | `iotapp` |
+ 
+### KeyVault
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `vaults` | `kv` |
+ | `vaults/secrets` | `kvs` |
+ 
+### Kubernetes
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `connectedClusters` | `kubcc` |
+ 
+### Kusto
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `clusters` | `kucl` |
+ | `clusters/databases` | `kcdb` |
+ | `clusters/databases/dataConnections` | `dcon` |
+ | `clusters/databases/eventhubconnections` | `ehcon` |
+ 
+### Logic
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `integrationAccounts` | `liact` |
+ | `integrationAccounts/assemblies` | `assem` |
+ | `integrationAccounts/batchConfigurations` | `bconf` |
+ | `integrationAccounts/certificates` | `cert` |
+ | `integrationAccounts/maps` | `map` |
+ | `integrationAccounts/partners` | `part` |
+ | `integrationAccounts/rosettanetprocessconfigurations` | `rpcnf` |
+ | `integrationAccounts/schemas` | `schem` |
+ | `integrationAccounts/sessions` | `sess` |
+ | `integrationServiceEnvironments` | `lise` |
+ | `integrationServiceEnvironments/managedApis` | `mapis` |
+ | `workflows` | `lwf` |
+ 
+### MachineLearning
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `commitmentPlans` | `mlcp` |
+ | `webServices` | `mlweb` |
+ | `workspaces` | `mlws` |
+ 
+### MachineLearningServices
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `workspaces` | `mlsw` |
+ | `workspaces/computes` | `mlswc` |
+ 
+### ManagedIdentity
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `userAssignedIdentities` | `miuai` |
+ 
+### Management
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `managementGroups` | `mg` |
+ 
+### Maps
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `accounts` | `macc` |
+ 
+### Media
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `mediaservices` | `mms` |
+ | `mediaservices/liveEvents` | `lievt` |
+ | `mediaservices/liveEvents/liveOutputs` | `liout` |
+ | `mediaservices/streamingEndpoints` | `strep` |
+ 
+### Migrate
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `assessmentProjects` | `migap` |
+ 
+### Network
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `applicationGateways` | `agw` |
+ | `applicationSecurityGroups` | `asg` |
+ | `azureFirewalls` | `afw` |
+ | `bastionHosts` | `bash` |
+ | `connections` | `conn` |
+ | `dnsZones` | `dnsz` |
+ | `expressRouteCircuits` | `erc` |
+ | `firewallPolicies` | `waf` |
+ | `firewallPolicies/ruleGroups` | `wafrg` |
+ | `frontDoors` | `fd` |
+ | `frontdoorWebApplicationFirewallPolicies` | `fdwfp` |
+ | `loadBalancers` | `lbe` |
+ | `loadBalancers` | `lbi` |
+ | `loadBalancers/inboundNatRules` | `inatr` |
+ | `localNetworkGateways` | `lngw` |
+ | `networkInterfaces` | `nic` |
+ | `networkSecurityGroups` | `nsg` |
+ | `networkSecurityGroups/securityRules` | `nsgsr` |
+ | `networkWatchers` | `nw` |
+ | `privateDnsZones` | `pdnsz` |
+ | `privateDnsZones/virtualNetworkLinks` | `pdnsv` |
+ | `privateLinkServices` | `pls` |
+ | `publicIPAddresses` | `pip` |
+ | `publicIPPrefixes` | `pipp` |
+ | `routeFilters` | `nrf` |
+ | `routeFilters/routeFilterRules` | `nrfrr` |
+ | `routeTables` | `netrt` |
+ | `routeTables/routes` | `route` |
+ | `serviceEndpointPolicies` | `nsept` |
+ | `trafficManagerProfiles` | `ntmp` |
+ | `virtualNetworkGateways` | `vnetg` |
+ | `virtualNetworks` | `vnet` |
+ | `virtualnetworks/subnets` | `vnets` |
+ | `virtualNetworks/virtualNetworkPeerings` | `vnetp` |
+ | `virtualWans` | `vwan` |
+ | `vpnGateways` | `vpng` |
+ | `vpnGateways/vpnConnections` | `vpnc` |
+ | `vpnSites` | `vpns` |
+ 
+### NotificationHubs
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `namespaces` | `nhns` |
+ | `namespaces/AuthorizationRules` | `nrule` |
+ | `namespaces/notificationHubs` | `nhub` |
+ | `namespaces/notificationHubs/AuthorizationRules` | `nhrule` |
+ 
+### OperationalInsights
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `clusters` | `opic` |
+ | `workspaces` | `opiw` |
+ 
+### OperationsManagement
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `dashboards` | `pdash` |
+ 
+### PowerBI
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `workspaceCollections` | `pbiwc` |
+ 
+### PowerBIDedicated
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `capacities` | `pbidc` |
+ 
+### Purview
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `accounts` | `pva` |
+ 
+### RecoveryServices
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `vaults` | `rsv ` |
+ | `vaults/backupPolicies` | `rsvbp` |
+ 
+### Relay
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `namespaces` | `rns` |
+ | `namespaces/AuthorizationRules` | `rule` |
+ | `namespaces/HybridConnections` | `hycon` |
+ | `namespaces/HybridConnections/authorizationRules` | `rule` |
+ | `namespaces/WcfRelays` | `wcfr` |
+ | `namespaces/WcfRelays/authorizationRules` | `wcfra` |
+ 
+### Resources
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `deployments` | `deloy` |
+ | `resourcegroups` | `rg` |
+ | `templateSpecs` | `tspec` |
+ 
+### Search
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `searchServices` | `ssvc` |
+ 
+### ServiceBus
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `namespaces` | `sbn` |
+ | `namespaces/AuthorizationRules` | `rule` |
+ | `namespaces/disasterRecoveryConfigs` | `sbndc` |
+ | `namespaces/migrationConfigurations` | `migc` |
+ | `namespaces/queues` | `que` |
+ | `namespaces/queues/authorizationRules` | `rule` |
+ | `namespaces/topics` | `topic` |
+ | `namespaces/topics/authorizationRules` | `trule` |
+ | `namespaces/topics/subscriptions` | `tsub` |
+ | `namespaces/topics/subscriptions/rules` | `sbtsr` |
+ 
+### ServiceFabric
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `clusters` | `sfc` |
+ 
+### SignalRService
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `signalR` | `sssr` |
+ 
+### Sql
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `managedInstances` | `sqlmi` |
+ | `servers` | `sqlds` |
+ | `servers` | `sqldw` |
+ | `servers/databases` | `sqldb` |
+ | `servers/databases/syncGroups` | `sqlsg` |
+ | `servers/elasticPools` | `sqlep` |
+ | `servers/failoverGroups` | `sqlfg` |
+ | `servers/firewallRules` | `sqlfw` |
+ 
+### Storage
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `storageAccounts` | `sa` |
+ | `storageAccounts` | `savm` |
+ | `storageSyncServices` | `ssss` |
+ | `storageSyncServices/syncGroups` | `sgrp` |
+ 
+### StorSimple
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `managers` | `ssm` |
+ 
+### StreamAnalytics
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `cluster` | `sac` |
+ | `streamingjobs` | `sasj` |
+ | `streamingjobs/functions` | `sjf` |
+ | `streamingjobs/inputs` | `sjin` |
+ | `streamingjobs/outputs` | `sjout` |
+ | `streamingjobs/transformations` | `sjtrf` |
+ 
+### Subscription
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `subscriptions` | `subcr` |
+ 
+### Synapse
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `workspaces` | `synws` |
+ | `workspaces/sqlPools` | `syndp` |
+ | `workspaces/sqlPools` | `synsp` |
+ 
+### TimeSeriesInsights
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `environments` | `tsie` |
+ | `environments/accessPolicies` | `tsiea` |
+ | `environments/eventSources` | `tsiee` |
+ | `environments/referenceDataSets` | `tsier` |
+ 
+### Web
+ 
+| Resource provider namespace/Entity | Abbreviation |  
+|--|--|
+ | `certificates` | `wbcer` |
+ | `serverfarms` | `wbsvf` |
+ | `sites` | `ase` |
+ | `sites` | `aswba` |
+ | `sites` | `func` |
+ | `sites` | `wsite` |
+ | `sites` | `wapp` |
+ | `sites/slots` | `slot` |
 
 ## Next steps
 
