@@ -28,7 +28,7 @@ As a first step to assessing a group of workloads, you will need to reference yo
 
 The container migration tools in Azure Migrate can accelerate migration of specific applications to AKS. Evaluate your workloads against the following list to identify Kubernetes migration candidates, and check back often as this list grows:
 
-- [Java web applications, running on Apache Tomcat](/azure/migrate/tutorial-containerize-java-kubernetes)
+- [Java web applications, running on Apache Tomcat](/azure/migrate/tutorial-app-containerization-java-kubernetes)
 - [ASP.NET applications](/azure/migrate/tutorial-app-containerization-aspnet-kubernetes)
 
 Use the Azure Migrate: App Containerization tool to migrate the application. The first step of that tools is discovery, which aids in assessment and evaluation of compatibility.
