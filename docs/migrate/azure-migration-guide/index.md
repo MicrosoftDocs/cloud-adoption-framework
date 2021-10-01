@@ -36,7 +36,7 @@ This guide is the suggested path for your first migration to Azure. It exposes y
 > - **Optimize and promote.** Optimize for cost and performance balance before you promote your workload to production.
 > - **Get assistance.** Get help and support during your migration or post-migration activities.
 
-In alignment with the best practices in the [Cloud Adoption Framework's Ready methodology](../../ready/index.md), deploy a landing zone before continuing with this guide.
+In alignment with the best practices in the [Cloud Adoption Framework's Ready methodology](../../ready/index.md), deploy a landing zone before you continue with this guide.
 
 ## [When to use this guide](#tab/WhenToUseThisGuide)
 
@@ -52,7 +52,7 @@ Although the tools discussed in this guide support a wide variety of migration s
 
 <!-- docutune:casing "our Microsoft teams" -->
 
-If any of these conditions don't apply to your situation, consider other [best practices for cloud migration](../azure-best-practices/index.md). We also recommend that you request assistance from one of our Microsoft teams or partners to perform more complex migrations. Customers who engage with Microsoft or certified partners are more successful in these scenarios. More information about requesting assistance is available in this guide.
+If any of these conditions don't apply to your situation, consider other [best practices for cloud migration](../azure-best-practices/index.md). For more complex migrations, we recommend that you request assistance from one of our Microsoft teams or partners. Customers who engage with Microsoft or certified partners are more successful in these scenarios. More information about requesting assistance is available in this guide.
 
 ::: zone target="docs"
 
