@@ -1,5 +1,5 @@
 ---
-title: Management and monitoring for data management and analytics 
+title: Management and monitoring for data management and analytics
 description: Learn how this enterprise-scale scenario can improve management and monitoring for data management and analytics in Azure.
 author: christophermschmidt
 ms.author: chrschm
@@ -7,6 +7,7 @@ ms.date: 07/19/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Management and monitoring for data management and analytics

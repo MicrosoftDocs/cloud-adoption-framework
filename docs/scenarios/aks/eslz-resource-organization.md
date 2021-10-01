@@ -10,9 +10,9 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-aks
 ---
 
-# Resource organization considerations for AKS
+# Resource organization considerations for AKS (Optional)
 
-The following considerations and recommendations will help establish proper resource organization and segmentation across management group hierarchies, subscriptions, landing zones, and resource groups. It will also help establish proper tagging strategies to keep resources organized.
+Resource organization consideration is mostly managed by the platform foundation, however here are some of the ways the platform foundation may affect enterprise-scale for AKS.
 
 The overall subscription and resource group design determined by generic enterprise-scale landing zone recommendations, will play a fundamental role in how the AKS resource organization is managed. As described in [Management group and subscription organization](../../ready/enterprise-scale/management-group-and-subscription-organization.md), management groups and subscriptions are used to assign policies to the resources underneath them, and subscriptions are the management boundary for governance and isolation of resources.
 
