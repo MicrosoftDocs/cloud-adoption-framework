@@ -23,7 +23,7 @@ In this article, Contoso uses Azure VMware Solution to create a private cloud in
 
 ## Business drivers
 
-Working closely with business partners, the Contoso it team defines the business drivers for a VMware migration to Azure. These drivers can include:
+Working closely with business partners, the Contoso IT team defines the business drivers for a VMware migration to Azure. These drivers can include:
 
 - **Datacenter evacuation or shutdown:** Seamlessly move VMware-based workloads when they consolidate or retire existing datacenters.
 - **Disaster recovery and business continuity:** Use a VMware stack deployed in Azure as a primary or secondary on-demand disaster recovery site for on-premises datacenter infrastructure.
@@ -37,7 +37,7 @@ With its business drivers in mind, Contoso has pinned down a few goals for this 
 
 - Continue managing its existing environments with VMware tools that are familiar to its teams, while modernizing the applications with native Azure services.
 - Seamlessly move Contoso VMware-based workloads from its datacenter to Azure, and integrate the VMware environment with Azure.
-- After migration, the application in Azure should have the same performance capabilities as it does today in VMware. The application remains as critical in the cloud as it's on-premises.
+- After migration, the application in Azure should have the same performance capabilities as it does today in VMware. The application will remain as critical in the cloud as was on-premises.
 
 These goals support Contoso's decision to use Azure VMware Solution and validate it as the best migration method.
 
@@ -69,8 +69,8 @@ Contoso's current architecture features:
 
 In its proposed architecture, Contoso will:
 
-- Deploy an [Azure VMware Solution private cloud](/azure/azure-vmware/concepts-private-clouds-clusters) to the west us Azure region.
-- Connect the on-premises datacenter to Azure VMware Solution running in west us by using virtual networks and [ExpressRoute](/azure/azure-vmware/concepts-networking) with Global Reach enabled.
+- Deploy an [Azure VMware Solution private cloud](/azure/azure-vmware/concepts-private-clouds-clusters) to the West US Azure region.
+- Connect the on-premises datacenter to Azure VMware Solution running in West US by using virtual networks and [ExpressRoute](/azure/azure-vmware/concepts-networking) with Global Reach enabled.
 - Migrate VMs to dedicated Azure VMware Solution by using [VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-D0CD0CC6-3802-42C9-9718-6DA5FEC246C6.html).
 
 ![Diagram of the proposed architecture.](./media/contoso-migration-vmware-to-azure/on-premises-stretched-network-expressroute.png)
@@ -112,7 +112,7 @@ To complete the process, the Contoso team:
 
 ### Step 1: Network planning
 
-Contoso needs to plan out its networking to include Azure Virtual Network and connectivity between on-premises and Azure. The company needs to provide a high-speed connection between its on-premises and azure-based environments, along with a connection to the Azure VMware Solution private cloud.
+Contoso needs to plan out its networking to include Azure Virtual Network and connectivity between on-premises and Azure. The company needs to provide a high-speed connection between its on-premises and Azure-based environments, along with a connection to the Azure VMware Solution private cloud.
 
 This connectivity is delivered through Azure ExpressRoute and will require some specific network address ranges and firewall ports for enabling the services. This high-bandwidth, low-latency connection allows Contoso to access services that run in its Azure subscription from the Azure VMware Solution private cloud environment.
 
@@ -129,7 +129,7 @@ Azure VMware Solution private clouds require, at minimum, a `/22` CIDR network a
 
 ### Step 2: Create an Azure VMware Solution private cloud
 
-With its network and IP address planning completed, Contoso will next focus on setting up the Azure VMware Solution service in the west us Azure region. By using Azure VMware Solution, Contoso can deploy a vSphere cluster in Azure.
+With its network and IP address planning completed, Contoso will next focus on setting up the Azure VMware Solution service in the West US Azure region. By using Azure VMware Solution, Contoso can deploy a vSphere cluster in Azure.
 
 An Azure VMware Solution private cloud is an isolated, VMware software-defined datacenter that supports ESXi hosts, vCenter, vSAN, and NSX. The stack runs on dedicated and isolated bare-metal hardware nodes in an Azure region. The minimum initial deployment for an Azure VMware Solution private cloud is three hosts. Additional hosts can be added one at a time, up to a maximum of 16 hosts per cluster.
 
@@ -176,7 +176,7 @@ For more information, see [Configure networking for your VMware private cloud in
 
     ![Screenshot of the **Add connection** pane for connecting ExpressRoute to the virtual network.](./media/contoso-migration-vmware-to-azure/add-connection.png)
 
-For more information, see [learn how to access an Azure VMware Solution private cloud](/azure/azure-vmware/tutorial-access-private-cloud).
+For more information, see [Learn how to access an Azure VMware Solution private cloud](/azure/azure-vmware/tutorial-access-private-cloud).
 
 ### Step 4: Migrate by using VMware HCX
 
