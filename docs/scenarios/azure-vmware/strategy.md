@@ -18,10 +18,10 @@ Cloud adoption best practices encourage customers to create a single, centralize
 
 Common motivations for choosing Azure VMware Solution are:
 
-- **Business needs:** to accelerate the migration of VMware-based workloads, support your [Total Cost of Ownership (TCO) reduction](https://azure.microsoft.com/pricing/tco/calculator/), and rapidly expand capacity. This includes your need to reduce costs, complexity, and risk associated with larger-scale migration projects.
-- **IT needs:** to create business continuity, deploy disaster recovery solutions, and scale traditional on-premises VMware environments - with little to no change to applications (including VDI environments where modernization of VDI is not needed).
-- **Operational needs:** to make use of the skills and processes you've established across IT teams, while you give team members the ability to grow and adopt cloud competencies over time.
-- **Strategic needs:** to incrementally modernize your VMware-based applications with other Azure services as business requirements evolve.
+- **Business needs:** To accelerate the migration of VMware-based workloads, support your [total cost of ownership (TCO) reduction](https://azure.microsoft.com/pricing/tco/calculator/), and rapidly expand capacity. This includes your need to reduce costs, complexity, and risk associated with larger-scale migration projects.
+- **IT needs:** To create business continuity, deploy disaster recovery solutions, and scale traditional on-premises VMware environments, with little to no change to applications (including VDI environments where modernization of VDI is not needed).
+- **Operational needs:** To make use of the skills and processes you've established across IT teams, while you give team members the ability to grow and adopt cloud competencies over time.
+- **Strategic needs:** To incrementally modernize your VMware-based applications with other Azure services as business requirements evolve.
 
 ## Azure VMware Solution outcomes
 
@@ -54,7 +54,7 @@ Take advantage of price benefits for Windows and SQL Server with:
 - **Azure Hybrid Benefit** for both [Windows](/azure/virtual-machines/windows/hybrid-use-benefit-licensing) and [SQL Server](/azure/azure-sql/azure-hybrid-benefit?tabs=azure-powershell). Azure Hybrid Benefit allows you to bring your existing licenses to Azure and reduce costs.
 - **Azure Reservations** [discounts for reserved instances](/azure/azure-vmware/reserved-instance) (and no cancellation fees). Azure VMware Solution offers 1-year and 3-year reserved instances for dedicated hosts, saving around 30-50% of the total cost of a node.
 
-### Modernize apps
+### Modernize applications
 
 Modernize applications running on VMware overtime through integration to [Azure native management, security, and services](..\azure-vmware\govern.md).
 
@@ -62,7 +62,7 @@ Modernize applications running on VMware overtime through integration to [Azure 
 - **Modernize applications** with the ability to connect them to Azure services such as Azure AD, SQL Managed Instance, and analytics.
 - **Deploy native Azure management controls**with Azure Monitor and Azure Security Center solutions to operate your VMware environments.
 - **Deploy native Azure public cloud capabilities** and take advantage of built-in security controls and compliance enforcement with Azure Backup and Azure Site Recovery.
-- **Achieve identity and access management consistency** with unified permissions and access control - using Azure Active Directory (Azure AD) as a single sign-on (SSO) identity source for VMware vCenter.
+- **Achieve identity and access management consistency** with unified permissions and access control, using Azure Active Directory (Azure AD) as a single sign-on (SSO) identity source for VMware vCenter.
 
 ## Azure VMware Solution business justification
 

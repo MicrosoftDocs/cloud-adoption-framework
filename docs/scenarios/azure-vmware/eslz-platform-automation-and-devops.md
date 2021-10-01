@@ -86,12 +86,12 @@ For more information about recommended network topologies, see [Network topology
 
 ### Automated scale
 
-By default, an Azure VMware Solution cluster has a fixed number of hosts defined by the scale of the cluster. You can programmatically modify per-cluster scaling, so that you can scale in and out via automation. This automation might be on-demand, on a schedule, or in reaction to Azure Monitor Alerts.
+By default, an Azure VMware Solution cluster has a fixed number of hosts defined by the scale of the cluster. You can programmatically modify per-cluster scaling, so that you can scale in and out via automation. This automation might be on-demand, on a schedule, or in reaction to Azure Monitor alerts.
 
 **Considerations:**
 
 - Automated scale-out can provide more capacity on-demand, but it's important to consider the cost of more hosts. This cost is limited to the quota that's provided to the subscription, but manual limits should be in place.
-- Before you automate the scale-in, consider the impact on running workloads and storage policies applied within the cluster. For example, workloads that have RAID-5 assigned can't be scaled-in to a three-node cluster. It's also important to consider memory and storage use, as this usage might block a scale-in operation.
+- Before you automate the scale-in, consider the impact on running workloads and storage policies applied within the cluster. For example, workloads that have RAID 5 assigned can't be scaled in to a three-node cluster. It's also important to consider memory and storage use, as this usage might block a scale-in operation.
 - Only one single-scale operation can be done at a time, so it's important to consider the orchestration of scale operations between multiple clusters.
 - An Azure VMware Solution scale operation isn't instantaneous, and you must consider the time it takes to [add another node to an existing cluster](/azure/azure-vmware/faq#how-long-does-it-take-to-provision-the-initial-three-hosts-in-a-cluster).
 - Third-party solutions and integrations might not expect hosts to be continuously removed and added. Consider validating the behavior of all third-party products. This validation ensures more steps aren't required to refresh or reconfigure the product when hosts are added or removed.
@@ -101,7 +101,7 @@ By default, an Azure VMware Solution cluster has a fixed number of hosts defined
 - Put hard limits in place for both scale-in and scale-out operations outside of quota.
 - [Request quota](/azure/azure-vmware/request-host-quota-azure-vmware-solution) ahead of time so it doesn't impact a scale operation. Quota isn't a guarantee for capacity, but rather the ability to deploy up to a specific limit. Review the quota limit regularly to ensure there's always headroom.
 - Ensure any automated scaling system is monitored and that it alerts you when a scale operation is done. This alert ensures there are no unexpected scale events.
-- Use Azure Metrics to confirm cluster capacity before scale-in operations to ensure there's adequate headroom. It's important to pay attention to CPU, memory, and storage before, during, and after any scale operations. This attention to capacity ensures that it doesn't impact the service-level agreement (SLA).
+- Use Azure Monitor Metrics to confirm cluster capacity before scale-in operations to ensure there's adequate headroom. Pay attention to CPU, memory, and storage before, during, and after any scale operations. This attention to capacity ensures that it doesn't impact the service-level agreement (SLA).
 
 ## Azure integration
 
@@ -134,7 +134,7 @@ You should implement Azure VMware Solution deployment automation as a series of 
 - Private cloud deployment
 - ExpressRoute gateway connectivity
 - Global Reach connectivity
-- Simplified NSX-T DHCP, DNS, and Segment creation
+- Simplified NSX-T DHCP, DNS, and segment creation
 
 After you deploy your private cloud, you can deploy resources within the private cloud. For more information, see [VMware platform automation](#vmware-platform-automation).
 
@@ -145,7 +145,7 @@ After you deploy your private cloud, you can deploy resources within the private
 
 ## VMware platform automation
 
-Within an Azure VMware Solution private cloud, you might also choose to automate the creation of resources within vCenter and NSX-T manager. The following series of considerations are listed to help design VMware-level automation.
+Within an Azure VMware Solution private cloud, you might also choose to automate the creation of resources within vCenter and NSX-T Manager. The following series of considerations are listed to help design VMware-level automation.
 
 ### vCenter automation - PowerCLI
 
@@ -154,7 +154,7 @@ Within an Azure VMware Solution private cloud, you might also choose to automate
 - Use [PowerCLI](https://developer.vmware.com/powercli) to create and configure virtual machines (VMs), resource pools, and VM templates, giving you full programmatic control over vCenter.
 - As vCenter is only available through private connectivity, or private IP, you must run PowerCLI on a machine that has line of sight to the Azure VMware Solution management networks. Consider using a self-hosted agent for your pipeline execution. With this agent, you can run PowerCLI on a VM within a virtual network or NSX-T segment.
 - You might not have access to do certain operations, as you're limited by the CloudAdmin role. Consider mapping out required permissions for the automation you plan to implement and validate it against the [CloudAdmin permissions](/azure/azure-vmware/concepts-identity).
-- For least privilege access, consider using a service account for vCenter level automation via Active Directory (AD) integration.
+- For least privilege access, consider using a service account for vCenter level automation via Active Directory integration.
 
 ### NSX-T automation - PowerCLI
 
@@ -169,15 +169,15 @@ Within an Azure VMware Solution private cloud, you might also choose to automate
 **Considerations:**
 
 - You can use [vSphere](https://registry.terraform.io/providers/hashicorp/vsphere/latest/docs) and [NSX-T](https://registry.terraform.io/providers/vmware/nsxt/latest/docs) providers for Terraform to deploy resources. These resources are deployed within the scope of the private cloud in a declarative fashion.
-- As Terraform needs to talk to the API endpoints within vCenter and NSX-T manager, it needs to have private connectivity to the private cloud management network. Consider deploying from an Azure Virtual Machine that can route to the private cloud.
+- As Terraform needs to talk to the API endpoints within vCenter and NSX-T Manager, it needs to have private connectivity to the private cloud management network. Consider deploying from an Azure virtual machine that can route to the private cloud.
 
-### vRealize Automation and vRealize operations
+### vRealize Automation and vRealize Operations
 
 **Considerations:**
 
 - You can use [vRealize Automation](https://docs.vmware.com/en/vRealize-Suite/index.html) similarly to an on-premises environment, so that you can automate the provisioning of virtual machines within Azure VMware Solution.
-- There are limitations to the deployment models supported on Azure VMware Solution. Consider using vRealize Cloud, or hosting the vRealize Automation appliances on-premises.
-- As with PowerCLI, private connectivity to Azure VMware Solution is required from the environment where the [vRealize Automation and Operations appliances](/azure/azure-vmware/vrealize-operations-for-azure-vmware-solution) is.
+- There are limitations to the deployment models supported on Azure VMware Solution. Consider using vRealize Cloud Management, or hosting the vRealize Automation appliances on-premises.
+- As with PowerCLI, private connectivity to Azure VMware Solution is required from the environment where the [vRealize Automation and vRealize Operations appliances](/azure/azure-vmware/vrealize-operations-for-azure-vmware-solution) is.
 
 ## Workload-level automation
 

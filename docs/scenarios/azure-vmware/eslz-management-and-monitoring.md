@@ -18,11 +18,11 @@ You can achieve operational excellence when you design Azure VMware Solution wit
 
 Review the following considerations for platform management and monitoring of Azure VMware Solution.
 
-- Create alerts and dashboards on the metrics that are most important to your operations teams. See [Configure Azure Alerts in Azure VMware Solution](/azure/azure-vmware/configure-alerts-for-azure-vmware-solution#supported-metrics-and-activities) for available monitoring and alerting metrics.
+- Create alerts and dashboards on the metrics that are most important to your operations teams. See [Configure alerts for Azure VMware Solution](/azure/azure-vmware/configure-alerts-for-azure-vmware-solution#supported-metrics-and-activities) for available monitoring and alerting metrics.
 
-- License VMware eco-system solutions like vRealize Operations Manager and vRealize Network Insights. These solutions provide a detailed understanding of the Azure VMware Solution platform. Customers can see monitoring data like vCenter events and flow logs for the NSX-T distributed firewall. vRealize Log Insights for Azure VMware Solution currently support *pull* logging. Only events, tasks, and alarms can be captured. Syslog pushing of unstructured data from hosts to vRealize isn't currently supported.
+- License VMware eco-system solutions like vRealize Operations Manager and vRealize Network Insight. These solutions provide a detailed understanding of the Azure VMware Solution platform. Customers can see monitoring data like vCenter events and flow logs for the NSX-T distributed firewall. *Pull* logging is currently supported by vRealize Log Insight for Azure VMware Solution . Only events, tasks, and alarms can be captured. Syslog pushing of unstructured data from hosts to vRealize isn't currently supported.
 
-- vRealize Operations doesn't support in-guest memory collection using VMware tools. Active and consumed memory use will continue to work.
+- In-guest memory collection isn't supported by vRealize Operations using VMware tools. Active and consumed memory use will continue to work.
 
 - vSAN storage is a finite resource, so you need to manage vSAN capacity. Use vSAN storage for guest virtual machine (VM) workloads only. Examine the following design considerations to help reduce unnecessary storage on vSAN.
 
@@ -81,7 +81,7 @@ Review the following recommendations for guest management and monitoring of work
 
 - If you're using a network virtual appliance, consider monitoring trace logs between both on-premises and Azure. Ensure monitoring is in place between Azure and Azure VMware Solution.
 
-- To help with storage concerns on the vSAN, consider using [Azure Disk Pools (preview)](/azure/virtual-machines/disks-pools-deploy) or [NetApp Files](/azure/azure-netapp-files/) to extend your storage footprint into Azure native storage services.
+- To help with storage concerns on the vSAN, consider using [Azure disk pools (preview)](/azure/virtual-machines/disks-pools-deploy) or [Azure NetApp Files](/azure/azure-netapp-files/) to extend your storage footprint into Azure native storage services.
 
 ## Next steps
 
