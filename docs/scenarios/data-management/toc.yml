@@ -117,6 +117,8 @@ items:
         href: ./architectures/reference-architecture-relecloud.md
       - name: Highly sensitive data landing zones
         href: ./architectures/reference-architecture-lamna.md
+      - name: Financial institution scenario for data mesh
+        href: ./architectures/reference-architecture-data-mesh.md
 
     - name: Deployment templates
       href: ./eslz-deployment-templates.md
