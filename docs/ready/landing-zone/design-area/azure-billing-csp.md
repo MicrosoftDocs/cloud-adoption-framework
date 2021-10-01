@@ -27,7 +27,7 @@ The Cloud Solution Provider (CSP) service gives Microsoft partners access to Mic
 >[!IMPORTANT]
 > The partner CSP completely manages an MPA.
 
-**Design considerations:**
+## Design considerations
 
 - A [CSP reseller relationship](/partner-center/request-a-relationship-with-a-customer) must exist between the partner and each Azure AD tenant in which the customer wants to provision a new Azure plan and CSP subscriptions.
 
@@ -39,7 +39,7 @@ The Cloud Solution Provider (CSP) service gives Microsoft partners access to Mic
 
 - By default, only the partner Azure reservations can only be purchased by the partner for their customer. However, the [**Customer Permissions** feature](/partner-center/give-customers-permission) grants customers permission to purchase Azure reservations from their CSP.
 
-**Design recommendations:**
+## Design recommendations
 
 - Work with your CSP partner to ensure that Azure Lighthouse is used for Administer on Behalf of (AOBO) access for most support scenarios. See [Azure Lighthouse and the Cloud Solution Provider program](/azure/lighthouse/concepts/cloud-solution-provider).
 

@@ -1,6 +1,6 @@
 ---
-title: Identity and access management recommendations
-description: Understand identity and access management recommendations as part of the Azure landing zone design areas.
+title: Identity and access management design area
+description: Understand the identity and access management design area as part of the Azure landing zone design areas.
 author: dominicallen
 ms.author: doalle
 ms.date: 09/14/2021
@@ -10,8 +10,37 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
+# Identity and access management design area
 
-# Identity and access management design recommendations
+Identity provides the basis of a large percentage of security assurance. It enables access based on identity authentication and authorization controls in cloud services to protect data and resources and to decide which requests should be permitted.
+
+Identity and access management (IAM) is boundary security in the public cloud. It must be treated as the foundation of any secure and fully compliant public cloud architecture. Azure offers a comprehensive set of services, tools, and reference architectures to enable organizations to make highly secure, operationally efficient environments as outlined here.
+
+This section examines design considerations and recommendations related to IAM in a cloud environment.
+
+### Why we need identity and access management
+
+The technological landscape in the enterprise is becoming complex and heterogenous. To manage compliance and security for this environment, IAM enables the right individuals to access the right resources at the right time for the right reasons.
+
+## Identity and access management design considerations
+
+- There are limits around the number of custom roles and role assignments that must be considered when you lay down a framework around IAM and governance. For more information, see [Azure RBAC service limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#azure-role-based-access-control-limits).
+- There's a limit of 2,000 role assignments per subscription.
+- There's a limit of 500 role assignments per management group.
+- Centralized versus federated resource ownership:
+  - Shared resources or any aspect of the environment that implements or enforces a security boundary, such as the network, must be managed centrally. This requirement is part of many regulatory frameworks. It's standard practice for any organization that grants or denies access to confidential or critical business resources.
+  - Managing application resources that don't violate security boundaries or other aspects required to maintain security and compliance can be delegated to application teams. Allowing users to provision resources within a securely managed environment allows organizations to take advantage of the agile nature of the cloud while preventing the violation of any critical security or governance boundary.
+  - Depending on the definition of the centralized or federated resource ownership, custom roles might differ. The custom roles for the centralized resource ownership are limited and might need additional rights depending on the responsibility model. For example, in some organizations a NetOps role might only need to manage and configure global connectivity. But in other organizations that need a more centralized approach, the NetOps role needs to be enriched with more allowed actions like creating peering between the hub and the spokes.
+
+### Authentication in a landing zone design considerations
+
+A critical design decision that an enterprise organization must make when adopting Azure is whether to extend an existing on-premises identity domain into Azure or to create a brand new one. Requirements for authentication inside the landing zone should be thoroughly assessed and incorporated into plans to deploy Active Directory Domain Services (AD DS) in Windows Server, Azure AD Domain Services (Azure AD DS), or both. Most Azure environments will use at least Azure AD for Azure fabric authentication and AD DS local host authentication and group policy management.
+
+- Consider centralized and delegated responsibilities to manage resources deployed inside the landing zone.
+- Applications that rely on domain services and use older protocols can use [Azure AD DS](/azure/active-directory-domain-services).
+- There is a difference between Azure AD, Azure AD DS, and AD DS running on Windows Server. Evaluate your application needs, and understand and document the authentication provider that each one will be using. Plan accordingly for all applications.
+
+## Identity and access management design recommendations
 
 - Use [Azure RBAC](/azure/role-based-access-control/overview) to manage data-plane access to resources, where possible. Examples are Azure Key Vault, a storage account, or a SQL database.
 - Deploy Azure AD conditional-access policies for any user with rights to Azure environments. Doing so provides another mechanism to help protect a controlled Azure environment from unauthorized access.
@@ -38,7 +67,7 @@ ms.custom: think-tank
 - Don't add users directly to Azure resource scopes. Instead add users to defined roles, which are then assigned to resource scopes. Direct user assignments circumvent centralized management, greatly increasing the management required to prevent unauthorized access to restricted data.
 
 
-## Authentication inside a landing zone Design recommendations
+### Authentication inside a landing zone design recommendations
 
 - Use centralized and delegated responsibilities to manage resources deployed inside the landing zone based on role and security requirements.
 - Privileged operations such as creating service principal objects, registering applications in Azure AD, and procuring and handling certificates or wildcard certificates require special permissions. Consider which users will be handling such requests and how to secure and monitor their accounts with the degree of diligence required.
@@ -48,3 +77,13 @@ ms.custom: think-tank
   - For AD DS on Windows Server, consider shared services environments that offer local authentication and host management in a larger enterprise-wide network context.
 - Deploy Azure AD DS within the primary region because this service can only be projected into one subscription. The Azure AD DS managed domain can be expanded to further regions with [replica sets](/azure/active-directory-domain-services/concepts-replica-sets).
 - Use managed identities instead of service principals for authentication to Azure services. This approach reduces exposure to credential theft.
+
+## Identity and access management in the Azure landing zone accelerator
+
+![Diagram that shows identity and access management.](../../enterprise-scale/media/iam.png)
+
+Identity and access management are core features of the Azure landing zone accelerator implementation.
+The deployment includes a subscription dedicated to identity, where customers can deploy the Active Directory domain controllers required for their environment. 
+
+The implementation also ....
+
