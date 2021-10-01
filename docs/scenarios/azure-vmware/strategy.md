@@ -68,7 +68,7 @@ Modernize applications running on VMware overtime through integration to [Azure 
 
 [Building a business justification for cloud migration](/azure/cloud-adoption-framework/strategy/cloud-migration-business-case) can dispel cloud rationalization myths that surface from your team's financial plan. Your finance team might need to develop a detailed financial model to account for components associated with the adoption of Azure VMware Solution.
 
-Initial business justification is a directional estimate that can help drive your strategic alignment. Your organization can create transparency between the cloud strategy team and other stakeholders by affirming the business justification can change significantly throughout planning activities. Seek a cross-team consensus of sufficient value in order to [gather inventory and develop a plan](/azure-docs/blob/master/articles/azure-vmware/plan-private-cloud-deployment.md). Once your digital estate is cataloged and assessed, you can refine your business case, and present clear plans for cloud value ROI.
+Initial business justification is a directional estimate that can help drive your strategic alignment. Your organization can create transparency between the cloud strategy team and other stakeholders by affirming the business justification can change significantly throughout planning activities. Seek a cross-team consensus of sufficient value in order to [gather inventory and develop a plan](/azure/azure-vmware/plan-private-cloud-deployment). Once your digital estate is cataloged and assessed, you can refine your business case, and present clear plans for cloud value ROI.
 
 ## Next steps
 
