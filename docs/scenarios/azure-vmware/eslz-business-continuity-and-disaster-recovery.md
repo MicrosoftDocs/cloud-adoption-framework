@@ -37,7 +37,7 @@ ms.custom: think-tank, e2e-azure-vmware
 
 :::image type="content" source="../_images/eslz-bcdr-3.png" alt-text="Diagram that shows the MABS backup server deployed as an Azure VMware Solution VM.":::
 
-- To restore from a backup for Azure VMware Solution platform components like vCenter, NSX Manager, or HCX manager, [create an Azure Support request](/azure/azure-portal/supportability/how-to-create-azure-support-request).
+- To restore from a backup for Azure VMware Solution platform components like vCenter, NSX Manager, or HCX Manager, [create an Azure Support request](/azure/azure-portal/supportability/how-to-create-azure-support-request).
 
 ## Disaster recovery design considerations
 

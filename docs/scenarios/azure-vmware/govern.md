@@ -44,7 +44,7 @@ Integrating with Azure-native services in your Azure VMware Solution private clo
 
  **Native Azure integration:** Connect to Azure services endpoints. For example, deploy Azure Active Directory as VMware vCenter SSO identity source.
 
-**Single point of support:** Azure VMware Solution is microsoft-developed, operated, and supported. Microsoft is first and only contact and coordinates support with VMware as required.
+**Single point of support:** Azure VMware Solution is Microsoft-developed, operated, and supported. Microsoft is the first and only contact and coordinates support with VMware as required.
 
 **Unified licensing and consumption:** Avoid unnecessary complexity and take confidence in managing a single vendor for licensing and resource consumption.
 
