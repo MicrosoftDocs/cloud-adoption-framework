@@ -6,7 +6,7 @@ ms.author: mboswell
 ms.date: 07/30/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
@@ -20,8 +20,8 @@ For enterprise-scale for analytics and AI, we'll focus on Azure Databricks works
 
 For every data landing zone you deploy, two shared workspaces are created.
 
-- The Azure Databricks Engineering workspace is for ingestion and processing. This workspace connects to Azure Data Lake via Azure service principals.
-- The Azure Databricks Analytics and Data Science workspace is provisioned for all data scientists and data operations teams. This workspace connects to Azure Data Lake by using Azure Active Directory (Azure AD) Pass-through Authentication. You share the Azure Databricks analytics and data science workspace across the data landing zone with all users who have access to the workspace. Don't use this workspace for data ingestion, transformation, or load. Use the Azure Databricks engineering workspace instead.
+- The Azure Databricks engineering workspace is for ingestion and processing. This workspace connects to Azure Data Lake via Azure service principals.
+- The Azure Databricks analytics and data science workspace is provisioned for all data scientists and data operations teams. This workspace connects to Azure Data Lake by using Azure Active Directory (Azure AD) Pass-through Authentication. You share the Azure Databricks analytics and data science workspace across the data landing zone with all users who have access to the workspace. Don't use this workspace for data ingestion, transformation, or load. Use the Azure Databricks engineering workspace instead.
 
 If you have an automated ingestion framework engine, the Azure Databricks engineering workspace uses both an Azure Key Vault instance created in the Azure metadata service resource group for running data ingestion pipelines from **raw** into **enriched** and an Azure Key Vault instance created in the data integration resource group for running developed engineering pipelines to transform from **raw** to **enriched**.
 
@@ -74,7 +74,7 @@ You might want to enable the following options for the Azure Databricks analytic
 
 The two Azure Databricks workspaces are deployed as part of a new data landing zone deployment. This following image shows the workflow of deploying an Azure Databricks environment in enterprise-scale for analytics and AI.
 
-![Diagram of a Azure Databricks deployment into a data landing zone.](../images/databricks-deploy.png)
+![Diagram of an Azure Databricks deployment into a data landing zone.](../images/databricks-deploy.png)
 
 1. The provisioning process first makes sure an Apache Hive metastore instance exists in the data landing zone. If it fails to find Apache Hive metastore, it quits and raises an error.
 2. Upon successfully finding Apache Hive metastore, a workspace is created.
@@ -109,8 +109,8 @@ The new global init scripts API is in public preview. Public preview features in
 
 ## Next steps
 
-Enterprise-scale for analytics and AI takes the guidelines below into account for integrating Azure Databricks:
+Enterprise-scale for analytics and AI takes the following guidelines into account for integrating Azure Databricks:
 
 - [Power your data strategy with Azure Synapse Analytics](./synapse.md)
 - [Securing access to Azure Data Lake Gen2 from Azure Databricks](https://github.com/hurtn/datalake-ADLS-access-patterns-with-Databricks/blob/master/readme.md)
-- [Azure Databricks Best Practices](https://github.com/Azure/AzureDatabricksBestPractices/blob/master/toc.md)
+- [Azure Databricks best practices](https://github.com/Azure/AzureDatabricksBestPractices/blob/master/toc.md)

@@ -1,13 +1,10 @@
 {
-    "version": "0.1",
+    "version": "0.2",
     "language": "en",
     "enabled": true,
     "import": [
         ".\\docs\\cspell.json"
     ],
     "words": [
-        "Adatum",
-        "lamna",
-        "migratable"
     ]
 }
