@@ -57,7 +57,7 @@ Here are a few features you'll find:
 
 ### Action
 
-To create an IoT hub:
+To create an IoT Hub instance:
 
 1. Go to **IoT Hub**.
 2. Select **Create IoT hub**.

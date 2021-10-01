@@ -6,7 +6,7 @@ ms.author: anhass
 ms.date: 08/06/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
@@ -14,7 +14,7 @@ ms.custom: e2e-data-management, think-tank
 
 When planning data management and analytics architecture, pay special attention to ensure that the architecture is robust and secure. This article addresses security, compliance, and governance design criteria for enterprise-scale data management and analytics. This article also discusses design recommendations and best practices for deployment of an enterprise-scale for analytics and AI on Azure. Review [enterprise-scale security governance and compliance](../../ready/enterprise-scale/security-governance-and-compliance.md) to fully prepare for governance of an enterprise solution.
 
-Cloud solutions initially hosted single, relatively isolated applications. As the benefits of cloud solutions became clear, larger-scale workloads were hosted in the cloud, such as SAP on Azure. So it became vital to address the security, reliability, performance, and cost of regional deployments throughout the life cycle of cloud services.
+Cloud solutions initially hosted single, relatively isolated applications. As the benefits of cloud solutions became clear, larger-scale workloads were hosted in the cloud, such as SAP on Azure. So it became vital to address the security, reliability, performance, and cost of regional deployments throughout the lifecycle of cloud services.
 
 The vision for data management and analytics landing zone security, compliance, and governance on Azure is to provide tools and processes that help you minimize risk and make effective decisions. The enterprise-scale landing zones define security governance and compliance roles and responsibilities.
 
@@ -22,7 +22,7 @@ The enterprise-scale for analytics and AI pattern relies on several security fea
 
 ## Security design recommendations
 
-Both Microsoft and customers share responsibility for security. For generally accepted security guidance, refer to [Cybersecurity Best Practices](https://www.cisecurity.org/cybersecurity-best-practices/) by the Center for Internet Security. The following sections are security design recommendations.
+Both Microsoft and customers share responsibility for security. For generally accepted security guidance, refer to [Cybersecurity best practices](https://www.cisecurity.org/cybersecurity-best-practices/) by the Center for Internet Security. The following sections are security design recommendations.
 
 ### Data-at-rest encryption
 
@@ -41,7 +41,7 @@ Data is in transit or in flight when it moves from one location to another. This
 - Transport Layer Security (TLS) 1.2 or later used by Azure components such as Azure Application Gateway or Azure Front Door.
 - Protocols available on Azure Virtual Machines, such as Windows IPsec or SMB.
 
-Encryption using Media Access Control Security (MACsec), an IEEE standard at the data-link layer, is automatically enabled for all Azure traffic between Azure datacenters. This encryption ensures customer data confidentiality and integrity. For more information, see [Azure customer data protection](/azure/security/fundamentals/protection-customer-data).
+Encryption using MACsec (media access control security), an IEEE standard at the data-link layer, is automatically enabled for all Azure traffic between Azure datacenters. This encryption ensures customer data confidentiality and integrity. For more information, see [Azure customer data protection](/azure/security/fundamentals/protection-customer-data).
 
 ### Manage keys and secrets
 
@@ -51,7 +51,7 @@ To control and manage disk encryption keys and secrets for enterprise-scale for 
 
 Azure Defender provides security alerts and advanced threat protection for virtual machines, SQL databases, containers, web applications, virtual networks, and more.
 
-When you enable Azure Defender from the Pricing & settings area of Azure Security Center, the following defender plans are enabled simultaneously and provide comprehensive defenses for the compute, data, and service layers of your environment:
+When you enable Azure Defender from the pricing and settings area of Azure Security Center, the following Azure Defender plans are enabled simultaneously and provide comprehensive defenses for the compute, data, and service layers of your environment:
 
 - [Azure Defender for servers](/azure/security-center/defender-for-servers-introduction?branch=master)
 - [Azure Defender for App Service](/azure/security-center/defender-for-app-service-introduction)
@@ -66,14 +66,14 @@ When you enable Azure Defender from the Pricing & settings area of Azure Securit
 These plans are explained separately in the Security Center documentation.
 
 > [!IMPORTANT]
-> Where Azure Defender is available for platform as a service (PaaS) services, we recommend enabling this feature by default, especially for Azure Data Lake Storage accounts. See [Introduction to Azure Defender](/azure/security-center/azure-defender) and [Configure Azure Defender for Storage](/azure/storage/common/azure-defender-storage-configure?tabs=azure-security-center) for further details.
+> Where Azure Defender is available for platform as a service (PaaS) offerings, you should enable this feature by default, especially for Azure Data Lake Storage accounts. For more information, see [Introduction to Azure Defender](/azure/security-center/azure-defender) and [configure Azure Defender for Storage](/azure/storage/common/azure-defender-storage-configure?tabs=azure-security-center).
 
-### Advanced threat protection
+### Microsoft Defender for Identity
 
-Advanced Threat Protection is part of the advanced data security offering, which is a unified package for advanced security capabilities. Advanced Threat Protection can be accessed and managed via the Azure portal.
+Microsoft Defender for Identity is part of the advanced data security offering, which is a unified package for advanced security capabilities. Microsoft Defender for Identity can be accessed and managed via the Azure portal.
 
->[!IMPORTANT]
->Where Advanced Threat Protection is available for PaaS Services, we recommend enabling this feature by default.
+> [!IMPORTANT]
+> Enable Microsoft Defender for Identity by default whenever it's available for the PaaS services you use.
 
 ### Enable Azure Sentinel
 

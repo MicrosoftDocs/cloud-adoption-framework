@@ -6,7 +6,7 @@ ms.author: jepeach
 ms.date: 09/21/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.custom: think-tank, e2e-data
+ms.custom: think-tank, e2e-data-management
 ---
 
 # Lamna Healthcare scenario for data management and analytics in Azure
@@ -29,7 +29,7 @@ Lamna will implement enterprise-scale for analytics and AI as their solution for
 
 ### Data management zone
 
-A critical concept for every enterprise-scale for analytics and AI implementation is having one Data Management Zone. This subscription contains resources that will be shared across all of the landing zones. This includes shared networking components, like a firewall and private DNS zones. It also includes resources for data and cloud governance, such as Azure Policy and Azure Purview.
+A critical concept for every enterprise-scale for analytics and AI implementation is having one data management zone. This subscription contains resources that will be shared across all of the landing zones. This includes shared networking components, like a firewall and private DNS zones. It also includes resources for data and cloud governance, such as Azure Policy and Azure Purview.
 
 ### Patient data landing zone
 
@@ -47,11 +47,11 @@ Like all business data, there's an element of sensitivity to these datasets, and
 
 The operations landing zone has a data integration that loads the healthcare provider data from Lamna's on-premises operations system. Like all data integrations, this lands the data in the cloud as-is and doesn't apply transformations to the datasets.
 
-#### Data Products
+#### Data products
 
 Analysts throughout Lamna need access to data to build reports for the business. However, much of the data is far too sensitive for a broad audience. To safely provide access to the highly sensitive patient data, the operations team created a **Tokenized patients dataset** product in their landing zone. Using Azure Data Factory, they copy patient data from the patients landing zone. However, the team was careful to remove or tokenize any columns containing personally identifiable information. This allows analysts to use the data for business purposes without exposing any personal details of the patients.
 
-### Marketing Data Landing Zone
+### Marketing data landing zone
 
 The marketing group is focused on obtaining new clients and managing Lamna's position within the marketplace. Their marketing landing zone is primarily used to store and analyze external datasets about the markets they serve and the healthcare industry.
 

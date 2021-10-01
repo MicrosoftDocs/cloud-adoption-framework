@@ -6,9 +6,11 @@ ms.author: mboswell
 ms.date: 07/19/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
+
+<!-- cspell:ignore datamanagement datalandingzone -->
 
 # Identity and access management for data management and analytics
 
