@@ -157,8 +157,6 @@ items:
         items:
         - name: Data ingestion
           href: ./best-practices/data-ingestion.md
-        - name: SAP data ingestion
-          href: ./best-practices/sap-data-ingestion.md
         - name: Automated ingestion pattern
           href: ./best-practices/automated-ingestion-pattern.md
       - name: SAP Implementation
