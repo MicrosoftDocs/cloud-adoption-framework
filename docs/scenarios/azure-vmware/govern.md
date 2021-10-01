@@ -26,29 +26,29 @@ A required ExpressRoute circuit can connect to Azure Cloud Services with a dedic
 
 All provisioned private clouds have vCenter Server, vSAN, vSphere, and NSX-T, so you can migrate workloads from your on-premises environments, deploy new virtual machines (VMs), and consume Azure services from your private clouds.
 
- VMware vSphere clusters reside on top of "share nothing" hyper-converged, bare-metal infrastructure. Azure VMware cluster architecture is dedicated and isolated - meaning that networking, storage, or compute is not shared with any other tenant. VSphere clusters are managed by Microsoft to meet performance, availability, security, and compliance requirements, at scale in Azure, providing unified management, networking, and operational controls.
+VMware vSphere clusters reside on top of "share nothing" hyper-converged, bare-metal infrastructure. Azure VMware cluster architecture is dedicated and isolated - meaning that networking, storage, or compute is not shared with any other tenant. VSphere clusters are managed by Microsoft to meet performance, availability, security, and compliance requirements, at scale in Azure, providing unified management, networking, and operational controls.
 
-Because Azure VMware Solution run hybrid workloads across on-premises and private cloud, unified operations is the best approach to providing a single pane of glass for incrementally deploying required governance and operational management controls. Read [Introduction to unified operations](/azure/cloud-adoption-framework/scenarios/hybrid/unified-operations) to get started.
+Because Azure VMware Solution run hybrid workloads across on-premises and private cloud, unified operations is the best approach to providing a single pane of glass for incrementally deploying required governance and operational management controls. Read the [introduction to unified operations](/azure/cloud-adoption-framework/scenarios/hybrid/unified-operations) to get started.
 
 ## Unified security and compliance
 
-On Azure, you can run, manage, and secure applications across VMware environments with a common operating framework. Use your existing VMware tools, like VMware vSphere, vSAN, and vCenter, combined with the scale, performance, and innovation of Azure. In terms of access and security, Azure VMware Solution private clouds use vSphere role-based access control for enhanced security. You can integrate vSphere SSO LDAP capabilities with Azure Active Directory. Read more about [Access and Identity concepts](/azure/azure-vmware/concepts-identity).
+On Azure, you can run, manage, and secure applications across VMware environments with a common operating framework. Use your existing VMware tools, like VMware vSphere, vSAN, and vCenter, combined with the scale, performance, and innovation of Azure. In terms of access and security, Azure VMware Solution private clouds use vSphere role-based access control for enhanced security. You can integrate vSphere SSO LDAP capabilities with Azure Active Directory. Read more about [access and identity concepts](/azure/azure-vmware/concepts-identity).
 
-Using a unified operations approach that uses familiar Azure tools to manage and govern your VMware hybrid workloads across on-premises and private cloud. Monitor, manage, and protect virtual machines in a hybrid environment (Azure, Azure VMware Solution, and on-premises). Read more about how you can [Start small with basic VM management](/azure/architecture/hybrid/azure-arc-hybrid-config?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json).
+Using a unified operations approach that uses familiar Azure tools to manage and govern your VMware hybrid workloads across on-premises and private cloud. Monitor, manage, and protect virtual machines in a hybrid environment (Azure, Azure VMware Solution, and on-premises). Read more about how you can [start small with basic VM management](/azure/architecture/hybrid/azure-arc-hybrid-config?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json).
 
 ### Integration with Azure-native services
 
 Integrating with Azure-native services in your Azure VMware Solution private cloud will ensure that your Azure VMware workloads benefit from unified operations best practices for governance guardrails.
 
-**Unified VM management:** single pane of glass to manage vSphere-based and Azure native VMs, with uniform identities, access control, and monitoring.
+**Unified VM management:** Single pane of glass to manage vSphere-based and Azure native VMs, with uniform identities, access control, and monitoring.
 
- **Native Azure integration:** connect to Azure services endpoints. For example, deploy Azure Active Directory as VMware vCenter SSO identity source.
+ **Native Azure integration:** Connect to Azure services endpoints. For example, deploy Azure Active Directory as VMware vCenter SSO identity source.
 
-**Single point of support:** Azure VMware Solution is Microsoft-developed, operated, and supported. Microsoft is first and only contact and coordinates support with VMware as required.
+**Single point of support:** Azure VMware Solution is microsoft-developed, operated, and supported. Microsoft is first and only contact and coordinates support with VMware as required.
 
-**Unified licensing and consumption:** avoid unnecessary complexity and take confidence in managing a single vendor for licensing and resource consumption.
+**Unified licensing and consumption:** Avoid unnecessary complexity and take confidence in managing a single vendor for licensing and resource consumption.
 
-**Azure Hybrid Use Benefits:** maximize the value of existing Windows Server and SQL Server licenses. Save up to 80 percent with Azure Hybrid Use Benefits and Azure Reserved VM Instances.
+**Azure Hybrid Use Benefits:** Maximize the value of existing Windows Server and SQL Server licenses. Save up to 80 percent with Azure hybrid use benefits and Azure Reserved VM Instances.
 
 ![Diagram of on-premises environment and Azure private cloud network services.](../azure-vmware/media/on-premises-environments-Azure-private-clouds-networks-services.png)
 
@@ -63,8 +63,8 @@ Azure Resource Manager (ARM) is the operating system of Azure that, stretching a
 - [Integrate Azure NetApp Files with Azure VMware Solution](/azure/azure-vmware/netapp-files-with-azure-vmware-solution)
 - [Protect web apps on Azure VMware Solution with Azure Application Gateway](/azure/azure-vmware/protect-azure-vmware-solution-with-application-gateway)
 - [Deploy Traffic Manager to balance Azure VMware Solution workloads](/azure/azure-vmware/deploy-traffic-manager-balance-workloads)
-- [Configure Azure Alerts in Azure VMware Solution](/azure/azure-vmware/configure-alerts-for-azure-vmware-solution)
-- [Attach disk pools to Azure VMware Solution hosts (Preview)](/azure/azure-vmware/attach-disk-pools-to-azure-vmware-solution-hosts)
+- [Configure Azure alerts in Azure VMware Solution](/azure/azure-vmware/configure-alerts-for-azure-vmware-solution)
+- [Attach disk pools to Azure VMware Solution hosts (preview)](/azure/azure-vmware/attach-disk-pools-to-azure-vmware-solution-hosts)
 - [Back up VMware VMs with Azure Backup Server](/azure-docs/articles/backup/backup-azure-backup-server-vmware.md)
 - [Prepare Azure Site Recovery resources for disaster recovery of Azure VMware Solution VMs](/azure/site-recovery/avs-tutorial-prepare-azure?context=/azure/azure-vmware/context/context)
 
@@ -87,12 +87,12 @@ These are the main focus areas of governance in an initial Azure VMware Solution
 
 - [An introduction to Azure Automation](/azure/automation/automation-intro)
 - [Azure subscription and service limits, quotas, and constraints](/azure/azure-resource-manager/management/azure-subscription-service-limits)
-- [Perform actions using Backup center](/azure/backup/backup-center-overview)
+- [Perform actions using Azure Backup Center](/azure/backup/backup-center-overview)
 - [Understand roles in Azure Active Directory](/azure/active-directory/roles/concept-understand-roles)
 - [What is Azure AD Privileged Identity Management?](/azure/active-directory/privileged-identity-management/pim-configure)
 - [Azure Monitor overview](/azure/azure-monitor/overview)
 - [Create a Log Analytics workspace in the Azure portal](/azure/azure-monitor/logs/quick-create-workspace)
-- [Extended Security Updates](/lifecycle/faq/extended-security-updates)
+- [Extended security updates](/lifecycle/faq/extended-security-updates)
 - [Security alerts and incidents in Azure Security Center](/azure/security-center/security-center-alerts-overview)
 - [Identity governance and administration solutions](/azure/active-directory/governance/identity-governance-overview)
 
@@ -114,9 +114,9 @@ For more information on how to expand your hybrid governance, see:
 
 VMware HCX Enterprise can speed up your organization's hybrid cloud adoption with enhanced VMware-native features that operate seamlessly on Azure.
 
-**Accelerate cloud adoption** create application mobility across any vSphere 5.0+ version deployed on-premises and Azure VMware Solution
+**Accelerate cloud adoption** create application mobility across any vSphere 5.0+ version deployed on-premises and Azure VMware Solution.
 
-**Hybrid Cloud Extension** deliver multisite, WAN optimized, secured, load balanced, traffic engineered network extension
+**HCX** delivers multisite, WAN optimized, secured, load-balanced, traffic-engineered network extension.
 
 **Replicated Assisted vMotion** execute large scale bulk migrations with Zero-downtime using the HCX Interconnect appliance along with replication and vMotion technologies
 

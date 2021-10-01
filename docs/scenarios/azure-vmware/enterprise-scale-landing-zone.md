@@ -25,7 +25,7 @@ Enterprise-scale for Azure VMware Solution provides these assets to support your
 - Landing zone architecture
 - An implementation that includes:
   - A deployable reference to create the environment for your Azure VMware Solution deployment
-  - A Microsoft-approved Azure VMware Solution reference implementation to test the deployed environment
+  - A microsoft-approved Azure VMware Solution reference implementation to test the deployed environment
 
 ## Prerequisites
 
