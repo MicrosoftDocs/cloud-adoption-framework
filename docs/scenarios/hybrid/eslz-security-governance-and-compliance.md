@@ -27,9 +27,9 @@ As your hybrid and multicloud resources become part of Azure Resource Manager, t
 - **Agent Management:** The Connected Machine Agent plays a critical role in your hybrid operations as it enables you to manage your Windows and Linux machines hosted outside of Azure and enforce governance policies, it is important to implement solutions that keep track of unresponsive agents.
 - **Agent Security permissions:** Secure access to the Connected Machine agent
 - **Managed Identity:** Use a managed identity with Azure Arc-enabled servers and define a strategy for identifying which applications running on Arc-enabled servers can use the Azure service assigned identity to request an Azure AD token.
-- **Secret and certificate management:** Enable Key Vault to protect security principal accounts and encryption keys. Consider using Azure Key Vault for certificate management on your Arc-enabled servers
+- **Secret and certificate management:** Enable Key Vault to protect security principle accounts and encryption keys. Consider using Azure Key Vault for certificate management on your Arc-enabled servers
 - **Policy management and reporting:** Define a governance plan for your hybrid servers and machines that translates into Azure Policies and remediation tasks.
-- **Data Residency:** Consider which Azure region you wish your Azure Arc-enabled machines to be provisioned into, and understand the [metadata that is collected](https://docs.microsoft.com/en-us/azure/azure-arc/servers/data-residency) from theses machines.
+- **Data Residency:** Consider which Azure region you wish your Azure Arc-enabled servers to be provisioned into, and understand the [metadata that is collected](https://docs.microsoft.com/en-us/azure/azure-arc/servers/data-residency) from theses machines.
 - **Log management strategy:** Plan for metrics and log collection of your hybrid resources into a Log Analytics workspace for further analysis and auditing.
 - **Threat protection and cloud security posture management:** Introduce controls to detect security misconfigurations and track compliance. Also, use [Azure's intelligence](https://docs.microsoft.com/en-us/azure/sentinel/overview) to protect your hybrid workloads against threats. [Enable Azure Security Center](https://docs.microsoft.com/en-us/azure/security-center/security-center-get-started) for all subscriptions containing Azure Arc-enabled servers for security baseline monitoring, security posture management and threat protection.
 - **Change Tracking and Inventory:** Track changes on the operating system, application files and registry to identify operational and security issues on your on-premises and other clouds environments.
@@ -107,6 +107,7 @@ Azure Security Center provides an unified security-management platform segmented
 - Implement an Azure Policy to make sure all resources are compliant and its security data is collected into the Log Analytics workspaces.
 - Enable Azure Defender for all subscriptions and use Azure Policy to ensure compliance.
 - Leverage security information and event management integration with Azure Security Center and Azure Sentinel.
+- Protect your endpoints with Azure Security Center's integration with Microsoft Defender for Endpoint.
 
 [Connect your non-Azure machines to Security Center](https://docs.microsoft.com/en-us/azure/security-center/quickstart-onboard-machines?pivots=azure-portal)
 
