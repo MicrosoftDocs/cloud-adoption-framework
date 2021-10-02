@@ -20,17 +20,17 @@ This framework is built collaboratively with customers, partners, and internal M
 
 ### Data management and analytics scenario
 
-This release of the Cloud Adoption Framework provides considerations to help you prepare for [data management and analytics in the cloud](../scenarios/data-management/index.md) . 
+This release of the Cloud Adoption Framework provides considerations to help you prepare for [data management and analytics in the cloud](../scenarios/data-management/index.md).
 
-This scenario focuses on enabling a few targeted outcomes: 
+This scenario focuses on enabling a few targeted outcomes:
 
-- Mature your analytics, AI/ML, and IoT capabilities in the cloud
-- Establish appropriate data governance across all data initiatives to move forward with confidence
-- Minimize technical debt by considering Well-Architected principles across all data workloads
-- Automate all three of the above with the codebase for Enterprise-Scale for Analytics
-- Quickly access skilling resources in documentation or learning modules for the various Azure services required across this scenario
+- Mature your analytics, AI and machine learning, and IoT capabilities in the cloud.
+- Establish appropriate data governance across all data initiatives to move forward with confidence.
+- Minimize technical debt by considering well-architected principles across all data workloads.
+- Automate all three of the above with the codebase for enterprise-scale for analytics.
+- Quickly access skilling resources in documentation or learning modules for the various Azure services required across this scenario.
 
-Get started with this scenario using the links below:
+Get started with this scenario using the following links:
 
 | Article | Description |
 |--|--|
@@ -43,11 +43,11 @@ Get started with this scenario using the links below:
 | [Govern your data estate](../scenarios/data-management/govern.md) | This article reviews a data governance solution to surround the specific data entities and data subject areas with people, processes, policies, and technology.
 | [Secure your data estate](../scenarios/data-management/secure.md) | Best practices to improve security of your entire data estate.
 | [Organize people and teams](../scenarios/data-management/organize.md) |Learn about how to organize data operations team members for the data management and analytics scenario in Azure.
-| [Well-architected framework for data workloads](../scenarios/data-management/well-architected-framework.md) | In this article, we review how you can apply principals of the Well-Architected Framework, to each of the data workloads within your data estate to minimize technical debt from the beginning.
+| [Azure Well-Architected Framework for data workloads](../scenarios/data-management/well-architected-framework.md) | In this article, we review how you can apply principals of the Azure Well-Architected Framework, to each of the data workloads within your data estate to minimize technical debt from the beginning.
 
 ### Strategic Migration Assessment and Readiness Tool (SMART)
 
-We've added an article to help you use the [Strategic Migration Assessment and Readiness Tool (SMART)](../plan/smart-assessment.md). This assessment can help you find out what you need to do to prepare for your Azure migration. 
+We've added an article to help you use the [Strategic Migration Assessment and Readiness Tool (SMART)](../plan/smart-assessment.md). This assessment can help you find out what you need to do to prepare for your Azure migration.
 
 ## July 2021
 
@@ -144,13 +144,13 @@ The critical design area of [network topology and connectivity](../ready/azure-b
 
 Companies often miss important steps in their cloud adoption journey. The new [cloud adoption antipatterns](../antipatterns/antipatterns-to-avoid.md) guidance highlights common customer pain points, what skipped step led to that pain, and the fastest path to recovery. The antipatterns are distributed throughout each methodology, but a top 10 list is available in the getting started section of the framework.
 
-### AI + Machine Learning
+### AI + machine learning
 
 When planning an Azure Machine Learning deployment for an enterprise environment, there are common decision points that affect how you create the workspaces. We've published a new article, [Organize and set up Azure Machine Learning environments](../ready/azure-best-practices/ai-machine-learning-resource-organization.md), that highlights these decision areas and the benefits of each:
 
-- **Team structure:** How your Machine Learning teams are organized and collaborate on a project's given use case and data segregation, or cost management requirements.
+- **Team structure:** How your machine learning teams are organized and collaborate on a project's given use case and data segregation, or cost management requirements.
 - **Environments:** The environments used as part of your development and release workflow to segregate development from production.
-- **Region:** The location of your data and the audience you need to serve your Machine Learning solution to.
+- **Region:** The location of your data and the intended audience for your machine learning solution.
 
 We added a reference implementation example to help illustrate the deployment of Azure Machine Learning in a larger setting. It outlines how the organization 'Contoso' set up Azure Machine Learning given their organizational constraints, reporting, and budgeting requirements.
 

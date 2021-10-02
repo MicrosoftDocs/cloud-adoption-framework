@@ -26,7 +26,7 @@ When customers deploy their first workloads to the cloud, they consider it as a 
 
 A company wants to modernize its online shop to improve its user experience. The modernization should be done by moving the online shop website and the underlying inventory database to Azure. Because dependencies exist between the inventory database and the company's SAP system, those systems need to communicate. So, the company needs to build up a hybrid cloud.
 
-The online shop team is innovative, so it begins modernizing the application, but it doesn't consider security requirements because of the hybrid connection. When it tests the application, it finds that the IT security team doesn't allow communication within Azure and on-premises systems, because security and compliance requirements aren't met.
+The online shop team is innovative, so it begins modernizing the application, but it doesn't consider security requirements because of the hybrid connection. When the team tests the application, it finds that the IT security team doesn't allow communication within Azure and on-premises systems, because security and compliance requirements aren't met.
 
 ### Preferred outcome: Establish security and compliance guardrails
 
@@ -34,7 +34,7 @@ Before you shift workloads to the cloud, put security and compliance guardrails 
 
 ## Antipattern: Migrate, modernize, or innovate without an assessment
 
-When a company considers a migration or modernization project, it needs to understand potential application and server dependencies so that it can plan more accurately. In application innovation scenarios, a company experiences more success by using architectural design sessions and reference architectures instead of aimless engineering efforts.
+A company considering a migration or modernization project needs to understand potential application and server dependencies to enable more accurate planning. In application innovation scenarios, a company experiences more success by using architectural design sessions and reference architectures instead of aimless engineering efforts.
 
 ### Example: Cause downtime by migrating without planning thoroughly
 
