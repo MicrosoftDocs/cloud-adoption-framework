@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Azure Machine Learning best practices for enterprise security
 
-This article explains security best practices for planning or managing a secure Azure Machine Learning deployment. The best practices come from Microsoft and customer experience with Azure Machine Learning. Each guideline explains the practice and its rationale. The article also provides links to how-to and reference documentation.
+This article explains security best practices for planning or managing a secure Azure Machine Learning deployment. Best practices come from Microsoft and customer experience with Azure Machine Learning. Each guideline explains the practice and its rationale. The article also provides links to how-to and reference documentation.
 
 ## Recommended network security architecture
 
@@ -34,7 +34,7 @@ The virtual network also contains a *private endpoint* for your Machine Learning
 
 - Machine Learning
 - Azure Active Directory (Azure AD)
-- Container Registry, and specific registries that Microsoft maintains
+- Azure Container Registry, and specific registries that Microsoft maintains
 - Azure Front Door
 - Azure Resource Manager
 - Azure Storage
@@ -45,13 +45,13 @@ Remote clients connect to the virtual network by using either Azure ExpressRoute
 
 When designing virtual networks, subnets, and private endpoints, consider the following requirements:
 
-- In general, create separate subnets for Training and Scoring, and use the Training subnet for all private endpoints.
+- In general, create separate subnets for training and scoring, and use the training subnet for all private endpoints.
 
-- IP addressing: Compute instances need one private IP each. Compute clusters need one private IP per node. AKS clusters need many private IP addresses, which are described in [Plan IP addressing for your AKS cluster](/azure/aks/configure-azure-cni#plan-ip-addressing-for-your-cluster). A separate subnet for at least AKS helps prevent IP address exhaustion.
+- For IP addressing, compute instances need one private IP each. Compute clusters need one private IP per node. AKS clusters need many private IP addresses, as described in [Plan IP addressing for your AKS cluster](/azure/aks/configure-azure-cni#plan-ip-addressing-for-your-cluster). A separate subnet for at least AKS helps prevent IP address exhaustion.
 
-- The compute resources in the Training and Scoring subnets need to access the Storage account, Key Vault, and Container Registry. Create private endpoints for the Storage account, Key Vault, and Container Registry.
+- The compute resources in the training and scoring subnets need to access the storage account, the key vault, and the container registry. Create private endpoints for the storage account, the key vault, and the container registry.
 
-- Machine Learning workspace default storage needs two private endpoints, one for Azure Blob storage and another for Azure File storage.
+- Machine Learning workspace default storage needs two private endpoints, one for Azure Blob Storage and another for Azure File Storage.
 
 - If you use Azure Machine Learning studio, the workspace and storage private endpoints should be in the same subnet.
 
@@ -66,15 +66,15 @@ Private IP addresses minimize your Azure resources' exposure to the internet. Ma
 | Workspace | Private endpoint | [Configure a private endpoint for an Azure Machine Learning workspace](/azure/machine-learning/how-to-configure-private-link?tabs=python)
 | **Associated resources** |
 | Storage | Private endpoint | [Secure Azure Storage accounts with service endpoints](/azure/machine-learning/how-to-secure-workspace-vnet#secure-azure-storage-accounts-with-service-endpoints) |
-| KeyVault | Private endpoint | [Secure Azure Key Vault](/azure/machine-learning/how-to-secure-workspace-vnet#secure-azure-key-vault) |
-| Container Registry | Private endpoint | [Enable Azure Container Registry](/azure/machine-learning/how-to-secure-workspace-vnet#enable-azure-container-registry-acr) |
+| Key Vault | Private endpoint | [Secure Azure Key Vault](/azure/machine-learning/how-to-secure-workspace-vnet#secure-azure-key-vault) |
+|  Container Registry | Private endpoint | [Enable Azure Container Registry](/azure/machine-learning/how-to-secure-workspace-vnet#enable-azure-container-registry-acr) |
 | **Training resources** |
 | Compute instance | Behind virtual network with public IP | [Secure training environments](/azure/machine-learning/how-to-secure-training-vnet?tabs=azure-studio#compute-instance) |
 | Compute cluster | Behind virtual network with public IP | [Secure training environments](/azure/machine-learning/how-to-secure-training-vnet?tabs=azure-studio%2Cipaddress#compute-cluster) |
 | **More hosting resources** |
 | Kubernetes cluster | Private endpoint | [Secure inferencing environments](/azure/machine-learning/how-to-secure-inferencing-vnet?tabs=python#secure-vnet-traffic) |
-| Machine Learning Load Balancer on AKS | Private load balancer | [Secure inferencing environments](/azure/machine-learning/how-to-secure-inferencing-vnet?tabs=python#secure-vnet-traffic) |
-| Azure Container Instance | Private endpoint | **Note:** You can't use a private endpoint with Container Instance if the Container Registry also uses a private endpoint.|
+| Machine Learning load balancer on AKS | Private load balancer | [Secure inferencing environments](/azure/machine-learning/how-to-secure-inferencing-vnet?tabs=python#secure-vnet-traffic) |
+| Azure Container Instances | Private endpoint | **Note:** You can't use a private endpoint with Container Instances if the container registry also uses a private endpoint.|
 
 ### Control virtual network inbound and outbound traffic
 
@@ -84,9 +84,9 @@ Use a firewall or Azure network security group (NSG) to control virtual network 
 
 To ensure that your private endpoint can access your Machine Learning workspace, take the following steps:
 
-1. Make sure you have access to your virtual network using a VPN connection, ExpressRoute, or Jumpbox virtual machine (VM) with Azure Bastion access. The public user can't access the Machine Learning workspace with the private endpoint, because it can be accessed only from your virtual network. For more information, see [Secure your workspace with virtual networks](/azure/machine-learning/how-to-secure-workspace-vnet#securely-connect-to-your-workspace).
+1. Make sure you have access to your virtual network using a VPN connection, ExpressRoute, or jumpbox virtual machine (VM) with Azure Bastion access. The public user can't access the Machine Learning workspace with the private endpoint, because it can be accessed only from your virtual network. For more information, see [Secure your workspace with virtual networks](/azure/machine-learning/how-to-secure-workspace-vnet#securely-connect-to-your-workspace).
 
-1. Make sure you can resolve the workspace fully qualified domain names (FQDNs) with your private IP address. If you use your own domain name system (DNS) server or a [centralized DNS infrastructure](/azure/cloud-adoption-framework/ready/azure-best-practices/private-link-and-dns-integration-at-scale#private-link-and-dns-integration-in-hub-and-spoke-network-architectures), you need to configure a DNS forwarder. For more information, see [How to use your workspace with a custom DNS server](/azure/machine-learning/how-to-custom-dns).
+1. Make sure you can resolve the workspace fully qualified domain names (FQDNs) with your private IP address. If you use your own Domain Name System (DNS) server or a [centralized DNS infrastructure](/azure/cloud-adoption-framework/ready/azure-best-practices/private-link-and-dns-integration-at-scale#private-link-and-dns-integration-in-hub-and-spoke-network-architectures), you need to configure a DNS forwarder. For more information, see [How to use your workspace with a custom DNS server](/azure/machine-learning/how-to-custom-dns).
 
 ## Workspace access management
 
@@ -96,7 +96,7 @@ When defining Machine Learning identity and access management controls, you can 
 
 In a self-service pattern, data scientists can create and manage workspaces. This pattern is best suited for proof-of-concept situations that require flexibility to try out different configurations. The disadvantage is that data scientists need the expertise to provision Azure resources. This approach is less suitable when strict control and auditability of resource use and data access are required.
 
-1. Define Azure Policies to set safeguards for resource provisioning and usage, such as allowed cluster sizes and VM types.
+1. Define Azure policies to set safeguards for resource provisioning and usage, such as allowed cluster sizes and VM types.
 
 1. Create a resource group for holding the workspaces, and grant data scientists a Contributor role in the resource group.
 
@@ -119,7 +119,7 @@ The disadvantage is that data access isn't compartmentalized or restricted on pe
 1. Create compute resources with system-assigned managed identities enabled.
 1. When a data scientist needs access to the data for a given project, grant the compute managed identity read access to the data.
 
-1. Grant the compute managed identity access to any other required resources, such as a Container Registry with custom Docker images for training.
+1. Grant the compute managed identity access to any other required resources, such as a container registry with custom Docker images for training.
 
 1. Also grant the workspace's managed identity read-access role on the data, to enable data preview.
 
@@ -138,19 +138,19 @@ The disadvantage of this approach is that sharing assets across projects can be 
 1. Create the workspace
 
 1. Identify data storage instances required for the project, create a user-assigned managed identity, and grant the identity read access to the storage.
-   
+
    Optionally, grant the workspace's managed identity access to data storage to allow data preview. You can omit this access for sensitive data not suitable for preview.
 
 1. Create credential-less data stores for the storage resources.
 
-1. Create compute resources within the workspace, and assign the managed identity to the compute resources. 
+1. Create compute resources within the workspace, and assign the managed identity to the compute resources.
 
-1. Grant the compute managed identity access to any other required resources, such as a Container Registry with custom Docker images for training.
+1. Grant the compute managed identity access to any other required resources, such as a container registry with custom Docker images for training.
 
 1. Grant data scientists working on the project a role on the workspace.
 
    By using Azure role-based access control (RBAC), you can restrict data scientists from creating new datastores or new compute resources with different managed identities. This practice prevents access to data not specific to the project.
-   
+
    Optionally, to simplify project membership management, you can create an Azure AD security group for project members and grant the group access to the workspace.
 
 ### Azure Data Lake Storage with credential passthrough
@@ -186,7 +186,7 @@ Machine Learning data at rest has two data sources:
 - Your storage has all your data, such as training data and trained model data, except for the metadata. You're responsible for your storage encryption.
 
 - Azure Cosmos DB contains your metadata, including run history information like experiment name and experiment submission date and time. In most workspaces, Azure Cosmos DB is in the Microsoft subscription and encrypted by a Microsoft-managed key.
-  
+
   If you want to encrypt your metadata by using your own key, you can use a customer-managed key workspace. The downside is that you need to have Azure Cosmos DB in your subscription and pay its cost. For more information, see [Data encryption with Azure Machine Learning](/azure/machine-learning/concept-data-encryption#azure-cosmos-db).
 
 For information on how Azure Machine Learning encrypts data in transit, see [Encryption in transit](/azure/machine-learning/concept-data-encryption#encryption-in-transit).
@@ -197,22 +197,22 @@ When you deploy Machine Learning resources, set up logging and auditing controls
 
 - Machine learning practitioners or operations teams want to **monitor machine learning pipeline health**. These observers need to understand issues in scheduled execution, or problems with data quality or expected training performance. You can build Azure dashboards that [monitor Azure Machine Learning data](/azure/machine-learning/monitor-azure-machine-learning), or [create event-driven workflows](/azure/machine-learning/how-to-use-event-grid).
 
-- Capacity managers, machine learning practitioners, or operations teams might want to [create a dashboard](/azure/machine-learning/monitor-azure-machine-learning) to **observe compute and quota utilization**. To manage a deployment with multiple Azure ML workspaces, consider creating a central dashboard to understand quota utilization. Quotas are managed on a subscription level, so the environment-wide view is important to drive optimization.
+- Capacity managers, machine learning practitioners, or operations teams might want to [create a dashboard](/azure/machine-learning/monitor-azure-machine-learning) to **observe compute and quota utilization**. To manage a deployment with multiple Azure Machine Learning workspaces, consider creating a central dashboard to understand quota utilization. Quotas are managed on a subscription level, so the environment-wide view is important to drive optimization.
 
 - IT and operations teams can set up [diagnostic logging](/azure/machine-learning/monitor-azure-machine-learning#collection-and-routing) to **audit resource access and altering events** in the workspace.
 
-- Consider creating dashboards that **monitor overall infrastructure health** for Machine Learning and dependent resources such as storage. For example, combining Azure storage metrics with pipeline execution data can help you optimize infrastructure for better performance, or discover problem root causes.
+- Consider creating dashboards that **monitor overall infrastructure health** for Machine Learning and dependent resources such as storage. For example, combining Azure Storage metrics with pipeline execution data can help you optimize infrastructure for better performance, or discover problem root causes.
 
-Azure collects and stores platform metrics and activity logs automatically. You can route the data to other locations by using a diagnostic setting. For observability across several workspace instances, set up diagnostic logging into a centralized Log Analytics workspace. Use Azure Policy to automatically set up logging for new Machine Learning workspaces into this central Log Analytics workspace.
+Azure collects and stores platform metrics and activity logs automatically. You can route the data to other locations by using a diagnostic setting. For observability across several workspace instances, set up diagnostic logging to a centralized Log Analytics workspace. Use Azure Policy to automatically set up logging for new Machine Learning workspaces into this central Log Analytics workspace.
 
 ## Azure Policy
 
 You can enforce and audit the usage of security features on workspaces through Azure Policy. Recommendations include:
 
 - Enforce custom-managed key encryption.
-- Enforce Azure Private Link and Private Endpoint.
+- Enforce Azure Private Link and private endpoints.
 - Enforce private DNS zones.
-- Disable non-Azure AD authentication, such as secure shell (SSH).
+- Disable non-Azure AD authentication, such as Secure Shell (SSH).
 
 For more information, see [Built-in policy definitions for Azure Machine Learning](/azure/machine-learning/policy-reference).
 
@@ -255,8 +255,8 @@ Learn more about Machine Learning security configurations:
 
 Get started with a Machine Learning template-based deployment:
 
-- [Azure Quickstart Templates (microsoft.com)](https://azure.microsoft.com/resources/templates/?resourceType=Microsoft.Machinelearningservices)
-- [Enterprise-Scale Analytics and AI - Data Landing Zone](https://github.com/Azure/data-landing-zone)
+- [Azure quickstart templates (`microsoft.com`)](https://azure.microsoft.com/resources/templates/?resourceType=Microsoft.Machinelearningservices)
+- [Enterprise-scale analytics and AI data landing zone](https://github.com/Azure/data-landing-zone)
 
 Read more articles about architectural considerations for deploying Machine Learning:
 
@@ -266,9 +266,8 @@ Read more articles about architectural considerations for deploying Machine Lear
 
 - See how to manage compute costs and budget across teams and users.
   > [!div class="nextstepaction"]
-  > [Budget, cost, and quota management for Azure ML at organizational scale](optimize-ai-machine-learning-cost.md) 
+  > [Budget, cost, and quota management for Azure Machine Learning at organizational scale](optimize-ai-machine-learning-cost.md)
 
 - Learn about machine learning DevOps (MLOps), which uses a combination of people, process, and technology to deliver robust, reliable, and automated machine learning solutions.
   > [!div class="nextstepaction"]
   > [Machine learning DevOps guide](ai-machine-learning-mlops.md)
-
