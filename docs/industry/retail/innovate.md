@@ -28,9 +28,9 @@ The tools and techniques presented in this article can help you develop innovati
 
 The most important step to innovation is [democratizing data](../../innovate/best-practices/data.md), because data that's accessible *and* understandable across the organization fuels innovation.
 
-This step is accelerated through the use of a common industry-specific data model. Maintaining a common model breaks down silos that stifle communication between applications and limit data democratization. When all employees, processes, and applications operate from a Common Data Model, they can all apply technology to improve products and services.
+This step is accelerated through the use of a common industry-specific data model. Maintaining a common model breaks down silos that stifle communication between applications and limit data democratization. When all employees, processes, and applications operate from a common data model, they can all apply technology to improve products and services.
 
-To extend your Common Data Model, use cloud native tools in Azure:
+To extend your common data model, use cloud native tools in Azure:
 
 - **Microsoft Power BI** to create rich visualizations and build business insights from your data models. Build and share reports and dashboards, and provide notifications, to bring the power of your data to your workforce.
 - **Azure Purview** to classify and add metadata to data sources, making it easier for all users to the find the data they need.
@@ -42,7 +42,7 @@ To extend your Common Data Model, use cloud native tools in Azure:
 
 Learn more about ways you can [build applications](../../innovate/best-practices/apps.md) to extend, improve, and automate your retail processes.
 
-- **Power Platform** empowers citizen developers from business teams across sales, payroll, finance, and so on. Extend your Common Data Model by empowering teams to create their own Power Apps and Power Automate solutions.
+- **Power Platform** empowers citizen developers from business teams across sales, payroll, finance, and so on. Extend your common data model by empowering teams to create their own Power Apps and Power Automate solutions.
 - **Intelligent experiences** build modern applications in the cloud with web apps or serverless functions. Infuse intelligence into the applications with speech, text, vision, and chat bots.
 
 ## Interact on devices
