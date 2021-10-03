@@ -1,6 +1,6 @@
 ---
 title: Azure landing zones for modern application platforms
-description: Describe the scenario's impact on Azure landing zone design
+description: Learn about Azure landing zones for modern application platforms.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 03/01/2021
@@ -9,6 +9,8 @@ ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank, e2e-aks
 ---
+
+<!-- cspell:ignore cust -->
 
 # Azure landing zones for modern application platforms
 
@@ -60,7 +62,7 @@ Once the core AKS landing zone is deployed and ready for further application dep
 
 Depending on your deployment pipeline and your container registry, you have two options for adding the application platform overlays:
 
-- The overlay installation can be included in the container images in your Container Registry standardizing the application platform deployment with the container deployment.
+- The overlay installation can be included in the container images in your container registry standardizing the application platform deployment with the container deployment.
 - Alternatively, the overlay can be deployed during your DevOps pipeline adding the runtime to an existing instance of your container hosts.
 
 The choice of these two options depends on host operations practices and the degree a variability in application runtimes across your portfolio of workloads.
