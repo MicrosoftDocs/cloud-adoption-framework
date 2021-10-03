@@ -18,13 +18,13 @@ When determining development, training, and compute instances for your machine l
 
 Reference the following diagram to understand development and training for your machine learning model:
 
-[![A development and training diagram.](./media/dev-and-training.png)](./media/dev-and-training.png#lightbox)
+[![A diagram showing development and training for a machine learning model.](./media/dev-and-training.png).](./media/dev-and-training.png#lightbox)
 
 ## Compute instances for your machine learning model
 
 The following diagram can help you to choose compute instances that help your machine learning model to run inference:
 
-[![A diagram that shows inference.](./media/inference.png)](./media/inference.png#lightbox)
+[![A diagram that shows inferencing.](./media/inference.png)](./media/inference.png#lightbox)
 
 ## Next steps
 

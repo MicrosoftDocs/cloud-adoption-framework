@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Governance in the Microsoft Cloud Adoption Framework for Azure
 
-Putting a business in the cloud creates new paradigms for the technologies that support that business. These new paradigms change how those technologies are adopted, managed, and governed. When you can delete and rebuild an entire virtual data center with a line of code that's executed by an unattended process, it's time to rethink traditional approaches. This reasoning is especially true for governance.
+Putting a business in the cloud creates new paradigms for the technologies that support that business. These new paradigms change how those technologies are adopted, managed, and governed. When you can delete and rebuild an entire virtual datacenter with a line of code that's executed by an unattended process, it's time to rethink traditional approaches. This reasoning is especially true for governance.
 
 Cloud governance is an iterative process. For organizations with existing policies that govern on-premises IT environments, cloud governance should complement those policies. The level of corporate policy integration between on-premises and the cloud varies depending on cloud governance maturity and the nature of the digital estate in the cloud. As the cloud estate changes over time, so do cloud governance processes and policies. Use the following exercises to help you start building your initial governance foundation:
 
@@ -28,7 +28,7 @@ Cloud governance is an iterative process. For organizations with existing polici
 
 The governance guide content serves two purposes:
 
-- Provides examples of actionable governance guides that represent common experiences that customers often find. Each example encapsulates business risks, corporate policies for risk mitigation, and design guidance for implementing technical solutions. Although the design guidance is specific to Azure, you can apply other content in the Cloud Adoption Framework documentation in a cloud-agnostic or multi-cloud approach.
+- Provides examples of actionable governance guides that represent common experiences that customers often find. Each example encapsulates business risks, corporate policies for risk mitigation, and design guidance for implementing technical solutions. Although the design guidance is specific to Azure, you can apply other content in the Cloud Adoption Framework documentation in a cloud-agnostic or multicloud approach.
 
 - Helps you create personalized governance solutions that meet various business needs. These needs include the governance of multiple public clouds through detailed guidance on the development of corporate policies, processes, and tooling.
 
@@ -46,4 +46,4 @@ Each section of the Cloud Adoption Framework represents a different specializati
 
 Read the Govern methodology content from start to finish to help you develop a robust cloud governance strategy in parallel with cloud implementation. The guidance walks you through the theory and implementation of this strategy.
 
-For an overview on the theory and quick access to Azure implementation, see the [Cloud governance guides overview](./guides/index.md). By using this guidance, you can start small and iteratively improve your governance needs in parallel with cloud adoption efforts.
+For an overview on the theory and quick access to Azure implementation, see the [cloud governance guides overview](./guides/index.md). By using this guidance, you can start small and iteratively improve your governance needs in parallel with cloud adoption efforts.
