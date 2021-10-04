@@ -116,8 +116,6 @@ Now that the application is in production, how can you optimize your workflow an
 > - Are cross-cutting application concerns abstracted from your application?
 > - Are you able to maintain system and application reliability, while still iterating on new features and versions?
 
-<!-- docutune:casing Consul -->
-
 **Application deployment checklist:**
 
 - **Deploy an API gateway.** An API gateway serves as an entry point to microservices, decouples clients from your microservices, adds another layer of security, and decreases the complexity of your microservices by removing the burden of handling cross-cutting concerns. For more information, see [Use Azure API Management with microservices deployed in Azure Kubernetes Service](/azure/api-management/api-management-kubernetes).
