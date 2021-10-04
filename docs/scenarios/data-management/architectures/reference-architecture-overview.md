@@ -26,11 +26,11 @@ The following architecture examples can help you to adapt the Cloud Adoption Fra
 |Single data landing zone     |[Adatum Corporation](reference-architecture-adatum.md)         |This reference architecture is ideal for customers that have identified a unit of their business that's ready to deploy analytics workloads to Azure. This architecture deploys a single landing zone that can be used by the business unit to manage their data estate. It provides the flexibility to add more landing zones for other business units when they're ready to move to Azure.         |
 |Multiple data landing zones     |[Relecloud](reference-architecture-relecloud.md)         |This reference architecture is relevant to customers that have already implemented a basic version of enterprise-scale for analytics and AI and are now ready to host a new business that modernizes its analytics operations. It demonstrates a more complex scenario with multiple landing zones, data integrations, and data products.         |
 |Highly sensitive data landing zones     |[Lamna Healthcare](reference-architecture-lamna.md)         |This reference architecture is for customers that want to use enterprise-scale for analytics and AI not only for scalability but also to secure their data. It demonstrates how access to sensitive data can be controlled and how appropriately desensitized data can be shared with analysts.         |
-|Financial institution scenario for data mesh     |[Initech](reference-architecture-data-mesh.md)         |This reference architecture is written for customers that want to use enterprise-scale for analytics and AI for scalability and data mesh architectures. It demonstrates a more complex scenario with multiple landing zones, data integrations, and data products.         |
+|Financial institution scenario for data mesh     |[Woodgrove Bank](reference-architecture-data-mesh.md)         |This reference architecture is written for customers that want to use enterprise-scale for analytics and AI for scalability and data mesh architectures. It demonstrates a more complex scenario with multiple landing zones, data integrations, and data products.         |
 
 ## Next steps
 
-- [Single data landing zone scenario at Adatum Corporation](./reference-architecture-adatum.md)
-- [Multiple data landing zones scenario at Relecloud](reference-architecture-relecloud.md)
-- [Highly sensitive data landing zones scenario at Lamna healthcare](reference-architecture-lamna.md)
-- [Financial institution scenario for data mesh at Initech](reference-architecture-data-mesh.md)
+- [Single data landing zone scenario](./reference-architecture-adatum.md)
+- [Multiple data landing zones scenario](reference-architecture-relecloud.md)
+- [Highly sensitive data landing zones scenario](reference-architecture-lamna.md)
+- [Financial institution scenario for data mesh](reference-architecture-data-mesh.md)
