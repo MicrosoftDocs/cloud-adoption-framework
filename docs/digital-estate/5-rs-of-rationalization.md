@@ -20,7 +20,7 @@ The *five Rs of rationalization* listed in this article are a great way to label
 
 ### Myth: It's easy to make rationalization decisions early in the process
 
- Accurate rationalization requires a deep knowledge of the workload and associated assets (applications, infrastructure, and data). Most importantly, accurate rationalization decisions take time. We recommend using an [incremental rationalization process](./rationalize.md#incremental-rationalization).
+Accurate rationalization requires a deep knowledge of the workload and associated assets (applications, infrastructure, and data). Most importantly, accurate rationalization decisions take time. We recommend using an [incremental rationalization process](./rationalize.md#incremental-rationalization).
 
 ### Myth: Cloud adoption has to wait for all workloads to be rationalized
 
