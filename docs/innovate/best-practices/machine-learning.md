@@ -99,7 +99,7 @@ Azure Machine Learning works with other services on the Azure platform, and also
 - **Compute targets such as Azure Kubernetes Service, Azure Container Instances, Azure Databricks, Azure Data Lake Analytics, and Azure HDInsight:** For more information on compute targets, see [What are compute targets?](/azure/machine-learning/concept-compute-target).
 - **Azure Event Grid:** For more information, see [Consume Azure Machine Learning events](/azure/machine-learning/how-to-use-event-grid).
 - **Azure Monitor:** For more information, see [Monitoring Azure Machine Learning](/azure/machine-learning/monitor-azure-machine-learning).
-- **Data stores such as Azure Storage accounts, Azure Data Lake Storage, Azure SQL Database, Azure Database for PostgreSQL, and Azure open datasets:** For more information, see [Access data in Azure Storage services](/azure/machine-learning/how-to-access-data) and [create datasets with Azure open datasets](/azure/machine-learning/how-to-create-register-datasets#create-datasets-with-azure-open-datasets).
+- **Data stores such as Azure Storage accounts, Azure Data Lake Storage, Azure SQL Database, Azure Database for PostgreSQL, and Azure open datasets:** For more information, see [Access data in Azure Storage services](/azure/machine-learning/how-to-access-data) and [Create datasets with Azure open datasets](/azure/machine-learning/how-to-create-register-datasets#create-datasets-with-azure-open-datasets).
 - **Azure Virtual Network:** For more information, see [Secure experimentation and inference in a virtual network](/azure/machine-learning/how-to-network-security-overview).
 - **Azure Pipelines:** For more information, see [Train and deploy machine learning models](/azure/devops/pipelines/targets/azure-machine-learning).
 - **Git repository logs:** For more information, see [Git integration](/azure/machine-learning/concept-train-model-git-integration).
@@ -109,5 +109,5 @@ Azure Machine Learning works with other services on the Azure platform, and also
 
 ## Next steps
 
-- Review machine learning white papers and e-books in the [Azure Machine Learning studio](https://azure.microsoft.com/resources/whitepapers/search/?service=machine-learning-studio), as well as other [machine learning service whitepapers](https://azure.microsoft.com/resources/whitepapers/search/?service=machine-learning-service).
+- Review machine learning white papers and e-books in the [Azure Machine Learning studio](https://azure.microsoft.com/resources/whitepapers/search/?service=machine-learning-studio), as well as other [machine learning service white papers](https://azure.microsoft.com/resources/whitepapers/search/?service=machine-learning-service).
 - Review [AI + machine learning architectures](/azure/architecture/browse/?azure_categories=ai-machine-learning).

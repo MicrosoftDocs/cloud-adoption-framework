@@ -36,7 +36,7 @@ Citizen developers are users who create new business applications using developm
 
 ## Intelligent experiences
 
-Intelligent experiences combine the speed and scale of modern web applications with the intelligence of Cognitive Services and bots. Individually, these technologies might be sufficient to meet your customers' needs. When properly combined, they broaden the spectrum of needs that can be met through a digital experience, while helping to contain application development costs.
+Intelligent experiences combine the speed and scale of modern web applications with the intelligence of cognitive services and bots. Individually, these technologies might be sufficient to meet your customers' needs. When properly combined, they broaden the spectrum of needs that can be met through a digital experience, while helping to contain application development costs.
 
 ### Modern web apps
 

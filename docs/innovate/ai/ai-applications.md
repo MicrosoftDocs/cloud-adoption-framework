@@ -47,7 +47,7 @@ To get started, first familiarize yourself with the various categories and servi
 
 ## AI agents
 
-The Microsoft Azure AI platform aims to empower developers to innovate and accelerate their projects. For conversational AI, Azure offers the Azure Bot Service and Bot Framework SDK and tools to enable developers to build rich conversational experiences. Additionally, developers can use Azure Cognitive Services like Language Understanding (LUIS), QnA Maker, and Speech service to add the abilities for chatbots to understand and speak with their end users.
+The Microsoft Azure AI platform aims to empower developers to innovate and accelerate their projects. For conversational AI, Azure offers the Azure Bot Service and Bot Framework SDK and tools to enable developers to build rich conversational experiences. Additionally, developers can use Azure Cognitive Services like LUIS (Language Understanding), QnA Maker, and Speech service to add the abilities for chatbots to understand and speak with their end users.
 
 Common scenarios for conversational AI or chatbot solutions include:
 
