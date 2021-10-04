@@ -3,11 +3,10 @@ title: Enterprise-scale for analytics and AI data products in Azure
 description: Learn about enterprise-scale for analytics and AI data products in Azure.
 author: mboswell
 ms.author: mboswell
-ms.date: 06/08/2021
+ms.date: 09/21/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
-ms.custom: e2e-data-management, think-tank
+ms.custom: think-tank, e2e-data-management
 ---
 
 # Enterprise-scale for analytics and AI data products in Azure
@@ -18,21 +17,24 @@ At a high level, data products are computed or polyglot persistence services tha
 
 - A data landing zone can have multiple data products that are created by ingesting data either inside the same data landing zone or from across multiple data landing zones as shown below.
 
-    :::image type="content" source="../images/data-product-cross-data-landing-zone.png" alt-text="Diagram of cross-data landing zone consumption.":::
+  :::image type="content" source="../images/data-product-cross-data-landing-zone.png" alt-text="Diagram of cross-data landing zone consumption.":::
 
-     The example above shows:
-     1. Intra-data landing zone consumption:
-         1. Data product B consumes from data product A and the data lake within its data landing zone; for example, data landing zone 1.
-         1. Data products C and D only consume from within their own respective data landing zones.
-     1. Inter-data landing zone consumption: Data product B also consumes from data product C and the data lake in data landing zone 3.
+  The example above shows:
 
-    > [!IMPORTANT]
-    > In the case of inter-data landing zone consumption, since data product B reads from data landing zone 3, this would require approval from the [data landing zone operations](../organize-persona-and-teams.md#data-landing-zone-teams) and [integration operations](../organize-persona-and-teams.md#data-landing-zone-teams) team of data landing zone 3.
-    > [!IMPORTANT]
-    > Data product B consumes from data products A and C. Before this can happen, data product B must register it's consumption of a data product via a data sharing agreement. This data sharing agreement should update the lineage from data product A to data product B and from data product C to data product B.
+  - Intrazone data consumption:
+    - Data product B consumes from data product A and the data lake within its data landing zone; for example, data landing zone 1.
+    - Data products C and D only consume from within their own respective data landing zones.
+  - Interzone data consumption:
+    - Data product B also consumes from data product C and the data lake in data landing zone 3.
 
-- The resource group for a data product would include all the service required to make that data product. Examples of services that might be part of a data product include Azure Functions, Azure App Service, Logic Apps, Azure Analysis Services, Cognitive Services, Azure Machine Learning, Azure SQL Database, Azure Database for MySQL, and Azure Cosmos DB. For more information, see [Data product samples](#sample-data-products).
-- A data product has data from a *READ* data source that has had some data transformation applied. For example, it can be a newly curated dataset or a BI report.
+  > [!IMPORTANT]
+  > In the case of interzone data consumption, since data product B reads from data landing zone 3, this would require approval from the [data landing zone operations](../organize-persona-and-teams.md#data-landing-zone-teams) and [integration operations](../organize-persona-and-teams.md#data-landing-zone-teams) team of data landing zone 3.
+
+  > [!IMPORTANT]
+  > Data product B consumes from data products A and C. Before this can happen, data product B must register its consumption of a data product via a data sharing agreement. This data sharing agreement should update the lineage from data product A to data product B and from data product C to data product B.
+
+- The resource group for a data product would include all the service required to make that data product. Examples of services that might be part of a data product include Azure Functions, Azure App Service, Logic Apps, Azure Analysis Services, Azure Cognitive Services, Azure Machine Learning, Azure SQL Database, Azure Database for MySQL, and Azure Cosmos DB. For more information, see [Data product samples](#sample-data-products).
+- A data product has data from a *READ* data source that has had some data transformation applied. For example, tt can be a newly curated dataset or a BI report.
 
 ## Design recommendations
 
@@ -40,7 +42,7 @@ We recommend building data products within your data landing zone by adhering to
 
 ### Deploy multiple resource groups
 
- Each data product is a resource group. Since data products are compute or polyglot persistence services, they may only be required depending on certain use cases. As such, they can be considered an optional component of your data landing zone. In the case where data products are required, you should create multiple resource groups by data product as shown below.
+Each data product is a resource group. Since data products are compute or polyglot persistence services, they may only be required depending on certain use cases. As such, they can be considered an optional component of your data landing zone. In the case where data products are required, you should create multiple resource groups by data product as shown below.
 
 ![Diagram of data product resource groups.](../images/data-products-resource-group.png)
 
@@ -102,8 +104,8 @@ To explain the architecture definition process, we'll look at an example of a fi
 
 The credit monitoring data product shown above consumes data from a *read data store* that has been ingested by the [integration operations team](../organize-persona-and-teams.md#data-landing-zone-teams) and produces data assets for two other data products.
 
->[!Note]
->A read data source or store is also known as Golden Record Source. These types of data sources have been cleaned but haven't had any transformation applied to them.
+> [!NOTE]
+> A read data source or store is also known as *golden record source*. These types of data sources have been cleaned but haven't had any transformation applied to them.
 
 The credit monitoring data product team requests read access to the read data stores they require for their data product. These requests are routed through the owners of the data for approval. Upon approval, the product teams can start to build the credit monitoring data product.
 
@@ -119,8 +121,8 @@ For every data landing zone, an empty visualization resource group is created. V
 
 ![Diagram of a visualization resource group.](../images/visualization-resource-group.png)
 
->[!NOTE]
->Licensing costs might mean that is it more economical to deploy third-party visualization products into the data management landing zone and for the products to connect across to the data landing zone to pull data back.
+> [!NOTE]
+> Licensing costs might mean that is it more economical to deploy third-party visualization products into the data management landing zone and for the products to connect across to the data landing zone to pull data back.
 
 While an initial visualization resource group will be deployed for a new data landing zone, data products might require their own reporting and visualization resource group. Security boundaries or a requirement to cross-charge for usage are the reason. It's important to remember that using Azure Active Directory passthrough authentication from services such as Power BI and Azure Analysis Services often reduces the need for a separated security boundary.
 
@@ -144,4 +146,4 @@ A data product for analytics and data science might contain the services shown i
 
 ## Next steps
 
-[Frequently asked questions about enterprise-scale for analytics and AI in Azure](./frequently-asked-questions.md)
+[Overview of reference architectures for data management and analytics in Azure](./reference-architecture-overview.md)

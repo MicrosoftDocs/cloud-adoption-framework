@@ -6,7 +6,7 @@ ms.author: mboswell
 ms.date: 07/28/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 

@@ -11,7 +11,6 @@ ms.custom: internal
 ---
 
 <!-- cSpell:ignore Personalizer -->
-<!-- docutune:ignore "global reach" -->
 
 # Examples of global reach outcomes
 
@@ -21,7 +20,7 @@ Fortune 500 and smaller enterprises have focused on the globalization of service
 
 Cloud solutions move the cost of globalization to the cloud provider. In Azure, customers can quickly deploy resources in the same region as customers or operations, without buying and provisioning a datacenter. Microsoft owns one of the largest wide-area networks in the world, connecting datacenters around the globe. Connectivity and global operating capacity are available to global customers on demand.
 
-[Walgreens Boots Alliance (WBA)](https://customers.microsoft.com/story/792289-walgreens-boots-alliance-retailers-azure-sap-migration) moved on-premises applications and IT resources in a heterogeneous Linux and Windows environment to the cloud, benefiting from improved performance and data centralization - and helping the company provide better customer service.
+[Walgreens Boots Alliance](https://customers.microsoft.com/story/792289-walgreens-boots-alliance-retailers-azure-sap-migration) moved on-premises applications and IT resources in a heterogeneous Linux and Windows environment to the cloud, benefiting from improved performance and data centralization, and helping the company provide better customer service.
 
 ## Global access
 

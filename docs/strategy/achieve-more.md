@@ -78,17 +78,17 @@ Save with Azure offers and licensing terms like the Azure Hybrid Benefit and Azu
 - Learn about [Azure Reservations](/azure/cost-management-billing/reservations/save-compute-costs-reservations).
 - Read the [reserved instances FAQ](https://azure.microsoft.com/pricing/reserved-vm-instances/#faq).
 
-Control your costs: Establish spending goals and policies with guidance from the Microsoft Cloud Adoption Framework for Azure. Implement cost controls with Azure Policy so your teams can go fast while complying with policy. For more information, see [enforce tagging conventions using Azure Policy](/azure/governance/policy/tutorials/govern-tags).
+Control your costs: Establish spending goals and policies with guidance from the Microsoft Cloud Adoption Framework for Azure. Implement cost controls with Azure Policy so your teams can go fast while complying with policy. For more information, see [Enforce tagging conventions using Azure Policy](/azure/governance/policy/tutorials/govern-tags).
 
 ## Understand your financial stories
 
 The core financial benefits of Azure are driven by a fundamental shift in the IT operating model. This shift benefits your organization's core financial statements and frees up cash flow for reinvestment:
 
-**Balance sheet**: When you operate on-premises in datacenters, you typically have invested up front in long-term assets that limit the cash and capital required to grow your business. While in the cloud, you can shift datacenter operations costs into modernization, developing cloud applications, and other projects that drive business growth. This shift can make your balance sheet more agile.
+**Balance sheet:** When you operate on-premises in datacenters, you typically have invested up front in long-term assets that limit the cash and capital required to grow your business. While in the cloud, you can shift datacenter operations costs into modernization, developing cloud applications, and other projects that drive business growth. This shift can make your balance sheet more agile.
 
-**Cash flow statement**: The pay-for-what-you-consume model and the ability to apply policies and tags to your Azure resources help you improve the predictability of your cash flow statement. This model delays spend and improves your cash flow timing.
+**Cash flow statement:** The pay-for-what-you-consume model and the ability to apply policies and tags to your Azure resources help you improve the predictability of your cash flow statement. This model delays spend and improves your cash flow timing.
 
-**Income statement (profit and loss)**: You can improve profitability over time by taking advantage of Azure's flexibility, low management costs, services, and pricing models.
+**Income statement (profit and loss):** You can improve profitability over time by taking advantage of Azure's flexibility, low management costs, services, and pricing models.
 
 ## Achieve more with your investment
 

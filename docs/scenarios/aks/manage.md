@@ -59,7 +59,7 @@ Once you've configured Azure Monitor to collect data on your containers, you can
 - Identify containers that are running on the nodes and their contribution to node utilization
 - Understand the behavior of clusters under average and heaviest loads. This knowledge can help you identify capacity needs and determine the maximum load that the cluster can sustain.
 - Configure alerts to proactively notify you or record when CPU and memory utilization on nodes or containers exceed your thresholds, or when a health state change occurs in the cluster at the infrastructure or nodes health rollup.
-- Use [queries](/azure/azure-monitor/containers/container-insights-log-search) to create a common set of alerts, dashboards, and detailed perform detailed analysis
+- Use [queries](/azure/azure-monitor/containers/container-insights-log-query) to create a common set of alerts, dashboards, and detailed perform detailed analysis
 
 This data will also support workload operations teams by providing detailed information about the workloads running on the containerized platform:
 

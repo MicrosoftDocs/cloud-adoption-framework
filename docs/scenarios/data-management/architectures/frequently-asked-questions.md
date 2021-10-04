@@ -6,7 +6,7 @@ ms.author: hamoodaleem
 ms.date: 03/03/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
@@ -24,9 +24,9 @@ Most data analytics patterns today exist with the three layers of raw, refined, 
 
 ### Should we deploy an Azure Databricks workspace per product?
 
-The recommendation is to use the shared product **Azure Databricks Analytics and Data Science workspace** inside the landing zone.
+The recommendation is to use the shared product **Azure Databricks analytics and data science workspace** inside the landing zone.
 
-This decision has been made to reduce the management overhead for the data platform operations team. Azure Databricks has a set of stand-alone policies that aren't integrated into the Azure policies. In a large environment, the setup of more Azure Databricks workspaces creates more management overhead. For example, maintaining policies and supported Apache Hive versions, updating ADB versions, and enforcing external Apache Hive metastore. There's no way a central platform team can enforce certain settings within any of the databricks workspaces. We recommend having shared workspaces for product teams in the landing zones, where the data platform ops teams can then define the necessary cluster policies and init scripts.
+This decision has been made to reduce the management overhead for the data platform operations team. Azure Databricks has a set of stand-alone policies that aren't integrated into the Azure policies. In a large environment, the setup of more Azure Databricks workspaces creates more management overhead. For example, maintaining policies and supported Apache Hive versions, updating ADB versions, and enforcing external Apache Hive metastore. There's no way a central platform team can enforce certain settings within any of the Databricks workspaces. We recommend having shared workspaces for product teams in the landing zones, where the data platform ops teams can then define the necessary cluster policies and initialization scripts.
 
 We recommends to use VNet peering between landing zones and private endpoints. For Azure Databricks, use VNet injection. As there's direct line of sight to all endpoints, there are no connectivity issues.
 
