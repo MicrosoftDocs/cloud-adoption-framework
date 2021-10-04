@@ -74,7 +74,7 @@ Whilst the Azure Active Directory system assigned identity can only be used to u
 
 ### Secret and certificate management
 
-Consider using Azure Key Vault to manage certificates on your Azure Arc-enabled servers. Azure Arc-enabled servers has a managed identity which is used by the Connected Machine and other Azure agents to communicate back to their respective services. The [Key Vault VM extension](https://techcommunity.microsoft.com/t5/itops-talk-blog/manage-certificates-on-your-hybrid-servers-using-azure-arc-key/ba-p/2142265) allows you to manage the certificate lifecycle on [Windows](https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/key-vault-windows) and [Linux](https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/key-vault-linux) machines
+Consider using Azure Key Vault to manage certificates on your Azure Arc-enabled servers. Azure Arc-enabled servers has a managed identity which is used by the Connected Machine and other Azure agents to communicate back to their respective services. The Key Vault VM extension allows you to manage the certificate lifecycle on [Windows](https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/key-vault-windows) and [Linux](https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/key-vault-linux) machines. [PLACEHOLDER](Secret management)
 
 ### Policy management and reporting
 
@@ -91,13 +91,13 @@ Understand the [scope of Azure policy](https://docs.microsoft.com/en-us/azure/ro
 - Enable Azure Advisor alerts to identify Azure arc-enabled servers with [outdated agents installed](https://docs.microsoft.com/en-us/azure/azure-arc/servers/plan-at-scale-deployment#phase-3-manage-and-operate).
 - [Enforce organization standards and assess compliance at scale](https://docs.microsoft.com/en-us/azure/azure-arc/servers/security-controls-policy).
 - Use an Azure Policy and Remediation tasks to onboard management services agents via the extension management feature.
-- Enable [Azure Monitor](https://techcommunity.microsoft.com/t5/itops-talk-blog/azure-monitor-for-azure-arc-enabled-servers/ba-p/1566654) for compliance and operational monitoring of Azure Arc-enabled servers.
+- Enable [Azure Monitor](https://docs.microsoft.com/en-us/azure/azure-arc/servers/learn/tutorial-enable-vm-insights) for compliance and operational monitoring of Azure Arc-enabled servers.
 
 ### Log management strategy
 
 Design and plan your Log Analytics Workspace deployment, as it will be the container where data is collected, aggregated and later analyzed. As the Log Analytics Workspace represents a geographical location of your data, a level of isolation and a scope for configurations like data retention you will have to identify the number of workspaces needed and how it maps to your organizational structure. It is recommended to use a single Azure Monitor Log Analytics workspace to manage centrally RBAC, visibility and reporting as it is described in the [Management and monitoring best practices of Clouf Adoption Framework](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/enterprise-scale/management-and-monitoring).
 
-[Designing your Azure Monitor Logs deployment](https://docs.microsoft.com/en-us/azure/azure-monitor/logs/design-logs-deployment)
+Review the best practices in [designing your Azure Monitor Logs deployment](https://docs.microsoft.com/en-us/azure/azure-monitor/logs/design-logs-deployment).
 
 ### Threat protection and cloud security posture management
 
@@ -110,6 +110,8 @@ Azure Security Center provides an unified security-management platform segmented
 - Protect your endpoints with Azure Security Center's integration with Microsoft Defender for Endpoint.
 
 [Connect your non-Azure machines to Security Center](https://docs.microsoft.com/en-us/azure/security-center/quickstart-onboard-machines?pivots=azure-portal)
+
+[PLACEHOLDER](Network Security)
 
 ### Change Tracking and Inventory
 
