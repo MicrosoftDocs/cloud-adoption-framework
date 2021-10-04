@@ -124,7 +124,7 @@ Below is guidance on how to implement and use the canary management group hierar
 3. Implement git branch policies or security for the canary environment as you have in place for the production environment.
    - Consider reducing the number of approvers and checks for the canary environment to fail-fast.
 4. Use the same Azure Pipelines or GitHub actions that use environment variables to change which hierarchy is being deployed. Another option is to clone the pipelines and amend the hard-coded settings to define which hierarchy is being deployed.
-   - Using [Azure Pipelines DevOps templates](/azure/devops/pipelines/process/templates) or [GitHub Actions Workflow Templates](https://docs.github.com/en/actions/learn-github-actions/sharing-workflows-with-your-organization) will help prevent the "Don’t Repeat Yourself" (DRY) principle.
+   - Using [Azure Pipelines DevOps templates](/azure/devops/pipelines/process/templates) or [GitHub Actions Workflow Templates](https://docs.github.com/en/actions/learn-github-actions/sharing-workflows-with-your-organization) will help you adhere to the *don't repeat yourself (DRY)* principle.
 5. Have a set of canary subscriptions under a separate EA department and account that can be moved around the canary management group hierarchy as needed.
    - It might be beneficial to have a set of resources always deployed into the canary environment subscriptions.
    - It might be helpful to have Infrastructure-as-Code templates such as ARM templates, Bicep, or Terraform, that create a set of resources that enable validation of changes in the canary environment.

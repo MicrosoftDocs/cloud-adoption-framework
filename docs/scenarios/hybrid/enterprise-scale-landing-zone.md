@@ -55,7 +55,7 @@ To extend enterprise-scale to address hybrid and multicloud needs, consider the 
 
 Landing zones are a set of reference architectures that help organizations quickly build out cloud environments and accelerate their adoption of cloud technologies.
 
-The Cloud Adoption Framework includes specific guidance for developing architectures in Azure for connecting to external environments. [Patterns such as Hub and Spoke can be used to create landing zones for ingress from and egress to external locations.](../../ready/enterprise-scale/implementation.md)
+The Cloud Adoption Framework includes specific guidance for developing architectures in Azure for connecting to external environments. Patterns such as Hub and Spoke can be used to create landing zones for ingress from and egress to external locations. For more information, see [Implement enterprise-scale landing zones in Azure](../../ready/enterprise-scale/implementation.md).
 
 For example, [Guidance can be found here](../../ready/azure-best-practices/connectivity-to-other-providers.md) to help building out Landing Zone architectures specifically for connectivity to other cloud environments.
 

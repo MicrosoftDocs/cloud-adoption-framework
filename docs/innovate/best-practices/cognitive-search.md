@@ -59,7 +59,7 @@ After you define an index, you're ready to upload content. You can use either a 
 
 The pull model retrieves data from external data sources. It's supported through indexers that streamline and automate aspects of data ingestion, such as connecting to, reading, and serializing data. [Indexers](/rest/api/searchservice/indexer-operations) are available for Azure Cosmos DB, Azure SQL Database, Azure Blob Storage, and SQL Server hosted in an Azure Virtual Machines instance. You can configure an indexer for on-demand or scheduled data refresh.
 
-The push model is provided through the SDK or REST APIs used for sending updated documents to an index. You can push data from virtually any dataset by using the JSON format. For more information, see [Add, update, or delete documents](/rest/api/searchservice/addupdate-or-delete-documents) or [how to use the .NET SDK](/azure/search/search-howto-dotnet-sdk) for guidance on loading data.
+The push model is provided through the SDK or REST APIs used for sending updated documents to an index. You can push data from virtually any dataset by using the JSON format. For more information, see [Add, update, or delete documents](/rest/api/searchservice/addupdate-or-delete-documents) and [How to use the .NET SDK](/azure/search/search-howto-dotnet-sdk) for guidance on loading data.
 
 ### Step 4: Search
 

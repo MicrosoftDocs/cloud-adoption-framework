@@ -172,7 +172,7 @@ When starting this process, most organizations will already have an Azure footpr
 
 1. Create a service guidance for every service that's currently used in your organization with the current service controls.
 
-   For example, if key vaults are used and there are no controls enforced on them, create a service guidance for "a key vault with no controls". If storage accounts are in use and a policy enforces encryption, create the storage account guidance with the control that encryption will be enforced.
+   For example, if key vaults are used and there are no controls enforced on them, create a service guidance for `A key vault with no controls`. If storage accounts are in use and a policy enforces encryption, create the storage account guidance with the control that encryption will be enforced.
 
 2. Trigger a service review for all services that are currently in use, adding them all to the service review schedule.
 
@@ -192,7 +192,7 @@ A main component of the service review process is to prevent services that don't
 
 A staged approach for allowing service use in different environments gives adoption teams earlier access to controls while reducing the exposure of services without controls.
 
-There are several stages that ensure adoption teams aren't blocked during the creation of new service guidance. The process accelerates their ability to start using services. The first stage, "Sandbox", is for the adoption team to nominate the new service that they need for a service review.
+There are several stages that ensure adoption teams aren't blocked during the creation of new service guidance. The process accelerates their ability to start using services. The first stage (`Sandbox`) is for the adoption team to nominate the new service that they need for a service review.
 
 ![Diagram that shows a new service control lifecycle.](../_images/govern/new-service-control-lifecycle.png)
 
@@ -230,7 +230,7 @@ If the service control requirements are written clearly, teams outside the gover
 
 With the approval and release steps still controlled by the governance team, organizations can scale the service review process while keeping centralized control.
 
-For example, a cloud adoption team might need a new service that hasn't been through a review. To get the service review completed more quickly, they can use the documentation in the imperatives to identify and produce the controls. This method moves them all the way through the technical implementation and policy code for the cloud governance team. The cloud adoption team then gets quicker access to the service and can be interpreted as a "first user pays" type scenario for the implementation of new services.
+For example, a cloud adoption team might need a new service that hasn't been through a review. To get the service review completed more quickly, they can use the documentation in the imperatives to identify and produce the controls. This method moves them all the way through the technical implementation and policy code for the cloud governance team. The cloud adoption team then gets quicker access to the service and can be interpreted as a *first user pays* scenario for the implementation of new services.
 
 ## Next steps
 
