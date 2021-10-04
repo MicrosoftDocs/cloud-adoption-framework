@@ -53,7 +53,7 @@ items:
   - name: Hybrid architectures
     items:
     - name: Overview
-      href: /azure/architecture/browse/hybrid_index?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
+      href: /azure/architecture/browse/?azure_categories=hybrid?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
 
     - name: Applications
       items:

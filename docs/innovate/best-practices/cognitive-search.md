@@ -68,5 +68,5 @@ After populating an index, you can [issue search queries](/azure/search/search-q
 ## Next steps
 
 - Learn more about [Azure Cognitive Search](/azure/search/).
-- Browse more [AI architectures](/azure/architecture/browse/).
+- Browse more [AI architectures](/azure/architecture/browse/?azure_categories=ai-machine-learning).
 - See an example knowledge mining solution in the article [JFK Files example architecture and solution](/azure/architecture/solution-ideas/articles/cognitive-search-with-skillsets).

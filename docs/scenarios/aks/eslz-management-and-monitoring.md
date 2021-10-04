@@ -1,6 +1,6 @@
 ---
-title: Operations baseline considerations for AKS
-description: Describe how to improve management and monitoring of AKS
+title: Operations baseline considerations for Azure Kubernetes Service
+description: Learn about considerations for your operations baseline for Azure Kubernetes Service.
 author: BrianBlanchard
 ms.author: pidebrui
 ms.date: 03/01/2021
@@ -10,9 +10,9 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-aks
 ---
 
-# Operations baseline considerations for AKS
+# Operations baseline considerations for Azure Kubernetes Service
 
-Kubernetes is a relatively new technology, rapidly evolving with an impressive ecosystem. As such, it can be challenging to manage it. By properly designing the solution with management and monitoring in mind, you can work toward operational excellence and customer success.
+Kubernetes is a relatively new technology, rapidly evolving with an impressive ecosystem. As such, it can be challenging to manage it. By properly designing your Azure Kubernetes Service (AKS) solution with management and monitoring in mind, you can work toward operational excellence and customer success.
 
 ## Design considerations
 

@@ -14,7 +14,7 @@ ms.custom: think-tank, e2e-azure-vmware
 
 Azure VMware Solution combines its software-defined datacenter (SDDC) software with Azure's global cloud platform. Use the [Govern methodology](../../govern/index.md) to incrementally improve governance of your cloud portfolio. Microsoft manages Azure VMware Solution to meet performance, availability, security, and compliance requirements. Microsoft provides the following components to run Azure VMware Solution at scale in Azure - across management systems, networking services, operating platform, and back-end infrastructure operations.
 
-To extend your governance approach across the Azure VMware Solution, evaluate and manage risk tolerance by identifying high-risk areas for business, convert risk vectors into governing corporate policies, and extend governance policies across Cost, Security Baseline, Identity Baseline, Resource consistency, and Deployment Acceleration disciplines.
+To extend your governance approach across the Azure VMware Solution, evaluate and manage risk tolerance by identifying high-risk areas for business, convert risk vectors into governing corporate policies, and extend governance policies across Cost Management, Security Baseline, Identity Baseline, Resource Consistency, and Deployment Acceleration disciplines.
 
 ![Diagram of enterprise-scale security, governance, and compliance.](../azure-vmware/media/enterprise-scale-security-governance-compliance.png)
 
