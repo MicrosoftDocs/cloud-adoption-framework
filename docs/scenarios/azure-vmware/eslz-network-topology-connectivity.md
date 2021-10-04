@@ -173,9 +173,6 @@ This scenario must inspect all traffic in the hub virtual network, which hosts t
 
 Implement Azure Route Server to make sure to route traffic through the hub. You're responsible for implementing and managing an NVA solution, or using an existing one.
 
-> [!NOTE]
-> Azure Route Server is currently in public preview.
-
 If you need high availability for the NVAs, deploy the NVAs in an active-standby configuration to preserve symmetric routing. For more information, see your NVA vendor documentation and [deploy highly available NVAs](/azure/architecture/reference-architectures/dmz/nva-ha?tabs=cli).
 
 The preceding architectural diagram shows an NVA with VXLAN support. For NVAs without VXLAN support, see [Deploying a non-integrated NVA in Virtual WAN without VXLAN and a transit VNet](https://github.com/Azure/AzureCAT-AVS/tree/main/networking/deploy-non-integrated-nvas-without-vxlan-in-vwan-with-transit-vnet-and-route-server).
@@ -248,10 +245,6 @@ If you currently connect to a virtual network-based hub-and-spoke topology via a
 ## General design considerations and recommendations
 
 Here are some general design considerations and recommendations for Azure VMware Solution network topology and connectivity:
-
-### Hub-spoke vs. Virtual WAN network topology
-
-Virtual WAN supports [transit connectivity between VPN and ExpressRoute](/azure/virtual-wan/virtual-wan-about#transit-er), but doesn't support hub-spoke topology.
 
 ### Private clouds and clusters
 
