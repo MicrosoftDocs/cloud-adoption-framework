@@ -22,7 +22,7 @@ The Azure Landing Zone Accelerator is an Azure portal based deployment experienc
 
 ## What is the Azure Landing Zone Conceptual Architecture?
 
-The Azure landing zone conceptual architecture represents scale and maturity decisions based on a wealth of lessons learned and feedback from customers who have adopted Azure as part of their digital estate, in which we provide prescriptive guidance and recommendations for your implementation.
+The Azure landing zone conceptual architecture represents scale and maturity decisions based on a wealth of lessons learned and feedback from customers who have adopted Azure as part of their digital estate. This conceptual architecture will help set a direction for the overall approach your organization takes to designing and implementing a landing zone.
 
 ## What does a "Landing Zone" map to in Azure in the context of Enterprise-scale?
 
