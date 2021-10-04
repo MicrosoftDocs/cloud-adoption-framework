@@ -44,7 +44,7 @@ As you get started, use the checklist and application development resources in t
   - [Get up and running with Kubernetes (e-book collection)](https://azure.microsoft.com/resources/containerize-your-apps-with-docker-and-kubernetes/)
   - [`Containerize Your Applications with Kubernetes on Azure` (webinar)](https://info.microsoft.com/AU-AzureApp-WBNR-FY20-11Nov-12-ContainerizeYourApplicationswithKubernetesonAzure-SRDEM10557_LP02OnDemandRegistration-ForminBody.html)
 
-- **Review common Kubernetes scenarios.** Although Kubernetes is often thought of as a platform for delivering microservices, it's becoming a much broader platform. Watch this video to learn about common Kubernetes scenarios such as batch analytics and workflow: [Overview of common Kubernetes scenarios (video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&v=zd8vYhrFXp4&index=7).
+- **Review common Kubernetes scenarios.** Although Kubernetes is often thought of as a platform for delivering microservices, it's becoming a much broader platform. For more information about common Kubernetes scenarios such as batch analytics and workflow, see [Overview of common Kubernetes scenarios (video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&v=zd8vYhrFXp4&index=7).
 
 - **Prepare your application for Kubernetes.** Prepare your application file system layout for Kubernetes and organize for weekly or daily releases. Learn how the Kubernetes deployment process enables reliable, zero-downtime upgrades.
 
@@ -57,7 +57,7 @@ As you get started, use the checklist and application development resources in t
 
   To learn more, see:
 
-  - [The basics of stateful applications in Kubernetes (video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&v=GieXzb91I40&index=9)
+  - [Basics of stateful applications in Kubernetes (video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&v=GieXzb91I40&index=9)
   - [State and data in Docker applications](/dotnet/architecture/microservices/architect-microservice-container-applications/docker-application-state-data)
   - [Storage options in Azure Kubernetes Service](/azure/aks/operator-best-practices-storage)
 
