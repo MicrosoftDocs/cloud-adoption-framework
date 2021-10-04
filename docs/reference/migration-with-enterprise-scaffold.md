@@ -69,7 +69,7 @@ The three common patterns for EA enrollments are:
 
 - The **geographic** pattern:
 
-  ![Diagram of the geographic pattern](../_images/reference/geographic.png)
+  ![Diagram of the geographic pattern.](../_images/reference/geographic.png)
 
 Though these patterns have their place, the **business unit** pattern is increasingly being adopted for its flexibility in modeling an organization's cost model as well as reflecting span of control. Microsoft's core engineering and operations group has created an effective subset of the **business unit** pattern modeled on **Federal**, **State**, and **Local**. For more information, see [Organizing your subscriptions and resource groups](../ready/azure-best-practices/organize-subscriptions.md).
 

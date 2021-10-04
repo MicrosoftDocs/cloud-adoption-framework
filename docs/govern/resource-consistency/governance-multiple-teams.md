@@ -153,7 +153,7 @@ Recall from the requirements that you have an individual in the organization who
 
 Once the subscription has been created, the **Azure account owner** can add the **subscription owner** account to the subscription with the **owner** role:
 
-![An Azure account owner adds the subscription owner user account to the subscription with the Owner role.](../../_images/govern/design/governance-3-0c.png).
+![An Azure account owner adds the subscription owner user account to the subscription with the Owner role.](../../_images/govern/design/governance-3-0c.png)
 *Figure 7: The Azure account owner adds the subscription owner user account to the subscription with the owner role.*
 
 The **subscription owner** account can now create **resource groups** and delegate resource access management.
