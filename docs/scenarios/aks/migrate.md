@@ -63,7 +63,7 @@ If you're coming from an existing Kubernetes platform (AKS engine, ACS, or anoth
 - [Azure kube CLI extension](https://github.com/yaron2/azure-kube-cli)
 - [Reshifter](https://github.com/mhausenblas/reshifter)
 - Migrating from [AKS engine](/azure-stack/user/azure-stack-kubernetes-aks-engine-overview) to AKS
-- Migrating from [Azure container service](https://azure.microsoft.com/updates/azure-container-service-will-retire-on-january-31-2020/) to AKS
+- Migrating from [Azure Container Service](https://azure.microsoft.com/updates/azure-container-service-will-retire-on-january-31-2020/) to AKS
 - Moving existing resources to a different region
 
 When migrating, ensure your target Kubernetes version is within the supported window for AKS. If using an older version, it might not be within the supported range and require upgrading versions to be supported by AKS. For more information, see [AKS supported Kubernetes versions](/azure/aks/supported-kubernetes-versions). Where possible, always try to migrate to the same version of Kubernetes. That means either do an in-place upgrade in the existing system or plan a post-migration upgrade based on your priorities.

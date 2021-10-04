@@ -28,7 +28,7 @@ The initial governance foundation focuses on the following aspects of governance
 - Organization of resources using resource groups, subscriptions, and management groups.
 - Azure Policy and Azure Blueprints to enforce governance policies.
 
-Each of these features of the initial governance foundation can be used to govern modern application platform solution instances. But first, you'll need to add a few components to the initial foundation to apply [Azure Policy to your containers](/azure/governance/policy/concepts/policy-for-kubernetes?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json). Once configured, you can use Azure Policy and your initial governance foundation to govern the following types of containers:
+These features of the initial governance foundation can be used to govern modern application platform solution instances. But first, you'll need to add a few components to the initial foundation to apply [Azure Policy to your containers](/azure/governance/policy/concepts/policy-for-kubernetes?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json). Once configured, you can use Azure Policy and your initial governance foundation to govern the following types of containers:
 
 - [Azure Kubernetes Service (AKS)](/azure/aks/intro-kubernetes?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)
 - [Azure Arc enabled Kubernetes](/azure/azure-arc/kubernetes/overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)

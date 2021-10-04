@@ -10,6 +10,8 @@ ms.subservice: govern
 ms.custom: internal
 ---
 
+<!-- docutune:casing UserPrincipalName SamAccountName "conditional access options" -->
+
 # Identity Baseline tools in Azure
 
 The [Identity Baseline discipline](./index.md) is one of the [Five Disciplines of Cloud Governance](../governance-disciplines.md). This discipline focuses on ways of establishing policies that ensure consistency and continuity of user identities regardless of the cloud provider that hosts the application or workload.
@@ -46,8 +48,6 @@ When you choose this method, Azure AD passes the authentication process to a sep
 For a decision tree that helps you choose the best solution for your organization, see [Choose the right authentication method for Azure Active Directory](/azure/active-directory/hybrid/choose-ad-authn).
 
 The following table lists the native tools that can help mature the policies and processes that support this discipline.
-
-<!-- docutune:casing UserPrincipalName SamAccountName "conditional access options" -->
 
 | Consideration | Password hash synchronization + Seamless SSO | Pass-through Authentication + Seamless SSO | Federation with AD FS |
 | --- | --- | --- | --- |

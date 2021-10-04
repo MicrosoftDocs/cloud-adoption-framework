@@ -281,8 +281,7 @@ Reference architectures are arranged by scenario. They contain best practices an
 
 **Learn more:**
 
-- Learn about [Azure reference architectures](/azure/architecture/browse/).
-- Review [Azure example scenarios](/azure/architecture/browse/).
+- Review [Azure reference architectures and example scenarios](/azure/architecture/browse/).
 
 ## Best practice: Manage resources with Azure management groups
 

@@ -163,6 +163,7 @@
         "multiuser",
         "multivalue",
         "multivalued",
+        "multizone",
         "nonblocking",
         "nonclustered",
         "nonintrusive",
