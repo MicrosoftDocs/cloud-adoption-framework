@@ -391,11 +391,6 @@
          "redirect_document_id": true
       },
       {
-         "source_path": "docs/ready/enterprise-scale/faq.md",
-         "redirect_url": "/azure/cloud-adoption-framework/ready/enterprise-scale/index",
-         "redirect_document_id": false
-      },
-      {
          "source_path": "docs/ready/enterprise-scale/implementation-guidelines.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/enterprise-scale/implementation",
          "redirect_document_id": true
