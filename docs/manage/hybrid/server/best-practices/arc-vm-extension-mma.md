@@ -108,7 +108,7 @@ Review the [Azure Monitor supported OS documentation](/azure/azure-monitor/vm/vm
 
     - Information about the Log Analytics workspace you previously created (workspace ID and key). These parameters are used to configure the MMA agent. You can find this information by going to your Log Analytics workspace and under **Settings**, select **Agents management**.
 
-      ![A screenshot of agents management within an Azure Arc-enabled server.](./media/arc-vm-extension-mma/agents-management.png)
+      ![A screenshot of **Agents management** within an Azure Arc-enabled server.](./media/arc-vm-extension-mma/agents-management.png)
 
       ![A screenshot of a workspace configuration.](./media/arc-vm-extension-mma/mma-workspace-config.png)
 
