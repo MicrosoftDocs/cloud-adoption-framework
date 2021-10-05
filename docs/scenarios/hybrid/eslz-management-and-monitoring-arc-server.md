@@ -46,4 +46,4 @@ Here are some general design recommendations for Azure Arc-enabled servers monit
 
 ## Learn before you start
 
-- Check for [Azure Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/) scenarios that may help you with proof of concept and basic understanding.
+- Check for [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/) scenarios that may help you with proof of concept and basic understanding.
