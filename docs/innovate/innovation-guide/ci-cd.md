@@ -25,7 +25,7 @@ You know that innovation and digital transformation is critical to business succ
 > - In every industry, every organization is trying to do one thing: drive constant value generation.
 > - The focus on innovation is essentially a process to help your organization find new ways to generate value.
 > - Perhaps the biggest mistake organizations make is trying to create new value by introducing new technologies.
-> - Sometimes the attitude is "if we just use more technology, we'll see things improve." But innovation is first and foremost a people story.
+> - Sometimes the attitude is, "If we just use more technology, we'll see things improve." But innovation is first and foremost a people story.
 > - Innovation is about the combination of people and technology.
 
 Organizations that successfully innovate toward digital transformation see vision, strategy, culture, unique potential, and capabilities as the foundational elements. They then turn to technology with a specific purpose in mind. Every company is becoming a software company. The hiring of software engineers is growing at a faster rate outside the tech industry than inside, according to LinkedIn data.
