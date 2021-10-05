@@ -34,7 +34,7 @@ If you're considering a lift-and-shift approach or are in the early assessment s
 
 #### Create a new project
 
-Begin server discovery, assessment, and migration using the following steps for Azure Migrate:
+Begin server discovery, assessment, and migration by using the following steps for Azure Migrate:
 
 1. Select **Azure Migrate**.
 2. In **Overview**, select **Discover, assess and migrate**.
@@ -145,7 +145,7 @@ When evaluating the timeline of your migration, consider:
 
 ## [Cost management](#tab/ManageCost)
 
-Assessing your environment provides a great opportunity to include a cost analysis step. Using the data collected by the assessment activities, you can analyze and predict costs. This cost prediction should factor both the consumption service costs and any one-time costs, like increased data ingress.
+Assessing your environment provides a great opportunity to include a cost analysis step. Using the data collected by the assessment activities, you can analyze and predict costs. This cost prediction should factor in both the consumption service costs and any one-time costs, like increased data ingress.
 
 During migration, certain factors affect decisions and execution activities:
 
