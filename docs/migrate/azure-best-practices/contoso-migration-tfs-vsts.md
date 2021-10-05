@@ -486,14 +486,14 @@ After migration is complete, Contoso admins next need to move source code manage
 
 **See also:**
 
-For more information, see [Import repositories from TFVC to Git](/azure/devops/repos/git/import-from-tfvc?view=azure-devops&preserve-view=true&viewFallbackFrom=vsts).
+[Import repositories from TFVC to Git](/azure/devops/repos/git/import-from-tfvc?view=azure-devops&preserve-view=true&viewFallbackFrom=vsts).
 
 ## Clean up after migration
 
 With the migration now complete, the Contoso team needs to do the following tasks:
 
 - Review the [post-import](/azure/devops/migrate/migration-post-import?view=azure-devops&preserve-view=true&viewFallbackFrom=vsts) article for information about additional import activities.
-- Either delete the TFVC repos or place them in read-only mode. Don't use the code bases. Instead, reference them for their history.
+- Either delete the TFVC repos or place them in read-only mode. Don't use the code bases; instead, reference them for their history.
 
 ## Post-migration training
 
