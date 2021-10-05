@@ -90,6 +90,7 @@ This list provides recommended abbreviations for various Azure resource types to
 | Managed disk (data) | `Microsoft.Compute/disks` | `disk` |
 | Notification Hubs | `Microsoft.NotificationHubs/namespaces/notificationHubs` | `ntf-` |
 | Notification Hubs namespace | `Microsoft.NotificationHubs/namespaces` | `ntfns-` |
+| Proximity Placement Group | `Microsoft.Compute/proximityPlacementGroups` | `ppg-` |
 | Snapshot | `Microsoft.Compute/snapshots` | `snap-` |
 | Static web app | `Microsoft.Web/staticSites` | `stapp-` |
 | Virtual machine | `Microsoft.Compute/virtualMachines` | `vm` |
