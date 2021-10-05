@@ -41,7 +41,7 @@ Consider the following best practices for batch inference:
 
 - **Compute options for batch inference:** Since batch inference processes don't run continuously, it's recommended to automatically start, stop, and scale reusable clusters that can handle a range of workloads. Different models require different environments, and your solution needs to be able to deploy a specific environment and remove it when inference is over for the compute to be available for the next model. See the following decision tree to identify the right compute instance for your model:
 
-  [![A diagram of the compute decision tree.](./media/compute-decision-tree.png)](./media/compute-decision-tree.png#lightbox)
+  [![Diagram of the compute decision tree.](./media/compute-decision-tree.png)](./media/compute-decision-tree.png#lightbox)
 
 - **Implement batch inference:** Azure supports multiple features for batch inference. One feature is `ParallelRunStep` in Azure Machine Learning, which allows customers to gain insights from terabytes of structured or unstructured data stored in Azure. `ParallelRunStep` provides out-of-the-box parallelism and works within Azure Machine Learning pipelines.
 
