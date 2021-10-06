@@ -3,7 +3,7 @@ title: Organize your Azure resources effectively
 description: Understand best practices for effectively organizing your Azure resources to simplify resource management.
 author: laraaleite
 ms.author: brblanch
-ms.date: 10/05/2021
+ms.date: 10/06/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -26,17 +26,20 @@ Azure provides four levels of management: management groups, subscriptions, reso
 ![Diagram that shows the relationship of management hierarchy levels.](./media/organize-resources/scope-levels.png)
 
 - **Management groups** help you manage access, policy, and compliance for multiple subscriptions. All subscriptions in a management group automatically inherit the conditions applied to the management group.
+
 - **Subscriptions** logically associate user accounts with the resources they create. Each subscription has limits or quotas on the amount of resources it can create and use. Organizations can use subscriptions to manage costs and the resources created by users, teams, or projects.
+
 - **Resource groups** are logical containers where you can deploy and manage Azure resources like web apps, databases, and storage accounts.
+
 - **Resources** are instances of services that you can create, like virtual machines, storage, or SQL databases.
 
 ### Management settings scope
 
 You can apply management settings like policies and Azure role-based access control at any management level. The management level determines how widely the setting is applied. Lower levels inherit settings from higher levels. For example, when you apply a policy to a subscription, the policy applies to all resource groups and resources in that subscription.
 
-Usually, it makes sense to apply critical settings at higher levels, and project-specific requirements at lower levels. For example, to make sure all resources for your organization are deployed to certain regions, apply a policy to the subscription that specifies the allowed locations. The allowed locations are automatically enforced as users in your organization add new resource groups and resources. Learn more about policies in the [Governance, security, and compliance](govern-org-compliance.md) section of this guide.
+Usually, it makes sense to apply critical settings at higher levels, and project-specific requirements at lower levels. For example, to make sure all resources for your organization deploy to certain regions, apply a policy to the subscription that specifies the allowed regions. The allowed locations are automatically enforced when users in your organization add new resource groups and resources. Learn more about policies in the [Governance, security, and compliance](govern-org-compliance.md) section of this guide.
 
-It's easy to manage a few subscriptions independently. If your number of subscriptions increases, consider creating a management group hierarchy to simplify subscription and resource management. For more information, see [Organize and manage your Azure subscriptions](../azure-best-practices/organize-subscriptions.md).
+It's easy to manage a few subscriptions independently. For a larger number of subscriptions, consider creating a management group hierarchy to simplify subscription and resource management. For more information, see [Organize and manage your Azure subscriptions](../azure-best-practices/organize-subscriptions.md).
 
 Work with people in the following roles as you plan your organizational compliance strategy:
 
@@ -51,7 +54,7 @@ Work with people in the following roles as you plan your organizational complian
 
 ### Create a management structure
 
-To create a management group, subscription, or resource group, sign in to the [Azure portal](https://portal.azure.com).
+To create a management group, subscription, or resource group from the [Azure portal](https://portal.azure.com).
 
 - To create a **management group** to help you manage multiple subscriptions, go to [Management groups](https://portal.azure.com/#blade/Microsoft_Azure_ManagementGroups/HierarchyBlade) and select **Create**.
   
@@ -65,7 +68,7 @@ To create a management group, subscription, or resource group, sign in to the [A
      1. Select the **Subscription** to create the resource group under.
      1. Enter a name for the **Resource group**.
      1. Select a **Region** for the resource group location.
-  1. Select **Review + create**, and if the review passes, select **Create**.
+  1. Select **Review + create**, and once the review passes, select **Create**.
 
 ::: zone-end
 
@@ -97,7 +100,7 @@ To create a management group, subscription, or resource group, sign in to the [A
 
 A good naming standard helps identify resources in the Azure portal, on a billing statement, and in automation scripts. Your naming strategy should include business and operational details in resource names.
 
-- Business details should include the organizational information needed to identify teams. Use the resource name along with the business owners who are responsible for the resource costs.
+- Business details should include the organizational information needed to identify teams. Use the resource's short name, along with the business owners who are responsible for the resource costs.
 
 - Operational details in resource names should include information that IT teams need. Include details that identify the workload, application, environment, criticality, and other information useful for managing resources.
 
@@ -114,9 +117,9 @@ The following table shows naming patterns for a few sample Azure resource types:
 
 | Entity | Scope | Length | Casing | Valid characters | Suggested pattern | Example |
 | --- | --- | --- | --- | --- | --- | --- |
-| Resource group | Subscription | 1-90 | Case insensitive | Alphanumeric, underscore, parentheses, hyphen, period except at end, and Unicode characters | `<service short name>-<environment>-rg` | `profx-prod-rg` |
+| Resource group | Subscription | 1-90 | Case insensitive | Alphanumeric, underscore, parentheses, hyphen, and period except at end | `<service-short-name>-<environment>-rg` | `profx-prod-rg` |
 | Availability set | Resource group | 1-80 | Case insensitive | Alphanumeric, underscore, and hyphen | `<service-short-name>-<context>-as` | `profx-SQL-as` |
-| Tag | Associated entity | 512 (name), 256 (value) | Case insensitive | Alphanumeric | `"Key" : "value"` | `"Department" : "Central IT"` |
+| Tag | Associated entity | 512 (name), 256 (value) | Case insensitive | Alphanumeric, spaces, and Unicode characters except for angle brackets, percent symbol, ampersand, forward or back slashes, question mark, or period | `key` : `value` | `Department` : `Central IT ☺` |
 
 ## Resource tags
 
@@ -142,7 +145,7 @@ For more tagging recommendations and examples, see the Cloud Adoption Framework 
 
 To apply a tag to a resource group:
 
-1. Go to [Resource groups](https://portal.azure.com/#blade/HubsExtension/BrowseResourceGroups) and select a resource group.
+1. In the Azure portal, go to [Resource groups](https://portal.azure.com/#blade/HubsExtension/BrowseResourceGroups) and select the resource group.
 1. Select **Tags** in the left navigation.
 1. Enter a new name and value, or select an existing name and value, and then select **Apply**.
 
