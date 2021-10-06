@@ -27,18 +27,18 @@ Azure provides four levels of management: management groups, subscriptions, reso
 
 - **Management groups** help you manage access, policy, and compliance for multiple subscriptions. All subscriptions in a management group automatically inherit the conditions applied to the management group.
 - **Subscriptions** logically associate user accounts with the resources they create. Each subscription has limits or quotas on the amount of resources it can create and use. Organizations can use subscriptions to manage costs and the resources created by users, teams, or projects.
-- **Resource groups** are logical containers in which you can deploy and manage Azure resources like web apps, databases, and storage accounts.
-- **Resources** are instances of services that you can create, like virtual machines (VMs), storage, or SQL databases.
+- **Resource groups** are logical containers where you can deploy and manage Azure resources like web apps, databases, and storage accounts.
+- **Resources** are instances of services that you can create, like virtual machines, storage, or SQL databases.
 
-### Management level settings scope
+### Management settings scope
 
-You can apply management settings like policies and Azure role-based access control (RBAC) at any management level. The management level determines how widely the setting is applied. Lower levels inherit settings from higher levels. For example, when you apply a policy to a subscription, the policy applies to all resource groups and resources in that subscription.
+You can apply management settings like policies and Azure role-based access control at any management level. The management level determines how widely the setting is applied. Lower levels inherit settings from higher levels. For example, when you apply a policy to a subscription, the policy applies to all resource groups and resources in that subscription.
 
-Usually, it makes sense to apply critical settings at higher levels, and project-specific requirements at lower levels. For example, to make sure all resources for your organization are deployed to certain regions, apply a policy to the subscription specifying the allowed locations. The allowed locations are automatically enforced as users in your organization add new resource groups and resources. Learn more about policies in the governance, security, and compliance section of this guide.
+Usually, it makes sense to apply critical settings at higher levels, and project-specific requirements at lower levels. For example, to make sure all resources for your organization are deployed to certain regions, apply a policy to the subscription that specifies the allowed locations. The allowed locations are automatically enforced as users in your organization add new resource groups and resources. Learn more about policies in the [Governance, security, and compliance](govern-org-compliance.md) section of this guide.
 
 It's easy to manage a few subscriptions independently. If your number of subscriptions increases, consider creating a management group hierarchy to simplify subscription and resource management. For more information, see [Organize and manage your Azure subscriptions](../azure-best-practices/organize-subscriptions.md).
 
-Work with people in the following roles to plan your organizational compliance strategy:
+Work with people in the following roles as you plan your organizational compliance strategy:
 
 - Security and compliance
 - IT administration
@@ -130,7 +130,7 @@ Other common uses for tags include:
 
 - **Metadata and documentation:** Administrators can easily see detail about the resources they're working on by applying a tag like `ProjectOwner`.
 - **Automation:** Regularly running scripts can take action based on a tag value like `ShutdownTime` or `DeprovisionDate`.
-- **Cost optimization:** You can allocate resources to the teams and resources who are responsible for the cost. In Azure Cost Management + Billing, you can apply the cost center tag as a filter to report charges based on team or department usage.
+- **Cost optimization:** You can allocate resources to the teams and resources who are responsible for the costs. In Azure Cost Management + Billing, you can apply the cost center tag as a filter to report charges based on team or department usage.
 
 Each resource or resource group can have a maximum of 50 tag name and value pairs. This limitation only applies to tags directly applied to the resource group or resource.
 
@@ -177,5 +177,5 @@ To learn more about management levels and organization, see:
 
 To learn more about resource naming and tagging, see:
 - [Develop your naming and tagging strategy for Azure resources](../azure-best-practices/naming-and-tagging.md)
-- [Use tags to organize your Azure resources](/azure/azure-resource-manager/management/tag-resources).
+- [Use tags to organize your Azure resources](/azure/azure-resource-manager/management/tag-resources)
 
