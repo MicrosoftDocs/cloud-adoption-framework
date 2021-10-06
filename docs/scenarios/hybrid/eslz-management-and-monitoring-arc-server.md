@@ -40,7 +40,8 @@ Here are some general design recommendations for Azure Arc-enabled servers monit
 
 ### Management:
 - Create an [Azure Advisor alert](https://docs.microsoft.com/en-us/azure/azure-arc/servers/plan-at-scale-deployment#phase-3-manage-and-operate) to identify Azure Arc-enabled servers that are not using the latest version of the Azure Connected Machine agent.
-- Use [Update Management](https://docs.microsoft.com/en-us/azure/automation/update-management/overview) in Azure Automation as a long-term patching mechanism for both Azure Arc-enabled Windows and Linux servers. Update Management will allow you to automate the Connected Machine agent upgrade via Windows Updates on Azure Arc-enabled Windows servres.
+- Use [Update Management](https://docs.microsoft.com/en-us/azure/automation/update-management/overview) in Azure Automation as a long-term patching mechanism for both Azure Arc-enabled Windows and Linux servers, which allows you to view and schedule operating system updates and patches for your Arc-enabled servers at scale.
+- Update Management will also allow you to automate the Connected Machine agent upgrade via Windows Updates on Azure Arc-enabled Windows servers.
 - Review the Connected Machine agent [upgrade methods](https://docs.microsoft.com/en-us/azure/azure-arc/servers/manage-agent#upgrading-agent).
 - Understand how to upgrade [virtual machine extensions](https://docs.microsoft.com/en-us/azure/azure-arc/servers/manage-vm-extensions) to keep other agents installed and managed by Azure Arc up to date.
 
