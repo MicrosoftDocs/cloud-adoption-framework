@@ -18,6 +18,12 @@ Defining and applying the proper control mechanisms is key in any cloud implemen
 
 By the end of this article, you will understand the critical design areas for security, governance, and compliance with clear Microsoft guidance.
 
+## Architecture
+
+The following image shows a conceptual reference architecture that demonstrates the security, compliance and governance design areas for Azure Arc-enabled servers:
+
+![A diagram depicting the Enterprise-scale security, governance and compliance for Azure Arc-enabled servers on Azure conceptual reference architecture.](./media/arc-enabled-servers-security-compliance-governance.png)
+
 ## Design considerations
 
 As your hybrid and multicloud resources become part of Azure Resource Manager, they can be managed and governed with Azure tools just as Azure native VMs.
