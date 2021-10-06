@@ -1,9 +1,9 @@
 ---
 title: Security, governance and compliance baseline for hybrid, multicloud, and edge deployments
 description: Expand Azure governance, security and compliance capabilities to hybrid, multicloud, and edge deployments.
-author: brianblanchard
-ms.author: brblanch
-ms.date: 02/01/2020
+author: MatthewGrimshaw
+ms.author: matgri
+ms.date: 06/10/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
