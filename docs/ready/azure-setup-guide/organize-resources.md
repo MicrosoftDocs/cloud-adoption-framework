@@ -54,7 +54,7 @@ Work with people in the following roles as you plan your organizational complian
 
 ### Create a management structure
 
-To create a management group, subscription, or resource group from the [Azure portal](https://portal.azure.com).
+To create a management group, subscription, or resource group, sign in to the [Azure portal](https://portal.azure.com).
 
 - To create a **management group** to help you manage multiple subscriptions, go to [Management groups](https://portal.azure.com/#blade/Microsoft_Azure_ManagementGroups/HierarchyBlade) and select **Create**.
   
