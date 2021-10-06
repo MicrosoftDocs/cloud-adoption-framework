@@ -175,7 +175,7 @@ To learn more about management levels and organization, see:
 - [Understand resource access management in Azure](../../govern/resource-consistency/resource-access-management.md)
 - [Subscription service limits](/azure/azure-resource-manager/management/azure-subscription-service-limits)
 
-To learn more about resource naming and tagging, see"
+To learn more about resource naming and tagging, see:
 - [Develop your naming and tagging strategy for Azure resources](../azure-best-practices/naming-and-tagging.md)
 - [Use tags to organize your Azure resources](/azure/azure-resource-manager/management/tag-resources).
 
