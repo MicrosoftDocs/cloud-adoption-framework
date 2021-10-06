@@ -19,9 +19,19 @@ Azure Arc-enabled servers allows you to manage your Windows and Linux physical s
 Here are some general design considerations for Azure Arc-enabled servers monitoring and management:
 
 - Review the [supported list of operating systems](https://docs.microsoft.com/en-us/azure/azure-monitor/agents/agents-overview#supported-operating-systems) for the monitoring agents.
-- Review the [network requirements](https://docs.microsoft.com/en-us/azure/azure-monitor/agents/log-analytics-agent#network-requirements) for the agents to communicate with Azure Monitor.
+- Review the [network requirements](https://docs.microsoft.com/en-us/azure/azure-monitor/agents/log-analytics-agent#network-requirements) for the monitoring agents to communicate with Azure Monitor.
+- Review the Azure Arc-enabled servers Windows and Linux architecture.
+
+![Azure Arc-enabled servers Windows architecture](../../_images/hybrid/Windows-architecture.png)
+
+![Azure Arc-enabled servers Windows architecture](../../_images/hybrid/Linux-architecture.png)
+
 - The Azure Monitor agents should be automatically deployed to Azure Arc-enabled Windows and Linux servers through [Azure Policy](https://docs.microsoft.com/en-us/azure/azure-monitor/deploy-scale) as part of the Enterprise scale landing zone.
 - Identify the needed [logs and metrics](https://docs.microsoft.com/en-us/azure/azure-monitor/agents/agent-data-sources) to be collected from your Azure Arc-enabled servers based on your requirements.
+- Review the Azure Connected Machine agent architecture.
+
+![Azure Arc-enabled servers Windows architecture](../../_images/hybrid/agent-architecture.png)
+
 - The Azure Connected Machine agent should be monitored for heartbeat connectivity to the platform.
 - The Azure Connected Machine agent is updated regularly to address bug fixes, stability enhancements, and new functionality. Updates should be monitored and deployed in a timely fashion. Determine whether to upgrade to the latest release manually or automatically depending on your requirements.
 - Update management of the Azure Arc-enabled servers should be automated to install the latest operating system and security updates.
