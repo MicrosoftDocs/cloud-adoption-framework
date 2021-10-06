@@ -44,6 +44,7 @@ Here are some general design recommendations for Azure Arc-enabled servers monit
 - Update Management will also allow you to automate the Connected Machine agent upgrade via Windows Updates on Azure Arc-enabled Windows servers.
 - Review the Connected Machine agent [upgrade methods](https://docs.microsoft.com/en-us/azure/azure-arc/servers/manage-agent#upgrading-agent).
 - Understand how to upgrade [virtual machine extensions](https://docs.microsoft.com/en-us/azure/azure-arc/servers/manage-vm-extensions) to keep other agents installed and managed by Azure Arc up to date.
+- Monitor [this article](https://docs.microsoft.com/en-us/azure/azure-arc/servers/agent-release-notes) for the latest releases, known issues and bug fixes of the Connected Machine agent.
 
 ## Learn before you start
 
