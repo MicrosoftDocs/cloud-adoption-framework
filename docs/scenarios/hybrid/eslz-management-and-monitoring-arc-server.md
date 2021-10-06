@@ -30,7 +30,7 @@ Here are some general design considerations for Azure Arc-enabled servers monito
 - Identify the needed [logs and metrics](https://docs.microsoft.com/en-us/azure/azure-monitor/agents/agent-data-sources) to be collected from your Azure Arc-enabled servers based on your requirements.
 - Review the Azure Connected Machine agent architecture.
 
-![Azure connected machine agent architecture](../../_images/hybrid/agent-architecture.png)
+![Azure connected machine agent architecture](../../_images/hybrid/Agent-architecture.png)
 
 - The Azure Connected Machine agent should be monitored for heartbeat connectivity to the platform.
 - The Azure Connected Machine agent is updated regularly to address bug fixes, stability enhancements, and new functionality. Updates should be monitored and deployed in a timely fashion. Determine whether to upgrade to the latest release manually or automatically depending on your requirements.
