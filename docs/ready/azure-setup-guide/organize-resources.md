@@ -63,7 +63,7 @@ To create a management group, subscription, or resource group, sign in to the [A
   > You can also create subscriptions programmatically. For more information, see [Programmatically create Azure subscriptions](/azure/cost-management-billing/manage/programmatically-create-subscription).
   
 - To create a **resource group** to hold resources that share the same permissions and policies:
-  1. Go to [Resource groups](https://portal.azure.com/#create/Microsoft.ResourceGroup).
+  1. Go to [Create a resource group](https://portal.azure.com/#create/Microsoft.ResourceGroup).
   1. In the **Create a resource group** form:
      1. Select the **Subscription** to create the resource group under.
      1. Enter a name for the **Resource group**.
