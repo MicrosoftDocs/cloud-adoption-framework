@@ -128,25 +128,16 @@ Enterprise-scale data landing zones outline reference implementation for repeata
 
 - To track research and development costs, deploy one machine learning workspace in the landing zone as a shared resource during the early stages of exploring your use case.
 
-## More Azure Machine Learning resources
-
-Use the [Enterprise-Scale Analytics - Data Product Analytics](https://github.com/Azure/data-product-analytics) template and guidance to deploy Azure Machine Learning.
-
-See the following CAF documentation to learn more about Azure Machine Learning deployment and management best practices for enterprises:
-
-- [Organize and set up Azure Machine Learning workspaces](/azure/cloud-adoption-framework/ready/azure-best-practices/ai-machine-learning-resource-organization): When planning an Azure Machine Learning deployment, how do team structures, environments, or the regionality of resources affect how workspaces are set up?
-
-- [Budget, cost, and quota management for Azure Machine Learning at the organizational scale](/azure/cloud-adoption-framework/ready/azure-best-practices/optimize-ai-machine-learning-cost): Organizations face many management and optimization challenges when managing workload, team, and user compute costs incurred from Azure Machine Learning.
-
-- [Machine learning DevOps](/azure/cloud-adoption-framework/ready/azure-best-practices/ai-machine-learning-mlops): Machine learning DevOps is an organizational change that relies on a combination of people, process, and technology to deliver machine learning solutions in a robust, scalable, reliable, and automated way. This guide summarizes best practices and information for enterprises to use Azure Machine Learning to adopt machine learning DevOps.
-
-- Use [Azure Machine Learning documentation and tutorials](/azure/machine-learning/) to get started with building your solutions.
-
 ## Next steps
 
-Continue to the following four Cloud Adoption Framework articles to learn more about Azure Machine Learning:
+Use the [Enterprise-Scale Analytics - Data Product Analytics](https://github.com/Azure/data-product-analytics) template and guidance to deploy Azure Machine Learning, and reference [Azure Machine Learning documentation and tutorials](/azure/machine-learning/) to get started with building your solutions.
 
-- [Organize and set up Azure Machine Learning environments](/azure/cloud-adoption-framework/ready/azure-best-practices/ai-machine-learning-resource-organization)
-- [Azure Machine Learning best practices for enterprise security](/azure/cloud-adoption-framework/ready/azure-best-practices/ai-machine-learning-enterprise-security)
-- [Manage budgets, costs, and quota for Azure Machine Learning at organizational scale](/azure/cloud-adoption-framework/ready/azure-best-practices/optimize-ai-machine-learning-cost)
-- [Machine learning DevOps guide](/azure/cloud-adoption-framework/ready/azure-best-practices/ai-machine-learning-mlops)
+Continue to the the following four Cloud Adoption Framework articles to learn more about Azure Machine Learning deployment and management best practices for enterprises:
+
+- [Organize and set up Azure Machine Learning environments](/azure/cloud-adoption-framework/ready/azure-best-practices/ai-machine-learning-resource-organization): When planning an Azure Machine Learning deployment, how do team structures, environments, or the geography of resources affect how workspaces are set up?
+
+- [Azure Machine Learning best practices for enterprise security](/azure/cloud-adoption-framework/ready/azure-best-practices/ai-machine-learning-enterprise-security): Learn how to secure your environment and resources with Azure Machine Learning.
+
+- [Manage budgets, costs, and quota for Azure Machine Learning at organizational scale](/azure/cloud-adoption-framework/ready/azure-best-practices/optimize-ai-machine-learning-cost): Organizations face many management and optimization challenges when managing workload, team, and user compute costs incurred from Azure Machine Learning.
+
+- [Machine learning DevOps guide](/azure/cloud-adoption-framework/ready/azure-best-practices/ai-machine-learning-mlops): Machine learning DevOps is an organizational change that relies on a combination of people, process, and technology to deliver machine learning solutions in a robust, scalable, reliable, and automated way. This guide summarizes best practices and information for enterprises to use Azure Machine Learning to adopt machine learning DevOps.
