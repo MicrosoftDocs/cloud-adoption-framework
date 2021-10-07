@@ -27,7 +27,7 @@ This scenario focuses on supporting two targeted outcomes:
 
 **Data governance:**
 - Properly manage the data estate to ensure data quality and maturity across all cloud deployments.
-- Govern how data is classified, categorized, and used, to ensure data is protected and reliable across all cloud deployments.
+- Govern how to classify, categorize, and use data to ensure data protection and reliability across all cloud deployments.
 
 For more information, see [Data summary and maturity model for Azure](./govern.md).
 
@@ -35,7 +35,7 @@ This scenario also provides a framework built on the following key principles. T
 
 **Allow**:
 - Scale without increased complexity.
-- Separate concerns to facilitate governance.
+- Separate concerns to make governance easier.
 - Self-serve data infrastructure.
 
 **Follow**:
