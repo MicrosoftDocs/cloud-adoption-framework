@@ -41,7 +41,7 @@ Here are some general design considerations for Azure Arc-enabled servers monito
 Here are some general design recommendations for Azure Arc-enabled servers monitoring and management:
 
 ### Monitoring:
-- Logs should be stored centrally to the dedicated platform Log Analytics workspace and [control log access with Azure Role-based access control](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/design-logs-deployment#access-control-overview) . If there is a requirement for a separate workspace due to management, data sovereignty or compliance requirements, this can affect the ability to have a single pane of glass and event correlation of your Azure Arc-enabled servers across the environment.
+- Logs should be stored centrally to the dedicated platform Log Analytics workspace and [control log access with Azure Role-based access control](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/design-logs-deployment#access-control-overview) . If there is a requirement for a separate workspace due to management, data sovereignty or compliance requirements, using a separate workspace can affect the ability to have a single pane of glass and event correlation of your Azure Arc-enabled servers across the environment.
 - Use VM insights to analyze the performance of your Azure Arc-enabled Windows and Linux servers and monitor their processes and dependencies on other resources and external processes.
 - Configure the needed performance counters for the Azure Arc-enabled Windows and Linux servers on the dedicated log analytics workspace.
 - Configure the logs that need to be collected for the Azure Arc-enabled Windows and Linux servers on the dedicated log analytics workspace.
@@ -54,7 +54,7 @@ Here are some general design recommendations for Azure Arc-enabled servers monit
 - Update Management will also allow you to automate the Azure Connected Machine agent upgrade via Windows Updates on Azure Arc-enabled Windows servers.
 - Review the Azure Connected Machine agent [upgrade methods](https://docs.microsoft.com/en-us/azure/azure-arc/servers/manage-agent#upgrading-agent).
 - Understand how to upgrade [virtual machine extensions](https://docs.microsoft.com/en-us/azure/azure-arc/servers/manage-vm-extensions) to keep other agents installed and managed by Azure Arc up to date.
-- Monitor [this article](https://docs.microsoft.com/en-us/azure/azure-arc/servers/agent-release-notes) for the latest releases, known issues and bug fixes of the Azure Connected Machine agent.
+- Monitor [this article](https://docs.microsoft.com/en-us/azure/azure-arc/servers/agent-release-notes) for the latest releases, known issues, and bug fixes of the Azure Connected Machine agent.
 
 ## Learn before you start
 
