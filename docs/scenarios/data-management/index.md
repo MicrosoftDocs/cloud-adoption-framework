@@ -38,9 +38,11 @@ This scenario also provides a framework built on the following key principles. T
 - Separate concerns to facilitate governance.
 - Self-serve data infrastructure.
 
-**Follow** best practices for well-architected cloud services.
+**Follow**:
+- Best practices for well-architected cloud services.
 
-**Support** on-premises and multicloud scenarios.
+**Support**:
+- On-premises and multicloud scenarios.
 
 **Adopt**:
 - A product and vendor agnostic approach.
@@ -71,7 +73,7 @@ The data management and analytics scenario is designed to guide the end-to-end c
 
 ## Reference architecture
 
-*Data management landing zone* and *data landing zone* architectures help accelerate deployment for many common data management and analytics solutions. The following diagram is an overview of a data platform with a central data management landing zone and multiple data landing zones.
+*Data management landing zone* and *data landing zone* architectures help accelerate deployment for many common data management and analytics solutions. The following diagram is an overview of a data platform with a central data management landing zone and multiple data landing zones:
 
 :::image type="content" source="images/high-level-design-multiple-landing-zones.png" alt-text="Diagram that shows a high-level design with a data management landing zone and data landing zones." border="false":::
 
@@ -98,21 +100,21 @@ Expand the **Featured Azure products** section in the **Data management and anal
 
 The following common customer journeys support the cloud data management and analytics scenario:
 
-**Prepare for centralized operations.** Use [Cloud Adoption Framework](/azure/cloud-adoption-framework) articles as resources. Establish processes and approaches to support the entire portfolio of workloads across your data estate.
+- **Prepare for centralized operations.** Use [Cloud Adoption Framework](/azure/cloud-adoption-framework) articles as resources. Establish processes and approaches to support the entire portfolio of workloads across your data estate.
 
-**Improve controls across your data estate.** Focus on [Govern](/azure/cloud-adoption-framework/govern) and [Manage](/azure/cloud-adoption-framework/manage) articles to integrate data management and analytics into existing operations. Use the [Ready](/azure/cloud-adoption-framework/ready) articles to deploy controls across all your cloud environments.
+- **Improve controls across your data estate.** Focus on [Govern](/azure/cloud-adoption-framework/govern) and [Manage](/azure/cloud-adoption-framework/manage) articles to integrate data management and analytics into existing operations. Use the [Ready](/azure/cloud-adoption-framework/ready) articles to deploy controls across all your cloud environments.
 
-**Use central IT governance to influence changes to individual workloads.** As data management and analytics processes improve, some requirements depend on knowing the architecture behind individual workloads. Use [Well-Architected Framework](./well-architected-framework.md) guidance to help individual workload owners improve their workloads to support data operations.
+- **Use central IT governance to influence changes to individual workloads.** As data management and analytics processes improve, some requirements depend on knowing the architecture behind individual workloads. Use [Well-Architected Framework](./well-architected-framework.md) guidance to help individual workload owners improve their workloads to support data operations.
 
-**Optimize individual workloads and workload teams.** Start with the [Well-Architected Framework](./well-architected-framework.md) guidance to integrate data management and analytics strategies into individual workloads. The guidance describes best practices and architectures that central IT and governance teams typically deliver to accelerate individual workload development.
+- **Optimize individual workloads and workload teams.** Start with the [Well-Architected Framework](./well-architected-framework.md) guidance to integrate data management and analytics strategies into individual workloads. The guidance describes best practices and architectures that central IT and governance teams typically deliver to accelerate individual workload development.
 
-**Use best practices to onboard individual assets.** Expand the **Best practices** section in the **Data management and analytics scenario** TOC for articles about processes to onboard all of your data estate into one data management and analytics control plane.
+- **Use best practices to onboard individual assets.** Expand the **Best practices** section in the **Data management and analytics scenario** TOC for articles about processes to onboard all of your data estate into one data management and analytics control plane.
 
-**Use specific Azure products.** Accelerate and improve data management and analytics capabilities by using the Azure products in the **Featured Azure products** section of the **Data management and analytics scenario** TOC.
+- **Use specific Azure products.** Accelerate and improve data management and analytics capabilities by using the Azure products in the **Featured Azure products** section of the **Data management and analytics scenario** TOC.
 
 ## Next steps
 
-Learn more about planning for Azure data management and analytics:
+For more information about planning for Azure data management and analytics, see:
 - [Develop a plan for data management and analytics](plan.md)
 - [Review your environment for Azure landing zones](ready.md)
 - [Introduction to enterprise-scale for analytics and AI in Azure](enterprise-scale-landing-zone.md)
