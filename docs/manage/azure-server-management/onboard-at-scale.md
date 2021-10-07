@@ -43,13 +43,13 @@ To assign the policies that described in the previous section:
 
 1. In the Azure portal, go to **Policy** > **Assignments** > **Assign initiative**.
 
-    ![Screenshot of the portal's policy interface with the Assignments option and Assign initiative option called out.](./media/onboarding-at-scale1.png)
+    ![Screenshot of the portal's policy interface with the **Assignments** option and **Assign initiative** option called out.](./media/onboarding-at-scale1.png)
 
 2. On the **Assign policy** page, set the **Scope** by selecting the ellipsis (**...**) and then selecting either a management group or subscription. Optionally, select a resource group. Then choose **Select** at the bottom of the **Scope** page. The scope determines which resources or group of resources the policy is assigned to.
 
 3. Select the ellipsis (**...**) next to **Policy definition** to open the list of available definitions. To filter the initiative definitions, enter **Azure Monitor** in the **Search** box:
 
-    ![Screenshot of the Enable Azure Monitor for V M initiative definition.](./media/onboarding-at-scale2.png)
+    ![Screenshot of the **Enable Azure Monitor for V M** initiative definition.](./media/onboarding-at-scale2.png)
 
 4. The **Assignment name** is automatically populated with the policy name that you selected, but you can change it. You can also add an optional description to provide more information about this policy assignment. The **Assigned by** field is automatically filled based on who is signed in. This field is optional, and it supports custom values.
 
@@ -57,7 +57,7 @@ To assign the policies that described in the previous section:
 
     ![Screenshot of the Log Analytics workspace option.](./media/onboarding-at-scale3.png)
 
-6. Select the **Managed Identity location** check box. If this policy is of the type [`DeployIfNotExists`](/azure/governance/policy/concepts/effects#deployifnotexists), a managed identity will be required to deploy the policy. In the portal, the account will be created as indicated by the check box selection.
+6. Select the **Managed Identity location** checkbox. If this policy is of the type [`DeployIfNotExists`](/azure/governance/policy/concepts/effects#deployifnotexists), a managed identity will be required to deploy the policy. In the portal, the account will be created as indicated by the checkbox selection.
 
 7. Select **Assign**.
 
@@ -100,7 +100,7 @@ The Change Tracking and Inventory solution is free for Azure VMs and costs $6 pe
 4. Select **Enable on selected machines**. Then select **Add** next to the machine name.
 5. Select **Enable** to enable the solution for those machines.
 
-![Screenshot of Change Tracking in the Azure portal](./media/onboarding-configuration2.png)
+![Screenshot of **Change Tracking** in the Azure portal](./media/onboarding-configuration2.png)
 
 #### Opt in by using saved searches
 

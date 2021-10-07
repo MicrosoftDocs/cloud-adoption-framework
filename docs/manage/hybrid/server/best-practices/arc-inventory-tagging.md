@@ -1,6 +1,6 @@
 ---
-title: Apply inventory tagging to Azure Arc enabled servers
-description: Learn how to use Azure Arc enabled servers to provide server inventory management capabilities across hybrid multicloud and on-premises environments
+title: Apply inventory tagging to Azure Arc-enabled servers
+description: Learn how to use Azure Arc-enabled servers to provide server inventory management capabilities across hybrid multicloud and on-premises environments
 author: likamrat
 ms.author: brblanch
 ms.date: 01/29/2021
@@ -10,11 +10,11 @@ ms.subservice: manage
 ms.custom: think-tank, e2e-hybrid
 ---
 
-# Apply inventory tagging to Azure Arc enabled servers
+# Apply inventory tagging to Azure Arc-enabled servers
 
-This article provides guidance on how to use Azure Arc enabled servers to provide server inventory management capabilities across hybrid multicloud and on-premises environments.
+This article provides guidance on how to use Azure Arc-enabled servers to provide server inventory management capabilities across hybrid multicloud and on-premises environments.
 
-Azure Arc enabled servers enable you to manage your Windows and Linux machines hosted outside of Azure on your corporate network or other cloud providers. This is similar to how you manage native virtual machines in Azure. When a hybrid machine is connected to Azure, it becomes a connected machine and is treated as a resource in Azure. Each connected machine has a resource ID, is managed as part of a resource group inside a subscription, and benefits from standard Azure constructs such as Azure Policy and applying tags. The ability to easily organize and manage server inventory using Azure as a management engine greatly reduces administrative complexity and provides a consistent strategy for hybrid and multicloud environments.
+Azure Arc-enabled servers enable you to manage your Windows and Linux machines hosted outside of Azure on your corporate network or other cloud providers. This is similar to how you manage native virtual machines in Azure. When a hybrid machine is connected to Azure, it becomes a connected machine and is treated as a resource in Azure. Each connected machine has a resource ID, is managed as part of a resource group inside a subscription, and benefits from standard Azure constructs such as Azure Policy and applying tags. The ability to easily organize and manage server inventory using Azure as a management engine greatly reduces administrative complexity and provides a consistent strategy for hybrid and multicloud environments.
 
 The following procedures use [Resource Graph Explorer](/azure/governance/resource-graph/first-query-portal) and [Azure CLI](/cli/azure/install-azure-cli) to demonstrate how to tag and query server inventory across multiple clouds from a single pane of glass in Azure.
 
@@ -44,7 +44,7 @@ The following procedures use [Resource Graph Explorer](/azure/governance/resourc
    az --version
    ```
 
-## Verify that your Azure Arc connected servers are ready for tagging
+## Verify that your Azure Arc-connected servers are ready for tagging
 
 Use Resource Graph Explorer to query and view resources in Azure.
 
@@ -59,11 +59,11 @@ Use Resource Graph Explorer to query and view resources in Azure.
     | where type =~ 'Microsoft.HybridCompute/machines'
     ```
 
-1. If you have correctly created Azure Arc enabled servers, they are listed in the results pane of Resource Graph Explorer. You can also view the Azure Arc enabled serves from the Azure portal.
+1. If you have correctly created Azure Arc-enabled servers, they are listed in the results pane of Resource Graph Explorer. You can also view the Azure Arc-enabled serves from the Azure portal.
 
     ![A screenshot of a Resource Graph Explorer query.](./media/inventory-tagging/run-query.png)
 
-    ![A screenshot of the details of an Azure Arc enabled server in the Azure portal.](./media/inventory-tagging/arc-server.png)
+    ![A screenshot of the details of an Azure Arc-enabled server in the Azure portal.](./media/inventory-tagging/arc-server.png)
 
 ## Create a basic Azure tag taxonomy
 
@@ -81,11 +81,11 @@ az tag add-value --name "Hosting Platform" --value "On-premises"
 
 ## Tag your Azure Arc resources
 
-After you've created a basic taxonomy structure, apply tags to the Azure Arc enabled server resources. The following procedure demonstrates tagging resources in both AWS and GCP. If you only have resources in one of these providers, you can skip to the appropriate section for AWS or GCP.
+After you've created a basic taxonomy structure, apply tags to the Azure Arc-enabled server resources. The following procedure demonstrates tagging resources in both AWS and GCP. If you only have resources in one of these providers, you can skip to the appropriate section for AWS or GCP.
 
-### Tag the Azure Arc connected AWS Ubuntu EC2 instance
+### Tag the Azure Arc-connected AWS Ubuntu EC2 instance
 
-In CLI, run the following commands to apply the `Hosting Platform : AWS`  tag to your AWS Azure Arc enabled servers.
+In CLI, run the following commands to apply the `Hosting Platform : AWS` tag to your AWS Azure Arc-enabled servers.
 
 > [!NOTE]
 > If you connected your AWS EC2 instances using a method other than the one described in the [Azure tutorial](./aws-terraform-ubuntu.md), then you need to adjust the values for `awsResourceGroup` and `awsMachineName` to match values specific to your environment.
@@ -100,9 +100,9 @@ az resource tag --ids $awsMachineResourceId --tags "Hosting Platform"="AWS"
 
 ![A screenshot of one output of the `az resource tag` command.](./media/inventory-tagging/az-resource-tag-1.png)
 
-### Tag Azure Arc connected GCP Ubuntu server
+### Tag Azure Arc-connected GCP Ubuntu server
 
-In CLI, run the following commands to apply the `Hosting Platform : GCP`  tag to your GCP Azure Arc enabled servers.
+In CLI, run the following commands to apply the `Hosting Platform : GCP` tag to your GCP Azure Arc-enabled servers.
 
 > [!NOTE]
 > If you connected your GCP instances using a method other than the one described in the related [Azure Arc Terraform tutorial](./gcp-terraform-ubuntu.md), then you will need to adjust the values for `gcpResourceGroup` and `gcpMachineName` to match values specific to your environment.
@@ -132,15 +132,15 @@ After you apply tags to the resources that are hosted in multiple clouds, use Re
 
    ![A screenshot of the details of a Resource Graph Explorer query.](./media/inventory-tagging/run-query-details.png)
 
-2. Click **Run Query** and then select the **Formatted Results** toggle. If done correctly, you should see all Azure Arc enabled servers and their assigned `Hosting Platform` tag values.
+2. Click **Run Query** and then select the **Formatted Results** toggle. If done correctly, you should see all Azure Arc-enabled servers and their assigned `Hosting Platform` tag values.
 
    ![A screenshot of the results of Resource Graph Explorer query.](./media/inventory-tagging/run-query-results.png)
 
    We can also view the tags on the projected servers from Azure portal.
 
-   ![A screenshot of one set of tags on an Azure Arc enabled server.](./media/inventory-tagging/tags-1.png)
+   ![A screenshot of one set of tags on an Azure Arc-enabled server.](./media/inventory-tagging/tags-1.png)
 
-   ![A screenshot of another set of tags on an Azure Arc enabled server.](./media/inventory-tagging/tags-2.png)
+   ![A screenshot of another set of tags on an Azure Arc-enabled server.](./media/inventory-tagging/tags-2.png)
 
 ## Clean up your environment
 

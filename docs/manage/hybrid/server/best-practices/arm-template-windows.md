@@ -14,12 +14,12 @@ ms.custom: think-tank, e2e-hybrid
 
 This article provides guidance for using an [Azure Resource Manager template (ARM template)](/azure/azure-resource-manager/templates/overview) to automatically onboard an Azure virtual machine (Azure VM) running Windows to Azure Arc. The provided ARM template is responsible for creating the Azure resources and executing the Azure Arc onboard script on the VM.
 
-Azure VMs are using the [Azure Instance Metadata Service (IMDS)](/azure/virtual-machines/windows/instance-metadata-service) by default. By projecting an Azure VM as an Azure Arc enabled server, a *conflict* is created, which will not allow for the Azure Arc server resources to be represented as one when the IMDS is being used. Instead, the Azure Arc server will still "act" as a native Azure VM.
+Azure VMs are using the [Azure Instance Metadata Service (IMDS)](/azure/virtual-machines/windows/instance-metadata-service) by default. By projecting an Azure VM as an Azure Arc-enabled server, a *conflict* is created, which will not allow for the Azure Arc server resources to be represented as one when the IMDS is being used. Instead, the Azure Arc server will still "act" as a native Azure VM.
 
 This guide will allow you to use and onboard Azure VMs to Azure Arc **for demo purposes only**. You will have the ability to simulate a server deployed outside of Azure, for example, on-premises or in other cloud platforms.
 
 > [!NOTE]
-> An Azure VM is not expected to be an Azure Arc enabled server. The following scenario is unsupported and should only be used for demo and testing purposes.
+> An Azure VM is not expected to be an Azure Arc-enabled server. The following scenario is unsupported and should only be used for demo and testing purposes.
 
 ## Prerequisites
 
@@ -75,7 +75,7 @@ For you to get familiar with the automation and deployment flow, below is an exp
 
 2. The ARM template includes an Azure VM custom script extension, which deploys the [`install_arc_agent.ps1`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/azure/windows/arm_template/scripts/install_arc_agent.ps1) PowerShell script.
 
-3. In order to allow the Azure VM to successfully be projected as an Azure Arc enabled server, the script will:
+3. In order to allow the Azure VM to successfully be projected as an Azure Arc-enabled server, the script will:
 
     1. Set local OS environment variables.
 
@@ -155,11 +155,11 @@ As mentioned, this deployment will use ARM templates. You will deploy a single t
 
     ![A screenshot of a fourth type of script output.](./media/arm-template/template-windows-script-4.png)
 
-4. Upon successful completion, a new Azure Arc enabled server will be added to the resource group.
+4. Upon successful completion, a new Azure Arc-enabled server will be added to the resource group.
 
-![A screenshot of a resource group from an Azure Arc enabled server.](./media/arm-template/template-windows-resource-gp.png)
+![A screenshot of a resource group from an Azure Arc-enabled server.](./media/arm-template/template-windows-resource-gp.png)
 
-![A screenshot of details from an Azure Arc enabled server.](./media/arm-template/template-windows-server-details.png)
+![A screenshot of details from an Azure Arc-enabled server.](./media/arm-template/template-windows-server-details.png)
 
 ## Cleanup
 
