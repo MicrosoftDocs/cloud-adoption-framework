@@ -1,13 +1,13 @@
 ---
 title: Enterprise-scale Arc Server Management and Monitoring
 description: Understand the design considerations and recommendations for management and monitoring of Arc-enabled servers
-author: "Sebassem, Aruthur.Clares, Islam.Gomaa"
-ms.author: "sebassem,arthur.clares,islam.gomaa"
+author: 'Seif Bassem'
+ms.author: sebassem
 ms.date: 09/20/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: think-tank, e2e-arc
+ms.custom: e2e-arc
 ---
 
 # Management and monitoring for Azure Arc-enabled servers enterprise-scale scenario
