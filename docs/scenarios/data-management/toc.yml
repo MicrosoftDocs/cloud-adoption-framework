@@ -12,6 +12,9 @@ items:
     href: ./strategy.md
   - name: Define your plan
     href: ./plan.md
+  - name: Build data management and analytics capabilities
+    href: ./plan-capabilities.md
+  
 
   - name: Prepare your environment
     items:
