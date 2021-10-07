@@ -82,6 +82,10 @@ Whilst the Azure Active Directory system assigned identity can only be used to u
 
 Consider using Azure Key Vault to manage certificates on your Azure Arc-enabled servers. Azure Arc-enabled servers has a managed identity which is used by the Connected Machine and other Azure agents to communicate back to their respective services. The Key Vault VM extension allows you to manage the certificate lifecycle on [Windows](https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/key-vault-windows) and [Linux](https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/key-vault-linux) machines. [PLACEHOLDER](Secret management)
 
+The following image shows a conceptual reference architecture that demonstrates the Azure Key Vault integration for Azure Arc-enabled servers:
+
+![A diagram depicting the the Azure Key Vault integration for Azure Arc-enabled servers.](./media/arc-enabled-servers-keyVault-integration.png)
+
 ### Policy management and reporting
 
 Having a policy-driven governance is a foundational principle of cloud-native operations and Cloud Adoption Framework. [Azure Policy](https://docs.microsoft.com/en-us/azure/governance/policy/) provides the mechanism to enforce corporate standards and to assess compliance at scale. Through it, you can implement governance for consistency of deployments, compliance, control costs, and improve your security posture; with its compliance dashboard, you will get an aggregated view of the overall state as well as remediation capabilities. Azure Arc-enabled servers support [Azure Policy](https://docs.microsoft.com/en-us/azure/governance/policy/overview) at the Azure Resource Management layer, and also within the individual server machine using [Guest Configuration Policies](https://docs.microsoft.com/en-us/azure/governance/policy/concepts/guest-configuration).
@@ -98,6 +102,10 @@ Understand the [scope of Azure policy](https://docs.microsoft.com/en-us/azure/ro
 - [Enforce organization standards and assess compliance at scale](https://docs.microsoft.com/en-us/azure/azure-arc/servers/security-controls-policy).
 - Use an Azure Policy and Remediation tasks to onboard management services agents via the extension management feature.
 - Enable [Azure Monitor](https://docs.microsoft.com/en-us/azure/azure-arc/servers/learn/tutorial-enable-vm-insights) for compliance and operational monitoring of Azure Arc-enabled servers.
+
+The following image shows a conceptual reference architecture that demonstrates the policy and compliance reporting design areas for Azure Arc-enabled servers:
+
+![A diagram depicting the Azure Policy for Azure Arc-enabled servers on Azure conceptual reference architecture.](./media/arc-enabled-servers-policy.png)
 
 ### Log management strategy
 
