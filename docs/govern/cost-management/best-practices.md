@@ -166,7 +166,7 @@ Storage accounts can use different types of redundancy for resilience and high a
 - Review [Azure Storage pricing](https://azure.microsoft.com/pricing/details/storage/).
 - Learn to use the [Azure Import/Export service](/azure/import-export/storage-import-export-service) to securely import large amounts of data to Azure Blob Storage and Azure Files.
 - Compare [blobs, files, and disk storage data types](/azure/storage/common/storage-introduction).
-- Learn more about [access tiers](/azure/storage/blobs/storage-blob-storage-tiers).
+- Learn more about [access tiers](/azure/storage/blobs/access-tiers-overview).
 - Review [different types of storage accounts](/azure/storage/common/storage-account-overview).
 - Learn about [Azure Storage redundancy](/azure/storage/common/storage-redundancy), including LRS, ZRS, GRS, and read-access GRS.
 - Learn more about [Azure Files](/azure/storage/files/storage-files-introduction).
