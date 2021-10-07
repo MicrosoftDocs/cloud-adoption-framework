@@ -14,7 +14,7 @@ ms.custom: e2e-data-management, think-tank
 
 With larger, more sophisticated forms of cloud adoption, the journey to the cloud becomes more complex. This article series covers technical and non-technical considerations for data management and analytics in the cloud. This guidance strives to be cloud agnostic to support hybrid and multicloud adoption, but the technical implementation examples focus on Azure products.
 
-## Objectives and key results
+## Objectives
 
 This scenario focuses on supporting two targeted outcomes:
 
@@ -75,7 +75,7 @@ The data management and analytics scenario is designed to guide the end-to-end c
 
 *Data management landing zone* and *data landing zone* architectures help accelerate deployment for many common data management and analytics solutions. The following diagram is an overview of a data platform with a central data management landing zone and multiple data landing zones:
 
-:::image type="content" source="images/high-level-design-multiple-landing-zones.png" alt-text="Diagram that shows a high-level design with a data management landing zone and data landing zones." border="false":::
+:::image type="content" source="images/high-level-overview-multiple-data-landing-zones.png" alt-text="Diagram that shows a high-level design with a data management landing zone and data landing zones." border="false":::
 
 For more information, see:
 - [Data management landing zone](architectures/data-management-landing-zone.md)
