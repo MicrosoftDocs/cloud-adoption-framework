@@ -442,7 +442,7 @@
       },
       {
          "source_path": "docs/reference/migration-with-enterprise-scaffold.md",
-         "redirect_url": "/azure/cloud-adoption-framework/resources/migration-with-enterprise-scaffold.md",
+         "redirect_url": "/azure/cloud-adoption-framework/resources/migration-with-enterprise-scaffold",
          "redirect_document_id": true
       },
       {
