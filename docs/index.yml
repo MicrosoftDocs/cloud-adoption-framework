@@ -36,7 +36,7 @@ highlightedContent:
     # Card
     - title: Tools and templates
       itemType: download
-      url: ./reference/tools-templates.md
+      url: ./resources/tools-templates.md
 
     # Card
     - title: Newly published articles
