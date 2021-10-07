@@ -1,7 +1,7 @@
 ---
 title: Enterprise-scale Arc Server Management and Monitoring
 description: Understand the design considerations and recommendations for management and monitoring of Arc-enabled servers
-author: 'Seif Bassem'
+author: 'Sebassem'
 ms.author: sebassem
 ms.date: 09/20/2021
 ms.topic: conceptual
