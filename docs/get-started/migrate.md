@@ -1,5 +1,5 @@
 ---
-title: "Get started: Accelerate migration"
+title: 'Get started: Accelerate migration'
 description: Recommended steps for stakeholder alignment, migration planning, deploying a landing zone, and migrating your first 10 workloads.
 author: BrianBlanchard
 ms.author: brblanch

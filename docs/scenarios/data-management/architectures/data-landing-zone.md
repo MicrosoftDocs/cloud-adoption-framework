@@ -7,11 +7,12 @@ ms.date: 03/03/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Overview of the enterprise-scale for analytics and AI architecture data landing zone in Azure
 
-Data landing zones are connected to the [data management landing zone](./data-management-landing-zone.md) by virtual network (VNet) peering. They're considered a [landing zone](/azure/cloud-adoption-framework/ready/landing-zone/) related to the enterprise-scale architecture.
+Data landing zones are connected to the [data management landing zone](./data-management-landing-zone.md) by virtual network (VNet) peering. They're considered a [landing zone](../../../ready/landing-zone/index.md) related to the enterprise-scale architecture.
 
 > [!IMPORTANT]
 > Before provisioning a data landing zone, you should have your DevOps and CI/CD operating model in place and a data management landing zone deployed.
@@ -35,7 +36,7 @@ The architecture of the data landing zone illustrates the layers, their respecti
 :::image type="content" source="../images/data-landing-zone-2.png" alt-text="Diagram of the data landing zone architecture." lightbox="../images/data-landing-zone-2.png":::
 
  > [!TIP]
-> Before getting started with deploying a data landing zone, it's highly recommended that you first [consider the number of initial data landing zones you want to deploy](/azure/cloud-adoption-framework/scenarios/data-management/eslz-scale).
+> Before getting started with deploying a data landing zone, it's highly recommended that you first [consider the number of initial data landing zones you want to deploy](../eslz-scale.md).
 
 ## Core services layer
 
@@ -54,7 +55,7 @@ Included are all the required services to enable the data landing zone within th
 
 :::image type="content" source="../images/data-landing-zone-network-rg.png" alt-text="Diagram of a data landing zone network resource group.":::
 
-The network resource group, contains core enterprise components such as [network security groups](/azure/virtual-network/network-security-groups-overview) (NSG), Azure [Network Watcher](/azure/network-watcher/network-watcher-monitoring-overview), and virtual network. All of these services are deployed into a single resource group. As part of the deployment, the virtual network of a data landing zone is [automatically peered with the data management landing zone's VNet](/azure/cloud-adoption-framework/scenarios/data-management/eslz-network-topology-and-connectivity) and the [connectivity subscription's VNet](/azure/cloud-adoption-framework/ready/enterprise-scale/architecture).
+The network resource group, contains core enterprise components such as [network security groups](/azure/virtual-network/network-security-groups-overview) (NSG), Azure [Network Watcher](/azure/network-watcher/network-watcher-monitoring-overview), and virtual network. All of these services are deployed into a single resource group. As part of the deployment, the virtual network of a data landing zone is [automatically peered with the data management landing zone's VNet](../eslz-network-topology-and-connectivity.md) and the [connectivity subscription's VNet](../../../ready/enterprise-scale/architecture.md).
 
 ### Monitoring
 
@@ -140,7 +141,7 @@ We recommend you deploy a virtual machine scale set with self-hosted integration
 To enable the resource group, you need to:
 
 - Create at least one Azure Data Factory in the shared integration resource group in the data landing zone. It will only be used for linking the shared self-hosted integration runtime and not for data pipelines.
-- Create a [shared image for the Azure virtual machine scale set](/azure/virtual-machine-scale-sets/shared-images-powershell) with a self-hosted integration runtime configured.
+- Create a [shared image for the Azure virtual machine scale set](/azure/virtual-machine-scale-sets/tutorial-use-custom-image-powershell) with a self-hosted integration runtime configured.
 - The [self hosted integration runtimes should be setup in high availability mode](/azure/data-factory/create-self-hosted-integration-runtime#high-availability-and-scalability).
 - The self-hosted integration runtimes should be associated with Azure data factories in the data landing zone(s).
 - [Azure Automation should be setup to update the self hosted integration runtime periodically](/azure/data-factory/self-hosted-integration-runtime-automation-scripts)

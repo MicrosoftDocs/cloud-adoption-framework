@@ -28,7 +28,7 @@ Every organization has different security environments and requirements and diff
 - **Covered resources:** Deployed assets that are covered by security standards.
 - **Overall standards compliance:** Ratio of compliance adherence to security standards.
 - **Attacks by severity:** How many coordinated attempts to disrupt your cloud-hosted services, such as through distributed denial of service (DDoS) attacks, does your infrastructure experience? What is the size and severity of these attacks?
-- **Malware protection:** Percentage of deployed virtual machines (VMs) that have all required anti-malware, firewall, or other security software installed.
+- **Malware protection:** Percentage of deployed virtual machines (VMs) that have all required antimalware, firewall, or other security software installed.
 - **Patch latency:** How long has it been since VMs have had OS and software patches applied.
 - **Security health recommendations:** Number of security software recommendations for resolving health standards for deployed resources, organized by severity.
 

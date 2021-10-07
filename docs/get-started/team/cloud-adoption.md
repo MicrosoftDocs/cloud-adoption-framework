@@ -1,5 +1,5 @@
 ---
-title: "Get started: Build a cloud adoption team"
+title: 'Get started: Build a cloud adoption team'
 description: Establish a cloud adoption team's scope, deliverables, and the capabilities to prepare for successful cloud adoption.
 author: JanetCThomas
 ms.author: janet
@@ -141,4 +141,4 @@ Cloud adoption is a great goal, but ungoverned adoption can produce unexpected r
 
 Aligning with the cloud governance team creates balance across cloud adoption efforts, but this is considered a minimum viable product (MVP), because it might not be sustainable. Each team is wearing many hats, as outlined in the [RACI charts](../../organize/raci-alignment.md).
 
-Learn more about overcoming [organizational antipatterns: silos and fiefdoms](../../organize/fiefdoms-silos.md).
+Learn more about overcoming [silos and fiefdoms](../../organize/fiefdoms-silos.md).

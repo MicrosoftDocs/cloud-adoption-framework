@@ -7,6 +7,7 @@ ms.date: 08/06/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Provision three Azure Data Lake Storage Gen2 accounts for each data landing zone

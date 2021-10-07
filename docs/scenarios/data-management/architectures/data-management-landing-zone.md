@@ -7,6 +7,7 @@ ms.date: 03/03/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Overview of the Azure enterprise-scale for analytics and AI data management landing zone
@@ -20,7 +21,7 @@ The data management landing zone is a separate subscription that has the standar
 > [!NOTE]
 > Polyglot persistence is an enterprise storage term used to describe choosing different data storage/data stores technologies to support the various data types and their storage needs. Polyglot persistence is essentially the idea that an application can use more than one core database or storage technology.
 > [!WARNING]
-> The data management landing zone must be deployed as a separate subscription under the platform branch of an enterprise-scale architecture. You can then control the governance across the enterprise. The [Cloud Adoption Framework enterprise-scale architecture](/azure/cloud-adoption-framework/ready/enterprise-scale/architecture) illustrates the way to approach enterprise-scale.
+> The data management landing zone must be deployed as a separate subscription under the platform branch of an enterprise-scale architecture. You can then control the governance across the enterprise. The [Cloud Adoption Framework enterprise-scale architecture](../../../ready/enterprise-scale/architecture.md) illustrates the way to approach enterprise-scale.
 
 ## Data catalog
 

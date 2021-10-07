@@ -28,7 +28,7 @@ For retail companies, IT operations are heavily influenced by the company's hist
 
 Do you plan to enable enterprise operations, and need to enable a separation of duties between IT and workload teams? Then the enterprise-scale implementation options might work best to accelerate your environmental configuration.
 
-If you plan to focus on central operations, the *start small* approach might be a better implementation option. With this approach, make sure you execute the [Govern methodology](./govern.md) and [the Manage methodology](./manage.md) in parallel with your cloud adoption plan.
+If you plan to focus on central operations, the *start small* approach might be a better implementation option. With this approach, make sure you execute the [Govern methodology](./govern.md) and the [Manage methodology](./manage.md) in parallel with your cloud adoption plan.
 
 ## Network: Branch strategy
 
