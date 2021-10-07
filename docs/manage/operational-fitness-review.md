@@ -67,7 +67,7 @@ The steps in this phase capture the requirements for conducting a regular review
 
 1. **Identify critical business operations.** Identify the enterprise's mission-critical business operations based on agreed upon business commitments. Business operations are independent from any supporting service functionality. In other words, business operations represent the actual activities that the business needs to perform and that are supported by a set of IT services.
 
-    The term *mission-critical* (or *business-critical*) reflects a severe impact on the business if the operation is impeded. For example, an online retailer might have a business operation, such as "enable a customer to add an item to a shopping cart" or "Process a credit card payment." If either of these operations fails, a customer can't complete the transaction and the enterprise fails to realize sales.
+    The term *mission-critical* (or *business-critical*) reflects a severe impact on the business if the operation is impeded. For example, an online retailer might have a business operation, such as "enable a customer to add an item to a shopping cart" or "process a credit card payment." If either of these operations fails, a customer can't complete the transaction and the enterprise fails to realize sales.
 
 1. **Map operations to services.** Map the critical business operations to the IT services (baseline, platform, or workload operations) that support them. Any technology platform or workload required to support a critical business function should also be identified to map operations and services to responsible teams.
 
