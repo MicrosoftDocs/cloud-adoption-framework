@@ -160,3 +160,8 @@ The Azure Connected Machine agent uses public key authentication to communicate 
 For more guidance for your cloud adoption journey, see the following article:
 
 - [Manage hybrid and multicloud environments](./manage.md)
+- [Resource Tagging](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/day2/arc_inventory_tagging/#apply-inventory-tagging-to-azure-arc-enabled-servers)
+- [Agent security permissions](https://docs.microsoft.com/en-us/azure/azure-arc/servers/agent-overview)
+- [Secret and certificate management](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/day2/arc_keyvault#deploy-azure-key-vault-extension-to-azure-arc-enabled-ubuntu-server-and-use-a-key-vault-managed-certificate-with-nginx)
+- [Threat protection and cloud security posture management](https://docs.microsoft.com/en-us/azure/security-center/)
+- [Threat protection with Azure Defender](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/day2/arc_securitycenter/#onboarding-azure-defender)
