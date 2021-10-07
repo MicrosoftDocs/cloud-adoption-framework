@@ -144,4 +144,9 @@ See the following CAF documentation to learn more about Azure Machine Learning d
 
 ## Next steps
 
-[SAP ingestion with enterprise-scale for analytics and AI in Azure](./sap-data-ingestion.md)
+Continue to the following four Cloud Adoption Framework articles to learn more about Azure Machine Learning:
+
+- [Organize and set up Azure Machine Learning environments](azure/cloud-adoption-framework/ready/azure-best-practices/ai-machine-learning-resource-organization)
+- [Azure Machine Learning best practices for enterprise security](/azure/cloud-adoption-framework/ready/azure-best-practices/ai-machine-learning-enterprise-security)
+- [Manage budgets, costs, and quota for Azure Machine Learning at organizational scale](/azure/cloud-adoption-framework/ready/azure-best-practices/optimize-ai-machine-learning-cost)
+- [Machine learning DevOps guide](/azure/cloud-adoption-framework/ready/azure-best-practices/ai-machine-learning-mlops)

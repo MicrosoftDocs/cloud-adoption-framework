@@ -141,7 +141,17 @@ items:
         - name: Deployment best practices
           href: ./best-practices/purview-deployment.md
       - name: Azure Machine Learning implementation
-        href: best-practices/azure-machine-learning.md
+        items:
+        - name: Implementation
+          href: best-practices/azure-machine-learning.md
+        - name: Organize and set up Azure Machine Learning environments
+          href: /azure/cloud-adoption-framework/ready/azure-best-practices/ai-machine-learning-resource-organization
+        - name: Best practices for enterprise security
+          href: /azure/cloud-adoption-framework/ready/azure-best-practices/ai-machine-learning-enterprise-security
+        - name: Budget, cost, and quota management with Azure Machine Learning
+          href: /azure/cloud-adoption-framework/ready/azure-best-practices/optimize-ai-machine-learning-cost
+        - name: Machine learning DevOps guide
+          href: /azure/cloud-adoption-framework/ready/azure-best-practices/ai-machine-learning-mlops
       - name: Data landing zone ingestion
         items:
         - name: Data ingestion
