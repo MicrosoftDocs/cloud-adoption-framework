@@ -97,7 +97,7 @@ Having a policy-driven governance is a foundational principle of cloud-native op
 Understand the [scope of Azure policy](/azure/role-based-access-control/scope-overview) and where it can be applied (Management Group, subscription, resource group or individual resource level). Create a Management Group design in accordance with the recommended practices outlined in the [Cloud Adoption Framework Enterprise Scale](/azure/cloud-adoption-framework/ready/enterprise-scale/management-group-and-subscription-organization)
 
 - Determine what Azure policies are required by defining business, regulatory and security requirements for Azure Arc-enabled servers.
-- Enforce tagging and implement [remediation tasks](azure/governance/policy/how-to/remediate-resources).
+- Enforce tagging and implement [remediation tasks](/azure/governance/policy/how-to/remediate-resources).
 - Understand and evaluate the [Azure Policy built-in definitions for Azure Arc-enabled servers](/azure/azure-arc/servers/policy-reference)
 - Understand and evaluate the built-in [Guest Configuration policies](/azure/governance/policy/samples/built-in-policies#guest-configuration) and [initiatives](/azure/governance/policy/samples/built-in-initiatives#guest-configuration).
 - Evaluate the need for creating [custom Guest configuration policies](/azure/governance/policy/how-to/guest-configuration-create)
