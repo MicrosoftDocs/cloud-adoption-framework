@@ -25,9 +25,9 @@ items:
         - name: Azure fundamental concepts
           href: ready/considerations/fundamental-concepts.md
         - name: Portfolio hierarchy
-          href: reference/fundamental-concepts/hosting-hierarchy.md
+          href: resources/fundamental-concepts/hosting-hierarchy.md
         - name: Azure hierarchy support
-          href: reference/fundamental-concepts/hierarchy-azure-tools.md
+          href: resources/fundamental-concepts/hierarchy-azure-tools.md
 
       - name: Accelerate adoption
         items:
@@ -68,6 +68,8 @@ items:
 
     - name: Adoption scenarios
       items:
+      - name: Azure VMware Solution
+        href: scenarios/azure-vmware/index.md
       - name: Data management and analytics
         href: scenarios/data-management/index.md
       - name: Hybrid and multicloud
@@ -419,7 +421,7 @@ items:
       - name: Networking
         items:
         - name: Network boundary security
-          href: reference/networking-vdc.md
+          href: resources/networking-vdc.md
         - name: Plan virtual networks
           href: /azure/virtual-network/virtual-network-vnet-plan-design-arm?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
         - name: Best practices for network security
@@ -1755,7 +1757,7 @@ items:
   - name: Resources
     items:
     - name: Tools and templates
-      href: reference/tools-templates.md
+      href: resources/tools-templates.md
     - name: Decision guides
       items:
       - name: Overview
@@ -1807,9 +1809,8 @@ items:
     - name: Archived resources
       items:
       - name: Cloud Operating Model
-        href: reference/cloud-operating-model.md
+        href: resources/cloud-operating-model.md
       - name: Azure enterprise scaffold
-        href: reference/azure-scaffold.md
+        href: resources/azure-scaffold.md
       - name: Virtual Datacenter (VDC)
-        href: reference/vdc.md
-
+        href: resources/vdc.md
