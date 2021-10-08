@@ -32,7 +32,7 @@ The following are some design considerations before onboarding Azure Arc-enabled
 * Your machines have [connectivity](/azure/azure-arc/servers/agent-overview#networking-configuration) from your on-premises network or other cloud environment to Azure, directly connected or via a proxy server or private endpoint. See the [NETWORK TOPOLOGY AND CONNECTIVITY CDA] (Networking for Azure Arc-enabled servers) enterprise-scale scenario for design considerations and recommendations.
 * To deploy and configure the Azure Arc-enabled servers Connected Machine agent, an account with administrator or as root privileges is required on the machines.
 * To onboard machines, you have the [required Azure permissions](/azure/azure-arc/servers/agent-overview#required-permissions).
-* Before onboarding machines, you have [registered the Azure resource providers](/azure/azure-arc/servers/agent-overview#register-azure-resource-providers) for Azure Arc-enabled servers.
+* Before onboarding machines, you've [registered the Azure resource providers](/azure/azure-arc/servers/agent-overview#register-azure-resource-providers) for Azure Arc-enabled servers.
 * Decide how you'll install and configure the Azure Connected Machine Agent across your fleet of servers. Typically, you'll deploy the agent using your organization’s standard automation tool(s).
 * Determine which Azure capabilities you want to enable on your Azure Arc-enabled servers. Some capabilities require a VM extension to be installed on your server, which can be automated with Azure Policy.
 
@@ -61,7 +61,7 @@ Afterwards, be sure to [verify your connection](/azure/azure-arc/servers/onboard
 
 ## Lifecycle Automation of Operating System Updates
 
-Once your servers are onboarded to Azure, it is recommended to [enable patch and update management](/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/arc-update-management) to ease OS lifecycle management on your Azure Arc-enabled servers. Update Management in Azure Automation allows you to view and schedule operating system updates and patches for your Arc-enabled servers at scale. More information about Update Management for Azure Automation can be found [here](/azure/automation/update-management/overview).
+Once your servers are onboarded to Azure, it's recommended to [enable patch and update management](/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/arc-update-management) to ease OS lifecycle management on your Azure Arc-enabled servers. Update Management in Azure Automation allows you to view and schedule operating system updates and patches for your Arc-enabled servers at scale. More information about Update Management for Azure Automation can be found [here](/azure/automation/update-management/overview).
 
 ## Using Virtual Machine Extensions with Azure Arc-enabled servers
 
@@ -74,7 +74,7 @@ We recommended automating the deployment of VM extensions at scale via one of fo
     * More details on using policy with Azure Arc-enabled servers can be found [SECURITY, GOVERNANCE, AND COMPLIANCE CDA] (here)
 * Using Azure Defender for Servers
     * Enable auto provisioning for the target VM extensions from Azure Security Center
-    * Select desired VM extensions to be automatically provisioned
+    * Select target VM extensions to be automatically provisioned
 
 ## Learn Before you Start
 
