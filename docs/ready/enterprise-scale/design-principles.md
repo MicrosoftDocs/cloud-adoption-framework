@@ -3,7 +3,7 @@ title: Cloud Adoption Framework enterprise-scale design principles
 description: Learn about enterprise-scale design principles in the Microsoft Cloud Adoption Framework for Azure.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 08/23/2021
+ms.date: 10/04/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -12,11 +12,11 @@ ms.custom: think-tank
 
 # Cloud Adoption Framework enterprise-scale design principles
 
-The enterprise-scale architecture prescribed in this guidance is based on the design principles described here. These principles serve as a compass for subsequent design decisions across critical technical domains. Familiarize yourself with these principles to better understand their impact and the trade-offs associated with nonadherence.
+The enterprise-scale architecture prescribed in this guidance is based on the design principles described in this article. These principles serve as a compass for design decisions across critical technical domains. Familiarize yourself with these principles to better understand their impact and the trade-offs associated with nonadherence.
 
 ## Subscription democratization
 
-Subscriptions should be used as a unit of management and scale aligned with business needs and priorities to support business areas and portfolio owners to accelerate application migrations and new application development. Subscriptions should be provided to business units to support the design, development, and testing of new workloads and migration of workloads.
+Use subscriptions should be used as a unit of management and scale aligned with business needs and priorities to support business areas and portfolio owners to accelerate application migrations and new application development. Subscriptions should be provided to business units to support the design, development, and testing of new workloads and migration of workloads.
 
 ## Policy-driven governance
 
