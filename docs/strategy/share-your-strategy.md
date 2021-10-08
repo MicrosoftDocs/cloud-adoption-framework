@@ -3,11 +3,11 @@ title: Share your cloud strategy
 description: Learn how to communicate your team's cloud strategy, such as a financial roadmap and multi-year plan, to your finance team.
 author: WendyRing
 ms.author: wering
-ms.service: cloud-adoption-framework
-ms.topic: conceptual
 ms.date: 4/15/2021
-ms.custom: template-concept
+ms.topic: conceptual
+ms.service: cloud-adoption-framework
 ms.subservice: strategy
+ms.custom: template-concept
 ---
 
 # Share your strategy

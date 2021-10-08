@@ -20,7 +20,7 @@ Successful cloud adoption programs typically involve at least one level of suppo
 
 ## Steps to align the partnership strategy
 
-It's important to start aligning your partnership strategy during the strategizing phase of adoption. The following steps can help remove roadblocks in later phases of the adoption lifecycle.
+It's important to start aligning your partnership strategy during the strategy definition phase of adoption. The following steps help remove roadblocks in later phases of the adoption lifecycle.
 
 1. Start to understand support needs.
 1. Consider partnership options that fit your culture and needs.
@@ -88,7 +88,7 @@ Watch this short video to get an overview of how the Azure Migration and Moderni
 
 ### Solution assessments
 
-Get assistance from a Microsoft solutions assessment expert or qualified partner as part of a [Solution Assessment engagement](https://www.microsoft.com/solutionassessments/solutionassessments.aspx?rtc=1). Microsoft Solution Assessments provide customers with an in depth understanding of the opportunities available in their environments to improve productivity, reduce cost and optimize investments.  These assessments utilize modern tools to collect the customer’s data estate, analyze the deployed environment and provide insights for data-driven recommendations to help customers determine actionable steps for digital transformations, cloud migrations and process improvement.
+Get assistance from a Microsoft solutions assessment expert or qualified partner as part of a [Solution Assessment engagement](https://www.microsoft.com/solutionassessments/solutionassessments.aspx?rtc=1). Microsoft Solution Assessments provide customers with an in depth understanding of the opportunities available in their environments to improve productivity, reduce cost and optimize investments.  These assessments utilize modern tools to collect the customer's data estate, analyze the deployed environment and provide insights for data-driven recommendations to help customers determine actionable steps for digital transformations, cloud migrations and process improvement.
 
 ### Azure support
 

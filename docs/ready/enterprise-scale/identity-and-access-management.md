@@ -24,7 +24,7 @@ The technological landscape in the enterprise is becoming complex and heterogeno
 
 ### Plan for identity and access management
 
-Enterprise organizations typically follow a least-privileged approach to operational access. This model should be expanded to consider Azure through Azure Active Directory (Azure AD), Azure role-based access control (Azure RBAC), and custom role definitions. It's critical to plan how to govern control- and data-plane access to resources in Azure. Any design for IAM and Azure RBAC must meet regulatory, security, and operational requirements before it can be accepted.
+Enterprise organizations typically follow a least-privileged approach to operational access. This model should be expanded to consider Azure through Azure Active Directory (Azure AD), Azure role-based access control (Azure RBAC), and custom role definitions. It's critical to plan how to govern control-plane and data-plane access to resources in Azure. Any design for IAM and Azure RBAC must meet regulatory, security, and operational requirements before it can be accepted.
 
 Identity and access management is a multistep process that involves careful planning for identity integration and other security considerations, such as blocking legacy authentication and planning for modern passwords. Staging planning also involves selection of business-to-business or business-to-consumer identity and access management. While these requirements vary, there are common design considerations and recommendations to consider for an enterprise landing zone.
 

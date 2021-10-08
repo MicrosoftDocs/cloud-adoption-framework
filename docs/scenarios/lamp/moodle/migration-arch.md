@@ -39,9 +39,9 @@ A predefined deployment template uses one of four predefined Moodle sizes: minim
 
   [![Button that launches the minimal Moodle deployment ARM template.](./images/deploy-to-azure.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FMoodle%2Fmaster%2Fazuredeploy-minimal.json)
 
-- *Small-to-mid deployment* supports up to 1,000 concurrent users. This deployment uses NFS, without high availability, and MySQL on eight vCores. This deployment doesn't include options like Elasticsearch or Azure Cache for Redis.
+- *Small-to-midsize deployment* supports up to 1,000 concurrent users. This deployment uses NFS, without high availability, and MySQL on eight vCores. This deployment doesn't include options like Elasticsearch or Azure Cache for Redis.
 
-  [![Button that launches the small-to-mid Moodle deployment ARM template.](./images/deploy-to-azure.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FMoodle%2Fmaster%2Fazuredeploy-small2mid-noha.json)
+  [![Button that launches the small-to-midsize Moodle deployment ARM template.](./images/deploy-to-azure.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FMoodle%2Fmaster%2Fazuredeploy-small2mid-noha.json)
 
 - *Large, high-availability deployment* supports more than 2,000 concurrent users. This deployment uses Azure Files, MySQL with 16 vCores, and Azure Cache for Redis without other options like Elasticsearch.
 

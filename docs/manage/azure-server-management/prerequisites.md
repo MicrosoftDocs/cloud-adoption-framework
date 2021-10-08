@@ -70,7 +70,7 @@ Alternatively, if your data-compliance policies don't dictate that resources res
 
 The example in the following diagram has one subscription with two resource groups, each located in a different geography:
 
-![Workspace model for small-to-medium environments](./media/workspace-model-small.png)
+![Workspace model for small-to-midsize environments](./media/workspace-model-small.png)
 
 ### Placement in a management subscription
 

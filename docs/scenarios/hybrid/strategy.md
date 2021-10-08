@@ -1,6 +1,6 @@
 ---
 title: Strategy for adopting unified operations
-description: Describe the scenario's effect on strategy.
+description: Learn about strategic considerations of hybrid and multicloud operations.
 author: mpvenables
 ms.author: brblanch
 ms.date: 04/21/2021

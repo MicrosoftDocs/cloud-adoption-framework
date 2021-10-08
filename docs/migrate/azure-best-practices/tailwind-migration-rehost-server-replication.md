@@ -127,7 +127,7 @@ In order to plan for best practice pre-migration activities, Tailwind defines th
 
 ### Technical: Post-migration
 
- Further, Tailwind defines the following activities to be executed after the migration failover:
+Further, Tailwind defines the following activities to be executed after the migration failover:
 
 - Review the documented Azure Migrate post-migration activities based on the source environments:
 

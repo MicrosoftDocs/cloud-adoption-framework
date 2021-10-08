@@ -1,8 +1,8 @@
 ---
 title: Govern SAP
-description: Describe the scenario's impact on governance
-author: JefferyMitchell
-ms.author: brblanch
+description: XX-DELETE-FILE-XX
+author: alexbuckgit
+ms.author: abuck
 ms.date: 07/01/2010
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

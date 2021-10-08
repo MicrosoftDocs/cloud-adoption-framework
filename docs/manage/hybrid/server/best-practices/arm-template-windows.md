@@ -115,8 +115,6 @@ As mentioned, this deployment will use ARM templates. You will deploy a single t
     > [!NOTE]
     > Make sure that you are using the same Azure resource group name as the one you used in the `azuredeploy.parameters.json` file.
 
-    <!-- cspell:ignore arcwinsrvdemo -->
-
     For example:
 
     ```console

@@ -50,7 +50,7 @@ If you don't have an Azure subscription, you can [create one for free](https://a
   az account set --subscription '<subscription name>'
   ```
 
- An example command is:
+An example command is:
 
   `az account set --subscription 'ComputePM LibrarySub'`
 
@@ -176,7 +176,7 @@ To back up configuration files, follow these steps:
    cp -R /etc/nginx /home/azureadmin/storage/configuration/
    ```
 
-   The `php` directory stores PHP configuration files, such as `php-fpm.conf`, `php.ini`, `pool.d`, and `conf.d`. The `nginx` directory stores ngnix configurations, such as `nginx.conf` and `sites-enabled/dns.conf`.
+   The `php` directory stores PHP configuration files, such as `php-fpm.conf`, `php.ini`, `pool.d`, and `conf.d`. The `nginx` directory stores NGINX configurations, such as `nginx.conf` and `sites-enabled/dns.conf`.
 
 ### Back up the database
 

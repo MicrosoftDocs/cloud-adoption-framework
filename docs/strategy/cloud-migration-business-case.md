@@ -22,24 +22,24 @@ When you're planning your business case to migrate to the cloud, there are sever
 
 **Environment scope, technical and financial:** As you build out the on-premises view of your environment, think about how your environment scope, from both a technical and financial perspective, is aligned. You want to be sure the technical environment you're using for your plan matches up to the financial data.
 
-**Baseline financial data: Cost to run today:** When you build out your business case, it’s important to pull your baseline financial data. Common questions you can ask to gather the financial data needed are:
+**Baseline financial data: Cost to run today:** When you build out your business case, it's important to pull your baseline financial data. Common questions you can ask to gather the financial data needed are:
 
 - How much does it cost to run my environment today?
 - What am I spending on servers in an average year?
 - What am I spending in my data center operations categories, for example, power or lease costs?
 - When is the next hardware refresh?
 
-**Projections: On-premises costs in on-premises scenario:** Forecast what your on-premises costs will be if you don’t migrate to the cloud.
+**Projections: On-premises costs in on-premises scenario:** Forecast what your on-premises costs will be if you don't migrate to the cloud.
 
 :::image type="content" source="./media/create-financial-plan/optimization-opportunity.png" alt-text="Diagram of on-premises or status quo.":::
 
-**Projections: On-premises costs in Azure scenario:** Forecast what your on-premises costs will be when you migrate to the cloud in an Azure scenario. It takes resources and time to shift your environment to the cloud, so it’s important to account for them in the business case. When you build out the Azure scenario, be sure to take into consideration and include all of the core benefits the cloud provides.
+**Projections: On-premises costs in Azure scenario:** Forecast what your on-premises costs will be when you migrate to the cloud in an Azure scenario. It takes resources and time to shift your environment to the cloud, so it's important to account for them in the business case. When you build out the Azure scenario, be sure to take into consideration and include all of the core benefits the cloud provides.
 
 :::image type="content" source="./media/create-financial-plan/optimized-consumption-plan.png" alt-text="Diagram of on-premises costs in Azure scenario.":::
 
 **Projections: Migration timeline and Azure costs (optimized):** Project what migration timeline and the Azure costs will be with a given environment. Consider how you can optimize and get the most out of your Azure investment. For example, use reserved instances, scale capacity up and down, use the Azure hybrid benefit, and right-size your resources.
 
-A business case isn't just a point-in-time view. It’s a plan for a period of time. As you shift to the cloud, you reduce your spend over-time and create a cloud migration plan. You can model out what the ramp-down in spend will be on-premises over time associated with your cloud migration plan.
+A business case isn't just a point-in-time view. It's a plan for a period of time. As you shift to the cloud, you reduce your spend over-time and create a cloud migration plan. You can model out what the ramp-down in spend will be on-premises over time associated with your cloud migration plan.
 
 Once on-premises workloads and cost structure have been identified, you can then build out your optimized Azure consumption plan.
 

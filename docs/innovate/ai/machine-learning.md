@@ -11,8 +11,6 @@ ms.custom: think-tank, seo-caf-innovate
 keywords: machine learning solutions, machine learning checklist, machine learning ai
 ---
 
-<!-- cSpell:ignore scikit RLlib ONNX Jupyter -->
-
 # Machine learning
 
 Machine learning is a subset of AI that allows machines to detect patterns and learn from data without expressly being programed for it. Azure Machine Learning solutions can advance your computing insights.

@@ -1,8 +1,8 @@
 ---
 title: Security governance and compliance
-description: Use the Cloud Adoption Framework for Azure to learn about governance and compliance considerations regarding security.
-author: joanabmartins
-ms.author: joamar
+description: XX-DELETE-THIS-FILE-XX
+author: alexbuckgit
+ms.author: abuck
 ms.date: 04/02/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -49,7 +49,7 @@ As with security controls, organizations should understand the division of respo
 
 [Introduction to regulatory compliance](../../govern/policy-compliance/regulatory-compliance.md) describes compliance regulations in various industries and geographies. Use this information to help identify which regulations are relevant for your organization.
 
- More detailed information about [Azure compliance offerings](/compliance/regulatory/offering-home) is available at the [Microsoft Trust Center](https://www.microsoft.com/trust-center). Moreover, all downloadable documentation is available to certain Azure customers from the [Microsoft Service Trust Portal](https://servicetrust.microsoft.com).
+More detailed information about [Azure compliance offerings](/compliance/regulatory/offering-home) is available at the [Microsoft Trust Center](https://www.microsoft.com/trust-center). Moreover, all downloadable documentation is available to certain Azure customers from the [Microsoft Service Trust Portal](https://servicetrust.microsoft.com).
 
 ## Monitoring compliance
 

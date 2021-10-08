@@ -11,8 +11,6 @@ ms.custom: think-tank, seo-caf-innovate
 keywords: application development, application deployment, site reliability engineering
 ---
 
-<!-- cSpell:ignore autoscaler Istio Linkerd -->
-
 # Application development and deployment
 
 Examine patterns and practices of application development, configure Azure Pipelines, and implement site reliability engineering (SRE) best practices. Site reliability engineering (SRE) is a software engineering approach to application development and deployment, change management, monitoring, emergency response, and more.

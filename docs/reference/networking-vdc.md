@@ -1,5 +1,5 @@
 ---
-title: "The virtual datacenter: A network perspective"
+title: 'The virtual datacenter: A network perspective'
 description: Use the Cloud Adoption Framework for Azure to learn how to use Azure to seamlessly extend your infrastructure into the cloud and build multitier architectures.
 author: tracsman
 ms.author: brblanch
@@ -11,8 +11,7 @@ ms.subservice: general
 ms.custom: think-tank, virtual-network
 ---
 
-<!-- docutune:disable -->
-<!-- cSpell:ignore iptables DDOS ITSM LLAP anycast vwan -->
+<!-- cSpell:ignore  LLAP vwan howitworks vpngateways erdirect frontdoor afds whatis -->
 
 # The virtual datacenter: A network perspective
 
@@ -560,5 +559,3 @@ Learn more about the Azure capabilities discussed in this document.
 [cosmos-db]: /azure/cosmos-db/introduction
 [IoT]: /azure/iot-fundamentals/iot-introduction
 [machine-learning]: /azure/machine-learning/overview-what-is-azure-ml
-
-<!--docutune:enable -->

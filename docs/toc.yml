@@ -1,5 +1,5 @@
 # docsTest:ignore "NET Core" "Cloud Operating Model" "Virtual Datacenter" Framework app
-#cSpell:ignore devtest mariadb authn devguide azurevm dotnetcore moodle veeam powerapps sqldatabase newsfeed wideworldimportersdw fazure fcloud ftoc
+#cSpell:ignore devguide dotnetcore veeam powerapps sqldatabase newsfeed wideworldimportersdw
 
 items:
   - name: Cloud Adoption Framework for Azure

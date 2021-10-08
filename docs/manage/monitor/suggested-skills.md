@@ -10,8 +10,6 @@ ms.subservice: manage
 ms.custom: internal
 ---
 
-<!-- cSpell:ignore kusto ITIL -->
-
 # Skills readiness for cloud monitoring
 
 When planning your migration journey, the objective is to develop the plans necessary to guide implementation. The plans need to also include how you will operate these workloads before they are transitioned or released into production, and not afterwards. Business stakeholders expect valuable services, and they expect them without disruption. IT staff members realize they need to learn new skills and adapt so they are prepared to confidently use the integrated Azure services to effectively monitor resources in Azure and hybrid environments.

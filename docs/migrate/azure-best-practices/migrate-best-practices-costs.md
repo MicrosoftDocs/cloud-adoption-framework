@@ -71,9 +71,9 @@ You can choose various options when you deploy Azure VMs to support workloads. E
 
 | Type | Details | Usage |
 | --- | --- | --- |
-| **General-purpose** | Balanced CPU-to-memory. | Good for testing and development, small- to medium-sized databases, and low- to medium-volume traffic web servers. |
+| **General-purpose** | Balanced CPU-to-memory. | Good for testing and development, small-to-midsize databases, and low-to-medium-volume traffic web servers. |
 | **Compute-optimized** | High CPU-to-memory. | Good for medium-volume traffic web server, network appliances, batch processes, and application servers. |
-| **Memory-optimized** | High memory-to-CPU. | Good for relational databases, medium- to large-size cache, and in-memory analytics. |
+| **Memory-optimized** | High memory-to-CPU. | Good for relational databases, medium-to large-size cache, and in-memory analytics. |
 | **Storage optimized** | High disk throughput and I/O. | Good for big data, and SQL and NoSQL databases. |
 | **GPU optimized** | Specialized VMs. Single or multiple GPUs. | Heavy graphics and video editing. |
 | **High performance** | Fastest and most powerful CPU. VMs with optional high-throughput network interfaces (RDMA). | Critical high-performance applications. |
@@ -124,7 +124,7 @@ Azure provides different types of storage accounts and performance tiers.
 
 | Account type | Details | Usage |
 | --- | --- | --- |
-| **General-purpose v2 standard** | Supports blobs (block, page, and append), files, disks, queues, and tables. <br><br> Supports hot, cool, and archive access tiers. Zone-redundant storage (ZRS) is supported. | Use for most scenarios and most types of data. Standard storage accounts can be HDD- or SSD-based. |
+| **General-purpose v2 standard** | Supports blobs (block, page, and append), files, disks, queues, and tables. <br><br> Supports hot, cool, and archive access tiers. Zone-redundant storage (ZRS) is supported. | Use for most scenarios and most types of data. Standard storage accounts can be HDD-based or SSD-based. |
 | **General-purpose v2 premium** | Supports Blob Storage data (page blobs). Supports hot, cool, and archive access tiers. ZRS is supported. <br><br> Stored on SSD. | Microsoft recommends using for all VMs. |
 | **General-purpose v1** | Access tiering isn't supported. Doesn't support ZRS. | Use if applications need the Azure classic deployment model. |
 | **Blob** | Specialized storage account for storing unstructured objects. Provides block blobs and append blobs only (no file, queue, table, or disk storage services). Provides the same durability, availability, scalability and performance as general-purpose v2. | You can't store page blobs in these accounts, and therefore can't store VHD files. You can set an access tier to hot or cool. |

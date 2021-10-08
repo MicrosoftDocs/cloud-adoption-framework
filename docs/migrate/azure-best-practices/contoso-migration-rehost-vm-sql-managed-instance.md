@@ -189,7 +189,7 @@ Contoso considers these factors:
 - A subnet can be associated with only one route table.
 - There are no additional charges for creating route tables in Microsoft Azure.
 
- To set up routing, the Contoso admins do the following steps:
+To set up routing, the Contoso admins do the following steps:
 
 1. Create a user-defined route table in the `ContosoNetworkingRG` resource group.
 

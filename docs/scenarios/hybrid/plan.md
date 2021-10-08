@@ -1,6 +1,6 @@
 ---
 title: Plan methodology for hybrid and multicloud strategy
-description: Describe the scenario's impact on planning
+description: Learn how to plan for hybrid and multicloud scenarios.
 author: mpvenables
 ms.author: brblanch
 ms.date: 02/01/2020
