@@ -6,13 +6,13 @@ ms.author: jatracey
 ms.date: 04/06/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready 
+ms.subservice: ready
 ms.custom: think-tank
 ---
 
 # Testing approach for enterprise-scale
 
->[!NOTE]
+> [!NOTE]
  > This article only applies to Microsoft Azure and not to any other Microsoft Cloud offerings such as Microsoft 365 or Microsoft Dynamics 365.
 
 Some organizations might want to test their enterprise-scale platform deployment for Azure Policy definitions and assignments, role-based access control (RBAC) custom roles and assignments, and so on. The tests can be completed via automation by using Azure Resource Manager templates (ARM templates), [AzOps](https://github.com/Azure/AzOps), [Terraform](https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest), or manually via the Azure portal. This guidance provides an approach that can be used to test changes and their impact in an enterprise-scale platform deployment.
@@ -21,14 +21,14 @@ This article can also be used with the [Platform automation and DevOps critical 
 
 This guidance is most suited to organizations with robust change management processes governing changes to the production environment management group hierarchy. The *canary* management group hierarchy can be independently used to author and test deployments before you deploy them into the production environment.
 
->[!NOTE]
- > The term "canary" is used to avoid confusion with development environments or test environments. This name is used for illustration purposes only. You might define any name you deem as appropriate for your canary enterprise-scale environment.
+> [!NOTE]
+ > The term *canary* is used to avoid confusion with development environments or test environments. This name is used for illustration purposes only. You might define any name you deem as appropriate for your canary enterprise-scale environment.
  >
- > Similarly, the term “production environment” is used throughout this guidance to refer to the management group hierarchy your organization might have in place that contains the Azure subscriptions and resources for your workloads.
+ > Similarly, the term *production environment* is used throughout this guidance to refer to the management group hierarchy your organization might have in place that contains the Azure subscriptions and resources for your workloads.
 
 ## Platform definition
 
->[!IMPORTANT]
+> [!IMPORTANT]
  > This guidance is not for development environments or test environments that will be used by application or service owners known as landing zones, workloads, applications, or services. These are placed and handled within the production environment management group hierarchy and associated governance (RBAC and Azure Policy).
  >
  > This guidance is only for platform level testing and changes in the context of enterprise-scale.
@@ -56,17 +56,17 @@ Using the canary environment to test this platform change will allow the organiz
 
 A similar scenario might be a change to the Azure RBAC role assignments and Azure AD group memberships. It might require a form of testing before the changes are made in the production environment.
 
->[!IMPORTANT]
+> [!IMPORTANT]
  > This is not a common deployment approach or pattern for most customers. It isn't mandatory for enterprise-scale deployments.
 
 [![Diagram of the management group hierarchy with the canary environment testing approach.](./media/canary-mgmt-groups.png)](./media/canary-mgmt-groups.png#lightbox)
 
-_Figure 1: Canary management group hierarchy._
+*Figure 1: Canary management group hierarchy.*
 
 As the diagram shows, the entire enterprise-scale production environment management group hierarchy is duplicated under the `Tenant Root Group`. The *canary* name is appended to the management group display names and IDs. The IDs must be unique within a single Azure AD tenant.
 
->[!NOTE]
- > The canary environment management group display names can be the same as the production environment management group display names. This might cause confusion for users. Because of this, we recommend to append the name “canary” to the display names, as well as to their IDs.
+> [!NOTE]
+ > The canary environment management group display names can be the same as the production environment management group display names. This might cause confusion for users. Because of this, we recommend to append the name "canary" to the display names, as well as to their IDs.
 
 The canary environment management group hierarchy is then used to simplify testing of the following resource types:
 
@@ -86,7 +86,7 @@ If you don't want to deploy the entire canary environment management group hiera
 
 [![Diagram of the testing approach that uses sandboxes.](./media/canary-sandboxes.png)](./media/canary-sandboxes.png#lightbox)
 
-_Figure 2: Enterprise-scale management group hierarchy highlighting sandboxes._
+*Figure 2: Enterprise-scale management group hierarchy highlighting sandboxes.*
 
 To test Azure Policy and RBAC in this scenario, you need a single Azure subscription with the Owner RBAC role assigned to the identity you wish to complete the testing as, for example, User Account, Service Principal, or Managed Service Identity. This configuration will allow you to author, assign, and remediate Azure Policy definitions and assignments within the scope of the sandbox subscription only.
 
@@ -110,7 +110,7 @@ Considerations to take into account when you use a single Azure AD tenant are:
 - Reduces complexity and management overhead caused by managing multiple Azure AD Tenants.
   - Privileged users that must maintain access and sign in to separate tenants to perform testing might make changes to the production environment accidentally, instead of making changes to the canary environment and vice versa.
 - Reduces the likelihood of configuration drift and deployment failures.
-- Doesn’t require extra security and break-glass or emergency access processes to be created.
+- Doesn't require extra security and break-glass or emergency access processes to be created.
 - Reduces friction and the time required to implement changes to the enterprise-scale deployment.
 
 ## Implementation guidance

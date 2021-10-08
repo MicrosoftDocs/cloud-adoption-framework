@@ -12,8 +12,6 @@ ms.custom: think-tank, fasttrack-new, AQC, seo-caf-innovate
 keywords: Connected devices, ubiquitous computing, device management, edge devices
 ---
 
-<!-- cSpell:ignore umarmohamedusman umarm Moovit -->
-
 # Interact through connected devices
 
 Innovate through intermittently connected devices and perceptive edge devices. Orchestrate millions of such devices, acquire and process limitless data, and take advantage of a growing number of multisensory, multidevice experiences. For devices at the edge of your network, Azure provides a framework for building immersive and effective business solutions. With ubiquitous computing, enabled by Azure combined with AI technology, you can build every type of intelligent application and system you can envision.

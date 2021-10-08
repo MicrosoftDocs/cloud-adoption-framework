@@ -11,8 +11,6 @@ ms.custom: think-tank, seo-caf-innovate
 keywords: Network design, cluster design, infrastructure provisioning, kubernetes
 ---
 
-<!-- cSpell:ignore autoscaler PDBs -->
-
 # Cluster design and operations
 
 This article covers cluster configuration and network design. Learn how to future-proof scalability by automating infrastructure provisioning. Provisioning is the process of setting up the IT infrastructure that you want. Automated infrastructure provisioning supports a remote installation and sets up virtual environments. It also helps you maintain high availability by planning for business continuity and disaster recovery.

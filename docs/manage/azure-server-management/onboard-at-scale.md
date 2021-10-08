@@ -10,8 +10,6 @@ ms.subservice: manage
 ms.custom: internal
 ---
 
-<!-- cSpell:ignore VMUUID kusto -->
-
 # Configure Azure server management services at scale
 
 You must complete these two tasks to onboard Azure server management services to your servers:

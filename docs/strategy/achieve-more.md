@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Achieve more with your investment in the cloud
 
-When migrating to the cloud, it’s important to think differently about how you'll consume and manage your cloud resources. As you build your business case, it’s critical to understand the key principles of cloud economics and transform your mindset. Part of this transformation is discovering technical and financial flexibility, efficiencies, and capabilities that aren’t possible with your on-premises IT infrastructure. When you plan short- and long-term cloud solutions and align them to [business outcomes](./business-outcomes/index.md), you can achieve more with every dollar you invest.
+When migrating to the cloud, it's important to think differently about how you'll consume and manage your cloud resources. As you build your business case, it's critical to understand the key principles of cloud economics and transform your mindset. Part of this transformation is discovering technical and financial flexibility, efficiencies, and capabilities that aren't possible with your on-premises IT infrastructure. When you plan short-term and long-term cloud solutions and align them to [business outcomes](./business-outcomes/index.md), you can achieve more with every dollar you invest.
 
 ## How does cloud pricing work?
 
@@ -22,9 +22,9 @@ To take advantage of the best pricing in the cloud, you must understand how you'
 
 ## Understand your workloads
 
-On-premises, your architecture is typically provisioned for peak capacity. Migrating from on-premises to the cloud gives you the flexibility of scalability, and you scale up and down as needed. It’s critical to understand your workloads to realize the full benefits of the cloud.
+On-premises, your architecture is typically provisioned for peak capacity. Migrating from on-premises to the cloud gives you the flexibility of scalability, and you scale up and down as needed. It's critical to understand your workloads to realize the full benefits of the cloud.
 
-**Idle capacity**: Azure helps eliminate the idle capacity created by overprovisioned architecture for coverage during peak usage. Rightsizing and eliminating workloads you don’t need helps reduce your idle capacity when moving to the cloud. This exercise delivers immediate savings and cash flow reductions.
+**Idle capacity**: Azure helps eliminate the idle capacity created by overprovisioned architecture for coverage during peak usage. Rightsizing and eliminating workloads you don't need helps reduce your idle capacity when moving to the cloud. This exercise delivers immediate savings and cash flow reductions.
 
 **Unpredictable workloads**:  You can scale your compute resources up and down in the cloud as the demands of your business change. You're able to scale your capacity up and down and use a variable cost model as opposed to a fixed cost model. This elasticity of the cloud makes the pay-for-what-you-consume model possible and works well for your unpredictable workloads. Consider using virtual machine scale sets and snoozing VMs to only pay for the resources you need when you need them.
 
@@ -96,7 +96,7 @@ The goal of your cloud business case is to achieve more with every dollar invest
 
 The initial technical benefits of a cloud migration focus on the lift and shift model, where you migrate workloads to infrastructure-as-a-service (IaaS) in the cloud. The goal is to get the most out of your on-premises investment, and then move those workloads to IaaS, potentially freeing up cash flow. Historically, this process would be considered a savings opportunity. This approach in the cloud is better viewed as a *reinvestment opportunity*.
 
-As you free up cash flow, continue your cloud adoption, and mature your workloads, you can reinvest the savings to modernize to different service levels. Once you have your initial workloads in IaaS, you might consider shifting some workloads to platform-as-a-service (PaaS). You’ll still provide the same type of service delivery however, you'll deliver it at a lower cost with more features and functionality. The next step in the iterative modernization process is moving some workflows and line-of-business applications to software-as-a-service (SaaS).
+As you free up cash flow, continue your cloud adoption, and mature your workloads, you can reinvest the savings to modernize to different service levels. Once you have your initial workloads in IaaS, you might consider shifting some workloads to platform-as-a-service (PaaS). You'll still provide the same type of service delivery however, you'll deliver it at a lower cost with more features and functionality. The next step in the iterative modernization process is moving some workflows and line-of-business applications to software-as-a-service (SaaS).
 
 When you plan your phases of cloud maturity and the reinvestment of your cloud savings, and align with [business outcomes](./business-outcomes/index.md), you can achieve more with every dollar you invest.
 

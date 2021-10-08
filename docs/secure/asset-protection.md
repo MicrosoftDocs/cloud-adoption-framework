@@ -116,7 +116,7 @@ Once you identify a best practice for an asset, apply it consistently to all ins
 
 ### Challenges with measuring value
 
- It can be difficult to measure the business value of asset protection. The impact of a problem isn't obvious until there's a real-world failure. The risk of not updating security for vulnerabilities is silent and invisible.
+It can be difficult to measure the business value of asset protection. The impact of a problem isn't obvious until there's a real-world failure. The risk of not updating security for vulnerabilities is silent and invisible.
 
 ### Prefer automated policy
 

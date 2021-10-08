@@ -129,8 +129,6 @@ LiveOps also helps to humanize data. A LiveOps approach makes data more actionab
 
 Game development is one example of an industry that's embracing LiveOps today. Modern games are the iconic LiveOps applications. Games have been going through a quiet revolution, transforming from packaged goods with a lifetime measured in hours to active communities with a lifetime measured in years. With more than 2 billion gamers out there, and tens of thousands of new games shipping every year fighting for attention, game developers are turning toward LiveOps to better engage and retain their player base over time. Innovation happens through continuous player engagement: content updates, special events, promotions, and offers.
 
-<!-- cSpell:ignore playfab -->
-
 ### Azure PlayFab
 
 [Azure PlayFab](/gaming/playfab/what-is-playfab) is a complete back-end platform for live games and an example of a leading LiveOps application platform. With Azure PlayFab, you can continuously monitor your code, get real-time analytics, and release real-time updates to optimize your applications and increase monetization. The PlayFab objective is to deliver the intelligent cloud for games, empowering developers to better engage, retain, and monetize their players.

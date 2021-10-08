@@ -147,7 +147,7 @@ The first two options provide a way to handle **sensitive (personal data)**, and
 - Insights about protection and compliance
 - Policies for data protection reporting
 
-Typically, a policy engine would integrate with a data catalog like Azure Purview. The Azure Marketplace features third-party vendor solutions, and some vendors work with Azure Synapse and Azure Databricks to encrypt and decrypt information while also providing row- and column-level security.
+Typically, a policy engine would integrate with a data catalog like Azure Purview. The Azure Marketplace features third-party vendor solutions, and some vendors work with Azure Synapse and Azure Databricks to encrypt and decrypt information while also providing row-level and column-level security.
 
 The policy engine should use Azure AD groups to apply policies to datasets. The expectation for any policy solution providing data privacy is to tokenize **sensitive (personal data)** and to always check through attribute access control so that the user has can detokenize the columns they need to access.
 

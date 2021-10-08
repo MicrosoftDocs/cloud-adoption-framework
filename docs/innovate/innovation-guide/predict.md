@@ -12,8 +12,6 @@ ms.custom: internal, fasttrack-edit, AQC, seo-caf-innovate
 keywords: Automate business processes, ai innovation, machine learning, knowledge mining
 ---
 
-<!-- cSpell:ignore ONNX -->
-
 # Innovate with AI in Azure
 
 As an innovator, your company has rich information about its business and its customers. Using AI innovation, your company can:
