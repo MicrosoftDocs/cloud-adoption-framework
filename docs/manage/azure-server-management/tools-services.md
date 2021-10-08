@@ -53,7 +53,7 @@ For your file-server data, another service to consider is [Azure File Sync](/azu
 
 [Azure Monitor](/azure/azure-monitor/overview) provides a view into various resources, like applications, containers, and virtual machines. It also collects data from several sources:
 
-- [Azure Monitor for VMs](/azure/azure-monitor/vm/vminsights-overview) provides an in-depth view of VM health, performance trends, and dependencies. The service monitors the health of the operating systems of your Azure Virtual Machines, virtual-machine scale sets, and machines in your on-premises environment.
+- [Azure Monitor for VMs](/azure/azure-monitor/vm/vminsights-overview) provides an in-depth view of VM health, performance trends, and dependencies. The service monitors the health of the operating systems of your Azure virtual machines, virtual-machine scale sets, and machines in your on-premises environment.
 - [Log Analytics](/azure/azure-monitor/logs/log-query-overview) is a feature of Azure Monitor. Its role is central to the overall Azure management story. It serves as the data store for log analysis and for many other Azure services. It offers a rich query language and an analytics engine that provides insights into the operation of your applications and resources.
 - [Azure activity log](/azure/azure-monitor/essentials/platform-logs-overview) is also a feature of Azure Monitor. It provides insight into subscription-level events that occur in Azure.
 

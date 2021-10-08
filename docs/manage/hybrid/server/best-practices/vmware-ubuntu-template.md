@@ -1,6 +1,6 @@
 ---
-title: Create a VMware vSphere template for Ubuntu server 18.04
-description: Create a VMware vSphere template for Ubuntu server 18.04.
+title: Create a VMware vSphere template for Ubuntu Server 18.04
+description: Create a VMware vSphere template for Ubuntu Server 18.04.
 author: likamrat
 ms.author: brblanch
 ms.date: 01/29/2021
@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-hybrid
 
 <!-- cspell:ignore netplan -->
 
-# Create a VMware vSphere template for Ubuntu server 18.04
+# Create a VMware vSphere template for Ubuntu Server 18.04
 
 This article provides guidance for creating an Ubuntu Server 18.04 VMware vSphere virtual machine template.
 
@@ -21,7 +21,7 @@ This article provides guidance for creating an Ubuntu Server 18.04 VMware vSpher
 > [!NOTE]
 > This guide assumes that you have some VMware vSphere familiarity. It's not designed to review either VMware or Ubuntu best practices.
 
-- [Download the latest Ubuntu server 18.04 ISO file](https://releases.ubuntu.com/18.04/)
+- [Download the latest Ubuntu Server 18.04 ISO file](https://releases.ubuntu.com/18.04/)
 
 - VMware vSphere 6.5 and above
 
@@ -57,7 +57,7 @@ This article provides guidance for creating an Ubuntu Server 18.04 VMware vSpher
 
 - Power on the VM and start the Ubuntu installation. No specific instructions here but:
 
-  - (Optional:) Consider using static IP
+  - Consider using a static IP address (optional)
   - Install OpenSSH server
 
     ![First screenshot of an Ubuntu installation](./media/vmware-template/ubuntu-template-installation-1.png)
