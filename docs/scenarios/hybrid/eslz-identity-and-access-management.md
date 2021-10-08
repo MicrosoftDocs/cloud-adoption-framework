@@ -25,13 +25,13 @@ Your organization or enterprise needs to design right access controls to secure 
 
 - **Server on-boarding and administration**
   - Use security groups to assign local administrator rights to the identified users or service accounts on the servers to onboard to Azure Arc at scale.
-  - Use Azure AD service principal to onboard servers to Azure Arc.
+  - Use [Azure AD service principal](/azure/azure-arc/servers/onboard-service-principal#create-a-service-principal-for-onboarding-at-scale) to onboard servers to Azure Arc.
   - Use separate Azure AD service principals to onboard severs when operated by different IT teams.
-  - Use short lived Azure AD service principal credentials (client secret) to onboard servers to Azure Arc.
+  - Use short lived Azure AD service principal [credentials (client secret)](/azure/active-directory/develop/howto-create-service-principal-portal#option-2-create-a-new-application-secret) to onboard servers to Azure Arc.
   - Assign only [Azure Connected Machine Onboarding](/azure/azure-arc/servers/onboard-service-principal#create-a-service-principal-for-onboarding-at-scale) role to service principal at the resource group level.
   - Create an Azure AD security group or Windows Active Directory security group(synced to Azure AD) and assign [Hybrid Server Resource Administrator](/azure/azure-arc/servers/plan-at-scale-deployment#prerequisites) role to manage Azure Arc-enabled server resources in Azure, then assign individual users or principals to the security group.
 
-- **Azure resource access**
+- **Azure AD protected resource access**
   - Use [managed identities](/azure/azure-arc/servers/managed-identity-authentication) from applications running on servers on-premises and other cloud environments to access resources protected by Azure Active Directory.
-  - Restrict access to managed identities to allow applications that are authorized using Azure Active Directory application permissions.
-  - Use *Hybrid agent extension applications* local security group on Windows or *himds*     group on Linux to grant access to users to request Azure resource access tokens from the Azure Arc-enabled servers.
+  - Restrict access to managed identities to [allow applications](/azure/active-directory/develop/v2-permissions-and-consent) that are authorized using Azure Active Directory application permissions.
+  - Use [*Hybrid agent extension applications*](/azure/azure-arc/servers/security-overview#using-a-managed-identity-with-azure-arc-enabled-servers) local security group on Windows or *himds* group on Linux to grant access to users to request Azure resource access tokens from the Azure Arc-enabled servers.
