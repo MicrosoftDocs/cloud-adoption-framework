@@ -19,9 +19,15 @@ Cloud adoption best practices encourage customers to create a single, centralize
 Common motivations for choosing Azure VMware Solution are:
 
 - **Business needs:** To accelerate the migration of VMware-based workloads, support your [total cost of ownership (TCO) reduction](https://azure.microsoft.com/pricing/tco/calculator/), and rapidly expand capacity. This includes your need to reduce costs, complexity, and risk associated with larger-scale migration projects.
-- **IT needs:** To create business continuity, deploy disaster recovery solutions, and scale traditional on-premises VMware environments, with little to no change to applications (including VDI environments where modernization of VDI is not needed).
-- **Operational needs:** To make use of the skills and processes you've established across IT teams, while you give team members the ability to grow and adopt cloud competencies over time.
-- **Strategic needs:** To incrementally modernize your VMware-based applications with other Azure services as business requirements evolve.
+- **IT needs:** To create business continuity, deploy disaster recovery solutions, and scale traditional on-premises VMware environments, with little to no change to applications (including VDI environments where modernization of VDI is not needed). Some additional IT needs are discussed below.
+  - ***Retaining same IP address***: In lift and shift migrations, very often IP address are reassigned. This may result in either application configuration change or application not working at all. Azure VMware Solution provides ability to retain IP address after migration.
+  - ***Retaining same MAC address***: Some software(s)/application(s) running in on-premise environment tie their licensing requirements with server/computer's MAC address. Change in MAC addresses after migration of these server(s)/computer(s) may result in non-compliance to licensing requirements. Azure VMware Solution provides ability to retain same MAC address.
+  - ***Multicast networking support***: Specialized software(s) may be using multicast networking while running in on-premise environment. Azure VMware Solution provides an excellent choice for running such specialized software(s).
+  - ***Functional Testing***: IT teams can reuse their existing functional testing tools and processes as defined for on-premise workloads. The tools and processes remains same in even when worklaods run in Azure VMware Solution.
+- **Operational needs:** To make use of the existing VMware skills, licenses (SRM, AVI Load balancers, etc.) and processes you've established across IT teams, while you give team members the ability to grow and adopt cloud competencies over time. Many IT teams can take advantages of following additional benefits offered by Azure VMware Solution.
+  - ***Less VM-level changes***: When migrated to Azure VMware Solution, a Virtual Machine (VM) does not undergo much configuration changes such as Disks, Memory, Network Interface Card (NIC). This reduces the testing time as well drives confidence in migration.
+  - ***Reuse existing Disaster Recovery (DR) site***: When customers migrate workloads to Azure VMware Solution from on-premise environment, they can continue to use their existing DR site, tools and processes.  
+- **Strategic needs:** To incrementally modernize your VMware-based applications with other Azure services as business requirements evolve. Change in IT hardware [supply chain environment](https://www.au.logicalis.com/news/how-the-global-chip-shortage-is-driving-data-centre-projects-to-the-cloud/) can also lead to unpredictable scenarios affecting on-premise data centers. Azure VMware Solution provides fastest way to mitigate this risk.
 
 ## Azure VMware Solution outcomes
 
