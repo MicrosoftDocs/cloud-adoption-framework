@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-hybrid
 
 # Deploy a local Ubuntu server hosted with Vagrant and connect it to Azure Arc
 
-This article provides guidance for deploying a local **Ubuntu** virtual machine using [Vagrant](https://www.vagrantup.com/) and connect it as an Azure Arc enabled server resource.
+This article provides guidance for deploying a local **Ubuntu** virtual machine using [Vagrant](https://www.vagrantup.com/) and connect it as an Azure Arc-enabled server resource.
 
 ## Prerequisites
 
@@ -28,19 +28,19 @@ This article provides guidance for deploying a local **Ubuntu** virtual machine 
     az --version
     ```
 
-3. Vagrant relies on an underlying hypervisor. For this guide, we will be using "Oracle VM VirtualBox".
+3. Vagrant relies on an underlying hypervisor. For this guide, we will be using Oracle VM VirtualBox.
 
     1. Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads).
 
         - If you are a macOS user, run `brew cask install virtualbox`
         - If you are a Windows user, you can use the [Chocolatey package](https://chocolatey.org/packages/virtualbox)
-        - If you are a Linux user, all package installation methods can be found [here](https://www.virtualbox.org/wiki/Linux_Downloads)
+        - If you are a Linux user, all package installation methods can be found in [Download VirtualBox for Linux hosts](https://www.virtualbox.org/wiki/Linux_Downloads).
 
     2. Install [Vagrant](https://www.vagrantup.com/docs/installation)
 
         - If you are a macOS user, run `brew cask install vagrant`
         - If you are a Windows user, you can use the [Chocolatey package](https://chocolatey.org/packages/vagrant)
-        - If you are a Linux user, look [here](https://www.vagrantup.com/downloads)
+        - If you are a Linux user, visit the [Vagrant download page](https://www.vagrantup.com/downloads).
 
 4. Create an Azure service principal.
 
@@ -96,15 +96,15 @@ Once the download is complete, the provisioning begins. As shown in the followin
 
 ![A screenshot of a completed `vagrant up` command.](./media/local-vagrant/vagrant-ubuntu-vagrant-up-complete.png)
 
-Upon completion, you will have a local Ubuntu VM deployed, connected as a new Azure Arc enabled server, inside a new resource group.
+Upon completion, you'll have a local Ubuntu VM deployed, connected as a new Azure Arc-enabled server, inside a new resource group.
 
-![A screenshot of an Azure Arc enabled server in the Azure portal.](./media/local-vagrant/vagrant-ubuntu-server.png)
+![A screenshot of an Azure Arc-enabled server in the Azure portal.](./media/local-vagrant/vagrant-ubuntu-server.png)
 
-![A screenshot of details from an Azure Arc enabled server in the Azure portal.](./media/local-vagrant/vagrant-ubuntu-server-details.png)
+![A screenshot of details from an Azure Arc-enabled server in the Azure portal.](./media/local-vagrant/vagrant-ubuntu-server-details.png)
 
 ## Semi-automated deployment (optional)
 
-The last step is to register the VM as a new Azure Arc enabled server resource.
+The last step is to register the VM as a new Azure Arc-enabled server resource.
 
 ![Another screenshot of the `vagrant up` command.](./media/local-vagrant/vagrant-ubuntu-vagrant-up-2.png)
 

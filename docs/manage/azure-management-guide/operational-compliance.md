@@ -11,9 +11,6 @@ ms.localizationpriority: high
 ms.custom: internal, fasttrack-edit, AQC
 ---
 
-<!-- docutune:casing "Update Management" "Guest Configuration" "Blueprints: Getting started" "Blueprints: Blueprint definitions" MMA -->
-<!-- cSpell:ignore WSUS -->
-
 # Operational compliance in Azure
 
 *Operational compliance* is the second discipline in any cloud management baseline.
@@ -44,7 +41,7 @@ For any enterprise-grade environment, this table outlines the suggested minimum 
 
 Computers that are managed by the Update Management solution for Azure Automation use the following configurations to do assessment and update deployments:
 
-- Microsoft Monitoring Agent (MMA) for Windows or Linux.
+- Log Analytics agent for Windows or Linux.
 - PowerShell Desired State Configuration (DSC) for Linux.
 - Azure Automation Hybrid Runbook Worker.
 - Microsoft Update or Windows Server Update Services (WSUS) for Windows computers.
@@ -91,13 +88,13 @@ To apply a policy to a resource group:
 
 ::: zone-end
 
-Azure Policy is used throughout governance processes. It's also highly valuable within cloud management processes. Azure Policy can audit and remediate Azure resources and can also audit settings inside a machine. The validation is performed by the Guest Configuration extension and client. The extension, through the client, validates settings like:
+Azure Policy is used throughout governance processes. It's also highly valuable within cloud management processes. Azure Policy can audit and remediate Azure resources and can also audit settings inside a machine. The validation is performed by the guest configuration extension and client. The extension, through the client, validates settings like:
 
 - Operating system configuration.
 - Application configuration or presence.
 - Environment settings.
 
-Azure Policy Guest Configuration currently only audits settings inside the machine. It doesn't apply configurations.
+Azure Policy guest configuration currently only audits settings inside the machine. It doesn't apply configurations.
 
 ::: zone target="chromeless"
 
@@ -123,7 +120,7 @@ To apply a policy to a resource group:
 To learn more, see:
 
 - [Azure Policy](/azure/governance/policy/)
-- [Azure Policy: Guest Configuration](/azure/governance/policy/concepts/guest-configuration)
+- [Azure Policy guest configuration](/azure/governance/policy/concepts/guest-configuration)
 - [Cloud Adoption Framework policy enforcement decision guide](../../decision-guides/policy-enforcement/index.md)
 
 ## Azure Blueprints
@@ -184,7 +181,7 @@ To publish blueprint artifacts to your subscription:
 
 ::: zone target="chromeless"
 
-1. Go to **Blueprints - Blueprint definitions**.
+1. Go to **Blueprints** > **Blueprint definitions**.
 1. Select the blueprint you created in the previous steps.
 1. Review the blueprint definition, then select **Publish blueprint**.
 1. In the **Version** box, enter a version like "1.0".
