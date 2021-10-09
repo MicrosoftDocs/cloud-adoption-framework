@@ -538,7 +538,7 @@ Learn more about the Azure capabilities discussed in this document.
 [RGMgmt]: /azure/azure-resource-manager/management/manage-resource-groups-portal#what-is-a-resource-group
 [ALB]: /azure/load-balancer/load-balancer-overview
 [DDoS]: /azure/ddos-protection/ddos-protection-overview
-[PIP]: /azure/virtual-network/virtual-network-public-ip-address
+[PIP]: /azure/virtual-network/ip-services/virtual-network-public-ip-address
 [azure-front-door]: /azure/frontdoor/front-door-overview
 [AFDWAF]: /azure/web-application-firewall/afds/afds-overview
 [AppGW]: /azure/application-gateway/overview
@@ -558,4 +558,4 @@ Learn more about the Azure capabilities discussed in this document.
 [SQL]: /azure/azure-sql/database/sql-database-paas-overview
 [cosmos-db]: /azure/cosmos-db/introduction
 [IoT]: /azure/iot-fundamentals/iot-introduction
-[machine-learning]: /azure/machine-learning/overview-what-is-azure-ml
+[machine-learning]: /azure/machine-learning/overview-what-is-azure-machine-learning

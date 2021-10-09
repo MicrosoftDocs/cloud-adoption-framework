@@ -77,14 +77,14 @@ A critical design decision that an enterprise organization must make when adopti
 **Design considerations:**
 
 - Consider centralized and delegated responsibilities to manage resources deployed inside the landing zone.
-- Applications that rely on domain services and use older protocols can use [Azure AD DS](/azure/active-directory-domain-services).
+- Applications that rely on domain services and use older protocols can use [Azure AD DS](/azure/active-directory-domain-services/).
 - There is a difference between Azure AD, Azure AD DS, and AD DS running on Windows Server. Evaluate your application needs, and understand and document the authentication provider that each one will be using. Plan accordingly for all applications.
 
 **Design recommendations:**
 
 - Use centralized and delegated responsibilities to manage resources deployed inside the landing zone based on role and security requirements.
 - Privileged operations such as creating service principal objects, registering applications in Azure AD, and procuring and handling certificates or wildcard certificates require special permissions. Consider which users will be handling such requests and how to secure and monitor their accounts with the degree of diligence required.
-- If an organization has a scenario where an application that uses integrated Windows authentication must be accessed remotely through Azure AD, consider using [Azure AD Application Proxy](/azure/active-directory/manage-apps/application-proxy).
+- If an organization has a scenario where an application that uses integrated Windows authentication must be accessed remotely through Azure AD, consider using [Azure AD Application Proxy](/azure/active-directory/app-proxy/application-proxy).
 - Evaluate the compatibility of workloads for AD DS on Windows Server and for Azure AD DS.
 - Ensure your network design allows resources that require AD DS on Windows Server for local authentication and management to access the appropriate domain controllers.
   - For AD DS on Windows Server, consider shared services environments that offer local authentication and host management in a larger enterprise-wide network context.

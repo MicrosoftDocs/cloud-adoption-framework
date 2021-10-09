@@ -17,7 +17,7 @@ This guidance discusses ways to connect an Azure enterprise-scale landing zone a
 The various options differ in speed, latency, reliability, service level agreements (SLAs), complexity, and costs. This article considers options and makes recommendations.
 
 > [!NOTE]
-> Microsoft and Oracle partnered to provide high-throughput, low-latency cross-connections between Azure and Oracle Cloud Infrastructure (OCI). For more information, see [Connectivity to Oracle Cloud Infrastructure](connectivity-to-other-providers-oci.md).
+> Microsoft and Oracle partnered to provide high-throughput, low-latency cross-connections between Azure and Oracle Cloud Infrastructure (OCI). For more information, see [Connectivity to Oracle Cloud Infrastructure](./connectivity-to-other-providers-oci.md).
 
 ## Design considerations
 
@@ -67,4 +67,4 @@ The various options differ in speed, latency, reliability, service level agreeme
 
 ## Next steps
 
-To learn more about connectivity to Oracle Cloud Infrastructure (OCI), see [Connectivity to Oracle Cloud Infrastructure](connectivity-to-other-providers-oci.md).
+To learn more about connectivity to Oracle Cloud Infrastructure (OCI), see [Connectivity to Oracle Cloud Infrastructure](./connectivity-to-other-providers-oci.md).

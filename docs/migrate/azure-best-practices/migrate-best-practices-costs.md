@@ -142,7 +142,7 @@ Storage accounts can use different types of redundancy for resilience and high a
 
 **Learn more:**
 
-- Review [Azure Storage pricing](https://azure.microsoft.com/pricing/details/storage/).
+- Review [Azure Storage products and pricing](https://azure.microsoft.com/product-categories/storage/).
 - Learn about [Azure Import/Export](/azure/import-export/storage-import-export-service).
 - Compare [blobs, files, and disk storage data types](/azure/storage/common/storage-introduction).
 - Learn more about [access tiers](/azure/storage/blobs/access-tiers-overview).
@@ -231,7 +231,7 @@ With Azure Cost Management + Billing, you can:
 
 - Read the [Azure Cost Management + Billing overview](/azure/cost-management-billing/cost-management-billing-overview).
 - Learn to [optimize your cloud investment with Azure Cost Management + Billing](/azure/cost-management-billing/costs/cost-mgt-best-practices).
-- Learn about [Azure Cost Management + Billing reports](/azure/cost-management-billing/cloudyn/use-reports).
+- Learn to [explore and analyze costs with cost analysis](/previous-versions/azure/cost-management-billing/cloudyn/use-reports).
 - Get a [tutorial on optimizing costs from recommendations](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations).
 - Review the [Azure Consumption APIs](/rest/api/consumption/budgets).
 
@@ -287,7 +287,7 @@ Identifying and moving stale data to cheaper storage areas can have a huge impac
 
 **Learn more:**
 
-- Learn more about [access tiers](/azure/storage/blobs/storage-blob-storage-tiers).
+- Learn more about [access tiers](/azure/storage/blobs/access-tiers-overview).
 - Read the [StorSimple overview](/azure/azure-monitor/overview).
 - Review [StorSimple pricing](https://azure.microsoft.com/pricing/details/storsimple/).
 

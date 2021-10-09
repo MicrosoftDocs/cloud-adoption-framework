@@ -47,11 +47,11 @@ Data science projects are different from application development or data enginee
 
 The experimentation and development stage usually begins when there is enough confidence that the data science project is feasible and can provide real business value. This stage is when development practices become increasingly important. It's a good practice to capture metrics for all of the experiments that are done at this stage. It's also important to incorporate source control so that it's possible to compare models and toggle between different versions of the code if needed. Development activities include the refactoring, testing, and automation of exploration code into repeatable experimentation pipelines, and the creation of model serving applications and pipelines. Refactoring code into more modular components and libraries helps increase reusability and testability, and it allows for performance optimization. Finally, what is deployed into staging and production environments is the model serving application or batch inference pipelines. Next to monitoring of infrastructure reliability and performance, similar to what's done for a regular application with traditional DevOps, the quality of the data, the data profile, and the model must be continuously monitored at the risk of degradation or drift. Machine learning models require retraining over time to stay relevant in a changing environment.
 
-![Diagram of the machine learning DevOps stages that include Explore, Experiment and develop, and Operate.](media/mlops-stages.png)
+![Diagram of the machine learning DevOps stages that include Explore, Experiment and develop, and Operate.](./media/mlops-stages.png)
 
 #### Data science lifecycle requires an adaptive way of working
 
-If you apply a typical DevOps way of working to a data science project, you might not find success because of the uncertain nature of data quality and its correlatively. Exploration and experimentation are recurring activities and needs throughout a machine learning project. The teams at Microsoft follow a project lifecycle and working process that was developed to reflect data science-specific activities. The [Team Data Science Process](/azure/machine-learning/team-data-science-process/overview) and [The Data Science Lifecycle Process](https://github.com/dslp/dslp) are examples of reference implementations.
+If you apply a typical DevOps way of working to a data science project, you might not find success because of the uncertain nature of data quality and its correlatively. Exploration and experimentation are recurring activities and needs throughout a machine learning project. The teams at Microsoft follow a project lifecycle and working process that was developed to reflect data science-specific activities. The [Team Data Science Process](/azure/architecture/data-science-process/overview) and [The Data Science Lifecycle Process](https://github.com/dslp/dslp) are examples of reference implementations.
 
 #### Data quality requirements and data availability constrain the work environment
 
@@ -65,7 +65,7 @@ Unlike traditional software, a machine learning solution is constantly at risk o
 
 While data science projects share roles with regular IT projects, the success of a machine learning team highly depends on a group of machine learning technology specialists and domain subject matter experts. Where the technology specialist has the right background to do end-to-end machine learning experimentation, the domain expert can support the specialist to analyze and synthesize the data, or qualify the data for use.
 
-Common technical roles that are unique to data science projects are Domain Expert, Data Engineer, Data Scientist, AI Engineer, Model Validator, and Machine Learning Engineer. To learn more about roles and tasks within a typical data science team, also refer to the [Team Data Science Process](/azure/machine-learning/team-data-science-process/roles-tasks).
+Common technical roles that are unique to data science projects are Domain Expert, Data Engineer, Data Scientist, AI Engineer, Model Validator, and Machine Learning Engineer. To learn more about roles and tasks within a typical data science team, also refer to the [Team Data Science Process](/azure/architecture/data-science-process/roles-tasks).
 
 ### Seven principles for machine learning DevOps
 
@@ -93,7 +93,7 @@ Azure Machine Learning offers several asset management, orchestration, and autom
 
 - Work in project teams to best utilize specialist and domain knowledge in your organization. [Organize and set up Azure Machine Learning Workspaces](./ai-machine-learning-resource-organization.md) on a project basis to comply with use case segregation requirements.
 - Define a set of responsibilities and tasks in your organization as a role, where one team member on an MLOps project team could fulfill multiple roles. Use Custom Roles in Azure to define a set of granular [Azure RBAC operations for Azure Machine Learning](/azure/role-based-access-control/resource-provider-operations#microsoftmachinelearningservices) that each role can perform.
-- Standardize on a project lifecycle and agile methodology. The [Team Data Science Process](/azure/machine-learning/team-data-science-process/overview) provides a reference lifecycle implementation.
+- Standardize on a project lifecycle and agile methodology. The [Team Data Science Process](/azure/architecture/data-science-process/overview) provides a reference lifecycle implementation.
 - Balanced teams can execute all MLOps stages from exploration to development to operations.
 
 ### Process
@@ -101,13 +101,13 @@ Azure Machine Learning offers several asset management, orchestration, and autom
 - Standardize on a code template to allow for code reuse and increase ramp up time at project start or when a new team member joins the project. [Azure Machine Learning pipelines](/azure/machine-learning/concept-ml-pipelines) and [job submissions script](/python/api/azureml-core/azureml.core.scriptrun), and [CI/CD pipelines](/azure/machine-learning/how-to-github-actions-machine-learning) lend themselves well for the creation of templates.
 - Use version control. Jobs that are submitted from a Git-backed folder [automatically track repo metadata](/azure/machine-learning/concept-train-model-git-integration) with the job in Azure Machine Learning for reproducibility.
 - Version experiment inputs and outputs to enable reproducibility. Use [Azure Machine Learning datasets](/azure/machine-learning/how-to-version-track-datasets), [model management](/azure/machine-learning/concept-model-management-and-deployment), and [environment management](/azure/machine-learning/concept-environments) capabilities to facilitate.
-- Build up a [run history](/azure/machine-learning/how-to-manage-runs?tabs=python) of experiment runs to allow for comparison, planning, and collaboration. Use an experiment tracking framework like [MLflow](/azure/machine-learning/how-to-use-mlflow) for metric collection.
+- Build up a [run history](/azure/machine-learning/how-to-track-monitor-analyze-runs?tabs=python) of experiment runs to allow for comparison, planning, and collaboration. Use an experiment tracking framework like [MLflow](/azure/machine-learning/how-to-use-mlflow) for metric collection.
 - Continuously measure and control the quality of your team's work through [continuous integration](/azure/architecture/microservices/ci-cd) on the full experimentation code base.
-- Early-terminate training when a model doesn't converge. Use an experiment tracking framework in combination with the [run history](/azure/machine-learning/how-to-manage-runs?tabs=python) in Azure Machine Learning to monitor job execution.
+- Early-terminate training when a model doesn't converge. Use an experiment tracking framework in combination with the [run history](/azure/machine-learning/how-to-track-monitor-analyze-runs?tabs=python) in Azure Machine Learning to monitor job execution.
 - Define an experiment and model management strategy. Consider using a name like *Champion* to refer to the current baseline model, or refer to *Challenger* models for candidate models, which could outperform the *Champion* model in production. Apply tags in Azure Machine Learning to mark experiment and models as appropriate. In some scenarios, such as sales forecasting, it can take months to determine whether the model's predictions are accurate.
 - Elevate [continuous integration](/azure/architecture/microservices/ci-cd) to continuous training by including model training as part of the build. For example, start model training on the full dataset with each pull request.
 - Shorten the time-to-feedback on the quality of machine learning pipeline by running an automated build on a sample of the data. Use [Azure Machine Learning pipeline parameters](/azure/machine-learning/how-to-use-pipeline-parameter) to parameterize input [datasets](/azure/machine-learning/how-to-train-with-datasets).
-- Use [continuous deployment for machine learning models](/azure/machine-learning/how-to-deploy-continuously-deploy) to automate the deployment and testing of real time scoring services across your Azure environments (development, test, production).
+- Use [continuous deployment for machine learning models](/azure/machine-learning/how-to-safely-rollout-managed-endpoints) to automate the deployment and testing of real time scoring services across your Azure environments (development, test, production).
 - In some regulated industries, model validation steps might be required before a machine learning model can be used in a production environment. By automating validation steps, to an extent, you might accelerate time to delivery. When manual review or validation steps are still the bottleneck, consider whether it's possible to certify the automated model validation pipeline. Use resource tags in Azure Machine Learning to indicate asset compliance, candidates for review, or as triggers for deployment.
 - Don't retrain in production and directly replace the production model without any integration testing. Even though model performance and functional requirements are good, among other potential issues, a model might have grown its environment footprint, breaking the serving environment.
 - When production data access is only available in production, use [Azure RBAC](/azure/role-based-access-control/resource-provider-operations#microsoftmachinelearningservices) and [custom roles](/azure/machine-learning/how-to-assign-roles) to give a select number of machine learning practitioners the read access they require, for example for data exploration. Alternatively, make a data copy available in the non-production environments.
@@ -212,7 +212,7 @@ An AI factory relies on building repeatable processes and reusable assets that c
 
 The following figure summarizes key elements of an AI factory:
 
-![Diagram of the key elements of an AI factory. ](media/ai-factory-summary.png)
+![Diagram of the key elements of an AI factory. ](./media/ai-factory-summary.png)
 
 Not every organization's machine learning DevOps (MLOps) requirements are the same. The MLOps architecture for a large multinational enterprise is unlikely to fit a small startup. Organizations start small and build up as their maturity, model catalog, and experience grows.
 

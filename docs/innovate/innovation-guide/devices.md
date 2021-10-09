@@ -28,7 +28,7 @@ Azure customers employ a continually expanding set of connected systems and devi
 > - [Azure Kinect DK](/azure/kinect-dk/about-azure-kinect-dk)
 > - Drones
 > - [Azure SQL Edge](/azure/azure-sql-edge/overview)
-> - [IoT plug and play](/azure/iot-pnp/overview-iot-plug-and-play)
+> - [IoT plug and play](/azure/iot-develop/overview-iot-plug-and-play)
 
 ## [Global scale IoT service](#tab/IoTHub)
 
@@ -45,8 +45,8 @@ Here are a few features you'll find:
 
 ### Learn more
 
-- [Azure IoT Hub](/azure/iot-hub)
-- [Azure IoT Hub Device Provisioning Service (DPS)](/azure/iot-dps)
+- [Azure IoT Hub](/azure/iot-hub/)
+- [Azure IoT Hub Device Provisioning Service (DPS)](/azure/iot-dps/)
 - [Use our modern IoT Azure DevOps project to help with your work item management](https://azuredevopsdemogenerator.azurewebsites.net/?name=modiot)
 
 ::: zone-end

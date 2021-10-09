@@ -262,12 +262,12 @@ Read more articles about architectural considerations for deploying Machine Lear
 
 - Learn how team structure, environment, or regional constraints affect workspace setup.
   > [!div class="nextstepaction"]
-  > [Organize and set up Azure Machine Learning environments](ai-machine-learning-resource-organization.md)
+  > [Organize and set up Azure Machine Learning environments](./ai-machine-learning-resource-organization.md)
 
 - See how to manage compute costs and budget across teams and users.
   > [!div class="nextstepaction"]
-  > [Budget, cost, and quota management for Azure Machine Learning at organizational scale](optimize-ai-machine-learning-cost.md)
+  > [Budget, cost, and quota management for Azure Machine Learning at organizational scale](./optimize-ai-machine-learning-cost.md)
 
 - Learn about machine learning DevOps (MLOps), which uses a combination of people, process, and technology to deliver robust, reliable, and automated machine learning solutions.
   > [!div class="nextstepaction"]
-  > [Machine learning DevOps guide](ai-machine-learning-mlops.md)
+  > [Machine learning DevOps guide](./ai-machine-learning-mlops.md)
