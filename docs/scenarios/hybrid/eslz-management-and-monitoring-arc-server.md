@@ -20,12 +20,6 @@ Here are some general design considerations for Azure Arc-enabled servers monito
 
 - Review the [supported list of operating systems](/azure/azure-monitor/agents/agents-overview#supported-operating-systems) for the monitoring agents.
 - Review the [network requirements](/azure/azure-monitor/agents/log-analytics-agent#network-requirements) for the monitoring agents to communicate with Azure Monitor.
-- Review the Azure Arc-enabled servers Windows and Linux architecture.
-
-![Azure Arc-enabled servers Windows architecture](../../_images/hybrid/Windows-architecture.png)
-
-![Azure Arc-enabled servers Linux architecture](../../_images/hybrid/Linux-architecture.png)
-
 - The Azure Monitor agents should be automatically deployed to Azure Arc-enabled Windows and Linux servers through [Azure Policy](/azure/azure-monitor/deploy-scale) as part of the Enterprise scale landing zone.
 - Identify the needed [logs and metrics](/azure/azure-monitor/agents/agent-data-sources) to be collected from your Azure Arc-enabled servers based on your requirements.
 - Review the Azure Connected Machine agent architecture.
