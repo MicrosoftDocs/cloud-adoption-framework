@@ -33,13 +33,13 @@ The following article provides guidance for deploying a local **Windows 10** vir
     1. Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads).
 
         - If you are an macOS user, run `brew cask install virtualbox`
-        - If you are a Windows user, you can use the [Chocolatey package](https://chocolatey.org/packages/virtualbox)
+        - If you are a Windows user, you can use the [Chocolatey package](https://community.chocolatey.org/packages/virtualbox)
         - If you are a Linux user, all package installation methods can be found in [Download VirtualBox for Linux hosts](https://www.virtualbox.org/wiki/Linux_Downloads).
 
     2. Install [Vagrant](https://www.vagrantup.com/docs/installation)
 
         - If you are an macOS user, run `brew cask install vagrant`
-        - If you are a Windows user, you can use the [Chocolatey package](https://chocolatey.org/packages/vagrant)
+        - If you are a Windows user, you can use the [Chocolatey package](https://community.chocolatey.org/packages/vagrant)
         - If you are a Linux user, visit the [Vagrant download page](https://www.vagrantup.com/downloads).
 
 4. Create an Azure service principal.

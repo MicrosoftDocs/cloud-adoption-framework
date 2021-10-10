@@ -313,7 +313,7 @@ Contoso can deploy an Azure Automation account with preconfigured runbooks and s
 
 ### Partner optimization tools
 
-Contoso can use partner tools such as [Hanu](https://hanu.com/insight/) and [Scalr](https://scalr.com/pricing/).
+Contoso can use partner tools such as [Hanu](https://hanu.com/insight/) and [Scalr](https://www.scalr.com/pricing).
 
 ## Step 4: Secure and manage
 

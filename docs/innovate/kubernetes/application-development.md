@@ -34,36 +34,36 @@ As you get started, use the checklist and application development resources in t
   For more information, see:
   - [Working with Docker in Visual Studio Code](https://code.visualstudio.com/docs/containers/overview)
   - [Working with Kubernetes in Visual Studio Code](https://code.visualstudio.com/docs/azure/kubernetes)
-  - [Bridge to Kubernetes overview](/visualstudio/containers/overview-bridge-to-kubernetes)
+  - [Bridge to Kubernetes overview](/visualstudio/bridge/overview-bridge-to-kubernetes)
 
 - **Containerize your application.** Familiarize yourself with the end-to-end Kubernetes development experience, including application scaffolding, inner-loop workflows, application-management frameworks, CI/CD pipelines, log aggregation, monitoring, and application metrics.
 
   To learn more, see:
-  - [Get up and running with Kubernetes (e-book collection)](https://azure.microsoft.com/resources/containerize-your-apps-with-docker-and-kubernetes/)
+  - [Get up and running with Kubernetes (e-book collection)](https://azure.microsoft.com/resources/kubernetes-ebook-collection/)
   - [`Containerize Your Applications with Kubernetes on Azure` (webinar)](https://info.microsoft.com/AU-AzureApp-WBNR-FY20-11Nov-12-ContainerizeYourApplicationswithKubernetesonAzure-SRDEM10557_LP02OnDemandRegistration-ForminBody.html)
 
-- **Review common Kubernetes scenarios.** Although Kubernetes is often thought of as a platform for delivering microservices, it's becoming a much broader platform. For more information about common Kubernetes scenarios such as batch analytics and workflow, see [Overview of common Kubernetes scenarios (video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&v=zd8vYhrFXp4&index=7).
+- **Review common Kubernetes scenarios.** Although Kubernetes is often thought of as a platform for delivering microservices, it's becoming a much broader platform. For more information about common Kubernetes scenarios such as batch analytics and workflow, see [Overview of common Kubernetes scenarios (video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&index=7&v=zd8vYhrFXp4).
 
 - **Prepare your application for Kubernetes.** Prepare your application file system layout for Kubernetes and organize for weekly or daily releases. Learn how the Kubernetes deployment process enables reliable, zero-downtime upgrades.
 
   For more information, see:
   - [Project design and layout for successful Kubernetes applications (webinar)](https://info.microsoft.com/ww-OnDemandRegistration-successful-kubernetes-applications-webinar.html)
-  - [How Kubernetes deployments work (video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&v=mNK14yXIZF4&index=3)
+  - [How Kubernetes deployments work (video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&index=3&v=mNK14yXIZF4)
   - [Develop and deploy applications on Kubernetes (Microsoft Learn)](/learn/paths/develop-deploy-applications-kubernetes/)
 
 - **Manage application storage.** Understand the performance needs and access methods for pods so that you can provide the appropriate storage options. Also, plan for ways to back up and test the restore process for attached storage.
 
   To learn more, see:
 
-  - [Basics of stateful applications in Kubernetes (video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&v=GieXzb91I40&index=9)
+  - [Basics of stateful applications in Kubernetes (video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&index=9&v=GieXzb91I40)
   - [State and data in Docker applications](/dotnet/architecture/microservices/architect-microservice-container-applications/docker-application-state-data)
   - [Storage options in Azure Kubernetes Service](/azure/aks/operator-best-practices-storage)
 
 - **Manage application secrets.** Use a key vault to store and retrieve keys and credentials. Don't store credentials in your application code.
 
   For more information, see:
-  - [`How Kubernetes and Configuration Management works` (video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&v=vRcQOZLnKUk&index=11)
-  - [Understand secrets management in Kubernetes (video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&v=KmhM33j5WYk&index=10)
+  - [`How Kubernetes and Configuration Management works` (video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&index=11&v=vRcQOZLnKUk)
+  - [Understand secrets management in Kubernetes (video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&index=10&v=KmhM33j5WYk)
   - [Use Azure Key Vault with Kubernetes](https://github.com/azure/kubernetes-keyvault-flexvol)
   - [Use Azure AD pod identity to authenticate and access Azure resources](https://github.com/azure/aad-pod-identity)
 
@@ -87,9 +87,9 @@ As you prepare the application for production, use the following checklist. You 
 
   For more information, see:
   - [Logging in Kubernetes](https://kubernetes.io/docs/concepts/cluster-administration/logging/)
-  - [Get started with monitoring and alerting for Kubernetes (video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&v=W7aN_z-cyUw&index=16)
+  - [Get started with monitoring and alerting for Kubernetes (video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&index=16&v=W7aN_z-cyUw)
   - [Azure Monitor for containers](/azure/azure-monitor/containers/container-insights-overview)
-  - [Enable and review Kubernetes control plane logs in Azure Kubernetes Service (AKS)](/azure/aks/view-control-plane-logs)
+  - [Enable and review Kubernetes control plane logs in Azure Kubernetes Service (AKS)](/azure/azure-monitor/containers/container-insights-log-query#resource-logs)
   - [View Kubernetes logs, events, and pod metrics in real time](/azure/azure-monitor/containers/container-insights-livedata-overview)
 
 - **Define resource requirements for the application.** A primary way to manage the compute resources within a Kubernetes cluster is to use pod requests and limits. These requests and limits tell the Kubernetes scheduler what compute resources a pod should be assigned. For more information, see [Define pod resource requests and limits](/azure/aks/developer-best-practices-resource-management#define-pod-resource-requests-and-limits).
@@ -100,7 +100,7 @@ As you prepare the application for production, use the following checklist. You 
 
   To learn more, see:
   - [Evolve your DevOps practices](/learn/paths/evolve-your-devops-practices/)
-  - [Setting up a Kubernetes build pipeline (video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&v=5irsAdKoEBU&index=6)
+  - [Setting up a Kubernetes build pipeline (video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&index=6&v=5irsAdKoEBU)
   - [Deployment Center for Azure Kubernetes Service](/azure/aks/deployment-center-launcher)
   - [GitHub Actions for deploying to Azure Kubernetes Service](/azure/aks/kubernetes-action)
   - [Tutorial: Deploy from GitHub to Azure Kubernetes Service using Jenkins](/azure/developer/jenkins/deploy-from-github-to-aks)
@@ -121,12 +121,12 @@ Now that the application is in production, how can you optimize your workflow an
 - **Deploy a service mesh.** A service mesh provides capabilities like traffic management, resiliency, policy, security, strong identity, and observability to your workloads. Your application is decoupled from these operational capabilities and the service mesh moves them out of the application layer and down to the infrastructure layer.
 
   For more information, see:
-  - [How&nbsp;service&nbsp;meshes&nbsp;work&nbsp;in&nbsp;Kubernetes&nbsp;(video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&v=izVWk7rYqWI&index=15) <br>
+  - [How&nbsp;service&nbsp;meshes&nbsp;work&nbsp;in&nbsp;Kubernetes&nbsp;(video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&index=15&v=izVWk7rYqWI) <br>
   - Learn about [service meshes](/azure/aks/servicemesh-about)
   - [Use Open Service Mesh with Azure Kubernetes Service](/azure/aks/open-service-mesh-about)
-  - [Use Istio with Azure Kubernetes Service](/azure/aks/servicemesh-istio-about)
-  - [Use Linkerd with Azure Kubernetes Service](/azure/aks/servicemesh-linkerd-about)
-  - [Use Consul with Azure Kubernetes Service](/azure/aks/servicemesh-consul-about)
+  - [Use Istio with Azure Kubernetes Service](/azure/aks/servicemesh-about)
+  - [Use Linkerd with Azure Kubernetes Service](/azure/aks/servicemesh-about)
+  - [Use Consul with Azure Kubernetes Service](/azure/aks/servicemesh-about)
 
 - **Implement site reliability engineering (SRE) practices.** Site reliability engineering (SRE) is a proven approach to maintain crucial system and application reliability while iterating at the speed demanded by the marketplace.
 

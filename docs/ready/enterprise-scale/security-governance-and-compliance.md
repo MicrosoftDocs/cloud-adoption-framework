@@ -197,11 +197,11 @@ The Azure Security Benchmark includes a collection of high-impact security recom
 
 The Azure Security Benchmark documentation specifies security controls and service recommendations:
 
-- [Security controls](/azure/security/benchmarks/overview)
+- [Security controls](/security/benchmark/azure/overview)
 
   The Azure Security Benchmark recommendations are categorized by security controls. Security controls represent high-level vendor-agnostic security requirements, such as network security and data protection. Each security control has a set of security recommendations and instructions that help you implement those recommendations.
 
-- [Service recommendations](/azure/security/benchmarks/security-baselines-overview)
+- [Service recommendations](/security/benchmark/azure/security-baselines-overview)
 
   When available, benchmark recommendations for Azure services include Azure Security Benchmark recommendations that are tailored specifically for that service.
 

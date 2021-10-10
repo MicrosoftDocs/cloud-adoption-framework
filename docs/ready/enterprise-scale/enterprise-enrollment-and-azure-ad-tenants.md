@@ -203,11 +203,11 @@ Ask basic security questions during the Azure AD design phase, such as how your 
 
 - Base using Azure single sign-on on the selected [planning topology](/azure/active-directory/hybrid/plan-connect-topologies).
 
-- If your organization doesn't have an identity infrastructure, start by implementing an Azure-AD-only identity deployment. Deployment with [Azure AD Domain Services](/azure/active-directory-domain-services) and [Microsoft Enterprise Mobility + Security](/mem/intune/fundamentals/what-is-intune) provides end-to-end protection for SaaS applications, enterprise applications, and devices.
+- If your organization doesn't have an identity infrastructure, start by implementing an Azure-AD-only identity deployment. Deployment with [Azure AD Domain Services](/azure/active-directory-domain-services/) and [Microsoft Enterprise Mobility + Security](/mem/intune/fundamentals/what-is-intune) provides end-to-end protection for SaaS applications, enterprise applications, and devices.
 
 - [Azure AD multifactor authentication](/azure/active-directory/authentication/concept-mfa-howitworks) provides another layer of security and authentication. For more security, also enforce [conditional access policies](/azure/active-directory/conditional-access/overview) for all privileged accounts.
 
-- Plan for [emergency access](/azure/active-directory/users-groups-roles/directory-emergency-access) or break-glass accounts to prevent tenant-wide account lockout.
+- Plan for [emergency access](/azure/active-directory/roles/security-emergency-access) or break-glass accounts to prevent tenant-wide account lockout.
 
 - Use [Azure AD Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) to manage identities and access.
 
@@ -217,4 +217,4 @@ Ask basic security questions during the Azure AD design phase, such as how your 
 
 ## Next steps
 
-[Identity and access management](identity-and-access-management.md)
+[Identity and access management](./identity-and-access-management.md)
