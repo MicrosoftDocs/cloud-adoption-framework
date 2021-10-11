@@ -34,7 +34,7 @@ Perimeter networks make use of the following Azure features and services:
 
 Usually, your central IT team and security teams are responsible for defining requirements to operate your perimeter networks.
 
-![Example of a hub and spoke network topology](../../_images/azure-best-practices/network-high-level-perimeter-networks.png)
+![Diagram that shows an example of a hub and spoke network topology.](../../_images/azure-best-practices/network-high-level-perimeter-networks.png)
 
 *Figure 1: Example of a hub and spoke network topology.*
 
