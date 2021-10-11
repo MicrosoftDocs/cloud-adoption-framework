@@ -133,7 +133,7 @@ To see a demo of AzOps being used, check out this YouTube video on the Microsoft
 
 The [AzOps](https://github.com/Azure/AzOps) tooling supports deploying Bicep files at the [four Azure scopes](/azure/azure-resource-manager/management/overview#understand-scope). Its pull process only stores the scan of your Azure tenants resources in ARM templates that use JSON.
 
-<!-- Leave us feedback via [GitHub issues on the AzOps repository](https://github.com/Azure/AzOps/issues) if you want to see something added to AzOps. -->
+Leave us feedback via [GitHub issues on the AzOps repository](https://github.com/Azure/AzOps/issues) if you want to see something added to AzOps.
 
 ### Terraform
 
