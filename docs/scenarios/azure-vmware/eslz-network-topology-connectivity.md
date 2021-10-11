@@ -259,13 +259,13 @@ Virtual WAN supports [transit connectivity between VPN and ExpressRoute](/azure/
 
 - All clusters also share the same connectivity settings, such as internet, ExpressRoute, HCX, public IP, and ExpressRoute Global Reach. Application workloads can also share some basic networking settings like network segments, dynamic host configuration protocol (DHCP), and Domain Name System (DNS).
 
-- Design your private clouds and clusters in advance, before deployment. The number of private clouds impacts your networking requirements directly. Each private cloud requires its own [/22 address space for private cloud management](/azure/azure-vmware/plan-private-cloud-deployment#define-the-ip-address-segment-for-private-cloud-management#define-the-ip-address-segment-for-private-cloud-management) and [IP address segment for VM workloads](/azure/azure-vmware/plan-private-cloud-deployment#define-the-ip-address-segment-for-vm-workloads#define-the-ip-address-segment-for-vm-workloads). Consider defining those address spaces in advance.
+- Design your private clouds and clusters in advance, before deployment. The number of private clouds impacts your networking requirements directly. Each private cloud requires its own [/22 address space for private cloud management](/azure/azure-vmware/plan-private-cloud-deployment#define-the-ip-address-segment-for-private-cloud-management) and [IP address segment for VM workloads](/azure/azure-vmware/plan-private-cloud-deployment#define-the-ip-address-segment-for-vm-workloads). Consider defining those address spaces in advance.
 
 - Discuss with your VMware and networking teams how to segment and distribute your private clouds, clusters, and network segments for workloads. Preplan to avoid wasting IP addresses.
 
-- For more information about managing IP addresses for private clouds, see [Define the IP address segment for private cloud management](/azure/azure-vmware/plan-private-cloud-deployment#determine-the-number-of-clusters-and-hosts#determine-the-number-of-clusters-and-hosts).
+- For more information about managing IP addresses for private clouds, see [Define the IP address segment for private cloud management](/azure/azure-vmware/plan-private-cloud-deployment#determine-the-number-of-clusters-and-hosts).
 
-- For more information about managing IP addresses for VM workloads, see [Define the IP address segment for VM workloads](/azure/azure-vmware/plan-private-cloud-deployment#define-the-ip-address-segment-for-vm-workloads#define-the-ip-address-segment-for-vm-workloads).
+- For more information about managing IP addresses for VM workloads, see [Define the IP address segment for VM workloads](/azure/azure-vmware/plan-private-cloud-deployment#define-the-ip-address-segment-for-vm-workloads).
 
 ### DNS and DHCP
 
