@@ -1097,7 +1097,7 @@ items:
               - name: Translate text in real time
                 href: /azure/cognitive-services/translator/quickstart-translator?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
               - name: Understand sentiment using LUIS
-                href: /azure/cognitive-services/LUIS/tutorial-machine-learned-entity?toc=%2Fazure%2Fcloud-adoption-framework%2Ftoc.json#publish-the-app-to-access-it-from-the-http-endpoint&bc=%2Fazure%2Fcloud-adoption-framework%2F_bread%2Ftoc.json
+                href: /azure/cognitive-services/LUIS/tutorial-machine-learned-entity?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread%/toc.json#publish-the-app-to-access-it-from-the-http-endpoint
               - name: Recognize speech from a microphone
                 href: /azure/cognitive-services/speech-service/get-started-speech-to-text?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
               - name: Bing web search

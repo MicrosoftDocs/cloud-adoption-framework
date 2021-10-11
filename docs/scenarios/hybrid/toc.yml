@@ -234,7 +234,7 @@ items:
     - name: Azure Stack HCI
       href: /azure-stack/#azure-stack-hci?toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json#azure-stack-hci
     - name: Azure IoT Edge
-      href: /azure/iot-edge/?toc=%2Fazure%2Fcloud-adoption-framework%2Fscenarios%2Fhybrid%2Ftoc.json&bc=%2Fazure%2Fcloud-adoption-framework%2F_bread%2Ftoc.json
+      href: /azure/iot-edge/?toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
     - name: Azure Sphere
       href: /azure-sphere/?toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
     - name: Windows for IoT
