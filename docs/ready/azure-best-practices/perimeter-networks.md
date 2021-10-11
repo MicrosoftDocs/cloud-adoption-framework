@@ -117,6 +117,10 @@ You can tune protection policies through dedicated traffic monitoring and machin
 
 Real-time telemetry is available through Azure Monitor views both during an attack and for historical purposes. You can add application-layer protection by using the Web Application Firewall in Azure Application Gateway. Protection is provided for IPv4 Azure public IP addresses.
 
+## Next steps
+
+Learn how to efficiently manage common communication or security requirements by using the [hub-and-spoke network topology](hub-spoke-network-topology.md) model.
+
 <!-- links -->
 
 [virtual-networks]: /azure/virtual-network/virtual-networks-overview
