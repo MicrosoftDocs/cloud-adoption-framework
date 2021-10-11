@@ -171,7 +171,7 @@ When Azure was originally released, access controls to a subscription were basic
 When implementing Azure role-based access control, the following practices are highly recommended:
 
 - Control the Administrator and Co-Administrator roles of a subscription, since these roles have extensive permissions. You only need to add the subscription owner as a Co-Administrator if they need to managed Azure classic deployments.
-- Use management groups to assign [roles](/azure/azure-resource-manager/management-groups-overview#management-group-access) across multiple subscriptions and reduce the burden of managing them at the subscription level.
+- Use management groups to assign [roles](/azure/governance/management-groups/overview#management-group-access) across multiple subscriptions and reduce the burden of managing them at the subscription level.
 - Add Azure users to a group (for example, `Application X Owners`) in Active Directory. Use the synchronized group to provide group members the appropriate rights to manage the resource group containing the application.
 - Follow the principle of granting the **least privilege** required to do the expected work.
 

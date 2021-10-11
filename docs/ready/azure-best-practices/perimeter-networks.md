@@ -113,7 +113,7 @@ Real-time telemetry is available through Azure Monitor views both during an atta
 [perimeter-network]: ../../resources/networking-vdc.md
 [alb]: /azure/load-balancer/load-balancer-overview
 [ddos]: /azure/ddos-protection/ddos-protection-overview
-[public-ip]: /azure/virtual-network/virtual-network-public-ip-address
+[public-ip]: /azure/virtual-network/ip-services/virtual-network-public-ip-address
 [afd]: /azure/frontdoor/front-door-overview
 [afdwaf]: /azure/web-application-firewall/afds/afds-overview
 [appgw]: /azure/application-gateway/overview

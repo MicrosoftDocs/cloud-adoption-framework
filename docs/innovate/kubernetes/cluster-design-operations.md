@@ -75,7 +75,7 @@ Once the application is in production, how can you optimize your workflow and pr
 
 - **Configure monitoring and troubleshooting at scale.** Set up alerting and monitoring for applications in Kubernetes. Learn about the default configuration, how to integrate more advanced metrics, and how to add custom monitoring and alerting to operate your application.
 
-  - [Get started with monitoring and alerting for Kubernetes (video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&index=16&v=W7aN_z-cyUw)
+  - [Get started with monitoring and alerting for Kubernetes (video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&v=W7aN_z-cyUw&index=16)
   - [Configure alerts using Azure Monitor for containers](/azure/azure-monitor/containers/container-insights-overview)
   - [Review diagnostic logs for master components](/azure/azure-monitor/containers/container-insights-log-query#resource-logs)
   - [Azure Kubernetes Service (AKS) diagnostics](/azure/aks/concepts-diagnostics)

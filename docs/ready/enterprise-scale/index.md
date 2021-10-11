@@ -33,7 +33,7 @@ The enterprise-scale approach to construct landing zones includes three sets of 
 - [Implementations](./implementation.md): Azure Resource Manager template of the architecture to accelerate adoption.
 
 <!-- TODO: Reinstate once template.md is ready.
-- [Template](./template.md): A documentation template to quickly capture decisions and any deviation from the suggested architecture or implementation.
+- [Template](): A documentation template to quickly capture decisions and any deviation from the suggested architecture or implementation.
 -->
 
 ## Community

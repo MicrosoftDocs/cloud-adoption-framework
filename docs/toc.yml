@@ -1164,7 +1164,7 @@ items:
           - name: Feedback loops
             items:
             - name: Manage feedback with Azure DevOps
-              href: /azure/devops/project/feedback/?bc=%2Fazure%2Fcloud-adoption-framework%2Ftoc.json
+              href: /azure/devops/project/feedback/?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/toc.json
           - name: Continuous integration
             items:
             - name: Continuous integration with Azure Pipelines and GitHub
