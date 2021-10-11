@@ -63,7 +63,7 @@ People have always tried to detect patterns in large volumes of data. Computers 
 
 Using insights as a starting point, machine learning develops and applies predictive models to capitalize on the patterns in data. Through multiple iterations of training, testing, and adoption, those models and algorithms can accurately predict future outcomes.
 
-[Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-ml) is the cloud-native service in Azure for building and training models based on your data. This tool also includes a [workflow for accelerating the development of machine learning algorithms](/azure/machine-learning/concept-azure-machine-learning-architecture). This workflow can be used to develop algorithms through a visual interface or Python.
+[Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-machine-learning) is the cloud-native service in Azure for building and training models based on your data. This tool also includes a [workflow for accelerating the development of machine learning algorithms](/azure/machine-learning/concept-azure-machine-learning-architecture). This workflow can be used to develop algorithms through a visual interface or Python.
 
 For more robust machine learning models, [ML Services in Azure HDInsight](/azure/hdinsight/r-server/r-server-overview) provides a machine learning platform built on Apache Hadoop clusters. This approach enables more granular control of the underlying clusters, storage, and compute nodes. Azure HDInsight also offers more advanced integration through tools like ScaleR and SparkR to create predictions based on integrated and ingested data, even working with data from a stream. The [flight delay prediction solution](/azure/hdinsight/hdinsight-hadoop-r-scaler-sparkr) demonstrates these advanced capabilities when used to predict flight delays based on weather conditions. The HDInsight solution also allows for enterprise controls, such as data security, network access, and performance monitoring to operationalize patterns.
 
@@ -87,5 +87,5 @@ Learn more about how to create an ambient experience through an [adjusted realit
 
 Review a prescriptive framework that includes the tools, programs, and content (best practices, configuration templates, and architecture guidance) to simplify adoption for the following innovation scenarios.
 
-- [Kubernetes in the Cloud Adoption Framework](..\kubernetes\index.md)
-- [AI in the Cloud Adoption Framework](..\ai\index.md)
+- [Kubernetes in the Cloud Adoption Framework](../kubernetes/index.md)
+- [AI in the Cloud Adoption Framework](../ai/index.md)

@@ -30,11 +30,11 @@ Here are some design recommendations for SAP on Azure monitoring and management:
 
 - Monitor SAP systems and solutions.
 
-- Use SAP Solution Manager and [Azure Monitor for SAP Solutions](/azure/virtual-machines/workloads/sap/azure-monitor-overview) to monitor SAP HANA, high-availability SUSE clusters, and SQL systems.
+- Use SAP Solution Manager and [Azure Monitor for SAP Solutions](/azure/virtual-machines/workloads/sap/monitor-sap-on-azure) to monitor SAP HANA, high-availability SUSE clusters, and SQL systems.
 
 - Run a VM Extension for SAP check. VM Extension for SAP uses the assigned managed identity of a virtual machine to access VM monitoring and configuration data. The check ensures that all performance metrics that appear inside your SAP application come from the underlying [Azure Extension for SAP](/azure/virtual-machines/workloads/sap/deployment-guide).
 
-- Protect your HANA database with [Azure Backup](/azure/virtual-machines/workloads/sap/sap-hana-backup-guide) service. If you deploy Azure NetApp Files (ANF) for your HANA database, use the [Azure Application Consistent Snapshot tool (AzAcSnap)](/azure/azure-netapp-files/azacsnap-introduction) to take application-consistent snapshots.
+- Protect your HANA database with [Azure Backup](/azure/backup/sap-hana-db-about) service. If you deploy Azure NetApp Files (ANF) for your HANA database, use the [Azure Application Consistent Snapshot tool (AzAcSnap)](/azure/azure-netapp-files/azacsnap-introduction) to take application-consistent snapshots.
 
 - Create a monitoring platform using [SAP telemetry tools](https://github.com/microsoft/saptelemetry) tools to provide business process insights.
 

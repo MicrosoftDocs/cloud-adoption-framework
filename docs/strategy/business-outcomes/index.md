@@ -52,8 +52,6 @@ Today's fast-changing business environment places a premium on time. The ability
 
 View samples of [agility outcomes](./agility-outcomes.md).
 
-<!-- docutune:ignore "global reach" -->
-
 ### Reach outcomes
 
 In a constantly shrinking market, global reach (ability to support global customers and users) can be measured by compliance in geographies that are relevant to the business.

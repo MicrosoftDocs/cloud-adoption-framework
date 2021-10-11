@@ -101,7 +101,7 @@ Contoso needs to set up a virtual network gateway connection from its on-premise
 
 #### Migration
 
-Contoso admins migrate the database by using Azure Database Migration Service and following the [step-by-step migration tutorial](/azure/dms/tutorial-mysql-azure-mysql-online). They can perform online, offline, and hybrid (preview) migrations by using MySQL 5.6 or 5.7.
+Contoso admins migrate the database by using Azure Database Migration Service and following the [step-by-step migration tutorial](/azure/dms/tutorial-mysql-azure-mysql-offline-portal). They can perform online, offline, and hybrid (preview) migrations by using MySQL 5.6 or 5.7.
 
 > [!NOTE]
 > MySQL 8.0 is supported in Azure Database for MySQL. The Database Migration Service tool doesn't yet support that version.

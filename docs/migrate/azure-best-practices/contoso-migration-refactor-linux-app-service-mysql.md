@@ -190,7 +190,7 @@ There are several ways to move the MySQL database. Each option requires Contoso 
 
 ### Step 4a: Migrate the database via Azure Database Migration Service
 
-Contoso admins migrate the database via Azure Database Migration Service by following the [step-by-step migration tutorial](/azure/dms/tutorial-mysql-azure-mysql-online). They can perform online, offline, and hybrid (preview) migrations by using MySQL 5.6 or 5.7.
+Contoso admins migrate the database via Azure Database Migration Service by following the [step-by-step migration tutorial](/azure/dms/tutorial-mysql-azure-mysql-offline-portal). They can perform online, offline, and hybrid (preview) migrations by using MySQL 5.6 or 5.7.
 
 > [!NOTE]
 > MySQL 8.0 is supported in Azure Database for MySQL, but the Database Migration Service tool does not yet support this version.

@@ -478,7 +478,7 @@ Contoso admins create two different projects for the front-end site.
 
 2. They import the [`SmartHotel360-Website`](https://github.com/Microsoft/SmartHotel360-Website) Git repository into the new project.
 
-3. For the function app, they create another Azure DevOps project (`SmartHotelPetChecker`) and import the [PetChecker](https://github.com/sonahander/SmartHotel360-PetCheckerFunction) Git repository into this project.
+3. For the function app, they create another Azure DevOps project (`SmartHotelPetChecker`) and import the [PetChecker](https://github.com/ramon-tomas-c/SmartHotel360-PetCheckerFunction) Git repository into this project.
 
 ### Configure the web app
 
@@ -701,4 +701,4 @@ Here are two examples of tailored learning paths on Microsoft Learn that align w
 
 - [Deploy a website to Azure with Azure App Service](/learn/paths/deploy-a-website-with-azure-app-service/): By creating web apps in Azure, you can publish and manage your website easily without having to work with the underlying servers, storage, or network assets. Instead, you can focus on your website features and rely on the robust Azure platform to help provide secure access to your site.
 
-- [Process and classify images with the Azure cognitive vision services](/learn/paths/process-classify-images-with-azure-cognitive-vision-services/): Azure Cognitive Services offers prebuilt functionality to enable computer vision functionality in your applications. Learn how to use the Azure cognitive vision services to detect faces, tag and classify images, and identify objects.
+- [Process and classify images with the Azure cognitive vision services](/learn/paths/create-computer-vision-solutions-azure-cognitive-services/): Azure Cognitive Services offers prebuilt functionality to enable computer vision functionality in your applications. Learn how to use the Azure cognitive vision services to detect faces, tag and classify images, and identify objects.

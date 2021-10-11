@@ -6,7 +6,7 @@ ms.author: mboswell
 ms.date: 08/06/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
@@ -185,10 +185,10 @@ In addition to participating in these user groups, analysts should submit data a
 
 ## Responsibility assignment matrix
 
-- Responsible: Who is completing the task?
-- Accountable: Who is making decisions and taking actions on the tasks(s)?
-- Consulted: Who will receive communication about decisions and tasks?
-- Informed: Who will be updated about the decisions and actions during the project?
+- **Responsible:** Who is completing the task?
+- **Accountable:** Who is making decisions and taking actions on the task?
+- **Consulted:** Who receives communications about decisions and task?
+- **Informed:** Who is updated about the decisions and actions during the project?
 
 |Role |Cloud environment|Data management landing zone|Data landing zone|Data integration|Data products|
 |-|-|-|-|-|-|
@@ -202,4 +202,4 @@ In addition to participating in these user groups, analysts should submit data a
 
 ## Next steps
 
-[The Azure Well-Architected Framework for data workloads](./well-architected-framework.md)
+The [Azure Well-Architected Framework for data workloads](./well-architected-framework.md)

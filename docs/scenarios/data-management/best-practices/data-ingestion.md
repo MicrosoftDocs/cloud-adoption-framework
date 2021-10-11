@@ -6,7 +6,7 @@ ms.author: mboswell
 ms.date: 08/06/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
@@ -53,8 +53,8 @@ However, it's possible to create more integration runtimes to ingest from on-pre
 
 This guidance elaborates on the information within:
 
-- [Securing access to Azure Data Lake Gen 2 from Azure Databricks](https://github.com/hurtn/datalake-ADLS-access-patterns-with-Databricks/blob/master/readme.md)
-- [Azure Databricks Best Practices](https://github.com/Azure/AzureDatabricksBestPractices/blob/master/toc.md)
+- [Securing access to Azure Data Lake Storage Gen2 from Azure Databricks](https://github.com/hurtn/datalake-ADLS-access-patterns-with-Databricks/blob/master/readme.md)
+- [Azure Databricks best practices](https://github.com/Azure/AzureDatabricksBestPractices/blob/master/toc.md)
 - [Use Azure Databricks within enterprise-scale for analytics and AI in Azure](./azure-databricks-implementation.md)
 
 - One premium Azure Databricks data engineering workspace should be deployed per data landing zone in the production ingest and processing resource group. It will enable a complete CI/CD experience and only allow notebooks to be deployed from Azure DevOps or GitHub.
@@ -77,9 +77,9 @@ This guidance elaborates on the information within:
 
 Organizations might need to support scenarios where publishers generate high-velocity event streams. For this pattern, a message queue is recommended, for example, Event Hubs or IoT Hub, to ingest these streams.
 
-Event Hubs and IoT Hub are scalable event processing services that can ingest and process large event volumes and data with low latency and high reliability. Event Hubs is designed as a big data streaming and event ingestion service. IoT Hub is a managed service that serves as a central message hub for bidirectional communication between an IoT application and the devices it manages. From there, data can either be exported to a data lake at regular intervals (batch) and processed with Azure Databricks in near-real-time via Apache Spark streaming, Azure Data Explorer, Stream Analytics, or Time Series Insights.
+Event Hubs and IoT Hub are scalable event processing services that can ingest and process large event volumes and data with low latency and high reliability. Event Hubs is designed as a big data streaming and event ingestion service. IoT Hub is a managed service that serves as a central message hub for bidirectional communication between an IoT application and the devices it manages. From there, data can either be exported to a data lake at regular intervals (batch) and processed with Azure Databricks in near-real-time via Apache Spark Streaming, Azure Data Explorer, Stream Analytics, or Time Series Insights.
 
-The last Event Hub or Apache Kafka landing zone inside the use case's specific landing zone should send its aggregated data to the data lake's raw layer in one of the data landing zones and to Event Hubs related to the data integration resource group in the data landing zone.
+The last Event Hubs or Apache Kafka landing zone inside the use case's specific landing zone should send its aggregated data to the data lake's raw layer in one of the data landing zones and to Event Hubs related to the data integration resource group in the data landing zone.
 
 ## Enforce data quality
 

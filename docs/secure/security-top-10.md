@@ -14,7 +14,7 @@ ms.custom: internal
 
 These are the top Azure security best practices that Microsoft recommends based on lessons learned across customers and our own environments.
 
-For a video presentation of these best practices, see [Top 10 best practices for Azure security](https://techcommunity.microsoft.com/t5/video-hub/top-10-best-practices-for-azure-security/m-p/1698837).
+For a video presentation of these best practices, see [Top 10 best practices for Azure security](https://techcommunity.microsoft.com/t5/video-hub/top-10-best-practices-for-azure-security/ba-p/1698837).
 
 ## 1. People: Educate teams about the cloud security journey
 

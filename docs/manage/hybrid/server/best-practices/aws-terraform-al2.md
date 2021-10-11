@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-hybrid
 
 # Use a Terraform plan to deploy an Amazon Linux 2 instance on Amazon Elastic Compute Cloud and connect it to Azure Arc
 
-This article provides guidance for using the provided [Terraform](https://www.terraform.io/) plan to deploy an Amazon Web Services (AWS) Amazon Elastic Compute Cloud (EC2) Linux 2 instance and connect it as an Azure Arc enabled server resource.
+This article provides guidance for using the provided [Terraform](https://www.terraform.io/) plan to deploy an Amazon Web Services (AWS) Amazon Elastic Compute Cloud (EC2) Linux 2 instance and connect it as an Azure Arc-enabled server resource.
 
 ## Prerequisites
 
@@ -60,7 +60,7 @@ In order for Terraform to create resources in AWS, we will need to create a new 
 
 1. Sign in to the [AWS management console](https://console.aws.amazon.com/console/home)
 
-2. After signing in, select the **Services** dropdown in the top left. Under **Security, Identity, and Compliance**, select **IAM** to access the [identity and access management page](https://console.aws.amazon.com/iam/home)
+2. After signing in, select the **Services** dropdown list in the top left. Under **Security, Identity, and Compliance**, select **IAM** to access the [identity and access management page](https://console.aws.amazon.com/iam/home)
 
     ![A screenshot of the AWS cloud console.](./media/aws-terraform-al2/al2-aws-console.png)
 
@@ -70,11 +70,11 @@ In order for Terraform to create resources in AWS, we will need to create a new 
 
     ![A screenshot of how to create a new user in an AWS cloud console.](./media/aws-terraform-al2/al2-new-user-1.png)
 
-4. On the **Add User** page, name the user `Terraform` and select the **Programmatic Access** check box, and then select **Next**
+4. On the **Add User** page, name the user `Terraform` and select the **Programmatic Access** checkbox, and then select **Next**
 
     ![Second screenshot of how to create a new user in an AWS cloud console.](./media/aws-terraform-al2/al2-new-user-2.png)
 
-5. On the **Set Permissions** page, select **Attach existing policies directly** and then check the box next to **AmazonEC2FullAccess** as seen in the screenshot, and then select **Next**
+5. On the **Set Permissions** page, select **Attach existing policies directly** and then check the box next to **AmazonEC2FullAccess** as seen in the screenshot, and then select **Next**.
 
     ![Third screenshot of how to create a new user in an AWS cloud console.](./media/aws-terraform-al2/al2-new-user-3.png)
 
@@ -113,7 +113,7 @@ Before executing the Terraform plan, you must export the environment variables w
     source ./scripts/vars.sh
     ```
 
-5. Make sure your SSH keys are available in `~/.ssh` and named `id_rsa.pub` and `id_rsa`. If you followed the ssh-keygen guide above to create your key then this should already be setup correctly. If not, you may need to modify [`main.tf`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/aws/AL2/terraform/main.tf) to use a key with a different path.
+5. Make sure your SSH keys are available in `~/.ssh` and named `id_rsa.pub` and `id_rsa`. If you followed the `ssh-keygen` guide above to create your key then this should already be setup correctly. If not, you may need to modify [`main.tf`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/aws/AL2/terraform/main.tf) to use a key with a different path.
 
 6. Run the `terraform init` command which will download the Terraform AzureRM provider.
 
@@ -121,15 +121,15 @@ Before executing the Terraform plan, you must export the environment variables w
 
 ## Deployment
 
-1. Run the `terraform apply --auto-approve` command and wait for the plan to finish. Upon completion, you will have an AWS Amazon Linux 2 EC2 instance deployed and connected as a new Azure Arc enabled server inside a new resource group.
+1. Run the `terraform apply --auto-approve` command and wait for the plan to finish. Upon completion, you will have an AWS Amazon Linux 2 EC2 instance deployed and connected as a new Azure Arc-enabled server inside a new resource group.
 
 2. Open the Azure portal and navigate to the `arc-servers-demo` resource group. The virtual machine created in AWS will be visible as a resource.
 
-    ![A screenshot showing an Azure Arc enabled server in the Azure portal.](./media/aws-terraform-al2/al2-server.png)
+    ![A screenshot showing an Azure Arc-enabled server in the Azure portal.](./media/aws-terraform-al2/al2-server.png)
 
 ## Semi-automated deployment (optional)
 
-As you may have noticed, the last step of the run is to register the VM as a new Azure Arc enabled server resource.
+As you may have noticed, the last step of the run is to register the VM as a new Azure Arc-enabled server resource.
 
   ![A screenshot of the `azcmagent connect` command.](./media/aws-terraform-al2/al2-azcmagent.png)
 
@@ -141,7 +141,7 @@ If you want to demo/control the actual registration process, do the following:
 
 2. Get the public IP of the AWS VM by running `terraform output`.
 
-    ![A screenshot of a terraform output.](./media/aws-terraform-al2/al2-terraform-output.png)
+    ![A screenshot of output from Terraform.](./media/aws-terraform-al2/al2-terraform-output.png)
 
 3. SSH to the VM using the `ssh ec2-user@xx.xx.xx.xx`, where `xx.xx.xx.xx` is the host IP.
 
