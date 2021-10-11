@@ -316,7 +316,13 @@ items:
             - name: Connectivity to Oracle Cloud Infrastructure
               href: ready/azure-best-practices/connectivity-to-other-providers-oci.md   
         - name: Resource organization
-          href: ready/landing-zone/design-area/resource-org.md
+          items:
+          - name: Overview
+            href: ready/landing-zone/design-area/resource-org.md
+          - name: Management groups
+            href: ready/landing-zone/design-area/resource-org-management-groups.md
+          - name: Subscriptions
+            href: ready/landing-zone/design-area/resource-org-subscriptions.md
       
         - name: Governance
           href: ready/landing-zone/design-area/governance.md
