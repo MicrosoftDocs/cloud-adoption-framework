@@ -3,11 +3,11 @@ title: Share your cloud strategy
 description: Learn how to communicate your team's cloud strategy, such as a financial roadmap and multi-year plan, to your finance team.
 author: WendyRing
 ms.author: wering
-ms.service: cloud-adoption-framework
-ms.topic: conceptual
 ms.date: 4/15/2021
-ms.custom: template-concept
+ms.topic: conceptual
+ms.service: cloud-adoption-framework
 ms.subservice: strategy
+ms.custom: template-concept
 ---
 
 # Share your strategy
@@ -28,13 +28,13 @@ What's most important to your organization? What business outcomes do you want t
 
 ### Use finance terminology
 
-Use terms and acronyms familiar to the finance team, for example, capital expenditure (CAPEX), operational expenditure (OPEX), and double mortgage period. Using these terms keeps your your business case streamlined and prevents over-explanation. See the [finance glossary](finance-vocabulary-terms.md) for detailed descriptions of the most common finance terms.
+Use terms and acronyms familiar to the finance team, for example, capital expenditure (CAPEX), operational expenditure (OPEX), and double mortgage period. Using these terms keeps your your business case streamlined and prevents over-explanation. See the [finance glossary](./finance-vocabulary-terms.md) for detailed descriptions of the most common finance terms.
 
 ## Share your business case
 
 Show the finance team your business case that includes a financial roadmap and multi-year plan. Your plan should reiterate your organization's business and financial goals, and demonstrate how cloud economics aligns to their financial considerations.
 
-Your business case should be tailored to your organization's goals and business outcomes. For help with building your business case, see [Create your business case](./cloud-migration-business-case.md) and [Strategy for partner alignment](partner-alignment.md).
+Your business case should be tailored to your organization's goals and business outcomes. For help with building your business case, see [Create your business case](./cloud-migration-business-case.md) and [Strategy for partner alignment](./partner-alignment.md).
 
 ## Answer questions
 

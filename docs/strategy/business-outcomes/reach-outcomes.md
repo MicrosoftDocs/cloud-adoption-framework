@@ -36,7 +36,7 @@ An online retailer that ships products globally can engage with their customers 
 
 ## Data sovereignty
 
-Operating in new markets introduces additional governance constraints. Azure provides compliance offerings that help customers meet compliance obligations across regulated industries and global markets. For more information, see the [overview of Microsoft Azure compliance](https://azure.microsoft.com/overview/trusted-cloud/compliance).
+Operating in new markets introduces additional governance constraints. Azure provides compliance offerings that help customers meet compliance obligations across regulated industries and global markets. For more information, see the [overview of Microsoft Azure compliance](https://azure.microsoft.com/overview/trusted-cloud/compliance/).
 
 ### Example
 

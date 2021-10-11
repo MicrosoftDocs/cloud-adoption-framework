@@ -32,7 +32,7 @@ Use Azure SQL Database pools, formerly SQL data warehouse, as the data store for
 Azure SQL Database on-demand is a serverless query service that's used by data scientists and engineers to run queries against files in the storage accounts.
 
 > [!TIP]
-> You might need additional Azure Synapse Analytics workspaces if your data integration needs to provide access to the golden source with row- and column-level security. You can provide these workspaces with Azure Synapse pools. Data products teams might require their own workspace for creating data products and a separate workspace that's only for product teams with scoped development access.
+> You might need additional Azure Synapse Analytics workspaces if your data integration needs to provide access to the golden source with row-level and column-level security. You can provide these workspaces with Azure Synapse pools. Data products teams might require their own workspace for creating data products and a separate workspace that's only for product teams with scoped development access.
 
 ## Azure Synapse Analytics setup
 

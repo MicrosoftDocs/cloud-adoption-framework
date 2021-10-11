@@ -10,7 +10,6 @@ ms.subservice: govern
 ms.custom: internal
 ---
 
-<!-- cSpell:ignore prepurchases -->
 
 # Motivations and business risks in the Cost Management discipline
 

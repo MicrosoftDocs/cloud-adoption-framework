@@ -1,5 +1,5 @@
 ---
-title: "The virtual datacenter: A network perspective"
+title: 'The virtual datacenter: A network perspective'
 description: Use the Cloud Adoption Framework for Azure to learn how to use Azure to seamlessly extend your infrastructure into the cloud and build multitier architectures.
 author: tracsman
 ms.author: brblanch
@@ -11,8 +11,7 @@ ms.subservice: general
 ms.custom: think-tank, virtual-network
 ---
 
-<!-- docutune:disable -->
-<!-- cSpell:ignore iptables DDOS ITSM LLAP anycast vwan -->
+<!-- cSpell:ignore  LLAP vwan howitworks vpngateways erdirect frontdoor afds whatis -->
 
 # The virtual datacenter: A network perspective
 
@@ -539,7 +538,7 @@ Learn more about the Azure capabilities discussed in this document.
 [RGMgmt]: /azure/azure-resource-manager/management/manage-resource-groups-portal#what-is-a-resource-group
 [ALB]: /azure/load-balancer/load-balancer-overview
 [DDoS]: /azure/ddos-protection/ddos-protection-overview
-[PIP]: /azure/virtual-network/virtual-network-public-ip-address
+[PIP]: /azure/virtual-network/ip-services/virtual-network-public-ip-address
 [azure-front-door]: /azure/frontdoor/front-door-overview
 [AFDWAF]: /azure/web-application-firewall/afds/afds-overview
 [AppGW]: /azure/application-gateway/overview
@@ -559,6 +558,4 @@ Learn more about the Azure capabilities discussed in this document.
 [SQL]: /azure/azure-sql/database/sql-database-paas-overview
 [cosmos-db]: /azure/cosmos-db/introduction
 [IoT]: /azure/iot-fundamentals/iot-introduction
-[machine-learning]: /azure/machine-learning/overview-what-is-azure-ml
-
-<!--docutune:enable -->
+[machine-learning]: /azure/machine-learning/overview-what-is-azure-machine-learning

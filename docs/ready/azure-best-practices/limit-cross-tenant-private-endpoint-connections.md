@@ -100,7 +100,7 @@ Use the following [Azure policy](https://github.com/Azure/data-management-zone/b
 }
 ```
 
-This policy denies any private endpoints created outside of the subscription of the linked service, like connections A and D. The policy also provides the flexibility to use *manualprivateLinkServiceConnections* and *privateLinkServiceConnections*.
+This policy denies any private endpoints created outside of the subscription of the linked service, like connections A and D. The policy also provides the flexibility to use `manualPrivateLinkServiceConnections` and `privateLinkServiceConnections`.
 
 You can update this policy so private endpoints can only be created in a certain set of subscriptions. This change can be done by adding a `list` parameter and by using the `"notIn": "[parameters('allowedSubscriptions')]"` construct. However, this approach isn't recommended, as it means that you would have to constantly maintain the list of subscriptions for this policy. Whenever a new subscription gets created inside your tenant, the subscription ID must be added to the parameter.
 
@@ -114,7 +114,7 @@ This policy blocks the creation of private endpoints that are in a different sub
 
 **Scenario two**: a rogue administrator requires **write** rights on the service in the customer environment for which a private endpoint should be created.
 
-With this right, a rogue administrator has the possibility to create a private endpoint in an external Azure AD tenant and subscription. This endpoint is linked to a service in the customer’s Azure AD tenant. This scenario is illustrated in Figure 1 as connection B.
+With this right, a rogue administrator has the possibility to create a private endpoint in an external Azure AD tenant and subscription. This endpoint is linked to a service in the customer's Azure AD tenant. This scenario is illustrated in Figure 1 as connection B.
 
 In this scenario, the rogue administrator needs to first set up an external private Azure AD tenant and Azure subscription. Next, they create a private endpoint in their environment by manually specifying the resource ID and group ID of the service in the corporate Azure AD tenant. Finally, they approve the private endpoint on the linked service to allow traffic over the connection across Azure AD tenants.
 
@@ -156,7 +156,7 @@ Use service-specific policies to prevent this scenario across the customer tenan
 
 This policy shows an example for Azure Storage. The same policy definition should be replicated for other services like [Key Vault](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/KeyVault/params.policyDefinition.Deny-KeyVault-PrivateEndpointConnections.json), [Cognitive Services](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/CognitiveServices/params.policyDefinition.Deny-CognitiveServices-PrivateEndpointConnections.json), and [SQL Server](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/Sql/params.policyDefinition.Deny-Sql-PrivateEndpointConnections.json). To further improve manageability, we suggest bundling the service-specific policies into an initiative. The policy denies the approval of private endpoint connections to private endpoints that are hosted outside of the subscription of the respective service. It doesn't deny the rejection or removal of private endpoint connections, which is the behavior customers want. Auto-approval workflows, such as connection C, aren't affected by this policy.
 
-However, the approval of compliant private endpoint connections within the portal is blocked with this method. This block occurs because the portal UI doesn't send the resource ID of the connected private endpoint in their payload. We advise you to use [Azure Resource Manager](https://github.com/Azure/data-management-zone/tree/main/infra/Policies/PolicyDefinitions/Storage/SampleDeployPrivateEndpointConnection), [Azure PowerShell](/powershell/module/az.network/approve-azprivateendpointconnection?view=azps-6.3.0), or [Azure CLI](/cli/azure/network/private-link-service/connection#az_network_private_link_service_connection_update) to approve the private endpoint connection.
+However, the approval of compliant private endpoint connections within the portal is blocked with this method. This block occurs because the portal UI doesn't send the resource ID of the connected private endpoint in their payload. We advise you to use [Azure Resource Manager](https://github.com/Azure/data-management-zone/tree/main/infra/Policies/PolicyDefinitions/Storage/SampleDeployPrivateEndpointConnection), [Azure PowerShell](/powershell/module/az.network/approve-azprivateendpointconnection), or [Azure CLI](/cli/azure/network/private-link-service/connection#az_network_private_link_service_connection_update) to approve the private endpoint connection.
 
 We also recommend assigning the policy to the top-level management group and use exemptions where required.
 
@@ -246,11 +246,11 @@ These policies are now available as built-in.
 
 - Azure Synapse workspaces should allow outbound data traffic only to approved targets.
 
-   Definition ID: /providers/Microsoft.Authorization/policyDefinitions/3484ce98-c0c5-4c83-994b-c5ac24785218
+   Definition ID: `/providers/Microsoft.Authorization/policyDefinitions/3484ce98-c0c5-4c83-994b-c5ac24785218`
 
 - Azure Synapse managed private endpoints should only connect to resources in approved Azure Active Directory tenants.
 
-   Definition ID: “/providers/Microsoft.Authorization/policyDefinitions/3a003702-13d2-4679-941b-937e58c443f0”
+   Definition ID: `/providers/Microsoft.Authorization/policyDefinitions/3a003702-13d2-4679-941b-937e58c443f0`
 
 We recommend that you assign the policy to the top-level management group and use exemptions where required.
 

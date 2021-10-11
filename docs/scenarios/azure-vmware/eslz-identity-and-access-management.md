@@ -49,4 +49,4 @@ After you deploy Azure VMware Solution, the new environment's vCenter contains a
 Learn about network topology and connectivity for an Azure VMware Solution enterprise-scale scenario. Examine design considerations and best practices about networking and connectivity with Microsoft Azure and Azure VMware Solution.
 
 > [!div class="nextstepaction"]
-> [Network topology and connectivity](eslz-network-topology-connectivity.md)
+> [Network topology and connectivity](./eslz-network-topology-connectivity.md)

@@ -7,10 +7,12 @@
       "inexhaustive",
       "migratable",
       "multiedge",
+      "multisignal",
       "offboarding",
       "passwordless",
       "personalizer",
       "preintegration",
+      "prepurchases",
       "reauthenticate",
       "replatform",
       "subresource",
@@ -23,7 +25,8 @@
   "ignoreRegExpList": [
     "\\b(acr|admin|aks|app|arc|azure|cloud|cloudwitness|config|contoso|data|db|demo|dev|devops|dc|east|europe|file|host|linux|migration|moodle|my|name|osticket|pass|petchecker|pets|resourcegroup|server|settings|smarthotel|sql|tfs|tfvars|url|us|user|vagrant|vm|web|west|winsrv){1,3}((eus)?\\d*\\b)",
     "\\bn?(tiny|small|medium|big|var)?(binary|char|int|datetime|money|text)\\b",
-    "/(whitepapers?|azureml)\b"
+    "/(whitepapers?|azureml)\b",
+    "`[a-z\\d]+`"
   ],
   "ignoreWords": [
       "arnaud",
@@ -34,11 +37,14 @@
       "dataslice",
       "dbextents",
       "eslz",
+      "hkey",
       "hostnamectl",
       "lamna",
       "mgmt",
       "phpinfo",
       "phpver",
+      "privatelink",
+      "recordsets",
       "reshifter",
       "scikit",
       "timespan",

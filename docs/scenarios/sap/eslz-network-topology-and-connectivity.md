@@ -81,9 +81,9 @@ Use a traditional Azure network topology based on hub-and-spoke architecture if 
 
 - Local and global VNet peering provide connectivity and are the preferred approaches to ensure connectivity between landing zones for SAP deployments across multiple Azure regions.
 
-## Plan for in- and outbound internet connectivity
+## Plan for inbound and outbound internet connectivity
 
-This section recommends connectivity models for in- and outbound connectivity to and from the public internet. Since Azure-native network security services like Azure Firewall, Azure Web Application Firewall on Application Gateway, and Azure Front Door are fully managed services, you don't incur the operational and management costs associated with infrastructure deployments, which can become complex at scale.
+This section recommends connectivity models for inbound and outbound connectivity to and from the public internet. Since Azure-native network security services like Azure Firewall, Azure Web Application Firewall on Application Gateway, and Azure Front Door are fully managed services, you don't incur the operational and management costs associated with infrastructure deployments, which can become complex at scale.
 
 **Design recommendations for SAP implementation:**
 
