@@ -40,7 +40,7 @@ There are many cost-savings offers the can help reduce your cloud costs:
 
 **Azure Hybrid Benefit**: Reduce the costs of running your workloads in the cloud by using this licensing benefit. You can use your on-premises Software Assurance-enabled Windows Server and SQL Server licenses on Azure. This benefit applies to RedHat and SUSE Linux subscriptions, too. To learn more, see [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/).
 
-**Spot virtual machines**: You can use spot virtual machines with deep discounts for workloads that can be interrupted and don't need to complete within a specific time frame. For example, high-performance computing scenarios, batch processing jobs, visual rendering applications, dev/test environments, including continuous integration and continuous delivery workloads, or large-scale stateless applications. To learn more, see [Spot virtual machines](https://azure.microsoft.com/pricing/spot/).
+**Spot virtual machines**: You can use spot virtual machines with deep discounts for workloads that can be interrupted and don't need to complete within a specific time frame. For example, high-performance computing scenarios, batch processing jobs, visual rendering applications, dev/test environments, including continuous integration and continuous delivery workloads, or large-scale stateless applications. To learn more, see [Spot virtual machines](https://azure.microsoft.com/services/virtual-machines/spot/).
 
 **Reservations**: Receive a discount on your workloads when you reserve your resources in advance. In return, Microsoft passes the savings onto you as discounts of up to 72 percent.1 For more information, see [Azure reservations](https://azure.microsoft.com/reservations/).
 

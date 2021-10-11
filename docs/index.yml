@@ -184,17 +184,17 @@ tools:
 
       # imageSrc should be square in ratio with no whitespace
       imageSrc: ./_images/learn-caf-logo.png
-      url: /learn/modules/microsoft-cloud-adoption-framework-for-azure/index
+      url: /learn/modules/microsoft-cloud-adoption-framework-for-azure/
 
     # Card
     - title: Azure fundamentals
       imageSrc: ./_images/learn-azure-fundamentals-logo.png
-      url: /learn/paths/azure-fundamentals
+      url: /learn/paths/az-900-describe-cloud-concepts/
 
     # Card
     - title: Learn the business value of Azure
       imageSrc: ./_images/learn-business-value-of-azure-logo.png
-      url: /learn/paths/learn-business-value-of-azure
+      url: /learn/paths/learn-business-value-of-azure/
 
 # conceptualContent section (optional)
 
@@ -249,12 +249,12 @@ additionalContent:
         # Card
         - title: FastTrack for Azure
           summary: Get help from Microsoft engineers
-          url: https://azure.microsoft.com/programs/azure-fasttrack
+          url: https://azure.microsoft.com/programs/azure-fasttrack/
 
         # Card
         - title: Azure Migration and Modernization Program
           summary: Get help migrating workloads to the cloud
-          url: https://azure.microsoft.com/migration/migration-program
+          url: https://azure.microsoft.com/migration/migration-modernization-program/
 
         # Card
         - title: Find a partner

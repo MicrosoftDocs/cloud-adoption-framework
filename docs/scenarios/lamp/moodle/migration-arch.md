@@ -59,7 +59,7 @@ To deploy one of the predefined ARM templates:
 
 1. On the **Custom deployment** page in the Azure portal, complete the mandatory **Subscription**, **Resource group**, **Region**, and **SSH Public Key** fields. For information on how to add the SSH key, see [Generating a new SSH key and adding it to the ssh-agent](https://docs.github.com/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
 
-   :::image type="content" source="images/custom-deployment.png" alt-text="Screenshot showing the Azure Custom deployment screen for a Moodle deployment ARM template." border="false":::
+   :::image type="content" source="./images/custom-deployment.png" alt-text="Screenshot showing the Azure Custom deployment screen for a Moodle deployment ARM template." border="false":::
 
 1. Select **Review + create**.
 
