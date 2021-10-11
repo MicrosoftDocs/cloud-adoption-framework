@@ -3,7 +3,7 @@ title: Enterprise-scale security governance and compliance
 description: Learn about enterprise-scale security governance and compliance in the Microsoft Cloud Adoption Framework for Azure.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 08/23/2021
+ms.date: 09/15/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -191,7 +191,11 @@ The Azure Security Benchmark documentation specifies security controls and servi
 
 ## Service enablement framework
 
-As business units request to deploy workloads to Azure, you need more visibility into a workload to determine how to achieve appropriate levels of governance, security, and compliance. When a new service is required, you need to allow it. The following table provides a framework to assess enterprise security readiness of Azure services:
+As business units request to deploy workloads to Azure, you need more visibility into a workload to determine how to achieve appropriate levels of governance, security, and compliance.
+
+When a new service is required, you need to allow it and create a process for onboarding services securely to Azure. The onboarding process should include reviewing the configuration options to determine what logging and monitoring needs to be established, and how to properly harden a resource before it can be used by the workload/application team.
+
+The following table provides a framework to assess enterprise security readiness of Azure services:
 
 | Assessment | Category | Criteria |
 |--|--|--|
@@ -254,3 +258,7 @@ As business units request to deploy workloads to Azure, you need more visibility
 |  |  | What is the deployment scope of the service? Is it a regional or global service? |
 |  | Service-level agreements (SLAs) | What is the SLA for service availability? |
 |  |  | If applicable, what is the SLA for performance? |
+
+## Suggested actions
+
+Involve the security team in the development process to apply a [SecDevOps](https://www.microsoft.com/en-us/securityengineering/devsecops) approach.

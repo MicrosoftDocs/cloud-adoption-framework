@@ -7,6 +7,7 @@ ms.date: 07/30/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Use Azure Databricks within enterprise-scale for analytics and AI in Azure

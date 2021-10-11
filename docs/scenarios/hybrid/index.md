@@ -7,7 +7,7 @@ ms.date: 01/11/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
-ms.custom: e2e-hybrid
+ms.custom: e2e-hybrid, think-tank
 ---
 
 # Introduction to hybrid and multicloud

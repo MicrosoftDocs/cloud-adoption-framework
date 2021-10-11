@@ -7,6 +7,7 @@ ms.date: 06/21/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Review your environment for Azure landing zones
@@ -54,4 +55,3 @@ Enterprise-scale for analytics and AI requires an understanding of landing zones
 ## Next steps
 
 [Introduction to enterprise-scale for analytics and AI in Azure](./enterprise-scale-landing-zone.md)
-

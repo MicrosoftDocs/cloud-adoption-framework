@@ -7,7 +7,7 @@ ms.date: 08/06/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: think-tank, e2e-data
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Best practices for data science projects with enterprise-scale for analytics and AI in Azure

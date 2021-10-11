@@ -38,13 +38,13 @@ MLOps with Azure helps you:
 - Simplify model packaging, validation, and deployment for quality control and a/B testing.
 - Explain and observe model behavior, and automate the retraining process.
 
-MLOps improves the quality and consistency of your machine learning solutions. To learn more about how to use Azure Machine Learning to manage the lifecycle of your models, see [MLOps: model management, deployment, and monitoring with Azure Machine Learning](/azure/machine-learning/concept-model-management-and-deployment).
+MLOps improves the quality and consistency of your machine learning solutions. To learn more about how to use Azure Machine Learning to manage the lifecycle of your models, see [MLOps: Model management, deployment, and monitoring with Azure Machine Learning](/azure/machine-learning/concept-model-management-and-deployment).
 
 ## Next steps
 
 Learn more by reading and exploring the following resources:
 
-- [MLOps: model management, deployment, and monitoring with Azure Machine Learning](/azure/machine-learning/concept-model-management-and-deployment)
+- [MLOps: Model management, deployment, and monitoring with Azure Machine Learning](/azure/machine-learning/concept-model-management-and-deployment)
 - How and where to [deploy models with Azure Machine Learning](/azure/machine-learning/how-to-deploy-and-where)
 - Tutorial: [deploy an image classification model in Azure Container Instances](/azure/machine-learning/tutorial-deploy-models-with-aml)
 - [End-to-end MLOps examples repo](https://github.com/microsoft/MLOps)
