@@ -40,7 +40,7 @@ items:
         - name: Connect to environments privately
           href: ./eslz-connect-to-environments-privately.md
         - name: Cross tenant private endpoint provisioning
-          href: ./eslz-limiting-cross-tenant-private-endpoint-provisioning.md    
+          href: ../ready/enterprise-scale/network-topology-and-connectivity.md
       - name: Resource organization
         href: ./eslz-resource-organization.md
       - name: Governance disciplines
