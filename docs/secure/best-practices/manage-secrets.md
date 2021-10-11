@@ -2,7 +2,7 @@
 title: Manage secrets
 description: Learn about best practices for managing secrets securely.
 author: petpipe-msft
-ms.author: pepiper
+ms.author: abuck
 ms.date: 04/04/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
