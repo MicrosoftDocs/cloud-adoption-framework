@@ -24,7 +24,7 @@ This scenario focuses on supporting two targeted outcomes:
 
 This scenario also provides a framework built on the following principles to address challenges with complex data architectures that do not scale to the needs of  enterprises:
 
-|  |  |
+| Principle | Description |
 |---------|---------|
 |**Allow**     |<ul><li>Scale without increased complexity</li><li>Separation of concerns to facilitate governance</li><li>Self-serve data infrastructure</li></ul>|
 |**Follow**     |<ul><li>Best practices for Well-Architected cloud services</li></ul>|
