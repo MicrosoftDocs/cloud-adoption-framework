@@ -24,6 +24,8 @@ items:
       href: ready.md
     - name: Design areas 
       items:
+      - name: Identity and access management
+        href: eslz-identity-and-access-management.md
       - name: Governance disciplines 
         href: eslz-security-governance-and-compliance.md  
     - name: Implementation options
