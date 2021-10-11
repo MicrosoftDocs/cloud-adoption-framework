@@ -35,7 +35,7 @@ Smaller cloud estates might not benefit from the added structure and capabilitie
 
 *Figure 1: An example of a hub-and-spoke network topology.*
 
-As shown in the diagram, Azure supports two types of hub-and-spoke design. It supports communication, shared resources, and centralized security policy (labeled as `VNet hub` in the diagram), or a design based on Azure Virtual WAN (labeled as `Virtual WAN` in the diagram) for large-scale branch-to-branch and branch-to-Azure communications.
+As shown in the diagram, Azure supports two types of hub-and-spoke design. The first type supports communication, shared resources, and centralized security policy. This type is labeled as *VNet hub* in the diagram. The second type is based on Azure Virtual WAN, which is labeled as *Virtual WAN* in the diagram. This type is for large-scale branch-to-branch and branch-to-Azure communications.
 
 A hub is a central network zone that controls and inspects ingress or egress traffic between zones: internet, on-premises, and spokes. The hub-and-spoke topology gives your IT department an effective way to enforce security policies in a central location. It also reduces the potential for misconfiguration and exposure.
 
@@ -67,7 +67,7 @@ When limits might be an issue, you can scale up the architecture by extending th
 - Virtual network peering
 - Azure ExpressRoute
 - Azure Virtual WAN
-- Site-to-site VPN.
+- Site-to-site VPN
 
 ![Diagram that shows a cluster of hubs and spokes.](../../_images/azure-best-practices/network-hub-spokes-cluster.png)
 
@@ -75,9 +75,9 @@ When limits might be an issue, you can scale up the architecture by extending th
 
 The introduction of multiple hubs increases the cost and management overhead of the system. This increase is only justified by:
 
-- Scalability.
-- System limits.
-- Redundancy and regional replication for user performance or disaster recovery.
+- Scalability
+- System limits
+- Redundancy and regional replication for user performance or disaster recovery
 
 In scenarios that require multiple hubs, all of the hubs should strive to offer the same set of services for operational ease.
 
@@ -93,7 +93,7 @@ A typical example of this scenario is the case where application processing serv
 
 *Figure 3: An example of spokes connecting to each other and a hub.*
 
-Spokes can also be interconnected to a spoke that acts as a hub. This approach creates a two-level hierarchy: the spoke in the higher level (level 0) becomes the hub of lower spokes (level 1) of the hierarchy. The spokes are required to forward the traffic to the central hub. This requirement is so that the traffic can transit to its destination in either the on-premises network or the public internet. An architecture with two levels of hubs introduces complex routing that removes the benefits of a simple hub-and-spoke relationship.
+Spokes can also be interconnected to a spoke that acts as a hub. This approach creates a two-level hierarchy: the spoke in the higher level, level 0, becomes the hub of lower spokes, or level 1, of the hierarchy. The spokes are required to forward the traffic to the central hub. This requirement is so that the traffic can transit to its destination in either the on-premises network or the public internet. An architecture with two levels of hubs introduces complex routing that removes the benefits of a simple hub-and-spoke relationship.
 
 ## Next steps
 
