@@ -29,7 +29,7 @@ The governance design area focusses on the considerations and recommendations fo
 -	Azure Pricing Calculator can be used to estimate the expected monthly costs for using any combination of Azure products.
 -	Azure Hybrid Benefit helps to significantly reduce the costs of running your workloads in the cloud. It works by letting you use your on-premises Software Assurance-enabled Windows Server and SQL Server licenses on Azure. This benefit applies to RedHat and SUSE Linux subscriptions, too.
 - Azure Reservations helps you to save money by committing to one-year or three-year plans for multiple products. Committing allows you to get a discount on the resources you use. Reservations can significantly reduce your resource costs by up to 72% from pay-as-you-go prices. 
-- Azure Policies can be used to whitelist regions, resource types and resource SKUs.
+- Azure Policies can be used to allow specific regions, resource types and resource SKUs.
 -	Azure Storage lifecycle management offers a rule-based policy that you can use to transition blob data to the appropriate and cheaper access tiers or to expire data at the end of the data lifecycle.
 -	Azure Dev/Test subscriptions gives you access to select Azure services for nonproduction workloads at discounted pricing.
 -	Use autoscaling and save costs by dynamically allocating and de-allocating resources to match your performance needs.
@@ -74,7 +74,7 @@ Azure Policy is essential to ensuring security and compliance within enterprise 
 
 - Use tools such as Azure Resource Manager (ARM) templates to ensure consistent resource baseline configurations (sometimes referred to as 'T-shirt sizes')
 - Use tools such as resource groups to act as containers for resources with a common lifecycle as well as shared management constraints such as policy or Azure role-based access control (Azure RBAC) requirements 
-- Refer to the guidance in the [resource organization - subscriptions](./resource-org-subscriptions) design area to explore how subscription quotas can be used to set cost controls
+- Refer to the guidance in the [resource organization - subscriptions](./resource-org-subscriptions.md) design area to explore how subscription quotas can be used to set cost controls
 
 ### Azure Policy - Design recommendations
 
