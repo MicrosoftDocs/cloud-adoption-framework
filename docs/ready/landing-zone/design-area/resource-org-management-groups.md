@@ -13,7 +13,8 @@ ms.custom: internal
 
 ## Management groups overview
 
-
+Management groups are a key tool to help organizations structure their cloud environments for organization and governance at scale. 
+Considering how to use management groups as part of the environment design is an important foundational step. Use the following guidance to help inform cloud architecture decisions. 
 
 ##  Management group  design considerations
 
