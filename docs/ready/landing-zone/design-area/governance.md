@@ -25,7 +25,19 @@ The governance design area focusses on the considerations and recommendations fo
 ### Cost management considerations
 
 - How is the organizations cost and recharging model structured? What are the key data points required in order to accurately reflect spend on cloud services?
-- Tagging resources can make the process of tracking and allocating cloud spend easier, find the structure of tags that best fits your cost and recharging model
+- Tagging resources can make the process of tracking and allocating cloud spend easier, find the structure of tags that best fits your cost and recharging model.
+-	Azure Pricing Calculator can be used to estimate the expected monthly costs for using any combination of Azure products.
+-	Azure Hybrid Benefit helps to significantly reduce the costs of running your workloads in the cloud. It works by letting you use your on-premises Software Assurance-enabled Windows Server and SQL Server licenses on Azure. This benefit applies to RedHat and SUSE Linux subscriptions, too.
+- Azure Reservations helps you to save money by committing to one-year or three-year plans for multiple products. Committing allows you to get a discount on the resources you use. Reservations can significantly reduce your resource costs by up to 72% from pay-as-you-go prices. 
+- Azure Policies can be used to whitelist regions, resource types and resource SKUs.
+-	Azure Storage lifecycle management offers a rule-based policy that you can use to transition blob data to the appropriate and cheaper access tiers or to expire data at the end of the data lifecycle.
+-	Azure Dev/Test subscriptions gives you access to select Azure services for nonproduction workloads at discounted pricing.
+-	Use autoscaling and save costs by dynamically allocating and de-allocating resources to match your performance needs.
+-	Using Azure Spot Virtual Machines allows you to take advantage of our unused capacity at a significant cost savings. Azure Spot Virtual Machines are great for workloads that can handle interruptions like batch processing jobs, dev/test environments, large compute workloads, and more.
+-	Some Azure services are free for 12 month and other services are always free. Selecting the right Azure services helps you to reduce costs.
+- Azure offers many ways to host your code. Operate more cost efficiently by selecting the right compute service for your application.
+
+
 
 Add text.....
 

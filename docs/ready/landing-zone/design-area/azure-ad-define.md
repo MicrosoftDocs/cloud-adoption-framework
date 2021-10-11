@@ -35,7 +35,7 @@ Ask basic security questions during the Azure AD design phase, such as how your 
 
 - Use [Azure AD Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) to manage identities and access.
 
-- Avoid creating multiple Azure AD tenants. For further information, see [Testing approach for enterprise scale](../../enterprise-scale/testing-approach.md) and [Cloud Adoption Framework Azure best practices guidance to standardize on a single directory and identity](../../secure/security-top-10.md#9-architecture-standardize-on-a-single-directory-and-identity).
+- Avoid creating multiple Azure AD tenants. For further information, see [Testing approach for enterprise scale](../../enterprise-scale/testing-approach.md) and [Cloud Adoption Framework Azure best practices guidance to standardize on a single directory and identity](/secure/security-top-10.md#9-architecture-standardize-on-a-single-directory-and-identity).
 
 - Use [Azure Lighthouse](/azure/lighthouse/overview) to grant third parties/partners access to Azure resources in customer Azure AD tenants and centralized access to Azure resources in multitenant Azure AD architectures.
 
