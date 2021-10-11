@@ -26,9 +26,9 @@ The network template deployment creates the following resources:
 
 - [Subnet](/azure/virtual-network/virtual-network-manage-subnet): A smaller network inside a large network. Subnets are also known as subnetworks. By default, an IP address in a subnet can communicate with any other IP address inside the virtual network.
 
-- [Public IP address](/azure/virtual-network/ip-services/public-ip-addresses#:~:text=public%20ip%20addresses%20enable%20azure,IP%20assigned%20can%20communicate%20outbound#:~:text=public%20ip%20addresses%20enable%20azure,IP%20assigned%20can%20communicate%20outbound): An IP address that an Azure resource uses to communicate with the internet. The address is dedicated to the Azure resource.
+- [Public IP address](/azure/virtual-network/ip-services/public-ip-addresses): An IP address that an Azure resource uses to communicate with the internet. The address is dedicated to the Azure resource.
 
-- [Azure Load Balancer](/azure/virtual-machines/windows/tutorial-load-balancer#:~:text=an%20azure%20load%20balancer%20is,traffic%20to%20an%20operational%20vm): A load balancer that efficiently distributes network or application traffic across multiple servers in a server farm. Load balancer ensures high availability and reliability by only sending requests to servers that are online.
+- [Azure Load Balancer](/azure/virtual-machines/windows/tutorial-load-balancer): A load balancer that efficiently distributes network or application traffic across multiple servers in a server farm. Load balancer ensures high availability and reliability by only sending requests to servers that are online.
 
 - [Azure Application Gateway](/azure/application-gateway/overview): An alternative to Load Balancer. All four predefined ARM templates deploy Load Balancer. If you use a fully configurable deployment instead of an ARM template, you can choose Application Gateway instead of Load Balancer. Application Gateway is a web-traffic load balancer that you can use to manage traffic to your web applications. Application Gateway can make routing decisions based on the additional attributes of an HTTP request, such as a URI path or host header.
 
