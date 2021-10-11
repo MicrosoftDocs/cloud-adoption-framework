@@ -139,7 +139,7 @@ items:
         - name: HA setup with STONITH
           href: /azure/virtual-machines/workloads/sap/ha-setup-with-stonith?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
         - name: OS backup for Type II SKUs
-          href: /azure/virtual-machines/workloads/sap/os-backup-type-ii-skus?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+          href: /azure/virtual-machines/workloads/sap/large-instance-os-backup?toc=%2Fazure%2Fcloud-adoption-framework%2Fscenarios%2Fsap%2Ftoc.json&bc=%2Fazure%2Fcloud-adoption-framework%2F_bread%2Ftoc.json
         - name: Enable kdump for HANA Large Instances
           href: /azure/virtual-machines/workloads/sap/hana-large-instance-enable-kdump?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
         - name: OS upgrade for HANA Large Instances
@@ -368,15 +368,15 @@ items:
     - name: Azure services integration into SAP
       items:
       - name: Use SAP HANA in Power BI Desktop
-        href: /power-bi/desktop-sap-hana
+        href: /power-bi/connect-data/desktop-sap-hana
       - name: DirectQuery for SAP HANA
-        href: /power-bi/desktop-directquery-sap-hana
+        href: /power-bi/connect-data/desktop-directquery-sap-hana
       - name: Use the SAP BW connector in Power BI Desktop
-        href: /power-bi/desktop-sap-bw-connector
+        href: /power-bi/connect-data/desktop-sap-bw-connector
     - name: Azure Monitor for SAP Solutions
       items:
       - name: Azure Monitor for SAP Solutions overview
-        href: /azure/virtual-machines/workloads/sap/azure-monitor-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        href: /azure/virtual-machines/workloads/sap/monitor-sap-on-azure?toc=%2Fazure%2Fcloud-adoption-framework%2Fscenarios%2Fsap%2Ftoc.json&bc=%2Fazure%2Fcloud-adoption-framework%2F_bread%2Ftoc.json
       - name: Azure Monitor for SAP Solutions providers
         href: /azure/virtual-machines/workloads/sap/azure-monitor-providers?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
       - name: Configure Azure Monitor for SAP Solutions - Azure portal
@@ -388,7 +388,7 @@ items:
     - name: Reference
       items:
       - name: Azure CLI
-        href: /cli/azure/ext/sap-hana/hanainstance
+        href: /cli/azure/hanainstance
       - name: Azure PowerShell
         href: /powershell/module/az.hanaonazure/#sap-hana-on-azure
   - name: Build skills on Learn

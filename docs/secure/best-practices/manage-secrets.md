@@ -128,7 +128,7 @@ The other type of keys are used for various Azure services for connectivity or t
 
 There are limitations or exceptions for the keys of various Azure services. Understanding and aligning with your business requirements will validate the best choice or practice below. For example, Azure Storage has support for shared access policies, shared access signatures, Azure AD, and so on.
 
-Understanding each of these [options](/azure/storage/common/storage-auth?toc=/azure/storage/blobs/toc.json) and documenting them to your business requirements will guide you through this decision process.
+Understanding each of these [options](/azure/storage/common/authorize-data-access?toc=%2Fazure%2Fstorage%2Fblobs%2Ftoc.json) and documenting them to your business requirements will guide you through this decision process.
 
 Additionally, many Azure services support managed identities for authentication.  [What are managed identities?](/azure/active-directory/managed-identities-azure-resources/overview)
 

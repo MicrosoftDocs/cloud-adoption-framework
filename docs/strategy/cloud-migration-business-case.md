@@ -53,7 +53,7 @@ Cloud billing models and offers differ from on-premises however, they can create
 
 **Azure Hybrid Benefit:** Reduce the costs of running your workloads in the cloud by using this licensing benefit. You can use your on-premises Software Assurance-enabled Windows Server and SQL Server licenses on Azure. This benefit applies to RedHat and SUSE Linux subscriptions, too. To learn more, see [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/).
 
-**Spot virtual machines:** You can use spot virtual machines with deep discounts for workloads that can be interrupted and don't need to complete within a specific time frame. For example, high-performance computing scenarios, batch processing jobs, visual rendering applications, dev/test environments including continuous integration and continuous delivery workloads, or large-scale stateless applications. To learn more, see [Spot virtual machines](https://azure.microsoft.com/pricing/spot/).
+**Spot virtual machines:** You can use spot virtual machines with deep discounts for workloads that can be interrupted and don't need to complete within a specific time frame. For example, high-performance computing scenarios, batch processing jobs, visual rendering applications, dev/test environments including continuous integration and continuous delivery workloads, or large-scale stateless applications. To learn more, see [Spot virtual machines](https://azure.microsoft.com/services/virtual-machines/spot/).
 
 **Reservations:** Receive a discount on your workloads when you reserve your resources in advance. In return, Microsoft passes the savings onto you as discounts of up to 72 percent. For more information, see [Azure reservations](https://azure.microsoft.com/reservations/).
 
@@ -85,7 +85,7 @@ The Calculator creates a match from Azure Services to create a high-level initia
 
 **Solution assessments:** Get assistance from a Microsoft solutions assessment expert or qualified partner as part of a [Solution Assessment engagement](https://www.microsoft.com/solutionassessments/solutionassessments.aspx).
 
-**Azure Migration and Modernization Program:** Join the  [Azure Migration and Modernization Program](https://azure.microsoft.com/migration/migration-program/) to get the guidance and expert help you need at every stage of the cloud migration journey. Migrate infrastructure, databases, and apps—and move forward with confidence.
+**Azure Migration and Modernization Program:** Join the  [Azure Migration and Modernization Program](https://azure.microsoft.com/migration/migration-modernization-program/) to get the guidance and expert help you need at every stage of the cloud migration journey. Migrate infrastructure, databases, and apps—and move forward with confidence.
 
 ### Learn about Azure with Microsoft Learn
 

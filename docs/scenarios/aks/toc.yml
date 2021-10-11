@@ -155,7 +155,7 @@ items:
       - name: AKS engine
         href: https://github.com/Azure/aks-engine/blob/master/docs/README.md
       - name: Secure pods
-        href: /azure/aks/use-pod-security-on-azure-policy?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
+        href: /azure/aks/use-azure-policy?toc=%2Fazure%2Fcloud-adoption-framework%2Fscenarios%2Faks%2Ftoc.json&bc=%2Fazure%2Fcloud-adoption-framework%2F_bread%2Ftoc.json
       - name: Secure traffic between pods
         href: /azure/aks/use-network-policies?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
       - name: Authorized IP access for AKS API
@@ -176,21 +176,21 @@ items:
     - name: Inventory and visibility
       items:
       - name: Overview
-        href: /azure/azure-monitor/insights/container-insights-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
+        href: /azure/azure-monitor/containers/container-insights-overview?toc=%2Fazure%2Fcloud-adoption-framework%2Fscenarios%2Faks%2Ftoc.json&bc=%2Fazure%2Fcloud-adoption-framework%2F_bread%2Ftoc.json
       - name: Enable monitoring overview
-        href: /azure/azure-monitor/insights/container-insights-onboard?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
+        href: /azure/azure-monitor/containers/container-insights-onboard?toc=%2Fazure%2Fcloud-adoption-framework%2Fscenarios%2Faks%2Ftoc.json&bc=%2Fazure%2Fcloud-adoption-framework%2F_bread%2Ftoc.json
       - name: Enable for new AKS cluster
-        href: /azure/azure-monitor/insights/container-insights-enable-new-cluster?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
+        href: /azure/azure-monitor/containers/container-insights-enable-new-cluster?toc=%2Fazure%2Fcloud-adoption-framework%2Fscenarios%2Faks%2Ftoc.json&bc=%2Fazure%2Fcloud-adoption-framework%2F_bread%2Ftoc.json
       - name: Enable for existing AKS cluster
-        href: /azure/azure-monitor/insights/container-insights-enable-existing-clusters?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
+        href: /azure/azure-monitor/containers/container-insights-enable-existing-clusters?toc=%2Fazure%2Fcloud-adoption-framework%2Fscenarios%2Faks%2Ftoc.json&bc=%2Fazure%2Fcloud-adoption-framework%2F_bread%2Ftoc.json
       - name: Enable for Azure Arc enabled cluster
-        href: /azure/azure-monitor/insights/container-insights-enable-arc-enabled-clusters?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
+        href: /azure/azure-monitor/containers/container-insights-enable-arc-enabled-clusters?toc=%2Fazure%2Fcloud-adoption-framework%2Fscenarios%2Faks%2Ftoc.json&bc=%2Fazure%2Fcloud-adoption-framework%2F_bread%2Ftoc.json
       - name: Enable for hybrid cluster
-        href: /azure/azure-monitor/insights/container-insights-hybrid-setup?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
+        href: /azure/azure-monitor/containers/container-insights-hybrid-setup?toc=%2Fazure%2Fcloud-adoption-framework%2Fscenarios%2Faks%2Ftoc.json&bc=%2Fazure%2Fcloud-adoption-framework%2F_bread%2Ftoc.json
       - name: Enable for Azure Red Hat OpenShift v3
-        href: /azure/azure-monitor/insights/container-insights-azure-redhat-setup?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
+        href: /azure/azure-monitor/containers/container-insights-azure-redhat-setup?toc=%2Fazure%2Fcloud-adoption-framework%2Fscenarios%2Faks%2Ftoc.json&bc=%2Fazure%2Fcloud-adoption-framework%2F_bread%2Ftoc.json
       - name: Enable for Azure Red Hat OpenShift v4
-        href: /azure/azure-monitor/insights/container-insights-azure-redhat4-setup?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
+        href: /azure/azure-monitor/containers/container-insights-azure-redhat4-setup?toc=%2Fazure%2Fcloud-adoption-framework%2Fscenarios%2Faks%2Ftoc.json&bc=%2Fazure%2Fcloud-adoption-framework%2F_bread%2Ftoc.json
 
     - name: Operational compliance
       items:
@@ -254,13 +254,13 @@ items:
     - name: Develop with Kubernetes
       items:
       - name: Overview
-        href: /visualstudio/containers/overview-local-process-kubernetes?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
+        href: /visualstudio/bridge/overview-bridge-to-kubernetes?toc=%2Fazure%2Fcloud-adoption-framework%2Fscenarios%2Faks%2Ftoc.json&bc=%2Fazure%2Fcloud-adoption-framework%2F_bread%2Ftoc.json
       - name: Bridge to Kubernetes
-        href: /visualstudio/containers/bridge-to-kubernetes?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
+        href: /visualstudio/bridge/bridge-to-kubernetes-vs?toc=%2Fazure%2Fcloud-adoption-framework%2Fscenarios%2Faks%2Ftoc.json&bc=%2Fazure%2Fcloud-adoption-framework%2F_bread%2Ftoc.json
       - name: How Bridge to Kubernetes works
-        href: /visualstudio/containers/overview-bridge-to-kubernetes?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
+        href: /visualstudio/bridge/overview-bridge-to-kubernetes?toc=%2Fazure%2Fcloud-adoption-framework%2Fscenarios%2Faks%2Ftoc.json&bc=%2Fazure%2Fcloud-adoption-framework%2F_bread%2Ftoc.json
       - name: Configure Bridge to Kubernetes
-        href: /visualstudio/containers/configure-bridge-to-kubernetes?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
+        href: /visualstudio/bridge/configure-bridge-to-kubernetes?toc=%2Fazure%2Fcloud-adoption-framework%2Fscenarios%2Faks%2Ftoc.json&bc=%2Fazure%2Fcloud-adoption-framework%2F_bread%2Ftoc.json
     - name: App Service
       items:
       - name: Overview
@@ -268,7 +268,7 @@ items:
       - name: ASP.NET Core
         href: /azure/app-service/quickstart-dotnetcore?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
       - name: ASP.NET
-        href: /azure/app-service/quickstart-dotnet-framework?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
+        href: /azure/app-service/quickstart-dotnetcore?toc=%2Fazure%2Fcloud-adoption-framework%2Fscenarios%2Faks%2Ftoc.json&bc=%2Fazure%2Fcloud-adoption-framework%2F_bread%2Ftoc.json
       - name: Node.js
         href: /azure/app-service/quickstart-nodejs?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/aks/toc.json
       - name: PHP

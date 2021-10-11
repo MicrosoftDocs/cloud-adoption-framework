@@ -57,7 +57,7 @@ These customer stories demonstrate how prioritizing sustainability and environme
 
 An intentional approach can help organizations to navigate their sustainability journey. These four steps can influence outcomes for your company:
 
-**Step 1:** Record and understand your company's carbon emissions. Start by categorizing your emissions, which will help you to list of areas on which to focus. The [Microsoft sustainability calculator](https://www.microsoft.com/sustainability/sustainability-guide/sustainability-calculator) can assist you with this task.
+**Step 1:** Record and understand your company's carbon emissions. Start by categorizing your emissions, which will help you to list of areas on which to focus. The [Microsoft sustainability calculator](https://www.microsoft.com/sustainability/emissions-impact-dashboard) can assist you with this task.
 
 **Step 2:** Evaluate whether your vendors, partners, and providers are taking steps to reduce their emissions and if these steps align with yours.
 
