@@ -1,7 +1,7 @@
 ---
 title: Identity and access management considerations for Azure Arc-enabled servers
 description: Describes how to improve identity and access management for the Azure Arc-enabled servers.
-author: Venkata Chintala
+author: chintalavr
 ms.author: vchintala
 ms.date: 09/16/2021
 ms.topic: conceptual
