@@ -13,7 +13,8 @@ ms.custom: think-tank
 # Migrate open-source databases to Azure
 
 This article demonstrates how the fictional company Contoso assessed, planned, and migrated its various on-premises open-source databases to Azure.
-For step-by-step guidance, you can also watch the [Migrate and Modernize Linux VMs and Databases into Azure](https://www.youtube.com/watch?v=1iskhkEtFNk&list=PLXtHYVsvn_b_lwPbu342oreT454QjrOLE) video. 
+
+For step-by-step guidance, you can also watch the [Migrate and Modernize Linux VMs and Databases into Azure](https://techcommunity.microsoft.com/t5/microsoft-mechanics-blog/migrate-amp-modernize-linux-vms-and-databases-into-azure/ba-p/2466366) video.
 
 As Contoso considers migrating to Azure, the company needs a technical and financial assessment to determine whether its on-premises workloads are good candidates for cloud migration. In particular, the Contoso team wants to assess machine and database compatibility for migration. Additionally, it wants to estimate capacity and costs for running Contoso's resources in Azure.
 
@@ -106,7 +107,7 @@ As the databases were inventoried, each type of database was reviewed to determi
 
 | Database type | Details | Target | Migration guide |
 | --- | --- | --- | --- |
-| **MySQL** | All supported versions upgrade to a supported version before migration | Azure Database for MySQL (PaaS) | [Guide](/azure/dms/tutorial-mysql-azure-mysql-online)
+| **MySQL** | All supported versions upgrade to a supported version before migration | Azure Database for MySQL (PaaS) | [Guide](/azure/dms/tutorial-mysql-azure-mysql-offline-portal)
 | **PostgreSQL** | All supported versions upgrade to a supported version before migration | Azure Database for PostgreSQL (PaaS) | [Guide](/azure/dms/tutorial-postgresql-azure-postgresql-online) |
 | **MariaDB** | All supported versions upgrade to a supported version before migration | Azure Database for MariaDB (PaaS) | [Guide](/azure/mariadb/howto-migrate-dump-restore) |
 

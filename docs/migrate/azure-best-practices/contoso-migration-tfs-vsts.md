@@ -125,7 +125,7 @@ They upgrade as follows:
      ![Screenshot of the **Product backlog** pane for verifying the Team Foundation Server installation.](./media/contoso-migration-tfs-vsts/upgrade5.png)
 
 > [!NOTE]
-> Some Team Foundation Server upgrades need to run the Configure Features Wizard after the upgrade finishes. [Learn more](/previous-versions/azure/devops/reference/upgrade/configure-features-after-upgrade?view=azure-devops&preserve-view=true&viewFallbackFrom=vsts).
+> Some Team Foundation Server upgrades need to run the Configure Features Wizard after the upgrade finishes. For more information, see [Configure features after an upgrade](/previous-versions/azure/devops/reference/upgrade/configure-features-after-upgrade?view=azure-devops&preserve-view=true&viewFallbackFrom=vsts).
 
 **Need more help?**
 

@@ -25,7 +25,7 @@ ms.custom: think-tank, e2e-azure-vmware
 
 - VMware vSAN storage policies on Azure VMware Solution are implemented with storage availability in mind. When the cluster has between three and five hosts, the number of host failures to tolerate without loss of data equals one. When the cluster has between 6 and 16 hosts, the number of host failures to tolerate before data loss can occur equals two. VMware vSAN storage policies can be applied on a per-VM basis. While these policies are the default, you can amend the policy used for VMware VMs to suit custom requirements. For more information, see [Azure VMware Solution storage concepts](/azure/azure-vmware/concepts-storage).
 - VMware High Availability (HA) is enabled by default on Azure VMware Solution. The HA admittance policy ensures a reservation of the compute and memory capacity of a single node. This reservation ensures sufficient reserve capacity to restart workloads in another node in an Azure VMware Solution cluster.
-- Currently, MABS doesn't support restoring backups to a secondary Azure VMware Solution private cloud. See the [disaster recovery section](eslz-business-continuity-and-disaster-recovery.md#disaster-recovery-design-considerations) when cross Azure VMware Solution recovery is required.
+- Currently, MABS doesn't support restoring backups to a secondary Azure VMware Solution private cloud. See the [disaster recovery section](./eslz-business-continuity-and-disaster-recovery.md#disaster-recovery-design-considerations) when cross Azure VMware Solution recovery is required.
 
 ## Business continuity design recommendations
 
@@ -109,4 +109,4 @@ ms.custom: think-tank, e2e-azure-vmware
 Learn about considerations and recommendations for the initial deployment of Azure VMware Solution and guidance for operational automation.
 
 > [!div class="nextstepaction"]
-> [Platform automation for Azure VMware Solution](eslz-platform-automation-and-devops.md)
+> [Platform automation for Azure VMware Solution](./eslz-platform-automation-and-devops.md)

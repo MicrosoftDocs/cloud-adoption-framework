@@ -24,7 +24,7 @@ This scenario focuses on supporting two targeted outcomes:
 
 This scenario is designed to guide the end-to-end customer journey throughout the cloud adoption lifecycle. Delivery of the full journey requires the following key components, or guidance sets:
 
-- [Cloud Adoption Framework](/azure/cloud-adoption-framework): Managing and governing data is a lifecycle process that starts by building on your existing cloud strategy and carries all the way through to ongoing operations management. The Cloud Adoption Framework will help to guide the full lifecycle for your data estate.
+- [Cloud Adoption Framework](/azure/cloud-adoption-framework/): Managing and governing data is a lifecycle process that starts by building on your existing cloud strategy and carries all the way through to ongoing operations management. The Cloud Adoption Framework will help to guide the full lifecycle for your data estate.
 
 - [Azure Well-Architected Framework](./well-architected-framework.md): Workload architecture and operations have a direct impact on data. Understand how your architecture can improve management and governance of the data used by your workload.
 

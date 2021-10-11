@@ -56,7 +56,7 @@ Take advantage of price benefits for Windows and SQL Server with:
 
 ### Modernize applications
 
-Modernize applications running on VMware overtime through integration to [Azure native management, security, and services](..\azure-vmware\govern.md).
+Modernize applications running on VMware overtime through integration to [Azure native management, security, and services](../azure-vmware/govern.md).
 
 - **Deploy unified hybrid management and operational controls** using [Azure Arc-enabled servers](/azure/azure-arc/servers/overview) across Azure, VMware, and other cloud infrastructures.
 - **Modernize applications** with the ability to connect them to Azure services such as Azure AD, SQL Managed Instance, and analytics.

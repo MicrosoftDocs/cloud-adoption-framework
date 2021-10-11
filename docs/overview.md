@@ -64,7 +64,7 @@ Each role uses its own vocabulary, and each has different goals and key performa
 
 Enter the *cloud architect*. The cloud architect serves as the thought leader and facilitator to bring these audiences together. We've designed this collection of guides to make it easier for cloud architects to have the right conversations with the right audiences and drive decision-making. Business transformation that's empowered by the cloud depends on the cloud architect role to help guide decisions throughout the business and IT.
 
-Each section of the Cloud Adoption Framework represents a different form of the cloud architect role. These sections also create opportunities to share cloud architecture responsibilities across a team of cloud architects. For example, the governance section is designed for cloud architects who have a passion for mitigating technical risks. Some cloud providers refer to these specialists as cloud custodians. We prefer the term *cloud guardian* or, collectively, the *cloud governance team*.
+Each section of the Cloud Adoption Framework represents a different form of the cloud architect role. These sections also create opportunities to share cloud architecture responsibilities across a team of cloud architects. For example, the governance section is designed for cloud architects who have a passion for mitigating technical risks. Some cloud providers refer to these specialists as cloud custodians. We prefer the term *cloud guardian* or collectively, the *cloud governance team*.
 
 ## How to use the Microsoft Cloud Adoption Framework for Azure
 

@@ -56,7 +56,7 @@ To extend the previous article, [Limit cross-tenant Private Endpoint connections
 
 ## Plan for application delivery
 
-[Plan for application delivery](../azure-best-practices/plan-for-app-delivery.md) explores key recommendations to deliver internal- and external-facing applications in a secure, scalable, and highly available way.
+[Plan for application delivery](../azure-best-practices/plan-for-app-delivery.md) explores key recommendations to deliver both internal and externally facing applications in a secure, scalable, and highly available way.
 
 ## Plan for landing zone network segmentation
 

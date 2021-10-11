@@ -20,7 +20,7 @@ Successful cloud adoption programs typically involve at least one level of suppo
 
 ## Steps to align the partnership strategy
 
-It's important to start aligning your partnership strategy during the strategizing phase of adoption. The following steps can help remove roadblocks in later phases of the adoption lifecycle.
+It's important to start aligning your partnership strategy during the strategy definition phase of adoption. The following steps help remove roadblocks in later phases of the adoption lifecycle.
 
 1. Start to understand support needs.
 1. Consider partnership options that fit your culture and needs.
@@ -52,7 +52,7 @@ You are not alone in your cloud journey. There are several options to support yo
 - **Azure solution providers (partners):** Get connected with Azure expert-managed services providers (MSP) and other Microsoft partners who have service offerings aligned to the Cloud Adoption Framework methodologies.
 - **FastTrack for Azure:** Use the Microsoft FastTrack for Azure program to accelerate migration.
 - **Azure Migration and Modernization Program (AMMP):** The AMMP program aligns a mixture of partners and Microsoft employees to accelerate and support your migration.
-- **Solution assessments:** Get assistance from a Microsoft solutions assessment expert or qualified partner as part of a [Solution Assessment engagement](https://www.microsoft.com/solutionassessments/solutionassessments.aspx?rtc=1).
+- **Solution assessments:** Get assistance from a Microsoft solutions assessment expert or qualified partner as part of a [Solution Assessment engagement](https://www.microsoft.com/solutionassessments/solutionassessments.aspx?rtc=2).
 
 ### Azure solution providers
 
@@ -68,13 +68,13 @@ In parallel to the development of the cloud adoption strategy, the cloud strateg
 
 ### FastTrack for Azure
 
-[FastTrack for Azure](https://azure.microsoft.com/programs/azure-fasttrack) provides direct assistance from Azure engineers, working hand in hand with partners, to help customers build Azure solutions quickly and confidently. FastTrack brings best practices and tools from real customer experiences to guide customers from setup, configuration, and development to production of Azure solutions, including:
+[FastTrack for Azure](https://azure.microsoft.com/programs/azure-fasttrack/) provides direct assistance from Azure engineers, working hand in hand with partners, to help customers build Azure solutions quickly and confidently. FastTrack brings best practices and tools from real customer experiences to guide customers from setup, configuration, and development to production of Azure solutions, including:
 
 During a typical FastTrack for Azure engagement, Microsoft helps to define the business vision to plan and develop Azure solutions successfully. The team assesses architectural needs and provides guidance, design principles, tools, and resources to help build, deploy, and manage Azure solutions. The team matches skilled partners for deployment services on request and periodically checks in to ensure that deployment is on track and to help remove blockers.
 
 ### Azure Migration and Modernization Program (AMMP)
 
-The [Azure Migration and Modernization Program (AMMP)](https://azure.microsoft.com/migration/migration-program) provides a mixture of technical skill building, step-by-step guidance, free migration tools, and potential offers to reduce migration costs.
+The [Azure Migration and Modernization Program (AMMP)](https://azure.microsoft.com/migration/migration-modernization-program/) provides a mixture of technical skill building, step-by-step guidance, free migration tools, and potential offers to reduce migration costs.
 
 The program uses FastTrack for Azure and Azure solution providers to improve customer success during migration.
 
@@ -88,11 +88,11 @@ Watch this short video to get an overview of how the Azure Migration and Moderni
 
 ### Solution assessments
 
-Get assistance from a Microsoft solutions assessment expert or qualified partner as part of a [Solution Assessment engagement](https://www.microsoft.com/solutionassessments/solutionassessments.aspx?rtc=1). Microsoft Solution Assessments provide customers with an in depth understanding of the opportunities available in their environments to improve productivity, reduce cost and optimize investments.  These assessments utilize modern tools to collect the customer’s data estate, analyze the deployed environment and provide insights for data-driven recommendations to help customers determine actionable steps for digital transformations, cloud migrations and process improvement.
+Get assistance from a Microsoft solutions assessment expert or qualified partner as part of a [Solution Assessment engagement](https://www.microsoft.com/solutionassessments/solutionassessments.aspx?rtc=2). Microsoft Solution Assessments provide customers with an in depth understanding of the opportunities available in their environments to improve productivity, reduce cost and optimize investments.  These assessments utilize modern tools to collect the customer's data estate, analyze the deployed environment and provide insights for data-driven recommendations to help customers determine actionable steps for digital transformations, cloud migrations and process improvement.
 
 ### Azure support
 
-If you have questions or need help, [create a support request](https://portal.azure.com/#blade/microsoft_azure_support/helpandsupportblade/newsupportrequest). If your support request requires deep technical guidance, visit [Azure support plans](https://azure.microsoft.com/support/plans) to align the best plan for your needs.
+If you have questions or need help, [create a support request](https://portal.azure.com/#blade/microsoft_azure_support/helpandsupportblade/newsupportrequest). If your support request requires deep technical guidance, visit [Azure support plans](https://azure.microsoft.com/support/plans/) to align the best plan for your needs.
 
 ## Shortlist of partner options
 

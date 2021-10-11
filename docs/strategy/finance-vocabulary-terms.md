@@ -3,11 +3,11 @@ title: Common finance vocabulary terms
 description: Learn about common finance vocabulary terms to use when creating a cloud migration business case or financial model.
 author: wering
 ms.author: wering
-ms.service: cloud-adoption-framework
-ms.topic: conceptual
 ms.date: 4/16/2021
-ms.custom: template-concept
+ms.topic: conceptual
+ms.service: cloud-adoption-framework
 ms.subservice: strategy
+ms.custom: template-concept
 ---
 
 # Glossary of common finance terms
@@ -16,7 +16,7 @@ Use these common finance terms when your team is creating a cloud migration busi
 
 ## Terms
 
-**Amortization**:  An expense tied to a typically intangible asset, that reflects the “economic” usage of that asset in a particular time period. For example if you purchase a license worth $100, you would capitalize that on your balance sheet. If you amortized it over 5-years, you would annually recognize an expense of $20 per year that impacts your income statement.
+**Amortization**:  An expense tied to a typically intangible asset that reflects the economic usage of that asset in a particular time period. For example if you purchase a license worth $100, you would capitalize that on your balance sheet. If you amortized it over five years, you would annually recognize an expense of $20 per year on your income statement.
 
 **Balance sheet**: A balance sheet is a financial statement that reports a company's assets, liabilities, and shareholders' equity as of a specific date.
 
@@ -26,11 +26,11 @@ Use these common finance terms when your team is creating a cloud migration busi
 
 **Cloud economics**: An understanding of the benefits and costs of the cloud, and the financial impact when you start a migration from on-premises to cloud computing.
 
-**Depreciation**: An expense tied to a capitalized asset, that reflects the “economic” usage of that asset in a particular time period. For example if you purchase a server worth $100, you would capitalize that on your balance sheet. If you depreciated it over 5-years, you would annually recognize an expense of $20 per year that impacts your income statement.
+**Depreciation**: An expense tied to a capitalized asset, that reflects the economic usage of that asset in a particular time period. For example if you purchase a server worth $100, you would capitalize that on your balance sheet. If you depreciated it over five years, you would annually recognize an expense of $20 per year on your income statement.
 
 **Double mortgage period**: A period when you have two sets of costs at the same time. For example, when you have both on-premises and cloud costs.
 
-**Earnings before interest, taxes, depreciation, and amortization (EBITDA)**: A performance indicator of the profitability of a business. This starts from “operating income” which is the income from your ongoing business operations (ignoring things like taxes or interest expense) and adds back depreciation and amortization. While a useful performance metric that is used for comparability, it is often viewed in conjunction metrics like Capital Expenditure to have a better all-up understanding of a companies ability to generate free cash flow.
+**Earnings before interest, taxes, depreciation, and amortization (EBITDA)**: A performance indicator of the profitability of a business. This starts from *operating income*, which is the income from your ongoing business operations (ignoring things like taxes or interest expense), and then adds back depreciation and amortization. While EBITDA is useful for comparability, it's often viewed in conjunction with metrics like capital expenditure to enable a fuller understanding of a company's ability to generate free cash flow.
 
 **Net Present Value (NPV)**: An assessment of the financial value of a business investment. This metric looks at cash flows, timing, and the required interest rate.
 

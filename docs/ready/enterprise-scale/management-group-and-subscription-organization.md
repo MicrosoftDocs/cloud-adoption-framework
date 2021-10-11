@@ -245,7 +245,7 @@ Organizations can use enterprise-scale Azure policies to enforce the following g
 
    A SQL database can experience a lot of schema, permission, and configuration changes throughout its lifecycle, and these changes can deviate from best practices. In turn, excessive permissions, orphaned roles, and other configurational drifts can be exploited by malicious actors.
 
-   Microsoft best practices for SQL databases can help enterprises to assess their SQL databases, and SQL Database has a built-in vulnerability assessment service to assist. A vulnerability assessment scans and identifies database- and server-level security risks, and it offers remediation tasks that can fix vulnerabilities.
+   Microsoft best practices for SQL databases can help enterprises to assess their SQL databases, and SQL Database has a built-in vulnerability assessment service to assist. A vulnerability assessment scans and identifies database-level and server-level security risks, and it offers remediation tasks that can fix vulnerabilities.
 
     A custom policy ensures that SQL databases are configured with vulnerability assessments. Assessment scans run periodically, reports are stored in an Azure Storage account, and a predefined email address shares the results for reporting.
 
@@ -323,7 +323,7 @@ Organizations can use enterprise-scale Azure policies to enforce the following g
 
     Fragmented firewall rules can lead to uncontrolled and ambiguous network traffic paths. Continuous changes to firewalls rules for every firewall instance make it difficult to assess network security posture, and multiple rules make it difficult to distinguish between a centrally managed basic set of rules and workload-specific network path rules.
 
-    Azure Firewall policies help organizations define a minimum set of rules that apply throughout their organization. Application-specific policies can inherit basic rules to create hierarchical rules that meet enterprise- and application-specific firewall requirements. When rules are configured through policies, they can be managed and monitored centrally.
+    Azure Firewall policies help organizations define a minimum set of rules that apply throughout their organization. Application-specific policies can inherit basic rules to create hierarchical rules that meet enterprise-specific and application-specific firewall requirements. When rules are configured through policies, they can be managed and monitored centrally.
 
     Azure offers a custom policy that helps enterprises to define Azure Firewall policies centrally. Enterprises control defining the rules and priorities that to meet their network traffic routing requirements. Depending on their needs, enterprises can define firewall policies centrally and apply them to either Azure Virtual WAN or hub-and-spoke network topology.
 

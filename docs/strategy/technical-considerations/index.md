@@ -13,7 +13,7 @@ ms.custom: internal
 # Understand technical considerations
 
 When you're making the shift to the cloud, there are technical considerations around how it will help improve how you manage and maintain your cloud and workloads.
-This guidance will help you discover the technical flexibility, efficiencies, and capabilities that aren’t possible with your on-premises IT infrastructure and help you build a business case to migrate to the cloud.
+This guidance will help you discover the technical flexibility, efficiencies, and capabilities that aren't possible with your on-premises IT infrastructure and help you build a business case to migrate to the cloud.
 
 ## Technical benefits
 
@@ -37,7 +37,7 @@ Capacity optimization, where you pay only for the resources you use over time, i
 
 ### Achieve more with your investment
 
-With a shift to the cloud, it’s important to think differently about how you'll consume and manage your cloud resources. As you build your business case, it’s critical to understand the key principles of cloud economics. When you plan short- and long-term cloud solutions and align them to business outcomes, you can achieve more with every dollar you invest.
+With a shift to the cloud, it's important to think differently about how you'll consume and manage your cloud resources. As you build your business case, it's critical to understand the key principles of cloud economics. When you plan short-term and long-term cloud solutions and align them to business outcomes, you can achieve more with every dollar you invest.
 
 ### Align your partner strategy
 
