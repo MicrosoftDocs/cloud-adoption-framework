@@ -1,14 +1,15 @@
 ---
-title: Resource organization: subscriptions - design area
+title: Resource organization - subscriptions - design area
 description: Overview for the resource organization and subscriptions design area
 author: DominicAllen
 ms.author: doalle
-ms.date: 8/1/2021
+ms.date: 10/11/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: internal
 ---
+# Subscriptions
 
 ## Subscriptions overview
 

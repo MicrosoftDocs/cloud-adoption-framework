@@ -1,14 +1,15 @@
 ---
-title: Resource organization: management groups - design area
+title: Resource organization - management groups - design area
 description: Overview for the resource organization and management groups design area
 author: DominicAllen
 ms.author: doalle
-ms.date: 8/1/2021
+ms.date: 10/11/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: internal
 ---
+# Management groups
 
 ## Management groups overview
 
