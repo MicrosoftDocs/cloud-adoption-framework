@@ -191,7 +191,7 @@ Cost transparency across a technical estate is a critical management challenge f
 
 - Use Azure Cost Management + Billing to aggregate costs. Make it available to application owners.
 
-- Use Azure resource tags categorize costs and group resources. Using tags allows you to have a chargeback mechanism for workloads that share a subscription or for a given workload that spans across multiple subscriptions.
+- Use Azure resource tags to categorize costs and group resources. Using tags allows you to have a chargeback mechanism for workloads that share a subscription or for a given workload that spans across multiple subscriptions.
 
 ## Policy-driven governance
 
@@ -211,7 +211,7 @@ Organizations can use enterprise-scale Azure policies to enforce the following g
 
     A lack of auditing and diagnostics information at a granular level can affect operational practices. Incomplete audit information makes it difficult to correlate logs from multiple Azure services and create cohesive debugging.
 
-    Once Azure services are provisioned, they should provide detailed information about how they interact with the Azure platform. This information can be broadly divided into logs and metrics, and each Azure service can be further grouped into its subcomponents. Ror example, an Azure public IP resource with `DDoSProtectionNotifications`, `DDoSMitigationReports`, and `DDoSMitigationFlowLogs` as its subcomponents. Collecting diagnostic information at these subcategories can also help organizations to enhance auditing and debugging.
+    Once Azure services are provisioned, they should provide detailed information about how they interact with the Azure platform. This information can be broadly divided into logs and metrics, and each Azure service can be further grouped into its subcomponents. For example, an Azure public IP resource with `DDoSProtectionNotifications`, `DDoSMitigationReports`, and `DDoSMitigationFlowLogs` as its subcomponents. Collecting diagnostic information at these subcategories can also help organizations to enhance auditing and debugging.
 
      A custom Azure Policy initiative is available to help enterprises gather logs and metrics at a deeper level for each Azure service. This initiative includes a policy for every Azure service, and the policies collect key log categories and metrics automatically.
 
@@ -315,7 +315,7 @@ Organizations can use enterprise-scale Azure policies to enforce the following g
 
 - **Auto-provision Private Link or Private Endpoint with private DNS zones:**
 
-    One enterprise maintenance challenge is how to create private DNS zones for every application that needs access to Azure PaaS services. Azure Private Link and Private Endpoint use private IP addresses to provide access to Azure platform as a service (PaaS) services, and private DNS zones resolve DNS records. Private DNS zone groups use categorizes from Azure services like blob, queue, table, and SQL to group Private Link connections and use one private DNS zone per service.
+    One enterprise maintenance challenge is how to create private DNS zones for every application that needs access to Azure PaaS services. Azure Private Link and Private Endpoint use private IP addresses to provide access to Azure platform as a service (PaaS) services, and private DNS zones resolve DNS records. Private DNS zone groups use categories from Azure services like blob, queue, table, and SQL to group Private Link connections and use one private DNS zone per service.
 
     Enterprises can also create central private DNS zones, and custom Azure policies can automatically connect Private Link or Private Endpoint with private DNS zones for Azure services.
 
@@ -323,7 +323,7 @@ Organizations can use enterprise-scale Azure policies to enforce the following g
 
     Fragmented firewall rules can lead to uncontrolled and ambiguous network traffic paths. Continuous changes to firewalls rules for every firewall instance make it difficult to assess network security posture, and multiple rules make it difficult to distinguish between a centrally managed basic set of rules and workload-specific network path rules.
 
-    Azure Firewall policies to help organizations define a minimum set of rules that apply throughout their organization. Application-specific policies can inherit basic rules to create hierarchical rules that meet enterprise-specific and application-specific firewall requirements. When rules are configured through policies, they can be managed and monitored centrally.
+    Azure Firewall policies help organizations define a minimum set of rules that apply throughout their organization. Application-specific policies can inherit basic rules to create hierarchical rules that meet enterprise-specific and application-specific firewall requirements. When rules are configured through policies, they can be managed and monitored centrally.
 
     Azure offers a custom policy that helps enterprises to define Azure Firewall policies centrally. Enterprises control defining the rules and priorities that to meet their network traffic routing requirements. Depending on their needs, enterprises can define firewall policies centrally and apply them to either Azure Virtual WAN or hub-and-spoke network topology.
 
@@ -333,7 +333,7 @@ Organizations can use enterprise-scale Azure policies to enforce the following g
 
     Azure hub-and-spoke network topology helps to streamline needs for network connectivity. A hub virtual network (VNet) can host shared services while spoke VNets host application-specific Azure resources. Hub-and-spoke VNets use VNet peering to connect with each other, and the network topology promotes clean network design, easier management, and optimized costs.
 
-    Azure offers a custom policy that uses Azure Firewall and gateways from VPNs and ExpressRoute to provisions hub VNets. Enterprises can configure all options for firewalls and gateways as part of the policy assignment. This policy simplifies the process to deploy Azure hub-and-spoke network topology.
+    Azure offers a custom policy that uses Azure Firewall and gateways from VPNs and ExpressRoute to provision hub VNets. Enterprises can configure all options for firewalls and gateways as part of the policy assignment. This policy simplifies the process to deploy Azure hub-and-spoke network topology.
 
     Another custom policy prevents two VNets from peering with each other to instead communicate with each other via a hub VNet. Configuring VNets to communicate with each other through with hubs makes it possible to control and monitor network connections. Network topology is simplified from a maintenance perspective as well.
 
