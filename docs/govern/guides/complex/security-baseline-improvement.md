@@ -163,7 +163,7 @@ Adding these processes and changes to the governance MVP helps remediate many of
 
 ## Next steps
 
-As cloud adoption continues and delivers additional business value, risks and cloud governance needs also change. For the fictional company in this guide, the next step is to support mission-critical workloads. This is the point when resource consistency controls are needed. A critical part of the security governance narrative is reviewing best practices that Microsoft has built for security. The Azure Security Benchmark (ASB) provides prescriptive best practices and recommendations to help improve the security of workloads, data, and services on Azure. [Read here](/azure/security/benchmarks/overview).
+As cloud adoption continues and delivers additional business value, risks and cloud governance needs also change. For the fictional company in this guide, the next step is to support mission-critical workloads. This is the point when resource consistency controls are needed. A critical part of the security governance narrative is reviewing best practices that Microsoft has built for security. The Azure Security Benchmark (ASB) provides prescriptive best practices and recommendations to help improve the security of workloads, data, and services on Azure. For more information, see [Overview of the Azure Security Benchmark](/security/benchmark/azure/overview).
 
 > [!div class="nextstepaction"]
 > [Improve the Resource Consistency discipline](./resource-consistency-improvement.md)

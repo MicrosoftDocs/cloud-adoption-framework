@@ -28,14 +28,14 @@ As you get started, the security essentials checklist and Kubernetes security re
 
 **Security checklist:**
 
-- **Familiarize yourself with the security essentials white paper.** The primary goals of a secure Kubernetes environment are ensuring that the applications it runs are protected, that security issues can be identified and addressed quickly, and that future similar issues will be prevented. For more information, see [The definitive guide to securing Kubernetes (white paper)](https://aka.ms/securingk8s-whitepaper).
+- **Familiarize yourself with the security essentials white paper.** The primary goals of a secure Kubernetes environment are ensuring that the applications it runs are protected, that security issues can be identified and addressed quickly, and that future similar issues will be prevented. For more information, see [`The Definitive Guide to Securing Kubernetes` (white paper)](https://aka.ms/securingk8s-whitepaper).
 
 - **Review the security hardening setup for the cluster nodes.** A security hardened host OS reduces the surface area of attack and allows deploying containers securely. To learn more, see [Security hardening in AKS virtual machine hosts](/azure/aks/security-hardened-vm-host-image).
 
 - **Setup cluster Kubernetes role-based access control (Kubernetes RBAC).** This control mechanism lets you assign users, or groups of users, permission to do things like create or modify resources, or view logs from running application workloads.
 
   For more information, see
-  - [Understand Kubernetes role-based access control (Kubernetes RBAC)  (video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&v=G3R24JSlGjY&index=12) <br>
+  - [Understand Kubernetes role-based access control (Kubernetes RBAC)  (video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&index=12&v=G3R24JSlGjY) <br>
   - [Integrate Azure AD with Azure Kubernetes Service](/azure/aks/azure-ad-integration-cli) <br>
   - [Limit access to cluster configuration file](/azure/aks/control-kubeconfig-access)
 
@@ -53,7 +53,7 @@ As you prepare the application for production, implement a minimum set of best p
 
 - **Control access to clusters using group membership.** Configure Kubernetes role-based access control (Kubernetes RBAC) to limit access to cluster resources based on user identity or group membership. For more information, see [Control access to cluster resources using Kubernetes RBAC and Azure AD identities](/azure/aks/azure-ad-rbac).
 
-- **Create a secrets management policy.** Securely deploy and manage sensitive information, such as passwords and certificates, using secrets management in Kubernetes. For more information, see [Understand secrets management in Kubernetes (video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&v=KmhM33j5WYk&index=10).
+- **Create a secrets management policy.** Securely deploy and manage sensitive information, such as passwords and certificates, using secrets management in Kubernetes. For more information, see [Understand secrets management in Kubernetes (video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&index=10&v=KmhM33j5WYk).
 
 - **Secure intra-pod network traffic with network policies.** Apply the principle of least privilege to control network traffic flow between pods in the cluster. For more information, see [Secure intra-pod traffic with network policies](/azure/aks/use-network-policies).
 

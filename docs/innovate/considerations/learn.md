@@ -26,7 +26,7 @@ Continuous learning is a method for responding to learning metrics and assessing
 - **Did the hypothesis prove true?** When the answer is yes, celebrate for a moment and then move on. There are always more things to learn, more hypotheses to test, and more ways to help the customer in your next iteration. When a hypothesis proves true, it's a good time to decide on a new feature that enhances the solution's utility for the customer.
 - **Can you get closer to a validated hypothesis by iterating on the current solution?** The answer is usually yes. Learning metrics typically suggest points in the process that lead to customer deviation. Use these data to find the root of a failed hypothesis. At times, the metrics may also suggest a solution.
 - **Is a reset of the hypothesis required?** Sometimes you learn that the hypothesis or underlying requirement was flawed. When you find a flaw, an iteration alone isn't necessarily the right answer. If a reset is required, rewrite the hypothesis and review the solution in light of the new hypothesis. The sooner this type of learning occurs, the easier it is to pivot. Early hypotheses should focus on testing the riskiest aspects of the solution to avoid pivots later in development.
-- **Unsure?** The second most common response after "iterate" is "we're not sure." Embrace this response. This response represents an opportunity to engage the customer, foster customer empathy, and to look beyond the data.
+- **Unsure?** The second most common response after "iterate" is "we're not sure". Embrace this response. This response represents an opportunity to engage the customer, foster customer empathy, and to look beyond the data.
 
 The answers to these questions shape the iteration to follow. Companies that demonstrate an ability to apply continuous learning and boldly make the right decisions for their customers are more likely to emerge as leaders in their markets.
 
@@ -69,4 +69,4 @@ Each phase of the process helps you build better solutions with your customers.
 
 As a next step to understanding this methodology, see [Common blockers and challenges to innovation](./challenges.md) to prepare for the changes ahead.
 
-Some of the concepts in this article build on topics first described in [The Lean Startup](http://theleanstartup.com/book), written by Eric Ries.
+Some of the concepts in this article build on topics first described in [`The Lean Startup`](http://theleanstartup.com/book), written by Eric Ries.

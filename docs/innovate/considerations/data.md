@@ -1,31 +1,29 @@
 ---
 title: Democratize data for minimum viable products
-description: Create a minimum viable product to start your development. Learn about data democratization—the process of getting data to test hypotheses and drive innovation.
+description: Create a minimum viable product to start your development. Learn about data democratization, the process of getting data to test hypotheses and drive innovation.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
-ms.custom:
- - internal
- - seo-caf-innovate
+ms.custom: internal, seo-caf-innovate
 keywords: What is data democratization, data democratization, democratize data, minimum viable product, data centralization
 ---
 
 # Democratize data with digital invention
 
-Coal, oil, and human potential were the three most consequential assets during the industrial revolution. These assets built companies, shifted markets, and ultimately changed nations. In the digital economy, there are three equally important assets for innovation—data, devices, and human potential. Each of these assets holds great innovation potential. For any innovation effort in the modern era, data is the new oil.
+Coal, oil, and human potential were the three most consequential assets during the industrial revolution. These assets built companies, shifted markets, and ultimately changed nations. In the digital economy, there are three equally important assets for innovation: data, devices, and human potential. These assets holds great innovation potential. For any innovation effort in the modern era, data is the new oil.
 
 In every company, there is data that can be used to find and meet customer needs. Unfortunately, the process of mining that data to drive innovation can be costly and time-consuming, so needs aren't discovered and solutions aren't created. Data democratization can solve this problem.
 
-What is data democratization? It's the process of getting data into the the right hands to drive innovation. This democratization process can take several forms, but they generally include solutions for ingested or integrated raw data, centralization of data, sharing data, and securing data. When data is democratized, experts around the company can use it to form and test hypotheses. In many cases, cloud adoption teams can [build with customer empathy](./build.md) using only data, to rapidly meet customer needs.
+What is data democratization? It's the process of getting data into the right hands to drive innovation. This democratization process can take several forms, but they generally include solutions for ingested or integrated raw data, centralization of data, sharing data, and securing data. When data is democratized, experts around the company can use it to form and test hypotheses. In many cases, cloud adoption teams can [build with customer empathy](./build.md) using only data, to rapidly meet customer needs.
 
 ## Ways to democratize data
 
 There are various ways to democratize data, but most include methods of collecting, centralizing, governing, and sharing the data. The following sections describe some of these methods. When you build a solution to a customer hypothesis, you should assess whether to democratize data, to what extent, and how to do it.
 
-![Process for democratizing data, shows these processes: Govern, Centralize, Collect, and Share data.](../../_images/innovate/democratize-data.png)
+![Process for democratizing data, shows these processes: govern, centralize, collect, and share data.](../../_images/innovate/democratize-data.png)
 
 ### Share data
 
@@ -44,12 +42,12 @@ Sharing data can quickly produce a minimum viable product to use in customer con
 
 After a hypothesis has been validated through data sharing, the next phase of development is typically data governance.
 
-Data governance is a broad topic that can require its own dedicated framework, a matter that's outside the scope of the [Cloud Adoption Framework](../../index.yml). 
+Data governance is a broad topic that can require its own dedicated framework, a matter that's outside the scope of the [Cloud Adoption Framework](../../index.yml).
 
 There are several aspects of data governance to consider as soon as you validate the customer hypothesis. For example:
 
 - **Is the shared data sensitive?** [Data should be classified](../../govern/policy-compliance/data-classification.md) before being shared publicly to protect the interests of customers and the company.
-- **If the data is sensitive, has it been secured?** Protection of sensitive data is a must for democratized data. The example workload discussed in [securing data solutions](/azure/architecture/data-guide/scenarios/securing-data-solutions) provides some references for securing data.
+- **If the data is sensitive, has it been secured?** Protection of sensitive data is a must for democratized data. The example workload discussed in [Securing data solutions](/azure/architecture/data-guide/scenarios/securing-data-solutions) provides some references for securing data.
 - **Is the data cataloged?** Identifying the nature of the shared data aids in long-term data management. Tools for documenting data, like [Azure Data Catalog](https://azure.microsoft.com/services/data-catalog/), make this process much easier in the cloud. Guidance regarding the [annotation of data](/azure/data-catalog/data-catalog-how-to-annotate) and the [documentation of data sources](/azure/data-catalog/data-catalog-how-to-documentation) can accelerate the process.
 
 When democratization of data is important to a customer-focused hypothesis, make sure the governance of shared data is in the release plan. This protects customers, data consumers, and the company.
@@ -66,7 +64,7 @@ When you centralize, you need an appropriate data store for the centralized data
 The reference architectures for [OLAP](/azure/architecture/data-guide/relational-data/online-analytical-processing) and [big data](/azure/architecture/data-guide/big-data/) solutions can help you choose the most appropriate centralization solution in Azure. If a hybrid solution is required, the reference architecture for [extending on-premises data](/azure/architecture/data-guide/scenarios/hybrid-on-premises-and-cloud) can also help accelerate solution development.
 
 > [!IMPORTANT]
-> For some customer needs and solutions, a simple approach might be enough. The cloud architect should challenge the team to consider low-cost solutions to validate the customer hypothesis, especially during early development. This section on collecting data discusseses scenarios that might suggest a different solution for your situation.
+> For some customer needs and solutions, a simple approach might be enough. The cloud architect should challenge the team to consider low-cost solutions to validate the customer hypothesis, especially during early development. This section on collecting data discusses scenarios that might suggest a different solution for your situation.
 
 ### Collect data
 
@@ -89,4 +87,4 @@ SQL Server 2017 and Azure SQL Data Warehouse both support [PolyBase](/sql/relati
 With a strategy for democratizing data in place, you'll next want to evaluate approaches to application development.
 
 > [!div class="nextstepaction"]
-> [Application development for innovative apps](./apps.md)
+> [Application development for innovative applications](./apps.md)

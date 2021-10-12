@@ -1,6 +1,6 @@
 ---
 title: Introduction to the modern application platform scenario
-description: Describe the scenario
+description: Learn about the modern application platform scenario of the Cloud Adoption Framework.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 03/01/2021
@@ -18,7 +18,7 @@ Organizations include managed services, application services, and containers in 
 
 - **Application platform:** A collection of application dependencies designed to support the execution of the application. Application platforms accelerate development by providing well-defined structures to address many common needs. Application platforms can also create constraints that affect how the application can be built.
 - **Application services (PaaS services):** Application services, or platform as a service (PaaS) options for developers, provide an application platform that maximizes the value each application can draw from a cloud environment. These services create a layer of abstraction between the application platform and the underlying cloud infrastructure. This layer of abstraction forces a specific and consistently defined set of application platform constraints, which can only run in specific environments.
-- **Containers:** Containers create a similar layer of abstraction between applications runtime requirements and underlying operating system & infrastructure. Unlike PaaS options, containers allow the application runtime to be configured for the needs of the application, regardless of the container host.
+- **Containers:** Containers create a similar layer of abstraction between an application's runtime requirements and the underlying operating system and infrastructure. Unlike PaaS options, containers allow the application runtime to be configured for the needs of the application, regardless of the container host.
 - **Container orchestration:** A container orchestrator provides a consistent application runtime for an instance of a container host. This orchestration allows workload-focused operations teams to mature deployment and DevOps practices to facilitate multiple deployment and operations practices, reducing dependencies on centralized or human operations.
 
 This article series will outline how application services and containers can be integrated into your cloud adoption strategy to delivery the following outcomes:

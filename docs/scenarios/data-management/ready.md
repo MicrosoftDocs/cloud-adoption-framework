@@ -6,7 +6,8 @@ ms.author: brblanch
 ms.date: 06/21/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Review your environment for Azure landing zones
@@ -35,7 +36,7 @@ If you're a large multinational enterprise with hundreds of data engineers and a
 
 Your business should consider how to best:
 
-- Serve data as a product versus a by product.
+- Serve data as a product rather than a byproduct.
 - Provide an ecosystem of data products instead of a singular data warehouse that might not best fit the data scenario.
 - Drive a default way to enforce data governance and security.
 - Drive teams to consistently prioritize business outcomes instead of obsessing over the underlying technology.
@@ -44,7 +45,7 @@ If you don't have an implementation of enterprise-scale landing zones, then it's
 
 ## Accelerate Azure landing zones for data management and analytics
 
-Enterprise-scale for analytics and AI requires an understanding of landing zones and uses infrastructure-as-code to deploy end-to-end solution templates. These customizable The following templates are customizable and can help your organization to get started with most data management and analytics scenarios:
+Enterprise-scale for analytics and AI requires an understanding of landing zones and uses infrastructure-as-code to deploy end-to-end solution templates. These customizable templates can help your organization get started with most data management and analytics scenarios:
 
 - [What is a landing zone?](/azure/cloud-adoption-framework/ready/landing-zone/)
 - [Choose a landing zone option](/azure/cloud-adoption-framework/ready/landing-zone/choose-landing-zone-option)
@@ -54,4 +55,3 @@ Enterprise-scale for analytics and AI requires an understanding of landing zones
 ## Next steps
 
 [Introduction to enterprise-scale for analytics and AI in Azure](./enterprise-scale-landing-zone.md)
-

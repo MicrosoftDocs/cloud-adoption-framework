@@ -6,8 +6,8 @@ ms.author: mboswell
 ms.date: 08/06/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
-ms.custom: think-tank, e2e-data
+ms.subservice: scenario
+ms.custom: e2e-data-management, think-tank
 ---
 
 # How automated ingestion frameworks support enterprise-scale for analytics and AI in Azure
@@ -72,7 +72,6 @@ The following illustrates how registered data sources in a Data Factory SQL Data
 
 ![Diagram of how new data sources are ingested.](../images/new-datastore-ingestion.png)
 
-
 The Data Factory ingestion master pipeline reads configurations from a Data Factory SQL Database metastore and runs iteratively with the correct parameters. Data moves with little to no change from the source to the raw layer in Azure Data Lake. The data shape is validated based on the Data Factory metastore, and file formats are converted to either Apache Parquet or Avro formats before being copied into the enriched layer.
 
 > [!TIP]
@@ -109,7 +108,7 @@ The following examples show how to use the Azure Purview REST API to register da
 
 **Register an Azure Data Lake Storage Gen2 data source**:
 
-```JSON
+```json
 {
   "kind":"AdlsGen2",
   "name":"<source-name> (for example, My-AzureDataLakeStorage)",
@@ -128,7 +127,7 @@ The following examples show how to use the Azure Purview REST API to register da
 
 **Register a SQL Database data source**:
 
-```JSON
+```json
 {
   "kind":"<source-kind> (for example, AdlsGen2)",
   "name":"<source-name> (for example, My-AzureSQLDatabase)",
@@ -172,7 +171,7 @@ The following examples show how to use the Azure Purview REST API to scan data s
 
 **Scan an Azure Data Lake Storage Gen2 data source**:
 
-```JSON
+```json
 {
   "name":"<scan-name>",
   "kind":"AdlsGen2Msi",
@@ -186,7 +185,7 @@ The following examples show how to use the Azure Purview REST API to scan data s
 
 **Scan a SQL Database data source**:
 
-```JSON
+```json
 {
   "name":"<scan-name>",
   "kind":"AzureSqlDatabaseMsi",
@@ -203,7 +202,7 @@ The following examples show how to use the Azure Purview REST API to scan data s
 
 **Use the following API call to scan data sources**:
 
-```HTTP
+```http
 POST https://{accountName}.scan.purview.azure.com/datasources/{dataSourceName}/scans/{newScanName}/run
 ```
 

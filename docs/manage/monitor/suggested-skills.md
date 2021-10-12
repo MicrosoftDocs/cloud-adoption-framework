@@ -6,11 +6,9 @@ ms.author: brblanch
 ms.date: 08/26/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: migrate
+ms.subservice: manage
 ms.custom: internal
 ---
-
-<!-- cSpell:ignore kusto ITIL -->
 
 # Skills readiness for cloud monitoring
 
@@ -33,13 +31,13 @@ Developing the necessary skills can be accelerated with the following learning p
 
 - [Monitoring Microsoft Azure Resources and Workloads](https://www.pluralsight.com/courses/microsoft-azure-resources-workloads-monitoring-update) helps you learn how to use Azure monitoring tools to monitor Azure network resources as well as resources located on-premises.
 
-- Learn about planning and designing your monitoring deployments at-scale and automating actions by viewing [Azure Monitor best practices and recommendations](https://www.youtube.com/watch?v=IWkqqahX_Ck&list=PLLasX02E8BPCDMuesOy2C0_TMFsoZWe_0&index=6).
+- Learn about planning and designing your monitoring deployments at-scale and automating actions by viewing [Azure Monitor best practices and recommendations](https://www.youtube.com/watch?list=PLLasX02E8BPCDMuesOy2C0_TMFsoZWe_0&index=6&v=IWkqqahX_Ck).
 
 ## Infrastructure monitoring
 
 - [Design a Monitoring Strategy for Infrastructure in Microsoft Azure](https://www.pluralsight.com/courses/microsoft-azure-monitoring-strategy-infrastructure-design-update) helps you learn foundational knowledge of monitoring capabilities and solutions in Azure.
 
-- [How to monitor your Kubernetes clusters](https://www.youtube.com/watch?time_continue=3&v=RjsNmapggPU&feature=emb_logo) provides an intermediate level deep dive to help you learn about monitoring your Kubernetes cluster with Azure Monitor for containers.
+- [How to monitor your Kubernetes clusters](https://www.youtube.com/watch?time_continue=3&feature=emb_logo&v=RjsNmapggPU) provides an intermediate level deep dive to help you learn about monitoring your Kubernetes cluster with Azure Monitor for containers.
 
 - Learn with Azure Monitor how to monitor data from [Azure Storage and HDInsight](https://www.pluralsight.com/courses/microsoft-azure-data-storage-monitoring).
 
@@ -49,7 +47,7 @@ Developing the necessary skills can be accelerated with the following learning p
 
 - With [Azure Arc for servers](/azure/azure-arc/servers/overview), learn how you can manage your Windows and Linux machines hosted outside of Azure similarly to how you manage virtual machines running in Azure.
 
-- [How to monitor your VMs](https://www.youtube.com/watch?v=O7scXPrsM_0&list=PLLasX02E8BPCDMuesOy2C0_TMFsoZWe_0&index=6&t=0s) provides an intermediate level deep dive to help you learn about monitoring your hybrid machines or servers, and Azure VM or virtual machine scale sets with Azure Monitor for VMs.
+- [How to monitor your VMs](https://www.youtube.com/watch?t=0s&list=PLLasX02E8BPCDMuesOy2C0_TMFsoZWe_0&index=6&v=O7scXPrsM_0) provides an intermediate level deep dive to help you learn about monitoring your hybrid machines or servers, and Azure VM or virtual machine scale sets with Azure Monitor for VMs.
 
 ## Application monitoring
 
@@ -99,7 +97,7 @@ To learn more, review the following:
 
 - [Evolve your DevOps practices](/learn/paths/evolve-your-devops-practices/).
 
-- [Automate your deployments with Azure DevOps](/learn/paths/automate-deployments-azure-devops/).
+- [Automate your deployments with Azure DevOps](/learn/modules/deploy-nodejs/).
 
 ## Other considerations
 

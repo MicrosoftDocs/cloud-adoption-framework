@@ -76,7 +76,7 @@ Here are the details:
 
 After paying for Azure, Contoso needs to figure out how to manage Azure subscriptions. Because Contoso has an EA, there's no limit on the number of Azure subscriptions it can create. An Azure Enterprise Agreement enrollment defines how a company shapes and uses Azure services, and defines a core governance structure.
 
-As a first step, Contoso has defined a structure known as an *enterprise scaffold* for its enrollment. Contoso used the [Azure enterprise scaffold guidance](../../reference/azure-scaffold.md) to help understand and design a scaffold.
+As a first step, Contoso has defined a structure known as an *enterprise scaffold* for its enrollment. Contoso used the [Azure enterprise scaffold guidance](../../resources/azure-scaffold.md) to help understand and design a scaffold.
 
 For now, Contoso has decided to use a functional approach to manage subscriptions:
 
@@ -290,7 +290,7 @@ Fault domains represent underlying hardware with a common power source and netwo
 
 Update domains represent underlying hardware that can undergo maintenance or be rebooted at the same time. Availability sets also distribute VMs across multiple update domains to ensure that at least one instance will be running at all times.
 
-Contoso will implement availability sets whenever VM workloads require high availability. For more information, see [Manage the availability of Windows VMs in Azure](/azure/virtual-machines/manage-availability).
+Contoso will implement availability sets whenever VM workloads require high availability. For more information, see [Manage the availability of Windows VMs in Azure](/azure/virtual-machines/availability).
 
 #### Availability Zones
 

@@ -41,7 +41,7 @@ These teams are responsible for putting together complex solutions with componen
 - Geo-redundancy and data consistency
 - Dashboards and reporting
 
- Enterprise architects and data engineers are concerned with building effective architectures that work in an integrated manner. Such architectures preserve performance, availability, ease of administration, flexibility/extensibility, and actionability.
+Enterprise architects and data engineers are concerned with building effective architectures that work in an integrated manner. Such architectures preserve performance, availability, ease of administration, flexibility/extensibility, and actionability.
 
 Data engineers can use Azure Synapse Analytics to simplify the steps to wrangle multiple data types from multiple sources, including streaming, transactional, and business data. They can use a code-free visual environment to connect to data sources and ingest, transform, and place data in the data lake.
 
