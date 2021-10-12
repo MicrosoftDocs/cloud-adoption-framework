@@ -30,6 +30,10 @@ items:
         href: eslz-arc-servers-connectivity.md
       - name: Governance disciplines 
         href: eslz-security-governance-and-compliance.md  
+      - name: Management disciplines
+        href: eslz-management-and-monitoring-arc-server.md
+      - name: Platform Automation
+        href: eslz-automation-arc-server.md  
     - name: Implementation options
       items:
       - name: Start small with basic VM management
