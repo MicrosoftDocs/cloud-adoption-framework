@@ -3,7 +3,7 @@ title: Perimeter networks
 description: Use the Cloud Adoption Framework for Azure to learn how to set up Azure effectively for your organization.
 author: tracsman
 ms.author: brblanch
-ms.date: 08/23/2021
+ms.date: 10/12/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
