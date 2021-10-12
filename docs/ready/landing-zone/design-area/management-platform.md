@@ -22,7 +22,7 @@ Use the guidance in this section to consider how to approach platform management
 
 ## Platform management and monitoring - Design considerations
 
-### Logging
+### Logging considerations
 
 - Consider using tools such as an Azure Monitor Log Analytics workspace as an administrative boundary.
 - Which teams will use the logs and telemetry from the platform? Who will require access to the logs?
@@ -34,7 +34,20 @@ Consider the following items relating to logging data to help inform the types o
 |Application-centric platform monitoring <br>  (encompassing both hot and cold telemetry paths for metrics and logs, respectively(|- Operating system metrics; for example, performance counters and custom metrics - Operating system logs; for example, Internet Information Services, Event Tracing for Windows, and syslogs <br> - Resource health events <br> - Security audit logging and achieving a horizontal security lens across your organization's entire Azure estate: <br> - Potential integration with on-premises security information and event management (SIEM) systems such as ArcSight or the Onapsis security platform <br> - Potential integration with software as a service (SaaS) offerings such as ServiceNow <br> - Azure activity logs <br> - Azure Active Directory (Azure AD) audit reports <br> - Azure diagnostic services, logs, and metrics; Azure Key Vault audit events; network security group (NSG) flow logs; and event logs <br> - Azure Monitor, Azure Network Watcher, Azure Security Center, and Azure Sentinel|
  Azure data retention thresholds and archiving requirements|  - The default retention period for Azure Monitor Logs is 30 days, with a maximum of two years.<br>  - The default retention period for Azure AD reports (premium) is 30 days. <br>  - The default retention period for the Azure diagnostic service is 90 days.|
 Operational requirements|  - Operational dashboards with native tools such as Azure Monitor Logs or third-party tooling <br>  - Controlling privileged activities with centralized roles <br> - Managed identities for Azure resources](/azure/active-directory/managed-identities-azure-resources/overview) for access to Azure services <br>  - Resource locks to protect editing and deleting resources
-  
+
+### Monitoring and alerting considerations
+
+- Which teams will need alert notifications?
+- Are there groups of services that will need different teams to be notified?
+- Are there existing service management tools in place that alerts need to be sent to?
+- Which services are considered business critical and need high priority notifications of issues?
+
+### Update management considerations
+
+- Are there existing update management tools used by the organization? Can they be extended to cover the cloud environment or are new tools required?
+- Which teams will be responsible for overseeing update management?
+- Are there groups of resources that share similar update schedules?
+- Are there groups of resources that cannot be updated at the same time for business continuity reasons?  
 
 ## Platform management and monitoring recommendations
 
