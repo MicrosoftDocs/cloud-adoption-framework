@@ -17,8 +17,6 @@ ms.custom: internal
 Security is a core consideration for all customers, in every environment.
 When designing and implementing an Azure landing zone, security should be a consideration throughout the process.
 
-... add more here ....
-
 The security design area focusses on the considerations and recommendations for design decisions as part of the landing zone. In addition to this, the [Secure methodology](/secure/index.md) in the Cloud Adoption Framework provides further in-depth guidance for holistic security processes and tools. 
 
 ### Azure Security Benchmark
@@ -34,31 +32,18 @@ The Azure Security Benchmark documentation specifies security controls and servi
 
 An enterprise must have visibility into what's happening within their technical cloud estate. Security monitoring and audit logging of Azure platform services is a key component of a scalable framework.
 
-- Data retention periods for audit data. Azure AD Premium reports have a 30-day retention period.
-
-- Long-term archiving of logs such as Azure activity logs, VM logs, and platform as a service (PaaS) logs.
-
-- Baseline security configuration via Azure in-guest VM policy.
-
-- Emergency patching for critical vulnerabilities.
-
-- Patching for VMs that are offline for extended periods of time.
-
-- Requirements for real-time monitoring and alerting.
-
-- Security information and event management integration with Azure Security Center and Azure Sentinel.
-
-- Vulnerability assessment of VMs.
-
 ### Platform security design considerations
 
-- Shared responsibility.
-
-- High availability and disaster recovery.
-
-- Consistent security across Azure services for data management and analytics and control plane operations.
-
-- Multitenancy for key platform components. The multitenancy includes Hyper-V, the HSMs underpinning Key Vault, and database engines.
+|Scope|Context|
+|-|-|
+| Security alerting| - Which teams require notifications for security alerts? <br> - are there groups of services that alerts require routing to different teams? <br> - business requirements for real-time monitoring and alerting. <br> - Security information and event management integration with Azure Security Center and Azure Sentinel.|
+| Security logging|- Data retention periods for audit data. Azure AD Premium reports have a 30-day retention period. <br> - Long-term archiving of logs such as Azure activity logs, VM logs, and platform as a service (PaaS) logs.|
+| Security controls| - Baseline security configuration via Azure in-guest VM policy. <br> - consider how your security controls will align with governance guardrails|
+| Vulnerability management|- Emergency patching for critical vulnerabilities. <br>- Patching for VMs that are offline for extended periods of time. <br> - Vulnerability assessment of VMs.
+|Shared responsibility| - Where are the hand-offs between team responsibilities that need to be considered when monitoring or responding to security events?|
+|High availability and disaster recovery|- In the event of a security event, which systems are business critical and should be considered as part of the business continuity planning? |
+|Consistent security across Azure services for data management and analytics and control plane operations| |
+|Multitenancy for key platform components. The multitenancy includes Hyper-V, the HSMs underpinning Key Vault, and database engines| |
 
 ## Security monitoring design recommendations
 
