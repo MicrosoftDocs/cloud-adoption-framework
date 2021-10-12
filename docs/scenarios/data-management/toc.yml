@@ -35,10 +35,8 @@ items:
         items:
         - name: Overview
           href: ./eslz-network-topology-and-connectivity.md
-        - name: Network Architecture
-          href: ./eslz-network-architecture.md
-        - name: Connect to environments privately
-          href: ./eslz-connect-to-environments-privately.md
+        - name: Network Architecture Considerations
+          href: ./eslz-network-considerations.md
         - name: Cross tenant private endpoint provisioning
           href: /ready/enterprise-scale/network-topology-and-connectivity.md
       - name: Resource organization
@@ -129,9 +127,11 @@ items:
         href: ./architectures/reference-architecture-data-mesh.md
 
     - name: Deployment templates
-      href: ./eslz-deployment-templates.md
+      href: ./architectures/eslz-deployment-templates.md
     - name: Policies
       href: ./architectures/policies.md
+    - name: Connecting to environments privately
+      href: ./architectures/connect-to-environments-privately.md
     - name: Frequently asked questions
       href: ./architectures/frequently-asked-questions.md
 
