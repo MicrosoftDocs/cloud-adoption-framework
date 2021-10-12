@@ -46,7 +46,7 @@ This scenario is designed to guide the end-to-end customer journey throughout th
 
 
 > [!TIP]
-> Deployable reference implementations and templates make it easy to get started with the data management and analytics scenario. To learn more, see [Deployment templates](eslz-deployment-templates.md).
+> Deployable reference implementations and templates make it easy to get started with the data management and analytics scenario. To learn more, see [Deployment templates](./architectures/frequently-asked-questions.md).
 
 ## Reference architectures
 

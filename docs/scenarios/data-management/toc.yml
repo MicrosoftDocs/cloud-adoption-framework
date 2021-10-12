@@ -127,7 +127,7 @@ items:
         href: ./architectures/reference-architecture-data-mesh.md
 
     - name: Deployment templates
-      href: ./architectures/eslz-deployment-templates.md
+      href: ./architectures/deployment-templates.md
     - name: Policies
       href: ./architectures/policies.md
     - name: Connecting to environments privately
