@@ -6,7 +6,7 @@ ms.author: hamoodaleem
 ms.date: 08/06/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
@@ -30,7 +30,7 @@ Following are guidelines on developing a data science template for your organiza
 
 ### Real-time
 
-- Include an Azure Data Factory or Azure Synapse deployment in templates and Cognitive Services.
+- Include an Azure Data Factory or Azure Synapse deployment in templates and Azure Cognitive Services.
 
 - The templates should provide all necessary tools to execute the data science exploration phase and the initial operationalization of the model.
 

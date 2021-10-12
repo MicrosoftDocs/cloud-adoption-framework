@@ -27,7 +27,7 @@ Azure Monitor provides a single unified hub for all monitoring and diagnostics d
 
 ::: zone target="docs"
 
- Start monitoring your:
+Start monitoring your:
 
 - [Applications](/azure/azure-monitor/app/app-insights-overview)
 - [Containers](/azure/azure-monitor/containers/container-insights-overview)

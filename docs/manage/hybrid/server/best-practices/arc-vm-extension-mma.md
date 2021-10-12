@@ -1,6 +1,6 @@
 ---
-title: Deploy Microsoft Monitoring Agent to Azure Arc Linux and Windows servers
-description: Learn how to manage extensions and use an Azure Resource Manager template to deploy Microsoft Monitoring Agent to Azure Arc Linux and Windows servers.
+title: Deploy the Log Analytics agent to Azure Arc Linux and Windows servers
+description: Learn how to manage extensions and use an Azure Resource Manager template to deploy the Log Analytics agent to Azure Arc Linux and Windows servers.
 author: likamrat
 ms.author: brblanch
 ms.date: 01/29/2021
@@ -10,13 +10,13 @@ ms.subservice: manage
 ms.custom: think-tank, e2e-hybrid
 ---
 
-# Manage extensions and use an Azure Resource Manager template to deploy Microsoft Monitoring Agent to Azure Arc Linux and Windows servers
+# Manage extensions and use an Azure Resource Manager template to deploy the Log Analytics agent to Azure Arc Linux and Windows servers
 
-This article provides guidance on how to manage extensions to Azure Arc enabled servers. Virtual machine extensions are small applications that provide post-deployment configuration and automation tasks such as software installation, anti-virus protection, or a mechanism to run a custom script.
+This article provides guidance on how to manage extensions to Azure Arc-enabled servers. Virtual machine extensions are small applications that provide post-deployment configuration and automation tasks such as software installation, anti-virus protection, or a mechanism to run a custom script.
 
-Azure Arc enabled servers, enables you to deploy Azure VM extensions to non-Azure Windows and Linux VMs, giving you a hybrid or multicloud management experience that levels to Azure VMs.
+Azure Arc-enabled servers, enables you to deploy Azure VM extensions to non-Azure Windows and Linux VMs, giving you a hybrid or multicloud management experience that levels to Azure VMs.
 
-You can use the Azure portal, Azure CLI, an Azure Resource Manager template (ARM template), PowerShell script or Azure policies to manage the extension deployment to Azure Arc enabled servers, both Linux and Windows. In the following procedures, you'll use an ARM template to deploy the Log Analytics agent to your servers. This onboards them in Azure services that use this agent: Azure Monitor, Azure Security Center, Azure Sentinel, and so on.
+You can use the Azure portal, Azure CLI, an Azure Resource Manager template (ARM template), PowerShell script or Azure policies to manage the extension deployment to Azure Arc-enabled servers, both Linux and Windows. In the following procedures, you'll use an ARM template to deploy the Log Analytics agent to your servers. This onboards them in Azure services that use this agent: Azure Monitor, Azure Security Center, Azure Sentinel, and so on.
 
 > [!IMPORTANT]
 > The procedures in this article assumes you've already deployed VMs, or servers that are running on-premises or on other clouds, and you have connected them to Azure Arc. If you haven't, the following information can help you automate this.
@@ -42,9 +42,9 @@ Review the [Azure Monitor supported OS documentation](/azure/azure-monitor/vm/vm
 
 2. As mentioned, this guide starts at the point where you already deployed and connected VMs or bare-metal servers to Azure Arc. For this scenario, we use a Google Cloud Platform (GCP) instance that has been already connected to Azure Arc and is visible as a resource in Azure. As shown in the following screenshots:
 
-    ![A screenshot of a resource group from an Azure Arc enabled server.](./media/arc-vm-extension-mma/mma-resource-group.png)
+    ![A screenshot of a resource group from an Azure Arc-enabled server.](./media/arc-vm-extension-mma/mma-resource-group.png)
 
-    ![A screenshot of a connected status from an Azure Arc enabled server.](./media/arc-vm-extension-mma/mma-connected-status.png)
+    ![A screenshot of a connected status from an Azure Arc-enabled server.](./media/arc-vm-extension-mma/mma-connected-status.png)
 
 3. [Install or update Azure CLI](/cli/azure/install-azure-cli). Azure CLI should be running version 2.7 or later. Use `az --version` to check your current installed version.
 
@@ -90,7 +90,7 @@ Review the [Azure Monitor supported OS documentation](/azure/azure-monitor/vm/vm
     --parameters <The `log_analytics-template.parameters.json` template file location>
     ```
 
-## Azure Arc enabled servers Microsoft Monitoring Agent extension deployment
+## Azure Arc-enabled servers Log Analytics agent extension deployment
 
 1. Edit the [extensions parameters file](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/extensions/arm/mma-template.parameters.json)
 
@@ -100,15 +100,15 @@ Review the [Azure Monitor supported OS documentation](/azure/azure-monitor/vm/vm
 
     - The VM name as registered in Azure Arc.
 
-      ![A screenshot of a machine name from an Azure Arc enabled server.](./media/arc-vm-extension-mma/mma-machine-name.png)
+      ![A screenshot of a machine name from an Azure Arc-enabled server.](./media/arc-vm-extension-mma/mma-machine-name.png)
 
-    - The location of the resource group where you registered the Azure Arc enabled server.
+    - The location of the resource group where you registered the Azure Arc-enabled server.
 
       ![A screenshot of an Azure region.](./media/arc-vm-extension-mma/mma-azure-region.png)
 
     - Information about the Log Analytics workspace you previously created (workspace ID and key). These parameters are used to configure the MMA agent. You can find this information by going to your Log Analytics workspace and under **Settings**, select **Agents management**.
 
-      ![A screenshot of Agents management within an Azure Arc enabled server.](./media/arc-vm-extension-mma/agents-management.png)
+      ![A screenshot of **Agents management** within an Azure Arc-enabled server.](./media/arc-vm-extension-mma/agents-management.png)
 
       ![A screenshot of a workspace configuration.](./media/arc-vm-extension-mma/mma-workspace-config.png)
 

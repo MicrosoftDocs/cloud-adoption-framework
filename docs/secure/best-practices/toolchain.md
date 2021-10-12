@@ -30,6 +30,6 @@ Commonly used tools in Azure security:
 Additional resources:
 
 - [Microsoft zero-trust blog](https://www.microsoft.com/security/blog/zero-trust/)
-- [Implementing a zero-trust security model at Microsoft](https://www.microsoft.com/en-us/itshowcase/implementing-a-zero-trust-security-model-at-microsoft)
+- [Implementing a zero-trust security model at Microsoft](https://www.microsoft.com/insidetrack/implementing-a-zero-trust-security-model-at-microsoft)
 - [Microsoft security blog](https://www.microsoft.com/security/blog/)
 - [Microsoft security response center (MSRC) blog](https://msrc-blog.microsoft.com/)

@@ -18,9 +18,9 @@ Enterprise-scale for AKS represents the strategic design path and target technic
 
 This solution is open source. You can adapt the templates to create an architecture that meets your needs. The following guidance provides design considerations for implementing a scalable AKS cluster in your landing zone. The design decisions your organization makes, based on this guidance, can lay the groundwork for scalability.
 
-## Implement a Platform Foundation
+## Implement a platform foundation
 
-Enterprise-scale for AKS assumes that a platform foundation that takes care of the shared services (network, security, identity, and governance) required to effectively construct and operationalize a landing zone has been successfully implemented. This is not mandatory to implement Enterprise scale for AKS but it does take care of a lot of the security and management required to safely manage your cloud environment. If you already have one, you can skip this step. For more information on this, review these articles:
+Enterprise-scale for AKS assumes that a platform foundation that takes care of the shared services (network, security, identity, and governance) required to effectively construct and operationalize a landing zone has been successfully implemented. This isn't mandatory when implementing enterprise-scale for AKS, but it does handle much of the security and management required to safely manage your cloud environment. If you already have one, you can skip this step. For more information on this, review these articles:
 
 - [Start with Cloud Adoption Framework enterprise-scale landing zones](../../ready/enterprise-scale/index.md)
 - [Implement Cloud Adoption Framework enterprise-scale landing zones in Azure](../../ready/enterprise-scale/implementation.md)
@@ -55,9 +55,9 @@ The following conceptual reference architecture is an example that shows a golde
 
 [![Enterprise-scale for AKS architecture](./media/aks-eslz-architecture.png)](./media/aks-eslz-architecture.png#lightbox)
 
-Enterprise-scale for AKS is an open-source collection of ARM, Bicep and Terraform templates, available in the [Enterprise Scale for AKS](https://github.com/Azure/Enterprise-Scale-for-AKS) repo.
+Enterprise-scale for AKS is an open-source collection of ARM, Bicep and Terraform templates, available in the [`Enterprise Scale for AKS`](https://github.com/Azure/Enterprise-Scale-for-AKS) repo.
 
-These templates are used to deploy infrastructure components such as virtual machines, networks, or storage to Azure. To get the templates, see the  [Enterprise Scale for AKS](https://github.com/Azure/Enterprise-Scale-for-AKS) repo. There, you will find various scenarios to help get you started on setting up your AKS environment quickly. Conceptually, this workload should sit in the landing zones management group of an enterprise-scale platform foundation as indicated in the image above. 
+These templates are used to deploy infrastructure components such as virtual machines, networks, or storage to Azure. To get the templates, see the [`Enterprise Scale for AKS`](https://github.com/Azure/Enterprise-Scale-for-AKS) repo. There, you will find various scenarios to help get you started on setting up your AKS environment quickly. Conceptually, this workload should sit in the landing zones management group of an enterprise-scale platform foundation as indicated in the image above.
 
 ## Next steps
 

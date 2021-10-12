@@ -1,6 +1,6 @@
 ---
 title: Plan methodology for hybrid and multicloud strategy
-description: Describe the scenario's impact on planning
+description: Learn how to plan for hybrid and multicloud scenarios.
 author: mpvenables
 ms.author: brblanch
 ms.date: 02/01/2020
@@ -163,7 +163,7 @@ Do you have to look at the existing estate differently? Or is a simple VM to VM 
 
 ## Hybrid and multicloud adoption plan
 
-Do you have a specific DevOps backlog the customer should use? Or is the standard adoption plan template still sufficient? Check out the strategy and plan template in the [Tools and templates](../../reference/tools-templates.md) section.
+Do you have a specific DevOps backlog the customer should use? Or is the standard adoption plan template still sufficient? Check out the strategy and plan template in the [Tools and templates](../../resources/tools-templates.md) section.
 
 ## Hybrid and multicloud readiness plan
 

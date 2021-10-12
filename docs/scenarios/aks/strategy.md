@@ -1,6 +1,6 @@
 ---
 title: Strategy for modern application platform adoption
-description: Describe the scenario's impact on strategy
+description: Learn about the strategic impact of modern application platform adoption.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 03/01/2021
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-aks
 ---
 
-# Strategic impact of modern application platform
+# Strategic impact of modern application platform adoption
 
 Best practice encourages customers to create a single centralized cloud adoption strategy, using the [Cloud Adoption Framework's Strategy methodology](../../strategy/index.md). If you haven't already, use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record your cloud adoption strategy.
 
@@ -23,7 +23,7 @@ Application services and containers can accelerate cloud adoption strategies, if
 - Pace of innovation: delivering technology-driven products and services to market faster than the competition
 - Streamlined operations: operations of a diverse set of workloads need to be optimized to reduce operational overhead
 
-Reducing the direct dependencies between workload operations and the operations of the underlying infrastructure through abstraction options like applications services (PaaS solutions) and orchestrated containers, can contribute to the success of each of these common motivations.
+Reducing the direct dependencies between workload operations and the operations of the underlying infrastructure through abstraction options like applications services (PaaS solutions) and orchestrated containers, can contribute to the success of these common motivations.
 
 ## Modern container outcomes
 

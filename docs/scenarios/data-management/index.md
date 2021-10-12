@@ -6,7 +6,7 @@ ms.author: mboswell
 ms.date: 10/08/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: overview
+ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
@@ -33,26 +33,26 @@ For more information, see [Data summary and maturity model for Azure](./govern.m
 
 This scenario also provides a framework built on the following key principles. These principles address current challenges with complex data architectures that don't scale to the needs of enterprises.
 
-**Allow**:
+**Allow:**
 - Scale without increased complexity.
 - Separate concerns to make governance easier.
 - Self-serve data infrastructure.
 
-**Follow**:
+**Follow:**
 - Best practices for well-architected cloud services.
 
-**Support**:
+**Support:**
 - On-premises and multicloud scenarios.
 
-**Adopt**:
+**Adopt:**
 - A product and vendor agnostic approach.
 - The Cloud Adoption Framework.
 
-**Commit to**:
+**Commit to:**
 - Azure landing zones as the baseline infrastructure for all workloads.
 - An operational model.
 
-**Enable**:
+**Enable:**
 - Common data infrastructure.
 - Distributed architecture under centralized governance.
 - Secure network line-of-sight.

@@ -1,5 +1,5 @@
 ---
-title: "The virtual datacenter: A network perspective"
+title: 'The virtual datacenter: A network perspective'
 description: Use the Cloud Adoption Framework for Azure to learn how to use Azure to seamlessly extend your infrastructure into the cloud and build multitier architectures.
 author: tracsman
 ms.author: brblanch
@@ -11,8 +11,7 @@ ms.subservice: general
 ms.custom: think-tank, virtual-network
 ---
 
-<!-- docutune:disable -->
-<!-- cSpell:ignore iptables DDOS ITSM LLAP anycast vwan -->
+<!-- cSpell:ignore  LLAP vwan howitworks vpngateways erdirect frontdoor afds whatis -->
 
 # The virtual datacenter: A network perspective
 
@@ -144,7 +143,7 @@ The role of each spoke can be to host different types of workloads. The spokes a
 ### Subscription limits and multiple hubs
 
 > [!IMPORTANT]
-> Based on the size of your Azure deployments, a multiple hub strategy may be needed. When designing your hub and spoke strategy, ask "can this design scale to use another hub virtual network in this region?", also, "can this design scale to accommodate multiple regions?" It's far better to plan for a design that scales and not need it, than to fail to plan and need it.
+> Based on the size of your Azure deployments, a multiple hub strategy may be needed. When designing your hub and spoke strategy, ask "Can this design scale to use another hub virtual network in this region?" and "Can this design scale to accommodate multiple regions?" It's far better to plan for a design that scales and not need it, than to fail to plan and need it.
 >
 > When to scale to a secondary (or more) hub will depend on myriad factors, usually based on inherent limits on scale. Be sure to review the subscription, virtual network, and virtual machine [limits][limits] when designing for scale.
 
@@ -251,7 +250,7 @@ Usually, the central IT team and security teams have responsibility for requirem
 The preceding diagram shows the enforcement of two perimeters with access to the internet and an on-premises network, both resident in the DMZ hub. In the DMZ hub, the perimeter network to internet can scale up to support many lines of business, using multiple farms of Web Application Firewalls (WAFs) or Azure Firewalls. The hub also allows for on-premises connectivity via VPN or ExpressRoute as needed.
 
 > [!NOTE]
-> In the preceding diagram, in the "DMZ Hub", many of the following features can be bundled together in an Azure Virtual WAN hub (such as virtual networks, user-defined routes, network security groups, VPN gateways, ExpressRoute gateways, Azure load balancers, Azure Firewalls, Firewall Manager, and DDOS). Using Azure Virtual WAN hubs can make the creation of the hub virtual network, and thus the VDC, much easier, since most of the engineering complexity is handled for you by Azure when you deploy an Azure Virtual WAN hub.
+> In the preceding diagram, in the `DMZ Hub`, many of the following features can be bundled together in an Azure Virtual WAN hub (such as virtual networks, user-defined routes, network security groups, VPN gateways, ExpressRoute gateways, Azure load balancers, Azure Firewalls, Firewall Manager, and DDOS). Using Azure Virtual WAN hubs can make the creation of the hub virtual network, and thus the VDC, much easier, since most of the engineering complexity is handled for you by Azure when you deploy an Azure Virtual WAN hub.
 
 [Virtual networks][virtual-network]. The hub is typically built on a virtual network with multiple subnets to host the different types of services that filter and inspect traffic to or from the internet via Azure Firewall, NVAs, WAF, and Azure Application Gateway instances.
 
@@ -539,7 +538,7 @@ Learn more about the Azure capabilities discussed in this document.
 [RGMgmt]: /azure/azure-resource-manager/management/manage-resource-groups-portal#what-is-a-resource-group
 [ALB]: /azure/load-balancer/load-balancer-overview
 [DDoS]: /azure/ddos-protection/ddos-protection-overview
-[PIP]: /azure/virtual-network/virtual-network-public-ip-address
+[PIP]: /azure/virtual-network/ip-services/virtual-network-public-ip-address
 [azure-front-door]: /azure/frontdoor/front-door-overview
 [AFDWAF]: /azure/web-application-firewall/afds/afds-overview
 [AppGW]: /azure/application-gateway/overview
@@ -559,6 +558,4 @@ Learn more about the Azure capabilities discussed in this document.
 [SQL]: /azure/azure-sql/database/sql-database-paas-overview
 [cosmos-db]: /azure/cosmos-db/introduction
 [IoT]: /azure/iot-fundamentals/iot-introduction
-[machine-learning]: /azure/machine-learning/overview-what-is-azure-ml
-
-<!--docutune:enable -->
+[machine-learning]: /azure/machine-learning/overview-what-is-azure-machine-learning

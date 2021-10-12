@@ -1,7 +1,7 @@
 ---
 title: DNS for on-premises and Azure
 description: Examine key design considerations and recommendations surrounding DNS for on-premises and Microsoft Azure.
-author: sitarant 
+author: sitarant
 ms.author: sitarant
 ms.date: 06/17/2021
 ms.topic: conceptual
