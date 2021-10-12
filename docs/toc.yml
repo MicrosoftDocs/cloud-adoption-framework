@@ -341,7 +341,16 @@ items:
           href: ready/landing-zone/design-area/security.md
 
         - name: Management
-          href: ready/landing-zone/design-area/management.md
+          items:
+          - name: Overview
+            href: ready/landing-zone/design-area/management.md
+          - name: Platform
+            href: ready/landing-zone/design-area/management-platform.md
+          - name: Applications
+            href: ready/landing-zone/design-area/management-applications.md
+          - name: Business continuity and disaster recovery
+            href: ready/landing-zone/design-area/management-bcdr.md
+
 
         - name: Platform automation and DevOps
           href: ready/landing-zone/design-area/platform-automation-devops.md
