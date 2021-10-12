@@ -13,30 +13,27 @@ ms.custom: internal
 
 # Management - Platform 
 
+As organizations design and implement cloud environments, the underpinning management and monitoring of the platform services will be a key consideration.
+Structuring these services to meet the needs of the business as the environment scales will be an important factor in success cloud adoption.
+
+How management operations are delivered as part of a landing zone will be directly influenced by the cloud operating model choices made as part of the earlier planning phases - the degree to which management is centralized for the platform being a key example of this. 
+
+Use the guidance in this section to consider how to approach platform management in your cloud environment. 
+
 ## Platform management and monitoring - Design considerations
 
-- Use an Azure Monitor Log Analytics workspace as an administrative boundary.
-- Application-centric platform monitoring, encompassing both hot and cold telemetry paths for metrics and logs, respectively:
-  - Operating system metrics; for example, performance counters and custom metrics
-  - Operating system logs; for example, Internet Information Services, Event Tracing for Windows, and syslogs
-  - Resource health events
-- Security audit logging and achieving a horizontal security lens across your organization's entire Azure estate:
-  - Potential integration with on-premises security information and event management (SIEM) systems such as ArcSight or the Onapsis security platform
-  - Potential integration with software as a service (SaaS) offerings such as ServiceNow
-  - Azure activity logs
-  - Azure Active Directory (Azure AD) audit reports
-  - Azure diagnostic services, logs, and metrics; Azure Key Vault audit events; network security group (NSG) flow logs; and event logs
-  - Azure Monitor, Azure Network Watcher, Azure Security Center, and Azure Sentinel
-- Azure data retention thresholds and archiving requirements:
-  - The default retention period for Azure Monitor Logs is 30 days, with a maximum of two years.
-  - The default retention period for Azure AD reports (premium) is 30 days.
-  - The default retention period for the Azure diagnostic service is 90 days.
+### Logging
 
-- Operational requirements:
-  - Operational dashboards with native tools such as Azure Monitor Logs or third-party tooling
-  - Controlling privileged activities with centralized roles
-  - [Managed identities for Azure resources](/azure/active-directory/managed-identities-azure-resources/overview) for access to Azure services
-  - Resource locks to protect editing and deleting resources
+- Consider using tools such as an Azure Monitor Log Analytics workspace as an administrative boundary.
+- Which teams will use the logs and telemetry from the platform? Who will require access to the logs?
+
+Consider the following items relating to logging data to help inform the types of data you may wish to collate and use:
+
+|Scope|Context|
+|-|-|
+|Application-centric platform monitoring <br>  (encompassing both hot and cold telemetry paths for metrics and logs, respectively(|- Operating system metrics; for example, performance counters and custom metrics - Operating system logs; for example, Internet Information Services, Event Tracing for Windows, and syslogs <br> - Resource health events <br> - Security audit logging and achieving a horizontal security lens across your organization's entire Azure estate: <br> - Potential integration with on-premises security information and event management (SIEM) systems such as ArcSight or the Onapsis security platform <br> - Potential integration with software as a service (SaaS) offerings such as ServiceNow <br> - Azure activity logs <br> - Azure Active Directory (Azure AD) audit reports <br> - Azure diagnostic services, logs, and metrics; Azure Key Vault audit events; network security group (NSG) flow logs; and event logs <br> - Azure Monitor, Azure Network Watcher, Azure Security Center, and Azure Sentinel|
+ Azure data retention thresholds and archiving requirements|  - The default retention period for Azure Monitor Logs is 30 days, with a maximum of two years.<br>  - The default retention period for Azure AD reports (premium) is 30 days. <br>  - The default retention period for the Azure diagnostic service is 90 days.|
+Operational requirements|  - Operational dashboards with native tools such as Azure Monitor Logs or third-party tooling <br>  - Controlling privileged activities with centralized roles <br> - Managed identities for Azure resources](/azure/active-directory/managed-identities-azure-resources/overview) for access to Azure services <br>  - Resource locks to protect editing and deleting resources
   
 
 ## Platform management and monitoring recommendations
