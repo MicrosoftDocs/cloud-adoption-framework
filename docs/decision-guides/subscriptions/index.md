@@ -3,7 +3,7 @@ title: Subscription decision guide
 description: Learn about subscription design strategies and management group hierarchy to organize your Azure assets.
 author: alexbuckgit
 ms.author: abuck
-ms.date: 08/23/2021
+ms.date: 10/12/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: decision-guide
