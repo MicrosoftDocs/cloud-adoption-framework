@@ -543,7 +543,7 @@ Learn more about the Azure capabilities discussed in this document.
 [AFDWAF]: /azure/web-application-firewall/afds/afds-overview
 [AppGW]: /azure/application-gateway/overview
 [AppGWWAF]: /azure/web-application-firewall/ag/ag-overview
-[MonitorOverview]: /azure/networking/networking-overview#monitor
+[MonitorOverview]: /azure/networking/fundamentals/networking-overview#monitor
 [AzureMonitor]: /azure/azure-monitor/overview
 [Metrics]: /azure/azure-monitor/essentials/data-platform-metrics
 [Logs]: /azure/azure-monitor/logs/data-platform-logs

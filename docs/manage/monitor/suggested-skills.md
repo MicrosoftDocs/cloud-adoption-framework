@@ -37,7 +37,7 @@ Developing the necessary skills can be accelerated with the following learning p
 
 - [Design a Monitoring Strategy for Infrastructure in Microsoft Azure](https://www.pluralsight.com/courses/microsoft-azure-monitoring-strategy-infrastructure-design-update) helps you learn foundational knowledge of monitoring capabilities and solutions in Azure.
 
-- [How to monitor your Kubernetes clusters](https://www.youtube.com/watch?time_continue=3&feature=emb_logo&v=RjsNmapggPU) provides an intermediate level deep dive to help you learn about monitoring your Kubernetes cluster with Azure Monitor for containers.
+- [How to monitor your Kubernetes clusters](https://www.youtube.com/watch?feature=emb_logo&v=RjsNmapggPU) provides an intermediate level deep dive to help you learn about monitoring your Kubernetes cluster with Azure Monitor for containers.
 
 - Learn with Azure Monitor how to monitor data from [Azure Storage and HDInsight](https://www.pluralsight.com/courses/microsoft-azure-data-storage-monitoring).
 
