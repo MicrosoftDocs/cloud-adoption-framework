@@ -229,7 +229,7 @@ Contoso creates an Azure DevOps project, configures a CI build to create the con
      ![Screenshot of adding another Docker Compose task in Azure DevOps.](./media/contoso-migration-rebuild/vsts7.png)
     *Figure 18: Adding another Docker Compose task.*
 
-9. They select the first task to build and configure the build with the Azure subscription, authorization, and Container Registry.
+9. They select the first task to build and configure the build with the Azure subscription, the authorization, and the container registry.
 
     ![Screenshot of building and configuring the build in Azure DevOps.](./media/contoso-migration-rebuild/vsts8.png)
     *Figure 19: Building and configuring the build.*
