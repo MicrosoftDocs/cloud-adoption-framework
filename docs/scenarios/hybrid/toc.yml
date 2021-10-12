@@ -26,6 +26,8 @@ items:
       items:
       - name: Identity and access management
         href: eslz-identity-and-access-management.md
+      - name: Network connectivity
+        href: eslz-arc-servers-connectivity.md
       - name: Governance disciplines 
         href: eslz-security-governance-and-compliance.md  
     - name: Implementation options
