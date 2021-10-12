@@ -16,9 +16,21 @@ As organizations begin their cloud adoption journey, starting with strong contro
 
 Governance provides mechanisms and processes to maintain control over your applications and resources in Azure.
 
+![Landing Zone image](../../enterprise-scale/media/lz-design.png)
+
 At part of the design area review, explore the considerations and recommendations outlined here in order to make informed decisions as you plan your landing zone. 
 
 The governance design area focusses on the considerations and recommendations for design decisions as part of the landing zone. In addition to this, the [Govern methodology](/govern/index.md) in the Cloud Adoption Framework provides further in-depth guidance for holistic governance processes and tools. 
+
+The govern methodology is formed of five disciplines:
+|Discipline|Context|
+|-|-|
+| Cost Management| Explore guidance to cost reporting control techniques|
+| Security baseline| Explore this further as part of the [Security design area](./security.md)|
+| Resource consistency| Explore guidance for naming and tagging resources as part of environment governance |
+| Identity baseline| Covered in depth as part of the [Identity and Access Management](./identity-access.md) design area|
+| Deployment acceleration| Explore this further as part of the [Platform automation and DevOps](./platform-automation-devops.md) design area|
+
 
 ## Azure governance considerations
 
@@ -36,8 +48,6 @@ The governance design area focusses on the considerations and recommendations fo
 -	Using Azure Spot Virtual Machines allows you to take advantage of our unused capacity at a significant cost savings. Azure Spot Virtual Machines are great for workloads that can handle interruptions like batch processing jobs, dev/test environments, large compute workloads, and more.
 -	Some Azure services are free for 12 month and other services are always free. Selecting the right Azure services helps you to reduce costs.
 - Azure offers many ways to host your code. Operate more cost efficiently by selecting the right compute service for your application.
-
-
 
 ### Resource consistency considerations
 
@@ -69,12 +79,6 @@ Azure Policy is essential to ensuring security and compliance within enterprise 
 
 - Use tools such as Azure Cost management and billing to implement financial oversight on resources in your environment
 - Use tools such as tags in Azure to append metadata to resources to enable granular analysis of spend - for example, cost centre or project name
-
-### Resource consistency recommendations
-
-- Use tools such as Azure Resource Manager (ARM) templates to ensure consistent resource baseline configurations (sometimes referred to as 'T-shirt sizes')
-- Use tools such as resource groups to act as containers for resources with a common lifecycle as well as shared management constraints such as policy or Azure role-based access control (Azure RBAC) requirements 
-- Refer to the guidance in the [resource organization - subscriptions](./resource-org-subscriptions.md) design area to explore how subscription quotas can be used to set cost controls
 
 ### Azure Policy - Design recommendations
 
