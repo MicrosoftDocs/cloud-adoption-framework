@@ -77,9 +77,9 @@ Upon successful completion, you will have your Linux server, connected as a new 
 
 ![A screenshot of the `az_connect_linux.sh` Linux script running.](./media/onboard-server/az-connect-linux.png)
 
-![A screenshot of an Azure Arc enabled resource in the Azure portal.](./media/onboard-server/linux-resource.png)
+![A screenshot of an Azure Arc-enabled resource in the Azure portal.](./media/onboard-server/linux-resource.png)
 
-![A screenshot of details from an Azure Arc enabled resource in the Azure portal.](./media/onboard-server/linux-resource-detail.png)
+![A screenshot of details from an Azure Arc-enabled resource in the Azure portal.](./media/onboard-server/linux-resource-detail.png)
 
 ## Delete the deployment
 

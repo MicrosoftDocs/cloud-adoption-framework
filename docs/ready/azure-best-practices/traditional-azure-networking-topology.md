@@ -117,9 +117,9 @@ The following figure shows this topology.
 - When you have hub-and-spoke networks in multiple Azure regions and most landing zones need to connect across regions (or when using direct peering to bypass hub NVAs isn't compatible with your security requirements), use hub NVAs to connect hub virtual networks in each region to each other and route traffic across regions. Global virtual network peering or ExpressRoute circuits can help to connect Hub virtual networks in the following ways:
 
   - Global virtual network peering provides a low latency and high throughput connection but generates [traffic fees](/azure/virtual-network/virtual-network-peering-overview#pricing).
-  
+
   - Routing via ExpressRoute might lead to increased latency (due to MSEE hairpin) and throughput will be constrained to the [ExpressRoute Gateway SKU](/azure/expressroute/expressroute-about-virtual-network-gateways#gwsku).
-   
+
 The following figure shows both options:
 
  ![Diagram that illustrates options for hub-to-hub connectivity.](./media/hub-to-hub-er-or-peering.png)
@@ -137,7 +137,7 @@ The following figure shows both options:
 - When using ExpressRoute circuits for cross-region connectivity, spokes in different regions will communicate directly and bypass the firewall, as they will learn via BGP routes to the spokes of the remote hub. If you require traffic across spokes to be inspected by the firewall NVAs in the hub virtual networks, you must implement one of these options:
 
   - Create more specific route entries in the spoke UDRs for the firewall in the local hub virtual network to redirect traffic across hubs.
-  
+
   - To simplify route configuration, [disable BGP propagation](/azure/virtual-network/virtual-networks-udr-overview#border-gateway-protocol) on the spoke route tables.
 
 - When your organization requires hub-and-spoke network architectures across more than two Azure regions, global transit connectivity between landing zones virtual networks across Azure regions is required, and you want to minimize network management overhead, it's recommended to evaluate a [managed global transit network architecture](./virtual-wan-network-topology.md) that's based on Virtual WAN.

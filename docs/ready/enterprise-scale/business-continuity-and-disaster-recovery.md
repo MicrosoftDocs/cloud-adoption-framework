@@ -31,7 +31,7 @@ Consider the following factors:
   - Data sharing and dependencies between zones.
 
   - The effect of Availability Zones on update domains compared to availability sets.
-  
+
   - The percentage of workloads that can be under maintenance simultaneously.
 
   - Support for specific virtual machine (VM) stock-keeping units with Availability Zones.

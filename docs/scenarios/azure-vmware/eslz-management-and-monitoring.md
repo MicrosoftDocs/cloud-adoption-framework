@@ -88,4 +88,4 @@ Review the following recommendations for guest management and monitoring of work
 Learn about design considerations for Azure VMware Solution business continuity and disaster recovery in an enterprise-scale scenario.
 
 > [!div class="nextstepaction"]
-> [Business continuity and disaster recovery for Azure VMware Solution](eslz-business-continuity-and-disaster-recovery.md)
+> [Business continuity and disaster recovery for Azure VMware Solution](./eslz-business-continuity-and-disaster-recovery.md)

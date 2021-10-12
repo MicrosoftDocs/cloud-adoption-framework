@@ -25,12 +25,12 @@ Azure Machine Learning provides all the tools developers and data scientists nee
 - Jupyter notebooks: use our [example notebooks](https://github.com/Azure/MachineLearningNotebooks) or create your own notebooks to use our SDK for Python samples.
 - R scripts or notebooks in which you use the [SDK for R](https://azure.github.io/azureml-sdk-for-r/reference/index.html) to write your own code, or use the R modules in the designer.
 - The [many models solution accelerator (preview)](https://github.com/microsoft/solution-accelerator-many-models) builds on Azure Machine Learning and enables you to train, operate, and manage hundreds or even thousands of machine learning models.
-- [Visual Studio Code extension](/azure/machine-learning/tutorial-setup-vscode-extension).
+- [Visual Studio Code extension](/azure/machine-learning/how-to-setup-vs-code).
 - [Machine learning CLI](/azure/machine-learning/reference-azure-machine-learning-cli).
 - Open-source frameworks such as PyTorch, TensorFlow, and scikit-learn and many more
 - [Reinforcement learning](/azure/machine-learning/how-to-use-reinforcement-learning) with Ray RLlib.
 
-You can even use [MLflow to track metrics and deploy models](/azure/machine-learning/how-to-use-mlflow) or [Kubeflow](https://www.kubeflow.org/docs/azure/) to build end-to-end workflow pipelines.
+You can even use [MLflow to track metrics and deploy models](/azure/machine-learning/how-to-use-mlflow) or [Kubeflow](https://www.kubeflow.org/docs/distributions/azure/) to build end-to-end workflow pipelines.
 
 ## Build machine learning models in Python or R
 
@@ -104,7 +104,7 @@ Azure Machine Learning works with other services on the Azure platform, and also
 - **Azure Pipelines:** For more information, see [Train and deploy machine learning models](/azure/devops/pipelines/targets/azure-machine-learning).
 - **Git repository logs:** For more information, see [Git integration](/azure/machine-learning/concept-train-model-git-integration).
 - **MLflow:** For more information, see [MLflow to track metrics and deploy models](/azure/machine-learning/how-to-use-mlflow).
-- **Kubeflow:** For more information, see [Build end-to-end workflow pipelines](https://www.kubeflow.org/docs/azure/).
+- **Kubeflow:** For more information, see [Build end-to-end workflow pipelines](https://www.kubeflow.org/docs/distributions/azure/).
 - **Secure communications:** Your Azure Storage account, compute targets, and other resources can be used securely inside a virtual network to train models and perform inference. For more information, see [Secure experimentation and inference in a virtual network](/azure/machine-learning/how-to-network-security-overview).
 
 ## Next steps
