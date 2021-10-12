@@ -113,5 +113,5 @@ Use the following templates to deploy other data integrations and data products 
 
 ## Next steps
 
-- Continue to [Deployment templates for enterprise-scale for analytics and AI deployments](../eslz-deployment-templates.md).
+- Continue to [Deployment templates for enterprise-scale for analytics and AI deployments](../architectures/deployment-templates.md).
 - Learn more in [Understand data privacy for the data management and analytics scenario in Azure](../secure-data-privacy.md).

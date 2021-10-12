@@ -124,5 +124,5 @@ To control the deployment of data integration and data product services, follow 
 
 ## Next steps
 
-- [Deployment templates for enterprise-scale for analytics and AI deployments](./eslz-deployment-templates.md)
+- [Deployment templates for enterprise-scale for analytics and AI deployments](./architectures/deployment-templates.md)
 - [An introduction to Azure Automation](/azure/automation/automation-intro)
