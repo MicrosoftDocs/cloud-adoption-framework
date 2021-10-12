@@ -34,3 +34,8 @@ To expand on the previous section, this section will consider a federated model 
 - Use [Azure Monitor Logs](/azure/azure-monitor/platform/data-platform-logs) for insights and reporting. Logs contain different types of data that's organized into records with different sets of properties. They're useful for analyzing complex data from a range of sources, such as performance data, events, and traces.
 - When necessary, use shared storage accounts within the landing zone for Azure diagnostic extension log storage.
 - Use [Azure Monitor alerts](/azure/azure-monitor/platform/alerts-overview) for the generation of operational alerts. Azure Monitor alerts unify alerts for metrics and logs and use features such as action and smart groups for advanced management and remediation purposes.
+
+
+## Well-architected Framework
+
+For further information on considerations for application-specific management, review the [Operational excellence](/azure/architecture/framework/#operational-excellence) of the Well-architected Framework
