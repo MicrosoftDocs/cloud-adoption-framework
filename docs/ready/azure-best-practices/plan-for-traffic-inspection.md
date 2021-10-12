@@ -30,7 +30,7 @@ As an alternative to Azure Virtual Network TAP, evaluate the following options:
 
 - Evaluate whether the latest version of NSG flow logs provides the level of detail that you need.
 -
-- NSG Flow Logs can be analyzed using several tools, including 3rd-party Elastic Stack, Grafana and Graylog. The recommended Azure first-party solution is [Azure Traffic Analytics](https://docs.microsoft.com/azure/network-watcher/traffic-analytics).
+- NSG Flow Logs can be analyzed using several tools, including 3rd-party Elastic Stack, Grafana, and Graylog. The recommended Azure first-party solution is [Azure Traffic Analytics](https://docs.microsoft.com/azure/network-watcher/traffic-analytics).
 
 - Use partner solutions for scenarios that require deep packet inspection.
 
