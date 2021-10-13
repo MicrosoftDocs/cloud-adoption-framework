@@ -22,6 +22,12 @@ items:
     items:
     - name: Azure landing zones
       href: ready.md
+    - name: Design areas 
+      items:
+      - name: Identity and access management
+        href: eslz-identity-and-access-management.md
+      - name: Governance disciplines 
+        href: eslz-security-governance-and-compliance.md  
     - name: Implementation options
       items:
       - name: Start small with basic VM management
