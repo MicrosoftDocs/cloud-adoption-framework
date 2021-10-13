@@ -10,8 +10,6 @@ ms.subservice: manage
 ms.custom: think-tank, e2e-hybrid
 ---
 
-<!-- cspell:ignore netplan -->
-
 # Create a VMware vSphere template for Ubuntu Server 18.04
 
 This article provides guidance for creating an Ubuntu Server 18.04 VMware vSphere virtual machine template.
@@ -57,7 +55,7 @@ This article provides guidance for creating an Ubuntu Server 18.04 VMware vSpher
 
 - Power on the VM and start the Ubuntu installation. No specific instructions here but:
 
-  - Consider using a static IP address (optional)
+  - Consider using a static IP address
   - Install OpenSSH server
 
     ![First screenshot of an Ubuntu installation](./media/vmware-template/ubuntu-template-installation-1.png)

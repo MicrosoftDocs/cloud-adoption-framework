@@ -12,8 +12,6 @@ ms.custom: internal
 
 <!-- docutune:casing Y/N None/Some/Severe Rehost/Refactor/Rearchitect/Rebuild -->
 
-<!-- cSpell:ignore VHDs autosnooze unsnooze Hanu Scalr -->
-
 # Scale a migration to Azure
 
 This article demonstrates how the fictional company Contoso performs a migration at scale to Azure. The company considers how to plan and perform a migration of more than 3,000 workloads, 8,000 databases, and 10,000 virtual machines (VMs).

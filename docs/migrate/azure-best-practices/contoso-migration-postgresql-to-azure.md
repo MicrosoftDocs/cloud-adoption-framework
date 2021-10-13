@@ -10,8 +10,6 @@ ms.subservice: migrate
 ms.custom: think-tank
 ---
 
-<!-- cSpell:ignore BYOK postgres psql dvdrental vpngateways -->
-
 # Migrate PostgreSQL databases to Azure
 
 This article demonstrates how the fictional company Contoso planned and migrated its on-premises PostgreSQL open-source database platform to Azure.
