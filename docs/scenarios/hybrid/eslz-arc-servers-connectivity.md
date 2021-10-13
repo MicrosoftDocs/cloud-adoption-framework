@@ -18,18 +18,18 @@ Azure Arc-enabled servers allows you to manage your Windows and Linux physical s
 
 The following are some network design considerations for Azure Arc-enabled servers for Azure:
 
-* Define the connectivity method. Your servers can [connect](/azure/azure-arc/servers/agent-overview#networking-configuration) from your on-premises network or other cloud environment to Azure, directly, via a proxy server or [private Link](/azure/azure-arc/servers/private-link-security).
-* For [direct connect (public endpoints)](/azure/azure-arc/servers/onboard-powershell#install-the-agent-and-connect-to-azure) you need to review your internet access for the connected machine agents.
-* If the connection from the Azure Arc-enabled server Connect Machine agent to the Azure Arc public endpoints traverses a proxy server the same URLs need to be allowed for the connection to be successful.
+* Define the connectivity method. Your servers can [connect](/azure/azure-arc/servers/agent-overview#networking-configuration) from your on-premises network or other cloud environment to Azure directly, via a proxy server or [Private Link Scope](/azure/azure-arc/servers/private-link-security).
+* For [directly connected (public endpoints)](/azure/azure-arc/servers/onboard-powershell#install-the-agent-and-connect-to-azure) you need to review your internet access for the Connected Machine Agent.
+* If the connection from the Azure Arc-enabled server Connect Machine agent to the Azure Arc public endpoints traverses a proxy server [the same URLs](/azure/azure-arc/servers/agent-overview#networking-configuration) need to be allowed for the connection to be successful.
 * Consider creating an automated process to keep the firewall and proxy network rules updated according to the [Azure ARC network service Tags and IP addresses range](https://www.microsoft.com/en-us/download/details.aspx?id=56519).
 * Considering that the traffic to Azure Arc is already encrypted, the use of a Proxy server doesn't make the Connected Machine agent more secure.
-* To further secure your network connectivity to Azure Arc, instead of using public networks and proxy servers, you can implement an Azure Arc Private Link. The Private Endpoint on your VNet allows it to reach Azure Arc-enabled servers endpoints through private IPs from your network's pool, instead of using the public IPs of these endpoints. That allows you to keep using your Azure Arc-enabled servers resource without opening your VNet to outbound traffic not requested.
-* Define extensions connectivity method using public endpoints or [Private Link](/azure/azure-arc/servers/private-link-security#how-it-works).
+* To further secure your network connectivity to Azure Arc, instead of using public networks and proxy servers, you can implement an Azure Arc Private Link. The Private Endpoint on your VNet allows it to reach Azure Arc-enabled servers endpoints through private IPs from your network's pool, instead of using the public IPs of these endpoints.
+* Define extensions connectivity method.  Extensions could also direct communicate using public networks through a firewall or proxy server. To further secure the extension connectivity you can implement a [Private Endpoint](/azure/azure-arc/servers/private-link-security#how-it-works) for each extension.
 
-## Design recommendation
+## Design recommendations
 
 * Use [Transport Layer Security 1.2 protocol](/azure/azure-arc/servers/agent-overview#transport-layer-security-12-protocol) to ensure the security of data in transit to Azure as older versions of TLS/Secure Sockets Layer (SSL) have been found to be vulnerable and while they still currently work to allow backwards compatibility, they are not recommended.
-* Familiarize yourself with connected machine agent components and the inter connection with other resources in Azure.
+* Familiarize yourself with Connected Machine Agent components and the inter connection with other resources in Azure.
 ![Azure Arc-enabled servers connectivity](./media/arc-enabled-servers-connectivity.png)
 * For the Direct Connection method configure the [required network rules](/azure/azure-arc/servers/agent-overview#networking-configuration).
 * [Understand how Azure Arc-enabled servers private link works](/azure/azure-arc/servers/private-link-security#how-it-works)
@@ -43,11 +43,11 @@ Azure Arc-enabled servers allows you to connect hybrid machines using the follow
 
 * Direct connection, using internet public endpoint.
 * Proxy server connection.
-* Private Link, using Site to Site VPN or Express Route to a private endpoint.
+* Private Link, using Site-to-Site VPN or ExpressRoute to a private endpoint.
 
 ### Direct connection
 
-Azure Arc-enabled servers offer direct connectivity to Azure public endpoints. In this connectivity method, all the machine agents will open a connection relying on the Internet public endpoints.
+Azure Arc-enabled servers offer direct connectivity to Azure public endpoints. In this connectivity method, all the machine agents will open a connection via the internet using public endpoint.
 
 * [Direct connection network configuration](/azure/azure-arc/servers/agent-overview#networking-configuration)
 
@@ -71,7 +71,7 @@ It's recommended to have a process to keep all required endpoints updated for an
 
 Azure Private Link allows you to securely link Azure PaaS services to your virtual network using private endpoints. For many services, you just set up an endpoint per resource. This means you can connect your on-premises or multi-cloud servers with Azure Arc and send all traffic over an Azure ExpressRoute or site-to-site VPN connection instead of using public networks.
 
-Connectivity to any other Azure resource from an Azure Arc-enabled server requires configuring Private Link for each service, which is optional, but recommended. Azure Private Link requires separate configuration per service. Including and not limited to Azure Automation, Azure Monitor, Azure Key Vault, or Azure Blob storage.
+Connectivity to any other Azure resource from an Azure Arc-enabled server requires configuring Private Link for each service, which is optional, but recommended. Azure Private Link requires separate configuration per service. Including and not limited to these extensions such as Azure Automation, Azure Monitor, Azure Key Vault, or Azure Blob storage.
 
 ![Azure Arc-enabled servers private link topology](./media/arc-enabled-servers-private-link-topology.png)
 
