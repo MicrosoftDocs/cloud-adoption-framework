@@ -30,11 +30,11 @@ This guide is the suggested path for your first migration to Azure. It exposes y
 
 > [!div class="checklist"]
 >
-> - **Assess each workload's technical fit.** Validate the technical readiness and suitability for migration.
-> - **Migrate your services.** Perform the actual migration by replicating on-premises resources to Azure.
-> - **Manage costs and billing.** Understand the tools required to control costs in Azure.
-> - **Optimize and promote.** Optimize for cost and performance balance before you promote your workload to production.
-> - **Get assistance.** Get help and support during your migration or post-migration activities.
+> - [**Assess each workload's technical fit.**](assess.md) Validate the technical readiness and suitability for migration.
+> - [**Migrate your services.**](migrate.md) Perform the actual migration by replicating on-premises resources to Azure.
+> - [**Manage costs and billing.**](manage-costs.md) Understand the tools required to control costs in Azure.
+> - [**Optimize and promote.**](optimize-and-transform.md) Optimize for cost and performance balance before you promote your workload to production.
+> - [**Get assistance.**](assistance.md) Get help and support during your migration or post-migration activities.
 
 In alignment with the best practices in the [Cloud Adoption Framework's Ready methodology](../../ready/index.md), deploy a landing zone before you continue with this guide.
 
