@@ -10,8 +10,6 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-avd
 ---
 
-<!-- cspell:ignore hostpool -->
-
 # Governance baseline considerations for Azure Virtual Desktop
 
 This article covers key design considerations and recommendations for security, governance, and compliance in a [Cloud Adoption Framework enterprise-scale landing zone architecture](../../ready/enterprise-scale/architecture.md) for [Azure Virtual Desktop](/azure/virtual-desktop/overview).

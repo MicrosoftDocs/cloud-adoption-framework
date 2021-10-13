@@ -10,8 +10,6 @@ ms.subservice: strategy
 ms.custom: internal
 ---
 
-<!-- cSpell:ignore MSPs -->
-
 # Strategy for partner alignment
 
 The Cloud Adoption Framework approaches cloud adoption as a self-service activity. The objective is to empower each of the teams supporting adoption through standardized approaches. In practice, you can't assume that a self-service approach will be sufficient for all adoption activities.

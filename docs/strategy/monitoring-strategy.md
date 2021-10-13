@@ -10,8 +10,6 @@ ms.subservice: strategy
 ms.custom: think-tank
 ---
 
-<!-- cSpell:ignore DIKW Nagios Zabbix -->
-
 # Cloud monitoring guide: Formulate a monitoring strategy
 
 As you undergo your digital transformation to the cloud, it's important that you plan and develop an effective cloud monitoring strategy with participation of developers, operations staff, and infrastructure engineers. The strategy should be growth-oriented, defined minimally, then refined iteratively; always aligned with business needs. Its outcome delivers an agile operations modality centered around the ability of the organization to proactively monitor complex distributed applications the business depends on.
@@ -186,9 +184,7 @@ Learning cycles includes getting monitoring data and insights into the hands of 
 
 ![Monitoring and control strategy](./media/monitoring-strategy/monitoring-and-control-strategy.png)
 
-<!-- docutune:ignore "Data to Information, Knowledge, and Wisdom" -->
-
-<Sup>1</sup> The dikw model is an often used method, with roots in knowledge management, to explain the ways we move from Data to Information, Knowledge, and Wisdom with a component of actions and decisions.
+<sup>1</sup> The DIKW model is an often used method, with roots in knowledge management, to explain the ways we move from *data to information, knowledge, and wisdom* with a component of actions and decisions.
 
 Monitoring is foundational for services you build in Azure. Your strategy can address these four disciplines of modern monitoring, to help you define minimum viable monitoring, and gain confidence in steps. Moving your capability from reactive to proactive and scaling its reach to end users is but one goal.
 
