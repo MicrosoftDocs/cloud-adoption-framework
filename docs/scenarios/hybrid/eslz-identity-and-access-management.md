@@ -21,6 +21,12 @@ Your organization or enterprise needs to design right access controls to secure 
 - Decide between single or multiple service principals to onboard servers owned by different business functions/units in an enterprise base on who operates these servers.
 - Decide between short lived or long lived service principal credentials (client secrets) to onboard servers to Azure Arc.
 
+## Architecture
+
+The following image shows reference architecture that demonstrates the roles, permissions and flow of actions for Azure Arc-enabled servers:
+
+![The following image shows reference architecture that demonstrates the identities, roles, permissions and flow of actions for Azure Arc-enabled servers:](./media/arc-enabled-servers-iam.png)
+
 ## Design recommendations
 
 - **Server on-boarding and administration**
