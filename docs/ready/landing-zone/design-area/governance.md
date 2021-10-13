@@ -54,7 +54,7 @@ The govern methodology is formed of five disciplines:
 
 - What are the groups of resources in your environment that share configuration characteristics that you will require to be keep consistent?
 - Are there groups of resources that should share a common lifecycle?
-- Are there groups of resources that should share common access constraints (e.g. role-based access contorls)
+- Are there groups of resources that should share common access constraints (e.g. role-based access controls)
 - Are there standard resource configurations within your organization that should be used to ensure a consistent baseline configuration?
 
 
@@ -62,7 +62,7 @@ The govern methodology is formed of five disciplines:
 
 Azure Policy is essential to ensuring security and compliance within enterprise technical estates. It can enforce vital management and security conventions across Azure platform services. It can also supplement Azure role-based access control that controls what actions authorized users can do.
 
-- Determine what Azure policies are needed.
+- Determine what Azure policies are needed, based on considerations such as business controls or compliance regulations. Use [the standards-based blueprint samples](/azure/governance/blueprints/samples) as a starting point
 
 - Enforce management and security conventions, such as the use of private endpoints.
 
@@ -83,7 +83,7 @@ Azure Policy is essential to ensuring security and compliance within enterprise 
 
 ### Azure Policy - Design recommendations
 
-- Identify required Azure tags and use the append policy mode to enforce usage.
+- Identify required Azure tags and use the append policy mode to enforce usage. Use the [tagging strategy](../../azure-best-practices/resource-tagging.md) article as a starting point
 
 - Map regulatory and compliance requirements to Azure Policy definitions and Azure role assignments.
 
