@@ -10,8 +10,6 @@ ms.subservice: migrate
 ms.custom: internal
 ---
 
-<!-- cSpell:ignore onmicrosoft visualstudio sourceconnectionstring smarthotelcontainer identitymaplog CONTOSOTFS DACPAC SQLDB SQLSERVERNAME INSTANCENAME sqlpackage SSDT azuredevopsmigration validateonly ImportType -->
-
 # Refactor a Team Foundation Server deployment to Azure DevOps Services
 
 This article shows how the fictional company Contoso refactors its on-premises Visual Studio Team Foundation Server deployment by migrating it to Azure DevOps Services in Azure. In this scenario, the Contoso development team has used Team Foundation Server for team collaboration and source control for the past five years. Now, the team wants to move to a cloud-based solution for developer and testing work, and for source control. Azure DevOps Services plays a key role as the Contoso team moves to an Azure DevOps Services model and develops new cloud-native applications.
@@ -252,7 +250,7 @@ Follow this migration process:
 
    After the upload, a shared access signature (SAS) is generated to allow the Team Foundation Server migration tool access to the storage.
 
-1. **Perform a dry-run import.** Complete the missing fields in the import file, including the DACPAC setting. To ensure that everything's working properly before the full migration, specify to perform a *dry-run* import. 
+1. **Perform a dry-run import.** Complete the missing fields in the import file, including the DACPAC setting. To ensure that everything's working properly before the full migration, specify to perform a *dry-run* import.
 
     A dry-run import helps to test the collection migration. Dry runs have a limited life, and are deleted automatically after a set duration and before a production migration runs. A success email sent after the import finishes includes a note that informs Contoso when the dry run is deleted.
 
@@ -334,7 +332,7 @@ After the Contoso admins create the DACPAC file, they upload it to the Azure Sto
 
     :::image type="content" source="./media/contoso-migration-tfs-vsts/backup8.png" alt-text="Screenshot of the **Get Shared Access Signature** link in Storage Explorer.":::
 
-1. On the **Shared Access Signature** page, accept the default settings and then select **Create**. 
+1. On the **Shared Access Signature** page, accept the default settings and then select **Create**.
 
     These settings enable access for 24 hours.
 
@@ -472,7 +470,7 @@ After migration is complete, Contoso admins next need to move source code manage
     :::image type="content" source="./media/contoso-migration-tfs-vsts/git3.png" alt-text="Screenshot of the **Import from TFVC** pane.":::
 
     > [!NOTE]
-    > Because TFVC and Git store version control information differently, we recommend that Contoso *not* migrate its repository history. 
+    > Because TFVC and Git store version control information differently, we recommend that Contoso *not* migrate its repository history.
 
 1. After the import finishes, review the code.
 

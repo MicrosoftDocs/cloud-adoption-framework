@@ -1,7 +1,5 @@
 ### YamlMime:Hub
 
-# docsTest:ignore "YamlMime:Hub" "https://aka.ms/adopt"
-
 title: Microsoft Cloud Adoption Framework for Azure
 summary: The Cloud Adoption Framework is a collection of documentation, implementation guidance, best practices, and tools that are proven guidance from Microsoft designed to accelerate your cloud adoption journey.
 brand: azure

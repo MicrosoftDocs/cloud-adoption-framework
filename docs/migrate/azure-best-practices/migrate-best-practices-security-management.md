@@ -11,7 +11,6 @@ ms.custom: internal
 ---
 
 <!-- docutune:casing "Update Management" -->
-<!-- cSpell:ignore FIPS SIEM majeure NSGs -->
 
 # Best practices to secure and manage workloads migrated to Azure
 

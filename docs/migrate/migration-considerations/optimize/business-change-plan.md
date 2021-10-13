@@ -10,9 +10,6 @@ ms.subservice: migrate
 ms.custom: internal
 ---
 
-<!-- cSpell:ignore Eason -->
-<!-- docutune:casing "Eason Matrix" -->
-
 # Business change plan
 
 Traditionally, IT has overseen the release of new workloads. During a major transformation, like a datacenter migration or a cloud migration, a similar pattern of IT lead adoption could be applied. However, the traditional approach might miss opportunities to realize additional business value. For this reason, before a migrated workload is promoted to production, implementing a broader approach to user adoption is suggested. This article outlines the ways in which a business change plan adds to a standard user adoption plan.

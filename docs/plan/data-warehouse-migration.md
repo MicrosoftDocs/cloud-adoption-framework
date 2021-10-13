@@ -10,8 +10,6 @@ ms.subservice: plan
 ms.custom: think-tank
 ---
 
-<!-- cSpell:ignore Informatica gzipped Attunity -->
-
 # Plan a data warehouse migration
 
 A data warehouse migration is a challenge for any company. In order to execute it well and avoid any unwelcome surprises and unplanned costs, you need to thoroughly research the challenge, mitigate risk, and plan your migration to ensure that you're as ready as possible. At a high level, your plan should cover the core data warehouse migration process steps and any tasks within them. The main process steps are:
@@ -86,7 +84,7 @@ In addition to preparing and readying your migration team for your target enviro
 - Microsoft Azure ExpressRoute to transfer compressed data directly to Azure.
 - File export to Azure Data Box.
 
-The main factors influencing which of these options is selected are data volume size (in terabytes) and network speed (in Mbps). A calculation is needed to determine how long it would take to migrate the data via the network, considering that data might be compressed in your data warehouse and become uncompressed when you export it. This situation can slow data transfer. Recompress data via Gzip when moving data by any of the above methods. PolyBase can process gzipped data directly. Large data volumes will likely be migrated via Azure Data Box if it will take too long to move the data.
+The main factors influencing which of these options is selected are data volume size (in terabytes) and network speed (in Mbps). A calculation is needed to determine how long it would take to migrate the data via the network, considering that data might be compressed in your data warehouse and become uncompressed when you export it. This situation can slow data transfer. Recompress data via Gzip when moving data by any of the above methods. PolyBase can process Gzipped data directly. Large data volumes will likely be migrated via Azure Data Box if it will take too long to move the data.
 
 Additionally, for Azure Data Factory to control the execution of exports of your existing data warehouse data from Azure, self-hosted integration run-time software must be installed in your datacenter to enable migration to proceed. Given these requirements if formal approval is needed to make this possible, then starting the appropriate approval processes early to enable this to happen will help avoid delays down the line.
 
