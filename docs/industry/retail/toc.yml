@@ -46,7 +46,7 @@ items:
     - name: Overview
       href: govern.md
     - name: Unified operations
-      href: ../../scenarios/hybrid/unified-operations.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2findustry%2fretail%2ftoc.json
+      href: ../../scenarios/hybrid/unified-operations.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json
   - name: Manage your assets
     href: manage.md
   - name: Understand retail organizations
@@ -58,9 +58,9 @@ items:
     - name: Build a real-time recommendation API on Azure
       href: /azure/architecture/reference-architectures/ai/real-time-recommendation?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json
     - name: Movie recommendations on Azure
-      href: /azure/architecture/example-scenario/ai/movie-recommendations-with-machine-learning?bc=%2Fazure%2Fcloud-adoption-framework%2F_bread%2Ftoc.json&toc=%2Fazure%2Fcloud-adoption-framework%2Findustry%2Fretail%2Ftoc.json
+      href: /azure/architecture/example-scenario/ai/movie-recommendations-with-machine-learning?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json
     - name: Scalable personalization on Azure
-      href: /azure/architecture/example-scenario/ai/scalable-personalization-with-content-based-recommendation-system?bc=%2Fazure%2Fcloud-adoption-framework%2F_bread%2Ftoc.json&toc=%2Fazure%2Fcloud-adoption-framework%2Findustry%2Fretail%2Ftoc.json
+      href: /azure/architecture/example-scenario/ai/scalable-personalization-with-content-based-recommendation-system?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json
     - name: Data warehousing and analytics
       href: /azure/architecture/example-scenario/data/data-warehouse?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/industry/retail/toc.json
     - name: Stream processing with Azure Databricks

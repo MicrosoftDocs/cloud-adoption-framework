@@ -20,7 +20,7 @@ The sample files illustrate how to use Azure PowerShell cmdlets to automate the 
 
 - Create a [Log Analytics workspace](/azure/azure-monitor/logs/manage-access). (Or, use an existing workspace if it meets the requirements. For details, see [Workspace planning](./prerequisites.md#log-analytics-workspace-and-automation-account-planning).
 
-- Create an Automation account, or use an existing account that meets the requirements. For more information, see [Workspace planning](./prerequisites.md#log-analytics-workspace-and-automation-account-planning).
+- Create an Azure Automation account, or use an existing account that meets the requirements. For more information, see [Workspace planning](./prerequisites.md#log-analytics-workspace-and-automation-account-planning).
 
 - Link the Automation account and the Log Analytics workspace. This step isn't required if you're onboarding by using the Azure portal.
 

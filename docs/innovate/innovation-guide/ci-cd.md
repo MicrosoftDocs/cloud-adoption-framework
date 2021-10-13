@@ -22,7 +22,7 @@ You know that innovation and digital transformation is critical to business succ
 
 > [!div class="checklist"]
 >
-> - In every industry, every organization is trying to do one thing: drive constant value generation.
+> - In every industry, each organization is trying to do one thing: drive constant value generation.
 > - The focus on innovation is essentially a process to help your organization find new ways to generate value.
 > - Perhaps the biggest mistake organizations make is trying to create new value by introducing new technologies.
 > - Sometimes the attitude is, "If we just use more technology, we'll see things improve." But innovation is first and foremost a people story.

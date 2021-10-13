@@ -229,7 +229,7 @@ Contoso creates an Azure DevOps project, configures a CI build to create the con
      ![Screenshot of adding another Docker Compose task in Azure DevOps.](./media/contoso-migration-rebuild/vsts7.png)
     *Figure 18: Adding another Docker Compose task.*
 
-9. They select the first task to build and configure the build with the Azure subscription, authorization, and Container Registry.
+9. They select the first task to build and configure the build with the Azure subscription, the authorization, and the container registry.
 
     ![Screenshot of building and configuring the build in Azure DevOps.](./media/contoso-migration-rebuild/vsts8.png)
     *Figure 19: Building and configuring the build.*
@@ -696,8 +696,6 @@ In this article, Contoso rebuilds the SmartHotel360 application in Azure. The on
 Microsoft Learn is a new approach to learning. Readiness for the new skills and responsibilities that come with cloud adoption doesn't come easily. Microsoft Learn provides a more rewarding approach to hands-on learning that helps you achieve your goals faster. With Microsoft Learn, you can earn points, rise through levels, and achieve more.
 
 Here are two examples of tailored learning paths on Microsoft Learn that align with the Contoso SmartHotel360 application in Azure.
-
-<!-- docsTest:casing "computer vision functionality" -->
 
 - [Deploy a website to Azure with Azure App Service](/learn/paths/deploy-a-website-with-azure-app-service/): By creating web apps in Azure, you can publish and manage your website easily without having to work with the underlying servers, storage, or network assets. Instead, you can focus on your website features and rely on the robust Azure platform to help provide secure access to your site.
 

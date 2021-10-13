@@ -129,7 +129,7 @@ Now that we have configured the Update Management solution, you can deploy updat
 
     ![A screenshot of a scheduled update within Update Management.](./media/arc-update-management/scheduled-update.png)
 
-This Update Management solution will update your Azure Arc-enabled servers in the deployment window based on the schedule you defined. There's a lot more you can do with [Update Management](/azure/automation/update-management/overview) that is outside the scope of this scenario. For more information, see the [Azure Automation update management overview](/azure/automation/update-management/overview).
+This Update Management solution will update your Azure Arc-enabled servers in the deployment window based on the schedule you defined. There's a lot more you can do with Update Management that's outside the scope of this scenario. For more information, see the [Update Management for Azure Automation overview](/azure/automation/update-management/overview).
 
 ## Clean up your environment
 

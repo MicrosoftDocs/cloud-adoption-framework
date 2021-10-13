@@ -256,6 +256,7 @@
         "showback",
         "showbacks",
         "sqlcmd",
+        "strategizing",
         "subcomponent",
         "subcomponents",
         "submillisecond",
@@ -307,10 +308,12 @@
         "cspell",
         "dataroot",
         "datetimeoffset",
+        "distros",
         "docfx",
         "docsmd",
         "docutune",
         "eastus",
+        "endjin",
         "hierarchyid",
         "highres",
         "hyperconverged",
@@ -325,11 +328,13 @@
         "markdownlint",
         "mcra",
         "mkdir",
+        "msiexec",
         "nextstepaction",
         "nvarchar",
         "onmicrosoft",
         "popout",
         "psec",
+        "psql",
         "rbac",
         "ries",
         "robocopy",
@@ -345,7 +350,9 @@
         "vianet",
         "visualstudio",
         "westus",
-        "wwwroot"
+        "wwwroot",
+        "yymmddhhmmss",
+        "yymmddhhmss"
     ],
     "flagWords": [
         "amongst",
@@ -383,6 +390,7 @@
     ],
     "import": [
         ".\\cspell-docset.json",
+        ".\\cspell-docset-names.json",
         ".\\cspell-docutune.json"
     ]
 }
