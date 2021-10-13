@@ -23,6 +23,7 @@ At part of the design area review, explore the considerations and recommendation
 The governance design area focusses on the considerations and recommendations for design decisions as part of the landing zone. In addition to this, the [Govern methodology](/govern/index.md) in the Cloud Adoption Framework provides further in-depth guidance for holistic governance processes and tools. 
 
 The govern methodology is formed of five disciplines:
+
 |Discipline|Context|
 |-|-|
 | Cost Management| Explore guidance to cost reporting control techniques|
