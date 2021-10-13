@@ -10,8 +10,6 @@ ms.subservice: migrate
 ms.custom: internal
 ---
 
-<!-- cSpell:ignore WEBVM SQLVM contosohost vcenter contosodc OSTICKETWEB OSTICKETMYSQL osTicket contosoosticket trafficmanager InnoDB binlog DBHOST DBUSER CNAME -->
-
 # Refactor a Linux application by using Azure App Service, Traffic Manager, and Azure Database for MySQL
 
 This article shows how the fictional company Contoso refactors a two-tier [LAMP-based](https://wikipedia.org/wiki/LAMP_software_bundle) application, migrating it from on-premises to Azure by using Azure App Service with GitHub integration and Azure Database for MySQL.
@@ -388,7 +386,7 @@ To clean up after the migration, Contoso does the following:
 - They remove the on-premises VMs from local backup jobs.
 - They update internal documentation to show new locations and IP addresses.
 - They review any resources that interact with the on-premises VMs, and update any relevant settings or documentation to reflect the new configuration.
-- They reconfigure monitoring to point to the `osticket-trafficmanager.net` URL, to track that the application is up and running.
+- They reconfigure monitoring to point to the `osticket.trafficmanager.net` URL, to track that the application is up and running.
 
 ## Review the deployment
 

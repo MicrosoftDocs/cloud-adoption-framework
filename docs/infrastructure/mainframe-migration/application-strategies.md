@@ -109,7 +109,7 @@ The cloud's distributed architectures rely on a different set of development too
 | Component        | Azure options                                                                                                                                  |
 |------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
 | z/OS             | Windows, Linux, or Unix                                                                                                                      |
-| CICS             | Azure services offered by Micro Focus, Oracle, GT Software (Fujitsu), TmaxSoft, Raincode, and NTT Data, or rewrite using Kubernetes |
+| CICS             | Azure services offered by Micro Focus, Oracle, GT Software (Fujitsu), TmaxSoft, Raincode, and NTT DATA, or rewrite using Kubernetes |
 | IMS              | Azure services offered by Micro Focus and Oracle                                                                                  |
 | Assembler        | Azure services from Raincode and TmaxSoft; or COBOL, C, or Java, or map to operating system functions               |
 | JCL              | JCL, PowerShell, or other scripting tools                                                                                                   |

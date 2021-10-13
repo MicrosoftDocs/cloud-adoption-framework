@@ -1,6 +1,3 @@
-# docsTest:ignore "NET Core" "Cloud Operating Model" "Virtual Datacenter" Framework app
-#cSpell:ignore devguide dotnetcore veeam powerapps sqldatabase newsfeed wideworldimportersdw
-
 items:
   - name: Cloud Adoption Framework for Azure
     href: index.yml
@@ -1164,7 +1161,7 @@ items:
           - name: Feedback loops
             items:
             - name: Manage feedback with Azure DevOps
-              href: /azure/devops/project/feedback/?bc=%2Fazure%2Fcloud-adoption-framework%2Ftoc.json
+              href: /azure/devops/project/feedback/?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/toc.json
           - name: Continuous integration
             items:
             - name: Continuous integration with Azure Pipelines and GitHub
