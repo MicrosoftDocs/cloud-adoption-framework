@@ -16,6 +16,8 @@ items:
     items:
     - name: Retail specific strategies
       href: strategy.md
+    - name: Industry priority scenarios
+      href: industry-priority-scenarios.md
     - name: Personalization
       href: retail-personalization.md
     - name: Omnichannel optimization
