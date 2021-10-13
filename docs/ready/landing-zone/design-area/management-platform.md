@@ -14,7 +14,7 @@ ms.custom: internal
 # Management - Platform 
 
 As organizations design and implement cloud environments, the underpinning management and monitoring of the platform services will be a key consideration.
-Structuring these services to meet the needs of the business as the environment scales will be an important factor in success cloud adoption.
+Structuring these services to meet the needs of the business as the environment scales will be an important factor in successful cloud adoption.
 
 How management operations are delivered as part of a landing zone will be directly influenced by the cloud operating model choices made as part of the earlier planning phases - the degree to which management is centralized for the platform being a key example of this. 
 

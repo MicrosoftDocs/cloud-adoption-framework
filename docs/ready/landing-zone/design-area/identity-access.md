@@ -38,12 +38,13 @@ A critical design decision that an enterprise organization must make when adopti
 
 #### Managed identities - design considerations
 
-
-#### Just-in-time (JIT) access - design considerations
-
-
 #### Privileged identity management (PIM) - design considerations
 
+- Which teams or individuals require access to services within the landing zone? What roles are they performing?
+- Who should authorize the access requests?
+- Who should receive the notifications when privileged roles are activated?
+- Who should have access to the audit history?
+- Explore the capabilities further [here](/azure/active-directory/privileged-identity-management/pim-configure)
 
 ### Identity for Azure platform resources - design considerations
 
@@ -55,6 +56,10 @@ A critical design decision that an enterprise organization must make when adopti
   - Depending on the definition of the centralized or federated resource ownership, custom roles might differ. The custom roles for the centralized resource ownership are limited and might need additional rights depending on the responsibility model. For example, in some organizations a NetOps role might only need to manage and configure global connectivity. But in other organizations that need a more centralized approach, the NetOps role needs to be enriched with more allowed actions like creating peering between the hub and the spokes.
 
 ### Workload access - design considerations
+
+- Based on your cloud operating model, which teams will require access to workloads within the landing zone?
+- What roles or functions will those with access carry out?
+- What is the minimum level of privilege they would require in order to carry out their responsibilities?
 
 ### Hosting Infrastructure-as-a-Service (IaaS) identity solutions - design considerations
 
@@ -73,8 +78,6 @@ A critical design decision that an enterprise organization must make when adopti
 
 ### Pre-requisites for a landing zone - design recommendations
 
-#### Role-based access control (RBAC) - design recommendations
-
 - Use [Azure RBAC](/azure/role-based-access-control/overview) to manage data-plane access to resources, where possible. Examples are Azure Key Vault, a storage account, or a SQL database.
 - Deploy Azure AD conditional-access policies for any user with rights to Azure environments. Doing so provides another mechanism to help protect a controlled Azure environment from unauthorized access.
 - Enforce multi-factor authentication for any user with rights to the Azure environments. Multi-factor authentication enforcement is a requirement of many compliance frameworks. It greatly lowers the risk of credential theft and unauthorized access.
@@ -91,15 +94,9 @@ A critical design decision that an enterprise organization must make when adopti
 | Subscription owner                 | Delegated role for subscription owner derived from subscription Owner role                                       | `*`                                                                                                                                                                                                                  | `Microsoft.Authorization/*/write`, `Microsoft.Network/vpnGateways/*`, `Microsoft.Network/expressRouteCircuits/*`, `Microsoft.Network/routeTables/write`, `Microsoft.Network/vpnSites/*` |
 | Application owners (DevOps/AppOps) | Contributor role granted for application/operations team at resource group level                                 | `*`                                                                                                                                                                                                                   | `Microsoft.Authorization/*/write`, `Microsoft.Network/publicIPAddresses/write`, `Microsoft.Network/virtualNetworks/write`, `Microsoft.KeyVault/locations/deletedVaults/purge/action`                                         |
 
-#### Managed identities - design recommendations
-
 - Use Azure AD managed identities for Azure resources to avoid authentication based on user names and passwords. Because many security breaches of public cloud resources originate with credential theft embedded in code or other text sources, enforcing managed identities for programmatic access greatly reduces the risk of credential theft.
 
-#### Just-in-time (JIT) access - design recommendations
-
 - Use Azure Security Center just-in-time access for all infrastructure as a service (IaaS) resources to enable network-level protection for ephemeral user access to IaaS virtual machines.
-
-#### Privileged identity management (PIM) - design recommendations
 
 - Use [Azure AD Privileged Identity Management (PIM)](/azure/active-directory/privileged-identity-management/pim-configure) to establish zero standing access and least privilege. Map your organization's roles to the minimum level of access needed. Azure AD PIM can either be an extension of existing tools and processes, use Azure native tools as outlined, or use both as needed.
 
