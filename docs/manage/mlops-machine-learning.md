@@ -20,7 +20,7 @@ ms.custom: think-tank
 
 Azure Machine Learning provides the following MLOps capabilities:
 
-- **Create reproducible pipelines.** Machine Learning pipelines enable you to define repeatable and reusable steps for your data preparation, training, and scoring processes.
+- **Create reproducible pipelines.** Machine learning pipelines enable you to define repeatable and reusable steps for your data preparation, training, and scoring processes.
 - **Create reusable software environments** for training and deploying models.
 - **Register, package, and deploy models from anywhere.** You can track the associated metadata required to use the model.
 - **Capture the governance data for the end-to-end lifecycle.** The logged information can include who is publishing models, why changes were made, and when models were deployed or used in production.

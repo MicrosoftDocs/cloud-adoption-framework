@@ -44,6 +44,7 @@ Accelerate your existing business growth with ready-to-deploy code that you can 
 
 ![Data complexity and siloed decision-making](./media/data-complexity-siloed-decision-making.png)
 
+
 ## Transform customer experience with real time shopping recommendations
 
 The Retail Recommender Solution Accelerator uses machine learning and a filtering model that connects what the customer looks at with data from what other users have in real time to provide a recommendation. For example, if other customers viewed phones and headsets, and you view phones, you are more likely to view a headset as well—an that particular customer view will become your recommendation. The system will then construct a matrix of similar data to inform your future recommendations.

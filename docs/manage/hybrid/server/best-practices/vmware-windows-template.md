@@ -23,7 +23,7 @@ This article provides guidance for creating a Windows Server 2019 VMware vSphere
 
 - VMware vSphere 6.5 and above
 
-- Although it can be used locally, for faster deployment, it is recommended to upload the file to a vSphere datastore or to vCenter content library.
+- Although it can be used locally, for faster deployment it's recommended to upload the file to a vSphere datastore or to vCenter content library.
 
 ## Creating Windows Server 2019 VM template
 
@@ -99,12 +99,12 @@ Before converting the VM to a template, several actions are required.
 
 4. Allow WinRM communication to the OS by running the [`allow_winrm`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/vmware/winsrv/terraform/scripts/allow_winrm.ps1) PowerShell script.
 
-5. None of the below are mandatory but should be considered for a Windows template:
+5. None of the following steps are mandatory but should be considered for a Windows template:
 
-    - Disabling user account control (can be later tuned on via group policy or a PowerShell script)
+    - Disable user account control (can be later tuned on via group policy or a PowerShell script)
     - Turn off Windows Defender Firewall (can be later tuned on via group policy or a PowerShell script)
-    - Disabling Internet Explorer Enhanced Security Configuration (ESC) (can be later tuned on via group policy or a PowerShell script)
-    - Enable Remote Desktop
+    - Disable Internet Explorer Enhanced Security Configuration (ESC) (can be later tuned on via group policy or a PowerShell script)
+    - Enable Remote Desktop Services
     - In PowerShell, install [Chocolatey](https://chocolatey.org/install)
 
       ```powershell

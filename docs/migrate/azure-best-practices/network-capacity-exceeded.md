@@ -10,8 +10,6 @@ ms.subservice: migrate
 ms.custom: internal
 ---
 
-<!-- cSpell:ignore HDFS databox VHDX -->
-
 # Best practices when data requirements exceed network capacity during a migration effort
 
 In a cloud migration, you replicate and synchronize assets over the network between the existing datacenter and the cloud. It's not uncommon for the existing data size requirements of various workloads to exceed network capacity. In such a scenario, the process of migration can be radically slowed, or in some cases, stopped entirely. The following guidance expands the scope of the [Azure migration guide](../azure-migration-guide/index.md) to provide a solution that works around network limitations.

@@ -21,7 +21,7 @@ Since the policies required to support the governance MVP are meant to apply to 
 
 1. Restrict the list of available role assignments to a set of built-in Azure roles authorized by your cloud governance team. This requires a [custom policy definition](https://github.com/azure/azure-policy/tree/master/samples/Authorization/allowed-role-definitions).
 2. Require the following tags on all resources: *Department/Billing Unit*, _Geography_, _Data Classification_, _Criticality_, _SLA_, _Environment_, _Application Archetype_, _Application_, and _Application Owner_. This can be handled using the `Require specified tag` built-in definition.
-3. Require that the `Application` tag for resources should match the name of the relevant resource group. This can be handled using the "Require tag and its value" built-in definition.
+3. Require that the `Application` tag for resources should match the name of the relevant resource group. This can be handled using the `Require tag and its value` built-in definition.
 
 For information on defining custom policies see the [Azure Policy documentation](/azure/governance/policy/tutorials/create-custom-policy-definition). For guidance and examples of custom policies, consult the [Azure Policy samples site](/azure/governance/policy/samples) and the associated [GitHub repository](https://github.com/azure/azure-policy).
 

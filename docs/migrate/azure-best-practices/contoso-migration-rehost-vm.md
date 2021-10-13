@@ -10,8 +10,6 @@ ms.subservice: migrate
 ms.custom: think-tank
 ---
 
-<!-- cSpell:ignore WEBVM SQLVM OSTICKETWEB OSTICKETMYSQL contosohost vcenter contosodc NSGs agentless -->
-
 # Rehost an on-premises application on Azure VMs by using Azure Migrate
 
 This article demonstrates how the fictional company Contoso rehosts a two-tier Windows .NET front-end application running on VMware virtual machines (VMs) by migrating application VMs to Azure VMs.

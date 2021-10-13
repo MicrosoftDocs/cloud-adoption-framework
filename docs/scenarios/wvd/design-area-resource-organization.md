@@ -44,7 +44,7 @@ As part of the Azure landing zone best practices, resources should be grouped lo
 
 Create management groups under your root-level management group to represent the types of workloads (archetypes) that you'll host and ones based on their security, compliance, connectivity, and feature needs. This grouping structure allows you to have a set of Azure policies applied at the management group level for all workloads that require the same security, compliance, connectivity, and feature settings.
 
-Subscriptions serve as a scale unit so that component workloads can scale within the platform [subscription limits](/azure/azure-subscription-service-limits). Make sure to consider subscription resource limits during your workload design sessions.
+Subscriptions serve as a scale unit so that component workloads can scale within the platform [subscription limits](/azure/azure-resource-manager/management/azure-subscription-service-limits). Make sure to consider subscription resource limits during your workload design sessions.
 
 Subscriptions provide a management boundary for governance and isolation, which clearly separates concerns.
 

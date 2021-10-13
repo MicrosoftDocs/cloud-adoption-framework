@@ -29,11 +29,11 @@ As a starting point, consider establishing the management levels that are shown 
 
 Organizations might also choose to [outsource functions related to one or more of these management levels to a service provider](https://aka.ms/adopt/partneroffers). These service providers can use [Azure Lighthouse](/azure/lighthouse/overview) to provide greater precision and transparency.
 
-The remaining articles in this series outline processes that are commonly found within each of these disciplines. In parallel, the [Azure Management Guide](../azure-management-guide/index.md) demonstrates the tools that can support each of those processes. For assistance with building your management baseline, start with the Azure Management Guide. After you've established the baseline, this article series and the accompanying best practices can help expand that baseline to define other levels of management support.
+The remaining articles in this series outline processes that are commonly found within these disciplines. In parallel, the [Azure Management Guide](../azure-management-guide/index.md) demonstrates the tools that can support those processes. For assistance with building your management baseline, start with the Azure Management Guide. After you've established the baseline, this article series and the accompanying best practices can help expand that baseline to define other levels of management support.
 
 ## Operations management discipline
 
-Each suggested management level provides necessary operations management for all assets (apps, data, & infra) in the portfolio, with an increasing degree of specificity. This mapping is designed to make it easier for the relevant roles to find the most appropriate processes and tools to deliver on the required level of cloud management.
+Each suggested management level provides necessary operations management for all assets (applications, data, and infrastructure) in the portfolio, with an increasing degree of specificity. This mapping is designed to make it easier for the relevant roles to find the most appropriate processes and tools to deliver on the required level of cloud management.
 
 The [operations management processes](../operational-fitness-review.md) defines the iterative discipline required to deliver operations and meet business commitments. This iterative process delivers on three levels of operations on a recurring rhythm of business:
 

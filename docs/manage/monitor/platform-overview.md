@@ -10,9 +10,6 @@ ms.subservice: manage
 ms.custom: think-tank
 ---
 
-<!-- docutune:casing "Squared Up" -->
-<!-- cSpell:ignore opsman ITSM -->
-
 # Cloud monitoring guide: Monitoring platforms overview
 
 Microsoft provides a range of monitoring capabilities from two products: System Center Operations Manager, which was designed for on-premises and then extended to the cloud, and Azure Monitor, which was designed for the cloud but can also monitor on-premises systems. These two offerings deliver core monitoring services, such as alerting, service uptime tracking, application and infrastructure health monitoring, diagnostics, and analytics.

@@ -53,7 +53,7 @@ items:
   - name: Hybrid architectures
     items:
     - name: Overview
-      href: /azure/architecture/browse/hybrid_index?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
+      href: /azure/architecture/browse/?azure_categories=hybrid?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
 
     - name: Applications
       items:
@@ -230,13 +230,13 @@ items:
     - name: Azure Stack HCI
       href: /azure-stack/hci/overview#azure-stack-hub?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
     - name: Azure Modular Datacenter
-      href: /azure-stack#azure-stack-hub?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
+      href: /azure-stack/?toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json#azure-stack-hub
     - name: Azure Stack HCI
-      href: /azure-stack#azure-stack-hci?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
+      href: /azure-stack/?toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json#azure-stack-hci
     - name: Azure IoT Edge
-      href: /azure/iot-edge/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
+      href: /azure/iot-edge/?toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
     - name: Azure Sphere
-      href: /azure-sphere?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
+      href: /azure-sphere/?toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
     - name: Windows for IoT
       href: /windows/iot-core/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
     - name: Virtual WAN

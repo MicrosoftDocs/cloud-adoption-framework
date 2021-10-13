@@ -104,7 +104,7 @@ Based on the insights from the monitoring details, you can better plan or adjust
 
 You can access these metrics directly from the Azure portal. Go to your Azure Machine Learning workspace, and select *Metrics* under the monitoring section on the left panel. Then, you can select details on what you would like to view, such as metrics, aggregation, and time period. For more information, see [Monitor Azure Machine Learning](/azure/machine-learning/monitor-azure-machine-learning) documentation page.
 
-![Diagram of Azure Monitor metrics for Azure Machine Learning](media/ai-machine-learning-azure-monitor-metrics.png)
+![Diagram of Azure Monitor metrics for Azure Machine Learning](./media/ai-machine-learning-azure-monitor-metrics.png)
 
 ### Switch between local, single-node, and multi-node cloud compute while you develop
 
@@ -194,7 +194,7 @@ Azure Machine Learning supports reserved compute instances. Discounts are automa
 
 Every time a machine learning pipeline is executed, intermediate datasets can be generated at each pipeline step for data caching and reuse. The growth of data as an output of these machine learning pipelines can become a pain point for an organization that is running many machine learning experiments.
 
-Data scientists typically don't spend their time to clean up the intermediate datasets that are generated. Over time, the amount of data that is generated will add up. Azure Storage comes with a capability to enhance the management of the data lifecycle. Using [Azure Blob Storage lifecycle management](/azure/storage/blobs/storage-lifecycle-management-concepts?tabs=azure-portal), you can set up general policies to move data that is unused into colder storage tiers and save costs.
+Data scientists typically don't spend their time to clean up the intermediate datasets that are generated. Over time, the amount of data that is generated will add up. Azure Storage comes with a capability to enhance the management of the data lifecycle. Using [Azure Blob Storage lifecycle management](/azure/storage/blobs/lifecycle-management-overview?tabs=azure-portal), you can set up general policies to move data that is unused into colder storage tiers and save costs.
 
 ### Infrastructure cost optimization considerations
 

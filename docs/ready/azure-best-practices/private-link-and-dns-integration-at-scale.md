@@ -18,7 +18,7 @@ ms.custom: think-tank
 
 Many customers build their network infrastructure in Azure using the hub and spoke network architecture, where:
 
-- Networking shared services (such as network virtual appliances, ExpressRoute/VPN gateways, or DNS servers) are deployed in the **hub** virtual network (VNet)
+- Networking shared services (such as network virtual appliances, ExpressRoute/VPN gateways, or DNS servers) are deployed in the **hub** virtual network (VNet).
 - **Spoke** VNets consume those shared services via VNet peering.
 
 In hub and spoke network architectures, application owners are typically provided with an Azure subscription, which includes a VNet (*a spoke*) connected to the *hub* VNet. In this architecture, they can deploy their virtual machines and have private connectivity to other VNets or to on-premises networks via ExpressRoute or VPN.
@@ -47,11 +47,11 @@ The following diagram shows a typical high-level architecture for enterprise env
 
 From the previous diagram, it is important to highlight that:
 
-- On-premises DNS servers have conditional forwarders configured for each private endpoint public DNS zone, pointing to the DNS servers 10.100.2.4 and 10.100.2.5 hosted in the hub VNet.
-- The DNS servers 10.100.2.4 and 10.100.2.5 hosted in the hub VNet use the Azure-provided DNS resolver (168.63.129.16) as a forwarder. 
-- The hub VNet must be linked to the Private DNS zone names for Azure services (such as privatelink.blob.core.windows.net, as shown in the picture).
-- All Azure VNets use the DNS servers hosted in the hub VNet (10.100.2.4 and 10.100.2.5) as the primary and secondary DNS servers.
-- If the DNS servers 10.100.2.4 and 10.100.2.5 are not authoritative for customer’s corporate domains (for example, Active Directory domain names), they should have conditional forwarders for the customer’s corporate domains, pointing to the on-premises DNS Servers (172.16.1.10 & 172.16.1.11) or DNS servers deployed in Azure which are authoritative for such zones. 
+- On-premises DNS servers have conditional forwarders configured for each private endpoint public DNS zone, pointing to the DNS servers `10.100.2.4` and `10.100.2.5` hosted in the hub VNet.
+- The DNS servers `10.100.2.4` and `10.100.2.5` hosted in the hub VNet use the Azure-provided DNS resolver (`168.63.129.16`) as a forwarder.
+- The hub VNet must be linked to the Private DNS zone names for Azure services (such as `privatelink.blob.core.windows.net`, as shown in the picture).
+- All Azure VNets use the DNS servers hosted in the hub VNet (`10.100.2.4` and `10.100.2.5`) as the primary and secondary DNS servers.
+- If the DNS servers `10.100.2.4` and `10.100.2.5` are not authoritative for customer's corporate domains (for example, Active Directory domain names), they should have conditional forwarders for the customer's corporate domains, pointing to the on-premises DNS Servers (`172.16.1.10` and `172.16.1.11`) or DNS servers deployed in Azure which are authoritative for such zones.
 
 Please note that while the previous diagram depicts a single hub and spoke architecture, this guidance is applicable to scenarios where there are multiple hub and spoke networks across multiple Azure regions. In this case, the hub VNets in all regions should be linked to the same Azure Private DNS zones.
 
@@ -101,7 +101,7 @@ In addition to the private DNS zones, we also need to [create a set of custom Az
            },
            {
              "field": "Microsoft.Storage/storageAccounts/networkAcls.defaultAction",
-             "notequals": "Deny"
+             "notEquals": "Deny"
            }
          ]
        },
