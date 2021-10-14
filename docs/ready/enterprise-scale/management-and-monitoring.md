@@ -20,8 +20,6 @@ This section explores how to operationally maintain an Azure enterprise estate w
 
 *Figure 1: Platform management and monitoring.*
 
-<!-- cSpell:ignore syslogs SIEM -->
-
 **Design considerations:**
 
 - Use an Azure Monitor Log Analytics workspace as an administrative boundary.
