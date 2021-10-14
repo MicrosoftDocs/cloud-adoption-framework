@@ -10,8 +10,6 @@ ms.subservice: ready
 ms.custom: internal
 ---
 
-<!-- cSpell:ignore NVAs VPNs -->
-
 # Review your network options
 
 Designing and implementing Azure networking capabilities is a critical part of your cloud adoption efforts. You'll need to make networking design decisions to properly support the workloads and services that are hosted in the cloud. Azure networking products and services support a wide variety of networking capabilities. How you structure these services and the networking architectures you choose depends on your organization's workload, governance, and connectivity requirements.
@@ -45,11 +43,11 @@ Answer the following questions about your workloads to help make decisions when 
   You can use [virtual network peering](/azure/virtual-network/virtual-network-peering-overview) to connect multiple instances of [Azure Virtual Network](/azure/virtual-network/virtual-networks-overview). Peering can support connections across subscriptions and regions. There might be scenarios where you provide shared services across multiple subscriptions or need to manage many network peerings. For these scenarios, consider adopting a [hub and spoke networking architecture](../../decision-guides/software-defined-network/hub-spoke.md) or using [Azure Virtual WAN](/azure/virtual-wan/virtual-wan-about). Virtual network peering provides connectivity only between two peered networks. By default, it doesn't provide transitive connectivity across multiple peerings.
 - **Will your workloads be accessible over the internet?**<br/>
   Azure provides services that are designed to help you manage and secure external access to your applications and services:
-    - [Azure Firewall](/azure/firewall/overview)
-    - [Network appliances](https://azure.microsoft.com/solutions/network-appliances/)
-    - [Azure Front Door](/azure/frontdoor/front-door-overview)
-    - [Azure Application Gateway](/azure/application-gateway/)
-    - [Azure Traffic Manager](/azure/traffic-manager/traffic-manager-overview)
+  - [Azure Firewall](/azure/firewall/overview)
+  - [Network appliances](https://azure.microsoft.com/solutions/network-appliances/)
+  - [Azure Front Door](/azure/frontdoor/front-door-overview)
+  - [Azure Application Gateway](/azure/application-gateway/)
+  - [Azure Traffic Manager](/azure/traffic-manager/traffic-manager-overview)
 - **Will you need to support custom DNS management?**<br/>
   [Azure DNS](/azure/dns/dns-overview) is a hosting service for DNS domains. Azure DNS provides name resolution by using the Azure infrastructure. If your workloads require name resolution that goes beyond the features that are provided by Azure DNS, consider deploying other solutions. If your workloads also require Active Directory services, consider using [Azure Active Directory Domain Services](/azure/active-directory-domain-services/overview) to augment Azure DNS capabilities. For more capabilities, you can also [deploy custom IaaS virtual machines](/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances) to support your requirements.
 
@@ -108,4 +106,4 @@ As part of your networking design process, see these articles:
 
 - [Virtual network planning](/azure/virtual-network/virtual-network-vnet-plan-design-arm?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json). Learn how to plan for virtual networks based on your isolation, connectivity, and location requirements.
 - [Azure best practices for network security](/azure/security/fundamentals/network-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json). Learn about Azure best practices that can help you enhance your network security.
-- [Best practices for networking when you migrate workloads to Azure](../../migrate/azure-best-practices/migrate-best-practices-networking.md?bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json). Get more guidance about how to implement Azure networking to support IaaS-based and PaaS-based workloads.
+- [Best practices for networking when you migrate workloads to Azure](../../migrate/azure-best-practices/migrate-best-practices-networking.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json). Get more guidance about how to implement Azure networking to support IaaS-based and PaaS-based workloads.

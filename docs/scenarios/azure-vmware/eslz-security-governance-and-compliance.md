@@ -86,7 +86,7 @@ Consider the following factors when deciding which systems, users, or devices ca
 
 - **Extended Security Update (ESU) keys:** Provide and configure ESU keys to push and install security updates on Azure VMware Solution VMs. Use the Volume Activation Management Tool for configuring ESU keys for the Azure VMware Solution cluster. For more information, see [Obtaining Extended Security Updates for eligible Windows devices](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/obtaining-extended-security-updates-for-eligible-windows-devices/ba-p/1167091).
 
-- **Code security:** Implement security measure in DevOps workflows to prevent security vulnerabilities in Azure VMware Solution workloads. Use modern authentication and authorization workflows such as Open Authorization (OAuth) and OpenID Connect (OIDC).
+- **Code security:** Implement security measure in DevOps workflows to prevent security vulnerabilities in Azure VMware Solution workloads. Use modern authentication and authorization workflows such as Open Authorization (OAuth) and OpenID Connect.
 
   Use [GitHub Enterprise Server on Azure VMware Solution](/azure/azure-vmware/configure-github-enterprise-server) for a versioned repository that ensures the integrity of the code base. Deploy build and run agents either in Azure VMware Solution or in a secure Azure environment.
 

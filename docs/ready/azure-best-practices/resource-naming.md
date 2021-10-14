@@ -60,8 +60,6 @@ The following section provides some example names for common Azure resource type
 >
 > Choose an approach that's suitable for your organization. The padding shown here illustrates the importance of using a consistent approach to inventory numbering, rather than which approach is superior. Before choosing a numbering scheme (with or without padding), evaluate what will affect long-term operations more: CMDB/asset management solutions or code-based inventory management. Then consistently follow the padding option that best fits your operational needs.
 
-<!-- cspell:ignore cloudapp azurewebsites servicebus -->
-
 <!-- cspell:ignoreRegExp [a-z]+-[a-z]+ -->
 <!-- cspell:ignoreRegExp `[a-z]+` -->
 <!-- cspell:ignoreRegExp [a-z]+\d+ -->
