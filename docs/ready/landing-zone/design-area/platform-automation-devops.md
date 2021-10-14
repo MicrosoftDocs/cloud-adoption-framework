@@ -12,13 +12,27 @@ ms.custom: internal
 
 # Design area: Platform automation and DevOps
 
-## Platform automation and DevOps considerations
+## Overview
 
 As organizations move into cloud technologies, the scale, agility and flexibility offered can lead to opportunities for new ways of working and modern approaches for delivering services. 
 
 Many traditional IT operating models aren't compatible with the cloud, and organizations must undergo operational and organizational transformation to deliver against enterprise migration targets. Evaluate using DevOps processes and tools for both application and central teams.
 
-### Design considerations
+A compound of development (Dev) and operations (Ops), DevOps is the union of people, processes and technology to continually provide value.
+This approach encourages a team collaboration approach that can create repeatable processes to help organizations operate efficiently and at scale.
+
+In the context of a cloud environment, DevOps processes will encourage the concepts of continuous integration and continuous deployment (CI/CD), which fosters a culture of refinement and improvement.
+
+Platform automation focusses on the tools and techniques that enable the streamlining of tasks that may once have been performed manually but using automation tools, such as Azure DevOps or Github.
+
+By automating tasks, the effort to complete them reduces as well as the risk of human-error introducing issues resulting from the task.
+This automation then enables the tasks to be completed quicker and more often, supporting the concepts of (CI/CD).
+
+This is directly applicable to the outcomes associated with implementing an Azure landing zone, and supports the concept of building repeatable, scalable environments.
+
+Using automated processes and tools enables deployment activities to be configured as 'stages' in a pipeline - a sequence of tasks that are completed in a prescribed order, with tests and checks built-in to ensure successful completion.
+
+### Platform automation and DevOps Design considerations
 
 - Where central teams are concerned, consider using pipelines for continuous integration and continuous deployment
 - Pipelines can be used to manage policy definitions, role definitions, policy assignments, management group hierarchies, and subscriptions. These pipelines help ensure that you can operationally manage multiple subscriptions while still conforming to a desired state.
