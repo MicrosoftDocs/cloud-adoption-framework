@@ -22,24 +22,24 @@ When you're planning your business case to migrate to the cloud, there are sever
 
 **Environment scope, technical and financial:** As you build out the on-premises view of your environment, think about how your environment scope, from both a technical and financial perspective, is aligned. You want to be sure the technical environment you're using for your plan matches up to the financial data.
 
-**Baseline financial data: Cost to run today:** When you build out your business case, it’s important to pull your baseline financial data. Common questions you can ask to gather the financial data needed are:
+**Baseline financial data: Cost to run today:** When you build out your business case, it's important to pull your baseline financial data. Common questions you can ask to gather the financial data needed are:
 
 - How much does it cost to run my environment today?
 - What am I spending on servers in an average year?
 - What am I spending in my data center operations categories, for example, power or lease costs?
 - When is the next hardware refresh?
 
-**Projections: On-premises costs in on-premises scenario:** Forecast what your on-premises costs will be if you don’t migrate to the cloud.
+**Projections: On-premises costs in on-premises scenario:** Forecast what your on-premises costs will be if you don't migrate to the cloud.
 
 :::image type="content" source="./media/create-financial-plan/optimization-opportunity.png" alt-text="Diagram of on-premises or status quo.":::
 
-**Projections: On-premises costs in Azure scenario:** Forecast what your on-premises costs will be when you migrate to the cloud in an Azure scenario. It takes resources and time to shift your environment to the cloud, so it’s important to account for them in the business case. When you build out the Azure scenario, be sure to take into consideration and include all of the core benefits the cloud provides.
+**Projections: On-premises costs in Azure scenario:** Forecast what your on-premises costs will be when you migrate to the cloud in an Azure scenario. It takes resources and time to shift your environment to the cloud, so it's important to account for them in the business case. When you build out the Azure scenario, be sure to take into consideration and include all of the core benefits the cloud provides.
 
 :::image type="content" source="./media/create-financial-plan/optimized-consumption-plan.png" alt-text="Diagram of on-premises costs in Azure scenario.":::
 
 **Projections: Migration timeline and Azure costs (optimized):** Project what migration timeline and the Azure costs will be with a given environment. Consider how you can optimize and get the most out of your Azure investment. For example, use reserved instances, scale capacity up and down, use the Azure hybrid benefit, and right-size your resources.
 
-A business case isn't just a point-in-time view. It’s a plan for a period of time. As you shift to the cloud, you reduce your spend over-time and create a cloud migration plan. You can model out what the ramp-down in spend will be on-premises over time associated with your cloud migration plan.
+A business case isn't just a point-in-time view. It's a plan for a period of time. As you shift to the cloud, you reduce your spend over-time and create a cloud migration plan. You can model out what the ramp-down in spend will be on-premises over time associated with your cloud migration plan.
 
 Once on-premises workloads and cost structure have been identified, you can then build out your optimized Azure consumption plan.
 
@@ -53,7 +53,7 @@ Cloud billing models and offers differ from on-premises however, they can create
 
 **Azure Hybrid Benefit:** Reduce the costs of running your workloads in the cloud by using this licensing benefit. You can use your on-premises Software Assurance-enabled Windows Server and SQL Server licenses on Azure. This benefit applies to RedHat and SUSE Linux subscriptions, too. To learn more, see [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/).
 
-**Spot virtual machines:** You can use spot virtual machines with deep discounts for workloads that can be interrupted and don't need to complete within a specific time frame. For example, high-performance computing scenarios, batch processing jobs, visual rendering applications, dev/test environments including continuous integration and continuous delivery workloads, or large-scale stateless applications. To learn more, see [Spot virtual machines](https://azure.microsoft.com/pricing/spot/).
+**Spot virtual machines:** You can use spot virtual machines with deep discounts for workloads that can be interrupted and don't need to complete within a specific time frame. For example, high-performance computing scenarios, batch processing jobs, visual rendering applications, dev/test environments including continuous integration and continuous delivery workloads, or large-scale stateless applications. To learn more, see [Spot virtual machines](https://azure.microsoft.com/services/virtual-machines/spot/).
 
 **Reservations:** Receive a discount on your workloads when you reserve your resources in advance. In return, Microsoft passes the savings onto you as discounts of up to 72 percent. For more information, see [Azure reservations](https://azure.microsoft.com/reservations/).
 
@@ -74,9 +74,9 @@ The Calculator creates a match from Azure Services to create a high-level initia
 
 **Retail Rates Prices API:** Use the Retail Rates Prices API to retrieve retail prices for all Azure services. Previously, the only way that you could retrieve prices for Azure services was to either use the Azure Pricing Calculator or use the Azure portal. This API gives you an unauthenticated experience to get retail rates for all Azure services. Use the API to explore prices for Azure services against different regions and different SKUs. The programmatic API can also help you create your own tools for internal analysis and price comparison across SKUs and regions. To learn more, see [Retail Rates Prices API](/rest/api/cost-management/retail-prices/azure-retail-prices).
 
-**Azure Virtual Machine cost comparison Power BI template:** This Power BI template allows you to estimate your cost savings against pay-as-you-go pricing by optimizing Azure offers and benefits for VMs like Azure Hybrid Benefit and reserved instances. Download the following files to use the Power BI model:
+**Azure Virtual Machine cost estimator:** This Power BI template allows you to estimate your cost savings against pay-as-you-go pricing by optimizing Azure offers and benefits for VMs like Azure Hybrid Benefit and reserved instances. Download the following files to use the Power BI model:
 
-- [Power BI template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/strategy/vm-cost-comparison-power-bi-template.pbix)
+- [Power BI template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/strategy/azure-virtual-machine-cost-estimator.pbix)
 - [Excel file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/strategy/on-premises-compute-unit-lists.xlsx)
 
 **Azure Pricing Calculator:** Use the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) to configure and estimate the costs for Azure products.
@@ -85,7 +85,7 @@ The Calculator creates a match from Azure Services to create a high-level initia
 
 **Solution assessments:** Get assistance from a Microsoft solutions assessment expert or qualified partner as part of a [Solution Assessment engagement](https://www.microsoft.com/solutionassessments/solutionassessments.aspx).
 
-**Azure Migration and Modernization Program:** Join the  [Azure Migration and Modernization Program](https://azure.microsoft.com/migration/migration-program/) to get the guidance and expert help you need at every stage of the cloud migration journey. Migrate infrastructure, databases, and apps—and move forward with confidence.
+**Azure Migration and Modernization Program:** Join the  [Azure Migration and Modernization Program](https://azure.microsoft.com/migration/migration-modernization-program/) to get the guidance and expert help you need at every stage of the cloud migration journey. Migrate infrastructure, databases, and apps—and move forward with confidence.
 
 ### Learn about Azure with Microsoft Learn
 

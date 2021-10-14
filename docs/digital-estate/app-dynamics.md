@@ -51,7 +51,7 @@ A company that sells widgets from an online marketplace has identified the follo
 - Billing
 - Confirm order
 
-These types of business transactions are common to e-commerce applications. A conversion funnel is the journey that a user takes through these pages, and it directly leads to sales revenue on the company's platform. When users abandon the journey because of poor page performance or errors, this directly impacts the company's underlying profit.
+These types of business transactions are common to e-commerce applications. A conversion funnel is the journey that a user takes through these pages, and it leads directly to sales revenue on the company's platform. When users abandon the journey because of poor page performance or errors, this directly impacts the company's underlying profit.
 
 Additionally, the company has identified the following key business metrics:
 

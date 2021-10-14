@@ -131,17 +131,13 @@ Azure Monitor provides a single unified hub for all monitoring and diagnostics d
 
 ### Action
 
-<!-- markdownlint-disable DOCSMD001 -->
-
 ::: form action="OpenBlade[#blade/Microsoft_Azure_Monitoring/AzureMonitoringBrowseBlade/overview]" submitText="Explore Azure Monitor" :::
-
-<!-- markdownlint-enable DOCSMD001 -->
 
 ::: zone-end
 
 ::: zone target="docs"
 
- Start monitoring your:
+Start monitoring your:
 
 - [Applications](/azure/azure-monitor/app/app-insights-overview)
 - [Containers](/azure/azure-monitor/containers/container-insights-overview)

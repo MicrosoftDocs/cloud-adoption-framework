@@ -26,7 +26,7 @@ The following diagram and table outline a number of scenarios that follow the sa
 | Applications | [ASP.NET](../migrate/azure-best-practices/contoso-migration-refactor-web-app-sql.md) | [Java](/azure/developer/java/migration/migration-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json) | [PHP](../migrate/azure-best-practices/contoso-migration-refactor-linux-app-service-mysql.md) |
 | Data | [SQL Server](../migrate/azure-best-practices/contoso-migration-rehost-vm-sql-managed-instance.md) | [Open-source databases](../migrate/azure-best-practices/sql-migration.md) | [Analytics](../migrate/azure-best-practices/analytics/analytics-solutions-overview.md) |
 | Hybrid | [Azure Stack](./azure-stack/index.md) | [VMware](../migrate/azure-best-practices/vmware-host.md) | |
-| Technology platforms | SAP (Classic & HANA) | Kubernetes | [Mainframes](../infrastructure/mainframe-migration/index.md) |
+| Technology platforms | SAP (classic and HANA) | Kubernetes | [Mainframes](../infrastructure/mainframe-migration/index.md) |
 | Additional scenarios | [Secure workloads](../migrate/azure-best-practices/migrate-best-practices-security-management.md) | [Multitenant environments](/azure/lighthouse/how-to/migration-at-scale?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json) | NetApp |
 
 Watch this short video for more information about using the right tools to move, manage and optimize your cloud environment.
@@ -41,7 +41,7 @@ Watch this short video for more information about using the right tools to move,
 
 In each of the preceding migration scenarios, the same basic process will guide your efforts as you move your existing workloads to the cloud, as shown here:
 
-![Diagram of the Cloud Adoption Framework migration model showing the Migration waves and the Migration effort.](../_images/migrate/methodology.png)
+![Diagram of the Cloud Adoption Framework migration model showing the migration waves and the migration effort.](../_images/migrate/methodology.png)
 
 In each scenario, you'll structure migration waves to guide the releases of multiple workloads. Establishing a cloud adoption plan and Azure landing zones through the plan and Ready methodologies helps to add structure to your migration waves.
 

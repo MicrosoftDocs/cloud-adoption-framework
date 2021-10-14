@@ -10,8 +10,6 @@ ms.subservice: general
 ms.custom: internal
 ---
 
-<!-- docutune:casing IR -->
-
 # Get started: Implement security across the enterprise environment
 
 Security helps create assurances of confidentiality, integrity, and availability for a business. Security efforts have a critical focus on protecting against the potential impact to operations caused by both internal and external malicious and unintentional acts.

@@ -6,7 +6,8 @@ ms.author: mboswell
 ms.date: 07/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Overview of Azure Data Lake Storage for the data management and analytics scenario
@@ -45,7 +46,7 @@ Scalability is a key concept and a single data lake might limit scalability from
     > Contact [Azure Support](https://azure.microsoft.com/support/faq/) to request higher capacity and ingress limits.
 
 - Isolation of data environments and predictability. For example, if you want to isolate activities that run in the laboratory zone to avoid potential effect on the curated zone. The curated zone holds data with greater business value that's used for critical decision making.
-- Features and functionality at the storage account level. Consider whether life cycle management options or firewall rules must be applied at the data landing zone or data lake level.
+- Features and functionality at the storage account level. Consider whether lifecycle management options or firewall rules must be applied at the data landing zone or data lake level.
 - There are good reasons to have multiple storage accounts, but be careful not to create unnecessary silos. Avoid creating duplicate data projects because of lack of visibility or knowledge-sharing across the organization. Ensure that a data catalog, good data governance, and project tracking tools are in place.
 - Data processing tools and technologies, like Azure Data Factory and Azure Databricks for Apache Spark, can easily interact with data across multiple lakes if permissions are appropriately configured.
 - Regional versus global lakes. Globally distributed consumers or processes on the lake might be sensitive to latency caused by geographic distances. Require data to be stored locally. Regulatory constraints or data sovereignty might require data to remain within a particular region. For more information, see [Multiregion deployments](#multiregion-deployments).

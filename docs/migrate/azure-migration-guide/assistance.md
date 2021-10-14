@@ -83,7 +83,7 @@ Need support engineer assistance for deep technical guidance?
 
 The following online communities provide community-based support:
 
-- [MSDN forums](https://social.msdn.microsoft.com/Forums/home?forum=windowsazureplatform%2Cazuremarketplace%2Cwindowsazureplatformctp)
+- [MSDN forums](https://social.msdn.microsoft.com/Forums/en-US/home)
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/azure)
 
 ::: zone-end

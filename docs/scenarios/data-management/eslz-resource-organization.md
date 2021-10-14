@@ -1,12 +1,13 @@
 ---
-title: Resource organization for enterprise-scale data management and analytics 
+title: Resource organization for enterprise-scale data management and analytics
 description: Learn how this enterprise-scale scenario can improve management group and subscription organization for data management and analytics in Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 07/19/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Resource organization for enterprise-scale data management and analytics
@@ -42,4 +43,3 @@ For example, tag all Azure development virtual machines with `Dev`. This strateg
 ## Next steps
 
 [Security, governance, and compliance for enterprise-scale data management and analytics](./eslz-security-governance-and-compliance.md)
-

@@ -6,7 +6,8 @@ ms.author: mboswell
 ms.date: 08/06/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Provision three Azure Data Lake Storage Gen2 accounts for each data landing zone
@@ -17,12 +18,12 @@ It's important to plan the structure of your data before you land it into a data
 
 The three data lake accounts should align to the typical zones within a data lake.
 
-| Lake number | Zone      | Container |
-|--------|-----------|-----------|
-| 1      | Raw       | 1         |
-| 2      | Enriched  | 1         |
-| 2      | Curated   | 2         |
-| 3      | Workspace | 1         |
+| Lake number | Zone | Container |
+|---|---|---|
+| 1 | Raw | 1 |
+| 2 | Enriched | 1 |
+| 2 | Curated | 2 |
+| 3 | Workspace | 1 |
 
 There should be a single container per data lake zone. The exception to this recommendation is where immutable or different soft delete policies are required for the data held in the container. These requirements will drive the need for more containers.
 
@@ -50,7 +51,7 @@ Using the water-based analogy, think of this layer as a reservoir that stores da
 
 This data is always immutable. It should be locked down and the permissions given to any consumers, whether they're automated or human, should be read-only. The zone might be organized by using a folder per source system. Each ingestion process has write access to only its associated folder.
 
-Consider using life cycle management to reduce long-term storage costs. This recommendation is because this layer usually stores the largest amount of data. Azure Data Lake Storage Gen2 supports moving data to the cool access tier either programmatically or through a life cycle management policy. The policy defines a set of rules that run once a day and can be assigned to the account, filesystem, or folder level. The feature is free although the operations will incur a cost.
+Consider using lifecycle management to reduce long-term storage costs. This recommendation is because this layer usually stores the largest amount of data. Azure Data Lake Storage Gen2 supports moving data to the cool access tier either programmatically or through a lifecycle management policy. The policy defines a set of rules that run once a day and can be assigned to the account, filesystem, or folder level. The feature is free although the operations will incur a cost.
 
 Raw data from source systems for each **data integration** or source will land into either the general folder, for *confidential or below*, or *sensitive* personal data folder for each **data integration** on data lake one. Each ingestion process should have write access to only their associated folder.
 
@@ -79,7 +80,7 @@ For batch or micro-batch patterns, the data should be copied from the source sys
 
 For streaming use cases, the data in the raw zone should sometimes be stored as an aggregated dataset. For example, data is ingested via a message bus such as Azure event hub. It's then aggregated via a real-time processing engine such as Azure Stream Analytics or Spark Streaming before it's stored in the data lake.
 
-As this layer usually stores the largest amount of data, consider using life cycle management to reduce long-term storage costs. At the time of writing Azure Data Lake Storage Gen2 supports moving data to the cool access tier either programmatically or through a life cycle management policy. The policy defines a set of rules that run once a day and can be assigned to the account, filesystem, or folder level.
+As this layer usually stores the largest amount of data, consider using lifecycle management to reduce long-term storage costs. At the time of writing Azure Data Lake Storage Gen2 supports moving data to the cool access tier either programmatically or through a lifecycle management policy. The policy defines a set of rules that run once a day and can be assigned to the account, filesystem, or folder level.
 
 > [!TIP]
 > Enterprises need to think about scenarios where they might need to rebuild an analytics platform from scratch and should always consider the most granular data they would require to rebuild downstream read data stores.
@@ -153,7 +154,7 @@ Data assets in this zone are typically highly governed and well-documented. Perm
 ```
 
 > [!TIP]
-> When a decision is made to land the data into another read data store such as Azure SQL database, as a high speed serving layer, we recommend to have a copy of the data located in the curated data. Although users of the **data product** will be guided to the main read data store or Azure SQL database, it will allow them to do further data exploration using a wider set of tools if the data is also available in the data lake.
+> When a decision is made to land the data into another read data store such as Azure SQL Database, as a high-speed serving layer, we recommend to have a copy of the data located in the curated data. Although users of the **data product** will be guided to the main read data store or Azure SQL Database instance, allowing them to do further data exploration using a wider set of tools if the data is also available in the data lake.
 
 Data assets in this zone should be highly governed and well-documented. For example, high-quality sales data might be data in the enriched data zone correlated with other demand forecasting signals such as social media trending patterns for a **data integration** that's used for predictive analytics on determining the sales projections for the next fiscal year.
 
@@ -226,7 +227,7 @@ Data might arrive to your data lake account in different kinds of formats. Human
 
 All of these formats are machine-readable binary file formats, offer compression to manage the file size, and are self-describing in nature with a schema embedded in the file. The difference between the formats is in how data is stored. Avro stores data in a row-based format and Parquet and ORC formats store data in a columnar format.
 
-- Avro file format is best where the I/O patterns are write heavy or the query patterns favor retrieving multiple rows of records in their entirety. For example, the Avro format is favored by message bus such as Azure Event Hub or Apache Kafka writes multiple events or messages in succession.
+- Avro file format is best where the I/O patterns are write heavy or the query patterns favor retrieving multiple rows of records in their entirety. For example, the Avro format is favored by message buses such as Azure Event Hubs or Apache Kafka writes multiple events or messages in succession.
 - Parquet and ORC file formats are best when the I/O patterns are more read heavy and when the query patterns are focused on a subset of columns in the records. For example, where the read transactions can be optimized to retrieve specific columns instead of reading the entire record.
 
 ### File size
@@ -235,7 +236,7 @@ Lots of small files generally lead to suboptimal performance and potentially hig
 
 Costs are reduced because of the shorter compute (Spark or Data Factory) times but also because of optimal read operations. For example, files greater than 4 MB in size incur a lower price for every 4-MB block of data read beyond the first 4 MB. For example, to read a single file that is 16 MB is cheaper than reading four files that are 4 MB each.
 
-When processing data with Apache Spark, the typical guidance is around 64 MB to 1 GB per file. It's well known in the Spark community that thousands of small files, or files KB in size, are a challenge to performance. In the raw zone, streaming data will typically have smaller files and messages at high velocity. Files will need to be regularly compacted and consolidated. If you're using the Delta format, then OPTIMIZE or AUTO OPTIMIZE can help.
+When processing data with Apache Spark, the typical guidance is around 64 MB to 1 GB per file. It's well known in the Spark community that thousands of small files, or files KB in size, are a challenge to performance. In the raw zone, streaming data will typically have smaller files and messages at high velocity. Files will need to be regularly compacted and consolidated. If you're using the Delta format, then `OPTIMIZE` or `AUTO OPTIMIZE` can help.
 
 ## Next steps
 

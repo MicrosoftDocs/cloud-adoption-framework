@@ -6,7 +6,8 @@ ms.author: brblanch
 ms.date: 06/21/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Enterprise enrollment and Azure Active Directory tenants for enterprise-scale for analytics and AI

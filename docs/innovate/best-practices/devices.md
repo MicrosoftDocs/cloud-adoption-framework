@@ -13,7 +13,7 @@ keywords: ambient user experience, ambient experience, device interaction
 
 # Ambient experience tools to interact with devices in Azure
 
-As described in [interacting with devices](../considerations/devices.md), the devices used to interact with a customer depend on how much ambient user experience is required to deliver the customer's need and empower adoption. Speed from the trigger that prompts the customer's need and your solution's ability to meet that need are determining factors in repeat usage. Ambient experiences help accelerate that response time and create a better experience for your customers by embedding your solution in the customers' immediate surroundings.
+As described in [Interacting with devices](../considerations/devices.md), the devices used to interact with a customer depend on how much ambient user experience is required to deliver the customer's need and empower adoption. Speed from the trigger that prompts the customer's need and your solution's ability to meet that need are determining factors in repeat usage. Ambient experiences help accelerate that response time and create a better experience for your customers by embedding your solution in the customers' immediate surroundings.
 
 ![Diagram that shows the Cloud Adoption Framework approach to interact with devices.](../../_images/innovate/ambient-experiences.png)
 
