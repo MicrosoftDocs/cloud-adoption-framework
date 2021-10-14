@@ -34,6 +34,10 @@ Regardless of the deployment option, you should carefully consider each design a
 
 Security, governance, and compliance are key topics when designing and building an Azure environment, not only to start from strong foundations, but also to ensure solid ongoing processes and controls are in place. Alongside the controls that help maintain and demonstrate compliance, the tools and processes implemented for managing environments play an important role in detecting and responding to issues that require action.
 
+![Overview of on-going activities for a landing zone](../landing-zone/design-area/media/management-capabilities.png)
+
+As the organization's cloud environment develops, these compliance design areas will be the focus for iterative refinement. This may be as a result of new applications that introduce specific new requirements, or the business requirements changing (for example in response to a new compliance standard).
+
 | Design areas | Objective | Relevant methodologies |
 |--|--|--|
 | Governance | Automate auditing and enforcement of governance policies. | Govern |
@@ -41,9 +45,12 @@ Security, governance, and compliance are key topics when designing and building 
 | Management | For stable, ongoing operations in the cloud, a management baseline is required to provide visibility, operations compliance, and protect and recover capabilities. | Manage |
 | Platform automation and DevOps | Align the best tools and templates to deploy your landing zones and supporting resources. | Ready |
 
+
 ## Next steps
 
 You can implement these design areas over time so that you can grow into your cloud operating model. Review the methodologies related to each of the design areas to understand in more detail the considerations and decisions required to implement a landing zone.
+
+Within each design area you'll find considerations to help shape your internal discussions and recommendations that provide specific guidance to help align your journey to the Azure landing zone conceptual architecture.
 
 Alternately, there are rich, opinionated implementation options that start with a defined position on each design area.
 
