@@ -10,8 +10,6 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-aks
 ---
 
-<!-- cspell:ignore cust -->
-
 # Azure landing zones for modern application platforms
 
 The [Ready methodology in the Cloud Adoption Framework](../../ready/index.md) guides the creation of all Azure environments using [Azure landing zones](../../ready/landing-zone/index.md). Azure landing zones provide many [implementation options](../../ready/landing-zone/implementation-options.md) built around a set of [common design areas](../../ready/landing-zone/design-areas.md).

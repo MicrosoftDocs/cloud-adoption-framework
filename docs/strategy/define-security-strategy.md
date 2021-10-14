@@ -10,8 +10,6 @@ ms.subservice: strategy
 ms.custom: think-tank
 ---
 
-<!-- cSpell:ignore NIST CISO COVID -->
-
 # Define a security strategy
 
 The ultimate objectives for a security organization don't change with adoption of cloud services, but how those objectives are achieved will change. Security teams must still focus on reducing business risk from attacks and work to get confidentiality, integrity, and availability assurances built into all information systems and data.
