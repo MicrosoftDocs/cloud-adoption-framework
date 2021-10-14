@@ -25,7 +25,7 @@ In addition, as part of designing and implementing an organization's landing zon
 
 The resource organization design area explores the considerations and recommendations associated with the techniques and technologies than can help maintain good structures to resource topologies within your cloud environments.
 
-![The four scope levels for organizing your Azure resources](../azure-setup-guide/media/organize-resources/scope-levels.png)
+![The four scope levels for organizing your Azure resources](../../azure-setup-guide/media/organize-resources/scope-levels.png)
 *Figure 1: The four scope levels for organizing your Azure resources.*
 
 ## Next steps
