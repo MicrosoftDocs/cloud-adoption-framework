@@ -18,10 +18,16 @@ As organizations move into cloud technologies, the scale, agility and flexibilit
 
 Many traditional IT operating models aren't compatible with the cloud, and organizations must undergo operational and organizational transformation to deliver against enterprise migration targets. Evaluate using DevOps processes and tools for both application and central teams.
 
+### DevOps
+
 A compound of development (Dev) and operations (Ops), DevOps is the union of people, processes and technology to continually provide value.
 This approach encourages a team collaboration approach that can create repeatable processes to help organizations operate efficiently and at scale.
 
 In the context of a cloud environment, DevOps processes will encourage the concepts of continuous integration and continuous deployment (CI/CD), which fosters a culture of refinement and improvement.
+
+The decisions your organization made when reviewing cloud operating models will directly influence how DevOps functions are implemented across technical teams with the capability for Infrastructure as Code.
+
+### Platform automation
 
 Platform automation focusses on the tools and techniques that enable the streamlining of tasks that may once have been performed manually but using automation tools, such as Azure DevOps or Github.
 
@@ -31,6 +37,8 @@ This automation then enables the tasks to be completed quicker and more often, s
 This is directly applicable to the outcomes associated with implementing an Azure landing zone, and supports the concept of building repeatable, scalable environments.
 
 Using automated processes and tools enables deployment activities to be configured as 'stages' in a pipeline - a sequence of tasks that are completed in a prescribed order, with tests and checks built-in to ensure successful completion.
+
+The ability to make changes at scale through a prescribed, automated process will also provide direct benefits to the organization's ability to expand beyond the baseline configurations chosen as part of security, governance and management.
 
 ### Platform automation and DevOps Design considerations
 
