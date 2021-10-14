@@ -30,7 +30,7 @@ The Azure Security Benchmark documentation specifies security controls and servi
 
 ## Security design considerations
 
-An enterprise must have visibility into what's happening within their technical cloud estate. Security monitoring and audit logging of Azure platform services is a key component of a scalable framework.
+An organization must have visibility into what's happening within their technical cloud estate. Security monitoring and audit logging of Azure platform services is a key component of a scalable framework.
 
 ### Platform security design considerations
 
@@ -46,17 +46,17 @@ An enterprise must have visibility into what's happening within their technical 
 
 ## Security monitoring design recommendations
 
-- Use Azure AD reporting capabilities to generate access control audit reports.
+- Use [Azure AD reporting capabilities](/azure/active-directory/reports-monitoring/concept-audit-logs) to generate access control audit reports.
 
 - Export Azure activity logs to Azure Monitor Logs for long-term data retention. Export to Azure Storage for long-term storage beyond two years, if necessary.
 
-- Enable Security Center Standard for all subscriptions, and use Azure Policy to ensure compliance.
+- [Enable Security Center Standard](/azure/security-center/security-center-get-started) for all subscriptions, and use Azure Policy to ensure compliance.
 
 - Monitor base operating system patching drift via Azure Monitor Logs and Azure Security Center.
 
-- Use Azure policies to automatically deploy software configurations through VM extensions and enforce a compliant baseline VM configuration.
+- Use Azure policies to automatically deploy software configurations through virtual machine (VM) extensions and enforce a compliant baseline VM configuration.
 
-- Monitor VM security configuration drift via Azure Policy.
+- Monitor virtual machine security configuration drift via Azure Policy.
 
 - Connect default resource configurations to a centralized Azure Monitor Log Analytics workspace.
 
@@ -70,10 +70,8 @@ An enterprise must have visibility into what's happening within their technical 
 
 - Determine the incident response plan for Azure services before allowing it into production.
 
-- Use Azure AD reporting capabilities to generate access control audit reports.
-
 - Align your security requirements with Azure platform roadmaps to stay current with newly released security controls.
 
-- Implement a zero-trust approach for access to the Azure platform, where appropriate.
+- Implement a [zero-trust approach for access](/azure/cloud-adoption-framework/secure/access-control) to the Azure platform, where appropriate.
 
 ## Security in the Azure landing zone accelerator

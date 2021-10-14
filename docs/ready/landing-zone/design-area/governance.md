@@ -14,7 +14,7 @@ ms.custom: internal
 
 As organizations begin their cloud adoption journey, starting with strong controls in place to government environments is an important success criteria.
 
-Governance provides mechanisms and processes to maintain control over your applications and resources in Azure.
+Governance provides mechanisms and processes to maintain control over your platform, applications and resources in Azure.
 
 ![Landing Zone image](../../enterprise-scale/media/lz-design.png)
 
