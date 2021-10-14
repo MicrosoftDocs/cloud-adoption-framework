@@ -38,6 +38,11 @@ A critical design decision that an enterprise organization must make when adopti
 
 #### Managed identities - design considerations
 
+- Which tasks and functions should the organization control with managed identities?
+- Which services or applications within your landing zone support Azure Active Directory authentication?
+- Explore [which Azure services cna use managed identities](/azure/active-directory/managed-identities-azure-resources/services-support-managed-identities)
+- Explore [managed identities for Azure resources](/azure/active-directory/managed-identities-azure-resources/overview) capabilities in further detail
+
 #### Privileged identity management (PIM) - design considerations
 
 - Which teams or individuals require access to services within the landing zone? What roles are they performing?
@@ -62,6 +67,9 @@ A critical design decision that an enterprise organization must make when adopti
 - What is the minimum level of privilege they would require in order to carry out their responsibilities?
 
 ### Hosting Infrastructure-as-a-Service (IaaS) identity solutions - design considerations
+
+- Does the organization need to extend an existing on-premises Active Directory domain into Azure?
+- Are there applications that are partly-hosted on-premises and partly-hosted in Azure?
 
 ## Identity and access management design recommendations
 
@@ -114,11 +122,9 @@ A critical design decision that an enterprise organization must make when adopti
 - Integrate Azure AD logs with the platform-central [Log Analytics workspace](/azure/azure-monitor/logs/data-platform-logs). It allows for a single source of truth around log and monitoring data in Azure, which gives organizations cloud-native options to meet requirements around log collection and retention.
 - If any data sovereignty requirements exist, custom user policies can be deployed to enforce them.
 
-### Workload access - design recommendations
-
 ### Hosting Infrastructure-as-a-Service (IaaS) identity solutions - design recommendations
 
-
+- See the following guidance for [deploying Active Directory Domain Services](/azure/architecture/reference-architectures/identity/adds-extend-domain) in Azure
 
 ## Identity and access management in the Azure landing zone accelerator
 
