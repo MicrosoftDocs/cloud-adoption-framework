@@ -42,8 +42,7 @@ An enterprise must have visibility into what's happening within their technical 
 | Vulnerability management|- Emergency patching for critical vulnerabilities. <br>- Patching for VMs that are offline for extended periods of time. <br> - Vulnerability assessment of VMs.
 |Shared responsibility| - Where are the hand-offs between team responsibilities that need to be considered when monitoring or responding to security events?|
 |High availability and disaster recovery|- In the event of a security event, which systems are business critical and should be considered as part of the business continuity planning? |
-|Consistent security across Azure services for data management and analytics and control plane operations| |
-|Multitenancy for key platform components. The multitenancy includes Hyper-V, the HSMs underpinning Key Vault, and database engines| |
+
 
 ## Security monitoring design recommendations
 
