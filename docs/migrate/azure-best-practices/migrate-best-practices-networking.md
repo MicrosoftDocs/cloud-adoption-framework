@@ -26,7 +26,7 @@ Azure provides virtual networks with these capabilities:
 - A virtual network is a logical isolation of the Azure cloud that's dedicated to your subscription.
 - You can implement multiple virtual networks within each Azure subscription and Azure region.
 - Each virtual network is isolated from other virtual networks.
-- Virtual networks can contain private and public IP addresses defined in [RFC 1918](https://datatracker.ietf.org/doc/html/rfc1918), expressed in classless inter-domain routing (CIDR) notation. Public IP addresses specified in a virtual network's address space aren't directly accessible from the internet.
+- Virtual networks can contain private and public IP addresses defined in [RFC 1918](https://datatracker.ietf.org/doc/html/rfc1918), expressed in classless interdomain routing (CIDR) notation. Public IP addresses specified in a virtual network's address space aren't directly accessible from the internet.
 - Virtual networks can connect to each other by using virtual network peering. Connected virtual networks can be in the same region or different regions; resources in one virtual network can connect to resources in other virtual networks.
 - By default, Azure routes traffic between subnets within a virtual network, connected virtual networks, on-premises networks, and the internet.
 
@@ -43,7 +43,7 @@ Other tips for planning are:
 - The virtual network address space shouldn't overlap with on-premises network ranges.
 - Overlapping addresses can cause networks that can't be connected, and routing that doesn't work properly.
 - If networks overlap, you'll need to redesign the network.
-- If you absolutely can't redesign the network, network address translation (NAT) can help but should be avoided or limited as much as possible.
+- If you absolutely can't redesign the network, Network Address Translation (NAT) can help, but it should be avoided or limited as much as possible.
 
 **Learn more:**
 
@@ -137,7 +137,7 @@ Here are a few additional points to be aware of as you set up Availability Zones
   - **Zone-redundant services:** The resource replicates automatically across zones, such as zone-redundant storage or Azure SQL Database.
 - To provide zonal fault tolerance, you can deploy a standard Azure Load Balancer instance with internet-facing workloads or application tiers.
 
-    ![Diagram of a standard Azure load balancer](./media/migrate-best-practices-networking/load-balancer.png)
+    ![Diagram of a standard Azure load balancer.](./media/migrate-best-practices-networking/load-balancer.png)
     *Figure 4: Load balancer.*
 
 **Learn more:**
@@ -191,7 +191,7 @@ When setting up a Site-to-Site VPN:
 - Read the [Azure VPN gateways overview](/azure/vpn-gateway/vpn-gateway-about-vpngateways).
 - Learn about [highly available VPN connections](/azure/vpn-gateway/vpn-gateway-highlyavailable).
 - Learn about [planning and designing a VPN gateway](/azure/vpn-gateway/vpn-gateway-about-vpngateways).
-- Review [VPN gateway settings](/azure/vpn-gateway/vpn-gateway-about-vpn-gateway-settings#gwsku).
+- Review [VPN Gateway settings](/azure/vpn-gateway/vpn-gateway-about-vpn-gateway-settings#gwsku).
 - Review [gateway SKUs](/azure/vpn-gateway/vpn-gateway-about-vpngateways#gwsku).
 - Read about [setting up BGP with Azure VPN gateways](/azure/vpn-gateway/vpn-gateway-bgp-overview).
 
@@ -470,7 +470,7 @@ Network Watcher provides tools to monitor resources and communications in an Azu
 
 Here are a few more details:
 
-- With Network Watcher, you can monitor and diagnose networking issues without signing into VMs.
+- With Network Watcher, you can monitor and diagnose networking issues without signing in to VMs.
 - You can trigger packet capture by setting alerts, and gain access to real-time performance information at the packet level. When you see an issue, you can investigate it in detail.
 - As a best practice, use Network Watcher to review NSG flow logs.
   - NSG flow logs in Network Watcher allow you to view information about ingress and egress IP traffic through an NSG.
@@ -487,7 +487,7 @@ Here are a few more details:
 For more complex network topologies, you might use security products from Microsoft partners, in particular network virtual appliances (NVAs).
 
 - An NVA is a VM that performs a network function, such as a firewall, WAN optimization, or other network function.
-- NVAs bolster virtual network security and network functions. They can be deployed for highly available firewalls, intrusion prevention, intrusion detection, WAFs, WAN optimization, routing, load balancing, VPN, certificate management, Active Directory, and multi-factor authentication.
+- NVAs bolster virtual network security and network functions. They can be deployed for highly available firewalls, intrusion prevention, intrusion detection, WAFs, WAN optimization, routing, load balancing, VPN, certificate management, Active Directory, and multifactor authentication.
 - NVAs are available from numerous vendors in [Azure Marketplace](https://azuremarketplace.microsoft.com/).
 
 ## Best practice: Implement firewalls and NVAs in hub networks

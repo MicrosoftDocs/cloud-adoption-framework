@@ -27,9 +27,9 @@ Azure Synapse studio is a tool in Azure Synapse that provides a unified experien
 
 During the initial setup of a [data landing zone](../architectures/data-landing-zone.md), you can deploy a single Azure Synapse Analytics workspace for use by all analysts and data scientists. You can create more workspaces for specific data integrations or data products.
 
-Use Azure SQL Database pools, formerly SQL data warehouse, as the data store for both enriched and curated data. This data store serves the data science team's need for feature datasets and datasets for analytical requirements. Azure Databricks can connect to these SQL pools and update the data, which is in the SQL pools.
+Use Azure SQL Database elastic pools as the data store for both enriched and curated data. This data store serves the data science team's need for feature datasets and datasets for analytical requirements. Azure Databricks can connect to these elastic pools and update the data in the pools.
 
-Azure SQL Database on-demand is a serverless query service that's used by data scientists and engineers to run queries against files in the storage accounts.
+Azure SQL Database on-demand is a serverless query service used by data scientists and engineers to run queries against files in the storage accounts.
 
 > [!TIP]
 > You might need additional Azure Synapse Analytics workspaces if your data integration needs to provide access to the golden source with row-level and column-level security. You can provide these workspaces with Azure Synapse pools. Data products teams might require their own workspace for creating data products and a separate workspace that's only for product teams with scoped development access.

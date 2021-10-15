@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-hybrid
 
 # Connect Azure Arc-enabled servers to Azure Security Center
 
-This article provides guidance on how to onboard an Azure Arc-enabled server to [Azure Security Center (Azure Security Center)](/azure/security-center/). This helps you start collecting security-related configurations and event logs so you can recommend actions and improve your overall Azure security posture.
+This article provides guidance on how to onboard an Azure Arc-enabled server to [Azure Security Center](/azure/security-center/). This helps you start collecting security-related configurations and event logs so you can recommend actions and improve your overall Azure security posture.
 
 In the following procedures, you enable and configure Azure Security Center Standard tier on your Azure subscription. This provides advanced threat protection and detection capabilities. The process includes:
 

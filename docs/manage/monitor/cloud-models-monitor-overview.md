@@ -32,7 +32,7 @@ It monitors all layers of the stack, starting with tenant services, such as Azur
 
 It also monitors infrastructure resources, such as VMs, storage, and network resources. At the top layer, it monitors your application.
 
-By monitoring each of these dependencies, and collecting the right signals that each can emit, you get the observability of applications and the key infrastructure you need.
+By monitoring these dependencies and collecting the right signals that each dependency can emit, you get the observability of applications and the key infrastructure you need.
 
 Our recommended approach to monitoring each layer of the stack is summarized in the following table:
 
@@ -114,7 +114,7 @@ At the application tier, Operations Manager offers basic application performance
 
 For any web application that can be reached externally, you should enable a type of synthetic transaction known as [availability monitoring](/azure/azure-monitor/app/monitor-web-app-availability). It's important to know whether your application or a critical HTTP/HTTPS endpoint that your application relies on, is available and responsive. With Application Insights availability monitoring, you can run tests from multiple Azure datacenters and provide insight into the health of your application from a global perspective.
 
-Although Operations Manager is capable of monitoring resources that are hosted in Azure, there are several advantages to including Azure Monitor, because its strengths overcome the limitations in Operations Manager and can establish a strong foundation to support eventual migration from it. Here we review each of those strengths and weaknesses, with our recommendation to include Azure Monitor in your hybrid monitoring strategy.
+Although Operations Manager is capable of monitoring resources that are hosted in Azure, there are several advantages to including Azure Monitor, because its strengths overcome the limitations in Operations Manager and can establish a strong foundation to support eventual migration from it. Here we review those strengths and limitations, with our recommendation to include Azure Monitor in your hybrid monitoring strategy.
 
 #### Disadvantages of using Operations Manager by itself
 

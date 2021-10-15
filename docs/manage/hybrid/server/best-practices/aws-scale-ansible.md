@@ -91,7 +91,7 @@ In order for Terraform to create resources in AWS, we'll need to create a new AW
 
     ![Second screenshot of a new user being created in an AWS cloud console.](./media/aws-scale-ansible/ansible-new-user-2.png)
 
-5. On the next page, **Set Permissions**, select **Attach existing policies directly** then check the box next to **AmazonEC2FullAccess** as shown in the screenshot, and then select **Next**.
+5. On the next page, **Set Permissions**, select **Attach existing policies directly** then select the box next to **AmazonEC2FullAccess** as shown in the screenshot, and then select **Next**.
 
     ![Third screenshot of a new user being created in an AWS cloud console.](./media/aws-scale-ansible/ansible-new-user-3.png)
 

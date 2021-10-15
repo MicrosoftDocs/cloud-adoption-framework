@@ -231,11 +231,11 @@ Before Contoso admins can run a migration to Azure, they need to set up and enab
 
 8. In **Compute**, review the VM name, size, OS disk type, and availability set. VMs must conform with [Azure requirements](/azure/migrate/migrate-support-matrix-vmware#vmware-requirements).
 
-    - **VM size:** If you're using assessment recommendations, this drop-down list contains the recommended size. Otherwise, Azure Migrate selects a size based on the closest match in the Azure subscription. You can choose a manual size instead in **Azure VM size**.
+    - **VM size:** If you're using assessment recommendations, this dropdown list contains the recommended size. Otherwise, Azure Migrate selects a size based on the closest match in the Azure subscription. You can choose a manual size instead in **Azure VM size**.
     - **OS disk:** Specify the OS (boot) disk for the VM. The OS disk has the operating system bootloader and installer.
     - **Availability set:** If the VM should be in an Azure availability set after migration, then specify the set. The set must be in the target resource group that you specify for the migration.
 
-9. In **Disks**, specify whether the VM disks should be replicated to Azure and select the disk type (standard SSD/HDD or premium managed disks) in Azure. Then select **Next**. You can exclude disks from replication. If you do, they won't be present on the Azure VM after migration.
+9. In **Disks**, specify whether the VM disks should be replicated to Azure and select the disk type (Standard SSD/HDD or Premium SSD) in Azure, and then select **Next**. You can exclude disks from replication. If you do, they won't be present on the Azure VM after migration.
 
 10. In **Review and start replication**, review the settings and select **Replicate** to start the initial replication for the servers.
 

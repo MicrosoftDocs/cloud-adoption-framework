@@ -35,7 +35,7 @@ Working closely with business partners, the Contoso IT team defines the business
 
 With its business drivers in mind, Contoso has pinned down a few goals for this migration:
 
-- Continue managing its existing environments with VMware tools that are familiar to its teams, while modernizing the applications with native Azure services.
+- Continue managing its existing environments with VMware Tools that are familiar to its teams, while modernizing the applications with native Azure services.
 - Seamlessly move Contoso VMware-based workloads from its datacenter to Azure, and integrate the VMware environment with Azure.
 - After migration, the application in Azure should have the same performance capabilities as it does today in VMware. The application will remain as critical in the cloud as it was on-premises.
 

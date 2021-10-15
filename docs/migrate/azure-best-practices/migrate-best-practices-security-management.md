@@ -104,9 +104,9 @@ In particular, older Azure-migrated VMs might not have the appropriate level of 
 
 - Microsoft Antimalware for Azure Cloud Services and Virtual Machines generates alerts when known malicious or unwanted software tries to install itself.
 - It's a single agent solution that runs in the background without human intervention.
-- In Security Center, you can identify VMs that don't have endpoint protection running and install Microsoft antimalware as needed.
+- In Security Center, you can identify VMs that don't have endpoint protection running and install Microsoft Antimalware as needed.
 
-  ![Screenshot of Antimalware for VMs.](./media/migrate-best-practices-security-management/antimalware.png)
+  ![Screenshot of Microsoft Antimalware for VMs.](./media/migrate-best-practices-security-management/antimalware.png)
   *Figure 1: Antimalware for VMs.*
 
 **Learn more:**
@@ -155,7 +155,7 @@ As you migrate your workloads and run them in Azure, staff with workload access 
 
 Ensure that admins with Azure access can access only resources that you want to allow. If the predefined roles in Azure aren't granular enough, you can create custom roles to separate and limit access permissions.
 
-  ![Screenshot of Access control.](./media/migrate-best-practices-security-management/subscription.png)
+  ![Screenshot of **Access control**.](./media/migrate-best-practices-security-management/subscription.png)
   *Figure 3: Access control.*
 
 **Learn more:**
@@ -171,9 +171,9 @@ Azure AD provides activity logs that appear in Azure Monitor. The logs capture t
 - Audit logs show the history of tasks in the tenant. Sign-in activity logs show who carried out the tasks.
 - Access to security reports depends on your Azure AD license. With the free and basic licenses, you get a list of risky users and sign-ins. With the premium licenses, you get underlying event information.
 - You can route activity logs to various endpoints for long-term retention and data insights.
-- Make it a common practice to review the logs, or integrate your security information and event management (SIEM) tools to automatically review abnormalities. If you're not using a premium license, you'll need to do a lot of analysis yourself, or by using your SIEM system. Analysis includes looking for risky sign-ins and events, and other user attack patterns.
+- Make it a common practice to review the logs, or integrate your security incident and event management (SIEM) tools to automatically review abnormalities. If you're not using a premium license, you'll need to do a lot of analysis yourself, or by using your SIEM system. Analysis includes looking for risky sign-ins and events, and other user attack patterns.
 
-  ![Screenshot of Azure AD Users and groups.](./media/migrate-best-practices-security-management/azure-ad.png)
+  ![Screenshot of Azure AD users and groups.](./media/migrate-best-practices-security-management/azure-ad.png)
   *Figure 4: Azure AD users and groups.*
 
 **Learn more:**
@@ -186,8 +186,8 @@ Azure AD provides activity logs that appear in Azure Monitor. The logs capture t
 Azure provides other security features that provide advanced security options. Note that some of the following best practices require add-on licenses and premium options.
 
 - **Implement Azure AD administrative units (AU).** Delegating administrative duties to support staff can be tricky with just basic Azure access control. Giving support staff access to administer all the groups in Azure AD might not be the ideal approach for organizational security. Using AU allows you to segregate Azure resources into containers in a similar way to on-premises organizational units (OUs). To use AUs, the AU admin must have a premium Azure AD license. For more information, see [Administrative units management in Azure AD](/azure/active-directory/roles/administrative-units).
-- **Use multi-factor authentication.** If you have a premium Azure AD license, you can enable and enforce multi-factor authentication on your admin accounts. Phishing is the most common way that accounts credentials are compromised. When a bad actor has admin account credentials, there's no stopping them from far-reaching actions, such as deleting all of your resource groups. You can establish multi-factor authentication in several ways, including with email, an authenticator app, and phone text messages. As an administrator, you can select the least intrusive option. Multi-factor authentication integrates with threat analytics and conditional access policies to randomly require a multi-factor authentication challenge response. Learn more about [Azure identity management and access control security best practices](/azure/security/fundamentals/identity-management-best-practices), and [how to set up multi-factor authentication](/azure/active-directory/authentication/howto-mfa-getstarted).
-- **Implement conditional access.** In most small and medium-sized organizations, Azure admins and the support team are probably located in a single geography. In this case, most sign-ins come from the same areas. If the IP addresses of these locations are fairly static, it makes sense that you shouldn't see administrator sign-ins from outside these areas. Even if a remote bad actor compromises an administrator's credentials, you can implement security features like conditional access, combined with multi-factor authentication, to prevent signing in from remote locations. This can also prevent spoofed locations from random IP addresses. Learn more about [conditional access](/azure/active-directory/conditional-access/overview) and [review best practices](/azure/active-directory/conditional-access/plan-conditional-access) for conditional access in Azure AD.
+- **Use multifactor authentication.** If you have a premium Azure AD license, you can enable and enforce multifactor authentication on your admin accounts. Phishing is the most common way that accounts credentials are compromised. When a bad actor has admin account credentials, there's no stopping them from far-reaching actions, such as deleting all of your resource groups. You can establish multifactor authentication in several ways, including with email, an authenticator app, and phone text messages. As an administrator, you can select the least intrusive option. Multifactor authentication integrates with threat analytics and conditional access policies to randomly require a multifactor authentication challenge response. Learn more about [Azure identity management and access control security best practices](/azure/security/fundamentals/identity-management-best-practices), and [how to set up multifactor authentication](/azure/active-directory/authentication/howto-mfa-getstarted).
+- **Implement conditional access.** In most small and midsize organizations, Azure admins and the support team are probably located in a single geography. In this case, most sign-ins come from the same areas. If the IP addresses of these locations are fairly static, it makes sense that you shouldn't see administrator sign-ins from outside these areas. Even if a remote bad actor compromises an administrator's credentials, you can implement security features like conditional access, combined with multifactor authentication, to prevent signing in from remote locations. This can also prevent spoofed locations from random IP addresses. Learn more about [conditional access](/azure/active-directory/conditional-access/overview) and [review best practices](/azure/active-directory/conditional-access/plan-conditional-access) for conditional access in Azure AD.
 - **Review enterprise application permissions.** Over time, admins select Microsoft and third-party links without knowing their affect on the organization. Links can present consent screens that assign permissions to Azure apps. This might allow access to read Azure AD data, or even full access to manage your entire Azure subscription. You should regularly review the applications to which your admins and users have allowed access to Azure resources. Ensure that these applications have only the permissions that are necessary. Additionally, quarterly or semi-annually you can email users with a link to application pages, so that they're aware of the applications to which they've allowed access to their organizational data. For more information, see [Unexpected application in my applications list](/azure/active-directory/manage-apps/application-types), and [how to control](/azure/active-directory/manage-apps/assign-user-or-group-access-portal) application assignments in Azure AD.
 
 ## Managed migrated workloads
@@ -348,7 +348,7 @@ You can use Azure Backup to back up VMs in the following ways:
 
 - **Direct backup from VM settings.** You can back up VMs with Azure Backup directly from the VM options in the Azure portal. You can back up the VM once per day, and you can restore the VM disk as needed. Azure Backup takes application-aware data snapshots, and no agent is installed on the VM.
 - **Direct backup in a Recovery Services vault.** You can back up your IaaS VMs by deploying an Azure Backup Recovery Services vault. This provides a single location to track and manage backups, as well as granular backup and restore options. Backup is up to three times a day, at the file and folder levels. It isn't application-aware, and Linux isn't supported. Install the Microsoft Azure recovery services (MARS) agent on each VM that you want to back up by using this method.
-- **Protect the VM to Azure Backup server.** Azure Backup server is provided free with Azure Backup. The VM is backed up to local Azure Backup server storage. You then back up the Azure Backup server to Azure in a vault. Backup is application-aware, with full granularity over backup frequency and retention. You can back up at the application level, for example by backing up SQL Server or SharePoint.
+- **Protect the VM to Azure Backup Server.** Azure Backup Server is provided free with Azure Backup. The VM is backed up to local Azure Backup Server storage. You then back up the Azure Backup Server to Azure in a vault. Backup is application-aware, with full granularity over backup frequency and retention. You can back up at the application level, for example by backing up SQL Server or SharePoint.
 
 For security, Azure Backup encrypts data in-flight by using AES-256. It sends it over HTTPS to Azure. Backed-up data-at-rest in Azure is encrypted by using [Azure Storage encryption](/azure/storage/common/storage-service-encryption).
 
@@ -502,7 +502,7 @@ At some point, you will need to collaborate with your support staff or Microsoft
 
 ## Best practice: Manage updates
 
-Keeping Azure VMs updated with the latest operating system and software updates is a massive chore. The ability to surface all VMs, figure out which updates they need, and automatically push those updates is extremely valuable.
+Keeping Azure VMs updated with the latest operating system and software updates is a massive chore. The ability to surface all VMs, determine which updates they need, and automatically push those updates is extremely valuable.
 
 - You can use Update Management in Azure Automation to manage operating system updates. This applies to machines that run Windows and Linux computers that are deployed in Azure, on-premises, and in other cloud providers.
 - Use Update Management to quickly assess the status of available updates on all agent computers, and manage update installation.
