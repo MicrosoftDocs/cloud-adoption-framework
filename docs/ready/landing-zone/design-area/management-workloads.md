@@ -1,6 +1,6 @@
 ---
-title: Management - application
-description: Design area guidance for applications in an Azure landing zone
+title: Management - workloads
+description: Design area guidance for workloads in an Azure landing zone
 author: DominicAllen
 ms.author: doalle
 ms.date: 8/1/2021
@@ -11,25 +11,25 @@ ms.custom: internal
 ---
 
 
-# Management - Applications
+# Management - Workloads
 
-## Application management and monitoring - Design considerations
+## Workload management and monitoring - Design considerations
 
-To expand on the previous section, this section will consider a federated model and explain how application teams can operationally maintain these workloads.
+To expand on the previous section, this section will consider a federated model and explain how workload teams can operationally maintain these workloads.
 
-- Application monitoring can use dedicated Log Analytics workspaces.
-- For applications that are deployed to virtual machines, logs should be stored centrally to the dedicated Log Analytics workspace from a platform perspective. Application teams can access the logs subject to the Azure RBAC they have on their applications or virtual machines.
-- Application performance and health monitoring for both infrastructure as a service (IaaS) and platform as a service (PaaS) resources.
-- Data aggregation across all application components.
+- Workload monitoring can use dedicated Log Analytics workspaces.
+- For workloads that are deployed to virtual machines, logs should be stored centrally to the dedicated Log Analytics workspace from a platform perspective. Workload teams can access the logs subject to the Azure RBAC they have on their workloads or virtual machines.
+- Workload performance and health monitoring for both infrastructure as a service (IaaS) and platform as a service (PaaS) resources.
+- Data aggregation across all workload components.
 - [Health modeling and operationalization](/manage/monitor/cloud-models-monitor-overview.md):
   - How to measure the health of the workload and its subsystems
   - A traffic-light model to represent health
-  - How to respond to failures across application components
+  - How to respond to failures across workload components
 
 
-## Application management and monitoring recommendations
+## Workload management and monitoring recommendations
 
-- Use a centralized Azure Monitor Log Analytics workspace to collect logs and metrics from IaaS and PaaS application resources and [control log access with Azure RBAC](/azure/azure-monitor/platform/design-logs-deployment#access-control-overview).
+- Use a centralized Azure Monitor Log Analytics workspace to collect logs and metrics from IaaS and PaaS workload resources and [control log access with Azure RBAC](/azure/azure-monitor/platform/design-logs-deployment#access-control-overview).
 - Use [Azure Monitor metrics](/azure/azure-monitor/platform/data-platform-metrics) for time-sensitive analysis. Metrics in Azure Monitor are stored in a time-series database optimized to analyze time-stamped data. These metrics are well suited for alerts and detecting issues quickly. They can also tell you how your system is performing. They typically need to be combined with logs to identify the root cause of issues.
 - Use [Azure Monitor Logs](/azure/azure-monitor/platform/data-platform-logs) for insights and reporting. Logs contain different types of data that's organized into records with different sets of properties. They're useful for analyzing complex data from a range of sources, such as performance data, events, and traces.
 - When necessary, use shared storage accounts within the landing zone for Azure diagnostic extension log storage.
@@ -38,4 +38,4 @@ To expand on the previous section, this section will consider a federated model 
 
 ## Well-architected Framework
 
-For further information on considerations for application-specific management, review the [Operational excellence](/azure/architecture/framework/#operational-excellence) of the Well-architected Framework
+For further information on considerations for workload-specific management, review the [Operational excellence](/azure/architecture/framework/#operational-excellence) of the Well-architected Framework
