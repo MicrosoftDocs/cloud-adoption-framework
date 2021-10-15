@@ -20,7 +20,9 @@ Considering how to use management groups as part of the environment design is an
 
 Management group structures within an Azure Active Directory (Azure AD) tenant support organizational mapping. Consider your management group structure thoroughly as your organization plans Azure adoption at scale.
 
-- How will your organization separate out services owned or operated by specific teams? Are there specific functions that need to be kept separate for business or operational compliance reasons? Reflect these considerations in your management group structure in order to design in, from the beginning, a structure that reflects how your organization intends to operate
+- How will your organization separate out services owned or operated by specific teams? 
+- Are there specific functions that need to be kept separate for business or operational compliance reasons? 
+- Reflect these considerations in your management group structure in order to design in, from the beginning, a structure that reflects how your organization intends to operate
 
 - Management groups can be used to aggregate policy and initiative assignments via Azure Policy.
 
@@ -29,6 +31,8 @@ Management group structures within an Azure Active Directory (Azure AD) tenant s
 - Any principal (user or service principal) within an Azure AD tenant can create new management groups, since Azure role-based access control (RBAC) authorization for management group operations isn't enabled by default.
 
 - All new subscriptions will be placed under the root management group by default.
+
+- Explore the capabilities of [management groups](/azure/governance/management-groups/overview) in more detail
 
 ## Management group recommendations
 
@@ -41,12 +45,6 @@ Avoid duplicating your organizational structure into a deeply nested management 
 - Use resource tags, which can be enforced or appended through Azure Policy, to query and horizontally navigate across the management group hierarchy. Then you can group resources for search needs without having to use a complex management group hierarchy.
 
 - Create a top-level sandbox management group to allow users to immediately experiment with Azure. Users can then experiment with resources that might not yet be allowed in production environments. The sandbox provides isolation from your development, test, and production environments.
-
-- Use a dedicated service principal name (SPN) to execute management group management operations, subscription management operations, and role assignment. Using an SPN reduces the number of users who have elevated rights and follows least-privilege guidelines.
-
-- Assign the User Access Administrator role at the root management group scope (/) to grant the SPN just mentioned access at the root level. After the SPN is granted permissions, the User Access Administrator role can be safely removed. In this way, only the SPN is part of the User Access Administrator role.
-
-- Assign the Contributor role to the SPN previously mentioned at the root management group scope (/), which allows tenant-level operations. This permission level ensures that the SPN can be used to deploy and manage resources to any subscription within your organization.
 
 - Create a Platform management group under the root management group to support common platform policy and Azure role assignment. This grouping structure ensures that different policies can be applied to the subscriptions used for your Azure foundation. It also ensures that the billing for common resources is centralized in one set of foundational subscriptions.
 
@@ -76,3 +74,11 @@ As part of the Azure landing zone accelerator the following decisions have been 
 |**Corp**| This is the dedicated Management Group for Corp landing zones, meaning workloads that requires connectivity/hybrid connectivity with the corporate network thru the hub in the connectivity subscription.|
 |**Sandboxes**| This is the dedicated Management Group for subscriptions that will solely be used for testing and exploration by an organization’s application teams. These subscriptions will be securely disconnected from the Corp and Online landing zones.|
 |**Decommissioned**| This is the dedicated Management Group for landing zones that are being cancelled, which then will be moved to this Management Group before deleted by Azure after 30-60 days.|
+
+## Permissions for the Azure landing zone accelerator
+
+- Requires a dedicated service principal name (SPN) to execute management group management operations, subscription management operations, and role assignment. Using an SPN reduces the number of users who have elevated rights and follows least-privilege guidelines.
+
+- Requires the User Access Administrator role at the root management group scope (/) to grant the SPN just mentioned access at the root level. After the SPN is granted permissions, the User Access Administrator role can be safely removed. In this way, only the SPN is part of the User Access Administrator role.
+
+- Requires the Contributor role to the SPN previously mentioned at the root management group scope (/), which allows tenant-level operations. This permission level ensures that the SPN can be used to deploy and manage resources to any subscription within your organization.

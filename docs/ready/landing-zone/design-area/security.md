@@ -40,8 +40,8 @@ An organization must have visibility into what's happening within their technica
 | Security logging|- Data retention periods for audit data. Azure AD Premium reports have a 30-day retention period. <br> - Long-term archiving of logs such as Azure activity logs, VM logs, and platform as a service (PaaS) logs.|
 | Security controls| - Baseline security configuration via Azure in-guest VM policy. <br> - consider how your security controls will align with governance guardrails|
 | Vulnerability management|- Emergency patching for critical vulnerabilities. <br>- Patching for VMs that are offline for extended periods of time. <br> - Vulnerability assessment of VMs.
-|Shared responsibility| - Where are the hand-offs between team responsibilities that need to be considered when monitoring or responding to security events?|
-|High availability and disaster recovery|- In the event of a security event, which systems are business critical and should be considered as part of the business continuity planning? |
+|Shared responsibility| - Where are the hand-offs between team responsibilities that need to be considered when monitoring or responding to security events? <br> Consider the guidance in the Secure methodology for [security operations](/azure/cloud-adoption-framework/secure/security-operations) |
+
 
 
 ## Security monitoring design recommendations
