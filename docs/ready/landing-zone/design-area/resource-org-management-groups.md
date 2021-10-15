@@ -20,7 +20,9 @@ Considering how to use management groups as part of the environment design is an
 
 Management group structures within an Azure Active Directory (Azure AD) tenant support organizational mapping. Consider your management group structure thoroughly as your organization plans Azure adoption at scale.
 
-- How will your organization separate out services owned or operated by specific teams? Are there specific functions that need to be kept separate for business or operational compliance reasons? Reflect these considerations in your management group structure in order to design in, from the beginning, a structure that reflects how your organization intends to operate
+- How will your organization separate out services owned or operated by specific teams? 
+- Are there specific functions that need to be kept separate for business or operational compliance reasons? 
+- Reflect these considerations in your management group structure in order to design in, from the beginning, a structure that reflects how your organization intends to operate
 
 - Management groups can be used to aggregate policy and initiative assignments via Azure Policy.
 

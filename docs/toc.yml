@@ -323,11 +323,6 @@ items:
             href: ready/landing-zone/design-area/resource-org-management-groups.md
           - name: Subscriptions
             href: ready/landing-zone/design-area/resource-org-subscriptions.md
-      
-        - name: Governance
-          items:
-          - name: Overview
-            href: ready/landing-zone/design-area/governance.md
           - name: Naming and tagging
             href: ready/azure-best-practices/naming-and-tagging.md
           - name: Define your naming convention
@@ -336,6 +331,10 @@ items:
             href: ready/azure-best-practices/resource-abbreviations.md
           - name: Define your tagging strategy
             href: ready/azure-best-practices/resource-tagging.md
+      
+        - name: Governance
+          href: ready/landing-zone/design-area/governance.md
+
 
         - name: Security
           href: ready/landing-zone/design-area/security.md
