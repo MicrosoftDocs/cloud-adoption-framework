@@ -284,7 +284,7 @@ As a summary, Contoso admins must perform the following tasks:
 
   - Enable binary logging in `my.ini` (Windows) or `my.cnf` (Unix). Failure to do so will cause the following error in the Migration Wizard: `Error in binary logging. Variable binlog_row_image has value 'minimal.' Please change it to 'full.'`
 
-    For more information, see the [MySQL documentation](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html).
+    For more information, see [Binary logging options and variables](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html) in the MySQL documentation.
 
   - User must have `ReplicationAdmin` role.
 

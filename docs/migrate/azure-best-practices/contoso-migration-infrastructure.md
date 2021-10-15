@@ -399,7 +399,7 @@ Within the hub-and-spoke model, Contoso needed to think about how traffic from t
   - After network access controls are implemented, traffic will be forwarded to the appropriate location in the trusted zone.
   - Outbound traffic from the virtual network will be routed to the internet through user-defined routes. The traffic is forced through the firewall and inspected in line with Contoso policies.
 - From the Contoso datacenter:
-  - Incoming traffic over Site-to-Site VPN or ExpressRoute hits the public IP address of the Azure VPN Gateway.
+  - Incoming traffic over Site-to-Site VPN or ExpressRoute hits the public IP address of the Azure VPN gateway.
   - Traffic is routed through the firewall and subject to firewall rules.
   - After the application of firewall rules, traffic is forwarded to an internal load balancer (Standard SKU) on the trusted internal zone subnet.
   - Outbound traffic from the trusted subnet to the on-premises datacenter over the VPN is routed through the firewall. Rules are applied before traffic goes over the Site-to-Site VPN connection.

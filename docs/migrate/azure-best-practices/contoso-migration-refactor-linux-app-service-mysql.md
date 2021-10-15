@@ -199,7 +199,11 @@ In brief, Contoso does the following:
 
   - The MySQL database server source must match the version that Azure Database for MySQL supports. Azure Database for MySQL supports MySQL Community Edition, the InnoDB storage engine, and migration across source and target with the same versions.
 
-  - They enable binary logging in `my.ini` (Windows) or `my.cnf` (Unix). Failure to do this will cause the following error in the Migration Wizard: `Error in binary logging. Variable binlog_row_image has value 'minimal'. Please change it to 'full'.` for more information, see the [MySQL documentation](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html).
+  - They enable binary logging in `my.ini` (Windows) or `my.cnf` (Unix). Failure to do this will cause the following error in the Migration Wizard:
+  
+    `Error in binary logging. Variable binlog_row_image has value 'minimal'. Please change it to 'full'.`
+
+    For more information, see [Binary logging options and variables](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html) in the MySQL documentation.
 
   - The user must have the `ReplicationAdmin` role.
 
