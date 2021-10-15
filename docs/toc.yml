@@ -444,8 +444,8 @@ items:
         - name: Refactor landing zones
           href: ready/landing-zone/refactor.md
 
-      - name: Skills relevant to ready and landing zones
-        href: ready/suggested-skills.md
+    - name: Skills relevant to ready and landing zones
+      href: ready/suggested-skills.md
 
     - name: Ready antipatterns
       href: antipatterns/ready-antipatterns.md
