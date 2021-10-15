@@ -68,8 +68,8 @@ The core capability of this module deploys the foundations of the [Cloud Adoptio
 
 The following resource types are deployed and managed by this module when using the core resources capability:
 
-|     | Azure Resource | Terraform Resource |
-| --- | -------------- | ------------------ |
+| Resource | Azure resource type | Terraform resource type |
+| --- | --- | --- |
 | Management Groups | [`Microsoft.Management/managementGroups`][arm_management_group] | [`azurerm_management_group`][azurerm_management_group] |
 | Management Group Subscriptions | [`Microsoft.Management/managementGroups/subscriptions`][arm_management_group_subscriptions] | [`azurerm_management_group`][azurerm_management_group] |
 | Policy Assignments | [`Microsoft.Authorization/policyAssignments`][arm_policy_assignment] | [`azurerm_management_group_policy_assignment`][azurerm_management_group_policy_assignment] |
@@ -92,8 +92,8 @@ This brings the benefit of being able to manage the full lifecycle of these reso
 
 The following resource types are deployed and managed by this module when the Management resources capability is enabled:
 
-|     | Azure Resource | Terraform Resource |
-| --- | -------------- | ------------------ |
+| Resource | Azure resource type | Terraform resource type |
+| --- | --- | --- |
 | Resource Groups | [`Microsoft.Resources/resourceGroups`][arm_resource_group] | [`azurerm_resource_group`][azurerm_resource_group] |
 | Log Analytics Workspace | [`Microsoft.OperationalInsights/workspaces`][arm_log_analytics_workspace] | [`azurerm_log_analytics_workspace`][azurerm_log_analytics_workspace] |
 | Log Analytics Solutions | [`Microsoft.OperationsManagement/solutions`][arm_log_analytics_solution] | [`azurerm_log_analytics_solution`][azurerm_log_analytics_solution] |
@@ -116,8 +116,8 @@ This is currently limited to the Hub & Spoke network topology, but the addition 
 
 The following resource types are deployed and managed by this module when the Connectivity resources capability is enabled:
 
-|     | Azure Resource | Terraform Resource |
-| --- | -------------- | ------------------ |
+| Resource | Azure resource type | Terraform resource type |
+| --- | --- | --- |
 | Resource Groups | [`Microsoft.Resources/resourceGroups`][arm_resource_group] | [`azurerm_resource_group`][azurerm_resource_group] |
 | Virtual Networks | [`Microsoft.Network/virtualNetworks`][arm_virtual_network] | [`azurerm_virtual_network`][azurerm_virtual_network] |
 | Subnets | [`Microsoft.Network/virtualNetworks/subnets`][arm_subnet] | [`azurerm_subnet`][azurerm_subnet] |
@@ -238,7 +238,7 @@ The Terraform module for Cloud Adoption Framework enterprise-scale provides an a
 To find out more, review the module on Terraform Registry, and explore the [module documentation on GitHub][gh-wiki] where we will post more examples and tutorials covering how to customize your deployment.
 
 > [!div class="nextstepaction"]
-[Review the module on Terraform Registry][caf-enterprise-scale]
+> [Review the module on Terraform Registry][caf-enterprise-scale]
 
 <!-- Image references -->
 
