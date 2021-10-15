@@ -444,26 +444,8 @@ items:
         - name: Refactor landing zones
           href: ready/landing-zone/refactor.md
 
-
-    - name: Best practices
-      items:
-      - name: Overview
-        href: ready/azure-best-practices/index.md
-      - name: Networking
-        items:
-        - name: Network boundary security
-          href: reference/networking-vdc.md
-        - name: Plan virtual networks
-          href: /azure/virtual-network/virtual-network-vnet-plan-design-arm?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-        - name: Best practices for network security
-          href: /azure/security/fundamentals/network-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-        - name: Perimeter networks
-          href: ready/azure-best-practices/perimeter-networks.md
-        - name: Hub and spoke network topology
-          href: ready/azure-best-practices/hub-spoke-network-topology.md
-
-      - name: Skills relevant to ready and landing zones
-        href: ready/suggested-skills.md
+    - name: Skills relevant to ready and landing zones
+      href: ready/suggested-skills.md
 
     - name: Ready antipatterns
       href: antipatterns/ready-antipatterns.md
