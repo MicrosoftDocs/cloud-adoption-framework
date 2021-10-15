@@ -347,7 +347,7 @@ items:
           - name: Platform
             href: ready/landing-zone/design-area/management-platform.md
           - name: Applications
-            href: ready/landing-zone/design-area/management-applications.md
+            href: ready/landing-zone/design-area/management-workloads.md
           - name: Business continuity and disaster recovery
             href: ready/landing-zone/design-area/management-bcdr.md
 
