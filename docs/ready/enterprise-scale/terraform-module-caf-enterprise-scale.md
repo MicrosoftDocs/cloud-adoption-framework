@@ -81,7 +81,7 @@ The following resource types are deployed and managed by this module when using 
 The exact number of resources created depends on the module configuration, but you can expect upwards of `180` resources to be created by this module for a default installation based on the example below.
 
 > [!TIP]
-None of these resources are deployed at the Subscription scope, however Terraform still requires a Subscription to establish an authenticated session with Azure.
+> None of these resources are deployed at the Subscription scope, however Terraform still requires a Subscription to establish an authenticated session with Azure.
 
 ### Management resources
 
@@ -110,9 +110,9 @@ This is currently limited to the Hub & Spoke network topology, but the addition 
 ![Enterprise-scale Connectivity Landing Zone Architecture][img-tf-connectivity]
 
 > [!TIP]
-The module currently only configures the networking hub, and dependent resources for the `connectivity` Subscription.
-Although we provide an option to enable outbound Virtual Network Peering (*from hub to spoke*), users will still need to initiate peering from spoke to hub.
-This is due to limitations in how the azurerm provider targets a specific Subscription for deployment.
+> The module currently only configures the networking hub, and dependent resources for the `connectivity` Subscription.
+> Although we provide an option to enable outbound Virtual Network Peering (*from hub to spoke*), users will still need to initiate peering from spoke to hub.
+> This is due to limitations in how the azurerm provider targets a specific Subscription for deployment.
 
 The following resource types are deployed and managed by this module when the Connectivity resources capability is enabled:
 
@@ -150,20 +150,24 @@ The only dependencies for this module are as follows:
 - AzureRM provider (*recommended version 2.77.0 and later*)
 
 > [!IMPORTANT]
-There are known issues with some Terraform and AzureRM provider version combinations. Some of these are due to new bugs being introduced which have since been remediated, whilst others are transient errors which can typically be resolved by re-running your deployment. We generally recommend pinning to specific versions, and testing thoroughly before upgrading. As each new version of the module is released, the project team plan to rebase the module to ensure compatibility with the latest Terraform and AzureRM provider versions.
+> There are known issues with some Terraform and AzureRM provider version combinations.
+> Some of these are due to new bugs being introduced which have since been remediated, whilst others are transient errors which can typically be resolved by re-running your deployment.
+> We generally recommend pinning to specific versions, and testing thoroughly before upgrading. 
+> As each new version of the module is released, the project team plan to rebase the module to ensure compatibility with the latest Terraform and AzureRM provider versions.
 
 ### Simple example
 
 The following is a simple starting configuration for your `main.tf` root module:
 
 > [!TIP]
-> Although the module has only one mandatory variable `root_parent_id`, we also recommend setting `root_id`. Changing the `root_id` value will initiate a full redeployment of all resources managed by the module, including downstream dependencies.
+> Although the module has only one mandatory variable `root_parent_id`, we also recommend setting `root_id`.
+> Changing the `root_id` value will initiate a full redeployment of all resources managed by the module, including downstream dependencies.
 
 > [!IMPORTANT]
-To get the latest features, ensure the module version is set to the latest and don't forget to run `terraform init -upgrade` if upgrading to a later version of the module.
-</br>
-</br>
-![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/Azure/terraform-azurerm-caf-enterprise-scale?style=flat&logo=github)
+> To get the latest features, ensure the module version is set to the latest and don't forget to run `terraform init -upgrade` if upgrading to a later version of the module.
+> </br>
+> </br>
+> ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/Azure/terraform-azurerm-caf-enterprise-scale?style=flat&logo=github)
 
 ```hcl
 # Configure Terraform to set the required AzureRM provider
@@ -224,8 +228,8 @@ module "enterprise_scale" {
 This example code will deploy the minimum recommended [management group and subscription organization][es-hierarchy] from the enterprise-scale reference architecture. You can then start to customize your deployment once you've got this up and running.
 
 > [!TIP]
-If you are new to Terraform, refer to this [tutorial on HashiCorp Learn][tf-install], covering installation and use of Terraform, and the [AzureRM provider guides][azurerm-auth] for information on how to configure the provider and authenticate with Azure.
-We also provide additional guidance on how to configure the provider for [deploying to multiple Subscriptions][wiki_provider_configuration] on our Wiki.
+> If you are new to Terraform, refer to this [tutorial on HashiCorp Learn][tf-install], covering installation and use of Terraform, and the [AzureRM provider guides][azurerm-auth] for information on how to configure the provider and authenticate with Azure.
+> We also provide additional guidance on how to configure the provider for [deploying to multiple Subscriptions][wiki_provider_configuration] on our Wiki.
 
 ## Next steps
 
