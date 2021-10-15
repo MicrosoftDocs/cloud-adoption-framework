@@ -203,7 +203,7 @@ To facilitate integration, Contoso uses the [Azure AD Connect tool](/azure/activ
 
 1. In the Azure portal, Contoso admins go to **Azure Active Directory** > **Azure AD Connect** and download the latest version of the tool to the server they're using for synchronization.
 
-    ![Screenshot that shows a link to download Azure A D connect.](./media/contoso-migration-infrastructure/download-ad-connect.png)
+    ![Screenshot that shows a link to download Azure A D Connect.](./media/contoso-migration-infrastructure/download-ad-connect.png)
 
     *Figure 8: Downloading Azure AD Connect.*
 

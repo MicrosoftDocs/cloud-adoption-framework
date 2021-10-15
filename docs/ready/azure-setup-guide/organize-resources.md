@@ -55,11 +55,11 @@ Work with people in the following roles as you plan your organizational complian
 To create a management group, subscription, or resource group, sign in to the [Azure portal](https://portal.azure.com).
 
 - To create a **management group** to help you manage multiple subscriptions, go to [Management groups](https://portal.azure.com/#blade/Microsoft_Azure_ManagementGroups/HierarchyBlade) and select **Create**.
-  
+
 - To create a **subscription** to associate users with resources, go to [Subscriptions](https://portal.azure.com/#blade/Microsoft_Azure_Billing/SubscriptionsBlade) and select **Add**.
   > [!NOTE]
   > You can also create subscriptions programmatically. For more information, see [Programmatically create Azure subscriptions](/azure/cost-management-billing/manage/programmatically-create-subscription).
-  
+
 - To create a **resource group** to hold resources that share the same permissions and policies:
   1. Go to [Create a resource group](https://portal.azure.com/#create/Microsoft.ResourceGroup).
   1. In the **Create a resource group** form:
@@ -135,7 +135,7 @@ Other common uses for tags include:
 
 Each resource or resource group can have a maximum of 50 tag name and value pairs. This limitation only applies to tags directly applied to the resource group or resource.
 
-For more tagging recommendations and examples, see the Cloud Adoption Framework [Recommended naming and tagging conventions](../azure-best-practices/naming-and-tagging.md).
+For more tagging recommendations and examples, see the Cloud Adoption Framework [recommended naming and tagging conventions](../azure-best-practices/naming-and-tagging.md).
 
 ::: zone target="docs"
 
