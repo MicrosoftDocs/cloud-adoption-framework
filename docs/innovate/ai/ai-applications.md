@@ -40,14 +40,14 @@ To get started, first familiarize yourself with the various categories and servi
 
 - Read the [Cognitive Services documentation](/azure/cognitive-services/).
 - Explore [interactive demos across the product/service pages](https://azure.microsoft.com/services/cognitive-services/).
-- Read the e-book, [Building Intelligent Apps with Cognitive APIs](https://azure.microsoft.com/resources/building-intelligent-apps-with-cognitive-apis/).
-- Download the [Intelligent Kiosk](https://github.com/Microsoft/Cognitive-Samples-IntelligentKiosk) to experience and demo the services. <!-- docutune:casing "Intelligent Kiosk" -->
+- Read the e-book, [`Building Intelligent Apps with Cognitive APIs`](https://azure.microsoft.com/resources/building-intelligent-apps-with-cognitive-apis/).
+- Download the [`Intelligent Kiosk`](https://github.com/Microsoft/Cognitive-Samples-IntelligentKiosk) to experience and demo the services.
 - Learn more about [container support in Azure Cognitive Services](/azure/cognitive-services/cognitive-services-container-support).
-- Review [reference architectures for AI solutions](/azure/architecture/browse/#ai--machine-learning).
+- Review [reference architectures for AI solutions](/azure/architecture/browse/?azure_categories=ai-machine-learning).
 
 ## AI agents
 
-The Microsoft Azure AI platform aims to empower developers to innovate and accelerate their projects. For conversational AI, Azure offers the Azure Bot Service and Bot Framework SDK and tools to enable developers to build rich conversational experiences. Additionally, developers can use Azure Cognitive Services like Language Understanding (LUIS), QnA Maker, and Speech service to add the abilities for chatbots to understand and speak with their end users.
+The Microsoft Azure AI platform aims to empower developers to innovate and accelerate their projects. For conversational AI, Azure offers the Azure Bot Service and Bot Framework SDK and tools to enable developers to build rich conversational experiences. Additionally, developers can use Azure Cognitive Services like LUIS (Language Understanding), QnA Maker, and Speech service to add the abilities for chatbots to understand and speak with their end users.
 
 Common scenarios for conversational AI or chatbot solutions include:
 
@@ -69,7 +69,7 @@ Azure Bot Service and Microsoft Bot Framework have the following characteristics
 
 For more information about Azure Bot Service and Bot Framework, see:
 
-- [Azure Bot Service and Bot Framework overview](/azure/bot-service/bot-service-overview-introduction)
+- [Azure Bot Service and Bot Framework overview](/azure/bot-service/bot-service-overview)
 - [Principles of bot design](/azure/bot-service/bot-service-design-principles)
 
 One of the easiest ways to get started is to use QnA Maker, part of Azure Cognitive Services, which can intelligently convert an FAQ document or website into a Q&A experience in minutes. To use QnA Maker, see:
@@ -81,11 +81,11 @@ To download and use Bot Framework SDK and tools for bot development, see:
 
 - [Latest versions of Bot Framework SDK and tools](/azure/bot-service/what-is-new)
 - [Create your first bot](/composer/quickstart-create-bot)
-- [Create a bot with the Bot Framework SDK for .NET](/azure/bot-service/dotnet/bot-builder-dotnet-sdk-quickstart)
+- [Create a bot with the Bot Framework SDK for .NET](/azure/bot-service/bot-service-quickstart-create-bot)
 
 To learn how to add Cognitive Services to make your bot even more intelligent, see:
 
-- [A Developer's Guide to Building AI Applications (e-book)](https://www.oreilly.com/library/view/a-developers-guide/9781492080619/)
+- [`A Developer's Guide to Building AI Applications` (e-book)](https://www.oreilly.com/library/view/a-developers-guide/9781492080619/)
 - [Cognitive Services documentation](/azure/cognitive-services/)
 
 To learn how to build your own Virtual Assistant with Bot Framework solution accelerators, and select a common set of skills such as calendar, e-mail, point of interest, and to-do, see the [Bot Framework solutions documentation](https://microsoft.github.io/botframework-solutions/index).

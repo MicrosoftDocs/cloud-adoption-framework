@@ -104,10 +104,10 @@ As previously described in [Understand security provisioning for data management
 
 ### Review dataset telemetry
 
-Integration ops can use a data access heatmap to identify traffic and hotspots that can help to identify popular assets. Heatmaps can also help to prioritize support investments and manage storage costs while highlighting data assets wit low traction. Low traction dataset would lead integration ops to contact the owners to evaluate archiving options.
+Integration ops can use a data access heat map to identify traffic and hotspots that can help to identify popular assets. Heat maps can also help to prioritize support investments and manage storage costs while highlighting data assets wit low traction. Low traction dataset would lead integration ops to contact the owners to evaluate archiving options.
 
 > [!NOTE]
-> Some data catalog solutions feature heatmaps as part of their integrated solution. However, it's also possible to do this with other reporting tools like Microsoft Power BI.
+> Some data catalog solutions feature heat maps as part of their integrated solution. However, it's also possible to do this with other reporting tools like Microsoft Power BI.
 
 ### The integration operations feedback and enhancement loop
 

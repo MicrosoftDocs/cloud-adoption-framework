@@ -122,5 +122,5 @@ Figure 2 summarizes how different personas work together to control access to da
 ## Next steps
 
 - [Data privacy for data management and analytics in Azure](./secure-data-privacy.md)
-- [How to deploy Azure Active Directory entitlement management](https://www.youtube.com/watch?v=zaaKvaaYwI4&feature=youtu.be) (video)
+- [How to deploy Azure Active Directory entitlement management](https://www.youtube.com/watch?feature=youtu.be&v=zaaKvaaYwI4) (video)
 - Explore [common scenarios in Azure AD entitlement management](/azure/active-directory/governance/entitlement-management-scenarios) for more information about how to manage entitlement.

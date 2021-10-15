@@ -54,7 +54,7 @@ In Azure, the following innovation tools are commonly used to accelerate digital
 - [SQL Server Stretch Database](/sql/sql-server/stretch-database/stretch-database)
 - [Azure StorSimple](/azure/storsimple/)
 - [Azure Files](/azure/storage/files/)
-- [Azure File Sync](/azure/storage/files/storage-sync-files-planning)
+- [Azure File Sync](/azure/storage/file-sync/file-sync-planning)
 - [PolyBase](/sql/relational-databases/polybase/polybase-guide)
 
 As the invention approaches adoption at scale, the aspects of each solution require refinement and technical maturity. As that happens, more of these services are likely to be required. Use the table of contents on the left side of this page for Azure tools guidance relevant to your hypothesis-testing process.

@@ -77,7 +77,7 @@ To manage the data estate using Azure Purview and to connect to Azure Purview St
 
 #### Access to Azure Purview Studio
 
-To maintain the use of Azure Purview portal through private connectivity, we recommend to [deny public network access](/azure/purview/catalog-private-link#firewalls-to-restrict-public-access) in Azure Purview settings. To connect to Azure Purview Studio, a *jump machine or jump box* that's deployed inside your network is needed. You can use a machine from the hybrid network or as a virtual machine inside the data management landing zone. A jump machine is a hardened remote access server, that commonly uses Microsoft's Remote Desktop Services or Secure Shell (SSH) software. Jump machines act as a stepping point for administrators who access critical systems with all administrative actions done from the dedicated host.
+To maintain the use of Azure Purview portal through private connectivity, we recommend to [deny public network access](/azure/purview/catalog-private-link#firewalls-to-restrict-public-access) in Azure Purview settings. To connect to Azure Purview Studio, a *jump machine* or *jump box* that's deployed inside your network is needed. You can use a machine from the hybrid network or as a virtual machine inside the data management landing zone. A jump machine is a hardened remote access server, that commonly uses Microsoft's Remote Desktop Services or Secure Shell (SSH) software. Jump machines act as a stepping point for administrators who access critical systems with all administrative actions done from the dedicated host.
 
 Use any of these options to manage your data using Azure Purview through Azure Purview Studio:
 

@@ -8,15 +8,13 @@ ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank, e2e-avd
---- 
-
-<!-- cspell:ignore hostpool -->
+---
 
 # Governance baseline considerations for Azure Virtual Desktop
 
 This article covers key design considerations and recommendations for security, governance, and compliance in a [Cloud Adoption Framework enterprise-scale landing zone architecture](../../ready/enterprise-scale/architecture.md) for [Azure Virtual Desktop](/azure/virtual-desktop/overview).
 
- As with any IT service, it's important to build the environment to scale, secure it, and be able to operate your environment simply and efficiently. While the Azure Virtual Desktop service does most of the front-end work, you still need to have the right control mechanisms to keep your systems and data safe. You also need processes to continually review those controls, report changes and, if necessary, remediate. At the end of this article, you'll understand the critical design areas for security, governance, and compliance, and you'll have clear guidance on Microsoft recommendations in each area.
+As with any IT service, it's important to build the environment to scale, secure it, and be able to operate your environment simply and efficiently. While the Azure Virtual Desktop service does most of the front-end work, you still need to have the right control mechanisms to keep your systems and data safe. You also need processes to continually review those controls, report changes and, if necessary, remediate. At the end of this article, you'll understand the critical design areas for security, governance, and compliance, and you'll have clear guidance on Microsoft recommendations in each area.
 
 In most cases, Azure Virtual Desktop is deployed into a landing zone as part of the [Microsoft Cloud Adoption Framework](../../overview.md) for Azure. Microsoft recommends reviewing the Cloud Adoption Framework to ensure that your environment has the right foundation for security, compliance, governance, and cost management.
 
@@ -45,7 +43,7 @@ In most cases, Azure Virtual Desktop is deployed into a landing zone as part of 
 - **Policy tools:** Use group policy and a device management tools like Intune and Microsoft Endpoint Configuration Manager to maintain a thorough security and compliance practice for your desktops.
 - **Patch management:** Patch management is a vital part of the overall security strategy for your environment. You need a consistent practice and deployment policy to maintain secure systems. Tools like Microsoft Endpoint Configuration Manager and partner applications can help manage patches and keep your systems up to date.
 - **Screen capture:** The screen capture feature, when enabled, prevents screen information from capture on the client endpoints. Remote content is blocked or hidden in screenshots and screen shares, and from software that captures screen content. For more information, see [Enable screen capture protection](/azure/virtual-desktop/security-guide#session-host-security-best-practices).
-- **Security baseline:** Use a security baseline as a starting point for securing the Windows operating system. For more information, see [Windows security baselines](/windows/security/threat-protection/windows-security-baselines).
+- **Security baseline:** Use a security baseline as a starting point for securing the Windows operating system. For more information, see [Windows security baselines](/windows/security/threat-protection/windows-security-configuration-framework/windows-security-baselines).
 - **Application control:** Implement [Windows Defender Application Control and AppLocker](/windows/security/threat-protection/windows-defender-application-control/wdac-and-applocker-overview), which allows organizations to control drivers and applications that can run on Windows 10 clients.
 - **Azure Security Center:** Enable Security Center to help maintain security compliance and alerting within your environment.
 - **Microsoft Secure Score:** [Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score) provides recommendations and best practice advice for increasing your security posture and securing surrounding infrastructure with documented best practices.
@@ -86,6 +84,6 @@ In addition to service level logging for Azure Virtual Desktop, administrators n
 - [Azure Monitor dependency extension](/azure/virtual-machines/extensions/agent-dependency-windows): Troubleshoot guest connections, logs traffic flows, and configuration
 - [Enable screen capture protection](/azure/virtual-desktop/security-guide#enable-screen-capture-protection-preview): Protects from remote capture of data
 - [Azure Security Center](/azure/security-center/security-center-services?tabs=features-windows): Security audits, regulatory compliance scanning, policy compliance
-- [Windows security baselines](/windows/security/threat-protection/windows-security-baselines)
+- [Windows security baselines](/windows/security/threat-protection/windows-security-configuration-framework/windows-security-baselines)
 
 For more information on Azure Virtual Desktop best practices, see [Session host security best practices](/azure/virtual-desktop/security-guide#session-host-security-best-practices). For a detailed list of best practices for Azure VMs, see [Security recommendations for virtual machines in Azure](/azure/virtual-machines/security-recommendations).

@@ -28,7 +28,7 @@ The standard [cloud adoption plan template](../../plan/template.md) accounts for
 <!-- -->
 
 > [!WARNING]
-> Incorporating a modern application platform strategy into standard migration processes (or a migration factory) will require mature implementation of tasks associated with [architecting workloads prior to migration](../../migrate/migration-considerations/assess/architect.md). Continuing with this strategy without those tasks will delay the migration effort and could lead to poor architecture decisions for the deployed container hosts and supporting workloads.
+> Incorporating a modern application platform strategy into standard migration processes (or a migration factory) will require mature implementation of tasks associated with [designing workload architectures prior to migration](../../migrate/migration-considerations/assess/architect.md). Continuing with this strategy without those tasks will delay the migration effort and could lead to poor architecture decisions for the deployed container hosts and supporting workloads.
 
 ## Identify candidate workloads
 
@@ -129,7 +129,7 @@ If there is reason to explore alternatives, ensure time is allocated to understa
 
 Often customers will deploy different container orchestrators in private cloud, edge, and public cloud environments. To standardize operations across those disparate cloud platforms, customers can incorporate a unified operations approach by extending their cloud operations tools to multiple cloud platforms.
 
-In Azure, organizations can standardize operations across various orchestrators by onboarding disparate container hosts into Azure Arc for Kubernetes. This tool ensures consistent monitoring, operations, and governance across each of those container hosts.
+In Azure, organizations can standardize operations across various orchestrators by onboarding disparate container hosts into Azure Arc for Kubernetes. This tool ensures consistent monitoring, operations, and governance across each container host.
 
 ### Application runtimes in private cloud and edge environments
 
@@ -144,10 +144,10 @@ When workloads must be run in a private cloud or edge environment, but the workl
 In addition to the cloud-adoption skilling plan, the cloud adoption teams might need to develop skills related to container and Kubernetes before executing your plan:
 
 - [Learn the basics of Kubernetes](/azure/aks/concepts-clusters-workloads)
-- [Learn about containers](https://azure.microsoft.com/product-categories/containers/)
+- Learn about [containers](https://azure.microsoft.com/product-categories/containers/)
 - [Review Kubernetes best practices](/azure/aks/best-practices)
 
-Ensure time is allocated for workload teams to document and dry-run migration plans. The existing application or external system (both dependencies and systems that depend on this workload) may need to be modified with added flexibility to support the migration effort. This is true for both pre-production and production environments.
+Ensure time is allocated for workload teams to document and dry-run migration plans. The existing application or external system (both dependencies and systems that depend on this workload) may need to be modified with added flexibility to support the migration effort. This is true for both preproduction and production environments.
 
 ## Next step: Review your environment or Azure landing zone
 

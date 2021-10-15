@@ -3,7 +3,7 @@ title: Cloud Adoption Framework enterprise-scale landing zone architecture
 description: Learn about enterprise-scale landing zone architecture in the Cloud Adoption Framework for Azure. Explore high-level architecture diagrams and component lists.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 09/30/2021
+ms.date: 10/15/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready

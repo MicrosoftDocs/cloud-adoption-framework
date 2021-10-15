@@ -10,8 +10,6 @@ ms.subservice: migrate
 ms.custom: think-tank
 ---
 
-<!-- cSpell:ignore OSTICKETWEB OSTICKETMYSQL contosohost vcenter contosodc contosoosticket osticket InnoDB binlog systemctl NSGs -->
-
 # Rehost an on-premises Linux application to Azure VMs and Azure Database for MySQL
 
 This article shows how the fictional company Contoso rehosts a two-tier [LAMP-based](https://wikipedia.org/wiki/LAMP_software_bundle) application and migrates it from on-premises to Azure by using Azure Virtual Machines (VMs) and Azure Database for MySQL.
@@ -273,7 +271,7 @@ There are several ways to move the MySQL database. Each option requires the Cont
 
 ### Step 6a: Migrate the database via Database Migration Service
 
-Contoso admins migrate the database via Database Migration Service by following the [step-by-step migration tutorial](/azure/dms/tutorial-mysql-azure-mysql-online). They can perform online, offline, and hybrid (preview) migrations by using MySQL 5.6 or 5.7.
+Contoso admins migrate the database via Database Migration Service by following the [step-by-step migration tutorial](/azure/dms/tutorial-mysql-azure-mysql-offline-portal). They can perform online, offline, and hybrid (preview) migrations by using MySQL 5.6 or 5.7.
 
 > [!NOTE]
 > MySQL 8.0 is supported in Azure Database for MySQL, but the Database Migration Service tool doesn't yet support that version.

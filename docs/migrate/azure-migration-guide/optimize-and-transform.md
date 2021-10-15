@@ -58,8 +58,8 @@ Resizing production virtual machines can cause service disruptions. Try to apply
 ::: zone target="docs"
 
 - [Manage reservations for Azure resources](/azure/cost-management-billing/reservations/manage-reserved-vm-instance)
-- [Resize a Windows VM](/azure/virtual-machines/windows/resize-vm)
-- [Resize a Linux virtual machine using Azure CLI](/azure/virtual-machines/linux/change-vm-size)
+- [Resize a Windows VM](/azure/virtual-machines/resize-vm)
+- [Resize a Linux virtual machine via Azure CLI](/azure/virtual-machines/resize-vm)
 
 Partners can use the Partner Center to review the usage.
 

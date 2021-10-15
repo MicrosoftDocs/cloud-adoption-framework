@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Apply design principles and advanced operations
 
-The first three cloud management disciplines describe a management baseline. At a minimum, a management baseline should include a standard business commitment to minimize business interruptions and accelerate recovery if service is interrupted. Most management baselines include a disciplined focus on maintaining "inventory and visibility," "operational compliance," and "protection and recovery."
+The first three cloud management disciplines describe a management baseline. At a minimum, a management baseline should include a standard business commitment to minimize business interruptions and accelerate recovery if service is interrupted. Most management baselines include a disciplined focus on maintaining *inventory and visibility*, *operational compliance*, and *protection and recovery*.
 
 The purpose of a management baseline is to create a consistent offering that provides a minimum level of business commitment for all supported workloads. This baseline of common, repeatable management offerings allows the team to deliver a highly optimized degree of operational management, with minimal deviation. But that standard offering might not provide a rich enough commitment to the business.
 
@@ -81,7 +81,7 @@ As a complement to this framework, the [Microsoft Azure Well-Architected Framewo
 - **Reliability:** Design systems to recover from failures and continue to function.
 - **Security:** Protect applications and data from threats.
 
-Most business interruptions equate to some form of technical debt, or deficiency in the architecture. For existing deployments, systems design improvements can be viewed as payments against existing technical debt. For new deployments, systems design improvements can be viewed as avoidance of technical debt. The next section, "Automated remediation," looks at ways to address technical debt that can't or shouldn't be addressed.
+Most business interruptions equate to some form of technical debt, or deficiency in the architecture. For existing deployments, systems design improvements can be viewed as payments against existing technical debt. For new deployments, systems design improvements can be viewed as avoidance of technical debt. The next section shows how to deal with technical debt that can't or shouldn't be addressed.
 
 To improve system design, learn more about the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/). As your system design improves, return to this article to find new opportunities to improve and scale the improvements across your environment.
 

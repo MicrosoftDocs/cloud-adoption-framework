@@ -1,6 +1,6 @@
 ---
 title: Azure landing zones for modern application platforms
-description: Describe the scenario's impact on Azure landing zone design
+description: Learn about Azure landing zones for modern application platforms.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 03/01/2021
@@ -60,7 +60,7 @@ Once the core AKS landing zone is deployed and ready for further application dep
 
 Depending on your deployment pipeline and your container registry, you have two options for adding the application platform overlays:
 
-- The overlay installation can be included in the container images in your Container Registry standardizing the application platform deployment with the container deployment.
+- The overlay installation can be included in the container images in your container registry standardizing the application platform deployment with the container deployment.
 - Alternatively, the overlay can be deployed during your DevOps pipeline adding the runtime to an existing instance of your container hosts.
 
 The choice of these two options depends on host operations practices and the degree a variability in application runtimes across your portfolio of workloads.
@@ -69,14 +69,14 @@ The choice of these two options depends on host operations practices and the deg
 
 All Azure landing zones are designed around a set of common design areas listed below. Each article includes a set of AKS-specific considerations and recommendations that can help the modern application platforms team prepare a landing zone for AKS containers:
 
-- [Enterprise enrollment](eslz-enterprise-enrollment.md)
-- [Identity and access management](eslz-identity-and-access-management.md)
-- [Network topology and connectivity](eslz-network-topology-and-connectivity.md)
-- [Resource organization](eslz-resource-organization.md)
-- [Governance disciplines](eslz-security-governance-and-compliance.md)
-- [Operations baseline](eslz-management-and-monitoring.md)
-- [Business continuity and disaster recovery](eslz-business-continuity-and-disaster-recovery.md)
-- [Deployment options](eslz-platform-automation-and-devops.md)
+- [Enterprise enrollment](./eslz-enterprise-enrollment.md)
+- [Identity and access management](./eslz-identity-and-access-management.md)
+- [Network topology and connectivity](./eslz-network-topology-and-connectivity.md)
+- [Resource organization](./eslz-resource-organization.md)
+- [Governance disciplines](./eslz-security-governance-and-compliance.md)
+- [Operations baseline](./eslz-management-and-monitoring.md)
+- [Business continuity and disaster recovery](./eslz-business-continuity-and-disaster-recovery.md)
+- [Deployment options](./eslz-platform-automation-and-devops.md)
 
 ## Next step: Migrate workloads to modern application platforms
 
