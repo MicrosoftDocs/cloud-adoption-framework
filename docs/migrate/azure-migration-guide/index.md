@@ -15,7 +15,7 @@ ms.custom: think-tank, fasttrack-new, AQC
 
 The [Cloud Adoption Framework's Migrate methodology](../index.md) guides readers through an iterative process of migrating one workload, or a small collection of workloads per release. In each iteration, you'll follow a process to assess, migrate, optimize, and promote to ensure that workloads are ready to meet production demands. That cloud-agnostic process can guide migration to any cloud provider.
 
-This article guides you though a simplified version of the process to migrate from your on-premises environment to Azure.
+This article guides you through a simplified version of the process to migrate from your on-premises environment to Azure.
 
 ::: zone target="docs"
 
