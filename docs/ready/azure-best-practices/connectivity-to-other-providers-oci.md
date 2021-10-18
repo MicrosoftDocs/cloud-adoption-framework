@@ -12,7 +12,7 @@ ms.custom: think-tank
 
 # Connectivity to Oracle Cloud Infrastructure
 
-This section provides different connectivity approaches to integrate an Azure enterprise-scale landing zone architecture to Oracle Cloud Infrastructure (OCI).
+This section provides different connectivity approaches to integrate an Azure landing zone architecture to Oracle Cloud Infrastructure (OCI).
 
 **Design considerations:**
 
