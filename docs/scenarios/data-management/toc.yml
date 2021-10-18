@@ -167,16 +167,10 @@ items:
         items:
         - name: Data ingestion
           href: ./best-practices/data-ingestion.md
+        - name: SAP data ingestion
+          href: ./best-practices/sap-data-ingestion.md
         - name: Automated ingestion pattern
           href: ./best-practices/automated-ingestion-pattern.md
-      - name: SAP Implementation
-        items:
-        - name: Analytics scenarios
-          href: best-practices/sap-analytics-scenarios.md
-        - name: Analytics data sources
-          href: best-practices/sap-analytics-data-sources.md
-        - name: Integration best practices
-          href: best-practices/sap-integration-best-practices.md    
       - name: Data science environment
         items:
         - name: Data science best practices
