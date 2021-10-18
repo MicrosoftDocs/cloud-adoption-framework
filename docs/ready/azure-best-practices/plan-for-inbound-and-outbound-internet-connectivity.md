@@ -59,6 +59,10 @@ This section describes recommended connectivity models for inbound and outbound 
 
 - If partner NVAs are required for inbound HTTP/S connections, deploy them within a landing-zone virtual network and together with the applications that they're protecting and exposing to the internet.
 
+- Do not expose Virtual Machine management ports to Internet.
+  - Use [Azure Policy](https://docs.microsoft.com/azure/virtual-network/policy-reference) to prevent Virtual Machines creation with public IP attached.
+  - Use [Azure Bastion](https://docs.microsoft.com/azure/bastion/bastion-overview) to access jump-boxes Virtual Machines for management purposes.
+
 - Use [Azure DDoS Protection Standard protection plans](/azure/ddos-protection/ddos-protection-overview) to help protect all public endpoints hosted within your virtual networks.
 
 - Don't replicate on-premises perimeter network concepts and architectures into Azure. Similar security capabilities are available in Azure, but the implementation and architecture must be adapted to the cloud.
