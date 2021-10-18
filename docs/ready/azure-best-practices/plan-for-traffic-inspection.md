@@ -22,6 +22,8 @@ In many industries, organizations require that traffic in Azure is mirrored to a
 
 - Packet capture in Azure Network Watcher is generally available, but captures are limited to a maximum period of five hours.
 
+- Azure VPN Gateway provides the ability to [capture network traffic](https://docs.microsoft.com/azure/vpn-gateway/packet-capture) for diagnostic purposes. A maximum of five packet captures can be run in parallel per gateway. These packet captures can be a combination of gateway-wide packet captures and per-connection packet captures.
+
 **Design recommendations:**
 
 As an alternative to Azure Virtual Network TAP, evaluate the following options:
