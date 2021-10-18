@@ -95,4 +95,4 @@ The recommended and Azure native approach for such connectivity is the usage of 
 
 ## Next Steps
 
-More guidance around how to setup connectivity to Azure can be found in the [Connectivity to Azure](/azure/cloud-adoption-framework/ready/azure-best-practices/connectivity-to-azure).
+More guidance on how to setup connectivity to Azure can be found in the [Connectivity to Azure](/azure/cloud-adoption-framework/ready/azure-best-practices/connectivity-to-azure).
