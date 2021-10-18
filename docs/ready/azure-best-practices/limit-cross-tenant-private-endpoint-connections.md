@@ -21,7 +21,7 @@ Private endpoints can be used to control the traffic within your Azure environme
 - **Connection A:** A rogue administrator creates private endpoints on the customer virtual network. These endpoints are linked to services that are hosted outside the customer environment, like another Azure AD tenant.
 - **Connection B:** A rogue administrator creates private endpoints in other Azure AD tenants that are linked to services hosted in the customers Azure AD tenant.
 
-![Diagram that shows cross-tenant private endpoint connection scenarios.](../../enterprise-scale/media/cross-tenant-pe-provisioning.png)
+![Diagram that shows cross-tenant private endpoint connection scenarios.](./media/cross-tenant-pe-provisioning.png)
 
 *Figure 1: Illustration of private endpoint cross-tenant scenarios.*
 
