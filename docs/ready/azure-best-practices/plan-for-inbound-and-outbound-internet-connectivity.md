@@ -20,6 +20,8 @@ This section describes recommended connectivity models for inbound and outbound 
 
 - The enterprise-scale architecture is fully compatible with partner NVAs, if your organization prefers to use NVAs or for situations where native services don't satisfy your organization's specific requirements.
 
+- Azure provides different direct internet outbound connectivity methods (such as NAT gateway or Load Balancer) for virtual machines or compute instances on a VNet. Those methods are described on the Azure’s outbound connectivity methods article.  
+
 **Design recommendations:**
 
 - Use Azure Firewall to govern:
@@ -46,6 +48,10 @@ This section describes recommended connectivity models for inbound and outbound 
 
 - When you're using Azure Front Door and Azure Application Gateway to help protect HTTP/S applications, use WAF policies in Azure Front Door. Lock down Azure Application Gateway to receive traffic only from Azure Front Door.
 
+- Do not use Azure’s default internet outbound access for any scenario.
+
+  - Use NAT Gateway for online landing zones, which are Landing Zones not connected to the hub VNet, where compute resources require internet outbound access and do no need any of the security features provided by Azure Firewall (Standard or Premium) or a 3rd party NVA.
+
 - If partner NVAs are required for east/west or south/north traffic protection and filtering:
 
   - For Virtual WAN network topologies, deploy the NVAs to a separate virtual network (for example, NVA virtual network). Then connect it to the regional Virtual WAN hub and to the landing zones that require access to NVAs. [This article](/azure/virtual-wan/scenario-route-through-nva) describes the process.
@@ -55,16 +61,4 @@ This section describes recommended connectivity models for inbound and outbound 
 
 - Use [Azure DDoS Protection Standard protection plans](/azure/ddos-protection/ddos-protection-overview) to help protect all public endpoints hosted within your virtual networks.
 
-- Use [Virtual Network NAT](https://docs.microsoft.com/azure/virtual-network/nat-gateway/nat-overview) if it is required to provide outbound-only connectivity with fixed IP, without an existing load balancer or public addresses directly attached to virtual machines, Azure Firewall or NVA. All outbound traffic for the subnet is processed by NAT automatically without any customer configuration.
-  - This feature can be used also to scale on SNAT ports for Azure Firewall as described in [this article](https://docs.microsoft.com/azure/firewall/integrate-with-nat-gateway).
-
-- Do not expose Virtual Machine management ports to Internet
-  - Use [Azure Policy](https://docs.microsoft.com/azure/virtual-network/policy-reference) to prevent Virtual Machines creation with public IP attached.
-  - Use [Azure Bastion](https://docs.microsoft.com/azure/bastion/bastion-overview) to access jump-boxes Virtual Machines for management purposes. 
-
 - Don't replicate on-premises perimeter network concepts and architectures into Azure. Similar security capabilities are available in Azure, but the implementation and architecture must be adapted to the cloud.
-
-**Additional Resources:**
-
-- [Perimeter networks](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/azure-best-practices/perimeter-networks)
-- [Best practices for network security](https://docs.microsoft.com/azure/security/fundamentals/network-best-practices) 
