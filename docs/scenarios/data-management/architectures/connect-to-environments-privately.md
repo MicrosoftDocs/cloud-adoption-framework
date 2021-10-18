@@ -77,9 +77,9 @@ If you want to connect to the VM using Azure Bastion, execute the following step
 
 :::image type="content" source="../images/new-sql-script.png" alt-text="Connect to New SQL Script" lightbox="../images/new-sql-script.png":::
 
-Only a single jumpbox in one of the Data Landing Zones is required to access services across all Data Landing Zones and Data Management Zones, if all the virtual networks have been peered with each other. 
+Only a single jumpbox in one of the Data Landing Zones is required to access services across all Data Landing Zones and Data Management Zones, if all the virtual networks have been peered with each other.
 
-More details on why this network setup is recommended can be found [network architecture](eslz-network-architecture.md) A maximum of one Azure Bastion service is recommended per Data Landing Zone. If more users require access to the environment, extra Azure VMs can be added to the Data Landing Zone.
+More details on why this network setup is recommended can be found [Network Architecture Considerations](../eslz-network-considerations.md) A maximum of one Azure Bastion service is recommended per Data Landing Zone. If more users require access to the environment, extra Azure VMs can be added to the Data Landing Zone.
 
 ## Point to Site (P2S) Connection
 
