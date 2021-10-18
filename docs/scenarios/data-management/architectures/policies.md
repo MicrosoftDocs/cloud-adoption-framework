@@ -370,3 +370,7 @@ Additional policies that are applied in the Databricks workspace through cluster
 |Policy Name  |Policy Area  |Description  |
 |---------|---------|---------|
 |Deny-PrivateLinkServicesForPowerBI|Resource Management|Restrict deployment of private link services for Power BI to avoid proliferation.|
+
+## Next Steps
+
+[Connecting to Environments Privately](connect-to-environments-privately.md)

@@ -59,5 +59,4 @@ Please keep in mind that the following services are not listed in the overview, 
 
 ## Next steps
 
-[Frequently asked questions about enterprise-scale for analytics and AI in Azure](./frequently-asked-questions.md)
-
+[Azure Policies](policies.md)
