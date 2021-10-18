@@ -3,7 +3,7 @@ title: Network topology and connectivity for data management and analytics landi
 description: Learn about the network topology and connectivity for data management and analytics landing zones in Azure.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 06/21/2021
+ms.date: 10/18/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -68,4 +68,4 @@ Handle DNS resolution for private endpoints through central [Azure Private DNS](
 
 ## Next steps
 
-[Resource organization for enterprise-scale data management and analytics](./eslz-resource-organization.md)
+
