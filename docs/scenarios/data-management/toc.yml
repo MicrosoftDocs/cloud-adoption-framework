@@ -38,7 +38,7 @@ items:
         - name: Network Architecture Considerations
           href: ./eslz-network-considerations.md
         - name: Cross tenant private endpoint provisioning
-          href: /ready/enterprise-scale/network-topology-and-connectivity.md
+          href: ../../ready/enterprise-scale/network-topology-and-connectivity.md
       - name: Resource organization
         href: ./eslz-resource-organization.md
       - name: Governance disciplines
