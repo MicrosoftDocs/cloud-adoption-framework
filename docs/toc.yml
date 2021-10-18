@@ -302,6 +302,8 @@ items:
                 href: ready/azure-best-practices/connectivity-to-azure.md
               - name: Connectivity to Azure PaaS services
                 href: ready/azure-best-practices/connectivity-to-azure-paas-services.md
+              - name: Limit cross-tenant private endpoint connections
+                href: ready/azure-best-practices/limit-cross-tenant-private-endpoint-connections.md
               - name: Connectivity to other cloud providers
                 href: ready/azure-best-practices/connectivity-to-other-providers.md
               - name: Connectivity to Oracle Cloud Infrastructure
