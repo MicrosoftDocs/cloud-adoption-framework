@@ -13,7 +13,7 @@ ms.custom: think-tank
 
 # Connectivity to other cloud providers
 
-This guidance discusses ways to connect an Azure enterprise-scale landing zone architecture to other cloud providers, such as Amazon Web Services (AWS) and Google Cloud Platform (GCP).
+This guidance discusses ways to connect an Azure landing zone architecture to other cloud providers, such as Amazon Web Services (AWS) and Google Cloud Platform (GCP).
 
 The various options differ in speed, latency, reliability, service level agreements (SLAs), complexity, and costs. This article considers options and makes recommendations.
 

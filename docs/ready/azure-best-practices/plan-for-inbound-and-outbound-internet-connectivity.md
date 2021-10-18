@@ -55,16 +55,9 @@ This section describes recommended connectivity models for inbound and outbound 
 
 - Use [Azure DDoS Protection Standard protection plans](/azure/ddos-protection/ddos-protection-overview) to help protect all public endpoints hosted within your virtual networks.
 
-- Use [Virtual Network NAT](https://docs.microsoft.com/azure/virtual-network/nat-gateway/nat-overview) if it is required to provide outbound-only connectivity with fixed IP, without an existing load balancer or public addresses directly attached to virtual machines, Azure Firewall or NVA. All outbound traffic for the subnet is processed by NAT automatically without any customer configuration.
-  - This feature can be used also to scale on SNAT ports for Azure Firewall as described in [this article](https://docs.microsoft.com/azure/firewall/integrate-with-nat-gateway).
-
 - Do not expose Virtual Machine management ports to Internet
   - Use [Azure Policy](https://docs.microsoft.com/azure/virtual-network/policy-reference) to prevent Virtual Machines creation with public IP attached.
-  - Use [Azure Bastion](https://docs.microsoft.com/azure/bastion/bastion-overview) to access jump-boxes Virtual Machines for management purposes. 
+  - Use [Azure Bastion](https://docs.microsoft.com/azure/bastion/bastion-overview) to access jump-boxes Virtual Machines for management purposes.
 
 - Don't replicate on-premises perimeter network concepts and architectures into Azure. Similar security capabilities are available in Azure, but the implementation and architecture must be adapted to the cloud.
 
-**Additional Resources:**
-
-- [Perimeter networks](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/azure-best-practices/perimeter-networks)
-- [Best practices for network security](https://docs.microsoft.com/azure/security/fundamentals/network-best-practices) 
