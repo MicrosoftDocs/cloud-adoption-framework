@@ -10,8 +10,6 @@ ms.subservice: strategy
 ms.custom: internal
 ---
 
-<!-- cSpell:ignore MSPs -->
-
 # Strategy for partner alignment
 
 The Cloud Adoption Framework approaches cloud adoption as a self-service activity. The objective is to empower each of the teams supporting adoption through standardized approaches. In practice, you can't assume that a self-service approach will be sufficient for all adoption activities.
@@ -52,7 +50,7 @@ You are not alone in your cloud journey. There are several options to support yo
 - **Azure solution providers (partners):** Get connected with Azure expert-managed services providers (MSP) and other Microsoft partners who have service offerings aligned to the Cloud Adoption Framework methodologies.
 - **FastTrack for Azure:** Use the Microsoft FastTrack for Azure program to accelerate migration.
 - **Azure Migration and Modernization Program (AMMP):** The AMMP program aligns a mixture of partners and Microsoft employees to accelerate and support your migration.
-- **Solution assessments:** Get assistance from a Microsoft solutions assessment expert or qualified partner as part of a [Solution Assessment engagement](https://www.microsoft.com/solutionassessments/solutionassessments.aspx?rtc=2).
+- **Solution assessments:** Get assistance from a Microsoft solutions assessment expert or qualified partner as part of a [Solution Assessment Program engagement](https://www.microsoft.com/solutionassessments).
 
 ### Azure solution providers
 
@@ -88,7 +86,7 @@ Watch this short video to get an overview of how the Azure Migration and Moderni
 
 ### Solution assessments
 
-Get assistance from a Microsoft solutions assessment expert or qualified partner as part of a [Solution Assessment engagement](https://www.microsoft.com/solutionassessments/solutionassessments.aspx?rtc=2). Microsoft Solution Assessments provide customers with an in depth understanding of the opportunities available in their environments to improve productivity, reduce cost and optimize investments.  These assessments utilize modern tools to collect the customer's data estate, analyze the deployed environment and provide insights for data-driven recommendations to help customers determine actionable steps for digital transformations, cloud migrations and process improvement.
+Get assistance from a Microsoft solutions assessment expert or qualified partner as part of a [Solution Assessment engagement](https://www.microsoft.com/solutionassessments). Microsoft Solution Assessments provide customers with an in depth understanding of the opportunities available in their environments to improve productivity, reduce cost and optimize investments.  These assessments utilize modern tools to collect the customer's data estate, analyze the deployed environment and provide insights for data-driven recommendations to help customers determine actionable steps for digital transformations, cloud migrations and process improvement.
 
 ### Azure support
 

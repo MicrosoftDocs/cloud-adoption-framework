@@ -72,7 +72,7 @@ And with advanced [machine learning pipelines](/azure/machine-learning/concept-m
 
 If you want to use scripts to automate your machine learning workflow, the [Azure Machine Learning CLI](/azure/machine-learning/reference-azure-machine-learning-cli) provides command-line tools that perform common tasks, such as submitting a training run or deploying a model.
 
-To get started using Azure Machine Learning, see [Next steps](/azure/machine-learning/overview-what-is-azure-ml#next-steps).
+To get started using Azure Machine Learning, see [Next steps](/azure/machine-learning/overview-what-is-azure-machine-learning#next-steps).
 
 ## Automated machine learning
 

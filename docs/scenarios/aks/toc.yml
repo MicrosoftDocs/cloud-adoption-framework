@@ -1,5 +1,3 @@
-# docsTest:ignore "NET Core" Framework app
-
 items:
   - name: Modern application platform - Microsoft Cloud Adoption Framework for Azure
     href: index.md

@@ -10,8 +10,6 @@ ms.subservice: migrate
 ms.custom: think-tank
 ---
 
-<!-- cSpell:ignore mysqldump InnoDB binlog Navicat -->
-
 # Migrate MySQL databases to Azure
 
 This article demonstrates how the fictional company Contoso planned and migrated its on-premises MySQL open-source database platform to Azure.

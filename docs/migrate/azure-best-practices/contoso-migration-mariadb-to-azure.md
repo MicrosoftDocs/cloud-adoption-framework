@@ -10,8 +10,6 @@ ms.subservice: migrate
 ms.custom: think-tank
 ---
 
-<!-- cSpell:ignore mysqldump -->
-
 # Migrate MariaDB databases to Azure
 
 This article demonstrates how the fictional company Contoso planned and migrated its on-premises MariaDB open-source database platform to Azure.

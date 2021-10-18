@@ -10,8 +10,6 @@ ms.subservice: plan
 ms.custom: internal
 ---
 
-<!-- cSpell:ignore OSTICKETWEB OSTICKETMYSQL CONTOSODC contosohost vcenter prereqs ctypes ctypeslib smarthotelapp -->
-
 # Assess on-premises workloads for migration to Azure
 
 This article shows how the fictional company Contoso assesses an on-premises app for migration to Azure. In the example scenario, Contoso's on-premises SmartHotel360 application currently runs on VMware. Contoso assesses the application VMs using the Azure Migrate service, and the SQL Server application database using Data Migration Assistant.
@@ -396,7 +394,7 @@ Contoso runs the installation on each VM.
 
 #### Install the MMA on Linux VMs
 
-1. Contoso installs the Python ctypes library on each VM by using the following command:
+1. Contoso installs the Python `ctypes` library on each VM by using the following command:
 
     `sudo apt-get install python-ctypeslib`
 

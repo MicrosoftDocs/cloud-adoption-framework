@@ -10,8 +10,6 @@ ms.subservice: plan
 ms.custom: think-tank
 ---
 
-<!-- docutune:casing "Movie Tickets Online" -->
-
 # Measure business outcomes with AppDynamics
 
 Measuring and quantifying successful business outcomes is a crucial part of any cloud adoption strategy. Understanding an application's performance and user experience is key to measuring those business outcomes. However, accurately measuring the correlation between application performance, user experience, and business impact is often difficult, inaccurate, and time consuming.

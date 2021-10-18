@@ -10,8 +10,6 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-aks
 ---
 
-<!-- cspell:ignore landingzones -->
-
 # Enterprise-scale for AKS
 
 Enterprise-scale for AKS represents the strategic design path and target technical state for an Azure Kubernetes Service (AKS) deployment. This solution provides an architectural approach and reference implementation to prepare landing zone subscriptions for a scalable Azure Kubernetes Service (AKS) cluster. The implementation adheres to the architecture and best practices of the Cloud Adoption Framework's Azure landing zones with a focus on the design principles of enterprise-scale.

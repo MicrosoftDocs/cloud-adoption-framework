@@ -67,11 +67,11 @@ Review the [Azure Monitor supported OS documentation](/azure/azure-monitor/vm/vm
 
    ```json
    {
-   "appId": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-   "displayName": "AzureArcServers",
-   "name": "http://AzureArcServers",
-   "password": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-   "tenant": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+     "appId": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+     "displayName": "AzureArcServers",
+     "name": "http://AzureArcServers",
+     "password": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+     "tenant": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX"
    }
    ```
 
