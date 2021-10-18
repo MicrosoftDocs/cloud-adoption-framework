@@ -2,7 +2,7 @@
 title: Network topology and connectivity overview
 description: Examine key design considerations and best practice surrounding networking and connectivity.
 author: DominicAllen
-ms.author: doallen
+ms.author: doalle
 ms.date: 10/18/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
