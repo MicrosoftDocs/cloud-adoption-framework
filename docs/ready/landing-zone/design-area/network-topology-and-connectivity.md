@@ -15,13 +15,17 @@ ms.custom: internal
 
 # Network topology and connectivity design area
 
+As organizations plan their landing zone design, network topology and connectivity needs to be a fundamental consideration.
+Networking will be central to almost everything inside a landing zone - and will enable connectivity to other Azure services, external users and on-premises infrastructure.
+As part of the Azure landing zone design areas, network topology and connectivity is in the environmental group of design areas given its importance in the core design and implementation decisions. 
+
 This series of articles examines key design considerations and best practices surrounding networking and connectivity to, from, and within Microsoft Azure.
 
 ## Topology
 
 |Scope|Context|
 |-|-|
-| Define an Azure network topology |Network topology is a critical element of the enterprise-scale architecture because it defines how applications can communicate with each other. <br>  [This section explores technologies and topology approaches for Azure deployments.](../../azure-best-practices/define-an-azure-network-topology.md) It focuses on two core approaches: topologies based on Azure Virtual WAN, and traditional topologies. |
+| Define an Azure network topology |Network topology is a critical element of the landing zone architecture because it defines how applications can communicate with each other. <br>  [This section explores technologies and topology approaches for Azure deployments.](../../azure-best-practices/define-an-azure-network-topology.md) It focuses on two core approaches: topologies based on Azure Virtual WAN, and traditional topologies. |
 | Traditional Azure networking topology |[This section explores the option for implementing a traditional Azure networking topology.](../../azure-best-practices/traditional-azure-networking-topology.md) |
 | Virtual WAN network topology | [This section explores the option for implementing an Azure Virtual WAN network topology.](../../azure-best-practices/virtual-wan-network-topology.md) |
 | Plan for IP addressing | It's vital that your organization plans for IP addressing in Azure to ensure that the IP address space doesn't overlap across on-premises locations and Azure regions. <br> [This section provides guidance on planning IP addressing for a hybrid implementation](../../azure-best-practices/plan-for-ip-addressing.md) | 
@@ -51,6 +55,5 @@ This series of articles examines key design considerations and best practices su
 |Scope|Context|
 |-|-|
 |Private Link and DNS integration at scale| [This section describes how to integrate Azure Private Link for PaaS services with Azure Private DNS zones in hub and spoke network architectures.](../../azure-best-practices/private-link-and-dns-integration-at-scale.md)|
-|Configure DNS and name resolution for on-premises and Azure resources| Domain Name System (DNS) is a critical design topic in the overall enterprise-scale architecture. Some organizations might want to use their existing investments in DNS. Others might see cloud adoption as an opportunity to modernize their internal DNS infrastructure and use native Azure capabilities.
-[This section explores guidance on planning DNS and name resolution for hybrid implementations.](../../azure-best-practices/dns-for-on-premises-and-azure-resources.md)|
+|Configure DNS and name resolution for on-premises and Azure resources| Domain Name System (DNS) is a critical design topic in the overall enterprise-scale architecture. Some organizations might want to use their existing investments in DNS. Others might see cloud adoption as an opportunity to modernize their internal DNS infrastructure and use native Azure capabilities. <br> [This section explores guidance on planning DNS and name resolution for hybrid implementations.](../../azure-best-practices/dns-for-on-premises-and-azure-resources.md)|
 
