@@ -6,7 +6,7 @@ ms.author: mboswell
 ms.date: 08/06/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
@@ -21,7 +21,7 @@ Organizations can use [authentication](./secure-authentication.md) and [authoriz
 
 In previous sections, we've focused on how to ingest different data types and how to onboard data integrations and data products. The focus has been predominantly on using automation as much as possible.
 
-The story for self-service access to data relies upon automation, which starts when a new dataset is registered. Even if your organization doesn't yet have an automated ingestion framework, we still recommend that you create a custom application, IT Service Management process, or PowerApp to allow integration operations (integration ops) and data product teams to register datasets.
+The story for self-service access to data relies upon automation, which starts when a new dataset is registered. Even if your organization doesn't yet have an automated ingestion framework, we still recommend that you create a custom application, IT service management process, or an application built with Microsoft Power Apps to allow integration ops and data product teams to register datasets.
 
 The high-level registration process should provide REST APIs to at least support:
 
@@ -35,11 +35,11 @@ The final step of creating an access package allows users to request access to t
 
 The data management and analytics scenario is centered around onboarding new data integration uses cases or data products via Azure Active Directory entitlement management.
 
-Azure Active Directory (Azure AD) entitlement management is an identity governance feature that automates workflows for access requests, access assignments, reviews, and expiration, supporting organizations to manage identity and the access life cycle at scale. For guidance about configuring access, see an [overview of Azure AD entitlement management](/azure/active-directory/governance/entitlement-management-overview).
+Azure Active Directory (Azure AD) entitlement management is an identity governance feature that automates workflows for access requests, access assignments, reviews, and expiration, supporting organizations to manage identity and the access lifecycle at scale. For guidance about configuring access, see an [overview of Azure AD entitlement management](/azure/active-directory/governance/entitlement-management-overview).
 
 The decision is based upon seeing scenarios where users receive access to a resource, they may hold on to access longer than is required for business purposes. Moving the entitlement packages allows delegate to non-administrators the ability to create access packages. These access packages contain resources, such as access to datasets, that users can request, and the delegated access package managers can define policies with rules for which users can request, who must approve their access, and when access expires.
 
-This video, [What is Azure Active Directory entitlement management?](https://www.youtube.com/watch?v=_Lss6bFrnQ8), recaps entitlement management and its value.
+For a recap of entitlement management and its value, see the [What is Azure Active Directory entitlement management?](https://www.youtube.com/watch?v=_Lss6bFrnQ8) video.
 
 Data access management is divided into the following tiers:
 
@@ -59,21 +59,25 @@ The following Azure AD group naming conventions are suggested for Azure AD Pass-
 
 - Data landing zone name
 - Data integration
-- RAW for RAW, ENR for Enriched, CUR for Curated
+  - `RAW` for raw
+  - `ENR` for enriched
+  - `CUR` for curated
 - Schema or table name
-- RW for read-write and R for read-only
-  
+  - `RW` for read-write
+  - `R` for read-only
+
 The following Azure AD group naming conventions are suggested for table access control:
 
 - Data landing zone name
 - Data product
-- CUR for Curated
+  - `CUR` for curated
 - Schema or table tame
-- RW for read-write and R for read-only
+  - `RW` for read-write
+  - `R` for read-only
 
 ## The Azure AD entitlement process
 
-1. Azure AD entitlement management creates access packages in the data landing zone access packages catalog. The access packages can contain multiple Azure AD groups. The Finance Analysis package gives access to finance and LOB Awhile the Finance Writers package gives access to schema F and LOB A. It's recommended to only grant write access to those who are creating the dataset. Read-only should be the default otherwise.
+1. Azure AD entitlement management creates access packages in the data landing zone access packages catalog. The access packages can contain multiple Azure AD groups. The `Finance Analysis` package gives access to finance and LOB A, while the `Finance Writers` package gives access to schema F and LOB A. Only grant write access to those who are creating the dataset. Otherwise, read-only access should be the default.
 
 1. Users browse an access package catalog or request access to the packages from a direct link (a docs link or a data catalog).
 
@@ -84,7 +88,7 @@ The following Azure AD group naming conventions are suggested for table access c
 1. If the enterprise wants to grant user permissions based on metadata (for example, a user's division, title, or location), then [dynamic groups in Azure AD](/azure/active-directory/enterprise-users/groups-create-rule) could be added as an approved group to the access package.
 
 > [!IMPORTANT]
-> The diagram illustrates adding Azure AD user groups. The same process can help with adding Azure service principals, which are used by data product teams for ingestion pipelines and more. It's recommended that you set up two life cycle settings, one for users to request short-term access (30 days) and another for requesting longer access periods (90 days).
+> The diagram illustrates adding Azure AD user groups. The same process can help with adding Azure service principals, which are used by data product teams for ingestion pipelines and more. It's recommended that you set up two lifecycle settings, one for users to request short-term access (30 days) and another for requesting longer access periods (90 days).
 
 ## Configure Azure AD entitlement management
 
@@ -106,7 +110,7 @@ Figure 2 summarizes how different personas work together to control access to da
 
 1. A data manager part of integration ops or data product can curate access packages and define which access and applications are included. The access packages are published to their corresponding catalogs. Access packages typically correspond to user profiles (for example, a base package for finance users) and can include expiration and access review policies. Special policies also exist for external guest users.
 
-1. Users browse packages in a MyAccess portal and can request access to these packages themselves. However, a manager could also request that for an AP-admin (requires assignment-manager role) to grant their team access.
+1. Users browse packages in a `MyAccess` portal and can request access to these packages themselves. However, a manager could also request that for an AP-admin (requires assignment-manager role) to grant their team access.
 
 1. Upon a request for access, the user must provide justification and submit.
 
@@ -118,5 +122,5 @@ Figure 2 summarizes how different personas work together to control access to da
 ## Next steps
 
 - [Data privacy for data management and analytics in Azure](./secure-data-privacy.md)
-- Video: [How to deploy Azure Active Directory entitlement management](https://www.youtube.com/watch?v=zaaKvaaYwI4&feature=youtu.be).
+- [How to deploy Azure Active Directory entitlement management](https://www.youtube.com/watch?feature=youtu.be&v=zaaKvaaYwI4) (video)
 - Explore [common scenarios in Azure AD entitlement management](/azure/active-directory/governance/entitlement-management-scenarios) for more information about how to manage entitlement.

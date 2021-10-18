@@ -32,13 +32,9 @@ During cloud-enabled innovation efforts, time to market is a key measure of IT's
 
 - **Example 2:** A logistics company has discovered an untapped segment of the market, but it needs a new version of their flagship application to capture this market share. Their larger competitor has made the same discovery. Through the execution of a cloud-enabled application innovation effort, the company embraces customer obsession and a DevOps-driven development approach to beat their slower, legacy competitor by *x* months. This jump on market entrance secured the customer base.
 
-<!-- docutune:ignore "Jamey Shiels" "Vice President of Digital Experience" "Aurora Health Care" -->
-
 ### Aurora Health Care
 
 Healthcare system transforms online services into a friendly digital experience. To transform its digital services, Aurora Health Care migrated its websites to the Microsoft Azure platform and adopted a strategy of continuous innovation.
-
-<!-- cSpell:ignore Jamey Shiels -->
 
 > "As a team, we're focused on high-quality solutions and speed. Choosing Azure was a very transformative decision for us."
 >

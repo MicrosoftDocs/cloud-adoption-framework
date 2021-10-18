@@ -10,8 +10,6 @@ ms.subservice: general
 ms.custom: internal
 ---
 
-<!-- cSpell:ignore matrixed ISVs -->
-
 # Understand and align the portfolio hierarchy
 
 Business needs are often supported, improved, or accelerated through information technology. A collection of technologies that delivers defined business value is called a *workload*. That collection might include applications, servers or virtual machines, data, devices, and other similarly grouped assets.
@@ -27,8 +25,6 @@ This article provides clear definitions for the levels of the portfolio hierarch
 ### Workloads
 
 Workloads and their supporting assets are at the core of any portfolio. The additional scopes or layers below define how those workloads are viewed and to what extent they're affected by the matrix of potential supporting teams.
-
-<!-- cSpell:ignore buildout -->
 
 ![Image of a workload in the cloud, showing workloads and assets together](../../_images/ready/buildout-workload-assets.png)
 
