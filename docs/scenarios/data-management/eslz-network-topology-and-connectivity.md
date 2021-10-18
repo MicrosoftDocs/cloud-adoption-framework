@@ -1,8 +1,8 @@
 ---
 title: Network topology and connectivity for data management and analytics landing zones
 description: Learn about the network topology and connectivity for data management and analytics landing zones in Azure.
-author: BrianBlanchard
-ms.author: brblanch
+author: marvinbuss
+ms.author: mabuss
 ms.date: 10/18/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
