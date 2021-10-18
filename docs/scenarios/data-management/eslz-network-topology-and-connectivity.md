@@ -68,4 +68,5 @@ Handle DNS resolution for private endpoints through central [Azure Private DNS](
 
 ## Next steps
 
-
+- [Network Architecture Considerations](eslz-network-considerations.md)
+- [Limit cross-tenant private endpoint connections in Azure](/../ready/azure-best-practices/limit-cross-tenant-private-endpoint-connections.md)
