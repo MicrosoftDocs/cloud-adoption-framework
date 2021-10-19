@@ -55,7 +55,7 @@ items:
       - name: Secure
         tocHref: /azure/cloud-adoption-framework/secure/
         topicHref: /azure/cloud-adoption-framework/secure
-    - name: Adoption scenarios
+    - name: Scenarios
       tocHref: /azure/cloud-adoption-framework/scenarios/
       topicHref: /azure/cloud-adoption-framework/scenarios/overview
       items:
