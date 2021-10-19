@@ -285,7 +285,7 @@ items:
         - name: Network topology and connectivity
           items:
             - name: Overview
-              href: ready/enterprise-scale/network-topology-and-connectivity.md
+              href: ready/landing-zone/design-area/network-topology-and-connectivity.md
             - name: Topology 
               items:
               - name: Define an Azure network topology
