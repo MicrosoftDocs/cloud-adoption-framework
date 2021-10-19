@@ -22,7 +22,7 @@ In many industries, organizations require that traffic in Azure is mirrored to a
 
 - Packet capture in Azure Network Watcher is generally available, but captures are limited to a maximum period of five hours.
 
-- Azure VPN Gateway provides the ability to [capture network traffic](https://docs.microsoft.com/azure/vpn-gateway/packet-capture) for diagnostic purposes. A maximum of five packet captures can be run in parallel per gateway. These packet captures can be a combination of gateway-wide packet captures and per-connection packet captures.
+- Azure VPN Gateway provides the ability to [capture network traffic](/azure/vpn-gateway/packet-capture) for diagnostic purposes. A maximum of five packet captures can be run in parallel per gateway. These packet captures can be a combination of gateway-wide packet captures and per-connection packet captures.
 
 **Design recommendations:**
 
@@ -32,10 +32,8 @@ As an alternative to Azure Virtual Network TAP, evaluate the following options:
 
 - Evaluate whether the latest version of NSG flow logs provides the level of detail that you need.
 -
-- NSG Flow Logs can be analyzed using several tools, including 3rd-party Elastic Stack, Grafana, and Graylog. The recommended Azure first-party solution is [Azure Traffic Analytics](https://docs.microsoft.com/azure/network-watcher/traffic-analytics).
+- NSG Flow Logs can be analyzed using several tools, including 3rd-party Elastic Stack, Grafana, and Graylog. The recommended Azure first-party solution is [Azure Traffic Analytics](/azure/network-watcher/traffic-analytics).
 
 - Use partner solutions for scenarios that require deep packet inspection.
-
-- Azure VPN Gateway provides the ability to [capture network traffic](https://docs.microsoft.com/azure/vpn-gateway/packet-capture) for diagnostic purposes. A maximum of five packet captures can be run in parallel per gateway. These packet captures can be a combination of gateway-wide packet captures and per-connection packet captures.
 
 - Don't develop a custom solution to mirror traffic. Although this approach might be acceptable for small-scale scenarios, we don't encourage it at scale because of complexity and the supportability issues that might arise.
