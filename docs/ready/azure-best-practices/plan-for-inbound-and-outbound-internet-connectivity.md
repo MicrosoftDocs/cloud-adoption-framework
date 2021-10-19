@@ -32,11 +32,11 @@ This section describes recommended connectivity models for inbound and outbound 
 
   - East/west traffic filtering (if your organization requires it).
 
-- Use Azure Firewall [Premium](https://docs.microsoft.com/azure/firewall/premium-features) if advanced firewall capabilities are required (TLS inspection, network intrusion detection and prevention system (IDPS), URL filtering, Web categories).
+- Use Azure Firewall [Premium](/azure/firewall/premium-features) if advanced firewall capabilities are required (TLS inspection, network intrusion detection and prevention system (IDPS), URL filtering, Web categories).
 
 - Use Firewall Manager with Virtual WAN to deploy and manage Azure firewalls across Virtual WAN hubs or in hub virtual networks. Firewall Manager is now in general availability for both Virtual WAN and regular virtual networks.
 
-- If multiple IP addresses and ranges are used consistently in Azure Firewall rules, it is recommended to use [IP Groups](https://docs.microsoft.com/azure/firewall/ip-groups). IP Groups can be reused in Azure Firewall DNAT, network, and application rules for multiple firewalls across regions and subscriptions in Azure.
+- If multiple IP addresses and ranges are used consistently in Azure Firewall rules, it is recommended to use [IP Groups](/azure/firewall/ip-groups). IP Groups can be reused in Azure Firewall DNAT, network, and application rules for multiple firewalls across regions and subscriptions in Azure.
 
 - Create a global Azure Firewall policy to govern security posture across the global network environment and assign it to all Azure Firewall instances. Allow for granular policies to meet requirements of specific regions by delegating incremental firewall policies to local security teams via Azure role-based access control.
 
@@ -60,7 +60,7 @@ This section describes recommended connectivity models for inbound and outbound 
 - If partner NVAs are required for inbound HTTP/S connections, deploy them within a landing-zone virtual network and together with the applications that they're protecting and exposing to the internet.
 
 - Do not expose Virtual Machine management ports to Internet.
-  - Use [Azure Policy](https://docs.microsoft.com/azure/virtual-network/policy-reference) to prevent Virtual Machines creation with public IP attached.
+  - Use [Azure Policy](/azure/virtual-network/policy-reference) to prevent Virtual Machines creation with public IP attached.
   - Use [Azure Bastion](https://docs.microsoft.com/azure/bastion/bastion-overview) to access jump-boxes Virtual Machines for management purposes.
 
 - Use [Azure DDoS Protection Standard protection plans](/azure/ddos-protection/ddos-protection-overview) to help protect all public endpoints hosted within your virtual networks.
