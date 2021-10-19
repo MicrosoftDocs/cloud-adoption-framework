@@ -10,8 +10,6 @@ ms.subservice: migrate
 ms.custom: think-tank
 ---
 
-<!-- cSpell:ignore AOAG SQLAOG SQLAOGAVSET BEPOOL contosovmsacc SHAOG -->
-
 # Rehost an on-premises application with Azure VMs and SQL Server Always On availability groups
 
 This article demonstrates how the fictional company Contoso rehosts a two-tier Windows .NET application running on VMware virtual machines (VMs) as part of a migration to Azure. Contoso migrates the application front-end VM to an Azure VM, and the application database to another Azure VM with SQL Server, running in a Windows Server failover cluster with SQL Server Always On availability groups.
@@ -212,8 +210,6 @@ Before the Contoso admins set up the cluster, they take a snapshot of the OS dis
 1. After the cluster is created, they verify that the VMs appear as cluster nodes.
 
      ![Screenshot that shows the clusters are created.](./media/contoso-migration-rehost-vm-sql-ag/create-cluster2.png)
-
-<!-- docsTest:casing "Failover Cluster Manager" -->
 
 ### Configure the cloud witness
 

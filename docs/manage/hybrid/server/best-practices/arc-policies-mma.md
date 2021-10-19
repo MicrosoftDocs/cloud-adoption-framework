@@ -1,6 +1,6 @@
 ---
 title: Manage Azure policies and deploy the Azure monitoring agent extension to Azure Arc Linux and Windows servers
-description: Learn how to use Azure Arc enabled servers to assign Azure policies to VMs outside of Azure, whether they are on-premises or on other clouds.
+description: Learn how to use Azure Arc-enabled servers to assign Azure policies to VMs outside of Azure, whether they are on-premises or on other clouds.
 author: likamrat
 ms.author: brblanch
 ms.date: 01/29/2021
@@ -12,9 +12,9 @@ ms.custom: think-tank, e2e-hybrid
 
 # Manage Azure policies and deploy the Azure monitoring agent extension to Azure Arc Linux and Windows servers
 
-This article provides guidance on how to use Azure Arc enabled servers to assign Azure policies to VMs outside of Azure, whether they are on-premises or on other clouds. With this feature you can now use Azure Policy to audit settings in the operating system of an Azure Arc enabled server, if a setting is not compliant you can also trigger a remediation task.
+This article provides guidance on how to use Azure Arc-enabled servers to assign Azure policies to VMs outside of Azure, whether they are on-premises or on other clouds. With this feature you can now use Azure Policy to audit settings in the operating system of an Azure Arc-enabled server, if a setting is not compliant you can also trigger a remediation task.
 
-In this case, you will assign a policy to audit if the Azure Arc connected machine has the Log Analytics agent installed. If not, use the extensions feature to automatically deploy it to the VM, an enrollment experience that levels to Azure VMs. This approach can be used to make sure all your servers are onboard to services such as Azure Monitor, Azure Security Center, Azure Sentinel, and so on.
+In this case, you will assign a policy to audit if the Azure Arc-connected machine has the Log Analytics agent installed. If not, use the extensions feature to automatically deploy it to the VM, an enrollment experience that levels to Azure VMs. This approach can be used to make sure all your servers are onboard to services such as Azure Monitor, Azure Security Center, Azure Sentinel, and so on.
 
 You can use the Azure portal, an Azure Resource Manager template (ARM template) or PowerShell script to assign policies to Azure subscriptions or resource groups. The following procedures use an ARM template to assign built-in policies.
 
@@ -42,9 +42,9 @@ Review the [Azure Monitor supported OS documentation](/azure/azure-monitor/vm/vm
 
 2. As mentioned, this guide starts at the point where you already deployed and connected VMs or servers to Azure Arc. In the following screenshots a Google Cloud Platform (GCP) server has been connected with Azure Arc and is visible as a resource in Azure.
 
-   ![A screenshot of a resource group for an Azure Arc enabled server.](./media/arc-policies-mma/resource-group.png)
+   ![A screenshot of a resource group for an Azure Arc-enabled server.](./media/arc-policies-mma/resource-group.png)
 
-   ![A screenshot of a connected status for an Azure Arc enabled server.](./media/arc-policies-mma/connected-status.png)
+   ![A screenshot of a connected status for an Azure Arc-enabled server.](./media/arc-policies-mma/connected-status.png)
 
 3. [Install or update Azure CLI](/cli/azure/install-azure-cli). Azure CLI should be running version 2.7 or later. Use `az --version` to check your current installed version.
 
@@ -67,11 +67,11 @@ Review the [Azure Monitor supported OS documentation](/azure/azure-monitor/vm/vm
 
    ```json
    {
-   "appId": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-   "displayName": "AzureArcServers",
-   "name": "http://AzureArcServers",
-   "password": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-   "tenant": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+     "appId": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+     "displayName": "AzureArcServers",
+     "name": "http://AzureArcServers",
+     "password": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+     "tenant": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX"
    }
    ```
 
@@ -90,9 +90,9 @@ az deployment group create --resource-group <Name of the Azure resource group> \
 --parameters <The `log_analytics-template.parameters.json` template file location>
 ```
 
-## Assign policies to Azure Arc connected machines
+## Assign policies to Azure Arc-connected machines
 
-After all the prerequisites are set, you can assign policies to the Azure Arc connected machines. Edit the [parameters file](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/policies/arm/policy.json) to provide your subscription ID as well as the Log Analytics workspace.
+After all the prerequisites are set, you can assign policies to the Azure Arc-connected machines. Edit the [parameters file](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/policies/arm/policy.json) to provide your subscription ID as well as the Log Analytics workspace.
 
 ![A screenshot of another ARM template parameter file.](./media/arc-policies-mma/parameter-file-2.png)
 
@@ -108,7 +108,7 @@ After all the prerequisites are set, you can assign policies to the Azure Arc co
 
    The `policy-set-definition` flag points to the initiative `Enable Azure Monitor` definition ID.
 
-2. After the initiative is assigned, it takes about 30 minutes for the assignment to be applied to the defined scope. Azure Policy then starts the evaluation cycle against the Azure Arc connected machine and recognizes it as noncompliant because it still doesn't have the Log Analytics agent configuration deployed. To check this, go to the Azure Arc connected machine under the policies section.
+2. After the initiative is assigned, it takes about 30 minutes for the assignment to be applied to the defined scope. Azure Policy then starts the evaluation cycle against the Azure Arc-connected machine and recognizes it as noncompliant because it still doesn't have the Log Analytics agent configuration deployed. To check this, go to the Azure Arc-connected machine under the **Policies** section.
 
    ![A screenshot of a noncompliant Azure Policy status.](./media/arc-policies-mma/noncompliant-policy.png)
 

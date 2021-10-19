@@ -10,8 +10,6 @@ ms.subservice: manage
 ms.custom: think-tank
 ---
 
-<!-- cSpell:ignore multisignal -->
-
 # Cloud monitoring guide: Alerting
 
 For years, IT organizations have struggled to combat the alert fatigue that's created by the monitoring tools deployed in the enterprise. Many systems generate a high volume of alerts often considered meaningless, while other alerts are relevant but are either overlooked or ignored. As a result, IT and developer operations have struggled to meet the service-level quality promised to internal or external customers. To ensure reliability, it's essential to understand the state of your infrastructure and applications. To minimize service degradation and disruption, or to decrease the effect of or reduce the number of incidents, you need to identify causes quickly.
@@ -43,7 +41,7 @@ If you're using Azure Monitor exclusively, follow these guidelines as you consid
 
 Depending on the feature and configuration you're using, you can store monitoring data in any of six repositories:
 
-- **Azure Monitor metrics database:** A time-series database used primarily for Azure Monitor platform metrics, but also has Application Insights metric data mirrored into it. Information entering this database has the fastest alert times.
+- **Azure Monitor Metrics database:** A time-series database used primarily for Azure Monitor platform metrics, but also has Application Insights metric data mirrored into it. Information entering this database has the fastest alert times.
 
 - **Application Insights resource:** A database that stores most Application Insights telemetry in log form.
 

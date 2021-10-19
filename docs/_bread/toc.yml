@@ -80,6 +80,7 @@ items:
     - name: Reference
       tocHref: /azure/cloud-adoption-framework/reference/
       topicHref: /azure/cloud-adoption-framework/reference
+
       items:
       - name: Decision guides
         tocHref: /azure/cloud-adoption-framework/decision-guides/

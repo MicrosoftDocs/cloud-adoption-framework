@@ -34,7 +34,7 @@ Once you have a baseline, establish minimum benchmarks representing an unaccepta
 
 - **Configuration drift triggers:** A company that is experiencing unexpected changes in the configuration of key system components, or failures in the deployment of or updates to its systems, should invest in the Deployment Acceleration discipline to identify root causes and steps for remediation.
 - **Out of compliance triggers:** If the number of out-of-compliance resources exceeds a defined threshold (either as a total number of resources or a percentage of total resources), a company should invest in Deployment Acceleration discipline improvements to ensure each resource's configuration remains in compliance throughout that resource's lifecycle.
-- **Project schedule triggers:** If the time to deploy a company's resources and applications often exceed a define threshold, a company should invest in its deployment acceleration processes to introduce or improve automated deployments for consistency and predictability. Deployment times measured in days or even weeks usually indicate a suboptimal Deployment Acceleration strategy.
+- **Project schedule triggers:** If the time to deploy a company's resources and applications often exceed a define threshold, a company should invest in its deployment acceleration processes to introduce or improve automated deployments for consistency and predictability. Deployment times measured in days or even weeks usually indicate a suboptimal deployment acceleration approach.
 
 ## Next steps
 

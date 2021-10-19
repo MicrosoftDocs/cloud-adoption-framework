@@ -10,9 +10,6 @@ ms.subservice: manage
 ms.custom: think-tank
 ---
 
-<!-- docutune:casing "Squared Up" Savision APM -->
-<!-- cSpell:ignore Savision -->
-
 # Cloud monitoring guide: Monitoring strategy for cloud deployment models
 
 This article includes our recommended monitoring strategy for each of the cloud deployment models, based on the following criteria:
@@ -113,7 +110,7 @@ To monitor the workloads that are running in Azure, you need:
 
 Knowledge is defined in the management pack, which describes how to monitor the individual dependencies and components. Both Azure management packs require performing a set of configuration steps in Azure and Operations Manager before you can begin monitoring these resources.
 
-At the application tier, Operations Manager offers basic application performance monitoring capabilities for some legacy versions of .NET and Java. If certain applications within your hybrid cloud environment operate in an offline or network-isolated mode, such that they can't communicate with a public cloud service, Operations Manager application performance monitoring (APM) might be a viable option for certain limited scenarios. For applications that are not running on legacy platforms but are hosted both on-premises and in any public cloud that allows communication through a firewall (either direct or via a proxy) to Azure, use Azure Monitor Application Insights. This service offers deep, code-level monitoring, with first-class support for ASP.NET, ASP.NET Core, Java, JavaScript, and Node.js.
+At the application tier, Operations Manager offers basic application performance monitoring capabilities for some legacy versions of .NET and Java. If certain applications within your hybrid cloud environment operate in an offline or network-isolated mode, such that they can't communicate with a public cloud service, Operations Manager application performance monitoring might be a viable option for certain limited scenarios. For applications that are not running on legacy platforms but are hosted both on-premises and in any public cloud that allows communication through a firewall (either direct or via a proxy) to Azure, use Azure Monitor Application Insights. This service offers deep, code-level monitoring, with first-class support for ASP.NET, ASP.NET Core, Java, JavaScript, and Node.js.
 
 For any web application that can be reached externally, you should enable a type of synthetic transaction known as [availability monitoring](/azure/azure-monitor/app/monitor-web-app-availability). It's important to know whether your application or a critical HTTP/HTTPS endpoint that your application relies on, is available and responsive. With Application Insights availability monitoring, you can run tests from multiple Azure datacenters and provide insight into the health of your application from a global perspective.
 

@@ -39,10 +39,10 @@ By using proper assessment data, your cloud adoption team can make wiser choices
 
 The following resources can help your team understand the differences between Azure and Azure Stack Hub:
 
-- [Azure Stack overview and roadmap](https://azure.microsoft.com/resources/videos/ignite-2018-azure-stack-overview-and-roadmap/)
-- [Azure Stack capacity planning](/azure/azure-stack/capacity-planning)
+- [Azure Stack overview and roadmap](https://azure.microsoft.com/resources/videos/)
+- [Azure Stack capacity planning](/azure-stack/operator/azure-stack-capacity-planning-overview)
 - [Azure Stack Hub datacenter integration walkthrough](/azure-stack/operator/azure-stack-customer-journey)
-- [Azure Stack virtual machine features](/azure-stack/user/azure-stack-vm-considerations?view=azs-1910)
+- [Azure Stack virtual machine features](/azure-stack/user/azure-stack-vm-considerations)
 
 When you understand the best platform for each workload, you can integrate your decisions into a [cloud adoption plan](../../plan/template.md) to manage public and private cloud migrations as one aligned effort.
 

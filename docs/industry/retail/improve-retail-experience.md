@@ -49,7 +49,7 @@ For information, see:
 
 - [Azure Synapse Analytics](/azure/synapse-analytics/)
 - [Azure Kubernetes Service](/azure/aks/)
-- [Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-ml)
+- [Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-machine-learning)
 - [Azure Synapse content on Microsoft Learn](/learn/browse/?terms=synapse)
 - [Azure Kubernetes on Microsoft Learn](/learn/browse/?terms=kubernetes)
 - [Data scientist learning path on Microsoft Learn](/learn/browse/?roles=data-scientist)

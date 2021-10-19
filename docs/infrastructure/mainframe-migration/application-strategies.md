@@ -10,9 +10,6 @@ ms.subservice: migrate
 ms.custom: think-tank
 ---
 
-<!-- docutune:casing GDGs "GT Software" "NTT Data" -->
-<!-- cSpell:ignore Attunity Codit DRDA ISAM ISQL LPARS VSAM ODBC JDBC GDGs REXX dbextents Raincode Tmax -->
-
 # Mainframe application migration
 
 When migrating applications from mainframe environments to Azure, most teams follow a pragmatic approach: reuse wherever and whenever possible, and then start a phased deployment where applications are rewritten or replaced.
@@ -112,7 +109,7 @@ The cloud's distributed architectures rely on a different set of development too
 | Component        | Azure options                                                                                                                                  |
 |------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
 | z/OS             | Windows, Linux, or Unix                                                                                                                      |
-| CICS             | Azure services offered by Micro Focus, Oracle, GT Software (Fujitsu), TmaxSoft, Raincode, and NTT Data, or rewrite using Kubernetes |
+| CICS             | Azure services offered by Micro Focus, Oracle, GT Software (Fujitsu), TmaxSoft, Raincode, and NTT DATA, or rewrite using Kubernetes |
 | IMS              | Azure services offered by Micro Focus and Oracle                                                                                  |
 | Assembler        | Azure services from Raincode and TmaxSoft; or COBOL, C, or Java, or map to operating system functions               |
 | JCL              | JCL, PowerShell, or other scripting tools                                                                                                   |
