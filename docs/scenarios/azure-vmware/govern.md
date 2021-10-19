@@ -28,7 +28,7 @@ All provisioned private clouds have vCenter Server, vSAN, vSphere, and NSX-T, so
 
 VMware vSphere clusters reside on top of "share nothing" hyper-converged, bare-metal infrastructure. Azure VMware cluster architecture is dedicated and isolated - meaning that networking, storage, or compute is not shared with any other tenant. VSphere clusters are managed by Microsoft to meet performance, availability, security, and compliance requirements, at scale in Azure, providing unified management, networking, and operational controls.
 
-Because Azure VMware Solution run hybrid workloads across on-premises and private cloud, unified operations is the best approach to providing a single pane of glass for incrementally deploying required governance and operational management controls. Read the [introduction to unified operations](/azure/cloud-adoption-framework/scenarios/hybrid/unified-operations) to get started.
+Because Azure VMware Solution run hybrid workloads across on-premises and private cloud, unified operations is the best approach to providing a single pane of glass for incrementally deploying required governance and operational management controls. Read the [introduction to unified operations](../hybrid/unified-operations.md) to get started.
 
 ## Unified security and compliance
 
@@ -54,7 +54,7 @@ Integrating with Azure-native services in your Azure VMware Solution private clo
 
 ### Unified operational management controls
 
-We recommend a [unified operations](/azure/cloud-adoption-framework/scenarios/hybrid/unified-operations) approach, so you can extend consistent Azure governance and operational management controls across your vSphere cluster, and seamlessly modernize your VMware workloads with native Azure services.
+We recommend a [unified operations](../hybrid/unified-operations.md) approach, so you can extend consistent Azure governance and operational management controls across your vSphere cluster, and seamlessly modernize your VMware workloads with native Azure services.
 
 Azure Resource Manager (ARM) is the operating system of Azure that, stretching across VMware resources, extends Azure-native governance and operational management controls across clusters, resource pools, and private clouds. For more information, see:
 

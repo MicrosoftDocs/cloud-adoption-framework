@@ -36,7 +36,7 @@ The pattern relies upon distribution of the data and its pipelines across domain
 - Monitoring
 
 > [!NOTE]
-> The enterprise-scale for analytics and AI framework builds on the Cloud Adoption Framework [enterprise-scale architecture](/azure/cloud-adoption-framework/ready/enterprise-scale/) and should be considered a supplement to it.
+> The enterprise-scale for analytics and AI framework builds on the Cloud Adoption Framework [enterprise-scale architecture](../../ready/enterprise-scale/index.md) and should be considered a supplement to it.
 
 ## Critical design areas
 
