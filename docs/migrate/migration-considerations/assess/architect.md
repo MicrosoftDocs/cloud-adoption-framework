@@ -1,5 +1,5 @@
 ---
-title: Architect workloads prior to migration
+title: Design workload architectures prior to migration
 description: Use the Cloud Adoption Framework for Azure to learn how to define the new architecture before cloud migration begins.
 author: BrianBlanchard
 ms.author: brblanch
@@ -10,7 +10,7 @@ ms.subservice: migrate
 ms.custom: internal
 ---
 
-# Architect workloads prior to migration
+# Design workload architectures prior to migration
 
 This article expands on the assessment process by reviewing activities associated with defining the architecture of a workload within a given iteration. As discussed in the article on [incremental rationalization](../../../digital-estate/rationalize.md), some architectural assumptions are made during any business transformation that requires a migration. This article clarifies those assumptions, shares a few roadblocks that can be avoided, and identifies opportunities to accelerate business value by challenging those assumptions. This incremental model for architecture allows teams to move faster and to obtain business outcomes sooner.
 

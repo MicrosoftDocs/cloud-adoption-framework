@@ -86,7 +86,7 @@ The following resources provide detailed information about the concepts discusse
 - [What is Azure Active Directory?](/azure/active-directory/fundamentals/active-directory-whatis)
 - [Associate or add an Azure subscription to your Azure Active Directory tenant](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory)
 - [Topologies for Azure AD Connect](/azure/active-directory/hybrid/plan-connect-topologies)
-- [Subscriptions, licenses, accounts, and tenants for Microsoft's cloud offerings](/office365/enterprise/subscriptions-licenses-accounts-and-tenants-for-microsoft-cloud-offerings)
+- [Subscriptions, licenses, accounts, and tenants for Microsoft's cloud offerings](/microsoft-365/enterprise/subscriptions-licenses-accounts-and-tenants-for-microsoft-cloud-offerings)
 
 ## Next steps
 

@@ -12,7 +12,7 @@ ms.custom: internal, operating-model
 
 # Operating model terminology
 
-The term operating model has many definitions. This intro article establishes terminology associated with operating models. To understand an operating model as it relates to the cloud, we first have to understand how an operating model fits into the bigger theme of corporate planning.
+The term *operating model* has many definitions. This intro article establishes terminology associated with operating models. To understand an operating model as it relates to the cloud, we first have to understand how an operating model fits into the bigger theme of corporate planning.
 
 ## Terms
 

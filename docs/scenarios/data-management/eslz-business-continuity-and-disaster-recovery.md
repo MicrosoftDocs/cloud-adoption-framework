@@ -6,7 +6,7 @@ ms.author: chrschm
 ms.date: 07/19/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
@@ -16,7 +16,7 @@ When you design architecture for a cloud service, consider your availability req
 
 High availability and disaster recovery can sometimes be combined. The two areas have slightly different strategies, especially when it comes to data. To learn more, see the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/) and its [reliability principles](/azure/architecture/framework/resiliency/principles).
 
-Instead of trying to prevent failures, accept up front that failures can and do happen. Minimize the effects of any single failing component in the life cycle. Your tolerance for cost, recovery point objective, and recovery time objective determine the type of solution to implement.
+Instead of trying to prevent failures, accept up front that failures can and do happen. Minimize the effects of any single failing component in the lifecycle. Your tolerance for cost, recovery point objective, and recovery time objective determine the type of solution to implement.
 
 ## Backup strategies
 

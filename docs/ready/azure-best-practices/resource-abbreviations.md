@@ -171,9 +171,9 @@ This list provides recommended abbreviations for various Azure resource types to
 
 | Asset type | Resource provider namespace/Entity | Abbreviation |
 |--|--|--|
-| Virtual desktop host pool | | vdpool- |
-| Virtual desktop application group | | vdag- |
-| Virtual desktop workspace | | vdws- |
+| Virtual desktop host pool | | `vdpool-` |
+| Virtual desktop application group | | `vdag-` |
+| Virtual desktop workspace | | `vdws-` |
 
 ## Developer tools
 

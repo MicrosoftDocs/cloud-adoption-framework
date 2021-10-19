@@ -10,8 +10,6 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-avd
 ---
 
-<!-- cSpell:ignore NTFS Logix -->
-
 # Azure Virtual Desktop deployment or migration
 
 The guidance in this article assumes that you've [established a plan for Azure Virtual Desktop](./plan.md), [assessed the desktop deployment requirements](./migrate-assess.md), [completed a proof of concept](./proof-of-concept.md), and are now ready to migrate or deploy your Azure Virtual Desktop instances.

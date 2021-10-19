@@ -6,13 +6,13 @@ ms.author: brblanch
 ms.date: 06/22/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
 # Introduction to enterprise-scale for analytics and AI in Azure
 
-In the late 1980s, there was the introduction of the data warehouse Gen1, which combined disparate data sources from across the enterprise. In the late 2000s came Gen2, with the introduction of the big data ecosystem like Hadoop and the data lake. In the mid 2010s, we had the cloud data platform. It was similar to previous generations, but with the introduction of the ingestion of streaming data, like Kappa or Lambda architectures. The early 2020s introduced the concepts of the data lakehouse, data mesh, data fabric, and data-centric operational patterns.
+In the late 1980s, there was the introduction of the data warehouse Gen1, which combined disparate data sources from across the enterprise. In the late 2000s came Gen2, with the introduction of the big data ecosystem like Hadoop and the data lake. In the mid 2010s, we had the cloud data platform. It was similar to previous generations, but with the introduction of the ingestion of streaming data, like kappa or lambda architectures. The early 2020s introduced the concepts of the data lakehouse, data mesh, data fabric, and data-centric operational patterns.
 
 Understanding the evolution and looking forward, many organizations still have the centralized monolithic platform, generation 1. This system works well, up to a point. Bottlenecks because of interdependent processes, tightly coupled components, hyperspecialized teams, and thousands of extract, transform, load (ETL) jobs.
 
@@ -36,7 +36,7 @@ The pattern relies upon distribution of the data and its pipelines across domain
 - Monitoring
 
 > [!NOTE]
-> The enterprise-scale for analytics and AI framework builds on the Cloud Adoption Framework [enterprise-scale architecture](/azure/cloud-adoption-framework/ready/enterprise-scale/) and should be considered a supplement to it.
+> The enterprise-scale for analytics and AI framework builds on the Cloud Adoption Framework [enterprise-scale architecture](../../ready/enterprise-scale/index.md) and should be considered a supplement to it.
 
 ## Critical design areas
 
@@ -82,26 +82,26 @@ A few important points to keep in mind about data landing zones:
 
 - Ingestion capabilities exist in each data landing zone. These capabilities allow subject matter experts to pull in external data sources into the data landing zone.
 - A data landing zone is instantiated based on its core architecture. It includes key capabilities to host an analytics platform.
-- A data landing zone can host one or many [Data integrations](#data-integrations).
-- A data landing zone can also host one or many [Data products](#data-products).
+- A data landing zone can host one or many [data integrations](#data-integrations).
+- A data landing zone can also host one or many [data products](#data-products).
 
 For more information, see [Data landing zone](./architectures/data-landing-zone.md).
 
 ### Data integrations
 
-The responsibility of ingesting external data into enterprise for analytics and AI lies with integration operations. Data integrations exist in a data landing zone as multiple resource groups, and each contains:
+The responsibility of ingesting external data into enterprise for analytics and AI lies with integration ops. Data integrations exist in a data landing zone as multiple resource groups, and each contains:
 
 - Azure Key Vault
 - Azure Data Factory for running developed engineering pipelines to transformations
 - A security user group that you give access to the Azure Databricks analytics and data science workspace
 - A service principal that's used by the data integration to deploy ingest jobs to the Azure Databricks engineering workspace
 
-Other services like Azure Event Hub, Azure IoT Hub, Azure Stream Analytics, and Azure Machine Learning can be created if they're needed.
+Other services like Azure Event Hubs, Azure IoT Hub, Azure Stream Analytics, and Azure Machine Learning can be created if they're needed.
 
 > [!IMPORTANT]
 > A **data integration** is responsible for ingesting external data into a read data source. Apart from data quality checks and other applied data, the data should avoid having other data transformations applied to it.
 
-For more information, see [enterprise-scale for analytics and AI data integrations in Azure](./architectures/data-landing-zone-data-integration.md).
+For more information, see [Enterprise-scale for analytics and AI data integrations in Azure](./architectures/data-landing-zone-data-integration.md).
 
 ### Data products
 

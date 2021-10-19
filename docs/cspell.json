@@ -1,5 +1,5 @@
 {
-    "version": "0.1",
+    "version": "0.2",
     "language": "en",
     "enabled": true,
     "words": [
@@ -105,6 +105,7 @@
         "hyperparameter",
         "hyperparameters",
         "hyperscale",
+        "hyperspecialized",
         "idempotence",
         "idempotency",
         "incentivize",
@@ -119,8 +120,10 @@
         "interoperate",
         "interoperates",
         "interpretability",
+        "intracloud",
         "jumpstart",
         "kubectl",
+        "lakehouse",
         "lifecycle",
         "lifecycles",
         "lightbox",
@@ -151,6 +154,7 @@
         "multisensory",
         "multisite",
         "multistep",
+        "multistructured",
         "multisubscription",
         "multitenancy",
         "multitenant",
@@ -159,6 +163,7 @@
         "multiuser",
         "multivalue",
         "multivalued",
+        "multizone",
         "nonblocking",
         "nonclustered",
         "nonintrusive",
@@ -251,6 +256,7 @@
         "showback",
         "showbacks",
         "sqlcmd",
+        "strategizing",
         "subcomponent",
         "subcomponents",
         "submillisecond",
@@ -302,10 +308,12 @@
         "cspell",
         "dataroot",
         "datetimeoffset",
+        "distros",
         "docfx",
         "docsmd",
         "docutune",
         "eastus",
+        "endjin",
         "hierarchyid",
         "highres",
         "hyperconverged",
@@ -320,11 +328,13 @@
         "markdownlint",
         "mcra",
         "mkdir",
+        "msiexec",
         "nextstepaction",
         "nvarchar",
         "onmicrosoft",
         "popout",
         "psec",
+        "psql",
         "rbac",
         "ries",
         "robocopy",
@@ -340,7 +350,9 @@
         "vianet",
         "visualstudio",
         "westus",
-        "wwwroot"
+        "wwwroot",
+        "yymmddhhmmss",
+        "yymmddhhmss"
     ],
     "flagWords": [
         "amongst",
@@ -378,6 +390,7 @@
     ],
     "import": [
         ".\\cspell-docset.json",
+        ".\\cspell-docset-names.json",
         ".\\cspell-docutune.json"
     ]
 }
