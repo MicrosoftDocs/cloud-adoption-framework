@@ -90,7 +90,7 @@ Here are some general design recommendations for Azure Arc-enabled servers cost 
 
 - Use [Log Analytics workspaces Insights](https://docs.microsoft.com/en-us/azure/azure-monitor/logs/log-analytics-workspace-insights-overview) solution to understand and monitor the collected logs and their ingestion rate on the Log Analytics workspace.
 
-![Log Analytics Insights](./media/log-analytics-insights.png)
+![Log Analytics Insights](./media/Log-analytics-insights.png)
 
 ### Azure Sentinel
 - Use the Azure Pricing Calculator to estimate [Azure Sentinel costs](https://docs.microsoft.com/en-us/azure/sentinel/azure-sentinel-billing).
@@ -100,6 +100,6 @@ Here are some general design recommendations for Azure Arc-enabled servers cost 
 ### Azure Policy Guest Configuration
 - Use Azure Cost Managemnet to understand the Azure Policy Guest Configuration costs by filtering by the **Microsoft.hybridcompute/machines** resource type.
 
-![Azure policy costs](./media/azure-cost-management-policy.png)
+![Azure policy costs](./media/Azure-cost-management-policy.png)
 
 
