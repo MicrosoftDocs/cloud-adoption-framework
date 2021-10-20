@@ -12,9 +12,11 @@ ms.custom: internal
 
 # Scenarios
 
-Your journey to the cloud becomes more nuanced in complexity, as you consider implementing larger, more complex scenarios of cloud adoption. These scenarios unify technical and non-technical considerations that can help accelerate your overall cloud adoption journey.
+Your journey to the cloud may become more nuanced in complexity as you consider the implementation of larger, more complex cloud adoption scenarios that best speak to your unique business requirements. These types of scenarios unify technical and non-technical considerations that can help your organization accelerate its overall cloud adoption journey.
 
-Along your cloud adoption journey, you'll various key sets of guidance can help you focus on the unique requirements of your organization.
+Along your cloud adoption path, you'll encounter various key sets of guidance that can help you focus on your requirements. These may be the requirements that enable you to maximize your investment in the cloud. Read on for more pointed guidance across several areas of cloud adoption best practices guidance—from the holistic and modular guidance of the Microsoft Cloud Adoption Framework—to the workload-specific architectural guidance of the Azure Well-Architected Framework—to reference architectures, high-level scenario diagrams that include templatized components and the technical requirements to implement them, based on extensive customer experiences that represent the infrastructure your organization will rely on. Visualize an ideal technical architecture, then blend and integrate it into your environment.
+
+Learn and benefit from a repository of successful cloud adoption experiences—best practices guidance—collected and codified from across the Microsoft customer and partner ecosystem. Read on for your answers about cloud adoption—and learn from successful migration and modernization experiences across our customer and partner communities. Let's make the cloud yours.
 
 ![Graphic of the end-to-end scenario components](./media/end-to-end-scenario-components.png)
 
