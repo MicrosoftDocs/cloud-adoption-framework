@@ -2,8 +2,8 @@
 title: Enterprise-scale FAQ
 description: The Enterprise-scale FAQ provides answers to common questions asked about the Enterprise-scale architecture.
 author: jtracey93
-ms.author: jatracey
-ms.date: 09/13/2021
+ms.author: doalle
+ms.date: 10/20/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
