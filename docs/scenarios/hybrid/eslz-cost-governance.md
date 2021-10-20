@@ -30,9 +30,6 @@ Azure Arc-enabled servers provides two types of services:
    - Azure Policy Guest Configuration (includes Azure Automation change tracking, inventory, state configuration)
    - Azure Key Vault
    - Azure Private Links
-
-![Azure Arc-enabled servers diagram](./media/arc-enabled-servers-security-compliance-governance.png)
-
 ## Design considerations
 ### Azure Monitor
 [Azure Monitor](/azure/azure-monitor/overview) includes functionality for the collection and analysis of log data of your Azure Arc-enabled servers (billed by data ingestion, retention, and export), collection of metrics, health monitoring, alerts, and notifications.
@@ -86,6 +83,7 @@ Here are some general design recommendations for Azure Arc-enabled servers cost 
 ![Azure Pricing Calculator](./media/pricing-calculator.png)
 
 ![Azure Pricing Calculator AZMon](./media/pricing-calculator-az-monitor.png)
+
 - Use [Azure Cost Management and Billing](https://docs.microsoft.com/en-us/azure/azure-monitor/usage-estimated-costs#azure-cost-management--billing) to have visibility on Azure Monitor costs.
 
 ![Azure cost management and billing](./media/Azure-cost-management-billing.png)
