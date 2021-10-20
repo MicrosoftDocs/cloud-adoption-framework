@@ -63,7 +63,7 @@ Review [Azure Sentinel pricing](https://azure.microsoft.com/en-us/pricing/detail
 
 ### Azure Key Vault
 
-The Key Vault VM extension allows you to manage the certificate lifecycle on [Windows](/azure/virtual-machines/extensions/key-vault-windows) and [Linux](/azure/virtual-machines/extensions/key-vault-linux) Azure Arc-enabled servers.Azure Key Vault is billed on the operations performed on the certificates and secrets. 
+The Key Vault VM extension allows you to manage the certificate lifecycle on [Windows](/azure/virtual-machines/extensions/key-vault-windows) and [Linux](/azure/virtual-machines/extensions/key-vault-linux) Azure Arc-enabled servers. Azure Key Vault is billed by the operations performed on the certificates and secrets. 
 
 Review [Azure Key Vault pricing](https://azure.microsoft.com/en-us/pricing/details/key-vault/).
 
@@ -76,9 +76,11 @@ Review [Azure Private Link pricing](https://azure.microsoft.com/en-us/pricing/de
 ## Design recommendations
 Here are some general design recommendations for Azure Arc-enabled servers cost governance:
 
-- Follow you tagging strategy to tag Azure Arc-enabled servers to better categorize charges across your environment.
+### Governance
+- Ensure that all Azure Arc-enabled servers follow proper [naming and tagging conventions](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging).
+- Use least privilege RBAC by assigning **Azure Connected Machine Onboarding role** to only administrators who will on-board Azure Arc-enabled servers to avoid un-needed costs.
 ### Azure Monitor 
--  Decide on the required [logs](https://docs.microsoft.com/en-us/azure/azure-monitor/agents/log-analytics-agent#data-collected) for the Azure Arc-enabled Windows and Linux servers to be collected in the Log Analytics workspace.
+-  Decide on the [required logs](https://docs.microsoft.com/en-us/azure/azure-monitor/agents/log-analytics-agent#data-collected) for the Azure Arc-enabled Windows and Linux servers to be collected in the Log Analytics workspace.
 -  Use the [Azure Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/) to calculate an estimate of the Azure Arc-enabled servers monitoring costs.
   
 ![Azure Pricing Calculator](./media/pricing-calculator.png)
@@ -92,6 +94,9 @@ Here are some general design recommendations for Azure Arc-enabled servers cost 
 
 ![Log Analytics Insights](./media/Log-analytics-insights.png)
 
+- Evaluate usage of [daily cap](https://docs.microsoft.com/en-us/azure/azure-monitor/logs/manage-cost-storage#set-the-daily-cap) to limit the daily ingestion for your workspace.
+- Evaluate possible data ingestion volume reducing, Refer to this [Tips for reducing data volume](https://docs.microsoft.com/en-us/azure/azure-monitor/logs/manage-cost-storage#tips-for-reducing-data-volume) documentation to help configure data ingestion properly.
+- Consider how long to retain data on Log Analytics. Data ingested into Log Analytics workspace can be retained at no additional charge up to first 31 days. Consider general aspects to configure the [Log Analytics workspace level default retention](https://docs.microsoft.com/en-us/azure/azure-monitor/logs/manage-cost-storage#workspace-level-default-retention) and specific needs to configure data [retention by data type](https://docs.microsoft.com/en-us/azure/azure-monitor/logs/manage-cost-storage#retention-by-data-type), that can be as low as 4 days. Example: Usually, performance data doens't need to be retained longer, instead, security logs may need to be retained longer.
 ### Azure Sentinel
 - Use the Azure Pricing Calculator to estimate [Azure Sentinel costs](https://docs.microsoft.com/en-us/azure/sentinel/azure-sentinel-billing).
 
@@ -102,4 +107,12 @@ Here are some general design recommendations for Azure Arc-enabled servers cost 
 
 ![Azure policy costs](./media/Azure-cost-management-policy.png)
 
+### Azure Key Vault
+- Use [Azure Key Vault insights](https://docs.microsoft.com/en-us/azure/azure-monitor/insights/key-vault-insights-overview) to monitor certificate renewal and secrets operations on your Azure Arc-enabled servers.
 
+![Azure Key Vault insights](./media/key-vault-insights.png)
+### Azure Private Link
+
+- Use Use [Azure Cost Management and Billing](https://docs.microsoft.com/en-us/azure/cost-management-billing/cost-management-billing-overview) to monitor the usage of Private Links used with Azure Arc-enabled servers.
+
+![Azure private link costs](./media/Private-endpoint-costs.png)
