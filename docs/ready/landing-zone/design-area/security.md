@@ -42,8 +42,9 @@ An organization must have visibility into what's happening within their technica
 | Vulnerability management|- Emergency patching for critical vulnerabilities. <br>- Patching for VMs that are offline for extended periods of time. <br> - Vulnerability assessment of VMs.
 |Shared responsibility| - Where are the hand-offs between team responsibilities that need to be considered when monitoring or responding to security events? <br> Consider the guidance in the Secure methodology for [security operations](/azure/cloud-adoption-framework/secure/security-operations) |
 
+## Security design recommendations
 
-## Security monitoring design recommendations
+### Security monitoring design recommendations
 
 - Use [Azure AD reporting capabilities](/azure/active-directory/reports-monitoring/concept-audit-logs) to generate access control audit reports.
 
