@@ -135,7 +135,7 @@ Most Azure environments will use at least Azure AD for Azure fabric authenticati
 ![Diagram that shows identity and access management.](../../enterprise-scale/media/iam.png)
 
 Identity and access management are core features of the Azure landing zone accelerator implementation.
-The deployment includes a subscription dedicated to identity, where customers can deploy the Active Directory domain controllers required for their environment. 
+The deployment includes a subscription dedicated to identity, where customers can deploy the Active Directory domain controllers required for their environment.
 
-The implementation also ....
+The implementation also includes options to assign recommended policies to govern identity and domain controllers.
 
