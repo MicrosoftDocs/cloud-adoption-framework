@@ -19,6 +19,7 @@ With larger, more sophisticated forms of cloud adoption, the journey to the clou
 This scenario focuses on supporting two targeted outcomes:
 
 **Analytics:**
+
 - Use the cloud to deliver increasingly mature analytics solutions.
 - Migrate data platforms to the cloud.
 - Democratize data by using advanced visualization tools.
@@ -26,6 +27,7 @@ This scenario focuses on supporting two targeted outcomes:
 - Extend workloads with machine learning.
 
 **Data governance:**
+
 - Properly manage the data estate to ensure data quality and maturity across all cloud deployments.
 - Govern how to classify, categorize, and use data to ensure data protection and reliability across all cloud deployments.
 
@@ -34,25 +36,31 @@ For more information, see [Data summary and maturity model for Azure](./govern.m
 This scenario also provides a framework built on the following key principles. These principles address current challenges with complex data architectures that don't scale to the needs of enterprises.
 
 **Allow:**
+
 - Scale without increased complexity.
 - Separate concerns to make governance easier.
 - Self-serve data infrastructure.
 
 **Follow:**
+
 - Best practices for well-architected cloud services.
 
 **Support:**
+
 - On-premises and multicloud scenarios.
 
 **Adopt:**
+
 - A product and vendor agnostic approach.
 - The Cloud Adoption Framework.
 
 **Commit to:**
+
 - Azure landing zones as the baseline infrastructure for all workloads.
 - An operational model.
 
 **Enable:**
+
 - Common data infrastructure.
 - Distributed architecture under centralized governance.
 - Secure network line-of-sight.
@@ -65,7 +73,7 @@ The data management and analytics scenario is designed to guide the end-to-end c
 |---------|---------|
 |[Cloud Adoption Framework](/azure/cloud-adoption-framework)|Data management and governance is a lifecycle process. Start by building on your existing cloud strategy, and carry through to ongoing operations management. The Cloud Adoption Framework helps guide the full lifecycle for your data estate.|
 |[Azure Well-Architected Framework](well-architected-framework.md)|Workload architecture and operations have a direct impact on data. Understand how your architecture can improve management and governance of the data your workloads use.|
-|[Azure landing zones](/azure/cloud-adoption-framework/ready/)|Choose a landing zone as the environment to host your workloads. Preprovisioning through code establishes a starting point for your Azure environment. Make sure to prepare the environment for the cloud adoption plan through Azure landing zones. Start with cloud adoption framework [enterprise-scale landing zones](/azure/cloud-adoption-framework/ready/enterprise-scale/) to create the infrastructure for your data platform.|
+|[Azure landing zones](../../ready/index.md)|Choose a landing zone as the environment to host your workloads. Preprovisioning through code establishes a starting point for your Azure environment. Make sure to prepare the environment for the cloud adoption plan through Azure landing zones. Start with cloud adoption framework [enterprise-scale landing zones](../../ready/enterprise-scale/index.md) to create the infrastructure for your data platform.|
 |[Enterprise-scale for analytics and AI](enterprise-scale-landing-zone.md)|The enterprise-scale strategic design pattern for analytics and AI environment relies on distribution of data and its pipelines across domains. This pattern includes capabilities like storage, data lineage, data classification, data ingestion, networking, security, access management, encryption, resiliency, and monitoring.|
 
 > [!TIP]
@@ -78,6 +86,7 @@ The data management and analytics scenario is designed to guide the end-to-end c
 :::image type="content" source="images/high-level-overview-multiple-data-landing-zones.png" alt-text="Diagram that shows a high-level design with a data management landing zone and data landing zones." border="false":::
 
 For more information, see:
+
 - [Data management landing zone](architectures/data-management-landing-zone.md)
 - [Data landing zone](architectures/data-management-landing-zone.md)
 
@@ -88,7 +97,7 @@ The following advanced, level-300+ articles in the **Data management and analyti
 - [Data lake implementation](best-practices/data-lake-overview.md)
 - [Azure Synapse Analytics implementation](best-practices/synapse.md)
 - [Azure Databricks implementation](best-practices/azure-databricks-implementation.md)
-- [Azure Purview implementation](best-practices/purview-checklist.md) 
+- [Azure Purview implementation](best-practices/purview-checklist.md)
 - [Data landing zone ingestion](best-practices/data-ingestion.md)
 - [Data science environment](best-practices/data-science-best-practices.md)
 
@@ -102,7 +111,7 @@ The following common customer journeys support the cloud data management and ana
 
 - **Prepare for centralized operations.** Use [Cloud Adoption Framework](/azure/cloud-adoption-framework) articles as resources. Establish processes and approaches to support the entire portfolio of workloads across your data estate.
 
-- **Improve controls across your data estate.** Focus on [Govern](/azure/cloud-adoption-framework/govern) and [Manage](/azure/cloud-adoption-framework/manage) articles to integrate data management and analytics into existing operations. Use the [Ready](/azure/cloud-adoption-framework/ready) articles to deploy controls across all your cloud environments.
+- **Improve controls across your data estate.** Focus on [Govern](../../govern/index.md) and [Manage](../../manage/index.md) articles to integrate data management and analytics into existing operations. Use the [Ready](../../ready/index.md) articles to deploy controls across all your cloud environments.
 
 - **Use central IT governance to influence changes to individual workloads.** As data management and analytics processes improve, some requirements depend on knowing the architecture behind individual workloads. Use [Well-Architected Framework](./well-architected-framework.md) guidance to help individual workload owners improve their workloads to support data operations.
 
@@ -115,6 +124,7 @@ The following common customer journeys support the cloud data management and ana
 ## Next steps
 
 For more information about planning for Azure data management and analytics, see:
+
 - [Develop a plan for data management and analytics](plan.md)
 - [Review your environment for Azure landing zones](ready.md)
 - [Introduction to enterprise-scale for analytics and AI in Azure](enterprise-scale-landing-zone.md)

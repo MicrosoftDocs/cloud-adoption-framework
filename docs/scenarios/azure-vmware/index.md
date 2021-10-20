@@ -29,7 +29,7 @@ Azure VMware Solution is a first party Microsoft Azure service built with VMware
 
 This scenario is designed to guide the end-to-end customer journey, throughout the cloud adoption lifecycle. Completing the journey requires a few key guidance sets:
 
-- **Cloud Adoption Framework:** These articles walk through the [considerations and recommendations of each CAF methodology](/azure/cloud-adoption-framework/overview). Use these articles to prepare decision makers, central IT, and the cloud center of excellence for adoption of Azure VMware Solution.
+- **Cloud Adoption Framework:** These articles walk through the [considerations and recommendations of each CAF methodology](../../overview.md). Use these articles to prepare decision makers, central IT, and the cloud center of excellence for adoption of Azure VMware Solution.
 - **Reference architectures:** These [reference solutions](/azure/architecture/browse/) help to accelerate the deployment of Azure VMware Solution.
 - **Featured Azure products:** Learn more about the [products that support your VMware strategy](/azure/azure-vmware/integrate-azure-native-services) in Azure.
 - **Microsoft Learn modules:** Get the [hands-on skilling required](/learn/paths/run-vmware-workloads-azure-vmware-solution/) to implement, maintain, and support Azure VMware Solution.
