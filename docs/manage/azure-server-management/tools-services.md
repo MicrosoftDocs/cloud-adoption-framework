@@ -47,7 +47,7 @@ If a workload requires real-time business continuity for hardware failures or da
 
 For more information, see the [complete Azure Site Recovery replication matrix](/azure/site-recovery/site-recovery-overview#what-can-i-replicate).
 
-For your file-server data, another service to consider is [Azure File Sync](/azure/storage/files/storage-sync-files-planning). This service helps you centralize your organization's file shares in Azure Files, while preserving the flexibility, performance, and compatibility of an on-premises file server. To use this service, follow the instructions for deploying Azure File Sync.
+For your file-server data, another service to consider is [Azure File Sync](/azure/storage/file-sync/file-sync-planning). This service helps you centralize your organization's file shares in Azure Files, while preserving the flexibility, performance, and compatibility of an on-premises file server. To use this service, follow the instructions for deploying Azure File Sync.
 
 ## Monitor
 
@@ -90,7 +90,7 @@ To learn about pricing for Azure management services, go to these pages:
 
 - [Azure Monitor](https://azure.microsoft.com/pricing/details/monitor/)
 
-- [Azure Security Center](https://azure.microsoft.com/pricing/details/security-center/)
+- [Azure Security Center](https://azure.microsoft.com/pricing/details/azure-defender/)
 
 - [Azure Automation](https://azure.microsoft.com/pricing/details/automation/), including:
   - Desired State Configuration
@@ -102,4 +102,4 @@ To learn about pricing for Azure management services, go to these pages:
 - [Azure File Sync service](https://azure.microsoft.com/pricing/details/storage/blobs/)
 
 > [!NOTE]
-> The Azure Update Management solution is free, but there's a small cost related to data ingestion. As a rule of thumb, the first 5 gigabytes (GB) per month of data ingestion are free. We generally observe that each machine uses about 25 MB per month. So, about 200 machines per month are covered for free. For more servers, multiply the number of additional servers by 25 MB per month. Then, multiply the result by the storage price for the additional storage that you need. For information about costs, see [Azure Storage pricing](https://azure.microsoft.com/pricing/details/storage/). Each additional server typically has a nominal impact on cost.
+> The Azure Update Management solution is free, but there's a small cost related to data ingestion. As a rule of thumb, the first 5 gigabytes (GB) per month of data ingestion are free. We generally observe that each machine uses about 25 MB per month. So, about 200 machines per month are covered for free. For more servers, multiply the number of additional servers by 25 MB per month. Then, multiply the result by the storage price for the additional storage that you need. For information about costs, see [Azure Storage pricing](https://azure.microsoft.com/product-categories/storage/). Each additional server typically has a nominal impact on cost.

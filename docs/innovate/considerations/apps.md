@@ -13,7 +13,7 @@ keywords: Innovative applications, citizen developers, application development
 
 # Application development for innovative applications
 
-As discussed in [Democratize data with digital invention](data.md), data fuels most innovations across the digital economy. Building on that analogy, applications are the fueling stations and infrastructure required to get that fuel into the right hands.
+As discussed in [Democratize data with digital invention](./data.md), data fuels most innovations across the digital economy. Building on that analogy, applications are the fueling stations and infrastructure required to get that fuel into the right hands.
 
 In some cases, data alone is enough to drive change and meet customer needs. More commonly though, solutions to customer needs require applications to shape the data and create an experience. Innovative applications engage and interact with the user, providing information and guidance. This article summarizes several principles that can help you find the right application development solution, based on the hypotheses to be validated.
 

@@ -32,7 +32,7 @@ Use Azure SQL Database pools, formerly SQL data warehouse, as the data store for
 Azure SQL Database on-demand is a serverless query service that's used by data scientists and engineers to run queries against files in the storage accounts.
 
 > [!TIP]
-> You might need additional Azure Synapse Analytics workspaces if your data integration needs to provide access to the golden source with row- and column-level security. You can provide these workspaces with Azure Synapse pools. Data products teams might require their own workspace for creating data products and a separate workspace that's only for product teams with scoped development access.
+> You might need additional Azure Synapse Analytics workspaces if your data integration needs to provide access to the golden source with row-level and column-level security. You can provide these workspaces with Azure Synapse pools. Data products teams might require their own workspace for creating data products and a separate workspace that's only for product teams with scoped development access.
 
 ## Azure Synapse Analytics setup
 
@@ -63,7 +63,7 @@ You can combine row-level security with column-level security to restrict access
 
 ### Azure Synapse data access control in Azure Data Lake
 
-When deploying an Azure Synapse Analytics workspace, you need an Azure Data Lake Storage account from the subscription or by manually using the storage account URL. The specified storage account is set as **primary** for the deployed Azure Synapse workspace to store its data. Azure Synapse stores data in a container that includes Apache Spark tables and Spark application logs in a folder called `/synapse/{workspacename}`. It also has a container for managing any libraries that you choose to install.
+When deploying an Azure Synapse Analytics workspace, you need an Azure Data Lake Storage account from the subscription or by manually using the storage account URL. The specified storage account is set as **primary** for the deployed Azure Synapse workspace to store its data. Azure Synapse stores data in a container that includes Apache Spark tables and Spark application logs in a folder called `/synapse/{workspaceName}`. It also has a container for managing any libraries that you choose to install.
 
 During the Azure Synapse workspace deployment through [Azure portal](https://ms.portal.azure.com/), you can either provide an existing storage account or create a new one. The provided storage account is set as the primary storage account for the Azure Synapse workspace. For either account option, the deployment process automatically grants the Azure Synapse workspace identity data access to the specified Data Lake Storage account using the Storage Blob Data Contributor role. If the deployment of Azure Synapse workspace happens outside of the Azure portal, you need to manually add an Azure Synapse workspace identity to the Storage Blob Data Contributor role later. We recommend assigning the role Storage Blob Data Contributor on the file system level to follow the least privilege principle.
 

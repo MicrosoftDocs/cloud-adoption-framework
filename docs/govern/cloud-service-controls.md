@@ -18,7 +18,7 @@ The following process outlines a possible governance implementation, allowing fo
 
 ## Layers of governance
 
-Determine the controls and measures to implement as part of your organization's governance process as outlined in [Define corporate cloud policy](policy-compliance/policy-definition.md).
+Determine the controls and measures to implement as part of your organization's governance process as outlined in [Define corporate cloud policy](./policy-compliance/policy-definition.md).
 
 ![Diagram that shows the service review process.](../_images/govern/cloud-policy-breakdown.png)
 
@@ -157,12 +157,12 @@ There are four key artifacts developed throughout this process.
 
 - **Service guidance**, is a per service document that outlines the key components around a service:
 
-   - When the service should be used
-   - Any restrictions on what it should be used for
-   - A list of controls that are enforced by the platform
-   - A list of controls that the developer should implement
+  - When the service should be used
+  - Any restrictions on what it should be used for
+  - A list of controls that are enforced by the platform
+  - A list of controls that the developer should implement
 
-   Cloud adoption teams refer to these documents for services they can pick up and use, and then plan the implementation of their project around the controls and components. The service guidance should also list any Azure policies and supporting functions that have been implemented. This guidance ensures that a reference can be enforced between the policy and service controls.
+  Cloud adoption teams refer to these documents for services they can pick up and use, and then plan the implementation of their project around the controls and components. The service guidance should also list any Azure policies and supporting functions that have been implemented. This guidance ensures that a reference can be enforced between the policy and service controls.
 
 - **Azure policies and supporting functions** are the components or technical implementation of the controls that go into the platform. This code is version-controlled and deployed. These code items must act in enforcing the policy and include the code for reporting compliance of the policy.
 

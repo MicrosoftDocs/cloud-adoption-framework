@@ -3,7 +3,6 @@ title: Enterprise-scale security governance and compliance
 description: Learn about enterprise-scale security governance and compliance in the Microsoft Cloud Adoption Framework for Azure.
 author: BrianBlanchard
 ms.author: brblanch
-
 ms.date: 09/15/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -88,7 +87,7 @@ Governance provides mechanisms and processes to maintain control over your appli
 
 - Enforce management and security conventions, such as the use of private endpoints.
 
-- Manage and create policy assignments by using policy definitions that can be reused at multiple inherited assignment scopes. 
+- Manage and create policy assignments by using policy definitions that can be reused at multiple inherited assignment scopes.
 
    You can have centralized, baseline policy assignments at management group, subscription, and resource group scopes.
 
@@ -176,7 +175,7 @@ Maintain a healthy security posture as you adopt Azure. Besides visibility, you 
 
 - If you want to bring your own keys, consider the possibility that your keys might not be supported across all considered services.
 
-- Implement relevant mitigation so that inconsistencies don't cause unwanted outcomes. 
+- Implement relevant mitigation so that inconsistencies don't cause unwanted outcomes.
 
 - Choose appropriate region pairs and disaster recovery regions that minimize latency.
 
@@ -198,16 +197,17 @@ The Azure Security Benchmark includes a collection of high-impact security recom
 
 The Azure Security Benchmark documentation specifies security controls and service recommendations:
 
-- [Security controls](/azure/security/benchmarks/overview) 
+- [Security controls](/security/benchmark/azure/overview)
 
-   The Azure Security Benchmark recommendations are categorized by security controls. Security controls represent high-level vendor-agnostic security requirements, such as network security and data protection. Each security control has a set of security recommendations and instructions that help you implement those recommendations.
-- [Service recommendations](/azure/security/benchmarks/security-baselines-overview) 
+  The Azure Security Benchmark recommendations are categorized by security controls. Security controls represent high-level vendor-agnostic security requirements, such as network security and data protection. Each security control has a set of security recommendations and instructions that help you implement those recommendations.
 
-   When available, benchmark recommendations for Azure services include Azure Security Benchmark recommendations that are tailored specifically for that service.
+- [Service recommendations](/security/benchmark/azure/security-baselines-overview)
+
+  When available, benchmark recommendations for Azure services include Azure Security Benchmark recommendations that are tailored specifically for that service.
 
 ## Service enablement framework
 
-As business units request to deploy workloads to Azure, you need visibility into each workload to determine how to achieve appropriate levels of governance, security, and compliance. When a new service is required, you need to allow it. 
+As business units request to deploy workloads to Azure, you need visibility into each workload to determine how to achieve appropriate levels of governance, security, and compliance. When a new service is required, you need to allow it.
 
 The following tables provide a framework to assess enterprise security readiness of Azure services for each assessment:
 

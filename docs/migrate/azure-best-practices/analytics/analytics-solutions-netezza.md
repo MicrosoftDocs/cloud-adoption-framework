@@ -10,10 +10,6 @@ ms.subservice: migrate
 ms.custom: think-tank
 ---
 
-<!-- docutune:casing Informatica Talend Inmon Attunity Qlik nzLua CBT CBTs NZPLSQL DELIM TABLENAME ORC Parquet nzsql nzunload mpp -->
-
-<!-- cSpell:ignore Informatica Talend Qlik CBTs NZPLSQL CHARINDEX DATEDIFF DELIM STRPOS TABLENAME nzsql nzunload zonemap -->
-
 # Azure Synapse Analytics solutions and migration for Netezza
 
 Many organizations that currently use Netezza data warehouse systems are looking to take advantage of innovative cloud, infrastructure as a service, and platform as a service offerings in newer environments like Azure. Many organizations are ready to take the step of shifting expensive tasks like infrastructure maintenance and platform development to a cloud provider.
@@ -101,7 +97,7 @@ Netezza implements some database objects that aren't directly supported in Azure
   - Temporal columns, including `DATE`, `TIME`, and `TIMESTAMP`
   - `CHAR` columns, if they are part of a materialized view and included in the `ORDER BY` clause
 
-  You can find out which columns have zone maps by using the nz_zonemap utility. The utility is part of the NZ Toolkit.
+  You can find out which columns have zone maps by using the `nz_zonemap` utility. The utility is part of the NZ Toolkit.
 
   Azure Synapse doesn't use zone maps, but you can achieve similar results by using user-defined index types or partitioning.
 
@@ -214,7 +210,7 @@ Consider the following information when you plan how to extract metadata and dat
 
 You can access system catalog tables in Netezza by using a utility like nz_ddl_table. You can use the tables to generate `CREATE TABLE` DDL statements, which you can then edit for the equivalent tables in Azure Synapse. Third-party migration and ETL tools also use the catalog information to achieve the same results.
 
-- **Data extraction:** You can extract raw data to migrate from an existing Netezza table into a flat, delimited file by using standard Netezza utilities like nzsql and nzunload, and by using external tables. Compress the files by using Gzip, and then use AzCopy or an Azure data transport service like Azure Data Box to upload the files to Azure Blob Storage.
+- **Data extraction:** You can extract raw data to migrate from an existing Netezza table into a flat, delimited file by using standard Netezza utilities like `nzsql` and `nzunload`, and by using external tables. Compress the files by using Gzip, and then use AzCopy or an Azure data transport service like Azure Data Box to upload the files to Azure Blob Storage.
 
   During a migration exercise, it's important to extract data as efficiently as possible. The recommended approach for Netezza is to use external tables, which is also the fastest method. You can complete multiple extracts in parallel to maximize the throughput for data extraction.
 

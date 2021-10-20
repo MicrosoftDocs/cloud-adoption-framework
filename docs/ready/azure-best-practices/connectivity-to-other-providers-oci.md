@@ -32,7 +32,7 @@ This section provides different connectivity approaches to integrate an Azure en
 
 - Interconnectivity between Azure and OCI is only available for [specific regions](/azure/virtual-machines/workloads/oracle/oracle-oci-overview#region-availability).
 
-- For more in-depth documentation about interconnectivity between Azure and OCI, see [Oracle application solutions to integrate Microsoft Azure and Oracle Cloud Infrastructure](/azure/virtual-machines/workloads/oracle/oracle-oci-overview) or see [Oracle documentation](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/azure.htm).
+- For more in-depth documentation about interconnectivity between Azure and OCI, see [Oracle application solutions to integrate Microsoft Azure and Oracle Cloud Infrastructure](/azure/virtual-machines/workloads/oracle/oracle-oci-overview) or see [Access to Microsoft Azure in OCI](https://docs.oracle.com/iaas/Content/Network/Concepts/azure.htm).
 
 **Design recommendations:**
 
@@ -54,11 +54,11 @@ This section provides different connectivity approaches to integrate an Azure en
 
 - To operate Oracle resources hosted in OCI by using Azure resources and technologies, you could:
 
-  - **From Azure:** Deploy a jumpbox in a spoke VNet. The jumpbox provides access to the virtual cloud network in OCI as shown in the following picture:
+  - **From Azure:** Deploy a jump box in a spoke VNet. The jump box provides access to the virtual cloud network in OCI as shown in the following picture:
 
-    ![Diagram that shows Azure to OCI Jumpbox on one VNet.](./media/azure-oci-jump-box-one-vnet.png)
+    ![Diagram that shows Azure to OCI jump box on one VNet.](./media/azure-oci-jump-box-one-vnet.png)
 
-    *Figure 3: Managing OCI resources from Azure via a jumpbox.*
+    *Figure 3: Managing OCI resources from Azure via a jump box.*
 
   - **From on-premises:** Use ExpressRoute Global Reach to bind an existing ExpressRoute circuit that connects on-premises to Azure, to an OCI ExpressRoute circuit that interconnects Azure to OCI. In this way, the Microsoft Enterprise Edge (MSEE) router becomes the central routing point between both ExpressRoute circuits.
 

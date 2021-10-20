@@ -10,8 +10,6 @@ ms.subservice: manage
 ms.custom: internal
 ---
 
-<!-- cSpell:ignore HKEY kusto -->
-
 # Enable tracking and alerting for critical changes
 
 Azure Change Tracking and Inventory provide alerts on the configuration state of your hybrid environment and changes to that environment. It can report critical file, service, software, and registry changes that might affect your deployed servers.

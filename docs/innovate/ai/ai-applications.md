@@ -69,7 +69,7 @@ Azure Bot Service and Microsoft Bot Framework have the following characteristics
 
 For more information about Azure Bot Service and Bot Framework, see:
 
-- [Azure Bot Service and Bot Framework overview](/azure/bot-service/bot-service-overview-introduction)
+- [Azure Bot Service and Bot Framework overview](/azure/bot-service/bot-service-overview)
 - [Principles of bot design](/azure/bot-service/bot-service-design-principles)
 
 One of the easiest ways to get started is to use QnA Maker, part of Azure Cognitive Services, which can intelligently convert an FAQ document or website into a Q&A experience in minutes. To use QnA Maker, see:
@@ -81,7 +81,7 @@ To download and use Bot Framework SDK and tools for bot development, see:
 
 - [Latest versions of Bot Framework SDK and tools](/azure/bot-service/what-is-new)
 - [Create your first bot](/composer/quickstart-create-bot)
-- [Create a bot with the Bot Framework SDK for .NET](/azure/bot-service/dotnet/bot-builder-dotnet-sdk-quickstart)
+- [Create a bot with the Bot Framework SDK for .NET](/azure/bot-service/bot-service-quickstart-create-bot)
 
 To learn how to add Cognitive Services to make your bot even more intelligent, see:
 

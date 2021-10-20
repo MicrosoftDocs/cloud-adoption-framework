@@ -84,9 +84,9 @@ Use a firewall or Azure network security group (NSG) to control virtual network 
 
 To ensure that your private endpoint can access your Machine Learning workspace, take the following steps:
 
-1. Make sure you have access to your virtual network using a VPN connection, ExpressRoute, or jumpbox virtual machine (VM) with Azure Bastion access. The public user can't access the Machine Learning workspace with the private endpoint, because it can be accessed only from your virtual network. For more information, see [Secure your workspace with virtual networks](/azure/machine-learning/how-to-secure-workspace-vnet#securely-connect-to-your-workspace).
+1. Make sure you have access to your virtual network using a VPN connection, ExpressRoute, or jump box virtual machine (VM) with Azure Bastion access. The public user can't access the Machine Learning workspace with the private endpoint, because it can be accessed only from your virtual network. For more information, see [Secure your workspace with virtual networks](/azure/machine-learning/how-to-secure-workspace-vnet#securely-connect-to-your-workspace).
 
-1. Make sure you can resolve the workspace fully qualified domain names (FQDNs) with your private IP address. If you use your own Domain Name System (DNS) server or a [centralized DNS infrastructure](/azure/cloud-adoption-framework/ready/azure-best-practices/private-link-and-dns-integration-at-scale#private-link-and-dns-integration-in-hub-and-spoke-network-architectures), you need to configure a DNS forwarder. For more information, see [How to use your workspace with a custom DNS server](/azure/machine-learning/how-to-custom-dns).
+1. Make sure you can resolve the workspace fully qualified domain names (FQDNs) with your private IP address. If you use your own Domain Name System (DNS) server or a [centralized DNS infrastructure](./private-link-and-dns-integration-at-scale.md#private-link-and-dns-integration-in-hub-and-spoke-network-architectures), you need to configure a DNS forwarder. For more information, see [How to use your workspace with a custom DNS server](/azure/machine-learning/how-to-custom-dns).
 
 ## Workspace access management
 
@@ -106,7 +106,7 @@ In a self-service pattern, data scientists can create and manage workspaces. Thi
 
 1. When data scientists create compute resources, they can assign the managed identities to the compute instances to gain data access.
 
-For best practices, see [Authentication for data management and analytics](/azure/cloud-adoption-framework/scenarios/data-management/secure-authentication).
+For best practices, see [Authentication for data management and analytics](../../scenarios/data-management/secure-authentication.md).
 
 ### Data-centric pattern
 
@@ -262,12 +262,12 @@ Read more articles about architectural considerations for deploying Machine Lear
 
 - Learn how team structure, environment, or regional constraints affect workspace setup.
   > [!div class="nextstepaction"]
-  > [Organize and set up Azure Machine Learning environments](ai-machine-learning-resource-organization.md)
+  > [Organize and set up Azure Machine Learning environments](./ai-machine-learning-resource-organization.md)
 
 - See how to manage compute costs and budget across teams and users.
   > [!div class="nextstepaction"]
-  > [Budget, cost, and quota management for Azure Machine Learning at organizational scale](optimize-ai-machine-learning-cost.md)
+  > [Budget, cost, and quota management for Azure Machine Learning at organizational scale](./optimize-ai-machine-learning-cost.md)
 
 - Learn about machine learning DevOps (MLOps), which uses a combination of people, process, and technology to deliver robust, reliable, and automated machine learning solutions.
   > [!div class="nextstepaction"]
-  > [Machine learning DevOps guide](ai-machine-learning-mlops.md)
+  > [Machine learning DevOps guide](./ai-machine-learning-mlops.md)

@@ -45,7 +45,7 @@ The following questions help you make decisions based on the Azure networking se
 
 - Will you need to inspect and audit outgoing traffic by using on-premises network devices?
 
-  Cloud-native workloads can use Azure Firewall or third-party network virtual appliances for internet traffic. For more information, see [What is Azure Firewall?](/azure/firewall/overview). Additionally, Microsoft Defender for Endpoint can provide insights for per-session traffic analysis when using Windows 10 Enterprise multi-session devices. For more information, see [Onboard Windows 10 Enterprise multi-session devices in Azure Virtual Desktop](/microsoft-365/security/defender-endpoint/onboard-windows-10-multi-session-device).
+  Cloud-native workloads can use Azure Firewall or third-party network virtual appliances for internet traffic. For more information, see [What is Azure Firewall?](/azure/firewall/overview). Additionally, Microsoft Defender for Endpoint can provide insights for per-session traffic analysis when using Windows 10 Enterprise multi-session devices. For more information, see [Onboard Windows 10 Enterprise multi-session devices in Azure Virtual Desktop](/microsoft-365/security/defender-endpoint/onboard-windows-multi-session-device).
 
   Your security policies might require internet-bound outgoing traffic to pass through centrally managed devices in the on-premises environment. Forced tunneling supports these scenarios, but not all managed services support forced tunneling. For more information, see [Virtual network traffic routing](/azure/virtual-network/virtual-networks-udr-overview).
 
@@ -130,4 +130,4 @@ As part of your networking design process, see these articles:
 
 ## Next steps
 
-[Management and monitoring](eslz-management-and-monitoring.md)
+[Management and monitoring](./eslz-management-and-monitoring.md)

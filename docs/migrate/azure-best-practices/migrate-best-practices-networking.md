@@ -10,8 +10,6 @@ ms.subservice: migrate
 ms.custom: internal
 ---
 
-<!-- cSpell:ignore NSGs CIDR FQDNs BGP's ACLs WAFs -->
-
 # Best practices to set up networking for workloads migrated to Azure
 
 As you plan and design for migration, in addition to the migration itself, one of the most critical steps is the design and implementation of Azure networking. This article describes best practices for networking when you're migrating to infrastructure as a service (IaaS) and platform as a service (PaaS) implementations in Azure.
@@ -412,7 +410,7 @@ Public IP addresses in Azure can be associated with VMs, load balancers, applica
 
 **Learn more:**
 
-- [Public IP addresses in Azure](/azure/virtual-network/public-ip-addresses#public-ip-addresses)
+- [Public IP addresses in Azure](/azure/virtual-network/ip-services/public-ip-addresses)
 - [Manage virtual machine access by using just-in-time](/azure/security-center/security-center-just-in-time)
 
 ## Take advantage of Azure security features for networking
@@ -490,7 +488,7 @@ For more complex network topologies, you might use security products from Micros
 
 - An NVA is a VM that performs a network function, such as a firewall, WAN optimization, or other network function.
 - NVAs bolster virtual network security and network functions. They can be deployed for highly available firewalls, intrusion prevention, intrusion detection, WAFs, WAN optimization, routing, load balancing, VPN, certificate management, Active Directory, and multi-factor authentication.
-- NVAs are available from numerous vendors in [Azure Marketplace](https://azuremarketplace.microsoft.com).
+- NVAs are available from numerous vendors in [Azure Marketplace](https://azuremarketplace.microsoft.com/).
 
 ## Best practice: Implement firewalls and NVAs in hub networks
 

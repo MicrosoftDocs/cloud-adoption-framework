@@ -10,8 +10,6 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-aks
 ---
 
-<!-- cspell:ignore cust -->
-
 # Azure landing zones for modern application platforms
 
 The [Ready methodology in the Cloud Adoption Framework](../../ready/index.md) guides the creation of all Azure environments using [Azure landing zones](../../ready/landing-zone/index.md). Azure landing zones provide many [implementation options](../../ready/landing-zone/implementation-options.md) built around a set of [common design areas](../../ready/landing-zone/design-areas.md).
@@ -71,14 +69,14 @@ The choice of these two options depends on host operations practices and the deg
 
 All Azure landing zones are designed around a set of common design areas listed below. Each article includes a set of AKS-specific considerations and recommendations that can help the modern application platforms team prepare a landing zone for AKS containers:
 
-- [Enterprise enrollment](eslz-enterprise-enrollment.md)
-- [Identity and access management](eslz-identity-and-access-management.md)
-- [Network topology and connectivity](eslz-network-topology-and-connectivity.md)
-- [Resource organization](eslz-resource-organization.md)
-- [Governance disciplines](eslz-security-governance-and-compliance.md)
-- [Operations baseline](eslz-management-and-monitoring.md)
-- [Business continuity and disaster recovery](eslz-business-continuity-and-disaster-recovery.md)
-- [Deployment options](eslz-platform-automation-and-devops.md)
+- [Enterprise enrollment](./eslz-enterprise-enrollment.md)
+- [Identity and access management](./eslz-identity-and-access-management.md)
+- [Network topology and connectivity](./eslz-network-topology-and-connectivity.md)
+- [Resource organization](./eslz-resource-organization.md)
+- [Governance disciplines](./eslz-security-governance-and-compliance.md)
+- [Operations baseline](./eslz-management-and-monitoring.md)
+- [Business continuity and disaster recovery](./eslz-business-continuity-and-disaster-recovery.md)
+- [Deployment options](./eslz-platform-automation-and-devops.md)
 
 ## Next step: Migrate workloads to modern application platforms
 
