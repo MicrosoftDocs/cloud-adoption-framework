@@ -31,7 +31,8 @@ Consider the following items relating to logging data to help inform the types o
 
 |Scope|Context|
 |-|-|
-|Application-centric platform monitoring <br>  (encompassing both hot and cold telemetry paths for metrics and logs, respectively)|- Operating system metrics; for example, performance counters and custom metrics - Operating system logs; for example, Internet Information Services, Event Tracing for Windows, and syslogs <br> - Resource health events <br> - Security audit logging and achieving a horizontal security lens across your organization's entire Azure estate: <br> - Potential integration with on-premises security information and event management (SIEM) systems such as ArcSight or the Onapsis security platform <br> - Potential integration with software as a service (SaaS) offerings such as ServiceNow <br> - Azure activity logs <br> - Azure Active Directory (Azure AD) audit reports <br> - Azure diagnostic services, logs, and metrics; Azure Key Vault audit events; network security group (NSG) flow logs; and event logs <br> - Azure Monitor, Azure Network Watcher, Azure Security Center, and Azure Sentinel|
+|Application-centric platform monitoring <br>  |Include both hot and cold telemetry paths for metrics and logs, respectively <br> Operating system metrics; for example, performance counters and custom metrics <br> Operating system logs; for example: <br> - Internet Information Services <br> - Event Tracing for Windows, and syslogs <br> - Resource health events <br>  |
+|Security audit logging  |Aim to achieve a horizontal security lens across your organization's entire Azure estate <br> Potential integration with on-premises security information and event management (SIEM) systems such as ArcSight or the Onapsis security platform <br> - Potential integration with software as a service (SaaS) offerings such as ServiceNow <br> - Azure activity logs <br> - Azure Active Directory (Azure AD) audit reports <br> - Azure diagnostic services, logs, and metrics; Azure Key Vault audit events; network security group (NSG) flow logs; and event logs <br> - Azure Monitor, Azure Network Watcher, Azure Security Center, and Azure Sentinel|
  Azure data retention thresholds and archiving requirements|  - The default retention period for Azure Monitor Logs is 30 days, with a maximum of two years.<br>  - The default retention period for Azure AD reports (premium) is 30 days. <br>  - The default retention period for the Azure diagnostic service is 90 days.|
 Operational requirements|  - Operational dashboards with native tools such as Azure Monitor Logs or third-party tooling <br>  - Controlling privileged activities with centralized roles <br> - Managed identities for Azure resources](/azure/active-directory/managed-identities-azure-resources/overview) for access to Azure services <br>  - Resource locks to protect editing and deleting resources
 
@@ -67,12 +68,11 @@ Operational requirements|  - Operational dashboards with native tools such as Az
 
 The Azure landing zone accelerator includes opinionated configuration that deploys key Azure management capabilities to help organizations get to scale and maturity quickly.
 
-Included in the Azure landing zone accelerator deployment are:
+Included in the Azure landing zone accelerator deployment are key management and monitoring tools, such as:
 
-| Technology| Configuration |
-|--|--|
-Azure Monitor| Insert specifics |
-Network watcher| Insert specifics | 
+- a Log Analytics workspace and automation account
+- Azure Security Center monitoring
+- Diagnostic settings for Activity Logs, Virtual machines, and Platform as a Service (PaaS) resources sent to Log Analytics
 
 ### Centralized logging in the Azure landing zone accelerator
 

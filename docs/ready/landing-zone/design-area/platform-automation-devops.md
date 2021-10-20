@@ -100,3 +100,7 @@ The following table presents a recommended distribution of responsibilities betw
 ## Platform automation and DevOps in the Azure landing zone accelerator
 
 ![Diagram of platform automation and DevOps.](../../enterprise-scale/media/devops.png)
+
+As part of the Azure landing zone accelerator, the option is available to integrate continuous integration and continuous deployment (CI/CD) pipelines into the environment using GitHub with GitHub actions. The portal process guides through the steps to setup the integration.
+
+By integrating CI/CD pipelines into the environment, platform resources can be managed as code in a repository. 

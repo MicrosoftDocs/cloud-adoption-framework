@@ -136,7 +136,4 @@ Cost transparency across a technical estate is a critical management challenge f
 
   - Include break-glass accounts in the list of [exempted users](/azure/cost-management-billing/manage/manage-azure-subscription-policy#exempted-users).
 
-## Azure Landing Zone accelerator configuration for resource organization
-
-### Azure landing zone accelerator resource organization implementation
 
