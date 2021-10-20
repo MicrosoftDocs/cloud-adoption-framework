@@ -396,55 +396,56 @@ items:
         href: ready/landing-zone/choose-landing-zone-option.md
       - name: Implementation options
         href: ready/landing-zone/implementation-options.md
-      - name: Start with enterprise scale
         items:
-        - name: Overview
-          href: ready/enterprise-scale/index.md
-        - name: Implement enterprise-scale landing zones
-          href: ready/enterprise-scale/implementation.md
-        - name: Testing approach for enterprise-scale
-          href: ready/enterprise-scale/testing-approach.md
-        - name: Terraform module for CAF enterprise-scale
-          href: ready/enterprise-scale/terraform-module-caf-enterprise-scale.md
-        - name: Transition to enterprise-scale (brownfield)
-          href: ready/enterprise-scale/transition.md
-        - name: Scenario-specific enterprise-scale landing zones
-          href: ready/enterprise-scale/scenario-specific-enterprise-scale-landing-zones.md
-      - name: Start small and expand
-        items:
-        - name: CAF Migration landing zone blueprint
-          href: ready/landing-zone/migrate-landing-zone.md
-        - name: CAF Foundation blueprint
-          href: ready/landing-zone/foundation-blueprint.md
-        - name: Terraform landing zones
-          href: ready/landing-zone/terraform-landing-zone.md
-        - name: Expand your landing zone
-          href: ready/considerations/index.md
+        - name: Start with enterprise scale
+          items:
+          - name: Overview
+            href: ready/enterprise-scale/index.md
+          - name: Implement enterprise-scale landing zones
+            href: ready/enterprise-scale/implementation.md
+          - name: Testing approach for enterprise-scale
+            href: ready/enterprise-scale/testing-approach.md
+          - name: Terraform module for CAF enterprise-scale
+            href: ready/enterprise-scale/terraform-module-caf-enterprise-scale.md
+          - name: Transition to enterprise-scale (brownfield)
+            href: ready/enterprise-scale/transition.md
+          - name: Scenario-specific enterprise-scale landing zones
+            href: ready/enterprise-scale/scenario-specific-enterprise-scale-landing-zones.md
+        - name: Start small and expand
+          items:
+          - name: CAF Migration landing zone blueprint
+            href: ready/landing-zone/migrate-landing-zone.md
+          - name: CAF Foundation blueprint
+            href: ready/landing-zone/foundation-blueprint.md
+          - name: Terraform landing zones
+            href: ready/landing-zone/terraform-landing-zone.md
+          - name: Expand your landing zone
+            href: ready/considerations/index.md
 
-        - name: Basic landing zone considerations
-          items:
-        - name: Improve landing zone operations
-          href: ready/considerations/landing-zone-operations.md
-        - name: Improve landing zone governance
-          href: ready/considerations/landing-zone-governance.md
-        - name: Improve landing zone security
-          items:
-            - name: Overview
-              href: ready/considerations/landing-zone-security.md
-            - name: Onboard a subscription to Azure Security Center
-              href: /azure/security-center/security-center-get-started?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Onboard Azure Sentinel
-              href: /azure/sentinel/quickstart-onboard?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Implementing a secure hybrid network architecture in Azure
-              href: /azure/architecture/reference-architectures/dmz/secure-vnet-dmz?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Azure identity management and access control security best practices
-              href: /azure/security/fundamentals/identity-management-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Azure network security best practices
-              href: /azure/security/fundamentals/network-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Azure operational security best practices
-              href: /azure/security/fundamentals/operational-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-      - name: Partner landing zones
-        href: ready/landing-zone/partner-landing-zone.md
+          - name: Basic landing zone considerations
+            items:
+          - name: Improve landing zone operations
+            href: ready/considerations/landing-zone-operations.md
+          - name: Improve landing zone governance
+            href: ready/considerations/landing-zone-governance.md
+          - name: Improve landing zone security
+            items:
+              - name: Overview
+                href: ready/considerations/landing-zone-security.md
+              - name: Onboard a subscription to Azure Security Center
+                href: /azure/security-center/security-center-get-started?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+              - name: Onboard Azure Sentinel
+                href: /azure/sentinel/quickstart-onboard?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+              - name: Implementing a secure hybrid network architecture in Azure
+                href: /azure/architecture/reference-architectures/dmz/secure-vnet-dmz?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+              - name: Azure identity management and access control security best practices
+                href: /azure/security/fundamentals/identity-management-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+              - name: Azure network security best practices
+                href: /azure/security/fundamentals/network-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+              - name: Azure operational security best practices
+                href: /azure/security/fundamentals/operational-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+        - name: Partner landing zones
+          href: ready/landing-zone/partner-landing-zone.md
       - name: Infrastructure-as-code theory
         items:
         - name: Refactor landing zones

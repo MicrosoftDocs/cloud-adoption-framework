@@ -43,7 +43,6 @@ An organization must have visibility into what's happening within their technica
 |Shared responsibility| - Where are the hand-offs between team responsibilities that need to be considered when monitoring or responding to security events? <br> Consider the guidance in the Secure methodology for [security operations](/azure/cloud-adoption-framework/secure/security-operations) |
 
 
-
 ## Security monitoring design recommendations
 
 - Use [Azure AD reporting capabilities](/azure/active-directory/reports-monitoring/concept-audit-logs) to generate access control audit reports.
@@ -75,3 +74,21 @@ An organization must have visibility into what's happening within their technica
 - Implement a [zero-trust approach for access](/azure/cloud-adoption-framework/secure/access-control) to the Azure platform, where appropriate.
 
 ## Security in the Azure landing zone accelerator
+
+Security is at the core of the Azure landing zone accelerator. As part of the implementation a number of tools and controls are deployed to help organizations achieve a security baseline, quickly.
+For example, the following are included:
+
+Tools:
+
+- Azure Security Center (Standard or Free tier)
+- Azure Sentinel
+- Azure DDoS Standard Protection plan (optional)
+
+Policies for on-line and corp-connected landing zones:
+
+- Enforce secure access (HTTPS) to storage accounts
+- Enforce auditing for Azure SQL
+- Enforce encryption for Azure SQL
+- Prevent IP forwarding
+- Prevent inbound RDP from internet
+- Ensure subnets are associated with NSG
