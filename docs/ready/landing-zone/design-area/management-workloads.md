@@ -26,7 +26,6 @@ To expand on the previous section, this section will consider a federated model 
   - A traffic-light model to represent health
   - How to respond to failures across workload components
 
-
 ## Workload management and monitoring recommendations
 
 - Use a centralized Azure Monitor Log Analytics workspace to collect logs and metrics from IaaS and PaaS workload resources and [control log access with Azure RBAC](/azure/azure-monitor/platform/design-logs-deployment#access-control-overview).
@@ -34,7 +33,6 @@ To expand on the previous section, this section will consider a federated model 
 - Use [Azure Monitor Logs](/azure/azure-monitor/platform/data-platform-logs) for insights and reporting. Logs contain different types of data that's organized into records with different sets of properties. They're useful for analyzing complex data from a range of sources, such as performance data, events, and traces.
 - When necessary, use shared storage accounts within the landing zone for Azure diagnostic extension log storage.
 - Use [Azure Monitor alerts](/azure/azure-monitor/platform/alerts-overview) for the generation of operational alerts. Azure Monitor alerts unify alerts for metrics and logs and use features such as action and smart groups for advanced management and remediation purposes.
-
 
 ## Well-architected Framework
 

@@ -12,6 +12,18 @@ ms.custom: internal
 
 # Design area: Azure governance
 
+This critical design area establishes the tooling needed to support cloud governance, compliance auditing, and automated guardrails.
+
+## Design Area review
+
+**Involved roles or functions:** This design area is led by [Cloud Governance](../../../organize/cloud-governance.md). The [Cloud Platform](../../../organize/cloud-platform.md) and [Cloud Center of Excellence](../../../organize/cloud-center-of-excellence.md) will likely be required to define and implement the technical requirements coming from this exercise. Since governance focuses largely on enforcement of operations and security requirements, this exercise will likely require involvement from [Cloud Security](../../../organize/cloud-security.md), [Central IT](../../../organize/cloud-security.md) &/or [Cloud Operations](../../../organize/cloud-operations.md).
+
+**Scope:** The objective of this exercise is to review decisions made during reviews of [identity](./identity-access.md), [network](./network-topology-and-connectivity.md), [security](./security.md), and [management](./management.md) design areas. In this review, the team should compare those decisions to the automated governance implemented as part of the Azure Landing Zone Accelerator to determine which should be audited or enforced; the review should also evaluate which of those Azure policies should be automatically deployed if they don't exist in the environment.
+
+**Out of scope:** This design area establishes the foundation for networking, but doesn't address more compliance-related topics like advanced network security or automated guardrails to enforce networking decisions. This more advanced guidance will be addressed when reviewing compliance design areas related to [Security](./security.md) and [Governance](./governance.md). Delaying those discussions will allow the cloud platform team to address initial networking requirements before expanding the audience to address more complex topics.
+
+## Design Area overview
+
 As organizations begin their cloud adoption journey, starting with strong controls in place to government environments is an important success criteria.
 
 Governance provides mechanisms and processes to maintain control over your platform, applications and resources in Azure.
@@ -20,7 +32,7 @@ Governance provides mechanisms and processes to maintain control over your platf
 
 At part of the design area review, explore the considerations and recommendations outlined here in order to make informed decisions as you plan your landing zone. 
 
-The governance design area focusses on the considerations and recommendations for design decisions as part of the landing zone. In addition to this, the [Govern methodology](/govern/index.md) in the Cloud Adoption Framework provides further in-depth guidance for holistic governance processes and tools. 
+The governance design area focusses on the considerations and recommendations for design decisions as part of the landing zone. In addition to this, the [Govern methodology](/govern/index.md) in the Cloud Adoption Framework provides further in-depth guidance for holistic governance processes and tools.
 
 The govern methodology is formed of five disciplines:
 
@@ -32,8 +44,21 @@ The govern methodology is formed of five disciplines:
 | Identity baseline| Covered in depth as part of the [Identity and Access Management](./identity-access.md) design area|
 | Deployment acceleration| Explore this further as part of the [Platform automation and DevOps](./platform-automation-devops.md) design area|
 
-
 ## Azure governance considerations
+
+Azure Policy is essential to ensuring security and compliance within enterprise technical estates. It can enforce vital management and security conventions across Azure platform services. It can also supplement Azure role-based access control that controls what actions authorized users can do. Azure Cost Management is also an essential tool to support on-going governance of cost and spending in Azure or multicloud environments.
+
+### Deployment acceleration considerations
+
+Traditional IT governance through human-intensive processes like a Change Advisory Board are seen as a hinderance to innovation and business agility. Azure policy accelerates deployment of all workloads by replacing human-based review processes with automated guardrails & regular audits of adherence to governance requirements.
+
+- Determine what Azure policies are needed, based on considerations such as business controls or compliance regulations. Use the Policies included in the Azure Landing Zone Accelerator as a stating point.
+- Use [the standards-based blueprint samples](/azure/governance/blueprints/samples) to consider additional policies which may align to your business requirements.
+- Enforce networking, identity, management, and security conventions are automated as often as possible.
+- Manage and create policy assignments by using policy definitions can be reused at multiple inherited assignment scopes. You can have centralized, baseline policy assignments at management group, subscription, and resource group scopes.
+- Ensure continuous compliance with compliance reporting and auditing.
+- Understand that Azure Policy has limits, such as the restriction of definitions at any particular scope: [policy limits](/azure/azure-resource-manager/management/azure-subscription-service-limits).
+- Understand regulatory compliance policies. The policies might include HIPAA, PCI DSS, or SOC 2 Trust Services Criteria.
 
 ### Cost management considerations
 
@@ -53,51 +78,37 @@ The govern methodology is formed of five disciplines:
 ### Resource consistency considerations
 
 - What are the groups of resources in your environment that share configuration characteristics that you will require to be keep consistent?
+- Is the application or workload subscription design the most appropriate given your operations needs?
 - Are there groups of resources that should share a common lifecycle?
 - Are there groups of resources that should share common access constraints (e.g. role-based access controls)
 - Are there standard resource configurations within your organization that should be used to ensure a consistent baseline configuration?
+- TODO: What policies or other automation configuration within the accelerator automate or enforce operations management practices related to monitoring, DR/BC, operational compliance (patching, optimization, drift)
 
+### Security baseline considerations
 
-### Azure Policy - Design considerations
+TODO: George Wallace has mentioned Policies in ESLZ which enforce security best practices. What are those policies & what things should the customer think about before accepting those or other policies to enforce security?
 
-Azure Policy is essential to ensuring security and compliance within enterprise technical estates. It can enforce vital management and security conventions across Azure platform services. It can also supplement Azure role-based access control that controls what actions authorized users can do.
+### Identity management considerations
 
-- Determine what Azure policies are needed, based on considerations such as business controls or compliance regulations. Use [the standards-based blueprint samples](/azure/governance/blueprints/samples) as a starting point
-
-- Enforce management and security conventions, such as the use of private endpoints.
-
-- Manage and create policy assignments by using policy definitions can be reused at multiple inherited assignment scopes. You can have centralized, baseline policy assignments at management group, subscription, and resource group scopes.
-
-- Ensure continuous compliance with compliance reporting and auditing.
-
-- Understand that Azure Policy has limits, such as the restriction of definitions at any particular scope: [policy limits](/azure/azure-resource-manager/management/azure-subscription-service-limits).
-
-- Understand regulatory compliance policies. The policies might include HIPAA, PCI DSS, or SOC 2 Trust Services Criteria.
+TODO: What automation should the customer consider to ensure identity and access decisions are automatically enforced?
 
 ## Azure governance recommendations
+
+### Deployment acceleration recommendations
+
+- Identify required Azure tags and use the append policy mode to enforce usage. Use the [tagging strategy](../../azure-best-practices/resource-tagging.md) article as a starting point
+- Map regulatory and compliance requirements to Azure Policy definitions and Azure role assignments.
+- Establish Azure Policy definitions at the top-level root management group so that they can be assigned at inherited scopes.
+- Manage policy assignments at the highest appropriate level with exclusions at bottom levels, if necessary.
+- Use Azure Policy to control resource provider registrations at the subscription or management group levels.
+- Use built-in policies where possible to minimize operational overhead.
+- Assign the built-in Resource Policy Contributor role at a particular scope to enable application-level governance.
+- Limit the number of Azure Policy assignments made at the root management group scope to avoid managing through exclusions at inherited scopes.
 
 ### Cost management recommendations
 
 - Use tools such as Azure Cost management and billing to implement financial oversight on resources in your environment
 - Use tools such as tags in Azure to append metadata to resources to enable granular analysis of spend - for example, cost centre or project name
-
-### Azure Policy - Design recommendations
-
-- Identify required Azure tags and use the append policy mode to enforce usage. Use the [tagging strategy](../../azure-best-practices/resource-tagging.md) article as a starting point
-
-- Map regulatory and compliance requirements to Azure Policy definitions and Azure role assignments.
-
-- Establish Azure Policy definitions at the top-level root management group so that they can be assigned at inherited scopes.
-
-- Manage policy assignments at the highest appropriate level with exclusions at bottom levels, if necessary.
-
-- Use Azure Policy to control resource provider registrations at the subscription or management group levels.
-
-- Use built-in policies where possible to minimize operational overhead.
-
-- Assign the built-in Resource Policy Contributor role at a particular scope to enable application-level governance.
-
-- Limit the number of Azure Policy assignments made at the root management group scope to avoid managing through exclusions at inherited scopes.
 
 ## Azure governance in the Azure landing zone accelerator
 

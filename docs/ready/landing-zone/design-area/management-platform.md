@@ -1,5 +1,5 @@
 ---
-title: Management - platform
+title: Management - Inventory and visibility
 description: Design area guidance for managing your Azure platform services
 author: DominicAllen
 ms.author: doalle
@@ -11,18 +11,16 @@ ms.custom: internal
 ---
 
 
-# Management - Platform 
+# Inventory and visibility considerations | Management design area
 
 As organizations design and implement cloud environments, the underpinning management and monitoring of the platform services will be a key consideration.
 Structuring these services to meet the needs of the business as the environment scales will be an important factor in successful cloud adoption.
 
 How management operations are delivered as part of a landing zone will be directly influenced by the cloud operating model choices made as part of the earlier planning phases - the degree to which management is centralized for the platform being a key example of this. 
 
-Use the guidance in this section to consider how to approach platform management in your cloud environment. 
+Use the guidance in this section to consider how to approach Inventory and Visibility in your cloud environment.
 
-## Platform management and monitoring - Design considerations
-
-### Logging considerations
+## Basic inventory considerations
 
 - Consider using tools such as an Azure Monitor Log Analytics workspace as an administrative boundary.
 - Which teams will use the logs and telemetry from the platform? Who will require access to the logs?
@@ -36,7 +34,7 @@ Consider the following items relating to logging data to help inform the types o
  Azure data retention thresholds and archiving requirements|  - The default retention period for Azure Monitor Logs is 30 days, with a maximum of two years.<br>  - The default retention period for Azure AD reports (premium) is 30 days. <br>  - The default retention period for the Azure diagnostic service is 90 days.|
 Operational requirements|  - Operational dashboards with native tools such as Azure Monitor Logs or third-party tooling <br>  - Controlling privileged activities with centralized roles <br> - Managed identities for Azure resources](/azure/active-directory/managed-identities-azure-resources/overview) for access to Azure services <br>  - Resource locks to protect editing and deleting resources
 
-### Monitoring and alerting considerations
+### Visibility considerations
 
 - Which teams will need alert notifications?
 - Are there groups of services that will need different teams to be notified?
@@ -50,7 +48,7 @@ Operational requirements|  - Operational dashboards with native tools such as Az
 - Are there groups of resources that share similar update schedules?
 - Are there groups of resources that cannot be updated at the same time for business continuity reasons?  
 
-## Platform management and monitoring recommendations
+## Inventory & visibility recommendations
 
 - Use a single [monitor logs workspace](/azure/azure-monitor/platform/design-logs-deployment) to manage platforms centrally except where Azure role-based access control (Azure RBAC), data sovereignty requirements and data retention policies mandate separate workspaces. Centralized logging is critical to the visibility required by operations management teams. Logging centralization drives reports about change management, service health, configuration, and most other aspects of IT operations. Converging on a centralized workspace model reduces administrative effort and the chances for gaps in observability.
 

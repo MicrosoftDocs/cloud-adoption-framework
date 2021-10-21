@@ -12,7 +12,17 @@ ms.custom: internal
 
 # Design area: Security
 
-## Overview
+This critical design area establishes a foundation for security across your Azure, hybrid, &/or multicloud environments. This foundation can later be enhanced with additional security guidance outlined in the [Cloud Adoption Framework's Secure methodology](../../../secure/index.md).
+
+## Design Area review
+
+**Involved roles or functions:** This design area is led by [Cloud Security](../../../organize/cloud-security.md), specifically the [security architects within that team](../../../organize/cloud-security-architecture.md). The [Cloud Platform](../../../organize/cloud-platform.md) and [Cloud Center of Excellence](../../../organize/cloud-center-of-excellence.md) will be required to review networking and identity decisions. The collective roles will likely be required to define and implement the technical requirements coming from this exercise. More advanced security guardrails may also require support from [Cloud Governance](../../../organize/cloud-governance.md)
+
+**Scope:** The objective of this exercise is to understand security requirements and implement those requirements consistently across all workloads in your cloud platform. The primary scope of this exercise focus on security operations tooling and access control (including zero trust and advanced network security).
+
+**Out of scope:** This exercise focuses on the foundation for a modern security operations center in the cloud. To streamline the conversation, this exercise does not address some of the disciplines in the [CAF Secure methodology](../../../secure/index.md). Specifically, security operations, asset protection, and innovation security will build on your Azure Landing Zone deployment, but are out of scope for this design area discussion.
+
+## Design Area overview
 
 Security is a core consideration for all customers, in every environment.
 When designing and implementing an Azure landing zone, security should be a consideration throughout the process.
@@ -32,7 +42,7 @@ The Azure Security Benchmark documentation specifies security controls and servi
 
 An organization must have visibility into what's happening within their technical cloud estate. Security monitoring and audit logging of Azure platform services is a key component of a scalable framework.
 
-### Platform security design considerations
+### Security operations design considerations
 
 |Scope|Context|
 |-|-|
@@ -42,9 +52,7 @@ An organization must have visibility into what's happening within their technica
 | Vulnerability management|- Emergency patching for critical vulnerabilities. <br>- Patching for VMs that are offline for extended periods of time. <br> - Vulnerability assessment of VMs.
 |Shared responsibility| - Where are the hand-offs between team responsibilities that need to be considered when monitoring or responding to security events? <br> Consider the guidance in the Secure methodology for [security operations](/azure/cloud-adoption-framework/secure/security-operations) |
 
-## Security design recommendations
-
-### Security monitoring design recommendations
+## Security operations design recommendations
 
 - Use [Azure AD reporting capabilities](/azure/active-directory/reports-monitoring/concept-audit-logs) to generate access control audit reports.
 
@@ -62,7 +70,28 @@ An organization must have visibility into what's happening within their technica
 
 - Use an Azure Event Grid-based solution for log-oriented, real-time alerting.
 
-### Platform security design recommendations
+### Access Control design considerations
+
+Modern security boundaries are slightly more complex than those in a traditional data center. The four walls of the data center no longer contain your assets. Keeping users out of the protected network is no longer sufficient to control access. In the cloud, your perimeter is no comprised of two parts: Network security controls and Zero Trust Access Controls.
+
+#### Advanced Network Security
+
+|Scope|Context|
+|-|-|
+| Plan for inbound and outbound internet connectivity | [This section describes recommended connectivity models for inbound and outbound connectivity to and from the public internet.](../../azure-best-practices/plan-for-inbound-and-outbound-internet-connectivity.md)|
+| Plan for landing zone network segmentation | [This section explores key recommendations to deliver highly secure internal network segmentation within a landing zone to drive a network zero-trust implementation.](../../azure-best-practices/plan-for-landing-zone-network-segmentation.md)|
+| Define network encryption requirements | [This section explores key recommendations to achieve network encryption between on-premises and Azure as well as across Azure regions.](../../azure-best-practices/define-network-encryption-requirements.md)|
+|Plan for traffic inspection |In many industries, organizations require that traffic in Azure is mirrored to a network packet collector for deep inspection and analysis. This requirement typically focuses on inbound and outbound internet traffic. [This section explores key considerations and recommended approaches for mirroring or tapping traffic within Azure Virtual Network](../../azure-best-practices/plan-for-traffic-inspection.md).|
+
+#### Zero Trust
+
+- Which teams or individuals require access to services within the landing zone? What roles are they performing?
+- Who should authorize the access requests?
+- Who should receive the notifications when privileged roles are activated?
+- Who should have access to the audit history?
+- Explore the capabilities further [here](/azure/active-directory/privileged-identity-management/pim-configure)
+
+### Access Control design recommendations
 
 - In the context of your underlying requirements, conduct a joint examination of each required service. If you want to bring your own keys, it might not be supported across all considered services. Implement relevant mitigation so that inconsistencies don't hinder desired outcomes. Choose appropriate region pairs and disaster recovery regions that minimize latency.
 
@@ -84,6 +113,9 @@ Tools:
 - Azure Security Center (Standard or Free tier)
 - Azure Sentinel
 - Azure DDoS Standard Protection plan (optional)
+- Azure Firewall
+- Web Application Firewall (WAF)
+- Privileged identity management (PIM)
 
 Policies for on-line and corp-connected landing zones:
 
