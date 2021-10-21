@@ -1,6 +1,6 @@
 ---
 title: Management - Operational compliance
-description: Design area guidance for managing your Azure platform services
+description: Design area guidance for establishing operational compliance across your Azure platform services
 author: DominicAllen
 ms.author: doalle
 ms.date: 8/1/2021
