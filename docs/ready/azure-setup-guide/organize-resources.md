@@ -11,8 +11,6 @@ ms.localizationpriority: high
 ms.custom: think-tank, fasttrack-edit, AQC, setup
 ---
 
-<!-- cSpell:ignore profx fsubscriptions fresource -->
-
 # Organize your Azure resources effectively
 
 Organize your cloud-based resources to secure, manage, and track costs related to your workloads. To organize your resources, define a management group hierarchy, consider and follow a naming convention, and apply resource tagging.
@@ -166,6 +164,7 @@ To apply a tag to a resource group:
 ::: form action="OpenBlade[#blade/HubsExtension/Resources/resourceType/Microsoft.Resources%2FSubscriptions%2FResourceGroups]" submitText="Go to resource groups" :::
 
 ::: zone-end
+
 ## Next steps
 
 To learn more about management levels and organization, see:
@@ -178,7 +177,7 @@ To learn more about management levels and organization, see:
 - [Understand resource access management in Azure](../../govern/resource-consistency/resource-access-management.md)
 - [Subscription service limits](/azure/azure-resource-manager/management/azure-subscription-service-limits)
 
-To learn more about resource naming and tagging, see:
+For more information about resource naming and tagging, see:
+
 - [Develop your naming and tagging strategy for Azure resources](../azure-best-practices/naming-and-tagging.md)
 - [Use tags to organize your Azure resources](/azure/azure-resource-manager/management/tag-resources)
-

@@ -153,7 +153,7 @@ No single approach to managing data lake access suits everyone. A major benefit 
 
 ## Azure Synapse Analytics data access control
 
-To deploy an Azure Synapse workspace, an Azure Data Lake Storage Gen2 account is required. Azure Synapse Analytics uses the primary storage account for several integration scenarios and stores data in a container. The container includes Apache Spark tables and application logs under a folder called **/synapse/{workspacename}**. The workspace also uses container for managing libraries that you choose to install.
+To deploy an Azure Synapse workspace, an Azure Data Lake Storage Gen2 account is required. Azure Synapse Analytics uses the primary storage account for several integration scenarios and stores data in a container. The container includes Apache Spark tables and application logs under a folder called `/synapse/{workspaceName}`. The workspace also uses container for managing libraries that you choose to install.
 
 During the workspace deployment through the [Azure portal](/azure/azure-portal/), provide an existing storage account or create a new one. The provided storage account is the primary storage account for the workspace. The deployment process grants the workspace identity access to the specified Data Lake Storage Gen2 account, using the **Storage Blob Data Contributor** role.
 
@@ -172,7 +172,7 @@ When setting-up data lake access control, some organizations require granular le
 When you use Apache Spark tables in Spark pool, a warehouse folder is created. It's in the root of the container in the workspace primary storage:
 
 ```output
-synapse/workspaces/{workspacename}/warehouse
+synapse/workspaces/{workspaceName}/warehouse
 ```
 
 If you plan to create Apache Spark tables in Azure Synapse Spark pool, grant write permission on the **warehouse** folder for the group running the command that creates the Spark table. If the command runs through triggered job in a pipeline, grant write permission to the workspace MSI.
