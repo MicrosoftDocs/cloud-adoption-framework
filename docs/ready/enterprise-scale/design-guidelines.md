@@ -12,7 +12,7 @@ ms.custom: think-tank
 
 # Cloud Adoption Framework enterprise-scale design guidelines
 
-This article outlines how the enterprise-scale architecture provides guidance on each of the [Azure landing zone design areas](../landing-zone/design-areas.md). The Critical design areas article series provides a step-by-step set of design guidelines that you can follow to implement the design principles included in the enterprise-scale solution.
+This article outlines how the enterprise-scale architecture provides guidance on each of the [Azure landing zone design areas](../landing-zone/design-areas.md). To implement the design principles included in the enterprise-scale solution, follow the step-by-step design guidelines in the Critical design areas article series.
 
 The core of enterprise-scale architecture contains a critical design path composed of fundamental design articles with interrelated and dependent design decisions. These articles provide design guidance across architecturally significant technical domains to support the critical design decisions that you must make to define the enterprise-scale architecture. For each of the considered domains, review the provided considerations and recommendations and use them to structure and drive designs within each area.
 
@@ -35,7 +35,7 @@ Decisions you make within these critical areas reverberate across enterprise-sca
 
 ## Next steps
 
-Read each of the articles in the Critical design areas article series to familiarize yourself with these design areas. After you're finished, start reading about landing zones.
+After you've read each of the articles in the Critical design areas article series and familiarized yourself with these design areas, start reading about landing zones.
 
 > [!div class="nextstepaction"]
 > [Implement enterprise-scale landing zones](./implementation.md)
