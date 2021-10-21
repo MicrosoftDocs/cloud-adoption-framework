@@ -250,6 +250,8 @@ The [Terraform module for Cloud Adoption Framework enterprise-scale][caf-enterpr
 
 To find out more, review the module on Terraform Registry, and explore the [module documentation on GitHub][gh-wiki] where we will post more examples and tutorials covering how to customize your deployment.
 
+Learn how to [Deploy the Microsoft Cloud Adoption Framework Enterprise-Scale Module][hcl-deploy-es] through HashiCorp Learn, where you can also discover how some parts of the module work.
+
 > [!div class="nextstepaction"]
 > [Review the module on Terraform Registry][caf-enterprise-scale]
 
@@ -264,6 +266,8 @@ To find out more, review the module on Terraform Registry, and explore the [modu
 <!-- Common links -->
 
 [terraform]: https://www.terraform.io/ "Terraform by HashiCorp"
+
+[hcl-deploy-es]: https://learn.hashicorp.com/tutorials/terraform/microsoft-caf-enterprise-scale "Deploy the Microsoft Cloud Adoption Framework Enterprise-Scale Module."
 
 [caf-enterprise-scale]: https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest "See the Terraform Module for Cloud Adoption Framework Enterprise-scale on Terraform Registry."
 [caf-es-dependencies]: https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest?tab=dependencies "See dependencies for the Terraform Module for Cloud Adoption Framework Enterprise-scale on Terraform Registry."
