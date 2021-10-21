@@ -43,7 +43,7 @@ Deploying the module from the Terraform Registry provides strict version control
 1. Managed and extensible core resource hierarchy for *subscription* organization using *management groups*.
 1. Scalable security governance and compliance using *Azure Policy* and *Access Control (IAM)*, with an extensive library of custom definitions ready to assign.
 1. Enforcement of policy across *subscriptions* through *management group* inheritance.
-1. Managed resources for *management* and *connectivity* landing zones, providing: 
+1. Managed resources for *management* and *connectivity* landing zones, providing:
     1. Assured *policy compliance* through tight integration of *resources* managed by the module and corresponding *policy assignments*.
     1. Integration between resources to reduce management overhead and provide an improved end-user experience, such as automatic creation of virtual network links for *Azure Private DNS*.
 
@@ -206,7 +206,7 @@ provider "azurerm" {
 
 data "azurerm_client_config" "core" {}
 
-# Use variables to customise the deployment
+# Use variables to customize the deployment
 
 variable "root_id" {
   type    = string
