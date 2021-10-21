@@ -12,6 +12,18 @@ ms.custom: think-tank
 
 # Identity and access management design area
 
+This critical design area establishes a foundation for the management of identity and access.
+
+## Design Area review
+
+**Involved roles or functions:** This design area will likely require support from one or more of the following functions or roles to make decisions and implement those decisions: [Cloud Platform](../../../organize/cloud-platform.md), and [Cloud Center of Excellence](../../../organize/cloud-center-of-excellence.md)
+
+**Scope:** The objective of this exercise is to evaluate options for your identity and access foundation. At minimum, you should make decisions regarding your approach for synchronizing identities with Azure Active Directory, authenticating users, assigning access to resources, and any core requirements for separation of duties.
+
+**Out of scope:** This design area establishes a foundation for proper access control, but doesn't fully address more advanced topics like Zero Trust, operational management of elevated privileges, or automated guardrails to prevent common identity and access mistakes. That guidance will be reviewed in the compliance design areas related to [Security](./security.md) and [Governance](./governance.md), since they will likely require a broader audience to make and act on decisions.
+
+## Design Area overview
+
 Identity provides the basis of a large percentage of security assurance. It enables access based on identity authentication and authorization controls in cloud services to protect data and resources and to decide which requests should be permitted.
 
 Identity and access management (IAM) is boundary security in the public cloud. It must be treated as the foundation of any secure and fully compliant public cloud architecture. Azure offers a comprehensive set of services, tools, and reference architectures to enable organizations to make highly secure, operationally efficient environments as outlined here.
@@ -22,9 +34,9 @@ The technological landscape in the enterprise is becoming complex and heterogeno
 
 ### Azure Active Directory design considerations
 
-A critical design decision that an enterprise organization must make when adopting Azure is whether to extend an existing on-premises identity domain into Azure or to create a brand new one. 
+A critical design decision that an enterprise organization must make when adopting Azure is whether to extend an existing on-premises identity domain into Azure or to create a brand new one.
 
-Requirements for authentication inside the landing zone should be thoroughly assessed and incorporated into plans to deploy Active Directory Domain Services (AD DS) in Windows Server, Azure AD Domain Services (Azure AD DS), or both. 
+Requirements for authentication inside the landing zone should be thoroughly assessed and incorporated into plans to deploy Active Directory Domain Services (AD DS) in Windows Server, Azure AD Domain Services (Azure AD DS), or both.
 
 Most Azure environments will use at least Azure AD for Azure fabric authentication and AD DS local host authentication and group policy management.
 
@@ -46,14 +58,6 @@ Most Azure environments will use at least Azure AD for Azure fabric authenticati
 - Which services or applications within your landing zone support Azure Active Directory authentication?
 - Explore [which Azure services cna use managed identities](/azure/active-directory/managed-identities-azure-resources/services-support-managed-identities)
 - Explore [managed identities for Azure resources](/azure/active-directory/managed-identities-azure-resources/overview) capabilities in further detail
-
-#### Privileged identity management (PIM) - design considerations
-
-- Which teams or individuals require access to services within the landing zone? What roles are they performing?
-- Who should authorize the access requests?
-- Who should receive the notifications when privileged roles are activated?
-- Who should have access to the audit history?
-- Explore the capabilities further [here](/azure/active-directory/privileged-identity-management/pim-configure)
 
 ### Identity for Azure platform resources - design considerations
 

@@ -15,9 +15,21 @@ ms.custom: internal
 
 # Network topology and connectivity design area
 
+This critical design area establishes a foundation for your network design in the cloud and connectivity to your cloud network.
+
+## Design Area review
+
+**Involved roles or functions:** This design area will likely require support from one or more of the following functions or roles to make decisions and implement those decisions: [Cloud Platform](../../../organize/cloud-platform.md), and [Cloud Center of Excellence](../../../organize/cloud-center-of-excellence.md)
+
+**Scope:** The objective of this exercise is to evaluate your network design in the cloud based on overall cloud adoption plans. If your cloud adoption plans include hybrid or multicloud dependencies or if you require connectivity for any other reasons, the design should also evaluate options for connectivity based on anticipated traffic patterns.
+
+**Out of scope:** This design area establishes the foundation for networking, but doesn't address more compliance-related topics like advanced network security or automated guardrails to enforce networking decisions. This more advanced guidance will be addressed when reviewing compliance design areas related to [Security](./security.md) and [Governance](./governance.md). Delaying those discussions will allow the cloud platform team to address initial networking requirements before expanding the audience to address more complex topics.
+
+## Design Area overview
+
 As organizations plan their landing zone design, network topology and connectivity needs to be a fundamental consideration.
 Networking will be central to almost everything inside a landing zone - and will enable connectivity to other Azure services, external users and on-premises infrastructure.
-As part of the Azure landing zone design areas, network topology and connectivity is in the environmental group of design areas given its importance in the core design and implementation decisions. 
+As part of the Azure landing zone design areas, network topology and connectivity is in the environmental group of design areas given its importance in the core design and implementation decisions.
 
 This series of articles examines key design considerations and best practices surrounding networking and connectivity to, from, and within Microsoft Azure.
 
@@ -40,15 +52,6 @@ This series of articles examines key design considerations and best practices su
 |Connectivity to other cloud providers | [This section provides different connectivity approaches to integrate an Azure enterprise-scale landing zone architecture to other cloud providers](../../azure-best-practices/connectivity-to-other-providers.md).|
 | Connectivity to Oracle Cloud Infrastructure| [Evaluate key design considerations and recommendations surrounding different connectivity approaches to integrate an Azure enterprise-scale landing zone architecture to Oracle Cloud Infrastructure (OCI)](../../azure-best-practices/connectivity-to-other-providers-oci.md)
 |Plan for application delivery | [This section explores key recommendations to deliver internal-facing and external-facing applications in a secure, highly scalable, and highly available way.](../../azure-best-practices/plan-for-app-delivery.md)|
-
-## Security
-
-|Scope|Context|
-|-|-|
-| Plan for inbound and outbound internet connectivity | [This section describes recommended connectivity models for inbound and outbound connectivity to and from the public internet.](../../azure-best-practices/plan-for-inbound-and-outbound-internet-connectivity.md)|
-| Plan for landing zone network segmentation | [This section explores key recommendations to deliver highly secure internal network segmentation within a landing zone to drive a network zero-trust implementation.](../../azure-best-practices/plan-for-landing-zone-network-segmentation.md)|
-| Define network encryption requirements | [This section explores key recommendations to achieve network encryption between on-premises and Azure as well as across Azure regions.](../../azure-best-practices/define-network-encryption-requirements.md)|
-|Plan for traffic inspection |In many industries, organizations require that traffic in Azure is mirrored to a network packet collector for deep inspection and analysis. This requirement typically focuses on inbound and outbound internet traffic. [This section explores key considerations and recommended approaches for mirroring or tapping traffic within Azure Virtual Network](../../azure-best-practices/plan-for-traffic-inspection.md).|
 
 ## Resources
 

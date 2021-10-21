@@ -12,9 +12,17 @@ ms.custom: internal
 
 # Design area: Platform automation and DevOps
 
-## Overview
+This critical design area evaluates opportunities to modernize your approach to environmental deployment with Infrastructure as Code options.
 
-As organizations move into cloud technologies, the scale, agility and flexibility offered can lead to opportunities for new ways of working and modern approaches for delivering services. 
+## Design Area review
+
+**Involved roles or functions:** This design area will likely require support from one or more of the following functions or roles to make decisions and implement those decisions: [Cloud Platform](../../../organize/cloud-platform.md), and [Cloud Center of Excellence](../../../organize/cloud-center-of-excellence.md)
+
+**Scope:** The objective of this exercise is to evaluate our organizations maturity with infrastructure as code and devops deployment approaches.
+
+## Design Area overview
+
+As organizations move into cloud technologies, the scale, agility and flexibility offered can lead to opportunities for new ways of working and modern approaches for delivering services.
 
 Many traditional IT operating models aren't compatible with the cloud, and organizations must undergo operational and organizational transformation to deliver against enterprise migration targets. Evaluate using DevOps processes and tools for both application and central teams.
 

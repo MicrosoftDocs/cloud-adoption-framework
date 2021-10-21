@@ -16,9 +16,6 @@ ms.custom: internal
 
 Each Azure landing zone implementation option provides a deployment approach and defined design principles. Before choosing an implementation option, use this article to gain an understanding of the design areas listed in the following table.
 
-> [!NOTE]
-> These design areas describe what you should consider prior to deploying a landing zone. Use it as a simple reference. Explore each of the design areas in this section for further guidance on each of the key themes for landing zone design.
-
 ## Environment design areas
 
 Regardless of the deployment option, you should carefully consider each design area. Your decisions affect the platform foundation on which each landing zone depends.
@@ -42,11 +39,18 @@ As the organization's cloud environment develops, these compliance design areas 
 
 | Design areas | Objective | Relevant methodologies |
 |--|--|--|
-| Governance | Automate auditing and enforcement of governance policies. | Govern |
 | Security | Implement controls and process to protect your cloud environments | Secure |
 | Management | For stable, ongoing operations in the cloud, a management baseline is required to provide visibility, operations compliance, and protect and recover capabilities. | Manage |
+| Governance | Automate auditing and enforcement of governance policies. | Govern |
 | Platform automation and DevOps | Align the best tools and templates to deploy your landing zones and supporting resources. | Ready |
 
+## Design area process
+
+These design areas describe what you should consider prior to deploying a landing zone. TOgether, they establish a process to aid in exploring otherwise complex topics, typically involved in making critical decisions about your environment. Evaluation of each design area will help understand any changes you may need to make to the Azure Landing Zone implementation options.
+
+Evaluating each of the design areas sequentially provides a process which simplifies design of even the most complex environments. However, if you've already addressed one or more of the design areas to your satisfaction, check it off the list and move on to the next area.
+
+In this process, you'll be provided a list of roles or functions typically require to make & act on design are decisions. You'll also see a series of considerations, recommendations, and scope boundaries to help shape the discussion and decision making process.
 
 ## Next steps
 
