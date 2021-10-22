@@ -359,7 +359,7 @@ items:
             href: ready/landing-zone/design-area/security.md
           - name: Secure privileged access
             href: /azure/active-directory/users-groups-roles/directory-admin-roles-secure?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Keys and encryption
+          - name: Encryption and keys
             href: ready/landing-zone/design-area/encryption-and-keys.md
           - name: Service enablement framework
             href: ready/landing-zone/design-area/service-enablement-framework.md
