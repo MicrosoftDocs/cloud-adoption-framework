@@ -53,6 +53,15 @@ This series of articles examines key design considerations and best practices su
 | Connectivity to Oracle Cloud Infrastructure| [Evaluate key design considerations and recommendations surrounding different connectivity approaches to integrate an Azure enterprise-scale landing zone architecture to Oracle Cloud Infrastructure (OCI)](../../azure-best-practices/connectivity-to-other-providers-oci.md)
 |Plan for application delivery | [This section explores key recommendations to deliver internal-facing and external-facing applications in a secure, highly scalable, and highly available way.](../../azure-best-practices/plan-for-app-delivery.md)|
 
+## Network Security
+
+|Scope|Context|
+|-|-|
+| Plan for inbound and outbound internet connectivity | [This section describes recommended connectivity models for inbound and outbound connectivity to and from the public internet.](../../azure-best-practices/plan-for-inbound-and-outbound-internet-connectivity.md)|
+| Plan for landing zone network segmentation | [This section explores key recommendations to deliver highly secure internal network segmentation within a landing zone to drive a network zero-trust implementation.](../../azure-best-practices/plan-for-landing-zone-network-segmentation.md)|
+| Define network encryption requirements | [This section explores key recommendations to achieve network encryption between on-premises and Azure as well as across Azure regions.](../../azure-best-practices/define-network-encryption-requirements.md)|
+|Plan for traffic inspection |In many industries, organizations require that traffic in Azure is mirrored to a network packet collector for deep inspection and analysis. This requirement typically focuses on inbound and outbound internet traffic. [This section explores key considerations and recommended approaches for mirroring or tapping traffic within Azure Virtual Network](../../azure-best-practices/plan-for-traffic-inspection.md).|
+
 ## Resources
 
 |Scope|Context|
