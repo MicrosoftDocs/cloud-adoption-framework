@@ -14,6 +14,8 @@ ms.custom: internal
 
 Start your Azure adoption by creating an initial set of subscriptions. Learn what subscriptions you should begin with based on your initial requirements.
 
+>[!Note] We recommend that organizations consider the Azure landing zone guidance for [resource organization](../landing-zone/design-area/resource-org.md) at a first step to planning subscriptions within an Azure environment to ensure the broader context of an environment intended to scale is considered
+
 ## Your first two subscriptions
 
 Start by creating two subscriptions:
