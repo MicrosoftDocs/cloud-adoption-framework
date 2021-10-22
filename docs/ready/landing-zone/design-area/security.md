@@ -51,6 +51,7 @@ An organization must have visibility into what's happening within their technica
 | Security controls| - Baseline security configuration via Azure in-guest VM policy. <br> - consider how your security controls will align with governance guardrails|
 | Vulnerability management|- Emergency patching for critical vulnerabilities. <br>- Patching for VMs that are offline for extended periods of time. <br> - Vulnerability assessment of VMs.
 |Shared responsibility| - Where are the hand-offs between team responsibilities that need to be considered when monitoring or responding to security events? <br> Consider the guidance in the Secure methodology for [security operations](/azure/cloud-adoption-framework/secure/security-operations) |
+| Encryption and keys | - who requires access to keys in the environment? <br> - who will be responsible for managing the keys? <br> - Explore [encryption and keys further](./encryption-and-keys.md)
 
 ## Security operations design recommendations
 

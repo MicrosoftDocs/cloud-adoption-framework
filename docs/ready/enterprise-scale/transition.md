@@ -1,6 +1,6 @@
 ---
-title: Transitioning existing Azure environments to enterprise-scale
-description: Onboard existing environments to an enterprise-scale architecture
+title: Transitioning existing Azure environments to the Azure landing zone conceptual architecture
+description: Onboard existing environments to an Azure landing zone conceptual architecture
 author: JefferyMitchell
 ms.author: brblanch
 ms.date: 10/15/2020
@@ -12,18 +12,18 @@ ms.custom: think-tank, csu
 
 <!-- docutune:casing resourceType resourceTypes resourceId resourceIds -->
 
-# Transition existing Azure environments to enterprise-scale
+# Transition existing Azure environments to the Azure landing zone conceptual architecture
 
 We recognize that most organizations may have an existing footprint in Azure, one or more subscriptions, and potentially an existing structure of their management groups. Depending on their initial business requirements and scenarios, Azure resources such as hybrid connectivity (for example with Site-to-Site VPN and/or ExpressRoute) may have been deployed.
 
-This article helps organizations to navigate the right path based on an existing Azure environment transitioning into enterprise-scale. This article also describes considerations for moving resources in Azure (for example, moving a subscription from one existing management group to another management group), which will help you evaluate and plan for transitioning your existing Azure environment to enterprise-scale landing zones.
+This article helps organizations to navigate the right path based on an existing Azure environment transitioning into the Azure landing zone conceptual architecture. This article also describes considerations for moving resources in Azure (for example, moving a subscription from one existing management group to another management group), which will help you evaluate and plan for transitioning your existing Azure environment.
 
 ## Moving resources in Azure
 
 Some resources in Azure can be moved post creation, and there are different approaches organizations can take subject to users Azure RBAC permissions at - and across scopes. The following table outlines which resources can be moved, at which scope, and the pros/cons associated with each.
 
 | Scope | Destination | Pros | Cons |
-|--|--|--|--|
+| ----- | ----------- | ---- | ---- |
 | Resources in resource groups | Can be moved to new resource group in same or different subscription | Allows you to modify resource composition in a resource group after deployment | - Not supported by all resourceTypes <br> - Some resourceTypes have specific limitations or requirements <br> - resourceIds are updated and impacts existing monitoring, alerts, and control plane operations <br> - Resource groups are locked during the move period <br> - Requires assessment of policies and RBAC pre and post-move operation |
 | Subscriptions in a tenant | Can be moved to different management groups | No impact to existing resources within the subscription, as no resourceId values will be changed | Requires assessment of policies and RBAC pre and post-move operation |
 
@@ -31,7 +31,7 @@ To understand which move strategy you should use, we will go through examples of
 
 ## Subscription move
 
-The common use cases for moving subscriptions are to organize subscriptions into management groups or when transferring subscriptions to a new Azure Active Directory tenant. Subscription moves for enterprise-scale focuses on moving subscriptions to management groups. Moving a subscription to a new tenant is mainly for [transferring billing ownership](/azure/cost-management-billing/manage/billing-subscription-transfer). For more guidance about how to move subscriptions across management groups in the same tenant, see [Moving management groups and subscriptions](/azure/governance/management-groups/manage#moving-management-groups-and-subscriptions).
+The common use cases for moving subscriptions are to organize subscriptions into management groups or when transferring subscriptions to a new Azure Active Directory tenant. Subscription moves focuses on moving subscriptions to management groups. Moving a subscription to a new tenant is mainly for [transferring billing ownership](/azure/cost-management-billing/manage/billing-subscription-transfer). For more guidance about how to move subscriptions across management groups in the same tenant, see [Moving management groups and subscriptions](/azure/governance/management-groups/manage#moving-management-groups-and-subscriptions).
 
 ### Azure RBAC requirements
 
@@ -70,3 +70,10 @@ Prior to a move operation, you must verify that the [resources in scope are supp
 ### Post-move operation
 
 When the resources are moved into a new resource group in the same subscription, any inherited Azure RBAC and policies from management group or/and subscription scope will still apply. If you move to a resource group in a new subscription - where the subscription may be subject to other Azure RBAC and policy assignment, same guidance applies as to the move subscription scenario to validate the resource compliance and access controls.
+
+## Scenarios
+
+We have provided guidance in [Scenarios: Transitioning existing Azure environments to the Azure landing zone conceptual architecture](./../landing-zone/alz-align-scenarios.md) for common scenarios that our customers may match, or be similar to, that they wish to migrate and transition from into the Azure landing zone conceptual architecture.
+
+> [!div class="nextstepaction"]
+> [Review Scenarios: Transitioning existing Azure environments to the Azure landing zone conceptual architecture](./../landing-zone/alz-align-scenarios.md)
