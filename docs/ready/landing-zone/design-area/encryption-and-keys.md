@@ -3,7 +3,6 @@ title: Encryption and key management
 description: Learn about encryption and key management as part of an Azure landing zone
 author: DominicAllen
 ms.author: doalle
-
 ms.date: 10/20/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

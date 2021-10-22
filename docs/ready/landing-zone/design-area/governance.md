@@ -82,15 +82,23 @@ Traditional IT governance through human-intensive processes like a Change Adviso
 - Are there groups of resources that should share a common lifecycle?
 - Are there groups of resources that should share common access constraints (e.g. role-based access controls)
 - Are there standard resource configurations within your organization that should be used to ensure a consistent baseline configuration?
-- TODO: What policies or other automation configuration within the accelerator automate or enforce operations management practices related to monitoring, DR/BC, operational compliance (patching, optimization, drift)
+- Explore how [tools in Azure can support resource consistency](/govern/resource-consistency/toolchain) as part of your landing zone
 
 ### Security baseline considerations
 
-TODO: George Wallace has mentioned Policies in ESLZ which enforce security best practices. What are those policies & what things should the customer think about before accepting those or other policies to enforce security?
+- Which tools and guardrails does the business need to be enforced across the environment as part of a security baseline?
+- Who should be notified when deviations are found?
+- Consider using tools such as Azure Policy to enforce those tools (such as Azure Security Center, Azure Defender)
+- Consider using tools such as Azure Policy to enforce guardrails (such as the Azure Security Benchmark)
 
 ### Identity management considerations
 
-TODO: What automation should the customer consider to ensure identity and access decisions are automatically enforced?
+- Who should have access to audit logs for identity and access management?
+- Who should be notified when suspicious log-in events occur?
+- Consider using tools such as the [Azure Active Directory reports](//azure/active-directory/reports-monitoring/overview-reports#:~:text=%20There%20are%20two%20types%20of%20activity%20reports,tasks%20reported%20by%20the%20audit%20logs...%20More%20) to govern activity
+- Consider the logs from Azure AD that should be sent to the central Log Analytics workspace for the platform
+- Explore the capabilities of [Azure AD access reviews](/azure/active-directory/governance/access-reviews-overview) as part of your governance approach within your landing zone
+- Explore the capabilities of [Azure AD entitlement management](/azure/active-directory/governance/entitlement-management-overview) as part of your governance approach within your landing zone
 
 ## Azure governance recommendations
 

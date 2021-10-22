@@ -3,7 +3,6 @@ title: Service Enablement Framework
 description: Learn about adopting a service enablement framework as part of your cloud adoption journey
 author: DominicAllen
 ms.author: doalle
-
 ms.date: 10/20/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
