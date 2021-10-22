@@ -522,7 +522,7 @@ The Contoso security team checks the Azure VMs and the SQL managed instance for 
 - Contoso's security team also is considering securing the data on the disk by using Azure Disk Encryption and Azure Key Vault.
 - The team enables threat detection on the managed instance. Threat detection sends an alert to Contoso's security team/service desk system to open a ticket if a threat is detected. Learn more about [threat detection for SQL Managed Instance](/azure/azure-sql/managed-instance/threat-detection-configure).
 
-     ![Screenshot that shows the **Threat detection screen for SQL Managed Instance.](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-security.png)
+     ![Screenshot that shows the **Threat detection** screen for SQL Managed Instance.](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-security.png)
 
 To learn more about security practices for VMs, see [Security best practices for IaaS workloads in Azure](/azure/security/fundamentals/iaas).
 
