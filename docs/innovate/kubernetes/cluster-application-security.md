@@ -11,8 +11,6 @@ ms.custom: think-tank, seo-caf-innovate
 keywords: application security, security essentials, Kubernetes security
 ---
 
-<!-- cSpell:ignore kured -->
-
 # Cluster and application security
 
 Familiarize yourself with Kubernetes security essentials and review the secure setup for clusters and application security guidance. Kubernetes security is important throughout the container lifecycle because of the distributed, dynamic nature of a Kubernetes cluster. Applications are only as secure as the weakest link in the chain of services that comprise the application's security.

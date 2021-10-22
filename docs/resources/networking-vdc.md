@@ -1,5 +1,5 @@
 ---
-title: "The virtual datacenter: A network perspective"
+title: 'The virtual datacenter: A network perspective'
 description: Use the Cloud Adoption Framework for Azure to learn how to use Azure to seamlessly extend your infrastructure into the cloud and build multitier architectures.
 author: tracsman
 ms.author: brblanch
@@ -10,9 +10,6 @@ ms.service: cloud-adoption-framework
 ms.subservice: general
 ms.custom: think-tank, virtual-network
 ---
-
-<!-- docutune:disable -->
-<!-- cSpell:ignore iptables DDOS ITSM LLAP anycast vwan -->
 
 # The virtual datacenter: A network perspective
 
@@ -539,12 +536,12 @@ Learn more about the Azure capabilities discussed in this document.
 [RGMgmt]: /azure/azure-resource-manager/management/manage-resource-groups-portal#what-is-a-resource-group
 [ALB]: /azure/load-balancer/load-balancer-overview
 [DDoS]: /azure/ddos-protection/ddos-protection-overview
-[PIP]: /azure/virtual-network/virtual-network-public-ip-address
+[PIP]: /azure/virtual-network/ip-services/virtual-network-public-ip-address
 [azure-front-door]: /azure/frontdoor/front-door-overview
 [AFDWAF]: /azure/web-application-firewall/afds/afds-overview
 [AppGW]: /azure/application-gateway/overview
 [AppGWWAF]: /azure/web-application-firewall/ag/ag-overview
-[MonitorOverview]: /azure/networking/networking-overview#monitor
+[MonitorOverview]: /azure/networking/fundamentals/networking-overview#monitor
 [AzureMonitor]: /azure/azure-monitor/overview
 [Metrics]: /azure/azure-monitor/essentials/data-platform-metrics
 [Logs]: /azure/azure-monitor/logs/data-platform-logs
@@ -559,6 +556,4 @@ Learn more about the Azure capabilities discussed in this document.
 [SQL]: /azure/azure-sql/database/sql-database-paas-overview
 [cosmos-db]: /azure/cosmos-db/introduction
 [IoT]: /azure/iot-fundamentals/iot-introduction
-[machine-learning]: /azure/machine-learning/overview-what-is-azure-ml
-
-<!--docutune:enable -->
+[machine-learning]: /azure/machine-learning/overview-what-is-azure-machine-learning

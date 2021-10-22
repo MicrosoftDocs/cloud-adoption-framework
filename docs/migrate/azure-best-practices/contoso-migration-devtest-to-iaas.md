@@ -10,8 +10,6 @@ ms.subservice: migrate
 ms.custom: think-tank
 ---
 
-<!-- cSpell:ignore vcenter contosohost contosodc NSGs agentless WEBVMDEV SQLVMDEV OSTICKETWEBDEV OSTICKETMYSQLDEV -->
-
 # Rehost an on-premises dev/test environment on Azure Virtual Machines via Azure Migrate
 
 This article demonstrates how the fictional company Contoso rehosts its dev/test environment for two applications running on VMware virtual machines (VMs) by migrating to Azure Virtual Machines.

@@ -56,7 +56,7 @@ Take advantage of price benefits for Windows and SQL Server with:
 
 ### Modernize applications
 
-Modernize applications running on VMware overtime through integration to [Azure native management, security, and services](..\azure-vmware\govern.md).
+Modernize applications running on VMware overtime through integration to [Azure native management, security, and services](../azure-vmware/govern.md).
 
 - **Deploy unified hybrid management and operational controls** using [Azure Arc-enabled servers](/azure/azure-arc/servers/overview) across Azure, VMware, and other cloud infrastructures.
 - **Modernize applications** with the ability to connect them to Azure services such as Azure AD, SQL Managed Instance, and analytics.
@@ -66,7 +66,7 @@ Modernize applications running on VMware overtime through integration to [Azure 
 
 ## Azure VMware Solution business justification
 
-[Building a business justification for cloud migration](/azure/cloud-adoption-framework/strategy/cloud-migration-business-case) can dispel cloud rationalization myths that surface from your team's financial plan. Your finance team might need to develop a detailed financial model to account for components associated with the adoption of Azure VMware Solution.
+[Building a business justification for cloud migration](../../strategy/cloud-migration-business-case.md) can dispel cloud rationalization myths that surface from your team's financial plan. Your finance team might need to develop a detailed financial model to account for components associated with the adoption of Azure VMware Solution.
 
 Initial business justification is a directional estimate that can help drive your strategic alignment. Your organization can create transparency between the cloud strategy team and other stakeholders by affirming the business justification can change significantly throughout planning activities. Seek a cross-team consensus of sufficient value in order to [gather inventory and develop a plan](/azure/azure-vmware/plan-private-cloud-deployment). Once your digital estate is cataloged and assessed, you can refine your business case, and present clear plans for cloud value ROI.
 

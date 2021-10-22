@@ -12,7 +12,7 @@ ms.custom: e2e-azure-vmware, think-tank
 
 # Management and monitoring for an Azure VMware Solution enterprise-scale scenario
 
-You can achieve operational excellence when you design Azure VMware Solution with management and monitoring in mind. VMware is a critical platform. As a result, you should also include guidance in the enterprise-scale design areas in your planning phase. Guidance is available in the Azure enterprise-scale landing zone for management and monitoring [documentation](/azure/cloud-adoption-framework/ready/enterprise-scale/management-and-monitoring).
+You can achieve operational excellence when you design Azure VMware Solution with management and monitoring in mind. VMware is a critical platform. As a result, you should also include guidance in the enterprise-scale design areas in your planning phase. Guidance is available in the Azure enterprise-scale landing zone for management and monitoring [documentation](../../ready/enterprise-scale/management-and-monitoring.md).
 
 ## Platform management and monitoring
 
@@ -88,4 +88,4 @@ Review the following recommendations for guest management and monitoring of work
 Learn about design considerations for Azure VMware Solution business continuity and disaster recovery in an enterprise-scale scenario.
 
 > [!div class="nextstepaction"]
-> [Business continuity and disaster recovery for Azure VMware Solution](eslz-business-continuity-and-disaster-recovery.md)
+> [Business continuity and disaster recovery for Azure VMware Solution](./eslz-business-continuity-and-disaster-recovery.md)

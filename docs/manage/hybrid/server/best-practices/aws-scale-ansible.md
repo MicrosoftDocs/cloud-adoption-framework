@@ -60,11 +60,11 @@ This guide can be used even if you do not already have an existing Ansible test 
 
       ```json
       {
-      "appId": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-      "displayName": "AzureArcAWS",
-      "name": "http://AzureArcAWS",
-      "password": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-      "tenant": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+        "appId": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "displayName": "AzureArcAWS",
+        "name": "http://AzureArcAWS",
+        "password": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "tenant": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX"
       }
       ```
 

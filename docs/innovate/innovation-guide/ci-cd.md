@@ -22,7 +22,7 @@ You know that innovation and digital transformation is critical to business succ
 
 > [!div class="checklist"]
 >
-> - In every industry, every organization is trying to do one thing: drive constant value generation.
+> - In every industry, each organization is trying to do one thing: drive constant value generation.
 > - The focus on innovation is essentially a process to help your organization find new ways to generate value.
 > - Perhaps the biggest mistake organizations make is trying to create new value by introducing new technologies.
 > - Sometimes the attitude is, "If we just use more technology, we'll see things improve." But innovation is first and foremost a people story.
@@ -128,8 +128,6 @@ LiveOps also helps to humanize data. A LiveOps approach makes data more actionab
 ### LiveOps transition
 
 Game development is one example of an industry that's embracing LiveOps today. Modern games are the iconic LiveOps applications. Games have been going through a quiet revolution, transforming from packaged goods with a lifetime measured in hours to active communities with a lifetime measured in years. With more than 2 billion gamers out there, and tens of thousands of new games shipping every year fighting for attention, game developers are turning toward LiveOps to better engage and retain their player base over time. Innovation happens through continuous player engagement: content updates, special events, promotions, and offers.
-
-<!-- cSpell:ignore playfab -->
 
 ### Azure PlayFab
 

@@ -10,8 +10,6 @@ ms.subservice: manage
 ms.custom: think-tank, e2e-hybrid
 ---
 
-<!-- cspell:ignore tfvars winsrv -->
-
 # Use a Terraform plan to deploy a VMware Ubuntu virtual machine and connect it to Azure Arc
 
 This article provides guidance for using the provided [Terraform](https://www.terraform.io/) plan to deploy an Ubuntu server, VMware vSphere virtual machine and connect it as an Azure Arc-enabled server resource.
