@@ -353,7 +353,6 @@ items:
               href: ready/azure-best-practices/organize-subscriptions.md
       
         - name: Security
-          href: ready/landing-zone/design-area/security.md
           items:
           - name: Overview
             href: ready/landing-zone/design-area/security.md
