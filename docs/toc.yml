@@ -272,9 +272,10 @@ items:
           - name: Define an Azure Active Directory tenant
             href: ready/landing-zone/design-area/azure-ad-define.md  
 
-        - name: Identity and access management 
-          href: ready/landing-zone/design-area/identity-access.md
-          items:
+        - name: Identity and access management
+          items: 
+          - name: Overview
+            href: ready/landing-zone/design-area/identity-access.md
           - name: Identity management best practices
             href: /azure/security/fundamentals/identity-management-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
           - name: Choose an authentication method
@@ -379,8 +380,9 @@ items:
             href: ready/landing-zone/design-area/management-workloads.md
 
         - name: Governance
-          href: ready/landing-zone/design-area/governance.md
           items:
+          - name: Overview
+            href: ready/landing-zone/design-area/governance.md
           - name: Track costs
             href: ready/azure-best-practices/track-costs.md
           - name: Optimize your cloud investment
@@ -395,8 +397,9 @@ items:
             href: /azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
 
         - name: Platform automation and DevOps
-          href: ready/landing-zone/design-area/platform-automation-devops.md
           items:
+          - name: Overview
+            href: ready/landing-zone/design-area/platform-automation-devops.md
           - name: Test-driven development (TDD) for landing zones
             href: ready/considerations/test-driven-development.md
           - name: Landing zone TDD in Azure
