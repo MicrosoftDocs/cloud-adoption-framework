@@ -67,7 +67,7 @@ For example, a finance user is granted an enterprise administrator role on the E
 
 - Departments and accounts can filter enrollment billing and usage reports.
 
-Review [Programmatically create Azure Enterprise Agreement subscriptions with the latest APIs](/azure/cost-management-billing/manage/programmatically-create-subscription-enterprise-agreement?tabs=rest#limitations-of-azure-enterprise-subscription-creation-api) for more information about Enterprise Agreement subscription limitations.
+- Review [Programmatically create Azure Enterprise Agreement subscriptions with the latest APIs](/azure/cost-management-billing/manage/programmatically-create-subscription-enterprise-agreement?tabs=rest#limitations-of-azure-enterprise-subscription-creation-api) for more information about Enterprise Agreement subscription limitations.
 
 **Design recommendations:**
 
