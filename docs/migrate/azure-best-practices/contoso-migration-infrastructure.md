@@ -426,7 +426,7 @@ With a network and routing topology in place, Contoso is ready to set up Azure n
 
   - `VNET-PROD-EUS2`. Azure IaaS production components will be located in this network.
 
-  Each virtual network will have its own unique address space without overlap. Contoso intends to configure routing without requiring Network Address Translation (NAT).
+  Each virtual network will have its own unique address space without overlap. Contoso intends to configure routing without requiring network address translation (NAT).
 
 - **Subnets:** There will be a subnet in each network for each application tier. Each subnet in the production network will have a matching subnet in the development virtual network. The production network has a subnet for domain controllers.
 

@@ -43,7 +43,7 @@ Other tips for planning are:
 - The virtual network address space shouldn't overlap with on-premises network ranges.
 - Overlapping addresses can cause networks that can't be connected, and routing that doesn't work properly.
 - If networks overlap, you'll need to redesign the network.
-- If you absolutely can't redesign the network, Network Address Translation (NAT) can help, but it should be avoided or limited as much as possible.
+- If you absolutely can't redesign the network, network address translation (NAT) can help, but it should be avoided or limited as much as possible.
 
 **Learn more:**
 

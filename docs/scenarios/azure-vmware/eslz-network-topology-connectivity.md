@@ -111,11 +111,11 @@ In this scenario, you consume Azure VMware Solution as a platform as a service (
 
 You can implement this scenario with:
 
-- Azure Firewall in the secured Virtual WAN hub for firewalls
-- Application Gateway for L7 load balancing
-- L4 Destination Network Address Translation (DNAT) with Azure Firewall to translate and filter network ingress traffic
-- Outbound internet via Azure Firewall in the Virtual WAN hub
-- ExR, VPN, or SD-WAN for connectivity between on-premises datacenters and Azure VMware Solution
+- Azure Firewall in the secured Virtual WAN hub for firewalls.
+- Application Gateway for L7 load balancing.
+- L4 DNAT (destination network address translation) with Azure Firewall to translate and filter network ingress traffic.
+- Outbound internet via Azure Firewall in the Virtual WAN hub.
+- ExR, VPN, or SD-WAN for connectivity between on-premises datacenters and Azure VMware Solution.
 
 [![Diagram of secure Virtual WAN hub with default route propagation.](./media/eslz-net-scenario-1.png)](./media/eslz-net-scenario-1.png#lightbox)
 
