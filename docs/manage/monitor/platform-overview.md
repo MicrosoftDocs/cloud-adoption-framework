@@ -145,7 +145,7 @@ Operations Manager provides four basic ways to analyze data after it has been co
 
 - **Reports:** Allow you to summarize historical data that's stored in the Operations Manager data warehouse. You can customize the data that views and reports are based on. However, there is no feature to allow for complex or interactive analysis of collected data.
 
-- **Operations Manager command shell:** Extends Windows PowerShell with an another set of cmdlets, and can query and visualize collected data. This includes graphs and other visualizations, natively with PowerShell, or with the Operations Manager HTML-based web console.
+- **Operations Manager command shell:** Extends Windows PowerShell with another set of cmdlets, and can query and visualize collected data. This includes graphs and other visualizations, natively with PowerShell, or with the Operations Manager HTML-based web console.
 
 ### Azure Monitor
 

@@ -86,7 +86,7 @@ Based on the observed initial and ongoing replications bandwidth patterns, Tailw
 - How much bandwidth is needed and available for replications?
 - How many VMs, on average, can be initially replicated at the same time?
 - How many VMs, on average, can be left replicating (delta replication) at the same time?
-- Is there an need to throttle replication within the replication appliances or agents?
+- Is there a need to throttle replication within the replication appliances or agents?
 
 ## Step 2: Migration cutover preparation
 

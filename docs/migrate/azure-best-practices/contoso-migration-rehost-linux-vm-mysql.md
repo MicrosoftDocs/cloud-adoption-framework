@@ -114,9 +114,9 @@ To set up the components, Contoso admins follow these steps:
 
 1. Provision the Azure Migrate: Server Migration tool.
 
-    1. From Azure Migrate, download the OVA image, and import it into VMware.
+    1. From Azure Migrate, download the `.OVA` image file, and import it into VMware.
 
-        ![Screenshot that shows downloading the OVA file.](./media/contoso-migration-rehost-vm/migration-download-ova.png)
+        ![Screenshot that shows downloading the O V A file.](./media/contoso-migration-rehost-vm/migration-download-ova.png)
 
     1. Start the imported image, and configure the tool by using the following steps:
 

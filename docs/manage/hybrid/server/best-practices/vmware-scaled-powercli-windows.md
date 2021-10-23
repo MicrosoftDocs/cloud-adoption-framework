@@ -82,7 +82,7 @@ This guide assumes you already have an exiting inventory of VMware virtual machi
 
 Below you can find the automation flow for this scenario:
 
-1. User edit the `vars.ps1` PowerCLI script.
+1. The user edits the `vars.ps1` PowerCLI script.
 
 2. The `scale_deploy.ps1` script execution will initiate authentication against vCenter and will scan the targeted VM folder where Azure Arc candidate VMs are located and will copy both the `vars.ps1` and the `install_azure_arc_agent.ps1` PowerCLI scripts to VM Windows OS located in the [`azure-arc` GitHub repository](https://github.com/microsoft/azure_arc/tree/main/azure_arc_servers_jumpstart/vmware/scaled_deployment/powercli/windows) to each VM in that VM folder.
 
@@ -90,7 +90,7 @@ Below you can find the automation flow for this scenario:
 
 ## Predeployment
 
-To demonstrate the before and after for this scenario, the following screenshots shows a dedicated, empty Azure resource group, a vCenter VM folder with candidate VMs and the **Apps & features** view in Windows showing no agent is installed.
+To demonstrate the before and after for this scenario, the following screenshots show a dedicated, empty Azure resource group, a vCenter VM folder with candidate VMs and the **Apps & features** view in Windows showing no agent is installed.
 
 ![Screenshot of an empty Azure resource group.](./media/vmware-scale-powercli/cli-windows-empty.png)
 

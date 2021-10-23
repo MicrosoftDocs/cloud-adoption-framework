@@ -88,7 +88,7 @@ For now, Contoso has decided to use a functional approach to manage subscription
 
 ### Examine licensing
 
-With subscriptions configured, Contoso can look at Microsoft licensing. The licensing strategy will depend on the resources that Contoso wants to migrate to Azure and how VMs and services are selected and deployed in Azure.
+Once the subscriptions have been configured, Contoso can look at Microsoft licensing. The licensing strategy will depend on the resources that Contoso wants to migrate to Azure and how VMs and services are selected and deployed in Azure.
 
 #### Azure Hybrid Benefit
 

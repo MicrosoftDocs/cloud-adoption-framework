@@ -135,7 +135,7 @@ Before executing the Terraform plan, you must export the environment variables w
     source ./scripts/vars.sh
     ```
 
-5. Make sure your SSH keys are available in `~/.ssh` and named `id_rsa.pub` and `id_rsa`. If you followed the SSH keygen guide above to create your key then this should already be setup correctly. If not, you may need to modify [`aws_infra.tf`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/aws/scaled_deployment/ansible/terraform/aws_infra.tf) to use a key with a different path.
+5. Make sure your SSH keys are available in `~/.ssh` and named `id_rsa.pub` and `id_rsa`. If you followed the SSH keygen guide above to create your key then this should already be set up correctly. If not, you may need to modify [`aws_infra.tf`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/aws/scaled_deployment/ansible/terraform/aws_infra.tf) to use a key with a different path.
 
 6. Run the `terraform init` command which will download the required Terraform providers.
 
