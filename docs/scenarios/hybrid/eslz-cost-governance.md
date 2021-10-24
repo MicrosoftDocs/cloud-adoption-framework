@@ -43,7 +43,7 @@ Azure Arc-enabled servers provides two types of services:
 
 Features of Azure Monitor that are automatically enabled such as collection of standard metrics, activity logs and Insights are provided at no cost.
 
-Review [the recommendations for monitoring](./eslz-management-and-monitoring-arc-server) to decide on your monitoring requirements and review [Azure Monitor pricing](https://azure.microsoft.com/pricing/details/monitor/).
+Review [recommendations for monitoring](./eslz-management-and-monitoring-arc-server) to decide on your monitoring requirements and review [Azure Monitor pricing](https://azure.microsoft.com/pricing/details/monitor/).
 
 ### Azure Security Center
 Azure Security Center is offered in [two modes](/azure/security-center/security-center-pricing):
