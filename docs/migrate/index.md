@@ -12,7 +12,7 @@ ms.custom: internal, seo-azure-migrate
 
 # Cloud migration in the Cloud Adoption Framework
 
-Any enterprise-scale [cloud adoption plan](../plan/index.md), will include workloads that do not warrant significant investments in the creation of new business logic. Those workloads could be moved to the cloud through any number of approaches: lift and shift; lift and optimize; or modernize. Each of these approaches is considered a migration.
+Any enterprise-scale [cloud adoption plan](../plan/index.md), will include workloads that do not warrant significant investments in the creation of new business logic. Those workloads could be moved to the cloud through any number of approaches: lift and shift; lift and optimize; or modernize. Each approach is considered a migration.
 
 Watch the following video to get a quick overview of the lift and shift approach.
 
@@ -66,7 +66,7 @@ The following bullets provide an overview of the phases of this process (picture
 - **Release workloads:** Once functionality is replicated to the cloud, workloads can be tested, optimized, documented, and released for ongoing operations. Critical during this process, is the effort to review the migrated workloads and hand them off to governance, operations management, and security teams for ongoing support of those workloads.
 
 > [!NOTE]
-> In some early iterations of migration effort, it is common to limit scope to a single workload. This approach maximizes skills retention and provides the team with more time to experiment and learn.
+> In some early iterations of migration effort, it's common to limit scope to a single workload. This approach maximizes skills retention and provides the team with more time to experiment and learn.
 
 <!-- -->
 

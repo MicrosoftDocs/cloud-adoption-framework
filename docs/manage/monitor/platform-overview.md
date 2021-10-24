@@ -79,7 +79,7 @@ Azure Monitor is a software as a service (SaaS) offering, so its supporting infr
 
 Operations Manager collects data directly only from agents that are installed on [Windows computers](/system-center/scom/plan-planning-agent-deployment#windows-agent). It can accept data from the Operations Manager SDK, but this approach is typically used for partners that extend the product with custom applications, not for collecting monitoring data. It can collect data from other sources, such as [Linux computers](/system-center/scom/plan-planning-agent-deployment#linuxunix-agent) and network devices, by using special modules that run on the Windows agent that remotely accesses these other devices.
 
-![Diagram of Operations Manager agent](./media/monitoring-management-guidance-cloud-and-on-premises/data-collection-opsman-agents-optimized.svg)
+![Diagram of Operations Manager agent](./media/monitoring-management-guidance-cloud-and-on-premises/data-collection-operations-manager-agents-optimized.svg)
 
 The Operations Manager agent can collect from multiple data sources on the local computer, such as the event log, custom logs, and performance counters. It can also run scripts, which can collect data from the local computer or from external sources. You can write custom scripts to collect data that can't be collected by other means, or to collect data from various remote devices that can't otherwise be monitored.
 
@@ -145,7 +145,7 @@ Operations Manager provides four basic ways to analyze data after it has been co
 
 - **Reports:** Allow you to summarize historical data that's stored in the Operations Manager data warehouse. You can customize the data that views and reports are based on. However, there is no feature to allow for complex or interactive analysis of collected data.
 
-- **Operations Manager command shell:** Extends Windows PowerShell with an another set of cmdlets, and can query and visualize collected data. This includes graphs and other visualizations, natively with PowerShell, or with the Operations Manager HTML-based web console.
+- **Operations Manager command shell:** Extends Windows PowerShell with another set of cmdlets, and can query and visualize collected data. This includes graphs and other visualizations, natively with PowerShell, or with the Operations Manager HTML-based web console.
 
 ### Azure Monitor
 

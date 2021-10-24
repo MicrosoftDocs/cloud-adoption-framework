@@ -84,7 +84,7 @@ In order for Terraform to create resources in AWS, we will need to create a new 
 
     ![Second screenshot of creating a new user in an AWS cloud console.](./media/aws-ubuntu/aws-ubuntu-new-user-2.png)
 
-5. On the **Set Permissions** page, select **Attach existing policies directly** and then check the box next to **AmazonEC2FullAccess** as seen in the screenshot, and then select **Next**.
+5. On the **Set Permissions** page, select **Attach existing policies directly** and then select the box next to **AmazonEC2FullAccess** as seen in the screenshot, and then select **Next**.
 
     ![Third screenshot of creating a new user in an AWS cloud console.](./media/aws-ubuntu/aws-ubuntu-new-user-3.png)
 
@@ -123,7 +123,7 @@ Before executing the Terraform plan, you must export the environment variables w
     source ./scripts/vars.sh
     ```
 
-5. Make sure your SSH keys are available in *~/.ssh* and named `id_rsa.pub` and `id_rsa`. If you followed the `ssh-keygen` guide above to create your key then this should already be setup correctly. If not, you may need to modify [`main.tf`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/aws/ubuntu/terraform/main.tf) to use a key with a different path.
+5. Make sure your SSH keys are available in *~/.ssh* and named `id_rsa.pub` and `id_rsa`. If you followed the `ssh-keygen` guide above to create your key then this should already be set up correctly. If not, you may need to modify [`main.tf`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/aws/ubuntu/terraform/main.tf) to use a key with a different path.
 
 6. Run the `terraform init` command which will download the Terraform AzureRM provider.
 
