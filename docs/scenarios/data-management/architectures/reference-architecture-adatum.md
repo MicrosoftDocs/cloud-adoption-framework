@@ -6,7 +6,7 @@ ms.author: jepeach
 ms.date: 09/21/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.custom: think-tank, e2e-data
+ms.custom: think-tank, e2e-data-management
 ---
 
 # Adatum Corporation scenario for data management and analytics in Azure

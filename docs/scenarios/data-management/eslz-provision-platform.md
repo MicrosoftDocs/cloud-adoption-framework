@@ -6,7 +6,7 @@ ms.author: hamoodaleem
 ms.date: 07/15/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
@@ -23,7 +23,7 @@ The data platform operations team is responsible for deploying a data management
 
 Teams can use templates provided by the data platform operations team to avoid starting from scratch for each asset. We recommend a forking pattern to automate the deployment of a new landing zone.
 
-For example, a data landing zone operations team requests a new data landing zone using a IT management tool or [Power Apps](https://azure.microsoft.com/products/powerapps/). Upon approval of the request, start the following workflow using parameters from the request:
+For example, a data landing zone operations team requests a new data landing zone using an IT management tool or [Power Apps](https://azure.microsoft.com/products/powerapps/). Upon approval of the request, start the following workflow using parameters from the request:
 
 1. Deploy a new subscription for the new data landing zone.
 1. Fork the main branch of the data landing zone template to create a new repository.
@@ -62,13 +62,13 @@ There are no Git APIs available to clone/update/commit/push in the proposed auto
 - Set up the subnet configurations for the data landing zone
 - Set up Azure Active Directory
 
-The runbooks use Git functions from the [`GitAutomation`](https://github.com/webmd-health-services/GitAutomation) PowerShell module for working with Git repositories. By installing this module inside an Azure Automation account, users can do create, clone, query, push, pull, and commit operations in Git repositories. The following image shows the GitAutomation module installed inside an automation account:
+The runbooks use Git functions from the [`GitAutomation`](https://github.com/webmd-health-services/GitAutomation) PowerShell module for working with Git repositories. By installing this module inside an Azure Automation account, users can do create, clone, query, push, pull, and commit operations in Git repositories. The following image shows the GitAutomation module installed inside an Automation account:
 
 :::image type="content" source="./images/git-automation.png" alt-text="Diagram of GitAutomation Module for working with Git repositories." lightbox="./images/git-automation.png":::
 
 Use the `Copy-GitRepository` function from the GitAutomation module to clone the main Git repository from the URL specified by `URL` to the data platform Git path specified by `DestinationPath`.
 
-This approach to data landing zone deployment is flexible, while ensuring that actions are compliant with organizational requirements. Life cycle management is possible through the ability to apply new features or optimizations from the original templates.
+This approach to data landing zone deployment is flexible, while ensuring that actions are compliant with organizational requirements. Lifecycle management is possible through the ability to apply new features or optimizations from the original templates.
 
 ## Data integration and data product deployment process
 
@@ -86,12 +86,12 @@ Deployment is done either directly using DevOps tooling or called via pipelines/
 1. The workflow then starts an Azure pipeline to create the networking requirements, and another Azure pipeline to deploy the data integration or data products services.
 1. The workflow notifies the user on completion.
 
->[!TIP]
->If you are new to DataOps, the Architecture Center has a hands-on lab [DataOps for the Modern Data Warehouse (MDW)](/azure/architecture/example-scenario/data-warehouse/dataops-mdw). The lab's scenario describes how a fictional city planning office can use this deployment solution. The deployment solution provides an end-to-end data pipeline that follows the MDW architectural pattern, along with corresponding DevOps and DataOps processes, to assess parking use and make informed business decisions.
+> [!TIP]
+> If you're new to DataOps, the Architecture Center has a hands-on lab, [DataOps for the Modern Data Warehouse (MDW)](/azure/architecture/example-scenario/data-warehouse/dataops-mdw). The lab's scenario describes how a fictional city planning office can use this deployment solution. The deployment solution provides an end-to-end data pipeline that follows the MDW architectural pattern, along with corresponding DevOps and DataOps processes, to assess parking use and make informed business decisions.
 
 ## Summary
 
-The above patterns provide control, agility, self-service, and life cycle management of policies.
+The above patterns provide control, agility, self-service, and lifecycle management of policies.
 
 ![Diagram of the overall DataOps model.](./images/overall-data-ops-model.png)
 
