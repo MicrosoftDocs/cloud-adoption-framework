@@ -23,7 +23,7 @@ The data platform operations team is responsible for deploying a data management
 
 Teams can use templates provided by the data platform operations team to avoid starting from scratch for each asset. We recommend a forking pattern to automate the deployment of a new landing zone.
 
-For example, a data landing zone operations team requests a new data landing zone using an IT management tool or [Power Apps](https://azure.microsoft.com/products/powerapps/). Upon approval of the request, start the following workflow using parameters from the request:
+For example, a data landing zone operations team requests a new data landing zone using an IT management tool or [Power Apps](https://powerapps.microsoft.com/). Upon approval of the request, start the following workflow using parameters from the request:
 
 1. Deploy a new subscription for the new data landing zone.
 1. Fork the main branch of the data landing zone template to create a new repository.
