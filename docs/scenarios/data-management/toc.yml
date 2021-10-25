@@ -32,7 +32,13 @@ items:
       - name: Identity and access management
         href: ./eslz-identity-and-access-management.md
       - name: Network topology and connectivity
-        href: ./eslz-network-topology-and-connectivity.md
+        items:
+        - name: Overview
+          href: ./eslz-network-topology-and-connectivity.md
+        - name: Network Architecture Considerations
+          href: ./eslz-network-considerations.md
+        - name: Limit cross-tenant private endpoint connections in Azure
+          href: ../../ready/azure-best-practices/limit-cross-tenant-private-endpoint-connections.md
       - name: Resource organization
         href: ./eslz-resource-organization.md
       - name: Governance disciplines
@@ -121,7 +127,11 @@ items:
         href: ./architectures/reference-architecture-data-mesh.md
 
     - name: Deployment templates
-      href: ./eslz-deployment-templates.md
+      href: ./architectures/deployment-templates.md
+    - name: Policies
+      href: ./architectures/policies.md
+    - name: Connecting to environments privately
+      href: ./architectures/connect-to-environments-privately.md
     - name: Frequently asked questions
       href: ./architectures/frequently-asked-questions.md
 
@@ -157,16 +167,10 @@ items:
         items:
         - name: Data ingestion
           href: ./best-practices/data-ingestion.md
+        - name: SAP data ingestion
+          href: ./best-practices/sap-data-ingestion.md
         - name: Automated ingestion pattern
           href: ./best-practices/automated-ingestion-pattern.md
-      - name: SAP Implementation
-        items:
-        - name: Analytics scenarios
-          href: best-practices/sap-analytics-scenarios.md
-        - name: Analytics data sources
-          href: best-practices/sap-analytics-data-sources.md
-        - name: Integration best practices
-          href: best-practices/sap-integration-best-practices.md    
       - name: Data science environment
         items:
         - name: Data science best practices

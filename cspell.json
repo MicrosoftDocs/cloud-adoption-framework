@@ -5,9 +5,5 @@
     "import": [
         ".\\docs\\cspell.json"
     ],
-    "words": [
-        "Adatum",
-        "lamna",
-        "migratable"
-    ]
+    "words": []
 }

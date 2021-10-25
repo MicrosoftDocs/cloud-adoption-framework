@@ -6,7 +6,7 @@ ms.author: jepeach
 ms.date: 09/21/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.custom: think-tank, e2e-data
+ms.custom: think-tank, e2e-data-management
 ---
 
 # Lamna Healthcare scenario for data management and analytics in Azure
@@ -113,5 +113,5 @@ Use the following templates to deploy other data integrations and data products 
 
 ## Next steps
 
-- Continue to [Deployment templates for enterprise-scale for analytics and AI deployments](../eslz-deployment-templates.md).
+- Continue to [Deployment templates for enterprise-scale for analytics and AI deployments](../architectures/deployment-templates.md).
 - Learn more in [Understand data privacy for the data management and analytics scenario in Azure](../secure-data-privacy.md).
