@@ -20,9 +20,9 @@ Based on the current capabilities of Azure Networking Services it is recommended
 3. The Data Management Zone and each Data Landing Zone
 4. Each Data Landing Zone.
 
-:::image type="content" source="images/network-options-network-mesh.png" alt-text="Network architecture":::
+:::image type="content" source="./images/network-options-network-mesh.png" alt-text="Network architecture":::
 
-Figure 1: Basic networking diagram for Cloud Adoption Framework data management and analytics
+*Figure 1: Basic networking diagram for Cloud Adoption Framework data management and analytics.*
 
 To explain the rationale behind the design, this article illustrates the advantages and disadvantages that come with each of the different network architecture approaches that were considered when designing the Cloud adoption framework data management and analytics. Every design pattern will be evaluated along the following criteria:
 
@@ -33,15 +33,15 @@ To explain the rationale behind the design, this article illustrates the advanta
 
 > [!NOTE]
 > Each scenario has been analyzed with the following cross-Data Landing Zone use-case in mind:
->Virtual machine B (virtual machine B) hosted in Data Landing Zone B loads a dataset from Storage Account A hosted in Data Landing Zone A. Next, it processes the dataset and finally it stores the processed dataset and in Storage Account B hosted in Data Landing Zone B.
+> Virtual machine B hosted in Data Landing Zone B loads a dataset from Storage Account A hosted in Data Landing Zone A. Next, it processes the dataset and finally it stores the processed dataset and in Storage Account B hosted in Data Landing Zone B.
 
 ## Hub and spoke design
 
 Many enterprises have adopted a hub and spoke network architecture.
 
-:::image type="content" source="images/network-options-hub-and-spoke.png" alt-text="hub and spoke architecture" lightbox="images/network-options-hub-and-spoke.png":::
+:::image type="content" source="./images/network-options-hub-and-spoke.png" alt-text="hub and spoke architecture" lightbox="./images/network-options-hub-and-spoke.png":::
 
-Figure 2: hub and spoke architecture
+*Figure 2: Hub and spoke architecture."
 
 As figure 2 illustrates, network transitivity would have to be setup in the Connectivity hub in order to be able to access data in Storage Account A from virtual machine B. Data would traverse two Vnet peerings ((2) and (5)) as well as a Network Virtual Appliance (NVA) hosted inside the Connectivity hub ((3) and (4)) before it gets loaded by the virtual machine (6) and then stored back into the Storage Account B (8).
 
@@ -51,7 +51,7 @@ With this solution approach, Data Product teams will only require write access t
 
 ### Hub and spoke Service Management
 
-The most relevant benefit of this network architecture design is that it is well-known and consistent with the existing network setup of most organizations. Therefore, it is easy to explain and implement. 
+The most relevant benefit of this network architecture design is that it is well-known and consistent with the existing network setup of most organizations. Therefore, it's easy to explain and implement.
 
 In addition, a centralized and Azure native DNS solution with Private DNS Zones can be used to provide FQDN resolution inside the Azure tenant. The use of Private DNS Zones also allows for the automation of the DNS A-record lifecycle through [Azure Policies](architectures/policies.md). Since traffic is routed through a central network virtual appliance, network traffic that is sent from one spoke to another one can also be logged and inspected, which can be another benefit of this design.
 
@@ -74,9 +74,9 @@ From an access management and partially from a Service Management perspective, t
 
 ## Private endpoint projection
 
-Another design alternative that was evaluated was the projection of Private Endpoints across each and every Landing Zone. With this approach, a Private Endpoint for Storage Account A would be created each Data Landing Zone. Therefore, this option leads to a first Private Endpoint in Data Landing Zone A that is connected to the Vnet in Data Landing Zone A, a second Private Endpoint in Data Landing Zone B that is connected to the Vnet in Data Landing Zone B, etc. The same applies to Storage Account B and potentially other services inside the Data Landing Zones. If the number of Data Landing Zones is defined as _n_, one would end up with _n_ Private Endpoints for at least all of the storage accounts and potentially other services within the Data Landing Zones leading to an exponential growth of the number of Private Endpoints.
+Another design alternative that was evaluated was the projection of Private Endpoints across each and every Landing Zone. With this approach, a Private Endpoint for Storage Account A would be created each Data Landing Zone. Therefore, this option leads to a first Private Endpoint in Data Landing Zone A that is connected to the Vnet in Data Landing Zone A, a second Private Endpoint in Data Landing Zone B that is connected to the Vnet in Data Landing Zone B, etc. The same applies to Storage Account B and potentially other services inside the Data Landing Zones. If the number of Data Landing Zones is defined as *n*, one would end up with *n* Private Endpoints for at least all of the storage accounts and potentially other services within the Data Landing Zones leading to an exponential growth of the number of Private Endpoints.
 
-:::image type="content" source="images/network-options-private-endpoint-projection.png" alt-text="Private Endpoint Projection Architecture":::
+:::image type="content" source="./images/network-options-private-endpoint-projection.png" alt-text="Private Endpoint Projection Architecture":::
 
 Since all Private Endpoints of a particular service (for example, Storage Account A) have the same FQDN (for example, `storageaccounta.privatelink.blob.core.windows.net`) this solution creates challenges on the DNS layer that cannot be solved with Private DNS Zones. A custom DNS solution is required that is capable of resolving DNS names based on the origin/IP-address of the requestor in order to make virtual machine A connect to the Private Endpoints connected to the Vnet in Data Landing Zone A and make virtual machine B connect to the Private Endpoints connected to the Vnet in Data Landing Zone B. This can be done with a setup based on Windows Servers, whereas the lifecycle of DNS A-records can be automated through a combination of Activity Log and Azure Functions.
 
@@ -115,7 +115,7 @@ The third option proposes to host the Private Endpoints in the Connectivity hub 
 
 In order to load a dataset stored in Storage Account A in virtual machine B, data would have to traverse a single Vnet peering between the Connectivity hub and the Data Landing Zone (5). Once the dataset has been loaded and processed ((3) and (4)) the dataset must traverse the Vnet peering a second time (5) before it can be stored on Storage Account B by accessing the Private Endpoint connected to the hub Vnet (6).
 
-:::image type="content" source="images/network-options-private-endpoints-in-connectivityhub.png" alt-text="Private endpoints in connectivity hub":::
+:::image type="content" source="./images/network-options-private-endpoints-in-connectivity-hub.png" alt-text="Private endpoints in connectivity hub":::
 
 ### Private endpoints in connectivity hub user access management
 
@@ -144,7 +144,7 @@ There are many benefits that come with this network architecture design. However
 
 The recommended design proposes the use of a network mesh, which means adding vNet peerings between all Data Landing Zone Vnets and between the Data Management Zone and each Data Landing Zone in addition to the existing hub and spoke network design that most organizations have setup inside their tenant. For the scenario mentioned in the introduction, data loaded from Storage Account A would first transition a Vnet peering connection (2) that is setup between the two Data Landing Zone Vnets before it would be loaded and processed by virtual machine B ((3) and (4)). Lastly, the data can be stored on Storage Account B by sending the data through the local Private Endpoint (5). With this option, the data does not pass the Connectivity hub and stays within the Data Platform consisting of a Data Management Zones and one or multiple Data Landing Zones.
 
-:::image type="content" source="images/network-options-meshed-network-architecture.png" alt-text="Meshed Network Architecture":::
+:::image type="content" source="./images/network-options-meshed-network-architecture.png" alt-text="Meshed Network Architecture":::
 
 ### Meshed network architecture user access management
 
