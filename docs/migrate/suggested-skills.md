@@ -12,9 +12,9 @@ ms.custom: internal
 
 # Skills readiness for cloud migration
 
-During a cloud migration, it is likely that employees, as well as some incumbent systems integration partners or managed services partners, will need to develop new skills to be effective during migration efforts.
+During a cloud migration, it's likely that employees, as well as some incumbent systems integration partners or managed services partners, will need to develop new skills to be effective during migration efforts.
 
-There are four distinct processes that are completed iteratively in the Migrate methodology. The following sections align the necessary skills for each of those processes with references to two prerequisites for skilling resources.
+There are four distinct processes that are completed iteratively in the Migrate methodology. The following sections align the necessary skills for those processes with references to two prerequisites for skilling resources.
 
 ## Prerequisites skilling resources
 

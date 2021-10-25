@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-hybrid
 
 # Connect Azure Arc-enabled servers to Azure Security Center
 
-This article provides guidance on how to onboard an Azure Arc-enabled server to [Azure Security Center (Azure Security Center)](/azure/security-center/). This helps you start collecting security-related configurations and event logs so you can recommend actions and improve your overall Azure security posture.
+This article provides guidance on how to onboard an Azure Arc-enabled server to [Azure Security Center](/azure/security-center/). This helps you start collecting security-related configurations and event logs so you can recommend actions and improve your overall Azure security posture.
 
 In the following procedures, you enable and configure Azure Security Center Standard tier on your Azure subscription. This provides advanced threat protection and detection capabilities. The process includes:
 
@@ -93,7 +93,7 @@ In the following procedures, you enable and configure Azure Security Center Stan
    --parameters <The `log_analytics-template.parameters.json` template file location>
    ```
 
-3. If you are going for an user-defined workspace, you should instruct Security Center to use it instead of the default one, use the following command:
+3. If you are going for a user-defined workspace, you should instruct Security Center to use it instead of the default one via the following command:
 
    ```console
    az security workspace-setting create --name default \
@@ -106,7 +106,7 @@ In the following procedures, you enable and configure Azure Security Center Stan
     az security pricing create -n VirtualMachines --tier 'standard'
     ```
 
-5. Assign the default Security Center policy initiative. Azure Security Center makes its security recommendations based on policies. There is an specific initiative that groups Security Center policies with the definition ID `1f3afdf9-d0c9-4c3d-847f-89da613e70a8`. The following command will assign the Azure Security Center initiative to your subscription.
+5. Assign the default Security Center policy initiative. Azure Security Center makes its security recommendations based on policies. There is a specific initiative that groups Security Center policies with the definition ID `1f3afdf9-d0c9-4c3d-847f-89da613e70a8`. The following command will assign the Azure Security Center initiative to your subscription.
 
     ```console
     az policy assignment create --name 'Azure Security Center Default <Your subscription ID>' \
