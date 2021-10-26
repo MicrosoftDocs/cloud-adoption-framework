@@ -62,7 +62,7 @@ Guide to the critical decisions that drive the design of the Cloud Adoption Fram
 * [Platform automation](PLACEHOLDER): Azure Arc enables organizations to manage their digital state hosted outside of Azure with the same level of experience and automation as a native Azure resource. As part of your Enterprise Scale Landing Zone implementation you should plan for agent onboarding, lifecycle management, and expansion of the Azure control plane capabilities via Azure Arc with as much automation as posible.
 * [Cost Management](PLACEHOLDER): keep track of ungoverned and unmonitored resources that prevent you from to increase accountability with budgets, cost allocation, and chargebacks.
 
-## Landing Zone
+## Enterprise Scale Landing Zone
 
 Landing zones are a set of reference architectures that help organizations quickly build out cloud environments and accelerate their adoption of cloud technologies.
 
