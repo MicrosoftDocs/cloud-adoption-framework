@@ -47,9 +47,9 @@ Review [recommendations for monitoring](./eslz-management-and-monitoring-arc-ser
 
 ### Azure Security Center
 Azure Security Center is offered in [two modes](/azure/security-center/security-center-pricing):
-- **Azure Defender OFF (Free)** - [Security Center without Azure Defender](/azure/security-center/security-center-introduction) once enabled, provides security policy, continuous security assessment, and actionable security recommendations to help you protect your Azure Arc-enabled servers and Azure resources. The free tier of Azure Defender for servers does not protect Azure Arc-enabled servers.
+- **Azure Defender DISABLED (Free)** - [Security Center without Azure Defender](/azure/security-center/security-center-introduction) once enabled, provides security policy, continuous security assessment, and actionable security recommendations to help you protect your Azure Arc-enabled servers and Azure resources. The free tier of Azure Defender for servers does not protect Azure Arc-enabled servers.
 
-- **Azure Defender ON (Charged)** - Enabling [Azure Defender](/azure/security-center/azure-defender) extends the capabilities of Azure Defender for Servers to your Azure Arc-enabled servers and Azure resources, providing unified security management and threat protection.
+- **Azure Defender ENABLED (Paid)** - Enabling [Azure Defender](/azure/security-center/azure-defender) extends the capabilities of Azure Defender for Servers to your Azure Arc-enabled servers and Azure resources, providing unified security management and threat protection.
 
 Review the [recommendations for security and compliance](./eslz-security-governance-and-compliance) and [Azure Defender for Servers pricing](https://azure.microsoft.com/pricing/details/azure-defender/).
 
@@ -75,7 +75,6 @@ Review [recommendations for automation](./eslz-automation-arc-server) and [Azure
 The Azure Key Vault VM extension allows you to manage the certificate lifecycle on [Windows](/azure/virtual-machines/extensions/key-vault-windows) and [Linux](/azure/virtual-machines/extensions/key-vault-linux) Azure Arc-enabled servers. Azure Key Vault is billed by the operations performed on the certificates, keys and secrets.
 
 Review [Azure Key Vault pricing](https://azure.microsoft.com/pricing/details/key-vault/).
-
 
 ### Azure Private Link
 You can use [Azure Private Link](/azure/azure-arc/servers/private-link-security) to ensure data coming from your Azure Arc-enabled servers is only accessed through authorized private networks. Azure Private Link is billed by endpoint and inbound/outbound data processed.
