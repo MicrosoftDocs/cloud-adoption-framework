@@ -1,6 +1,6 @@
 ---
-title: Enterprise-Scale support for hybrid and multicloud
-description: Learn how enterprise-scale can accelerate adoption of hybrid or multi-cloud architectures.
+title: Enterprise Scale support for hybrid and multicloud
+description: Learn how Enterprise Scale can accelerate adoption of hybrid or multi-cloud architectures.
 author: LauraNicolas
 ms.author: doalle
 ms.date: 03/01/2021
@@ -10,15 +10,15 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-hybrid
 ---
 
-# Introduction to Enterprise-scale Landing Zone for hybrid and multicloud
+# Introduction to Enterprise Scale Landing Zone for hybrid and multicloud
 
 Enterprises are currently building and running applications across a variety of ecosystems that can be on-premises, in multiple public clouds and on the edge. On these distributed environments it is critical to ensure compliance and find an effective way to manage servers, applications and data at scale while maintaining agility.
 
-[Enterprise-scale landing zones provide a specific architectural approach](../../ready/enterprise-scale/architecture.md), reference architecture, and reference implementations to prepare your landing zones for mission-critical technology platforms and any supported workloads.
+[Enterprise Scale Landing Zone provide a specific architectural approach](../../ready/enterprise-scale/architecture.md), reference architecture, and reference implementations to prepare your Landing Zones for mission-critical technology platforms and any supported workloads.
 
 [PLACEHOLDER]
 
-Enterprise-scale was built with hybrid and multicloud in mind. Supporting hybrid and multicloud requires two simple additions to the reference architecture:
+Enterprise Scale was built with hybrid and multicloud in mind. Supporting hybrid and multicloud requires two simple additions to the reference architecture:
 
 * Hybrid and multicloud connectivity: understand key network design considerations and recommendations when working with Azure Arc.
 * Unified operations: include Azure Arc enabled resources to extend governance and operations support with consistent tooling.
@@ -37,7 +37,7 @@ This is helpful if the strategic intent is to simplify and consolidate the infra
 
 ## Prerequisite
 
-This article assumes that you are familiar with enterprise-scale landing zone. For more information on this prerequisite, review the enterprise-scale [overview](../../ready/enterprise-scale/index.md) and [implementation guidance](../../ready/enterprise-scale/implementation.md).
+This article assumes that you are familiar with Enterprise Scale Landing Zone. For more information on this prerequisite, review the Enterprise Scale [overview](../../ready/enterprise-scale/index.md) and [implementation guidance](../../ready/enterprise-scale/implementation.md).
 
 ## Azure Arc
 
@@ -53,7 +53,7 @@ You can now manage virtual machines, Kubernetes clusters, and databases as if th
 
 ## Design guidelines
 
-Guide to the critical decisions that drive the design of the Cloud Adoption Framework for Azure enterprise-scale landing zone in a hybrid a multicloud environment. There are six critical design areas that need to be considered as part of your enterprise-scale landing zone implementation when working with Azure Arc:
+Guide to the critical decisions that drive the design of the Cloud Adoption Framework for Azure Enterprise Scale Landing Zone in a hybrid a multicloud environment. There are six critical design areas that need to be considered as part of your Enterprise Scale Landing Zone implementation when working with Azure Arc:
 
 * [Network topology and connectivity](PLACEHOLDER): design considerations when working with Azure Arc-enabled servers and how to securely connect them to your Enterprise Scale Landing Zone.
 * [Identity and access management](PLACEHOLDER): best practices for right access controls design to secure hybrid resources as they are centrally managed from Azure using Azure Arc.
