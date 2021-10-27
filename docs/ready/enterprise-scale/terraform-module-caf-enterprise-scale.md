@@ -3,7 +3,7 @@ title: Terraform module for Cloud Adoption Framework enterprise-scale
 description: Learn how to use the Terraform module for Cloud Adoption Framework enterprise-scale to deploy Azure landing zones.
 author: krowlandson
 ms.author: brblanch
-ms.date: 10/15/2021
+ms.date: 10/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -16,10 +16,11 @@ Azure provides native services for building your enterprise-scale landing zones.
 
 The [caf-enterprise-scale][caf-enterprise-scale] module provides an accelerator for deploying the recommended platform resources needed to manage [Azure landing zones][msdocs-alz-architecture] at scale, using Terraform.
 
-These resources are aligned to the enterprise scale [reference architecture][es-ref-arch], but can be customized to meet the requirements of your organization:
+## Overview of the enterprise-scale reference architecture
 
-![Overview of the enterprise scale reference architecture][img-es-ref-arch]
-*Figure 1: Overview of the enterprise scale reference architecture.*
+These resources are aligned to the enterprise-scale [reference architecture][es-ref-arch]. You can customize them to meet the requirements of your organization.
+
+[ ![Overview of the enterprise-scale reference architecture](media/ns-arch-cust-inline.png)](media/ns-arch-cust-inline.png#lightbox)
 
 The module can be configured to deploy different sets of resources as required, each aligned to the critical design areas of enterprise-scale:
 
@@ -36,16 +37,18 @@ By packaging these capabilities into a single Terraform module, it becomes easie
 
 Reuse of components is a fundamental principle of infrastructure as code. Modules are instrumental in defining standards and consistency across resource deployment within and across environments. This module is published to the official [Terraform Registry][tf-reg-azure] and is verified by HashiCorp.
 
-Deploying the module from the Terraform Registry provides strict version control, whilst ensuring you always have access to the latest version. This provides both an accelerated delivery of enterprise-scale in your environment, and a tested upgrade path to the latest version of enterprise-scale.
+Deploying the module from the Terraform Registry provides strict version control while ensuring you always have access to the latest version. Doing so provides:
+- An accelerated delivery of enterprise-scale in your environment.
+- A tested upgrade path to the latest version of enterprise-scale.
 
 ## Benefits of using the module
 
-1. Managed and extensible core resource hierarchy for *subscription* organization using *management groups*.
-1. Scalable security governance and compliance using *Azure Policy* and *Access Control (IAM)*, with an extensive library of custom definitions ready to assign.
-1. Enforcement of policy across *subscriptions* through *management group* inheritance.
-1. Managed resources for *management* and *connectivity* landing zones, providing:
-    1. Assured *policy compliance* through tight integration of *resources* managed by the module and corresponding *policy assignments*.
-    1. Integration between resources to reduce management overhead and provide an improved end-user experience, such as automatic creation of virtual network links for *Azure Private DNS*.
+- Managed and extensible core resource hierarchy for Subscription organization using Management Groups.
+- Scalable security governance and compliance using Azure Policy and Access Control (IAM), with an extensive library of custom definitions ready to assign.
+- Enforcement of policy across Subscriptions through Management Group inheritance.
+- Managed resources for Management and Connectivity landing zones, providing:
+  - Assured Policy Compliance through tight integration of Resources managed by the module and corresponding Policy Assignments.
+  - Integration between resources to reduce management overhead and provide an improved end-user experience, like automatic creation of virtual network links for Azure Private DNS.
 
 > [!TIP]
 > The template library is updated programmatically from the [Azure/Enterprise-Scale][gh-es] repository.
@@ -60,15 +63,15 @@ Resources deployed by the module are split logically into the following capabili
 - [Connectivity Resources](#connectivity-resources)
 - [Identity Resources](#identity-resources)
 
-These resources can be deployed (by capability) across multiple Subscriptions using the [Provider Configuration][wiki_provider_configuration] on the module block.
+These resources can be deployed, by capability, across multiple Subscriptions using the [Provider Configuration][wiki_provider_configuration] on the module block.
 
-The following sections outline the different resource types deployed and managed by this module, depending on the configuration options specified.
+The following sections outline the different groups of resource types deployed and managed by this module, depending on the configuration options specified.
 
 ## Core resources
 
 The core capability of this module deploys the foundations of the [Cloud Adoption Framework enterprise-scale landing zone architecture][msdocs-alz-architecture], with a focus on the central [resource hierarchy and governance][es-hierarchy]:
 
-![Enterprise-scale Core Landing Zones Architecture][img-tf-core]
+![Enterprise-scale Core Landing Zones Architecture](./media/terraform-caf-enterprise-scale-overview.png)
 
 The following resource types are deployed and managed by this module when using the core resources capability:
 
@@ -85,15 +88,13 @@ The following resource types are deployed and managed by this module when using 
 The exact number of resources created depends on the module configuration, but you can expect upwards of `180` resources to be created by this module for a default installation based on the example below.
 
 > [!TIP]
-> None of these resources are deployed at the Subscription scope, however Terraform still requires a Subscription to establish an authenticated session with Azure.
+> None of these resources are deployed at the Subscription scope, but Terraform still requires a Subscription to establish an authenticated session with Azure.
 
 ## Management resources
 
-The module provides an option to enable deployment of [Management and monitoring][es-management] resources into the current Subscription context.
-It also ensures the specified Subscription is placed in the correct Management Group.
-This brings the benefit of being able to manage the full lifecycle of these resources using Terraform, with native integration into the corresponding Policy Assignments to ensure full policy compliance.
+The module provides an option to enable deployment of [Management and monitoring][es-management] resources into the specified Subscription as per the [Provider Configuration][wiki_provider_configuration]. It also ensures the specified Subscription is placed in the right Management Group. The module also provides the benefit of managing the full lifecycle of these resources using Terraform, with native integration, into the corresponding Policy Assignments to ensure full policy compliance.
 
-![Enterprise-scale Management Landing Zone Architecture][img-tf-management]
+![Enterprise-scale Management Landing Zone Architecture](./media/terraform-caf-enterprise-scale-management.png)
 
 The following resource types are deployed and managed by this module when the Management resources capability is enabled:
 
@@ -105,20 +106,18 @@ The following resource types are deployed and managed by this module when the Ma
 | Automation Account | [`Microsoft.Automation/automationAccounts`][arm_automation_account] | [`azurerm_automation_account`][azurerm_automation_account] |
 | Log Analytics Linked Service | [`Microsoft.OperationalInsights/workspaces /linkedServices`][arm_log_analytics_linked_service] | [`azurerm_log_analytics_linked_service`][azurerm_log_analytics_linked_service] |
 
-Please refer to the [Deploy Management Resources][wiki_deploy_management_resources] page on our Wiki for more information about how to use this capability.
+For more information about how to use this capability, see [Deploy Management Resources][wiki_deploy_management_resources] on our wiki. 
 
 ## Connectivity resources
 
-The module provides an option to enable deployment of [Network topology and connectivity][es-connectivity] resources into the current Subscription context.
-It also ensures the specified Subscription is placed in the correct Management Group.
-This capability currently enables deployment of a multi-region Hub & Spoke network topology, and Virtual WAN is on our roadmap (date TBC).
+The module provides an option to enable deployment of [Network topology and connectivity][es-connectivity] resources into the current Subscription context. It also ensures the specified Subscription is placed in the right Management Group. This capability currently enables deployment of a multi-region Hub & Spoke network topology, and Virtual WAN is on our roadmap (date TBC).
 
-![Enterprise-scale Connectivity Landing Zone Architecture][img-tf-connectivity]
+![Enterprise-scale Connectivity Landing Zone Architecture](./media/terraform-caf-enterprise-scale-connectivity.png)
 
-> [!TIP]
+> [!NOTE]
 > The module currently only configures the networking hub, and dependent resources for the `connectivity` Subscription.
 > Although we provide an option to enable outbound Virtual Network Peering (*from hub to spoke*), users will still need to initiate peering from spoke to hub.
-> This is due to limitations in how the azurerm provider targets a specific Subscription for deployment.
+> This is caused by limitations in how the azurerm provider targets a specific Subscription for deployment.
 
 The following resource types are deployed and managed by this module when the Connectivity resources capability is enabled:
 
@@ -134,49 +133,42 @@ The following resource types are deployed and managed by this module when the Co
 | DNS Zones (pending) | [`Microsoft.Network/dnsZones`][arm_dns_zone] | [`azurerm_dns_zone`][azurerm_dns_zone] |
 | Virtual Network Peerings (pending) | [`Microsoft.Network/virtualNetworks/virtualNetworkPeerings`][arm_virtual_network_peering] | [`azurerm_virtual_network_peering`][azurerm_virtual_network_peering] |
 
-Please refer to the [Deploy Connectivity Resources][wiki_deploy_connectivity_resources] page on our Wiki for more information about how to use this capability.
+For more information about how to use this capability, see [Deploy Connectivity Resources][wiki_deploy_connectivity_resources] on our wiki.
 
 ## Identity resources
 
-The module provides an option to enable deployment of [Identity and access management][es-identity] resources into the current Subscription context.
-It also ensures the specified Subscription is placed in the correct Management Group.
+The module provides an option to enable deployment of [Identity and access management][es-identity] resources into the current Subscription context. It also ensures the specified Subscription is placed in the right Management Group.
 
-![Enterprise-scale Identity Landing Zone Architecture][img-tf-identity]
+![Enterprise-scale Identity Landing Zone Architecture](./media/terraform-caf-enterprise-scale-identity.png)
 
-No additional resources are deployed by this capability, however policy settings relating to the `identity` Management Group can now be easily updated via the `configure_identity_resources` input variable.
+No other resources are deployed by this capability. If you'd like to update policy settings relating to the `identity` Management Group, you can do so via the `configure_identity_resources` input variable.
 
-Please refer to the [Deploy Identity Resources][wiki_deploy_identity_resources] page on our Wiki for more information about how to use this capability.
+For more information about how to use this capability, see [Deploy Identity Resources][wiki_deploy_identity_resources] on our wiki.
 
 ## Getting started
 
 The module requires Terraform `v0.15.0` or later.
 
-To simplify getting started, the module has been published to the [Terraform Registry][tf-reg-azure].
-This allows it to be referenced directly within your code, as per the [simple example](#simple-example) below.
+To simplify getting started, the module has been published to the [Terraform Registry][tf-reg-azure]. You can reference it directly within your code, as per the [simple example](#simple-example) below.
 Running `terraform init` will automatically download the module and all dependencies.
 
 You can view module and provider dependencies on the [Dependencies][caf-es-dependencies] tab in the Terraform Registry.
 
 > [!IMPORTANT]
 > There are known issues with some Terraform and AzureRM provider version combinations.
-> Some of these are due to new bugs being introduced which have since been remediated, whilst others are transient errors which can typically be resolved by re-running your deployment.
-> </br>
-> </br>
+> Some of these are cased by new bugs being introduced which have since been remediated, whilst others are transient errors which can typically be fixed by re-running your deployment.
+>
 > We generally recommend pinning to specific versions, and testing thoroughly before upgrading.
-> </br>
-> </br>
-> Major versions of the module will be released when changes are needed to ensure compatibility with the latest Terraform and AzureRM provider versions.
-> This may also result in changing the minimum supported versions.
-> </br>
-> </br>
+>
+> Major versions of the module will be released when changes are needed to ensure compatibility with the latest Terraform and AzureRM provider versions. This may also result in changing the minimum supported versions.
+>
 > To get the latest features, ensure the module version is set to the latest and don't forget to run `terraform init -upgrade` if upgrading to a later version of the module.
-> </br>
-> </br>
+>
 > ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/Azure/terraform-azurerm-caf-enterprise-scale?style=flat&logo=github)
 
 ## Simple example
 
-The following is a simple starting configuration for your `main.tf` root module:
+The following code is a simple starting configuration for your `main.tf` root module:
 
 > [!TIP]
 > Although the module has only one mandatory variable `root_parent_id`, we also recommend setting `root_id`.
@@ -238,30 +230,22 @@ module "enterprise_scale" {
 }
 ```
 
-This example code will deploy the minimum recommended [management group and subscription organization][es-hierarchy] from the enterprise-scale reference architecture. You can then start to customize your deployment once you've got this up and running.
+This example code will deploy the minimum recommended [management group and subscription organization][es-hierarchy] from the enterprise-scale reference architecture. You can then start to customize your deployment once you've got this simple example up and running.
 
 > [!TIP]
-> If you are new to Terraform, refer to this [tutorial on HashiCorp Learn][tf-install], covering installation and use of Terraform, and the [AzureRM provider guides][azurerm-auth] for information on how to configure the provider and authenticate with Azure.
-> We also provide additional guidance on how to configure the provider for [deploying across multiple Subscriptions][wiki_provider_configuration] on our Wiki.
+> If you are new to Terraform, refer to this [tutorial on HashiCorp Learn][tf-install]. It covers installation and use of Terraform. Also see the [AzureRM provider guides][azurerm-auth] for information on how to set up the provider and authenticate with Azure.
+> We provide additional guidance on how to set up the provider for [deploying across multiple Subscriptions][wiki_provider_configuration] on our wiki.
 
 ## Next steps
 
-The [Terraform module for Cloud Adoption Framework enterprise-scale][caf-enterprise-scale] provides an accelerated path to building out your enterprise-scale landing zones. It also provides a great deal of flexibility to expand and customize your deployment whilst retaining a simplified approach to managing the configuration of each landing zone.
+The [Terraform module for Cloud Adoption Framework enterprise-scale][caf-enterprise-scale] provides an accelerated path to building out your enterprise-scale landing zones. It also provides the flexibility to expand and customize your deployment while keeping a simplified approach to managing the configuration of each landing zone.
 
-To find out more, review the module on Terraform Registry, and explore the [module documentation on GitHub][gh-wiki] where we will post more examples and tutorials covering how to customize your deployment.
+To find out more, review the module on Terraform Registry, and explore the [module documentation on GitHub][gh-wiki]. We'll post more examples and tutorials there covering how to customize your deployment.
 
-Learn how to [Deploy the Microsoft Cloud Adoption Framework Enterprise-Scale Module][hcl-deploy-es] through HashiCorp Learn, where you can also discover how some parts of the module work.
+Learn how to [Deploy the Microsoft Cloud Adoption Framework Enterprise-Scale Module][hcl-deploy-es] through HashiCorp Learn. Once there, you can also discover how some parts of the module work.
 
 > [!div class="nextstepaction"]
 > [Review the module on Terraform Registry][caf-enterprise-scale]
-
-<!-- Image references -->
-
-[img-es-ref-arch]:     ./media/ns-arch-cust-inline.png "Overview of the enterprise scale reference architecture."
-[img-tf-core]:         ./media/terraform-caf-enterprise-scale-overview.png "Overview of the enterprise scale reference architecture covered by core resources."
-[img-tf-connectivity]: ./media/terraform-caf-enterprise-scale-connectivity.png "Overview of the enterprise scale reference architecture covered by connectivity resources."
-[img-tf-identity]:     ./media/terraform-caf-enterprise-scale-identity.png "Overview of the enterprise scale reference architecture covered by identity resources."
-[img-tf-management]:   ./media/terraform-caf-enterprise-scale-management.png "Overview of the enterprise scale reference architecture covered by management resources."
 
 <!-- Common links -->
 
