@@ -27,15 +27,17 @@ Azure Arc-enabled servers provides two types of services:
    - Azure Monitor
    - Azure Defender for Servers (formerly Azure Security Center Standard tier)
    - Azure Sentinel
-   - Azure Policy Guest Configuration\*\*
-   - Azure Automation state configuration, change tracking and inventory\*\*
+   - Azure Policy Guest Configuration
+   - Azure Automation state configuration, change tracking and inventory
    - Azure Automation hybrid runbook workers
    - Azure Key Vault
    - Azure Private Links
 
-\* Azure Automation Update Management is a free service, but the log data collected for it is billed with your other Azure Monitor usage.
+> [!Note]
+> Azure Automation Update Management is a free service, but the log data collected for it is billed with your other Azure Monitor usage.
 
-\*\* You are charged only once for any combination of Azure Policy Guest Configuration, Azure Automation state configuration, change tracking and inventory.
+> [!Note]
+> You are charged only once for any combination of Azure Policy Guest Configuration, Azure Automation state configuration, change tracking and inventory.
 
 ## Design considerations
 ### Azure Monitor
