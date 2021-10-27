@@ -14,9 +14,13 @@ ms.custom: internal
 
 Your journey to the cloud may become more nuanced in complexity as you consider the implementation of larger, more complex cloud adoption scenarios that best speak to your unique business requirements. These types of scenarios unify technical and non-technical considerations that can help your organization accelerate its overall cloud adoption journey.
 
+## Cloud adoption scenario
+
 Along your cloud adoption path, you'll encounter various key sets of guidance that can help you focus on your requirements. These may be the requirements that enable you to maximize your investment in the cloud. Read on for more pointed guidance across several areas of cloud adoption best practices guidance—from the holistic and modular guidance of the Microsoft Cloud Adoption Framework—to the workload-specific architectural guidance of the Azure Well-Architected Framework—to reference architectures, high-level scenario diagrams that include templatized components and the technical requirements to implement them, based on extensive customer experiences that represent the infrastructure your organization will rely on. Visualize an ideal technical architecture, then blend and integrate it into your environment.
 
 Learn and benefit from a repository of successful cloud adoption experiences—best practices guidance—collected and codified from across the Microsoft customer and partner ecosystem. Read on for your answers about cloud adoption—and learn from successful migration and modernization experiences across our customer and partner communities. Let's make the cloud yours.
+
+## Components of a cloud adoption scenario
 
 ![Graphic of the end-to-end scenario components](./media/end-to-end-scenario-components.png)
 
@@ -29,7 +33,7 @@ Learn and benefit from a repository of successful cloud adoption experiences—b
 | <br> :::image type="icon" source="../_images/hybrid/hybrid-product-docs.png"::: | <br> Featured Azure products provide information about the products that support your Azure strategy. Use proven combinations of Azure products and services to solve your business problems. Get started with documentation and reference architectures—follow best practices guidance for scenarios—and implement solutions for common workloads on Azure. |
 | <br> :::image type="icon" source="../_images/hybrid/hybrid-skills.png"::: | <br> Microsoft Learn is an online free training platform. Guided, interactive, hands-on Learn modules help you to gain required skills so you can implement, maintain, and support solutions in the cloud—including role-based training and learning paths for Azure developers, solution architects, and administrators. |
 
-## Implement your scenario
+## Scenario(s) to support your cloud adoption strategy 
 
 Each overview page provides guidance to implement the scenario:
 
