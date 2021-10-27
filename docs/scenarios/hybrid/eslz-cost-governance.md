@@ -90,7 +90,7 @@ Here are some general design recommendations for Azure Arc-enabled servers cost 
 - Use least privilege RBAC by assigning **Azure Connected Machine Resource Administrator** to only administrators who need to read, write, delete and re-onboard Azure Connected Machines.
 
 ### Azure Monitor 
--  Decide on the [required logs](/azure/azure-monitor/agents/log-analytics-agent#data-collected) for the Azure Arc-enabled Windows and Linux servers to be collected in the Log Analytics workspace.
+-  Decide on the [required logs and events](/azure/azure-monitor/agents/log-analytics-agent#data-collected) for the Azure Arc-enabled Windows and Linux servers to be collected in the Log Analytics workspace.
 -  Use the [Azure Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/) to calculate an estimate of the Azure Arc-enabled servers monitoring costs for Azure Log Analytics ingestion, alerts and notifications.
   
 ![Azure Pricing Calculator](./media/pricing-calculator.png)
@@ -119,6 +119,7 @@ Here are some general design recommendations for Azure Arc-enabled servers cost 
 ![Azure Sentinel cost analysis](./media/Azure-cost-management-Sentinel.png)
 
 - Review [data retention costs](/azure/sentinel/azure-sentinel-billing#data-retention-costs) for data ingested into the Log Analytics workspace used by Azure Sentinel.
+- Filter the [right level of logs and events](/azure/azure-monitor/agents/log-analytics-agent#data-collected) for the Azure Arc-enabled Windows and Linux servers to be collected in the Log Analytics workspace.
 - Use [Log Analytics queries](/azure/sentinel/azure-sentinel-billing#run-queries-to-understand-your-data-ingestion) and the [Workspace Usage Report workbook](/azure/sentinel/azure-sentinel-billing#deploy-a-workbook-to-visualize-data-ingestion) to understand your data ingestion trends.
 - Create a [cost management playbook](/azure/sentinel/azure-sentinel-billing#use-a-playbook-for-cost-management-alerts) to send notification if your Azure Sentinel workspace exceeds your budget.
 - Azure Sentinel integrates with other Azure services to provide enhanced capabilities. Review the [pricing details](/azure/sentinel/azure-sentinel-billing#costs-for-other-services) for these services.
