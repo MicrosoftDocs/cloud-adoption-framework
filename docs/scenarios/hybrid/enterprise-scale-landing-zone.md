@@ -1,7 +1,7 @@
 ---
 title: Enterprise-Scale support for hybrid and multicloud
 description: Learn how enterprise-scale can accelerate adoption of hybrid or multi-cloud architectures.
-author: JefferyMitchell
+author: LauraNicolas
 ms.author: doalle
 ms.date: 03/01/2021
 ms.topic: conceptual
@@ -14,7 +14,7 @@ ms.custom: think-tank, e2e-hybrid
 
 Enterprises are currently building and running applications across a variety of ecosystems that can be on-premises, in multiple public clouds and on the edge. On these distributed environments it is critical to ensure compliance and find an effective way to manage servers, applications and data at scale while maintaining agility.
 
-Enterprise-scale landing zones provide a specific architectural approach, reference architecture, and reference implementations to prepare your landing zones for mission-critical technology platforms and any supported workloads.
+[Enterprise-scale landing zones provide a specific architectural approach](../../ready/enterprise-scale/architecture.md), reference architecture, and reference implementations to prepare your landing zones for mission-critical technology platforms and any supported workloads.
 
 [PLACEHOLDER]
 
@@ -61,9 +61,3 @@ Guide to the critical decisions that drive the design of the Cloud Adoption Fram
 * [Management and monitoring](PLACEHOLDER): similar to governance techniques, Azure Management services can also be extended out to other environments, such as on-premises and other cloud platforms through Azure Arc. Enterprise Scale provides guidance on how operationally maintain Azure Arc-enabled servers on Azure enterprise estate, with centralized management and monitoring at the platform level
 * [Platform automation](PLACEHOLDER): Azure Arc enables organizations to manage their digital state hosted outside of Azure with the same level of experience and automation as a native Azure resource. As part of your Enterprise Scale Landing Zone implementation you should plan for agent onboarding, lifecycle management, and expansion of the Azure control plane capabilities via Azure Arc with as much automation as posible.
 * [Cost Management](PLACEHOLDER): keep track of ungoverned and unmonitored resources that prevent you from to increase accountability with budgets, cost allocation, and chargebacks.
-
-## Enterprise Scale Landing Zone
-
-Landing zones are a set of reference architectures that help organizations quickly build out cloud environments and accelerate their adoption of cloud technologies.
-
-The Enterprise Scale Landing Zone includes Azure Arc to extend governance and operations as part of an unified operations strategy. The Cloud Adoption Framework also provides specific guidance for developing architectures in Azure for connecting to external environments that can be on-premises, multicloud and on the edge. For more information, see [implement enterprise-scale landing zones in Azure](../../ready/enterprise-scale/architecture.md).
