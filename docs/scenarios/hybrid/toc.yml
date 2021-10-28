@@ -34,6 +34,8 @@ items:
         href: eslz-management-and-monitoring-arc-server.md
       - name: Platform Automation
         href: eslz-automation-arc-server.md  
+      - name: Cost governance
+        href: eslz-cost-governance.md
     - name: Implementation options
       items:
       - name: Start small with basic VM management
