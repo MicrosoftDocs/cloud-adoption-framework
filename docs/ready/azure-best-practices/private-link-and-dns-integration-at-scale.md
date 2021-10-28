@@ -3,7 +3,7 @@ title: Private Link and DNS integration at scale
 description: Private Link and DNS integration at scale
 author: JefferyMitchell
 ms.author: brblanch
-ms.date: 02/18/2021
+ms.date: 10/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -183,7 +183,7 @@ In addition to the private DNS zones, we also need to [create a set of custom Az
          "details": {
            "type": "Microsoft.Network/privateEndpoints/privateDnsZoneGroups",
            "roleDefinitionIds": [
-             "/providers/Microsoft.Authorization/roleDefinitions/b24988ac-6180-42a0-ab88-20f7382dd24c"
+             "/providers/Microsoft.Authorization/roleDefinitions/4d97b98b-1d4f-4787-a291-c67834d212e7"
            ],           
            "deployment": {
              "properties": {
@@ -254,7 +254,7 @@ In addition to the private DNS zones, we also need to [create a set of custom Az
 Once policy definitions have been deployed, [assign the policies][link-7] at the desired scope in your management group hierarchy. Ensure that the policy assignments target the Azure subscriptions that will be used by the application teams to deploy PaaS services with private endpoint access exclusively.
 
 > [!IMPORTANT]
-> Remember to assign the [Private DNS Zone Contributor role][link-8] role in the subscription/resource group where the private DNS zones are hosted to the [managed identity created by the `DeployIfNotExists` policy assignment][link-9] that will be responsible to create and manage the private endpoint DNS record in the private DNS zone. This is because the private endpoint is located in the application owner Azure subscription, while the private DNS zone is located in a different subscription (such as central connectivity subscription).
+> In addition to [assigning the roleDefinition][link-11] defined in the policy, remember to assign the [Private DNS Zone Contributor role][link-8] role in the subscription/resource group where the private DNS zones are hosted to the [managed identity created by the `DeployIfNotExists` policy assignment][link-9] that will be responsible to create and manage the private endpoint DNS record in the private DNS zone. This is because the private endpoint is located in the application owner Azure subscription, while the private DNS zone is located in a different subscription (such as central connectivity subscription).
 
 Once the platform team finishes this configuration, Azure subscriptions from applications teams are ready for them to create Azure PaaS services with private endpoint access exclusively, and ensuring the DNS records for private endpoints are automatically registered (and removed once private endpoint is deleted) from corresponding private DNS zones.
 
@@ -314,6 +314,7 @@ If an application owner deletes the private endpoint, the corresponding records 
 [link-8]: /azure/dns/dns-protect-private-zones-recordsets
 [link-9]: /azure/governance/policy/how-to/remediate-resources
 [link-10]: /azure/governance/policy/overview
+[link-11]: /azure/governance/policy/how-to/remediate-resources#configure-policy-definition
 [image-1]: ./media/private-link-example-central-dns.png
 [image-2]: ./media/create-private-dns-zones.jpg
 [image-3]: ./media/create-storage-account-blob.jpg
