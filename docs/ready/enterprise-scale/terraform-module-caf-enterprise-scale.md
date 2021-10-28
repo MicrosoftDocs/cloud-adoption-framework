@@ -164,7 +164,7 @@ It also ensures the specified Subscription is placed in the right Management Gro
 ![Enterprise-scale Identity Landing Zone Architecture](./media/terraform-caf-enterprise-scale-identity.png)
 
 No other resources are deployed by this capability.
-If you'd like to update policy settings relating to the `identity` Management Group, you can do so via the `configure_identity_resources` input variable.
+If you'd like to update policy settings related to the `identity` Management Group, you can do so via the `configure_identity_resources` input variable.
 
 For more information about how to use this capability, see the [Deploy Identity Resources][wiki_deploy_identity_resources] wiki page.
 
@@ -190,7 +190,7 @@ You can view module and provider dependencies on the [Dependencies][caf-es-depen
 > New major releases will ensure compatibility with the latest Terraform and AzureRM provider versions.
 > It may result in a change in the minimum supported versions.
 >
-> To get the latest features, ensure the module version is set to the latest.
+> To get the latest features, ensure the module version is set to the latest version.
 > If you're upgrading to a later version of the module, don't forget to run `terraform init -upgrade`.
 >
 > ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/Azure/terraform-azurerm-caf-enterprise-scale?style=flat&logo=github)
@@ -267,7 +267,7 @@ module "enterprise_scale" {
 The [Terraform module for Cloud Adoption Framework enterprise-scale][caf-enterprise-scale] provides an accelerated path to building out your enterprise-scale landing zones.
 It also provides the flexibility to expand and customize your deployment while maintaining a simplified approach to managing the configuration of each landing zone.
 
-To find out more, [review the module on Terraform Registry][caf-enterprise-scale], and explore the [module documentation on GitHub][gh-wiki].
+To find out more, [review the module on Terraform Registry][caf-enterprise-scale], and explore the [module documentation][gh-wiki] on GitHub.
 We'll post more examples and tutorials there that will cover how to customize your deployment.
 
 Learn how to [Deploy the Microsoft Cloud Adoption Framework Enterprise-Scale Module][hcl-deploy-es] through HashiCorp Learn.
