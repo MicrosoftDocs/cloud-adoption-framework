@@ -16,28 +16,28 @@ Cost governance is the continuous process of implementing policies to control co
 
 ## How much does Azure Arc-enabled servers cost?
 Azure Arc-enabled servers provides two types of services:
-1. **Azure Arc control plane functionality**, which is provided at no extra cost including:
+1. Azure Arc control plane functionality, which is provided at no extra cost including:
    - Resource organization through Azure management groups and tags.
    - Searching and indexing through Azure Resource Graph.
    - Access control through Azure RBAC at subscription or resource group level.
    - Environments and automation through templates and extensions.
-   - Update management\*
+   - Update management
 
-2. **Azure services used on the Azure Arc-enabled servers**, which incur costs according to their usage including:
+2. Azure services used in conjunction to Azure Arc-enabled servers (but not limited to), which incur costs according to their usage including:
    - Azure Monitor
-   - Azure Defender for Servers (formerly Azure Security Center Standard tier)
+   - Azure Defender for Servers
    - Azure Sentinel
-   - Azure Policy Guest Configuration
+   - Azure Policy guest configuration
    - Azure Automation state configuration, change tracking and inventory
    - Azure Automation hybrid runbook workers
    - Azure Key Vault
-   - Azure Private Links
+   - Azure Private Link
 
 > [!Note]
 > Azure Automation Update Management is a free service, but the log data collected for it is billed with your other Azure Monitor usage.
 
 > [!Note]
-> You are charged only once for any combination of Azure Policy Guest Configuration, Azure Automation state configuration, change tracking and inventory.
+> You are charged only once for any combination of Azure Policy guest configuration, Azure Automation state configuration, change tracking and inventory.
 
 ## Design considerations
 ### Azure Monitor
@@ -61,7 +61,7 @@ Azure Sentinel provides intelligent security analytics across your enterprise. T
 Review [Azure Sentinel pricing](https://azure.microsoft.com/pricing/details/azure-sentinel/).
 
 
-### Azure Policy Guest Configuration
+### Azure Policy guest configuration
 Azure Policy Guest Configuration can audit and enforce operating system and application settings across your fleet of servers. Azure Policy guest configuration is billed per server per month and includes usage rights for Azure Automation state configuration, change tracking and inventory.
 
 Review the [recommendations for governance and compliance](./eslz-security-governance-and-compliance.md) and [Azure Policy Guest Configuration pricing](https://azure.microsoft.com/pricing/details/azure-arc/).
