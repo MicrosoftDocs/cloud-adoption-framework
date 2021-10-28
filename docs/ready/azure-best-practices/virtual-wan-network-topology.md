@@ -47,11 +47,13 @@ Explore key design considerations and recommendations surrounding virtual wide a
 
 - A single Azure Virtual WAN hub can support a specific maximum number of VM workloads across all directly attached VNets, which are documented in [Azure Virtual WAN limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#virtual-wan-limits).
 
+- Multiple Azure Virtual WAN hubs can be deployed in the same region to scale beyond single hub limits.
+
 - Virtual WAN integrates with various [SD-WAN providers](/azure/virtual-wan/virtual-wan-locations-partners).
 
 - Many managed service providers offer [managed services](/azure/networking/networking-partners-msp) for Virtual WAN.
 
-- User VPN (Point-to-Site) gateways in Virtual WAN can scale up to 20-Gbps aggregated throughput and 10,000 client connections per virtual hub.
+- User VPN (Point-to-Site) gateways in Virtual WAN can scale up to 20-Gbps aggregated throughput and 100,000 client connections per virtual hub, as documented in the  [Azure Virtual WAN limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#virtual-wan-limits) page.
 
 - Site-to-site VPN gateways in Virtual WAN can scale up to 20-Gbps aggregated throughput.
 

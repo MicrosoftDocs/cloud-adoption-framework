@@ -22,7 +22,7 @@ This section explores key recommendations to achieve network encryption between 
 
 - When you're using ExpressRoute with private peering, traffic isn't currently encrypted.
 
-- Configuring a Site-to-Site VPN connection over ExpressRoute private peering is now [in preview](/azure/vpn-gateway/site-to-site-vpn-private-peering).
+- Its is possible to configure a Site-to-Site [VPN connection over ExpressRoute private peering](/azure/vpn-gateway/site-to-site-vpn-private-peering).
 
 - You can apply [media access control security (MACsec)](/azure/expressroute/expressroute-howto-MACsec) encryption to ExpressRoute Direct to achieve network encryption.
 
@@ -44,7 +44,7 @@ This section explores key recommendations to achieve network encryption between 
 
   - Use partner NVAs to establish IPsec tunnels over ExpressRoute private peering.
   - Establish a VPN tunnel over ExpressRoute with Microsoft peering.
-  - Evaluate the capability to configure a Site-to-Site VPN connection over ExpressRoute private peering ([in preview](/azure/vpn-gateway/site-to-site-vpn-private-peering).
+  - Evaluate the capability to configure a Site-to-Site [VPN connection over ExpressRoute private peering](/azure/vpn-gateway/site-to-site-vpn-private-peering).
 
 - If traffic between Azure regions must be encrypted, use global VNet peering to connect virtual networks across regions.
 

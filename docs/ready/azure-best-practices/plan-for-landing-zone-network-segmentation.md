@@ -16,15 +16,15 @@ This section explores key recommendations to deliver highly secure internal netw
 
 **Design considerations:**
 
-- The zero-trust model assumes a breached state and verifies each request as though it originates from an uncontrolled network.
+- The [zero-trust model](https://docs.microsoft.com/security/zero-trust/deploy/networks) assumes a breached state and verifies each request as though it originates from an uncontrolled network.
 
 - An advanced zero-trust network implementation employs fully distributed ingress/egress cloud micro-perimeters and deeper micro-segmentation.
 
-- Network security groups can use Azure service tags to facilitate connectivity to Azure PaaS services.
+- Network Security Groups ([NSG](https://docs.microsoft.com/azure/virtual-network/network-security-groups-overview)) can use Azure [Service Tags](https://docs.microsoft.com/azure/virtual-network/service-tags-overview) to facilitate connectivity to Azure PaaS services.
 
-- Application security groups don't span or provide protection across virtual networks.
+- Application Security Groups ([ASG](https://docs.microsoft.com/azure/virtual-network/application-security-groups)) don't span or provide protection across virtual networks.
 
-- NSG flow logs are now supported through Azure Resource Manager templates.
+- NSG [Flow Logs](https://docs.microsoft.com/azure/network-watcher/network-watcher-nsg-flow-logging-overview) are now supported through Azure Resource Manager templates.
 
 **Design recommendations:**
 
@@ -32,11 +32,13 @@ This section explores key recommendations to deliver highly secure internal netw
 
 - Use NSGs to help protect traffic across subnets, as well as east/west traffic across the platform (traffic between landing zones).
 
-- The application team should use application security groups at the subnet-level NSGs to help protect multitier VMs within the landing zone.
+- The application team should use Application Security Groups at the subnet-level NSGs to help protect multitier VMs within the landing zone.
 
-- Use NSGs and application security groups to micro-segment traffic within the landing zone and avoid using a central NVA to filter traffic flows.
+    ![Diagram that shows how Application Security Group works.](./media/azure-asg.png)
 
-- Enable NSG flow logs and feed them into Traffic Analytics to gain insights into internal and external traffic flows.
+- Use NSGs and Application Security Groups to micro-segment traffic within the landing zone and avoid using a central NVA to filter traffic flows.
+
+- Enable NSG Flow Logs and feed them into [Traffic Analytics](https://docs.microsoft.com/azure/network-watcher/traffic-analytics) to gain insights into internal and external traffic flows. Flow Logs should be enabled on all critical VNETs/subnets in your subscription as an audit-ability and security best practice.
 
 - Use NSGs to selectively allow connectivity between landing zones.
 

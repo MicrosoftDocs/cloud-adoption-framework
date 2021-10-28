@@ -46,7 +46,7 @@ Explore key design considerations and recommendation surrounding network topolog
 
   - Deploy and manage UDRs if they need to be inspected or logged for traffic across virtual networks.
 
-- VPN gateways with Border Gateway Protocol (BGP) are transitive within Azure and on-premises, but they don't provide transitive access to networks connected via ExpressRoute.
+- VPN gateways with Border Gateway Protocol (BGP) are transitive within Azure and on-premises, but they don't provide transitive access to networks connected via ExpressRoute by default. If this capability is required, [Azure Route Server](https://docs.microsoft.com/azure/route-server/overview) should be considered.
 
 - When multiple ExpressRoute circuits are connected to the same virtual network, use connection weights and BGP techniques to ensure an optimal path for traffic between on-premises and Azure. For more information, see [Optimize ExpressRoute routing](/azure/expressroute/expressroute-optimize-routing).
 
@@ -57,6 +57,8 @@ Explore key design considerations and recommendation surrounding network topolog
 - ExpressRoute is bound to certain limits; there are a maximum number of ExpressRoute connections per ExpressRoute gateway and ExpressRoute private peering can identify a maximum number of routes from Azure to on-premises. See [ExpressRoute limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#expressroute-limits) for more information about these limits.
 
 - A VPN gateway's maximum aggregated throughput is 10 gigabits per second. It supports up to 30 site-to-site or network-to-network tunnels.
+
+- If NVA is part of the architecture, Azure Route Server can be considered to simplify dynamic routing between your network virtual appliance (NVA) and your virtual network. It allows you to exchange routing information directly through Border Gateway Protocol (BGP) routing protocol between any NVA that supports the BGP routing protocol and the Azure Software Defined Network (SDN) in the Azure Virtual Network (VNET) without the need to manually configure or maintain route tables.
 
 **Design recommendations:**
 
@@ -112,7 +114,11 @@ The following figure shows this topology.
 
   - All Landing Zone and Platform virtual networks should use this plan.
 
-- Use your existing network, multiprotocol label switching, and SD-WAN to connect branch locations with corporate headquarters. Transit in Azure between ExpressRoute and VPN gateways isn't supported.
+- Use your existing network, multiprotocol label switching, and SD-WAN to connect branch locations with corporate headquarters. Transit in Azure between ExpressRoute and VPN gateways isn't supported if Azure Route Server is not used.
+
+- If transitivity between ExpressRoute and VPN gateways is required in Hub & Spoke scenario, Azure Route Server should be used as described in [this](https://docs.microsoft.com/azure/route-server/expressroute-vpn-support) reference scenario.
+
+    ![Diagram that illustrates transitivity between ER and VPN gateways with Azure Route Server.](./media/route-server-transitivity.png)
 
 - When you have hub-and-spoke networks in multiple Azure regions and a few landing zones need to connect across regions, use global virtual network peering to directly connect landing zone virtual networks that need to route traffic to each other. Depending on the communicating VM's SKU, global virtual network peering can provide high network throughput. Traffic between directly peered landing zone virtual networks will bypass NVAs within hub virtual networks. This would also be subject to [limitations on global virtual network peering](/azure/virtual-network/virtual-network-peering-overview#constraints-for-peered-virtual-networks).
 
@@ -121,7 +127,7 @@ The following figure shows this topology.
   - Global virtual network peering provides a low latency and high throughput connection but generates [traffic fees](/azure/virtual-network/virtual-network-peering-overview#pricing).
   
   - Routing via ExpressRoute might lead to increased latency (due to MSEE hairpin) and throughput will be constrained to the [ExpressRoute Gateway SKU](/azure/expressroute/expressroute-about-virtual-network-gateways#gwsku).
-   
+
 The following figure shows both options:
 
  ![Diagram that illustrates options for hub-to-hub connectivity.](./media/hub-to-hub-er-or-peering.png)
