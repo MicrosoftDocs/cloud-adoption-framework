@@ -45,7 +45,7 @@ Azure Arc-enabled servers provides two types of services:
 
 Features of Azure Monitor that are automatically enabled such as collection of standard metrics, activity logs and insights are provided at no cost.
 
-Review [recommendations for monitoring](./eslz-management-and-monitoring-arc-server) to decide on your monitoring requirements and review [Azure Monitor pricing](https://azure.microsoft.com/pricing/details/monitor/).
+Review [recommendations for monitoring](./eslz-management-and-monitoring-arc-server.md) to decide on your monitoring requirements and review [Azure Monitor pricing](https://azure.microsoft.com/pricing/details/monitor/).
 
 ### Azure Security Center
 Azure Security Center is offered in [two modes](/azure/security-center/security-center-pricing):
@@ -53,7 +53,7 @@ Azure Security Center is offered in [two modes](/azure/security-center/security-
 
 - **Azure Defender ENABLED (Paid)** - Enabling [Azure Defender](/azure/security-center/azure-defender) extends the capabilities of Azure Defender for Servers to your Azure Arc-enabled servers and Azure resources, providing unified security management and threat protection.
 
-Review the [recommendations for security and compliance](./eslz-security-governance-and-compliance) and [Azure Defender for Servers pricing](https://azure.microsoft.com/pricing/details/azure-defender/).
+Review the [recommendations for security and compliance](./eslz-security-governance-and-compliance.md) and [Azure Defender for Servers pricing](https://azure.microsoft.com/pricing/details/azure-defender/).
 
 ### Azure Sentinel
 Azure Sentinel provides intelligent security analytics across your enterprise. The data for this analysis is stored in an Azure Monitor Log Analytics workspace. Azure Sentinel is billed based on the volume of data ingested for analysis in Azure Sentinel and stored in the Azure Monitor Log Analytics workspace for your Azure Arc-enabled servers.
@@ -64,13 +64,13 @@ Review [Azure Sentinel pricing](https://azure.microsoft.com/pricing/details/azur
 ### Azure Policy Guest Configuration
 Azure Policy Guest Configuration can audit and enforce operating system and application settings across your fleet of servers. Azure Policy guest configuration is billed per server per month and includes usage rights for Azure Automation state configuration, change tracking and inventory.
 
-Review the [recommendations for governance and compliance](./eslz-security-governance-and-compliance) and [Azure Policy Guest Configuration pricing](https://azure.microsoft.com/pricing/details/azure-arc/).
+Review the [recommendations for governance and compliance](./eslz-security-governance-and-compliance.md) and [Azure Policy Guest Configuration pricing](https://azure.microsoft.com/pricing/details/azure-arc/).
 
 ### Azure Automation Configuration Management
 
 Azure Automation Configuration Management includes software change tracking and inventory for your servers as well as state configuration to configure your servers at-scale with PowerShell Desired State Configuration. Azure Automation Configuration Management is billed per server per month and includes usage rights for Azure Policy Guest Configuration. 
 
-Review [recommendations for automation](./eslz-automation-arc-server) and [Azure Automation pricing](https://azure.microsoft.com/pricing/details/automation/).
+Review [recommendations for automation](./eslz-automation-arc-server.md) and [Azure Automation pricing](https://azure.microsoft.com/pricing/details/automation/).
 
 ### Azure Key Vault
 
@@ -81,7 +81,7 @@ Review [Azure Key Vault pricing](https://azure.microsoft.com/pricing/details/key
 ### Azure Private Link
 You can use [Azure Private Link](/azure/azure-arc/servers/private-link-security) to ensure data coming from your Azure Arc-enabled servers is only accessed through authorized private networks. Azure Private Link is billed by endpoint and inbound/outbound data processed.
 
-Review [recommendations for connectivity](./eslz-arc-servers-connectivity) and [Azure Private Link pricing](https://azure.microsoft.com/pricing/details/private-link/).
+Review [recommendations for connectivity](./eslz-arc-servers-connectivity.md) and [Azure Private Link pricing](https://azure.microsoft.com/pricing/details/private-link/).
 
 ## Design recommendations
 Here are some general design recommendations for Azure Arc-enabled servers cost governance:
