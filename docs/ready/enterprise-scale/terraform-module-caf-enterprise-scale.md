@@ -79,7 +79,7 @@ The following sections outline the different groups of resource types deployed a
 
 The core capability of this module deploys the foundations of the [Cloud Adoption Framework enterprise-scale landing zone architecture][msdocs-alz-architecture], with a focus on the central [resource hierarchy and governance][es-hierarchy]:
 
-[ ![Enterprise-scale Core Landing Zones Architecture](./media/terraform-caf-enterprise-scale-overview.png) ](./media/terraform-caf-enterprise-scale-overview.png#lightbox)
+![Enterprise-scale Core Landing Zones Architecture](./media/terraform-caf-enterprise-scale-overview.png)
 
 When using the core resources capability, the module deploys and manages the following resource types:
 
@@ -102,7 +102,7 @@ The exact number of resources created depends on the module configuration. In ge
 
 The module provides an option to enable deployment of [management and monitoring][es-management] resources into the specified Subscription as described on the [Provider Configuration][wiki_provider_configuration] wiki page. It also ensures the specified Subscription is placed in the right Management Group. The module provides the benefit of managing the full lifecycle of these resources using Terraform, with native integration, into the corresponding policy assignments to ensure full policy compliance.
 
-[ ![Enterprise-scale Management Landing Zone Architecture](./media/terraform-caf-enterprise-scale-management.png) ](./media/terraform-caf-enterprise-scale-management.png#lightbox)
+![Enterprise-scale Management Landing Zone Architecture](./media/terraform-caf-enterprise-scale-management.png)
 
 When you enable the Management resources capability, the module deploys and manages the following resource types:
 
@@ -120,7 +120,7 @@ For more information about how to use this capability, see the [Deploy Managemen
 
 The module provides an option to enable deployment of [network topology and connectivity][es-connectivity] resources into the current Subscription context. It also ensures the specified Subscription is placed in the right Management Group. This capability currently enables deployment of a multi-region Hub & Spoke network topology. Virtual WAN is on the product roadmap.
 
-[ ![Enterprise-scale Connectivity Landing Zone Architecture](./media/terraform-caf-enterprise-scale-connectivity.png) ](./media/terraform-caf-enterprise-scale-connectivity.png#lightbox)
+![Enterprise-scale Connectivity Landing Zone Architecture](./media/terraform-caf-enterprise-scale-connectivity.png)
 
 > [!NOTE]
 > The module currently only configures the networking hub and dependent resources for the `connectivity` Subscription.
@@ -147,7 +147,7 @@ For more information about how to use this capability, see the [Deploy Connectiv
 
 The module provides an option to enable deployment of [identity and access management][es-identity] resources into the current Subscription context. It also ensures the specified Subscription is placed in the right Management Group.
 
-[ ![Enterprise-scale Identity Landing Zone Architecture](./media/terraform-caf-enterprise-scale-identity.png) ](./media/terraform-caf-enterprise-scale-identity.png#lightbox)
+![Enterprise-scale Identity Landing Zone Architecture](./media/terraform-caf-enterprise-scale-identity.png)
 
 No other resources are deployed by this capability. If you'd like to update policy settings relating to the `identity` Management Group, you can do so via the `configure_identity_resources` input variable.
 
