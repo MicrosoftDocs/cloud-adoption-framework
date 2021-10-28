@@ -140,6 +140,6 @@ Here are some general design recommendations for Azure Arc-enabled servers cost 
 ![Azure Key Vault insights](./media/key-vault-insights.png)
 ### Azure Private Link
 
-- Use [Azure Cost Management and Billing](/azure/cost-management-billing/cost-management-billing-overview) to monitor the usage of Private Links used with Azure Arc-enabled servers.
+- Use [Azure Cost Management and Billing](/azure/cost-management-billing/cost-management-billing-overview) to monitor the usage of Private Link used with Azure Arc-enabled servers.
 
 ![Azure private link costs](./media/Private-endpoint-costs.png)
