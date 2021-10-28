@@ -3,7 +3,7 @@ title: Terraform module for Cloud Adoption Framework enterprise-scale
 description: Learn how to use the Terraform module for Cloud Adoption Framework enterprise-scale to deploy Azure landing zones.
 author: krowlandson
 ms.author: brblanch
-ms.date: 10/27/2021
+ms.date: 10/28/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -104,7 +104,8 @@ When using the core resources capability, the module deploys and manages the fol
 The exact number of resources created depends on the module configuration. In general, you can expect the module to create upwards of 180 resources for a default installation, based on the [example below](#simple-example).
 
 > [!TIP]
-> None of these resources get deployed at the Subscription scope, but Terraform still requires a Subscription to establish an authenticated session with Azure. For more information on authenticating with Azure, see [Azure Provider: Authenticating using the Azure CLI](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/azure_cli).
+> None of these resources get deployed at the Subscription scope, but Terraform still requires a Subscription to establish an authenticated session with Azure.
+> For more information on authenticating with Azure, see [Azure Provider: Authenticating using the Azure CLI](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/azure_cli).
 
 ## Management resources
 
@@ -185,9 +186,12 @@ You can view module and provider dependencies on the [Dependencies][caf-es-depen
 >
 > We generally recommend pinning to specific versions, and testing thoroughly before upgrading.
 >
-> We will release major versions of the module when changes are needed. New major releases will ensure compatibility with the latest Terraform and AzureRM provider versions. It may result in a change in the minimum supported versions.
+> We will release major versions of the module when changes are needed.
+> New major releases will ensure compatibility with the latest Terraform and AzureRM provider versions.
+> It may result in a change in the minimum supported versions.
 >
-> To get the latest features, ensure the module version is set to the latest. If you're upgrading to a later version of the module, don't forget to run `terraform init -upgrade`.
+> To get the latest features, ensure the module version is set to the latest.
+> If you're upgrading to a later version of the module, don't forget to run `terraform init -upgrade`.
 >
 > ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/Azure/terraform-azurerm-caf-enterprise-scale?style=flat&logo=github)
 
