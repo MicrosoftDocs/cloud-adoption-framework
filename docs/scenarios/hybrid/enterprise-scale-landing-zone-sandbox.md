@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-hybrid
 
 # Azure Arc-enabled servers enterprise-scale sandbox
 
-Working with Azure Arc means that you are about to onboard infrastructure assets that are located outside of Azure or deploy Azure services to any infrastructure, either on-premises or in a multi-cloud environment. 
+Working with Azure Arc means that you are onboarding infrastructure assets that are located outside of Azure or deploying Azure services to any infrastructure, either on-premises or in a multi-cloud environment. 
 
 Azure Arc-enabled servers enable you to manage your Windows and Linux physical servers and virtual machines hosted outside of Azure, on your corporate network, or other cloud providers. This management experience is designed to be consistent with how you manage native Azure virtual machines.
 
