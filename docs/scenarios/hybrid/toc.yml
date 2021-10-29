@@ -38,8 +38,10 @@ items:
         href: eslz-cost-governance.md
     - name: Implementation options
       items:
-      - name: Start small with basic VM management
-        href: /azure/architecture/hybrid/azure-arc-hybrid-config?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
+      # - name: Start small with basic VM management
+      #   href: /azure/architecture/hybrid/azure-arc-hybrid-config?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
+      - name: Start with a Sandbox deployment
+        href: enterprise-scale-landing-zone-sandbox.md      
       - name: Enterprise-scale landing zones for hybrid
         href: enterprise-scale-landing-zone.md
 
