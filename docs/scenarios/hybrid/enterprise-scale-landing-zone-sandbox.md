@@ -20,7 +20,7 @@ To quickly practice your skills with an Azure Arc-enabled servers environment, w
 
 ## Enterprise-Scale landing zone sandbox subscription
 
-The ArcBox solution is designed to run in your enterprise-scale sandbox subscription and will bootstrap all the required Azure resources, contained in a single resource group.
+The ArcBox solution is designed to run in your enterprise-scale sandbox subscription and will bootstrap all the required Azure resources inside a single resource group.
 
 ![ArcBox in a sandbox subscription](./media/arcbox-sandbox-subscription.png)
 
