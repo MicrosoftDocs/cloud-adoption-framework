@@ -14,7 +14,7 @@ ms.custom: think-tank, e2e-hybrid
 
 Working with Azure Arc means that you are onboarding infrastructure assets that are located outside of Azure or deploying Azure services to any infrastructure, either on-premises or in a multi-cloud environment. 
 
-Azure Arc-enabled servers enable you to manage your Windows and Linux physical servers and virtual machines hosted outside of Azure, on your corporate network, or other cloud providers. This management experience is designed to be consistent with how you manage native Azure virtual machines.
+Azure Arc-enabled servers enables you to manage your Windows and Linux physical servers and virtual machines hosted outside of Azure, on your corporate network, or other cloud providers. This management experience is designed to be consistent with how you manage native Azure virtual machines.
 
 To quickly practice your skills with an Azure Arc-enabled servers environment, we created an automated, easy-to-deploy sandbox solution for all things Azure Arc named “ArcBox”, which is powered by the Azure Arc Jumpstart project. ArcBox is designed to be completely self-contained within a single Azure subscription and resource group, which will make it easy for a user to get hands-on with the Azure Arc-enabled servers technology with nothing more than an available Azure subscription.
 
