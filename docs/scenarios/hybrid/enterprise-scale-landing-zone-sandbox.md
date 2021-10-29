@@ -1,7 +1,7 @@
 ---
 title: Enterprise-Scale Azure Arc sandbox
 description: Learn how to deploy Azure Arc enterprise-scale sandbox to accelerate adoption of hybrid or multi-cloud architectures.
-author: LiorKamrat
+author: likamrat
 ms.author: doalle
 ms.date: 10/29/2021
 ms.topic: conceptual
@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-hybrid
 
 # Azure Arc-enabled servers enterprise-scale sandbox
 
-Working with Azure Arc means that you are onboarding infrastructure assets that are located outside of Azure or deploying Azure services to any infrastructure, either on-premises or in a multi-cloud environment. 
+Working with Azure Arc means that you are onboarding infrastructure assets that are located outside of Azure or deploying Azure services to any infrastructure, either on-premises or in a multi-cloud environment.
 
 Azure Arc-enabled servers enables you to manage your Windows and Linux physical servers and virtual machines hosted outside of Azure, on your corporate network, or other cloud providers. This management experience is designed to be consistent with how you manage native Azure virtual machines.
 
@@ -35,7 +35,7 @@ The ArcBox solution can be deployed using one of the four methods:
 - Azure Resource Manager (ARM) template using the Azure CLI
 - Azure Resource Manager (ARM) template using the Azure portal
 
-Depending on the desired deployment method, you are required to install either [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) or [Terraform CLI](https://learn.hashicorp.com/tutorials/terraform/install-cli).
+Depending on the desired deployment method, you are required to install either [Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli) or [Terraform CLI](https://learn.hashicorp.com/tutorials/terraform/install-cli).
 
 ## Next steps
 
