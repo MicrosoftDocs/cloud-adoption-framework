@@ -28,7 +28,7 @@ Once deployed, the resource group will contain five Azure Arc-enabled servers re
 
 ## Deployment options & prerequisites
 
-The ArcBox solution can be deployed in one of the four methods available:
+The ArcBox solution can be deployed using one of the four methods:
 
 - Azure Bicep using the Azure CLI
 - Terraform using the Terraform CLI
