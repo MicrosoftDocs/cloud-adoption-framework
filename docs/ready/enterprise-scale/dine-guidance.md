@@ -65,7 +65,7 @@ If you have read the above and still are certain that DINE policies are unable t
 >[!NOTE]
 > This is not a permanent operation, and the policies can be re-enabled at any time by a member of your platform team if you later decide to utilize DINE or Modify policies.
 >  
-> More detail on this can be found below in phases 2 & 3.
+> More detail on this can be found below in phases [2](#phase-2-enable-dinemodify-policies-on-a-specific-policy-or-reduced-scope-setting-enforcement-mode-to-default-on-policy-assignments) & [3](#phase-3-enabling-dinemodify-policies-everywhere-setting-enforcementmode-to-default-on-policy-assignments).
 
 ### Approach Overview
 
