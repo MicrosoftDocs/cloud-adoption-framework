@@ -195,6 +195,9 @@ Cost transparency across a technical estate is a critical management challenge f
 
 ## Policy-driven governance
 
+>[!NOTE]
+> Looking for guidance for DeployIfNotExists policies in environments were you may be unable to or want to enable them? If so, see [What if we cannot or are not yet ready to utilize DeployIfNotExists (DINE) policies?](/azure/cloud-adoption-framework/ready/enterprise-scale/dine-guidance)
+
 Organizations can use enterprise-scale Azure policies to enforce the following governance requirements:
 
 - **Prevent public IP-based services:**

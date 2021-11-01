@@ -280,8 +280,9 @@ items:
           - name: Identity and access management
             href: ready/enterprise-scale/identity-and-access-management.md
           - name: Management group and subscription organization
-            href: ready/enterprise-scale/management-group-and-subscription-organization.md
             items: 
+            - name: Overview & Guidance
+              href: ready/enterprise-scale/management-group-and-subscription-organization.md
             - name: What if we cannot or are not yet ready to utilize DeployIfNotExists (DINE) policies?
               href: ready/enterprise-scale/dine-guidance.md
           - name: Network topology and connectivity
