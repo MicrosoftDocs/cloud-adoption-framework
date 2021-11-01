@@ -14,7 +14,7 @@ ms.custom: think-tank
 
 This critical design area focuses on the two highest levels of alignment across all of your azure deployments; Your enterprise agreement and association of that agreement with an Azure Active Directory (Azure AD) tenant.
 
-## Design Area review exercise
+## Design Area review
 
 **Involved roles or functions:** This design area will likely require support from one or more of the following functions or roles to make decisions and implement those decisions: [Cloud Strategy](../../../organize/cloud-strategy.md), [Cloud Platform](../../../organize/cloud-platform.md), and [Cloud Center of Excellence](../../../organize/cloud-center-of-excellence.md)
 
