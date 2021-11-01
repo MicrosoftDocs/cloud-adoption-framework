@@ -1,6 +1,6 @@
 ---
-title: Enterprise Agreement enrollments and Azure Active Directory tenants
-description: Understand Enterprise Agreement enrollments and Azure Active Directory tenants.
+title: Azure billing offers and Active Directory tenants
+description: Understand Azure billing offers and Active Directory tenants
 author: jtracey93
 ms.author: jatracey
 ms.date: 08/23/2021
@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
-# Enterprise Agreement enrollments and Azure Active Directory tenants
+# Azure billing offers and Active Directory tenants
 
 This critical design area focuses on the two highest levels of alignment across all of your azure deployments; Your enterprise agreement and association of that agreement with an Azure Active Directory (Azure AD) tenant.
 
