@@ -7,7 +7,7 @@
 
 A set of global policies and RBAC roles will provide a baseline level of governance enforcement. To meet the cloud governance team's policy requirements, implementing the governance MVP requires completing the following tasks:
 
-1. Identify the Azure Policy definitions needed to enforce business requirements. This might include using built-in definitions and creating new custom definitions. To keep up with the pace of newly released built-in definitions, there's an [atom feed](https://github.com/Azure/azure-policy/commits/master/built-in-policies.atom) of all the commits for built-in policies, which you can use for an RSS feed. Alternatively, you can check [AzAdvertizer](https://www.azadvertizer.net/). 
+1. Identify the Azure Policy definitions needed to enforce business requirements. This might include using built-in definitions and creating new custom definitions. To keep up with the pace of newly released built-in definitions, there's an [Atom feed](https://github.com/Azure/azure-policy/commits/master/built-in-policies.atom) of all the commits for built-in policies, which you can use for an RSS feed. Alternatively, you can check [`AzAdvertizer`](https://www.azadvertizer.net/).
 2. Create a blueprint definition using these built-in and custom policy and the role assignments required by the governance MVP.
 3. Apply policies and configuration globally by assigning the blueprint definition to all subscriptions.
 

@@ -86,7 +86,7 @@ Based on the observed initial and ongoing replications bandwidth patterns, Tailw
 - How much bandwidth is needed and available for replications?
 - How many VMs, on average, can be initially replicated at the same time?
 - How many VMs, on average, can be left replicating (delta replication) at the same time?
-- Is there an need to throttle replication within the replication appliances or agents?
+- Is there a need to throttle replication within the replication appliances or agents?
 
 ## Step 2: Migration cutover preparation
 
@@ -192,7 +192,7 @@ Typically, this is usually led by application owners.
 
 Now that test cases have been defined, Tailwind develops the following workflow to encompass the various scenarios it might encounter based on the needs of each application or server.
 
-The majority of Tailwind's scenarios require the second and fifth paths in the following workflow. Tailwind has many legacy servers and other servers marked as **Ready with Conditions**, which might not boot in Azure. Therefore, Tailwind will test each of those servers in an isolated VNet to ensure that each server passes the smoke test. For this, Tailwind will perform a test migration in Azure Migrate which allows for the option for automated clean up of created resources such as VMs and NICs.
+The majority of Tailwind's scenarios require the second and fifth paths in the following workflow. Tailwind has many legacy servers and other servers marked as **Ready with Conditions**, which might not boot in Azure. Therefore, Tailwind will test those servers in an isolated VNet to ensure that each server passes the smoke test. For this, Tailwind will perform a test migration in Azure Migrate which allows for the option for automated clean up of created resources such as VMs and NICs.
 
 Further, Tailwind's environment is tightly coupled which means there's a large amount of servers which are interdependent with one another, thus resulting in large migration waves. Tailwind has decided to split their large migration waves and migrate servers together which have the most strict latency requirements. As a result, some application dependencies must remain on-premises for a given migration wave. Tailwind determines that it should migrate directly into the production VNet, since that network already has connectivity back to their on-premises dependencies. In this path, Tailwind will perform necessary smoke tests in an isolated VNet and perform UAT in the production VNet. If successful, Tailwind will conclude the migration as a final cutover for the servers.
 

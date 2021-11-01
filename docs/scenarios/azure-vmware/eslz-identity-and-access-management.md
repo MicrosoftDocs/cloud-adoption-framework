@@ -12,7 +12,7 @@ ms.custom: e2e-azure-vmware, think-tank
 
 # Enterprise-scale identity and access management for Azure VMware Solution
 
-This article builds on the information found in [Identity and access management](/azure/cloud-adoption-framework/ready/enterprise-scale/identity-and-access-management) and [Azure VMware Solution identity concepts](/azure/azure-vmware/concepts-identity).
+This article builds on the information found in [Identity and access management](../../ready/enterprise-scale/identity-and-access-management.md) and [Azure VMware Solution identity concepts](/azure/azure-vmware/concepts-identity).
 
 Use this information to examine design considerations and recommendations for identity and access management that's specific to the deployment of Azure VMware Solution.
 

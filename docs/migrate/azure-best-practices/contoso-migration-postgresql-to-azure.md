@@ -42,7 +42,7 @@ After pinning down goals and requirements, Contoso designs and reviews a deploym
 
 ### Current environment
 
-PostgreSQL 9.6.7 is running on a physical Linux machine (`sql-pg-01.contoso.com`) in the Contoso datacenter. Contoso already has an Azure subscription with a Site-to-Site VPN gateway to an on-premises datacenter network.
+PostgreSQL 9.6.7 is running on a physical Linux machine (`sql-pg-01.contoso.com`) in the Contoso datacenter. Contoso already has an Azure subscription with a Site-to-Site VPN Gateway to an on-premises datacenter network.
 
 ### Proposed solution
 
@@ -131,7 +131,7 @@ To prepare, set up a virtual network to access the database. Create a virtual ne
 1. Select **+ Add**.
 1. Select the subscription and resource group for the service.
 1. Enter a name for the instance.
-1. Select the closest location to the Contoso datacenter or VPN gateway.
+1. Select the closest location to the Contoso datacenter or VPN Gateway.
 1. Select **Azure** for the service mode.
 1. Select a pricing tier.
 1. Select **Review + create**.
@@ -181,18 +181,23 @@ To prepare, set up a virtual network to access the database. Create a virtual ne
 **Migration:**
 
 1. In the Azure portal, Contoso goes to its Database Migration Service resource.
+
 1. If the service isn't started, select **Start Service**.
+
 1. Select **New Migration Project**.
 
-    ![Screenshot that shows the New Migration Project option highlighted.](./media/contoso-migration-postgresql-to-azure/azure_migration_service_new_project.png)
+    ![Screenshot that shows the **New migration project** option highlighted.](./media/contoso-migration-postgresql-to-azure/azure_migration_service_new_project.png)
     *Figure 4: Starting a new migration.*
 
 1. Select **New Activity** > **Online data migration**.
+
 1. Enter a name.
+
 1. Select **PostgreSQL** as the source.
+
 1. For the target, select **Azure Database for PostgreSQL** and then select **Save**.
 
-    ![Screenshot that shows the New migration project pane.](./media/contoso-migration-postgresql-to-azure/azure_migration_service_new_project02.png)
+    ![Screenshot that shows the **New migration project** pane.](./media/contoso-migration-postgresql-to-azure/azure_migration_service_new_project02.png)
     *Figure 5: A new migration project is highlighted.*
 
 1. Enter the source information, and select **Save**.
@@ -221,13 +226,15 @@ To prepare, set up a virtual network to access the database. Create a virtual ne
     *Figure 10: Naming and running the activity.*
 
 1. Monitor the migration. Retry it if anything fails. An example is if foreign key references were missing.
+
 1. After `Full load completed` matches the table count, select **Start Cutover**.
 
     ![Screenshot that shows monitoring the migration to start the cutover.](./media/contoso-migration-postgresql-to-azure/azure_migration_service_complete.png)
     *Figure 11: Monitoring the migration to start the cutover.*
 
 1. Stop all transactions from the source server.
-1. Select the **Confirm** check box, and then select **Apply**.
+
+1. Select the **Confirm** checkbox, and then select **Apply**.
 
     ![Screenshot that shows running the cutover.](./media/contoso-migration-postgresql-to-azure/azure_migration_service_cutover.png)
     *Figure 12: Running the cutover.*
@@ -237,14 +244,14 @@ To prepare, set up a virtual network to access the database. Create a virtual ne
     ![Screenshot that shows completing the cutover.](./media/contoso-migration-postgresql-to-azure/azure_migration_service_finished.png)
     *Figure 13: Completing the cutover.*
 
-      > [!NOTE]
-      > The previous Database Migration Service steps can also be performed via the [Azure CLI](/azure/dms/tutorial-postgresql-azure-postgresql-online).
+    > [!NOTE]
+    > The previous Database Migration Service steps can also be performed via the [Azure CLI](/azure/dms/tutorial-postgresql-azure-postgresql-online).
 
 1. Import the database schema (step 2):
 
-      ```cmd
-        psql -h {host}.postgres.database.azure.com -d dvdrental -U username -f dvdrental_schema_foreign.sql
-      ```
+   ```cmd
+   psql -h {host}.postgres.database.azure.com -d dvdrental -U username -f dvdrental_schema_foreign.sql
+   ```
 
 1. Reconfigure any applications or processes that use the on-premises database to point to the new Azure Database for PostgreSQL database instance.
 

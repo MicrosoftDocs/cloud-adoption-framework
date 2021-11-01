@@ -44,9 +44,9 @@ After pinning down their goals and requirements, Contoso designs and reviews a d
 ### Current application
 
 - The SmartHotel360 on-premises application is tiered across two VMs, `WEBVM` and `SQLVM`.
-- The VMs are located on VMware ESXi host contosohost1.contoso.com version 6.5.
+- The VMs are located on VMware ESXi host `contosohost1.contoso.com` version 6.5.
 - The VMware environment is managed by vCenter Server 6.5 (`vcenter.contoso.com`), which runs on a VM.
-- Contoso has an on-premises datacenter (contoso-datacenter), with an on-premises domain controller (contosodc1).
+- Contoso has an on-premises datacenter (`contoso-datacenter`), with an on-premises domain controller (`contosodc1`).
 - The on-premises VMs in the Contoso datacenter will be decommissioned after the migration is done.
 
 ### Proposed solution
@@ -171,7 +171,7 @@ Contoso admins set up the virtual network as follows:
 
     - Azure DNS resolver: `168.63.129.16`
 
-    ![Screenshot of Network DNS servers list.](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-dns.png)
+    ![Screenshot of network DNS servers list.](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-dns.png)
 
 **Need more help?**
 
@@ -224,7 +224,7 @@ Now, Contoso admins provision a SQL managed instance by doing the following:
 
     - A virtual cluster, in case Contoso has multiple managed instances.
 
-      ![Screenshot of new resources in the ContosoRG resource group.](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-resources.png)
+      ![Screenshot of new resources in the `ContosoRG` resource group.](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-resources.png)
 
 **Need more help?**
 
@@ -309,12 +309,12 @@ The Contoso admins now configure Azure DevOps to perform the build and release p
 
 1. They select the build number to watch the process. After it's finished, the admins can see the process feedback, and they select **Artifacts** to review the build results.
 
-    ![Screenshot of the build page and the Artifacts link for reviewing the build results.](./media/contoso-migration-refactor-web-app-sql-managed-instance/pipeline5.png)
+    ![Screenshot of the build page and the **Artifacts** link for reviewing the build results.](./media/contoso-migration-refactor-web-app-sql-managed-instance/pipeline5.png)
 
     The **Artifacts explorer** pane opens, and the **drop** folder displays the build results.
 
-    - The two .zip files are the packages that contain the applications.
-    - These .zip files are used in the release pipeline for deployment to Azure App Service.
+    - The two `.zip` files are the packages that contain the applications.
+    - These `.zip` files are used in the release pipeline for deployment to Azure App Service.
 
      ![Screenshot of the **Artifacts explorer** pane.](./media/contoso-migration-refactor-web-app-sql-managed-instance/pipeline6.png)
 
@@ -348,7 +348,7 @@ The Contoso admins now configure Azure DevOps to perform the build and release p
 
 1. They set the continuous deployment trigger to **Enabled**.
 
-    ![Screenshot showing the continuous deployment trigger set to Enabled.](./media/contoso-migration-refactor-web-app-sql-managed-instance/pipeline14.png)
+    ![Screenshot showing the continuous deployment trigger set to **Enabled**.](./media/contoso-migration-refactor-web-app-sql-managed-instance/pipeline14.png)
 
 1. The admins go back to the stage **1 job, 1 task** and then select **Deploy Azure App Service**.
 
@@ -364,15 +364,15 @@ The Contoso admins now configure Azure DevOps to perform the build and release p
 
 1. They repeat the process to publish the web app `SmartHotel.Registration.Web.zip` file to the correct web app, and then select **Save**.
 
-    ![Screenshot of the **Select a file or folder** pane for selecting the WEB file.](./media/contoso-migration-refactor-web-app-sql-managed-instance/pipeline18.png)
+    ![Screenshot of the **Select a file or folder** pane for selecting the **Web** file.](./media/contoso-migration-refactor-web-app-sql-managed-instance/pipeline18.png)
 
     The release pipeline is displayed, as shown here:
 
      ![Screenshot of the release pipeline summary.](./media/contoso-migration-refactor-web-app-sql-managed-instance/pipeline19.png)
 
-1. They go back to **Build**, select **Triggers**, and then select the **Enable continuous integration** check box. This action enables the pipeline so that when changes are committed to the code, the full build and release occur.
+1. They go back to **Build**, select **Triggers**, and then select the **Enable continuous integration** checkbox. This action enables the pipeline so that when changes are committed to the code, the full build and release occur.
 
-    ![Screenshot highlighting the **Enable continuous integration** check box.](./media/contoso-migration-refactor-web-app-sql-managed-instance/pipeline20.png)
+    ![Screenshot highlighting the **Enable continuous integration** checkbox.](./media/contoso-migration-refactor-web-app-sql-managed-instance/pipeline20.png)
 
 1. They select **Save & Queue** to run the full pipeline. A new build is triggered, which in turn creates the first release of the application to the Azure App Service.
 
@@ -380,7 +380,7 @@ The Contoso admins now configure Azure DevOps to perform the build and release p
 
 1. Contoso admins can follow the build and release pipeline process from Azure DevOps. After the build finishes, the release starts.
 
-    ![Screenshot of the build and release app.](./media/contoso-migration-refactor-web-app-sql-managed-instance/pipeline22.png)
+    ![Screenshot of build and release.](./media/contoso-migration-refactor-web-app-sql-managed-instance/pipeline22.png)
 
 1. After the pipeline finishes, both sites have been deployed and the application is up and running online.
 

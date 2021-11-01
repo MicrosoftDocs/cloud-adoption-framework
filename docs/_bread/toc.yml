@@ -62,8 +62,6 @@ items:
       tocHref: /azure/cloud-adoption-framework/industry/retail/
       topicHref: /azure/cloud-adoption-framework/industry/retail
     - name: Resources
-      tocHref: /azure/cloud-adoption-framework/resources/
-      topicHref: /azure/cloud-adoption-framework/resources
       items:
       - name: Decision guides
         tocHref: /azure/cloud-adoption-framework/decision-guides/
