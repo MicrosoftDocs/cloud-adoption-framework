@@ -25,9 +25,9 @@ Ask basic security questions during the Azure AD design phase, such as how your 
 
 **Design recommendations:**
 
-- Base using Azure single sign-on on the selected [planning topology](/azure/active-directory/hybrid/plan-connect-topologies).
+- Define your Azure single sign-on strategy, using Azure AD Connect, based on one of the supported [topologies](/azure/active-directory/hybrid/plan-connect-topologies).
 
-- If your organization doesn't have an identity infrastructure, start by implementing an Azure-AD-only identity deployment. Deployment with [Azure AD Domain Services](/azure/active-directory-domain-services) and [Microsoft Enterprise Mobility + Security](/mem/intune/fundamentals/what-is-intune) provides end-to-end protection for SaaS applications, enterprise applications, and devices.
+- If your organization doesn't have an identity infrastructure, start by implementing an Azure AD only identity deployment. Deployment with [Azure AD Domain Services](/azure/active-directory-domain-services) and [Microsoft Enterprise Mobility + Security](/mem/intune/fundamentals/what-is-intune) provides end-to-end protection for SaaS applications, enterprise applications, and devices.
 
 - [Azure AD multifactor authentication](/azure/active-directory/authentication/concept-mfa-howitworks) provides another layer of security and authentication. For more security, also enforce [conditional access policies](/azure/active-directory/conditional-access/overview) for all privileged accounts.
 
@@ -35,7 +35,8 @@ Ask basic security questions during the Azure AD design phase, such as how your 
 
 - Use [Azure AD Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) to manage identities and access.
 
+- Send all Azure AD diagnostic logs to a central Azure Monitor Log Analytics Workspace following the guidance here: [Integrate Azure AD logs with Azure Monitor logs](/azure/active-directory/reports-monitoring/howto-integrate-activity-logs-with-log-analytics)
+
 - Avoid creating multiple Azure AD tenants. For further information, see [Testing approach for enterprise scale](../../enterprise-scale/testing-approach.md) and [Cloud Adoption Framework Azure best practices guidance to standardize on a single directory and identity](/secure/security-top-10.md#9-architecture-standardize-on-a-single-directory-and-identity).
 
 - Use [Azure Lighthouse](/azure/lighthouse/overview) to grant third parties/partners access to Azure resources in customer Azure AD tenants and centralized access to Azure resources in multitenant Azure AD architectures.
-

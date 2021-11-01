@@ -58,4 +58,4 @@ The Microsoft Customer Agreement often represents an organization's hierarchy, w
 
 - Periodically audit the agreement billing RBAC role assignments to review who has access.
 
-- For development/testing (dev/test) workloads, use the [Enterprise Dev/Test](/azure/cost-management-billing/manage/ea-portal-administration#enterprise-devtest-offer) offer, where available. Ensure you comply with the [terms of use](https://azure.microsoft.com/offers/ms-azr-0148p/).
+- For development/testing (dev/test) workloads, use the Microsoft Azure Plan for Dev/Test offer, where available. Ensure you comply with the [terms of use](https://azure.microsoft.com/offers/ms-azr-0148g/).
