@@ -12,7 +12,7 @@ ms.custom: think-tank
 
 # Azure billing offers and Active Directory tenants
 
-This critical design area focuses on the two highest levels of alignment across all of your azure deployments; Your enterprise agreement and association of that agreement with an Azure Active Directory (Azure AD) tenant.
+This critical design area focuses on the two highest levels of alignment across all of your azure deployments; Your Azure Billing offer and the association of that offer with an Azure Active Directory (Azure AD) tenant.
 
 ## Design Area review
 
