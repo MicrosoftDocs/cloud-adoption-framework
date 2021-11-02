@@ -59,9 +59,9 @@ Developing the necessary skills can be accelerated with the following learning p
 
   - [`Microsoft Azure Database Monitoring Playbook`](https://www.pluralsight.com/courses/microsoft-azure-database-playbook-monitoring) helps you learn how to implement and use monitoring of Azure SQL Database, Azure SQL Data Warehouse, and Azure Cosmos DB.
 
-  - [`Instrument Applications with Azure Monitor Application Insights`](https://www.pluralsight.com/courses/microsoft-azure-application-insights-web-application-instrument) is a deep-dive course on using the Application Insights SDK to collect telemetry and events from an application with angular and Node.js components.
+  - [`Instrument Applications with Azure Monitor Application Insights`](https://www.pluralsight.com/courses/microsoft-azure-application-insights-web-application-instrument) is a deep-dive course on using the Application Insights SDK to collect telemetry and events from an application with Angular and Node.js components.
 
-  - [`Application Debugging and Profiling`](https://www.pluralsight.com/courses/devintersection-azureai-session-31) is a recording from a Microsoft conference session on using and interpreting data provided by the Azure Monitor Application Insights snapshot debugger and profiler.
+  - [`Application Debugging and Profiling`](https://www.pluralsight.com/courses/devintersection-azureai-session-31) is a recording from a Microsoft conference session on using and interpreting data provided by Application Insights Snapshot Debugger and Application Insights Profiler.
 
 ## Data analysis
 
@@ -91,7 +91,7 @@ To learn more, review the following:
 
 - [Get started with Azure DevOps](/learn/modules/get-started-with-devops/).
 
-- [Learn about DevOps Dojo white belt foundation](/learn/paths/devops-dojo-white-belt-foundation/).
+- [Introduce DevOps Dojo: Create efficiencies that support your business](/learn/paths/devops-dojo-white-belt-foundation/).
 
 - [Evolve your DevOps practices](/learn/paths/evolve-your-devops-practices/).
 

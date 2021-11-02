@@ -73,7 +73,7 @@ This article provides guidance for creating a Windows Server 2019 VMware vSphere
 
 Before converting the VM to a template, several actions are required.
 
-1. Install VMware tools and restart.
+1. Install VMware Tools and restart.
 
     ![First screenshot of a VMware Tools installation.](./media/vmware-template/windows-template-tools-1.png)
 
@@ -101,11 +101,11 @@ Before converting the VM to a template, several actions are required.
 
 5. None of the following steps are mandatory but should be considered for a Windows template:
 
-    - Disable user account control (can be later tuned on via group policy or a PowerShell script)
-    - Turn off Windows Defender Firewall (can be later tuned on via group policy or a PowerShell script)
-    - Disable Internet Explorer Enhanced Security Configuration (ESC) (can be later tuned on via group policy or a PowerShell script)
+    - Disable user account control (can be later turned on via group policy or a PowerShell script)
+    - Turn off Windows Defender Firewall (can be later turned on via group policy or a PowerShell script)
+    - Disable Internet Explorer Enhanced Security Configuration (ESC) (can be later turned on via group policy or a PowerShell script)
     - Enable Remote Desktop Services
-    - In PowerShell, install [Chocolatey](https://chocolatey.org/install)
+    - From PowerShell, install [Chocolatey](https://chocolatey.org/install)
 
       ```powershell
       Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
