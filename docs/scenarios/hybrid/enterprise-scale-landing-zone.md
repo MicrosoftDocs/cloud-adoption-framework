@@ -53,7 +53,7 @@ You can now manage virtual machines, Kubernetes clusters, and databases as if th
 
 ## Design guidelines
 
-Guide to the critical decisions that drive the design of the Cloud Adoption Framework for Azure Enterprise Scale Landing Zone in a hybrid a multicloud environment. There are six critical design areas that need to be considered as part of your Enterprise Scale Landing Zone implementation when working with Azure Arc:
+The design guidelines provide recommendations to the critical decisions that drive the design of the Cloud Adoption Framework for Azure Enterprise Scale Landing Zone in a hybrid a multicloud environment. There are six critical design areas that need to be considered as part of your Enterprise Scale Landing Zone implementation when working with Azure Arc:
 
 * [Network topology and connectivity](./eslz-arc-servers-connectivity.md): design considerations when working with Azure Arc-enabled servers and how to securely connect them to your Enterprise Scale Landing Zone.
 * [Identity and access management](./eslz-identity-and-access-management.md): best practices for right access controls design to secure hybrid resources as they are centrally managed from Azure using Azure Arc.
