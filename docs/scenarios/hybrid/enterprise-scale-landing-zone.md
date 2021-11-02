@@ -16,7 +16,7 @@ Enterprises are currently building and running applications across a variety of 
 
 [Enterprise Scale Landing Zone provide a specific architectural approach](../../ready/enterprise-scale/architecture.md), reference architecture, and reference implementations to prepare your Landing Zones for mission-critical technology platforms and any supported workloads.
 
-[PLACEHOLDER]
+![Diagram for ESLZ](../../ready/enterprise-scale/media/lz-design.png)
 
 Enterprise Scale was built with hybrid and multicloud in mind. Supporting hybrid and multicloud requires two simple additions to the reference architecture:
 
