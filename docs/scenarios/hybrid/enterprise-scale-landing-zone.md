@@ -1,7 +1,7 @@
 ---
 title: Enterprise Scale support for hybrid and multicloud
 description: Learn how Enterprise Scale can accelerate adoption of hybrid or multi-cloud architectures.
-author: LauraNicolas
+author: lanicolas
 ms.author: doalle
 ms.date: 03/01/2021
 ms.topic: conceptual
