@@ -22,15 +22,15 @@ This may be due to number of reasons, such as:
 
 If you fit into the above example scenarios or similar, this document will help you to understand how to adopt the [Azure landing zone conceptual architecture](/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-conceptual-architecture), alongside its [design principles](/azure/cloud-adoption-framework/ready/enterprise-scale/design-principles), whilst not utilizing DINE policies, initially (can optionally choose to gradually enable in the future), that help you achieve [policy-driven governance](/azure/cloud-adoption-framework/ready/enterprise-scale/design-principles#policy-driven-governance).
 
-## DeployIfNotExists policy usage in the Azure Landing Zone?
+## DeployIfNotExists policy usage in the Azure Landing Zone
 
-, it is important to first understand what and where they are used within the Azure landing zone reference implementations and why. This will then help you to understand whether you want to completely prevent DINE policies from making changes within your Azure environment or not.
+Before diving into the steps you can take to avoid or gradually approach the usage of DINE policies, it is important to first understand what and where they are used within the Azure landing zone reference implementations and why. This will then help you to understand whether you want to completely prevent DINE policies from making changes within your Azure environment or not.
 
 ### Why?
 
 DINE policies are part of the Azure landing zone reference implementations to assist you and your organization to ultimately ensure your landing zones (also known as subscriptions) and resources within them are compliant; whilst also removing the operation burden for platform and landing zone teams as your Azure environment scales.
 
-For example, a new landing zone subscription is provisioned and placed into the “corp” management group.
+For example, a new landing zone subscription is provisioned and placed into the "corp" management group.
 
 DINE policies will then do the following to the landing zone subscription:
 
@@ -51,12 +51,12 @@ All the DINE policies assigned are there to assist you and the landing zone owne
 ## How to prevent DINE or Modify policies from making automatic changes to your Azure environment?
 
 >[!IMPORTANT]
-> Throughout the below guidance you will see reference to the “Enforcement Mode” feature being set to either of the 2 below values in either of the terms listed for them:
+> Throughout the below guidance you will see reference to the "Enforcement Mode" feature being set to either of the 2 below values in either of the terms listed for them:
 >  
 > - `Disabled` or `DoNotEnforce`
 > - `Enabled` or `Default`
 >  
-> This is due to the Azure portal using the `Disabled` and `Enabled` terms for the “Enforcement Mode” feature, whilst ARM templates and other API interfaces use `DoNotEnforce` and `Default` for the same options respectively.
+> This is due to the Azure portal using the `Disabled` and `Enabled` terms for the "Enforcement Mode" feature, whilst ARM templates and other API interfaces use `DoNotEnforce` and `Default` for the same options respectively.
 >  
 > This is outlined further here: [Enforcement Mode](/azure/governance/policy/concepts/assignment-structure#enforcement-mode)
 
@@ -125,7 +125,7 @@ As mentioned at the end of the [Approach Overview](#approach-overview), some cus
 However, if staying in this state permanently or a longer period (years etc.) then it may be better for you to adopt the [AuditIfNotExists](/azure/governance/policy/concepts/effects#auditifnotexists) (AINE) policy effect and associated definitions and setting the Enforcement Mode back to `Default`.
 
 >[!NOTE]
-> By changing to using the AINE policy effect with the associated definitions that support this effect and setting the Enforcement Mode back to `Default` you still achieve the same goal of “disabling DINE”.
+> By changing to using the AINE policy effect with the associated definitions that support this effect and setting the Enforcement Mode back to `Default` you still achieve the same goal of "disabling DINE".
 
 The reasons for changing from DINE to AINE and setting the Enforcement Mode back to `Default` as longer term or permanent approach for phase 1 is that; by doing this you will gain the Azure Activity Log entries back for policy compliance statuses which are useful for building automation workflows from these log entries in your overall platform management operations.
 
@@ -150,13 +150,13 @@ To do this you will first need to identify the policy or reduced scope that will
 >[!NOTE]
 > You may wish to review and implement a [Testing approach for enterprise-scale](/azure/cloud-adoption-framework/ready/enterprise-scale/testing-approach) platform to enable you to test policies and other platform changes in a separated management group hierarchy within the same tenant.
 >  
-> This is also known as a “Canary” deployment of Enterprise-scale.
+> This is also known as a "Canary" deployment of Enterprise-scale.
 
 Some suggested examples of scopes and policies are shown in the below table:
 
 | When you want to... | ...choose from these scopes | Example policies to use |
 | ------------------- | --------------------------- | ----------------------- |
-| - Test the DINE/Modify automated remediation capabilities <br> - Verify how your complete deployment processes and CI/CD pipelines (including tests) may be affected <br> - Verify how your workload may be affected | - Sandbox Subscription <br> - Sandbox Management Group <br> - Non-production workload landing zone Subscription <br> - [Enterprise-scale “Canary” environment](/azure/cloud-adoption-framework/ready/enterprise-scale/testing-approach) | - Configure Azure Activity logs to stream to specified Log Analytics workspace <br> - Deploy Azure Security Center configuration <br> - Enable Azure Monitor for VMs/Virtual Machine Scale Sets <br> - Deploy Diagnostic Settings to Azure Services <br>  -- Potentially only enable for specific services within the initiative |
+| - Test the DINE/Modify automated remediation capabilities <br> - Verify how your complete deployment processes and CI/CD pipelines (including tests) may be affected <br> - Verify how your workload may be affected | - Sandbox Subscription <br> - Sandbox Management Group <br> - Non-production workload landing zone Subscription <br> - [Enterprise-scale "Canary" environment](/azure/cloud-adoption-framework/ready/enterprise-scale/testing-approach) | - Configure Azure Activity logs to stream to specified Log Analytics workspace <br> - Deploy Azure Security Center configuration <br> - Enable Azure Monitor for VMs/Virtual Machine Scale Sets <br> - Deploy Diagnostic Settings to Azure Services <br>  -- Potentially only enable for specific services within the initiative |
 
 You may also decide to use a manual remediation task on a limited scope or set of resources to test how DINE or Modify policies remediation task may or may not impact your environment. Detailed guidance on creating a remediation task can be found in the Azure Policy documentation here: [Create a remediation task](/azure/governance/policy/how-to/remediate-resources#create-a-remediation-task).
 
