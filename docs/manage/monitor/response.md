@@ -1,6 +1,6 @@
 ---
 title: Cloud monitoring and response
-description: Use the Cloud Adoption Framework for Azure to learn how to determine when to use Azure Monitor or System Center Operations Manager in Microsoft Azure.
+description: Gain an understanding of the response discipline in observability and recommended approaches to acting on significant events detected.
 author: MGoedtel
 ms.author: brblanch
 ms.date: 10/28/2021
