@@ -41,7 +41,7 @@ Azure Arc-enabled servers provides two types of services:
 
 ## Design considerations
 - **Governance:** Define a governance plan for your hybrid servers that translates into Azure Policies, tags, naming standards and least-privilege controls.
-- **Azure Monitor:** [Azure Monitor](/azure/azure-monitor/overview) includes functionality for the collection and analysis of log data of your Azure Arc-enabled servers (billed by data ingestion, retention, and export), collection of metrics, health monitoring, alerts, and notifications. Features of Azure Monitor that are automatically enabled such as collection of standard metrics, activity logs and insights are provided at no cost.
+- **Azure Monitor:** [Azure Monitor](/azure/azure-monitor/overview) includes functionality for the collection and analysis of log data of your Azure Arc-enabled servers (billed by data ingestion, retention, and export), collection of metrics, health monitoring, alerts, and notifications. Features of Azure Monitor that are automatically enabled such as the collection of standard metrics, activity logs and insights are provided at no cost.
 - **Azure Security Center:**  Azure Security Center is offered in [two modes](/azure/security-center/security-center-pricing):
 
    **Azure Defender DISABLED (Free)** - [Security Center without Azure Defender](/azure/security-center/security-center-introduction) once enabled, provides security policy, continuous security assessment, and actionable security recommendations to help you protect your Azure Arc-enabled servers and Azure resources. The free tier of Azure Defender for servers does not protect Azure Arc-enabled servers.
