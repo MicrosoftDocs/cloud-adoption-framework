@@ -1,7 +1,7 @@
 ---
-title: Enterprise-Scale support for hybrid and multicloud
-description: Learn how enterprise-scale can accelerate adoption of hybrid or multi-cloud architectures.
-author: JefferyMitchell
+title: Enterprise Scale support for hybrid and multicloud
+description: Learn how Enterprise Scale can accelerate adoption of hybrid or multi-cloud architectures.
+author: lanicolas
 ms.author: doalle
 ms.date: 03/01/2021
 ms.topic: conceptual
@@ -10,15 +10,18 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-hybrid
 ---
 
-# Enterprise-scale support for hybrid and multicloud
+# Introduction to Enterprise Scale Landing Zone for hybrid and multicloud
 
-Enterprise-scale landing zones provide a specific architectural approach, reference architecture, and reference implementations to prepare your landing zones for mission-critical technology platforms and any supported workloads.
+Enterprises are currently building and running applications across a variety of ecosystems that can be on-premises, in multiple public clouds and on the edge. On these distributed environments it is critical to ensure compliance and find an effective way to manage servers, applications and data at scale while maintaining agility.
 
-Enterprise-scale was built with hybrid and multicloud in mind. Supporting hybrid and multicloud requires three simple additions to the reference architecture:
+[Enterprise Scale Landing Zone provide a specific architectural approach](../../ready/enterprise-scale/architecture.md), reference architecture, and reference implementations to prepare your Landing Zones for mission-critical technology platforms and any supported workloads.
 
-- **Hybrid:** Add hybrid network connectivity
-- **Multicloud:** Add multicloud network connectivity
-- **Unified operations:** Add Azure Arc to extend governance and operations support
+![Diagram for ESLZ](../../ready/enterprise-scale/media/lz-design.png)
+
+Enterprise Scale was built with hybrid and multicloud in mind. Supporting hybrid and multicloud requires two simple additions to the reference architecture:
+
+* Hybrid and multicloud connectivity: understand key network design considerations and recommendations when working with Azure Arc.
+* Unified operations: include Azure Arc enabled resources to extend governance and operations support with consistent tooling.
 
 ## Why hybrid?
 
@@ -34,64 +37,7 @@ This is helpful if the strategic intent is to simplify and consolidate the infra
 
 ## Prerequisite
 
-This article assumes that enterprise-scale landing zone has been successfully implemented. For more information on this prerequisite, review the enterprise-scale [overview](../../ready/enterprise-scale/index.md) and [implementation guidance](../../ready/enterprise-scale/implementation.md).
-
-## Design guidelines
-
-Guide to the critical decisions that drive the design of the Cloud Adoption Framework for Azure enterprise-scale landing zone. There are six critical design areas that can be used to review and modify your enterprise-scale landing zone or any other Azure landing zone implementation:
-
-- [Identity and access management](../../ready/enterprise-scale/identity-and-access-management.md)
-- [Network topology and connectivity](../../ready/enterprise-scale/network-topology-and-connectivity.md)
-- [Management and monitoring](../../ready/enterprise-scale/management-and-monitoring.md)
-- [Business continuity and disaster recovery](../../ready/enterprise-scale/business-continuity-and-disaster-recovery.md)
-- [Security, governance and compliance](../../ready/enterprise-scale/security-governance-and-compliance.md)
-- [Platform automation and DevOps](../../ready/enterprise-scale/platform-automation-and-devops.md)
-
-## Implementation additions
-
-To extend enterprise-scale to address hybrid and multicloud needs, consider the following as part of your implementation:
-
-## Landing Zone
-
-Landing zones are a set of reference architectures that help organizations quickly build out cloud environments and accelerate their adoption of cloud technologies.
-
-The Cloud Adoption Framework includes specific guidance for developing architectures in Azure for connecting to external environments. Patterns such as Hub and Spoke can be used to create landing zones for ingress from and egress to external locations. For more information, see [Implement enterprise-scale landing zones in Azure](../../ready/enterprise-scale/implementation.md).
-
-For example, [Guidance can be found here](../../ready/azure-best-practices/connectivity-to-other-providers.md) to help building out Landing Zone architectures specifically for connectivity to other cloud environments.
-
-## Network
-
-Networking topology is a key consideration when integrating between Azure and external environments and should be factored into any planning exercises and design work in order to ensure a smooth implementation. The following links provide specific and actionable guidance on specific topics:
-
-- [Connectivity to Azure](../../ready/azure-best-practices/connectivity-to-azure.md)
-- [IP Addressing](../../ready/azure-best-practices/plan-for-ip-addressing.md)
-- [Hub and Spoke network topologies](../../ready/azure-best-practices/hub-spoke-network-topology.md)
-- [PrivateLink and DNS integration](../../ready/azure-best-practices/private-link-and-dns-integration-at-scale.md)
-- [Landing Zone network segmentation](../../ready/azure-best-practices/plan-for-landing-zone-network-segmentation.md)
-
-## Identity
-
-As organizations build out cloud environments alongside existing on-premises datacenters, identity becomes an area for consideration to ensure issues are not introduced. With applications spread between on-premises and the cloud, management of access for users can become a challenge. Azure has technologies that help organizations manage identities across on-premises and cloud environments in order to simplify the experience for users.
-
-To achieve hybrid identity, organizations should consider the following three Azure Active Directory approaches:
-
-- [Password hash synchronization (PHS)](/azure/active-directory/hybrid/whatis-phs)
-- [Pass-through authentication (PTA)](/azure/active-directory/hybrid/how-to-connect-pta)
-- [Federation (AD FS)](/azure/active-directory/hybrid/whatis-fed)
-
-[Further information can be found here](/azure/active-directory/hybrid/whatis-hybrid-identity) for planning identity models in a hybrid environment.
-
-## Governance
-
-Expanding infrastructure and applications across multiple locations potentially introduces additional complexity to maintaining governance standards. As part of the planning for hybrid, centralized governance tools and processes should be implemented in order to establish good patterns as workloads scale out.
-
-The [Cloud Adoption Framework's Enterprise Scale Landing Zone architecture](../../ready/enterprise-scale/architecture.md) includes patterns for standardizing the deployment of [Azure Policy](/azure/governance/policy/overview) and [Role-based Access Controls (RBAC)](../../ready/azure-setup-guide/manage-access.md) through structured use of management groups to segment resources into logical groupings. These patterns can be extended using technologies such as Azure Arc, which is detailed further below.
-
-## Management
-
-Similar to the considerations needed for governance in a hybrid environment, managing distributed workloads at scale requires planning in order to ensure issues are not introduced as the span of deployments scales. Using technologies such as [Log Analytics](/azure/azure-monitor/logs/log-analytics-overview), [Application Insights](/azure/azure-monitor/app/app-insights-overview), [Azure Monitor](https://azure.microsoft.com/services/monitor/#features), and [Azure Security Center](/azure/security-center/) to [aggregate telemetry and work from a single pane of glass](../../manage/azure-management-guide/inventory.md?tabs=AzureServiceHealth%2CLog-Analytics%2CAzure-Monitor%2CConfigure-solutions) enables infrastructure and application teams to manage by exception and focus on fixing identified issues from a consolidated view.
-
-Also similar to governance techniques, the management technologies described above can also be extended out to other environments, such as on-premises and other cloud platforms for certain use cases.
+This article assumes that you are familiar with Enterprise Scale Landing Zone. For more information on this prerequisite, review the Enterprise Scale [overview](../../ready/enterprise-scale/index.md) and [implementation guidance](../../ready/enterprise-scale/implementation.md).
 
 ## Azure Arc
 
@@ -99,6 +45,19 @@ As described in this article, Azure provides organizations with various manageme
 
 This provides a single management plane and a single view on the entire hybrid estate in order to make monitoring and management at scale as straightforward as possible.
 
+![Azure Arc high level architecture](./media/azure-arc-high-level-architecture.png)
+
 [Azure Arc](/azure/azure-arc/) simplifies governance and management by delivering a consistent multi-cloud and on-premises management platform. Azure Arc enables you to manage your entire environment, with a single pane of glass, by projecting your existing resources into [Azure Resource Manager](/azure/azure-resource-manager/management/overview).
 
 You can now manage virtual machines, Kubernetes clusters, and databases as if they are running in Azure. Regardless of where they live, you can use familiar Azure services and management capabilities. Azure Arc enables you to continue using traditional ITOps, while introducing DevOps practices to support new cloud native patterns in your environment.
+
+## Design guidelines
+
+The design guidelines provide recommendations to the critical decisions that drive the design of the Cloud Adoption Framework for Azure Enterprise Scale Landing Zone in a hybrid a multicloud environment. There are six critical design areas that need to be considered as part of your Enterprise Scale Landing Zone implementation when working with Azure Arc:
+
+* [Network topology and connectivity](./eslz-arc-servers-connectivity.md): design considerations when working with Azure Arc-enabled servers and how to securely connect them to your Enterprise Scale Landing Zone.
+* [Identity and access management](./eslz-identity-and-access-management.md): best practices for right access controls design to secure hybrid resources as they are centrally managed from Azure using Azure Arc.
+* [Security, governance and compliance](./eslz-security-governance-and-compliance.md): the [Cloud Adoption Framework's Enterprise Scale Landing Zone architecture](../../ready/enterprise-scale/architecture.md) includes patterns for standardizing the deployment of [Azure Policy](/azure/governance/policy/overview) and [Role-based Access Controls (RBAC)](../../ready/azure-setup-guide/manage-access.md) through structured use of management groups to segment resources into logical groupings. These patterns can be extended using technologies such as Azure Arc.
+* [Management and monitoring](./eslz-management-and-monitoring-arc-server.md): similar to governance techniques, Azure Management services can also be extended out to other environments, such as on-premises and other cloud platforms through Azure Arc. Enterprise Scale provides guidance on how operationally maintain Azure Arc-enabled servers on Azure enterprise estate, with centralized management and monitoring at the platform level
+* [Platform automation](./eslz-automation-arc-server.md): Azure Arc enables organizations to manage their digital state hosted outside of Azure with the same level of experience and automation as a native Azure resource. As part of your Enterprise Scale Landing Zone implementation you should plan for agent onboarding, lifecycle management, and expansion of the Azure control plane capabilities via Azure Arc with as much automation as posible.
+* [Cost Management](./eslz-cost-governance.md): keep track of ungoverned and unmonitored resources that prevent you from to increase accountability with budgets, cost allocation, and chargebacks.
