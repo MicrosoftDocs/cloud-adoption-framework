@@ -124,7 +124,7 @@ Microsoft Defender for Cloud provides an unified security-management platform se
 - Use Azure Arc-enabled servers to onboard hybrid resources in Azure Defender.
 - Implement an Azure Policy to make sure all resources are compliant and its security data is collected into the Log Analytics workspaces.
 - Enable Azure Defender for all subscriptions and use Azure Policy to ensure compliance.
-- Leverage security information and event management integration with Microsoft Defender for Cloud and Azure Sentinel.
+- Use security information and event management integration with Microsoft Defender for Cloud and Azure Sentinel.
 - Protect your endpoints with AMicrosoft Defender for Cloud's integration with Microsoft Defender for Endpoint.
 
 [Connect your non-Azure machines to Microsoft Defender for Cloud](/azure/security-center/quickstart-onboard-machines?pivots=azure-portal)
@@ -133,7 +133,7 @@ Microsoft Defender for Cloud provides an unified security-management platform se
 
 ### Change Tracking and Inventory
 
-Centralizing logs drives additional reports that can be leveraged as additional layers of security and reduces the chances for gaps in observability. [Change Tracking and Inventory in Azure Automation](/azure/automation/change-tracking/overview) forwards and collects the data in a Log Analytics workspace. When using  Azure Defender for servers you get File Integrity Monitoring (FIM) to examine and track software changes, Windows services and Linux daemons on your Azure Arc-enabled servers.
+Centralizing logs drives additional reports that can be used as additional layers of security and reduces the chances for gaps in observability. [Change Tracking and Inventory in Azure Automation](/azure/automation/change-tracking/overview) forwards and collects the data in a Log Analytics workspace. When using  Azure Defender for servers you get File Integrity Monitoring (FIM) to examine and track software changes, Windows services and Linux daemons on your Azure Arc-enabled servers.
 
 ### Software Updates
 
