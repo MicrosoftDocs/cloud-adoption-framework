@@ -34,7 +34,7 @@ The following image shows reference architecture that demonstrates the roles, pe
 - **Server on-boarding and administration**
   - Use security groups to assign local administrator rights to the identified users or service accounts on the servers to onboard to Azure Arc at scale.
   - Use [Azure AD service principal](/azure/azure-arc/servers/onboard-service-principal#create-a-service-principal-for-onboarding-at-scale) to onboard servers to Azure Arc.
-  - Use separate Azure AD service principals to onboard severs when operated by different IT teams.
+  - Use separate Azure AD service principal accounts to onboard servers when operated by different IT teams.
   - Use short lived Azure AD service principal [client secrets](/azure/active-directory/develop/howto-create-service-principal-portal#option-2-create-a-new-application-secret).
   - Assign the [Azure Connected Machine Onboarding](/azure/azure-arc/servers/onboard-service-principal#create-a-service-principal-for-onboarding-at-scale) role at the resource group level.
   - Use Azure AD security groups and assign [Hybrid Server Resource Administrator](/azure/azure-arc/servers/plan-at-scale-deployment#prerequisites) role to manage Azure Arc-enabled server resources in Azure.
