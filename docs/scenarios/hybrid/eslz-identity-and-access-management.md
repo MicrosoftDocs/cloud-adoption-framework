@@ -24,10 +24,10 @@ The following image shows reference architecture that demonstrates the roles, pe
 
 ## Design considerations
 
-- Decide who has access to onboarding servers from your organization to setup required permissions on the servers and in Azure resource manager.
-- Decide who has access to manage Azure Arc-enabled servers and ability to view their data from Azure services and other cloud environments.
-- Decide between single or multiple service principals to onboard servers owned by different business functions/units in an enterprise base on who operates these servers.
-- Decide between short lived or long lived service principal credentials (client secrets) to onboard servers to Azure Arc.
+- Decide who has access to onboarding servers from your organization to set up required permissions on the servers and in Azure resource manager.
+- Decide who has access to manage Azure Arc-enabled servers and the ability to view their data from Azure services and other cloud environments.
+- Decide between single or multiple service principal accounts to onboard servers owned by different business functions/units in an enterprise based on who operates these servers.
+- Decide between short-lived or long-lived service principal credentials (client secrets) to onboard servers to Azure Arc.
 
 ## Design recommendations
 
