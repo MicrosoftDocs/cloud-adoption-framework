@@ -34,7 +34,7 @@ When migration is the highest priority, strategy and planning will play a vital 
 
 When innovation is the highest priority, strategy and planning require more investments early in the process to ensure balance in the portfolio and wise alignment of the investment made during cloud adoption. For more information and guidance, see [Understand the innovation journey](../get-started/innovate.md).
 
-To ensure wiser decision-making, all participants in the migration process should have a clear awareness of their motivations. The following section outlines how customers can guide and affect wiser decisions through consistent, strategic methodologies.
+To ensure wiser decision-making, all participants in the migration process should have a clear awareness of their motivations. The following section outlines how customers can guide and effect wiser decisions through consistent, strategic methodologies.
 
 ## Motivation-driven strategies and business outcomes
 
