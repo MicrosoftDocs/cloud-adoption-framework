@@ -14,7 +14,7 @@ ms.custom: e2e-hybrid
 
 This article walks through the key design considerations and best practices for security, governance, and compliance in hybrid, multicloud and edge deployments managed by Azure Arc that should be in place as part of a CAF enterprise-scale landing zone implementation.
 
-Defining and applying the proper control mechanisms is key in any cloud implementation as it is the foundational element to stay secured and compliant. In a traditional environment these mechanisms usually involve review processes and manual controls, however the cloud has introduced a new approach to IT governance with automated guardrails and checks. Azure Policy and Microsoft Defender for Cloud are cloud native tools that allow the implementation of these controls, reports, and remediation tasks in an automated fashion. By combining them with Azure Arc, your governance policies and security checks are extended to any resource in public or private clouds.
+Defining and applying the proper control mechanisms is key in any cloud implementation as it is the foundational element to stay secured and compliant. In a traditional environment, these mechanisms usually involve review processes and manual controls, however, the cloud has introduced a new approach to IT governance with automated guardrails and checks. Azure Policy and Azure Security Center are cloud-native tools that allow the implementation of these controls, reports, and remediation tasks in an automated fashion. By combining them with Azure Arc, your governance policies and security checks are extended to any resource in public or private clouds.
 
 By the end of this article, you will understand the critical design areas for security, governance, and compliance with clear Microsoft guidance.
 
