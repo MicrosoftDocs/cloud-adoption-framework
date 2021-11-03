@@ -65,4 +65,4 @@ Use [Update Management](/azure/automation/update-management/overview) in Azure A
 Update Management will also allow you to automate the Azure Connected Machine agent upgrade via Windows Updates on Azure Arc-enabled Windows servers.
 ## Learn before you start
 
-- Check for [Azure Arc Jumpstart](https://aka.ms/AzureArcJumpstart) scenarios that may help you with proof of concept and basic understanding.
+Check for [Azure Arc Jumpstart](https://aka.ms/AzureArcJumpstart) scenarios that may help you with proof of concept and basic understanding.
