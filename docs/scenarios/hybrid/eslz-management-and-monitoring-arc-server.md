@@ -27,8 +27,8 @@ Here are some general design considerations for Azure Arc-enabled servers monito
 - **Azure Monitor requirements:** Azure Monitor can collect data directly from your hybrid machines into a Log Analytics workspace for detailed analysis and correlation. This would entail installing the monitoring agents like the Log Analytics and Dependency agents.
 - **Azure Monitor agents deployment:** Review the [deployment options](/azure/azure-arc/servers/concept-log-analytics-extension-deployment) for the Azure Monitor agents.
 - **Azure Monitor configuration:** Plan your Azure Arc-enabled servers [monitoring requirements](/azure/azure-monitor/agents/log-analytics-agent#data-collected) including metrics and log collection.
-- **Azure Machine agent management:** The Azure Connected Machine Agent plays a critical role in your hybrid operations as it enables you to manage your Windows and Linux machines hosted outside of Azure and enforce governance policies, it is important to implement solutions that keep track of unresponsive agents, monitor for new versions and automate deployment of upgrades.
-- **Update management for your hybrid resources:** Updates should be automated and installed in timely manner to make sure your Azure Arc-enabled servers have the latest operating system and security updates.
+- **Azure Machine agent management:** The Azure Connected Machine Agent plays a critical role in your hybrid operations as it enables you to manage your Windows and Linux machines hosted outside of Azure and enforce governance policies, it is important to implement solutions that keep track of unresponsive agents, monitor for new versions and automate the deployment of upgrades.
+- **Update management for your hybrid resources:** Updates should be automated and installed in a timely manner to make sure your Azure Arc-enabled servers have the latest operating system and security updates.
 ## Design recommendations
 ### Azure Monitor requirements
 Review and understand how the Log Analytics agent [operates and collects data](/azure/azure-monitor/agents/log-analytics-agent) before deployment.
