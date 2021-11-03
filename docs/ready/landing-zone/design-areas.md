@@ -22,10 +22,10 @@ Regardless of the deployment option, you should carefully consider each design a
 
 | Design areas | Objective | Relevant methodologies |
 |--|--|--|
-| Azure billing and Active Directory tenant | Proper tenant creation, enrollment, and billing setup are important early steps. | Ready |
-| Identity and access management | Identity and access management is a primary security boundary in the public cloud. It's the foundation for any secure and fully compliant architecture. | Ready |
-| Network topology and connectivity | Networking and connectivity decisions are an equally important foundational aspect of any cloud architecture. | Ready |
-| Resource organization | As cloud adoption scales, considerations for subscription design and management group hierarchy have an impact on governance, operations management, and adoption patterns. | Govern |
+| [Azure billing and Active Directory tenant](./design-area/azure-billing-ad-tenant.md) | Proper tenant creation, enrollment, and billing setup are important early steps. | Ready |
+| [Identity and access management](./design-area/identity-access.md) | Identity and access management is a primary security boundary in the public cloud. It's the foundation for any secure and fully compliant architecture. | Ready |
+| [Network topology and connectivity](./design-area/network-topology-and-connectivity.md) | Networking and connectivity decisions are an equally important foundational aspect of any cloud architecture. | Ready |
+| [Resource organization](./design-area/resource-org.md) | As cloud adoption scales, considerations for subscription design and management group hierarchy have an impact on governance, operations management, and adoption patterns. | Govern |
 
 ## Compliance design areas
 
@@ -39,10 +39,10 @@ As the organization's cloud environment develops, these compliance design areas 
 
 | Design areas | Objective | Relevant methodologies |
 |--|--|--|
-| Security | Implement controls and process to protect your cloud environments | Secure |
-| Management | For stable, ongoing operations in the cloud, a management baseline is required to provide visibility, operations compliance, and protect and recover capabilities. | Manage |
-| Governance | Automate auditing and enforcement of governance policies. | Govern |
-| Platform automation and DevOps | Align the best tools and templates to deploy your landing zones and supporting resources. | Ready |
+| [Security](./design-area/security.md) | Implement controls and process to protect your cloud environments | Secure |
+| [Management](./design-area/management.md) | For stable, ongoing operations in the cloud, a management baseline is required to provide visibility, operations compliance, and protect and recover capabilities. | Manage |
+| [Governance](./design-area/governance.md) | Automate auditing and enforcement of governance policies. | Govern |
+| [Platform automation and DevOps](./design-area/platform-automation-devops.md) | Align the best tools and templates to deploy your landing zones and supporting resources. | Ready |
 
 ## Design area process
 
