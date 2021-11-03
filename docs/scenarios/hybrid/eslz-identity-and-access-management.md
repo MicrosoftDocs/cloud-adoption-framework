@@ -14,7 +14,7 @@ ms.custom: e2e-arc-enabled-servers
 
 ## Overview
 
-Your organization or enterprise needs to design the right access controls to secure hybrid environments using on-premises and cloud identity management systems. On-premises and cloud identity management systems play an important role in designing, and implementing right access management controls in securing Azure Arc-enabled server infrastructure.
+Your organization or enterprise needs to design the right access controls to secure hybrid environments using on-premises and cloud identity management systems. On-premises and cloud identity management systems play an important role in designing, and implementing the right access management controls in securing Azure Arc-enabled server infrastructure.
 
 ## Architecture
 
