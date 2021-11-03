@@ -113,7 +113,7 @@ The following image shows a conceptual reference architecture that demonstrates 
 
 ### Log management strategy
 
-Design and plan your Log Analytics Workspace deployment, as it will be the container where data is collected, aggregated and later analyzed. As the Log Analytics Workspace represents a geographical location of your data, a level of isolation and a scope for configurations like data retention you will have to identify the number of workspaces needed and how it maps to your organizational structure. It is recommended to use a single Azure Monitor Log Analytics workspace to manage centrally RBAC, visibility and reporting as it is described in the [Management and monitoring best practices of Clouf Adoption Framework](/azure/cloud-adoption-framework/ready/enterprise-scale/management-and-monitoring).
+Design and plan your Log Analytics Workspace deployment, as it will be the container where data is collected, aggregated and later analyzed. As the Log Analytics Workspace represents a geographical location of your data, a level of isolation and a scope for configurations like data retention you will have to identify the number of workspaces needed and how it maps to your organizational structure. It is recommended to use a single Azure Monitor Log Analytics workspace to manage centrally RBAC, visibility and reporting as it is described in the [Management and monitoring best practices of Cloud Adoption Framework](/azure/cloud-adoption-framework/ready/enterprise-scale/management-and-monitoring).
 
 Review the best practices in [designing your Azure Monitor Logs deployment](/azure/azure-monitor/logs/design-logs-deployment).
 
