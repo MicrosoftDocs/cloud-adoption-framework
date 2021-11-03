@@ -14,7 +14,7 @@ ms.custom: e2e-hybrid
 
 This article walks through the key design considerations and best practices for security, governance, and compliance in hybrid, multicloud and edge deployments managed by Azure Arc that should be in place as part of a CAF enterprise-scale landing zone implementation.
 
-Defining and applying the proper control mechanisms is key in any cloud implementation as it is the foundational element to stay secured and compliant. In a traditional environment these mechanisms usually involve review processes and manual controls, however the cloud has introduced a new approach to IT governance with automated guardrails and checks. Azure Policy and Azure Security Center are cloud native tools that allow the implementation of these controls, reports, and remediation tasks in an automated fashion. By combining them with Azure Arc, your governance policies and security checks are extended to any resource in public or private clouds.
+Defining and applying the proper control mechanisms is key in any cloud implementation as it is the foundational element to stay secured and compliant. In a traditional environment these mechanisms usually involve review processes and manual controls, however the cloud has introduced a new approach to IT governance with automated guardrails and checks. Azure Policy and Microsoft Defender for Cloud are cloud native tools that allow the implementation of these controls, reports, and remediation tasks in an automated fashion. By combining them with Azure Arc, your governance policies and security checks are extended to any resource in public or private clouds.
 
 By the end of this article, you will understand the critical design areas for security, governance, and compliance with clear Microsoft guidance.
 
@@ -33,7 +33,7 @@ As your hybrid and multicloud resources become part of Azure Resource Manager, t
 - **Agent Management:** The Connected Machine Agent plays a critical role in your hybrid operations as it enables you to manage your Windows and Linux machines hosted outside of Azure and enforce governance policies, it is important to implement solutions that keep track of unresponsive agents.
 - **Agent Security permissions:** Secure access to the Azure Connected Machine agent by reviewing users with local administrator privileges on the server.
 - **Managed Identity:** Use the [managed identity with Azure Arc-enabled servers](/azure/azure-arc/servers/managed-identity-authentication) and define a strategy for identifying which applications running on Arc-enabled servers can use the Azure service assigned identity to request an Azure AD token.
-- **Secret and certificate management:** Enable Azure Key Vault to protect service principal credentials. Consider using Azure Key Vault for certificate management on your Arc-enabled servers, both on [Windows](/azure/virtual-machines/extensions/key-vault-windows) and [Linux](/azure/virtual-machines/extensions/key-vault-linux) machines.
+- **Secret and certificate management:** Enable Azure Key Vault to protect service principal credentials. Consider using [Azure Key Vault](/azure/key-vault/general/basic-concepts) for certificate management on your Arc-enabled servers.
 - **Policy management and reporting:** Define a governance plan for your hybrid servers and machines that translates into Azure Policies and remediation tasks.
 - **Data Residency:** Consider which Azure region you wish your Azure Arc-enabled servers to be provisioned into, and understand the [metadata that is collected](/azure/azure-arc/servers/data-residency) from these machines.
 - **Log management strategy:** Plan for metrics and log collection of your hybrid resources into a Log Analytics workspace for further analysis and auditing.
@@ -119,15 +119,15 @@ Review the best practices in [designing your Azure Monitor Logs deployment](/azu
 
 ### Threat protection and cloud security posture management
 
-Azure Security Center provides an unified security-management platform segmented as a cloud security posture management (CSPM) and cloud workload protection platform (CWPP). To increase security on your hybrid landing zone it is important to protect the data and assets hosted in Azure and elsewhere, Azure Defender for servers extends these capabilities to Azure Arc-enabled servers and together with Microsoft Defender for Endpoint provide a comprehensice EDR.  To heighten security on your hybrid landing zone consider:
+Microsoft Defender for Cloud provides an unified security-management platform segmented as a cloud security posture management (CSPM) and cloud workload protection platform (CWPP). To increase security on your hybrid landing zone it is important to protect the data and assets hosted in Azure and elsewhere, Azure Defender for servers extends these capabilities to Azure Arc-enabled servers and together with Microsoft Defender for Endpoint provide a comprehensive EDR.  To heighten security on your hybrid landing zone consider:
 
 - Use Azure Arc-enabled servers to onboard hybrid resources in Azure Defender.
 - Implement an Azure Policy to make sure all resources are compliant and its security data is collected into the Log Analytics workspaces.
 - Enable Azure Defender for all subscriptions and use Azure Policy to ensure compliance.
-- Leverage security information and event management integration with Azure Security Center and Azure Sentinel.
-- Protect your endpoints with Azure Security Center's integration with Microsoft Defender for Endpoint.
+- Leverage security information and event management integration with Microsoft Defender for Cloud and Azure Sentinel.
+- Protect your endpoints with AMicrosoft Defender for Cloud's integration with Microsoft Defender for Endpoint.
 
-[Connect your non-Azure machines to Security Center](/azure/security-center/quickstart-onboard-machines?pivots=azure-portal)
+[Connect your non-Azure machines to Microsoft Defender for Cloud](/azure/security-center/quickstart-onboard-machines?pivots=azure-portal)
 
 [PLACEHOLDER](Network Security)
 
