@@ -257,7 +257,7 @@ items:
       - name: Journey to the target architecture
         href: ready/landing-zone/landing-zone-journey.md
       - name: Design principles
-        href: ready/landing-zone/design-principles.md
+        href: ready/enterprise-scale/design-principles.md
       - name: Design areas
         href: ready/landing-zone/design-areas.md
         items:
