@@ -26,10 +26,10 @@ The following diagram shows a conceptual reference architecture for the connecti
 
 The following are some network design considerations for Azure Arc-enabled servers:
 
-- **Define the agent's connectivity method:** review your existing infrastructure, security requirements and decide how the Connected Machine agent will [communicate to Azure](/azure/azure-arc/servers/agent-overview#networking-configuration) from your on-premises network or other cloud environment. This connection can be over the internet, optionally through a proxy server or you can implement [Private Link](/azure/azure-arc/servers/private-link-security) for a private connection.
+- **Define the agent's connectivity method:** review your existing infrastructure, security requirements and decide how the Connected Machine agent will [communicate to Azure](/azure/azure-arc/servers/agent-overview#networking-configuration) from your on-premises network or other cloud providers. This connection can be over the internet, optionally through a proxy server or you can implement [Private Link](/azure/azure-arc/servers/private-link-security) for a private connection.
 - **Manage Access to Azure Service Tags:** create an automated process to keep the firewall and proxy network rules updated according to the [Azure Arc network service Tags and IP addresses range](https://www.microsoft.com/en-us/download/details.aspx?id=56519).
 - **Secure your network connectivity to Azure Arc:** configure the machine to use Transport security (TLS) 1.2 older versions are not recommended as data in transit might be vulnerable.
-- **Define extensions connectivity method:** Azure extensions deployed on an Azure Arc-enabled server also need to communicate with other Azure Services, this connectivity can be direct using public networks or through a firewall or proxy server. To further secure the extension connectivity you can implement a [Private Endpoint](/azure/azure-arc/servers/private-link-security#how-it-works) for each extension.
+- **Define extensions connectivity method:** Azure extensions deployed on an Azure Arc-enabled server also need to communicate with other Azure Services, this connectivity can be directly using public networks or through a firewall or proxy server. To further secure the extension connectivity you can implement a [Private Endpoint](/azure/azure-arc/servers/private-link-security#how-it-works) for each extension.
 
 ## Design recommendations
 
