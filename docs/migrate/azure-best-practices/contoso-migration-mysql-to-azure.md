@@ -23,6 +23,9 @@ The IT leadership team has worked closely with business partners to understand w
 - **Increase agility.** Contoso IT needs to be more responsive to the needs of the business. It must react faster than the changes in the marketplace to enable success in a global economy. It mustn't become a business blocker.
 - **Scale.** As the business grows successfully, Contoso IT must provide systems that grow at the same pace.
 
+> [!NOTE]
+> For detailed guidance on migrations to Azure Database for MySQL with labs, see [Azure MySQL Migration Guide](https://aka.ms/migrate/mysql). 
+
 ## Migration goals
 
 The Contoso cloud team has pinned down goals for this migration. These goals were used to determine the best migration method.
