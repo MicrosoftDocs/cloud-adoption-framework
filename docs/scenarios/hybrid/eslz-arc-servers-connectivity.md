@@ -1,5 +1,5 @@
 ---
-title: Enterprise Scale Azure Arc-enabled servers Network Connectivity
+title: Azure Arc-enabled servers Network Connectivity
 description: Understand the design considerations and recommendations for network connectivity of Arc-enabled servers
 author: Welasco
 ms.author: vsantana
@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank, e2e-arc
 ---
 
-# Enterprise Scale Azure Arc-enabled servers Network Connectivity
+# Azure Arc-enabled servers Network Connectivity
 
 Azure Arc-enabled servers allows you to manage your Windows and Linux physical servers and virtual machines, on your corporate network, or other cloud provider using the Azure control plane. This document walks through the key design considerations and best practices for Azure Arc-enabled servers connectivity as part of a CAF Enterprise Scale landing zone implementation.
 
