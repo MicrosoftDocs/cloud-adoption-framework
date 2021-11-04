@@ -37,8 +37,7 @@ The following are some network design considerations for Azure Arc-enabled serve
 
 Azure Arc-enabled servers allows you to connect hybrid machines using the following methods:
 
-- Direct connection
-- Proxy Server connection
+- Direct connection, optionally behind a firewall or proxy
 - Private Link
 
 #### Direct Connection
@@ -49,7 +48,7 @@ Azure Arc-enabled servers offers [direct connectivity to Azure public endpoints]
 
 In this connectivity method you need to review your internet access for the Connected Machine Agent and it is best practice to configure the [required network rules](/azure/azure-arc/servers/agent-overview#networking-configuration).
 
-#### Proxy server connection
+#### Proxy server connection (Optional)
 
 If the machine needs to connect through a firewall or proxy server to communicate over the internet, the agent communicates outbound instead using the HTTP protocol. Proxy servers don't make the Connected Machine agent more secure because the traffic is already encrypted.
 
@@ -85,7 +84,7 @@ If Private Link is used it requires configuring [Private Link for each service](
 
 ## Next Steps
 
-* [Understand how Azure Arc-enabled servers private link works](/azure/azure-arc/servers/private-link-security#how-it-works)
-* [Plan your Private Link setup](/azure/azure-arc/servers/private-link-security#planning-your-private-link-setup)
-* [Review the required network configuration for the Private Link connectivity method](/azure/azure-arc/servers/private-link-security#network-configuration)
-* [Familiarize yourself with the available troubleshooting Azure Arc-enabled servers agent connection issues](/azure/azure-arc/servers/troubleshoot-agent-onboard)
+- [Understand how Azure Arc-enabled servers private link works](/azure/azure-arc/servers/private-link-security#how-it-works)
+- [Plan your Private Link setup](/azure/azure-arc/servers/private-link-security#planning-your-private-link-setup)
+- [Review the required network configuration for the Private Link connectivity method](/azure/azure-arc/servers/private-link-security#network-configuration)
+- [Familiarize yourself with the available troubleshooting Azure Arc-enabled servers agent connection issues](/azure/azure-arc/servers/troubleshoot-agent-onboard)
