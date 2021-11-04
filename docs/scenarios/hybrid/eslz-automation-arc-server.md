@@ -1,5 +1,5 @@
 ---
-title: Enterprise-Scale Azure Arc-Enabled Servers Automation
+title: Automation for Azure Arc-enabled servers
 description: Understand the design considerations and recommendations for automation of Arc-enabled servers
 author: DCMattyG
 ms.author: magarret
@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: e2e-arc
 ---
 
-# Automation for Azure Arc-enabled Servers Enterprise-Scale Scenario
+# Automation for Azure Arc-enabled servers
 
 Azure Arc-enabled servers enable you to manage your Windows and Linux servers and virtual machines hosted outside of Azure, on your corporate network, or another cloud provider. This document is written to help plan for the automation of onboarding, update management, and expansion of the capabilities of Azure Arc-enabled servers through VM extensions. The article presents key recommendations for operations teams to onboard and automate Azure Arc-enabled servers throughout their lifecycle.
 

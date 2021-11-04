@@ -1,5 +1,5 @@
 ---
-title: Identity and access management considerations for Azure Arc-enabled servers
+title: Identity and access management for Azure Arc-enabled servers
 description: Describes how to improve identity and access management for the Azure Arc-enabled servers.
 author: chintalavr
 ms.author: vchintala
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: e2e-arc-enabled-servers
 ---
 
-# Identity and access management considerations for Azure Arc-enabled servers
+# Identity and access management for Azure Arc-enabled servers
 
 ## Overview
 
@@ -20,7 +20,7 @@ Your organization or enterprise needs to design the right access controls to sec
 
 The following image shows reference architecture that demonstrates the roles, permissions and flow of actions for Azure Arc-enabled servers:
 
-![The following image shows reference architecture that demonstrates the identities, roles, permissions and flow of actions for Azure Arc-enabled servers:](./media/arc-enabled-servers-iam.png)
+![The following image shows reference architecture that demonstrates the identities, roles, permissions and flow of actions for Azure Arc-enabled servers:](./media/arc-enabled-servers-iam.svg)
 
 ## Design considerations
 

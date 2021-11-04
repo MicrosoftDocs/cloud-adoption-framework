@@ -1,6 +1,6 @@
 ---
-title: Security, governance and compliance baseline for hybrid, multicloud, and edge deployments
-description: Expand Azure governance, security and compliance capabilities to hybrid, multicloud, and edge deployments.
+title: Security, governance and compliance baseline for Azure Arc-enabled servers
+description: Expand Azure governance, security and compliance capabilities Security, governance and compliance baseline for Azure Arc-enabled servers deployments.
 author: MatthewGrimshaw
 ms.author: matgri
 ms.date: 06/10/2021
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: e2e-hybrid
 ---
 
-# Security, governance and compliance baseline for hybrid, multicloud, and edge deployments
+# Security, governance and compliance baseline for Azure Arc-enabled servers
 
 This article walks through the key design considerations and best practices for security, governance, and compliance in hybrid, multicloud and edge deployments managed by Azure Arc that should be in place as part of a CAF enterprise-scale landing zone implementation.
 
@@ -22,7 +22,7 @@ By the end of this article, you will understand the critical design areas for se
 
 The following image shows a conceptual reference architecture that demonstrates the security, compliance and governance design areas for Azure Arc-enabled servers:
 
-![A diagram depicting the Enterprise-scale security, governance and compliance for Azure Arc-enabled servers on Azure conceptual reference architecture.](./media/arc-enabled-servers-security-compliance-governance.png)
+![A diagram depicting the Enterprise-scale security, governance and compliance for Azure Arc-enabled servers on Azure conceptual reference architecture.](./media/arc-enabled-servers-security-compliance-governance.svg)
 
 ## Design considerations
 
@@ -75,11 +75,13 @@ Consider using Azure Key Vault to manage certificates on your Azure Arc-enabled 
 
 The following image shows a conceptual reference architecture that demonstrates the Azure Key Vault integration for Azure Arc-enabled servers:
 
-![A diagram depicting the the Azure Key Vault integration for Azure Arc-enabled servers.](./media/arc-enabled-servers-keyVault-integration.png)
+![A diagram depicting the the Azure Key Vault integration for Azure Arc-enabled servers.](./media/arc-enabled-servers-keyVault-integration.svg)
 
 ### Policy management and reporting
 
-Having a policy-driven governance is a foundational principle of cloud-native operations and Cloud Adoption Framework. [Azure Policy](/azure/governance/policy/) provides the mechanism to enforce corporate standards and to assess compliance at scale. Through it, you can implement governance for consistency of deployments, compliance, control costs, and improve your security posture; with its compliance dashboard, you will get an aggregated view of the overall state as well as remediation capabilities. Azure Arc-enabled servers support [Azure Policy](/azure/governance/policy/overview) at the Azure Resource Management layer, and also within the individual server machine using [Guest Configuration Policies](/azure/governance/policy/concepts/guest-configuration).
+Having a policy-driven governance is a foundational principle of cloud-native operations and Cloud Adoption Framework. [Azure Policy](/azure/governance/policy/) provides the mechanism to enforce corporate standards and to assess compliance at scale. Through it, you can implement governance for consistency of deployments, compliance, control costs, and improve your security posture; with its compliance dashboard, you will get an aggregated view of the overall state as well as remediation capabilities.
+
+Azure Arc-enabled servers support [Azure Policy](/azure/governance/policy/overview) at the Azure Resource Management layer, and also within the individual server machine using [Guest Configuration Policies](/azure/governance/policy/concepts/guest-configuration).
 
 Understand the [scope of Azure policy](/azure/role-based-access-control/scope-overview) and where it can be applied (Management Group, subscription, resource group or individual resource level). Create a Management Group design in accordance with the recommended practices outlined in the [Cloud Adoption Framework Enterprise Scale](/azure/cloud-adoption-framework/ready/enterprise-scale/management-group-and-subscription-organization)
 
@@ -96,7 +98,7 @@ Understand the [scope of Azure policy](/azure/role-based-access-control/scope-ov
 
 The following image shows a conceptual reference architecture that demonstrates the policy and compliance reporting design areas for Azure Arc-enabled servers:
 
-![A diagram depicting the Azure Policy for Azure Arc-enabled servers on Azure conceptual reference architecture.](./media/arc-enabled-servers-policy.png)
+![A diagram depicting the Azure Policy for Azure Arc-enabled servers on Azure conceptual reference architecture.](./media/arc-enabled-servers-policy.svg)
 
 ### Log management strategy
 
@@ -140,9 +142,9 @@ Also consider the sensitive data that is sent to the Azure Monitor Log Analytics
 
 ### Secure public key
 
-The Azure Connected Machine agent uses public key authentication to communicate with the Azure service. After you onboard a server to Azure Arc, a private key is saved to the disk and used whenever the agent communicates with Azure. 
+The Azure Connected Machine agent uses public key authentication to communicate with the Azure service. After you onboard a server to Azure Arc, a private key is saved to the disk and used whenever the agent communicates with Azure.
 
-If stolen, the private key can be used on another server to communicate with the service and act as if it were the original server. This includes getting access to the system-assigned identity and any resources that identity has access to. 
+If stolen, the private key can be used on another server to communicate with the service and act as if it were the original server. This includes getting access to the system-assigned identity and any resources that identity has access to.
 
 The private key file is protected to only allow the HIMDS account access to read it. To prevent offline attacks, we strongly recommend the use of full disk encryption (for example, BitLocker, dm-crypt, etc.) on the operating system volume of your server.
 

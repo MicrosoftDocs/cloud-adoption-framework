@@ -1,5 +1,5 @@
 ---
-title: Azure Arc-enabled servers Network Connectivity
+title: Network connectivity for Azure Arc-enabled servers
 description: Understand the design considerations and recommendations for network connectivity of Arc-enabled servers
 author: Welasco
 ms.author: vsantana
@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank, e2e-arc
 ---
 
-# Azure Arc-enabled servers Network Connectivity overview
+# Network connectivity for Azure Arc-enabled servers
 
 Azure Arc-enabled servers allow you to manage your Windows and Linux physical servers and virtual machines, on your corporate network, or other cloud provider using the Azure control plane. This document walks through the key design considerations and best practices for Azure Arc-enabled servers connectivity as part of a Cloud Adoption Framework Enterprise Scale landing zone implementation.
 
@@ -20,7 +20,7 @@ This article assumes that Enterprise Scale Landing Zone has been successfully im
 
 The following diagram shows a conceptual reference architecture for the connectivity of Azure Arc-enabled servers:
 
-![A diagram depicting the Enterprise Scale connectivity for Azure Arc-enabled servers on Azure conceptual reference architecture.](./media/arc-enabled-servers-connectivity-options2.png)
+![Azure Arc-enabled servers connectivity options](./media/arc-enabled-servers-connectivity-options.svg)
 
 ## Design considerations
 
@@ -44,8 +44,6 @@ Azure Arc-enabled servers allows you to connect hybrid machines using the follow
 
 Azure Arc-enabled servers offers [direct connectivity to Azure public endpoints](/azure/azure-arc/servers/agent-overview#networking-configuration). In this connectivity method, all the machine agents will open a connection via the internet using a public endpoint. The Connected Machine agent for Linux and Windows communicates outbound securely to Azure over TCP port 443 using HTTPS protocol.
 
-![Azure Arc-enabled servers connectivity options](./media/arc-enabled-servers-direct-connection.png)
-
 For direct connections you need to review your internet access for the Connected Machine Agent and it is best practice to configure the [required network rules](/azure/azure-arc/servers/agent-overview#networking-configuration).
 
 #### Proxy server or Firewall connection (Optional)
@@ -60,7 +58,7 @@ Be aware that if you deploy extensions on your Azure Arc-enabled servers every e
 
 Azure Arc-enabled servers allow you to deploy VM extensions to centrally manage your servers from Azure, these extensions connect to other resources such as Log Analytics Workspaces, Automation Accounts, Key Vault or Azure Storage. You can use Azure Private Link to make this connection private without opening any public network access, all of the data is kept private preventing data exfiltration. The traffic between  Azure Arc-enabled servers and Azure Services will go through your VPN connection or Express Route and will be kept inside the Microsoft Azure backbone network.
 
-![Azure Arc-enabled servers private link topology](./media/arc-enabled-servers-private-link-topology.png)
+![Azure Arc-enabled servers private link topology](./media/arc-enabled-servers-private-link-topology.svg)
 
 Review this method's [restrictions and limitations](/azure/azure-arc/servers/private-link-security#restrictions-and-limitations) and consider that when you enable any one of the Azure Arc-enabled servers supported VM extensions, those extensions connect other Azure resources which require configuring Private Link for each service. Review [Azure Private Link security](/azure/azure-arc/servers/private-link-security#how-it-works) for more information.
 
