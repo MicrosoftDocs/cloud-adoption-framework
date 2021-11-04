@@ -24,7 +24,7 @@ The ArcBox solution is designed to run in your enterprise-scale sandbox subscrip
 
 ![ArcBox in a sandbox subscription](./media/arcbox-sandbox-subscription.png)
 
-Once deployed, the resource group will contain five Azure Arc-enabled servers resources as well as a "unified operations" resource layer so you will be able to start integrating with Azure services and understand Azure Arc-enabled servers value proposition.
+Once deployed, the resource group will contain six Azure Arc-enabled servers resources (including an Azure Arc-enabled SQL server resource) as well as a "unified operations" resource layer so you will be able to start integrating with Azure services and understand Azure Arc-enabled servers value proposition.
 
 ## Deployment options & prerequisites
 
