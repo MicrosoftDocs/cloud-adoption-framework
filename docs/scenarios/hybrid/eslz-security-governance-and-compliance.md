@@ -28,7 +28,6 @@ The following image shows a conceptual reference architecture that demonstrates 
 
 As your hybrid and multicloud resources become part of Azure Resource Manager, they can be managed and governed with Azure tools just as Azure native VMs.
 
-- **Resource consistency and inventory management:** Group your hybrid resources using [Azure scopes of management](/azure/role-based-access-control/scope-overview) into a [taxonomy](/azure/azure-resource-manager/management/tag-resources?tabs=json) that matches your organization. Apply tags to your Azure Arc-enabled servers to add additional context that is relevant for your operations.
 - **Agent Provisioning:** Define a strategy for provisioning the Azure Arc-enabled servers and protecting access to the onboarding credentials. Consider the level and method of automation for [bulk enrollment](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm). Consider how to structure [pilot and production deployments](/azure/azure-arc/servers/plan-at-scale-deployment) and establish a formal plan that takes into account the scope and plan for a deployment including objectives, selection criteria, success criteria, training plans, rollback and risks.
 - **Agent Management:** The Connected Machine Agent plays a critical role in your hybrid operations as it enables you to manage your Windows and Linux machines hosted outside of Azure and enforce governance policies, it is important to implement solutions that keep track of unresponsive agents.
 - **Agent Security permissions:** Secure access to the Azure Connected Machine agent by reviewing users with local administrator privileges on the server.
@@ -45,18 +44,6 @@ As your hybrid and multicloud resources become part of Azure Resource Manager, t
 - **Secure public key:** Secure the Connected Machine agent public key authentication to communicate with the Azure service.
 
 ## Design recommendations
-
-### Resource consistency and inventory management
-
-Before onboarding any machine onto Azure Arc it is important to define a structure on how these resources will map to Azure management scopes (management groups, subscriptions and resource groups). This mapping is key, as it will determine how you will be able to interact with these resources when applying RBAC roles and while assigning Azure policies as part of your governance model. Review the Cloud Adoption Framework recommendations on how to [organize resources](/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources?tabs=AzureManagementGroupsAndHierarchy)
-
-When designing this structure be aware of [Azure Resource Manager service limits](/azure/azure-arc/servers/agent-overview#azure-subscription-and-service-limits), as they are also applicable to Azure Arc-enabled servers and it is important to plan for the number of machines to be connected to an specific [resource group](/azure/azure-resource-manager/management/azure-subscription-service-limits#resource-group-limits) or [subscription](/azure/azure-resource-manager/management/azure-subscription-service-limits#subscription-limits).
-
-After you have created a taxonomy structure and agreed on naming standards it is recommended to apply tags to the Azure Arc-enabled server resources. Once a server is registered in Azure it has a resource ID and becomes part of a resource group within a subscription where it can benefit from standard Azure constructs such as [tags](/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/arc-inventory-tagging). These provide the ability to add metadata to a resource to quickly locate it and automate operational tasks, as such they are relevant to your day to day tasks as described in the [Cloud Adoption Framework tagging strategy](/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging). However, it is a good practice to include a tag that reflects the `hosting platform` for the Azure Arc-enabled resource.
-
-The following image shows a conceptual reference for resource tagging for Azure Arc-enabled servers:
-
-![A diagram depicting resource tagging for Azure Arc-enabled servers](./media/arc-enabled-servers-resource-tagging.png)
 
 ### Agent Provisioning
 
@@ -164,7 +151,6 @@ The private key file is protected to only allow the HIMDS account access to read
 For more guidance for your cloud adoption journey, see the following article:
 
 - [Manage hybrid and multicloud environments](./manage.md)
-- [Resource Tagging](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/day2/arc_inventory_tagging/#apply-inventory-tagging-to-azure-arc-enabled-servers)
 - [Agent security permissions](/azure/azure-arc/servers/agent-overview)
 - [Secret and certificate management](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/day2/arc_keyvault#deploy-azure-key-vault-extension-to-azure-arc-enabled-ubuntu-server-and-use-a-key-vault-managed-certificate-with-nginx)
 - [Threat protection and cloud security posture management](/azure/security-center/)
