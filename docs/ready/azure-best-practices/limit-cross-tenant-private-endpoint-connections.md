@@ -46,7 +46,7 @@ Once the rogue administrator approves the private endpoint connection, corporate
 
 ### Mitigation for scenario one
 
-Use the following [Azure Policy](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/PrivateEndpoint/params.policyDefinition.Deny-PrivateEndpoint-PrivateLinkServiceConnections.json) to automatically deny the creation of a private endpoint in the corporate Azure AD tenant that's linked to an outside Azure service.
+Use the following [policy definition](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/PrivateEndpoint/params.policyDefinition.Deny-PrivateEndpoint-PrivateLinkServiceConnections.json) to automatically deny the creation of a private endpoint in the corporate Azure AD tenant that's linked to an outside Azure service.
 
 ```json
 "if": {
