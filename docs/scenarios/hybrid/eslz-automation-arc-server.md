@@ -18,7 +18,7 @@ Azure Arc-enabled servers enable you to manage your Windows and Linux servers an
 
 The following image shows a conceptual reference architecture that highlights the onboarding and automation design areas for Azure Arc-enabled servers:
 
-![Azure Arc-enabled data services | Onboarding and VM extension integration](../../_images/hybrid/arc-servers-onboarding.png)
+![Azure Arc-enabled data services | Onboarding and VM extension integration](./media/arc-servers-onboarding.svg)
 
 ## Design considerations
 
