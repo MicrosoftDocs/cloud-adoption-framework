@@ -6,7 +6,8 @@ ms.author: deeikele
 ms.date: 09/22/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.custom: think-tank, e2e-data
+ms.subservice: scenario
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Azure Machine Learning as a data product for enterprise-scale for analytics and AI
@@ -19,7 +20,9 @@ Azure Machine Learning is an integrated platform for managing the machine learni
 
 - Managed inference capabilities and robust integration with Azure compute and data services can help to simplify how the service is consumed.
 
-Azure Machine Learning, the Azure platform, and Azure AI services can work together to manage the machine learning life cycle. A machine learning practitioner can use Azure Synapse Analytics, Azure SQL, or Microsoft Power BI to start analyzing data and transition to Azure Machine Learning for prototyping, managing experimentation, and operationalization. In enterprise-scale landing zones, Azure Machine Learning can be considered a [data product](/architectures/data-landing-zone-data-products.md).
+Azure Machine Learning covers all aspects of the data science lifecycle. It covers datastore and dataset registration to model deployment. It can be used for any kind of machine learning, from classical machine learning to deep learning. It includes supervised and unsupervised learning. Whether you prefer to write Python, R code, or use zero-code or low-code options such as the designer, you can build, train, and track accurate machine learning and deep learning models in an Azure Machine Learning workspace.
+
+Azure Machine Learning, the Azure platform, and Azure AI services can work together to manage the machine learning lifecycle. A machine learning practitioner can use Azure Synapse Analytics, Azure SQL, or Microsoft Power BI to start analyzing data and transition to Azure Machine Learning for prototyping, managing experimentation, and operationalization. In enterprise-scale landing zones, Azure Machine Learning can be considered a [data product](/architectures/data-landing-zone-data-products.md).
 
 ## Azure Machine Learning in enterprise-scale
 
@@ -27,7 +30,7 @@ A Cloud Adoption Framework (CAF) landing zone foundation, enterprise-scale data 
 
 The following design principles can guide the implementation of Azure Machine Learning enterprise-scale landing zones:
 
-- **Accelerated data access:** Preconfigure landing zone storage components as data stores in the Azure Machine Learning workspace.  
+- **Accelerated data access:** Preconfigure landing zone storage components as data stores in the Azure Machine Learning workspace.
 
 - **Enabled collaboration:** Organize workspaces by project and centralize access management for landing zone resources to support data engineering, data science, and machine learning professionals to work together.
 
@@ -42,6 +45,7 @@ The following design principles can guide the implementation of Azure Machine Le
 - **Observability:** Central logging and reference configurations can help to monitor the environment.
 
 ## Implementation overview
+
 >[!NOTE]
 >This section recommends configurations specific to the enterprise-scale analytics and AI construction set. It complements Azure Machine Learning documentation and CAF best practices.
 
@@ -127,6 +131,12 @@ Enterprise-scale data landing zones outline reference implementation for repeata
 - If you traditionally use built-in Azure policies and need to meet additional compliance requirements, build custom Azure policies to enhance governance and self-service.
 
 - To track research and development costs, deploy one machine learning workspace in the landing zone as a shared resource during the early stages of exploring your use case.
+
+> [!IMPORTANT]
+> Use Azure Machine Learning clusters for production-grade model training, and Azure Kubernetes Service (AKS) for production-grade deployments.
+
+> [!TIP]
+> Use Azure Machine Learning for data science projects. It covers the end-to-end workflow with subservices and features, and allows to the process to be fully automated.
 
 ## Next steps
 

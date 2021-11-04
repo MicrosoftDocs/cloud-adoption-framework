@@ -17,7 +17,7 @@ Coal, oil, and human potential were the three most consequential assets during t
 
 In every company, there is data that can be used to find and meet customer needs. Unfortunately, the process of mining that data to drive innovation can be costly and time-consuming, so needs aren't discovered and solutions aren't created. Data democratization can solve this problem.
 
-What is data democratization? It's the process of getting data into the the right hands to drive innovation. This democratization process can take several forms, but they generally include solutions for ingested or integrated raw data, centralization of data, sharing data, and securing data. When data is democratized, experts around the company can use it to form and test hypotheses. In many cases, cloud adoption teams can [build with customer empathy](./build.md) using only data, to rapidly meet customer needs.
+What is data democratization? It's the process of getting data into the right hands to drive innovation. This democratization process can take several forms, but they generally include solutions for ingested or integrated raw data, centralization of data, sharing data, and securing data. When data is democratized, experts around the company can use it to form and test hypotheses. In many cases, cloud adoption teams can [build with customer empathy](./build.md) using only data, to rapidly meet customer needs.
 
 ## Ways to democratize data
 
@@ -64,7 +64,7 @@ When you centralize, you need an appropriate data store for the centralized data
 The reference architectures for [OLAP](/azure/architecture/data-guide/relational-data/online-analytical-processing) and [big data](/azure/architecture/data-guide/big-data/) solutions can help you choose the most appropriate centralization solution in Azure. If a hybrid solution is required, the reference architecture for [extending on-premises data](/azure/architecture/data-guide/scenarios/hybrid-on-premises-and-cloud) can also help accelerate solution development.
 
 > [!IMPORTANT]
-> For some customer needs and solutions, a simple approach might be enough. The cloud architect should challenge the team to consider low-cost solutions to validate the customer hypothesis, especially during early development. This section on collecting data discusseses scenarios that might suggest a different solution for your situation.
+> For some customer needs and solutions, a simple approach might be enough. The cloud architect should challenge the team to consider low-cost solutions to validate the customer hypothesis, especially during early development. This section on collecting data discusses scenarios that might suggest a different solution for your situation.
 
 ### Collect data
 

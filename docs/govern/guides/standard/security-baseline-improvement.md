@@ -120,7 +120,7 @@ The governance MVP design will change to include new Azure policies and an imple
     - Audit that password security settings are set correctly inside Linux and Windows machines.
   - Audit and enforce that Azure Recovery Services vaults exist in the subscription.
 - Firewall configuration:
-  - Identify a configuration of Azure Firewall that meets necessary security requirements. Alternatively, identify a compatible third-party appliance that's compatible with Azure. The Azure Security Benchmark provides additional information on [network security strategy](/azure/security/benchmarks/security-controls-v2-governance-strategy#gs-5-define-network-security-strategy) and [firewall configurations to support your security strategy](/azure/security/benchmarks/security-controls-v2-network-security#ns-4-protect-applications-and-services-from-external-network-attacks).
+  - Identify a configuration of Azure Firewall that meets necessary security requirements. Alternatively, identify a compatible third-party appliance that's compatible with Azure. The Azure Security Benchmark provides additional information on [network security strategy](/security/benchmark/azure/security-controls-v2-governance-strategy#gs-5-define-network-security-strategy) and [firewall configurations to support your security strategy](/security/benchmark/azure/security-controls-v2-network-security#ns-4-protect-applications-and-services-from-external-network-attacks).
   - Create a Resource Manager template to deploy the firewall with required configurations.
 - Azure Blueprints:
   - Create a new blueprint named `protected-data`.

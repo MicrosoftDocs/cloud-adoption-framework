@@ -20,7 +20,7 @@ Building on the previous connectivity sections, this section explores recommende
 
   - Virtual network injection provides dedicated private deployments for supported services. Management plane traffic still flows through public IP addresses.
 
-  - [Azure Private Link](/azure/private-link/private-endpoint-overview#private-link-resource) provides dedicated access by using private IP addresses to Azure PaaS instances or custom services behind Azure Load Balancer Standard tier. For more information, see [key benefits of Private Link](/azure/private-link/private-link-overview#key-benefits).
+  - [Azure Private Link](/azure/private-link/private-endpoint-overview#private-link-resource) provides dedicated access by using private IP addresses to Azure PaaS instances or custom services behind Azure Load Balancer Standard tier. For more information, see [Key benefits of Private Link](/azure/private-link/private-link-overview#key-benefits).
 
   - [Virtual network service endpoints](/azure/virtual-network/virtual-network-service-endpoints-overview) provide service-level access from selected subnets to selected PaaS services. Review the list of supported services on the link provided.
 

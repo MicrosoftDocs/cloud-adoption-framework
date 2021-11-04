@@ -6,7 +6,7 @@ ms.author: mboswell
 ms.date: 08/06/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
@@ -108,7 +108,7 @@ The following examples show how to use the Azure Purview REST API to register da
 
 **Register an Azure Data Lake Storage Gen2 data source:**
 
-```JSON
+```json
 {
   "kind":"AdlsGen2",
   "name":"<source-name> (for example, My-AzureDataLakeStorage)",
@@ -127,7 +127,7 @@ The following examples show how to use the Azure Purview REST API to register da
 
 **Register a SQL Database data source:**
 
-```JSON
+```json
 {
   "kind":"<source-kind> (for example, AdlsGen2)",
   "name":"<source-name> (for example, My-AzureSQLDatabase)",
@@ -171,7 +171,7 @@ The following examples show how to use the Azure Purview REST API to scan data s
 
 **Scan an Azure Data Lake Storage Gen2 data source:**
 
-```JSON
+```json
 {
   "name":"<scan-name>",
   "kind":"AdlsGen2Msi",
@@ -185,7 +185,7 @@ The following examples show how to use the Azure Purview REST API to scan data s
 
 **Scan a SQL Database data source:**
 
-```JSON
+```json
 {
   "name":"<scan-name>",
   "kind":"AzureSqlDatabaseMsi",
@@ -202,7 +202,7 @@ The following examples show how to use the Azure Purview REST API to scan data s
 
 **Use the following API call to scan data sources:**
 
-```HTTP
+```http
 POST https://{accountName}.scan.purview.azure.com/datasources/{dataSourceName}/scans/{newScanName}/run
 ```
 

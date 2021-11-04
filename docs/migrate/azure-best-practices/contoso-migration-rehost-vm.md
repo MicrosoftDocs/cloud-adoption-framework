@@ -10,8 +10,6 @@ ms.subservice: migrate
 ms.custom: think-tank
 ---
 
-<!-- cSpell:ignore WEBVM SQLVM OSTICKETWEB OSTICKETMYSQL contosohost vcenter contosodc NSGs agentless -->
-
 # Rehost an on-premises application on Azure VMs by using Azure Migrate
 
 This article demonstrates how the fictional company Contoso rehosts a two-tier Windows .NET front-end application running on VMware virtual machines (VMs) by migrating application VMs to Azure VMs.
@@ -30,7 +28,7 @@ The IT leadership team has worked closely with business partners to understand w
 
 The Contoso cloud team has pinned down goals for this migration. It used these goals to determine the best migration method:
 
-- After migration, the application in Azure should have the same performance capabilities as it does today in VMware. The application will remain as critical in the cloud as it is on-premises.
+- After migration, the application in Azure should have the same performance capabilities as it does today in VMware. The application will remain as critical in the cloud as it's been on-premises.
 - Although this application is important to Contoso, the company doesn't want to invest in it at this time. Contoso wants to move the application safely to the cloud in its current form.
 - Contoso doesn't want to change the ops model for this application. Contoso does want to interact with it in the cloud in the same way that it does now.
 - Contoso doesn't want to change any application functionality. Only the application location will change.
@@ -70,7 +68,7 @@ Contoso evaluates the proposed design by putting together a list of pros and con
 | Consideration | Details |
 | --- | --- |
 | **Pros** | Both the application VMs will be moved to Azure without changes, making the migration simple. <br><br> Because Contoso is using a lift-and-shift approach for both application VMs, it doesn't need any special configuration or migration tools for the application database. <br><br> Contoso can take advantage of its investment in Software Assurance by using the Azure Hybrid Benefit. <br><br> Contoso will retain full control of the application VMs in Azure. |
-| **Cons** | `WEBVM` and `SQLVM` are running Windows Server 2008 R2. Azure supports the operating system for specific roles. [Learn more](/troubleshoot/azure/virtual-machines/server-software-support). <br><br> The web and data tiers of the application remain as single points of failure. <br><br> `SQLVM` is running on SQL Server 2008 R2. SQL Server 2008 R2 is no longer in mainstream support, but it is supported for Azure VMs. [Learn more](/azure/azure-sql/virtual-machines/windows/sql-server-2008-extend-end-of-support). <br><br> Contoso must continue supporting the application on Azure VMs rather than moving to a managed service such as Azure App Service or Azure SQL Database. |
+| **Cons** | `WEBVM` and `SQLVM` are running Windows Server 2008 R2. Azure supports the operating system for specific roles. [Learn more](/troubleshoot/azure/virtual-machines/server-software-support). <br><br> The web and data tiers of the application remain as single points of failure. <br><br> `SQLVM` is running on SQL Server 2008 R2. SQL Server 2008 R2 is no longer in mainstream support, but it's supported for Azure VMs. [Learn more](/azure/azure-sql/virtual-machines/windows/sql-server-2008-extend-end-of-support). <br><br> Contoso must continue supporting the application on Azure VMs rather than moving to a managed service such as Azure App Service or Azure SQL Database. |
 
 ### Migration process
 
@@ -122,7 +120,7 @@ To migrate the VMs to Azure, Contoso needs a virtual network in which Azure VMs 
 
 1. Provision the Azure Migrate: Server Migration tool.
 
-    1. From Azure Migrate, download the OVA image and import it into VMware.
+    1. From Azure Migrate, download the `.OVA` image file and import it into VMware.
 
        ![Screenshot that shows the **Download** button for the O V A file.](./media/contoso-migration-rehost-vm/migration-download-ova.png)
 
@@ -138,7 +136,7 @@ To migrate the VMs to Azure, Contoso needs a virtual network in which Azure VMs 
 
        - Set the VMware vCenter credentials.
 
-         ![Screenshot that shows selections for specifying a vCenter server.](./media/contoso-migration-rehost-vm/migration-vcenter-server.png)
+         ![Screenshot of the **Specify vCenter Server** screen.](./media/contoso-migration-rehost-vm/migration-vcenter-server.png)
 
        - Add any Windows-based credentials for discovery.
 
@@ -211,11 +209,11 @@ With discovery completed, they can begin replication of VMware VMs to Azure.
 
 8. In **Compute**, review the VM name, size, OS disk type, and availability set. VMs must conform with [Azure requirements](/azure/migrate/migrate-support-matrix-vmware#vmware-requirements).
 
-    - **VM size:** If you're using assessment recommendations, the VM size drop-down list will contain the recommended size. Otherwise, Azure Migrate picks a size based on the closest match in the Azure subscription. Alternatively, pick a manual size in **Azure VM size**.
+    - **VM size:** If you're using assessment recommendations, the VM size dropdown list will contain the recommended size. Otherwise, Azure Migrate picks a size based on the closest match in the Azure subscription. Alternatively, pick a manual size in **Azure VM size**.
     - **OS disk:** Specify the OS (boot) disk for the VM. The OS disk has the operating system bootloader and installer.
     - **Availability set:** If the VM should be in an Azure availability set after migration, specify the set. The set must be in the target resource group that you specify for the migration.
 
-9. In **Disks**, specify whether the VM disks should be replicated to Azure, and select the disk type (standard SSD/HDD or premium-managed disks) in Azure. Then select **Next**.
+9. In **Disks**, specify whether the VM disks should be replicated to Azure, and select the disk type (Standard SSD/HDD or Premium SSD) in Azure. Then select **Next**.
 
    You can exclude disks from replication. If you exclude disks, they won't be present on the Azure VM after migration.
 
@@ -303,4 +301,4 @@ Contoso will enable [Azure Cost Management + Billing](/azure/cost-management-bil
 
 ## Conclusion
 
-In this article, Contoso rehosted the SmartHotel360 application in Azure. The admins migrated the application VMs to Azure VMs by using the Azure Migrate: Server Migration tool. You can also review the Azure DevOps projects which have been published in the [DevOps generator](https://aka.ms/adopt/plan/generator). Once in the generator, download the [Server Migration Project](https://azuredevopsdemogenerator.azurewebsites.net/?name=servermigration) under the Cloud Adoption Framework navigation.
+In this article, Contoso rehosted the SmartHotel360 application in Azure. The admins migrated the application VMs to Azure VMs by using the Azure Migrate: Server Migration tool. You can also review the Azure DevOps projects which have been published in the [DevOps generator](https://aka.ms/adopt/plan/generator). Once in the generator, download the [`Server Migration Project`](https://azuredevopsdemogenerator.azurewebsites.net/?name=servermigration) under the Cloud Adoption Framework navigation.

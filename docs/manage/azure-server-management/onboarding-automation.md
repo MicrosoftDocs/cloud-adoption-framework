@@ -10,8 +10,6 @@ ms.subservice: manage
 ms.custom: internal
 ---
 
-<!-- cspell:ignore perf -->
-
 # Automate onboarding
 
 To improve the efficiency of deploying Azure server management services, consider automating deployment as discussed in previous sections of this guidance. The script and the example templates provided in the following sections are starting points for developing your own automation of onboarding processes.
@@ -22,7 +20,7 @@ The sample files illustrate how to use Azure PowerShell cmdlets to automate the 
 
 - Create a [Log Analytics workspace](/azure/azure-monitor/logs/manage-access). (Or, use an existing workspace if it meets the requirements. For details, see [Workspace planning](./prerequisites.md#log-analytics-workspace-and-automation-account-planning).
 
-- Create an Automation account, or use an existing account that meets the requirements. For more information, see [Workspace planning](./prerequisites.md#log-analytics-workspace-and-automation-account-planning).
+- Create an Azure Automation account, or use an existing account that meets the requirements. For more information, see [Workspace planning](./prerequisites.md#log-analytics-workspace-and-automation-account-planning).
 
 - Link the Automation account and the Log Analytics workspace. This step isn't required if you're onboarding by using the Azure portal.
 

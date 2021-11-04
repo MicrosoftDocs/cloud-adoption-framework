@@ -10,8 +10,6 @@ ms.subservice: strategy
 ms.custom: think-tank
 ---
 
-<!-- cSpell:ignore NIST CISO COVID -->
-
 # Define a security strategy
 
 The ultimate objectives for a security organization don't change with adoption of cloud services, but how those objectives are achieved will change. Security teams must still focus on reducing business risk from attacks and work to get confidentiality, integrity, and availability assurances built into all information systems and data.
@@ -117,7 +115,7 @@ While these could be part of any security modernization plan, the rapid pace of 
 
 - **Success in either productivity or security requires both.** An organization must focus on both security and productivity in today's "innovation or become irrelevant" environment. If the organization is not productive and driving new innovation, it may lose competitiveness in the marketplace that causes it to weaken financially or eventually fail. If the organization is not secure and loses control of assets to attackers, it may lose competitiveness in the marketplace that causes it to weaken financially and eventually fail.
 
-- **Nobody's perfect.** No organization is perfect at adopting the cloud, not even Microsoft. Microsoft's IT and security teams grapple with many of the same challenges that our customers do such as figuring out how to structure programs well, balancing supporting legacy software with supporting cutting edge innovation, and even technology gaps in cloud services. As these teams learn how to better operate and secure the cloud, they are actively sharing their lessons learned via documents like this along with others on the [IT showcase site](https://www.microsoft.com/itshowcase), while continuously providing feedback to our engineering teams and third-party vendors to improve their offerings.
+- **Nobody's perfect.** No organization is perfect at adopting the cloud, not even Microsoft. Microsoft's IT and security teams grapple with many of the same challenges that our customers do such as figuring out how to structure programs well, balancing supporting legacy software with supporting cutting edge innovation, and even technology gaps in cloud services. As these teams learn how to better operate and secure the cloud, they are actively sharing their lessons learned via documents like this along with others on the [IT showcase site](https://www.microsoft.com/insidetrack), while continuously providing feedback to our engineering teams and third-party vendors to improve their offerings.
 
   Based on our experience, we recommend that teams are held to a standard of continuous learning and improvement rather than a standard of perfection.
 

@@ -10,10 +10,6 @@ ms.subservice: migrate
 ms.custom: think-tank
 ---
 
-<!-- docutune:casing "BMC Control-M" ASSGN DLBL EXTENT LIBDEF EXEC TWS-OPC CA-SAR IMS/TM IMS/DC "IMS/Data Communications" "Micro Focus Server Enterprise Edition" VSE -->
-<!-- docutune:ignore JOB Natural SPOOL -->
-<!-- cSpell:ignore dbspaces dbextents ASSGN DLBL EXTENT LIBDEF EXEC IPLs VSAM RACF LPARs -->
-
 # Mainframe migration overview
 
 Many companies and organizations benefit from moving some or all their mainframe workloads, applications, and databases to the cloud. Azure provides mainframe-like features at cloud scale without many of the drawbacks associated with mainframes.
@@ -66,7 +62,7 @@ The following are typical mainframe operations:
 
 - **Batch:** Jobs run without user interaction, typically on a regular schedule such as every weekday morning. Batch jobs can be run on systems based on Windows or Linux by using a JCL emulator such as Micro Focus Server Enterprise Edition or BMC Control-M software.
 
-- **Job control language (JCL):** Specify resources needed to process batch jobs. JCL conveys this information to z/OS through a set of job control statements. Basic JCL contains six types of statements: JOB, ASSGN, DLBL, EXTENT, LIBDEF, and EXEC. A job can contain several EXEC statements (steps), and each step could have several LIBDEF, ASSGN, DLBL, and EXTENT statements.
+- **Job control language (JCL):** Specify resources needed to process batch jobs. JCL conveys this information to z/OS through a set of job control statements. Basic JCL contains six types of statements: `JOB`, `ASSGN`, `DLBL`, `EXTENT`, `LIBDEF`, and `EXEC`. A job can contain several `EXEC` statements (steps), and each step could have several `LIBDEF`, `ASSGN`, `DLBL`, and `EXTENT` statements.
 
 - **Initial program load (IPL):** Refers to loading a copy of the operating system from disk into a processor's real storage and running it. IPLs are used to recover from downtime. An IPL is like booting the operating system on Windows or Linux VMs.
 

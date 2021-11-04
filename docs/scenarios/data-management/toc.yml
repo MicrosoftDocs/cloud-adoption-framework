@@ -1,6 +1,3 @@
-# docsTest:ignore "NET Core" "Cloud Operating Model" "Virtual Datacenter" Framework app
-#cSpell:ignore devtest mariadb
-
 items:
   - name: Data management and analytics - Microsoft Cloud Adoption Framework for Azure
     href: ./index.md
@@ -12,6 +9,9 @@ items:
     href: ./strategy.md
   - name: Define your plan
     href: ./plan.md
+  - name: Build data management and analytics capabilities
+    href: ./plan-capabilities.md
+  
 
   - name: Prepare your environment
     items:

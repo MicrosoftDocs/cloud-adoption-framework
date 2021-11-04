@@ -10,9 +10,6 @@ ms.subservice: strategy
 ms.custom: internal
 ---
 
-<!-- docutune:casing ExakTime "Descartes MacroPoint" -->
-<!-- cspell:ignore Exak -->
-
 # Examples of customer engagement outcomes
 
 As discussed in the [business outcomes overview](./index.md), several potential business outcomes can serve as the foundation for any transformation journey conversation with the business. This article focuses on a common business measure: customer engagement. Understanding the needs of customers, and the ecosystem around customers, helps you to articulate the business outcomes that are the target of a business's transformation journey.
