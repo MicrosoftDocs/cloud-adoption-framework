@@ -26,9 +26,9 @@ The following image shows a conceptual reference architecture for the connectivi
 
 The following are some network design considerations for Azure Arc-enabled servers:
 
-- **Define the agent's connectivity method:** The Connected Machine agent [communicates to Azure](/azure/azure-arc/servers/agent-overview#networking-configuration) from your on-premises network or other cloud environment over TCP port 443. This connection can be over the internet, through a proxy server or you can implement [Private Link Scope](/azure/azure-arc/servers/private-link-security) for a private connection.
+- **Define the agent's connectivity method:** The Connected Machine agent [communicates to Azure](/azure/azure-arc/servers/agent-overview#networking-configuration) from your on-premises network or other cloud environment over TCP port 443. This connection can be over the internet, optionally through a proxy server or you can implement [Private Link](/azure/azure-arc/servers/private-link-security) for a private connection.
 - **Manage Access to Azure Service Tags:** create an automated process to keep the firewall and proxy network rules updated according to the [Azure Arc network service Tags and IP addresses range](https://www.microsoft.com/en-us/download/details.aspx?id=56519).
-- **Secure your network connectivity to Azure Arc:** configure the machine to use Transport secuirty (TLS) 1.2 older versions are not recomended as data in transit might be vulnerable.
+- **Secure your network connectivity to Azure Arc:** configure the machine to use Transport security (TLS) 1.2 older versions are not recommended as data in transit might be vulnerable.
 - **Define extensions connectivity method:** Azure Extensions also need to communicate with other Azure Services, this connectivity can be direct using public networks or through a firewall or proxy server. To further secure the extension connectivity you can implement a [Private Endpoint](/azure/azure-arc/servers/private-link-security#how-it-works) for each extension.
 
 ## Design recommendations
@@ -37,30 +37,28 @@ The following are some network design considerations for Azure Arc-enabled serve
 
 Azure Arc-enabled servers allows you to connect hybrid machines using the following methods:
 
-- Direct connection, optionally behind a firewall or proxy
-- Private Link
+- Direct connection, optionally behind a firewall or proxy server.
+- Private Link,
 
 #### Direct Connection
 
-Azure Arc-enabled servers offers [direct connectivity to Azure public endpoints]((/azure/azure-arc/servers/agent-overview#networking-configuration)). In this connectivity method, all the machine agents will open a connection via the internet using public endpoint. The Connected Machine agent for Linux and Windows communicates outbound securely to Azure over TCP port 443.
+Azure Arc-enabled servers offers [direct connectivity to Azure public endpoints](/azure/azure-arc/servers/agent-overview#networking-configuration). In this connectivity method, all the machine agents will open a connection via the internet using public endpoint. The Connected Machine agent for Linux and Windows communicates outbound securely to Azure over TCP port 443.
 
 ![Azure Arc-enabled servers connectivity options](./media/arc-enabled-servers-direct-connection.png)
 
 In this connectivity method you need to review your internet access for the Connected Machine Agent and it is best practice to configure the [required network rules](/azure/azure-arc/servers/agent-overview#networking-configuration).
 
-#### Proxy server connection (Optional)
+#### Proxy server or Firewall connection (Optional)
 
-If the machine needs to connect through a firewall or proxy server to communicate over the internet, the agent communicates outbound instead using the HTTP protocol. Proxy servers don't make the Connected Machine agent more secure because the traffic is already encrypted.
+If the machine needs to connect through a firewall or proxy server to communicate over the internet, the agent connects outbound instead using the HTTP protocol. Proxy servers don't make the Connected Machine agent more secure because the traffic is already encrypted.
 
 If outbound connectivity is restricted by your firewall or proxy server, make sure the [Azure Arc network service Tags and IP addresses range](/azure/azure-arc/servers/agent-overview#networking-configuration) are not blocked. When you only allow the IP ranges or domain names required for the agent to communicate with the service, you need to allow access to the required Service Tags and URLs.
 
 Be aware that if you deploy extensions on your Azure Arc-enabled servers they also support Proxy connection and should be configured as such. However, every extension has its own endpoint, and all corresponding URLs must also be allowed in the firewall or proxy. It is recommended to have an automated process to keep all required endpoints updated for any firewall or proxy rules.
 
-If there is a need to update or remove proxy settings please follow the steps described [here.](/azure/azure-arc/servers/manage-agent#update-or-remove-proxy-settings)
-
 #### Private Link
 
-Azure Arc-enabled servers allow you to deploy VM extensions to centrally manage your servers from Azure, these extensions connect to other resources such as Log Analytics Workspaces, Automation Accounts, Key Vault or Azure Storage. You can use Azure Private Link to make this connection private without opening any public network access, all of the data is kept private preventing data exfiltration. The traffic between you Azure Arc-enabled servers and Azure Services will go through your VPN connection or Express Route and will be kept inside the Microsoft Azure backbone network.
+Azure Arc-enabled servers allow you to deploy VM extensions to centrally manage your servers from Azure, these extensions connect to other resources such as Log Analytics Workspaces, Automation Accounts, Key Vault or Azure Storage. You can use Azure Private Link to make this connection private without opening any public network access, all of the data is kept private preventing data exfiltration. The traffic between  Azure Arc-enabled servers and Azure Services will go through your VPN connection or Express Route and will be kept inside the Microsoft Azure backbone network.
 
 ![Azure Arc-enabled servers private link topology](./media/arc-enabled-servers-private-link-topology.png)
 
@@ -76,9 +74,9 @@ It is recommended to use [Transport Layer Security 1.2 protocol](/azure/azure-ar
 
 ### Define extensions connectivity method
 
-When you enable any one of the Azure Arc-enabled servers supported VM extensions, those extensions connect other Azure resources. Define a connectivity method for those extensions either directly, behind a proxy server/firewall or using Private Link.
+When you enable any of the Azure Arc-enabled servers supported VM extensions, those extensions connect to other Azure resources. It is important to define a connectivity method for those extensions either directly, behind a proxy server/firewall or using Private Link.
 
-If your Azure Arc enabled-servers use a proxy or firewall all the corresponding URLs must also be allowed as every extension has its own endpoint.
+If your Azure Arc enabled-servers use a proxy or firewall all the corresponding URLs for the extension must also be allowed as it will communicate with its own endpoint.
 
 If Private Link is used it requires configuring [Private Link for each service](/azure/azure-arc/servers/private-link-security#how-it-works).
 
