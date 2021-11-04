@@ -37,8 +37,8 @@ The following are some network design considerations for Azure Arc-enabled serve
 
 Azure Arc-enabled servers allows you to connect hybrid machines using the following methods:
 
-- Direct connection, optionally behind a firewall or proxy server.
-- Private Link.
+- Direct connection, optionally behind a firewall or proxy server
+- Private Link
 
 #### Direct Connection
 
