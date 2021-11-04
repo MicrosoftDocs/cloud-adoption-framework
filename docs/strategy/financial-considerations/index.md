@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Understand financial considerations
 
-A digital transformation goes hand-in-hand with a financial transformation. When you're making the shift to the cloud, there are financial considerations around how the cloud will impact your financial position, accounting  KPIs, and processes that Chief Financial Officers (CFO) and finance teams need to understand. Your organization’s motivations and business outcomes will help determine how you look at your financials.
+A digital transformation goes hand-in-hand with a financial transformation. When you're making the shift to the cloud, there are financial considerations around how the cloud will impact your financial position, accounting  KPIs, and processes that Chief Financial Officers (CFO) and finance teams need to understand. Your organization's motivations and business outcomes will help determine how you look at your financials.
 
 This guidance will help you learn how to use the cloud to make your IT cost structure more flexible and help you build a business case to migrate to the cloud.
 
@@ -30,7 +30,7 @@ A reduced data center footprint is another benefit of a shift to the cloud. On-p
 
 ## Increased productivity and service delivery
 
-How can the cloud help your team be more productive? It’s critical to consider how DevOps the cloud can improve and drive efficiency in your organization. The cloud can help unlock better DevOps processes, resulting in faster time to market, increased revenue, increased employee productivity, and the ability to deploy products more quickly.
+How can the cloud help your team be more productive? It's critical to consider how DevOps the cloud can improve and drive efficiency in your organization. The cloud can help unlock better DevOps processes, resulting in faster time to market, increased revenue, increased employee productivity, and the ability to deploy products more quickly.
 
 ## Sustainability
 

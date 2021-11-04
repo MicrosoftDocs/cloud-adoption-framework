@@ -6,7 +6,7 @@ ms.author: mboswell
 ms.date: 07/20/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: operate
+ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
@@ -44,7 +44,7 @@ Even if a service accesses another service without human interactions, the servi
 
 For service-to-service authentication, the preferred method for authenticating Azure services is managed identities. Managed identities for Azure resources allow for authentication to any service that supports Azure AD authentication without any explicit credentials. For more information, see [What are managed identities for Azure resources](/azure/active-directory/managed-identities-azure-resources/overview).
 
-Managed identities are service principals, which can only be used with Azure resources. For example, a managed identity can be created directly for an Azure Data Factory instance. This managed identity is an object registered to Azure AD. It represents this data factory. This identity can then be used to authenticate to any service, such as Data Lake Storage, without any credential in the code. Azure takes care of the credentials that are used by the service instance. The identity can grant authorization to Azure service resources, such as a folder in the Azure Data Lake Storage. When you delete this data factory instance, Azure cleans up the identity in Azure AD.
+Managed identities are service principals, which can only be used with Azure resources. For example, a managed identity can be created directly for an Azure Data Factory instance. This managed identity is an object registered to Azure AD. It represents this Data Factory instance. This identity can then be used to authenticate to any service, such as Data Lake Storage, without any credential in the code. Azure takes care of the credentials that are used by the service instance. The identity can grant authorization to Azure service resources, such as a folder in the Azure Data Lake Storage. When you delete this Data Factory instance, Azure cleans up the identity in Azure AD.
 
 #### Benefits of using managed identities
 
@@ -72,7 +72,7 @@ An Azure service principal is the alternative for applications and services that
 |-------------------|------------------|
 | A security identity manually created in Azure AD for use by applications, services, and tools to access specific Azure resources. | A special type of service principal. It's an automatic identity that is created when an Azure service is created. |
 | Can be used by any application or service. It isn't tied to a specific Azure service. | Represents an Azure service instance itself. It cannot be used to represent other Azure services. |
-| Has an independent life cycle. You must delete it explicitly. | Deletes automatically when the Azure service instance is deleted. |
+| Has an independent lifecycle. You must delete it explicitly. | Is deleted automatically when the Azure service instance is deleted. |
 | Password-based or certificate-based authentication. | No explicit password to be provided for authentication. |
 
 ## Database authentication and permissions
@@ -90,7 +90,7 @@ We recommend that you use Azure AD groups to secure database objects instead of 
 
 ## Azure Data Lake security in the data management and analytics scenario
 
-To control access to data in the data lake, we recommend using access control list (ACL) at the level of files and folders. Azure Data Lake also adopts a Portable Operating System Interface (POSIX)-like access control list model. POSIX is the family of standards for operating systems. One standard defines a simple but yet powerful permission structure for accessing files and folders. POSIX has been adopted widely in network file shares and Unix computers.
+To control access to data in the data lake, we recommend using access control list (ACL) at the level of files and folders. Azure Data Lake also adopts a POSIX-like access control list model. POSIX (portable operating system interface) is a family of standards for operating systems. One standard defines a simple but powerful permission structure for accessing files and folders. POSIX has been adopted widely for network file shares and Unix computers.
 
 Similar to Azure RBAC general practices, the following rules should apply to ACL:
 

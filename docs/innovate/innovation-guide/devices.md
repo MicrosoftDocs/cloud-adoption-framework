@@ -12,8 +12,6 @@ ms.custom: think-tank, fasttrack-new, AQC, seo-caf-innovate
 keywords: Connected devices, ubiquitous computing, device management, edge devices
 ---
 
-<!-- cSpell:ignore umarmohamedusman umarm Moovit -->
-
 # Interact through connected devices
 
 Innovate through intermittently connected devices and perceptive edge devices. Orchestrate millions of such devices, acquire and process limitless data, and take advantage of a growing number of multisensory, multidevice experiences. For devices at the edge of your network, Azure provides a framework for building immersive and effective business solutions. With ubiquitous computing, enabled by Azure combined with AI technology, you can build every type of intelligent application and system you can envision.
@@ -30,7 +28,7 @@ Azure customers employ a continually expanding set of connected systems and devi
 > - [Azure Kinect DK](/azure/kinect-dk/about-azure-kinect-dk)
 > - Drones
 > - [Azure SQL Edge](/azure/azure-sql-edge/overview)
-> - [IoT plug and play](/azure/iot-pnp/overview-iot-plug-and-play)
+> - [IoT plug and play](/azure/iot-develop/overview-iot-plug-and-play)
 
 ## [Global scale IoT service](#tab/IoTHub)
 
@@ -47,8 +45,8 @@ Here are a few features you'll find:
 
 ### Learn more
 
-- [Azure IoT Hub](/azure/iot-hub)
-- [Azure IoT Hub Device Provisioning Service (DPS)](/azure/iot-dps)
+- [Azure IoT Hub](/azure/iot-hub/)
+- [Azure IoT Hub Device Provisioning Service (DPS)](/azure/iot-dps/)
 - [Use our modern IoT Azure DevOps project to help with your work item management](https://azuredevopsdemogenerator.azurewebsites.net/?name=modiot)
 
 ::: zone-end
@@ -57,7 +55,7 @@ Here are a few features you'll find:
 
 ### Action
 
-To create an IoT hub:
+To create an IoT Hub instance:
 
 1. Go to **IoT Hub**.
 2. Select **Create IoT hub**.

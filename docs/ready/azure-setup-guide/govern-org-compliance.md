@@ -155,7 +155,7 @@ To learn more, see:
 
 - [Azure Security Center](/azure/security-center/)
 - [Just-in-time VM access](/azure/security-center/security-center-just-in-time#how-does-just-in-time-access-work)
-- [Security Center pricing tiers](https://azure.microsoft.com/pricing/details/security-center/)
+- [Security Center pricing tiers](https://azure.microsoft.com/pricing/details/azure-defender/)
 - [Cloud Adoption Framework: Security Baseline discipline](../../govern/security-baseline/index.md)
 
 ::: zone-end

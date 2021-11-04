@@ -148,13 +148,13 @@ Start using Data Migration Assistant with these steps:
 1. Select **Next** to start the assessment.
 1. View results in Data Migration Assistant.
 
-For an enterprise, we recommend following the approach outlined in [Assess an enterprise and consolidate assessment reports with DMA](/sql/dma/dma-consolidatereports) to assess multiple servers, combine the reports, and then use provided Power BI reports to analyze the results.
+For an enterprise, we recommend following the approach outlined in [Assess an enterprise and consolidate assessment reports with DMA](/azure/migrate/tutorial-assess-sql) to assess multiple servers, combine the reports, and then use provided Power BI reports to analyze the results.
 
 For more information, including detailed usage steps, see:
 
 - [Data Migration Assistant overview](/sql/dma/dma-overview)
-- [Assess an enterprise and consolidate assessment reports with DMA](/sql/dma/dma-consolidatereports)
-- [Analyze consolidated assessment reports created by Data Migration Assistant with Power BI](/sql/dma/dma-consolidatereports)
+- [Assess an enterprise and consolidate assessment reports with DMA](/azure/migrate/tutorial-assess-sql)
+- [Analyze consolidated assessment reports created by Data Migration Assistant with Power BI](/azure/migrate/tutorial-assess-sql)
 
 ### SQL Server Migration Assistant
 
