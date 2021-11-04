@@ -7,7 +7,7 @@ ms.date: 09/13/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: e2e-data-management, think-tank
+ms.custom: think-tank, e2e-data
 ---
 
 # Azure Purview deployment best practices for data management and analytics enterprise-scale scenario
@@ -220,4 +220,9 @@ Review the following list of personas involved in an enterprise-scale for analyt
 | Data scientists | Use your preferred tools and machine learning frameworks to build scalable data science solutions. Accelerate end-to-end machine learning lifecycle.|<ul><li>Data source admin</li><li>Data curator</li></ul> |
 | Machine learning engineers | Enable right processes and infrastructure for easy model deployment and model management. |<ul><li>Data source admin</li><li>Data curator</li></ul> |
 
-For more information about data personas, see [Personas and teams](../organize-persona-and-teams.md#personas).
+For more information about data personas, see [personas and teams](../organize-persona-and-teams.md#personas).
+
+## Next steps
+
+[Azure Machine Learning as a data product for enterprise-scale for analytics and AI](./azure-machine-learning.md)
+

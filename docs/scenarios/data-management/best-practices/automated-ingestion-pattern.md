@@ -95,7 +95,7 @@ Use the following API call to register new data sources:
 PUT https://{accountName}.scan.purview.azure.com/datasources/{dataSourceName}
 ````
 
-**URI parameters for the data source**:
+**URI parameters for the data source:**
 
 |Name  |Required  |Type  |Description  |
 |---------|---------|---------|---------|
@@ -106,7 +106,7 @@ PUT https://{accountName}.scan.purview.azure.com/datasources/{dataSourceName}
 
 The following examples show how to use the Azure Purview REST API to register data sources with payloads:
 
-**Register an Azure Data Lake Storage Gen2 data source**:
+**Register an Azure Data Lake Storage Gen2 data source:**
 
 ```JSON
 {
@@ -125,7 +125,7 @@ The following examples show how to use the Azure Purview REST API to register da
 }
 ```
 
-**Register a SQL Database data source**:
+**Register a SQL Database data source:**
 
 ```JSON
 {
@@ -157,7 +157,7 @@ Use the following API call to scan data sources:
 PUT https://{accountName}.scan.purview.azure.com/datasources/{dataSourceName}/scans/{newScanName}/
 ````
 
-**URI parameters for a scan**:
+**URI parameters for a scan:**
 
 |Name  |Required  |Type  |Description  |
 |---------|---------|---------|---------|
@@ -169,7 +169,7 @@ PUT https://{accountName}.scan.purview.azure.com/datasources/{dataSourceName}/sc
 
 The following examples show how to use the Azure Purview REST API to scan data sources with payloads:
 
-**Scan an Azure Data Lake Storage Gen2 data source**:
+**Scan an Azure Data Lake Storage Gen2 data source:**
 
 ```JSON
 {
@@ -183,7 +183,7 @@ The following examples show how to use the Azure Purview REST API to scan data s
 }
 ```
 
-**Scan a SQL Database data source**:
+**Scan a SQL Database data source:**
 
 ```JSON
 {
@@ -200,7 +200,7 @@ The following examples show how to use the Azure Purview REST API to scan data s
 
 ```
 
-**Use the following API call to scan data sources**:
+**Use the following API call to scan data sources:**
 
 ```HTTP
 POST https://{accountName}.scan.purview.azure.com/datasources/{dataSourceName}/scans/{newScanName}/run
