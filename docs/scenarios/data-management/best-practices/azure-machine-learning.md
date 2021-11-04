@@ -1,5 +1,5 @@
 ---
-title: Azure Machine Learning as a data product for enterprise-scale for analytics and AI 
+title: Azure Machine Learning as a data product for enterprise-scale for analytics and AI
 description: Learn about Azure Machine Learning as a data product for enterprise-scale for analytics and AI.
 author: abdale
 ms.author: deeikele
@@ -12,7 +12,7 @@ ms.custom: e2e-data-management, think-tank
 
 # Azure Machine Learning as a data product for enterprise-scale for analytics and AI
 
-Azure Machine Learning is an integrated platform for managing the machine learning life cycle from beginning to end, including help with the creation, operation, and consumption of machine learning models and workflows. A few benefits of the service include:
+Azure Machine Learning is an integrated platform for managing the machine learning lifecycle from beginning to end, including help with the creation, operation, and consumption of machine learning models and workflows. A few benefits of the service include:
 
 - Capabilities support creators to increase their productivity by helping them to manage experiments, access data, track jobs, tune hyperparameters, and automate workflows.
 
@@ -22,7 +22,7 @@ Azure Machine Learning is an integrated platform for managing the machine learni
 
 Azure Machine Learning covers all aspects of the data science lifecycle. It covers datastore and dataset registration to model deployment. It can be used for any kind of machine learning, from classical machine learning to deep learning. It includes supervised and unsupervised learning. Whether you prefer to write Python, R code, or use zero-code or low-code options such as the designer, you can build, train, and track accurate machine learning and deep learning models in an Azure Machine Learning workspace.
 
-Azure Machine Learning, the Azure platform, and Azure AI services can work together to manage the machine learning lifecycle. A machine learning practitioner can use Azure Synapse Analytics, Azure SQL, or Microsoft Power BI to start analyzing data and transition to Azure Machine Learning for prototyping, managing experimentation, and operationalization. In enterprise-scale landing zones, Azure Machine Learning can be considered a [data product](/architectures/data-landing-zone-data-products.md).
+Azure Machine Learning, the Azure platform, and Azure AI services can work together to manage the machine learning lifecycle. A machine learning practitioner can use Azure Synapse Analytics, Azure SQL Database, or Microsoft Power BI to start analyzing data and transition to Azure Machine Learning for prototyping, managing experimentation, and operationalization. In enterprise-scale landing zones, Azure Machine Learning can be considered a [data product](/architectures/data-landing-zone-data-products.md).
 
 ## Azure Machine Learning in enterprise-scale
 
@@ -40,14 +40,14 @@ The following design principles can guide the implementation of Azure Machine Le
 
 - **Separation of concerns between data management and data consumption:** Identity passthrough is the default authentication type for Azure Machine Learning and storage.
 
-- **Faster data integration:** Azure Data Factory, Synapse Analytics, and Databricks landing zones can be preconfigured to link to Azure Machine Learning.
+- **Faster data integration:** Azure Data Factory, Azure Synapse Analytics, and Databricks landing zones can be preconfigured to link to Azure Machine Learning.
 
 - **Observability:** Central logging and reference configurations can help to monitor the environment.
 
 ## Implementation overview
 
->[!NOTE]
->This section recommends configurations specific to the enterprise-scale analytics and AI construction set. It complements Azure Machine Learning documentation and CAF best practices.
+> [!NOTE]
+> This section recommends configurations specific to the enterprise-scale analytics and AI construction set. It complements Azure Machine Learning documentation and CAF best practices.
 
 ### Workspace organization and setup
 
@@ -55,7 +55,7 @@ You can deploy the number of machine learning workspaces that your workloads req
 
 - Deploy at least one machine learning workspace per project.
 
-- Depending on your machine learning project’s life cycle, deploy one development (dev) workspace to prototype use cases and explore data early on. For work that requires continuous experimentation, testing, and deployment, deploy a staging and production workspace.
+- Depending on your machine learning project's lifecycle, deploy one development (dev) workspace to prototype use cases and explore data early on. For work that requires continuous experimentation, testing, and deployment, deploy a staging and production workspace.
 
 - When multiple environments are needed for dev, staging, and production workspaces in enterprise-scale, we recommend avoiding data duplication by having each environment land in the same production data landing zone.
 
@@ -67,7 +67,7 @@ For each default resource configuration in an enterprise-scale data landing zone
 - Application Insights
 - Azure Container Registry
 - Use Azure Machine Learning to connect to an Azure Storage account and Azure Active Directory (Azure AD) identity-based authentication to help users connect to the account.
-- Diagnostic logging is set up for each workspace and configured to a central log analytics resource in enterprise-scale; this can help Azure Machine Learning job health and resource statuses to be analyzed centrally within and across landing zones.
+- Diagnostic logging is set up for each workspace and configured to a central Log Analytics resource in enterprise-scale; this can help Azure Machine Learning job health and resource statuses to be analyzed centrally within and across landing zones.
 - See [What is an Azure Machine Learning workspace?](/azure/machine-learning/concept-workspace) to learn more about Azure Machine Learning resources and dependencies.
 
 ### Integration with data landing zone core services
@@ -84,7 +84,7 @@ The enterprise-scale data landing zone comes with a default set of services that
 
 Networking for implementing Azure Machine Learning in enterprise-scale landing zones is set up with [security best practices for Azure Machine Learning](/azure/machine-learning/concept-enterprise-security) and CAF [networking best practices](/azure/security/fundamentals/network-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json). These best practices include the following configurations:
 
-- Azure Machine Learning and dependent resources are configured to use private link endpoints.
+- Azure Machine Learning and dependent resources are configured to use Private Link endpoints.
 - Managed compute resources are deployed only with private IP addresses.
 - Network connectivity to the Azure Machine Learning public base image repository and partner services like Azure Artifacts can be configured at a network level.
 
@@ -96,29 +96,29 @@ Consider the following recommendations for managing user identities and access w
 
 - Use Azure AD groups to manage user permissions for storage and machine learning resources.
 
-- Azure Machine Learning can use [user-assigned managed identities for access control](/azure/machine-learning/how-to-use-managed-identities?tabs=python) and limit the range of access to Azure Container Registry, Key Vault, Storage, and Application Insights.
+- Azure Machine Learning can use [user-assigned managed identities for access control](/azure/machine-learning/how-to-use-managed-identities?tabs=python) and limit the range of access to Azure Container Registry, Key Vault, Azure Storage, and Application Insights.
 
 - Create user-assigned managed identities to managed compute clusters created in Azure Machine Learning.
 
 ### Provision infrastructure through self-service
 
-Self-service can be enabled and governed with [Azure Policies for Azure Machine Learning](/azure/machine-learning/how-to-integrate-azure-policy). The following table lists a set of default enterprise-scale policies when you deploy Azure Machine Learning. For more information, see [Azure Policy built-in policy definitions for Azure Machine Learning](/azure/machine-learning/policy-reference).
+Self-service can be enabled and governed with [policies for Azure Machine Learning](/azure/machine-learning/how-to-integrate-azure-policy). The following table lists a set of default enterprise-scale policies when you deploy Azure Machine Learning. For more information, see [Azure Policy built-in policy definitions for Azure Machine Learning](/azure/machine-learning/policy-reference).
 
-Policy | Type | Reference
------- | ------ | -----
-Azure Machine Learning workspaces should use Azure Private Link. | Built-in | [View in the Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F40cec1dd-a100-4920-b15b-3024fe8901ab)
-Azure Machine Learning workspaces should use user-assigned managed identities. | Built-in | [View in the Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F5f0c7d88-c7de-45b8-ac49-db49e72eaa78)
-[Preview]: Configure allowed registries for specified Azure Machine Learning computes. | Built-in | [View in the Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F5853517a-63de-11ea-bc55-0242ac130003)
-Configure Azure Machine Learning workspaces with private endpoints. | Built-in | [View in the Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F7838fd83-5cbb-4b5d-888c-bfa240972597)
-Configure machine learning computes to disable local authentication methods. | Built-in | [View in the Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2Fa6f9a2d0-cff7-4855-83ad-4cd750666512)  
-Append-MachineLearningCompute-SetupScriptsCreationScript | Custom (CAF landing zones) | [View on GitHub](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/MachineLearning/params.policyDefinition.Audit-MachineLearning-PrivateEndpointId.json)  
-Deny-MachineLearning-HbiWorkspace | Custom (CAF landing zones) | [View on GitHub](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/MachineLearning/params.policyDefinition.Deny-MachineLearning-HbiWorkspace.json)  
-Deny-MachineLearning-PublicAccessWhenBehindVnet | Custom (CAF landing zones) | [View on GitHub](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/MachineLearning/params.policyDefinition.Deny-MachineLearning-PublicAccessWhenBehindVnet.json)  
-Deny-MachineLearning-Aks | Custom (CAF landing zones) | [View on GitHub](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/MachineLearning/params.policyDefinition.Deny-MachineLearningAks.json)  
-Deny-MachineLearningCompute-SubnetId | Custom (CAF landing zones) | [View on GitHub](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/MachineLearning/params.policyDefinition.Deny-MachineLearningCompute-SubnetId.json)  
-Deny-MachineLearningCompute-VmSize | Custom (CAF landing zones) | [View on GitHub](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/MachineLearning/params.policyDefinition.Deny-MachineLearningCompute-VmSize.json)  
-Deny-MachineLearningComputeCluster-RemoteLoginPortPublicAccess | Custom (CAF landing zones) | [View on GitHub](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/MachineLearning/params.policyDefinition.Deny-MachineLearningComputeCluster-RemoteLoginPortPublicAccess.json)  
-Deny-MachineLearningComputeCluster-Scale | Custom (CAF landing zones) | [View on GitHub](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/MachineLearning/params.policyDefinition.Deny-MachineLearningComputeCluster-Scale.json)  
+| Policy | Type | Reference |
+| ------ | ------ | ----- |
+| Azure Machine Learning workspaces should use Azure Private Link. | Built-in | [View in the Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F40cec1dd-a100-4920-b15b-3024fe8901ab) |
+| Azure Machine Learning workspaces should use user-assigned managed identities. | Built-in | [View in the Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F5f0c7d88-c7de-45b8-ac49-db49e72eaa78) |
+| [Preview]: Configure allowed registries for specified Azure Machine Learning computes. | Built-in | [View in the Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F5853517a-63de-11ea-bc55-0242ac130003) |
+| Configure Azure Machine Learning workspaces with private endpoints. | Built-in | [View in the Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F7838fd83-5cbb-4b5d-888c-bfa240972597) |
+| Configure machine learning computes to disable local authentication methods. | Built-in | [View in the Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2Fa6f9a2d0-cff7-4855-83ad-4cd750666512) |
+| Append-MachineLearningCompute-SetupScriptsCreationScript | Custom (CAF landing zones) | [View on GitHub](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/MachineLearning/params.policyDefinition.Audit-MachineLearning-PrivateEndpointId.json)   |
+| Deny-MachineLearning-HbiWorkspace | Custom (CAF landing zones) | [View on GitHub](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/MachineLearning/params.policyDefinition.Deny-MachineLearning-HbiWorkspace.json)   |
+| Deny-MachineLearning-PublicAccessWhenBehindVnet | Custom (CAF landing zones) | [View on GitHub](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/MachineLearning/params.policyDefinition.Deny-MachineLearning-PublicAccessWhenBehindVnet.json)   |
+| Deny-MachineLearning-Aks | Custom (CAF landing zones) | [View on GitHub](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/MachineLearning/params.policyDefinition.Deny-MachineLearningAks.json)   |
+| Deny-MachineLearningCompute-SubnetId | Custom (CAF landing zones) | [View on GitHub](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/MachineLearning/params.policyDefinition.Deny-MachineLearningCompute-SubnetId.json)   |
+| Deny-MachineLearningCompute-VmSize | Custom (CAF landing zones) | [View on GitHub](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/MachineLearning/params.policyDefinition.Deny-MachineLearningCompute-VmSize.json)   |
+| Deny-MachineLearningComputeCluster-RemoteLoginPortPublicAccess | Custom (CAF landing zones) | [View on GitHub](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/MachineLearning/params.policyDefinition.Deny-MachineLearningComputeCluster-RemoteLoginPortPublicAccess.json)   |
+| Deny-MachineLearningComputeCluster-Scale | Custom (CAF landing zones) | [View on GitHub](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/MachineLearning/params.policyDefinition.Deny-MachineLearningComputeCluster-Scale.json)   |
 
 ## Recommendations for managing your environment
 
@@ -140,9 +140,9 @@ Enterprise-scale data landing zones outline reference implementation for repeata
 
 ## Next steps
 
-Use the [Enterprise-Scale Analytics - Data Product Analytics](https://github.com/Azure/data-product-analytics) template and guidance to deploy Azure Machine Learning, and reference [Azure Machine Learning documentation and tutorials](/azure/machine-learning/) to get started with building your solutions.
+Use the [`Enterprise-Scale Analytics - Data Product Analytics`](https://github.com/Azure/data-product-analytics) template and guidance to deploy Azure Machine Learning, and reference [Azure Machine Learning documentation and tutorials](/azure/machine-learning/) to get started with building your solutions.
 
-Continue to the the following four Cloud Adoption Framework articles to learn more about Azure Machine Learning deployment and management best practices for enterprises:
+Continue to the following four Cloud Adoption Framework articles to learn more about Azure Machine Learning deployment and management best practices for enterprises:
 
 - [Organize and set up Azure Machine Learning environments](/azure/cloud-adoption-framework/ready/azure-best-practices/ai-machine-learning-resource-organization): When planning an Azure Machine Learning deployment, how do team structures, environments, or the geography of resources affect how workspaces are set up?
 

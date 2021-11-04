@@ -25,38 +25,38 @@ These templates not only contain Azure Resource Manager templates and their para
 
 The templates can change over time because of new Azure services and requirements. Secure the `main` branch of these repositories to ensure that it remains error-free and ready for consumption and deployment. Use a development subscription to test template configuration changes before you merge feature enhancements back into the `main` branch.
 
-## Cost Estimates
+## Cost estimates
 
-Links to the official Cost Calculator have been provided where users can make changes depending on the expected amount of data and data throughput. All cost calculations will specify base cost of CAF data management and analytics. Base cost means the cost that occur if no data workloads run inside the respective subscriptions.
+Links to the official cost calculator have been provided where users can make changes depending on the expected amount of data and data throughput. All cost calculations will specify base cost of CAF data management and analytics. Base cost means the cost that occur if no data workloads run inside the respective subscriptions.
 
-### Data Management Zone
+### Data management zone
 
-In a production scenario, it is recommended to rely on the Azure Firewall and Private DNS Zones hosted in the connectivity Hub of [Enterprise-Scale Landing Zones](https://github.com/Azure/Enterprise-Scale). In Minimal Viable Products, users may rely on the Azure Firewall and Private DNS Zones bundled with CAF data management and analytics. Hence, two different cost calculations are provided which can be found below:
+In a production scenario, it's recommended to rely on the Azure Firewall and private DNS zones hosted in the connectivity hub of [enterprise-scale landing zones](https://github.com/Azure/Enterprise-Scale). In minimal viable products, users may rely on the Azure Firewall and private DNS zones bundled with CAF data management and analytics. Hence, two different cost calculations are provided which can be found below:
 
-- [Pricing Calculator - Data Management Zone w/o Azure Firewall and Private DNS Zones](https://azure.com/e/ebb7508a6d78487b9a1583878d0948cc)
-- [Pricing Calculator - Data Management Zone w/ Azure Firewall and Private DNS Zones](https://azure.com/e/658478643d4b46fdbf8b1972c4b0704b)
+- [Pricing calculator - data management zone witho Azure Firewall and private DNS zones](https://azure.com/e/ebb7508a6d78487b9a1583878d0948cc)
+- [Pricing calculator - data management zone w/ Azure Firewall and private DNS zones](https://azure.com/e/658478643d4b46fdbf8b1972c4b0704b)
 
-Please keep in mind that the following services are not listed in the overview, because they are either not available in the official Pricing Calculator or the Pricing Calculator does not allow to set the compute hours to 0:
+Keep in mind that the following services are not listed in the overview, because they are either not available in the official pricing calculator or the pricing calculator does not allow to set the compute hours to 0:
 
 - Azure Purview
-- Synapse Private Link Hub
-- Route Table
-- Network Security Group
+- Synapse Private Link hub
+- Route table
+- Network security group
 
-### Data Landing Zone
+### Data landing zone
 
-For the Data Landing Zone, please refer to the following cost calculation:
+For the data landing zone,  refer to the following cost calculation:
 
-- [Pricing Calculator - Data Landing Zone](https://azure.com/e/55cb6feafcc24cec8cfeb10486d54ab5)
+- [Pricing calculator - data landing zone](https://azure.com/e/55cb6feafcc24cec8cfeb10486d54ab5)
 
-Cost can be further reduced by hosting the Self-hosted Integration Runtime (SHIR) on-premises instead of hosting it on a Virtual Machine Scale Set (VMSS).
+Cost can be further reduced by hosting the self-hosted integration runtime (shir) on-premises instead of hosting it on a virtual machine scale set (vmss).
 
-Please keep in mind that the following services are not listed in the overview, because they are either not available in the official Pricing Calculator or the Pricing Calculator does not allow to set the compute hours to 0:
+Keep in mind that the following services are not listed in the overview, because they are either not available in the official pricing calculator or the pricing calculator does not allow to set the compute hours to 0:
 
 - Azure Databricks
-- Route Table
-- Network Security Group
+- Route table
+- Network security group
 
 ## Next steps
 
-[Azure Policies](policies.md)
+[Azure policies](policies.md)
