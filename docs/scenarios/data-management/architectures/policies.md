@@ -32,7 +32,7 @@ Enterprise-scale analytics and AI contains custom policies pertaining to **resou
 - [Azure Cognitive Services](#azure-cognitive-services)
 - [Azure Machine Learning](#azure-machine-learning)
 - [Azure SQL Managed Instance](#azure-sql-managed-instance)
-- [Azure SQL Database](#azure-sql)
+- [Azure SQL Database](#azure-sql-database)
 - [Azure Database for MariaDB](#azure-database-for-mariadb)
 - [Azure Database for MySQL](#azure-database-for-mysql)
 - [Azure Database for PostgreSQL](#azure-database-for-postgresql)

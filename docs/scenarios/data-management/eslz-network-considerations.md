@@ -33,7 +33,8 @@ To explain the rationale behind the design, this article illustrates the advanta
 - Bandwidth
 
 > [!NOTE]
-> Each scenario has been analyzed with the following cross-data landing zone use-case in mind:
+> Each scenario has been analyzed with the following cross-data landing zone use case in mind:
+>
 > Virtual machine B hosted in data landing zone B loads a dataset from storage account A hosted in data landing zone A. Next, it processes the dataset and finally it stores the processed dataset and in storage account B hosted in data landing zone B.
 
 ## Hub and spoke design
@@ -48,7 +49,7 @@ As Figure 2 illustrates, network transitivity would have to be setup in the conn
 
 ### Hub and spoke user access management
 
-With this solution approach, data product teams will only require write access to a resource group in the respective data landing zone and join access to their designated subnet to be able to create new services including the private endpoints in a self-service manner. Therefore, data product teams can deploy private endpoints themselves and don't require support to set up the necessary connectivity given that they get the necessary access rights to connect private endpoints to a subnet in that spoke.
+With this approach, data product teams will only require write access to a resource group in the respective data landing zone and join access to their designated subnet to be able to create new services including the private endpoints in a self-service manner. Therefore, data product teams can deploy private endpoints themselves and don't require support to set up the necessary connectivity given that they get the necessary access rights to connect private endpoints to a subnet in that spoke.
 
 ### Hub and spoke service management
 
@@ -143,13 +144,13 @@ There are many benefits that come with this network architecture design. However
 
 ## Meshed network architecture (recommended)
 
-The recommended design proposes the use of a network mesh, which means adding VNet peerings between all data landing zone VNets and between the data management zone and each data landing zone in addition to the existing hub and spoke network design that most organizations have setup inside their tenant. For the scenario mentioned in the introduction, data loaded from storage account A would first transition a VNet peering connection (2) that is setup between the two data landing zone VNets before it would be loaded and processed by virtual machine B ((3) and (4)). Lastly, the data can be stored on storage account B by sending the data through the local private endpoint (5). With this option, the data does not pass the connectivity hub and stays within the data platform consisting of a data management zones and one or multiple data landing zones.
+The recommended design proposes the use of a network mesh, which means adding VNet peerings between all data landing zone VNets and between the data management zone and each data landing zone in addition to the existing hub and spoke network design that most organizations have setup inside their tenant. For the scenario mentioned in the introduction, data loaded from storage account A would first transition a VNet peering connection (2) that is set up between the two data landing zone VNets before it would be loaded and processed by virtual machine B ((3) and (4)). Lastly, the data can be stored on storage account B by sending the data through the local private endpoint (5). With this option, the data does not pass the connectivity hub and stays within the data platform consisting of a data management zone and one or multiple data landing zones.
 
 :::image type="content" source="./images/network-options-meshed-network-architecture.png" alt-text="Meshed Network Architecture":::
 
 ### Meshed network architecture user access management
 
-With this solution approach data product teams will only require write access to their dedicated resource group in the data landing zone and join access to their designated subnet to be able to create new services including the private endpoints in a self-service manner. Therefore, data product teams can deploy private endpoints themselves and don't require support to set up the necessary connectivity if they get the necessary access rights provided to connect private endpoints to a subnet in that spoke.
+With this approach, data product teams will only require write access to their dedicated resource group in the data landing zone and join access to their designated subnet to be able to create new services including the private endpoints in a self-service manner. Therefore, data product teams can deploy private endpoints themselves and don't require support to set up the necessary connectivity if they get the necessary access rights provided to connect private endpoints to a subnet in that spoke.
 
 ### Meshed network architecture service management
 
@@ -172,4 +173,4 @@ The meshed network design offers maximum bandwidth at minimal cost without any c
 
 ## Meshed network architecture conclusion
 
-After reviewing all network architecture options from various angles and identifying pros and cons of each proposed pattern, a meshed network architecture is the clear winner. Not only from a throughput perspective, but also from a cost and management perspective the solution has tremendous benefits and therefore should be used when deploying Cloud Adoption Framework data management and analytics. Peering spoke virtual networks has not been common in the past, but not doing so has also led to various issues when starting to share datasets across domains and business units. In addition, one can also argue that Cloud Adoption Framework data management and analytics can be seen as coherent solution that just spans across multiple subscriptions. In a single subscription setup, the network traffic flow would be equal to the flow in the meshed network architecture, with the difference that within a single subscription users will most likely hit [subscription level limits and quotas](/azure/azure-resource-manager/management/azure-subscription-service-limits) of the platform, which is something that Cloud Adoption Framework data management and analytics wants to protect against.
+After reviewing all network architecture options from various angles and identifying pros and cons of each proposed pattern, a meshed network architecture is the clear winner. Not only from a throughput perspective, but also from a cost and management perspective the solution has tremendous benefits and therefore should be used when deploying Cloud Adoption Framework data management and analytics. Peering spoke virtual networks has not been common in the past, but not doing so has also led to various issues when starting to share datasets across domains and business units. In addition, one can also argue that Cloud Adoption Framework data management and analytics can be seen as coherent solution that just spans across multiple subscriptions. In a single subscription setup, the network traffic flow would be equal to the flow in the meshed network architecture, with the difference that, within a single subscription, users will most likely hit [subscription level limits and quotas](/azure/azure-resource-manager/management/azure-subscription-service-limits) of the platform, which is something that Cloud Adoption Framework data management and analytics wants to protect against.
