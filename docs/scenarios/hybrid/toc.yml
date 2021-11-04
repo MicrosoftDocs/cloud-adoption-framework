@@ -28,6 +28,8 @@ items:
         href: eslz-identity-and-access-management.md
       - name: Network connectivity
         href: eslz-arc-servers-connectivity.md
+      - name: Resource organization
+        href: eslz-resource-organization.md
       - name: Governance disciplines 
         href: eslz-security-governance-and-compliance.md  
       - name: Management disciplines
