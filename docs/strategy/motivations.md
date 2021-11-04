@@ -3,22 +3,22 @@ title: Why are we moving to the cloud?
 description: Use the Cloud Adoption Framework for Azure to understand the motivations behind cloud migration that can help produce more successful business outcomes.
 author: mpvenables
 ms.author: brblanch
-ms.date: 08/23/2021
+ms.date: 11/03/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ms.custom: internal
 ---
 
-# Motivations: Why are we moving to the cloud?
+# Why are we moving to the cloud?
 
-"Why are we moving to the cloud?" It's a common question for business and technical stakeholders alike. If the answer is, "Our board (or CIO, or C-level executives) told us to move to the cloud," then it's unlikely that the business will achieve the desired outcomes.
+"Why are we moving to the cloud?" This is a common question for both businesses and technical stakeholders. If the answer is, "Our board (or CIO, or C-level executives) told us to move to the cloud," then it may be more difficult for those businesses to achieve their expected outcomes.
 
-This article discusses a few motivations behind cloud migration that can help produce more successful business outcomes. These options help facilitate a conversation about motivations and, ultimately, business outcomes.
+This article discusses some of the motivations behind cloud migration, that can help produce more successful business outcomes. Understanding these motivations will help you create a conversation about the available options and, ultimately, create positive business outcomes.
 
 ## Motivations
 
-Business transformations that are supported by cloud adoption can be driven by various motivations. It's likely that several motivations apply at the same time. The goal of the lists in the following table is to help generate ideas about which motivations are relevant. From there, you can prioritize and assess the potential impacts of the motivations. In this article, your cloud adoption team should meet with various executives and business leaders using the following list to understand which of these motivations are affected by the cloud adoption effort.
+Business transformations that are supported by cloud adoption can be driven by various motivations. It's likely that several motivations apply at the same time. The goal of this list, in the following table, is to help generate ideas about which motivations are relevant. From there, you can evaluate and assess the potential impacts of the applicable motivations. Your cloud adoption team should meet with the stakeholders, both executives and business leaders, and discuss which of the following motivations can help your businesses' cloud adoption.
 
 | Critical business events | Migration | Innovation |
 |---|---|---|
@@ -32,9 +32,9 @@ When a response to critical business events is the highest priority, it's import
 
 When migration is the highest priority, strategy and planning will play a vital role early in the process. We recommend that you implement the first workload in parallel with planning efforts, to help the team understand and anticipate any learning curves that are associated with cloud adoption.
 
-When innovation is the highest priority, strategy and planning require more investments early in the process to ensure balance in the portfolio and wise alignment of the investment made during cloud adoption. For more information and guidance, see [Understand the innovation journey](../get-started/innovate.md).
+When innovation is the highest priority, strategy and planning require more investments early in the process. This ensures balance in the portfolio, and wise alignment of the investments made during cloud adoption. For more information and guidance, see [Understand the innovation journey](../get-started/innovate.md).
 
-To ensure wiser decision-making, all participants in the migration process should have a clear awareness of their motivations. The following section outlines how customers can guide and effect wiser decisions through consistent, strategic methodologies.
+To ensure better decision-making, all participants in the migration process should have a clear awareness of their motivations. The following section outlines how customers can guide and affect decisions, through consistent and strategic methodologies.
 
 ## Motivation-driven strategies and business outcomes
 
@@ -42,9 +42,9 @@ This section highlights the *migration* and *innovation* motivations and their c
 
 ### Migration
 
-The *migration* motivations listed near the top of the motivations table are the most common, but not necessarily the most significant, reasons for adopting the cloud. These outcomes are important to achieve, but they're most effectively used to transition to other, more useful worldviews. This important first step to cloud adoption is often called a *cloud migration*. The [Migrate methodology](../get-started/migrate.md) in the Cloud Adoption Framework outlines the *strategy for executing a cloud migration*.
+The *migration* motivations listed near the top of the motivations table, are the most common reasons for adopting the cloud, but not necessarily the most significant. These outcomes are important to achieve, but they're most effectively used to transition to other, more useful worldviews. This important first step to cloud adoption is often called a *cloud migration*. The [Migrate methodology](../get-started/migrate.md) in the Cloud Adoption Framework outlines the *strategy for executing a cloud migration*.
 
-Some motivations align well with a migrate strategy. Motivations at the top of this list can have less business impact than those toward the bottom. **Strategies with migration driving motivations** have helped organizations to successfully create business outcomes that:
+Some motivations align well with a migration strategy. Motivations at the top of this list can have less business impact than the ones towards the bottom. **Strategies with migration driving motivations** have helped organizations to successfully create business outcomes that:
 
 - Increase cost savings. Read the [customer story](https://customers.microsoft.com/story/canadian-power-generator-shines-light-on-numbers).
 - Reduce vendor or technical complexity.
@@ -70,7 +70,7 @@ The motivations below help IT organizations to focus more on innovation than a m
 
 ## Next steps
 
-Understanding projected business outcomes helps facilitate the conversations that you need to have as you document your motivations and supporting metrics, in alignment with your business strategy. Next, read an overview of business outcomes that are commonly associated with a move to the cloud.
+Understanding your projected business outcomes, will help facilitate conversations that you'll need to have.  These conversations will prove invaluable in documenting your motivations and supporting metrics, in alignment with your business strategy. Next, read an overview of business outcomes that are commonly associated with a move to the cloud.
 
 > [!div class="nextstepaction"]
 > [Overview of business outcomes](./business-outcomes/index.md)
