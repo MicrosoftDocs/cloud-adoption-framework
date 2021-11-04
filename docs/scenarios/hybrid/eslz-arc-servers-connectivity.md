@@ -1,5 +1,5 @@
 ---
-title: Enterprise-scale Azure Arc-enabled servers Network Connectivity
+title: Enterprise Scale Azure Arc-enabled servers Network Connectivity
 description: Understand the design considerations and recommendations for network connectivity of Arc-enabled servers
 author: Welasco
 ms.author: vsantana
@@ -10,11 +10,11 @@ ms.subservice: ready
 ms.custom: think-tank, e2e-arc
 ---
 
-# Enterprise-scale Azure Arc-enabled servers Network Connectivity
+# Enterprise Scale Azure Arc-enabled servers Network Connectivity
 
-Azure Arc-enabled servers allows you to manage your Windows and Linux physical servers and virtual machines, on your corporate network, or other cloud provider using the Azure control plane. This document walks through the key design considerations and best practices for Azure Arc-enabled servers connectivity as part of a CAF enterprise-scale landing zone implementation.
+Azure Arc-enabled servers allows you to manage your Windows and Linux physical servers and virtual machines, on your corporate network, or other cloud provider using the Azure control plane. This document walks through the key design considerations and best practices for Azure Arc-enabled servers connectivity as part of a CAF Enterprise Scale landing zone implementation.
 
-This article assumes that enterprise-scale landing zone has been successfully implemented, therefore hybrid and multicloud network connections have been established and will focus on the Azure Arc-enabled servers Connected Machine agent connectivity. For more information on this prerequisite, review the enterprise-scale [overview](../../ready/enterprise-scale/index.md) and [implementation guidance](../../ready/enterprise-scale/implementation.md).
+This article assumes that Enterprise Scale landing zone has been successfully implemented, therefore hybrid and multicloud network connections have been established and will focus on the Azure Arc-enabled servers Connected Machine agent connectivity. For more information on this prerequisite, review the Enterprise Scale [overview](../../ready/enterprise-scale/index.md) and [implementation guidance](../../ready/enterprise-scale/implementation.md).
 
 ## Design considerations
 
