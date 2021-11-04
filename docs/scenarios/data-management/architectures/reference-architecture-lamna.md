@@ -6,7 +6,7 @@ ms.author: jepeach
 ms.date: 09/21/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.custom: think-tank, e2e-data
+ms.custom: think-tank, e2e-data-management
 ---
 
 # Lamna Healthcare scenario for data management and analytics in Azure
@@ -29,7 +29,7 @@ Lamna will implement enterprise-scale for analytics and AI as their solution for
 
 ### Data management zone
 
-A critical concept for every enterprise-scale for analytics and AI implementation is having one Data Management Zone. This subscription contains resources that will be shared across all of the landing zones. This includes shared networking components, like a firewall and private DNS zones. It also includes resources for data and cloud governance, such as Azure Policies and Azure Purview.
+A critical concept for every enterprise-scale for analytics and AI implementation is having one Data Management Zone. This subscription contains resources that will be shared across all of the landing zones. This includes shared networking components, like a firewall and private DNS zones. It also includes resources for data and cloud governance, such as Azure Policy and Azure Purview.
 
 ### Patient data landing zone
 
@@ -41,7 +41,7 @@ This landing zone will host a copy of the detailed patient data and health recor
 
 The operations group at Lamna is responsible for the company's core line of business, namely providing consulting services to healthcare providers. In their operations data landing zone, they store data related to these healthcare providers and the services with which they've engaged.
 
-Like all business data, there's an element of sensitivity to these datasets, and Lamna of wants to protect its list of clients. However, since this data doesn't include health information about individuals, it is not subject to the most stringent data protection laws.
+Like all business data, there's an element of sensitivity to these datasets, and Lamna of wants to protect its list of clients. However, since this data doesn't include health information about individuals, it's not subject to the most stringent data protection laws.
 
 #### Data integrations
 
@@ -73,7 +73,7 @@ No. Only the most restricted data requiring specific protections, like just-in-t
 
 ## Deployment guidelines
 
-The customer scenario outlined above can be deployed by referencing the following architectures for the Lamna data management zanding zone and data landing zone:
+The customer scenario outlined above can be deployed by referencing the following architectures for the Lamna data management landing zone and data landing zone:
 
 ### Data management landing zone deployment
 
@@ -95,7 +95,7 @@ The customer scenario outlined above can be deployed by referencing the followin
 
 To deploy the architectures, use the data management landing zone and the data landing zone reference implementation templates in the following GitHub repositories:
 
-- [Data management zanding zone template](https://github.com/Azure/data-management-zone)
+- [Data management landing zone template](https://github.com/Azure/data-management-zone)
 - [Data landing zone template](https://github.com/Azure/data-landing-zone)
 
 Use the following templates to deploy other data integrations and data products in the Lamna data landing zones:
@@ -113,5 +113,5 @@ Use the following templates to deploy other data integrations and data products 
 
 ## Next steps
 
-- Continue to [Deployment templates for enterprise-scale for analytics and AI deployments](../eslz-deployment-templates.md).
+- Continue to [Deployment templates for enterprise-scale for analytics and AI deployments](../architectures/deployment-templates.md).
 - Learn more in [Understand data privacy for the data management and analytics scenario in Azure](../secure-data-privacy.md).

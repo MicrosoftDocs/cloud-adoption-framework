@@ -32,7 +32,13 @@ items:
       - name: Identity and access management
         href: ./eslz-identity-and-access-management.md
       - name: Network topology and connectivity
-        href: ./eslz-network-topology-and-connectivity.md
+        items:
+        - name: Overview
+          href: ./eslz-network-topology-and-connectivity.md
+        - name: Network Architecture Considerations
+          href: ./eslz-network-considerations.md
+        - name: Limit cross-tenant private endpoint connections in Azure
+          href: ../../ready/azure-best-practices/limit-cross-tenant-private-endpoint-connections.md
       - name: Resource organization
         href: ./eslz-resource-organization.md
       - name: Governance disciplines
@@ -51,7 +57,7 @@ items:
           href: ./eslz-platform-automation-and-devops.md
         - name: Provision the platform
           href: ./eslz-provision-platform.md
-        
+
   - name: Govern your data estate
     items:
     - name: Overview
@@ -106,7 +112,7 @@ items:
         href: ./architectures/data-landing-zone-data-integration.md
       - name: Data products
         href: ./architectures/data-landing-zone-data-products.md
-    
+
     - name: Reference architectures
       items:
       - name: Overview
@@ -117,9 +123,15 @@ items:
         href: ./architectures/reference-architecture-relecloud.md
       - name: Highly sensitive data landing zones
         href: ./architectures/reference-architecture-lamna.md
- 
+      - name: Financial institution scenario for data mesh
+        href: ./architectures/reference-architecture-data-mesh.md
+
     - name: Deployment templates
-      href: ./eslz-deployment-templates.md
+      href: ./architectures/deployment-templates.md
+    - name: Policies
+      href: ./architectures/policies.md
+    - name: Connecting to environments privately
+      href: ./architectures/connect-to-environments-privately.md
     - name: Frequently asked questions
       href: ./architectures/frequently-asked-questions.md
 
@@ -171,8 +183,12 @@ items:
           href: ./best-practices/sap-data-ingestion.md
         - name: Automated ingestion pattern
           href: ./best-practices/automated-ingestion-pattern.md
-      - name: Data science best practices
-        href: best-practices/data-science-best-practices.md
+      - name: Data science environment
+        items:
+        - name: Data science best practices
+          href: ./best-practices/data-science-best-practices.md
+        - name: Azure Machine Learning
+          href: ./best-practices/azure-machine-learning.md
 
   - name: Featured Azure products
     items:

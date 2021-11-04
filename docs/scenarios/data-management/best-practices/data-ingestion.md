@@ -6,7 +6,7 @@ ms.author: mboswell
 ms.date: 08/06/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
@@ -77,7 +77,7 @@ This guidance elaborates on the information within:
 
 Organizations might need to support scenarios where publishers generate high-velocity event streams. For this pattern, a message queue is recommended, for example, Event Hubs or IoT Hub, to ingest these streams.
 
-Event Hubs and IoT Hub are scalable event processing services that can ingest and process large event volumes and data with low latency and high reliability. Event Hubs is designed as a big data streaming and event ingestion service. IoT Hub is a managed service that serves as a central message hub for bidirectional communication between an IoT application and the devices it manages. From there, data can either be exported to a data lake at regular intervals (batch) and processed with Azure Databricks in near-real-time via Apache Spark streaming, Azure Data Explorer, Stream Analytics, or Time Series Insights.
+Event Hubs and IoT Hub are scalable event processing services that can ingest and process large event volumes and data with low latency and high reliability. Event Hubs is designed as a big data streaming and event ingestion service. IoT Hub is a managed service that serves as a central message hub for bidirectional communication between an IoT application and the devices it manages. From there, data can either be exported to a data lake at regular intervals (batch) and processed with Azure Databricks in near-real-time via Apache Spark Streaming, Azure Data Explorer, Stream Analytics, or Time Series Insights.
 
 The last Event Hub or Apache Kafka landing zone inside the use case's specific landing zone should send its aggregated data to the data lake's raw layer in one of the data landing zones and to Event Hubs related to the data integration resource group in the data landing zone.
 
@@ -133,4 +133,4 @@ Depending on the destination, Azure Database Migration Service can replicate fro
 
 ## Next steps
 
-[SAP ingestion with enterprise-scale for analytics and AI in Azure](./sap-data-ingestion.md)
+[SAP ingestion with enterprise-scale for analytics and AI in Azure](sap-data-ingestion.md)

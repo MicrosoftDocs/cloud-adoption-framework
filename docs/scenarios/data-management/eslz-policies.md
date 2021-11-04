@@ -1,16 +1,16 @@
 ---
-title: Policies in Azure enterprise-scale for analytics and AI
-description: Learn about Azure policies in enterprise-scale for analytics and AI. Azure policies help your organization govern resources as needed.
+title: Policies in data management and analytics
+description: Learn about Azure policies in data management and analytics. Azure policies help your organization govern resources as needed.
 author: abdale
 ms.author: hamoodaleem
-ms.date: 07/15/2021
+ms.date: 09/21/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Policies in Azure enterprise-scale for analytics and AI
+# Policies in data management and analytics
 
 Before considering a deployment, it's important for your organization to put guardrails in place. By using [Azure policies](/azure/governance/policy/overview), you can implement governance for resource consistency, regulatory compliance, security, cost, and management.
 
@@ -38,7 +38,7 @@ Azure policies in enterprise-scale for analytics and AI were developed with the 
 
 [Implementing custom policies](/azure/governance/policy/tutorials/create-and-manage) allows you to do more with Azure Policy. Enterprise-scale for analytics and AI comes with a set of pre-created policies to help you implement any required guardrails in your environment.
 
-Enterprise-scale for analytics and AI contains custom policies related to **resource and cost management, authentication, encryption, network isolation, logging, resilience, and more**. See [Data service policies](https://github.com/Azure/data-management-zone/tree/main/infra/Policies) for an updated list of policies.
+Enterprise-scale for analytics and AI contains custom policies related to **resource and cost management, authentication, encryption, network isolation, logging, resilience, and more**. See [Data service policies](./architectures/policies.md) for an updated list of policies.
 
 > [!NOTE]
 > The policies provided are not applied by default during deployment. They should be viewed as guidance only, and can be applied depending on business requirements. Policies should always be applied to the highest level possible. In most cases, this is a [management group](/azure/governance/management-groups/overview). All of the policies are available in our GitHub repository.
