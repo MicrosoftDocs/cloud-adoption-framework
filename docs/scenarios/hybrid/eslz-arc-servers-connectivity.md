@@ -74,7 +74,7 @@ It is recommended to use [Transport Layer Security 1.2 protocol](/azure/azure-ar
 
 ### Define extensions connectivity method
 
-When you enable any of the Azure Arc-enabled servers supported VM extensions, those extensions connect to other Azure resources. It is important to define a connectivity method for those extensions either directly, behind a proxy server/firewall or using Private Link.
+When you enable any of the Azure Arc-enabled servers supported VM extensions, those extensions connect to other Azure resources. It is important to define a connectivity method for those extensions either directly, behind a proxy server/firewall or using Azure Private Link.
 
 If your Azure Arc enabled-servers use a proxy or firewall all the corresponding URLs for the extension must also be allowed as it will communicate with its own endpoint.
 
