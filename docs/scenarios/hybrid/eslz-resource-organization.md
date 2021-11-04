@@ -12,7 +12,7 @@ ms.custom: e2e-hybrid
 
 # Resource organization for Azure Arc-enabled servers
 
-To align with the [Ready methodology](../../ready/index.md) of the Cloud Adoption Framework, implement a naming and tagging strategy that includes your hybrid and multicloud resources and add business and operational details as components of resource names and metadata tags.
+To align with the [Ready methodology](../../ready/index.md) of the Cloud Adoption Framework, implement a resource consistency and tagging strategy that includes your hybrid and multicloud resources and add business and operational details as components of inventory management and metadata tags.
 
 ## Resource consistency and inventory management
 
