@@ -50,7 +50,7 @@ For direct connections you need to review your internet access for the Connected
 
 #### Proxy server or Firewall connection (Optional)
 
-If the machine uses a firewall or a proxy server to communicate over the internet, the agent connects outbound  using the HTTP protocol.
+If the machine uses a firewall or a proxy server to communicate over the internet, the agent connects outbound using the HTTP protocol.
 
 If outbound connectivity is restricted by your firewall or proxy server, make sure the [Azure Arc network service Tags and IP addresses range](/azure/azure-arc/servers/agent-overview#networking-configuration) are not blocked. When you only allow the required IP ranges or domain names for the agent to communicate with the service, use [Service Tags and URLs](https://www.microsoft.com/en-us/download/details.aspx?id=56519) to configure your firewall or proxy server.
 
