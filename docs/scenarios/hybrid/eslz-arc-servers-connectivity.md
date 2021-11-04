@@ -22,6 +22,12 @@ The following image shows a conceptual reference architecture for the connectivi
 
 ![A diagram depicting the Enterprise Scale connectivity for Azure Arc-enabled servers on Azure conceptual reference architecture.](./media/arc-enabled-servers-connectivity-options2.png)
 
+## Architecture
+
+The following image shows a conceptual reference architecture for the connectivity of Azure Arc-enabled servers:
+
+![A diagram depicting the Enterprise-scale connectivity for Azure Arc-enabled servers on Azure conceptual reference architecture.](./media/arc-enabled-servers-connectivity-options2.png)
+
 ## Design considerations
 
 The following are some network design considerations for Azure Arc-enabled servers:
@@ -46,11 +52,13 @@ Azure Arc-enabled servers offers [direct connectivity to Azure public endpoints]
 
 ![Azure Arc-enabled servers connectivity options](./media/arc-enabled-servers-direct-connection.png)
 
+
 For direct connections you need to review your internet access for the Connected Machine Agent and it is best practice to configure the [required network rules](/azure/azure-arc/servers/agent-overview#networking-configuration).
 
 #### Proxy server or Firewall connection (Optional)
 
 If the machine uses a firewall or proxy server to communicate over the internet, the agent connects outbound instead using the HTTP protocol. Proxy servers don't make the Connected Machine agent more secure because the traffic is already encrypted.
+
 
 If outbound connectivity is restricted by your firewall or proxy server, make sure the [Azure Arc network service Tags and IP addresses range](/azure/azure-arc/servers/agent-overview#networking-configuration) are not blocked. When you only allow the IP ranges or domain names required for the agent to communicate with the service, you need to allow access to the required Service Tags and URLs.
 
@@ -63,6 +71,7 @@ Azure Arc-enabled servers allow you to deploy VM extensions to centrally manage 
 ![Azure Arc-enabled servers private link topology](./media/arc-enabled-servers-private-link-topology.png)
 
 Review this method's [restrictions and limitations](/azure/azure-arc/servers/private-link-security#restrictions-and-limitations) and consider that when you enable any one of the Azure Arc-enabled servers supported VM extensions, those extensions connect other Azure resources which require configuring Private Link for each service. Review [Azure Private Link security](/azure/azure-arc/servers/private-link-security#how-it-works) for more information.
+
 
 ### Manage Access to Azure Service Tags
 

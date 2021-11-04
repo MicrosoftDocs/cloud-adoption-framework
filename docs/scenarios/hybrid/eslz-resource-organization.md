@@ -14,7 +14,7 @@ ms.custom: e2e-hybrid
 
 To align with the [Ready methodology](../../ready/index.md) of the Cloud Adoption Framework, implement a resource consistency and tagging strategy that includes your hybrid and multicloud resources and add business and operational details as components of inventory management and metadata tags.
 
-## Resource consistency and inventory management
+## Resource consistency and organization
 
 Before onboarding any machine onto Azure Arc it is important to define a structure on how these resources will map to Azure management scopes (management groups, subscriptions and resource groups). This mapping is key, as it will determine how you will be able to interact with these resources when applying RBAC roles and while assigning Azure policies as part of your governance model. Review the Cloud Adoption Framework recommendations on how to [organize resources](/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources?tabs=AzureManagementGroupsAndHierarchy)
 
