@@ -31,7 +31,7 @@ This scenario also provides a framework built on the following principles to add
 | Principle | Description |
 |---------|---------|
 |**Allow**     |<ul><li>Scale without increased complexity</li><li>Separation of concerns to facilitate governance</li><li>Self-serve data infrastructure</li></ul>|
-|**Follow**     |<ul><li>Best practices for Well-Architected cloud services</li></ul>|
+|**Follow**     |<ul><li>Best practices for well-architected cloud services</li></ul>|
 |**Support**     |<ul><li>On-premises and multicloud scenarios</li></ul>         |
 |**Adopt**     |<ul><li>Product and vendor agnostic approach</li><li>Cloud Adoption Framework</li></ul>|
 |**Commit**     |<ul><li>Azure landing zones as the baseline infrastructure for all workloads</li><li>Operational model</li></ul>|
@@ -64,7 +64,7 @@ For more information, see:
 
 ## Best practices
 
-The following advanced, level-300+ articles in the **Data management and analytics scenario** table of contents (TOC) can help central IT teams deploy tools and manage processes for data management and governance:
+The following advanced, level-300+ articles in the **Data management and analytics scenario** table of contents can help central IT teams deploy tools and manage processes for data management and governance:
 
 - [Data lake implementation](best-practices/data-lake-overview.md)
 - [Azure Synapse Analytics implementation](best-practices/synapse.md)
@@ -75,7 +75,7 @@ The following advanced, level-300+ articles in the **Data management and analyti
 
 ## Featured Azure products
 
-Expand the **Featured Azure products** section in the **Data management and analytics scenario** TOC to learn about the Azure products that support data management and analytics.
+Expand the **Featured Azure products** section in the **Data management and analytics scenario** toc to learn about the Azure products that support data management and analytics.
 
 ## Common customer journeys
 
@@ -87,11 +87,11 @@ The following common customer journeys support the cloud data management and ana
 
 **Influence changes to individual workloads (central IT and governance):** As your data management and analytics processes improve, the central data governance teams will find requirements that depend on knowledge of the architecture behind individual workloads. Use the [Azure Well-Architected Framework](./well-architected-framework.md) guidance to help workload owners understand potential improvements to their workloads that will improve data operations.
 
-- **Optimize individual workloads and workload teams.** Start with the [Well-Architected Framework](./well-architected-framework.md) guidance to integrate data management and analytics strategies into individual workloads. The guidance describes best practices and architectures that central IT and governance teams typically deliver to accelerate individual workload development.
+- **Optimize individual workloads and workload teams.** Start with the [Azure Well-Architected Framework](./well-architected-framework.md) guidance to integrate data management and analytics strategies into individual workloads. The guidance describes best practices and architectures that central IT and governance teams typically deliver to accelerate individual workload development.
 
-- **Use best practices to onboard individual assets.** Expand the **Best practices** section in the **Data management and analytics scenario** TOC for articles about processes to onboard all of your data estate into one data management and analytics control plane.
+- **Use best practices to onboard individual assets.** Expand the **Best practices** section in the **Data management and analytics scenario** table of contents for articles about processes to onboard all of your data estate into one data management and analytics control plane.
 
-- **Use specific Azure products.** Accelerate and improve data management and analytics capabilities by using the Azure products in the **Featured Azure products** section of the **Data management and analytics scenario** TOC.
+- **Use specific Azure products.** Accelerate and improve data management and analytics capabilities by using the Azure products in the **Featured Azure products** section of the **Data management and analytics scenario** table of contents.
 
 ## Take action
 

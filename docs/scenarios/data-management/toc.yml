@@ -11,7 +11,6 @@ items:
     href: ./plan.md
   - name: Build data management and analytics capabilities
     href: ./plan-capabilities.md
-  
 
   - name: Prepare your environment
     items:
@@ -35,7 +34,7 @@ items:
         items:
         - name: Overview
           href: ./eslz-network-topology-and-connectivity.md
-        - name: Network Architecture Considerations
+        - name: Network architecture considerations
           href: ./eslz-network-considerations.md
         - name: Limit cross-tenant private endpoint connections in Azure
           href: ../../ready/azure-best-practices/limit-cross-tenant-private-endpoint-connections.md
@@ -97,7 +96,7 @@ items:
       - name: Teams functions
         href: ./organize-team-functions.md
 
-  - name: Well-Architected considerations
+  - name: Well-architected considerations
     href: ./well-architected-framework.md
 
   - name: Architectures
