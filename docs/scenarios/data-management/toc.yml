@@ -168,13 +168,13 @@ items:
         - name: Implementation
           href: best-practices/azure-machine-learning.md
         - name: Organize and set up Azure Machine Learning environments
-          href: /azure/cloud-adoption-framework/ready/azure-best-practices/ai-machine-learning-resource-organization
+          href: /azure/cloud-adoption-framework/ready/azure-best-practices/ai-machine-learning-resource-organization?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
         - name: Best practices for enterprise security
-          href: /azure/cloud-adoption-framework/ready/azure-best-practices/ai-machine-learning-enterprise-security
+          href: /azure/cloud-adoption-framework/ready/azure-best-practices/ai-machine-learning-enterprise-security?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
         - name: Budget, cost, and quota management with Azure Machine Learning
-          href: /azure/cloud-adoption-framework/ready/azure-best-practices/optimize-ai-machine-learning-cost
+          href: /azure/cloud-adoption-framework/ready/azure-best-practices/optimize-ai-machine-learning-cost?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
         - name: Machine learning DevOps guide
-          href: /azure/cloud-adoption-framework/ready/azure-best-practices/ai-machine-learning-mlops
+          href: /azure/cloud-adoption-framework/ready/azure-best-practices/ai-machine-learning-mlops?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
       - name: Data landing zone ingestion
         items:
         - name: Data ingestion
@@ -193,46 +193,46 @@ items:
   - name: Featured Azure products
     items:
     - name: ARM templates
-      href: /azure/azure-resource-manager/templates/
+      href: /azure/azure-resource-manager/templates/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
     - name: Blob Storage
-      href: /azure/storage/blobs/
+      href: /azure/storage/blobs/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
     - name: Azure Cosmos DB
-      href: /azure/cosmos-db/
+      href: /azure/cosmos-db/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
     - name: Azure Database for MariaDB
-      href: /azure/mariadb/
+      href: /azure/mariadb/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
     - name: Azure Database for MySQL
-      href: /azure/mysql/
+      href: /azure/mysql/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
     - name: Azure Database for PostgreSQL
-      href: /azure/data-explorer/
+      href: /azure/data-explorer/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
     - name: Azure Databricks
-      href: /azure/databricks/
+      href: /azure/databricks/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
     - name: Azure Data Explorer
-      href: /azure/data-explorer/
+      href: /azure/data-explorer/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
     - name: Azure Data Lake
-      href: /azure/storage/blobs/data-lake-storage-introduction
+      href: /azure/storage/blobs/data-lake-storage-introduction?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
     - name: Azure Key Vault
-      href: /azure/key-vault/
+      href: /azure/key-vault/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
     - name: Azure Machine Learning
-      href: /azure/machine-learning/
+      href: /azure/machine-learning/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
     - name: Azure Policy
-      href: /azure/governance/policy/
+      href: /azure/governance/policy/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
     - name: Azure Private Link
-      href: /azure/private-link/
+      href: /azure/private-link/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
     - name: Azure Purview
-      href: /azure/purview/
+      href: /azure/purview/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
     - name: Azure Stream Analytics
-      href: /azure/stream-analytics/
+      href: /azure/stream-analytics/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
     - name: Azure SQL Database
-      href: /azure/azure-sql/
+      href: /azure/azure-sql/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
     - name: Azure Synapse Analytics
-      href: /azure/synapse-analytics/
+      href: /azure/synapse-analytics/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
     - name: Data Factory
-      href: /azure/data-factory/
+      href: /azure/data-factory/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
     - name: Event Hubs
-      href: /azure/event-hubs/
+      href: /azure/event-hubs/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
     - name: HDInsight
-      href: /azure/hdinsight/
+      href: /azure/hdinsight/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
     - name: Network Watcher
-      href: /azure/network-watcher/
+      href: /azure/network-watcher/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
     - name: Virtual network
-      href: /azure/virtual-network/
+      href: /azure/virtual-network/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
