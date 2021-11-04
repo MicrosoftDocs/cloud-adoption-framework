@@ -67,7 +67,7 @@ Enterprise-scale analytics and AI contains custom policies pertaining to **resou
 |Deny-Storage-ContainerDeleteRetentionPolicy|Resilience|Enforce container delete retention policies larger than seven days for storage account.|
 |Deny-Storage-CorsRules|Network Isolation|Deny cors rules for storage account.|
 |Deny-Storage-InfrastructureEncryption|Encryption|Enforce infrastructure (double) encryption for storage accounts.|
-|Deny-Storage-MinimumTlsVersion|Encryption|Enforces minimum tls version 1.2 for storage account.|
+|Deny-Storage-MinimumTlsVersion|Encryption|Enforces minimum TLS version 1.2 for storage account.|
 |Deny-Storage-NetworkAclsBypass|Network Isolation|Enforces network bypass to none for storage account.|
 |Deny-Storage-NetworkAclsIpRules|Network Isolation|Enforces network ip rules for storage account.|
 |Deny-Storage-NetworkAclsVirtualNetworkRules|Network Isolation|Denies virtual network rules for storage account.|
@@ -121,10 +121,10 @@ Enterprise-scale analytics and AI contains custom policies pertaining to **resou
 |Deny-SynapsePrivateLinkHub|Network Isolation|Denies Synapse Private Link Hub.|
 |Deny-SynapseSpark-AutoPause|Resource Management|Enforces auto pause for Synapse Spark Pools.|
 |Deny-SynapseSpark-AutoScale|Resource Management|Enforces auto scale for Synapse Spark Pools.|
-|Deny-SynapseSql-Sku|Resource Management|Denies certain Synapse Sql Pool SKUs.|
+|Deny-SynapseSql-Sku|Resource Management|Denies certain Synapse SQL Pool SKUs.|
 |Deploy-SynapseSql-AuditingSettings|Logging|Send auditing logs for Synapse SQL pools to log analytics.|
-|Deploy-SynapseSql-MetadataSynch|Resource Management|Setup metadata sync for Synapse sql pools.|
-|Deploy-SynapseSql-SecurityAlertPolicies|Logging|Deploy Synapse sql pool security alert policy.|
+|Deploy-SynapseSql-MetadataSynch|Resource Management|Setup metadata sync for Synapse SQL pools.|
+|Deploy-SynapseSql-SecurityAlertPolicies|Logging|Deploy Synapse SQL pool security alert policy.|
 |Deploy-SynapseSql-TransparentDataEncryption|Encryption|Deploy Synapse SQL transparent data encryption.|
 |Deploy-SynapseSql-VulnerabilityAssessment|Logging|Deploy Synapse SQL pool vulnerability assessments.|
 
@@ -139,7 +139,7 @@ Enterprise-scale analytics and AI contains custom policies pertaining to **resou
 |Policy name  |Policy area  |Description  |
 |---------|---------|---------|
 |Append-Databricks-PublicIp|Network Isolation|Enforces no public access on Databricks workspaces.|
-|Deny-Databricks-Sku|Resource Management|Deny non-premium Databricks sku.|
+|Deny-Databricks-Sku|Resource Management|Deny non-premium Databricks SKU.|
 |Deny-Databricks-VirtualNetwork|Network Isolation|Deny non-virtual network deployment for databricks.|
 
 Additional policies that are applied in the Databricks workspace through cluster policies:
@@ -164,7 +164,7 @@ Additional policies that are applied in the Databricks workspace through cluster
 
 |Policy name  |Policy area  |Description  |
 |---------|---------|---------|
-|Append-IotHub-MinimalTlsVersion|Encryption|Enforces minimal tls version for iot hub.|
+|Append-IotHub-MinimalTlsVersion|Encryption|Enforces minimal TLS version for iot hub.|
 |Audit-IotHub-PrivateEndpointId|Network Isolation|Audit public endpoints that are created in other subscriptions for iot hubs.|
 |Deny-IotHub-PublicNetworkAccess|Network Isolation|Denies public network access for iot hub.|
 |Deny-IotHub-Sku|Resource Management|Enforces iot hub SKUs.|
@@ -174,11 +174,11 @@ Additional policies that are applied in the Databricks workspace through cluster
 
 |Policy name  |Policy area  |Description  |
 |---------|---------|---------|
-|Deny-EventHub-Ipfilterrules|Network Isolation|Deny adding ip filter rules for event hub.|
-|Deny-EventHub-MaximumThroughputUnits|Network Isolation|Denies public network access for my sql servers.|
-|Deny-EventHub-NetworkRuleSet|Network Isolation|Enforces default virtual network rules for event hub.|
-|Deny-EventHub-Sku|Resource Management|Denies certain Skus for event hubs.|
-|Deny-EventHub-Virtualnetworkrules|Network Isolation|Deny adding virtual network rules for event hub.|
+|Deny-EventHub-Ipfilterrules|Network Isolation|Deny adding ip filter rules for Azure Event Hubs.|
+|Deny-EventHub-MaximumThroughputUnits|Network Isolation|Denies public network access for my SQL servers.|
+|Deny-EventHub-NetworkRuleSet|Network Isolation|Enforces default virtual network rules for Azure Event Hubs.|
+|Deny-EventHub-Sku|Resource Management|Denies certain AKUs for Azure Event Hubs.|
+|Deny-EventHub-Virtualnetworkrules|Network Isolation|Deny adding virtual network rules for Azure Event Hubs.|
 
 ## Azure Stream Analytics
 
@@ -225,7 +225,7 @@ Additional policies that are applied in the Databricks workspace through cluster
 |Audit-CognitiveServices-PrivateEndpointId|Network Isolation|Audit public endpoints that are created in other subscriptions for cognitive services.|
 |Deny-CognitiveServices-Encryption|Encryption|Enforces use of encryption for cognitive services.|
 |Deny-CognitiveServices-PublicNetworkAccess|Network Isolation|Enforces no public network access for cognitive services.|
-|Deny-CognitiveServices-Sku|Resource Management|Deny cognitive services free sku.|
+|Deny-CognitiveServices-Sku|Resource Management|Deny cognitive services free SKU.|
 |Deny-CognitiveServices-UserOwnedStorage|Network Isolation|Enforces user owned storage for cognitive services.|
 
 ## Azure Machine Learning
@@ -257,9 +257,9 @@ Additional policies that are applied in the Databricks workspace through cluster
 
 |Policy name  |Policy area  |Description  |
 |---------|---------|---------|
-|Append-Sql-MinimalTlsVersion|Encryption|Enforces minimal TLS version for sql servers.|
+|Append-Sql-MinimalTlsVersion|Encryption|Enforces minimal TLS version for SQL servers.|
 |Audit-Sql-PrivateEndpointId|Network Isolation|Audit public endpoints that are created in other subscriptions for Azure SQL.|
-|Deny-Sql-PublicNetworkAccess|Network Isolation|Denies public network access for sql servers.|
+|Deny-Sql-PublicNetworkAccess|Network Isolation|Denies public network access for SQL servers.|
 |Deny-Sql-StorageAccountType|Resilience|Enforces geo-redundant database backup.|
 |Deploy-Sql-AuditingSettings|Logging|Deploy SQL auditing settings.|
 |Deploy-Sql-AzureAdOnlyAuthentications|Authentication|Enforces Azure AD only authentication for SQL server.|
@@ -340,7 +340,7 @@ Additional policies that are applied in the Databricks workspace through cluster
 |Deny-Cache-MinimumTlsVersion|Encryption|Enforces minimum TLS version for Redis Cache.|
 |Deny-Cache-NonSslPort|Network Isolation|Enforces turning off the non-SSL port for Redis Cache.|
 |Deny-Cache-PublicNetworkAccess|Network Isolation|Enforces no public network access for Redis Cache.|
-|Deny-Cache-Sku|Resource Management|Enforces certain Skus for Redis Cache.|
+|Deny-Cache-Sku|Resource Management|Enforces certain SkKUs for Redis Cache.|
 |Deny-Cache-VnetInjection|Network Isolation|Enforces use of private endpoints and denies vnet injection for Redis Cache.|
 
 ## Container instances
@@ -363,7 +363,7 @@ Additional policies that are applied in the Databricks workspace through cluster
 |Deny-HdInsight-EncryptionInTransit|Encryption|Enforces encryption in transit for HDInsight clusters.|
 |Deny-HdInsight-MinimalTlsVersion|Encryption|Enforces minimal TLS version for HDInsight clusters.|
 |Deny-HdInsight-NetworkProperties|Network Isolation|Enforces private link enablement for HDInsight clusters.|
-|Deny-HdInsight-Sku||Enforces certain SKU's for HDInsight clusters.|
+|Deny-HdInsight-Sku||Enforces certain SKUs for HDInsight clusters.|
 |Deny-HdInsight-VirtualNetworkProfile|Network Isolation|Enforces virtual network injection for HDInsight clusters.|
 
 ## Power BI
