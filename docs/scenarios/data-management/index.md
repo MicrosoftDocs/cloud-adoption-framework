@@ -75,7 +75,7 @@ The following advanced, level-300+ articles in the **Data management and analyti
 
 ## Featured Azure products
 
-Expand the **Featured Azure products** section in the **Data management and analytics scenario** toc to learn about the Azure products that support data management and analytics.
+Expand the **Featured Azure products** section in the **Data management and analytics scenario** table of contents to learn about the Azure products that support data management and analytics.
 
 ## Common customer journeys
 
