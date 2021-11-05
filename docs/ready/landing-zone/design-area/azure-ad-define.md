@@ -20,10 +20,25 @@ Ask basic security questions during the Azure AD design phase, such as how your 
 
 **Design considerations:**
 
+- An Azure Subscription can only trust one Azure AD Tenant at a time, further information can be found [Associate or add an Azure subscription to your Azure Active Directory tenant](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory)
+
 - Multiple Azure AD tenants can function in the same enrollment.
+
 - Azure Lighthouse only supports delegation at the subscription and resource group scopes.
 
+- The `*.onmicrosoft.com` domain name created for each Azure AD Tenant must be globally unique as per [the Terminology section in What is Azure Active Directory?](/azure/active-directory/fundamentals/active-directory-whatis#terminology)
+  
+  - The `*.onmicrosoft.com` domain name for each Azure AD Tenant cannot be changed once created.
+
+- Review [Compare self-managed Active Directory Domain Services, Azure Active Directory, and managed Azure Active Directory Domain Services](/azure/active-directory-domain-services/compare-identity-solutions) to fully understand the differences between all the options and how they relate
+
+- If using [Azure Government](/azure/azure-government/documentation-government-welcome) review the guidance around Azure AD Tenants in [Planning identity for Azure Government applications](/azure/azure-government/documentation-government-plan-identity)
+
 **Design recommendations:**
+
+- Add one or more custom domains to your Azure AD Tenant as per [Add your custom domain name using the Azure Active Directory portal](/azure/active-directory/fundamentals/add-custom-domain)
+
+  - Review [Azure AD UserPrincipalName population](/azure/active-directory/hybrid/plan-connect-userprincipalname) if planning to or using Azure AD Connect to ensure custom domain names are reflected in you on-premises Active Directory Domain Services environment.
 
 - Define your Azure single sign-on strategy, using Azure AD Connect, based on one of the supported [topologies](/azure/active-directory/hybrid/plan-connect-topologies).
 
