@@ -110,7 +110,7 @@ Review the best practices in [designing your Azure Monitor Logs deployment](/azu
 
 ### Threat protection and cloud security posture management
 
-Azure Security Center provides a unified security-management platform segmented as a cloud security posture management (CSPM) and cloud workload protection platform (CWPP). To increase security on your hybrid landing zone it is important to protect the data and assets hosted in Azure and elsewhere, Microsoft Defender for Servers extends these capabilities to Azure Arc-enabled servers and together with Microsoft Defender for Endpoint provide a comprehensive EDR. To strenghten security of your hybrid landing zone, consider the following:
+Azure Security Center provides a unified security-management platform segmented as a cloud security posture management (CSPM) and cloud workload protection platform (CWPP). To increase security on your hybrid landing zone it is important to protect the data and assets hosted in Azure and elsewhere, Microsoft Defender for Servers extends these capabilities to Azure Arc-enabled servers and together with Microsoft Defender for Endpoint provide a comprehensive EDR. To strengthen the security of your hybrid landing zone, consider the following:
 
 - Use Azure Arc-enabled servers to onboard hybrid resources in [Microsoft Defender for Cloud](/azure/security-center/quickstart-onboard-machines?pivots=azure-portal).
 - Implement an Azure Policy to make sure all resources are compliant and its security data is collected into the Log Analytics workspaces.
