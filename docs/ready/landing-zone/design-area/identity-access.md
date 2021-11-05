@@ -56,7 +56,7 @@ Most Azure environments will use at least Azure AD for Azure fabric authenticati
 
 - Which tasks and functions should the organization control with managed identities?
 - Which services or applications within your landing zone support Azure Active Directory authentication?
-- Explore [which Azure services cna use managed identities](/azure/active-directory/managed-identities-azure-resources/services-support-managed-identities)
+- Explore [which Azure services can use managed identities](/azure/active-directory/managed-identities-azure-resources/services-support-managed-identities)
 - Explore [managed identities for Azure resources](/azure/active-directory/managed-identities-azure-resources/overview) capabilities in further detail
 
 ### Identity for Azure platform resources - design considerations
@@ -120,7 +120,7 @@ Most Azure environments will use at least Azure AD for Azure fabric authenticati
 
 - Use privileged identities for automation runbooks that require elevated access permissions. Automated workflows that violate critical security boundaries should be governed by the same tools and policies users of equivalent privilege are.
 
-### Identity for Azure platform resources - design recommendations 
+### Identity for Azure platform resources - design recommendations
 
 ### Platform access - design recommendations
 
@@ -142,4 +142,3 @@ Identity and access management are core features of the Azure landing zone accel
 The deployment includes a subscription dedicated to identity, where customers can deploy the Active Directory domain controllers required for their environment.
 
 The implementation also includes options to assign recommended policies to govern identity and domain controllers.
-
