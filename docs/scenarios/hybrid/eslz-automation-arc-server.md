@@ -43,7 +43,7 @@ The following are some general design recommendations for Azure Arc-enabled serv
 
 - Create a [dedicated resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups) to include only Azure Arc-enabled servers and centralize management and monitoring of these resources.
 - Evaluate and develop an IT-aligned [tagging strategy](/azure/cloud-adoption-framework/decision-guides/resource-tagging/) that can help reduce the complexity of managing your Azure Arc-enabled servers and simplify making management decisions.
-- Create a [service principal](/azure/azure-arc/servers/onboard-service-principal#create-a-service-principal-for-onboarding-at-scale) to connect machines non-interactively using Azure PowerShell or from the portal.
+- Create a [service principal](/azure/azure-arc/servers/onboard-service-principal#create-a-service-principal-for-onboarding-at-scale) to connect machines non-interactively using Azure PowerShell or from the Azure portal.
 
 ### Onboard Azure Arc-enabled servers
 
@@ -66,13 +66,13 @@ We recommended automating the deployment of VM extensions at scale via [Azure Po
 Overview of steps:
 - Create an [initiative](/azure/security-center/security-policy-concept#what-is-a-security-initiative) to deploy VM extensions at scale
 - Use a “[DeployIfNotExists](/azure/governance/policy/concepts/effects#deployifnotexists)” policy effect to ensure the VM extensions get deployed automatically as more servers are onboarded, and remediate any servers where the VM extensions have been removed
-- More details on using policy with Azure Arc-enabled servers can be found in the [Security, Governance and Compliance for Azure Arc-enabled servers](./eslz-security-governance-and-compliance.md) enterprise-scale scenario
+- More details on using policy with Azure Arc-enabled servers can be found in the [Security, Governance and Compliance for Azure Arc-enabled servers](./eslz-security-governance-and-compliance.md) section of this guide.
 
 ### Lifecycle Automation
 
 Once your servers are onboarded to Azure, it's recommended to [enable patch and update management](/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/arc-update-management) to ease OS lifecycle management on your Azure Arc-enabled servers. Update Management in Azure Automation allows you to view and schedule operating system updates and patches for your Arc-enabled servers at scale. More information about Update Management for Azure Automation can be found [here](/azure/automation/update-management/overview).
 
-- Enable OS lifecycle automation by configuring [Update Management](/azure/automation/update-management/enable-from-automation-account) in Azure Automation to manage operating system updates for your Windows and Linux virtual machines registered with Azure Arc-enabled servers.
+We recommend enabling OS lifecycle management automation by configuring the [Update Management](/azure/automation/update-management/enable-from-automation-account) soluiton in Azure Automation to manage operating system updates for your Windows and Linux virtual machines registered with Azure Arc-enabled servers.
 
 ## Next Steps
 

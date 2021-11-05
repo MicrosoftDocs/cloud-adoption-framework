@@ -12,7 +12,7 @@ ms.custom: e2e-arc
 
 # Management and monitoring for Azure Arc-enabled servers
 
-Azure Arc-enabled servers allows you to manage your Windows and Linux physical servers and virtual machines hosted outside of Azure, on your corporate network, or other cloud provider.  This document is written to help you operationally maintain Azure Arc-enabled servers on Azure enterprise estate, with centralized management and monitoring at the [platform level](/azure/cloud-adoption-framework/ready/enterprise-scale/management-and-monitoring). The article presents key recommendations for operations teams to maintain Azure Arc-enabled servers.
+Azure Arc-enabled servers allows you to manage your Windows and Linux physical servers and virtual machines hosted outside of Azure, on your corporate network, or other cloud provider. This article will help you operate Azure Arc-enabled servers on Azure enterprise estate with centralized management and monitoring at the [platform level](/azure/cloud-adoption-framework/ready/enterprise-scale/management-and-monitoring). The article presents key recommendations for operations teams to maintain Azure Arc-enabled servers.
 
 ## Architecture
 
@@ -36,7 +36,7 @@ Here are some general design considerations for Azure Arc-enabled servers monito
 
 - Review and understand how the Log Analytics agent [operates and collects data](/azure/azure-monitor/agents/log-analytics-agent) before deployment.
 - Review the [Network connectivity for Azure Arc-enabled servers](./eslz-arc-servers-connectivity.md) section of this guide for network specific design considerations and recommendations.
-- Before onboarding any machine to Azure Monitor, it's important to review the [supported list of operating systems](/azure/azure-monitor/agents/agents-overview#supported-operating-systems) and the the [network requirements](/azure/azure-monitor/agents/log-analytics-agent#network-requirements) of the monitoring agents.
+- Before onboarding any machine to Azure Monitor, it's important to review the [supported list of operating systems](/azure/azure-monitor/agents/agents-overview#supported-operating-systems) and the [network requirements](/azure/azure-monitor/agents/log-analytics-agent#network-requirements) of the monitoring agents.
 
 ### Azure Monitor agents deployment
 
@@ -65,7 +65,7 @@ Here are some general design considerations for Azure Arc-enabled servers monito
 
 ## Next steps
 
-For more guidance for your cloud adoption journey, see the following article:
+For more guidance for your hybrid cloud adoption journey, please review the following:
 
 - Review [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/day2/) scenarios
 - Review the [prerequisites](/azure/azure-arc/servers/agent-overview#prerequisites) for Azure Arc-enabled servers

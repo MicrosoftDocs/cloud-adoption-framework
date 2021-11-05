@@ -36,7 +36,7 @@ As your hybrid and multicloud resources become part of Azure Resource Manager, t
 - **Policy management and reporting:** Define a governance plan for your hybrid servers and machines that translates into Azure Policies and remediation tasks.
 - **Data Residency:** Consider which Azure region you wish your Azure Arc-enabled servers to be provisioned into, and understand the [metadata that is collected](/azure/azure-arc/servers/data-residency) from these machines.
 - **Log management strategy:** Plan for metrics and log collection of your hybrid resources into a Log Analytics workspace for further analysis and auditing.
-- **Threat protection and cloud security posture management:** Introduce controls to detect security misconfigurations and track compliance. Also, use [Azure's intelligence](/azure/sentinel/overview) to protect your hybrid workloads against threats. [Enable Azure Defender for Servers](/azure/security-center/security-center-get-started) for all subscriptions containing Azure Arc-enabled servers for security baseline monitoring, security posture management and threat protection.
+- **Threat protection and cloud security posture management:** Introduce controls to detect security misconfigurations and track compliance. Also, use [Azure's intelligence](/azure/sentinel/overview) to protect your hybrid workloads against threats. [Enable Microsoft Defender for Servers](/azure/security-center/security-center-get-started) for all subscriptions containing Azure Arc-enabled servers for security baseline monitoring, security posture management and threat protection.
 - **Change Tracking and Inventory:** [Track changes](/azure/automation/change-tracking/overview) on the operating system, application files and registry to identify operational and security issues on your on-premises and other cloud environments.
 - **Software Updates:** Define a strategy to assess the status of available updates to maintain security compliance with critical and security updates of your operating systems.
 - **Role based access controls:** Define administrative, operations, and engineering roles within the organization that will take care of day-to-day operations in the hybrid environment. Mapping each team to actions and responsibilities will determine Azure role-based access control (RBAC) roles and configuration. Consider using a [RACI](/azure/cloud-adoption-framework/organize/raci-alignment) matrix to support this effort and build controls into the management scope hierarchy that you define following the resource consistency and inventory management guidance. For more information, review the [Identity and access management for Azure Arc-enabled servers](./eslz-identity-and-access-management.md) section of this guide.
@@ -77,7 +77,7 @@ The following image shows a conceptual reference architecture that demonstrates 
 ![A diagram depicting the the Azure Key Vault integration for Azure Arc-enabled servers.](./media/arc-enabled-servers-keyVault-integration.svg)
 
 > [!TIP]
->Learn how to use Key Vault managed certificates with Arc-enabled Linux servers in the [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/day2/arc_keyvault#deploy-azure-key-vault-extension-to-azure-arc-enabled-ubuntu-server-and-use-a-key-vault-managed-certificate-with-nginx) project.
+> Learn how to use Key Vault managed certificates with Arc-enabled Linux servers in the [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/day2/arc_keyvault#deploy-azure-key-vault-extension-to-azure-arc-enabled-ubuntu-server-and-use-a-key-vault-managed-certificate-with-nginx) project.
 
 ### Policy management and reporting
 
@@ -89,9 +89,9 @@ Understand the [scope of Azure policy](/azure/role-based-access-control/scope-ov
 
 - Determine what Azure policies are required by defining business, regulatory and security requirements for Azure Arc-enabled servers.
 - Enforce tagging and implement [remediation tasks](/azure/governance/policy/how-to/remediate-resources).
-- Understand and evaluate the [Azure Policy built-in definitions for Azure Arc-enabled servers](/azure/azure-arc/servers/policy-reference)
+- Understand and evaluate the [Azure Policy built-in definitions for Azure Arc-enabled servers](/azure/azure-arc/servers/policy-reference).
 - Understand and evaluate the built-in [Guest Configuration policies](/azure/governance/policy/samples/built-in-policies#guest-configuration) and [initiatives](/azure/governance/policy/samples/built-in-initiatives#guest-configuration).
-- Evaluate the need for creating [custom Guest configuration policies](/azure/governance/policy/how-to/guest-configuration-create)
+- Evaluate the need for creating [custom Guest configuration policies](/azure/governance/policy/how-to/guest-configuration-create).
 - Define a monitoring and alerting policy that identifies [unhealthy Azure arc-enabled servers](/azure/azure-arc/servers/plan-at-scale-deployment#phase-3-manage-and-operate).
 - Enable Azure Advisor alerts to identify Azure arc-enabled servers with [outdated agents installed](/azure/azure-arc/servers/plan-at-scale-deployment#phase-3-manage-and-operate).
 - [Enforce organization standards and assess compliance at scale](/azure/azure-arc/servers/security-controls-policy).
@@ -110,18 +110,18 @@ Review the best practices in [designing your Azure Monitor Logs deployment](/azu
 
 ### Threat protection and cloud security posture management
 
-Azure Security Center provides a unified security-management platform segmented as a cloud security posture management (CSPM) and cloud workload protection platform (CWPP). To increase security on your hybrid landing zone it is important to protect the data and assets hosted in Azure and elsewhere, Azure Defender for servers extends these capabilities to Azure Arc-enabled servers and together with Microsoft Defender for Endpoint provide a comprehensive EDR. To strenghten security of your hybrid landing zone, consider the following:
+Azure Security Center provides a unified security-management platform segmented as a cloud security posture management (CSPM) and cloud workload protection platform (CWPP). To increase security on your hybrid landing zone it is important to protect the data and assets hosted in Azure and elsewhere, Microsoft Defender for Servers extends these capabilities to Azure Arc-enabled servers and together with Microsoft Defender for Endpoint provide a comprehensive EDR. To strenghten security of your hybrid landing zone, consider the following:
 
-- Use Azure Arc-enabled servers to onboard hybrid resources in [Azure Defender](/azure/security-center/quickstart-onboard-machines?pivots=azure-portal).
+- Use Azure Arc-enabled servers to onboard hybrid resources in [Microsoft Defender for Cloud](/azure/security-center/quickstart-onboard-machines?pivots=azure-portal).
 - Implement an Azure Policy to make sure all resources are compliant and its security data is collected into the Log Analytics workspaces.
-- Enable Azure Defender for all subscriptions and use Azure Policy to ensure compliance.
-- Use security information and event management integration with Microsoft Defender for Cloud and Azure Sentinel.
+- Enable Microsoft Defender for all subscriptions and use Azure Policy to ensure compliance.
+- Use security information and event management integration with Microsoft Defender for Cloud and Microsoft Sentinel.
 - Protect your endpoints with Microsoft Defender for Cloud's integration with Microsoft Defender for Endpoint.
 - For securing the connectivity between Arc-enabled servers and Azure, review the [Network connectivity for Azure Arc-enabled servers](./eslz-arc-servers-connectivity.md) section of this guide.
 
 ### Change Tracking and Inventory
 
-Centralizing logs drives additional reports that can be used as additional layers of security and reduces the chances for gaps in observability. [Change Tracking and Inventory in Azure Automation](/azure/automation/change-tracking/overview) forwards and collects the data in a Log Analytics workspace. When using  Azure Defender for servers you get File Integrity Monitoring (FIM) to examine and track software changes, Windows services and Linux daemons on your Azure Arc-enabled servers.
+Centralizing logs drives additional reports that can be used as additional layers of security and reduces the chances for gaps in observability. [Change Tracking and Inventory in Azure Automation](/azure/automation/change-tracking/overview) forwards and collects the data in a Log Analytics workspace. When using Microsoft Defender for Servers you get File Integrity Monitoring (FIM) to examine and track software changes, Windows services and Linux daemons on your Azure Arc-enabled servers.
 
 ### Software Updates
 
