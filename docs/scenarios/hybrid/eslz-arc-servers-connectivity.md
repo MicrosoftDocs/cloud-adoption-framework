@@ -34,7 +34,7 @@ The following list gives an overview of network design considerations for Azure 
 
 ## Design recommendations
 
-### Define Arc agent's connectivity method
+### Define Azure Arc agent's connectivity method
 
 Azure Arc-enabled servers allows you to connect hybrid machines using the following methods:
 
