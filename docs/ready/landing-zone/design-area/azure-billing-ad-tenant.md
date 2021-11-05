@@ -22,7 +22,6 @@ This critical design area focuses on the two highest levels of alignment across 
 
 **Out of scope:** This design area references *Active Directory or AD*, but it doesn't focus on the identity or management aspects of AD, only the tenant in which your identities will ultimately be hosted. That guidance will be reviewed in the [Identity and access management design area](./identity-access.md)
 
-
 ## Design area overview
 
 The Azure service presents a range of [active subscription offers](https://azure.microsoft.com/support/legal/offer-details/), and customers can use these offers at the same time to gain flexible billing options. Example subscriptions include Enterprise Agreement (Enterprise Agreement), Microsoft Customer Agreement, Cloud Service Provider, and others.  
