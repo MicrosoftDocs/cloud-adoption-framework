@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-arc
 
 # Network connectivity for Azure Arc-enabled servers
 
-Azure Arc-enabled servers allow you to manage your Windows and Linux physical servers and virtual machines, hosted either in your on-premises environment, or by Third-party cloud provider using the Azure control plane. This document walks you through the key design considerations and best practices for Azure Arc-enabled servers connectivity as part of a Cloud Adoption Framework Enterprise Scale landing zone guidance.
+Azure Arc-enabled servers allow you to manage your Windows and Linux physical servers and virtual machines, hosted either in your on-premises environment or by a third-party cloud provider using the Azure control plane. This document walks you through the key design considerations and best practices for Azure Arc-enabled servers connectivity as part of a Cloud Adoption Framework Enterprise Scale landing zone guidance.
 
 This article assumes that Enterprise Scale Landing Zone has been successfully implemented, therefore hybrid network connections have been established and will focus on the Azure Arc-enabled servers Connected Machine agent connectivity. For more information on this prerequisite, review the [Enterprise Scale overview](../../ready/enterprise-scale/index.md) and the [implementation guidance](../../ready/enterprise-scale/implementation.md).
 
