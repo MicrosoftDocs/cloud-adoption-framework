@@ -18,17 +18,17 @@ Cost governance is the continuous process of implementing policies to control co
 
 Azure Arc-enabled servers provides two types of services:
 
-1. Azure Arc control plane functionality, which is provided at no extra cost including:
+1. **Azure Arc control plane functionality**, which is provided at no extra cost including:
    - Resource organization through Azure management groups and tags.
    - Searching and indexing through Azure Resource Graph.
    - Access control through Azure RBAC at subscription or resource group level.
    - Environments and automation through templates and extensions.
    - Update management
 
-2. Azure services used in conjunction to Azure Arc-enabled servers (but not limited to), which incur costs according to their usage including:
+2. **Azure services used in conjunction to Azure Arc-enabled servers** (but not limited to), which incur costs according to their usage including:
    - Azure Monitor
-   - Azure Defender for Servers
-   - Azure Sentinel
+   - Microsoft Defender for servers
+   - Microsoft Sentinel
    - Azure Policy guest configuration
    - Azure Automation state configuration, change tracking and inventory
    - Azure Automation hybrid runbook workers
@@ -42,16 +42,15 @@ Azure Arc-enabled servers provides two types of services:
 
 ## Design considerations
 
-- **Governance:** Define a governance plan for your hybrid servers that translates into Azure Policies, tags, naming standards and least-privilege controls.
+- **Governance:** Define a governance model for your hybrid servers that translates into Azure Policies, tags, naming standards and least-privilege controls.
 - **Azure Monitor:** [Azure Monitor](/azure/azure-monitor/overview) includes functionality for the collection and analysis of log data of your Azure Arc-enabled servers (billed by data ingestion, retention, and export), collection of metrics, health monitoring, alerts, and notifications. Features of Azure Monitor that are automatically enabled such as the collection of standard metrics, activity logs and insights are provided at no cost.
-- **Azure Security Center:**  Azure Security Center is offered in [two modes](/azure/security-center/security-center-pricing):
+- **Microsoft Defender for Cloud** (formerly known as Azure Security Center): Microsoft Defender for Cloud is offered in [two modes](/azure/security-center/security-center-pricing):
 
-   **Azure Defender DISABLED (Free)** - [Security Center without Azure Defender](/azure/security-center/security-center-introduction) once enabled, provides security policy, continuous security assessment, and actionable security recommendations to help you protect your Azure Arc-enabled servers and Azure resources. The free tier of Azure Defender for servers does not protect Azure Arc-enabled servers.
+   **Azure Defender DISABLED (Free)** - [Security Center without Azure Defender](/azure/security-center/defender-for-cloud-introduction) once enabled, provides security policy, continuous security assessment, and actionable security recommendations to help you protect your Azure Arc-enabled servers and Azure resources. The free tier of Azure Defender for servers does not protect Azure Arc-enabled servers.
 
-   **Azure Defender ENABLED (Paid)** - Enabling [Azure Defender](/azure/security-center/azure-defender) extends the capabilities of Azure Defender for Servers to your Azure Arc-enabled servers and Azure resources, providing unified security management and threat protection.
+   **Azure Defender ENABLED (Paid)** - Enabling [Azure Defender](/azure/security-center/azure-defender) extends the capabilities of Azure Defender for servers to your Azure Arc-enabled servers and Azure resources, providing unified security management and threat protection.
 
-- **Azure Sentinel:**
-Azure Sentinel provides intelligent security analytics across your enterprise. The data for this analysis is stored in an Azure Monitor Log Analytics workspace. Azure Sentinel is billed based on the volume of data ingested for analysis in Azure Sentinel and stored in the Azure Monitor Log Analytics workspace for your Azure Arc-enabled servers.
+- **Microsoft Sentinel:** Microsoft Sentinel provides intelligent security analytics across your enterprise. The data for this analysis is stored in an Azure Monitor Log Analytics workspace. Microsoft Sentinel is billed based on the volume of data ingested for analysis in Azure Sentinel and stored in the Azure Monitor Log Analytics workspace for your Azure Arc-enabled servers.
 - **Azure Policy guest configuration:** Azure Policy Guest Configuration can audit and enforce operating system and application settings across your fleet of servers. Azure Policy guest configuration is billed per server per month and includes usage rights for Azure Automation state configuration, change tracking and inventory.
 - **Azure Automation Configuration Management:** Azure Automation Configuration Management includes software change tracking and inventory for your servers as well as state configuration to configure your servers at-scale with PowerShell Desired State Configuration. Azure Automation Configuration Management is billed per server per month and includes usage rights for Azure Policy Guest Configuration.
 - **Azure Key Vault:** The Azure Key Vault VM extension allows you to manage the certificate lifecycle on [Windows](/azure/virtual-machines/extensions/key-vault-windows) and [Linux](/azure/virtual-machines/extensions/key-vault-linux) Azure Arc-enabled servers. Azure Key Vault is billed by the operations performed on the certificates, keys and secrets.
@@ -90,26 +89,26 @@ Here are some general design recommendations for Azure Arc-enabled servers cost 
 - To retain data longer than 730 days, consider using [Log Analytics workspace data export](/azure/azure-monitor/logs/logs-data-export).
 - Consider using [Commitment Tier](/azure/azure-monitor/logs/manage-cost-storage#pricing-model) pricing based on your data ingestion volume.
 
-### Azure Security Center
+### Microsoft Defender for Cloud (formerly Azure Security Center)
 
-Review the [recommendations for security and compliance](./eslz-security-governance-and-compliance.md) and [Azure Defender for Servers pricing](https://azure.microsoft.com/pricing/details/azure-defender/).
+Review the [recommendations for security and compliance](./eslz-security-governance-and-compliance.md) and [Microsoft Defender for servers pricing](https://azure.microsoft.com/pricing/details/azure-defender/).
 
-### Azure Sentinel
+### Microsoft Sentinel (formerly Azure Sentinel)
 
-- Review [Azure Sentinel pricing](https://azure.microsoft.com/pricing/details/azure-sentinel/).
-- Use the Azure Pricing Calculator to estimate [Azure Sentinel costs](/azure/sentinel/azure-sentinel-billing).
+- Review [Microsoft Sentinel pricing](https://azure.microsoft.com/pricing/details/azure-sentinel/).
+- Use the Azure Pricing Calculator to estimate [Microsoft Sentinel costs](/azure/sentinel/azure-sentinel-billing).
 
-![Azure Sentinel costs](./media/azure-sentinel-costs.png)
+![Microsoft Sentinel costs](./media/azure-sentinel-costs.png)
 
 - Use [Azure Cost Management and Billing](/azure/sentinel/azure-sentinel-billing#manage-and-monitor-azure-sentinel-costs) to have visibility on Azure Sentinel analysis costs.
 
-![Azure Sentinel cost analysis](./media/Azure-cost-management-Sentinel.png)
+![Microsoft Sentinel cost analysis](./media/Azure-cost-management-Sentinel.png)
 
 - Review [data retention costs](/azure/sentinel/azure-sentinel-billing#data-retention-costs) for data ingested into the Log Analytics workspace used by Azure Sentinel.
 - Filter the [right level of logs and events](/azure/azure-monitor/agents/log-analytics-agent#data-collected) for the Azure Arc-enabled Windows and Linux servers to be collected in the Log Analytics workspace.
 - Use [Log Analytics queries](/azure/sentinel/azure-sentinel-billing#run-queries-to-understand-your-data-ingestion) and the [Workspace Usage Report workbook](/azure/sentinel/azure-sentinel-billing#deploy-a-workbook-to-visualize-data-ingestion) to understand your data ingestion trends.
 - Create a [cost management playbook](/azure/sentinel/azure-sentinel-billing#use-a-playbook-for-cost-management-alerts) to send notification if your Azure Sentinel workspace exceeds your budget.
-- Azure Sentinel integrates with other Azure services to provide enhanced capabilities. Review the [pricing details](/azure/sentinel/azure-sentinel-billing#costs-for-other-services) for these services.
+- Microsoft Sentinel integrates with other Azure services to provide enhanced capabilities. Review the [pricing details](/azure/sentinel/azure-sentinel-billing#costs-for-other-services) for these services.
 - Consider using [Commitment Tier](/azure/sentinel/azure-sentinel-billing#set-or-change-pricing-tier) pricing based on your data ingestion volume.
 - Consider [separating non-security](/azure/sentinel/azure-sentinel-billing#separate-non-security-data-in-a-different-workspace) operational data into a different Azure Log Analytics workspace.
 
@@ -141,4 +140,9 @@ Review [recommendations for automation](./eslz-automation-arc-server.md) and [Az
 
 ## Next steps
 
-Review the Cloud Adoption Framework [best practices and recommendations](/azure/cloud-adoption-framework/get-started/manage-costs) to efficiently manage your cloud costs.
+For more guidance for your hybrid cloud adoption journey, please review the following:
+
+- Review [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/day2/) scenarios
+- Review the [prerequisites](/azure/azure-arc/servers/agent-overview#prerequisites) for Azure Arc-enabled servers
+- Plan an [at-scale deployment](/azure/azure-arc/servers/plan-at-scale-deployment) of Azure Arc-enable servers
+- Review the Cloud Adoption Framework [best practices and recommendations](/azure/cloud-adoption-framework/get-started/manage-costs) to efficiently manage your cloud costs.
