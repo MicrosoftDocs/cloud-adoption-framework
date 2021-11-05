@@ -14,7 +14,7 @@ ms.custom: think-tank, e2e-arc
 
 Azure Arc-enabled servers allow you to manage your Windows and Linux physical servers and virtual machines, on your corporate network, or other cloud provider using the Azure control plane. This document walks through the key design considerations and best practices for Azure Arc-enabled servers connectivity as part of a Cloud Adoption Framework Enterprise Scale landing zone implementation.
 
-This article assumes that Enterprise Scale Landing Zone has been successfully implemented, therefore hybrid network connections have been established and will focus on the Azure Arc-enabled servers Connected Machine agent connectivity. For more information on this prerequisite, review the [Enterprise Scale overview](../../ready/enterprise-scale/index.md) and [implementation guidance](../../ready/enterprise-scale/implementation.md).
+This article assumes that Enterprise Scale Landing Zone has been successfully implemented, therefore hybrid network connections have been established and will focus on the Azure Arc-enabled servers Connected Machine agent connectivity. For more information on this prerequisite, review the [Enterprise Scale overview](../../ready/enterprise-scale/index.md) and the [implementation guidance](../../ready/enterprise-scale/implementation.md).
 
 ## Architecture
 
@@ -30,6 +30,7 @@ The following are some network design considerations for Azure Arc-enabled serve
 - **Manage Access to Azure Service Tags:** create an automated process to keep the firewall and proxy network rules updated according to the [Azure Arc network service Tags and IP addresses range](https://www.microsoft.com/en-us/download/details.aspx?id=56519).
 - **Secure your network connectivity to Azure Arc:** configure the machine to use Transport security (TLS) 1.2 older versions are not recommended as data in transit might be vulnerable.
 - **Define extensions connectivity method:** Azure extensions deployed on an Azure Arc-enabled server also need to communicate with other Azure Services, this connectivity can be directly using public networks or through a firewall or proxy server. To further secure the extension connectivity you can implement a [Private Endpoint](/azure/azure-arc/servers/private-link-security#how-it-works) for each extension.
+- Review the [Network topology and connectivity design area](/azure/cloud-adoption-framework/ready/enterprise-scale/network-topology-and-connectivity) of Azure Landing Zone Enterprise Scale to assess the impact of Arc-enabled servers on your overall connectivity.
 
 ## Design recommendations
 
@@ -80,7 +81,12 @@ If Private Link is used it requires configuring [Private Link for each service](
 
 ## Next Steps
 
-- [Understand how Azure Arc-enabled servers Private Link works](/azure/azure-arc/servers/private-link-security#how-it-works)
-- [Plan your Private Link setup](/azure/azure-arc/servers/private-link-security#planning-your-private-link-setup)
-- [Review the required network configuration for the Private Link connectivity method](/azure/azure-arc/servers/private-link-security#network-configuration)
-- [Familiarize yourself with the available troubleshooting Azure Arc-enabled servers agent connection issues](/azure/azure-arc/servers/troubleshoot-agent-onboard)
+For more guidance for your hybrid cloud adoption journey, please review the following:
+
+- Review [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/day2/) scenarios
+- Review the [prerequisites](/azure/azure-arc/servers/agent-overview#prerequisites) for Azure Arc-enabled servers
+- Review the required [network configuration](/azure/azure-arc/servers/private-link-security#network-configuration) for the Private Link connectivity method
+- Understand how Azure Arc-enabled servers [Private Link](/azure/azure-arc/servers/private-link-security#how-it-works) works
+- Plan an [at-scale deployment](/azure/azure-arc/servers/plan-at-scale-deployment) of Azure Arc-enable servers
+- Plan your [Private Link setup](/azure/azure-arc/servers/private-link-security#planning-your-private-link-setup)
+- Familiarize yourself with the available [troubleshooting Azure Arc-enabled servers agent connection](/azure/azure-arc/servers/troubleshoot-agent-onboard) issues
