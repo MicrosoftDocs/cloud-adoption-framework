@@ -70,7 +70,7 @@ While the Azure Active Directory system assigned identity can only be used to up
 
 ### Secret and certificate management
 
-Consider using Azure Key Vault to manage certificates on your Azure Arc-enabled servers. Azure Arc-enabled servers has a managed identity which is used by the Connected Machine and other Azure agents to communicate back to their respective services. The Key Vault VM extension allows you to manage the certificate lifecycle on [Windows](/azure/virtual-machines/extensions/key-vault-windows) and [Linux](/azure/virtual-machines/extensions/key-vault-linux) machines. 
+Consider using Azure Key Vault to manage certificates on your Azure Arc-enabled servers. Azure Arc-enabled servers has a managed identity that is used by the Connected Machine and other Azure agents to communicate back to their respective services. The Key Vault VM extension allows you to manage the certificate lifecycle on [Windows](/azure/virtual-machines/extensions/key-vault-windows) and [Linux](/azure/virtual-machines/extensions/key-vault-linux) machines. 
 
 The following image shows a conceptual reference architecture that demonstrates the Azure Key Vault integration for Azure Arc-enabled servers:
 
