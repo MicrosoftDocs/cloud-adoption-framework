@@ -24,7 +24,7 @@ The following diagram shows a conceptual reference architecture for the connecti
 
 ## Design considerations
 
-The following list gives and overview of network design considerations for Azure Arc-enabled servers:
+The following list gives an overview of network design considerations for Azure Arc-enabled servers:
 
 - **Define the agent's connectivity method:** Review your existing infrastructure, security requirements, and decide how the Connected Machine agent will [communicate with Azure](/azure/azure-arc/servers/agent-overview#networking-configuration) from your on-premises network or other cloud providers. This connection can go directly over the internet, through a proxy server, or you can implement [Private Link](/azure/azure-arc/servers/private-link-security) for a private connection.
 - **Manage Access to Azure Service Tags:** Create an automated process to keep the firewall and proxy network rules updated according to the [Azure Arc network service Tags and IP addresses range](https://www.microsoft.com/en-us/download/details.aspx?id=56519).
