@@ -41,7 +41,7 @@ Here are some general design considerations for Azure Arc-enabled servers monito
 ### Azure Monitor agents deployment
 
 - The Azure Monitor agents should be automatically deployed to Azure Arc-enabled Windows and Linux servers through [Azure Policy](/azure/azure-monitor/deploy-scale) as part of the [Enterprise scale landing zone](/azure/cloud-adoption-framework/ready/enterprise-scale/management-and-monitoring).
-- Logs should be stored centrally to the dedicated platform Log Analytics workspace and control log access with Azure [Role-based access control](/azure/azure-monitor/platform/design-logs-deployment#access-control-overview). If there is a requirement for a separate workspace due to management, data sovereignty or compliance requirements, using a separate workspace can affect the ability to have a single pane of glass and event correlation of your Azure Arc-enabled servers across the environment.
+- Logs should be stored centrally to the dedicated platform Log Analytics workspace and control log access with Azure [role-based access control (RBAC)](/azure/azure-monitor/platform/design-logs-deployment#access-control-overview). If there is a requirement for a separate workspace due to management, data sovereignty or compliance requirements, using a separate workspace can affect the ability to have a single pane of glass and event correlation of your Azure Arc-enabled servers across the environment.
 
 ### Azure Monitor configuration
 

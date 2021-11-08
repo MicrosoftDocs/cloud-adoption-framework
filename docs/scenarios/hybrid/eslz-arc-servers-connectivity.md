@@ -53,7 +53,7 @@ If the machine uses a firewall or a proxy server to communicate over the interne
 
 If outbound connectivity is restricted by your firewall or a proxy server, make sure the [Azure Arc network service Tags and IP addresses range](/azure/azure-arc/servers/agent-overview#networking-configuration) are not blocked by those devices. When you only allow the required IP ranges or domain names for the agent to communicate with the service, use [Service Tags and URLs](https://www.microsoft.com/en-us/download/details.aspx?id=56519) to configure your firewall or proxy server.
 
-If you want to deploy extensions on your Azure Arc-enabled servers, keep in mind that every extension has its own endpoint(s), and all corresponding URLs must also be allowed in your firewall and/or proxy.
+Be aware that if you deploy extensions on your Azure Arc-enabled servers every extension has its own endpoint and all corresponding URLs must also be allowed in the firewall or proxy. Adding these endpoints will ensure granular secured network traffic to meet principle of least privilege (PoLP).
 
 #### Private Link
 
