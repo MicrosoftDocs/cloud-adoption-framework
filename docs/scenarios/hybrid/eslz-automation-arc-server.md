@@ -24,22 +24,39 @@ The following image shows a conceptual reference architecture that highlights th
 
 The following are some design considerations before onboarding Azure Arc-enabled servers to Azure:
 
-- **Review Requirements:** Your machines run a [supported operating system](/azure/azure-arc/servers/agent-overview#supported-operating-systems) for the Azure Connected Machine agent.
-- **Review Requirements:** Your machines have the [required software](/azure/azure-arc/servers/agent-overview#software-requirements) installed before deploying the Azure Connected Machine agent.
-- **Review Requirements:** You've reviewed the [Azure subscription and service limits](/azure/azure-arc/servers/agent-overview#azure-subscription-and-service-limits) for Azure Arc-enabled servers.
-- **Network Connectivity** Your machines have [connectivity](/azure/azure-arc/servers/agent-overview#networking-configuration) from your on-premises network or other cloud providers to Azure, directly connected or via a proxy server or private endpoint. See the [Network connectivity for Azure Arc-enabled servers](./eslz-arc-servers-connectivity.md) section of this guide for design considerations and recommendations.
-- **Environment Preparation:** To deploy and configure the Azure Arc-enabled servers Connected Machine agent, an account with administrator or as root privileges are required on the machines.
-- **Environment Preparation:** To onboard machines, you have the [required Azure permissions](/azure/azure-arc/servers/agent-overview#required-permissions). See the [Identity and access management for Azure Arc-enabled servers](./eslz-identity-and-access-management.md) section of this guide for more identity and access related content.
-- **Onboard Azure Arc-enabled servers:** Before onboarding machines, you've [registered the Azure resource providers](/azure/azure-arc/servers/agent-overview#register-azure-resource-providers) for Azure Arc-enabled servers.
-- **Onboard Azure Arc-enabled servers:** Decide how you'll install and configure the Azure Connected Machine Agent across your fleet of servers. Typically, you'll deploy the agent using your organization’s standard automation tool(s).
-- **Virtual Machine Extensions:** Determine which Azure capabilities you want to enable on your Azure Arc-enabled servers. Some capabilities require a VM extension to be installed on your server, which can be automated with Azure Policy.
-- **Lifecycle Automation:** Create an operating system patch management strategy for Azure Arc-enable servers
+### Review Requirements
+
+- Your machines run a [supported operating system](/azure/azure-arc/servers/agent-overview#supported-operating-systems) for the Azure Connected Machine agent.
+- Your machines have the [required software](/azure/azure-arc/servers/agent-overview#software-requirements) installed before deploying the Azure Connected Machine agent.
+- You've reviewed the [Azure subscription and service limits](/azure/azure-arc/servers/agent-overview#azure-subscription-and-service-limits) for Azure Arc-enabled servers.
+
+### Network connectivity
+
+Your machines have [connectivity](/azure/azure-arc/servers/agent-overview#networking-configuration) from your on-premises network and/or each of the other third-party cloud providers to Azure, directly connected or via a proxy server or private endpoint. See the [Network connectivity for Azure Arc-enabled servers](./eslz-arc-servers-connectivity.md) section of this guide for design considerations and recommendations.
+
+### Environment preparation
+
+- To deploy and configure the Azure Arc-enabled servers Connected Machine agent, an account with administrator or as root privileges are required on the machines.
+- To onboard machines, you have the [required Azure permissions](/azure/azure-arc/servers/agent-overview#required-permissions). See the [Identity and access management for Azure Arc-enabled servers](./eslz-identity-and-access-management.md) section of this guide for more identity and access related content.
+
+### Onboard Azure Arc-enabled servers
+
+- Before onboarding machines, you've [registered the Azure resource providers](/azure/azure-arc/servers/agent-overview#register-azure-resource-providers) for Azure Arc-enabled servers.
+- Decide how you'll install and configure the Azure Connected Machine Agent across your fleet of servers. Typically, you'll deploy the agent using your organization’s standard automation tool(s).
+
+### Virtual Machine Extensions
+
+Determine which Azure capabilities you want to enable on your Azure Arc-enabled servers. Some capabilities require a VM extension to be installed on your server, which can be automated with Azure Policy.
+
+### Lifecycle automation
+
+Create an operating system patch management strategy for Azure Arc-enable servers.
 
 ## Design recommendations
 
-The following are some general design recommendations for Azure Arc-enabled servers:
+The following are general design recommendations for Azure Arc-enabled servers:
 
-### Environment Preparation
+### Environment preparation
 
 - Create a [dedicated resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups) to include only Azure Arc-enabled servers and centralize management and monitoring of these resources.
 - Evaluate and develop an IT-aligned [tagging strategy](/azure/cloud-adoption-framework/decision-guides/resource-tagging/) that can help reduce the complexity of managing your Azure Arc-enabled servers and simplify making management decisions.
@@ -64,11 +81,12 @@ To simplify the management of hybrid servers throughout their lifecycle, [VM ext
 We recommended automating the deployment of VM extensions at scale via [Azure Policy](/azure/governance/policy/overview) to automatically deploy extensions to your Azure Arc-enabled servers and regularly check the policy compliance data to identify and remediate servers that don't have the agent installed.
 
 Overview of steps:
-- Create an [initiative](/azure/security-center/security-policy-concept#what-is-a-security-initiative) to deploy VM extensions at scale
-- Use a “[DeployIfNotExists](/azure/governance/policy/concepts/effects#deployifnotexists)” policy effect to ensure the VM extensions get deployed automatically as more servers are onboarded, and remediate any servers where the VM extensions have been removed
+
+- Create an [initiative](/azure/security-center/security-policy-concept#what-is-a-security-initiative) to deploy VM extensions at scale.
+- Use a “[DeployIfNotExists](/azure/governance/policy/concepts/effects#deployifnotexists)” policy effect to ensure the VM extensions get deployed automatically as more servers are onboarded, and remediate any servers where the VM extensions have been removed.
 - More details on using policy with Azure Arc-enabled servers can be found in the [Security, Governance and Compliance for Azure Arc-enabled servers](./eslz-security-governance-and-compliance.md) section of this guide.
 
-### Lifecycle Automation
+### Lifecycle automation
 
 Once your servers are onboarded to Azure, it's recommended to [enable patch and update management](/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/arc-update-management) to ease OS lifecycle management on your Azure Arc-enabled servers. Update Management in Azure Automation allows you to view and schedule operating system updates and patches for your Arc-enabled servers at scale. More information about Update Management for Azure Automation can be found [here](/azure/automation/update-management/overview).
 
