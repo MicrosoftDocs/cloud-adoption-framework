@@ -405,11 +405,12 @@ items:
           - name: Landing zone TDD in Azure
             href: ready/considerations/azure-test-driven-development.md
 
-      - name: Choose a landing zone option
-        href: ready/landing-zone/choose-landing-zone-option.md
+
       - name: Implementation options
         href: ready/landing-zone/implementation-options.md
         items:
+        - name: Choose a landing zone option
+          href: ready/landing-zone/choose-landing-zone-option.md
         - name: Start with enterprise scale
           items:
           - name: Overview
