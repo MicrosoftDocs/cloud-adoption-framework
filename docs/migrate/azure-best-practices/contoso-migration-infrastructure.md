@@ -10,8 +10,6 @@ ms.subservice: migrate
 ms.custom: think-tank
 ---
 
-<!-- cSpell:ignore untrust CIDR RRAS CONTOSODC SYSVOL ITIL NSGs ASGs -->
-
 # Deploy a migration infrastructure
 
 This article shows how the fictional company Contoso prepares its on-premises infrastructure for migration, sets up an Azure infrastructure in preparation for migration, and runs the business in a hybrid environment.
@@ -59,7 +57,7 @@ Here's a diagram that shows the current Contoso on-premises infrastructure.
 
 ## Step 1: Buy and subscribe to Azure
 
-Contoso needs to figure out how to buy Azure, how to manage subscriptions, and how to license services and resources.
+Contoso needs to determine how to buy Azure, how to manage subscriptions, and how to license services and resources.
 
 ### Buy Azure
 
@@ -74,9 +72,9 @@ Here are the details:
 
 ### Manage subscriptions
 
-After paying for Azure, Contoso needs to figure out how to manage Azure subscriptions. Because Contoso has an EA, there's no limit on the number of Azure subscriptions it can create. An Azure Enterprise Agreement enrollment defines how a company shapes and uses Azure services, and defines a core governance structure.
+After paying for Azure, Contoso needs to determine how to manage Azure subscriptions. Because Contoso has an EA, there's no limit on the number of Azure subscriptions it can create. An Azure Enterprise Agreement enrollment defines how a company shapes and uses Azure services, and defines a core governance structure.
 
-As a first step, Contoso has defined a structure known as an *enterprise scaffold* for its enrollment. Contoso used the [Azure enterprise scaffold guidance](../../reference/azure-scaffold.md) to help understand and design a scaffold.
+As a first step, Contoso has defined a structure known as an *enterprise scaffold* for its enrollment. Contoso used the [Azure enterprise scaffold guidance](../../resources/azure-scaffold.md) to help understand and design a scaffold.
 
 For now, Contoso has decided to use a functional approach to manage subscriptions:
 
@@ -90,7 +88,7 @@ For now, Contoso has decided to use a functional approach to manage subscription
 
 ### Examine licensing
 
-With subscriptions configured, Contoso can look at Microsoft licensing. The licensing strategy will depend on the resources that Contoso wants to migrate to Azure and how VMs and services are selected and deployed in Azure.
+Once the subscriptions have been configured, Contoso can look at Microsoft licensing. The licensing strategy will depend on the resources that Contoso wants to migrate to Azure and how VMs and services are selected and deployed in Azure.
 
 #### Azure Hybrid Benefit
 
@@ -217,13 +215,13 @@ To facilitate integration, Contoso uses the [Azure AD Connect tool](/azure/activ
 
 3. In **Connect to Azure AD**, they specify the credentials for connecting to Azure AD (in the form `admin@contoso.com` or `admin@contoso.onmicrosoft.com`).
 
-    ![Screenshot that shows the Connect to Azure A D page of the Azure A D Connect Wizard.](./media/contoso-migration-infrastructure/ad-connect-wiz2.png)
+    ![Screenshot that shows the **Connect to Azure A D** page of the Azure A D Connect Wizard.](./media/contoso-migration-infrastructure/ad-connect-wiz2.png)
 
     *Figure 10: Azure AD Connect Wizard: Connect to Azure AD.*
 
 4. In **Connect to AD DS**, they specify credentials for the on-premises directory (in the form `CONTOSO\admin` or `contoso.com\admin`).
 
-    ![Screenshot that shows the Connect to A D D S page of the Azure A D Connect Wizard.](./media/contoso-migration-infrastructure/ad-connect-wiz3.png)
+    ![Screenshot that shows the **Connect to A D D S** page of the Azure A D Connect Wizard.](./media/contoso-migration-infrastructure/ad-connect-wiz3.png)
 
     *Figure 11: Azure AD Connect Wizard: Connect to AD DS.*
 
@@ -290,7 +288,7 @@ Fault domains represent underlying hardware with a common power source and netwo
 
 Update domains represent underlying hardware that can undergo maintenance or be rebooted at the same time. Availability sets also distribute VMs across multiple update domains to ensure that at least one instance will be running at all times.
 
-Contoso will implement availability sets whenever VM workloads require high availability. For more information, see [Manage the availability of Windows VMs in Azure](/azure/virtual-machines/manage-availability).
+Contoso will implement availability sets whenever VM workloads require high availability. For more information, see [Manage the availability of Windows VMs in Azure](/azure/virtual-machines/availability).
 
 #### Availability Zones
 
@@ -330,7 +328,7 @@ Contoso will implement [Azure Site Recovery](/azure/site-recovery/site-recovery-
 
 With the regional design in place, Contoso is ready to consider a network strategy. It needs to think about how the on-premises datacenter and Azure connect and communicate with each other, and how to design the network infrastructure in Azure. Specifically, Contoso needs to:
 
-- **Plan hybrid network connectivity.** Figure out how it's going to connect networks across on-premises and Azure.
+- **Plan hybrid network connectivity.** Determine how it's going to connect networks across on-premises and Azure.
 - **Design an Azure network infrastructure.** Decide how it will deploy networks over regions. How will networks communicate within the same region and across regions?
 - **Design and set up Azure networks.** Set up Azure networks and subnets, and decide what will reside in them.
 
@@ -484,8 +482,8 @@ Azure IaaS components are located in the production network. Each application ti
 - **Hub:** The hub virtual network in `Central US` is considered the secondary point of connectivity to the on-premises datacenter. The spoke virtual networks in `Central US` can be used to isolate workloads if necessary, managed separately from other spokes.
 
 - **Virtual networks:** Contoso will have two virtual networks in `Central US`:
-  - `VNET-PROD-CUS`: This is a production network and can be thought of as a secondary hub.
-  - `VNET-ASR-CUS`: This virtual network will act as a location in which VMs are created after failover from on-premises or as a location for Azure VMs failed over from the primary to the secondary region. This network is similar to the production networks but without any domain controllers on it.
+  - `VNET-PROD-CUS`: A production network that can be thought of as a secondary hub.
+  - `VNET-ASR-CUS`: A virtual network that will act as a location where VMs are created after failover from on-premises, or as a location for Azure VMs failed over from the primary to the secondary region. This network is similar to the production networks but without any domain controllers on it.
 
   Each virtual network in the region will have its own address space without overlap. Contoso will configure routing without NAT.
 
@@ -550,13 +548,13 @@ For the domain controllers in the `VNET-PROD-EUS2` network, Contoso wants traffi
 
 1. **Allow forwarded traffic** and **Allow gateway transit configurations** on the peered connection. In our example, this would be the connection from `VNET-HUB-EUS2` to `VNET-PROD-EUS2`.
 
-    ![Screenshot that shows selected check boxes for allowing forwarded traffic and allowing gateway transit.](./media/contoso-migration-infrastructure/peering1.png)
+    ![Screenshot that shows selected checkboxes for allowing forwarded traffic and allowing gateway transit.](./media/contoso-migration-infrastructure/peering1.png)
 
     *Figure 23: A peered connection.*
 
 2. **Allow forwarded traffic** and **Use remote gateways** on the other side of the peering, on the connection from `VNET-PROD-EUS2` to `VNET-HUB-EUS2`.
 
-    ![Screenshot that shows the selected check boxes for allowing forwarded traffic and using remote gateways.](./media/contoso-migration-infrastructure/peering2.png)
+    ![Screenshot that shows the selected checkboxes for allowing forwarded traffic and using remote gateways.](./media/contoso-migration-infrastructure/peering2.png)
 
     *Figure 24: A peered connection.*
 

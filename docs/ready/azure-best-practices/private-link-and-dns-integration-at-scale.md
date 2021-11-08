@@ -3,7 +3,7 @@ title: Private Link and DNS integration at scale
 description: Private Link and DNS integration at scale
 author: JefferyMitchell
 ms.author: brblanch
-ms.date: 02/18/2021
+ms.date: 10/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -18,7 +18,7 @@ ms.custom: think-tank
 
 Many customers build their network infrastructure in Azure using the hub and spoke network architecture, where:
 
-- Networking shared services (such as network virtual appliances, ExpressRoute/VPN gateways, or DNS servers) are deployed in the **hub** virtual network (VNet)
+- Networking shared services (such as network virtual appliances, ExpressRoute/VPN gateways, or DNS servers) are deployed in the **hub** virtual network (VNet).
 - **Spoke** VNets consume those shared services via VNet peering.
 
 In hub and spoke network architectures, application owners are typically provided with an Azure subscription, which includes a VNet (*a spoke*) connected to the *hub* VNet. In this architecture, they can deploy their virtual machines and have private connectivity to other VNets or to on-premises networks via ExpressRoute or VPN.
@@ -47,11 +47,11 @@ The following diagram shows a typical high-level architecture for enterprise env
 
 From the previous diagram, it is important to highlight that:
 
-- On-premises DNS servers have conditional forwarders configured for each private endpoint public DNS zone, pointing to the DNS servers 10.100.2.4 and 10.100.2.5 hosted in the hub VNet.
-- The DNS servers 10.100.2.4 and 10.100.2.5 hosted in the hub VNet use the Azure-provided DNS resolver (168.63.129.16) as a forwarder. 
-- The hub VNet must be linked to the Private DNS zone names for Azure services (such as privatelink.blob.core.windows.net, as shown in the picture).
-- All Azure VNets use the DNS servers hosted in the hub VNet (10.100.2.4 and 10.100.2.5) as the primary and secondary DNS servers.
-- If the DNS servers 10.100.2.4 and 10.100.2.5 are not authoritative for customer’s corporate domains (for example, Active Directory domain names), they should have conditional forwarders for the customer’s corporate domains, pointing to the on-premises DNS Servers (172.16.1.10 & 172.16.1.11) or DNS servers deployed in Azure which are authoritative for such zones. 
+- On-premises DNS servers have conditional forwarders configured for each private endpoint public DNS zone, pointing to the DNS servers `10.100.2.4` and `10.100.2.5` hosted in the hub VNet.
+- The DNS servers `10.100.2.4` and `10.100.2.5` hosted in the hub VNet use the Azure-provided DNS resolver (`168.63.129.16`) as a forwarder.
+- The hub VNet must be linked to the Private DNS zone names for Azure services (such as `privatelink.blob.core.windows.net`, as shown in the picture).
+- All Azure VNets use the DNS servers hosted in the hub VNet (`10.100.2.4` and `10.100.2.5`) as the primary and secondary DNS servers.
+- If the DNS servers `10.100.2.4` and `10.100.2.5` are not authoritative for customer's corporate domains (for example, Active Directory domain names), they should have conditional forwarders for the customer's corporate domains, pointing to the on-premises DNS Servers (`172.16.1.10` and `172.16.1.11`) or DNS servers deployed in Azure which are authoritative for such zones.
 
 Please note that while the previous diagram depicts a single hub and spoke architecture, this guidance is applicable to scenarios where there are multiple hub and spoke networks across multiple Azure regions. In this case, the hub VNets in all regions should be linked to the same Azure Private DNS zones.
 
@@ -101,7 +101,7 @@ In addition to the private DNS zones, we also need to [create a set of custom Az
            },
            {
              "field": "Microsoft.Storage/storageAccounts/networkAcls.defaultAction",
-             "notequals": "Deny"
+             "notEquals": "Deny"
            }
          ]
        },
@@ -183,7 +183,7 @@ In addition to the private DNS zones, we also need to [create a set of custom Az
          "details": {
            "type": "Microsoft.Network/privateEndpoints/privateDnsZoneGroups",
            "roleDefinitionIds": [
-             "/providers/Microsoft.Authorization/roleDefinitions/b24988ac-6180-42a0-ab88-20f7382dd24c"
+             "/providers/Microsoft.Authorization/roleDefinitions/4d97b98b-1d4f-4787-a291-c67834d212e7"
            ],           
            "deployment": {
              "properties": {
@@ -254,7 +254,7 @@ In addition to the private DNS zones, we also need to [create a set of custom Az
 Once policy definitions have been deployed, [assign the policies][link-7] at the desired scope in your management group hierarchy. Ensure that the policy assignments target the Azure subscriptions that will be used by the application teams to deploy PaaS services with private endpoint access exclusively.
 
 > [!IMPORTANT]
-> Remember to assign the [Private DNS Zone Contributor role][link-8] role in the subscription/resource group where the private DNS zones are hosted to the [managed identity created by the `DeployIfNotExists` policy assignment][link-9] that will be responsible to create and manage the private endpoint DNS record in the private DNS zone. This is because the private endpoint is located in the application owner Azure subscription, while the private DNS zone is located in a different subscription (such as central connectivity subscription).
+> In addition to [assigning the roleDefinition][link-11] defined in the policy, remember to assign the [Private DNS Zone Contributor role][link-8] role in the subscription/resource group where the private DNS zones are hosted to the [managed identity created by the `DeployIfNotExists` policy assignment][link-9] that will be responsible to create and manage the private endpoint DNS record in the private DNS zone. This is because the private endpoint is located in the application owner Azure subscription, while the private DNS zone is located in a different subscription (such as central connectivity subscription).
 
 Once the platform team finishes this configuration, Azure subscriptions from applications teams are ready for them to create Azure PaaS services with private endpoint access exclusively, and ensuring the DNS records for private endpoints are automatically registered (and removed once private endpoint is deleted) from corresponding private DNS zones.
 
@@ -314,6 +314,7 @@ If an application owner deletes the private endpoint, the corresponding records 
 [link-8]: /azure/dns/dns-protect-private-zones-recordsets
 [link-9]: /azure/governance/policy/how-to/remediate-resources
 [link-10]: /azure/governance/policy/overview
+[link-11]: /azure/governance/policy/how-to/remediate-resources#configure-policy-definition
 [image-1]: ./media/private-link-example-central-dns.png
 [image-2]: ./media/create-private-dns-zones.jpg
 [image-3]: ./media/create-storage-account-blob.jpg

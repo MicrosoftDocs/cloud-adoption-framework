@@ -6,7 +6,7 @@ ms.author: mboswell
 ms.date: 08/06/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
@@ -34,7 +34,7 @@ Some services have specific RBAC roles like Storage Blob Data Contributor or Dat
 
 The following best practices can help you to get started with RBAC:
 
-- **Use RBAC roles for service management and operations, and use service-specific roles for data access and workload-specific tasks:** Use RBAC roles on Azure resources for granting permission to security principals that need to perform resource management and operations tasks. For security principals that need to access data within storage, they don't an RBAC role on the resource because they don't need to manage it. Instead, grant permission to data objects directly; for example, read-access on a folder in Azure Data Lake Storage Gen2 or a contained database user and table permission on a database in Azure SQL database.
+- **Use RBAC roles for service management and operations, and use service-specific roles for data access and workload-specific tasks:** Use RBAC roles on Azure resources for granting permission to security principals that need to perform resource management and operations tasks. Security principals that need to access data within storage don't require an RBAC role on the resource, because they don't need to manage it. Instead, grant permission to data objects directly. For example, grant read access to a folder in Azure Data Lake Storage Gen2 or a contained database user and table permission on a database in Azure SQL Database.
 
 - **Use built-in RBAC roles:** First, use the built-in RBAC Azure resource roles to manage services and assign operations roles to control access. Create and use custom roles for Azure resources only when built-in roles don't meet specific needs.
 

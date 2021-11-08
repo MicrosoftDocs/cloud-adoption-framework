@@ -33,7 +33,7 @@ As you're establishing a commitment with the business, there are a few key aspec
 - Loss avoidance ROI.
 - Validation of management level.
 
-To aid in your decision process, the remainder of this article describes each of these aspects in greater detail.
+To aid in your decision process, the remainder of this article describes these aspects in greater detail.
 
 ## IT operations prerequisites
 

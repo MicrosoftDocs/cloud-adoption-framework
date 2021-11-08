@@ -27,7 +27,7 @@ The official guidance in the Cloud Adoption Framework is to always create a clou
 
 **Guidance to support deliverable completion:**
 
-- [Cloud governance functions](../../organize/cloud-governance.md) might already be spread across multiple individuals or teams. Having a team that goes by the title "cloud governance team" isn't important, but the required capabilities should reside with an accountable party or team.
+- [Cloud governance functions](../../organize/cloud-governance.md) might already be spread across multiple individuals or teams. Having a team that goes by the title *cloud governance team* isn't important, but the required capabilities should reside with an accountable party or team.
 - If the company's long-term cloud adoption strategy can be delivered from one landing zone in one cloud environment, the amount of governance and operations efforts might be small enough for delivery by one person or one team. That team is unlikely to be called cloud governance, because it serves many functions beyond cloud governance. Even for that team, this getting started guide can help ensure that it can deliver on this important function of governance.
 
 <br>

@@ -1,7 +1,5 @@
 ### YamlMime:Hub
 
-# docsTest:ignore "YamlMime:Hub" "https://aka.ms/adopt"
-
 title: Microsoft Cloud Adoption Framework for Azure
 summary: The Cloud Adoption Framework is a collection of documentation, implementation guidance, best practices, and tools that are proven guidance from Microsoft designed to accelerate your cloud adoption journey.
 brand: azure
@@ -22,8 +20,6 @@ metadata:
 
 highlightedContent:
 
-# cSpell:ignore caf
-
 # itemType: architecture, concept, deploy, download, get-started, how-to-guide, learn, overview, quickstart, reference, sample, tutorial, video, whats-new
 
   items:
@@ -36,7 +32,7 @@ highlightedContent:
     # Card
     - title: Tools and templates
       itemType: download
-      url: ./reference/tools-templates.md
+      url: ./resources/tools-templates.md
 
     # Card
     - title: Newly published articles
@@ -186,17 +182,17 @@ tools:
 
       # imageSrc should be square in ratio with no whitespace
       imageSrc: ./_images/learn-caf-logo.png
-      url: /learn/modules/microsoft-cloud-adoption-framework-for-azure/index
+      url: /learn/modules/microsoft-cloud-adoption-framework-for-azure/
 
     # Card
     - title: Azure fundamentals
       imageSrc: ./_images/learn-azure-fundamentals-logo.png
-      url: /learn/paths/azure-fundamentals
+      url: /learn/paths/az-900-describe-cloud-concepts/
 
     # Card
     - title: Learn the business value of Azure
       imageSrc: ./_images/learn-business-value-of-azure-logo.png
-      url: /learn/paths/learn-business-value-of-azure
+      url: /learn/paths/learn-business-value-of-azure/
 
 # conceptualContent section (optional)
 
@@ -251,12 +247,12 @@ additionalContent:
         # Card
         - title: FastTrack for Azure
           summary: Get help from Microsoft engineers
-          url: https://azure.microsoft.com/programs/azure-fasttrack
+          url: https://azure.microsoft.com/programs/azure-fasttrack/
 
         # Card
         - title: Azure Migration and Modernization Program
           summary: Get help migrating workloads to the cloud
-          url: https://azure.microsoft.com/migration/migration-program
+          url: https://azure.microsoft.com/migration/migration-modernization-program/
 
         # Card
         - title: Find a partner

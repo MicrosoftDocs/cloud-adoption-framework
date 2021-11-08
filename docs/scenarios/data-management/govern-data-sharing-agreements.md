@@ -6,7 +6,7 @@ ms.author: pstrengholt
 ms.date: 7/20/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: overview
+ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
@@ -27,7 +27,7 @@ A data sharing agreement ensures stable delivery of data. The agreement works li
 
 A good SLA typically describes the quality of data delivery and interface. This part of the SLA might include uptime, error rates, and availability. It could also include deprecation, a roadmap, and version numbers. The metadata that capture these details can be under source control. That approach allows automatic triggering validations and deployments. For more information, see [Source control in Azure Data Factory](/azure/data-factory/source-control).
 
-Data delivery contracts provide insight into coupling and dependencies between domains and applications. A contract also allows for [contract testing](/azure/data-factory/continuous-integration-deployment#cicd-life cycle). Testing ensures all application and interface changes are validated against the consumer's data requirements. You can detect schema drift to detect when data flows become vulnerable to upstream data source changes. For more information, see [Schema drift in mapping data flow](/azure/data-factory/concepts-data-flow-schema-drift).
+Data delivery contracts provide insight into coupling and dependencies between domains and applications. A contract also allows for [contract testing](/azure/data-factory/continuous-integration-delivery#cicd-lifecycle). Testing ensures all application and interface changes are validated against the consumer's data requirements. You can detect schema drift to detect when data flows become vulnerable to upstream data source changes. For more information, see [Schema drift in mapping data flow](/azure/data-factory/concepts-data-flow-schema-drift).
 
 When data products become popular and widely used, you need to implement versioning and manage compatibility and deployment. Without these disciplines, reusability can be low and interfaces can break. We recommend documenting contracts for all interfaces. Document message-format schemas, data schemas, transportation types, and their relationship to the applications.
 

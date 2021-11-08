@@ -1,21 +1,22 @@
 ---
-title: Detail of Policies in Azure enterprise-scale for analytics and AI
+title: Detail of policies in Azure enterprise-scale for analytics and AI
 description: Learn about Azure policies details in enterprise-scale for analytics and AI. Azure policies help your organization govern resources as needed.
 author: marvinbuss
 ms.author: mabuss
 ms.date: 09/21/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
+ms.custom: e2e-data-management, think-tank
 ---
 
-# Azure Policies
+# Azure policies
 
-[Implementing custom policies](/azure/governance/policy/tutorials/create-and-manage) allows you to do more with Azure Policy. Enterprise-Scale Analytics and AI comes with a set of pre-created policies to help you implement the required guard rails in your environment.
+[Implementing custom policies](/azure/governance/policy/tutorials/create-and-manage) allows you to do more with Azure Policy. Enterprise-scale analytics and AI comes with a set of pre-created policies to help you implement the required guardrails in your environment.
 
-Enterprise-Scale Analytics and AI contains custom policies pertaining to **resource and cost management, authentication, encryption, network isolation, logging, resilience and more** that apply to the following services and areas:
+Enterprise-scale analytics and AI contains custom policies pertaining to **resource and cost management, authentication, encryption, network isolation, logging, resilience and more** that apply to the following services and areas:
 
-- [All Services](#all-services)
+- [All services](#all-services)
 - [Storage](#storage)
 - [Key Vault](#key-vault)
 - [Azure Data Factory](#azure-data-factory)
@@ -31,16 +32,16 @@ Enterprise-Scale Analytics and AI contains custom policies pertaining to **resou
 - [Azure Cognitive Services](#azure-cognitive-services)
 - [Azure Machine Learning](#azure-machine-learning)
 - [Azure SQL Managed Instance](#azure-sql-managed-instance)
-- [Azure SQL](#azure-sql)
+- [Azure SQL Database](#azure-sql-database)
 - [Azure Database for MariaDB](#azure-database-for-mariadb)
 - [Azure Database for MySQL](#azure-database-for-mysql)
 - [Azure Database for PostgreSQL](#azure-database-for-postgresql)
 - [Azure Cognitive Search](#azure-cognitive-search)
 - [Azure DNS](#azure-dns)
-- [Network Security Group](#network-security-group)
+- [Network security group](#network-security-group)
 - [Batch](#batch)
 - [Azure Cache for Redis](#azure-cache-for-redis)
-- [Container Instances](#container-instances)
+- [Container instances](#container-instances)
 - [Azure Firewall](#azure-firewall)
 - [HDInsight](#hdinsight)
 - [Power BI](#power-bi)
@@ -48,9 +49,9 @@ Enterprise-Scale Analytics and AI contains custom policies pertaining to **resou
 > [!NOTE]
 > The policies provided below are not applied by default during deployment. They should be viewed as guidance-only and can be applied depending on business requirements. Policies should always be applied to the highest level possible and in most cases this will be a [management group](/azure/governance/management-groups/overview). All the policies are available in our GitHub repository.
 
-## All Services
+## All services
 
-|Policy Name  |Policy Area  |Description  |
+|Policy name  |Policy area  |Description  |
 |---------|---------|---------|
 | Deny-PublicIp|Network Isolation|Restrict deployment of public IPs.|
 |Deny-PrivateEndpoint-PrivateLinkServiceConnections|Network Isolation| Deny private endpoints to resources outside of the aad tenant and subscription.|
@@ -59,14 +60,14 @@ Enterprise-Scale Analytics and AI contains custom policies pertaining to **resou
 
 ## Storage
 
-|Policy Name  |Policy Area  |Description  |
+|Policy name  |Policy area  |Description  |
 |---------|---------|---------|
 |Append-Storage-Encryption|Encryption|Enforce encryption for storage accounts.|
 |Deny-Storage-AllowBlobPublicAccess|Network Isolation|Enforces no public access to all blobs or containers in the storage account.|
 |Deny-Storage-ContainerDeleteRetentionPolicy|Resilience|Enforce container delete retention policies larger than seven days for storage account.|
 |Deny-Storage-CorsRules|Network Isolation|Deny cors rules for storage account.|
 |Deny-Storage-InfrastructureEncryption|Encryption|Enforce infrastructure (double) encryption for storage accounts.|
-|Deny-Storage-MinimumTlsVersion|Encryption|Enforces minimum tls version 1.2 for storage account.|
+|Deny-Storage-MinimumTlsVersion|Encryption|Enforces minimum TLS version 1.2 for storage account.|
 |Deny-Storage-NetworkAclsBypass|Network Isolation|Enforces network bypass to none for storage account.|
 |Deny-Storage-NetworkAclsIpRules|Network Isolation|Enforces network ip rules for storage account.|
 |Deny-Storage-NetworkAclsVirtualNetworkRules|Network Isolation|Denies virtual network rules for storage account.|
@@ -79,7 +80,7 @@ Enterprise-Scale Analytics and AI contains custom policies pertaining to **resou
 
 ## Key Vault
 
-|Policy Name  |Policy Area  |Description  |
+|Policy name  |Policy area  |Description  |
 |---------|---------|---------|
 |Audit-KeyVault-PrivateEndpointId|Network Isolation|Audit public endpoints that are created in other subscriptions for key vault.|
 |Deny-KeyVault-NetworkAclsBypass|Network Isolation|Enforces bypass network level rules for key vault.|
@@ -92,7 +93,7 @@ Enterprise-Scale Analytics and AI contains custom policies pertaining to **resou
 
 ## Azure Data Factory
 
-|Policy Name  |Policy Area  |Description  |
+|Policy name  |Policy area  |Description  |
 |---------|---------|---------|
 |Append-DataFactory-IdentityType|Authentication|Enforces use of system assigned identity for data factory.|
 |Deny-DataFactory-ApiVersion|Resource Management|Denies old API version for data factory V1.|
@@ -105,7 +106,7 @@ Enterprise-Scale Analytics and AI contains custom policies pertaining to **resou
 
 ## Azure Synapse Analytics
 
-|Policy Name  |Policy Area  |Description  |
+|Policy name  |Policy area  |Description  |
 |---------|---------|---------|
 |Append-Synapse-LinkedAccessCheckOnTargetResource|Network Isolation|Enforce [LinkedAccessCheckOnTargetResource](/dotnet/api/microsoft.azure.management.synapse.models.managedvirtualnetworksettings.linkedaccesscheckontargetresource) in managed vnet settings when Synapse Workspace is created.|
 |Append-Synapse-Purview|Network Isolation|Enforce connection between central purview instance and Synapse Workspace.|
@@ -120,30 +121,30 @@ Enterprise-Scale Analytics and AI contains custom policies pertaining to **resou
 |Deny-SynapsePrivateLinkHub|Network Isolation|Denies Synapse Private Link Hub.|
 |Deny-SynapseSpark-AutoPause|Resource Management|Enforces auto pause for Synapse Spark Pools.|
 |Deny-SynapseSpark-AutoScale|Resource Management|Enforces auto scale for Synapse Spark Pools.|
-|Deny-SynapseSql-Sku|Resource Management|Denies certain Synapse Sql Pool SKUs.|
+|Deny-SynapseSql-Sku|Resource Management|Denies certain Synapse SQL Pool SKUs.|
 |Deploy-SynapseSql-AuditingSettings|Logging|Send auditing logs for Synapse SQL pools to log analytics.|
-|Deploy-SynapseSql-MetadataSynch|Resource Management|Setup metadata sync for Synapse sql pools.|
-|Deploy-SynapseSql-SecurityAlertPolicies|Logging|Deploy Synapse sql pool security alert policy.|
+|Deploy-SynapseSql-MetadataSynch|Resource Management|Setup metadata sync for Synapse SQL pools.|
+|Deploy-SynapseSql-SecurityAlertPolicies|Logging|Deploy Synapse SQL pool security alert policy.|
 |Deploy-SynapseSql-TransparentDataEncryption|Encryption|Deploy Synapse SQL transparent data encryption.|
 |Deploy-SynapseSql-VulnerabilityAssessment|Logging|Deploy Synapse SQL pool vulnerability assessments.|
 
 ## Azure Purview
 
-|Policy Name  |Policy Area  |Description  |
+|Policy name  |Policy area  |Description  |
 |---------|---------|---------|
 |Deny-Purview|Resource Management|Restrict deployment of Purview accounts to avoid proliferation.|
 
 ## Azure Databricks
 
-|Policy Name  |Policy Area  |Description  |
+|Policy name  |Policy area  |Description  |
 |---------|---------|---------|
 |Append-Databricks-PublicIp|Network Isolation|Enforces no public access on Databricks workspaces.|
-|Deny-Databricks-Sku|Resource Management|Deny non-premium Databricks sku.|
+|Deny-Databricks-Sku|Resource Management|Deny non-premium Databricks SKU.|
 |Deny-Databricks-VirtualNetwork|Network Isolation|Deny non-virtual network deployment for databricks.|
 
 Additional policies that are applied in the Databricks workspace through cluster policies:
 
-|Cluster Policy  |Policy Area  |
+|Cluster policy name |Policy area  |
 |---------|---------|
 |Restrict Spark version|Resource Management|
 |Restrict cluster size and VM types|Resource Management|
@@ -153,17 +154,17 @@ Additional policies that are applied in the Databricks workspace through cluster
 |Restrict DBUs per hour|Resource Management|
 |Deny public SSH|Authentication|
 |Cluster credential passthrough enabled|Authentication|
-|Enable process isolation|Network Isolation|
-|Enforce spark monitoring|Logging|
+|Enable process isolation|Network isolation|
+|Enforce Spark monitoring|Logging|
 |Enforce cluster logs|Logging|
-|Allow only SQL, python|Resource Management|
-|Deny additional setup scripts|Resource Management|
+|Allow only SQL, Python|Resource management|
+|Deny additional setup scripts|Resource management|
 
 ## Azure IoT Hub
 
-|Policy Name  |Policy Area  |Description  |
+|Policy name  |Policy area  |Description  |
 |---------|---------|---------|
-|Append-IotHub-MinimalTlsVersion|Encryption|Enforces minimal tls version for iot hub.|
+|Append-IotHub-MinimalTlsVersion|Encryption|Enforces minimal TLS version for iot hub.|
 |Audit-IotHub-PrivateEndpointId|Network Isolation|Audit public endpoints that are created in other subscriptions for iot hubs.|
 |Deny-IotHub-PublicNetworkAccess|Network Isolation|Denies public network access for iot hub.|
 |Deny-IotHub-Sku|Resource Management|Enforces iot hub SKUs.|
@@ -171,17 +172,17 @@ Additional policies that are applied in the Databricks workspace through cluster
 
 ## Azure Event Hubs
 
-|Policy Name  |Policy Area  |Description  |
+|Policy name  |Policy area  |Description  |
 |---------|---------|---------|
-|Deny-EventHub-Ipfilterrules|Network Isolation|Deny adding ip filter rules for event hub.|
-|Deny-EventHub-MaximumThroughputUnits|Network Isolation|Denies public network access for my sql servers.|
-|Deny-EventHub-NetworkRuleSet|Network Isolation|Enforces default virtual network rules for event hub.|
-|Deny-EventHub-Sku|Resource Management|Denies certain Skus for event hubs.|
-|Deny-EventHub-Virtualnetworkrules|Network Isolation|Deny adding virtual network rules for event hub.|
+|Deny-EventHub-Ipfilterrules|Network Isolation|Deny adding ip filter rules for Azure Event Hubs.|
+|Deny-EventHub-MaximumThroughputUnits|Network Isolation|Denies public network access for my SQL servers.|
+|Deny-EventHub-NetworkRuleSet|Network Isolation|Enforces default virtual network rules for Azure Event Hubs.|
+|Deny-EventHub-Sku|Resource Management|Denies certain AKUs for Azure Event Hubs.|
+|Deny-EventHub-Virtualnetworkrules|Network Isolation|Deny adding virtual network rules for Azure Event Hubs.|
 
 ## Azure Stream Analytics
 
-|Policy Name  |Policy Area  |Description  |
+|Policy name  |Policy area  |Description  |
 |---------|---------|---------|
 |Append-StreamAnalytics-IdentityType|Authentication|Enforces use of system assigned identity for stream analytics.|
 |Deny-StreamAnalytics-ClusterId|Resource Management|Enforces use of Stream Analytics cluster.|
@@ -189,7 +190,7 @@ Additional policies that are applied in the Databricks workspace through cluster
 
 ## Azure Data Explorer
 
-|Policy Name  |Policy Area  |Description  |
+|Policy name  |Policy area  |Description  |
 |---------|---------|---------|
 |Deny-DataExplorer-DiskEncryption|Encryption|Enforces use of disk encryption for data explorer.|
 |Deny-DataExplorer-DoubleEncryption|Encryption|Enforces use of double encryption for data explorer.|
@@ -200,7 +201,7 @@ Additional policies that are applied in the Databricks workspace through cluster
 
 ## Azure Cosmos DB
 
-|Policy Name  |Policy Area  |Description  |
+|Policy name  |Policy area  |Description  |
 |---------|---------|---------|
 |Append-Cosmos-DenyCosmosKeyBasedMetadataWriteAccess|Authentication|Deny key based metadata write access for Cosmos DB accounts.|
 |Append-Cosmos-PublicNetworkAccess|Network Isolation|Enforces no public network access for Cosmos DB accounts.|
@@ -210,7 +211,7 @@ Additional policies that are applied in the Databricks workspace through cluster
 
 ## Azure Container Registry
 
-|Policy Name  |Policy Area  |Description  |
+|Policy name  |Policy area  |Description  |
 |---------|---------|---------|
 |Audit-ContainerRegistry-PrivateEndpointId|Network Isolation|Audit public endpoints that are created in other subscriptions for cognitive services.|
 |Deny-ContainerRegistry-PublicNetworkAccess|Network Isolation|Denies public network access for container registry.|
@@ -218,18 +219,18 @@ Additional policies that are applied in the Databricks workspace through cluster
 
 ## Azure Cognitive Services
 
-|Policy Name  |Policy Area  |Description  |
+|Policy name  |Policy area  |Description  |
 |---------|---------|---------|
 |Append-CognitiveServices-IdentityType|Authentication|Enforces use of system assigned identity for cognitive services.|
 |Audit-CognitiveServices-PrivateEndpointId|Network Isolation|Audit public endpoints that are created in other subscriptions for cognitive services.|
 |Deny-CognitiveServices-Encryption|Encryption|Enforces use of encryption for cognitive services.|
 |Deny-CognitiveServices-PublicNetworkAccess|Network Isolation|Enforces no public network access for cognitive services.|
-|Deny-CognitiveServices-Sku|Resource Management|Deny cognitive services free sku.|
+|Deny-CognitiveServices-Sku|Resource Management|Deny cognitive services free SKU.|
 |Deny-CognitiveServices-UserOwnedStorage|Network Isolation|Enforces user owned storage for cognitive services.|
 
 ## Azure Machine Learning
 
-|Policy Name  |Policy Area  |Description  |
+|Policy name  |Policy area  |Description  |
 |---------|---------|---------|
 |Append-MachineLearning-PublicAccessWhenBehindVnet|Network Isolation|Deny public access behind vnet for machine learning workspaces.|
 |Audit-MachineLearning-PrivateEndpointId|Network Isolation|Audit public endpoints that are created in other subscriptions for machine learning.|
@@ -242,7 +243,7 @@ Additional policies that are applied in the Databricks workspace through cluster
 
 ## Azure SQL Managed Instance
 
-|Policy Name  |Policy Area  |Description  |
+|Policy name  |Policy area  |Description  |
 |---------|---------|---------|
 |Append-SqlManagedInstance-MinimalTlsVersion|Encryption|Enforces minimal TLS version for SQL Managed Instance servers.|
 |Deny-SqlManagedInstance-PublicDataEndpoint|Network Isolation|Denies public data endpoint for SQL Managed Instances.|
@@ -252,13 +253,13 @@ Additional policies that are applied in the Databricks workspace through cluster
 |Deploy-SqlManagedInstance-SecurityAlertPolicies|Logging|Deploy SQL Managed Instance security alert policies.|
 |Deploy-SqlManagedInstance-VulnerabilityAssessment|Logging|Deploy SQL Managed Instance vulnerability assessments.|
 
-## Azure SQL
+## Azure SQL Database
 
-|Policy Name  |Policy Area  |Description  |
+|Policy name  |Policy area  |Description  |
 |---------|---------|---------|
-|Append-Sql-MinimalTlsVersion|Encryption|Enforces minimal TLS version for sql servers.|
+|Append-Sql-MinimalTlsVersion|Encryption|Enforces minimal TLS version for SQL servers.|
 |Audit-Sql-PrivateEndpointId|Network Isolation|Audit public endpoints that are created in other subscriptions for Azure SQL.|
-|Deny-Sql-PublicNetworkAccess|Network Isolation|Denies public network access for sql servers.|
+|Deny-Sql-PublicNetworkAccess|Network Isolation|Denies public network access for SQL servers.|
 |Deny-Sql-StorageAccountType|Resilience|Enforces geo-redundant database backup.|
 |Deploy-Sql-AuditingSettings|Logging|Deploy SQL auditing settings.|
 |Deploy-Sql-AzureAdOnlyAuthentications|Authentication|Enforces Azure AD only authentication for SQL server.|
@@ -269,7 +270,7 @@ Additional policies that are applied in the Databricks workspace through cluster
 
 ## Azure Database for MariaDB
 
-|Policy Name  |Policy Area  |Description  |
+|Policy name  |Policy area  |Description  |
 |---------|---------|---------|
 |Append-MariaDb-MinimalTlsVersion|Encryption|Enforces minimal TLS version for MariaDB servers.|
 |Audit-MariaDb-PrivateEndpointId|Network Isolation|Audit public endpoints that are created in other subscriptions for MariaDB.|
@@ -279,7 +280,7 @@ Additional policies that are applied in the Databricks workspace through cluster
 
 ## Azure Database for MySQL
 
-|Policy Name  |Policy Area  |Description  |
+|Policy name  |Policy area  |Description  |
 |---------|---------|---------|
 |Append-MySQL-MinimalTlsVersion|Encryption|Enforces minimal TLS version for MySQL servers.|
 |Audit-MySql-PrivateEndpointId|Network Isolation|Audit public endpoints that are created in other subscriptions for MySQL.|
@@ -290,7 +291,7 @@ Additional policies that are applied in the Databricks workspace through cluster
 
 ## Azure Database for PostgreSQL
 
-|Policy Name  |Policy Area  |Description  |
+|Policy name  |Policy area  |Description  |
 |---------|---------|---------|
 |Append-PostgreSQL-MinimalTlsVersion|Encryption|Enforces minimal TLS version for PostgreSQL servers.|
 |Audit-PostgreSql-PrivateEndpointId|Network Isolation|Audit public endpoints that are created in other subscriptions for PostgreSQL.|
@@ -301,7 +302,7 @@ Additional policies that are applied in the Databricks workspace through cluster
 
 ## Azure Cognitive Search
 
-|Policy Name  |Policy Area  |Description  |
+|Policy name  |Policy area  |Description  |
 |---------|---------|---------|
 |Append-Search-IdentityType|Authentication|Enforces use of system assigned identity for Cognitive Search.|
 |Audit-Search-PrivateEndpointId|Network Isolation|Audit public endpoints that are created in other subscriptions for Cognitive Search.|
@@ -310,19 +311,19 @@ Additional policies that are applied in the Databricks workspace through cluster
 
 ## Azure DNS
 
-|Policy Name  |Policy Area  |Description  |
+|Policy name  |Policy area  |Description  |
 |---------|---------|---------|
 |Deny-PrivateDnsZones|Resource Management|Restrict deployment of private DNS zones to avoid proliferation.|
 
-## Network Security Group
+## Network security group
 
-|Policy Name  |Policy Area  |Description  |
+|Policy name  |Policy area  |Description  |
 |---------|---------|---------|
 |Deploy-Nsg-FlowLogs|Logging|Deploy NSG flow logs and traffic analytics.|
 
 ## Batch
 
-|Policy Name  |Policy Area  |Description  |
+|Policy name  |Policy area  |Description  |
 |---------|---------|---------|
 |Deny-Batch-InboundNatPools|Network Isolation|Denies inbound NAT pools for batch account VM pools.|
 |Deny-Batch-NetworkConfiguration|Network Isolation|Denies public IP addresses for batch account VM pools.|
@@ -332,45 +333,45 @@ Additional policies that are applied in the Databricks workspace through cluster
 
 ## Azure Cache for Redis
 
-|Policy Name  |Policy Area  |Description  |
+|Policy name  |Policy area  |Description  |
 |---------|---------|---------|
 |Deny-Cache-Enterprise|Resource Management|Denies Redis Cache Enterprise.|
 |Deny-Cache-FirewallRules|Network Isolation|Denies firewall rules for Redis Cache.|
 |Deny-Cache-MinimumTlsVersion|Encryption|Enforces minimum TLS version for Redis Cache.|
 |Deny-Cache-NonSslPort|Network Isolation|Enforces turning off the non-SSL port for Redis Cache.|
 |Deny-Cache-PublicNetworkAccess|Network Isolation|Enforces no public network access for Redis Cache.|
-|Deny-Cache-Sku|Resource Management|Enforces certain Skus for Redis Cache.|
+|Deny-Cache-Sku|Resource Management|Enforces certain SkKUs for Redis Cache.|
 |Deny-Cache-VnetInjection|Network Isolation|Enforces use of private endpoints and denies vnet injection for Redis Cache.|
 
-## Container Instances
+## Container instances
 
-|Policy Name  |Policy Area  |Description  |
+|Policy name  |Policy area  |Description  |
 |---------|---------|---------|
 |Deny-ContainerInstance-PublicIpAddress|Network Isolation|Denies public Container Instances created from Azure Machine Learning.|
 
 ## Azure Firewall
 
-|Policy Name  |Policy Area  |Description  |
+|Policy name  |Policy area  |Description  |
 |---------|---------|---------|
 |Deny-Firewall|Resource Management|Restrict deployment of Azure Firewall to avoid proliferation.|
 
 ## HDInsight
 
-|Policy Name  |Policy Area  |Description  |
+|Policy name  |Policy area  |Description  |
 |---------|---------|---------|
 |Deny-HdInsight-EncryptionAtHost|Encryption|Enforce encryption at host for HDInsight clusters.|
 |Deny-HdInsight-EncryptionInTransit|Encryption|Enforces encryption in transit for HDInsight clusters.|
 |Deny-HdInsight-MinimalTlsVersion|Encryption|Enforces minimal TLS version for HDInsight clusters.|
 |Deny-HdInsight-NetworkProperties|Network Isolation|Enforces private link enablement for HDInsight clusters.|
-|Deny-HdInsight-Sku||Enforces certain SKU's for HDInsight clusters.|
+|Deny-HdInsight-Sku||Enforces certain SKUs for HDInsight clusters.|
 |Deny-HdInsight-VirtualNetworkProfile|Network Isolation|Enforces virtual network injection for HDInsight clusters.|
 
 ## Power BI
 
-|Policy Name  |Policy Area  |Description  |
+|Policy name  |Policy area  |Description  |
 |---------|---------|---------|
 |Deny-PrivateLinkServicesForPowerBI|Resource Management|Restrict deployment of private link services for Power BI to avoid proliferation.|
 
-## Next Steps
+## Next steps
 
-[Connecting to Environments Privately](connect-to-environments-privately.md)
+[Connecting to environments privately](connect-to-environments-privately.md)

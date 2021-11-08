@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-hybrid
 
 # Deploy a local Windows Server instance hosted by Vagrant and connect it to Azure Arc
 
-The following article provides guidance for deploying a local **Windows 10** virtual machine using [Vagrant](https://www.vagrantup.com/) and connect it as an Azure Arc enabled server resource.
+The following article provides guidance for deploying a local **Windows 10** virtual machine using [Vagrant](https://www.vagrantup.com/) and connect it as an Azure Arc-enabled server resource.
 
 ## Prerequisites
 
@@ -32,15 +32,15 @@ The following article provides guidance for deploying a local **Windows 10** vir
 
     1. Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads).
 
-        - If you are an macOS user, run `brew cask install virtualbox`
-        - If you are a Windows user, you can use the [Chocolatey package](https://chocolatey.org/packages/virtualbox)
-        - If you are a Linux user, all package installation methods can be found [here](https://www.virtualbox.org/wiki/Linux_Downloads)
+        - If you are a macOS user, run `brew cask install virtualbox`
+        - If you are a Windows user, you can use the [Chocolatey package](https://community.chocolatey.org/packages/virtualbox)
+        - If you are a Linux user, all package installation methods can be found in [Download VirtualBox for Linux hosts](https://www.virtualbox.org/wiki/Linux_Downloads).
 
     2. Install [Vagrant](https://www.vagrantup.com/docs/installation)
 
-        - If you are an macOS user, run `brew cask install vagrant`
-        - If you are a Windows user, you can use the [Chocolatey package](https://chocolatey.org/packages/vagrant)
-        - If you are a Linux user, look [here](https://www.vagrantup.com/downloads)
+        - If you are a macOS user, run `brew cask install vagrant`
+        - If you are a Windows user, you can use the [Chocolatey package](https://community.chocolatey.org/packages/vagrant)
+        - If you are a Linux user, visit the [Vagrant download page](https://www.vagrantup.com/downloads).
 
 4. Create an Azure service principal.
 
@@ -74,10 +74,10 @@ The following article provides guidance for deploying a local **Windows 10** vir
 
 - The vagrantfile executes a script on the VM OS to install all the needed artifacts and to inject environment variables. Edit the [`scripts/vars.ps1`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/local/vagrant/windows/scripts/vars.ps1) PowerShell script to match the Azure service principal you created.
 
-  - `subscriptionId` = Your Azure subscription ID
-  - `appId` = Your Azure service principal name
-  - `password` = Your Azure service principal password
-  - `tenantId` = Your Azure tenant ID
+  - `subscriptionId` = your Azure subscription ID
+  - `appId` = your Azure service principal name
+  - `password` = your Azure service principal password
+  - `tenantId` = your Azure tenant ID
   - `resourceGroup` = Azure resource group name
   - `location` = Azure region
 
@@ -96,15 +96,15 @@ Once the download is complete, the actual provisioning will start. As shown in t
 
 ![A screenshot of a completed `vagrant up` command.](./media/local-vagrant/vagrant-windows-complete.png)
 
-Upon completion, you will have a local Windows 10 VM deployed, connected as a new Azure Arc enabled server inside a new resource group.
+Upon completion, you will have a local Windows 10 VM deployed, connected as a new Azure Arc-enabled server inside a new resource group.
 
-![A screenshot of an Azure Arc enabled server in the Azure portal.](./media/local-vagrant/vagrant-windows-server.png)
+![A screenshot of an Azure Arc-enabled server in the Azure portal.](./media/local-vagrant/vagrant-windows-server.png)
 
-![A screenshot of the details from an Azure Arc enabled server in the Azure portal.](./media/local-vagrant/vagrant-windows-server-details.png)
+![A screenshot of the details from an Azure Arc-enabled server in the Azure portal.](./media/local-vagrant/vagrant-windows-server-details.png)
 
 ## Semi-automated deployment (optional)
 
-The last step of the run is to register the VM as a new Azure Arc enabled server resource.
+The last step of the run is to register the VM as a new Azure Arc-enabled server resource.
 
 ![Another screenshot of a completed `vagrant up` command.](./media/local-vagrant/vagrant-windows-complete-2.png)
 

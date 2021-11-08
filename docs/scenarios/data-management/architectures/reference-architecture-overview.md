@@ -20,7 +20,6 @@ The Cloud Adoption Framework for data management and analytics is designed to be
 
 The following architecture examples can help you to adapt the Cloud Adoption Framework for data management and analytics to your use case.
 
-
 |Scenario  |Example customer  |Description  |
 |---------|---------|---------|
 |Single data landing zone     |[Adatum Corporation](reference-architecture-adatum.md)         |This reference architecture is ideal for customers that have identified a unit of their business that's ready to deploy analytics workloads to Azure. This architecture deploys a single landing zone that can be used by the business unit to manage their data estate. It provides the flexibility to add more landing zones for other business units when they're ready to move to Azure.         |
