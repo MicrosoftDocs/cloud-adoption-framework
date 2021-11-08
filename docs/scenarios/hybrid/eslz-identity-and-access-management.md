@@ -24,10 +24,9 @@ The following diagram shows a reference architecture that demonstrates the roles
 
 ## Design considerations
 
-- Decide who has access to onboarding servers from your organization to set up required permissions on the servers and in Azure.
-- Decide who has access to manage Azure Arc-enabled servers and the ability to view their data from Azure services and other cloud environments.
+- Decide who should have access to onboarding servers from your organization to set up required permissions on the servers and in Azure.
+- Decide who should have access to manage Azure Arc-enabled servers and the ability to view their data from Azure services and other cloud environments.
 - Decide between a single or multiple service principal accounts to onboard servers owned by different business functions/units in an enterprise based on operational responsibility and ownership.
-- Decide between short-lived or long-lived service principal credentials (client secrets) to onboard servers to Azure Arc.
 - Review the [Identity and Access Management design area](/azure/cloud-adoption-framework/ready/enterprise-scale/identity-and-access-management) of Azure Landing Zone Enterprise Scale to assess the impact of Arc-enabled servers on your overall identity and access model.
 
 ## Design recommendations
@@ -35,7 +34,7 @@ The following diagram shows a reference architecture that demonstrates the roles
 - **Server on-boarding and administration**
   - Use security groups to assign local administrator rights to the identified users or service accounts on the servers to onboard to Azure Arc at scale.
   - Use [Azure AD service principal](/azure/azure-arc/servers/onboard-service-principal#create-a-service-principal-for-onboarding-at-scale) to onboard servers to Azure Arc. Consider using multiple Azure AD service principals in a decentralized operating model, where servers are managed by different IT teams.
-  - Use short-lived Azure AD service principal [client secrets](/azure/active-directory/develop/howto-create-service-principal-portal#option-2-create-a-new-application-secret).
+  - Use a short-lived Azure AD service principal [client secrets](/azure/active-directory/develop/howto-create-service-principal-portal#option-2-create-a-new-application-secret).
   - Assign the [Azure Connected Machine Onboarding](/azure/azure-arc/servers/onboard-service-principal#create-a-service-principal-for-onboarding-at-scale) role at the resource group level.
   - Use Azure AD security groups and grant the [Hybrid Server Resource Administrator](/azure/azure-arc/servers/plan-at-scale-deployment#prerequisites) role to teams and individuals that will manage Arc-enabled server resources in Azure.
 - **Azure AD protected resource access**
