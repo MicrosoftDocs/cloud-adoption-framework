@@ -82,7 +82,7 @@ If your Azure Arc enabled-servers use a proxy or a firewall, all URLs required f
 
 If Private Link is being used, it requires configuring [Private Link for each service](/azure/azure-arc/servers/private-link-security#how-it-works).
 
-## Next Steps
+## Next steps
 
 For more guidance for your hybrid cloud adoption journey, please review the following:
 

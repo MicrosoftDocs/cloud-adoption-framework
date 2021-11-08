@@ -92,7 +92,7 @@ Once your servers are onboarded to Azure, it's recommended to [enable patch and 
 
 We recommend enabling OS lifecycle management automation by configuring the [Update Management](/azure/automation/update-management/enable-from-automation-account) solution in Azure Automation to manage operating system updates for your Windows and Linux virtual machines registered with Azure Arc-enabled servers.
 
-## Next Steps
+## Next steps
 
 For more guidance for your hybrid cloud adoption journey, please review the following:
 
