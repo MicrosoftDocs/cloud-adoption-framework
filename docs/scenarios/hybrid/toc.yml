@@ -34,7 +34,7 @@ items:
         href: eslz-security-governance-and-compliance.md  
       - name: Management disciplines
         href: eslz-management-and-monitoring-arc-server.md
-      - name: Platform Automation
+      - name: Platform automation
         href: eslz-automation-arc-server.md  
       - name: Cost governance
         href: eslz-cost-governance.md

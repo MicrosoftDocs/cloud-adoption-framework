@@ -45,7 +45,7 @@ Azure Arc-enabled servers allows you to connect hybrid machines using the follow
 
 Azure Arc-enabled servers offer a [direct connectivity to Azure public endpoints](/azure/azure-arc/servers/agent-overview#networking-configuration). With this connectivity method, all machine agents will open a connection via the internet using a public endpoint. The Connected Machine agent for Linux and Windows communicates outbound to Azure in a secure manner using the HTTPS protocol (TCP/443).
 
-For using the direct connection method you need to review your internet access for the Connected Machine Agent. It is a recommended practice to configure the [required network rules](/azure/azure-arc/servers/agent-overview#networking-configuration).
+For using the direct connection method you need to review your internet access for the Connected Machine agent. It is a recommended practice to configure the [required network rules](/azure/azure-arc/servers/agent-overview#networking-configuration).
 
 #### Proxy server or Firewall connection (Optional)
 
@@ -61,7 +61,7 @@ Azure Arc-enabled servers allow you to deploy VM extensions to centrally manage 
 
 ![Azure Arc-enabled servers private link topology](./media/arc-enabled-servers-private-link-topology.svg)
 
-This connection method has specific [restrictions and limitations](/azure/azure-arc/servers/private-link-security#restrictions-and-limitations) you should get familiar with. When you enable any of Arc-enabled servers extensions, those extensions connect to specific Azure services that have their own requirements for configuring Private Link support. 
+This connection method has specific [restrictions and limitations](/azure/azure-arc/servers/private-link-security#restrictions-and-limitations) you should get familiar with. When you enable any of Arc-enabled servers extensions, those extensions connect to specific Azure services that have their own requirements for configuring Private Link support.
 
 >[!TIP]
 >Review [Azure Private Link security](/azure/azure-arc/servers/private-link-security#how-it-works) for more information.
