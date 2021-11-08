@@ -174,6 +174,8 @@ items:
           href: /azure/cloud-adoption-framework/ready/azure-best-practices/optimize-ai-machine-learning-cost?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
         - name: Machine learning DevOps guide
           href: /azure/cloud-adoption-framework/ready/azure-best-practices/ai-machine-learning-mlops?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
+        - name: Data science best practices
+          href: ./best-practices/data-science-best-practices.md
       - name: Data landing zone ingestion
         items:
         - name: Data ingestion
@@ -182,12 +184,6 @@ items:
           href: ./best-practices/sap-data-ingestion.md
         - name: Automated ingestion pattern
           href: ./best-practices/automated-ingestion-pattern.md
-      - name: Data science environment
-        items:
-        - name: Data science best practices
-          href: ./best-practices/data-science-best-practices.md
-        - name: Azure Machine Learning
-          href: ./best-practices/azure-machine-learning.md
 
   - name: Featured Azure products
     items:
