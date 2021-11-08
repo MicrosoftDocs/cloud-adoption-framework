@@ -3,7 +3,7 @@ title: Network topology and connectivity for connecting to environments privatel
 description: Learn about the network topology for connecting to environments privately
 author: marvinbuss
 ms.author: mabuss
-ms.date: 09/21/2021
+ms.date: 11/08/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -28,11 +28,11 @@ Today, instead of exposing a VM publicly, customers can rely on Azure Bastion as
 
 A few other core security benefits of Azure Bastion are:
 
-1. Traffic initiated from Azure Bastion to the target VM stays within the customer VNet.
-1. Protection against port scanning, since RDP ports, SSH ports, and public IP addresses aren't publicly exposed for VMs.
-1. Azure Bastion helps protect against zero-day exploits. It sits at the perimeter of your virtual network. Since it's a PaaS service, the Azure platform keeps Azure Bastion up to date.
-1. The service integrates with native security appliances for an Azure virtual network, like Azure Firewall.
-1. Azure Bastion can be used to monitor and manage remote connections.
+- Traffic initiated from Azure Bastion to the target VM stays within the customer VNet.
+- Protection against port scanning, since RDP ports, SSH ports, and public IP addresses aren't publicly exposed for VMs.
+- Azure Bastion helps protect against zero-day exploits. It sits at the perimeter of your virtual network. Since it's a PaaS service, the Azure platform keeps Azure Bastion up to date.
+- The service integrates with native security appliances for an Azure virtual network, like Azure Firewall.
+- Azure Bastion can be used to monitor and manage remote connections.
 
 More details about Azure Bastion can be found in [What is Azure Bastion?](/azure/bastion/bastion-overview).
 
