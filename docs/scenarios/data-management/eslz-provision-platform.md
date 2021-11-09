@@ -64,7 +64,7 @@ There are no Git APIs available to clone/update/commit/push in the proposed auto
 
 The runbooks use Git functions from the [`GitAutomation`](https://github.com/webmd-health-services/GitAutomation) PowerShell module for working with Git repositories. By installing this module inside an Azure Automation account, users can do create, clone, query, push, pull, and commit operations in Git repositories. The following image shows the `GitAutomation` module installed inside an Azure Automation account:
 
-:::image type="content" source="./images/git-automation.png" alt-text="Diagram of GitAutomation Module for working with Git repositories." lightbox="./images/git-automation.png":::
+:::image type="content" source="./images/git-automation.png" alt-text="Diagram of `GitAutomation` module for working with Git repositories." lightbox="./images/git-automation.png":::
 
 Use the `Copy-GitRepository` function from the `GitAutomation` module to clone the main Git repository from the URL specified by `URL` to the data platform Git path specified by `DestinationPath`.
 
@@ -124,5 +124,5 @@ To control the deployment of data integration and data product services, follow 
 
 ## Next steps
 
-- [Deployment templates for enterprise-scale for analytics and AI deployments](./eslz-deployment-templates.md)
+- [Deployment templates for enterprise-scale for analytics and AI deployments](./architectures/deployment-templates.md)
 - [An introduction to Azure Automation](/azure/automation/automation-intro)
