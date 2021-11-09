@@ -76,7 +76,7 @@ items:
         topicHref: /azure/cloud-adoption-framework/scenarios/wvd/
       - name: Retail industry
         tocHref: /azure/cloud-adoption-framework/industry/retail
-        topicHref: /azure/cloud-adoption-framework/scenarios/industry/retail/
+        topicHref: /azure/cloud-adoption-framework/industry/retail/
     - name: Reference
       tocHref: /azure/cloud-adoption-framework/reference/
       topicHref: /azure/cloud-adoption-framework/reference
