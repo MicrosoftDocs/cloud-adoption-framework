@@ -1,9 +1,9 @@
 ---
 title: Network topology and connectivity for data management and analytics landing zones
 description: Learn about the network topology and connectivity for data management and analytics landing zones in Azure.
-author: BrianBlanchard
-ms.author: brblanch
-ms.date: 06/21/2021
+author: marvinbuss
+ms.author: mabuss
+ms.date: 10/18/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -46,7 +46,7 @@ Data landing zones connect to other data landing zones using virtual network pee
 
 ## Data management landing zone to third-party clouds
 
-To set up connectivity between a data management landing zone and a third-party cloud, use a [site-to-site VPN](/azure/vpn-gateway/vpn-gateway-create-site-to-site-rm-powershell) gateway connection. This VPN can connect your on-premises or third-party cloud landing zone to an Azure virtual network. This connection is created over an IPsec or internet key exchange v1 or v2 (IKEv1 or IKEv2) VPN tunnel.
+To set up connectivity between a data management landing zone and a third-party cloud, use a [Site-to-Site VPN](/azure/vpn-gateway/vpn-gateway-create-site-to-site-rm-powershell) gateway connection. This VPN can connect your on-premises or third-party cloud landing zone to an Azure virtual network. This connection is created over an IPsec or internet key exchange v1 or v2 (IKEv1 or IKEv2) VPN tunnel.
 
 Site-to-Site VPNs can provide better continuity for your workloads in a hybrid cloud setup with Azure.
 
@@ -55,7 +55,7 @@ Site-to-Site VPNs can provide better continuity for your workloads in a hybrid c
 
 ## Private endpoints
 
-The enterprise-scale for analytics and AI framework uses [Private Link](/azure/private-link/private-link-service-overview), where available, for shared platform as a service (PaaS) functionality. Private Link is available for several services and is in public preview for other services. Private Link addresses data exfiltration concerns related to service endpoints.
+The enterprise-scale for analytics and AI framework uses [Private Link](/azure/private-link/private-link-service-overview), where available, for shared platform as a service (PaaS) functionality. Private Link is available for several services and is in public preview for more services. Private Link addresses data exfiltration concerns related to service endpoints.
 
 For the current list of supported products, see [Private Link resources](/azure/private-link/private-endpoint-overview#private-link-resource).
 
@@ -68,4 +68,5 @@ Handle DNS resolution for private endpoints through central [Azure Private DNS](
 
 ## Next steps
 
-[Resource organization for enterprise-scale data management and analytics](./eslz-resource-organization.md)
+- [Network architecture considerations](eslz-network-considerations.md)
+- [Limit cross-tenant private endpoint connections in Azure](/../ready/azure-best-practices/limit-cross-tenant-private-endpoint-connections.md)

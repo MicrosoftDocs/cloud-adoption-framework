@@ -436,6 +436,11 @@
          "redirect_document_id": true
       },
       {
+         "source_path": "docs/scenarios/data-management/eslz-deployment-templates.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/data-management/architectures/deployment-templates",
+         "redirect_document_id": false
+      },
+      {
          "source_path": "docs/reference/migration-with-enterprise-scaffold.md",
          "redirect_url": "/azure/cloud-adoption-framework/resources/migration-with-enterprise-scaffold",
          "redirect_document_id": true
