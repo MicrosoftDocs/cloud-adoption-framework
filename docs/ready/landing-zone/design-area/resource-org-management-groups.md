@@ -56,6 +56,14 @@ Avoid duplicating your organizational structure into a deeply nested management 
 
 - Configure a default, dedicated management group for new subscriptions to ensure that no subscriptions are placed under the root management group. This is especially important if there are users eligible for MSDN or Visual Studio benefits and subscriptions. A good candidate for this type of management group is a Sandbox management group.
 
+- Do not create management groups for Production, Testing and Development environments. If required separate these into different subscriptions in the same management group. Also review further guidance on this topic:
+
+  - [How do we handle "dev/test/production" workload landing zones in enterprise-scale architecture? - FAQ](../../enterprise-scale/faq.md#how-do-we-handle-devtestproduction-workload-landing-zones-in-enterprise-scale-architecture)
+  - [Testing approach for enterprise-scale](../../enterprise-scale/testing-approach.md)
+
+> [!NOTE]
+> For testing guidance for enterprise-scale deployments, see [Testing approach for enterprise-scale](../../enterprise-scale/testing-approach.md).
+
 ## Management groups in the Azure landing zone accelerator
 
 As part of the Azure landing zone accelerator the following decisions have been made and included in the implementation for management group structure
