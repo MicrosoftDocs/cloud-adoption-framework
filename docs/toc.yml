@@ -344,14 +344,6 @@ items:
             href: ready/azure-best-practices/resource-tagging.md
           - name: Move resources
             href: /azure/azure-resource-manager/management/move-resource-group-and-subscription?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Design options for specific use cases
-            items:
-            - name: Create your initial subscriptions
-              href: ready/azure-best-practices/initial-subscriptions.md
-            - name: Scale with multiple subscriptions
-              href: ready/azure-best-practices/scale-subscriptions.md
-            - name: Organize your subscriptions
-              href: ready/azure-best-practices/organize-subscriptions.md
       
         - name: Security
           items:
