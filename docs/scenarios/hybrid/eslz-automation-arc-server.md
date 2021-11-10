@@ -37,7 +37,7 @@ Your machines have [connectivity](/azure/azure-arc/servers/agent-overview#networ
 ### Environment preparation
 
 - To deploy and configure the Azure Arc-enabled servers Connected Machine agent, an account with administrator or root privileges is required.
-- To onboard machines, you have the [required Azure permissions](/azure/azure-arc/servers/agent-overview#required-permissions). See the [Identity and access management for Azure Arc-enabled servers](./eslz-identity-and-access-management.md) section of this guide for more identity and access-related content.
+- To onboard machines, you have the [required Azure permissions](/azure/azure-arc/servers/agent-overview#required-permissions). See the [Identity and access management for Azure Arc-enabled servers](./eslz-identity-and-access-management.md) section of this guide for more identity and access related content.
 
 ### Onboard Azure Arc-enabled servers
 
@@ -90,7 +90,7 @@ Overview of steps:
 
 Once your servers are onboarded to Azure, it's recommended to [enable patch and update management](/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/arc-update-management) to ease OS lifecycle management on your Azure Arc-enabled servers. Update Management in Azure Automation allows you to view and schedule operating system updates and patches for your Arc-enabled servers at scale. More information about Update Management for Azure Automation can be found [here](/azure/automation/update-management/overview).
 
-We recommend enabling OS lifecycle management automation by configuring the [Update Management](/azure/automation/update-management/enable-from-automation-account) solution in Azure Automation, to manage operating system updates for your Windows and Linux virtual machines, registered with Azure Arc-enabled servers.
+We recommend enabling OS lifecycle management automation by configuring the [Update Management](/azure/automation/update-management/enable-from-automation-account) solution in Azure Automation, to manage operating system updates for your Windows and Linux virtual machines registered with Azure Arc-enabled servers.
 
 ## Next steps
 
