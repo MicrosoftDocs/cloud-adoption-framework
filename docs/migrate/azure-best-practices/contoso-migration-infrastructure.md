@@ -765,7 +765,7 @@ There are a few aspects for Contoso to consider:
 - A [network security group (NSG)](/azure/virtual-network/network-security-groups-overview) filters network traffic based on a list of security rules that allow or deny network traffic to resources connected to virtual networks in Azure.
 - [Azure Disk Encryption](/azure/security/fundamentals/encryption-atrest) is a capability that helps you encrypt your Windows and Linux IaaS VM disks.
 
-### Work with the Microsoft Defender for Cloud
+### Work with Microsoft Defender for Cloud
 
 Contoso is looking for a quick view into the security posture of its new hybrid cloud, and specifically, its Azure workloads. As a result, Contoso has decided to implement Microsoft Defender for Cloud starting with the following features:
 

@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Phase 3: Ongoing management and security
 
-After you've onboarded Azure server management services, you'll need to focus on the operations and security configurations that will support your ongoing operations. We'll start with securing your environment by reviewing the Microsoft Defender for Cloud. We'll then configure policies to keep your servers in compliance and automate common tasks. This section covers the following topics:
+After you've onboarded Azure server management services, you'll need to focus on the operations and security configurations that will support your ongoing operations. We'll start with securing your environment by reviewing Microsoft Defender for Cloud. We'll then configure policies to keep your servers in compliance and automate common tasks. This section covers the following topics:
 
 - [Address security recommendations](#address-security-recommendations): Microsoft Defender for Cloud provides suggestions to improve the security of your environment. When you implement these recommendations, you see the impact reflected in a security score.
 - [Enable the guest configuration policy](./guest-configuration-policy.md): Use the Azure Policy guest configuration feature to audit the settings in a virtual machine. For example, you can check whether any certificates are about to expire.

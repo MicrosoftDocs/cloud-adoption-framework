@@ -100,13 +100,13 @@ In the following procedures, you enable and configure Microsoft Defender for Clo
    --target-workspace '/subscriptions/<Your subscription ID>/resourceGroups/<Name of the Azure resource group>/providers/Microsoft.OperationalInsights/workspaces/<Name of the Log Analytics Workspace>'
    ```
 
-4. Select the Microsoft Defender for Cloud tier. The Free tier is enabled on all your Azure subscriptions by default and will provide continuous security assessment and actionable security recommendations. In this guide, you use the Standard tier for Azure Virtual Machines that extends these capabilities providing unified security management and threat protection across your hybrid cloud workloads. To enable the Standard tier of Microsoft Defender for Cloud for VMs, run the following command:
+4. Select a Microsoft Defender for Cloud tier. The Free tier is enabled on all your Azure subscriptions by default and will provide continuous security assessment and actionable security recommendations. In this guide, you use the Standard tier for Azure Virtual Machines that extends these capabilities providing unified security management and threat protection across your hybrid cloud workloads. To enable the Standard tier of Microsoft Defender for Cloud for VMs, run the following command:
 
     ```console
     az security pricing create -n VirtualMachines --tier 'standard'
     ```
 
-5. Assign the default Defender for Cloud policy initiative. Microsoft Defender for Cloud makes its security recommendations based on policies. There is a specific initiative that groups Defender for Cloud policies with the definition ID `1f3afdf9-d0c9-4c3d-847f-89da613e70a8`. The following command will assign the Microsoft Defender for Cloud initiative to your subscription.
+5. Assign the default Defender for Cloud policy initiative. Microsoft Defender for Cloud makes its security recommendations based on policies. There is a specific initiative that groups Defender for Cloud policies with the definition ID `1f3afdf9-d0c9-4c3d-847f-89da613e70a8`. The following command will assign the Defender for Cloud initiative to your subscription.
 
     ```console
     az policy assignment create --name 'Azure Security Center Default <Your subscription ID>' \
@@ -120,7 +120,7 @@ After you successfully onboard Microsoft Defender for Cloud, you'll get recommen
 
 In the **Compute & Apps** section under **VM & Servers**, Microsoft Defender for Cloud provides an overview of all the discovered security recommendations for your VMs and computers, including Azure VMs, Azure classic VMs, servers, and Azure Arc machines.
 
-![A screenshot of **Compute & Apps** in the Microsoft Defender for Cloud.](./media/arc-security-center/compute-apps.png)
+![A screenshot of **Compute & Apps** in Microsoft Defender for Cloud.](./media/arc-security-center/compute-apps.png)
 
 On the Azure Arc-enabled servers, Microsoft Defender for Cloud recommends installing the Log Analytics agent. Each recommendation also includes:
 

@@ -126,7 +126,7 @@ Once the transformation is complete, governance and operations must live on for 
 - Consider implementing a development security operations (DevSecOps) approach.
 - Conduct an impact analysis to gauge results on costs, security, and user adoption.
 - Periodically produce an impact report that shows the changes in metrics created by the system and estimate the business impacts of the [hybrid identity strategy](../../decision-guides/identity/index.md).
-- Establish integrated monitoring recommended by the [Microsoft Defender for Cloud](/azure/security-center/security-center-introduction).
+- Establish integrated monitoring recommended by [Microsoft Defender for Cloud](/azure/security-center/security-center-introduction).
 
 ## Next steps
 

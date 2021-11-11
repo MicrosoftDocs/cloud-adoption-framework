@@ -149,7 +149,7 @@ Security posture awareness for Azure VMware Solution guest VMs helps you underst
 
 Consider and implement the following recommendations when planning for Azure VMware Solution environment and guest VM compliance.
 
-- **Microsoft Defender for Cloud monitoring:** Use Microsoft Defender for Cloud's regulatory compliance view to monitor compliance against security and regulatory benchmarks. Configure Microsoft Defender for Cloud workflow automation to track any deviation from the expected compliance posture. For more information, see the [Microsoft Defender for Cloud documentation](/azure/security-center/security-center-introduction).
+- **Microsoft Defender for Cloud monitoring:** Use Microsoft Defender for Cloud's regulatory compliance view to monitor compliance against security and regulatory benchmarks. Configure Microsoft Defender for Cloud workflow automation to track any deviation from the expected compliance posture. For more information, see [Microsoft Defender for Cloud overview](/azure/security-center/security-center-introduction).
 
 - **Guest VM DR compliance:** Track DR configuration compliance for Azure VMware Solution guest VMs to ensure that their mission-critical applications and workloads remain available during a disaster. Use Azure Site Recovery or an Azure VMware Solution certified BCDR solution, which provides at-scale replication provisioning, noncompliance status monitoring, and automatic remediation.
 
