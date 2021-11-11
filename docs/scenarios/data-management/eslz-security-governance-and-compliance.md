@@ -47,26 +47,26 @@ Encryption using MACsec (media access control security), an IEEE standard at the
 
 To control and manage disk encryption keys and secrets for enterprise-scale for analytics and AI, use Azure Key Vault. Key Vault has capabilities for provisioning and managing SSL/TLS certificates. You can also protect secrets with hardware security modules (HSMs).
 
-### Azure Defender
+### Microsoft Defender for Cloud
 
-Azure Defender provides security alerts and advanced threat protection for virtual machines, SQL databases, containers, web applications, virtual networks, and more.
+Microsoft Defender for Cloud provides security alerts and advanced threat protection for virtual machines, SQL databases, containers, web applications, virtual networks, and more.
 
-When you enable Azure Defender from the pricing and settings area of Azure Security Center, the following Azure Defender plans are enabled simultaneously and provide comprehensive defenses for the compute, data, and service layers of your environment:
+When you enable Microsoft Defender for Cloud from the pricing and settings area of Microsoft Defender for Cloud, the following Microsoft Defender plans are enabled simultaneously and provide comprehensive defenses for the compute, data, and service layers of your environment:
 
-- [Azure Defender for servers](/azure/security-center/defender-for-servers-introduction?branch=master)
-- [Azure Defender for App Service](/azure/security-center/defender-for-app-service-introduction)
-- [Azure Defender for Storage](/azure/security-center/defender-for-storage-introduction)
-- [Azure Defender for SQL](/azure/security-center/defender-for-sql-introduction)
-- [Azure Defender for Kubernetes](/azure/security-center/defender-for-kubernetes-introduction)
-- [Azure Defender for container registries](/azure/security-center/defender-for-container-registries-introduction)
-- [Azure Defender for Key Vault](/azure/security-center/defender-for-key-vault-introduction)
-- [Azure Defender for Resource Manager](/azure/security-center/defender-for-resource-manager-introduction)
-- [Azure Defender for DNS](/azure/security-center/defender-for-dns-introduction)
+- [Microsoft Defender for servers](/azure/security-center/defender-for-servers-introduction?branch=master)
+- [Microsoft Defender for App Service](/azure/security-center/defender-for-app-service-introduction)
+- [Microsoft Defender for Storage](/azure/security-center/defender-for-storage-introduction)
+- [Microsoft Defender for SQL](/azure/security-center/defender-for-sql-introduction)
+- [Microsoft Defender for Kubernetes](/azure/security-center/defender-for-kubernetes-introduction)
+- [Microsoft Defender for container registries](/azure/security-center/defender-for-container-registries-introduction)
+- [Microsoft Defender for Key Vault](/azure/security-center/defender-for-key-vault-introduction)
+- [Microsoft Defender for Resource Manager](/azure/security-center/defender-for-resource-manager-introduction)
+- [Microsoft Defender for DNS](/azure/security-center/defender-for-dns-introduction)
 
-These plans are explained separately in the Security Center documentation.
+These plans are explained separately in the Defender for Cloud documentation.
 
 > [!IMPORTANT]
-> Where Azure Defender is available for platform as a service (PaaS) offerings, you should enable this feature by default, especially for Azure Data Lake Storage accounts. For more information, see [Introduction to Azure Defender](/azure/security-center/azure-defender) and [configure Azure Defender for Storage](/azure/storage/common/azure-defender-storage-configure?tabs=azure-security-center).
+> Where Microsoft Defender for Cloud is available for platform as a service (PaaS) offerings, you should enable this feature by default, especially for Azure Data Lake Storage accounts. For more information, see [Introduction to Microsoft Defender for Cloud](/azure/security-center/azure-defender) and [configure Microsoft Defender for Storage](/azure/storage/common/azure-defender-storage-configure?tabs=azure-security-center).
 
 ### Microsoft Defender for Identity
 
@@ -75,9 +75,9 @@ Microsoft Defender for Identity is part of the advanced data security offering, 
 > [!IMPORTANT]
 > Enable Microsoft Defender for Identity by default whenever it's available for the PaaS services you use.
 
-### Enable Azure Sentinel
+### Enable Microsoft Sentinel
 
-[Azure Sentinel](/azure/sentinel/overview) is a scalable, cloud-native, security information event management (SIEM), and security orchestration automated response (SOAR) solution. Azure Sentinel delivers intelligent security analytics and threat intelligence across the enterprise, providing a single solution for alert detection, threat visibility, proactive hunting, and threat response.
+[Microsoft Sentinel](/azure/sentinel/overview) is a scalable, cloud-native, security information event management (SIEM), and security orchestration automated response (SOAR) solution. Microsoft Sentinel delivers intelligent security analytics and threat intelligence across the enterprise, providing a single solution for alert detection, threat visibility, proactive hunting, and threat response.
 
 ## Networking
 

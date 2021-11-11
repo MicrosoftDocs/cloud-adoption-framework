@@ -6,7 +6,7 @@ items:
     href: overview.md
   - name: What's new
     href: get-started/whats-new.md
-  
+
   - name: Scenarios
     items:
     - name: Overview
@@ -25,7 +25,7 @@ items:
       href: scenarios/wvd/index.md
     - name: Retail industry
       href: industry/retail/index.md
-  
+
   - name: Adoption journeys
     items:
     - name: Get started
@@ -372,9 +372,9 @@ items:
           items:
             - name: Overview
               href: ready/considerations/landing-zone-security.md
-            - name: Onboard a subscription to Azure Security Center
+            - name: Onboard a subscription to Microsoft Defender for Cloud
               href: /azure/security-center/security-center-get-started?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Onboard Azure Sentinel
+            - name: Onboard Microsoft Sentinel
               href: /azure/sentinel/quickstart-onboard?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Implementing a secure hybrid network architecture in Azure
               href: /azure/architecture/reference-architectures/dmz/secure-vnet-dmz?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json

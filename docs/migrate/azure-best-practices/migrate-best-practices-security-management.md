@@ -23,7 +23,7 @@ As you plan and design for migration, in addition to thinking about the migratio
 
 After migration, the most critical task is to secure migrated workloads from internal and external threats. These best practices help you to do that:
 
-- Learn how to work with the monitoring, assessments, and recommendations provided by Azure Security Center.
+- Learn how to work with the monitoring, assessments, and recommendations provided by Microsoft Defender for Cloud.
 - Get best practices for encrypting your data in Azure.
 - Protect your VMs from malware and malicious attacks.
 - Keep sensitive information secure in migrated web apps.
@@ -33,31 +33,31 @@ After migration, the most critical task is to secure migrated workloads from int
 
 These best practices are described in more detail in the sections that follow.
 
-## Best practice: Follow Azure Security Center recommendations
+## Best practice: Follow Microsoft Defender for Cloud recommendations
 
-Azure tenant admins need to enable security features that protect workloads from attacks. Security Center provides unified security management. From Security Center, you can apply security policies across workloads, limit threat exposure, and detect and respond to attacks. Security Center analyzes resources and configurations across Azure tenants, and makes security recommendations, including:
+Azure tenant admins need to enable security features that protect workloads from attacks. Defender for Cloud provides unified security management. From Defender for Cloud, you can apply security policies across workloads, limit threat exposure, and detect and respond to attacks. Defender for Cloud analyzes resources and configurations across Azure tenants, and makes security recommendations, including:
 
 - **Centralized policy management:** Ensure compliance with company or regulatory security requirements by centrally managing security policies across all your hybrid cloud workloads.
 - **Continuous security assessment:** Monitor the security posture of machines, networks, storage and data services, and applications to discover potential security issues.
 - **Actionable recommendations:** Remediate security vulnerabilities before they can be exploited by attackers, with prioritized and actionable security recommendations.
 - **Prioritized alerts and incidents:** Focus on the most critical threats first, with prioritized security alerts and incidents.
 
-In addition to assessments and recommendations, Security Center provides other security features that you can enable for specific resources.
+In addition to assessments and recommendations, Defender for Cloud provides other security features that you can enable for specific resources.
 
 - **Just-in-time (JIT) access.** Reduce your network attack surface with JIT, controlled access to management ports on Azure VMs.
   - Having VM RDP port 3389 open on the internet exposes VMs to continual activity from bad actors. Azure IP addresses are well-known, and hackers continually probe them for attacks on open 3389 ports.
   - JIT uses network security groups (NSGs) and incoming rules that limit the amount of time that a specific port is open.
-  - With JIT access enabled, Security Center checks that a user has Azure role-based access control (Azure RBAC) write access permissions for a VM. In addition, you can specify rules for how users can connect to VMs. If permissions are OK, an access request is approved, and Security Center configures NSGs to allow inbound traffic to the selected ports for the amount of time you specify. NSGs return to their previous state when the time expires.
+  - With JIT access enabled, Defender for Cloud checks that a user has Azure role-based access control (Azure RBAC) write access permissions for a VM. In addition, you can specify rules for how users can connect to VMs. If permissions are OK, an access request is approved, and Defender for Cloud configures NSGs to allow inbound traffic to the selected ports for the amount of time you specify. NSGs return to their previous state when the time expires.
 - **Adaptive application controls.** Keep software and malware off VMs by controlling which applications run on them, by using dynamic allow lists.
   - Adaptive application controls allow you to approve applications, and prevent rogue users or administrators from installing unapproved or vetting software applications on your VMs.
     - You can block or alert attempts to run malicious applications, avoid unwanted or malicious applications, and ensure compliance with your organization's application security policy.
 - **File Integrity Monitoring.** Ensure the integrity of files running on VMs.
   - You don't need to install software to cause VM issues. Changing a system file can also cause VM failure or performance degradation. File Integrity Monitoring examines system files and registry settings for changes, and notifies you if something is updated.
-  - Security Center recommends which files you should monitor.
+  - Defender for Cloud recommends which files you should monitor.
 
 **Learn more:**
 
-- Learn more about [Azure Security Center](/azure/security-center/security-center-introduction).
+- Learn more about [Microsoft Defender for Cloud](/azure/security-center/security-center-introduction).
 - Learn more about [just-in-time VM access](/azure/security-center/security-center-just-in-time).
 - Learn about [applying adaptive application controls](/azure/security-center/security-center-adaptive-application).
 - [Get started](/azure/security-center/security-center-file-integrity-monitoring) with File Integrity Monitoring.
@@ -72,7 +72,7 @@ Encryption is an important part of Azure security practices. Ensuring that encry
   - Azure Disk Encryption uses BitLocker for Windows, and dm-crypt for Linux, to provide volume encryption for the operating system and data disks.
   - You can use an encryption key created by Azure, or you can supply your own encryption keys, safeguarded in Azure Key Vault.
   - With Azure Disk Encryption, IaaS VM data is secured at rest (on the disk) and during VM boot.
-    - Security Center alerts you if you have VMs that aren't encrypted.
+    - Defender for Cloud alerts you if you have VMs that aren't encrypted.
 - **Storage:** Protect at-rest data stored in Azure Storage.
   - Data stored in Azure Storage accounts can be encrypted by using Microsoft-generated AES keys that are FIPS 140-2 compliant, or you can use your own keys.
   - Azure Storage encryption is enabled for all new and existing storage accounts, and it can't be disabled.
@@ -104,7 +104,7 @@ In particular, older Azure-migrated VMs might not have the appropriate level of 
 
 - Microsoft Antimalware for Azure Cloud Services and Virtual Machines generates alerts when known malicious or unwanted software tries to install itself.
 - It's a single agent solution that runs in the background without human intervention.
-- In Security Center, you can identify VMs that don't have endpoint protection running and install Microsoft Antimalware as needed.
+- In Defender for Cloud, you can identify VMs that don't have endpoint protection running and install Microsoft Antimalware as needed.
 
   ![Screenshot of Microsoft Antimalware for VMs.](./media/migrate-best-practices-security-management/antimalware.png)
   *Figure 1: Antimalware for VMs.*
@@ -132,7 +132,7 @@ Azure provides the following solutions:
 - **Web Application Firewall:** This is a feature of Azure Application Gateway that provides centralized protection for web apps.
   - It protects web apps without requiring back-end code modifications.
   - It protects multiple web apps at the same time, behind Application Gateway.
-  - You can monitor Web Application Firewall by using Azure Monitor. Web Application Firewall is integrated into Security Center.
+  - You can monitor Web Application Firewall by using Azure Monitor. Web Application Firewall is integrated into Defender for Cloud.
 
   ![Diagram of Azure Key Vault and secure web apps.](./media/migrate-best-practices-security-management/web-apps.png)
   *Figure 2: Azure Key Vault.*
@@ -466,7 +466,7 @@ With diagnostic logging enabled for Azure resources, you can start to use loggin
 **Learn more:**
 
 - Learn about [alerts](/azure/azure-monitor/alerts/alerts-overview).
-- Learn about [security playbooks that respond to Security Center alerts](/azure/security-center/workflow-automation).
+- Learn about [security playbooks that respond to Defender for Cloud alerts](/azure/security-center/workflow-automation).
 
 ## Best practice: Use the Azure dashboard
 

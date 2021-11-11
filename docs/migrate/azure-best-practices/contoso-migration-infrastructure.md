@@ -761,13 +761,13 @@ Security is crucial in the cloud, and Azure provides a wide array of security to
 
 There are a few aspects for Contoso to consider:
 
-- [Azure Security Center](/azure/security-center/security-center-introduction) provides unified security management and Microsoft Defender for Identity across hybrid cloud workloads. Use it to apply security policies across your workloads, limit your exposure to threats, and detect and respond to attacks.
+- [Microsoft Defender for Cloud](/azure/security-center/security-center-introduction) provides unified security management and Microsoft Defender for Identity across hybrid cloud workloads. Use it to apply security policies across your workloads, limit your exposure to threats, and detect and respond to attacks.
 - A [network security group (NSG)](/azure/virtual-network/network-security-groups-overview) filters network traffic based on a list of security rules that allow or deny network traffic to resources connected to virtual networks in Azure.
 - [Azure Disk Encryption](/azure/security/fundamentals/encryption-atrest) is a capability that helps you encrypt your Windows and Linux IaaS VM disks.
 
-### Work with the Azure Security Center
+### Work with the Microsoft Defender for Cloud
 
-Contoso is looking for a quick view into the security posture of its new hybrid cloud, and specifically, its Azure workloads. As a result, Contoso has decided to implement Azure Security Center starting with the following features:
+Contoso is looking for a quick view into the security posture of its new hybrid cloud, and specifically, its Azure workloads. As a result, Contoso has decided to implement Microsoft Defender for Cloud starting with the following features:
 
 - Centralized policy management
 - Continuous assessment
@@ -784,9 +784,9 @@ With centralized policy management, Contoso will ensure compliance with security
 
 Contoso will take advantage of the continuous security assessment that monitors the security of machines, networks, storage, data, and applications to discover potential security issues.
 
-Security Center analyzes the security state of the Contoso compute, infrastructure, and data resources. It also analyzes the security state of Azure apps and services. Continuous assessment helps the Contoso operations team to discover potential security issues, such as systems with missing security updates or exposed network ports.
+Defender for Cloud analyzes the security state of the Contoso compute, infrastructure, and data resources. It also analyzes the security state of Azure apps and services. Continuous assessment helps the Contoso operations team to discover potential security issues, such as systems with missing security updates or exposed network ports.
 
-Contoso wants to make sure all of the VMs are protected. Security Center helps with this. It verifies VM health, and it makes prioritized and actionable recommendations to remediate security vulnerabilities before they're exploited.
+Contoso wants to make sure all of the VMs are protected. Defender for Cloud helps with this. It verifies VM health, and it makes prioritized and actionable recommendations to remediate security vulnerabilities before they're exploited.
 
 ![Screenshot that shows monitoring of virtual machines.](./media/contoso-migration-infrastructure/monitoring.png)
 *Figure 44: Monitoring.*

@@ -28,7 +28,7 @@ Understand [shared responsibility](/azure/security/fundamentals/shared-responsib
 
 ## Antipattern: Assume out-of-the-box solutions provide security
 
-Companies often perceive security as a given in the cloud. Although this assumption is usually correct, most environments also need to adhere to compliance framework requirements, which can differ from security requirements. Azure provides basic security. And, through the [Azure Security Center](/azure/security-center/), the [Azure portal](https://portal.azure.com) provides help with improving security. But, enforcing a compliance and security standard isn't an out-of-the-box experience when you create a subscription.
+Companies often perceive security as a given in the cloud. Although this assumption is usually correct, most environments also need to adhere to compliance framework requirements, which can differ from security requirements. Azure provides basic security. And, through the [Microsoft Defender for Cloud](/azure/security-center/), the [Azure portal](https://portal.azure.com) provides help with improving security. But, enforcing a compliance and security standard isn't an out-of-the-box experience when you create a subscription.
 
 ### Example: Neglect cloud security
 
@@ -40,7 +40,7 @@ Define a proper [cloud security strategy](../strategy/define-security-strategy.m
 
 Read about secure cloud workloads in the [Azure Security Benchmark](/security/benchmark/azure/introduction). Build upon the [CIS Controls v7.1](https://learn.cisecurity.org/cis-controls-download) from the Center for Internet Security, along with [NIST SP800-53](https://www.nist.gov/privacy-framework/nist-sp-800-53) from the National Institute of Standards and Technology, which address most security risks and measures.
 
-Use the Azure Security Center to identify risks, adapt best practices, and improve your company's security posture.
+Use the Microsoft Defender for Cloud to identify risks, adapt best practices, and improve your company's security posture.
 
 Implement or support company-specific, automated compliance and security requirements by using [Azure Policy](/azure/governance/policy/overview) and [Azure Blueprints](/azure/governance/blueprints/overview).
 

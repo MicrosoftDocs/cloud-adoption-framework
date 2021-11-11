@@ -39,7 +39,7 @@ The components deployed and their purpose include the following:
 | Activity logging | Auditing all subscription activities and archiving: <li> Storage account <li> Azure Event Hubs |
 | Diagnostics logging | All operation logs kept for a specific number of days: <li> Storage account <li> Event Hubs |
 | Log Analytics | Stores the operation logs. Deploy common solutions for deep application best practices review: <li> `NetworkMonitoring` <li> `AdAssessment` <li> `AdReplication` <li> `AgentHealthAssessment` <li> `DnsAnalytics` <li> `KeyVaultAnalytics` |
-| Azure Security Center | Security hygiene metrics and alerts sent to email and phone number |
+| Microsoft Defender for Cloud | Security hygiene metrics and alerts sent to email and phone number |
 
 ## Use this blueprint
 
@@ -178,10 +178,11 @@ solution_plan_map = {
 
 ```
 
-Next, we configured the alert parameters for Azure Security Center.
+Next, we configured the alert parameters for Microsoft Defender for Cloud.
 
 ```hcl
 # Azure Security Center Configuration
+
 security_center = {
     contact_email   = "joe@contoso.com"
     contact_phone   = "+6500000000"

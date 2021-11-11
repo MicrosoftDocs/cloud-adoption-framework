@@ -44,21 +44,21 @@ The **Microsoft Service Trust Portal** provides in-depth information and tools t
 
 ## Unique intelligent insights
 
-As the volume and complexity of security signals grow, determining if those signals are credible threats, and then acting, takes far too long. Microsoft offers an unparalleled breadth of security intelligence delivered at cloud scale to help quickly detect and remediate threats. For more information, see the [Azure Security Center overview](/azure/security-center/security-center-introduction).
+As the volume and complexity of security signals grow, determining if those signals are credible threats, and then acting, takes far too long. Microsoft offers an unparalleled breadth of security intelligence delivered at cloud scale to help quickly detect and remediate threats. For more information, see the [Microsoft Defender for Cloud overview](/azure/security-center/security-center-introduction).
 
 ## Azure threat intelligence
 
-By using the threat intelligence option available in Security Center, IT administrators can identify security threats against the environment. For example, they can identify whether a particular computer is part of a botnet. Computers can become nodes in a botnet when attackers illicitly install malware that secretly connects the computer to the command and control. Threat intelligence can also identify potential threats coming from underground communication channels, such as the dark web.
+By using the threat intelligence option available in Defender for Cloud, IT administrators can identify security threats against the environment. For example, they can identify whether a particular computer is part of a botnet. Computers can become nodes in a botnet when attackers illicitly install malware that secretly connects the computer to the command and control. Threat intelligence can also identify potential threats coming from underground communication channels, such as the dark web.
 
-To build this threat intelligence, Security Center uses data from multiple sources within Microsoft. Security Center uses this data to identify potential threats against your environment. The threat intelligence pane is composed of three major options:
+To build this threat intelligence, Defender for Cloud uses data from multiple sources within Microsoft. Defender for Cloud uses this data to identify potential threats against your environment. The threat intelligence pane is composed of three major options:
 
 - Detected threat types
 - Threat origin
 - Threat intelligence map
 
-## Machine learning in Azure Security Center
+## Machine learning in Microsoft Defender for Cloud
 
-Azure Security Center deeply analyzes a wealth of data from a variety of Microsoft and partner solutions to help you achieve greater security. To take advantage of this data, the company use data science and machine learning for threat prevention, detection, and eventually investigation.
+Microsoft Defender for Cloud deeply analyzes a wealth of data from a variety of Microsoft and partner solutions to help you achieve greater security. To take advantage of this data, the company use data science and machine learning for threat prevention, detection, and eventually investigation.
 
 Broadly, Azure Machine Learning helps achieve two outcomes:
 
@@ -72,4 +72,4 @@ Making effective security decisions is not easy. It requires security experience
 
 ## Behavioral analytics
 
-Behavioral analytics is a technique that analyzes and compares data to a collection of known patterns. These patterns are not simple signatures. They're determined through complex machine learning algorithms that are applied to massive data sets. They're also determined through careful analysis of malicious behaviors by expert analysts. Azure Security Center can use behavioral analytics to identify compromised resources based on analysis of virtual machine logs, virtual network device logs, fabric logs, crash dumps, and other sources.
+Behavioral analytics is a technique that analyzes and compares data to a collection of known patterns. These patterns are not simple signatures. They're determined through complex machine learning algorithms that are applied to massive data sets. They're also determined through careful analysis of malicious behaviors by expert analysts. Microsoft Defender for Cloud can use behavioral analytics to identify compromised resources based on analysis of virtual machine logs, virtual network device logs, fabric logs, crash dumps, and other sources.
