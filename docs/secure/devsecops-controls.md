@@ -2,7 +2,7 @@
 title: DevSecOps controls
 description: Learn about DevSecOps controls and how to apply them.
 author: texnokot
-ms.author: vialmazo
+ms.author: brblanch
 ms.date: 04/04/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

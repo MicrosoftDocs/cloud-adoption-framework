@@ -24,7 +24,7 @@ After you've onboarded Azure server management services, you'll need to focus on
 
 Microsoft Defender for Cloud is the central place to manage security for your environment. You'll see an overall assessment and targeted recommendations.
 
-We recommend that you review and implement the recommendations provided by this service. For information about additional benefits of Microsoft Defender for Cloud, see [Follow Microsoft Defender for Cloud recommendations](../../migrate/azure-best-practices/migrate-best-practices-security-management.md#best-practice-follow-azure-security-center-recommendations).
+We recommend that you review and implement the recommendations provided by this service. For information about additional benefits of Microsoft Defender for Cloud, see [Follow Microsoft Defender for Cloud recommendations](../../migrate/azure-best-practices/migrate-best-practices-security-management.md#best-practice-microsoft-defender-for-cloud-recommendations).
 
 ## Next steps
 

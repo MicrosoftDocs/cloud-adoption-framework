@@ -29,7 +29,7 @@ Migration services can help you migrate your workloads into Azure. To provide th
 
 ## Secure
 
-[Microsoft Defender for Cloud](/azure/security-center/security-center-introduction) is a comprehensive security management application. By onboarding to Defender for Cloud, you can quickly get an assessment of the security and regulatory compliance status of your environment. For instructions on onboarding your servers to Defender for Cloud, see [Configure Azure management services for a subscription](./onboard-at-scale.md#azure-security-center).
+[Microsoft Defender for Cloud](/azure/security-center/security-center-introduction) is a comprehensive security management application. By onboarding to Defender for Cloud, you can quickly get an assessment of the security and regulatory compliance status of your environment. For instructions on onboarding your servers to Defender for Cloud, see [Configure Azure management services for a subscription](./onboard-at-scale.md#microsoft-defender-for-cloud).
 
 ## Protect
 
