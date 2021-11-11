@@ -40,7 +40,7 @@ Some examples of policy-driven governance are:
 
 - `Deny` effect: Prevents subnets from being created or updated to have no Network Security Groups associated with them.
 
-- `DeployIfNotExists` effect: A new subscription (landing zone) is created and placed into a management group within your enterprise-scale deployment. Azure Policy ensures that Microsoft Defender for Cloud (previously known as Microsoft Defender for Cloud Standard) is enabled on the subscription. It also configures the diagnostic settings for Activity Log to send logs to the Log Analytics workspace in the Management subscription.
+- `DeployIfNotExists` effect: A new subscription (landing zone) is created and placed into a management group within your enterprise-scale deployment. Azure Policy ensures that Microsoft Defender for Cloud (formerly known as Azure Security Center) is enabled on the subscription. It also configures the diagnostic settings for Activity Log to send logs to the Log Analytics workspace in the Management subscription.
 
   Instead of repeating code or manual activities when a new subscription is created, the `DeployIfNotExists` policy definition automatically deploys and configures them for you.
 

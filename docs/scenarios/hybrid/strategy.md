@@ -136,7 +136,7 @@ Easily adopt DevOps techniques like IaC. Empower developers with self-service ac
 
 ### Easily implement Azure security anywhere
 
-Access Microsoft Defender for Cloud's system of unified infrastructure security management. Strengthen your security posture with advanced threat protection across hybrid workloads in the cloud, no matter whether in Azure, multicloud, or on-premises environments. Centrally access and manage all resources with Azure role-based access control (RBAC). Centrally manage and enforce policy compliance, and simplify audit reporting with Azure Policy.
+Access the system of unified infrastructure security management available in Microsoft Defender for Cloud. Strengthen your security posture with advanced threat protection across hybrid workloads in the cloud, no matter whether in Azure, multicloud, or on-premises environments. Centrally access and manage all resources with Azure role-based access control (RBAC). Centrally manage and enforce policy compliance, and simplify audit reporting with Azure Policy.
 
 ### Governance and configuration of resources anywhere
 

@@ -17,8 +17,8 @@ This article provides guidance on how to onboard an Azure Arc-enabled server to 
 In the following procedures, you enable and configure Microsoft Defender for Cloud Standard tier on your Azure subscription. This provides advanced threat protection and detection capabilities. The process includes:
 
 - Setup a Log Analytics workspace where logs and events are aggregated for analysis.
-- Assign Defender for Cloud's default security policies.
-- Review Microsoft Defender for Cloud's recommendations.
+- Assign Defender for Cloud default security policies.
+- Review Defender for Cloud recommendations.
 - Apply recommended configurations on Azure Arc-enabled servers using the **Quick Fix** remediations.
 
 > [!IMPORTANT]
@@ -81,7 +81,7 @@ In the following procedures, you enable and configure Microsoft Defender for Clo
 
 ## Onboard Microsoft Defender for Cloud
 
-1. Data collected by Microsoft Defender for Cloud is stored in a Log Analytics workspace. You can either use the default one created by Microsoft Defender for Cloud or a custom one created by you. If you want to create a dedicated workspace, you can automate the deployment by editing the Azure Resource Manager template (ARM template) [parameters file](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/securitycenter/arm/log_analytics-template.parameters.json), provide a name and location for your workspace:
+1. Data collected by Microsoft Defender for Cloud is stored in a Log Analytics workspace. You can either use the default one created by Defender for Cloud or a custom one created by you. If you want to create a dedicated workspace, you can automate the deployment by editing the Azure Resource Manager template (ARM template) [parameters file](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/securitycenter/arm/log_analytics-template.parameters.json), provide a name and location for your workspace:
 
    ![A screenshot of an ARM template.](./media/arc-security-center/arm-template.png)
 
@@ -106,7 +106,7 @@ In the following procedures, you enable and configure Microsoft Defender for Clo
     az security pricing create -n VirtualMachines --tier 'standard'
     ```
 
-5. Assign the default Defender for Cloud policy initiative. Microsoft Defender for Cloud makes its security recommendations based on policies. There is a specific initiative that groups Defender for Cloud policies with the definition ID `1f3afdf9-d0c9-4c3d-847f-89da613e70a8`. The following command will assign the Defender for Cloud initiative to your subscription.
+5. Assign the default Microsoft Defender for Cloud policy initiative. Defender for Cloud makes its security recommendations based on policies. There is a specific initiative that groups Defender for Cloud policies with the definition ID `1f3afdf9-d0c9-4c3d-847f-89da613e70a8`. The following command will assign the Defender for Cloud initiative to your subscription.
 
     ```console
     az policy assignment create --name 'Azure Security Center Default <Your subscription ID>' \
@@ -116,7 +116,7 @@ In the following procedures, you enable and configure Microsoft Defender for Clo
 
 ## Azure Arc and Microsoft Defender for Cloud integration
 
-After you successfully onboard Microsoft Defender for Cloud, you'll get recommendations to help you protect your resources, including your Azure Arc-enabled servers. Microsoft Defender for Cloud will periodically analyze the security state of your Azure resources to identify potential security vulnerabilities.
+After you successfully onboard Microsoft Defender for Cloud, you'll get recommendations to help you protect your resources, including your Azure Arc-enabled servers. Defender for Cloud will periodically analyze the security state of your Azure resources to identify potential security vulnerabilities.
 
 In the **Compute & Apps** section under **VM & Servers**, Microsoft Defender for Cloud provides an overview of all the discovered security recommendations for your VMs and computers, including Azure VMs, Azure classic VMs, servers, and Azure Arc machines.
 

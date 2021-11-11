@@ -136,7 +136,7 @@ In prior iterative changes to the best practice, we defined network security gro
     1. Configure Microsoft Defender for Cloud for any management group that contains protected data classifications.
     2. Set automatic provisioning to on by default to ensure patching compliance.
     3. Establish OS security configurations. IT security to define the configuration.
-    4. Support IT security in the initial use of Microsoft Defender for Cloud. Transition use of Defender for Cloud to IT security, but maintain access for governance continuous improvement purposes.
+    4. Support IT security in the initial use of Defender for Cloud. Transition use of Defender for Cloud to IT security, but maintain access for governance continuous improvement purposes.
     5. Create a Resource Manager template reflecting the changes required for Microsoft Defender for Cloud configuration within a subscription.
 4. Update Azure Policy for all subscriptions.
     1. Audit and enforce criticality and data classification across all management groups and subscriptions to identify any subscriptions with protected data classifications.

@@ -143,11 +143,11 @@ Microsoft Defender for Cloud plays an important part in your governance strategy
 Many security features, like security policy and recommendations, are available for free. Some of the more advanced features, like just-in-time VM access and hybrid workload support, are available under the Defender for Cloud Standard tier. Just-in-time VM access can help reduce the network attack surface by controlling access to management ports on Azure VMs.
 
 > [!TIP]
-> Microsoft Defender for Cloud is enabled by default in each subscription. We recommend that you enable data collection from virtual machines to allow Microsoft Defender for Cloud to install its agent and begin gathering data.
+> Defender for Cloud is enabled by default in each subscription. We recommend that you enable data collection from virtual machines to allow Defender for Cloud to install its agent and begin gathering data.
 
 ::: zone target="docs"
 
-To explore Microsoft Defender for Cloud, go to the [Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/SecurityMenuBlade/0).
+To explore Defender for Cloud, go to the [Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/SecurityMenuBlade/0).
 
 ### Learn more
 

@@ -80,7 +80,7 @@ The following procedures will enable and configure Microsoft Sentinel on your Az
 
 ## Onboard Microsoft Sentinel
 
-Microsoft Sentinel uses the Log Analytics agent to collect log files for Windows and Linux servers and forward them to Microsoft Sentinel. The data collected is stored in a Log Analytics workspace. Since you can't use the default workspace created by Microsoft Defender for Cloud a custom one is required. You could have raw events and alerts for Microsoft Defender for Cloud within the same custom workspace as Microsoft Sentinel.
+Microsoft Sentinel uses the Log Analytics agent to collect log files for Windows and Linux servers and forward them to Microsoft Sentinel. The data collected is stored in a Log Analytics workspace. Since you can't use the default workspace created by Microsoft Defender for Cloud a custom one is required. You could have raw events and alerts for Defender for Cloud within the same custom workspace as Microsoft Sentinel.
 
 1. Create a dedicated Log Analytics workspace and enable the Microsoft Sentinel solution on the top of it. Use this [Azure Resource Manager template (ARM template)](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/azuresentinel/arm/sentinel-template.json) to create a new Log Analytics workspace, define the Microsoft Sentinel solution, and enable it for the workspace. To automate the deployment you can edit the ARM template [parameters file](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/azuresentinel/arm/sentinel-template.parameters.json), provide a name and location for your workspace.
 

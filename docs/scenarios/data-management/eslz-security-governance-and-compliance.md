@@ -51,7 +51,7 @@ To control and manage disk encryption keys and secrets for enterprise-scale for 
 
 Microsoft Defender for Cloud provides security alerts and advanced threat protection for virtual machines, SQL databases, containers, web applications, virtual networks, and more.
 
-When you enable Microsoft Defender for Cloud from the pricing and settings area of Microsoft Defender for Cloud, the following Microsoft Defender plans are enabled simultaneously and provide comprehensive defenses for the compute, data, and service layers of your environment:
+When you enable Defender for Cloud from the pricing and settings area, the following Microsoft Defender plans are enabled simultaneously and provide comprehensive defenses for the compute, data, and service layers of your environment:
 
 - [Microsoft Defender for servers](/azure/security-center/defender-for-servers-introduction?branch=master)
 - [Microsoft Defender for App Service](/azure/security-center/defender-for-app-service-introduction)
@@ -66,7 +66,7 @@ When you enable Microsoft Defender for Cloud from the pricing and settings area 
 These plans are explained separately in the Defender for Cloud documentation.
 
 > [!IMPORTANT]
-> Where Microsoft Defender for Cloud is available for platform as a service (PaaS) offerings, you should enable this feature by default, especially for Azure Data Lake Storage accounts. For more information, see [Introduction to Microsoft Defender for Cloud](/azure/security-center/azure-defender) and [configure Microsoft Defender for Storage](/azure/storage/common/azure-defender-storage-configure?tabs=azure-security-center).
+> Where Defender for Cloud is available for platform as a service (PaaS) offerings, you should enable this feature by default, especially for Azure Data Lake Storage accounts. For more information, see [Introduction to Microsoft Defender for Cloud](/azure/security-center/azure-defender) and [configure Microsoft Defender for Storage](/azure/storage/common/azure-defender-storage-configure?tabs=azure-security-center).
 
 ### Microsoft Defender for Identity
 

@@ -186,9 +186,9 @@ One of the biggest blockers to cloud adoption traditionally has been concerns ov
 
 ### Microsoft Defender for Cloud
 
-The [Microsoft Defender for Cloud](/azure/security-center/security-center-introduction) provides a unified view of the security status of resources across your environment in addition to advanced threat protection. Microsoft Defender for Cloud is an open platform that enables Microsoft partners to create software that plugs into and enhance its capabilities. The baseline capabilities of the Free tier of Microsoft Defender for Cloud provide assessment and recommendations that enhance your security posture. Its paid tiers enable additional and valuable capabilities such as just-in-time privileged access and adaptive application controls (allow lists).
+[Microsoft Defender for Cloud](/azure/security-center/security-center-introduction) provides a unified view of the security status of resources across your environment in addition to advanced threat protection. Defender for Cloud is an open platform that enables Microsoft partners to create software that plugs into and enhance its capabilities. The baseline capabilities of the Free tier of Defender for Cloud provide assessment and recommendations that enhance your security posture. Its paid tiers enable additional and valuable capabilities such as just-in-time privileged access and adaptive application controls (allow lists).
 > [!TIP]
-> Microsoft Defender for Cloud is a powerful tool that is regularly improved with new capabilities you can use to detect threats and protect your enterprise. It's highly recommended to always enable Microsoft Defender for Cloud.
+> Defender for Cloud is a powerful tool that is regularly improved with new capabilities you can use to detect threats and protect your enterprise. It's highly recommended to always enable Defender for Cloud.
 
 ### Locks for Azure resources
 
