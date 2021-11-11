@@ -374,7 +374,7 @@ items:
               href: ready/considerations/landing-zone-security.md
             - name: Onboard a subscription to Microsoft Defender for Cloud
               href: /azure/security-center/security-center-get-started?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Onboard Microsoft Sentinel
+            - name: Onboard to Microsoft Sentinel
               href: /azure/sentinel/quickstart-onboard?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Implementing a secure hybrid network architecture in Azure
               href: /azure/architecture/reference-architectures/dmz/secure-vnet-dmz?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json

@@ -18,7 +18,7 @@ The following procedures will enable and configure Microsoft Sentinel on your Az
 
 - Setting up a Log Analytics workspace where logs and events are aggregated for analysis and correlation.
 - Enabling Microsoft Sentinel on the workspace.
-- Onboarding Azure Arc-enabled servers on Microsoft Sentinel using the extension management feature and Azure Policy.
+- Onboarding Azure Arc-enabled servers to Microsoft Sentinel using the extension management feature and Azure Policy.
 
 > [!IMPORTANT]
 > The procedures in this article assumes you've already deployed VMs, or servers that are running on-premises or on other clouds, and you have connected them to Azure Arc. If you haven't, the following information can help you automate this.
@@ -78,7 +78,7 @@ The following procedures will enable and configure Microsoft Sentinel on your Az
 > [!NOTE]
 > We highly recommend that you scope the service principal to a specific [Azure subscription and resource group](/cli/azure/ad/sp).
 
-## Onboard Microsoft Sentinel
+## Onboard to Microsoft Sentinel
 
 Microsoft Sentinel uses the Log Analytics agent to collect log files for Windows and Linux servers and forward them to Microsoft Sentinel. The data collected is stored in a Log Analytics workspace. Since you can't use the default workspace created by Microsoft Defender for Cloud a custom one is required. You could have raw events and alerts for Defender for Cloud within the same custom workspace as Microsoft Sentinel.
 
@@ -98,7 +98,7 @@ For example:
 
    ![A screenshot of the `az deployment group create` command.](./media/arc-azure-sentinel/sentinel-4.png)
 
-## Onboard Azure Arc-enabled VMs on Microsoft Sentinel
+## Onboard Azure Arc-enabled VMs to Microsoft Sentinel
 
 After you've deployed Microsoft Sentinel to your Log Analytics workspace, you need to connect data sources to it.
 
