@@ -16,7 +16,14 @@ In the [Observability](observability.md) we discussed the five disciplines of mo
 
 As part of monitoring, alerting was an action resulting from a detected condition, such as a node in the cluster is down, a database for an application is full, or an application process is consuming too many CPU cycles for an indefinite period. Based on defined escalation paths and the severity/impact of the condition, the alert would create an incident record in an ITSM system or send an e-mail notification to the operations or engineering team depending on your escalation path. We consider this approach outdated and not in alignment with modern service management or cloud operations recommended practices.
 
-There are other responsive actions that can be used instead of following the traditional path, where an operator is alerted quickly when any component in the infrastructure or application is considered unhealthy. Orchestration should be the next step depending on the situation. Because many cloud resources at the infrastructure, platform, and software-layers are managed by the cloud provider and can’t be controlled by the customer. You are dependent on the cloud provider.
+There are other responsive actions that can be used instead of following this traditional path. Under certain circumstances, some alerts can be informational to inform you that:
+
+* A VM was automatically shutdown to minimize waste and control costs based on a schedule or low utilization detected.
+* IaaS or PaaS resources are idle for a long period of time or not provisioned based on Azure Advisor recommendations.
+
+In the first example, orchestration was used as a result of detecting the condition and then informing you that the action was performed and why. In the second example, orchestration can be used, based on business logic or ITSM process workflow, to manage those infrastructure-related activities. 
+
+Orchestration should be the next step depending on the situation. Because many cloud resources at the infrastructure, platform, and software-layers are managed by the cloud provider and can’t be controlled by the customer, you are dependent on the cloud provider.
 
 ## Successful alerting strategy
 
