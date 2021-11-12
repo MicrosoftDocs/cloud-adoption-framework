@@ -9,22 +9,9 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: think-tank
 ---
+# Adopting policy driven guardrails
 
-# What if we cannot or are not yet ready to utilize DeployIfNotExists (DINE) policies?
-
-Whilst the Azure landing zones reference implementations utilize [`DeployIfNotExists` (DINE)](/azure/governance/policy/concepts/effects#deployifnotexists) Azure policies to help you achieve policy-driven governance within your Azure environment, we understand that you may not be able to use DINE policies or are not yet ready on your cloud adoption journey to enable this type of [Azure Policy effect](/azure/governance/policy/concepts/effects).
-
-This may be due to number of reasons, such as:
-
-- Regulatory compliance policies, standards, or law restrictions
-- Strict change control processes that require human approval for every action within your Azure environment
-- Lack of expertise, experience, and understanding of how to manage and use DINE policies
-
-If you fit into the above example scenarios or similar, this document will help you to understand how to adopt the [Azure landing zone conceptual architecture](/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-conceptual-architecture), alongside its [design principles](/azure/cloud-adoption-framework/ready/enterprise-scale/design-principles), whilst not utilizing DINE policies, initially (can optionally choose to gradually enable in the future), that help you achieve [policy-driven governance](/azure/cloud-adoption-framework/ready/enterprise-scale/design-principles#policy-driven-governance).
-
-## DeployIfNotExists policy usage in the Azure Landing Zone
-
-Before diving into the steps you can take to avoid or gradually approach the usage of DINE policies, it is important to first understand what and where they are used within the Azure landing zone reference implementations and why. This will then help you to understand whether you want to completely prevent DINE policies from making changes within your Azure environment or not.
+Before diving into the steps you can take to gradually adopt the usage of policies, it is important to first understand what and where they are used within the Azure landing zone reference implementations and why. This will then help you to understand whether you want to completely prevent `DeployIfNotExists` (DINE) or `Modify` policies from making changes within your Azure environment or not.
 
 ### Why?
 
@@ -48,10 +35,18 @@ DINE policies will then do the following to the landing zone subscription:
 
 All the DINE policies assigned are there to assist you and the landing zone owners to remain compliant, no actual workload resources are deployed via DINE policies (we do not recommend this either as per: [Should we use Azure Policy to deploy workloads?](/azure/cloud-adoption-framework/ready/enterprise-scale/faq#should-we-use-azure-policy-to-deploy-workloads)) only auxiliary or supporting resources or settings are deployed or configured by these DINE policies.
 
-## How to prevent DINE or Modify policies from making automatic changes to your Azure environment?
+Whilst the Azure landing zones reference implementations utilize [`DeployIfNotExists` (DINE)](/azure/governance/policy/concepts/effects#deployifnotexists) Azure policies to help you achieve policy-driven governance within your Azure environment, we understand that you may not be able to use DINE policies or are not yet ready on your cloud adoption journey to enable this type of [Azure Policy effect](/azure/governance/policy/concepts/effects).
+
+This may be due to number of reasons, such as:
+
+- Regulatory compliance policies, standards, or law restrictions
+- Strict change control processes that require human approval for every action within your Azure environment
+- Lack of expertise, experience, and understanding of how to manage and use DINE policies
+
+If you fit into the above example scenarios or similar, this document will help you to understand how to adopt the [Azure landing zone conceptual architecture](/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-conceptual-architecture), alongside its [design principles](/azure/cloud-adoption-framework/ready/enterprise-scale/design-principles), whilst not utilizing DINE policies, initially (can optionally choose to gradually enable in the future), that help you achieve [policy-driven governance](/azure/cloud-adoption-framework/ready/enterprise-scale/design-principles#policy-driven-governance).
 
 >[!IMPORTANT]
-> Throughout the below guidance you will see reference to the "Enforcement Mode" feature being set to either of the 2 below values in either of the terms listed for them:
+> Throughout the below guidance you will see reference to the "Enforcement Mode" feature being set with two possible values in either of the terms listed for them:
 >  
 > - `Disabled` or `DoNotEnforce`
 > - `Enabled` or `Default`
