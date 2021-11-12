@@ -23,7 +23,7 @@ Azure Arc-enabled servers provide two types of services:
    - Searching and indexing through Azure Resource Graph.
    - Access control through Azure role-based access control (RBAC) at subscription or resource group level.
    - Environments and automation through templates and extensions.
-   - Azure Update Management
+   - Azure Automation Update Management
 
 2. **Azure services used in conjunction to Azure Arc-enabled servers** (but not limited to), which incur costs according to their usage includes:
    - Azure Monitor
