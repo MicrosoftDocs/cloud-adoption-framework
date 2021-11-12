@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: think-tank
 ---
-# Policy driven guardrails
+# Adopting policy driven guardrails
 
 Before diving into the steps you can take to avoid or gradually approach the usage of DeployIfNotExists (DINE) policies, it is important to first understand what and where they are used within the Azure landing zone reference implementations and why. This will then help you to understand whether you want to completely prevent DINE policies from making changes within your Azure environment or not.
 
