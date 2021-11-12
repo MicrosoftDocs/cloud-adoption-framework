@@ -3,7 +3,7 @@ title: Cloud monitoring and response
 description: Gain an understanding of the response discipline in observability and recommended approaches to acting on significant events detected.
 author: MGoedtel
 ms.author: brblanch
-ms.date: 10/28/2021
+ms.date: 11/11/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: manage
@@ -14,9 +14,9 @@ ms.custom: think-tank
 
 In the [Observability](observability.md) we discussed the five disciplines of monitoring, and in this article we focus on the response discipline. Response is the result of defining one or more actions based on data-driven decisions by observing the monitoring data.  An alert triggering a notification or incident record used to be the primary outcome or action when your monitoring tool detected an issue or change that could potentially cause a system outages or significant incident. Escalating an alert isn’t important to observability, and today it shouldn’t be considered the first line of defense.
 
-As part of monitoring, alerting was an action resulting from a detected condition, such as a node in the cluster is down, a database for an application is full, or an application process is consuming too many CPU cycles for an indefinite period. Based on defined escalation paths and the severity/impact of the condition, the alert would create an incident record in an ITSM system or send an e-mail notification to the operations team. Today we consider this approach outdated and not in alignment with modern service management or cloud operations practices.
+As part of monitoring, alerting was an action resulting from a detected condition, such as a node in the cluster is down, a database for an application is full, or an application process is consuming too many CPU cycles for an indefinite period. Based on defined escalation paths and the severity/impact of the condition, the alert would create an incident record in an ITSM system or send an e-mail notification to the operations team. We consider this approach outdated and not in alignment with modern service management or cloud operations recommended practices.
 
-There are new responsive actions that can be used to remove the human element out of the loop, where orchestration should be the next step depending on the situation. Because many cloud resources at the infrastructure, platform, and software-layers are managed by the cloud provider and can’t be controlled by the customer, you are dependent on the cloud provider. This requires configuring service health alerts
+There are other responsive actions that can be used instead of following the traditional path, where an operator is alerted quickly when any component in the infrastructure or application is considered unhealthy. Orchestration should be the next step depending on the situation. Because many cloud resources at the infrastructure, platform, and software-layers are managed by the cloud provider and can’t be controlled by the customer. You are dependent on the cloud provider. 
 
 ## Successful alerting strategy
 
