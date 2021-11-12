@@ -1,9 +1,9 @@
 ---
-title: What if we cannot or are not yet ready to utilize DeployIfNotExists (DINE) policies?
-description: Understand how to handle DeployIfNotExists policies in the Azure Landing Zone if you are unable to enable them.
+title: Adopting policy driven guardrails
+description: Understand how to adopt policy driven guardrails in the Azure Landing Zone
 author: jtracey93
 ms.author: jatracey
-ms.date: 11/01/2021
+ms.date: 12/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
