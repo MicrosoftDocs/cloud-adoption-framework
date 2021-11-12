@@ -64,7 +64,7 @@ Our approach layers real-time IoT insights on a unified view of retail data.
   - Route planning and scheduling
   - Demand forecasting
 
-### Supply chain optimization success stories
+### Supply chain optimization stories
 
 Learn how [Anheuser-Busch InBev](https://customers.microsoft.com/story/ab-inbev-consumer-goods-azure) brewed up business solutions with Microsoft Azure.
 

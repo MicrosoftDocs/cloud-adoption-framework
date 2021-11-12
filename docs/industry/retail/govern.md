@@ -18,7 +18,7 @@ Use the [Cloud Adoption Framework methodology](../../govern/index.md) to systema
 
 When developing your cloud governance strategy, start out by following the approach in the standard methodology.
 
-# The challenges of good data governance
+## The challenges of good data governance
 
 Retailers are facing challenges tied to how data is stored, analyzed, managed, and governed. Unlocking the necessary business value to differentiate and grow in an increasingly competitive digital ecosystem means that retailers will face challenges. Along with generating insights at scale from disparate datasets—ensuring data storage, data sharing, and data integrity across silod systems, maintaining a culture built upon the strategic management of business data, and a unified practice of foundational governance, compliance, and security.
 

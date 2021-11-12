@@ -16,7 +16,7 @@ Industry priority scenarios aim to unlock the highest level of your digital reta
 
 - ensures data is only visible to the entities that require it
 - natively manages read/write privileges
-- allows for rapid, secure deployment of solutions.
+- allows for rapid, secure deployment of solutions
 
 Implementing industry priority scenarios (IPS), you can harmonize your loosely coupled datasets, and implement a master data management (MDM) program to realize targeted, successful business outcomes.
 
@@ -29,16 +29,13 @@ There are four industry priority scenarios within the retail industry:
 - Deliver resilient supply chain
 - Reimagine retail
 
-|Industry priority scenario (IPS)|Know your customers|Empower your employees|Deliver resilient supply chain|Reimagine retail|
+|Industry priority scenario|Know your customers|Empower your employees|Deliver resilient supply chain|Reimagine retail|
 |--------------------------------|---------|----------------------|------------------------------|----------------|
 ||                    Create digital experiences,and use AI and predictive analytics to anticipate evolving customer needs and deliver individualized interactions across channels|Enable secure digital collaboration across your business and reduce costs|Gain visibility across your end-to-end supply chain using technology solutions|Create innovative customer experiences, optimize in-store operations, and use technology to evolve products, services, and business models|
 
-Microsoft is addressing existing challenges in the retail sector to unlock Intelligent retail—the highest stage of digital retail maturity in the cloud by:
+Microsoft is addressing existing challenges in the today's competitive retail sector—moving the industry forward with cloud technologies that enable your organization to better engage your customer across the entire supply chain.
 
-- [anticipating evolving customer needs](..\retail\retail-personalization.md) and [delivering individualized interactions across channels](..\retail\retail-omnichannel-optimization.md)
-- enabling secure digital collaboration across your organization and reducing your costs
-- [gaining end-to-end supply chain visibility](..\retail\retail-supply-chain-optimization.md) with technology solutions
-- [deploying technologies to modernize products, services, and business models](..\retail\retail-building-management-optimization.md)
+Move your company towards Intelligent retail—the highest stage of digital retail maturity in the cloud to—[anticipate your evolving customer needs](../retail/retail-personalization.md##personalization-success-stories) and [deliver individualized interactions across your channels](../retail/retail-omnichannel-optimization.md###omnichannel-success-stories)—[gain a unified view of your invoice, revenue, and user behavior data analytics and identify revenue growth trajectories](../retail/retail-modern-finance-solution-accelerator.md##modern-finance-story)—[gain end-to-end visibility across your supply chain with technology solutions](..\retail\retail-supply-chain-optimization.md###supply-chain-optimization-stories)—and [deploy technologies to modernize products, services, and business models](..\retail\retail-building-management-optimization.md###building-management-optimization-success-stories).
 
 ## Know your customers
 

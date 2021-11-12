@@ -32,10 +32,9 @@ Let's look at the Modern Finance Solution Accelerator through 4 pillars:
 1. Business process automation – enabling greater efficiency through chat bots and automated workflows
 1. Risk and compliance – harnessing technology to mitigate and proactively control risk
 
-Customer Story
-Chipotle is a fast-casual Mexican grill with over 64k+ employees and an extremely broad customer base that purchases food both in person (at the restaurant) and through online channels. In addition, many of the guests aren’t known, making it difficult to provide personalized offers and campaigns that deepen relationships. Chipotle used Azure Machine Learning to unify customer profiles and integrate multiple data sources with digital advertising channels. Chipotle has been able to enrich customer profiles with demographics and preference across multiple data platforms. Chipotle uses fresh insights to drive a personalized digital advertising experience for known and unknown customers, grow digital orders, and increase customer loyalty. 
+## Modern finance story
 
-Read the full [Chipotle customer story](https://customers.microsoft.com/story/849868-chipotle-retailers-dynamics-365)
+Chipotle used Azure Machine Learning to unify customer profiles and integrate multiple data sources with digital advertising channels. Chipotle has been able to enrich customer profiles with demographics and preference across multiple data platforms. Chipotle is using these insights to drive a personalized digital advertising experience for known and unknown customers, grow digital orders, and increase customer loyalty. Read the full [Chipotle customer story](https://customers.microsoft.com/story/849868-chipotle-retailers-dynamics-365)
 
 ## Modern Finance Solution Accelerator overview
 
@@ -45,37 +44,45 @@ The Modern Finance Solution Accelerator gathers data from Azure Synapse Analytic
 
 ## Identity top factors for your revenue growth
 
-- Unite silod departments by eliminating restricted data flow—and deliver faster customer demand responses for rapid fulfillment, flexible delivery, and easy returns
+- Unite siloed departments by eliminating restricted data flow—and deliver faster customer demand responses for rapid fulfillment, flexible delivery, and easy returns
 - Launch your solution and reach your business outcomes in weeks from ready-to-deploy, custom-built code and GitHub architectures
 
-Built on Azure Synapse Analytics and Azure Machine learning, the Modern Finance Solution Accelerator has prerequisites:
+### Modern Finance Solution Accelerator technical overview
 
-1. Access to an Azure subscription
-2. PowerBI pro license (or free trial)
+Modern Finance Solution Accelerator [GitHub repository](https://github.com/microsoft/Azure-Synapse-Solution-Accelerator-Financial-Analytics-Customer-Revenue-Growth-Factor)
+
+The Modern Finance Solution Accelerator is built on Azure Synapse Analytics and Azure Machine learning—with these prerequisites:
+
+1. Access to an Azure subscription.
+2. Power BI pro license (or free trial).
 3. Knowledge of Azure, Azure Synapse Analytics, Azure Machine Learning Services, and Power BI.
 
 The following technologies will be used in this solution accelerator:
 
-- Azure Data Lake Storage Account <link to each tech>
-- Azure Synapse Analytics <link to each tech>
-- Spark Pool <link to each tech>
-- Azure Machine Learning Service <link to each tech>
-- Azure Storage Account <link to each tech>
-- Azure Key Vault <link to each tech>
-- Azure Application Insights <link to each tech>
+- Azure Data Lake Storage Account
+- Azure Synapse Analytics
+- Spark Pool
+- Azure Machine Learning Service
+- Azure Storage Account
+- Azure Key Vault
+- Azure Application Insights
 
-Link to the Solution Accelerator repo: https://github.com/microsoft/Azure-Synapse-Solution-Accelerator-Financial-Analytics-Customer-Revenue-Growth-Factor 
+## Get started with deployment
 
-## Get started deploying the Modern Finance Solution Accelerator
-
-Here is a high-level view of the two architectures:
+The Modern Finance Solution Accelerator was built to provide developers with the required resources to build a solution to identify the top factors for revenue growth from an e-commerce platform using Azure Synapse Analytics and Azure Machine Learning. Here are architecture diagrams that provide a high-level overview of what you will be building for this Solution Accelerator:
 
 ![Azure Synapse AI architecture](./media/synapse-ai-architecture.png)
 
 ![Azure Synapse AI + Azure ML AutoML architecture](./media/synapse-auto-ml-architecture.png)
 
-## Next steps
+1. Clone the [Modern Finance Solution GitHub repository](https://github.com/microsoft/Azure-Synapse-Solution-Accelerator-Financial-Analytics-Customer-Revenue-Growth-Factor) and navigate to the root of the directory.
+1. Go to the [deployment guide](https://github.com/microsoft/Azure-Synapse-Solution-Accelerator-Financial-Analytics-Customer-Revenue-Growth-Factor/blob/main/Resource_Deployment/README.md) for next steps to complete the deployment.
 
-1. Clone the Modern Finance repo and navigate to the root of the directory
-https://github.com/microsoft/Azure-Synapse-Solution-Accelerator-Financial-Analytics-Customer-Revenue-Growth-Factor
-1. Go to the deployment guide (https://github.com/microsoft/Azure-Synapse-Solution-Accelerator-Financial-Analytics-Customer-Revenue-Growth-Factor/blob/main/Resource_Deployment/README.md) for the steps to complete the deployment.
+Read more:
+
+- [Azure Synapse Analytics](/azure/synapse-analytics/)
+- [Azure Kubernetes Service](/azure/aks/)
+- [Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-ml)
+- [Azure Synapse content on Microsoft Learn](/learn/browse/?terms=synapse)
+- [Azure Kubernetes on Microsoft Learn](/learn/browse/?terms=kubernetes)
+- [Data scientist learning path on Microsoft Learn](/learn/browse/?roles=data-scientist)

@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: internal, e2e-retail
 ---
 
-# Forecast customer demand with a Demand Forecasting Solution Accelerator
+# Forecast customer demand with the Demand Forecasting Solution Accelerator
 
 ## End-to-end solution with consolidated machine learning models
 
@@ -44,21 +44,27 @@ models approach is commonly seen in:
 
 Carhartt
 
-To remain competitive with the growing number of online retail giants, Carhartt decided to get ahead of the game with a  comprehensive data-driven solution. After realizing that their on-premises virtual machines were creating a memory bottleneck their team worked with Microsoft to expand its model with high-performance solutions from Azure Machine Learning. Supercharged data insights helped Carhartt optimize sales across e-commerce sites, big-box retailers, and its 33 physical stores. Read the full [Carhartt customer story](https://customers.microsoft.com/story/816179-carhartt-retailers-azure).
+To remain competitive, Carhartt sought a comprehensive data-driven solution. Since on-premises virtual machines created a memory bottleneck, the company worked with Microsoft to expand its model with high-performance solutions from Azure Machine Learning. Supercharged data insights helped Carhartt optimize sales across e-commerce sites, big-box retailers, and its 33 physical stores. Read the full [Carhartt customer story](https://customers.microsoft.com/story/816179-carhartt-retailers-azure).
 
 Walgreens
 
-Serving approximately 8 million customers daily requires this retailer to process vast amounts of data daily. Walgreens relies on insights gained by comparing POS transactions to historical data across the supply chain. To make this process even more complex, the retailer acquired other retail pharmacies, adding even more data points to analyze. With Azure, Walgreens was able to use machine learning to connect the disparate sources of data to optimize its inventory and promotions to target the right customers at the right time. Read the full [Walgreens customer story](https://customers.microsoft.com/story/1411448755996187154-walgreens-health-provider-azure)
+Walgreens processes vast amounts of data, relying on insights from comparing point of sale transactions to historical data across the supply chain, and had acquired other pharmacies, adding more data points to analyze. With Azure, Walgreens was able to use machine learning to connect the disparate sources of data to optimize its inventory and promotions to target the right customers at the right time. Read the full [Walgreens customer story](https://customers.microsoft.com/story/1411448755996187154-walgreens-health-provider-azure)
 
 Learn how to configure your environment, prepare your dataset, train 10,000+ models, and forecast sales. Then you can customize your accelerator for your business challenges.
 
-## Get started deploying the Modern Finance Solution Accelerator MVP:
+## Get started deploying the MVP
 
-1. **Find your code** on [GitHub](https://github.com/microsoft/solution-accelerator-many-models)
-
-2. **Deploy Azure machine learning and assets** to Azure.
-
-3. **Configure the development environment** using a Notebook virtual machine.
-
-4. **Run Notebooks**. Once your development environment is set up, run through the
+1. Find your code in the Demand Forecasting Solution Accelerator [GitHub repository](https://github.com/microsoft/solution-accelerator-many-models).
+2. Deploy Azure machine learning and assets to Azure.
+3. Configure the development environment using a Notebook virtual machine.
+4. **Run Jupyter Notebooks**. Once your development environment is set up, run through the
     Jupyter Notebooks step by step, [following the steps for the Many Models Solution Accelerator](https://github.com/microsoft/solution-accelerator-many-models).
+
+Read more:
+
+- [Azure Synapse Analytics](/azure/synapse-analytics/)
+- [Azure Kubernetes Service](/azure/aks/)
+- [Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-ml)
+- [Azure Synapse content on Microsoft Learn](/learn/browse/?terms=synapse)
+- [Azure Kubernetes on Microsoft Learn](/learn/browse/?terms=kubernetes)
+- [Data scientist learning path on Microsoft Learn](/learn/browse/?roles=data-scientist)
