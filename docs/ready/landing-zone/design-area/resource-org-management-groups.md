@@ -50,7 +50,7 @@ Management group structures within an Azure Active Directory (Azure AD) tenant s
 
 - Limit the number of Azure Policy assignments made at the root management group scope (/). This limitation minimizes debugging inherited policies in lower-level management groups.
 
-- Use policies to enforce compliance requirements either at management group or subscription scope to achieve Policy-driven governance. **LINK TO DESIGN PRINCIPLES ONCE BACK FROM PR #2620**
+- Use policies to enforce compliance requirements either at management group or subscription scope to achieve Policy-driven governance.
 
 - Ensure that only privileged users can operate management groups in the tenant by enabling Azure RBAC authorization in the management group [hierarchy settings](/azure/governance/management-groups/how-to/protect-resource-hierarchy#setting---require-authorization) (by default, all users are authorized to create their own management groups under the root management group).
 
