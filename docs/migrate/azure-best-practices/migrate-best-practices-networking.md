@@ -406,7 +406,7 @@ Public IP addresses in Azure can be associated with VMs, load balancers, applica
 - As a best practice, VMs shouldn't be configured with a public IP address.
   - If you need a port opened, it should only be for web services, such as port 80 or 443.
   - Standard remote management ports, such as SSH (22) and RDP (3389), along with all other ports, should be set to deny by using NSGs.
-- A better practice is to put VMs behind Azure Load Balancer or Azure Application Gateway. Then, if you need access to remote management ports, you can use just-in-time VM access in Azure Security Center.
+- A better practice is to put VMs behind Azure Load Balancer or Azure Application Gateway. Then, if you need access to remote management ports, you can use just-in-time VM access in Microsoft Defender for Cloud.
 
 **Learn more:**
 
@@ -450,7 +450,7 @@ Here are some additional notes about WAF:
 - WAF provides centralized protection of your web applications from common exploits and vulnerabilities.
 - You don't need to modify your code to make use of WAF.
 - It can protect multiple web apps at the same time, behind Application Gateway.
-- WAF is integrated with Azure Security Center.
+- WAF is integrated with Microsoft Defender for Cloud.
 - You can customize WAF rules and rule groups to suit your application requirements.
 - As a best practice, you should use a WAF in front of any web-facing application, including applications on Azure VMs or in Azure App Service.
 

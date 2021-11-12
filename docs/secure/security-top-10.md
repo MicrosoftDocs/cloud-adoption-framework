@@ -74,7 +74,7 @@ Microsoft provides extensive resources to help technical professionals ramp up o
     - [Security baselines for Azure](/security/benchmark/azure/security-baselines-overview): Application of ASB to individual Azure services
   - [Microsoft security best practices](/security/compass/microsoft-security-compass-introduction) - videos and documentation
 - Azure compliance
-  - [Regulatory compliance](/azure/security-center/security-center-compliance-dashboard) evaluation with Azure Security Center
+  - [Regulatory compliance](/azure/security-center/security-center-compliance-dashboard) evaluation with Microsoft Defender for Cloud
 - Identity protocols and security
   - [Azure security documentation site](/azure/security/)
   - Azure AD authentication [YouTube series](https://www.youtube.com/playlist?list=PLLasX02E8BPD5vC2XHS_oHaMVmaeHHPLy)
@@ -106,8 +106,8 @@ These are the typical areas where security decisions are needed, descriptions, a
 | Network security | Configuration and maintenance of Azure Firewall, network virtual appliances (and associated routing), WAFs, NSGs, ASGs, and so on. | *Typically [Infrastructure and endpoint security](../organize/cloud-security-infrastructure-endpoint.md) team focused on network security*  |
 | Network management | Enterprise-wide virtual network and subnet allocation | *Typically existing network operations team in [Central IT Operations](../organize/central-it.md)* |
 | Server endpoint security | Monitor and remediate server security (patching, configuration, endpoint security, and so on.) | *Typically [Central IT Operations](../organize/central-it.md) and [Infrastructure and endpoint security](../organize/cloud-security-infrastructure-endpoint.md) teams jointly* |
-| Incident monitoring and response | Investigate and remediate security incidents in SIEM or source console (Azure Security Center, Azure AD identity protection, and so on.) | *Typically [security operations](../organize/cloud-security-operations-center.md) team* |
-| Policy management | Set direction for use of Azure role-based access control (Azure RBAC), Azure Security Center, administrator protection strategy, and Azure Policy to govern Azure resources | *Typically [Policy and Standards](../organize/cloud-security-policy-standards.md) + [Security Architecture](../organize/cloud-security-architecture.md) Teams jointly* |
+| Incident monitoring and response | Investigate and remediate security incidents in SIEM or source console (Microsoft Defender for Cloud, Azure AD identity protection, and so on.) | *Typically [security operations](../organize/cloud-security-operations-center.md) team* |
+| Policy management | Set direction for use of Azure role-based access control (Azure RBAC), Microsoft Defender for Cloud, administrator protection strategy, and Azure Policy to govern Azure resources | *Typically [Policy and Standards](../organize/cloud-security-policy-standards.md) + [Security Architecture](../organize/cloud-security-architecture.md) Teams jointly* |
 | Identity security and standards | Set direction for Azure AD directories, PIM/pam usage, multifactor authentication, password/synchronization configuration, application identity standards | *Typically [Identity and Key Management](../organize/cloud-security-identity-keys.md) + [Policy and Standards](../organize/cloud-security-policy-standards.md) + [Security Architecture](../organize/cloud-security-architecture.md) Teams jointly*  |
 
 > [!NOTE]
@@ -145,7 +145,7 @@ While similar in many ways, cloud platforms have important technical difference 
 **Key Focus Areas**: while there are many details described in the resource links, these are key areas to focus your education and planning efforts:
 
 - **Shared responsibility model and cloud architectures:** To a security analyst, Azure is a software defined datacenter that provides many services including VMs (familiar) and others that are very different from on-premises such as Azure SQL Database Azure Functions, and so on. Where the best data is in the service logs or the specialized threat detection services rather than in logs for the underlying OS/VMs (which are operated by Microsoft and service multiple customers). Analysts need to understand and integrate this context into their daily workflows so they know what data to expect, where to get it, and what format it will be in.
-- **Endpoint data sources:** Getting insights and data for attacks and malware on cloud hosted servers is often faster, easier, and more accurate with native cloud detection tools like Azure Security Center and endpoint detection and response (EDR) solutions as opposed to traditional approaches of direct disk access. While direct disk forensics are available for scenarios where it's possible and required for legal proceedings ([computer forensics in Azure](/azure/architecture/example-scenario/forensics/)), this is often the most inefficient way to detect and investigate attacks.
+- **Endpoint data sources:** Getting insights and data for attacks and malware on cloud hosted servers is often faster, easier, and more accurate with native cloud detection tools like Microsoft Defender for Cloud and endpoint detection and response (EDR) solutions as opposed to traditional approaches of direct disk access. While direct disk forensics are available for scenarios where it's possible and required for legal proceedings ([computer forensics in Azure](/azure/architecture/example-scenario/forensics/)), this is often the most inefficient way to detect and investigate attacks.
 - **Network and identity data sources:** Many functions of cloud platforms primarily use identity primarily for access control such as access to the Azure portal (though network access controls are used extensively as well). This requires analysts to develop an understanding of cloud identity protocols to get a full, rich, picture of attacker activity (and legitimate user activity) to support incident investigation and remediation. Identity directories and protocols are also different from on-premises as they are typically based on SAML, OAuth, and OpenID Connect and cloud directories rather than LDAP, Kerberos, NTLM, and Active Directory that are commonly found on-premises.
 - **Practice exercises:** Simulated attacks and response can help build organizational muscle memory and technical readiness for your security analysts, threat hunters, incident managers, and other stakeholders in your organization. Learning on the job and adapting is a natural part of incident response, but you should work to minimize how much you have to learn in a crisis.
 
@@ -186,7 +186,7 @@ These new capabilities offer new possibilities, but realizing value from them re
 
 **Who**: this is typically divided into two sets of responsibilities:
 
-- [Security posture management](../organize/cloud-security-posture-management.md) - this newer function is often an evolution of existing vulnerability management or governance functions. This includes monitoring overall security posture using Azure Security Center secure score and other data sources, actively working with resource owners to mitigate risks, and reporting risk to security leadership.
+- [Security posture management](../organize/cloud-security-posture-management.md) - this newer function is often an evolution of existing vulnerability management or governance functions. This includes monitoring overall security posture using Microsoft Defender for Cloud secure score and other data sources, actively working with resource owners to mitigate risks, and reporting risk to security leadership.
 - **Security remediation:** Assign accountability for addressing these risks to the teams responsible for managing those resources. This should either the DevOps teams managing their own application resources or the technology-specific teams in **[Central IT Operations](../organize/central-it.md)**:
 
   - **Compute and application resources:**
@@ -210,7 +210,7 @@ These new capabilities offer new possibilities, but realizing value from them re
 > [!IMPORTANT]
 > The explanations for why, what, and how to secure resources are often similar across different resource types and applications, but it's critical to relate these to what each team already knows and cares about. Security teams should engage with their IT and DevOps counterparts as a trusted advisor and partner focused on enabling these teams to be successful.
 
-**Tooling**: [secure score](/azure/security-center/secure-score-security-controls) in Azure Security Center provides an assessment of the most important security information in Azure for a wide variety of assets. This should be your starting point on posture management and can be supplemented with custom Azure policies and other mechanisms as needed.
+**Tooling**: [secure score](/azure/security-center/secure-score-security-controls) in Microsoft Defender for Cloud provides an assessment of the most important security information in Azure for a wide variety of assets. This should be your starting point on posture management and can be supplemented with custom Azure policies and other mechanisms as needed.
 
 **Frequency**: set up a regular cadence (typically monthly) to review Azure secure score and plan initiatives with specific improvement goals. The frequency can be increased as needed.
 
@@ -310,7 +310,7 @@ These native solutions also enable security operations teams to focus on inciden
   - [Policy and standards](../organize/cloud-security-policy-standards.md): Set standards and policy for enabling native tooling throughout the organization. Monitor for compliance.
   - [Infrastructure and endpoint](../organize/cloud-security-infrastructure-endpoint.md) / **[Central IT Operations](../organize/central-it.md):** Configure and enable detections, integrate into automation and infrastructure as code solutions.
 
-**How**: enable [threat detection in Azure Security Center](/azure/security-center/azure-defender) for all the resources you are using and have each team integrate these into their processes as described above.
+**How**: enable [threat detection in Microsoft Defender for Cloud](/azure/security-center/azure-defender) for all the resources you are using and have each team integrate these into their processes as described above.
 
 Also see the Azure Security Benchmark [LT-1: enable threat detection for Azure resources](/security/benchmark/azure/security-controls-v2-logging-threat-detection#lt-1-enable-threat-detection-for-azure-resources).
 

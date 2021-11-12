@@ -33,7 +33,7 @@ This section explores how to operationally maintain an Azure enterprise estate w
   - Azure activity logs
   - Azure Active Directory (Azure AD) audit reports
   - Azure diagnostic services, logs, and metrics; Azure Key Vault audit events; network security group (NSG) flow logs; and event logs
-  - Azure Monitor, Azure Network Watcher, Azure Security Center, and Azure Sentinel
+  - Azure Monitor, Azure Network Watcher, Microsoft Defender for Cloud, and Microsoft Sentinel
 - Azure data retention thresholds and archiving requirements:
   - The default retention period for Azure Monitor Logs is 30 days, with a maximum of two years.
   - The default retention period for Azure AD reports (premium) is 30 days.
