@@ -321,11 +321,11 @@ Contoso begins using these services during migration. With Azure hybrid support,
 
 ### Security
 
-Contoso will rely on Azure Security Center for unified security management and Microsoft Defender for Identity across hybrid cloud workloads.
+Contoso will rely on Microsoft Defender for Cloud for unified security management and Microsoft Defender for Identity across hybrid cloud workloads.
 
-Security Center provides full visibility into and control over the security of cloud applications in Azure. Contoso can quickly detect and take action in response to threats, and reduce security exposure by enabling adaptive threat protection.
+Defender for Cloud provides full visibility into and control over the security of cloud applications in Azure. Contoso can quickly detect and take action in response to threats, and reduce security exposure by enabling adaptive threat protection.
 
-Learn more about [Security Center](https://azure.microsoft.com/services/security-center/).
+Learn more about [Defender for Cloud](https://azure.microsoft.com/services/security-center/).
 
 ### Monitoring
 

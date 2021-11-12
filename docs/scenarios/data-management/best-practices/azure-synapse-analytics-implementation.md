@@ -59,7 +59,7 @@ For example, row-level security ensures that users in a specific data integratio
 You can combine row-level security with column-level security to restrict access to columns with sensitive data. This way, both row-level security and column-level security apply the access restriction logic at the database tier rather than the application tier. The permission is evaluated every time data access is attempted from any tier.
 
 > [!TIP]
-> We recommend that features such as Azure Defender for SQL, data classification, data encryption, and dynamic data masking are available for SQL pool to support data protection and limit sensitive data exposure.
+> We recommend that features such as Microsoft Defender for SQL, data classification, data encryption, and dynamic data masking are available for SQL pool to support data protection and limit sensitive data exposure.
 
 ### Azure Synapse data access control in Azure Data Lake
 
