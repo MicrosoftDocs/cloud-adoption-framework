@@ -168,7 +168,7 @@ Additional policies that are applied in the Databricks workspace through cluster
 |Audit-IotHub-PrivateEndpointId|Network Isolation|Audit public endpoints that are created in other subscriptions for iot hubs.|
 |Deny-IotHub-PublicNetworkAccess|Network Isolation|Denies public network access for iot hub.|
 |Deny-IotHub-Sku|Resource Management|Enforces iot hub SKUs.|
-|Deploy-IotHub-IoTSecuritySolutions|Security|Deploy Azure defender for IoT for IoT Hubs.|
+|Deploy-IotHub-IoTSecuritySolutions|Security|Deploy Microsoft Defender for IoT for IoT Hubs.|
 
 ## Azure Event Hubs
 

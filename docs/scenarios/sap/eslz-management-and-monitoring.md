@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-sap
 
 # Operations baseline for SAP on Azure
 
-This article builds on a number of considerations and recommendations defined in the Azure landing zone article [enterprise-scale design area for management and monitoring](../../ready/enterprise-scale/management-and-monitoring.md). Following the guidance in this article will help explore how to operationally maintain an SAP platform on Azure enterprise estate, with centralized management and monitoring at the platform level. The article presents key recommendations for SAP operations teams to maintain SAP systems within the Azure platform. Since SAP is an mission-critical platform, the guidance on the enterprise-scale design areas should also be included in your design.
+This article builds on a number of considerations and recommendations defined in the Azure landing zone article [enterprise-scale design area for management and monitoring](../../ready/enterprise-scale/management-and-monitoring.md). Following the guidance in this article will help explore how to operationally maintain an SAP platform on Azure enterprise estate, with centralized management and monitoring at the platform level. The article presents key recommendations for SAP operations teams to maintain SAP systems within the Azure platform. Since SAP is a mission-critical platform, the guidance on the enterprise-scale design areas should also be included in your design.
 
 **Design considerations:**
 
@@ -48,4 +48,4 @@ Here are some design recommendations for SAP on Azure monitoring and management:
 
 - For each Azure subscription, run an [Azure Availability Zone latency test](https://github.com/Azure/SAP-on-Azure-Scripts-and-Utilities/tree/main/AvZone-Latency-Test) before zonal deployment to choose low-latency zones for SAP on Azure deployment.
 
-- Implement threat protection for SAP with [Azure Sentinel](/azure/sentinel/overview).
+- Implement threat protection for SAP with [Microsoft Sentinel](/azure/sentinel/overview).
