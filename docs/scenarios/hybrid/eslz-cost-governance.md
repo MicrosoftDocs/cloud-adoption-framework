@@ -21,7 +21,7 @@ Azure Arc-enabled servers provide two types of services:
 1. **Azure Arc control plane functionality**, which is provided at no extra cost includes:
    - Resource organization through Azure management groups and tags.
    - Searching and indexing through Azure Resource Graph.
-   - Access control through Azure role-based access control (Azure RBAC) at subscription or resource group level.
+   - Access control through Azure role-based access control (RBAC) at subscription or resource group level.
    - Environments and automation through templates and extensions.
    - Azure Update Management
 
