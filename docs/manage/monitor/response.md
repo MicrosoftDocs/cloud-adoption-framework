@@ -21,9 +21,15 @@ There are other responsive actions that can be used instead of following this tr
 * A VM was automatically shutdown to minimize waste and control costs based on a schedule or low utilization detected.
 * IaaS or PaaS resources are idle for a long period of time or not provisioned based on Azure Advisor recommendations.
 
-In the first example, orchestration was used as a result of detecting the condition and then informing you that the action was performed and why. In the second example, orchestration can be used, based on business logic or ITSM process workflow, to manage those infrastructure-related activities.
+In the first example, orchestration was used based on a native scheduling feature, and by the monitoring platform detecting the utilization condition. Instead of the alert notifying or escalating as the only action, it informs you of the action performed and why. In the second example, orchestration can be used, based on business logic or ITSM process workflow, to manage those infrastructure-related activities.
 
-Orchestration should be the next step depending on the situation. Because many cloud resources at the infrastructure, platform, and software-layers are managed by the cloud provider and can’t be controlled by the customer, you are dependent on the cloud provider.
+There are many services in Azure that help you monitor and diagnose the infrastructure, platform, and software-layers that are managed by Microsoft and can't be controlled by you, the customer. These services automatically generate logs that record status or an event, and compliment the diagnostic or other telemetry you collect from the different resources in Azure.
+
+It's important to understand how you can structure all that data that has been gathered to meet your analysis requirements, and when combined with data from each part of the system and data generated from other dependencies that may not be in the same region, subscription, or resource group. This information requires careful correlation to ensure that data is combined accurately.
+Use this exercise to determine how the monitoring data can be used to identify potential failures, resource bottlenecks, under or over utilization, etc.
+
+
+orchestration should be the next step for certain conditions or issues identified from analysis of monitoring telemetry.
 
 ## Successful alerting strategy
 
