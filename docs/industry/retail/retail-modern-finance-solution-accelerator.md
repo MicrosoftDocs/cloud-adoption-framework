@@ -32,7 +32,7 @@ Let's look at the Modern Finance Solution Accelerator through 4 pillars:
 1. Business process automation – enabling greater efficiency through chat bots and automated workflows
 1. Risk and compliance – harnessing technology to mitigate and proactively control risk
 
-## Modern finance story
+## Modern finance success story
 
 Chipotle used Azure Machine Learning to unify customer profiles and integrate multiple data sources with digital advertising channels. Chipotle has been able to enrich customer profiles with demographics and preference across multiple data platforms. Chipotle is using these insights to drive a personalized digital advertising experience for known and unknown customers, grow digital orders, and increase customer loyalty. Read the full [Chipotle customer story](https://customers.microsoft.com/story/849868-chipotle-retailers-dynamics-365)
 
