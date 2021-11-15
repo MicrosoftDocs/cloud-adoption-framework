@@ -6,6 +6,26 @@ items:
     href: overview.md
   - name: What's new
     href: get-started/whats-new.md
+  
+  - name: Scenarios
+    items:
+    - name: Overview
+      href: scenarios/overview.md
+    - name: Azure VMware Solution
+      href: scenarios/azure-vmware/index.md
+    - name: Data management and analytics
+      href: scenarios/data-management/index.md
+    - name: Hybrid and multicloud
+      href: scenarios/hybrid/index.md
+    - name: Modern application platform
+      href: scenarios/aks/index.md
+    - name: SAP
+      href: scenarios/sap/index.md
+    - name: Virtual desktops
+      href: scenarios/wvd/index.md
+    - name: Retail industry
+      href: industry/retail/index.md
+  
   - name: Adoption journeys
     items:
     - name: Get started
@@ -62,26 +82,6 @@ items:
         href: get-started/team/cloud-governance.md
       - name: Build a cloud operations team
         href: get-started/team/cloud-operations.md
-
-    - name: Adoption scenarios
-      items:
-      - name: Azure VMware Solution
-        href: scenarios/azure-vmware/index.md
-      - name: Data management and analytics
-        href: scenarios/data-management/index.md
-      - name: Hybrid and multicloud
-        href: scenarios/hybrid/index.md
-      - name: Modern application platform
-        href: scenarios/aks/index.md
-      - name: SAP
-        href: scenarios/sap/index.md
-      - name: Virtual desktops
-        href: scenarios/wvd/index.md
-
-    - name: Industry scenarios
-      items:
-      - name: Retail
-        href: industry/retail/index.md
 
     - name: Antipatterns to avoid
       href: antipatterns/antipatterns-to-avoid.md
