@@ -352,7 +352,7 @@ items:
               href: ready/azure-best-practices/scale-subscriptions.md
             - name: Organize your subscriptions
               href: ready/azure-best-practices/organize-subscriptions.md
-      
+
         - name: Security
           items:
           - name: Overview
