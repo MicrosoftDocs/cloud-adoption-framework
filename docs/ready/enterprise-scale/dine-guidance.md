@@ -33,7 +33,7 @@ DINE policies will then do the following to the landing zone subscription:
 - Configure the Diagnostic Settings for all resources to be sent to the central Log Analytics workspace in the management subscription
 - Deploy the required Azure Monitor Agents for Virtual Machines and Virtual Machine Scale Sets, including Arc connected servers, and connect them to the central Log Analytics workspace in the management subscription
 
-All the DINE policies assigned are there to assist you and the landing zone owners to remain compliant, no actual workload resources are deployed via DINE policies (we do not recommend this either as per: [Should we use Azure Policy to deploy workloads?](/azure/cloud-adoption-framework/ready/enterprise-scale/faq#should-we-use-azure-policy-to-deploy-workloads)) only auxiliary or supporting resources or settings are deployed or configured by these DINE policies.
+All assigned policies are there to assist you and the landing zone owners to remain compliant, no actual workload resources are deployed via DINE policies (we do not recommend this either as per: [Should we use Azure Policy to deploy workloads?](/azure/cloud-adoption-framework/ready/enterprise-scale/faq#should-we-use-azure-policy-to-deploy-workloads)) only auxiliary or supporting resources or settings are deployed or configured by these DINE policies.
 
 Whilst the Azure landing zones reference implementations utilize [`DeployIfNotExists` (DINE)](/azure/governance/policy/concepts/effects#deployifnotexists) Azure policies to help you achieve policy-driven governance within your Azure environment, we understand that you may not be able to use DINE policies or are not yet ready on your cloud adoption journey to enable this type of [Azure Policy effect](/azure/governance/policy/concepts/effects).
 
@@ -43,7 +43,7 @@ This may be due to number of reasons, such as:
 - Strict change control processes that require human approval for every action within your Azure environment
 - Lack of expertise, experience, and understanding of how to manage and use DINE policies
 
-If you fit into the above example scenarios or similar, this document will help you to understand how to adopt the [Azure landing zone conceptual architecture](/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-conceptual-architecture), alongside its [design principles](/azure/cloud-adoption-framework/ready/enterprise-scale/design-principles), whilst not utilizing DINE policies, initially (can optionally choose to gradually enable in the future), that help you achieve [policy-driven governance](/azure/cloud-adoption-framework/ready/enterprise-scale/design-principles#policy-driven-governance).
+If you fit into the above example scenarios or similar, this document will help you to understand how to adopt the [Azure landing zone conceptual architecture](/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-conceptual-architecture), alongside its [design principles](/azure/cloud-adoption-framework/ready/enterprise-scale/design-principles), whilst not utilizing certain policies initially (can optionally choose to gradually enable in the future), that help you achieve [policy-driven governance](/azure/cloud-adoption-framework/ready/enterprise-scale/design-principles#policy-driven-governance).
 
 >[!IMPORTANT]
 > Throughout the below guidance you will see reference to the "Enforcement Mode" feature being set with two possible values in either of the terms listed for them:
@@ -55,7 +55,7 @@ If you fit into the above example scenarios or similar, this document will help 
 >  
 > This is outlined further here: [Enforcement Mode](/azure/governance/policy/concepts/assignment-structure#enforcement-mode)
 
-If you have read the above and still are certain that DINE policies are unable to be used by your organization for whatever reason, then below we will detail how to prevent (also known as disable) the policies from making automatic changes to your Azure environment.
+If you have read the above and still are certain that DINE, policies are unable to be used by your organization for whatever reason, then below we will detail how to prevent (also known as disable) the policies from making automatic changes to your Azure environment.
 
 >[!NOTE]
 > This is not a permanent operation, and the policies can be re-enabled at any time by a member of your platform team if you later decide to utilize DINE or Modify policies.
@@ -126,15 +126,20 @@ The reasons for changing from DINE to AINE and setting the Enforcement Mode back
 
 However, it should also be noted that you will lose the capability to perform manual remediation tasks as unlike DINE policies, AINE policies do not perform any deployments (automated or manual).
 
-To convert a DINE policy definition to an AINE definition you must remove the following properties from the definition:
-
-- `roleDefinitionIds`
-- `deploymentScope`
-- `deployment`
-
-Once you have removed these properties, you can create a new policy definition that will be supported with AINE that you can then assign at the appropriate scopes to replace the DINE policies.
-
 Also, remember to update the policy definition to accept and allow the `AuditIfNotExists` policy assignment effect.
+
+The following tables summarizes the different options and the implications for the different types of policy effects and enforcement mode combination:
+
+| Policy effect | Enforcement Mode      | Activity log entry | Remediation action |
+| --            | --                    | --                 | --          |
+| DINE          | Enabled/Default       | Yes                | Platform triggered remediation |
+| DINE          | Disabled/DoNotEnforce | No                 | Manual trigger of remediation task required |
+| Modify        | Enabled/Default       | Yes                | Automatic remediation during creation/update |
+| Modify        | Disabled/DoNotEnforce | No                 | Manual trigger of remediation task required |
+| Deny          | Enabled/Default       | Yes                | Creation/update blocked |
+| Deny          | Disabled/DoNotEnforce | No                 | Creation/update allowed. Manual remediation required |
+| Audit/AINE    | Enabled/Default       | Yes                | Manual remediation required |
+| Audit/AINE    | Disabled/DoNotEnforce | No                 | Manual remediation required |
 
 ### Phase 2: Enable DINE/Modify Policies on a specific policy or reduced scope (Setting Enforcement Mode to `Default` on Policy Assignments)
 
