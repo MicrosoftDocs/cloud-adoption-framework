@@ -47,7 +47,7 @@ For example, a finance user is granted an enterprise administrator role on the E
 
 - A range of administrators can be assigned to a single enrollment.
 
-- Each subscription should have a designated account owner.
+- Each subscription should have a designated account owner. See [Azure EA portal administration guide](/azure/cost-management-billing/manage/ea-portal-administration#change-azure-subscription-or-account-ownership) for details on how to change this, if needed.
 
 - Each account owner is a subscription owner for any subscriptions provisioned under that account.
 
