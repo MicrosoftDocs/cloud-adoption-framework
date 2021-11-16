@@ -273,13 +273,7 @@ items:
             href: ready/landing-zone/design-area/azure-ad-define.md  
 
         - name: Identity and access management
-          items: 
-          - name: Overview
-            href: ready/landing-zone/design-area/identity-access.md
-          - name: Identity management best practices
-            href: /azure/security/fundamentals/identity-management-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Choose an authentication method
-            href: /azure/active-directory/hybrid/choose-ad-authn?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+          href: ready/landing-zone/design-area/identity-access.md
           
         - name: Network topology and connectivity
           items:
