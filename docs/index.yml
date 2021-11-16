@@ -102,14 +102,14 @@ productDirectory:
     - title: Ready
       imageSrc: ./_images/caf-ready.png
       links:
-        - url: ./ready/azure-setup-guide/index.md
-          text: Azure setup guide
         - url: ./operating-model/index.md
           text: Operating model alignment
         - url: ./ready/landing-zone/index.md
-          text: Azure landing zones
-        - url: ./ready/azure-best-practices/index.md
-          text: Best practices for Azure readiness
+          text: Azure landing zone conceptual architecture 
+        - url: ./ready/landing-zone/landing-zone-journey.md
+          text: Journey to the target architecture
+        - url: ./ready/landing-zone/design-areas.md
+          text: Azure landing zone design areas 
 
     # Card
     - title: Migrate
