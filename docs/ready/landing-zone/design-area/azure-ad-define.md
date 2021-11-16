@@ -32,6 +32,8 @@ Ask basic security questions during the Azure AD design phase, such as how your 
 
 - Review [Compare self-managed Active Directory Domain Services, Azure Active Directory, and managed Azure Active Directory Domain Services](/azure/active-directory-domain-services/compare-identity-solutions) to fully understand the differences between all the options and how they relate
 
+- Explore the [authentication methods offered by Azure Active Directory](/azure/active-directory/hybrid/choose-ad-authn) as part of your Azure Active Directory tenant planning
+
 - If using [Azure Government](/azure/azure-government/documentation-government-welcome) review the guidance around Azure AD Tenants in [Planning identity for Azure Government applications](/azure/azure-government/documentation-government-plan-identity)
 
 - If using Azure Government, Azure China 21Vianet, Azure Germany ([Closed on October 29, 2021](https://www.microsoft.com/cloud-platform/germany-cloud-regions)) then please review [National clouds](/azure/active-directory/develop/authentication-national-cloud) for further guidance around Azure AD
