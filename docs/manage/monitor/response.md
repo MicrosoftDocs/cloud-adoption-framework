@@ -3,7 +3,7 @@ title: Cloud monitoring and response
 description: Gain an understanding of the response discipline in observability and recommended approaches to acting on significant events detected.
 author: MGoedtel
 ms.author: brblanch
-ms.date: 11/11/2021
+ms.date: 11/15/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: manage
@@ -14,18 +14,19 @@ ms.custom: think-tank
 
 In the [Observability](observability.md) we discussed the five disciplines of monitoring, and in this article we focus on the response discipline. Response is the result of defining one or more actions based on data-driven decisions by observing the monitoring data.  An alert triggering a notification or incident record used to be the primary outcome or action when your monitoring tool detected an issue or change that could potentially cause a system outages or significant incident. Escalating an alert isn’t important to observability, and today it shouldn’t be considered the first line of defense.
 
-As part of monitoring, alerting was an action resulting from a detected condition, such as a node in the cluster is down, a database for an application is full, or an application process is consuming too many CPU cycles for an indefinite period. Based on defined escalation paths and the severity/impact of the condition, the alert would create an incident record in an ITSM system or send an e-mail notification to the operations or engineering team depending on your escalation path. We consider this approach outdated and not in alignment with modern service management or cloud operations recommended practices.
+As part of monitoring, alerting was an action resulting from a detected condition, such as a node in the cluster is down, a database for an application is full, or an application process is consuming too many CPU cycles for an indefinite period. Based on defined escalation paths and the severity/impact of the condition, the alert creates an incident record in an ITSM system, or sends an e-mail notification to the operations or engineering team following your escalation path. We consider this approach outdated and not in alignment with modern service management or cloud operations recommended practices.
 
 There are other responsive actions that can be used instead of following this traditional path. Under certain circumstances, some alerts can be informational to inform you that:
 
 * A VM was automatically shutdown to minimize waste and control costs based on a schedule or low utilization detected.
 * IaaS or PaaS resources are idle for a long period of time or not provisioned based on Azure Advisor recommendations.
 
-In the first example, orchestration was used based on a native scheduling feature, and by the monitoring platform detecting the utilization condition. Instead of the alert notifying or escalating as the only action, it informs you of the action performed and why. In the second example, orchestration can be used, based on business logic or ITSM process workflow, to manage those infrastructure-related activities. Orchestration should be the next step for certain conditions or issues identified from analysis of monitoring telemetry.
+In the first example, orchestration was used based on a native scheduling feature, and by the monitoring platform detecting the utilization condition. Instead of the alert notifying or escalating as the only action, it informs you of the action performed and why. In the second example, orchestration can be used, based on business logic or ITSM process workflow, to manage those infrastructure-related activities. Much faster response and actions are needed today, and with the cloud *alerting* is less for humans than it is for an automated response, or just an ongoing orchestration as part of an automated value stream.
 
 There are many services in Azure that help you monitor and diagnose the infrastructure, platform, and software-layers that are managed by Microsoft and can't be controlled by you, the customer. These services automatically generate logs that record status or an event, and compliment the diagnostic or other telemetry you collect from the different resources in Azure.
 
 It's important to understand how you can structure all that data that has been gathered to meet your analysis requirements, and when combined with data from each part of the system and data generated from other dependencies that may not be in the same region, subscription, or resource group. This information requires careful correlation to ensure that data is combined accurately.
+
 Use this exercise to determine how the monitoring data can be used to identify potential failures, resource bottlenecks, under or over utilization, etc.
 
 ## Successful alerting strategy
