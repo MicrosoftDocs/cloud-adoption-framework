@@ -26,7 +26,7 @@ Resource tags provide the ability to add metadata to a resource to quickly locat
 
 The following image shows a conceptual reference for resource tagging for Azure Arc-enabled Kubernetes:
 
-![A diagram depicting resource tagging for Azure Arc-enabled servers](./media/arc-enabled-kubernetes-resource-tagging.svg)
+![A diagram depicting resource tagging for Azure Arc-enabled kubernetes](./media/arc-enabled-kubernetes-resource-tagging.svg)
 
 ## Next steps
 
