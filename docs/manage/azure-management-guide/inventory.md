@@ -176,6 +176,6 @@ Each article guides you through a series of steps to onboard these solutions:
 - Azure Log Analytics Agent Health
 - Antimalware assessment
 - Azure Monitor for VMs
-- Azure Security Center
+- Microsoft Defender for Cloud
 
 Each of the previous steps helps establish inventory and visibility.

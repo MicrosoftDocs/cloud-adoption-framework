@@ -20,7 +20,7 @@ Developing the necessary skills can be accelerated with the following learning p
 
 - Introduction to [Azure Resource Manager](/azure/azure-resource-manager/management/overview) discusses the basic concepts of management and deployment of Azure resources. The IT staff managing the monitoring experience across the enterprise should understand management scopes, Azure role-based access control (Azure RBAC), using. Azure Resource Manager templates, and management of resources using Azure CLI and Azure PowerShell.
 
-- Introduction to [Azure Policy](/azure/governance/policy/overview) helps you learn how you can use Azure Policy to create, assign, and manage policies. Azure Policy can deploy and configure the Azure Monitor agents, enable monitoring with Azure Monitor for VMs and Azure Security Center, deploy diagnostic settings, audit guest configuration settings, and more.
+- Introduction to [Azure Policy](/azure/governance/policy/overview) helps you learn how you can use Azure Policy to create, assign, and manage policies. Azure Policy can deploy and configure the Azure Monitor agents, enable monitoring with Azure Monitor for VMs and Microsoft Defender for Cloud, deploy diagnostic settings, audit guest configuration settings, and more.
 
 - Introduction to [Azure command-line interface (CLI)](/cli/azure/get-started-with-azure-cli), which is our cross-platform command-line experience for managing Azure resources. Also review the introduction to [Azure PowerShell](/powershell/azure/). As part of their beginner-level course, [learning Azure management tools](https://www.linkedin.com/learning/learning-azure-management-tools), LinkedIn offers sessions covering Azure CLI and PowerShell programming languages:
 
