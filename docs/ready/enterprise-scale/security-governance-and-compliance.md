@@ -133,7 +133,7 @@ An enterprise must have visibility into what's happening within their technical 
 
 - Set requirements for real-time monitoring and alerting.
 
-- Integrate security information and event management with Azure Security Center and Azure Sentinel.
+- Integrate security information and event management with Microsoft Defender for Cloud and Microsoft Sentinel.
 
 - Do a vulnerability assessment of VMs.
 
@@ -143,9 +143,9 @@ An enterprise must have visibility into what's happening within their technical 
 
 - Export Azure activity logs to Azure Monitor Logs for long-term data retention. Export to Azure Storage for long-term storage beyond two years, if necessary.
 
-- Enable Security Center Standard for all subscriptions, and use Azure Policy to ensure compliance.
+- Enable Defender for Cloud Standard for all subscriptions, and use Azure Policy to ensure compliance.
 
-- Monitor base operating system patching drift via Azure Monitor Logs and Azure Security Center.
+- Monitor base operating system patching drift via Azure Monitor Logs and Microsoft Defender for Cloud.
 
 - Use Azure policies to automatically deploy software configurations through VM extensions and enforce a compliant baseline VM configuration.
 

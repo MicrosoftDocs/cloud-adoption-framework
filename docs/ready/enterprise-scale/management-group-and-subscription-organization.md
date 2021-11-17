@@ -211,7 +211,7 @@ Organizations can use enterprise-scale Azure policies to enforce the following g
 
     A lack of auditing and diagnostics information at a granular level can affect operational practices. Incomplete audit information makes it difficult to correlate logs from multiple Azure services and create cohesive debugging.
 
-    Once Azure services are provisioned, they should provide detailed information about how they interact with the Azure platform. This information can be broadly divided into logs and metrics, and each Azure service can be further grouped into its subcomponents. Ror example, an Azure public IP resource with `DDoSProtectionNotifications`, `DDoSMitigationReports`, and `DDoSMitigationFlowLogs` as its subcomponents. Collecting diagnostic information at these subcategories can also help organizations to enhance auditing and debugging.
+    Once Azure services are provisioned, they should provide detailed information about how they interact with the Azure platform. This information can be broadly divided into logs and metrics, and each Azure service can be further grouped into its subcomponents. For example, an Azure public IP resource with `DDoSProtectionNotifications`, `DDoSMitigationReports`, and `DDoSMitigationFlowLogs` as its subcomponents. Collecting diagnostic information at these subcategories can also help organizations to enhance auditing and debugging.
 
      A custom Azure Policy initiative is available to help enterprises gather logs and metrics at a deeper level for each Azure service. This initiative includes a policy for every Azure service, and the policies collect key log categories and metrics automatically.
 
@@ -289,13 +289,13 @@ Organizations can use enterprise-scale Azure policies to enforce the following g
 
     Azure offers a custom policy that pairs every subnet with an NSG. A combination of subnet and an NSG ensures that a default set of rules controls traffic to and from a subnet. Depending on their needs, enterprises can also add or modify rules to control traffic further.
 
-- **Use Azure Security Center to detect and protect against security threats:**
+- **Use Microsoft Defender for Cloud to detect and protect against security threats:**
 
-    An Azure subscription can hold a range of resources like VMs, container images, an more, and these resources are exposed to risks like malware/unwanted software installation, uncontrolled access to management ports on a VM, and others. With security attacks becoming more sophisticated and a limited-supply of experienced security professionals, detecting security vulnerabilities and protecting workloads is extremely challenging.
+    An Azure subscription can hold a range of resources, such as VMs and container images, and these resources are exposed to risks like malware or unwanted software installation, uncontrolled access to management ports on a VM, and other risks. With security attacks becoming more sophisticated and a limited supply of experienced security professionals, detecting security vulnerabilities and protecting workloads is extremely challenging.
 
-    Azure Security Center is the Azure native security management system that assesses Azure resources' security posture against security best practices. It helps to detect and prevent threats against data and application services, and with multiple integration points, it can be deployed quickly.
+    Microsoft Defender for Cloud is the Azure native security management system that assesses Azure resources' security posture against security best practices. It helps to detect and prevent threats against data and application services, and with multiple integration points, it can be deployed quickly.
 
-    Azure offers a custom policy that pairs Azure subscriptions with Security Center, helping subscriptions to quickly start receiving Security Center threat detection and protection. This policy automatically covers key Azure services like VMs, storage accounts, and seven others with Security Center. If deviation from security best practice occurs, enterprises benefit from continuous security assessments and actionable recommendations.
+    Azure offers a custom policy that pairs Azure subscriptions with Defender for Cloud, helping subscriptions to quickly start receiving Defender for Cloud threat detection and protection. This policy automatically covers key Azure services like VMs, storage accounts, and seven others with Defender for Cloud. If deviation from security best practice occurs, enterprises benefit from continuous security assessments and actionable recommendations.
 
 - **Protect against ransomware attacks and data loss:**
 

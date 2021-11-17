@@ -11,8 +11,6 @@ ms.subservice: general
 ms.custom: think-tank, virtual-network
 ---
 
-<!-- cSpell:ignore  LLAP vwan howitworks vpngateways erdirect frontdoor afds whatis -->
-
 # The virtual datacenter: A network perspective
 
 Applications migrated from on-premises will benefit from Azure's secure cost-efficient infrastructure, even with minimal application changes. Even so, enterprises should adapt their architectures to improve agility and take advantage of Azure's capabilities.
@@ -543,7 +541,7 @@ Learn more about the Azure capabilities discussed in this document.
 [AFDWAF]: /azure/web-application-firewall/afds/afds-overview
 [AppGW]: /azure/application-gateway/overview
 [AppGWWAF]: /azure/web-application-firewall/ag/ag-overview
-[MonitorOverview]: /azure/networking/networking-overview#monitor
+[MonitorOverview]: /azure/networking/fundamentals/networking-overview#monitor
 [AzureMonitor]: /azure/azure-monitor/overview
 [Metrics]: /azure/azure-monitor/essentials/data-platform-metrics
 [Logs]: /azure/azure-monitor/logs/data-platform-logs

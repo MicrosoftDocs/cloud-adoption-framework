@@ -311,11 +311,7 @@ To configure or monitor Traffic Manager profiles:
 
 ::: zone target="chromeless"
 
-<!-- markdownlint-disable DOCSMD001 -->
-
 ::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.Network%2FTrafficManagerProfiles]" submitText="Go to Traffic Manager profiles" :::
-
-<!-- markdownlint-enable DOCSMD001 -->
 
 ::: zone-end
 

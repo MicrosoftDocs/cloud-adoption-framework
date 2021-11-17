@@ -10,8 +10,6 @@ ms.subservice: strategy
 ms.custom: think-tank
 ---
 
-<!-- cspell:ignore datasheets -->
-
 # Responsible AI
 
 Driven by ethical principles that put people first, Microsoft is committed to advancing AI. We want to partner with you to support this endeavor.
@@ -41,7 +39,7 @@ Put responsible AI into practice with these guidelines, designed to help you ant
 - [Conversational AI guidelines](https://www.microsoft.com/research/publication/responsible-bots/)
 - [Inclusive design guidelines](https://www.microsoft.com/design/inclusive/)
 - [AI fairness checklist](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4t6dA)
-- [Datasheets for datasets template](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4t8QB)
+- [`Datasheets for Datasets` template](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4t8QB)
 - [AI security engineering guidance](https://blogs.microsoft.com/on-the-issues/2019/12/06/ai-machine-learning-security/)
 
 ## Tools for responsible AI

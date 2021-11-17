@@ -11,8 +11,6 @@ ms.localizationpriority: high
 ms.custom: think-tank, fasttrack-new, AQC
 ---
 
-<!-- cSpell:ignore MSPs -->
-
 # Get assistance
 
 We know that getting the right support at the right time will accelerate your migration efforts. Review the assistance avenues below to meet your needs.

@@ -10,8 +10,6 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-<!-- cspell:ignore datamanagement datalandingzone -->
-
 # Identity and access management for data management and analytics
 
 This article examines design considerations and recommendations for identity and access management. It focuses on the deployment of a data management and analytic platform on Microsoft Azure. Since data management and analytics is a mission-critical element, the guidance on the enterprise-scale design areas should also be included in your design.
@@ -47,7 +45,7 @@ For automation purposes of deploying data landing zones, you need these roles:
         Deploy all private DNS zones for all data services into a single subscription and resource group. The service principal needs to be `Private DNS Zone Contributor` on the global DNS resource group that was created during the data management zone deployment. This role is required to deploy A-records for the private endpoints.
     :::column-end:::
     :::column span="2":::
-        (Resource group scope) `/subscriptions/{{datamanagement}subscriptionId}/resourceGroups/{resourceGroupName}`
+        (Resource group scope) `/subscriptions/{{dataManagement}subscriptionId}/resourceGroups/{resourceGroupName}`
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -58,7 +56,7 @@ For automation purposes of deploying data landing zones, you need these roles:
         In order to set up virtual network peering between the data landing zone network and the data management landing zone network, the service principal needs `Network Contributor` access rights on the resource group of the remote virtual network.
     :::column-end:::
     :::column span="2":::
-        (Resource group scope) `/subscriptions/{{datamanagement}subscriptionId}/resourceGroups/{resourceGroupName}`
+        (Resource group scope) `/subscriptions/{{dataManagement}subscriptionId}/resourceGroups/{resourceGroupName}`
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -69,7 +67,7 @@ For automation purposes of deploying data landing zones, you need these roles:
         This permission is required to share the self-hosted integration runtime that gets deployed into the `integration-rg` resource group with other data factories. It's also required to assign the Azure Data Factory and Azure Synapse Analytics managed identities access on the respective storage account file systems.
     :::column-end:::
     :::column span="2":::
-        (Resource scope) `/subscriptions/{{datalandingzone}subscriptionId}`
+        (Resource scope) `/subscriptions/{{dataLandingZone}subscriptionId}`
     :::column-end:::
 :::row-end:::
 

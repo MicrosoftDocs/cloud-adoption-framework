@@ -391,11 +391,6 @@
          "redirect_document_id": true
       },
       {
-         "source_path": "docs/ready/enterprise-scale/faq.md",
-         "redirect_url": "/azure/cloud-adoption-framework/ready/enterprise-scale/index",
-         "redirect_document_id": false
-      },
-      {
          "source_path": "docs/ready/enterprise-scale/implementation-guidelines.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/enterprise-scale/implementation",
          "redirect_document_id": true
@@ -439,6 +434,11 @@
          "source_path": "docs/reference/fundamental-concepts/hosting-hierarchy.md",
          "redirect_url": "/azure/cloud-adoption-framework/resources/fundamental-concepts/hosting-hierarchy",
          "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/scenarios/data-management/eslz-deployment-templates.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/data-management/architectures/deployment-templates",
+         "redirect_document_id": false
       },
       {
          "source_path": "docs/reference/migration-with-enterprise-scaffold.md",

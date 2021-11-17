@@ -23,7 +23,7 @@ The data platform operations team is responsible for deploying a data management
 
 Teams can use templates provided by the data platform operations team to avoid starting from scratch for each asset. We recommend a forking pattern to automate the deployment of a new landing zone.
 
-For example, a data landing zone operations team requests a new data landing zone using an IT management tool or [Power Apps](https://azure.microsoft.com/products/powerapps/). Upon approval of the request, start the following workflow using parameters from the request:
+For example, a data landing zone operations team requests a new data landing zone using an IT management tool or [Power Apps](https://powerapps.microsoft.com/). Upon approval of the request, start the following workflow using parameters from the request:
 
 1. Deploy a new subscription for the new data landing zone.
 1. Fork the main branch of the data landing zone template to create a new repository.
@@ -64,7 +64,7 @@ There are no Git APIs available to clone/update/commit/push in the proposed auto
 
 The runbooks use Git functions from the [`GitAutomation`](https://github.com/webmd-health-services/GitAutomation) PowerShell module for working with Git repositories. By installing this module inside an Azure Automation account, users can do create, clone, query, push, pull, and commit operations in Git repositories. The following image shows the `GitAutomation` module installed inside an Azure Automation account:
 
-:::image type="content" source="./images/git-automation.png" alt-text="Diagram of GitAutomation Module for working with Git repositories." lightbox="./images/git-automation.png":::
+:::image type="content" source="./images/git-automation.png" alt-text="Diagram of `GitAutomation` module for working with Git repositories." lightbox="./images/git-automation.png":::
 
 Use the `Copy-GitRepository` function from the `GitAutomation` module to clone the main Git repository from the URL specified by `URL` to the data platform Git path specified by `DestinationPath`.
 
@@ -124,5 +124,5 @@ To control the deployment of data integration and data product services, follow 
 
 ## Next steps
 
-- [Deployment templates for enterprise-scale for analytics and AI deployments](./eslz-deployment-templates.md)
+- [Deployment templates for enterprise-scale for analytics and AI deployments](./architectures/deployment-templates.md)
 - [An introduction to Azure Automation](/azure/automation/automation-intro)

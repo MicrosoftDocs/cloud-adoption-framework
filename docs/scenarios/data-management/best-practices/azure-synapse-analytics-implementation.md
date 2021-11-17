@@ -27,9 +27,9 @@ Azure Synapse studio is a tool in Azure Synapse that provides a unified experien
 
 During the initial setup of a [data landing zone](../architectures/data-landing-zone.md), you can deploy a single Azure Synapse Analytics workspace for use by all analysts and data scientists. You can create more workspaces for specific data integrations or data products.
 
-Use Azure SQL Database pools, formerly SQL data warehouse, as the data store for both enriched and curated data. This data store serves the data science team's need for feature datasets and datasets for analytical requirements. Azure Databricks can connect to these SQL pools and update the data, which is in the SQL pools.
+Use Azure SQL Database elastic pools as the data store for both enriched and curated data. This data store serves the data science team's need for feature datasets and datasets for analytical requirements. Azure Databricks can connect to these elastic pools and update the data in the pools.
 
-Azure SQL Database on-demand is a serverless query service that's used by data scientists and engineers to run queries against files in the storage accounts.
+Azure SQL Database on-demand is a serverless query service used by data scientists and engineers to run queries against files in the storage accounts.
 
 > [!TIP]
 > You might need additional Azure Synapse Analytics workspaces if your data integration needs to provide access to the golden source with row-level and column-level security. You can provide these workspaces with Azure Synapse pools. Data products teams might require their own workspace for creating data products and a separate workspace that's only for product teams with scoped development access.
@@ -59,11 +59,11 @@ For example, row-level security ensures that users in a specific data integratio
 You can combine row-level security with column-level security to restrict access to columns with sensitive data. This way, both row-level security and column-level security apply the access restriction logic at the database tier rather than the application tier. The permission is evaluated every time data access is attempted from any tier.
 
 > [!TIP]
-> We recommend that features such as Azure Defender for SQL, data classification, data encryption, and dynamic data masking are available for SQL pool to support data protection and limit sensitive data exposure.
+> We recommend that features such as Microsoft Defender for SQL, data classification, data encryption, and dynamic data masking are available for SQL pool to support data protection and limit sensitive data exposure.
 
 ### Azure Synapse data access control in Azure Data Lake
 
-When deploying an Azure Synapse Analytics workspace, you need an Azure Data Lake Storage account from the subscription or by manually using the storage account URL. The specified storage account is set as **primary** for the deployed Azure Synapse workspace to store its data. Azure Synapse stores data in a container that includes Apache Spark tables and Spark application logs in a folder called `/synapse/{workspacename}`. It also has a container for managing any libraries that you choose to install.
+When deploying an Azure Synapse Analytics workspace, you need an Azure Data Lake Storage account from the subscription or by manually using the storage account URL. The specified storage account is set as **primary** for the deployed Azure Synapse workspace to store its data. Azure Synapse stores data in a container that includes Apache Spark tables and Spark application logs in a folder called `/synapse/{workspaceName}`. It also has a container for managing any libraries that you choose to install.
 
 During the Azure Synapse workspace deployment through [Azure portal](https://ms.portal.azure.com/), you can either provide an existing storage account or create a new one. The provided storage account is set as the primary storage account for the Azure Synapse workspace. For either account option, the deployment process automatically grants the Azure Synapse workspace identity data access to the specified Data Lake Storage account using the Storage Blob Data Contributor role. If the deployment of Azure Synapse workspace happens outside of the Azure portal, you need to manually add an Azure Synapse workspace identity to the Storage Blob Data Contributor role later. We recommend assigning the role Storage Blob Data Contributor on the file system level to follow the least privilege principle.
 

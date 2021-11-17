@@ -1,14 +1,9 @@
-# docsTest:ignore "NET Core" "Cloud Operating Model" "Virtual Datacenter" Framework app
-#cSpell:ignore devtest mariadb
-
 items:
   - name: Hybrid and multicloud - Microsoft Cloud Adoption Framework for Azure
-    href: scenario-overview.md
+    href: index.md
     pdf_name: Hybrid and multicloud - Microsoft Cloud Adoption Framework for Azure
   - name: Overview
     items:
-    - name: Intro to hybrid and multicloud
-      href: index.md
     - name: Intro to unified operations
       href: unified-operations.md
     - name: Azure products
@@ -81,7 +76,7 @@ items:
         href: /azure/architecture/solution-ideas/articles/ai-at-the-edge-disconnected?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
       - name: Azure Functions in a hybrid environment
         href: /azure/architecture/hybrid/azure-functions-hybrid?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
-      - name: Robo application example on Azure Stack HCI
+      - name: ROBO application example on Azure Stack HCI
         href: /azure/architecture/hybrid/azure-stack-robo?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
       - name: Run containers in a hybrid environment
         href: /azure/architecture/hybrid/hybrid-containers?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
@@ -156,9 +151,9 @@ items:
 
     - name: Security
       items:
-      - name: Hybrid security monitoring using Azure Security Center and Azure Sentinel
+      - name: Hybrid security monitoring using Microsoft Defender for Cloud and Microsoft Sentinel
         href: /azure/architecture/hybrid/hybrid-security-monitoring?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
-      - name: Hybrid security monitoring using Azure Security Center and Azure Sentinel
+      - name: Hybrid security monitoring using Microsoft Defender for Cloud and Microsoft Sentinel
         href: /azure/architecture/solution-ideas/articles/devsecops-in-azure?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
 
     - name: Environmental readiness

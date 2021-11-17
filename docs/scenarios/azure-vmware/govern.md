@@ -28,7 +28,7 @@ All provisioned private clouds have vCenter Server, vSAN, vSphere, and NSX-T, so
 
 VMware vSphere clusters reside on top of "share nothing" hyper-converged, bare-metal infrastructure. Azure VMware cluster architecture is dedicated and isolated - meaning that networking, storage, or compute is not shared with any other tenant. VSphere clusters are managed by Microsoft to meet performance, availability, security, and compliance requirements, at scale in Azure, providing unified management, networking, and operational controls.
 
-Because Azure VMware Solution run hybrid workloads across on-premises and private cloud, unified operations is the best approach to providing a single pane of glass for incrementally deploying required governance and operational management controls. Read the [introduction to unified operations](/azure/cloud-adoption-framework/scenarios/hybrid/unified-operations) to get started.
+Because Azure VMware Solution run hybrid workloads across on-premises and private cloud, unified operations is the best approach to providing a single pane of glass for incrementally deploying required governance and operational management controls. Read the [introduction to unified operations](../hybrid/unified-operations.md) to get started.
 
 ## Unified security and compliance
 
@@ -54,12 +54,12 @@ Integrating with Azure-native services in your Azure VMware Solution private clo
 
 ### Unified operational management controls
 
-We recommend a [unified operations](/azure/cloud-adoption-framework/scenarios/hybrid/unified-operations) approach, so you can extend consistent Azure governance and operational management controls across your vSphere cluster, and seamlessly modernize your VMware workloads with native Azure services.
+We recommend a [unified operations](../hybrid/unified-operations.md) approach, so you can extend consistent Azure governance and operational management controls across your vSphere cluster, and seamlessly modernize your VMware workloads with native Azure services.
 
 Azure Resource Manager (ARM) is the operating system of Azure that, stretching across VMware resources, extends Azure-native governance and operational management controls across clusters, resource pools, and private clouds. For more information, see:
 
 - [Monitor and protect VMs with Azure native services](/azure/azure-vmware/integrate-azure-native-services)
-- [Integrate security solutions in Azure Security Center](/azure/azure-vmware/azure-security-integration)
+- [Integrate security solutions in Microsoft Defender for Cloud](/azure/azure-vmware/azure-security-integration)
 - [Integrate Azure NetApp Files with Azure VMware Solution](/azure/azure-vmware/netapp-files-with-azure-vmware-solution)
 - [Protect web apps on Azure VMware Solution with Azure Application Gateway](/azure/azure-vmware/protect-azure-vmware-solution-with-application-gateway)
 - [Deploy Traffic Manager to balance Azure VMware Solution workloads](/azure/azure-vmware/deploy-traffic-manager-balance-workloads)
@@ -93,7 +93,7 @@ These are the main focus areas of governance in an initial Azure VMware Solution
 - [Azure Monitor overview](/azure/azure-monitor/overview)
 - [Create a Log Analytics workspace in the Azure portal](/azure/azure-monitor/logs/quick-create-workspace)
 - [Extended security updates](/lifecycle/faq/extended-security-updates)
-- [Security alerts and incidents in Azure Security Center](/azure/security-center/security-center-alerts-overview)
+- [Security alerts and incidents in Microsoft Defender for Cloud](/azure/security-center/security-center-alerts-overview)
 - [Identity governance and administration solutions](/azure/active-directory/governance/identity-governance-overview)
 
 We recommend you implement an Azure VMware Solution that's secure, and that includes solid governance in your environment for the whole lifecycle. This will help your organization meet compliance requirements, and explore recommended design elements during your implementation.

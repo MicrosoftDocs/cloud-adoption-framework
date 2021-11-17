@@ -145,7 +145,7 @@ Policies and initiatives are powerful Azure tools. Policies allow companies to p
 
 Initiatives provide enterprises the ability to group logical policies and track them as a single entity. Initiatives help the enterprise address the needs of both agile and traditional workloads. Common uses of initiatives include:
 
-- **Enable monitoring in Azure Security Center.** This is a default initiative in the Azure Policy and an excellent example of what initiatives are. It enables policies that identify unencrypted SQL databases, virtual machine (VM) vulnerabilities, and more common security-related needs.
+- **Enable monitoring in Microsoft Defender for Cloud.** This is a default initiative in the Azure Policy and an excellent example of what initiatives are. It enables policies that identify unencrypted SQL databases, virtual machine (VM) vulnerabilities, and more common security-related needs.
 - **Regulatory-specific initiative.** Enterprises often group policies common to a regulatory requirement (such as HIPAA) so that controls and compliancy to those controls are tracked efficiently.
 - **Resource types and SKUs.** Creating an initiative that restricts the types of resources that can be deployed as well as the SKUs that can be deployed can help to control costs and ensure your organization is only deploying resources that your team has the skill set and procedures to support.
 
@@ -171,7 +171,7 @@ When Azure was originally released, access controls to a subscription were basic
 When implementing Azure role-based access control, the following practices are highly recommended:
 
 - Control the Administrator and Co-Administrator roles of a subscription, since these roles have extensive permissions. You only need to add the subscription owner as a Co-Administrator if they need to managed Azure classic deployments.
-- Use management groups to assign [roles](/azure/azure-resource-manager/management-groups-overview#management-group-access) across multiple subscriptions and reduce the burden of managing them at the subscription level.
+- Use management groups to assign [roles](/azure/governance/management-groups/overview#management-group-access) across multiple subscriptions and reduce the burden of managing them at the subscription level.
 - Add Azure users to a group (for example, `Application X Owners`) in Active Directory. Use the synchronized group to provide group members the appropriate rights to manage the resource group containing the application.
 - Follow the principle of granting the **least privilege** required to do the expected work.
 
@@ -184,11 +184,11 @@ Planning and preparing for your identity and access controls and following [Azur
 
 One of the biggest blockers to cloud adoption traditionally has been concerns over security. IT risk managers and security departments need to ensure that resources in Azure are protected and secure by default. Azure provides capabilities you can use to protect resources while detecting and eliminating threats against those resources.
 
-### Azure Security Center
+### Microsoft Defender for Cloud
 
-The [Azure Security Center](/azure/security-center/security-center-introduction) provides a unified view of the security status of resources across your environment in addition to advanced threat protection. Azure Security Center is an open platform that enables Microsoft partners to create software that plugs into and enhance its capabilities. The baseline capabilities of the Free tier of Azure Security Center provide assessment and recommendations that enhance your security posture. Its paid tiers enable additional and valuable capabilities such as just-in-time privileged access and adaptive application controls (allow lists).
+[Microsoft Defender for Cloud](/azure/security-center/security-center-introduction) provides a unified view of the security status of resources across your environment in addition to advanced threat protection. Defender for Cloud is an open platform that enables Microsoft partners to create software that plugs into and enhance its capabilities. The baseline capabilities of the Free tier of Defender for Cloud provide assessment and recommendations that enhance your security posture. Its paid tiers enable additional and valuable capabilities such as just-in-time privileged access and adaptive application controls (allow lists).
 > [!TIP]
-> Azure Security Center is a powerful tool that is regularly improved with new capabilities you can use to detect threats and protect your enterprise. It's highly recommended to always enable Azure Security Center.
+> Defender for Cloud is a powerful tool that is regularly improved with new capabilities you can use to detect threats and protect your enterprise. It's highly recommended to always enable Defender for Cloud.
 
 ### Locks for Azure resources
 
@@ -249,7 +249,7 @@ This information can be viewed and acted on at multiple levels and are continual
 
 ### Deep infrastructure monitoring
 
-- **Log Analytics:** Log Analytics plays a central role in Azure monitoring by collecting telemetry and other data from a variety of sources and providing a query language and analytics engine that gives you insights into the operation of your applications and resources. You can either interact directly with Log Analytics data through fast log searches and views, or you may use analysis tools in other Azure services that store their data in Log Analytics such as Application Insights or Azure Security Center.
+- **Log Analytics:** Log Analytics plays a central role in Azure monitoring by collecting telemetry and other data from a variety of sources and providing a query language and analytics engine that gives you insights into the operation of your applications and resources. You can either interact directly with Log Analytics data through fast log searches and views, or you may use analysis tools in other Azure services that store their data in Log Analytics such as Application Insights or Microsoft Defender for Cloud.
 
 - **Network monitoring:** Azure's network monitoring services enable you to gain insight into network traffic flow, performance, security, connectivity, and bottlenecks. A well-planned network design should include configuring Azure network monitoring services such as Network Watcher and ExpressRoute Monitor.
 

@@ -10,8 +10,6 @@ ms.subservice: migrate
 ms.custom: think-tank
 ---
 
-<!-- cSpell:ignore mysqldump InnoDB binlog Navicat -->
-
 # Migrate MySQL databases to Azure
 
 This article demonstrates how the fictional company Contoso planned and migrated its on-premises MySQL open-source database platform to Azure.
@@ -24,6 +22,9 @@ The IT leadership team has worked closely with business partners to understand w
 - **Increase efficiency.** Contoso needs to remove unnecessary procedures and streamline processes for developers and users. The business needs IT to be fast and not waste time or money to deliver faster on customer requirements.
 - **Increase agility.** Contoso IT needs to be more responsive to the needs of the business. It must react faster than the changes in the marketplace to enable success in a global economy. It mustn't become a business blocker.
 - **Scale.** As the business grows successfully, Contoso IT must provide systems that grow at the same pace.
+
+> [!NOTE]
+> For detailed guidance on migrations to Azure Database for MySQL with labs, see [Azure MySQL Migration Guide](https://aka.ms/migrate/mysql). 
 
 ## Migration goals
 
@@ -109,13 +110,25 @@ Contoso admins migrate the database by using Azure Database Migration Service an
 As a summary, they must do the following tasks:
 
 - Ensure all migration prerequisites are met:
+
   - The MySQL database server source must match the version that Azure Database for MySQL supports. Azure Database for MySQL supports MySQL Community Edition, the InnoDB storage engine, and migration across source and target with the same versions.
-  - Enable binary logging in `my.ini` (Windows) or `my.cnf` (Unix). Failure to enable binary logging causes the following error in the Migration Wizard: `Error in binary logging. Variable binlog_row_image has value 'minimal'. Please change it to 'full'.` For more information, see the [MySQL documentation](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html).
+
+  - Enable binary logging in `my.ini` (Windows) or `my.cnf` (Unix). Failure to enable binary logging causes the following error in the Migration Wizard:
+  
+    `Error in binary logging. Variable binlog_row_image has value 'minimal'. Please change it to 'full'.`
+
+    For more information, see [Binary logging options and variables](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html) in the MySQL documentation.
+
   - User must have the `ReplicationAdmin` role.
+
   - Migrate the database schemas without foreign keys and triggers.
+
 - Create a virtual network that connects via ExpressRoute or a VPN to your on-premises network.
+
 - Create an Azure Database Migration Service instance with a `Premium` SKU that's connected to the virtual network.
+
 - Ensure that the instance can access the MySQL database via the virtual network. Make sure that all incoming ports are allowed from Azure to MySQL at the virtual network level, the network VPN, and the machine that hosts MySQL.
+
 - Create a new Database Migration Service project:
 
   ![Screenshot shows how to create a new Database Migration Service project](./media/contoso-migration-mysql-to-azure/migration-dms-new-project.png)

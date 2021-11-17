@@ -52,7 +52,7 @@ Consider the following factors when deciding which systems, users, or devices ca
 
 - **Controlled vCenter access:** Uncontrolled access to the Azure VMware Solution vCenter can increase attack surface area. Use a dedicated privileged access workstation (PAW) to securely access Azure VMware Solution vCenter and NSX Manager. Create a user group and add individual user account to this user group.
 
-- **Inbound internet request logging for guest workloads:** Use Azure Firewall or an approved NVA that maintains audit logs for incoming requests to guest VMs. Import those logs into your security incident and event management (SIEM) solution for appropriate monitoring and alerting. Use Azure Sentinel to process Azure event information and logging before integration into existing SIEM solutions. For more information, see [Integrate Azure Security Center with Azure VMware Solution](/azure/azure-vmware/azure-security-integration).
+- **Inbound internet request logging for guest workloads:** Use Azure Firewall or an approved NVA that maintains audit logs for incoming requests to guest VMs. Import those logs into your security incident and event management (SIEM) solution for appropriate monitoring and alerting. Use Microsoft Sentinel to process Azure event information and logging before integration into existing SIEM solutions. For more information, see [Integrate Microsoft Defender for Cloud with Azure VMware Solution](/azure/azure-vmware/azure-security-integration).
 
 - **Session monitoring for outbound internet connection security:** Use rule control or session auditing of outbound internet connectivity from Azure VMware Solution to identify unexpected or suspicious outbound internet activity. Decide when and where to position outbound network inspection to ensure maximum security. For more information, see [Enterprise-scale network topology and connectivity for Azure VMware Solution](./eslz-network-topology-connectivity.md).
 
@@ -66,15 +66,15 @@ Consider the following factors when deciding which systems, users, or devices ca
 
 ### Guest application and VM security
 
-- **Advanced threat detection:** To prevent various security risks and data breaches, use endpoint security protection, security alert configuration, change control processes, and vulnerability assessments. You can use Azure Security Center for threat management, endpoint protection, security alerting, OS patching, and a centralized view into regulatory compliance enforcement. For more information, see [Integrate Azure Security Center with Azure VMware Solution](/azure/azure-vmware/azure-security-integration).
+- **Advanced threat detection:** To prevent various security risks and data breaches, use endpoint security protection, security alert configuration, change control processes, and vulnerability assessments. You can use Microsoft Defender for Cloud for threat management, endpoint protection, security alerting, OS patching, and a centralized view into regulatory compliance enforcement. For more information, see [Integrate Microsoft Defender for Cloud with Azure VMware Solution](/azure/azure-vmware/azure-security-integration).
 
-  Use Azure Arc for servers to onboard your guest VMs. Once onboarded, use Azure Log Analytics, Azure Monitor, and Azure Security Center to collect logs and metrics and create dashboards and alerts. Use Microsoft Defender Security Center to protect and alert on threats associated with VM guests. For more information, see [Integrate and deploy Azure native services in Azure VMware Solution](/azure/azure-vmware/integrate-azure-native-services#onboard-vms-to-azure-arc-enabled-servers).
+  Use Azure Arc for servers to onboard your guest VMs. Once onboarded, use Azure Log Analytics, Azure Monitor, and Microsoft Defender for Cloud to collect logs and metrics and create dashboards and alerts. Use Microsoft Defender Security Center to protect and alert on threats associated with VM guests. For more information, see [Integrate and deploy Azure native services in Azure VMware Solution](/azure/azure-vmware/integrate-azure-native-services#onboard-vms-to-azure-arc-enabled-servers).
 
-  Deploy the Log Analytics agent on VMware VMs before starting a migration, or when deploying new guest VMs. Configure the MMA agent to send metrics and logs to an Azure Log Analytics workspace. After the migration, verify that the Azure VMware Solution VM reports alerts in Azure Monitor and Azure Security Center.
+  Deploy the Log Analytics agent on VMware VMs before starting a migration, or when deploying new guest VMs. Configure the MMA agent to send metrics and logs to an Azure Log Analytics workspace. After the migration, verify that the Azure VMware Solution VM reports alerts in Azure Monitor and Microsoft Defender for Cloud.
 
   Alternatively, use a solution from an Azure VMware Solution certified partner to assess VM security postures and provide regulatory compliance against Center for Internet Security (CIS) requirements.
 
-- **Security analytics:** Use cohesive security event collection, correlation, and analytics from Azure VMware Solution VMs and other sources to detect cyberattacks. Use Azure Security Center as a data source for Azure Sentinel. Configure Azure Defender for Storage, Azure Resource Manager, Domain Name System (DNS), and other Azure services related to Azure VMware Solution deployment. Consider using an Azure VMware Solution data connector from a certified partner.
+- **Security analytics:** Use cohesive security event collection, correlation, and analytics from Azure VMware Solution VMs and other sources to detect cyberattacks. Use Microsoft Defender for Cloud as a data source for Microsoft Sentinel. Configure Microsoft Defender for Storage, Azure Resource Manager, Domain Name System (DNS), and other Azure services related to Azure VMware Solution deployment. Consider using an Azure VMware Solution data connector from a certified partner.
 
 - **Guest VM encryption:** Azure VMware Solution provides data-at-rest encryption for the underlying vSAN storage platform. Some workloads and environments with file system access might require more encryption to protect data. In these situations, consider enabling encryption of the guest VM operating system (OS) and data. Use the [native guest OS encryption](/azure/virtual-machines/windows/disk-encryption-overview) tools to encrypt guest VMs. Use Azure Key Vault to store and protect the encryption keys.
 
@@ -86,7 +86,7 @@ Consider the following factors when deciding which systems, users, or devices ca
 
 - **Extended Security Update (ESU) keys:** Provide and configure ESU keys to push and install security updates on Azure VMware Solution VMs. Use the Volume Activation Management Tool for configuring ESU keys for the Azure VMware Solution cluster. For more information, see [Obtaining Extended Security Updates for eligible Windows devices](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/obtaining-extended-security-updates-for-eligible-windows-devices/ba-p/1167091).
 
-- **Code security:** Implement security measure in DevOps workflows to prevent security vulnerabilities in Azure VMware Solution workloads. Use modern authentication and authorization workflows such as Open Authorization (OAuth) and OpenID Connect (OIDC).
+- **Code security:** Implement security measure in DevOps workflows to prevent security vulnerabilities in Azure VMware Solution workloads. Use modern authentication and authorization workflows such as Open Authorization (OAuth) and OpenID Connect.
 
   Use [GitHub Enterprise Server on Azure VMware Solution](/azure/azure-vmware/configure-github-enterprise-server) for a versioned repository that ensures the integrity of the code base. Deploy build and run agents either in Azure VMware Solution or in a secure Azure environment.
 
@@ -120,7 +120,7 @@ Consider implementing the following recommendations when planning for environmen
 
 Security posture awareness for Azure VMware Solution guest VMs helps you understand cybersecurity readiness and response and provide complete security coverage for guest VMs and applications.
 
-- **Enable [Azure Defender](/azure/security-center/azure-defender)** in Azure Security Center for running Azure services and Azure VMware Solution guest VM workloads.
+- **Enable [Microsoft Defender for Cloud](/azure/security-center/azure-defender)** for running Azure services and Azure VMware Solution guest VM workloads.
 
 - **Use [Azure Arc enabled servers](/azure/azure-arc/servers/overview)** to manage Azure VMware Solution guest VMs with tools that replicate Azure native resource tooling, including:
 
@@ -149,7 +149,7 @@ Security posture awareness for Azure VMware Solution guest VMs helps you underst
 
 Consider and implement the following recommendations when planning for Azure VMware Solution environment and guest VM compliance.
 
-- **Azure Security Center monitoring:** Use Azure Security Center's regulatory compliance view to monitor compliance against security and regulatory benchmarks. Configure Azure Security Center workflow automation to track any deviation from the expected compliance posture. For more information, see the [Azure Security Center documentation](/azure/security-center/security-center-introduction).
+- **Microsoft Defender for Cloud monitoring:** Use regulatory compliance view in Defender for Cloud to monitor compliance with security and regulatory benchmarks. Configure Defender for Cloud workflow automation to track any deviation from the expected compliance posture. For more information, see [Microsoft Defender for Cloud overview](/azure/security-center/security-center-introduction).
 
 - **Guest VM DR compliance:** Track DR configuration compliance for Azure VMware Solution guest VMs to ensure that their mission-critical applications and workloads remain available during a disaster. Use Azure Site Recovery or an Azure VMware Solution certified BCDR solution, which provides at-scale replication provisioning, noncompliance status monitoring, and automatic remediation.
 

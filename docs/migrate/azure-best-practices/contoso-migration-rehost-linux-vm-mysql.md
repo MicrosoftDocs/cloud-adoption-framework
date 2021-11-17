@@ -10,8 +10,6 @@ ms.subservice: migrate
 ms.custom: think-tank
 ---
 
-<!-- cSpell:ignore OSTICKETWEB OSTICKETMYSQL contosohost vcenter contosodc contosoosticket osticket InnoDB binlog systemctl NSGs -->
-
 # Rehost an on-premises Linux application to Azure VMs and Azure Database for MySQL
 
 This article shows how the fictional company Contoso rehosts a two-tier [LAMP-based](https://wikipedia.org/wiki/LAMP_software_bundle) application and migrates it from on-premises to Azure by using Azure Virtual Machines (VMs) and Azure Database for MySQL.
@@ -30,7 +28,7 @@ The IT leadership team has worked closely with business partners to understand w
 
 The Contoso cloud team has pinned down goals for this migration to determine the best migration method:
 
-- After migration, the application in Azure should have the same performance capabilities as it does today in the company's on-premises VMware environment. The application will remain as critical in the cloud as it is on-premises.
+- After migration, the application in Azure should have the same performance capabilities as it does today in the company's on-premises VMware environment. The application will remain as critical in the cloud as it's been on-premises.
 - Contoso doesn't want to invest in this application. It's important to the business, but in its current form Contoso simply wants to move it safely to the cloud.
 - Having completed a couple of Windows application migrations, Contoso wants to learn how to use a Linux-based infrastructure in Azure.
 - Contoso wants to minimize database admin tasks after the application is moved to the cloud.
@@ -116,9 +114,9 @@ To set up the components, Contoso admins follow these steps:
 
 1. Provision the Azure Migrate: Server Migration tool.
 
-    1. From Azure Migrate, download the OVA image, and import it into VMware.
+    1. From Azure Migrate, download the `.OVA` image file, and import it into VMware.
 
-        ![Screenshot that shows downloading the OVA file.](./media/contoso-migration-rehost-vm/migration-download-ova.png)
+        ![Screenshot that shows downloading the O V A file.](./media/contoso-migration-rehost-vm/migration-download-ova.png)
 
     1. Start the imported image, and configure the tool by using the following steps:
 
@@ -165,13 +163,13 @@ With discovery finished, they can begin replication of the application VM to Azu
 
 1. In the Azure Migrate project, go to **Servers** > **Azure Migrate: Server Migration**, and select **Replicate**.
 
-    ![Screenshot that shows the Replicate option.](./media/contoso-migration-rehost-linux-vm/select-replicate.png)
+    ![Screenshot that shows the **Replicate** option.](./media/contoso-migration-rehost-linux-vm/select-replicate.png)
 
 1. In **Replicate** > **Source settings** > **Are your machines virtualized?**, select **Yes, with VMware vSphere**.
 
 1. In **On-premises appliance**, select the name of the Azure Migrate appliance that you set up, and then select **OK**.
 
-    ![Screenshot that shows the Source settings tab.](./media/contoso-migration-rehost-linux-vm/source-settings.png)
+    ![Screenshot that shows the **Source settings** tab.](./media/contoso-migration-rehost-linux-vm/source-settings.png)
 
 1. In **Virtual machines**, select the machines you want to replicate:
     - If you've run an assessment for the VMs, you can apply VM sizing and disk type (premium/standard) recommendations from the assessment results. In **Import migration settings from an Azure Migrate assessment?**, select the **Yes** option.
@@ -190,11 +188,11 @@ With discovery finished, they can begin replication of the application VM to Azu
 
 1. In **Compute**, review the VM name, size, OS disk type, and availability set. VMs must conform with [Azure requirements](/azure/migrate/migrate-support-matrix-vmware#vmware-requirements).
 
-    - **VM size:** If you use assessment recommendations, the VM size drop-down list contains the recommended size. Otherwise, Azure Migrate picks a size based on the closest match in the Azure subscription. Alternatively, pick a manual size in **Azure VM size**.
+    - **VM size:** If you use assessment recommendations, the VM size dropdown list contains the recommended size. Otherwise, Azure Migrate picks a size based on the closest match in the Azure subscription. Alternatively, pick a manual size in **Azure VM size**.
     - **OS disk:** Specify the OS (boot) disk for the VM. The OS disk is the disk that has the operating system bootloader and installer.
     - **Availability set:** If the VM should be in an Azure availability set after migration, specify the set. The set must be in the target resource group you specify for the migration.
 
-1. In **Disks**, specify whether the VM disks should be replicated to Azure. Then select the disk type (standard SSD/HDD or premium-managed disks) in Azure, and select **Next**.
+1. In **Disks**, specify whether the VM disks should be replicated to Azure. Then select the disk type (Standard SSD/HDD or Premium SSD) in Azure, and select **Next**.
     - You can exclude disks from replication.
     - If you exclude disks, they won't be present on the Azure VM after migration.
 
@@ -211,18 +209,18 @@ Contoso admins run a quick test migration and then a full migration to move the 
 
 1. In **Migration goals** > **Servers** > **Azure Migrate: Server Migration**, select **Test migrated servers**.
 
-     ![Screenshot that shows the Test migrated servers option.](./media/contoso-migration-rehost-linux-vm/test-migrated-servers.png)
+     ![Screenshot that shows the **Test migrated servers** option.](./media/contoso-migration-rehost-linux-vm/test-migrated-servers.png)
 
 1. Select and hold (or right-click) the VM to test, and then select **Test migrate**.
 
-    ![Screenshot that shows the Test migrate item.](./media/contoso-migration-rehost-linux-vm/test-migrate.png)
+    ![Screenshot that shows the **Test migrate** item.](./media/contoso-migration-rehost-linux-vm/test-migrate.png)
 
 1. In **Test Migration**, select the Azure virtual network in which the Azure VM will be located after the migration. We recommend you use a nonproduction virtual network.
 1. The **Test migration** job starts. Monitor the job in the portal notifications.
 1. After the migration finishes, view the migrated Azure VM in **Virtual Machines** in the Azure portal. The machine name has a suffix **-Test**.
 1. After the test is done, select and hold (or right-click) the Azure VM in **Replicating machines**. Then select **Clean up test migration**.
 
-    ![Screenshot that shows the Clean up test migration item.](./media/contoso-migration-rehost-linux-vm/clean-up.png)
+    ![Screenshot that shows the **Clean up test migration** item.](./media/contoso-migration-rehost-linux-vm/clean-up.png)
 
 ### Migrate the VM
 
@@ -230,7 +228,7 @@ Now Contoso admins run a full migration to complete the move.
 
 1. In the Azure Migrate project, go to **Servers** > **Azure Migrate: Server Migration**, and select **Replicating servers**.
 
-    ![Screenshot that shows the Replicating servers option.](./media/contoso-migration-rehost-linux-vm/replicating-servers.png)
+    ![Screenshot that shows the **Replicating servers** option.](./media/contoso-migration-rehost-linux-vm/replicating-servers.png)
 
 1. In **Replicating machines**, select and hold (or right-click) the VM, and then select **Migrate**.
 1. In **Migrate** > **Shut down virtual machines and perform a planned migration with no data loss**, select **Yes** > **OK**.
@@ -254,7 +252,7 @@ Contoso admins provision a MySQL database instance in the primary region (`East 
 
 1. For **Backup Redundancy Options**, select **Geo-Redundant**. This option allows you to restore the database in the secondary region (`Central US`) if an outage occurs. You can configure this option only when you provision the database.
 
-     ![Screenshot that shows the Geo-Redundant option.](./media/contoso-migration-rehost-linux-vm-mysql/db-redundancy.png)
+     ![Screenshot that shows the **Geo-Redundant** option.](./media/contoso-migration-rehost-linux-vm-mysql/db-redundancy.png)
 
 1. In the `VNET-PROD-EUS2` network, go to **Service endpoints**, and add a service endpoint (a database subnet) for the SQL service.
 
@@ -281,35 +279,46 @@ Contoso admins migrate the database via Database Migration Service by following 
 As a summary, Contoso admins must perform the following tasks:
 
 - Ensure all migration prerequisites are met:
+
   - The MySQL server database source must match the version that Azure Database for MySQL supports. Azure Database for MySQL supports MySQL Community Edition, the InnoDB storage engine, and migration across the source and target with the same versions.
-  - Enable binary logging in `my.ini` (Windows) or `my.cnf` (Unix). Failure to do so will cause the following error in the Migration Wizard: `Error in binary logging. Variable binlog_row_image has value 'minimal.' Please change it to 'full.'` For more information, see the [MySQL documentation](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html).
+
+  - Enable binary logging in `my.ini` (Windows) or `my.cnf` (Unix). Failure to do so will cause the following error in the Migration Wizard: `Error in binary logging. Variable binlog_row_image has value 'minimal.' Please change it to 'full.'`
+
+    For more information, see [Binary logging options and variables](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html) in the MySQL documentation.
+
   - User must have `ReplicationAdmin` role.
+
   - Migrate the database schemas without foreign keys and triggers.
+
 - Create a virtual network that connects via Azure ExpressRoute or a VPN to your on-premises network.
+
 - Create a Database Migration Service instance by using a `Premium` SKU that's connected to the virtual network.
+
 - Ensure that the instance can access the MySQL database via the virtual network. Ensure that all incoming ports are allowed from Azure to MySQL at the virtual network level, the network VPN, and the machine that hosts MySQL.
+
 - Run the Database Migration Service tool:
+
   - Create a migration project.
 
     ![Screenshot that shows creating a migration project.](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-new-project.png)
 
-    ![Screenshot that shows the New migration project pane.](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-new-project-02.png)
+    ![Screenshot that shows the **New migration project** pane.](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-new-project-02.png)
 
   - Add a source (on-premises database).
 
-    ![Screenshot that shows the Add Source Details pane.](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-source.png)
+    ![Screenshot that shows the **Add Source Details** pane.](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-source.png)
 
   - Select a target.
 
-    ![Screenshot that shows the Target details pane.](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-target.png)
+    ![Screenshot that shows the **Target details** pane.](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-target.png)
 
   - Select the databases to migrate.
 
-    ![Screenshot that shows the Map to target databases pane.](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-databases.png)
+    ![Screenshot that shows the **Map to target databases** pane.](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-databases.png)
 
   - Configure advanced settings.
 
-    ![Screenshot that shows the Migration settings pane.](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-settings.png)
+    ![Screenshot that shows the **Migration settings** pane.](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-settings.png)
 
   - Start the replication and resolve any errors.
 
@@ -317,9 +326,9 @@ As a summary, Contoso admins must perform the following tasks:
 
   - Perform the final cutover. ![Screenshot that shows the final cutover.](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-cutover.png)
 
-    ![Screenshot that shows the Complete cutover pane.](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-cutover-complete.png)
+    ![Screenshot that shows the **Complete cutover** pane.](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-cutover-complete.png)
 
-    ![Screenshot that shows the Migration Activities list.](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-cutover-complete-02.png)
+    ![Screenshot that shows the **Migration Activities** list.](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-cutover-complete-02.png)
 
   - Reinstate any foreign keys and triggers.
   - Modify applications to use the new database.
@@ -338,7 +347,7 @@ Contoso admins migrate the database by using backup and restore with MySQL tools
 
 1. In MySQL Workbench, create a MySQL connection to `OSTICKETMYSQL`.
 
-    ![Screenshot that shows the Connection tab.](./media/contoso-migration-rehost-linux-vm-mysql/workbench1.png)
+    ![Screenshot that shows the **Connection** tab.](./media/contoso-migration-rehost-linux-vm-mysql/workbench1.png)
 
 1. Export the database as `osticket` to a local self-contained file.
 
@@ -350,7 +359,7 @@ Contoso admins migrate the database by using backup and restore with MySQL tools
 
 1. Now, import (restore) the database in the Azure Database for MySQL instance from the self-contained file. A new schema (`osticket`) is created for the instance.
 
-    ![Screenshot that shows the Import from Self-Contained File option.](./media/contoso-migration-rehost-linux-vm-mysql/workbench4.png)
+    ![Screenshot that shows the **Import from Self-Contained File** option.](./media/contoso-migration-rehost-linux-vm-mysql/workbench4.png)
 
 ### Connect the VM to the database
 
@@ -358,7 +367,7 @@ As the final step in the migration process, Contoso admins update the connection
 
 1. Make an SSH connection to the `OSTICKETWEB` VM by using PuTTY or another SSH client. The VM is private, so connect by using the private IP address.
 
-    ![Screenshot that shows the Connect to virtual machine pane.](./media/contoso-migration-rehost-linux-vm/db-connect.png)
+    ![Screenshot that shows the **Connect to virtual machine** pane.](./media/contoso-migration-rehost-linux-vm/db-connect.png)
 
     ![Screenshot that shows the connection to the database.](./media/contoso-migration-rehost-linux-vm/db-connect2.png)
 

@@ -30,7 +30,7 @@ Here are some design considerations for data analytics on Azure monitoring and m
 
 When evaluating enterprise-scale analytics, consider the following design recommendations:
 
-- Implement threat protection. For more information, see [Azure Sentinel](/azure/sentinel/overview).
+- Implement threat protection. For more information, see [Microsoft Sentinel](/azure/sentinel/overview).
 
 - Monitor all services deployed in the data landing zone to a Log Analytics workspace.
 

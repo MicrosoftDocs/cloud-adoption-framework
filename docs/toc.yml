@@ -1,6 +1,3 @@
-# docsTest:ignore "NET Core" "Cloud Operating Model" "Virtual Datacenter" Framework app
-#cSpell:ignore devguide dotnetcore veeam powerapps sqldatabase newsfeed wideworldimportersdw
-
 items:
   - name: Cloud Adoption Framework for Azure
     href: index.yml
@@ -9,6 +6,26 @@ items:
     href: overview.md
   - name: What's new
     href: get-started/whats-new.md
+
+  - name: Scenarios
+    items:
+    - name: Overview
+      href: scenarios/overview.md
+    - name: Azure VMware Solution
+      href: scenarios/azure-vmware/index.md
+    - name: Data management and analytics
+      href: scenarios/data-management/index.md
+    - name: Hybrid and multicloud
+      href: scenarios/hybrid/index.md
+    - name: Modern application platform
+      href: scenarios/aks/index.md
+    - name: SAP
+      href: scenarios/sap/index.md
+    - name: Virtual desktops
+      href: scenarios/wvd/index.md
+    - name: Retail industry
+      href: industry/retail/index.md
+
   - name: Adoption journeys
     items:
     - name: Get started
@@ -65,26 +82,6 @@ items:
         href: get-started/team/cloud-governance.md
       - name: Build a cloud operations team
         href: get-started/team/cloud-operations.md
-
-    - name: Adoption scenarios
-      items:
-      - name: Azure VMware Solution
-        href: scenarios/azure-vmware/index.md
-      - name: Data management and analytics
-        href: scenarios/data-management/index.md
-      - name: Hybrid and multicloud
-        href: scenarios/hybrid/index.md
-      - name: Modern application platform
-        href: scenarios/aks/index.md
-      - name: SAP
-        href: scenarios/sap/index.md
-      - name: Virtual desktops
-        href: scenarios/wvd/index.md
-
-    - name: Industry scenarios
-      items:
-      - name: Retail
-        href: industry/retail/index.md
 
     - name: Antipatterns to avoid
       href: antipatterns/antipatterns-to-avoid.md
@@ -338,6 +335,8 @@ items:
           href: ready/enterprise-scale/transition.md
         - name: Scenario-specific enterprise-scale landing zones
           href: ready/enterprise-scale/scenario-specific-enterprise-scale-landing-zones.md
+        - name: Enterprise-scale FAQ
+          href: ready/enterprise-scale/faq.md
       - name: Start small and expand
         items:
         - name: CAF Migration landing zone blueprint
@@ -373,9 +372,9 @@ items:
           items:
             - name: Overview
               href: ready/considerations/landing-zone-security.md
-            - name: Onboard a subscription to Azure Security Center
+            - name: Onboard a subscription to Microsoft Defender for Cloud
               href: /azure/security-center/security-center-get-started?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Onboard Azure Sentinel
+            - name: Onboard to Microsoft Sentinel
               href: /azure/sentinel/quickstart-onboard?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Implementing a secure hybrid network architecture in Azure
               href: /azure/architecture/reference-architectures/dmz/secure-vnet-dmz?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
@@ -1164,7 +1163,7 @@ items:
           - name: Feedback loops
             items:
             - name: Manage feedback with Azure DevOps
-              href: /azure/devops/project/feedback/?bc=%2Fazure%2Fcloud-adoption-framework%2Ftoc.json
+              href: /azure/devops/project/feedback/?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/toc.json
           - name: Continuous integration
             items:
             - name: Continuous integration with Azure Pipelines and GitHub
