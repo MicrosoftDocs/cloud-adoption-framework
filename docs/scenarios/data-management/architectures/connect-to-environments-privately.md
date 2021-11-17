@@ -12,11 +12,11 @@ ms.custom: e2e-data-management, think-tank
 
 # Connect to environments privately
 
-The enterprise-scale reference architecture is secure by design. It uses a multilayered security approach to overcome common data exfiltration risks that are raised by customers. Customers can use features on a network, identity, data, and service layer to define specific access controls and expose only required data to users. Even if some of these security mechanisms fail, the features help keep data within the enterprise-scale platform secure.
+The enterprise-scale reference architecture is secure by design. It uses a multilayered security approach to overcome common data exfiltration risks that are raised by customers. You can use certain features on a network, identity, data, and service layer to define specific access controls and expose only required data to your users. Even if some of these security mechanisms fail, the features help keep data within the enterprise-scale platform secure.
 
-Network features such as private endpoints and disabled public network access can greatly reduce the attack surface of a data platform of an organization. Even with these features enabled, though, you still need to take extra precautions to successfully connect to services such as Azure storage accounts, Azure Synapse workspaces, Azure Purview, or Azure Machine Learning from the public internet. 
+Network features such as private endpoints and disabled public network access can greatly reduce the attack surface of a data platform of an organization. Even with these features enabled, though, you need to take extra precautions to successfully connect to services such as Azure storage accounts, Azure Synapse workspaces, Azure Purview, or Azure Machine Learning from the public internet. 
 
-This document describes the most common options for connecting to services inside the data management zone or data landing zone in a simple and secure way.
+This document describes the most common options for connecting to services inside a data management zone or data landing zone in a simple and secure way.
 
 ## About Azure Bastion host and jumpboxes
 
@@ -24,14 +24,14 @@ The most simple solution is to host a jumpbox on the virtual network of the data
 
 Previously, jumpbox VMs had to be hosted with public IPs to enable RDP and SSH sessions from the public internet. Network security groups (NSGs) could be used to further lock down traffic to allow connections from only a limited set of public IPs. However, this approach meant that a public IP had to be exposed from the Azure environment, which increased the attack surface of an organization. Alternatively, customers could have used DNAT rules in their Azure Firewall to expose the SSH or RDP port of a VM to the public internet, which can lead to similar security risks.
 
-Today, instead of exposing a VM publicly, customers can rely on Azure Bastion as a more secure alternative. Azure Bastion provides a secure remote connection from the Azure portal to Azure VMs over Transport Layer Security (TLS). Azure Bastion should be set up on a dedicated subnet (subnet with name `AzureBastionSubnet`) in the Azure data landing zone or Azure data management zone. You can then use it to connect to any VM on that virtual network or a peered virtual network directly from the Azure portal. No extra clients or agents need to be installed on any VM. You can again use NSGs to allow RDP and SSH from Azure Bastion only.
+Today, instead of exposing a VM publicly, you can rely on Azure Bastion as a more secure alternative. Azure Bastion provides a secure remote connection from the Azure portal to Azure VMs over Transport Layer Security (TLS). Azure Bastion should be set up on a dedicated subnet (subnet with name `AzureBastionSubnet`) in the Azure data landing zone or Azure data management zone. You can then use it to connect to any VM on that virtual network or a peered virtual network directly from the Azure portal. No extra clients or agents need to be installed on any VM. You can again use NSGs to allow RDP and SSH from Azure Bastion only.
 
-:::image type="content" source="../images/bastion-network-architecture.png" alt-text="Diagram of Azure Bastion network architecture." lightbox="../images/bastion-network-architecture.png":::
+:::image type="content" source="../images/bastion-network-architecture.png" alt-text="Diagram of Azure Bastion network architecture." lightbox="../images/bastion-network-architecture.png" :::
 
 Azure Bastion provides a few additional core security benefits, including:
 
 - Traffic initiated from Azure Bastion to the target VM stays within the customer virtual network.
-- Protection against port scanning, because RDP ports, SSH ports, and public IP addresses aren't publicly exposed for VMs.
+- You get protection against port scanning, because RDP ports, SSH ports, and public IP addresses aren't publicly exposed for VMs.
 - Azure Bastion helps protect against zero-day exploits. It sits at the perimeter of your virtual network. Because it's a platform as a service (PaaS), the Azure platform keeps Azure Bastion up to date.
 - The service integrates with native security appliances for an Azure virtual network, such as Azure Firewall.
 - Azure Bastion can be used to monitor and manage remote connections.
@@ -42,9 +42,9 @@ For more information, see [What is Azure Bastion?](/azure/bastion/bastion-overvi
 
 To simplify the process for users, there is a Bicep/ARM template that can help you quickly create this setup inside your data management zone or data landing zone. Use the template to create the following setup inside your subscription:
 
-:::image type="content" source="../images/bastion-architecture.png" alt-text="Diagram of Azure Bastion architecture." lightbox="../images/bastion-architecture.png":::
+:::image type="content" source="../images/bastion-architecture.png" alt-text="Diagram of Azure Bastion architecture." lightbox="../images/bastion-architecture.png" :::
 
-To deploy this yourself, select the **Deploy to Azure** button:
+To deploy the Bastion host yourself, select the **Deploy to Azure** button:
 
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fdata-management-zone%2Fmain%2Fdocs%2Freference%2Fbastionhost%2Fmain.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fdata-management-zone%2Fmain%2Fdocs%2Freference%2Fbastionhost%2Fportal.json)
 
@@ -54,7 +54,7 @@ When you deploy Azure Bastion and a jumpbox through the **Deploy to Azure** butt
 
 After the deployment, you'll notice that two extra subnets have been created on the data landing zone virtual network.
 
-:::image type="content" source="../images/bastion-subnets.png" alt-text="Screenshot of the Azure Bastion and Jumpbox subnets." lightbox="../images/bastion-subnets.png":::
+:::image type="content" source="../images/bastion-subnets.png" alt-text="Screenshot of the Azure Bastion and Jumpbox subnets." lightbox="../images/bastion-subnets.png" :::
 
 In addition, you will find a new resource group inside your subscription, which includes the Azure Bastion resource and a virtual machine:
 
@@ -62,7 +62,7 @@ In addition, you will find a new resource group inside your subscription, which 
 
 To connect to the VM by using Azure Bastion, do the following:
 
-1. Select the VM (in this case, `dlz01-dev-bastion`), and then select **Connect** > **Bastion**.
+1. Select the VM (for example, *dlz01-dev-bastion*), select **Connect**, and then select **Bastion**.
 
     :::image type="content" source="../images/bastion-connect-to-vm.png" alt-text="Screenshot of the Overview pane for connecting to a VM by using Azure Bastion.":::
 
@@ -70,19 +70,19 @@ To connect to the VM by using Azure Bastion, do the following:
 
 1. Enter your credentials, and then select **Connect**.
 
-    :::image type="content" source="../images/bastion-enter-credentials.png" alt-text="Screenshot of the 'Connect using Azure Bastion' pane for connecting to your VM by signing in with your credentials." lightbox="../images/bastion-enter-credentials.png":::
+    :::image type="content" source="../images/bastion-enter-credentials.png" alt-text="Screenshot of the 'Connect using Azure Bastion' pane for connecting to your VM by signing in with your credentials." lightbox="../images/bastion-enter-credentials.png" :::
 
-    The RDP session opens on a new browser tab, and you can start connecting to your data services.
+    The RDP session opens on a new browser tab, from which you can start connecting to your data services.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/). 
 
 1. Go to the `{prefix}-{environment}-product-synapse001` Azure Synapse workspace inside the `{prefix}-{environment}-shared-product` resource group for data exploration.
 
-    :::image type="content" source="../images/dev-shared-product-synapse.png" alt-text="Screenshot of the 'Synapse workspace' in the Azure portal." lightbox="../images/dev-shared-product-synapse.png":::
+    :::image type="content" source="../images/dev-shared-product-synapse.png" alt-text="Screenshot of the 'Synapse workspace' in the Azure portal." lightbox="../images/dev-shared-product-synapse.png" :::
 
 1. In the Azure Synapse workspace, load a sample dataset from the gallery (for example, the NYC Taxi dataset), and then select **New SQL Script** to query `TOP 100` rows.
 
-   :::image type="content" source="../images/new-sql-script.png" alt-text="Screenshot of the Synapse Analytics pane for connect to a new SQL script." lightbox="../images/new-sql-script.png":::
+   :::image type="content" source="../images/new-sql-script.png" alt-text="Screenshot of the Synapse Analytics pane for connect to a new SQL script." lightbox="../images/new-sql-script.png" :::
 
 If all the virtual networks have been peered with each other, only a single jumpbox in one data landing zone is required to access services across all data landing zones and data management zones.
 
@@ -90,16 +90,16 @@ To learn why we recommend this network setup, see [Network architecture consider
 
 ## Use point-to-site connections
 
-Alternatively, you can connect users to the virtual network by using point-to-site connections. An Azure-native solution to this approach is to set up a VPN gateway to allow VPN connections between users and the VPN gateway over an encrypted tunnel. After you've established the connection, users can start connecting privately to services that are hosted on the virtual network inside the Azure tenant, including Azure storage accounts, Azure Synapse Analytics, and Azure Purview.
+Alternatively, you can connect users to the virtual network by using point-to-site connections. An Azure-native solution to this approach is to set up a VPN gateway to allow VPN connections between users and the VPN gateway over an encrypted tunnel. After you've established the connection, users can start connecting privately to services that are hosted on the virtual network inside the Azure tenant. These services include Azure storage accounts, Azure Synapse Analytics, and Azure Purview.
 
-We recommend that you set up the VPN gateway in the hub virtual network of the hub and spoke architecture. For detailed, step-by-step guidance on setting up a VPN gateway, see [Tutorial: Create a gateway portal](/azure/vpn-gateway/tutorial-create-gateway-portal).
+We recommend that you set up the VPN gateway in the hub virtual network of the hub-and-spoke architecture. For detailed, step-by-step guidance on setting up a VPN gateway, see [Tutorial: Create a gateway portal](/azure/vpn-gateway/tutorial-create-gateway-portal).
 
 ## Use site-to-site connections
 
-If users are already connected to the on-premises network environment and connectivity should be extended to Azure, you can use site-to-site connections to connect the on-premises and Azure connectivity hub. Like a VPN tunnel connection, the site-to-site connection lets you extend the connectivity to the Azure environment to allow users who are connected to the corporate network to connect privately to services that are hosted on the virtual network inside the Azure tenant, including Azure Storage accounts, Azure Synapse, and Azure Purview.
+If users are already connected to the on-premises network environment and connectivity should be extended to Azure, you can use site-to-site connections to connect the on-premises and Azure connectivity hub. Like a VPN tunnel connection, the site-to-site connection lets you extend the connectivity to the Azure environment. Doing so allows users who are connected to the corporate network to connect privately to services that are hosted on the virtual network inside the Azure tenant. These services include Azure Storage accounts, Azure Synapse, and Azure Purview.
 
-The recommended, Azure-native approach to such connectivity is the use of ExpressRoute. We recommend that you set up the ExpressRoute gateway in the hub virtual network of the hub and spoke architecture. For detailed, step-by-step guidance on setting up ExpressRoute connectivity, see [Tutorial: Create and modify peering for an ExpressRoute circuit by using the Azure portal](/azure/expressroute/expressroute-howto-routing-portal-resource-manager).
+The recommended, Azure-native approach to such connectivity is the use of ExpressRoute. We recommend that you set up an ExpressRoute gateway in the hub virtual network of the hub-and-spoke architecture. For detailed, step-by-step guidance on setting up ExpressRoute connectivity, see [Tutorial: Create and modify peering for an ExpressRoute circuit by using the Azure portal](/azure/expressroute/expressroute-howto-routing-portal-resource-manager).
 
 ## Next steps
 
-For more guidance on setting up connectivity to Azure, see [Connectivity to Azure](/azure/cloud-adoption-framework/ready/azure-best-practices/connectivity-to-azure).
+For more information about setting up connectivity to Azure, see [Connectivity to Azure](/azure/cloud-adoption-framework/ready/azure-best-practices/connectivity-to-azure).
