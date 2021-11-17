@@ -61,7 +61,7 @@ This section describes recommended connectivity models for inbound and outbound 
 
 - Do not expose Virtual Machine management ports to Internet.
   - Use [Azure Policy](/azure/virtual-network/policy-reference) to prevent Virtual Machines creation with public IP attached.
-  - Use [Azure Bastion](https://docs.microsoft.com/azure/bastion/bastion-overview) to access jump-boxes Virtual Machines for management purposes.
+  - Use [Azure Bastion](/azure/bastion/bastion-overview) to access jump-boxes Virtual Machines for management purposes.
 
 - Use [Azure DDoS Protection Standard protection plans](/azure/ddos-protection/ddos-protection-overview) to help protect all public endpoints hosted within your virtual networks.
 
