@@ -409,6 +409,8 @@ items:
           items:
           - name: Overview
             href: ready/enterprise-scale/index.md
+          - name: Design principles 
+            href: ready/enterprise-scale/design-principles.md  
           - name: Implement enterprise-scale landing zones
             href: ready/enterprise-scale/implementation.md
           - name: Testing approach for enterprise-scale
