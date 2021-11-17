@@ -15,7 +15,7 @@ The enterprise-scale analytics and AI solution has the following core starter te
 
 |Repository|Content|Required|Deployment model|
 |-|-|-|-|
-|[Data management template](https://github.com/Azure/data-management-zone)| Central data management services and shared data services, such as data catalog and self-hosted integration runtime | Yes | One per enterprise-scale for analytics and AI |
+|[Data management template](https://github.com/Azure/data-management-zone)| Central data management services and shared data services, such as data catalog and self-hosted integration runtime | Yes | One per enterprise-scale analytics and AI |
 |[Data landing zone template](https://github.com/Azure/data-landing-zone)| Data landing zone shared services, such as data storage, ingestion services, and management services | Yes | One per data landing zone |
 |[Data integration template - batch processing](https://github.com/Azure/data-product-batch) | Additional services required for batch data processing | No | One or more per data landing zone |
 |[Data integration template - stream processing](https://github.com/Azure/data-product-streaming) | Additional services required for processing data streams | No | One or more per data landing zone |
@@ -46,11 +46,11 @@ Keep in mind that the following services are not listed in the overview, because
 
 ### Data landing zone costs
 
-For the data landing zone, refer to the following cost calculation:
+For data landing zones, refer to the following cost calculation:
 
 - [Pricing calculator - data landing zone](https://azure.com/e/55cb6feafcc24cec8cfeb10486d54ab5)
 
-The cost can be further reduced by hosting the self-hosted integration runtime (SHIR) on-premises instead of hosting it on a virtual machine scale set.
+You can further reduce the cost by hosting the self-hosted integration runtime (SHIR) on-premises instead of hosting it on a virtual machine scale set.
 
 Keep in mind that the following services are not listed in the overview, because they're either unavailable in the official pricing calculator or the pricing calculator doesn't allow you to set the compute hours to 0:
 
