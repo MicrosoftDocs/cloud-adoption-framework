@@ -20,7 +20,7 @@ It's vital that your organization plans for IP addressing in Azure to ensure tha
 
 - Overlapping IP address spaces across on-premises and Azure regions will create major contention challenges.
 
-- Azure VPN Gateway offer the possibility to connect overlapping on-premises sites with overlapping IP address spaces through NAT (Network Address Translation) capability. This is feature is generally available in [Azure Virtual WAN](https://docs.microsoft.com/azure/virtual-wan/nat-rules-vpn-gateway) and in preview for standalone [Azure VPN Gateway](https://docs.microsoft.com/azure/vpn-gateway/nat-howto).
+- Azure VPN Gateway offers the possibility to connect overlapping on-premises sites with overlapping IP address spaces through NAT (Network Address Translation) capability. This is feature is generally available in [Azure Virtual WAN](https://docs.microsoft.com/azure/virtual-wan/nat-rules-vpn-gateway) and in preview for standalone [Azure VPN Gateway](https://docs.microsoft.com/azure/vpn-gateway/nat-howto).
 
   ![Diagram that shows how NAT works with VPN Gateway.](./media/vpn-nat.png)
 

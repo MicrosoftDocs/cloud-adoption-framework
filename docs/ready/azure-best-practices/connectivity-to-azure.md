@@ -32,7 +32,7 @@ This section expands on the network topology to consider recommended models for 
 
 - ExpressRoute [Direct](https://docs.microsoft.com/azure/expressroute/expressroute-erdirect-about) allows creation of multiple ExpressRoute circuits at no additional cost, up to the ExpressRoute Direct port capacity (10 Gbps or 100 Gbps). It also allows you to connect directly to Microsoft's ExpressRoute routers. For the 100-Gbps SKU, the minimum circuit bandwidth is 5 Gbps. For the 10-Gbps SKU, the minimum circuit bandwidth is 1 Gbps.
 
-- When enabled on ExpressRoute circuit, [FastPath](https://docs.microsoft.com/azure/expressroute/about-fastpath) sends network traffic directly to virtual machines in the virtual network, bypassing the gateway. FastPath is designed to improve the data path performance between your on-premises network and your virtual network without having a bottleneck on the gateway.
+- When enabled on an ExpressRoute circuit, [FastPath](https://docs.microsoft.com/azure/expressroute/about-fastpath) sends network traffic directly to virtual machines in the virtual network, bypassing the gateway. FastPath is designed to improve the data path performance between your on-premises network and your virtual network without having a bottleneck on the gateway.
 
 **Design recommendations:**
 
