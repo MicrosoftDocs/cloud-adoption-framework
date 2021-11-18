@@ -273,13 +273,7 @@ items:
             href: ready/landing-zone/design-area/azure-ad-define.md  
 
         - name: Identity and access management
-          items: 
-          - name: Overview
-            href: ready/landing-zone/design-area/identity-access.md
-          - name: Identity management best practices
-            href: /azure/security/fundamentals/identity-management-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Choose an authentication method
-            href: /azure/active-directory/hybrid/choose-ad-authn?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+          href: ready/landing-zone/design-area/identity-access.md
           
         - name: Network topology and connectivity
           items:
@@ -334,16 +328,18 @@ items:
             href: ready/landing-zone/design-area/resource-org-management-groups.md
           - name: Subscriptions
             href: ready/landing-zone/design-area/resource-org-subscriptions.md
-          - name: Naming and tagging
-            href: ready/azure-best-practices/naming-and-tagging.md
-          - name: Define your naming convention
-            href: ready/azure-best-practices/resource-naming.md
-          - name: Abbreviations for resource types
-            href: ready/azure-best-practices/resource-abbreviations.md
-          - name: Define your tagging strategy
-            href: ready/azure-best-practices/resource-tagging.md
-          - name: Move resources
-            href: /azure/azure-resource-manager/management/move-resource-group-and-subscription?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+          - name: Additional information
+            items:  
+            - name: Naming and tagging
+              href: ready/azure-best-practices/naming-and-tagging.md
+            - name: Define your naming convention
+              href: ready/azure-best-practices/resource-naming.md
+            - name: Abbreviations for resource types
+              href: ready/azure-best-practices/resource-abbreviations.md
+            - name: Define your tagging strategy
+              href: ready/azure-best-practices/resource-tagging.md
+            - name: Move resources
+              href: /azure/azure-resource-manager/management/move-resource-group-and-subscription?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
           - name: Design options for specific use cases
             items:
             - name: Create your initial subscriptions
@@ -352,7 +348,7 @@ items:
               href: ready/azure-best-practices/scale-subscriptions.md
             - name: Organize your subscriptions
               href: ready/azure-best-practices/organize-subscriptions.md
-      
+
         - name: Security
           items:
           - name: Overview
@@ -404,16 +400,18 @@ items:
             href: ready/considerations/test-driven-development.md
           - name: Landing zone TDD in Azure
             href: ready/considerations/azure-test-driven-development.md
-          
-      - name: Choose a landing zone option
-        href: ready/landing-zone/choose-landing-zone-option.md
+
       - name: Implementation options
         href: ready/landing-zone/implementation-options.md
         items:
+        - name: Choose a landing zone option
+          href: ready/landing-zone/choose-landing-zone-option.md
         - name: Start with enterprise scale
           items:
           - name: Overview
             href: ready/enterprise-scale/index.md
+          - name: Design principles 
+            href: ready/enterprise-scale/design-principles.md  
           - name: Implement enterprise-scale landing zones
             href: ready/enterprise-scale/implementation.md
           - name: Testing approach for enterprise-scale

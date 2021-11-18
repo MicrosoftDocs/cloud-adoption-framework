@@ -15,7 +15,7 @@ ms.custom: internal
 Organizations often use multiple Azure subscriptions to avoid per-subscription resource limits and to better manage and govern their Azure resources. It's important to define a strategy for scaling your subscriptions.
 
 >[!Note] 
->We recommend that organizations consider the Azure landing zone guidance for [resource organization](../landing-zone/design-area/resource-org.md) at a first step to planning subscriptions within an Azure environment to ensure the broader context of an environment intended to scale is considered
+>We recommend that organizations consider the Azure landing zone guidance for [resource organization](../landing-zone/design-area/resource-org.md) as a first step to planning subscriptions within an Azure environment to ensure the broader context of an environment intended to scale is considered
 
 ## Review fundamental concepts
 

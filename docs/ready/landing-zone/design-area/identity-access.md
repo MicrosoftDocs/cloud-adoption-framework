@@ -41,6 +41,7 @@ Requirements for authentication inside the landing zone should be thoroughly ass
 Most Azure environments will use at least Azure AD for Azure fabric authentication and AD DS local host authentication and group policy management.
 
 - Consider centralized and delegated responsibilities to manage resources deployed inside the landing zone.
+- Explore the [authentication methods offered by Azure Active Directory](/azure/active-directory/hybrid/choose-ad-authn) as part of your identity planning
 - Applications that rely on domain services and use older protocols can use [Azure AD DS](/azure/active-directory-domain-services).
 - There is a difference between Azure AD, Azure AD DS, and AD DS running on Windows Server. Evaluate your application needs, and understand and document the authentication provider that each one will be using. Plan accordingly for all applications.
 
@@ -56,7 +57,7 @@ Most Azure environments will use at least Azure AD for Azure fabric authenticati
 
 - Which tasks and functions should the organization control with managed identities?
 - Which services or applications within your landing zone support Azure Active Directory authentication?
-- Explore [which Azure services cna use managed identities](/azure/active-directory/managed-identities-azure-resources/services-support-managed-identities)
+- Explore [which Azure services can use managed identities](/azure/active-directory/managed-identities-azure-resources/services-support-managed-identities)
 - Explore [managed identities for Azure resources](/azure/active-directory/managed-identities-azure-resources/overview) capabilities in further detail
 
 ### Identity for Azure platform resources - design considerations
@@ -120,12 +121,14 @@ Most Azure environments will use at least Azure AD for Azure fabric authenticati
 
 - Use privileged identities for automation runbooks that require elevated access permissions. Automated workflows that violate critical security boundaries should be governed by the same tools and policies users of equivalent privilege are.
 
-### Identity for Azure platform resources - design recommendations 
+### Identity for Azure platform resources - design recommendations
 
 ### Platform access - design recommendations
 
 - Use Azure-AD-only groups for Azure control-plane resources in Azure AD PIM when you grant access to resources.
   - Add on-premises groups to the Azure-AD-only group if a group management system is already in place.
+    - By using Azure AD only groups you can add both users and groups synchronized from on-premises, via Azure AD Connect, and Azure AD only (also known as cloud only) users and groups to a single Azure AD only group, including guest users.
+    - Also, groups synchronized from on-premises can only be managed and updated from the identity source of truth (on-premises Active Directory) and may only contain members from the same identity source, which doesn't provide flexibility like Azure AD only groups do.
 
 - Integrate Azure AD logs with the platform-central [Log Analytics workspace](/azure/azure-monitor/logs/data-platform-logs). It allows for a single source of truth around log and monitoring data in Azure, which gives organizations cloud-native options to meet requirements around log collection and retention.
 - If any data sovereignty requirements exist, custom user policies can be deployed to enforce them.
@@ -142,4 +145,3 @@ Identity and access management are core features of the Azure landing zone accel
 The deployment includes a subscription dedicated to identity, where customers can deploy the Active Directory domain controllers required for their environment.
 
 The implementation also includes options to assign recommended policies to govern identity and domain controllers.
-
