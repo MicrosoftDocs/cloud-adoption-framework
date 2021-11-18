@@ -92,7 +92,7 @@ Networking for implementing Azure Machine Learning in enterprise-scale landing z
 
 Consider the following recommendations for managing user identities and access with Azure Azure Machine Learning:
 
-- Data stores in Azure Machine Learning can be configured to use credential- or identity-based authentication. When you use [access control and data lake configurations in Azure Data Lake Storage Gen2](./data-lake-access.md?branch=scenario-data-management#configure-access-using-acls-only-recommended-for-enterprise-scale-analytics-and-ai), configure data stores to use identity-based authentication; this allows Azure Machine Learning to optimize user access permissions for storage.
+- Data stores in Azure Machine Learning can be configured to use credential- or identity-based authentication. When you use [access control and data lake configurations in Azure Data Lake Storage Gen2](./data-lake-access.md?branch=scenario-data-management), configure data stores to use identity-based authentication; this allows Azure Machine Learning to optimize user access permissions for storage.
 
 - Use Azure AD groups to manage user permissions for storage and machine learning resources.
 
