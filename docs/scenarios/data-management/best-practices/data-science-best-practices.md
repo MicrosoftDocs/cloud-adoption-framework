@@ -133,4 +133,4 @@ The following purposes apply to each folder in the repository:
 
 ## Next steps
 
-[Enterprise-scale for analytics and AI data products in Azure](/data-landing-zone-data-products.md)
+[Enterprise-scale for analytics and AI data products in Azure](/azure/cloud-adoption-framework/scenarios/data-management/architectures/data-landing-zone-data-products)
