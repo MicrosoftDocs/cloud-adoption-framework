@@ -372,7 +372,7 @@ items:
             href: ready/landing-zone/design-area/management-bcdr.md
           - name: Operational Compliance
             href: ready/landing-zone/design-area/management-operational-compliance.md
-          - name: workloads
+          - name: Workloads
             href: ready/landing-zone/design-area/management-workloads.md
 
         - name: Governance
