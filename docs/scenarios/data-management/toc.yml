@@ -171,9 +171,9 @@ items:
         - name: Best practices for enterprise security
           href: ../../ready/azure-best-practices/ai-machine-learning-enterprise-security.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
         - name: Budget, cost, and quota management with Azure Machine Learning
-          href: ../../ready/azure-best-practices/optimize-ai-machine-learning-cost.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/fazure/cloud-adoption-framework/scenarios/data-management/toc.json
+          href: ../../ready/azure-best-practices/optimize-ai-machine-learning-cost.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
         - name: Machine learning DevOps guide
-          href: ../../ready/azure-best-practices/ai-machine-learning-mlops.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/fazure/cloud-adoption-framework/scenarios/data-management/toc.json
+          href: ../../ready/azure-best-practices/ai-machine-learning-mlops.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
         - name: Data science best practices
           href: ./best-practices/data-science-best-practices.md
       - name: Data landing zone ingestion
