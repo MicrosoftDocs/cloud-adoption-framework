@@ -33,8 +33,6 @@ Security, governance, and compliance are key topics when designing and building 
 
 Alongside the controls that help maintain and demonstrate compliance, the tools and processes implemented for managing environments play an important role in detecting and responding to issues that require action.
 
-![Compliance design areas](./design-area/media/compliance.png)
-
 As the organization's cloud environment develops, these compliance design areas will be the focus for iterative refinement. This may be as a result of new applications that introduce specific new requirements, or the business requirements changing (for example in response to a new compliance standard).
 
 | Design areas | Objective | Relevant methodologies |
