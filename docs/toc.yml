@@ -401,7 +401,6 @@ items:
           - name: Landing zone TDD in Azure
             href: ready/considerations/azure-test-driven-development.md
 
-
       - name: Implementation options
         href: ready/landing-zone/implementation-options.md
         items:
@@ -421,6 +420,9 @@ items:
             href: ready/enterprise-scale/terraform-module-caf-enterprise-scale.md
           - name: Scenario-specific enterprise-scale landing zones
             href: ready/enterprise-scale/scenario-specific-enterprise-scale-landing-zones.md
+          - name: Enterprise-scale FAQ
+            href: ready/enterprise-scale/faq.md
+          
         - name: Start small and expand
           items:
           - name: CAF Migration landing zone blueprint

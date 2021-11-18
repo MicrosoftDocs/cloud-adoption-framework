@@ -64,6 +64,14 @@ Management group structures within an Azure Active Directory (Azure AD) tenant s
 > [!NOTE]
 > For testing guidance for enterprise-scale deployments, see [Testing approach for enterprise-scale](../../enterprise-scale/testing-approach.md).
 
+- Do not create management groups for Production, Testing and Development environments. If required separate these into different subscriptions in the same management group. Also review further guidance on this topic:
+
+  - [How do we handle "dev/test/production" workload landing zones in enterprise-scale architecture? - FAQ](../../enterprise-scale/faq.md#how-do-we-handle-devtestproduction-workload-landing-zones-in-enterprise-scale-architecture)
+  - [Testing approach for enterprise-scale](../../enterprise-scale/testing-approach.md)
+
+> [!NOTE]
+> For testing guidance for enterprise-scale deployments, see [Testing approach for enterprise-scale](../../enterprise-scale/testing-approach.md).
+
 ## Management groups in the Azure landing zone accelerator
 
 As part of the Azure landing zone accelerator the following decisions have been made and included in the implementation for management group structure
