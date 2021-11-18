@@ -20,7 +20,7 @@ This section describes recommended connectivity models for inbound and outbound 
 
 - The enterprise-scale architecture is fully compatible with partner NVAs, if your organization prefers to use NVAs or for situations where native services don't satisfy your organization's specific requirements.
 
-- Azure provides different direct internet outbound connectivity methods (such as NAT gateway or Load Balancer) for virtual machines or compute instances on a VNet. Those methods are described on the Azure outbound connectivity methods article.  
+- Azure provides different direct internet outbound connectivity methods (such as NAT gateway or Load Balancer) for virtual machines or compute instances on a VNet. Those methods are described in the [Azure outbound connectivity methods article](/azure/load-balancer/load-balancer-outbound-connections#scenarios).  
 
 **Design recommendations:**
 
