@@ -144,6 +144,9 @@ The following tables summarizes the different options and the implications for t
 | Audit/AINE    | Enabled/Default       | Yes                | Manual remediation required |
 | Audit/AINE    | Disabled/DoNotEnforce | No                 | Manual remediation required |
 
+>[!NOTE]
+> You should also review the guidance in [Reacting to Azure Policy state change events](/azure/governance/policy/concepts/event-overview) to understand if using the Event Grid integration with Azure Policy provides a suitable approach if you plan to build your own automation based on policy state events.
+
 ### Phase 2: Enable DINE/Modify Policies on a specific policy or reduced scope (Setting Enforcement Mode to `Default` on Policy Assignments)
 
 Once you have completed [phase 1](#phase-1-disable-dinemodify-policies-automated-actions), you may decide that you wish to test and try out the full automation capabilities of DINE and Modify policies on a specific policy or upon a reduced scope, like the `Sandbox` management group or a non-production workload subscription.
