@@ -53,7 +53,7 @@ When designing virtual networks, subnets, and private endpoints, consider the fo
 
 - Machine Learning workspace default storage needs two private endpoints, one for Azure Blob Storage and another for Azure File Storage.
 
-- If you use Azure Machine Learning studio, the workspace and storage private endpoints should be in the same VNet. If you use a _public endpoint_ with the storage account, then the storage endpoint and workspace private endpoint must be in the same subnet.
+- If you use Azure Machine Learning studio, the workspace and storage private endpoints should be in the same VNet.
 
 - If you have multiple workspaces, use a virtual network for each workspace to create an explicit network boundary between workspaces.
 
