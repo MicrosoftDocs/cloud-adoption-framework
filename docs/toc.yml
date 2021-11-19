@@ -283,7 +283,7 @@ items:
             items: 
             - name: Overview & Guidance
               href: ready/enterprise-scale/management-group-and-subscription-organization.md
-            - name: What if we cannot or are not yet ready to utilize DeployIfNotExists (DINE) policies?
+            - name: Adopting policy driven guardrails
               href: ready/enterprise-scale/dine-guidance.md
           - name: Network topology and connectivity
             items:
