@@ -38,7 +38,7 @@ The Azure landing zone conceptual architecture should focus on application-centr
 
 ### Align Azure-native design and roadmaps
 
-The The Azure landing zone conceptual architecture approach advocates using Azure-native platform services and capabilities whenever possible. This approach should align with Azure platform roadmaps to ensure that new capabilities are available within your environments. Azure platform roadmaps should help to inform the migration strategy and The Azure landing zone conceptual trajectory.
+The Azure landing zone conceptual architecture approach advocates using Azure-native platform services and capabilities whenever possible. This approach should align with Azure platform roadmaps to ensure that new capabilities are available within your environments. Azure platform roadmaps should help to inform the migration strategy and The Azure landing zone conceptual trajectory.
 
 ## Impact on design deviations
 
