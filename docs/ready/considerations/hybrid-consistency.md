@@ -6,11 +6,9 @@ ms.author: brblanch
 ms.date: 12/27/2018
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: migrate
+ms.subservice: ready
 ms.custom: internal
 ---
-
-<!-- cSpell:ignore ISVs Bitnami Yourhosting Revera Avanade Pulsant PricewaterhouseCoopers Pointnext -->
 
 # Create hybrid cloud consistency
 
@@ -60,9 +58,6 @@ Azure Stack is offered via two deployment options:
 ## Azure Stack one-cloud ecosystem
 
 You can speed up Azure Stack initiatives by using the complete Azure ecosystem:
-
-<!-- docutune:casing ISVs Bitnami DXC EMC Infront Yourhosting Revera Avanade Pulsant PWC PricewaterhouseCoopers Tieto NTT "Kemp Technologies" "Pivotal Cloud Foundry" -->
-<!-- cSpell:ignore ISVs Bitnami Infront Kemp Yourhosting Revera Avanade Pulsant PricewaterhouseCoopers Tieto -->
 
 - Azure ensures that most applications and services that are certified for Azure will work on Azure Stack. Several ISVs are extending their solutions to Azure Stack. These ISVs include Bitnami, Docker, Kemp Technologies, Pivotal Cloud Foundry, Red Hat Enterprise Linux, and SUSE Linux.
 - You can opt to have Azure Stack delivered and operated as a fully managed service. Several partners will have managed service offerings across Azure and Azure Stack shortly. These partners include Tieto, Yourhosting, Revera, Pulsant, and NTT. These partners deliver managed services for Azure via the Cloud Solution Provider (CSP) program. They're extending their offerings to include hybrid solutions.

@@ -27,6 +27,11 @@ Private endpoints can be used to control the traffic within your Azure environme
 
 For both scenarios, it's as simple as specifying the resource ID of the service and manually approving the private endpoint connection. The user also requires some role-based access control (RBAC) access to execute these actions.
 
+<<<<<<< HEAD
+=======
+Connections C and D in Figure 1 illustrate scenarios that customers generally want to allow as private endpoint connections are kept within the corporate Azure AD tenant and therefore do not represent a security risk. Hence, these two scenarios are not covered in this article.
+
+>>>>>>> master
 The following information gives you options to prevent the provisioning of private endpoints across Azure AD tenants.
 
 ## Deny private endpoints linked to services in other tenants
@@ -162,7 +167,7 @@ We also recommend assigning the policy to the top-level management group and use
 
 ### Considerations for scenario two
 
-Managed virtual networks and managed private endpoints have been introduced in Azure Synapse Analytics and Azure Data Factory. Because of  these new capabilities, the policy will block the secure and private usage of these services.
+Managed virtual networks and managed private endpoints have been introduced in Azure Synapse Analytics and Azure Data Factory. Because of these new capabilities, the policy blocks the secure and private usage of these services.
 
 We recommend the use of an **Audit** effect instead of a **Deny** affect in the policy definition used in the [scenario two mitigation](#mitigation-for-scenario-two). This effect change can help you keep track of private endpoints being created in separate subscriptions and tenants. You can also use policy exemptions for the respective data platform scopes.
 

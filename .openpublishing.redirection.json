@@ -19,7 +19,7 @@
          "source_path": "docs/appendix/roadmap.md",
          "redirect_url": "/azure/cloud-adoption-framework/overview",
          "redirect_document_id": false
-      },      
+      },
       {
          "source_path": "docs/business-strategy/index.md",
          "redirect_url": "/azure/cloud-adoption-framework/strategy/index",
@@ -34,7 +34,7 @@
          "source_path": "docs/governance/benchmark.md",
          "redirect_url": "/azure/cloud-adoption-framework/govern/benchmark",
          "redirect_document_id": true
-      },      
+      },
       {
          "source_path": "docs/governance/best-practices.md",
          "redirect_url": "/azure/cloud-adoption-framework/govern/guides/index",
@@ -84,7 +84,7 @@
          "source_path": "docs/reference/roadmap.md",
          "redirect_url": "/azure/cloud-adoption-framework/overview",
          "redirect_document_id": false
-      },                        
+      },
       {
          "source_path": "docs/migrate/expanded-scope/index.md",
          "redirect_url": "/azure/cloud-adoption-framework/migrate/azure-best-practices/index",
@@ -269,7 +269,7 @@
          "source_path": "docs/migrate/expanded-scope/suggested-skills.md",
          "redirect_url": "/azure/cloud-adoption-framework/migrate/suggested-skills",
          "redirect_document_id": true
-      },      
+      },
       {
          "source_path": "docs/migrate/expanded-scope/multiple-datacenters.md",
          "redirect_url": "/azure/cloud-adoption-framework/migrate/azure-best-practices/multiple-datacenters",
@@ -414,6 +414,61 @@
          "source_path": "docs/security/security-top-10.md",
          "redirect_url": "/azure/cloud-adoption-framework/secure/security-top-10",
          "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/reference/azure-scaffold.md",
+         "redirect_url": "/azure/cloud-adoption-framework/resources/azure-scaffold",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/reference/cloud-operating-model.md",
+         "redirect_url": "/azure/cloud-adoption-framework/resources/cloud-operating-model",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/reference/fundamental-concepts/hierarchy-azure-tools.md",
+         "redirect_url": "/azure/cloud-adoption-framework/resources/fundamental-concepts/hierarchy-azure-tools",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/reference/fundamental-concepts/hosting-hierarchy.md",
+         "redirect_url": "/azure/cloud-adoption-framework/resources/fundamental-concepts/hosting-hierarchy",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/scenarios/data-management/eslz-deployment-templates.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/data-management/architectures/deployment-templates",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/reference/migration-with-enterprise-scaffold.md",
+         "redirect_url": "/azure/cloud-adoption-framework/resources/migration-with-enterprise-scaffold",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/reference/networking-vdc.md",
+         "redirect_url": "/azure/cloud-adoption-framework/resources/networking-vdc",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/reference/tools-templates.md",
+         "redirect_url": "/azure/cloud-adoption-framework/resources/tools-templates",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/reference/vdc.md",
+         "redirect_url": "/azure/cloud-adoption-framework/resources/vdc",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/scenarios/sap/govern.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/sap/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/secure/best-practices/security-governance-and-compliance.md",
+         "redirect_url": "/azure/cloud-adoption-framework/secure/best-practices/end-to-end-governance",
+         "redirect_document_id": false
       }
    ]
 }

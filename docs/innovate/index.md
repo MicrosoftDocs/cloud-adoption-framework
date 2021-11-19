@@ -23,14 +23,14 @@ To prepare you for this phase of the cloud adoption lifecycle, the framework sug
 |--|--|
 | <br> :::image type="icon" source="../_images/icons/1.png"::: | <br> [Create hypothesis with business value consensus](./business-value.md): Before you decide on technical solutions, identify how new innovations can drive business value and come up with a hypothesis about customer needs. |
 | <br> :::image type="icon" source="../_images/icons/2.png"::: | <br> [Build your first MVP](./considerations/build.md): Once a hypothesis has enough value potential to be built into your application, the build process starts. Development sprints should be as quick as possible, to allow quick verification or rejection of the hypothesis, or to fine tune the way in which the required functionality is to be integrated in the application.  |
-| <br> :::image type="icon" source="../_images/icons/3.png"::: | <br> [Measure](./considerations/measure.md) & [Learn](./considerations/learn.md) from your MVP: You want to verify the accuracy of your hypothesis as soon as possible. A Minimum Viable Product (MVP) is a preliminary version of the new functionality, that offers just enough functionality to gather feedback that confirms if you are moving in the right direction. |
-| <br> :::image type="icon" source="../_images/icons/4.png"::: | <br> [Expand digital innovation](./considerations/invention.md): To refine your hypothesis using the innovation disciplines or the digital inventions which include: democratize data, engage via apps, empower adoption, Interact with devices, and predict and influence.
+| <br> :::image type="icon" source="../_images/icons/3.png"::: | <br> [Measure](./considerations/measure.md) & [Learn](./considerations/learn.md) from your MVP: You want to verify the accuracy of your hypothesis as soon as possible. A minimum viable product (MVP) is a preliminary version of the new functionality, that offers just enough functionality to gather feedback that confirms if you are moving in the right direction. |
+| <br> :::image type="icon" source="../_images/icons/4.png"::: | <br> [Expand digital innovation](./considerations/invention.md): To refine your hypothesis using the innovation disciplines or the digital inventions which include: <li> Democratize data <li> Engage via applications <li> Empower adoption <li> Interact with devices <li> Predict and influence
 
 ## Innovation summary
 
 The following approach builds on existing lean methodologies. It's designed to help you create a cloud-focused conversation about customer adoption and a scientific model for creating business value. The approach also maps existing Azure services to manageable decision processes. This alignment can help you find the right technical options to address specific customer needs or hypotheses. As you build your MVP, you should consider using the five disciplines of digital inventions, which include democratize data, engage via applications, empower adoption, interact with devices, and predict and influence.
 
-![The Innovate methodology of the Cloud Adoption Framework](../_images/innovate/innovate-methodology.png)
+![Diagram of the Innovate methodology of the Cloud Adoption Framework.](../_images/innovate/innovate-methodology.png)
 
 This article series emphasizes the following aspects of this methodology:
 

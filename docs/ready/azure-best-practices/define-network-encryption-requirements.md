@@ -36,7 +36,7 @@ This section explores key recommendations to achieve network encryption between 
 
 - When you're establishing VPN connections from on-premises to Azure by using VPN gateways, traffic is encrypted at a protocol level through IPsec tunnels. The preceding diagram shows this encryption in flow `A`.
 
-- When you're using ExpressRoute Direct, configure [MACsec](/azure/expressroute/expressroute-howto-MACsec) in order to encrypt traffic at the layer-two level between your organization's routers and MSEE. The diagram shows this encryption in flow `B`.
+- When you're using ExpressRoute Direct, configure [MACsec](/azure/expressroute/expressroute-howto-MACsec) in order to encrypt traffic at Layer 2 between your organization's routers and MSEE. The diagram shows this encryption in flow `B`.
 
 - For Virtual WAN scenarios where MACsec isn't an option (for example, not using ExpressRoute Direct), use a Virtual WAN VPN gateway to establish [IPsec tunnels over ExpressRoute private peering](/azure/virtual-wan/vpn-over-expressroute). The diagram shows this encryption in flow `C`.
 
@@ -45,7 +45,5 @@ This section explores key recommendations to achieve network encryption between 
   - Use partner NVAs to establish IPsec tunnels over ExpressRoute private peering.
   - Establish a VPN tunnel over ExpressRoute with Microsoft peering.
   - Evaluate the capability to configure a Site-to-Site [VPN connection over ExpressRoute private peering](/azure/vpn-gateway/site-to-site-vpn-private-peering).
-
-- If traffic between Azure regions must be encrypted, use global VNet peering to connect virtual networks across regions.
 
 - If native Azure solutions (as shown in flows `B` and `C` in the diagram) don't meet your requirements, use partner NVAs in Azure to encrypt traffic over ExpressRoute private peering.

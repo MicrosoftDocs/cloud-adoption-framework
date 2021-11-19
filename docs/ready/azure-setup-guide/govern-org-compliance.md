@@ -15,7 +15,7 @@ ms.custom: think-tank, fasttrack-edit, AQC, setup
 
 # Governance, security, and compliance in Azure
 
-As you establish corporate policy and plan your governance strategies, you can use tools and services like Azure Policy, Azure Blueprints, and Azure Security Center to enforce and automate your organization's governance decisions. Before you start your governance planning, use the [governance benchmark tool](https://cafbaseline.com) to identify potential gaps in your organization's cloud governance approach. For more information about developing governance processes, see the [Govern methodology](../../govern/index.md).
+As you establish corporate policy and plan your governance strategies, you can use tools and services like Azure Policy, Azure Blueprints, and Microsoft Defender for Cloud to enforce and automate your organization's governance decisions. Before you start your governance planning, use the [governance benchmark tool](https://cafbaseline.com) to identify potential gaps in your organization's cloud governance approach. For more information about developing governance processes, see the [Govern methodology](../../govern/index.md).
 
 ## [Azure Blueprints](#tab/AzureBlueprints)
 
@@ -131,31 +131,31 @@ To learn more, see:
 
 ::: zone-end
 
-## [Azure Security Center](#tab/AzureSecurityCenter)
+## [Microsoft Defender for Cloud](#tab/AzureSecurityCenter)
 
-Azure Security Center plays an important part in your governance strategy. It helps you stay on top of security because it:
+Microsoft Defender for Cloud plays an important part in your governance strategy. It helps you stay on top of security because it:
 
 - Provides a unified view of security across your workloads.
 - Collects, searches, and analyzes security data from a variety of sources, which includes firewalls and other partner solutions.
 - Provides actionable security recommendations to fix issues before they can be exploited.
 - Can be used to apply security policies across your hybrid cloud workloads to ensure compliance with security standards.
 
-Many security features, like security policy and recommendations, are available for free. Some of the more advanced features, like just-in-time VM access and hybrid workload support, are available under the Security Center Standard tier. Just-in-time VM access can help reduce the network attack surface by controlling access to management ports on Azure VMs.
+Many security features, like security policy and recommendations, are available for free. Some of the more advanced features, like just-in-time VM access and hybrid workload support, are available under the Defender for Cloud Standard tier. Just-in-time VM access can help reduce the network attack surface by controlling access to management ports on Azure VMs.
 
 > [!TIP]
-> Azure Security Center is enabled by default in each subscription. We recommend that you enable data collection from virtual machines to allow Azure Security Center to install its agent and begin gathering data.
+> Defender for Cloud is enabled by default in each subscription. We recommend that you enable data collection from virtual machines to allow Defender for Cloud to install its agent and begin gathering data.
 
 ::: zone target="docs"
 
-To explore Azure Security Center, go to the [Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/SecurityMenuBlade/0).
+To explore Defender for Cloud, go to the [Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/SecurityMenuBlade/0).
 
 ### Learn more
 
 To learn more, see:
 
-- [Azure Security Center](/azure/security-center/)
+- [Microsoft Defender for Cloud](/azure/security-center/)
 - [Just-in-time VM access](/azure/security-center/security-center-just-in-time#how-does-just-in-time-access-work)
-- [Security Center pricing tiers](https://azure.microsoft.com/pricing/details/security-center/)
+- [Defender for Cloud pricing tiers](https://azure.microsoft.com/pricing/details/azure-defender/)
 - [Cloud Adoption Framework: Security Baseline discipline](../../govern/security-baseline/index.md)
 
 ::: zone-end

@@ -1,7 +1,6 @@
 ---
 title: Connectivity to other cloud providers
-
-description: Integrate an Azure enterprise-scale landing zone architecture to other cloud providers such as Amazon Web Services (AWS) and Google Cloud Platform (GCP). 
+description: Integrate an Azure enterprise-scale landing zone architecture to other cloud providers such as Amazon Web Services (AWS) and Google Cloud Platform (GCP).
 author: daltondhcp
 ms.author: brblanch
 ms.date: 05/26/2021
@@ -17,8 +16,8 @@ This guidance discusses ways to connect an Azure landing zone architecture to ot
 
 The various options differ in speed, latency, reliability, service level agreements (SLAs), complexity, and costs. This article considers options and makes recommendations.
 
-> [!Note]
-> Microsoft and Oracle partnered to provide high-throughput, low-latency cross-connections between Azure and Oracle Cloud Infrastructure (OCI). For more information, see [Connectivity to Oracle Cloud Infrastructure](connectivity-to-other-providers-oci.md).
+> [!NOTE]
+> Microsoft and Oracle partnered to provide high-throughput, low-latency cross-connections between Azure and Oracle Cloud Infrastructure (OCI). For more information, see [Connectivity to Oracle Cloud Infrastructure](./connectivity-to-other-providers-oci.md).
 
 **Design considerations:**
 
@@ -30,7 +29,6 @@ The various options differ in speed, latency, reliability, service level agreeme
    You can use the following cross-cloud connectivity flow chart as an aid to choosing an option:
 
     ![Diagram of cross-cloud connectivity flow chart](./media/cloud-interconnect-decision-tree.png)
-    
     *Figure 1: Cross-cloud connectivity flow chart*
 
 - You can only connect an Azure virtual network to another cloud provider's virtual private cloud (VPC) if the private IP address spaces don't overlap.
@@ -51,11 +49,9 @@ The various options differ in speed, latency, reliability, service level agreeme
 - Use the ExpressRoute circuit of option 1 or option 2 to connect to the hub virtual network of a traditional hub and spoke topology or to the virtual hub for a Virtual WAN topology. For more information, see Figure 2 and Figure 3.
 
     ![Figure 2: Cross-cloud connectivity with customer-managed routing (Option 1)](./media/eslz-other-cloud-providers.png)
-    
     *Figure 2: Cross-cloud connectivity with customer-managed routing (Option 1)*
 
     ![Figure 3: Cross-cloud connectivity with a cloud exchange provider (Option 2).](./media/other-cloud-exchange-provider.png)
-    
     *Figure 3: Cross-cloud connectivity with a cloud exchange provider (Option 2)*
 
 - If you need to minimize latency between Azure and another cloud provider, consider deploying your application in a single virtual network with an ExpressRoute gateway, and enable FastPath.
@@ -72,4 +68,4 @@ The various options differ in speed, latency, reliability, service level agreeme
 
 ## Next steps
 
-To learn more about connectivity to Oracle Cloud Infrastructure (OCI), see [Connectivity to Oracle Cloud Infrastructure](connectivity-to-other-providers-oci.md).
+To learn more about connectivity to Oracle Cloud Infrastructure (OCI), see [Connectivity to Oracle Cloud Infrastructure](./connectivity-to-other-providers-oci.md).

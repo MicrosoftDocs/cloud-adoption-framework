@@ -10,9 +10,6 @@ ms.subservice: ready
 ms.custom: internal
 ---
 
-<!-- docutune:casing "Azure VPN Gateway" L7 -->
-<!-- cSpell:ignore autoregistration BGPs MACsec MPLS MSEE onprem privatelink VPNs -->
-
 # Network topology and connectivity overview in Azure
 
 The following series of articles examines key design considerations and best practices for Azure networking and connectivity.
@@ -72,7 +69,7 @@ Many industries require Azure traffic to be mirrored to a network packet collect
 
 ## Connect to other cloud providers
 
-[Connectivity to other cloud providers](../azure-best-practices/connectivity-to-other-providers.md) describes different connectivity approaches to integrate an Azure landing zone architecture with other cloud providers.
+[Connectivity to other cloud providers](../azure-best-practices/connectivity-to-other-providers.md) describes different connectivity approaches to integrate an Azure enterprise-scale landing zone architecture with other cloud providers.
 
 ## Next steps
 
@@ -80,4 +77,3 @@ This overview summarized articles about key networking topology and connectivity
 
 > [!div class="nextstepaction"]
 > [Plan for IP addressing](../azure-best-practices/plan-for-ip-addressing.md)
-

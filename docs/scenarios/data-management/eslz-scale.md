@@ -6,7 +6,8 @@ ms.author: espen
 ms.date: 07/16/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: migrate
+ms.subservice: scenario
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Scaling data management and analytics in Azure
@@ -29,7 +30,7 @@ For more information, see [Enterprise-scale for analytics and AI architecture da
 
 ## Single data landing zone
 
-This figure shows an overview of an enterprise-scale for analytics and AI platform with a data management landing zone and a single data landing zone.
+The following diagram shows an overview of an enterprise-scale for analytics and AI platform with a data management landing zone and a single data landing zone.
 
 ![Diagram of enterprise-scale data management and single data landing zone.](./images/high-level-design-single-data-landing-zone.png)
 

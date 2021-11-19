@@ -6,11 +6,9 @@ ms.author: brblanch
 ms.date: 02/25/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: migrate
+ms.subservice: plan
 ms.custom: internal
 ---
-
-<!-- cSpell:ignore OSTICKETWEB OSTICKETMYSQL CONTOSODC contosohost vcenter prereqs ctypes ctypeslib smarthotelapp -->
 
 # Assess on-premises workloads for migration to Azure
 
@@ -194,8 +192,8 @@ Results are displayed as soon as they're available. If Contoso fixes issues, it 
 > For large-scale assessments:
 >
 > - Run multiple assessments concurrently and view the state of the assessments on the **All assessments** page.
-> - Consolidate assessments into a [SQL Server database](/sql/dma/dma-consolidatereports).
-> - Consolidate assessments into a [Power BI report](/sql/dma/dma-consolidatereports).
+> - Consolidate assessments into a [SQL Server database](/azure/migrate/tutorial-assess-sql).
+> - Consolidate assessments into a [Power BI report](/azure/migrate/tutorial-assess-sql).
 
 ## Step 3: Prepare for VM assessment by using Azure Migrate
 
@@ -396,7 +394,7 @@ Contoso runs the installation on each VM.
 
 #### Install the MMA on Linux VMs
 
-1. Contoso installs the Python ctypes library on each VM by using the following command:
+1. Contoso installs the Python `ctypes` library on each VM by using the following command:
 
     `sudo apt-get install python-ctypeslib`
 

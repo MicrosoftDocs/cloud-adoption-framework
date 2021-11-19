@@ -10,8 +10,6 @@ ms.subservice: strategy
 ms.custom: think-tank
 ---
 
-<!-- cSpell:ignore NIST CISO COVID -->
-
 # Define a security strategy
 
 The ultimate objectives for a security organization don't change with adoption of cloud services, but how those objectives are achieved will change. Security teams must still focus on reducing business risk from attacks and work to get confidentiality, integrity, and availability assurances built into all information systems and data.
@@ -23,7 +21,7 @@ Security teams need to modernize strategies, architectures, and technology as th
 - Security teams are likely to be left out of cloud adoption decision making if they take a legacy mindset of "arms-length" security where the answer always starts with "no" (instead of working together with IT and business teams to reduce risk while enabling the business).
 - Security teams will have a difficult time detecting and defending against cloud attacks if they use only legacy on-premises tooling and exclusively adhere to network perimeter only doctrine for all defenses and monitoring. Defending at cloud scale mandates the use of cloud native detection and automation capabilities and the introduction of an identity perimeter to help monitor and protect cloud and mobile assets. For more information, consult these references:
   - The [Microsoft identity platform](/azure/active-directory/develop/v2-overview) helps you incorporate modern authentication and authorization mechanisms into your applications.
-  - [Azure Sentinel](/azure/sentinel/overview) provides cloud native security analytics and threat intelligence across your organization.
+  - [Microsoft Sentinel](/azure/sentinel/overview) provides cloud native security analytics and threat intelligence across your organization.
 
 Because this transformation can be significant, we recommend that security teams take an agile approach to modernizing security that rapidly modernizes the most critical aspects of the strategy and then continuously improve incrementally afterwards.
 
@@ -38,8 +36,8 @@ Many organizations start by treating cloud resources as another *virtual datacen
 
 - Rapid enablement and scaling of security capabilities.
 - Highly effective asset inventory and security configuration hygiene discovery.
-- Continuous assessment of the organization's security posture and controls, by deploying for example [Azure Security Center](/azure/security-center/security-center-introduction).
-- Vastly improved threat detection that uses vast repositories of threat intelligence and the nearly unlimited processing and storage capabilities of the cloud, such as that enabled by [Azure Sentinel](/azure/sentinel/overview).
+- Continuous assessment of the organization's security posture and controls, by deploying for example [Microsoft Defender for Cloud](/azure/security-center/security-center-introduction).
+- Vastly improved threat detection that uses vast repositories of threat intelligence and the nearly unlimited processing and storage capabilities of the cloud, such as that enabled by [Microsoft Sentinel](/azure/sentinel/overview).
 
 ### The right level of security friction
 
@@ -117,7 +115,7 @@ While these could be part of any security modernization plan, the rapid pace of 
 
 - **Success in either productivity or security requires both.** An organization must focus on both security and productivity in today's "innovation or become irrelevant" environment. If the organization is not productive and driving new innovation, it may lose competitiveness in the marketplace that causes it to weaken financially or eventually fail. If the organization is not secure and loses control of assets to attackers, it may lose competitiveness in the marketplace that causes it to weaken financially and eventually fail.
 
-- **Nobody's perfect.** No organization is perfect at adopting the cloud, not even Microsoft. Microsoft's IT and security teams grapple with many of the same challenges that our customers do such as figuring out how to structure programs well, balancing supporting legacy software with supporting cutting edge innovation, and even technology gaps in cloud services. As these teams learn how to better operate and secure the cloud, they are actively sharing their lessons learned via documents like this along with others on the [IT showcase site](https://www.microsoft.com/itshowcase), while continuously providing feedback to our engineering teams and third-party vendors to improve their offerings.
+- **Nobody's perfect.** No organization is perfect at adopting the cloud, not even Microsoft. Microsoft's IT and security teams grapple with many of the same challenges that our customers do such as figuring out how to structure programs well, balancing supporting legacy software with supporting cutting edge innovation, and even technology gaps in cloud services. As these teams learn how to better operate and secure the cloud, they are actively sharing their lessons learned via documents like this along with others on the [IT showcase site](https://www.microsoft.com/insidetrack), while continuously providing feedback to our engineering teams and third-party vendors to improve their offerings.
 
   Based on our experience, we recommend that teams are held to a standard of continuous learning and improvement rather than a standard of perfection.
 
@@ -239,8 +237,8 @@ This section describes the key relationships that frequently change on the journ
 
   - **Security:** Does the cloud provider follow industry best practices for security? Has this been validated by independent regulatory bodies?
 
-    - [Microsoft Cloud App Security](/cloud-app-security/risk-score) allows you to discover usage of over 16,000 cloud applications, which are ranked and scored based on more than 70 risk factors to provide you with ongoing visibility into cloud use, shadow IT, and the risk that shadow IT poses to your organization.
-    - The [Microsoft Service Trust Portal](https://servicetrust.microsoft.com) makes regulatory compliance certifications, audit reports, pen tests, and more available to customers. These documents include many details of internal security practices (notably the SOC 2 Type 2 report and FedRAMP Moderate system security plan). [Azure Security Center](/azure/security-center/tutorial-security-policy) allows the [management of security policies](/azure/security-center/tutorial-security-policy) and can indicate the level of compliance with predefined industry and regulatory standards.
+    - [Microsoft Defender for Cloud Apps](/cloud-app-security/risk-score) allows you to discover usage of over 16,000 cloud applications, which are ranked and scored based on more than 70 risk factors to provide you with ongoing visibility into cloud use, shadow IT, and the risk that shadow IT poses to your organization.
+    - The [Microsoft Service Trust Portal](https://servicetrust.microsoft.com) makes regulatory compliance certifications, audit reports, pen tests, and more available to customers. These documents include many details of internal security practices (notably the SOC 2 Type 2 report and FedRAMP Moderate system security plan). [Microsoft Defender for Cloud](/azure/security-center/tutorial-security-policy) allows the [management of security policies](/azure/security-center/tutorial-security-policy) and can indicate the level of compliance with predefined industry and regulatory standards.
 
   - **Business competitor:** Is the cloud provider a significant business competitor in your industry? Do you have sufficient protections in the cloud services contract or other means to protect your business against potentially hostile actions?
 

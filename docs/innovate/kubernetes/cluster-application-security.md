@@ -11,8 +11,6 @@ ms.custom: think-tank, seo-caf-innovate
 keywords: application security, security essentials, Kubernetes security
 ---
 
-<!-- cSpell:ignore kured -->
-
 # Cluster and application security
 
 Familiarize yourself with Kubernetes security essentials and review the secure setup for clusters and application security guidance. Kubernetes security is important throughout the container lifecycle because of the distributed, dynamic nature of a Kubernetes cluster. Applications are only as secure as the weakest link in the chain of services that comprise the application's security.
@@ -28,7 +26,7 @@ As you get started, the security essentials checklist and Kubernetes security re
 
 **Security checklist:**
 
-- **Familiarize yourself with the security essentials white paper.** The primary goals of a secure Kubernetes environment are ensuring that the applications it runs are protected, that security issues can be identified and addressed quickly, and that future similar issues will be prevented. For more information, see [The definitive guide to securing Kubernetes (white paper)](https://aka.ms/securingk8s-whitepaper).
+- **Familiarize yourself with the security essentials white paper.** The primary goals of a secure Kubernetes environment are ensuring that the applications it runs are protected, that security issues can be identified and addressed quickly, and that future similar issues will be prevented. For more information, see [`The Definitive Guide to Securing Kubernetes` (white paper)](https://aka.ms/securingk8s-whitepaper).
 
 - **Review the security hardening setup for the cluster nodes.** A security hardened host OS reduces the surface area of attack and allows deploying containers securely. To learn more, see [Security hardening in AKS virtual machine hosts](/azure/aks/security-hardened-vm-host-image).
 
@@ -68,8 +66,8 @@ As you prepare the application for production, implement a minimum set of best p
 - **Configure a container and cluster scanning solution.** Scan containers pushed into Azure Container Registry and gain deeper visibility to your cluster nodes, cloud traffic, and security controls.
 
   For more information, see:
-  - [Azure Container Registry integration with Security Center](/azure/security-center/defender-for-container-registries-introduction) <br>
-  - [Azure Kubernetes Service integration with Security Center](/azure/security-center/defender-for-kubernetes-introduction)
+  - [Azure Container Registry integration with Defender for Cloud](/azure/security-center/defender-for-container-registries-introduction) <br>
+  - [Azure Kubernetes Service integration with Defender for Cloud](/azure/security-center/defender-for-kubernetes-introduction)
 
 ## Optimize and scale
 

@@ -6,7 +6,8 @@ ms.author: mboswell
 ms.date: 03/03/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Enterprise-scale for analytics and AI data integrations in Azure
@@ -28,7 +29,7 @@ For each data integration resource group in a data landing zone, create:
 - An integration security user group used to give access to the Azure Databricks analytics and data science workspace.
 - A service principal used by the integration for deploying ingest jobs to the Azure Databricks engineering workspace.
 
-Other services such as Event Hubs, IoT Hubs, stream insight, and Machine Learning can optionally be created.
+Instances of other services such as Azure Event Hubs, Azure IoT Hub, Azure Stream Analytics, and Azure Machine Learning can optionally be created.
 
 There should be a data integration resource group per external integration.
 

@@ -16,7 +16,7 @@ This article discusses the reasons that customers typically adopt a Deployment A
 
 ## Relevance
 
-On-premises systems are often deployed using baseline images or installation scripts. Additional configuration is usually necessary, which may involve multiple steps or human intervention. These manual processes are error-prone and often result in "configuration drift", requiring time-consuming troubleshooting and remediation tasks.
+On-premises systems are often deployed using baseline images or installation scripts. Additional configuration is usually necessary, which may involve multiple steps or human intervention. These manual processes are error-prone and often result in *configuration drift*, requiring time-consuming troubleshooting and remediation tasks.
 
 Most Azure resources can be deployed and configured manually via the Azure portal. This approach may be sufficient for your needs when only have a few resources to manage. As your cloud estate grows, your organization should begin to integrate automation into your deployment processes to ensure your cloud resources avoid configuration drift or other problems introduced by manual processes. Adopting a DevOps or [DevSecOps](https://www.microsoft.com/devsecops) approach is often the best way to manage your deployments as you cloud adoption efforts mature.
 
