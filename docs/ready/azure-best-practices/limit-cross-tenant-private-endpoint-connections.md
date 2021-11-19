@@ -27,11 +27,8 @@ Private endpoints can be used to control the traffic within your Azure environme
 
 For both scenarios, it's as simple as specifying the resource ID of the service and manually approving the private endpoint connection. The user also requires some role-based access control (RBAC) access to execute these actions.
 
-<<<<<<< HEAD
-=======
 Connections C and D in Figure 1 illustrate scenarios that customers generally want to allow as private endpoint connections are kept within the corporate Azure AD tenant and therefore do not represent a security risk. Hence, these two scenarios are not covered in this article.
 
->>>>>>> master
 The following information gives you options to prevent the provisioning of private endpoints across Azure AD tenants.
 
 ## Deny private endpoints linked to services in other tenants
