@@ -15,6 +15,8 @@ ms.custom: internal
 
 ## Business continuity and disaster recovery - Design considerations
 
+For effective business continuity and disaster recovery, your organization or enterprise needs to design suitable, platform-level capabilities that application workloads can consume to meet their requirements. Specifically, these application workloads have requirements related to the recover time objective (RTO) and recovery point objective (RPO). To design capabilities appropriately for these workloads, ensure that you capture disaster recovery (DR) requirements.
+
 Consider the following factors:
 
 |Scope|Context|

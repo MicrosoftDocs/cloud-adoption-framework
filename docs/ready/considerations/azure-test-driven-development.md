@@ -47,7 +47,7 @@ The examples listed above can be used as tools for accelerating TDD cycles. They
 
 ## Next steps
 
-To begin refactoring your first landing zone, evaluate [basic landing zone considerations](./basic-considerations.md).
+To begin refactoring your first landing zone, evaluate the [refactor landing zones](../landing-zone/refactor.md) guidance.
 
 > [!div class="nextstepaction"]
-> [Basic landing zone considerations](./basic-considerations.md)
+> [Refactor landing zones](../landing-zone/refactor.md)

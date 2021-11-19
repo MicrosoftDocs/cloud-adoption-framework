@@ -36,4 +36,4 @@ The [Govern methodology](../../govern/index.md) provides overall guidance for bu
 Cloud adoption will continue to expand with each wave or release of new workloads. To stay ahead of these requirements, cloud platform teams should periodically review the landing zone design areas.
 
 > [!div class="nextstepaction"]
-> [Review additional landing zone design areas](../landing-zone/design-areas.md)
+> [Review landing zone design areas](../landing-zone/design-areas.md)

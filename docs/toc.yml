@@ -1935,7 +1935,17 @@ items:
       - name: Subscriptions
         href: decision-guides/subscriptions/index.md
       - name: Identity
-        href: decision-guides/identity/index.md
+        items:
+        - name: Identity decision guide
+          href: decision-guides/identity/index.md
+        - name: Identity management best practices
+          href: /azure/security/fundamentals/identity-management-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+        - name: Secure privileged access
+          href: /azure/active-directory/roles/security-planning?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
+        - name: Azure role-based access control
+          href: ready/considerations/roles.md  
+        - name: Choose an authentication method
+          href: /azure/active-directory/hybrid/choose-ad-authn?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json  
       - name: Policy enforcement
         href: decision-guides/policy-enforcement/index.md
       - name: Resource consistency
@@ -1944,25 +1954,79 @@ items:
         href: decision-guides/resource-tagging/index.md
       - name: Encryption
         href: decision-guides/encryption/index.md
-      - name: Software-defined networks
+      - name: Networking
         items:
-        - name: Overview
-          href: decision-guides/software-defined-network/index.md
-        - name: PaaS-only
-          href: decision-guides/software-defined-network/paas-only.md
-        - name: Cloud-native
-          href: decision-guides/software-defined-network/cloud-native.md
-        - name: Cloud DMZ
-          href: decision-guides/software-defined-network/cloud-dmz.md
-        - name: Hybrid
-          href: decision-guides/software-defined-network/hybrid.md
-        - name: Hub and spoke model
-          href: decision-guides/software-defined-network/hub-spoke.md
+        - name: Review networking options
+          href: ready/considerations/networking-options.md
+        - name: Network boundary security
+          href: resources/networking-vdc.md
+        - name: Plan virtual networks
+          href: /azure/virtual-network/virtual-network-vnet-plan-design-arm?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+        - name: Best practices for network security
+          href: /azure/security/fundamentals/network-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+        - name: Perimeter networks
+          href: ready/azure-best-practices/perimeter-networks.md
+        - name: Hub and spoke network topology
+          href: ready/azure-best-practices/hub-spoke-network-topology.md
+        - name: Software-defined networks
+          items:
+          - name: Overview
+            href: decision-guides/software-defined-network/index.md
+          - name: PaaS-only
+            href: decision-guides/software-defined-network/paas-only.md
+          - name: Cloud-native
+            href: decision-guides/software-defined-network/cloud-native.md
+          - name: Cloud DMZ
+            href: decision-guides/software-defined-network/cloud-dmz.md
+          - name: Hybrid
+            href: decision-guides/software-defined-network/hybrid.md
+          - name: Hub and spoke model
+            href: decision-guides/software-defined-network/hub-spoke.md
       - name: Logging and reporting
         href: decision-guides/logging-and-reporting/index.md
+      - name: Cost management
+        items:
+        - name: Track costs
+          href: ready/azure-best-practices/track-costs.md
+        - name: Optimize your cloud investment
+          href: /azure/cost-management-billing/costs/cost-mgt-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+        - name: Create and manage budgets
+          href: /azure/cost-management-billing/costs/tutorial-acm-create-budgets?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+        - name: Export cost data
+          href: /azure/cost-management-billing/costs/tutorial-export-acm-data?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+        - name: Optimize costs from recommendations
+          href: /azure/cost-management-billing/costs/tutorial-acm-opt-recommendations?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+        - name: Monitor usage and spending
+          href: /azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json  
       - name: Migration tools
         href: decision-guides/migrate-decision-guide/index.md
-
+      - name: Storage
+        items:
+        - name: Review storage options
+          href: ready/considerations/storage-options.md
+        - name: Storage security guide
+          href: /azure/storage/blobs/security-recommendations?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+      - name: Databases
+        items:
+        - name: Review data options
+          href: ready/considerations/data-options.md
+        - name: Database security best practices
+          href: /azure/azure-sql/database/security-best-practice?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
+        - name: Choose a deployment option in Azure SQL Database
+          href: /azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
+      - name: AI + Machine Learning
+        items:
+        - name: Organize and set up Azure Machine Learning environments
+          href: ready/azure-best-practices/ai-machine-learning-resource-organization.md
+        - name: Best practices for enterprise security
+          href: ready/azure-best-practices/ai-machine-learning-enterprise-security.md
+        - name: Budget, cost, and quota management with Azure Machine Learning
+          href: ready/azure-best-practices/optimize-ai-machine-learning-cost.md
+        - name: Machine learning DevOps (MLOps)
+          href: ready/azure-best-practices/ai-machine-learning-mlops.md  
+      - name: Create hybrid cloud consistency
+        href: ready/considerations/hybrid-consistency.md
+  
     - name: Additional resources
       items:
       - name: Azure Architecture Center for solution architecture
