@@ -132,11 +132,11 @@ The following tables summarizes the different options and the implications for t
 
 | Policy effect | Enforcement Mode      | Activity log entry | Remediation action |
 | --            | --                    | --                 | --          |
-| DINE          | Enabled/Default       | Yes                | Platform triggered remediation at scan after creation/resource update. Manual trigger of remediation task required if dependent resource is modified/deleted. |
-| DINE          | Disabled/DoNotEnforce | No                 | Manual trigger of remediation task required |
+| DINE          | Enabled/Default       | Yes                | Platform triggered remediation at scan after creation/resource update. Manual creation of a remediation task required if dependent resource is modified or pre-existing prior to the policy assignment. |
+| DINE          | Disabled/DoNotEnforce | No                 | Manual creation of a remediation task required |
 | Modify        | Enabled/Default       | Yes                | Automatic remediation during creation/update |
-| Modify        | Disabled/DoNotEnforce | No                 | Manual trigger of remediation task required |
-| Deny          | Enabled/Default       | Yes                | Creation/update blocked |
+| Modify        | Disabled/DoNotEnforce | No                 | Manual creation of a remediation task required |
+| Deny          | Enabled/Default       | Yes                | Creation/update denied |
 | Deny          | Disabled/DoNotEnforce | No                 | Creation/update allowed. Manual remediation required |
 | Audit/AINE    | Enabled/Default       | Yes                | Manual remediation required |
 | Audit/AINE    | Disabled/DoNotEnforce | No                 | Manual remediation required |
