@@ -13,13 +13,16 @@ ms.custom: think-tank
 
 Before diving into the steps you can take to gradually adopt the usage of policies, it is important to first understand what and where they are used within the Azure landing zone reference implementations and why. This will then help you to understand whether you want to completely prevent `DeployIfNotExists` (DINE) or `Modify` policies from making changes within your Azure environment or not.
 
+>[!NOTE]
+> This scenario and approach outlined in this article is not intended for or recommended for the majority of customers. Please review the below [Why?](#why) section in full before deciding whether this is suitable and required for your environment.
+
 ### Why?
 
-DINE policies are part of the Azure landing zone reference implementations to assist you and your organization to ultimately ensure your landing zones (also known as subscriptions) and resources within them are compliant; whilst also removing the operation burden for platform and landing zone teams as your Azure environment scales.
+DINE and Modify policies are part of the Azure landing zone reference implementations to assist you and your organization to ultimately ensure your landing zones (also known as subscriptions) and resources within them are compliant; whilst also removing the operation burden for platform and landing zone teams as your Azure environment scales.
 
 For example, a new landing zone subscription is provisioned and placed into the "corp" management group.
 
-DINE policies will then do the following to the landing zone subscription:
+DINE and Modify policies will then do the following to the landing zone subscription:
 
 >[!NOTE]
 > All the below can be optionally disabled at any time or during deployment of the Azure landing zone reference implementations.
@@ -33,9 +36,9 @@ DINE policies will then do the following to the landing zone subscription:
 - Configure the Diagnostic Settings for all resources to be sent to the central Log Analytics workspace in the management subscription
 - Deploy the required Azure Monitor Agents for Virtual Machines and Virtual Machine Scale Sets, including Arc connected servers, and connect them to the central Log Analytics workspace in the management subscription
 
-All assigned policies are there to assist you and the landing zone owners to remain compliant, no actual workload resources are deployed via DINE policies (we do not recommend this either as per: [Should we use Azure Policy to deploy workloads?](/azure/cloud-adoption-framework/ready/enterprise-scale/faq#should-we-use-azure-policy-to-deploy-workloads)) only auxiliary or supporting resources or settings are deployed or configured by these DINE policies.
+All assigned policies are there to assist you and the landing zone owners to remain compliant, no actual workload resources are deployed via DINE or Modify policies (we do not recommend this either as per: [Should we use Azure Policy to deploy workloads?](/azure/cloud-adoption-framework/ready/enterprise-scale/faq#should-we-use-azure-policy-to-deploy-workloads)) only auxiliary or supporting resources or settings are deployed or configured by these DINE policies.
 
-Whilst the Azure landing zones reference implementations utilize [`DeployIfNotExists` (DINE)](/azure/governance/policy/concepts/effects#deployifnotexists) Azure policies to help you achieve policy-driven governance within your Azure environment, we understand that you may not be able to use DINE policies or are not yet ready on your cloud adoption journey to enable this type of [Azure Policy effect](/azure/governance/policy/concepts/effects).
+Whilst the Azure landing zones reference implementations utilize [`DeployIfNotExists` (DINE)](/azure/governance/policy/concepts/effects#deployifnotexists) Azure policies to help you achieve policy-driven governance within your Azure environment, we understand that you may not be able to use DINE or Modify policies or are not yet ready on your cloud adoption journey to enable this type of [Azure Policy effect](/azure/governance/policy/concepts/effects).
 
 This may be due to number of reasons, such as:
 
@@ -55,7 +58,7 @@ If you fit into the above example scenarios or similar, this document will help 
 >  
 > This is outlined further here: [Enforcement Mode](/azure/governance/policy/concepts/assignment-structure#enforcement-mode)
 
-If you have read the above and still are certain that DINE, policies are unable to be used by your organization for whatever reason, then below we will detail how to prevent (also known as disable) the policies from making automatic changes to your Azure environment.
+If you have read the above and still are certain that DINE or Modify, policies are unable to be used by your organization for whatever reason, then below we will detail how to prevent (also known as disable) the policies from making automatic changes to your Azure environment.
 
 >[!NOTE]
 > This is not a permanent operation, and the policies can be re-enabled at any time by a member of your platform team if you later decide to utilize DINE or Modify policies.
