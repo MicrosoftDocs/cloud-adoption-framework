@@ -22,7 +22,7 @@ Azure Machine Learning is an integrated platform for managing the machine learni
 
 Azure Machine Learning covers all aspects of the data science lifecycle. It covers datastore and dataset registration to model deployment. It can be used for any kind of machine learning, from classical machine learning to deep learning. It includes supervised and unsupervised learning. Whether you prefer to write Python, R code, or use zero-code or low-code options such as the designer, you can build, train, and track accurate machine learning and deep learning models in an Azure Machine Learning workspace.
 
-Azure Machine Learning, the Azure platform, and Azure AI services can work together to manage the machine learning lifecycle. A machine learning practitioner can use Azure Synapse Analytics, Azure SQL Database, or Microsoft Power BI to start analyzing data and transition to Azure Machine Learning for prototyping, managing experimentation, and operationalization. In enterprise-scale landing zones, Azure Machine Learning can be considered a [data product](/architectures/data-landing-zone-data-products.md).
+Azure Machine Learning, the Azure platform, and Azure AI services can work together to manage the machine learning lifecycle. A machine learning practitioner can use Azure Synapse Analytics, Azure SQL Database, or Microsoft Power BI to start analyzing data and transition to Azure Machine Learning for prototyping, managing experimentation, and operationalization. In enterprise-scale landing zones, Azure Machine Learning can be considered a [data product](/azure/cloud-adoption-framework/scenarios/data-management/architectures/data-landing-zone-data-products).
 
 ## Azure Machine Learning in enterprise-scale
 
@@ -72,7 +72,7 @@ For each default resource configuration in an enterprise-scale data landing zone
 
 ### Integration with data landing zone core services
 
-The enterprise-scale data landing zone comes with a default set of services that are deployed in the [core services layer](/architectures/data-landing-zone?branch=scenario-data-management#core-services-layer). These core services can be configured when Azure Machine Learning is deployed in enterprise-scale.
+The enterprise-scale data landing zone comes with a default set of services that are deployed in the [core services layer](/azure/cloud-adoption-framework/scenarios/data-management/architectures/data-landing-zone#core-services-layer). These core services can be configured when Azure Machine Learning is deployed in enterprise-scale.
 
 - Connect Azure Synapse Analytics or Databricks workspaces as linked services to integrate data and process big data.
 
@@ -111,7 +111,7 @@ Self-service can be enabled and governed with [policies for Azure Machine Learni
 | [Preview]: Configure allowed registries for specified Azure Machine Learning computes. | Built-in | [View in the Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F5853517a-63de-11ea-bc55-0242ac130003) |
 | Configure Azure Machine Learning workspaces with private endpoints. | Built-in | [View in the Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F7838fd83-5cbb-4b5d-888c-bfa240972597) |
 | Configure machine learning computes to disable local authentication methods. | Built-in | [View in the Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2Fa6f9a2d0-cff7-4855-83ad-4cd750666512) |
-| Append-MachineLearningCompute-SetupScriptsCreationScript | Custom (CAF landing zones) | [View on GitHub](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/MachineLearning/params.policyDefinition.Audit-MachineLearning-PrivateEndpointId.json)   |
+| Append-MachineLearningCompute-SetupScriptsCreationScript | Custom (CAF landing zones) | [View on GitHub](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/MachineLearning/params.policyDefinition.Append-MachineLearningCompute-SetupScriptsCreationScript.json)   |
 | Deny-MachineLearning-HbiWorkspace | Custom (CAF landing zones) | [View on GitHub](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/MachineLearning/params.policyDefinition.Deny-MachineLearning-HbiWorkspace.json)   |
 | Deny-MachineLearning-PublicAccessWhenBehindVnet | Custom (CAF landing zones) | [View on GitHub](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/MachineLearning/params.policyDefinition.Deny-MachineLearning-PublicAccessWhenBehindVnet.json)   |
 | Deny-MachineLearning-Aks | Custom (CAF landing zones) | [View on GitHub](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/MachineLearning/params.policyDefinition.Deny-MachineLearningAks.json)   |
