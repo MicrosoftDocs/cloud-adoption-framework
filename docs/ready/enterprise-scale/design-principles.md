@@ -22,7 +22,7 @@ Decisions you made during review of each design area made need to be adjusted sl
 
 Subscriptions should be used as a unit of management and scale aligned with business needs and priorities to support business areas and portfolio owners to accelerate application migrations and new application development. Subscriptions should be provided to business units to support the design, development, and testing of new workloads and migration of workloads. 
 
-Together alongside a suitable [Management Group hierarchy](./../landing-zone/design-area/resource-org-management-groups.md) subscription can be managed and organized efficiently to enable the organization to operate efficiently at scale.
+Together alongside a suitable [Management Group hierarchy](./../landing-zone/design-area/resource-org-management-groups.md) subscription can be managed and organized efficiently to enable the organization to operate effectively at scale.
 
 ### Policy-driven governance
 
