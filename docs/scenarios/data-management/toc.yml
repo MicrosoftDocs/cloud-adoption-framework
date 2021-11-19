@@ -167,13 +167,13 @@ items:
         - name: Implementation
           href: best-practices/azure-machine-learning.md
         - name: Organize and set up Azure Machine Learning environments
-          href: /azure/cloud-adoption-framework/ready/azure-best-practices/ai-machine-learning-resource-organization?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
+          href: ../../ready/azure-best-practices/ai-machine-learning-resource-organization.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
         - name: Best practices for enterprise security
-          href: /azure/cloud-adoption-framework/ready/azure-best-practices/ai-machine-learning-enterprise-security?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
+          href: ../../ready/azure-best-practices/ai-machine-learning-enterprise-security.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
         - name: Budget, cost, and quota management with Azure Machine Learning
-          href: /azure/cloud-adoption-framework/ready/azure-best-practices/optimize-ai-machine-learning-cost?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
+          href: ../../ready/azure-best-practices/optimize-ai-machine-learning-cost.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
         - name: Machine learning DevOps guide
-          href: /azure/cloud-adoption-framework/ready/azure-best-practices/ai-machine-learning-mlops?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
+          href: ../../ready/azure-best-practices/ai-machine-learning-mlops.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
         - name: Data science best practices
           href: ./best-practices/data-science-best-practices.md
       - name: Data landing zone ingestion
