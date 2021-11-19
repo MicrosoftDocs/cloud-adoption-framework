@@ -58,7 +58,7 @@ Azure Activity Log can be used to set up [resource health notifications](/azure/
 
 ### Role based access controls
 
-Once a Kubernetes cluster is onboarded you will be able to assign [Azure Role Based Access Controls](/azure/role-based-access-control/overview/) to the Azure Arc-enabled resource, follow the [least privilege principle](/security/benchmark/azure/baselines/arc-enabled-security-baseline#pa-7-follow-just-enough-administration-least-privilege-principle) users, groups or applications assigned with roles like "Contributor" or "Owner" are able to execute operations like deploying extensions which basically has the power to do anything on Arc-enabled Kubernetes. These roles should be used with caution to limit possible blast radius or eventually replaced by custom roles.
+Once a Kubernetes cluster is onboarded you will be able to assign [Azure Role Based Access Controls](/azure/role-based-access-control/overview) to the Azure Arc-enabled resource, follow the [least privilege principle](/security/benchmark/azure/baselines/arc-enabled-security-baseline#pa-7-follow-just-enough-administration-least-privilege-principle) users, groups or applications assigned with roles like "Contributor" or "Owner" are able to execute operations like deploying extensions which basically has the power to do anything on Arc-enabled Kubernetes. These roles should be used with caution to limit possible blast radius or eventually replaced by custom roles.
 
 Also consider the sensitive data that is sent to the Azure Monitor Log Analytics workspace, the same RBAC principle should be applied to the data itself. Azure Arc-enabled Kubernetes provides RBAC access to log data collected by the Log Analytics agent, stored in the Log Analytics workspace the machine is registered to. Review how to implement granular Log Analytics Workspace access in the [designing your Azure Monitor Logs deployment documentation](/azure/azure-monitor/logs/design-logs-deployment#access-control-overview).
 
@@ -81,20 +81,16 @@ Make sure to review best practices on [implementing CI/CD workflows with GitOps]
 
 ### Policy management and reporting
 
-Having a policy-driven governance is a foundational principle of cloud-native operations and Cloud Adoption Framework. [Azure Policy](/azure/governance/policy/) provides the mechanism to enforce corporate standards and to assess compliance at scale. Through it, you can implement governance for consistency of deployments, compliance, control costs, and improve your security posture; with its compliance dashboard, you will get an aggregated view of the overall state as well as remediation capabilities. Azure Arc-enabled Kubernetes supports [Azure Policy](/azure/governance/policy/overview) at the Azure Resource Management layer, and also within the individual server machine using [Guest Configuration Policies](/azure/governance/policy/concepts/guest-configuration).
+Having a policy-driven governance is a foundational principle of cloud-native operations and Cloud Adoption Framework. [Azure Policy](/azure/governance/policy/) provides the mechanism to enforce corporate standards and to assess compliance at scale. Through it, you can implement governance for consistency of deployments, compliance, control costs, and improve your security posture; with its compliance dashboard, you will get an aggregated view of the overall state as well as remediation capabilities. Azure Arc-enabled Kubernetes supports [Azure Policy](/azure/governance/policy/overview) at the Azure Resource Management layer, and also in-cluster policy enforcements by extending [Gatekeeper for Open Policy Agent](/azure/governance/policy/concepts/policy-for-kubernetes?toc=/azure/azure-arc/kubernetes/toc.json).
 
-Understand the [scope of Azure policy](/azure/role-based-access-control/scope-overview) and where it can be applied (Management Group, subscription, resource group or individual resource level). Create a Management Group design in accordance with the recommended practices outlined in the [Cloud Adoption Framework Enterprise Scale](/azure/cloud-adoption-framework/ready/enterprise-scale/management-group-and-subscription-organization)
+Understand the [scope of Azure policy](/azure/governance/policy/concepts/scope) and where it can be applied (Management Group, subscription, resource group or individual resource level). Create a Management Group design in accordance with the recommended practices outlined in the [Cloud Adoption Framework Enterprise Scale](/azure/cloud-adoption-framework/ready/enterprise-scale/management-group-and-subscription-organization)
 
 - Determine what Azure policies are required by defining business, regulatory and security requirements for Azure Arc-enabled Kubernetes.
 - Enforce tagging and implement [remediation tasks](/azure/governance/policy/how-to/remediate-resources).
-- Understand and evaluate the [Azure Policy built-in definitions for Azure Arc-enabled Kubernetes](/azure/azure-arc/kubernetes/policy-reference)
-- Understand and evaluate the built-in [Guest Configuration policies](/azure/governance/policy/samples/built-in-policies#guest-configuration) and [initiatives](/azure/governance/policy/samples/built-in-initiatives#guest-configuration).
-- Evaluate the need for creating [custom Guest configuration policies](/azure/governance/policy/how-to/guest-configuration-create)
-- Define a monitoring and alerting policy that identifies [unhealthy Azure arc-enabled Kubernetes](/azure/azure-arc/kubernetes/plan-at-scale-deployment#phase-3-manage-and-operate).
-- Enable Azure Advisor alerts to identify Azure arc-enabled Kubernetes with [outdated agents installed](/azure/azure-arc/kubernetes/plan-at-scale-deployment#phase-3-manage-and-operate).
-- [Enforce organization standards and assess compliance at scale](/azure/azure-arc/kubernetes/security-controls-policy).
-- Use an Azure Policy and Remediation tasks to onboard management services agents via the extension management feature.
-- Enable [Azure Monitor](/azure/azure-arc/Kubernetes/learn/tutorial-enable-vm-insights) for compliance and operational monitoring of Azure Arc-enabled Kubernetes.
+- Use an Azure Policy to [enforce GitOps](/azure/azure-arc/kubernetes/use-azure-policy) and apply configurations at scale.
+- Understand and evaluate the [Azure Policy built-in definitions for Azure Arc-enabled Kubernetes](/azure/azure-arc/kubernetes/policy-reference).
+- Use an Azure Policy and Remediation tasks to onboard management services agents via the extension management feature, including Azure Defender.
+- Enable [Azure Monitor Container Insights](/azure/azure-monitor/containers/container-insights-enable-arc-enabled-clusters?toc=/azure/azure-arc/kubernetes/toc.json) for compliance and operational monitoring of Azure Arc-enabled Kubernetes.
 
 The following image shows a conceptual reference architecture that demonstrates the policy and compliance reporting design areas for Azure Arc-enabled Kubernetes:
 
