@@ -27,7 +27,7 @@ There are many services in Azure that help you monitor and diagnose the infrastr
 
 It's important to understand how you can structure all that data that has been gathered to meet your analysis requirements, and when combined with data from each part of the system and data generated from other dependencies that may not be in the same region, subscription, or resource group. This information requires careful correlation to ensure that data is combined accurately.
 
-Use this exercise to determine how the monitoring data can be used to identify potential failures, resource bottlenecks, under or over utilization, etc. Then evaluate if they are the right conditions to use orchestration as the first response or if escalation is necessary with IT Operations or following a workflow as part of the DevOps Operate phase.  
+Use this exercise to determine how the monitoring data can be used to identify potential failures, resource bottlenecks, under or over utilization, etc. Then evaluate if they are the right conditions to use orchestration as the first response or if escalation is necessary with IT Operations, or follow a workflow in the DevOps Operate phase.  
 
 ## Successful alerting strategy
 
