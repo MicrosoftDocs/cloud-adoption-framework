@@ -16,7 +16,7 @@ In the [Observability](observability.md) we discussed the five disciplines of mo
 
 As part of monitoring, alerting was an action resulting from a detected condition, such as a node in the cluster is down, a database for an application is full, or an application process is consuming too many CPU cycles for an indefinite period. Based on defined escalation paths and the severity/impact of the condition, the alert creates an incident record in an ITSM system, or sends an e-mail notification to the operations or engineering team following your escalation path. We consider this approach outdated and not in alignment with modern service management or cloud operations recommended practices. This approach closely follows the traditional ITIL Incident Management path.
 
-There are other responsive actions that can be used instead of following this traditional path. Under certain circumstances, some alerts can be informational to inform you that:
+There are other responsive actions that can be used instead of following the traditional path. Under certain circumstances, some alerts can be informational to inform you that:
 
 * A VM was automatically shutdown to minimize waste and control costs based on a schedule or low utilization detected.
 * IaaS or PaaS resources are idle for a long period of time or not provisioned based on Azure Advisor recommendations.
@@ -27,7 +27,7 @@ There are many services in Azure that help you monitor and diagnose the infrastr
 
 It's important to understand how you can structure all that data that has been gathered to meet your analysis requirements, and when combined with data from each part of the system and data generated from other dependencies that may not be in the same region, subscription, or resource group. This information requires careful correlation to ensure that data is combined accurately.
 
-Use this exercise to determine how the monitoring data can be used to identify potential failures, resource bottlenecks, under or over utilization, etc.
+Use this exercise to determine how the monitoring data can be used to identify potential failures, resource bottlenecks, under or over utilization, etc. Then evaluate if they are the right conditions to use orchestration as the first response or if escalation is necessary with IT Operations or following a workflow as part of the DevOps Operate phase.  
 
 ## Successful alerting strategy
 
