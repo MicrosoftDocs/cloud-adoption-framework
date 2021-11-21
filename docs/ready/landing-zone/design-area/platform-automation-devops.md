@@ -12,15 +12,15 @@ ms.custom: internal
 
 # Design area: Platform automation and DevOps
 
-This critical design area evaluates opportunities to modernize your approach to environmental deployment with Infrastructure as Code options.
+This critical design area evaluates opportunities to modernize your approach to environmental deployment with infrastructure as code options.
 
-## Design Area review
+## Design area review
 
-**Involved roles or functions:** This design area will likely require support from one or more of the following functions or roles to make decisions and implement those decisions: [Cloud Platform](../../../organize/cloud-platform.md), and [Cloud Center of Excellence](../../../organize/cloud-center-of-excellence.md)
+**Involved roles or functions:** This design area will likely require support from one or more of the following functions or roles to make decisions and implement those decisions: [cloud platform](../../../organize/cloud-platform.md), and [cloud center of excellence](../../../organize/cloud-center-of-excellence.md)
 
-**Scope:** The objective of this exercise is to evaluate our organizations maturity with infrastructure as code and devops deployment approaches.
+**Scope:** The objective of this exercise is to evaluate our organizations maturity with infrastructure as code and DevOps deployment approaches.
 
-## Design Area overview
+## Design area overview
 
 As organizations move into cloud technologies, the scale, agility and flexibility offered can lead to opportunities for new ways of working and modern approaches for delivering services.
 
@@ -28,16 +28,16 @@ Many traditional IT operating models aren't compatible with the cloud, and organ
 
 ### DevOps
 
-A compound of development (Dev) and operations (Ops), DevOps is the union of people, processes and technology to continually provide value.
+A compound of development (dev) and operations (ops), DevOps is the union of people, processes and technology to continually provide value.
 This approach encourages a team collaboration approach that can create repeatable processes to help organizations operate efficiently and at scale.
 
 In the context of a cloud environment, DevOps processes will encourage the concepts of continuous integration and continuous deployment (CI/CD), which fosters a culture of refinement and improvement.
 
-The decisions your organization made when reviewing cloud operating models will directly influence how DevOps functions are implemented across technical teams with the capability for Infrastructure as Code.
+The decisions your organization made when reviewing cloud operating models will directly influence how DevOps functions are implemented across technical teams with the capability for infrastructure as code.
 
 ### Platform automation
 
-Platform automation focusses on the tools and techniques that enable the streamlining of tasks that may once have been performed manually but using automation tools, such as Azure DevOps or Github.
+Platform automation focusses on the tools and techniques that enable the streamlining of tasks that may once have been performed manually but using automation tools, such as Azure DevOps or GitHub.
 
 By automating tasks, the effort to complete them reduces as well as the risk of human-error introducing issues resulting from the task.
 This automation then enables the tasks to be completed quicker and more often, supporting the concepts of (CI/CD).
@@ -48,7 +48,7 @@ Using automated processes and tools enables deployment activities to be configur
 
 The ability to make changes at scale through a prescribed, automated process will also provide direct benefits to the organization's ability to expand beyond the baseline configurations chosen as part of security, governance and management.
 
-### Platform automation and DevOps Design considerations
+### Platform automation and DevOps design considerations
 
 - Where central teams are concerned, consider using pipelines for continuous integration and continuous deployment
 - Pipelines can be used to manage policy definitions, role definitions, policy assignments, management group hierarchies, and subscriptions. These pipelines help ensure that you can operationally manage multiple subscriptions while still conforming to a desired state.
@@ -67,11 +67,11 @@ The distribution of roles, responsibilities, and trust between central IT teams 
 
 Central teams strive to maintain full control while application owners seek to maximize agility. The balance between these goals can greatly influence the success of the migration.
 
-## Recommendations for Platform automation and DevOps
+## Recommendations for platform automation and DevOps
 
 An Azure DevOps model that's based on these recommendations provides the desired control for central teams and the migration agility required by application teams.
 
-### Platform automation and DevOps - Design recommendations
+### Platform automation and DevOps - design recommendations
 
 Establish a cross-functional DevOps platform team to build, manage, and maintain your environments. This team should include members from your central IT team, security, compliance, and business units to ensure that a wide spectrum of your enterprise is represented. The following list presents a recommended set of DevOps roles for a central platform team:
 
@@ -82,17 +82,17 @@ Establish a cross-functional DevOps platform team to build, manage, and maintain
 |**NetOps** (network operations)| Network management (holistic) |
 |**AppDevOps**| Allow application owners to create and manage application resources through a DevOps model <br> Application migration or transformation <br> Application management and monitoring <br> Azure RBAC (application resources) <br> Security monitoring and audit (application resources) <br> Cost management (application resources) <br> Network management (application resources)| 
 
-  - In some instances, you might want to break AppDevOps into more granular roles such as AppDataOps for database management or AppSecOps for more security-sensitive applications.
+- In some instances, you might want to break AppDevOps into more granular roles such as AppDataOps for database management or AppSecOps for more security-sensitive applications.
 
-  - Provide a central application DevOps function to support applications that don't have existing DevOps capabilities or a business case to establish one (for example, legacy applications with minimal development capabilities).
+- Provide a central application DevOps function to support applications that don't have existing DevOps capabilities or a business case to establish one (for example, legacy applications with minimal development capabilities).
 
-  - Use a policy-driven approach with clear Azure RBAC boundaries to centrally enforce consistency and security across application teams. This ensures a least privilege approach is taken by using a combination of Azure RBAC and Azure Policy, and that workloads are compliant with Azure Policy assignments at all times.
+- Use a policy-driven approach with clear Azure RBAC boundaries to centrally enforce consistency and security across application teams. This ensures a least privilege approach is taken by using a combination of Azure RBAC and Azure Policy, and that workloads are compliant with Azure Policy assignments at all times.
 
-  - To accelerate Azure adoption, the central platform team should establish a common set of templates and libraries for application teams to draw upon. For example, horizontal (cross-function) guidance can help to support migrations through subject matter expertise and to ensure alignment with the overall target enterprise-scale architecture.
+- To accelerate Azure adoption, the central platform team should establish a common set of templates and libraries for application teams to draw upon. For example, horizontal (cross-function) guidance can help to support migrations through subject matter expertise and to ensure alignment with the overall target enterprise-scale architecture.
 
-  - Don't restrict application teams to use central artifacts or approaches because it hinders their agility. You can enforce consistent baseline configurations through a policy-driven infrastructure approach and Azure RBAC. This ensures that application (business unit) teams are flexible enough to innovate while still able to draw from a predefined set of templates.
+- Don't restrict application teams to use central artifacts or approaches because it hinders their agility. You can enforce consistent baseline configurations through a policy-driven infrastructure approach and Azure RBAC. This ensures that application (business unit) teams are flexible enough to innovate while still able to draw from a predefined set of templates.
 
-  - Don't force application teams to use a central process or provisioning pipeline for the instantiation or management of application resources. Existing teams that already rely on a DevOps pipeline for application delivery should still be able to use the same tools they have been using. Remember that you can still use Azure Policy to maintain guardrails, independent of how resources are deployed in Azure.
+- Don't force application teams to use a central process or provisioning pipeline for the instantiation or management of application resources. Existing teams that already rely on a DevOps pipeline for application delivery should still be able to use the same tools they have been using. Remember that you can still use Azure Policy to maintain guardrails, independent of how resources are deployed in Azure.
 
 ### Define central and federated responsibilities recommendations
 
@@ -109,6 +109,6 @@ The following table presents a recommended distribution of responsibilities betw
 
 ![Diagram of platform automation and DevOps.](../../enterprise-scale/media/devops.png)
 
-As part of the Azure landing zone accelerator, the option is available to integrate continuous integration and continuous deployment (CI/CD) pipelines into the environment using GitHub with GitHub actions. The portal process guides through the steps to setup the integration.
+As part of the Azure landing zone accelerator, the option is available to integrate continuous integration and continuous deployment (CI/CD) pipelines into the environment using GitHub with GitHub Actions. The portal process guides through the steps to set up the integration.
 
-By integrating CI/CD pipelines into the environment, platform resources can be managed as code in a repository. 
+By integrating CI/CD pipelines into the environment, platform resources can be managed as code in a repository.

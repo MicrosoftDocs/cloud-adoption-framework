@@ -44,11 +44,11 @@ As the organization's cloud environment develops, these compliance design areas 
 
 ## Design area process
 
-These design areas describe what you should consider prior to deploying a landing zone. Together, they establish a process to aid in exploring otherwise complex topics, typically involved in making critical decisions about your environment. Evaluation of each design area will help understand any changes you may need to make to the Azure Landing Zone implementation options.
+These design areas describe what you should consider prior to deploying a landing zone. Together, they establish a process to aid in exploring otherwise complex topics, typically involved in making critical decisions about your environment. Evaluation of each design area will help understand any changes you may need to make to the Azure landing zone implementation options.
 
 Evaluating each of the design areas sequentially provides a process which simplifies design of even the most complex environments. However, if you've already addressed one or more of the design areas to your satisfaction, check it off the list and move on to the next area.
 
-In this process, you'll be provided a list of roles or functions typically require to make & act on design are decisions. You'll also see a series of considerations, recommendations, and scope boundaries to help shape the discussion and decision making process.
+In this process, you'll be provided a list of roles or functions typically require to make and act on design are decisions. You'll also see a series of considerations, recommendations, and scope boundaries to help shape the discussion and decision making process.
 
 ## Next steps
 

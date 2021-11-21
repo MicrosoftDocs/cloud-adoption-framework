@@ -14,8 +14,8 @@ ms.custom: internal
 
 Start your Azure adoption by creating an initial set of subscriptions. Learn what subscriptions you should begin with based on your initial requirements.
 
->[!Note] 
->We recommend that organizations consider the Azure landing zone guidance for [resource organization](../landing-zone/design-area/resource-org.md) as a first step to planning subscriptions within an Azure environment to ensure the broader context of an environment intended to scale is considered
+> [!NOTE]
+> We recommend that organizations consider the Azure landing zone guidance for [resource organization](../landing-zone/design-area/resource-org.md) as a first step to planning subscriptions within an Azure environment to ensure the broader context of an environment intended to scale is considered
 
 ## Your first two subscriptions
 
@@ -33,7 +33,7 @@ This approach has many benefits:
 - Azure Dev/Test subscription offerings are available for nonproduction workloads. These offerings provide discounted rates on Azure services and software licensing.
 - Your production and nonproduction environments will likely have different sets of Azure policies. Using separate subscriptions makes it simple to apply each distinct policy at the subscription level.
 - You can allow certain types of Azure resources in your nonproduction subscription for testing purposes. You can enable those resource providers in your nonproduction subscription without making them available in your production environment.
-- You can use Azure Dev/Test subscriptions as isolated sandbox environments. These sandboxes allow administrators and developers to rapidly build up and tear down entire sets of Azure resources. This isolation can also help with data protection and security concerns.
+- You can use Azure dev/test subscriptions as isolated sandbox environments. These sandboxes allow administrators and developers to rapidly build up and tear down entire sets of Azure resources. This isolation can also help with data protection and security concerns.
 - The acceptable cost thresholds that you define will likely vary between production and nonproduction environments.
 
 ## Sandbox subscriptions

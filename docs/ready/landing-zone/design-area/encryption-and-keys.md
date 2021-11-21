@@ -24,7 +24,7 @@ Encryption is a vital step toward ensuring data privacy, compliance, and data re
 
 - Isolate application-specific and workload-specific secrets and shared secrets, as appropriate to [control access](/azure/key-vault/general/best-practices).
 
-- Optimize premium SKUs where hardware-security-module-protected keys are required.
+- Optimize Premium SKUs where hardware-security-module-protected keys are required.
 
    Underlying hardware security modules (HSMs) are FIPS 140-2 Level 2 compliant. Manage Azure dedicated HSM for FIPS 140-2 Level 3 compliance by considering the supported scenarios.
 

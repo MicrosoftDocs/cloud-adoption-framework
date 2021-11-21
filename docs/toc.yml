@@ -2,7 +2,7 @@ items:
   - name: Cloud Adoption Framework for Azure
     href: index.yml
     pdf_name: Microsoft Cloud Adoption Framework for Azure
-  - name: About the Framework
+  - name: About the framework
     href: overview.md
   - name: What's new
     href: get-started/whats-new.md
@@ -104,7 +104,7 @@ items:
         href: strategy/business-outcomes/fiscal-outcomes.md
       - name: Agility outcomes
         href: strategy/business-outcomes/agility-outcomes.md
-      - name: Global reach outcomes
+      - name: Global Reach outcomes
         href: strategy/business-outcomes/reach-outcomes.md
       - name: Customer engagement outcomes
         href: strategy/business-outcomes/engagement-outcomes.md
@@ -262,25 +262,25 @@ items:
         items:
         - name: Azure billing and Active Directory tenant
           items:
-          - name: Overview 
+          - name: Overview
             href: ready/landing-zone/design-area/azure-billing-ad-tenant.md
           - name: Enterprise Agreement
             href: ready/landing-zone/design-area/azure-billing-ea.md
-          - name: Microsoft Customer Agreement
+          - name: Microsoft customer agreement
             href: ready/landing-zone/design-area/azure-billing-mca.md
-          - name: Cloud Service provider
+          - name: Cloud service provider
             href: ready/landing-zone/design-area/azure-billing-csp.md
           - name: Define an Azure Active Directory tenant
-            href: ready/landing-zone/design-area/azure-ad-define.md  
+            href: ready/landing-zone/design-area/azure-ad-define.md
 
         - name: Identity and access management
           href: ready/landing-zone/design-area/identity-access.md
-          
+
         - name: Network topology and connectivity
           items:
             - name: Overview
               href: ready/landing-zone/design-area/network-topology-and-connectivity.md
-            - name: Topology 
+            - name: Topology
               items:
               - name: Define an Azure network topology
                 href: ready/azure-best-practices/define-an-azure-network-topology.md
@@ -290,7 +290,7 @@ items:
                 href: ready/azure-best-practices/virtual-wan-network-topology.md
               - name: Plan for IP addressing
                 href: ready/azure-best-practices/plan-for-ip-addressing.md
-            - name: Connectivity 
+            - name: Connectivity
               items:
               - name: Connectivity to Azure
                 href: ready/azure-best-practices/connectivity-to-azure.md
@@ -304,7 +304,7 @@ items:
                 href: ready/azure-best-practices/connectivity-to-other-providers-oci.md
               - name: Plan for application delivery
                 href: ready/azure-best-practices/plan-for-app-delivery.md
-            - name: Network Security 
+            - name: Network security
               items:
               - name: Plan for inbound and outbound internet connectivity
                 href: ready/azure-best-practices/plan-for-inbound-and-outbound-internet-connectivity.md
@@ -314,7 +314,7 @@ items:
                 href: ready/azure-best-practices/define-network-encryption-requirements.md
               - name: Plan for traffic inspection
                 href: ready/azure-best-practices/plan-for-traffic-inspection.md
-            - name: Resources 
+            - name: Resources
               items:
               - name: Private Link and DNS integration at scale
                 href: ready/azure-best-practices/private-link-and-dns-integration-at-scale.md
@@ -330,7 +330,7 @@ items:
           - name: Subscriptions
             href: ready/landing-zone/design-area/resource-org-subscriptions.md
           - name: Additional information
-            items:  
+            items:
             - name: Naming and tagging
               href: ready/azure-best-practices/naming-and-tagging.md
             - name: Define your naming convention
@@ -360,8 +360,6 @@ items:
             href: ready/landing-zone/design-area/encryption-and-keys.md
           - name: Service enablement framework
             href: ready/landing-zone/design-area/service-enablement-framework.md
-          
-
 
         - name: Management
           items:
@@ -371,7 +369,7 @@ items:
             href: ready/landing-zone/design-area/management-platform.md
           - name: Protect and recover
             href: ready/landing-zone/design-area/management-bcdr.md
-          - name: Operational Compliance
+          - name: Operational compliance
             href: ready/landing-zone/design-area/management-operational-compliance.md
           - name: Workloads
             href: ready/landing-zone/design-area/management-workloads.md
@@ -411,8 +409,8 @@ items:
           items:
           - name: Overview
             href: ready/enterprise-scale/index.md
-          - name: Design principles 
-            href: ready/enterprise-scale/design-principles.md  
+          - name: Design principles
+            href: ready/enterprise-scale/design-principles.md
           - name: Implement enterprise-scale landing zones
             href: ready/enterprise-scale/implementation.md
           - name: Testing approach for enterprise-scale
@@ -423,7 +421,7 @@ items:
             href: ready/enterprise-scale/scenario-specific-enterprise-scale-landing-zones.md
           - name: Enterprise-scale FAQ
             href: ready/enterprise-scale/faq.md
-          
+
         - name: Start small and expand
           items:
           - name: CAF Migration landing zone blueprint
@@ -435,8 +433,8 @@ items:
 
         - name: Partner landing zones
           href: ready/landing-zone/partner-landing-zone.md
-        
-      - name: Align 
+
+      - name: Align
         items:
         - name: Refactor landing zones
           href: ready/landing-zone/refactor.md
@@ -457,9 +455,9 @@ items:
           items:
           - name: Overview
             href: ready/considerations/landing-zone-security.md
-          - name: Onboard a subscription to Azure Security Center
+          - name: Onboard a subscription to Microsoft Defender for Cloud
             href: /azure/security-center/security-center-get-started?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Onboard Azure Sentinel
+          - name: Onboard Microsoft Sentinel
             href: /azure/sentinel/quickstart-onboard?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
           - name: Implementing a secure hybrid network architecture in Azure
             href: /azure/architecture/reference-architectures/dmz/secure-vnet-dmz?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
@@ -1090,7 +1088,7 @@ items:
                 href: /azure/app-service/tutorial-nodejs-mongodb-app?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
             - name: Infusing intelligence
               items:
-              - name: Computer Vision service
+              - name: Computer vision service
                 href: /azure/cognitive-services/computer-vision/overview?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
               - name: Translate text in real time
                 href: /azure/cognitive-services/translator/quickstart-translator?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
@@ -1771,9 +1769,9 @@ items:
         - name: Secure privileged access
           href: /azure/active-directory/roles/security-planning?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
         - name: Azure role-based access control
-          href: ready/considerations/roles.md  
+          href: ready/considerations/roles.md
         - name: Choose an authentication method
-          href: /azure/active-directory/hybrid/choose-ad-authn?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json  
+          href: /azure/active-directory/hybrid/choose-ad-authn?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Policy enforcement
         href: decision-guides/policy-enforcement/index.md
       - name: Resource consistency
@@ -1825,7 +1823,7 @@ items:
         - name: Optimize costs from recommendations
           href: /azure/cost-management-billing/costs/tutorial-acm-opt-recommendations?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
         - name: Monitor usage and spending
-          href: /azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json  
+          href: /azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Migration tools
         href: decision-guides/migrate-decision-guide/index.md
       - name: Storage
@@ -1842,7 +1840,7 @@ items:
           href: /azure/azure-sql/database/security-best-practice?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
         - name: Choose a deployment option in Azure SQL Database
           href: /azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-      - name: AI + Machine Learning
+      - name: AI + machine learning
         items:
         - name: Organize and set up Azure Machine Learning environments
           href: ready/azure-best-practices/ai-machine-learning-resource-organization.md
@@ -1851,10 +1849,10 @@ items:
         - name: Budget, cost, and quota management with Azure Machine Learning
           href: ready/azure-best-practices/optimize-ai-machine-learning-cost.md
         - name: Machine learning DevOps (MLOps)
-          href: ready/azure-best-practices/ai-machine-learning-mlops.md  
+          href: ready/azure-best-practices/ai-machine-learning-mlops.md
       - name: Create hybrid cloud consistency
         href: ready/considerations/hybrid-consistency.md
-  
+
     - name: Additional resources
       items:
       - name: Azure Architecture Center for solution architecture
@@ -1870,9 +1868,9 @@ items:
 
     - name: Archived resources
       items:
-      - name: Cloud Operating Model
+      - name: Cloud operating model
         href: resources/cloud-operating-model.md
       - name: Azure enterprise scaffold
         href: resources/azure-scaffold.md
-      - name: Virtual Datacenter (VDC)
+      - name: Virtual datacenter (VDC)
         href: resources/vdc.md

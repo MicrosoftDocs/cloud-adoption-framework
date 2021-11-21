@@ -14,7 +14,7 @@ ms.custom: think-tank, csu
 
 # Transition existing Azure environments to the Azure landing zone conceptual architecture
 
-We recognize that most organizations may have an existing footprint in Azure, one or more subscriptions, and potentially an existing structure of their management groups. Depending on their initial business requirements and scenarios, Azure resources such as hybrid connectivity (for example with Site-to-Site VPN and/or ExpressRoute) may have been deployed.
+We recognize that most organizations may have an existing footprint in Azure, one or more subscriptions, and potentially an existing structure of their management groups. Depending on their initial business requirements and scenarios, Azure resources such as hybrid connectivity (for example with Site-to-Site VPN or ExpressRoute) may have been deployed.
 
 This article helps organizations to navigate the right path based on an existing Azure environment transitioning into the Azure landing zone conceptual architecture. This article also describes considerations for moving resources in Azure (for example, moving a subscription from one existing management group to another management group), which will help you evaluate and plan for transitioning your existing Azure environment.
 
@@ -24,7 +24,7 @@ Some resources in Azure can be moved post creation, and there are different appr
 
 | Scope | Destination | Pros | Cons |
 | ----- | ----------- | ---- | ---- |
-| Resources in resource groups | Can be moved to new resource group in same or different subscription | Allows you to modify resource composition in a resource group after deployment | - Not supported by all resourceTypes <br> - Some resourceTypes have specific limitations or requirements <br> - resourceIds are updated and impacts existing monitoring, alerts, and control plane operations <br> - Resource groups are locked during the move period <br> - Requires assessment of policies and RBAC pre and post-move operation |
+| Resources in resource groups | Can be moved to new resource group in same or different subscription | Allows you to modify resource composition in a resource group after deployment | - Not supported by all resourceTypes <br> - Some resourceTypes have specific limitations or requirements <br> - resourceIds are updated and impacts existing monitoring, alerts, and control plane operations <br> - resource groups are locked during the move period <br> - Requires assessment of policies and RBAC pre and post-move operation |
 | Subscriptions in a tenant | Can be moved to different management groups | No impact to existing resources within the subscription, as no resourceId values will be changed | Requires assessment of policies and RBAC pre and post-move operation |
 
 To understand which move strategy you should use, we will go through examples of both:
@@ -35,13 +35,13 @@ The common use cases for moving subscriptions are to organize subscriptions into
 
 ### Azure RBAC requirements
 
-To assess a subscription prior to a move, it is important that the user has the appropriate Azure RBAC such as being an owner on the subscription (direct role assignment), and has write permission on the target management group (built-in roles that support this are the Owner role, the Contributor role, and the Management Group Contributor role).
+To assess a subscription prior to a move, it's important that the user has the appropriate Azure RBAC such as being an owner on the subscription (direct role assignment), and has write permission on the target management group (built-in roles that support this are the Owner role, the Contributor role, and the Management Group Contributor role).
 
 If the user has an inherited Owner role permission on the subscription from an existing management group, the subscription can only be moved to the management group where the user has been assigned the Owner role.
 
 ### Policy
 
-Existing subscriptions may be subject to Azure policies assigned either directly, or at the management group where they are currently located. It is important to assess current policies, and the policies that may exist in the new management group/management group hierarchy.
+Existing subscriptions may be subject to Azure policies assigned either directly, or at the management group where they are currently located. It's important to assess current policies, and the policies that may exist in the new management group/management group hierarchy.
 
 Azure Resource Graph can be used to perform an inventory of existing resources and compare their configuration with the policies existing at the destination.
 
@@ -65,7 +65,7 @@ For more guidance about how to move resources across resource groups and subscri
 
 ### Before you move resources
 
-Prior to a move operation, you must verify that the [resources in scope are supported](/azure/azure-resource-manager/management/move-support-resources) as well as assessing their requirements and dependencies. For instance, moving a peered virtual network requires you to disable virtual network peering first, and re-enable the peering once the move operation has completed. This disable/re-enable dependency requires planning upfront to understand the impact to any existing workload that may be connected to your virtual networks.
+Prior to a move operation, you must verify that the [resources in scope are supported](/azure/azure-resource-manager/management/move-support-resources) as well as assessing their requirements and dependencies. For instance, moving a peered virtual network requires you to disable virtual network peering first, and reenable the peering once the move operation has completed. This disable/reenable dependency requires planning upfront to understand the impact to any existing workload that may be connected to your virtual networks.
 
 ### Post-move operation
 
@@ -76,4 +76,4 @@ When the resources are moved into a new resource group in the same subscription,
 We have provided guidance in [Scenarios: Transitioning existing Azure environments to the Azure landing zone conceptual architecture](./../landing-zone/alz-align-scenarios.md) for common scenarios that our customers may match, or be similar to, that they wish to migrate and transition from into the Azure landing zone conceptual architecture.
 
 > [!div class="nextstepaction"]
-> [Review Scenarios: Transitioning existing Azure environments to the Azure landing zone conceptual architecture](./../landing-zone/alz-align-scenarios.md)
+> [Review scenarios: Transitioning existing Azure environments to the Azure landing zone conceptual architecture](./../landing-zone/alz-align-scenarios.md)
