@@ -40,13 +40,13 @@ This section provides different connectivity approaches to integrate an Azure la
 
 - You can interconnect an Azure network architecture based on the traditional hub and spoke architecture or Azure Virtual WAN-based network topologies. It can be done by connecting the ExpressRoute circuit that will be used to interconnect Azure to OCI to the hub VNet or Virtual WAN hub as shown in the following diagram.
 
-  ![Diagram that shows interconnectivity between Azure and OCI via ExpressRoute.](./media/azure-oci-hub-and-spoke.png)
+  ![Diagram that shows interconnectivity between Azure and O C I via ExpressRoute.](./media/azure-oci-hub-and-spoke.png)
 
   *Figure 1: Interconnectivity between Azure and OCI via ExpressRoute.*
 
 - If your application requires the lowest possible latency between Azure and OCI, consider deploying your application in a single VNet with an ExpressRoute gateway and FastPath enabled.
 
-  ![Diagram that shows Azure to OCI - single vNet.](./media/azure-oci-one-vnet.png)
+  ![Diagram that shows Azure to O C I - single V Net.](./media/azure-oci-one-vnet.png)
 
   *Figure 2: Interconnectivity between Azure and OCI with a single VNet.*
 

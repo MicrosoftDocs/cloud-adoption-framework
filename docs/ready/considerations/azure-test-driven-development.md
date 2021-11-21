@@ -20,7 +20,7 @@ As outlined in the previous article on [test-driven development (TDD) for landin
 
 *Figure 1: Test-driven development tools in Azure.*
 
-The toolchain of Azure-native governance products and services can be easily integrated into test-driven development for the creation of landing zones. Each of these tools serves a specific purpose, making it easier to develop, test, and deploy your landing zone in alignment with TDD cycles.
+The toolchain of Azure-native governance products and services can be easily integrated into test-driven development for the creation of landing zones. These tools serves a specific purpose, making it easier to develop, test, and deploy your landing zone in alignment with TDD cycles.
 
 ## Microsoft-provided test and deployment templates to accelerate TDD
 

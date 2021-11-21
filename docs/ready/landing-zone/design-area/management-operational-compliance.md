@@ -1,5 +1,5 @@
 ---
-title: Management - Operational compliance
+title: Management - operational compliance
 description: Design area guidance for establishing operational compliance across your Azure platform services
 author: DominicAllen
 ms.author: doalle
@@ -9,7 +9,6 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: internal
 ---
-
 
 # Operational compliance considerations | Management design area
 
@@ -36,4 +35,4 @@ Learn more about the [guest configuration feature of Azure Policy](/azure/govern
 - Are there existing update management tools used by the organization? Can they be extended to cover the cloud environment or are new tools required?
 - Which teams will be responsible for overseeing update management?
 - Are there groups of resources that share similar update schedules?
-- Are there groups of resources that cannot be updated at the same time for business continuity reasons?  
+- Are there groups of resources that cannot be updated at the same time for business continuity reasons?

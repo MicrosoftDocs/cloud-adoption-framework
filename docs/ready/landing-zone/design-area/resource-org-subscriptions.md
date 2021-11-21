@@ -9,6 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: internal
 ---
+
 # Subscriptions
 
 ## Subscriptions overview
@@ -19,10 +20,10 @@ Subscriptions are a unit of management, billing, and scale within Azure. They pl
 
 ### Subscription organization and governance design considerations
 
-- Subscriptions serve as boundaries for assigning Azure policies. 
-  
+- Subscriptions serve as boundaries for assigning Azure policies.
+
   - For example, secure workloads such as Payment Card Industry (PCI) workloads typically require additional policies to achieve compliance. Instead of using a management group to group workloads that require PCI compliance, you can achieve the same isolation with a subscription. This way, you don't have too many management groups with a small number of subscriptions.
-    
+
     - However, creating a management group for these types of landing zone archetypes, if a larger amount of subscriptions are to be created, is a recommended approach.
 
 - Subscriptions serve as a scale unit so that component workloads can scale within the platform [subscription limits](/azure/azure-resource-manager/management/azure-subscription-service-limits). Make sure to consider subscription resource limits during your workload design sessions.
@@ -30,7 +31,7 @@ Subscriptions are a unit of management, billing, and scale within Azure. They pl
 - Subscriptions provide a management boundary for governance and isolation, which clearly separates concerns.
 
 - There's a manual process, planned future automation, that can be conducted to limit an Azure AD tenant to use only Enterprise Agreement enrollment subscriptions. This process prevents creation of Microsoft Developer Network subscriptions at the root management group scope.
-  - To do this, reach out via an [Azure support ticket](https://azure.microsoft.com/support/create-ticket/)
+  - To do this, reach out via an [Azure Support ticket](https://azure.microsoft.com/support/create-ticket/)
 
 - Review the guidance in [Azure subscription and reservation transfer hub](/azure/cost-management-billing/manage/subscription-transfer) for information around supported transfers of subscriptions between Azure billing offers.
 
@@ -44,7 +45,7 @@ Each Azure region contains a finite number of resources. When you consider an Az
 
 - Consider that subscription quotas aren't capacity guarantees and are applied on a per-region basis.
 
-  - See [On-demand Capacity Reservation (preview)](/azure/virtual-machines/capacity-reservation-overview) for Virtual Machine capacity reservations.
+  - See [On-demand capacity reservation (preview)](/azure/virtual-machines/capacity-reservation-overview) for virtual machine capacity reservations.
 
 ### Subscription tenant transfer restrictions design considerations
 
@@ -56,9 +57,9 @@ However, the Azure AD tenant that an Azure subscription is linked to can be chan
 - [Transfer an Azure subscription to a different Azure AD directory](/azure/role-based-access-control/transfer-subscription)
 
 > [!NOTE]
-> For Azure cloud solution provider (CSP) subscriptions, transferring to another Azure AD tenant is not supported.
+> For Azure Cloud Solution Provider (CSP) subscriptions, transferring to another Azure AD tenant is not supported.
 
-When this is considered in the context of Azure landing zones, you may decide to restrict and prevent users from being able to either transfer Azure subscriptions out of your organization's Azure AD tenant or transfer Azure subscriptions into your organization's Azure AD tenant. This can be done by following the process detailed in  [Manage Azure subscription policies](/azure/cost-management-billing/manage/manage-azure-subscription-policy).
+When this is considered in the context of Azure landing zones, you may decide to restrict and prevent users from being able to either transfer Azure subscriptions out of your organization's Azure AD tenant or transfer Azure subscriptions into your organization's Azure AD tenant. This can be done by following the process detailed in [Manage Azure subscription policies](/azure/cost-management-billing/manage/manage-azure-subscription-policy).
 
 As part of the subscription policy you can configure, you can also provide a list of [exempted users](/azure/cost-management-billing/manage/manage-azure-subscription-policy#exempted-users) who are permitted to bypass what's set in the policy.
 
@@ -145,5 +146,3 @@ Cost transparency across a technical estate is a critical management challenge f
   - This would ideally be members of an Azure PlatformOps (platform operations) team.
 
   - Include break-glass accounts in the list of [exempted users](/azure/cost-management-billing/manage/manage-azure-subscription-policy#exempted-users).
-
-

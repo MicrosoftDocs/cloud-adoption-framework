@@ -99,11 +99,11 @@ productDirectory:
         - url: ./operating-model/index.md
           text: Operating model alignment
         - url: ./ready/landing-zone/index.md
-          text: Azure landing zone conceptual architecture 
+          text: Azure landing zone conceptual architecture
         - url: ./ready/landing-zone/landing-zone-journey.md
           text: Journey to the target architecture
         - url: ./ready/landing-zone/design-areas.md
-          text: Azure landing zone design areas 
+          text: Azure landing zone design areas
 
     # Card
     - title: Migrate
@@ -250,7 +250,7 @@ additionalContent:
           url: https://azure.microsoft.com/programs/azure-fasttrack/
 
         # Card
-        - title: Azure Migration and Modernization Program
+        - title: Azure migration and modernization program
           summary: Get help migrating workloads to the cloud
           url: https://azure.microsoft.com/migration/migration-modernization-program/
 

@@ -1,6 +1,6 @@
 ---
-title: Cloud Service Provider and Azure Active Directory tenants
-description: Understand CSP Agreements and Azure Active Directory tenants.
+title: Cloud service provider and Azure Active Directory tenants
+description: Understand CSP agreements and Azure Active Directory tenants.
 author: jtracey93
 ms.author: jatracey
 ms.date: 08/23/2021
@@ -20,12 +20,12 @@ The Cloud Solution Provider (CSP) service gives Microsoft partners access to Mic
 - Attach services that add value.
 - Be the customer's first point of contact for support.
 
-[Azure in CSP](https://azure.microsoft.com/offers/ms-azr-0145p/) is an Azure plan with various subscriptions that are hosted by the partner's [Microsoft Partner Agreement (MPA)](/azure/cost-management-billing/understand/mpa-overview). The MPA is similar to the Microsoft Customer Agreement; both are hosted on the modern commerce platform and use a [simplified purchase agreement](https://www.microsoft.com/licensing/docs/customeragreement).
+[Azure in CSP](https://azure.microsoft.com/offers/ms-azr-0145p/) is an Azure plan with various subscriptions that are hosted by the partner's [Microsoft partner agreement (MPA)](/azure/cost-management-billing/understand/mpa-overview). The mpa is similar to the Microsoft customer agreement; both are hosted on the modern commerce platform and use a [simplified purchase agreement](https://www.microsoft.com/licensing/docs/customeragreement).
 
-![Diagram that shows an MPA hierarchy.](../../enterprise-scale/media/mpa-hierarchy.png)
+![Diagram that shows a mpa hierarchy.](../../enterprise-scale/media/mpa-hierarchy.png)
 
->[!IMPORTANT]
-> The partner CSP completely manages an MPA.
+> [!IMPORTANT]
+> The partner CSP completely manages a mpa.
 
 ## Design considerations
 
@@ -33,18 +33,18 @@ The Cloud Solution Provider (CSP) service gives Microsoft partners access to Mic
 
 - Only the partner can provision an Azure plan and CSP subscriptions.
 
-- A specific set of criteria can be used to determine if a subscription should be suspended; a partner can also suspend a subscription.
+- A specific set of criteria can be used to determine whether a subscription should be suspended; a partner can also suspend a subscription.
 
 - The partner can allow customers to view their Azure usage fees on a per customer basis. For more information, see [Enable the policy to view Azure usage charges](/azure/cost-management-billing/costs/get-started-partners#enable-cost-management-for-customer-tenant-subscriptions). Partners can also use other tools to provide customers with access to their charges.
 
-- By default, only the partner Azure reservations can only be purchased by the partner for their customer. However, the [**Customer Permissions** feature](/partner-center/give-customers-permission) grants customers permission to purchase Azure reservations from their CSP.
+- By default, only the partner Azure Reservations can only be purchased by the partner for their customer. However, the [**Customer Permissions** feature](/partner-center/give-customers-permission) grants customers permission to purchase Azure Reservations from their CSP.
 
 ## Design recommendations
 
-- Work with your CSP partner to ensure that Azure Lighthouse is used for Administer on Behalf of (AOBO) access for most support scenarios. See [Azure Lighthouse and the Cloud Solution Provider program](/azure/lighthouse/concepts/cloud-solution-provider).
+- Work with your CSP partner to ensure that Azure Lighthouse is used for administer on behalf of (AOBO) access for most support scenarios. For more information, see [Azure Lighthouse and the Cloud Solution Provider program](/azure/lighthouse/concepts/cloud-solution-provider).
 
 - Work with your CSP partner to understand how to create support cases and escalation processes.
 
 - Discuss how to create self-service subscriptions with your CSP partner.
 
-- Use [Azure Cost Management](/azure/cost-management-billing/cost-management-billing-overview) reports and views, which can use Azure metadata (for example, tags and location) to explore and analyze your organization's costs.
+- Use [Azure Cost Management + Billing](/azure/cost-management-billing/cost-management-billing-overview) reports and views, which can use Azure metadata (for example, tags and location) to explore and analyze your organization's costs.
