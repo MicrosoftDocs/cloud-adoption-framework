@@ -47,7 +47,7 @@ It's vital that your organization plans for IP addressing in Azure to ensure tha
 
 - For environments that have limited availability of private IP addresses (RFC 1918), consider using IPv6. VNets can be IPv4-only or dual stack [IPv4+IPv6](/azure/virtual-network/ip-services/ipv6-overview).
 
-  ![Diagram that shows IPv4 and IPv6 dual stack.](./media/azure-ipv4andipv6.png)
+  ![Diagram that shows IPv4 and IPv6 dual stack.](./media/azure-ipv4-ipv6.png)
 
 - Don't create unnecessarily large virtual networks (for example, `/16`) to ensure that IP address space isn't wasted. The smallest supported IPv4 subnet is /29, and the largest is /2 (using CIDR subnet definitions). IPv6 subnets must be exactly /64 in size.
 

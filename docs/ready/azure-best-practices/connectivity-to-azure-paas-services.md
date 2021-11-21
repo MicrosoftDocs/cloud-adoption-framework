@@ -46,7 +46,7 @@ Building on the previous connectivity sections, this section explores recommende
 
 - Use virtual network service endpoints to secure access to Azure PaaS services from within your virtual network, but only when Private Link isn't available and there are no data exfiltration concerns. To address data exfiltration concerns with service endpoints, use NVA filtering or use virtual network service endpoint policies for Azure Storage.
 
-![A diagram to explain service endpoint connectivity.](./media/vnet_service_endpoints_overview.png)
+![A diagram to explain service endpoint connectivity.](./media/vnet-service-endpoints-overview.png)
 
 - Don't enable virtual network service endpoints by default on all subnets.
 
