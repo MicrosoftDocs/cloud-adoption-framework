@@ -26,9 +26,9 @@ Compared to monitoring platforms and related tooling that were available in the 
 
 There are other responsive actions that can be used instead of following the traditional model, most notably automation. There are also different models of automation to consider:
 
-* Fully automated - remediation actions are performed automatically.
+* Fully automated - remediation actions are performed automatically. To use full automation it should be proven to be reliable, efficient, and safe. Full automation frees up your resources so they can focus more on your strategic initiatives.
 
-* Semi-automated - approval is required for any remediation action.
+* Semi-automated - approval is required for any remediation action. 
 
 
 
