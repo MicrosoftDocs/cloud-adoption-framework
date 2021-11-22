@@ -120,7 +120,7 @@ Review the best practices in [designing your Azure Monitor Logs deployment](/azu
 
 The following image shows a conceptual reference architecture for Microsoft Defender for Cloud on an Azure Arc-enabled Kubernetes:
 
-![A diagram depicting the Azure Policy for Azure Arc-enabled Kubernetes](./media/arc-enabled-k8s-defender.png)
+![A diagram depicting the Microsoft Defender for Azure Arc-enabled Kubernetes](./media/arc-enabled-k8s-defender.png)
 
 If Azure Container Registry is used as the central private Docker registry to store and manage your container images, [enable Microsoft Defender for container registries](/azure/defender-for-cloud/defender-for-container-registries-introduction) to also scan the images for vulnerabilities with the integrated scanner powered by Qualys.
 
