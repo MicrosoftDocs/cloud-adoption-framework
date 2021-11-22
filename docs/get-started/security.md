@@ -161,7 +161,7 @@ Security planning and cloud adoption planning should not be done in isolation. I
 
     - [Zero-trust user access reference architecture](/security/ciso-workshop/ciso-workshop-module-3#part-5-zero-trust-user-access-reference-architecture-842) to modernize access control architecture for cloud generation.
 
-    - [Microsoft Defender for Cloud](/azure/security-center/) and [Microsoft cloud application security](/cloud-app-security/) to help secure cloud assets.
+    - [Microsoft Defender for Cloud](/azure/security-center/) and [Microsoft Defender for Cloud Apps](/cloud-app-security/) to help secure cloud assets.
 
   - **Security awareness and education plan**, so all teams have basic critical security knowledge.
 
