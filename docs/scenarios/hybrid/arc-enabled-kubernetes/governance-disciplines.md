@@ -134,17 +134,12 @@ The Kubernetes API receives requests to perform actions in the cluster so it is 
 - Enable the use of hosted agents/runners of Azure Pipelines, GitHub Actions, or any other hosted CI/CD service without requiring self-hosted agents.
 - Provide cluster access to Azure services for [custom locations](azure/azure-arc/kubernetes/custom-locations) and other resources created on top of it.
 
-Recommendations:
-
-- Use [Azure Active Directory (Azure AD) and role assignments in Azure](azure/azure-arc/kubernetes/azure-rbac) to control authorization checks on the cluster.
-- Enhance security with the principle of Least Privilige and [create role assignments for users to access the cluster](/azure/azure-arc/kubernetes/azure-rbac#create-role-assignments-for-users-to-access-the-cluster).
-
-
 ### Improve microservices observability and security
 
 the implementation of a service mesh can help with authentication, authorization, security and visibility of microservice-based applications. Azure Arc-enabled Kubernetes simplifies the deployment of Open Service Mesh as an extension.
 
 [PLACEHOLDER](OpenService Mesh CDA)
+
 ### Registry Security
 
 the container registry is another element that should be considered in the context of governance and security of an Azure Arc-enabled Kubernetes cluster as it holds the application images that can be a confidentiality risk and is another attack vector.
