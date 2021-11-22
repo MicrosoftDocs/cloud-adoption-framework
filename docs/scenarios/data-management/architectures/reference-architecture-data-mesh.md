@@ -19,9 +19,7 @@ Woodgrove Bank is a very large financial services company with a world-wide foot
 
 ## Current situation
 
-Woodgrove Bank finds it challenging to distribute data toward different locations because of the data warehousing complexity. Integrating new data is time consuming and it's tempting to duplicate data. Woodgrove Bank also finds it very hard to oversee the end-to-end data landscape because of point-to-point connectivity. Lastly, Woodgrove Bank underestimated the sheer demand for intensive data consumption. New use cases are quickly introduced one after another. Data governance, such as data ownership and quality, and costs are hard to control. Keeping up with regulation difficult since Woodgrove Bank doesn't know where exactly their data resides.
-
-A critical concern for Woodgrove Bank is the security of the patient data. As a financial company, they are subject to several different data protection laws.
+Woodgrove Bank finds it challenging to distribute data toward different locations because of the complexity of data warehousing. Integrating new data is time consuming, and it's tempting to duplicate data. Woodgrove Bank also finds it difficult to oversee the end-to-end data landscape because of point-to-point connectivity. The bank underestimated the sheer demand for intensive data consumption. New use cases are introduced quickly, one after another. Data governance, such as data ownership and quality, and costs are hard to control. Keeping current with regulations is difficult because Woodgrove Bank doesn't know exactly where its data resides.
 
 ## Architecture solution: Data mesh
 
