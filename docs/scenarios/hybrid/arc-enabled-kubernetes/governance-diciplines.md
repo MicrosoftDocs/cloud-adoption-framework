@@ -14,7 +14,7 @@ ms.custom: e2e-hybrid
 
 This article walks through the key design considerations and best practices for the topics of security, governance, and compliance of Azure Arc-enabled Kubernetes deployments that should be in place as part of a CAF enterprise-scale landing zone implementation.
 
-Azure Policy and Azure Security Center are cloud-native tools that allow the implementation of guardrails, controls, reports, alerts and remediation tasks in an automated fashion. By combining them with Azure Arc-enabled Kubernetes, your governance policies and security checks are extended to any Kubernetes cluster in public or private clouds.
+[Azure Policy](/azure/governance/policy/overview) and [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) are cloud-native tools that allow the implementation of guardrails, controls, reports, alerts and remediation tasks in an automated fashion. By combining them with Azure Arc-enabled Kubernetes, your governance policies and security checks are extended to any Kubernetes cluster in public or private clouds.
 
 Before going through this document its important to understand governance principles because of the effect of the decisions made, also make sure to review [Enterprise-scale for AKS](/azure/cloud-adoption-framework/scenarios/aks/enterprise-scale-landing-zone) to understand the relevant concepts of Enterprise Scale in a container environment.
 
@@ -35,12 +35,12 @@ As your hybrid and multicloud resources become part of Azure Resource Manager, t
 - **Role based access controls:** Define administrative, operations, and developer roles within the organization that will take care of day-to-day operations in the hybrid clusters. Mapping each team to actions and responsibilities will determine Azure role-based access control (RBAC) roles and Kubernetes ClusterRoleBinding and RoleBinding. Consider using a [RACI](/azure/cloud-adoption-framework/organize/raci-alignment) matrix to support this effort and build controls into the management scope hierarchy that you define following the resource consistency and inventory management guidance. For more information, review the [Identity and access management for Azure Arc-enabled kubernetes section of this guide](PLACEHOLDER IDENTITY CDA).
 - **Secret and certificate management:** secure secrets and certificates using Azure Key Vault and deploying its extension on your Azure Arc-enabled kubernetes clusters via Container Storage Interface (CSI).
 - **Enable and secure GitOps configurations:** GitOps configurations enforce the desired state of the system so it is an important tool for compliance as there is tracking of all the changes made overtime. When working with GitOps configurations you need to thing about how to secure access to your source control tool.
+- **Policy management and reporting:** Define a governance plan for your hybrid Kubernetes that translates into Azure Policies and remediation tasks.
+- **Log management strategy:** Plan for metrics and log collection of your hybrid resources into a Log Analytics workspace for further analysis and auditing. Review the recommendations for [monitoring in this guide](./management-disciplines.md).
+- **Threat protection and cloud security posture management:** enforce thread protection and introduce controls to detect security misconfigurations and track compliance. Also, use [Azure's intelligence](/azure/sentinel/overview) to protect your hybrid workloads against threats. [Enable Microsoft Defender for Kubernetes](/defender-for-cloud/defender-for-kubernetes-introduction) for all subscriptions containing Azure Arc-enabled Kubernetes for security baseline monitoring, security posture management and threat protection.
 - **Secure cluster access:** plan how to secure access to the Kubernetes API. Azure Arc-enabled Kubernetes provides the cluster connect feature that provides connectivity to the apiserver without having to enable any inbound port.
 - **Improve microservices observability and security:** the implementation of a service mesh can help with authentication, authorization, security and visibility of microservice-based applications. Azure Arc-enabled Kubernetes simplifies the deployment of Open Service Mesh as an extension.
 - **Registry Security:** the container registry is another element that should be considered in the context of governance and security of an Azure Arc-enabled Kubernetes cluster as it holds the application images that can be a confidentiality risk and is another attack vector.
-- **Policy management and reporting:** Define a governance plan for your hybrid Kubernetes that translates into Azure Policies and remediation tasks.
-- **Log management strategy:** Plan for metrics and log collection of your hybrid resources into a Log Analytics workspace for further analysis and auditing. Review the recommendations for [monitoring in this guide](./management-disciplines.md).
-- **Threat protection and cloud security posture management:** enforce thread protection and introduce controls to detect security misconfigurations and track compliance. Also, use [Azure's intelligence](/azure/sentinel/overview) to protect your hybrid workloads against threats. [Enable Azure Defender for Kubernetes](/azure/security-center/security-center-get-started) for all subscriptions containing Azure Arc-enabled Kubernetes for security baseline monitoring, security posture management and threat protection.
 
 ## Design recommendations
 
@@ -77,11 +77,17 @@ Consider using the Azure Key Vault extension to manage secrets and certificates 
 GitOps is an essential component of any IT strategy that follows a fully automated approach to operations, it provides scale, consistency, tracking and auditing capabilities to any deployment.
 This GitOps approach simplifies the deployment of multiple aplications, accross clusters and environments while tracking and enforcing the desired state of the system declaratively with Git. By using Git as your single source of truth and as the central tool for all deployments it becomes the best way to track cluster state, account for changes and approvals overtime, facilitate fault investigation while enabling automation across distributed environments.
 
+The following image shows how the GitOps flow looks like in the context of Arc-enabled KubernetesAzure Arc-enabled Kubernetes:
+
+![Azure Arc-enabled Kubernetes GitOps Flow](./media/arc-enabled-k8s-gitops.png)
+
 Make sure to review best practices on [implementing CI/CD workflows with GitOps](PLACEHOLDER_CDA)
 
 ### Policy management and reporting
 
-Having a policy-driven governance is a foundational principle of cloud-native operations and Cloud Adoption Framework. [Azure Policy](/azure/governance/policy/) provides the mechanism to enforce corporate standards and to assess compliance at scale. Through it, you can implement governance for consistency of deployments, compliance, control costs, and improve your security posture; with its compliance dashboard, you will get an aggregated view of the overall state as well as remediation capabilities. Azure Arc-enabled Kubernetes supports [Azure Policy](/azure/governance/policy/overview) at the Azure Resource Management layer, and also in-cluster policy enforcements by extending [Gatekeeper for Open Policy Agent](/azure/governance/policy/concepts/policy-for-kubernetes?toc=/azure/azure-arc/kubernetes/toc.json).
+Having a policy-driven governance is a foundational principle of cloud-native operations and Cloud Adoption Framework. [Azure Policy](/azure/governance/policy/) provides the mechanism to enforce corporate standards and to assess compliance at scale. Through it, you can implement governance for consistency of deployments, compliance, control costs, and improve your security posture; with its compliance dashboard, you will get an aggregated view of the overall state as well as remediation capabilities. Azure Arc-enabled Kubernetes supports [Azure Policy](/azure/governance/policy/overview) at the Azure Resource Management layer, and also in-cluster policy enforcements by extending [Gatekeeper for Open Policy Agent](/azure/governance/policy/concepts/policy-for-kubernetes?toc=/azure/azure-arc/kubernetes/toc.json). The following image ilustrates how Azure Policy applies at-scale enforcements and safeguards on Azure Arc-enabled Kubernetes clusters:
+
+![Azure Arc-enabled Kubernetes GitOps Flow](./media/arc-enabled-k8s-policy.png)
 
 Understand the [scope of Azure policy](/azure/governance/policy/concepts/scope) and where it can be applied (Management Group, subscription, resource group or individual resource level). Create a Management Group design in accordance with the recommended practices outlined in the [Cloud Adoption Framework Enterprise Scale](/azure/cloud-adoption-framework/ready/enterprise-scale/management-group-and-subscription-organization)
 
@@ -89,12 +95,8 @@ Understand the [scope of Azure policy](/azure/governance/policy/concepts/scope) 
 - Enforce tagging and implement [remediation tasks](/azure/governance/policy/how-to/remediate-resources).
 - Use an Azure Policy to [enforce GitOps](/azure/azure-arc/kubernetes/use-azure-policy) and apply configurations at scale.
 - Understand and evaluate the [Azure Policy built-in definitions for Azure Arc-enabled Kubernetes](/azure/azure-arc/kubernetes/policy-reference).
-- Use an Azure Policy and Remediation tasks to onboard management services agents via the extension management feature, including Azure Defender.
+- Use an Azure Policy and Remediation tasks to onboard management services agents via the extension management feature, including Microsoft Defender.
 - Enable [Azure Monitor Container Insights](/azure/azure-monitor/containers/container-insights-enable-arc-enabled-clusters?toc=/azure/azure-arc/kubernetes/toc.json) for compliance and operational monitoring of Azure Arc-enabled Kubernetes.
-
-The following image shows a conceptual reference architecture that demonstrates the policy and compliance reporting design areas for Azure Arc-enabled Kubernetes:
-
-![A diagram depicting the Azure Policy for Azure Arc-enabled Kubernetes on Azure conceptual reference architecture.](./media/arc-enabled-kubernetes-policy.png)
 
 ### Log management strategy
 
@@ -104,44 +106,41 @@ Review the best practices in [designing your Azure Monitor Logs deployment](/azu
 
 ### Threat protection and cloud security posture management
 
-Azure Security Center provides a unified security-management platform segmented as a cloud security posture management (CSPM) and cloud workload protection platform (CWPP). To increase security on your hybrid landing zone it is important to protect the data and assets hosted in Azure and elsewhere, Azure Defender for Kubernetes extends these capabilities to Azure Arc-enabled Kubernetes and together with Microsoft Defender for Endpoint provide a comprehensive EDR.  To heighten security on your hybrid landing zone consider the following:
+[Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) provides a unified security-management platform segmented as a cloud security posture management (CSPM) and cloud workload protection platform (CWPP). To increase security on your hybrid landing zone it is important to protect the data and assets hosted in Azure and elsewhere, Microsoft Defender for Kubernetes extends these capabilities to Azure Arc-enabled Kubernetes.  To heighten security on your hybrid landing zone consider the following:
 
-- Use Azure Arc-enabled Kubernetes to onboard hybrid resources in Azure Defender.
+- Use Azure Arc-enabled Kubernetes extension to onboard hybrid resources in Microsoft Defender for Cloud.
 - Implement an Azure Policy to make sure all resources are compliant and its security data is collected into the Log Analytics workspaces.
-- Enable Azure Defender for all subscriptions and use Azure Policy to ensure compliance.
+- Enable Microsoft Defender for all subscriptions and use Azure Policy to ensure compliance.
 - Use security information and event management integration with Microsoft Defender for Cloud and Azure Sentinel.
-- Protect your endpoints with AMicrosoft Defender for Cloud's integration with Microsoft Defender for Endpoint.
 
-[Connect your non-Azure machines to Microsoft Defender for Cloud](/azure/security-center/quickstart-onboard-machines?pivots=azure-portal)
+The following image shows a conceptual reference architecture for Microsoft Defender for Cloud on an Azure Arc-enabled Kubernetes:
 
-[PLACEHOLDER](Network Security)
+![A diagram depicting the Azure Policy for Azure Arc-enabled Kubernetes](./media/arc-enabled-k8s-defender.png)
 
-### Change Tracking and Inventory
+If Azure Container Registry is used as the central private Docker registry to store and manage your container images, [enable Microsoft Defender for container registries](/azure/defender-for-cloud/defender-for-container-registries-introduction) to also scan the images for vulnerabilities with the integrated scanner powered by Qualys.
 
-Centralizing logs drives additional reports that can be used as additional layers of security and reduces the chances for gaps in observability. [Change Tracking and Inventory in Azure Automation](/azure/automation/change-tracking/overview) forwards and collects the data in a Log Analytics workspace. When using  Azure Defender for Kubernetes you get File Integrity Monitoring (FIM) to examine and track software changes, Windows services and Linux daemons on your Azure Arc-enabled Kubernetes.
+Make sure to review [the best practices for a secure network connectivity](PLACEHOLDER_Network).
 
-### Software Updates
+### Secure cluster access
 
-With Azure Arc-enabled server it is possible to manage in Azure your enterprise estate with centralized management and monitoring at scale. More specifically, it provides alerts and recommendations to IT teams with full operational visibility that includes managing the updates of your Windows and Linux VM.
+Plan how to secure access to the Kubernetes API. Azure Arc-enabled Kubernetes provides the cluster connect feature that provides connectivity to the apiserver without having to enable any inbound port.
 
-Assessing and updating your operating systems should be part of your overall management strategy to maintain security compliance with Critical and Security updates as they are released. Use Update Management in Azure Automation as a long-term patching mechanism for both Azure and hybrid resources and use Azure Policy to ensure and enforce the Update Management configurations to all VMs, including your [Azure Arc-enabled Kubernetes](/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/arc-update-management).
+### Improve microservices observability and security
 
-You can also use [Azure Automanage](/azure/automanage/automanage-virtual-machines), so there is no need to worry about the details of onboarding and maintaining best practices for Update Management on your Arc resources.
+the implementation of a service mesh can help with authentication, authorization, security and visibility of microservice-based applications. Azure Arc-enabled Kubernetes simplifies the deployment of Open Service Mesh as an extension.
 
-### Secure public key
+### Registry Security
 
-The Azure Connected Machine agent uses public key authentication to communicate with the Azure service. After you onboard a server to Azure Arc, a private key is saved to the disk and used whenever the agent communicates with Azure.
-
-If stolen, the private key can be used on another server to communicate with the service and act as if it were the original server. This includes getting access to the system-assigned identity and any resources that identity has access to. 
-
-The private key file is protected to only allow the HIMDS account access to read it. To prevent offline attacks, we strongly recommend the use of full disk encryption (for example, BitLocker, dm-crypt, etc.) on the operating system volume of your server.
+the container registry is another element that should be considered in the context of governance and security of an Azure Arc-enabled Kubernetes cluster as it holds the application images that can be a confidentiality risk and is another attack vector.
 
 ## Next steps
 
 For more guidance for your cloud adoption journey, see the following article:
 
 - [Manage hybrid and multicloud environments](./manage.md)
-- [Agent security permissions](/azure/azure-arc/kubernetes/agent-overview)
-- [Secret and certificate management](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_kubernetes/day2/arc_keyvault#deploy-azure-key-vault-extension-to-azure-arc-enabled-ubuntu-server-and-use-a-key-vault-managed-certificate-with-nginx)
-- [Threat protection and cloud security posture management](/azure/security-center/)
-- [Threat protection with Azure Defender](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_kubernetes/day2/arc_securitycenter/#onboarding-azure-defender)
+- [Connect an existing Kubernetes cluster to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli)
+- [Secret and certificate management](PLACEHOLDER Jumpstart)
+- [Threat protection and cloud security posture management](/azure/defender-for-cloud/)
+- [Apply GitOps configurations on GKE as an Azure Arc Connected Cluster using Azure Policy for Kubernetes](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_k8s/day2/gke/gke_policy/)
+- [Integrate Azure Defender with Cluster API as an Azure Arc Connected Cluster using Kubernetes extensions](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_k8s/day2/cluster_api/cluster_api_defender_extension/)
+- [Integrate Open Service Mesh (OSM) with Cluster API as an Azure Arc Connected Cluster using Kubernetes extensions](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_k8s/day2/cluster_api/cluster_api_osm_extension/)
