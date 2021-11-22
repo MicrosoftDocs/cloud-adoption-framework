@@ -79,7 +79,6 @@ The Cloud Adoption Framework includes tools that help you quickly implement tech
 | [Modern IoT Azure](https://aka.ms/adopt/plan/generator) | Connected sensors, devices, and intelligent operations can transform businesses and enable new growth opportunities. In this project you will get the work items needed to plan and implement your IOT solution using the [Azure IoT Platform](https://azure.microsoft.com/overview/iot/?WT.mc_id=devops_userstory_service_iot-inproduct-devopsportal). |
 | [Many Models](https://github.com/microsoft/solution-accelerator-many-models) | In the real world, many problems can be too complex to be solved by a single machine learning model. Whether that be predicting sales for each individual store, building a predictive maintanence model for hundreds of oil wells, or tailoring an experience to individual users, building a model for each instance can lead to improved results on many machine learning problems. |
 | [Demand Forecasting](https://github.com/microsoft/Azure-Synapse-Solution-Accelerator-Financial-Analytics-Customer-Revenue-Growth-Factor) | This accelerator was built to provide developers with all of the resources needed to build a solution to identify the top factors for revenue growth from an e-commerce platform using Azure Synapse Analytics and Azure Machine Learning.|
-| [Azure Synapse Proof-of-Concept](https://github.com/shaneochotny/Azure-Synapse-Analytics-PoC) | This proof-of-concept accelerator is intended to simplify the creation of a Synapse Analytics environment based on best practices.|
 
 
 ## Manage
