@@ -12,7 +12,7 @@ ms.custom: think-tank
 
 # Cloud monitoring guide: Response
 
-In the [Observability](observability.md) we discussed the five disciplines of monitoring, and in this article we focus on the response discipline. Response is the result of defining one or more actions based on data-driven decisions by observing the monitoring data.  An alert triggering a notification or incident record used to be the primary outcome or action when your monitoring tool detected an issue or change that could potentially cause a system outages or significant incident. Escalating an alert isn’t important to observability, and today it shouldn’t be considered the first line of defense.
+In the [Observability](observability.md) we discussed the five disciplines of monitoring, and in this article we focus on the response discipline. Response is the result of defining one or more actions based on data-driven decisions by observing the monitoring data. An alert triggering a notification or incident record used to be the primary outcome or action when your monitoring tool detected an issue or change that could potentially cause a system outages or significant incident. Alerting helps ensure that the service remains healthy, responsive, and secure. It's an important part of any service that makes performance, availability, and privacy guarantees to the business where the data might need to be acted on immediately. Escalating an alert isn’t important to observability, and today it shouldn’t be considered the first line of defense.
 
 As part of monitoring, alerting was an action resulting from a detected condition, such as a node in the cluster is down, a database for an application is full, or an application process is consuming too many CPU cycles for an indefinite period. Based on defined escalation paths and the severity/impact of the condition, the alert creates an incident record in an ITSM system, or sends an e-mail notification to the operations or engineering team following your escalation path. We consider this approach outdated and not in alignment with modern service management or cloud operations recommended practices. This approach closely follows the traditional ITIL Incident Management path, which doesn't match the goals of the cloud efficiency through agility, minimum cost, optimization, and so forth.
 
@@ -26,11 +26,11 @@ Compared to monitoring platforms and related tooling that were available in the 
 
 There are other responsive actions that can be used instead of following the traditional model, most notably automation. There are also different models of automation to consider:
 
-* Fully automated - remediation actions are performed automatically. To use full automation it should be proven to be reliable, efficient, and safe. Full automation frees up your resources so they can focus more on your strategic initiatives.
+* Fully automated - remediation actions are performed automatically. To use full automation it should be proven to be reliable, efficient, that it's durable to where it's usefulness isn't short lived, and safe. Full automation frees up your resources so they can focus more on your strategic initiatives.
 
-* Semi-automated - approval is required for any remediation action. 
+* Semi-automated - approval is required for any remediation action.
 
-
+Alerting usually depends on the instrumentation data based on security events, performance metrics, availability information, and logs.Data-driven actions are the result of analyzing holistic, end-to-end perspectives of each monitored resource by aggregating and processing different types of collected data types, to determine the impact and what responsive action to take.
 
 Under certain circumstances, some alerts can be informational to inform you that:
 
@@ -41,7 +41,7 @@ In the first example, orchestration was used based on a native scheduling featur
 
 There are many services in Azure that help you monitor and diagnose the infrastructure, platform, and software-layers that are managed by Microsoft and can't be controlled by you, the customer. These services automatically generate logs that record status or an event, and compliment the diagnostic or other telemetry you collect from the different resources in Azure.
 
-It's important to understand how you can structure all that data that has been gathered to meet your analysis requirements, and when combined with data from each part of the system and data generated from other dependencies that may not be in the same region, subscription, or resource group. This information requires careful correlation to ensure that data is combined accurately.
+It's important to understand how you can structure all that data that has been gathered to meet your analysis requirements, and when combined with data from each part of the service and data generated from other dependencies that may not be in the same region, subscription, or resource group. This information requires careful correlation to ensure that data is combined accurately.
 
 Use this exercise to determine how the monitoring data can be used to identify potential failures, resource bottlenecks, under or over utilization, etc. Then evaluate if they are the right conditions to use orchestration as the first response, escalate to IT Operations, or follow a workflow in the DevOps Operate phase.  
 
