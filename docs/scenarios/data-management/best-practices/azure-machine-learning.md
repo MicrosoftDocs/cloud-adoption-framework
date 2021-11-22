@@ -59,7 +59,7 @@ You can deploy the number of machine learning workspaces that your workloads req
 
 - When multiple environments are needed for dev, staging, and production workspaces in enterprise-scale, we recommend avoiding data duplication by having each environment land in the same production data landing zone.
 
-- See [Organize and set up Azure Machine Learning environments](/azure/cloud-adoption-framework/ready/azure-best-practices/ai-machine-learning-resource-organization) to learn more about how to organize and set up Azure Machine Learning resources.
+- See [Organize and set up Azure Machine Learning environments](../../../ready/azure-best-practices/ai-machine-learning-resource-organization.md) to learn more about how to organize and set up Azure Machine Learning resources.
 
 For each default resource configuration in an enterprise-scale data landing zone, an Azure Machine Learning service is deployed in a dedicated resource group with the following configurations and dependent resources:
 
@@ -92,7 +92,7 @@ Networking for implementing Azure Machine Learning in enterprise-scale landing z
 
 Consider the following recommendations for managing user identities and access with Azure Azure Machine Learning:
 
-- Data stores in Azure Machine Learning can be configured to use credential- or identity-based authentication. When you use [access control and data lake configurations in Azure Data Lake Storage Gen2](/azure/cloud-adoption-framework/scenarios/data-management/best-practices/data-lake-access?branch=scenario-data-management#configure-access-using-acls-only-recommended-for-enterprise-scale-analytics-and-ai), configure data stores to use identity-based authentication; this allows Azure Machine Learning to optimize user access permissions for storage.
+- Data stores in Azure Machine Learning can be configured to use credential- or identity-based authentication. When you use [access control and data lake configurations in Azure Data Lake Storage Gen2](./data-lake-access.md?branch=scenario-data-management), configure data stores to use identity-based authentication; this allows Azure Machine Learning to optimize user access permissions for storage.
 
 - Use Azure AD groups to manage user permissions for storage and machine learning resources.
 
@@ -144,10 +144,10 @@ Use the [`Enterprise-Scale Analytics - Data Product Analytics`](https://github.c
 
 Continue to the following four Cloud Adoption Framework articles to learn more about Azure Machine Learning deployment and management best practices for enterprises:
 
-- [Organize and set up Azure Machine Learning environments](/azure/cloud-adoption-framework/ready/azure-best-practices/ai-machine-learning-resource-organization): When planning an Azure Machine Learning deployment, how do team structures, environments, or the geography of resources affect how workspaces are set up?
+- [Organize and set up Azure Machine Learning environments](../../../ready/azure-best-practices/ai-machine-learning-resource-organization.md): When planning an Azure Machine Learning deployment, how do team structures, environments, or the geography of resources affect how workspaces are set up?
 
-- [Azure Machine Learning best practices for enterprise security](/azure/cloud-adoption-framework/ready/azure-best-practices/ai-machine-learning-enterprise-security): Learn how to secure your environment and resources with Azure Machine Learning.
+- [Azure Machine Learning best practices for enterprise security](../../../ready/azure-best-practices/ai-machine-learning-enterprise-security.md): Learn how to secure your environment and resources with Azure Machine Learning.
 
-- [Manage budgets, costs, and quota for Azure Machine Learning at organizational scale](/azure/cloud-adoption-framework/ready/azure-best-practices/optimize-ai-machine-learning-cost): Organizations face many management and optimization challenges when managing workload, team, and user compute costs incurred from Azure Machine Learning.
+- [Manage budgets, costs, and quota for Azure Machine Learning at organizational scale](../../../ready/azure-best-practices/optimize-ai-machine-learning-cost.md): Organizations face many management and optimization challenges when managing workload, team, and user compute costs incurred from Azure Machine Learning.
 
-- [Machine learning DevOps guide](/azure/cloud-adoption-framework/ready/azure-best-practices/ai-machine-learning-mlops): Machine learning DevOps is an organizational change that relies on a combination of people, process, and technology to deliver machine learning solutions in a robust, scalable, reliable, and automated way. This guide summarizes best practices and information for enterprises to use Azure Machine Learning to adopt machine learning DevOps.
+- [Machine learning DevOps guide](../../../ready/azure-best-practices/ai-machine-learning-mlops.md): Machine learning DevOps is an organizational change that relies on a combination of people, process, and technology to deliver machine learning solutions in a robust, scalable, reliable, and automated way. This guide summarizes best practices and information for enterprises to use Azure Machine Learning to adopt machine learning DevOps.
