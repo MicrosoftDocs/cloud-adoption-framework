@@ -123,7 +123,19 @@ Make sure to review [the best practices for a secure network connectivity](PLACE
 
 ### Secure cluster access
 
-Plan how to secure access to the Kubernetes API. Azure Arc-enabled Kubernetes provides the cluster connect feature that provides connectivity to the apiserver without having to enable any inbound port.
+Plan how to secure access to the Kubernetes API.
+With Cluster Connect, you can securely connect to Azure Arc-enabled Kubernetes clusters without requiring any inbound port to be enabled on the firewall. Access to the apiserver of the Azure Arc-enabled Kubernetes cluster enables the following scenarios:
+
+* Enable interactive debugging and troubleshooting.
+* Provide cluster access to Azure services for [custom locations](azure/azure-arc/kubernetes/custom-locations) and other resources created on top of it.
+
+A conceptual overview of this feature is available in [Cluster connect - Azure Arc-enabled Kubernetes](/azure/azure-arc/kubernetes/conceptual-cluster-connect) article.
+
+Recommendations:
+* Use [Azure Active Directory (Azure AD) and role assignments in Azure](azure/azure-arc/kubernetes/azure-rbac) to control authorization checks on the cluster.
+* Enhance security with the principle of Least Privilige and [create role assignments for users to access the cluster](/azure/azure-arc/kubernetes/azure-rbac#create-role-assignments-for-users-to-access-the-cluster).
+* Use [Conditional Access with Azure AD](/azure/azure-arc/kubernetes/azure-rbac#use-conditional-access-with-azure-ad). Additional information on Conditional Access can be found [here](/azure/active-directory/conditional-access/overview).
+* Having standing access by some users to sensitive information or critical network configuration settings in Kubernetes is a potential pathway to compromised accounts or internal threat activities. Privileged access management helps protect your organization from breaches and helps to meet compliance best practices by limiting standing access to sensitive data or access to critical configuration settings. Instead of administrators having constant access, Azure Arc-enabled Kubernetes allows you to implement [Just-In-Time (JIT)](/azure/azure-arc/kubernetes/azure-rbac#configure-just-in-time-cluster-access-with-azure-ad) access rules for tasks that need elevated permissions.
 
 ### Improve microservices observability and security
 
