@@ -20,7 +20,7 @@ Each Azure landing zone implementation option provides a deployment approach and
 
 Whatever the deployment option, you should carefully consider each design area. Your decisions affect the platform foundation on which each landing zone depends.
 
-| Design area | Objective | Relevant methodologies |
+| Design area | Objective | Relevant methodology |
 |--|--|--|
 | [Azure billing and Active Directory tenant](./design-area/azure-billing-ad-tenant.md) | Proper tenant creation, enrollment, and billing setup are important early steps. | Ready |
 | [Identity and access management](./design-area/identity-access.md) | Identity and access management is a primary security boundary in the public cloud. It's the foundation for any secure and fully compliant architecture. | Ready |
@@ -35,7 +35,7 @@ The tools and processes you implement for managing environments play an importan
 
 As the organization's cloud environment develops, these compliance design areas will be the focus for iterative refinement. This refinement might be because of new applications that introduce specific new requirements, or the business requirements changing. For example, in response to a new compliance standard.
 
-| Design area | Objective | Relevant methodologies |
+| Design area | Objective | Relevant methodology |
 |--|--|--|
 | [Security](./design-area/security.md) | Implement controls and processes to protect your cloud environments. | Secure |
 | [Management](./design-area/management.md) | For stable, ongoing operations in the cloud, a management baseline is required to provide visibility, operations compliance, and protect and recover capabilities. | Manage |
