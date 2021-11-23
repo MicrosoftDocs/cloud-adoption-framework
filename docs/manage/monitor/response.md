@@ -34,7 +34,7 @@ Alerting usually depends on the instrumentation data based on security events, p
 
 ## Cost efficiency
 
-As with the other observability disciplines, the team needs to understand and realize what the cost implications are and how the types of responses defined in support of modern incident management help control costs. While the overarching goal is to reduce Mean Time to Recovery (MTTR) by quickly responding and resolving an issue, you need to always evaluate the potential cost and impact to the IT or business budget.
+As with the other observability disciplines, the team needs to understand and realize what the cost implications are and how the types of responses defined in support of modern incident management help control costs. While the overarching goal is to reduce Mean Time to Recovery (MTTR) by quickly responding and resolving an issue, you need to always evaluate the potential cost and impact to the IT or business revenue stream.
 
 Every reported incident has a cost. If the organization invests in orchestration to automate a response, you should evaluate what the cost benefit is, as well as what the cost impact is by increasing consumption from the cloud service to utilize those services or features that enable automation.
 
