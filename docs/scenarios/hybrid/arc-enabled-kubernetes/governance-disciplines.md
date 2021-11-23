@@ -136,9 +136,20 @@ The Kubernetes API receives requests to perform actions in the cluster so it is 
 
 ### Improve microservices observability and security
 
-the implementation of a service mesh can help with authentication, authorization, security and visibility of microservice-based applications. Azure Arc-enabled Kubernetes simplifies the deployment of Open Service Mesh as an extension.
+The implementation of a service mesh provides the ability to introduce authentication and authorization as pods or end users connect to your services, this creates a more secure environment by enforcing the least privilege principle. By default pods sit on a flat trusted network, whereas on a service mesh implementation a set of sidecars that act as network proxies are deployed, these sidecars manage east-west communication, encrypt traffic and improve traffic observability overall.
 
-[PLACEHOLDER](OpenService Mesh CDA)
+A Service Mesh implementation can protect against:
+
+- Unauthorized accesses
+- Sniffing attacks
+- Data exfiltration
+- Impersonations
+
+With Azure Arc-enabled Kubernetes extension management capabilities you can deploy Open Service Mesh anywhere as shown in the diagram
+
+![A diagram depicting Open Service Mesh extension for Azure Arc-enabled Kubernetes](./media/arc-enabled-k8s-osm.png)
+
+Make sure to review the [best practices for Open Service Mesh implementation](PLACEHOLDERopen_service_meshCDA)
 
 ### Registry Security
 
