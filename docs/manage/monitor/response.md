@@ -30,7 +30,7 @@ There are other responsive actions that can be used instead of following the tra
 
 * Semi-automated - approval is required for any remediation action.
 
-Alerting usually depends on the instrumentation data based on security events, performance metrics, availability information, and logs.Data-driven actions are the result of analyzing holistic, end-to-end perspectives of each monitored resource by aggregating and processing different types of collected data types, to determine the impact and what responsive action to take.
+Alerting usually depends on the instrumentation data based on security events, performance metrics, availability information, and logs. Data-driven actions are the result of analyzing holistic, end-to-end perspectives of each monitored resource by aggregating and processing different types of collected data types, to determine the impact and what responsive action to take.
 
 ## Cost efficiency
 
