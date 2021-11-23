@@ -22,7 +22,7 @@ The Retail Recommender Solution Accelerator helps retailers highlight associated
 - When the shopper adds items to the cart, the site offers more recommendations, based on what products would be purchased with these items.
 - As the shopper moves around the retailer's site, the site offers new recommendations based on what the shopper looks at.
 
-# Retail Recommender Solution Accelerator 
+## Retail Recommender Solution Accelerator 
 
 The Retail Recommender Solution Accelerator is ready-to-deploy code that levers analytics capabilities within Azure Synapse to evaluate your shoppers' past purchasing and browsing habits—delivering a tailored browsing experience with personalized product recommendations.
 
