@@ -46,7 +46,7 @@ Some examples of policy-driven governance are:
 
 ## What if we cannot or are not yet ready to utilize DeployIfNotExists (DINE) policies?
 
-We have a dedicated page that walks through the various phases and options you have to either "disable" DINE policies or how you can use our 3 phase approach to adopt them over time within your environment.
+We have a dedicated page that walks through the various phases and options you have to either "disable" DINE policies or use our 3 phase approach to adopt them over time within your environment.
 
 See the guidance [Adopting policy driven guardrails](/azure/cloud-adoption-framework/ready/enterprise-scale/dine-guidance)
 

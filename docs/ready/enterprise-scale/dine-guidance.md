@@ -11,7 +11,7 @@ ms.custom: think-tank
 ---
 # Adopting policy driven guardrails
 
-Before diving into the steps you can take to gradually adopt the usage of policies, it is important to first understand what and where they are used within the Azure landing zone reference implementations and why. This will then help you to understand whether you want to completely prevent `DeployIfNotExists` (DINE) or `Modify` policies from making changes within your Azure environment or not.
+Before diving into the steps you can take to gradually adopt the usage of policies, it is important to first understand what and where they are used within the Azure landing zone reference implementations and why. This will then help you to understand whether you want to prevent `DeployIfNotExists` (DINE) or `Modify` policies from making changes within your Azure environment.
 
 >[!NOTE]
 > This scenario and approach outlined in this article is not intended for or recommended for the majority of customers. Please review the below [Why?](#why) section in full before deciding whether this is suitable and required for your environment.
@@ -58,7 +58,7 @@ If you fit into the above example scenarios or similar, this document will help 
 >  
 > This is outlined further here: [Enforcement Mode](/azure/governance/policy/concepts/assignment-structure#enforcement-mode)
 
-If you have read the above and still are certain that DINE or Modify, policies are unable to be used by your organization for whatever reason, then below we will detail how to prevent (also known as disable) the policies from making automatic changes to your Azure environment.
+If you have read the above and still are certain that DINE or Modify, policies are unable to be used by your organization, then below we will detail how to prevent (also known as disable) the policies from making automatic changes to your Azure environment.
 
 >[!NOTE]
 > This is not a permanent operation, and the policies can be re-enabled at any time by a member of your platform team if you later decide to utilize DINE or Modify policies.
@@ -78,15 +78,13 @@ The following diagram summarizes the suggested phased approach:
    - You can choose to use an entire environment (for example the Sandbox management group) or a non-critical workload subscription.
 3. Set the [Enforcement Mode](/azure/governance/policy/concepts/assignment-structure#enforcement-mode) to `Default` on Policy Assignments on remaining DINE policies across the entire Azure environment
 
-Some customers, due to regulatory compliance restrictions, may not be able to ever move past phase 1. However, this is not an issue and is supported to remain in this state, if necessary to do so.
-
-Although other customers may be able to progress, over time, to phases 2 and 3 to fully adopt DINE to assist with policy-driven governance for their Azure environment.
+Some customers, due to regulatory compliance restrictions, may not be able to ever move past phase 1. However, this is not an issue and is supported to remain in this state, if necessary. Other customers may be able to progress, over time, to phases 2 and 3 to fully adopt DINE and Modify policies to assist with policy-driven governance for their Azure environment.
 
 ### Phase 1: Disable DINE/Modify Policies Automated Actions
 
 When assigning a policy, by default the [effect](/azure/governance/policy/concepts/effects) defined in the policy definition will apply; and this is recommended to be left as is (for example, leave the policy assignment effect as `DeployIfNotExists`).
 
-Instead of changing the policy definition and/or its effect, you can instead influence this behavior with minimal effort by using the  feature on policy assignments.
+Instead of changing the policy definition and/or its effect, you can instead influence this behavior with minimal effort by using the feature on policy assignments.
 
 #### Example of Azure portal experience setting Enforcement Mode to `DoNotEnforce` (also known as `Disabled`) on a Policy Assignment
 
@@ -111,21 +109,21 @@ Instead of changing the policy definition and/or its effect, you can instead inf
 
 The [Enforcement Mode](/azure/governance/policy/concepts/assignment-structure#enforcement-mode) feature provides you the ability to see the effect of a policy on existing resources without initiating it or triggering entries in the Azure Activity log. This scenario is commonly referred to as "What If" and aligns to safe deployment practices.
 
-Even when [Enforcement Mode](/azure/governance/policy/concepts/assignment-structure#enforcement-mode) is set to `DoNotEnforce`, [remediation tasks](/azure/governance/policy/how-to/remediate-resources) can be triggered manually, allowing you to remediate specific non-compliant resources and also see what the DINE policy would do if its enforcement mode was set to `Default`.
+Even when [Enforcement Mode](/azure/governance/policy/concepts/assignment-structure#enforcement-mode) is set to `DoNotEnforce`, [remediation tasks](/azure/governance/policy/how-to/remediate-resources) can be triggered manually, allowing you to remediate specific non-compliant resources and also see what the DINE or Modify policy would have done if its enforcement mode was set to `Default`.
 
 >[!IMPORTANT]
 > When the Enforcement Mode feature is set to `DoNotEnforce`, entries in the Azure Activity log won't be generated. Consider this if you plan to be notified when a non-compliant resource is created.
 
 #### Staying in the Phase 1 state permanently
 
-As mentioned at the end of the [Approach Overview](#approach-overview), some customers may need to remain in [phase 1](#phase-1-disable-dinemodify-policies-automated-actions) for a longer period or maybe even permanently due to their requirements; this is valid state to be in and remain in for any duration of time.
+As mentioned at the end of the [Approach Overview](#approach-overview), some customers may need to remain in [phase 1](#phase-1-disable-dinemodify-policies-automated-actions) for a longer period or maybe even permanently due to their requirements; this is valid state to be in and remain in for any period of time.
 
 However, if staying in this state permanently or a longer period (years etc.) then it may be better for you to adopt the [AuditIfNotExists](/azure/governance/policy/concepts/effects#auditifnotexists) (AINE) policy effect and associated definitions and setting the Enforcement Mode back to `Default`.
 
 >[!NOTE]
-> By changing to using the AINE policy effect with the associated definitions that support this effect and setting the Enforcement Mode back to `Default` you still achieve the same goal of "disabling DINE".
+> By changing to using an AINE policy and setting the Enforcement Mode to `Default` you still achieve the same goal of "disabling DINE".
 
-The reasons for changing from DINE to AINE and setting the Enforcement Mode back to `Default` as longer term or permanent approach for phase 1 is that; by doing this you will gain the Azure Activity Log entries back for policy compliance statuses which are useful for building automation workflows from these log entries in your overall platform management operations.
+The reasons for changing from DINE to AINE and setting the Enforcement Mode back to `Default` as longer term or permanent approach for phase 1 are that; by doing this you will gain the Azure Activity Log entries back for policy compliance statuses which are useful for building automation workflows from these log entries in your overall platform management operations.
 
 However, it should also be noted that you will lose the capability to perform manual remediation tasks as unlike DINE policies, AINE policies do not perform any deployments (automated or manual).
 
@@ -164,9 +162,9 @@ Some suggested examples of scopes and policies are shown in the below table:
 | ------------------- | --------------------------- | ----------------------- |
 | - Test the DINE/Modify automated remediation capabilities <br> - Verify how your complete deployment processes and CI/CD pipelines (including tests) may be affected <br> - Verify how your workload may be affected | - Sandbox Subscription <br> - Sandbox Management Group <br> - Non-production workload landing zone Subscription <br> - [Enterprise-scale "Canary" environment](/azure/cloud-adoption-framework/ready/enterprise-scale/testing-approach) | - Configure Azure Activity logs to stream to specified Log Analytics workspace <br> - Deploy Azure Security Center configuration <br> - Enable Azure Monitor for VMs/Virtual Machine Scale Sets <br> - Deploy Diagnostic Settings to Azure Services <br>  -- Potentially only enable for specific services within the initiative |
 
-You may also decide to use a manual remediation task on a limited scope or set of resources to test how DINE or Modify policies remediation task may or may not impact your environment. Detailed guidance on creating a remediation task can be found in the Azure Policy documentation here: [Create a remediation task](/azure/governance/policy/how-to/remediate-resources#create-a-remediation-task).
+You may also decide to use a manual remediation task on a limited scope or set of resources to test how these policies will impact your environment. Detailed guidance on creating a remediation task can be found in the Azure Policy documentation here: [Create a remediation task](/azure/governance/policy/how-to/remediate-resources#create-a-remediation-task).
 
-Once you have identified a policy, or policies, and the reduced scope to assign them at, the next step is to set or assign the policy but setting the policy assignment's Enforcement Mode to `Default`; whilst leaving the pre-defined policy effect (for example `DeployIfNotExists` or `Modify`) as is on chosen reduced scope.
+Once you have identified a policy, or policies, and the reduced scope to assign them at, the next step is to assign the policy and set the Enforcement Mode to `Default`; whilst leaving the policy effect (for example `DeployIfNotExists` or `Modify`) as is on chosen reduced scope.
 
 #### Example of Azure portal experience setting Enforcement Mode to `Default` (also known as `Enabled`) on a Policy Assignment
 
