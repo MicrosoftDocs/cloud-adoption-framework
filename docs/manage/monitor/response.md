@@ -32,6 +32,14 @@ There are other responsive actions that can be used instead of following the tra
 
 Alerting usually depends on the instrumentation data based on security events, performance metrics, availability information, and logs.Data-driven actions are the result of analyzing holistic, end-to-end perspectives of each monitored resource by aggregating and processing different types of collected data types, to determine the impact and what responsive action to take.
 
+## Cost efficiency
+
+As with the other observability disciplines, the team needs to understand and realize what the cost implications are and how the types of responses defined in support of modern incident management help control costs. While the overarching goal is to reduce Mean Time to Recovery (MTTR) by quickly responding and resolving an issue, you need to always evaluate the potential cost and impact to the IT or business budget.
+
+Every reported incident has a cost. If the organization invests in orchestration to automate a response, you should evaluate what the cost benefit is, as well as what the cost impact is by increasing consumption from the cloud service to utilize those services or features that enable automation.
+
+## Automation
+
 Under certain circumstances, some alerts can be informational to inform you that:
 
 * A VM was automatically shutdown to minimize waste and control costs based on a schedule or low utilization detected.
@@ -41,9 +49,9 @@ In the first example, orchestration was used based on a native scheduling featur
 
 There are many services in Azure that help you monitor and diagnose the infrastructure, platform, and software-layers that are managed by Microsoft and can't be controlled by you, the customer. These services automatically generate logs that record status or an event, and compliment the diagnostic or other telemetry you collect from the different resources in Azure.
 
-It's important to understand how you can structure all that data that has been gathered to meet your analysis requirements, and when combined with data from each part of the service and data generated from other dependencies that may not be in the same region, subscription, or resource group. This information requires careful correlation to ensure that data is combined accurately.
+It's important to understand how you can structure all that data that has been gathered to meet your analysis requirements, and when combined with data from each part of the service and data generated from other dependencies that might not be in the same region, subscription, or resource group. This information requires careful correlation to ensure that data is combined accurately.
 
-Use this exercise to determine how the monitoring data can be used to identify potential failures, resource bottlenecks, under or over utilization, etc. Then evaluate if they are the right conditions to use orchestration as the first response, escalate to IT Operations, or follow a workflow in the DevOps Operate phase.  
+Use this exercise to determine how the monitoring data can be used to identify potential failures, resource bottlenecks, under or over utilization, and so forth. Then evaluate if they are the right conditions to use orchestration as the first response, escalate to IT Operations, or follow a workflow in the DevOps Operate phase.  
 
 ## Successful alerting strategy
 
