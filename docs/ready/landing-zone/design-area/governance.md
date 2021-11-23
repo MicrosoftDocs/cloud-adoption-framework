@@ -1,5 +1,5 @@
 ---
-title: Governance
+title: Azure governance design area guidance
 description: Design area guidance for governing your Azure environment
 author: DominicAllen
 ms.author: doalle

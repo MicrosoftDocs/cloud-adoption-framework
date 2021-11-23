@@ -1,5 +1,5 @@
 ---
-title: Management - business continuity and disaster recovery
+title: Azure management - business continuity and disaster recovery
 description: Design area guidance for business continuity and disaster recovery
 author: DominicAllen
 ms.author: doalle

@@ -1,5 +1,5 @@
 ---
-title: Security
+title: Security design in Azure
 description: Design area guidance for security in Azure
 author: DominicAllen
 ms.author: doalle

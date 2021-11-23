@@ -35,7 +35,7 @@ The Azure landing zone architecture supports subscriptions from any [Azure offer
 
 Explore the further information, considerations and recommendations for each approach below:
 
-- [Enterprise Agreement (EA)](./azure-billing-ea.md)
-- [Microsoft customer agreement (MCA)](./azure-billing-mca.md)
-- [Cloud service provider agreement (CSP)](./azure-billing-csp.md)
+- [Enterprise Agreement (EA)](./azure-billing-enterprise-agreement.md)
+- [Microsoft customer agreement (MCA)](./azure-billing-microsoft-customer-agreement.md)
+- [Cloud service provider agreement (CSP)](./azure-billing-cloud-solution-provider.md)
 - [Define an Azure Active Directory (Azure AD) tenant](./azure-ad-define.md)

@@ -19,7 +19,7 @@ The various options differ in speed, latency, reliability, service-level agreeme
 > [!NOTE]
 > Microsoft and Oracle partnered to provide high-throughput, low-latency cross-connections between Azure and Oracle Cloud Infrastructure (OCI). For more information, see [Connectivity to Oracle Cloud Infrastructure](./connectivity-to-other-providers-oci.md).
 
-**Design considerations:**
+## Design considerations
 
 - We consider the following options to connect Azure to another cloud:
   - **Option 1:** Connect Azure ExpressRoute and the other cloud provider's equivalent private connection. The customer manages routing.
@@ -29,6 +29,7 @@ The various options differ in speed, latency, reliability, service-level agreeme
    You can use the following cross-cloud connectivity flow chart as an aid to choosing an option:
 
     ![Diagram of cross-cloud connectivity flow chart](./media/cloud-interconnect-decision-tree.png)
+
     *Figure 1: Cross-cloud connectivity flow chart*
 
 - You can only connect an Azure virtual network to another cloud provider's virtual private cloud (VPC) if the private IP address spaces don't overlap.
@@ -42,21 +43,23 @@ The various options differ in speed, latency, reliability, service-level agreeme
 - FastPath still requires a virtual network gateway to be created for route exchange purposes. The virtual network gateway must use either the Ultra Performance SKU or the ErGw3AZ SKU for the ExpressRoute gateway to enable route management.
 - There are configurations that FastPath doesn't support, such as a UDR on the gateway subnet. For more information, see [Limitations](/azure/expressroute/about-fastpath#limitations) in about ExpressRoute FastPath.
 
-**Design recommendations:**
+## Design recommendations
 
 - Use option 1 or option 2 to avoid use of the public internet, if you require an SLA, if you want predictable throughput, or need to handle data volume transfer. Consider whether to use a customer-managed routing or a cloud exchange provider if you haven't implemented ExpressRoute already.
 - Create the ExpressRoute circuits for option 1 and option 2 in the connectivity subscription.
 - Use the ExpressRoute circuit of option 1 or option 2 to connect to the hub virtual network of a traditional hub and spoke topology or to the virtual hub for a Virtual WAN topology. For more information, see Figure 2 and Figure 3.
 
     ![Figure 2: Cross-cloud connectivity with customer-managed routing (option 1)](./media/eslz-other-cloud-providers.png)
+
     *Figure 2: Cross-cloud connectivity with customer-managed routing (Option 1)*
 
     ![Figure 3: Cross-cloud connectivity with a cloud exchange provider (option 2).](./media/other-cloud-exchange-provider.png)
+
     *Figure 3: Cross-cloud connectivity with a cloud exchange provider (Option 2)*
 
 - If you need to minimize latency between Azure and another cloud provider, consider deploying your application in a single virtual network with an ExpressRoute gateway, and enable FastPath.
 
-    ![Figure 4: Cross-cloud connectivity with FastPath enabled](./media/other-cloud-fast-path.png))
+    ![Figure 4: Cross-cloud connectivity with FastPath enabled](./media/other-cloud-fast-path.png)
 
     *Figure 4: Cross-cloud connectivity with FastPath enabled*
 

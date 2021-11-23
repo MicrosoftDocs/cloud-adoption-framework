@@ -1,5 +1,5 @@
 ---
-title: Network topology and connectivity overview
+title: Overview of network topology and connectivity for Azure
 description: Examine key design considerations and best practice surrounding networking and connectivity.
 author: DominicAllen
 ms.author: doalle

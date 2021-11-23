@@ -12,8 +12,6 @@ ms.custom: internal
 
 # Management groups
 
-## Management groups overview
-
 [Management groups](/azure/governance/management-groups/overview) are a key tool to help organizations structure their cloud environments for organization and governance at scale.
 Considering how to use management groups as part of the environment design is an important foundational step. Use the following guidance to help inform cloud architecture decisions.
 
@@ -62,16 +60,16 @@ Management group structures within an Azure Active Directory (Azure AD) tenant s
   - [How do we handle "dev/test/production" workload landing zones in enterprise-scale architecture? - FAQ](../../enterprise-scale/faq.md#how-do-we-handle-devtestproduction-workload-landing-zones-in-enterprise-scale-architecture)
   - [Testing approach for enterprise-scale](../../enterprise-scale/testing-approach.md)
 
-> [!NOTE]
-> For testing guidance for enterprise-scale deployments, see [Testing approach for enterprise-scale](../../enterprise-scale/testing-approach.md).
+   > [!NOTE]
+   > For testing guidance for enterprise-scale deployments, see [Testing approach for enterprise-scale](../../enterprise-scale/testing-approach.md).
 
 - Do not create management groups for production, testing and development environments. If required separate these into different subscriptions in the same management group. Also review further guidance on this topic:
 
   - [How do we handle "dev/test/production" workload landing zones in enterprise-scale architecture? - FAQ](../../enterprise-scale/faq.md#how-do-we-handle-devtestproduction-workload-landing-zones-in-enterprise-scale-architecture)
   - [Testing approach for enterprise-scale](../../enterprise-scale/testing-approach.md)
 
-> [!NOTE]
-> For testing guidance for enterprise-scale deployments, see [Testing approach for enterprise-scale](../../enterprise-scale/testing-approach.md).
+   > [!NOTE]
+   > For testing guidance for enterprise-scale deployments, see [Testing approach for enterprise-scale](../../enterprise-scale/testing-approach.md).
 
 ## Management groups in the Azure landing zone accelerator
 
