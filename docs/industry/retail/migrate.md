@@ -100,13 +100,13 @@ Retail organizations need both modern services and the resiliency on-site comput
 
 ### Distributed, unified, and consistent governance and management
 
-Retail organizations might have workloads presenting a particular challenge because of their performance and resiliency requirements. If you have distributed locations and need to drive a cloud adoption strategy for assets in those locations, consider a unified operations strategy, and hybrid and multicloud implementation. This strategy can [deliver consistent governance and management operations](../retail/govern.md) across public cloud, private cloud, and edge locations. For more information, see Introduction to unified operations. 
+Retail organizations might have workloads presenting a particular challenge because of their performance and resiliency requirements. If you have distributed locations and need to drive a cloud adoption strategy for assets in those locations, consider a unified operations strategy, and hybrid and multicloud implementation. This strategy can [deliver consistent governance and management operations](../retail/govern.md) across public cloud, private cloud, and edge locations. For more information, see Introduction to unified operations.
 
 Azure Stack can consistently build and run hybrid applications across datacenters, edge locations, remote offices, and clouds. Innovate how you provision and manage on-premises workloads with full Azure integration, and consolidate legacy infrastructure with cost-optimized, pre-configured hardware
 
-Implement a [unified operations approach to cloud management](../../scenarios/hybrid/unified-operations.md) before proceeding with [hybrid and multicloud](../../scenarios/hybrid/index.md) adoption at scale. Azure Arc simplifies management of complex, distributed, hybrid operational environments. It provides a cloud-first strategy operated from one dashboard, extending scalable, and consistent multi-cloud and on-premises governance and management across your distributed environment.
+We recommend that retailers implement a [unified operations approach to cloud management](../../scenarios/hybrid/unified-operations.md) before proceeding with [hybrid and multicloud](../../scenarios/hybrid/index.md) adoption at scale. Azure Arc simplifies management of complex, distributed, hybrid operational environments. It provides a cloud-first strategy operated from one dashboard, extending scalable, and consistent multi-cloud and on-premises governance and management across your distributed environment.
 
-Azure Arc delivers further integration between management of Azure services and on-premises infrastructure. Azure Arc can manage virtualized and containerized workloads running on Azure Stack hardware, leveraging the compute and cloud capabilities of Azure Stack.
+Azure Arc delivers further integration between management of Azure services and on-premises infrastructure. Azure Arc can manage virtualized and containerized workloads running on Azure Stack hardware, making use of the compute and cloud capabilities of Azure Stack.
 
 ## Next steps
 
