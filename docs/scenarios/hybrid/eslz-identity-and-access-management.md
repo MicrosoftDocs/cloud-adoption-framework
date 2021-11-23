@@ -14,7 +14,7 @@ ms.custom: e2e-arc-enabled-servers
 
 ## Overview
 
-Your organization needs to design the right access controls to secure hybrid environments using on-premises and cloud-based identity management systems. 
+Your organization needs to design the right access controls to secure hybrid environments using on-premises and cloud-based identity management systems.
 
 These identity management systems play an important role. They help designing and implementing reliable access management controls for securing Azure Arc-enabled servers infrastructure.
 
@@ -51,3 +51,4 @@ For more guidance for your hybrid cloud adoption journey, review the following a
 - Review [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/day2/) scenarios
 - Review the [prerequisites](/azure/azure-arc/servers/agent-overview#prerequisites) for Azure Arc-enabled servers
 - Plan an [at-scale deployment](/azure/azure-arc/servers/plan-at-scale-deployment) of Azure Arc-enable servers
+- To learn more about Azure Arc, check out the [Azure Arc learning path on Microsoft Learn](/learn/paths/manage-hybrid-infrastructure-with-azure-arc/)
