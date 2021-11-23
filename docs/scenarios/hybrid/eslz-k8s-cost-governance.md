@@ -14,30 +14,22 @@ ms.custom: e2e-arc
 Cost governance is the continuous process of implementing policies to control costs of services you are using on Azure. This document will walk you through the various cost governance considerations and recommendations when using Azure Arc-enabled Kubernetes.
 
 
-## How much does Azure Arc-enabled servers cost?
-Azure Arc-enabled servers provides two types of services:
+## How much does Azure Arc-enabled Kubernetes cost?
+Azure Arc-enabled Kubernetes provides two types of services:
 1. Azure Arc control plane functionality, which is provided at no extra cost including:
    - Resource organization through Azure management groups and tags.
    - Searching and indexing through Azure Resource Graph.
    - Access control through Azure RBAC at subscription or resource group level.
-   - Environments and automation through templates and extensions.
-   - Update management
+   - Automation through templates and extensions.
 
-2. Azure services used in conjunction to Azure Arc-enabled servers (but not limited to), which incur costs according to their usage including:
-   - Azure Monitor
-   - Azure Defender for Servers
-   - Azure Sentinel
-   - Azure Policy guest configuration
-   - Azure Automation state configuration, change tracking and inventory
-   - Azure Automation hybrid runbook workers
-   - Azure Key Vault
-   - Azure Private Link
+2. Azure services used in conjunction to Azure Arc-enabled Kubernetes (but not limited to), which incur costs according to their usage including:
+   - Kubernetes Configuration
+   - Azure Policy for Kubernetes
+   - Azure Monitor for Containers
+   - Microsoft Defender for Kubernetes clusters extension
 
 > [!Note]
-> Azure Automation Update Management is a free service, but the log data collected for it is billed with your other Azure Monitor usage.
-
-> [!Note]
-> You are charged only once for any combination of Azure Policy guest configuration, Azure Automation state configuration, change tracking and inventory.
+> If the Azure Arc-enabled Kubernetes cluster is on Azure Stack Edge, AKS on Azure Stack HCI, or AKS on Windows Server 2019 Datacenter, then Kubernetes configuration is included at no charge
 
 ## Design considerations
 - **Governance:** Define a governance plan for your hybrid servers that translates into Azure Policies, tags, naming standards and least-privilege controls.
