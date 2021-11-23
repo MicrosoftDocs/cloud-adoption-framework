@@ -75,4 +75,12 @@ After the release of your monitoring configuration, you can learn a lot about wh
 
 Both System Center Operations Manager and Azure Monitor support alerts based on static or even dynamic thresholds, and actions set up on top of them. Examples include alerts for email, SMS, and voice calls for simple notifications. Both of these services also support IT service management (ITSM) integration, to automate the creation of incident records and escalate to the correct support team, or any other alert management system that uses a webhook.
 
-When possible, you can use any of several services to automate recovery actions. These include System Center Orchestrator, Azure Automation, Azure Logic Apps, or autoscaling in the case of elastic workloads. While notifying the responsible teams is the most common action for alerting, automating corrective actions might also be appropriate. This automation can help streamline the entire incident management process. Automating these recovery tasks can also reduce the risk of human error.
+When possible, you can use any of the following Azure services or service-related features to automate recovery actions, or any combination thereof. These include:
+
+* Azure Automation
+* Azure Logic Apps
+* Azure Functions
+* Azure Kubernetes Service using the Kubernetes container orchestration engine supporting containerized microservices
+* Azure or autoscaling in the case of elastic workloads
+
+While notifying the responsible teams is the most common action for alerting, automating corrective actions might also be appropriate. This automation can help streamline the entire incident management process, and automating these recovery tasks can also reduce the risk of human error.
