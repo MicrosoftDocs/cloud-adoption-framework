@@ -43,7 +43,7 @@ Many enterprises have adopted a hub and spoke network architecture.
 
 :::image type="content" source="./images/network-options-hub-and-spoke.png" alt-text="Hub and spoke architecture" lightbox="./images/network-options-hub-and-spoke.png":::
 
-*Figure 2: Hub and spoke architecture."
+*Figure 2: Hub and spoke architecture.*
 
 As Figure 2 illustrates, network transitivity would have to be setup in the connectivity hub in order to be able to access data in storage account A from virtual machine B. Data would traverse two VNet peerings ((2) and (5)) as well as a network virtual appliance (NVA) hosted inside the connectivity hub ((3) and (4)) before it gets loaded by the virtual machine (6) and then stored back into the storage account B (8).
 

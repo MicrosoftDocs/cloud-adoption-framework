@@ -1,5 +1,5 @@
 ---
-title: Management
+title: Management for Azure environments
 description: Design area guidance for managing your Azure environment
 author: DominicAllen
 ms.author: doalle
@@ -36,7 +36,7 @@ Use the following operations items to evaluate which operations management tooli
 |-|-|
 |[**Inventory & visibility**](./management-platform.md)|As cloud environments are implemented and scaled out, management controls that span the environment become increasingly important. <br> Irrespective of the services that are running on top of the landing zone, there is a need for the management of fundamental elements of the platform to ensure stable, ongoing operations. <br> These management tools should be capable of scaling as the environments do. <br> They may include a mix of first party and third-party tools, depending on your existing investments.|
 |[**Operational Compliance**](./management-operational-compliance.md)|Requirements for patching and managing configuration drift. Requirements for automatic or centralize resource optimization and sizing. Requirements for workloads which should only be optimized or resized by the assigned workload teams and processes for ensuring completion of their regular optimization efforts.|
-|[**Protect & Recover**](./management-bcdr.md)| Your organization needs to design suitable, platform-level capabilities that application workloads can depend on for a basic level of business continuity and disaster recovery.  <br>  Specifically, these application workloads have requirements pertaining to recover time objective (RTO) and recovery point objective (RPO). Be sure that you capture disaster recovery (DR) requirements to identify and address needs for advanced operations.|
+|[**Protect & Recover**](./management-business-continuity-disaster-recovery.md)| Your organization needs to design suitable, platform-level capabilities that application workloads can depend on for a basic level of business continuity and disaster recovery.  <br>  Specifically, these application workloads have requirements pertaining to recover time objective (RTO) and recovery point objective (RPO). Be sure that you capture disaster recovery (DR) requirements to identify and address needs for advanced operations.|
 
 ### Advanced operations
 

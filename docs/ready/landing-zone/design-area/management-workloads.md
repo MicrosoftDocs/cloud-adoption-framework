@@ -1,5 +1,5 @@
 ---
-title: Management - workloads
+title: Azure management - workloads
 description: Design area guidance for workloads in an Azure landing zone
 author: DominicAllen
 ms.author: doalle

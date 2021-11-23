@@ -12,11 +12,11 @@ ms.custom: think-tank
 
 <!-- docutune:casing resourceType resourceTypes resourceId resourceIds -->
 
-# Scenarios: Transitioning existing Azure environments to the Azure landing zone conceptual architecture
+# Scenario: Transitioning existing Azure environments to the Azure landing zone conceptual architecture
 
-This page will detail example scenarios, that may match your current Azure environment, and will detail steps and considerations in relation to how to migrate and transition your Azure environment into the Azure landing zone conceptual architecture.
+This page will detail an example scenario that might match your current Azure environment, and will detail steps and considerations in relation to how to migrate and transition your Azure environment into the Azure landing zone conceptual architecture. The scenario is a single subscription with no management groups.
 
-## Scenario 1: Single subscription with no management groups
+<!-- ## Scenario 1: Single subscription with no management groups (Add this heading and change sub-headings to H3s when another example is added) -->
 
 In this scenario, the customer already has started to use Azure and already hosts a few applications/services within the platform, however, they have realized that their current implementation is limiting their scalability and growth as per their "cloud first" strategy.
 
@@ -24,7 +24,7 @@ As part of this expansion, they are also planning to migrate away from their on-
 
 The customer has evaluated the Azure landing zones conceptual architecture and decided to move from their existing approach to an enterprise-scale architecture to support their "cloud first" strategy; whilst having a robust platform that can scale with them as they evacuate their on-premises datacenters.
 
-### Current state
+## Current state
 
 In this scenario, the customers current state of their Azure environment is as follows:
 
@@ -45,7 +45,7 @@ The following diagram depicts the current state of this sample scenario:
 
 ![Single subscription environment](./media/alz-align-scenario-single-sub.png)
 
-### Transition to the Azure landing zone conceptual architecture
+## Transition to the Azure landing zone conceptual architecture
 
 To transition from this scenario's current state to an Azure landing zone conceptual architecture, the following approach is suggested:
 
@@ -62,8 +62,8 @@ To transition from this scenario's current state to an Azure landing zone concep
 
 The following diagram depicts the state during the migration approach of this sample scenario:
 
-![Single subscription environment - transition state](./media/alz-align-single-sub-transition-state.png)
+:::image type="content" source="./media/alz-align-single-sub-transition-state.png" alt-text="Single subscription environment - transition state" lightbox="./media/alz-align-single-sub-transition-state.png":::
 
-### Summary
+## Summary
 
 In this scenario, the customer has enabled themselves to achieve their expansion and scaling plans within Azure by deploying the [Azure landing zone conceptual architecture](./index.md#azure-landing-zone-conceptual-architecture) in parallel to their existing environment.

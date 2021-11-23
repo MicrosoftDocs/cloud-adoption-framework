@@ -265,11 +265,11 @@ items:
           - name: Overview
             href: ready/landing-zone/design-area/azure-billing-ad-tenant.md
           - name: Enterprise Agreement
-            href: ready/landing-zone/design-area/azure-billing-ea.md
+            href: ready/landing-zone/design-area/azure-billing-enterprise-agreement.md
           - name: Microsoft customer agreement
-            href: ready/landing-zone/design-area/azure-billing-mca.md
+            href: ready/landing-zone/design-area/azure-billing-microsoft-customer-agreement.md
           - name: Cloud service provider
-            href: ready/landing-zone/design-area/azure-billing-csp.md
+            href: ready/landing-zone/design-area/azure-billing-cloud-solution-provider.md
           - name: Define an Azure Active Directory tenant
             href: ready/landing-zone/design-area/azure-ad-define.md
 
@@ -368,7 +368,7 @@ items:
           - name: Inventory and visibility
             href: ready/landing-zone/design-area/management-platform.md
           - name: Protect and recover
-            href: ready/landing-zone/design-area/management-bcdr.md
+            href: ready/landing-zone/design-area/management-business-continuity-disaster-recovery.md
           - name: Operational compliance
             href: ready/landing-zone/design-area/management-operational-compliance.md
           - name: Workloads
@@ -441,7 +441,7 @@ items:
         - name: Transition to the Azure landing zone conceptual architecture
           href: ready/enterprise-scale/transition.md
         - name: Alignment scenarios
-          href: ready/landing-zone/alz-align-scenarios.md
+          href: ready/landing-zone/align-scenarios.md
 
       - name: Enhance
         items:

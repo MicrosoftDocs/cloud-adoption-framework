@@ -12,8 +12,6 @@ ms.custom: internal
 
 # Subscriptions
 
-## Subscriptions overview
-
 Subscriptions are a unit of management, billing, and scale within Azure. They play a critical role when you're designing for large-scale Azure adoption. This section helps you capture subscription requirements and design target subscriptions based on critical factors. These factors are environment type, ownership and governance model, organizational structure, and application portfolios.
 
 ## Subscriptions considerations

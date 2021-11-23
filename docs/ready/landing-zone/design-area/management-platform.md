@@ -1,5 +1,5 @@
 ---
-title: Management - inventory and visibility
+title: Azure management - inventory and visibility
 description: Design area guidance for managing your Azure platform services
 author: DominicAllen
 ms.author: doalle

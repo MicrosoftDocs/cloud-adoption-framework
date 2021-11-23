@@ -73,7 +73,7 @@ When the resources are moved into a new resource group in the same subscription,
 
 ## Scenarios
 
-We have provided guidance in [Scenarios: Transitioning existing Azure environments to the Azure landing zone conceptual architecture](./../landing-zone/alz-align-scenarios.md) for common scenarios that our customers may match, or be similar to, that they wish to migrate and transition from into the Azure landing zone conceptual architecture.
+We have provided guidance in [Scenarios: Transitioning existing Azure environments to the Azure landing zone conceptual architecture](./../landing-zone/align-scenarios.md) for common scenarios that our customers may match, or be similar to, that they wish to migrate and transition from into the Azure landing zone conceptual architecture.
 
 > [!div class="nextstepaction"]
-> [Review scenarios: Transitioning existing Azure environments to the Azure landing zone conceptual architecture](./../landing-zone/alz-align-scenarios.md)
+> [Review scenarios: Transitioning existing Azure environments to the Azure landing zone conceptual architecture](./../landing-zone/align-scenarios.md)
