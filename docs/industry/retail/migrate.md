@@ -45,7 +45,7 @@ The first step towards an intelligent retail solution with Azure Marketplace is 
 
 More data has been generated in the last 3 years compared to the 30 years before—and AI and ML need a large dataset to learn from and generate high-quality predictions. The retail industry generates 40 petabytes of data an hour that can be levered to build good AI and ML models and deliver predictive insights at scale.
 
-## End-to-end solutions with Azure Retail Marketplace
+## Azure Retail Marketplace's end-to-end solutions
 
 A [recent study](https://clouddamcdnprodep.azureedge.net/gdc/gdc9fKC0t/original) by Forrester commissioned by Microsoft revealed that 83 percent of retail and CPG (consumer packed goods) decision makers agree that delivering a connected and unified experience to customers is vital to business success and that the key to creating those experiences lies with digital commerce.
 
