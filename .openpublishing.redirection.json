@@ -447,7 +447,7 @@
       },
       {
          "source_path": "docs/ready/enterprise-scale/security-governance-and-compliance.md",
-         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/governance",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/governance",
          "redirect_document_id": true
       },
       {
