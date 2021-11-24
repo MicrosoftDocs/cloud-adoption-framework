@@ -78,7 +78,7 @@ Advancing through the stages of cloud retail maturity will required changing to 
 
 ## Differentiation in difficult times
 
-According to data from the 2020 Frost & Sullivan Global Cloud User Survey, sponsored by Microsoft, retailers during the global pandemic accelerated digital transformation to improve customer relationships, customer experience and competitive differentiators through innovative, personalized products. Furthermore, the data reveals that substantive increases in hybrid solution adoption and implementation point to hybrid and multicloud as an increasing value-added solution for the retail sector.
+According to data from the [2020 Frost & Sullivan Global Cloud User Survey](https://clouddamcdnprodep.azureedge.net/gdc/gdcInGlOM/original), sponsored by Microsoft, retailers during the global pandemic accelerated digital transformation to improve customer relationships, customer experience, and competitive differentiators through innovative, personalized products. Furthermore, the data reveals that substantive increases in hybrid solution adoption and implementation point to hybrid and multicloud as an increasing value-added solution for the retail sector.
 
 Multicloud adoption among retailers in 2020 increased by nearly 50%, and hybrid cloud adoption rose by 19%. Retailers are implementing multichannel solutions to develop more intimate customer relationships. An intelligent hybrid cloud platform providing the infrastructure, platform, and tools for management and operational processes across datacenters, multicloud and edge can help.
 
