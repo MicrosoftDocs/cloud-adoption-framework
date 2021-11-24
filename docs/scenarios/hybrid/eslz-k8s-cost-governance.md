@@ -26,26 +26,25 @@ Azure Arc-enabled Kubernetes provides two types of services:
    - Kubernetes Configuration
    - Azure Policy for Kubernetes
    - Azure Monitor for Containers
-   - Microsoft Defender for Kubernetes clusters extension
+   - Microsoft Defender for Containers
 
 > [!Note]
 > If the Azure Arc-enabled Kubernetes cluster is on Azure Stack Edge, AKS on Azure Stack HCI, or AKS on Windows Server 2019 Datacenter, then Kubernetes configuration is included at no charge
 
 ## Design considerations
-- **Governance:** Define a governance plan for your hybrid servers that translates into Azure Policies, tags, naming standards and least-privilege controls.
-- **Azure Monitor:** [Azure Monitor](/azure/azure-monitor/overview) includes functionality for the collection and analysis of log data of your Azure Arc-enabled servers (billed by data ingestion, retention, and export), collection of metrics, health monitoring, alerts, and notifications. Features of Azure Monitor that are automatically enabled such as the collection of standard metrics, activity logs and insights are provided at no cost.
-- **Azure Security Center:**  Azure Security Center is offered in [two modes](/azure/security-center/security-center-pricing):
+- **Governance:** Define a governance plan for your hybrid clusters that translates into Azure Policies, tags, naming standards and least-privilege controls.
+- **Azure Monitor for Containers:** [Azure Monitor for Containers](/azure/azure-monitor/containers/container-insights-overview) gives you performance visibility by collecting memory and processor metrics from controllers, nodes, and containers that are available in Kubernetes through the Metrics API. Container logs are also collected. **[Missing]Pricing information**
+- **Microsoft Defender for Cloud (formerly known as Azure Security Center):**  Microsoft Defender for Cloud is offered in [two modes](/azure/defender-for-cloud/enhanced-security-features-overview#what-are-the-benefits-of-enabling-enhanced-security-features):
 
-   **Azure Defender DISABLED (Free)** - [Security Center without Azure Defender](/azure/security-center/security-center-introduction) once enabled, provides security policy, continuous security assessment, and actionable security recommendations to help you protect your Azure Arc-enabled servers and Azure resources. The free tier of Azure Defender for servers does not protect Azure Arc-enabled servers.
+   **Without enhanced security features (Free)** - [Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) is enabled for free on all your Azure subscriptions when you visit the workload protection dashboard in the Azure portal for the first time, or if enabled programmatically via API. Using this free mode provides the secure score and its related features: security policy, continuous security assessment, and actionable security recommendations to help you protect your Azure resources..
 
-   **Azure Defender ENABLED (Paid)** - Enabling [Azure Defender](/azure/security-center/azure-defender) extends the capabilities of Azure Defender for Servers to your Azure Arc-enabled servers and Azure resources, providing unified security management and threat protection.
-   
-- **Azure Sentinel:**
-Azure Sentinel provides intelligent security analytics across your enterprise. The data for this analysis is stored in an Azure Monitor Log Analytics workspace. Azure Sentinel is billed based on the volume of data ingested for analysis in Azure Sentinel and stored in the Azure Monitor Log Analytics workspace for your Azure Arc-enabled servers.
-- **Azure Policy guest configuration:** Azure Policy Guest Configuration can audit and enforce operating system and application settings across your fleet of servers. Azure Policy guest configuration is billed per server per month and includes usage rights for Azure Automation state configuration, change tracking and inventory.
-- **Azure Automation Configuration Management:** Azure Automation Configuration Management includes software change tracking and inventory for your servers as well as state configuration to configure your servers at-scale with PowerShell Desired State Configuration. Azure Automation Configuration Management is billed per server per month and includes usage rights for Azure Policy Guest Configuration. 
-- **Azure Key Vault:** The Azure Key Vault VM extension allows you to manage the certificate lifecycle on [Windows](/azure/virtual-machines/extensions/key-vault-windows) and [Linux](/azure/virtual-machines/extensions/key-vault-linux) Azure Arc-enabled servers. Azure Key Vault is billed by the operations performed on the certificates, keys and secrets.
-- **Azure Private Link:** You can use [Azure Private Link](/azure/azure-arc/servers/private-link-security) to ensure data coming from your Azure Arc-enabled servers is only accessed through authorized private networks. Azure Private Link is billed by endpoint and inbound/outbound data processed.
+   **Defender for Cloud with all enhanced security features (Paid)** - Enabling [Microsoft Defender for Cloud](/azure/defender-for-cloud/enhanced-security-features-overview) enhanced security extends the capabilities of the free mode to workloads running in private and other public clouds, providing unified security management and threat protection across your hybrid cloud workloads.
+
+- **Kubernetes configuration:** [Kubernetes Configuration](/azure/azure-arc/kubernetes/conceptual-configurations) delivers configuration management and application deployment using GitOps. With this capability, cluster admins can declare their cluster configuration and applications in Git. The development teams can then use pull requests and the tools they are familiar with (existing DevOps pipelines, Git, Kubernetes manifests, Helm charts) to easily deploy applications onto Azure Arc enabled Kubernetes clusters and make updates in production. Billing is based on the number of vCPUs/hour in the cluster and is charged monthly. Clusters incur a single charge for configuration management no matter how many repositories are connected.
+>[!Note]
+>Clusters can function without a constant connection to Azure. When disconnected, each cluster’s charge will be determined based on the last known number of vCPUs that were registered with Azure Arc. If your cluster will be disconnected from Azure and you don’t want to be charged for Kubernetes Configuration, you can delete the configurations. The vCPU count is updated every 5 minutes when connected. The first 6 vCPUs are included at no cost.
+
+- **Azure Policy for Kubernetes:** 
 ## Design recommendations
 Here are some general design recommendations for Azure Arc-enabled servers cost governance:
 
