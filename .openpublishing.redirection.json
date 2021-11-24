@@ -402,22 +402,22 @@
       },
       {
          "source_path": "docs/ready/considerations/compute-options.md",
-         "redirect_url": "/azure/architecture/guide/technology-choices/compute-decision-tree",
+         "redirect_url": "https://docs.microsoft.com/azure/architecture/guide/technology-choices/compute-decision-tree",
          "redirect_document_id": true
       },
       {
          "source_path": "docs/ready/azure-best-practices/index.md",
-         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/landing-zone/design-areas",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-areas",
          "redirect_document_id": true
       },
       {
          "source_path": "docs/ready/enterprise-scale/architecture.md",
-         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/landing-zone/index",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/index",
          "redirect_document_id": true
       },
       {
          "source_path": "docs/ready/enterprise-scale/design-guidelines.md",
-         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/landing-zone/design-areas",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-areas",
          "redirect_document_id": false
       },
       {
