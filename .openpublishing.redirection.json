@@ -398,12 +398,12 @@
       {
          "source_path": "docs/ready/considerations/basic-considerations.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-conceptual-architecture",
-         "redirect_document_id": true
+         "redirect_document_id": false
       },
       {
          "source_path": "docs/ready/considerations/compute-options.md",
          "redirect_url": "https://docs.microsoft.com/azure/architecture/guide/technology-choices/compute-decision-tree",
-         "redirect_document_id": true
+         "redirect_document_id": false
       },
       {
          "source_path": "docs/ready/azure-best-practices/index.md",
@@ -447,7 +447,7 @@
       },
       {
          "source_path": "docs/ready/enterprise-scale/security-governance-and-compliance.md",
-         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/landing-zone/governance",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/governance",
          "redirect_document_id": true
       },
       {
