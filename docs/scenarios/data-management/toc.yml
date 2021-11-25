@@ -1,7 +1,7 @@
 items:
-  - name: Data management and analytics - Microsoft Cloud Adoption Framework for Azure
+  - name: Data management and analytics Scenario
     href: ./index.md
-    pdf_name: Data management and analytics - Microsoft Cloud Adoption Framework for Azure
+    pdf_name: Data management and analytics Scenario
 
   - name: Overview
     href: ./overview-data-governance.md
@@ -14,15 +14,12 @@ items:
 
   - name: Prepare your environment
     items:
-    - name: Azure landing zones for data management and analytics
+    - name: Overview
       href: ./ready.md
-
-    - name: Implementation options
-      items:
-      - name: Enterprise-scale landing zone for data management and analytics
-        href: ./enterprise-scale-landing-zone.md
-      - name: Scaling data management and analytics
-        href: ./eslz-scale.md
+    - name: Landing zones for data management and analytics
+      href: ./enterprise-scale-landing-zone.md
+    - name: Scaling data management and analytics
+      href: ./eslz-scale.md
 
     - name: Design area considerations
       items:

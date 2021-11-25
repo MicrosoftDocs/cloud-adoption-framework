@@ -3,7 +3,7 @@ title: Authentication for data management and analytics in Azure
 description: Learn about authentication techniques for the data management and analytics scenario in Azure, including user, application, and service-to-service authentication.
 author: mboswell
 ms.author: mboswell
-ms.date: 07/20/2021
+ms.date: 11/25/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario

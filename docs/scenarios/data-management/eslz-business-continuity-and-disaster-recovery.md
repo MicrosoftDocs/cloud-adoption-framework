@@ -3,7 +3,7 @@ title: Business continuity and disaster recovery for data management and analyti
 description: Learn how this enterprise-scale scenario can improve business continuity and disaster recovery for data management and analytics in Azure.
 author: christophermschmidt
 ms.author: chrschm
-ms.date: 07/19/2021
+ms.date: 11/25/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -62,9 +62,9 @@ For an overview of high availability with Azure Machine Learning, see [Failover 
 
 ### Azure Key Vault
 
-Azure Key Vault provides features to help you maintain availability and prevent data loss. Back up secrets only if you have a critical business justification. Backing up secrets in your key vault may introduce operational challenges such as maintaining multiple sets of logs, permissions, and backups when secrets expire or rotate. For more information, see [Azure Key Vault backup](/azure/key-vault/general/backup).
+Azure Key Vault provides features to help you maintain availability and prevent data loss. Back up secrets only if you have a critical business justification. Backing up secrets in your key vault might introduce operational challenges such as maintaining multiple sets of logs, permissions, and backups when secrets expire or rotate. For more information, see [Azure Key Vault backup](/azure/key-vault/general/backup).
 
-Key Vault maintains availability in disaster scenarios. It fails over requests to a paired region without any intervention from a user. For more information, see [Azure Key Vault availability and redundancy](/azure/key-vault/general/disaster-recovery-guidance). As an alternative, you may consider storing secrets and other Key Vault artifacts in a secondary vault with appropriate permissions. This pattern may be suited for applications that require the vault to be in the same region as the application.
+Key Vault maintains availability in disaster scenarios. It fails over requests to a paired region without any intervention from a user. For more information, see [Azure Key Vault availability and redundancy](/azure/key-vault/general/disaster-recovery-guidance). As an alternative, you might consider storing secrets and other Key Vault artifacts in a secondary vault with appropriate permissions. This pattern might be suited for applications that require the vault to be in the same region as the application.
 
 ### Azure SQL Database
 
