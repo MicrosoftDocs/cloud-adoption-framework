@@ -1,15 +1,15 @@
 ---
-title: Deployment templates for enterprise-scale analytics and AI deployments
-description: Learn about the core starter templates for enterprise-scale analytics and AI deployments.
+title: Deployment templates for data management and analytics scenario deployments
+description: Learn about the core starter templates for data management and analytics scenario deployments.
 author: mboswell
 ms.author: mboswell
-ms.date: 10/01/2021
+ms.date: 11/25/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.custom: think-tank, e2e-data-management
 ---
 
-# Deployment templates for enterprise-scale analytics and AI deployments
+# Deployment templates for data management and analytics scenario
 
 The enterprise-scale analytics and AI solution has the following core starter templates:
 

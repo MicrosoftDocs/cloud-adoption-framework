@@ -11,7 +11,7 @@ ms.custom: think-tank, e2e-data-management
 
 # Lamna Healthcare scenario for data management and analytics in Azure
 
-This reference architecture is written for customers that want to use enterprise-scale for analytics and AI not only for scalability but to secure their data. It demonstrates how access to sensitive data can be controlled and how appropriately desensitized data can be shared with analysts.
+This reference architecture is written for customers that want to use data management and analytics scenario not only for scalability but to secure their data. It demonstrates how access to sensitive data can be controlled and how appropriately desensitized data can be shared with analysts.
 
 ## Customer profile
 
@@ -25,15 +25,15 @@ A critical concern for Lamna is the security of the patient data. As a healthcar
 
 ## Architectural solution
 
-Lamna will implement enterprise-scale for analytics and AI as their solution for a cloud-based analytics platform. They will rely on multiple landing zones both for increased scalability and for clear separation of sensitive datasets.
+Lamna will implement data management and analytics scenario as their solution for a cloud-based analytics platform. They will rely on multiple landing zones both for increased scalability and for clear separation of sensitive datasets.
 
 ### Data management zone
 
-A critical concept for every enterprise-scale for analytics and AI implementation is having one data management zone. This subscription contains resources that will be shared across all of the landing zones. This includes shared networking components, like a firewall and private DNS zones. It also includes resources for data and cloud governance, such as Azure Policy and Azure Purview.
+A critical concept for every data management and analytics scenario implementation is having one data management zone. This subscription contains resources that will be shared across all of the landing zones. This includes shared networking components, like a firewall and private DNS zones. It also includes resources for data and cloud governance, such as Azure Policy and Azure Purview.
 
 ### Patient data landing zone
 
-In Lamna's organizational chart, the patient management group is part of the operations group. However, given the extreme sensitivity of the data they use, they will have their own data landing zone in the enterprise-scale for analytics and AI architecture.
+In Lamna's organizational chart, the patient management group is part of the operations group. However, given the extreme sensitivity of the data they use, they will have their own data landing zone in the data management and analytics scenario architecture.
 
 This landing zone will host a copy of the detailed patient data and health records from the company's patient management application and related datasets. These datasets will be loaded into the landing zone by data integrations that'll regularly ingest the data into the cloud and land it in Azure Data Lake Storage.
 
@@ -113,5 +113,5 @@ Use the following templates to deploy other data integrations and data products 
 
 ## Next steps
 
-- Continue to [Deployment templates for enterprise-scale for analytics and AI deployments](../architectures/deployment-templates.md).
+- Continue to [Deployment templates for data management and analytics scenario](../architectures/deployment-templates.md).
 - Learn more in [Understand data privacy for the data management and analytics scenario in Azure](../secure-data-privacy.md).
