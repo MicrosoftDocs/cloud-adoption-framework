@@ -82,13 +82,15 @@ According to data from the [2020 Frost & Sullivan Global Cloud User Survey](http
 
 Multicloud adoption among retailers in 2020 increased by nearly 50%, and hybrid cloud adoption rose by 19%. Retailers are implementing multichannel solutions to develop more intimate customer relationships. An intelligent hybrid cloud platform providing the infrastructure, platform, and tools for management and operational processes across datacenters, multicloud and edge can help.
 
-According to study data, 37% of organizations have already implemented a hybrid/multi-cloud management platform, and furthermore, and highly value what the benefits of hybrid and multicloud offer to the retail sector:
+The study clearly points to an industry trend towards increasing datacenter modernization, and the retail enterprise's embrace of hybrid and multicloud infrastructure, platform, tools, and operational processes. While 44% of retail organizations are currently using hybrid and multicloud services in 2020, 46% have already implemented hybrid and multicloud technologies (and 43% plan such an implementation within two years). Significantly, 59% of companies have started the modernization of their datacenters, and 47% are currently implementing edge technologies.
+
+Figures from the study also reveal what retail companies considered *the highest-value features in a hybrid cloud platform*—listed here, and ranked by priority:
 
 - Advanced data management and protection tools
 
 - Advanced analytics-based intelligence
 
-- Support for premises-based or edge servers
+- Support for on-premises or edge servers
 
 - Seamless data migration capability
 
@@ -98,7 +100,7 @@ With origins in brick-and-mortar storefronts and distribution centers, the retai
 
 Retail organizations need both modern services and the resiliency on-site computing offers environments. Some big box retailers have existing brick-and-mortar datacenters, or may have a significant presence in Azure. Or, in response to rapid changes via the global pandemic, their top focus now is keeping employees productive and safe—besides always improving the end-to-end customer experience. After adopting additional health and safety protocols for essential workers in warehouses and retail stores, retailers are implementing multichannel solutions to cultivate digital customer relationships in a retail market where instantly changing customer preferences are limited to neither devices nor platforms.
 
-### Unified, consistent governance and management
+### Consistent governance and management
 
 Retail organizations might have workloads presenting a particular challenge because of their performance and resiliency requirements. If you have distributed locations and need to drive a cloud adoption strategy for assets in those locations, consider a unified operations strategy, and hybrid and multicloud implementation. This strategy can [deliver consistent governance and management operations](../retail/govern.md) across public cloud, private cloud, and edge locations. For more information, see Introduction to unified operations.
 
