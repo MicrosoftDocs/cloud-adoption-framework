@@ -85,11 +85,11 @@ Here are some general design recommendations for Azure Arc-enabled servers cost 
 - Review [Azure Sentinel pricing](https://azure.microsoft.com/pricing/details/azure-sentinel/).
 - Use the Azure Pricing Calculator to estimate [Azure Sentinel costs](/azure/sentinel/azure-sentinel-billing).
 
-![Azure Sentinel costs](../media/azure-sentinel-costs.png)
+![Azure Sentinel costs](./media/azure-sentinel-costs.png)
 
 - Use [Azure Cost Management and Billing](/azure/sentinel/azure-sentinel-billing#manage-and-monitor-azure-sentinel-costs) to have visibility on Azure Sentinel analysis costs.
 
-![Azure Sentinel cost analysis](../media/Azure-cost-management-Sentinel.png)
+![Azure Sentinel cost analysis](./media/Azure-cost-management-Sentinel.png)
 
 - Review [data retention costs](/azure/sentinel/azure-sentinel-billing#data-retention-costs) for data ingested into the Log Analytics workspace used by Azure Sentinel.
 - Filter the [right level of logs and events](/azure/azure-monitor/containers/container-insights-agent-config) for the Azure Arc-enabled Kubernetes clusters to be collected in the Log Analytics workspace.
