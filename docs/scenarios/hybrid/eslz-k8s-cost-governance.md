@@ -54,8 +54,8 @@ Here are some general design recommendations for Azure Arc-enabled servers cost 
 - Use least privilege RBAC by assigning **Azure Connected Machine Onboarding role** to only administrators who will on-board Azure Arc-enabled servers to avoid unnecessary costs.
 - Use least privilege RBAC by assigning **Azure Connected Machine Resource Administrator** to only administrators who need to read, write, delete and re-onboard Azure Connected Machines.
 
-### Azure Monitor 
-- Review [recommendations for monitoring](./eslz-management-and-monitoring-arc-server.md) to decide on your monitoring requirements and review [Azure Monitor pricing](https://azure.microsoft.com/pricing/details/monitor/).
+### Azure Monitor for Containers
+- Review [recommendations for monitoring](./eslz-k8s-management-and-monitoring-arc-server.md) to decide on your monitoring requirements and review [Azure Monitor pricing](https://azure.microsoft.com/pricing/details/monitor/).
 
 -  Decide on the [required logs and events](/azure/azure-monitor/agents/log-analytics-agent#data-collected) for the Azure Arc-enabled Windows and Linux servers to be collected in the Log Analytics workspace.
 -  Use the [Azure Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/) to calculate an estimate of the Azure Arc-enabled servers monitoring costs for Azure Log Analytics ingestion, alerts and notifications.
@@ -77,9 +77,10 @@ Here are some general design recommendations for Azure Arc-enabled servers cost 
 - To retain data longer than 730 days, consider using [Log Analytics workspace data export](/azure/azure-monitor/logs/logs-data-export).
 - Consider using [Commitment Tier](/azure/azure-monitor/logs/manage-cost-storage#pricing-model) pricing based on your data ingestion volume.
 
-### Azure Security Center
-- Review the [recommendations for security and compliance](./eslz-security-governance-and-compliance.md) and [Azure Defender for Servers pricing](https://azure.microsoft.com/pricing/details/azure-defender/).
-### Azure Sentinel
+### Microsoft Defender for Cloud (formerly known as Azure Security Center):
+- Review the [recommendations for security and compliance](./eslz-k8s-security-governance-and-compliance.md)
+- Review [Microsoft Defender for Containers pricing information](https://azure.microsoft.com/pricing/details/azure-defender/).
+### Microsoft Sentinel
 - Review [Azure Sentinel pricing](https://azure.microsoft.com/pricing/details/azure-sentinel/).
 - Use the Azure Pricing Calculator to estimate [Azure Sentinel costs](/azure/sentinel/azure-sentinel-billing).
 
@@ -103,19 +104,11 @@ Here are some general design recommendations for Azure Arc-enabled servers cost 
 - All built-in Guest Configuration policies include a parameter that controls whether the policy will be assigned to Azure Arc-enabled servers machines. Review your policy assignments and set this parameter to "false" for policies that do not need to be evaluated on your hybrid servers.
 
 ![Azure policy costs](./media/Azure-cost-management-policy.png)
-
-### Azure Automation Configuration Management:
-- Review [recommendations for automation](./eslz-automation-arc-server.md) and [Azure Automation pricing](https://azure.microsoft.com/pricing/details/automation/).
 ### Azure Key Vault
 - Review [Azure Key Vault pricing](https://azure.microsoft.com/pricing/details/key-vault/).
 - Use [Azure Key Vault insights](/azure/azure-monitor/insights/key-vault-insights-overview) to monitor certificate renewal and secrets operations on your Azure Arc-enabled servers.
 
 ![Azure Key Vault insights](./media/key-vault-insights.png)
-### Azure Private Link
-- Review [recommendations for connectivity](./eslz-arc-servers-connectivity.md) and [Azure Private Link pricing](https://azure.microsoft.com/pricing/details/private-link/).
-- Use [Azure Cost Management and Billing](/azure/cost-management-billing/cost-management-billing-overview) to monitor the usage of Private Link used with Azure Arc-enabled servers.
-
-![Azure private link costs](./media/Private-endpoint-costs.png)
 
 ## Next steps
 Review the Cloud Adoption Framework [best practices and recommendations](/azure/cloud-adoption-framework/get-started/manage-costs) to efficiently manage your cloud costs.
