@@ -81,6 +81,15 @@ Here are some general design recommendations for Azure Arc-enabled servers cost 
 ### Microsoft Defender for Cloud (formerly known as Azure Security Center):
 - Review the [recommendations for security and compliance](./eslz-k8s-security-governance-and-compliance.md)
 - Review [Microsoft Defender for Containers pricing information](https://azure.microsoft.com/pricing/details/azure-defender/).
+- Use Azure Resource Graph to review the number of cores you have for the Azure Arc-enabled Kubernetes clusters.
+
+```python
+Resources
+| extend AgentVersion=properties.agentVersion, KubernetesVersion=properties.kubernetesVersion, Distribution= properties.distribution,Infrastructure=properties.infrastructure, NodeCount=properties.totalNodeCount,TotalCoreCount=toint(properties.totalCoreCount)
+| project id, subscriptionId, location, type,AgentVersion ,KubernetesVersion ,Distribution,Infrastructure ,NodeCount , TotalCoreCount
+| where type =~ 'Microsoft.Kubernetes/connectedClusters'
+| order by TotalCoreCount
+```
 ### Microsoft Sentinel
 - Review [Azure Sentinel pricing](https://azure.microsoft.com/pricing/details/azure-sentinel/).
 - Use the Azure Pricing Calculator to estimate [Azure Sentinel costs](/azure/sentinel/azure-sentinel-billing).
