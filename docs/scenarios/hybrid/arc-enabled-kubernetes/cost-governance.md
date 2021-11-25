@@ -90,6 +90,10 @@ Resources
 | where type =~ 'Microsoft.Kubernetes/connectedClusters'
 | order by TotalCoreCount
 ```
+### Kubernetes configuration
+
+### Azure Policy for Kubernetes
+
 ### Microsoft Sentinel
 - Review [Azure Sentinel pricing](https://azure.microsoft.com/pricing/details/azure-sentinel/).
 - Use the Azure Pricing Calculator to estimate [Azure Sentinel costs](/azure/sentinel/azure-sentinel-billing).
