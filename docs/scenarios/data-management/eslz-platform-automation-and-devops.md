@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Platform automation and DevOps for a data management and analytics enterprise-scale scenario
+# Platform automation and DevOps for a data management and analytics scenario
 
 Data management and analytics scenario is focused on separating the runtime, automation, and user layers.
 

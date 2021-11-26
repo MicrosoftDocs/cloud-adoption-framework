@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Resource organization for enterprise-scale data management and analytics
+# Resource organization for data management and analytics scenario
 
 To align with the Ready methodology of the Cloud Adoption Framework, implement a naming and tagging strategy. Your strategy should include business and operational details as components of resource names and metadata tags. For more information, see [Ensure the environment is prepared for the cloud adoption plan](../../ready/index.md).
 
