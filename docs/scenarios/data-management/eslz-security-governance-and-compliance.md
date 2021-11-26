@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Security, governance, and compliance for enterprise-scale data management and analytics
+# Security, governance, and compliance for data management and analytics
 
 When planning data management and analytics architecture, pay special attention to ensure that the architecture is robust and secure. This article addresses security, compliance, and governance design criteria for enterprise-scale data management and analytics. This article also discusses design recommendations and best practices for deployment of an data management and analytics scenario on Azure. Review [enterprise-scale security governance and compliance](../../ready/enterprise-scale/security-governance-and-compliance.md) to fully prepare for governance of an enterprise solution.
 

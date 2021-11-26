@@ -1,6 +1,6 @@
 ---
 title: Provision the data management and analytics scenario platform
-description: Learn how to provision the data management and analytics scenario platform by deploying landing zones and DevOps services.
+description: Learn how to provision the data management and analytics scenario by deploying landing zones and DevOps services.
 author: abdale
 ms.author: hamoodaleem
 ms.date: 07/15/2021
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Provision the Azure data management and analytics scenario platform
+# Provision the Azure data management and analytics scenario
 
 ## Data management landing zone deployment process
 
