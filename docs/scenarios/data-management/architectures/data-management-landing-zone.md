@@ -1,18 +1,18 @@
 ---
-title: Overview of the enterprise-scale for analytics and AI data management landing zone in Azure
-description: Gain an overview of the enterprise-scale for analytics and AI data management landing zone in Azure
+title: Overview of the data management and analytics scenario data management landing zone in Azure
+description: Gain an overview of the data management and analytics scenario data management landing zone in Azure
 author: mboswell
 ms.author: mboswell
-ms.date: 03/03/2021
+ms.date: 11/25/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Overview of the Azure enterprise-scale for analytics and AI data management landing zone
+# Overview of the data management landing zone
 
-The data management landing zone is classified as a management function and is central to the enterprise-scale for analytics and AI platform. It's responsible for the governance of the platform and enables communication to ingest data sources from Azure, third-party clouds, and on-premises data sources.
+The data management landing zone is classified as a management function and is central to the data management and analytics scenario. It's responsible for the governance of the platform and enables communication to ingest data sources from Azure, third-party clouds, and on-premises data sources.
 
  :::image type="content" source="../images/data-management-overview.png" alt-text="Diagram of data management landing zone overview." lightbox="../images/data-management-overview.png":::
 
@@ -29,7 +29,7 @@ We recommend you have a catalog service provisioned to define the metadata of th
 
 The catalog registers and maintains the data information in a centralized place and makes it available for the organization. It ensures that enterprises avoid duplicate datasets caused by redundant data ingestion by different project teams.
 
-Enterprise-scale for analytics and AI relies on [Azure Purview](/azure/purview/overview) to serve as:
+Data management and analytics scenario relies on [Azure Purview](/azure/purview/overview) to serve as:
 
 - System of registration
 - Discovery for enterprise data sources
@@ -68,7 +68,7 @@ Azure Purview can scan and automatically classify documents. For example, if you
 
 ## Data lineage
 
-Data lineage plays an important component in an enterprise-scale for analytics and AI solution. Lineage is a factor in understanding data quality and validating compliance. Lineage also adds context to datasets and products that allows for discoverable and self-serviceable data products.
+Data lineage plays an important component in an data management and analytics scenario. Lineage is a factor in understanding data quality and validating compliance. Lineage also adds context to datasets and products that allows for discoverable and self-serviceable data products.
 
 One of the primary features of a data catalog is the ability to show the lineage between datasets. Azure Purview supports capturing data lineage from three Azure Data Factory activities: copy data, data flow, and execute SSIS package. Along with the native integration, custom lineage reporting is also supported via Apache Atlas hooks or REST API.
 
@@ -81,7 +81,7 @@ One of the primary features of a data catalog is the ability to show the lineage
 
 Enterprises are advised to continue with their current solution.
 
-In enterprise-scale for analytics and AI data, integrations become responsible for producing datasets that are consumed by other data products. Integration ops owners are responsible for the business-aligned key performance indicators (KPIs) and the service-level goals around consumption of their read data sources.
+In data management and analytics scenario data, integrations become responsible for producing datasets that are consumed by other data products. Integration ops owners are responsible for the business-aligned key performance indicators (KPIs) and the service-level goals around consumption of their read data sources.
 
 Data quality should happen as close to the source as possible to avoid quality issues replicating across the analytics and AI estate. Moving quality metrics and validation to the data integration aligns the quality process with the teams that are closest to the data. These teams have the deepest understanding of the data asset. Data lineage also provides data quality confidence and should be provided for all datasets and products.
 
@@ -113,7 +113,7 @@ Many master data management solutions fully integrate with Azure Active Director
 
 ### Approaches
 
-Enterprises have developed many different approaches to master data management. The following list includes some of the more common approaches and how they can be implemented within the enterprise-scale for analytics and AI framework.
+Enterprises have developed many different approaches to master data management. The following list includes some of the more common approaches and how they can be implemented within the data management and analytics scenario.
 
 #### Registry
 
@@ -146,7 +146,7 @@ The API catalog can help standardize documentation and offers a place for intern
 
 ### Data sharing and contracts
 
-Enterprise-scale for analytics and AI uses
+Data management and analytics scenario uses
 [Azure AD entitlement management](/azure/active-directory/governance/entitlement-management-overview) to control access and sharing of data. Your enterprise still might require a sharing and contract repository. The repository is an organizational function. It should be in the data management landing zone.
 
 These contracts should give information on data validation, model, and security policies. For more information, see [Data sharing agreements](../govern-data-sharing-agreements.md).
@@ -157,11 +157,11 @@ Data products may have different lifecycles. We recommend applying policies to r
 
 In Azure, the data lifecycle is handled by each relevant service containing persisted data.
 
-[Lifecycle management](../best-practices/data-lake-key-considerations.md#lifecycle-management) for enterprise-scale for analytics and AI outlines more considerations around the different layers in a data lake.
+[Lifecycle management](../best-practices/data-lake-key-considerations.md#lifecycle-management) for data management and analytics scenario outlines more considerations around the different layers in a data lake.
 
 ## Automation interfaces (optional)
 
-Enterprise-scale for analytics and AI creates three resource groups to help with the creation of your custom onboarding solutions for your data estate.
+Data management and analytics scenario creates three resource groups to help with the creation of your custom onboarding solutions for your data estate.
 
 Typically, user interfaces are in the "governance" resource group. The application layer and database are in `automation` and `automationdb`, respectively.
 
@@ -185,11 +185,11 @@ The data management landing zone hosts an Azure Container Registry. It allows th
 
 ## Global DNS
 
-Enterprise-scale for analytics and AI uses Private Link, which relies on having a private DNS zone. Check with your networking team before deploying another private DNS as they might have already deployed the services.
+Data management and analytics scenario uses Private Link, which relies on having a private DNS zone. Check with your networking team before deploying another private DNS as they might have already deployed the services.
 
 ## Azure Synapse Private Link hub
 
-Azure Synapse Analytics Private Link hubs are Azure resources, which act as connectors between your secured network and the synapse studio web experience. Enterprise-scale for analytics and AI uses the hubs to securely connect to Azure Synapse studio from your Azure Virtual Network using private links.
+Azure Synapse Analytics Private Link hubs are Azure resources, which act as connectors between your secured network and the synapse studio web experience. Data management and analytics scenario uses the hubs to securely connect to Azure Synapse studio from your Azure Virtual Network using private links.
 
 There are two steps to connect to Azure Synapse studio using private links. First, you must create a Private Link hubs resource. Second, you must create a private endpoint from your Azure Virtual Network to this Private Link hub. You can then use private endpoints to securely communicate with Azure Synapse studio. Integrate the private endpoints with your DNS solution, either in your on-premises solution or with Azure Private DNS.
 
@@ -197,4 +197,4 @@ For more information, see [Connect to Azure Synapse studio using private links](
 
 ## Next steps
 
-[Overview of the enterprise-scale for analytics and AI architecture data landing zone in Azure](./data-landing-zone.md)
+[Overview of the data landing zone](./data-landing-zone.md)

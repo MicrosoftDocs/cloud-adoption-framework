@@ -14,7 +14,7 @@ ms.custom: e2e-data-management, think-tank
 
 The enterprise-scale reference architecture is secure by design. It uses a multilayered security approach to overcome common data exfiltration risks that are raised by customers. You can use certain features on a network, identity, data, and service layer to define specific access controls and expose only required data to your users. Even if some of these security mechanisms fail, the features help keep data within the enterprise-scale platform secure.
 
-Network features such as private endpoints and disabled public network access can greatly reduce the attack surface of a data platform of an organization. Even with these features enabled, though, you need to take extra precautions to successfully connect to services such as Azure storage accounts, Azure Synapse workspaces, Azure Purview, or Azure Machine Learning from the public internet. 
+Network features such as private endpoints and disabled public network access can greatly reduce the attack surface of a data platform of an organization. Even with these features enabled, though, you need to take extra precautions to successfully connect to services such as Azure storage accounts, Azure Synapse workspaces, Azure Purview, or Azure Machine Learning from the public internet.
 
 This document describes the most common options for connecting to services inside a data management zone or data landing zone in a simple and secure way.
 
@@ -74,7 +74,7 @@ To connect to the VM by using Azure Bastion, do the following:
 
     The RDP session opens on a new browser tab, from which you can start connecting to your data services.
 
-1. Sign in to the [Azure portal](https://portal.azure.com/). 
+1. Sign in to the [Azure portal](https://portal.azure.com/).
 
 1. Go to the `{prefix}-{environment}-product-synapse001` Azure Synapse workspace inside the `{prefix}-{environment}-shared-product` resource group for data exploration.
 

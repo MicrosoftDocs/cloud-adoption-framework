@@ -3,7 +3,7 @@ title: Technology for end-to-end governance in Azure
 description: Learn about the technology needed for end-to-end governance in Azure.
 author: mboswell
 ms.author: mboswell
-ms.date: 06/21/2021
+ms.date: 11/25/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
