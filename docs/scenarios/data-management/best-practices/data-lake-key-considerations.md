@@ -1,9 +1,9 @@
 ---
 title: Key considerations for Azure Data Lake Storage
-description: Understand key Azure Data Lake Storage considerations for enterprise-scale for analytics and AI.
+description: Understand key Azure Data Lake Storage considerations for data management and analytics scenario.
 author: mboswell
 ms.author: mboswell
-ms.date: 08/03/2021
+ms.date: 11/25/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -36,7 +36,7 @@ Data stored in the cloud grows at an exponential rate. To manage costs for your 
 
 These data access scenarios benefits from a different access tier that's optimized for a particular access pattern. With hot, cool, and archive access tiers, Azure Blob Storage addresses this need for differentiated access tiers with separate pricing models.
 
-Enterprise-scale for analytics and AI recommends that you implement a tiering policy for all three Data Lake Storage accounts.
+Data management and analytics scenario recommends that you implement a tiering policy for all three Data Lake Storage accounts.
 
 Lifecycle management uses a rule-based policy. Use this policy to transition your data to the appropriate access tiers or to expire at the end of the data's lifecycle.
 

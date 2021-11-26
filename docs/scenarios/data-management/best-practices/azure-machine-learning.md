@@ -1,16 +1,16 @@
 ---
-title: Azure Machine Learning as a data product for enterprise-scale for analytics and AI
-description: Learn about Azure Machine Learning as a data product for enterprise-scale for analytics and AI.
+title: Azure Machine Learning as a data product for data management and analytics scenario
+description: Learn about Azure Machine Learning as a data product for data management and analytics scenario.
 author: abdale
 ms.author: deeikele
-ms.date: 09/22/2021
+ms.date: 11/25/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Azure Machine Learning as a data product for enterprise-scale for analytics and AI
+# Azure Machine Learning as a data product for data management and analytics scenario
 
 Azure Machine Learning is an integrated platform for managing the machine learning lifecycle from beginning to end, including help with the creation, operation, and consumption of machine learning models and workflows. A few benefits of the service include:
 
