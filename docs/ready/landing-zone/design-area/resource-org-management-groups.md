@@ -90,5 +90,7 @@ The following decisions have been made and included in the implementation for th
 
 ## Next steps
 
+Learn about the role subscriptions play when you're planning a large-scale Azure adoption.
+
 > [!div class="nextstepaction"]
 > [Subscriptions](resource-org-subscriptions.md)
