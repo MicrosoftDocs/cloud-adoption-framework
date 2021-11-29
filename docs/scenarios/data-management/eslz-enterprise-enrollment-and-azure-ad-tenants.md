@@ -14,7 +14,7 @@ ms.custom: e2e-data-management, think-tank
 
 Azure landing zones for enterprise-scale for analytics and AI don't have any considerations or recommendations that affect enterprise enrollment or Azure AD tenant decisions.
 
-However, it's important to understand the decisions made by the cloud platform team, and to be aware of existing [enterprise enrollment or Azure Active Directory (Azure AD) tenant decisions](../../ready/enterprise-scale/enterprise-enrollment-and-azure-ad-tenants.md).
+However, it's important to understand the decisions made by the cloud platform team, and to be aware of existing [enterprise enrollment or Azure Active Directory (Azure AD) tenant decisions](../../ready/landing-zone/design-area/azure-billing-ad-tenant.md).
 
 ## Identity and access management
 
