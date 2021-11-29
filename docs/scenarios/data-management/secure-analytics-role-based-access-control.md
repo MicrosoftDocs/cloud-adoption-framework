@@ -3,7 +3,7 @@ title: Data management and role-based access control for the data management and
 description: Learn about data management and role-based access control for the data management and analytics scenario in Azure.
 author: mboswell
 ms.author: mboswell
-ms.date: 08/06/2021
+ms.date: 11/25/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario

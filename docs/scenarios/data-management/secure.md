@@ -3,7 +3,7 @@ title: Secure data management and analytics in Azure
 description: Learn about the security principles for the data management and analytics scenario in Azure.
 author: mboswell
 ms.author: mboswell
-ms.date: 07/20/2021
+ms.date: 11/25/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -27,7 +27,7 @@ The focus of the data management and analytics scenario is based on key manageme
 | **Better clarity and enforceability of rules and definitions**| Clearly separate data to help keep the environment organized, while making it easy to enforce security rules and definitions. |
 
 > [!TIP]
-> When you deploy enterprise-scale for analytics and AI, consider using these automation principles to enable security, as opposed to manually applying them. Ideally, a user should do manual interaction only to approve or deny an access request. For more information, see [Deployment templates for enterprise-scale for analytics and AI deployment](./eslz-deployment-templates.md).
+> When you deploy data management and analytics scenario, consider using these automation principles to enable security, as opposed to manually applying them. Ideally, a user should do manual interaction only to approve or deny an access request. For more information, see [Deployment templates for data management and analytics scenario deployment](./architectures/deployment-templates.md).
 
 ## Next steps
 

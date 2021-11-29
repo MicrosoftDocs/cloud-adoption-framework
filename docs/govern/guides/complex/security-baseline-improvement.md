@@ -132,12 +132,12 @@ In prior iterative changes to the best practice, we defined network security gro
     1. In the prior iteration, a network security group was created blocking all public traffic and allowing all internal traffic. Now we want to shift this network security group a bit.
     2. The new network security group configuration should block all public traffic, along with all traffic from the local datacenter.
     3. Traffic entering this virtual network should only come from the virtual network on the other side of the virtual network peer.
-3. Azure Security Center implementation:
-    1. Configure Azure Security Center for any management group that contains protected data classifications.
+3. Microsoft Defender for Cloud implementation:
+    1. Configure Microsoft Defender for Cloud for any management group that contains protected data classifications.
     2. Set automatic provisioning to on by default to ensure patching compliance.
     3. Establish OS security configurations. IT security to define the configuration.
-    4. Support IT security in the initial use of Azure Security Center. Transition use of Security Center to IT security, but maintain access for governance continuous improvement purposes.
-    5. Create a Resource Manager template reflecting the changes required for Azure Security Center configuration within a subscription.
+    4. Support IT security in the initial use of Defender for Cloud. Transition use of Defender for Cloud to IT security, but maintain access for governance continuous improvement purposes.
+    5. Create a Resource Manager template reflecting the changes required for Microsoft Defender for Cloud configuration within a subscription.
 4. Update Azure Policy for all subscriptions.
     1. Audit and enforce criticality and data classification across all management groups and subscriptions to identify any subscriptions with protected data classifications.
     2. Audit and enforce use of approved OS images only.
@@ -150,7 +150,7 @@ In prior iterative changes to the best practice, we defined network security gro
     5. Audit and enforce the limitation of user-defined routing tables.
 6. Azure blueprint:
     1. Create an Azure blueprint named `protected-data`.
-    2. Add the virtual network peer, network security group, and Azure Security Center templates to the blueprint.
+    2. Add the virtual network peer, network security group, and Microsoft Defender for Cloud templates to the blueprint.
     3. Ensure the template for Active Directory from the previous iteration is **not** included in the blueprint. Any dependencies on Active Directory will be provided by the corporate IT subscription.
     4. Terminate any existing Active Directory VMs deployed in the previous iteration.
     5. Add the new policies for protected data subscriptions.

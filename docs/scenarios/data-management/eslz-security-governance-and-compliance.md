@@ -3,22 +3,22 @@ title: Security, governance, and compliance for enterprise-scale data management
 description: Learn how to improve security, governance, and compliance for enterprise-scale data management and analytics in Azure.
 author: andrehass
 ms.author: anhass
-ms.date: 08/06/2021
+ms.date: 11/25/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Security, governance, and compliance for enterprise-scale data management and analytics
+# Security, governance, and compliance for data management and analytics
 
-When planning data management and analytics architecture, pay special attention to ensure that the architecture is robust and secure. This article addresses security, compliance, and governance design criteria for enterprise-scale data management and analytics. This article also discusses design recommendations and best practices for deployment of an enterprise-scale for analytics and AI on Azure. Review [enterprise-scale security governance and compliance](../../ready/enterprise-scale/security-governance-and-compliance.md) to fully prepare for governance of an enterprise solution.
+When planning data management and analytics architecture, pay special attention to ensure that the architecture is robust and secure. This article addresses security, compliance, and governance design criteria for enterprise-scale data management and analytics. This article also discusses design recommendations and best practices for deployment of an data management and analytics scenario on Azure. Review [enterprise-scale security governance and compliance](../../ready/enterprise-scale/security-governance-and-compliance.md) to fully prepare for governance of an enterprise solution.
 
 Cloud solutions initially hosted single, relatively isolated applications. As the benefits of cloud solutions became clear, larger-scale workloads were hosted in the cloud, such as SAP on Azure. So it became vital to address the security, reliability, performance, and cost of regional deployments throughout the lifecycle of cloud services.
 
 The vision for data management and analytics landing zone security, compliance, and governance on Azure is to provide tools and processes that help you minimize risk and make effective decisions. The enterprise-scale landing zones define security governance and compliance roles and responsibilities.
 
-The enterprise-scale for analytics and AI pattern relies on several security features that can be enabled in Azure. These features include encryption, role-based access control, access control lists, and networking restrictions.
+The data management and analytics scenario pattern relies on several security features that can be enabled in Azure. These features include encryption, role-based access control, access control lists, and networking restrictions.
 
 ## Security design recommendations
 
@@ -28,7 +28,7 @@ Both Microsoft and customers share responsibility for security. For generally ac
 
 Data-at-rest encryption refers to the encryption of data as it persists in storage, and addresses the security risks related to direct physical access of storage media. Dar is a critical security control since the underlying data is unrecoverable and cannot be changed without its decryption key. Dar is an important layer in the defense-in-depth strategy of Microsoft datacenters. Often, there are compliance and governance reasons to deploy data-at-rest encryption.
 
-Several Azure services support data-at-rest encryption, including Azure Storage and Azure SQL databases. Although common concepts and models influence the design of Azure services, each service may apply data-at-rest encryption at different stack layers or have different encryption requirements.
+Several Azure services support data-at-rest encryption, including Azure Storage and Azure SQL databases. Although common concepts and models influence the design of Azure services, each service can apply data-at-rest encryption at different stack layers or have different encryption requirements.
 
 > [!IMPORTANT]
 > All services that support data-at-rest encryption should have it enabled by default.
@@ -45,28 +45,28 @@ Encryption using MACsec (media access control security), an IEEE standard at the
 
 ### Manage keys and secrets
 
-To control and manage disk encryption keys and secrets for enterprise-scale for analytics and AI, use Azure Key Vault. Key Vault has capabilities for provisioning and managing SSL/TLS certificates. You can also protect secrets with hardware security modules (HSMs).
+To control and manage disk encryption keys and secrets for data management and analytics scenario, use Azure Key Vault. Key Vault has capabilities for provisioning and managing SSL/TLS certificates. You can also protect secrets with hardware security modules (HSMs).
 
-### Azure Defender
+### Microsoft Defender for Cloud
 
-Azure Defender provides security alerts and advanced threat protection for virtual machines, SQL databases, containers, web applications, virtual networks, and more.
+Microsoft Defender for Cloud provides security alerts and advanced threat protection for virtual machines, SQL databases, containers, web applications, virtual networks, and more.
 
-When you enable Azure Defender from the pricing and settings area of Azure Security Center, the following Azure Defender plans are enabled simultaneously and provide comprehensive defenses for the compute, data, and service layers of your environment:
+When you enable Defender for Cloud from the pricing and settings area, the following Microsoft Defender plans are enabled simultaneously and provide comprehensive defenses for the compute, data, and service layers of your environment:
 
-- [Azure Defender for servers](/azure/security-center/defender-for-servers-introduction?branch=master)
-- [Azure Defender for App Service](/azure/security-center/defender-for-app-service-introduction)
-- [Azure Defender for Storage](/azure/security-center/defender-for-storage-introduction)
-- [Azure Defender for SQL](/azure/security-center/defender-for-sql-introduction)
-- [Azure Defender for Kubernetes](/azure/security-center/defender-for-kubernetes-introduction)
-- [Azure Defender for container registries](/azure/security-center/defender-for-container-registries-introduction)
-- [Azure Defender for Key Vault](/azure/security-center/defender-for-key-vault-introduction)
-- [Azure Defender for Resource Manager](/azure/security-center/defender-for-resource-manager-introduction)
-- [Azure Defender for DNS](/azure/security-center/defender-for-dns-introduction)
+- [Microsoft Defender for servers](/azure/security-center/defender-for-servers-introduction?branch=master)
+- [Microsoft Defender for App Service](/azure/security-center/defender-for-app-service-introduction)
+- [Microsoft Defender for Storage](/azure/security-center/defender-for-storage-introduction)
+- [Microsoft Defender for SQL](/azure/security-center/defender-for-sql-introduction)
+- [Microsoft Defender for Kubernetes](/azure/security-center/defender-for-kubernetes-introduction)
+- [Microsoft Defender for container registries](/azure/security-center/defender-for-container-registries-introduction)
+- [Microsoft Defender for Key Vault](/azure/security-center/defender-for-key-vault-introduction)
+- [Microsoft Defender for Resource Manager](/azure/security-center/defender-for-resource-manager-introduction)
+- [Microsoft Defender for DNS](/azure/security-center/defender-for-dns-introduction)
 
-These plans are explained separately in the Security Center documentation.
+These plans are explained separately in the Defender for Cloud documentation.
 
 > [!IMPORTANT]
-> Where Azure Defender is available for platform as a service (PaaS) offerings, you should enable this feature by default, especially for Azure Data Lake Storage accounts. For more information, see [Introduction to Azure Defender](/azure/security-center/azure-defender) and [configure Azure Defender for Storage](/azure/storage/common/azure-defender-storage-configure?tabs=azure-security-center).
+> Where Defender for Cloud is available for platform as a service (PaaS) offerings, you should enable this feature by default, especially for Azure Data Lake Storage accounts. For more information, see [Introduction to Microsoft Defender for Cloud](/azure/security-center/azure-defender) and [configure Microsoft Defender for Storage](/azure/storage/common/azure-defender-storage-configure?tabs=azure-security-center).
 
 ### Microsoft Defender for Identity
 
@@ -75,13 +75,13 @@ Microsoft Defender for Identity is part of the advanced data security offering, 
 > [!IMPORTANT]
 > Enable Microsoft Defender for Identity by default whenever it's available for the PaaS services you use.
 
-### Enable Azure Sentinel
+### Enable Microsoft Sentinel
 
-[Azure Sentinel](/azure/sentinel/overview) is a scalable, cloud-native, security information event management (SIEM), and security orchestration automated response (SOAR) solution. Azure Sentinel delivers intelligent security analytics and threat intelligence across the enterprise, providing a single solution for alert detection, threat visibility, proactive hunting, and threat response.
+[Microsoft Sentinel](/azure/sentinel/overview) is a scalable, cloud-native, security information event management (SIEM), and security orchestration automated response (SOAR) solution. Microsoft Sentinel delivers intelligent security analytics and threat intelligence across the enterprise, providing a single solution for alert detection, threat visibility, proactive hunting, and threat response.
 
 ## Networking
 
-The enterprise-scale for analytics and AI prescribed view is to use Azure private endpoints for all PaaS services and not use public IPs for all infrastructure as a service (IaaS) services. For more information, see [Enterprise-scale for analytics and AI networking](./eslz-network-topology-and-connectivity.md).
+The data management and analytics scenario prescribed view is to use Azure private endpoints for all PaaS services and not use public IPs for all infrastructure as a service (IaaS) services. For more information, see [Data management and analytics scenario networking](./eslz-network-topology-and-connectivity.md).
 
 ## Compliance and governance design recommendations
 
@@ -117,4 +117,4 @@ The following recommendations apply to various compliance and governance scenari
 
 ## Next steps
 
-[Azure policies for enterprise-scale for analytics and AI](./eslz-policies.md)
+[Azure policies for data management and analytics scenario](./eslz-policies.md)
