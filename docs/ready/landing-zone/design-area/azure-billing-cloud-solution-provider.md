@@ -20,7 +20,7 @@ The Cloud Solution Provider (CSP) service gives Microsoft partners access to Mic
 - Attach services that add value.
 - Be the customer's first point of contact for support.
 
-[Azure in CSP](https://azure.microsoft.com/offers/ms-azr-0145p/) is an Azure plan with various subscriptions that are hosted by the partner's [Microsoft partner agreement (MPA)](/azure/cost-management-billing/understand/mpa-overview). The MPA is similar to the Microsoft customer agreement. Both are hosted on the modern commerce platform and use a [simplified purchase agreement](https://www.microsoft.com/licensing/docs/customeragreement).
+[Azure in CSP](https://azure.microsoft.com/offers/ms-azr-0145p/) is an Azure plan with various subscriptions that are hosted by the partner's [Microsoft Partner Agreement (MPA)](/azure/cost-management-billing/understand/mpa-overview). The MPA is similar to the Microsoft customer agreement. Both are hosted on the modern commerce platform and use a [simplified purchase agreement](https://www.microsoft.com/licensing/docs/customeragreement).
 
 ![Diagram that shows an MPA hierarchy.](../../enterprise-scale/media/mpa-hierarchy.png)
 
@@ -48,3 +48,10 @@ The Cloud Solution Provider (CSP) service gives Microsoft partners access to Mic
 - Discuss how to create self-service subscriptions with your CSP partner.
 
 - Use [Azure Cost Management + Billing](/azure/cost-management-billing/cost-management-billing-overview) reports and views. These reports can use Azure metadata, like tags and location, to explore and analyze your organization's costs.
+
+## Next steps
+
+Learn how to improve your security posture by defining your Azure AD tenants.
+
+> [!div class="nextstepaction"]
+> [Define Azure AD tenants](azure-ad-define.md)
