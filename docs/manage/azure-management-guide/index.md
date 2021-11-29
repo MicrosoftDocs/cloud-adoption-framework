@@ -23,6 +23,8 @@ ms.custom: internal, fasttrack-edit, AQC
 
 ::: zone-end
 
+There are a number of elements of management which need to be addressed prior defining your management strategy. First off, it is important to align with your Strategy. As you began your cloud journey, you defined some critical outcomes for your business. These outcomes range from fiscal to operations to sustainability, security and compliance. As you build your management baseline ensure that these outcomes are incorporated and addressed. Connecting your management and operations to your strategy and plan will ensure that you have full alignment and accountability across your organization. See the section which covers [business outcomes](../../strategy/business-outcomes/okr.md)
+
 The Azure Management Guide helps Azure customers create a management baseline to establish resource consistency across Azure. This guide outlines the basic tools needed for any Azure production environments, especially environments that host sensitive data. For more information, best practices, and considerations related to preparing your cloud environment, see the [readiness section](../index.md) of the Cloud Adoption Framework.
 
 ## Scope of this guide
