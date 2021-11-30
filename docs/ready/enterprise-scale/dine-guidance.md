@@ -29,8 +29,8 @@ DINE and Modify policies will then do the following to the landing zone subscrip
 >  
 > The below only shows a subset of all the policies that are assigned as part of the Azure Landing Zone accelerator. For a full list of policies that can be assigned by the Azure Landing Zone reference implementation, see [Policies included in Enterprise-Scale Landing Zones reference implementations](https://github.com/Azure/Enterprise-Scale/blob/main/docs/ESLZ-Policies.md).
 
-- Enable Azure Security Center
-  - Including configuring Azure Security Center exports to the central Log Analytics workspace in the management subscription
+- Enable Microsoft Defender for Cloud
+  - Including configuring Microsoft Defender for Cloud exports to the central Log Analytics workspace in the management subscription
 - Enables Azure Defender for the different supported offerings based on the policy parameters configured on the policy assignment
 - Configure the Azure Activity Logs to be sent to the central Log Analytics workspace in the management subscription
 - Configure the Diagnostic Settings for all resources to be sent to the central Log Analytics workspace in the management subscription
@@ -160,7 +160,7 @@ Some suggested examples of scopes and policies are shown in the below table:
 
 | When you want to... | ...choose from these scopes | Example policies to use |
 | ------------------- | --------------------------- | ----------------------- |
-| - Test the DINE/Modify automated remediation capabilities <br> - Verify how your complete deployment processes and CI/CD pipelines (including tests) may be affected <br> - Verify how your workload may be affected | - Sandbox Subscription <br> - Sandbox Management Group <br> - Non-production workload landing zone Subscription <br> - [Enterprise-scale "Canary" environment](/azure/cloud-adoption-framework/ready/enterprise-scale/testing-approach) | - Configure Azure Activity logs to stream to specified Log Analytics workspace <br> - Deploy Azure Security Center configuration <br> - Enable Azure Monitor for VMs/Virtual Machine Scale Sets <br> - Deploy Diagnostic Settings to Azure Services <br>  -- Potentially only enable for specific services within the initiative |
+| - Test the DINE/Modify automated remediation capabilities <br> - Verify how your complete deployment processes and CI/CD pipelines (including tests) may be affected <br> - Verify how your workload may be affected | - Sandbox Subscription <br> - Sandbox Management Group <br> - Non-production workload landing zone Subscription <br> - [Enterprise-scale "Canary" environment](/azure/cloud-adoption-framework/ready/enterprise-scale/testing-approach) | - Configure Azure Activity logs to stream to specified Log Analytics workspace <br> - Deploy Microsoft Defender for Cloud configuration <br> - Enable Azure Monitor for VMs/Virtual Machine Scale Sets <br> - Deploy Diagnostic Settings to Azure Services <br>  -- Potentially only enable for specific services within the initiative |
 
 You may also decide to use a manual remediation task on a limited scope or set of resources to test how these policies will impact your environment. Detailed guidance on creating a remediation task can be found in the Azure Policy documentation here: [Create a remediation task](/azure/governance/policy/how-to/remediate-resources#create-a-remediation-task).
 
