@@ -61,11 +61,8 @@ Here are some general design recommendations for Azure Arc-enabled servers cost 
 | [Azure Arc Kubernetes Cluster Admin](/azure/role-based-access-control/built-in-roles#azure-arc-kubernetes-cluster-admin)  | Lets you manage all resources in the cluster.	  |
 | [Azure Arc Kubernetes Viewer](/azure/role-based-access-control/built-in-roles#azure-arc-kubernetes-viewer)  | Lets you view all resources in cluster/namespace, except secrets.	  |
 | [Azure Arc Kubernetes Writer](/azure/role-based-access-control/built-in-roles#azure-arc-kubernetes-writer) | Lets you update everything in cluster/namespace, except (cluster)roles and (cluster)role bindings.  |
-
-- Use [Azure Policy for Kubernetes](/azure/azure-arc/kubernetes/policy-reference) to enforce and enure consistent configuration across all your Azure Arc-enabled Kubernetes clusters.
-
 ### Azure Monitor for Containers
-- Review [recommendations for monitoring](./eslz-k8s-management-and-monitoring-arc-server.md) to decide on your monitoring requirements and review [Azure Monitor pricing](https://azure.microsoft.com/pricing/details/monitor/).
+- Review [recommendations for monitoring](./management-disciplines.md) to decide on your monitoring requirements and review [Azure Monitor for Kubernetes pricing](https://azure.microsoft.com/pricing/details/monitor/).
 
 -  Decide on the [required logs and events](/azure/azure-monitor/containers/container-insights-agent-config) for the Azure Arc-enabled Kubernetes clusters to be collected in the Log Analytics workspace.
 -  Use the [Azure Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/) to calculate an estimate of the Azure Arc-enabled Kubernetes monitoring costs for Azure Log Analytics ingestion, alerts and notifications.
@@ -88,8 +85,11 @@ Here are some general design recommendations for Azure Arc-enabled servers cost 
 - Consider using [Commitment Tier](/azure/azure-monitor/logs/manage-cost-storage#pricing-model) pricing based on your data ingestion volume.
 
 ### Microsoft Defender for Cloud (formerly known as Azure Security Center):
-- Review the [recommendations for security and compliance](./eslz-k8s-security-governance-and-compliance.md)
+- Review the [recommendations for security and compliance](./management-disciplines.md)
 - Review [Microsoft Defender for Containers pricing information](https://azure.microsoft.com/pricing/details/azure-defender/).
+### Kubernetes configuration
+- Review [Kubernetes configuration pricing](https://azure.microsoft.com/pricing/details/azure-arc/).
+- Use [Azure Policy for Kubernetes](/azure/azure-arc/kubernetes/policy-reference) to enforce and enure consistent configuration across all your Azure Arc-enabled Kubernetes clusters.
 - Use Azure Resource Graph to review the number of cores you have for the Azure Arc-enabled Kubernetes clusters.
 
 ```python
@@ -99,8 +99,9 @@ Resources
 | where type =~ 'Microsoft.Kubernetes/connectedClusters'
 | order by TotalCoreCount
 ```
-### Kubernetes configuration
+- Use [Azure Cost Management and Billing](/azure/cost-management-billing/cost-management-billing-overview) to have visibility on Kubernetes configuration costs.
 
+![alt](./media/arc-enabled-kubernetes-configuration-cost.png)
 ### Azure Policy for Kubernetes
 
 ### Microsoft Sentinel
