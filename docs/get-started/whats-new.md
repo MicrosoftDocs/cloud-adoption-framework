@@ -16,6 +16,24 @@ Here's a list of recent changes made to the Cloud Adoption Framework.
 
 This framework is built collaboratively with customers, partners, and internal Microsoft teams. New and updated content is released when it becomes available. These releases allow you to test, validate, and refine the guidance along with us. We encourage you to partner with us to build the Cloud Adoption Framework.
 
+## December 2021
+
+### Microsoft Azure VMware Solution scenario
+
+This release of the Cloud Adoption Framework provides considerations for [migrating VMware resources from on-premises datacenters to dedicated Azure cloud environments](../scenarios/azure-vmware/index.md).
+
+This scenario focuses on enabling specific, targeted outcomes to:
+
+- Accelerate migration and lower your TCO, reducing the time and complexity of migrating your existing VMware workloads to Azure—and maintain operational consistency, avoiding downtime with live bulk virtual machine migration.
+
+- Gain reliability and scale with automated provisioning for your VMware workloads on global Azure infrastructure.
+
+- Optimize your licensing costs on Azure with price benefits for Windows and SQL Server.
+
+- Modernize your applications running on VMware—through integration with Azure-native management, security, and services.
+
+- Deploy unified hybrid management and operational controls with Azure Arc-enabled servers across Azure, VMware, and other cloud infrastructures.
+
 ## August 2021
 
 ### Data management and analytics scenario
