@@ -44,6 +44,12 @@ Some examples of policy-driven governance are:
 
   Instead of repeating code or manual activities when a new subscription is created, the `DeployIfNotExists` policy definition automatically deploys and configures them for you.
 
+## What if we cannot or are not yet ready to utilize DeployIfNotExists (DINE) policies?
+
+We have a dedicated page that walks through the various phases and options you have to either "disable" DINE policies or use our 3 phase approach to adopt them over time within your environment.
+
+See the guidance [Adopting policy driven guardrails](/azure/cloud-adoption-framework/ready/enterprise-scale/dine-guidance)
+
 ## Should we use Azure Policy to deploy workloads?
 
 In short, **no**. Use Azure Policy to control, govern, and keep your workloads and landing zones compliant. It isn't designed to deploy entire workloads and other tooling. Use the Azure portal or infrastructure-as-code offerings (ARM Templates, Bicep, Terraform) to deploy and manage your workload and get the autonomy you need.
