@@ -11,13 +11,11 @@ ms.localizationpriority: high
 ms.custom: internal, fasttrack-edit, AQC
 ---
 
-<!-- docutune:ignore "provide advanced threat protection" -->
-
 # Protect and recover in Azure
 
 *Protect and recover* is the third and final discipline in any cloud-management baseline.
 
-![Cloud Management Baseline](../../_images/manage/management-baseline.png)
+![Diagram showing a cloud management baseline.](../../_images/manage/management-baseline.png)
 
 In [Operational compliance in Azure](./operational-compliance.md) the objective is to reduce the likelihood of a business interruption. The current article aims to reduce the duration and impact of outages that can't be prevented.
 
@@ -26,7 +24,7 @@ For any enterprise-grade environment, this table outlines the suggested minimum 
 | Process                 | Tool                  | Purpose                                                                                  |
 | ----------------------- | --------------------- | ---------------------------------------------------------------------------------------- |
 | Protect data            | Azure Backup          | Back up data and virtual machines in the cloud.                                          |
-| Protect the environment | Azure Security Center | Strengthen security and provide advanced threat protection across your hybrid workloads. |
+| Protect the environment | Microsoft Defender for Cloud | Strengthen security and provide advanced threat protection across your hybrid workloads. |
 
 ::: zone target="docs"
 

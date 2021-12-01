@@ -32,7 +32,7 @@ This section provides different connectivity approaches to integrate an Azure la
 
 - Interconnectivity between Azure and OCI is only available for [specific regions](/azure/virtual-machines/workloads/oracle/oracle-oci-overview#region-availability).
 
-- For more in-depth documentation about interconnectivity between Azure and OCI, see [Oracle application solutions to integrate Microsoft Azure and Oracle Cloud Infrastructure](/azure/virtual-machines/workloads/oracle/oracle-oci-overview) or see [Oracle documentation](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/azure.htm).
+- For more in-depth documentation about interconnectivity between Azure and OCI, see [Oracle application solutions to integrate Microsoft Azure and Oracle Cloud Infrastructure](/azure/virtual-machines/workloads/oracle/oracle-oci-overview) or see [Access to Microsoft Azure in OCI](https://docs.oracle.com/iaas/Content/Network/Concepts/azure.htm).
 
 **Design recommendations:**
 
@@ -40,13 +40,13 @@ This section provides different connectivity approaches to integrate an Azure la
 
 - You can interconnect an Azure network architecture based on the traditional hub and spoke architecture or Azure Virtual WAN-based network topologies. It can be done by connecting the ExpressRoute circuit that will be used to interconnect Azure to OCI to the hub VNet or Virtual WAN hub as shown in the following diagram.
 
-  ![Diagram that shows interconnectivity between Azure and OCI via ExpressRoute.](./media/azure-oci-hub-and-spoke.png)
+  ![Diagram that shows interconnectivity between Azure and O C I via ExpressRoute.](./media/azure-oci-hub-and-spoke.png)
 
   *Figure 1: Interconnectivity between Azure and OCI via ExpressRoute.*
 
 - If your application requires the lowest possible latency between Azure and OCI, consider deploying your application in a single VNet with an ExpressRoute gateway and FastPath enabled.
 
-  ![Diagram that shows Azure to OCI - single vNet.](./media/azure-oci-one-vnet.png)
+  ![Diagram that shows Azure to O C I - single V Net.](./media/azure-oci-one-vnet.png)
 
   *Figure 2: Interconnectivity between Azure and OCI with a single VNet.*
 
@@ -54,11 +54,11 @@ This section provides different connectivity approaches to integrate an Azure la
 
 - To operate Oracle resources hosted in OCI by using Azure resources and technologies, you could:
 
-  - **From Azure:** Deploy a jumpbox in a spoke VNet. The jumpbox provides access to the virtual cloud network in OCI as shown in the following picture:
+  - **From Azure:** Deploy a jump box in a spoke VNet. The jump box provides access to the virtual cloud network in OCI as shown in the following picture:
 
-    ![Diagram that shows Azure to OCI Jumpbox on one VNet.](./media/azure-oci-jump-box-one-vnet.png)
+    ![Diagram that shows Azure to OCI jump box on one VNet.](./media/azure-oci-jump-box-one-vnet.png)
 
-    *Figure 3: Managing OCI resources from Azure via a jumpbox.*
+    *Figure 3: Managing OCI resources from Azure via a jump box.*
 
   - **From on-premises:** Use ExpressRoute Global Reach to bind an existing ExpressRoute circuit that connects on-premises to Azure, to an OCI ExpressRoute circuit that interconnects Azure to OCI. In this way, the Microsoft Enterprise Edge (MSEE) router becomes the central routing point between both ExpressRoute circuits.
 

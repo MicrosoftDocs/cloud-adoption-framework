@@ -26,7 +26,7 @@ Together alongside a suitable [Management Group hierarchy](./../landing-zone/des
 
 ### Policy-driven governance
 
-Azure Policy should be used to provide guardrails and ensure continued compliance with your organization's platform, along with the applications deployed onto it. Azure Policy also provides application owners with sufficient freedom and a secure unhindered path to the cloud.
+Use Azure Policy to provide guardrails and ensure continued compliance with your organization's platform and the applications deployed onto it. Azure Policy also provides application owners with independence and a secure, unhindered path to the cloud.
 
 ### Single control and management plane
 

@@ -1,5 +1,5 @@
 ---
-title: Service Enablement Framework
+title: Service enablement framework
 description: Learn about adopting a service enablement framework as part of your cloud adoption journey
 author: DominicAllen
 ms.author: doalle

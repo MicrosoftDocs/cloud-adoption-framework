@@ -9,9 +9,8 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: internal
 ---
-# Subscriptions
 
-## Subscriptions overview
+# Subscriptions
 
 Subscriptions are a unit of management, billing, and scale within Azure. They play a critical role when you're designing for large-scale Azure adoption. This section helps you capture subscription requirements and design target subscriptions based on critical factors. These factors are environment type, ownership and governance model, organizational structure, and application portfolios.
 
@@ -19,26 +18,34 @@ Subscriptions are a unit of management, billing, and scale within Azure. They pl
 
 ### Subscription organization and governance design considerations
 
-- Subscriptions serve as boundaries for assigning Azure policies. 
-    - For example, secure workloads such as Payment Card Industry (PCI) workloads typically require additional policies to achieve compliance. Instead of using a management group to group workloads that require PCI compliance, you can achieve the same isolation with a subscription. This way, you don't have too many management groups with a small number of subscriptions.
+- Subscriptions serve as boundaries for assigning Azure policies.
+
+  - For example, secure workloads such as Payment Card Industry (PCI) workloads typically require additional policies to achieve compliance. Instead of using a management group to group workloads that require PCI compliance, you can achieve the same isolation with a subscription. This way, you don't have too many management groups with a small number of subscriptions.
+
+    - However, creating a management group for these types of landing zone archetypes, if a larger amount of subscriptions are to be created, is a recommended approach.
 
 - Subscriptions serve as a scale unit so that component workloads can scale within the platform [subscription limits](/azure/azure-resource-manager/management/azure-subscription-service-limits). Make sure to consider subscription resource limits during your workload design sessions.
 
 - Subscriptions provide a management boundary for governance and isolation, which clearly separates concerns.
 
 - There's a manual process, planned future automation, that can be conducted to limit an Azure AD tenant to use only Enterprise Agreement enrollment subscriptions. This process prevents creation of Microsoft Developer Network subscriptions at the root management group scope.
+  - To do this, reach out via an [Azure Support ticket](https://azure.microsoft.com/support/create-ticket/)
 
-### Configure subscription quota and capacity design considerations
+- Review the guidance in [Azure subscription and reservation transfer hub](/azure/cost-management-billing/manage/subscription-transfer) for information around supported transfers of subscriptions between Azure billing offers.
+
+### Subscription quota and capacity design considerations
 
 Each Azure region contains a finite number of resources. When you consider an Azure adoption that involves large resource quantities, ensure that sufficient capacity and SKUs are available and that the attained capacity can be understood and monitored.
 
-- Consider limits and quotas within the Azure platform for each service that your workloads require.
+- Consider [limits and quotas](/azure/azure-resource-manager/management/azure-subscription-service-limits) within the Azure platform for each service that your workloads require.
 
 - Consider the availability of required SKUs within chosen Azure regions. For example, new features might be available only in certain regions. The availability of certain SKUs for given resources such as VMs might be different from one region to another.
 
 - Consider that subscription quotas aren't capacity guarantees and are applied on a per-region basis.
 
-### Configure subscription tenant transfer restrictions design considerations
+  - See [On-demand capacity reservation (preview)](/azure/virtual-machines/capacity-reservation-overview) for virtual machine capacity reservations.
+
+### Subscription tenant transfer restrictions design considerations
 
 Each Azure subscription is linked to a single Azure AD tenant, this acts as the identity provider (IdP) for the Azure subscription which it will trust to authenticate users, services and devices.
 
@@ -48,9 +55,9 @@ However, the Azure AD tenant that an Azure subscription is linked to can be chan
 - [Transfer an Azure subscription to a different Azure AD directory](/azure/role-based-access-control/transfer-subscription)
 
 > [!NOTE]
-> For Azure cloud solution provider (CSP) subscriptions, transferring to another Azure AD tenant is not supported.
+> For Azure Cloud Solution Provider (CSP) subscriptions, transferring to another Azure AD tenant is not supported.
 
-When this is considered in the context of Azure landing zones, you may decide to restrict and prevent users from being able to either transfer Azure subscriptions out of your organization's Azure AD tenant or transfer Azure subscriptions into your organization's Azure AD tenant. This can be done by following the process detailed in  [Manage Azure subscription policies](/azure/cost-management-billing/manage/manage-azure-subscription-policy).
+When this is considered in the context of Azure landing zones, you may decide to restrict and prevent users from being able to either transfer Azure subscriptions out of your organization's Azure AD tenant or transfer Azure subscriptions into your organization's Azure AD tenant. This can be done by following the process detailed in [Manage Azure subscription policies](/azure/cost-management-billing/manage/manage-azure-subscription-policy).
 
 As part of the subscription policy you can configure, you can also provide a list of [exempted users](/azure/cost-management-billing/manage/manage-azure-subscription-policy#exempted-users) who are permitted to bypass what's set in the policy.
 
@@ -83,7 +90,7 @@ Cost transparency across a technical estate is a critical management challenge f
 
 - Use Azure Advisor to check recommendations for optimizing costs.
 
-## Subscriptions - recommendations
+## Subscriptions recommendations
 
 ### Subscription organization and governance recommendations
 
@@ -110,6 +117,8 @@ Cost transparency across a technical estate is a critical management challenge f
 
 - Avoid a rigid subscription model, and opt instead for a set of flexible criteria to group subscriptions across the organization. This flexibility ensures that as your organization's structure and workload composition changes, you can create new subscription groups instead of using a fixed set of existing subscriptions. One size doesn't fit all for subscriptions. What works for one business unit might not work for another. Some applications might coexist within the same landing zone subscription while others might require their own subscription.
 
+  - See [How do we handle "dev/test/production" workload landing zones in enterprise-scale architecture?](/azure/cloud-adoption-framework/ready/enterprise-scale/faq#how-do-we-handle-devtestproduction-workload-landing-zones-in-enterprise-scale-architecture) for further guidance regarding this point. **LINK WILL NEED UPDATING ONCE FAW PR MERGED #2676**
+
 ### Subscription quota and capacity recommendations
 
 - Use subscriptions as scale units, and scale out resources and subscriptions as required. Your workload can then use the required resources for scaling out, when needed, without hitting subscription limits in the Azure platform.
@@ -135,5 +144,3 @@ Cost transparency across a technical estate is a critical management challenge f
   - This would ideally be members of an Azure PlatformOps (platform operations) team.
 
   - Include break-glass accounts in the list of [exempted users](/azure/cost-management-billing/manage/manage-azure-subscription-policy#exempted-users).
-
-

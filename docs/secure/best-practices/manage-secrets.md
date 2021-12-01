@@ -2,7 +2,7 @@
 title: Manage secrets
 description: Learn about best practices for managing secrets securely.
 author: petpipe-msft
-ms.author: pepiper
+ms.author: abuck
 ms.date: 04/04/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -54,7 +54,7 @@ Understanding alternatives to using Azure Key Vault and adhering to the external
 > - Implement observability, for example: logging, monitoring, and alerting
 > - If you use Azure Key Vault:
 >   - Implement the security baseline for Azure Key Vault
->   - Enable [Azure Defender for Azure Key Vault](/azure/security-center/defender-for-key-vault-introduction)
+>   - Enable [Microsoft Defender for Key Vault](/azure/security-center/defender-for-key-vault-introduction)
 >   - Enable logging for Azure Key Vault
 
 To learn more, see:
@@ -128,7 +128,7 @@ The other type of keys are used for various Azure services for connectivity or t
 
 There are limitations or exceptions for the keys of various Azure services. Understanding and aligning with your business requirements will validate the best choice or practice below. For example, Azure Storage has support for shared access policies, shared access signatures, Azure AD, and so on.
 
-Understanding each of these [options](/azure/storage/common/storage-auth?toc=/azure/storage/blobs/toc.json) and documenting them to your business requirements will guide you through this decision process.
+Understanding each of these [options](/azure/storage/common/authorize-data-access?toc=/azure/storage/blobs/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json) and documenting them to your business requirements will guide you through this decision process.
 
 Additionally, many Azure services support managed identities for authentication.  [What are managed identities?](/azure/active-directory/managed-identities-azure-resources/overview)
 

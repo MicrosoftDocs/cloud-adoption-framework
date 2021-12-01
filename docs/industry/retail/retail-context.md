@@ -56,7 +56,7 @@ If there's one thing to be learned following COVID-19, it's that agility is key.
 
 ## Next steps
 
-To learn more about how Azure supports retail organizations, see [Azure for retail](./retail-azure-advantages.md).
+To learn more about how Azure supports retail organizations, see [Azure for Retail](./retail-azure-advantages.md).
 
 These resources offer guidance in the cloud adoption scenario.
 

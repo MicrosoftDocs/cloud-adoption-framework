@@ -1,5 +1,5 @@
 ---
-title: Management - Inventory and visibility
+title: Azure management - inventory and visibility
 description: Design area guidance for managing your Azure platform services
 author: DominicAllen
 ms.author: doalle
@@ -10,15 +10,14 @@ ms.subservice: ready
 ms.custom: internal
 ---
 
-
 # Inventory and visibility considerations | Management design area
 
 As organizations design and implement cloud environments, the underpinning management and monitoring of the platform services will be a key consideration.
 Structuring these services to meet the needs of the business as the environment scales will be an important factor in successful cloud adoption.
 
-How management operations are delivered as part of a landing zone will be directly influenced by the cloud operating model choices made as part of the earlier planning phases - the degree to which management is centralized for the platform being a key example of this. 
+How management operations are delivered as part of a landing zone will be directly influenced by the cloud operating model choices made as part of the earlier planning phases - the degree to which management is centralized for the platform being a key example of this.
 
-Use the guidance in this section to consider how to approach Inventory and Visibility in your cloud environment.
+Use the guidance in this section to consider how to approach inventory and visibility in your cloud environment.
 
 ## Basic inventory considerations
 
@@ -30,8 +29,8 @@ Consider the following items relating to logging data to help inform the types o
 |Scope|Context|
 |-|-|
 |Application-centric platform monitoring <br>  |Include both hot and cold telemetry paths for metrics and logs, respectively <br> Operating system metrics; for example, performance counters and custom metrics <br> Operating system logs; for example: <br> - Internet Information Services <br> - Event Tracing for Windows, and syslogs <br> - Resource health events <br>  |
-|Security audit logging  |Aim to achieve a horizontal security lens across your organization's entire Azure estate <br> Potential integration with on-premises security information and event management (SIEM) systems such as ArcSight or the Onapsis security platform <br> - Potential integration with software as a service (SaaS) offerings such as ServiceNow <br> - Azure activity logs <br> - Azure Active Directory (Azure AD) audit reports <br> - Azure diagnostic services, logs, and metrics; Azure Key Vault audit events; network security group (NSG) flow logs; and event logs <br> - Azure Monitor, Azure Network Watcher, Azure Security Center, and Azure Sentinel|
- Azure data retention thresholds and archiving requirements|  - The default retention period for Azure Monitor Logs is 30 days, with a maximum of two years.<br>  - The default retention period for Azure AD reports (premium) is 30 days. <br>  - The default retention period for the Azure diagnostic service is 90 days.|
+|Security audit logging  |Aim to achieve a horizontal security lens across your organization's entire Azure estate <br> Potential integration with on-premises security information and event management (SIEM) systems such as ArcSight or the Onapsis security platform <br> - Potential integration with software as a service (SaaS) offerings such as ServiceNow <br> - Azure activity logs <br> - Azure Active Directory (Azure AD) audit reports <br> - Azure diagnostic services, logs, and metrics; Azure Key Vault audit events; network security group (NSG) flow logs; and event logs <br> - Azure Monitor, Azure Network Watcher, Microsoft Defender for Cloud, and Microsoft Sentinel|
+ Azure data retention thresholds and archiving requirements|  - The default retention period for Azure Monitor Logs is 30 days, with a maximum of two years.<br>  - the default retention period for Azure AD reports (premium) is 30 days. <br>  - the default retention period for the Azure diagnostic service is 90 days.|
 Operational requirements|  - Operational dashboards with native tools such as Azure Monitor Logs or third-party tooling <br>  - Controlling privileged activities with centralized roles <br> - Managed identities for Azure resources](/azure/active-directory/managed-identities-azure-resources/overview) for access to Azure services <br>  - Resource locks to protect editing and deleting resources
 
 ### Visibility considerations
@@ -41,14 +40,14 @@ Operational requirements|  - Operational dashboards with native tools such as Az
 - Are there existing service management tools in place that alerts need to be sent to?
 - Which services are considered business critical and need high priority notifications of issues?
 
-### Update management considerations
+### Update Management considerations
 
-- Are there existing update management tools used by the organization? Can they be extended to cover the cloud environment or are new tools required?
-- Which teams will be responsible for overseeing update management?
+- Are there existing Update Management tools used by the organization? Can they be extended to cover the cloud environment or are new tools required?
+- Which teams will be responsible for overseeing Update Management?
 - Are there groups of resources that share similar update schedules?
-- Are there groups of resources that cannot be updated at the same time for business continuity reasons?  
+- Are there groups of resources that cannot be updated at the same time for business continuity reasons?
 
-## Inventory & visibility recommendations
+## Inventory and visibility recommendations
 
 - Use a single [monitor logs workspace](/azure/azure-monitor/platform/design-logs-deployment) to manage platforms centrally except where Azure role-based access control (Azure RBAC), data sovereignty requirements and data retention policies mandate separate workspaces. Centralized logging is critical to the visibility required by operations management teams. Logging centralization drives reports about change management, service health, configuration, and most other aspects of IT operations. Converging on a centralized workspace model reduces administrative effort and the chances for gaps in observability.
 
@@ -68,16 +67,16 @@ The Azure landing zone accelerator includes opinionated configuration that deplo
 
 Included in the Azure landing zone accelerator deployment are key management and monitoring tools, such as:
 
-- a Log Analytics workspace and automation account
-- Azure Security Center monitoring
-- Diagnostic settings for Activity Logs, Virtual machines, and Platform as a Service (PaaS) resources sent to Log Analytics
+- A Log Analytics workspace and Automation account
+- Microsoft Defender for Cloud monitoring
+- Diagnostic settings for activity logs, virtual machines, and platform as a service (PaaS) resources sent to Log Analytics
 
 ### Centralized logging in the Azure landing zone accelerator
 
-In the context of the Azure landing zone accelerator, centralized logging is primarily concerned with platform operations. 
+In the context of the Azure landing zone accelerator, centralized logging is primarily concerned with platform operations.
 
-This emphasis doesn't prevent the use of the same workspace for VM-based application logging. With a workspace configured in resource-centric access control mode, granular Azure RBAC is enforced to ensure application teams will only have access to the logs from their resources. 
+This emphasis doesn't prevent the use of the same workspace for VM-based application logging. With a workspace configured in resource-centric access control mode, granular Azure RBAC is enforced to ensure application teams will only have access to the logs from their resources.
 
-In this model, application teams benefit from the use of existing platform infrastructure by reducing their management overhead. 
+In this model, application teams benefit from the use of existing platform infrastructure by reducing their management overhead.
 
 For any non-compute resources such as web apps or Azure Cosmos DB databases, application teams can use their own Log Analytics workspaces and configure diagnostics and metrics to be routed here.

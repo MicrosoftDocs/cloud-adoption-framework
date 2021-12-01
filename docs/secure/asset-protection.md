@@ -23,7 +23,7 @@ Asset protection acts as the technical subject matter expert for assets. It work
 > [!NOTE]
 > Asset protection is usually implemented by IT operations teams that maintain the assets and are supplemented by expertise in the security team. For more information, see [Design controls as a team](#design-controls-as-a-team).
 
-Threat actors are persistent and seek out vulnerabilities that result from gaps in the application of standards and policy. Attackers can directly target the business-critical data or application. They can also target the infrastructure that grants them access to the business-critical data and applications. Access control focuses on managing authorized access to resources. Asset protection addresses on all other potential out of band ways to gain access or control of resources. These two disciplines compliment each other and should be designed together to meet your architecture, policies, and standards. For more information, see [Access control](.\access-control.md).
+Threat actors are persistent and seek out vulnerabilities that result from gaps in the application of standards and policy. Attackers can directly target the business-critical data or application. They can also target the infrastructure that grants them access to the business-critical data and applications. Access control focuses on managing authorized access to resources. Asset protection addresses on all other potential out of band ways to gain access or control of resources. These two disciplines compliment each other and should be designed together to meet your architecture, policies, and standards. For more information, see [Access control](./access-control.md).
 
 ![Diagram presents an overview of asset protection and asset control, with sections for get secure and stay secure.](./media/asset-protection.png)
 
@@ -44,7 +44,7 @@ Everything degrades over time. Physical items wear out. The environment changes 
 - **Technology requirements**, driven by rapid cloud platform evolution and feature releases.
 - **Security requirements**, driven by attacker innovation and rapid evolution of native cloud security capabilities.
 
-This dynamic affects all parts of security, including [security operations](.\security-operations.md), [access control](.\access-control.md), and particularly DevSecOps in [Innovation security](.\innovation-security.md).
+This dynamic affects all parts of security, including [security operations](./security-operations.md), [access control](./access-control.md), and particularly DevSecOps in [Innovation security](./innovation-security.md).
 
 Staying secure includes many elements. Focus on these two specific areas of asset protection:
 
@@ -71,7 +71,7 @@ Without business leadership support, security and IT leaders are distracted from
 
 Network isolation might be a valid option for protecting older assets that can no longer be secured, but cannot be immediately retired. This scenario can typically occur for end of life operating systems and applications. It's common in operational technology (OT) environments and legacy systems.
 
-Isolation itself is considered access control, even though the assets that can't be secured are identified as part of asset protection. For more information, see [Avoid firewall and forget](.\access-control.md).
+Isolation itself is considered access control, even though the assets that can't be secured are identified as part of asset protection. For more information, see [Avoid firewall and forget](./access-control.md).
 
 Some systems at end of life are difficult to disconnect and isolate completely. We don't recommend leaving these insecure systems fully connected to a production network. This configuration can allow attackers to compromise the system and gain access to assets in the organization.
 
@@ -83,7 +83,7 @@ Staying secure is challenging in a world that is constantly changing. It's criti
 
 To get started with asset protection, we recommend that organizations take the following steps.
 
-- **Focus on well-known resources first:** Think about virtual machines, networks, and identities in the cloud that the team is already familiar with. This technique allows you to make immediate progress and are often easier to manage and secure with native cloud tools like Azure Security Center and Azure Defender.
+- **Focus on well-known resources first:** Think about virtual machines, networks, and identities in the cloud that the team is already familiar with. This technique allows you to make immediate progress and are often easier to manage and secure with native cloud tools like Microsoft Defender for Cloud.
 - **Start with vendor/industry baselines:** Start your security configuration with a well-known and proven solution, for example:
 
   - **Security baselines in the Azure Security Benchmark.** Microsoft provides security configuration guidance tailored to individual Azure services. These baselines apply the Azure security benchmarks to the unique attributes of each service. This approach enables security teams to secure each service and refine configurations as needed. For more information, see [Security baselines for Azure](/security/benchmark/azure/security-baselines-overview).
@@ -116,7 +116,7 @@ Once you identify a best practice for an asset, apply it consistently to all ins
 
 ### Challenges with measuring value
 
- It can be difficult to measure the business value of asset protection. The impact of a problem isn't obvious until there's a real-world failure. The risk of not updating security for vulnerabilities is silent and invisible.
+It can be difficult to measure the business value of asset protection. The impact of a problem isn't obvious until there's a real-world failure. The risk of not updating security for vulnerabilities is silent and invisible.
 
 ### Prefer automated policy
 

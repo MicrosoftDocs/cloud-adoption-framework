@@ -18,15 +18,15 @@ Building on the previous connectivity sections, this section explores recommende
 
 - Azure PaaS services are typically accessed over public endpoints. However, the Azure platform provides capabilities to secure such endpoints or even make them entirely private:
 
-  - Virtual network injection provides [dedicated private deployments](https://docs.microsoft.com/azure/virtual-network/virtual-network-for-azure-services) for supported services. Management plane traffic still flows through public IP addresses.
+  - Virtual network injection provides [dedicated private deployments](/azure/virtual-network/virtual-network-for-azure-services) for supported services. Management plane traffic still flows through public IP addresses.
 
-  ![A diagram to explain VNET injected service connectivity.](./media/deploy-service-into-vnet.png)
+  ![A diagram to explain V Net injected service connectivity.](./media/deploy-service-into-vnet.png)
 
-  - [Azure Private Link](/azure/private-link/private-endpoint-overview#private-link-resource) provides dedicated access by using private IP addresses to Azure PaaS instances or custom services behind Azure Load Balancer Standard tier. For more information, see [key benefits of Private Link](/azure/private-link/private-link-overview#key-benefits).
+  - [Azure Private Link](/azure/private-link/private-endpoint-overview#private-link-resource) provides dedicated access by using private IP addresses to Azure PaaS instances or custom services behind Azure Load Balancer Standard tier. For more information, see [Key benefits of Private Link](/azure/private-link/private-link-overview#key-benefits).
 
   - [Virtual network service endpoints](/azure/virtual-network/virtual-network-service-endpoints-overview) provide service-level access from selected subnets to selected PaaS services. Review the list of supported services on the link provided.
 
-  - [What is the difference between Service Endpoints and Private Endpoints?](/azure/private-link/private-link-faq#what-is-the-difference-between-service-endpoints-and-private-endpoints-) provides an explanation of the differences between Private Link Endpoints and VNet Service Endpoints.
+  - [What is the difference between service endpoints and private endpoints?](/azure/private-link/private-link-faq#what-is-the-difference-between-service-endpoints-and-private-endpoints-) provides an explanation of the differences between Private Link endpoints and VNet service endpoints.
 
 - Enterprises often have concerns about public endpoints for PaaS services that must be appropriately mitigated.
 
@@ -40,13 +40,13 @@ Building on the previous connectivity sections, this section explores recommende
 
 - Use Private Link, [where available](/azure/private-link/private-link-overview#availability), for shared Azure PaaS services. Private Link is generally available for several services and is in public preview for other services.
 
-- Access Azure PaaS services from on-premises via [ExpressRoute with Private peering](/azure/expressroute/expressroute-circuit-peerings#privatepeering). Use either virtual network injection for dedicated Azure services or Azure Private Link for available shared Azure services. To access Azure PaaS services from on-premises when virtual network injection or Private Link isn't available, use [ExpressRoute with Microsoft peering](/azure/expressroute/expressroute-circuit-peerings#microsoftpeering). This method avoids transiting over the public internet.
+- Access Azure PaaS services from on-premises via [ExpressRoute with private peering](/azure/expressroute/expressroute-circuit-peerings#privatepeering). Use either virtual network injection for dedicated Azure services or Azure Private Link for available shared Azure services. To access Azure PaaS services from on-premises when virtual network injection or Private Link isn't available, use [ExpressRoute with Microsoft peering](/azure/expressroute/expressroute-circuit-peerings#microsoftpeering). This method avoids transiting over the public internet.
 
-  - Accessing Azure PaaS Services from on-premises via ExpressRoute with Microsoft Peering does not prevent access to the public endpoints of the PaaS service. This must be configured and restricted as required separately.
+  - Accessing Azure PaaS services from on-premises via ExpressRoute with Microsoft peering does not prevent access to the public endpoints of the PaaS service. This must be configured and restricted as required separately.
 
 - Use virtual network service endpoints to secure access to Azure PaaS services from within your virtual network, but only when Private Link isn't available and there are no data exfiltration concerns. To address data exfiltration concerns with service endpoints, use NVA filtering or use virtual network service endpoint policies for Azure Storage.
 
-![A diagram to explain Service Endpoint connectivity.](./media/vnet_service_endpoints_overview.png)
+![A diagram to explain service endpoint connectivity.](./media/vnet-service-endpoints-overview.png)
 
 - Don't enable virtual network service endpoints by default on all subnets.
 

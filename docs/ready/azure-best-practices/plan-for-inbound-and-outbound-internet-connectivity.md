@@ -20,7 +20,7 @@ This section describes recommended connectivity models for inbound and outbound 
 
 - The enterprise-scale architecture is fully compatible with partner NVAs, if your organization prefers to use NVAs or for situations where native services don't satisfy your organization's specific requirements.
 
-- Azure provides different direct internet outbound connectivity methods (such as NAT gateway or Load Balancer) for virtual machines or compute instances on a VNet. Those methods are described on the Azure’s outbound connectivity methods article.  
+- Azure provides different direct internet outbound connectivity methods (such as NAT gateway or load balancer) for virtual machines or compute instances on a VNet. Those methods are described in the [Azure outbound connectivity methods article](/azure/load-balancer/load-balancer-outbound-connections#scenarios).
 
 **Design recommendations:**
 
@@ -32,11 +32,11 @@ This section describes recommended connectivity models for inbound and outbound 
 
   - East/west traffic filtering (if your organization requires it).
 
-- Use Azure Firewall [Premium](/azure/firewall/premium-features) if advanced firewall capabilities are required (TLS inspection, network intrusion detection and prevention system (IDPS), URL filtering, Web categories).
+- Use Azure Firewall [premium](/azure/firewall/premium-features) if advanced firewall capabilities are required (TLS inspection, network intrusion detection and prevention system (IDPS), URL filtering, web categories).
 
 - Use Firewall Manager with Virtual WAN to deploy and manage Azure firewalls across Virtual WAN hubs or in hub virtual networks. Firewall Manager is now in general availability for both Virtual WAN and regular virtual networks.
 
-- If multiple IP addresses and ranges are used consistently in Azure Firewall rules, it is recommended to use [IP Groups](/azure/firewall/ip-groups). IP Groups can be reused in Azure Firewall DNAT, network, and application rules for multiple firewalls across regions and subscriptions in Azure.
+- If multiple IP addresses and ranges are used consistently in Azure Firewall rules, it's recommended to use [IP groups](/azure/firewall/ip-groups). IP groups can be reused in Azure Firewall DNAT, network, and application rules for multiple firewalls across regions and subscriptions in Azure.
 
 - Create a global Azure Firewall policy to govern security posture across the global network environment and assign it to all Azure Firewall instances. Allow for granular policies to meet requirements of specific regions by delegating incremental firewall policies to local security teams via Azure role-based access control.
 
@@ -48,9 +48,9 @@ This section describes recommended connectivity models for inbound and outbound 
 
 - When you're using Azure Front Door and Azure Application Gateway to help protect HTTP/S applications, use WAF policies in Azure Front Door. Lock down Azure Application Gateway to receive traffic only from Azure Front Door.
 
-- Do not use Azure’s default internet outbound access for any scenario.
+- Do not use Azure's default internet outbound access for any scenario.
 
-  - Use NAT Gateway for online landing zones, which are Landing Zones not connected to the hub VNet, where compute resources require internet outbound access and do no need any of the security features provided by Azure Firewall (Standard or Premium) or a 3rd party NVA.
+  - Use NAT gateway for online landing zones, which are landing zones not connected to the hub VNet, where compute resources require internet outbound access and do no need any of the security features provided by Azure Firewall (standard or premium) or a third-party NVA.
 
 - If partner NVAs are required for east/west or south/north traffic protection and filtering:
 
@@ -59,9 +59,9 @@ This section describes recommended connectivity models for inbound and outbound 
 
 - If partner NVAs are required for inbound HTTP/S connections, deploy them within a landing-zone virtual network and together with the applications that they're protecting and exposing to the internet.
 
-- Do not expose Virtual Machine management ports to Internet.
-  - Use [Azure Policy](/azure/virtual-network/policy-reference) to prevent Virtual Machines creation with public IP attached.
-  - Use [Azure Bastion](https://docs.microsoft.com/azure/bastion/bastion-overview) to access jump-boxes Virtual Machines for management purposes.
+- Do not expose virtual machine management ports to internet.
+  - Use [Azure Policy](/azure/virtual-network/policy-reference) to prevent virtual machines creation with public IP attached.
+  - Use [Azure Bastion](/azure/bastion/bastion-overview) to access jump-boxes virtual machines for management purposes.
 
 - Use [Azure DDoS Protection Standard protection plans](/azure/ddos-protection/ddos-protection-overview) to help protect all public endpoints hosted within your virtual networks.
 

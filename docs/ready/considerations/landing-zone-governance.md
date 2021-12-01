@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Improve landing zone governance
 
-Landing zone governance is the smallest unit of overall governance. Establishing a sound governance foundation within your first few landing zones will reduce the amount of refactoring required later in the adoption lifecycle. Improving landing zone governance will integrate cost controls, establish basic tooling to allow for scale, and will make it easier for the cloud governance team to deliver on the Five Disciplines of Cloud Governance.
+Landing zone governance is the smallest unit of overall governance. Establishing a sound governance foundation within your first few landing zones will reduce the amount of refactoring required later in the adoption lifecycle. Improving landing zone governance will integrate cost controls, establish basic tooling to allow for scale, and will make it easier for the cloud governance team to deliver on the five Disciplines of Cloud Governance.
 
 ## Landing zone governance best practices
 
@@ -33,7 +33,7 @@ The [Govern methodology](../../govern/index.md) provides overall guidance for bu
 
 ## Next steps
 
-Cloud adoption will continue to expand with each wave or release of new workloads. To stay ahead of these requirements, cloud platform teams should periodically review additional landing zone best practices.
+Cloud adoption will continue to expand with each wave or release of new workloads. To stay ahead of these requirements, cloud platform teams should periodically review the landing zone design areas.
 
 > [!div class="nextstepaction"]
-> [Review additional landing zone best practices](../azure-best-practices/index.md)
+> [Review landing zone design areas](../landing-zone/design-areas.md)

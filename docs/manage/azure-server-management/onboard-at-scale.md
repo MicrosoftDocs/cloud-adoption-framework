@@ -10,8 +10,6 @@ ms.subservice: manage
 ms.custom: internal
 ---
 
-<!-- cSpell:ignore VMUUID kusto -->
-
 # Configure Azure server management services at scale
 
 You must complete these two tasks to onboard Azure server management services to your servers:
@@ -43,13 +41,13 @@ To assign the policies that described in the previous section:
 
 1. In the Azure portal, go to **Policy** > **Assignments** > **Assign initiative**.
 
-    ![Screenshot of the portal's policy interface with the Assignments option and Assign initiative option called out.](./media/onboarding-at-scale1.png)
+    ![Screenshot of the portal's policy interface with the **Assignments** option and **Assign initiative** option called out.](./media/onboarding-at-scale1.png)
 
 2. On the **Assign policy** page, set the **Scope** by selecting the ellipsis (**...**) and then selecting either a management group or subscription. Optionally, select a resource group. Then choose **Select** at the bottom of the **Scope** page. The scope determines which resources or group of resources the policy is assigned to.
 
 3. Select the ellipsis (**...**) next to **Policy definition** to open the list of available definitions. To filter the initiative definitions, enter **Azure Monitor** in the **Search** box:
 
-    ![Screenshot of the Enable Azure Monitor for V M initiative definition.](./media/onboarding-at-scale2.png)
+    ![Screenshot of the **Enable Azure Monitor for V M** initiative definition.](./media/onboarding-at-scale2.png)
 
 4. The **Assignment name** is automatically populated with the policy name that you selected, but you can change it. You can also add an optional description to provide more information about this policy assignment. The **Assigned by** field is automatically filled based on who is signed in. This field is optional, and it supports custom values.
 
@@ -57,7 +55,7 @@ To assign the policies that described in the previous section:
 
     ![Screenshot of the Log Analytics workspace option.](./media/onboarding-at-scale3.png)
 
-6. Select the **Managed Identity location** check box. If this policy is of the type [`DeployIfNotExists`](/azure/governance/policy/concepts/effects#deployifnotexists), a managed identity will be required to deploy the policy. In the portal, the account will be created as indicated by the check box selection.
+6. Select the **Managed Identity location** checkbox. If this policy is of the type [`DeployIfNotExists`](/azure/governance/policy/concepts/effects#deployifnotexists), a managed identity will be required to deploy the policy. In the portal, the account will be created as indicated by the checkbox selection.
 
 7. Select **Assign**.
 
@@ -100,7 +98,7 @@ The Change Tracking and Inventory solution is free for Azure VMs and costs $6 pe
 4. Select **Enable on selected machines**. Then select **Add** next to the machine name.
 5. Select **Enable** to enable the solution for those machines.
 
-![Screenshot of Change Tracking in the Azure portal](./media/onboarding-configuration2.png)
+![Screenshot of **Change Tracking** in the Azure portal](./media/onboarding-configuration2.png)
 
 #### Opt in by using saved searches
 
@@ -174,13 +172,13 @@ After creation is complete, the workspace resource instance displays **AntiMalwa
 
 You can enable [Azure Monitor for VMs](/azure/azure-monitor/vm/vminsights-overview) through the view page for the VM instance, as described in [Enable management services on a single VM for evaluation](./onboard-single-vm.md). You shouldn't enable solutions directly from the **Solutions** page as you do for the other solutions that are described in this article. For large-scale deployments, it may be easier to use [automation](./onboarding-automation.md) to enable the correct solutions in the workspace.
 
-### Azure Security Center
+### Microsoft Defender for Cloud
 
-We recommend that you onboard all your servers at least to the Free tier of Azure Security Center. This option provides basic security assessments and actionable security recommendations for your environment. The Standard tier provides additional benefits. For more information, see [Azure Security Center pricing](/azure/security-center/security-center-pricing).
+We recommend that you onboard all your servers at least to the Free tier of Microsoft Defender for Cloud. This option provides basic security assessments and actionable security recommendations for your environment. The Standard tier provides additional benefits. For more information, see [Microsoft Defender for Cloud pricing](/azure/security-center/security-center-pricing).
 
-To enable the Free tier of Azure Security Center, follow these steps:
+To enable the Free tier of Microsoft Defender for Cloud, follow these steps:
 
-1. Go to the **Security Center** portal page.
+1. Go to the **Defender for Cloud** portal page.
 2. Under **POLICY & COMPLIANCE**, select **Security policy**.
 3. Find the Log Analytics workspace resource that you created in the pane on the right side.
 4. Select **Edit settings** for that workspace.

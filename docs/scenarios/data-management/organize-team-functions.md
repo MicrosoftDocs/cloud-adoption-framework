@@ -6,8 +6,8 @@ ms.author: mboswell
 ms.date: 08/06/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
-ms.custom: think-tank, e2e-data
+ms.subservice: scenario
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Understand teams and functions for data management and analytics in Azure
@@ -104,10 +104,10 @@ As previously described in [Understand security provisioning for data management
 
 ### Review dataset telemetry
 
-Integration ops can use a data access heatmap to identify traffic and hotspots that can help to identify popular assets. Heatmaps can also help to prioritize support investments and manage storage costs while highlighting data assets wit low traction. Low traction dataset would lead integration ops to contact the owners to evaluate archiving options.
+Integration ops can use a data access heat map to identify traffic and hotspots that can help to identify popular assets. Heat maps can also help to prioritize support investments and manage storage costs while highlighting data assets wit low traction. Low traction dataset would lead integration ops to contact the owners to evaluate archiving options.
 
 > [!NOTE]
-> Some data catalog solutions feature heatmaps as part of their integrated solution. However, it's also possible to do this with other reporting tools like Microsoft Power BI.
+> Some data catalog solutions feature heat maps as part of their integrated solution. However, it's also possible to do this with other reporting tools like Microsoft Power BI.
 
 ### The integration operations feedback and enhancement loop
 
@@ -185,10 +185,10 @@ In addition to participating in these user groups, analysts should submit data a
 
 ## Responsibility assignment matrix
 
-- Responsible: Who is completing the task?
-- Accountable: Who is making decisions and taking actions on the tasks(s)?
-- Consulted: Who will receive communication about decisions and tasks?
-- Informed: Who will be updated about the decisions and actions during the project?
+- **Responsible:** Who is completing the task?
+- **Accountable:** Who is making decisions and taking actions on the task?
+- **Consulted:** Who receives communications about decisions and task?
+- **Informed:** Who is updated about the decisions and actions during the project?
 
 |Role |Cloud environment|Data management landing zone|Data landing zone|Data integration|Data products|
 |-|-|-|-|-|-|
@@ -202,4 +202,4 @@ In addition to participating in these user groups, analysts should submit data a
 
 ## Next steps
 
-[The Azure Well-Architected Framework for data workloads](./well-architected-framework.md)
+The [Azure Well-Architected Framework for data workloads](./well-architected-framework.md)

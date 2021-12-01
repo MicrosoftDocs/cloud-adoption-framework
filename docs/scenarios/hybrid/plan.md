@@ -1,13 +1,13 @@
 ---
 title: Plan methodology for hybrid and multicloud strategy
-description: Describe the scenario's impact on planning
+description: Learn how to plan for hybrid and multicloud scenarios.
 author: mpvenables
 ms.author: brblanch
 ms.date: 02/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
-ms.custom: e2e-hybrid
+ms.custom: e2e-hybrid, think-tank
 ---
 
 # Plan for hybrid and multicloud
@@ -152,7 +152,7 @@ Planning efforts for unified operations and management assume that most assets f
 - **Remain current with fully automated updates, upgrades and policy-controlled deployments** like evergreen SQL and hyperscale deployment option of [Azure Database for PostgreSQL](/azure/postgresql/).
 - **Optimize performance of data workloads, and dynamically scale up/scale out, without application downtime with cloud elasticity on-premises.**
 - **Gain unified management and consistent visibility over on-premises and native Azure data workloads** using familiar tools (Azure portal, Azure data studio, and Azure CLI).
-- **Protect your on-premises data workloads using Azure security and governance toolsets** including [Azure Security Center](/azure/security-center/security-center-introduction), [Azure Policy](/azure/governance/policy/overview), and [Azure RBAC](/azure/role-based-access-control/).
+- **Protect your on-premises data workloads using Azure security and governance toolsets** including [Microsoft Defender for Cloud](/azure/security-center/security-center-introduction), [Azure Policy](/azure/governance/policy/overview), and [Azure RBAC](/azure/role-based-access-control/).
 - **Increase cost-efficiencies across your hybrid infrastructure** with a modern cloud billing model.
 
 ## Guidance for inventory analysis
@@ -163,7 +163,7 @@ Do you have to look at the existing estate differently? Or is a simple VM to VM 
 
 ## Hybrid and multicloud adoption plan
 
-Do you have a specific DevOps backlog the customer should use? Or is the standard adoption plan template still sufficient? Check out the strategy and plan template in the [Tools and templates](../../reference/tools-templates.md) section.
+Do you have a specific DevOps backlog the customer should use? Or is the standard adoption plan template still sufficient? Check out the strategy and plan template in the [Tools and templates](../../resources/tools-templates.md) section.
 
 ## Hybrid and multicloud readiness plan
 

@@ -1,5 +1,5 @@
 ---
-title: Security
+title: Security design in Azure
 description: Design area guidance for security in Azure
 author: DominicAllen
 ms.author: doalle
@@ -14,20 +14,20 @@ ms.custom: internal
 
 This critical design area establishes a foundation for security across your Azure, hybrid, &/or multicloud environments. This foundation can later be enhanced with additional security guidance outlined in the [Cloud Adoption Framework's Secure methodology](../../../secure/index.md).
 
-## Design Area review
+## Design area review
 
-**Involved roles or functions:** This design area is led by [Cloud Security](../../../organize/cloud-security.md), specifically the [security architects within that team](../../../organize/cloud-security-architecture.md). The [Cloud Platform](../../../organize/cloud-platform.md) and [Cloud Center of Excellence](../../../organize/cloud-center-of-excellence.md) will be required to review networking and identity decisions. The collective roles will likely be required to define and implement the technical requirements coming from this exercise. More advanced security guardrails may also require support from [Cloud Governance](../../../organize/cloud-governance.md)
+**Involved roles or functions:** This design area is led by [cloud security](../../../organize/cloud-security.md), specifically the [security architects within that team](../../../organize/cloud-security-architecture.md). The [cloud platform](../../../organize/cloud-platform.md) and [cloud center of excellence](../../../organize/cloud-center-of-excellence.md) will be required to review networking and identity decisions. The collective roles will likely be required to define and implement the technical requirements coming from this exercise. More advanced security guardrails may also require support from [cloud governance](../../../organize/cloud-governance.md)
 
 **Scope:** The objective of this exercise is to understand security requirements and implement those requirements consistently across all workloads in your cloud platform. The primary scope of this exercise focus on security operations tooling and access control (including zero trust and advanced network security).
 
-**Out of scope:** This exercise focuses on the foundation for a modern security operations center in the cloud. To streamline the conversation, this exercise does not address some of the disciplines in the [CAF Secure methodology](../../../secure/index.md). Specifically, security operations, asset protection, and innovation security will build on your Azure Landing Zone deployment, but are out of scope for this design area discussion.
+**Out of scope:** This exercise focuses on the foundation for a modern security operations center in the cloud. To streamline the conversation, this exercise does not address some of the disciplines in the [CAF Secure methodology](../../../secure/index.md). Specifically, security operations, asset protection, and innovation security will build on your Azure landing zone deployment, but are out of scope for this design area discussion.
 
-## Design Area overview
+## Design area overview
 
 Security is a core consideration for all customers, in every environment.
 When designing and implementing an Azure landing zone, security should be a consideration throughout the process.
 
-The security design area focusses on the considerations and recommendations for design decisions as part of the landing zone. In addition to this, the [Secure methodology](/secure/index.md) in the Cloud Adoption Framework provides further in-depth guidance for holistic security processes and tools. 
+The security design area focusses on the considerations and recommendations for design decisions as part of the landing zone. In addition to this, the [Secure methodology](/secure/index.md) in the Cloud Adoption Framework provides further in-depth guidance for holistic security processes and tools.
 
 ### Azure Security Benchmark
 
@@ -46,12 +46,12 @@ An organization must have visibility into what's happening within their technica
 
 |Scope|Context|
 |-|-|
-| Security alerting| - Which teams require notifications for security alerts? <br> - are there groups of services that alerts require routing to different teams? <br> - business requirements for real-time monitoring and alerting. <br> - Security information and event management integration with Azure Security Center and Azure Sentinel.|
+| Security alerting| - Which teams require notifications for security alerts? <br> - are there groups of services that alerts require routing to different teams? <br> - business requirements for real-time monitoring and alerting. <br> - Security information and event management integration with Microsoft Defender for Cloud and Microsoft Sentinel.|
 | Security logging|- Data retention periods for audit data. Azure AD Premium reports have a 30-day retention period. <br> - Long-term archiving of logs such as Azure activity logs, VM logs, and platform as a service (PaaS) logs.|
 | Security controls| - Baseline security configuration via Azure in-guest VM policy. <br> - consider how your security controls will align with governance guardrails|
 | Vulnerability management|- Emergency patching for critical vulnerabilities. <br>- Patching for VMs that are offline for extended periods of time. <br> - Vulnerability assessment of VMs.
-|Shared responsibility| - Where are the hand-offs between team responsibilities that need to be considered when monitoring or responding to security events? <br> Consider the guidance in the Secure methodology for [security operations](/azure/cloud-adoption-framework/secure/security-operations) |
-| Encryption and keys | - who requires access to keys in the environment? <br> - who will be responsible for managing the keys? <br> - Explore [encryption and keys further](./encryption-and-keys.md)
+|Shared responsibility| - Where are the handoffs between team responsibilities that need to be considered when monitoring or responding to security events? <br> Consider the guidance in the Secure methodology for [security operations](/azure/cloud-adoption-framework/secure/security-operations) |
+| Encryption and keys | - Who requires access to keys in the environment? <br> - Who will be responsible for managing the keys? <br> - Explore [encryption and keys further](./encryption-and-keys.md)
 
 ## Security operations design recommendations
 
@@ -59,9 +59,9 @@ An organization must have visibility into what's happening within their technica
 
 - Export Azure activity logs to Azure Monitor Logs for long-term data retention. Export to Azure Storage for long-term storage beyond two years, if necessary.
 
-- [Enable Security Center Standard](/azure/security-center/security-center-get-started) for all subscriptions, and use Azure Policy to ensure compliance.
+- [Enable Defender for Cloud standard](/azure/security-center/security-center-get-started) for all subscriptions, and use Azure Policy to ensure compliance.
 
-- Monitor base operating system patching drift via Azure Monitor Logs and Azure Security Center.
+- Monitor base operating system patching drift via Azure Monitor Logs and Microsoft Defender for Cloud.
 
 - Use Azure policies to automatically deploy software configurations through virtual machine (VM) extensions and enforce a compliant baseline VM configuration.
 
@@ -71,28 +71,28 @@ An organization must have visibility into what's happening within their technica
 
 - Use an Azure Event Grid-based solution for log-oriented, real-time alerting.
 
-### Access Control design considerations
+### Access control design considerations
 
-Modern security boundaries are slightly more complex than those in a traditional data center. The four walls of the data center no longer contain your assets. Keeping users out of the protected network is no longer sufficient to control access. In the cloud, your perimeter is no comprised of two parts: Network security controls and Zero Trust Access Controls.
+Modern security boundaries are slightly more complex than those in a traditional datacenter. The four walls of the datacenter no longer contain your assets. Keeping users out of the protected network is no longer sufficient to control access. In the cloud, your perimeter is no comprised of two parts: network security controls and zero trust access controls.
 
-#### Advanced Network Security
+#### Advanced network security
 
 |Scope|Context|
 |-|-|
-| Plan for inbound and outbound internet connectivity | [This section describes recommended connectivity models for inbound and outbound connectivity to and from the public internet.](../../azure-best-practices/plan-for-inbound-and-outbound-internet-connectivity.md)|
-| Plan for landing zone network segmentation | [This section explores key recommendations to deliver highly secure internal network segmentation within a landing zone to drive a network zero-trust implementation.](../../azure-best-practices/plan-for-landing-zone-network-segmentation.md)|
-| Define network encryption requirements | [This section explores key recommendations to achieve network encryption between on-premises and Azure as well as across Azure regions.](../../azure-best-practices/define-network-encryption-requirements.md)|
+| Plan for inbound and outbound internet connectivity | [This section describes recommended connectivity models for inbound and outbound connectivity to and from the public internet](../../azure-best-practices/plan-for-inbound-and-outbound-internet-connectivity.md).|
+| Plan for landing zone network segmentation | [This section explores key recommendations to deliver highly secure internal network segmentation within a landing zone to drive a network zero-trust implementation](../../azure-best-practices/plan-for-landing-zone-network-segmentation.md).|
+| Define network encryption requirements | [This section explores key recommendations to achieve network encryption between on-premises and Azure as well as across Azure regions](../../azure-best-practices/define-network-encryption-requirements.md).|
 |Plan for traffic inspection |In many industries, organizations require that traffic in Azure is mirrored to a network packet collector for deep inspection and analysis. This requirement typically focuses on inbound and outbound internet traffic. [This section explores key considerations and recommended approaches for mirroring or tapping traffic within Azure Virtual Network](../../azure-best-practices/plan-for-traffic-inspection.md).|
 
-#### Zero Trust
+#### Zero trust
 
 - Which teams or individuals require access to services within the landing zone? What roles are they performing?
 - Who should authorize the access requests?
 - Who should receive the notifications when privileged roles are activated?
 - Who should have access to the audit history?
-- Explore the capabilities further [here](/azure/active-directory/privileged-identity-management/pim-configure)
+- Explore the capabilities further [here](/azure/active-directory/privileged-identity-management/pim-configure).
 
-### Access Control design recommendations
+### Access control design recommendations
 
 - In the context of your underlying requirements, conduct a joint examination of each required service. If you want to bring your own keys, it might not be supported across all considered services. Implement relevant mitigation so that inconsistencies don't hinder desired outcomes. Choose appropriate region pairs and disaster recovery regions that minimize latency.
 
@@ -111,18 +111,18 @@ For example, the following are included:
 
 Tools:
 
-- Azure Security Center (Standard or Free tier)
-- Azure Sentinel
-- Azure DDoS Standard Protection plan (optional)
+- Microsoft Defender for Cloud (standard or Free tier)
+- Microsoft Sentinel
+- Azure DDoS standard protection plan (optional)
 - Azure Firewall
 - Web Application Firewall (WAF)
-- Privileged identity management (PIM)
+- Privileged Identity Management (PIM)
 
 Policies for on-line and corp-connected landing zones:
 
 - Enforce secure access (HTTPS) to storage accounts
-- Enforce auditing for Azure SQL
-- Enforce encryption for Azure SQL
+- Enforce auditing for Azure SQL Database
+- Enforce encryption for Azure SQL Database
 - Prevent IP forwarding
 - Prevent inbound RDP from internet
 - Ensure subnets are associated with NSG

@@ -29,7 +29,7 @@ Migration services can help you migrate your workloads into Azure. To provide th
 
 ## Secure
 
-[Azure Security Center](/azure/security-center/security-center-introduction) is a comprehensive security management application. By onboarding to Security Center, you can quickly get an assessment of the security and regulatory compliance status of your environment. For instructions on onboarding your servers to Azure Security Center, see [Configure Azure management services for a subscription](./onboard-at-scale.md#azure-security-center).
+[Microsoft Defender for Cloud](/azure/security-center/security-center-introduction) is a comprehensive security management application. By onboarding to Defender for Cloud, you can quickly get an assessment of the security and regulatory compliance status of your environment. For instructions on onboarding your servers to Defender for Cloud, see [Configure Azure management services for a subscription](./onboard-at-scale.md#microsoft-defender-for-cloud).
 
 ## Protect
 
@@ -47,13 +47,13 @@ If a workload requires real-time business continuity for hardware failures or da
 
 For more information, see the [complete Azure Site Recovery replication matrix](/azure/site-recovery/site-recovery-overview#what-can-i-replicate).
 
-For your file-server data, another service to consider is [Azure File Sync](/azure/storage/files/storage-sync-files-planning). This service helps you centralize your organization's file shares in Azure Files, while preserving the flexibility, performance, and compatibility of an on-premises file server. To use this service, follow the instructions for deploying Azure File Sync.
+For your file-server data, another service to consider is [Azure File Sync](/azure/storage/file-sync/file-sync-planning). This service helps you centralize your organization's file shares in Azure Files, while preserving the flexibility, performance, and compatibility of an on-premises file server. To use this service, follow the instructions for deploying Azure File Sync.
 
 ## Monitor
 
 [Azure Monitor](/azure/azure-monitor/overview) provides a view into various resources, like applications, containers, and virtual machines. It also collects data from several sources:
 
-- [Azure Monitor for VMs](/azure/azure-monitor/vm/vminsights-overview) provides an in-depth view of VM health, performance trends, and dependencies. The service monitors the health of the operating systems of your Azure Virtual Machines, virtual-machine scale sets, and machines in your on-premises environment.
+- [Azure Monitor for VMs](/azure/azure-monitor/vm/vminsights-overview) provides an in-depth view of VM health, performance trends, and dependencies. The service monitors the health of the operating systems of your Azure virtual machines, virtual-machine scale sets, and machines in your on-premises environment.
 - [Log Analytics](/azure/azure-monitor/logs/log-query-overview) is a feature of Azure Monitor. Its role is central to the overall Azure management story. It serves as the data store for log analysis and for many other Azure services. It offers a rich query language and an analytics engine that provides insights into the operation of your applications and resources.
 - [Azure activity log](/azure/azure-monitor/essentials/platform-logs-overview) is also a feature of Azure Monitor. It provides insight into subscription-level events that occur in Azure.
 
@@ -90,7 +90,7 @@ To learn about pricing for Azure management services, go to these pages:
 
 - [Azure Monitor](https://azure.microsoft.com/pricing/details/monitor/)
 
-- [Azure Security Center](https://azure.microsoft.com/pricing/details/security-center/)
+- [Microsoft Defender for Cloud](https://azure.microsoft.com/pricing/details/azure-defender/)
 
 - [Azure Automation](https://azure.microsoft.com/pricing/details/automation/), including:
   - Desired State Configuration
@@ -102,4 +102,4 @@ To learn about pricing for Azure management services, go to these pages:
 - [Azure File Sync service](https://azure.microsoft.com/pricing/details/storage/blobs/)
 
 > [!NOTE]
-> The Azure Update Management solution is free, but there's a small cost related to data ingestion. As a rule of thumb, the first 5 gigabytes (GB) per month of data ingestion are free. We generally observe that each machine uses about 25 MB per month. So, about 200 machines per month are covered for free. For more servers, multiply the number of additional servers by 25 MB per month. Then, multiply the result by the storage price for the additional storage that you need. For information about costs, see [Azure Storage pricing](https://azure.microsoft.com/pricing/details/storage/). Each additional server typically has a nominal impact on cost.
+> The Azure Update Management solution is free, but there's a small cost related to data ingestion. As a rule of thumb, the first 5 gigabytes (GB) per month of data ingestion are free. We generally observe that each machine uses about 25 MB per month. So, about 200 machines per month are covered for free. For more servers, multiply the number of additional servers by 25 MB per month. Then, multiply the result by the storage price for the additional storage that you need. For information about costs, see [Azure Storage pricing](https://azure.microsoft.com/product-categories/storage/). Each additional server typically has a nominal impact on cost.
