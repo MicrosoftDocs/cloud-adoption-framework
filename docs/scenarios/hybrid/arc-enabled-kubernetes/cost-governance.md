@@ -11,7 +11,7 @@ ms.custom: e2e-hybrid, think-tank
 ---
 
 
-# Cost governance with Azure Arc-enabled servers
+# Cost governance with Azure Arc-enabled Kubernetes
 Cost governance is the continuous process of implementing policies to control costs of services you are using on Azure. This document will walk you through the various cost governance considerations and recommendations when using Azure Arc-enabled Kubernetes.
 
 
@@ -61,6 +61,8 @@ Here are some general design recommendations for Azure Arc-enabled servers cost 
 | [Azure Arc Kubernetes Cluster Admin](/azure/role-based-access-control/built-in-roles#azure-arc-kubernetes-cluster-admin)  | Lets you manage all resources in the cluster.	  |
 | [Azure Arc Kubernetes Viewer](/azure/role-based-access-control/built-in-roles#azure-arc-kubernetes-viewer)  | Lets you view all resources in cluster/namespace, except secrets.	  |
 | [Azure Arc Kubernetes Writer](/azure/role-based-access-control/built-in-roles#azure-arc-kubernetes-writer) | Lets you update everything in cluster/namespace, except (cluster)roles and (cluster)role bindings.  |
+
+- Use [Azure Policy for Kubernetes](/azure/azure-arc/kubernetes/policy-reference) to enforce and enure consistent configuration across all your Azure Arc-enabled Kubernetes clusters.
 
 ### Azure Monitor for Containers
 - Review [recommendations for monitoring](./eslz-k8s-management-and-monitoring-arc-server.md) to decide on your monitoring requirements and review [Azure Monitor pricing](https://azure.microsoft.com/pricing/details/monitor/).
