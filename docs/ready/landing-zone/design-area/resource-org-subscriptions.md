@@ -20,9 +20,9 @@ Subscriptions are a unit of management, billing, and scale within Azure. Subscri
 
 - Subscriptions serve as boundaries for assigning Azure policies.
 
-  - For example, secure workloads such as Payment Card Industry (PCI) workloads typically require other policies to achieve compliance. Instead of using a management group-to-group workload that requires PCI compliance, you can achieve the same isolation with a subscription. This way, you don't have too many management groups with a few subscriptions.
+  - For example, secure workloads such as Payment Card Industry (PCI) workloads typically require other policies to achieve compliance. Instead of using a management group to collate workloads that require PCI compliance, you can achieve the same isolation with a subscription. This way, you don't have too many management groups with a few subscriptions.
 
-    - Create a management group for large subscription landing zones.
+    - If you need to group together a number of subscriptions that are of teh same workload archetype creating them under a management group is the recommended approach.
 
 - Subscriptions serve as a scale unit so component workloads can scale within the platform [subscription limits](/azure/azure-resource-manager/management/azure-subscription-service-limits). Make sure to consider subscription resource limits during your workload design sessions.
 
@@ -57,7 +57,7 @@ The Azure AD tenant linked to the Azure subscription can be changed by a user wi
 > [!NOTE]
 > For Azure Cloud Solution Provider (CSP) subscriptions, transferring to another Azure AD tenant is not supported.
 
-Azure landing zones prevent users from transferring subscriptions to your organization's Azure AD tenant. Review this process in [Manage Azure subscription policies](/azure/cost-management-billing/manage/manage-azure-subscription-policy).
+With Azure landing zones, you have the option to set requirements to prevent users from transferring subscriptions to your organization's Azure AD tenant. Review the process in [Manage Azure subscription policies](/azure/cost-management-billing/manage/manage-azure-subscription-policy).
 
 Configure the subscription policy by providing a list of [exempted users](/azure/cost-management-billing/manage/manage-azure-subscription-policy#exempted-users). Exempted users are permitted to bypass what's set in the policy.
 
