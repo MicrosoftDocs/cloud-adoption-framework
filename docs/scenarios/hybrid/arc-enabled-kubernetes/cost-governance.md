@@ -45,15 +45,22 @@ Azure Arc-enabled Kubernetes provides two types of services:
 >[!Note]
 >Clusters can function without a constant connection to Azure. When disconnected, each cluster’s charge will be determined based on the last known number of vCPUs that were registered with Azure Arc. If your cluster will be disconnected from Azure and you don’t want to be charged for Kubernetes Configuration, you can delete the configurations. The vCPU count is updated every 5 minutes when connected. The first 6 vCPUs are included at no cost.
 
-- **Azure Policy for Kubernetes:** [Azure Policy](/azure/governance/policy/concepts/policy-for-kubernetes) extends Gatekeeper v3, an admission controller webhook for Open Policy Agent (OPA), to apply at-scale enforcements and safeguards on your clusters in a centralized, consistent manner. Azure Policy makes it possible to manage and report on the compliance state of your Kubernetes clusters from one place. **[Missing]Pricing information**
+- **Azure Policy for Kubernetes:** [Azure Policy for Kubernetes](/azure/governance/policy/concepts/policy-for-kubernetes) extends Gatekeeper v3, an admission controller webhook for Open Policy Agent (OPA), to apply at-scale enforcements and safeguards on your clusters in a centralized, consistent manner. Azure Policy makes it possible to manage and report on the compliance state of your Kubernetes clusters from one place. **[Missing]Pricing information**
 - **Microsoft Sentinel:** Microsoft Sentinel provides intelligent security analytics across your enterprise. The data for this analysis is stored in an Azure Monitor Log Analytics workspace. Microsoft Sentinel is billed based on the volume of data ingested for analysis in Azure Sentinel, and stored in the Azure Monitor Log Analytics workspace for your Azure Arc-enabled servers.
 ## Design recommendations
 Here are some general design recommendations for Azure Arc-enabled servers cost governance:
-
 ### Governance
-- Ensure that all Azure Arc-enabled servers follow proper [naming and tagging conventions](/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging).
-- Use least privilege RBAC by assigning **Azure Connected Machine Onboarding role** to only administrators who will on-board Azure Arc-enabled servers to avoid unnecessary costs.
-- Use least privilege RBAC by assigning **Azure Connected Machine Resource Administrator** to only administrators who need to read, write, delete and re-onboard Azure Connected Machines.
+- Ensure that all Azure Arc-enabled Kubernetes clusters follow proper [naming and tagging conventions](/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging).
+- Use least privilege RBAC by assigning **[Kubernetes Cluster - Azure Arc Onboarding](/azure/role-based-access-control/built-in-roles#kubernetes-cluster---azure-arc-onboarding)** to only administrators who will on-board Azure Arc-enabled Kubernetes clusters to avoid unnecessary costs.
+- Use least privilege RBAC by assigning builtin roles to administrators managing the Azure Arc-enabled Kubernetes clusters to avoid unnecessary costs.
+
+| Role  | Description  |
+|---|---|
+| [Azure Arc Enabled Kubernetes Cluster User Role](/azure/role-based-access-control/built-in-roles#azure-arc-enabled-kubernetes-cluster-user-role)  | List cluster user credentials action.  |
+| [Azure Arc Kubernetes Admin](/azure/role-based-access-control/built-in-roles#azure-arc-kubernetes-admin)  |  Lets you manage all resources under cluster/namespace, except update or delete resource quotas and namespaces.	 |
+| [Azure Arc Kubernetes Cluster Admin](/azure/role-based-access-control/built-in-roles#azure-arc-kubernetes-cluster-admin)  | Lets you manage all resources in the cluster.	  |
+| [Azure Arc Kubernetes Viewer](/azure/role-based-access-control/built-in-roles#azure-arc-kubernetes-viewer)  | Lets you view all resources in cluster/namespace, except secrets.	  |
+| [Azure Arc Kubernetes Writer](/azure/role-based-access-control/built-in-roles#azure-arc-kubernetes-writer) | Lets you update everything in cluster/namespace, except (cluster)roles and (cluster)role bindings.  |
 
 ### Azure Monitor for Containers
 - Review [recommendations for monitoring](./eslz-k8s-management-and-monitoring-arc-server.md) to decide on your monitoring requirements and review [Azure Monitor pricing](https://azure.microsoft.com/pricing/details/monitor/).
