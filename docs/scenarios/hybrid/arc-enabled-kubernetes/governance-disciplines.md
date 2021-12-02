@@ -77,7 +77,7 @@ Integrating with Azure AD also enables the use of Azure AD advance security capa
 
 Do not store secrets or certificates in application code or file systems. Secrets should be stored in key stores and provided to containers at runtime as they are needed.
 
-Consider using the Azure Key Vault extension to manage secrets and certificates on your Azure Arc-enabled Kubernetes clusters. The Key Vault extension allows you to manage the certificate lifecycle on your Kubernetes deployments. [PLACEHOLDER](Jumpstart scenario)
+Consider using the [Azure Key Vault extension](https://docs.microsoft.com/en-us/azure/azure-arc/kubernetes/tutorial-akv-secrets-provider) to manage secrets and certificates on your Azure Arc-enabled Kubernetes clusters. The Key Vault extension allows you to manage the certificate lifecycle on your Kubernetes deployments.
 
 ### Enable and secure GitOps configurations
 
@@ -135,7 +135,7 @@ The following image shows a conceptual reference architecture for Microsoft Defe
 
 If Azure Container Registry is used as the central private Docker registry to store and manage your container images, [enable Microsoft Defender for container registries](/azure/defender-for-cloud/defender-for-container-registries-introduction) to also scan the images for vulnerabilities with the integrated scanner powered by Qualys.
 
-Make sure to review [the best practices for a secure network connectivity](PLACEHOLDER_Network).
+Make sure to review [the best practices for a secure network connectivity](./network-connectivity.md).
 
 ### Secure cluster access
 
@@ -168,7 +168,7 @@ For more guidance for your cloud adoption journey, see the following article:
 
 - [Manage hybrid and multicloud environments](./manage.md)
 - [Connect an existing Kubernetes cluster to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli)
-- [Secret and certificate management](PLACEHOLDER Jumpstart)
+- [Secret and certificate management](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_k8s/day2/cluster_api/cluster_api_keyvault_extension/)
 - [Threat protection and cloud security posture management](/azure/defender-for-cloud/)
 - [Apply GitOps configurations on GKE as an Azure Arc Connected Cluster using Azure Policy for Kubernetes](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_k8s/day2/gke/gke_policy/)
 - [Integrate Azure Defender with Cluster API as an Azure Arc Connected Cluster using Kubernetes extensions](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_k8s/day2/cluster_api/cluster_api_defender_extension/)
