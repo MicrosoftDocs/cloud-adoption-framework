@@ -3,7 +3,7 @@ title: Cloud monitoring and response
 description: Gain an understanding of the response discipline in observability and recommended approaches to acting on significant events detected.
 author: MGoedtel
 ms.author: brblanch
-ms.date: 11/23/2021
+ms.date: 12/02/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: manage
@@ -12,25 +12,45 @@ ms.custom: think-tank
 
 # Cloud monitoring guide: Response
 
-In the [Observability](observability.md) we discussed the five disciplines of monitoring, and in this article we focus on the response discipline. Response is the result of defining one or more actions based on data-driven decisions by observing the monitoring data. An alert triggering a notification or incident record used to be the primary outcome or action when your monitoring tool detected an issue or change that could potentially cause a system outages or significant incident. Alerting helps ensure that the service remains healthy, responsive, and secure. It's an important part of any service that makes performance, availability, and privacy guarantees to the business where the data might need to be acted on immediately. Escalating an alert isn’t important to observability, and today it shouldn’t be considered the first line of defense.
+In the [Observability](observability.md) article we discussed the five disciplines of monitoring. In this next article, we focus on the response discipline. Response is the result of defining one or more *actions* based on data-driven decisions from monitoring that lets service consumers:
 
-As part of monitoring, alerting was an action resulting from a detected condition, such as a node in the cluster is down, a database for an application is full, or an application process is consuming too many CPU cycles for an indefinite period. Based on defined escalation paths and the severity/impact of the condition, the alert creates an incident record in an ITSM system, or sends an e-mail notification to the operations or engineering team following your escalation path. We consider this approach outdated and not in alignment with modern service management or cloud operations recommended practices. This approach closely follows the traditional ITIL Incident Management path, which doesn't match the goals of the cloud efficiency through agility, minimum cost, optimization, and so forth.
+* Act smart, based on the good use of well-tuned monitoring data.
+* Leverage monitoring throughout incident/problem activities.
+* Automate investigation, diagnosis, resolution, recovery, and remediation.
+
+## Overview
+
+The principle of *significance* applies here, as a sort of process flow decision or policy for action, which is also useful to tune and optimize alerts, notifications and reports digests. Cloud monitoring can now do much more than notify humans that something is wrong, and we need monitoring to play a critical role for a wide range of scenarios:
+
+* Dynamic control of service/system behavior to avoid and eliminate incidents.
+* Inform or provide routine signaling or telemetry for dynamic processes, compliance, automatic scaling, and visualizations.
+* Help the IT organization act on and manage change.
+
+A *current event* can be any occurrence that is worth watching, worth knowing about that could be significant to raise an *alert.*  Cloud services emit diagnostic and security *logs* that can now be more easily ingested, combined, correlated, and queried. As a result you can decide what migitation action to take, from rasing an alert, creating a bug in DevOps, to also retaining past events for future predictive analyses.
+
+With this, there is less need for alerts to notify humans and trigger ticketing systems. An alert triggering a notification or incident record used to be the primary outcome or action when your monitoring tool detected an issue or change that could potentially cause a system outages or significant incident. Alerting helps ensure that the service remains healthy, responsive, and secure. It's an important part of any service that makes performance, availability, and privacy guarantees to the business where the data might need to be acted on immediately. Escalating an alert isn’t important to observability, and today it shouldn’t be considered the first line of defense.
+
+As part of monitoring, alerting was an action resulting from a detected condition, such as a node in the cluster is down, a database for an application is full, or an application process is consuming too many CPU cycles for an indefinite period. Based on defined escalation paths and the severity/impact of the condition, the alert creates an incident record in an IT Service Management (ITSM) system, or sends an e-mail notification to the operations or engineering team following your escalation path. We consider this approach outdated and not in alignment with modern service management or cloud operations recommended practices. This approach closely follows the traditional ITIL Incident Management path, which doesn't match the goals of the cloud efficiency through agility, minimum cost, optimization, and so forth.
+
+## Cloud monitoring
 
 Compared to monitoring platforms and related tooling that were available in the past, cloud computing offers:  
 
-* Much more flexibility to devise response options
+- Much more flexibility to devise response options.
 
-* Easier ways to develop and enable automated responses
+- Easier ways to develop and enable automated responses.
 
-* Cloud protocols or API methods more easily integrate with work management systems, including DevOps.
+- Cloud protocols or API methods more easily integrate with work management systems, including DevOps.
 
-There are other responsive actions that can be used instead of following the traditional model, most notably automation. There are also different models of automation to consider:
+And consider the following modes for the range of automated action, whether that be for investigation, enrichment, routing, assignment, remediation, recovery or resolution:
 
-* Fully automated - remediation actions are performed automatically. To use full automation it should be proven to be reliable, efficient, that it's durable to where it's usefulness isn't short lived, and safe. Full automation frees up your resources so they can focus more on your strategic initiatives.
+|||
+|-|-|
+|**Fully Automated**|Actions are performed automatically. To use full automation it should be proven to be reliable, efficient, that it's durable to where it's usefulness isn't short lived, and safe. Full automation frees up your resources so they can focus more on your strategic initiatives.|
+|**Semi-automated**|Approval is required for any remediation action.|
+|**Manual**|An operator selects an automation example or playbook from a curated library.|
 
-* Semi-automated - approval is required for any remediation action.
-
-Alerting usually depends on the instrumentation data based on security events, performance metrics, availability information, and logs. Data-driven actions are the result of analyzing holistic, end-to-end perspectives of each monitored resource by aggregating and processing different types of collected data types, to determine the impact and what responsive action to take.
+Alerting usually depends on the instrumentated data based on security events, performance metrics, availability information, and logs. Data-driven actions are the result of analyzing holistic, end-to-end perspectives of each monitored resource by aggregating and processing different types of collected data types, to determine the impact and what responsive action to take.
 
 ## Cost efficiency
 
@@ -39,6 +59,42 @@ As with the other observability disciplines, the team needs to understand and re
 Every reported incident has a cost. If the organization invests in orchestration to automate a response, you should evaluate what the cost benefit is, as well as what the cost impact is by increasing consumption from the cloud service to utilize those services or features that enable automation.
 
 ## Automation
+
+Cloud automation offers significant advantages for security and health monitoring. Speed, flexibility, and precision are three archetypes that cloud automation brings to responsive operations. Often we call this orchtestration, and the Microsoft cloud offers several services.
+
+For example:
+
+1. An identity-driven threat is detected from one or more logs, raising an alert.
+2. Automation is immediately triggered to gather more information and correlate more logs - to enrich the alert.
+3. An operator takes action, by selection the right automation from a library, such as disabling a user.
+
+And later, the example or use case can be fully automated.
+
+The role of automation then provides a sort of *playbook* that reduces costs and saves time:
+
+* No security incident was needed to follow through lengthy investigation and diagnosis, resolution and recovery.
+* The detection-to-correction cycle could be in seconds or minutes versus hours.
+
+Next, your team need to build a list or library of automation examples that can be flexibly put to use - either from raw material found on public web sites or curated internally and stored in a source control repository.
+
+## Agile work management
+
+Traditional monitoring was tied to your ITSM system, notably for Incident Management. This is no longer as useful in the cloud, for the reasons that we cited above, but is still important for traditional incident-significant service discruption events.
+
+Agile and DevOps is now needed:
+
+* You'll need a repository or source control of automation playbooks, scripts and documentation for example
+* You manage a library of cloud automation using Agile work management methods. 
+
+You then get two things:
+
+* Monitoring solutions in production can then call or get the latest from the repository when needed, or
+
+* DevOps Work Management pushes the latest updates from the repository to the cloud service where the library is kept.
+
+## Derivative of incident management in DevOps  
+
+[DevOps Incident Management: A Guide With Best Practices](https://www.xplg.com/devops-incident-management-best-practices/)
 
 There are many services in Azure that help you monitor and diagnose the infrastructure, platform, and software-layers that are managed by Microsoft and can't be controlled by you, the customer. These services automatically generate logs that record status or an event, and compliment the diagnostic or other telemetry you collect from the different resources in Azure.
 
@@ -52,6 +108,8 @@ Under certain circumstances, some alerts can be informational to inform you that
 * IaaS or PaaS resources are idle for a long period of time or not provisioned based on Azure Advisor recommendations.
 
 In the first example, orchestration was used based on a native scheduling feature, and by the monitoring platform detecting the utilization condition. Instead of the alert notifying or escalating as the only action, it informs you of the action performed and why. In the second example, orchestration can be used, based on business logic or ITSM process workflow, to manage those infrastructure-related activities. Much faster response and actions are needed today, and with the cloud *alerting* is less for humans than it is for an automated response, or just an ongoing orchestration as part of an automated value stream.
+
+Keep in mind that learning is key.
 
 ## Successful alerting strategy
 
