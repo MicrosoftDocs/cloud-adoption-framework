@@ -84,7 +84,7 @@ Traditional monitoring was tied to your ITSM system, notably for Incident Manage
 Agile and DevOps is now needed:
 
 * You'll need a repository or source control of automation playbooks, scripts and documentation for example
-* You manage a library of cloud automation using Agile work management methods. 
+* You manage a library of cloud automation using Agile work management methods.
 
 You then get two things:
 
@@ -92,9 +92,7 @@ You then get two things:
 
 * DevOps Work Management pushes the latest updates from the repository to the cloud service where the library is kept.
 
-## Derivative of incident management in DevOps  
-
-[DevOps Incident Management: A Guide With Best Practices](https://www.xplg.com/devops-incident-management-best-practices/)
+This is a derivative of incident management in DevOps, and to learn more see [DevOps Incident Management: A Guide With Best Practices](https://www.xplg.com/devops-incident-management-best-practices/).
 
 There are many services in Azure that help you monitor and diagnose the infrastructure, platform, and software-layers that are managed by Microsoft and can't be controlled by you, the customer. These services automatically generate logs that record status or an event, and compliment the diagnostic or other telemetry you collect from the different resources in Azure.
 
