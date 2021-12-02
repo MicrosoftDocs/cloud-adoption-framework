@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: e2e-arc
 ---
 
-# Automation for Azure Arc-enabled servers
+# Platform automation for Azure Arc-enabled servers
 
 Azure Arc-enabled servers allow you to manage your Windows and Linux servers and virtual machines—that are hosted outside of Azure, on your corporate network, or on another cloud provider. This document is written to help plan for the automation of onboarding, update management, and expansion of the capabilities of Azure Arc-enabled servers through VM extensions. The article presents key recommendations for operations teams to onboard and automate Azure Arc-enabled servers throughout their lifecycle.
 
