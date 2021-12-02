@@ -35,17 +35,17 @@ A mapping of the business impact (from your strategic business outcomes) and tec
 |Wave| Rationalization | Outcomes |
 |----------|--------------|
 |**Migrate & Modernize**| Rehost and refactor | Tactical, quick wins can be included in a standard migration projects alongside other applications and infrastructure. Tools like Azure Migrate can automated this type of one-time migration to the cloud. When possible, this approach allows for modernization of the data platform to Azure SQL Database, Azure Cosmos DB, or other transactional data structures.|
-|**Transform & Modernize**| Rehost and refactor | When business value increases, so may the complexity of data estate management. These data assets will likely require a degree of transmission, transformation, and synchronization to keep on-premises processes running, while also enabling richer functions in the cloud. Tools like Azure Data Factory can help with the ongoing transformation after the data asset is migrated and modernized.|
+|**Transform & Modernize**| Rehost and refactor | When business value increases, so might the complexity of data estate management. These data assets will likely require a degree of transmission, transformation, and synchronization to keep on-premises processes running, while also enabling richer functions in the cloud. Tools like Azure Data Factory can help with the ongoing transformation after the data asset is migrated and modernized.|
 |**Innovate with confidence**| Rearchitect or rebuild | Achieving high business value requires the ability to innovate with confidence. Use cloud-native data tools to democratize data, analyze information, and predict outcomes. |
 
 ### Workload identification
 
-Strategic initiatives are delivered by the workloads which run on top of your data environment. To properly architect workloads, you must first identify the workloads running within your data estate. At times, this process can be complex. Data workloads can include one or more data sources. They may also include one or more processes for preparing data, analyzing information, or predicting outcomes.
+Strategic initiatives are delivered by the workloads which run on top of your data environment. To properly architect workloads, you must first identify the workloads running within your data estate. At times, this process can be complex. Data workloads can include one or more data sources. They might also include one or more processes for preparing data, analyzing information, or predicting outcomes.
 
 To simplify workload identification, start with wave planning approach described in the prior two sections. For each wave, identify the data sources, applications, and infrastructure required to deliver the strategic initiative. Evaluate their dependencies to see workload groupings more clearly, using the Azure Migrate tool.
 
 - Transactional data assets will typically be associated with an existing application, making workload identification easier.
-- Analysis and AI/machine learning solutions may be a bit more complex, requiring a more granular review of the outcomes delivered by each. When possible, associate analysis and AI solutions with the business processes which consumes their outputs, often creating an application level mapping. For cross-application BI, AI, or machine learning solutions, create new workload names to map the data assets to the business processes they impact.
+- Analysis and AI/machine learning solutions might be a bit more complex, requiring a more granular review of the outcomes delivered by each. When possible, associate analysis and AI solutions with the business processes which consumes their outputs, often creating an application level mapping. For cross-application BI, AI, or machine learning solutions, create new workload names to map the data assets to the business processes they impact.
 
 Workloads identified in the digital estate assessment will be used throughout adoption to drive business impact classification. The derived values should be recorded using the same [naming and tagging standards](../../ready/azure-best-practices/naming-and-tagging.md) used for other cloud adoption efforts.
 

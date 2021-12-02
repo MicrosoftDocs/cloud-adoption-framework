@@ -57,4 +57,4 @@ On top of these environmental controls, the workload team should consider:
 
 ## Next steps
 
-[Overview of the enterprise-scale for analytics and AI data management landing zone in Azure](./architectures/data-management-landing-zone.md)
+[Overview of the data management and analytics scenario data management landing zone in Azure](./architectures/data-management-landing-zone.md)
