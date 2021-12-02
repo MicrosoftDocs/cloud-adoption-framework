@@ -122,17 +122,5 @@ Resources
 - Consider using [Commitment Tier](/azure/sentinel/azure-sentinel-billing#set-or-change-pricing-tier) pricing based on your data ingestion volume.
 - Consider [separating non-security](/azure/sentinel/azure-sentinel-billing#separate-non-security-data-in-a-different-workspace) operational data into a different Azure Log Analytics workspace.
 
-### Azure Policy Guest Configuration
-- Review the [recommendations for governance and compliance](./eslz-security-governance-and-compliance.md) and [Azure Policy Guest Configuration pricing](https://azure.microsoft.com/pricing/details/azure-arc/).
-- Use Azure Cost Management to understand the Azure Policy Guest Configuration costs by filtering by the **Microsoft.HybridCompute/machines** resource type.
-- All built-in Guest Configuration policies include a parameter that controls whether the policy will be assigned to Azure Arc-enabled servers machines. Review your policy assignments and set this parameter to "false" for policies that do not need to be evaluated on your hybrid servers.
-
-![Azure policy costs](./media/Azure-cost-management-policy.png)
-### Azure Key Vault
-- Review [Azure Key Vault pricing](https://azure.microsoft.com/pricing/details/key-vault/).
-- Use [Azure Key Vault insights](/azure/azure-monitor/insights/key-vault-insights-overview) to monitor certificate renewal and secrets operations on your Azure Arc-enabled servers.
-
-![Azure Key Vault insights](./media/key-vault-insights.png)
-
 ## Next steps
 Review the Cloud Adoption Framework [best practices and recommendations](/azure/cloud-adoption-framework/get-started/manage-costs) to efficiently manage your cloud costs.
