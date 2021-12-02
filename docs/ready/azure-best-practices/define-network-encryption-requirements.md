@@ -44,6 +44,6 @@ This section explores key recommendations to achieve network encryption between 
 
   - Use partner NVAs to establish IPsec tunnels over ExpressRoute private peering.
   - Establish a VPN tunnel over ExpressRoute with Microsoft peering.
-  - Evaluate the capability to configure a Site-to-Site VPN connection over ExpressRoute private peering ([in preview](/azure/vpn-gateway/site-to-site-vpn-private-peering).
+  - Evaluate the capability to configure a Site-to-Site VPN connection over [ExpressRoute with private peering] (/azure/vpn-gateway/site-to-site-vpn-private-peering). This feature is only supported on zone-redundant gateways. For example, VpnGw1AZ, VpnGw2AZ, etc.
 
 - If native Azure solutions (as shown in flows `B` and `C` in the diagram) don't meet your requirements, use partner NVAs in Azure to encrypt traffic over ExpressRoute private peering.
