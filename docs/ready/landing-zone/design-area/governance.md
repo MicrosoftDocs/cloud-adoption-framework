@@ -3,7 +3,7 @@ title: Azure governance design area guidance
 description: Design area guidance for governing your Azure environment
 author: DominicAllen
 ms.author: doalle
-ms.date: 8/1/2021
+ms.date: 12/2/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
