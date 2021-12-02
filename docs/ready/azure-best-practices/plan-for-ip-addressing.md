@@ -22,7 +22,7 @@ It's important your organization plans for IP addressing in Azure. Planning ensu
 
 - Azure VPN Gateway can connect overlapping, on-premises sites with overlapping IP address spaces through network address translation (NAT) capability. This feature is generally available in [Azure Virtual WAN](/azure/virtual-wan/nat-rules-vpn-gateway) and in preview for standalone [Azure VPN Gateway](/azure/vpn-gateway/nat-howto).
 
-  ![Diagram that shows how NAT works with VPN Gateway.](./media/vpn-nat.png)
+  :::image type="content" source="./media/vpn-nat.png" alt-text="{Diagram that shows how NAT works with VPN Gateway.}":::
 
 - You can add address space after you create a virtual network. This process doesn't need an outage if the virtual network is already connected to another virtual network via virtual network peering. Instead, each remote peering needs a [resync operation](/azure/architecture/networking/prefixes/add-ip-space-peered-vnet) done after the network space has changed.
 
