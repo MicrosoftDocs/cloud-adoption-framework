@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Design area: Security
 
-This design area creates a base for security across your Azure, hybrid, and multicloud environments. You can enhance this foundation later with security guidance outlined in the [Cloud Adoption Framework's Secure methodology](../../../secure/index.md).
+This design area creates a foundation for security across your Azure, hybrid, and multicloud environments. You can enhance this foundation later with security guidance outlined in the [Cloud Adoption Framework's Secure methodology](../../../secure/index.md).
 
 ## Design area review
 
@@ -26,7 +26,7 @@ This design area creates a base for security across your Azure, hybrid, and mult
 
 Security is a core consideration for all customers, in every environment. When designing and implementing an Azure landing zone, security should be a consideration throughout the process.
 
-The security design area focuses on considerations and recommendations for landing zone decisions. The [Secure methodology](/secure/index.md) in the Cloud Adoption Framework also provides further in-depth guidance for holistic security processes and tools.
+The security design area focuses on considerations and recommendations for landing zone decisions. The [Secure methodology](../../../secure/index.md) in the Cloud Adoption Framework also provides further in-depth guidance for holistic security processes and tools.
 
 ### Azure Security Benchmark
 
@@ -34,8 +34,8 @@ The Azure Security Benchmark includes high-impact security recommendations to he
 
 The Azure Security Benchmark documentation specifies security controls and service recommendations.
 
-- [Security controls](/azure/security/benchmarks/overview): The Azure Security Benchmark recommendations are categorized by security controls. Security controls represent high-level vendor-agnostic security requirements, like network security and data protection. Each security control has a set of security recommendations and instructions that help you implement those recommendations.
-- [Service recommendations](/azure/security/benchmarks/security-baselines-overview): When available, benchmark recommendations for Azure services will include Azure Security Benchmark recommendations that are tailored specifically for that service.
+- [Security controls](/security/benchmark/azure/overview): The Azure Security Benchmark recommendations are categorized by security controls. Security controls represent high-level vendor-agnostic security requirements, like network security and data protection. Each security control has a set of security recommendations and instructions that help you implement those recommendations.
+- [Service recommendations](/security/benchmark/azure/security-baselines-overview): When available, benchmark recommendations for Azure services will include Azure Security Benchmark recommendations that are tailored specifically for that service.
 
 ## Security design considerations
 
@@ -45,8 +45,8 @@ An organization must have visibility into what's happening within their technica
 
 |Scope|Context|
 |-|-|
-| Security alerting | - Which teams require notifications for security alerts? <br> - Are there groups of services that alerts require routing to different teams? <br> - Business requirements for real-time monitoring and alerting. <br> - Security information and event management integration with Microsoft Defender for Cloud and Microsoft Sentinel. |
-| Security logging |- Data retention periods for audit data. Azure Active Directory (Azure AD) Premium reports have a 30-day retention period. <br> - Long-term archiving of logs like Azure activity logs, virtual machine (VM) logs, and platform as a service (PaaS) logs.|
+| Security alerts | - Which teams require notifications for security alerts? <br> - Are there groups of services that alerts require routing to different teams? <br> - Business requirements for real-time monitoring and alerting. <br> - Security information and event management integration with Microsoft Defender for Cloud and Microsoft Sentinel. |
+| Security logs |- Data retention periods for audit data. Azure Active Directory (Azure AD) Premium reports have a 30-day retention period. <br> - Long-term archiving of logs like Azure activity logs, virtual machine (VM) logs, and platform as a service (PaaS) logs.|
 | Security controls| - Baseline security configuration via Azure in-guest VM policy. <br> - Consider how your security controls will align with governance guardrails. |
 | Vulnerability management | - Emergency patching for critical vulnerabilities. <br> - Patching for VMs that are offline for extended periods of time. <br> - Vulnerability assessment of VMs.
 | Shared responsibility | - Where are the handoffs for team responsibilities? These responsibilities need consideration when monitoring or responding to security events. <br> -  Consider the guidance in the Secure methodology for [security operations](/azure/cloud-adoption-framework/secure/security-operations). |
