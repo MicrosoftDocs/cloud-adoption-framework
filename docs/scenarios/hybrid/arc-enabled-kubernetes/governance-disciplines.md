@@ -88,16 +88,7 @@ The following image shows how the GitOps flow looks like in the context of Arc-e
 
 ![Azure Arc-enabled Kubernetes GitOps Flow](./media/arc-enabled-k8s-gitops.png)
 
-When adding GitOps configurations it is important to evaluate these security best practices:
-
-- Explore the [different authentication methods available to connect to the repo](https://docs.microsoft.com/en-us/azure/azure-arc/kubernetes/tutorial-use-gitops-connected-cluster) and consider the following options:
-
-  - HTTP or SSH: when choosing between HTTPS or SSH for connecting to your source control tool, both protocols offer a reliable and secure connection. However, HTTPS is often times easier to set up and uses a port that usually does not require additional open ports in your firewalls.
-  - User-provided or Flux-created keys: using a Flux-created key has the advantage that it eliminates the need for developers to manage credentials. If you choose a user-provided key it is recommended to use a service account rather than a user account so it is not linked to an specific person in the organization. Keep in mind that if you use a user-provided key you are responsible for securing and managing its lifecycle so be sure to implement the proper procedures.
-
-- Set branch permissions and policies: as your Git repo becomes the central piece of your application deployments, it is key to set up permissions to control who can read and update the code in a branch as well as implement policies to enforce your team's code quality and change management otherwhise the GitOps workflow may ship code that is not up to your standards.
-
-Make sure to review best practices on [implementing CI/CD workflows with GitOps.](PLACEHOLDER_CDA)
+When adding GitOps configurations it is important to secure access to the repository, its keys and set branch permissions, make sure to review [best practices for GitOps](PLACEHOLDER_CDA).
 
 ### Policy management and reporting
 
