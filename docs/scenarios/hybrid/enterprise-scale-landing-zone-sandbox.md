@@ -22,7 +22,9 @@ To practice your skills in an Azure Arc-enabled servers environment, we created 
 
 The ArcBox solution is designed to run in your enterprise-scale sandbox subscription and will bootstrap all the required Azure resources inside a single resource group.
 
-![ArcBox in a sandbox subscription](./media/arcbox-sandbox-subscription.png)
+[ ![ArcBox in a sandbox subscription.](./media/arcbox-sandbox-subscription.png)](./media/arcbox-sandbox-subscription.png#lightbox)
+
+[ ![ArcBox resource group.](./media/arcbox-resource-group.png)](./media/arcbox-resource-group.png#lightbox)
 
 ![ArcBox resource group](./media/arcbox-resource-group.png)
 
