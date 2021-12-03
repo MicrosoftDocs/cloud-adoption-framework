@@ -18,7 +18,7 @@ The critical resource organization design area establishes consistent patterns f
 
 **Involved roles or functions:** This design area probably requires support from one or more [cloud platform](../../../organize/cloud-platform.md) and [cloud center of excellence](../../../organize/cloud-center-of-excellence.md) functions to make and implement decisions.
 
-**Scope:** Resource organization decisions are a foundation for all compliance-related design areas. The goal of resource organization planning is to establish consistent patterns for:
+**Scope:** Resource organization decisions are a foundation for all compliance-related design areas. The goal of resource organization planning is to establish consistent patterns for the following areas:
 
 - Naming
 - Tagging
