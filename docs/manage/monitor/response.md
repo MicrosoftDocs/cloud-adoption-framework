@@ -60,7 +60,7 @@ Compared to monitoring platforms and related tooling that were available in the 
 
 And consider the following modes for the range of automated action, whether that be for investigation, enrichment, routing, assignment, remediation, recovery, or resolution:
 
-|Orchesration method|Description|
+|Orchestration method|Description|
 |-|-|
 |**Fully Automated**|Actions are performed automatically. To use full automation it should be proven to be reliable, efficient, that it's durable to where its usefulness isn't short lived, and safe. Full automation frees up your resources so they can focus more on your strategic initiatives.|
 |**Semi-automated**|Approval is required for any remediation action.|
