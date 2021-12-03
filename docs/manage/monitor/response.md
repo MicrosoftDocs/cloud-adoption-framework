@@ -28,9 +28,25 @@ The principle of *significance* applies here, as a sort of process flow decision
 
 A *current event* can be any occurrence that is worth watching, worth knowing about that could be significant to raise an *alert.*  Cloud services emit diagnostic and security *logs* that can now be more easily ingested, combined, correlated, and queried. As a result you can decide what migitation action to take, from rasing an alert, creating a bug in DevOps, to also retaining past events for future predictive analyses.
 
-With this, there is less need for alerts to notify humans and trigger ticketing systems. An alert triggering a notification or incident record used to be the primary outcome or action when your monitoring tool detected an issue or change that could potentially cause a system outages or significant incident. Alerting helps ensure that the service remains healthy, responsive, and secure. It's an important part of any service that makes performance, availability, and privacy guarantees to the business where the data might need to be acted on immediately. Escalating an alert isn’t important to observability, and today it shouldn’t be considered the first line of defense.
+## Alerting
 
-As part of monitoring, alerting was an action resulting from a detected condition, such as a node in the cluster is down, a database for an application is full, or an application process is consuming too many CPU cycles for an indefinite period. Based on defined escalation paths and the severity/impact of the condition, the alert creates an incident record in an IT Service Management (ITSM) system, or sends an e-mail notification to the operations or engineering team following your escalation path. We consider this approach outdated and not in alignment with modern service management or cloud operations recommended practices. This approach closely follows the traditional ITIL Incident Management path, which doesn't match the goals of the cloud efficiency through agility, minimum cost, optimization, and so forth.
+There is less need for alerts to serve the basic reactive function of notifying humans when something is wrong, and triggering work ticketing systems. Focus less on integrating monitoring with IT Service Management (ITSM) systems for Incident Management, and sieze new opportunities that lets cloud automation replace more expensive service management processes, thereby eliminating incidents.
+
+Alerting helps proactively ensure that the service/system remains healthy, responsive, and secure. It's an important part of any service that makes performance, availability, and privacy guarantees to the business where the data might need to be acted on immediately. Escalating an alert isn’t important to observability, and today it shouldn’t be considered the first line of defense.
+
+A more primitive role of monitoring was to raise alerts for reactionary response, as follows:
+
+|Detected condition |Action |
+|----|----|
+Cluster is down, database is full, high CPU, privacy breach, security threat, etc.|Alert and notify, or raise an incident record. |
+
+We consider this approach outdated and not in alignment with modern service management or cloud operations recommended practices. This approach closely follows the traditional ITIL Incident Management path, which doesn't match the goals of the cloud efficiency through agility, minimum cost, optimization, and so forth.
+
+A modern approach might have a freqency of detected conditions that are much more informative and automated, for example:
+
+|Detected condition |Primitive action |Modern action |
+|-----|-----|-----|
+|CPU > 95%, security threat, telemetric signaling, threshold| Alert and notify, webhook, push notification, playbook, auto-scale |Query logs to identify the offending component and trigger automation to correct the problem with the offending component. |
 
 ## Cloud monitoring
 
