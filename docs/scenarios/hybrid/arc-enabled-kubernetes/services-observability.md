@@ -1,6 +1,6 @@
 ---
-title: Service Mesh for Arc-enabled Kubernetes
-description: Understand the design considerations and recommendations for Service Mesh on Azure Arc-enabled Kubernetes.
+title: Services Observability for Arc-enabled Kubernetes
+description: Understand the design considerations and recommendations for Services Observability on Azure Arc-enabled Kubernetes.
 author: jpocloud
 ms.author: jpocloud
 ms.date: 11/15/2021
@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: e2e-hybrid, think-tank
 ---
 
-# Service Mesh for Azure Arc-enabled Kubernetes
+# Services Observability for Azure Arc-enabled Kubernetes
 
 Content-here
 
