@@ -14,7 +14,7 @@ ms.custom: internal
 
 As business units request to deploy workloads to Azure, you need visibility into each workload to determine how to achieve the right levels of governance, security, and compliance. When a new service is required, you need to allow it.
 
-The following tables provide a framework to assess enterprise security readiness of Azure services for each assessment:
+The following tables provide a framework to assess the enterprise security readiness of Azure services.
 
 ## Security
 
