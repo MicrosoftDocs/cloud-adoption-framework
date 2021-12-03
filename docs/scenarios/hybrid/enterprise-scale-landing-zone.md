@@ -1,6 +1,6 @@
 ---
-title: Introduction to Enterprise Scale support for hybrid and multicloud
-description: Learn how Enterprise Scale can accelerate adoption of hybrid or multi-cloud architectures.
+title: Introduction to Azure Arc-enabled servers Landing Zone accelerator for hybrid and multicloud
+description: Learn how Azure Arc-enabled servers can accelerate adoption of hybrid or multi-cloud architectures.
 author: lanicolas
 ms.author: doalle
 ms.date: 03/01/2021
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-hybrid
 ---
 
-# Introduction to Enterprise Scale Landing Zone for hybrid and multicloud
+# Introduction to Azure Arc-enabled servers Landing Zone accelerator for hybrid and multicloud
 
 Enterprises are currently building and running applications across various ecosystems that can be on-premises, in multiple public clouds, and on the edge. On these distributed environments, it is critical to ensure compliance and find an effective way to manage servers, applications, and data at scale, while maintaining agility.
 
