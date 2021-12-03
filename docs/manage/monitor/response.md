@@ -38,7 +38,7 @@ A more primitive role of monitoring was to raise alerts for reactionary response
 
 |Detected condition |Action |
 |----|----|
-Cluster is down, database is full, high CPU, privacy breach, security threat, etc.|Alert and notify, or raise an incident record. |
+Cluster is down<br> Database is full<br> High CPU utilization<br> Security threat |Alert and notify, or raise an incident record. |
 
 We consider this approach outdated and not in alignment with modern service management or cloud operations recommended practices. This approach closely follows the traditional ITIL Incident Management path, which doesn't match the goals of the cloud efficiency through agility, minimum cost, optimization, and so forth.
 
@@ -46,7 +46,7 @@ A modern approach might have a frequency of detected conditions that are much mo
 
 |Detected condition |Primitive action |Modern action |
 |-----|-----|-----|
-|CPU > 95%<br> security threat<br> availability fault | Alert and notify, webhook, push notification, playbook, auto-scale |Query logs to identify the offending component and trigger automation to correct the problem with the offending component. |
+|Performance metric - high memory utilization<br> Security threat - detected suspicious network activity<br> Availability fault - Azure blob storage requests are failing | Alert and notify, webhook, push notification, playbook, auto-scale |Query logs to identify the offending component and trigger automation to correct the problem with the offending component. |
 
 ## Cloud monitoring
 
