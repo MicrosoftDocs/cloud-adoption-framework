@@ -12,10 +12,10 @@ ms.custom: think-tank
 
 # Cloud monitoring guide: Response
 
-In the [Observability](observability.md) article we discussed the five disciplines of monitoring. In this next article, we focus on the response discipline. Response is the result of defining one or more *actions* based on data-driven decisions from monitoring that let service consumers:
+In the [Observability](observability.md) article, we discussed the five disciplines of monitoring. In this next article, we focus on the response discipline. Response is the result of defining one or more *actions* based on data-driven decisions from monitoring that let service consumers:
 
 * Act smart, based on the good use of well-tuned monitoring data.
-* Leverage monitoring throughout incident/problem activities.
+* Apply monitoring throughout incident/problem activities.
 * Automate investigation, diagnosis, resolution, recovery, and remediation.
 
 ## Overview
@@ -58,7 +58,7 @@ Compared to monitoring platforms and related tooling that were available in the 
 
 - Cloud protocols or API methods more easily integrate with work management systems, including DevOps.
 
-And consider the following modes for the range of automated action, whether that be for investigation, enrichment, routing, assignment, remediation, recovery or resolution:
+And consider the following modes for the range of automated action, whether that be for investigation, enrichment, routing, assignment, remediation, recovery, or resolution:
 
 |Orchesration method|Description|
 |-|-|
