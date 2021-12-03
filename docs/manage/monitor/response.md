@@ -46,7 +46,7 @@ A modern approach might have a frequency of detected conditions that are much mo
 
 |Detected condition |Primitive action |Modern action |
 |-----|-----|-----|
-|CPU > 95%, security threat, telemetric signaling, threshold| Alert and notify, webhook, push notification, playbook, auto-scale |Query logs to identify the offending component and trigger automation to correct the problem with the offending component. |
+|CPU > 95%<br> security threat<br> availability fault | Alert and notify, webhook, push notification, playbook, auto-scale |Query logs to identify the offending component and trigger automation to correct the problem with the offending component. |
 
 ## Cloud monitoring
 
