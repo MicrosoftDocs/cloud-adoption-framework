@@ -6,6 +6,7 @@ ms.author: mboswell
 ms.date: 11/25/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
+ms.subservice: scenario
 ms.custom: think-tank, e2e-data-management
 ---
 
@@ -60,4 +61,4 @@ Keep in mind that the following services are not listed in the overview, because
 
 ## Next steps
 
-Learn about [Azure policies](policies.md) for enterprise-scale analytics and AI. 
+Learn about [Azure policies](policies.md) for enterprise-scale analytics and AI.

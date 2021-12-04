@@ -6,6 +6,7 @@ ms.author: jepeach
 ms.date: 11/25/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
+ms.subservice: scenario
 ms.custom: think-tank, e2e-data-management
 ---
 
