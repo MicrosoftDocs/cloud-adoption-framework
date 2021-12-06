@@ -38,7 +38,7 @@ Consider the following factors when designing BCDR for application workloads:
 
 - Consistent backups for applications and data:
   - VM snapshots.
-  - Azure Backup and Recovery Services vaults.
+  - Azure Backup Recovery Services vaults.
   - Subscription limits restricting the number of Recovery Services vaults and the size of each vault.
 
 - Network connectivity if a failover occurs:
