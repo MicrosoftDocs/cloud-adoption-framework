@@ -22,7 +22,7 @@ Consider the following factors when designing BCDR for application workloads:
   - RTO and RPO requirements for each workload.
   - Support for active-active and active-passive availability patterns.
 
-- BCDR as a service for *platform-as-a-service (PaaS)* services:
+- BCDR as a service for platform-as-a-service (PaaS) services:
   - Native DR and high-availability (HA) feature support.
   - Geo-replication and DR capabilities for PaaS services.
 
