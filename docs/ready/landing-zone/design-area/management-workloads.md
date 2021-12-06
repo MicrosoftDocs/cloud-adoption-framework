@@ -18,9 +18,9 @@ This guidance uses a federated model to explain how workload teams can operation
 
 To plan for workload management and monitoring, consider the following factors:
 
-- Workload monitoring with dedicated Azure Monitor Log Analytics workspaces.
+- Workload monitoring in dedicated Azure Monitor Log Analytics workspaces.
 
-  For workloads that are deployed to virtual machines (VMs), store logs relative to dedicated Log Analytics workspaces. Workload team members can access logs for their workloads or VMs according to Azure role-based access control (RBAC) roles.
+  For workloads that are deployed to virtual machines (VMs), store logs relative to dedicated Log Analytics workspaces. Workload team members can access logs for their workloads or VMs according to their Azure role-based access control (RBAC) roles.
 
 - Performance and health monitoring for both infrastructure-as-a-service (IaaS) and platform-as-a-service (PaaS) resources.
 
@@ -51,7 +51,5 @@ You can use centralized Azure Monitor components to manage and monitor workloads
   Logs contain different types of data organized into records with different sets of properties. Logs are useful for analyzing complex data from a range of sources, such as performance data, events, and traces. If necessary, use shared storage accounts in the landing zone for Azure diagnostic extension log storage.
 
 - Use [Azure Monitor alerts](/azure/azure-monitor/platform/alerts-overview) for generating operational alerts. Azure Monitor alerts unify metric and log alerts, and use features like actions and smart groups for advanced management and remediation.
-
-## Next steps
 
 For more workload management considerations and recommendations, see [Operational excellence](/azure/architecture/framework/#operational-excellence) in the Azure Well-Architected Framework.
