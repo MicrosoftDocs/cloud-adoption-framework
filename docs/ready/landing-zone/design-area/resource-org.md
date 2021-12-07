@@ -41,7 +41,7 @@ To start your cloud journey with a small set of subscriptions, see [Create your 
 
 Cloud adoption journeys have varying starting points and scale requirements. Some enterprises start with a few applications in the cloud and grow over time. Other enterprises must scale quickly to address business demands like a datacenter migration. In either scenario, resource organization planning should include environment growth to accommodate further applications and services.
 
-A key consideration for resource organization design is to simplify management across the environment for increased workload numbers and scale. Enterprise landing zone design and implementation should consider foundational management group and subscription structure, to avoid creating scaling constraints later.
+A key consideration for resource organization design is to simplify management across the environment for increased workload numbers and scale. Azure landing zone design and implementation should consider foundational management group and subscription structure, to avoid creating scaling constraints later.
 
 The resource organization design area explores techniques and technologies that help maintain good resource topologies in cloud environments. The following diagram shows the four scope levels for organizing Azure resources: management groups, subscriptions, resource groups, and resources.
 
