@@ -82,7 +82,7 @@ Establish a cross-functional DevOps platform team to build, manage, and maintain
 |**NetOps** (network operations)| Network management (holistic) |
 |**AppDevOps**| Allow application owners to create and manage application resources through a DevOps model <br> Application migration or transformation <br> Application management and monitoring <br> Azure RBAC (application resources) <br> Security monitoring and audit (application resources) <br> Cost management (application resources) <br> Network management (application resources) |
 
--Sometimes, you might want to break AppDevOps into more granular roles, such as AppDataOps for database management, or AppSecOps for more security-sensitive applications.
+- Sometimes, you might want to break AppDevOps into more granular roles, such as AppDataOps for database management, or AppSecOps for more security-sensitive applications.
 
 - Provide a central application DevOps function to support applications that don't have existing DevOps capabilities, or a business case to establish one (for example, legacy applications with minimal development capabilities).
 
