@@ -3,7 +3,7 @@ title: Platform automation and DevOps design area
 description: Design area guidance for platform automation and DevOps
 author: DominicAllen
 ms.author: doalle
-ms.date: 12/6/2021
+ms.date: 12/7/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -33,7 +33,7 @@ This approach encourages team collaboration that creates repeatable processes to
 
 In the context of a cloud environment, DevOps processes will encourage the concepts of continuous integration and continuous deployment (CI/CD), which fosters a culture of refinement and improvement.
 
-The decisions you make when reviewing cloud operating models might influence how you use DevOps functions. These decisions might also reach across technical teams with the capability for infrastructure as code.
+The decisions you make when reviewing cloud operating models might influence how you use DevOps functions. These decisions can also reach across technical teams with the capability for infrastructure as code.
 
 ### Platform automation
 
@@ -69,7 +69,7 @@ Central teams strive to maintain full control, while application owners seek to 
 
 ## Recommendations for platform automation and DevOps
 
-The Azure DevOps Services model that's based on these recommendations provide the control for central teams and the migration agility required by application teams.
+The Azure DevOps Services model that's based on these recommendations provides the control for central teams and the migration agility that application teams require.
 
 ### Platform automation and DevOps - design recommendations
 
@@ -90,7 +90,7 @@ Establish a cross-functional DevOps platform team to build, manage, and maintain
 
 - To accelerate Azure adoption, the central platform team might establish a common set of templates and libraries for application teams. For example, horizontal (cross-function) guidance can help support migrations through subject matter expertise, which ensures alignment with the overall target enterprise-scale architecture.
 
-- Don't restrict application teams to the use of central artifacts as it might hinder their agility. You can enforce consistent baseline configurations through a policy-driven infrastructure approach with Azure RBAC. This ensures that application (business unit) teams are flexible enough to innovate, while still able to draw from a predefined set of templates.
+- Don't restrict application teams to the use of central artifacts because it might hinder their agility. You can enforce consistent baseline configurations through a policy-driven infrastructure approach with Azure RBAC. This ensures that application (business unit) teams are flexible enough to innovate, while still able to draw from a predefined set of templates.
 
 - Don't force application teams to use a central process or provisioning pipeline for the instantiation or management of application resources. Existing teams that already rely on a DevOps pipeline for application delivery can still use their existing tools. Remember, you can still use Azure Policy to maintain guardrails independent of how resources are deployed in Azure.
 
