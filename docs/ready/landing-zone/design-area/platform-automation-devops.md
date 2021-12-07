@@ -86,7 +86,7 @@ Establish a cross-functional DevOps platform team to build, manage, and maintain
 
 - Provide a central application DevOps function to support applications that don't have existing DevOps capabilities, or a business case to establish one (for example, legacy applications with minimal development capabilities).
 
-- Use a policy-driven approach with clear Azure RBAC boundaries to centrally enforce consistency and security across application teams. A policy-driven approach ensures good approach is taken by using a combination of Azure RBAC and Azure Policy, and ensures that workloads are compliant with Azure Policy assignments.
+- Use a policy-driven approach with clear Azure RBAC boundaries to centrally enforce consistency and security across application teams. This ensures that a good approach is taken by using a combination of Azure RBAC and Azure Policy, and ensures that workloads are compliant with Azure Policy assignments.
 
 - To accelerate Azure adoption, the central platform team might establish a common set of templates and libraries for application teams. For example, horizontal (cross-function) guidance can help support migrations through subject matter expertise, which ensures alignment with the overall target enterprise-scale architecture.
 
