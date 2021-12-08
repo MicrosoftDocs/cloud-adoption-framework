@@ -3,14 +3,14 @@ title: Encryption and key management in Azure
 description: Learn about encryption and key management as part of an Azure landing zone
 author: DominicAllen
 ms.author: doalle
-ms.date: 10/20/2021
+ms.date: 12/07/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: internal
 ---
 
-# Define encryption and key management
+# Encryption and key management in Azure
 
 Encryption is a vital step toward ensuring data privacy, compliance, and data residency in Microsoft Azure. It's also one of the most important security concerns of many enterprises. This section covers design considerations and recommendations for encryption and key management.
 
@@ -18,15 +18,15 @@ Encryption is a vital step toward ensuring data privacy, compliance, and data re
 
 - Set subscription and scale limits as they apply to Azure Key Vault.
 
-   Key Vault has transaction limits for keys and secrets. To throttle transactions per vault in a certain period, see [Azure limits](/azure/azure-resource-manager/management/azure-subscription-service-limits).
+   Key Vault has transaction limits for keys and secrets. To [throttle transactions](/azure/key-vault/general/overview-throttling) per vault for a certain period of time, see [Azure limits](/azure/azure-resource-manager/management/azure-subscription-service-limits).
 
    Key Vault serves a security boundary because access permissions for keys, secrets, and certificates are at the vault level. Key Vault access policy assignments grant permissions separately to keys, secrets, or certificates. They don't support granular, object-level permissions like a specific key, secret, or certificate [key management](/azure/security/fundamentals/data-encryption-best-practices).
 
-- Isolate application-specific and workload-specific secrets and shared secrets, as appropriate to [control access](/azure/key-vault/general/best-practices).
+- Isolate application-specific and workload-specific secrets and shared secrets, as necessary, to [control access](/azure/key-vault/general/best-practices).
 
-- Optimize Premium SKUs where hardware-security-module-protected keys are required.
+- Optimize Premium SKUs where HSM-protected (Hardware Security Module) keys are required.
 
-   Underlying hardware security modules (HSMs) are FIPS 140-2 Level 2 compliant. Manage Azure dedicated HSM for FIPS 140-2 Level 3 compliance by considering the supported scenarios.
+   Underlying HSMs are FIPS 140-2 Level 2 compliant. Manage Azure dedicated HSM for FIPS 140-2 Level 3 compliance by considering the supported scenarios.
 
 - Manage key rotation and secret expiration.
 
@@ -44,10 +44,10 @@ Encryption is a vital step toward ensuring data privacy, compliance, and data re
 
 - Set requirements for using customer-managed keys for native encryption mechanisms, such as Azure Storage encryption:
 
-  - [Customer-managed keys](/azure/storage/common/customer-managed-keys-configure-key-vault).
-  - Whole-disk encryption for virtual machines (VMs).
-  - Data-in-transit encryption.
-  - Data-at-rest encryption.
+  - [Customer-managed keys](/azure/storage/common/customer-managed-keys-configure-key-vault)
+  - Whole-disk encryption for virtual machines (VMs)
+  - Data-in-transit encryption
+  - Data-at-rest encryption
 
 ## Design recommendations
 
@@ -55,7 +55,7 @@ Encryption is a vital step toward ensuring data privacy, compliance, and data re
 
 - Provision Azure Key Vault with the soft delete and purge policies enabled to allow retention protection for deleted objects.
 
-- Follow a least privilege model by limiting authorization to permanently delete keys, secrets, and certificates to specialized custom Azure Active Directory (Azure AD) roles.
+- Follow a least-privilege model by limiting the authorization to permanently delete keys, secrets, and certificates to specialized custom Azure Active Directory (Azure AD) roles.
 
 - Automate the certificate management and renewal process with public certificate authorities to ease administration.
 
@@ -65,10 +65,10 @@ Encryption is a vital step toward ensuring data privacy, compliance, and data re
 
 - Use the platform-central Azure Monitor Log Analytics workspace to audit key, certificate, and secret usage within each instance of Key Vault.
 
-- Delegate Key Vault instantiation and privileged access and use Azure Policy to enforce a consistent compliant configuration.
+- Delegate Key Vault instantiation and privileged access, and use Azure Policy to enforce a consistent compliant configuration.
 
-- Default to Microsoft-managed keys for principal encryption functionality and use customer-managed keys when required.
+- Default to Microsoft-managed keys for principal encryption functionality, and use customer-managed keys when required.
 
 - Don't use centralized instances of Key Vault for application keys or secrets.
 
-- Don't share Key Vault instances between applications to avoid secret sharing across environments.
+- To avoid secret sharing across environments, don't share Key Vault instances between applications.
