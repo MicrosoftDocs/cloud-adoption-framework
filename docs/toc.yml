@@ -261,6 +261,7 @@ items:
         href: ready/landing-zone/design-areas.md
         items:
 <<<<<<< HEAD
+<<<<<<< HEAD
         - name: Azure billing and Active Directory tenant
 =======
         - name: Overview
@@ -352,6 +353,9 @@ items:
 
         - name: Basic landing zone considerations
 >>>>>>> f8cf28c2e9c5b3e8b8c9bae29f2001013d8ae2f3
+=======
+        - name: Azure billing and Active Directory tenant
+>>>>>>> d6692b522ea21b35f68f4c3e4c6e44be24713061
           items:
           - name: Overview
             href: ready/landing-zone/design-area/azure-billing-ad-tenant.md
@@ -1666,8 +1670,8 @@ items:
           href: manage/monitor/observability.md
         - name: Data collection
           href: manage/monitor/data-collection.md
-        - name: Alerting
-          href: manage/monitor/alerting.md
+        - name: Response
+          href: manage/monitor/response.md
         - name: Monitoring platforms overview
           href: manage/monitor/platform-overview.md
         - name: Skills relevant to monitoring
