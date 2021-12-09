@@ -329,6 +329,8 @@ items:
             href: ready/landing-zone/design-area/resource-org-management-groups.md
           - name: Subscriptions
             href: ready/landing-zone/design-area/resource-org-subscriptions.md
+          - name: Adopt policy-driven guardrails
+            href: ready/enterprise-scale/dine-guidance.md
           - name: Additional information
             items:
             - name: Naming and tagging
