@@ -381,6 +381,11 @@
          "redirect_document_id": false
       },
       {
+         "source_path": "docs/manage/monitor/alerting.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/monitor/response",
+         "redirect_document_id": false
+      },
+      {
          "source_path": "docs/ready/considerations/enterprise-scale.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/enterprise-scale",
          "redirect_document_id": true

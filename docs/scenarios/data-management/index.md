@@ -3,7 +3,7 @@ title: Azure data management and analytics scenario overview
 description: Gain an overview of an end-to-end scenario for data management and analytics in the cloud, with a focus on Azure implementation.
 author: mboswell
 ms.author: mboswell
-ms.date: 10/08/2021
+ms.date: 11/25/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -45,8 +45,8 @@ The data management and analytics scenario is designed to guide the end-to-end c
 |---------|---------|
 | [Cloud Adoption Framework](/azure/cloud-adoption-framework) |Managing and governing data is a lifecycle process that starts by building on your existing cloud strategy and carries all the way through to ongoing operations management. The Cloud Adoption Framework will help to guide the full lifecycle for your data estate.         |
 | [Azure Well-Architected Framework](./well-architected-framework.md) |Workload architecture and operations have a direct impact on data. Understand how your architecture can improve management and governance of the data used by your workload.         |
-| [Azure landing zones](/azure/cloud-adoption-framework/ready/) |Choosing a landing zone as the environment to host your workloads, preprovisioned through code establishes a code-based starting point for your Azure environment. Ensure the environment is prepared for the cloud adoption plan through Azure landing zones by starting with Cloud Adoption Framework [enterprise-scale landing zones](/azure/cloud-adoption-framework/ready/enterprise-scale/) to create the infrastructure of your data platform.         |
-| [Enterprise-scale for analytics and AI](enterprise-scale-landing-zone.md)  |Representing a strategic design path for an Azure analytics and AI environment, the enterprise-scale for analytics and AI pattern relies upon distribution of the data and its pipelines across domains. This pattern includes the capabilities such as storage, data lineage, data classification, data ingestion, networking, security, access management, encryption, resiliency and monitoring.         |
+| [Azure landing zones](../../ready/index.md) |Choosing a landing zone as the environment to host your workloads, preprovisioned through code establishes a code-based starting point for your Azure environment. Ensure the environment is prepared for the cloud adoption plan through Azure landing zones by starting with Cloud Adoption Framework [enterprise-scale landing zones](../../ready/enterprise-scale/index.md) to create the infrastructure of your data platform.         |
+| [Data management and analytics scenario](enterprise-scale-landing-zone.md)  |Representing a strategic design path for an Azure data management and analytics. The Data management and analytics scenario pattern relies upon distribution of the data and its pipelines across domains. This pattern includes the capabilities such as storage, data lineage, data classification, data ingestion, networking, security, access management, encryption, resiliency and monitoring.         |
 
 > [!TIP]
 > Deployable reference implementations and templates make it easy to get started with the data management and analytics scenario. To learn more, see [Deployment templates](./architectures/frequently-asked-questions.md).
@@ -99,7 +99,7 @@ For more information about planning for Azure data management and analytics, see
 
 - [Develop a plan for data management and analytics](plan.md)
 - [Review your environment for Azure landing zones](ready.md)
-- [Introduction to enterprise-scale for analytics and AI in Azure](enterprise-scale-landing-zone.md)
+- [Introduction to Data management and analytics scenario in Azure](enterprise-scale-landing-zone.md)
 
 ## Next steps
 
