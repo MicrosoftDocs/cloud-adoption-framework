@@ -1,18 +1,18 @@
 ---
-title: Frequently asked questions about enterprise-scale for analytics and AI in Azure
-description: Explore frequently asked questions about enterprise-scale for analytics and AI in Azure.
+title: Frequently asked questions about data management and analytics scenario
+description: Explore frequently asked questions about data management and analytics scenario.
 author: abdale
 ms.author: hamoodaleem
-ms.date: 03/03/2021
+ms.date: 11/25/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Frequently asked questions about enterprise-scale for analytics and AI in Azure
+# Frequently asked questions about data management and analytics scenario
 
-The following are common questions asked about enterprise-scale for analytics and AI.
+The following are common questions asked about data management and analytics scenario.
 
 ## Storage accounts
 

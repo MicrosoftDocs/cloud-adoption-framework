@@ -3,7 +3,7 @@ title: Network architecture considerations
 description: Learn network architecture considerations for data management and analytics landing zones in Azure.
 author: marvinbuss
 ms.author: mabuss
-ms.date: 10/18/2021
+ms.date: 11/25/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -86,9 +86,9 @@ With this setup, virtual machine B can load the raw dataset in storage account A
 
 ### Private endpoint projection user access management
 
-From a user access management perspective, this scenario is similar to the first option except for the fact that access rights may also be required for other data landing zones to not just create private endpoints within the designated data landing zone and VNet but also in the other data landing zones and their respective VNets. Hence, data product teams may not only require write access to a resource group in the designated data landing zone and join access to their designated subnet to be able to create new services including the private endpoints in a self-service manner, but they may also require access to a resource group and subnet inside the other data landing zones to create the respective local private endpoints.
+From a user access management perspective, this scenario is similar to the first option except for the fact that access rights might also be required for other data landing zones to not just create private endpoints within the designated data landing zone and VNet but also in the other data landing zones and their respective VNets. Hence, data product teams might not only require write access to a resource group in the designated data landing zone and join access to their designated subnet to be able to create new services including the private endpoints in a self-service manner, but they might also require access to a resource group and subnet inside the other data landing zones to create the respective local private endpoints.
 
-In summary, this setup increases the complexity on the access management layer since data product teams may require few permissions not just in a single but in each and every data landing zone. In addition, it may lead to confusion and inconsistent role-based access control over time. If necessary access rights are not provided to data landing zone teams or data product teams, problems described in [Hub and spoke design](#hub-and-spoke-design) will be applicable.
+In summary, this setup increases the complexity on the access management layer since data product teams might require few permissions not just in a single but in each and every data landing zone. In addition, it might lead to confusion and inconsistent role-based access control over time. If necessary access rights are not provided to data landing zone teams or data product teams, problems described in [Hub and spoke design](#hub-and-spoke-design) will be applicable.
 
 ### Private endpoint projection service management
 
@@ -109,7 +109,7 @@ Because there are no network virtual appliances, limiting throughput for cross-d
 
 ### Private endpoint projection summary
 
-This network architecture suffers from the potential exponential growth of private endpoints, which may even cause losing track of which private endpoints are used where and for which purpose. Another limiting factor is the access management issues described above and the complexities created on the DNS layer. Therefore, this network design cannot be recommended.
+This network architecture suffers from the potential exponential growth of private endpoints, which might even cause losing track of which private endpoints are used where and for which purpose. Another limiting factor is the access management issues described above and the complexities created on the DNS layer. Therefore, this network design cannot be recommended.
 
 ## Private endpoints in connectivity hub
 

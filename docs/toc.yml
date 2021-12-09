@@ -1575,8 +1575,8 @@ items:
           href: manage/monitor/observability.md
         - name: Data collection
           href: manage/monitor/data-collection.md
-        - name: Alerting
-          href: manage/monitor/alerting.md
+        - name: Response
+          href: manage/monitor/response.md
         - name: Monitoring platforms overview
           href: manage/monitor/platform-overview.md
         - name: Skills relevant to monitoring
