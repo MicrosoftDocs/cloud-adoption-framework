@@ -280,7 +280,11 @@ items:
           - name: Identity and access management
             href: ready/enterprise-scale/identity-and-access-management.md
           - name: Management group and subscription organization
-            href: ready/enterprise-scale/management-group-and-subscription-organization.md
+            items: 
+            - name: Overview & Guidance
+              href: ready/enterprise-scale/management-group-and-subscription-organization.md
+            - name: Adopting policy driven guardrails
+              href: ready/enterprise-scale/dine-guidance.md
           - name: Network topology and connectivity
             items:
             - name: Overview
@@ -1578,8 +1582,8 @@ items:
           href: manage/monitor/observability.md
         - name: Data collection
           href: manage/monitor/data-collection.md
-        - name: Alerting
-          href: manage/monitor/alerting.md
+        - name: Response
+          href: manage/monitor/response.md
         - name: Monitoring platforms overview
           href: manage/monitor/platform-overview.md
         - name: Skills relevant to monitoring

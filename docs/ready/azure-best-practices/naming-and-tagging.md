@@ -23,8 +23,10 @@ Define your naming and tagging strategy as early as possible. Use the following 
 - [Naming rules and restrictions for Azure resources](/azure/azure-resource-manager/management/resource-name-rules)
 
 > [!NOTE]
-> Every business has its own organizational and management requirements. These recommendations help start a discussion with your cloud adoption teams. As the discussion proceeds, use the template below to document the naming and tagging decisions you make when aligning these recommendations to your specific business needs.
+> Every business has its own organizational and management requirements. These recommendations help start a discussion with your cloud adoption teams. As the discussion proceeds, use the tools below to document the naming and tagging decisions you make when aligning these recommendations to your specific business needs.
 >
+> Download the [Azure Naming Tool](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready/AzNamingTool) to create an organizational naming reference and name generator.
+> 
 > Download the [naming and tagging conventions tracking template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/naming-and-tagging-conventions-tracking-template.xlsx).
 
 ## Purpose of naming and tagging
