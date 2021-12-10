@@ -28,7 +28,7 @@ Here are some design considerations for data analytics on Azure monitoring and m
 
 ## Design recommendations
 
-When evaluating enterprise-scale analytics, consider the following design recommendations:
+When evaluating data management and analytics scenario, consider the following design recommendations:
 
 - Implement threat protection. For more information, see [Microsoft Sentinel](/azure/sentinel/overview).
 

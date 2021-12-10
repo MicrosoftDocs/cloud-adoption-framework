@@ -47,7 +47,7 @@ The following design principles can guide the implementation of Azure Machine Le
 ## Implementation overview
 
 > [!NOTE]
-> This section recommends configurations specific to the enterprise-scale analytics and AI construction set. It complements Azure Machine Learning documentation and CAF best practices.
+> This section recommends configurations specific to the data management and analytics scenario. It complements Azure Machine Learning documentation and CAF best practices.
 
 ### Workspace organization and setup
 
@@ -140,7 +140,7 @@ Enterprise-scale data landing zones outline reference implementation for repeata
 
 ## Next steps
 
-Use the [`Enterprise-Scale Analytics - Data Product Analytics`](https://github.com/Azure/data-product-analytics) template and guidance to deploy Azure Machine Learning, and reference [Azure Machine Learning documentation and tutorials](/azure/machine-learning/) to get started with building your solutions.
+Use the [Data Product Analytics](https://github.com/Azure/data-product-analytics) template and guidance to deploy Azure Machine Learning, and reference [Azure Machine Learning documentation and tutorials](/azure/machine-learning/) to get started with building your solutions.
 
 Continue to the following four Cloud Adoption Framework articles to learn more about Azure Machine Learning deployment and management best practices for enterprises:
 

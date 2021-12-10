@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-data-management
 
 # A financial institution scenario for data mesh
 
-This reference architecture is written for customers that want to use enterprise-scale analytics and AI for scalability and *data mesh* architectures. It demonstrates a more complex scenario, with multiple landing zones, data integrations, and data products.
+This reference architecture is written for customers that want to use data management and analytics scenario for scalability and *data mesh* architectures. It demonstrates a more complex scenario, with multiple landing zones, data integrations, and data products.
 
 ## Customer profile
 
