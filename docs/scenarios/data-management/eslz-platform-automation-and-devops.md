@@ -39,7 +39,7 @@ The following diagram shows how automation principles are implemented for a data
 
 ## Deployment models
 
-Enterprise-scale analytics for and AI consists of:
+Data management and analytics scenario consists of:
 
 - A data management landing zone.
 - One or more data landing zones.
