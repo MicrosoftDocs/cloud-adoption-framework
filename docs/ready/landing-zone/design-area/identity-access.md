@@ -55,7 +55,7 @@ Most Azure environments will use at least Azure AD for Azure fabric authenticati
 
 - Consider centralized and delegated responsibilities to manage resources deployed inside the landing zone.
 - Explore the [authentication methods offered by Azure Active Directory](/azure/active-directory/hybrid/choose-ad-authn) as part of your identity planning
-- Applications that rely on domain services and use older protocols can use [Azure AD DS](/azure/active-directory-domain-services).
+- Applications that rely on domain services and use older protocols might be able to use [Azure AD DS](/azure/active-directory-domain-services).
 - There's a difference between Azure AD, Azure AD DS, and AD DS running on Windows Server. Evaluate your application needs, and understand and document the authentication provider that each one will be using. Plan then for all applications.
 
 ### Prerequisites for a landing zone - design considerations
