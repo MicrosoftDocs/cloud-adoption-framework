@@ -12,7 +12,7 @@ ms.custom: e2e-hybrid
 
 # Resource organization for Azure Arc-enabled Kubernetes
 
-Resource organization is all about preparing your environment and organizing your resources in the most efficient way so that it is easier to find, consume and act on a resource. Microsoft Cloud Adoption Framework [Ready methodology](../../ready/index.md) provides all necessary guidance in this respect before you deploy and operationalize your workloads. Broadly, such activities include a consistent resource grouping, defining naming standards, relevant tagging, fine grained access control.
+Resource organization is all about preparing your environment and organizing your resources in the most efficient way so that it is easier to find, consume and act on a resource. Microsoft Cloud Adoption Framework [Ready methodology](/azure/cloud-adoption-framework/ready/) provides all necessary guidance in this respect before you deploy and operationalize your workloads. Broadly, such activities include a consistent resource grouping, defining naming standards, relevant tagging, fine grained access control.
 
 ## Resource consistency and organization
 
@@ -30,7 +30,7 @@ The following image shows a conceptual reference for resource tagging for Azure 
 
 For more guidance for your hybrid cloud adoption journey, please review the following:
 
-- Understand how to manage [hybrid and multicloud](./manage.md) environments
+- [Manage hybrid and multicloud environments](/azure/cloud-adoption-framework/scenarios/hybrid/manage)
 - Review [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_k8s/day2/) scenarios
 - Review the [prerequisites](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#prerequisites) for Azure Arc-enabled Kubernetes
 - [Connect an existing Kubernetes cluster to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli)

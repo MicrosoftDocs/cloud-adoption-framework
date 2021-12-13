@@ -77,7 +77,7 @@ Integrating with Azure AD also enables the use of Azure AD advance security capa
 
 Do not store secrets or certificates in application code or file systems. Secrets should be stored in key stores and provided to containers at runtime as they are needed.
 
-Consider using the [Azure Key Vault extension](https://docs.microsoft.com/en-us/azure/azure-arc/kubernetes/tutorial-akv-secrets-provider) to manage secrets and certificates on your Azure Arc-enabled Kubernetes clusters. The Key Vault extension allows you to manage the certificate lifecycle on your Kubernetes deployments.
+Consider using the [Azure Key Vault extension](/azure/azure-arc/kubernetes/tutorial-akv-secrets-provider) to manage secrets and certificates on your Azure Arc-enabled Kubernetes clusters. The Key Vault extension allows you to manage the certificate lifecycle on your Kubernetes deployments.
 
 ### Enable and secure GitOps configurations
 
@@ -86,7 +86,7 @@ This GitOps approach simplifies the deployment of multiple applications, across 
 
 The following image shows how the GitOps flow looks like in the context of Arc-enabled Kubernetes:
 
-![Azure Arc-enabled Kubernetes GitOps Flow](./media/arc-enabled-k8s-gitops.png)
+![Azure Arc-enabled K8s GitOps workflow](./media/arc-enabled-k8s-gitops.png)
 
 When adding GitOps configurations it is important to secure access to the repository, its keys and set branch permissions, make sure to review [best practices for GitOps](PLACEHOLDER_CDA).
 
@@ -94,7 +94,7 @@ When adding GitOps configurations it is important to secure access to the reposi
 
 Having a policy-driven governance is a foundational principle of cloud-native operations and Cloud Adoption Framework. [Azure Policy](/azure/governance/policy/) provides the mechanism to enforce corporate standards and to assess compliance at scale. Through it, you can implement governance for consistency of deployments, compliance, control costs, and improve your security posture; with its compliance dashboard, you will get an aggregated view of the overall state as well as remediation capabilities. Azure Arc-enabled Kubernetes supports [Azure Policy](/azure/governance/policy/overview) at the Azure Resource Management layer, and also in-cluster policy enforcements by extending [Gatekeeper for Open Policy Agent](/azure/governance/policy/concepts/policy-for-kubernetes?toc=/azure/azure-arc/kubernetes/toc.json). The following image illustrates how Azure Policy applies at-scale enforcements and safeguards on Azure Arc-enabled Kubernetes clusters:
 
-![Azure Arc-enabled Kubernetes GitOps Flow](./media/arc-enabled-k8s-policy.png)
+![Azure Arc-enabled Kubernetes Policy](./media/arc-enabled-k8s-policy.png)
 
 Understand the [scope of Azure policy](/azure/governance/policy/concepts/scope) and where it can be applied (Management Group, subscription, resource group or individual resource level). Create a Management Group design in accordance with the recommended practices outlined in the [Cloud Adoption Framework Enterprise Scale](/azure/cloud-adoption-framework/ready/enterprise-scale/management-group-and-subscription-organization)
 
@@ -134,7 +134,7 @@ The Kubernetes API receives requests to perform actions in the cluster, so it is
 
 - Enable interactive debugging and troubleshooting.
 - Enable the use of hosted agents/runners of Azure Pipelines, GitHub Actions, or any other hosted CI/CD service without requiring self-hosted agents.
-- Provide cluster access to Azure services for [custom locations](azure/azure-arc/kubernetes/custom-locations) and other resources created on top of it.
+- Provide cluster access to Azure services for [custom locations](/azure/azure-arc/kubernetes/custom-locations) and other resources created on top of it.
 
 ### Improve microservices observability and security
 
@@ -157,7 +157,7 @@ Make sure to review the [best practices for Open Service Mesh implementation.](P
 
 For more guidance for your cloud adoption journey, see the following article:
 
-- [Manage hybrid and multicloud environments](./manage.md)
+- [Manage hybrid and multicloud environments](/azure/cloud-adoption-framework/scenarios/hybrid/manage)
 - [Connect an existing Kubernetes cluster to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli)
 - [Secret and certificate management](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_k8s/day2/cluster_api/cluster_api_keyvault_extension/)
 - [Threat protection and cloud security posture management](/azure/defender-for-cloud/)
