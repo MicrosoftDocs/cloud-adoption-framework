@@ -47,7 +47,7 @@ Microsoft Azure Data Factory is a fully managed, pay-as-you-use, hybrid data int
 
 It supports over 80 connectors to external data sources and databases and has templates for common data integration tasks. A visual front-end browser-based GUI enables non-programmers to create and run process pipelines to ingest, transform, and load data. More experienced programmers can incorporate custom code if necessary, for example, Python programs.
 
-Development of simple or comprehensive extract, transform, load (ETL) and extract, load, transform (ELT) processes without coding or maintenance can be easily achieved. This process includes ingest, move, prepare, transform, and process your data. Scheduling and triggers can also be designed and managed within Azure Data Factory to build an automated data integration and loading environment. It can produce trusted data assets that are described in the Azure Data Catalog business glossary.
+Development of simple or comprehensive extract, transform, load (ETL) and extract, load, transform (ELT) processes without coding or maintenance can be easily achieved. This process includes ingest, move, prepare, transform, and process your data. Scheduling and triggers can also be designed and managed within Azure Data Factory to build an automated data integration and loading environment. It can produce trusted data assets that are described in the data catalog business glossary.
 
 Azure Data Factory can be used to implement and manage a hybrid environment, which includes connectivity to on-premises, cloud, edge streaming, and software as a service (SaaS) data, in a secure and consistent way.
 
