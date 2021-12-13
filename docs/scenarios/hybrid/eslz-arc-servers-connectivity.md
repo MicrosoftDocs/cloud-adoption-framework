@@ -59,7 +59,7 @@ Be aware that if you deploy extensions on your Azure Arc-enabled servers, every 
 
 Azure Arc-enabled servers let you deploy VM extensions to centrally manage your servers from Azure. These extensions connect to other resources such as Log Analytics workspaces, automation accounts, Key Vault or Azure Storage. You can use Azure Private Link to make this connection private without opening any public network access. All of the data is kept private, preventing data exfiltration. The traffic between Azure Arc-enabled servers and Azure services will go through a Site-to-Site VPN tunnel or an ExpressRoute with private peering.
 
-[ ![Azure Arc-enabled servers Private Link topology.](./media/arc-enabled-servers-private-link-topology.svg)](./media/arc-enabled-servers-private-link-topology.svg#lightbox)
+[ ![Azure Arc-enabled servers Private Link topology.](./media/arc-enabled-servers-private-link-topology.png)](./media/arc-enabled-servers-private-link-topology.png#lightbox)
 
 This connection method has specific [restrictions and limitations](/azure/azure-arc/servers/private-link-security#restrictions-and-limitations) you should be familiar with. When you enable any of Azure Arc-enabled servers extensions, those extensions connect to specific Azure services that have their own requirements for configuring Private Link support.
 
