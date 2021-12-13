@@ -20,7 +20,7 @@ This article assumes that you have successfully implemented enterprise-scale lan
 
 The following diagram shows a conceptual reference architecture for the connectivity of Azure Arc-enabled servers.
 
-[ ![Azure Arc-enabled servers connectivity options.](./media/arc-enabled-servers-connectivity-options.svg)](./media/arc-enabled-servers-connectivity-options.svg#lightbox)
+[ ![Azure Arc-enabled servers connectivity options.](./media/arc-enabled-servers-connectivity-options.png)](./media/arc-enabled-servers-connectivity-options.png#lightbox)
 
 ## Design considerations
 
