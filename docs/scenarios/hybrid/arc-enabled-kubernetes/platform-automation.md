@@ -31,6 +31,15 @@ Your cluster has connectivy from your on-premises network or third-party cloud p
 
 - To deploy and configure the Azure Arc-enabled Kubernetes agent, a **[Missing] role** is required.
 
-## Onboard Azure Arc-enabled Kubernetes
+### Onboard Azure Arc-enabled Kubernetes
 
 - Before onboarding clusters, you've **[MISSING registered the Azure resource providers]**
+- Decide how you'll install and configure the Azure agent on your cluster.  Typically you'll deploy the agent using your organization's standard automation tools.
+
+### Cluster extensions
+
+Determine which Azure capabilities you want on your Azure Arc-enabled Kubernetes cluster.  Some capabilities require a cluster extension to be deployed.
+
+### Lifecycle automation
+
+Create a cluster update management strategy for Azure Arc-enabled Kubernetes clusters.
