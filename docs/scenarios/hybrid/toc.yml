@@ -21,7 +21,7 @@ items:
       items:
       - name: Identity and access management
         href: eslz-identity-and-access-management.md
-      - name: Network connectivity
+      - name: Network topology & connectivity
         href: eslz-arc-servers-connectivity.md
       - name: Resource organization
         href: eslz-resource-organization.md
