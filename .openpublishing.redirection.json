@@ -426,7 +426,7 @@
          "redirect_document_id": false
       },
       {
-         "source_path": "docs/azure/cloud-adoption-framework/ready/enterprise-scale/enterprise-enrollment-and-azure-ad-tenants.md",
+         "source_path": "docs/ready/enterprise-scale/enterprise-enrollment-and-azure-ad-tenants.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/azure-billing-ad-tenant",
          "redirect_document_id": true
       },
