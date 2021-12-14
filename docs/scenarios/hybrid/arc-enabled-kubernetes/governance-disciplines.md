@@ -38,7 +38,7 @@ As your hybrid and multicloud resources become part of Azure Resource Manager, t
 - **Enable and secure GitOps configurations:** GitOps configurations enforce the desired state of the system so it is an important tool for compliance as there is tracking of all the changes made overtime. When working with GitOps configurations you need to thing about how to secure access to your source control tool.
 - **Policy management and reporting:** Define a governance plan for your hybrid Kubernetes that translates into Azure Policies and remediation tasks.
 - **Log management strategy:** Plan for metrics and log collection of your hybrid resources into a Log Analytics workspace for further analysis and auditing. Review the recommendations for [monitoring in this guide](./management-disciplines.md).
-- **Threat protection and cloud security posture management:** Enforce thread protection and introduce controls to detect security misconfigurations and track compliance. Also, use [Azure's intelligence](/azure/sentinel/overview) to protect your hybrid workloads against threats. [Enable Microsoft Defender for Kubernetes](/defender-for-cloud/defender-for-kubernetes-introduction) for all subscriptions containing Azure Arc-enabled Kubernetes for security baseline monitoring, security posture management and threat protection.
+- **Threat protection and cloud security posture management:** Enforce thread protection and introduce controls to detect security misconfigurations and track compliance. Also, use [Azure's intelligence](/azure/sentinel/overview) to protect your hybrid workloads against threats. [Enable Microsoft Defender for Containers](/azure/defender-for-cloud/defender-for-containers-introduction?tabs=defender-for-container-arch-aks) for all subscriptions containing Azure Arc-enabled Kubernetes for security baseline monitoring, security posture management and threat protection.
 - **Secure cluster access:** Plan how to secure access to the Kubernetes API. Azure Arc-enabled Kubernetes provides the cluster connect feature that provides connectivity to the apiserver without having to enable any inbound port.
 - **Improve microservices observability and security:** The implementation of a service mesh can help with authentication, authorization, security and visibility of microservice-based applications. Azure Arc-enabled Kubernetes simplifies the deployment of Open Service Mesh as an extension.
 
@@ -113,10 +113,11 @@ Review the best practices in [designing your Azure Monitor Logs deployment](/azu
 
 ### Threat protection and cloud security posture management
 
-[Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) provides a unified security-management platform segmented as a cloud security posture management (CSPM) and cloud workload protection platform (CWPP). To increase security on your hybrid landing zone it is important to protect the data and assets hosted in Azure and elsewhere, Microsoft Defender for Kubernetes extends these capabilities to Azure Arc-enabled Kubernetes. To heighten security on your hybrid landing zone, consider the following:
+[Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) provides a unified security-management platform segmented as a cloud security posture management (CSPM) and cloud workload protection platform (CWPP). To increase security on your hybrid landing zone it is important to protect the data and assets hosted in Azure and elsewhere, Microsoft Defender for Containers extends these capabilities to Azure Arc-enabled Kubernetes. To heighten security on your hybrid landing zone, consider the following:
 
 - Use Azure Arc-enabled Kubernetes extension to onboard hybrid resources in Microsoft Defender for Cloud.
-- Implement an Azure Policy to make sure all resources are compliant, and its security data is collected into the Log Analytics workspaces.
+- Enable Microsoft Defender for Containers plan for all subscriptions. By default, the plan is configured to automatically deploy the Defender extension to any Arc-enabled Kubernetes cluster that is attached to this subscription. You can optionally modify this configuration.
+- Verify that the Defender extension is deployed on your clusters.
 - Enable Microsoft Defender for all subscriptions and use Azure Policy to ensure compliance.
 - Use security information and event management integration with Microsoft Defender for Cloud and Azure Sentinel.
 
