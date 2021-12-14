@@ -41,7 +41,9 @@ This conceptual architecture represents scale and maturity decisions based on a 
 
 While your specific implementation might vary, as a result of specific business decisions or existing investments in tools that need to persist in your cloud environment, this conceptual architecture will help set a direction for the overall approach your organization takes to designing and implementing a landing zone.
 
-![A conceptual architecture diagram of an Azure landing zone.](../enterprise-scale/media/ns-arch-cust-expanded.png)
+Use this architecture as a starting point. Download the [Visio file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/enterprise-scale-architecture.vsdx) and modify it to fit your specific business and technical requirements when planning your landing zone implementation.
+
+:::image type="content" source="../enterprise-scale/media/ns-arch-cust-expanded.png" alt-text="A conceptual architecture diagram of an Azure landing zone." lightbox="../enterprise-scale/media/ns-arch-cust-expanded.png":::
 
 ## Azure landing zone accelerator
 

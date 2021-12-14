@@ -6,6 +6,7 @@ ms.author: jepeach
 ms.date: 11/25/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
+ms.subservice: scenario
 ms.custom: think-tank, e2e-data-management
 ---
 
@@ -23,7 +24,7 @@ All of these disparate groups are producing their own data. Many of the business
 
 The company's vision is to have a centralized analytics platform, a single source of truth for all data. However, it has become challenging for many different stakeholders to buy into one single technology. Given the rate at which new data is being created and new options become available, even early drafts of plans for centralization quickly become outdated. Meanwhile, the corporate sales team has outgrown their current solution, and the company urgently needs to use new analytics to pursue a new market segment.
 
-Adatum has decided to implement the data management and analytics scenario pattern in Azure to solve this problem. The enterprise is confident that the enterprise-scale analytics pattern will allow the corporate sales team to migrate their data platform today but still provide enough flexibility to accommodate other business units when they are ready to join.
+Adatum has decided to implement the data management and analytics scenario pattern in Azure to solve this problem. The enterprise is confident that the data management and analytics scenario will allow the corporate sales team to migrate their data platform today but still provide enough flexibility to accommodate other business units when they are ready to join.
 
 ### Current situation
 

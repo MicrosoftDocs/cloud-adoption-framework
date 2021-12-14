@@ -47,7 +47,7 @@ The following design principles can guide the implementation of Azure Machine Le
 ## Implementation overview
 
 > [!NOTE]
-> This section recommends configurations specific to the enterprise-scale analytics and AI construction set. It complements Azure Machine Learning documentation and CAF best practices.
+> This section recommends configurations specific to the data management and analytics scenario. It complements Azure Machine Learning documentation and CAF best practices.
 
 ### Workspace organization and setup
 
@@ -111,14 +111,14 @@ Self-service can be enabled and governed with [policies for Azure Machine Learni
 | [Preview]: Configure allowed registries for specified Azure Machine Learning computes. | Built-in | [View in the Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F5853517a-63de-11ea-bc55-0242ac130003) |
 | Configure Azure Machine Learning workspaces with private endpoints. | Built-in | [View in the Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F7838fd83-5cbb-4b5d-888c-bfa240972597) |
 | Configure machine learning computes to disable local authentication methods. | Built-in | [View in the Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2Fa6f9a2d0-cff7-4855-83ad-4cd750666512) |
-| Append-MachineLearningCompute-SetupScriptsCreationScript | Custom (CAF landing zones) | [View on GitHub](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/MachineLearning/params.policyDefinition.Append-MachineLearningCompute-SetupScriptsCreationScript.json)   |
-| Deny-MachineLearning-HbiWorkspace | Custom (CAF landing zones) | [View on GitHub](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/MachineLearning/params.policyDefinition.Deny-MachineLearning-HbiWorkspace.json)   |
-| Deny-MachineLearning-PublicAccessWhenBehindVnet | Custom (CAF landing zones) | [View on GitHub](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/MachineLearning/params.policyDefinition.Deny-MachineLearning-PublicAccessWhenBehindVnet.json)   |
-| Deny-MachineLearning-Aks | Custom (CAF landing zones) | [View on GitHub](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/MachineLearning/params.policyDefinition.Deny-MachineLearningAks.json)   |
-| Deny-MachineLearningCompute-SubnetId | Custom (CAF landing zones) | [View on GitHub](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/MachineLearning/params.policyDefinition.Deny-MachineLearningCompute-SubnetId.json)   |
-| Deny-MachineLearningCompute-VmSize | Custom (CAF landing zones) | [View on GitHub](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/MachineLearning/params.policyDefinition.Deny-MachineLearningCompute-VmSize.json)   |
-| Deny-MachineLearningComputeCluster-RemoteLoginPortPublicAccess | Custom (CAF landing zones) | [View on GitHub](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/MachineLearning/params.policyDefinition.Deny-MachineLearningComputeCluster-RemoteLoginPortPublicAccess.json)   |
-| Deny-MachineLearningComputeCluster-Scale | Custom (CAF landing zones) | [View on GitHub](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/MachineLearning/params.policyDefinition.Deny-MachineLearningComputeCluster-Scale.json)   |
+| Append-machinelearningcompute-setupscriptscreationscript | Custom (CAF landing zones) | [View on GitHub](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/MachineLearning/params.policyDefinition.Append-MachineLearningCompute-SetupScriptsCreationScript.json)   |
+| Deny-machinelearning-hbiworkspace | Custom (CAF landing zones) | [View on GitHub](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/MachineLearning/params.policyDefinition.Deny-MachineLearning-HbiWorkspace.json)   |
+| Deny-machinelearning-publicaccesswhenbehindvnet | Custom (CAF landing zones) | [View on GitHub](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/MachineLearning/params.policyDefinition.Deny-MachineLearning-PublicAccessWhenBehindVnet.json)   |
+| Deny-machinelearning-AKS | Custom (CAF landing zones) | [View on GitHub](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/MachineLearning/params.policyDefinition.Deny-MachineLearningAks.json)   |
+| Deny-machinelearningcompute-subnetid | Custom (CAF landing zones) | [View on GitHub](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/MachineLearning/params.policyDefinition.Deny-MachineLearningCompute-SubnetId.json)   |
+| Deny-machinelearningcompute-vmsize | Custom (CAF landing zones) | [View on GitHub](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/MachineLearning/params.policyDefinition.Deny-MachineLearningCompute-VmSize.json)   |
+| Deny-machinelearningcomputecluster-remoteloginportpublicaccess | Custom (CAF landing zones) | [View on GitHub](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/MachineLearning/params.policyDefinition.Deny-MachineLearningComputeCluster-RemoteLoginPortPublicAccess.json)   |
+| Deny-machinelearningcomputecluster-scale | Custom (CAF landing zones) | [View on GitHub](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/MachineLearning/params.policyDefinition.Deny-MachineLearningComputeCluster-Scale.json)   |
 
 ## Recommendations for managing your environment
 
@@ -140,7 +140,7 @@ Enterprise-scale data landing zones outline reference implementation for repeata
 
 ## Next steps
 
-Use the [`Enterprise-Scale Analytics - Data Product Analytics`](https://github.com/Azure/data-product-analytics) template and guidance to deploy Azure Machine Learning, and reference [Azure Machine Learning documentation and tutorials](/azure/machine-learning/) to get started with building your solutions.
+Use the [Data Product Analytics](https://github.com/Azure/data-product-analytics) template and guidance to deploy Azure Machine Learning, and reference [Azure Machine Learning documentation and tutorials](/azure/machine-learning/) to get started with building your solutions.
 
 Continue to the following four Cloud Adoption Framework articles to learn more about Azure Machine Learning deployment and management best practices for enterprises:
 
