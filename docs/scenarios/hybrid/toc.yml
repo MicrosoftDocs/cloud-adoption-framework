@@ -26,8 +26,8 @@ items:
       - name: Resource organization
         href: eslz-resource-organization.md
       - name: Governance disciplines 
-        href: eslz-governance-and-compliance.md
-      - name: Secuity
+        href: eslz-governance.md
+      - name: Security and compliance
       - href: eslz-security.md
       - name: Management disciplines
         href: eslz-management-and-monitoring-arc-server.md
