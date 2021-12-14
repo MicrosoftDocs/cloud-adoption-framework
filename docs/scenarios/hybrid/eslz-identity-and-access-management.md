@@ -12,7 +12,6 @@ ms.custom: e2e-hybrid, think-tank
 
 # Identity and access management for Azure Arc-enabled servers
 
-## Overview
 
 Your organization needs to design the right access controls to secure hybrid environments using on-premises and cloud-based identity management systems.
 
