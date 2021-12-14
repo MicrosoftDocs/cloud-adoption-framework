@@ -14,6 +14,9 @@ ms.custom: internal
 
 If you have only a few subscriptions, it's fairly easy to manage them independently. But what if you have many subscriptions? Then you can create a management group hierarchy to help manage your subscriptions and resources.
 
+> [!NOTE]
+> We recommend that organizations consider the Azure landing zone guidance for [resource organization](../landing-zone/design-area/resource-org.md) as a first step to planning subscriptions within an Azure environment to ensure the broader context of an environment intended to scale is considered
+
 ## Azure management groups
 
 For your subscriptions, Azure management groups help you efficiently manage:

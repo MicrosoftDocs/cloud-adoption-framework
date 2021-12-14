@@ -20,11 +20,11 @@ The following table lists example reference implementations based on the recomme
 
 | Example deployment | Description | GitHub repo | Deploy to Azure |
 |---------|---------|---------|---------|
-| Enterprise-scale foundation | The suggested foundation for enterprise-scale adoption. | [Example in GitHub][GitHub-WingTip] | [![DTA-Button-WingTip]][DTA-WingTip] |
-| Enterprise-scale hub and spoke | Add a [hub and spoke](/azure/architecture/reference-architectures/hybrid-networking/hub-spoke) network module to the enterprise-scale foundation. | [Example in GitHub][GitHub-AdventureWorks] | [![DTA-Button-AdventureWorks]][DTA-AdventureWorks] |
-| Enterprise-scale Virtual WAN | Add a [Virtual WAN](/azure/virtual-wan/virtual-wan-global-transit-network-architecture) network module to the enterprise-scale foundation. | [Example in GitHub][GitHub-Contoso] | [![DTA-Button-Contoso]][DTA-Contoso] |
-| Enterprise-scale for small enterprises | Add a [hub and spoke](/azure/architecture/reference-architectures/hybrid-networking/hub-spoke) network architecture for small organizations. | [Example in GitHub][GitHub-TreyResearch] | [![DTA-Button-TreyResearch]][DTA-TreyResearch] |
-| Enterprise-scale for Azure Government | Reference implementation that can be deployed to Azure Government and includes all options in a converged portal experience. | [Example in GitHub][GitHub-AzureGov] | [![DTA-Button-AzureGov]][DTA-AzureGov] |
+| Enterprise-scale foundation | The suggested foundation for enterprise-scale adoption. | [Example in GitHub][GitHub-WingTip] | [![Dta-button-wingtip]][dta-wingtip] |
+| Enterprise-scale hub and spoke | Add a [hub and spoke](/azure/architecture/reference-architectures/hybrid-networking/hub-spoke) network module to the enterprise-scale foundation. | [Example in GitHub][GitHub-AdventureWorks] | [![Dta-button-adventureworks]][dta-adventureworks] |
+| Enterprise-scale Virtual WAN | Add a [Virtual WAN](/azure/virtual-wan/virtual-wan-global-transit-network-architecture) network module to the enterprise-scale foundation. | [Example in GitHub][GitHub-Contoso] | [![Dta-button-Contoso]][dta-Contoso] |
+| Enterprise-scale for small enterprises | Add a [hub and spoke](/azure/architecture/reference-architectures/hybrid-networking/hub-spoke) network architecture for small organizations. | [Example in GitHub][GitHub-TreyResearch] | [![Dta-button-treyresearch]][dta-treyresearch] |
+| Enterprise-scale for Azure Government | Reference implementation that can be deployed to Azure Government and includes all options in a converged portal experience. | [Example in GitHub][GitHub-AzureGov] | [![Dta-button-azuregov]][dta-azuregov] |
 
 Each reference implementation deploys platform resources to the selected target environment. Deployment details and an overview of the deployed resources can be found using the GitHub link in the table above.
 
@@ -37,9 +37,9 @@ These examples provide an easy deployment option to support continued learning f
 
 <!-- The following section is used to store references to external images and links to reduce maintenance overhead and enable tooltips -->
 
-[//]: # (*******************************)
-[//]: # (EXTERNAL IMAGE REFERENCES BELOW)
-[//]: # (*******************************)
+[/]: # (*******************************)
+[/]: # (External image references below)
+[/]: # (*******************************)
 
 [DTA-Button-WingTip]: https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true "Deploy WingTip reference implementation (foundation) to Azure."
 [DTA-Button-AdventureWorks]: https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true "Deploy AdventureWorks reference implementation (hybrid connectivity with hub and spoke) to Azure."
@@ -47,9 +47,9 @@ These examples provide an easy deployment option to support continued learning f
 [DTA-Button-TreyResearch]: https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true "Deploy TreyResearch reference implementation for small organizations to Azure."
 [DTA-Button-AzureGov]: https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true "Deploy Enterprise-scale reference implementation for Azure Government."
 
-[//]: # (**************************)
-[//]: # (EXTERNAL LINK LABELS BELOW)
-[//]: # (**************************)
+[/]: # (**************************)
+[/]: # (External link labels below)
+[/]: # (**************************)
 
 [GitHub-WingTip]: https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/wingtip/README.md
 [GitHub-AdventureWorks]: https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/adventureworks/README.md

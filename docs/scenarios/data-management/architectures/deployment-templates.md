@@ -3,7 +3,7 @@ title: Deployment templates for data management and analytics scenario deploymen
 description: Learn about the core starter templates for data management and analytics scenario deployments.
 author: mboswell
 ms.author: mboswell
-ms.date: 11/25/2021
+ms.date: 12/14/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -35,7 +35,7 @@ We have provided links to the official cost calculator, where users can make cha
 
 In a production scenario, we recommend that you rely on the Azure Firewall and private DNS zones that are hosted in the connectivity hub of [enterprise-scale landing zones](https://github.com/Azure/Enterprise-Scale). In minimal viable products, you can rely on the Azure Firewall and private DNS zones that are bundled with Cloud Adoption Framework data management and analytics. Therefore, we provide the following two different cost calculations:
 
-- [Calculation 1: Pricing calculator - data management zone with Azure Firewall and private DNS zones](https://azure.com/e/ebb7508a6d78487b9a1583878d0948cc)
+- [Calculation 1: Pricing calculator - data management zone without Azure Firewall and private DNS zones](https://azure.com/e/ebb7508a6d78487b9a1583878d0948cc)
 - [Calculation 2: Pricing calculator - data management zone with Azure Firewall and private DNS zones](https://azure.com/e/658478643d4b46fdbf8b1972c4b0704b)
 
 Keep in mind that the following services are not listed in the overview, because they are either not available in the official pricing calculator or the pricing calculator does not allow you to set the compute hours to 0:
