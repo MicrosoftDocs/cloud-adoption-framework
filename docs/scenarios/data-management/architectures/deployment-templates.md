@@ -3,7 +3,7 @@ title: Deployment templates for data management and analytics scenario deploymen
 description: Learn about the core starter templates for data management and analytics scenario deployments.
 author: mboswell
 ms.author: mboswell
-ms.date: 11/25/2021
+ms.date: 12/14/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
