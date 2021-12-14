@@ -37,7 +37,7 @@ The decisions you make when reviewing cloud operating models might influence how
 
 ### Platform automation
 
-Platform automation focuses on tools and techniques that enable the streamlining of tasks. These tasks might have been performed manually using automation tools such as Azure DevOps Services, or GitHub.
+Platform automation focuses on tools and techniques that enable the streamlining of tasks. These tasks might have been performed manually or using automation tools such as Azure DevOps Services, or GitHub.
 
 By automating tasks, the effort to complete them reduces the risk of human-error that might come from issues resulting from the task.
 This automation then enables the tasks to be completed quicker and more often, supporting the concepts of (CI/CD).
