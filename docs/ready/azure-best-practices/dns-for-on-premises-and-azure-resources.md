@@ -12,7 +12,7 @@ ms.custom: think-tank
 
 # DNS for on-premises and Azure resources
 
-Domain Name System (DNS) is a critical design topic in the overall enterprise-scale architecture. Some organizations might want to use their existing investments in DNS. Others might see cloud adoption as an opportunity to modernize their internal DNS infrastructure and use native Azure capabilities.
+Domain Name System (DNS) is a critical design topic in the overall landing zone architecture. Some organizations might want to use their existing investments in DNS. Others might see cloud adoption as an opportunity to modernize their internal DNS infrastructure and use native Azure capabilities.
 
 **Design considerations:**
 
