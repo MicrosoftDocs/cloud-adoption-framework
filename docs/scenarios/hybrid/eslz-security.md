@@ -1,4 +1,14 @@
-
+---
+title: Enterprise-scale security governance and compliance
+description: Expand security to Arc and Hybrid
+author: sitarant
+ms.author: sitarant
+ms.date: 12/14/2021
+ms.topic: conceptual
+ms.service: cloud-adoption-framework
+ms.subservice: scenario
+ms.custom: e2e-hybrid, think-tank
+---
 ### Enterprise-scale security governance and compliance
 
 This article defines encryption and key management, helps you plan for governance, defines security monitoring and an audit policy, and enables you to plan for platform security.
