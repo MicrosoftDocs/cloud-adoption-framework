@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: think-tank, e2e-hybrid
 ---
 
-# Network connectivity for Azure Arc-enabled servers
+# Network topology & connectivity for Azure Arc-enabled servers
 
 Azure Arc-enabled servers let you manage your Windows and Linux physical servers and virtual machines (hosted either in your on-premises environment or by a third-party cloud provider) using the Azure control plane. This document walks you through the key design considerations and best practices for Azure Arc-enabled servers connectivity as part of a Cloud Adoption Framework enterprise-scale landing zone guidance.
 
