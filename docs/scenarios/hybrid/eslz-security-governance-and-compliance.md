@@ -1,5 +1,5 @@
 ---
-title: Security, governance, and compliance baseline for Azure Arc-enabled servers
+title: Security, governance and compliance baseline for Azure Arc-enabled servers
 description: Expand Azure security, governance, and compliance baseline for deployment on Azure Arc-enabled servers.
 author: MatthewGrimshaw
 ms.author: matgri
@@ -10,9 +10,9 @@ ms.subservice: scenario
 ms.custom: e2e-hybrid, think-tank
 ---
 
-# Security, governance and, compliance baseline for Azure Arc-enabled servers
+# Security, governance and compliance baseline for Azure Arc-enabled servers
 
-This article covers the key design considerations and best practices when implementing security, governance, and compliance in hybrid, multicloud, and edge deployments. Azure Arc manages these deployments and is a part of the CAF enterprise-scale landing zone.
+This article covers the key design considerations and best practices when implementing security, governance, and compliance for Azure Arc-enabled servers deployments. While the enterprise-scale landing zone documentation covers "[Governance](/azure/cloud-adoption-framework/ready/landing-zone/design-area/governance)" and "[Security](/azure/cloud-adoption-framework/ready/landing-zone/design-area/security)" as separate topics, for Azure Arc-enabled servers, these critical design areas are consolidated as a single topic.
 
 Defining and applying the proper control mechanisms is key in any cloud implementation, as it's the foundational element to stay secured and compliant. In a traditional environment, these mechanisms usually involve review processes and manual controls. However, the cloud has introduced a new approach to IT governance with automated guardrails and checks. [Azure Policy](/azure/governance/policy/overview) and [Microsoft Defender for Cloud](/azure/security-center/defender-for-cloud-introduction) are cloud-native tools that allow the implementation of these controls, reports, and remediation tasks in an automated fashion. By combining them with Azure Arc, your governance policies and security checks are extended to any resource in public or private clouds.
 
@@ -172,3 +172,4 @@ For more guidance for your hybrid cloud adoption journey,  review the following:
 - Plan an [at-scale deployment](/azure/azure-arc/servers/plan-at-scale-deployment) of Azure Arc-enable servers
 - Understand how to [manage hybrid and multicloud environments](./manage.md)
 - To learn more about Azure Arc, check out the [Azure Arc learning path on Microsoft Learn](/learn/paths/manage-hybrid-infrastructure-with-azure-arc/)
+
