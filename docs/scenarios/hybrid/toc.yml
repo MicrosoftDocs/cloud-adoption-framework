@@ -21,20 +21,18 @@ items:
       items:
       - name: Identity and access management
         href: eslz-identity-and-access-management.md
-      - name: Network topology & connectivity
+      - name: Network topology and connectivity
         href: eslz-arc-servers-connectivity.md
       - name: Resource organization
         href: eslz-resource-organization.md
-      - name: Governance disciplines 
+      - name: Governance and security disciplines
         href: eslz-governance.md
-      - name: Security and compliance
-      - href: eslz-security.md
-      - name: Management disciplines
+      - name: Management 
         href: eslz-management-and-monitoring-arc-server.md
-      - name: Automation discipline
-        href: eslz-automation-arc-server.md  
       - name: Cost governance
         href: eslz-cost-governance.md
+      - name: Automation disciplines
+        href: eslz-automation-arc-server.md  
     - name: Implementation options
       items:
       # - name: Start small with basic VM management
