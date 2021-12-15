@@ -401,6 +401,66 @@
          "redirect_document_id": true
       },
       {
+         "source_path": "docs/ready/considerations/basic-considerations.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-conceptual-architecture",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/ready/considerations/compute-options.md",
+         "redirect_url": "https://docs.microsoft.com/azure/architecture/guide/technology-choices/compute-decision-tree",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/ready/azure-best-practices/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-areas",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/ready/enterprise-scale/architecture.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/index",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/ready/enterprise-scale/design-guidelines.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-areas",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/ready/enterprise-scale/enterprise-enrollment-and-azure-ad-tenants.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/azure-billing-ad-tenant",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/ready/enterprise-scale/identity-and-access-management.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/ready/enterprise-scale/management-group-and-subscription-organization.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/ready/enterprise-scale/management-and-monitoring.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/management",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/ready/enterprise-scale/business-continuity-and-disaster-recovery.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-business-continuity-disaster-recovery",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/ready/enterprise-scale/security-governance-and-compliance.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/governance",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/ready/enterprise-scale/platform-automation-and-devops.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/platform-automation-devops",
+         "redirect_document_id": true
+      },
+      {
          "source_path": "docs/scenarios/lamp/moodle/index.md",
          "redirect_url": "/azure/cloud-adoption-framework/scenarios/lamp/moodle/migration-overview",
          "redirect_document_id": true
