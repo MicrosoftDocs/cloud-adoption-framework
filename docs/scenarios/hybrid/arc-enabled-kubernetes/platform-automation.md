@@ -51,13 +51,13 @@ The following are general design recommendations for Azure Arc-enabled Kubernete
 ### Environment preparation
 
 - Create a [dedicated resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups) to include only Azure Arc-enabled Kubernetes clusters and centralize management and monitoring of these resources.
-- Evaluate and develop an IT-aligned [tagging strategy](/azure/cloud-adoption-framework/decision-guides/resource-tagging/) that can help reduce the complexity of managing your Azure Arc-enabled servers and simplifies the process of making management decisions.
+- Evaluate and develop an IT-aligned [tagging strategy](/azure/cloud-adoption-framework/decision-guides/resource-tagging/) that can help reduce the complexity of managing your Azure Arc-enabled Kubernetes and simplifies the process of making management decisions.
 - A kubeconfig file with context pointing to the Kubernetes cluster which will be Arc-enabled.
 - Create a Service Principal to onboard Kubernetes clusters non-interactively using the Azure CLI. Visit [Identity and Access Management](./identity-access-management.md) for more information surrounding required permissions.
 
 ### Onboard Azure Arc-enabled Kubernetes clusters
 
-One of your first tasks will be to onboard your fleet of Kubernetes clusters to Azure Arc. After determining resource group placement and your target clusters, if you only have a few clusters, you can opt to run the onboarding directly from your Windows or Linux machine using the Azure CLI. For larger fleets of servers, we recommended creating a service principal and onboarding your clusters in an automated fashion by way of automation tooling such as Azure DevOps, GitHub Actions, or an existing automation tool used to currently manage your Kubernetes clusters. Review the network requirements found in [network connectivity](./network-connectivitiy.md).
+One of your first tasks will be to onboard your fleet of Kubernetes clusters to Azure Arc. After determining resource group placement and your target clusters, if you only have a few clusters, you can opt to run the onboarding directly from your Windows or Linux machine using the Azure CLI. For larger fleets of clusters, we recommended creating a service principal and onboarding your clusters in an automated fashion by way of automation tooling such as Azure DevOps, GitHub Actions, or an existing automation tool used to currently manage your Kubernetes clusters. Ensure your Kubernetes clusters meet the network requirements found in [network connectivity](./network-connectivitiy.md).
 
 Afterwards, be sure to [verify your connection](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#5-verify-cluster-connection) to Azure Arc-enabled Kubernetes.
 
@@ -68,8 +68,8 @@ Depending on the needs of Extensions, you may opt to have extensions that are re
 For cases where extensions are common across all of your Arc-enabled Kubernetes clusters, or large groups of Arc-enabled Kubernetes clusters, we recommend automating the deployment of Arc extensions at scale via [Azure Policy](/azure/governance/policy/overview). The following is an overview of steps:
 
 - Create an [initiative](/azure/security-center/security-policy-concept#what-is-a-security-initiative) to deploy VM extensions at scale.
-- Use a "[DeployIfNotExists](/azure/governance/policy/concepts/effects#deployifnotexists)" policy effect to ensure the VM extensions get deployed automatically, as more servers are onboarded, and remediate any servers where the VM extensions have been removed.
-- More details on using policy with Azure Arc-enabled Kubernetes clusters can be found in the [Security, governance and compliance for Azure Arc-enabled servers](./eslz-security-governance-and-compliance.md) section of this guide.
+- Use a "[DeployIfNotExists](/azure/governance/policy/concepts/effects#deployifnotexists)" policy effect to ensure the VM extensions get deployed automatically, as more Kubernetes clusters are onboarded, and remediate any Kubernetes clusters where the extensions have been removed.
+- More details on using policy with Azure Arc-enabled Kubernetes clusters can be found in the [Security, governance and compliance for Azure Arc-enabled Kubernetes](./eslz-security-governance-and-compliance.md) section of this guide.
 
 
 ### Lifecycle Automation
