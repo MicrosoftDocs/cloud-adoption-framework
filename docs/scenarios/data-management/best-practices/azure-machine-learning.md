@@ -82,7 +82,7 @@ The data landing zone comes with a default set of services that are deployed in 
 
 ### Network connectivity
 
-Networking for implementing Azure Machine Learning in azure landing zones is set up with [security best practices for Azure Machine Learning](/azure/machine-learning/concept-enterprise-security) and CAF [networking best practices](/azure/security/fundamentals/network-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json). These best practices include the following configurations:
+Networking for implementing Azure Machine Learning in Azure landing zones is set up with [security best practices for Azure Machine Learning](/azure/machine-learning/concept-enterprise-security) and CAF [networking best practices](/azure/security/fundamentals/network-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json). These best practices include the following configurations:
 
 - Azure Machine Learning and dependent resources are configured to use Private Link endpoints.
 - Managed compute resources are deployed only with private IP addresses.
