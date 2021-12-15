@@ -43,7 +43,7 @@ Your business should consider how to best:
 - Drive a default way to enforce data governance and security.
 - Drive teams to consistently prioritize business outcomes instead of obsessing over the underlying technology.
 
-If you don't have an implementation of azure landing zones, then it's important to consult your cloud teams about how to meet prerequisites. For more information, see [Ensure the environment is prepared for the cloud adoption plan](../../ready/index.md).
+If you don't have an implementation of Azure landing zones, then it's important to consult your cloud teams about how to meet prerequisites. For more information, see [Ensure the environment is prepared for the cloud adoption plan](../../ready/index.md).
 
 ## Accelerate Azure landing zones for data management and analytics
 
