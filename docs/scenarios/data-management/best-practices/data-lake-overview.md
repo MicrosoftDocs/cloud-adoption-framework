@@ -36,14 +36,7 @@ A common design consideration is whether to have a single or multiple data lakes
 
 Data Lake Storage Gen2 is a platform as a service (PaaS) fully managed service. Because of this, multiple storage accounts or file systems won't incur a monetary cost until you start to store and access data. When you plan your provisioning, security, and governance, including your backups and disaster recovery, keep in mind that there's administrative and operational overhead associated with each Azure resource. To decide to create one or multiple accounts has no definitive answer. It requires thought and planning based on your unique scenario.
 
-Scalability is a key concept and a single data lake might limit scalability from the outset. We recommend you add three data lake accounts during your discovery and design phase. The following considerations factor into our recommendation:
-
-- Large-scale enterprise workloads generally require significant throughput and resources. Splitting the lake physically across multiple storage accounts helps you stay within the various subscription and service quotas.
-
-  - For more information about limits, see [Scalability and performance targets](/azure/storage/common/scalability-targets-standard-account).
-
-    > [!TIP]
-    > Contact [Azure Support](https://azure.microsoft.com/support/faq/) to request higher capacity and ingress limits.
+We recommend you add three data lake accounts during your discovery and design phase. The following considerations factor into our recommendation:
 
 - Isolation of data environments and predictability. For example, if you want to isolate activities that run in the laboratory zone to avoid potential effect on the curated zone. The curated zone holds data with greater business value that's used for critical decision making.
 - Features and functionality at the storage account level. Consider whether lifecycle management options or firewall rules must be applied at the data landing zone or data lake level.
@@ -53,7 +46,7 @@ Scalability is a key concept and a single data lake might limit scalability from
 
 ## Multiregion deployments
 
-Data residency rules, or a requirement to have data close to a user base, can drive the requirement to create Azure Data Lake accounts in multiple Azure regions. We recommend you create a data landing zone in one region and then replicate global data using third-party products like AzCopy or Azure Data Factory. Local data remains in-region while global data is replicated across multiple regions.
+Data residency rules, or a requirement to have data close to a user base, can drive the requirement to create Azure Data Lake accounts in multiple Azure regions. We recommend you create a data landing zone in one region and then replicate global data using AzCopy, Azure Data Factory or third-party products. Local data remains in-region while global data is replicated across multiple regions.
 
 ## Data lake access control list guidelines
 

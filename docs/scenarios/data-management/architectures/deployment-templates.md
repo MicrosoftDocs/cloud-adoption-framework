@@ -33,7 +33,7 @@ We have provided links to the official cost calculator, where users can make cha
 
 ### Data management zone costs
 
-In a production scenario, we recommend that you rely on the Azure Firewall and private DNS zones that are hosted in the connectivity hub of [enterprise-scale landing zones](https://github.com/Azure/Enterprise-Scale). In minimal viable products, you can rely on the Azure Firewall and private DNS zones that are bundled with Cloud Adoption Framework data management and analytics. Therefore, we provide the following two different cost calculations:
+In a production scenario, we recommend that you rely on the Azure Firewall and private DNS zones that are hosted in the connectivity hub of [azure landing zones](https://github.com/Azure/Enterprise-Scale). In minimal viable products, you can rely on the Azure Firewall and private DNS zones that are bundled with Cloud Adoption Framework data management and analytics. Therefore, we provide the following two different cost calculations:
 
 - [Calculation 1: Pricing calculator - data management zone without Azure Firewall and private DNS zones](https://azure.com/e/ebb7508a6d78487b9a1583878d0948cc)
 - [Calculation 2: Pricing calculator - data management zone with Azure Firewall and private DNS zones](https://azure.com/e/658478643d4b46fdbf8b1972c4b0704b)

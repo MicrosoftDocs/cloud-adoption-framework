@@ -3,7 +3,7 @@ title: Key considerations for Azure Data Lake Storage
 description: Understand key Azure Data Lake Storage considerations for data management and analytics scenario.
 author: mboswell
 ms.author: mboswell
-ms.date: 11/25/2021
+ms.date: 12/15/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -63,9 +63,9 @@ For more information, see [Private endpoints](../eslz-network-topology-and-conne
 > [!IMPORTANT]
 > Data from a data landing zone can be accessed from another data landing zone over the virtual network peering between the zones. This is done using the private endpoints associated with each data lake account. We recommend turning off all public access to the lakes and using private endpoints. Network connectivity across data landing zones, like private links, are controlled by the platform operations team.
 
-## Soft delete for containers (preview)
+## Soft delete for containers
 
-Soft delete for containers (preview) protects your data from being accidentally or maliciously deleted. When container soft delete is enabled for a storage account, any deleted containers and their contents are retained in Azure Storage for the period that you specify. During the retention period, you can restore previously deleted containers. Restoring a container restores any blobs within that container when it was deleted.
+Soft delete for containers protects your data from being accidentally or maliciously deleted. When container soft delete is enabled for a storage account, any deleted containers and their contents are retained in Azure Storage for the period that you specify. During the retention period, you can restore previously deleted containers. Restoring a container restores any blobs within that container when it was deleted.
 
 For end-to-end protection of your blob data, we recommend enabling the following data protection features:
 
@@ -75,7 +75,7 @@ For end-to-end protection of your blob data, we recommend enabling the following
 > [!WARNING]
 > Deleting a storage account can't be undone. Container soft delete does not protect against the deletion of a storage account, but only against the deletion of containers in that account. To protect a storage account from deletion, configure a lock on the storage account resource. For more information about locking Azure Resource Manager resources, see [Lock resources to prevent unexpected changes](/azure/azure-resource-manager/management/lock-resources).
 
-## Store business-critical blob data with immutable storage (preview)
+## Store business-critical blob data with immutable storage
 
 Store business-critical data objects in a write once, read many (WORM) state with Azure Blob Storage. This state makes the data non-erasable and non-modifiable for a user-specified interval. During the retention interval, blobs can be created and read but can't be modified or deleted. Immutable storage is available for general-purpose v1, general-purpose v2, BlobStorage, and BlockBlobStorage accounts in all Azure regions.
 
