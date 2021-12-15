@@ -31,7 +31,7 @@ items:
         href: eslz-management-and-monitoring-arc-server.md
       - name: Cost governance
         href: eslz-cost-governance.md
-      - name: Automation disciplines
+      - name: Automation disciplines for Azure Arc-enabled servers
         href: eslz-automation-arc-server.md  
     - name: Implementation options
       items:
