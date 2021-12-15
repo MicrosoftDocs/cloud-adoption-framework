@@ -46,58 +46,43 @@ Create a cluster update management strategy for Azure Arc-enabled Kubernetes clu
 
 ## Design recommendations
 
-The following are general design recommendations for Azure Arc-enabled servers:
+The following are general design recommendations for Azure Arc-enabled Kubernetes clusters:
 
 ### Environment preparation
 
-*** need to customize for K8S ***
-- Create a [dedicated resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups) to include only Azure Arc-enabled servers and centralize management and monitoring of these resources.
+- Create a [dedicated resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups) to include only Azure Arc-enabled Kubernetes clusters and centralize management and monitoring of these resources.
 - Evaluate and develop an IT-aligned [tagging strategy](/azure/cloud-adoption-framework/decision-guides/resource-tagging/) that can help reduce the complexity of managing your Azure Arc-enabled servers and simplifies the process of making management decisions.
-- Create a [service principal](/azure/azure-arc/servers/onboard-service-principal#create-a-service-principal-for-onboarding-at-scale) to connect machines non-interactively using Azure PowerShell or from the Azure portal.
+- A kubeconfig file with context pointing to the Kubernetes cluster which will be Arc-enabled.
+- Create a Service Principal to onboard Kubernetes clusters non-interactively using the Azure CLI. Visit [Identity and Access Management](./identity-access-management.md) for more information surrounding required permissions.
 
-### Onboard Azure Arc-enabled servers
+### Onboard Azure Arc-enabled Kubernetes clusters
 
-*** need to customize ***
+One of your first tasks will be to onboard your fleet of Kubernetes clusters to Azure Arc. After determining resource group placement and your target clusters, if you only have a few clusters, you can opt to run the onboarding directly from your Windows or Linux machine using the Azure CLI. For larger fleets of servers, we recommended creating a service principal and onboarding your clusters in an automated fashion by way of automation tooling such as Azure DevOps, GitHub Actions, or an existing automation tool used to currently manage your Kubernetes clusters. Review the network requirements found in [network connectivity](./network-connectivitiy.md).
 
-One of your first tasks will be to onboard your fleet of servers and virtual machines to Azure. After [generating an installation script](/azure/azure-arc/servers/onboard-portal#generate-the-installation-script-from-the-azure-portal), if you only have a few servers, you can opt to run the script directly from your [Windows](/azure/azure-arc/servers/onboard-portal#install-and-validate-the-agent-on-windows) or [Linux](/azure/azure-arc/servers/onboard-portal#install-and-validate-the-agent-on-linux) machines. For larger fleets of servers, there are several options available in Azure to automate the onboarding process. We recommended creating a [service principal](/azure/azure-arc/servers/onboard-service-principal#create-a-service-principal-for-onboarding-at-scale) and apply one of the following methods:
+Afterwards, be sure to [verify your connection](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#5-verify-cluster-connection) to Azure Arc-enabled Kubernetes.
 
-- Review and customize the [predefined installation script](/azure/azure-arc/servers/onboard-service-principal) for at-scale deployment of the connected machine agent to support your automated deployment requirements.
-- Generate a [PowerShell script](/azure/azure-arc/servers/onboard-service-principal) using a service principal, and deploy via your organizations existing automation platform
-  - Connect machines using [automation Update Management](/azure/azure-arc/servers/onboard-update-management-machines)
-  - Connect machines using [PowerShell remoting](/azure/azure-arc/servers/onboard-powershell#install-and-connect-by-using-powershell-remoting) or [PowerShell DSC](/azure/azure-arc/servers/onboard-dsc)
-  - Connect machines from [Windows Admin Center](/azure/azure-arc/servers/onboard-windows-admin-center)
+### Arc-enabled Kubernetes extensions
 
-Afterwards, be sure to [verify your connection](/azure/azure-arc/servers/onboard-portal#verify-the-connection-with-azure-arc) to Azure Arc.
+Depending on the needs of Extensions, you may opt to have extensions that are required to be installed on all of your Arc enabled Kubernetes clusters, as well as certain extensions which are installed only to specific Arc-enabled Kubernetes clusters. For extensions that are not widely adopted across your fleet of clusters, considering automating by way for CLI and Arm template using automation tools such as Azure DevOps or GitHub Actions.
 
-### Virtual machine extensions
-
-*** need to customize ***
-
-To simplify the management of hybrid servers throughout their lifecycle, [VM extensions](/azure/azure-arc/servers/manage-vm-extensions) can be deployed to Azure Arc-enabled servers from the Azure portal. Virtual machine (VM) extensions are small applications that provide post-deployment configuration and automation tasks on Azure VMs. For example, if a virtual machine requires software installation, anti-virus protection, or to run a script in it, a VM extension can be used. Many VM extensions are supported for both [Windows](/azure/azure-arc/servers/manage-vm-extensions#windows-extensions) and [Linux](/azure/azure-arc/servers/manage-vm-extensions#linux-extensions) Azure Arc-enabled servers.
-
-We recommended automating the deployment of VM extensions at scale via [Azure Policy](/azure/governance/policy/overview) to automatically deploy extensions to your Azure Arc-enabled servers and regularly check the policy compliance data to identify and remediate servers that don't have the agent installed.
-
-Overview of steps:
+For cases where extensions are common across all of your Arc-enabled Kubernetes clusters, or large groups of Arc-enabled Kubernetes clusters, we recommend automating the deployment of Arc extensions at scale via [Azure Policy](/azure/governance/policy/overview). The following is an overview of steps:
 
 - Create an [initiative](/azure/security-center/security-policy-concept#what-is-a-security-initiative) to deploy VM extensions at scale.
 - Use a "[DeployIfNotExists](/azure/governance/policy/concepts/effects#deployifnotexists)" policy effect to ensure the VM extensions get deployed automatically, as more servers are onboarded, and remediate any servers where the VM extensions have been removed.
-- More details on using policy with Azure Arc-enabled servers can be found in the [Security, governance and compliance for Azure Arc-enabled servers](./eslz-security-governance-and-compliance.md) section of this guide.
+- More details on using policy with Azure Arc-enabled Kubernetes clusters can be found in the [Security, governance and compliance for Azure Arc-enabled servers](./eslz-security-governance-and-compliance.md) section of this guide.
 
-### Lifecycle automation
 
-*** need to customize ***
+### Lifecycle Automation
 
-Once your servers are onboarded to Azure, it's recommended to [enable patch and Update Management](/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/arc-update-management) to ease OS lifecycle management on your Azure Arc-enabled servers. Update Management in Azure Automation allows you to view and schedule operating system updates and patches for your Azure Arc-enabled servers at scale. More information about Update Management for Azure Automation can be found in [Update Management overview](/azure/automation/update-management/overview).
+During the onboarding process, Azure Arc enabled Kubernetes provision agents on to your Kubernetes cluster, these agent versions will change with updates to Azure Arc and should be regularly upgraded. We recommend enabling the auto-upgrade feature for the Azure Arc agents running inside your cluster, this is the default behavior when onboarding a cluster to Azure Arc. Visit [Upgrade Agents] for more information on the auto-upgrade feature and version support policy.
 
-We recommend enabling OS lifecycle management automation by configuring the [Update Management](/azure/automation/update-management/enable-from-automation-account) solution in Azure Automation, to manage operating system updates for your Windows and Linux virtual machines registered with Azure Arc-enabled servers.
+The other Arc components that will require updates on your cluster are Extension versions. For any extension installed on your cluster, we recommend to leave the default behavior to automatically upgrade the extension minor version, which can optionally be disabled during provisioning. In the case of a major version upgrade which may cause, there will be a migration path documented to move to the extension major release. Please see [Extensions and Custom locations](./extensions-management.md) for more information.
+
 
 ## Next steps
 
-*** need to customize ***
-
 For more guidance for your hybrid cloud adoption journey,  review the following:
 
-- Review [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/day2/) scenarios
-- Review the [prerequisites](/azure/azure-arc/servers/agent-overview#prerequisites) for Azure Arc-enabled servers
-- Plan an [at-scale deployment](/azure/azure-arc/servers/plan-at-scale-deployment) of Azure Arc-enable servers
+- Review [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_k8s/) scenarios
+- Review [Identity and Access requirements](./identity-access-management.md) for Azure Arc-enabled Kubernetes
 - To learn more about Azure Arc, check out the [Azure Arc learning path on Microsoft Learn](/learn/paths/manage-hybrid-infrastructure-with-azure-arc/)
