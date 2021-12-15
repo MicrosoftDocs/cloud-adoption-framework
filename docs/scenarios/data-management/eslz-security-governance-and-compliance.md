@@ -3,7 +3,7 @@ title: Security, governance, and compliance for enterprise-scale data management
 description: Learn how to improve security, governance, and compliance for enterprise-scale data management and analytics in Azure.
 author: andrehass
 ms.author: anhass
-ms.date: 11/25/2021
+ms.date: 12/15/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -16,7 +16,7 @@ When planning data management and analytics architecture, pay special attention 
 
 Cloud solutions initially hosted single, relatively isolated applications. As the benefits of cloud solutions became clear, larger-scale workloads were hosted in the cloud, such as SAP on Azure. So it became vital to address the security, reliability, performance, and cost of regional deployments throughout the lifecycle of cloud services.
 
-The vision for data management and analytics landing zone security, compliance, and governance on Azure is to provide tools and processes that help you minimize risk and make effective decisions. The enterprise-scale landing zones define security governance and compliance roles and responsibilities.
+The vision for data management and analytics landing zone security, compliance, and governance on Azure is to provide tools and processes that help you minimize risk and make effective decisions. The azure landing zones define security governance and compliance roles and responsibilities.
 
 The data management and analytics scenario pattern relies on several security features that can be enabled in Azure. These features include encryption, role-based access control, access control lists, and networking restrictions.
 

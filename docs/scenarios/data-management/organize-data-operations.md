@@ -3,7 +3,7 @@ title: DevOps automation for data management and analytics in Azure
 description: Learn about DevOps automation for the data management and analytics scenario in Azure.
 author: abdale
 ms.author: hamoodaleem
-ms.date: 08/06/2021
+ms.date: 12/15/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -75,7 +75,7 @@ In Azure Resource Manager templates, the core provisioning is in the **resources
 ```
 
 > [!IMPORTANT]
-> Every layer of the enterprise-scale for analytics and AI such as data management landing zone, data landing zones, data integrations, or data products, should be defined with a declarative language like Azure Resource Manager or Terraform, checked into a repository, and deployed through CI/CD pipelines. This allows teams to track and version changes to the infrastructure and configuration of Azure scope while supporting different architecture levels to be automated in an agile way. This guidance leads teams to use Git repositories to always have visibility into the state of specific Azure scopes.
+> Every layer of the data management and analytics scenario such as data management landing zone, data landing zones, data integrations, or data products, should be defined with a declarative language like Azure Resource Manager or Terraform, checked into a repository, and deployed through CI/CD pipelines. This allows teams to track and version changes to the infrastructure and configuration of Azure scope while supporting different architecture levels to be automated in an agile way. This guidance leads teams to use Git repositories to always have visibility into the state of specific Azure scopes.
 
 ## Workflows and automation
 

@@ -53,7 +53,7 @@ Scalability is a key concept and a single data lake might limit scalability from
 
 ## Multiregion deployments
 
-Data residency rules, or a requirement to have data close to a user base, can drive the requirement to create Azure Data Lake accounts in multiple Azure regions. We recommend you create a data landing zone in one region and then replicate global data using third-party products like AzCopy or Azure Data Factory. Local data remains in-region while global data is replicated across multiple regions.
+Data residency rules, or a requirement to have data close to a user base, can drive the requirement to create Azure Data Lake accounts in multiple Azure regions. We recommend you create a data landing zone in one region and then replicate global data using AzCopy, Azure Data Factory or third-party products. Local data remains in-region while global data is replicated across multiple regions.
 
 ## Data lake access control list guidelines
 

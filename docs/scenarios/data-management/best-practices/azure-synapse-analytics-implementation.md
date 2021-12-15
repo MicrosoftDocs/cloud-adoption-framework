@@ -3,7 +3,7 @@ title: Use Azure Synapse Analytics with data management and analytics scenario
 description: Learn how to use Azure Synapse Analytics with data management and analytics scenario.
 author: mboswell
 ms.author: mboswell
-ms.date: 11/25/2021
+ms.date: 12/15/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -52,7 +52,7 @@ At the network level, data management and analytics scenario uses [synapse manag
 
 Use access control lists with [Azure Active Directory (Azure AD) pass-through in Azure Synapse Analytics](/azure/synapse-analytics/sql/active-directory-authentication#azure-ad-pass-through-in-azure-synapse-analytics) to manage access to the files in the data lake.
 
-We recommend row-level security and column-level security to restrict the data access on the tables in synapse SQL pool using security policy. Row-level security and column-level security is used at the database level and in addition to the database roles.
+We recommend row-level security and column-level security to restrict the data access on the tables in Azure Synapse SQL pool using security policy. Row-level security and column-level security is used at the database level and in addition to the database roles.
 
 For example, row-level security ensures that users in a specific data integration or data product only see their own data. Even if the table contains data for the entire enterprise.
 

@@ -3,7 +3,7 @@ title: Azure Machine Learning as a data product for data management and analytic
 description: Learn about Azure Machine Learning as a data product for data management and analytics scenario.
 author: abdale
 ms.author: deeikele
-ms.date: 11/25/2021
+ms.date: 12/15/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -22,13 +22,13 @@ Azure Machine Learning is an integrated platform for managing the machine learni
 
 Azure Machine Learning covers all aspects of the data science lifecycle. It covers datastore and dataset registration to model deployment. It can be used for any kind of machine learning, from classical machine learning to deep learning. It includes supervised and unsupervised learning. Whether you prefer to write Python, R code, or use zero-code or low-code options such as the designer, you can build, train, and track accurate machine learning and deep learning models in an Azure Machine Learning workspace.
 
-Azure Machine Learning, the Azure platform, and Azure AI services can work together to manage the machine learning lifecycle. A machine learning practitioner can use Azure Synapse Analytics, Azure SQL Database, or Microsoft Power BI to start analyzing data and transition to Azure Machine Learning for prototyping, managing experimentation, and operationalization. In enterprise-scale landing zones, Azure Machine Learning can be considered a [data product](/azure/cloud-adoption-framework/scenarios/data-management/architectures/data-landing-zone-data-products).
+Azure Machine Learning, the Azure platform, and Azure AI services can work together to manage the machine learning lifecycle. A machine learning practitioner can use Azure Synapse Analytics, Azure SQL Database, or Microsoft Power BI to start analyzing data and transition to Azure Machine Learning for prototyping, managing experimentation, and operationalization. In azure landing zones, Azure Machine Learning can be considered a [data product](/azure/cloud-adoption-framework/scenarios/data-management/architectures/data-landing-zone-data-products).
 
-## Azure Machine Learning in enterprise-scale
+## Azure Machine Learning in data management and analytics scenario
 
-A Cloud Adoption Framework (CAF) landing zone foundation, enterprise-scale data landing zones, and the configuration of Azure Machine Learning set up machine learning professionals with a preconfigured environment to which they can repeatedly deploy new machine learning workloads or migrate existing workloads. These capabilities can help machine learning professionals to gain more agility and value for their time.
+A Cloud Adoption Framework (CAF) landing zone foundation, data management and analytics scenario data landing zones, and the configuration of Azure Machine Learning set up machine learning professionals with a preconfigured environment to which they can repeatedly deploy new machine learning workloads or migrate existing workloads. These capabilities can help machine learning professionals to gain more agility and value for their time.
 
-The following design principles can guide the implementation of Azure Machine Learning enterprise-scale landing zones:
+The following design principles can guide the implementation of Azure Machine Learning azure landing zones:
 
 - **Accelerated data access:** Preconfigure landing zone storage components as data stores in the Azure Machine Learning workspace.
 
@@ -57,11 +57,11 @@ You can deploy the number of machine learning workspaces that your workloads req
 
 - Depending on your machine learning project's lifecycle, deploy one development (dev) workspace to prototype use cases and explore data early on. For work that requires continuous experimentation, testing, and deployment, deploy a staging and production workspace.
 
-- When multiple environments are needed for dev, staging, and production workspaces in enterprise-scale, we recommend avoiding data duplication by having each environment land in the same production data landing zone.
+- When multiple environments are needed for dev, staging, and production workspaces in a data landing zone, we recommend avoiding data duplication by having each environment land in the same production data landing zone.
 
 - See [Organize and set up Azure Machine Learning environments](../../../ready/azure-best-practices/ai-machine-learning-resource-organization.md) to learn more about how to organize and set up Azure Machine Learning resources.
 
-For each default resource configuration in an enterprise-scale data landing zone, an Azure Machine Learning service is deployed in a dedicated resource group with the following configurations and dependent resources:
+For each default resource configuration in an data landing zone, an Azure Machine Learning service is deployed in a dedicated resource group with the following configurations and dependent resources:
 
 - Azure Key Vault
 - Application Insights
@@ -72,7 +72,7 @@ For each default resource configuration in an enterprise-scale data landing zone
 
 ### Integration with data landing zone core services
 
-The enterprise-scale data landing zone comes with a default set of services that are deployed in the [core services layer](/azure/cloud-adoption-framework/scenarios/data-management/architectures/data-landing-zone#core-services-layer). These core services can be configured when Azure Machine Learning is deployed in enterprise-scale.
+The data landing zone comes with a default set of services that are deployed in the [core services layer](/azure/cloud-adoption-framework/scenarios/data-management/architectures/data-landing-zone#core-services-layer). These core services can be configured when Azure Machine Learning is deployed in data landing zone.
 
 - Connect Azure Synapse Analytics or Databricks workspaces as linked services to integrate data and process big data.
 
@@ -82,7 +82,7 @@ The enterprise-scale data landing zone comes with a default set of services that
 
 ### Network connectivity
 
-Networking for implementing Azure Machine Learning in enterprise-scale landing zones is set up with [security best practices for Azure Machine Learning](/azure/machine-learning/concept-enterprise-security) and CAF [networking best practices](/azure/security/fundamentals/network-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json). These best practices include the following configurations:
+Networking for implementing Azure Machine Learning in azure landing zones is set up with [security best practices for Azure Machine Learning](/azure/machine-learning/concept-enterprise-security) and CAF [networking best practices](/azure/security/fundamentals/network-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json). These best practices include the following configurations:
 
 - Azure Machine Learning and dependent resources are configured to use Private Link endpoints.
 - Managed compute resources are deployed only with private IP addresses.
@@ -102,7 +102,7 @@ Consider the following recommendations for managing user identities and access w
 
 ### Provision infrastructure through self-service
 
-Self-service can be enabled and governed with [policies for Azure Machine Learning](/azure/machine-learning/how-to-integrate-azure-policy). The following table lists a set of default enterprise-scale policies when you deploy Azure Machine Learning. For more information, see [Azure Policy built-in policy definitions for Azure Machine Learning](/azure/machine-learning/policy-reference).
+Self-service can be enabled and governed with [policies for Azure Machine Learning](/azure/machine-learning/how-to-integrate-azure-policy). The following table lists a set of default policies when you deploy Azure Machine Learning. For more information, see [Azure Policy built-in policy definitions for Azure Machine Learning](/azure/machine-learning/policy-reference).
 
 | Policy | Type | Reference |
 | ------ | ------ | ----- |
@@ -122,7 +122,7 @@ Self-service can be enabled and governed with [policies for Azure Machine Learni
 
 ## Recommendations for managing your environment
 
-Enterprise-scale data landing zones outline reference implementation for repeatable deployments, which can help you to set up manageable and governable environments. Consider the following recommendations for using Azure Machine Learning to manage your environment:
+Data management and analytics scenario data landing zones outline reference implementation for repeatable deployments, which can help you to set up manageable and governable environments. Consider the following recommendations for using Azure Machine Learning to manage your environment:
 
 - Use Azure AD groups to manage access to machine learning resources.
 
