@@ -3,7 +3,7 @@ title: Introduction to Data management and analytics scenario
 description: Gain an overview of Data management and analytics scenario.
 author: mboswell
 ms.author: brblanch
-ms.date: 06/22/2021
+ms.date: 12/15/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -22,7 +22,7 @@ Even with the introduction of the cloud, the centralized approach to data manage
 
 In response to the challenges of centralized data warehouses, Data management and analytics scenario represents a strategic design path and targets the technical state for an Azure analytics and AI environment.
 
-The pattern relies upon distribution of the data and its pipelines across domains. This pattern enables ownership of accessibility, usability, and development. Largely based on these patterns, Data management and analytics scenario includes the following capabilities:
+The pattern relies upon distribution of the data and its pipelines across domains. This pattern enables ownership of accessibility, usability, and development. Largely based on these patterns, data management and analytics scenario includes the following capabilities:
 
 - Storage
 - Data lineage
@@ -55,7 +55,7 @@ To learn more, see:
 
 ### Data management landing zone
 
-At the heart of Data management and analytics scenario, is its data management capability. This capability is enabled through the data management landing zone.
+At the heart of data management and analytics scenario, is its data management capability. This capability is enabled through the data management landing zone.
 
 :::image type="content" source="./images/data-management-overview-1.png" alt-text="Diagram of a Data management overview.":::
 
@@ -125,13 +125,13 @@ Examples of data products include:
 - Azure Cosmos DB
 
 > [!IMPORTANT]
-> A **data product** fulfills a specific need within a business using data. Data products manage, organize, and make sense of the data across domains and present the insights gained from the data products. A data product is a result of data from one or many data integrations or other data products.
+> A **data product** fulfils a specific need within a business using data. Data products manage, organize, and make sense of the data across domains and present the insights gained from the data products. A data product is a result of data from one or many data integrations or other data products.
 
 For more information, see [Data management and analytics scenario data products in Azure](./architectures/data-landing-zone-data-products.md).
 
 ### Data platform operational excellence
 
-The Data management and analytics scenario is designed with data platform operational excellence at its core through self-service enablement, governance, and streamlined deployments. The working model for data operations enables these core principles by using infrastructure-as-code and deployment templates. It also uses deployment processes that include a forking and branching strategy and a central repository.
+The data management and analytics scenario is designed with data platform operational excellence at its core through self-service enablement, governance, and streamlined deployments. The working model for data operations enables these core principles by using infrastructure-as-code and deployment templates. It also uses deployment processes that include a forking and branching strategy and a central repository.
 
 For more information, see [Understand DevOps automation for data management and analytics in Azure](./organize-data-operations.md).
 

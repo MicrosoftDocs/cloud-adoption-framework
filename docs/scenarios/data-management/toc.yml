@@ -1,7 +1,7 @@
 items:
-  - name: Data management and analytics Scenario
+  - name: Data management and analytics scenario
     href: ./index.md
-    pdf_name: Data management and analytics Scenario
+    pdf_name: Data management and analytics scenario
 
   - name: Overview
     href: ./overview-data-governance.md
