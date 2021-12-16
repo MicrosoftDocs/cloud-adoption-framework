@@ -3,7 +3,7 @@ title: Technology for end-to-end governance in Azure
 description: Learn about the technology needed for end-to-end governance in Azure.
 author: mboswell
 ms.author: mboswell
-ms.date: 11/25/2021
+ms.date: 12/15/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -71,7 +71,7 @@ With the Azure Purview data insights, data officers and security officers can ge
 
 In the context of data governance, these technologies can be combined to produce trusted reusable data assets.
 
-:::image type="content" source="./images/data-cataloging.png" alt-text="Diagram of data landing zones in enterprise-scale for analytics and AI.":::
+:::image type="content" source="./images/data-cataloging.png" alt-text="Diagram of data landing zones in data management and analytics scenario.":::
 
 Data in disparate registered data sources across the data landscape can be ingested into Azure Data Lake Storage. It can be integrated using Azure Data Factory to create trusted, commonly understood, reusable Common Data Model assets. The assets can be persisted back in the data lake published in Azure Purview.
 

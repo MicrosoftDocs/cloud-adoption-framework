@@ -16,7 +16,7 @@ The data management landing zone is classified as a management function and is c
 
  :::image type="content" source="../images/data-management-overview.png" alt-text="Diagram of data management landing zone overview." lightbox="../images/data-management-overview.png":::
 
-The data management landing zone is a separate subscription that has the standard services of an enterprise-scale framework. They're connected to the data landing zones and connectivity subscription via virtual network peering. It allows the data governance of the data, via crawlers, which connect to the data lakes and polyglot storage in the data landing zones.
+The data management landing zone is a separate subscription that has the standard services of an azure landing zone. They're connected to the data landing zones and connectivity subscription via virtual network peering. It allows the data governance of the data, via crawlers, which connect to the data lakes and polyglot storage in the data landing zones.
 
 > [!NOTE]
 > Polyglot persistence is an enterprise storage term used to describe choosing different data storage/data stores technologies to support the various data types and their storage needs. Polyglot persistence is essentially the idea that an application can use more than one core database or storage technology.
