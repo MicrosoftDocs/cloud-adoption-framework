@@ -20,14 +20,14 @@ Software defined datacenters and other cloud technologies are helping solve long
 
 - **Inventory and configuration error discovery** are much more reliable for cloud hosted assets as they're all immediately visible (vs. A physical datacenter).
 - **Vulnerability management** evolving into a critical part of overall security posture management.
-- **Addition of container technologies** to be managed and secured by infrastructure and network teams as the organization adopts this technology broadly. See [Container security in Security Center](/azure/security-center/container-security) for an example.
+- **Addition of container technologies** to be managed and secured by infrastructure and network teams as the organization adopts this technology broadly. See [Container security in Defender for Cloud](/azure/security-center/container-security) for an example.
 - **Security agent consolidation** and tool simplification to reduce the maintenance and performance overhead of security agents and tools.
 - **Allow-listing of applications** and internal network filtering is becoming much easier to configure and deploy for cloud hosted servers (using machine learning generated rule sets). See [Adaptive application controls](/azure/security-center/security-center-adaptive-application) and [adaptive network hardening](/azure/security-center/security-center-adaptive-network-hardening) for Azure examples.
 - **Automated templates** for configuring infrastructure and security are much easier with software defined datacenters in the cloud. Azure example is [Azure Blueprints](/azure/governance/blueprints/overview)
 - **Just in time (JIT) and just enough access (JEA)** enable practical application of least privilege principles to privileged access for servers and endpoints.
 - **User experience** becomes critical as users increasingly can choose or purchase their endpoint devices.
 - **Unified endpoint management** allows managing security posture of all endpoint devices including mobile and traditional PCs as well as providing critical device integrity signals for zero trust access control solutions.
-- **Network security architectures** and controls are partially diminished with the shift to cloud application architectures, but they remain a fundamental security measure. For more information, see [Network security and containment](/azure/architecture/framework/security/network-security-containment).
+- **Network security architectures** and controls are partially diminished with the shift to cloud application architectures, but they remain a fundamental security measure. For more information, see [Network security and containment](/azure/architecture/framework/security/design-network-segmentation).
 
 ## Team composition and key relationships
 

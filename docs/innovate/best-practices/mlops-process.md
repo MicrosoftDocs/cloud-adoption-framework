@@ -77,13 +77,13 @@ The Team Data Science Process (TDSP) provides a lifecycle to structure the devel
 - Modeling
 - Deployment
 
-The goals, tasks, and documentation artifacts for each stage of the TDSP lifecycle are described in the [Team Data Science Process lifecycle](/azure/machine-learning/team-data-science-process/lifecycle).
+The goals, tasks, and documentation artifacts for each stage of the TDSP lifecycle are described in the [Team Data Science Process lifecycle](/azure/architecture/data-science-process/lifecycle).
 
 ## The roles and activities within machine learning operations
 
 Per the TDSP lifecycle, the key roles in the AI project are data engineer, data scientist, and machine learning operations engineer. These roles are critical to your project's success and must work together toward accurate, repeatable, scalable, and production-ready solutions.
 
-[![A diagram showing the machine learning operations process.](./media/mlops-process.png)](./media/mlops-process.png#lightbox)
+[![Diagram showing the machine learning operations process.](./media/mlops-process.png)](./media/mlops-process.png#lightbox)
 
 - **Data engineer:** This role ingests, validates, and cleans the data. Once the data is refined, it's cataloged and made available for data scientists to use. At this stage, it's important to explore and analyze duplicate data, remove outliers, and identify missing data. These activities should be defined in the pipeline steps and are executed as the train pipeline is preprocessed. Unique and specific names should be assigned to core and generated features.
 

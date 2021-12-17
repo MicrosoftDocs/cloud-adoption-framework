@@ -20,7 +20,7 @@ IT staff members might feel anxious about their roles and positions as they real
 The Cloud Adoption Framework guides readers through the full adoption lifecycle. Throughout this framework, readers are provided opportunities to build necessary skills. To help you get started on this journey, skills-readiness articles are included in the following outline for easier access. Each of the following links maps to the skills required to be successful in each of those adoption phases.
 
 - **[Strategy](../strategy/suggested-skills.md):** Develop the skills needed to prepare an actionable migration plan. This includes business justification and other required business-planning skills.
-- **[Plan](./suggested-skills.md):** Develop the skills needed to prepare an actionable migration plan. This includes business justification and other required business-planning skills.
+- **Plan:** Develop the skills needed to prepare an actionable migration plan. This includes business justification and other required business-planning skills.
 - **[Ready](../ready/suggested-skills.md):** Develop the skills needed to prepare the business, culture, people, and environment for coming changes.
 
 - **Adopt:** Adoption skills are aligned to various technical efforts:

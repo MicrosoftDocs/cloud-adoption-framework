@@ -1,12 +1,13 @@
 ---
-title: Business continuity and disaster recovery for data management and analytics 
+title: Business continuity and disaster recovery for data management and analytics
 description: Learn how this enterprise-scale scenario can improve business continuity and disaster recovery for data management and analytics in Azure.
 author: christophermschmidt
 ms.author: chrschm
-ms.date: 07/19/2021
+ms.date: 11/25/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Business continuity and disaster recovery for data management and analytics
@@ -15,7 +16,7 @@ When you design architecture for a cloud service, consider your availability req
 
 High availability and disaster recovery can sometimes be combined. The two areas have slightly different strategies, especially when it comes to data. To learn more, see the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/) and its [reliability principles](/azure/architecture/framework/resiliency/principles).
 
-Instead of trying to prevent failures, accept up front that failures can and do happen. Minimize the effects of any single failing component in the life cycle. Your tolerance for cost, recovery point objective, and recovery time objective determine the type of solution to implement.
+Instead of trying to prevent failures, accept up front that failures can and do happen. Minimize the effects of any single failing component in the lifecycle. Your tolerance for cost, recovery point objective, and recovery time objective determine the type of solution to implement.
 
 ## Backup strategies
 
@@ -47,7 +48,7 @@ Azure Data Lake Storage Gen2 already supports 3x replication to guard against lo
 If one of the data landing zones requires geo-redundancy, with Data Lake Storage Gen2, we recommend you geo-replicate your data by using GRS or RA-GRS. Consider ways for the application using Data Lake Storage Gen2 to automatically fail over to the secondary region. You could use monitoring triggers or length of failed attempts. Otherwise, at least send a notification to administrators for manual intervention. Keep in mind that there's trade-off of failing over versus waiting for a service to come back online.
 
 > [!NOTE]
-> A storage account which is configured as RA-GRS or any other GRS technology does not qualifies as a response to disaster recovery. Conduct appropriate due diligence in terms of what works best, including a dual load scenario, which copies data into two Azure regions.
+> A storage account configured as RA-GRS or GRS can be part of a disaster recovery plan but requires due diligence analyzing RPO and RTO and reviewing other options such as a dual load scenario which copies data into two different Azure regions.
 
 Each data landing zone must have a recovery point objective for its data integrations and data products. Each data landing zone must have a defined replication strategy for its use cases.
 
@@ -61,9 +62,9 @@ For an overview of high availability with Azure Machine Learning, see [Failover 
 
 ### Azure Key Vault
 
-Azure Key Vault provides features to help you maintain availability and prevent data loss. Back up secrets only if you have a critical business justification. Backing up secrets in your key vault may introduce operational challenges such as maintaining multiple sets of logs, permissions, and backups when secrets expire or rotate. For more information, see [Azure Key Vault backup](/azure/key-vault/general/backup).
+Azure Key Vault provides features to help you maintain availability and prevent data loss. Back up secrets only if you have a critical business justification. Backing up secrets in your key vault might introduce operational challenges such as maintaining multiple sets of logs, permissions, and backups when secrets expire or rotate. For more information, see [Azure Key Vault backup](/azure/key-vault/general/backup).
 
-Key Vault maintains availability in disaster scenarios. It fails over requests to a paired region without any intervention from a user. For more information, see [Azure Key Vault availability and redundancy](/azure/key-vault/general/disaster-recovery-guidance). As an alternative, you may consider storing secrets and other Key Vault artifacts in a secondary vault with appropriate permissions. This pattern may be suited for applications that require the vault to be in the same region as the application.
+Key Vault maintains availability in disaster scenarios. It fails over requests to a paired region without any intervention from a user. For more information, see [Azure Key Vault availability and redundancy](/azure/key-vault/general/disaster-recovery-guidance). As an alternative, you might consider storing secrets and other Key Vault artifacts in a secondary vault with appropriate permissions. This pattern might be suited for applications that require the vault to be in the same region as the application.
 
 ### Azure SQL Database
 

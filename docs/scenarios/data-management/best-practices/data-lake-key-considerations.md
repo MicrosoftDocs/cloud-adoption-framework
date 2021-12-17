@@ -1,19 +1,20 @@
 ---
 title: Key considerations for Azure Data Lake Storage
-description: Understand key Azure Data Lake Storage considerations for enterprise-scale for analytics and AI.
+description: Understand key Azure Data Lake Storage considerations for data management and analytics scenario.
 author: mboswell
 ms.author: mboswell
-ms.date: 08/03/2021
+ms.date: 12/15/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Key considerations for Azure Data Lake Storage
 
 Learn about important considerations for your Azure data lakes.
 
-## Life cycle management
+## Lifecycle management
 
 Azure Storage offers different access tiers, which allow you to store blob object data in the most cost-effective manner. The available access tiers include:
 
@@ -35,23 +36,23 @@ Data stored in the cloud grows at an exponential rate. To manage costs for your 
 
 These data access scenarios benefits from a different access tier that's optimized for a particular access pattern. With hot, cool, and archive access tiers, Azure Blob Storage addresses this need for differentiated access tiers with separate pricing models.
 
-Enterprise-scale for analytics and AI recommends that you implement a tiering policy for all three Data Lake Storage accounts.
+Data management and analytics scenario recommends that you implement a tiering policy for all three Data Lake Storage accounts.
 
-Life cycle management uses a rule-based policy. Use this policy to transition your data to the appropriate access tiers or to expire at the end of the data's life cycle.
+Lifecycle management uses a rule-based policy. Use this policy to transition your data to the appropriate access tiers or to expire at the end of the data's lifecycle.
 
-With the life cycle management policy, you can:
+With the lifecycle management policy, you can:
 
 - Transition blobs from cool to hot immediately if accessed to optimize for performance.
 
 - Transition blobs, blob versions, and blob snapshots to a cooler storage tier to optimize for cost. This transition is useful if the blobs are not accessed or modified for a period of time. For example, hot to cool, hot to archive, or cool to archive.
 
-- Delete blobs, blob versions, and blob snapshots at the end of their life cycle.
+- Delete blobs, blob versions, and blob snapshots at the end of their lifecycle.
 
 - Define rules to be run once per day at the storage account level.
 
 - Apply rules to containers or a subset of blobs by using name prefixes or blob index tags as filters.
 
-For example, suppose a system has data that's used frequently during the first stages of the life cycle, but then only occasionally after a month. After two months, the dataset is rarely used. In this scenario, hot storage is best during the first month. Cool storage is the most cost optimal for occasional access. Archive storage is the best tier option after the data gets old. You can use a life cycle management policy rule to automatically move aging data to cooler tiers.
+For example, suppose a system has data that's used frequently during the first stages of the lifecycle, but then only occasionally after a month. After two months, the dataset is rarely used. In this scenario, hot storage is best during the first month. Cool storage is the most cost optimal for occasional access. Archive storage is the best tier option after the data gets old. You can use a lifecycle management policy rule to automatically move aging data to cooler tiers.
 
 ## Data lakes connectivity
 
@@ -62,9 +63,9 @@ For more information, see [Private endpoints](../eslz-network-topology-and-conne
 > [!IMPORTANT]
 > Data from a data landing zone can be accessed from another data landing zone over the virtual network peering between the zones. This is done using the private endpoints associated with each data lake account. We recommend turning off all public access to the lakes and using private endpoints. Network connectivity across data landing zones, like private links, are controlled by the platform operations team.
 
-## Soft delete for containers (preview)
+## Soft delete for containers
 
-Soft delete for containers (preview) protects your data from being accidentally or maliciously deleted. When container soft delete is enabled for a storage account, any deleted containers and their contents are retained in Azure Storage for the period that you specify. During the retention period, you can restore previously deleted containers. Restoring a container restores any blobs within that container when it was deleted.
+Soft delete for containers protects your data from being accidentally or maliciously deleted. When container soft delete is enabled for a storage account, any deleted containers and their contents are retained in Azure Storage for the period that you specify. During the retention period, you can restore previously deleted containers. Restoring a container restores any blobs within that container when it was deleted.
 
 For end-to-end protection of your blob data, we recommend enabling the following data protection features:
 
@@ -74,7 +75,7 @@ For end-to-end protection of your blob data, we recommend enabling the following
 > [!WARNING]
 > Deleting a storage account can't be undone. Container soft delete does not protect against the deletion of a storage account, but only against the deletion of containers in that account. To protect a storage account from deletion, configure a lock on the storage account resource. For more information about locking Azure Resource Manager resources, see [Lock resources to prevent unexpected changes](/azure/azure-resource-manager/management/lock-resources).
 
-## Store business-critical blob data with immutable storage (preview)
+## Store business-critical blob data with immutable storage
 
 Store business-critical data objects in a write once, read many (WORM) state with Azure Blob Storage. This state makes the data non-erasable and non-modifiable for a user-specified interval. During the retention interval, blobs can be created and read but can't be modified or deleted. Immutable storage is available for general-purpose v1, general-purpose v2, BlobStorage, and BlockBlobStorage accounts in all Azure regions.
 
@@ -82,7 +83,7 @@ For information about how to set and clear legal holds or create a time-based re
 
 Immutable storage helps healthcare organizations, financial institutions, and related industries. Particularly for broker-dealer organizations to store data securely. Immutable storage can also be used in any scenario to protect critical data against modification or deletion.
 
-For more information, see [How immutable storage for Azure Blob Storage works](/azure/storage/blobs/immutable-storage-overview#about-immutable-blob-storage#about-immutable-blob-storage).
+For more information, see [How immutable storage for Azure Blob Storage works](/azure/storage/blobs/immutable-storage-overview#about-immutable-blob-storage).
 
 Depending on your industry, we recommend that you assess immutable storage for use in the raw layer of the data lake.
 
@@ -108,7 +109,7 @@ The types of anonymous requests logged are:
 - Successful requests.
 - Server errors.
 - Time out errors for both client and server.
-- Failed GET requests with the error code 304, Not Modified.
+- Failed HTTP GET requests with the error code 304 (`Not Modified`).
 
 All other failed anonymous requests aren't logged.
 

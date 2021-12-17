@@ -6,7 +6,8 @@ ms.author: brblanch
 ms.date: 06/22/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: strategy
+ms.subservice: scenario
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Integrate data management and analytics into your cloud adoption strategy
@@ -105,9 +106,9 @@ Using data to build better products and higher value services as a point of comp
 
 ## A principled approach to your data strategy
 
-With data governance as the focus, the following diagram shows the key stages of a data life cycle:
+With data governance as the focus, the following diagram shows the key stages of a data lifecycle:
 
-![Diagram of a data life cycle.](./images/data-management-and-quality.png)
+![Diagram of a data lifecycle.](./images/data-management-and-quality.png)
 
 An effective data strategy must have provisions for data governance. They're mutually inclusive, but not the same thing.
 
@@ -129,7 +130,7 @@ Your data processing needs will vary according to the workload. For example, mos
 
 The most popular organizational processing requirements come from online transaction processing (OLTP). Certain workloads need specialized processing such as high performance computing (HPC), also called "big compute". These use many CPU or GPU-based computers to solve complex mathematical tasks.
 
-For certain specialized workloads, customers can secure execution environments like Azure confidential computing, which helps users secure data while it's in use on public cloud platforms. This state is required for efficient processing. The data is protected inside a Trusted Execution Environment (TEE), also known as an enclave. This environment protects the code and data against viewing and modification from outside of the TEE. This creates the ability to train AI models using data sources from different organizations without sacrificing data confidentiality.
+For certain specialized workloads, customers can secure execution environments like Azure confidential computing, which helps users secure data while it's in use on public cloud platforms. This state is required for efficient processing. The data is protected inside a trusted execution environment (TEE), also known as an enclave. This environment protects the code and data against viewing and modification from outside of the TEE. This creates the ability to train AI models using data sources from different organizations without sacrificing data confidentiality.
 
 ### Analytics
 
@@ -137,7 +138,7 @@ Extract, transform, load construct, or called ETL or ELT depending on where the 
 
 Batch processing on Azure Databricks, R, Python or for deep learning models are common examples. Compute, storage, networking, orchestration, DevOps and MLOps, are key considerations here. For super large models, look at distributed training of deep learning models on Azure or the turning project. You also need to consider the ability to deal with data and model drift.
 
-Azure enterprise-scale for analytics and AI helps collate all four layers together with people, process, security, and compliance. We also suggest using the recommended architectures from Azure landing zones to get started. They use the Microsoft Cloud Adoption Framework and culminate our experience working through thousands of large-scale enterprise deployments.
+Data management and analytics scenario helps collate all four layers together with people, process, security, and compliance. We also suggest using the recommended architectures from Azure landing zones to get started. They use the Microsoft Cloud Adoption Framework and culminate our experience working through thousands of large-scale enterprise deployments.
 
 Now that we've covered the four stages, the following representation shows the key capabilities needed on top of your data platform to provide end-to-end data governance capability.
 
@@ -157,7 +158,7 @@ We put responsible AI and our principles into practice through the development o
 
 In addition to practices, we've developed a set of tools to help others understand, protect, and control AI at every stage of innovation. Our tools are a result of collaboration across various disciplines to strengthen and accelerate responsible AI, spanning software engineering and development, to social sciences, user research, law, and policy.
 
-To further collaboration, we also open-sourced many tools such as interpret machine learning and Fair Learn that others can use to contribute and build upon alongside democratizing tools through Azure Machine Learning.
+To further collaboration, we also open-sourced many tools such as interpret machine learning and Fairlearn that others can use to contribute and build upon alongside democratizing tools through Azure Machine Learning.
 
 The pivot to becoming a data-driven organization is fundamental to deliver competitive advantage in the new normal. We want to help our customers shift from an application only approach to an application and data-led approach, helping to create an end-to-end data strategy that can ensure repeatability and scalability across current and future use cases that impact business outcomes.
 
@@ -186,7 +187,7 @@ When you deliver data products against the set-out success criteria in a standar
 
 ## Next steps
 
-The following articles can guide your cloud adoption journey and help your cloud adoption scenario to succeed: 
+The following articles can guide your cloud adoption journey and help your cloud adoption scenario to succeed:
 
 - [Develop a plan for data management and analytics](./plan.md)
 - [Review your environment for Azure landing zones](./ready.md)

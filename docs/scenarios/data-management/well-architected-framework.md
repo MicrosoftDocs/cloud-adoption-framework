@@ -6,7 +6,8 @@ ms.author: prda
 ms.date: 01/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: scenario
+ms.custom: e2e-data-management, think-tank
 ---
 
 # The Azure Well-Architected Framework for data workloads
@@ -15,7 +16,7 @@ The [Plan methodology of this scenario](./plan.md) outlines a process for you to
 
 ## Cost optimization
 
-It's critical to architect with the right tool for the right solution in mind. This principal can help you analyze spend over time. It can also help you analyze your ability to scale out versus scale in when needed. For your data workloads, consider reusability, on-demand scaling, reduced data duplication, and take advantage of the Azure Advisor service.  
+It's critical to architect with the right tool for the right solution in mind. This principal can help you analyze spend over time. It can also help you analyze your ability to scale out versus scale in when needed. For your data workloads, consider reusability, on-demand scaling, reduced data duplication, and take advantage of the Azure Advisor service.
 
 ## Performance efficiency
 
@@ -56,4 +57,4 @@ On top of these environmental controls, the workload team should consider:
 
 ## Next steps
 
-[Overview of the enterprise-scale for analytics and AI data management landing zone in Azure](./architectures/data-management-landing-zone.md)
+[Overview of the data management and analytics scenario data management landing zone in Azure](./architectures/data-management-landing-zone.md)

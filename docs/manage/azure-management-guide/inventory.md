@@ -26,7 +26,7 @@ For any enterprise-grade environment, the following table outlines the suggested
 | Monitor health of Azure services | [Azure Service Health](/azure/service-health/service-health-overview) | Health, performance, and diagnostics for services running in Azure |
 | Log centralization | [Log Analytics](/azure/azure-monitor/logs/log-analytics-overview) | Central logging for all visibility purposes |
 | Monitoring centralization | [Azure Monitor](/azure/azure-monitor/overview) | Central monitoring of operational data and trends |
-| Virtual machine inventory and change tracking | [Change Tracking and Inventory](/azure/automation/change-tracking/overview) | Inventory VMs and monitor changes for guest OS level |
+| Virtual machine inventory and change tracking | [Change Tracking and Inventory in Azure Automation](/azure/automation/change-tracking/overview) | Inventory VMs and monitor changes for guest OS level |
 | Subscription monitoring | [Azure activity log](/azure/azure-monitor/essentials/activity-log) | Monitoring change at the subscription level |
 | Guest OS monitoring | [Azure Monitor for VMs](/azure/azure-monitor/vm/vminsights-overview) | Monitoring changes and performance of VMs |
 | Network monitoring | [Azure Network Watcher](/azure/network-watcher/network-watcher-monitoring-overview) | Monitoring network changes and performance |
@@ -131,17 +131,13 @@ Azure Monitor provides a single unified hub for all monitoring and diagnostics d
 
 ### Action
 
-<!-- markdownlint-disable DOCSMD001 -->
-
 ::: form action="OpenBlade[#blade/Microsoft_Azure_Monitoring/AzureMonitoringBrowseBlade/overview]" submitText="Explore Azure Monitor" :::
-
-<!-- markdownlint-enable DOCSMD001 -->
 
 ::: zone-end
 
 ::: zone target="docs"
 
- Start monitoring your:
+Start monitoring your:
 
 - [Applications](/azure/azure-monitor/app/app-insights-overview)
 - [Containers](/azure/azure-monitor/containers/container-insights-overview)
@@ -174,12 +170,12 @@ There are two approaches to onboarding:
 
 Each article guides you through a series of steps to onboard these solutions:
 
-- Update Management solution
-- Change Tracking and Inventory solution
+- Update Management in Azure Automation
+- Change Tracking and Inventory in Azure Automation
 - Azure activity log
 - Azure Log Analytics Agent Health
 - Antimalware assessment
 - Azure Monitor for VMs
-- Azure Security Center
+- Microsoft Defender for Cloud
 
 Each of the previous steps helps establish inventory and visibility.

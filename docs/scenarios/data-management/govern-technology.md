@@ -3,10 +3,11 @@ title: Technology for end-to-end governance in Azure
 description: Learn about the technology needed for end-to-end governance in Azure.
 author: mboswell
 ms.author: mboswell
-ms.date: 06/21/2021
+ms.date: 12/15/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: overview
+ms.subservice: scenario
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Technology for end-to-end governance in Azure
@@ -22,17 +23,17 @@ In the context of technology needed for end-to-end data governance, Microsoft pr
 
 The first step in data governance is to create a common business vocabulary of common data names and definitions describing logical data entities that can be shared across the enterprise. For example, customer, account, product, supplier, orders, payments, and returns. Once you've created a common business vocabulary, it becomes possible to create these common data assets. You can store them where their reuse can be maximized to drive consistency everywhere.
 
-The graphic below shows some elements of the [standard entities](https://github.com/microsoft/CDM/tree/master/schemaDocuments/core/applicationCommon) available within Common Data Model. More information: [Common Data Model repository on GitHub](https://aka.ms/cdmrepo).
+The following graphic shows some elements of the [standard entities](https://github.com/microsoft/CDM/tree/master/schemaDocuments/core/applicationCommon) available within the Common Data Model. For more information, see the [Common Data Model repository on GitHub](https://aka.ms/cdmrepo).
 
-:::image type="content" source="images/cdm-entities-v1.png" alt-text="Poster of the Common Data Model." lightbox="images/cdm-entities-v1.png":::
+:::image type="content" source="./images/cdm-entities-v1.png" alt-text="Poster of the Common Data Model." lightbox="./images/cdm-entities-v1.png":::
 
-[Download the Common Data Model poster](https://aka.ms/cdmposter)
+[Download a poster of the Common Data Model](https://aka.ms/cdmposter)
 
-The Common Data Model is an open, prebuilt set of common business entities and activities used across a business. The Common Data Model can be used to shortcut the creation of your common business vocabulary.
+The Common Data Model is an open, prebuilt set of common business entities and activities used across a business. The Common Data Model can be used to accelerate the definition of your common business vocabulary.
 
 ## Azure Data Lake Storage
 
-Azure Data Lake Storage provides a common place to capture, ingest, and integrate data to produce trusted data assets. Common Data Model entities can be created in Azure Data Lake storage. The entities can be accessible to:
+Azure Data Lake Storage provides a common place to capture, ingest, and integrate data to produce trusted data assets. Common Data Model entities can be created in Azure Data Lake Storage. The entities can be accessible to:
 
 - Power BI
 - Azure Data Factory
@@ -46,11 +47,11 @@ Microsoft Azure Data Factory is a fully managed, pay-as-you-use, hybrid data int
 
 It supports over 80 connectors to external data sources and databases and has templates for common data integration tasks. A visual front-end browser-based GUI enables non-programmers to create and run process pipelines to ingest, transform, and load data. More experienced programmers can incorporate custom code if necessary, for example, Python programs.
 
-Development of simple or comprehensive extract, transform, load (ETL) and extract, load, transform (ELT) processes without coding or maintenance can be easily achieved. This process includes ingest, move, prepare, transform, and process your data. Scheduling and triggers can also be designed and managed within Azure Data Factory to build an automated data integration and loading environment. It can produce trusted data assets that are described in the Azure Data Catalog business glossary.
+Development of simple or comprehensive extract, transform, load (ETL) and extract, load, transform (ELT) processes without coding or maintenance can be easily achieved. This process includes ingest, move, prepare, transform, and process your data. Scheduling and triggers can also be designed and managed within Azure Data Factory to build an automated data integration and loading environment. It can produce trusted data assets that are described in the data catalog business glossary.
 
 Azure Data Factory can be used to implement and manage a hybrid environment, which includes connectivity to on-premises, cloud, edge streaming, and software as a service (SaaS) data, in a secure and consistent way.
 
-:::image type="content" source="./images/data-factory-wrangling-data-flows.png" alt-text="Diagram of data factory wrangling data flows." lightbox="images/data-factory-wrangling-data-flows-zoom.png":::
+:::image type="content" source="./images/data-factory-wrangling-data-flows.png" alt-text="Diagram of data factory wrangling data flows." lightbox="./images/data-factory-wrangling-data-flows-zoom.png":::
 
 Azure Data Factory wrangling data flows enable business users to make use of the platform to visually discover, explore, and prepare data at scale without writing code. The Azure Data Factory capability is similar to Microsoft Excel Power Query or Microsoft Power BI data flows. Business users use a spreadsheet style user interface with dropdown lists to transform, prepare, and integrate data.
 
@@ -70,13 +71,13 @@ With the Azure Purview data insights, data officers and security officers can ge
 
 In the context of data governance, these technologies can be combined to produce trusted reusable data assets.
 
-:::image type="content" source="./images/data-cataloging.png" alt-text="Diagram of data landing zones in enterprise-scale for analytics and AI.":::
+:::image type="content" source="./images/data-cataloging.png" alt-text="Diagram of data landing zones in data management and analytics scenario.":::
 
-Data in disparate registered data sources across the data landscape can be ingested into Azure Data Lake Storage. It can be integrated using Azure Data Factory to create trusted, commonly understood, reusable Common Data Model data assets. The assets can be persisted back in the data lake published in Azure Purview.
+Data in disparate registered data sources across the data landscape can be ingested into Azure Data Lake Storage. It can be integrated using Azure Data Factory to create trusted, commonly understood, reusable Common Data Model assets. The assets can be persisted back in the data lake published in Azure Purview.
 
 :::image type="content" source="./images/common-infrastructure.png" alt-text="Diagram of common infrastructure.":::
 
-Everything that is underpinned by Azure Data Lake Storage and can then make use of trusted, commonly understood Common Data Model described data assets. The goal is build once, publish in a data marketplace (Azure Purview), and reuse everywhere.
+Everything underpinned by Azure Data Lake Storage can then use trusted, commonly understood data assets described in the Common Data Model. The goal is to build once, publish in a data marketplace (Azure Purview), and reuse everywhere.
 
 ## Next steps
 

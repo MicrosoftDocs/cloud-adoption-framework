@@ -1,18 +1,18 @@
 ---
-title: How automated ingestion frameworks support enterprise-scale for analytics and AI in Azure
-description: Learn about how automated ingestion frameworks support enterprise-scale for analytics and AI in Azure.
+title: How automated ingestion frameworks support data management and analytics scenario in Azure
+description: Learn about how automated ingestion frameworks support data management and analytics scenario in Azure.
 author: mboswell
 ms.author: mboswell
-ms.date: 08/06/2021
+ms.date: 11/25/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
-ms.custom: think-tank, e2e-data
+ms.subservice: scenario
+ms.custom: e2e-data-management, think-tank
 ---
 
-# How automated ingestion frameworks support enterprise-scale for analytics and AI in Azure
+# How automated ingestion frameworks support data management and analytics scenario in Azure
 
-The [ingest process with enterprise-scale for analytics and AI in Azure](./data-ingestion.md#ingest-considerations-for-azure-data-factory) and [ingest and processing resource group](../architectures/data-landing-zone.md#ingest-and-processing) guide enterprises through how to build their own custom ingestion framework.
+The [ingest process with data management and analytics scenario in Azure](./data-ingestion.md#ingest-considerations-for-azure-data-factory) and [ingest and processing resource group](../architectures/data-landing-zone.md#ingest-and-processing) guide enterprises through how to build their own custom ingestion framework.
 
 This section provides guidance for how custom ingestion frameworks can drive services and processes.
 
@@ -72,7 +72,6 @@ The following illustrates how registered data sources in a Data Factory SQL Data
 
 ![Diagram of how new data sources are ingested.](../images/new-datastore-ingestion.png)
 
-
 The Data Factory ingestion master pipeline reads configurations from a Data Factory SQL Database metastore and runs iteratively with the correct parameters. Data moves with little to no change from the source to the raw layer in Azure Data Lake. The data shape is validated based on the Data Factory metastore, and file formats are converted to either Apache Parquet or Avro formats before being copied into the enriched layer.
 
 > [!TIP]
@@ -96,7 +95,7 @@ Use the following API call to register new data sources:
 PUT https://{accountName}.scan.purview.azure.com/datasources/{dataSourceName}
 ````
 
-**URI parameters for the data source**:
+**URI parameters for the data source:**
 
 |Name  |Required  |Type  |Description  |
 |---------|---------|---------|---------|
@@ -107,9 +106,9 @@ PUT https://{accountName}.scan.purview.azure.com/datasources/{dataSourceName}
 
 The following examples show how to use the Azure Purview REST API to register data sources with payloads:
 
-**Register an Azure Data Lake Storage Gen2 data source**:
+**Register an Azure Data Lake Storage Gen2 data source:**
 
-```JSON
+```json
 {
   "kind":"AdlsGen2",
   "name":"<source-name> (for example, My-AzureDataLakeStorage)",
@@ -126,9 +125,9 @@ The following examples show how to use the Azure Purview REST API to register da
 }
 ```
 
-**Register a SQL Database data source**:
+**Register a SQL Database data source:**
 
-```JSON
+```json
 {
   "kind":"<source-kind> (for example, AdlsGen2)",
   "name":"<source-name> (for example, My-AzureSQLDatabase)",
@@ -158,7 +157,7 @@ Use the following API call to scan data sources:
 PUT https://{accountName}.scan.purview.azure.com/datasources/{dataSourceName}/scans/{newScanName}/
 ````
 
-**URI parameters for a scan**:
+**URI parameters for a scan:**
 
 |Name  |Required  |Type  |Description  |
 |---------|---------|---------|---------|
@@ -170,9 +169,9 @@ PUT https://{accountName}.scan.purview.azure.com/datasources/{dataSourceName}/sc
 
 The following examples show how to use the Azure Purview REST API to scan data sources with payloads:
 
-**Scan an Azure Data Lake Storage Gen2 data source**:
+**Scan an Azure Data Lake Storage Gen2 data source:**
 
-```JSON
+```json
 {
   "name":"<scan-name>",
   "kind":"AdlsGen2Msi",
@@ -184,9 +183,9 @@ The following examples show how to use the Azure Purview REST API to scan data s
 }
 ```
 
-**Scan a SQL Database data source**:
+**Scan a SQL Database data source:**
 
-```JSON
+```json
 {
   "name":"<scan-name>",
   "kind":"AzureSqlDatabaseMsi",
@@ -201,12 +200,12 @@ The following examples show how to use the Azure Purview REST API to scan data s
 
 ```
 
-**Use the following API call to scan data sources**:
+**Use the following API call to scan data sources:**
 
-```HTTP
+```http
 POST https://{accountName}.scan.purview.azure.com/datasources/{dataSourceName}/scans/{newScanName}/run
 ```
 
 ## Next steps
 
-[Best practices for data science projects with enterprise-scale for analytics and AI in Azure](./data-science-best-practices.md)
+[Best practices for data science projects with data management and analytics scenario in Azure](./data-science-best-practices.md)

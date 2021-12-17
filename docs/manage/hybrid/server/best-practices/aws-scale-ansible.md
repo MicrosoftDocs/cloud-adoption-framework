@@ -14,7 +14,7 @@ ms.custom: think-tank, e2e-hybrid
 
 This article provides guidance for using [Ansible](https://www.ansible.com/) to scale onboarding Amazon Web Services (AWS) Amazon Elastic Compute Cloud (EC2) instances to Azure Arc.
 
-This guide assumes that you have a basic understanding of Ansible. A basic Ansible playbook and configuration is provided that uses the [`amazon.aws.aws_ec2`](https://docs.ansible.com/ansible/latest/collections/amazon/aws/aws_ec2_inventory.html) plugin for dynamic loading of EC2 server inventory.
+This guide assumes that you have a basic understanding of Ansible. A basic Ansible playbook and configuration is provided that uses the [`amazon.aws.aws_ec2`](https://docs.ansible.com/ansible/latest/collections/amazon/aws/aws_ec2_inventory.html) plug-in for dynamic loading of EC2 server inventory.
 
 This guide can be used even if you do not already have an existing Ansible test environment and includes a Terraform plan that will create a sample AWS EC2 server inventory comprised of four Windows Server 2019 servers and four Ubuntu servers along with a basic CentOS 7 Ansible control server with a simple configuration.
 
@@ -39,7 +39,7 @@ This guide can be used even if you do not already have an existing Ansible test 
 
 4. [Create a free AWS account](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/)
 
-5. [Install Terraform >= V0.13](https://learn.hashicorp.com/tutorials/terraform/install-cli)
+5. [Install Terraform >= v0.13](https://learn.hashicorp.com/tutorials/terraform/install-cli)
 
    - Create an Azure service principal.
 
@@ -60,11 +60,11 @@ This guide can be used even if you do not already have an existing Ansible test 
 
       ```json
       {
-      "appId": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-      "displayName": "AzureArcAWS",
-      "name": "http://AzureArcAWS",
-      "password": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-      "tenant": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+        "appId": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "displayName": "AzureArcAWS",
+        "name": "http://AzureArcAWS",
+        "password": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "tenant": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX"
       }
       ```
 
@@ -77,7 +77,7 @@ In order for Terraform to create resources in AWS, we'll need to create a new AW
 
 1. Sign in to the [AWS management console](https://console.aws.amazon.com/console/home)
 
-2. After signing in, select the **Services** dropdown in the top left. Under **Security, Identity, and Compliance**, select **IAM** to access the [identity and access management page](https://console.aws.amazon.com/iam/home)
+2. After signing in, select the **Services** dropdown list in the top left. Under **Security, Identity, and Compliance**, select **IAM** to access the [identity and access management page](https://console.aws.amazon.com/iam/home)
 
     ![A screenshot of an AWS cloud console.](./media/aws-scale-ansible/ansible-aws-console.png)
 
@@ -87,11 +87,11 @@ In order for Terraform to create resources in AWS, we'll need to create a new AW
 
     ![A screenshot of a new user in an AWS cloud console.](./media/aws-scale-ansible/ansible-new-user-1.png)
 
-4. On the **Add User** page, name the user **Terraform** and select the **Programmatic Access** check box, and then select **Next**
+4. On the **Add User** page, name the user **Terraform** and select the **Programmatic Access** checkbox, and then select **Next**.
 
     ![Second screenshot of a new user being created in an AWS cloud console.](./media/aws-scale-ansible/ansible-new-user-2.png)
 
-5. On the next page, **Set Permissions**, select **Attach existing policies directly** then check the box next to **AmazonEC2FullAccess** as shown in the screenshot, and then select **Next**.
+5. On the next page, **Set Permissions**, select **Attach existing policies directly** then select the box next to **AmazonEC2FullAccess** as shown in the screenshot, and then select **Next**.
 
     ![Third screenshot of a new user being created in an AWS cloud console.](./media/aws-scale-ansible/ansible-new-user-3.png)
 
@@ -135,7 +135,7 @@ Before executing the Terraform plan, you must export the environment variables w
     source ./scripts/vars.sh
     ```
 
-5. Make sure your SSH keys are available in `~/.ssh` and named `id_rsa.pub` and `id_rsa`. If you followed the SSH keygen guide above to create your key then this should already be setup correctly. If not, you may need to modify [`aws_infra.tf`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/aws/scaled_deployment/ansible/terraform/aws_infra.tf) to use a key with a different path.
+5. Make sure your SSH keys are available in `~/.ssh` and named `id_rsa.pub` and `id_rsa`. If you followed the SSH keygen guide above to create your key then this should already be set up correctly. If not, you may need to modify [`aws_infra.tf`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/aws/scaled_deployment/ansible/terraform/aws_infra.tf) to use a key with a different path.
 
 6. Run the `terraform init` command which will download the required Terraform providers.
 
@@ -149,7 +149,7 @@ Before executing the Terraform plan, you must export the environment variables w
 
     ![A screenshot of AWS console displaying EC2 instances.](./media/aws-scale-ansible/ec2-instances.png)
 
-### Run the Ansible playbook to onboard the AWS EC2 instances as Azure Arc enabled servers
+### Run the Ansible playbook to onboard the AWS EC2 instances as Azure Arc-enabled servers
 
 1. When the Terraform plan completes, it displays the public IP of the Ansible control server in an output variable named `ansible_ip`. SSH into the Ansible server by running `ssh centos@xx.xx.xx.xx`, where `xx.xx.xx.xx` is substituted for your Ansible server's IP address.
 
@@ -159,7 +159,7 @@ Before executing the Terraform plan, you must export the environment variables w
 
     ![A screenshot of the `ansible` config folder.](./media/aws-scale-ansible/ansible-cfg.png)
 
-3. The `aw-ec2` Ansible plugin requires AWS credentials to dynamically read your AWS server inventory. We will export these as environment variables. Run the following commands, replacing the values for `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` with the AWS credentials you created earlier.
+3. The `aw-ec2` Ansible plug-in requires AWS credentials to dynamically read your AWS server inventory. We will export these as environment variables. Run the following commands, replacing the values for `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` with the AWS credentials you created earlier.
 
     ```console
     export AWS_ACCESS_KEY_ID="XXXXXXXXXXXXXXXXX"
@@ -176,13 +176,13 @@ Before executing the Terraform plan, you must export the environment variables w
     ansible-playbook arc_agent.yml -i ansible_plugins/inventory-uswest2-aws_ec2.yml --extra-vars '{"service_principal_id": "XXXXXXX-XXXXX-XXXXXXX", "service_principal_secret": "XXXXXXXXXXXXXXXXXXXXXXXX"}'
     ```
 
-    If the playbook run is successful, you should see output similar to the below screenshot.
+    If the playbook run is successful, you should see output similar to the following screenshot.
 
     ![A screenshot of an Ansible playbook running.](./media/aws-scale-ansible/ansible-playbook.png)
 
-6. Open the Azure portal and navigate to the `arc-aws-demo` resource group. You should see the Azure Arc enabled servers listed.
+6. Open the Azure portal and navigate to the `arc-aws-demo` resource group. You should see the Azure Arc-enabled servers listed.
 
-    ![A screenshot of the Azure portal onboarding Azure Arc enabled servers.](./media/aws-scale-ansible/onboarding-servers.png)
+    ![A screenshot of the Azure portal onboarding Azure Arc-enabled servers.](./media/aws-scale-ansible/onboarding-servers.png)
 
 ### Clean up environment by deleting resources
 
@@ -197,11 +197,11 @@ To delete all the resources you created as part of this demo, use the `terraform
 
 ### Review provided Ansible configuration and playbook
 
-1. Navigate to the `ansible_config` directory and review the provided configuration. The provided configuration contains a basic `ansible.cfg` file. This file enables the [`amazon.aws.aws_ec2`](https://docs.ansible.com/ansible/latest/collections/amazon/aws/aws_ec2_inventory.html) Ansible plugin which dynamically loads your server inventory by using an AWS IAM role. Ensure that the IAM role you are using has sufficient privileges to access the inventory you wish to onboard.
+1. Navigate to the `ansible_config` directory and review the provided configuration. The provided configuration contains a basic `ansible.cfg` file. This file enables the [`amazon.aws.aws_ec2`](https://docs.ansible.com/ansible/latest/collections/amazon/aws/aws_ec2_inventory.html) Ansible plug-in which dynamically loads your server inventory by using an AWS IAM role. Ensure that the IAM role you are using has sufficient privileges to access the inventory you wish to onboard.
 
     ![A screenshot showing the details of an `ansible.cfg` file.](./media/aws-scale-ansible/ansible-cfg-details.png)
 
-2. The file [`inventory-uswest2-aws_ec2.yml`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/aws/scaled_deployment/ansible/terraform/ansible_config/ansible_plugins/inventory_uswest2_aws_ec2.yml) configures the `aws_ec2` plugin to pull inventory from `uswest2` region and group assets by applied tags. Adjust this file as needed to support onboarding your server inventory, such as changing the region or adjusting groups or filters.
+2. The file [`inventory-uswest2-aws_ec2.yml`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/aws/scaled_deployment/ansible/terraform/ansible_config/ansible_plugins/inventory_uswest2_aws_ec2.yml) configures the `aws_ec2` plug-in to pull inventory from `uswest2` region and group assets by applied tags. Adjust this file as needed to support onboarding your server inventory, such as changing the region or adjusting groups or filters.
 
    The files in `./ansible-config/group-vars` should be adjusted to provide the credentials you wish to use to onboard various Ansible host groups.
 
@@ -215,6 +215,6 @@ To delete all the resources you created as part of this demo, use the `terraform
 
       ![A screenshot of an Ansible playbook running.](./media/aws-scale-ansible/ansible-playbook.png)
 
-    As earlier, open Azure portal and navigate to the `arc-aws-demo` resource group. You should see the Azure Arc enabled servers listed.
+    As earlier, open Azure portal and navigate to the `arc-aws-demo` resource group. You should see the Azure Arc-enabled servers listed.
 
-    ![A screenshot of the Azure portal showing Azure Arc enabled servers.](./media/aws-scale-ansible/onboarding-servers.png)
+    ![A screenshot of the Azure portal showing Azure Arc-enabled servers.](./media/aws-scale-ansible/onboarding-servers.png)

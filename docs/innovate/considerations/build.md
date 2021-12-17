@@ -11,8 +11,6 @@ ms.custom: internal, seo-caf-innovate
 keywords: how to build empathy, customer empathy, cloud innovation
 ---
 
-<!-- docutune:casing "Oxford English Dictionary" -->
-
 # Build with customer empathy
 
 "Necessity is the mother of invention." This proverb captures the indelibility of the human spirit and our natural drive to invent. As explained in the Oxford English Dictionary, "When the need for something becomes imperative, you're forced to find ways of getting or achieving it." Few would deny these universal truths about invention. However, as described in [Innovation in the digital economy](./index.md), cloud innovation requires a balance between invention and adoption.
@@ -102,7 +100,7 @@ There are many legal, compliance, and industry requirements that might necessita
 
 ## References
 
-Some of the concepts in this article build on topics discussed in [The Lean Startup](http://theleanstartup.com/book) by Eric Ries.
+Some of the concepts in this article build on topics discussed in [`The Lean Startup`](http://theleanstartup.com/book) by Eric Ries.
 
 ## Next steps
 

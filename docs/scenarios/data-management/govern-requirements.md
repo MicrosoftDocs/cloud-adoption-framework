@@ -3,33 +3,34 @@ title: Requirements for governing Azure data in a modern enterprise
 description: Learn about requirements for governing Azure data in a modern enterprise.
 author: mboswell
 ms.author: mboswell
-ms.date: 06/23/2021
+ms.date: 11/25/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: overview
+ms.subservice: scenario
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Requirements for governing Azure data in a modern enterprise
 
-The requirements for governing data include:
+The data management and analytics scenario recommends you consider the following requirements for governing data::
 
-- Data item and data entity definition to create a common business vocabulary in a business glossary
-- Data item and data entity identification and discovery
-- Data governance classification to govern data access security, data privacy, and data retention
-- People, like data owners with governance accountability and data stewards responsible for data protection and quality
-- Data governance processes
-- Policies and rules to define how specific data should be governed throughout its life cycle
-- Policy enforcement across data stores in the distributed data landscape
-- Master data management to make the data consistent. This might be across operational and analytical systems like customer, product, and supplier
-- Metadata lineage
-- Technology to make it possible to govern structured, multistructured, and unstructured data. The governance might span across the datacenter, multiple clouds, and the edge
+- Data item and data entity definition to create a common business vocabulary in a business glossary.
+- Data item and data entity identification and discovery.
+- Data governance classification to govern data access security, data privacy, and data retention.
+- People, like data owners with governance accountability and data stewards responsible for data protection and quality.
+- Data governance processes.
+- Policies and rules to define how specific data should be governed throughout its lifecycle.
+- Policy enforcement across data stores in the distributed data landscape.
+- Master data management to make the data consistent. This might be across operational and analytical systems like customer, product, and supplier.
+- Metadata lineage.
+- Technology to make it possible to govern structured, multistructured, and unstructured data. The governance might span across the datacenter, multiple clouds, and the edge.
 
-The other challenge is that data is being collected and stored in multiple places across the enterprise. The data might include data collected and stored in different geographies and different legal jurisdictions. As a result, different legislation may apply to governing the same data in different jurisdictions. Discover what data exists across the hybrid multicloud distributed data landscape, including geographic location, to:
+The other challenge is that data is being collected and stored in multiple places across the enterprise. The data might include data collected and stored in different geographies and different legal jurisdictions. As a result, different legislation might apply to governing the same data in different jurisdictions. Discover what data exists across the hybrid multicloud distributed data landscape, including geographic location, to:
 
-- Understand what data attributes, data entities, and data relationships exist across the distributed data landscape
+- Understand what data attributes, data entities, and data relationships exist across the distributed data landscape.
 - Classify the data to know how to govern it
-- Define policies to specify how data should be governed for each type of governance classification
-- Enforce data quality, data access security, data privacy, and life cycle management policies across the distributed data landscape
+- Define policies to specify how data should be governed for each type of governance classification.
+- Enforce data quality, data access security, data privacy, and lifecycle management policies across the distributed data landscape.
 
 ## Data governance classification
 
@@ -40,7 +41,11 @@ There needs to be a way to classify data to understand its level of confidential
 
 An example of these schemes is:
 
+## Data confidentiality classification scheme
+
 [!INCLUDE [data-confidentiality-classification-scheme](./includes/data-confidentiality-classification-scheme.md)]
+
+## Data retention classification scheme
 
 [!INCLUDE [data-retention-classification-scheme](./includes/data-retention-classification-scheme.md)]
 
@@ -58,7 +63,7 @@ Another requirement is the need for accountability. Without accountability, conf
 - Who is looking after the quality of product data across all brochures and partner websites?
 - Who ensures customer data is consistent across all systems?
 - Who is policing external subscription data usage versus the license?
-- Who is policing privileged users like dbas and data scientists?
+- Who is policing privileged users like database administrators and data scientists?
 
 Is it a C-level executive? Is it a department head? Is it the head of governance, risk, and compliance? What about the legal department? Or is it IT's responsibility? Roles and responsibilities are needed to avoid confusion and to set the foundation upon which a data culture can materialize.
 
@@ -105,19 +110,19 @@ Finally, there's a requirement for metadata lineage. You can use an audit trail 
 
 ## Summary of what is needed for end-to-end data governance
 
-You need an end-to-end solution that can govern data throughout its life cycle across data stores in the edge, multiple clouds, and the datacenter.
+You need an end-to-end solution that can govern data throughout its lifecycle across data stores in the edge, multiple clouds, and the datacenter.
 
 :::image type="content" source="./images/data-governance-framework.png" alt-text="Diagram of data governance framework.":::
 
 Your data governance solution should have several components:
 
 - A data governance vision and strategy
-- The data itself, such as customer data, supplier data, order data, and others
-- The data life cycle from creation to destruction within which data needs to be governed
-- Data governance roles and responsibilities (people)
-- Data governance processes and activities and how they apply to the data life cycle
-- Policies and rules to govern data at different points in the life cycle
-- Data governance technologies to help make data governance possible
+- The data itself, such as customer data, supplier data, order data, and others.
+- The data lifecycle from creation to destruction within which data needs to be governed.
+- Data governance roles and responsibilities (people).
+- Data governance processes and activities and how they apply to the data lifecycle.
+- Policies and rules to govern data at different points in the lifecycle.
+- Data governance technologies to help make data governance possible.
 
 ## Next steps
 

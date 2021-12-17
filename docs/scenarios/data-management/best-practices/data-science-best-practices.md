@@ -1,18 +1,18 @@
 ---
-title: Best practices for data science projects with enterprise-scale for analytics and AI in Azure
-description: Learn about best practices for data science projects with enterprise-scale for analytics and AI in Azure.
+title: Best practices for data science projects with data management and analytics scenario in Azure
+description: Learn about best practices for data science projects with data management and analytics scenario in Azure.
 author: abdale
 ms.author: hamoodaleem
 ms.date: 08/06/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
-ms.custom: think-tank, e2e-data
+ms.subservice: scenario
+ms.custom: e2e-data-management, think-tank
 ---
 
-# Best practices for data science projects with enterprise-scale for analytics and AI in Azure
+# Best practices for data science projects with data management and analytics scenario in Azure
 
-We recommend these best practices for how to use enterprise-scale for analytics and AI in Azure to operationalize data science projects.
+We recommend these best practices for how to use data management and analytics scenario in Azure to operationalize data science projects.
 
 ## Develop a blueprint
 
@@ -30,7 +30,7 @@ Following are guidelines on developing a data science template for your organiza
 
 ### Real-time
 
-- Include an Azure Data Factory or Azure Synapse deployment in templates and Cognitive Services.
+- Include an Azure Data Factory or Azure Synapse deployment in templates and Azure Cognitive Services.
 
 - The templates should provide all necessary tools to execute the data science exploration phase and the initial operationalization of the model.
 
@@ -68,7 +68,7 @@ Before you deploy a model in Azure Machine Learning to an AKS, the user needs to
 
 To safely update models in Azure Machine Learning, teams should use the controlled rollout feature (preview) to minimize downtime and keep the model's REST endpoint consistent.
 
-## Best practices and the workflow for Machine Learning operations
+## Best practices and the workflow for MLOps
 
 ### Include sample code in data science repositories
 
@@ -108,29 +108,29 @@ Pipelines should demonstrate how to:
 
 Artifacts won't suit all projects all the time and may require customization, but having a foundation can speed up a project's operationalization and deployment.
 
-### Structure the Machine Learning operations repository
+### Structure the MLOps repository
 
 To avoid situations where users might lose track of where you store artifacts, we recommend requesting more time to communicate and construct a top-level folder structure for the standard repository where all projects should follow.
 
 > [!NOTE]
 > The concepts mentioned in this section can be used across on-premises, Amazon Web Services, Palantir, and Azure environments.
 
-The proposed top-level folder structure for a Machine Learning operations repository is illustrated in the following:
+The proposed top-level folder structure for a MLOps (machine learning operations) repository is illustrated in the following:
 
-![Diagram of the repository structure for Machine Learning operations.](../images/repository-structure.png)
+![Diagram of the repository structure for MLOps.](../images/repository-structure.png)
 
 The following purposes apply to each folder in the repository:
 
-|Folder  |Purpose  |
-|---------|---------|
-|`.cloud`     |Cloud-specific code and artifacts should be stored in this folder. The artifacts include configuration files for the Azure Machine Learning workspace, including compute target definitions, jobs, registered models, and endpoints.         |
-|`.ado/.github`     |This folder should be used to store Azure DevOps or GitHub artifacts like YAML pipelines or code owners.         |
-|`code`     |This folder should include the actual code that's developed as part of the project. This folder can contain Python packages and some scripts that are used for the respective steps of the machine learning pipeline. We recommend separating individual steps that need to be done in this folder. Common steps are **preprocessing**, **model training**, and **model registration**. Dependencies like Conda dependencies, Docker images, or others should be defined for each folder.         |
-|`docs`     |This folder is used for documentation purposes. This folder stores Markdown files and images to describe the project.         |
-|`pipelines`     |This stores Azure Machine Learning pipelines definitions in YAML or Python.         |
-|`tests`     |The folder is used for writing unit and integration tests that need to be executed to discover bugs and issues early during the project.         |
-|`notebooks`     |This folder is used to separate Jupyter notebooks from the actual Python project. Inside the folder, each individual should have a subfolder to check in their notebooks and prevent Git merge conflicts.         |
+|Folder | Purpose |
+|--|--|
+|`.cloud` | Cloud-specific code and artifacts should be stored in this folder. The artifacts include configuration files for the Azure Machine Learning workspace, including compute target definitions, jobs, registered models, and endpoints. |
+|`.ado/.github` | This folder should be used to store Azure DevOps or GitHub artifacts like YAML pipelines or code owners. |
+|`code` | This folder should include the actual code that's developed as part of the project. This folder can contain Python packages and some scripts that are used for the respective steps of the machine learning pipeline. We recommend separating individual steps that need to be done in this folder. Common steps are **preprocessing**, **model training**, and **model registration**. Dependencies like Conda dependencies, Docker images, or others should be defined for each folder. |
+|`docs` | This folder is used for documentation purposes. This folder stores Markdown files and images to describe the project. |
+|`pipelines` | This stores Azure Machine Learning pipelines definitions in YAML or Python. |
+|`tests` | The folder is used for writing unit and integration tests that need to be executed to discover bugs and issues early during the project. |
+|`notebooks` | This folder is used to separate Jupyter notebooks from the actual Python project. Inside the folder, each individual should have a subfolder to check in their notebooks and prevent Git merge conflicts. |
 
 ## Next steps
 
-[Azure Machine Learning as a data product for enterprise-scale for analytics and AI](./azure-machine-learning.md)
+[Data management and analytics scenario data products in Azure](/azure/cloud-adoption-framework/scenarios/data-management/architectures/data-landing-zone-data-products)

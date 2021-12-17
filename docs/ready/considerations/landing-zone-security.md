@@ -18,9 +18,9 @@ When a workload or the landing zones that hosts it require access to any sensiti
 
 The following list of reference architectures and best practices provides examples of ways to improve landing zone security:
 
-- [Azure Security Center](/azure/security-center/security-center-get-started?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json): Onboard a subscription to Security Center.
-- [Azure Sentinel](/azure/sentinel/quickstart-onboard?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json): Onboard Azure Sentinel to provide a **security information event management (SIEM)** and **security orchestration automated response (SOAR)** solution.
-- [Network boundary security](../../reference/networking-vdc.md): Several reference patterns for developing a network, similar to how the network boundary is secured in a datacenter.
+- [Microsoft Defender for Cloud](/azure/security-center/security-center-get-started?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json): Onboard a subscription to Defender for Cloud.
+- [Microsoft Sentinel](/azure/sentinel/quickstart-onboard?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json): Onboard to Microsoft Sentinel to provide a **security information event management (SIEM)** and **security orchestration automated response (SOAR)** solution.
+- [Network boundary security](../../resources/networking-vdc.md): Several reference patterns for developing a network, similar to how the network boundary is secured in a datacenter.
 - [Secure network architecture](/azure/architecture/reference-architectures/dmz/secure-vnet-dmz?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json): Reference architecture for implementing a perimeter network and secure network architecture.
 - [Identity management and access control](/azure/security/fundamentals/identity-management-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json): Series of best practices for implementing identity and access to secure a landing zone in Azure.
 - [Network security practices](/azure/security/fundamentals/network-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json): Provides additional best practices for securing the network.

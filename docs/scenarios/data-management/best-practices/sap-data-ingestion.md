@@ -1,16 +1,16 @@
 ---
-title: SAP ingestion with enterprise-scale for analytics and AI in Azure
-description: Learn about SAP ingestion with enterprise-scale for analytics and AI in Azure.
+title: SAP ingestion with data management and analytics scenario in Azure
+description: Learn about SAP ingestion with data management and analytics scenario in Azure.
 author: mboswell
 ms.author: mboswell
 ms.date: 08/06/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
-ms.custom: think-tank, e2e-data
+ms.subservice: scenario
+ms.custom: e2e-data-management, think-tank
 ---
 
-# SAP ingestion with enterprise-scale for analytics and AI in Azure
+# SAP ingestion with data management and analytics scenario in Azure
 
 Azure can support many approaches for extracting and ingesting data from SAP data sources, including from BusinessWare and SAP ERP Central Component (ECC). SAP systems are complex because their monolithic structure cuts across several domains. The recommended pattern is for each business group to ingest their data from SAP into their data landing zone. Data is presented in the enriched layer (having passed through raw) and is accessible subject to Azure Active Directory group access controls. Central finance teams can curate and ingest the finance objects into a single data asset, conducive to their data landing zone's requirements.
 
@@ -32,7 +32,7 @@ Described as the **PUSH** option, this SAP-based option facilitates trigger-base
 
 There are many third-party tools that can provide value-added extraction and ingestion from SAP sources in real time. Microsoft recommends [Qlik Replicate](https://www.qlik.com/us/products/technology/sap) (previously known as Attunity), [Simplement Data Liberator](https://www.simplement.us/), and [Kagool Velocity](https://www.kagool.com/). Each provides similar functionality and can extract data from SAP in almost real time and provide business context and intelligence out of the box.
 
-These services differ in their technical architecture. Qlik Replicate and Simplement Data Liberator provide near-real-time replication by identifying changes in source database logs. Kagool Velocity uses an add-on to SAP NetWeaver and submits a Request for Comments to the application layer to expose data. Compared to options mentioned earlier, these options provide better out-of-the-box functionality and near-real-time support, but they require third-party technologies.
+These services differ in their technical architecture. Qlik Replicate and Simplement Data Liberator provide near-real-time replication by identifying changes in source database logs. Kagool Velocity uses an add-on to SAP NetWeaver and submits a request for comments to the application layer to expose data. Compared to options mentioned earlier, these options provide better out-of-the-box functionality and near-real-time support, but they require third-party technologies.
 
 ## Recommendation
 
@@ -40,4 +40,4 @@ Our recommendation is a hybrid option comprised of several options that serve as
 
 ## Next steps
 
-[How automated ingestion frameworks support enterprise-scale for analytics and AI in Azure](./automated-ingestion-pattern.md)
+[How automated ingestion frameworks support data management and analytics scenario in Azure](./automated-ingestion-pattern.md)

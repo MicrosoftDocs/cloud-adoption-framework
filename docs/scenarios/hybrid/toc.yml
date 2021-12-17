@@ -1,14 +1,9 @@
-# docsTest:ignore "NET Core" "Cloud Operating Model" "Virtual Datacenter" Framework app
-#cSpell:ignore devtest mariadb
-
 items:
   - name: Hybrid and multicloud - Microsoft Cloud Adoption Framework for Azure
-    href: scenario-overview.md
+    href: index.md
     pdf_name: Hybrid and multicloud - Microsoft Cloud Adoption Framework for Azure
   - name: Overview
     items:
-    - name: Intro to hybrid and multicloud
-      href: index.md
     - name: Intro to unified operations
       href: unified-operations.md
     - name: Azure products
@@ -53,7 +48,7 @@ items:
   - name: Hybrid architectures
     items:
     - name: Overview
-      href: /azure/architecture/browse/hybrid_index?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
+      href: /azure/architecture/browse/?azure_categories=hybrid?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
 
     - name: Applications
       items:
@@ -63,7 +58,7 @@ items:
         href: /azure/architecture/solution-ideas/articles/ai-at-the-edge-disconnected?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
       - name: Azure Functions in a hybrid environment
         href: /azure/architecture/hybrid/azure-functions-hybrid?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
-      - name: Robo application example on Azure Stack HCI
+      - name: ROBO application example on Azure Stack HCI
         href: /azure/architecture/hybrid/azure-stack-robo?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
       - name: Run containers in a hybrid environment
         href: /azure/architecture/hybrid/hybrid-containers?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
@@ -138,9 +133,9 @@ items:
 
     - name: Security
       items:
-      - name: Hybrid security monitoring using Azure Security Center and Azure Sentinel
+      - name: Hybrid security monitoring using Microsoft Defender for Cloud and Microsoft Sentinel
         href: /azure/architecture/hybrid/hybrid-security-monitoring?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
-      - name: Hybrid security monitoring using Azure Security Center and Azure Sentinel
+      - name: Hybrid security monitoring using Microsoft Defender for Cloud and Microsoft Sentinel
         href: /azure/architecture/solution-ideas/articles/devsecops-in-azure?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
 
     - name: Environmental readiness
@@ -230,13 +225,13 @@ items:
     - name: Azure Stack HCI
       href: /azure-stack/hci/overview#azure-stack-hub?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
     - name: Azure Modular Datacenter
-      href: /azure-stack#azure-stack-hub?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
+      href: /azure-stack/?toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json#azure-stack-hub
     - name: Azure Stack HCI
-      href: /azure-stack#azure-stack-hci?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
+      href: /azure-stack/?toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json#azure-stack-hci
     - name: Azure IoT Edge
-      href: /azure/iot-edge/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
+      href: /azure/iot-edge/?toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
     - name: Azure Sphere
-      href: /azure-sphere?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
+      href: /azure-sphere/?toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
     - name: Windows for IoT
       href: /windows/iot-core/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
     - name: Virtual WAN

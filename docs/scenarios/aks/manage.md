@@ -1,6 +1,6 @@
 ---
 title: Manage modern application platform solutions
-description: Describe the scenario's impact on operations management
+description: Learn how to manage modern application platform clusters.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 03/01/2021
@@ -59,7 +59,7 @@ Once you've configured Azure Monitor to collect data on your containers, you can
 - Identify containers that are running on the nodes and their contribution to node utilization
 - Understand the behavior of clusters under average and heaviest loads. This knowledge can help you identify capacity needs and determine the maximum load that the cluster can sustain.
 - Configure alerts to proactively notify you or record when CPU and memory utilization on nodes or containers exceed your thresholds, or when a health state change occurs in the cluster at the infrastructure or nodes health rollup.
-- Use [queries](/azure/azure-monitor/containers/container-insights-log-search) to create a common set of alerts, dashboards, and detailed perform detailed analysis
+- Use [queries](/azure/azure-monitor/containers/container-insights-log-query) to create a common set of alerts, dashboards, and detailed perform detailed analysis
 
 This data will also support workload operations teams by providing detailed information about the workloads running on the containerized platform:
 
@@ -71,12 +71,12 @@ This data will also support workload operations teams by providing detailed info
 
 ### Operations compliance
 
-Patching, tuning, and sizing happens at a few different levels in a containerized environment. The operators may sit in a number of different teams, depending on your desired operations approach. To maintain operations compliance, an operator will monitor usage, resize assets to balance performance and cost, and patch the underlying systems to minimize risk and configuration drift. Each of these are tasks that central IT organizations tend to deliver as part of the operations baseline for IaaS and PaaS solutions.
+Patching, tuning, and sizing happens at a few different levels in a containerized environment. The operators may sit in a number of different teams, depending on your desired operations approach. To maintain operations compliance, an operator will monitor usage, resize assets to balance performance and cost, and patch the underlying systems to minimize risk and configuration drift. Central IT organizations tend to deliver these tasks as part of the operations baseline for IaaS and PaaS solutions.
 
 In a cluster environment in Azure, these tasks are performed at multiple levels: AKS cluster, node image, and node OS. All of these operations tasks become more dependent on an understanding and working relationship of the workloads running in the clusters or on individual node pools. The following statements will help evaluate what and if you want to do to operate your container environments.
 
 - If the sizing and patching of the AKS cluster, node image or node OS is delivered as part of the deployment pipeline for the application or is dependent on application architecture or configuration, then it's best to shift operational compliance to the workload team for granular control. Because workloads often take a dependency on orchestration features, this is the most common pattern as an unexpected AKS version change or node image change could be catastrophic to the workload or its runtime tooling.
-- For the less common centralized clusters, supporting a portfolio of workloads and a variety of applications, the centralized operations team may still be responsible for operational compliance tasks, the following guides will help deliver those tasks across your clusters. Executing these tasks on a recurring basis instills platform specific operations. There is notable risk in a central operations approach, and careful testing of upgrades in pre-production environments, clear and adhered to scheduled maintenance, and contingency plans for noncompliant workloads all need to be in place. One bad upgrade can be a single point of failure and likewise, one workload not able to upgrade can cause a cluster to fall out of support. Plan and manage multitenant clusters with due diligence.
+- For the less common centralized clusters, supporting a portfolio of workloads and a variety of applications, the centralized operations team may still be responsible for operational compliance tasks, the following guides will help deliver those tasks across your clusters. Executing these tasks on a recurring basis instills platform specific operations. There is notable risk in a central operations approach, and careful testing of upgrades in preproduction environments, clear and adhered to scheduled maintenance, and contingency plans for noncompliant workloads all need to be in place. One bad upgrade can be a single point of failure and likewise, one workload not able to upgrade can cause a cluster to fall out of support. Plan and manage multitenant clusters with due diligence.
 
 For both cluster types, follow the guidance on upgrades, node images, and node OS updates found below:
 

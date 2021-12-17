@@ -1,6 +1,6 @@
 ---
-title: Application development for innovative apps
-description: Learn how to use citizen developers in your application development. Create apps that shape data and create experiences that engage customers and support innovation.
+title: Application development for innovative applications
+description: Learn how to use citizen developers in your application development. Create applications that shape data and create experiences that engage customers and support innovation.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/02/2021
@@ -11,19 +11,19 @@ ms.custom: internal, seo-caf-innovate
 keywords: Innovative applications, citizen developers, application development
 ---
 
-# Application development for innovative apps
+# Application development for innovative applications
 
-As discussed in [Democratize data with digital invention](data.md), data fuels most innovations across the digital economy. Building on that analogy, applications are the fueling stations and infrastructure required to get that fuel into the right hands.
+As discussed in [Democratize data with digital invention](./data.md), data fuels most innovations across the digital economy. Building on that analogy, applications are the fueling stations and infrastructure required to get that fuel into the right hands.
 
 In some cases, data alone is enough to drive change and meet customer needs. More commonly though, solutions to customer needs require applications to shape the data and create an experience. Innovative applications engage and interact with the user, providing information and guidance. This article summarizes several principles that can help you find the right application development solution, based on the hypotheses to be validated.
 
-![The diagram shows elements that can help create an app that provides an experience for customers that meets their needs.](../../_images/innovate/engage-via-apps.png)
+![Diagram showing elements that can help create an application that provides an experience for customers that meets their needs.](../../_images/innovate/engage-via-apps.png)
 
 ## Shared code
 
 Teams that are quick to respond to customer feedback, market changes, and opportunities typically innovate best. The first principle of innovative applications is an element of the [growth mindset](./learn.md#growth-mindset): "Share the code." Code sharing invites diverse perspectives and contributions, and spurs innovation. Therefore, application development should start with a shared code repository.
 
-A widely adopted tool for managing code repositories is [GitHub](https://guides.github.com), which allows you to create a shared code repository quickly. An alternative is [Microsoft Azure Repos](https://azure.microsoft.com/services/devops/repos/), which is an [Azure DevOps](https://azure.microsoft.com/services/devops/) service that provides unlimited, cloud-hosted private repos for your project. For version control when you use Azure Repos, you can choose either Git, which is a distributed type, or Team Foundation Version Control (TFVC), which is centralized. For more information about Azure Repos, Git, and TFVC, see [Azure Repos Documentation](/azure/devops/repos/?view=azure-devops&preserve-view=true).
+A widely adopted tool for managing code repositories is [GitHub](https://guides.github.com), which allows you to create a shared code repository quickly. An alternative is [Microsoft Azure Repos](https://azure.microsoft.com/services/devops/repos/), which is an [Azure DevOps](https://azure.microsoft.com/services/devops/) service that provides unlimited, cloud-hosted private repos for your project. For version control when you use Azure Repos, you can choose either Git, which is a distributed type, or Team Foundation Version Control (TFVC), which is centralized. For more information about Azure Repos, Git, and TFVC, see the [Azure Repos documentation](/azure/devops/repos/).
 
 ## Citizen developers
 
@@ -36,7 +36,7 @@ Citizen developers are users who create new business applications using developm
 
 ## Intelligent experiences
 
-Intelligent experiences combine the speed and scale of modern web applications with the intelligence of cognitive services and bots. Alone, each of these technologies might be sufficient to meet your customers' needs. When properly combined, they broaden the spectrum of needs that can be met through a digital experience, while helping to contain application development costs.
+Intelligent experiences combine the speed and scale of modern web applications with the intelligence of cognitive services and bots. Individually, these technologies might be sufficient to meet your customers' needs. When properly combined, they broaden the spectrum of needs that can be met through a digital experience, while helping to contain application development costs.
 
 ### Modern web apps
 

@@ -1,13 +1,13 @@
 ---
 title: Strategy for adopting unified operations
-description: Describe the scenario's effect on strategy.
+description: Learn about strategic considerations of hybrid and multicloud operations.
 author: mpvenables
 ms.author: brblanch
 ms.date: 04/21/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
-ms.custom: e2e-hybrid
+ms.custom: e2e-hybrid, think-tank
 ---
 
 # Strategic considerations of hybrid and multicloud operations
@@ -136,7 +136,7 @@ Easily adopt DevOps techniques like IaC. Empower developers with self-service ac
 
 ### Easily implement Azure security anywhere
 
-Access Azure Security Center's system of unified infrastructure security management. Strengthen your security posture with advanced threat protection across hybrid workloads in the cloud, no matter whether in Azure, multicloud, or on-premises environments. Centrally access and manage all resources with Azure role-based access control (RBAC). Centrally manage and enforce policy compliance, and simplify audit reporting with Azure Policy.
+Access the system of unified infrastructure security management available in Microsoft Defender for Cloud. Strengthen your security posture with advanced threat protection across hybrid workloads in the cloud, no matter whether in Azure, multicloud, or on-premises environments. Centrally access and manage all resources with Azure role-based access control (RBAC). Centrally manage and enforce policy compliance, and simplify audit reporting with Azure Policy.
 
 ### Governance and configuration of resources anywhere
 
@@ -148,7 +148,7 @@ Create a shared application and infrastructure lifecycle within teams traditiona
 
 ### Integrated DevOps and management capabilities
 
-Select another Azure Arc enabled service, Azure development, and operational tools that are developer tooling-agnostic. Access a unified enterprise dashboard that grants you a consistent view across environments via GitHub, Azure Monitor, Security Center, Azure update integration, and more. Deploy common templates to automate configurations, and deploy IaC to make safe and repeatable production deployments. Manage end-to-end identity and access across all users and resources with Azure Active Directory, enterprise identity service, and Azure Resource Manager.
+Select another Azure Arc enabled service, Azure development, and operational tools that are developer tooling-agnostic. Access a unified enterprise dashboard that grants you a consistent view across environments via GitHub, Azure Monitor, Defender for Cloud, Azure update integration, and more. Deploy common templates to automate configurations, and deploy IaC to make safe and repeatable production deployments. Manage end-to-end identity and access across all users and resources with Azure Active Directory, enterprise identity service, and Azure Resource Manager.
 
 ## Next steps
 

@@ -44,4 +44,4 @@ Embracing this guiding set of principles can help give you near-real-time insigh
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Alerting strategy](./alerting.md)
+> [Response strategy](./response.md)

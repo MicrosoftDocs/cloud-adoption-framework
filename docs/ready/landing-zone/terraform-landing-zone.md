@@ -10,8 +10,6 @@ ms.subservice: ready
 ms.custom: think-tank
 ---
 
-<!-- cSpell:ignore eastasia southeastasia vCPUs lalogs tfvars NetworkMonitoring ADAssessment ADReplication AgentHealthAssessment DnsAnalytics KeyVaultAnalytics -->
-
 # Use Terraform to build your landing zones
 
 Azure provides native services for deploying your landing zones. Other third-party tools can also help with this effort. One such tool that customers and partners often use to deploy landing zones is Terraform by HashiCorp. This section shows how to use a sample landing zone to deploy foundational governance, accounting, and security capabilities for an Azure subscription.
@@ -31,8 +29,6 @@ The first landing zone deploys the following components in your subscription:
 ![Foundational landing zone using Terraform](../../_images/ready/foundations-terraform-landing-zone.png)
 *Figure 1: A foundation landing zone using Terraform.*
 
-<!-- docutune:casing NetworkMonitoring AdAssessment AdReplication AgentHealthAssessment DnsAnalytics KeyVaultAnalytics -->
-
 ## Capabilities
 
 The components deployed and their purpose include the following:
@@ -42,8 +38,8 @@ The components deployed and their purpose include the following:
 | Resource groups | Core resource groups needed for the foundation |
 | Activity logging | Auditing all subscription activities and archiving: <li> Storage account <li> Azure Event Hubs |
 | Diagnostics logging | All operation logs kept for a specific number of days: <li> Storage account <li> Event Hubs |
-| Log Analytics | Stores the operation logs. Deploy common solutions for deep application best practices review: <li> NetworkMonitoring <li> AdAssessment <li> AdReplication <li> AgentHealthAssessment <li> DnsAnalytics <li> KeyVaultAnalytics |
-| Azure Security Center | Security hygiene metrics and alerts sent to email and phone number |
+| Log Analytics | Stores the operation logs. Deploy common solutions for deep application best practices review: <li> `NetworkMonitoring` <li> `AdAssessment` <li> `AdReplication` <li> `AgentHealthAssessment` <li> `DnsAnalytics` <li> `KeyVaultAnalytics` |
+| Microsoft Defender for Cloud | Security hygiene metrics and alerts sent to email and phone number |
 
 ## Use this blueprint
 
@@ -73,7 +69,7 @@ The following decisions are represented in the CAF Terraform modules:
 | Subscription design    | N/A - designed for a single production subscription.                                                                                                                                                                                                                     | [Create initial subscriptions](../azure-best-practices/initial-subscriptions.md)                                                                                                                                                                                  |
 | Resource groups        | N/A - designed for a single production subscription.                                                                                                                                                                                                                     | [Scale subscriptions](../azure-best-practices/scale-subscriptions.md)                                                                                                                                                                                           |
 | Management groups      | N/A - designed for a single production subscription.                                                                                                                                                                                                                     | [Organize subscriptions](../azure-best-practices/organize-subscriptions.md)                                                                                                                                                                                     |
-| Data                   | N/A                                                                                                                                                                                                                                                                      | [Choose the correct SQL Server option in Azure](/azure/sql-database/sql-database-paas-vs-sql-server-iaas) and [Azure data store guidance](/azure/architecture/guide/technology-choices/data-store-overview) |
+| Data                   | N/A                                                                                                                                                                                                                                                                      | [Choose the correct SQL Server option in Azure](/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview) and [Azure data store guidance](/azure/architecture/guide/technology-choices/data-store-overview) |
 | Storage                | N/A                                                                                                                                                                                                                                                                      | [Azure Storage guidance](../considerations/storage-options.md)                                                                                                                                                                                                  |
 | Naming standards       | When the environment is created, a unique prefix is also created. Resources that require a globally unique name (such as storage accounts) use this prefix. The custom name is appended with a random suffix. Tag usage is mandated as described in the following table. | [Naming and tagging best practices](../azure-best-practices/naming-and-tagging.md)                                                                                                                                                                              |
 | Cost management        | N/A                                                                                                                                                                                                                                                                      | [Tracking costs](../azure-best-practices/track-costs.md)                                                                                                                                                                                                        |
@@ -182,10 +178,11 @@ solution_plan_map = {
 
 ```
 
-Next, we configured the alert parameters for Azure Security Center.
+Next, we configured the alert parameters for Microsoft Defender for Cloud.
 
 ```hcl
 # Azure Security Center Configuration
+
 security_center = {
     contact_email   = "joe@contoso.com"
     contact_phone   = "+6500000000"
