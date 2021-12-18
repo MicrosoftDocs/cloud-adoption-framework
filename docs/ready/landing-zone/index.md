@@ -14,7 +14,7 @@ ms.custom: internal
 
 Azure landing zones are the output of a multisubscription Azure environment that accounts for scale, security governance, networking, and identity. Azure landing zones enable application migration, modernization, and innovation at enterprise-scale in Azure. These zones consider all platform resources that are required to support the customer's application portfolio and don't differentiate between infrastructure as a service or platform as a service.
 
-![Diagram that shows a landing zone design.](../enterprise-scale/media/lz-design.png)
+![Diagram that shows a landing zone design](../enterprise-scale/media/lz-design.png)
 
 A landing zone is an environment for hosting your workloads, preprovisioned through code. Watch the following video to learn more.
 
