@@ -12,19 +12,19 @@ ms.custom: internal
 
 # Manage change in an incremental migration effort
 
-This article assumes that migration processes are incremental in nature, running parallel to the [govern process](../../../govern/index.md). However, the same guidance could be used to populate initial tasks in a work breakdown structure for traditional waterfall change management approaches.
+This article assumes that migration processes are incremental in nature, and runs parallel to the [govern process](../../../govern/index.md). However, the same guidance could be used to populate initial tasks in a work breakdown structure for traditional waterfall change management approaches.
 
 ## Release backlog
 
-A *release backlog* consists of a series of assets (VMs, databases, files, and applications, among others) that must be migrated before a workload can be released for production usage in the cloud. During each iteration, the cloud adoption team documents and estimates the efforts required to move each asset to the cloud. See the "iteration backlog" section that follows.
+A *release backlog* consists of a series of assets (VMs, databases, files, and applications, among others) that must be migrated before a workload can be released for production usage in the cloud. During each iteration, the cloud adoption team documents and estimates the efforts required to move each asset to the cloud.
 
 ## Iteration backlog
 
-An *iteration backlog* is a list of the detailed work required to migrate a specific number of assets from the existing digital estate to the cloud. The entries on this list are often stored in an agile management tool, like Azure DevOps, as work items.
+An *iteration backlog* is a list of the detailed work required to migrate a specific number of assets from the existing digital estate to the cloud. The entries on this list are often stored as work items in an agile management tool such as Azure DevOps.
 
-Prior to starting the first iteration, the cloud adoption team specifies an iteration duration, usually two to four weeks. This time box is important to create a start and finish time period for each set of committed activities. Maintaining consistent execution windows makes it easy to gauge velocity (pace of migration) and alignment to changing business needs.
+Prior to starting the first iteration, the cloud adoption team specifies a two to four week iteration duration. The iteration duration is important because it allows each set of committed activities to start and finish. Maintaining consistent execution windows makes it easy to gauge velocity (pace of migration) and alignment to changing business needs.
 
-Prior to each iteration, the team reviews the release backlog, estimating the effort and priorities of assets to be migrated. It then commits to deliver a specific number of agreed-on migrations. After this is agreed to by the cloud adoption team, the list of activities becomes the *current iteration backlog*.
+Prior to each iteration, the team reviews the release backlog and estimates the effort and priorities of assets to be migrated. Next, the team commits to deliver a specific number of agreed-on migrations. Finally, when the cloud adoption team makes an agreement, the list of activities becomes the *current iteration backlog*.
 
 During each iteration, team members work as a self-organizing team to fulfill commitments in the current iteration backlog.
 
