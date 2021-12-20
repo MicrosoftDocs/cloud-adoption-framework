@@ -12,7 +12,7 @@ ms.custom: e2e-hybrid, think-tank
 
 # Services Observability for Azure Arc-enabled Kubernetes
 
-Content-here
+Service Observability is important in distributed systems to understand service behavior from an efficiency and reliability standpoints. This allows your teams to understand performance issues and allow development and operation groups to understand system deficiencies and be able to make improvements.
 
 ## Architecture
 
@@ -22,7 +22,9 @@ The following image shows a conceptual reference architecture that highlights th
 
 ## Design considerations
 
-The following are some design considerations before onboarding Azure Arc-enabled servers to Azure:
+The following are some design considerations before onboarding a Service Mesh to your Arc-enabled Kubernetes service:
+
+### Service Mesh and Service Observability needs
 
 ### Example sub-category
 
