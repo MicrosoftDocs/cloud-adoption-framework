@@ -78,7 +78,7 @@ The following diagram summarizes the suggested phased approach:
 Some customers, due to regulatory compliance restrictions, may not be able to ever move past phase 1. However, this is not an issue and is supported to remain in this state, if necessary. Other customers may be able to progress, over time, to phases 2 and 3 to fully adopt DINE and Modify policies to assist with policy-driven governance for their Azure environment.
 
 > [!NOTE]
-> The scenario and approach outlined in this article is not intended for or recommended for the majority of customers. Please review the [Why?](#why) section in full before you decide whether it is suitable and required for your environment.
+> The scenario outlined in this article is not intended for or recommended for the majority of customers. Please review the [Why?](#why) section in full before you decide whether the approach is suitable and required for your environment.
 
 ### Phase 1: Disable DINE/Modify Policies Automated Actions
 
