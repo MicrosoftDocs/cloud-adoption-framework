@@ -433,6 +433,8 @@ items:
           - name: Terraform landing zones
             href: ready/landing-zone/terraform-landing-zone.md
 
+        - name: ISV landing zones
+          href: ready/landing-zone/isv-landing-zone.md
         - name: Partner landing zones
           href: ready/landing-zone/partner-landing-zone.md
 
