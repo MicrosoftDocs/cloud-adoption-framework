@@ -13,9 +13,6 @@ ms.custom: think-tank
 
 Before diving into the steps you can take to gradually adopt the usage of policies, it is important to first understand what and where they are used within the Azure landing zone reference implementations and why. This will then help you to understand whether you want to prevent `DeployIfNotExists` (DINE) or `Modify` policies from making changes within your Azure environment.
 
->[!NOTE]
-> This scenario and approach outlined in this article is not intended for or recommended for the majority of customers. Please review the below [Why?](#why) section in full before deciding whether this is suitable and required for your environment.
-
 ### Why?
 
 DINE and Modify policies are part of the Azure landing zone reference implementations to assist you and your organization to ultimately ensure your landing zones (also known as subscriptions) and resources within them are compliant; whilst also removing the operation burden for platform and landing zone teams as your Azure environment scales.
@@ -79,6 +76,9 @@ The following diagram summarizes the suggested phased approach:
 3. Set the [Enforcement Mode](/azure/governance/policy/concepts/assignment-structure#enforcement-mode) to `Default` on Policy Assignments on remaining DINE policies across the entire Azure environment
 
 Some customers, due to regulatory compliance restrictions, may not be able to ever move past phase 1. However, this is not an issue and is supported to remain in this state, if necessary. Other customers may be able to progress, over time, to phases 2 and 3 to fully adopt DINE and Modify policies to assist with policy-driven governance for their Azure environment.
+
+>[!NOTE]
+> This scenario and approach outlined in this article is not intended for or recommended for the majority of customers. Please review the above [Why?](#why) section in full before deciding whether this is suitable and required for your environment.
 
 ### Phase 1: Disable DINE/Modify Policies Automated Actions
 
