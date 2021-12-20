@@ -45,12 +45,15 @@ This table outlines a few processes, tools, and potential effects common in cust
 | Discipline | Process | Tool | Potential impact | Learn more |
 |---|---|---|---|---|
 | Inventory and visibility | Service change tracking | Azure Resource Graph | Greater visibility into changes to Azure services might help detect negative effects sooner or remediate faster. | [Overview of Azure Resource Graph](/azure/governance/resource-graph/overview) |
+| Inventory and visibility | Visualize Data | Azure Sentinel | Instant visualization and analysis of data | [Sentinel visualize collected data](/azure/sentinel/get-visibility) |
 | Inventory and visibility | IT Service Management (ITSM) integration | IT Service Management Connector | Automated ITSM connection creates awareness sooner. | [IT Service Management Connector (ITSMC)](/azure/azure-monitor/alerts/itsmc-overview) |
 | Operational compliance | Operations automation | Azure Automation | Automate operational compliance for faster and more accurate response to change. | See the following sections |
+| Operational compliance | Zero trust | Azure Sentinel | Zero Trust workbook uses the full breadth of Microsoft security offerings |[Sentinel Zero trust Workbook](/azure/sentinel/whats-new#zero-trust-tic30-workbook) |
 | Operational compliance | Performance automation | Azure Automation | Automate operational compliance with performance expectations to resolve common resource specific scaling or sizing issues. | See the following sections |
 | Operational compliance | Multicloud operations | Azure Automation Hybrid Runbook Worker | Automate operations across multiple clouds. | [Hybrid Runbook Worker overview](/azure/automation/automation-hybrid-runbook-worker) |
 | Operational compliance | Guest automation | Desired State Configuration (DSC) | Code-based configuration of guest operating systems to reduce errors and configuration drift. | [DSC overview](/powershell/scripting/dsc/overview/overview) |
 | Protect and recover | Breach notification | Microsoft Defender for Cloud | Extend protection to include security-breach recovery triggers. | See the following sections |
+| Protect and recover | Threat Hunting | Azure Sentinel | Built in hunting queries that help you detect and protect against malicious activity  | [Sentinel Threat Hunting](/azure/sentinel/hunting) |
 
 ::: zone target="docs"
 
@@ -127,3 +130,19 @@ To explore Microsoft Defender for Cloud, go to the [Azure portal](https://portal
 To learn more, see [Microsoft Defender for Cloud documentation](/azure/security-center/).
 
 ::: zone-end
+
+## Azure Sentinel
+
+Azure Sentinel is a cloud-native security information event management (SIEM) and security orchestration automated response (SOAR) solution that plays a role, not only in your Enhanced management baseline in Azure but also in the Enhanced Baseline, Platform Operations and Workload Operations. 
+
+Azure Sentinel allows you to Collect Data, Detect Threats, Investigate Incidents and Respond using Automation. Upon enabling the solution the ability to connect and collect data from Azure, On-premises or any other cloud provider becomes available. There are over a hundred Data Connectors available including Office 365 Audit Logs, Azure Activity Logs, Cisco Umbrella, Trend Micro TippingPoint, Sophos Cloud Optix, VMWare ESXi and many others that simplify your integration into Sentinel from existing investments. 
+
+Azure Sentinel can be enabled at no additional cost on an Azure Monitor Log Analytics workspace for the first 31-days. See more [Azure Sentinel Pricing](https://azure.microsoft.com/pricing/details/azure-sentinel/).
+
+### Learn more about Azure Sentinel
+
+To explore Azure Sentinel, go to the [Azure portal](https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/microsoft.securityinsightsarg%2Fsentinel)
+
+To learn more, see [Azure Sentinel documentation](/azure/sentinel/).
+
+Want to become an Azure Sentinel Ninja, see [Azure Sentinel Ninja Training](https://techcommunity.microsoft.com/t5/azure-sentinel/become-an-azure-sentinel-ninja-the-complete-level-400-training/ba-p/1246310)
