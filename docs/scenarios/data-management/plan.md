@@ -100,8 +100,4 @@ Agility is about thinking through how to understand what's going on in your curr
 
 ## Next steps
 
-The following articles can guide your cloud adoption journey and help your cloud adoption scenario to succeed:
-
-- [Review your environment for Azure landing zones](./ready.md)
-- [Govern data management and analytics](./govern.md)
-- [Secure data management and analytics](./secure.md)
+[Build data management and analytics capabilities in Azure](./plan-capabilities.md)

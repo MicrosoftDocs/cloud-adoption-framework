@@ -133,4 +133,4 @@ Depending on the destination, Azure Database Migration Service can replicate fro
 
 ## Next steps
 
-[SAP ingestion with enterprise-scale for analytics and AI in Azure](./sap-data-ingestion.md)
+[SAP ingestion with enterprise-scale for analytics and AI in Azure](sap-data-ingestion.md)
