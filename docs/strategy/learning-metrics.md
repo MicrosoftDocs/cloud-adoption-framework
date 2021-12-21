@@ -1,6 +1,6 @@
 ---
 title: Align technical efforts to outcome metrics
-description: Understand how to align efforts that measure and communicate transformation's impact on the business.
+description: Understand how to align efforts to measure and communicate transformation's impact on the business.
 author: mpvenables
 ms.author: brblanch
 ms.date: 12/15/2021
@@ -48,7 +48,7 @@ An even more valuable outcome metric is the number of dashboards created from co
 
 ## Next steps
 
-After you align your outcome metrics, you're ready to start [building the business case](./cloud-migration-business-case.md) to deliver against them.
+After you align your outcome metrics, you're ready to start [measuring business outcomes](./business-outcomes/okr.md) using objectives and key results (OKRs).
 
 > [!div class="nextstepaction"]
-> [Build the cloud business case](./cloud-migration-business-case.md)
+> [Measure business outcomes](./business-outcomes/okr.md)
