@@ -3,7 +3,7 @@ title: Replication options
 description: Use the Cloud Adoption Framework for Azure to understand the replication process and why you need replication for cloud migration.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 04/04/2019
+ms.date: 12/21/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
