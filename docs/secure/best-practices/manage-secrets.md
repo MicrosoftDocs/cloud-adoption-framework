@@ -54,7 +54,7 @@ Understanding alternatives to using Azure Key Vault and adhering to the external
 > - Implement observability, for example: logging, monitoring, and alerting
 > - If you use Azure Key Vault:
 >   - Implement the security baseline for Azure Key Vault
->   - Enable [Azure Defender for Azure Key Vault](/azure/security-center/defender-for-key-vault-introduction)
+>   - Enable [Microsoft Defender for Key Vault](/azure/security-center/defender-for-key-vault-introduction)
 >   - Enable logging for Azure Key Vault
 
 To learn more, see:

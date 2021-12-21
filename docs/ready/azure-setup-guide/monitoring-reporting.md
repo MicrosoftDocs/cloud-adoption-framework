@@ -122,13 +122,13 @@ To learn more, see [Azure Advisor documentation](/azure/advisor/).
 
 ::: zone-end
 
-## [Azure Security Center](#tab/AzureSecurityCenter)
+## [Microsoft Defender for Cloud](#tab/AzureSecurityCenter)
 
-Azure Security Center also plays an important part in your monitoring strategy. It can help you monitor the security of your machines, networks, storage, data services, and applications. Security Center provides advanced threat detection by using machine learning and behavioral analytics to help identify active threats targeting your Azure resources. It also provides threat protection that blocks malware or other unwanted code, and reduces the surface area exposed to brute force and other network attacks.
+Microsoft Defender for Cloud also plays an important part in your monitoring strategy. It can help you monitor the security of your machines, networks, storage, data services, and applications. Defender for Cloud provides advanced threat detection by using machine learning and behavioral analytics to help identify active threats targeting your Azure resources. It also provides threat protection that blocks malware or other unwanted code, and reduces the surface area exposed to brute force and other network attacks.
 
-When Security Center identifies a threat, it triggers a security alert with steps you need to take to respond to an attack. It also provides a report with information about the threat that was detected.
+When Defender for Cloud identifies a threat, it triggers a security alert with steps you need to take to respond to an attack. It also provides a report with information about the threat that was detected.
 
-Azure Security Center is offered in two tiers: free and standard. Features like security recommendations are available for free. The Standard tier provides additional protection like advanced threat detection and protection across hybrid cloud workloads.
+Microsoft Defender for Cloud is offered in two tiers: free and standard. Features like security recommendations are available for free. The Standard tier provides additional protection like advanced threat detection and protection across hybrid cloud workloads.
 
 ::: zone target="chromeless"
 
@@ -144,10 +144,10 @@ After you turn on and set up security policies for a subscription's resources, y
 
 ::: zone target="docs"
 
-To explore Azure Security Center, go to the [Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/SecurityMenuBlade/0).
+To explore Microsoft Defender for Cloud, go to the [Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/SecurityMenuBlade/0).
 
 ### Learn more
 
-To learn more, see [Azure Security Center documentation](/azure/security-center/).
+To learn more, see [Microsoft Defender for Cloud documentation](/azure/security-center/).
 
 ::: zone-end

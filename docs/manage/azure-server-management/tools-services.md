@@ -29,7 +29,7 @@ Migration services can help you migrate your workloads into Azure. To provide th
 
 ## Secure
 
-[Azure Security Center](/azure/security-center/security-center-introduction) is a comprehensive security management application. By onboarding to Security Center, you can quickly get an assessment of the security and regulatory compliance status of your environment. For instructions on onboarding your servers to Azure Security Center, see [Configure Azure management services for a subscription](./onboard-at-scale.md#azure-security-center).
+[Microsoft Defender for Cloud](/azure/security-center/security-center-introduction) is a comprehensive security management application. By onboarding to Defender for Cloud, you can quickly get an assessment of the security and regulatory compliance status of your environment. For instructions on onboarding your servers to Defender for Cloud, see [Configure Azure management services for a subscription](./onboard-at-scale.md#microsoft-defender-for-cloud).
 
 ## Protect
 
@@ -90,7 +90,7 @@ To learn about pricing for Azure management services, go to these pages:
 
 - [Azure Monitor](https://azure.microsoft.com/pricing/details/monitor/)
 
-- [Azure Security Center](https://azure.microsoft.com/pricing/details/azure-defender/)
+- [Microsoft Defender for Cloud](https://azure.microsoft.com/pricing/details/azure-defender/)
 
 - [Azure Automation](https://azure.microsoft.com/pricing/details/automation/), including:
   - Desired State Configuration

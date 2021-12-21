@@ -23,13 +23,15 @@ Define your naming and tagging strategy as early as possible. Use the following 
 - [Naming rules and restrictions for Azure resources](/azure/azure-resource-manager/management/resource-name-rules)
 
 > [!NOTE]
-> Every business has its own organizational and management requirements. These recommendations help start a discussion with your cloud adoption teams. As the discussion proceeds, use the template below to document the naming and tagging decisions you make when aligning these recommendations to your specific business needs.
+> Every business has its own organizational and management requirements. These recommendations help start a discussion with your cloud adoption teams. As the discussion proceeds, use the tools below to document the naming and tagging decisions you make when aligning these recommendations to your specific business needs.
 >
+> Download the [Azure Naming Tool](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready/AzNamingTool) to create an organizational naming reference and name generator.
+> 
 > Download the [naming and tagging conventions tracking template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/naming-and-tagging-conventions-tracking-template.xlsx).
 
 ## Purpose of naming and tagging
 
-Accurately representing and naming your resources is essential for security purposes. In the event of a security incident, it's critical to quickly identify affected systems, what functions those systems support, and the potential business impact. Security services such as [Azure Security Center](/azure/security-center/security-center-introduction) and [Azure Sentinel](/azure/sentinel/) reference resources and their associated logging and alert information by resource name.
+Accurately representing and naming your resources is essential for security purposes. In the event of a security incident, it's critical to quickly identify affected systems, what functions those systems support, and the potential business impact. Security services such as [Microsoft Defender for Cloud](/azure/security-center/security-center-introduction) and [Microsoft Sentinel](/azure/sentinel/) reference resources and their associated logging and alert information by resource name.
 
 Azure defines [naming rules and restrictions for Azure resources](/azure/azure-resource-manager/management/resource-name-rules). This guidance provides detailed recommendations to support enterprise cloud adoption efforts.
 

@@ -24,7 +24,7 @@ For any enterprise-grade environment, this table outlines the suggested minimum 
 | Process                 | Tool                  | Purpose                                                                                  |
 | ----------------------- | --------------------- | ---------------------------------------------------------------------------------------- |
 | Protect data            | Azure Backup          | Back up data and virtual machines in the cloud.                                          |
-| Protect the environment | Azure Security Center | Strengthen security and provide advanced threat protection across your hybrid workloads. |
+| Protect the environment | Microsoft Defender for Cloud | Strengthen security and provide advanced threat protection across your hybrid workloads. |
 
 ::: zone target="docs"
 

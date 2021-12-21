@@ -152,7 +152,7 @@ Planning efforts for unified operations and management assume that most assets f
 - **Remain current with fully automated updates, upgrades and policy-controlled deployments** like evergreen SQL and hyperscale deployment option of [Azure Database for PostgreSQL](/azure/postgresql/).
 - **Optimize performance of data workloads, and dynamically scale up/scale out, without application downtime with cloud elasticity on-premises.**
 - **Gain unified management and consistent visibility over on-premises and native Azure data workloads** using familiar tools (Azure portal, Azure data studio, and Azure CLI).
-- **Protect your on-premises data workloads using Azure security and governance toolsets** including [Azure Security Center](/azure/security-center/security-center-introduction), [Azure Policy](/azure/governance/policy/overview), and [Azure RBAC](/azure/role-based-access-control/).
+- **Protect your on-premises data workloads using Azure security and governance toolsets** including [Microsoft Defender for Cloud](/azure/security-center/security-center-introduction), [Azure Policy](/azure/governance/policy/overview), and [Azure RBAC](/azure/role-based-access-control/).
 - **Increase cost-efficiencies across your hybrid infrastructure** with a modern cloud billing model.
 
 ## Guidance for inventory analysis

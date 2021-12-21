@@ -27,8 +27,8 @@ Since then, some things have changed that will affect governance:
 - Identity is controlled by an on-premises instance of Active Directory. Hybrid identity is facilitated through replication to Azure Active Directory.
 - IT operations or cloud operations are largely managed by Azure Monitor and related automation capabilities.
 - Business continuity and disaster recovery (BCDR) is controlled by Azure Recovery Services vaults.
-- Azure Security Center is used to monitor security violations and attacks.
-- Azure Security Center and Azure Monitor are both used to monitor governance of the cloud.
+- Microsoft Defender for Cloud is used to monitor security violations and attacks.
+- Microsoft Defender for Cloud and Azure Monitor are both used to monitor governance of the cloud.
 - Azure Blueprints, Azure Policy, and management groups are used to automate compliance to policy.
 
 ### Incrementally improve the future state

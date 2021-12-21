@@ -1,18 +1,18 @@
 ---
-title: How automated ingestion frameworks support enterprise-scale for analytics and AI in Azure
-description: Learn about how automated ingestion frameworks support enterprise-scale for analytics and AI in Azure.
+title: How automated ingestion frameworks support data management and analytics scenario in Azure
+description: Learn about how automated ingestion frameworks support data management and analytics scenario in Azure.
 author: mboswell
 ms.author: mboswell
-ms.date: 08/06/2021
+ms.date: 11/25/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# How automated ingestion frameworks support enterprise-scale for analytics and AI in Azure
+# How automated ingestion frameworks support data management and analytics scenario in Azure
 
-The [ingest process with enterprise-scale for analytics and AI in Azure](./data-ingestion.md#ingest-considerations-for-azure-data-factory) and [ingest and processing resource group](../architectures/data-landing-zone.md#ingest-and-processing) guide enterprises through how to build their own custom ingestion framework.
+The [ingest process with data management and analytics scenario in Azure](./data-ingestion.md#ingest-considerations-for-azure-data-factory) and [ingest and processing resource group](../architectures/data-landing-zone.md#ingest-and-processing) guide enterprises through how to build their own custom ingestion framework.
 
 This section provides guidance for how custom ingestion frameworks can drive services and processes.
 
@@ -208,4 +208,4 @@ POST https://{accountName}.scan.purview.azure.com/datasources/{dataSourceName}/s
 
 ## Next steps
 
-[Best practices for data science projects with enterprise-scale for analytics and AI in Azure](./data-science-best-practices.md)
+[Best practices for data science projects with data management and analytics scenario in Azure](./data-science-best-practices.md)

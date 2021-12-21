@@ -83,7 +83,7 @@ Staying secure is challenging in a world that is constantly changing. It's criti
 
 To get started with asset protection, we recommend that organizations take the following steps.
 
-- **Focus on well-known resources first:** Think about virtual machines, networks, and identities in the cloud that the team is already familiar with. This technique allows you to make immediate progress and are often easier to manage and secure with native cloud tools like Azure Security Center and Azure Defender.
+- **Focus on well-known resources first:** Think about virtual machines, networks, and identities in the cloud that the team is already familiar with. This technique allows you to make immediate progress and are often easier to manage and secure with native cloud tools like Microsoft Defender for Cloud.
 - **Start with vendor/industry baselines:** Start your security configuration with a well-known and proven solution, for example:
 
   - **Security baselines in the Azure Security Benchmark.** Microsoft provides security configuration guidance tailored to individual Azure services. These baselines apply the Azure security benchmarks to the unique attributes of each service. This approach enables security teams to secure each service and refine configurations as needed. For more information, see [Security baselines for Azure](/security/benchmark/azure/security-baselines-overview).

@@ -1,16 +1,16 @@
 ---
-title: Overview of the enterprise-scale for analytics and AI architecture data landing zone in Azure
-description: Learn about the enterprise-scale for analytics and AI architecture data landing zone in Azure.
+title: Overview of the data management and analytics scenario architecture data landing zone in Azure
+description: Learn about the data management and analytics scenario architecture data landing zone in Azure.
 author: mboswell
 ms.author: mboswell
-ms.date: 03/03/2021
+ms.date: 11/25/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Overview of the enterprise-scale for analytics and AI architecture data landing zone in Azure
+# Overview of the data landing zone in Azure
 
 Data landing zones are connected to the [data management landing zone](./data-management-landing-zone.md) by virtual network (VNet) peering. They're considered a [landing zone](../../../ready/landing-zone/index.md) related to the enterprise-scale architecture.
 
@@ -116,7 +116,7 @@ Across the data landing zone, there's a requirement for many shared metadata ser
 ![Diagram of data landing zone shared metadata services.](../images/data-landing-zone-shared-services.png)
 
 > [!TIP]
-> If your organization has decided to develop your own ingestion framework engine based on the recommendations in the enterprise-scale for analytics and AI ingestion flow, using either a Power Apps or .NET application, in the data management landing zone, we would suggest deploying an Azure SQL Database instance to hold metadata for Azure Data Factory to use. Having this custom application will speed up the onboarding of data sources, allowing teams to create new data sources for ingestion for landing into the Raw to Enriched in the data landing zone data lakes.
+> If your organization has decided to develop your own ingestion framework engine based on the recommendations in the data management and analytics scenario ingestion flow, using either a Power Apps or .NET application, in the data management landing zone, we would suggest deploying an Azure SQL Database instance to hold metadata for Azure Data Factory to use. Having this custom application will speed up the onboarding of data sources, allowing teams to create new data sources for ingestion for landing into the Raw to Enriched in the data landing zone data lakes.
 >
 
 A self-hosted integration runtime will be deployed for use with Azure Purview to scan data inside the data landing zone. We recommend you understand how to [create and manage a self-hosted integration runtime in Azure Purview](/azure/purview/manage-integration-runtimes).
@@ -163,7 +163,7 @@ Azure Databricks service is envisioned to be one of the key consumers of the Azu
 > An Azure Databricks workspace will be provisioned for all data scientists and DataOps called the Azure Databricks analytics and data science workspace as shown in the shared products resource group.
 > This workspace can be configured to connect to the Azure Data Lake using Azure Active Directory passthrough or table access control. Depending on the use case, conditional access can be configured as another security measure.
 
-The enterprise-scale for analytics and AI guidance follows best practices to integrate Azure Databricks:
+The data management and analytics scenario guidance follows best practices to integrate Azure Databricks:
 
 - [Securing access to Azure Data Lake Gen2 from Azure Databricks](https://github.com/hurtn/datalake-ADLS-access-patterns-with-Databricks/blob/master/readme.md)
 - [Azure Databricks best practices](https://github.com/Azure/AzureDatabricksBestPractices/blob/master/toc.md)
@@ -184,7 +184,7 @@ Azure Synapse Analytics is the provisioned integrated analytics service that acc
 A data integration resource group, is responsible for data ingestion and enrichment only from external sources such as metrics, finance, and CRM. This layer can operate in both real-time, batch and micro-batch.
 
 > [!IMPORTANT]
-> To learn more about each of the services deployed in the data integration resource group, see [Enterprise-scale for analytics and AI data integrations in Azure](./data-landing-zone-data-integration.md).
+> To learn more about each of the services deployed in the data integration resource group, see [Data management and analytics scenario data integrations in Azure](./data-landing-zone-data-integration.md).
 >
 
 ## Data products layer
@@ -195,7 +195,7 @@ A data landing zone can have multiple data products. You can create the data pro
 
 The resource group for a data product includes all the service required to make that data product. For example, there's a requirement to have an Azure Database for MySQL, that's used by a visualization tool. The data must be ingested and transformed before landing into the MySQL database. You can deploy an Azure Data Factory and Azure Database for MySQL into the data product resource group.
 
-For more information on how to onboard data products, see [Enterprise-scale for analytics and AI data products in Azure](./data-landing-zone-data-products.md). The guidance explains the process to create the services and resource groups.
+For more information on how to onboard data products, see [Data management and analytics scenario data products in Azure](./data-landing-zone-data-products.md). The guidance explains the process to create the services and resource groups.
 
 ## Visualization layer
 
@@ -212,4 +212,4 @@ This resource group could host virtual machines for third-party visualization se
 
 ## Next steps
 
-[Enterprise-scale for analytics and AI data integrations in Azure](./data-landing-zone-data-integration.md)
+[Data management and analytics scenario data integrations in Azure](./data-landing-zone-data-integration.md)

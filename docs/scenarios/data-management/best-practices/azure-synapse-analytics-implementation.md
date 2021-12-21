@@ -1,16 +1,16 @@
 ---
-title: Use Azure Synapse Analytics with enterprise-scale for analytics and AI
-description: Learn how to use Azure Synapse Analytics with enterprise-scale for analytics and AI.
+title: Use Azure Synapse Analytics with data management and analytics scenario
+description: Learn how to use Azure Synapse Analytics with data management and analytics scenario.
 author: mboswell
 ms.author: mboswell
-ms.date: 08/03/2021
+ms.date: 12/15/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Use Azure Synapse Analytics with enterprise-scale for analytics and AI
+# Use Azure Synapse Analytics with data management and analytics scenario
 
 Azure Synapse Analytics is the provisioned, integrated analytics service that accelerates time to insight across data warehouses and big data systems. Azure Synapse Analytics brings together:
 
@@ -21,7 +21,7 @@ Azure Synapse Analytics is the provisioned, integrated analytics service that ac
 Azure Synapse studio is a tool in Azure Synapse that provides a unified experience for management, monitoring, coding, and security. Synapse studio has deep integration with other Azure services like Power BI, Azure Cosmos DB, and Azure Machine Learning.
 
 > [!NOTE]
-> This section aims to describe prescribed configurations which are specific to enterprise-scale for analytics and AI. It's a compliment to the official [Azure Synapse Analytics documentation](/azure/synapse-analytics/).
+> This section aims to describe prescribed configurations which are specific to data management and analytics scenario. It's a compliment to the official [Azure Synapse Analytics documentation](/azure/synapse-analytics/).
 
 ## Overview
 
@@ -46,20 +46,20 @@ We recommend Azure Databricks for premium big data processing and data science c
 
 A data landing zone creates workspaces with an [Azure Synapse Analytics managed virtual network](/azure/synapse-analytics/security/synapse-workspace-managed-vnet). Communication with Azure Synapse happens through the three endpoints it exposes: SQL pool, SQL on-demand, and the development endpoint.
 
-At the network level, enterprise-scale for analytics and AI uses [synapse managed private endpoints](/azure/synapse-analytics/security/synapse-workspace-managed-private-endpoints). These endpoints ensure all of the traffic between the data landing zone virtual network and Azure Synapse workspaces moves entirely over the Microsoft backbone network.
+At the network level, data management and analytics scenario uses [synapse managed private endpoints](/azure/synapse-analytics/security/synapse-workspace-managed-private-endpoints). These endpoints ensure all of the traffic between the data landing zone virtual network and Azure Synapse workspaces moves entirely over the Microsoft backbone network.
 
 ### Azure Synapse data access control
 
 Use access control lists with [Azure Active Directory (Azure AD) pass-through in Azure Synapse Analytics](/azure/synapse-analytics/sql/active-directory-authentication#azure-ad-pass-through-in-azure-synapse-analytics) to manage access to the files in the data lake.
 
-We recommend row-level security and column-level security to restrict the data access on the tables in synapse SQL pool using security policy. Row-level security and column-level security is used at the database level and in addition to the database roles.
+We recommend row-level security and column-level security to restrict the data access on the tables in Azure Synapse SQL pool using security policy. Row-level security and column-level security is used at the database level and in addition to the database roles.
 
 For example, row-level security ensures that users in a specific data integration or data product only see their own data. Even if the table contains data for the entire enterprise.
 
 You can combine row-level security with column-level security to restrict access to columns with sensitive data. This way, both row-level security and column-level security apply the access restriction logic at the database tier rather than the application tier. The permission is evaluated every time data access is attempted from any tier.
 
 > [!TIP]
-> We recommend that features such as Azure Defender for SQL, data classification, data encryption, and dynamic data masking are available for SQL pool to support data protection and limit sensitive data exposure.
+> We recommend that features such as Microsoft Defender for SQL, data classification, data encryption, and dynamic data masking are available for SQL pool to support data protection and limit sensitive data exposure.
 
 ### Azure Synapse data access control in Azure Data Lake
 

@@ -3,7 +3,7 @@ title: Provision three Azure Data Lake Storage Gen2 accounts for each data landi
 description: Learn about the three Azure Data Lake Storage Gen2 accounts that should be provisioned for each data landing zone.
 author: mboswell
 ms.author: mboswell
-ms.date: 08/06/2021
+ms.date: 11/25/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -12,7 +12,7 @@ ms.custom: e2e-data-management, think-tank
 
 # Provision three Azure Data Lake Storage Gen2 accounts for each data landing zone
 
-It's important to plan the structure of your data before you land it into a data lake. This planning then allows security, partitioning, and processing to be used effectively. The [three data lakes](./data-lake-overview.md#the-three-data-lakes) outlines a starting point for enterprise-scale for analytics and AI.
+It's important to plan the structure of your data before you land it into a data lake. This planning then allows security, partitioning, and processing to be used effectively. The [three data lakes](./data-lake-overview.md#the-three-data-lakes) outlines a starting point for data management and analytics scenario.
 
 ## Overview
 
