@@ -22,7 +22,7 @@ These identity management systems play an important role. They help designing an
 
 The following diagram shows a reference architecture that demonstrates the roles, permissions, and flow of actions for Azure Arc-enabled servers:
 
-:::image type="content" source="./media/arc-enabled-servers-iam.svg" alt-text="Image that shows reference architecture that demonstrates the identities, roles, permissions and flow of actions for Azure Arc-enabled servers." lightbox="./media/arc-enabled-servers-iam.svg" border="false":::
+:::image type="content" source="./media/arc-enabled-servers-iam.svg" alt-text="Image that shows reference architecture that demonstrates the identities, roles, permissions and flow of actions for Azure Arc-enabled servers." lightbox="./media/arc-enabled-servers-iam.png" border="false":::
 
 ## Design considerations
 
