@@ -34,7 +34,7 @@ When a datacenter is properly maintained, patched, and updated, there is likely 
 
 - **Frequent host upgrades:** When you have to upgrade large numbers of hosts to complete the migration of a workload, it can delay the migration team. Break out affected applications and address the remediation steps before you include affected applications in any planned releases.
 - **Frequent guest OS upgrade:** Large enterprises commonly have servers running on outdated versions of Linux or Windows. Aside from the apparent security risks of operating an outdated OS, there are also incompatibility issues that prevent affected workloads from being migrated. When a large number of VMs require OS remediation, try breaking out these efforts into a parallel iteration.
-- **Major code changes:** Older custom applications might require significantly more modifications to prepare them for PaaS deployment. When this is the case, try removing them from the migration backlog entirely, managing them in a wholly separate program.
+- **Major code changes:** Older custom applications might require significantly more modifications to prepare them for PaaS deployment. When this is the case, try removing them from the migration backlog entirely, managing them in a separate program.
 
 ## Decision framework
 
