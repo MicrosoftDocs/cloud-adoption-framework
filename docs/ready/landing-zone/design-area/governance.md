@@ -32,7 +32,7 @@ Governance provides mechanisms and processes for maintaining control over platfo
 
 The design area review explores the considerations and recommendations that help you make informed decisions as you plan your landing zone.
 
-The governance design area focuses on the design decisions in the landing zone. Also, the [Govern methodology](/govern/index.md) in the Cloud Adoption Framework gives guidance for governance processes and tools.
+The governance design area focuses on the design decisions in the landing zone. Also, the [Govern methodology](/azure/cloud-adoption-framework/govern/index) in the Cloud Adoption Framework gives guidance for governance processes and tools.
 
 The Govern methodology consists of five disciplines:
 
@@ -82,7 +82,7 @@ Change advisory review boards might hinder an organizations innovation and busin
 - Are there groups of resources that should share a common lifecycle?
 - Are there groups of resources that should share common access constraints (such as Role-based access control)?
 - Are there standard resource configurations within your organization that might be used to ensure a consistent baseline configuration?
-- Explore how [tools in Azure can support resource consistency](/govern/resource-consistency/toolchain) in your landing zone.
+- Explore how [tools in Azure can support resource consistency](/azure/cloud-adoption-framework/govern/resource-consistency/toolchain) in your landing zone.
 
 ### Security baseline considerations
 
