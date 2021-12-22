@@ -36,7 +36,7 @@ The following are some design considerations before implementing the Flux extens
 
 ### Configuration Repository Structure
 
-Before defining your cluster configuration repository, consider the different layers of configuration on your Kubernetes Cluster and different   responsibilities for provisioning these different layers of configurations.
+Before defining your cluster configuration repository, consider the different layers of configuration on your Kubernetes cluster and different   responsibilities for provisioning these different layers of configurations.
 
 #### Configuration layers
 
@@ -52,31 +52,43 @@ Before defining your cluster configuration repository, consider the different la
 
 #### Repository Structure
 
-Consider different tradeoffs with how you choose a Git repository structure that will define your Kubernetes cluster state.  Depending on the responsibilities and personas identified, it is important to consider the necessary collaboration or desired independence required for different repository structure options.
+Consider different tradeoffs with how you choose a Git repository structure that will define your Kubernetes cluster state.  Depending on the responsibilities and personas identified, it is important to consider the necessary collaboration or desired team independence required for different repository structure options.
 
-- A single repository or branch that represents each environment. This allows the most flexibility to control Git policies and permissions for each repository that represents an environment. The drawback is that there will be duplicate configuration between environments of different types, such as production, staging, development.
-- A single repository for all environments. As an example, this approach can be implemented using Kustomize which allows you to define a base configuration for Kubernetes objects and a set of overlays for an environment that override configurations in the base. This can reduce duplicating YAML files for each environment but reduces the configuration separation between environments. Making a single change to the repository has the potential to impact all environments at once, so understanding the impact of changes to base folders must be carefully taken.
-- Multiple repositories each serving a specific purpose. This could be used for separating configuration repositories for each application, team, layer, or tenant. This allows teams to have more independent control but moves away from the principle of defining your system state in a single repository and improve the central configuration, visibility and control of deployments to a cluster. Setting up multiple repositories should be considered for multi-tenancy needs. There is RBAC and security built-in to limit what configuration a team/tenant assigned to a specific repository can apply, such as only allowing deployment to certain namespaces.
+For your code repositories, you can use whatever branching strategy you like since it is only used for your CI. For your GitOps configuration repositories, you need to consider the following strategies based on your organization size and tooling:
+
+- Single repository (Branch per environment)
+  - This allows the most flexibility to control Git policies and permissions for each branch that represents an environment.
+  - The drawback is that there there will be no sharing of the common config among environments since tooling such as Kustomize does not work with Git branches.
+- Single repository (Directory per environment)
+  - As an example, this approach can be implemented using Kustomize which allows you to define a base configuration for Kubernetes objects and a set of overlays for an environment that override configurations in the base.
+  - This can reduce duplicating YAML files for each environment but reduces the configuration separation between environments. Making a single change to the repository has the potential to impact all environments at once, so understanding the impact of changes to base folders must be fully understood and taken with care.
+- Multiple repositories (each serving a specific purpose)
+  - This could be used for separating configuration repositories for each application, team, layer, or tenant.
+  - This allows teams to have more independent control but moves away from the principle of defining your system state in a single repository to improve the central configuration, visibility and control of deployments to a cluster.
+  - Setting up multiple repositories should be considered for multi-tenancy needs. There is RBAC and security built-in to limit what configuration a team/tenant assigned to a specific repository can apply, such as only allowing deployment to certain namespaces.
 
 ### Application & Platform Configuration
 
 Platform Operators and Application Operators have several options for managing Kubernetes configuration, the following are choices:
 
-- Raw Kubernetes YAML files that represent YAML specs for each Kubernetes API object you are deploying, this approach works well for single environments. The drawbacks to using raw YAML files is that customizing becomes difficult when you begin to incorporate multiple environments as you need to then duplicate YAML files, and there is not a way to re-use.
-- Helm is a package management tool for Kubernetes objects. It’s a great option for cluster operators to install third-party off-the-shelf applications. Be aware of using its templating too heavily as a configuration management tool for internal applications as it can become complex to manage as the templates grow.
+- Raw Kubernetes YAML files that represent YAML specs for each Kubernetes API object you are deploying, this approach works well for single environments. The drawbacks to using raw YAML files is that customizing becomes difficult when you begin to incorporate multiple environments as you need to then duplicate YAML files, and there is not a good method of re-use.
+- Helm is a package management tool for Kubernetes objects. It’s a great option for Cluster Operators to install third-party off-the-shelf applications. Be aware of using its templating too heavily as a configuration management tool for internal applications as it can become complex to manage as the templates grow.
   - If using Helm Flux has the Helm Controller, allowing one to declaratively manage Helm Chart releases with Kubernetes manifests. You can create a HelmRelease object to manage that process.
 - Kustomize is a Kubernetes native configuration management tool and introduces a template-free way to customize application configuration.
   - If using Kustomize, flux has a kustomize-controller which specialized in running continuous delivery pipelines for infrastructure and workloads defined with Kubernetes manifests and assembled with Kustomize. You can create a Kustomization object to manage that process.
-- With Azure Arc-enabled Kubernetes, there is a list of available extensions which become managed by Microsoft instead of requiring you to manage the lifecycle of the component. Some of these have Open-Source alternative options, an example of this is the Azure Key Vault Secrets Provider. Managing it outside of the extension process allows you more control of these components but adds additional overhead of support and lifecycle management.
+- With Azure Arc-enabled Kubernetes, there is a list of available extensions which become managed and supported by Microsoft instead of requiring you to manage the lifecycle and support of the component. Some of these have Open-Source alternative options, an example of this is the Azure Key Vault Secrets Provider. Managing it outside of the extension process allows you more control of these components but adds additional overhead of support and lifecycle management.
 
 ### CI/CD Flow
 
 #### Application pipeline
 
 - Consider the necessary application build, testing, and validations that you want to include in your Continuous Integration process. This can include linting and testing related to security, integration and performance which are required to create a release candidate for environment deployments.
-- For bridging the gap between a built container image in a CI pipeline to being deployed on a cluster, a traditional push deployment method would be done by calling the Kubernetes API directly from the deployment pipeline. With a GitOps process, to avoid manual configuration modifications to your GitOps repository, the CD pipeline can have permission or run as a service account which then has permission to open a Pull Request or commit directly to a cluster configuration repository with the new container image change. These changes from your CD pipeline can also provision all YAML objects required for your application.
+- For bridging the gap between a built container image in a CI pipeline to being deployed on a cluster, a traditional push deployment method would be done by calling the Kubernetes API directly from the deployment pipeline.
+- With a GitOps process, to avoid manual configuration modifications to your GitOps repository, the CD pipeline can have permission or run as a service account which then has permission to open a Pull Request or commit directly to an configuration repository with the new container image change. These changes from your CD pipeline can also provision all YAML objects required for your application.
 
-#### Platform update process
+![GitOps CI](../../_images/gitops_ci.png)
+
+#### Cluster-wide component update process
 
 - As Cluster Operators need to manage cluster-wide components, this likely will not originate from a CD pipeline. Consider defining a promotion process for Cluster Operators to ensure changes can smoothly transition from one environment to another.
 - In scenarios where you need to apply identical GitOps configuration at scale to your Arc-enabled Kubernetes clusters, you can consider applying an Azure Policy which can automatically install the Flux extension and apply the GitOps configuration to existing Arc-enabled Kubernetes clusters or new clusters as they get onboarded to Azure Arc.
@@ -84,8 +96,6 @@ Platform Operators and Application Operators have several options for managing K
 For all updates to your configuration, to verify changes have been successfully applied to your desired environment, consider defining notifications in Flux to integrate to your CI/CD tools, email, or ChatOps tools to alert on successful changes as well as deployment failures.
 
 ### Security
-
-Explore the different authentication methods and access options available to connect to the GitOps repo and consider the following options:
 
 #### Repository Auth
 
@@ -98,34 +108,55 @@ Explore the different authentication methods and access options available to con
 - PR Pipelines can work with your branch policies to validate YAML configuration and/or deploy test environments as required. These gates will help eliminate configuration errors and increase deployment security and confidence.
 - For access permission, consider which users in your organization should have repository read access, PR creation access, and PR Approval access.
 
-#### Configuration Secrets
+#### Secret Management
 
 - Avoid storing plain text or base64 encoded secrets in your Git repository, instead consider integrating to an external secrets provider such as Azure Key Vault. The [Azure Key Vault Provider for Secrets Store CSI Driver](/azure/azure-arc/kubernetes/tutorial-akv-secrets-provider) allows for the integration of an Azure key vault as a secrets store with an Azure Kubernetes Service (AKS) cluster via a CSI volume. This is available through Azure Arc-enabled Kubernetes extension.
 - Another alternative to manage secrets, is to use [Bitnami's Sealed Secrets](https://Github.com/bitnami-labs/sealed-secrets/releases), which works on the concept of public and private keys. This allows operators to store the one-way encrypted secret using a public key in Git, which can only be decrypted by the private key which is used by a SealedSecrets controller running in your cluster.
 
-## Design recommendations
+## Design Recommendations
 
-### Configuration Repository Structure
+The following image is a reference architecture that shows the responsibilities, repositories, and pipelines to implement a GitOps process using the Azure Arc-enabled Kubernetes Flux Extension(/azure/azure-arc/kubernetes/tutorial-use-Gitops-flux2).
 
-- On your Arc-enabled Kubernetes cluster, enable [GitOps using Flux v2](/azure/azure-arc/kubernetes/tutorial-use-Gitops-flux2).
-- Create a single repository to represent a Kubernetes cluster with different branches representing each environment type. This will allow fine grain control of changes into each specific environment.
-- Structure the repository to separate cluster-wide components and applications by folders, this will allow differentiation between the layers running in your cluster.
+![GitOps CI](../../_images/eslz-cicd-flow.png)
 
-### Application & Platform Configuration 
+### Repositories
 
-- Incorporate tools that make it easier for application developers and operators to build initial configuration per environment. Application operators should define CD pipelines and Kubernetes specific application configuration that take advantage of package managers such as Helm or configuration tools like Kustomize overlays to make configuration simpler.
-- For scenarios that require a Kubernetes configuration to be applied to all Arc-enabled Kubernetes clusters, create an Azure Policy to apply this at scale.
+The following three Git repositories are included in the design:
 
-###	CI/CD Flow
+- Application code repository
+  - This repository stores application code and any pipeline definition and configuration scripts.
+  - Use a development branching strategy that is easy to understand and limits the amount of undesired long running branches.
+- Application configuration repository
+  - This repository is used to store application configuration including Kubernetes objects such as ConfigMaps, Deployments, Services, and HPA objects. Structure the repository with different folders for each application. Flux will synchronize changes from this repository and target branch, to the cluster.
+  - Incorporate tools that make it easier for application developers and operators to build initial configuration per environment. Application Operators should define Kubernetes specific application configuration that take advantage of package managers such as Helm or configuration tools like Kustomize overlays to make configuration simpler.
+  - Create a branch that represents each environment type. This will allow fine grain control of changes into each specific environment such as non-prod and production environments.
+- Cluster-wide configuration repository
+  - Define cluster-wide components that a Cluster Operator will manage such as ingress controller, namespaces, RBAC, and a monitoring stack. Flux will synchronize changes from this repository and target branch, to the cluster.
+  - Structure the repository with different folders representing different components.
+  - Create a branch that represents each environment type. This will allow fine grain control of changes into each specific environment such as non-prod and production environments.
 
-Use the following reference tutorials to [pmplement CI/CD with GitOps on Azure Arc-enabled Kubernetes] (/azure/azure-arc/kubernetes/tutorial-Gitops-flux2-ci-cd).
+###	CI/CD and Configuration Update Process
 
-- Development teams should define a CI process that includes building, linting, testing, and pushing an application to a container registry.
-- Create a CD pipeline that automatically opens a pull request against your GitOps repo’s environment. This CD pipeline can have environment stages with appropriate environment variables that target the correct GitOps repository and branch.
-- The deployment pipeline should deploy all Kubernetes manifests to the Git repository in raw YAML form, when possible.
-- Implement [GitOps Connector](https://Github.com/microsoft/Gitops-connector) to integrated feedback from the Flux agent to your CI/CD tooling.
+#### CI/CD, Container Image Update
+
+- CI Pipeline
+  - Development teams should define a CI pipeline with a process that includes building, linting, testing, and pushing an application to a container registry.
+- CD Pipeline
+  - Create a CD pipeline that runs a script which targets  changes against your application configuration repository. This script creates a temporary branch sourced from your target environment, makes a change to the image tag version, commits the change, and opens a pull request against the target environment branch. This CD pipeline can have environment stages with appropriate environment variables that target the correct GitOps Configuration repository and branch.
+  - Define manual approval steps on environment stages to limit unwanted pull requests to all environments.
+- Branch policies can be enabled on the application configuration repository to enforce peer review or approvals for environments. This can be a minimum number of required reviews or auto-approval for lower environments. Additionally consider 3rd party integrations and approvals as necessary to meet any organization standards.
+
+#### Cluster-wide and Application Configuration updates
+
+- Cluster Operators and Application Operators will each be defining configuration in their respective configuration repository. These users will not require pipeline tooling to push configurations, and instead can use the native Git commit and PR processes to define configuration and push the changes to a branch that represents an environment.
+- For new configuration definitions, start with defining configuration in lower environments, such as Dev and promote to higher environments by merge and pull request. Cherry-pick configuration updates that are only specific to certain environments as needed.
+- For implementing at-scale GitOps Configurations which require a Kubernetes configuration to be applied to all Arc-enabled Kubernetes clusters, create an Azure Policy to automatically apply this configuration at scale.
+
+### Feedback
+
 - Configure Azure Monitor alerts to alert on GitOps configurations that are unable to synchronize or are erroring.
-
+- Implement [GitOps Connector](https://Github.com/microsoft/Gitops-connector) to integrated feedback from the Flux agent to your CI/CD tooling.
+  
 ### Security
 
 - It is recommended to use a private Git repository that has Authentication and Authorization required for defining any configuration repository, this will ensure unwanted access to any cluster configuration.
@@ -133,12 +164,13 @@ Use the following reference tutorials to [pmplement CI/CD with GitOps on Azure A
 - Configure branch policies and permissions that match the responsibilities of the cluster, with a minimum amount of reviewers to approve changes.
 - Configure a PR pipeline to validate YAML configurations, syntax, and optionally deploy a test cluster. Setup a branch policy to require this pipeline to run successful before any merge can be accepted.
 - Implement secrets using the [Azure Key Vault Provider for Secrets Store CSI Driver](/azure/azure-arc/kubernetes/tutorial-akv-secrets-provider), this will allow for the integration of an Azure Key Vault as a secrets store with an Arc-enabled Kubernetes cluster via a CSI volume.
+- The Flux extension supports namespace and cluster scoped configurations, choose the namespace scope when a configuration should not have access beyond a single namespace.
 
 ## Next steps
 
 For more guidance for your hybrid cloud adoption journey,  review the following:
 
-- To learn more about Azure Arc, check out the [Conceptual GitOps with Fluxv2](/azure/azure-arc/kubernetes/conceptual-Gitops-flux2)
-- To learn more about Azure Arc, check out the [Use GitOps with Fluxv2](/azure/azure-arc/kubernetes/tutorial-use-Gitops-flux2)
-- To learn more about Azure Arc, check out the [Conceptual GitOps Fluxv2 CI/CD Process](/azure/azure-arc/kubernetes/conceptual-Gitops-flux2-ci-cd)
-- To learn more about Azure Arc, check out the [Tutorial to implement Fluxv2 CI/CD](/azure/azure-arc/kubernetes/tutorial-Gitops-flux2-ci-cd)
+- To learn more about GitOps with Azure Arc on Kubernetes, check out the [Conceptual GitOps with Fluxv2](/azure/azure-arc/kubernetes/conceptual-Gitops-flux2)
+- To learn more about GitOps with Azure Arc on Kubernetes, check out the [Use GitOps with Fluxv2](/azure/azure-arc/kubernetes/tutorial-use-Gitops-flux2)
+- To learn more about GitOps with Azure Arc on Kubernetes, check out the [Conceptual GitOps Fluxv2 CI/CD Process](/azure/azure-arc/kubernetes/conceptual-Gitops-flux2-ci-cd)
+- To learn more about GitOps with Azure Arc on Kubernetes, check out the [Tutorial to implement Fluxv2 CI/CD](/azure/azure-arc/kubernetes/tutorial-Gitops-flux2-ci-cd)
