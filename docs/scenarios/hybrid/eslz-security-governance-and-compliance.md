@@ -114,7 +114,7 @@ Understand the [scope of Azure Policy](/azure/role-based-access-control/scope-ov
 
 The following image displays conceptual reference architecture that demonstrates the policy and compliance reporting design areas for Azure Arc-enabled servers:
 
-:::image type="content" source="./media/arc-enabled-servers-policy.svg" alt-text="A diagram depicting the Azure Policy for Azure Arc-enabled servers on Azure conceptual reference architecture." lightbox="./media/arc-enabled-servers-policy.svg" border="false":::
+:::image type="content" source="./media/arc-enabled-servers-policy.svg" alt-text="A diagram depicting the Azure Policy for Azure Arc-enabled servers on Azure conceptual reference architecture." lightbox="./media/arc-enabled-servers-policy.png" border="false":::
 
 ### Log management strategy
 
