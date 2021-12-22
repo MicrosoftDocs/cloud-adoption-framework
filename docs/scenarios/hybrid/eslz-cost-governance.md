@@ -76,11 +76,11 @@ Here are some general design recommendations for Azure Arc-enabled servers cost 
 
 - Use [Azure Cost Management + Billing](/azure/azure-monitor/usage-estimated-costs#azure-cost-management--billing) to have visibility on Azure Monitor costs.
 
-![Azure Cost Management + Billing](./media/Azure-cost-management-billing.png)
+![Azure Cost Management + Billing](./media/azure-cost-management-billing.png)
 
 - Use [Log Analytics workspaces insights](/azure/azure-monitor/logs/log-analytics-workspace-insights-overview) solution to understand and monitor the collected logs and their ingestion rate on the Log Analytics workspace.
 
-![Log Analytics insights](./media/Log-analytics-insights.png)
+![Log Analytics insights](./media/log-analytics-insights.png)
 
 - Evaluate possible data ingestion volume reducing. Refer to [Tips for reducing data volume](/azure/azure-monitor/logs/manage-cost-storage#tips-for-reducing-data-volume) documentation, to help configure data ingestion properly.
 - Consider how long you want to retain data on Log Analytics. Data ingested into Log Analytics workspace can be retained at no additional charge, up to the first 31 days. Consider general aspects to configure the [Log Analytics workspace level default retention](/azure/azure-monitor/logs/manage-cost-storage#workspace-level-default-retention) and specific needs to configure data [retention by data type](/azure/azure-monitor/logs/manage-cost-storage#retention-by-data-type), that can be as minimal as four days. Example: performance data doesn't usually need to be retained for long periods, but security logs may need to be retained for extended periods.
@@ -100,7 +100,7 @@ Review the [recommendations for security and compliance](./eslz-security-governa
 
 - Use [Azure Cost Management + Billing](/azure/sentinel/azure-sentinel-billing#manage-and-monitor-azure-sentinel-costs) to have visibility on Microsoft Sentinel analysis costs.
 
-![Microsoft Sentinel cost analysis](./media/Azure-cost-management-Sentinel.png)
+![Microsoft Sentinel cost analysis](./media/azure-cost-management-sentinel.png)
 
 - Review [data retention costs](/azure/sentinel/azure-sentinel-billing#data-retention-costs) for data ingested into the Log Analytics workspace used by Microsoft Sentinel.
 - Filter the [right level of logs and events](/azure/azure-monitor/agents/log-analytics-agent#data-collected) for the Azure Arc-enabled Windows and Linux servers to be collected in the Log Analytics workspace.
@@ -116,7 +116,7 @@ Review the [recommendations for security and compliance](./eslz-security-governa
 - Use Azure Cost Management + Billing to understand the Azure Policy guest configuration costs by filtering the **Microsoft.HybridCompute/machines** resource type.
 - All built-in guest configuration policies include a parameter that controls whether the policy will be assigned to Azure Arc-enabled servers machines. Review your policy assignments and set this parameter to "false" for policies that do not need to be evaluated on your hybrid servers.
 
-![Azure Policy costs](./media/Azure-cost-management-policy.png)
+![Azure Policy costs](./media/azure-cost-management-policy.png)
 
 ### Azure Automation configuration management
 
@@ -134,11 +134,11 @@ Review [recommendations for automation](./eslz-automation-arc-server.md) and [Az
 - Review [recommendations for connectivity](./eslz-arc-servers-connectivity.md) and [Azure Private Link pricing](https://azure.microsoft.com/pricing/details/private-link/).
 - Use [Azure Cost Management + Billing](/azure/cost-management-billing/cost-management-billing-overview) to monitor the usage of Private Link, used with Azure Arc-enabled servers.
 
-![Azure Private Link costs](./media/Private-endpoint-costs.png)
+![Azure Private Link costs](./media/private-endpoint-costs.png)
 
 ## Next steps
 
-For more guidance for your hybrid cloud adoption journey,  review the following:
+For more guidance for your hybrid cloud adoption journey, review the following:
 
 - Review [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/day2/) scenarios
 - Review the [prerequisites](/azure/azure-arc/servers/agent-overview#prerequisites) for Azure Arc-enabled servers
