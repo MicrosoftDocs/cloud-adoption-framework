@@ -56,6 +56,6 @@ Ask basic security questions during the Azure AD design phase, such as how your 
 
 - Send all Azure AD diagnostic logs to a central Azure Monitor Log Analytics workspace following the guidance here: [Integrate Azure AD logs with Azure Monitor Logs](/azure/active-directory/reports-monitoring/howto-integrate-activity-logs-with-log-analytics)
 
-- Avoid creating multiple Azure AD tenants. For further information, see [Testing approach for enterprise-scale](../../enterprise-scale/testing-approach.md) and [Cloud Adoption Framework Azure best practices guidance to standardize on a single directory and identity](/secure/security-top-10.md#9-architecture-standardize-on-a-single-directory-and-identity).
+- Avoid creating multiple Azure AD tenants. For further information, see [Testing approach for enterprise-scale](../../enterprise-scale/testing-approach.md) and [Cloud Adoption Framework Azure best practices guidance to standardize on a single directory and identity](/azure/cloud-adoption-framework/secure/security-top-10#9-architecture-standardize-on-a-single-directory-and-identity).
 
 - Use [Azure Lighthouse](/azure/lighthouse/overview) to grant third parties/partners access to Azure resources in customer Azure AD tenants and centralized access to Azure resources in multitenant Azure AD architectures.
