@@ -26,7 +26,7 @@ Resource tags allow you to add metadata to a resource to quickly locate it and a
 
 The following image shows a conceptual reference for resource tagging for Azure Arc-enabled servers:
 
-![A diagram depicting resource tagging for Azure Arc-enabled servers](./media/arc-enabled-servers-resource-tagging.svg)
+:::image type="content" source="./media/arc-enabled-servers-resource-tagging.svg" alt-text="A diagram depicting resource tagging for Azure Arc-enabled servers." lightbox="./media/arc-enabled-servers-resource-tagging.svg" border="false":::
 
 ## Next steps
 

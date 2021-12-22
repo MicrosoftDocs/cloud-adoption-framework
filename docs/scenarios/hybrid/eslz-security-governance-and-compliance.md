@@ -88,7 +88,7 @@ Consider using [Azure Key Vault](/azure/key-vault/general/basic-concepts) to man
 
 The following image displays conceptual reference architecture that demonstrates the Azure Key Vault integration for Azure Arc-enabled servers:
 
-![A diagram depicting the Azure Key Vault integration for Azure Arc-enabled servers.](./media/arc-enabled-servers-keyVault-integration.svg)
+![A diagram depicting the Azure Key Vault integration for Azure Arc-enabled servers.](./media/arc-enabled-servers-key-vault-integration.svg)
 
 > [!TIP]
 > Learn how to use Key Vault managed certificates with Azure Arc-enabled Linux servers in the [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/day2/arc_keyvault#deploy-azure-key-vault-extension-to-azure-arc-enabled-ubuntu-server-and-use-a-key-vault-managed-certificate-with-nginx) project.
@@ -114,7 +114,7 @@ Understand the [scope of Azure Policy](/azure/role-based-access-control/scope-ov
 
 The following image displays conceptual reference architecture that demonstrates the policy and compliance reporting design areas for Azure Arc-enabled servers:
 
-![A diagram depicting the Azure Policy for Azure Arc-enabled servers on Azure conceptual reference architecture.](./media/arc-enabled-servers-policy.svg)
+:::image type="content" source="./media/arc-enabled-servers-policy.svg" alt-text="A diagram depicting the Azure Policy for Azure Arc-enabled servers on Azure conceptual reference architecture." lightbox="./media/arc-enabled-servers-policy.svg" border="false":::
 
 ### Log management strategy
 

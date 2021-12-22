@@ -16,7 +16,7 @@ Enterprises are currently building and running applications across various ecosy
 
 [Enterprise-scale landing zone provides a specific architectural approach](../../ready/enterprise-scale/architecture.md), reference architecture, and reference implementations to help prepare your landing zones for mission-critical technology platforms and supported workloads.
 
-![Diagram for enterprise-scale landing zone.](./media/lz-design.png)
+![Diagram for enterprise-scale landing zone.](./media/landing-zone-design.png)
 
 Enterprise-scale was built with hybrid and multicloud in mind. Supporting hybrid and multicloud requires two simple additions to the reference architecture:
 
@@ -27,7 +27,7 @@ Enterprise-scale was built with hybrid and multicloud in mind. Supporting hybrid
 
 As organizations look to adopt modern cloud services and the benefits they bring, there will be an inevitable period of parallel-running, alongside the legacy on-premises infrastructure.
 
-As cloud services are further evaluated, or as business requirements dictate, organizations may choose to run more than one public cloud service.
+As cloud services are further evaluated, or as business requirements dictate, organizations might choose to run more than one public cloud service.
 
 A distributed heterogeneous estate requires simplified consolidated management and governance, in order to reduce the operational impact.
 
