@@ -49,7 +49,7 @@ This table outlines a few processes, tools, and potential effects common in cust
 | Operational compliance | Operations automation | Azure Automation | Automate operational compliance for faster and more accurate response to change. | See the following sections |
 | Operational compliance | Performance automation | Azure Automation | Automate operational compliance with performance expectations to resolve common resource specific scaling or sizing issues. | See the following sections |
 | Operational compliance | Multicloud operations | Azure Automation Hybrid Runbook Worker | Automate operations across multiple clouds. | [Hybrid Runbook Worker overview](/azure/automation/automation-hybrid-runbook-worker) |
-| Operational compliance | Guest automation | Desired State Configuration (DSC) | Code-based configuration of guest operating systems to reduce errors and configuration drift. | [DSC overview](/powershell/scripting/dsc/overview/overview) |
+| Operational compliance | Guest automation | Desired State Configuration (DSC) | Code-based configuration of guest operating systems to reduce errors and configuration drift. | [DSC overview](/powershell/scripting/dsc/overview) |
 | Protect and recover | Breach notification | Microsoft Defender for Cloud | Extend protection to include security-breach recovery triggers. | See the following sections |
 
 ::: zone target="docs"
