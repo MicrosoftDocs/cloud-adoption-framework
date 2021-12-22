@@ -3,7 +3,7 @@ title: Remediating assets prior to migration
 description: Learn how to remediate any assets that you determine to be incompatible with your chosen cloud provider before migration begins.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 12/21/2021
+ms.date: 12/22/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -16,15 +16,15 @@ During the migration assessment process, the team identifies any configurations 
 
 ## Common remediation tasks
 
-In any corporate environment, technical debt exists but it is healthy and expected. Architecture decisions that are suited for an on-premises environment might not be suitable in a cloud platform. In either case, common remediation tasks might be required to prepare assets for migration. The following are a few examples:
+In any corporate environment, technical debt exists, but it's healthy and expected. Architecture decisions that are suited for an on-premises environment might not be suitable in a cloud platform. In either case, common remediation tasks might be required to prepare assets for migration. The following are a few examples:
 
-- **Minor host upgrades.** Occasionally, an outdated host needs to be upgraded prior to replication.
-- **Minor guest OS upgrades.** It is more likely that an OS will need patching or upgrading prior to replication.
-- **SLA modifications.** Backup and recovery change significantly in a cloud platform. It is likely that assets will need minor modifications to their backup processes to ensure continued function in the cloud.
-- **PaaS migration.** In some cases, a PaaS deployment of a data structure or application might be required to accelerate deployment. Minor modifications are required to prepare the solution for PaaS deployment.
-- **PaaS code changes.** It is not uncommon for custom applications to require minor code modifications to be PaaS ready. Examples could include methods that write to local disk or use of in-memory session state, among others.
-- **Application configuration changes.** Migrated applications might require changes to variables, such as network paths to dependent assets, service account changes, or updates to dependent IP addresses.
-- **Minor changes to network paths.** Routing patterns need to be modified to properly route user traffic to the new assets.
+- **Minor host upgrades:** Occasionally, an outdated host needs to be upgraded prior to replication.
+- **Minor guest OS upgrades:** You'll probably need to patch or upgrade your OS before replication.
+- **SLA modifications:** Backup and recovery change significantly in a cloud platform. Assets might need to be modified to their backup processes to ensure continued function in the cloud.
+- **PaaS migration:** In some cases, a PaaS deployment of a data structure or application might be required to accelerate deployment. Minor modifications are required to prepare the solution for PaaS deployment.
+- **PaaS code changes:** It's not uncommon for custom applications to require minor code modifications to be PaaS ready. Examples could include methods that write to local disk or use of in-memory session state, among others.
+- **Application configuration changes:** Migrated applications might require changes to variables, such as network paths to dependent assets, service account changes, or updates to dependent IP addresses.
+- **Minor changes to network paths:** Routing patterns need to be modified to properly route user traffic to the new assets.
     > [!NOTE]
     > This isn't production routing to the new assets, but rather configuration to allow for proper routing to the assets in general.
 
@@ -32,9 +32,9 @@ In any corporate environment, technical debt exists but it is healthy and expect
 
 When a datacenter is properly maintained, patched, and updated, there is likely to be little need for remediation. Remediation-rich environments tend to be common among large enterprises. This might also include organizations under large IT downsizing, legacy managed service and acquisition-rich environments. In each of these types of environments, remediation consumes a large portion of the migration effort. The following remediation tasks might frequently appear, or negatively affect migration speed or consistency. If this happens, break out remediation into a parallel effort and team (similar to cloud adoption and cloud governance).
 
-- **Frequent host upgrades.** When large numbers of hosts must be upgraded to complete the migration of a workload, the migration team is likely to suffer from delays. It is wise to break out affected applications and address the remediation steps prior to including affected applications in any planned releases.
-- **Frequent guest OS upgrade.** Large enterprises commonly have servers running on outdated versions of Linux or Windows. Aside from the apparent security risks of operating an outdated OS, there are also incompatibility issues that prevent affected workloads from being migrated. When a large number of VMs require OS remediation, try breaking out these efforts into a parallel iteration.
-- **Major code changes.** Older custom applications might require significantly more modifications to prepare them for PaaS deployment. When this is the case, try removing them from the migration backlog entirely, managing them in a wholly separate program.
+- **Frequent host upgrades:** When you have to upgrade large numbers of hosts to complete the migration of a workload, it can delay the migration team. Break out affected applications and address the remediation steps before you include affected applications in any planned releases.
+- **Frequent guest OS upgrade:** Large enterprises commonly have servers running on outdated versions of Linux or Windows. Aside from the apparent security risks of operating an outdated OS, there are also incompatibility issues that prevent affected workloads from being migrated. When a large number of VMs require OS remediation, try breaking out these efforts into a parallel iteration.
+- **Major code changes:** Older custom applications might require significantly more modifications to prepare them for PaaS deployment. When this is the case, try removing them from the migration backlog entirely, managing them in a wholly separate program.
 
 ## Decision framework
 
