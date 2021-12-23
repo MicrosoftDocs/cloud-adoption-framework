@@ -20,7 +20,7 @@ There are several promotion models. This article outlines three of the most comm
 
 In each of the following promotion models, the chosen migration tool replicates and stages the assets that make up a workload. After staging, each model treats the asset a bit differently.
 
-- **Single-step promotion.** In a *single-step* promotion model, the staging process doubles as the promotion process. After all assets are staged, end-user traffic is rerouted and staging becomes production. In such a case, promotion is part of the migration process. This model is the fastest migration model. However, this approach makes it more difficult to integrate robust testing or optimization activities. Further, this model type assumes that the migration team has access to the staging and production environment. This environment compromises separation of duties in some environments.
+- **Single-step promotion:** In a *single-step* promotion model, the staging process doubles as the promotion process. After all assets are staged, end-user traffic is rerouted and staging becomes production. In such a case, promotion is part of the migration process. This model is the fastest migration model. However, this approach makes it more difficult to integrate robust testing or optimization activities. Further, this model type assumes that the migration team has access to the staging and production environment. This environment compromises separation of duties in some environments.
   > [!NOTE]
   > The table of contents for this site lists the promotion activity as part of the optimize process. In a single-step model, promotion occurs during the migration phase. When using this model, roles and responsibilities should be updated to reflect this.
 - **Staged.** In a *staged* promotion model, the workload is considered migrated after it's staged, but it isn't yet promoted. Before promotion, the migrated workload undergoes a series of performance tests, business tests, and optimization changes. It's then promoted at a future date with a business test plan. This approach improves the balance between cost and performance, while making it easier to obtain business validation.
@@ -48,7 +48,9 @@ This model uses migration automation tools to replicate, stage, and promote asse
 
 The staging sandbox managed by the migration tool in this model is used for limited testing purposes. The replicated assets are then deployed into the cloud environment, which serves as an extended staging environment. The migrated assets run in the cloud, while extra assets are replicated, staged, and migrated. When full workloads become available, richer testing is started. When all assets associated with a subscription have been migrated, the subscription and all hosted workloads are promoted to production. There's no change to the workloads in this scenario during the promotion process. Instead, the changes tend to be at the network and identity layers, routing users to the new environment and revoking access of the cloud adoption team.
 
-**Pros.** Positive benefits of this approach include:
+### Pros
+
+Positive benefits of this approach include:
 
 - This model provides more precise business testing opportunities.
 - The workload can be studied more closely to better optimize performance and cost of the assets.
