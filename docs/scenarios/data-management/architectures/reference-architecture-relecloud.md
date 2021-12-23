@@ -105,7 +105,7 @@ Use the following templates to deploy other data integrations and data products 
 |---------|---------|---------|---------|
 |Cloud accounts     |Operations         |Data integration         |[Data product batch template](https://github.com/Azure/data-product-batch)         |
 |Recommender revenue     |Operations         |Data product         |[Data product batch template](https://github.com/Azure/data-product-batch)         |
-|Cloud service recommender     |Operations         |Data product         |[Data product analytics template](https://github.com/Azure/data-product-analytics/blob/main/docs/EnterpriseScaleAnalytics-Prerequisites.md)         |
+|Cloud service recommender     |Operations         |Data product         |[Data product analytics template](https://github.com/Azure/data-product-analytics)         |
 |Revenue by product     |Billing         |Data product         |[Data product batch template](https://github.com/Azure/data-product-batch)         |
 
 > [!IMPORTANT]
