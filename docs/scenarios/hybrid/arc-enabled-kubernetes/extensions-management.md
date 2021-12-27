@@ -41,11 +41,8 @@ Extensions are periodically updated.  Define a strategy to keep cluster extensio
 
 For more guidance for your cloud adoption journey, see the following article:
 
-- [Manage hybrid and multicloud environments](/azure/cloud-adoption-framework/scenarios/hybrid/manage)
 - [Connect an existing Kubernetes cluster to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli)
 - [Secret and certificate management](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_k8s/day2/cluster_api/cluster_api_keyvault_extension/)
-- [Threat protection and cloud security posture management](/azure/defender-for-cloud/)
-- [Apply GitOps configurations on GKE as an Azure Arc Connected Cluster using Azure Policy for Kubernetes](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_k8s/day2/gke/gke_policy/)
 - [Integrate Azure Defender with Cluster API as an Azure Arc Connected Cluster using Kubernetes extensions](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_k8s/day2/cluster_api/cluster_api_defender_extension/)
 - [Integrate Open Service Mesh (OSM) with Cluster API as an Azure Arc Connected Cluster using Kubernetes extensions](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_k8s/day2/cluster_api/cluster_api_osm_extension/)
-- [Enterprise Scale for AKS](/azure/cloud-adoption-framework/scenarios/aks/enterprise-scale-landing-zone)Add content here.
+- [Enterprise Scale for AKS](/azure/cloud-adoption-framework/scenarios/aks/enterprise-scale-landing-zone)
