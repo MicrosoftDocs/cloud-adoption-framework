@@ -6,8 +6,8 @@ ms.author: mirhoads
 ms.date: 11/15/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
-ms.custom: e2e-hybrid, think-tank
+ms.subservice: scenario
+ms.custom: e2e-hybrid
 ---
 
 # Automation for Azure Arc-enabled Kubernetes
@@ -56,7 +56,7 @@ The following are general design recommendations for Azure Arc-enabled Kubernete
 
 ### Onboard Azure Arc-enabled Kubernetes clusters
 
-One of your first tasks will be to onboard your fleet of Kubernetes clusters to Azure Arc. After determining resource group placement and your target clusters, if you only have a few clusters, you can opt to run the onboarding directly from your Windows or Linux machine using the Azure CLI. For larger fleets of clusters, we recommended creating a service principal and onboarding your clusters in an automated fashion by way of automation tooling such as Azure DevOps, GitHub Actions, or an existing automation tool used to currently manage your Kubernetes clusters. Ensure your Kubernetes clusters meet the network requirements found in [network connectivity](./network-connectivitiy.md).
+One of your first tasks will be to onboard your fleet of Kubernetes clusters to Azure Arc. After determining resource group placement and your target clusters, if you only have a few clusters, you can opt to run the onboarding directly from your Windows or Linux machine using the Azure CLI. For larger fleets of clusters, we recommended creating a service principal and onboarding your clusters in an automated fashion by way of automation tooling such as Azure DevOps, GitHub Actions, or an existing automation tool used to currently manage your Kubernetes clusters. Ensure your Kubernetes clusters meet the network requirements found in [network connectivity](./kubernetes/quickstart-connect-cluster?tabs=azure-cli#meet-network-requirements).
 
 Afterwards, be sure to [verify your connection](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#5-verify-cluster-connection) to Azure Arc-enabled Kubernetes.
 
@@ -68,7 +68,7 @@ For cases where extensions are common across all of your Arc-enabled Kubernetes 
 
 - Create an [initiative](/azure/security-center/security-policy-concept#what-is-a-security-initiative) to deploy Arc-enabled Kubernetes extensions at scale.
 - Use a "[DeployIfNotExists](/azure/governance/policy/concepts/effects#deployifnotexists)" policy effect to ensure the Arc-enabled Kubernetes extensions get deployed automatically, as more Kubernetes clusters are onboarded, and remediate any Kubernetes clusters where the extensions have been removed.
-- More details on using policy with Azure Arc-enabled Kubernetes clusters can be found in the [Security, governance and compliance for Azure Arc-enabled Kubernetes](./eslz-security-governance-and-compliance.md) section of this guide.
+- More details on using policy with Azure Arc-enabled Kubernetes clusters can be found in the [Security, governance and compliance for Azure Arc-enabled Kubernetes](./governance-disciplines.md) section of this guide.
 
 
 ### Lifecycle Automation
