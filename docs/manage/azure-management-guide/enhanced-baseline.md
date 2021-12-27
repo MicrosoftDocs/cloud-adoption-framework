@@ -50,7 +50,7 @@ This table outlines a few processes, tools, and potential effects common in cust
 | Operational compliance | Zero trust | Azure Sentinel | Zero Trust workbook uses the full breadth of Microsoft security offerings |[Sentinel Zero trust Workbook](/azure/sentinel/whats-new#zero-trust-tic30-workbook) |
 | Operational compliance | Performance automation | Azure Automation | Automate operational compliance with performance expectations to resolve common resource specific scaling or sizing issues. | See the following sections |
 | Operational compliance | Multicloud operations | Azure Automation Hybrid Runbook Worker | Automate operations across multiple clouds. | [Hybrid Runbook Worker overview](/azure/automation/automation-hybrid-runbook-worker) |
-| Operational compliance | Guest automation | Desired State Configuration (DSC) | Code-based configuration of guest operating systems to reduce errors and configuration drift. | [DSC overview](/powershell/scripting/dsc/overview/overview) |
+| Operational compliance | Guest automation | Desired State Configuration (DSC) | Code-based configuration of guest operating systems to reduce errors and configuration drift. | [DSC overview](/powershell/scripting/dsc/overview) |
 | Protect and recover | Breach notification | Microsoft Defender for Cloud | Extend protection to include security-breach recovery triggers. | See the following sections |
 | Protect and recover | Threat Hunting | Azure Sentinel | Built in hunting queries that help you detect and protect against malicious activity  | [Sentinel Threat Hunting](/azure/sentinel/hunting) |
 

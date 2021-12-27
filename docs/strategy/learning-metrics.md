@@ -3,7 +3,7 @@ title: Align technical efforts to outcome metrics
 description: Understand how to align efforts to measure and communicate transformation's impact on the business.
 author: mpvenables
 ms.author: brblanch
-ms.date: 12/15/2021
+ms.date: 12/23/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
