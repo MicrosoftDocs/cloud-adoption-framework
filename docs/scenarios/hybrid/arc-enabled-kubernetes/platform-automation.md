@@ -6,8 +6,8 @@ ms.author: mirhoads
 ms.date: 11/15/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
-ms.custom: e2e-hybrid, think-tank
+ms.subservice: scenario
+ms.custom: e2e-hybrid
 ---
 
 # Automation for Azure Arc-enabled Kubernetes
