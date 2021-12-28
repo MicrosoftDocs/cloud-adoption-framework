@@ -92,7 +92,34 @@ Azure Arc resources can be part of any application! Whether it's Azure Arc-enabl
 Since Azure Arc resources are physically located outside of Azure and therefore can be considered a "metadata resource" in the way they are represented in Azure. Consequently, this means that Azure Arc resources can be treated as any other Azure resource that can be part of any landing zone (platform or application) following the [Subscription democratization and Application-centric and archetype-neutral](/azure/cloud-adoption-framework/ready/enterprise-scale/design-principles) design principles.
 
 [ ![Diagram that shows a landing zone design.](./media/lz-design-revised.png)](./media/lz-design-revised.png#lightbox)
+### Common examples of Azure Arc resources in Azure Landing Zones
 
+Below are a number of common examples as to how Azure Arc resources can be projected as metadata resources into numerous landing zones in the context of Azure Landing Zones.
+
+#### Example 1: Projecting Domain Controllers outside of Azure
+
+Many customers will have Active Directory Domain Services (ADDS) deployments within their environments of which Domain Controllers (DCs) are a critical component of ADDS and the customers overall architecture. 
+
+Within the Azure Landing Zone conceptual architecture there is a dedicated identity landing zone subscription which is designed to host identity based resources; whether hosted within Azure, like ADDS DC Virtual Machines (VMs), or whether projected into Azure via Azure Arc-enabled Servers from any other location, for example on-premises hosted ADDS DCs or both.
+
+Therefore it is recommended pattern to project identity resources that are located outside of Azure to be projected into the identity Azure landing zone via Azure Arc.
+
+#### Example 2: Projecting On-Premises Data Centers into Azure
+
+The majority of customers are likely to still have on-premises data centers present in their environments, regardless of size of the footprint (single servers or large virtualized environments).
+
+Customers can treat these on-premises data centers as normal landing zones and therefore place them into new or existing landing zones as they see fit. Some common approaches for this example are: 
+
+1. Project resources into dedicated landing zone subscription/s for on-premises data center resources
+    - In larger environments that may have multiple data centers across the globe, customers may choose to have a landing zone per country also containing the resources from that same country to provide a logical separation of the on-premises data centres into Azure
+      - This may also assist with the security, governance and compliance requirements for different on-premises data centers 
+2. Project resources into separate landing zone subscriptions based with other Azure resources that support the same application/service
+
+#### Example 3: Projecting Remote Application Resources into Azure
+
+Customers building latency sensitive or applications with data sovereignty requirements may need to host some resources that are part of their application outside of Azure. When doing this customers still want to be able to control, govern, secure and operate all of these resources that build up their application from a central point. By using Azure Arc, customers can achieve this goal.
+
+Customers in this scenario should project their Azure Arc resources for their application into the same application landing zone subscription/s as the Azure resources are deployed into. This will ensure that a single set of policies, permissions and other controls can be applied to all resources, regardless of location they are in, from a single control plane.
 <!-- ## Modify your environment to reflect your cloud mix
 
 All three customers will have to deliver on slightly different *strategic* requirements to succeed in their digital transformation.
