@@ -16,7 +16,7 @@ items:
   - name: Prepare your environment
     items:
     - name: Azure landing zones
-      href: ready.md
+      href: ready_revised.md
     - name: Design areas 
       items:
       - name: Identity and access management
@@ -27,7 +27,7 @@ items:
         href: eslz-resource-organization.md
       - name: Governance and security disciplines
         href: eslz-security-governance-and-compliance.md
-      - name: Management 
+      - name: Management disciplines
         href: eslz-management-and-monitoring-arc-server.md
       - name: Cost governance
         href: eslz-cost-governance.md

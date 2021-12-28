@@ -1,6 +1,6 @@
 ---
-title: Enterprise-Scale Azure Arc sandbox
-description: Learn how to deploy Azure Arc enterprise-scale sandbox to accelerate adoption of hybrid or multi-cloud architectures.
+title: Azure Arc sandbox
+description: Learn how to deploy Azure Arc sandbox to accelerate adoption of hybrid or multi-cloud architectures.
 author: likamrat
 ms.author: likamrat
 ms.date: 12/01/2021
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-hybrid
 ---
 
-# Azure Arc-enabled servers enterprise-scale sandbox
+# Azure Arc-enabled servers sandbox
 
 With Azure Arc, you are onboarding infrastructure assets that are located outside of Azure, or deploying Azure services to any infrastructure, either on-premises or in a multi-cloud environment.
 
@@ -20,7 +20,7 @@ To practice your skills in an Azure Arc-enabled servers environment, we created 
 
 ## Enterprise-Scale landing zone sandbox subscription
 
-The ArcBox solution is designed to run in your enterprise-scale sandbox subscription and will bootstrap all the required Azure resources inside a single resource group.
+The ArcBox solution is designed to run in your enterprise-scale sandbox subscription (**but not limited to**) and will bootstrap all the required Azure resources inside a single resource group.
 
 [ ![ArcBox in a sandbox subscription.](./media/arcbox-sandbox-subscription.png)](./media/arcbox-sandbox-subscription.png#lightbox)
 
