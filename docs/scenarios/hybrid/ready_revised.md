@@ -92,7 +92,7 @@ For each cloud mix above, you'll need an Azure environment to support, govern, a
 
 Azure Arc resources can be part of any application! Whether it's Azure Arc-enabled servers representing IT assets deployed outside of Azure, customer own-managed Kubernetes clusters in a multicloud environment, or Azure Arc-enabled data, application and machine learning services working at the edge.
 
-The Cloud Adoption Framework and Azure landing zones are designed to create consistent architecture and create the best place for customers to land their applications, including the ones who have Azure Arc resources as part of it.
+[Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/) are the output of a multisubscription Azure environment that accounts for scale, security governance, networking, and identity. The application landing zone subscriptions can also contain Azure Arc resources as well as regular Azure resources.
 
 Since Azure Arc resources are physically located outside of Azure and therefore can be considered a "metadata resource" in the way they are represented in Azure. Consequently, this means that Azure Arc resources can be treated as any other Azure resource that can be part of any landing zone (platform or application) following the [Subscription democratization and Application-centric and archetype-neutral](/azure/cloud-adoption-framework/ready/enterprise-scale/design-principles) design principles.
 
