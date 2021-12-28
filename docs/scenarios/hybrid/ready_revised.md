@@ -70,7 +70,7 @@ For customers who want to simplify complex and distributed environments across o
 
 ## Azure Arc customer snapshot
 
-Whether it's Harry's Harvesters, Angie's Applications, or Mary's Markets, all three reference customers run workloads on different hardware, across on-premises datacenters, and multiple public cloud providers as well as supporting IoT workloads deployed on the edge. These workloads include various services and are based on either bare-metal servers, virtual machines, managed Platform-as-a-Service (PaaS) services, and cloud-native, container-based applications.
+Whether it's Fabrikam, Contoso, or Tailwind Traders, all three reference customers run workloads on different hardware, across on-premises datacenters, and multiple public cloud providers as well as supporting IoT workloads deployed on the edge. These workloads include various services and are based on either bare-metal servers, virtual machines, managed Platform-as-a-Service (PaaS) services, and cloud-native, container-based applications.
 
 In their modernization journey, all three customers realized that the need for having hybrid and multicloud established practices is essential for the business success and market demand. Also, the need for modernized workloads is becoming crucial to all three customers' relevancy in their respected areas.
 
