@@ -44,15 +44,15 @@ The Cloud Adoption Framework migration model is based on an incremental cloud tr
 
 Cloud migrations tools like [Azure Site Recovery](/azure/site-recovery/site-recovery-overview) can migrate entire datacenters consisting of thousands of virtual machines (VMs). However, the business and existing IT operations often can't handle such a high pace of change. Many organizations break up a migration effort into multiple iterations. They move one workload, or one collection of workloads, per iteration.
 
-The principles behind this incremental model are based on the execution of certain processes and prerequisites. These processes are referenced in the following image.
+The principles behind this incremental model are based on the execution of certain processes and prerequisites. These processes are referenced in the following infographic.
 
-![An image that shows the Cloud Adoption Framework migration model.](../../_images/migrate/methodology.png)
+![An infographic that shows the Cloud Adoption Framework migration model.](../../_images/migrate/methodology.png)
 
 The consistent application of these principles represents an end goal for your cloud migration processes. They shouldn't be viewed as a required starting point. As your migration efforts mature, refer to the guidance in this section to help define the best process to support your organizational needs.
 
 ## Next steps
 
-Begin learning about this model by [investigating the prerequisites to migration](./prerequisites/index.md).
+Begin learning about this model by investigating the prerequisites to migration.
 
 > [!div class="nextstepaction"]
 > [Prerequisites to migration](./prerequisites/index.md)
