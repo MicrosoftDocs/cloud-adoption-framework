@@ -94,7 +94,7 @@ Azure Arc resources can be part of any application! Whether it's Azure Arc-enabl
 
 The Cloud Adoption Framework and Azure landing zones are designed to create consistent architecture and create the best place for customers to land their applications, including the ones who have Azure Arc resources as part of it.
 
-Since these Azure Arc resources are physically deployed outside of Azure and consider to be a "metadata resource" in the way they are represented in Azure, it has no dedicated landing zone nor having a dependency on it and can be part of any landing zone the customer has or accelerate his adoption of it.
+Since Azure Arc resources are physically located outside of Azure and therefore can be considered a "metadata resource" in the way they are represented in Azure. Consequently, this means that Azure Arc resources can be treated as any other Azure resource that can be part of any landing zone (platform or application) following the [Subscription democratization and Application-centric and archetype-neutral](/azure/cloud-adoption-framework/ready/enterprise-scale/design-principles) design principles.
 
 [ ![Diagram that shows a landing zone design.](./media/lz-design-revised.png)](./media/lz-design-revised.png#lightbox)
 
