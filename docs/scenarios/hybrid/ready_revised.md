@@ -87,7 +87,7 @@ For each cloud mix above, you'll need an Azure environment to support, govern, a
 - Review [What is an Azure Landing Zone?](/azure/cloud-adoption-framework/ready/landing-zone/)
 - Consider each of the [Azure landing zone design areas](../../ready/landing-zone/design-areas.md) to properly evaluate your technical requirements.
 - Compare your requirements to the [Azure landing zone implementation options](../../ready/landing-zone/implementation-options.md) to find and implement the most suitable template to start your configuration.
-- Do you have an [existing Azure environment to transition into enterprise-scale](../../ready/enterprise-scale/transition.md)?
+- Review [Transition existing Azure environments to the Azure landing zone conceptual architecture](../../ready/enterprise-scale/transition.md)
 
 ## Azure Arc as a landing zone accelerator
 
