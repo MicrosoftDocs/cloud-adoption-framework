@@ -31,13 +31,13 @@ For more information about Azure Migrate see [Migrate VWware VMs to Azure](/azur
 
 After assessing on-premise and cloud infrastructure for migration, Azure Site Recovery contributes to your migration strategy by replicating on-premises machines. See the following steps to set up migration for on-premises VMs, physical servers, and cloud VM instances to Azure:
 
-- Verify prerequisites.
-- Prepare Azure resources.
-- Prepare on-premises VM or cloud instances for migration.
-- Deploy a configuration server.
-- Enable replication for VMs.
-- Test failover to make sure everything's working.
-- Run a one-time failover to Azure.
+- Verify prerequisites
+- Prepare Azure resources
+- Prepare on-premises VM or cloud instances for migration
+- Deploy a configuration server
+- Enable replication for VMs
+- Test failover to make sure everything's working
+- Run a one-time failover to Azure
 
 ## Azure Database Migration Service
 
