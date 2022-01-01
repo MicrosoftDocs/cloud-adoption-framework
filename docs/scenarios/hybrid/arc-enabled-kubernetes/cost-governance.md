@@ -100,6 +100,7 @@ Here are some general design recommendations for Azure Arc-enabled servers cost 
 ### Kubernetes configuration
 
 - Review [Kubernetes configuration pricing](https://azure.microsoft.com/pricing/details/azure-arc/).
+- Review recommendations for [Kubernetes configuration](./cicd-workflow.md).
 - Use [Azure Policy for Kubernetes](/azure/azure-arc/kubernetes/policy-reference) to enforce and enure consistent configuration across all your Azure Arc-enabled Kubernetes clusters.
 - Use Azure Resource Graph to review the number of cores you have for the Azure Arc-enabled Kubernetes clusters.
 
@@ -114,6 +115,10 @@ Resources
 
 ![alt](./media/arc-enabled-kubernetes-configuration-cost.png)
 
+### Azure Policy for Kubernetes
+
+- Review [Azure Policy for Kubernetes pricing](https://azure.microsoft.com/pricing/details/azure-arc/).
+- Review recommendations for [Azure Policy for Kubernetes](./governance-diciplines.md).
 
 ### Microsoft Sentinel
 
