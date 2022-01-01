@@ -29,6 +29,8 @@ Azure Arc-enabled Kubernetes provides two types of services:
    - Azure Policy for Kubernetes
    - Azure Monitor for Containers
    - Microsoft Defender for Containers
+   - Microsoft Sentinel
+   - Azure Key Vault
 
 > [!Note]
 > If the Azure Arc-enabled Kubernetes cluster is on Azure Stack Edge, AKS on Azure Stack HCI, or AKS on Windows Server 2019 Datacenter, then Kubernetes configuration is included at no charge
@@ -52,6 +54,8 @@ Azure Arc-enabled Kubernetes provides two types of services:
 - **Azure Policy for Kubernetes:** [Azure Policy for Kubernetes](/azure/governance/policy/concepts/policy-for-kubernetes) extends Gatekeeper v3, an admission controller webhook for Open Policy Agent (OPA), to apply at-scale enforcements and safeguards on your clusters in a centralized, consistent manner. Azure Policy makes it possible to manage and report on the compliance state of your Kubernetes clusters from one place. There is currently no cost for Azure Policy for Kubernetes while in public preview.
 
 - **Microsoft Sentinel:** Microsoft Sentinel provides intelligent security analytics across your enterprise. The data for this analysis is stored in an Azure Monitor Log Analytics workspace. Microsoft Sentinel is billed based on the volume of data ingested for analysis in Azure Sentinel, and stored in the Azure Monitor Log Analytics workspace for your Azure Arc-enabled Kubernetes clusters.
+
+- **Azure Key Vault:** The Azure Key Vault Provider for Secrets Store CSI Driver allows for the integration of an Azure key vault as a secrets store with a Kubernetes cluster via a CSI volume. Azure Key Vault is billed by the operations performed on the certificates, keys and secrets.
 ## Design recommendations
 
 Here are some general design recommendations for Azure Arc-enabled Kubernetes cost governance:
@@ -95,7 +99,7 @@ Here are some general design recommendations for Azure Arc-enabled Kubernetes co
 
 ### Microsoft Defender for Cloud (formerly known as Azure Security Center):
 
-- Review the [recommendations for security and compliance](./management-disciplines.md)
+- Review the [recommendations for security and governance](./management-disciplines.md)
 - Review [Microsoft Defender for Containers pricing information](https://azure.microsoft.com/pricing/details/azure-defender/).
 ### Kubernetes configuration
 
@@ -139,6 +143,13 @@ Resources
 - Consider using [Commitment Tiers](/azure/sentinel/azure-sentinel-billing#set-or-change-pricing-tier) pricing based on your data ingestion volume.
 - Consider [separating non-security](/azure/sentinel/azure-sentinel-billing#separate-non-security-data-in-a-different-workspace) operational data into a different Azure Log Analytics workspace.
 
+### Azure Key Vault
+
+- Review [Azure Key Vault pricing](https://azure.microsoft.com/pricing/details/key-vault/).
+- Review [recommendations for security and governance](./management-disciplines.md).
+- Use [Azure Key Vault insights](/azure/azure-monitor/insights/key-vault-insights-overview) to monitor secrets operations on your Azure Arc-enabled Kubernetes.
+
+![Azure Key Vault insights](./media/key-vault-insights.png)
 ## Next steps
 
 For more guidance for your hybrid cloud adoption journey, please review the following:
