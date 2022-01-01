@@ -7,15 +7,16 @@ ms.date: 11/15/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: e2e-hybrid, think-tank
+ms.custom: e2e-hybrid, think-tank, e2e-arc-enabled-kubernetes
 ---
 
 
 # Cost governance with Azure Arc-enabled Kubernetes
+
 Cost governance is the continuous process of implementing policies to control costs of services you are using on Azure. This document will walk you through the various cost governance considerations and recommendations when using Azure Arc-enabled Kubernetes.
 
-
 ## How much does Azure Arc-enabled Kubernetes cost?
+
 Azure Arc-enabled Kubernetes provides two types of services:
 1. Azure Arc control plane functionality, which is provided at no extra cost including:
    - Resource organization through Azure management groups and tags.
@@ -33,6 +34,7 @@ Azure Arc-enabled Kubernetes provides two types of services:
 > If the Azure Arc-enabled Kubernetes cluster is on Azure Stack Edge, AKS on Azure Stack HCI, or AKS on Windows Server 2019 Datacenter, then Kubernetes configuration is included at no charge
 
 ## Design considerations
+
 - **Governance:** Define a governance plan for your hybrid clusters that translates into Azure Policies, tags, naming standards and least-privilege controls.
 - **Azure Monitor for Containers:** [Azure Monitor for Containers](/azure/azure-monitor/containers/container-insights-overview) gives you performance visibility by collecting memory and processor metrics from controllers, nodes, and containers that are available in Kubernetes through the Metrics API. Container logs are also collected. This is billed by data ingestion, retention, and export for Log Analytics.
 - **Microsoft Defender for Cloud (formerly known as Azure Security Center):**  Microsoft Defender for Cloud is offered in [two modes](/azure/defender-for-cloud/enhanced-security-features-overview#what-are-the-benefits-of-enabling-enhanced-security-features):
@@ -48,8 +50,10 @@ Azure Arc-enabled Kubernetes provides two types of services:
 - **Azure Policy for Kubernetes:** [Azure Policy for Kubernetes](/azure/governance/policy/concepts/policy-for-kubernetes) extends Gatekeeper v3, an admission controller webhook for Open Policy Agent (OPA), to apply at-scale enforcements and safeguards on your clusters in a centralized, consistent manner. Azure Policy makes it possible to manage and report on the compliance state of your Kubernetes clusters from one place. There is currently no cost for Azure Policy for Kubernetes while in public preview.
 - **Microsoft Sentinel:** Microsoft Sentinel provides intelligent security analytics across your enterprise. The data for this analysis is stored in an Azure Monitor Log Analytics workspace. Microsoft Sentinel is billed based on the volume of data ingested for analysis in Azure Sentinel, and stored in the Azure Monitor Log Analytics workspace for your Azure Arc-enabled Kubernetes clusters.
 ## Design recommendations
+
 Here are some general design recommendations for Azure Arc-enabled servers cost governance:
 ### Governance
+
 - Ensure that all Azure Arc-enabled Kubernetes clusters follow proper [naming and tagging conventions](/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging).
 - Use least privilege RBAC by assigning **[Kubernetes Cluster - Azure Arc Onboarding](/azure/role-based-access-control/built-in-roles#kubernetes-cluster---azure-arc-onboarding)** to only administrators who will on-board Azure Arc-enabled Kubernetes clusters to avoid unnecessary costs.
 - Use least privilege RBAC by assigning builtin roles to administrators managing the Azure Arc-enabled Kubernetes clusters to avoid unnecessary costs.
@@ -62,6 +66,7 @@ Here are some general design recommendations for Azure Arc-enabled servers cost 
 | [Azure Arc Kubernetes Viewer](/azure/role-based-access-control/built-in-roles#azure-arc-kubernetes-viewer)  | Lets you view all resources in cluster/namespace, except secrets.	  |
 | [Azure Arc Kubernetes Writer](/azure/role-based-access-control/built-in-roles#azure-arc-kubernetes-writer) | Lets you update everything in cluster/namespace, except (cluster)roles and (cluster)role bindings.  |
 ### Azure Monitor for Containers
+
 - Review [recommendations for monitoring](./management-disciplines.md) to decide on your monitoring requirements and review [Azure Monitor for Kubernetes pricing](https://azure.microsoft.com/pricing/details/monitor/).
 
 -  Decide on the [required logs and events](/azure/azure-monitor/containers/container-insights-agent-config) for the Azure Arc-enabled Kubernetes clusters to be collected in the Log Analytics workspace.
@@ -85,9 +90,11 @@ Here are some general design recommendations for Azure Arc-enabled servers cost 
 - Consider using [Commitment Tier](/azure/azure-monitor/logs/manage-cost-storage#pricing-model) pricing based on your data ingestion volume.
 
 ### Microsoft Defender for Cloud (formerly known as Azure Security Center):
+
 - Review the [recommendations for security and compliance](./management-disciplines.md)
 - Review [Microsoft Defender for Containers pricing information](https://azure.microsoft.com/pricing/details/azure-defender/).
 ### Kubernetes configuration
+
 - Review [Kubernetes configuration pricing](https://azure.microsoft.com/pricing/details/azure-arc/).
 - Use [Azure Policy for Kubernetes](/azure/azure-arc/kubernetes/policy-reference) to enforce and enure consistent configuration across all your Azure Arc-enabled Kubernetes clusters.
 - Use Azure Resource Graph to review the number of cores you have for the Azure Arc-enabled Kubernetes clusters.
@@ -105,6 +112,7 @@ Resources
 
 
 ### Microsoft Sentinel
+
 - Review [Azure Sentinel pricing](https://azure.microsoft.com/pricing/details/azure-sentinel/).
 - Use the Azure Pricing Calculator to estimate [Azure Sentinel costs](/azure/sentinel/azure-sentinel-billing).
 
