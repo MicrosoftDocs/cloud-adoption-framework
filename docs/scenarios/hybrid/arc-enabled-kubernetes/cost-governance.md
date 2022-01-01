@@ -54,7 +54,7 @@ Azure Arc-enabled Kubernetes provides two types of services:
 - **Microsoft Sentinel:** Microsoft Sentinel provides intelligent security analytics across your enterprise. The data for this analysis is stored in an Azure Monitor Log Analytics workspace. Microsoft Sentinel is billed based on the volume of data ingested for analysis in Azure Sentinel, and stored in the Azure Monitor Log Analytics workspace for your Azure Arc-enabled Kubernetes clusters.
 ## Design recommendations
 
-Here are some general design recommendations for Azure Arc-enabled servers cost governance:
+Here are some general design recommendations for Azure Arc-enabled Kubernetes cost governance:
 ### Governance
 
 - Review recommendations for [resource organization](./resource-organization.md) and [governance](./governance-diciplines.md).
