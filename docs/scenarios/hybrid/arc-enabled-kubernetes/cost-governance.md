@@ -92,6 +92,10 @@ Here are some general design recommendations for Azure Arc-enabled Kubernetes co
 
 ![Log Analytics insights](./media/Log-analytics-insights.png)
 
+- Leverage the built-in [Azure Monitor workbooks](/azure/azure-monitor/containers/container-insights-reports#billing-workbooks) to gain more insights on your clusters' billable monitoring data.
+
+![Azure Monitor workbook showing namespace billing](./media/Azure-Monitor-Workbooks.png)
+
 - Evaluate possible data ingestion volume reducing, refer to these [Tips for reducing data volume](/azure/azure-monitor/logs/manage-cost-storage#tips-for-reducing-data-volume) documentation to help configure data ingestion properly.
 - Consider how long to retain data on Log Analytics. Data ingested into Log Analytics workspace can be retained at no additional charge up to first 31 days. Consider general aspects to configure the [Log Analytics workspace level default retention](/azure/azure-monitor/logs/manage-cost-storage#workspace-level-default-retention) and specific needs to configure data [retention by data type](/azure/azure-monitor/logs/manage-cost-storage#retention-by-data-type), that can be as low as 4 days. Example: Usually, performance data doesn't need to be retained longer, instead, security logs may need to be retained longer.
 - To retain data longer than 730 days, consider using [Log Analytics workspace data export](/azure/azure-monitor/logs/logs-data-export).
