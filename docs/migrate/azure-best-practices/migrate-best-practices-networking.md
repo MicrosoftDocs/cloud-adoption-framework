@@ -125,7 +125,7 @@ Azure adds a DNS server by default when you deploy a virtual network. You can us
 
 **Learn more:**
 
-- Learn about [name resolution when you use your own DNS server](../index.md).
+- Learn about [name resolution when you use your own DNS server](/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances#name-resolution-that-uses-your-own-dns-server).
 - Learn about [DNS naming rules and restrictions](../../ready/azure-best-practices/naming-and-tagging.md).
 
 ## Best practice: Set up Availability Zones
@@ -201,7 +201,7 @@ When setting up a Site-to-Site VPN:
 - Read the [Azure VPN gateways overview](/azure/vpn-gateway/vpn-gateway-about-vpngateways).
 - Learn about [highly available VPN connections](/azure/vpn-gateway/vpn-gateway-highlyavailable).
 - Learn about [planning and designing a VPN gateway](/azure/vpn-gateway/vpn-gateway-about-vpngateways).
-- Review [VPN Gateway settings](/azure/vpn-gateway/vpn-gateway-about-vpn-gateway-settings#gwsku).
+- Review [VPN Gateway settings](/azure/vpn-gateway/vpn-gateway-about-vpn-gateway-settings).
 - Review [gateway SKUs](/azure/vpn-gateway/vpn-gateway-about-vpngateways#gwsku).
 - Read about [setting up BGP with Azure VPN gateways](/azure/vpn-gateway/vpn-gateway-bgp-overview).
 
