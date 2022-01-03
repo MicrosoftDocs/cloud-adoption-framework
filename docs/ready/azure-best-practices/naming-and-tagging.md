@@ -3,7 +3,7 @@ title: Develop your naming and tagging strategy for Azure resources
 description: Read an overview of resource naming and tagging strategy for enterprise cloud adoption efforts.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 12/01/2020
+ms.date: 12/22/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -31,9 +31,9 @@ Define your naming and tagging strategy as early as possible. Use the following 
 
 ## Purpose of naming and tagging
 
-Accurately representing and naming your resources is essential for security purposes. In the event of a security incident, it's critical to quickly identify affected systems, what functions those systems support, and the potential business impact. Security services such as [Microsoft Defender for Cloud](/azure/security-center/security-center-introduction) and [Microsoft Sentinel](/azure/sentinel/) reference resources and their associated logging and alert information by resource name.
+Accurately representing and naming your resources is essential for security purposes. If you come upon a security incident, it's critical to quickly identify affected systems, what functions those systems support, and the potential business impact. Security services such as [Microsoft Defender for Cloud](/azure/security-center/security-center-introduction) and [Microsoft Sentinel](/azure/sentinel/) reference resources and their associated logging and alert information by resource name.
 
-Azure defines [naming rules and restrictions for Azure resources](/azure/azure-resource-manager/management/resource-name-rules). This guidance provides detailed recommendations to support enterprise cloud adoption efforts.
+Azure defines [naming rules and restrictions for Azure resources](/azure/azure-resource-manager/management/resource-name-rules). This guidance provides you with detailed recommendations to support enterprise cloud adoption efforts.
 
 Changing resource names can be difficult. Establish a comprehensive naming convention before you begin any large cloud deployment.
 
@@ -41,9 +41,9 @@ Changing resource names can be difficult. Establish a comprehensive naming conve
 
 A naming and tagging strategy includes business and operational details as components of resource names and metadata tags:
 
-- The business side of this strategy ensures that resource names and tags include the organizational information needed to identify the teams. Use a resource along with the business owners who are responsible for resource costs.
+- The business side of this strategy ensures that resource names and tags include the organizational information you need to identify the teams. Use a resource along with the business owners who are responsible for resource costs.
 
-- The operational side ensures that names and tags include information that IT teams use to identify the workload, application, environment, criticality, and other information useful for managing resources.
+- The operational side ensures that names and tags include necessary information. IT teams use this information to identify the workload, application, environment, criticality, and other information useful for managing resources.
 
 ## Next steps
 
