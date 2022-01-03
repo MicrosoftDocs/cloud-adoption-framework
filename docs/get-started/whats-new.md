@@ -3,7 +3,7 @@ title: What's new in the Microsoft Cloud Adoption Framework
 description: Learn about recent updates to the Microsoft Cloud Adoption Framework for Azure.
 author: JanetCThomas
 ms.author: janet
-ms.date: 03/01/2020
+ms.date: 01/03/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: general
@@ -12,9 +12,29 @@ ms.custom: internal
 
 # What's new in the Microsoft Cloud Adoption Framework for Azure
 
-Here's a list of recent changes made to the Cloud Adoption Framework.
+Here's a list of recent changes we've made to the Cloud Adoption Framework.
 
-This framework is built collaboratively with customers, partners, and internal Microsoft teams. New and updated content is released when it becomes available. These releases allow you to test, validate, and refine the guidance along with us. We encourage you to partner with us to build the Cloud Adoption Framework.
+This Framework is collaboratively built with customers, partners, and internal Microsoft teams. We release new and updated content as it becomes available. New releases enable you to test, validate, and refine the Framework's guidance along with us.
+
+Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
+
+## December 2021
+
+### Updates to Azure landing zone content in the Ready methodology
+
+We've refined decisions for each landing zone implementation option, and have added pointed guidance for each design area.
+
+- We've clarified implementation decisions necessary within design areas—and have added expanded guidance in articles addressing:
+  - Plan for the Cloud Solution Provider service and Define Azure AD tenants (Azure billing and Active Directory tenant),
+  - Identity and access management foundation (Identity and access management),
+  - Plan for IP addressing (Network topology and connectivity),
+  - Management group design considerations and subscription considerations (Resource organization),
+  - Encryption and key management and Service enablement framework (Security),
+  - Inventory and visibility considerations, Business continuity and disaster recovery, Operational compliance considerations, and Workload management and monitoring (Management),
+  - Azure governance considerations (Governance),
+  - Modernizing your environmental deployment with infrastructure as code (Platform automation and DevOps),
+
+Finally, we've added an example alignment scenario to the Align on-ramp—Transitioning existing Azure environments to the Azure landing zone conceptual architecture.
 
 ## October 2021
 
