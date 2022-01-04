@@ -99,7 +99,7 @@ Below are a number of common examples as to how Azure Arc resources can be proje
 
 #### Example 1: Projecting Domain Controllers outside of Azure
 
-Many customers will have Active Directory Domain Services (ADDS) deployments within their environments of which Domain Controllers (DCs) are a critical component of ADDS and the customers overall architecture. 
+Many customers will have Active Directory Domain Services (ADDS) deployments within their environments of which Domain Controllers (DCs) are a critical component of ADDS and the customers overall architecture.
 
 Within the Azure Landing Zone conceptual architecture there is a dedicated identity landing zone subscription which is designed to host identity-based resources; whether hosted within Azure, like ADDS DC Virtual Machines (VMs), or whether projected into Azure via Azure Arc-enabled servers from any other location, for example, on-premises hosted ADDS DCs or both.
 
