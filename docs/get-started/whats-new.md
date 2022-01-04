@@ -32,7 +32,7 @@ We've refined decisions for each landing zone implementation option, and have ad
   - Encryption and key management and Service enablement framework (Security),
   - Inventory and visibility considerations, Business continuity and disaster recovery, Operational compliance considerations, and Workload management and monitoring (Management),
   - Azure governance considerations (Governance),
-  - Modernizing your environmental deployment with infrastructure as code (Platform automation and DevOps),
+  - Modernizing your environmental deployment with infrastructure as code (Platform automation and DevOps).
 
 Finally, we've added an example alignment scenario to the Align on-ramp—Transitioning existing Azure environments to the Azure landing zone conceptual architecture.
 
