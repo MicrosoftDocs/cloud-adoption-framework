@@ -134,7 +134,7 @@ An Azure Database for MySQL database will be provisioned. The Azure Databricks e
 
 ### Shared integration
 
-We recommend you deploy a virtual machine scale set with self-hosted integration runtimes into the data management landing zone. It should be hosted in the integration resource group. This deployment will enable rapid onboarding of datasets to the data landing zone.
+We recommend you deploy a virtual machine scale set with self-hosted integration runtimes into the data landing zone. It should be hosted in the shared integration resource group. This deployment will enable rapid onboarding of datasets to the data landing zone.
 
 :::image type="content" source="../images/data-landing-zone-shared-integration-rg.png" alt-text="Diagram of a data landing zone shared integration resource group.":::
 
