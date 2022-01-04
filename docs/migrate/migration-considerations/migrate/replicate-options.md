@@ -3,7 +3,7 @@ title: Replication options
 description: Use the Cloud Adoption Framework for Azure to understand the replication process and why you need replication for cloud migration.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 12/30/2021
+ms.date: 1/04/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Replication options
 
-Before starting migration, ensure that primary systems are safe and will continue to run without issues. System downtime disrupts users or customers, and it costs time and money. Migration isn't simply as turning off the virtual machines on-premises and copying them across to Azure. Migration tools must take into account asynchronous, or synchronous replication, to ensure that live systems merge to Azure with no downtime. Most of all, systems must be kept in lockstep with on-premises counterparts. To ensure that workloads work as expected, you might want to test migrated resources in isolated partitions in Azure.
+Before starting migration, ensure that primary systems are safe and will continue to run without issues. System downtime disrupts users or customers, and it costs time and money. Migration isn't as simple as turning off the virtual machines on-premises and copying them across to Azure. Migration tools must take into account asynchronous, or synchronous replication, to ensure that live systems merge to Azure with no downtime. Most of all, systems must be kept in lockstep with on-premises counterparts. To ensure that workloads work as expected, you might want to test migrated resources in isolated partitions in Azure.
 
 Content in the Cloud Adoption Framework assumes that Azure Migrate (or Azure Site Recovery) is the most appropriate tool for replicating assets to the cloud. However, there are other options available, and this article discusses those options to help enable decision-making.
 
@@ -43,7 +43,7 @@ After assessing on-premise and cloud infrastructure for migration, Azure Site Re
 
 This service helps reduce the complexity of your cloud migration, and uses a single comprehensive service instead of multiple tools. [Azure Database Migration Service](/azure/dms/dms-overview) is designed as a seamless, end-to-end solution for moving on-premises SQL Server databases to the cloud. It's a fully managed service designed to enable seamless migrations from multiple database sources to Azure data platforms with little downtime. The service integrates some of the functionality from existing tools and services, and provides customers with a comprehensive, highly available solution.
 
-The service uses Data Migration Assistant to generate assessment reports that provide recommendations that guide you through the changes required before to performing a migration. It's up to you to do any required remediation. When you're ready to begin the migration process, Azure Database Migration Service does all of the associated steps. You can fire and forget your migration projects with peace of mind, knowing that the process takes advantage of Microsoft best practices.
+The service uses Data Migration Assistant to generate assessment reports that provide recommendations that guide you through the changes required before performing a migration. It's up to you to do any required remediation. When you're ready to begin the migration process, Azure Database Migration Service does all of the associated steps. You can fire and forget your migration projects with peace of mind, knowing that the process takes advantage of Microsoft best practices.
 
 ## Next steps
 
