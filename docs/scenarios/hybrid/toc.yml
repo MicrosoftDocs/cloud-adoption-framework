@@ -16,8 +16,8 @@ items:
   - name: Prepare your environment
     items:
     - name: Azure landing zones
-      href: ready_revised.md
-    - name: Design areas 
+      href: ready.md
+    - name: Design areas
       items:
       - name: Identity and access management
         href: eslz-identity-and-access-management.md
