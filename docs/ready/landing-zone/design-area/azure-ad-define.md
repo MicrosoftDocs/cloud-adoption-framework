@@ -3,7 +3,7 @@ title: Define Azure Active Directory tenants
 description: Understand how to set up Azure Active Directory tenants.
 author: jtracey93
 ms.author: jatracey
-ms.date: 08/23/2021
+ms.date: 01/04/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready

@@ -25,14 +25,14 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 We've refined decisions for each landing zone implementation option, and have added pointed guidance for each design area.
 
 - We've clarified implementation decisions necessary within design areas—and have added expanded guidance in articles addressing:
-  - Plan for the Cloud Solution Provider service and Define Azure AD tenants (Azure billing and Active Directory tenant),
-  - Identity and access management foundation (Identity and access management),
-  - Plan for IP addressing (Network topology and connectivity),
-  - Management group design considerations and subscription considerations (Resource organization),
-  - Encryption and key management and Service enablement framework (Security),
-  - Inventory and visibility considerations, Business continuity and disaster recovery, Operational compliance considerations, and Workload management and monitoring (Management),
-  - Azure governance considerations (Governance),
-  - Modernizing your environmental deployment with infrastructure as code (Platform automation and DevOps).
+  - [Plan for the Cloud Solution Provider service](../ready/landing-zone/design-area/azure-billing-cloud-solution-provider.md) and [Define Azure AD tenants](../ready/landing-zone/design-area/azure-ad-define.md) (Azure billing and Active Directory tenant),
+  - [Identity and access management foundation](../ready/landing-zone/design-area/identity-access.md) (Identity and access management),
+  - [Plan for IP addressing](../ready/azure-best-practices/plan-for-ip-addressing.md) (Network topology and connectivity),
+  - [Management groups](../ready/landing-zone/design-area/resource-org-management-groups.md) design considerations and subscription considerations (Resource organization),
+  - [Encryption and key management in Azure](../ready/landing-zone/design-area/encryption-and-keys.md) and [Service enablement framework](../ready/landing-zone/design-area/service-enablement-framework.md) (Security),
+  - [Inventory and visibility considerations](../ready/landing-zone/design-area/management-platform.md), [Business continuity and disaster recovery](../ready/landing-zone/design-area/management-business-continuity-disaster-recovery.md), [Operational compliance considerations](../ready/landing-zone/design-area/management-operational-compliance.md), and [Workload management and monitoring](../ready/landing-zone/design-area/management-workloads.md) (Management),
+  - [Design area: Azure governance](../ready/landing-zone/design-area/governance.md) (Governance),
+  - [Design area: Platform automation and DevOps](../ready/landing-zone/design-area/platform-automation-devops.md) (Platform automation and DevOps).
 
 Finally, we've added an example alignment scenario to the Align on-ramp—Transitioning existing Azure environments to the Azure landing zone conceptual architecture.
 
