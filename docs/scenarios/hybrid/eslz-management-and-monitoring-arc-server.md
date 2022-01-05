@@ -20,7 +20,7 @@ This article will help you operate Azure Arc-enabled servers on Azure enterprise
 
 The following diagram shows conceptual reference architecture, that demonstrates how the Azure [connected machine agent](/azure/azure-arc/servers/agent-overview) communicates with the different management and monitoring capabilities in Azure.
 
-[ ![Azure connected machine agent architecture.](./media/arc-enabled-servers-connected-agent.png)](./media/arc-enabled-servers-connected-agent.png#lightbox)
+[ ![Azure connected machine agent architecture.](./media/arc-enabled-servers-connected-agent.svg)](./media/arc-enabled-servers-connected-agent.svg#lightbox)
 
 ## Design considerations
 
