@@ -71,6 +71,8 @@ By using the OSM monitoring workbook and Azure Monitor, you can:
 - Get detailed information about the endpoints for each service and see how traffic is flowing between services, and what performance looks like for each communication edge.
 - Explore a service topology graph visualization that shows services and their relationships within the Mesh
 
+Services observability is a single discipline of your cloud monitoring strategy, to see additional monitoring considerations, visit [Management and monitoring for Azure Arc-enabled Kubernetes](./eslz-management-and-monitoring.md).
+
 ## Next steps
 
 For more guidance for your hybrid cloud adoption journey,  review the following:
@@ -80,3 +82,4 @@ For more guidance for your hybrid cloud adoption journey,  review the following:
 - To learn more about Open Service Mesh, check out the following : [Open Service Mesh Upstream documentation](https://release-v0-11.docs.openservicemesh.io/)
 - To learn more about Open Service Mesh Monitoring with Azure Monitor, check out the following : [Configure Monitoring and Observability with Open Service Mesh on Azure Kubernetes Service (AKS)](/azure/aks/open-service-mesh-azure-monitor)
 - To learn more about Open Service Mesh Monitoring dashboard, check out the following : [Azure Monitor Container Insights Open Service Mesh Monitoring (Private Preview)](https://github.com/microsoft/Docker-Provider/blob/ci_dev/Documentation/OSMPrivatePreview/ReadMe.md#how-to-consume-osm-monitoring-dashboard) 
+- To learn more about Monitoring on Azure Arc enabled Kubernetes, check out the following: [Management and monitoring for Azure Arc-enabled Kubernetes](./eslz-management-and-monitoring.md)
