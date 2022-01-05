@@ -18,9 +18,9 @@ It's helpful to think about Azure landing zones as the "city plan" and the archi
 
 As an Independent Software Vendor (ISV) building and operating your solution on Azure, refer to the following resources:
 
-* [**Azure landing zones**](./index.md): guidance for the overall Azure environment, analogous to a "city plan".
-* [**Azure Well-Architected Framework**](/azure/architecture/framework/): architectural guidance applicable to all workloads, analogous to a "building plan".
-* [**Architecting multitenant solutions on Azure**](/azure/architecture/guide/multitenant/overview): architectural guidance applicable specifically to developers of **multitenant** solutions on Azure.
+* [Azure landing zones](./index.md): guidance for the overall Azure environment, analogous to a "city plan".
+* [Azure Well-Architected Framework](/azure/architecture/framework/): architectural guidance applicable to all workloads, analogous to a "building plan".
+* [Architecting multitenant solutions on Azure](/azure/architecture/guide/multitenant/overview): architectural guidance applicable specifically to developers of **multitenant** solutions on Azure.
 
 While as an ISV, SaaS provider, or a Startup your specific implementation might vary, the Azure landing zones conceptual architecture will help you set a direction for the overall approach.
 
