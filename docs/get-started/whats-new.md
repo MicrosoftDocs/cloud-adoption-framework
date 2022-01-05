@@ -22,19 +22,11 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
 ### Updates to Azure landing zone content in the Ready methodology
 
-We've refined decisions for each landing zone implementation option, and have added pointed guidance for each design area.
+We've refined the flow for finding the right landing zone implementation, and have added additional content for all design areas.
 
-- We've clarified implementation decisions necessary within design areas—and have added expanded guidance in articles addressing:
-  - [Plan for the Cloud Solution Provider service](../ready/landing-zone/design-area/azure-billing-cloud-solution-provider.md) and [Define Azure AD tenants](../ready/landing-zone/design-area/azure-ad-define.md) (Azure billing and Active Directory tenant),
-  - [Identity and access management foundation](../ready/landing-zone/design-area/identity-access.md) (Identity and access management),
-  - [Plan for IP addressing](../ready/azure-best-practices/plan-for-ip-addressing.md) (Network topology and connectivity),
-  - [Management groups](../ready/landing-zone/design-area/resource-org-management-groups.md) design considerations and subscription considerations (Resource organization),
-  - [Encryption and key management in Azure](../ready/landing-zone/design-area/encryption-and-keys.md) and [Service enablement framework](../ready/landing-zone/design-area/service-enablement-framework.md) (Security),
-  - [Inventory and visibility considerations](../ready/landing-zone/design-area/management-platform.md), [Business continuity and disaster recovery](../ready/landing-zone/design-area/management-business-continuity-disaster-recovery.md), [Operational compliance considerations](../ready/landing-zone/design-area/management-operational-compliance.md), and [Workload management and monitoring](../ready/landing-zone/design-area/management-workloads.md) (Management),
-  - [Design area: Azure governance](../ready/landing-zone/design-area/governance.md) (Governance),
-  - [Design area: Platform automation and DevOps](../ready/landing-zone/design-area/platform-automation-devops.md) (Platform automation and DevOps).
+We've consolidated guidance into a comprehensive set across environment and compliance design areas —to make the right information easier for you to find. We've created a clearer flow for organizations to work through during the design phase, before deploying a landing zone. Read more about [Azure landing zone design areas](../ready/landing-zone/design-areas.md).
 
-Finally, we've added an example alignment scenario to the Align on-ramp—Transitioning existing Azure environments to the Azure landing zone conceptual architecture.
+Finally, we've added an example alignment scenario to the Align on-ramp—[Scenario: Transition existing Azure environments to the Azure landing zone conceptual architecture](../ready/landing-zone/align-scenarios).
 
 ## October 2021
 
