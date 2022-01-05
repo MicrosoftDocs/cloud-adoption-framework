@@ -28,7 +28,7 @@ ISV solutions often fit one of the following three deployment models. Each of th
 
 ## Pure SaaS deployment model
 
-In the pure SaaS model, the ISV software is deployed fully in the ISV's own Azure subscriptions and end-customers consume the software-as-a-service without deploying it in their own Azure subscriptions. Examples of pure SaaS software are SendGrid, Confluent Cloud, Snowflake, and many others [SaaS listings in Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps?filters=saas).
+In the pure SaaS model, the ISV software is deployed fully in the ISV's own Azure subscriptions and end-customers consume the software-as-a-service without deploying it in their own Azure subscriptions. Examples of pure SaaS software are SendGrid, Confluent Cloud, Snowflake, and many other [SaaS listings in Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps?filters=saas).
 
 ![Diagram showing pure SaaS deployment model](./media/isv-pure-saas-deployment.png)
 
@@ -40,7 +40,7 @@ ISVs building pure SaaS solutions should consider:
 
 * How to decide if all resources making up the SaaS solution should be in one Azure subscription or partitioned across multiple Azure subscriptions?
 * Should each customer of an ISV's SaaS solution be hosted in a dedicated Azure subscription or can resources be created in one or a few shared subscriptions?
-* How to apply the [deployment stamp (scale unit) pattern]/azure/architecture/guide/multitenant/approaches/overview) for all tiers of the solution?
+* How to apply the [deployment stamp (scale unit) pattern](/azure/architecture/guide/multitenant/approaches/overview) for all tiers of the solution?
 * How to think about [Azure resource organization in multitenant solutions](/azure/architecture/guide/multitenant/approaches/resource-organization) to avoid facing scale challenges and Azure subscription limits?
 
 ## Customer-deployed deployment model
@@ -94,13 +94,13 @@ The [securing Azure environments with Azure Active Directory whitepaper](https:/
 
 ## Management Group hierarchy considerations for SaaS ISVs
 
-As a SaaS ISV, you might find that the recommended Azure landing zone [Management Group hierarchy](./design-area/resource-org-management-groups.md) of Corp and Online archetypes isn't applicable to how you develop and operate your SaaS solution. Also, Azure landing zone [Enterprise-scale FAQ](../enterprise-scale/faq.md#how-do-we-handle-devtestproduction-workload-landing-zones-in-enterprise-scale-architecture) explains how to handle the "dev/test/production" workload landing zones for enterprise customers, but it might still not be applicable to SaaS providers whose single workload is partition across multiple Azure subscriptions for scale or isolation purposes.
+As a SaaS ISV, you might find that the recommended Azure landing zone [Management Group hierarchy](./design-area/resource-org-management-groups.md) of Corp and Online archetypes isn't applicable to how you develop and operate your SaaS solution. Also, Azure landing zone [Enterprise-scale FAQ](../enterprise-scale/faq.md#how-do-we-handle-devtestproduction-workload-landing-zones-in-enterprise-scale-architecture) explains how to handle the "dev/test/production" workload landing zones for enterprise customers, but it might still not be applicable to SaaS providers whose single workload is partitioned across multiple Azure subscriptions.
 
-SaaS ISVs often organize their cloud environments by modeling their software development lifecycle promotional environments of dev, test, stage, and prod. The primary difference between the dev, test, stage, and prod groups of subscriptions is frequently Azure RBAC such as who can access these groups of subscriptions - DevOps, SaaSOps, Developers, or Testers. The Azure Policy differences are less pronounced since these groups of subscriptions often have similar guardrails such as which Azure regions and VM sizes can be used in each environment. Also, SaaS ISVs with multiple tiers of service for their customers, can have extra separation between free-tier customers on shared multitenant instances of the application and premium-tier customers with dedicated deployments of the application.
+SaaS ISVs often organize their cloud environments by modeling their software development lifecycle promotional environments of dev, test, stage, and prod. The primary difference between the dev, test, stage, and prod groups of subscriptions is frequently the Azure RBAC such as who can access these groups of subscriptions - DevOps, SaaSOps, Developers, or Testers. The Azure Policy differences are less pronounced since these groups of subscriptions often have similar guardrails such as which Azure regions and VM sizes can be used in each environment. Also, SaaS ISVs with multiple tiers of service, can have extra separation between free-tier shared instances of the  and premium-tier dedicated instances of the application.
 
 If you're such an ISV, you might prefer to use Management Groups for grouping multiple subscriptions that correspond to the separate promotional environments "dev/test/production" and which have different Azure RBAC and Azure Policies.
 
-The diagram below shows a potential management group and subscription hierarchy that is relatable to many SaaS ISVs. The "stage" management group and the distinction between multitenant and isolated production subscription might not be applicable to all ISVs. For example, smaller ISVs can decide to only start with three subscriptions such as platform, dev/test, and prod, but might want to account for extra subscriptions as separate deployment stamps as they grow.
+The diagram below shows a potential management group and subscription hierarchy that is relatable to many SaaS ISVs. The "stage" management group and the distinction between multitenant and isolated production subscriptions are optional since they might not be applicable to all ISVs. For example, smaller ISVs can decide to only start with three subscriptions such as platform, dev/test, and prod, but might want to include extra subscriptions as separate deployment stamps as they grow.
 
 ![ISV promotional environment Management Group hierarchy](./media/isv-mg-hierarchy.png)
 
