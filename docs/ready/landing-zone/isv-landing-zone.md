@@ -18,7 +18,7 @@ It's helpful to think about Azure landing zones as the "city plan" and the archi
 
 As an Independent Software Vendor (ISV) building and operating your solution on Azure, refer to the following resources:
 
-* [**Azure landing zones**](./): guidance for the overall Azure environment, analogous to a "city plan".
+* [**Azure landing zones**](./index.md): guidance for the overall Azure environment, analogous to a "city plan".
 * [**Azure Well-Architected Framework**](/azure/architecture/framework/): architectural guidance applicable to all workloads, analogous to a "building plan".
 * [**Architecting multitenant solutions on Azure**](/azure/architecture/guide/multitenant/overview): architectural guidance applicable specifically to developers of **multitenant** solutions on Azure.
 
@@ -32,16 +32,16 @@ In the pure SaaS model, the ISV software is deployed fully in the ISV's own Azur
 
 ![Diagram showing pure SaaS deployment model](./media/isv-pure-saas-deployment.png)
 
-As a SaaS ISV, you should look at the Azure landing zone guidance for how to properly architect your overall Azure environment for scale and should also review the [Architecting multitenant solutions on Azure](https://docs.microsoft.com/azure/architecture/guide/multitenant/overview) series that provides guidance on how to design, build, and operate your own multitenant solutions on Azure.
+As a SaaS ISV, you should look at the Azure landing zone guidance for how to properly architect your overall Azure environment for scale and should also review the [Architecting multitenant solutions on Azure](/azure/architecture/guide/multitenant/overview) series that provides guidance on how to design, build, and operate your own multitenant solutions on Azure.
 
-As a smaller SaaS ISV, today, you might not have your application architected in a multi-subscription way because it currently functions properly within Azure subscription limits. Review the [Enterprise-scale landing zone design principles](../enterprise-scale/design-principles.md), such as subscription democratization, and familiarize yourself with the [architectural approaches for multitenancy](https://docs.microsoft.com/azure/architecture/guide/multitenant/approaches/overview) to plan for future growth as required.
+As a smaller SaaS ISV, today, you might not have your application architected in a multi-subscription way because it currently functions properly within Azure subscription limits. Review the [Enterprise-scale landing zone design principles](../enterprise-scale/design-principles.md), such as subscription democratization, and familiarize yourself with the [architectural approaches for multitenancy](/azure/architecture/guide/multitenant/approaches/overview) to plan for future growth as required.
 
 ISVs building pure SaaS solutions should consider:
 
 * How to decide if all resources making up the SaaS solution should be in one Azure subscription or partitioned across multiple Azure subscriptions?
 * Should each customer of an ISV's SaaS solution be hosted in a dedicated Azure subscription or can resources be created in one or a few shared subscriptions?
-* How to apply the [deployment stamp (scale unit) pattern](https://docs.microsoft.com/azure/architecture/guide/multitenant/approaches/overview) for all tiers of the solution?
-* How to think about [Azure resource organization in multitenant solutions](https://docs.microsoft.com/azure/architecture/guide/multitenant/approaches/resource-organization) to avoid facing scale challenges and Azure subscription limits?
+* How to apply the [deployment stamp (scale unit) pattern]/azure/architecture/guide/multitenant/approaches/overview) for all tiers of the solution?
+* How to think about [Azure resource organization in multitenant solutions](/azure/architecture/guide/multitenant/approaches/resource-organization) to avoid facing scale challenges and Azure subscription limits?
 
 ## Customer-deployed deployment model
 
@@ -106,6 +106,6 @@ The diagram below shows a potential management group and subscription hierarchy 
 
 ## Next steps
 
-* If you're building a multitenant solution, learn more about [architecting multitenant solutions on Azure](https://docs.microsoft.com/azure/architecture/guide/multitenant/overview)
+* If you're building a multitenant solution, learn more about [architecting multitenant solutions on Azure](/azure/architecture/guide/multitenant/overview)
 * Learn [what is an Azure landing zone](./index.md)
 * Learn about [Azure landing zone design areas](./design-areas.md)
