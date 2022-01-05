@@ -12,7 +12,7 @@ ms.custom: e2e-hybrid
 
 # Automation for Azure Arc-enabled Kubernetes
 
-Azure Arc-enabled Kubernetes clusters allow you to manage your Kubernetes clusters that are hosted outside of Azure, on your corporate network, or on another cloud provider.  This document is written to help plan the automation of onboarding of clusters and adding additional capability through cluster extensions.  This article presents key recommendations for operations teams to onboard and automate Azure Arc-enabled clusters thorughout their lifecycle.
+Azure Arc-enabled Kubernetes clusters allow you to manage your Kubernetes clusters that are hosted outside of Azure, on your corporate network, or on another cloud provider.  This document is written to help plan the automation of onboarding of clusters and adding additional capability through cluster extensions.  This article presents key recommendations for operations team(s) to onboard and automate Azure Arc-enabled clusters thorughout their lifecycle.
 
 ## Design Considerations
 
@@ -41,7 +41,7 @@ Determine which Azure capabilities you want on your Azure Arc-enabled Kubernetes
 
 ### Lifecycle automation
 
-Create a cluster update management strategy for Azure Arc-enabled Kubernetes clusters.
+Create an Azure Arc agent and Azure Arc-enabled Kubernetes extensions update management strategy.
 
 ## Design recommendations
 
@@ -62,7 +62,7 @@ Afterwards, be sure to [verify your connection](/azure/azure-arc/kubernetes/quic
 
 ### Arc-enabled Kubernetes extensions
 
-Depending on the needs of Extensions, you may opt to have extensions that are required to be installed on all of your Arc enabled Kubernetes clusters, as well as certain extensions which are installed only to specific Arc-enabled Kubernetes clusters. For extensions that are not widely adopted across your fleet of clusters, considering automating by way for CLI and Arm template using automation tools such as Azure DevOps or GitHub Actions.
+Depending on the needs of Extensions, you may opt to have extensions that are required to be installed on all of your Arc enabled Kubernetes clusters, as well as certain extensions which are installed only to specific Arc-enabled Kubernetes clusters. For extensions that are not widely adopted across your fleet of clusters, consider automation through Azure CLI and/or ARM templates using tools such as Azure DevOps or GitHub Actions.
 
 For cases where extensions are common across all of your Arc-enabled Kubernetes clusters, or large groups of Arc-enabled Kubernetes clusters, we recommend automating the deployment of Arc extensions at scale via [Azure Policy](/azure/governance/policy/overview). The following is an overview of steps:
 
@@ -75,7 +75,7 @@ For cases where extensions are common across all of your Arc-enabled Kubernetes 
 
 During the onboarding process, Azure Arc enabled Kubernetes provision agents on to your Kubernetes cluster, these agent versions will change with updates to Azure Arc and should be regularly upgraded. We recommend enabling the auto-upgrade feature for the Azure Arc agents running inside your cluster, this is the default behavior when onboarding a cluster to Azure Arc. Visit [Upgrade Agents] for more information on the auto-upgrade feature and version support policy.
 
-The other Arc components that will require updates on your cluster are Extension versions. For any extension installed on your cluster, we recommend to leave the default behavior to automatically upgrade the extension minor version, which can optionally be disabled during provisioning. In the case of a major version upgrade which may cause, there will be a migration path documented to move to the extension major release. Please see [Extensions and Custom locations](./extensions-management.md) for more information.
+The other Arc components that will require updates on your cluster are extensions. For any extension installed on your cluster, we recommend leaving the default behavior to automatically upgrade the extension minor version, which can optionally be disabled during provisioning. In the case of a major version upgrade, there will be a migration path documented to move to the extension major release. Please see [Extensions and Custom locations](./extensions-management.md) for more information.
 
 
 ## Next steps
