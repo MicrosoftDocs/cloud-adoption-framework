@@ -3,7 +3,7 @@ title: Identity and access management for data management and analytics
 description: Learn how this enterprise-scale scenario can improve identity and access management for data management and analytics in Azure.
 author: mboswell
 ms.author: mboswell
-ms.date: 07/19/2021
+ms.date: 11/25/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -18,7 +18,7 @@ This article builds on considerations and recommendations about Azure landing zo
 
 ## Data landing zone design
 
-Enterprise-scale for analytics and AI supports an access control model using Azure Active Directory (Azure AD) identities. The model uses both Azure role-based access control (Azure RBAC) and access control lists (ACLs).
+Data management and analytics scenario supports an access control model using Azure Active Directory (Azure AD) identities. The model uses both Azure role-based access control (Azure RBAC) and access control lists (ACLs).
 
 Review the Azure administration and management activities your teams perform. Consider your data management and analytics on Azure. Determine the best possible distribution of responsibilities within your organization.
 
@@ -131,7 +131,7 @@ Managing access to data should be done using Azure AD groups. Add user principle
 
 For datasets in Azure data lakes, consider using access control lists (ACLs). For more information, see [Access control model in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-access-control-model). Using Azure AD passthrough with access control lists is supported by most native Azure services, including Azure Machine Learning, Azure Synapse Analytics, and Azure Databricks.
 
-Other polyglot storage is likely to be used in enterprise-scale for analytics and AI. Examples include Azure Database for PostgreSQL, Azure Database for MySQL, Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics. They could be used by data integrations to store read data stores or by data product teams.
+Other polyglot storage is likely to be used in data management and analytics scenario. Examples include Azure Database for PostgreSQL, Azure Database for MySQL, Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics. They could be used by data integrations to store read data stores or by data product teams.
 
 - [Use Azure Active Directory for authentication with Azure Database for PostgreSQL](/azure/postgresql/howto-configure-sign-in-aad-authentication)
 - [Use Azure Active Directory authentication](/azure/azure-sql/database/authentication-aad-overview) with Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics

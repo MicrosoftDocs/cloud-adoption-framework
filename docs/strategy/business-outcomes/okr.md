@@ -3,7 +3,7 @@ title: Measure business outcomes with objectives and key results (OKRs)
 description: Use the Cloud Adoption Framework to measure business outcomes using objectives and key results (OKRs).
 author: wayneme75
 ms.author: brblanch
-ms.date: 10/21/2020
+ms.date: 12/23/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
@@ -98,7 +98,9 @@ Five steps can help your organization to move forward with OKRs:
 
 **Step 5: Improve:** Continue to improve, revisit, and rethink how to connect further across the organization. OKRs in spreadsheets can be useful, but an organization can benefit most from everyone participating to meet objectives and gaining insights from the aligned data.
 
-Contact [WorkBoard](https://appsource.microsoft.com/product/office/WA104381599) to get started.
+Contact [WorkBoard](https://appsource.microsoft.com/product/office/WA104381599) to learn more about helping your organization move forward with OKRs.
+
+Now that you have measured your business outcomes, you are ready to [understand financial considerations](../financial-considerations/index.md).
 
 > [!div class="nextstepaction"]
-> [Align efforts for learning metrics](../learning-metrics.md)
+> [Understand financial considerations](../financial-considerations/index.md)
