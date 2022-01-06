@@ -171,7 +171,7 @@ IR processes modernization is typically led by [security operations](../organize
 
   - **[Security operations](../organize/cloud-security-operations-center.md) incident management team or leadership**: Leads process and integration updates to key external stakeholders. These teams include legal and communications or public relations teams.
   - **[Security operations](../organize/cloud-security-operations-center.md) security analysts**: Provide expertise on technical incident investigation and triage.
-  - **[Central IT operations](../organize/central-it.md)**: Provides expertise on cloud platform directly, via cloud center of excellence, or via external consultants.
+  - **[Central IT operations](../organize/central-it.md)**: Provide expertise on cloud platform directly, via cloud center of excellence, or via external consultants.
 
 ### How 
 
@@ -283,7 +283,7 @@ Password and multifactor initiative is typically led by [identity and key manage
 
 - **Sponsorship:** Typically sponsored by CISO, CIO, or director of identity.
 - **Execution:** A collaborative effort involving:
-  - **[Policy and standards](../organize/cloud-security-policy-standards.md)** team: Establish clear requirements.
+  - **[Policy and standards](../organize/cloud-security-policy-standards.md) team**: Establish clear requirements.
   - **[Identity and key management](../organize/cloud-security-identity-keys.md)** or **[central IT operations](../organize/central-it.md)**: Implement the policy,
   - **[Security compliance management](../organize/cloud-security-compliance-management.md)**: Monitors to ensure compliance.
 
@@ -326,7 +326,7 @@ This practice can free up your team's time and attention for higher value securi
 - **Sponsorship**: This update of network security strategy is typically sponsored by security leadership or IT leadership
 - **Execution**: Integrating strategies into your cloud network security strategy is a collaborative effort involving:
   - **[Security architecture](../organize/cloud-security-architecture.md)**: Establish cloud network security architecture with cloud network and cloud network security leads.
-  - **Cloud network leads** ([central IT operations](../organize/central-it.md)) + **Cloud Network security leads** ([infrastructure security team](../organize/cloud-security-infrastructure-endpoint.md))
+  - **Cloud network leads ([central IT operations](../organize/central-it.md))** + **Cloud Network security leads ([infrastructure security team](../organize/cloud-security-infrastructure-endpoint.md))**
     - Establish cloud network security architecture with security architects
     - Configure firewall, NSG, and WAF capabilities and work with application architects on WAF rules
   - **Application architects**: Work with network security to build and refine WAF rule sets and DDoS configurations to protect the application without disrupting availability
@@ -495,9 +495,9 @@ When teams work in isolation without being aligned to a common strategy, their i
 
 One example of teams working in isolation that has played out consistently in many organizations is the segmentation of assets:
 
-- The *network security team* develops a strategy for segmenting a *flat network*. The strategy increases security, often based on physical sites, assigned IP address addresses/ranges, or similar items.
-- Separately, the *identity team* developed a strategy for groups and Active Directory organizational units (OUs) based on their understanding and knowledge of the organization.
-- Often, *application teams* find it difficult to work with these systems. It's difficult because they were designed with limited input and understanding of business operations, goals, and risks.
+- The **network security team** develops a strategy for segmenting a *flat network*. The strategy increases security, often based on physical sites, assigned IP address addresses/ranges, or similar items.
+- Separately, the **identity team** developed a strategy for groups and Active Directory organizational units (OUs) based on their understanding and knowledge of the organization.
+- Often, **application teams** find it difficult to work with these systems. It's difficult because they were designed with limited input and understanding of business operations, goals, and risks.
 
 In organizations where this limitation happens, teams frequently experience conflicts over firewall exceptions. The conflicts can negatively impact security because teams approve exceptions. Also, productivity negatively impacts security because deployments slowdown for application functionality the business needs.
 
@@ -526,6 +526,6 @@ Microsoft has published video guidance for [applying a segmentation strategy to 
 The Cloud Adoption Framework includes guidance to help your teams with:
 
 - **[Building a cloud strategy team](../get-started/team/cloud-strategy.md)**: Ideally, security should be integrated into an existing cloud strategy.
-- **[Build or modernize a security strategy](../strategy/define-security-strategy.md)**: To meet business and security goals in the current age of cloud services and modern threats.
+- **[Build or modernize a security strategy](../strategy/define-security-strategy.md)**: Meet business and security goals in the current age of cloud services and modern threats.
 
 Also see the [Azure Security Benchmark governance and strategy](/security/benchmark/azure/security-controls-v2-governance-strategy).
