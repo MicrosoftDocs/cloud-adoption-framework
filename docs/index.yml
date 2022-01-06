@@ -226,11 +226,11 @@ conceptualContent:
           text: Identify gaps between your current state and business priorities, and get the right resources to help you address those gaps.
 
     # Card
-    - title: Microsoft Azure Well-Architected Review
+    - title: Cloud Adoption Strategy Evaluator
       links:
-        - url: /assessments/?id=azure-architecture-review&mode=pre-assessment
-          itemType: architecture
-          text: Examine how to go beyond your basic operations for priority workloads.
+        - url: /assessments/?mode=pre-assessment&id=8fefc6d5-97ac-42b3-8e97-d82701e55bab
+          itemType: quickstart
+          text: Assess your cloud adoption strategy and get recommendations on building or advancing your cloud business case.
 
 # additionalContent section (optional)
 

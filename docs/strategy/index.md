@@ -30,4 +30,6 @@ The following steps help you document your business strategy efficiently. This a
 | <br> :::image type="icon" source="../_images/icons/3.png"::: | <br> [Evaluate financial considerations](./financial-considerations/index.md): Learn how to use the cloud to make your IT cost structure more flexible. Then, build a business case to adopt the cloud. |
 | <br> :::image type="icon" source="../_images/icons/4.png"::: | <br> [Understand technical considerations](./technical-considerations/index.md): Discover the technical flexibility, efficiencies, and capabilities that help you build a business case to adopt the cloud. |
 
-Use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to build out your cloud adoption strategy, and to track the output of each of the steps that are outlined above.
+Take the [Cloud Adoption Strategy Evaluator](/assessments/?mode=pre-assessment&id=8fefc6d5-97ac-42b3-8e97-d82701e55bab) assessment that will help you build a business case to enable your cloud journey.
+
+Use the results from the assessment—and continue to build your cloud adoption strategy by using the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to track the output of each of the  four steps above, documenting your business strategy.

@@ -18,6 +18,10 @@ This Framework is collaboratively built with customers, partners, and internal M
 
 Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
+## January 2022
+
+We launched [assessment_name], a new assessment built around the principles of cloud economics—which evaluates your cloud adoption strategy, and provides recommendations to help build a robust business case that supports your organization's unique cloud journey.
+
 ## December 2021
 
 ### Updates to Azure landing zone content in the Ready methodology
