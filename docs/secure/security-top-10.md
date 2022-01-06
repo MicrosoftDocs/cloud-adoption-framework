@@ -311,7 +311,7 @@ Simplify your network security strategy and maintenance by integrating Azure Fir
 
 ### Why
 
-Simplicity is critical to security as it reduces likelihood of risk from confusion, misconfigurations, and other human errors. See the "drive simplicity" [security principle](/azure/architecture/framework/security/security-principles).
+Simplicity is critical to security as it reduces likelihood of risk from confusion, misconfigurations, and other human errors. See the "drive simplicity" [security principle](/azure/architecture/framework/security/security-principles.md).
 
 Firewalls and WAFs are important basic security controls to protect applications from malicious traffic, but their setup and maintenance can be complex and consume a significant amount of the security team's time and attention (similar to adding custom aftermarket parts to a car). Azure's native capabilities can simplify implementation and operation of firewalls, web application firewalls, distributed denial of service (DDoS) mitigations, and more.
 
