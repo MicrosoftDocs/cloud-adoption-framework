@@ -311,7 +311,7 @@ Simplify your network security strategy and maintenance by integrating Azure Fir
 
 ### Why
 
-Simplicity is critical to security as it reduces likelihood of risk from confusion, misconfigurations, and other human errors. See the "drive simplicity" [security principle](/azure/architecture/framework/security/security-principles.md).
+Simplicity is critical to security as it reduces likelihood of risk from confusion, misconfigurations, and other human errors. See the "drive simplicity" [security principle](/azure/architecture/framework/security/security-principles).
 
 Firewalls and WAFs are important basic security controls to protect applications from malicious traffic, but their setup and maintenance can be complex and consume a significant amount of the security team's time and attention (similar to adding custom aftermarket parts to a car). Azure's native capabilities can simplify implementation and operation of firewalls, web application firewalls, distributed denial of service (DDoS) mitigations, and more.
 
@@ -336,8 +336,8 @@ This practice can free up your team's time and attention for higher value securi
 
 Organizations looking to simplify their operations have two options:
 
-- **Extend existing capabilities and architectures:** Many organizations often choose to extend the use of existing firewall capabilities so they can capitalize on existing investments into skills and process integration, particularly as they first adopt the cloud.
-- **Embrace native security controls:** More organizations are starting to prefer using native controls to avoid the complexity of integrating third-party capabilities. These organizations are typically seeking to avoid the risk of a misconfiguration in load balancing, user-defined routes, the firewall or WAF itself, and delays in handoffs between different technical teams. This option is compelling to organizations embracing infrastructure as code approaches as they can automate and instrument the built-in capabilities more easily than third-party capabilities.
+- **Extend existing capabilities and architectures**: Many organizations often choose to extend the use of existing firewall capabilities so they can capitalize on existing investments into skills and process integration, particularly as they first adopt the cloud.
+- **Embrace native security controls**: More organizations are starting to prefer using native controls to avoid the complexity of integrating third-party capabilities. These organizations are typically seeking to avoid the risk of a misconfiguration in load balancing, user-defined routes, the firewall or WAF itself, and delays in handoffs between different technical teams. This option is compelling to organizations embracing infrastructure as code approaches as they can automate and instrument the built-in capabilities more easily than third-party capabilities.
 
 Documentation on Azure native network security capabilities can be found at:
 
@@ -376,7 +376,7 @@ Typically driven by the [security operations](../organize/cloud-security-operati
   - [Threat intelligence](../organize/cloud-security-threat-intelligence.md): Research and integrate information on cloud attacks to inform teams with context and intelligence.
   - [Security architecture](../organize/cloud-security-architecture.md): Integrate native tooling into security architecture documentation.
   - [Policy and standards](../organize/cloud-security-policy-standards.md): Set standards and policy for enabling native tooling throughout the organization. Monitor for compliance.
-  - [Infrastructure and endpoint](../organize/cloud-security-infrastructure-endpoint.md) / **[Central IT Operations](../organize/central-it.md):** Configure and enable detections, integrate into automation and infrastructure as code solutions.
+  - [Infrastructure and endpoint](../organize/cloud-security-infrastructure-endpoint.md) / [Central IT Operations](../organize/central-it.md): Configure and enable detections, integrate into automation and infrastructure as code solutions.
 
 ### How 
 
@@ -415,9 +415,9 @@ Often a cross-team effort, driven by [security architecture](../organize/cloud-s
 
 - **Sponsorship**: Typically sponsored by [identity and key management](../organize/cloud-security-identity-keys.md) and [security architecture](../organize/cloud-security-architecture.md) (though some organizations may require sponsorship by CISO or CIO)
 - **Execution**: A collaborative effort involving:
-  - [Security architecture](../organize/cloud-security-architecture.md): Incorporates into security and IT architecture documents and diagrams
-  - [Policy and standards](../organize/cloud-security-policy-standards.md): Document policy and monitor for compliance
-  - [Identity and key management](../organize/cloud-security-identity-keys.md) or **[Central IT Operations](../organize/central-it.md)** to implement the policy by enabling features and supporting developers with accounts, education, and so on.
+  - **[Security architecture](../organize/cloud-security-architecture.md)**: Incorporates into security and IT architecture documents and diagrams
+  - **[Policy and standards](../organize/cloud-security-policy-standards.md)**: Document policy and monitor for compliance
+  - **[Identity and key management](../organize/cloud-security-identity-keys.md)** or **[Central IT Operations](../organize/central-it.md)** to implement the policy by enabling features and supporting developers with accounts, education, and so on.
   - **Application developers** or **[Central IT Operations](../organize/central-it.md)**: Use identity in applications and Azure service configurations (responsibilities will vary based on level of DevOps adoption)
 
 ### How 
@@ -459,10 +459,10 @@ Identity-based authentication overcomes many of these challenges with mature cap
 Often a cross-team effort, driven by [security architecture](../organize/cloud-security-architecture.md) or [identity and key management](../organize/cloud-security-identity-keys.md) teams.
 
 - **Sponsorship**: Typically sponsored by [security architecture](../organize/cloud-security-architecture.md) or [identity and key management](../organize/cloud-security-identity-keys.md)  (though some organizations may require sponsorship by CISO or CIO).
-- **Execution**: A collaborative effort involving
-  - [Security architecture](../organize/cloud-security-architecture.md): Incorporates into security and IT architecture diagrams and documents.
-  - [Policy and standards](../organize/cloud-security-policy-standards.md): Document policy and monitor for compliance.
-  - [Identity and key management](../organize/cloud-security-identity-keys.md) or **[Central IT Operations](../organize/central-it.md)** to implement the policy by enabling features and supporting developers with accounts, education, and so on.
+- **Execution**: A collaborative effort involving:
+  - **[Security architecture](../organize/cloud-security-architecture.md)**: Incorporates into security and IT architecture diagrams and documents.
+  - **[Policy and standards](../organize/cloud-security-policy-standards.md)**: Document policy and monitor for compliance.
+  - **[Identity and key management](../organize/cloud-security-identity-keys.md)** or **[Central IT Operations](../organize/central-it.md)** to implement the policy by enabling features and supporting developers with accounts, education, and so on.
   - **App developers** or **[Central IT Operations](../organize/central-it.md)**: Use identity in applications and Azure service configurations (responsibilities will vary based on level of DevOps adoption).
 
 ### How
@@ -508,8 +508,8 @@ While security can create healthy friction by forcing critical thinking, this co
 
 - **Sponsorship**: The unified strategy typically cosponsored by the CIO, CISO, and CTO. The sponsorship often comes with business leadership support for some high-level elements and is championed by representatives from each team.
 - **Execution**: The security strategy must be implemented by everyone. It should integrate data from various teams to increase ownership, buy-in, and likelihood of success.
-  - [Security architecture](../organize/cloud-security-architecture.md): Leads the effort to build security strategy and resulting architecture. Also, actively gathers feedback from teams and documents it in presentations, documents, and diagrams for the various audiences.
-  - [Policy and standards](../organize/cloud-security-policy-standards.md): Captures the appropriate elements into standards and policy and then monitors for compliance.
+  - **[Security architecture](../organize/cloud-security-architecture.md)**: Leads the effort to build security strategy and resulting architecture. Also, actively gathers feedback from teams and documents it in presentations, documents, and diagrams for the various audiences.
+  - **[Policy and standards](../organize/cloud-security-policy-standards.md)**: Captures the appropriate elements into standards and policy and then monitors for compliance.
   - **All technical IT and security teams**: Provide input requirements, then align to and implement the enterprise strategy.
   - **Application owners and developers**: Read and understand strategy documentation that applies to them (ideally, guidance tailored to their role).
 
@@ -526,7 +526,7 @@ Microsoft has published video guidance for [applying a segmentation strategy to 
 
 The Cloud Adoption Framework includes guidance to help your teams with:
 
-- [Building a cloud strategy team](../get-started/team/cloud-strategy.md): Ideally, security should be integrated into an existing cloud strategy.
-- [Build or modernize a security strategy](../strategy/define-security-strategy.md): To meet business and security goals in the current age of cloud services and modern threats.
+- **[Building a cloud strategy team](../get-started/team/cloud-strategy.md)**: Ideally, security should be integrated into an existing cloud strategy.
+- **[Build or modernize a security strategy](../strategy/define-security-strategy.md)**: To meet business and security goals in the current age of cloud services and modern threats.
 
 Also see the [Azure Security Benchmark governance and strategy](/security/benchmark/azure/security-controls-v2-governance-strategy).
