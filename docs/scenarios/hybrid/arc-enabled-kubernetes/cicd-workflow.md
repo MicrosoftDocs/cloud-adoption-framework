@@ -21,6 +21,7 @@ By implementing GitOps, you can achieve some of the following benefits:
 - Automatic correction of drift that can occur to your cluster to match the desired cluster state defined in your Git repository.
 - Ability to roll back the Kubernetes configuration to a previous version, using Git revert or Git rollback commands. Cluster deployments re-creation for disaster recovery scenarios also becomes a fast and straight forward process because your Kubernetes desired cluster configuration is stored in Git.
 - Improve security by reducing the amount of service accounts that are required to have deployment permission to your cluster.
+- Implement a CI/CD pipeline for deploying applications to your cluster.
 
 ## Architecture
 
@@ -58,7 +59,7 @@ For your code repositories, you can use whatever branching strategy you like sin
 
 - Single repository (Branch per environment):
   - This allows the most flexibility to control Git policies and permissions for each branch that represents an environment.
-  - The drawback is that there there will be no sharing of the common config among environments since tooling such as Kustomize does not work with Git branches.
+  - The drawback is that there there will be no sharing of the common config among environments since tooling such as [Kustomize](https://kubernetes-sigs.github.io/kustomize/) does not work with Git branches.
 - Single repository (Directory per environment):
   - As an example, this approach can be implemented using Kustomize which allows you to define a base configuration for Kubernetes objects and a set of overlays for an environment that override configurations in the base.
   - This can reduce duplicating YAML files for each environment but reduces the configuration separation between environments. Making a single change to the repository has the potential to impact all environments at once, so understanding the impact of changes to base folders must be fully understood and taken with care.
@@ -72,7 +73,7 @@ For your code repositories, you can use whatever branching strategy you like sin
 Platform Operators and Application Operators have several options for managing Kubernetes configuration, the following are choices:
 
 - Raw Kubernetes YAML files that represent YAML specs for each Kubernetes API object you are deploying, this approach works well for single environments. The drawbacks to using raw YAML files is that customizing becomes difficult when you begin to incorporate multiple environments as you need to then duplicate YAML files, and there is not a good method of re-use.
-- Helm is a package management tool for Kubernetes objects. It’s a great option for Cluster Operators to install third-party off-the-shelf applications. Be aware of using its templating too heavily as a configuration management tool for internal applications as it can become complex to manage as the templates grow.
+- (Helm)[https://helm.sh/] is a package management tool for Kubernetes objects. It’s a great option for Cluster Operators to install third-party off-the-shelf applications. Be aware of using its templating too heavily as a configuration management tool for internal applications as it can become complex to manage as the templates grow.
   - If using Helm Flux has the Helm Controller, allowing one to declaratively manage Helm Chart releases with Kubernetes manifests. You can create a HelmRelease object to manage that process.
 - Kustomize is a Kubernetes native configuration management tool and introduces a template-free way to customize application configuration.
   - If using Kustomize, flux has a kustomize-controller which specialized in running continuous delivery pipelines for infrastructure and workloads defined with Kubernetes manifests and assembled with Kustomize. You can create a Kustomization object to manage that process.
@@ -159,6 +160,7 @@ The following three Git repositories are included in the design:
   
 ### Security
 
+- Review (recommendations for security and governanvce)[./governance-diciplines.md] of your Azure Arc-enabled Kubernetes clusters.
 - It is recommended to use a private Git repository that has authentication and authorization required for defining any configuration repository, this will ensure unwanted access to any cluster configuration.
 - Access the Git repository through SSH protocol and an SSH key if your Git provider supports it. In scenarios where SSH is unusable due to outbound connectivity restrictions or your Git provider does not support the required SSH libraries, it is recommended to use a dedicated service account and associate an API key with the account for Flux to use.
 - Configure branch policies and permissions that match the responsibilities of the cluster, with a minimum amount of reviewers to approve changes.
