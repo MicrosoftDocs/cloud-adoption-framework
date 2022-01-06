@@ -3,7 +3,7 @@ title: What's new in the Microsoft Cloud Adoption Framework
 description: Learn about recent updates to the Microsoft Cloud Adoption Framework for Azure.
 author: JanetCThomas
 ms.author: janet
-ms.date: 03/01/2020
+ms.date: 01/04/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: general
@@ -12,9 +12,21 @@ ms.custom: internal
 
 # What's new in the Microsoft Cloud Adoption Framework for Azure
 
-Here's a list of recent changes made to the Cloud Adoption Framework.
+Here's a list of recent changes we've made to the Cloud Adoption Framework.
 
-This framework is built collaboratively with customers, partners, and internal Microsoft teams. New and updated content is released when it becomes available. These releases allow you to test, validate, and refine the guidance along with us. We encourage you to partner with us to build the Cloud Adoption Framework.
+This Framework is collaboratively built with customers, partners, and internal Microsoft teams. We release new and updated content as it becomes available. New releases enable you to test, validate, and refine the Framework's guidance along with us.
+
+Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
+
+## December 2021
+
+### Updates to Azure landing zone content in the Ready methodology
+
+We've refined the flow for finding the right landing zone implementation, and have added additional content for all design areas.
+
+We've consolidated guidance into a comprehensive set across environment and compliance design areas —to make the right information easier for you to find. We've created a clearer flow for organizations to work through during the design phase, before deploying a landing zone. Read more about [Azure landing zone design areas](../ready/landing-zone/design-areas.md).
+
+Finally, we've added an example alignment scenario to the Align on-ramp—[Scenario: Transition existing Azure environments to the Azure landing zone conceptual architecture](../ready/landing-zone/align-scenarios.md).
 
 ## October 2021
 
