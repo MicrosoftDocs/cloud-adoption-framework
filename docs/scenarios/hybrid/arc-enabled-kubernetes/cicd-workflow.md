@@ -59,7 +59,7 @@ For your code repositories, you can use whatever branching strategy you like sin
 
 - Single repository (Branch per environment):
   - This allows the most flexibility to control Git policies and permissions for each branch that represents an environment.
-  - The drawback is that there there will be no sharing of the common config among environments since tooling such as [Kustomize](https://kubernetes-sigs.github.io/kustomize/) does not work with Git branches.
+  - The drawback is that there will be no sharing of the common config among environments since tooling such as [Kustomize](https://kubernetes-sigs.github.io/kustomize/) does not work with Git branches.
 - Single repository (Directory per environment):
   - As an example, this approach can be implemented using Kustomize which allows you to define a base configuration for Kubernetes objects and a set of overlays for an environment that override configurations in the base.
   - This can reduce duplicating YAML files for each environment but reduces the configuration separation between environments. Making a single change to the repository has the potential to impact all environments at once, so understanding the impact of changes to base folders must be fully understood and taken with care.
