@@ -53,7 +53,7 @@ Whether you're already operating in the cloud or you're planning for future adop
 
 **Technology:**
 
-6. [Require passwordless or multifactor authentication](../secure/security-top-10.md#6-technology-require-passwordless-or-multifactor-authentication)
+6. [Require passwordless or multifactor authentication](../secure/security-top-10.md#6-technology-require-passwordless-or-multi-factor-authentication)
 7. [Integrate native firewall and network security](../secure/security-top-10.md#7-technology-integrate-native-firewall-and-network-security)
 8. [Integrate native threat detection](../secure/security-top-10.md#8-technology-integrate-native-threat-detection)
 
