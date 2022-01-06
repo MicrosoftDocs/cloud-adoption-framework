@@ -45,7 +45,7 @@ Provide teams with the context required to successfully deploy and operate durin
 Microsoft has published the following lessons that customers and IT organization have learned on their journeys to the cloud:
 
 - How [security roles and responsibilities](../organize/cloud-security.md) are evolving in the security organization
-- [Evolution of threat environment, roles, and digital strategies](https://docs.microsoft.com/security/compass/microsoft-security-compass-introduction#evolution-of-threat-environment-roles--digital-strategies-2004)
+- [Evolution of threat environment, roles, and digital strategies](/security/compass/microsoft-security-compass-introduction)
 - [Transformation of security, strategies, tools, and threats](/security/compass/microsoft-security-compass-introduction#transformation-of-security-strategies-tools--threats-1513)
 - [Learnings from Microsoft experience securing hyperscale cloud environment](/security/compass/microsoft-security-compass-introduction#microsoft-security-practices-1349) that can help you on your journey
 
