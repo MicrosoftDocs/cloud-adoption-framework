@@ -1,15 +1,16 @@
 ---
-title: Enterprise-scale for analytics and AI data products in Azure
-description: Learn about enterprise-scale for analytics and AI data products in Azure.
+title: Data management and analytics scenario data products in Azure
+description: Learn about data management and analytics scenario data products in Azure.
 author: mboswell
 ms.author: mboswell
 ms.date: 09/21/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
+ms.subservice: scenario
 ms.custom: think-tank, e2e-data-management
 ---
 
-# Enterprise-scale for analytics and AI data products in Azure
+# Data management and analytics scenario data products in Azure
 
 At a high level, data products are computed or polyglot persistence services that might be required depending on certain use cases. A data product is anything that drives business value, for example, reports, workbooks, bespoke database, or data API. It can use other services and technologies that aren't part of [data landing zone](./data-landing-zone.md) core services. One example is reporting with niche requirements, such as compliance and tax reporting or specialized capabilities that address gaps in the baseline policies.
 
@@ -29,7 +30,6 @@ At a high level, data products are computed or polyglot persistence services tha
 
   > [!IMPORTANT]
   > In the case of interzone data consumption, since data product B reads from data landing zone 3, this would require approval from the [data landing zone operations](../organize-persona-and-teams.md#data-landing-zone-teams) and [integration operations](../organize-persona-and-teams.md#data-landing-zone-teams) team of data landing zone 3.
-
   > [!IMPORTANT]
   > Data product B consumes from data products A and C. Before this can happen, data product B must register its consumption of a data product via a data sharing agreement. This data sharing agreement should update the lineage from data product A to data product B and from data product C to data product B.
 

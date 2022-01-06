@@ -7,7 +7,6 @@ ms.date: 01/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
-ms.localizationpriority: high
 ms.custom: internal, fasttrack-edit, AQC, seo-caf-innovate
 keywords: Automate business processes, ai innovation, machine learning, knowledge mining
 ---

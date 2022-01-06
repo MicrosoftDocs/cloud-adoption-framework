@@ -7,7 +7,6 @@ ms.date: 02/25/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
-ms.localizationpriority: high
 ms.custom: think-tank, fasttrack-new, AQC
 ---
 
