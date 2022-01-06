@@ -3,7 +3,7 @@ title: What's new in the Microsoft Cloud Adoption Framework
 description: Learn about recent updates to the Microsoft Cloud Adoption Framework for Azure.
 author: JanetCThomas
 ms.author: janet
-ms.date: 01/03/2022
+ms.date: 01/04/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: general
@@ -22,19 +22,11 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
 ### Updates to Azure landing zone content in the Ready methodology
 
-We've refined decisions for each landing zone implementation option, and have added pointed guidance for each design area.
+We've refined the flow for finding the right landing zone implementation, and have added additional content for all design areas.
 
-- We've clarified implementation decisions necessary within design areas—and have added expanded guidance in articles addressing:
-  - Plan for the Cloud Solution Provider service and Define Azure AD tenants (Azure billing and Active Directory tenant),
-  - Identity and access management foundation (Identity and access management),
-  - Plan for IP addressing (Network topology and connectivity),
-  - Management group design considerations and subscription considerations (Resource organization),
-  - Encryption and key management and Service enablement framework (Security),
-  - Inventory and visibility considerations, Business continuity and disaster recovery, Operational compliance considerations, and Workload management and monitoring (Management),
-  - Azure governance considerations (Governance),
-  - Modernizing your environmental deployment with infrastructure as code (Platform automation and DevOps).
+We've consolidated guidance into a comprehensive set across environment and compliance design areas —to make the right information easier for you to find. We've created a clearer flow for organizations to work through during the design phase, before deploying a landing zone. Read more about [Azure landing zone design areas](../ready/landing-zone/design-areas.md).
 
-Finally, we've added an example alignment scenario to the Align on-ramp—Transitioning existing Azure environments to the Azure landing zone conceptual architecture.
+Finally, we've added an example alignment scenario to the Align on-ramp—[Scenario: Transition existing Azure environments to the Azure landing zone conceptual architecture](../ready/landing-zone/align-scenarios.md).
 
 ## October 2021
 
