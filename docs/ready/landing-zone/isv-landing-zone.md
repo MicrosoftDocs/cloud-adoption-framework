@@ -39,7 +39,7 @@ ISV solutions often fit one of three deployment models: pure SaaS, customer-depl
 
 In the pure SaaS model, the ISV's software is deployed fully in the ISV's own Azure subscriptions. End customers consume the software without deploying it in their own Azure subscriptions. In the following diagram, a user is using a pure SaaS application provided by an ISV:
 
-![Diagram that shows a pure SaaS deployment model. A user directly uses the application deployed into the ISV's Azure subscription.](./media/isv-pure-saas-deployment.png)
+![Diagram that shows a pure SaaS deployment model. A user directly uses the application deployed into the ISV's Azure subscription.](./media/isv-landing-zone/isv-pure-saas-deployment.png)
 
 Examples of pure SaaS software inlude SendGrid, Confluent Cloud, Snowflake, and many other [SaaS listings in Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps?filters=saas).
 
@@ -56,7 +56,7 @@ ISVs building pure SaaS solutions should consider the following questions:
 
 In the customer-deployed model, end customers purchase software from the ISV and then deploy it into their own Azure subscriptions. The deployment might be initiated from the Azure Marketplace, or it might be manually deployed by the customer following instructions and using scripts provided by the ISV. In the following diagram, an ISV provides software packages or an Azure Marketplace catalog product, and customers deploy the resources into their own Azure subscriptions alongside their other workloads:
 
-![Diagram that shows a customer-deployed deployment model. A customer deploys resources provided by the ISV into their own Azure subscription, and users use those resources.](./media/isv-customer-deployed-deployment.png)
+![Diagram that shows a customer-deployed deployment model. A customer deploys resources provided by the ISV into their own Azure subscription, and users use those resources.](./media/isv-landing-zone/isv-customer-deployed-deployment.png)
 
 Customers frequently deploy multiple products from different ISVs into their Azure subscriptions. They compose these individual products into a solution. For example, they might deploy a database product from one ISV, a network virtual appliance from another ISV, and a web application from a third ISV. Because of this, the *Customer's other workload* element the diagram above might represent either customer's own workload or another ISV product deployed within the customer's Azure subscription.
 
@@ -79,7 +79,7 @@ ISVs building solutions that customers will deploy into their own subscriptions 
 
 Some SaaS solutions interact with or use resources that are deployed in the customers' Azure subscriptions. This deployment model is sometimes called *Dual deployment SaaS* or *SaaS hybrid*. In the following diagram, an ISV provides a hosted SaaS solution that interacts with resources deployed into an end customer's Azure subscription:
 
-![Diagram that shows a dual deployment SaaS deployment model.](./media/isv-dual-deployment.png)
+![Diagram that shows a dual deployment SaaS deployment model.](./media/isv-landing-zone/isv-dual-deployment.png)
 
 For example, Power BI is a SaaS service that, optionally, uses a Power BI On-Premises Data Gateway deployed on a VM in the customer's Azure subscription. NetApp Virtual Desktop provides a SaaS console interface to control Azure Virtual Desktop resources in the customer's Azure subscriptions. Upsolver provides a SaaS console for data analytics, and dynamically creates and deletes compute node virtual machines in the customer's Azure subscription.
 
@@ -111,7 +111,7 @@ ISVs who use multiple environments for their SaaS solutions can consider using m
 
 In the following diagram, a management group and subscription hierarchy is shown for an ISV that uses three environments (*Development*, *Test*, *Staging*, and *Production*) and with two different service tiers (*Free* and *Isolated*):
 
-![Diagram that shows an example management group and subscription hierarchy for an ISV.](./media/isv-mg-hierarchy.png)
+[ ![Diagram that shows an example management group and subscription hierarchy for an ISV.](./media/isv-landing-zone/isv-mg-hierarchy.png) ](./media/isv-landing-zone/isv-mg-hierarchy.png#lightbox)
 
 The distinction between multitenant and isolated production subscriptions might not apply to all ISVs. Also, different ISVs might use different sets of environments. For example, smaller ISVs can decide to only start with three subscriptions, such as *Platform*, *Development/Test*, and *Production*. They then might need to deploy additional subscriptions as separate deployment stamps as they grow.
 
