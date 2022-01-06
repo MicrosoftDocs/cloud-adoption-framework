@@ -45,7 +45,7 @@ Provide teams with the context required to successfully deploy and operate durin
 Microsoft has published the following lessons that customers and IT organization have learned on their journeys to the cloud:
 
 - How [security roles and responsibilities](../organize/cloud-security.md) are evolving in the security organization
-- [Evolution of threat environment, roles, and digital strategies](/securit/compass/microsoft-security-compass-introduction#evolution-of-threat-environment-roles--digital-strategies-2004)
+- [Evolution of threat environment, roles, and digital strategies](/security/compass/microsoft-security-compass-introduction#evolution-of-threat-environment-roles--digital-strategies-2004)
 - [Transformation of security, strategies, tools, and threats](/security/compass/microsoft-security-compass-introduction#transformation-of-security-strategies-tools--threats-1513)
 - [Learnings from Microsoft experience securing hyperscale cloud environment](/security/compass/microsoft-security-compass-introduction#microsoft-security-practices-1349) that can help you on your journey
 
@@ -231,14 +231,14 @@ This practice is typically divided into two sets of responsibilities:
 - **[Security posture management](../organize/cloud-security-posture-management.md)**: This function is often an evolution of existing vulnerability management or governance functions. The result includes monitoring overall security posture using Microsoft Defender for Cloud secure score and other data sources. It also includes actively working with resource owners to mitigate risks and reporting risk to security leadership.
 - **Security remediation**: Assign accountability for addressing these risks to the teams responsible for managing those resources. This accountability should belong to either the DevOps teams managing their own application resources or the technology-specific teams in **[Central IT Operations](../organize/central-it.md)**:
 
-  - **Compute and application resources:**
+  - **Compute and application resources**
     - **App services:** Application development/security teams
     - **Containers:** Application development or infrastructure/IT operations
     - **VMs/scale sets/compute:** IT/infrastructure operations
-  - **Data and storage resources:**
+  - **Data and storage resources**
     - **SQL/Redis/Data Lake Analytics/data lake store:** Database team
     - **Storage accounts:** Storage/infrastructure team
-  - **Identity and access resources:**
+  - **Identity and access resources**
     - **Subscriptions:** Identity teams
     - **Key Vault:** Identity or information/data security team
   - **Networking resources:** Network security team
@@ -254,9 +254,9 @@ Security is everyone's job. Not everyone, though, currently knows how important 
 > [!IMPORTANT]
 > The explanations for why, what, and how to secure resources are often similar across different resource types and applications, but it's critical to relate these to what each team already knows and cares about. Security teams should engage with their IT and DevOps counterparts as a trusted advisor and partner focused on enabling these teams to be successful.
 
-**Tooling**: [secure score](/azure/security-center/secure-score-security-controls) in Microsoft Defender for Cloud provides an assessment of the most important security information in Azure for a wide variety of assets. This assessment should be your starting point on posture management and can be supplemented with custom Azure policies and other mechanisms as needed.
+**Tooling**: [Secure score](/azure/defender-for-cloud/secure-score-security-controls) in Microsoft Defender for Cloud provides an assessment of the most important security information in Azure for a wide variety of assets. This assessment should be your starting point on posture management and can be supplemented with custom Azure policies and other mechanisms as needed.
 
-**Frequency**: set up a regular cadence (typically monthly) to review Azure secure score and plan initiatives with specific improvement goals. The frequency can be increased as needed.
+**Frequency**: Set up a regular cadence, typically monthly, to review Azure secure score and plan initiatives with specific improvement goals. The frequency can be increased as needed.
 
 > [!TIP]
  > Gamify the activity if possible to increase engagement, such as creating fun competitions and prizes for the DevOps teams that improve their score the most.
