@@ -169,9 +169,9 @@ IR processes modernization is typically led by [security operations](../organize
 - **Sponsorship**: This process modernization is typically sponsored by the security operations director or equivalent.
 - **Execution**: Adapting existing processes (or writing them for the first time) is a collaborative effort involving:
 
-  - [Security operations](../organize/cloud-security-operations-center.md) incident management team or leadership - leads process and integration updates to key external stakeholders. These teams include legal and communications or public relations teams
-  - [Security operations](../organize/cloud-security-operations-center.md) security analysts - provide expertise on technical incident investigation and triage
-  - [Central IT operations](../organize/central-it.md) - provides expertise on cloud platform (directly, via cloud center of excellence, or via external consultants)
+  - **[Security operations](../organize/cloud-security-operations-center.md) incident management team or leadership**: Leads process and integration updates to key external stakeholders. These teams include legal and communications or public relations teams.
+  - **[Security operations](../organize/cloud-security-operations-center.md) security analysts**: Provide expertise on technical incident investigation and triage.
+  - **[Central IT operations](../organize/central-it.md)**: Provides expertise on cloud platform directly, via cloud center of excellence, or via external consultants.
 
 ### How 
 
@@ -208,7 +208,7 @@ Also see the Azure Security Benchmark [IR-1: preparation - update incident respo
 
 Ensure that you're actively managing the security posture of your Azure environment by:
 
-- Assigning clear ownership of responsibilities for
+- Assigning clear ownership of responsibilities for:
   - Monitoring security posture
   - Mitigating risks to assets
 - Automating and simplifying these tasks
@@ -283,9 +283,9 @@ Password and multifactor initiative is typically led by [identity and key manage
 
 - **Sponsorship:** Typically sponsored by CISO, CIO, or director of identity.
 - **Execution:** A collaborative effort involving:
-  - [Policy and standards](../organize/cloud-security-policy-standards.md) team establish clear requirements
-  - [Identity and key management](../organize/cloud-security-identity-keys.md) or [central IT operations](../organize/central-it.md) to implement the policy
-  - [Security compliance management](../organize/cloud-security-compliance-management.md) monitors to ensure compliance
+  - **[Policy and standards](../organize/cloud-security-policy-standards.md)** team: Establish clear requirements.
+  - **[Identity and key management](../organize/cloud-security-identity-keys.md)** or **[central IT operations](../organize/central-it.md)**: Implement the policy,
+  - **[Security compliance management](../organize/cloud-security-compliance-management.md)**: Monitors to ensure compliance.
 
 ### How 
 
@@ -299,7 +299,7 @@ Implement passwordless or multi-factor authentication. Also, train administrator
 > [!NOTE]
 > Text message-based multifactor authentication is now relatively inexpensive for attackers to bypass, so focus on passwordless and stronger multifactor authentication.
 
-Also see the Azure Security Benchmark [ID-4: use strong authentication controls for all Azure Active Directory-based access](/security/benchmark/azure/security-controls-v2-identity-management#id-4-use-strong-authentication-controls-for-all-azure-active-directory-based-access).
+Also, see the Azure Security Benchmark [ID-4: use strong authentication controls for all Azure Active Directory-based access](/security/benchmark/azure/security-controls-v2-identity-management#id-4-use-strong-authentication-controls-for-all-azure-active-directory-based-access).
 
 ## 7. Technology: Integrate native firewall and network security
 
@@ -325,12 +325,11 @@ This practice can free up your team's time and attention for higher value securi
 
 - **Sponsorship**: This update of network security strategy is typically sponsored by security leadership or IT leadership
 - **Execution**: Integrating strategies into your cloud network security strategy is a collaborative effort involving:
-
-  - [Security architecture](../organize/cloud-security-architecture.md) - establish cloud network security architecture with cloud network and cloud network security leads.
+  - **[Security architecture](../organize/cloud-security-architecture.md)**: Establish cloud network security architecture with cloud network and cloud network security leads.
   - **Cloud network leads** ([central IT operations](../organize/central-it.md)) + **Cloud Network security leads** ([infrastructure security team](../organize/cloud-security-infrastructure-endpoint.md))
     - Establish cloud network security architecture with security architects
     - Configure firewall, NSG, and WAF capabilities and work with application architects on WAF rules
-  - **Application architects:** Work with network security to build and refine WAF rule sets and DDoS configurations to protect the application without disrupting availability
+  - **Application architects**: Work with network security to build and refine WAF rule sets and DDoS configurations to protect the application without disrupting availability
 
 ### How 
 
@@ -347,7 +346,7 @@ Documentation on Azure native network security capabilities can be found at:
 
 [Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps?page=1&search=firewall) includes many third-party firewall providers.
 
-Also see the Azure Security Benchmark [ns-4: protect applications and services from external network attacks](/security/benchmark/azure/security-controls-v2-network-security#ns-4-protect-applications-and-services-from-external-network-attacks).
+Also, see the Azure Security Benchmark [ns-4: protect applications and services from external network attacks](/security/benchmark/azure/security-controls-v2-network-security#ns-4-protect-applications-and-services-from-external-network-attacks).
 
 ## 8. Technology: Integrate native threat detection
 
@@ -371,12 +370,12 @@ Typically driven by the [security operations](../organize/cloud-security-operati
 
 - **Sponsorship**: Typically sponsored by the security operations director or equivalent role.
 - **Execution**: Integrating native threat detection is a collaborative effort involving those solutions with:
-  - [Security operations](../organize/cloud-security-operations-center.md): Integrate alerts into SIEM and incident investigation processes. Also, educate analysts on cloud alerts and what they mean, and how to use the native cloud tools.
-  - [Incident preparation](../organize/cloud-security-incident-preparation.md): Integrate cloud incidents into practice exercises and ensure practice exercises are conducted to drive team readiness.
-  - [Threat intelligence](../organize/cloud-security-threat-intelligence.md): Research and integrate information on cloud attacks to inform teams with context and intelligence.
-  - [Security architecture](../organize/cloud-security-architecture.md): Integrate native tooling into security architecture documentation.
-  - [Policy and standards](../organize/cloud-security-policy-standards.md): Set standards and policy for enabling native tooling throughout the organization. Monitor for compliance.
-  - [Infrastructure and endpoint](../organize/cloud-security-infrastructure-endpoint.md) / [Central IT Operations](../organize/central-it.md): Configure and enable detections, integrate into automation and infrastructure as code solutions.
+  - **[Security operations](../organize/cloud-security-operations-center.md)**: Integrate alerts into SIEM and incident investigation processes. Also, educate analysts on cloud alerts and what they mean, and how to use the native cloud tools.
+  - **[Incident preparation](../organize/cloud-security-incident-preparation.md)**: Integrate cloud incidents into practice exercises and ensure practice exercises are conducted to drive team readiness.
+  - **[Threat intelligence](../organize/cloud-security-threat-intelligence.md)**: Research and integrate information on cloud attacks to inform teams with context and intelligence.
+  - **[Security architecture](../organize/cloud-security-architecture.md)**: Integrate native tooling into security architecture documentation.
+  - **[Policy and standards](../organize/cloud-security-policy-standards.md)**: Set standards and policy for enabling native tooling throughout the organization. Monitor for compliance.
+  - **[Infrastructure and endpoint](../organize/cloud-security-infrastructure-endpoint.md)** / **[Central IT Operations](../organize/central-it.md)**: Configure and enable detections, integrate into automation and infrastructure as code solutions.
 
 ### How 
 
