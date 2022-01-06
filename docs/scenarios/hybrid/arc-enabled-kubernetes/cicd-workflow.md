@@ -25,9 +25,19 @@ By implementing GitOps, you can achieve some of the following benefits:
 
 ## Architecture
 
-The following image show a conceptual reference architecture that highlights the Flux cluster extension installation provisioning in your cluster and GitOps configuration process for an Azure Arc-enabled Kubernetes cluster.
+The following images show a conceptual reference architecture that highlights the Flux cluster extension installation provisioning in your cluster, GitOps configuration process for an Azure Arc-enabled Kubernetes cluster and Gitops flow.
 
-![GitOps Flow](../../media/azure-arc-enabled-kubernetes-gitops-flow.png)
+- Cluster Extension
+
+    ![Flux installation](../../_images/eslz-cicd-flux2-extension-install-arc.png)
+
+- Gitops Configuration
+
+    ![GitOps configuration](../../_images/eslz-cicd-flux2-config-install.png)
+
+- Gitops Flow
+
+    ![GitOps Flow](../../_images/eslz-cicd-gitops-flow.png)
 
 ## Design considerations
 
@@ -85,7 +95,7 @@ Platform Operators and Application Operators have several options for managing K
 - For bridging the gap between a built container image in a CI pipeline to being deployed on a cluster, a traditional push deployment method would be done by calling the Kubernetes API directly from the deployment pipeline.
 - With a GitOps process, to avoid manual configuration modifications to your GitOps repository, the CD pipeline can have permission or run as a service account which then has permission to open a Pull Request or commit directly to an configuration repository with the new container image change. These changes from your CD pipeline can also provision all YAML objects required for your application.
 
-![GitOps CI](../../_images/gitops_ci.png)
+![GitOps CI](../../_images/eslz-cicd-gitops_ci.png)
 
 #### Cluster-wide component update process
 
