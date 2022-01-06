@@ -3,7 +3,7 @@ title: Azure workload management and monitoring
 description: Get design area guidance for managing and monitoring workloads in an Azure landing zone.
 author: DominicAllen
 ms.author: doalle
-ms.date: 12/06/2021
+ms.date: 01/04/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
