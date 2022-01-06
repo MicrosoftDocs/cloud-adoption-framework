@@ -25,11 +25,9 @@ By implementing GitOps, you can achieve some of the following benefits:
 
 ## Architecture
 
-The following images show a conceptual reference architecture that highlights the Flux cluster extension installation provisioning in your cluster and GitOps configuration process for an Azure Arc-enabled Kubernetes cluster.
+The following image show a conceptual reference architecture that highlights the Flux cluster extension installation provisioning in your cluster and GitOps configuration process for an Azure Arc-enabled Kubernetes cluster.
 
-![Flux Extension](./azure/azure-arc/kubernetes/media/Gitops/flux2-extension-install-arc.png)
-
-![GitOps Configuration](./azure/azure-arc/kubernetes/media/Gitops/flux2-config-install.png)
+![GitOps Flow](../../media/azure-arc-enabled-kubernetes-gitops-flow.png)
 
 ## Design considerations
 
