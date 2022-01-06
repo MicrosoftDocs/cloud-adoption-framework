@@ -49,7 +49,7 @@ Before you use the Cloud Adoption Framework foundation landing zone, review the 
 
 Review the following assumptions or constraints for this initial landing zone. If these assumptions align with your needs, you can use the blueprint to create a landing zone. Or, you can extend this blueprint to create a landing zone blueprint that meets your needs.
 
-- **Subscription limits:** This adoption effort is unlikely to exceed [subscription limits](/azure/azure-resource-manager/management/azure-subscription-service-limits). Two common indicators are an excess of 25,000 VMs or 10,000 vCPUs.
+- **Subscription limits:** This adoption effort is unlikely to exceed [subscription limits](/azure/azure-resource-manager/management/azure-subscription-service-limits). Two common indicators are an excess of 25,000 virtual machines or 10,000 vCPUs.
 - **Compliance:** No third-party compliance requirements are needed for this landing zone.
 - **Architectural complexity:** Architectural complexity doesn't require more production subscriptions.
 - **Shared services:** No existing shared services in Azure require this subscription to be treated like a spoke in a hub-and-spoke architecture.
@@ -78,8 +78,6 @@ The following decisions are represented in the CAF Terraform modules:
 #### Tagging standards
 
 The minimum set of tags shown below must be present on all resources and resource groups:
-
-<!-- TODO: Review capitalization and hyphenation -->
 
 | Key               | Description                      | Example values |
 |-------------------|----------------------------------|----------------|
@@ -129,7 +127,7 @@ azure_activity_logs_retention = 365
 azure_diagnostics_logs_retention = 60
 ```
 
-Into the tags_hub, we specify the minimum set of tags that are applied to all resources created.
+Into the `tags_hub`, we specify the minimum set of tags that are applied to all resources created.
 
 ```hcl
 tags_hub = {
@@ -196,7 +194,7 @@ After you've reviewed the configuration, you can deploy the configuration as you
 
 The foundation landing zone lays the groundwork for a complex environment in a decomposed manner. This edition provides a set of simple capabilities. You can extend the capabilities by adding other modules or layering other landing zones on top of it.
 
-Layering your landing zones is a good practice for decoupling systems, versioning each component that you're using, and allowing fast innovation and stability for your infrastructure as code deployment.
+It's a good practice to layer your landing zones. That practice helps decouple systems, version each component that you're using, and allows fast innovation and stability for your infrastructure-as-code deployment.
 
 Future reference architectures will demonstrate this concept for a hub and spoke topology.
 
