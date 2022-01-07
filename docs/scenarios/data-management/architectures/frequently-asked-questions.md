@@ -20,6 +20,8 @@ The following are common questions asked about data management and analytics sce
 
 Most data analytics patterns today exist with the three layers of raw, refined, and curated. Although they can be kept in the same storage, when it comes to large-scale implementations it creates issues with exceeding the number of allowed role-based access control (RBAC) and access control list (ACL) permissions that are available within a single storage account. When you use separate storage accounts, most implementations can avoid this issue.
 
+Other reasons are discussed in [Overview of Azure Data Lake Storage for the data management and analytics scenario](../best-practices/data-lake-overview.md).
+
 ## Databricks
 
 ### Should we deploy an Azure Databricks workspace per product?
