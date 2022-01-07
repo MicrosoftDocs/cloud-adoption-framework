@@ -1,6 +1,6 @@
 ---
 title: Identity and access management for data management and analytics
-description: Learn how this enterprise-scale scenario can improve identity and access management for data management and analytics in Azure.
+description: Learn how this scenario can improve identity and access management for data management and analytics in Azure.
 author: mboswell
 ms.author: mboswell
 ms.date: 11/25/2021
@@ -129,9 +129,9 @@ The following role assignments are required for deploying a data integration and
 
 Managing access to data should be done using Azure AD groups. Add user principle names or service principal names to the Azure AD groups. Add the groups to the services and grant permissions to the group. This approach allows for fine-grained access control.
 
-For datasets in Azure data lakes, consider using access control lists (ACLs). For more information, see [Access control model in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-access-control-model). Using Azure AD passthrough with access control lists is supported by most native Azure services, including Azure Machine Learning, Azure Synapse Analytics, and Azure Databricks.
+For datasets in Azure data lakes, consider using access control lists (ACLs). For more information, see [Access control model in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-access-control-model). Using Azure AD passthrough with access control lists is supported by most native Azure services, including Azure Machine Learning, Azure Synapse SQL Serverless, Apache Spark for Azure Synapse and Azure Databricks.
 
-Other polyglot storage is likely to be used in data management and analytics scenario. Examples include Azure Database for PostgreSQL, Azure Database for MySQL, Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics. They could be used by data integrations to store read data stores or by data product teams.
+Other polyglot storage is likely to be used in data management and analytics scenario. Examples include Azure Database for PostgreSQL, Azure Database for MySQL, Azure SQL Database, SQL Managed Instance, and Azure Synapse SQL Dedicated Pools. They could be used by data integrations to store read data stores or by data product teams.
 
 - [Use Azure Active Directory for authentication with Azure Database for PostgreSQL](/azure/postgresql/howto-configure-sign-in-aad-authentication)
 - [Use Azure Active Directory authentication](/azure/azure-sql/database/authentication-aad-overview) with Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics
