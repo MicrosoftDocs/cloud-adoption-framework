@@ -16,9 +16,9 @@ The Cloud Adoption Framework data management and analytics promise the possibili
 
 Based on the current capabilities of Azure networking services, it's recommended to rely on a meshed network architecture. Set up VNet peering between:
 
-1. The connectivity hub and data management zone,
+1. The connectivity hub and data management landing zone,
 2. The connectivity hub and each data landing zone,
-3. The data management zone and each data landing zone
+3. The data management landing zone and each data landing zone
 4. Each data landing zone.
 
 :::image type="content" source="./images/network-options-network-mesh.png" alt-text="Network architecture":::
@@ -144,7 +144,7 @@ There are many benefits that come with this network architecture design. However
 
 ## Meshed network architecture (recommended)
 
-The recommended design proposes the use of a network mesh, which means adding VNet peerings between all data landing zone VNets and between the data management zone and each data landing zone in addition to the existing hub and spoke network design that most organizations have setup inside their tenant. For the scenario mentioned in the introduction, data loaded from storage account A would first transition a VNet peering connection (2) that is set up between the two data landing zone VNets before it would be loaded and processed by virtual machine B ((3) and (4)). Lastly, the data can be stored on storage account B by sending the data through the local private endpoint (5). With this option, the data does not pass the connectivity hub and stays within the data platform consisting of a data management zone and one or multiple data landing zones.
+The recommended design proposes the use of a network mesh, which means adding VNet peerings between all data landing zone VNets and between the data management landing zone and each data landing zone in addition to the existing hub and spoke network design that most organizations have setup inside their tenant. For the scenario mentioned in the introduction, data loaded from storage account A would first transition a VNet peering connection (2) that is set up between the two data landing zone VNets before it would be loaded and processed by virtual machine B ((3) and (4)). Lastly, the data can be stored on storage account B by sending the data through the local private endpoint (5). With this option, the data does not pass the connectivity hub and stays within the data platform consisting of a data management landing zone and one or multiple data landing zones.
 
 :::image type="content" source="./images/network-options-meshed-network-architecture.png" alt-text="Meshed network architecture":::
 

@@ -42,7 +42,7 @@ For automation purposes of deploying data landing zones, you need these roles:
         [Private DNS Zone Contributor](/azure/role-based-access-control/built-in-roles#private-dns-zone-contributor)
     :::column-end:::
     :::column span="3":::
-        Deploy all private DNS zones for all data services into a single subscription and resource group. The service principal needs to be `Private DNS Zone Contributor` on the global DNS resource group that was created during the data management zone deployment. This role is required to deploy A-records for the private endpoints.
+        Deploy all private DNS zones for all data services into a single subscription and resource group. The service principal needs to be `Private DNS Zone Contributor` on the global DNS resource group that was created during the data management landing zone deployment. This role is required to deploy A-records for the private endpoints.
     :::column-end:::
     :::column span="2":::
         (Resource group scope) `/subscriptions/{{dataManagement}subscriptionId}/resourceGroups/{resourceGroupName}`
@@ -96,7 +96,7 @@ The following role assignments are required for deploying a data integration and
         [Private DNS Zone Contributor](/azure/role-based-access-control/built-in-roles#private-dns-zone-contributor)
     :::column-end:::
     :::column span="3":::
-        Deploy all private DNS zones for all data services into a single subscription and resource group. The service principal needs to be `Private DNS Zone Contributor` on the global DNS resource group that was created during the data management zone deployment. This role is required to deploy A-records for the respective private endpoints.
+        Deploy all private DNS zones for all data services into a single subscription and resource group. The service principal needs to be `Private DNS Zone Contributor` on the global DNS resource group that was created during the data management landing zone deployment. This role is required to deploy A-records for the respective private endpoints.
     :::column-end:::
     :::column span="2":::
         (Resource group scope) `/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}`

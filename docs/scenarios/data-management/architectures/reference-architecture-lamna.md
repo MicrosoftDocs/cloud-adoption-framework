@@ -28,9 +28,9 @@ A critical concern for Lamna is the security of the patient data. As a healthcar
 
 Lamna will implement data management and analytics scenario as their solution for a cloud-based analytics platform. They will rely on multiple landing zones both for increased scalability and for clear separation of sensitive datasets.
 
-### Data management zone
+### Data management landing zone
 
-A critical concept for every data management and analytics scenario implementation is having one data management zone. This subscription contains resources that will be shared across all of the landing zones. This includes shared networking components, like a firewall and private DNS zones. It also includes resources for data and cloud governance, such as Azure Policy and Azure Purview.
+A critical concept for every data management and analytics scenario implementation is having one data management landing zone. This subscription contains resources that will be shared across all of the landing zones. This includes shared networking components, like a firewall and private DNS zones. It also includes resources for data and cloud governance, such as Azure Policy and Azure Purview.
 
 ### Patient data landing zone
 
