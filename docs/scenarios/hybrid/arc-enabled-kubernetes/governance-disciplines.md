@@ -18,7 +18,7 @@ This article walks through the key design considerations and best practices for 
 
 [Azure Policy](/azure/governance/policy/overview) and [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) are cloud-native tools that allow the implementation of guardrails, controls, reports, alerts and remediation tasks in an automated fashion. By combining them with Azure Arc-enabled Kubernetes, your governance policies and security checks are extended to any Kubernetes cluster on-premises and/or multi-cloud environments.
 
-Before going through this document it is important to understand governance principles to better align with organization security policies. 
+Before going through this document it is important to understand governance principles to better align with organization security policies.
 
 By the end of this article, you will understand the critical design considerations and recommendations for security, governance, and compliance with clear Microsoft guidance for Azure Arc-enabled Kubernetes.
 
@@ -123,14 +123,13 @@ Review the best practices in [designing your Azure Monitor Logs deployment](/azu
 - Use Azure Arc-enabled Kubernetes extension to onboard Arc-enabled Kubernetes resources in Microsoft Defender for Cloud.
 - Enable Microsoft Defender for Containers plan for all subscriptions. By default, the plan is configured to automatically deploy the Defender extension on any Arc-enabled Kubernetes cluster that is onboarded to this subscription. You can optionally modify this configuration.
 - Verify that the Defender extension is deployed on your clusters.
-- Enable Microsoft Defender for all subscriptions and use Azure Policy to ensure compliance.
 - Use security information and event management (SIEM) integration with Microsoft Defender for Cloud and Azure Sentinel.
 
 The following image shows a conceptual reference architecture for Microsoft Defender for Cloud on an Azure Arc-enabled Kubernetes:
 
 ![A diagram depicting the Microsoft Defender for Azure Arc-enabled Kubernetes](./media/arc-enabled-k8s-defender.png)
 
-If Azure Container Registry is used as the central private Docker registry to store and manage your container images, [use Microsoft Defender for Containers to scan the images for vulnerabilities](/azure/defender-for-cloud/defender-for-container-registries-usage).
+If Azure Container Registry is used as the central private Docker registry to store and manage your container images, [Use Microsoft Defender for Containers to scan the images for vulnerabilities](/azure/defender-for-cloud/defender-for-container-registries-usage).
 
 Make sure to review [the best practices for a secure network connectivity](./network-connectivity.md).
 
