@@ -1,5 +1,5 @@
 ---
-title: Azure Purview deployment best practices for data management and analytics enterprise-scale scenario
+title: Azure Purview deployment best practices for data management and analytics scenario
 description: Azure Purview best practices for account setup, networking, name resolution, authentication of data sources, roles, and access control.
 author: zeinam
 ms.author: zeinam
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Azure Purview deployment best practices for data management and analytics enterprise-scale scenario
+# Azure Purview deployment best practices for data management and analytics scenario
 
 The [data management landing zone](../architectures/data-management-landing-zone.md) is responsible for the governance of the data management and analytics scenario platform. It relies on [Azure Purview](https://azure.microsoft.com/services/purview/) to provide data management capabilities:
 
