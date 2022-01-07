@@ -123,14 +123,13 @@ Review the best practices in [designing your Azure Monitor Logs deployment](/azu
 - Use Azure Arc-enabled Kubernetes extension to onboard Arc-enabled Kubernetes resources in Microsoft Defender for Cloud.
 - Enable Microsoft Defender for Containers plan for all subscriptions. By default, the plan is configured to automatically deploy the Defender extension on any Arc-enabled Kubernetes cluster that is onboarded to this subscription. You can optionally modify this configuration.
 - Verify that the Defender extension is deployed on your clusters.
-- Enable Microsoft Defender for all subscriptions and use Azure Policy to ensure compliance.
 - Use security information and event management (SIEM) integration with Microsoft Defender for Cloud and Azure Sentinel.
 
 The following image shows a conceptual reference architecture for Microsoft Defender for Cloud on an Azure Arc-enabled Kubernetes:
 
 ![A diagram depicting the Microsoft Defender for Azure Arc-enabled Kubernetes](./media/arc-enabled-k8s-defender.png)
 
-If Azure Container Registry is used as the central private Docker registry to store and manage your container images, [enable Microsoft Defender for Container registries](/azure/defender-for-cloud/defender-for-container-registries-introduction) to scan the images for vulnerabilities.
+If Azure Container Registry is used as the central private Docker registry to store and manage your container images, [Use Microsoft Defender for Containers to scan the images for vulnerabilities](/azure/defender-for-cloud/defender-for-container-registries-usage).
 
 Make sure to review [the best practices for a secure network connectivity](./network-connectivity.md).
 
