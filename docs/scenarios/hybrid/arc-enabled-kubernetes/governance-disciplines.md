@@ -130,7 +130,7 @@ The following image shows a conceptual reference architecture for Microsoft Defe
 
 ![A diagram depicting the Microsoft Defender for Azure Arc-enabled Kubernetes](./media/arc-enabled-k8s-defender.png)
 
-If Azure Container Registry is used as the central private Docker registry to store and manage your container images, [enable Microsoft Defender for Container registries](/azure/defender-for-cloud/defender-for-container-registries-introduction) to scan the images for vulnerabilities.
+If Azure Container Registry is used as the central private Docker registry to store and manage your container images, [Use Microsoft Defender for Containers to scan the images for vulnerabilities](/azure/defender-for-cloud/defender-for-container-registries-usage).
 
 Make sure to review [the best practices for a secure network connectivity](./network-connectivity.md).
 
