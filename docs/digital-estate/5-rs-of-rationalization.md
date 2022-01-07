@@ -3,7 +3,7 @@ title: Cloud rationalization
 description: Learn about cloud rationalization, the process of evaluating assets to determine the best way to migrate or modernize each asset in the cloud.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 09/16/2019
+ms.date: 1/07/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
@@ -20,7 +20,7 @@ The *five Rs of rationalization* listed in this article are a great way to label
 
 ### Myth: It's easy to make rationalization decisions early in the process
 
-Accurate rationalization requires a deep knowledge of the workload and associated assets (applications, infrastructure, and data). Most importantly, accurate rationalization decisions take time. We recommend using an [incremental rationalization process](./rationalize.md#incremental-rationalization).
+Good rationalization requires a deep knowledge of the workload and associated assets (applications, infrastructure, and data). Most importantly, good rationalization decisions take time. We recommend using an [incremental rationalization process](./rationalize.md#incremental-rationalization).
 
 ### Myth: Cloud adoption has to wait for all workloads to be rationalized
 
@@ -28,7 +28,7 @@ Rationalizing an entire IT portfolio or even a single datacenter can delay the r
 
 ### Myth: Business justification has to wait for all workloads to be rationalized
 
-To develop a business justification for a cloud adoption effort, make a few basic assumptions at the portfolio level. When motivations are aligned to innovation, assume rearchitecture. When motivations are aligned to migration, assume rehost. These assumptions can accelerate the business justification process. Assumptions are then challenged and budgets refined during the assessment phase of each workload's adoption cycle.
+To develop a business justification for a cloud adoption effort, make a few basic assumptions at the portfolio level. When motivations are aligned to innovation, assume rearchitecture. If they're aligned to migration, assume rehost. These assumptions can accelerate the business justification process. Assumptions are then challenged and budgets refined during the assessment phase of each workload's adoption cycle.
 
 Now review the following five Rs of rationalization to familiarize yourself with the long-term process. While developing your cloud adoption plan, choose the option that best aligns with your motivations, business outcomes, and current state environment. The goal in digital estate rationalization is to set a baseline, not to rationalize every workload.
 
@@ -48,8 +48,8 @@ Common drivers might include:
 
 Quantitative analysis factors:
 
-- VM size (CPU, memory, storage).
-- Dependencies (network traffic).
+- VM size, including CPU, memory, and storage.
+- Dependencies like network traffic.
 - Asset compatibility.
 
 Qualitative analysis factors:
@@ -63,21 +63,21 @@ Qualitative analysis factors:
 
 Platform as a service (PaaS) options can reduce the operational costs that are associated with many applications. It's a good idea to slightly refactor an application to fit a PaaS-based model.
 
-"Refactor" also refers to the application development process of refactoring code to enable an application to deliver on new business opportunities.
+*Refactor* also refers to the application development process of refactoring code to enable an application to deliver on new business opportunities.
 
 Common drivers might include:
 
 - Faster and shorter updates.
 - Code portability.
-- Greater cloud efficiency (resources, speed, cost, managed operations).
+- Greater cloud efficiency to help with resources, speed, cost, and managed operations.
 
 Quantitative analysis factors:
 
-- Application asset size (CPU, memory, storage).
-- Dependencies (network traffic).
-- User traffic (page views, time on page, load time).
-- Development platform (languages, data platform, middle-tier services).
-- Database (CPU, memory, storage, version).
+- Application asset size like CPU, memory, and storage.
+- Dependencies like network traffic.
+- User traffic like page views, time on page, and load times.
+- Development platforms like languages, data platforms, and middle tier services.
+- Database that includes CPU, memory, storage, and version.
 
 Qualitative analysis factors:
 
@@ -87,7 +87,7 @@ Qualitative analysis factors:
 
 ## Rearchitect
 
-Some aging applications aren't compatible with cloud providers because of the architectural decisions that were made when the application was built. In these cases, the application might need to be rearchitected before transformation.
+Some aging applications aren't compatible with cloud providers. This incompatibility is because of the architectural decisions that were made when the application was built. In these cases, the application might need to be rearchitected before transformation.
 
 In other cases, applications that are cloud-compatible, but not cloud-native, might create cost efficiencies and operational efficiencies by rearchitecting the solution into a cloud-native application.
 
@@ -99,11 +99,11 @@ Common drivers might include:
 
 Quantitative analysis factors:
 
-- Application asset size (CPU, memory, storage).
-- Dependencies (network traffic).
-- User traffic (page views, time on page, load time).
-- Development platform (languages, data platform, middle tier services).
-- Database (CPU, memory, storage, version).
+- Application asset size like CPU, memory, and storage.
+- Dependencies like network traffic.
+- User traffic like page views, time on page, and load times.
+- Development platforms like languages, data platforms, and middle tier services.
+- Database that includes CPU, memory, storage, and version.
 
 Qualitative analysis factors:
 
@@ -113,7 +113,7 @@ Qualitative analysis factors:
 
 ## Rebuild
 
-In some scenarios, the delta that must be overcome to carry an application forward can be too large to justify further investment. This is especially true for applications that previously met the needs of a business but are now unsupported or misaligned with the current business processes. In this case, a new code base is created to align with a [cloud-native](https://azure.microsoft.com/overview/cloudnative/) approach.
+In some scenarios, the delta that must be overcome to carry an application forward can be too large to justify further investment. This issue is especially true for applications that previously met the needs of a business but are now unsupported with the current business processes. To resolve the issue a new code base is created to align with a [cloud-native](https://azure.microsoft.com/overview/cloudnative/) approach.
 
 Common drivers might include:
 
@@ -123,11 +123,11 @@ Common drivers might include:
 
 Quantitative analysis factors:
 
-- Application asset size (CPU, memory, storage).
-- Dependencies (network traffic).
-- User traffic (page views, time on page, load time).
-- Development platform (languages, data platform, middle tier services).
-- Database (CPU, memory, storage, version).
+- Application asset size like CPU, memory, and storage.
+- Dependencies like network traffic.
+- User traffic like page views, time on page, and load times.
+- Development platforms like languages, data platforms, and middle tier services.
+- Database that includes CPU, memory, storage, and version.
 
 Qualitative analysis factors:
 
@@ -148,10 +148,10 @@ Common drivers might include:
 Quantitative analysis factors:
 
 - General operating-cost reductions.
-- VM size (CPU, memory, storage).
-- Dependencies (network traffic).
+- VM size, including CPU, memory, and storage.
+- Dependencies like network traffic.
 - Assets to be retired.
-- Database (CPU, memory, storage, version).
+- Database that includes CPU, memory, storage, and version.
 
 Qualitative analysis factors:
 
