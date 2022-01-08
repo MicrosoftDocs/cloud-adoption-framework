@@ -1,6 +1,6 @@
 ---
 title: Azure security best practices
-description: Find out what Microsoft recommends as the top Azure security best practices.
+description: Learn about the top Azure security best practices that we recommend based on lessons learned by customers and in our own environments.
 author: JanetCThomas
 ms.author: brblanch
 ms.date: 01/06/2022
@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Azure security best practices
 
-This list includes the top Azure security best practices that Microsoft recommends based on lessons learned across customers and our own environments.
+This list includes the top Azure security best practices that we recommend based on lessons learned by customers and in our own environments.
 
 For a video presentation of these best practices, see [Top 10 best practices for Azure security](https://techcommunity.microsoft.com/t5/video-hub/top-10-best-practices-for-azure-security/ba-p/1698837).
 
@@ -22,34 +22,34 @@ For a video presentation of these best practices, see [Top 10 best practices for
 
 ### What 
 
-Educate your security and IT teams on the cloud security journey and the changes they'll be navigating including:
+Educate your security and IT teams on the cloud security journey and the changes they'll be navigating, including:
 
-- Changes to threats in the cloud
+- Threats in the cloud
 - Shared responsibility model and how it impacts security
 - Cultural and role/responsibility changes that typically come with cloud adoption
 
 ### Why 
 
-Moving to the cloud is a significant change that requires a shift in mindset and approach for security. While the outcomes security provides to the organization won't change, the best way to accomplish these outcomes in the cloud often changes, sometimes significantly.
+Moving to the cloud is a significant change that requires a shift in mindset and approach for security. While the outcomes that security provides to the organization won't change, the best way to accomplish these outcomes in the cloud often changes, sometimes significantly.
 
-The transition to the cloud is similar to moving from a standalone house into a high-rise apartment building. You still have basic infrastructure (like plumbing and electricity) and do similar activities (such as socializing, cooking, TV and internet, and so on). However, there's often quite a difference in what comes with the building, who provides and maintains them, and your daily routine.
+The transition to the cloud is similar to moving from a standalone house to a high-rise apartment building. You still have basic infrastructure, like plumbing and electricity, and do similar activities, such as socializing, cooking, TV and internet, and so on. However, there's often quite a difference in what comes with the building, who provides and maintains it, and your daily routine.
 
 ### Who 
 
-Everyone in the security and IT organization with any security responsibilities should be familiar with this context and the changes (from CIO/CISO to technical practitioners).
+Everyone in the security and IT organization with any security responsibility should be familiar with this context. They should also be familiar with the changes from the CIO or CISO to technical practitioners.
 
 ### How 
 
 Provide teams with the context required to successfully deploy and operate during the transition to the cloud environment.
 
-Microsoft has published the following lessons that customers and IT organization have learned on their journeys to the cloud:
+Microsoft has published the following lessons that customers and IT organization have learned on their journeys to the cloud.
 
 - How [security roles and responsibilities](../organize/cloud-security.md) are evolving in the security organization
 - [Evolution of threat environment, roles, and digital strategies](/security/compass/microsoft-security-compass-introduction#evolution-of-threat-environment-roles--digital-strategies-2004)
 - [Transformation of security, strategies, tools, and threats](/security/compass/microsoft-security-compass-introduction#transformation-of-security-strategies-tools--threats-1513)
 - [Learnings from Microsoft experience securing hyperscale cloud environment](/security/compass/microsoft-security-compass-introduction#microsoft-security-practices-1349) that can help you on your journey
 
-Also see the Azure Security Benchmark [gs-3: align organization roles, responsibilities, and accountabilities](/security/benchmark/azure/security-controls-v2-governance-strategy#gs-3-align-organization-roles-responsibilities-and-accountabilities).
+Also, see the Azure Security Benchmark [gs-3: align organization roles, responsibilities, and accountabilities](/security/benchmark/azure/security-controls-v2-governance-strategy#gs-3-align-organization-roles-responsibilities-and-accountabilities).
 
 ## 2. People: Educate teams on cloud security technology
 
@@ -57,32 +57,32 @@ Also see the Azure Security Benchmark [gs-3: align organization roles, responsib
 
 ### What
 
-Ensure your teams have time set aside for technical education on securing cloud resources including:
+Ensure your teams have time set aside for technical education on securing cloud resources, including:
 
 - Cloud technology and cloud security technology
 - Recommended configurations and best practices
-- Where to learn more technical details as needed
+- Where to learn more technical details
 
 ### Why 
 
 Technical teams need access to technical information to make sound informed security decisions. Technical teams are good at learning new technologies on the job, but the volume of details in the cloud often overwhelms their ability to fit learning into their daily routine.
 
-Set aside dedicated time for technical learning. This learning helps ensure people have time to build confidence on their ability to assess cloud security and think through how to adapt their existing skills and processes. Even the most talented special operations teams in the military need training and intelligence to work at their best.
+Set aside dedicated time for technical learning. Learning helps ensure that people have time to build confidence on their ability to assess cloud security. It also helps them think through how to adapt their existing skills and processes. Even the most talented special operations teams in the military need training and intelligence to work at their best.
 
 ### Who 
 
 All security and IT roles that directly interact with cloud technology should dedicate time for technical learning on cloud platforms and how to secure them.
 
-Additionally security, IT technical managers, and project managers should develop familiarity with some technical details for securing cloud resources. This familiarity helps them more effectively lead and coordinate cloud initiatives.
+Security, IT technical managers, and project managers should develop familiarity with some technical details for securing cloud resources. This familiarity helps them more effectively lead and coordinate cloud initiatives.
 
 ### How 
 
-Ensure that technical professionals in security have time set aside for self-paced training on how to secure cloud assets. While not always feasible, ideally provide access to formal training with an experienced instructor and hands-on labs.
+Ensure that technical security professionals have time set aside for self-paced training on how to secure cloud assets. While not always feasible, provide access to formal training with an experienced instructor and hands-on labs.
 
 > [!IMPORTANT]
-> Identity protocols are critical to access control in the cloud but often not prioritized in on-premises security, so security teams should ensure to focus on developing familiarity with these protocols and logs.
+> Identity protocols are critical to access control in the cloud but often not prioritized in on-premises security. So, security teams should ensure to focus on developing familiarity with these protocols and logs.
 
-Microsoft provides extensive resources to help technical professionals ramp up on securing Azure resources and report compliance:
+Microsoft provides extensive resources to help technical professionals ramp up on securing Azure resources and report compliance. Those resources include:
 
 - Azure security
   - Az-500 [learning path](/learn/certifications/exams/az-500?tab=tab-learning-paths) (and certification)
@@ -96,7 +96,7 @@ Microsoft provides extensive resources to help technical professionals ramp up o
   - Azure AD authentication [YouTube series](https://www.youtube.com/playlist?list=PLLasX02E8BPD5vC2XHS_oHaMVmaeHHPLy)
   - [Securing Azure environments with Azure Active Directory](https://azure.microsoft.com/resources/securing-azure-environments-with-azure-active-directory/)
 
-Also see the Azure Security Benchmark [gs-3: align organization roles, responsibilities, and accountabilities](/security/benchmark/azure/security-controls-v2-governance-strategy#gs-3-align-organization-roles-responsibilities-and-accountabilities)
+Also, see the Azure Security Benchmark [gs-3: align organization roles, responsibilities, and accountabilities](/security/benchmark/azure/security-controls-v2-governance-strategy#gs-3-align-organization-roles-responsibilities-and-accountabilities)
 
 ## 3. Process: Assign accountability for cloud security decisions
 
@@ -126,18 +126,18 @@ Security leadership chooses which teams or individuals are accountable for makin
 
 ### How
 
-Choose groups (or individuals) that will be responsible for making key security decisions.
+Choose groups or individuals that will be responsible for making key security decisions.
 
-Document these owners, their contact information, and socialize the information widely within the security, IT, and cloud teams to ensure it's easy for all roles to contact them.
+Document these owners, their contact information, and socialize the information widely within the security, IT, and cloud teams. Socialization ensures that it's easy for all roles to contact them.
 
-These areas are typically areas where security decisions are needed. The following table shows the decision category, category description, and which teams typically make the decisions.
+These areas are typically where security decisions are needed. The following table shows the decision category, category description, and which teams typically make the decisions.
 
 | Decision         | Description           | Typical team  |
 | ------------- |-------------| -----|
-| Network security | Configuration and maintenance of Azure Firewall, network virtual appliances (and associated routing), Web Application Firewalls (WAFs), NSGs, ASGs, and so on. | *Typically [Infrastructure and endpoint security](../organize/cloud-security-infrastructure-endpoint.md) team focused on network security*  |
-| Network management | Enterprise-wide virtual network and subnet allocation | *Typically existing network operations team in [Central IT Operations](../organize/central-it.md)* |
-| Server endpoint security | Monitor and remediate server security (patching, configuration, endpoint security, and so on.) | *Typically [Central IT Operations](../organize/central-it.md) and [Infrastructure and endpoint security](../organize/cloud-security-infrastructure-endpoint.md) teams jointly* |
-| Incident monitoring and response | Investigate and remediate security incidents in SIEM or source console (Microsoft Defender for Cloud, Azure AD identity protection, and so on.) | *Typically [security operations](../organize/cloud-security-operations-center.md) team* |
+| Network security | Configuration and maintenance of Azure Firewall, network virtual appliances (and associated routing), Web Application Firewalls (WAFs), NSGs, ASGs, and so on. | *Typically [Infrastructure and endpoint security](../organize/cloud-security-infrastructure-endpoint.md) team focused on network security*.  |
+| Network management | Enterprise-wide virtual network and subnet allocation. | *Typically existing network operations team in [Central IT Operations](../organize/central-it.md)*. |
+| Server endpoint security | Monitor and remediate server security, including patching, configuration, endpoint security, and so on. | *Typically [Central IT Operations](../organize/central-it.md) and [Infrastructure and endpoint security](../organize/cloud-security-infrastructure-endpoint.md) teams jointly*. |
+| Incident monitoring and response | Investigate and remediate security incidents in SIEM or source console, including Microsoft Defender for Cloud, Azure AD identity protection, and so on. | *Typically [security operations](../organize/cloud-security-operations-center.md) team*. |
 | Policy management | Set direction for use of Azure role-based access control (Azure RBAC), Microsoft Defender for Cloud, administrator protection strategy, and Azure Policy to govern Azure resources | *Typically [Policy and Standards](../organize/cloud-security-policy-standards.md) + [Security Architecture](../organize/cloud-security-architecture.md) Teams jointly* |
 | Identity security and standards | Set direction for Azure AD directories, PIM/pam usage, multi-factor authentication, password/synchronization configuration, application identity standards | *Typically [Identity and Key Management](../organize/cloud-security-identity-keys.md) + [Policy and Standards](../organize/cloud-security-policy-standards.md) + [Security Architecture](../organize/cloud-security-architecture.md) Teams jointly*  |
 
