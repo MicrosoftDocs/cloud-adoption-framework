@@ -19,6 +19,8 @@ items:
       href: ready.md
     - name: Design areas
       items:
+      - name: Introduction to Azure Arc-enabled servers landing zone accelerator for hybrid
+        href: enterprise-scale-landing-zone.md      
       - name: Identity and access management
         href: eslz-identity-and-access-management.md
       - name: Network topology and connectivity
@@ -35,12 +37,8 @@ items:
         href: eslz-automation-arc-server.md  
     - name: Implementation options
       items:
-      # - name: Start small with basic VM management
-      #   href: /azure/architecture/hybrid/azure-arc-hybrid-config?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
-      - name: Start with Azure Arc-enabled servers Landing Zone accelerator sandbox
+      - name: Start with Azure Arc-enabled servers landing zone accelerator sandbox
         href: enterprise-scale-landing-zone-sandbox.md
-      - name: Introduction to Azure Arc-enabled servers Landing Zone accelerator for hybrid
-        href: enterprise-scale-landing-zone.md
 
   - name: Migrate to the cloud
     href: migrate.md

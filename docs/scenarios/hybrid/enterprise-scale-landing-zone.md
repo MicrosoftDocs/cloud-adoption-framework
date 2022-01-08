@@ -45,7 +45,7 @@ Azure provides organizations with various management tools that enable infrastru
 
 This provides a single management plane and a single view on the entire hybrid estate, in order to make monitoring and management at scale, as straightforward as possible.
 
-[ ![Azure Arc high level architecture.](./media/single-control-plane.svg)](./media/single-control-plane.svg#lightbox)
+[ ![Azure Arc high level architecture](./media/single-control-plane.png)](./media/single-control-plane.png#lightbox)
 
 [Azure Arc](/azure/azure-arc/) simplifies governance and management by delivering a consistent multicloud and on-premises management platform. Azure Arc enables you to manage your entire environment, with a single pane of glass, by projecting your existing resources into [Azure Resource Manager](/azure/azure-resource-manager/management/overview).
 

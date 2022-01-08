@@ -39,7 +39,7 @@ Also consider the sensitive data that is sent to the Azure Monitor Log Analytics
 
 The following diagram shows a reference architecture that demonstrates the roles, permissions, and flow of actions for Azure Arc-enabled servers:
 
-[ ![The following image shows reference architecture that demonstrates the identities, roles, permissions and flow of actions for Azure Arc-enabled servers.](./media/arc-enabled-servers-iam.svg)](./media/arc-enabled-servers-iam.svg#lightbox)
+[ ![The following image shows reference architecture that demonstrates the identities, roles, permissions and flow of actions for Azure Arc-enabled servers.](./media/arc-enabled-servers-iam.png)](./media/arc-enabled-servers-iam.png#lightbox)
 
 ## Design considerations
 
