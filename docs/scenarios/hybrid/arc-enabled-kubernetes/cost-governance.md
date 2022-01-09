@@ -13,6 +13,8 @@ ms.custom: e2e-hybrid, think-tank, e2e-arc-enabled-kubernetes
 
 # Cost governance with Azure Arc-enabled Kubernetes
 
+## Overview
+
 Cost governance is the continuous process of implementing policies to control costs of services you are using on Azure. This document will walk you through the various cost governance considerations and recommendations when using Azure Arc-enabled Kubernetes.
 
 ## How much does Azure Arc-enabled Kubernetes cost?
@@ -24,7 +26,7 @@ Azure Arc-enabled Kubernetes provides two types of services:
    - Access control through Azure RBAC at subscription or resource group level.
    - Automation through templates and extensions.
 
-2. Azure services used in conjunction to Azure Arc-enabled Kubernetes (but not limited to), which incur costs according to their usage including:
+2. Azure services used in conjunction with Azure Arc-enabled Kubernetes (but not limited to), incur costs according to their usage including:
    - Kubernetes Configuration
    - Azure Policy for Kubernetes
    - Azure Monitor for Containers
