@@ -22,6 +22,10 @@ The following is an Azure Arc-enabled Kubernetes network architecture diagram to
 
 ![Arc-enabled Kubernetes Network Architecture](./media/arc-enabled-kubernetes-network.png)
 
+The following is a network architecture diagram that supports cluster access from any network location using [Azure Arc-enabled Kubernetes Cluster Connect](/azure/azure-arc/kubernetes/conceptual-cluster-connect) feature.
+
+![Arc-enabled Kubernetes Cluster Connect Network Architecture](./media/cluster-connect-network.png)
+
 ## Design considerations
 
 - Review Arc-enabled Kubernetes [network requirements](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#meet-network-requirements) to before making decision to decide between fully connected vs semi-connected mode.
