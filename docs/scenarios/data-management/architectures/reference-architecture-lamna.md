@@ -28,9 +28,9 @@ A critical concern for Lamna is the security of the patient data. As a healthcar
 
 Lamna will implement data management and analytics scenario as their solution for a cloud-based analytics platform. They will rely on multiple landing zones both for increased scalability and for clear separation of sensitive datasets.
 
-### Data management zone
+### Data management landing zone
 
-A critical concept for every data management and analytics scenario implementation is having one data management zone. This subscription contains resources that will be shared across all of the landing zones. This includes shared networking components, like a firewall and private DNS zones. It also includes resources for data and cloud governance, such as Azure Policy and Azure Purview.
+A critical concept for every data management and analytics scenario implementation is having one data management landing zone. This subscription contains resources that will be shared across all of the landing zones. This includes shared networking components, like a firewall and private DNS zones. It also includes resources for data and cloud governance, such as Azure Policy and Azure Purview.
 
 ### Patient data landing zone
 
@@ -50,7 +50,7 @@ The operations landing zone has a data integration that loads the healthcare pro
 
 #### Data products
 
-Analysts throughout Lamna need access to data to build reports for the business. However, much of the data is far too sensitive for a broad audience. To safely provide access to the highly sensitive patient data, the operations team created a **Tokenized patients dataset** product in their landing zone. Using Azure Data Factory, they copy patient data from the patients landing zone. However, the team was careful to remove or tokenize any columns containing personally identifiable information. This allows analysts to use the data for business purposes without exposing any personal details of the patients.
+Analysts throughout Lamna need access to data to build reports for the business. However, much of the data is far too sensitive for a broad audience. To safely provide access to the highly sensitive patient data, the operations team created a **Tokenized patients dataset** product in their landing zone. Using Azure Data Factory, they copy patient data from the patients landing zone. However, the team was careful to remove or tokenize any columns containing personal data. This allows analysts to use the data for business purposes without exposing any personal details of the patients.
 
 ### Marketing data landing zone
 

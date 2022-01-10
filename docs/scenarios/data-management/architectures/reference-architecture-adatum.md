@@ -32,11 +32,11 @@ The Adatum corporate sales group uses traditional ERP and CRM systems to process
 
 ## Architectural solution
 
-In this reference architecture, we will deploy a data management zone, which is needed for all ESA implementations, and a single data landing zone, which can be used by the corporate sales department.
+In this reference architecture, we will deploy a data management landing zone, which is needed for all ESA implementations, and a single data landing zone, which can be used by the corporate sales department.
 
-### Data management zone
+### Data management landing zone
 
-A critical concept for every data management and analytics scenario is having one data management zone. This subscription contains resources that will be shared across all of the landing zones. This includes shared networking components like a firewall and private DNS zones. It also includes resources for data and cloud governance, such as Azure Policy and Azure Purview.
+A critical concept for every data management and analytics scenario is having one data management landing zone. This subscription contains resources that will be shared across all of the landing zones. This includes shared networking components like a firewall and private DNS zones. It also includes resources for data and cloud governance, such as Azure Policy and Azure Purview.
 
 ### Data integrations
 
@@ -74,7 +74,7 @@ In this example, the corporate sales team is the first to move to the new data m
 
 ## How to evolve in the future
 
-Scaling is accomplished by adding more landing zones to the architecture. These landing zones will use VNet peering to connect to the data management zone and all of the other landing zones. This mesh pattern allows datasets and resources to be shared across zones. By splitting into different zones, the workloads are spread across Azure subscriptions and resources. This allows enterprises to avoid reaching the limits of the Azure services and continue to grow their data estates.
+Scaling is accomplished by adding more landing zones to the architecture. These landing zones will use VNet peering to connect to the data management landing zone and all of the other landing zones. This mesh pattern allows datasets and resources to be shared across zones. By splitting into different zones, the workloads are spread across Azure subscriptions and resources. This allows enterprises to avoid reaching the limits of the Azure services and continue to grow their data estates.
 
 ## Deployment guidelines
 

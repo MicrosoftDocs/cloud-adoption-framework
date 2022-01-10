@@ -1,6 +1,6 @@
 ---
 title: Business continuity and disaster recovery for data management and analytics
-description: Learn how this enterprise-scale scenario can improve business continuity and disaster recovery for data management and analytics in Azure.
+description: Learn how this scenario can improve business continuity and disaster recovery for data management and analytics in Azure.
 author: christophermschmidt
 ms.author: chrschm
 ms.date: 11/25/2021
