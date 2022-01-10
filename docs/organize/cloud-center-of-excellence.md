@@ -50,7 +50,8 @@ The objective of the CCoE is to:
 
 ## Meeting cadence
 
-The CCoE is staffed by four high demand teams. It's important to allow for organic collaboration and to track growth through a common repository/solution catalog. Maximize natural interactions, but minimize meetings. Recurring meetings such as release meetings hosted by the cloud adoption team can provide data inputs, but when this function matures, try to limit dedicated meetings. A meeting after each release plan is shared can provide a minimum touch point for this team.
+The CCoE is a function staffed by multiple high demand teams. It is important to allow for organic collaboration and track growth through a common repository/solution catalog. Maximize natural interactions, but minimize meetings. Recurring meetings such as release meetings hosted by the cloud adoption team can provide data inputs, but when this function matures, try to limit dedicated meetings. A meeting after each release plan is shared can provide a minimum touch point for this team.
+
 
 ## Solutions and controls
 
