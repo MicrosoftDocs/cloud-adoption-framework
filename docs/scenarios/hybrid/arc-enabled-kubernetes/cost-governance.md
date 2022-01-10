@@ -63,13 +63,13 @@ Azure Arc-enabled Kubernetes provides two types of services:
 Here are some general design recommendations for Azure Arc-enabled Kubernetes cost governance:
 ### Governance
 
-- Review recommendations for [resource organization](./resource-organization.md) and [governance](./governance-diciplines.md).
+- Review the [resource organization critical design area](./resource-organization.md) and [governance](./governance-diciplines.md).
 - Ensure that all Azure Arc-enabled Kubernetes clusters follow proper [naming and tagging conventions](/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging).
 - Use least privilege RBAC by assigning **[Kubernetes Cluster - Azure Arc Onboarding](/azure/role-based-access-control/built-in-roles#kubernetes-cluster---azure-arc-onboarding)** to only administrators who will on-board Azure Arc-enabled Kubernetes clusters to avoid unnecessary costs.
 - Use least privilege RBAC by assigning builtin roles to administrators managing the Azure Arc-enabled Kubernetes clusters to avoid unnecessary costs. Review recommendations for [Identity and access management](./identity-access-management.md).
 ### Azure Monitor for Containers
 
-- Review [recommendations for monitoring](./management-disciplines.md) to decide on your monitoring requirements and review [Azure Monitor for Kubernetes pricing](https://azure.microsoft.com/pricing/details/monitor/).
+- Review the [Management and monitoring critical design area](./management-disciplines.md) to decide on your monitoring requirements and review [Azure Monitor for Kubernetes pricing](https://azure.microsoft.com/pricing/details/monitor/).
 
 -  Decide on the [required logs and events](/azure/azure-monitor/containers/container-insights-agent-config) for the Azure Arc-enabled Kubernetes clusters to be collected in the Log Analytics workspace.
 -  Use the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) to calculate an estimate of the Azure Arc-enabled Kubernetes monitoring costs for Azure Log Analytics ingestion, alerts and notifications.
@@ -97,12 +97,12 @@ Here are some general design recommendations for Azure Arc-enabled Kubernetes co
 
 ### Microsoft Defender for Cloud (formerly known as Azure Security Center):
 
-- Review the [recommendations for security and governance](./management-disciplines.md)
+- Review the [Security, governance, and compliance critical design area](./management-disciplines.md)
 - Review [Microsoft Defender for Containers pricing information](https://azure.microsoft.com/pricing/details/azure-defender/).
 ### Kubernetes configuration
 
 - Review [Kubernetes configuration pricing](https://azure.microsoft.com/pricing/details/azure-arc/).
-- Review recommendations for [Kubernetes configuration](./cicd-workflow.md).
+- Review the [CI/CD workflow critical design area](./cicd-workflow.md).
 - Use [Azure Policy for Kubernetes](/azure/azure-arc/kubernetes/policy-reference) to enforce and enure consistent configuration across all your Azure Arc-enabled Kubernetes clusters.
 - Use [Azure Resource Graph](/azure/governance/resource-graph/overview) queries to review the number of cores you have for the Azure Arc-enabled Kubernetes clusters.
 
@@ -120,7 +120,7 @@ Resources
 ### Azure Policy for Kubernetes
 
 - Review [Azure Policy for Kubernetes pricing](https://azure.microsoft.com/pricing/details/azure-arc/).
-- Review recommendations for [Azure Policy for Kubernetes](./governance-diciplines.md).
+- Review the [Security, governance, and compliance critical design area](./management-disciplines.md)
 
 ### Microsoft Sentinel
 
