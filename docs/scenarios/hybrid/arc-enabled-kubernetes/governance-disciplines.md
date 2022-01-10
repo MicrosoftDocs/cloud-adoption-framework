@@ -139,7 +139,7 @@ Make sure to review [the best practices for a secure network connectivity](./net
 
 ### Secure cluster access
 
-The Kubernetes API receives requests to perform actions in the cluster, so it is the central way to interact with and manage a cluster, therefore it is a key piece to protect. With [Azure Arc-enabled Kubernetes cluster connect](/azure/azure-arc/kubernetes/conceptual-cluster-connect), you can securely connect to Azure Arc-enabled Kubernetes clusters anywhere without requiring any inbound port to be enabled on the firewall. Access to the apiserver of the Azure Arc-enabled Kubernetes cluster enables the following scenarios:
+The Kubernetes API receives requests to perform actions in the cluster, so it is the central way to interact with and manage a cluster, therefore it is a key piece to protect. With [Azure Arc-enabled Kubernetes cluster connect](/azure/azure-arc/kubernetes/conceptual-cluster-connect), you can securely connect to Azure Arc-enabled Kubernetes clusters anywhere without requiring any inbound port to be enabled on the firewall. Access to the _apiserver_ of the Azure Arc-enabled Kubernetes cluster enables the following scenarios:
 
 - Enable interactive debugging and troubleshooting.
 - Enable the use of hosted agents/runners of Azure Pipelines, GitHub Actions, or any other hosted CI/CD service without requiring self-hosted agents.
