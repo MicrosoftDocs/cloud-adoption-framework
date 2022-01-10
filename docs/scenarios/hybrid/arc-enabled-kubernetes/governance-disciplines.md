@@ -152,10 +152,6 @@ A Service Mesh implementation can protect against:
 - Data exfiltration
 - Impersonations
 
-With Azure Arc-enabled Kubernetes extension management capabilities you can deploy Open Service Mesh anywhere as shown in the diagram below.
-
-![A diagram depicting Open Service Mesh extension for Azure Arc-enabled Kubernetes](./media/arc-enabled-k8s-osm.png)
-
 Make sure to review the [Open Service Mesh implementation critical design area.](PLACEHOLDERopen_service_meshCDA)
 
 ## Next steps
