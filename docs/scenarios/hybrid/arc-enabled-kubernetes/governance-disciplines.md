@@ -1,6 +1,6 @@
 ---
 title: Security, governance and compliance baseline for hybrid, multicloud, and edge Kubernetes deployments
-description: Expand Azure governance, security and compliance capabilities to hybrid, multicloud, and edge deployments.
+description: Expand Azure governance, security, and compliance baseline for deployment on Azure Arc-enabled Kubernetes.
 author: lanicolas
 ms.author: matgri
 ms.date: 06/10/2021
