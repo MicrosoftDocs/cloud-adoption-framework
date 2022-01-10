@@ -24,7 +24,7 @@ After you have created a taxonomy structure and agreed on naming standards, it i
 
 Review [Cloud Adoption Framework tagging strategy](/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging) for detailed guidance on tagging. You can apply a tag either during the time of cluster onboarding or once a cluster is registered in Azure (it has a resource ID and becomes part of the resource group within a subscription).
 
-After clusters are onboarded to resource groups and tags have been added, you can use [Resource Graph](https://docs.microsoft.com/azure/governance/resource-graph/overview#:~:text=Azure%20Resource%20Graph%20is%20a,can%20effectively%20govern%20your%20environment.) queries, view grouping based on resource groups, or organize and inventory resources based on tags. Specifically for Arc-enabled Kubernetes, it is a good practice to include a tag that reflects the "hosting platform", or "infrastructure type" for Azure Arc-enabled resources as well as the physical location.
+After clusters are onboarded to resource groups and tags have been added, you can use [Resource Graph](/azure/governance/resource-graph/overview#:~:text=Azure%20Resource%20Graph%20is%20a,can%20effectively%20govern%20your%20environment.) queries, view grouping based on resource groups, or organize and inventory resources based on tags. Specifically for Arc-enabled Kubernetes, it is a good practice to include a tag that reflects the "hosting platform", or "infrastructure type" for Azure Arc-enabled resources as well as the physical location.
 
 The following image shows a conceptual reference for resource tagging for Azure Arc-enabled Kubernetes:
 
