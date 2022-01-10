@@ -147,7 +147,7 @@ The Kubernetes API receives requests to perform actions in the cluster, so it is
 
 ### Microservices observability and security
 
-The implementation of a service mesh provides the ability to introduce authentication and authorization on your services connections, this creates a more secure environment by enforcing the least privilege principle. By default, pods sit on a flat trusted network, whereas on a service mesh implementation a set of sidecars that act as network proxies are deployed, these sidecars manage east-west communication, encrypt traffic and improve traffic observability overall.
+The implementation of a service mesh provides the ability to introduce authentication and authorization on your services connections, which creates a more secured environment by enforcing the least privilege principle. By default, pods sit on a flat trusted network, whereas on a service mesh implementation, a set of sidecars that act as network proxies are deployed. These sidecars manage east-west communication, encrypt traffic, and improve traffic observability overall.
 
 A Service Mesh implementation can protect against:
 
