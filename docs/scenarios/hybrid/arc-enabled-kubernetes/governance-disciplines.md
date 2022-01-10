@@ -34,7 +34,7 @@ As your hybrid and multicloud resources become part of Azure Resource Manager, t
 
 - **Agent Provisioning:** Define a strategy for provisioning the [Azure Arc-enabled Kubernetes agent](/azure/azure-arc/kubernetes/conceptual-agent-overview) and use the least privilege principle when creating the onboarding service principal. Consider a method of automation for bulk enrollment.
 - **Agent Management:** The Arc-enabled Kubernetes agent plays a critical role in the hybrid operations of your Azure Arc-enabled Kubernetes clusters as it enables you to manage them from Azure. It is important to implement solutions that keep track of the [agent's connectivity status](/azure/azure-arc/kubernetes/conceptual-agent-architecture#connectivity-status). Also it is critical to define a process for upgrading the Azure Arc-enabled Kubernetes agents.
-- **Role-based access controls (RBAC):** Define administrative, operations, and developer roles within the organization that will take care of day-to-day operations in the hybrid clusters. Mapping each team to actions and responsibilities will determine Azure role-based access control (RBAC) roles and Kubernetes ClusterRoleBinding and RoleBinding. Consider using a [RACI](/azure/cloud-adoption-framework/organize/raci-alignment) matrix to support this effort and build controls into the management scope hierarchy that you define following the resource consistency and inventory management guidance. For more information, review the [Identity and access management for Azure Arc-enabled Kubernetes section of this guide](PLACEHOLDER IDENTITY CDA).
+- **Role-based access controls (RBAC):** Define administrative, operations, and developer roles within the organization that will take care of day-to-day operations in the hybrid clusters. Mapping each team to actions and responsibilities will determine Azure role-based access control (RBAC) roles and Kubernetes ClusterRoleBinding and RoleBinding. Consider using a [RACI](/azure/cloud-adoption-framework/organize/raci-alignment) matrix to support this effort and build controls into the management scope hierarchy that you define following the resource consistency and inventory management guidance. For more information, review the [Identity and access management for Azure Arc-enabled Kubernetes section of this guide](./identity-access-management.md).
 - **Secret and certificate management:** Secure secrets and certificates using [Azure Key Vault and deploying its extension](/azure/azure-arc/kubernetes/tutorial-akv-secrets-provider) on your Azure Arc-enabled kubernetes clusters via Container Storage Interface (CSI).
 - **Data Residency:** Consider which Azure region you wish your Azure Arc-enabled Kubernetes clusters to be provisioned into, and understand [the data that is collected from these resources.](/azure/azure-arc/kubernetes/faq#does-azure-arc-enabled-kubernetes-store-any-customer-data-outside-of-the-clusters-region)
 - **Enable and secure GitOps configurations:** GitOps configurations enforce the desired state of the system and are an important tool for compliance tracking of Arc-enabled Kubernetes clusters. When working with [GitOps configurations](./cicd-workflow.md) consider securing access to your source control system with appropriate network and access controls.
@@ -93,7 +93,7 @@ GitOps is an essential component of any IT strategy that follows a fully automat
 
 This GitOps approach simplifies the deployment of multiple applications, across clusters and environments while tracking and enforcing the desired state of the system declaratively with Git. By using Git as your single source of truth and as the central tool for all deployments it becomes the best way to track cluster state, account for changes and approvals over time, facilitate fault investigation while enabling automation across distributed environments.
 
-When adding GitOps configurations it is important to secure access to the repository, its keys and set branch permissions, make sure to review [the critical design area for GitOps](PLACEHOLDER_CDA).
+When adding GitOps configurations it is important to secure access to the repository, its keys and set branch permissions, make sure to review [the critical design area for GitOps](./cicd-workflow.md).
 
 ### Policy management and reporting
 
@@ -154,7 +154,7 @@ A Service Mesh implementation can protect against:
 - Data exfiltration
 - Impersonations
 
-Make sure to review the [Open Service Mesh implementation critical design area.](PLACEHOLDERopen_service_meshCDA)
+Make sure to review the [Open Service Mesh implementation critical design area.](./services-observability.md)
 
 ## Next steps
 
