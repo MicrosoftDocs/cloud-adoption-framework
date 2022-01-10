@@ -83,7 +83,9 @@ Make sure to review [more specific identity recommendations for Azure Arc-enable
 
 Do not store secrets or certificates in application code or file systems. Secrets should be stored in key stores and provided to containers at runtime as they are needed.
 
-Consider using the [Azure Key Vault extension](/azure/azure-arc/kubernetes/tutorial-akv-secrets-provider) to manage secrets and certificates on your Azure Arc-enabled Kubernetes clusters. The Key Vault extension allows you to manage the certificate lifecycle on your Kubernetes deployments.
+Consider using the [Azure Key Vault extension](/azure/azure-arc/kubernetes/tutorial-akv-secrets-provider) to manage secrets and certificates on your Azure Arc-enabled Kubernetes clusters. The Key Vault extension allows you to manage the certificate lifecycle on your Kubernetes deployments as shown in the diagram below.
+
+![Azure Arc-enabled Kubernetes and Key Vault integration](./media/arc-enabled-k8s-keyvault.png)
 
 ### Enable and secure GitOps configurations
 
