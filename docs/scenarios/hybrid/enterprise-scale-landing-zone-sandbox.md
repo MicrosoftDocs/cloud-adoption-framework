@@ -37,7 +37,7 @@ The ArcBox solution can be deployed using one of the four methods:
 - Azure Resource Manager (ARM) template using the Azure CLI
 - Azure Resource Manager (ARM) template using the Azure portal
 
-Based on the desired deployment method, you are required to install either [Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli) or [Terraform CLI](https://learn.hashicorp.com/tutorials/terraform/install-cli).
+Based on the desired deployment method, you are required to install either [Azure CLI](/cli/azure/install-azure-cli) or [Terraform CLI](https://learn.hashicorp.com/tutorials/terraform/install-cli).
 
 ## Next steps
 
