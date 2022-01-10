@@ -28,7 +28,7 @@ After clusters are onboarded to resource groups and tags have been added, you ca
 
 The following image shows a conceptual reference for resource tagging for Azure Arc-enabled Kubernetes:
 
-![A diagram depicting resource tagging for Azure Arc-enabled kubernetes](./media/arc-enabled-kubernetes-resource-tagging.svg)
+![A diagram depicting resource tagging for Azure Arc-enabled kubernetes](./media/arc-enabled-kubernetes-resource-tagging.png)
 
 ## Next steps
 
