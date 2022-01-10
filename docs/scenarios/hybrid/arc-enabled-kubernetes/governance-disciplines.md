@@ -18,7 +18,7 @@ This article walks through the key design considerations and best practices for 
 
 [Azure Policy](/azure/governance/policy/overview) and [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) are cloud-native tools that allow the implementation of guardrails, controls, reports, alerts and remediation tasks in an automated fashion. By combining them with Azure Arc-enabled Kubernetes, your governance policies and security checks are extended to any Kubernetes cluster on-premises and/or multi-cloud environments.
 
-Before going through this document it is important to understand governance principles to better align with organization security policies.
+Before going through this document, it is important to understand governance principles to better align with your organization's security policies.
 
 By the end of this article, you will understand the critical design considerations and recommendations for security, governance, and compliance with clear Microsoft guidance for Azure Arc-enabled Kubernetes.
 
