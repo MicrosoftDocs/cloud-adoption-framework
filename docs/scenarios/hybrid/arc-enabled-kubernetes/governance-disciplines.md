@@ -20,7 +20,7 @@ This article walks through the key design considerations and best practices for 
 
 Before going through this document, it is important to understand governance principles to better align with your organization's security policies.
 
-By the end of this article, you will understand the critical design considerations and recommendations for security, governance, and compliance with clear Microsoft guidance for Azure Arc-enabled Kubernetes.
+By the end of this article, you will understand the critical design considerations and recommendations for governance, security, and compliance with clear Microsoft guidance for Azure Arc-enabled Kubernetes.
 
 ## Architecture
 
