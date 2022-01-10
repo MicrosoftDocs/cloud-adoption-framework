@@ -54,7 +54,7 @@ It is possible to integrate the agent provisioning as part of your continuous in
 
 ### Agent Management
 
-The Azure Arc agent is the key component for Azure Arc-enabled Kubernetes, it contains several logical components that plays a role in security, governance, and management operations. If the agent stops sending heartbeats to Azure, goes offline or loses connectivity to Azure, you will not be able to perform operational tasks on it. Hence, it is necessary to develop a plan to get notified and how you will respond.
+The Azure Arc agent is the key component for Azure Arc-enabled Kubernetes, it contains several logical components that play a role in security, governance, and management operations. If the agent stops sending heartbeats to Azure, goes offline or loses connectivity to Azure, you will not be able to perform operational tasks on it. Hence, it is necessary to develop a plan to get notified and how you will respond.
 
 Azure Activity Log can be used to set up [resource health alerts](/azure/service-health/resource-health-alert-monitor-guide) and remain informed on current and historical health status of the [agent's pods](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#6-view-azure-arc-agents-for-kubernetes), review [management best practices](management-disciplines.md). An [Azure Arc-enabled Kubernetes cluster will be shown offline](/azure/azure-arc/kubernetes/conceptual-agent-architecture) if the service has not received an agent heartbeat for 15 minutes, review the [Azure Arc-enabled Kubernetes connectivity best practices](./network-connectivity.md) to make sure the agent can connect to Azure's endpoints securely.
 
