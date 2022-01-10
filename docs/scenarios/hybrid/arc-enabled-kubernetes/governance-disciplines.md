@@ -89,7 +89,7 @@ Consider using the [Azure Key Vault extension](/azure/azure-arc/kubernetes/tutor
 
 GitOps is an essential component of any IT strategy that follows a fully automated approach to operations, it provides scale, consistency, tracking, and auditing capabilities to any deployment.
 
-This GitOps approach simplifies the deployment of multiple applications, across clusters and environments while tracking and enforcing the desired state of the system declaratively with Git. By using Git as your single source of truth and as the central tool for all deployments it becomes the best way to track cluster state, account for changes and approvals overtime, facilitate fault investigation while enabling automation across distributed environments.
+This GitOps approach simplifies the deployment of multiple applications, across clusters and environments while tracking and enforcing the desired state of the system declaratively with Git. By using Git as your single source of truth and as the central tool for all deployments it becomes the best way to track cluster state, account for changes and approvals over time, facilitate fault investigation while enabling automation across distributed environments.
 
 The following image shows how the GitOps flow looks like in the context of Arc-enabled Kubernetes:
 
