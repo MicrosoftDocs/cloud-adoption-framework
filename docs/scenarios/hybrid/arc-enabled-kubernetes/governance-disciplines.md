@@ -109,7 +109,7 @@ Understand the [scope of Azure policy](/azure/governance/policy/concepts/scope) 
 
 - Determine what Azure policies are required to meet your organization business, regulatory, and security requirements for Azure Arc-enabled Kubernetes.
 - Enforce tagging and implement [remediation tasks](/azure/governance/policy/how-to/remediate-resources).
-- Use an Azure Policy to [enforce GitOps](/azure/azure-arc/kubernetes/use-azure-policy) and apply configurations at scale.
+- Use Azure Policy to [enforce GitOps](/azure/azure-arc/kubernetes/use-azure-policy) and apply configurations at scale.
 - Understand and evaluate the [Azure Policy built-in definitions for Azure Arc-enabled Kubernetes](/azure/azure-arc/kubernetes/policy-reference).
 - Use an Azure Policy and Remediation tasks to onboard management services agents via the extension management feature, including Microsoft Defender for Cloud.
 - Enable [Azure Monitor Container Insights](/azure/azure-monitor/containers/container-insights-enable-arc-enabled-clusters?toc=/azure/azure-arc/kubernetes/toc.json) for compliance and operational monitoring of Azure Arc-enabled Kubernetes clusters.
