@@ -1,5 +1,5 @@
 ---
-title: Security, governance and compliance baseline for hybrid, multicloud, and edge Kubernetes deployments
+title: Governance, security, and compliance baseline for Azure Arc-enabled Kubernetes
 description: Expand Azure governance, security, and compliance baseline for deployment on Azure Arc-enabled Kubernetes.
 author: lanicolas
 ms.author: matgri
@@ -10,11 +10,11 @@ ms.subservice: scenario
 ms.custom: e2e-hybrid
 ---
 
-# Security, governance and compliance baseline for hybrid, multicloud, and edge Kubernetes deployments
+# Governance, security, and compliance baseline for Azure Arc-enabled Kubernetes
 
 ## Overview
 
-This article walks through the key design considerations and best practices for the topics of security, governance, and compliance of Azure Arc-enabled Kubernetes deployments that should be in place as part of a CAF enterprise-scale landing zone implementation.
+This article walks through the key design considerations and best practices for the topics of security, governance, and compliance of Azure Arc-enabled Kubernetes deployments that should be in place as part of a CAF enterprise-scale landing zone implementation. While the enterprise-scale landing zone documentation covers "[Governance](/azure/cloud-adoption-framework/ready/landing-zone/design-area/governance)" and "[Security](/azure/cloud-adoption-framework/ready/landing-zone/design-area/security)" as separate topics, for Azure Arc-enabled Kubernetes, these critical design areas are consolidated as a single topic.
 
 [Azure Policy](/azure/governance/policy/overview) and [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) are cloud-native tools that allow the implementation of guardrails, controls, reports, alerts and remediation tasks in an automated fashion. By combining them with Azure Arc-enabled Kubernetes, your governance policies and security checks are extended to any Kubernetes cluster on-premises and/or multi-cloud environments.
 
@@ -30,16 +30,16 @@ The following image shows a conceptual reference architecture that demonstrates 
 
 ## Design considerations
 
-As your hybrid and multicloud resources become part of Azure Resource Manager, they can be managed and governed from Azure, this article provides guidance for creating your landing zone when working with Azure Arc-enabled Kubernetes:
+As your hybrid and multicloud resources become part of Azure Resource Manager, they can be managed and governed from Azure. This article provides guidance on which design elements should be considered while working on securing and governing Azure Arc-enabled Kubernetes cluster resources.
 
 - **Agent Provisioning:** Define a strategy for provisioning the [Azure Arc-enabled Kubernetes agent](/azure/azure-arc/kubernetes/conceptual-agent-overview) and use the least privilege principle when creating the onboarding service principal. Consider a method of automation for bulk enrollment.
 - **Agent Management:** The Arc-enabled Kubernetes agent plays a critical role in the hybrid operations of your Azure Arc-enabled Kubernetes clusters as it enables you to manage them from Azure. It is important to implement solutions that keep track of the [agent's connectivity status](/azure/azure-arc/kubernetes/conceptual-agent-architecture#connectivity-status). Also it is critical to define a process for upgrading the Azure Arc-enabled Kubernetes agents.
-- **Role based access controls:** Define administrative, operations, and developer roles within the organization that will take care of day-to-day operations in the hybrid clusters. Mapping each team to actions and responsibilities will determine Azure role based access control (RBAC) roles and Kubernetes ClusterRoleBinding and RoleBinding. Consider using a [RACI](/azure/cloud-adoption-framework/organize/raci-alignment) matrix to support this effort and build controls into the management scope hierarchy that you define following the resource consistency and inventory management guidance. For more information, review the [Identity and access management for Azure Arc-enabled Kubernetes section of this guide](PLACEHOLDER IDENTITY CDA).
+- **Role-based access controls (RBAC):** Define administrative, operations, and developer roles within the organization that will take care of day-to-day operations in the hybrid clusters. Mapping each team to actions and responsibilities will determine Azure role-based access control (RBAC) roles and Kubernetes ClusterRoleBinding and RoleBinding. Consider using a [RACI](/azure/cloud-adoption-framework/organize/raci-alignment) matrix to support this effort and build controls into the management scope hierarchy that you define following the resource consistency and inventory management guidance. For more information, review the [Identity and access management for Azure Arc-enabled Kubernetes section of this guide](PLACEHOLDER IDENTITY CDA).
 - **Secret and certificate management:** Secure secrets and certificates using [Azure Key Vault and deploying its extension](/azure/azure-arc/kubernetes/tutorial-akv-secrets-provider) on your Azure Arc-enabled kubernetes clusters via Container Storage Interface (CSI).
 - **Data Residency:** Consider which Azure region you wish your Azure Arc-enabled Kubernetes clusters to be provisioned into, and understand [the data that is collected from these resources.](/azure/azure-arc/kubernetes/faq#does-azure-arc-enabled-kubernetes-store-any-customer-data-outside-of-the-clusters-region)
 - **Enable and secure GitOps configurations:** GitOps configurations enforce the desired state of the system and are an important tool for compliance tracking of Arc-enabled Kubernetes clusters. When working with [GitOps configurations](./cicd-workflow.md) consider securing access to your source control system with appropriate network and access controls.
 - **Policy management and reporting:** Define a governance plan for your hybrid Kubernetes that translates into Azure Policies and remediation tasks.
-- **Log management strategy:** Plan for metrics and log collection of your hybrid resources into a Log Analytics workspace for further analysis and auditing. Review the recommendations for [monitoring in this guide](./management-disciplines.md).
+- **Log management strategy:** Plan for metrics and log collection of your hybrid resources into a Log Analytics workspace for further analysis and auditing by reviewing the [management disciplines critical design area design considerations and recommendations](./management-disciplines.md).
 - **Threat protection and cloud security posture management:** Enforce threat protection and introduce controls to detect security misconfigurations and track compliance. Also, use [Azure's intelligence](/azure/sentinel/overview) to protect your hybrid workloads against threats. [Enable Microsoft Defender for Containers](/azure/defender-for-cloud/defender-for-containers-introduction?tabs=defender-for-container-arch-aks) for all subscriptions containing Azure Arc-enabled Kubernetes for security baseline monitoring, security posture management, and threat protection.
 - **Secure cluster access:** Plan how to secure access to the Kubernetes API. Azure Arc-enabled Kubernetes provides the [cluster connect feature](/azure/azure-arc/kubernetes/cluster-connect) that provides connectivity to the apiserver without having to enable any inbound port.
 - **Improve microservices observability and security:** The implementation of a service mesh can help with authentication, authorization, security, and visibility of microservice-based applications. Azure Arc-enabled Kubernetes simplifies the deployment of [Open Service Mesh (OSM) as an extension](./services-observability.md).
@@ -58,13 +58,13 @@ The Azure Arc agent is the key component for Azure Arc-enabled Kubernetes, it co
 
 Azure Activity Log can be used to set up [resource health alerts](/azure/service-health/resource-health-alert-monitor-guide) and remain informed on current and historical health status of the [agent's pods](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#6-view-azure-arc-agents-for-kubernetes), review [management best practices](management-disciplines.md). An [Azure Arc-enabled Kubernetes cluster will be shown offline](/azure/azure-arc/kubernetes/conceptual-agent-architecture) if the service has not received an agent heartbeat for 15 minutes, review the [Azure Arc-enabled Kubernetes connectivity best practices](./network-connectivity.md) to make sure the agent can connect to Azure's endpoints securely.
 
-### Role-based access controls
+### Role-based access controls (RBAC)
 
-Once a Kubernetes cluster is onboarded you will be able to assign [Azure Role-based Access Controls](/azure/role-based-access-control/overview) to the Azure Arc-enabled resource, follow the [least privilege principle](/security/benchmark/azure/baselines/arc-enabled-security-baseline#pa-7-follow-just-enough-administration-least-privilege-principle) users, groups or applications assigned with roles like "Contributor" or "Owner" are able to execute operations like deploying extensions which perform actions as "ClusterAdmin" and can have a cluster-wide impact. These roles should be used with caution to limit the possible "blast radius" or eventually be replaced by custom roles.
+Once a Kubernetes cluster is onboarded you will be able to assign [Azure Role-based Access Controls (RBAC)](/azure/role-based-access-control/overview) to the Azure Arc-enabled resource, follow the [least privilege principle](/security/benchmark/azure/baselines/arc-enabled-security-baseline#pa-7-follow-just-enough-administration-least-privilege-principle) users, groups or applications assigned with roles like "Contributor" or "Owner" are able to execute operations like deploying extensions which perform actions as "ClusterAdmin" and can have a cluster-wide impact. These roles should be used with caution to limit the possible "blast radius" or eventually be replaced by custom roles.
 
-Consider the sensitive data that is sent to the Azure Monitor Log Analytics workspace, the same RBAC principle should be applied to the data itself. Azure Arc-enabled Kubernetes provides RBAC access to log data collected by the Log Analytics agent, stored in the Log Analytics workspace the cluster is registered to. Review how to implement granular Log Analytics Workspace access in the [designing your Azure Monitor Logs deployment documentation](/azure/azure-monitor/logs/design-logs-deployment#access-control-overview).
+Consider the sensitive data that is sent to the Azure Monitor Log Analytics workspace, the same role-based access controls (RBAC) principle should be applied to the data itself. Azure Arc-enabled Kubernetes provides RBAC access to log data collected by the Log Analytics agent, stored in the Log Analytics workspace the cluster is registered to. Review how to implement granular Log Analytics Workspace access in the [designing your Azure Monitor Logs deployment documentation](/azure/azure-monitor/logs/design-logs-deployment#access-control-overview).
 
-[Integrate your Azure Arc-enabled Kubernetes cluster with Azure Active Directory](/azure/azure-arc/kubernetes/azure-rbac) this will allow you to use Azure role assignments for a more granular control on who has access and permissions on Azure Arc-enabled Kubernetes cluster resources. 
+[Integrate your Azure Arc-enabled Kubernetes cluster with Azure Active Directory](/azure/azure-arc/kubernetes/azure-rbac) this will allow you to use Azure role assignments for a more granular control on who has access and permissions on Azure Arc-enabled Kubernetes cluster resources.
 
 This integration works natively with Kubernetes _ClusterRoleBinding_ and _RoleBinding_ object types and effectively consolidates authorization to your Kubernetes cluster with Azure AD as the central identity and access management service. By using Azure AD you get full auditing and tracing of changes done in the cluster as well as any authorization event.
 
@@ -91,15 +91,11 @@ GitOps is an essential component of any IT strategy that follows a fully automat
 
 This GitOps approach simplifies the deployment of multiple applications, across clusters and environments while tracking and enforcing the desired state of the system declaratively with Git. By using Git as your single source of truth and as the central tool for all deployments it becomes the best way to track cluster state, account for changes and approvals over time, facilitate fault investigation while enabling automation across distributed environments.
 
-The following image shows how the GitOps flow looks like in the context of Arc-enabled Kubernetes:
-
-![Azure Arc-enabled K8s GitOps workflow](./media/arc-enabled-k8s-gitops.png)
-
 When adding GitOps configurations it is important to secure access to the repository, its keys and set branch permissions, make sure to review [best practices for GitOps](PLACEHOLDER_CDA).
 
 ### Policy management and reporting
 
-Having policy-driven governance is a foundational principle of cloud-native operations and Microsoft Cloud Adoption Framework for Azure. [Azure Policy](/azure/governance/policy/) provides the mechanism to enforce corporate standards and to assess compliance at scale. Through it, you can implement governance for consistency of deployments, compliance, control costs, and improve your security posture; with its compliance dashboard, you will get an aggregated view of the overall state as well as remediation capabilities. 
+Having policy-driven governance is a foundational principle of cloud-native operations and Microsoft Cloud Adoption Framework for Azure. [Azure Policy](/azure/governance/policy/) provides the mechanism to enforce corporate standards and to assess compliance at scale. Through it, you can implement governance for consistency of deployments, compliance, control costs, and improve your security posture; with its compliance dashboard, you will get an aggregated view of the overall state as well as remediation capabilities.
 
 Azure Arc-enabled Kubernetes supports [Azure Policy](/azure/governance/policy/overview) at the Azure Resource Management layer, and also in-cluster policy enforcements by extending [Gatekeeper for Open Policy Agent](/azure/governance/policy/concepts/policy-for-kubernetes?toc=/azure/azure-arc/kubernetes/toc.json). The following image illustrates how Azure Policy applies at-scale enforcements and safeguards on Azure Arc-enabled Kubernetes clusters:
 
@@ -116,7 +112,7 @@ Understand the [scope of Azure policy](/azure/governance/policy/concepts/scope) 
 
 ### Log management strategy
 
-Design and plan your Log Analytics Workspace deployment, as it is the storage where data is collected, aggregated, and later analyzed. As the Log Analytics workspace represents a geographical location of your data, to support a level of isolation and scope for configurations like data retention, determine the number of workspaces needed and how it maps to your organizational structure. It is recommended to use a single Azure Monitor Log Analytics workspace to manage centralized RBAC, visibility, and reporting as described in the [Management and monitoring best practices of Cloud Adoption Framework](/azure/cloud-adoption-framework/ready/enterprise-scale/management-and-monitoring).
+Design and plan your Log Analytics Workspace deployment, as it is the storage where data is collected, aggregated, and later analyzed. As the Log Analytics workspace represents a geographical location of your data, to support a level of isolation and scope for configurations like data retention, determine the number of workspaces needed and how it maps to your organizational structure. It is recommended to use a single Azure Monitor Log Analytics workspace to manage centralized role-based access controls (RBAC), visibility, and reporting as described in the [Management and monitoring best practices of Cloud Adoption Framework](/azure/cloud-adoption-framework/ready/enterprise-scale/management-and-monitoring).
 
 Review the best practices in [designing your Azure Monitor Logs deployment](/azure/azure-monitor/logs/design-logs-deployment).
 
