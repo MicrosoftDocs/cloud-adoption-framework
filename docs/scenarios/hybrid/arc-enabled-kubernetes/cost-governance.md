@@ -67,14 +67,6 @@ Here are some general design recommendations for Azure Arc-enabled Kubernetes co
 - Ensure that all Azure Arc-enabled Kubernetes clusters follow proper [naming and tagging conventions](/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging).
 - Use least privilege RBAC by assigning **[Kubernetes Cluster - Azure Arc Onboarding](/azure/role-based-access-control/built-in-roles#kubernetes-cluster---azure-arc-onboarding)** to only administrators who will on-board Azure Arc-enabled Kubernetes clusters to avoid unnecessary costs.
 - Use least privilege RBAC by assigning builtin roles to administrators managing the Azure Arc-enabled Kubernetes clusters to avoid unnecessary costs. Review recommendations for [Identity and access management](./identity-access-management.md).
-
-| Role  | Description  |
-|---|---|
-| [Azure Arc Enabled Kubernetes Cluster User Role](/azure/role-based-access-control/built-in-roles#azure-arc-enabled-kubernetes-cluster-user-role)  | List cluster user credentials action.  |
-| [Azure Arc Kubernetes Admin](/azure/role-based-access-control/built-in-roles#azure-arc-kubernetes-admin)  |  Lets you manage all resources under cluster/namespace, except update or delete resource quotas and namespaces.	 |
-| [Azure Arc Kubernetes Cluster Admin](/azure/role-based-access-control/built-in-roles#azure-arc-kubernetes-cluster-admin)  | Lets you manage all resources in the cluster.	  |
-| [Azure Arc Kubernetes Viewer](/azure/role-based-access-control/built-in-roles#azure-arc-kubernetes-viewer)  | Lets you view all resources in cluster/namespace, except secrets.	  |
-| [Azure Arc Kubernetes Writer](/azure/role-based-access-control/built-in-roles#azure-arc-kubernetes-writer) | Lets you update everything in cluster/namespace, except (cluster)roles and (cluster)role bindings.  |
 ### Azure Monitor for Containers
 
 - Review [recommendations for monitoring](./management-disciplines.md) to decide on your monitoring requirements and review [Azure Monitor for Kubernetes pricing](https://azure.microsoft.com/pricing/details/monitor/).
@@ -112,7 +104,7 @@ Here are some general design recommendations for Azure Arc-enabled Kubernetes co
 - Review [Kubernetes configuration pricing](https://azure.microsoft.com/pricing/details/azure-arc/).
 - Review recommendations for [Kubernetes configuration](./cicd-workflow.md).
 - Use [Azure Policy for Kubernetes](/azure/azure-arc/kubernetes/policy-reference) to enforce and enure consistent configuration across all your Azure Arc-enabled Kubernetes clusters.
-- Use Azure Resource Graph to review the number of cores you have for the Azure Arc-enabled Kubernetes clusters.
+- Use [Azure Resource Graph](/azure/governance/resource-graph/overview) queries to review the number of cores you have for the Azure Arc-enabled Kubernetes clusters.
 
 ```python
 Resources
