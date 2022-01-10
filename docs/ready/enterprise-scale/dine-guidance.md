@@ -15,7 +15,7 @@ Before you use policies, you need to understand where they're used within the Az
 
 ### Why use DINE and Modify policies?
 
-DINE and Modify policies are part of the Azure landing zone reference implementations. They help you and your organization ensure your landing zone, which is also known as subscriptions, and the resources within them are compliant. These policies also remove the operational burden for platform and landing zone teams as your Azure environment scales.
+DINE and Modify policies are part of the Azure landing zone reference implementations. They help you and your organization ensure your landing zones, which are also known as subscriptions, and the resources within them are compliant. These policies also remove the operational burden for platform and landing zone teams as your Azure environment scales.
 
 For example, consider a scenario where a new landing zone subscription is provisioned and placed in the "corp" management group. DINE and Modify policies then take the following actions for the landing zone subscription:
 
@@ -33,7 +33,7 @@ For example, consider a scenario where a new landing zone subscription is provis
 
 All assigned policies help you and the landing zone owners remain compliant. No actual workload resources are deployed via DINE or Modify policies. We don't recommend this either. For more information, see [Should we use Azure Policy to deploy workloads?](/azure/cloud-adoption-framework/ready/enterprise-scale/faq#should-we-use-azure-policy-to-deploy-workloads). Only auxiliary or supporting resources or settings are deployed or configured by these DINE policies.
 
-The Azure landing zones reference implementations use [DINE](/azure/governance/policy/concepts/effects#deployifnotexists) Azure policies to help you achieve policy-driven governance within your Azure environment. But maybe you can't use DINE or Modify policies, or you aren't ready to enable this type of [Azure policy](/azure/governance/policy/concepts/effects) because of:
+The Azure landing zones reference implementations use [DINE](/azure/governance/policy/concepts/effects#deployifnotexists) Azure policies to help you achieve policy-driven governance within your Azure environment. But maybe you can't use DINE or Modify policies, or you aren't ready to enable this type of [Azure policy effect](/azure/governance/policy/concepts/effects) because of:
 
 - Regulatory compliance policies, standards, or law restrictions.
 - Strict change control processes that require human approval for every action within your Azure environment.
@@ -91,7 +91,7 @@ This screenshot shows how to use the Azure portal to set the enforcement mode to
 
 #### Use the ARM template to set the enforcement mode to DoNotEnforce
 
-This code example shows how to use an ARM template to set `enforcementMode` to `DoNotEnforce` on a policy assignment. DoNotEnforce is also known as Disabled.
+This code example shows how to use an ARM template to set `enforcementMode` to `DoNotEnforce` on a policy assignment. `DoNotEnforce` is also known as `Disabled`.
 
 ```json
 {
@@ -119,7 +119,7 @@ Even when the [enforcement mode](/azure/governance/policy/concepts/assignment-st
 
 As mentioned in the [Approach overview](#approach-overview) section, some customers might need to remain in [phase 1](#phase-1-disable-dine-and-modify-policies-automated-actions) for a long period or even permanently because of their requirements. This state is valid, and customers can remain in it for any length of time.
 
-Perhaps you need to stay in this state permanently or for a long period, like years. If so, it might be better for you to adopt the [AuditIfNotExists](/azure/governance/policy/concepts/effects#auditifnotexists) (AINE) policy effect and associated definitions and set the enforcement mode back to `Default`.
+Perhaps you need to stay in this state permanently or for a long period, like years. If so, it might be better for you to adopt the [`AuditIfNotExists`](/azure/governance/policy/concepts/effects#auditifnotexists) (AINE) policy effect and associated definitions and set the enforcement mode back to `Default`.
 
 >[!NOTE]
 > By changing to using an AINE policy and setting the enforcement mode to `Default`, you still achieve the same goal of disabling DINE.
@@ -134,11 +134,11 @@ The following table summarizes the options and implications for the different ty
 
 | Policy effect | Enforcement mode      | Activity log entry | Remediation action |
 | --            | --                    | --                 | --          |
-| DINE          | Enabled or Default       | Yes                | Platform-triggered remediation at scan after creation or resource update. Manual creation of a remediation task required if dependent resource is modified or preexisting prior to the policy assignment. |
+| DINE          | Enabled or Default       | Yes                | Platform-triggered remediation at scale after creation or resource update. Manual creation of a remediation task required if dependent resource is modified or preexisting prior to the policy assignment. |
 | DINE          | Disabled or DoNotEnforce | No                 | Manual creation of a remediation task required. |
 | Modify        | Enabled or Default       | Yes                | Automatic remediation during creation or update. |
 | Modify        | Disabled or DoNotEnforce | No                 | Manual creation of a remediation task required. |
-| Deny          | Enabled orDefault       | Yes                | Creation or update denied. |
+| Deny          | Enabled or Default       | Yes                | Creation or update denied. |
 | Deny          | Disabled or DoNotEnforce | No                 | Creation or update allowed. Manual remediation required. |
 | Audit/AINE    | Enabled or Default       | Yes                | Manual remediation required. |
 | Audit/AINE    | Disabled or DoNotEnforce | No                 | Manual remediation required. |
@@ -177,7 +177,7 @@ This screenshot shows how to use the Azure portal to set the enforcement mode to
 
 #### Use an ARM template to set the enforcement mode to Default
 
-This code example shows how to use an ARM template to set `enforcementMode` to `Default` on a policy assignment. Default is also known as Enabled.
+This code example shows how to use an ARM template to set `enforcementMode` to `Default` on a policy assignment. `Default` is also known as `Enabled`.
 
 ```json
 {
