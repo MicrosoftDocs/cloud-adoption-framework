@@ -30,11 +30,11 @@ However, analysts in the billing group have different skills than the analysts i
 
 Relecloud will scale their analytics platform by adding a new landing zone for the billing group. This will provide a virtual workspace for the billing group to implement the analytics solutions that'll meet their business needs. By having the landing zone separate from the organization's other resources, the billing group can implement its own access policies and account for the costs of its services.
 
-### Data management zone
+### Data management landing zone
 
-A key concept for every data management and analytics scenario implementation is having one data management zone. This subscription contains resources that'll be shared across all landing zones. This includes shared networking components like a firewall or private DNS zones. It also includes resources for data and cloud governance like Azure Policy and Azure Purview.
+A key concept for every data management and analytics scenario implementation is having one data management landing zone. This subscription contains resources that'll be shared across all landing zones. This includes shared networking components like a firewall or private DNS zones. It also includes resources for data and cloud governance like Azure Policy and Azure Purview.
 
-Relecloud created a data management zone when the solution was deployed for the operations group. When the billing group joins the platform, they'll use the same data management zone. This will allow them to share common resources with the operations group.
+Relecloud created a data management landing zone when the solution was deployed for the operations group. When the billing group joins the platform, they'll use the same data management landing zone. This will allow them to share common resources with the operations group.
 
 ### Operations data landing zone
 
@@ -58,7 +58,7 @@ The billing group has been using an on-premises system to power its analytics. H
 
 As discussed above, the billing group won't share a landing zone with the operations group. Instead, they'll be given their own landing zone in which they'll have the freedom to build the platform that best suits their needs.
 
-The new landing zone will be connected to the data management zone and all other data landing zones with virtual network peering. This will enable data to be shared securely through the Azure internal network.
+The new landing zone will be connected to the data management landing zone and all other data landing zones with virtual network peering. This will enable data to be shared securely through the Azure internal network.
 
 #### Billing data integrations
 
