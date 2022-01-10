@@ -99,6 +99,7 @@ Here are some general design recommendations for Azure Arc-enabled Kubernetes co
 
 - Review the [Security, governance, and compliance critical design area](./management-disciplines.md)
 - Review [Microsoft Defender for Containers pricing information](https://azure.microsoft.com/pricing/details/azure-defender/).
+- Consider deploying the Microsoft Defender for Containers [cost estimation workbook](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Workbooks/Defender%20for%20Containers%20Cost%20Estimation?WT.mc_id=m365-0000-rotrent) to understand the estimates of your Microsoft Defender for Containers cost.
 ### Kubernetes configuration
 
 - Review [Kubernetes configuration pricing](https://azure.microsoft.com/pricing/details/azure-arc/).
