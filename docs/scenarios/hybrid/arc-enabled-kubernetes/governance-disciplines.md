@@ -129,7 +129,7 @@ Review the best practices in [designing your Azure Monitor Logs deployment](/azu
 - Verify that the Defender extension is deployed on your clusters.
 - Use security information and event management (SIEM) integration with Microsoft Defender for Cloud and Azure Sentinel.
 
-The following image shows a conceptual reference architecture for Microsoft Defender for Cloud on an Azure Arc-enabled Kubernetes:
+The following image shows a conceptual reference architecture for Microsoft Defender for Cloud on an Azure Arc-enabled Kubernetes cluster resource:
 
 ![A diagram depicting the Microsoft Defender for Azure Arc-enabled Kubernetes](./media/arc-enabled-k8s-defender.png)
 
