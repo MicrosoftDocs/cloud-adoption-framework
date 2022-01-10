@@ -48,7 +48,7 @@ As your hybrid and multicloud resources become part of Azure Resource Manager, t
 
 ### Agent Provisioning
 
-Define a strategy for onboarding your clusters in Azure Arc, including a method of automation for bulk enrollment and establish a formal plan that takes into account the scope and plan for a deployment including objectives, selection criteria, success criteria, training plans, rollback and risks.
+Define a strategy for onboarding your clusters onto Azure Arc, including a method of automation for bulk enrollment, and establish a formal plan that takes into account the scope and plan for the deployment, including objectives, selection criteria, success criteria, training plans, rollback, and risks.
 
 It is possible to integrate the agent provisioning as part of your continuous integration and continuous deployment (CI/CD) pipelines by [using a service principal](/azure/azure-arc/kubernetes/create-onboarding-service-principal). It is recommended to limit the privileges of this service principal and only assign the roles required to onboard Kubernetes to Azure, the "Kubernetes Cluster - Azure Arc Onboarding" role, as this can only be used to onboard Kubernetes and cannot re-onboard or delete the resource.
 
