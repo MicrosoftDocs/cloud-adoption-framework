@@ -61,7 +61,7 @@ Azure Arc-enabled Kubernetes provides two types of services:
 
 ## Design recommendations
 
-Here are some general design recommendations for Azure Arc-enabled Kubernetes cost governance:
+Here are some design recommendations for Azure Arc-enabled Kubernetes cost governance:
 ### Governance
 
 - Review the [resource organization](./resource-organization.md) and [governance diciplines](./governance-diciplines.md) critical design areaa.
