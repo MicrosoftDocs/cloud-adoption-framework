@@ -107,7 +107,7 @@ SaaS ISVs often organize their cloud environments by modeling their software dev
 
 Azure Policy configuration is often similar between environments, because these groups of subscriptions often have similar guardrails. For example, you might specify policies like the allowable Azure regions and VM sizes that can be used in each environment. Also, SaaS ISVs with multiple tiers of service might have extra separation between free-tier shared instances of the solution and premium-tier dedicated instances of the application.
 
-ISVs who use multiple environments for their SaaS solutions can consider using management groups to grouping their Azure subscriptions that correspond to each environment, and then apply Azure RBAC rules and Azure Policy policies to each environment's management group.
+ISVs who use multiple environments for their SaaS solutions can consider using management groups for grouping their Azure subscriptions that correspond to each environment, and then apply Azure RBAC rules and Azure Policy policies to each environment's management group.
 
 In the following diagram, a management group and subscription hierarchy is shown for an ISV that uses three environments (*Development*, *Test*, *Staging*, and *Production*) and with two different service tiers (*Free* and *Isolated*):
 
