@@ -23,7 +23,7 @@ Azure Arc-enabled Kubernetes provides two types of services:
 1. Azure Arc control plane functionality, which is provided at no extra cost including:
    - Resource organization through Azure management groups and tags.
    - Searching and indexing through Azure Resource Graph.
-   - Access control through Azure RBAC at subscription or resource group level.
+   - Access control through Azure role-based access control (RBAC) at subscription or resource group level.
    - Automation through templates and extensions.
 
 2. Azure services used in conjunction with Azure Arc-enabled Kubernetes (but not limited to), incur costs according to their usage including:
