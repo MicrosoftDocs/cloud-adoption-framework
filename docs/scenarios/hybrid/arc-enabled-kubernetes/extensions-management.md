@@ -12,7 +12,7 @@ ms.custom: e2e-hybrid, think-tank, e2e-arc-enabled-kubernetes
 
 # Extensions Management for Azure Arc-enabled Kubernetes
 
-This article walks through the key design considerations and best practices for the managing extensions of Azure Arc-enabled Kubernetes deployments as part of a CAF enterprise-scale landing zone implementation.
+This article walks through the key design considerations and best practices for managing extensions of Azure Arc-enabled Kubernetes deployments.
 
 Before going through this document it is important to understand governance principles because of the effect of the decisions made, also make sure to review [Enterprise-scale for AKS](/azure/cloud-adoption-framework/scenarios/aks/enterprise-scale-landing-zone) to understand the relevant concepts of Enterprise Scale in a container environment.
 
