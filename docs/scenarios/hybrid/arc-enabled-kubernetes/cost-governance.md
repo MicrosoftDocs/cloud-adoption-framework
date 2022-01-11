@@ -27,7 +27,7 @@ Azure Arc-enabled Kubernetes provides two types of services:
    - Automation through templates and extensions.
 
 2. Azure services used in conjunction with Azure Arc-enabled Kubernetes (but not limited to), incur costs according to their usage including:
-   - Kubernetes Configuration
+   - Kubernetes GitOps configuration
    - Azure Policy for Kubernetes
    - Azure Monitor Container Insights
    - Microsoft Defender for Containers
