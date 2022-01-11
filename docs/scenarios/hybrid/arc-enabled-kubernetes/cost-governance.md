@@ -99,7 +99,7 @@ Here are some design recommendations for Azure Arc-enabled Kubernetes cost gover
 
 - Review the [Security, governance, and compliance critical design area](./management-disciplines.md) to understand how to use Microsoft Defender for Cloud to protect and secure your Azure Arc-enabled Kubernetes clusters.
 - Review [Microsoft Defender for Containers pricing information](https://azure.microsoft.com/pricing/details/azure-defender/).
-- Consider deploying the Microsoft Defender for Containers [cost estimation workbook](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Workbooks/Defender%20for%20Containers%20Cost%20Estimation?WT.mc_id=m365-0000-rotrent) to understand the estimates of your Microsoft Defender for Containers cost.
+- Consider deploying the Microsoft Defender for Containers [cost estimation workbook](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Workbooks/Defender%20for%20Containers%20Cost%20Estimation?WT.mc_id=m365-0000-rotrent) to understand the cost estimates of protecting your Azure Arc-enabled Kubernetes using Microsoft Defender for Containers.
 
 ### Kubernetes GitOps configuration
 
@@ -146,7 +146,7 @@ Resources
 ### Azure Key Vault
 
 - Review [Azure Key Vault pricing](https://azure.microsoft.com/pricing/details/key-vault/).
-- Review [recommendations for security and governance](./management-disciplines.md).
+- Review [recommendations for security and governance](./management-disciplines.md) to understand how to use Azure Key vault to manage secrets and certificates on your Azure Arc-enabled Kubernetes clusters. 
 - Use [Azure Key Vault insights](/azure/azure-monitor/insights/key-vault-insights-overview) to monitor secrets operations on your Azure Arc-enabled Kubernetes.
 
 ![Azure Key Vault insights](./media/key-vault-insights.png)
