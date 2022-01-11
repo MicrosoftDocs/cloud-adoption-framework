@@ -70,9 +70,8 @@ Here are some design recommendations for Azure Arc-enabled Kubernetes cost gover
 - Use least privilege RBAC by assigning built-in roles to authorized users managing the Azure Arc-enabled Kubernetes clusters to avoid unnecessary costs. Review recommendations for [Identity and access management](./identity-access-management.md).
 ### Azure Monitor for Containers
 
-- Review the [Management and monitoring critical design area](./management-disciplines.md) to decide on your monitoring requirements and review [Azure Monitor for Kubernetes pricing](https://azure.microsoft.com/pricing/details/monitor/).
-
--  Decide on the [required logs and events](/azure/azure-monitor/containers/container-insights-agent-config) for the Azure Arc-enabled Kubernetes clusters to be collected in the Log Analytics workspace.
+- Review the [Management and monitoring critical design area](./management-disciplines.md) to plan your monitoring strategy and decide on your requirements for monitoring Azure Arc-enabled Kubernetes clusters to optimize your monitoring costs.
+- Review [Azure Monitor for Containers pricing](https://azure.microsoft.com/pricing/details/monitor/).
 -  Use the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) to calculate an estimate of the Azure Arc-enabled Kubernetes monitoring costs for Azure Log Analytics ingestion, alerts, and notifications.
   
 ![Azure Pricing Calculator](./media/pricing-calculator.png)
@@ -91,9 +90,9 @@ Here are some design recommendations for Azure Arc-enabled Kubernetes cost gover
 
 ![Azure Monitor workbook showing namespace billing](./media/Azure-Monitor-Workbooks.png)
 
-- Evaluate possible data ingestion volume reducing, refer to these [tips for reducing data volume](/azure/azure-monitor/logs/manage-cost-storage#tips-for-reducing-data-volume) documentation to help configure data ingestion properly.
+- Review [tips for reducing Log Analytics ingestion data volume](/azure/azure-monitor/logs/manage-cost-storage#tips-for-reducing-data-volume) documentation to help configure data ingestion properly.
 - Consider how long to retain data on Log Analytics. Data ingested into the Log Analytics workspace can be retained at no additional charge up to the first 31 days. Consider general aspects to configure the [Log Analytics workspace level default retention](/azure/azure-monitor/logs/manage-cost-storage#workspace-level-default-retention) and specific needs to configure data [retention by data type](/azure/azure-monitor/logs/manage-cost-storage#retention-by-data-type), that can be as low as 4 days. Example: Usually, performance data doesn't need to be retained longer, instead, security logs may need to be retained longer.
-- To retain data longer than 730 days, consider using [Log Analytics workspace data export](/azure/azure-monitor/logs/logs-data-export).
+- Consider using [Log Analytics workspace data export](/azure/azure-monitor/logs/logs-data-export) to retain data longer than 730 days.
 - Consider using [Commitment Tier](/azure/azure-monitor/logs/manage-cost-storage#pricing-model) pricing based on your data ingestion volume.
 
 ### Microsoft Defender for Cloud (formerly known as Azure Security Center):
