@@ -65,7 +65,7 @@ Here are some general design recommendations for Azure Arc-enabled Kubernetes co
 
 - Review the [resource organization critical design area](./resource-organization.md) and [governance](./governance-diciplines.md).
 - Ensure that all Azure Arc-enabled Kubernetes clusters follow proper [naming and tagging conventions](/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging).
-- Use least privilege RBAC by assigning **[Kubernetes Cluster - Azure Arc Onboarding](/azure/role-based-access-control/built-in-roles#kubernetes-cluster---azure-arc-onboarding)** to only administrators who will on-board Azure Arc-enabled Kubernetes clusters to avoid unnecessary costs.
+- Use least privilege RBAC by assigning **[Kubernetes Cluster - Azure Arc Onboarding](/azure/role-based-access-control/built-in-roles#kubernetes-cluster---azure-arc-onboarding)** to only authorized users who will onboard Azure Arc-enabled Kubernetes clusters to avoid unnecessary costs.
 - Use least privilege RBAC by assigning built-in roles to authorized users managing the Azure Arc-enabled Kubernetes clusters to avoid unnecessary costs. Review recommendations for [Identity and access management](./identity-access-management.md).
 ### Azure Monitor for Containers
 
