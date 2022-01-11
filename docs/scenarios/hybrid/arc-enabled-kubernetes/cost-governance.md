@@ -29,7 +29,7 @@ Azure Arc-enabled Kubernetes provides two types of services:
 2. Azure services used in conjunction with Azure Arc-enabled Kubernetes (but not limited to), incur costs according to their usage including:
    - Kubernetes Configuration
    - Azure Policy for Kubernetes
-   - Azure Monitor for Containers
+   - Azure Monitor Container Insights
    - Microsoft Defender for Containers
    - Microsoft Sentinel
    - Azure Key Vault
