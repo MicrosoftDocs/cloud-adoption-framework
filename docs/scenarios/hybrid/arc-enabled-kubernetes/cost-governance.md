@@ -35,7 +35,7 @@ Azure Arc-enabled Kubernetes provides two types of services:
    - Azure Key Vault
 
 > [!Note]
-> If the Azure Arc-enabled Kubernetes cluster is on Azure Stack Edge, AKS on Azure Stack HCI, or AKS on Windows Server 2019 Datacenter, then Kubernetes configuration is included at no charge
+> If the Azure Arc-enabled Kubernetes cluster is on AKS on Azure Stack HCI, then Kubernetes GitOps configuration is included at no charge.
 
 ## Design considerations
 
