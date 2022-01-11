@@ -21,18 +21,18 @@ Cost governance is the continuous process of implementing policies to control co
 
 Azure Arc-enabled Kubernetes provides two types of services:
 1. Azure Arc control plane functionality, which is provided at no extra cost including:
-   - Resource organization through Azure management groups and tags.
-   - Searching and indexing through Azure Resource Graph.
-   - Access control through Azure role-based access control (RBAC) at subscription or resource group level.
-   - Automation through templates and extensions.
+   - Resource organization through Azure [management groups](/azure/governance/management-groups/overview) and [tags](/azure/azure-resource-manager/management/tag-resources?tabs=json).
+   - Searching and indexing through [Azure Resource Graph](/azure/governance/resource-graph/overview).
+   - Access control through [Azure role-based access control](/azure/role-based-access-control/overview) (RBAC) at subscription or resource group level.
+   - Automation through [templates](/azure/azure-resource-manager/templates/overview) and [extensions](/azure/azure-arc/kubernetes/extensions).
 
 2. Azure services used in conjunction with Azure Arc-enabled Kubernetes (but not limited to), incur costs according to their usage including:
-   - Kubernetes GitOps configuration
-   - Azure Policy for Kubernetes
-   - Azure Monitor Container Insights
-   - Microsoft Defender for Containers
-   - Microsoft Sentinel
-   - Azure Key Vault
+   - [Kubernetes GitOps configuration](/azure/azure-arc/kubernetes/conceptual-configurations)
+   - [Azure Policy for Kubernetes](/azure/governance/policy/concepts/policy-for-kubernetes)
+   - [Azure Monitor Container Insights](/azure/azure-monitor/containers/container-insights-overview)
+   - [Microsoft Defender for Containers](/azure/defender-for-cloud/defender-for-containers-introduction?tabs=defender-for-container-arch-aks)
+   - [Microsoft Sentinel](/azure/sentinel/overview)
+   - [Azure Key Vault](/azure/key-vault/general/basic-concepts)
 
 > [!Note]
 > If the Azure Arc-enabled Kubernetes cluster is on Azure Stack Edge, AKS on Azure Stack HCI, or AKS on Windows Server 2019 Datacenter, then Kubernetes configuration is included at no charge
