@@ -55,7 +55,7 @@ Azure Arc-enabled Kubernetes provides two types of services:
 
 - **Azure Policy for Kubernetes:** [Azure Policy for Kubernetes](/azure/governance/policy/concepts/policy-for-kubernetes) extends Gatekeeper v3, an admission controller webhook for Open Policy Agent (OPA), to apply at-scale enforcements and safeguards on your clusters in a centralized, consistent manner. Azure Policy makes it possible to manage and report on the compliance state of your Kubernetes clusters from one place. There is currently no cost for Azure Policy for Kubernetes while in public preview.
 
-- **Microsoft Sentinel:** Microsoft Sentinel provides intelligent security analytics across your enterprise. The data for this analysis is stored in an Azure Monitor Log Analytics workspace. Microsoft Sentinel is billed based on the volume of data ingested for analysis in Azure Sentinel, and stored in the Azure Monitor Log Analytics workspace for your Azure Arc-enabled Kubernetes clusters.
+- **Microsoft Sentinel:** Microsoft Sentinel provides intelligent security analytics across your enterprise. The data for this analysis is stored in an Azure Monitor Log Analytics workspace. Microsoft Sentinel is billed based on the volume of data ingested for analysis in Azure Sentinel and stored in the Azure Monitor Log Analytics workspace for your Azure Arc-enabled Kubernetes clusters.
 
 - **Azure Key Vault:** The Azure Key Vault Provider for Secrets Store CSI Driver allows for the integration of an Azure key vault as a secrets store with a Kubernetes cluster via a CSI volume. Azure Key Vault is billed by the operations performed on the certificates, keys, and secrets.
 
