@@ -115,6 +115,9 @@ In the following diagram, a management group and subscription hierarchy is shown
 
 The distinction between multitenant and isolated production subscriptions might not apply to all ISVs. Also, different ISVs might use different sets of environments. For example, smaller ISVs can decide to only start with three subscriptions, such as *Platform*, *Development/Test*, and *Production*. They then might need to deploy additional subscriptions as separate deployment stamps as they grow.
 
+> [!TIP]
+> If your operating model separates corporate IT and SaaS operations, then you might use two separate Azure AD tenants. If so, follow the standard landing zone approach for corporate resources. If your corporate and SaaS operations teams are the same, consider using a single Azure AD tenant with multiple management groups under the tenant root group.
+
 ## Azure landing zone design principles and implementations
 
 [Azure's landing zone design principles](../enterprise-scale/design-principles.md) recommend aligning to Azure-native platform capabilities such as Log Analytics, Azure Monitor, and Azure Firewall. They also provide specific [Azure landing zone implementation options](./implementation-options.md).
