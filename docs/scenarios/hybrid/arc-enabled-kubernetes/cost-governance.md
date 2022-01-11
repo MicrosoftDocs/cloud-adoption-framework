@@ -79,11 +79,11 @@ Here are some general design recommendations for Azure Arc-enabled Kubernetes co
 
 ![Azure Pricing Calculator AZMon](./media/pricing-calculator-az-monitor.png)
 
-- Use [Azure Cost Management and Billing](/azure/azure-monitor/usage-estimated-costs#azure-cost-management--billing) to have visibility on Azure Monitor costs.
+- Use [Azure Cost Management and Billing](/azure/azure-monitor/usage-estimated-costs#azure-cost-management--billing) to have visibility on Azure Monitor for Containers costs.
 
 ![Azure cost management and billing](./media/Azure-cost-management-billing.png)
 
-- Use [Log Analytics workspaces insights](/azure/azure-monitor/logs/log-analytics-workspace-insights-overview) solution to understand and monitor the collected logs and their ingestion rate on the Log Analytics workspace.
+- Use [Log Analytics workspaces insights](/azure/azure-monitor/logs/log-analytics-workspace-insights-overview) solution to understand and have visibility on the Azure Kubernetes clusters monitored, collected logs, and their ingestion rate to avoid unnecessary ingestion costs.
 
 ![Log Analytics insights](./media/Log-analytics-insights.png)
 
@@ -98,16 +98,16 @@ Here are some general design recommendations for Azure Arc-enabled Kubernetes co
 
 ### Microsoft Defender for Cloud (formerly known as Azure Security Center):
 
-- Review the [Security, governance, and compliance critical design area](./management-disciplines.md)
+- Review the [Security, governance, and compliance critical design area](./management-disciplines.md) to understand how to use Microsoft Defender for Cloud to protect and secure your Azure Arc-enabled Kubernetes clusters.
 - Review [Microsoft Defender for Containers pricing information](https://azure.microsoft.com/pricing/details/azure-defender/).
 - Consider deploying the Microsoft Defender for Containers [cost estimation workbook](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Workbooks/Defender%20for%20Containers%20Cost%20Estimation?WT.mc_id=m365-0000-rotrent) to understand the estimates of your Microsoft Defender for Containers cost.
 
-### Kubernetes configuration
+### Kubernetes GitOps configuration
 
-- Review [Kubernetes configuration pricing](https://azure.microsoft.com/pricing/details/azure-arc/).
-- Review the [CI/CD workflow critical design area](./cicd-workflow.md).
-- Use [Azure Policy for Kubernetes](/azure/azure-arc/kubernetes/policy-reference) to enforce and enure consistent configuration across all your Azure Arc-enabled Kubernetes clusters.
-- Use [Azure Resource Graph](/azure/governance/resource-graph/overview) queries to review the number of cores you have for the Azure Arc-enabled Kubernetes clusters.
+- Review [Kubernetes GitOps configuration pricing](https://azure.microsoft.com/pricing/details/azure-arc/).
+- Review the [CI/CD workflow critical design area](./cicd-workflow.md) to understand the best practices and recommendations for managing and monitoring Kubernetes GitOps configuration on your Azure Arc-enabled Kubernetes clusters.
+- Use [Azure Policy for Kubernetes](/azure/azure-arc/kubernetes/policy-reference) to enforce and ensure consistent configuration across all your Azure Arc-enabled Kubernetes clusters.
+- Use [Azure Resource Graph](/azure/governance/resource-graph/overview) queries to review the number of cores you have for the Azure Arc-enabled Kubernetes clusters to estimate the cost of enabling Kubernetes GitOps configuration.
 
 ```python
 Resources
@@ -116,14 +116,14 @@ Resources
 | where type =~ 'Microsoft.Kubernetes/connectedClusters'
 | order by TotalCoreCount
 ```
-- Use [Azure Cost Management and Billing](/azure/cost-management-billing/cost-management-billing-overview) to have visibility on Kubernetes configuration costs.
+- Use [Azure Cost Management and Billing](/azure/cost-management-billing/cost-management-billing-overview) to have visibility on Kubernetes GitOps configuration costs.
 
-![alt](./media/arc-enabled-kubernetes-configuration-cost.png)
+![Kubernetes GitOps configuration cost in Azure portal](./media/arc-enabled-kubernetes-configuration-cost.png)
 
 ### Azure Policy for Kubernetes
 
 - Review [Azure Policy for Kubernetes pricing](https://azure.microsoft.com/pricing/details/azure-arc/).
-- Review the [Security, governance, and compliance critical design area](./management-disciplines.md)
+- Review the [Security, governance, and compliance critical design area](./management-disciplines.md) to understand the best practices and recommendations for implementing Azure Policy for Kubernetes, including but not limited to enforcing tagging for better cost visibility across clusters, enforcmenet of Kubernetes GitOps configuration, and controlling the enablement of Azure services.
 
 ### Microsoft Sentinel
 
