@@ -118,7 +118,6 @@ Resources
 - Use [Azure Cost Management and Billing](/azure/cost-management-billing/cost-management-billing-overview) to have visibility on Kubernetes GitOps configuration costs.
 
 ![Kubernetes GitOps configuration cost in Azure portal](./media/arc-enabled-kubernetes-configuration-cost.png)
-
 ### Azure Policy for Kubernetes
 
 - Review [Azure Policy for Kubernetes pricing](https://azure.microsoft.com/pricing/details/azure-arc/).
