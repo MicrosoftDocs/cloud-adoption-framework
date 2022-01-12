@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: e2e-hybrid, think-tank
 ---
 
-# Security, governance and compliance baseline for Azure Arc-enabled servers
+# Governance, security, and compliance baseline for Azure Arc-enabled servers
 
 This article covers the key design considerations and best practices when implementing security, governance, and compliance for Azure Arc-enabled servers deployments. While the enterprise-scale landing zone documentation covers "[Governance](/azure/cloud-adoption-framework/ready/landing-zone/design-area/governance)" and "[Security](/azure/cloud-adoption-framework/ready/landing-zone/design-area/security)" as separate topics, for Azure Arc-enabled servers, these critical design areas are consolidated as a single topic.
 
