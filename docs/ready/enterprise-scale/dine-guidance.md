@@ -19,8 +19,7 @@ DINE and Modify policies are part of the Azure landing zone reference implementa
 
 For example, consider a scenario where a new landing zone subscription is provisioned and placed in the "corp" management group. DINE and Modify policies then take the following actions for the landing zone subscription:
 
-- Enable Microsoft Defender for Cloud:
-  - Including configuring Defender for Cloud exports to the central Log Analytics workspace in the management subscription.
+- Enable Microsoft Defender for Cloud. Configure Defender for Cloud exports to the central Log Analytics workspace in the management subscription.
 - Enable Defender for Cloud for the different supported offerings based on the policy parameters configured on the policy assignment.
 - Configure the Azure Activity logs to be sent to the central Log Analytics workspace in the management subscription.
 - Configure the diagnostic settings for all resources to be sent to the central Log Analytics workspace in the management subscription.
@@ -219,7 +218,6 @@ Here's a high-level overview of the steps you do in this phase:
 
 - Remove assignments used specifically for [testing during phase 2](#testing).
 - Go through each DINE and Modify policy assignment in your Azure environment and set the enforcement mode to `Default`. This process is shown in the examples in phase 2.
-- Create remediation tasks for existing resources that are noncompliant by following the guidance in [Create a remediation task](/azure/governance/policy/how-to/remediate-resources#create-a-remediation-task).
-  - New resources will automatically be remediated if they match the policy rules and existence conditions.
+- Create remediation tasks for existing resources that are noncompliant by following the guidance in [Create a remediation task](/azure/governance/policy/how-to/remediate-resources#create-a-remediation-task). New resources will automatically be remediated if they match the policy rules and existence conditions.
 
 Even though in phase 3 we recommend that you set the enforcement mode to `Default` for all DINE and Modify policies in your Azure environment, this choice is still optional. You can make this choice on a per-policy basis to suit your needs and requirements.
