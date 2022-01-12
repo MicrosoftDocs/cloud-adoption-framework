@@ -1,9 +1,9 @@
 ---
 title: How to use the business outcome template
-description: Learn to use the business outcome template to capture business outcomes that will be used in the development of customer transformation journey strategies.
+description: Learn to use the template to capture business outcomes and develop strategies for the customer transformation journey.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 04/04/2019
+ms.date: 12/23/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
@@ -53,7 +53,7 @@ Discovery is a fundamental tenet of enterprise architecture. If discovery is lim
 
 ## Next steps
 
-Learn to align your technical efforts to meaningful learning metrics.
+Learn to align your technical efforts to observable and measurable outcome metrics.
 
 > [!div class="nextstepaction"]
 > [Align your technical efforts](../learning-metrics.md)

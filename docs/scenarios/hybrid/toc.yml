@@ -17,8 +17,10 @@ items:
     items:
     - name: Azure landing zones
       href: ready.md
-    - name: Design areas 
+    - name: Design areas
       items:
+      - name: Introduction to Azure Arc-enabled servers landing zone accelerator for hybrid
+        href: enterprise-scale-landing-zone.md      
       - name: Identity and access management
         href: eslz-identity-and-access-management.md
       - name: Network topology and connectivity
@@ -27,7 +29,7 @@ items:
         href: eslz-resource-organization.md
       - name: Governance and security disciplines
         href: eslz-security-governance-and-compliance.md
-      - name: Management 
+      - name: Management disciplines
         href: eslz-management-and-monitoring-arc-server.md
       - name: Cost governance
         href: eslz-cost-governance.md
@@ -35,12 +37,8 @@ items:
         href: eslz-automation-arc-server.md  
     - name: Implementation options
       items:
-      # - name: Start small with basic VM management
-      #   href: /azure/architecture/hybrid/azure-arc-hybrid-config?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
-      - name: Start with Azure Arc-enabled servers Landing Zone accelerator sandbox
+      - name: Start with Azure Arc-enabled servers landing zone accelerator sandbox
         href: enterprise-scale-landing-zone-sandbox.md
-      - name: Introduction to Azure Arc-enabled servers Landing Zone accelerator for hybrid
-        href: enterprise-scale-landing-zone.md
 
   - name: Migrate to the cloud
     href: migrate.md
@@ -66,7 +64,7 @@ items:
   - name: Hybrid architectures
     items:
     - name: Overview
-      href: /azure/architecture/browse/?azure_categories=hybrid?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
+      href: /azure/architecture/browse/?azure_categories=hybrid&bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
 
     - name: Applications
       items:

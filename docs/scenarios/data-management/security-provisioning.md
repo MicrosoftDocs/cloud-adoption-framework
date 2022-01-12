@@ -3,7 +3,7 @@ title: Provision security for data management and analytics in Azure
 description: Learn how to provision security for the data management and analytics scenario in Azure.
 author: mboswell
 ms.author: mboswell
-ms.date: 08/06/2021
+ms.date: 11/25/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -19,13 +19,13 @@ Organizations can use [authentication](./secure-authentication.md) and [authoriz
 
 ## Automate security
 
-In previous sections, we've focused on how to ingest different data types and how to onboard data integrations and data products. The focus has been predominantly on using automation as much as possible.
+In other sections, we've focused on how to ingest different data types and how to onboard data integrations and data products. The focus has been predominantly on using automation as much as possible.
 
 The story for self-service access to data relies upon automation, which starts when a new dataset is registered. Even if your organization doesn't yet have an automated ingestion framework, we still recommend that you create a custom application, IT service management process, or an application built with Microsoft Power Apps to allow integration ops and data product teams to register datasets.
 
 The high-level registration process should provide REST APIs to at least support:
 
-- Creating folders inside the data integration's Azure Data Lake containers.
+- Creating folders inside the data integration's or data product's Azure Data Lake containers.
 - Creating the required Azure AD groups for access. Each data asset in Azure Data Lake Storage owns two matching Azure AD groups.
 - Creating an access package within [Azure AD entitlement management](/azure/active-directory/governance/entitlement-management-overview).
 
@@ -37,7 +37,7 @@ The data management and analytics scenario is centered around onboarding new dat
 
 Azure Active Directory (Azure AD) entitlement management is an identity governance feature that automates workflows for access requests, access assignments, reviews, and expiration, supporting organizations to manage identity and the access lifecycle at scale. For guidance about configuring access, see an [overview of Azure AD entitlement management](/azure/active-directory/governance/entitlement-management-overview).
 
-The decision is based upon seeing scenarios where users receive access to a resource, they may hold on to access longer than is required for business purposes. Moving the entitlement packages allows delegate to non-administrators the ability to create access packages. These access packages contain resources, such as access to datasets, that users can request, and the delegated access package managers can define policies with rules for which users can request, who must approve their access, and when access expires.
+The decision is based upon seeing scenarios where users receive access to a resource, they might hold on to access longer than is required for business purposes. Moving the entitlement packages allows delegate to non-administrators the ability to create access packages. These access packages contain resources, such as access to datasets, that users can request, and the delegated access package managers can define policies with rules for which users can request, who must approve their access, and when access expires.
 
 For a recap of entitlement management and its value, see the [What is Azure Active Directory entitlement management?](https://www.youtube.com/watch?v=_Lss6bFrnQ8) video.
 
@@ -52,7 +52,7 @@ Data access management is divided into the following tiers:
 
 The diagram shows how:
 
-- Integration ops or data product onboard the new dataset or product to a data landing zone.
+- Integration ops or data product teams onboard the new dataset or product to a data landing zone.
 - An Azure AD group is created and assigned to the dataset. Access can be granted with Azure AD Pass-through Authentication or table access control in Azure Databricks or Azure Synapse Analytics.
 
 The following Azure AD group naming conventions are suggested for Azure AD Pass-through Authentication:
@@ -88,7 +88,7 @@ The following Azure AD group naming conventions are suggested for table access c
 1. If the enterprise wants to grant user permissions based on metadata (for example, a user's division, title, or location), then [dynamic groups in Azure AD](/azure/active-directory/enterprise-users/groups-create-rule) could be added as an approved group to the access package.
 
 > [!IMPORTANT]
-> The diagram illustrates adding Azure AD user groups. The same process can help with adding Azure service principals, which are used by data product teams for ingestion pipelines and more. It's recommended that you set up two lifecycle settings, one for users to request short-term access (30 days) and another for requesting longer access periods (90 days).
+> The diagram illustrates adding Azure AD user groups. The same process can help with adding Azure service principals, which are used by integration or data product teams for ingestion pipelines and more. It's recommended that you set up two lifecycle settings, one for users to request short-term access (30 days) and another for requesting longer access periods (90 days).
 
 ## Configure Azure AD entitlement management
 

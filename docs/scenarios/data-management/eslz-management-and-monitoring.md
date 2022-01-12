@@ -3,7 +3,7 @@ title: Management and monitoring for data management and analytics
 description: Learn how this enterprise-scale scenario can improve management and monitoring for data management and analytics in Azure.
 author: christophermschmidt
 ms.author: chrschm
-ms.date: 07/19/2021
+ms.date: 11/25/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -28,7 +28,7 @@ Here are some design considerations for data analytics on Azure monitoring and m
 
 ## Design recommendations
 
-When evaluating enterprise-scale analytics, consider the following design recommendations:
+When evaluating data management and analytics scenario, consider the following design recommendations:
 
 - Implement threat protection. For more information, see [Microsoft Sentinel](/azure/sentinel/overview).
 
