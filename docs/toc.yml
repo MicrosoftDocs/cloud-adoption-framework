@@ -90,6 +90,8 @@ items:
     items:
     - name: Overview
       href: strategy/index.md
+    - name: Assess cloud adoption strategy
+      href: strategy/cloud-adoption-strategy-evaluator.md      
     - name: Motivations
       href: strategy/motivations.md
     - name: Business outcomes
