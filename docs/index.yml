@@ -201,36 +201,36 @@ conceptualContent:
 # itemType: architecture, concept, deploy, download, get-started, how-to-guide, learn, overview, quickstart, reference, sample, tutorial, video, whats-new
 
   title: Assessments # < 60 chars (optional)
-  summary: Assessments help you plan your cloud journey. Use them to identify differences between your current state and your desired state. We'll provide personalized, curated recommendations to help you reach your desired state. # < 160 Chars (optional)
+  summary: Use assessments to help plan your cloud journey. Identify differences between your current and desired states—with personalized recommendations to help you reach your cloud adoption goals. # < 160 Chars (optional)
   items:
 
+     # Card
+    - title: Cloud Adoption Strategy Evaluator
+      links:
+        - url: /assessments/?mode=pre-assessment&id=8fefc6d5-97ac-42b3-8e97-d82701e55bab
+          itemType: quickstart
+          text: Assess your cloud adoption strategy, and get recommendations on building and advancing your cloud business case.
+    
     # Card
     - title: Cloud journey tracker
       links:
         - url: /assessments/?id=cloud-journey-tracker&mode=pre-assessment
           itemType: get-started
-          text: Identify your cloud adoption path based on the needs of your business.
+          text: Identify your cloud adoption path based on the unique needs of your business.
 
     # Card
     - title: Strategic Migration Assessment and Readiness Tool (SMART)
       links:
         - url: /assessments/?id=Strategic-Migration-Assessment&mode=pre-assessment
           itemType: get-started
-          text: Unblock migration efforts, improve processes, and drive business success.
+          text: Unblock your migration efforts, improve your processes, and drive your business success.
 
     # Card
     - title: Governance benchmark
       links:
         - url: https://www.cafbaseline.com
           itemType: quickstart
-          text: Identify gaps between your current state and business priorities, and get the right resources to help you address those gaps.
-
-    # Card
-    - title: Cloud Adoption Strategy Evaluator
-      links:
-        - url: /assessments/?mode=pre-assessment&id=8fefc6d5-97ac-42b3-8e97-d82701e55bab
-          itemType: quickstart
-          text: Assess your cloud adoption strategy and get recommendations on building or advancing your cloud business case.
+          text: Identify gaps between your current state and business priorities. Get the right resources to help you address the gaps.
 
 # additionalContent section (optional)
 
