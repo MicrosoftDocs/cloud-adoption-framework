@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: e2e-hybrid, think-tank
 ---
 
-# Services Observability for Azure Arc-enabled Kubernetes
+# Overview
 
 Observability is a characteristic of an application that refers to how well a system’s internal state or status can be understood from its external outputs. Computer systems are measured by observing CPU time, memory, disk space, latency, errors, etc. The more observable a system is, the easier it is to understand what it’s doing by looking at it.
 
