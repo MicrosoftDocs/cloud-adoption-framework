@@ -31,9 +31,7 @@ You might need extra Azure Synapse Analytics workspaces if your data integration
 
 ## Azure Synapse Analytics setup
 
-The first step in the deployment Azure Synapse Analytics is to set up an Azure Synapse workspace.
-
-As you need an Azure Data Lake Storage account, we recommend using a dedicated container on the workspace data lake account. This container is used as primary storage to store Spark metadata.
+The first step in the deployment Azure Synapse Analytics is to set up an Azure Synapse workspace which is [connected to an Azure Purview account](/azure/synapse-analytics/catalog-and-governance/quickstart-connect-azure-purview).
 
 ### Azure Synapse Analytics networking
 
