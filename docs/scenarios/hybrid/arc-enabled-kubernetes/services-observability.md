@@ -18,10 +18,12 @@ The observability of a system has a significant impact on its operating cost. Ob
 
 Service Observability is important as it allows you to understand performance and issues that are occurring with distributed and cloud systems that are based on dynamic architectures. Implementing a solution to achieve service observability will gain the following benefits:
 
-- Ensure end users can consume an application and business expectations are met. 
+- Ensure end users can consume an application and business expectations are met.
 - Understand an entire system and how it is working together by using a single pane of glass.
 - Establish a baseline for your system and understand how it changes with different circumstances.
 - Be able to generate action items from unexpected scenarios and behaviors.
+
+Azure Arc-enabled Kubernetes provides two integrated extension options which can help achieve services observability: [Open Service Mesh](/azure/azure-arc/kubernetes/tutorial-arc-enabled-open-service-mesh) and [Self-hosted API Management gateway](/azure/api-management/self-hosted-gateway-overview). These options will be covered in the following design consideration sections.
 
 ## Design considerations
 
@@ -66,7 +68,7 @@ The following diagram shows an example of a Service Mesh Proxy functionality of 
 
  ![Example observability with a Service Mesh Proxy](../../_images/eslz-svc-obs.png)
 
-### API Management Self-hosted ateway
+### API Management Self-hosted gateway
 
 With the integration between Azure API Management and Azure Arc on Kubernetes, you can deploy the API Management gateway component as an extension in an Azure Arc-enabled Kubernetes cluster. This allows a containerized version of API Management gateway to run in your Arc-enabled Kubernetes cluster. All self-hosted gateways are managed from the API Management service they are federated with, thus providing you with the visibility and unified management experience across all internal and external APIs.
 
