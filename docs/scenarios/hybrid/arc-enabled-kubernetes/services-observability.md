@@ -104,6 +104,11 @@ It is recommended to use Open Service Mesh which provides observability into the
 
 Both Azure Monitor and Azure Application Insights help you maximize the availability and performance of your applications and services by delivering a comprehensive solution for collecting, analyzing, and acting on telemetry from your cloud and on-premises environments. Azure Arc-enabled Open Service Mesh will have deep integrations into both of these Azure services, and provide a seamless Azure experience for viewing and responding to critical KPIs provided by OSM metrics. You can enable that by following the steps mentioned [here](https://docs.microsoft.com/en-us/azure/azure-arc/kubernetes/tutorial-arc-enabled-open-service-mesh#monitoring-application-using-azure-monitor-and-applications-insights).
 
+As a minimum, it is recommended to define the following three RED metrics which you should measure for all services:
+- **Request Rate**: The number of requests the service is receiving per second
+- **Errors**: The number or rate of failed requests
+- **Duration**: The amount of time it takes for a service to handle a request
+  
 Open Service Mesh provides several preconfigured service workbooks in Azure Monitor so you don't have to manually set up dashboards and charts. This detailed telemetry enables operators to observe service behavior, and empowers them to troubleshoot, maintain, and optimize their applications.
 
 By using the OSM monitoring workbook and Azure Monitor, you can:
