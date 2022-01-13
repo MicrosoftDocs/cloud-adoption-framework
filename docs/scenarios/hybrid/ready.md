@@ -39,7 +39,7 @@ Azure Arc enables hybrid and multicloud architectures and holds a set of technol
 
 Choosing a hybrid and multicloud environment isn't a binary decision, it's closer to a range of decisions. Before you configure your Azure environment or any other cloud environment, it's important to identify how your cloud environment will support your specific mix of cloud-hosting decisions. Here are some examples of common cloud mixes:
 
-[ ![Diagram that shows Three illustrations showing how different customers distribute workloads across cloud providers](./media/arc-servers-graphs.png)](./media/arc-servers-graphs.png#lightbox)
+[![Diagram that shows three illustrations of how different customers distribute workloads across cloud providers.](./media/arc-servers-graphs.png)](./media/arc-servers-graphs.png#lightbox)
 
 Each dark blue dot is a workload, and each light blue circle is a business process, supported by a distinct environment. Each cloud mix requires a different Azure environment configuration, as seen with our three reference customers:
 
@@ -91,7 +91,7 @@ Azure Arc extends the Azure Resource Manager (ARM) APIs so any workload can be r
 - Threat detection
 - Security vulnerability management and auditing
 
-[ ![Diagram that shows Azure Arc overview.](./media/arc-servers-unified-operations.png)](./media/arc-servers-unified-operations.png#lightbox)
+[![Diagram that shows Azure Arc overview.](./media/arc-servers-unified-operations.png)](./media/arc-servers-unified-operations.png#lightbox)
 
 ## Configure your initial Azure environment
 
