@@ -64,14 +64,14 @@ Raw data from source systems for each **data integration** or source will land i
 |--Source
 |---Entity
 |---LoadTS=YYMMDDHHMSS
-|       file001.parquet
-|       file001.parquet
+|----file001.parquet
+|----file001.parquet
 |-Sensitive(Personal data)
 |--Source
 |---Entity
 |---LoadTS=YYMMDDHHMSS
-|       file001.parquet
-|       file001.parquet
+|----file001.parquet
+|----file001.parquet
 ```
 
 This data is stored as-is in the data lake. It's consumed by an analytics engine such as Spark to do cleansing and enrichment operations to generate the curated data.
@@ -107,8 +107,8 @@ Enriched Directory Layout
 |----Dataset
 |-----Entity
 |------LoadTS=YYMMDDHHMMSS
-|        file001.parquet
-|        file001.parquet
+|----file001.parquet
+|----file001.parquet
 |---Sensitive (Personal data)
 |----Dataset
 |-----Entity
@@ -143,8 +143,8 @@ Data assets in this zone are typically highly governed and well-documented. Perm
 |----Dataset
 |-----Entity
 |------LoadTS=YYMMDDHHMMSS
-|        file001.parquet
-|        file001.parquet
+|----file001.parquet
+|----file001.parquet
 |---Sensitive(Personal data)
 |----Dataset
 |-----Entity
