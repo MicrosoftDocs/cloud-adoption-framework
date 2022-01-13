@@ -25,6 +25,16 @@ Service Observability is important as it allows you to understand performance an
 
 Azure Arc-enabled Kubernetes provides two integrated extension options which can help achieve services observability: [Open Service Mesh](/azure/azure-arc/kubernetes/tutorial-arc-enabled-open-service-mesh) and [Self-hosted API Management gateway](/azure/api-management/self-hosted-gateway-overview). These options will be covered in the following design consideration sections.
 
+## Architecture
+
+The following diagram illustrates the three pillars of Services Observability with data volume impact.
+
+![Services Observability Pillars](../../_images/eslz-svc-obs-pillars.png)
+
+The following diagram shows the different Open Service Mesh components running in an Arc-enabled Kubernetes cluster. Additionally, this shows a sample application enabled in the service mesh, which automatically gets configured with an Envoy side-car container.
+
+![Open Service Mesh running in Azure Arc-enabled Kubernetes](../../_images/eslz-svc-obs-osm.png)
+
 ## Design considerations
 
 Metrics, logs, and traces are the three pillars of observability. For a system to be observable, metrics, logs, and traces should be incorporated into your observability strategy.
@@ -51,7 +61,8 @@ The following sections provide an overview on service observability using a serv
 
 A service mesh provides capabilities like traffic management, resiliency, policy enforcement, transport security, identity security, and observability to your workloads. Your application is decoupled from these operational capabilities and the service mesh moves them out of the application layer, and down to the infrastructure layer. This is done by a high-performance proxy that mediates all the inbound and outbound traffic to a service.
 
-- Azure Arc-enabled Kubernetes supports [Open Service Mesh (OSM)]( https://openservicemesh.io/), a CNCF project, to be deployed as an [extension](/azure/azure-arc/kubernetes/tutorial-arc-enabled-open-service-mesh). Open Service Mesh is a lightweight, extensible, Cloud Native service mesh that allows users to uniformly manage, secure and get out-of-the-box observability features for highly dynamic microservice environments. Other popular Service Mesh’s which will require vendor support include: [Istio](https://istio.io/), [Consul Connect](https://www.hashicorp.com/products/consul/multi-platform-service-mesh/), [Linkerd](https://linkerd.io/2.11/overview/).
+- Azure Arc-enabled Kubernetes supports [Open Service Mesh (OSM)]( https://openservicemesh.io/), a CNCF project, to be deployed as an [extension](/azure/azure-arc/kubernetes/tutorial-arc-enabled-open-service-mesh). Open Service Mesh is a lightweight, extensible, Cloud Native service mesh that allows users to uniformly manage, secure and get out-of-the-box observability features for highly dynamic microservice environments. 
+- Other popular Service Mesh’s which will require vendor support include: [Istio](https://istio.io/), [Consul Connect](https://www.hashicorp.com/products/consul/multi-platform-service-mesh/), [Linkerd](https://linkerd.io/2.11/overview/).
 - Depending on what features are used, when implementing a service mesh, there comes additional responsibility on Application Operators who may need to define a configuration for each service such as access rules and onboarding services. Additionally, Cluster Operators will need to manage and be aware of the Service Mesh controller. Due to how service mesh leverages the [side-car pattern](/azure/architecture/patterns/sidecar), when debugging Egress and Ingress, access logs from the service mesh control plane and sidecar will be required.
 
 ### Service Mesh Observability
