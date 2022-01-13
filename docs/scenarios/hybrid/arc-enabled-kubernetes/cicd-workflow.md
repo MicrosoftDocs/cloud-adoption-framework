@@ -87,7 +87,7 @@ Platform Operators and Application Operators have several options for managing K
   - If using Kustomize, Flux has a Kustomize-controller which specialized in running continuous delivery pipelines for infrastructure and workloads defined with Kubernetes manifests and assembled with Kustomize. You can create a Kustomization object to manage that process.
 - With Azure Arc-enabled Kubernetes, there is a list of available extensions which become managed and supported by Microsoft instead of requiring you to manage the lifecycle and support of the component. Some of these have Open-Source alternative options, an example of this is the Azure Key Vault Secrets Provider. Managing it outside of the extension process allows you more control of these components but adds an additional overhead of support and lifecycle management.
 
-### CI/CD Flow
+### Continues Integration and Continues Delivery (CI/CD) Flow
 
 #### Application pipeline
 
@@ -122,7 +122,7 @@ For all updates to your configuration, to verify changes have been successfully 
 #### Secret Management
 
 - Avoid storing plain text or base64 encoded secrets in your Git repository, instead consider integrating to an external secrets provider such as Azure Key Vault. The [Azure Key Vault Provider for Secrets Store CSI Driver](/azure/azure-arc/kubernetes/tutorial-akv-secrets-provider) allows for the integration of an Azure key vault as a secrets store with an Azure Kubernetes Service (AKS) cluster via a CSI volume. This is available through Azure Arc-enabled Kubernetes extension.
-- Another alternative to manage secrets, is to use [Bitnami's Sealed Secrets](https://Github.com/bitnami-labs/sealed-secrets/releases), which works on the concept of public and private keys. This allows operators to store the one-way encrypted secret using a public key in Git, which can only be decrypted by the private key which is used by a SealedSecrets controller running in your cluster.
+- Another alternative to manage secrets is to use [Bitnami's Sealed Secrets](https://Github.com/bitnami-labs/sealed-secrets/releases), which works on the concept of public and private keys. This allows operators to store the one-way encrypted secret using a public key in Git, which can only be decrypted by the private key which is used by a SealedSecrets controller running in your cluster.
 
 ## Design Recommendations
 
@@ -185,6 +185,7 @@ The following three Git repositories are included in the design:
 For more guidance for your hybrid cloud adoption journey,  review the following:
 
 - To learn more about GitOps with Azure Arc on Kubernetes, check out the [Conceptual GitOps with Fluxv2](/azure/azure-arc/kubernetes/conceptual-Gitops-flux2)
+- Experience Azure Arc-enabled Kubernetes with a basic GitOps flow from the [Azure Arc Jumpstart proof of concept](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_k8s/day2/cluster_api/cluster_api_gitops_basic/#deploy-gitops-configurations-and-perform-basic-gitops-flow-on-cluster-api-as-an-azure-arc-connected-cluster-flux-v2)
 - To learn more about GitOps with Azure Arc on Kubernetes, check out the [Use GitOps with Fluxv2](/azure/azure-arc/kubernetes/tutorial-use-Gitops-flux2)
 - To learn more about GitOps with Azure Arc on Kubernetes, check out the [Conceptual GitOps Fluxv2 CI/CD Process](/azure/azure-arc/kubernetes/conceptual-Gitops-flux2-ci-cd)
 - To learn more about GitOps with Azure Arc on Kubernetes, check out the [Tutorial to implement Fluxv2 CI/CD](/azure/azure-arc/kubernetes/tutorial-Gitops-flux2-ci-cd)
