@@ -21,7 +21,7 @@ This article helps expose many considerations about data management and analytic
 Data management and analytics is aligned to [innovation focused motivations](../../strategy/motivations.md). Customers who integrate this scenario into their cloud adoption strategy are motivated by the following common drivers:
 
 - A scalable analytics framework designed to enable building an enterprise data platform
-- Self service to empower the user in data exploration, data asset creation, and product development
+- Self-service to empower the user in data exploration, data asset creation, and product development
 - Foster a data led culture with reusable data assets, data communities, secure third-party exchange, and in-place sharing
 - Share data with confidence secured by policies, common identity, confidentiality, and encryption
 - Improved customer experiences and engagements
@@ -83,6 +83,32 @@ For more information, see [What is data governance?](./govern.md).
 
 Business and technology leaders need to develop the mindset and strategies required to generate value from data and scale quickly in a simplified structured manner.
 
+## Culture
+
+To build a successful data strategy, you need a data-driven culture. One that fosters open, collaborative participation consistently. This is so the entire workforce can learn, communicate, and improve the organization's business outcomes. It will also improve an employee's own ability to generate impact or influence, backed by data. Where you start on the journey will depend on your organization, your industry, and where you in the maturity curve. Let's look at what a maturity curve looks like:
+
+### Level 0
+
+Data is not exploited programmatically and consistently. The data focus within the company is from an application development perspective. On this level, we commonly see unplanned analytics projects. Additionally, each application is highly specialized to the unique data and stakeholder needs. Each has significant code bases and engineering teams, with many being engineered outside of IT as well. Finally, use case enablement and analytics are siloed.
+
+### Level 1
+
+Here, we see teams being formed, strategy being created, but analytics still is departmentalized. At this level, organizations tend to be good at traditional data capture and analytics. They could have a level of commitment to cloud-based approaches; for example, they could already be accessing data from the cloud.
+
+### Level 2
+
+The innovation platform is almost ready, with workflows in place to deal with data quality, and the organization can answer a few "why" questions. At this level, organizations are actively looking for an end-to-end data strategy with centrally governed data lake stores controlling data store sprawl and improving data discoverability. They are ready for smart and intelligent applications that bring compute to the centrally governed data lakes, reducing the need for federated copies of key data, reducing privacy risks and reducing compute costs. They are also ready for multitenant, centrally hosted shared data services for common data computing tasks and recognize the value of this to enable the speed of insights from data science-driven intelligence services.
+
+### Level 3
+
+Some of the characteristics of this level are a holistic approach to data and projects related to data being deeply integrated with business outcomes. We would also see predictions being done using analytics platforms. At this level, organizations are unlocking digital innovation from both a data estate and application development perspective. They have the foundational data services including data lake(s) and shared data services in place. Multiple teams across the company are successfully delivering on critical business workloads, key business use cases, and measurable outcomes. Telemetry is being used to identify new shared data services. IT is a trusted advisor to teams across the company to help improve critical business processes through the end-to-end trusted and connected data strategy.
+
+### Level 4
+
+Here we see the entire company using a data-driven culture, frameworks, and standards enterprise. We also see automation, centers of excellence around analytics or automation, and data-driven feedback loops in action. One of the outcomes of a data-driven culture, is the use of AI in a meaningful way, and here it's easy to define a maturity model as the one shown below.
+
+:::image type="content" source="./images/data-strategy-maturity.png" alt-text="Diagram of an organization's maturity evolving." lightbox="./images/data-strategy-maturity.png":::
+
 ## Business aligned objectives
 
 Identifying key priorities in line with the business vision and keeping **"think big, start small, and act fast"** ideology is the fundamental key for success. Picking up the right use case doesn't always need to be long haul difficult vetting process. It could be an ongoing problem in any business unit where there's enough data to validate its return on investment, more appetite, and easy buy-in. Things can move quickly and that's where most of the organization can be struggling to get started.
@@ -128,7 +154,7 @@ Choosing the right storage based on the workload is key. Even if you don't get i
 
 Your data processing needs will vary according to the workload. For example, most big data processing has elements of both real-time and batch processing. Most enterprises also have elements of time series processing requirements and the need to process free-form text for enterprise search capabilities.
 
-The most popular organizational processing requirements come from online transaction processing (OLTP). Certain workloads need specialized processing such as high performance computing (HPC), also called "big compute". These use many CPU or GPU-based computers to solve complex mathematical tasks.
+The most popular organizational processing requirements come from online transaction processing (OLTP). Certain workloads need specialized processing such as high-performance computing (HPC), also called "big compute". These use many CPU or GPU-based computers to solve complex mathematical tasks.
 
 For certain specialized workloads, customers can secure execution environments like Azure confidential computing, which helps users secure data while it's in use on public cloud platforms. This state is required for efficient processing. The data is protected inside a trusted execution environment (TEE), also known as an enclave. This environment protects the code and data against viewing and modification from outside of the TEE. This creates the ability to train AI models using data sources from different organizations without sacrificing data confidentiality.
 
@@ -150,7 +176,7 @@ After making all the capability provisions, and taking a principled architectura
 
 ## Data strategy summary
 
-Taking a principled approach on additional, but relevant considerations, such as data governance and responsible AI will pay dividends later.
+Taking a principled approach on other, but relevant considerations, such as data governance and responsible AI will pay dividends later.
 
 At Microsoft, we use four core principles of fairness, reliability and safety, privacy and security, and inclusiveness. Underpinning these principles are two foundational principles of transparency and accountability.
 
@@ -160,7 +186,7 @@ In addition to practices, we've developed a set of tools to help others understa
 
 To further collaboration, we also open-sourced many tools such as interpret machine learning and Fairlearn that others can use to contribute and build upon alongside democratizing tools through Azure Machine Learning.
 
-The pivot to becoming a data-driven organization is fundamental to deliver competitive advantage in the new normal. We want to help our customers shift from an application only approach to an application and data-led approach, helping to create an end-to-end data strategy that can ensure repeatability and scalability across current and future use cases that impact business outcomes.
+The pivot to becoming a data-driven organization is fundamental to deliver competitive advantage in the new normal. We want to help our customer's shift from an application only approach to an application and data-led approach, helping to create an end-to-end data strategy that can ensure repeatability and scalability across current and future use cases that impact business outcomes.
 
 ![Diagram of unlocking innovation.](./images/data-strategy-innovation.png)
 
@@ -172,7 +198,7 @@ There must be clear understanding around the adopted approach and desired common
 
 Communication is one of the most important elements of this framework. It requires a communication process to be devised between leadership, business, IT, and the delivery teams. Communication helps deliver effectively in the context of the current project, and it established a forum to stay in line, up-to date, and focused on the overall objective of formulating a holistic data strategy for the future.
 
-Engagement is essential between team members designing and implementing the data strategy, and team members contributing, consuming, and exploiting the data, such as the business units who will make decisions and build outcomes based upon the data. Put another way, data strategies and associated data platforms that are built without engagement of the end users of such platforms risk challenges in relevance and adoption.
+Engagement is essential between team members designing and implementing the data strategy, and team members contributing, consuming, and exploiting the data, such as the business units who will make decisions and build outcomes based upon the data. Put another way, data strategies, and associated data platforms that are built without engagement of the end users of such platforms risk challenges in relevance and adoption.
 
 There are two key strategic processes that will help to deliver successfully in the context of this framework:
 

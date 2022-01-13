@@ -34,7 +34,7 @@ Data is not exploited programmatically and consistently. The data focus within t
 
 ### Level 1
 
-Here, we see teams being formed, strategy being created, but analytics still is departmentalized. At this level, organizations tend to be good at traditional data capture and analytics. They may also have a level of commitment to cloud-based approaches; for example, they may already be accessing data from the cloud.
+Here, we see teams being formed, strategy being created, but analytics still is departmentalized. At this level, organizations tend to be good at traditional data capture and analytics. They could  also have a level of commitment to cloud-based approaches; for example, they could already be accessing data from the cloud.
 
 ### Level 2
 
