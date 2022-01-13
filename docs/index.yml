@@ -11,7 +11,7 @@ metadata:
   services: cloud-adoption-framework
   author: JanetCThomas
   ms.author: janet
-  ms.date: 06/17/2021
+  ms.date: 01/13/2022
   ms.topic: hub-page
   ms.service: cloud-adoption-framework
   ms.subservice: overview
@@ -209,14 +209,14 @@ conceptualContent:
       links:
         - url: /assessments/?mode=pre-assessment&id=8fefc6d5-97ac-42b3-8e97-d82701e55bab
           itemType: quickstart
-          text: Assess your cloud adoption strategy, and get recommendations on building and advancing your cloud business case.
+          text: Assess your cloud adoption strategy, and receive recommendations for building and advancing your cloud business case.
     
     # Card
-    - title: Cloud journey tracker
+    - title: Cloud Journey Tracker
       links:
         - url: /assessments/?id=cloud-journey-tracker&mode=pre-assessment
           itemType: get-started
-          text: Identify your cloud adoption path based on the unique needs of your business.
+          text: Identify your cloud adoption path, based on the unique needs of your business.
 
     # Card
     - title: Strategic Migration Assessment and Readiness Tool (SMART)

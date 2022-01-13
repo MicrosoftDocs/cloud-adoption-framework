@@ -3,7 +3,7 @@ title: What's new in the Microsoft Cloud Adoption Framework
 description: Learn about recent updates to the Microsoft Cloud Adoption Framework for Azure.
 author: JanetCThomas
 ms.author: janet
-ms.date: 01/04/2022
+ms.date: 01/13/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: general
@@ -12,7 +12,7 @@ ms.custom: internal
 
 # What's new in the Microsoft Cloud Adoption Framework for Azure
 
-Here's a list of recent changes we've made to the Cloud Adoption Framework.
+Here are the recent changes we've made to the Cloud Adoption Framework.
 
 This Framework is collaboratively built with customers, partners, and internal Microsoft teams. We release new and updated content as it becomes available. New releases enable you to test, validate, and refine the Framework's guidance along with us.
 
@@ -20,7 +20,9 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
 ## January 2022
 
-We launched [assessment_name], a new assessment built around the principles of cloud economics—which evaluates your cloud adoption strategy, and provides recommendations to help build a robust business case that supports your organization's unique cloud journey.
+### Launch of Cloud Adoption Strategy Evaluator in the Microsoft Cloud Adoption Framework
+
+We've launched the [Cloud Adoption Strategy Evaluator](https://docs.microsoft.com/assessments/?mode=pre-assessment&id=8fefc6d5-97ac-42b3-8e97-d82701e55bab), a new assessment built around the principles of cloud economics—which evaluates your cloud adoption strategy, and provides recommendations to help build a robust business case that supports your organization's unique cloud journey.
 
 ## December 2021
 
