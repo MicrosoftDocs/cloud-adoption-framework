@@ -97,7 +97,7 @@ Here, we see teams being formed, strategy being created, but analytics still is 
 
 ### Level 2
 
-The innovation platform is almost ready, with workflows in place to deal with data quality, and the organization can answer a few "why" questions. At this level, organizations are actively looking for an end-to-end data strategy with centrally governed data lake stores controlling data store sprawl and improving data discoverability. They are ready for smart and intelligent applications that bring compute to the centrally governed data lakes, reducing the need for federated copies of key data, reducing privacy risks and reducing compute costs. They are also ready for multitenant, centrally hosted shared data services for common data computing tasks and recognize the value of this to enable the speed of insights from data science-driven intelligence services.
+The innovation platform is almost ready, with workflows in place to deal with data quality, and the organization can answer a few "why" questions. At this level, organizations are actively looking for an end-to-end data strategy with centrally governed data lake stores controlling data store sprawl and improving data discoverability. They are ready for smart and intelligent applications that bring compute to the centrally governed data lakes, reducing the need for federated copies of key data, reducing privacy risks and reducing compute costs. They are also ready for multitenant, centrally-hosted shared data services for common data computing tasks and recognize the value of this to enable the speed of insights from data science-driven intelligence services.
 
 ### Level 3
 
