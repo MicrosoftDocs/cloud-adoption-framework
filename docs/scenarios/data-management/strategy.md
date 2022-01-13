@@ -186,7 +186,7 @@ In addition to practices, we've developed a set of tools to help others understa
 
 To further collaboration, we also open-sourced many tools such as interpret machine learning and Fairlearn that others can use to contribute and build upon alongside democratizing tools through Azure Machine Learning.
 
-The pivot to becoming a data-driven organization is fundamental to deliver competitive advantage in the new normal. We want to help our customer's shift from an application only approach to an application and data-led approach, helping to create an end-to-end data strategy that can ensure repeatability and scalability across current and future use cases that impact business outcomes.
+The pivot to becoming a data-driven organization is fundamental to deliver competitive advantage in the new normal. We want to help our customers' shift from an application only approach to an application and data-led approach, helping to create an end-to-end data strategy that can ensure repeatability and scalability across current and future use cases that impact business outcomes.
 
 ![Diagram of unlocking innovation.](./images/data-strategy-innovation.png)
 
