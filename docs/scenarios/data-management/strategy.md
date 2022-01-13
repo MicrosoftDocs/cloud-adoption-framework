@@ -97,7 +97,7 @@ Here, we see teams being formed, strategy being created, but analytics still is 
 
 ### Level 2
 
-The innovation platform is almost ready, with workflows in place to deal with data quality, and the organization can answer a few "why" questions. At this level, organizations are actively looking for an end-to-end data strategy with centrally governed data lake stores controlling data store sprawl and improving data discoverability. They are ready for smart and intelligent applications that bring compute to the centrally governed data lakes, reducing the need for federated copies of key data, reducing privacy risks and reducing compute costs. They are also ready for multitenant, centrally hosted shared data services for common data computing tasks and recognize the value of this to enable the speed of insights from data science-driven intelligence services.
+The innovation platform is almost ready, with workflows in place to deal with data quality, and the organization can answer a few "why" questions. At this level, organizations are actively looking for an end-to-end data strategy with centrally governed data lake stores controlling data store sprawl and improving data discoverability. They are ready for smart and intelligent applications that bring compute to the centrally governed data lakes, reducing the need for federated copies of key data, reducing privacy risks and reducing compute costs. They are also ready for multitenant, centrally-hosted shared data services for common data computing tasks and recognize the value of this to enable the speed of insights from data science-driven intelligence services.
 
 ### Level 3
 
@@ -186,7 +186,7 @@ In addition to practices, we've developed a set of tools to help others understa
 
 To further collaboration, we also open-sourced many tools such as interpret machine learning and Fairlearn that others can use to contribute and build upon alongside democratizing tools through Azure Machine Learning.
 
-The pivot to becoming a data-driven organization is fundamental to deliver competitive advantage in the new normal. We want to help our customer's shift from an application only approach to an application and data-led approach, helping to create an end-to-end data strategy that can ensure repeatability and scalability across current and future use cases that impact business outcomes.
+The pivot to becoming a data-driven organization is fundamental to deliver competitive advantage in the new normal. We want to help our customers' shift from an application only approach to an application and data-led approach, helping to create an end-to-end data strategy that can ensure repeatability and scalability across current and future use cases that impact business outcomes.
 
 ![Diagram of unlocking innovation.](./images/data-strategy-innovation.png)
 
