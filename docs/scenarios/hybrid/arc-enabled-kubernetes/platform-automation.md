@@ -30,7 +30,7 @@ The following are some design considerations before onboarding Azure Arc-enabled
 * **Environment Preparation:** To deploy and configure the Azure Arc-enabled Kubernetes agent, a cluster admin role is required on your Kubernetes cluster.
 * **Onboard Azure Arc-enabled Kubernetes:** Decide how you'll install and configure the Azure agent on your cluster.  Typically you'll deploy the agent using your organization's standard automation tool(s).
 * **Cluster Extensions:** Determine which Azure capabilities you want on your Azure Arc-enabled Kubernetes cluster.  Some capabilities require a cluster extension to be deployed.
-* **Lifecycle Automation:** Create an Azure Arc agent and Azure Arc-enabled Kubernetes extensions update management strategy.
+* **Agent lifecycle automation:** Create an Azure Arc agent and Azure Arc-enabled Kubernetes extensions update management strategy.
 
 ## Design recommendations
 
