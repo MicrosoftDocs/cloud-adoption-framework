@@ -34,7 +34,7 @@ The following are some design considerations before onboarding Azure Arc-enabled
 
 ## Design recommendations
 
-The following are general design recommendations for Azure Arc-enabled Kubernetes clusters:
+The following are design recommendations for Azure Arc-enabled Kubernetes clusters:
 
 ### Environment preparation
 
