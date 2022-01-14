@@ -27,9 +27,15 @@ Conceptually, extensions for Azure Arc-enabled Kubernetes can be thought of as t
 
 ![Azure Arc-enabled infrastructure services](./media/arc-infra-services-extensions.png)
 
+In the above image, Azure Arc-enabled infrastructure extensions are depicted.
+
 ![Azure Arc-enabled services extensions](./media/arc-services-extensions.png)
 
+In the above image, Azure Arc-enabled service extensions are depicted.
+
 ![Cluster Extension Diagram](./media/arc-kubernetes-cluster-extensions.png)
+
+Finally, the above image illustrates the overall integration for extensions for Azure Arc-enabled Kubernetes clusters.
 
 Additionally, while extensions provide additional capability for Azure Arc-enabled Kubernetes clusters, consider your specific use case and needs before installing any extensions.  Furthermore, consider how extensions will be kept up-to-date over the lifespan of your cluster.
 
