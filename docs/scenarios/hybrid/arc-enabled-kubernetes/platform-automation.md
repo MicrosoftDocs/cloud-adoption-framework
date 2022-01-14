@@ -60,7 +60,7 @@ For cases where extensions are common across all of your Arc-enabled Kubernetes 
 - More details on using policy with Azure Arc-enabled Kubernetes clusters can be found in the [Security, governance and compliance for Azure Arc-enabled Kubernetes](./governance-disciplines.md) section of this guide.
 
 
-### Lifecycle Automation
+### Agent and extensions lifecycle automation
 
 - During the onboarding process, Azure Arc-enabled Kubernetes provision agents onto your Kubernetes cluster. These agent versions will change as Azure Arc technologies evolved and should be regularly upgraded. We recommend enabling the auto-upgrade feature for the Azure Arc agents running inside your cluster, this is the default behavior when onboarding a cluster to Azure Arc. Review the [Upgrade Agents](/azure/azure-arc/kubernetes/agent-upgrade) for more information on the auto-upgrade feature and version support policy.
 
