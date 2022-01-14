@@ -39,7 +39,7 @@ The following are general design recommendations for Azure Arc-enabled Kubernete
 ### Environment preparation
 
 - Create a [dedicated resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups) to include only Azure Arc-enabled Kubernetes clusters and centralize management and monitoring of these resources.
-- Evaluate and develop an IT-aligned [tagging strategy](/azure/cloud-adoption-framework/decision-guides/resource-tagging/) that can help reduce the complexity of managing your Azure Arc-enabled Kubernetes and simplifies the process of making management decisions.
+- Evaluate and develop an IT-aligned [tagging strategy](/azure/cloud-adoption-framework/decision-guides/resource-tagging/) that can help reduce the complexity of managing your Azure Arc-enabled Kubernetes and simplify the process of making management decisions.
 - A kubeconfig file with context pointing to the Kubernetes cluster which will be Arc-enabled.
 - Create a Service Principal to onboard Kubernetes clusters non-interactively using the Azure CLI. Review the [Identity and access management critical design area](./identity-access-management.md) for more information surrounding required permissions.
 
