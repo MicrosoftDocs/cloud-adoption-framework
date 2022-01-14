@@ -49,7 +49,7 @@ Data management and analytics scenario offers enterprises a strategic design pat
 
 At the highest level, data management and analytics scenario uses a data management capability, which is enabled through the data management landing zone. This zone is responsible for the federated data governance of an organization of the (self-service) platform, as well as the data domains that drive business value through data products. The benefit of this approach is that it abstracts away all technical complexity, while adhering to the same standards. It ensures that there is no proliferation of technology. It also allows enterprises to start modular, with a small footprint, and then grow over time.
 
-The data management zone, as you can see in the following diagram, surrounds all data domains. It glues all domains together and provides the oversight that Woodgrove Bank is looking for.
+The data management landing zone, as you can see in the following diagram, surrounds all data domains. It glues all domains together and provides the oversight that Woodgrove Bank is looking for.
 
 :::image type="content" source="../images/data-mesh-plane.png" alt-text="Diagram showing how data mesh intelligently distributes data products between data domains." lightbox="../images/data-mesh-plane.png":::
 
@@ -99,15 +99,15 @@ You can use managed identities to ensure that a least privilege access model is 
 
 Data management and analytics scenario is designed with data mesh in mind. Data management and analytics scenario provides a proven approach by which organizations can share data across many data domains. Data management and analytics scenario allows domains to have autonomy to make choices, and at the same time it governs the architecture by ring-fencing it with data management services.
 
-A consideration to keep in mind, when you're implementing data mesh, is how to logically group and organize your domains. This requires an enterprise view and is likely also a cultural shift for your organization. The shift requires you to federate data ownership among data domains and owners who are accountable for providing their data as products. It also requires teams to conform to centralized capabilities that are offered by the data management zone. This new approach might require individual teams to give up their current mandates, which is likely to generate resistance. You might have to make certain political choices and strike a balance between centralized and decentralized approaches.
+A consideration to keep in mind, when you're implementing data mesh, is how to logically group and organize your domains. This requires an enterprise view and is likely also a cultural shift for your organization. The shift requires you to federate data ownership among data domains and owners who are accountable for providing their data as products. It also requires teams to conform to centralized capabilities that are offered by the data management landing zone. This new approach might require individual teams to give up their current mandates, which is likely to generate resistance. You might have to make certain political choices and strike a balance between centralized and decentralized approaches.
 
-You can scale a data mesh architecture by adding more landing zones to the architecture for individual domains. These landing zones use virtual network peering to connect to the data management zone and all other landing zones. This pattern allows you to share datasets and resources across zones. And by splitting into separate zones, you can spread workloads across Azure subscriptions and resources. This approach allows you to implement the data mesh organically.
+You can scale a data mesh architecture by adding more landing zones to the architecture for individual domains. These landing zones use virtual network peering to connect to the data management landing zone and all other landing zones. This pattern allows you to share datasets and resources across zones. And by splitting into separate zones, you can spread workloads across Azure subscriptions and resources. This approach allows you to implement the data mesh organically.
 
 ## Learn more
 
 Microsoft resources:
 
-- [Data management zone template](https://github.com/Azure/data-management-zone)
+- [Data management landing zone template](https://github.com/Azure/data-management-zone)
 - [Data landing zone template](https://github.com/Azure/data-landing-zone)
 
 Article by data mesh founder Zhamak Dehghani:

@@ -28,7 +28,7 @@ Azure Machine Learning, the Azure platform, and Azure AI services can work toget
 
 A Cloud Adoption Framework (CAF) landing zone foundation, data management and analytics scenario data landing zones, and the configuration of Azure Machine Learning set up machine learning professionals with a preconfigured environment to which they can repeatedly deploy new machine learning workloads or migrate existing workloads. These capabilities can help machine learning professionals to gain more agility and value for their time.
 
-The following design principles can guide the implementation of Azure Machine Learning azure landing zones:
+The following design principles can guide the implementation of Azure Machine Learning Azure landing zones:
 
 - **Accelerated data access:** Preconfigure landing zone storage components as data stores in the Azure Machine Learning workspace.
 
