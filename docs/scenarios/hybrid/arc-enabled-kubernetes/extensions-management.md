@@ -25,17 +25,9 @@ Consider the following factors when designing how to use Azure Arc-enabled Kuber
 
 Conceptually, extensions for Azure Arc-enabled Kubernetes can be thought of as those for Azure Arc-enabled infrastructure services and those for Azure Arc-enabled services.  While this distinction is not made explicitly for the name of each extension, it is helpful to consider keeping these two categories of extensions in mind when designing for deploying Azure Arc-enabled Kubernetes.  For example, the Microsoft Defender for Cloud extension can be thought of as an extension for Azure Arc-enabled infrastructure services, whereas the Azure App Service for Azure Arc extension can be thought of as an Azure Arc-enabled services extension.
 
-![Azure Arc-enabled infrastructure services](./media/arc-infra-services-extensions.png)
-
-In the above image, Azure Arc-enabled infrastructure extensions are depicted.
-
-![Azure Arc-enabled services extensions](./media/arc-services-extensions.png)
-
-In the above image, Azure Arc-enabled service extensions are depicted.
-
 ![Cluster Extension Diagram](./media/arc-kubernetes-cluster-extensions.png)
 
-Finally, the above image illustrates the overall integration for extensions for Azure Arc-enabled Kubernetes clusters.
+The above image illustrates the overall integration for extensions for Azure Arc-enabled Kubernetes clusters.  
 
 Additionally, while extensions provide additional capability for Azure Arc-enabled Kubernetes clusters, consider your specific use case and needs before installing any extensions.  Furthermore, consider how extensions will be kept up-to-date over the lifespan of your cluster.
 
