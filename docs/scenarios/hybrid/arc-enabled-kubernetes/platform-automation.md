@@ -29,7 +29,7 @@ The following are some design considerations before onboarding Azure Arc-enabled
 * **Network Connectivity:** Your cluster has connectivity from your on-premises network or third-party cloud providers to Azure - either directly connected, via a proxy server, or private endpoint.  See the [Network connectivity for Azure Arc-enabled Kubernetes](./network-connectivity.md) section of this guide for design considerations and recommendations.
 * **Environment Preparation:** To deploy and configure the Azure Arc-enabled Kubernetes agent, a cluster admin role is required on your Kubernetes cluster.
 * **Onboard Azure Arc-enabled Kubernetes:** Decide how you'll install and configure the Azure agent on your cluster.  Typically you'll deploy the agent using your organization's standard automation tool(s).
-* **Cluster Extensions:** Determine which Azure capabilities you want on your Azure Arc-enabled Kubernetes cluster.  Some capabilities require a cluster extension to be deployed.
+* **Cluster Extensions:** Determine which Azure capabilities you want on your Azure Arc-enabled Kubernetes cluster.  Some services require a cluster extension to be deployed.
 * **Agent lifecycle automation:** Create an Azure Arc agent and Azure Arc-enabled Kubernetes extensions update management strategy.
 
 ## Design recommendations
