@@ -30,7 +30,7 @@ For more information, see [Data management and analytics scenario architecture d
 
 ## Single data landing zone
 
-The following diagram shows an overview of an data management and analytics scenario platform with a data management landing zone and a single data landing zone.
+The following diagram shows an overview of a data management and analytics scenario platform with a data management landing zone and a single data landing zone.
 
 ![Diagram of enterprise-scale data management and single data landing zone.](./images/high-level-design-single-data-landing-zone.png)
 
@@ -38,7 +38,7 @@ This approach allows you to conform to the principles of data management and ana
 
 ## Multiple data landing zones
 
-This diagram is an overview of an data management and analytics scenario platform with a central data management landing zone and multiple data landing zones:
+This diagram is an overview of a data management and analytics scenario platform with a central data management landing zone and multiple data landing zones:
 
 ![Diagram of enterprise-scale data management and multiple data landing zones.](./images/high-level-design-multiple-landing-zones.png)
 
