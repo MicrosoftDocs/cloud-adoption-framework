@@ -3,7 +3,7 @@ title: Cloud rationalization
 description: Learn about cloud rationalization, the process of evaluating assets to determine the best way to migrate or modernize each asset in the cloud.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 1/07/2021
+ms.date: 01/07/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
@@ -24,7 +24,7 @@ Good rationalization requires a deep knowledge of the workload and associated as
 
 ### Myth: Cloud adoption has to wait for all workloads to be rationalized
 
-Rationalizing an entire IT portfolio or even a single datacenter can delay the realization of business value by months or even years. Full rationalization should be avoided when possible. Instead, use the [Power of 10 approach to release planning](./rationalize.md#release-planning) to make wise decisions about the next 10 workloads that are slated for cloud adoption.
+Rationalizing an entire IT portfolio or even a single datacenter can delay the realization of business value by months or even years. Avoid full rationalization when possible. Instead, use the [Power of 10 approach to release planning](./rationalize.md#release-planning) to make wise decisions about the next 10 workloads that are slated for cloud adoption.
 
 ### Myth: Business justification has to wait for all workloads to be rationalized
 
@@ -48,16 +48,16 @@ Common drivers might include:
 
 Quantitative analysis factors:
 
-- VM size, including CPU, memory, and storage.
-- Dependencies like network traffic.
-- Asset compatibility.
+- VM size, including CPU, memory, and storage
+- Dependencies like network traffic
+- Asset compatibility
 
 Qualitative analysis factors:
 
-- Tolerance for change.
-- Business priorities.
-- Critical business events.
-- Process dependencies.
+- Tolerance for change
+- Business priorities
+- Critical business events
+- Process dependencies
 
 ## Refactor
 
@@ -73,17 +73,17 @@ Common drivers might include:
 
 Quantitative analysis factors:
 
-- Application asset size like CPU, memory, and storage.
-- Dependencies like network traffic.
-- User traffic like page views, time on page, and load times.
-- Development platforms like languages, data platforms, and middle tier services.
-- Database that includes CPU, memory, storage, and version.
+- Application asset size like CPU, memory, and storage
+- Dependencies like network traffic
+- User traffic like page views, time on page, and load times
+- Development platforms like languages, data platforms, and middle tier services
+- Database that includes CPU, memory, storage, and version
 
 Qualitative analysis factors:
 
-- Continued business investments.
-- Bursting options or timelines.
-- Business process dependencies.
+- Continued business investments
+- Bursting options or timelines
+- Business process dependencies
 
 ## Rearchitect
 
@@ -99,21 +99,21 @@ Common drivers might include:
 
 Quantitative analysis factors:
 
-- Application asset size like CPU, memory, and storage.
-- Dependencies like network traffic.
-- User traffic like page views, time on page, and load times.
-- Development platforms like languages, data platforms, and middle tier services.
-- Database that includes CPU, memory, storage, and version.
+- Application asset size like CPU, memory, and storage
+- Dependencies like network traffic
+- User traffic like page views, time on page, and load times
+- Development platforms like languages, data platforms, and middle tier services
+- Database that includes CPU, memory, storage, and version
 
 Qualitative analysis factors:
 
-- Growing business investments.
-- Operational costs.
-- Potential feedback loops and DevOps investments.
+- Growing business investments
+- Operational costs
+- Potential feedback loops and DevOps investments
 
 ## Rebuild
 
-In some scenarios, the delta that must be overcome to carry an application forward can be too large to justify further investment. This issue is especially true for applications that previously met the needs of a business but are now unsupported with the current business processes. To resolve the issue a new code base is created to align with a [cloud-native](https://azure.microsoft.com/overview/cloudnative/) approach.
+In some scenarios, the delta that must be overcome to carry an application forward can be too large to justify further investment. This issue is especially true for applications that previously met the needs of a business but are now unsupported with the current business processes. To resolve the issue, create a new code base to align with a [cloud-native](https://azure.microsoft.com/overview/cloudnative/) approach.
 
 Common drivers might include:
 
@@ -123,17 +123,17 @@ Common drivers might include:
 
 Quantitative analysis factors:
 
-- Application asset size like CPU, memory, and storage.
-- Dependencies like network traffic.
-- User traffic like page views, time on page, and load times.
-- Development platforms like languages, data platforms, and middle tier services.
-- Database that includes CPU, memory, storage, and version.
+- Application asset size like CPU, memory, and storage
+- Dependencies like network traffic
+- User traffic like page views, time on page, and load times
+- Development platforms like languages, data platforms, and middle tier services
+- Database that includes CPU, memory, storage, and version
 
 Qualitative analysis factors:
 
-- Declining end-user satisfaction.
-- Business processes limited by functionality.
-- Potential cost, experience, or revenue gains.
+- Declining end-user satisfaction
+- Business processes limited by functionality
+- Potential cost, experience, or revenue gains
 
 ## Replace
 
@@ -147,18 +147,18 @@ Common drivers might include:
 
 Quantitative analysis factors:
 
-- General operating-cost reductions.
-- VM size, including CPU, memory, and storage.
-- Dependencies like network traffic.
-- Assets to be retired.
-- Database that includes CPU, memory, storage, and version.
+- General operating-cost reductions
+- VM size, including CPU, memory, and storage
+- Dependencies like network traffic
+- Assets to be retired
+- Database that includes CPU, memory, storage, and version
 
 Qualitative analysis factors:
 
-- Cost benefit analysis of the current architecture versus a SaaS solution.
-- Business process maps.
-- Data schemas.
-- Custom or automated processes.
+- Cost benefit analysis of the current architecture versus a SaaS solution
+- Business process maps
+- Data schemas
+- Custom or automated processes
 
 ## Next steps
 
