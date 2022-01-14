@@ -1,5 +1,5 @@
 ---
-title: CI/CD workflow using GitOps
+title: CI/CD workflow using GitOps in Azure
 description: Understand the design considerations and recommendations for CI/CD workflow using GitOps of Azure Arc-enabled Kubernetes.
 author: jpocloud
 ms.author: jpocloud
@@ -41,7 +41,7 @@ The following images show a conceptual reference architecture that highlights th
 
 ## Design considerations
 
-The following are some design considerations before implementing the Flux extension and a GitOps Configuration to Azure Arc-enabled Kubernetes:
+The following are some design considerations before implementing GitOps to Azure Arc-enabled Kubernetes:
 
 ### Configuration Repository Structure
 
@@ -69,8 +69,8 @@ For your code repositories, you can use any branching strategy you like since it
   - This allows the most flexibility to control Git policies and permissions for each branch that represents an environment.
   - The drawback is that there will be no sharing of the common config among environments since tooling such as [Kustomize](https://kubernetes-sigs.github.io/kustomize/) does not work with Git branches.
 - Single repository (Directory per environment):
-  - As an example, this approach can be implemented using Kustomize which allows you to define a base configuration for Kubernetes objects and a set of overlays for an environment that override configurations in the base.
-  - This can reduce duplicating YAML files for each environment but reduces the configuration separation between environments. Making a single change to the repository has the potential to impact all environments at once, so understanding the impact of changes to base folders must be fully understood and taken with care.
+  - As an example, this approach can be implemented using Kustomize which allows you to define a base configuration for Kubernetes objects and a set of  (i.e patches) for an environment that overrides configurations in the base.
+  - This can reduce duplicating YAML files for each environment but reduces the configuration separation between environments. Making a single change to the repository has the potential to impact all environments at once, so understanding the impact of changes to base directories must be fully understood and taken with care.
 - Multiple repositories (each serving a specific purpose):
   - This could be used for separating configuration repositories for each application, team, layer, or tenant.
   - This allows teams to have more independent control but moves away from the principle of defining your system state in a single repository to improve the central configuration, visibility and control of deployments to a cluster.
@@ -138,13 +138,13 @@ The following three Git repositories are included in the design:
   - This repository stores application code and any pipeline definition and configuration scripts.
   - Use a development branching strategy that is easy to understand and limits the amount of undesired long-running branches.
 - Application configuration repository:
-  - This repository is used to store application configuration including Kubernetes objects such as ConfigMaps, Deployments, Services, and HPA objects. Structure the repository with different folders for each application. Flux will synchronize changes from this repository and target branch, to the cluster.
+  - This repository is used to store application configuration including Kubernetes objects such as ConfigMaps, Deployments, Services, and HPA objects. Structure the repository with different directories for each application. Flux will synchronize changes from this repository and target branch, to the cluster.
   - Incorporate tools that make it easier for application developers and operators to build initial configuration per environment. Application Operators should define Kubernetes specific application configuration that takes advantage of package managers such as Helm or configuration tools like Kustomize overlays to make configuration simpler.
   - Create a branch that represents each environment type. This will allow fine-grain control of changes into each specific environment such as non-prod and production environments.
   - When the application(s) are deployed to a particular namespace, use the namespace scope feature within the GitOps configuration to enforce configuration to only a certain namespace.
 - Cluster-wide configuration repository:
   - Define cluster-wide components that a Cluster Operator will manage such as Ingress Controller, Namespaces, RBAC, monitoring, and security stack. Flux will synchronize changes from this repository and target branch, to the cluster.
-  - Structure the repository with different folders representing different components.
+  - Structure the repository with different directories representing different components.
   - Create a branch that represents each environment type. This will allow fine-grain control of changes into each specific environment such as non-prod and production environments.
   - Cluster Operators should take advantage of package managers such as Helm or configuration tools like Kustomize overlays to make configuration simpler.
 
