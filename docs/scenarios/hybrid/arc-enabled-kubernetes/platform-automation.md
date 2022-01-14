@@ -53,11 +53,10 @@ Afterwards, be sure to [verify your connection](/azure/azure-arc/kubernetes/quic
 
 Depending on your needs for extensions, you could opt to have extensions that are required to be installed on all of your Arc enabled Kubernetes clusters, as well as certain extensions which are installed only to specific Arc-enabled Kubernetes clusters. For extensions that are not widely adopted across your fleet of clusters, consider automation through Azure CLI and/or ARM templates using tools such as Azure DevOps or GitHub Actions.
 
-For cases where extensions are common across all of your Arc-enabled Kubernetes clusters, or large groups of Arc-enabled Kubernetes clusters, we recommend automating the deployment of Arc extensions at scale via [Azure Policy](/azure/governance/policy/overview). The following is an overview of steps:
-
-- Create an [initiative](/azure/security-center/security-policy-concept#what-is-a-security-initiative) to deploy Arc-enabled Kubernetes extensions at scale.
-- Use a "[DeployIfNotExists](/azure/governance/policy/concepts/effects#deployifnotexists)" policy effect to ensure the Arc-enabled Kubernetes extensions get deployed automatically, as more Kubernetes clusters are onboarded, and remediate any Kubernetes clusters where the extensions have been removed.
-- More details on using policy with Azure Arc-enabled Kubernetes clusters can be found in the [Security, governance and compliance for Azure Arc-enabled Kubernetes](./governance-disciplines.md) section of this guide.
+- For cases where extensions are common across all of your Arc-enabled Kubernetes clusters, or large groups of Arc-enabled Kubernetes clusters, we recommend automating the deployment of Arc extensions at scale via [Azure Policy](/azure/governance/policy/overview). The following is an overview of the steps:
+  - Create an [initiative](/azure/security-center/security-policy-concept#what-is-a-security-initiative) to deploy Azure Arc-enabled Kubernetes extensions at scale.
+  - Use a "[DeployIfNotExists](/azure/governance/policy/concepts/effects#deployifnotexists)" policy effect to ensure the Azure Arc-enabled Kubernetes extensions get deployed automatically, as more Kubernetes clusters are onboarded, and remediate any Kubernetes clusters where the extensions have been removed.
+  - More details on using Azure Policy with Azure Arc-enabled Kubernetes clusters can be found in the [Governance and security disciplines critical design area](./governance-disciplines.md) section of this guide.
 
 
 ### Agent and extensions lifecycle automation
