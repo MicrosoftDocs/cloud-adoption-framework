@@ -14,7 +14,7 @@ ms.custom: e2e-hybrid
 
 The following image shows a conceptual reference architecture that hightlights the onboarding and automation design areas for Azure Arc-enabled Kubernetes:
 
-![Azure Arc-enabled Kubernetes | Onboarding and VM Extension Integration](./media/arc-kubernetes-onboarding.svg)
+![Azure Arc-enabled Kubernetes | Onboarding and VM Extension Integration](./media/arc-kubernetes-onboarding.png)
 
 # Automation for Azure Arc-enabled Kubernetes
 
@@ -66,8 +66,9 @@ The other Azure Arc components that will require updates on your cluster are ext
 
 ## Next steps
 
-For more guidance for your hybrid cloud adoption journey,  review the following:
+For more guidance for your hybrid cloud adoption journey, review the following:
 
 - Review [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_k8s/) scenarios
-- Review [Identity and Access requirements](./identity-access-management.md) for Azure Arc-enabled Kubernetes
+- [Manage hybrid and multicloud environments](/azure/cloud-adoption-framework/scenarios/hybrid/manage)
+- [Connect an existing Kubernetes cluster to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli)
 - To learn more about Azure Arc, check out the [Azure Arc learning path on Microsoft Learn](/learn/paths/manage-hybrid-infrastructure-with-azure-arc/)
