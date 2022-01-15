@@ -41,7 +41,7 @@ The following diagram shows [Azure Arc-enabled Kubernetes cluster access from an
 ## Design considerations
 
 - **Kubernetes cluster onboarding**
-  - Decide between Azure AD user vs service principal to onboard Kubernetes cluster to Azure Arc individually or at scale. Please refer [Platform Automation CDA](./platform-automation.md) for implementation details.
+  - Decide between Azure AD user vs service principal to onboard Kubernetes cluster to Azure Arc individually or at scale. Please review to the [Automation disciplines critical design area](./platform-automation.md) for additional implementation details.
   - As Kubernetes cluster onboarding to Azure Arc requires Cluster Admin role on the Kubernetes cluster, decide between using a user from on-premises or other cloud identity provider or Kubernetes service account with Cluster Admin role.
 
 - **Kubernetes cluster management**
