@@ -45,7 +45,7 @@ The following diagram shows [Azure Arc-enabled Kubernetes cluster access from an
   - As Kubernetes cluster onboarding to Azure Arc requires Cluster Admin role on the Kubernetes cluster, decide between using a user from on-premises or other cloud identity provider or Kubernetes service account with Cluster Admin role.
 
 - **Kubernetes cluster management**
-  - As Azure Arc-enabled Kubernetes brings Azure AD authentication and Azure RBAC into on-premises or other cloud Kubernetes environments, decide between existing Kubernetes access management versus [Azure RBAC](/azure/azure-arc/kubernetes/conceptual-azure-rbac) depending on the organization security and governance requirements.
+  - As Azure Arc-enabled Kubernetes brings Azure AD authentication and Azure RBAC to on-premises or other cloud Kubernetes environments, decide between existing Kubernetes access management versus [Azure RBAC](/azure/azure-arc/kubernetes/conceptual-azure-rbac) depending on the organization security and governance requirements.
   - Decide if Azure Arc-enabled Kubernetes Cluster Connect gives you flexibility to [manage Kubernetes cluster](/azure/azure-arc/kubernetes/conceptual-cluster-connect) without the inbound firewall ports opened to the on-premises or other cloud networks.
   - Decide if Azure RBAC is the right choice when there are many Kubernetes clusters running on-premises and other cloud environments and simplifies cluster administration across all Kubernetes clusters.
 
