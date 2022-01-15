@@ -32,7 +32,7 @@ The following diagram shows different Azure Arc-enabled Kubernetes components an
 
 ![Azure RBAC on Azure Arc-enabled Kubernetes](./media/conceptual-azure-rbac.png).
 
-### Manage Azure Arc-enabled Kubernetes cluster anywhere
+### Securely access Azure Arc-enabled Kubernetes cluster from anywhere
 
 The following diagram shows [Azure Arc-enabled Kubernetes cluster access from anywhere](/azure/azure-arc/kubernetes/conceptual-cluster-connect) and how the components interact with each other to manage cluster using Azure RBAC.
 
