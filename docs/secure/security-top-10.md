@@ -160,7 +160,7 @@ Update processes and prepare analysts to for responding to security incidents on
 
 Active attackers present an immediate risk to the organization. The risk can quickly become a difficult to control situation. Respond quickly and effectively to attacks. This incident response (IR) process must be effective for your entire estate including all cloud platforms hosting enterprise data, systems, and accounts.
 
-While similar in many ways, cloud platforms are different technically from on-premises systems. On-premises systems can break existing processes, typically because information is available in a different form. Security analysts may also have challenges rapidly responding to an unfamiliar environment that can slow them down. This statement is true, especially if they're trained only on classic on-premises architectures and network/disk forensics approaches.
+While similar in many ways, cloud platforms are different technically from on-premises systems. On-premises systems can break existing processes, typically because information is available in a different form. Security analysts might also have challenges rapidly responding to an unfamiliar environment that can slow them down. This statement is true, especially if they're trained only on classic on-premises architectures and network/disk forensics approaches.
 
 ### Who 
 
@@ -178,9 +178,9 @@ IR processes modernization is typically led by [security operations](../organize
 Update processes and prepare your team so they know what to do when they find an active attacker.
 
 - **Processes and playbooks**: Adapt existing investigations, remediation, and threat hunting processes to the differences of how cloud platforms work. The differences include new or different tools, data sources, identity protocols, and so on.
-- **Education**: Educate analysts on the overall cloud transformation, technical details of how the platform works, and new or updated processes. This information lets them know what will be different and where to go for what they need.
+- **Education**: Educate analysts on the overall cloud transformation, technical details of how the platform works, and new or updated processes. This information lets them know what might change and where to go for what they need.
 - **Key Focus Areas**: While there are many details described in the resource links, these areas are where to focus your education and planning efforts:
-- **Shared responsibility model and cloud architectures**: To a security analyst, Azure is a software-defined datacenter that provides many services. These services include VMs and others that are different from on-premises, such as Azure SQL Database Azure Functions and so on. The best data is in the service logs or the specialized threat detection services. It's not in logs for the underlying OS/VMs, which are operated by Microsoft and service multiple customers. Analysts need to understand and integrate this context into their daily workflows. That way they know what data to expect, where to get it, and what format it will be in.
+- **Shared responsibility model and cloud architectures**: To a security analyst, Azure is a software-defined datacenter that provides many services. These services include VMs and others that are different from on-premises, such as Azure SQL Database Azure Functions and so on. The best data is in the service logs or the specialized threat detection services. It's not in logs for the underlying OS/VMs, which are operated by Microsoft and service multiple customers. Analysts need to understand and integrate this context into their daily workflows. That way they know what data to expect, where to get it, and what format it's in.
 - **Endpoint data sources**: Getting insights and data for attacks and malware on cloud hosted servers is often faster, easier, and more precise with native cloud-detection tools. Tools like Microsoft Defender for Cloud and endpoint detection and response (EDR) solutions provide more precise data than traditional approaches of direct disk access. Direct disk forensics are available for scenarios where it's possible and required for legal proceedings. For more information, see ([computer forensics in Azure](/azure/architecture/example-scenario/forensics/)). Often, though, this approach is the most inefficient way to detect and investigate attacks.
 - **Network and identity data sources**: Many functions of cloud platforms primarily use identity for access control. This access control includes access to the Azure portal, though network access controls are used extensively as well. This access control requires analysts to develop an understanding of cloud identity protocols to get a full, rich picture of attacker activity and legitimate user activity to support incident investigation and remediation. Identity directories and protocols are also different from on-premises ones. They're typically based on SAML, OAuth, and OpenID Connect and cloud directories rather than LDAP, Kerberos, NTLM, and Active Directory.
 - **Practice exercises**: Simulated attacks and response can help build organizational muscle memory and technical readiness. They provide preparation for your security analysts, threat hunters, incident managers, and other stakeholders in your organization. Learning on the job and adapting is a natural part of incident response, but you should work to minimize how much you have to learn in a crisis.
@@ -229,7 +229,7 @@ These new capabilities offer new possibilities, but realizing value from them re
 This practice is typically divided into two sets of responsibilities:
 
 - **[Security posture management](../organize/cloud-security-posture-management.md)**: This function is often an evolution of existing vulnerability management or governance functions. The result includes monitoring overall security posture using Microsoft Defender for Cloud secure score and other data sources. It also includes actively working with resource owners to mitigate risks and reporting risk to security leadership.
-- **Security remediation**: Assign accountability for addressing these risks to the teams responsible for managing those resources. This accountability should belong to either the DevOps teams managing their own application resources or the technology-specific teams in **[Central IT Operations](../organize/central-it.md)**:
+- **Security remediation**: Assign accountability for addressing these risks to the teams responsible for managing those resources. This accountability belongs to either the DevOps teams managing their own application resources or the technology-specific teams in **[Central IT Operations](../organize/central-it.md)**:
 
   - **Compute and application resources**
     - **App services:** Application development/security teams
@@ -249,7 +249,7 @@ This practice is typically divided into two sets of responsibilities:
 Security is everyone's job. Not everyone, though, currently knows how important it is, what to do, and how to do it.
 
 - Hold resource owners accountable for the security risk just as they're held accountable for availability, performance, cost, and other success factors.
-- Support resource owners with a clear understanding of why security risk matters to their assets, what they should do to mitigate risk, and how to implement it with minimal productivity loss.
+- Support resource owners with a clear understanding of why security risk matters to their assets, what they can do to mitigate risk, and how to implement it with minimal productivity loss.
 
 > [!IMPORTANT]
 > The explanations for why, what, and how to secure resources are often similar across different resource types and applications, but it's critical to relate these to what each team already knows and cares about. Security teams should engage with their IT and DevOps counterparts as a trusted advisor and partner focused on enabling these teams to be successful.
@@ -275,31 +275,31 @@ Require all critical impact admins to use passwordless or multi-factor authentic
 
 Just as antique skeleton keys won't protect a house against a modern day burglar, passwords can't protect accounts against common attacks we see today. Technical details are described in [Your pa$$word doesn't matter](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/your-pa-word-doesn-t-matter/ba-p/731984).
 
-Multi-factor authentication was once a burdensome extra step. Passwordless approaches today improve how users sign in using biometric approaches like facial recognition in Windows Hello and mobile devices. Additionally, zero trust approaches remember trusted devices. This method reduces prompting for annoying out of band multi-factor authentication actions. For more information, see [User sign-in frequency](/azure/active-directory/conditional-access/howto-conditional-access-session-lifetime#user-sign-in-frequency).
+Multifactor authentication was once a burdensome extra step. Passwordless approaches today improve how users sign in using biometric approaches like facial recognition in Windows Hello and mobile devices. Additionally, zero trust approaches remember trusted devices. This method reduces prompting for annoying out of band multi-factor authentication actions. For more information, see [User sign-in frequency](/azure/active-directory/conditional-access/howto-conditional-access-session-lifetime#user-sign-in-frequency).
 
 ### Who 
 
 Password and multifactor initiative is typically led by [identity and key management](../organize/cloud-security-identity-keys.md) or [security architecture](../organize/cloud-security-architecture.md).
 
-- **Sponsorship:** Typically sponsored by CISO, CIO, or director of identity.
-- **Execution:** A collaborative effort involving:
+- **Sponsorship**: Typically sponsored by CISO, CIO, or director of identity.
+- **Execution**: A collaborative effort involving:
   - **[Policy and standards](../organize/cloud-security-policy-standards.md) team**: Establish clear requirements.
-  - **[Identity and key management](../organize/cloud-security-identity-keys.md)** or **[central IT operations](../organize/central-it.md)**: Implement the policy,
-  - **[Security compliance management](../organize/cloud-security-compliance-management.md)**: Monitors to ensure compliance.
+  - **[Identity and key management](../organize/cloud-security-identity-keys.md)** or **[central IT operations](../organize/central-it.md)**: Implement the policy.
+  - **[Security compliance management](../organize/cloud-security-compliance-management.md)**: Monitor to ensure compliance.
 
 ### How 
 
-Implement passwordless or multi-factor authentication. Also, train administrators on how to use it as they need it, and require admins to follow using written policy. This can be accomplished by one or more of these technologies:
+Implement passwordless or multifactor authentication. Train administrators on how to use it as they need it and require admins to follow by using written policy. This can be accomplished by one or more of these technologies:
 
 - [Passwordless (Windows Hello)](/windows/security/identity-protection/hello-for-business/hello-identity-verification)
 - [Passwordless (authenticator app)](/azure/active-directory/authentication/howto-authentication-passwordless-phone)
-- [Azure multifactor authentication](/azure/active-directory/authentication/howto-mfa-userstates)
-- Third-party multi-factor authentication solution
+- [Azure AD Multi-factor Authentication](/azure/active-directory/authentication/howto-mfa-userstates)
+- Third-party multifactor authentication solution
 
 > [!NOTE]
 > Text message-based multifactor authentication is now relatively inexpensive for attackers to bypass, so focus on passwordless and stronger multifactor authentication.
 
-Also, see the Azure Security Benchmark [ID-4: use strong authentication controls for all Azure Active Directory-based access](/security/benchmark/azure/security-controls-v2-identity-management#id-4-use-strong-authentication-controls-for-all-azure-active-directory-based-access).
+For more information, see the Azure Security Benchmark [ID-4: use strong authentication controls for all Azure Active Directory-based access](/security/benchmark/azure/security-controls-v2-identity-management#id-4-use-strong-authentication-controls-for-all-azure-active-directory-based-access).
 
 ## 7. Technology: Integrate native firewall and network security
 
@@ -326,14 +326,14 @@ This practice can free up your team's time and attention for higher value securi
 - **Sponsorship**: This update of network security strategy is typically sponsored by security leadership or IT leadership
 - **Execution**: Integrating strategies into your cloud network security strategy is a collaborative effort involving:
   - **[Security architecture](../organize/cloud-security-architecture.md)**: Establish cloud network security architecture with cloud network and cloud network security leads.
-  - **Cloud network leads ([central IT operations](../organize/central-it.md))** + **Cloud Network security leads ([infrastructure security team](../organize/cloud-security-infrastructure-endpoint.md))**
-    - Establish cloud network security architecture with security architects
-    - Configure firewall, NSG, and WAF capabilities and work with application architects on WAF rules
+  - **Cloud network leads ([central IT operations](../organize/central-it.md))** and **Cloud Network security leads ([infrastructure security team](../organize/cloud-security-infrastructure-endpoint.md))**
+    - Establish cloud network security architecture with security architects.
+    - Configure firewall, NSG, and WAF capabilities and work with application architects on WAF rules.
   - **Application architects**: Work with network security to build and refine WAF rule sets and DDoS configurations to protect the application without disrupting availability
 
 ### How 
 
-Organizations looking to simplify their operations have two options:
+Organizations that want to simplify their operations have two options:
 
 - **Extend existing capabilities and architectures**: Many organizations often choose to extend the use of existing firewall capabilities so they can capitalize on existing investments into skills and process integration, particularly as they first adopt the cloud.
 - **Embrace native security controls**: More organizations are starting to prefer using native controls to avoid the complexity of integrating third-party capabilities. These organizations are typically seeking to avoid the risk of a misconfiguration in load balancing, user-defined routes, the firewall or WAF itself, and delays in handoffs between different technical teams. This option is compelling to organizations embracing infrastructure as code approaches as they can automate and instrument the built-in capabilities more easily than third-party capabilities.
@@ -346,11 +346,11 @@ Documentation on Azure native network security capabilities can be found at:
 
 [Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps?page=1&search=firewall) includes many third-party firewall providers.
 
-Also, see the Azure Security Benchmark [ns-4: protect applications and services from external network attacks](/security/benchmark/azure/security-controls-v2-network-security#ns-4-protect-applications-and-services-from-external-network-attacks).
+For more information, see the Azure Security Benchmark [ns-4: protect applications and services from external network attacks](/security/benchmark/azure/security-controls-v2-network-security#ns-4-protect-applications-and-services-from-external-network-attacks).
 
 ## 8. Technology: Integrate native threat detection
 
-*Simplify detection and response of attacks against Azure systems and data.*
+Simplify detection and response of attacks against Azure systems and data.
 
 ### What 
 
@@ -412,12 +412,12 @@ While it sometimes seems easier to quickly stand up a custom LDAP directory for 
 
 Often a cross-team effort, driven by [security architecture](../organize/cloud-security-architecture.md) or [identity and key management](../organize/cloud-security-identity-keys.md) teams.
 
-- **Sponsorship**: Typically sponsored by [identity and key management](../organize/cloud-security-identity-keys.md) and [security architecture](../organize/cloud-security-architecture.md) (though some organizations may require sponsorship by CISO or CIO)
+- **Sponsorship**: Typically sponsored by [identity and key management](../organize/cloud-security-identity-keys.md) and [security architecture](../organize/cloud-security-architecture.md) (though some organizations might require sponsorship by CISO or CIO)
 - **Execution**: A collaborative effort involving:
-  - **[Security architecture](../organize/cloud-security-architecture.md)**: Incorporates into security and IT architecture documents and diagrams
-  - **[Policy and standards](../organize/cloud-security-policy-standards.md)**: Document policy and monitor for compliance
-  - **[Identity and key management](../organize/cloud-security-identity-keys.md)** or **[Central IT Operations](../organize/central-it.md)** to implement the policy by enabling features and supporting developers with accounts, education, and so on.
-  - **Application developers** or **[Central IT Operations](../organize/central-it.md)**: Use identity in applications and Azure service configurations (responsibilities will vary based on level of DevOps adoption)
+  - **[Security architecture](../organize/cloud-security-architecture.md)**: Incorporates into security and IT architecture documents and diagrams.
+  - **[Policy and standards](../organize/cloud-security-policy-standards.md)**: Documents policy and monitors for compliance.
+  - **[Identity and key management](../organize/cloud-security-identity-keys.md)** or **[Central IT Operations](../organize/central-it.md)**: Implements the policy by enabling features and supporting developers with accounts, education, and so on.
+  - **Application developers** or **[Central IT Operations](../organize/central-it.md)**: Uses identity in applications and Azure service configurations. Responsibilities vary based on level of DevOps adoption.
 
 ### How 
 
@@ -432,7 +432,7 @@ The ideal time to combine your use of identity is during application development
 - Modernize applications for the cloud.
 - Update cloud applications with DevOps processes.
 
-While there are valid reasons for a separate directory for independent business units or regulatory requirements, multiple directories should be avoided in all other circumstances.
+While there are valid reasons for a separate directory for independent business units or regulatory requirements, avoid multiple directories in all other circumstances.
 
 Also see the Azure Security Benchmark [ID-1: standardize Azure Active Directory as the central identity and authentication system](/security/benchmark/azure/security-controls-v2-identity-management#id-1-standardize-azure-active-directory-as-the-central-identity-and-authentication-system).
 
@@ -445,7 +445,7 @@ Also see the Azure Security Benchmark [ID-1: standardize Azure Active Directory 
 
 ### What 
 
-Use Azure AD identities instead of key-based authentication wherever possible (Azure services, applications, APIs, and so on.).
+Use Azure AD identities instead of key-based authentication wherever possible (Azure services, applications, APIs, and so on).
 
 ### Why 
 
@@ -457,11 +457,11 @@ Identity-based authentication overcomes many of these challenges with mature cap
 
 Often a cross-team effort, driven by [security architecture](../organize/cloud-security-architecture.md) or [identity and key management](../organize/cloud-security-identity-keys.md) teams.
 
-- **Sponsorship**: Typically sponsored by [security architecture](../organize/cloud-security-architecture.md) or [identity and key management](../organize/cloud-security-identity-keys.md)  (though some organizations may require sponsorship by CISO or CIO).
+- **Sponsorship**: Typically sponsored by [security architecture](../organize/cloud-security-architecture.md) or [identity and key management](../organize/cloud-security-identity-keys.md) (though some organizations might require sponsorship by CISO or CIO).
 - **Execution**: A collaborative effort involving:
   - **[Security architecture](../organize/cloud-security-architecture.md)**: Incorporates into security and IT architecture diagrams and documents.
   - **[Policy and standards](../organize/cloud-security-policy-standards.md)**: Document policy and monitor for compliance.
-  - **[Identity and key management](../organize/cloud-security-identity-keys.md)** or **[Central IT Operations](../organize/central-it.md)** to implement the policy by enabling features and supporting developers with accounts, education, and so on.
+  - **[Identity and key management](../organize/cloud-security-identity-keys.md)** or **[Central IT Operations](../organize/central-it.md)**: Implement the policy by enabling features and supporting developers with accounts, education, and so on.
   - **App developers** or **[Central IT Operations](../organize/central-it.md)**: Use identity in applications and Azure service configurations (responsibilities will vary based on level of DevOps adoption).
 
 ### How
@@ -514,11 +514,11 @@ While security can create healthy friction by forcing critical thinking, this co
 
 ### How
 
-Build and implement a security strategy for cloud that includes the input and active participation of all teams. While the process documentation format will vary, it should always include:
+Build and implement a security strategy for cloud that includes the input and active participation of all teams. While the process documentation format can vary, it should always include:
 
 - **Active input from teams**: Strategies typically fail if people in the organization don't buy into them. Ideally, get all teams in the same room to collaboratively build the strategy. In the workshops we conduct with customers, we often find organizations have been operating in de facto silos and these meetings often result in people meeting each other for the first time. We also find that inclusiveness is a requirement. If some teams aren't invited, this meeting typically has to be repeated until all participants join it. If they don't join, then the project doesn't move forward.
 - **Documented and communicated clearly**: All teams should have awareness of the security strategy. Ideally, the security strategy is a security component of the overall technology strategy. This strategy includes why to integrate security, what is important in security, and what security success looks like. This strategy should also include specific guidance for application and development teams so they can get clear, organized guidance without having to read through non-relevant information.
-- **Stable, but flexible**: Strategies should remain relatively consistent and stable. But, the architectures and the documentation may need changes to add clarity and accommodate the dynamic nature of cloud. For example, filtering out malicious external traffic would stay consistent as a strategic imperative even if you shift from the use of a third-party next generation firewall to Azure Firewall and adjust diagrams and guidance on how to do it.
+- **Stable, but flexible**: Keep strategies relatively consistent and stable, but the architectures and the documentation might need to add clarity and accommodate the dynamic nature of cloud. For example, filtering out malicious external traffic would stay consistent as a strategic imperative even if you shift from the use of a third-party next generation firewall to Azure Firewall and adjust diagrams and guidance on how to do it.
 - **Start with segmentation**: Over the course of cloud adoption, your teams will address many strategy issues large and small, but you need to start somewhere. We recommend starting the security strategy with enterprise asset segmentation. This segmentation is a foundational decision that would be challenging to change later and requires both business input and many technical teams.
 
 Microsoft has published video guidance for [applying a segmentation strategy to Azure](/security/compass/microsoft-security-compass-introduction#azure-components-and-reference-model-2151). There are also documents published about [enterprise segmentation](/security/compass/governance#enterprise-segmentation-strategy) and [aligning network security to it](/security/compass/network-security-containment#align-network-segmentation-with-enterprise-segmentation-strategy).
