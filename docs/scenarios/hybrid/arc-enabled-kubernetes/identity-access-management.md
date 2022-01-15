@@ -74,7 +74,7 @@ Azure Arc-enabled Kubernetes supports the following Roles to onboard Kubernetes 
 |Azure Arc Kubernetes Cluster Admin|Lets you manage all resources in the cluster.|
 |Azure Arc Kubernetes Viewer|Lets you view all resources in cluster/namespace, except secrets.|
 |Azure Arc Kubernetes Writer|Lets you update everything in cluster/namespace, except (cluster)roles and (cluster)role bindings.|
-|Kubernetes Cluster - Azure Arc Onboarding|Role definition to authorize any user/service to create connectedClusters resource|
+|Kubernetes Cluster - Azure Arc Onboarding|Role definition to authorize any user/service to create connected clusters resource|
 |Microsoft.Kubernetes connected cluster role|Microsoft.Kubernetes connected cluster role.|
 
 ## Next steps
