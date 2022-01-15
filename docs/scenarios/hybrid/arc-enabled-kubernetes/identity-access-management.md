@@ -53,7 +53,7 @@ The following diagram shows [Azure Arc-enabled Kubernetes cluster access from an
 
 - **Kubernetes cluster onboarding**
   - Use [Azure AD security groups](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal) to grant Azure Arc-enabled Kubernetes cluster Management and Governance roles to onboard and manage Azure Arc-enabled Kubernetes resources in Azure.
-  - Use least privilege and separation of duties principles and create security groups,  assign users or principals to the security groups to perform various roles on the Kubernetes clusters.
+  - Use [least privilege](/azure/active-directory/roles/best-practices#1-manage-to-least-privilege) and separation of duties principles and create security groups,  assign users or principals to the security groups to perform various roles on the Kubernetes clusters.
   
 - **Kubernetes cluster management**
   - If on-premises identities are synchronized with Azure Active Directory, use the same identities when using Azure RBAC for cluster management.
