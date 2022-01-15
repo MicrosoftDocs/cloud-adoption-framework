@@ -24,7 +24,7 @@ This document explains the Azure Arc-enabled Kubernetes service identity and acc
 
 ## Architecture
 
-It is important to understand the [Arc-enabled Kubernetes connectivity modes](/azure/azure-arc/kubernetes/conceptual-connectivity-modes#understand-connectivity-modes) to make right architectural decision to make use of Azure RBAC supported in these connectivity modes as Azure RBAC is supported only in fully connected mode and not supported in semi-connected mode.
+It is important to understand the [Arc-enabled Kubernetes connectivity modes](/azure/azure-arc/kubernetes/conceptual-connectivity-modes#understand-connectivity-modes) to make the right architectural decision to make use of Azure RBAC supported in these connectivity modes as Azure RBAC is supported only in fully connected mode and not supported in semi-connected mode.
 
 ### Azure RBAC on Azure Arc-enabled Kubernetes
 
