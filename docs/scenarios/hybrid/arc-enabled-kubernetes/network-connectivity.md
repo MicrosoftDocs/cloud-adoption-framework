@@ -31,7 +31,7 @@ The following is a network architecture diagram that supports cluster access fro
 ## Design considerations
 
 - Review the Azure Arc-enabled Kubernetes [network requirements](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#meet-network-requirements) before making decision to decide between fully connected vs semi-connected mode.
-- Considering the trade offs between the organization security and compliance requirements versus Arc-enabled Kubernetes benefits that offer to the organizations, decide between fully connected vs semi-connected mode.
+- Consider the trade-offs between the organization's security and compliance requirements versus Azure Arc-enabled Kubernetes benefits that offer to the organizations, decide between fully connected vs semi-connected mode.
 - Decide between public or private endpoints to connect to Azure Log Analytics workspaces through ExpressRoute or VPN versus internet connectivity.
 - Decide between public or private endpoints to connect to [Azure Key Vaults](/azure/azure-arc/kubernetes/tutorial-akv-secrets-provider) through ExpressRoute or VPN versus internet connectivity.
 - Decide network connectivity options for Azure Arc-enabled Kubernetes cluster management as Azure Arc-enabled Kubernetes cluster supports [cluster management from any network](/azure/azure-arc/kubernetes/conceptual-cluster-connect). Refer [Identity and Access Management](./identity-access-management.md) for design considerations and recommendations when deciding the network independent cluster management.
