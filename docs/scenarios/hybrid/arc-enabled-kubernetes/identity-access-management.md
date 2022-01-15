@@ -14,7 +14,11 @@ ms.custom: e2e-hybrid, think-tank
 
 ## Overview
 
-Azure Arc-enabled Kubernetes service supports different Kubernetes environments on-premises and other cloud environments that are integrated with different identity and access management systems. In addition to existing Kubernetes cluster RBAC, Azure Arc-enabled Kubernetes supports Azure RBAC to provide unified access management across Kubernetes clusters to minimize operational overhead. Combination of these RBAC models are used depending on the activity that is being performed at various phases of the service such as onboarding Kubernetes cluster to Azure Arc, managing Arc-enabled Kubernetes cluster, installing Azure Arc extensions, applications running on Arc-enabled Kubernetes cluster, and accessing Azure resources using Azure RBAC. It is critical for organizations to understand the scenarios and design Arc-enabled Kubernetes clusters to use appropriate RBAC models to fit into their infrastructure and meet organizations security and governance requirements.
+Azure Arc-enabled Kubernetes service supports different Kubernetes environments on-premises and other cloud environments that are integrated with different identity and access management systems. In addition to existing Kubernetes cluster role-based access control (RBAC), Azure Arc-enabled Kubernetes supports Azure RBAC to provide unified access management across Kubernetes clusters to minimize operational overhead. 
+
+The combination of these RBAC models is used depending on the activity that is being performed at various phases of the service such as onboarding Kubernetes cluster to Azure Arc, managing Arc-enabled Kubernetes cluster, installing Azure Arc extensions, applications running on Arc-enabled Kubernetes cluster, and accessing Azure resources using Azure RBAC.
+
+It is critical for organizations to understand the scenarios and design Arc-enabled Kubernetes clusters to use appropriate RBAC models to fit into their infrastructure and meet their security and governance requirements.
 
 This document explains Arc-enabled Kubernetes service IAM architecture, design considerations, recommendations, and role based access controls for different scenarios.
 
