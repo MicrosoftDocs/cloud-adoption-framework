@@ -20,7 +20,7 @@ The combination of these RBAC models is used depending on the activity that is b
 
 It is critical for organizations to understand the scenarios and design Arc-enabled Kubernetes clusters to use appropriate RBAC models to fit into their infrastructure and meet their security and governance requirements.
 
-This document explains Arc-enabled Kubernetes service IAM architecture, design considerations, recommendations, and role based access controls for different scenarios.
+This document explains the Azure Arc-enabled Kubernetes service identity and access management (IAM) architecture, design considerations, recommendations, and role-based access controls for various scenarios.
 
 ## Architecture
 
