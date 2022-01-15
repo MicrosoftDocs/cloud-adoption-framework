@@ -40,7 +40,7 @@ The following is a network architecture diagram that supports cluster access fro
 
 ## Design recommendations
 
-- Considering the benefits of Azure Arc-enabled Kubernetes capabilities, use fully connected mode for Kubernetes cluster onboarding to stay current with latest product releases, security updates, policies, and install extensions to bring Azure cloud services to on-premises or multi-cloud environments.
+- Consider the benefits of Azure Arc-enabled Kubernetes capabilities, and use fully connected mode for onboarded Kubernetes clusters in order to stay current with the latest product releases, security updates, policies, and installed extensions to bring Azure cloud services to on-premises or multi-cloud environments.
 - Enable [private links](/azure/azure-monitor/logs/private-link-security) to access Azure resources such as [Key Vault](/azure/azure-arc/kubernetes/tutorial-akv-secrets-provider), Storage Accounts, Azure Container Registry, and Log Analytics from Kubernetes cluster running on-premises or other cloud environments through Azure Express Route or VPN connection.
 - Configure on-premises or non-azure cloud DNS servers to forward [Azure private endpoint DNS](/azure/private-link/private-endpoint-dns#on-premises-workloads-using-a-dns-forwarder) resolution to Azure Private DNS zone.
 - When [Azure Arc-enabled Kubernetes agents](/azure/azure-arc/kubernetes/conceptual-agent-overview) traffic is going through the firewalls or proxy servers, create source and destination object groups or tags to simplify outbound internet traffic rules to support additional URL whitelisting for Azure Arc extensions.
