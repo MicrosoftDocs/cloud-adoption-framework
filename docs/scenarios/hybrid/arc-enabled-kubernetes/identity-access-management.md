@@ -65,7 +65,7 @@ The following diagram shows [Azure Arc-enabled Kubernetes cluster access from an
   
 ## Role based access controls (RBAC)
 
-Azure Arc-enabled Kubernetes supports following Roles to onboard Kubernetes clusters to Azure Arc and manage Kubernetes clusters using Azure RBAC.
+Azure Arc-enabled Kubernetes supports the following Roles to onboard Kubernetes clusters to Azure Arc and manages Kubernetes clusters using Azure RBAC.
 
 |Role|Description|
 |-----------|------------|
