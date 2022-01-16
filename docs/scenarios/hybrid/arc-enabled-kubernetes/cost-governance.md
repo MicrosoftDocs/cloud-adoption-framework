@@ -33,7 +33,7 @@ Azure Arc-enabled Kubernetes provides two types of services:
    - [Azure Key Vault](/azure/key-vault/general/basic-concepts)
 
 >[!Tip]
-> Billing for the Azure services used in conjuction with Azure Arc-enabled Kubernetes is the same as Azure Kubernetes Service billing.
+> Billing for the Azure services used in conjunction with Azure Arc-enabled Kubernetes is the same as Azure Kubernetes Service billing.
 
 > [!Note]
 > If the Azure Arc-enabled Kubernetes cluster is on AKS on Azure Stack HCI, then Kubernetes GitOps configuration is included at no charge.
