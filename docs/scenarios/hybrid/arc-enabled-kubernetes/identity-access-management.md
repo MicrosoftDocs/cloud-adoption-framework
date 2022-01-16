@@ -51,11 +51,14 @@ The following diagram shows [Azure Arc-enabled Kubernetes cluster access from an
 
 - **Kubernetes cluster onboarding**
   - Use [Azure AD security groups](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal) to grant Azure Arc-enabled Kubernetes cluster RBAC roles to onboard and manage Azure Arc-enabled Kubernetes cluster.
-  - Use [least privilege](/azure/active-directory/roles/best-practices#1-manage-to-least-privilege) and separation of duties principles and create security groups,  assign users or principals to the security groups to perform various roles on the Kubernetes clusters.
   
 - **Kubernetes cluster management**
   - If on-premises identities are synchronized with Azure AD, use the same identities when using Azure RBAC for cluster management.
   - Create [security groups](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal) and map them to the Azure RBAC roles supported by Azure Arc-enabled Kubernetes to simplify access management. Assign permissions to these security groups at the resource group or subscription level depending on the resource organization and governance requirements. Please refer [Resource Organization CDA](./resource-organization.md) for guidance.
+  
+  > [!NOTE]
+  > Azure Arc-enabled Kubernetes do not support users with more than 200 security group memberships and will receive an authentication error.
+
   - Avoid direct user assignment to Azure RBAC roles as it is difficult to govern access management.
   - Assign security group owners to decentralize and delegate access management responsibility and audit assignments.
   - Enable periodic [access reviews](/azure/active-directory/privileged-identity-management/pim-create-azure-ad-roles-and-resource-roles-review) in Azure AD to remove users that are no longer need access to the Kubernetes clusters.
@@ -67,13 +70,12 @@ Azure Arc-enabled Kubernetes supports the following Roles to onboard Kubernetes 
 
 |Role|Description|
 |-----------|------------|
-|Azure Arc Enabled Kubernetes Cluster User Role|List cluster user credentials action.|
+|Azure Arc Enabled Kubernetes Cluster User Role|Allows users to fetch the Cluster Connect based kubeconfig file to manage clusters from anywhere.|
 |Azure Arc Kubernetes Admin|Lets you manage all resources under cluster/namespace, except update or delete resource quotas and namespaces.|
 |Azure Arc Kubernetes Cluster Admin|Lets you manage all resources in the cluster.|
 |Azure Arc Kubernetes Viewer|Lets you view all resources in cluster/namespace, except secrets.|
 |Azure Arc Kubernetes Writer|Lets you update everything in cluster/namespace, except (cluster)roles and (cluster)role bindings.|
 |Kubernetes Cluster - Azure Arc Onboarding|Role definition to authorize any user/service to create connected clusters resource|
-|Microsoft.Kubernetes connected cluster role|Microsoft.Kubernetes connected cluster role.|
 
 ## Next steps
 
