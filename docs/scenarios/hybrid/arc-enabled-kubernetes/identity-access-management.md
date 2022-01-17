@@ -85,3 +85,4 @@ Azure Arc-enabled Kubernetes supports the following Roles to onboard Kubernetes 
 - [Access your cluster securely](/azure/azure-arc/kubernetes/conceptual-cluster-connect) from anywhere using Cluster connect.
 - Azure Landing Zones - [Azure identity and access management design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access).
 - Cloud Adoption Framework - [Access Control](/azure/cloud-adoption-framework/secure/access-control) methodology.
+- Review [Azure Arc Jumpstart - Azure Arc-enabled Kubernetes](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_k8s/).
