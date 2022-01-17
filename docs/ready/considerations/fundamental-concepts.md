@@ -3,7 +3,7 @@ title: Azure fundamental concepts
 description: Use the Cloud Adoption Framework for Azure to learn fundamental concepts and terms used in Azure and how the concepts relate to one another.
 author: alexbuckgit
 ms.author: abuck
-ms.date: 05/20/2019
+ms.date: 01/16/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
