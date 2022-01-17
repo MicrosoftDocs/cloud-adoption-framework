@@ -115,7 +115,7 @@ For all updates to your configuration, to verify changes have been successfully 
 
 #### Repo and Branch security
 
-- Set branch permissions and policies on your configuration repository. As your Git repo becomes the central piece of your Kubernetes deployments, it is key to set up permissions to control who can read and update the code in a branch as well as implement policies to enforce your team's code quality and change management, otherwise the GitOps workflow can ship code that is not up to your organizations standards.
+- Set branch permissions and policies on your configuration repository. As your Git repo becomes the central piece of your Kubernetes deployments, it is key to set up permissions to control who can read and update the code in a branch as well as implement policies to enforce your team's code quality and change management, otherwise, the GitOps workflow can ship code that is not up to your organizations' standards.
 - Pull request (PR) Pipelines can work with your branch policies to validate YAML configuration and/or deploy test environments as required. These gates will help eliminate configuration errors and increase deployment security and confidence.
 - For access permission, consider which users in your organization should have repository read access, PR creation access, and PR Approval access.
 
