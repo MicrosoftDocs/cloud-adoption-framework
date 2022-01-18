@@ -76,15 +76,17 @@ For your code repositories, you can use any branching strategy you like since it
   - This allows teams to have more independent control but moves away from the principle of defining your system state in a single repository to improve the central configuration, visibility and control of deployments to a cluster.
   - Setting up multiple repositories should be considered for multi-tenancy needs. There is role-based access control (RBAC) and security built-in to limit what configuration a team/tenant assigned to a specific repository can apply, such as only allowing deployment to certain namespaces.
 
+See additional ways of structuring your repository in the [Flux Guide](https://fluxcd.io/docs/guides/repository-structure/).
+
 ### Application & Platform Configuration
 
 Platform Operators and Application Operators have several options for managing Kubernetes configuration, the following are choices:
 
 - Raw Kubernetes YAML files that represent YAML specs for each Kubernetes API object you are deploying, this approach works well for single environments. The drawbacks to using raw YAML files is that customizing becomes difficult when you begin to incorporate multiple environments as you need to then duplicate YAML files, and there is not a good method of re-use.
 - [Helm](https://helm.sh/) is a package management tool for Kubernetes objects. It’s a valid option for Cluster Operators to install third-party off-the-shelf applications. Be aware of using its templating too heavily as a configuration management tool for internal applications as it can become complex to manage as the templates grow.
-  - If using Helm, Flux has the Helm Controller built into it, allowing one to declaratively manage Helm Chart releases with Kubernetes manifests. You can create a _HelmRelease_ object to manage that process.
+  - If using Helm, Flux includes a Helm Controller, allowing one to declaratively manage Helm Chart releases with Kubernetes manifests. You can create a _HelmRelease_ object to manage that process.
 - Kustomize is a Kubernetes native configuration management tool and introduces a template-free way to customize application configuration.
-  - If using Kustomize, Flux has a Kustomize-controller which specialized in running continuous delivery pipelines for infrastructure and workloads defined with Kubernetes manifests and assembled with Kustomize. You can create a Kustomization object to manage that process.
+  - If using Kustomize, Flux includes a Kustomize-controller which specialized in running continuous delivery pipelines for infrastructure and workloads defined with Kubernetes manifests and assembled with Kustomize. You can create a Kustomization object to manage that process.
 - With Azure Arc-enabled Kubernetes, there is a list of available extensions which become managed and supported by Microsoft instead of requiring you to manage the lifecycle and support of the component. Some of these have Open-Source alternative options, an example of this is the Azure Key Vault Secrets Provider. Managing it outside of the extension process allows you more control of these components but adds an additional overhead of support and lifecycle management.
 
 ### Continues Integration and Continues Delivery (CI/CD) Flow
@@ -110,7 +112,7 @@ For all updates to your configuration, to verify changes have been successfully 
 
 #### Repository Auth
 
-- A Public or private repository can be used with GitOps, but due to the sensitive nature of Kubernetes configuration, a private repository that requires Authentication by SSH key or API key should be considered. GitOps will also work with a Git repository that is only accessible within an internal network as long as the Kubernetes cluster can access it, but this will limit your ability to use cloud based Git providers such as Azure DevOps Repos or GitHub.
+- A Public or private Git repository can be used with GitOps, but due to the sensitive nature of Kubernetes configuration, a private repository that requires authentication by SSH key or API key should be considered. GitOps will also work with a Git repository that is only accessible within a private network as long as the Kubernetes cluster can access it, but this will limit your ability to use cloud-based Git providers such as Azure DevOps Repos or GitHub.
 - HTTPS or SSH: when choosing between HTTPS or SSH for connecting to your source control tool, both protocols offer a reliable and secure connection. However, HTTPS is often times easier to set up and uses a port that usually does not require opening additional ports in your firewalls.
 
 #### Repo and Branch security
@@ -174,7 +176,7 @@ The following three Git repositories are included in the design:
 
 - Review [the recommendations for governance and security](./governance-diciplines.md) of your Azure Arc-enabled Kubernetes clusters.
 - It is recommended to use a private Git repository that has authentication and authorization required for defining any configuration repository, this will ensure unwanted access to any cluster configuration.
-- Access the Git repository through SSH protocol and an SSH key if your Git provider supports it. In scenarios where SSH is unusable due to outbound connectivity restrictions or your Git provider does not support the required SSH libraries, it is recommended to use a dedicated service account and associate an API key with the account for Flux to use.
+- Access the Git repository through SSH protocol and an SSH key if your Git provider supports it. In scenarios where SSH is unusable due to outbound connectivity restrictions or your Git provider does not support the required SSH libraries, it is recommended to use a dedicated service account and associate an API key with the account for Flux to use. As an alternative to SSH when using GitHub, you can review [Creating a personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) for authentication.
 - Configure branch policies and permissions that match the responsibilities of the cluster, with a minimum amount of reviewers to approve changes.
 - Configure a PR pipeline to validate YAML configurations, syntax, and optionally deploy a test Kubernetes cluster. Setup a branch policy to require this pipeline to run successfully before any merge can be accepted.
 - Implement secrets using the [Azure Key Vault Provider for Secrets Store CSI Driver](/azure/azure-arc/kubernetes/tutorial-akv-secrets-provider), this will allow for the integration of an Azure Key Vault as a secrets store with an Azure Arc-enabled Kubernetes cluster via a CSI volume.
