@@ -143,3 +143,4 @@ For more guidance for your hybrid cloud adoption journey, review the following:
 - To learn more about Open Service Mesh, check out the following : [Open Service Mesh Upstream documentation](https://release-v0-11.docs.openservicemesh.io/)
 - To learn more about Open Service Mesh Monitoring with Azure Monitor, check out the following : [Configure Monitoring and Observability with Open Service Mesh on Azure Kubernetes Service (AKS)](/azure/aks/open-service-mesh-azure-monitor)
 - To learn more about Monitoring on Azure Arc enabled Kubernetes, check out the following: [Management and monitoring for Azure Arc-enabled Kubernetes](./eslz-management-and-monitoring.md)
+- To learn more about Service meshes, check out the following: [About service meshes](/azure/aks/servicemesh-about)
