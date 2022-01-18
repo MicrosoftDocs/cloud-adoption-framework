@@ -59,13 +59,15 @@ Before defining your cluster configuration repository, consider the different la
 
 - Application Developers who are responsible for pushing their source code, triggering builds, and creating container images.
 - Application Operators who are responsible for maintaining the application repositories, configurations, environment variables, app-specific helm charts, Kustomizations etc.
-- Cluster Operators are responsible for setting up the cluster baseline. They are typically concerned with setting up cluster-wide components and policies. They maintain a directory or directories which contain common infrastructure tools such as Namespaces, Service Accounts, RoleBindings, CRDs, cluster-wide policies, Ingress components, etc.
+  - [Apply a Flux configuration by using the Azure CLI](/azure/azure-arc/kubernetes/tutorial-use-gitops-flux2#apply-a-flux-configuration-by-using-the-azure-cli)
+  - [Flux2 helm and kustomize example](https://github.com/fluxcd/flux2-kustomize-helm-example)
+- Cluster Operators are responsible for setting up the cluster baseline. They are typically concerned with setting up cluster-wide components and policies. They maintain a Git repo directory or directories which contain common infrastructure tools such as Namespaces, Service Accounts, RoleBindings, CRDs, cluster-wide policies, Ingress components, etc.
 
 #### Repository Structure
 
-Consider different tradeoffs with how you choose a Git repository structure that will define your Kubernetes cluster state.  Depending on the responsibilities and personas identified, it is important to consider the necessary collaboration or desired team independence required for different repository structure options.
+Consider different tradeoffs with how you choose a Git repository structure that will define your Kubernetes cluster state which includes applications and cluster-wide components. Depending on the responsibilities and personas identified, it is important to consider the necessary collaboration or desired team independence required for different repository structure options.
 
-For your code repositories, you can use any branching strategy you like since it is only used for your CI process. For your GitOps configuration repositories, you need to consider the following strategies based on your organization size and tooling:
+For your code repositories, you can use any branching strategy you like since it is only used by your Continues Integration (CI) process. For your GitOps configuration repositories, you need to consider the following strategies based on your organization business needs, size and tooling:
 
 - Single repository (Branch per environment):
   - This allows the most flexibility to control Git policies and permissions for each branch that represents an environment.
@@ -105,10 +107,10 @@ The following is a process flow that contains the traditional application CI pro
 
 #### Cluster-wide component update process
 
-- As Cluster Operators need to manage cluster-wide components, this likely will not originate from a CD pipeline. Consider defining a promotion process for Cluster Operators to ensure changes can smoothly transition from one environment to another.
-- In scenarios where you need to apply identical GitOps configuration at scale to your Arc-enabled Kubernetes clusters, you can consider applying an Azure Policy which can automatically install the Flux extension and apply the GitOps configuration to existing Arc-enabled Kubernetes clusters or new clusters as they get onboarded to Azure Arc.
+- As Cluster Operators need to manage cluster-wide components, this likely will not originate from a CD pipeline used to deploy the applications and services. Consider defining a promotion process specific to Cluster Operators to ensure changes can smoothly transition from one environment to another.
+- In scenarios where you need to apply identical GitOps configuration at scale to your Azure Arc-enabled Kubernetes clusters, you can consider applying an Azure Policy that can automatically install the Flux extension and apply the GitOps configuration to existing Arc-enabled Kubernetes clusters or new clusters as they get onboarded to Azure Arc.
 
-For all updates to your configuration, to verify changes have been successfully applied to your desired environment, consider defining notifications in Flux to integrate to your CI/CD tools, email, or ChatOps tools to alert on successful changes as well as deployment failures.
+For all updates to your configuration, to verify changes have been successfully applied to your desired environment, consider defining notifications in Flux to integrate to your CI/CD tools, email, or ChatOps tools to alert on successful changes as well as deployment failures. Deployment status information is also available in the Azure portal and through the k8s-configuration cli and ARM API.
 
 ### Security
 
@@ -181,6 +183,8 @@ The following three Git repositories are included in the design:
 
 - Review [the recommendations for governance and security](./governance-diciplines.md) of your Azure Arc-enabled Kubernetes clusters.
 - It is recommended to use a private Git repository that has authentication and authorization required for defining any configuration repository, this will ensure unwanted access to any cluster configuration.
+  - [Connecting to GitHub with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)
+  - [Choose the right authentication mechanism for Azure DevOps](/azure/devops/integrate/get-started/authentication/authentication-guidance)
 - Access the Git repository through SSH protocol and an SSH key if your Git provider supports it. In scenarios where SSH is unusable due to outbound connectivity restrictions or your Git provider does not support the required SSH libraries, it is recommended to use a dedicated service account and associate an API key with the account for Flux to use. As an alternative to SSH when using GitHub, you can review [Creating a personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) for authentication.
 - Configure branch policies and permissions that match the responsibilities of the cluster, with a minimum amount of reviewers to approve changes.
 - Configure a PR pipeline to validate YAML configurations, syntax, and optionally deploy a test Kubernetes cluster. Setup a branch policy to require this pipeline to run successfully before any merge can be accepted.
