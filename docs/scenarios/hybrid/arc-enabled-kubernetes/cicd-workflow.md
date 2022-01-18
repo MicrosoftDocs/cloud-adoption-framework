@@ -23,6 +23,8 @@ By implementing GitOps, you can achieve some of the following benefits:
 - Improve security by reducing the amount of service accounts that are required to have deployment permission to your cluster.
 - Implement a CI/CD pipeline for deploying applications to your cluster.
 
+GitOps on Azure Arc-enabled Kubernetes uses an extension that implements [Flux](https://www.weave.works/oss/flux/), a popular open-source tool set. Flux is an operator that automates the GitOps configuration deployments in your cluster. Flux provides support for common file sources (Git and Helm repositories, Buckets) and template types (YAML, Helm, and Kustomize). Flux also supports multi-tenancy and deployment dependency management, among other features.
+
 ## Architecture
 
 The following images show a conceptual reference architecture that highlights the Flux cluster extension installation provisioning in your cluster, GitOps configuration process for an Azure Arc-enabled Kubernetes cluster and GitOps Flow.
@@ -49,7 +51,7 @@ Before defining your cluster configuration repository, consider the different la
 
 #### Configuration layers
 
-- Application configuration needed to deploy an application and its related Kubernetes objects to the cluster such as Deployment, Service, HPA, and ConfigMap resources.
+- Application configuration needed to deploy an application and its related Kubernetes objects to the cluster such as Deployment, Service, HPA, and ConfigMap resources. Application configurations are typically applied to a namespace-level GitOps configuration, requiring the application components only to be configured within a single namespace.
 - Cluster-wide components such as an Ingress Controller, monitoring and security stack, and various agents that operate across the cluster.
 - Cluster-wide configuration for creation of Kubernetes objects such as Namespaces, ServiceAccounts, Roles and RoleBindings, and other cluster-wide policies.
 
@@ -165,11 +167,14 @@ The following three Git repositories are included in the design:
 
 - Cluster Operators and Application Operators will each be defining configuration in their respective configuration repository. These users will not require pipeline tooling to push configurations, and instead can use the native Git commit and PR processes to define the configuration and push the changes to a branch that represents an environment.
 - For new configuration definitions, start with defining configuration in lower environments, such as Dev and promote to higher environments by merges and pull requests. Cherry-pick configuration updates that are only specific to certain environments as needed.
+<!-- The following section is commented until support/documentation is added -->
+<!-- 
 - For implementing at-scale GitOps Configurations which require a Kubernetes configuration to be applied to all Azure Arc-enabled Kubernetes clusters, create an Azure Policy to automatically apply this configuration at scale.
+-->
 
 ### Feedback and alerting
 
-- Configure Azure Monitor alerts to alert on GitOps configurations that are unable to synchronize or are erroring.
+- Configure [Flux Notifications](https://fluxcd.io/docs/guides/notifications/) to alert users on GitOps configurations that are unable to synchronize or are erroring. Application Operators should configure alerts to determine when an application deployment has been deployed and is healthy. Cluster Operators should configure alerts when cluster-wide component reconciliation has failed, and additionally alert on synchronization issues with the Git repository.
 - Implement [GitOps Connector](https://github.com/microsoft/Gitops-connector) to integrate feedback from the Flux agent to your CI/CD tooling.
   
 ### Security
