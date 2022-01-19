@@ -30,7 +30,7 @@ For example, consider a scenario where a new landing zone subscription is provis
 >  
 > The preceding list shows a subset of all the policies that are assigned as part of the Azure landing zone accelerator. For a full list of policies that can be assigned by the Azure landing zone reference implementation, see [Policies included in enterprise-scale landing zones reference implementations](https://github.com/Azure/Enterprise-Scale/blob/main/docs/ESLZ-Policies.md).
 
-All assigned policies help you and the landing zone owners remain compliant. No actual workload resources are deployed via DINE or Modify policies. We don't recommend this either. For more information, see [Should we use Azure Policy to deploy workloads?](/azure/cloud-adoption-framework/ready/enterprise-scale/faq#should-we-use-azure-policy-to-deploy-workloads). Only auxiliary or supporting resources or settings are deployed or configured by these DINE policies.
+All assigned policies help you and the landing zone owners remain compliant. No actual workload resources are deployed via DINE or Modify policies. We don't recommend this either. For more information, see [Should we use Azure Policy to deploy workloads?](./faq.md#should-we-use-azure-policy-to-deploy-workloads). Only auxiliary or supporting resources or settings are deployed or configured by these DINE policies.
 
 The Azure landing zones reference implementations use [DINE](/azure/governance/policy/concepts/effects#deployifnotexists) Azure policies to help you achieve policy-driven governance within your Azure environment. But maybe you can't use DINE or Modify policies, or you aren't ready to enable this type of [Azure policy effect](/azure/governance/policy/concepts/effects) because of:
 
@@ -38,7 +38,7 @@ The Azure landing zones reference implementations use [DINE](/azure/governance/p
 - Strict change control processes that require human approval for every action within your Azure environment.
 - Lack of expertise, experience, and understanding of how to manage and use DINE policies.
 
-If you fit into the preceding examples or similar scenarios, this article helps you understand how to adopt the [Azure landing zone conceptual architecture](/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-conceptual-architecture) and adhere to its [design principles](/azure/cloud-adoption-framework/ready/enterprise-scale/design-principles). Although you won't use certain policies initially, you can choose to gradually enable them in the future. The goal is to help you achieve [policy-driven governance](/azure/cloud-adoption-framework/ready/enterprise-scale/design-principles#policy-driven-governance).
+If you fit into the preceding examples or similar scenarios, this article helps you understand how to adopt the [Azure landing zone conceptual architecture](../landing-zone/index.md#azure-landing-zone-conceptual-architecture) and adhere to its [design principles](./design-principles.md). Although you won't use certain policies initially, you can choose to gradually enable them in the future. The goal is to help you achieve [policy-driven governance](./design-principles.md#policy-driven-governance).
 
 >[!IMPORTANT]
 > Throughout this article, you'll see two possible values used for the enforcement mode terms:
@@ -154,7 +154,7 @@ After you've completed [phase 1](#phase-1-disable-dine-and-modify-policies-autom
 To do this procedure, first you need to identify the policy or reduced scope that will be used to test and try the DINE and Modify policies' full automation capabilities.
 
 >[!NOTE]
-> You might want to review and implement a [testing approach for an enterprise-scale](/azure/cloud-adoption-framework/ready/enterprise-scale/testing-approach) platform. In this way, you can test policies and other platform changes in a separated management group hierarchy within the same tenant.
+> You might want to review and implement a [testing approach for an enterprise-scale](./testing-approach.md) platform. In this way, you can test policies and other platform changes in a separated management group hierarchy within the same tenant.
 >
 > This approach is also known as a "canary" deployment.
 
@@ -162,7 +162,7 @@ Some suggested examples of scopes and policies are shown in the following table:
 
 | When you want to... | ...choose from these scopes | Example policies to use |
 | ------------------- | --------------------------- | ----------------------- |
-| - Test the DINE/Modify automated remediation capabilities. <br> - Verify how your complete deployment processes and CI/CD pipelines, including tests, might be affected. <br> - Verify how your workload might be affected. | - Sandbox subscription <br> - Sandbox management group <br> - Nonproduction workload landing zone subscription <br> - [Enterprise-scale "canary" environment](/azure/cloud-adoption-framework/ready/enterprise-scale/testing-approach) | - Configure Azure Activity logs to stream to a specified Log Analytics workspace. <br> - Deploy Defender for Cloud configuration. <br> - Enable Azure Monitor for VMs or Virtual Machine Scale Sets. <br> - Deploy diagnostic settings to Azure services. <br>  - Potentially only enable for specific services within the initiative. |
+| - Test the DINE/Modify automated remediation capabilities. <br> - Verify how your complete deployment processes and CI/CD pipelines, including tests, might be affected. <br> - Verify how your workload might be affected. | - Sandbox subscription <br> - Sandbox management group <br> - Nonproduction workload landing zone subscription <br> - [Enterprise-scale "canary" environment](./testing-approach.md) | - Configure Azure Activity logs to stream to a specified Log Analytics workspace. <br> - Deploy Defender for Cloud configuration. <br> - Enable Azure Monitor for VMs or Virtual Machine Scale Sets. <br> - Deploy diagnostic settings to Azure services. <br>  - Potentially only enable for specific services within the initiative. |
 
 You might also decide to use a manual remediation task on a limited scope or set of resources to test how these policies will affect your environment. For more information on how to create a remediation task, see the Azure Policy documentation [Create a remediation task](/azure/governance/policy/how-to/remediate-resources#create-a-remediation-task).
 

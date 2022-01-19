@@ -69,8 +69,8 @@ Private IP addresses minimize your Azure resources' exposure to the internet. Ma
 | Key Vault | Private endpoint | [Secure Azure Key Vault](/azure/machine-learning/how-to-secure-workspace-vnet#secure-azure-key-vault) |
 |  Container Registry | Private endpoint | [Enable Azure Container Registry](/azure/machine-learning/how-to-secure-workspace-vnet#enable-azure-container-registry-acr) |
 | **Training resources** |
-| Compute instance | Behind virtual network with public IP | [Secure training environments](/azure/machine-learning/how-to-secure-training-vnet?tabs=azure-studio#compute-instance) |
-| Compute cluster | Behind virtual network with public IP | [Secure training environments](/azure/machine-learning/how-to-secure-training-vnet?tabs=azure-studio%2Cipaddress#compute-cluster) |
+| Compute instance | Private IP (no public IP preview) | [Secure training environments](/azure/machine-learning/how-to-secure-training-vnet?tabs=azure-studio#compute-instance) |
+| Compute cluster | Private IP (no public IP preview) | [Secure training environments](/azure/machine-learning/how-to-secure-training-vnet?tabs=azure-studio%2Cipaddress#compute-cluster) |
 | **More hosting resources** |
 | Kubernetes cluster | Private endpoint | [Secure inferencing environments](/azure/machine-learning/how-to-secure-inferencing-vnet?tabs=python#secure-vnet-traffic) |
 | Machine learning load balancer on AKS | Private load balancer | [Secure inferencing environments](/azure/machine-learning/how-to-secure-inferencing-vnet?tabs=python#secure-vnet-traffic) |
