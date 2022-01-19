@@ -263,7 +263,7 @@ Security is everyone's job. Not everyone, though, knows how important it is, wha
 
 For more information, see the Azure Security Benchmark [gs-2: define security posture management strategy](/security/benchmark/azure/security-controls-v2-governance-strategy#gs-2-define-security-posture-management-strategy).
 
-## 6. Technology: Require passwordless or multi-factor authentication
+## 6. Technology: Require passwordless or multifactor authentication
 
 Are you willing to bet the security of your enterprise that professional attackers can't guess or steal your administrator's password?
 
@@ -275,7 +275,7 @@ Require all critical impact admins to use passwordless or multi-factor authentic
 
 Just as antique skeleton keys won't protect a house against a modern day burglar, passwords can't protect accounts against common attacks we see today. Technical details are described in [Your pa$$word doesn't matter](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/your-pa-word-doesn-t-matter/ba-p/731984).
 
-Multifactor authentication was once a burdensome extra step. Passwordless approaches today improve how users sign in using biometric approaches like facial recognition in Windows Hello and mobile devices. Additionally, zero trust approaches remember trusted devices. This method reduces prompting for annoying out of band multi-factor authentication actions. For more information, see [User sign-in frequency](/azure/active-directory/conditional-access/howto-conditional-access-session-lifetime#user-sign-in-frequency).
+Multifactor authentication was once a burdensome extra step. Passwordless approaches today improve how users sign in using biometric approaches like facial recognition in Windows Hello and mobile devices. Additionally, zero trust approaches remember trusted devices. This method reduces prompting for annoying out of band multifactor authentication actions. For more information, see [User sign-in frequency](/azure/active-directory/conditional-access/howto-conditional-access-session-lifetime#user-sign-in-frequency).
 
 ### Who 
 
