@@ -53,7 +53,7 @@ For more information, see the Azure Security Benchmark [gs-3: align organization
 
 ## 2. People: Educate teams on cloud security technology
 
-*People need to understand where they're going.*
+People need to understand where they're going.
 
 ### What
 
@@ -100,7 +100,7 @@ For more information, see the Azure Security Benchmark [gs-3: align organization
 
 ## 3. Process: Assign accountability for cloud security decisions
 
-*If nobody is accountable for making security decisions, they won't get made.*
+If nobody is accountable for making security decisions, they won't get made.
 
 ### What 
 
@@ -108,7 +108,7 @@ Choose who is responsible for making each type of security decision for the ente
 
 ### Why 
 
-Clear ownership of security decisions speeds up cloud adoption **and** increases security. Lack of ownership typically creates friction. It creates friction because nobody feels empowered to make decisions. Nobody knows who to ask for a decision and nobody is incentivized to research a well-informed decision. Friction frequently impedes:
+Clear ownership of security decisions speeds up cloud adoption and increases security. Lack of ownership typically creates friction. It creates friction because nobody feels empowered to make decisions. Nobody knows who to ask for a decision and nobody is incentivized to research a well-informed decision. Friction frequently impedes:
 
 * Business goals
 * Developer timelines
@@ -134,12 +134,12 @@ These areas are typically where security decisions are needed. The following tab
 
 | Decision         | Description           | Typical team  |
 | ------------- |-------------| -----|
-| Network security | Configuration and maintenance of Azure Firewall, network virtual appliances (and associated routing), Web Application Firewalls (WAFs), NSGs, ASGs, and so on. | *Typically [Infrastructure and endpoint security](../organize/cloud-security-infrastructure-endpoint.md) team focused on network security*.  |
-| Network management | Enterprise-wide virtual network and subnet allocation. | *Typically existing network operations team in [Central IT Operations](../organize/central-it.md)*. |
-| Server endpoint security | Monitor and remediate server security, including patching, configuration, endpoint security, and so on. | *Typically [Central IT Operations](../organize/central-it.md) and [Infrastructure and endpoint security](../organize/cloud-security-infrastructure-endpoint.md) teams jointly*. |
-| Incident monitoring and response | Investigate and remediate security incidents in SIEM or source console, including Microsoft Defender for Cloud, Azure AD identity protection, and so on. | *Typically [security operations](../organize/cloud-security-operations-center.md) team*. |
-| Policy management | Set direction for use of Azure role-based access control (Azure RBAC), Microsoft Defender for Cloud, administrator protection strategy, and Azure Policy to govern Azure resources | *Typically [Policy and Standards](../organize/cloud-security-policy-standards.md) + [Security Architecture](../organize/cloud-security-architecture.md) Teams jointly* |
-| Identity security and standards | Set direction for Azure AD directories, PIM/pam usage, multi-factor authentication, password/synchronization configuration, application identity standards | *Typically [Identity and Key Management](../organize/cloud-security-identity-keys.md) + [Policy and Standards](../organize/cloud-security-policy-standards.md) + [Security Architecture](../organize/cloud-security-architecture.md) Teams jointly*  |
+| Network security | Configure and maintain Azure Firewall, network virtual appliances (and associated routing), Web Application Firewalls (WAFs), NSGs, ASGs, and so on. | [Infrastructure and endpoint security](../organize/cloud-security-infrastructure-endpoint.md) team focused on network security  |
+| Network management | Manage enterprise-wide virtual network and subnet allocation. | Existing network operations team in [Central IT Operations](../organize/central-it.md) |
+| Server endpoint security | Monitor and remediate server security, including patching, configuration, endpoint security, and so on. | [Central IT Operations](../organize/central-it.md) and [Infrastructure and endpoint security](../organize/cloud-security-infrastructure-endpoint.md) teams jointly |
+| Incident monitoring and response | Investigate and remediate security incidents in SIEM or source console, including Microsoft Defender for Cloud, Azure AD identity protection, and so on. | [Security operations](../organize/cloud-security-operations-center.md) team |
+| Policy management | Set direction for use of Azure role-based access control (Azure RBAC), Microsoft Defender for Cloud, administrator protection strategy, and Azure Policy to govern Azure resources. | [Policy and Standards](../organize/cloud-security-policy-standards.md) and [Security Architecture](../organize/cloud-security-architecture.md) teams jointly |
+| Identity security and standards | Set direction for Azure AD directories, PIM/pam usage, multi-factor authentication, password/synchronization configuration, application identity standards. | [Identity and Key Management](../organize/cloud-security-identity-keys.md), [Policy and Standards](../organize/cloud-security-policy-standards.md), and [Security Architecture](../organize/cloud-security-architecture.md) teams jointly |
 
 > [!NOTE]
 >
@@ -150,7 +150,7 @@ For more information, see the Azure Security Benchmark [gs-3: align organization
 
 ## 4. Process: Update incident response processes for cloud
 
-*You don't have time to plan for a crisis during a crisis.*
+You don't have time to plan for a crisis during a crisis.
 
 ### What
 
@@ -202,7 +202,7 @@ For more information, see the Azure Security Benchmark [IR-1: preparation - upda
 
 ## 5. Process: Establish security posture management
 
-*First, know thyself.*
+First, know thyself.
 
 ### What 
 
@@ -265,7 +265,7 @@ For more information, see the Azure Security Benchmark [gs-2: define security po
 
 ## 6. Technology: Require passwordless or multi-factor authentication
 
-*Are you willing to bet the security of your enterprise that professional attackers can't guess or steal your administrator's password?*
+Are you willing to bet the security of your enterprise that professional attackers can't guess or steal your administrator's password?
 
 ### What 
 
@@ -303,7 +303,7 @@ For more information, see the Azure Security Benchmark [ID-4: use strong authent
 
 ## 7. Technology: Integrate native firewall and network security
 
-*Simplify protection of systems and data against network attacks.*
+Simplify protection of systems and data against network attacks.
 
 ### What 
 
@@ -385,7 +385,7 @@ For more information, see the Azure Security Benchmark [LT-1: enable threat dete
 
 ## 9. Architecture: Standardize on a single directory and identity
 
-*Nobody wants to deal with multiple identities and directories.*
+Nobody wants to deal with multiple identities and directories.
 
 ### What 
 
@@ -468,14 +468,16 @@ Identity-based access control implementation often a cross-team effort. The effo
 
 Setting an organizational preference and habit for using identity-based authentication requires following a process and enabling technology.
 
-**The process**:
+**The process**
 
-1. **Establish policy** and standards that clearly outline the default identity-based authentication, and acceptable exceptions.
-2. **Educate** developers and infrastructure teams on why to use the new approach, what they need to do, and how to do it.
-3. **Implement** changes in a pragmatic way by starting with new greenfield capabilities being adopted now and in the future (new Azure services, new applications) and then following up with a clean-up of existing brownfield configurations.
-4. **Monitor** for compliance and follow up with developer and infrastructure teams to remediate.
+1. Establish policy and standards that clearly outline the default identity-based authentication, and acceptable exceptions.
+2. Educate developers and infrastructure teams on why to use the new approach, what they need to do, and how to do it.
+3. Implement changes in a pragmatic way by starting with new greenfield capabilities being adopted now and in the future (new Azure services, new applications) and then following up with a clean-up of existing brownfield configurations.
+4. Monitor for compliance and follow up with developer and infrastructure teams to remediate.
 
-**The technologies**: For non-human accounts such as services or automation, use [managed identities](/azure/active-directory/managed-identities-azure-resources/overview). Azure managed identities can authenticate to Azure services and resources that support Azure AD authentication. Authentication is enabled through predefined access grant rules, avoiding hard-coded credentials in source code or configuration files.
+**The technologies** 
+
+For non-human accounts such as services or automation, use [managed identities](/azure/active-directory/managed-identities-azure-resources/overview). Azure managed identities can authenticate to Azure services and resources that support Azure AD authentication. Authentication is enabled through predefined access grant rules, avoiding hard-coded credentials in source code or configuration files.
 
 For services that don't support managed identities, use Azure AD to create a [service principal](/azure/active-directory/develop/app-objects-and-service-principals) with restricted permissions at the resource level instead. We recommended configuring service principals with certificate credentials and fallback to client secrets. In both cases, [Azure Key Vault](/azure/key-vault/general/overview) can be used with Azure managed identities, so that the runtime environment (such as an Azure function) can retrieve the credential from the key vault.
 
@@ -483,7 +485,7 @@ For more information, see the Azure Security Benchmark [ID-2: manage application
 
 ## 11. Architecture: establish a single unified security strategy
 
-*Everyone needs to row in the same direction for the boat to go forward.*
+Everyone needs to row in the same direction for the boat to go forward.
 
 ### What 
 
@@ -495,9 +497,9 @@ When teams work in isolation without being aligned to a common strategy, their i
 
 One example of teams working in isolation that has played out consistently in many organizations is the segmentation of assets:
 
-- The **network security team** develops a strategy for segmenting a *flat network*. The strategy increases security, often based on physical sites, assigned IP address addresses/ranges, or similar items.
-- Separately, the **identity team** developed a strategy for groups and Active Directory organizational units (OUs) based on their understanding and knowledge of the organization.
-- Often, **application teams** find it difficult to work with these systems. It's difficult because they were designed with limited input and understanding of business operations, goals, and risks.
+- **Network security**: Develops a strategy for segmenting a flat network. The strategy increases security, often based on physical sites, assigned IP address addresses/ranges, or similar items.
+- **Identity team**: Develops a strategy for groups and Active Directory organizational units (OUs) based on their understanding and knowledge of the organization.
+- **Application teams**: Find it difficult to work with these systems. It's difficult because they were designed with limited input and understanding of business operations, goals, and risks.
 
 In organizations where this limitation happens, teams frequently experience conflicts over firewall exceptions. The conflicts can negatively impact security because teams approve exceptions. Productivity negatively impacts security because deployments slowdown for application functionality the business needs.
 
