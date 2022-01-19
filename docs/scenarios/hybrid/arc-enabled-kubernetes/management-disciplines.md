@@ -14,7 +14,7 @@ ms.custom: e2e-hybrid, think-tank
 
 This document provides key design considerations and recommendations to manage and monitor Azure Ar-enabled Kubernetes clusters to help you understand and design solutions for well architected operational excellence.
 
-Before continuing with this document, review [Identity and Access Management](./identity-access-management.md), [Networking](./network-connectivity.md), [Resource Organization](./resource-organization.md), and [Governance](./governance-disciplines.md) critical design areas (CDA) to better understand related design considerations and recommendations to focus on management and monitoring aspects of the Azure Arc-enabled Kubernetes.
+Before continuing with this document, review [identity and access management](./identity-access-management.md), [networking](./network-connectivity.md), [resource organization](./resource-organization.md), and [governance](./governance-disciplines.md) critical design areas (CDA) to better understand related design considerations and recommendations to focus on management and monitoring aspects of Azure Arc-enabled Kubernetes.
 
 ## Architecture
 
