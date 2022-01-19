@@ -24,7 +24,7 @@ The following is an Azure Arc-enabled Kubernetes network architecture diagram to
 
 The following is a network architecture diagram that supports cluster access from any network location using [Azure Arc-enabled Kubernetes Cluster Connect capability](/azure/azure-arc/kubernetes/conceptual-cluster-connect) feature.
 
-![Arc-enabled Kubernetes Cluster Connect Network Architecture](./media/conceptual-cluster-connect.png)
+![Arc-enabled Kubernetes Cluster Connect Network Architecture](./media/cluster-connect-network.png)
 
 ## Design considerations
 
