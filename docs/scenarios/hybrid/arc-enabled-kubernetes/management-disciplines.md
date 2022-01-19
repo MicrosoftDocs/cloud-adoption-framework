@@ -18,7 +18,7 @@ Before continuing with this document, review [identity and access management](./
 
 ## Architecture
 
-It is important to understand Azure Arc-enabled Kubernetes architecture and [network connectivity modes](/azure/azure-arc/kubernetes/conceptual-connectivity-modes#understand-connectivity-modes) to make the right architectural decision to onboard on-premises or multi-cloud Kubernetes clusters to Azure Arc, manage, and monitor and meet organization enterprise architecture standards and operational desired state.
+It is important to understand Azure Arc-enabled Kubernetes architecture and [network connectivity modes](/azure/azure-arc/kubernetes/conceptual-connectivity-modes#understand-connectivity-modes) to make the right architectural decision to onboard on-premises or multi-cloud Kubernetes clusters to Azure Arc, manage, monitor, and meet organization enterprise architecture standards and operational desired state.
 
 ### Cluster management
 
