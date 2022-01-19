@@ -49,9 +49,9 @@ Common scenarios for machine learning solutions include:
 - **Follow along with video tutorials** to learn more about the benefits of machine learning, such as no-code model building, machine learning operations (MLOps), ONNX Runtime, model interpretability and transparency, and more.
 
   - [What's new with Azure Machine Learning](https://channel9.msdn.com/Shows/AI-Show/Allup-Azure-ML)
-  - [Use AutoML to build models](https://aka.ms/automlvideo)
-  - [Build zero-code models with Azure Machine Learning designer](https://aka.ms/studioanddesigner)
-  - [MLOps for managing the end-to-end lifecycle](https://aka.ms/mlopsvideo)
+  - [Use AutoML to build models](/shows/AI-Show/Automate-ML)
+  - [Build zero-code models with Azure Machine Learning designer](/shows/AI-Show/Designer-drag-and-drop-ML)
+  - [MLOps for managing the end-to-end lifecycle](/shows/AI-Show/MLops-updates-model-registry)
   - [Incorporating ONNX Runtime into your models](https://www.youtube.com/watch?v=qy7X2JGLUC4)
   - [Model interpretability and transparency](https://channel9.msdn.com/shows/ai-show/machine-learning-Interpretability-toolkit)
   - [Building models with R](https://channel9.msdn.com/shows/ai-show/r-in-azure-machine-learning)

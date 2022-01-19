@@ -40,12 +40,12 @@ This article assumes that enterprise-scale landing zone has been successfully im
 
 Guide to the critical decisions that drive the design of the Cloud Adoption Framework for Azure enterprise-scale landing zone. There are six critical design areas that can be used to review and modify your enterprise-scale landing zone or any other Azure landing zone implementation:
 
-- [Identity and access management](../../ready/enterprise-scale/identity-and-access-management.md)
+- [Identity and access management](../../ready/landing-zone/design-area/identity-access.md)
 - [Network topology and connectivity](../../ready/enterprise-scale/network-topology-and-connectivity.md)
-- [Management and monitoring](../../ready/enterprise-scale/management-and-monitoring.md)
-- [Business continuity and disaster recovery](../../ready/enterprise-scale/business-continuity-and-disaster-recovery.md)
-- [Security, governance and compliance](../../ready/enterprise-scale/security-governance-and-compliance.md)
-- [Platform automation and DevOps](../../ready/enterprise-scale/platform-automation-and-devops.md)
+- [Management and monitoring](../../ready/landing-zone/design-area/management.md)
+- [Business continuity and disaster recovery](../../ready/landing-zone/design-area/management-business-continuity-disaster-recovery.md)
+- [Security, governance and compliance](../../ready/landing-zone/design-area/governance.md)
+- [Platform automation and DevOps](../../ready/landing-zone/design-area/platform-automation-devops.md)
 
 ## Implementation additions
 
@@ -85,7 +85,7 @@ To achieve hybrid identity, organizations should consider the following three Az
 
 Expanding infrastructure and applications across multiple locations potentially introduces additional complexity to maintaining governance standards. As part of the planning for hybrid, centralized governance tools and processes should be implemented in order to establish good patterns as workloads scale out.
 
-The [Cloud Adoption Framework's Enterprise Scale Landing Zone architecture](../../ready/enterprise-scale/architecture.md) includes patterns for standardizing the deployment of [Azure Policy](/azure/governance/policy/overview) and [Role-based Access Controls (RBAC)](../../ready/azure-setup-guide/manage-access.md) through structured use of management groups to segment resources into logical groupings. These patterns can be extended using technologies such as Azure Arc, which is detailed further below.
+The [Cloud Adoption Framework's Enterprise Scale Landing Zone architecture](../../ready/landing-zone/index.md) includes patterns for standardizing the deployment of [Azure Policy](/azure/governance/policy/overview) and [Role-based Access Controls (RBAC)](../../ready/azure-setup-guide/manage-access.md) through structured use of management groups to segment resources into logical groupings. These patterns can be extended using technologies such as Azure Arc, which is detailed further below.
 
 ## Management
 
