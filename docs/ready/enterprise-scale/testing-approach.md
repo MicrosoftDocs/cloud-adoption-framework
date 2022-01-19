@@ -17,7 +17,7 @@ ms.custom: think-tank
 
 Some organizations might want to test their enterprise-scale platform deployment for Azure Policy definitions and assignments, role-based access control (RBAC) custom roles and assignments, and so on. The tests can be completed via automation by using Azure Resource Manager templates (ARM templates), [AzOps](https://github.com/Azure/AzOps), [Terraform](https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest), or manually via the Azure portal. This guidance provides an approach that can be used to test changes and their impact in an enterprise-scale platform deployment.
 
-This article can also be used with the [Platform automation and DevOps critical design area](./platform-automation-and-devops.md) guidance as it relates to the PlatformOps and Central functions teams and tasks.
+This article can also be used with the [Platform automation and DevOps critical design area](../landing-zone/design-area/platform-automation-devops.md) guidance as it relates to the PlatformOps and Central functions teams and tasks.
 
 This guidance is most suited to organizations with robust change management processes governing changes to the production environment management group hierarchy. The *canary* management group hierarchy can be independently used to author and test deployments before you deploy them into the production environment.
 
@@ -128,4 +128,4 @@ Below is guidance on how to implement and use the canary management group hierar
 5. Have a set of canary subscriptions under a separate EA department and account that can be moved around the canary management group hierarchy as needed.
    - It might be beneficial to have a set of resources always deployed into the canary environment subscriptions.
    - It might be helpful to have Infrastructure-as-Code templates such as ARM templates, Bicep, or Terraform, that create a set of resources that enable validation of changes in the canary environment.
-6. Send all Azure activity logs for all Azure subscriptions, including any canary environment subscriptions, to the production environment Azure Log Analytics workspace as per the [enterprise-scale design recommendations](./management-and-monitoring.md).
+6. Send all Azure activity logs for all Azure subscriptions, including any canary environment subscriptions, to the production environment Azure Log Analytics workspace as per the [enterprise-scale design recommendations](../landing-zone/design-area/management.md).

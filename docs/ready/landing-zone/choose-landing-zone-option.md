@@ -231,7 +231,7 @@ The following considerations are key to your adoption plan for either type:
 
 Enterprise-scale provides long-term self-sufficiency and operational excellence immediately. Enterprise-scale also helps to accelerate compliance adoption across your organization. The enterprise-scale approach builds out a foundation for you. Enterprise-scale includes the guardrails around security, identity, and network. The approach includes CI/CD pipeline options for DevOps and automation.
 
-If you start small and expand, there are ways to achieve self-sufficiency, adoption velocity, and operational excellence. Use the Govern and Manage methodologies of the Cloud Adoption Framework to iteratively build those pieces into the landing zone solution. Use the eight areas of design, [Cloud Adoption Framework enterprise-scale design guidelines](../enterprise-scale/design-guidelines.md), to iteratively improve your design.
+If you start small and expand, there are ways to achieve self-sufficiency, adoption velocity, and operational excellence. Use the Govern and Manage methodologies of the Cloud Adoption Framework to iteratively build those pieces into the landing zone solution. Use the eight areas of design, [Cloud Adoption Framework enterprise-scale design guidelines](./design-areas.md), to iteratively improve your design.
 
 To learn more about operational excellence, see [Deliver operational excellence during digital transformation](../../get-started/operational-excellence.md).
 
@@ -246,7 +246,7 @@ Your organization might need to have a particular workload or application that n
 
 Start small and expand is an iterative approach to compliance. Use the Cloud Adoption Framework Govern and Manage methodologies to support sensitive data or critical workloads. For more information, see the [Govern methodology for the cloud](../../govern/methodology.md) and [IT management and operations in the cloud](../../manage/considerations/index.md).
 
-The enterprise-scale architecture includes designs for segmentation and separation to support compliance goals and a [service enablement framework](../enterprise-scale/security-governance-and-compliance.md#service-enablement-framework) to determine how to achieve appropriate levels of governance, security, and compliance.
+The enterprise-scale architecture includes designs for segmentation and separation to support compliance goals and a [service enablement framework](./design-area/governance.md#service-enablement-framework) to determine how to achieve appropriate levels of governance, security, and compliance.
 
 If possible, identify low-risk workloads to implement first. This technique helps you build infrastructure and skills over time. You can add the Govern and Manage methodologies as you understand how the cloud works.
 
@@ -264,7 +264,7 @@ Both implementation offer best practices. Start small and expand lets you add be
 
 Enterprise-scale comes with all critical services configured. Start small and expand comes with some resources deployed.
 
-For more information, see [Best practices for Azure readiness](../azure-best-practices/index.md).
+For more information, see [Best practices for Azure readiness](./design-areas.md).
 
 Both methodologies offer automation capabilities.
 

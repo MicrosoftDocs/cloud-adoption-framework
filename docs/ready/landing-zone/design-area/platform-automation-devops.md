@@ -3,7 +3,7 @@ title: Platform automation and DevOps design area
 description: Design area guidance for platform automation and DevOps
 author: DominicAllen
 ms.author: doalle
-ms.date: 12/7/2021
+ms.date: 01/04/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready

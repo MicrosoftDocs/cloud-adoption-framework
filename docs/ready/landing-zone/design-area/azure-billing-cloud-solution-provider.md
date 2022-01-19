@@ -3,7 +3,7 @@ title: Cloud Solution Provider service
 description: Learn how to understand Cloud Solution Provider (CSP) service agreements and Azure Active Directory (Azure AD) tenants.
 author: jtracey93
 ms.author: jatracey
-ms.date: 12/07/2021
+ms.date: 01/04/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready

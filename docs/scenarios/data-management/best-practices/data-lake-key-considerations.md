@@ -89,7 +89,7 @@ Depending on your industry, we recommend that you assess immutable storage for u
 
 ## Monitoring
 
-In a data landing zone, all the monitoring should be sent to the [enterprise-scale management subscription](../../../ready/enterprise-scale/management-and-monitoring.md) for analysis.
+In a data landing zone, all the monitoring should be sent to the [enterprise-scale management subscription](../../../ready/landing-zone/design-area/management.md) for analysis.
 
 Learn how Azure Storage collects the same kinds of monitoring data as other Azure resources in [Monitoring Azure resources with Azure Monitor](/azure/azure-monitor/essentials/monitor-azure-resource). For more information on the logs and metrics created by Azure Storage, see [Monitoring Azure Blob Storage](/azure/storage/blobs/monitor-blob-storage).
 

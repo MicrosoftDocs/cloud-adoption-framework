@@ -33,7 +33,7 @@ Each reference implementation deploys platform resources to the selected target 
 These examples provide an easy deployment option to support continued learning for the enterprise-scale approach. Before you use these examples in a production version of enterprise-scale, review the enterprise-scale architecture.
 
 > [!div class="nextstepaction"]
-> [Review the enterprise-scale architecture](./architecture.md)
+> [Review the enterprise-scale architecture](../landing-zone/index.md)
 
 <!-- The following section is used to store references to external images and links to reduce maintenance overhead and enable tooltips -->
 

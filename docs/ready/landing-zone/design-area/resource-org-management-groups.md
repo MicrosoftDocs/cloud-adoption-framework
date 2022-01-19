@@ -3,7 +3,7 @@ title: Management groups
 description: Learn about the resource organization and management group design considerations and recommendations.
 author: DominicAllen
 ms.author: doalle
-ms.date: 12/07/2021
+ms.date: 01/04/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready

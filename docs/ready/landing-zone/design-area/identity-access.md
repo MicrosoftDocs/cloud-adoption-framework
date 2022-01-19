@@ -3,7 +3,7 @@ title: Azure identity and access management design area
 description: Understand the identity and access management design area as part of the Azure landing zone design areas.
 author: dominicallen
 ms.author: doalle
-ms.date: 11/29/2021
+ms.date: 01/04/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready

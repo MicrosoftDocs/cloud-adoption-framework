@@ -172,7 +172,7 @@ Consider and implement the following recommendations when planning for Azure VMw
 This article is based on the Cloud Adoption Framework enterprise-scale landing zone architectural design principles and guidelines. For more information, see:
 
 - [Enterprise-scale design principles](../../ready/enterprise-scale/design-principles.md)
-- [Enterprise-scale design guidelines](../../ready/enterprise-scale/design-guidelines.md)
+- [Enterprise-scale design guidelines](../../ready/landing-zone/design-areas.md)
 
 The article is part of a series that applies enterprise-scale landing zone principles and recommendations to Azure VMware Solution deployments. Other articles in the series include:
 
