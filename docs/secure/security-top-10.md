@@ -185,7 +185,7 @@ Update processes and prepare your team so they know what to do when they find an
   - **Network and identity data sources**: Many functions of cloud platforms primarily use identity for access control. This access control includes access to the Azure portal, though network access controls are used extensively as well. This access control requires analysts to develop an understanding of cloud identity protocols to get a full, rich picture of attacker activity and legitimate user activity to support incident investigation and remediation. Identity directories and protocols are different from on-premises ones. They're typically based on SAML, OAuth, and OpenID Connect and cloud directories rather than LDAP, Kerberos, NTLM, and Active Directory.
   - **Practice exercises**: Simulated attacks and response can help build organizational muscle memory and technical readiness. They provide preparation for your security analysts, threat hunters, incident managers, and other stakeholders in your organization. Learning on the job and adapting is a natural part of incident response, but you can work to minimize how much you have to learn in a crisis.
 
-### Key Resources
+### Key resources
 
 - [Incident response reference guide (IRRG)](https://aka.ms/IRRG)
 - Guidance on [building your own security incident response process](https://msrc-blog.microsoft.com/2019/07/01/inside-the-msrc-building-your-own-security-incident-response-process/)
@@ -293,7 +293,7 @@ Implement passwordless or multifactor authentication. Train administrators on ho
 
 - [Passwordless (Windows Hello)](/windows/security/identity-protection/hello-for-business/hello-identity-verification)
 - [Passwordless (authenticator app)](/azure/active-directory/authentication/howto-authentication-passwordless-phone)
-- [Azure AD Multi-factor Authentication](/azure/active-directory/authentication/howto-mfa-userstates)
+- [Azure AD Multi-Factor Authentication](/azure/active-directory/authentication/howto-mfa-userstates)
 - Third-party multifactor authentication solution
 
 > [!NOTE]
