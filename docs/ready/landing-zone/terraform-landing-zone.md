@@ -73,7 +73,7 @@ The following decisions are represented in the CAF Terraform modules:
 | Storage                | N/A | [Azure Storage guidance](../considerations/storage-options.md)  |
 | Naming standards       | When the environment is created, a unique prefix is also created. Resources that require a globally unique name, such as storage accounts, use this prefix. The custom name is appended with a random suffix. Tag usage is mandated as described in the following table. | [Naming and tagging best practices](../azure-best-practices/naming-and-tagging.md) |
 | Cost management        | N/A              | [Tracking costs](../azure-best-practices/track-costs.md)     |
-| Compute                | N/A          | [Compute options](../considerations/compute-options.md)  |
+| Compute                | N/A          | [Compute options](/azure/architecture/guide/technology-choices/compute-decision-tree)  |
 
 #### Tagging standards
 

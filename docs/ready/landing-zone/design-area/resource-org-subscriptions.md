@@ -117,7 +117,7 @@ Cost transparency is a critical management challenge faced by every large enterp
 
 - Avoid a rigid subscription model, and opt for a set of flexible criteria to group subscriptions across the organization. The flexibility ensures that as your organization's structure and workload composition changes, you can create new subscription groups instead of using a fixed set of existing subscriptions. One size doesn't fit all for subscriptions and what works for one business unit might not work for another. Some applications might coexist within the same landing zone subscription, while others might require their own subscription.
 
-  - See [How do we handle "dev/test/production" workload landing zones in enterprise-scale architecture?](/azure/cloud-adoption-framework/ready/enterprise-scale/faq#how-do-we-handle-devtestproduction-workload-landing-zones-in-enterprise-scale-architecture) for further guidance about this point.
+  - See [How do we handle "dev/test/production" workload landing zones in enterprise-scale architecture?](../../enterprise-scale/faq.md#how-do-we-handle-devtestproduction-workload-landing-zones-in-enterprise-scale-architecture) for further guidance about this point.
 
 ### Subscription quota and capacity recommendations
 
@@ -144,3 +144,4 @@ Cost transparency is a critical management challenge faced by every large enterp
   - Include members from an Azure PlatformOps (platform operations) team.
 
   - Include break-glass accounts in the list of [exempted users](/azure/cost-management-billing/manage/manage-azure-subscription-policy#exempted-users).
+  

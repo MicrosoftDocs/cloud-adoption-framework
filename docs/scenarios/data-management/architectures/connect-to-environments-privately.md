@@ -102,4 +102,4 @@ The recommended, Azure-native approach to such connectivity is the use of Expres
 
 ## Next steps
 
-For more information about setting up connectivity to Azure, see [Connectivity to Azure](/azure/cloud-adoption-framework/ready/azure-best-practices/connectivity-to-azure).
+For more information about setting up connectivity to Azure, see [Connectivity to Azure](../../../ready/azure-best-practices/connectivity-to-azure.md).

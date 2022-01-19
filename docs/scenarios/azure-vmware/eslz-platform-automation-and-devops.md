@@ -105,7 +105,7 @@ By default, an Azure VMware Solution cluster has a fixed number of hosts defined
 
 ## Azure integration
 
-An Azure VMware Solution private cloud can also use several different Azure native services. You can include these services within the Azure VMware Solution deployment or deployed as separate components. When outside the scope of the article, we recommend that you use the existing patterns within the [enterprise-scale landing zone](../../ready/enterprise-scale/architecture.md) architecture to integrate with these services.
+An Azure VMware Solution private cloud can also use several different Azure native services. You can include these services within the Azure VMware Solution deployment or deployed as separate components. When outside the scope of the article, we recommend that you use the existing patterns within the [enterprise-scale landing zone](../../ready/landing-zone/index.md) architecture to integrate with these services.
 
 **Considerations:**
 
@@ -141,7 +141,7 @@ After you deploy your private cloud, you can deploy resources within the private
 **Considerations:**
 
 - You might have an existing automation practice, or you built a DevOps strategy as part of the enterprise-scale landing zone. If so, consider reusing the same patterns for Azure VMware Solution deployments to keep a consistent automation style across the board.
-- For more information, see the enterprise-scale landing zone [platform automation and DevOps documentation](../../ready/enterprise-scale/platform-automation-and-devops.md).
+- For more information, see the enterprise-scale landing zone [platform automation and DevOps documentation](../../ready/landing-zone/design-area/platform-automation-devops.md).
 
 ## VMware platform automation
 

@@ -49,7 +49,7 @@ An organization must have visibility into what's happening within their technica
 | Security logs |- Data retention periods for audit data. Azure Active Directory (Azure AD) Premium reports have a 30-day retention period. <br> - Long-term archiving of logs like Azure activity logs, virtual machine (VM) logs, and platform as a service (PaaS) logs.|
 | Security controls| - Baseline security configuration via Azure in-guest VM policy. <br> - Consider how your security controls will align with governance guardrails. |
 | Vulnerability management | - Emergency patching for critical vulnerabilities. <br> - Patching for VMs that are offline for extended periods of time. <br> - Vulnerability assessment of VMs.
-| Shared responsibility | - Where are the handoffs for team responsibilities? These responsibilities need consideration when monitoring or responding to security events. <br> -  Consider the guidance in the Secure methodology for [security operations](/azure/cloud-adoption-framework/secure/security-operations). |
+| Shared responsibility | - Where are the handoffs for team responsibilities? These responsibilities need consideration when monitoring or responding to security events. <br> -  Consider the guidance in the Secure methodology for [security operations](../../../secure/security-operations.md). |
 | Encryption and keys | - Who requires access to keys in the environment? <br> - Who will be responsible for managing the keys? <br> - Explore [encryption and keys further](./encryption-and-keys.md). |
 
 ## Security operations design recommendations
@@ -102,7 +102,7 @@ For more information, see [Azure AD Privileged Identity Management](/azure/activ
 
 - Align your security requirements with Azure platform roadmaps to stay current with newly released security controls.
 
-- Implement a [zero-trust approach for access](/azure/cloud-adoption-framework/secure/access-control) to the Azure platform where appropriate.
+- Implement a [zero-trust approach for access](../../../secure/access-control.md) to the Azure platform where appropriate.
 
 ## Security in the Azure landing zone accelerator
 
