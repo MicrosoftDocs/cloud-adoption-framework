@@ -2,7 +2,7 @@
 title: CI/CD workflow using GitOps in Azure
 description: Understand the design considerations and recommendations for CI/CD workflow using GitOps of Azure Arc-enabled Kubernetes.
 author: jpocloud
-ms.author: jpocloud
+ms.author: johnpoole
 ms.date: 11/15/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

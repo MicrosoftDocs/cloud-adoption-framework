@@ -2,7 +2,7 @@
 title: Services Observability for Arc-enabled Kubernetes
 description: Understand the design considerations and recommendations for Services Observability on Azure Arc-enabled Kubernetes.
 author: jpocloud
-ms.author: jpocloud
+ms.author: johnpoole
 ms.date: 11/15/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -73,7 +73,7 @@ Service Meshes come with different features, with observability being an importa
 - The RED method (Rates-calls/sec, Errors, Duration-call latencies), which is a subset of the four golden signals and used for measuring services. It should provide a standardized way of collecting RED metrics, traces etc.
 - The observability impact by increasing the breadth of coverage to all services which are part of the mesh.
 - Features that can help increase adoption of observability by auto-instrumenting all services.
-- Evaluate a service mesh that comes with an ability to scrape metrics and collect logs that can surface into your monitoring solution - which should be able to support ingestion and process of metrics and logs based on your needs.
+- Evaluate a service mesh that integrates well with service observability pillars that can scrape metrics and collect logs which are surfaced into your monitoring solution. Ensure the telemetry collection will support your business needs and integrate well with your existing monitoring solution.
 
 The following diagram shows an example of a Service Mesh Proxy functionality of data collection and forwarding.
 
