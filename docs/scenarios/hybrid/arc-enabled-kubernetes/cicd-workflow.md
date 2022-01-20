@@ -103,7 +103,7 @@ Platform Operators and Application Operators have several options for managing K
 With a GitOps process, to avoid manual configuration modifications to your GitOps repository, the CD pipeline can have permission or run as a service account which then has permission to open a Pull Request (PR) or commit directly to a configuration repository with the new container image change. These changes from your CD pipeline can also provision all YAML objects required for your application.
 
 The following is a process flow that contains the traditional application CI process incorporated with changes to support GitOps.
-![GitOps CI](../../_images/eslz-cicd-gitops_ci.png)
+![GitOps Process](../../_images/eslz-cicd-gitops_ci.png)
 
 #### Cluster-wide component update process
 
@@ -134,7 +134,7 @@ For all updates to your configuration, to verify changes have been successfully 
 
 The following image is a reference architecture that shows the responsibilities, repositories, and pipelines to implement a GitOps process using the Azure Arc-enabled Kubernetes [Flux Extension](/azure/azure-arc/kubernetes/tutorial-use-Gitops-flux2).
 
-![GitOps CI](../../_images/eslz-cicd-flow.png)
+![GitOps Reference](../../_images/eslz-cicd-flow.png)
 
 ### Repositories
 

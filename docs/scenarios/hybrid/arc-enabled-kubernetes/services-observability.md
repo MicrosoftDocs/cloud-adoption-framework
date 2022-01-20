@@ -47,7 +47,7 @@ All the three above pillars are interconnected. Metrics are stored as numerical 
 
 The following is a table showing collection impact for the three pillars.
 
-|         | Metrics           | Logs  | Distributed Tracing  |
+| Collection characteristic        | Metrics           | Logs  | Distributed Tracing  |
 | ------------- |:-------------:| -----:| -----:|
 | Accounts for every transaction      | yes | yes | no (sampled) |
 | Immune to cardinality issues      | no      |   yes |   yes |
@@ -89,7 +89,7 @@ For more information, please visit the [self-hosted gateway overview](/azure/api
 
 ### API Management Self-hosted gateway Observability
 
-The self-hosted gateway emits metrics and stdout and stderr logs. The metrics emitted have the ability to be configured by a ConfigMap in your cluster. For information on advanced monitoring with API Management, see [Advanced Monitoring](azure/api-management/api-management-log-to-eventhub-sample). The Self-hosted gateway observability accounts for external traffic (North-South) coming into your cluster, it does not provide any observability for pod-to-pod traffic inside the cluster (East-West).
+The self-hosted gateway emits metrics and stdout and stderr logs. The metrics emitted have the ability to be configured by a ConfigMap in your cluster. For information on advanced monitoring with API Management, see [Advanced Monitoring](/azure/api-management/api-management-log-to-eventhub-sample). The Self-hosted gateway observability accounts for external traffic (North-South) coming into your cluster, it does not provide any observability for pod-to-pod traffic inside the cluster (East-West).
 
 **Cloud Metrics and Logs:**
 Metrics are emitted to Azure Monitor by default. Using Azure Monitor for containers, the self-hosted gateway container logs can be collected and viewed in Log Analytics. For more information, see [Configure local metrics and logs for Azure API Management self-hosted gateway](/azure/api-management/how-to-configure-cloud-metrics-logs)
@@ -100,7 +100,7 @@ Metrics are emitted to Azure Monitor by default. Using Azure Monitor for contain
 
 The following is a table to show the potential differences to guide in choosing an implementation for obtaining services observability.
 
-|         | Service Mesh           | Application Performance Monitoring  | Self-hosted API Gateway |
+| Capability        | Service Mesh           | Application Performance Monitoring  | Self-hosted API Gateway |
 | ------------- |:-------------:| -----:| -----:|
 | East-West Traffic supported    | yes | yes | no |
 | Metrics capability     | yes | yes | yes |
@@ -115,7 +115,7 @@ The following is a table to show the potential differences to guide in choosing 
 
 It is recommended to use Open Service Mesh which provides observability into the health and performance of your services. To obtain telemetry data, Open Service Mesh relies on sidecar proxies that you inject as a separate container into the same pods as your workloads. The proxies intercept all inbound and outbound HTTP traffic to the workloads and report the data to Open Service Mesh. With this system, service developers don't have to instrument their code to collect telemetry data. Enable Open Service Mesh by using the Azure Arc-enabled Kubernetes cluster extension capability, this allows Microsoft to manage the control plane for you. You can learn more by visiting [Deploy Azure Arc-enabled Open Service Mesh (Preview)](/azure/azure-arc/kubernetes/tutorial-arc-enabled-open-service-mesh).
 
-Both Azure Monitor and Azure Application Insights help you maximize the availability and performance of your applications and services by delivering a comprehensive solution for collecting, analyzing, and acting on telemetry from your cloud and on-premises environments. Azure Arc-enabled Open Service Mesh will have deep integrations into both of these Azure services, and provide a seamless Azure experience for viewing and responding to critical KPIs provided by OSM metrics. You can enable that by following the steps mentioned [here](https://docs.microsoft.com/en-us/azure/azure-arc/kubernetes/tutorial-arc-enabled-open-service-mesh#monitoring-application-using-azure-monitor-and-applications-insights). If you are not using Azure monitoring services, Open Service Mesh provides documented [observability integrations](https://release-v0-11.docs.openservicemesh.io/docs/guides/observability/) for metrics with Prometheus and Grafana, Tracing with Jaeger, and log forwarding with Fluent Bit. These integrations can be used to be extend to other in-house monitoring tools as needed.
+Both Azure Monitor and Azure Application Insights help you maximize the availability and performance of your applications and services by delivering a comprehensive solution for collecting, analyzing, and acting on telemetry from your cloud and on-premises environments. Azure Arc-enabled Open Service Mesh will have deep integrations into both of these Azure services, and provide a seamless Azure experience for viewing and responding to critical KPIs provided by OSM metrics. You can enable that by following the steps mentioned [here](/azure/azure-arc/kubernetes/tutorial-arc-enabled-open-service-mesh#monitoring-application-using-azure-monitor-and-applications-insights). If you are not using Azure monitoring services, Open Service Mesh provides documented [observability integrations](https://release-v0-11.docs.openservicemesh.io/docs/guides/observability/) for metrics with Prometheus and Grafana, Tracing with Jaeger, and log forwarding with Fluent Bit. These integrations can be used to be extend to other in-house monitoring tools as needed.
 
 As a minimum, it is recommended to define the following three RED metrics which you should measure for all services:
 
