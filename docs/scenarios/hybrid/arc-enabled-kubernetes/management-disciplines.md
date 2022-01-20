@@ -63,7 +63,7 @@ The following architecture diagram shows Azure Arc-enabled Kubernetes cluster mo
 
 - Use shared administration terminal server(s) to [install required tools](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#prerequisites) to maintain consistent tools and versions across all users to prevent issues deploying and managing Azure Arc-enabled Kubernetes cluster.
 - Make sure administration terminal servers and on-premises or multi-cloud Kubernetes clusters are whitelisted to access [Azure Arc-enabled Kubernetes required URLs](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#meet-network-requirements) to onboard and manage using Azure Arc control plane.
-- Create a script to verify connectivity to the [Azure Arc-enabled Kubernetes required URLs](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#meet-network-requirements) from on the on-premises or multi-cloud Kubernetes cluster nodes to minimize effort troubleshooting and resolving connectivity issues.
+- Develop a process to verify connectivity to the [Azure Arc-enabled Kubernetes required URLs](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#meet-network-requirements) from on the on-premises or multi-cloud Kubernetes cluster nodes to minimize effort troubleshooting and resolving connectivity issues.
 - Create onboarding deployment script using [PowerShell](/azure/azure-resource-manager/templates/deploy-powershell) or [Bash](/azure/azure-resource-manager/templates/deploy-cloud-shell?tabs=azure-cli) to onboard Arc-enabled Kubernetes cluster and install cluster extensions to prevent issues and consistent deployment across all environments and clusters.
 
 **Cluster management:**
