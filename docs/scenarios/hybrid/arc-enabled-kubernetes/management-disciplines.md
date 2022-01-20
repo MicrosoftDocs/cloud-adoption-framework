@@ -46,7 +46,8 @@ The following architecture diagram shows Azure Arc-enabled Kubernetes cluster mo
 
 **Cluster management:**
 
-- Azure [Arc-enabled Kubernetes extensions](/azure/azure-arc/kubernetes/extensions) require additional URL whitelisting on firewalls or proxy. Depending on the extensions being installed, consider planning to accommodate additional URLs whitelisting to minimize change management timelines.
+- Azure [Arc-enabled Kubernetes extensions](/azure/azure-arc/kubernetes/extensions) require additional URL 
+"Allow" rules on firewalls or proxy. Depending on the extensions being installed, consider planning to accommodate additional URL whitelisting to minimize change management timelines.
 - If onboarding of on-premises or multi-cloud Kubernetes cluster is done with [auto-upgrade toggle off](/azure/azure-arc/kubernetes/agent-upgrade#toggle-auto-upgrade-on-or-off-when-connecting-cluster-to-azure-arc) to control agent upgrades, consider upgrading Arc-enabled Kubernetes agents on a regular basis to stay up to date with latest product releases and avoid expensive upgrade process in the future.
 - Consider using [GitOps](/azure/azure-arc/kubernetes/tutorial-use-gitops-flux2) to manage Arc-enabled Kubernetes agent and cluster extension updates to maintain consistent deployments across all clusters and environments. Review [platform automation CDA](./platform-automation.md) for detailed guidance.
 
