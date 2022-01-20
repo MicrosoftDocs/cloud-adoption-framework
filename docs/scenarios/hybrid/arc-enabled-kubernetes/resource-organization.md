@@ -2,7 +2,7 @@
 title: Resource organization for Azure Arc-enabled kubernetes
 description: Evaluate how resources will be organized when working with Azure Arc-enabled kubernetes
 author: lanicolas
-ms.author: matgri
+ms.author: lanicola
 ms.date: 11/15/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
