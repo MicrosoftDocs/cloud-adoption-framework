@@ -1,6 +1,6 @@
 ---
 title: Management and monitoring for Azure Arc-enabled Kubernetes
-description: Understand the design considerations and recommendations for management and monitoring of Arc-enabled Kubernetes.
+description: Understand the design considerations and recommendations for management and monitoring of Azure Arc-enabled Kubernetes.
 author: chintalavr
 ms.author: vchintala
 ms.date: 11/15/2021
