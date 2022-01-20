@@ -75,7 +75,7 @@ See how Azure’s data and AI capabilities are enabling intelligent retail with 
 
 ### Take the Cloud Journey Tracker assessment
 
-Take [Microsoft’s Cloud Journey Tracker](https://docs.microsoft.com/assessments/?id=cloud-journey-tracker&mode=pre-assessment) to develop and implement your cloud strategy. The tracker enables users to identify a cloud adoption path based on their organization’s needs and enables them to navigate to relevant content in the Cloud Adoption Framework for Azure.
+Take [Cloud Journey Tracker](/assessments/?id=cloud-journey-tracker&mode=pre-assessment) to develop and implement your cloud strategy. The tracker enables users to identify a cloud adoption path based on their organization’s needs and enables them to navigate to relevant content in the Cloud Adoption Framework for Azure.
 
 ## Next steps
 

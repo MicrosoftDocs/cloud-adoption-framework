@@ -12,7 +12,7 @@ ms.custom: internal, e2e-retail
 
 # Cloud adoption plan for the retail industry
 
-Success in any digital transformation effort requires a sound plan to guide the various interconnected programs toward common strategic goals. When the cloud is used as the foundation for digital transformation, this can be expressed through a cloud adoption plan. This article outlines aids in building a cloud adoption plan with the distinct considerations seen across retail organizations, based on common strategic objectives and a respect for your current digital retail maturity. 
+Success in any digital transformation effort requires a sound plan to guide the various interconnected programs toward common strategic goals. When the cloud is used as the foundation for digital transformation, this can be expressed through a cloud adoption plan. This article outlines aids in building a cloud adoption plan with the distinct considerations seen across retail organizations, based on common strategic objectives and a respect for your current digital retail maturity.
 
 ## Prerequisite
 
@@ -34,11 +34,11 @@ Retailers can map these horizons to the maturity levels of the retail cloud matu
 
 [![Diagram of the stages of digital retail cloud maturity](./media/maturity-model.png)](./retail-cloud-maturity.md)
 
-- **Connected retail:** Migrate and modernize technology solutions to enable advanced innovations and reduce operational overhead.
+**Connected retail:** Migrate and modernize technology solutions to enable advanced innovations and reduce operational overhead.
 
-- **Analytics-driven retail:** Align to a common data model, unlocking advanced analytics while improving data governance.
+**Analytics-driven retail:** Align to a common data model, unlocking advanced analytics while improving data governance.
 
-- **Intelligent retail:** Deliver intelligent retail experiences that integrate AI and machine learning into custom applications and Microsoft retail cloud offerings.
+**Intelligent retail:** Deliver intelligent retail experiences that integrate AI and machine learning into custom applications and Microsoft retail cloud offerings.
 
 ## Integrate actionable program plans
 

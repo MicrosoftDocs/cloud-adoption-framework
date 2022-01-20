@@ -19,8 +19,6 @@ demand of their customers in an increasingly competitive retail marketplace, whe
 
 Retailers are looking for an approach to understand where there is any amount of shortfall, backlog, or break-down in the supply chain. In the supercharged, competitive retail ecosystem in these challenging times, it's a requirement to have a 360-degree view of all dimensions of the customer journey—from production to delivery—along the supply chain. Operations and manufacturing teams need to remove silos and data antipatterns within the organization—to free up resources and prevent waste along the supply chain.
 
-![Retail supply chain data optimization](./media/retail-supply-chain-data.png)
-
 To assist you in meeting the demands of your highly time-sensitive market, we recommend the Demand Forecasting Solution Accelerator. The Demand Forecasting Solution Accelerator shows you how to build a customized sales forecasting model. This
 accelerator will assist by reducing development time through pre-built, pre-configured assets. Deploying the Demand Forecasting Solution can help you return results in weeks, and deliver you the ability to scale as your business requirements grow.
 
