@@ -22,11 +22,11 @@ To practice your skills in an Azure Arc-enabled servers environment, we created 
 
 The ArcBox solution is designed to run in your enterprise-scale sandbox subscription and will bootstrap all the required Azure resources inside a single resource group.
 
-[ ![ArcBox in a sandbox subscription.](./media/arcbox-sandbox-subscription.png)](./media/arcbox-sandbox-subscription.png#lightbox)
+[ ![ArcBox in a sandbox subscription.](../media/arcbox-sandbox-subscription.png)](../media/arcbox-sandbox-subscription.png#lightbox)
 
-[ ![ArcBox resource group.](./media/arcbox-resource-group.png)](./media/arcbox-resource-group.png#lightbox)
+[ ![ArcBox resource group.](../media/arcbox-resource-group.png)](../media/arcbox-resource-group.png#lightbox)
 
-![ArcBox resource group](./media/arcbox-resource-group.png)
+![ArcBox resource group](../media/arcbox-resource-group.png)
 
 Once deployed, the resource group will contain six Azure Arc-enabled server resources (including an Azure Arc-enabled SQL server resource). A "unified operations" resource layer will also be included, so you will be able to start integrating with Azure services and understand Azure Arc-enabled servers value proposition.
 

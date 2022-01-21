@@ -14,13 +14,13 @@ ms.custom: think-tank, e2e-hybrid
 
 Azure Arc-enabled servers let you manage your Windows and Linux physical servers and virtual machines (hosted either in your on-premises environment or by a third-party cloud provider) using the Azure control plane. This document walks you through the key design considerations and best practices for Azure Arc-enabled servers connectivity as part of a Cloud Adoption Framework enterprise-scale landing zone guidance.
 
-This article assumes that you have successfully implemented enterprise-scale landing zone and established hybrid network connections, and therefore focuses on the Azure Arc-enabled servers connected machine agent connectivity. For more information on this prerequisite, review the [enterprise-scale overview](../../ready/enterprise-scale/index.md) and the [implementation guidance](../../ready/enterprise-scale/implementation.md).
+This article assumes that you have successfully implemented enterprise-scale landing zone and established hybrid network connections, and therefore focuses on the Azure Arc-enabled servers connected machine agent connectivity. For more information on this prerequisite, review the [enterprise-scale overview](../../../ready/enterprise-scale/index.md) and the [implementation guidance](../../../ready/enterprise-scale/implementation.md).
 
 ## Architecture
 
 The following diagram shows a conceptual reference architecture for the connectivity of Azure Arc-enabled servers.
 
-![Azure Arc-enabled servers connectivity options](./media/arc-enabled-servers-connectivity-options.svg)
+![Azure Arc-enabled servers connectivity options](../media/arc-enabled-servers-connectivity-options.svg)
 
 ## Design considerations
 
@@ -59,7 +59,7 @@ Be aware that if you deploy extensions on your Azure Arc-enabled servers, every 
 
 Azure Arc-enabled servers let you deploy VM extensions to centrally manage your servers from Azure. These extensions connect to other resources such as Log Analytics workspaces, automation accounts, Key Vault or Azure Storage. You can use Azure Private Link to make this connection private without opening any public network access. All of the data is kept private, preventing data exfiltration. The traffic between Azure Arc-enabled servers and Azure services will go through a Site-to-Site VPN tunnel or an ExpressRoute with private peering.
 
-![Azure Arc-enabled servers Private Link topology](./media/arc-enabled-servers-private-link-topology.svg)
+![Azure Arc-enabled servers Private Link topology](../media/arc-enabled-servers-private-link-topology.svg)
 
 This connection method has specific [restrictions and limitations](/azure/azure-arc/servers/private-link-security#restrictions-and-limitations) you should be familiar with. When you enable any of Azure Arc-enabled servers extensions, those extensions connect to specific Azure services that have their own requirements for configuring Private Link support.
 
