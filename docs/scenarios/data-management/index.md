@@ -60,7 +60,7 @@ The data management and analytics scenario is designed to guide the end-to-end c
 For more information, see:
 
 - [Data management landing zone](architectures/data-management-landing-zone.md)
-- [Data landing zone](architectures/data-management-landing-zone.md)
+- [Data landing zone](architectures/data-landing-zone.md)
 
 ## Best practices
 
