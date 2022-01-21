@@ -28,18 +28,18 @@ It is important to understand the [Arc-enabled Kubernetes connectivity modes](/a
 
 The following diagram shows different Azure Arc-enabled Kubernetes components and how they interact when using [Azure RBAC](/azure/azure-arc/kubernetes/conceptual-azure-rbac#architecture---azure-rbac-on-azure-arc-enabled-kubernetes) to manage the Kubernetes cluster.
 
-![Azure RBAC on Azure Arc-enabled Kubernetes](./media/conceptual-azure-rbac.png).
+![Azure RBAC on Azure Arc-enabled Kubernetes](./media/arc-enabled-kubernetes-rbac.png).
 
 ### Securely access Azure Arc-enabled Kubernetes cluster from anywhere
 
 The following diagram shows [Azure Arc-enabled Kubernetes cluster access from anywhere](/azure/azure-arc/kubernetes/conceptual-cluster-connect) and how the components interact with each other to manage cluster using Azure RBAC.
 
-![Access Arc-enabled Kubernetes anywhere](./media/cluster-connect-network.png)
+![Access Arc-enabled Kubernetes anywhere](./media/arc-enabled-kubernetes-cluster-connect-network.png)
 
 ## Design considerations
 
 - **Kubernetes cluster onboarding**
-  - Decide between Azure AD user vs service principal to onboard Kubernetes cluster to Azure Arc individually or at scale. Please review to the [Automation disciplines critical design area](./platform-automation.md) for additional implementation details.
+  - Decide between Azure AD user vs service principal to onboard Kubernetes cluster to Azure Arc individually or at scale. Please review to the [Automation disciplines critical design area](./automation-disciplines.md) for additional implementation details.
   - Identity of the onboarding entity needs to have cluster-admin ClusterRoleBinding on the cluster, decide between using a user from on-premises or other cloud identity provider or Kubernetes service account with cluster-admin role.
 
 - **Kubernetes cluster management**
@@ -70,7 +70,7 @@ Azure Arc-enabled Kubernetes supports the following Roles to onboard Kubernetes 
 
 |Role|Description|
 |-----------|------------|
-|Azure Arc Enabled Kubernetes Cluster User Role|Allows users to fetch the Cluster Connect based kubeconfig file to manage clusters from anywhere.|
+|Azure Arc-enabled Kubernetes Cluster User Role|Allows users to fetch the Cluster Connect based kubeconfig file to manage clusters from anywhere.|
 |Azure Arc Kubernetes Admin|Lets you manage all resources under cluster/namespace, except update or delete resource quotas and namespaces.|
 |Azure Arc Kubernetes Cluster Admin|Lets you manage all resources in the cluster.|
 |Azure Arc Kubernetes Viewer|Lets you view all resources in cluster/namespace, except secrets.|
@@ -79,10 +79,17 @@ Azure Arc-enabled Kubernetes supports the following Roles to onboard Kubernetes 
 
 ## Next steps
 
-- Review [common conditional access policies](/azure/active-directory/conditional-access/plan-conditional-access) to apply when using Azure RBAC for Arc-enabled Kubernetes cluster.
+For more information about your hybrid and multicloud cloud journey, see the following articles:
+
+- Review the [prerequisites](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#prerequisites) for Azure Arc-enabled Kubernetes.
+- Review [validated Kubernetes distributions](/azure/azure-arc/kubernetes/validation-program#validated-distributions) for Azure Arc-enabled Kubernetes.
+- Review [Manage hybrid and multicloud environments](/azure/cloud-adoption-framework/scenarios/hybrid/manage).
+- Review [common conditional access policies](/azure/active-directory/conditional-access/plan-conditional-access) to apply when using Azure RBAC for Azure Arc-enabled Kubernetes cluster.
 - [Resource organization](./resource-organization.md) to plan and apply governance and security using Azure RBAC.
 - [Integrate Azure AD with Azure Arc-enabled Kubernetes clusters](/azure/azure-arc/kubernetes/azure-rbac).
 - [Access your cluster securely](/azure/azure-arc/kubernetes/conceptual-cluster-connect) from anywhere using Cluster connect.
-- Azure Landing Zones - [Azure identity and access management design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access).
-- Cloud Adoption Framework - [Access Control](/azure/cloud-adoption-framework/secure/access-control) methodology.
-- Review [Azure Arc Jumpstart - Azure Arc-enabled Kubernetes](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_k8s/).
+- [Azure Landing Zones - Azure identity and access management design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access).
+- [Cloud Adoption Framework - Access Control](/azure/cloud-adoption-framework/secure/access-control) methodology.
+- Experience Azure Arc-enabled Kubernetes automated scenarios with the [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_k8s/).
+- To learn more about Azure Arc, review the [Azure Arc learning path on Microsoft Learn](/learn/paths/manage-hybrid-infrastructure-with-azure-arc/).
+- Review [Frequently Asked Questions - Azure Arc-enabled](/azure/azure-arc/kubernetes/faq) to get answers to most common questions.

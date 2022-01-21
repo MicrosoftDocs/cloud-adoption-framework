@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: e2e-hybrid, think-tank
 ---
 
-# Overview
+# Services observability for Arc-enabled Kubernetes
 
 [Observability](/azure/cloud-adoption-framework/manage/monitor/observability) is a characteristic of an application that refers to how well a system’s internal state or status can be understood from its external outputs. Computer systems are measured by observing CPU time, memory, disk space, latency, errors, etc. The more observable a system is, the easier it is to understand what it’s doing by looking at it.
 
@@ -29,11 +29,11 @@ Azure Arc-enabled Kubernetes provides two integrated extension options which can
 
 The following diagram illustrates the three pillars of Services Observability with data volume impact.
 
-![Services Observability Pillars](../../_images/eslz-svc-obs-pillars.png)
+![Services Observability Pillars](./media/arc-enabled-kubernetes-obs-pillars.png)
 
 The following diagram shows the different Open Service Mesh components running in an Arc-enabled Kubernetes cluster. Additionally, this shows a sample application enabled in the service mesh, which automatically gets configured with an Envoy side-car container.
 
-![Open Service Mesh running in Azure Arc-enabled Kubernetes](../../_images/eslz-svc-obs-osm.png)
+![Open Service Mesh running in Azure Arc-enabled Kubernetes](./media/arc-enabled-kubernetes-obs-osm.png)
 
 ## Design considerations
 
@@ -61,7 +61,7 @@ The following sections provide an overview on service observability using a serv
 
 A service mesh provides capabilities like traffic management, resiliency, policy enforcement, transport security, identity security, and observability to your workloads. Your application is decoupled from these operational capabilities and the service mesh moves them out of the application layer, and down to the infrastructure layer. This is done by a high-performance proxy that mediates all the inbound and outbound traffic to a service.
 
-- Azure Arc-enabled Kubernetes supports [Open Service Mesh (OSM)]( https://openservicemesh.io/), a CNCF project, to be deployed as an [extension](/azure/azure-arc/kubernetes/tutorial-arc-enabled-open-service-mesh). Open Service Mesh is a lightweight, extensible, Cloud Native service mesh that allows users to uniformly manage, secure and get out-of-the-box observability features for highly dynamic microservice environments. 
+- Azure Arc-enabled Kubernetes supports [Open Service Mesh (OSM)]( https://openservicemesh.io/), a CNCF project, to be deployed as an [extension](/azure/azure-arc/kubernetes/tutorial-arc-enabled-open-service-mesh). Open Service Mesh is a lightweight, extensible, Cloud Native service mesh that allows users to uniformly manage, secure and get out-of-the-box observability features for highly dynamic microservice environments.
 - Other popular Service Mesh’s which will require vendor support include: [Istio](https://istio.io/), [Consul Connect](https://www.hashicorp.com/products/consul/multi-platform-service-mesh/), [Linkerd](https://linkerd.io/2.11/overview/).
 - Depending on what features are used, when implementing a service mesh, there comes additional responsibility on Application Operators who may need to define a configuration for each service such as access rules and onboarding services. Additionally, Cluster Operators will need to manage and be aware of the Service Mesh controller. Due to how service mesh leverages the [side-car pattern](/azure/architecture/patterns/sidecar), when debugging Egress and Ingress, access logs from the service mesh control plane and sidecar will be required.
 
@@ -77,7 +77,7 @@ Service Meshes come with different features, with observability being an importa
 
 The following diagram shows an example of a Service Mesh Proxy functionality of data collection and forwarding.
 
- ![Example observability with a Service Mesh Proxy](../../_images/eslz-svc-obs.png)
+ ![Example observability with a Service Mesh Proxy](./media/arc-enabled-kubernetes-obs.png)
 
 ### API Management Self-hosted gateway
 
@@ -131,16 +131,22 @@ Open Service Mesh provides several pre-configured service workbooks in Azure Mon
 - Get detailed information about the endpoints for each service and see how traffic is flowing between services, and what performance looks like for each communication edge.
 - Explore a service topology graph visualization that shows services and their relationships within the Mesh.
 
-Services observability is a single discipline of your cloud monitoring strategy, to see additional monitoring considerations, visit [Management and monitoring for Azure Arc-enabled Kubernetes](./eslz-management-and-monitoring.md).
+Services observability is a single discipline of your cloud monitoring strategy, to see additional monitoring considerations, visit [the Management disciplines critical design area](./management-disciplines.md).
 
 ## Next steps
 
-For more guidance for your hybrid cloud adoption journey, review the following:
+For more information about your hybrid and multicloud cloud journey, see the following articles:
 
-- To learn more about Azure Arc-enabled Open Service Mesh, check out the following : [Deploy Azure Arc-enabled Open Service Mesh (Preview)](/azure/azure-arc/kubernetes/tutorial-arc-enabled-open-service-mesh)
-- To learn more about Open Service Mesh, check out the following : [Open Service Mesh AKS add-on](/azure/aks/open-service-mesh-about)
-- Experience Azure Arc-enabled Kubernetes with the Open Service Mesh extension from the [Azure Arc Jumpstart proof of concept](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_k8s/day2/cluster_api/cluster_api_osm_extension/#integrate-open-service-mesh-osm-with-cluster-api-as-an-azure-arc-connected-cluster-using-kubernetes-extensions)
-- To learn more about Open Service Mesh, check out the following : [Open Service Mesh Upstream documentation](https://release-v0-11.docs.openservicemesh.io/)
-- To learn more about Open Service Mesh Monitoring with Azure Monitor, check out the following : [Configure Monitoring and Observability with Open Service Mesh on Azure Kubernetes Service (AKS)](/azure/aks/open-service-mesh-azure-monitor)
-- To learn more about Monitoring on Azure Arc enabled Kubernetes, check out the following: [Management and monitoring for Azure Arc-enabled Kubernetes](./eslz-management-and-monitoring.md)
-- To learn more about Service meshes, check out the following: [About service meshes](/azure/aks/servicemesh-about)
+- Review the [prerequisites](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#prerequisites) for Azure Arc-enabled Kubernetes.
+- Review [validated Kubernetes distributions](/azure/azure-arc/kubernetes/validation-program#validated-distributions) for Azure Arc-enabled Kubernetes.
+- Review [Manage hybrid and multicloud environments](/azure/cloud-adoption-framework/scenarios/hybrid/manage).
+- To learn more about Azure Arc-enabled Open Service Mesh, review the following:
+  - [Deploy Azure Arc-enabled Open Service Mesh (Preview)](/azure/azure-arc/kubernetes/tutorial-arc-enabled-open-service-mesh).
+  - [Open Service Mesh AKS add-on](/azure/aks/open-service-mesh-about).
+  - [Open Service Mesh Upstream documentation](https://release-v0-11.docs.openservicemesh.io/)
+- To learn more about Open Service Mesh Monitoring with Azure Monitor, review the following : [Configure Monitoring and Observability with Open Service Mesh on Azure Kubernetes Service (AKS)](/azure/aks/open-service-mesh-azure-monitor)
+- To learn more about Monitoring on Azure Arc-enabled Kubernetes, review the following: [Management and monitoring for Azure Arc-enabled Kubernetes](./management-disciplines.md).
+- To learn more about Service meshes, review the following: [About service meshes](/azure/aks/servicemesh-about).
+- Experience Azure Arc-enabled Kubernetes with the Open Service Mesh extension from the [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_k8s/day2/cluster_api/cluster_api_osm_extension/#integrate-open-service-mesh-osm-with-cluster-api-as-an-azure-arc-connected-cluster-using-kubernetes-extensions).
+- To learn more about Azure Arc, review the [Azure Arc learning path on Microsoft Learn](/learn/paths/manage-hybrid-infrastructure-with-azure-arc/).
+- Review [Frequently Asked Questions - Azure Arc-enabled](/azure/azure-arc/kubernetes/faq) to get answers to most common questions.

@@ -10,11 +10,19 @@ ms.subservice: scenario
 ms.custom: e2e-hybrid, think-tank, e2e-arc-enabled-kubernetes
 ---
 
-# Extensions Management for Azure Arc-enabled Kubernetes
+# Extensions management for Azure Arc-enabled Kubernetes
 
 This article walks through the key design considerations and best practices for managing extensions of Azure Arc-enabled Kubernetes deployments.
 
 Before going through this document it is important to understand governance principles because of the effect of the decisions made, also make sure to review [Enterprise-scale for AKS](/azure/cloud-adoption-framework/scenarios/aks/enterprise-scale-landing-zone) to understand the relevant concepts of Enterprise Scale in a container environment.
+
+## Architecture
+
+Conceptually, extensions for Azure Arc-enabled Kubernetes can be thought of as those for Azure Arc-enabled infrastructure services and those for Azure Arc-enabled services.  While this distinction is not made explicitly for the name of each extension, it is helpful to consider keeping these two categories of extensions in mind when designing for deploying Azure Arc-enabled Kubernetes.  For example, the Microsoft Defender for Cloud extension can be thought of as an extension for Azure Arc-enabled infrastructure services, whereas the Azure App Service for Azure Arc extension can be thought of as an Azure Arc-enabled services extension.
+
+the following image illustrates the overall integration for extensions for Azure Arc-enabled Kubernetes clusters.
+
+![Cluster Extension Diagram](./media/arc-enabled-kubernetes-cluster-extensions.png)
 
 ## Design Considerations
 
@@ -22,12 +30,6 @@ Consider the following factors when designing how to use Azure Arc-enabled Kuber
 
 - Review which [extensions are currently available](/azure/azure-arc/kubernetes/extensions)
 - Review which [extensions are built on top of Helm](/azure/azure-arc/kubernetes/conceptual-extensions)
-
-Conceptually, extensions for Azure Arc-enabled Kubernetes can be thought of as those for Azure Arc-enabled infrastructure services and those for Azure Arc-enabled services.  While this distinction is not made explicitly for the name of each extension, it is helpful to consider keeping these two categories of extensions in mind when designing for deploying Azure Arc-enabled Kubernetes.  For example, the Microsoft Defender for Cloud extension can be thought of as an extension for Azure Arc-enabled infrastructure services, whereas the Azure App Service for Azure Arc extension can be thought of as an Azure Arc-enabled services extension.
-
-![Cluster Extension Diagram](./media/arc-kubernetes-cluster-extensions.png)
-
-The above image illustrates the overall integration for extensions for Azure Arc-enabled Kubernetes clusters.  
 
 Additionally, while extensions provide additional capability for Azure Arc-enabled Kubernetes clusters, consider your specific use case and needs before installing any extensions.  Furthermore, consider how extensions will be kept up-to-date over the lifespan of your cluster.
 
@@ -43,6 +45,14 @@ Extensions are periodically updated.  Use the `--auto-upgrade-minor-version` fla
 
 ## Next steps
 
-For more guidance for your cloud adoption journey, see the following article:
+For more information about your hybrid and multicloud cloud journey, see the following articles:
 
-- [Connect an existing Kubernetes cluster to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli)
+- Review the [prerequisites](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#prerequisites) for Azure Arc-enabled Kubernetes.
+- Review [validated Kubernetes distributions](/azure/azure-arc/kubernetes/validation-program#validated-distributions) for Azure Arc-enabled Kubernetes.
+- Review [Manage hybrid and multicloud environments](/azure/cloud-adoption-framework/scenarios/hybrid/manage).
+- [Connect an existing Kubernetes cluster to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli).
+- To learn about Azure Arc-enabled Kubernetes cluster extension architecture, review [Cluster extensions](/azure-arc/kubernetes/conceptual-extensions).
+- To learn how to install Azure Arc-enabled Kubernetes cluster extension, review [Deploy and manage Azure Arc-enabled Kubernetes cluster extensions](/azure/azure-arc/kubernetes/extensions).
+- Experience Azure Arc-enabled Kubernetes automated scenarios with the [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_k8s/).
+- To learn more about Azure Arc, review the [Azure Arc learning path on Microsoft Learn](/learn/paths/manage-hybrid-infrastructure-with-azure-arc/).
+- Review [Frequently Asked Questions - Azure Arc-enabled](/azure/azure-arc/kubernetes/faq) to get answers to most common questions.
