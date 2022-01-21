@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-sap
 
 # Operations baseline for SAP on Azure
 
-This article builds on a number of considerations and recommendations defined in the Azure landing zone article [enterprise-scale design area for management and monitoring](../../ready/enterprise-scale/management-and-monitoring.md). Following the guidance in this article will help explore how to operationally maintain an SAP platform on Azure enterprise estate, with centralized management and monitoring at the platform level. The article presents key recommendations for SAP operations teams to maintain SAP systems within the Azure platform. Since SAP is a mission-critical platform, the guidance on the enterprise-scale design areas should also be included in your design.
+This article builds on a number of considerations and recommendations defined in the Azure landing zone article [enterprise-scale design area for management and monitoring](../../ready/landing-zone/design-area/management.md). Following the guidance in this article will help explore how to operationally maintain an SAP platform on Azure enterprise estate, with centralized management and monitoring at the platform level. The article presents key recommendations for SAP operations teams to maintain SAP systems within the Azure platform. Since SAP is a mission-critical platform, the guidance on the enterprise-scale design areas should also be included in your design.
 
 **Design considerations:**
 
