@@ -12,12 +12,11 @@ ms.custom: e2e-hybrid, think-tank
 
 # Identity and access management for Azure Arc-enabled servers
 
-
 Your organization needs to design the right access controls to secure hybrid environments using on-premises and cloud-based identity management systems.
 
 These identity management systems play an important role. They help designing and implementing reliable access management controls for securing Azure Arc-enabled servers infrastructure.
 
-### Managed identity
+## Managed identity
 
 The Azure AD system-assigned identity can only be used to update the status of the Azure Arc-enabled servers (for example, the 'last seen' heartbeat). It's still possible to allow an application on your server to use the system-assigned identity, to access Azure resources (for example, to request secrets from a key vault). You should:
 

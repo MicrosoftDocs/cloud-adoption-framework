@@ -28,8 +28,8 @@ The enterprise-scale architecture is modular by design. It allows you to start w
 
 The enterprise-scale approach to construct landing zones includes three sets of assets to support cloud teams:
 
-- [Design guidelines](./design-guidelines.md): Guide to the critical decisions that drive the design of the Cloud Adoption Framework for Azure enterprise-scale landing zone.
-- [Architecture](./architecture.md): Conceptual reference architecture that demonstrates design areas and best practices.
+- [Design guidelines](../landing-zone/design-areas.md): Guide to the critical decisions that drive the design of the Cloud Adoption Framework for Azure enterprise-scale landing zone.
+- [Architecture](../landing-zone/index.md): Conceptual reference architecture that demonstrates design areas and best practices.
 - [Implementations](./implementation.md): Azure Resource Manager template of the architecture to accelerate adoption.
 
 <!-- TODO: Reinstate once template.md is ready.

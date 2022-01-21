@@ -88,6 +88,7 @@ Consider using [Azure Key Vault](/azure/key-vault/general/basic-concepts) to man
 
 The following image displays conceptual reference architecture that demonstrates the Azure Key Vault integration for Azure Arc-enabled servers:
 
+
 [ ![A diagram depicting the Azure Key Vault integration for Azure Arc-enabled servers.](../media/arc-enabled-servers-keyVault-integration.png)](../media/arc-enabled-servers-keyVault-integration.png#lightbox)
 
 > [!TIP]
@@ -172,4 +173,3 @@ For more guidance for your hybrid cloud adoption journey,  review the following:
 - Plan an [at-scale deployment](/azure/azure-arc/servers/plan-at-scale-deployment) of Azure Arc-enable servers
 - Understand how to [manage hybrid and multicloud environments](../manage.md)
 - To learn more about Azure Arc, check out the [Azure Arc learning path on Microsoft Learn](/learn/paths/manage-hybrid-infrastructure-with-azure-arc/)
-

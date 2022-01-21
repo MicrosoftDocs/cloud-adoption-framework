@@ -22,13 +22,13 @@ Azure Machine Learning is an integrated platform for managing the machine learni
 
 Azure Machine Learning covers all aspects of the data science lifecycle. It covers datastore and dataset registration to model deployment. It can be used for any kind of machine learning, from classical machine learning to deep learning. It includes supervised and unsupervised learning. Whether you prefer to write Python, R code, or use zero-code or low-code options such as the designer, you can build, train, and track accurate machine learning and deep learning models in an Azure Machine Learning workspace.
 
-Azure Machine Learning, the Azure platform, and Azure AI services can work together to manage the machine learning lifecycle. A machine learning practitioner can use Azure Synapse Analytics, Azure SQL Database, or Microsoft Power BI to start analyzing data and transition to Azure Machine Learning for prototyping, managing experimentation, and operationalization. In Azure landing zones, Azure Machine Learning can be considered a [data product](/azure/cloud-adoption-framework/scenarios/data-management/architectures/data-landing-zone-data-products).
+Azure Machine Learning, the Azure platform, and Azure AI services can work together to manage the machine learning lifecycle. A machine learning practitioner can use Azure Synapse Analytics, Azure SQL Database, or Microsoft Power BI to start analyzing data and transition to Azure Machine Learning for prototyping, managing experimentation, and operationalization. In Azure landing zones, Azure Machine Learning can be considered a [data product](../architectures/data-landing-zone-data-products.md).
 
 ## Azure Machine Learning in data management and analytics scenario
 
 A Cloud Adoption Framework (CAF) landing zone foundation, data management and analytics scenario data landing zones, and the configuration of Azure Machine Learning set up machine learning professionals with a preconfigured environment to which they can repeatedly deploy new machine learning workloads or migrate existing workloads. These capabilities can help machine learning professionals to gain more agility and value for their time.
 
-The following design principles can guide the implementation of Azure Machine Learning azure landing zones:
+The following design principles can guide the implementation of Azure Machine Learning Azure landing zones:
 
 - **Accelerated data access:** Preconfigure landing zone storage components as data stores in the Azure Machine Learning workspace.
 
@@ -72,7 +72,7 @@ For each default resource configuration in an data landing zone, an Azure Machin
 
 ### Integration with data landing zone core services
 
-The data landing zone comes with a default set of services that are deployed in the [core services layer](/azure/cloud-adoption-framework/scenarios/data-management/architectures/data-landing-zone#core-services-layer). These core services can be configured when Azure Machine Learning is deployed in data landing zone.
+The data landing zone comes with a default set of services that are deployed in the [core services layer](../architectures/data-landing-zone.md#core-services-layer). These core services can be configured when Azure Machine Learning is deployed in data landing zone.
 
 - Connect Azure Synapse Analytics or Databricks workspaces as linked services to integrate data and process big data.
 

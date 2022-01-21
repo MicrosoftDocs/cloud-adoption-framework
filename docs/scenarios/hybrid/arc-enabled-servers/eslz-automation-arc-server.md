@@ -1,4 +1,5 @@
 ---
+
 title: Automation disciplines for Azure Arc-enabled servers
 description: Understand the design considerations and recommendations for automation of Azure Arc-enabled servers
 author: DCMattyG
@@ -17,6 +18,7 @@ Azure Arc-enabled servers allow you to manage your Windows and Linux servers and
 ## Architecture
 
 The following image shows a conceptual reference architecture that highlights the onboarding and automation design areas for Azure Arc-enabled servers:
+
 
 [ ![Azure Arc-enabled data services | Onboarding and VM extension integration.](../media/arc-enabled-servers-onboarding.png)](../media/arc-enabled-servers-onboarding.png#lightbox)
 
