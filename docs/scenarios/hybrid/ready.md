@@ -24,6 +24,8 @@ The [Ready methodology](../../ready/index.md) of the Cloud Adoption Framework fo
 - Security governance
 - Networking
 - Identity
+- Cost management
+- Monitoring
 
 When preparing for a hybrid and multicloud deployment, environment configurations might be slightly different.
 
@@ -122,11 +124,11 @@ Review these examples to learn how to project Azure Arc resources as metadata re
 
 #### Example one: Projecting Domain Controllers outside of Azure
 
-Many customers have Active Directory Domain Services (AD DS) deployments within their environments of which Domain Controllers (DCs) are a critical component of AD DS and the customers overall architecture.
+Many customers have Active Directory Domain Services (AD DS) deployments within their environments of which domain controllers are a critical component of AD DS and the customers overall architecture.
 
-Within the Azure Landing Zone conceptual architecture, there's a dedicated identity landing zone subscription that's designed to host identity-based resources. This subscription can be hosted in Azure, for example using AD DS DC Virtual Machines (VMs). It can also be projected into Azure via Azure Arc-enabled servers from any other location.
+Within the Azure Landing Zone conceptual architecture, there's a dedicated identity landing zone subscription that's designed to host identity-based resources. This subscription can be hosted in Azure, for example using AD DS domain controller (DC) Virtual Machines (VMs). It can also be projected into Azure via Azure Arc-enabled servers from any other location.
 
-It's the recommended pattern for Arc-enabled identity resources located outside of Azure. Then it can be projected into the identity Azure landing zone via Azure Arc.
+It's the recommended pattern for Azure Arc-enabled identity-related resources located outside of Azure. Then it can be projected into the identity Azure landing zone via Azure Arc.
 
 #### Example two: Projecting On-Premises Data Centers into Azure
 
