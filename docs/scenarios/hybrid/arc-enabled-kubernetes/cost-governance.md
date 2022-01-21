@@ -108,7 +108,7 @@ Here are some design recommendations for Azure Arc-enabled Kubernetes cost gover
 ### Kubernetes GitOps configuration
 
 - Review [Kubernetes GitOps configuration pricing](https://azure.microsoft.com/pricing/details/azure-arc/).
-- Review the [CI/CD workflow critical design area](./cicd-workflow.md) to understand the best practices and recommendations for managing and monitoring Kubernetes GitOps configuration on your Azure Arc-enabled Kubernetes clusters.
+- Review the [CI/CD workflow critical design area](./cicd-gitops-disciplines.md) to understand the best practices and recommendations for managing and monitoring Kubernetes GitOps configuration on your Azure Arc-enabled Kubernetes clusters.
 - Use [Azure Policy for Kubernetes](/azure/azure-arc/kubernetes/policy-reference) to enforce and ensure consistent configuration across all your Azure Arc-enabled Kubernetes clusters.
 - Use [Azure Resource Graph](/azure/governance/resource-graph/overview) queries to review the number of cores you have for the Azure Arc-enabled Kubernetes clusters to estimate the cost of enabling Kubernetes GitOps configuration.
 

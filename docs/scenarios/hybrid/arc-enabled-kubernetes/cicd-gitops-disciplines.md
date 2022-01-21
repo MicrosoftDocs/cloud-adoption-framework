@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: e2e-hybrid, think-tank
 ---
 
-# CI/CD workflow using GitOps with Azure Arc-enabled Kubernetes
+# CI/CD and GitOps disciplines with Azure Arc-enabled Kubernetes
 
 As a cloud-native construct, Kubernetes requires a cloud-native approach to deployment and operations. With GitOps, you declare the desired state of your application-based deployments in files stored in Git repositories. Applications will have Kubernetes objects needed to run, which can include Deployments, Horizontal-Pod-Autoscalers, Services, and ConfigMaps. Kubernetes operators run in the clusters and continually reconcile the cluster state with the desired state declared in the Git repository. These operators pull the files from the Git repositories and apply the desired state to the clusters. The operators also continuously assure that the cluster remains in the desired state.
 
