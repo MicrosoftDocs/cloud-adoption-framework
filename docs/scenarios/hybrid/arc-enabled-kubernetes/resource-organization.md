@@ -32,7 +32,7 @@ The following image shows a conceptual reference for resource tagging for Azure 
 
 ## Next steps
 
-For more guidance for your hybrid cloud adoption journey, review the following:
+For more information about your hybrid and multicloud cloud journey, see the following articles:
 
 - Review the [prerequisites](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#prerequisites) for Azure Arc-enabled Kubernetes.
 - Review [validated Kubernetes distributions](/azure/azure-arc/kubernetes/validation-program#validated-distributions) for Azure Arc-enabled Kubernetes.
