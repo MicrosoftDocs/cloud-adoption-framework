@@ -3,7 +3,7 @@ title: Understand cloud operating models
 description: Understand cloud operating models and how they impact your cloud adoption strategy.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 08/14/2020
+ms.date: 01/21/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: general
