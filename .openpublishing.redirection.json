@@ -511,6 +511,11 @@
          "redirect_document_id": true
       },
       {
+         "source_path": "docs/migrate/azure-best-practices/vmware-host.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-vmware/index",
+         "redirect_document_id": false
+      },
+      {
          "source_path": "docs/reference/networking-vdc.md",
          "redirect_url": "/azure/cloud-adoption-framework/resources/networking-vdc",
          "redirect_document_id": true
