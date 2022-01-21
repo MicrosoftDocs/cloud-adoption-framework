@@ -22,25 +22,25 @@ items:
       - name: Azure Arc-enabled Kubernetes
         items:
         - name: Identity and access management
-          href: ../identity-access-management.md
+          href: ../../identity-access-management.md
         - name: Network topology and connectivity
-          href: ../network-connectivity.md
+          href: ../../network-connectivity.md
         - name: Resource organization
-          href: ../resource-organization.md
+          href: ../../resource-organization.md
         - name: Governance and security disciplines
-          href: ../governance-disciplines.md
+          href: ../../governance-disciplines.md
         - name: Management disciplines
-          href: ../management-disciplines.md
+          href: ../../management-disciplines.md
         - name: Cost governance
-          href: ../cost-governance.md
+          href: ../../cost-governance.md
         - name: Automation disciplines
-          href: ../automation-disciplines.md
+          href: ../../automation-disciplines.md
         - name: Extensions management
-          href: ../extensions-management.md
+          href: ../../extensions-management.md
         - name: CI/CD and GitOps disciplines
-          href: ../cicd-gitops-disciplines.md
+          href: ../../cicd-gitops-disciplines.md
         - name: Services observability
-          href: ../services-observability.md       
+          href: ../../services-observability.md
     - name: Implementation options
       items:
       - name: Start small with basic VM management
