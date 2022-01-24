@@ -88,8 +88,7 @@ Consider using [Azure Key Vault](/azure/key-vault/general/basic-concepts) to man
 
 The following image displays conceptual reference architecture that demonstrates the Azure Key Vault integration for Azure Arc-enabled servers:
 
-
-[ ![A diagram depicting the Azure Key Vault integration for Azure Arc-enabled servers.](../media/arc-enabled-servers-keyVault-integration.png)](../media/arc-enabled-servers-keyVault-integration.png#lightbox)
+[ ![A diagram depicting the Azure Key Vault integration for Azure Arc-enabled servers.](../media/arc-enabled-servers-key-vault-integration.png)](../media/arc-enabled-servers-key-vault-integration.png#lightbox)
 
 > [!TIP]
 > Learn how to use Key Vault managed certificates with Azure Arc-enabled Linux servers in the [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/day2/arc_keyvault#deploy-azure-key-vault-extension-to-azure-arc-enabled-ubuntu-server-and-use-a-key-vault-managed-certificate-with-nginx) project.
