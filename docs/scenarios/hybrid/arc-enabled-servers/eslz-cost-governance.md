@@ -139,7 +139,7 @@ Review [recommendations for automation](./eslz-automation-arc-server.md) and [Az
 
 ## Next steps
 
-For more guidance for your hybrid cloud adoption journey,  review the following:
+For more guidance for your hybrid cloud adoption journey, review the following resources:
 
 
 - Review [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/day2/) scenarios
