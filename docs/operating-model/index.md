@@ -12,11 +12,11 @@ ms.custom: internal, operating-model
 
 # Understand cloud operating models
 
-Adopting the cloud creates an opportunity to revisit how you operate technological systems. This series of articles clarifies cloud operating models and how they might impact your cloud adoption strategy. However, let's clarify the term *cloud operating model*.
+Adopting the cloud creates an opportunity to revisit how you operate technological systems. This series of articles clarifies cloud operating models and how they might impact your cloud adoption strategy. However, let us clarify the meaning of *cloud operating model*.
 
 ## Define your operating model
 
-Before deploying your cloud architecture, it's important to understand how you want to operate in the cloud. The future state of your cloud operating model might be defined by strategic direction, people organization, governance, risk, and compliance (GRC). Azure landing zones might provide a variety of options to support your operating model. The proceeding articles share foundational terms and provide examples of common operating models. These models, which are based on actual customer experiences, might help guide your decision about the right Azure landing zone.
+Before deploying your cloud architecture, try to understand how you want to operate in the cloud. Strategic direction, among people organization, governance, risk, and compliance, help define your cloud operating model. Your landing zones might provide a variety of options to support your operating model. The proceeding articles share foundational terms and provide examples of common operating models. These models, which are based on actual customer experiences, might help guide your decision about the right Azure landing zone.
 
 ## What is an operating model?
 
@@ -28,23 +28,23 @@ Some processes remain relevant when technology operations shift to the cloud. Ho
 
 ## How is a cloud operating model different?
 
-Redundancy in the hardware stack is a never-ending cycle. Physical hardware breaks down and performance degrades. The breakdown of hardware rarely aligns with an organization's capital expenditure budget and planning cycles. Operating in the cloud changes the way hardware refreshes and midnight patches work. The cloud shifts the focus upstream to operating systems, applications, and data digital assets. The shift from physical to digital also shifts the technology operating model.
+The hardware stack is a never-ending cycle. Physical hardware breaks down and performance degrades. The breakdown of hardware rarely aligns with an organization's capital expenditure budget and planning cycles. Operating in the cloud changes the way you do hardware refreshes and midnight patches. The cloud shifts your focus upstream to operating systems, applications, and data digital assets. The shift from physical to digital also shifts your technology operating model.
 
-As operating models shift to the cloud, you still need the same people and processes. However, the shift to focused on a higher level of operations. If your people no longer focus on server uptime, then their success metrics will change. If security is no longer protected by the four walls of a datacenter, then your threat profile changes. When procurement is no longer a blocker to innovation, then the pace where you manage change also changes.
+As operating models shift to the cloud, you still need the same people and processes. However, the shift is focused on a higher level of operations. If your people no longer focus on server uptime, then their success metrics will change. When security is no longer protected by the four walls of a datacenter, then your threat profile changes. The way you manage changes might change when procurement is no longer a blocker to innovation.
 
 A *cloud operating model* is the collection of processes and procedures that define how you want to operate technology in the cloud.
 
 ## Purpose of a cloud operating model
 
-When hardware is removed from the unit of operations, the focus shifts to digital assets and the workloads they support. The purpose of operating models shift from keeping the lights on to ensuring consistent operations.
+When we remove hardware from the unit of operations, we shift focus to digital assets and supported workloads. As such, operating models shift from keeping the lights on to ensuring consistent operations.
 
-The [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/) does a great job of decomposing workload considerations. Workload considerations are a set of common architectural principles. Architectural principles consists of cost optimization, operational excellence, performance efficiency, reliability, and security.
+The [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/) does a great job of decomposing workload considerations, which are a set of common architectural principles. We use these principles for cost optimization, operational excellence, performance efficiency, reliability, and security.
 
 When moving to a higher level of operations, the common architectural principles help reframe the purpose of the cloud operating model. How do we ensure that all assets and workloads in the portfolio balance these architecture principles? What processes are needed to scale the application of those principles?
 
 ## Reimagine your operating model
 
-If you update your operating model to remove references to procurement, change, operations, or protection of physical assets, then what's left? For some organizations, their operating model is a clean slate, and the constraints developed over time are reduced. In either case, this is an opportunity to think about how you want to operate in the cloud.
+Update your operating model to remove references to procurement, change, operations, or protection of physical assets is an option. If you do this, then what is left? For some organizations, their operating model is a clean slate, and the constraints developed over time are reduced. This is an opportunity to think about how you want to operate in the cloud.
 
 To help you imagine the future state of your operating model, these articles discuss the following subjects:
 
