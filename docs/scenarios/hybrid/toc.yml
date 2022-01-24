@@ -18,7 +18,7 @@ items:
     - name: Azure landing zones
       href: ready.md
     - name: Introduction to Azure Arc-enabled servers landing zone accelerator for hybrid
-      href: enterprise-scale-landing-zone.md   
+      href: enterprise-scale-landing-zone.md
     - name: Design areas
       items:
       - name: Identity and access management
@@ -34,7 +34,7 @@ items:
       - name: Cost governance
         href: arc-enabled-servers/eslz-cost-governance.md
       - name: Automation disciplines
-        href: arc-enabled-servers/eslz-automation-arc-server.md  
+        href: arc-enabled-servers/eslz-automation-arc-server.md
     - name: Implementation options
       items:
       - name: Start with Azure Arc-enabled servers landing zone accelerator sandbox

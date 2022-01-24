@@ -67,15 +67,15 @@ The following considerations are most important when preparing any of your cloud
 
 Some customers might want to simplify complex and distributed environments across on-premises, edge, and multicloud. [Azure Arc](https://azure.microsoft.com/services/azure-arc/) enables deployment of Azure services anywhere and extends Azure management to any infrastructure.
 
-- **Organize and govern across environments** - Get databases, Kubernetes clusters, and servers sprawling across on-premises, edge, and multicloud environments under control by centrally organizing and governing from a single place.
+- **Organize and govern across environments**: Get databases, Kubernetes clusters, and servers sprawling across on-premises, edge, and multicloud environments under control by centrally organizing and governing from a single place.
 
-- **Manage Kubernetes Apps at scale** - Deploy and manage Kubernetes applications across environments using DevOps techniques. Ensure that applications are deployed and configured from source control consistently.
+- **Manage Kubernetes applications at scale**: Deploy and manage Kubernetes applications across environments using DevOps techniques. Ensure that applications are deployed and configured from source control consistently.
 
-- **Run Azure services anywhere** - Get automated patching, upgrades, security, and scale on-demand across on-premises, edge, and multicloud environments for your data estate.
+- **Run Azure services anywhere**: Get automated patching, upgrades, security, and scale on-demand across on-premises, edge, and multicloud environments for your data estate.
 
 ## Azure Arc customer snapshot
 
-All three reference customers run workloads on different hardware. They also run workloads across on-premises datacenters and multiple public cloud providers, and support IoT workloads deployed on the edge. These workloads include various services and are based on either bare-metal servers, virtual machines, managed platform-as-a-service (PaaS) services, and cloud-native, container-based applications.
+All three reference customers run workloads on different hardware. They also run workloads across on-premises datacenters and multiple public cloud providers, and support IoT workloads deployed on the edge. These workloads include various services and are based on either bare-metal servers, virtual machines, managed platform as a service (PaaS) services, and cloud-native, container-based applications.
 
 All three customers realized the need to have hybrid and multicloud established practices is essential for business success. Also, the need for modernized workloads is becoming crucial to all three customers' relevancy in their respected areas.
 
@@ -99,7 +99,7 @@ Azure Arc extends the Azure Resource Manager (ARM) APIs so any workload can be r
 
 For each cloud mix above, you'll need an Azure environment to support, govern, and manage your cloud resources. The Ready methodology of the Cloud Adoption Framework helps prepare your environment by using a few steps:
 
-- Review [What is an Azure Landing Zone?](/azure/cloud-adoption-framework/ready/landing-zone/)
+- Review [What is an Azure landing zone?](/azure/cloud-adoption-framework/ready/landing-zone/)
 - Consider each of the [Azure landing zone design areas](../../ready/landing-zone/design-areas.md) to properly evaluate your technical requirements.
 - Compare your requirements to the [Azure landing zone implementation options](../../ready/landing-zone/implementation-options.md) to find and implement the most suitable template to start your configuration.
 - Review the [Transition existing Azure environments to the Azure landing zone conceptual architecture](../../ready/enterprise-scale/transition.md) article.
@@ -114,7 +114,7 @@ Azure Arc resources can be part of any application. For example:
 
 As such, the application landing zone subscriptions can also contain Azure Arc resources and regular Azure resources.
 
-Since Azure Arc resources are located outside of Azure, they can be considered a *metadata resource* in the way they're represented in Azure. So, Azure Arc resources can be treated as any other Azure resource that can be part of a landing zone. It doesn't matter if it's a platform or application, and follows the [Subscription democratization and Application-centric and archetype-neutral](/azure/cloud-adoption-framework/ready/enterprise-scale/design-principles) design principles.
+Since Azure Arc resources are located outside of Azure, they can be considered a *metadata resource* in the way they're represented in Azure. So, Azure Arc resources can be treated as any other Azure resource that can be part of a landing zone. It doesn't matter if it's a platform or application, and follows the [subscription democratization and application-centric and archetype-neutral](/azure/cloud-adoption-framework/ready/enterprise-scale/design-principles) design principles.
 
 :::image type="content" source="./media/lz-design-revised.png" alt-text="Diagram that shows a landing zone design." lightbox="./media/lz-design-revised.png":::
 
@@ -122,26 +122,26 @@ Since Azure Arc resources are located outside of Azure, they can be considered a
 
 Review these examples to learn how to project Azure Arc resources as metadata resources in Azure landing zones.
 
-#### Example one: Projecting Domain Controllers outside of Azure
+#### Example one: Projecting domain controllers outside of Azure
 
 Many customers have Active Directory Domain Services (AD DS) deployments within their environments of which domain controllers are a critical component of AD DS and the customers overall architecture.
 
-Within the Azure Landing Zone conceptual architecture, there's a dedicated identity landing zone subscription that's designed to host identity-based resources. This subscription can be hosted in Azure, for example using AD DS domain controller (DC) Virtual Machines (VMs). It can also be projected into Azure via Azure Arc-enabled servers from any other location.
+Within the Azure landing zone conceptual architecture, there's a dedicated identity landing zone subscription that's designed to host identity-based resources. This subscription can be hosted in Azure, for example using AD DS domain controller (DC) virtual machines (VMs). It can also be projected into Azure via Azure Arc-enabled servers from any other location.
 
 It's the recommended pattern for Azure Arc-enabled identity-related resources located outside of Azure. Then it can be projected into the identity Azure landing zone via Azure Arc.
 
-#### Example two: Projecting On-Premises Data Centers into Azure
+#### Example two: Projecting on-premises datacenters into Azure
 
-Most customers are likely to still have on-premises data centers present in their environments. The footprint can vary. They might have single servers or large virtualized environments.
+Most customers are likely to still have on-premises datacenters present in their environments. The footprint can vary. They might have single servers or large virtualized environments.
 
-Customers can treat these on-premises data centers as normal landing zones and then place them into new or existing landing zones as they see fit. Some common approaches for this example are:
+Customers can treat these on-premises datacenters as normal landing zones and then place them into new or existing landing zones as they see fit. Some common approaches for this example are:
 
-1. Move project resources into dedicated landing zone subscriptions for on-premises data center resources.
-    - In larger environments that have multiple data centers across the globe, customers might have one landing zone per country. These landing zones also contain the resources from that country to provide a logical separation of the on-premises data centers into Azure.
+1. Move project resources into dedicated landing zone subscriptions for on-premises datacenter resources.
+    - In larger environments that have multiple datacenters across the globe, customers might have one landing zone per country. These landing zones also contain the resources from that country to provide a logical separation of the on-premises datacenters into Azure.
     - This approach might also assist with the security, governance, and compliance requirements for different on-premises datacenters.
 2. Move project resources into separate landing zone subscriptions based on other Azure resources that support the same application or service.
 
-#### Example three: Projecting Remote Application Resources into Azure
+#### Example three: Projecting remote application resources into Azure
 
 A customer might develop latency-sensitive applications, or applications with data sovereignty requirements. These applications might need to host some resources that are part of their application outside of Azure. With these types of development, customers still want to control, govern, secure, and operate all of the resources that build up their application from a central point. By using Azure Arc, customers can achieve this goal.
 
@@ -151,6 +151,6 @@ Customers in this scenario should project their Azure Arc resources for their ap
 
 For more information about your hybrid and multicloud cloud journey, see the following articles:
 
-- [Introduction to Azure Arc-enabled servers Landing Zone accelerator for hybrid and multicloud](./enterprise-scale-landing-zone.md)
+- [Introduction to Azure Arc-enabled servers landing zone accelerator for hybrid and multicloud](./enterprise-scale-landing-zone.md)
 
-- [Learn how to deploy Azure Arc sandbox to accelerate adoption of hybrid or multi-cloud architectures](./enterprise-scale-landing-zone-sandbox.md)
+- [Learn how to deploy Azure Arc sandbox to accelerate adoption of hybrid or multicloud architectures](./enterprise-scale-landing-zone-sandbox.md)

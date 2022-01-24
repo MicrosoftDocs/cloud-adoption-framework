@@ -1,6 +1,6 @@
 ---
 title: Azure Arc sandbox
-description: Learn how to deploy Azure Arc sandbox to accelerate adoption of hybrid or multi-cloud architectures.
+description: Learn how to deploy Azure Arc sandbox to accelerate adoption of hybrid or multicloud architectures.
 author: likamrat
 ms.author: likamrat
 ms.date: 12/01/2021
@@ -12,23 +12,23 @@ ms.custom: think-tank, e2e-hybrid
 
 # Azure Arc-enabled servers sandbox
 
-With Azure Arc, you are onboarding infrastructure assets that are located outside of Azure, or deploying Azure services to any infrastructure, either on-premises or in a multi-cloud environment.
+With Azure Arc, you are onboarding infrastructure assets that are located outside of Azure, or deploying Azure services to any infrastructure, either on-premises or in a multicloud environment.
 
-Azure Arc-enabled servers allow you to manage your Windows and Linux physical servers and virtual machines—that are hosted outside of Azure, on your corporate network, or on other cloud providers. This management experience is designed to be consistent with how you manage native Azure virtual machines.
+Azure Arc-enabled servers allow you to manage your Windows and Linux physical servers and virtual machines - that are hosted outside of Azure, on your corporate network, or on other cloud providers. This management experience is designed to be consistent with how you manage native Azure Virtual Machines.
 
-To practice your skills in an Azure Arc-enabled servers environment, we created an automated, easy-to-deploy sandbox solution for all things Azure Arc named “ArcBox”, which is powered by the Azure Arc Jumpstart project. ArcBox is designed to be entirely self-contained within a single Azure subscription and resource group. ArcBox makes it easy for a user to get hands-on with the Azure Arc-enabled servers technology, with nothing more than an Azure subscription.
+To practice your skills in an Azure Arc-enabled servers environment, we created an automated, easy-to-deploy sandbox solution for all things Azure Arc named "ArcBox", which is powered by Azure Arc Jumpstart. ArcBox is designed to be entirely self-contained within a single Azure subscription and resource group. ArcBox makes it easy for a user to get hands-on with the Azure Arc-enabled servers technology, with nothing more than an Azure subscription.
 
-## Enterprise-Scale landing zone sandbox subscription
+## Enterprise-scale landing zone sandbox subscription
 
 The ArcBox solution is designed to run in your enterprise-scale sandbox subscription (**but not limited to**) and will bootstrap all the required Azure resources inside a single resource group.
 
-[ ![ArcBox in a sandbox subscription.](./media/arcbox-sandbox-subscription.png)](./media/arcbox-sandbox-subscription.png#lightbox)
+[ ![Diagram of ArcBox in a sandbox subscription.](./media/arcbox-sandbox-subscription.png)](./media/arcbox-sandbox-subscription.png#lightbox)
 
-[ ![ArcBox resource group.](./media/arcbox-resource-group.png)](./media/arcbox-resource-group.png#lightbox)
+[ ![Diagram of ArcBox resource group.](./media/arcbox-resource-group.png)](./media/arcbox-resource-group.png#lightbox)
 
-Once deployed, the resource group will contain six Azure Arc-enabled server resources (including an Azure Arc-enabled SQL server resource). A "unified operations" resource layer will also be included, so you will be able to start integrating with Azure services and understand Azure Arc-enabled servers value proposition.
+Once deployed, the resource group will contain six Azure Arc-enabled server resources (including an Azure Arc-enabled SQL Server resource). A "unified operations" resource layer will also be included, so you will be able to start integrating with Azure services and understand Azure Arc-enabled servers value proposition.
 
-## Deployment options & prerequisites
+## Deployment options and prerequisites
 
 The ArcBox solution can be deployed using one of the four methods:
 

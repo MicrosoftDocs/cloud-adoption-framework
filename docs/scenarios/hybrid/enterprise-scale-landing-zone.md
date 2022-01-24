@@ -1,6 +1,6 @@
 ---
-title: Introduction to Azure Arc-enabled servers Landing Zone accelerator for hybrid and multicloud
-description: Learn how Azure Arc-enabled servers can accelerate adoption of hybrid or multi-cloud architectures.
+title: Introduction to Azure Arc-enabled servers landing zone accelerator for hybrid and multicloud
+description: Learn how Azure Arc-enabled servers can accelerate adoption of hybrid or multicloud architectures.
 author: lanicolas
 ms.author: doalle
 ms.date: 03/01/2021
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-hybrid
 ---
 
-# Introduction to Azure Arc-enabled servers Landing Zone accelerator for hybrid and multicloud
+# Introduction to Azure Arc-enabled servers landing zone accelerator for hybrid and multicloud
 
 Enterprises are currently building and running applications across various ecosystems that can be on-premises, in multiple public clouds, and on the edge. On these distributed environments, it's critical to ensure compliance and find an effective way to manage servers, applications, and data at scale, while maintaining agility.
 
@@ -27,7 +27,7 @@ Enterprise-scale was built with hybrid and multicloud in mind. Supporting hybrid
 
 As organizations look to adopt modern cloud services and the benefits they bring, there will be an inevitable period of parallel-running, alongside the legacy on-premises infrastructure.
 
-As cloud services are further evaluated, or as business requirements dictate, organizations may choose to run more than one public cloud service.
+As cloud services are further evaluated, or as business requirements dictate, organizations might choose to run more than one public cloud service.
 
 A distributed heterogeneous estate requires simplified consolidated management and governance, in order to reduce the operational impact.
 
@@ -45,7 +45,7 @@ Azure provides organizations with various management tools that enable infrastru
 
 This provides a single management plane and a single view on the entire hybrid estate, in order to make monitoring and management at scale, as straightforward as possible.
 
-[ ![Azure Arc high level architecture](./media/single-control-plane.png)](./media/single-control-plane.png#lightbox)
+[ ![Diagram that shows Azure Arc high level architecture.](./media/single-control-plane.png)](./media/single-control-plane.png#lightbox)
 
 [Azure Arc](/azure/azure-arc/) simplifies governance and management by delivering a consistent multicloud and on-premises management platform. Azure Arc enables you to manage your entire environment, with a single pane of glass, by projecting your existing resources into [Azure Resource Manager](/azure/azure-resource-manager/management/overview).
 
