@@ -1,6 +1,6 @@
 ---
-title: Security, governance, and compliance baseline for Azure Arc-enabled servers
-description: Expand Azure security, governance, and compliance baseline for deployment on Azure Arc-enabled servers.
+title: Governance, security, and compliance baseline for Azure Arc-enabled servers
+description: Expand Azure governance, security, and compliance baseline for deployment on Azure Arc-enabled servers.
 author: MatthewGrimshaw
 ms.author: matgri
 ms.date: 06/10/2021
@@ -10,9 +10,9 @@ ms.subservice: scenario
 ms.custom: e2e-hybrid, think-tank
 ---
 
-# Security, governance and, compliance baseline for Azure Arc-enabled servers
+# Governance, security, and compliance baseline for Azure Arc-enabled servers
 
-This article covers the key design considerations and best practices when implementing security, governance, and compliance in hybrid, multicloud, and edge deployments. Azure Arc manages these deployments and is a part of the CAF enterprise-scale landing zone.
+This article covers the key design considerations and best practices when implementing security, governance, and compliance for Azure Arc-enabled servers deployments. While the enterprise-scale landing zone documentation covers "[Governance](/azure/cloud-adoption-framework/ready/landing-zone/design-area/governance)" and "[Security](/azure/cloud-adoption-framework/ready/landing-zone/design-area/security)" as separate topics, for Azure Arc-enabled servers, these critical design areas are consolidated as a single topic.
 
 Defining and applying the proper control mechanisms is key in any cloud implementation, as it's the foundational element to stay secured and compliant. In a traditional environment, these mechanisms usually involve review processes and manual controls. However, the cloud has introduced a new approach to IT governance with automated guardrails and checks. [Azure Policy](/azure/governance/policy/overview) and [Microsoft Defender for Cloud](/azure/security-center/defender-for-cloud-introduction) are cloud-native tools that allow the implementation of these controls, reports, and remediation tasks in an automated fashion. By combining them with Azure Arc, your governance policies and security checks are extended to any resource in public or private clouds.
 
@@ -22,7 +22,7 @@ By the end of this article, you'll understand the critical design areas for secu
 
 The following image displays conceptual reference architecture that demonstrates the security, compliance, and governance design areas for Azure Arc-enabled servers:
 
-![A diagram depicting the enterprise-scale security, governance and compliance for Azure Arc-enabled servers on Azure conceptual reference architecture.](../media/arc-enabled-servers-security-compliance-governance.svg)
+[ ![A diagram depicting the enterprise-scale security, governance and compliance for Azure Arc-enabled servers on Azure conceptual reference architecture.](../media/arc-enabled-servers-security-compliance-governance.png)](../media/arc-enabled-servers-security-compliance-governance.png#lightbox)
 
 ## Design considerations
 
@@ -88,7 +88,7 @@ Consider using [Azure Key Vault](/azure/key-vault/general/basic-concepts) to man
 
 The following image displays conceptual reference architecture that demonstrates the Azure Key Vault integration for Azure Arc-enabled servers:
 
-![A diagram depicting the Azure Key Vault integration for Azure Arc-enabled servers.](../media/arc-enabled-servers-key-vault-integration.svg)
+[ ![A diagram depicting the Azure Key Vault integration for Azure Arc-enabled servers.](../media/arc-enabled-servers-key-vault-integration.png)](../media/arc-enabled-servers-key-vault-integration.png#lightbox)
 
 > [!TIP]
 > Learn how to use Key Vault managed certificates with Azure Arc-enabled Linux servers in the [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/day2/arc_keyvault#deploy-azure-key-vault-extension-to-azure-arc-enabled-ubuntu-server-and-use-a-key-vault-managed-certificate-with-nginx) project.
@@ -114,7 +114,7 @@ Understand the [scope of Azure Policy](/azure/role-based-access-control/scope-ov
 
 The following image displays conceptual reference architecture that demonstrates the policy and compliance reporting design areas for Azure Arc-enabled servers:
 
-:::image type="content" source="../media/arc-enabled-servers-policy.svg" alt-text="A diagram depicting the Azure Policy for Azure Arc-enabled servers on Azure conceptual reference architecture." lightbox="../media/arc-enabled-servers-policy.png" border="false":::
+[ ![A diagram depicting the Azure Policy for Azure Arc-enabled servers on Azure conceptual reference architecture.](../media/arc-enabled-servers-policy.png)](../media/arc-enabled-servers-policy.png#lightbox)
 
 ### Log management strategy
 

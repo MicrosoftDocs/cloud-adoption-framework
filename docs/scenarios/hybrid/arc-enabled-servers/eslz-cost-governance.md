@@ -50,7 +50,7 @@ Azure Arc-enabled servers provide two types of services:
 
 - **Microsoft Sentinel:** Microsoft Sentinel provides intelligent security analytics across your enterprise. The data for this analysis is stored in an Azure Monitor Log Analytics workspace. Microsoft Sentinel is billed based on the volume of data ingested for analysis in Microsoft Sentinel, and stored in the Azure Monitor Log Analytics workspace for your Azure Arc-enabled servers.
 - **Azure Policy guest configuration:** Azure Policy guest configuration can audit and enforce operating system and application settings across your fleet of servers. Azure Policy guest configuration is billed per server per month, and includes usage rights for Azure Automation State Configuration, change tracking, and inventory.
-- **Azure Automation configuration management:** Azure Automation configuration management includes software Change Tracking and Inventory for your servers: As well as state configuration to configure your servers at-scale with PowerShell Desired State Configuration. Azure Automation configuration management is billed per server per month, and includes usage rights for Azure Policy guest configuration.
+- **Azure Automation configuration management:** Azure Automation configuration management includes software Change Tracking and Inventory for your servers, as well as state configuration to configure your servers at-scale with PowerShell Desired State Configuration. Azure Automation configuration management is billed per server per month, and includes usage rights for Azure Policy guest configuration.
 - **Azure Key Vault:** The Azure Key Vault VM extension allows you to manage the certificate lifecycle on [Windows](/azure/virtual-machines/extensions/key-vault-windows) and [Linux](/azure/virtual-machines/extensions/key-vault-linux) Azure Arc-enabled servers. Azure Key Vault is billed by the operations performed on the certificates, keys, and secrets.
 - **Azure Private Link:** You can use [Azure Private Link](/azure/azure-arc/servers/private-link-security), to ensure data coming from your Azure Arc-enabled servers are only accessed through authorized private networks. Azure Private Link is billed by endpoint and inbound/outbound data processed.
 
@@ -70,17 +70,18 @@ Here are some general design recommendations for Azure Arc-enabled servers cost 
 - Decide on the [required logs and events](/azure/azure-monitor/agents/log-analytics-agent#data-collected) for Azure Arc-enabled Windows and Linux servers, to be collected in the Log Analytics workspace.
 - Use the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator/) to estimate Azure Arc-enabled servers monitoring costs, for Azure Log Analytics ingestion, alerts, and notifications.
   
-![Azure pricing calculator](../media/pricing-calculator.png)
 
-![Azure Pricing Calculator A Z M o n](../media/pricing-calculator-az-monitor.png)
+[ ![Azure pricing calculator.](../media/pricing-calculator.png)](../media/pricing-calculator.png#lightbox)
+
+[ ![Azure Pricing Calculator A Z M o n.](../media/pricing-calculator-az-monitor.png)](../media/pricing-calculator-az-monitor.png#lightbox)
 
 - Use [Azure Cost Management + Billing](/azure/azure-monitor/usage-estimated-costs#azure-cost-management--billing) to have visibility on Azure Monitor costs.
 
-![Azure Cost Management + Billing](../media/azure-cost-management-plus-billing.png)
+[ ![Azure Cost Management + Billing.](../media/cost-management-billing-azure.png)](../media/cost-management-billing-azure.png#lightbox)
 
 - Use [Log Analytics workspaces insights](/azure/azure-monitor/logs/log-analytics-workspace-insights-overview) solution to understand and monitor the collected logs and their ingestion rate on the Log Analytics workspace.
 
-![Log Analytics insights](../media/log-analytics-insights-dashboard.png)
+[ ![Log Analytics insights.](../media/insights-log-analytics.png)](../media/insights-log-analytics.png#lightbox)
 
 - Evaluate possible data ingestion volume reducing. Refer to [Tips for reducing data volume](/azure/azure-monitor/logs/manage-cost-storage#tips-for-reducing-data-volume) documentation, to help configure data ingestion properly.
 - Consider how long you want to retain data on Log Analytics. Data ingested into Log Analytics workspace can be retained at no additional charge, up to the first 31 days. Consider general aspects to configure the [Log Analytics workspace level default retention](/azure/azure-monitor/logs/manage-cost-storage#workspace-level-default-retention) and specific needs to configure data [retention by data type](/azure/azure-monitor/logs/manage-cost-storage#retention-by-data-type), that can be as minimal as four days. Example: performance data doesn't usually need to be retained for long periods, but security logs may need to be retained for extended periods.
@@ -96,11 +97,11 @@ Review the [recommendations for security and compliance](./eslz-security-governa
 - Review [Microsoft Sentinel pricing](https://azure.microsoft.com/pricing/details/azure-sentinel/).
 - Use the Azure pricing calculator to estimate [Microsoft Sentinel costs](/azure/sentinel/azure-sentinel-billing).
 
-![Microsoft Sentinel costs](../media/azure-sentinel-costs.png)
+[ ![Microsoft Sentinel costs.](../media/azure-sentinel-costs.png)](../media/azure-sentinel-costs.png#lightbox)
 
 - Use [Azure Cost Management + Billing](/azure/sentinel/azure-sentinel-billing#manage-and-monitor-azure-sentinel-costs) to have visibility on Microsoft Sentinel analysis costs.
 
-![Microsoft Sentinel cost analysis](../media/microsoft-sentinel-cost-management.png)
+[ ![Microsoft Sentinel cost analysis.](../media/cost-management-azure-sentinel.png)](../media/cost-management-azure-sentinel.png#lightbox)
 
 - Review [data retention costs](/azure/sentinel/azure-sentinel-billing#data-retention-costs) for data ingested into the Log Analytics workspace used by Microsoft Sentinel.
 - Filter the [right level of logs and events](/azure/azure-monitor/agents/log-analytics-agent#data-collected) for the Azure Arc-enabled Windows and Linux servers to be collected in the Log Analytics workspace.
@@ -116,7 +117,7 @@ Review the [recommendations for security and compliance](./eslz-security-governa
 - Use Azure Cost Management + Billing to understand the Azure Policy guest configuration costs by filtering the **Microsoft.HybridCompute/machines** resource type.
 - All built-in guest configuration policies include a parameter that controls whether the policy will be assigned to Azure Arc-enabled servers machines. Review your policy assignments and set this parameter to "false" for policies that do not need to be evaluated on your hybrid servers.
 
-![Azure Policy costs](../media/azure-policy-cost-management.png)
+[ ![Azure Policy costs.](../media/cost-management-policy-azure.png)](../media/cost-management-policy-azure.png#lightbox)
 
 ### Azure Automation configuration management
 
@@ -127,18 +128,19 @@ Review [recommendations for automation](./eslz-automation-arc-server.md) and [Az
 - Review [Azure Key Vault pricing](https://azure.microsoft.com/pricing/details/key-vault/).
 - Use [Azure Key Vault insights](/azure/azure-monitor/insights/key-vault-insights-overview) to monitor certificate renewal and secrets operations on your Azure Arc-enabled servers.
 
-![Azure Key Vault insights](../media/key-vault-insights.png)
+[ ![Azure Key Vault insights.](../media/key-vault-insights.png)](../media/key-vault-insights.png#lightbox)
 
 ### Azure Private Link
 
 - Review [recommendations for connectivity](./eslz-arc-servers-connectivity.md) and [Azure Private Link pricing](https://azure.microsoft.com/pricing/details/private-link/).
 - Use [Azure Cost Management + Billing](/azure/cost-management-billing/cost-management-billing-overview) to monitor the usage of Private Link, used with Azure Arc-enabled servers.
 
-![Azure Private Link costs](../media/monitor-private-endpoint-costs.png)
+[ ![Azure Private Link costs.](../media/cost-private-endpoints.png)](../media/cost-private-endpoints.png#lightbox)
 
 ## Next steps
 
-For more guidance for your hybrid cloud adoption journey, review the following:
+For more guidance for your hybrid cloud adoption journey, review the following resources:
+
 
 - Review [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/day2/) scenarios
 - Review the [prerequisites](/azure/azure-arc/servers/agent-overview#prerequisites) for Azure Arc-enabled servers
