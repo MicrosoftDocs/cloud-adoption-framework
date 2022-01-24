@@ -42,8 +42,6 @@ This section explores key recommendations to deliver internal-facing and externa
 
 - Use Traffic Manager to deliver global applications that span protocols other than HTTP/S.
 
-- Ingress traffic patterns in Azure Landing Zones Plan for app delivery.
-  ![appdelivery-ingress-pattern](https://user-images.githubusercontent.com/38658285/150641238-83c3b45a-66b0-49f3-9cee-22beb0329400.png)
+- Summarized ingress traffic patterns in Azure Landing Zones Plan for app delivery.
+  ![appdelivery-ingress-pattern-v1](https://user-images.githubusercontent.com/38658285/150786316-9914527b-d2f8-420e-8b1e-a9dbb1150bae.png)
 
-- Egress traffic patterns in Azure Landing Zones Plan for app delivery.
-  ![appdelivery-egress-pattern](https://user-images.githubusercontent.com/38658285/150641239-81ce502a-4890-4177-843b-16e64db9fe97.png)
