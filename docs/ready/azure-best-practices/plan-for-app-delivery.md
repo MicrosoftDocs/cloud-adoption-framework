@@ -44,4 +44,5 @@ This section explores key recommendations to deliver internal-facing and externa
 
 - Summarized ingress traffic patterns in Azure Landing Zones Plan for app delivery.
   ![appdelivery-ingress-pattern-v1](https://user-images.githubusercontent.com/38658285/150786316-9914527b-d2f8-420e-8b1e-a9dbb1150bae.png)
+[ESLZ-AppDelivery-IngressTrafficPattern.zip](https://github.com/azureflipper/cloud-adoption-framework/files/7925752/ESLZ-AppDelivery-IngressTrafficPattern.zip)
 
