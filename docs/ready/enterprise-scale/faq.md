@@ -101,7 +101,7 @@ A common challenge to this approach is that you might need some policies to appl
   > Tags can be changed by users with appropriate Azure RBAC permissions, so for security focused policies, we don't advise using tags in policies. Users might change the tags on a resource and potentially bypass or apply another policy definition to the resources.
 
 - Apply policies at a subscription level as required, ideally during the subscription creation process (as mentioned earlier).
-- For policies that are implemented to help control costs (for example, to restrict certain VM SKUs from being used), apply the policy definition at a subscription level where required or make costs the responsibility of the landing zone owners, enabling true autonomy. (See [Platform automation and DevOps](../landing-zone/design-area/platform-automation-devops.md#define-central-and-federated-responsibilities).)
+- For policies that are implemented to help control costs (for example, to restrict certain VM SKUs from being used), apply the policy definition at a subscription level where required or make costs the responsibility of the landing zone owners, enabling true autonomy. (See [Platform automation and DevOps](../landing-zone/design-area/platform-automation-devops.md).)
 - Use sandbox subscriptions for development activities. Sandboxes have a less restrictive policy set.
 
 #### Example of an optimal management group hierarchy aligned to enterprise-scale architecture
