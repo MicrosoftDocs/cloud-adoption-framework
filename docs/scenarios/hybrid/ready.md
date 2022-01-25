@@ -116,7 +116,7 @@ As such, the application landing zone subscriptions can also contain Azure Arc r
 
 Since Azure Arc resources are located outside of Azure, they can be considered a *metadata resource* in the way they're represented in Azure. So, Azure Arc resources can be treated as any other Azure resource that can be part of a landing zone. It doesn't matter if it's a platform or application, and follows the [subscription democratization and application-centric and archetype-neutral](/azure/cloud-adoption-framework/ready/enterprise-scale/design-principles) design principles.
 
-:::image type="content" source="./media/lz-design-revised.png" alt-text="Diagram that shows a landing zone design." lightbox="./media/lz-design-revised.png":::
+:::image type="content" source="./media/landing-zone-design-revised.png" alt-text="Diagram that shows a landing zone design." lightbox="./media/landing-zone-design-revised.png":::
 
 ### Common examples of Azure Arc resources in Azure landing zones
 
