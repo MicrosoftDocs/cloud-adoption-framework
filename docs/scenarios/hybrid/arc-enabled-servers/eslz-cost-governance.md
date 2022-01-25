@@ -18,22 +18,22 @@ Cost governance is the continuous process of implementing policies, to control t
 
 Azure Arc-enabled servers provide two types of services:
 
-1. **Azure Arc control plane functionality**, which is provided at no extra cost includes:
-   - Resource organization through Azure management groups and tags.
-   - Searching and indexing through Azure Resource Graph.
-   - Access control through Azure role-based access control (RBAC) at subscription or resource group level.
-   - Environments and automation through templates and extensions.
-   - Azure Automation Update Management
+- **Azure Arc control plane functionality**, which is provided at no extra cost includes:
+  - Resource organization through Azure management groups and tags.
+  - Searching and indexing through Azure Resource Graph.
+  - Access control through Azure role-based access control (RBAC) at subscription or resource group level.
+  - Environments and automation through templates and extensions.
+  - Azure Automation Update Management
 
-2. **Azure services used in conjunction to Azure Arc-enabled servers** (but not limited to), which incur costs according to their usage includes:
-   - Azure Monitor
-   - Microsoft Defender for servers
-   - Microsoft Sentinel
-   - Azure Policy guest configuration
-   - Azure Automation State Configuration, change tracking, and inventory
-   - Azure Automation hybrid runbook workers
-   - Azure Key Vault
-   - Azure Private Link
+- **Azure services used in conjunction to Azure Arc-enabled servers** (but not limited to), which incur costs according to their usage includes:
+  - Azure Monitor
+  - Microsoft Defender for servers
+  - Microsoft Sentinel
+  - Azure Policy guest configuration
+  - Azure Automation State Configuration, change tracking, and inventory
+  - Azure Automation hybrid runbook workers
+  - Azure Key Vault
+  - Azure Private Link
 
 > [!NOTE]
 > Azure Automation Update Management is a free service, but the log data collected is billed with your other Azure Monitor usage. You are charged only once for any combination of Azure Policy guest configuration, Azure Automation State Configuration, change tracking, and inventory.
@@ -72,7 +72,7 @@ Here are some general design recommendations for Azure Arc-enabled servers cost 
 
 [ ![Screenshot that shows the Azure pricing calculator.](../media/pricing-calculator.png)](../media/pricing-calculator.png#lightbox)
 
-[ ![Screenshot that shows Azure pricing calculator for Azure Monitor.](../media/pricing-calculator-az-monitor.png)](../media/pricing-calculator-az-monitor.png#lightbox)
+[ ![Screenshot that shows Azure pricing calculator for Azure Monitor.](../media/pricing-calculator-azure-monitor.png)](../media/pricing-calculator-azure-monitor.png#lightbox)
 
 - Use [Azure Cost Management + Billing](/azure/azure-monitor/usage-estimated-costs#azure-cost-management--billing) to have visibility on Azure Monitor costs.
 
@@ -80,7 +80,7 @@ Here are some general design recommendations for Azure Arc-enabled servers cost 
 
 - Use [Log Analytics workspaces insights](/azure/azure-monitor/logs/log-analytics-workspace-insights-overview) solution to understand and monitor the collected logs and their ingestion rate on the Log Analytics workspace.
 
-[ ![Screenshot that shows Log Analytics insights.](../media/insights-log-analytics.png)](../media/insights-log-analytics.png#lightbox)
+:::image type="content" source="../media/insights-log-analytics.png" alt-text="Screenshot that shows Log Analytics insights." lightbox="../media/insights-log-analytics.png":::
 
 - Evaluate possible data ingestion volume reducing. Refer to [Tips for reducing data volume](/azure/azure-monitor/logs/manage-cost-storage#tips-for-reducing-data-volume) documentation, to help configure data ingestion properly.
 - Consider how long you want to retain data on Log Analytics. Data ingested into Log Analytics workspace can be retained at no additional charge, up to the first 31 days. Consider general aspects to configure the [Log Analytics workspace level default retention](/azure/azure-monitor/logs/manage-cost-storage#workspace-level-default-retention) and specific needs to configure data [retention by data type](/azure/azure-monitor/logs/manage-cost-storage#retention-by-data-type), that can be as minimal as four days. Example: performance data doesn't usually need to be retained for long periods, but security logs may need to be retained for extended periods.
@@ -99,12 +99,11 @@ Review the [recommendations for security and compliance](./eslz-security-governa
 - Review [Microsoft Sentinel pricing](https://azure.microsoft.com/pricing/details/azure-sentinel/).
 - Use the Azure pricing calculator to estimate [Microsoft Sentinel costs](/azure/sentinel/azure-sentinel-billing).
 
-
-[ ![Screenshot that shows and example Microsoft Sentinel costs.](../media/azure-sentinel-costs.png)](../media/azure-sentinel-costs.png#lightbox)
+:::image type="content" source="../media/azure-sentinel-costs.png" alt-text="Screenshot that shows and example Microsoft Sentinel costs." lightbox="../media/azure-sentinel-costs.png":::
 
 - Use [Azure Cost Management + Billing](/azure/sentinel/azure-sentinel-billing#manage-and-monitor-azure-sentinel-costs) to have visibility on Microsoft Sentinel analysis costs.
 
-[ ![Screenshot that shows Microsoft Sentinel cost analysis.](../media/cost-management-azure-sentinel.png)](../media/cost-management-azure-sentinel.png#lightbox)
+:::image type="content" source="../media/cost-management-azure-sentinel.png" alt-text="Screenshot that shows Microsoft Sentinel cost analysis." lightbox="../media/cost-management-azure-sentinel.png":::
 
 - Review [data retention costs](/azure/sentinel/azure-sentinel-billing#data-retention-costs) for data ingested into the Log Analytics workspace used by Microsoft Sentinel.
 - Filter the [right level of logs and events](/azure/azure-monitor/agents/log-analytics-agent#data-collected) for the Azure Arc-enabled Windows and Linux servers to be collected in the Log Analytics workspace.
@@ -120,7 +119,7 @@ Review the [recommendations for security and compliance](./eslz-security-governa
 - Use Azure Cost Management + Billing to understand the Azure Policy guest configuration costs by filtering the **Microsoft.HybridCompute/machines** resource type.
 - All built-in guest configuration policies include a parameter that controls whether the policy will be assigned to Azure Arc-enabled servers machines. Review your policy assignments and set this parameter to "false" for policies that do not need to be evaluated on your hybrid servers.
 
-[ ![Screenshot that shows an example of Azure Policy costs.](../media/cost-management-policy-azure.png)](../media/cost-management-policy-azure.png#lightbox)
+:::image type="content" source="../media/cost-management-policy-azure.png" alt-text="Screenshot that shows an example of Azure Policy costs." lightbox="../media/cost-management-policy-azure.png":::
 
 ### Azure Automation configuration management
 
@@ -131,14 +130,14 @@ Review [recommendations for automation](./eslz-automation-arc-server.md) and [Az
 - Review [Azure Key Vault pricing](https://azure.microsoft.com/pricing/details/key-vault/).
 - Use [Azure Key Vault insights](/azure/azure-monitor/insights/key-vault-insights-overview) to monitor certificate renewal and secrets operations on your Azure Arc-enabled servers.
 
-[ ![Screenshot that shows Azure Key Vault insights.](../media/key-vault-insights.png)](../media/key-vault-insights.png#lightbox)
+:::image type="content" source="../media/key-vault-insights.png" alt-text="Screenshot that shows Azure Key Vault insights." lightbox="../media/key-vault-insights.png":::
 
 ### Azure Private Link
 
 - Review [recommendations for connectivity](./eslz-arc-servers-connectivity.md) and [Azure Private Link pricing](https://azure.microsoft.com/pricing/details/private-link/).
 - Use [Azure Cost Management + Billing](/azure/cost-management-billing/cost-management-billing-overview) to monitor the usage of Private Link, used with Azure Arc-enabled servers.
 
-[ ![Screenshot that shows an example of Azure Private Link costs.](../media/cost-private-endpoints.png)](../media/cost-private-endpoints.png#lightbox)
+:::image type="content" source="../media/cost-private-endpoints.png" alt-text="Screenshot that shows an example of Azure Private Link costs." lightbox="../media/cost-private-endpoints.png":::
 
 ## Next steps
 

@@ -136,10 +136,10 @@ Most customers are likely to still have on-premises datacenters present in their
 
 Customers can treat these on-premises datacenters as normal landing zones and then place them into new or existing landing zones as they see fit. Some common approaches for this example are:
 
-1. Move project resources into dedicated landing zone subscriptions for on-premises datacenter resources.
-    - In larger environments that have multiple datacenters across the globe, customers might have one landing zone per country. These landing zones also contain the resources from that country to provide a logical separation of the on-premises datacenters into Azure.
-    - This approach might also assist with the security, governance, and compliance requirements for different on-premises datacenters.
-2. Move project resources into separate landing zone subscriptions based on other Azure resources that support the same application or service.
+- Move project resources into dedicated landing zone subscriptions for on-premises datacenter resources.
+  - In larger environments that have multiple datacenters across the globe, customers might have one landing zone per country. These landing zones also contain the resources from that country to provide a logical separation of the on-premises datacenters into Azure.
+  - This approach might also assist with the security, governance, and compliance requirements for different on-premises datacenters.
+- Move project resources into separate landing zone subscriptions based on other Azure resources that support the same application or service.
 
 #### Example three: Projecting remote application resources into Azure
 
