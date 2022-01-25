@@ -14,50 +14,48 @@ ms.custom: internal, readiness, fasttrack-edit
 
 A well-defined naming convention helps to quickly identify information about resources, accelerate deployments, and support effective communication throughout your organization. 
 
-There is not a one size fits all approach to defining a naming convention as each organization will have different needs and preferences. However, there are some best practices, considerations and examples available to help enable orgnaizations develop a standardized naming convention for their Azure deployments.
+There isn't a one-size-fits-all approach to defining a naming convention. Each organization will have different needs and preferences. However, there are some best practices, considerations, and examples available to help enable orgnaizations develop a standardized naming convention for their Azure deployments.
 
 > [!NOTE]
-> Use the Cloud Adoption Framework naming tools to assist you in defing your naming convention
+> Use the Cloud Adoption Framework naming tools to assist you in defing your naming convention:
 > 
-> >[Azure Naming Tool](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready/AzNamingTool)
-> >
-> >[Naming and tagging tracking template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/naming-and-tagging-conventions-tracking-template.xlsx)
- 
+> - [Azure Naming Tool](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready/AzNamingTool)
+> - [Naming and tagging tracking template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/naming-and-tagging-conventions-tracking-template.xlsx)
+>
 
 ## Naming components
 
-Naming conventions are comprised of individual "naming components" defined by organizations to quickly identify key information about resources. 
+Naming conventions are comprised of individual *naming components* that organizations define to quickly identify key information about resources. 
 
-Naming components may include information about the resource types, associated workloads, deployment environments, and the regions where the resources is hosted. For example, a public IP resource for a production SharePoint workload residing in the West US region may be defined as `pip-sharepoint-prod-westus-001`.
+Naming components might include information about the resource types, associated workloads, deployment environments, and the regions where the resource is hosted. For example, a public IP resource for a production SharePoint workload residing in the West US region might be defined as `pip-sharepoint-prod-westus-001`.
 
-
-![Components of an Azure resource name](../../_images/ready/resource-naming.png)
+![Components of an Azure resource name.](../../_images/ready/resource-naming.png)
 
 *Diagram 1: Components of an Azure resource name.*
 
 ### Recommended naming components
 
-When you construct your naming convention, identify the key pieces of information you want to reflect in a resource name. Different information is relevant for different resource types, and not all established naming components may be used for each resource type. The intension is to have a standard naming convention for your envrionment that is easy to follow, concise and useful to recognizing information releveant to the resource deployed. 
+When you construct your naming convention, identify the key pieces of information you want to reflect in a resource name. Different information is relevant for different resource types, and not all established naming components can be used for each resource type. The intention is to have a standard naming convention for your environment that is easy to follow, concise, and useful for recognizing information that's relevant to the deployed resource. 
 
-The following list provides examples of naming components that are useful when you construct resource names.
+The following list provides examples of naming components that are useful when you construct resource names:
 
 | Naming component | Description |
 |--|--|
-| **Organization** | Top level name of organization, normally utilized as top management group or in smaller organizations part of the naming convention. Examples, `contoso`
+| **Organization** | Top-level name of organization, normally utilized as top management group or, in smaller organizations, part of the naming convention. Example: `contoso`
 | **Business unit or department** | Top-level division of your company that owns the subscription or workload the resource belongs to. In smaller organizations, this component might represent a single corporate top-level organizational element. Examples: `fin`, `mktg`, `product`, `it`, `corp` |
-| **Resource type** | An abbreviation that represents the type of Azure resource or asset. This component is often used as a prefix or suffix in the name. For more information, see [Recommended abbreviations for Azure resource types](./resource-abbreviations.md). Examples: `rg`, `vm` |
-| **Project, application or service name** | Name of a project, application, or service that the resource is a part of. Examples: `navigator`, `emissions`, `sharepoint`, `hadoop` |
+| **Resource type** | An abbreviation that represents the type of Azure resource or asset. This component often is used as a prefix or suffix in the name. For more information, see [Recommended abbreviations for Azure resource types](./resource-abbreviations.md). Examples: `rg`, `vm` |
+| **Project, application, or service name** | Name of a project, application, or service that the resource is a part of. Examples: `navigator`, `emissions`, `sharepoint`, `hadoop` |
 | **Environment** | The stage of the development lifecycle for the workload that the resource supports. Examples: `prod`, `dev`, `qa`, `stage`, `test` |
 | **Location** | The region or cloud provider where the resource is deployed. Examples:  `westus`, `eastus2`, `westeu`, `usva`, `ustx` |
-| **VM Role** | Identifier for the purpose of the VM. Examples: `db` database, `ws` web server, `ps` print server|
-| **Instance** | The instance count for a specific resource to identify more than one with the same naming convention. Examples, `01`, `001` |
+| **VM role** | Identifier for the purpose of the VM. Examples: `db` (database), `ws` (web server), `ps` (print server) |
+| **Instance** | The instance count for a specific resource to identify more than one resource that has the same naming convention. Examples, `01`, `001` |
 
 > [!NOTE]
-> While Virtual Machine names in Azure can be longer than the allowed NetBIOS name of the VM, it is recommended to keep them consistant. Please refer to [Computer Names](https://docs.microsoft.com/en-us/troubleshoot/windows-server/identity/naming-conventions-for-computer-domain-site-ou#computer-names) for more infomration and additional restrictions.
+> Although virtual machine (VM) names in Azure can be longer than the allowed NetBIOS name of the VM, we recommend that you keep them consistent. For more information and for other restrictions, see [Computer names](/troubleshoot/windows-server/identity/naming-conventions-for-computer-domain-site-ou#computer-names).
 > 
 ## Naming considerations 
 
-In addition to defining the naming components, you must also consider the order in which the naming components should be listed, if and what type of delimiters should be utilized between components, and take into account the different naming rules associated with resources types. 
+In addition to defining the naming components, you must also consider the order in which the naming components should be listed, if and what type of delimiters you should use between components, and take into account the different naming rules associated with resources types. 
 
 ### Scope
 
@@ -67,43 +65,43 @@ For example, a virtual network has a resource group scope, which means that ther
 
 Some resource names, such as PaaS services with public endpoints or virtual machine DNS labels, have global scopes, so they must be unique across the entire Azure platform.
 
-![Scope levels for Azure resource names](../../_images/ready/resource-naming-scope.png)
+![Scope levels for Azure resource names.](../../_images/ready/resource-naming-scope.png)
 
 *Diagram 2: Scope levels for Azure resource names.*
 
 ### Azure naming rules
 
-Azure naming rules depending on the resource type that must be considered when defining a naming standard. It is important to understand these rules when defining a naming convention to avoid confusion and delay deployments. 
+Azure naming rules vary depending on the resource type. When you define a naming convention, it's important to understand Azure naming rules for the resource type to avoid confusion and delay deployments. 
 
-For example, resource names have length limits. It is recommended to keep the length of naming components short to prevent exceeding resource name length limits.
+For example, resource names have length limits. We recommend that you keep the length of naming components short to prevent exceeding resource name length limits.
 
 > [!NOTE]
-> Balancing the context embedded in a name with its scope and length limit is important when you develop your naming conventions. For more information, see [Naming rules and restrictions for Azure resources](/azure/azure-resource-manager/management/resource-name-rules).
+> Balancing the context of a name with its scope and name length limit is important when you develop your naming conventions. For more information, see [Naming rules and restrictions for Azure resources](/azure/azure-resource-manager/management/resource-name-rules).
 
 ### Naming abbreviations
 
-Abbreviating names is a strategy that allows you to shorten the names to reduce the length and complexity of resource naming. Shortening names can be useful for any of the naming components, but especially important to assist in keeping the resource names within the naming length rules. For example, a VM name in azure can be longer than the OS naming restrictions. Keeping Azure VM names shortened to the naming restrictions by the OS helps to keep consistantcy, increase communications about when discussing resources, and reduce confusion when working between Azure portal while being directly logged into the VM itself.
+You can abbreviate resource names and naming components as a strategy to reduce the length and complexity of resource names. Shortening names can be useful for any of the naming components, but it's especially important to help you keep resource names within name length limits. For example, a VM name in Azure can be longer than the OS naming restrictions. Keeping Azure VM names shorter than the naming restrictions of the OS helps create consistency, improve communication when discussing resources, and reduce confusion when you are working in the Azure portal while being signed in to the VM itself.
 
 > [!NOTE]
-> Review [recommended abbreviations for Azure resource types](./resource-abbreviations.md) when naming your resources and assets.
+> When you're ready to name your resources and assets, review [Recommended abbreviations for Azure resource types](./resource-abbreviations.md).
 
 ### Padding schemes
 
 Padding improves readability and sorting of assets when those assets are managed in a configuration management database (CMDB), IT Asset Management tool, or traditional accounting tools. When the deployed asset is managed centrally as part of a larger inventory or portfolio of IT assets, the padding approach aligns with interfaces those systems use to manage inventory naming.
 
-Unfortunately, the traditional asset padding approach can prove problematic in infrastructure-as-code approaches which may iterate through assets based on a non-padded number. This approach is common during deployment or automated configuration management tasks. Those scripts would have to routinely strip the padding and convert the padded number to a real number, which slows script development and run time.
+Unfortunately, the traditional asset padding approach can prove problematic in infrastructure-as-code approaches, which might iterate through assets based on a non-padded number. This approach is common during deployment or automated configuration management tasks. Those scripts would have to routinely strip the padding and convert the padded number to a real number, which slows script development and runtime.
 
 > [!NOTE]
 > Choose an approach that's suitable for your organization. The padding shown here illustrates the importance of using a consistent approach to inventory numbering, rather than which approach is superior. Before choosing a numbering scheme (with or without padding), evaluate what will affect long-term operations more: CMDB/asset management solutions or code-based inventory management. Then consistently follow the padding option that best fits your operational needs.
 
 ## Example names for common Azure resource types
 
-The following section provides some example names for common Azure resource types in an enterprise cloud deployment. For additional examples, please refer to the 
-[Azure Naming Tool](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready/AzNamingTool) or [Naming and tagging tracking template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/naming-and-tagging-conventions-tracking-template.xlsx)
+The following section provides some example names for common Azure resource types in an enterprise cloud deployment. For additional examples, see the 
+[Azure Naming Tool](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready/AzNamingTool) and the [Naming and tagging tracking template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/naming-and-tagging-conventions-tracking-template.xlsx).
  
 
 > [!NOTE]
->  Examples listed below are intended to provide visualization of a naming convention, but actual conventions will vary by orgnaization.  
+>  The following examples are intended to provide visualization of a naming convention, but actual conventions will vary by organization.  
 
 ### Example names: General
 
