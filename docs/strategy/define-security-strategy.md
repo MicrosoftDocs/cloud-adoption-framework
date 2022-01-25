@@ -3,7 +3,7 @@ title: Define a security strategy
 description: Use the Cloud Adoption Framework for Azure to learn to build a business justification for cloud migration.
 author: MarkSimos
 ms.author: brblanch
-ms.date: 05/15/2020
+ms.date: 12/23/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
@@ -16,34 +16,47 @@ The ultimate objectives for a security organization don't change with adoption o
 
 ## Modernize your security strategy
 
-Security teams need to modernize strategies, architectures, and technology as the organization adopts cloud and operates it over time. While the size and number of changes can initially seem daunting, the modernization of the security program allows security to shed some painful burdens associated with legacy approaches. An organization may temporarily operate with legacy strategy and tooling, but this approach is difficult to sustain with the pace of change in cloud and the threat environment:
+Security teams need to modernize strategies, architectures, and technology as the organization adopts cloud and operates it over time. While the size and number of changes can initially seem daunting, the modernization of the security program allows security to shed some painful burdens associated with legacy approaches. An organization can temporarily operate with legacy strategy and tooling, but this approach is difficult to sustain with the pace of change in cloud and the threat environment:
 
 - Security teams are likely to be left out of cloud adoption decision making if they take a legacy mindset of "arms-length" security where the answer always starts with "no" (instead of working together with IT and business teams to reduce risk while enabling the business).
-- Security teams will have a difficult time detecting and defending against cloud attacks if they use only legacy on-premises tooling and exclusively adhere to network perimeter only doctrine for all defenses and monitoring. Defending at cloud scale mandates the use of cloud native detection and automation capabilities and the introduction of an identity perimeter to help monitor and protect cloud and mobile assets. For more information, consult these references:
-  - The [Microsoft identity platform](/azure/active-directory/develop/v2-overview) helps you incorporate modern authentication and authorization mechanisms into your applications.
-  - [Microsoft Sentinel](/azure/sentinel/overview) provides cloud native security analytics and threat intelligence across your organization.
+- Security teams will have a difficult time detecting and defending against cloud attacks if they use only legacy on-premises tooling and exclusively adhere to network perimeter-only doctrine for all defenses and monitoring.
 
-Because this transformation can be significant, we recommend that security teams take an agile approach to modernizing security that rapidly modernizes the most critical aspects of the strategy and then continuously improve incrementally afterwards.
+### Monitor and protect at cloud-scale
+
+Defending at cloud-scale is a significant transformation effort, mandating the use of cloud-native detection and automation capabilities, and the introduction of an identity perimeter to help monitor and protect cloud and mobile assets.
+
+- The [Microsoft identity platform](/azure/active-directory/develop/v2-overview) helps you incorporate modern authentication and authorization mechanisms into your applications.
+- [Microsoft Sentinel](/azure/sentinel/overview) provides cloud-native security analytics and threat intelligence across your organization, enabling improved threat detection that makes use of large repositories of threat intelligence, and the nearly unlimited processing and storage capabilities of the cloud.
+
+We recommend that security teams take an agile approach to modernizing security—rapidly modernizing the most critical aspects of the strategy, continuously improving in increments, moving forward.
 
 ### Security of the cloud and from the cloud
 
 As your organization adopts cloud services, security teams will work toward two main objectives:
 
-- **Security \*of\* the cloud (securing cloud resources):** Security should be integrated into the planning and operation of cloud services to ensure that those core security assurances are consistently applied across all resources.
-- **Security \*from\* the cloud (using the cloud to transform security):** Security should immediately start planning and thinking about how to use cloud technologies to modernize security tools and processes, particularly natively integrated security tools. Increasingly, security tools are being hosted in the cloud and providing capabilities that are difficult or impossible to do in an on-premises environment.
+- **Security of the cloud** (securing cloud resources): Security should be integrated into the planning and operation of cloud services to ensure that those core security assurances are consistently applied across all resources.
+- **Security from the cloud** (using the cloud to transform security): Security should immediately start planning and thinking about how to use cloud technologies to modernize security tools and processes, particularly natively integrated security tools. Security tools are increasingly being hosted in the cloud—providing capabilities that are difficult or impossible to do in an on-premises environment.
 
-Many organizations start by treating cloud resources as another *virtual datacenter*, an effective starting point for security of the cloud. As organizations modernize using security from the cloud, most will find themselves quickly outgrowing this model of thinking. Securing a software-defined datacenter using cloud-hosted tools enables capabilities beyond what on-premises models can offer:
+### Securing software-defined datacenters
+
+Many organizations start by treating cloud resources as another *virtual datacenter*, an effective starting point for security of the cloud. As organizations modernize using security from the cloud, most will find themselves quickly outgrowing this model of thinking. Securing a software-defined datacenter enables capabilities beyond what on-premises models can offer. Cloud-hosted security tools offer:
 
 - Rapid enablement and scaling of security capabilities.
 - Highly effective asset inventory and security configuration hygiene discovery.
-- Continuous assessment of the organization's security posture and controls, by deploying for example [Microsoft Defender for Cloud](/azure/security-center/security-center-introduction).
-- Vastly improved threat detection that uses vast repositories of threat intelligence and the nearly unlimited processing and storage capabilities of the cloud, such as that enabled by [Microsoft Sentinel](/azure/sentinel/overview).
+
+Deploying [Microsoft Defender for Cloud](/azure/security-center/security-center-introduction) enables the **continuous assessment of your organization's security posture and controls**. It strengthens the security posture of your cloud resources, and with its integrated Microsoft Defender plans, Defender for Cloud protects workloads running in Azure, hybrid, and other cloud platforms. Learn more about [Microsoft Defender for Cloud](/azure/security-center/security-center-introduction).
+
+>[!NOTE]
+>Azure Security Center and Azure Defender are now called Microsoft Defender for Cloud. We've also renamed Azure Defender plans to Microsoft Defender plans. For example, Azure Defender for Storage is now Microsoft Defender for Storage.
+>
+>[**Learn more about the recent renaming of Microsoft security services**](https://aka.ms/secblg11).
+>
 
 ### The right level of security friction
 
 Security naturally creates friction that slows down processes, it's critical to identifying which elements are healthy in your DevOps and IT processes and which are not:
 
-- **Healthy friction:** Much like the resistance in exercise makes a muscle stronger, integrating the right level of security friction strengthens the system or application by forcing critical thinking at the right time. This typically takes the form of considering how and why an attacker may try to compromise an application or system during design (known as [threat modeling](/azure/security/develop/threat-modeling-tool)), and reviewing, identifying, and ideally fixing potential vulnerabilities an attacker can exploit in software code, configurations, or operational practices.
+- **Healthy friction:** Much like the resistance in exercise makes a muscle stronger, integrating the right level of security friction strengthens the system or application by forcing critical thinking at the right time. This typically takes the form of considering how and why an attacker might try to compromise an application or system during design (known as [threat modeling](/azure/security/develop/threat-modeling-tool)), and reviewing, identifying, and ideally fixing potential vulnerabilities an attacker can exploit in software code, configurations, or operational practices.
 - **Unhealthy friction:** Impedes more value than it protects. This often happens when security bugs generated by tools have a high false positive rate (such as false alarms) or when the effort to discover or fix security issues far exceeds the potential impact of an attack.
 
 ### Standalone and integrated responsibilities
@@ -88,7 +101,7 @@ Leaders can help drive culture changes with concrete proactive steps like:
 
 Many classic security strategies have been focused solely on preventing attacks, an approach that is insufficient for modern threats. Security teams must ensure their strategy goes beyond this and also enables rapid attack detection, response, and recovery to increase resilience. Organizations must assume that attackers will compromise some resources (sometimes called *assume breach*) and work to ensure that resources and technical designs are balanced between attack prevention and attack management (rather than the typical default approach of only attempting to prevent attacks).
 
-Many organizations are already on this journey because they have been managing the steady rise in volume and sophistication of attacks in recent years. This journey often starts with the first major incident, which can be an emotional event where people lose their prior sense of invulnerability and safety. While not as severe as a loss of life, this event can trigger similar emotions starting with denial and ultimately ending in acceptance. This assumption of "failure" may be difficult for some to accept at first, but it has strong parallels to the well-established "fail-safe" engineering principle and the assumption allows your teams to focus on a better definition of success: resilience.
+Many organizations are already on this journey because they have been managing the steady rise in volume and sophistication of attacks in recent years. This journey often starts with the first major incident, which can be an emotional event where people lose their prior sense of invulnerability and safety. While not as severe as a loss of life, this event can trigger similar emotions starting with denial and ultimately ending in acceptance. This assumption of "failure" might be difficult for some to accept at first, but it has strong parallels to the well-established "fail-safe" engineering principle and the assumption allows your teams to focus on a better definition of success: resilience.
 
 The functions of the [NIST cybersecurity framework](https://www.nist.gov/cyberframework) serve as a useful guide on how to balance investments between the complementary activities of identify, protect, detect, respond, and recover in a resilient strategy.
 
@@ -109,11 +122,11 @@ While these could be part of any security modernization plan, the rapid pace of 
   - **Learn** the business and IT objectives and why each is important and how they are thinking about achieving them as they transform.
   - **Share** why security is important in the context of those business goals and risks, what other teams can do to meet security goals, and how they should do it.
 
-  While not an easy task, it's essential for sustainably securing the organization and its assets. This partnership will likely result in healthy compromises where only the minimum security, business, and reliability goals may be met initially, but incrementally improve steadily over time.
+  While not an easy task, it's essential for sustainably securing the organization and its assets. This partnership will likely result in healthy compromises where only the minimum security, business, and reliability goals might be met initially, but incrementally improve steadily over time.
 
 - **Security is an ongoing risk, not a problem.** You can't "solve" crime. At its core, security is just a risk management discipline, which happens to be focused on malicious actions by humans rather than natural events. Like all risks, security is not a problem that can be fixed by a solution, it's a combination of the likelihood and impact of damage from a negative event, an attack. It's most comparable to traditional corporate espionage and criminal activities where organizations face motivated human attackers who have financial incentive to successfully attack the organization.
 
-- **Success in either productivity or security requires both.** An organization must focus on both security and productivity in today's "innovation or become irrelevant" environment. If the organization is not productive and driving new innovation, it may lose competitiveness in the marketplace that causes it to weaken financially or eventually fail. If the organization is not secure and loses control of assets to attackers, it may lose competitiveness in the marketplace that causes it to weaken financially and eventually fail.
+- **Success in either productivity or security requires both.** An organization must focus on both security and productivity in today's "innovation or become irrelevant" environment. If the organization is not productive and driving new innovation, it could lose competitiveness in the marketplace that causes it to weaken financially or eventually fail. If the organization is not secure and loses control of assets to attackers, it could lose competitiveness in the marketplace that causes it to weaken financially and eventually fail.
 
 - **Nobody's perfect.** No organization is perfect at adopting the cloud, not even Microsoft. Microsoft's IT and security teams grapple with many of the same challenges that our customers do such as figuring out how to structure programs well, balancing supporting legacy software with supporting cutting edge innovation, and even technology gaps in cloud services. As these teams learn how to better operate and secure the cloud, they are actively sharing their lessons learned via documents like this along with others on the [IT showcase site](https://www.microsoft.com/insidetrack), while continuously providing feedback to our engineering teams and third-party vendors to improve their offerings.
 
@@ -174,7 +187,7 @@ This section describes the key relationships that frequently change on the journ
 
   By setting a tone of cooperation with business leaders and their teams rather than a classic "arms-length" relationship, security leaders can avoid an adversarial dynamic that impedes both security and productivity goals.
 
-  Security leaders should strive to provide clarity to their team on how to manage their daily decisions on productivity and security tradeoffs as this may be new to many on their teams.
+  Security leaders should strive to provide clarity to their team on how to manage their daily decisions on productivity and security tradeoffs as this might be new to many on their teams.
 
 - **Between application and infrastructure teams (and cloud providers):** This relationship is undergoing significant changes because of multiple trends in the IT and security industry aimed at increasing innovation speed and developer productivity.
 
@@ -212,7 +225,7 @@ This section describes the key relationships that frequently change on the journ
 
     - **High-value machine learning:** Machine learning often confers a significant competitive advantage and is often considered sensitive intellectual property and a trade secret.
 
-    - **Sensitivity imprint:** Supervised machine learning is tuned using data sets, which imprints characteristics of the dataset on the algorithm. Because of this, the tuned algorithm may be considered sensitive because of the dataset used to train it. For example, training a machine learning algorithm to find secret army bases on a map using a dataset of secret army bases would make it a sensitive asset.
+    - **Sensitivity imprint:** Supervised machine learning is tuned using data sets, which imprints characteristics of the dataset on the algorithm. Because of this, the tuned algorithm might be considered sensitive because of the dataset used to train it. For example, training a machine learning algorithm to find secret army bases on a map using a dataset of secret army bases would make it a sensitive asset.
 
     > [!NOTE]
     > Not all examples are obvious, so it's critical to bring a team together with the right stakeholders from data science teams, business stakeholders, security teams, privacy teams, and others. These teams should have a responsibility to meet common goals of innovation and responsibility. They should address common issues such as how and where to store copies of data in insecure configurations, how to classify algorithms, as well as any concerns of your organizations.

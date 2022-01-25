@@ -3,7 +3,7 @@ title: Define your naming convention
 description: Learn about the considerations for naming your Azure resources and assets, and review example names for resources and assets in Azure.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 11/19/2021
+ms.date: 12/28/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -25,11 +25,9 @@ There isn't a one-size-fits-all approach to defining a naming convention. Each o
 
 ## Naming components
 
-Naming conventions are comprised of individual *naming components* that organizations define to quickly identify key information about resources. 
+An effective naming convention composes resource names from *naming components*. Naming components contain important information about each resource. A good name helps you quickly identify the resource's type, associated workload, deployment environment, and the Azure region hosting it. For example, a public IP resource for a production SharePoint workload in the West US region might be `pip-sharepoint-prod-westus-001`.
 
-Naming components might include information about the resource types, associated workloads, deployment environments, and the regions where the resource is hosted. For example, a public IP resource for a production SharePoint workload residing in the West US region might be defined as `pip-sharepoint-prod-westus-001`.
-
-![Components of an Azure resource name.](../../_images/ready/resource-naming.png)
+![Diagram that shows the components of an Azure resource name.](../../_images/ready/resource-naming.png)
 
 *Diagram 1: Components of an Azure resource name.*
 
@@ -65,7 +63,7 @@ For example, a virtual network has a resource group scope, which means that ther
 
 Some resource names, such as PaaS services with public endpoints or virtual machine DNS labels, have global scopes, so they must be unique across the entire Azure platform.
 
-![Scope levels for Azure resource names.](../../_images/ready/resource-naming-scope.png)
+![Diagram that shows the scope levels for Azure resource names.](../../_images/ready/resource-naming-scope.png)
 
 *Diagram 2: Scope levels for Azure resource names.*
 
@@ -82,12 +80,21 @@ For example, resource names have length limits. We recommend that you keep the l
 
 You can abbreviate resource names and naming components as a strategy to reduce the length and complexity of resource names. Shortening names can be useful for any of the naming components, but it's especially important to help you keep resource names within name length limits. For example, a VM name in Azure can be longer than the OS naming restrictions. Keeping Azure VM names shorter than the naming restrictions of the OS helps create consistency, improve communication when discussing resources, and reduce confusion when you are working in the Azure portal while being signed in to the VM itself.
 
+| Naming component | Description |
+|--|--|
+| **Resource type** | An abbreviation that represents the type of Azure resource or asset. This component is often used as a prefix or suffix in the name. For more information, see [Recommended abbreviations for Azure resource types](./resource-abbreviations.md). <br/> Examples: `rg`, `vm` |
+| **Business unit** | Top-level division of your company that owns the subscription or workload the resource belongs to. In smaller organizations, this component might represent a single corporate top-level organizational element. <br/> Examples: `fin`, `mktg`, `product`, `it`, `corp` |
+| **Application or service name** | Name of the application, workload, or service that the resource is a part of. <br/> Examples: `navigator`, `emissions`, `sharepoint`, `hadoop` |
+| **Subscription type** | Summary description of the purpose of the subscription that contains the resource. Often broken down by deployment environment type or specific workloads. <br/> Examples: `prod`, `shared`, `client` |
+| **Deployment&nbsp;environment** | The stage of the development lifecycle for the workload that the resource supports. <br/> Examples: `prod`, `dev`, `qa`, `stage`, `test` |
+| **Region** | The Azure region where the resource is deployed. <br/> Examples: `westus`, `eastus2`, `westeu`, `usva`, `ustx` |
+
 > [!NOTE]
 > When you're ready to name your resources and assets, review [Recommended abbreviations for Azure resource types](./resource-abbreviations.md).
 
 ### Padding schemes
 
-Padding improves readability and sorting of assets when those assets are managed in a configuration management database (CMDB), IT Asset Management tool, or traditional accounting tools. When the deployed asset is managed centrally as part of a larger inventory or portfolio of IT assets, the padding approach aligns with interfaces those systems use to manage inventory naming.
+Padding improves readability and helps you sort assets when those assets are managed in a configuration management database (CMDB) or IT asset management tool, or when using traditional accounting tools. When the deployed asset is managed centrally as part of a larger inventory or portfolio of IT assets, the padding approach aligns with interfaces those systems use to manage inventory naming.
 
 Unfortunately, the traditional asset padding approach can prove problematic in infrastructure-as-code approaches, which might iterate through assets based on a non-padded number. This approach is common during deployment or automated configuration management tasks. Those scripts would have to routinely strip the padding and convert the padded number to a real number, which slows script development and runtime.
 
@@ -99,6 +106,7 @@ Unfortunately, the traditional asset padding approach can prove problematic in i
 The following section provides some example names for common Azure resource types in an enterprise cloud deployment. For additional examples, see the 
 [Azure Naming Tool](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready/AzNamingTool) and the [Naming and tagging tracking template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/naming-and-tagging-conventions-tracking-template.xlsx).
  
+Some of these example names use a three-digit padding scheme (`###`), such as `mktg-prod-001`.
 
 > [!NOTE]
 >  The following examples are intended to provide visualization of a naming convention, but actual conventions will vary by organization.  
@@ -115,8 +123,15 @@ The following section provides some example names for common Azure resource type
 
 | Asset type | Scope | Format and examples |
 |--|--|--|
-| **Virtual network** | Resource group | *vnet-\<environment>-\<region>-\<###>* <br><br> <li> `vnet-shared-eastus2-001` <li> `vnet-prod-westus-001` <li> `vnet-client-eastus2-001` |
+| **Virtual network** | Resource group | *vnet-\<subscription&nbsp;type>-\<region>-\<###>* <br><br> <li> `vnet-shared-eastus2-001` <li> `vnet-prod-westus-001` <li> `vnet-client-eastus2-001` |
 | **Virtual network gateway** | Virtual network | *vgw-\<environment>-\<region>-\<###>* <br><br> <li> `vgw-shared-eastus2-001` <li> `vgw-prod-westus-001` <li> `vgw-client-eastus2-001` |
+| **Subnet** | Virtual network | *snet-\<subscription>-\<region>-\<###>* <br><br> <li> `snet-shared-eastus2-001` <li> `snet-prod-westus-001` <li> `snet-client-eastus2-001` |
+| **Network interface (NIC)** | Resource group | *nic-<##>-\<vm&nbsp;name>-\<subscription>-\<###>* <br><br> <li> `nic-01-dc1-shared-001` <li> `nic-02-vmhadoop1-prod-001` <li> `nic-02-vmtest1-client-001` |
+| **Public IP address** | Resource group | *pip-\<vm&nbsp;name&nbsp;or&nbsp;app&nbsp;name>-\<environment>-\<region>-\<###>* <br><br> <li> `pip-dc1-shared-eastus2-001` <li> `pip-hadoop-prod-westus-001` |
+| **Load balancer** | Resource group | *lb-\<app&nbsp;name&nbsp;or&nbsp;role>-\<environment>-\<###>* <br><br> <li> `lb-navigator-prod-001` <li> `lb-sharepoint-dev-001` |
+| **Network security group (NSG)** | Subnet or NIC | *nsg-\<policy&nbsp;name&nbsp;or&nbsp;app&nbsp;name>-\<###>* <br><br> <li> `nsg-weballow-001` <li> `nsg-rdpallow-001` <li> `nsg-sqlallow-001` <li> `nsg-dnsblocked-001` |
+| **Local network gateway** | Virtual gateway | *lgw-\<subscription&nbsp;type>-\<region>-\<###>* <br><br> <li> `lgw-shared-eastus2-001` <li> `lgw-prod-westus-001` <li> `lgw-client-eastus2-001` |
+| **Virtual network gateway** | Virtual network | *vgw-\<subscription&nbsp;type>-\<region>-\<###>* <br><br> <li> `vgw-shared-eastus2-001` <li> `vgw-prod-westus-001` <li> `vgw-client-eastus2-001` |
 | **Site-to-Site connection** | Resource group | *cn-\<local&nbsp;gateway&nbsp;name>-to-\<virtual&nbsp;gateway&nbsp;name>* <br><br> <li> `cn-lgw-shared-eastus2-001-to-vgw-shared-eastus2-001` <li> `cn-lgw-shared-eastus2-001-to-vgw-shared-westus-001` |
 
 ### Example names: Compute and Web

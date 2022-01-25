@@ -3,7 +3,7 @@ title: Power your data strategy with Azure Synapse Analytics
 description: Learn how Azure Synapse Analytics can power your data strategy. Choosing the right set of tools and technologies is essential for a successful business outcome.
 author: pratimdas
 ms.author: mboswell
-ms.date: 07/28/2021
+ms.date: 11/25/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -42,4 +42,4 @@ Build a strong data strategy. Choose the right tools and technology as the backb
 
 ## Next steps
 
-[Use Azure Synapse Analytics with enterprise-scale for analytics and AI](./azure-synapse-analytics-implementation.md).
+[Use Azure Synapse Analytics with data management and analytics scenario](./azure-synapse-analytics-implementation.md).

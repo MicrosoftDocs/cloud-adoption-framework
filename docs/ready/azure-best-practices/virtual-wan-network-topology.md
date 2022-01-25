@@ -47,13 +47,15 @@ Explore key design considerations and recommendations surrounding virtual wide a
 
 - A single Azure Virtual WAN hub can support a specific maximum number of VM workloads across all directly attached VNets, which are documented in [Azure Virtual WAN limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#virtual-wan-limits).
 
+- Multiple Azure Virtual WAN hubs can be deployed in the same region to scale beyond single hub limits.
+
 - Virtual WAN integrates with various [SD-WAN providers](/azure/virtual-wan/virtual-wan-locations-partners).
 
 - Many managed service providers offer [managed services](/azure/networking/networking-partners-msp) for Virtual WAN.
 
-- User VPN (Point-to-Site) gateways in Virtual WAN can scale up to 20-Gbps aggregated throughput and 10,000 client connections per virtual hub.
+- User VPN (Point-to-Site) gateways in Virtual WAN can scale up to 20-Gbps aggregated throughput and 100,000 client connections per virtual hub, as documented in the [Azure Virtual WAN limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#virtual-wan-limits) page.
 
-- Site-to-site VPN gateways in Virtual WAN can scale up to 20-Gbps aggregated throughput.
+- Site-to-Site VPN gateways in Virtual WAN can scale up to 20-Gbps aggregated throughput.
 
 - ExpressRoute circuits using a Local, Standard, or Premium SKU can be connected to a Virtual WAN hub.
 
@@ -67,15 +69,15 @@ Explore key design considerations and recommendations surrounding virtual wide a
 
 - The Virtual WAN portal experience requires that all Virtual WAN resources are deployed into the same resource group together.
 
-- An Azure DDoS Protection standard protection plan can be shared across all VNets in a single Azure AD Tenant to protect resources with public IP addresses. For more information, see [Azure DDoS Protection Standard](/azure/ddos-protection/ddos-protection-overview).
+- An Azure DDoS Protection Standard protection plan can be shared across all VNets in a single Azure AD tenant to protect resources with public IP addresses. For more information, see [Azure DDoS Protection Standard](/azure/ddos-protection/ddos-protection-overview).
 
-  - At this time, Virtual WAN Secure Virtual Hubs don't support Azure DDoS standard protection plans. For more information, see [Azure Firewall Manager known issues](/azure/firewall-manager/overview#known-issues) and [hub virtual network and secured virtual hub comparison](/azure/firewall-manager/vhubs-and-vnets#comparison).
+  - At this time, Virtual WAN secure virtual hubs don't support Azure DDoS standard protection plans. For more information, see [Azure Firewall Manager known issues](/azure/firewall-manager/overview#known-issues) and [Hub virtual network and secured virtual hub comparison](/azure/firewall-manager/vhubs-and-vnets#comparison).
 
-  - Only resources with Public IP addresses are covered by Azure DDoS Protection standard protection plans.
+  - Only resources with public IP addresses are covered by Azure DDoS Protection Standard protection plans.
 
-    - 100 public IP addresses are included in the cost of an Azure DDoS Protection standard protection plan across all protected VNets associated to the DDoS Protection plan. Any other public IP addresses over the 100 included with the plan, are charged separately. For more information on Azure DDoS Protection Standard Protection pricing, see the [pricing page](https://azure.microsoft.com/pricing/details/ddos-protection/) or the [FAQ](/azure/ddos-protection/ddos-faq#how-does-pricing-work).
+    - 100 public IP addresses are included in the cost of an Azure DDoS Protection Standard protection plan across all protected VNets associated to the DDoS protection plan. Any other public IP addresses over the 100 included with the plan, are charged separately. For more information on Azure DDoS Protection Standard protection pricing, see the [pricing page](https://azure.microsoft.com/pricing/details/ddos-protection/) or the [FAQ](/azure/ddos-protection/ddos-faq#how-does-pricing-work).
 
-  - Review the [supported resources of Azure DDoS Protection standard protection plans](/azure/ddos-protection/ddos-faq#what-are-the-supported-protected-resource-types)
+  - Review the [supported resources of Azure DDoS Protection Standard protection plans](/azure/ddos-protection/ddos-faq#what-are-the-supported-protected-resource-types)
 
 **Design recommendations:**
 

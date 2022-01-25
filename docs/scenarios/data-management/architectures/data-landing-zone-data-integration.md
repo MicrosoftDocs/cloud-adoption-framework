@@ -1,6 +1,6 @@
 ---
-title: Enterprise-scale for analytics and AI data integrations in Azure
-description: Learn about enterprise-scale for analytics and AI data integrations in Azure.
+title: Data management and analytics scenario data integrations in Azure
+description: Learn about data management and analytics scenario data integrations in Azure.
 author: mboswell
 ms.author: mboswell
 ms.date: 03/03/2021
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Enterprise-scale for analytics and AI data integrations in Azure
+# Data management and analytics scenario data integrations in Azure
 
 The role of integrations operations is explained under [integration ops (per integration)](../organize-persona-and-teams.md#data-landing-zone-teams).
 
@@ -38,7 +38,7 @@ There should be a data integration resource group per external integration.
 
 ## Azure Key Vault
 
-Enterprise-scale for analytics and AI will make use of Azure Key Vault functionality and store secrets within Azure whenever possible.
+Data management and analytics scenario will make use of Azure Key Vault functionality and store secrets within Azure whenever possible.
 
 Each data landing zone will have an Azure Key Vault per integration. This functionality will ensure that encryption key, secret, and certificate derivation meet the requirements of the environment. This is to allow better separation of administrative duties and reduce risk associated with mixing keys, secrets of differing classifications, and integrations.
 
@@ -73,4 +73,4 @@ Figure 2 shows the subprocess of adding an integration to a pre-existing Azure D
 
 ## Next steps
 
-[Enterprise-scale for analytics and AI data products in Azure](./data-landing-zone-data-products.md)
+[Data management and analytics scenario data products in Azure](./data-landing-zone-data-products.md)
