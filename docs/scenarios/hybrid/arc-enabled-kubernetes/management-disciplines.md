@@ -14,21 +14,21 @@ ms.custom: e2e-hybrid, think-tank
 
 This document provides key design considerations and recommendations to manage and monitor Azure Ar-enabled Kubernetes clusters to help you understand and design solutions for well architected operational excellence.
 
-Use guidance provided in this document along with other critical design areas (CDA) referenced throughout the document, to better understand related design considerations and recommendations to focus on management and monitoring aspects of Azure Arc-enabled Kubernetes.
+Use guidance provided in this document along with other critical design areas referenced throughout the document, to better understand related design considerations and recommendations to focus on management and monitoring aspects of Azure Arc-enabled Kubernetes.
 
 ## Architecture
 
-It is important to understand Azure Arc-enabled Kubernetes architecture and [network connectivity modes](/azure/azure-arc/kubernetes/conceptual-connectivity-modes#understand-connectivity-modes) to make the right architectural decision to onboard on-premises or multi-cloud Kubernetes clusters to Azure Arc, manage, monitor, and meet organization enterprise architecture standards and operational desired state.
+It is important to understand Azure Arc-enabled Kubernetes architecture and [network connectivity modes](/azure/azure-arc/kubernetes/conceptual-connectivity-modes#understand-connectivity-modes) to make the right architectural decision to onboard on-premises or multicloud Kubernetes clusters to Azure Arc, manage, monitor, and meet organization architecture standards and operational desired state.
 
 ### Cluster management
 
-The following architecture diagram shows different Azure Arc-enabled Kubernetes components and how they interact when onboarding and managing the on-premises or multi-cloud Kubernetes cluster in a fully connected network connectivity mode.
+The following architecture diagram shows different Azure Arc-enabled Kubernetes components and how they interact when onboarding and managing the on-premises or multicloud Kubernetes cluster in a fully connected network connectivity mode.
 
 ![Azure Arc-enabled Kubernetes cluster management](./media/arc-enabled-kubernetes-cluster-management.png)
 
 The following diagram shows [Azure Arc-enabled Kubernetes cluster access from anywhere](/azure/azure-arc/kubernetes/conceptual-cluster-connect) and how the components interact with each other to manage cluster using Azure RBAC.
 
-![Access Arc-enabled Kubernetes anywhere](./media/cluster-connect-network.png)
+![Access Arc-enabled Kubernetes anywhere](./media/arc-enabled-kubernetes-cluster-connect-network.png)
 
 ### Cluster monitoring
 
@@ -40,15 +40,15 @@ The following architecture diagram shows Azure Arc-enabled Kubernetes cluster mo
 
 **Cluster onboarding:**
 
-- Consider the recommendations provided in [resource organization CDA](./resource-organization.md) and [governance principles CDA](./governance-disciplines.md) when designing [enterprise scale landing zone subscriptions](/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-conceptual-architecture) to onboard and manage Azure Arc-enabled Kubernetes cluster and the [extensions](/azure/azure-arc/kubernetes/extensions).
-- Decide between [auto-upgrade versus manual upgrade Azure Arc-enabled Kubernetes agents](/azure/azure-arc/kubernetes/agent-upgrade#toggle-auto-upgrade-on-or-off-when-connecting-cluster-to-azure-arc) depending on the organization change management process and onboard on-premises or multi-cloud Kubernetes clusters to Azure Arc. If the decision is re-considered later, Azure Arc-enabled Kubernetes agents auto-upgrade management behavior can be changed any time after cluster is onboarded.
-- Consider simplicity and minimizing of firewall or proxy management and design source and destination groups to manage [Azure Arc-enabled Kubernetes network firewall rules](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#meet-network-requirements). Refer to your on-premises or multi-cloud firewall or proxy management guidelines for more details.
+- Consider the recommendations provided in [resource organization critical design area](./resource-organization.md) and [governance and security disciplines](./governance-disciplines.md) when designing [enterprise scale landing zone subscriptions](/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-conceptual-architecture) to onboard and manage Azure Arc-enabled Kubernetes cluster and the [extensions](/azure/azure-arc/kubernetes/extensions).
+- Decide between [auto-upgrade versus manual upgrade Azure Arc-enabled Kubernetes agents](/azure/azure-arc/kubernetes/agent-upgrade#toggle-auto-upgrade-on-or-off-when-connecting-cluster-to-azure-arc) depending on the organization change management process and onboard on-premises or multicloud Kubernetes clusters to Azure Arc. If the decision is re-considered later, Azure Arc-enabled Kubernetes agents auto-upgrade management behavior can be changed any time after cluster is onboarded.
+- Consider simplicity and minimizing of firewall or proxy management and design source and destination groups to manage [Azure Arc-enabled Kubernetes network firewall rules](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#meet-network-requirements). Refer to your on-premises or multicloud firewall or proxy management guidelines for more details.
 
 **Cluster management:**
 
 - Azure [Arc-enabled Kubernetes extensions](/azure/azure-arc/kubernetes/extensions) require  additional URLs allow access rules on firewalls or proxy. Depending on the extensions being installed, consider planning to accommodate additional URLs allow access rules to minimize change management timelines.
-- If onboarding of on-premises or multi-cloud Kubernetes cluster is done with [auto-upgrade toggle off](/azure/azure-arc/kubernetes/agent-upgrade#toggle-auto-upgrade-on-or-off-when-connecting-cluster-to-azure-arc), to control agent upgrades, consider upgrading Azure Arc-enabled Kubernetes agents on a regular basis to stay up to date with latest product releases and avoid expensive upgrade process in the future.
-- Consider using [GitOps](/azure/azure-arc/kubernetes/tutorial-use-gitops-flux2) to manage Arc-enabled Kubernetes agent and cluster extension updates to maintain consistent deployments across all clusters and environments. Review [GitOps CDA](./cicd-workflow.md) and [platform automation CDA](./platform-automation.md) for detailed guidance.
+- If onboarding of on-premises or multicloud Kubernetes cluster is done with [auto-upgrade toggle off](/azure/azure-arc/kubernetes/agent-upgrade#toggle-auto-upgrade-on-or-off-when-connecting-cluster-to-azure-arc), to control agent upgrades, consider upgrading Azure Arc-enabled Kubernetes agents on a regular basis to stay up to date with latest product releases and avoid expensive upgrade process in the future.
+- Consider using [GitOps](/azure/azure-arc/kubernetes/tutorial-use-gitops-flux2) to manage Arc-enabled Kubernetes agent and cluster extension updates to maintain consistent deployments across all clusters and environments. Review [CI/CD workflow using GitOps](./cicd-gitops-disciplines.md) and [platform disciplines](./automation-disciplines.md) critical design areas for detailed guidance.
 
 **Cluster monitoring:**
 
@@ -61,8 +61,8 @@ The following architecture diagram shows Azure Arc-enabled Kubernetes cluster mo
 **Cluster onboarding:**
 
 - Use shared administration terminal server(s) to [install required tools](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#prerequisites) to maintain consistent tools and versions across all users to prevent issues deploying and managing Azure Arc-enabled Kubernetes cluster.
-- Make sure administration terminal servers and on-premises or multi-cloud Kubernetes clusters are whitelisted to access [Azure Arc-enabled Kubernetes required URLs](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#meet-network-requirements) to onboard and manage using Azure Arc control plane.
-- Create a script to verify connectivity to the [Azure Arc-enabled Kubernetes required URLs](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#meet-network-requirements) from on the on-premises or multi-cloud Kubernetes cluster nodes to minimize effort troubleshooting and resolving connectivity issues.
+- Make sure administration terminal servers and on-premises or multicloud Kubernetes clusters are in the Allow list to access [Azure Arc-enabled Kubernetes required URLs](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#meet-network-requirements) to onboard and manage using Azure Arc control plane.
+- Create a script to verify connectivity to the [Azure Arc-enabled Kubernetes required URLs](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#meet-network-requirements) from on the on-premises or multicloud Kubernetes cluster nodes to minimize effort troubleshooting and resolving connectivity issues.
 - Create onboarding deployment script using [PowerShell](/azure/azure-resource-manager/templates/deploy-powershell) or [Bash](/azure/azure-resource-manager/templates/deploy-cloud-shell?tabs=azure-cli) to onboard Arc-enabled Kubernetes cluster and install cluster extensions to prevent issues and consistent deployment across all environments and clusters.
 
 **Cluster management:**
@@ -76,13 +76,19 @@ The following architecture diagram shows Azure Arc-enabled Kubernetes cluster mo
 - Enable [Azure Monitor Container insights for Azure Arc-enabled Kubernetes clusters](/azure/azure-monitor/containers/container-insights-enable-arc-enabled-clusters) to collect logs and metrics to create dashboards and generate alerts for cluster related issues.
 - Use [Azure Resource Graph](/azure/azure-arc/kubernetes/resource-graph-samples?tabs=azure-cli) or [Log Analytics queries](/azure/azure-monitor/logs/queries) to monitor cluster health and raise alerts.
 
-![Arc-enabled Kubernetes cluster status resource graph query](./media/resource-graph-connected-cluster-status.png)
+  ![Arc-enabled Kubernetes cluster status resource graph query](./media/resource-graph-connected-cluster-status.png)
 
 ## Next steps
 
+For more information about your hybrid and multicloud cloud journey, see the following articles:
+
+- Review the [prerequisites](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#prerequisites) for Azure Arc-enabled Kubernetes.
+- Review [validated Kubernetes distributions](/azure/azure-arc/kubernetes/validation-program#validated-distributions) for Azure Arc-enabled Kubernetes.
+- Review [Manage hybrid and multicloud environments](/azure/cloud-adoption-framework/scenarios/hybrid/manage).
 - Review [Azure Arc-enabled Kubernetes network connectivity requirements](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#meet-network-requirements).
 - Review [Connect an existing Kubernetes cluster to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster).
-- Review [Azure Arc Jumpstart - Azure Arc-enabled Kubernetes](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_k8s/).
 - Review [Upgrading Azure Arc-enabled Kubernetes agents](/azure/azure-arc/kubernetes/agent-upgrade).
 - Review [Use Cluster Connect to connect to Azure Arc-enabled Kubernetes clusters](/azure/azure-arc/kubernetes/cluster-connect) to manage clusters.
+- Experience Azure Arc-enabled Kubernetes automated scenarios with the [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_k8s/).
+- To learn more about Azure Arc, review the [Azure Arc learning path on Microsoft Learn](/learn/paths/manage-hybrid-infrastructure-with-azure-arc/).
 - Review [Frequently Asked Questions - Azure Arc-enabled](/azure/azure-arc/kubernetes/faq) to get answers to most common questions.
