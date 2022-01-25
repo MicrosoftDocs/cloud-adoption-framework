@@ -51,6 +51,7 @@ The following list provides examples of naming components that are useful when y
 > [!NOTE]
 > Although virtual machine (VM) names in Azure can be longer than the allowed NetBIOS name of the VM, we recommend that you keep them consistent. For more information and for other restrictions, see [Computer names](/troubleshoot/windows-server/identity/naming-conventions-for-computer-domain-site-ou#computer-names).
 > 
+
 ## Naming considerations 
 
 In addition to defining the naming components, you must also consider the order in which the naming components should be listed, if and what type of delimiters you should use between components, and take into account the different naming rules associated with resources types. 
@@ -117,7 +118,7 @@ Some of these example names use a three-digit padding scheme (`###`), such as `m
 |--|--|--|
 | **Management group** |  Organization / Unit / Department | *mg-\<organization>-\<unit>-\<department>* <br><br> <li> `mg-contoso` <li> `mg-contoso-hr` <li> `mg-hr` |
 | **Subscription** | Account / enterprise agreement | *\<department>-\<environment>-\<###>* <br><br> <li> `mktg-prod` <li> `corp-shared-001` |
-| **Resource Group** | Subscription | *rg-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>* <br><br> <li> `rg-projectcontoso-prod` <li> `rg-sharepoint-dev` <li> `rg-coreservices-shared` |
+| **Resource group** | Subscription | *rg-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>* <br><br> <li> `rg-projectcontoso-prod` <li> `rg-sharepoint-dev` <li> `rg-coreservices-shared` |
 
 ### Example names: Networking
 
@@ -131,7 +132,6 @@ Some of these example names use a three-digit padding scheme (`###`), such as `m
 | **Load balancer** | Resource group | *lb-\<app&nbsp;name&nbsp;or&nbsp;role>-\<environment>-\<###>* <br><br> <li> `lb-navigator-prod-001` <li> `lb-sharepoint-dev-001` |
 | **Network security group (NSG)** | Subnet or NIC | *nsg-\<policy&nbsp;name&nbsp;or&nbsp;app&nbsp;name>-\<###>* <br><br> <li> `nsg-weballow-001` <li> `nsg-rdpallow-001` <li> `nsg-sqlallow-001` <li> `nsg-dnsblocked-001` |
 | **Local network gateway** | Virtual gateway | *lgw-\<subscription&nbsp;type>-\<region>-\<###>* <br><br> <li> `lgw-shared-eastus2-001` <li> `lgw-prod-westus-001` <li> `lgw-client-eastus2-001` |
-| **Virtual network gateway** | Virtual network | *vgw-\<subscription&nbsp;type>-\<region>-\<###>* <br><br> <li> `vgw-shared-eastus2-001` <li> `vgw-prod-westus-001` <li> `vgw-client-eastus2-001` |
 | **Site-to-Site connection** | Resource group | *cn-\<local&nbsp;gateway&nbsp;name>-to-\<virtual&nbsp;gateway&nbsp;name>* <br><br> <li> `cn-lgw-shared-eastus2-001-to-vgw-shared-eastus2-001` <li> `cn-lgw-shared-eastus2-001-to-vgw-shared-westus-001` |
 
 ### Example names: Compute and Web
