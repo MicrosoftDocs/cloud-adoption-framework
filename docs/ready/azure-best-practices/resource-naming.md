@@ -100,17 +100,15 @@ Padding improves readability and helps you sort assets when those assets are man
 Unfortunately, the traditional asset padding approach can prove problematic in infrastructure-as-code approaches, which might iterate through assets based on a non-padded number. This approach is common during deployment or automated configuration management tasks. Those scripts would have to routinely strip the padding and convert the padded number to a real number, which slows script development and runtime.
 
 > [!NOTE]
-> Choose an approach that's suitable for your organization. The padding shown here illustrates the importance of using a consistent approach to inventory numbering, rather than which approach is superior. Before choosing a numbering scheme (with or without padding), evaluate what will affect long-term operations more: CMDB/asset management solutions or code-based inventory management. Then consistently follow the padding option that best fits your operational needs.
+> Choose an approach that's suitable for your organization. Some of the example names described later in this article use a three-digit padding scheme (`###`), such as `mktg-prod-001`. The padding shown here illustrates the importance of using a consistent approach to inventory numbering, rather than which approach is superior. Before choosing a numbering scheme (with or without padding), evaluate what will affect long-term operations more: CMDB/asset management solutions or code-based inventory management. Then consistently follow the padding option that best fits your operational needs.
 
 ## Example names for common Azure resource types
 
 The following section provides some example names for common Azure resource types in an enterprise cloud deployment. For additional examples, see the 
 [Azure Naming Tool](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready/AzNamingTool) and the [Naming and tagging tracking template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/naming-and-tagging-conventions-tracking-template.xlsx).
- 
-Some of these example names use a three-digit padding scheme (`###`), such as `mktg-prod-001`.
 
 > [!NOTE]
->  The following examples are intended to provide visualization of a naming convention, but actual conventions will vary by organization.  
+> The following examples are intended to provide visualization of a naming convention, but actual conventions will vary by organization.  
 
 ### Example names: General
 
