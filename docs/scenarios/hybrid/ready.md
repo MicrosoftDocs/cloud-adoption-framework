@@ -153,4 +153,4 @@ For more information about your hybrid and multicloud cloud journey, see the fol
 
 - [Introduction to Azure Arc-enabled servers landing zone accelerator for hybrid and multicloud](./enterprise-scale-landing-zone.md)
 
-- [Learn how to deploy Azure Arc sandbox to accelerate adoption of hybrid or multicloud architectures](./enterprise-scale-landing-zone-sandbox.md)
+- [Learn how to deploy Azure Arc sandbox to accelerate adoption of hybrid or multicloud architectures](./arc-enabled-servers/enterprise-scale-landing-zone-sandbox.md)
