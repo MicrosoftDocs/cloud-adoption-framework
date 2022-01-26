@@ -3,7 +3,7 @@ title: The Five Disciplines of Cloud Governance
 description: Use the Cloud Adoption Framework for Azure to learn about Cost Management, Security Baseline, Identity Baseline, Resource Consistency, and Deployment Acceleration disciplines.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 09/17/2019
+ms.date: 01/26/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
