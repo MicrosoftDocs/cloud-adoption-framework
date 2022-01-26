@@ -246,7 +246,7 @@ Your organization might need to have a particular workload or application that n
 
 Start small and expand is an iterative approach to compliance. Use the Cloud Adoption Framework Govern and Manage methodologies to support sensitive data or critical workloads. For more information, see the [Govern methodology for the cloud](../../govern/methodology.md) and [IT management and operations in the cloud](../../manage/considerations/index.md).
 
-The enterprise-scale architecture includes designs for segmentation and separation to support compliance goals and a [service enablement framework](./design-area/governance.md#service-enablement-framework) to determine how to achieve appropriate levels of governance, security, and compliance.
+The enterprise-scale architecture includes designs for segmentation and separation to support compliance goals and a [service enablement framework](./design-area/governance.md) to determine how to achieve appropriate levels of governance, security, and compliance.
 
 If possible, identify low-risk workloads to implement first. This technique helps you build infrastructure and skills over time. You can add the Govern and Manage methodologies as you understand how the cloud works.
 
