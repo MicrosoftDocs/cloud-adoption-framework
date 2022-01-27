@@ -44,7 +44,7 @@ Get started with this scenario using the following links:
 | [Platform automation](../scenarios/hybrid/arc-enabled-servers/eslz-automation-arc-server.md) | Azure Arc enables organizations to manage their digital state hosted outside of Azure with the same level of experience and automation as a native Azure resource. As part of your Enterprise Scale Landing Zone implementation you should plan for agent onboarding, lifecycle management, and expansion of the Azure control plane capabilities via Azure Arc with as much automation as possible. |
 | [Cost governance](../scenarios/hybrid/arc-enabled-servers/eslz-cost-governance.md) | Keep track of ungoverned and unmonitored resources that prevent you from to increase accountability with budgets, cost allocation, and chargebacks. |
 | [Enterprise-scale sandbox](../scenarios/hybrid/arc-enabled-servers/enterprise-scale-landing-zone-sandbox.md) | Get started with a fully automated Azure Arc-enabled servers sandbox deployment. |
-| [Support for hybrid and multicloud](../scenarios/hybrid/arc-enabled-servers/enterprise-scale-landing-zone.md) | Learn how to accelerate adoption of hybrid or multi-cloud architectures. |
+| [Support for hybrid and multicloud](../scenarios/hybrid/enterprise-scale-landing-zone.md) | Learn how to accelerate adoption of hybrid or multi-cloud architectures. |
 
 ### Launch of Cloud Adoption Strategy Evaluator in the Microsoft Cloud Adoption Framework
 
