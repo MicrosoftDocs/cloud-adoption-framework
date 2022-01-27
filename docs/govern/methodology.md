@@ -3,7 +3,7 @@ title: Govern methodology for the cloud
 description: Use an incremental governance approach based on a minimum viable product (MVP) to support corporate policies and move quickly toward cloud adoption.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 07/04/2019
+ms.date: 01/27/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
