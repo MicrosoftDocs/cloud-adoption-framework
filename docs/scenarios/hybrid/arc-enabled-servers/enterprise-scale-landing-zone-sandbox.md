@@ -41,4 +41,4 @@ Based on the desired deployment method, you are required to install either [Azur
 
 ## Next steps
 
-As mentioned, the Azure Arc-enabled servers enterprise-scale sandbox implementation is based on the fully automated Jumpstart ArcBox solution. For more information and guidance on how to get started, open the [Jumpstart ArcBox website page](https://azurearcjumpstart.io/azure_jumpstart_arcbox/flavors/ITPro).
+As mentioned, the Azure Arc-enabled servers landing zone accelerator sandbox implementation is based on the fully automated Jumpstart ArcBox solution. For more information and guidance on how to get started, open the [Jumpstart ArcBox website page](https://aka.ms/JumpstartArcBox).
