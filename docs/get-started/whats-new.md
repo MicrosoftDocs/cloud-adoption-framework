@@ -22,7 +22,7 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
 ### Launch of Cloud Adoption Strategy Evaluator in the Microsoft Cloud Adoption Framework
 
-We've launched the [Cloud Adoption Strategy Evaluator](https://docs.microsoft.com/assessments/?mode=pre-assessment&id=8fefc6d5-97ac-42b3-8e97-d82701e55bab), a new assessment built around the principles of cloud economics—which evaluates your cloud adoption strategy, and provides recommendations to help build a robust business case that supports your organization's unique cloud journey.
+We've launched the [Cloud Adoption Strategy Evaluator](/assessments/?id=8fefc6d5-97ac-42b3-8e97-d82701e55bab&mode=pre-assessment), a new assessment built around the principles of cloud economics—which evaluates your cloud adoption strategy, and provides recommendations to help build a robust business case that supports your organization's unique cloud journey.
 
 ## December 2021
 
@@ -174,7 +174,7 @@ We've updated the introduction to each category of business outcomes with refere
 
 ### Enterprise-scale updates
 
-The critical design area of [network topology and connectivity](../ready/azure-best-practices/define-an-azure-network-topology.md) includes new articles that simplify rationalizing individual components of your network design. Those design aspects now include guidance on [connecting to multicloud providers](../ready/azure-best-practices/connectivity-to-other-providers.md) like Oracle Cloud Infrastructure. We've also released the new enterprise-scale Terraform module to demonstrate Microsoft's continued investment in open-source approaches to Azure landing zone configuration. Lastly, we've updated guidance on how enterprises can [optimize management groups and organize subscriptions](../ready/enterprise-scale/management-group-and-subscription-organization.md) in Azure to meet cloud governance requirements.
+The critical design area of [network topology and connectivity](../ready/azure-best-practices/define-an-azure-network-topology.md) includes new articles that simplify rationalizing individual components of your network design. Those design aspects now include guidance on [connecting to multicloud providers](../ready/azure-best-practices/connectivity-to-other-providers.md) like Oracle Cloud Infrastructure. We've also released the new enterprise-scale Terraform module to demonstrate Microsoft's continued investment in open-source approaches to Azure landing zone configuration. Lastly, we've updated guidance on how enterprises can [optimize management groups and organize subscriptions](../ready/landing-zone/design-area/resource-org.md) in Azure to meet cloud governance requirements.
 
 ### Antipatterns
 
@@ -234,7 +234,7 @@ We've also expanded the business outcomes to share a number of common business m
 | Article | Description |
 |--|--|
 | [Transition existing Azure environments to enterprise-scale](../ready/enterprise-scale/transition.md) | This article helps organizations to navigate the right path based on an existing Azure environment transitioning into enterprise-scale. |
-| [Cloud Adoption Framework enterprise-scale landing zone architecture](../ready/enterprise-scale/architecture.md) | This article was updated to include a high-level diagram for an enterprise-scale landing zone architecture based on the hub and spoke network topology, and updates to describe and cross-reference the critical design areas for an enterprise-scale landing zone architecture. |
+| [Cloud Adoption Framework enterprise-scale landing zone architecture](../ready/landing-zone/index.md) | This article was updated to include a high-level diagram for an enterprise-scale landing zone architecture based on the hub and spoke network topology, and updates to describe and cross-reference the critical design areas for an enterprise-scale landing zone architecture. |
 
 ## August 25, 2020
 

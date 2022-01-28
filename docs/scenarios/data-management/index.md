@@ -49,7 +49,7 @@ The data management and analytics scenario is designed to guide the end-to-end c
 | [Data management and analytics scenario](enterprise-scale-landing-zone.md)  |Representing a strategic design path for an Azure data management and analytics. The Data management and analytics scenario pattern relies upon distribution of the data and its pipelines across domains. This pattern includes the capabilities such as storage, data lineage, data classification, data ingestion, networking, security, access management, encryption, resiliency and monitoring.         |
 
 > [!TIP]
-> Deployable reference implementations and templates make it easy to get started with the data management and analytics scenario. To learn more, see [Deployment templates](./architectures/frequently-asked-questions.md).
+> Deployable reference implementations and templates make it easy to get started with the data management and analytics scenario. To learn more, see [Deployment templates](./architectures/deployment-templates.md).
 
 ## Reference architecture
 
@@ -60,7 +60,7 @@ The data management and analytics scenario is designed to guide the end-to-end c
 For more information, see:
 
 - [Data management landing zone](architectures/data-management-landing-zone.md)
-- [Data landing zone](architectures/data-management-landing-zone.md)
+- [Data landing zone](architectures/data-landing-zone.md)
 
 ## Best practices
 
