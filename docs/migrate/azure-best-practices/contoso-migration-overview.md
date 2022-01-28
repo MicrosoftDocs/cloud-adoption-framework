@@ -16,7 +16,7 @@ This section of the Cloud Adoption Framework for Azure provides examples of seve
 
 ## Introduction
 
-Azure provides access to a comprehensive set of cloud services. As developers and IT professionals, you can use these services to build, deploy, and manage applications on a range of tools and frameworks through a global network of datacenters. As your business faces challenges associated with the digital shift, the Azure platform helps you to figure out how to:
+Azure provides access to a comprehensive set of cloud services. As developers and IT professionals, you can use these services to build, deploy, and manage applications on a range of tools and frameworks through a global network of datacenters. As your business faces challenges associated with the digital shift, the Azure platform helps you to determine how to:
 
 - Optimize resources and operations.
 - Engage with your customers and employees.
@@ -24,7 +24,7 @@ Azure provides access to a comprehensive set of cloud services. As developers an
 
 The cloud provides advantages for speed and flexibility, minimized costs, performance, and reliability. But many organizations will need to continue to run on-premises datacenters. In response to cloud adoption barriers, Azure provides a hybrid cloud strategy that builds bridges between your on-premises datacenters and the Azure public cloud. An example is using Azure cloud resources like Azure Backup to protect on-premises resources or Azure analytics to gain insights into on-premises workloads.
 
-As part of the hybrid cloud strategy, Azure provides growing solutions for migrating on-premises applications and workloads to the cloud. With simple steps, you can comprehensively assess your on-premises resources to figure out how they'll run in the Azure platform. Then, with a deep assessment in hand, you can confidently migrate resources to Azure. When resources are up and running in Azure, you can optimize them to retain and improve access, flexibility, security, and reliability.
+As part of the hybrid cloud strategy, Azure provides growing solutions for migrating on-premises applications and workloads to the cloud. With simple steps, you can comprehensively assess your on-premises resources to determine how they'll run in the Azure platform. Then, with a deep assessment in hand, you can confidently migrate resources to Azure. When resources are up and running in Azure, you can optimize them to retain and improve access, flexibility, security, and reliability.
 
 ## Migration patterns
 
@@ -138,6 +138,6 @@ This series focuses on each migration scenario, driven by slightly different bus
 
 The example articles provided in this section use two demo applications: SmartHotel360 and osTicket.
 
-**SmartHotel360**: This test application was developed by Microsoft to use when you work with Azure. It's provided under an open-source license, and you can download it from [GitHub](https://github.com/Microsoft/SmartHotel360). It's an ASP.NET application connected to a SQL Server database. In the scenarios discussed in these articles, the current version of this application is deployed to two VMware VMs running Windows Server 2008 R2 and SQL Server 2008 R2. These application VMs are hosted on-premises and managed by vCenter Server.
+**SmartHotel360:** This test application was developed by Microsoft to use when you work with Azure. It's provided under an open-source license, and you can download it from [GitHub](https://github.com/Microsoft/SmartHotel360). It's an ASP.NET application connected to a SQL Server database. In the scenarios discussed in these articles, the current version of this application is deployed to two VMware VMs running Windows Server 2008 R2 and SQL Server 2008 R2. These application VMs are hosted on-premises and managed by vCenter Server.
 
-**osTicket**: This open-source service desk ticketing application runs on Linux. You can download it from [GitHub](https://github.com/osTicket/osTicket). In the scenarios discussed in these articles, the current version of this application is deployed on-premises to two VMware VMs running Ubuntu 16.04 LTS using Apache 2, PHP 7.0, and MySQL 5.7.
+**osTicket:** This open-source service desk ticketing application runs on Linux. You can download it from [GitHub](https://github.com/osTicket/osTicket). In the scenarios discussed in these articles, the current version of this application is deployed on-premises to two VMware VMs running Ubuntu 16.04 LTS using Apache 2, PHP 7.0, and MySQL 5.7.

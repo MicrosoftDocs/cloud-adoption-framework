@@ -10,8 +10,6 @@ ms.subservice: ready
 ms.custom: internal
 ---
 
-<!-- cSpell:ignore HDFS databox Avere HANA ACLs NetApp Isilon DFSR Cloudera -->
-
 # Review your storage options
 
 Storage capabilities are critical for supporting workloads and services that are hosted in the cloud. As you prepare for your cloud adoption, review this information to plan for your storage needs.

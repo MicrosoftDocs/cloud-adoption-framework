@@ -1,6 +1,6 @@
 ---
-title: Schema migration and data definition language (DDL) commands
-description: Learn about design considerations and performance options for data definition language (DDL) commands when you're migrating schemas to Azure Synapse Analytics.
+title: Schema migration and Data Definition Language (DDL) commands
+description: Learn about design considerations and performance options for Data Definition Language (DDL) commands when you're migrating schemas to Azure Synapse Analytics.
 author: v-hanki
 ms.author: brblanch
 ms.date: 07/14/2020
@@ -12,7 +12,7 @@ ms.custom: think-tank
 
 # Schema migration and DDL commands
 
-This article describes design considerations and performance options for data definition language (DDL) commands when you're migrating schemas to Azure Synapse Analytics.
+This article describes design considerations and performance options for Data Definition Language (DDL) commands when you're migrating schemas to Azure Synapse Analytics.
 
 ## Design considerations
 
@@ -68,7 +68,7 @@ If the migration project includes any changes to the data model, the best practi
 
 You can migrate the existing system as several layers; for example, the data ingest/staging layer, data warehouse layer, and reporting or data mart layer. Each layer consists of relational tables and views. Although you can migrate these to Azure Synapse Analytics as they are, it might be more cost-effective and reliable to use some of the features and capabilities of the Azure ecosystem. For example:
 
-- **Data ingest and staging:** Instead of using relational tables for fast parallel data loading, you can use Azure Blob storage with PolyBase during part of the ETL (extract, transform, load) or ELT (extract, load, transform) process.
+- **Data ingest and staging:** Instead of using relational tables for fast parallel data loading, you can use Azure Blob Storage with PolyBase during part of the ETL (extract, transform, load) or ELT (extract, load, transform) process.
 
 - **Data ingest and staging:** You can use Azure Blob Storage in conjunction with PolyBase for fast parallel data loading for part of the ETL (extract, transform, load) or ELT (extract, load, transform) process, rather than relational tables.
 - **Reporting layer and data marts:** The performance characteristics of Azure Synapse Analytics might eliminate the need to physically instantiate aggregated tables for reporting purposes or data marts. It might be possible to implement these as views onto the core data warehouse or via a third-party data virtualization layer. At the basic level, you can achieve the process for data migration of historical data and possibly also incremental updates as shown in this diagram:
@@ -204,7 +204,7 @@ Use the performance and scalability of the target Azure Synapse Analytics enviro
 
 Use the monitoring tools provided by the Azure environment to understand how queries are executed and where bottlenecks might be occurring. Tools are also available from third-party Microsoft partners to provide monitoring dashboards and automated resource management and alerting.
 
-Each SQL operation in Azure Synapse Analytics and resource, such as memory or the CPU used by that query, is logged into system tables. A series of dynamic management views simplifies access to this information.
+Each SQL operation in Azure Synapse Analytics and resource, such as memory or the CPU used by that query, is logged to system tables. A series of dynamic management views simplifies access to this information.
 
 The following sections explain the key options within Azure SQL Data Warehouse for tuning query performance. Existing environments will contain information about potential optimization in the target environment.
 
@@ -226,7 +226,7 @@ Temporary tables are commonly used within ETL/ELT processing, where transient in
 
 Azure Synapse Analytics is an MPP database system that achieves performance and scalability by running in parallel across multiple processing nodes.
 
-The ideal processing scenario for running an SQL query in a multi-node environment is to balance the workload and give all nodes an equal amount of data to process. This approach also allows you to minimize or eliminate the amount of data that has to be moved between nodes to satisfy the query.
+The ideal processing scenario for running an SQL query in a multinode environment is to balance the workload and give all nodes an equal amount of data to process. This approach also allows you to minimize or eliminate the amount of data that has to be moved between nodes to satisfy the query.
 
 It can be challenging to achieve the ideal scenario because there are often aggregations in typical analytics queries and multiple joins between several tables, as between fact and dimension tables.
 

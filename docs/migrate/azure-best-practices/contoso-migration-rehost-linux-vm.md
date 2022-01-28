@@ -28,7 +28,7 @@ The IT leadership team has worked closely with business partners to understand w
 
 The Contoso cloud team has pinned down goals for this migration to determine the best migration method:
 
-- After migration, the application in Azure should have the same performance capabilities as it does today in the company's on-premises VMware environment. The application will remain as critical in the cloud as it is on-premises.
+- After migration, the application in Azure should have the same performance capabilities as it does today in the company's on-premises VMware environment. The application will remain as critical in the cloud as it's been on-premises.
 - Contoso doesn't want to invest in this application. It's important to the business, but in its current form Contoso simply wants to move it safely to the cloud.
 - Contoso doesn't want to change the ops model for this application. It wants to interact with the application in the cloud in the same way that it does now.
 - Contoso doesn't want to change application functionality. Only the application location will change.
@@ -121,7 +121,7 @@ They set up these components as follows:
 
 1. Provision the Azure Migrate: Server Migration tool. With the network and storage account in place, Contoso now creates a Recovery Services vault (`ContosoMigrationVault`) and places it in the `ContosoFailoverRG` resource group in the primary region (`East US 2`).
 
-    ![Screenshot that shows the Azure Migrate Server Migration tool](./media/contoso-migration-rehost-linux-vm/server-migration-tool.png)
+    ![Screenshot that shows the Azure Migrate: Server Migration tool](./media/contoso-migration-rehost-linux-vm/server-migration-tool.png)
 
 **Need more help?**
 
@@ -148,13 +148,13 @@ With discovery finished, begin replication of VMware VMs to Azure.
 
 1. In the Azure Migrate project, go to **Servers** > **Azure Migrate: Server Migration**, and select **Replicate**.
 
-    ![Screenshot that shows the Replicate option.](./media/contoso-migration-rehost-linux-vm/select-replicate.png)
+    ![Screenshot that shows the **Replicate** option.](./media/contoso-migration-rehost-linux-vm/select-replicate.png)
 
 2. In **Replicate** > **Source settings** > **Are your machines virtualized?**, select **Yes, with VMware vSphere**.
 
 3. In **On-premises appliance**, select the name of the Azure Migrate appliance that you set up, and then select **OK**.
 
-    ![Screenshot that shows the Source settings tab.](./media/contoso-migration-rehost-linux-vm/source-settings.png)
+    ![Screenshot that shows the **Source settings** tab.](./media/contoso-migration-rehost-linux-vm/source-settings.png)
 
 4. In **Virtual machines**, select the machines you want to replicate.
     - If you've run an assessment for the VMs, you can apply VM sizing and disk type (premium/standard) recommendations from the assessment results. In **Import migration settings from an Azure Migrate assessment?**, select the **Yes** option.
@@ -174,11 +174,11 @@ With discovery finished, begin replication of VMware VMs to Azure.
 
 8. In **Compute**, review the VM name, size, OS disk type, and availability set. VMs must conform with [Azure requirements](/azure/migrate/migrate-support-matrix-vmware#vmware-requirements).
 
-    - **VM size:** If you're using assessment recommendations, the VM size drop-down list will contain the recommended size. Otherwise, Azure Migrate picks a size based on the closest match in the Azure subscription. Alternatively, pick a manual size in **Azure VM size**.
+    - **VM size:** If you're using assessment recommendations, the VM size dropdown list will contain the recommended size. Otherwise, Azure Migrate picks a size based on the closest match in the Azure subscription. Alternatively, pick a manual size in **Azure VM size**.
     - **OS disk:** Specify the OS (boot) disk for the VM. The OS disk is the disk that has the operating system bootloader and installer.
     - **Availability set:** If the VM should be in an Azure availability set after migration, specify the set. The set must be in the target resource group you specify for the migration.
 
-9. In **Disks**, specify whether the VM disks should be replicated to Azure. Select the disk type (standard SSD/HDD or premium-managed disks) in Azure. Then select **Next**.
+9. In **Disks**, specify whether the VM disks should be replicated to Azure. Select the disk type (Standard SSD/HDD or Premium SSD) in Azure. Then select **Next**.
     - You can exclude disks from replication.
     - If you exclude disks, they won't be present on the Azure VM after migration.
 
@@ -195,18 +195,18 @@ Contoso admins run a quick test migration and then a migration to move the VMs.
 
 1. In **Migration goals** > **Servers** > **Azure Migrate: Server Migration**, select **Test migrated servers**.
 
-     ![Screenshot that shows the Test migrated servers option.](./media/contoso-migration-rehost-linux-vm/test-migrated-servers.png)
+     ![Screenshot that shows the **Test migrated servers** option.](./media/contoso-migration-rehost-linux-vm/test-migrated-servers.png)
 
 1. Select and hold (or right-click) the VM to test. Then select **Test migrate**.
 
-    ![Screenshot that shows the Test migrate item.](./media/contoso-migration-rehost-linux-vm/test-migrate.png)
+    ![Screenshot that shows the **Test migrate** item.](./media/contoso-migration-rehost-linux-vm/test-migrate.png)
 
 1. In **Test Migration**, select the Azure virtual network in which the Azure VM will be located after the migration. We recommend you use a nonproduction virtual network.
 1. The **Test migration** job starts. Monitor the job in the portal notifications.
 1. After the migration finishes, view the migrated Azure VM in **Virtual Machines** in the Azure portal. The machine name has a suffix **-Test**.
 1. After the test is done, select and hold (or right-click) the Azure VM in **Replicating machines**. Then select **Clean up test migration**.
 
-    ![Screenshot that shows the Clean up test migration item.](./media/contoso-migration-rehost-linux-vm/clean-up.png)
+    ![Screenshot that shows the **Clean up test migration** item.](./media/contoso-migration-rehost-linux-vm/clean-up.png)
 
 ### Migrate the VMs
 
@@ -214,7 +214,7 @@ Now Contoso admins run a full migration to complete the move.
 
 1. In the Azure Migrate project, go to **Servers** > **Azure Migrate: Server Migration**, and select **Replicating servers**.
 
-    ![Screenshot that shows the Replicating servers option.](./media/contoso-migration-rehost-linux-vm/replicating-servers.png)
+    ![Screenshot that shows the **Replicating servers** option.](./media/contoso-migration-rehost-linux-vm/replicating-servers.png)
 
 1. In **Replicating machines**, select and hold (or right-click) the VM and select **Migrate**.
 1. In **Migrate** > **Shut down virtual machines and perform a planned migration with no data loss**, select **Yes** > **OK**.
@@ -229,7 +229,7 @@ As the final step in the migration process, Contoso admins update the connection
 
 1. Make an SSH connection to the `OSTICKETWEB` VM by using PuTTY or another SSH client. The VM is private, so connect by using the private IP address.
 
-    ![Screenshot that shows the Connect to virtual machine pane.](./media/contoso-migration-rehost-linux-vm/db-connect.png)
+    ![Screenshot that shows the **Connect to virtual machine** pane.](./media/contoso-migration-rehost-linux-vm/db-connect.png)
 
     ![Screenshot that shows the connection to the database.](./media/contoso-migration-rehost-linux-vm/db-connect2.png)
 

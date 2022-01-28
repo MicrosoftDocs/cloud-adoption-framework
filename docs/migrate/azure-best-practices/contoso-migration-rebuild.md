@@ -100,7 +100,7 @@ Here's what Contoso needs for this scenario:
 | --- | --- |
 | Azure subscription | <li> Contoso created subscriptions in an earlier article. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/). <li> If you create a free account, you're the admin of your subscription and can perform all actions. <li> If you use an existing subscription and you're not the admin, you need to work with the admin to assign Owner or Contributor permissions to you. |
 | Azure infrastructure | <li> Learn [how Contoso set up an Azure infrastructure](./contoso-migration-infrastructure.md). |
-| Developer prerequisites | Contoso needs the following tools on a developer workstation: <li> [Visual Studio Community 2017 version 15.5](https://visualstudio.microsoft.com/vs/community/) <li> .NET workload, enabled <li> [Git](https://git-scm.com) <li> [Azure PowerShell](https://azure.microsoft.com/downloads/) <li> [The Azure CLI](/cli/azure/install-azure-cli) <li> [Docker Community Edition (Windows 10) or Docker Enterprise Edition (Windows Server)](https://docs.docker.com/docker-for-windows/install/), set to use Windows containers |
+| Developer prerequisites | Contoso needs the following tools on a developer workstation: <li> [Visual Studio Community 2017 version 15.5](https://visualstudio.microsoft.com/vs/community/) <li> .NET workload, enabled <li> [Git](https://git-scm.com) <li> [Azure PowerShell](https://azure.microsoft.com/downloads/) <li> [Azure CLI](/cli/azure/install-azure-cli) <li> [Docker Community Edition (Windows 10) or Docker Enterprise Edition (Windows Server)](https://docs.docker.com/docker-for-windows/install/), set to use Windows containers |
 
 ## Scenario steps
 
@@ -417,7 +417,7 @@ Contoso admins provision the Computer Vision API. The API will be called by the 
 
 1. The admins create a **Computer Vision** instance in Azure Marketplace.
 
-     ![Screenshot of creating a new computer vision instance in Azure Marketplace.](./media/contoso-migration-rebuild/vision1.png)
+     ![Screenshot of creating a new Computer Vision instance in Azure Marketplace.](./media/contoso-migration-rebuild/vision1.png)
     *Figure 47: A new instance in Azure Marketplace.*
 
 2. They provision the API (`smarthotelpets`) in the production resource group `ContosoRG`, in the main region (`East US 2`).
@@ -547,7 +547,7 @@ Contoso admins can now publish the website.
 
 9. They add an artifact and select the build that they've configured.
 
-    ![Screenshot of adding an artifact, with Build as the source type.](./media/contoso-migration-rebuild/vsts-publish-front5.png)
+    ![Screenshot of adding an artifact, with **Build** as the source type.](./media/contoso-migration-rebuild/vsts-publish-front5.png)
     *Figure 64: Adding an artifact.*
 
 10. They select the lightning bolt icon on the artifact and then set continuous deployment to **Enabled**.
@@ -564,7 +564,7 @@ Contoso admins can now publish the website.
 
 13. In the **Pipeline**, they add a new stage.
 
-    ![Screenshot of the Pipeline tab and adding a new stage.](./media/contoso-migration-rebuild/vsts-publish-front8.png)
+    ![Screenshot of the **Pipeline** tab and adding a new stage.](./media/contoso-migration-rebuild/vsts-publish-front8.png)
     *Figure 67: Adding a new stage.*
 
 14. They select **Azure App Service deployment with slot** and then name the environment **Prod**.
@@ -630,12 +630,12 @@ Contoso admins deploy the application by doing the following:
 
 10. They name the environment **Prod** and then select the subscription. They set the **App type** to **Function App** and the app service name as `smarthotelpetchecker`.
 
-    ![Screenshot of the app type and app service name.](./media/contoso-migration-rebuild/petchecker2.png)
+    ![Screenshot of the **App type** and **App service name**.](./media/contoso-migration-rebuild/petchecker2.png)
     *Figure 76: The function app.*
 
 11. They add an artifact, **Build**.
 
-    ![Screenshot of adding an artifact, with the Build source type.](./media/contoso-migration-rebuild/petchecker3.png)
+    ![Screenshot of adding an artifact, with the **Build** source type.](./media/contoso-migration-rebuild/petchecker3.png)
     *Figure 77: Adding an artifact.*
 
 12. They enable **Continuous deployment trigger** and then select **Save**.
@@ -699,4 +699,4 @@ Here are two examples of tailored learning paths on Microsoft Learn that align w
 
 - [Deploy a website to Azure with Azure App Service](/learn/paths/deploy-a-website-with-azure-app-service/): By creating web apps in Azure, you can publish and manage your website easily without having to work with the underlying servers, storage, or network assets. Instead, you can focus on your website features and rely on the robust Azure platform to help provide secure access to your site.
 
-- [Process and classify images with the Azure cognitive vision services](/learn/paths/create-computer-vision-solutions-azure-cognitive-services/): Azure Cognitive Services offers prebuilt functionality to enable computer vision functionality in your applications. Learn how to use the Azure cognitive vision services to detect faces, tag and classify images, and identify objects.
+- [Create computer vision solutions with Azure Cognitive Services](/learn/paths/create-computer-vision-solutions-azure-cognitive-services/): Azure Cognitive Services offers prebuilt functionality to enable Computer Vision functionality in your applications. Learn how to use the vision APIs in Azure Cognitive Services to detect faces, tag and classify images, and identify objects.

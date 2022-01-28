@@ -10,15 +10,15 @@ ms.subservice: manage
 ms.custom: think-tank, e2e-hybrid
 ---
 
-# Connect Azure Arc-enabled servers to Azure Security Center
+# Connect Azure Arc-enabled servers to Microsoft Defender for Cloud
 
-This article provides guidance on how to onboard an Azure Arc-enabled server to [Azure Security Center (Azure Security Center)](/azure/security-center/). This helps you start collecting security-related configurations and event logs so you can recommend actions and improve your overall Azure security posture.
+This article provides guidance on how to onboard an Azure Arc-enabled server to [Microsoft Defender for Cloud](/azure/security-center/). This helps you start collecting security-related configurations and event logs so you can recommend actions and improve your overall Azure security posture.
 
-In the following procedures, you enable and configure Azure Security Center Standard tier on your Azure subscription. This provides advanced threat protection and detection capabilities. The process includes:
+In the following procedures, you enable and configure Microsoft Defender for Cloud Standard tier on your Azure subscription. This provides advanced threat protection and detection capabilities. The process includes:
 
 - Setup a Log Analytics workspace where logs and events are aggregated for analysis.
-- Assign Security Center's default security policies.
-- Review Azure Security Center's recommendations.
+- Assign Defender for Cloud default security policies.
+- Review Defender for Cloud recommendations.
 - Apply recommended configurations on Azure Arc-enabled servers using the **Quick Fix** remediations.
 
 > [!IMPORTANT]
@@ -79,9 +79,9 @@ In the following procedures, you enable and configure Azure Security Center Stan
 > [!NOTE]
 > We highly recommend that you scope the service principal to a specific [Azure subscription and resource group](/cli/azure/ad/sp).
 
-## Onboard Azure Security Center
+## Onboard Microsoft Defender for Cloud
 
-1. Data collected by Azure Security Center is stored in a Log Analytics workspace. You can either use the default one created by Azure Security Center or a custom one created by you. If you want to create a dedicated workspace, you can automate the deployment by editing the Azure Resource Manager template (ARM template) [parameters file](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/securitycenter/arm/log_analytics-template.parameters.json), provide a name and location for your workspace:
+1. Data collected by Microsoft Defender for Cloud is stored in a Log Analytics workspace. You can either use the default one created by Defender for Cloud or a custom one created by you. If you want to create a dedicated workspace, you can automate the deployment by editing the Azure Resource Manager template (ARM template) [parameters file](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/securitycenter/arm/log_analytics-template.parameters.json), provide a name and location for your workspace:
 
    ![A screenshot of an ARM template.](./media/arc-security-center/arm-template.png)
 
@@ -93,20 +93,20 @@ In the following procedures, you enable and configure Azure Security Center Stan
    --parameters <The `log_analytics-template.parameters.json` template file location>
    ```
 
-3. If you are going for an user-defined workspace, you should instruct Security Center to use it instead of the default one, use the following command:
+3. If you are going for a user-defined workspace, you should instruct Defender for Cloud to use it instead of the default one via the following command:
 
    ```console
    az security workspace-setting create --name default \
    --target-workspace '/subscriptions/<Your subscription ID>/resourceGroups/<Name of the Azure resource group>/providers/Microsoft.OperationalInsights/workspaces/<Name of the Log Analytics Workspace>'
    ```
 
-4. Select the Azure Security Center tier. The Free tier is enabled on all your Azure subscriptions by default and will provide continuous security assessment and actionable security recommendations. In this guide, you use the Standard tier for Azure Virtual Machines that extends these capabilities providing unified security management and threat protection across your hybrid cloud workloads. To enable the Standard tier of Azure Security Center for VMs, run the following command:
+4. Select a Microsoft Defender for Cloud tier. The Free tier is enabled on all your Azure subscriptions by default and will provide continuous security assessment and actionable security recommendations. In this guide, you use the Standard tier for Azure Virtual Machines that extends these capabilities providing unified security management and threat protection across your hybrid cloud workloads. To enable the Standard tier of Microsoft Defender for Cloud for VMs, run the following command:
 
     ```console
     az security pricing create -n VirtualMachines --tier 'standard'
     ```
 
-5. Assign the default Security Center policy initiative. Azure Security Center makes its security recommendations based on policies. There is an specific initiative that groups Security Center policies with the definition ID `1f3afdf9-d0c9-4c3d-847f-89da613e70a8`. The following command will assign the Azure Security Center initiative to your subscription.
+5. Assign the default Microsoft Defender for Cloud policy initiative. Defender for Cloud makes its security recommendations based on policies. There is a specific initiative that groups Defender for Cloud policies with the definition ID `1f3afdf9-d0c9-4c3d-847f-89da613e70a8`. The following command will assign the Defender for Cloud initiative to your subscription.
 
     ```console
     az policy assignment create --name 'Azure Security Center Default <Your subscription ID>' \
@@ -114,15 +114,15 @@ In the following procedures, you enable and configure Azure Security Center Stan
     --policy-set-definition '1f3afdf9-d0c9-4c3d-847f-89da613e70a8'
     ```
 
-## Azure Arc and Azure Security Center integration
+## Azure Arc and Microsoft Defender for Cloud integration
 
-After you successfully onboard Azure Security Center, you'll get recommendations to help you protect your resources, including your Azure Arc-enabled servers. Azure Security Center will periodically analyze the security state of your Azure resources to identify potential security vulnerabilities.
+After you successfully onboard Microsoft Defender for Cloud, you'll get recommendations to help you protect your resources, including your Azure Arc-enabled servers. Defender for Cloud will periodically analyze the security state of your Azure resources to identify potential security vulnerabilities.
 
-In the **Compute & Apps** section under **VM & Servers**, Azure Security Center provides an overview of all the discovered security recommendations for your VMs and computers, including Azure VMs, Azure classic VMs, servers, and Azure Arc machines.
+In the **Compute & Apps** section under **VM & Servers**, Microsoft Defender for Cloud provides an overview of all the discovered security recommendations for your VMs and computers, including Azure VMs, Azure classic VMs, servers, and Azure Arc machines.
 
-![A screenshot of **Compute & Apps** in the Azure Security Center.](./media/arc-security-center/compute-apps.png)
+![A screenshot of **Compute & Apps** in Microsoft Defender for Cloud.](./media/arc-security-center/compute-apps.png)
 
-On the Azure Arc-enabled servers, Azure Security Center recommends installing the Log Analytics agent. Each recommendation also includes:
+On the Azure Arc-enabled servers, Microsoft Defender for Cloud recommends installing the Log Analytics agent. Each recommendation also includes:
 
 - A short description of the recommendation.
 - A secure score impact, in this case, with a status of **High**.
@@ -130,17 +130,17 @@ On the Azure Arc-enabled servers, Azure Security Center recommends installing th
 
 For specific recommendations, like in the following screenshot, you will also get a **Quick Fix** that enables you to quickly remediate a recommendation on multiple resources.
 
-  ![A screenshot of an Azure Security Center recommendation for an Azure Arc-enabled server.](./media/arc-security-center/recommendation-quick-fix.png)
+  ![A screenshot of a Microsoft Defender for Cloud recommendation for an Azure Arc-enabled server.](./media/arc-security-center/recommendation-quick-fix.png)
 
-  ![A screenshot of an Azure Security Center recommendation to install Log Analytics.](./media/arc-security-center/recommendation-remediate.png)
+  ![A screenshot of a Microsoft Defender for Cloud recommendation to install Log Analytics.](./media/arc-security-center/recommendation-remediate.png)
 
 The following remediation **Quick Fix** is using an ARM template to deploy the Log Analytics agent extension on the Azure Arc machine.
 
-  ![A screenshot of an Azure Security Center **Quick Fix** ARM template.](./media/arc-security-center/quick-fix-template.png)
+  ![A screenshot of a Microsoft Defender for Cloud **Quick Fix** ARM template.](./media/arc-security-center/quick-fix-template.png)
 
-You can trigger the remediation with the ARM template from the Azure Security Center dashboard, by selecting the Log Analytics workspace used for Azure Security Center and then choosing **Remediate 1 resource**.
+You can trigger the remediation with the ARM template from the workload protection dashboard, by selecting the Log Analytics workspace used for Microsoft Defender for Cloud and then choosing **Remediate 1 resource**.
 
-  ![A screenshot of how to trigger a remediation step in Azure Security Center.](./media/arc-security-center/remediation-trigger.png)
+  ![A screenshot of how to trigger a remediation step in Microsoft Defender for Cloud.](./media/arc-security-center/remediation-trigger.png)
 
 After you apply the recommendation on the Azure Arc-enabled server, the resource will be marked as healthy.
 

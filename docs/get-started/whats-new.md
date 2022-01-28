@@ -3,7 +3,7 @@ title: What's new in the Microsoft Cloud Adoption Framework
 description: Learn about recent updates to the Microsoft Cloud Adoption Framework for Azure.
 author: JanetCThomas
 ms.author: janet
-ms.date: 03/01/2020
+ms.date: 01/13/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: general
@@ -12,9 +12,45 @@ ms.custom: internal
 
 # What's new in the Microsoft Cloud Adoption Framework for Azure
 
-Here's a list of recent changes made to the Cloud Adoption Framework.
+Here are the recent changes we've made to the Cloud Adoption Framework.
 
-This framework is built collaboratively with customers, partners, and internal Microsoft teams. New and updated content is released when it becomes available. These releases allow you to test, validate, and refine the guidance along with us. We encourage you to partner with us to build the Cloud Adoption Framework.
+This Framework is collaboratively built with customers, partners, and internal Microsoft teams. We release new and updated content as it becomes available. New releases enable you to test, validate, and refine the Framework's guidance along with us.
+
+Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
+
+## January 2022
+
+### Launch of Cloud Adoption Strategy Evaluator in the Microsoft Cloud Adoption Framework
+
+We've launched the [Cloud Adoption Strategy Evaluator](/assessments/?id=8fefc6d5-97ac-42b3-8e97-d82701e55bab&mode=pre-assessment), a new assessment built around the principles of cloud economics—which evaluates your cloud adoption strategy, and provides recommendations to help build a robust business case that supports your organization's unique cloud journey.
+
+## December 2021
+
+### Updates to Azure landing zone content in the Ready methodology
+
+We've refined the flow for finding the right landing zone implementation, and have added additional content for all design areas.
+
+We've consolidated guidance into a comprehensive set across environment and compliance design areas —to make the right information easier for you to find. We've created a clearer flow for organizations to work through during the design phase, before deploying a landing zone. Read more about [Azure landing zone design areas](../ready/landing-zone/design-areas.md).
+
+Finally, we've added an example alignment scenario to the Align on-ramp—[Scenario: Transition existing Azure environments to the Azure landing zone conceptual architecture](../ready/landing-zone/align-scenarios.md).
+
+## October 2021
+
+### Microsoft Azure VMware Solution scenario
+
+This release of the Cloud Adoption Framework provides considerations for [migrating VMware resources from on-premises datacenters to dedicated Azure cloud environments](../scenarios/azure-vmware/index.md).
+
+This scenario focuses on enabling specific, targeted outcomes to:
+
+- Accelerate migration and lower your TCO, reducing the time and complexity of migrating your existing VMware workloads to Azure—and maintain operational consistency, avoiding downtime with live bulk virtual machine migration.
+
+- Gain reliability and scale with automated provisioning for your VMware workloads on global Azure infrastructure.
+
+- Optimize your licensing costs on Azure with price benefits for Windows and SQL Server.
+
+- Modernize your applications running on VMware—through integration with Azure-native management, security, and services.
+
+- Deploy unified hybrid management and operational controls with Azure Arc-enabled servers across Azure, VMware, and other cloud infrastructures.
 
 ## August 2021
 
@@ -138,7 +174,7 @@ We've updated the introduction to each category of business outcomes with refere
 
 ### Enterprise-scale updates
 
-The critical design area of [network topology and connectivity](../ready/azure-best-practices/define-an-azure-network-topology.md) includes new articles that simplify rationalizing individual components of your network design. Those design aspects now include guidance on [connecting to multicloud providers](../ready/azure-best-practices/connectivity-to-other-providers.md) like Oracle Cloud Infrastructure. We've also released the new enterprise-scale Terraform module to demonstrate Microsoft's continued investment in open-source approaches to Azure landing zone configuration. Lastly, we've updated guidance on how enterprises can [optimize management groups and organize subscriptions](../ready/enterprise-scale/management-group-and-subscription-organization.md) in Azure to meet cloud governance requirements.
+The critical design area of [network topology and connectivity](../ready/azure-best-practices/define-an-azure-network-topology.md) includes new articles that simplify rationalizing individual components of your network design. Those design aspects now include guidance on [connecting to multicloud providers](../ready/azure-best-practices/connectivity-to-other-providers.md) like Oracle Cloud Infrastructure. We've also released the new enterprise-scale Terraform module to demonstrate Microsoft's continued investment in open-source approaches to Azure landing zone configuration. Lastly, we've updated guidance on how enterprises can [optimize management groups and organize subscriptions](../ready/landing-zone/design-area/resource-org.md) in Azure to meet cloud governance requirements.
 
 ### Antipatterns
 
@@ -198,7 +234,7 @@ We've also expanded the business outcomes to share a number of common business m
 | Article | Description |
 |--|--|
 | [Transition existing Azure environments to enterprise-scale](../ready/enterprise-scale/transition.md) | This article helps organizations to navigate the right path based on an existing Azure environment transitioning into enterprise-scale. |
-| [Cloud Adoption Framework enterprise-scale landing zone architecture](../ready/enterprise-scale/architecture.md) | This article was updated to include a high-level diagram for an enterprise-scale landing zone architecture based on the hub and spoke network topology, and updates to describe and cross-reference the critical design areas for an enterprise-scale landing zone architecture. |
+| [Cloud Adoption Framework enterprise-scale landing zone architecture](../ready/landing-zone/index.md) | This article was updated to include a high-level diagram for an enterprise-scale landing zone architecture based on the hub and spoke network topology, and updates to describe and cross-reference the critical design areas for an enterprise-scale landing zone architecture. |
 
 ## August 25, 2020
 

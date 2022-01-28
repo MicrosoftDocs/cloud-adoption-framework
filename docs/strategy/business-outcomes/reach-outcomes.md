@@ -10,8 +10,6 @@ ms.subservice: strategy
 ms.custom: internal
 ---
 
-<!-- cSpell:ignore Personalizer -->
-
 # Examples of global reach outcomes
 
 As discussed in [Business outcomes](./index.md), several potential business outcomes can serve as the foundation for any transformation journey conversation with the business. This article focuses on a common business measure: reach. *Reach* is a concise term that, in this case, refers to a company's globalization strategy. Understanding the company's globalization strategy helps you better articulate the business outcomes that are the target of a business's transformation journey.

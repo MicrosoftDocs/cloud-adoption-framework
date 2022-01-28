@@ -17,7 +17,7 @@ ms.custom: think-tank
 
 Some organizations might want to test their enterprise-scale platform deployment for Azure Policy definitions and assignments, role-based access control (RBAC) custom roles and assignments, and so on. The tests can be completed via automation by using Azure Resource Manager templates (ARM templates), [AzOps](https://github.com/Azure/AzOps), [Terraform](https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest), or manually via the Azure portal. This guidance provides an approach that can be used to test changes and their impact in an enterprise-scale platform deployment.
 
-This article can also be used with the [Platform automation and DevOps critical design area](./platform-automation-and-devops.md) guidance as it relates to the PlatformOps and Central functions teams and tasks.
+This article can also be used with the [Platform automation and DevOps critical design area](../landing-zone/design-area/platform-automation-devops.md) guidance as it relates to the PlatformOps and Central functions teams and tasks.
 
 This guidance is most suited to organizations with robust change management processes governing changes to the production environment management group hierarchy. The *canary* management group hierarchy can be independently used to author and test deployments before you deploy them into the production environment.
 
@@ -100,7 +100,7 @@ However, this approach doesn't allow you to test with the inheritance of RBAC an
 
 Considerations to take into account when you use a single Azure AD tenant are:
 
-- Follows [Enterprise-scale design recommendations](./enterprise-enrollment-and-azure-ad-tenants.md#define-azure-ad-tenants) for Azure AD Tenants.
+- Follows [Enterprise-scale design recommendations](../landing-zone/design-area/azure-billing-ad-tenant.md) for Azure AD Tenants.
 - As per the [Cloud Adoption Framework Azure best practices, standardize on a single directory and identity](../../secure/security-top-10.md#9-architecture-standardize-on-a-single-directory-and-identity) guidance, single Azure AD tenants are best practice for most.
   - In a single Azure AD tenant, you can use the different Azure AD groups for both production environments and canary enterprise-scale environments, with the same users, assigned to their relevant management group hierarchy within the same Azure AD tenant.
 - Increased or duplicated Azure AD licensing costs because of multiple identities across different Azure AD tenants.
@@ -128,4 +128,4 @@ Below is guidance on how to implement and use the canary management group hierar
 5. Have a set of canary subscriptions under a separate EA department and account that can be moved around the canary management group hierarchy as needed.
    - It might be beneficial to have a set of resources always deployed into the canary environment subscriptions.
    - It might be helpful to have Infrastructure-as-Code templates such as ARM templates, Bicep, or Terraform, that create a set of resources that enable validation of changes in the canary environment.
-6. Send all Azure activity logs for all Azure subscriptions, including any canary environment subscriptions, to the production environment Azure Log Analytics workspace as per the [enterprise-scale design recommendations](./management-and-monitoring.md).
+6. Send all Azure activity logs for all Azure subscriptions, including any canary environment subscriptions, to the production environment Azure Log Analytics workspace as per the [enterprise-scale design recommendations](../landing-zone/design-area/management.md).

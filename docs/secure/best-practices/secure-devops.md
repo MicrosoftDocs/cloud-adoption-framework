@@ -119,7 +119,7 @@ To learn more, see:
 
 ## Resources
 
-- [Platform automation and DevOps](../../ready/enterprise-scale/platform-automation-and-devops.md)
+- [Platform automation and DevOps](../../ready/landing-zone/design-area/platform-automation-devops.md)
 - [Pipelines security walkthrough](/azure/devops/pipelines/security/overview)
 - [Security via templates](/azure/devops/pipelines/security/templates)
 - [DevSecOps in GitHub](/azure/architecture/solution-ideas/articles/devsecops-in-github)

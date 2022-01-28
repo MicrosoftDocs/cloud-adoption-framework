@@ -12,8 +12,7 @@ ms.custom: think-tank
 
 # Migrate open-source databases to Azure
 
-This article demonstrates how the fictional company Contoso assessed, planned, and migrated its various on-premises open-source databases to Azure.
-For step-by-step guidance, you can also watch the [Migrate and Modernize Linux VMs and Databases into Azure](https://techcommunity.microsoft.com/t5/microsoft-mechanics-blog/migrate-amp-modernize-linux-vms-and-databases-into-azure/ba-p/2466366) video.
+This article demonstrates how the fictional company Contoso assessed, planned, and migrated its various on-premises open-source databases to Azure. For step-by-step guidance, you can also watch [`Migrate and Modernize Linux VMs and Databases into Azure` (video)](https://techcommunity.microsoft.com/t5/microsoft-mechanics-blog/migrate-amp-modernize-linux-vms-and-databases-into-azure/ba-p/2466366).
 
 As Contoso considers migrating to Azure, the company needs a technical and financial assessment to determine whether its on-premises workloads are good candidates for cloud migration. In particular, the Contoso team wants to assess machine and database compatibility for migration. Additionally, it wants to estimate capacity and costs for running Contoso's resources in Azure.
 
@@ -88,7 +87,7 @@ Data migrations follow a standard and repeatable pattern. This process involves 
 
 #### Step 1: Discovery
 
-Contoso used Azure Migrate to surface the dependencies across the Contoso environment. Azure Migrate automatically discovered application components on Windows and Linux systems and mapped the communication between services. Azure Migrate also surfaced the connections between Contoso servers, processes, inbound and outbound connection latency, and ports across the TCP-connected architecture. Contoso was only required to install the [Microsoft Monitoring Agent](/azure/azure-monitor/agents/agent-windows) and the [Microsoft Dependency Agent](/azure/azure-monitor/vm/vminsights-enable-hybrid#install-the-dependency-agent-on-windows).
+Contoso used Azure Migrate to surface the dependencies across the Contoso environment. Azure Migrate automatically discovered application components on Windows and Linux systems and mapped the communication between services. Azure Migrate also surfaced the connections between Contoso servers, processes, inbound and outbound connection latency, and ports across the TCP-connected architecture. Contoso was only required to install the [Log Analytics agent](/azure/azure-monitor/agents/agent-windows) and the [Microsoft Dependency Agent](/azure/azure-monitor/vm/vminsights-enable-hybrid#install-the-dependency-agent-on-windows).
 
 Contoso has identified over 300 database instances that must be migrated. Of these instances, roughly 40 percent can be moved to PaaS-based services. Of the remaining 60 percent, they must be moved to an IaaS-based approach with a VM running the respective database software.
 

@@ -53,7 +53,7 @@ Each organization categorizes their applications differently. They often separat
 
 - Mission-critical workloads.
 - Applications that are part of cost of goods sold (COGS) within your company. For example, every widget manufactured by a company contains an Azure IoT module that sends telemetry. This process might require a dedicated subscription for accounting or governance purposes to be part of COGS.
-- Applications subject to regulatory requirements like the Health Insurance Portability and Accountability Act of 1996 (HIPAA) or the Federal Risk and Authorization Management Program (FedRAMP).
+- Applications subject to regulatory requirements like [HIPAA](https://www.hhs.gov/hipaa/index.html) or [FedRAMP](https://www.fedramp.gov/).
 
 ### Functional strategy
 

@@ -10,8 +10,6 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-aks
 ---
 
-<!-- cspell:ignoreRegExp kubecostToken=.[A-Za-z\d=]{20,50}. -->
-
 # Cost governance with Kubecost
 
 Cost governance is the continuous process of implementing policies to control costs. In the Kubernetes context, there are several ways organizations can control and optimize costs. These include native Kubernetes tooling to manage and govern resource usage and consumption and proactively monitor and optimize the underlying infrastructure.

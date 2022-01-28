@@ -104,8 +104,8 @@ Azure provides different types of storage data.
 | --- | --- | --- |
 | **Blobs** | Optimized to store massive amounts of unstructured objects, such as text or binary data. <br><br> | Access data from everywhere over HTTP/HTTPS. <br><br> Use for streaming and random access scenarios. For example, to serve images and documents directly to a browser, stream video and audio, and store backup and disaster recovery data. |
 | **Files** | Managed file shares accessed over SMB 3.0. | Use when migrating on-premises file shares and to provide multiple access/connections to file data. |
-| **Disks** | Based on page blobs. <br><br> Disk type: standard (HDD or SSD) or premium (SSD). <br><br> Disk management: unmanaged (you manage disk settings and storage) or managed (you select the disk type and Azure manages the disk for you). | Use premium disks for VMs. Use managed disks for simple management and scaling. |
-| **Queues** | Store and retrieve large numbers of messages accessed via authenticated calls (HTTP or HTTPS). | Connect application components with asynchronous message queueing. |
+| **Disks** | Based on page blobs. <br><br> Disk type: Standard HDD/SSD or Premium SSD. <br><br> Disk management: Unmanaged (you manage disk settings and storage) or managed (you select the disk type and Azure manages the disk for you). | Use premium disks for VMs. Use managed disks for simple management and scaling. |
+| **Queues** | Store and retrieve large numbers of messages accessed via authenticated calls (HTTP or HTTPS). | Connect application components with asynchronous message queuing. |
 | **Tables** | Store tables. | This data type is part of Azure Cosmos DB Table API. |
 
 ### Access tiers
@@ -214,7 +214,7 @@ With Azure Cost Management + Billing, you can:
   - You can choose to have email notifications sent when your budget thresholds are reached.
   - You can export costs management data to Azure Storage to analyze it.
 
-  ![Screenshot of an Azure Cost Management budget.](./media/migrate-best-practices-costs/budget.png)
+  ![Screenshot of an Azure Cost Management + Billing budget.](./media/migrate-best-practices-costs/budget.png)
   *Figure 4: An Azure Cost Management + Billing budget.*
 
 - Perform a cost analysis to explore and analyze your organizational costs, to understand how costs are accrued, and identify spending trends.
@@ -222,7 +222,7 @@ With Azure Cost Management + Billing, you can:
   - You can view cost analysis data for various scopes, including by department, account, subscription, or resource group.
   - You can get a cost analysis that shows total costs for the current month, and accumulated daily costs.
 
-  ![Screenshot of Azure Cost Management analysis](./media/migrate-best-practices-costs/analysis.png)
+  ![Screenshot of Azure Cost Management + Billing analysis](./media/migrate-best-practices-costs/analysis.png)
   *Figure 5: Azure Cost Management + Billing analysis.*
 
 - Get Azure Advisor recommendations that show you how you can optimize and improve efficiency.

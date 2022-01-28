@@ -74,7 +74,7 @@ Contoso set up its subscriptions as described in [Manage subscriptions](contoso-
 - If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/).
 - If you create a free account, you're the admin of your subscription and can perform all actions.
 - If you use an existing subscription and you're not the admin, work with the admin to assign you Owner or Contributor permissions.
-- If you need more granular permissions, see [Manage site recovery access with Azure role-based access control](/azure/site-recovery/site-recovery-role-based-linked-access-control).
+- If you need more granular permissions, see [Manage Azure Site Recovery access with role-based access control](/azure/site-recovery/site-recovery-role-based-linked-access-control).
 
 ### Azure infrastructure
 
@@ -90,7 +90,7 @@ Here's how Contoso admins complete the migration:
 
 > [!div class="checklist"]
 >
-> - **Step 1: Create an Azure storage account**. This storage account is used during the migration process.
+> - **Step 1: Create an Azure Storage account**. This storage account is used during the migration process.
 > - **Step 2: Upgrade Team Foundation Server**. Upgrade the deployment to Team Foundation Server 2018 upgrade 3.
 > - **Step 3: Validate the Team Foundation Server collection**. Validate the Team Foundation Server collection in preparation for the migration.
 > - **Step 4: Build the migration files**. Create the migration files by using the Team Foundation Server migration tool.
@@ -324,7 +324,7 @@ After the Contoso admins create the DACPAC file, they upload it to the Azure Sto
 
     :::image type="content" source="./media/contoso-migration-tfs-vsts/backup6.png" alt-text="Screenshot of the **Create Blob Container** link in Storage Explorer.":::
 
-1. On the **Upload files** pane, in the **Blob type** drop-down list, specify **Block Blob** for the DACPAC file upload.
+1. On the **Upload files** pane, in the **Blob type** dropdown list, specify **Block Blob** for the DACPAC file upload.
 
     :::image type="content" source="./media/contoso-migration-tfs-vsts/backup7.png" alt-text="Screenshot of the **Upload files** pane in Storage Explorer.":::
 
@@ -439,7 +439,7 @@ Now that the dry run is complete, the Contoso admins can start the production mi
 
     :::image type="content" source="./media/contoso-migration-tfs-vsts/full5.png" alt-text="Screenshot showing that the data is being copied to the cloud.":::
 
-1. After the migration finishes, sign into Azure DevOps Services as a Contoso admin to ensure that the projects were migrated properly.
+1. After the migration finishes, sign in to Azure DevOps Services as a Contoso admin to ensure that the projects were migrated properly.
 
 1. Open a project and select **Work Items** > **Assigned to me**. This page shows that the work item data has been migrated.
 
@@ -461,11 +461,11 @@ After migration is complete, Contoso admins next need to move source code manage
 
     :::image type="content" source="./media/contoso-migration-tfs-vsts/git1.png" alt-text="Screenshot of the **$/PolicyConnect** repo in the Azure DevOps Services portal.":::
 
-1. In the source **$/PolicyConnect** drop-down list, select **Import repository**.
+1. In the source **$/PolicyConnect** dropdown list, select **Import repository**.
 
     :::image type="content" source="./media/contoso-migration-tfs-vsts/git2.png" alt-text="Screenshot of the **Import repository** link in the Azure DevOps Services portal.":::
 
-1. In the **Source type** drop-down list, select **TFVC**. In the **Path** box, specify the path to the repo, and then select **Import**. Leave the **Migrate History** check box cleared.
+1. In the **Source type** dropdown list, select **TFVC**. In the **Path** box, specify the path to the repo, and then select **Import**. Leave the **Migrate History** checkbox cleared.
 
     :::image type="content" source="./media/contoso-migration-tfs-vsts/git3.png" alt-text="Screenshot of the **Import from TFVC** pane.":::
 

@@ -50,7 +50,7 @@ The business strategy and collective cloud adoption plans are inputs that should
 
 ## Next steps
 
-Before engaging any of the above methodologies, use the next article to compare common cloud operating models and find a model that closely matches your requirements. That article will help establish the most actionable starting point and set of exercises to move you towards the desired operating model across your cloud platform.
+Before engaging any of the above methodologies, use the next article to compare common cloud operating models and find a model that closely matches your requirements. That article will help establish the most actionable starting point and set of exercises to move you toward the desired operating model across your cloud platform.
 
 > [!div class="nextstepaction"]
 > [Compare common cloud operating models](./compare.md)

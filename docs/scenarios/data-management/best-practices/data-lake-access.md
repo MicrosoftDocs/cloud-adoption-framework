@@ -3,7 +3,7 @@ title: Access control and data lake configurations in Azure Data Lake Storage Ge
 description: Learn about access control and data lake configurations in Azure Data Lake Storage Gen2. This article describes using role-based access control and access control lists.
 author: mboswell
 ms.author: mboswell
-ms.date: 08/02/2021
+ms.date: 11/25/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -85,7 +85,7 @@ If container-level access control is sufficient, Azure RBAC assignments offer a 
 
 ### Configure access using ACLs only
 
-We recommend the access control lists configuration for enterprise-scale for analytics and AI.
+We recommend the access control lists configuration for data management and analytics scenario.
 
 We recommend that you assign access control entries to a security group rather than an individual user or service principal. For more information, see [Use security groups versus individual users](/azure/storage/blobs/data-lake-storage-best-practices#use-security-groups-versus-individual-users). When adding or removing users from the group, no updates to Data Lake Storage are required. Using groups also reduces the chance of exceeding the 32 access control entries per file or folder ACL. After the four default entries, there are only 28 remaining for permission assignments.
 
@@ -153,7 +153,7 @@ No single approach to managing data lake access suits everyone. A major benefit 
 
 ## Azure Synapse Analytics data access control
 
-To deploy an Azure Synapse workspace, an Azure Data Lake Storage Gen2 account is required. Azure Synapse Analytics uses the primary storage account for several integration scenarios and stores data in a container. The container includes Apache Spark tables and application logs under a folder called **/synapse/{workspacename}**. The workspace also uses container for managing libraries that you choose to install.
+To deploy an Azure Synapse workspace, an Azure Data Lake Storage Gen2 account is required. Azure Synapse Analytics uses the primary storage account for several integration scenarios and stores data in a container. The container includes Apache Spark tables and application logs under a folder called `/synapse/{workspaceName}`. The workspace also uses container for managing libraries that you choose to install.
 
 During the workspace deployment through the [Azure portal](/azure/azure-portal/), provide an existing storage account or create a new one. The provided storage account is the primary storage account for the workspace. The deployment process grants the workspace identity access to the specified Data Lake Storage Gen2 account, using the **Storage Blob Data Contributor** role.
 
@@ -172,7 +172,7 @@ When setting-up data lake access control, some organizations require granular le
 When you use Apache Spark tables in Spark pool, a warehouse folder is created. It's in the root of the container in the workspace primary storage:
 
 ```output
-synapse/workspaces/{workspacename}/warehouse
+synapse/workspaces/{workspaceName}/warehouse
 ```
 
 If you plan to create Apache Spark tables in Azure Synapse Spark pool, grant write permission on the **warehouse** folder for the group running the command that creates the Spark table. If the command runs through triggered job in a pipeline, grant write permission to the workspace MSI.
@@ -187,4 +187,4 @@ For more information, see [How to set up access control for your synapse workspa
 
 ## Next steps
 
-[Use Azure Databricks within enterprise-scale for analytics and AI in Azure](./azure-databricks-implementation.md)
+[Use Azure Databricks within data management and analytics scenario in Azure](./azure-databricks-implementation.md)

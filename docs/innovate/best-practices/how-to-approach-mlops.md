@@ -70,7 +70,7 @@ The data scientist will need to gather information for the following questions:
 - Are there existing project workflows that can assist?
 - How much work will be required to advance the model to production?
 
-Next, a machine learning engineer designs the workflow and estimates the amount of work required. One best practice is to involve the data scientist(s) in building out the workflow; this time presents a key opportunity to cross-train and familiarize them with the final repo since it's common for the data scientist to work on the use case in the future.
+Next, a machine learning engineer designs the workflow and estimates the amount of work required. One best practice is to involve data scientists in building out the workflow; this time presents a key opportunity to cross-train and familiarize them with the final repo since it's common for the data scientist to work on the use case in the future.
 
 ## How machine learning operations benefit business
 

@@ -19,9 +19,15 @@ Cloud adoption best practices encourage customers to create a single, centralize
 Common motivations for choosing Azure VMware Solution are:
 
 - **Business needs:** To accelerate the migration of VMware-based workloads, support your [total cost of ownership (TCO) reduction](https://azure.microsoft.com/pricing/tco/calculator/), and rapidly expand capacity. This includes your need to reduce costs, complexity, and risk associated with larger-scale migration projects.
-- **IT needs:** To create business continuity, deploy disaster recovery solutions, and scale traditional on-premises VMware environments, with little to no change to applications (including VDI environments where modernization of VDI is not needed).
-- **Operational needs:** To make use of the skills and processes you've established across IT teams, while you give team members the ability to grow and adopt cloud competencies over time.
-- **Strategic needs:** To incrementally modernize your VMware-based applications with other Azure services as business requirements evolve.
+- **IT needs:** To create business continuity, deploy disaster recovery solutions, and scale traditional on-premises VMware environments, with little to no change to applications (including VDI environments where modernization of VDI is not needed). Some additional IT needs are discussed below.
+  - ***Retain the same IP address***: In lift and shift migrations, very often IP address are reassigned. This may result in either application configuration change or application not working at all. Azure VMware Solution provides ability to retain IP address after migration.
+  - ***Retain the same MAC address***: Some software(s)/application(s) running in on-premise environment tie their licensing requirements with server/computer's MAC address. Change in MAC addresses after migration of these server(s)/computer(s) may result in non-compliance to licensing requirements. Azure VMware Solution provides ability to retain same MAC address.
+  - ***Multicast networking support***: Specialized software(s) may be using multicast networking while running in an on-premise environment. Azure VMware Solution provides an excellent choice for running such specialized software(s).
+  - ***Functional Testing***: IT teams can reuse their existing functional testing tools and processes as defined for on-premise workloads. The tools and processes remain the same even when workloads run in Azure VMware Solutions.
+- **Operational needs:** Make use of the existing VMware skills, licenses (SRM, VMware NSX Advanced Load Balancer (formerly AVI) Load balancer) and processes you've established across IT teams, while you give team members the ability to grow and adopt cloud competencies over time. Many IT teams can take advantages of following additional benefits offered by Azure VMware Solutions.
+  - **Fewer VM-level changes:** When migrated to Azure VMware Solution, a Virtual Machine (VM) has minimal configuration changes such as Disks, Memory, Network Interface Card (NIC). This reduces the testing time as well drives confidence in migration.
+  - **Reuse of existing disaster recovery (DR) sites:** When customers migrate workloads to Azure VMware Solution from an on-premise environment, they can continue to use their existing DR site, tools, and processes.
+- **Strategic needs:** To incrementally modernize your VMware-based applications with other Azure services as business requirements evolve. Change in IT hardware [supply chain environment](https://www.au.logicalis.com/news/how-the-global-chip-shortage-is-driving-data-centre-projects-to-the-cloud/) can also lead to unpredictable scenarios affecting on-premise data centers. Azure VMware Solution provides fastest way to mitigate this risk.
 
 ## Azure VMware Solution outcomes
 
@@ -60,13 +66,13 @@ Modernize applications running on VMware overtime through integration to [Azure 
 
 - **Deploy unified hybrid management and operational controls** using [Azure Arc-enabled servers](/azure/azure-arc/servers/overview) across Azure, VMware, and other cloud infrastructures.
 - **Modernize applications** with the ability to connect them to Azure services such as Azure AD, SQL Managed Instance, and analytics.
-- **Deploy native Azure management controls** with Azure Monitor and Azure Security Center solutions to operate your VMware environments.
+- **Deploy native Azure management controls** with Azure Monitor and Microsoft Defender for Cloud solutions to operate your VMware environments.
 - **Deploy native Azure public cloud capabilities** and take advantage of built-in security controls and compliance enforcement with Azure Backup and Azure Site Recovery.
 - **Achieve identity and access management consistency** with unified permissions and access control, using Azure Active Directory (Azure AD) as a single sign-on (SSO) identity source for VMware vCenter.
 
 ## Azure VMware Solution business justification
 
-[Building a business justification for cloud migration](/azure/cloud-adoption-framework/strategy/cloud-migration-business-case) can dispel cloud rationalization myths that surface from your team's financial plan. Your finance team might need to develop a detailed financial model to account for components associated with the adoption of Azure VMware Solution.
+[Building a business justification for cloud migration](../../strategy/cloud-migration-business-case.md) can dispel cloud rationalization myths that surface from your team's financial plan. Your finance team might need to develop a detailed financial model to account for components associated with the adoption of Azure VMware Solution.
 
 Initial business justification is a directional estimate that can help drive your strategic alignment. Your organization can create transparency between the cloud strategy team and other stakeholders by affirming the business justification can change significantly throughout planning activities. Seek a cross-team consensus of sufficient value in order to [gather inventory and develop a plan](/azure/azure-vmware/plan-private-cloud-deployment). Once your digital estate is cataloged and assessed, you can refine your business case, and present clear plans for cloud value ROI.
 

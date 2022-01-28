@@ -27,6 +27,8 @@ Private endpoints can be used to control the traffic within your Azure environme
 
 For both scenarios, it's as simple as specifying the resource ID of the service and manually approving the private endpoint connection. The user also requires some role-based access control (RBAC) access to execute these actions.
 
+Connections C and D in Figure 1 illustrate scenarios that customers generally want to allow as private endpoint connections are kept within the corporate Azure AD tenant and therefore do not represent a security risk. Hence, these two scenarios are not covered in this article.
+
 The following information gives you options to prevent the provisioning of private endpoints across Azure AD tenants.
 
 ## Deny private endpoints linked to services in other tenants
@@ -44,7 +46,7 @@ Once the rogue administrator approves the private endpoint connection, corporate
 
 ### Mitigation for scenario one
 
-Use the following [Azure policy](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/PrivateEndpoint/params.policyDefinition.Deny-PrivateEndpoint-PrivateLinkServiceConnections.json) to automatically deny the creation of a private endpoint in the corporate Azure AD tenant that's linked to an outside Azure service.
+Use the following [Azure Policy](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/PrivateEndpoint/params.policyDefinition.Deny-PrivateEndpoint-PrivateLinkServiceConnections.json) to automatically deny the creation of a private endpoint in the corporate Azure AD tenant that's linked to an outside Azure service.
 
 ```json
 "if": {
@@ -154,7 +156,7 @@ Use service-specific policies to prevent this scenario across the customer tenan
 }
 ```
 
-This policy shows an example for Azure Storage. The same policy definition should be replicated for other services like [Key Vault](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/KeyVault/params.policyDefinition.Deny-KeyVault-PrivateEndpointConnections.json), [Cognitive Services](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/CognitiveServices/params.policyDefinition.Deny-CognitiveServices-PrivateEndpointConnections.json), and [SQL Server](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/Sql/params.policyDefinition.Deny-Sql-PrivateEndpointConnections.json). To further improve manageability, we suggest bundling the service-specific policies into an initiative. The policy denies the approval of private endpoint connections to private endpoints that are hosted outside of the subscription of the respective service. It doesn't deny the rejection or removal of private endpoint connections, which is the behavior customers want. Auto-approval workflows, such as connection C, aren't affected by this policy.
+This policy shows an example for Azure Storage. The same policy definition should be replicated for other services like [Key Vault](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/KeyVault/params.policyDefinition.Deny-KeyVault-PrivateEndpointConnections.json), [cognitive services](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/CognitiveServices/params.policyDefinition.Deny-CognitiveServices-PrivateEndpointConnections.json), and [SQL Server](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/Sql/params.policyDefinition.Deny-Sql-PrivateEndpointConnections.json). To further improve manageability, we suggest bundling the service-specific policies into an initiative. The policy denies the approval of private endpoint connections to private endpoints that are hosted outside of the subscription of the respective service. It doesn't deny the rejection or removal of private endpoint connections, which is the behavior customers want. Auto-approval workflows, such as connection C, aren't affected by this policy.
 
 However, the approval of compliant private endpoint connections within the portal is blocked with this method. This block occurs because the portal UI doesn't send the resource ID of the connected private endpoint in their payload. We advise you to use [Azure Resource Manager](https://github.com/Azure/data-management-zone/tree/main/infra/Policies/PolicyDefinitions/Storage/SampleDeployPrivateEndpointConnection), [Azure PowerShell](/powershell/module/az.network/approve-azprivateendpointconnection), or [Azure CLI](/cli/azure/network/private-link-service/connection#az_network_private_link_service_connection_update) to approve the private endpoint connection.
 
@@ -162,7 +164,7 @@ We also recommend assigning the policy to the top-level management group and use
 
 ### Considerations for scenario two
 
-Managed virtual networks and managed private endpoints have been introduced in Azure Synapse Analytics and Azure Data Factory. Because of  these new capabilities, the policy will block the secure and private usage of these services.
+Managed virtual networks and managed private endpoints have been introduced in Azure Synapse Analytics and Azure Data Factory. Because of these new capabilities, the policy blocks the secure and private usage of these services.
 
 We recommend the use of an **Audit** effect instead of a **Deny** affect in the policy definition used in the [scenario two mitigation](#mitigation-for-scenario-two). This effect change can help you keep track of private endpoints being created in separate subscriptions and tenants. You can also use policy exemptions for the respective data platform scopes.
 
@@ -196,7 +198,7 @@ To overcome [scenario one](#deny-private-endpoints-linked-to-services-in-other-t
 }
 ```
 
-This policy denies managed private endpoints that are linked to services that are hosted outside the subscription of the data factory. You can change this policy to allow connections to services hosted in a set of subscriptions by adding a `list` parameter and by using the `"notIn": "[parameters('allowedSubscriptions')]"` construct. We recommend this change for the data platform scope inside the tenant or environments where services with managed virtual networks and managed private endpoints are extensively used.
+This policy denies managed private endpoints that are linked to services that are hosted outside the subscription of the Data Factory. You can change this policy to allow connections to services hosted in a set of subscriptions by adding a `list` parameter and by using the `"notIn": "[parameters('allowedSubscriptions')]"` construct. We recommend this change for the data platform scope inside the tenant or environments where services with managed virtual networks and managed private endpoints are extensively used.
 
 We recommend assigning this policy to the top-level management group and use exemptions where required. For the data platform, we recommend you make these changes and assign the policy to the set of data platform subscriptions.
 

@@ -3,7 +3,7 @@ title: Aligning responsibilities across teams
 description: Learn to align responsibilities across teams by developing a cross-team matrix that identifies responsible, accountable, consulted, and informed (RACI) parties.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 09/10/2019
+ms.date: 12/29/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Align responsibilities across teams
 
-Learn to align responsibilities across teams by developing a cross-team matrix that identifies *responsible, accountable, consulted, and informed (RACI)* parties. This article provides an example RACI matrix for the organizational structures described in [Establish team structures](./organization-structures.md):
+Learn to align responsibilities across teams. Align responsibilities by developing a cross-team matrix that identifies *responsible, accountable, consulted, and informed (RACI)* parties. This article provides an example RACI matrix for the organizational structures described in the [Establish team structures](./organization-structures.md) article:
 
 - [Cloud adoption team only](#cloud-adoption-team-only)
 - [MVP best practice](#best-practice-minimum-viable-product-mvp)

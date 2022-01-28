@@ -37,7 +37,7 @@ You have to make critical decisions that drive the design of the Cloud Adoption 
 
 The following image shows a conceptual reference architecture that demonstrates design areas:
 
-![A diagram depicting the Enterprise-scale for SAP on Azure conceptual reference architecture.](./media/overview-architecture.png)
+:::image type="content" source="./media/overview-architecture.png" alt-text="A diagram depicting the Enterprise-scale for SAP on Azure conceptual reference architecture." lightbox="./media/overview-architecture.png":::
 
 ## Implementation
 

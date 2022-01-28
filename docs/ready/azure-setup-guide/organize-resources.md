@@ -7,11 +7,8 @@ ms.date: 10/06/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.localizationpriority: high
 ms.custom: think-tank, fasttrack-edit, AQC, setup
 ---
-
-<!-- cSpell:ignore profx fsubscriptions fresource -->
 
 # Organize your Azure resources effectively
 
@@ -57,11 +54,11 @@ Work with people in the following roles as you plan your organizational complian
 To create a management group, subscription, or resource group, sign in to the [Azure portal](https://portal.azure.com).
 
 - To create a **management group** to help you manage multiple subscriptions, go to [Management groups](https://portal.azure.com/#blade/Microsoft_Azure_ManagementGroups/HierarchyBlade) and select **Create**.
-  
+
 - To create a **subscription** to associate users with resources, go to [Subscriptions](https://portal.azure.com/#blade/Microsoft_Azure_Billing/SubscriptionsBlade) and select **Add**.
   > [!NOTE]
   > You can also create subscriptions programmatically. For more information, see [Programmatically create Azure subscriptions](/azure/cost-management-billing/manage/programmatically-create-subscription).
-  
+
 - To create a **resource group** to hold resources that share the same permissions and policies:
   1. Go to [Create a resource group](https://portal.azure.com/#create/Microsoft.ResourceGroup).
   1. In the **Create a resource group** form:
@@ -137,7 +134,7 @@ Other common uses for tags include:
 
 Each resource or resource group can have a maximum of 50 tag name and value pairs. This limitation only applies to tags directly applied to the resource group or resource.
 
-For more tagging recommendations and examples, see the Cloud Adoption Framework [Recommended naming and tagging conventions](../azure-best-practices/naming-and-tagging.md).
+For more tagging recommendations and examples, see the Cloud Adoption Framework [recommended naming and tagging conventions](../azure-best-practices/naming-and-tagging.md).
 
 ::: zone target="docs"
 
@@ -166,6 +163,7 @@ To apply a tag to a resource group:
 ::: form action="OpenBlade[#blade/HubsExtension/Resources/resourceType/Microsoft.Resources%2FSubscriptions%2FResourceGroups]" submitText="Go to resource groups" :::
 
 ::: zone-end
+
 ## Next steps
 
 To learn more about management levels and organization, see:
@@ -178,7 +176,7 @@ To learn more about management levels and organization, see:
 - [Understand resource access management in Azure](../../govern/resource-consistency/resource-access-management.md)
 - [Subscription service limits](/azure/azure-resource-manager/management/azure-subscription-service-limits)
 
-To learn more about resource naming and tagging, see:
+For more information about resource naming and tagging, see:
+
 - [Develop your naming and tagging strategy for Azure resources](../azure-best-practices/naming-and-tagging.md)
 - [Use tags to organize your Azure resources](/azure/azure-resource-manager/management/tag-resources)
-

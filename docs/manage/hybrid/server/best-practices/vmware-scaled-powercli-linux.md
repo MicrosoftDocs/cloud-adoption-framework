@@ -96,7 +96,7 @@ The automation flow for this scenario includes these steps:
 
 ## Predeployment
 
-To demonstrate the before and after for this scenario, the following screenshots shows a dedicated, empty Azure resource group, a vCenter VM folder with candidate VMs and the `/var/opt/` directory showing no agent is installed.
+To demonstrate the before and after for this scenario, the following screenshots show a dedicated, empty Azure resource group, a vCenter VM folder with candidate VMs and the `/var/opt/` directory showing no agent is installed.
 
 ![Screenshot of an empty Azure resource group.](./media/vmware-scale-powercli/cli-linux-empty.png)
 

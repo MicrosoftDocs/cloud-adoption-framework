@@ -96,9 +96,7 @@ The following scope and role settings will create the required visibility into c
 
   - In a well-managed environment, the cloud governance team likely has a higher degree of access already, making additional scope assignment for [Cost Management Contributor](/azure/role-based-access-control/built-in-roles#cost-management-contributor) unnecessary.
 
-<!-- cSpell:ignore automations -->
-
-- [Cloud center of excellence](../../organize/cloud-center-of-excellence.md). Responsibility for managing costs related to shared services requires Cost Management Contributor access at the subscription level. Additionally, this team might require Cost Management Contributor access to resource groups or subscriptions that contain assets deployed by CCoE automations to understand how those automations affect costs.
+- [Cloud center of excellence](../../organize/cloud-center-of-excellence.md). Responsibility for managing costs related to shared services requires Cost Management Contributor access at the subscription level. Additionally, this team might require Cost Management Contributor access to resource groups or subscriptions that contain assets deployed by CCoE automation processes to understand how those processes affect costs.
 
   - **Shared services.** When a cloud center of excellence is engaged, best practice suggests that assets managed by the CCoE are supported from a centralized shared service subscription within a hub and spoke model. In this scenario, the CCoE likely has Contributor or Owner access to that subscription, making additional scope assignment for [Cost Management Contributor](/azure/role-based-access-control/built-in-roles#cost-management-contributor) unnecessary.
   - **CCoE automation/controls.** The CCoE commonly provides controls and automated deployment scripts to cloud adoption teams. The CCoE has a responsibility to understand how these accelerators affect costs. To gain that visibility, the team needs [Cost Management Contributor](/azure/role-based-access-control/built-in-roles#cost-management-contributor) access to any resource groups or subscriptions running those accelerators.

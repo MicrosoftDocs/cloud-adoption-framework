@@ -13,7 +13,7 @@ ms.subservice: manage
 
 This article is intended to help organizations implement a consistent monitoring strategy quicker by ensuring *observability* is established in the Azure landing zone (that is, in every minimum viable product) for each monitoring solution.
 
-As a planner, you formulate a monitoring plan for a service and include some monitoring objectives. One objective you want is for the monitoring consumer(s) to reach a level of comfort or confidence with the solution you are planning for them, as soon as possible. Then you can move on to other objectives, like building reports and custom dashboards.
+As a planner, you develop a monitoring plan for a service and include some monitoring objectives. One desirable objective is for the monitoring consumers to reach a level of comfort or confidence with the solution you are planning for them, as soon as possible. Then you can move on to other objectives, like building reports and custom dashboards.
 
 We call this *adoption*.
 
@@ -53,7 +53,7 @@ This is demonstrated in the following ways:
 
 - Monitoring becomes embedded into Azure resources and resource groups versus separate tooling you manage on-premises.
 
-- Cloud-native monitoring architectures are SIEM-like, such as Azure Monitor. So it's expansive, log-driven, and orders of magnitude more flexible.
+- Cloud-native monitoring architectures such as Azure Monitor are similar to security incident and event management (SIEM) tools. Azure Monitor is expansive, log-driven, and orders of magnitude more flexible.
 
 For architects, diagnostics form the core of their exploitation of more cost effective cloud-native monitoring structures that let IT manage services holistically across the different cloud models.
 
@@ -83,9 +83,9 @@ The following figure shows the Observe discipline on the left, and later in this
 
 ## Observability and response
 
-**Observability** is a *qualitative indicator that a monitoring solution helps the monitoring consumer achieve the satisfactory level of control of a defined service*. Where monitoring provides service consumers with a suitable range of monitoring *capabilities* and *perspectives*.
+**Observability** is a *qualitative indicator that a monitoring solution helps the monitoring consumer achieve the satisfactory level of control of a defined service*, where monitoring provides service consumers with a suitable range of monitoring *capabilities* and *perspectives*.
 
-**Response** is the organization's ability to quickly ascertain *significance* of observed monitoring data (detected events, telemetric patterns, correlated information, an so on) such that for negative events it can rapidly restore or remediate. For positive events or informational events, it can help to maintain service agreements, improve reliability, and reduce support costs. Events dynamically occur in the system or service, where monitoring solutions provide alerting, control loop automation, and raise incidents, problems, or changes in an external IT service management (ITSM) system. Realize that many events cannot or should not be automatically remediated.
+**Response** is the organization's ability to quickly ascertain *significance* of observed monitoring data (detected events, telemetric patterns, correlated information, and so on) such that for negative events it can rapidly restore or remediate. For positive events or informational events, it can help to maintain service agreements, improve reliability, and reduce support costs. Events dynamically occur in the system or service, where monitoring solutions provide alerting, control loop automation, and raise incidents, problems, or changes in an external IT service management (ITSM) system. Realize that many events cannot or should not be automatically remediated.
 
 **Utility:** In this sense, observability (and response) is about the operational use or utility of the monitoring solution. Azure Monitor provides Microsoft's perspective of our service resources, and gives you similar capabilities as an on-premises monitoring system. A monitoring solution needs visualizations, such as dashboards and workbooks, with role-based access.
 

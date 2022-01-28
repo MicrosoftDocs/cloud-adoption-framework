@@ -91,7 +91,7 @@ In order for Terraform to create resources in AWS, we'll need to create a new AW
 
     ![Second screenshot of a new user being created in an AWS cloud console.](./media/aws-scale-ansible/ansible-new-user-2.png)
 
-5. On the next page, **Set Permissions**, select **Attach existing policies directly** then check the box next to **AmazonEC2FullAccess** as shown in the screenshot, and then select **Next**.
+5. On the next page, **Set Permissions**, select **Attach existing policies directly** then select the box next to **AmazonEC2FullAccess** as shown in the screenshot, and then select **Next**.
 
     ![Third screenshot of a new user being created in an AWS cloud console.](./media/aws-scale-ansible/ansible-new-user-3.png)
 
@@ -135,7 +135,7 @@ Before executing the Terraform plan, you must export the environment variables w
     source ./scripts/vars.sh
     ```
 
-5. Make sure your SSH keys are available in `~/.ssh` and named `id_rsa.pub` and `id_rsa`. If you followed the SSH keygen guide above to create your key then this should already be setup correctly. If not, you may need to modify [`aws_infra.tf`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/aws/scaled_deployment/ansible/terraform/aws_infra.tf) to use a key with a different path.
+5. Make sure your SSH keys are available in `~/.ssh` and named `id_rsa.pub` and `id_rsa`. If you followed the SSH keygen guide above to create your key then this should already be set up correctly. If not, you may need to modify [`aws_infra.tf`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/aws/scaled_deployment/ansible/terraform/aws_infra.tf) to use a key with a different path.
 
 6. Run the `terraform init` command which will download the required Terraform providers.
 

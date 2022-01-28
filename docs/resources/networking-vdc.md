@@ -11,8 +11,6 @@ ms.subservice: general
 ms.custom: think-tank, virtual-network
 ---
 
-<!-- cSpell:ignore  LLAP vwan howitworks vpngateways erdirect frontdoor afds whatis -->
-
 # The virtual datacenter: A network perspective
 
 Applications migrated from on-premises will benefit from Azure's secure cost-efficient infrastructure, even with minimal application changes. Even so, enterprises should adapt their architectures to improve agility and take advantage of Azure's capabilities.
