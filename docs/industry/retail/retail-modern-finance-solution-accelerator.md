@@ -27,10 +27,10 @@ The Modern Finance Solution Accelerator changes the way we deliver an impact acr
 
 Let's look at the Modern Finance Solution Accelerator through 4 pillars:
 
-1. Financial analysis and reporting – transforming legacy systems and tools to increase insight and productivity
-1. Strategy and forecasting – driving forward-looking forecasting and strategic decision making
-1. Business process automation – enabling greater efficiency through chat bots and automated workflows
-1. Risk and compliance – harnessing technology to mitigate and proactively control risk
+- Financial analysis and reporting – transforming legacy systems and tools to increase insight and productivity
+- Strategy and forecasting – driving forward-looking forecasting and strategic decision making
+- Business process automation – enabling greater efficiency through chat bots and automated workflows
+- Risk and compliance – harnessing technology to mitigate and proactively control risk
 
 ## Modern finance success story
 
@@ -53,9 +53,9 @@ Modern Finance Solution Accelerator [GitHub repository](https://github.com/micro
 
 The Modern Finance Solution Accelerator is built on Azure Synapse Analytics and Azure Machine learning—with these prerequisites:
 
-1. Access to an Azure subscription.
-2. Power BI pro license (or free trial).
-3. Knowledge of Azure, Azure Synapse Analytics, Azure Machine Learning Services, and Power BI.
+- Access to an Azure subscription.
+- Power BI pro license (or free trial).
+- Knowledge of Azure, Azure Synapse Analytics, Azure Machine Learning Services, and Power BI.
 
 The following technologies will be used in this solution accelerator:
 
@@ -71,9 +71,9 @@ The following technologies will be used in this solution accelerator:
 
 The Modern Finance Solution Accelerator was built to provide developers with the required resources to build a solution to identify the top factors for revenue growth from an e-commerce platform using Azure Synapse Analytics and Azure Machine Learning. Here are architecture diagrams that provide a high-level overview of what you will be building for this Solution Accelerator:
 
-![Azure Synapse AI architecture](./media/synapse-ai-architecture.png)
+[ ![Azure Synapse AI architecture](./media/synapse-ai-architecture.png) ](./media/synapse-ai-architecture.png#lightbox)
 
-![Azure Synapse AI + Azure ML AutoML architecture](./media/synapse-auto-ml-architecture.png)
+[ ![Azure Synapse AI + Azure ML AutoML architecture](./media/synapse-auto-ml-architecture.png) ](./media/synapse-auto-ml-architecture.png#lightbox)
 
 1. Clone the [Modern Finance Solution GitHub repository](https://github.com/microsoft/Azure-Synapse-Solution-Accelerator-Financial-Analytics-Customer-Revenue-Growth-Factor) and navigate to the root of the directory.
 1. Go to the [deployment guide](https://github.com/microsoft/Azure-Synapse-Solution-Accelerator-Financial-Analytics-Customer-Revenue-Growth-Factor/blob/main/Resource_Deployment/README.md) for next steps to complete the deployment.

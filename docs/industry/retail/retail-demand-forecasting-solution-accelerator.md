@@ -24,7 +24,7 @@ accelerator will assist by reducing development time through pre-built, pre-conf
 
 ## Improve accuracy with the "many models" approach
 
-![Many models demand forecasting approach](./media/many-models-demand-forecasting-approach.png)
+[ ![Many models demand forecasting approach](./media/many-models-demand-forecasting-approach.png) ](./media/many-models-demand-forecasting-approach.png#lightbox)
 
 The Pattern of many models is very common across a wide variety of industries,
 and applicable to many real-world use cases. In the retail sector, the many
