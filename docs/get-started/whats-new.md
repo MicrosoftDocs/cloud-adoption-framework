@@ -20,6 +20,32 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
 ## January 2022
 
+### Unified management and operations with Azure Arc-enabled servers landing zone accelerator
+
+This release of the Cloud Adoption Framework provides considerations to help you prepare for an enterprise-scale deployment of Azure Arc-enabled servers.
+
+This scenario focuses on enabling a few targeted outcomes:
+
+- Mature your hybrid practices with Azure Arc-enabled servers management and operations.
+- Establish appropriate Azure Arc-enabled servers governance across all on-premises and multicloud assets to move forward with confidence.
+- Minimize technical debt by considering well-architected principles across all Azure Arc-enabled servers workloads.
+- Automate all three of the above with the codebase for Azure Arc-enabled servers landing zone accelerator.
+- Quickly access skilling resources in documentation or learning modules for the various Azure services required across this scenario.
+
+Get started with this scenario using the following links:
+
+| Article | Description |
+|--|--|
+| [Identity and access management](../scenarios/hybrid/arc-enabled-servers/eslz-identity-and-access-management.md) | Best practices for right access controls design to secure hybrid resources as they are centrally managed from Azure using Azure Arc. |
+| [Network topology and connectivity](../scenarios/hybrid/arc-enabled-servers/eslz-arc-servers-connectivity.md) | Design considerations when working with Azure Arc-enabled servers and how to securely connect them to your Enterprise Scale Landing Zone. |
+| [Resource organization](../scenarios/hybrid/arc-enabled-servers/eslz-resource-organization.md) | Best practices for resource consistency and tagging strategy, that includes your hybrid and multicloud resources. |
+| [Governance and security disciplines](../scenarios/hybrid/arc-enabled-servers/eslz-security-governance-and-compliance.md) | The [Cloud Adoption Framework's Enterprise Scale Landing Zone architecture](../ready/enterprise-scale/architecture.md) includes patterns for standardizing the deployment of [Azure Policy](/azure/governance/policy/overview) and [role-based access controls (RBAC)](../ready/azure-setup-guide/manage-access.md) through structured use of management groups to segment resources into logical groupings. These patterns can be extended using technologies such as Azure Arc. |
+| [Management disciplines](../scenarios/hybrid/arc-enabled-servers/eslz-management-and-monitoring-arc-server.md) | Similar to governance techniques, Azure Management services can also be extended out to other environments, such as on-premises and other cloud platforms through Azure Arc. Enterprise Scale provides guidance on how operationally maintain Azure Arc-enabled servers on Azure enterprise estate, with centralized management and monitoring at the platform level. |
+| [Automation disciplines](../scenarios/hybrid/arc-enabled-servers/eslz-automation-arc-server.md) | Azure Arc enables organizations to manage their digital state hosted outside of Azure with the same level of experience and automation as a native Azure resource. As part of your Enterprise Scale Landing Zone implementation you should plan for agent onboarding, lifecycle management, and expansion of the Azure control plane capabilities via Azure Arc with as much automation as possible. |
+| [Cost governance](../scenarios/hybrid/arc-enabled-servers/eslz-cost-governance.md) | Keep track of ungoverned and unmonitored resources that prevent you from to increase accountability with budgets, cost allocation, and chargebacks. |
+| [Start with Azure Arce-enabled server landing zone accelerator sandbox](../scenarios/hybrid/arc-enabled-servers/enterprise-scale-landing-zone-sandbox.md) | Get started with a fully automated Azure Arc-enabled servers sandbox deployment. |
+| [Introduction to Azure Arc-enabled servers landing zone accelerator for hybrid](../scenarios/hybrid/enterprise-scale-landing-zone.md) | Learn how to accelerate adoption of hybrid or multi-cloud architectures. |
+
 ### Launch of Cloud Adoption Strategy Evaluator in the Microsoft Cloud Adoption Framework
 
 We've launched the [Cloud Adoption Strategy Evaluator](/assessments/?id=8fefc6d5-97ac-42b3-8e97-d82701e55bab&mode=pre-assessment), a new assessment built around the principles of cloud economics—which evaluates your cloud adoption strategy, and provides recommendations to help build a robust business case that supports your organization's unique cloud journey.
@@ -199,104 +225,5 @@ To help you accelerate adoption and innovation, we've added new information abou
 | [How&nbsp;GitHub&nbsp;accelerates&nbsp;cloud&nbsp;adoption](../scenarios/github-velocity/index.md) | This article outlines the benefits of using GitHub to accelerate cloud adoption by taking advantage of open-source assets, collaborative development environments, automation and security features. |
 | [Best practices for machine learning](../innovate/best-practices/machine-learning.md) | We've updated and expanded the best practice guidance for machine learning. Included in the best practices are: <br><br> <li> [How to approach machine learning operations](../innovate/best-practices/how-to-approach-mlops.md) and the [MLOps process](../innovate/best-practices/mlops-process.md) <li> [Machine learning security](../innovate/best-practices/ml-security.md) <li> [Machine learning inference and deployment](../innovate/best-practices/ml-deployment-inference.md) <li> [Determine compute instances for your model](../innovate/best-practices/dev-train-comp-instances-for-ml.md) <li> [Set up machine learning workspaces](../innovate/best-practices/set-up-ml-workspaces.md) <li> [Responsible and trusted AI](../innovate/best-practices/trusted-ai.md) |
 | [Choose&nbsp;a&nbsp;landing&nbsp;zone&nbsp;option](../ready/landing-zone/choose-landing-zone-option.md) | Microsoft offers two implementation options for landing zones: *Start small and expand* and *Enterprise-scale*. Use this new article to review both options and choose the right approach for your organization. |
-
-## December 2020
-
-We've revised the naming and tagging strategy guidance, as well as adding guidance for Moodle migration scenarios.
-
-| Article | Description |
-|--|--|
-| [Develop&nbsp;your&nbsp;naming&nbsp;and&nbsp;tagging&nbsp;strategy for Azure resources](../ready/azure-best-practices/naming-and-tagging.md) | We've refined the guidance for defining your naming and tagging strategy. In addition to the overview, we've separated this guidance into multiple articles that cover these topics: <br><br> <li> [Define your naming convention](../ready/azure-best-practices/resource-naming.md) <li> [Recommended abbreviations for various Azure resource types](../ready/azure-best-practices/resource-abbreviations.md) <li> [Define your tagging strategy](../ready/azure-best-practices/resource-tagging.md) |
-| [Migrate a Moodle deployment to Azure](../scenarios/lamp/moodle/migration-overview.md) | Learn how to migrate a deployment of the Moodle open-source learning management system from an on-premises environment to Azure. Steps are provided for using either the Azure portal or the Azure CLI for your deployment. |
-
-## October 2020
-
-This month's updates include incremental improvements throughout the Cloud Adoption Framework and supporting web assets.
-
-Our biggest investments have focused on building out Microsoft Learn modules to accelerate application of the Cloud Adoption Framework. This month, we released the modules listed below. Note that the Getting Started module provides our first guidance aligned with an industry vertical, by introducing a retail customer (Tailwind Traders) who we will follow through all of the core methodology modules to follow.
-
-| Module | Description |
-|--|--|
-| [Overview module](/learn/modules/microsoft-cloud-adoption-framework-for-azure/) | Entry-level introduction to the framework. |
-| [Getting Started module](/learn/modules/cloud-adoption-framework-getting-started/) | Introduction to the getting started guides to accelerate application of the proper methodologies for overcoming specific blockers. |
-| [Azure landing zones](/learn/modules/cloud-adoption-framework-ready/) | Before building out your cloud environment, understand your operating requirements and choose the most appropriate Azure landing zone product to get you started. |
-| [Create an enterprise-scale architecture](/learn/paths/enterprise-scale-architecture/) | Create landing zones at scale following a set of enterprise-scale design principles, reference architectures, and reference implementations. Four modules to create a single learning path to success. |
-
-We've also expanded the business outcomes to share a number of common business motivations and approaches that continue to emerge in the post-COVID marketplace.
-
-| Article | Description |
-|--|--|
-| [Examples of sustainability outcomes](../strategy/business-outcomes/sustainability.md) | Learn how cloud computing can help you reduce carbon emissions, use resources more efficiently, and shrink your environmental footprint. |
-| [Measure business outcomes with objectives and key results (OKRs)](../strategy/business-outcomes/okr.md) | Learn how to use OKRs to measure business outcomes. |
-| [Measure business outcomes with AppDynamics](../digital-estate/app-dynamics.md) | Understanding an application's performance and user experience is key to measuring business outcomes. See how AppDynamics can provide business insights for most use cases. |
-| [Cost management update: Spot VMs](../govern/cost-management/best-practices.md#best-practice-reduce-nonproduction-costs) | Use of Spot VMs in nonproduction environments is a rapidly emerging practice to further reduce costs in those environments.existing environments. "I already have a working environment. How can I apply the design principles of enterprise-scale?" The new article on transitioning to enterprise-scale can help. |
-
-| Article | Description |
-|--|--|
-| [Transition existing Azure environments to enterprise-scale](../ready/enterprise-scale/transition.md) | This article helps organizations to navigate the right path based on an existing Azure environment transitioning into enterprise-scale. |
-| [Cloud Adoption Framework enterprise-scale landing zone architecture](../ready/landing-zone/index.md) | This article was updated to include a high-level diagram for an enterprise-scale landing zone architecture based on the hub and spoke network topology, and updates to describe and cross-reference the critical design areas for an enterprise-scale landing zone architecture. |
-
-## August 25, 2020
-
-This release provides better definition and decision criteria regarding landing zone implementations.
-
-### Operating model
-
-One of the most important considerations in landing zone design and implementation is your operating model. How you want to operate in the cloud will have a direct impact on the architecture and controls to implement. The following articles will help align your target operating model with a few models that are common in the cloud. Then map those to the most appropriate implementation to get started.
-
-| Article | Description |
-|--|--|
-| [Compare common operating models](../operating-model/compare.md) | This article is the primary guide for comparing operating models and choosing a course of action. |
-| [Understand cloud operating models](../operating-model/index.md) | Primer for making import decisions regarding your operating model. |
-| [Define your operating model with CAF](../operating-model/define.md) | The Cloud Adoption Framework is an incremental guide to building out your environment and adopting the cloud within your chosen operating model. This article creates a frame of reference to understand how the various methodologies support the development of your operating model. |
-| [Terms](../operating-model/terms.md) | Terms that are likely to come up when discussing your operating model with counterparts. These terms are not as commonly used by architects or technical specialists, but will prove important in those conversations. |
-
-### Azure landing zones: Additional implementation options
-
-The concept and implementations options behind Azure landing zones was built alongside the leading Microsoft partners. This release recognizes the existing intellectual property (IP) that those partners use to accelerate cloud adoption.
-
-| Article | Description |
-|--|--|
-| [Partner landing zones](../ready/landing-zone/partner-landing-zone.md) | Review and compare Azure landing zone offers from your partner. |
-| [Implementation options](../ready/landing-zone/implementation-options.md) | Updated to add partner landing zone options to the existing Azure landing zone implementation options. |
-| [Enterprise-scale reference implementations](../ready/enterprise-scale/implementation.md) | Updated to add a hub-spoke reference implementation to enterprise-scale reference implementations. |
-
-> [!NOTE]
-> The new partner landing zone articles don't specify how a partner should define or implement a landing zone. Instead, it's designed to add structure to a complex conversation, so you can better understand the partner offer. This list of questions and minimum evaluation criteria can also be used to compare offers from potential partners. It's also being used by some partners to more clearly communicate the value of their Azure landing zone implementation options.
-
-## July 17, 2020
-
-This release adds a number of new scenarios to make cloud adoption more actionable.
-
-**Migration scenarios:**
-
-The new [migration scenarios overview page](../scenarios/index.md) builds on the Migrate methodology to demonstrate how Azure delivers on the One Migrate promise. It provides approaches to migrating multiple first and third-party scenarios to Azure. This includes new migration scenarios:
-
-| Article | Description |
-|--|--|
-| [Azure Virtual Desktop](../scenarios/wvd/index.md) | This scenario enables productivity boosts and accelerates the migration of various workloads to support the end-user experience. |
-| [Azure Stack](../scenarios/azure-stack/index.md) | Learn about deploying Azure in your datacenter using Azure Stack Hub. |
-
-**Analytics in the Cloud Adoption Framework:**
-
-Analytics solutions are now included in the Microsoft Cloud Adoption Framework. These new topics highlight best practices for enabling analytics solutions during your cloud adoption journey.
-
-| Article | Description |
-|--|--|
-| [Analytics solution for Teradata, Netezza, Exadata](../migrate/azure-best-practices/analytics/analytics-solutions-overview.md) | Learn about migrating legacy on-premises environments including Teradata, Netezza, and Exadata to modern analytics solutions. |
-| [High availability for Azure Synapse](../migrate/azure-best-practices/analytics/azure-synapse.md) | Learn about one of the key benefits of a modern cloud-based infrastructure, built-in high availability and disaster recovery. |
-| [Schema migration data definition languages (DDL)](../migrate/azure-best-practices/analytics/schema-migration-ddl.md) | Learn about the database objects and associated processes when preparing to migrate existing data. |
-
-**AI in the Cloud Adoption Framework:**
-
-AI solutions and best practices are now integrated into the Microsoft Cloud Adoption Framework. These AI solutions can help accelerate innovation with predictions about customer's needs, automate business processes, discover information, find new ways to engage with customers, and deliver better experiences during your cloud adoption journey.
-
-| Article | Description |
-|--|--|
-| [Responsible AI](../strategy/responsible-ai.md) | Learn about the AI principles you should consider when implementing AI solutions and learn how to establish a responsible AI strategy. |
-| [Azure innovation guide: Innovate with AI](../innovate/innovation-guide/predict.md) | Learn about how you can innovate with AI and find the best solution based on your implementation needs. |
-| [AI in the Cloud Adoption Framework](../innovate/ai/index.md) | Review a prescriptive framework that includes the tools, programs, and content (best practices, configuration templates, and architecture guidance) to simplify adoption of AI and cloud-native practices at scale. |
-| [MLOps with Azure Machine Learning](../manage/mlops-machine-learning.md) | Learn about machine learning operations (MLOps) best practices. |
-| [Innovate with AI](../innovate/best-practices/predict.md) | Learn about AI solutions (machine learning, AI applications and agents, knowledge mining) and best practices that can accelerate digital invention. |
 
 <!-- docutune:ignoreNextStep -->
