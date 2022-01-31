@@ -3,7 +3,7 @@ title: Cloud adoption plan deployment to Azure DevOps
 description: Learn how to quickly deploy a backlog to Azure DevOps by using a template that aligns cloud adoption efforts to a standardized process.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 07/01/2019
+ms.date: 01/31/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
