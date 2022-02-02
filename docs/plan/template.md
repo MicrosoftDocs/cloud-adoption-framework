@@ -3,7 +3,7 @@ title: Cloud adoption plan for the deployment to Azure DevOps
 description: Learn how to deploy backlogs using a template that aligns cloud adoption efforts to a standardized process.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 01/31/2022
+ms.date: 02/01/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
@@ -14,29 +14,29 @@ ms.custom: internal
 
 Azure DevOps is a set of cloud-based tools for Azure customers who manage iterative projects. It also includes tools for managing deployment pipelines and other important aspects of DevOps.
 
-In this article, you learn how to quickly deploy a backlog with a template. The template aligns cloud adoption efforts to a standardized process. This process is based on guidance in the Cloud Adoption Framework.
+In this article, you learn how to quickly deploy a backlog by using a template. The template aligns cloud adoption efforts to a standardized process. This process is based on guidance in the Cloud Adoption Framework.
 
 ## Create your cloud adoption plan
 
 To deploy the cloud adoption plan, open the [Azure DevOps demo generator](https://aka.ms/adopt/plan/generator). This tool deploys the template to your Azure DevOps tenant. This tool requires the following steps:
 
-1. Verify that the selected template field is set to cloud adoption plan. If it isn't, select choose template to choose the right template.
-2. Select your Azure DevOps organization from the select organization drop-down list box.
-3. Enter a name for your new project. The cloud adoption plan has this name when it's deployed to your Azure DevOps tenant.
-4. Select create project to create a project in your tenant that's based on the strategy and plan template. A progress bar shows your progress toward the deployment of the project.
-5. When deployment is finished, select navigate to project to see your new project.
+1. Verify that the **Selected Template** field is set to **Cloud Adoption Plan**. If it isn't, select **Choose template** to choose the right template.
+2. Select your Azure DevOps organization from the **Select Organization** menu.
+3. Type a name for your new project. The cloud adoption plan has this name when it's deployed to your Azure DevOps tenant.
+4. Select **Create Project** to create a project in your tenant that's based on the strategy and plan template. A progress bar shows your progress toward the deployment of the project.
+5. When deployment is finished, select **Navigate to project** to see your new project.
 
-After your project has been created, see this article series to learn how to modify the template to align to your cloud adoption plan.
+After your project has been created, continue through this article series to learn how to modify the template to align to your cloud adoption plan.
 
 For more support and guidance on this tool, see [Azure DevOps Services demo generator](/azure/devops/demo-gen/).
 
 ## Bulk edit the cloud adoption plan
 
-When your project plan has been deployed, you can use Microsoft Excel to modify it. It's much easier to create workloads, or assets, by using Microsoft Excel compared to the Azure DevOps browser experience.
+After you deploy your project plan, you can use Microsoft Excel to modify it. It's easier to create workloads or assets by using Microsoft Excel compared to the Azure DevOps browser experience.
 
 To prepare your workstation for bulk editing, see [Bulk add or modify work items with Microsoft Excel](/azure/devops/boards/backlogs/office/bulk-add-modify-work-items-excel).
 
-You might want to use Microsoft Project to track their tasks, create backlog, and assign resource. Here are the steps to [connect Microsoft Project to Azure DevOps](/azure/devops/boards/backlogs/create-your-backlog).
+You might want to use Microsoft Project to track tasks, create a backlog, and assign resources. Here are the steps to [connect Microsoft Project to Azure DevOps](/azure/devops/boards/backlogs/create-your-backlog).
 
 ## Use the cloud adoption plan
 
@@ -49,7 +49,7 @@ The cloud adoption plan organizes activities by activity type:
 
 At each layer, activities are sequenced based on dependencies. Activities are linked to articles in the Cloud Adoption Framework to clarify the objective or task at hand.
 
-The clearest view of the cloud adoption plan comes from the epics backlog view. For help with the epics backlog view, see the article on [view a backlog](/azure/devops/boards/backlogs/define-features-epics#view-a-backlog-or-portfolio-backlog). From this view, it's easy to plan and manage the work required to complete the current phase of the adoption lifecycle.
+The clearest view of the cloud adoption plan comes from the epics backlog view. For help with the epics backlog view, see [view a backlog](/azure/devops/boards/backlogs/define-features-epics#view-a-backlog-or-portfolio-backlog). From the backlog view, it's easy to plan and manage the work required to complete the current phase of the adoption lifecycle.
 
 > [!NOTE]
 > The current state of the cloud adoption plan focuses heavily on migration efforts. Tasks related to governance, innovation, or operations must be populated manually.
