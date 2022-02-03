@@ -3,7 +3,7 @@ title: Manage access to your Azure environment with Azure role-based access cont
 description: Learn how to set up access control for your Azure environment with Azure role-based access control.
 author: LijuKodicheraJayadevan
 ms.author: brblanch
-ms.date: 04/09/2019
+ms.date: 02/03/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
