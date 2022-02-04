@@ -133,4 +133,4 @@ The following purposes apply to each folder in the repository:
 
 ## Next steps
 
-[Data management and analytics scenario data products in Azure](/azure/cloud-adoption-framework/scenarios/data-management/architectures/data-landing-zone-data-products)
+[Data management and analytics scenario data products in Azure](../architectures/data-landing-zone-data-products.md)

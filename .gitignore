@@ -12,3 +12,4 @@ _repo.*/
 .vscode/launch.json
 docs/cspell-empty.json
 .DS_Store
+.vscode/settings.json
