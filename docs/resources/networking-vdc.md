@@ -4,7 +4,7 @@ description: Use the Cloud Adoption Framework for Azure to learn how to use Azur
 author: tracsman
 ms.author: brblanch
 manager: rossort
-ms.date: 02/25/2020
+ms.date: 02/04/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: general
