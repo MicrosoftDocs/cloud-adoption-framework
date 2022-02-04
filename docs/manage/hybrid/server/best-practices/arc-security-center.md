@@ -1,6 +1,6 @@
 ---
-title: Connect Azure Arc-enabled servers to Azure Security Center
-description: Learn how to onboard an Azure Arc-enabled server to Azure Security Center.
+title: Connect Azure Arc-enabled servers to Microsoft Defender for Cloud
+description: Learn how to onboard an Azure Arc-enabled server to Microsoft Defender for Cloud.
 author: likamrat
 ms.author: brblanch
 ms.date: 01/15/2020
