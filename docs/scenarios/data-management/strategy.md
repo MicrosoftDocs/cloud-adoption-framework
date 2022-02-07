@@ -199,8 +199,6 @@ Batch processing on Azure Databricks, R, or Python--or for deep learning models-
 
 A data management and analytics scenario helps collate the layers of a data strategy, together with people, process, security, and compliance. We also suggest using the recommended architectures from Azure landing zones to get started. They use the Microsoft Cloud Adoption Framework and incorporate our experience working through thousands of large-scale enterprise deployments.
 
-Now that we've covered the four stages, the following representation shows the key capabilities needed on top of your data platform to provide end-to-end data governance capability.
-
 ### Building blocks
 
 After you make all the capability provisions and take a principled architectural view, you'll most likely end up with the building blocks required for your cloud strategy journey.
@@ -211,25 +209,30 @@ After you make all the capability provisions and take a principled architectural
 
 Taking a principled approach on other (but relevant) considerations, such as data governance and responsible AI, will pay dividends later.
 
-At Microsoft, we use four core principles of fairness, reliability and safety, privacy and security, and inclusiveness. Underpinning these principles are two foundational principles of transparency and accountability.
+At Microsoft, we use four core principles: fairness, reliability and safety, privacy and security, and inclusiveness. Underpinning these principles are two foundational principles of transparency and accountability.
 
 We put responsible AI and our principles into practice through the development of resources and a system of governance. Some of our guidelines focus on human/AI interaction, conversational AI, inclusive design, an AI fairness checklist, and a data sheet for datasets.
 
-In addition to practices, we've developed a set of tools to help others understand, protect, and control AI at every stage of innovation. Our tools are a result of collaboration across various disciplines to strengthen and accelerate responsible AI, spanning software engineering and development, to social sciences, user research, law, and policy.
+In addition to practices, we've developed a set of tools to help others understand, protect, and control AI at every stage of innovation. Our tools are a result of collaboration across various disciplines to strengthen and accelerate responsible AI. That collaboration has spanned software engineering and development, social sciences, user research, law, and policy.
 
-To further collaboration, we also open-sourced many tools such as interpret machine learning and Fairlearn that others can use to contribute and build upon alongside democratizing tools through Azure Machine Learning.
+To further collaboration, we open-sourced many tools, such as InterpretML and Fairlearn. Others can contribute to and build upon these tools. We also democratized tools through Azure Machine Learning.
 
-The pivot to becoming a data-driven organization is fundamental to deliver competitive advantage in the new normal. We want to help our customers' shift from an application only approach to an application and data-led approach, helping to create an end-to-end data strategy that can ensure repeatability and scalability across current and future use cases that impact business outcomes.
+The pivot to becoming a data-driven organization is fundamental to deliver competitive advantage in the new normal. We want to help our customers' shift from an application-only approach to an application and data-led approach. An approach that focuses on applications and data can help create an end-to-end data strategy that ensures repeatability and scalability across current and future use cases that affect business outcomes.
 
-![Diagram of unlocking innovation.](./images/data-strategy-innovation.png)
+![Diagram of unlocking digital innovation.](./images/data-strategy-innovation.png)
 
 ## Foster commitment, communication, and engagement
 
 There must be clear understanding around the adopted approach and desired common business objectives among all key roles involved in making your data strategy a success. The key roles might include the leadership team (C-level), business units, IT, operations, and others.
 
-Communication is one of the most important elements of this framework. It requires a communication process to be devised between leadership, business, IT, and the delivery teams. Communication helps deliver effectively in the context of the current project, and it established a forum to stay in line, up-to date, and focused on the overall objective of formulating a holistic data strategy for the future.
+Communication is one of the most important elements of this framework. An organization must devise a communication process between leadership, business, IT, and the delivery teams. Communication helps deliver effectively in the context of the current project. It also establishes a forum to stay in line, up to date, and focused on the overall objective of formulating a holistic data strategy for the future.
 
-Engagement is essential between team members designing and implementing the data strategy, and team members contributing, consuming, and exploiting the data, such as the business units who will make decisions and build outcomes based upon the data. Put another way, data strategies, and associated data platforms that are built without engagement of the end users of such platforms risk challenges in relevance and adoption.
+Engagement is essential between these two groups:
+
+- Team members who design and implement the data strategy
+- Team members who contribute to, consume, and exploit the data, such as the business units that will make decisions and build outcomes based upon the data. 
+
+Put another way, data strategies and associated data platforms that are built without engagement of the users of such platforms risk challenges in relevance and adoption.
 
 There are two key strategic processes that will help to deliver successfully in the context of this framework:
 
@@ -240,7 +243,7 @@ For more information, see [Building your plan](./plan.md).
 
 ## Deliver value
 
-When you deliver data products against the set-out success criteria in a standardized and structured way, it's going to validate the iterative framework. Additionally, when you take the learning and continuously innovate, it will help build business confidence and widen out the data strategy strategic goals. This process will provide clearer and quicker adoption across the business.
+When you deliver data products against the success criteria in a standardized and structured way, it's going to validate the iterative framework. Additionally, when you take the learning and continuously innovate, that will help build business confidence and widen out the data strategy strategic goals. This process will provide clearer and quicker adoption across the business.
 
 ## Next steps
 
