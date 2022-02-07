@@ -51,6 +51,7 @@ The following key requirements and considerations that affect your Azure Virtual
 - Internet ingress and egress requirements.
 - NVA use in the current architecture.
 - Azure Virtual Desktop connectivity to a standard hub virtual network or Virtual WAN hub.
+- Session host connection model (native and RDP Shortpath).
 - Traffic inspection requirements for:
   - Internet egress from Azure Virtual Desktop.
   - Internet ingress to Azure Virtual Desktop.
@@ -60,9 +61,19 @@ The following key requirements and considerations that affect your Azure Virtual
 
 The following scenarios describe the most common networking scenarios for Azure Virtual Desktop. This list isn't exhaustive. For more scenarios.
 
-## Scenario 1: Secured Virtual WAN hub with default route propagation
+## Scenario 1: Hub & Spoke with hybrid connectivity
 
 ### Customer profile
+
+This scenario is ideal if:
+
+- You don't need traffic inspection between Azure Virtual Desktop networks and other Azure virtual networks.
+- You don't need traffic inspection between Azure Virtual Desktop networks and on-premises datacenters.
+- You don't need traffic inspection of internet-bound traffic from Azure Virtual Desktop networks.
+- You have a pre-existing hybrid connectivity to on-premeses (Express Route or S2S VPN).
+- You do need traffic inspection between Azure VMware Solution workloads and the internet.
+
+In this scenario, you consume Azure VMware Solution as a platform as a service (PaaS) offering. You don't own the public IP addresses. You have to add public-facing L4 and L7 inbound services if needed. You might or might not already have ExpressRoute connectivity between on-premises datacenters and Azure.
 
 ### Architectural components
 
@@ -79,9 +90,6 @@ Virtual WAN supports [transit connectivity between VPN and ExpressRoute](/azure/
 ### DNS and identity services
 
 Regardless of the connectivity model used, Azure Virtual Desktop subnets need to have connectivity to identity (AD DS or AADDS) and DNS (Custom DNS) services.
-
-### Hybrid connectivity (Express Route or VPN)
-
 
 ### Bandwidth and latency
 
