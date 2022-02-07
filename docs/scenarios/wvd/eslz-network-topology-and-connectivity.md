@@ -69,13 +69,23 @@ This scenario is ideal if:
 
 - You don't need traffic inspection between Azure Virtual Desktop networks and other Azure virtual networks.
 - You don't need traffic inspection between Azure Virtual Desktop networks and on-premises datacenters.
-- You don't need traffic inspection of internet-bound traffic from Azure Virtual Desktop networks.
-- You have a pre-existing hybrid connectivity to on-premeses (Express Route or S2S VPN).
+- You don't need traffic inspection of internet outbound traffic from Azure Virtual Desktop networks.
+- You don't need to control the public IPs use to SNAT Azure Virtual Desktop internet outbound connections.
+- You don't enforced network filtering within Azure Virtual Desktops networks.
+- You have pre-existing hybrid connectivity to on-premeses (Express Route or S2S VPN).
+- You have pre-existing ADDS and DNS custom DNS servers.
 - You do need traffic inspection between Azure VMware Solution workloads and the internet.
-
-In this scenario, you consume Azure VMware Solution as a platform as a service (PaaS) offering. You don't own the public IP addresses. You have to add public-facing L4 and L7 inbound services if needed. You might or might not already have ExpressRoute connectivity between on-premises datacenters and Azure.
+- You consume Azure Virtual Desktop in native connection model (No RDP Shortpath).
 
 ### Architectural components
+
+You can implement this scenario with:
+
+- Azure Firewall in the secured Virtual WAN hub for firewalls.
+- ADDS servers and custom DNS servers.
+- Network security groups.
+- Outbound internet via default Azure vNEt SNAT.
+- Express route or VPN gateway for hybrid connectivity.
 
 ### Considerations
 
