@@ -16,7 +16,7 @@ A best practice for customers is to create a single, centralized cloud adoption 
 
 This article exposes considerations about data management and analytics that will affect your broader strategy.
 
-## Prioritize business outcomes that you want your data strategy to achieve
+## Prioritize business outcomes for your data strategy
 
 It's key to align your data strategy with your business outcomes. Having a successful data strategy will give you a competitive advantage. Most business outcomes can be classified under one or more of these four categories:
 
@@ -32,8 +32,6 @@ After you've prioritized your business outcomes, look at your current projects a
 
 ## Unlock strategic value
 
-Throughout your journey in business intelligence, analytics, and AI maturity, there are key themes in unlocking the strategic value of data for consistent business growth. 
-
 There are inherent complexities and ground realities in building a data-driven culture to drive business forward in a consistent, forward-thinking, agile, and informed way. Before you move to the deployment phase, you should focus efforts toward formulating a coherent data strategy to achieve desired business outcomes.
 
 Data management and analytics are aligned to [innovation-focused motivations](../../strategy/motivations.md). Customers who integrate this scenario into their cloud adoption strategy are motivated by the following common drivers:
@@ -46,7 +44,7 @@ Data management and analytics are aligned to [innovation-focused motivations](..
 - Transformation of products or services
 - Market disruption with new products or services
 
-The following key themes outline how you can realize these motivations in your strategy. Carefully analyze them and how they relate to the important aspects of a coherent data strategy.
+The following key themes outline how you can realize these motivations in your strategy. Carefully analyze them and think about how they relate to a coherent data strategy. Also think about how they can unlock the strategic value of data for consistent business growth.
 
 ![Diagram that shows the key themes of increasing efficiencies, data democratization, and governance.](./images/key-themes.png)
 
@@ -64,7 +62,7 @@ Central IT has slowly been shifting to shadow IT, becoming more decentralized an
 
 There are many reasons why businesses fail to tap into the full potential of their data. It might be because business functions work in silos, where each team uses different tools and standards for data analysis. Or it might be a failure to link key performance indicators to overall business goals.
 
-Data democratization helps deliver that value back to business and achieve challenging business growth targets.
+Data democratization helps deliver that value back to business and achieve challenging targets for business growth.
 
 ### Governance
 
@@ -80,9 +78,9 @@ For more information, see [What is data governance?](./govern.md).
 
 ## Develop a data-driven culture
 
-To build a successful data strategy, you need a data-driven culture. Develop one that fosters open, collaborative participation consistently. This is so the entire workforce can learn, communicate, and improve the organization's business outcomes. It will also improve each employee's ability to generate impact or influence, backed by data. 
+To build a successful data strategy, you need a data-driven culture. Develop one that fosters open, collaborative participation consistently. The entire workforce can then learn, communicate, and improve the organization's business outcomes. Developing a data-driven culture will also improve each employee's ability to generate impact or influence, backed by data. 
 
-Where you start on the journey will depend on your organization, your industry, and where you in the maturity curve. Let's look at what a maturity curve looks like.
+Where you start on the journey will depend on your organization, your industry, and where you are in the maturity curve. Let's look at what a maturity curve looks like.
 
 ### Level 0
 
@@ -141,9 +139,9 @@ Each step has its own set of principles, processes, tools, and technologies.
 
 Withholding data assets and related insights might affect socioeconomic, political, research, and investment decisions. That's why it's paramount for organizations to build the capability to provide insights in a secure and responsible way. All data that's generated or acquired must go through a data classification exercise, unless otherwise explicitly stated. Where needed, the gold standard for dealing with confidential data is encryption at rest and in transit. 
 
-Data, applications, and services all have their own gravitational pull. But data is the heaviest here, and so it has the most gravitational pull. Unlike Newton's apple, data doesn't have a physical mass to draw in surrounding objects. Instead, latency and throughput act as accelerators to the analytics process. Latency, throughput, and ease of access often require that data is duplicated even when that isn't the desired outcome. Set up people, processes, tools, and technologies appropriately to balance such requirements against the organization's data policies. 
+Data, applications, and services all have their own gravitational pull. But data is the heaviest here, and so it has the most gravitational pull. Unlike Newton's apple, data doesn't have a physical mass to draw in surrounding objects. Instead, latency and throughput act as accelerators to the analytics process. Latency, throughput, and ease of access often require duplication of data, even when that isn't the desired outcome. Set up people, processes, tools, and technologies appropriately to balance such requirements against the organization's data policies. 
 
-Architectural constructs govern the speed at which data can be processed. And it's facilitated through innovations in software, hardware, and networking. Some of the architectural considerations are: 
+Architectural constructs govern the speed at which data can be processed. And they're facilitated through innovations in software, hardware, and networking. Some of the architectural considerations are: 
 
 - Setting up data distribution
 - Partitioning
@@ -155,7 +153,7 @@ Architectural constructs govern the speed at which data can be processed. And it
 
 Using data to build better products and higher-value services as a point of competitive advantage is nothing new. What is new is the volume, velocity, and variety of data that cloud computing has enabled.
 
-Designing a modern data analytics platform in the cloud is the convergence of security, governance, monitoring, on-demand scaling, data-operations, and self-service. Understanding how these facets interplay distinguishes a great data strategy from a good one. You can use tools like the Cloud Adoption Framework to help ensure architectural cohesiveness, integrity, and best practices.
+Designing a modern data analytics platform in the cloud is the convergence of security, governance, monitoring, on-demand scaling, data operations, and self-service. Understanding how these facets interplay distinguishes a great data strategy from a good one. You can use tools like the Cloud Adoption Framework to help ensure architectural cohesiveness, integrity, and best practices.
 
 With data governance as the focus, the following diagram shows the main stages of a data life cycle:
 
@@ -171,7 +169,7 @@ A key consideration for data ingestion is the ability to build a data pipeline f
 
 When you're building a pipeline, consider design, along with the ability to wrangle data, scale compute, and distribute data. Also, having the right DevOps support for the continuous integration and delivery of your pipeline is critical. 
 
-Tools such as Azure Data Factory support a plethora of on-premises, software as a service (SaaS), and data sources from other public clouds. Having such agility from the start is always helpful.
+Tools such as Azure Data Factory support a plethora of on-premises data sources, software as a service (SaaS) data sources, and data sources from other public clouds. Having such agility from the start is always helpful.
 
 ### Storage
 
@@ -185,7 +183,7 @@ Your data processing needs will vary according to the workload. For example, mos
 
 The most popular organizational processing requirements come from online transaction processing (OLTP). Certain workloads need specialized processing, such as high-performance computing (HPC), also called "big compute." These workloads use many CPU or GPU-based computers to solve complex mathematical tasks.
 
-For certain specialized workloads, customers can secure execution environments like Azure confidential computing, which helps users secure data while it's in use on public cloud platforms. This state is required for efficient processing. The data is protected inside a trusted execution environment (TEE), also known as an enclave. This environment protects the code and data against viewing and modification from outside the TEE. This creates the ability to train AI models by using data sources from different organizations without sacrificing data confidentiality.
+For certain specialized workloads, customers can secure execution environments like Azure confidential computing, which helps users secure data while it's in use on public cloud platforms. This state is required for efficient processing. The data is protected inside a trusted execution environment (TEE), also known as an enclave. This environment protects the code and data against viewing and modification from outside the TEE. It creates the ability to train AI models by using data sources from different organizations without sacrificing data confidentiality.
 
 ### Analytics
 
@@ -199,7 +197,7 @@ A data management and analytics scenario helps collate the layers of a data stra
 
 ### Building blocks
 
-After you make all the capability provisions and take a principled architectural view, you'll most likely end up with the building blocks required for your cloud strategy journey.
+After you make all the capability provisions and take a principled architectural view, you should have the building blocks for your cloud adoption strategy.
 
 :::image type="content" source="./images/data-strategy-building-block.png" alt-text="Diagram of a decision tree for managing credentials." lightbox="./images/data-strategy-building-block.png":::
 
@@ -228,7 +226,7 @@ Communication is one of the most important elements of this framework. An organi
 Engagement is essential between these two groups:
 
 - Team members who design and implement the data strategy
-- Team members who contribute to, consume, and exploit the data, such as the business units that will make decisions and build outcomes based upon the data. 
+- Team members who contribute to, consume, and exploit the data, such as the business units that will make decisions and build outcomes based upon the data
 
 Put another way, data strategies and associated data platforms that are built without engagement of the users of such platforms risk challenges in relevance and adoption.
 
@@ -237,7 +235,7 @@ Two strategic processes will help to deliver successfully in the context of this
 - Formation of a center of excellence
 - Adoption of an agile delivery method
 
-For more information, see [Building your plan](./plan.md).
+For more information, see [Develop a plan for data management and analytics](./plan.md).
 
 ## Deliver value
 
