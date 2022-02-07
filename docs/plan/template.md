@@ -49,7 +49,7 @@ The cloud adoption plan organizes activities by activity type:
 
 At each layer, activities are sequenced based on dependencies. Activities are linked to articles in the Cloud Adoption Framework to clarify the objective or task at hand.
 
-The clearest view of the cloud adoption plan comes from the epics backlog view. For help with the epics backlog view, see [view a backlog](/azure/devops/boards/backlogs/define-features-epics#view-a-backlog-or-portfolio-backlog). From the backlog view, it's easy to plan and manage the work required to complete the current phase of the adoption lifecycle.
+The clearest view of the cloud adoption plan comes from the **Epics** backlog view. For help with the backlog view, see [view a backlog](/azure/devops/boards/backlogs/define-features-epics#view-a-backlog-or-portfolio-backlog). From the backlog view, it's easy to plan and manage the work required to complete the current phase of the adoption lifecycle.
 
 > [!NOTE]
 > The current state of the cloud adoption plan focuses heavily on migration efforts. Tasks related to governance, innovation, or operations must be populated manually.
