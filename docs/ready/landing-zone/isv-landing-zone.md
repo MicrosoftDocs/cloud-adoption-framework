@@ -157,7 +157,7 @@ Regular customers use separate Azure subscriptions for each application team and
 
 On the other hand, SaaS ISVs might need to group multiple subscriptions that represent shards or partitions of the *same* subsystem, application, or workload. If, as an ISV, you have specific requirements to have Azure Policies or Azure RBAC applied to these groups of subscriptions in way that's noticeably different from the archetype management group, you can consider creating child management groups that correspond to each environment under the archetype management group.
 
-TODO: Diagram showing the landing zone management group options.
+![Diagram that shows Landing Zones management group with potential environment-specific management group level for SaaS ISVs who need to group many subscriptions of the same subsystem.](./media/isv-landing-zone/isv-landing-zones-mg.png)
 
 ## Decommissioned and Sandboxes Management Groups
 
