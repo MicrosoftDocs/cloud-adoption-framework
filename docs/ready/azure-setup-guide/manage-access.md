@@ -25,6 +25,38 @@ When planning your access control methodology try to work with people in your or
 
 The Cloud Adoption Framework offers more guidance on using [Azure role-based access control](../considerations/roles.md) in your cloud adoption efforts.
 
+::: zone target="chromeless"
+
+## Actions
+
+**Grant resource group access:**
+
+To grant a user access to a resource group:
+
+1. Go to **Resource groups**.
+1. Select a resource group.
+1. Select **Access control (IAM)**.
+1. Select **+ Add** > **Add role assignment**.
+1. Select a role, and then assign access to a user, group, or service principal.
+
+::: form action="OpenBlade[#blade/HubsExtension/Resources/resourceType/Microsoft.Resources%2FSubscriptions%2FResourceGroups]" submitText="Go to resource groups" ::: form-end
+
+**Grant subscription access:**
+
+To grant a user access to a subscription:
+
+1. Go to **Subscriptions**.
+1. Select a subscription.
+1. Select **Access control (IAM)**.
+1. Select **+ Add** > **Add role assignment**.
+1. Select a role, and then assign access to a user, group, or service principal.
+
+::: form action="OpenBlade[#blade/Microsoft_Azure_Billing/SubscriptionsBlade]" submitText="Go to subscriptions" ::: form-end
+
+::: zone-end
+
+::: zone target="docs"
+
 ## Grant resource group access
 
 To grant a user access to a resource group:
