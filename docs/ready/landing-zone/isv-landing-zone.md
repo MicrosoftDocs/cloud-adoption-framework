@@ -114,7 +114,7 @@ Using separate Azure Active Directory tenants for pre-production and production 
 
 For more in depth discussion on the decision for multiple Azure AD tenants, see the [securing Azure environments with Azure Active Directory whitepaper](https://azure.microsoft.com/resources/securing-azure-environments-with-azure-active-directory/).
 
-> ![NOTE]
+> [!NOTE]
 > Using separate Azure Active Directory tenants involves higher management overhead and should be used sparingly only when required. In addition, if you are using Azure AD Premium features like Privileged Identity Management, you would need to purchase the license for each of the tenants.
 
 TODO: Diagram showing Azure AD tenant options.
