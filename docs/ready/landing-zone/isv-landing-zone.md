@@ -131,7 +131,7 @@ On the other hand, if each of the SaaS products is managed and operated by compl
 
 ![Diagram that shows top-level management group options with a single management group and separate management groups for each of the SaaS Products](./media/isv-landing-zone/isv-top-level-mg.png)
 
-## "Platform" Management Group
+## Platform Management Group
 
 In the [Azure landing zone resource organization hierarchy](./design-area/resource-org-management-groups.md#management-groups-in-the-azure-landing-zone-accelerator), the "Platform" management group contains all of the Azure subscriptions with resources hosting the *shared services and components* used by the workloads in the landing zone subscriptions. For example, the following components are usually part of the platform or shared services subscriptions: centralized logging infrastructure such as Log Analytics workspaces, DevOps, security, and automation tooling, central networking resources such as hub-VNet and DDos Protection plans, and ISV's own control plane services.
 
@@ -141,7 +141,7 @@ If on the other hand, you expect to need separate Azure Policies for different p
 
 ![Diagram that shows Platform management group options with a single management group and platform subscription or separate management groups for management, connectivity, and identity.](./media/isv-landing-zone/isv-platform-mg.png)
 
-## "Landing Zones" Management Group
+## Landing Zones Management Group
 
 "Landing Zones" management group is the holding place for Azure subscriptions that host the actual subsystems and workloads of the SaaS solution. This management group contains one or more child management groups. Each of the child management groups under the "Landing Zones" represents a workload or subsystem "archetype" with consistent policy and access requirements that should apply to all subscriptions.
 
@@ -169,7 +169,11 @@ Sandboxes management group usually houses Azure subscriptions that are used for 
 
 ![Diagram that shows the optional Decommissioned and Sandboxes management groups on the same level as the Platform and Landing Zones management groups.](./media/isv-landing-zone/isv-decommissioned-mg.png)
 
-TODO: Two diagrams showing ISV landing zones: the simplest possible and more full featured
+## Example Azure landing zone structure for SaaS ISV
+
+The following diagram shows a potential SaaS ISV Azure landing zones hierarchy. In this diagram, the ISV decided to keep all platform components in one Azure subscription instead of splitting them as described in the [platform management group](#platform-management-group) section. In this example, there is only one "Landing Zone" with [environment-specific management groups](#landing-zones-management-group) for organizing the subscriptions and assigning different Azure Policy and RBAC. Gray-color sections on the diagram are optional and are shown for reference of what you can do if you need to have complete platform-level separation between different SaaS products each with their own platform.
+
+![Diagram that shows how Azure landing zone hierarchy can look like for an ISV with three completely separate SaaS products each with its own separate platform and landing zones.](./media/isv-landing-zone/isv-landing-zone-example1.png)
 
 ## Next steps
 
