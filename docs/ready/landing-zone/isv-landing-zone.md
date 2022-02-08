@@ -117,8 +117,6 @@ For more in depth discussion on the decision for multiple Azure AD tenants, see 
 > [!NOTE]
 > Using separate Azure Active Directory tenants involves higher management overhead and should be used sparingly only when required. In addition, if you are using Azure AD Premium features like Privileged Identity Management, you would need to purchase the license for each of the tenants.
 
-TODO: Diagram showing Azure AD tenant options.
-
 ![Diagram that shows Azure AD tenant options for ISVs with a single corporate tenant or separation between corporate and SaaS Ops tenants.](./media/isv-landing-zone/isv-aad-tenant.png)
 
 ## Top-level Management Group
@@ -131,13 +129,13 @@ If all of the product share the *same* "platform" for DevOps, identity, security
 
 On the other hand, if each of the SaaS products is managed and operated by completely separate platform teams - such as saas01-ops and saas02-ops - you can create separate top-level management groups for each of the SaaS products each with its own landing zone management group hierarchy including platform, landing zones, and optionally decommissioned, and sandbox. This is similar to the [testing approach for enterprise-scale landing zones](../enterprise-scale/testing-approach#example-scenarios-and-outcomes.md), but instead of Contoso and Contoso-Canary, as a SaaS ISV with completely separate products with their own individual platforms, you would have Contoso-SaaS-01 and Contoso-SaaS-02.
 
-TODO: Diagram showing the top-level management group options.
+![Diagram that shows top-level management group options with a single management group and separate management groups for each of the SaaS Products](./media/isv-landing-zone/isv-top-level-mg.png)
 
 ## "Platform" Management Group
 
 In the [Azure landing zone resource organization hierarchy](./design-area/resource-org-management-groups.md#management-groups-in-the-azure-landing-zone-accelerator), the "Platform" management group contains all of the Azure subscriptions with resources hosting the *shared services and components* used by the workloads in other subscriptions. For example, the following components are usually part of the platform or shared services: centralized logging infrastructure such as Log Analytics workspaces, DevOps, security, and automation tooling, central networking resources such as hub-VNet and DDos Protection plans, and ISV's own control plane services.
 
-For convenient separation of roles and policies for enterprise customers, the Platform management group is frequently partitioned into three child management groups: Identity, Management, and Connectivity. If in your organization there is a single team that is managing all shared platform components (i.e., networking, identity, and management), and you expect it to continuing being a single team, you can use a single "platform" management group and start with one "platform" Azure subscription within that management group. 
+For convenient separation of roles and policies for enterprise customers, the Platform management group is frequently partitioned into three child management groups: Identity, Management, and Connectivity. If in your organization there is a single team that is managing all shared platform components (i.e., networking, identity, and management), and you expect it to continuing being a single team, you can use a single "platform" management group and start with one "platform" Azure subscription within that management group.
 
 If on the other hand, you expect to need separate Azure Policies for different parts of the central platform, you should start with additional level in the management group hierarchy under the platform to separate parts that will be managed by different teams.
 
