@@ -81,11 +81,12 @@ This scenario is ideal if:
 
 You can implement this scenario with:
 
-- Azure Firewall in the secured Virtual WAN hub for firewalls.
 - ADDS servers and custom DNS servers.
 - Network security groups.
-- Outbound internet via default Azure vNEt SNAT.
-- Express route or VPN gateway for hybrid connectivity.
+- Outbound internet via default Azure vNet path.
+- Express route or VPN gateway for hybrid connectivity to on-premeses.
+- Virtual Network Gateway.
+- 
 
 ### Considerations
 
