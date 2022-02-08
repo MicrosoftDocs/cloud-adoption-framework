@@ -1,6 +1,6 @@
 ---
-title: data lake specifics for data mesh
-description: Learn about data lake specifics for data mesh
+title: Data mesh data ops
+description: Learn about Data mesh data ops
 author: mboswell
 ms.author: mboswell
 ms.date: 03/03/2021
@@ -10,6 +10,6 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# data lake specifics for data mesh
+# Data mesh data ops
 
 xxxx
