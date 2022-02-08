@@ -1,6 +1,6 @@
 ---
 title: observability 
-description: Learn about data mesh in azure
+description: Learn about data mesh observability in azure
 author: mboswell
 ms.author: mboswell
 ms.date: 03/03/2021
