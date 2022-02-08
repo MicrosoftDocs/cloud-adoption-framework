@@ -119,6 +119,8 @@ For more in depth discussion on the decision for multiple Azure AD tenants, see 
 
 TODO: Diagram showing Azure AD tenant options.
 
+![Diagram that shows Azure AD tenant options for ISVs with a single corporate tenant or separation between corporate and SaaS Ops tenants.](./media/isv-landing-zone/isv-aad-tenant.png)
+
 ## Top-level Management Group
 
 [Azure landing zone conceptual architecture](index.md#azure-landing-zone-conceptual-architecture) recommends using a specific Management Group hierarchy nested under the "Tenant root group" and not using the root group directly. For a regular customer with a centralized corporate IT team managing the platform and shared services like logging, networking, identity, and security, there is usually one top-level management group (e.g., Contoso) under the root group with everything else below that management group.
