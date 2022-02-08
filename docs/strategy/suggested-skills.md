@@ -1,50 +1,50 @@
 ---
-title: Skills readiness path during the planning phase of a migration journey
-description: Use the Cloud Adoption Framework for Azure to learn about the skills readiness path during the planning phase of migration.
+title: Skills needed to support the strategy phase of cloud adoption 
+description: Use the Cloud Adoption Framework for Azure to learn about the skills needed during the strategy phase of cloud adoption.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 05/19/2019
+ms.date: 02/01/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ms.custom: internal
 ---
 
-# Skills readiness path during the planning phase of a migration journey
+# Skills needed to support the strategy phase of cloud adoption
 
-The objective during the planning phase of a migration journey is to develop the plans necessary to guide migration implementation. This phase requires a few critical skills, including:
+The objective during the strategy phase of a cloud adoption journey is to develop the plans needed to guide its technical implementation. This phase requires critical skills such as:
 
-- Establishing the vision.
-- Building the business justification.
-- Rationalizing the digital estate.
-- Creating a migration backlog (technical plan).
+- Establishing your vision.
+- Building your business justification.
+- Rationalizing your digital estate.
+- Creating your migration backlog (technical plan).
 
-The following sections provide learning paths to develop each of these skills.
+The learning paths in the sections below help you to develop each of these skills.
 
-## Establish the vision
+## Establish your vision
 
-The success of any cloud adoption effort is defined by the business vision. When the technical team doesn't understand the motives and desired outcomes, it's hard for them to guide their efforts toward business success. See these articles for information about documenting and articulating the business vision for the technical team:
+The success of any cloud adoption effort is defined by your business vision. When the technical team doesn't understand the motives and desired outcomes, it's hard for them to guide their efforts toward business success. Read more about documenting and articulating the business vision for the technical team:
 
 - [Adoption motivations](./motivations.md). Document and articulate the reasons behind the technical effort.
 - [Business outcomes](./business-outcomes/index.md). Clearly articulate what's expected of the technical team in terms of business changes.
 - [Learning metrics](./learning-metrics.md). Establish short-term metrics that can show progress toward longer-term business outcomes.
 
-## Build the business justification
+## Build your business justification
 
 Justifying the investment to adopt the cloud can require deeper analysis and an understanding of your organization's accounting practices. The articles on business justification can help you develop these skills:
 
 - [Cloud migration business case](./cloud-migration-business-case.md). Establish a business case for cloud migration.
 
-## Rationalize the digital estate
+## Rationalize your digital estate
 
 You can refine your business case by aligning the desired business case with current and future digital estate inventory. These articles can guide the development of a digital estate rationalization:
 
 - [Incremental rationalization](../digital-estate/rationalize.md): An agile approach to rationalization that properly aligns late-bound technical decisions.
 - [The five Rs of rationalization](../digital-estate/5-rs-of-rationalization.md): Understand the various rationalization options.
 
-## Create a migration backlog (technical plan)
+## Create your migration backlog (technical plan)
 
-Convert the business case and rationalized digital estate into an actionable migration plan to guide the technical activities required to achieve the desired business outcomes.
+Convert your business case and rationalized digital estate into an actionable migration plan to guide the technical activities required to achieve your desired business outcomes.
 
 ## Business planning skills
 

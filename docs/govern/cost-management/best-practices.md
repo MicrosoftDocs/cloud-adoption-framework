@@ -206,7 +206,7 @@ Using Azure Reserved VM Instances, you prepay for either a one-year or three-yea
 - You can cancel reserved instances.
 
 ![Azure Reserved VM Instances](../../migrate/azure-best-practices/media/migrate-best-practices-costs/reserve.png)
-*Figure 1: Azure Reserved VM instances.*
+*Figure 1: Azure Reserved VM Instances.*
 
 **Learn more:**
 
