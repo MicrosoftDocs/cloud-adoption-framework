@@ -167,7 +167,7 @@ Decommissioned management group is the holding place for Azure subscriptions tha
 
 Sandboxes management group usually houses Azure subscriptions that are used for exploration purposes and have loose or no Azure Policies applied to them. For example, individual developer subscriptions could be placed in the Sandboxes management group to not have the regular SaaS product Azure Policies and governance applied to these subscriptions to increase experimentation agility. The subscriptions in Sandboxes management group should not have direct connectivity to the landing zone subscriptions running pre-production or production workloads.
 
-TODO: Diagram showing the optional decommissioned and sandboxes management groups.
+![Diagram that shows the optional Decommissioned and Sandboxes management groups on the same level as the Platform and Landing Zones management groups.](./media/isv-landing-zone/isv-decommissioned-mg.png)
 
 TODO: Two diagrams showing ISV landing zones: the simplest possible and more full featured
 
