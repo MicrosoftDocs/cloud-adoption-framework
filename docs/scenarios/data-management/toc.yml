@@ -99,15 +99,16 @@ items:
     - name: Data management landing zone
       href: ./architectures/data-management-landing-zone.md
     - name: Data landing zone
-      items:
-      - name: Overview
-        href: ./architectures/data-landing-zone.md
-      - name: Data integrations
-        href: ./architectures/data-landing-zone-data-integration.md
-      - name: Data products
-        href: ./architectures/data-landing-zone-data-products.md
+      href: ./architectures/data-landing-zone.md
 
-    - name: Reference architectures
+    - name: Data Products
+      items:
+        - name: Overview
+          href: ./architectures/data-landing-zone-data-products.md
+        - name: Data Application Templates
+          href: ./architectures/data-landing-zone-data-integration.md
+
+    - name: Reference architectures (archive)
       items:
       - name: Overview
         href: ./architectures/reference-architecture-overview.md
@@ -119,6 +120,49 @@ items:
         href: ./architectures/reference-architecture-lamna.md
       - name: Financial institution scenario for data mesh
         href: ./architectures/reference-architecture-data-mesh.md
+
+    - name: Data mesh
+      items:
+      - name: Overview
+        href: ./architectures/what-is-data-mesh.md
+      - name: Data Domains
+        href: ./architectures/data-domains.md
+      - name: Data Products
+        href: ./architectures/what-is-data-product.md
+      - name: Domain agnostics infra
+        href: ./architectures/domain-agnostic-infra.md
+      - name: Observability
+        href: ./architectures/observability.md
+      - name: Data Onboarding
+        href: ./architectures/data-onboarding.md
+      - name: Registration of data products
+        href: ./architectures/registration-of-data-products.md        
+      - name: Data mesh governance
+        href: ./architectures/data-mesh-governance.md
+      - name: Metadata standard
+        href: ./architectures/metadata-standards.md
+      - name: Data Marketplace
+        href: ./architectures/data-marketplace.md
+      - name: Models
+        href: ./architectures/models-cdm.md
+      - name: Data Quality
+        href: ./architectures/data-quality.md
+
+      - name: Data sharing
+        items:
+        - name: Overview
+          href: ./architectures/data-sharing-overview.md
+        - name: Alignment with application integration
+          href: ./architectures/alignment-with-application-integration.md
+        - name: Data virtualization
+          href: ./architectures/data-virtualization.md
+
+      - name: Data mesh operating model
+        href: ./architectures/data-mesh-dataops.md
+      - name: Data mesh networking
+        href: ./architectures/data-mesh-networking-considerations.md
+      - name: Data mesh security
+        href: ./architectures/data-mesh-security.md
 
     - name: Deployment templates
       href: ./architectures/deployment-templates.md

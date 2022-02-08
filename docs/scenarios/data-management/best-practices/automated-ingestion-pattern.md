@@ -102,7 +102,7 @@ PUT https://{accountName}.scan.purview.azure.com/datasources/{dataSourceName}
 |`accountName`    | True       | String        | Name of the Azure Purview account         |
 |`dataSourceName` | True       | String        | Name of the data source         |
 
-### Use the Azure Purview REST API
+### Use the Azure Purview REST API for registration
 
 The following examples show how to use the Azure Purview REST API to register data sources with payloads:
 
@@ -165,7 +165,7 @@ PUT https://{accountName}.scan.purview.azure.com/datasources/{dataSourceName}/sc
 |`dataSourceName` | True        | String        | Name of the data source         |
 |`newScanName`    | True        | String        | Name of the new scan         |
 
-### Use the Azure Purview REST API
+### Use the Azure Purview REST API for scanning
 
 The following examples show how to use the Azure Purview REST API to scan data sources with payloads:
 
