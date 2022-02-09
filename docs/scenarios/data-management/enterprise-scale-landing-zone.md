@@ -53,7 +53,7 @@ To learn more, see:
 
 At the heart of data management and analytics scenario, is its management capability. This capability is enabled through the data management landing zone.
 
-:::image type="content" source="./images/data-management-overview-1.png" alt-text="Diagram of a Data management overview.":::
+:::image type="content" source="./images/data-management-overview-1.png" alt-text="Diagram of a Data management overview." lightbox="images/data-management-overview-1.png":::
 
 The **Data management landing zone** is a subscription that governs the platform and supports the following capabilities:
 
@@ -72,7 +72,7 @@ For more information, see [Overview of the Azure Data management and analytics s
 
 **Data landing zones** are subscriptions that host multiple analytics and AI solutions relevant to their respective domain or domain(s). These subscriptions within Data management and analytics scenario represent primary business groups, integrators, and enablers. These groups own, operate, and often provide innate understanding for the source systems.
 
-:::image type="content" source="./images/data-landing-zone-overview.png" alt-text="Diagram of a data landing zone.":::
+:::image type="content" source="./images/data-landing-zone-overview.png" alt-text="Diagram of a data landing zone." lightbox="images/data-landing-zone-overview.png":::
 
 A few important points to keep in mind about data landing zones:
 
