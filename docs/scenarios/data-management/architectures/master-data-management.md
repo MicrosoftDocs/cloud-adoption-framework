@@ -1,5 +1,5 @@
 ---
-title: Manage master data
+title: Manage master data in data mesh
 description: Learn about managing master data in Data Mesh.
 author: PietheinStrengholt
 ms.author: pstrengholt
