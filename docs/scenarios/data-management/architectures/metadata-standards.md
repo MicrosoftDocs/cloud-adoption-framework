@@ -33,12 +33,13 @@ After you know what metadata you need, you need to find a place for storing and 
 
 When implementing Azure Purview, it's recommend not introducing too much change and complexity quickly. The technical metadata is the foundation. You’ll need to gather and organize this before you can make sense of it. After this, start with the basics: business terms, lists of authoritative data sources and databases, schema information, data ownership and stewardship, and security. Slowly scale by involving more domain owners and data stewards. Also scale by adding more classifications and sensitivity labels. This improves the search experience and allows for better data access management.
 
-For your domain-oriented architecture, it's recommended to align your Azure Purview Collections and Glossaries with your data domains. Collections in Azure Purview are used to organize assets and sources. You can use these as a boundary for your assets and sources within a particular domain. You can do the same for your glossary: create hierarchy structures within your glossary and align these with your domains. Ask your domains to take ownership for creating relationships between your glossary terms and collection attributes. This creates transparency over data ownership and improves your data semantics.
+For your domain-oriented architecture, it's recommended to align your Azure Purview Collections and Glossaries with your data domains. Collections in Azure Purview are used to organize assets and sources. You can use a Collection as a boundary for your assets and sources and align this with a particular domain. You can do the same for your glossary: create hierarchy structures within your glossary and align these with your domains. Ask your domains to take ownership for creating relationships between your glossary terms and collection attributes. This creates transparency over data ownership and improves your data semantics.
 
 ## Recommendation: Use Azure Cosmos DB for your company Knowledge Graph
 
 There's a growing trend in the industry to bring insights of your data closer to data analysts and scientists by using portals that use more metadata intensively. This trend is also known as “Data observability” and features concepts like Metadata Lake, Knowledge Graph or Metadata Graph to describe platforms where metadata is centralized.
 
-For building a unified view of data for your organization with custom user experience it's recommended to look at Azure Cosmos DB. Azure Cosmos DB is a globally distributed, multi-model database service with NoSQL endpoints. It provides a graph database service via the Gremlin API to store massive graphs with billions of vertices and edges.
+For building a unified view of data for your organization with custom user experience it's recommended to look at Azure Cosmos DB, which is a globally distributed, multi-model database service with NoSQL endpoints. It provides a graph database service via the Gremlin API to store massive graphs with billions of vertices and edges.
+
 
 
