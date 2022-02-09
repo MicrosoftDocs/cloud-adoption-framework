@@ -3,7 +3,7 @@ title: Manage access to your Azure environment with Azure role-based access cont
 description: Learn how to set up access control for your Azure environment with Azure role-based access control.
 author: LijuKodicheraJayadevan
 ms.author: brblanch
-ms.date: 04/09/2019
+ms.date: 02/08/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -12,18 +12,17 @@ ms.custom: think-tank, fasttrack-edit, AQC, setup
 
 # Manage access to your Azure environment with Azure role-based access control
 
-Managing who can access your Azure resources and subscriptions is an important part of your Azure governance strategy, and assigning group-based access rights and privileges is a good practice. Dealing with groups rather than individual users simplifies maintenance of access policies, provides consistent access management across teams, and reduces configuration errors. Azure role-based access control (Azure RBAC) is the primary method of managing access in Azure.
+Managing who can access your Azure resources and subscriptions is an important part of your Azure governance strategy. Assigning group-based access rights and privileges is also a good practice. Dealing with groups instead of individual users simplifies maintenance of access policies, provides consistent access management across teams, and reduces configuration errors. Azure role-based access control (Azure RBAC) is the primary method of managing access in Azure.
 
-Azure RBAC provides detailed access management of resources in Azure. It helps you manage who has access to Azure resources, what they can do with those resources, and what scopes they can access.
+Azure RBAC lets you manage access of your resources in Azure. It helps you manage who has access to Azure resources, what they can do with those resources, and what scopes they can access.
 
 When you plan your access control strategy, grant users the least privilege required to get their work done. The following image shows a suggested pattern for assigning Azure RBAC.
 
-![Diagram that shows Azure roles](./media/manage-access/role-examples.png)
-*Figure 1: Azure roles.*
+![Diagram that shows Azure roles.](./media/manage-access/role-examples.png)
 
-When you plan your access control methodology, we recommend that you work with people in your organizations with the following roles: security and compliance, IT administration, and enterprise architect.
+When you plan your access control methodology, try to work with people in your organization. We recommend that you work with people in security and compliance, IT administration, and enterprise architecture.
 
-The Cloud Adoption Framework offers additional guidance on using [Azure role-based access control](../considerations/roles.md) in your cloud adoption efforts.
+The Cloud Adoption Framework offers more guidance on using [Azure role-based access control](../considerations/roles.md) in your cloud adoption efforts.
 
 ::: zone target="chromeless"
 

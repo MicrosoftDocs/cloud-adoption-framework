@@ -201,7 +201,7 @@ conceptualContent:
 # itemType: architecture, concept, deploy, download, get-started, how-to-guide, learn, overview, quickstart, reference, sample, tutorial, video, whats-new
 
   title: Assessments # < 60 chars (optional)
-  summary: Use assessments to help plan your cloud journey. Identify differences between your current and desired states—with personalized recommendations to help you reach your cloud adoption goals. # < 160 Chars (optional)
+  summary: Use assessments to help plan your cloud journey. Identify differences between your current and desired states, with personalized recommendations to help you reach your cloud adoption goals. # < 160 Chars (optional)
   items:
 
      # Card
@@ -210,7 +210,7 @@ conceptualContent:
         - url: /assessments/?mode=pre-assessment&id=8fefc6d5-97ac-42b3-8e97-d82701e55bab
           itemType: quickstart
           text: Assess your cloud adoption strategy, and receive recommendations for building and advancing your cloud business case.
-    
+
     # Card
     - title: Cloud Journey Tracker
       links:
