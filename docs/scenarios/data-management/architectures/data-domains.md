@@ -100,6 +100,10 @@ For overlapping data requirements, you can use different patterns from domain-dr
 
 In all cases it is recommended for your domains to adhere to your interoperability standards. Thus, a partnership domain that produces new data for other domains must expose their data products like any other domain, including the part of taking ownership.
 
+## Domain Responsibilities
+
+Data mesh decentralizes data ownership by distributing it among domain teams. For many organizations this means a shift from a centralized model around governance to a federated model. 
+
 ## Level of granularity for decoupling
 
 Now you know how to recognize and facilitate data domains, you come to your next point: designing the right level of domain granularity and rules for decoupling. There are two important dimensions that come into play when decomposing your architecture:
