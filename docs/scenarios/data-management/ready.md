@@ -12,7 +12,7 @@ ms.custom: e2e-data-management, think-tank
 
 # Review your environment for Azure landing zones
 
-Data management and analytics scenario builds upon Azure landing zones for ease of deployment and governance. The principal purpose of an Azure landing zone is to ensure that when an application or workload lands on Azure, the required "plumbing" is already in place. It provides greater agility and compliance with enterprise security and governance requirements. Azure landing zones must be in place before you deploy your first data management and analytics landing zones.
+Data management and analytics scenario builds upon Azure landing zones for ease of deployment and governance. The principal purpose of an Azure landing zone is to ensure that when an application or workload lands on Azure, the required "plumbing" is already in place. There are sample templates, which get you started which can be used for data lakehouse and [data mesh](architectures/what-is-data-mesh.md) deployments. They provide agility and compliance with security and governance requirements. Azure landing zones must be in place before you deploy your first data management and analytics landing zones.
 
 ## Data management and analytics evaluation
 
@@ -24,17 +24,15 @@ The data management and analytics scenario builds on top of the Microsoft Cloud 
 
 The data management and analytics scenario paves the way for customers to build and operationalize landing zones to host and run analytics workloads. You build the landing zones on the foundations of security, governance, and compliance. They're scalable and modular while supporting autonomy and innovation.
 
-Data management and analytics scenario was designed with the same strategic principles in mind. To perform effectively, data management and analytics scenario moves teams from working horizontally across each ingest, processing, analysis, consumption, and visualization tier to vertical data landing zone groups that coexist in an agile team. Platform teams such as data platform operations and platform operations are grouped together under a common platform group.
-
 ### Build on an Azure landing zone
 
-Before you consider deploying the data management and analytics scenario, you need to understand how close you are to agility within your organization today.
+Before you consider deploying the data management and analytics scenario, you need to understand how close you're to agility within your organization today.
 
 Many enterprises have outdated data architectures that don't scale to the needs of large and multidisciplinary organizations. Centralized knowledge and capabilities introduce a bottleneck on a linear process workflow.
 
 If you're a small enterprise with limited staff, then having a centralized model mixed with some business subject matter experts might fit your operations model.
 
-If you're a large multinational enterprise with hundreds of data engineers and analysts spread around the business, a distributed operating model like a data lakehouse, data mesh, data fabric, data-centric, or others might fit your business better. What data management and analytics scenario provides is guidance to deploy the infrastructure to underpin these operation models.
+If you're a large multinational enterprise with hundreds of data engineers and analysts spread around the business, a distributed operating model like data mesh might fit your business better. Data management and analytics scenario provides guidance to deploy the infrastructure to underpin these operation models.
 
 Your business should consider how to best:
 
@@ -47,7 +45,7 @@ If you don't have an implementation of Azure landing zones, then it's important 
 
 ## Accelerate Azure landing zones for data management and analytics
 
-Data management and analytics scenario requires an understanding of landing zones and uses infrastructure-as-code to deploy end-to-end solution templates. These customizable templates can help your organization get started with most data management and analytics scenarios:
+Data management and analytics scenario requires an understanding of landing zones and uses infrastructure-as-code to deploy sample end-to-end solution templates. These customizable templates can help your organization get started with most data management and analytics scenarios:
 
 - [What is a landing zone?](../../ready/landing-zone/index.md)
 - [Choose a landing zone option](../../ready/landing-zone/choose-landing-zone-option.md)

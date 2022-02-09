@@ -41,7 +41,7 @@ It's key to align your data strategy with your business outcomes. Having a succe
 
 **Optimize operations:** Increase the flow of information across your entire business operation. Keep your business processes synchronized and make every interaction valuable through a data-driven approach.
 
-**Transform your products and development life cycle:** Gather telemetry data about your services and offerings. Use the data to prioritize a release or create a new feature, and evaluate effectiveness and adoption continuously.
+**Transform your products and development life cycle:** Gather data about your services and offerings. Use the data to prioritize a release or create a new feature, and evaluate effectiveness and adoption continuously.
 
 Once you have prioritized your business outcomes, it's key to look at your current projects and long-term strategic initiatives, and classify them accordingly. Consider combining the four business outcomes in a matrix format, based on complexity and impact. Also, think about adding the architectural pillars to help you dive deeper into the scenario.
 
@@ -51,7 +51,7 @@ Throughout your business intelligence, analytics and AI maturity journey, there 
 
 ## Critical first steps to modernize data management
 
-Set your organization up for success by building a foundation for each of the four pillars of a modern data strategy:
+Set up your organization for success by building a foundation for each of the four pillars of a modern data strategy:
 
 ![Diagram critical first steps to modernize data management](./images/key-themes.png)
 
@@ -95,7 +95,7 @@ To build a successful data strategy, you need a data-driven culture. One that fo
 
 ### Level 0
 
-Data is not exploited programmatically and consistently. The data focus within the company is from an application development perspective. On this level, we commonly see unplanned analytics projects. Additionally, each application is highly specialized to the unique data and stakeholder needs. Each has significant code bases and engineering teams, with many being engineered outside of IT as well. Finally, use case enablement and analytics are siloed.
+Data isn't exploited programmatically and consistently. The data focus within the company is from an application development perspective. On this level, we commonly see unplanned analytics projects. Additionally, each application is highly specialized to the unique data and stakeholder needs. Each has significant code bases and engineering teams, with many being engineered outside of IT as well. Finally, use case enablement and analytics are siloed.
 
 ### Level 1
 
@@ -103,7 +103,7 @@ Here, we see teams being formed, strategy being created, but analytics still is 
 
 ### Level 2
 
-The innovation platform is almost ready, with workflows in place to deal with data quality, and the organization can answer a few "why" questions. At this level, organizations are actively looking for an end-to-end data strategy with centrally governed data lake stores controlling data store sprawl and improving data discoverability. They are ready for smart and intelligent applications that bring compute to the centrally governed data lakes, reducing the need for federated copies of key data, reducing privacy risks and reducing compute costs. They are also ready for multitenant, centrally-hosted shared data services for common data computing tasks and recognize the value of this to enable the speed of insights from data science-driven intelligence services.
+The innovation platform is almost ready, with workflows in place to deal with data quality, and the organization can answer a few "why" questions. At this level, organizations are actively looking for an end-to-end data strategy with centrally governed data lake stores controlling data store sprawl and improving data discoverability. They're ready for smart and intelligent applications that bring compute to the centrally governed data lakes, reducing the need for federated copies of key data, reducing privacy risks and reducing compute costs. They're also ready for multitenant, centrally hosted shared data services for common data computing tasks and recognize the value of this to enable the speed of insights from data science-driven intelligence services.
 
 ### Level 3
 

@@ -46,16 +46,12 @@ To learn more, see:
 
 - [Data management](#data-management-landing-zone)
 - [Data landing zone](#data-landing-zone)
-- [Data integrations](#data-integrations)
 - [Data products](#data-products)
 - [Data platform operational excellence](#data-platform-operational-excellence)
 
-> [!IMPORTANT]
-> Data management and analytics scenario recommends to use zone-redundant storage (ZRS).
-
 ### Data management landing zone
 
-At the heart of data management and analytics scenario, is its data management capability. This capability is enabled through the data management landing zone.
+At the heart of data management and analytics scenario, is its management capability. This capability is enabled through the data management landing zone.
 
 :::image type="content" source="./images/data-management-overview-1.png" alt-text="Diagram of a Data management overview.":::
 
@@ -74,7 +70,7 @@ For more information, see [Overview of the Azure Data management and analytics s
 
 ### Data landing zone
 
-**Data landing zones** are subscriptions that might host multiple analytics and AI solutions relevant to their respective domain. These subscriptions within Data management and analytics scenario represent primary business groups, integrators, and enablers. These groups own, operate, and often provide innate understanding for the source systems.
+**Data landing zones** are subscriptions that host multiple analytics and AI solutions relevant to their respective domain or domain(s). These subscriptions within Data management and analytics scenario represent primary business groups, integrators, and enablers. These groups own, operate, and often provide innate understanding for the source systems.
 
 :::image type="content" source="./images/data-landing-zone-overview.png" alt-text="Diagram of a data landing zone.":::
 
@@ -82,26 +78,9 @@ A few important points to keep in mind about data landing zones:
 
 - Ingestion capabilities exist in each data landing zone. These capabilities allow subject matter experts to pull in external data sources into the data landing zone.
 - A data landing zone is instantiated based on its core architecture. It includes key capabilities to host an analytics platform.
-- A data landing zone can host one or many [data integrations](#data-integrations).
 - A data landing zone can also host one or many [data products](#data-products).
 
 For more information, see [Data landing zone](./architectures/data-landing-zone.md).
-
-### Data integrations
-
-The responsibility of ingesting external data into enterprise for analytics and AI lies with integration ops. Data integrations exist in a data landing zone as multiple resource groups, and each contains:
-
-- Azure Key Vault
-- Azure Data Factory for running developed engineering pipelines to transformations
-- A security user group that you give access to the Azure Databricks analytics and data science workspace
-- A service principal that's used by the data integration to deploy ingest jobs to the Azure Databricks engineering workspace
-
-Other services like Azure Event Hubs, Azure IoT Hub, Azure Stream Analytics, and Azure Machine Learning can be created if they're needed.
-
-> [!IMPORTANT]
-> A **data integration** is responsible for ingesting external data into a read data source. Apart from data quality checks and other applied data, the data should avoid having other data transformations applied to it.
-
-For more information, see [Data management and analytics scenario data integrations in Azure](./architectures/data-landing-zone-data-integration.md).
 
 ### Data products
 
@@ -125,9 +104,24 @@ Examples of data products include:
 - Azure Cosmos DB
 
 > [!IMPORTANT]
-> A **data product** fulfils a specific need within a business using data. Data products manage, organize, and make sense of the data across domains and present the insights gained from the data products. A data product is a result of data from one or many data integrations or other data products.
+> A **data product** fulfils a specific need within a business using data. Data products manage, organize, and make sense of the data within and across domains. A data product is a result of data from one or many transactional system integrations or other data products.
 
 For more information, see [Data management and analytics scenario data products in Azure](./architectures/data-landing-zone-data-products.md).
+
+#### Data integrations
+
+The organization might decide to create another team, within a domain, for ingesting external data into the landing zone. This team still produces a data product but are tightly scoped as to there role. Data integrations could exist in a data landing zone as multiple resource groups, and each contains:
+
+- Azure Key Vault
+- Azure Data Factory for running developed engineering pipelines to transformations
+- A service principal that's used by the data integration to deploy ingest jobs to the Azure Databricks engineering workspace
+
+Other services like Azure Event Hubs, Azure IoT Hub, Azure Stream Analytics, and Azure Machine Learning can be created if they're needed.
+
+> [!IMPORTANT]
+> A **data integration** is responsible for ingesting external data into a read data source. Apart from data quality checks and other applied data, the data should avoid having other data transformations applied to it.
+
+For more information, see [Data management and analytics scenario data integrations in Azure](./architectures/data-landing-zone-data-integration.md).
 
 ### Data platform operational excellence
 
