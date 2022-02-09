@@ -89,7 +89,7 @@ You can implement this scenario with:
 - Azure private DNS zone.
 - Azure private endpoints.
 
-[![Diagram of networking scenario 1.](./media/network-topology-scenario-1)](./media/network-topology-scenario-1.png#lightbox)
+[![Diagram of networking scenario 1.](./media/network-topology-scenario-1.png)](./media/network-topology-scenario-1.png#lightbox)
 
 ### Considerations
 
