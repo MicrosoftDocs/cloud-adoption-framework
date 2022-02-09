@@ -150,6 +150,8 @@ items:
         href: ./architectures/models-cdm.md
       - name: Data Quality
         href: ./architectures/data-quality.md
+      - name: Master Data Management
+        href: ./architectures/master-data-management.md        
 
       - name: Data sharing
         items:
