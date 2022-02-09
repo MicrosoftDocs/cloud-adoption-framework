@@ -39,7 +39,7 @@ For your domain-oriented architecture, it's recommended to align your Azure Purv
 
 There's a growing trend in the industry to bring insights of your data closer to data analysts and scientists by using portals that use more metadata intensively. This trend is also known as “Data observability” and features concepts like Metadata Lake, Knowledge Graph or Metadata Graph to describe platforms where metadata is centralized.
 
-:::image type="content" source="../images/metadata-standards.png" alt-text="Metadata Lake Architecture" lightbox="../images/metadata-standards-01.png":::
+:::image type="content" source="../images/metadata-standards.png" alt-text="Metadata Lake Architecture" lightbox="../images/metadata-standards.png":::
 
 For building a unified view of data for your organization with custom user experience it's recommended to look at Azure Cosmos DB, which is a globally distributed, multi-model database service with NoSQL endpoints. It provides a graph database service via the Gremlin API to store massive graphs with billions of vertices and edges.
 
