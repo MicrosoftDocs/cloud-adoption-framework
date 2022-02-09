@@ -72,7 +72,7 @@ This scenario is ideal if:
 - You don't need traffic inspection of internet outbound traffic from Azure Virtual Desktop networks.
 - You don't need to control the public IPs use to SNAT Azure Virtual Desktop internet outbound connections.
 - You don't enforced network filtering within Azure Virtual Desktops networks.
-- You have pre-existing hybrid connectivity to on-premeses (Express Route or S2S VPN).
+- You have pre-existing hybrid connectivity to on-premises (Express Route or S2S VPN).
 - You have pre-existing ADDS and DNS custom DNS servers.
 - You do need traffic inspection between Azure VMware Solution workloads and the internet.
 - You consume Azure Virtual Desktop in native connection model (No RDP Shortpath).
@@ -84,11 +84,17 @@ You can implement this scenario with:
 - ADDS servers and custom DNS servers.
 - Network security groups.
 - Outbound internet via default Azure vNet path.
-- Express route or VPN gateway for hybrid connectivity to on-premeses.
+- Express route or VPN gateway for hybrid connectivity to on-premises.
 - Virtual Network Gateway.
 - 
 
 ### Considerations
+
+- No client direct network path to session hosts.
+- Client connections are routed via AVD control plane (Gateway).
+- No direct network peering between AVD spokes, all the connections will go through the connectivity hub.
+- Outbound internet connection from the session hosts will use NAT with dynamic Azure public IPs.
+- No path for public inbound connections to session hosts is required.
 
 ## General design considerations and recommendations
 
@@ -104,9 +110,7 @@ Regardless of the connectivity model used, Azure Virtual Desktop subnets need to
 
 ### Bandwidth and latency
 
-Azure Virtual Desktops leverages Remote Desktop Protocol (RDP), more information on RDP bandwidth requirements can be found at:
-
-- [Remote Desktop Protocol (RDP) bandwidth requirements](https://docs.microsoft.com/en-us/azure/virtual-desktop/rdp-bandwidth)
+Azure Virtual Desktops leverages Remote Desktop Protocol (RDP), this protocol has bandwidth requirements outlined at [Remote Desktop Protocol (RDP) bandwidth requirements](https://docs.microsoft.com/en-us/azure/virtual-desktop/rdp-bandwidth)
 
 Connection latency will vary depending on the location of the users and the virtual machines. Azure Virtual Desktop services will continuously roll out to new geographies to improve latency. To minimized latency perceived by Azure Virtual Desktop clients, use the [Azure Virtual Desktop Experience Estimator](https://azure.microsoft.com/en-us/services/virtual-desktop/assessment/) to get round trip time (RTT) sample from clients and use this information to place session hosts in the closest region with the lowest RTT to the end users ([Interpreting results from estimator tool](https://docs.microsoft.com/en-us/azure/virtual-desktop/connection-latency)).
 
@@ -133,7 +137,7 @@ Azure Virtual Desktop connection flow uses:
 
 ### Business continuity and disaster recovery (BCDR)
 
-Although Azure network services (vNet, NSG, UDR, ASG, etc.) are regional, Compute resources used by Azure Virtual Desktop as session hosts are not, therefore deploying or recovery these resources to a target region, will require a networking setup that has connectivity to identity, DNS and data sources as the source.
+Although Azure Virtual Desktop (AVD) required network services (vNet, NSG, UDR, ASG) are regional, compute resources used by AVD as session hosts are not, therefore deploying or recovering these resources to a target environment will require it to has a networking setup with the same capabilities as the one on the source environment or that at least has connectivity to identity and DNS services.
 
 ## Follow Azure networking best practices
 
