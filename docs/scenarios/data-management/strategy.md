@@ -20,7 +20,7 @@ This article helps expose many considerations about data management and analytic
 
 Data management and analytics is aligned to [innovation focused motivations](../../strategy/motivations.md). Customers who integrate this scenario into their cloud adoption strategy are motivated by the following common drivers:
 
-- A scalable analytics framework designed to enable building an enterprise data platform
+- A cloud scale analytics framework designed to enable building an analytics platform
 - Self-service to empower the user in data exploration, data asset creation, and product development
 - Foster a data led culture with reusable data assets, data communities, secure third-party exchange, and in-place sharing
 - Share data with confidence secured by policies, common identity, confidentiality, and encryption
@@ -49,33 +49,39 @@ Once you have prioritized your business outcomes, it's key to look at your curre
 
 Throughout your business intelligence, analytics and AI maturity journey, there are *key themes* in unlocking the strategic value of data for consistent business growth. There are inherent complexities and ground realities in building a data-driven culture to drive business forward in a consistent, forward thinking, agile, and informed way. Before moving to the deploy phase, you should focus efforts toward formulating a coherent data strategy to achieve desired business outcomes.
 
-## Key themes
+## Critical first steps to modernize data management
 
-Carefully analyze the following key themes and how they relate to the important aspects of a coherent data strategy:
+Set your organization up for success by building a foundation for each of the four pillars of a modern data strategy:
 
-![Diagram of key themes.](./images/key-themes.png)
+![Diagram critical first steps to modernize data management](./images/key-themes.png)
 
 *"A **data strategy** is the foundation to using **data** as an asset and driving business forward. It's not a patch job for **data** problems. It's a long-term, guiding plan that defines the people, processes, and technology to put in place to solve **data** challenges."*
 
-To create a strategy is one thing, but to execute one at enterprise-scale poses a great challenge to an organization's existing culture, people, processes, and technology choices. It requires a great deal of commitment and clearer ownership at all levels of an organization.
+To create a strategy is one thing, but to execute one at scale poses a great challenge to an organization's existing culture, people, processes, and technology choices. It requires a great deal of commitment and clearer ownership at all levels of an organization.
 
-### Increase efficiencies
+## Governance
 
-The agility of the cloud, more than ever before, has imposed the need for organizations to adapt quickly and bring efficiencies to all areas of business. According to the [report by Gartner on emerging risks](https://www.gartner.com/en/newsroom/press-releases/2018-10-24-gartner-survey-shows-digitalization-misconceptions-threaten-organizations-as-the-top-emerging-risk-in-3q19), while organizations continue to focus on digital initiatives and invest in them, two-thirds not only fail to deliver upon expectations, but also demonstrate enterprise weaknesses.
+- Map, catalog, scan, and classify data by business objective
+- Connect data across your enterprise.
+- Implement compliance controls.
 
-### Data democratization
+## Operationalize data management
 
-Central IT has slowly been shifting to shadow IT becoming more de-centralized and enabling agility. They want to innovate quickly by having access to enterprise-wide **unified** quality data in self-serve fashion to meet challenging business requirements. There are many reasons why businesses fail to tap into the full potential of their data. It might be because of business functions working in separate silos, each team using different tools and standards for data analysis, or a failure to link KPIs to overall business goals.
+- Use agile data management and landing zones for fast, scalable deployment built on a foundation of security, governance, and compliance best practices.
+- Simplify and strengthen your data security with authentication, authorization, and automation.
+- Integrate data for consistency across the business.
 
-Data democratization is the key to delivering that value back to business and achieving the challenging business growth targets.
+## Self-service enablement
 
-### Governance
+- Understand and prioritize your LOBs needs'.
+- Distribute data across domains to enable ownership and bring data to closer to users.
+- Deploy self-service data products to drive insights and business value.
 
-With data governance, there has to be the right balance in the decentralized world of a data democratization approach. If governance is enforced too hard, it can stifle innovation. However, not having some core principles and processes in place might create data silos. These silos can result in damaging an organization's reputation and potential revenues. That's why a holistic data governance approach is fundamental to unlocking strategic value of data in a consistent manner.
+## Analytics
 
-In the absence of a well thought-out data strategy, there's a clear need to just "get going" and quickly start demonstrating value back to business. In this pursuit, acting on the above key themes or using them as strategic principles wrapped in a framework can address current business problems. It can also help the formation of a holistic data strategy, in an iterative way with validation, and still yield timely results.
-
-For more information, see [What is data governance?](./govern.md).
+- Answer complex analytical questions with cloud-based analytics and visualization tools.
+- Create data-as-a-service to provide data products to users on demand.
+- Use insights to unlock strategic value of data for business growth.
 
 ### Iterative data strategy validation framework
 
@@ -158,21 +164,15 @@ The most popular organizational processing requirements come from online transac
 
 For certain specialized workloads, customers can secure execution environments like Azure confidential computing, which helps users secure data while it's in use on public cloud platforms. This state is required for efficient processing. The data is protected inside a trusted execution environment (TEE), also known as an enclave. This environment protects the code and data against viewing and modification from outside of the TEE. This creates the ability to train AI models using data sources from different organizations without sacrificing data confidentiality.
 
-### Analytics
+### Analytical processing
 
 Extract, transform, load construct, or called ETL or ELT depending on where the transformation happens, relates to online analytical processing (OLAP) and data warehousing needs. One of the useful capabilities is the ability to automatically detect schema drift. Consider end-to-end architectures like automated enterprise BI with Azure Synapse Analytics and Azure Data Factory. To support advanced analytics including Azure Machine Learning and AI capabilities, it's key to consider the reusability of platform technologies already in use for other processing requirements of similar nature. Here's a quick start guide with working example for end-to-end processing.
 
-Batch processing on Azure Databricks, R, Python or for deep learning models are common examples. Compute, storage, networking, orchestration, DevOps and MLOps, are key considerations here. For super large models, look at distributed training of deep learning models on Azure or the turning project. You also need to consider the ability to deal with data and model drift.
+Batch processing on Azure Synapse R, Python or for deep learning models are common examples. Compute, storage, networking, orchestration, DevOps and MLOps, are key considerations here. For super large models, look at distributed training of deep learning models on Azure or the turning project. You also need to consider the ability to deal with data and model drift.
 
 Data management and analytics scenario helps collate all four layers together with people, process, security, and compliance. We also suggest using the recommended architectures from Azure landing zones to get started. They use the Microsoft Cloud Adoption Framework and culminate our experience working through thousands of large-scale enterprise deployments.
 
 Now that we've covered the four stages, the following representation shows the key capabilities needed on top of your data platform to provide end-to-end data governance capability.
-
-## Building blocks
-
-After making all the capability provisions, and taking a principled architectural view as discussed in this section, you'll most likely end up with the building blocks required for your cloud strategy journey.
-
-:::image type="content" source="./images/data-strategy-building-block.png" alt-text="Diagram of a decision tree for managing credentials." lightbox="./images/data-strategy-building-block.png":::
 
 ## Data strategy summary
 

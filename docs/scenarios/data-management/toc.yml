@@ -10,7 +10,7 @@ items:
   - name: Plan
     href: ./plan.md
 
-  - name: Plan
+  - name: Ready
     items:
     - name: Overview
       href: ./ready.md
