@@ -49,7 +49,7 @@ To learn more, see:
 - [Data products](#data-products)
 - [Data platform operational excellence](#data-platform-operational-excellence)
 
-### Data management landing zone
+## Data management landing zone
 
 At the heart of data management and analytics scenario, is its management capability. This capability is enabled through the data management landing zone.
 
@@ -68,7 +68,7 @@ The **Data management landing zone** is a subscription that governs the platform
 
 For more information, see [Overview of the Azure Data management and analytics scenario data management landing zone](./architectures/data-management-landing-zone.md).
 
-### Data landing zone
+## Data landing zone
 
 **Data landing zones** are subscriptions that host multiple analytics and AI solutions relevant to their respective domain or domain(s). These subscriptions within Data management and analytics scenario represent primary business groups, integrators, and enablers. These groups own, operate, and often provide innate understanding for the source systems.
 
@@ -82,7 +82,7 @@ A few important points to keep in mind about data landing zones:
 
 For more information, see [Data landing zone](./architectures/data-landing-zone.md).
 
-### Data products
+## Data products
 
 A data product is anything that drives business value, including reports, workbooks, a distinct database, or a data API. It can use the following services and technologies that don't belong to a data landing zone's core architecture:
 
@@ -108,7 +108,7 @@ Examples of data products include:
 
 For more information, see [Data management and analytics scenario data products in Azure](./architectures/data-landing-zone-data-products.md).
 
-#### Data integrations
+### Data integrations
 
 The organization might decide to create another team, within a domain, for ingesting external data into the landing zone. This team still produces a data product but are tightly scoped as to there role. Data integrations could exist in a data landing zone as multiple resource groups, and each contains:
 
@@ -123,7 +123,7 @@ Other services like Azure Event Hubs, Azure IoT Hub, Azure Stream Analytics, and
 
 For more information, see [Data management and analytics scenario data integrations in Azure](./architectures/data-landing-zone-data-integration.md).
 
-### Data platform operational excellence
+## Data platform operational excellence
 
 The data management and analytics scenario is designed with data platform operational excellence at its core through self-service enablement, governance, and streamlined deployments. The working model for data operations enables these core principles by using infrastructure-as-code and deployment templates. It also uses deployment processes that include a forking and branching strategy and a central repository.
 
