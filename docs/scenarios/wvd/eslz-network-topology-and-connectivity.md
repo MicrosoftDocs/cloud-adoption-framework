@@ -86,15 +86,20 @@ You can implement this scenario with:
 - Outbound internet via default Azure vNet path.
 - Express route or VPN gateway for hybrid connectivity to on-premises.
 - Virtual Network Gateway.
-- 
+- Azure private DNS zone.
+- Azure private endpoints.
+
+[![Diagram of networking scenario 1.](./media/network-topology-scenario-1)](./media/network-topology-scenario-1.png#lightbox)
 
 ### Considerations
 
 - No client direct network path to session hosts.
 - Client connections are routed via AVD control plane (Gateway).
 - No direct network peering between AVD spokes, all the connections will go through the connectivity hub.
-- Outbound internet connection from the session hosts will use NAT with dynamic Azure public IPs.
+- Outbound internet connection from the session hosts will use NAT with dynamic Azure public IPs.d
 - No path for public inbound connections to session hosts is required.
+- Connections from session hosts to Azure files (storage accounts) will be established using private endpoints.
+- Azure private DNS zones deployed on the hub to resolve storage account file service (privatelink.file.core.windows.net) and key vaults (privatelink.vaultcore.azure.net) namespaces.
 
 ## General design considerations and recommendations
 
