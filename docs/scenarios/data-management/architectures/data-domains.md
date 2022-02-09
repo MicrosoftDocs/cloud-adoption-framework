@@ -3,7 +3,7 @@ title: What is data domains?
 description: Learn about data domains
 author: PietheinStrengholt
 ms.author: pstrengholt
-ms.date: 03/03/2021
+ms.date: 02/09/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -20,7 +20,7 @@ Domain-Driven-Design
 
 Let’s start with the theoretical part: Domain-Driven-Design (DDD) is a method for supporting software development that helps describe complex systems for larger organizations, originally described by Eric Evans. DDD is popular because many of its high-level practices had an impact on modern software and application development approaches, such as microservices.
 
-DDD differentiates between bounded contexts, domains, and subdomains. Domains are the problem spaces you’re trying to address. They're the areas where knowledge, behavior, laws, and activities come together. They're the areas where you see semantic coupling: behavioral dependencies between components or services. Part of an area is also communication: using a language the team shares, so everybody can work efficiently. This language is also called the ubiquitous language or domain language.
+DDD differentiates between bounded contexts, domains, and subdomains. Domains are the problem spaces you’re trying to address. They're the areas where knowledge, behavior, laws, and activities come together. They're the areas where you see semantic coupling: behavioral dependencies between components or services. Part of an area is also communication: team members using a language the team shares, so everybody can work efficiently. This language is also called the ubiquitous language or domain language.
 
 Domains are usually decomposed into subdomains to better manage the complexity. A common example is decomposing a domain in such a way that each subdomain corresponds to a specific business problem. Not all subdomains are the same. You could, for example, classify domains to be either core, generic, or supporting. Core subdomains are the most important. They're the secret sauce, the ingredients, that make the business unique. Generic subdomains are nonspecific and typically easy to solve with off-the-shelf products. Supporting subdomains don’t offer competitive advantage but are necessary to keep the organization running. Usually, they aren’t that complex.
 Bounded contexts are the logical (context) boundaries. They focus on the solution space: the design of systems and applications. It's an area where the alignment of focus on the solution space makes sense. Within DDD, this can be code, database designs, and so on. Between the domains and bounded contexts, there can be alignment, but binding them together is no hard rule. Bounded contexts are in general technical by nature and can span across multiple domains and subdomains.
@@ -47,7 +47,7 @@ Applications and components that are aligned with a specific business capability
 
 :::image type="content" source="../images/data-domains-02.png" alt-text="Diagram showing bounded contexts" lightbox="../images/data-domains-02.png":::
  
-In the example from above, Customer management is founded on subject matter expertise and therefore knows best what data to serve to other domains. The Customer management’s inner architecture is decoupled, so all application components within these boundaries can directly communicate using application-specific interfaces and data models. However, data distribution to other domains is formalized using data products and clear interoperability standards. In this approach, all data products are also aligned with the domain and inherit the ubiquitous language: a constructed, formalized language, agreed upon by stakeholders and designers from the same domain, to serve the needs of that domain.
+In the example from above, Customer management is founded on subject matter expertise and therefore knows best what data to serve to other domains. The Customer management’s inner architecture is decoupled, so all application components within these boundaries can directly communicate using application-specific interfaces and data models. However, data distribution to other domains is formalized using [data products](../data-landing-zone-data-products.md) and clear interoperability standards. In this approach, all [data products](../data-landing-zone-data-products.md) are also aligned with the domain and inherit the ubiquitous language: a constructed, formalized language, agreed upon by stakeholders and designers from the same domain, to serve the needs of that domain.
 
 Multiple capability realizations result in additional domains
 When working with business capability maps, it's important to acknowledge that some business capabilities can be instantiated several times. For instance, Tailwind Traders, the example you used so far, can have multiple localized realizations, or implementations, of “baggage handling and lost items”. For example, one line of business operates only in Asia. In that context, “baggage handling and lost items” is a capability that is fulfilled for Asia-related airplanes. A different line of business could target the European market, so in this context another “baggage handling and lost items” capability is used. This scenario of multiple instances could lead to multiple localized implementations using different technology services and disjoined teams operating those services. To conclude: the relationship of business capability and capability instance (realization) is one-to-many, which also means that you end up with additional (sub-)domains.
@@ -56,7 +56,7 @@ When working with business capability maps, it's important to acknowledge that s
 
 More important is how you should handle shared business capabilities. Such a capability is typically implemented centrally -as a service model- and provided to different lines of business. “Customer management”, for example, could be such a capability. In the context of Tailwind Traders, both the Asia and European lines of business use the same administration for their clients. The question is: how to project domain data ownership on a shared capability? It’s likely that multiple business representatives take accountability for customers that sit in the same shared administration. To conclude, there's an application domain and a data domain! From a data product viewpoint, your domain and bounded context don’t perfectly align. Conversely, you could argue that from a business capability’s viewpoint, there’s still a single data concern.
 
-For your shared capabilities, such as complex vendor packages, SaaS solutions and legacy systems, it's recommended to be consistent on your domain data ownership approach. One technique could be to segregate data ownership via data products, which also might require application improvements. In the example of “customer management” different pipelines from the application domain could generate multiple data products: one data product for all Asia-related customers and one for all European-related customers. This means multiple data domains originate from the same application domain.
+For your shared capabilities, such as complex vendor packages, SaaS solutions and legacy systems, it's recommended to be consistent on your domain data ownership approach. One technique could be to segregate data ownership via [data products](../data-landing-zone-data-products.md), which also might require application improvements. In the example of “customer management” different pipelines from the application domain could generate multiple [data products](../data-landing-zone-data-products.md): one data product for all Asia-related customers and one for all European-related customers. This means multiple data domains originate from the same application domain.
 A different technique for handling shared data is to ask your application domains to design a single data product that encapsulates metadata for distinguishing data ownership inside the data product. You could, for example, use a reserved column name for ownership, mapping each row to a single specific data domain.
 
 ### Identify monoliths that offer multiple business capabilities
@@ -69,7 +69,7 @@ When mapping your domains, you'll learn there are different patterns, based on t
 
 :::image type="content" source="../images/data-domains-03.png" alt-text="Source system-aligned domains" lightbox="../images/data-domains-03.png":::
 
-* Source system-aligned domains are aligned with source systems, where the data originates. These are typically transactional or operational systems. The goal must be to capture data directly from these golden source systems. Data products that originate from the providing domains should be read-optimized for intensive data consumption, so you want to facilitate your domains using standardized services for data transformation and sharing. These services, including pre-configured container structures, enable your source-oriented domain teams to publish data more easily; it’s the path of least resistance to do the right thing with the benefit of minimal disruption and costs.
+* Source system-aligned domains are aligned with source systems, where the data originates. These are typically transactional or operational systems. The goal must be to capture data directly from these golden source systems. [data products](../data-landing-zone-data-products.md) that originate from the providing domains should be read-optimized for intensive data consumption, so you want to facilitate your domains using standardized services for data transformation and sharing. These services, including pre-configured container structures, enable your source-oriented domain teams to publish data more easily; it’s the path of least resistance to do the right thing with the benefit of minimal disruption and costs.
 
 #### Consumer-aligned domains
 
@@ -81,9 +81,9 @@ When mapping your domains, you'll learn there are different patterns, based on t
 
 :::image type="content" source="../images/data-domains-05.png" alt-text="Re-delivery domains" lightbox="../images/data-domains-05.png":::
 
-* Redelivery domains: A different and more difficult scenario is the reusability of data. For example, multiple downstream consumers might be interested in a combination of data from different domains. You can create data products, which aggregate data or combine high-level data required by many domains. This takes away the repetitive work.
+* Redelivery domains: A different and more difficult scenario is the reusability of data. For example, multiple downstream consumers might be interested in a combination of data from different domains. You can create [data products](../data-landing-zone-data-products.md), which aggregate data or combine high-level data required by many domains. This takes away the repetitive work.
 
-For your architecture, it's recommended to loosely couple the creation of data products and analytical use cases. In the model below, a domain takes both the ownership for aggregated data reusable data and an analytical use case. However, the two concerns are decoupled. With this approach, data consumers can safely consume new data products, while not being tightly connected to analytical use cases of the same domain. The aggregated data in this situation is input for the analytical use case.
+For your architecture, it's recommended to loosely couple the creation of [data products](../data-landing-zone-data-products.md) and analytical use cases. In the model below, a domain takes both the ownership for aggregated data reusable data and an analytical use case. However, the two concerns are decoupled. With this approach, data consumers can safely consume new [data products](../data-landing-zone-data-products.md), while not being tightly connected to analytical use cases of the same domain. The aggregated data in this situation is input for the analytical use case.
 
 ### Define patterns for overlapping domains
 
@@ -98,21 +98,21 @@ For overlapping data requirements, you can use different patterns from domain-dr
 * In the partnership model, the integration logic is coordinated in an unplanned manner within a newly created domain. All teams cooperate with and regard each other’s needs. A significant commitment is needed from everybody because each can’t change the shared logic freely.
 * A conformist pattern can be used to conform all domains to all requirements. This pattern can be a choice 1) when the integration work is complex 2) no other parties are allowed to have control 3) or when vendor packages are used.
 
-In all cases, it's recommended for your domains to adhere to your interoperability standards. Thus, a partnership domain that produces new data for other domains must expose their data products like any other domain, including the part of taking ownership.
+In all cases, it's recommended for your domains to adhere to your interoperability standards. Thus, a partnership domain that produces new data for other domains must expose their [data products](../data-landing-zone-data-products.md) like any other domain, including the part of taking ownership.
 
 ## Domain Responsibilities
 
 Data mesh decentralizes data ownership by distributing it among domain teams. For many organizations, this means a shift from a centralized model around governance to a federated model. This means that domain teams are assigned with tasks, such as:
 
-- Taking ownership of data pipelines, such as ingestion, cleaning and transforming data to serve as many data customer's needs as possible
-- Improving data quality for data, including adherence to SLAs and quality measures set by data consumers
+- Domains taking ownership of data pipelines, such as ingestion, cleaning and transforming data to serve as many data customer's needs as possible
+- Improving [Data Quality](../data-quality.md) for data, including adherence to SLAs and quality measures set by data consumers
 - Encapsulating metadata or using reserved column names for fine-grained row- and column-level filtering
 - Adhering to metadata management standards, such as:
     - Application and source system schema registration
     - Metadata for improved discoverability
     - Versioning information
     - Linkage of data attributes and business terms
-    - Integrity metadata information for allowing domains to better integrate with other domains
+    - Integrity [metadata](../metadata-standards.md) information for allowing domains to better integrate with other domains
 - Adhering to data interoperability standards, including protocols, data formats and data types
 - Providing lineage by either linking source systems and integration services to scanners or manually providing lineage
 - Adhering to tasks related to data sharing, including IAM access review and creating data contracts
@@ -121,9 +121,9 @@ Data mesh decentralizes data ownership by distributing it among domain teams. Fo
 
 Now you know how to recognize and facilitate data domains, you come to your next point: designing the right level of domain granularity and rules for decoupling. There are two important dimensions that come into play when decomposing your architecture:
 
-First, there's granularity for functional domains and setting bounded contexts: conforming to the way of working, ensuring data becomes available to all domains and enjoy using shared services, taking ownership, adhering to metadata standards, and so on. A recommendation for data distribution is to set the boundaries, where possible, fine-grained because becoming data-driven is all about making data available for intensively reusing data. If you define your domain boundaries too coarse-grained, you'll force undesired couplings between many applications and data reusability gets lost. Thus, each time data crosses boundaries of business capabilities, strive for decoupling. This means that within a domain, tight coupling within the inner architecture of the domain is allowed. However, when crossing the boundaries, domains must stay decoupled and distribute read-optimized data products for sharing data to other domains.
+First, there's granularity for functional domains and setting bounded contexts: domains conforming to the way of working, ensuring data becomes available to all domains and enjoy using shared services, taking ownership, adhering to metadata standards, and so on. A recommendation for data distribution is to set the boundaries, where possible, fine-grained because becoming data-driven is all about making data available for intensively reusing data. If you define your domain boundaries too coarse-grained, you'll force undesired couplings between many applications and data reusability gets lost. Thus, each time data crosses boundaries of business capabilities, strive for decoupling. This means that within a domain, tight coupling within the inner architecture of the domain is allowed. However, when crossing the boundaries, domains must stay decoupled and distribute read-optimized [data products](../data-landing-zone-data-products.md) for sharing data to other domains.
 
-Second, there's granularity for technical domains and infrastructure utilization. These are your data landing zones for enabling agility to service data integrations and data products within it. Such a landing zone, with shared infrastructure and services underneath, how would you offer this to your different domain teams? The experiences are that many different aspects trigger functional domains will be logically grouped together and become candidates for sharing platform infrastructure. Here are some considerations:
+Second, there's granularity for technical domains and infrastructure utilization. These are your [data landing zones](../data-landing-zone.md) for enabling agility to service data integrations and [data products](../data-landing-zone-data-products.md) within it. Such a landing zone, with shared infrastructure and services underneath, how would you offer this to your different domain teams? The experiences are that many different aspects trigger functional domains will be logically grouped together and become candidates for sharing platform infrastructure. Here are some considerations:
 
 * Cohesion and efficiency in the way of working and sharing data is a strong driver of aligning functional domains to a data landing zone. This strongly relates to data gravity: tendency of constantly sharing large datasets between domains.
 * Regional boundaries could result in implementing additional data landing zones.
