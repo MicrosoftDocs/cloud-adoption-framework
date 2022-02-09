@@ -27,16 +27,16 @@ Cloud solutions were initially designed to host single, relatively isolated appl
 
 In the example cloud deployment diagram below, the red box highlights a security gap. The yellow box shows an opportunity to optimize network virtual appliances across workloads.
 
-![Diagram of cloud deployment and networking virtual datacenter](../_images/vdc/networking-vdc-redundant.png)
+![Diagram that shows a cloud deployment and networking virtual datacenter.](../_images/vdc/networking-vdc-redundant.png)
 
 Virtual datacenters help achieve the scale required for enterprise workloads. The scale must address the challenges introduced when running large-scale applications in the public cloud.
 
-A virtual datacenter (VDC) implementation includes more than the application workloads in the cloud. It also provides network, security, management, DNS and Active Directory services. As enterprises migrate more workloads to Azure, consider the infrastructure and objects that support these workloads. Good resource management helps avoid the increase of separately managed "workload islands" with independent data flows, security models, and compliance challenges.
+A virtual datacenter implementation includes more than the application workloads in the cloud. It also provides network, security, management, DNS, and Active Directory services. As enterprises migrate more workloads to Azure, consider the infrastructure and objects that support these workloads. Good resource management helps avoid the increase of separately managed "workload islands" with independent data flows, security models, and compliance challenges.
 
 The virtual datacenter concept provides recommendations and high-level designs for implementing a collection of separate but related entities. These entities often have common supporting functions, features, and infrastructure. Viewing your workloads as a virtual datacenter helps realize reduced cost from economies of scale, It also helps with optimized security via component and data flow centralization, and easier operations, management, and compliance audits.
 
 > [!NOTE]
-> A virtual datacenter is not a specific Azure service. Rather, various Azure features and capabilities are combined to meet your requirements. A virtual datacenter is a way of thinking about your workloads and Azure usage to optimize your resources and capabilities in the cloud. It provides a modular approach to providing IT services in Azure, while respecting the enterprise's organizational roles and responsibilities.
+> A virtual datacenter isn'ft a specific Azure service. Rather, various Azure features and capabilities are combined to meet your requirements. A virtual datacenter is a way of thinking about your workloads and Azure usage to optimize your resources and capabilities in the cloud. It provides a modular approach to providing IT services in Azure, while respecting the enterprise's organizational roles and responsibilities.
 
 A virtual datacenter helps enterprises deploy workloads and applications in Azure for the following scenarios:
 
