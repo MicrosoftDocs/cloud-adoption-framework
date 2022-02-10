@@ -198,7 +198,6 @@ The **Sandboxes** management group usually contains Azure subscriptions that are
 > Subscriptions in the **Sandboxes** management group should not have direct connectivity to the landing zone subscriptions. Avoid connecting sandbox subscriptions to production workloads, and any non-production environments that should mirror production environments.
 
 The following diagram illustrates two potential options. Option A includes the **Decommissioned** and **Sandbox** management groups, while option B does not.
-<!-- TODO for consistency we should decide whether A or B is always the simple/complex one -->
 
 ![Diagram that shows the optional Decommissioned and Sandboxes management groups on the same level as the Platform and Landing Zones management groups.](./media/isv-landing-zone/isv-decommissioned-mg.png)
 
@@ -206,7 +205,7 @@ The following diagram illustrates two potential options. Option A includes the *
 
 This section includes two examples of an Azure landing zone structure for a SaaS ISV. Select each tab to compare the two example landing zones.
 
-# [Simple](#tab/simple)
+# [Minimal](#tab/minimal)
 
 The following diagram shows an example SaaS ISV Azure landing zones hierarchy with the following characteristics:
 
@@ -217,7 +216,7 @@ The following diagram shows an example SaaS ISV Azure landing zones hierarchy wi
 
 ![Diagram that shows an example Azure landing zone hierarchy for an ISV. Most of the components from this article are omitted.](./media/isv-landing-zone/isv-landing-zone-example1.png)
 
-# [Complex](#tab/linux)
+# [Comprehensive](#tab/comprehensive)
 
 The following diagram shows an example SaaS ISV Azure landing zones hierarchy with the following characteristics:
 
@@ -227,7 +226,6 @@ The following diagram shows an example SaaS ISV Azure landing zones hierarchy wi
 - The landing zone includes [environment-specific management groups](#landing-zones-management-group) for organizing the subscriptions and assigning different policies and role assigments.
 - The ISV decided to include the optional management groups for [decommissioned and sandbox subscriptions](#decommissioned-and-sandboxes-management-groups).
 
-<!-- TODO another example here -->
 ![Diagram that shows an example Azure landing zone hierarchy for an ISV. Most of the components from this article are included.](./media/isv-landing-zone/isv-landing-zone-example1.png)
 
 ---
