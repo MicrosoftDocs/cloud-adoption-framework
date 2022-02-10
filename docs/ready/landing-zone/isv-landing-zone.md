@@ -117,7 +117,8 @@ Avoid using separate Azure AD tenants for pre-production and production environm
 
 For more information on the using multiple Azure AD tenants, see the [securing Azure environments with Azure Active Directory whitepaper](https://azure.microsoft.com/resources/securing-azure-environments-with-azure-active-directory/).
 
-> [!WARNING] <!-- TODO Arsen is a warning too extreme? -->
+<!-- TODO Arsen is a warning too extreme? -->
+> [!WARNING]
 > When you use multiple Azure AD tenants, you will have higher management overhead. You should only use multiple Azure AD tenants when it's required. Additionally, if you use Azure AD Premium features like Privileged Identity Management, you need to purchase the license for each of your Azure AD tenants, which can increase your costs.
 
 ![Diagram that shows Azure AD tenant options for ISVs with a single corporate tenant or separation between corporate and SaaS Ops tenants.](./media/isv-landing-zone/isv-aad-tenant.png)
@@ -130,7 +131,7 @@ As a SaaS ISV you might have one SaaS product or a few (usually under 10) comple
 
 If all of the product share the *same* "platform" for DevOps, identity, security, connectivity, logging, and that shared platform is operated by a central team - such as corporate IT or the cross-product SaaS operations team - you should have one top-level "SaaS Product" management group under the tenant root group.
 
-On the other hand, if each of the SaaS products is managed and operated by completely separate platform teams - such as *SaaS Product-01 Ops* and *SaaS Product-02 Ops* - you can create separate top-level management groups for each of the SaaS products each with its own landing zone management group hierarchy including platform, landing zones, and optionally decommissioned, and sandbox. This is similar to the [testing approach for enterprise-scale landing zones](../enterprise-scale/testing-approach.md#example-scenarios-and-outcomes.md), but instead of Contoso and Contoso-Canary, as a SaaS ISV with completely separate products with their own individual platforms, you would have Contoso-SaaS-Product-01, Contoso-SaaS-Product-02, and Contos-SaaS-Product-03.
+On the other hand, if each of the SaaS products is managed and operated by completely separate platform teams - such as *SaaS Product-01 Ops* and *SaaS Product-02 Ops* - you can create separate top-level management groups for each of the SaaS products each with its own landing zone management group hierarchy including platform, landing zones, and optionally decommissioned, and sandbox. This is similar to the [testing approach for enterprise-scale landing zones](../enterprise-scale/testing-approach.md#example-scenarios-and-outcomes), but instead of Contoso and Contoso-Canary, as a SaaS ISV with completely separate products with their own individual platforms, you would have Contoso-SaaS-Product-01, Contoso-SaaS-Product-02, and Contos-SaaS-Product-03.
 
 ![Diagram that shows top-level management group options with a single management group and separate management groups for each of the SaaS Products](./media/isv-landing-zone/isv-top-level-mg.png)
 
