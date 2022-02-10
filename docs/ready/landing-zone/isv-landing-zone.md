@@ -188,7 +188,7 @@ The following diagram illustrates two potential options. Option A represents a s
 
 ### Decommissioned and Sandboxes management groups
 
-The Azure landing zone [resource organization guidance](./design-area/resource-org-management-groups.md#management-groups-in-the-azure-landing-zone-accelerator) recommends including optional **Decommissioned** and **Sandboxes** management groups directly below the top-level management group.
+The Azure landing zone [resource organization guidance](./design-area/resource-org-management-groups.md#management-groups-in-the-azure-landing-zone-accelerator) recommends including **Decommissioned** and **Sandboxes** management groups directly below the top-level management group.
 
 The **Decommissioned** management group is the holding place for Azure subscriptions that are being disabled and will eventually be deleted. A subscription that's no longer in use could be moved to this management group for tracking it until all of the resources in the subscription are permanently deleted.
 
@@ -199,7 +199,7 @@ The **Sandboxes** management group usually contains Azure subscriptions that are
 
 The following diagram illustrates two potential options. Option A does not includes the **Decommissioned** and **Sandbox** management groups, while option B does.
 
-![Diagram that shows the optional Decommissioned and Sandboxes management groups on the same level as the Platform and Landing Zones management groups.](./media/isv-landing-zone/isv-decommissioned-mg.png)
+![Diagram that shows the Decommissioned and Sandboxes management groups on the same level as the Platform and Landing Zones management groups.](./media/isv-landing-zone/isv-decommissioned-mg.png)
 
 ### Example ISV landing zones
 
@@ -212,7 +212,7 @@ The following diagram shows an example SaaS ISV Azure landing zones hierarchy wi
 - The ISV decided to keep all of their platform components in a single Azure subscription, instead of [splitting them into multiple platform management groups](#platform-management-group).
 - There is only one [landing zone management group](#landing-zones-management-group).
 - The landing zone includes [environment-specific management groups](#landing-zones-management-group) for organizing the subscriptions and assigning different policies and role assigments.
-- The ISV decided not to include the optional management groups for [decommissioned and sandbox subscriptions](#decommissioned-and-sandboxes-management-groups).
+- The ISV decided not to include the management groups for [decommissioned and sandbox subscriptions](#decommissioned-and-sandboxes-management-groups).
 
 ![Diagram that shows an example Azure landing zone hierarchy for an ISV. Most of the components from this article are omitted.](./media/isv-landing-zone/isv-landing-zone-example1.png)
 
@@ -224,7 +224,7 @@ The following diagram shows an example SaaS ISV Azure landing zones hierarchy wi
 - The ISV decided to keep all of their platform components in a single Azure subscription, instead of [splitting them into multiple platform management groups](#platform-management-group).
 - There are two [landing zone management groups](#landing-zones-management-group) (**Regular stamps** and **PCI-DSS**).
 - The landing zone includes [environment-specific management groups](#landing-zones-management-group) for organizing the subscriptions and assigning different policies and role assignments.
-- The ISV decided to include the optional management groups for [decommissioned and sandbox subscriptions](#decommissioned-and-sandboxes-management-groups).
+- The ISV decided to include the management groups for [decommissioned and sandbox subscriptions](#decommissioned-and-sandboxes-management-groups).
 
 ![Diagram that shows an example Azure landing zone hierarchy for an ISV. Most of the components from this article are included.](./media/isv-landing-zone/isv-landing-zone-example2.png)
 
