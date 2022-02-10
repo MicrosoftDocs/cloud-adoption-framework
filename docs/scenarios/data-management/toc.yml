@@ -1,7 +1,6 @@
 items:
   - name: Data management and analytics scenario
     href: ./index.md
-    pdf_name: Data management and analytics scenario
 
   - name: Overview
     href: ./overview-data-governance.md
@@ -14,10 +13,6 @@ items:
     items:
     - name: Overview
       href: ./ready.md
-    - name: Landing zones for data management and analytics
-      href: ./enterprise-scale-landing-zone.md
-    - name: Scaling data management and analytics
-      href: ./eslz-scale.md
 
     - name: Design area considerations
       items:

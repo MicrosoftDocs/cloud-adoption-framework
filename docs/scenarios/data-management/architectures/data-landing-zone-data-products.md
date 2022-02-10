@@ -42,7 +42,7 @@ We recommend building data products within your data landing zone by adhering to
 
 ### Deploy multiple resource groups
 
-Each data product is a resource group. Since data products are compute or polyglot persistence services, they may only be required depending on certain use cases. As such, they can be considered an optional component of your data landing zone. In the case where data products are required, you should create multiple resource groups by data product as shown below.
+Each data product is a resource group. Since data products are compute or polyglot persistence services, they are only required depending on certain use cases. As such, they can be considered an optional component of your data landing zone. In the case where data products are required, you should create multiple resource groups by data product as shown below.
 
 ![Diagram of data product resource groups.](../images/data-products-resource-group.png)
 

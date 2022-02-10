@@ -3,7 +3,7 @@ title: Network topology and connectivity for data management and analytics landi
 description: Learn about the network topology and connectivity for data management and analytics landing zones in Azure.
 author: marvinbuss
 ms.author: mabuss
-ms.date: 11/25/2021
+ms.date: 02/10/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -12,9 +12,9 @@ ms.custom: e2e-data-management, think-tank
 
 # Network topology and connectivity for data management and analytics landing zones
 
-This article has design considerations and guidelines for networking and connectivity to or from data management landing zones and data landing zones. It builds on information in the [enterprise-scale design area for network topology and connectivity](../../ready/enterprise-scale/network-topology-and-connectivity.md) article.
+This article has design considerations and guidelines for networking and connectivity to or from data management landing zones and data landing zones. It builds on information in the [design area for network topology and connectivity](../../ready/enterprise-scale/network-topology-and-connectivity.md) article.
 
-Since data management and data landing zones are important, you should also include the guidance for the enterprise-scale design areas in your design.
+Since data management and data landing zones are important, you should also include the guidance for the design areas in your design.
 
 This section outlines networking patterns that can help with:
 
@@ -23,7 +23,7 @@ This section outlines networking patterns that can help with:
 - Creating access for remote workers.
 - Interfacing with on-premises and software as a service (SaaS) solutions.
 
-:::image type="content" source="./images/networking-overview.png" alt-text="Diagram that shows a high-level overview of networking for data management and analytics scenario." lightbox="./images/networking-overview.png":::
+:::image type="content" source="./images/network-options-network-mesh.png" alt-text="Diagram that shows a high-level overview of networking for data management and analytics scenario." lightbox="./images/network-options-network-mesh.png":::
 
 ## Data management landing zone networking
 
@@ -38,7 +38,7 @@ Data management landing zone services that support Azure Private Link are inject
 For every new data landing zone, you should create a virtual network peering from the data management landing zone to the data landing zone.
 
 > [!IMPORTANT]
-> A data management landing zone connects to an analytics and AI landing zone using virtual network peering.
+> A data management landing zone connects to an data landing zone using virtual network peering.
 
 ## Data landing zones to data landing zones
 
