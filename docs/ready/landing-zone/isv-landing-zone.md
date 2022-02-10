@@ -104,7 +104,10 @@ Even in these situations, we recommend you use Azure landing zone guidance and s
 
 ## Azure AD tenants
 
-Each Azure landing zone and its Management Group hierarchy is rooted in *one* Azure Active Directory tenant. Therefore, the first decision that needs to be made is which Azure Active Directory tenant will be used as the source of identities - users, groups, and service principals - for "managing Azure resources". This decision does not limit the flexibility of the ISV's "application authentication" which can use other identity providers such as Azure AD B2C.
+Each Azure landing zone and its management group hierarchy is rooted in *one* Azure Active Directory (Azure AD) tenant. This means that the first decision you need to make is **which Azure AD tenant will be used as the source of identities for managing your Azure resources**. Identities in the directory include users, groups, and service principals.
+
+> [!TIP]
+> The Azure AD tenant you select for your landing zone doesn't affect your application-level authentication. Regardless of the landing zone's tenant, you can still use other identity providers like Azure AD B2C.
 
 Azure landing zone's [Azure AD tenant guidance](./design-area/azure-ad-define.md) strongly recommends using a single Azure AD tenant, which is the correct approach for most customers. However, as a SaaS ISV, you might have reasons to separate the Azure AD tenant used by your SaaS operations team from the Azure AD tenant used by your own internal or corporate IT team.
 
@@ -123,11 +126,11 @@ For more in depth discussion on the decision for multiple Azure AD tenants, see 
 
 [Azure landing zone conceptual architecture](index.md#azure-landing-zone-conceptual-architecture) recommends using a specific Management Group hierarchy nested under the "Tenant root group" and not using the root group directly. For a regular customer with a centralized corporate IT team managing the platform and shared services like logging, networking, identity, and security, there is usually one top-level management group (e.g., Contoso) under the root group with everything else below that management group.
 
-As a SaaS ISV you might have one SaaS product or a few (usually under 10) completely separate SaaS products or lines of business. As discussed in [Azure AD tenant](#azure-ad-tenant-decision) section, the Azure AD tenant used for managing Azure resources should be the same across all products, but what about the rest of the management group hierarchy?
+As a SaaS ISV you might have one SaaS product or a few (usually under 10) completely separate SaaS products or lines of business. As discussed in [Azure AD tenant](#azure-ad-tenants) section, the Azure AD tenant used for managing Azure resources should be the same across all products, but what about the rest of the management group hierarchy?
 
 If all of the product share the *same* "platform" for DevOps, identity, security, connectivity, logging, and that shared platform is operated by a central team - such as corporate IT or the cross-product SaaS operations team - you should have one top-level "SaaS Product" management group under the tenant root group.
 
-On the other hand, if each of the SaaS products is managed and operated by completely separate platform teams - such as *SaaS Product-01 Ops* and *SaaS Product-02 Ops* - you can create separate top-level management groups for each of the SaaS products each with its own landing zone management group hierarchy including platform, landing zones, and optionally decommissioned, and sandbox. This is similar to the [testing approach for enterprise-scale landing zones](../enterprise-scale/testing-approach#example-scenarios-and-outcomes.md), but instead of Contoso and Contoso-Canary, as a SaaS ISV with completely separate products with their own individual platforms, you would have Contoso-SaaS-Product-01, Contoso-SaaS-Product-02, and Contos-SaaS-Product-03.
+On the other hand, if each of the SaaS products is managed and operated by completely separate platform teams - such as *SaaS Product-01 Ops* and *SaaS Product-02 Ops* - you can create separate top-level management groups for each of the SaaS products each with its own landing zone management group hierarchy including platform, landing zones, and optionally decommissioned, and sandbox. This is similar to the [testing approach for enterprise-scale landing zones](../enterprise-scale/testing-approach.md#example-scenarios-and-outcomes.md), but instead of Contoso and Contoso-Canary, as a SaaS ISV with completely separate products with their own individual platforms, you would have Contoso-SaaS-Product-01, Contoso-SaaS-Product-02, and Contos-SaaS-Product-03.
 
 ![Diagram that shows top-level management group options with a single management group and separate management groups for each of the SaaS Products](./media/isv-landing-zone/isv-top-level-mg.png)
 
