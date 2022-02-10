@@ -125,7 +125,7 @@ For more information on the using multiple Azure AD tenants, see the [securing A
 
 ## Top-level management group
 
-[The Azure landing zone conceptual architecture](index.md#azure-landing-zone-conceptual-architecture) recommends using a specific management group hierarchy. The hierarchy is nested under the Azure-created **tenant root group** management group, and you don't use the tenant root group directly.
+[The Azure landing zone conceptual architecture](index.md#azure-landing-zone-conceptual-architecture) recommends using a specific management group hierarchy. The hierarchy is nested under the Azure-created **Tenant root group** management group, and you don't use the tenant root group directly.
 
 For a regular customer, who has a centralized corporate IT team managing the platform and shared services like logging, networking, identity, and security, there is usually one top-level management group, which is created under the tenant root group. The top-level management group is usually named after the customer, such as *Contoso*, and the rest of the management groups are deployed below that top-level management group.
 
@@ -144,21 +144,22 @@ However, if each of the SaaS products is managed and operated by completely sepa
 
 ## Platform management group
 
-In the [Azure landing zone resource organization hierarchy](./design-area/resource-org-management-groups.md#management-groups-in-the-azure-landing-zone-accelerator), the "Platform" management group contains all of the Azure subscriptions with resources hosting the *shared services and components* used by the workloads in the landing zone subscriptions. For example, the following components are usually part of the platform or shared services subscriptions: centralized logging infrastructure such as Log Analytics workspaces, DevOps, security, and automation tooling, central networking resources such as hub-VNet and DDos Protection plans, and ISV's own control plane services.
+In the [Azure landing zone resource organization hierarchy](./design-area/resource-org-management-groups.md#management-groups-in-the-azure-landing-zone-accelerator), the **Platform** management group contains all of the Azure subscriptions that host the shared services and components used by workloads in the landing zone subscriptions. Example components that are deployed into the platform or shared services subscriptions include centralized logging infrastructure such as Log Analytics workspaces, DevOps, security, and automation tooling, central networking resources such as hub-VNet and DDos Protection plans, and the ISV's own control plane services.
 
-For convenient separation of roles and policies for enterprise customers, the Platform management group is frequently partitioned into three child management groups: Identity, Management, and Connectivity. If in your organization there is a single team that is managing all shared platform components (i.e., networking, identity, and management), and you expect it to continuing being a single team, you can use a single "platform" management group and start with one "platform" Azure subscription within that management group.
+For convenient separation of roles and policies for enterprise customers, the **Platform** management group is frequently partitioned into three child management groups: **Identity**, **Management**, and **Connectivity**. In your organization, you might have a single team to manage all of the shared platform components like networking, identity, and management. If this is the case, and if you have no plans to separate the management across multiple teams, then consider using a single **Platform** management group. Within that management group, start by deploying one **Platform** Azure subscription.
 
-If on the other hand, you expect to need separate Azure Policies for different parts of the central platform, you should start with additional level in the management group hierarchy under the platform to separate parts that will be managed by different teams.
+However, if you expect to need separate policies for different parts of the centralized platform, you should deploy additional levels in the management group hierarchy under the **Platform** management group. This ensure you can separate the components that will be managed by different teams.
 
 ![Diagram that shows Platform management group options with a single management group and platform subscription or separate management groups for management, connectivity, and identity.](./media/isv-landing-zone/isv-platform-mg.png)
 
 ## Landing Zones management group
 
-"Landing Zones" management group is the holding place for Azure subscriptions that host the actual subsystems and workloads of the SaaS solution. This management group contains one or more child management groups. Each of the child management groups under the "Landing Zones" represents a workload or subsystem "archetype" with consistent policy and access requirements that should apply to all subscriptions.
+The **Landing Zones** management group contains the Azure subscriptions that host the actual subsystems and workloads of your SaaS solution.
 
-For example, if a subsystem of your SaaS product needs to be PCI-DSS compliant, there should be a "PCI DSS" archetype child management group under "Landing Zones" and all of the Azure subscriptions that contain resources in scope of the PCI-DSS should be within that management group.
+This management group contains one or more child management groups. Each of the child management groups under the **Landing Zones** management group represents a workload or subsystem *archetype*, with consistent policy and access requirements that should apply to all subscriptions. Example scenarios for using multiple archetypes include:
 
-Another example could be separate landing zone archetypes for your SaaS solution's "dedicated tier" and "free tier" customers with different Azure Policies applied to each group such as only specific VM sizes in the free tier or specific regions for the dedicated tier.
+- **Compliance:** If a subsystem of your SaaS product needs to be PCI-DSS compliant, consider creating a **PCI DSS** archetype child management group under **Landing Zones**. All of the Azure subscriptions that contain resources in scope of the PCI-DSS compliance should be placed within that management group.
+- **Tiers:** Consider creating separate landing zone archetypes for your SaaS solution's *dedicated* tier and *free* tier customers. Each of the child management groups contains different Azure Policy settings. For example, the policies in the free tier might restrict deployments to only enable specific virtual machine SKUs, and the policies in the dedicated tier might require resources to be deployed into specific regions.
 
 ### Environment-specific management groups
 
