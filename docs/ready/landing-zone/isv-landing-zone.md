@@ -111,17 +111,17 @@ Each Azure landing zone and its management group hierarchy is rooted in *one* Az
 
 The [guidance for Azure landing zones and Azure AD tenants](./design-area/azure-ad-define.md) strongly recommends using a single Azure AD tenant. This is the correct approach for most customers. However, as a SaaS ISV, you might have reasons to separate the Azure AD tenant used by your SaaS operations team from the Azure AD tenant used by your own internal or corporate IT team.
 
-For some SaaS ISVs, separate teams manage the corporate resources and operate the SaaS solution. This can be for operational reasons, or to comply with regulatory requirements where corporate IT team might not be allowed to manage the SaaS-related subscriptions and resources and can't be administrators of the Azure AD tenant. If this scenario applies to you, consider using two separate Azure AD tenants: one Azure AD tenant for corporate IT resources like Office 365, and a separate Azure AD tenant for Azure resources that comprise the SaaS solution. Use separate domain names for each Azure AD tenant. For example, you might use `contoso.com` for your corporate Azure AD tenant, and `ContosoSaaSOps.com` for your SaaS Azure AD tenant.
-
-Avoid using separate Azure AD tenants for pre-production and production environments. For example, don't create tenants like `ContosoSaaSOpsPreProd.com` and `ContosoSaaSOpsProd.com` with separate Azure subscriptions under each one. Instead, use a single Azure AD tenant, and use management groups and Azure role-based access control (RBAC) to govern the access to subscriptions and resources under that single tenant.
-
-For more information on the using multiple Azure AD tenants, see the [securing Azure environments with Azure Active Directory whitepaper](https://azure.microsoft.com/resources/securing-azure-environments-with-azure-active-directory/).
+For some SaaS ISVs, one teams manages the corporate resources and a separate team operates the SaaS solution. This separation can be for operational reasons, or to comply with regulatory requirements. For example, the corporate IT team might not be allowed to manage the SaaS-related subscriptions and resources, and can't be administrators of the Azure AD tenant. If this scenario applies to you, consider using two separate Azure AD tenants: one Azure AD tenant for corporate IT resources like Office 365, and a separate Azure AD tenant for Azure resources that comprise the SaaS solution. Use separate domain names for each Azure AD tenant. For example, you might use `contoso.com` for your corporate Azure AD tenant, and `ContosoSaaSOps.com` for your SaaS Azure AD tenant.
 
 <!-- TODO Arsen is a warning too extreme? -->
 > [!WARNING]
 > When you use multiple Azure AD tenants, you will have higher management overhead. You should only use multiple Azure AD tenants when it's required. Additionally, if you use Azure AD Premium features like Privileged Identity Management, you need to purchase the license for each of your Azure AD tenants, which can increase your costs.
 
 ![Diagram that shows Azure AD tenant options for ISVs with a single corporate tenant or separation between corporate and SaaS Ops tenants.](./media/isv-landing-zone/isv-aad-tenant.png)
+
+Avoid using separate Azure AD tenants for pre-production and production environments. For example, don't create tenants like `ContosoSaaSOpsPreProd.com` and `ContosoSaaSOpsProd.com` with separate Azure subscriptions under each one. Instead, use a single Azure AD tenant, and use management groups and Azure role-based access control (RBAC) to govern the access to subscriptions and resources under that single tenant.
+
+For more information on the using multiple Azure AD tenants, see the [securing Azure environments with Azure Active Directory whitepaper](https://azure.microsoft.com/resources/securing-azure-environments-with-azure-active-directory/).
 
 ## Top-level management group
 
