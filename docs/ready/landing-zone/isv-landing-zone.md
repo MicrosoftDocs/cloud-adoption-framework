@@ -15,7 +15,7 @@ ms.custom: internal
 For many organizations, the [Azure landing zones](./index.md) conceptual architecture represents the destination in their cloud adoption journey. Landing zones describe how you can build an Azure environment with multiple subscriptions. A landing zone accounts for scale, security, governance, networking, and identity. It's based on feedback and lessons learned from many customers.
 
 > [!TIP]
-> It can be helpful to think about Azure landing zones as being related to a city plan. The architectures of the specific workloads deployed into a landing zone are like the plans for buildings in the city. For example water, gas, electricity, and transport links are all required before any buildings are constructed. The same applies for Azure, where Azure Landing Zones (Management Groups, Azure Policies, Subscriptions, RBAC, and so forth) are required before any workloads can be deployed in a production manner.
+> It can be helpful to think about Azure landing zones as being related to a city plan. The architectures of the specific workloads deployed into a landing zone are like the plans for buildings in the city. For example, water, gas, electricity, and transport links are all required before any buildings are constructed. The same applies for Azure. The components of Azure landing zones, including management groups, policies subscriptions, and role-based access control (RBAC), are all required before any production workloads can be deployed.
 
 As an Independent Software Vendor (ISV) building and operating your solution on Azure, you should refer to the following resources:
 
@@ -119,7 +119,7 @@ For some SaaS ISVs, one teams manages the corporate resources and a separate tea
 
 ![Diagram that shows Azure AD tenant options for ISVs with a single corporate tenant or separation between corporate and SaaS Ops tenants.](./media/isv-landing-zone/isv-aad-tenant.png)
 
-Avoid using separate Azure AD tenants for pre-production and production environments. For example, don't create tenants like `ContosoSaaSOpsPreProd.com` and `ContosoSaaSOpsProd.com` with separate Azure subscriptions under each one. Instead, use a single Azure AD tenant, and use management groups and Azure role-based access control (RBAC) to govern the access to subscriptions and resources under that single tenant.
+Avoid using separate Azure AD tenants for pre-production and production environments. For example, don't create tenants like `ContosoSaaSOpsPreProd.com` and `ContosoSaaSOpsProd.com` with separate Azure subscriptions under each one. Instead, use a single Azure AD tenant, and use management groups and Azure RBAC to govern the access to subscriptions and resources under that single tenant.
 
 For more information on the using multiple Azure AD tenants, see the [securing Azure environments with Azure Active Directory whitepaper](https://azure.microsoft.com/resources/securing-azure-environments-with-azure-active-directory/).
 
@@ -184,7 +184,7 @@ The **Decommissioned** management group is the holding place for Azure subscript
 The **Sandboxes** management group usually contains Azure subscriptions that are used for exploration purposes and have loose or no policies applied to them. For example, you might provide individual developers with their own subscriptions for development and testing. To increase the agility of the developers and to enable them to easily experiment with Azure, you could consider placing them in the **Sandboxes** management group. By doing so, you avoid the normal policies and governance being applied to these subscriptions.
 
 > [!IMPORTANT]
-> Subscriptions in the **Sandboxes** management group should not have direct connectivity to the landing zone subscriptions. Avoid connecting sandbox subscriptions to either noon-production or production workloads.
+> Subscriptions in the **Sandboxes** management group should not have direct connectivity to the landing zone subscriptions. Avoid connecting sandbox subscriptions to either non-production or production workloads.
 <!-- TODO Arsen we might need a little explanation here as I can see lots of smaller ISVs thinking "what's the harm in connecting sandboxes to a preprod environment?" -->
 
 The following diagram illustrates two potential options. Option A includes the **Decommissioned** and **Sandbox** management groups, while option B does not.
@@ -192,7 +192,7 @@ The following diagram illustrates two potential options. Option A includes the *
 
 ![Diagram that shows the optional Decommissioned and Sandboxes management groups on the same level as the Platform and Landing Zones management groups.](./media/isv-landing-zone/isv-decommissioned-mg.png)
 
-## Example Azure landing zone structure for a SaaS ISV
+## Example ISV landing zones
 
 This section includes two examples of an Azure landing zone structure for a SaaS ISV. Select each tab to compare the two example landing zones.
 
