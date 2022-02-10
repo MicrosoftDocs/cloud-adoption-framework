@@ -129,27 +129,29 @@ For more information on the using multiple Azure AD tenants, see the [securing A
 
 ## Management groups
 
-[The Azure landing zone conceptual architecture](index.md#azure-landing-zone-conceptual-architecture) recommends using a specific management group hierarchy.
+[The Azure landing zone conceptual architecture](index.md#azure-landing-zone-conceptual-architecture) recommends using a specific management group hierarchy. ISVs sometimes have different requirements to other customers. This section describes some areas in which you might adopt different practices from the standard landing zone conceptual architecture.
 
 ### Top-level management group
 
 The hierarchy is nested under the Azure-created **Tenant root group** management group, and you don't use the tenant root group directly.
 
-For a regular customer, who has a centralized corporate IT team managing the platform and shared services like logging, networking, identity, and security, there is usually one top-level management group, which is created under the tenant root group. The top-level management group is usually named after the customer, such as *Contoso*, and the rest of the management groups are deployed below that top-level management group.
+For a regular customer, who has a centralized corporate IT team managing the platform and shared services like logging, networking, identity, and security, there is usually one top-level management group, which is created under the **Tenant root group**. The top-level management group is usually named after the customer, such as *Contoso*, and the rest of the management groups are deployed below that top-level management group.
 
 As a SaaS ISV, you might have one SaaS product, or you might have a few completely separate SaaS products or lines of business. As discussed in the [Azure AD tenants](#azure-ad-tenants) section, the Azure AD tenant used for managing Azure resources should be the same across all of your products. But, in some scenarios, you might choose to deploy multiple management group hierarchies.
 
 Consider how independent your products are from each other, and ask yourself these questions:
 
-1. Do all of your products use the same platforms for DevOps, identity, security, connectivity, and logging?
-1. Are those shared services operated by a single central team, such as corporate IT or the cross-product SaaS operations team?
+- Do all of your products use the same platforms for DevOps, identity, security, connectivity, and logging?
+- Are those shared services operated by a single central team, such as corporate IT or the cross-product SaaS operations team?
 
-If the answers to both of these questions is yes, then you should have one top-level **SaaS Product** management group under the tenant root group.
+If the answers to both of these questions is yes, then you should have one top-level **SaaS Product** management group under the **Tenant root group**.
 
-However, if each of the SaaS products is managed and operated by completely separate platform teams, consider creating separate top-level management groups for each of the SaaS products, such as **SaaS Product-01** and **SaaS Product-02**. Each product's top-level management group has its own landing zone management group hierarchy, which includes the elements described later in this article. This approach is similar to the [testing approach for enterprise-scale landing zones](../enterprise-scale/testing-approach.md#example-scenarios-and-outcomes), but instead of *Contoso* and *Contoso-Canary*, as a SaaS ISV with completely separate products with their own individual platforms, you would have *Contoso-SaaS-Product-01*, *Contoso-SaaS-Product-02*, and *Contoso-SaaS-Product-03*.
+However, if each of the SaaS products is managed and operated by completely separate platform teams, consider creating separate top-level management groups for each of the SaaS products, such as **SaaS Product-01** and **SaaS Product-02**. Each product's top-level management group has its own landing zone management group hierarchy, which includes the elements described later in this article.
 
 > [!TIP]
 > It's uncommon for one ISV to have more than just a few top-level management groups. Often, several products can be combined together due to similarities in how they're managed and operated.
+
+This approach is similar to the [testing approach for enterprise-scale landing zones](../enterprise-scale/testing-approach.md#example-scenarios-and-outcomes), but instead of *Contoso* and *Contoso-Canary*, as a SaaS ISV with completely separate products with their own individual platforms, you would have *Contoso-SaaS-Product-01*, *Contoso-SaaS-Product-02*, and *Contoso-SaaS-Product-03*.
 
 ![Diagram that shows top-level management group options with a single management group and separate management groups for each of the SaaS products](./media/isv-landing-zone/isv-top-level-mg.png)
 
@@ -182,7 +184,7 @@ Most Azure customers use separate Azure subscriptions for each application team 
 
 However, SaaS ISVs can have different requirements to most other Azure customers. SaaS ISVs might need to group multiple subscriptions that represent *shards* or *partitions* of the same subsystem, application, or workload. If you have specific requirements to have policies or role assignments applied to these groups of subscriptions in way that's noticeably different from the archetype management group, you can consider creating child management groups that correspond to each environment under the archetype management group.
 
-The following diagram illustrates two potential options. Option A represents a simpler scenario, where regular customers use separate subscriptions for each environment but don't create environment-specific management groups. Option B shows a SaaS ISV scenario with environment-specific management groups under the **Regular stamps** management group. Each environment-specific management group contains multiple subscriptions. Over time, the ISV scales their Azure resources in each environment across an increasing number of subscriptions with a common set of policies and role assignments.
+The following diagram illustrates two potential options. Option A represents a scenario where you use separate subscriptions for each environment but don't create environment-specific management groups. Option B shows a SaaS ISV scenario with environment-specific management groups under the **Regular stamps** management group. Each environment-specific management group contains multiple subscriptions. Over time, the ISV scales their Azure resources in each environment across an increasing number of subscriptions with a common set of policies and role assignments.
 
 ![Diagram that shows two management group hierarchies. Option B includes an environment-specific management group level for SaaS ISVs who need to group many subscriptions of the same subsystem.](./media/isv-landing-zone/isv-landing-zones-mg.png)
 
@@ -195,7 +197,7 @@ The **Decommissioned** management group is the holding place for Azure subscript
 The **Sandboxes** management group usually contains Azure subscriptions that are used for exploration purposes and have loose or no policies applied to them. For example, you might provide individual developers with their own subscriptions for development and testing. To increase the agility of the developers and to enable them to easily experiment with Azure, you could consider placing them in the **Sandboxes** management group. By doing so, you avoid the normal policies and governance being applied to these subscriptions.
 
 > [!IMPORTANT]
-> Subscriptions in the **Sandboxes** management group should not have direct connectivity to the landing zone subscriptions. Avoid connecting sandbox subscriptions to production workloads, and any non-production environments that should mirror production environments.
+> Subscriptions in the **Sandboxes** management group should not have direct connectivity to the landing zone subscriptions. Avoid connecting sandbox subscriptions to production workloads, or to any non-production environments that mirror production environments.
 
 The following diagram illustrates two potential options. Option A does not includes the **Decommissioned** and **Sandbox** management groups, while option B does.
 
