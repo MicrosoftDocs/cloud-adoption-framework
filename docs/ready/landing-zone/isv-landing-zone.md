@@ -146,7 +146,7 @@ Consider how independent your products are from each other, and ask yourself the
 
 If the answers to both of these questions is yes, then you should have one top-level **SaaS Product** management group under the tenant root group.
 
-However, if each of the SaaS products is managed and operated by completely separate platform teams, consider creating separate top-level management groups for each of the SaaS products, such as **SaaS Product-01 Ops** and **SaaS Product-02 Ops**. Each product's top-level management group has its own landing zone management group hierarchy, which includes the elements described later in this article. This approach is similar to the [testing approach for enterprise-scale landing zones](../enterprise-scale/testing-approach.md#example-scenarios-and-outcomes), but instead of *Contoso* and *Contoso-Canary*, as a SaaS ISV with completely separate products with their own individual platforms, you would have *Contoso-SaaS-Product-01*, *Contoso-SaaS-Product-02*, and *Contoso-SaaS-Product-03*.
+However, if each of the SaaS products is managed and operated by completely separate platform teams, consider creating separate top-level management groups for each of the SaaS products, such as **SaaS Product-01** and **SaaS Product-02**. Each product's top-level management group has its own landing zone management group hierarchy, which includes the elements described later in this article. This approach is similar to the [testing approach for enterprise-scale landing zones](../enterprise-scale/testing-approach.md#example-scenarios-and-outcomes), but instead of *Contoso* and *Contoso-Canary*, as a SaaS ISV with completely separate products with their own individual platforms, you would have *Contoso-SaaS-Product-01*, *Contoso-SaaS-Product-02*, and *Contoso-SaaS-Product-03*.
 
 > [!TIP]
 > It's uncommon for one ISV to have more than just a few top-level management groups. Often, several products can be combined together due to similarities in how they're managed and operated.
@@ -234,4 +234,4 @@ The following diagram shows an example SaaS ISV Azure landing zones hierarchy wi
 
 * If you're building a multitenant solution, learn more about [architecting multitenant solutions on Azure](/azure/architecture/guide/multitenant/overview).
 * Learn [what is an Azure landing zone](index.md).
-* Learn about [Azure landing zone design areas](design-areas.md)
+* Learn about [Azure landing zone design areas](design-areas.md).
