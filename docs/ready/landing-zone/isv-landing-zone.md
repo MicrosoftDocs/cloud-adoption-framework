@@ -183,17 +183,17 @@ SaaS ISVs often organize their cloud environments by modeling their software dev
 > [!WARNING]
 > Most Azure customers use separate Azure subscriptions for each application team and have hundreds of applications. If each application had its own development, test, staging, and production management group there would be a very large number of management groups with almost identical policies. The [Enterprise-Scale Landing Zone FAQ](../enterprise-scale/faq.md#how-do-we-handle-devtestproduction-workload-landing-zones-in-enterprise-scale-architecture) advises against using separate management groups for each environment for most customers. Instead, it advises using separate subscriptions within a single management group.
 
-However, SaaS ISVs can have different requirements to most other Azure customers. SaaS ISVs might need to group multiple subscriptions that represent *shards* or *partitions* of the same subsystem, application, or workload. If you have specific requirements to have policies or role assignments applied to these groups of subscriptions in way that's noticeably different from the archetype management group, you can consider creating child management groups that correspond to each environment under the archetype management group.
+SaaS ISVs can have different requirements to most other Azure customers. SaaS ISVs might need to group multiple subscriptions that represent *shards* or *partitions* of the same subsystem, application, or workload. If you have specific requirements to have policies or role assignments applied to these groups of subscriptions in way that's noticeably different from the archetype management group, you can consider creating child management groups that correspond to each environment under the archetype management group.
 
 The following diagrams illustrate two potential options. Option A represents a scenario where you use separate subscriptions for each environment but don't create environment-specific management groups. Option B shows a SaaS ISV scenario with environment-specific management groups under the **Regular stamps** management group. Each environment-specific management group contains multiple subscriptions. Over time, the ISV scales their Azure resources in each environment across an increasing number of subscriptions with a common set of policies and role assignments.
 
 Select each tab to see the two diagrams.
 
-# [Without environment-specific management groups](#tab/mg-env-no)
+#### [Without environment-specific management groups](#tab/mg-env-no)
 
 ![Diagram that shows landing zone hierarchy without environment-specific management groups.](./media/isv-landing-zone/isv-landing-zones-mg-env-no.png)
 
-# [With environment-specific management groups](#tab/mg-env-yes)
+#### [With environment-specific management groups](#tab/mg-env-yes)
 
 ![Diagram that shows landing zone hierarchy with environment-specific management group level for SaaS ISVs who need to group many subscriptions of the same subsystem.](./media/isv-landing-zone/isv-landing-zones-mg-env-yes.png)
 
@@ -216,7 +216,7 @@ The following diagram illustrates two potential options. Option A does not inclu
 
 This section includes two examples of an Azure landing zone structure for a SaaS ISV. Select each tab to compare the two example landing zones.
 
-# [Minimal](#tab/minimal)
+#### [Minimal](#tab/minimal)
 
 The following diagram shows an example SaaS ISV Azure landing zones hierarchy with the following characteristics:
 
@@ -227,7 +227,7 @@ The following diagram shows an example SaaS ISV Azure landing zones hierarchy wi
 
 ![Diagram that shows an example Azure landing zone hierarchy for an ISV. Most of the components from this article are omitted.](./media/isv-landing-zone/isv-landing-zone-example1.png)
 
-# [Comprehensive](#tab/comprehensive)
+#### [Comprehensive](#tab/comprehensive)
 
 The following diagram shows an example SaaS ISV Azure landing zones hierarchy with the following characteristics:
 
