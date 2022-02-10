@@ -20,13 +20,19 @@ An important aspect of MDM is master identification numbers, which link mastered
 
 One approach for having master data consistency between domains is asking your domains, when distributing [data products](./data-landing-zone-data-products.md), to conform themselves to centrally managed master data. The list of master data is published, for example, in a master data store or central repository. When any of your domains distribute data products across, so to other domains, domains use the enterprise reference identifiers from the enterprise reference data to classify data. This allows other domains to quickly recognize master data within data products.
 
+:::image type="content" source="../images/master-data-management-01.png" alt-text="Master Data Management Domain" lightbox="../images/master-data-management-01.png":::
+
 When grouping your MDM activities and using a master data stores as centralized repositories, you could also create new MDM domains. Such an MDM domain refers to a specific data subject where identification and control of the master data is focused. Well known examples are customers, products, geographical locations, finance and risk, and employee data. Mastered data from these MDM domains are expected to find its way back to domains. The distribution of this data is similar to how data products are being distributed.
 
 You could scope master data management and allow different approaches of data product distribution. For example, some data products within the boundaries of a certain scope don't have to conform to enterprise master data, while data products that are distribute beyond the scope must conform. Or you apply this pattern the other way around: only within a specific scope strict adherence is required. The lists or reference data is typically centrally managed within an MDM solution.
 
 ### Domain-level Master Data Management
 
-When you look for overlapping data, you’re likely to discover different degrees of overlap. Some data is generic and spans many domains; other data has limited overlap and spans only a few domains. To distinguish the importance and amount of overlap, you could also extend MDM to domain-level MDM by creating partial views of master data within a specific scope. This is useful for data that is shared between some, but not all, domains. It's important for the overlapping domains to manage their data but to have no central dependency. MDM solutions in that respect can be best offered as service. Abstracting away the infrastructure and providing MDM as a service to your domains could simplify usage tremendously. If you're using a central solution, the recommendation is to apply segregated views for each of your individual domains or scopes.
+When you look for overlapping data, you’re likely to discover different degrees of overlap. Some data is generic and spans many domains; other data has limited overlap and spans only a few domains. To distinguish the importance and amount of overlap, you could also extend MDM to domain-level MDM by creating partial views of master data within a specific scope. This is useful for data that is shared between some, but not all, domains.
+
+:::image type="content" source="../images/master-data-management-02.png" alt-text="Domain-level Master Data Management" lightbox="../images/master-data-management-02.png":::
+
+It's important for the overlapping domains to manage their data but to have no central dependency. MDM solutions in that respect can be best offered as service. Abstracting away the infrastructure and providing MDM as a service to your domains could simplify usage tremendously. If you're using a central solution, the recommendation is to apply segregated views for each of your individual domains or scopes.
 
 ### Achieving MDM consistency via reusable components
 
