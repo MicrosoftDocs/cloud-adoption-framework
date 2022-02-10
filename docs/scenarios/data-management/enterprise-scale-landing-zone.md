@@ -72,7 +72,7 @@ For more information, see [Overview of the Azure data management and analytics s
 
 **Data landing zones** are subscriptions that host multiple analytics and AI solutions relevant to their respective domain or domain(s). These subscriptions within data management and analytics scenario represent primary business groups, integrators, and enablers. These groups own, operate, and often provide innate understanding for the source systems.
 
-:::image type="content" source="./images/data-landing-zone-overview.png" alt-text="Diagram of a data landing zone." lightbox="images/data-landing-zone-overview.png":::
+:::image type="content" source="images/data-landing-zone-overview.png" alt-text="Diagram of a data landing zone" lightbox="images/data-landing-zone-overview.png":::
 
 A few important points to keep in mind about data landing zones:
 
