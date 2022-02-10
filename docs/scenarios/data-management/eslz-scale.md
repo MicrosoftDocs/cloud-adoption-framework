@@ -24,9 +24,9 @@ A data landing zone is equal to an Azure subscription and allows single or multi
 
 Subscriptions are a unit of management, billing, and scale within Azure. Subscriptions play a critical role when you're designing for large-scale Azure adoption.
 
-The majority of deployments will start with a single data landing zone connected to a data management landing zone. The single data landing zone can contain multiple domains and data applications.
+Most deployments will start with a single data landing zone connected to a data management landing zone. The single data landing zone can contain multiple domains and data applications.
 
-There are factors which will drive you towards multiple data landing zones such:
+There are factors that will drive you towards multiple data landing zones such:
 
 - Multi-region data landing zone deployments
 - Requirements for different Azure policies to be applied to a data landing zone
@@ -34,7 +34,7 @@ There are factors which will drive you towards multiple data landing zones such:
 - Subscriptions provide a management boundary for governance and isolation, which clearly separates concerns.
 - Consider that subscription quotas aren't capacity guarantees and are applied on a per-region basis.
 
-Further consideration are documented in the cloud adoption framework guidance for [Subscriptions](../../ready/landing-zone/design-area/resource-org-subscriptions.md).
+Further considerations are documented in the cloud adoption framework guidance for [Subscriptions](../../ready/landing-zone/design-area/resource-org-subscriptions.md).
 
 ## Single data landing zone
 
