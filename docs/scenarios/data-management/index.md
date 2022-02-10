@@ -14,7 +14,36 @@ ms.custom: e2e-data-management, think-tank
 
 With larger, more sophisticated forms of cloud adoption, the journey to the cloud becomes more complex. This article series covers technical and non-technical considerations for data management and analytics in the cloud. This guidance strives to be cloud agnostic to support hybrid and multicloud adoption, but the technical implementation examples focus on Azure products.
 
-## Objectives
+It builds upon the cloud adoption framework and azure landing zones.
+
+## Built on an Azure landing zone
+
+Before you consider deploying the data management and analytics scenario, you need to understand how close you're to agility within your organization today.
+
+Many enterprises have outdated data architectures that don't scale to the needs of large and multidisciplinary organizations. Centralized knowledge and capabilities introduce a bottleneck on a linear process workflow.
+
+If you're a small enterprise with limited staff, then having a centralized model mixed with some business subject matter experts might fit your operations model.
+
+If you're a large multinational enterprise with hundreds of data engineers and analysts spread around the business, a distributed operating model like data mesh might fit your business better. Data management and analytics scenario provides guidance to deploy the infrastructure to underpin these operation models.
+
+Your business should consider how to best:
+
+- Serve data as a product rather than a byproduct.
+- Provide an ecosystem of data products instead of a singular data warehouse that might not best fit the data scenario.
+- Drive a default way to enforce data governance and security.
+- Drive teams to consistently prioritize business outcomes instead of obsessing over the underlying technology.
+
+If you don't have an implementation of Azure landing zones, then it's important to consult your cloud teams about how to meet prerequisites. For more information, see [Ensure the environment is prepared for the cloud adoption plan](../../ready/index.md).
+
+## Accelerate Azure landing zones for data management and analytics
+
+Data management and analytics scenario requires an understanding of landing zones and uses infrastructure-as-code to deploy sample end-to-end solution templates. These customizable templates can help your organization get started with most data management and analytics scenarios:
+
+- [What is a landing zone?](../../ready/landing-zone/index.md)
+- [Choose a landing zone option](../../ready/landing-zone/choose-landing-zone-option.md)
+- [Refactor landing zones](../../ready/landing-zone/refactor.md)
+- [Data management and analytics landing zone](./ready.md)
+
 
 This scenario focuses on supporting two targeted outcomes:
 
