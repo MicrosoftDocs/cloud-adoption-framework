@@ -59,7 +59,6 @@ Currently, you'll need to use one of several open-source tools to complete the r
 
 If you're coming from an existing Kubernetes platform (AKS engine, ACS, or another Kubernetes implementation), you might consider using some open-source tooling to help with the migration. In these cases you've already got a workload that functions in Kubernetes, and rehosting in AKS is much simpler. Validate all capabilities exist in AKS before performing any migration.
 
-- [Velero](https://velero.io)
 - [Azure kube CLI extension](https://github.com/yaron2/azure-kube-cli)
 - [Reshifter](https://github.com/mhausenblas/reshifter)
 - Migrating from [AKS engine](/azure-stack/user/azure-stack-kubernetes-aks-engine-overview) to AKS

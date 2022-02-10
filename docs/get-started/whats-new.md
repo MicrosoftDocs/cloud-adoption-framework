@@ -14,7 +14,7 @@ ms.custom: internal
 
 Here are the recent changes we've made to the Cloud Adoption Framework.
 
-This Framework is collaboratively built with customers, partners, and internal Microsoft teams. We release new and updated content as it becomes available. New releases enable you to test, validate, and refine the Framework's guidance along with us.
+This framework is collaboratively built with customers, partners, and internal Microsoft teams. We release new and updated content as it becomes available. New releases enable you to test, validate, and refine this guidance along with us.
 
 Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
@@ -43,8 +43,8 @@ Get started with this scenario using the following links:
 | [Management disciplines](../scenarios/hybrid/arc-enabled-servers/eslz-management-and-monitoring-arc-server.md) | Similar to governance techniques, Azure Management services can also be extended out to other environments, such as on-premises and other cloud platforms through Azure Arc. Enterprise Scale provides guidance on how operationally maintain Azure Arc-enabled servers on Azure enterprise estate, with centralized management and monitoring at the platform level. |
 | [Automation disciplines](../scenarios/hybrid/arc-enabled-servers/eslz-automation-arc-server.md) | Azure Arc enables organizations to manage their digital state hosted outside of Azure with the same level of experience and automation as a native Azure resource. As part of your Enterprise Scale Landing Zone implementation you should plan for agent onboarding, lifecycle management, and expansion of the Azure control plane capabilities via Azure Arc with as much automation as possible. |
 | [Cost governance](../scenarios/hybrid/arc-enabled-servers/eslz-cost-governance.md) | Keep track of ungoverned and unmonitored resources that prevent you from to increase accountability with budgets, cost allocation, and chargebacks. |
-| [Start with Azure Arce-enabled server landing zone accelerator sandbox](../scenarios/hybrid/arc-enabled-servers/enterprise-scale-landing-zone-sandbox.md) | Get started with a fully automated Azure Arc-enabled servers sandbox deployment. |
-| [Introduction to Azure Arc-enabled servers landing zone accelerator for hybrid](../scenarios/hybrid/enterprise-scale-landing-zone.md) | Learn how to accelerate adoption of hybrid or multi-cloud architectures. |
+| [Start with Azure Arc-enabled servers landing zone accelerator sandbox](../scenarios/hybrid/arc-enabled-servers/enterprise-scale-landing-zone-sandbox.md) | Get started with a fully automated Azure Arc-enabled servers sandbox deployment. |
+| [Introduction to Azure Arc-enabled servers landing zone accelerator for hybrid](../scenarios/hybrid/enterprise-scale-landing-zone.md) | Learn how to accelerate adoption of hybrid or multicloud architectures. |
 
 ### Launch of Cloud Adoption Strategy Evaluator in the Microsoft Cloud Adoption Framework
 
@@ -56,9 +56,9 @@ We've launched the [Cloud Adoption Strategy Evaluator](/assessments/?id=8fefc6d5
 
 We've refined the flow for finding the right landing zone implementation, and have added additional content for all design areas.
 
-We've consolidated guidance into a comprehensive set across environment and compliance design areas —to make the right information easier for you to find. We've created a clearer flow for organizations to work through during the design phase, before deploying a landing zone. Read more about [Azure landing zone design areas](../ready/landing-zone/design-areas.md).
+We've consolidated guidance into a comprehensive set across environment and compliance design areas, making it easier to find the right information. We've created a clearer flow for organizations to work through during the design phase, before deploying a landing zone. Read more about [Azure landing zone design areas](../ready/landing-zone/design-areas.md).
 
-Finally, we've added an example alignment scenario to the Align on-ramp—[Scenario: Transition existing Azure environments to the Azure landing zone conceptual architecture](../ready/landing-zone/align-scenarios.md).
+Finally, we've added an example alignment scenario to the Align on-ramp: [Scenario: Transition existing Azure environments to the Azure landing zone conceptual architecture](../ready/landing-zone/align-scenarios.md).
 
 ## October 2021
 
@@ -68,13 +68,13 @@ This release of the Cloud Adoption Framework provides considerations for [migrat
 
 This scenario focuses on enabling specific, targeted outcomes to:
 
-- Accelerate migration and lower your TCO, reducing the time and complexity of migrating your existing VMware workloads to Azure—and maintain operational consistency, avoiding downtime with live bulk virtual machine migration.
+- Accelerate migration and lower your TCO, reducing the time and complexity of migrating your existing VMware workloads to Azure, as well as maintaining operational consistency, avoiding downtime with live bulk virtual machine migration.
 
 - Gain reliability and scale with automated provisioning for your VMware workloads on global Azure infrastructure.
 
 - Optimize your licensing costs on Azure with price benefits for Windows and SQL Server.
 
-- Modernize your applications running on VMware—through integration with Azure-native management, security, and services.
+- Modernize your applications running on VMware through integration with Azure-native management, security, and services.
 
 - Deploy unified hybrid management and operational controls with Azure Arc-enabled servers across Azure, VMware, and other cloud infrastructures.
 
