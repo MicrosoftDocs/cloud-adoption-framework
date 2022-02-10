@@ -1,9 +1,9 @@
 ---
-title: Introduction to Data management and analytics scenario
-description: Gain an overview of Data management and analytics scenario.
+title: Introduction to data management and analytics scenario
+description: Gain an overview of data management and analytics scenario.
 author: mboswell
-ms.author: brblanch
-ms.date: 12/15/2021
+ms.author: mboswell
+ms.date: 02/10/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -20,7 +20,7 @@ The data warehouse and data lake is still valuable, and will play an important r
 
 Even with the introduction of the cloud, the centralized approach to data management remains largely unchanged most of the time.
 
-In response to the challenges of centralized data warehouses, Data management and analytics scenario represents a strategic design path and targets the technical state for an Azure analytics and AI environment.
+In response to the challenges of centralized data warehouses, data management and analytics scenario represents a strategic design path and targets the technical state for an Azure analytics and AI environment.
 
 The pattern relies upon distribution of the data and its pipelines across domains. This pattern enables ownership of accessibility, usability, and development. Largely based on these patterns, data management and analytics scenario includes the following capabilities:
 
@@ -36,18 +36,18 @@ The pattern relies upon distribution of the data and its pipelines across domain
 - Monitoring
 
 > [!NOTE]
-> The Data management and analytics scenario builds on the Cloud Adoption Framework [enterprise-scale architecture](../../ready/enterprise-scale/index.md) and should be considered a supplement to it.
+> The data management and analytics scenario builds on the Cloud Adoption Framework [enterprise-scale architecture](../../ready/enterprise-scale/index.md) and should be considered a supplement to it.
 
 ## Critical design areas
 
-Data management and analytics scenario considers five critical design areas that help translate organizational requirements to Azure constructs and capabilities. Lack of attention to these design areas typically creates dissonance and friction between the enterprise-scale definition and Azure adoption. Data management and analytics scenario uses these design areas to help address the mismatch between on-premises and cloud-design infrastructure, and data monoliths.
+data management and analytics scenario considers five critical design areas that help translate organizational requirements to Azure constructs and capabilities. Lack of attention to these design areas typically creates dissonance and friction between the enterprise-scale definition and Azure adoption. data management and analytics scenario uses these design areas to help address the mismatch between on-premises and cloud-design infrastructure, and data monoliths.
 
 To learn more, see:
 
-- [Data management](#data-management-landing-zone)
+- [Data management landing zone](#data-management-landing-zone)
 - [Data landing zone](#data-landing-zone)
 - [Data products](#data-products)
-- [Data platform operational excellence](#data-platform-operational-excellence)
+- [Data platform operational excellence](#operational-excellence)
 
 ## Data management landing zone
 
@@ -60,74 +60,44 @@ The **Data management landing zone** is a subscription that governs the platform
 - [Data catalog](./architectures/data-management-landing-zone.md#data-catalog)
 - [Data classification](./architectures/data-management-landing-zone.md#data-classification)
 - [Data lineage](./architectures/data-management-landing-zone.md#data-lineage)
-- [Data quality management](./architectures/data-management-landing-zone.md#data-quality-management)
+- [Data quality](./architectures/data-management-landing-zone.md#data-quality-management)
 - [Data modeling repository](./architectures/data-management-landing-zone.md#data-modeling-repository)
 - [Master data management](./architectures/data-management-landing-zone.md#master-data-management)
 - [API catalog](./architectures/data-management-landing-zone.md#api-catalog)
 - [Data sharing and contracts](govern-data-sharing-agreements.md)
 
-For more information, see [Overview of the Azure Data management and analytics scenario data management landing zone](./architectures/data-management-landing-zone.md).
+For more information, see [Overview of the Azure data management and analytics scenario data management landing zone](./architectures/data-management-landing-zone.md).
 
 ## Data landing zone
 
-**Data landing zones** are subscriptions that host multiple analytics and AI solutions relevant to their respective domain or domain(s). These subscriptions within Data management and analytics scenario represent primary business groups, integrators, and enablers. These groups own, operate, and often provide innate understanding for the source systems.
+**Data landing zones** are subscriptions that host multiple analytics and AI solutions relevant to their respective domain or domain(s). These subscriptions within data management and analytics scenario represent primary business groups, integrators, and enablers. These groups own, operate, and often provide innate understanding for the source systems.
 
 :::image type="content" source="./images/data-landing-zone-overview.png" alt-text="Diagram of a data landing zone." lightbox="images/data-landing-zone-overview.png":::
 
 A few important points to keep in mind about data landing zones:
 
-- Ingestion capabilities exist in each data landing zone. These capabilities allow subject matter experts to pull in external data sources into the data landing zone.
+- Automated Ingestion capabilities can exist in each data landing zone. These capabilities allow subject matter experts to pull in external data sources into the data landing zone.
 - A data landing zone is instantiated based on its core architecture. It includes key capabilities to host an analytics platform.
-- A data landing zone can also host one or many [data products](#data-products).
+- A data landing zone can contain multiple [data product](#data-products).
 
 For more information, see [Data landing zone](./architectures/data-landing-zone.md).
 
 ## Data products
 
-A data product is anything that drives business value, including reports, workbooks, a distinct database, or a data API. It can use the following services and technologies that don't belong to a data landing zone's core architecture:
+A data product is anything that drives business value and is pushed to a polyglot store such as the data landing zone data lake.
 
-- Reporting with niche requirements, like compliance, tax reporting, HR, and others.
-- Specialized capabilities that address gaps in the baseline policies.
+Data products manage, organize, and make sense of the data within and across domains. A data product is a result of data from one or many transactional system integrations or other data products.
 
-Since data products are compute or polyglot persistence services, they might only be required depending on certain use cases.
-
-Examples of data products include:
-
-- Azure Functions
-- Azure App Service
-- Azure Logic Apps
-- Azure Analysis Services
-- Azure Cognitive Services
-- Azure Machine Learning
-- Azure SQL Database
-- Azure Database for MySQL
-- Azure Cosmos DB
+For more information, see [data management and analytics scenario data products in Azure](./architectures/data-landing-zone-data-products.md).
 
 > [!IMPORTANT]
-> A **data product** fulfils a specific need within a business using data. Data products manage, organize, and make sense of the data within and across domains. A data product is a result of data from one or many transactional system integrations or other data products.
+> When ingesting data from operational systems into a read data source. Apart from data quality checks and other applied data, the data should avoid having other data transformations applied to it. This drives reusability of the data product and allow other domains to consume, subject to access, for there use cases as opposed to having multiple extractions from the same operational system.
 
-For more information, see [Data management and analytics scenario data products in Azure](./architectures/data-landing-zone-data-products.md).
+## Operational excellence
 
-### Data integrations
+The data management and analytics scenario is designed with operational excellence at its core through self-service enablement, governance, and streamlined deployments. The working model for data operations enables these core principles by using infrastructure-as-code and deployment templates. It also uses deployment processes that include a forking and branching strategy and a central repository.
 
-The organization might decide to create another team, within a domain, for ingesting external data into the landing zone. This team still produces a data product but are tightly scoped as to there role. Data integrations could exist in a data landing zone as multiple resource groups, and each contains:
-
-- Azure Key Vault
-- Azure Data Factory for running developed engineering pipelines to transformations
-- A service principal that's used by the data integration to deploy ingest jobs to the Azure Databricks engineering workspace
-
-Other services like Azure Event Hubs, Azure IoT Hub, Azure Stream Analytics, and Azure Machine Learning can be created if they're needed.
-
-> [!IMPORTANT]
-> A **data integration** is responsible for ingesting external data into a read data source. Apart from data quality checks and other applied data, the data should avoid having other data transformations applied to it.
-
-For more information, see [Data management and analytics scenario data integrations in Azure](./architectures/data-landing-zone-data-integration.md).
-
-## Data platform operational excellence
-
-The data management and analytics scenario is designed with data platform operational excellence at its core through self-service enablement, governance, and streamlined deployments. The working model for data operations enables these core principles by using infrastructure-as-code and deployment templates. It also uses deployment processes that include a forking and branching strategy and a central repository.
-
-For more information, see [Understand DevOps automation for data management and analytics in Azure](./organize-data-operations.md).
+For more information, see [Organize Operations](./organize.md).
 
 ## Next steps
 
