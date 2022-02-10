@@ -12,11 +12,7 @@ ms.custom: e2e-data-management, think-tank
 
 # Azure data management and analytics scenario
 
-With larger, more sophisticated forms of cloud adoption, the journey to the cloud becomes more complex. This article series covers technical and non-technical considerations for data management and analytics in the cloud. This guidance strives to be cloud agnostic to support hybrid and multicloud adoption, but the technical implementation examples focus on Azure products.
-
-It builds upon the cloud adoption framework and azure landing zones.
-
-## Built on an Azure landing zone
+With larger, more sophisticated forms of cloud adoption, the journey to the cloud becomes more complex. This article series covers technical and non-technical considerations for data management and analytics in the cloud. This guidance strives to be cloud agnostic to support hybrid and multicloud adoption, but the technical implementation examples focus on Azure products. It builds upon Microsoft's cloud adoption framework and requires understanding of landing zones. [What is a landing zone?](../../ready/landing-zone/index.md).
 
 Before you consider deploying the data management and analytics scenario, you need to understand how close you're to agility within your organization today.
 
@@ -35,14 +31,7 @@ Your business should consider how to best:
 
 If you don't have an implementation of Azure landing zones, then it's important to consult your cloud teams about how to meet prerequisites. For more information, see [Ensure the environment is prepared for the cloud adoption plan](../../ready/index.md).
 
-## Accelerate Azure landing zones for data management and analytics
-
-Data management and analytics scenario requires an understanding of landing zones and uses infrastructure-as-code to deploy sample end-to-end solution templates. These customizable templates can help your organization get started with most data management and analytics scenarios:
-
-- [What is a landing zone?](../../ready/landing-zone/index.md)
-- [Choose a landing zone option](../../ready/landing-zone/choose-landing-zone-option.md)
-- [Refactor landing zones](../../ready/landing-zone/refactor.md)
-- [Data management and analytics landing zone](./ready.md)
+## Objectives
 
 This scenario focuses on supporting two targeted outcomes:
 
