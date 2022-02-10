@@ -12,7 +12,7 @@ ms.custom: e2e-data-management, think-tank
 
 # Requirements for governing Azure data in a modern enterprise
 
-The data management and analytics scenario recommends you consider the following requirements for governing data::
+The cloud scale analytics recommends you consider the following requirements for governing data::
 
 - Data item and data entity definition to create a common business vocabulary in a business glossary.
 - Data item and data entity identification and discovery.

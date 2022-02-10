@@ -1,6 +1,6 @@
 ---
-title: Detail of policies in Azure data management and analytics scenario
-description: Learn about Azure policies details in data management and analytics scenario. Azure policies help your organization govern resources as needed.
+title: Detail of policies in Azure cloud scale analytics
+description: Learn about Azure policies details in cloud scale analytics. Azure policies help your organization govern resources as needed.
 author: marvinbuss
 ms.author: mabuss
 ms.date: 11/25/2021
@@ -12,9 +12,9 @@ ms.custom: e2e-data-management, think-tank
 
 # Azure policies
 
-[Implementing custom policies](/azure/governance/policy/tutorials/create-and-manage) allows you to do more with Azure Policy. Data management and analytics scenario comes with a set of pre-created policies to help you implement the required guardrails in your environment.
+[Implementing custom policies](/azure/governance/policy/tutorials/create-and-manage) allows you to do more with Azure Policy. Cloud scale analytics comes with a set of pre-created policies to help you implement the required guardrails in your environment.
 
-Data management and analytics scenario contains custom policies pertaining to **resource and cost management, authentication, encryption, network isolation, logging, resilience and more** that apply to the following services and areas:
+Cloud scale analytics contains custom policies pertaining to **resource and cost management, authentication, encryption, network isolation, logging, resilience and more** that apply to the following services and areas:
 
 - [All services](#all-services)
 - [Storage](#storage)

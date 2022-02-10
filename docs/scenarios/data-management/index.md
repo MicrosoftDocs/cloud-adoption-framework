@@ -1,5 +1,5 @@
 ---
-title: Azure data management and analytics scenario overview
+title: Azure cloud scale analytics overview
 description: Gain an overview of an end-to-end scenario for data management and analytics in the cloud, with a focus on Azure implementation.
 author: mboswell
 ms.author: mboswell
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Azure data management and analytics scenario
+# Azure cloud scale analytics
 
 With larger, more sophisticated forms of cloud adoption, the journey to the cloud becomes more complex. This article series covers technical and non-technical considerations for data management and analytics in the cloud. This guidance strives to be cloud agnostic to support hybrid and multicloud adoption, but the technical implementation examples focus on Azure products.
 
@@ -39,17 +39,17 @@ This scenario also provides a framework built on the following principles to add
 
 ## Implementation guidance
 
-The data management and analytics scenario is designed to guide the end-to-end customer journey through the cloud adoption lifecycle. The full journey requires the following key components or guidance sets:
+The cloud scale analytics is designed to guide the end-to-end customer journey through the cloud adoption lifecycle. The full journey requires the following key components or guidance sets:
 
 |Documentation  |Description  |
 |---------|---------|
 | [Cloud Adoption Framework](/azure/cloud-adoption-framework) |Managing and governing data is a lifecycle process that starts by building on your existing cloud strategy and carries all the way through to ongoing operations management. The Cloud Adoption Framework will help to guide the full lifecycle for your data estate.         |
 | [Azure Well-Architected Framework](./well-architected-framework.md) |Workload architecture and operations have a direct affect on data. Understand how your architecture can improve management and governance of the data used by your workload.         |
 | [Azure landing zones](../../ready/index.md) |Choosing a landing zone as the environment to host your workloads, preprovisioned through code establishes a code-based starting point for your Azure environment. Ensure the environment is prepared for the cloud adoption plan through Azure landing zones by starting with Cloud Adoption Framework [Azure landing zones](../../ready/enterprise-scale/index.md) to create the infrastructure of your data platform.         |
-| [Data management and analytics scenario](enterprise-scale-landing-zone.md)  |Representing a strategic design path for an Azure data management and analytics. The data management and analytics scenario pattern relies upon distribution of the data and its pipelines across domains. This pattern includes the capabilities such as storage, data lineage, data classification, data ingestion, networking, security, access management, encryption, resiliency and monitoring.         |
+| [Cloud scale analytics](enterprise-scale-landing-zone.md)  |Representing a strategic design path for an Azure data management and analytics. The cloud scale analytics pattern relies upon distribution of the data and its pipelines across domains. This pattern includes the capabilities such as storage, data lineage, data classification, data ingestion, networking, security, access management, encryption, resiliency and monitoring.         |
 
 > [!TIP]
-> Deployable reference implementations and templates make it easy to get started with the data management and analytics scenario. To learn more, see [Deployment templates](./architectures/deployment-templates.md).
+> Deployable reference implementations and templates make it easy to get started with the cloud scale analytics. To learn more, see [Deployment templates](./architectures/deployment-templates.md).
 
 ## Reference architecture
 
@@ -65,7 +65,7 @@ For more information, see:
 
 ## Best practices
 
-The following advanced, level-300+ articles in the **Data management and analytics scenario** table of contents can help central IT teams deploy tools and manage processes for data management and governance:
+The following advanced, level-300+ articles in the **Cloud scale analytics** table of contents can help central IT teams deploy tools and manage processes for data management and governance:
 
 - [Data lake implementation](best-practices/data-lake-overview.md)
 - [Azure Synapse Analytics implementation](best-practices/synapse.md)
@@ -76,11 +76,11 @@ The following advanced, level-300+ articles in the **Data management and analyti
 
 ## Featured Azure products
 
-Expand the **Featured Azure products** section in the **Data management and analytics scenario** table of contents to learn about the Azure products that support data management and analytics.
+Expand the **Featured Azure products** section in the **Cloud scale analytics** table of contents to learn about the Azure products that support data management and analytics.
 
 ## Common customer journeys
 
-The following common customer journeys support the cloud data management and analytics scenario:
+The following common customer journeys support the cloud cloud scale analytics:
 
 - **Prepare your environment** Use [Prepare your environment](./plan.md) articles as resources. Establish processes and approaches to support the entire portfolio of workloads across your data estate.
 
@@ -90,9 +90,9 @@ The following common customer journeys support the cloud data management and ana
 
 - **Optimize individual workloads and workload teams.** Start with the [Azure Well-Architected Framework](./well-architected-framework.md) guidance to integrate data management and analytics strategies into individual workloads. The guidance describes best practices and architectures that central IT and governance teams typically deliver to accelerate individual workload development.
 
-- **Use best practices to onboard individual assets.** Expand the **Best practices** section in the **Data management and analytics scenario** table of contents for articles about processes to onboard all of your data estate into one data management and analytics control plane.
+- **Use best practices to onboard individual assets.** Expand the **Best practices** section in the **Cloud scale analytics** table of contents for articles about processes to onboard all of your data estate into one data management and analytics control plane.
 
-- **Use specific Azure products.** Accelerate and improve data management and analytics capabilities by using the Azure products in the **Featured Azure products** section of the **Data management and analytics scenario** table of contents.
+- **Use specific Azure products.** Accelerate and improve data management and analytics capabilities by using the Azure products in the **Featured Azure products** section of the **Cloud scale analytics** table of contents.
 
 ## Take action
 
@@ -100,7 +100,7 @@ For more information about planning for Azure data management and analytics, see
 
 - [Develop a plan for data management and analytics](plan.md)
 - [Review your environment for Azure landing zones](ready.md)
-- [Introduction to Data management and analytics scenario in Azure](enterprise-scale-landing-zone.md)
+- [Introduction to Cloud scale analytics in Azure](enterprise-scale-landing-zone.md)
 
 ## Next steps
 

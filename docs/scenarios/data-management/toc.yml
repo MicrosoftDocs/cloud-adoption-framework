@@ -1,7 +1,7 @@
 items:
-  - name: Data management and analytics scenario
+  - name: Cloud scale analytics
     href: ./index.md
-    pdf_name: Data management and analytics scenario
+    pdf_name: Cloud scale analytics
 
   - name: Overview
     href: ./overview-data-governance.md
