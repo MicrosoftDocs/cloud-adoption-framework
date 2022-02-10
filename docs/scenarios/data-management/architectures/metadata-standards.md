@@ -43,5 +43,7 @@ There's a growing trend in the industry to bring insights of your data closer to
 
 For building a unified view of data for your organization with custom user experience it's recommended to look at Azure Cosmos DB, which is a globally distributed, multi-model database service with NoSQL endpoints. It provides a graph database service via the Gremlin API to store massive graphs with billions of vertices and edges.
 
+The end result of this architecture is a company-wide graph which provides a unified view of all data in your organization using end-to-end context. The metadata lake is not about only storing information. It actively organizes your metadata as a graph by connecting it to many other services and tools. This allows you cross-correlate subject areas such as: domains, data quality, data usage, business capabilities, application functions, informatiom from your technical architecture, operational events, organizational metadata, application ownership metadata, location information, application life cycle management information, and so on.
+
 
 
