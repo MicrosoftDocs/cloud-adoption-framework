@@ -163,9 +163,9 @@ For convenient separation of roles and policies for enterprise customers, the **
 
 However, if you expect to need separate policies for different parts of the centralized platform, you should deploy the additional levels in the management group hierarchy under the **Platform** management group. This ensure you can separate the components that will be managed by different teams.
 
-The following diagram illustrates two potential implementations of the **Platform** management group. Option A shows a simple scenario, where the **Platform** management group contains a single platform subscription. Option B shows a more complex scenario, where the **Platform** management group contains three child management groups: **Management and DevOps**, **Identity and Security**, and **Connectivity**, each containing a subscription with the relevant resources.
+The following diagram illustrates two potential implementations of the **Platform** management group. Option A shows a more comprehensive scenario, where the **Platform** management group contains three child management groups: **Management and DevOps**, **Identity and Security**, and **Connectivity**, each containing a subscription with the relevant resources. Option A shows a simple scenario, where the **Platform** management group contains a single platform subscription.
 
-![Diagram that shows two management group hierarchies. Option A includes a platform management group options with a single management group. Option B shows separate platform management groups for management, connectivity, and identity.](./media/isv-landing-zone/isv-platform-mg.png)
+![Diagram that shows two management group hierarchies. Option A shows separate platform management groups for management, connectivity, and identity. Option B includes a platform management group options with a single management group.](./media/isv-landing-zone/isv-platform-mg.png)
 
 ### Landing Zones management group
 
@@ -180,13 +180,22 @@ This management group contains one or more child management groups. Each of the 
 
 SaaS ISVs often organize their cloud environments by modeling their software development lifecycle environments through a sequence. Commonly, this requires deployment first to a *Development* environment, then a *Test* environment, a *Staging* environment, and then to the *Production* environment. One common difference between the environments is the Azure RBAC rules, such as who can access these groups of subscriptions. For example, the DevOps, SaaSOps, development, and test teams might have different levels of access to different environments.
 
-Most Azure customers use separate Azure subscriptions for each application team and have hundreds of applications. If each application had its own development, test, staging, and production management group there would be a very large number of management groups with almost identical policies. The [Enterprise-Scale Landing Zone FAQ](../enterprise-scale/faq.md#how-do-we-handle-devtestproduction-workload-landing-zones-in-enterprise-scale-architecture) advises against using separate management groups for each environment for most customers. Instead, it advises using separate subscriptions within a single management group.
+> [!WARNING]
+> Most Azure customers use separate Azure subscriptions for each application team and have hundreds of applications. If each application had its own development, test, staging, and production management group there would be a very large number of management groups with almost identical policies. The [Enterprise-Scale Landing Zone FAQ](../enterprise-scale/faq.md#how-do-we-handle-devtestproduction-workload-landing-zones-in-enterprise-scale-architecture) advises against using separate management groups for each environment for most customers. Instead, it advises using separate subscriptions within a single management group.
 
 However, SaaS ISVs can have different requirements to most other Azure customers. SaaS ISVs might need to group multiple subscriptions that represent *shards* or *partitions* of the same subsystem, application, or workload. If you have specific requirements to have policies or role assignments applied to these groups of subscriptions in way that's noticeably different from the archetype management group, you can consider creating child management groups that correspond to each environment under the archetype management group.
 
-The following diagram illustrates two potential options. Option A represents a scenario where you use separate subscriptions for each environment but don't create environment-specific management groups. Option B shows a SaaS ISV scenario with environment-specific management groups under the **Regular stamps** management group. Each environment-specific management group contains multiple subscriptions. Over time, the ISV scales their Azure resources in each environment across an increasing number of subscriptions with a common set of policies and role assignments.
+The following diagrams illustrate two potential options. Option A represents a scenario where you use separate subscriptions for each environment but don't create environment-specific management groups. Option B shows a SaaS ISV scenario with environment-specific management groups under the **Regular stamps** management group. Each environment-specific management group contains multiple subscriptions. Over time, the ISV scales their Azure resources in each environment across an increasing number of subscriptions with a common set of policies and role assignments.
 
-![Diagram that shows two management group hierarchies. Option B includes an environment-specific management group level for SaaS ISVs who need to group many subscriptions of the same subsystem.](./media/isv-landing-zone/isv-landing-zones-mg.png)
+Select each tab to see the two diagrams.
+
+# [Without environment-specific management groups](#tab/mg-env-no)
+
+![Diagram that shows landing zone hierarchy without environment-specific management groups.](./media/isv-landing-zone/isv-landing-zones-mg-env-no.png)
+
+# [With environment-specific management groups](#tab/mg-env-yes)
+
+![Diagram that shows landing zone hierarchy with environment-specific management group level for SaaS ISVs who need to group many subscriptions of the same subsystem.](./media/isv-landing-zone/isv-landing-zones-mg-env-yes.png)
 
 ### Decommissioned and Sandboxes management groups
 
