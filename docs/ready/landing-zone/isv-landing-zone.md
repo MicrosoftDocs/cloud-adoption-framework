@@ -131,7 +131,7 @@ For more information on the using multiple Azure AD tenants, see the [securing A
 
 [The Azure landing zone conceptual architecture](index.md#azure-landing-zone-conceptual-architecture) recommends using a specific management group hierarchy.
 
-## Top-level management group
+### Top-level management group
 
 The hierarchy is nested under the Azure-created **Tenant root group** management group, and you don't use the tenant root group directly.
 
