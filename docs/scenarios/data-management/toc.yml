@@ -11,7 +11,7 @@ items:
 
   - name: Ready
     items:
-    - name: Overview
+    - name: Introduction to data management and analytics scenario
       href: ./ready.md
 
     - name: Design area considerations
