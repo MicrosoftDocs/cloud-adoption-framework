@@ -12,10 +12,15 @@ ms.custom: internal
 
 # Independent Software Vendor (ISV) considerations for Azure landing zones
 
+> [!CAUTION]
+> **Note to reviewers:** The diagrams on this article are in draft, and will be revised to the correct visual style before publication.
+
 For many organizations, the [Azure landing zones](./index.md) conceptual architecture represents the destination in their cloud adoption journey. Landing zones describe how you can build an Azure environment with multiple subscriptions. A landing zone accounts for scale, security, governance, networking, and identity. It's based on feedback and lessons learned from many customers.
 
 > [!TIP]
-> It can be helpful to think about Azure landing zones as being related to a city plan. The architectures of the specific workloads deployed into a landing zone are like the plans for buildings in the city. For example, water, gas, electricity, and transport links are all required before any buildings are constructed. The same applies for Azure. The components of Azure landing zones, including management groups, policies subscriptions, and role-based access control (RBAC), are all required before any production workloads can be deployed.
+> It can be helpful to think about Azure landing zones as being like a city plan. The architectures of the specific workloads deployed into a landing zone are like the plans for buildings in the city.
+>
+> For example, water, gas, electricity, and transport links are all required before any buildings are constructed. The same applies for Azure. The components of Azure landing zones, including management groups, policies subscriptions, and role-based access control (RBAC), are all required before any production workloads can be deployed.
 
 As an Independent Software Vendor (ISV) building and operating your solution on Azure, you should refer to the following resources:
 
@@ -113,7 +118,6 @@ The [guidance for Azure landing zones and Azure AD tenants](./design-area/azure-
 
 For some SaaS ISVs, one teams manages the corporate resources and a separate team operates the SaaS solution. This separation can be for operational reasons, or to comply with regulatory requirements. For example, the corporate IT team might not be allowed to manage the SaaS-related subscriptions and resources, and can't be administrators of the Azure AD tenant. If this scenario applies to you, consider using two separate Azure AD tenants: one Azure AD tenant for corporate IT resources like Office 365, and a separate Azure AD tenant for Azure resources that comprise the SaaS solution. Use separate domain names for each Azure AD tenant. For example, you might use `contoso.com` for your corporate Azure AD tenant, and `ContosoSaaSOps.com` for your SaaS Azure AD tenant.
 
-<!-- TODO Arsen is a warning too extreme? -->
 > [!WARNING]
 > When you use multiple Azure AD tenants, you will have higher management overhead. You should only use multiple Azure AD tenants when it's required. Additionally, if you use Azure AD Premium features like Privileged Identity Management, you need to purchase the license for each of your Azure AD tenants, which can increase your costs.
 
@@ -123,13 +127,17 @@ Avoid using separate Azure AD tenants for pre-production and production environm
 
 For more information on the using multiple Azure AD tenants, see the [securing Azure environments with Azure Active Directory whitepaper](https://azure.microsoft.com/resources/securing-azure-environments-with-azure-active-directory/).
 
+## Management groups
+
+[The Azure landing zone conceptual architecture](index.md#azure-landing-zone-conceptual-architecture) recommends using a specific management group hierarchy.
+
 ## Top-level management group
 
-[The Azure landing zone conceptual architecture](index.md#azure-landing-zone-conceptual-architecture) recommends using a specific management group hierarchy. The hierarchy is nested under the Azure-created **Tenant root group** management group, and you don't use the tenant root group directly.
+The hierarchy is nested under the Azure-created **Tenant root group** management group, and you don't use the tenant root group directly.
 
 For a regular customer, who has a centralized corporate IT team managing the platform and shared services like logging, networking, identity, and security, there is usually one top-level management group, which is created under the tenant root group. The top-level management group is usually named after the customer, such as *Contoso*, and the rest of the management groups are deployed below that top-level management group.
 
-As a SaaS ISV, you might have one SaaS product, or you might have a few completely separate SaaS products or lines of business. <!-- TODO Arsen I'm not sure we need to say "typically less than 10" products? --> As discussed in the [Azure AD tenants](#azure-ad-tenants) section, the Azure AD tenant used for managing Azure resources should be the same across all products. But, in some scenarios, you might choose to deploy multiple management group hierarchies.
+As a SaaS ISV, you might have one SaaS product, or you might have a few completely separate SaaS products or lines of business. As discussed in the [Azure AD tenants](#azure-ad-tenants) section, the Azure AD tenant used for managing Azure resources should be the same across all of your products. But, in some scenarios, you might choose to deploy multiple management group hierarchies.
 
 Consider how independent your products are from each other, and ask yourself these questions:
 
@@ -140,9 +148,12 @@ If the answers to both of these questions is yes, then you should have one top-l
 
 However, if each of the SaaS products is managed and operated by completely separate platform teams, consider creating separate top-level management groups for each of the SaaS products, such as **SaaS Product-01 Ops** and **SaaS Product-02 Ops**. Each product's top-level management group has its own landing zone management group hierarchy, which includes the elements described later in this article. This approach is similar to the [testing approach for enterprise-scale landing zones](../enterprise-scale/testing-approach.md#example-scenarios-and-outcomes), but instead of *Contoso* and *Contoso-Canary*, as a SaaS ISV with completely separate products with their own individual platforms, you would have *Contoso-SaaS-Product-01*, *Contoso-SaaS-Product-02*, and *Contoso-SaaS-Product-03*.
 
+> [!TIP]
+> It's uncommon for one ISV to have more than just a few top-level management groups. Often, several products can be combined together due to similiarities in how they're managed and operated.
+
 ![Diagram that shows top-level management group options with a single management group and separate management groups for each of the SaaS products](./media/isv-landing-zone/isv-top-level-mg.png)
 
-## Platform management group
+### Platform management group
 
 In the [Azure landing zone resource organization hierarchy](./design-area/resource-org-management-groups.md#management-groups-in-the-azure-landing-zone-accelerator), the **Platform** management group contains all of the Azure subscriptions that host the shared services and components used by workloads in the landing zone subscriptions. Example components that are deployed into the platform or shared services subscriptions include centralized logging infrastructure such as Log Analytics workspaces, DevOps, security, and automation tooling, central networking resources such as hub-VNet and DDos Protection plans, and the ISV's own control plane services.
 
@@ -154,7 +165,7 @@ The following diagram illustrates two potential implementations of the **Platfor
 
 ![Diagram that shows two management group hierarchies. Option A includes a platform management group options with a single management group. Option B shows separate platform management groups for management, connectivity, and identity.](./media/isv-landing-zone/isv-platform-mg.png)
 
-## Landing Zones management group
+### Landing Zones management group
 
 The **Landing Zones** management group contains the Azure subscriptions that host the actual subsystems and workloads of your SaaS solution.
 
@@ -175,7 +186,7 @@ The following diagram illustrates two potential options. Option A includes envir
 
 ![Diagram that shows two management group hierarchies. Option A includes an environment-specific management group level for SaaS ISVs who need to group many subscriptions of the same subsystem.](./media/isv-landing-zone/isv-landing-zones-mg.png)
 
-## Decommissioned and Sandboxes management groups
+### Decommissioned and Sandboxes management groups
 
 The Azure landing zone [resource organization guidance](./design-area/resource-org-management-groups.md#management-groups-in-the-azure-landing-zone-accelerator) recommends including optional **Decommissioned** and **Sandboxes** management groups directly below the top-level management group.
 
@@ -184,15 +195,14 @@ The **Decommissioned** management group is the holding place for Azure subscript
 The **Sandboxes** management group usually contains Azure subscriptions that are used for exploration purposes and have loose or no policies applied to them. For example, you might provide individual developers with their own subscriptions for development and testing. To increase the agility of the developers and to enable them to easily experiment with Azure, you could consider placing them in the **Sandboxes** management group. By doing so, you avoid the normal policies and governance being applied to these subscriptions.
 
 > [!IMPORTANT]
-> Subscriptions in the **Sandboxes** management group should not have direct connectivity to the landing zone subscriptions. Avoid connecting sandbox subscriptions to either non-production or production workloads.
-<!-- TODO Arsen we might need a little explanation here as I can see lots of smaller ISVs thinking "what's the harm in connecting sandboxes to a preprod environment?" -->
+> Subscriptions in the **Sandboxes** management group should not have direct connectivity to the landing zone subscriptions. Avoid connecting sandbox subscriptions to production workloads, and any non-production environments that should mirror production environments.
 
 The following diagram illustrates two potential options. Option A includes the **Decommissioned** and **Sandbox** management groups, while option B does not.
 <!-- TODO for consistency we should decide whether A or B is always the simple/complex one -->
 
 ![Diagram that shows the optional Decommissioned and Sandboxes management groups on the same level as the Platform and Landing Zones management groups.](./media/isv-landing-zone/isv-decommissioned-mg.png)
 
-## Example ISV landing zones
+### Example ISV landing zones
 
 This section includes two examples of an Azure landing zone structure for a SaaS ISV. Select each tab to compare the two example landing zones.
 
