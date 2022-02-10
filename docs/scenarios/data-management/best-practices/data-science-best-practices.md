@@ -1,6 +1,6 @@
 ---
-title: Best practices for data science projects with cloud scale analytics in Azure
-description: Learn about best practices for data science projects with cloud scale analytics in Azure.
+title: Best practices for data science projects with data management and analytics scenario in Azure
+description: Learn about best practices for data science projects with data management and analytics scenario in Azure.
 author: abdale
 ms.author: hamoodaleem
 ms.date: 08/06/2021
@@ -10,9 +10,9 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Best practices for data science projects with cloud scale analytics in Azure
+# Best practices for data science projects with data management and analytics scenario in Azure
 
-We recommend these best practices for how to use cloud scale analytics in Azure to operationalize data science projects.
+We recommend these best practices for how to use data management and analytics scenario in Azure to operationalize data science projects.
 
 ## Develop a blueprint
 
@@ -133,4 +133,4 @@ The following purposes apply to each folder in the repository:
 
 ## Next steps
 
-[Cloud scale analytics data products in Azure](../architectures/data-landing-zone-data-products.md)
+[Data management and analytics scenario data products in Azure](../architectures/data-landing-zone-data-products.md)

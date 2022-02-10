@@ -1,6 +1,6 @@
 ---
 title: Understand the personas and teams for data management and analytics in Azure
-description: Learn about the personas and teams for the cloud scale analytics in Azure.
+description: Learn about the personas and teams for the data management and analytics scenario in Azure.
 author: abdale
 ms.author: hamoodaleem
 ms.date: 08/06/2021
@@ -12,13 +12,13 @@ ms.custom: e2e-data-management, think-tank
 
 # Understand the personas and teams for data management and analytics in Azure
 
-For the cloud scale analytics, we recommend moving teams like ingest, processing, analysis, consumption, and visualization from working in horizontally siloed teams, to agile vertical cross domain teams in each tier. Platform teams like data platform operations and platform operations are grouped together in a common platform group.
+For the data management and analytics scenario, we recommend moving teams like ingest, processing, analysis, consumption, and visualization from working in horizontally siloed teams, to agile vertical cross domain teams in each tier. Platform teams like data platform operations and platform operations are grouped together in a common platform group.
 
-![Overview of the cloud scale analytics teams.](./images/enterprise-scale-analytics-ai-teams.png)
+![Overview of the data management and analytics scenario teams.](./images/enterprise-scale-analytics-ai-teams.png)
 
 ## Personas
 
-Multiple personas are involved a cloud scale analytics deployment. The following sections outline the personas that are key to a successful deployment, and data governance roles are described further down this page.
+Multiple personas are involved a data management and analytics scenario deployment. The following sections outline the personas that are key to a successful deployment, and data governance roles are described further down this page.
 
 | Persona | Role |
 |-|-|

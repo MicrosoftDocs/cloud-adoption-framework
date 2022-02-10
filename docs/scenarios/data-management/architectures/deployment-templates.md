@@ -1,6 +1,6 @@
 ---
-title: Deployment templates for cloud scale analytics deployments
-description: Learn about the core starter templates for cloud scale analytics deployments.
+title: Deployment templates for data management and analytics scenario deployments
+description: Learn about the core starter templates for data management and analytics scenario deployments.
 author: mboswell
 ms.author: mboswell
 ms.date: 12/14/2021
@@ -10,13 +10,13 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-data-management
 ---
 
-# Deployment templates for cloud scale analytics
+# Deployment templates for data management and analytics scenario
 
-The cloud scale analytics has the following core starter templates:
+The data management and analytics scenario has the following core starter templates:
 
 |Repository|Content|Required|Deployment model|
 |-|-|-|-|
-|[Data management template](https://github.com/Azure/data-management-zone)| Central data management services and shared data services, such as data catalog and self-hosted integration runtime | Yes | One per cloud scale analytics |
+|[Data management template](https://github.com/Azure/data-management-zone)| Central data management services and shared data services, such as data catalog and self-hosted integration runtime | Yes | One per data management and analytics scenario |
 |[Data landing zone template](https://github.com/Azure/data-landing-zone)| Data landing zone shared services, such as data storage, ingestion services, and management services | Yes | One per data landing zone |
 |[Data integration template - batch processing](https://github.com/Azure/data-product-batch) | Additional services required for batch data processing | No | One or more per data landing zone |
 |[Data integration template - stream processing](https://github.com/Azure/data-product-streaming) | Additional services required for processing data streams | No | One or more per data landing zone |
@@ -61,4 +61,4 @@ Keep in mind that the following services are not listed in the overview, because
 
 ## Next steps
 
-Learn about [Azure policies](policies.md) for cloud scale analytics.
+Learn about [Azure policies](policies.md) for data management and analytics scenario.

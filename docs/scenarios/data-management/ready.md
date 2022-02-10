@@ -12,7 +12,7 @@ ms.custom: e2e-data-management, think-tank
 
 # Review your environment for Azure landing zones
 
-Cloud scale analytics builds upon Azure landing zones for ease of deployment and governance. The principal purpose of an Azure landing zone is to ensure that when an application or workload lands on Azure, the required "plumbing" is already in place. There are sample templates, which get you started which can be used for data lakehouse and [data mesh](architectures/what-is-data-mesh.md) deployments. They provide agility and compliance with security and governance requirements. Azure landing zones must be in place before you deploy your first data management and analytics landing zones.
+Data management and analytics scenario builds upon Azure landing zones for ease of deployment and governance. The principal purpose of an Azure landing zone is to ensure that when an application or workload lands on Azure, the required "plumbing" is already in place. There are sample templates, which get you started which can be used for data lakehouse and [data mesh](architectures/what-is-data-mesh.md) deployments. They provide agility and compliance with security and governance requirements. Azure landing zones must be in place before you deploy your first data management and analytics landing zones.
 
 ## Data management and analytics evaluation
 
@@ -20,19 +20,19 @@ Often businesses seek clarity or prescriptive guidance before they start to carv
 
 To speed up the delivery of this end-to-end insights journey while still keeping these challenges in mind, Microsoft has developed a prescriptive scenario for data management and analytics. It aligns to the key themes discussed in [Develop a plan for data management and analytics](./plan.md).
 
-The cloud scale analytics builds on top of the Microsoft Cloud Adoption Framework whilst applying our Well-Architected framework lens. Microsoft Cloud Adoption Framework provides prescriptive guidance and best practices on cloud operating models, reference architecture, and platform templates. It's based on real-world learnings from some of our most challenging, sophisticated, and complex environments.
+The data management and analytics scenario builds on top of the Microsoft Cloud Adoption Framework whilst applying our Well-Architected framework lens. Microsoft Cloud Adoption Framework provides prescriptive guidance and best practices on cloud operating models, reference architecture, and platform templates. It's based on real-world learnings from some of our most challenging, sophisticated, and complex environments.
 
-The cloud scale analytics paves the way for customers to build and operationalize landing zones to host and run analytics workloads. You build the landing zones on the foundations of security, governance, and compliance. They're scalable and modular while supporting autonomy and innovation.
+The data management and analytics scenario paves the way for customers to build and operationalize landing zones to host and run analytics workloads. You build the landing zones on the foundations of security, governance, and compliance. They're scalable and modular while supporting autonomy and innovation.
 
 ### Build on an Azure landing zone
 
-Before you consider deploying the cloud scale analytics, you need to understand how close you're to agility within your organization today.
+Before you consider deploying the data management and analytics scenario, you need to understand how close you're to agility within your organization today.
 
 Many enterprises have outdated data architectures that don't scale to the needs of large and multidisciplinary organizations. Centralized knowledge and capabilities introduce a bottleneck on a linear process workflow.
 
 If you're a small enterprise with limited staff, then having a centralized model mixed with some business subject matter experts might fit your operations model.
 
-If you're a large multinational enterprise with hundreds of data engineers and analysts spread around the business, a distributed operating model like data mesh might fit your business better. Cloud scale analytics provides guidance to deploy the infrastructure to underpin these operation models.
+If you're a large multinational enterprise with hundreds of data engineers and analysts spread around the business, a distributed operating model like data mesh might fit your business better. Data management and analytics scenario provides guidance to deploy the infrastructure to underpin these operation models.
 
 Your business should consider how to best:
 
@@ -45,7 +45,7 @@ If you don't have an implementation of Azure landing zones, then it's important 
 
 ## Accelerate Azure landing zones for data management and analytics
 
-Cloud scale analytics requires an understanding of landing zones and uses infrastructure-as-code to deploy sample end-to-end solution templates. These customizable templates can help your organization get started with most cloud scale analyticss:
+Data management and analytics scenario requires an understanding of landing zones and uses infrastructure-as-code to deploy sample end-to-end solution templates. These customizable templates can help your organization get started with most data management and analytics scenarios:
 
 - [What is a landing zone?](../../ready/landing-zone/index.md)
 - [Choose a landing zone option](../../ready/landing-zone/choose-landing-zone-option.md)
@@ -54,4 +54,4 @@ Cloud scale analytics requires an understanding of landing zones and uses infras
 
 ## Next steps
 
-[Introduction to cloud scale analytics](./enterprise-scale-landing-zone.md)
+[Introduction to data management and analytics scenario](./enterprise-scale-landing-zone.md)

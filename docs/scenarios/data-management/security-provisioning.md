@@ -1,6 +1,6 @@
 ---
 title: Provision security for data management and analytics in Azure
-description: Learn how to provision security for the cloud scale analytics in Azure.
+description: Learn how to provision security for the data management and analytics scenario in Azure.
 author: mboswell
 ms.author: mboswell
 ms.date: 11/25/2021
@@ -33,7 +33,7 @@ The final step of creating an access package allows users to request access to t
 
 ### Grant access
 
-The cloud scale analytics is centered around onboarding new data integration uses cases or data products via Azure Active Directory entitlement management.
+The data management and analytics scenario is centered around onboarding new data integration uses cases or data products via Azure Active Directory entitlement management.
 
 Azure Active Directory (Azure AD) entitlement management is an identity governance feature that automates workflows for access requests, access assignments, reviews, and expiration, supporting organizations to manage identity and the access lifecycle at scale. For guidance about configuring access, see an [overview of Azure AD entitlement management](/azure/active-directory/governance/entitlement-management-overview).
 
@@ -92,7 +92,7 @@ The following Azure AD group naming conventions are suggested for table access c
 
 ## Configure Azure AD entitlement management
 
-The cloud scale analytics roles map to the configurations and maintenance of an Azure AD entitlement management solution.
+The data management and analytics scenario roles map to the configurations and maintenance of an Azure AD entitlement management solution.
 
 An organization can use Azure AD entitlement management to delegate access governance to access package managers, which frees data landing zone staff to support themselves without deferring to platform teams.
 

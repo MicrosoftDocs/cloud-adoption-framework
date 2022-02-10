@@ -26,30 +26,30 @@ You can start with single or multiple data landing zones:
 
 - For a more advanced environment that requires the ability to scale out using consistent patterns, consider [multiple data landing zones](#multiple-data-landing-zones).
 
-For more information, see [Cloud scale analytics architecture data landing zone](./architectures/data-landing-zone.md).
+For more information, see [Data management and analytics scenario architecture data landing zone](./architectures/data-landing-zone.md).
 
 ## Single data landing zone
 
-The following diagram shows an overview of a cloud scale analytics platform with a data management landing zone and a single data landing zone.
+The following diagram shows an overview of a data management and analytics scenario platform with a data management landing zone and a single data landing zone.
 
 ![Diagram of enterprise-scale data management and single data landing zone.](./images/high-level-design-single-data-landing-zone.png)
 
-This approach allows you to conform to the principles of cloud scale analytics. It gives you the option to add data landing zones as needed. This pattern builds out common core services with flexibility to add customizations. If you start with a single data landing zone, plan for expanding into multiple landing zones. Such planning avoids having to migrate data later.
+This approach allows you to conform to the principles of data management and analytics scenario. It gives you the option to add data landing zones as needed. This pattern builds out common core services with flexibility to add customizations. If you start with a single data landing zone, plan for expanding into multiple landing zones. Such planning avoids having to migrate data later.
 
 ## Multiple data landing zones
 
-This diagram is an overview of a cloud scale analytics platform with a central data management landing zone and multiple data landing zones:
+This diagram is an overview of a data management and analytics scenario platform with a central data management landing zone and multiple data landing zones:
 
 ![Diagram of enterprise-scale data management and multiple data landing zones.](./images/high-level-design-multiple-landing-zones.png)
 
-Cloud scale analytics advocates consistent governance using a common architecture. The architecture defines baseline capabilities and policies. All data landing zones adhere to the same controls and auditing. Teams can create data pipelines, ingest sources, and create data products, such as reports and dashboards. Teams can do Spark/SQL analysis as needed. You can augment data landing zone capabilities by adding services to the capability in the policy. For instance, a team could add a third-party graph engine to address a niche business requirement.
+Data management and analytics scenario advocates consistent governance using a common architecture. The architecture defines baseline capabilities and policies. All data landing zones adhere to the same controls and auditing. Teams can create data pipelines, ingest sources, and create data products, such as reports and dashboards. Teams can do Spark/SQL analysis as needed. You can augment data landing zone capabilities by adding services to the capability in the policy. For instance, a team could add a third-party graph engine to address a niche business requirement.
 
 If you have multiple data landing zones, the zones can connect to data lakes hosted in other zones. This approach allows groups to collaborate across the enterprise.
 
 When designing for multiple data landing zones, ensure direct communication between workloads with large amounts of traffic. For large workloads across multiple subscriptions, we recommend peering the virtual networks, see [Network topology and connectivity for data management and analytics landing zones](eslz-network-topology-and-connectivity.md).
 
-Cloud scale analytics places a strong emphasis on central cataloging and classification to protect data and allow various groups to discover datasets.
+Data management and analytics scenario places a strong emphasis on central cataloging and classification to protect data and allow various groups to discover datasets.
 
 ## Next steps
 
-[Enterprise enrollment and Azure Active Directory tenants for cloud scale analytics](./eslz-enterprise-enrollment-and-azure-ad-tenants.md)
+[Enterprise enrollment and Azure Active Directory tenants for data management and analytics scenario](./eslz-enterprise-enrollment-and-azure-ad-tenants.md)
