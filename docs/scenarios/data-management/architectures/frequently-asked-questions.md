@@ -1,6 +1,6 @@
 ---
-title: Frequently asked questions about data management and analytics scenario
-description: Explore frequently asked questions about data management and analytics scenario.
+title: Frequently asked questions about cloud scale analytics
+description: Explore frequently asked questions about cloud scale analytics.
 author: abdale
 ms.author: hamoodaleem
 ms.date: 11/25/2021
@@ -10,9 +10,9 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Frequently asked questions about data management and analytics scenario
+# Frequently asked questions about cloud scale analytics
 
-The following are common questions asked about data management and analytics scenario.
+The following are common questions asked about cloud scale analytics.
 
 ## Storage accounts
 
@@ -20,7 +20,7 @@ The following are common questions asked about data management and analytics sce
 
 Most data analytics patterns today exist with the three layers of raw, refined, and curated. Although they can be kept in the same storage, when it comes to large-scale implementations it creates issues with exceeding the number of allowed role-based access control (RBAC) and access control list (ACL) permissions that are available within a single storage account. When you use separate storage accounts, most implementations can avoid this issue.
 
-Other reasons are discussed in [Overview of Azure Data Lake Storage for the data management and analytics scenario](../best-practices/data-lake-overview.md).
+Other reasons are discussed in [Overview of Azure Data Lake Storage for the cloud scale analytics](../best-practices/data-lake-overview.md).
 
 ## Databricks
 
@@ -34,4 +34,4 @@ We recommends to use VNet peering between landing zones and private endpoints. F
 
 ## Next steps
 
-[Overview of Azure Data Lake Storage for the data management and analytics scenario](../best-practices/data-lake-overview.md)
+[Overview of Azure Data Lake Storage for the cloud scale analytics](../best-practices/data-lake-overview.md)

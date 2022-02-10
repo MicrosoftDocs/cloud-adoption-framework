@@ -1,6 +1,6 @@
 ---
-title: Overview of the data management and analytics scenario data management landing zone in Azure
-description: Gain an overview of the data management and analytics scenario data management landing zone in Azure
+title: Overview of the cloud scale analytics data management landing zone in Azure
+description: Gain an overview of the cloud scale analytics data management landing zone in Azure
 author: mboswell
 ms.author: mboswell
 ms.date: 11/25/2021
@@ -12,7 +12,7 @@ ms.custom: e2e-data-management, think-tank
 
 # Overview of the data management landing zone
 
-The data management landing zone is classified as a management function and is central to the data management and analytics scenario. It's responsible for the governance of the platform and enables communication to ingest data sources from Azure, third-party clouds, and on-premises data sources.
+The data management landing zone is classified as a management function and is central to the cloud scale analytics. It's responsible for the governance of the platform and enables communication to ingest data sources from Azure, third-party clouds, and on-premises data sources.
 
  :::image type="content" source="../images/data-management-overview.png" alt-text="Diagram of data management landing zone overview." lightbox="../images/data-management-overview.png":::
 
@@ -68,7 +68,7 @@ Azure Purview can scan and automatically classify documents. For example, if you
 
 ## Data lineage
 
-Data lineage plays an important component in an data management and analytics scenario. Lineage is a factor in understanding data quality and validating compliance. Lineage also adds context to datasets and products that allows for discoverable and self-serviceable data products.
+Data lineage plays an important component in an cloud scale analytics. Lineage is a factor in understanding data quality and validating compliance. Lineage also adds context to datasets and products that allows for discoverable and self-serviceable data products.
 
 One of the primary features of a data catalog is the ability to show the lineage between datasets. Azure Purview supports capturing data lineage from three Azure Data Factory activities: copy data, data flow, and execute SSIS package. Along with the native integration, custom lineage reporting is also supported via Apache Atlas hooks or REST API.
 
@@ -81,7 +81,7 @@ One of the primary features of a data catalog is the ability to show the lineage
 
 Enterprises are advised to continue with their current solution.
 
-In data management and analytics scenario data, integrations become responsible for producing datasets that are consumed by other data products. Integration ops owners are responsible for the business-aligned key performance indicators (KPIs) and the service-level goals around consumption of their read data sources.
+In cloud scale analytics data, integrations become responsible for producing datasets that are consumed by other data products. Integration ops owners are responsible for the business-aligned key performance indicators (KPIs) and the service-level goals around consumption of their read data sources.
 
 Data quality should happen as close to the source as possible to avoid quality issues replicating across the analytics and AI estate. Moving quality metrics and validation to the data integration aligns the quality process with the teams that are closest to the data. These teams have the deepest understanding of the data asset. Data lineage also provides data quality confidence and should be provided for all datasets and products.
 
@@ -113,7 +113,7 @@ Many master data management solutions fully integrate with Azure Active Director
 
 ### Approaches
 
-Enterprises have developed many different approaches to master data management. The following list includes some of the more common approaches and how they can be implemented within the data management and analytics scenario.
+Enterprises have developed many different approaches to master data management. The following list includes some of the more common approaches and how they can be implemented within the cloud scale analytics.
 
 #### Registry
 
@@ -157,7 +157,7 @@ Data products may have different lifecycles. We recommend applying policies to r
 
 In Azure, the data lifecycle is handled by each relevant service containing persisted data.
 
-[Lifecycle management](../best-practices/data-lake-key-considerations.md#lifecycle-management) for data management and analytics scenario outlines more considerations around the different layers in a data lake.
+[Lifecycle management](../best-practices/data-lake-key-considerations.md#lifecycle-management) for cloud scale analytics outlines more considerations around the different layers in a data lake.
 
 ## Automation interfaces (optional)
 

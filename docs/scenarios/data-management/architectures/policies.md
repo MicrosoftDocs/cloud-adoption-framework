@@ -1,6 +1,6 @@
 ---
-title: Detail of policies in Azure data management and analytics scenario
-description: Learn about Azure policies details in data management and analytics scenario. Azure policies help your organization govern resources as needed.
+title: Detail of policies in Azure cloud scale analytics
+description: Learn about Azure policies details in cloud scale analytics. Azure policies help your organization govern resources as needed.
 author: marvinbuss
 ms.author: mabuss
 ms.date: 11/25/2021

@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Introduction to data management and analytics scenario
+# Introduction to cloud scale analytics
 
 In the late 1980s, there was the introduction of the data warehouse Gen1, which combined disparate data sources from across the enterprise. In the late 2000s came Gen2, with the introduction of the big data ecosystem like Hadoop and the data lake. In the mid 2010s, we had the cloud data platform. It was similar to previous generations, but with the introduction of the ingestion of streaming data, like kappa or lambda architectures. The early 2020s introduced the concepts of the data lakehouse, data mesh, data fabric, and data-centric operational patterns.
 
@@ -22,7 +22,7 @@ Even with the introduction of the cloud, the centralized approach to data manage
 
 In response to the challenges of centralized data warehouses, Data management and analytics scenario represents a strategic design path and targets the technical state for an Azure analytics and AI environment.
 
-The pattern relies upon distribution of the data and its pipelines across domains. This pattern enables ownership of accessibility, usability, and development. Largely based on these patterns, data management and analytics scenario includes the following capabilities:
+The pattern relies upon distribution of the data and its pipelines across domains. This pattern enables ownership of accessibility, usability, and development. Largely based on these patterns, cloud scale analytics includes the following capabilities:
 
 - Storage
 - Data lineage
@@ -55,7 +55,7 @@ To learn more, see:
 
 ### Data management landing zone
 
-At the heart of data management and analytics scenario, is its data management capability. This capability is enabled through the data management landing zone.
+At the heart of cloud scale analytics, is its data management capability. This capability is enabled through the data management landing zone.
 
 :::image type="content" source="./images/data-management-overview-1.png" alt-text="Diagram of a Data management overview.":::
 
@@ -131,7 +131,7 @@ For more information, see [Data management and analytics scenario data products 
 
 ### Data platform operational excellence
 
-The data management and analytics scenario is designed with data platform operational excellence at its core through self-service enablement, governance, and streamlined deployments. The working model for data operations enables these core principles by using infrastructure-as-code and deployment templates. It also uses deployment processes that include a forking and branching strategy and a central repository.
+The cloud scale analytics is designed with data platform operational excellence at its core through self-service enablement, governance, and streamlined deployments. The working model for data operations enables these core principles by using infrastructure-as-code and deployment templates. It also uses deployment processes that include a forking and branching strategy and a central repository.
 
 For more information, see [Understand DevOps automation for data management and analytics in Azure](./organize-data-operations.md).
 

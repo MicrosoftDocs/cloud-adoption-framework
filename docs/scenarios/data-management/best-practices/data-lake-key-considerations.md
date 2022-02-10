@@ -1,6 +1,6 @@
 ---
 title: Key considerations for Azure Data Lake Storage
-description: Understand key Azure Data Lake Storage considerations for data management and analytics scenario.
+description: Understand key Azure Data Lake Storage considerations for cloud scale analytics.
 author: mboswell
 ms.author: mboswell
 ms.date: 12/15/2021

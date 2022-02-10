@@ -30,15 +30,15 @@ For more information, see [Data management and analytics scenario architecture d
 
 ## Single data landing zone
 
-The following diagram shows an overview of a data management and analytics scenario platform with a data management landing zone and a single data landing zone.
+The following diagram shows an overview of a cloud scale analytics platform with a data management landing zone and a single data landing zone.
 
 ![Diagram of enterprise-scale data management and single data landing zone.](./images/high-level-design-single-data-landing-zone.png)
 
-This approach allows you to conform to the principles of data management and analytics scenario. It gives you the option to add data landing zones as needed. This pattern builds out common core services with flexibility to add customizations. If you start with a single data landing zone, plan for expanding into multiple landing zones. Such planning avoids having to migrate data later.
+This approach allows you to conform to the principles of cloud scale analytics. It gives you the option to add data landing zones as needed. This pattern builds out common core services with flexibility to add customizations. If you start with a single data landing zone, plan for expanding into multiple landing zones. Such planning avoids having to migrate data later.
 
 ## Multiple data landing zones
 
-This diagram is an overview of a data management and analytics scenario platform with a central data management landing zone and multiple data landing zones:
+This diagram is an overview of a cloud scale analytics platform with a central data management landing zone and multiple data landing zones:
 
 ![Diagram of enterprise-scale data management and multiple data landing zones.](./images/high-level-design-multiple-landing-zones.png)
 
@@ -52,4 +52,4 @@ Data management and analytics scenario places a strong emphasis on central catal
 
 ## Next steps
 
-[Enterprise enrollment and Azure Active Directory tenants for data management and analytics scenario](./eslz-enterprise-enrollment-and-azure-ad-tenants.md)
+[Enterprise enrollment and Azure Active Directory tenants for cloud scale analytics](./eslz-enterprise-enrollment-and-azure-ad-tenants.md)

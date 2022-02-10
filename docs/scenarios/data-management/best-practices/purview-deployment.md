@@ -1,5 +1,5 @@
 ---
-title: Azure Purview deployment best practices for data management and analytics scenario
+title: Azure Purview deployment best practices for cloud scale analytics
 description: Azure Purview best practices for account setup, networking, name resolution, authentication of data sources, roles, and access control.
 author: zeinam
 ms.author: zeinam
@@ -10,9 +10,9 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Azure Purview deployment best practices for data management and analytics scenario
+# Azure Purview deployment best practices for cloud scale analytics
 
-The [data management landing zone](../architectures/data-management-landing-zone.md) is responsible for the governance of the data management and analytics scenario platform. It relies on [Azure Purview](https://azure.microsoft.com/services/purview/) to provide data management capabilities:
+The [data management landing zone](../architectures/data-management-landing-zone.md) is responsible for the governance of the cloud scale analytics platform. It relies on [Azure Purview](https://azure.microsoft.com/services/purview/) to provide data management capabilities:
 
 - [Data catalog](../architectures/data-management-landing-zone.md#data-catalog)
 - [Data classification](../architectures/data-management-landing-zone.md#data-classification)
@@ -24,7 +24,7 @@ Azure Purview is a unified data governance service. It helps organizations manag
 > We recommend using third-party tools of your choice to integrate the remaining capabilities of the [data management landing zone](../architectures/data-management-landing-zone.md) with Azure that are currently not supported by Azure Purview.
 >
 > [!NOTE]
-> This guidance in this section explains configurations specific to data management and analytics scenario. It's a collection of Azure best practices to enhance your data governance using Azure Purview. The guidance compliments the official [Azure Purview documentation](/azure/purview/).
+> This guidance in this section explains configurations specific to cloud scale analytics. It's a collection of Azure best practices to enhance your data governance using Azure Purview. The guidance compliments the official [Azure Purview documentation](/azure/purview/).
 
 One Azure Purview account is deployed inside the data management landing zone, which serves as a centralized data catalog. From the data management landing zone, Azure Purview can communicate with each data landing zone via private network connectivity using VNet peering across data management, data landing zones, and [self-hosted integration runtimes](/azure/purview/manage-integration-runtimes). Discovery of datasets in on-premises data stores and other public clouds is achieved by more deployments of self-hosted integration runtimes.
 
@@ -113,7 +113,7 @@ If you have a hybrid cloud, and cross-premises name resolution is required, it's
 > [!TIP]
 > To allow name resolution between the data management landing zone and the data landing zones, use the same private DNS zones located inside `{prefix}-global-dns` resource group inside the data management landing zone.
 
-For more information related to data management and analytics scenario networking and name resolution, see [Data management and analytics scenario networking](../eslz-network-topology-and-connectivity.md)
+For more information related to cloud scale analytics networking and name resolution, see [Data management and analytics scenario networking](../eslz-network-topology-and-connectivity.md)
 
 ## Manage authentication for data sources in Azure Purview
 
@@ -201,7 +201,7 @@ Once the data management landing zone deployment is complete, use the least priv
 
 For more information about Azure Purview catalog roles, see [Role-based access control in Azure Purview's data plane](/azure/purview/catalog-permissions)
 
-Review the following list of personas involved in an data management and analytics scenario deployment. Assign them the relevant Azure Purview roles so they can contribute in the success of the program:
+Review the following list of personas involved in an cloud scale analytics deployment. Assign them the relevant Azure Purview roles so they can contribute in the success of the program:
 
 | Persona | Role | Recommended Azure Purview role |
 |---|---|---|
@@ -222,4 +222,4 @@ For more information about data personas, see [Personas and teams](../organize-p
 
 ## Next steps
 
-[Azure Machine Learning as a data product for data management and analytics scenario](./azure-machine-learning.md)
+[Azure Machine Learning as a data product for cloud scale analytics](./azure-machine-learning.md)

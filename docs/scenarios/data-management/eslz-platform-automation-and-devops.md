@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Platform automation and DevOps for a data management and analytics scenario
+# Platform automation and DevOps for a cloud scale analytics
 
 Data management and analytics scenario is focused on separating the runtime, automation, and user layers.
 
@@ -48,16 +48,16 @@ Data management and analytics scenario consists of:
 
 Each asset can evolve independently over time because of different requirements and lifecycles. For example, one of the data landing zones might require RA-GRS storage accounts at some point. It's important to have an infrastructure as code (IaC) representation of each of asset in a repository. This way, changes can be implemented based on requirements in the respective data landing zone, data integration, or data product.
 
-The following table summarizes the teams involved in an data management and analytics scenario deployment.
+The following table summarizes the teams involved in an cloud scale analytics deployment.
 
 | Name | Role | Number of teams |
 |-|-|-|
 | Cloud platform team | The Azure cloud platform team in your organization. | One for the whole Azure platform. |
-| Data platform team | In charge of creating and maintaining Azure Resource Manager template repositories for different levels of data management and analytics scenario. Also maintains the data management landing zone and supports other teams if there are deployment issues or required enhancements. | One for data management and analytics scenario. |
+| Data platform team | In charge of creating and maintaining Azure Resource Manager template repositories for different levels of cloud scale analytics. Also maintains the data management landing zone and supports other teams if there are deployment issues or required enhancements. | One for cloud scale analytics. |
 | Data landing zone team | In charge of deploying and maintaining a specific data landing zone. Also supports the deployment and enhancement of data integrations and data products. | One team per data landing zone. |
 | Integration team | In charge of data integration deployment and updates. | One team per domain. |
 | Data product team |In charge of data products deployment and updates. | One team per data product. |
 
 ## Next steps
 
-[Provision the data management and analytics scenario platform](./eslz-provision-platform.md)
+[Provision the cloud scale analytics platform](./eslz-provision-platform.md)

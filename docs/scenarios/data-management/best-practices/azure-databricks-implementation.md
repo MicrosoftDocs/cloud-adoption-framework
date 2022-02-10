@@ -1,6 +1,6 @@
 ---
-title: Use Azure Databricks within data management and analytics scenario in Azure
-description: Learn how to use Azure Databricks for data management and analytics scenario in Azure.
+title: Use Azure Databricks within cloud scale analytics in Azure
+description: Learn how to use Azure Databricks for cloud scale analytics in Azure.
 author: mboswell
 ms.author: mboswell
 ms.date: 11/25/2021
@@ -10,11 +10,11 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Use Azure Databricks within data management and analytics scenario in Azure
+# Use Azure Databricks within cloud scale analytics in Azure
 
 Azure Databricks is a data analytics platform optimized for the Microsoft Azure Cloud Services platform. Azure Databricks offers two environments for developing data-intensive applications: Azure Databricks SQL Analytics and Azure Databricks workspace.
 
-For data management and analytics scenario, we'll focus on Azure Databricks workspace.
+For cloud scale analytics, we'll focus on Azure Databricks workspace.
 
 ## Overview
 
@@ -44,7 +44,7 @@ All Azure Databricks workspaces should use the premium plan, which provides the 
 - Role-based access control for notebooks, clusters, jobs, and tables
 - Audit logs
 
-To align to data management and analytics scenario, we recommend that all workspaces have the following default deployment options configured:
+To align to cloud scale analytics, we recommend that all workspaces have the following default deployment options configured:
 
 - The Azure Databricks workspaces connects to an external Apache Hive metastore instance in the data landing zone.
 - Configure each workspace to send Databricks diagnostic logging to Azure Log Analytics.
@@ -72,7 +72,7 @@ You might want to enable the following options for the Azure Databricks analytic
 
 ## Deploy Azure Databricks
 
-The two Azure Databricks workspaces are deployed as part of a new data landing zone deployment. This following image shows the workflow of deploying an Azure Databricks environment in data management and analytics scenario.
+The two Azure Databricks workspaces are deployed as part of a new data landing zone deployment. This following image shows the workflow of deploying an Azure Databricks environment in cloud scale analytics.
 
 ![Diagram of an Azure Databricks deployment into a data landing zone.](../images/databricks-deploy.png)
 
