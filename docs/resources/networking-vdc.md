@@ -81,7 +81,7 @@ The Azure fabric allocates infrastructure resources to tenant workloads and mana
 
 A virtual datacenter requires connectivity to external networks to offer services to customers, partners, or internal users. This need for connectivity refers not only to the Internet, but also to on-premises networks and datacenters.
 
-Customers control which services can access and be accessed from the public internet. This access is controlled by using [Azure Firewall][AzFW] or other types of virtual network appliances (NVAs), custom routing policies by using [user-defined routes][UDR], and network filtering by using [network security groups][NSG]. We recommend that all internet-facing resources also be protected by the [Azure DDoS Protection Standard][DDoS].
+Customers control the services that can access and be accessed from the public internet. This access is controlled by using [Azure Firewall][AzFW] or other types of virtual network appliances (NVAs), custom routing policies by using [user-defined routes][UDR], and network filtering by using [network security groups][NSG]. We recommend that all internet-facing resources also be protected by the [Azure DDoS Protection Standard][DDoS].
 
 Enterprises may need to connect their virtual datacenter to on-premises datacenters or other resources. This connectivity between Azure and on-premises networks is a crucial aspect when designing an effective architecture. Enterprises have two different ways to create this interconnection: transit over the Internet or via private direct connections.
 
