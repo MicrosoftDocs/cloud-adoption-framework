@@ -189,11 +189,11 @@ The following diagrams illustrate two potential options. Option A represents a s
 
 Select each tab to see the two diagrams.
 
-#### [Option A](#tab/mg-env-no/)
+#### [Option A](#tab/mg-env-no)
 
 ![Diagram that shows landing zone hierarchy without environment-specific management groups.](./media/isv-landing-zone/isv-landing-zones-mg-env-no.png)
 
-#### [Option B](#tab/mg-env-yes/)
+#### [Option B](#tab/mg-env-yes)
 
 ![Diagram that shows landing zone hierarchy with environment-specific management group level for SaaS ISVs who need to group many subscriptions of the same subsystem.](./media/isv-landing-zone/isv-landing-zones-mg-env-yes.png)
 
@@ -218,7 +218,7 @@ The following diagram illustrates two potential options. Option A does not inclu
 
 This section includes two examples of an Azure landing zone structure for a SaaS ISV. Select each tab to compare the two example landing zones.
 
-#### [Minimal](#tab/minimal/)
+#### [Minimal](#tab/minimal)
 
 The following diagram shows an example SaaS ISV Azure landing zones hierarchy with the following characteristics:
 
@@ -229,7 +229,7 @@ The following diagram shows an example SaaS ISV Azure landing zones hierarchy wi
 
 ![Diagram that shows an example Azure landing zone hierarchy for an ISV. Most of the components from this article are omitted.](./media/isv-landing-zone/isv-landing-zone-example1.png)
 
-#### [Comprehensive](#tab/comprehensive/)
+#### [Comprehensive](#tab/comprehensive)
 
 The following diagram shows an example SaaS ISV Azure landing zones hierarchy with the following characteristics:
 
