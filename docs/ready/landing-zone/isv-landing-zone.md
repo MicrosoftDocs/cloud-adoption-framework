@@ -163,7 +163,7 @@ For convenient separation of roles and policies for enterprise customers, the **
 
 However, if you expect to need separate policies for different parts of the centralized platform, you should deploy the additional levels in the management group hierarchy under the **Platform** management group. This ensure you can separate the components that will be managed by different teams.
 
-The following diagram illustrates two potential implementations of the **Platform** management group. Option A shows a more comprehensive scenario, where the **Platform** management group contains three child management groups: **Management and DevOps**, **Identity and Security**, and **Connectivity**, each containing a subscription with the relevant resources. Option A shows a simple scenario, where the **Platform** management group contains a single platform subscription.
+The following diagram illustrates two potential implementations of the **Platform** management group. Option A shows a more comprehensive scenario, where the **Platform** management group contains three child management groups: **Management and DevOps**, **Identity and Security**, and **Connectivity**, each containing a subscription with the relevant resources. Option B shows a simple scenario, where the **Platform** management group contains a single platform subscription.
 
 ![Diagram that shows two management group hierarchies. Option A shows separate platform management groups for management, connectivity, and identity. Option B includes a platform management group options with a single management group.](./media/isv-landing-zone/isv-platform-mg.png)
 
