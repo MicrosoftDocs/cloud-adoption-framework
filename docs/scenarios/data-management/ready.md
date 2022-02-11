@@ -1,8 +1,8 @@
 ---
 title: Review your environment for Azure landing zones
 description: Learn about how data management and analytics affects your Azure landing zone design.
-author: BrianBlanchard
-ms.author: brblanch
+author: mboswell
+ms.author: mboswell
 ms.date: 12/15/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -10,31 +10,9 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Introduction to data management and analytics scenario
+# Data Management and Analytics Scenario Overview
 
-Data management and analytics scenario builds upon Azure landing zones for ease of deployment and governance. The principal purpose of an Azure landing zone is to ensure that when an application or workload lands on Azure, the required "plumbing" is already in place. There are sample templates, which get you started which can be used for data lakehouse and [data mesh](architectures/what-is-data-mesh.md) deployments. They provide agility and compliance with security and governance requirements. Azure landing zones must be in place before you deploy your first data management and analytics landing zones.
-
-## Data management and analytics evaluation
-
-Often businesses seek clarity or prescriptive guidance before they start to carve out the technical details for a specific use case, project, or an end-to-end data management and analytics. It can be challenging to ensure that all strategic and required principles in the scope of the current use are considered for how the overall data strategy is formulated.
-
-To speed up the delivery of this end-to-end insights journey while still keeping these challenges in mind, Microsoft has developed a prescriptive scenario for data management and analytics. It aligns to the key themes discussed in [Develop a plan for data management and analytics](plan.md).
-
-The data management and analytics scenario builds on top of the Microsoft Cloud Adoption Framework whilst applying our Well-Architected framework lens. Microsoft Cloud Adoption Framework provides prescriptive guidance and best practices on cloud operating models, reference architecture, and platform templates. It's based on real-world learnings from some of our most challenging, sophisticated, and complex environments.
-
-The data management and analytics scenario paves the way for customers to build and operationalize landing zones to host and run analytics workloads. You build the landing zones on the foundations of security, governance, and compliance. They're scalable and modular while supporting autonomy and innovation.
-
-## Observations of existing architectures
-
-In the late 1980s, there was the introduction of the data warehouse generation 1, which combined disparate data sources from across the enterprise. In the late 2000s came Gen2, with the introduction of the big data ecosystem like Hadoop and the data lake. In the mid 2010s, we had the cloud data platform. It was similar to previous generations, but with the introduction of the ingestion of streaming data, like kappa or lambda architectures. The early 2020s introduced the concepts of the data lakehouse, data mesh, data fabric, and data-centric operational patterns.
-
-Understanding the evolution and looking forward, many organizations still have the centralized monolithic platform, generation 1. This system works well, up to a point. Bottlenecks because of interdependent processes, tightly coupled components, hyperspecialized teams, and thousands of extract, transform, load (ETL) jobs become prominent and can slow down delivery timelines.
-
-The data warehouse and data lake is still valuable, and will play an important role in your overall architecture. We're highlighting some of the challenges that inevitably come forth when using these traditional practices. These challenges are especially relevant in a complex organization, where data sources, requirements, teams, and outputs change.
-
-## Data Management and Analytics Scenario
-
-In response to the challenges of centralized data warehouses, data management and analytics scenario represents a strategic design path and targets the technical state for an Azure analytics and AI environment.
+In response to the need of frictionless governance and platform to actionable insights to the business, data management and analytics scenario represents a strategic design path and targets the technical state for an Azure analytics and AI environment.
 
 The pattern relies upon distribution of the data and its pipelines across domains. This pattern enables ownership of accessibility, usability, and development. Largely based on these patterns, data management and analytics scenario includes the following capabilities:
 
@@ -42,12 +20,12 @@ The pattern relies upon distribution of the data and its pipelines across domain
 - Data lineage
 - Data classification
 - Data ingestion
+- Data Quality
+- Access Provisioning
 - Networking
-- Security
-- Access management
 - Encryption
 - Resiliency
-- Monitoring
+- Observability
 
 > [!NOTE]
 > The data management and analytics scenario builds on the Cloud Adoption Framework [enterprise-scale architecture](../../ready/enterprise-scale/index.md) and should be considered a supplement to it.
@@ -79,6 +57,8 @@ The **Data management landing zone** is a subscription that governs the platform
 - [Master data management](architectures/data-management-landing-zone.md#master-data-management)
 - [API catalog](architectures/data-management-landing-zone.md#api-catalog)
 - [Data sharing and contracts](govern-data-sharing-agreements.md)
+- [Data privacy for data management and analytics in Azure](secure-data-privacy.md)
+- [Provision security for data management and analytics in Azure](security-provisioning.md)
 
 For more information, see [Overview of the Azure data management and analytics scenario data management landing zone](architectures/data-management-landing-zone.md).
 
