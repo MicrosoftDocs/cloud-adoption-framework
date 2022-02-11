@@ -26,8 +26,6 @@ items:
           href: ./eslz-network-topology-and-connectivity.md
         - name: Network architecture considerations
           href: ./eslz-network-considerations.md
-        - name: Limit cross-tenant private endpoint connections in Azure
-          href: ../../ready/azure-best-practices/limit-cross-tenant-private-endpoint-connections.md
       - name: Resource organization
         href: ./eslz-resource-organization.md
       - name: Governance disciplines
