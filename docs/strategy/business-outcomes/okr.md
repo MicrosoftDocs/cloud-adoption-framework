@@ -3,7 +3,7 @@ title: Measure business outcomes with objectives and key results (OKRs)
 description: Use the Cloud Adoption Framework to measure business outcomes using objectives and key results (OKRs).
 author: wayneme75
 ms.author: brblanch
-ms.date: 02/09/2022
+ms.date: 02/11/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
@@ -14,7 +14,7 @@ ms.custom: think-tank
 
 # Measure business outcomes using objectives and key results (OKRs)
 
-Modern operations require modern ways to measure business outcomes, and cloud technology can help to increase velocity for a business. An organization's measurement platform should support a company's outcomes and plan for growth by:
+Modern operations require new ways to measure business outcomes, and cloud technology can help increase velocity for a business. An organization can measure and support business outcomes and plans for growth by:
 
 - Providing insights to team members and groups.
 - Supporting staff to pivot quickly when outcomes don't align with strategy and expectations.
@@ -22,7 +22,7 @@ Modern operations require modern ways to measure business outcomes, and cloud te
 
 ## An overview of objectives and key results (OKRs)
 
-Many organizations have started to adopt objectives and key results (OKRs). OKRs have proven to drive alignment in complex work environments, foster innovation, and help individuals to focus on what matters. The two components comprising OKRs are an objective and key results for that objective. An objective is the statement of intent: what is the team trying to accomplish, and why is it important? Key results are specific outcomes that track impact on the objective.
+Many organizations have started to adopt objectives and key results (OKRs). OKRs have proven to drive alignment in complex work environments, foster innovation, and help individuals focus on what matters. The two components in OKRs are an objective and the key results for that objective. An objective is the statement of intent. What is the team trying to accomplish, and why is it important? Key results are specific outcomes that track impact on the objective.
 
 **Objective:** Clarity and intent.
 
@@ -38,11 +38,11 @@ To do this, focus on what happens in a month, a quarter, and other short-term in
 
 - **Aspire and inspire:** Teams establish their best possible results in a given quarter, focus efforts on great outcomes, and use retros to learn and iterate.
 
-- **Outcome focus:** Quarterly key results provide clarity on where value is created. This helps teams and the organization to drive business impacts faster.
+- **Outcome focus:** Quarterly key results provide clarity on where value is created. This helps teams and the organization drive business impacts faster.
 
 - **Global and local:** Teams localize OKRs into their nouns, verbs, and numbers that enrich OKRs with the team's expertise and insights.
 
-- **Transparent:** OKRs, alignment, and progress are visible to everyone with OKR software, simplifying collaboration and making good decisions faster.
+- **Transparent:** OKRs, alignment, and progress are visible to everyone with OKR software, which might simplify collaboration and making good decisions faster.
 
 ## How OKRs add value to an organization
 
@@ -50,13 +50,11 @@ OKRs help to create alignment and accountability within organizations.
 
 ![How OKRs increase alignment and accountability within organizations to help them meet goals faster.](../../_images/strategy/okr.jpg)
 
-*Figure 1: How OKRs increase alignment and accountability within organizations to help them meet goals faster.*
-
 Learn more about how your team can align [strategy and execution](https://www.workboard.com/blog/execution-vs-strategy.php) during planning and execution phases.
 
 ## Examples of OKRs
 
-The principles defined by WorkBoard can help your organization to understand how useful OKRs take form. Objectives need to inspire your company and its teams to fully understand your mission. Key results need to be specific and measurable within the quarter.
+The principles defined by WorkBoard can help your organization understand how useful OKRs take form. Objectives need to inspire your company, and help teams fully understand your mission. Key results need to be specific and measurable within the quarter.
 
 Here are some example of OKRs:
 
@@ -64,9 +62,9 @@ Here are some example of OKRs:
 
 **Key results:**
 
-1. 45 percent of K-12 schools using our platform
-1. A 12 percent increase in student engagement, as measured through internal systems
-1. A 95 percent satisfaction rate from quarterly parent surveys
+1. 45 percent of K-12 schools using our platform.
+1. A 12 percent increase in student engagement, as measured through internal systems.
+1. A 95 percent satisfaction rate from quarterly parent surveys.
 
 **Objective 2:** Build a technology platform that supports every person in our business to innovate and create.
 
@@ -80,15 +78,15 @@ Here are some example of OKRs:
 
 **Key results:**
 
-1. Increasing pipeline coverage from 50 percent to 200 percent
-1. Increasing closing rates for sales engagements by 5 percent
-1. Reducing the time to close deals by 8 percent
+1. Increasing pipeline coverage from 50 percent to 200 percent.
+1. Increasing closing rates for sales engagements by 5 percent.
+1. Reducing the time to close deals by 8 percent.
 
 ## Next steps
 
 Five steps can help your organization to move forward with OKRs:
 
-**Step 1: Learn:** Start exploring what OKRs can do for your business, and tune in to some of your industry peers and leaders to learn about how OKRs have benefited their organizations.
+**Step 1: Learn:** Start exploring what OKRs can do for your business. Tune in to some of your industry peers and leaders to learn about how OKRs have benefited their organizations.
 
 **Step 2: Plan:** As you begin to draft your OKRs, ensure that your sponsors are contributing and involved in the process. Work with an OKR coach to refine your OKRs.
 
