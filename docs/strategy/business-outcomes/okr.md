@@ -18,11 +18,11 @@ Modern operations require new ways to measure business outcomes, and cloud techn
 
 - Providing insights to team members and groups.
 - Supporting staff to pivot quickly when outcomes don't align with strategy and expectations.
-- Offering a structured format, templates, sequences, and tools to help teams plan and visualize for increasing velocity.
+- Offer a structured format, templates, sequences, and tools to help teams plan and visualize for increasing velocity.
 
 ## An overview of objectives and key results (OKRs)
 
-Many organizations have started to adopt objectives and key results (OKRs). OKRs have proven to drive alignment in complex work environments, foster innovation, and help individuals focus on what matters. The two components in OKRs are an objective and the key results for that objective. An objective is the statement of intent. What is the team trying to accomplish, and why is it important? Key results are specific outcomes that track impact on the objective.
+Many organizations have started to adopt objectives and key results (OKRs). OKRs have proven to drive alignment in complex work environments, foster innovation, and help individuals focus on what matters. The two components in OKRs are an objective and the key results for that objective. An objective is the statement of intent. What is the team trying to accomplish, and why is it important? Key results are specific outcomes that track the status of the objective.
 
 **Objective:** Clarity and intent.
 
@@ -30,17 +30,17 @@ Many organizations have started to adopt objectives and key results (OKRs). OKRs
 
 It's important to understand that OKRs are useful for measuring team outcomes versus individual performance. Since deadlines often motivate team performance, key results are established quarterly. OKRs help teams to focus on the most important tasks instead of the volume of work at hand.
 
-To do this, focus on what happens in a month, a quarter, and other short-term intervals. You can have OKRs that last longer, but shorter intervals emphasize the need for OKRs that track short-term impact.
+To do this, focus on what happens in a month, a quarter, and other short-term intervals. You can have OKRs that last longer, but shorter intervals emphasize the need for OKRs that track short-term affect.
 
 ## OKR key principles
 
 [WorkBoard](https://www.workboard.com) is a company that focuses solely on OKRs and offers software solutions to help customers adopt them. According to the company, the key principles of OKRs are:
 
-- **Aspire and inspire:** Teams establish their best possible results in a given quarter, focus efforts on great outcomes, and use retros to learn and iterate.
+- **Aspire and inspire:** Teams establishes their best possible results in a given quarter, focus efforts on great outcomes, and use retros to learn and iterate.
 
 - **Outcome focus:** Quarterly key results provide clarity on where value is created. This helps teams and the organization drive business impacts faster.
 
-- **Global and local:** Teams localize OKRs into their nouns, verbs, and numbers that enrich OKRs with the team's expertise and insights.
+- **Global and local:** Teams localizes OKRs into their nouns, verbs, and numbers that enrich OKRs with the team's expertise and insights.
 
 - **Transparent:** OKRs, alignment, and progress are visible to everyone with OKR software, which might simplify collaboration and making good decisions faster.
 
@@ -56,7 +56,7 @@ Learn more about how your team can align [strategy and execution](https://www.wo
 
 The principles defined by WorkBoard can help your organization understand how useful OKRs take form. Objectives need to inspire your company, and help teams fully understand your mission. Key results need to be specific and measurable within the quarter.
 
-Here are some example of OKRs:
+Here are some examples of OKRs:
 
 **Objective 1:** Be the top US provider of learning platforms to schools.
 
@@ -94,11 +94,11 @@ Five steps can help your organization to move forward with OKRs:
 
 **Step 4: Drive:** To maintain rigor and focus, make sure that you're sharing outcomes and results across the organization. This will help your teams to adopt a habit of using OKRs.
 
-**Step 5: Improve:** Continue to improve, revisit, and rethink how to connect further across the organization. OKRs in spreadsheets can be useful, but an organization can benefit most from everyone participating to meet objectives and gaining insights from the aligned data.
+**Step 5: Improve:** Continue to improve, revisit, and rethink how to connect further across the organization. OKRs in spreadsheets can be useful. However, an organization can benefit most if everyone participates to meet objectives and gain insights from the aligned data.
 
 Contact [WorkBoard](https://appsource.microsoft.com/product/office/WA104381599) to learn more about helping your organization move forward with OKRs.
 
-Now that you have measured your business outcomes, you are ready to [understand financial considerations](../financial-considerations/index.md).
+Now that you've measured your business outcomes, you're ready to [understand financial considerations](../financial-considerations/index.md).
 
 > [!div class="nextstepaction"]
 > [Understand financial considerations](../financial-considerations/index.md)
