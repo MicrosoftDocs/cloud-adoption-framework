@@ -9,7 +9,7 @@ items:
   - name: Plan
     href: ./plan.md
 
-  - name: Ready
+  - name: Prepare
     items:
     - name: Introduction to data management and analytics scenario
       href: ./ready.md
@@ -41,7 +41,7 @@ items:
       - name: Business continuity and disaster recovery
         href: ./eslz-business-continuity-and-disaster-recovery.md
 
-  - name: Govern
+  - name: Govern your data estate
     items:
     - name: Overview
       href: ./govern.md
@@ -56,7 +56,7 @@ items:
     - name: Data sharing agreements
       href: ./govern-data-sharing-agreements.md
 
-  - name: Secure
+  - name: Secure your data estate
     items:
     - name: Overview
       href: ./secure.md
@@ -69,7 +69,7 @@ items:
     - name: Data privacy
       href: ./secure-data-privacy.md
 
-  - name: Organize
+  - name: Organize people and teams
     items:
       - name: Overview
         href: ./organize.md
