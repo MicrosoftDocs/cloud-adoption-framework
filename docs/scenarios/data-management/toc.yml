@@ -4,14 +4,14 @@ items:
 
   - name: Overview
     href: ./overview-data-governance.md
-  - name: Strategy
+  - name: Build an initial strategy
     href: ./strategy.md
-  - name: Plan
+  - name: Define your plan
     href: ./plan.md
 
   - name: Prepare analytics estate
     items:
-    - name: Azure landing zone for data management and analytics
+    - name: Azure landing zones for data management and analytics
       href: ./ready.md
 
     - name: Design area considerations

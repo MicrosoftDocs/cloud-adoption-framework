@@ -14,7 +14,7 @@ ms.custom: e2e-data-management, think-tank
 
 Best practice encourages customers to create a single centralized cloud adoption strategy, using the [Cloud Adoption Framework's Strategy methodology](../../strategy/index.md). If you haven't already, use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record your cloud adoption strategy.
 
-This article helps expose many considerations about data management and analytics that will have an effect on your broader strategy.
+Before implementing the data management and analytics scenario, you should have a plan in place for your data strategy. You can start small with a single use-case or you might have a much set of large use-cases which will require prioritization. A strategy can help you establish your processes and start off the initial conversations, within the business, on the pillars you need to concentrate on.
 
 ## Data management and analytics motivations
 
@@ -85,13 +85,13 @@ To create a strategy is one thing, but to execute one at scale poses a great cha
 
 ### Iterative data strategy validation framework
 
-![Diagram of the iterative data strategy validation framework.](./images/data-strategy-framework.png)
-
 Business and technology leaders need to develop the mindset and strategies required to generate value from data and scale quickly in a simplified structured manner.
 
 ## Culture
 
 To build a successful data strategy, you need a data-driven culture. One that fosters open, collaborative participation consistently. This is so the entire workforce can learn, communicate, and improve the organization's business outcomes. It will also improve an employee's own ability to generate impact or influence, backed by data. Where you start on the journey will depend on your organization, your industry, and where you in the maturity curve. Let's look at what a maturity curve looks like:
+
+:::image type="content" source="./images/data-strategy-maturity.png" alt-text="Diagram of an organization's maturity evolving." lightbox="./images/data-strategy-maturity.png":::
 
 ### Level 0
 
@@ -112,8 +112,6 @@ Some of the characteristics of this level are a holistic approach to data and pr
 ### Level 4
 
 Here we see the entire company using a data-driven culture, frameworks, and standards enterprise. We also see automation, centers of excellence around analytics or automation, and data-driven feedback loops in action. One of the outcomes of a data-driven culture, is the use of AI in a meaningful way, and here it's easy to define a maturity model as the one shown below.
-
-:::image type="content" source="./images/data-strategy-maturity.png" alt-text="Diagram of an organization's maturity evolving." lightbox="./images/data-strategy-maturity.png":::
 
 ## Business aligned objectives
 

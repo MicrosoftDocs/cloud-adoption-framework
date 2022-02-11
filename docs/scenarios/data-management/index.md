@@ -122,4 +122,4 @@ For more information about planning for Azure data management and analytics, see
 To start your cloud data management and analytics journey, learn about data governance:
 
 > [!div class="nextstepaction"]
-> [What is data governance?](overview-data-governance.md)
+> [Introduction to data management and analytics overview](overview-data-governance.md)
