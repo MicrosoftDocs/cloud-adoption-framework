@@ -11,7 +11,7 @@ items:
 
   - name: Prepare
     items:
-    - name: Introduction to data management and analytics scenario
+    - name: Azure landing zone for data management and analytics
       href: ./ready.md
 
     - name: Design area considerations
