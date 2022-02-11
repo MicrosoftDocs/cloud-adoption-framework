@@ -9,7 +9,7 @@ items:
   - name: Plan
     href: ./plan.md
 
-  - name: Prepare
+  - name: Prepare analytics estate
     items:
     - name: Azure landing zone for data management and analytics
       href: ./ready.md
@@ -41,7 +41,7 @@ items:
       - name: Business continuity and disaster recovery
         href: ./eslz-business-continuity-and-disaster-recovery.md
 
-  - name: Govern your data estate
+  - name: Govern your analytics estate
     items:
     - name: Overview
       href: ./govern.md
@@ -56,7 +56,7 @@ items:
     - name: Data sharing agreements
       href: ./govern-data-sharing-agreements.md
 
-  - name: Secure your data estate
+  - name: Secure your analytics estate
     items:
     - name: Overview
       href: ./secure.md
@@ -80,7 +80,7 @@ items:
       - name: Teams functions
         href: ./organize-team-functions.md
 
-  - name: Manage
+  - name: Manage your analytics estate
     items:
     - name: Overview
       href: ./eslz-platform-automation-and-devops.md
