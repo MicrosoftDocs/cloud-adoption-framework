@@ -123,7 +123,13 @@ Identity services connectivity requirements of Azure Virtual Desktop session hos
 
 ### DNS
 
+Azure Virtual Desktop session hosts have the same name resolution requirements as any other IaaS workload, therefore connectivity to custom DNS servers or access (via vNet network link) to Azure Private DNS zones is required. Additional Azure Private DNS Zones are required to host the private endpoint namespaces of certain (storage accounts, key) PaaS services.
 
+- [Azure Private Endpoint DNS configuration](https://docs.microsoft.com/en-us/azure/private-link/private-endpoint-dns)
+
+To facilitate end user Azure Virtual Desktop client configuration (subscription to RDS feed), it is recommended to set up email discovery in the public DNs domain following:
+
+- [Set up email discovery to subscribe to your RDS feed](https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds-email-discovery)
 
 ### Bandwidth and latency
 
@@ -133,7 +139,7 @@ Connection latency will vary depending on the location of the users and the virt
 
 Additional information to interpret 
 
-### Quality of Service (QoS)
+### Quality of Service (QoS) with RDP Shortpath
 
 RDP Shortpath for managed networks provides a direct UDP-based transport between Remote Desktop Client and Session host. RDP Shortpath for managed networks enables configuration of Quality of Service (QoS) policies for the RDP data. QoS in Azure Virtual Desktop allows real-time RDP traffic that's sensitive to network delays to "cut in line" in front of traffic that's less sensitive. more information on QoS can be found at:
 
