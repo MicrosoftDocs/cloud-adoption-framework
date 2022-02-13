@@ -34,7 +34,7 @@ Designing and implementing Azure Virtual Desktop Azure networking capabilities i
   - Azure Firewall
   - Encryption for private connectivity
 
-- A [**network virtual appliance (NVA)**](https://azure.microsoft.com/en-us/blog/azure-firewall-and-network-virtual-appliances/) is a network device that supports functions like connectivity, application delivery, wide-area network (WAN) optimization, and security. NVAs include Azure Firewall and Azure Load Balancer.
+- [**network virtual appliance (NVA)**](https://azure.microsoft.com/en-us/blog/azure-firewall-and-network-virtual-appliances/) is a network device that supports functions like connectivity, application delivery, wide-area network (WAN) optimization, and security. NVAs include Azure Firewall and Azure Load Balancer.
 
 - In [**Forced tunneling**](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-forced-tunneling-rm#:~:text=Forced%20tunneling%20in%20Azure%20is%20configured%20via%20virtual,virtual%20networks%2C%20see%20User-defined%20routes%20and%20IP%20forwarding.) scenario all Internet-bound traffic originating on Azure VMs is routed or "forced" to go through an inspection and auditing appliance. without the option to allow you to inspect or audit the traffic. Unauthorized Internet access can potentially lead to information disclosure or other types of security breaches.
 
@@ -71,11 +71,10 @@ This scenario is ideal if:
 - You don't need traffic inspection between Azure Virtual Desktop networks and on-premises datacenters.
 - You don't need traffic inspection of internet outbound traffic from Azure Virtual Desktop networks.
 - You don't need to control the public IPs use to SNAT Azure Virtual Desktop internet outbound connections.
-- You don't enforced network filtering within Azure Virtual Desktops networks.
+- You don't enforce Azure Virtual Desktops networks internal traffic.
 - You have pre-existing hybrid connectivity to on-premises (Express Route or S2S VPN).
-- You have pre-existing ADDS and DNS custom DNS servers.
-- You do need traffic inspection between Azure VMware Solution workloads and the internet.
-- You consume Azure Virtual Desktop in native connection model (No RDP Shortpath).
+- You have pre-existing ADDS and DNS custom servers.
+- You consume Azure Virtual Desktop with standard connection model (No RDP Shortpath).
 
 ### Architectural components
 
@@ -83,23 +82,27 @@ You can implement this scenario with:
 
 - ADDS servers and custom DNS servers.
 - Network security groups.
+- Network Watcher.
 - Outbound internet via default Azure vNet path.
-- Express route or VPN gateway for hybrid connectivity to on-premises.
-- Virtual Network Gateway.
+- Express route or VPN virtual network gateway for hybrid connectivity to on-premises.
 - Azure private DNS zone.
 - Azure private endpoints.
+- Azure files service on storage accounts.
+- Azure key vault.
 
 [![Diagram of networking scenario 1.](./media/network-topology-scenario-1.png)](./media/network-topology-scenario-1.png#lightbox)
 
 ### Considerations
 
-- No client direct network path to session hosts.
-- Client connections are routed via AVD control plane (Gateway).
-- No direct network peering between AVD spokes, all the connections will go through the connectivity hub.
-- Outbound internet connection from the session hosts will use NAT with dynamic Azure public IPs.d
-- No path for public inbound connections to session hosts is required.
+- This scenario doesn't account for client direct network connectivity to session hosts from public or private (no RDP Shortpath).
+- Client connections are managed by Azure Virtual Desktop control plane Gateway (public endpoint), therefore AVD clients need to be able to create outbound connections to required AVD URLs (check required URL list under under general design considerations and recommendations).
+- Since Azure Virtual Desktop manages connections to session hosts, no public inbound path to session hosts is needed.
+- No virtual network peering between Azure Virtual Desktop spokes, all the traffic goes through the connectivity hub.
+- Outbound internet connection from Azure Virtual Desktop session hosts will go through the default Azure outbound NAT using dynamic Azure public IPs (no customer control on outbound public IPs used).
 - Connections from session hosts to Azure files (storage accounts) will be established using private endpoints.
-- Azure private DNS zones deployed on the hub to resolve storage account file service (privatelink.file.core.windows.net) and key vaults (privatelink.vaultcore.azure.net) namespaces.
+- Azure private DNS zones are used to resolve private endpoint namespaces:
+  - Storage account file service (privatelink.file.core.windows.net).
+  - key vaults (privatelink.vaultcore.azure.net).
 
 ## General design considerations and recommendations
 
@@ -113,7 +116,10 @@ Virtual WAN supports [transit connectivity between VPN and ExpressRoute](/azure/
 
 ### Identity services
 
-Regardless of the connectivity model used, Azure Virtual Desktop subnets need to have connectivity to identity (AD DS or AADDS) services.
+Identity services connectivity requirements of Azure Virtual Desktop session hosts will depend on the identity model chosen:
+
+- ADDS or Azure AD DS (AADDS) joined VMs: Azure Virtual Desktop networks must have connectivity to the network where the identity service is hosted.
+- [Azure AD (AAD) joined VMs](https://docs.microsoft.com/en-us/azure/architecture/example-scenario/wvd/azure-virtual-desktop-azure-active-directory-join): Azure Virtual Desktop session hosts create outbound connections to AAD public endpoints, therefore no private connectivity configurations required. 
 
 ### DNS
 
@@ -143,7 +149,7 @@ Azure Virtual Desktop compute resources and clients require to access public end
 
 Azure Virtual Desktop connection flow uses:
 
-- [Native model](https://docs.microsoft.com/en-us/azure/virtual-desktop/network-connectivity): 443/TCP
+- [Standard model](https://docs.microsoft.com/en-us/azure/virtual-desktop/network-connectivity): 443/TCP
 - [RDP Shortpath model](https://docs.microsoft.com/en-us/azure/virtual-desktop/shortpath): 443/TCP and 3390/UDP
 
 ### Business continuity and disaster recovery (BCDR)
