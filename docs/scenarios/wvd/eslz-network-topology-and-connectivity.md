@@ -105,13 +105,19 @@ You can implement this scenario with:
 
 Here are some general design considerations and recommendations for Azure Virtual Desktop network topology and connectivity:
 
+### Plan for IP addressing
+
 ### Hub-spoke vs. Virtual WAN network topology
 
 Virtual WAN supports [transit connectivity between VPN and ExpressRoute](/azure/virtual-wan/virtual-wan-about#transit-er), but doesn't support hub-spoke topology.
 
-### DNS and identity services
+### Identity services
 
-Regardless of the connectivity model used, Azure Virtual Desktop subnets need to have connectivity to identity (AD DS or AADDS) and DNS (Custom DNS) services.
+Regardless of the connectivity model used, Azure Virtual Desktop subnets need to have connectivity to identity (AD DS or AADDS) services.
+
+### DNS
+
+
 
 ### Bandwidth and latency
 
