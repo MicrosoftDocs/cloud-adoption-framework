@@ -137,8 +137,6 @@ Azure Virtual Desktops leverages Remote Desktop Protocol (RDP), this protocol ha
 
 Connection latency will vary depending on the location of the users and the virtual machines. Azure Virtual Desktop services will continuously roll out to new geographies to improve latency. To minimized latency perceived by Azure Virtual Desktop clients, use the [Azure Virtual Desktop Experience Estimator](/services/virtual-desktop/assessment/) to get round trip time (RTT) sample from clients and use this information to place session hosts in the closest region with the lowest RTT to the end users ([Interpreting results from estimator tool](/azure/virtual-desktop/connection-latency)).
 
-Additional information to interpret 
-
 ### Quality of Service (QoS) with RDP Shortpath
 
 RDP Shortpath for managed networks provides a direct UDP-based transport between Remote Desktop Client and Session host. RDP Shortpath for managed networks enables configuration of Quality of Service (QoS) policies for the RDP data. QoS in Azure Virtual Desktop allows real-time RDP traffic that's sensitive to network delays to "cut in line" in front of traffic that's less sensitive. more information on QoS can be found at:
