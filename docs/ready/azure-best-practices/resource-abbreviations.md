@@ -23,7 +23,7 @@ This list provides recommended abbreviations for various Azure resource types to
 | Asset type | Resource provider namespace/Entity | Abbreviation |
 |--|--|--|
 | API management service instance | `Microsoft.ApiManagement/service` | `apim-` |
-| Managed Identity | `Microsoft.ManagedIdentity/userAssignedIdentities` | `id-` |
+| Managed Identity | `Microsoft.ManagedIdentity/userAssignedIdentities` | `id-` <br> `mi-`|
 | Management group | `Microsoft.Management/managementGroups` | `mg-` |
 | Policy definition | `Microsoft.Authorization/policyDefinitions` | `policy-` |
 | Resource group | `Microsoft.Resources/resourceGroups` | `rg-` |
@@ -78,13 +78,14 @@ This list provides recommended abbreviations for various Azure resource types to
 | Asset type | Resource provider namespace/entity | Abbreviation |
 |--|--|--|
 | App Service environment | `Microsoft.Web/sites` | `ase-` |
-| App Service plan | `Microsoft.Web/serverFarms` | `plan-` |
+| App Service plan | `Microsoft.Web/serverFarms` | `plan-` <br> `asp-` |
 | Availability set | `Microsoft.Compute/availabilitySets` | `avail-` |
 | Azure Arc enabled server | `Microsoft.HybridCompute/machines` | `arcs-` |
 | Azure Arc enabled Kubernetes cluster | `Microsoft.Kubernetes/connectedClusters` | `arck` |
+| Batch accounts | `Microsoft.Batch/batchAccount` | `ba-` |
 | Cloud service | `Microsoft.Compute/cloudServices` | `cld-` |
 | Disk encryption set | `Microsoft.Compute/diskEncryptionSets` | `des` |
-| Function app | `Microsoft.Web/sites` | `func-` |
+| Function app | `Microsoft.Web/sites` | `func-` <br> `fa-` |
 | Gallery | `Microsoft.Compute/galleries` | `gal` |
 | Managed disk (OS) | `Microsoft.Compute/disks` | `osdisk` |
 | Managed disk (data) | `Microsoft.Compute/disks` | `disk` |
@@ -110,16 +111,16 @@ This list provides recommended abbreviations for various Azure resource types to
 
 | Asset type | Resource provider namespace/Entity | Abbreviation |
 |--|--|--|
-| Azure Cosmos DB database | `Microsoft.DocumentDB/databaseAccounts/sqlDatabases` | `cosmos-` |
-| Azure Cache for Redis instance | `Microsoft.Cache/Redis` | `redis-` |
+| Azure Cosmos DB database | `Microsoft.DocumentDB/databaseAccounts/sqlDatabases` | `cosmos-` <br> `cdb-` |
+| Azure Cache for Redis instance | `Microsoft.Cache/Redis` | `redis-` <br> `rdb-` |
 | Azure SQL Database server | `Microsoft.Sql/servers` | `sql-` |
 | Azure SQL database | `Microsoft.Sql/servers/databases` | `sqldb-` |
 | Azure Synapse Analytics | `Microsoft.Synapse/workspaces` | `syn` |
 | Azure Synapse Analytics Workspaces | `Microsoft.Synapse/workspaces` | `synw` |
 | Azure Synapse Analytics SQL Dedicated Pool | `Microsoft.Synapse/workspaces/sqlPools` | `syndp` |
 | Azure Synapse Analytics Spark Pool | `Microsoft.Synapse/workspaces/sqlPools` | `synsp` |
-| MySQL database | `Microsoft.DBforMySQL/servers` | `mysql-` |
-| PostgreSQL database | `Microsoft.DBforPostgreSQL/servers` | `psql-` |
+| MySQL database | `Microsoft.DBforMySQL/servers` | `mysql-` <br> `mydb-` |
+| PostgreSQL database | `Microsoft.DBforPostgreSQL/servers` | `psql-` <br> `pdb-` |
 | SQL Server Stretch Database | `Microsoft.Sql/servers/databases` | `sqlstrdb-` |
 | SQL Managed Instance | `Microsoft.Sql/managedInstances` | `sqlmi-` |
 
@@ -142,19 +143,19 @@ This list provides recommended abbreviations for various Azure resource types to
 
 | Asset type | Resource provider namespace/Entity | Abbreviation |
 |--|--|--|
-| Azure Analysis Services server | `Microsoft.AnalysisServices/servers` | `as` |
+| Azure Analysis Services server | `Microsoft.AnalysisServices/servers` | `as` <br> `aas` |
 | Azure Databricks workspace | `Microsoft.Databricks/workspaces` | `dbw-` |
 | Azure Stream Analytics | `Microsoft.StreamAnalytics/cluster` | `asa-` |
 | Azure Data Explorer cluster | `Microsoft.Kusto/clusters` | `dec` |
 | Azure Data Explorer cluster database | `Microsoft.Kusto/clusters/databases` | `dedb` |
-| Azure Data Factory | `Microsoft.DataFactory/factories` | `adf-` |
+| Azure Data Factory | `Microsoft.DataFactory/factories` | `adf-` <br> `df-` |
 | Data Lake Store account | `Microsoft.DataLakeStore/accounts` | `dls` |
 | Data Lake Analytics account | `Microsoft.DataLakeAnalytics/accounts` | `dla` |
-| Event Hubs namespace | `Microsoft.EventHub/namespaces` | `evhns-` |
-| Event hub | `Microsoft.EventHub/namespaces/eventHubs` | `evh-` |
-| Event Grid domain | `Microsoft.EventGrid/domains` | `evgd-` |
-| Event Grid subscriptions | `Microsoft.EventGrid/eventSubscriptions` | `evgs-` |
-| Event Grid topic | `Microsoft.EventGrid/domains/topics` | `evgt-` |
+| Event Hubs namespace | `Microsoft.EventHub/namespaces` | `evhns-` <br> `ehns-` |
+| Event hub | `Microsoft.EventHub/namespaces/eventHubs` | `evh-` <br> `eh-` |
+| Event Grid domain | `Microsoft.EventGrid/domains` | `evgd-` <br> `egd-` |
+| Event Grid subscriptions | `Microsoft.EventGrid/eventSubscriptions` | `evgs-` <br> `egs-` |
+| Event Grid topic | `Microsoft.EventGrid/domains/topics` | `evgt-` <br> `egt-` |
 | HDInsight - Hadoop cluster | `Microsoft.HDInsight/clusters` | `hadoop-` |
 | HDInsight - HBase cluster | `Microsoft.HDInsight/clusters` | `hbase-` |
 | HDInsight - Kafka cluster | `Microsoft.HDInsight/clusters` | `kafka-` |
@@ -187,7 +188,7 @@ This list provides recommended abbreviations for various Azure resource types to
 | Asset type | Resource provider namespace/Entity | Abbreviation |
 |--|--|--|
 | Integration account | `Microsoft.Logic/integrationAccounts` | `ia-` |
-| Logic apps | `Microsoft.Logic/workflows` | `logic-` |
+| Logic apps | `Microsoft.Logic/workflows` | `logic-` <br> `la-` |
 | Service Bus | `Microsoft.ServiceBus/namespaces` | `sb-` |
 | Service Bus queue | `Microsoft.ServiceBus/namespaces/queues` | `sbq-` |
 | Service Bus topic | `Microsoft.ServiceBus/namespaces/topics` | `sbt-` |
@@ -197,7 +198,7 @@ This list provides recommended abbreviations for various Azure resource types to
 | Asset type | Resource provider namespace/Entity | Abbreviation |
 |--|--|--|
 | Automation account | `Microsoft.Automation/automationAccounts` | `aa-` |
-| Application Insights | `Microsoft.Insights/components` | `appi-` |
+| Application Insights | `Microsoft.Insights/components` | `appi-` <br> `ai-`  |
 | Azure Monitor action group | `Microsoft.Insights/actionGroups` | `ag-` |
 | Azure Purview instance | `Microsoft.Purview/accounts` | `pview-` |
 | Blueprint | `Microsoft.Blueprint/blueprints` | `bp-` |
@@ -212,6 +213,40 @@ This list provides recommended abbreviations for various Azure resource types to
 | Azure Migrate project | `Microsoft.Migrate/assessmentProjects` | `migr-` |
 | Database Migration Service instance | `Microsoft.DataMigration/services` | `dms-` |
 | Recovery Services vault | `Microsoft.RecoveryServices/vaults` | `rsv-` |
+
+## AI + Machine Learning
+
+| Asset type | Resource provider namespace/Entity | Abbreviation |
+|--|--|--|
+| Azure Cognitive Search	|	 | `csrch-` |
+| Azure Databricks	|	 | `dtb-` |
+| Azure Machine Learning	|	 | `ml-` |
+| Azure Open Datasets	|	 | `ods-` |
+| Azure Cognitive Services	|	 | `csrv-` |
+| Azure Video Analyzer	|	 | `vidanlz-` |
+| Computer Vision	|	 | `cv-` |
+| Content Moderator	|	 | `cmod-` |
+| Custom Vision	|	 | `custv-` |
+| Data Science Virtual Machines	|	 | `dsvm-` |
+| Face API	|	 | `cfapi-` |
+| Azure Form Recognizer	|	 | `formr-` |
+| Kinect DK	|	 | `kdk-` |
+| Language Understanding (LUIS)	|	 | `luis-` |
+| Microsoft Genomics	|	 | `mgen-` |
+| Personalizer	|	 | `pers-` |
+| Project Bonsai	|	 | `pb-` |
+| QnA Maker	|	 | `qna-` |
+| Speaker recognition	|	 | `sr-` |
+| Speech to text	|	 | `s2t-` |
+| Speech translation	|	 | `strans-` |
+| Cognitive Service for Language	|	 | `csl-` |
+| Text to speech	|	 | `t2s-` |
+| Translator	|	 | `trans-` |
+| Azure Metrics Advisor	|	 | `camd-` |
+| Health Bot	|	 | `hbot-` |
+| Azure Percept	|	 | `aperc-` |
+| Azure Applied AI Services	|	 | `aaais-` |
+| Azure OpenAI Service	|	 | `openai-` |
 
 ## Deprecated product names
 
