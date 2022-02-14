@@ -18,62 +18,62 @@ This list provides recommended abbreviations for various Azure resource types to
 
 <!-- cSpell:ignoreRegExp [a-z]+-? -->
 
-## Resource List in Alphabetical Order
+## Resource List
 
 | Asset Type | Resource provider namespace/Entity | Abbreviation |  
 |--|--|--|
    | `Analysis Services Server`| `Microsoft.AnalysisServices/servers` | `assvr` |
    | `API Management`| `Microsoft.ApiManagement/service` | `apims` |
-   | `API Management - API`| `Microsoft.ApiManagement/service/apis` | `apis` |
-   | `API Management - API Issue`| `Microsoft.ApiManagement/service/apis/issues` | `apii` |
-   | `API Management - API Issue Attachment`| `Microsoft.ApiManagement/service/apis/issues/attachments` | `apiia` |
-   | `API Management - API Issue Comment`| `Microsoft.ApiManagement/service/apis/issues/comments` | `apiic` |
-   | `API Management - API Operation`| `Microsoft.ApiManagement/service/apis/operations` | `apio` |
-   | `API Management - API Operation Tag`| `Microsoft.ApiManagement/service/apis/operations/tags` | `apiot` |
-   | `API Management - API Release`| `Microsoft.ApiManagement/service/apis/releases` | `apir` |
-   | `API Management - API Schema`| `Microsoft.ApiManagement/service/apis/schemas` | `apis` |
-   | `API Management - API Tag Description`| `Microsoft.ApiManagement/service/apis/tagDescriptions` | `apitd` |
-   | `API Management - API Tag`| `Microsoft.ApiManagement/service/apis/tags` | `apitg` |
-   | `API Management - API Version Set`| `Microsoft.ApiManagement/service/api-version-sets` | `apivs` |
-   | `API Management - Authorization Server`| `Microsoft.ApiManagement/service/authorizationServers` | `apias` |
-   | `API Management - Backend`| `Microsoft.ApiManagement/service/backends` | `apib` |
-   | `API Management - Certificate`| `Microsoft.ApiManagement/service/certificates` | `apic` |
-   | `API Management - Diagnostic`| `Microsoft.ApiManagement/service/diagnostics` | `apid` |
-   | `API Management - Group`| `Microsoft.ApiManagement/service/groups` | `apig` |
-   | `API Management - User`| `Microsoft.ApiManagement/service/groups/users` | `apigu` |
-   | `API Management - Identity Provider`| `Microsoft.ApiManagement/service/identityProviders` | `apiip` |
-   | `API Management - Logger`| `Microsoft.ApiManagement/service/loggers` | `apil` |
-   | `API Management - Notification`| `Microsoft.ApiManagement/service/notifications` | `apin` |
-   | `API Management - Recipient Email`| `Microsoft.ApiManagement/service/notifications/recipientEmails` | `recem` |
-   | `API Management - OpenID Connect Provider`| `Microsoft.ApiManagement/service/openidConnectProviders` | `apioi` |
-   | `API Management - Policy`| `Microsoft.ApiManagement/service/policies` | `apipo` |
-   | `API Management - Product`| `Microsoft.ApiManagement/service/products` | `apipr` |
-   | `API Management - Product API`| `Microsoft.ApiManagement/service/products/apis` | `api` |
-   | `API Management - Product Group`| `Microsoft.ApiManagement/service/products/groups` | `grp` |
-   | `API Management - Product Tag`| `Microsoft.ApiManagement/service/products/tags` | `tags` |
-   | `API Management - Property`| `Microsoft.ApiManagement/service/properties` | `prop` |
-   | `API Management - Subscription`| `Microsoft.ApiManagement/service/subscriptions` | `sub` |
-   | `API Management - Tag`| `Microsoft.ApiManagement/service/tags` | `tags` |
-   | `API Management - Template`| `Microsoft.ApiManagement/service/templates` | `temp` |
-   | `API Management - User`| `Microsoft.ApiManagement/service/users` | `user` |
+   | `API Management API`| `Microsoft.ApiManagement/service/apis` | `apis` |
+   | `API Management API Issue`| `Microsoft.ApiManagement/service/apis/issues` | `apii` |
+   | `API Management API Issue Attachment`| `Microsoft.ApiManagement/service/apis/issues/attachments` | `apiia` |
+   | `API Management API Issue Comment`| `Microsoft.ApiManagement/service/apis/issues/comments` | `apiic` |
+   | `API Management API Operation`| `Microsoft.ApiManagement/service/apis/operations` | `apio` |
+   | `API Management API Operation Tag`| `Microsoft.ApiManagement/service/apis/operations/tags` | `apiot` |
+   | `API Management API Release`| `Microsoft.ApiManagement/service/apis/releases` | `apir` |
+   | `API Management API Schema`| `Microsoft.ApiManagement/service/apis/schemas` | `apis` |
+   | `API Management API Tag Description`| `Microsoft.ApiManagement/service/apis/tagDescriptions` | `apitd` |
+   | `API Management API Tag`| `Microsoft.ApiManagement/service/apis/tags` | `apitg` |
+   | `API Management API Version Set`| `Microsoft.ApiManagement/service/api-version-sets` | `apivs` |
+   | `API Management Authorization Server`| `Microsoft.ApiManagement/service/authorizationServers` | `apias` |
+   | `API Management Backend`| `Microsoft.ApiManagement/service/backends` | `apib` |
+   | `API Management Certificate`| `Microsoft.ApiManagement/service/certificates` | `apic` |
+   | `API Management Diagnostic`| `Microsoft.ApiManagement/service/diagnostics` | `apid` |
+   | `API Management Group`| `Microsoft.ApiManagement/service/groups` | `apig` |
+   | `API Management User`| `Microsoft.ApiManagement/service/groups/users` | `apigu` |
+   | `API Management Identity Provider`| `Microsoft.ApiManagement/service/identityProviders` | `apiip` |
+   | `API Management Logger`| `Microsoft.ApiManagement/service/loggers` | `apil` |
+   | `API Management Notification`| `Microsoft.ApiManagement/service/notifications` | `apin` |
+   | `API Management Recipient Email`| `Microsoft.ApiManagement/service/notifications/recipientEmails` | `recem` |
+   | `API Management OpenID Connect Provider`| `Microsoft.ApiManagement/service/openidConnectProviders` | `apioi` |
+   | `API Management Policy`| `Microsoft.ApiManagement/service/policies` | `apipo` |
+   | `API Management Product`| `Microsoft.ApiManagement/service/products` | `apipr` |
+   | `API Management Product API`| `Microsoft.ApiManagement/service/products/apis` | `api` |
+   | `API Management Product Group`| `Microsoft.ApiManagement/service/products/groups` | `grp` |
+   | `API Management Product Tag`| `Microsoft.ApiManagement/service/products/tags` | `tags` |
+   | `API Management Property`| `Microsoft.ApiManagement/service/properties` | `prop` |
+   | `API Management Subscription`| `Microsoft.ApiManagement/service/subscriptions` | `sub` |
+   | `API Management Tag`| `Microsoft.ApiManagement/service/tags` | `tags` |
+   | `API Management Template`| `Microsoft.ApiManagement/service/templates` | `temp` |
+   | `API Management User`| `Microsoft.ApiManagement/service/users` | `user` |
    | `App Configuration - Configuration Store`| `Microsoft.AppConfiguration/configurationStores` | `accs` |
    | `Lock`| `Microsoft.Authorization/locks` | `lock` |
    | `Policy Assignment`| `Microsoft.Authorization/policyAssignments` | `pa` |
    | `Policy Definition`| `Microsoft.Authorization/policyDefinitions` | `pd` |
    | `Policy Set Definition`| `Microsoft.Authorization/policySetDefinitions` | `psd` |
    | `Automation Account`| `Microsoft.Automation/automationAccounts` | `aa` |
-   | `Automation Account - Certificate`| `Microsoft.Automation/automationAccounts/certificates` | `cert` |
-   | `Automation Account - Connection`| `Microsoft.Automation/automationAccounts/connections` | `conn` |
-   | `Automation Account - Credential`| `Microsoft.Automation/automationAccounts/credentials` | `cred` |
-   | `Automation Account - Runbook`| `Microsoft.Automation/automationAccounts/runbooks` | `runbk` |
-   | `Automation Account - Schedule`| `Microsoft.Automation/automationAccounts/schedules` | `sched` |
-   | `Automation Account - Variable`| `Microsoft.Automation/automationAccounts/variables` | `var` |
-   | `Automation Account - Watcher`| `Microsoft.Automation/automationAccounts/watchers` | `watch` |
-   | `Automation Account - Webhook`| `Microsoft.Automation/automationAccounts/webhooks` | `wbhk` |
+   | `Automation Account Certificate`| `Microsoft.Automation/automationAccounts/certificates` | `cert` |
+   | `Automation Account Connection`| `Microsoft.Automation/automationAccounts/connections` | `conn` |
+   | `Automation Account Credential`| `Microsoft.Automation/automationAccounts/credentials` | `cred` |
+   | `Automation Account Runbook`| `Microsoft.Automation/automationAccounts/runbooks` | `runbk` |
+   | `Automation Account Schedule`| `Microsoft.Automation/automationAccounts/schedules` | `sched` |
+   | `Automation Account Variable`| `Microsoft.Automation/automationAccounts/variables` | `var` |
+   | `Automation Account Watcher`| `Microsoft.Automation/automationAccounts/watchers` | `watch` |
+   | `Automation Account Webhook`| `Microsoft.Automation/automationAccounts/webhooks` | `wbhk` |
    | `Batch Account`| `Microsoft.Batch/batchAccounts` | `ba` |
-   | `Batch Account - Application`| `Microsoft.Batch/batchAccounts/applications` | `appl` |
-   | `Batch Account - Certificate`| `Microsoft.Batch/batchAccounts/certificates` | `cert` |
-   | `Batch Account - Pool`| `Microsoft.Batch/batchAccounts/pools` | `pool` |
+   | `Batch Account Application`| `Microsoft.Batch/batchAccounts/applications` | `appl` |
+   | `Batch Account Certificate`| `Microsoft.Batch/batchAccounts/certificates` | `cert` |
+   | `Batch Account Pool`| `Microsoft.Batch/batchAccounts/pools` | `pool` |
    | `Blockchain Member`| `Microsoft.Blockchain/blockchainMembers` | `blchm` |
    | `Blueprint Assignment`| `Microsoft.Blueprint/blueprintAssignments` | `bpas` |
    | `Blueprint`| `Microsoft.Blueprint/blueprints` | `bp` |
@@ -87,7 +87,7 @@ This list provides recommended abbreviations for various Azure resource types to
    | `Redis Cache Firewall Rule`| `Microsoft.Cache/Redis/firewallRules` | `rule` |
    | `CDN Profile`| `Microsoft.Cdn/profiles` | `cdnp` |
    | `CDN Profile Endpoint`| `Microsoft.Cdn/profiles/endpoints` | `cdnep` |
-   | `Certificate Registration - Order`| `Microsoft.CertificateRegistration/certificateOrders` | `cerco` |
+   | `Certificate Registration Order`| `Microsoft.CertificateRegistration/certificateOrders` | `cerco` |
    | `Cognitive Services Account`| `Microsoft.CognitiveServices/accounts` | `coga` |
    | `Availability Set`| `Microsoft.Compute/availabilitySets` | `avset` |
    | `Cloud Service`| `Microsoft.Compute/cloudServices` | `cldsvc` |
@@ -96,39 +96,38 @@ This list provides recommended abbreviations for various Azure resource types to
    | `Disk`| `Microsoft.Compute/disks` | `osdsk` |
    | `Compute Gallery`| `Microsoft.Compute/galleries` | `gal` |
    | `Compute Gallery Application`| `Microsoft.Compute/galleries/applications` | `app` |
-   | `Compute Gallery Application Version`| `Microsoft.Compute/galleries/applications/versions` | `apver` |
    | `Compute Gallery Image`| `Microsoft.Compute/galleries/images` | `gimg` |
    | `Image`| `Microsoft.Compute/images` | `img` |
    | `Snapshot`| `Microsoft.Compute/snapshots` | `snap` |
    | `Virtual Machine (Windows)`| `Microsoft.Compute/virtualMachines` | `vm` |
    | `Virtual Machine Scale Set (Windows)`| `Microsoft.Compute/virtualMachineScaleSets` | `vmss` |
-   | `Container Instance - Group`| `Microsoft.ContainerInstance/containerGroups` | `congp` |
+   | `Container Instance Group`| `Microsoft.ContainerInstance/containerGroups` | `congp` |
    | `Container Registry`| `Microsoft.ContainerRegistry/registries` | `conrg` |
-   | `Container Registry - Build Task`| `Microsoft.ContainerRegistry/registries/buildTasks` | `btsks` |
-   | `Container Registry - Build Task Step`| `Microsoft.ContainerRegistry/registries/buildTasks/steps` | `steps` |
-   | `Container Registry - Replication`| `Microsoft.ContainerRegistry/registries/replications` | `rep` |
-   | `Container Registry - Scope Map`| `Microsoft.ContainerRegistry/registries/scopeMaps` | `scmap` |
-   | `Container Registry - Task`| `Microsoft.ContainerRegistry/registries/tasks` | `tasks` |
-   | `Container Registry - Token`| `Microsoft.ContainerRegistry/registries/tokens` | `tokn` |
-   | `Container Registry - Webhook`| `Microsoft.ContainerRegistry/registries/webhooks` | `webhk` |
+   | `Container Registry Build Task`| `Microsoft.ContainerRegistry/registries/buildTasks` | `btsks` |
+   | `Container Registry Build Task Step`| `Microsoft.ContainerRegistry/registries/buildTasks/steps` | `steps` |
+   | `Container Registry Replication`| `Microsoft.ContainerRegistry/registries/replications` | `rep` |
+   | `Container Registry Scope Map`| `Microsoft.ContainerRegistry/registries/scopeMaps` | `scmap` |
+   | `Container Registry Task`| `Microsoft.ContainerRegistry/registries/tasks` | `tasks` |
+   | `Container Registry Token`| `Microsoft.ContainerRegistry/registries/tokens` | `tokn` |
+   | `Container Registry Webhook`| `Microsoft.ContainerRegistry/registries/webhooks` | `webhk` |
    | `Container Service Managed Cluster`| `Microsoft.ContainerService/managedClusters` | `aks` |
    | `Container Service Open Shift Managed Cluster`| `Microsoft.ContainerServiceopenShiftManagedClusters` | `osmc` |
    | `Customer Insight`| `Microsoft.CustomerInsights/hubs` | `cihub` |
-   | `Customer Insight - Authorization Policy`| `Microsoft.CustomerInsights/hubs/authorizationPolicies` | `authp` |
-   | `Customer Insight - Connector`| `Microsoft.CustomerInsights/hubs/connectors` | `conn` |
-   | `Customer Insight - Connector Mapping`| `Microsoft.CustomerInsights/hubs/connectors/mappings` | `map` |
-   | `Customer Insight - Interaction`| `Microsoft.CustomerInsights/hubs/interactions` | `int` |
-   | `Customer Insight - KPI`| `Microsoft.CustomerInsights/hubs/kpi` | `kpi` |
-   | `Customer Insight - Link`| `Microsoft.CustomerInsights/hubs/links` | `link` |
-   | `Customer Insight - Prediction`| `Microsoft.CustomerInsights/hubs/predictions` | `pred` |
-   | `Customer Insight - Profile`| `Microsoft.CustomerInsights/hubs/profiles` | `prof` |
-   | `Customer Insight - Relationship Link`| `Microsoft.CustomerInsights/hubs/relationshipLinks` | `rlink` |
-   | `Customer Insight - Relationship`| `Microsoft.CustomerInsights/hubs/relationships` | `rel` |
-   | `Customer Insight - Role Assignment`| `Microsoft.CustomerInsights/hubs/roleAssignments` | `role` |
-   | `Customer Insight - View`| `Microsoft.CustomerInsights/hubs/views` | `views` |
-   | `Custom Provider - Association`| `Microsoft.CustomProviders/associations` | `cpass` |
-   | `Custom Provider - Resource Provider`| `Microsoft.CustomProviders/resourceProviders` | `cprep` |
-   | `Data Box - Job`| `Microsoft.DataBox/jobs` | `dbjob` |
+   | `Customer Insight Authorization Policy`| `Microsoft.CustomerInsights/hubs/authorizationPolicies` | `authp` |
+   | `Customer Insight Connector`| `Microsoft.CustomerInsights/hubs/connectors` | `conn` |
+   | `Customer Insight Connector Mapping`| `Microsoft.CustomerInsights/hubs/connectors/mappings` | `map` |
+   | `Customer Insight Interaction`| `Microsoft.CustomerInsights/hubs/interactions` | `int` |
+   | `Customer Insight KPI`| `Microsoft.CustomerInsights/hubs/kpi` | `kpi` |
+   | `Customer Insight Link`| `Microsoft.CustomerInsights/hubs/links` | `link` |
+   | `Customer Insight Prediction`| `Microsoft.CustomerInsights/hubs/predictions` | `pred` |
+   | `Customer Insight Profile`| `Microsoft.CustomerInsights/hubs/profiles` | `prof` |
+   | `Customer Insight Relationship Link`| `Microsoft.CustomerInsights/hubs/relationshipLinks` | `rlink` |
+   | `Customer Insight Relationship`| `Microsoft.CustomerInsights/hubs/relationships` | `rel` |
+   | `Customer Insight Role Assignment`| `Microsoft.CustomerInsights/hubs/roleAssignments` | `role` |
+   | `Customer Insight View`| `Microsoft.CustomerInsights/hubs/views` | `views` |
+   | `Custom Provider Association`| `Microsoft.CustomProviders/associations` | `cpass` |
+   | `Custom Provider Resource Provider`| `Microsoft.CustomProviders/resourceProviders` | `cprep` |
+   | `Data Box Job`| `Microsoft.DataBox/jobs` | `dbjob` |
    | `Databricks Workspae`| `Microsoft.Databricks/workspaces` | `dbws` |
    | `Data Factory`| `Microsoft.DataFactory/factories` | `adf` |
    | `Data Factory Data Flow`| `Microsoft.DataFactory/factories/dataflows` | `flows` |
@@ -233,29 +232,26 @@ This list provides recommended abbreviations for various Azure resource types to
    | `Azure Firewall`| `Microsoft.Network/azureFirewalls` | `afw` |
    | `Bastion`| `Microsoft.Network/bastionHosts` | `bst` |
    | `Connection`| `Microsoft.Network/connections` | `conn` |
-   | `DNS Zone`| `Microsoft.Network/dnsZones` | `dnsz` |
-   | `Express Route Circuit`| `Microsoft.Network/expressRouteCircuits` | `erc` |
+   | `Express Route Circuit`| `Microsoft.Network/expressRouteCircuits` | `exrc` |
    | `Firewall Policy`| `Microsoft.Network/firewallPolicies` | `waf` |
-   | `Firewall Policy - Rule Group`| `Microsoft.Network/firewallPolicies/ruleGroups` | `wafrg` |
+   | `Firewall Policy Rule Group`| `Microsoft.Network/firewallPolicies/ruleGroups` | `wafrg` |
    | `Front Door`| `Microsoft.Network/frontDoors` | `fd` |
    | `Front Door Web Application Firewall Policy`| `Microsoft.Network/frontdoorWebApplicationFirewallPolicies` | `fdwfp` |
    | `Load Balancer (External)`| `Microsoft.Network/loadBalancers` | `lbe` |
    | `Load Balancer (Internal)`| `Microsoft.Network/loadBalancers` | `lbi` |
-   | `Load Balancer - Inbound NAT Rule`| `Microsoft.Network/loadBalancers/inboundNatRules` | `inatr` |
+   | `Load Balancer Inbound NAT Rule`| `Microsoft.Network/loadBalancers/inboundNatRules` | `inatr` |
    | `Local Network Gateway`| `Microsoft.Network/localNetworkGateways` | `lngw` |
    | `Network Interface`| `Microsoft.Network/networkInterfaces` | `nic` |
    | `Network Security Group`| `Microsoft.Network/networkSecurityGroups` | `nsg` |
-   | `Network Security Group - Security Rule`| `Microsoft.Network/networkSecurityGroups/securityRules` | `nsgsr` |
    | `Network Watcher`| `Microsoft.Network/networkWatchers` | `nw` |
-   | `Private DNS Zone`| `Microsoft.Network/privateDnsZones` | `pdnsz` |
-   | `Private DNS Zone - Virtual Network Link`| `Microsoft.Network/privateDnsZones/virtualNetworkLinks` | `pdnsv` |
+   | `Private DNS Zone Virtual Network Link`| `Microsoft.Network/privateDnsZones/virtualNetworkLinks` | `pdnsv` |
    | `Private Link Service`| `Microsoft.Network/privateLinkServices` | `pls` |
    | `Public IP Address`| `Microsoft.Network/publicIPAddresses` | `pip` |
-   | `Public IP Prefix`| `Microsoft.Network/publicIPPrefixes` | `pipp` |
+   | `Public IP Prefix`| `Microsoft.Network/publicIPPrefixes` | `pippfx` |
    | `Route Filter`| `Microsoft.Network/routeFilters` | `nrf` |
-   | `Route Filter - Rule`| `Microsoft.Network/routeFilters/routeFilterRules` | `nrfrr` |
-   | `Route Table`| `Microsoft.Network/routeTables` | `netrt` |
-   | `Route Table - Route`| `Microsoft.Network/routeTables/routes` | `route` |
+   | `Route Filter Rule`| `Microsoft.Network/routeFilters/routeFilterRules` | `nrfrr` |
+   | `Route Table`| `Microsoft.Network/routeTables` | `rtb` |
+   | `Route Table Route`| `Microsoft.Network/routeTables/routes` | `route` |
    | `Service Endpoint Policy`| `Microsoft.Network/serviceEndpointPolicies` | `nsept` |
    | `Traffice Manager Profile`| `Microsoft.Network/trafficManagerProfiles` | `ntmp` |
    | `Virtual Network Gateway`| `Microsoft.Network/virtualNetworkGateways` | `vnetg` |
@@ -264,8 +260,8 @@ This list provides recommended abbreviations for various Azure resource types to
    | `Virtual Network Peering`| `Microsoft.Network/virtualNetworks/virtualNetworkPeerings` | `vnetp` |
    | `Virtual WAN`| `Microsoft.Network/virtualWans` | `vwan` |
    | `VPN Gateway`| `Microsoft.Network/vpnGateways` | `vpng` |
-   | `VPN Gateway - Connection`| `Microsoft.Network/vpnGateways/vpnConnections` | `vpnc` |
-   | `VPN Site`| `Microsoft.Network/vpnSites` | `vpns` |
+   | `VPN Gateway Connection`| `Microsoft.Network/vpnGateways/vpnConnections` | `vpnc` |
+   | `VPN Site`| `Microsoft.Network/vpnSites` | `vpnsite` |
    | `Notification Hubs Namespace`| `Microsoft.NotificationHubs/namespaces` | `nhns` |
    | `Notification Hubs Namespace Authorization Rule`| `Microsoft.NotificationHubs/namespaces/AuthorizationRules` | `nrule` |
    | `Notification Hubs Namespace Hub`| `Microsoft.NotificationHubs/namespaces/notificationHubs` | `nhub` |
@@ -284,14 +280,12 @@ This list provides recommended abbreviations for various Azure resource types to
    | `Relay Hybrid Connection Authorization Rule`| `Microsoft.Relay/namespaces/HybridConnections/authorizationRules` | `rule` |
    | `Relay WCF Relay`| `Microsoft.Relay/namespaces/WcfRelays` | `wcfr` |
    | `Relay WCF Relay Authorization Rule`| `Microsoft.Relay/namespaces/WcfRelays/authorizationRules` | `wcfra` |
-   | `Deployment`| `Microsoft.Resources/deployments` | `deloy` |
    | `Resource Group`| `Microsoft.Resources/resourcegroups` | `rg` |
    | `Template Spec`| `Microsoft.Resources/templateSpecs` | `tspec` |
    | `Search Service`| `Microsoft.Search/searchServices` | `ssvc` |
    | `Service Bus`| `Microsoft.ServiceBus/namespaces` | `sbn` |
    | `Service Bus Authorization Rule`| `Microsoft.ServiceBus/namespaces/AuthorizationRules` | `rule` |
    | `Service Bus Disaster Recovery Config`| `Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs` | `sbndc` |
-   | `Service Bus Migration Configuration`| `Microsoft.ServiceBus/namespaces/migrationConfigurations` | `migc` |
    | `Service Bus Queue`| `Microsoft.ServiceBus/namespaces/queues` | `que` |
    | `Service Bus Queue Authorization Rule`| `Microsoft.ServiceBus/namespaces/queues/authorizationRules` | `rule` |
    | `Service Bus Topic`| `Microsoft.ServiceBus/namespaces/topics` | `topic` |
@@ -334,7 +328,6 @@ This list provides recommended abbreviations for various Azure resource types to
    | `Web Site (Function App)`| `Microsoft.Web/sites` | `func` |
    | `Web Site (Static Web App)`| `Microsoft.Web/sites` | `wsite` |
    | `Web Site (Web App)`| `Microsoft.Web/sites` | `wapp` |
-   | `Web Site Slot`| `Microsoft.Web/sites/slots` | `slot` |
 
 ## Next steps
 
