@@ -148,8 +148,6 @@ RDP Shortpath for managed networks provides a direct UDP-based transport between
 
 - [Implement Quality of Service (QoS) for Azure Virtual Desktop](/azure/virtual-desktop/rdp-quality-of-service-qos)
 
-### Network security
-
 ### Internet
 
 Azure Virtual Desktop compute resources and clients require to access some specific public endpoints, therefore internet-bound connections will be needed. Network scenarios like forced tunneling to enhance security and filtering are supported as long as the Azure virtual Desktop requirements are meet, the following link outlines the requirements for AVD session hosts and client devices.
