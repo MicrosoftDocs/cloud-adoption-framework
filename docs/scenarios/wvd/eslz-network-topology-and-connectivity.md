@@ -12,9 +12,12 @@ ms.custom: think-tank, e2e-avd
 
 # Network topology and connectivity for Azure Virtual Desktop
 
-## Review network options
+Designing and implementing Azure Virtual Desktop Azure networking capabilities is critical for your Azure Virtual Desktop landing zone. This article builds on several Cloud Adoption Framework [enterprise-scale landing zones](../../ready/enterprise-scale/network-topology-and-connectivity.md) architectural principles and recommendations for managing network topology and connectivity at scale. Design foundations include:
 
-Designing and implementing Azure Virtual Desktop Azure networking capabilities is critical for your Azure Virtual Desktop landing zone. Azure networking products and services support a wide variety of networking capabilities. How you structure these services and the networking architectures you choose depends on your organization's workload, governance, and connectivity requirements.
+- **Hybrid integration** for connectivity between on-premises, multicloud, edge, and global users. For more information, see [Enterprise-scale support for hybrid and multicloud](../hybrid/enterprise-scale-landing-zone.md).
+- **Performance and reliability at scale** for consistent, low-latency experience and scalability for workloads.
+- **Zero-trust-based network security** to secure network perimeter and traffic flows. For more information, see [Network security strategies on Azure](/azure/architecture/framework/security/design-network).
+- **Extensibility** for easily expanding network footprint without design rework.
 
 ## Networking components and concepts
 
@@ -39,6 +42,8 @@ Designing and implementing Azure Virtual Desktop Azure networking capabilities i
 - In [**Forced tunneling**](/azure/vpn-gateway/vpn-gateway-forced-tunneling-rm#:~:text=Forced%20tunneling%20in%20Azure%20is%20configured%20via%20virtual,virtual%20networks%2C%20see%20User-defined%20routes%20and%20IP%20forwarding.) scenario all Internet-bound traffic originating on Azure VMs is routed or "forced" to go through an inspection and auditing appliance. without the option to allow you to inspect or audit the traffic. Unauthorized Internet access can potentially lead to information disclosure or other types of security breaches.
 
 - [**Network Security Group (NSG)**](/azure/virtual-network/network-security-groups-overview) can be used to filter network traffic to and from Azure resources in an Azure virtual network. A network security group contains security rules that allow or deny inbound network traffic to, or outbound network traffic from, several types of Azure resources.
+
+- [**Application Security Group (ASG)**](/azure/virtual-network/application-security-groups) enable you to configure network security as a natural extension of an application's structure, allowing you to group virtual machines and define network security policies based on those groups. You can reuse your security policy at scale without manual maintenance of explicit IP addresses.
 
 - [**User Defined Routes (UDR)**](/azure/virtual-network/virtual-networks-udr-overview) can be used to override Azure's default system routes, or to add additional routes to a subnet's route table.
 
@@ -96,19 +101,19 @@ You can implement this scenario with:
 
 - This scenario doesn't account for client direct network connectivity to session hosts from public or private (no RDP Shortpath).
 - Client connections are managed by Azure Virtual Desktop control plane Gateway (public endpoint), therefore AVD clients need to be able to create outbound connections to required AVD URLs (check required URL list under under general design considerations and recommendations).
-- Since Azure Virtual Desktop manages connections to session hosts, no public inbound path to session hosts is needed.
+- Azure Virtual Desktop control plane manages connection , therefore
+- No public IPs or any other public inbound path to session hosts is needed, traffic from clients to session hosts flows through Azure Virtual Desktop control plane gateway.
 - No virtual network peering between Azure Virtual Desktop spokes, all the traffic goes through the connectivity hub.
 - Outbound internet connection from Azure Virtual Desktop session hosts will go through the default Azure outbound NAT using dynamic Azure public IPs (no customer control on outbound public IPs used).
 - Connections from session hosts to Azure files (storage accounts) will be established using private endpoints.
 - Azure private DNS zones are used to resolve private endpoint namespaces:
   - Storage account file service (privatelink.file.core.windows.net).
-  - key vaults (privatelink.vaultcore.azure.net).
+  - Key vaults (privatelink.vaultcore.azure.net).
+- Even though for this scenario network filtering is not enforced, NSGs are placed on all subnets to enable monitoring and insights by using network watcher NSG flow logs and traffic analytics.
 
 ## General design considerations and recommendations
 
 Here are some general design considerations and recommendations for Azure Virtual Desktop network topology and connectivity:
-
-### Plan for IP addressing
 
 ### Hub-spoke vs. Virtual WAN network topology
 
@@ -118,7 +123,7 @@ Virtual WAN supports [transit connectivity between VPN and ExpressRoute](/azure/
 
 Identity services connectivity requirements of Azure Virtual Desktop session hosts will depend on the identity model chosen:
 
-- ADDS or Azure AD DS (AADDS) joined VMs: Azure Virtual Desktop networks must have connectivity to the network where the identity service is hosted.
+- ADDS or Azure AD DS (AAD DS) joined VMs: Azure Virtual Desktop networks must have connectivity to the network where the identity service is hosted.
 - [Azure AD (AAD) joined VMs](/azure/architecture/example-scenario/wvd/azure-virtual-desktop-azure-active-directory-join): Azure Virtual Desktop session hosts create outbound connections to AAD public endpoints, therefore no private connectivity configurations required. 
 
 ### DNS
@@ -143,9 +148,11 @@ RDP Shortpath for managed networks provides a direct UDP-based transport between
 
 - [Implement Quality of Service (QoS) for Azure Virtual Desktop](/azure/virtual-desktop/rdp-quality-of-service-qos)
 
-### Network security and Internet
+### Network security
 
-Azure Virtual Desktop compute resources and clients require to access public endpoints, therefore internet-bound connections will be needed. Network scenarios like forced tunneling to enhance security and filtering are supported as long as the Azure virtual Desktop requirements are meet, the following link outlines the requirements for AVD session hosts and client devices.
+### Internet
+
+Azure Virtual Desktop compute resources and clients require to access some specific public endpoints, therefore internet-bound connections will be needed. Network scenarios like forced tunneling to enhance security and filtering are supported as long as the Azure virtual Desktop requirements are meet, the following link outlines the requirements for AVD session hosts and client devices.
 
 - [Required URL list and check tool](/azure/virtual-desktop/safe-url-list)
 
