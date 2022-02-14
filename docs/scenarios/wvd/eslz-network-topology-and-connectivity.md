@@ -1,7 +1,7 @@
 ---
 title: Networking for Azure Virtual Desktop
 description: Use the Cloud Adoption Framework for Azure to identify networking capabilities that your landing zone needs to support Azure Virtual Desktop workloads.
-author: danycontrerasms
+author: danycontre
 ms.author: brblanch
 ms.date: 05/07/2021
 ms.topic: conceptual
