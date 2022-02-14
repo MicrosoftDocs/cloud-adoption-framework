@@ -3,7 +3,7 @@ title: Components needed for data governance
 description: Understand the components for data governance.
 author: mboswell
 ms.author: mboswell
-ms.date: 11/25/2021
+ms.date: 02/14/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -12,7 +12,7 @@ ms.custom: e2e-data-management, think-tank
 
 # Components needed for data governance
 
-At the top of the solution, is the data governance vision and strategy. The strategy includes a vision statement, the stakeholders backing the data governance program, and goals of the program. These goals should be aligned with strategic business objectives to show contribution to common goals. The strategy also includes success metrics (KPIs) and targets to be reached to monitor the progress.
+At the top of the solution, is the data governance vision and [strategy](strategy.md). The strategy includes a vision statement, the stakeholders backing the data governance program, and goals of the program. These goals should be aligned with strategic business objectives to show contribution to common goals. The strategy also includes success metrics (KPIs) and targets to be reached to monitor the progress.
 
 There are two types of metrics to be considered.
 
