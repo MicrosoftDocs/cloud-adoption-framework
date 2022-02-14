@@ -1,16 +1,16 @@
 ---
-title: Requirements for governing Azure data in a modern enterprise
-description: Learn about requirements for governing Azure data in a modern enterprise.
+title: Requirements for governing data
+description: Learn about requirements for governing data
 author: mboswell
 ms.author: mboswell
-ms.date: 11/25/2021
+ms.date: 02/14/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Requirements for governing Azure data in a modern enterprise
+# Requirements for governing data
 
 The data management and analytics scenario recommends you consider the following requirements for governing data::
 
@@ -96,9 +96,7 @@ Associate these policies and rules with each class in the data governance classi
 
 ## Master data management
 
-Another central requirement in governing data is master data management. Master data is the most widely shared data in any organization and includes core data entities. Core data entities include customer, supplier, materials, employee, and asset. It also includes financial chart of accounts data that is found in different financial applications. Because master data is so widely shared, its application agnostic. It's needed by both operational transaction processing applications and analytical systems. Keeping this data synchronized can resolve so many data errors and process errors. So, maintaining it centrally via a common process and synchronizing every system that needs it, is the ideal situation. Also, governance is needed over who is allowed to maintain it and where that maintenance needs to happen.
-
-:::image type="content" source="./images/master-data-management.png" alt-text="Diagram of master data management.":::
+Another requirement in governing data is master data management. Master data is the most widely shared data in any organization and includes core data entities. Core data entities include customer, supplier, materials, employee, and asset. It also includes financial chart of accounts data that is found in different financial applications. Because master data is so widely shared, its application agnostic. It's needed by both operational transaction processing applications and analytical systems. Keeping this data synchronized can resolve so many data errors and process errors. So, maintaining it centrally via a common process and synchronizing every system that needs it, is the ideal situation. Also, governance is needed over who is allowed to maintain it and where that maintenance needs to happen.
 
 The same applies to reference data such as code sets and financial markets data. In this case, standardization and synchronization of code sets is known as reference data management, which is also a requirement.
 

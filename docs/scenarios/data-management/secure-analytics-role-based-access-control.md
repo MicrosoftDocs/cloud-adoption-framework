@@ -3,7 +3,7 @@ title: Data management and role-based access control for the data management and
 description: Learn about data management and role-based access control for the data management and analytics scenario in Azure.
 author: mboswell
 ms.author: mboswell
-ms.date: 11/25/2021
+ms.date: 02/14/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -12,7 +12,7 @@ ms.custom: e2e-data-management, think-tank
 
 # Data management and role-based access control for the data management and analytics scenario in Azure
 
-Authorization is the act of granting an authenticated party permission to perform an action. The key principle of access control is giving users only the amount of access that they need to do their jobs and only allowing certain actions at a particular scope. Role-based security/role-based access control (RBAC) corresponds to access control and is used by many organizations to control access based on defined roles or job functions versus individual users. Users are then assigned one or more security roles, each of which is given authorized permissions to perform specific tasks. For example, data engineers with the *data ingestion developer* job function will be assigned the Contributor role within Data Lake Storage in the development environment. This contributor gains permission to manage all Azure Data Lake Storage settings except granting access.
+Authorization is the act of granting an authenticated party permission to perform an action. The key principle of access control is giving users only the amount of access that they need to do their jobs and only allowing certain actions at a particular scope. Role-based security/role-based access control (RBAC) corresponds to access control and is used by many organizations to control access based on defined roles or job functions versus individual users. Users are then assigned one or more security roles, each of which is given authorized permissions to perform specific tasks.
 
 When using Azure Active Directory (Azure AD) as the centralized identity provider, authorization to access data services and storage can be granted per user or per application and is based on an Azure AD identity. Authorization covers RBAC to the service and access control list at the file, folder, or object level in the storage.
 

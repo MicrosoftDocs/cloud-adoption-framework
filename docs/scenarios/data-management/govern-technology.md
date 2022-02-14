@@ -3,7 +3,7 @@ title: Technology for end-to-end governance in Azure
 description: Learn about the technology needed for end-to-end governance in Azure.
 author: mboswell
 ms.author: mboswell
-ms.date: 12/15/2021
+ms.date: 02/14/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -14,22 +14,9 @@ ms.custom: e2e-data-management, think-tank
 
 In the context of technology needed for end-to-end data governance, Microsoft provides its own technologies and also partner technologies on Azure. Microsoft provides the following technology components to assist you in governing data:
 
-- Common Data Model
-- Azure Data Lake Storage
-- Azure Data Factory
-- Azure Purview
-
-## Common Data Model
-
-The first step in data governance is to create a common business vocabulary of common data names and definitions describing logical data entities that can be shared across the enterprise. For example, customer, account, product, supplier, orders, payments, and returns. Once you've created a common business vocabulary, it becomes possible to create these common data assets. You can store them where their reuse can be maximized to drive consistency everywhere.
-
-The following graphic shows some elements of the [standard entities](https://github.com/microsoft/CDM/tree/master/schemaDocuments/core/applicationCommon) available within the Common Data Model. For more information, see the [Common Data Model repository on GitHub](https://aka.ms/cdmrepo).
-
-:::image type="content" source="./images/cdm-entities-v1.png" alt-text="Poster of the Common Data Model." lightbox="./images/cdm-entities-v1.png":::
-
-[Download a poster of the Common Data Model](https://aka.ms/cdmposter)
-
-The Common Data Model is an open, prebuilt set of common business entities and activities used across a business. The Common Data Model can be used to accelerate the definition of your common business vocabulary.
+- [Azure Data Lake Storage](#azure-data-lake-storage)
+- [Azure Data Factory](#microsoft-azure-data-factory)
+- [Azure Purview](#azure-purview)
 
 ## Azure Data Lake Storage
 
@@ -71,13 +58,11 @@ With the Azure Purview data insights, data officers and security officers can ge
 
 In the context of data governance, these technologies can be combined to produce trusted reusable data assets.
 
-:::image type="content" source="./images/data-cataloging.png" alt-text="Diagram of data landing zones in data management and analytics scenario.":::
-
-Data in disparate registered data sources across the data landscape can be ingested into Azure Data Lake Storage. It can be integrated using Azure Data Factory to create trusted, commonly understood, reusable Common Data Model assets. The assets can be persisted back in the data lake published in Azure Purview.
+Data in disparate registered data sources across the data landscape can be ingested into Azure Data Lake Storage. It can be integrated using Azure Data Factory to create trusted, commonly understood, reusable data products. The assets can be persisted back in the data lake published in Azure Purview.
 
 :::image type="content" source="./images/common-infrastructure.png" alt-text="Diagram of common infrastructure.":::
 
-Everything underpinned by Azure Data Lake Storage can then use trusted, commonly understood data assets described in the Common Data Model. The goal is to build once, publish in a data marketplace (Azure Purview), and reuse everywhere.
+Everything underpinned by Azure Data Lake Storage can then use trusted, commonly understood data products. The goal is to build once, publish in a data marketplace (Azure Purview), and reuse everywhere.
 
 ## Next steps
 
