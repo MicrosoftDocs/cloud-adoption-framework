@@ -10,8 +10,6 @@ ms.subservice: migrate
 ms.custom: think-tank
 ---
 
-<!-- cSpell:ignore vcenter contosohost contosodc NSGs agentless WEBVMDEV SQLVMDEV OSTICKETWEBDEV OSTICKETMYSQLDEV -->
-
 # Rehost an on-premises dev/test environment on Azure Virtual Machines via Azure Migrate
 
 This article demonstrates how the fictional company Contoso rehosts its dev/test environment for two applications running on VMware virtual machines (VMs) by migrating to Azure Virtual Machines.
@@ -140,9 +138,9 @@ Contoso needs to migrate the VMs to a virtual network where the Azure VMs will r
 
 2. Provision the Azure Migrate: Server Migration tool.
 
-    1. From Azure Migrate, download the .OVA image and import it into VMware.
+    1. From Azure Migrate, download the `.OVA` image file and import it into VMware.
 
-       ![Screenshot of downloading the .OVA file.](./media/contoso-migration-devtest-to-iaas/migration-download-ova.png)
+       ![Screenshot of downloading the O V A file.](./media/contoso-migration-devtest-to-iaas/migration-download-ova.png)
        *Figure 3: Download the .OVA file.*
 
     1. Start the imported image and configure the tool, including the following steps:
@@ -233,11 +231,11 @@ Before Contoso admins can run a migration to Azure, they need to set up and enab
 
 8. In **Compute**, review the VM name, size, OS disk type, and availability set. VMs must conform with [Azure requirements](/azure/migrate/migrate-support-matrix-vmware#vmware-requirements).
 
-    - **VM size:** If you're using assessment recommendations, this drop-down list contains the recommended size. Otherwise, Azure Migrate selects a size based on the closest match in the Azure subscription. You can choose a manual size instead in **Azure VM size**.
+    - **VM size:** If you're using assessment recommendations, this dropdown list contains the recommended size. Otherwise, Azure Migrate selects a size based on the closest match in the Azure subscription. You can choose a manual size instead in **Azure VM size**.
     - **OS disk:** Specify the OS (boot) disk for the VM. The OS disk has the operating system bootloader and installer.
     - **Availability set:** If the VM should be in an Azure availability set after migration, then specify the set. The set must be in the target resource group that you specify for the migration.
 
-9. In **Disks**, specify whether the VM disks should be replicated to Azure and select the disk type (standard SSD/HDD or premium managed disks) in Azure. Then select **Next**. You can exclude disks from replication. If you do, they won't be present on the Azure VM after migration.
+9. In **Disks**, specify whether the VM disks should be replicated to Azure and select the disk type (Standard SSD/HDD or Premium SSD) in Azure, and then select **Next**. You can exclude disks from replication. If you do, they won't be present on the Azure VM after migration.
 
 10. In **Review and start replication**, review the settings and select **Replicate** to start the initial replication for the servers.
 

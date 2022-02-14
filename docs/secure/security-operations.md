@@ -18,7 +18,7 @@ Security operations reduce risk by limiting damage from attackers who gain acces
 
 Rapid response and recovery protect your organization by damaging the adversary's return on investment (ROI). When adversaries are evicted and forced to start a new attack, their cost to attack your organization goes up.
 
-Security operations (SecOps) is sometimes referred to or structured as a security operations center (SOC). [Security posture management](./security-governance.md#security-posture-management) of the operational environment is a function of governance discipline. Security of the DevOps process is part of the [innovation security](innovation-security.md) discipline.
+Security operations (SecOps) is sometimes referred to or structured as a security operations center (SOC). [Security posture management](./security-governance.md#security-posture-management) of the operational environment is a function of governance discipline. Security of the DevOps process is part of the [innovation security](./innovation-security.md) discipline.
 
 ## People and process
 
@@ -104,7 +104,7 @@ The transformation of security operations is driven primarily by the following t
 - **Internet of Things (IoT) and operational technology (OT) coverage:** Adversaries actively target IoT and OT devices as part of their attack chains. These targets might be the ultimate purpose of an attack or a means to access or traverse the environment.
 - **Cloud processing of telemetry:** Security operations modernization is required because of the massive increase in relevant telemetry that comes from the cloud. This telemetry is difficult or impossible to process with on-premises resources and classic techniques. It then drives SecOps to embrace cloud services that provide massive scale analytics, machine learning, and behavior analytics. These technologies help rapidly extract the value to meet the time sensitive needs of security operations.
 
-It's important to invest in updated SecOps tools and training to ensure security operations can meet these challenges. For more information, see [Update incident response processes for cloud](security-top-10.md#4-process-update-incident-response-processes-for-cloud).
+It's important to invest in updated SecOps tools and training to ensure security operations can meet these challenges. For more information, see [Update incident response processes for cloud](./security-top-10.md#4-process-update-incident-response-processes-for-cloud).
 
 For more information on security operations roles and responsibilities, see [Security operations](../organize/cloud-security-operations-center.md).
 

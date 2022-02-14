@@ -63,7 +63,7 @@ Apply the [operational compliance](./operational-compliance.md) content to ensur
 
 Next, review and use the [overview of the Azure Security Benchmark](/security/benchmark/azure/overview) content to ensure the various control domains are identified and mapped to your operational-compliance.
 
-Lastly, ensure the incorporation of the governance and security content in [Security control v2: governance and strategy](/security/benchmark/azure/security-controls-v2-governance-strategy) is documented within your overall business operational methodologies.
+Lastly, ensure the incorporation of the governance and security content in [Security control v2: Governance and strategy](/security/benchmark/azure/security-controls-v2-governance-strategy) is documented within your overall business operational methodologies.
 
 ## Use the template
 

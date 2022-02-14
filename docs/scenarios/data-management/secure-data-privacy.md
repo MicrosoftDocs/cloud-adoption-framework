@@ -3,7 +3,7 @@ title: Data privacy for data management and analytics in Azure
 description: Learn about data privacy for the data management and analytics scenario in Azure.
 author: abdale
 ms.author: hamoodaleem
-ms.date: 08/06/2021
+ms.date: 11/25/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -18,11 +18,11 @@ The data management and analytics scenario frees organizations to determine the 
 
 | Confidential | Description |
 |------------|---------------|
-|Public   |Anyone can access and it can be sent to anyone, for example, open government data|
+|Public | Anyone can access and it can be sent to anyone, for example, open government data |
 |Internal use only | Employees only can access but cannot be sent outside the company |
-|Confidential  |  Should be shared only if needed for a specific task and cannot be sent outside the company without a non-disclosure agreement|
-|Sensitive (personal data) |Personal data that must be masked and shared only on a need to know basis for a limited time can't be sent to unauthorized personnel or outside the company |
-|Restricted  |  Only to be shared with named individuals who are accountable for its protection, for example, legal documents, trade secrets |
+|Confidential | Should be shared only if needed for a specific task and cannot be sent outside the company without a non-disclosure agreement |
+|Sensitive (personal data) | Personal data that must be masked and shared only on a need to know basis for a limited time can't be sent to unauthorized personnel or outside the company |
+|Restricted | Only to be shared with named individuals who are accountable for its protection, for example, legal documents, trade secrets |
 
 Before ingesting data, you must categorize the data as **confidential or below** or **sensitive (personal data)**:
 
@@ -147,7 +147,7 @@ The first two options provide a way to handle **sensitive (personal data)**, and
 - Insights about protection and compliance
 - Policies for data protection reporting
 
-Typically, a policy engine would integrate with a data catalog like Azure Purview. The Azure Marketplace features third-party vendor solutions, and some vendors work with Azure Synapse and Azure Databricks to encrypt and decrypt information while also providing row- and column-level security.
+Typically, a policy engine would integrate with a data catalog like Azure Purview. The Azure Marketplace features third-party vendor solutions, and some vendors work with Azure Synapse and Azure Databricks to encrypt and decrypt information while also providing row-level and column-level security. Azure Purview has recently launched a preview for access policies to control access to data stored in Blob and Azure Data Lake Storage (ADLS) Gen2. See [Dataset provisioning by data owner for Azure Storage (preview)](/azure/purview/how-to-access-policies-storage).
 
 The policy engine should use Azure AD groups to apply policies to datasets. The expectation for any policy solution providing data privacy is to tokenize **sensitive (personal data)** and to always check through attribute access control so that the user has can detokenize the columns they need to access.
 

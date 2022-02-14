@@ -21,7 +21,7 @@ Expanding your landing zone provides a code-first approach to embedding the foll
 ![Shared architecture principles](../../_images/ready/shared-principles.png)
 *Figure 1: Shared architecture principles.*
 
-These same architecture principles are shared by [Azure Advisor](/azure/advisor/advisor-overview), the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework), and the solutions in the [Azure Architecture Center](/azure/architecture).
+These same architecture principles are shared by [Azure Advisor](/azure/advisor/advisor-overview), the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/), and the solutions in the [Azure Architecture Center](/azure/architecture/).
 
 ## Applying these principles to your landing zone improvements
 

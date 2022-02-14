@@ -10,8 +10,6 @@ ms.subservice: migrate
 ms.custom: think-tank
 ---
 
-<!-- cSpell:ignore Giga -->
-
 # Azure Synapse Analytics solutions
 
 Current market offerings fall short in meeting an organization's growing needs. Legacy on-premises environments, including Teradata, Netezza, and Oracle Exadata, are expensive, slow to innovate, and inelastic. Organizations that use on-premises systems are now considering taking advantage of innovative cloud, infrastructure as a service, and platform as a service offerings in newer environments like Azure.

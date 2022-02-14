@@ -7,11 +7,8 @@ ms.date: 04/04/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
-ms.localizationpriority: high
 ms.custom: think-tank, fasttrack-new, AQC
 ---
-
-<!-- cSpell:ignore MSPs -->
 
 # Get assistance
 
@@ -83,7 +80,7 @@ Need support engineer assistance for deep technical guidance?
 
 The following online communities provide community-based support:
 
-- [MSDN forums](https://social.msdn.microsoft.com/Forums/home?forum=windowsazureplatform%2Cazuremarketplace%2Cwindowsazureplatformctp)
+- [MSDN forums](https://social.msdn.microsoft.com/Forums/en-US/home)
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/azure)
 
 ::: zone-end

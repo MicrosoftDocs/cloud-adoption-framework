@@ -82,7 +82,7 @@ During migration efforts, it's common for adoption teams to assume that workload
 
 **Minimum scope:** During early-stage planning, use the rehost option for planning, with a clear understanding that this option is an initial business assumption and not a technical decision. In the Migrate methodology, the cloud adoption team would then challenge this assumption for each migrated workload. This methodology follows the assess/migrate/promote approach for each workload or group or workloads creating a migration factory. During the assessment phase, the adoption team evaluates technical fit and architecture of each workload. That assessment effort seldom results in a pure lift-and-shift approach because many of the components in the architecture tend to be selected for refactoring and modernization.
 
-**Expanded scope example:** For mission-critical or high-sensitivity workloads, like a mainframe or multitier microservices application, a deeper assessment of the workload may be required during the assessment phase. In these rearchitecture situations, customers should use the Microsoft Azure Well-Architected Review and the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework) to refine workload requirements during the assessment.
+**Expanded scope example:** For mission-critical or high-sensitivity workloads, like a mainframe or multitier microservices application, a deeper assessment of the workload may be required during the assessment phase. In these rearchitecture situations, customers should use the Microsoft Azure Well-Architected Review and the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/) to refine workload requirements during the assessment.
 
 ## Balance during the innovation phase
 

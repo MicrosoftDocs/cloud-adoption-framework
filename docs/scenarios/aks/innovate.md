@@ -18,7 +18,7 @@ The Innovate methodology of the Cloud Adoption Framework for Azure drives adopti
 
 When integrating modern application platforms into your cloud adoption strategy, innovation isn't limited to containers. Integration of modern application platforms offers the innovation that comes with other forms of hybrid and multicloud strategy.
 
-![Diagram that shows the various innovation options enabled by the layers of abstraction in a modern app platform.](../../_images/innovate/hybrid-innovation-vision.png)
+![Diagram showing the various innovation options enabled by the layers of abstraction in a modern application platform.](../../_images/innovate/hybrid-innovation-vision.png)
 
 The following are examples of innovation from the layers of abstraction provided by a modern application platform innovation approach:
 

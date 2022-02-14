@@ -49,7 +49,7 @@ If any or all of the preceding reasons represent your existing business consider
 
 ## What if I don't need a cloud strategy team?
 
-Review the [cloud strategy functions](../../organize/cloud-strategy.md) that are required to deliver on cloud strategy needs. Not every organization requires a dedicated team or virtual team to help meet its strategic needs. In your [RACI (responsible, accountable, consulted, and informed) template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx), list the core accountabilities of the strategy, and identify the person on your team who will be accountable for each. If one person will take on all of those accountabilities, simple replace "cloud strategy" with that person's name in the RACI template.
+Review the [cloud strategy functions](../../organize/cloud-strategy.md) that are required to deliver on cloud strategy needs. Not every organization requires a dedicated team or virtual team to help meet its strategic needs. In your [RACI (responsible, accountable, consulted, and informed) template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx), list the core accountabilities of the strategy, and identify the person on your team who will be accountable for each. If one person will take on all of those accountabilities, replace *Cloud strategy* with that person's name in the RACI template.
 
 ## Step 2: Establish the cloud strategy team
 
@@ -130,7 +130,7 @@ Impacts on business outcomes can take time. These types of changes typically mov
 **Guidance to support deliverable completion:**
 
 - Record business outcomes in the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx).
-- [Business outcomes](../../strategy/business-outcomes/index.md): Some fiscal outcomes tend to be extremely cost sensitive. When the desired outcomes map to fiscal metrics, it can be wise to invest very early in the Cost Management governance discipline.
+- [Business outcomes](../../strategy/business-outcomes/index.md): Some fiscal outcomes tend to be extremely cost sensitive. When the desired outcomes map to fiscal metrics, it can be wise to invest very early in the Cost Management discipline.
 - [Learning metrics](../../strategy/learning-metrics.md) help bridge the gap between business outcomes and technical adoption efforts.
 
 **Accountable team:**

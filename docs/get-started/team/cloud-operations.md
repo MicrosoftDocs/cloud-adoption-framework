@@ -71,7 +71,7 @@ Cloud adoption generally comes in waves, or releases. A regular cadence that's a
 
 **Guidance to support deliverable completion:**
 
-- For additional guidance on cadences for meetings, see the "deliverables" section of [cloud operations functions](../../organize/cloud-operations.md#deliverables).
+- For additional guidance on cadences for meetings, see [Cloud operations functions: Deliverables](../../organize/cloud-operations.md#deliverables).
 
 <br>
 

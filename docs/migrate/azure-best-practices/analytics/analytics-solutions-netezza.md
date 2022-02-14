@@ -10,10 +10,6 @@ ms.subservice: migrate
 ms.custom: think-tank
 ---
 
-<!-- docutune:casing Informatica Talend Inmon Attunity Qlik nzLua CBT CBTs NZPLSQL DELIM TABLENAME ORC Parquet nzsql nzunload mpp -->
-
-<!-- cSpell:ignore Informatica Talend Qlik CBTs NZPLSQL CHARINDEX DATEDIFF DELIM STRPOS TABLENAME nzsql nzunload zonemap -->
-
 # Azure Synapse Analytics solutions and migration for Netezza
 
 Many organizations that currently use Netezza data warehouse systems are looking to take advantage of innovative cloud, infrastructure as a service, and platform as a service offerings in newer environments like Azure. Many organizations are ready to take the step of shifting expensive tasks like infrastructure maintenance and platform development to a cloud provider.
@@ -32,7 +28,7 @@ At a high level, the migration process includes the steps that are listed in the
 
 | Preparation        | Migration                             | Post-migration |
 | :----------------- | :----------------------------- | :---------------- |
-| <li> Define scope: What do we want to migrate? <li> Build an inventory of data and processes to migrate. <li> Define any data model changes. <li> Identify the best Azure and third-party tools and features to use. <li> Train staff early on the new platform. <li> Set up the Azure target platform.</li> | <li> Start small and simple. <li> Automate where possible. <li> Use Azure built-in tools and features to reduce the migration effort. <li> Migrate metadata for tables and views. <li> Migrate relevant historical data. <li> Migrate or refactor stored procedures and business processes. <li> Migrate or refactor ETL or ELT incremental load processes.</li> | <li> Monitor and document all stages of the migration process. <li> Use experience gained to build a template for future migrations. <li> Reengineer the data model, if necessary, by using the new platform's performance and scalability. <li> Test applications and query tools. <li> Benchmark and optimize query performance.</li> |
+| <li> Define scope: what do we want to migrate? <li> Build an inventory of data and processes to migrate. <li> Define any data model changes. <li> Identify the best Azure and third-party tools and features to use. <li> Train staff early on the new platform. <li> Set up the Azure target platform.</li> | <li> Start small and simple. <li> Automate where possible. <li> Use Azure built-in tools and features to reduce the migration effort. <li> Migrate metadata for tables and views. <li> Migrate relevant historical data. <li> Migrate or refactor stored procedures and business processes. <li> Migrate or refactor ETL or ELT incremental load processes.</li> | <li> Monitor and document all stages of the migration process. <li> Use experience gained to build a template for future migrations. <li> Reengineer the data model, if necessary, by using the new platform's performance and scalability. <li> Test applications and query tools. <li> Benchmark and optimize query performance.</li> |
 
 When you migrate from a legacy Netezza environment to Azure Synapse, you must consider some specific factors, in addition to the more general subjects described in the Netezza documentation.
 
@@ -101,7 +97,7 @@ Netezza implements some database objects that aren't directly supported in Azure
   - Temporal columns, including `DATE`, `TIME`, and `TIMESTAMP`
   - `CHAR` columns, if they are part of a materialized view and included in the `ORDER BY` clause
 
-  You can find out which columns have zone maps by using the nz_zonemap utility. The utility is part of the NZ Toolkit.
+  You can find out which columns have zone maps by using the `nz_zonemap` utility. The utility is part of the NZ Toolkit.
 
   Azure Synapse doesn't use zone maps, but you can achieve similar results by using user-defined index types or partitioning.
 
@@ -117,46 +113,47 @@ Netezza implements some database objects that aren't directly supported in Azure
 
 <!-- docutune:disable -->
 
-| IBM Netezza data type | Azure Synapse SQL v2 data type |
-| :-------------------- | :----------------------------- |
-| bigint (int8) | bigint |
-| binary varying(n) (alias varbinary(n)) | varbinary(n) |
-| binary(n) | binary(n) |
-| boolean (bool) | bit |
-| bpchar(n) | varchar(n) |
-| byteint (int1) | smallint |
-| character varying (n) (alias varchar(n)) | varchar(n) |
-| character(n) (alias char(n)) | char(n) |
-| dataslice | *Not Supported* |
-| date | date |
-| datetime | datetime |
-| decimal | decimal(18,0) |
-| decimal(p,s) | decimal(p,s) |
-| double | float(53) |
-| float | float |
-| float(p) | float(p) |
-| float4 | float(53) |
-| float8 | float(53) |
-| integer (alias int, int4) | int |
-| interval (alias timespan) | *Not Supported* |
-| national bpchar(n) | nvarchar(n) |
-| national character(n) (alias nchar(n)) | nchar(n) |
-| number(p,s) | decimal(p,s) |
-| numeric | decimal(18,0) |
-| numeric(p,s) | numeric (p,s)|
-| national character varying(n) (alias nvarchar(n)) | nvarchar(n) |
-| real | real |
-| rowid | *Not Supported* |
-| smallint (alias int2) | smallint |
-| st_geometry(n) | *Not Supported* |
-| time | time |
-| time with time zone (alias timetz) | datetimeoffset |
-| timestamp(p) | datetime2(p) |
-| transactionid | *Not Supported* |
+  | IBM Netezza data type | Azure Synapse SQL v2 data type |
+  | :-------------------- | :----------------------------- |
+  | bigint (int8) | bigint |
+  | binary varying(n) (alias varbinary(n)) | varbinary(n) |
+  | binary(n) | binary(n) |
+  | boolean (bool) | bit |
+  | bpchar(n) | varchar(n) |
+  | byteint (int1) | smallint |
+  | character varying (n) (alias varchar(n)) | varchar(n) |
+  | character(n) (alias char(n)) | char(n) |
+  | dataslice | *Not Supported* |
+  | date | date |
+  | datetime | datetime |
+  | decimal | decimal(18,0) |
+  | decimal(p,s) | decimal(p,s) |
+  | double | float(53) |
+  | float | float |
+  | float(p) | float(p) |
+  | float4 | float(53) |
+  | float8 | float(53) |
+  | integer (alias int, int4) | int |
+  | interval (alias timespan) | *Not Supported* |
+  | national bpchar(n) | nvarchar(n) |
+  | national character(n) (alias nchar(n)) | nchar(n) |
+  | number(p,s) | decimal(p,s) |
+  | numeric | decimal(18,0) |
+  | numeric(p,s) | numeric (p,s)|
+  | national character varying(n) (alias nvarchar(n)) | nvarchar(n) |
+  | real | real |
+  | rowid | *Not Supported* |
+  | smallint (alias int2) | smallint |
+  | st_geometry(n) | *Not Supported* |
+  | time | time |
+  | time with time zone (alias timetz) | datetimeoffset |
+  | timestamp(p) | datetime2(p) |
+  | transactionid | *Not Supported* |
 
 <!-- docutune:enable -->
 
-Note: Some third-party vendors offer tools and services that can automate migration tasks, including data type mapping. If a third-party ETL tool like Informatica or Talend is already used in the Netezza environment, you can use the tool to implement any data transformations that are required.
+  > [!NOTE]
+  > Some third-party vendors offer tools and services that can automate migration tasks, including data type mapping. If a third-party ETL tool like Informatica or Talend is already used in the Netezza environment, you can use the tool to implement any data transformations that are required.
 
 - **SQL Data Manipulation Language (DML) syntax:** You should be aware of a few differences in SQL DML syntax between Netezza SQL and Azure Synapse.
 
@@ -214,7 +211,7 @@ Consider the following information when you plan how to extract metadata and dat
 
 You can access system catalog tables in Netezza by using a utility like nz_ddl_table. You can use the tables to generate `CREATE TABLE` DDL statements, which you can then edit for the equivalent tables in Azure Synapse. Third-party migration and ETL tools also use the catalog information to achieve the same results.
 
-- **Data extraction:** You can extract raw data to migrate from an existing Netezza table into a flat, delimited file by using standard Netezza utilities like nzsql and nzunload, and by using external tables. Compress the files by using Gzip, and then use AzCopy or an Azure data transport service like Azure Data Box to upload the files to Azure Blob Storage.
+- **Data extraction:** You can extract raw data to migrate from an existing Netezza table into a flat, delimited file by using standard Netezza utilities like `nzsql` and `nzunload`, and by using external tables. Compress the files by using Gzip, and then use AzCopy or an Azure data transport service like Azure Data Box to upload the files to Azure Blob Storage.
 
   During a migration exercise, it's important to extract data as efficiently as possible. The recommended approach for Netezza is to use external tables, which is also the fastest method. You can complete multiple extracts in parallel to maximize the throughput for data extraction.
 

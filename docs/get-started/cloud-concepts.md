@@ -70,7 +70,7 @@ Hosting assets and workloads in the cloud can be simple, consisting of a single 
 
 **Guidance to support deliverable completion:**
 
-- Understand the levels of the [portfolio hierarchy](../reference/fundamental-concepts/hosting-hierarchy.md) to align fundamental terms.
+- Understand the levels of the [portfolio hierarchy](../resources/fundamental-concepts/hosting-hierarchy.md) to align fundamental terms.
 
 <br>
 
@@ -109,14 +109,14 @@ To ensure consistent alignment with the portfolio hierarchy decisions, it's impo
 
 **Guidance to support deliverable completion:**
 
-- Understand how [Azure products support the portfolio hierarchy](../reference/fundamental-concepts/hierarchy-azure-tools.md).
+- Understand how [Azure products support the portfolio hierarchy](../resources/fundamental-concepts/hierarchy-azure-tools.md).
 - Review existing subscriptions for alignment to the chosen portfolio hierarchy.
 
 Build a subscription strategy:
 
 - Start with [Two subscriptions by design](../ready/azure-best-practices/initial-subscriptions.md). Add basic subscription designs to account for common enterprise needs, like shared services or sandbox subscriptions.
 - [Manage multiple subscriptions](../ready/azure-best-practices/organize-subscriptions.md) as additional subscriptions are required to support the cloud adoption plan.
-- Establish [clear boundaries based on the portfolio hierarchy](../reference/fundamental-concepts/hierarchy-azure-tools.md#organizing-the-hierarchy-in-azure).
+- Establish [clear boundaries based on the portfolio hierarchy](../resources/fundamental-concepts/hierarchy-azure-tools.md#organizing-the-hierarchy-in-azure).
 - When required, [move resource groups and assets between subscriptions](/azure/azure-resource-manager/management/move-resource-group-and-subscription) to adhere to the organization strategy.
 
 <br>
@@ -135,7 +135,7 @@ Complexity of the portfolio hierarchy will help inform organizational structures
 
 **Guidance to support deliverable completion:**
 
-- Use the prior steps as a guide to evaluate the [portfolio hierarchy accountability guidance](../reference/fundamental-concepts/hosting-hierarchy.md#hierarchy-accountability-and-guidance). Determine which capabilities might need to be delivered by dedicated organizations or virtual teams.
+- Use the prior steps as a guide to evaluate the [portfolio hierarchy accountability guidance](../resources/fundamental-concepts/hosting-hierarchy.md#hierarchy-accountability-and-guidance). Determine which capabilities might need to be delivered by dedicated organizations or virtual teams.
 - Use [Get started: Align your organization](./org-alignment.md) to apply the portfolio hierarchy accountability guidance to the RACI (responsible, accountable, consulted, and informed) diagram.
 
 <br>

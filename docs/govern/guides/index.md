@@ -76,7 +76,7 @@ Compared to traditional on-premises environments, Azure allows workload developm
 
 The CAF enterprise-scale landing zone architecture aims to address these concerns earlier in the adoption lifecycle by architectures, implementations, and guidance to help achieve a balance between cloud adoption team requirements and central IT team requirements during enterprise cloud adoption efforts. Central to this approach is the concept of a shared service architecture and well-managed landing zones.
 
-CAF enterprise-scale landing zone deploys your own "isolated cloud" within the Azure platform, integrating management processes, regulatory requirements, and security processes required by your governance policies. Within this virtual boundary, CAF enterprise-scale landing zone offers example models for deploying workloads while ensuring consistent compliance and provides basic guidance on implementing an organization's separation of roles and responsibilities in the cloud.
+CAF enterprise-scale landing zone deploys your own isolated cloud environment within the Azure platform, integrating management processes, regulatory requirements, and security processes required by your governance policies. Within this virtual boundary, CAF enterprise-scale landing zone offers example models for deploying workloads while ensuring consistent compliance and provides basic guidance on implementing an organization's separation of roles and responsibilities in the cloud.
 
 ### CAF enterprise-scale landing zone qualifications
 

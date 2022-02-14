@@ -95,7 +95,7 @@ An Azure Migrate assessment will provide a way for you to analyze all workloads 
 
 ## Next steps
 
-Review how you can extend your governance approach across the Azure VMware Solution. Evaluate and manage risk tolerance by identifying high-risk areas for business, convert risk vectors into governing corporate policies, and extend governance policies across Cost, Security Baseline, Identity Baseline, Resource Consistency, and Deployment Acceleration disciplines.
+Review how you can extend your governance approach across the Azure VMware Solution. Evaluate and manage risk tolerance by identifying high-risk areas for business, convert risk vectors into governing corporate policies, and extend governance policies across Cost Management, Security Baseline, Identity Baseline, Resource Consistency, and Deployment Acceleration disciplines.
 
 > [!div class="nextstepaction"]
 > [Govern Azure VMware Solution](./govern.md)

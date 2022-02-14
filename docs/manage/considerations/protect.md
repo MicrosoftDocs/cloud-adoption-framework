@@ -20,7 +20,7 @@ Preparation for an outage allows the team to detect failures sooner and recover 
 
 ## Translate protection and recovery conversations
 
-The workloads that power business operations consist of applications, data, virtual machines (VMs), and other assets. Each of those assets might require a different approach to protection and recovery. The important aspect of this discipline is to establish a consistent commitment within the management baseline, which can provide a starting point during business discussions.
+The workloads that power business operations consist of applications, data, virtual machines (VMs), and other assets. Those assets might require a different approach to protection and recovery. The important aspect of this discipline is to establish a consistent commitment within the management baseline, which can provide a starting point during business discussions.
 
 At a minimum, each asset that supports any given workload should have a baseline approach with a clear commitment to speed of recovery (recovery time objectives, or RTO) and risk of data loss (recovery point objectives, or RPO).
 

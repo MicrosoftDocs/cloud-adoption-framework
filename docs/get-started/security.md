@@ -10,8 +10,6 @@ ms.subservice: general
 ms.custom: internal
 ---
 
-<!-- docutune:casing IR -->
-
 # Get started: Implement security across the enterprise environment
 
 Security helps create assurances of confidentiality, integrity, and availability for a business. Security efforts have a critical focus on protecting against the potential impact to operations caused by both internal and external malicious and unintentional acts.
@@ -163,7 +161,7 @@ Security planning and cloud adoption planning should not be done in isolation. I
 
     - [Zero-trust user access reference architecture](/security/ciso-workshop/ciso-workshop-module-3#part-5-zero-trust-user-access-reference-architecture-842) to modernize access control architecture for cloud generation.
 
-    - [Azure Security Center](/azure/security-center/) and [Microsoft cloud application security](/cloud-app-security/) to help secure cloud assets.
+    - [Microsoft Defender for Cloud](/azure/security-center/) and [Microsoft Defender for Cloud Apps](/cloud-app-security/) to help secure cloud assets.
 
   - **Security awareness and education plan**, so all teams have basic critical security knowledge.
 
@@ -305,4 +303,4 @@ As you continue into the operations mode of cloud security, consider these next 
 - Review security information in [Built-in security controls for Azure services](/security/benchmark/azure/).
 - Review Azure security tools and services in [Security services and technologies available on Azure](/azure/security/fundamentals/services-technologies).
 - Review the [Microsoft Trust Center](https://www.microsoft.com/trustcenter/guidance/risk-assessment). It contains extensive guidance, reports, and related documentation that can help you perform risk assessments as part of your regulatory compliance processes.
-- Review third-party tools available to facilitate meeting your security requirements. For more information, see [Integrate security solutions in Azure Security Center](/azure/security-center/security-center-partner-integration).
+- Review third-party tools available to facilitate meeting your security requirements. For more information, see [Integrate security solutions in Microsoft Defender for Cloud](/azure/security-center/security-center-partner-integration).

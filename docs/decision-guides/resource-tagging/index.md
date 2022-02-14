@@ -63,8 +63,6 @@ As part of your planning process, use the following questions to determine the k
 
 The following tagging patterns are examples of how tagging can be used to organize cloud assets. These patterns aren't meant to be exclusive and can be used in parallel. They provide multiple ways of organizing assets based on your company's needs.
 
-<!-- cSpell:ignore catalogsearch northamerica jsmith contactalias catsearchowners businessprocess businessimpact revenueimpact -->
-
 | Tag type | Examples | Description |
 |--|--|--|
 | Functional | `app` = `catalogsearch1` <br> `tier` = `web` <br> `webserver` = `apache` <br> `env` = `prod` <br> `env` = `staging` <br> `env` = `dev` | Categorize resources by their purpose within a workload, what environment they've been deployed to, or other functionality and operational details. |

@@ -63,8 +63,6 @@ Beyond mobile reality, or even mixed reality, lies integrated reality. Integrate
 
 This digital experience is best when some form of device is consistently within the same surroundings in which the customer need occurs. Common scenarios include factory floors, elevators, and even your car. These types of large devices already contain compute power. You can also use data from the device itself to detect customer behaviors and send those behaviors to the cloud. This automatic capture of customer behavior data dramatically reduces the need for a customer to input data. Additionally, the web, mobile, or VR experience can function as a feedback loop to share what's been learned from the integrated reality solution.
 
-<!-- docutune:casing "advanced computer vision" -->
-
 Examples of integrated reality in Azure:
 
 - [Azure Internet of Things (IoT) solutions](/azure/iot-fundamentals/): A collection of services in Azure that each aid in managing devices and the flow of data from those devices into the cloud and back out to end users.

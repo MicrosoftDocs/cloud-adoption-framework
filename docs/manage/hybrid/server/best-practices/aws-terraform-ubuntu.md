@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-hybrid
 
 # Use a Terraform plan to deploy an Amazon Web Services Amazon Elastic Compute Cloud instance and connect it to Azure Arc
 
-This article provides guidance for using the provided [Terraform](https://www.terraform.io/) plan to deploy an Amazon Web Services (AWS) Amazon Elastic Compute Cloud (EC2) instance and connect it as an Azure Arc enabled server resource.
+This article provides guidance for using the provided [Terraform](https://www.terraform.io/) plan to deploy an Amazon Web Services (AWS) Amazon Elastic Compute Cloud (EC2) instance and connect it as an Azure Arc-enabled server resource.
 
 ## Prerequisites
 
@@ -70,7 +70,7 @@ In order for Terraform to create resources in AWS, we will need to create a new 
 
 1. Sign in to the [AWS management console](https://console.aws.amazon.com/console/home)
 
-2. After signing in, select the **Services** dropdown in the top left. Under **Security, Identity, and Compliance**, select **IAM** to access the [identity and access management page](https://console.aws.amazon.com/iam/home)
+2. After signing in, select the **Services** dropdown list in the top left. Under **Security, Identity, and Compliance**, select **IAM** to access the [identity and access management page](https://console.aws.amazon.com/iam/home)
 
     ![A screenshot of an AWS cloud console.](./media/aws-ubuntu/aws-ubuntu-console.png)
 
@@ -80,11 +80,11 @@ In order for Terraform to create resources in AWS, we will need to create a new 
 
     ![A screenshot of creating a new user in an AWS cloud console.](./media/aws-ubuntu/aws-ubuntu-new-user-1.png)
 
-4. On the **Add User** page, name the user `Terraform` and select the **Programmatic Access** check box, and then select **Next**.
+4. On the **Add User** page, name the user `Terraform` and select the **Programmatic Access** checkbox, and then select **Next**.
 
     ![Second screenshot of creating a new user in an AWS cloud console.](./media/aws-ubuntu/aws-ubuntu-new-user-2.png)
 
-5. On the **Set Permissions** page, select **Attach existing policies directly** and then check the box next to **AmazonEC2FullAccess** as seen in the screenshot, and then select **Next**.
+5. On the **Set Permissions** page, select **Attach existing policies directly** and then select the box next to **AmazonEC2FullAccess** as seen in the screenshot, and then select **Next**.
 
     ![Third screenshot of creating a new user in an AWS cloud console.](./media/aws-ubuntu/aws-ubuntu-new-user-3.png)
 
@@ -108,10 +108,10 @@ Before executing the Terraform plan, you must export the environment variables w
 
 2. The Terraform plan creates resources in both Microsoft Azure and AWS. It then executes a script on an AWS EC2 virtual machine to install the Azure Arc agent and all necessary artifacts. This script requires certain information about your AWS and Azure environments. Edit [`scripts/vars.sh`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/aws/ubuntu/terraform/scripts/vars.sh) and update each of the variables with the appropriate values.
 
-    - `TF_VAR_subscription_id` = Your Azure subscription ID
-    - `TF_VAR_client_id` = Your Azure service principal app ID
-    - `TF_VAR_client_secret` = Your Azure service principal password
-    - `TF_VAR_tenant_id` = Your Azure tenant ID
+    - `TF_VAR_subscription_id` = your Azure subscription ID
+    - `TF_VAR_client_id` = your Azure service principal application ID
+    - `TF_VAR_client_secret` = your Azure service principal password
+    - `TF_VAR_tenant_id` = your Azure tenant ID
     - `AWS_ACCESS_KEY_ID` = AWS access key
     - `AWS_SECRET_ACCESS_KEY` = AWS secret key
 
@@ -123,7 +123,7 @@ Before executing the Terraform plan, you must export the environment variables w
     source ./scripts/vars.sh
     ```
 
-5. Make sure your SSH keys are available in *~/.ssh* and named `id_rsa.pub` and `id_rsa`. If you followed the ssh-keygen guide above to create your key then this should already be setup correctly. If not, you may need to modify [`main.tf`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/aws/ubuntu/terraform/main.tf) to use a key with a different path.
+5. Make sure your SSH keys are available in *~/.ssh* and named `id_rsa.pub` and `id_rsa`. If you followed the `ssh-keygen` guide above to create your key then this should already be set up correctly. If not, you may need to modify [`main.tf`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/aws/ubuntu/terraform/main.tf) to use a key with a different path.
 
 6. Run the `terraform init` command which will download the Terraform AzureRM provider.
 
@@ -131,17 +131,17 @@ Before executing the Terraform plan, you must export the environment variables w
 
 ## Deployment
 
-1. Run the `terraform apply --auto-approve` command and wait for the plan to finish. Upon completion, you will have an AWS Amazon Linux 2 EC2 instance deployed and connected as a new Azure Arc enabled server inside a new resource group.
+1. Run the `terraform apply --auto-approve` command and wait for the plan to finish. Upon completion, you will have an AWS Amazon Linux 2 EC2 instance deployed and connected as a new Azure Arc-enabled server inside a new resource group.
 
 2. Open the Azure portal and navigate to the `arc-aws-demo` resource group. The virtual machine created in AWS will be visible as a resource.
 
-    ![A screenshot showing an Azure Arc enabled server in the Azure portal.](./media/aws-ubuntu/aws-ubuntu-server.png)
+    ![A screenshot showing an Azure Arc-enabled server in the Azure portal.](./media/aws-ubuntu/aws-ubuntu-server.png)
 
     ![A screenshot of AWS console displaying EC2 instances.](./media/aws-ubuntu/aws-ubuntu-ec2-instances.png)
 
 ## Semi-automated deployment (optional)
 
-As you may have noticed, the last step of the run is to register the VM as a new Azure Arc enabled server resource.
+As you may have noticed, the last step of the run is to register the VM as a new Azure Arc-enabled server resource.
 
   ![A screenshot of the `azcmagent connect` command.](./media/aws-ubuntu/aws-ubuntu-azcmagent-1.png)
 
@@ -153,7 +153,7 @@ If you want to demo/control the actual registration process, do the following:
 
 2. Get the public IP of the AWS VM by running `terraform output`.
 
-    ![A screenshot of a terraform output.](./media/aws-ubuntu/aws-ubuntu-terraform.png)
+    ![A screenshot of output from Terraform.](./media/aws-ubuntu/aws-ubuntu-terraform.png)
 
 3. SSH the VM using the `ssh ubuntu@xx.xx.xx.xx` where `xx.xx.xx.xx` is the host IP.
 

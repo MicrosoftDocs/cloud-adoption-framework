@@ -1,5 +1,5 @@
 ---
-title: Scalability considerations for AKS environments
+title: Scalability considerations for Azure Kubernetes Service environments
 description: Scalability considerations for AKS environments
 author: xstabel
 ms.author: brblanch
@@ -10,11 +10,9 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-aks
 ---
 
-<!-- docutune:casing "HPA" -->
+# Scalability considerations for Azure Kubernetes Service environments
 
-# Scalability considerations for AKS environments
-
-AKS can be scaled-in and out depending upon infrastructure needs (requiring more or less capacity), adding node pools with special capabilities like GPU, or application needs, in this case you have several factors like number and rate of concurrent connections, number of requests, back-end latencies on AKS applications.
+Azure Kubernetes Service (AKS) can be scaled-in and out depending upon infrastructure needs (requiring more or less capacity), adding node pools with special capabilities like GPU, or application needs, in this case you have several factors like number and rate of concurrent connections, number of requests, back-end latencies on AKS applications.
 
 The most common scalability options for AKS are the cluster autoscaler (automatically adding/removing nodes based on CPU and memory utilization) or the HPA (horizontal pod autoscaler) for your applications to scale in and out based on CPU and memory utilization as well as more advanced metrics.
 
@@ -40,8 +38,8 @@ Here are some crucial factors to consider:
 
 Follow these best practices for your design:
 
-- Use virtual machine scale sets, which are required for scenarios including autoscaling, multiple node pools, and Windows node pool support.
-  - Don't manually enable or edit settings for scalability in the Azure portal or using the Azure CLI.
+- Use virtual machine scale sets (VMSS), which are required for scenarios including autoscaling, multiple node pools, and Windows node pool support.
+  - Don't manually enable or edit VMSS scalability settings in the Azure portal or using the Azure CLI.  Instead, use the cluster autoscaler.
 - If you need fast burst autoscaling choose to burst from AKS cluster using Azure Container Instances and [virtual nodes](/azure/aks/virtual-nodes-portal) for rapid and infinite scalability and per-second billing.
 - Use [cluster autoscaler](/azure/aks/cluster-autoscaler) and [scale-to-zero](/azure/aks/scale-cluster#scale-user-node-pools-to-0) for predictable scalability using VM-based worker nodes.
 - Enable [cluster autoscaler](/azure/aks/cluster-autoscaler) to meet application demands.

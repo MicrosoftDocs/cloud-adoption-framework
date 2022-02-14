@@ -10,9 +10,6 @@ ms.subservice: migrate
 ms.custom: think-tank
 ---
 
-<!-- docutune:casing "Table 4" "Parallel Sysplex" CF Assembler "Demystifying Mainframe-to-Azure Migration" "ROSCOE Programming Facility" "RPF" "CA Librarian" CA-Panvalet -->
-<!-- cSpell:ignore vCPUs Proliant Sysplex IPLs DASDs LPARs ISPF Panvalet -->
-
 # Make the switch from mainframes to Azure
 
 As an alternative platform for running traditional mainframe applications, Azure offers hyperscale compute and storage in a high availability environment. You get the value and agility of a modern, cloud-based platform without the costs associated with a mainframe environment.
@@ -21,13 +18,11 @@ This section provides technical guidance for making the switch from a mainframe 
 
 ![Mainframe and Azure](../../_images/mainframe-migration/make-the-switch.png)
 
-<!-- docutune:casing vCPUs -->
-
 ## MIPS vs. vCPUs
 
 There is no universal mapping formula that exists for determining the number of virtual central processing units (vCPUs) needed to run mainframe workloads. However, the metric of a million instructions per second (MIPS) is often mapped to vCPUs on Azure. MIPS measures the overall compute power of a mainframe by providing a constant value of the number of cycles per second for a given machine.
 
-A small organization might require less than 500 MIPS, while a large organization typically uses more than 5,000 MIPS. At $1,000 per single MIPS, a large organization spends approximately $5 million annually to deploy a 5,000-MIPS infrastructure. The annual cost estimate for a typical Azure deployment of this scale is approximately one-tenth the cost of a MIPS infrastructure. For details, see Table 4 in the [Demystifying Mainframe-to-Azure Migration](https://azure.microsoft.com/resources/demystifying-mainframe-to-azure-migration/) white paper.
+A small organization might require less than 500 MIPS, while a large organization typically uses more than 5,000 MIPS. At $1,000 per single MIPS, a large organization spends approximately $5 million annually to deploy a 5,000-MIPS infrastructure. The annual cost estimate for a typical Azure deployment of this scale is approximately one-tenth the cost of a MIPS infrastructure. For details, see *Table 4* in the [`Demystifying Mainframe-to-Azure Migration`](https://azure.microsoft.com/resources/demystifying-mainframe-to-azure-migration/) white paper.
 
 An accurate calculation of MIPS to vCPUs with Azure depends on the type of vCPU and the exact workload you are running. However, benchmark studies provide a good basis for estimating the number and type of vCPUs you will need. A recent HPE zRef benchmark provides the following estimates:
 

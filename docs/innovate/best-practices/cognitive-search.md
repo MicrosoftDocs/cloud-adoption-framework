@@ -11,7 +11,6 @@ ms.custom: think-tank, seo-caf-innovate
 keywords: cognitive search, azure cognitive services, cognitive search engine, what is cognitive, azure search
 ---
 
-<!-- docutune:casing "JFK Files" -->
 <!-- docutune:ignore "Azure Search" -->
 
 # What is Azure Cognitive Search?
@@ -59,7 +58,7 @@ After you define an index, you're ready to upload content. You can use either a 
 
 The pull model retrieves data from external data sources. It's supported through indexers that streamline and automate aspects of data ingestion, such as connecting to, reading, and serializing data. [Indexers](/rest/api/searchservice/indexer-operations) are available for Azure Cosmos DB, Azure SQL Database, Azure Blob Storage, and SQL Server hosted in an Azure Virtual Machines instance. You can configure an indexer for on-demand or scheduled data refresh.
 
-The push model is provided through the SDK or REST APIs used for sending updated documents to an index. You can push data from virtually any dataset by using the JSON format. For more information, see [Add, update, or delete documents](/rest/api/searchservice/addupdate-or-delete-documents) or [how to use the .NET SDK](/azure/search/search-howto-dotnet-sdk) for guidance on loading data.
+The push model is provided through the SDK or REST APIs used for sending updated documents to an index. You can push data from virtually any dataset by using the JSON format. For more information, see [Add, update, or delete documents](/rest/api/searchservice/addupdate-or-delete-documents) and [How to use the .NET SDK](/azure/search/search-howto-dotnet-sdk) for guidance on loading data.
 
 ### Step 4: Search
 
@@ -68,5 +67,5 @@ After populating an index, you can [issue search queries](/azure/search/search-q
 ## Next steps
 
 - Learn more about [Azure Cognitive Search](/azure/search/).
-- Browse more [AI architectures](/azure/architecture/browse/).
-- See an example knowledge mining solution in the article [JFK Files example architecture and solution](/azure/architecture/solution-ideas/articles/cognitive-search-with-skillsets).
+- Browse more [AI architectures](/azure/architecture/browse/?azure_categories=ai-machine-learning).
+- See an example knowledge mining solution in the article [`JFK Files` example architecture and solution](/azure/architecture/solution-ideas/articles/cognitive-search-with-skillsets).

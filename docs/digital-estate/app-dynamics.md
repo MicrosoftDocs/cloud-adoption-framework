@@ -10,8 +10,6 @@ ms.subservice: plan
 ms.custom: think-tank
 ---
 
-<!-- docutune:casing "Movie Tickets Online" -->
-
 # Measure business outcomes with AppDynamics
 
 Measuring and quantifying successful business outcomes is a crucial part of any cloud adoption strategy. Understanding an application's performance and user experience is key to measuring those business outcomes. However, accurately measuring the correlation between application performance, user experience, and business impact is often difficult, inaccurate, and time consuming.
@@ -51,7 +49,7 @@ A company that sells widgets from an online marketplace has identified the follo
 - Billing
 - Confirm order
 
-These types of business transactions are common to e-commerce applications. A conversion funnel is the journey that a user takes through these pages, and it directly leads to sales revenue on the company's platform. When users abandon the journey because of poor page performance or errors, this directly impacts the company's underlying profit.
+These types of business transactions are common to e-commerce applications. A conversion funnel is the journey that a user takes through these pages, and it leads directly to sales revenue on the company's platform. When users abandon the journey because of poor page performance or errors, this directly impacts the company's underlying profit.
 
 Additionally, the company has identified the following key business metrics:
 

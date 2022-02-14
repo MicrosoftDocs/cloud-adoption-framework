@@ -2,7 +2,7 @@ items:
   - name: Desktop virtualization - Microsoft Cloud Adoption Framework for Azure
     href: index.md
     pdf_name: Desktop Virtualization - Microsoft Cloud Adoption Framework for Azure
-    
+
   - name: Strategic impact
     href: strategy.md
 

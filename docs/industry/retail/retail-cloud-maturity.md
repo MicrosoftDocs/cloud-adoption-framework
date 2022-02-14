@@ -30,7 +30,7 @@ Connected retail organizations are further along on their cloud journey. They've
 
 ## Analytics-driven retail
 
-Analytics-driven retailers focus on establishing a base for future transformation using big data, IoT, and industry-specific AI capabilities. The cloud groundwork that has been laid makes these retailers more data-driven and agile than retailers in earlier stages. It's in this stage that near-term innovation and actualization of the industry priority scenarios and use cases that lead the retail industry become available. These use cases, like personalization and supply chain optimization, become available across the plan, buy, sell, and move retail domains. Many retailers in this stage establish a new way to think about the data that drives their business. Microsoft recommends adopting a common data model that lets first-party and third-party solutions interact with the retail value chain that is represented by their data.
+Analytics-driven retailers focus on establishing a base for future transformation using big data, IoT, and industry-specific AI capabilities. The cloud groundwork that has been laid makes these retailers more data-driven and agile than retailers in earlier stages. During this stage, near-term innovation and actualization of the industry priority scenarios and use cases that lead the retail industry become available. These use cases, like personalization and supply chain optimization, become available across the plan, buy, sell, and move retail domains. Many retailers in this stage establish a new way to think about the data that drives their business. Microsoft recommends adopting a common data model that lets first-party and third-party solutions interact with the retail value chain that is represented by their data.
 
 ## Intelligent retail
 
@@ -46,7 +46,7 @@ The following articles can guide your cloud adoption journey and help you succee
 
 - [Cloud adoption strategy for the retail industry](./strategy.md)
 - [Cloud adoption plan for the retail industry](./plan.md)
-- [Review your environment or Azure landing zone(s)](./ready.md)
+- [Review your environment or Azure landing zones](./ready.md)
 - [Migrate common retail industry technologies](./migrate.md)
 - [Innovation in the retail industry](./innovate.md)
 - [Governance in the retail industry](./govern.md)

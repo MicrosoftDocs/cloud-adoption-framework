@@ -10,8 +10,6 @@ ms.subservice: migrate
 ms.custom: internal
 ---
 
-<!-- cSpell:ignore CSPs MSPs -->
-
 # Understand partnership and support options
 
 During migration, the cloud adoption team performs the actual migration of workloads to the cloud. Unlike the collaborative and problem-solving tasks when defining the [digital estate](../../../digital-estate/index.md) or building the core cloud infrastructure, migration tends to be a series of repetitive execution tasks. Beyond the repetitive aspects, there are likely testing and tuning efforts that require deep knowledge of the chosen cloud provider. The repetitive nature of this process can sometimes be best addressed by a partner, reducing strain on full-time staff. Additionally, partners may be able to better align deep technical expertise when the repetitive processes encounter execution anomalies.
@@ -33,7 +31,6 @@ If an organization is planning an Azure migration on its own, Microsoft is alway
 - [Microsoft Cloud Adoption Framework](../../index.md). This framework presents a structured approach to cloud adoption and migration. It is based on best practices across many Microsoft-supported customer engagements and is organized as a series of steps, from architecture and design to implementation. For each step, supporting guidance helps you with the design of your application architecture.
 - [Cloud design patterns](/azure/architecture/patterns/). Azure provides some useful cloud design patterns for building reliable, scalable, secure workloads in the cloud. Each pattern describes the problem that the pattern addresses, considerations for applying the pattern, and an example based on Azure. Most of the patterns include code samples or snippets that show how to implement the pattern on Azure. However, they're relevant to any distributed system, whether hosted on Azure or on other cloud platforms.
 - [Cloud fundamentals](/azure/architecture/guide/). Fundamentals help teach the basic approaches to implementation of core concepts. This guide helps technicians think about solutions that go beyond a single Azure service.
-- [Example scenarios](/azure/architecture/browse/). The guide provides references from real customer implementations, outlining the tools, approaches, and processes that past customers have followed to accomplish specific business goals.
 - [Reference architectures](/azure/architecture/browse/). Reference architectures are arranged by scenario, with related architectures grouped together. Each architecture includes best practices, along with considerations for scalability, availability, manageability, and security. Most also include a deployable solution.
 
 ## FastTrack for Azure
@@ -71,7 +68,7 @@ The main phases of a typical FastTrack for Azure engagement are:
 
 ![Microsoft Services Cloud Adoption Framework approach](../../../_images/migrate/mcs-program-approach.jpg)
 
-**Assess:** Microsoft Services uses a [unified data- and tool-driven approach](https://download.microsoft.com/download/C/7/C/C7CEA89D-7BDB-4E08-B998-737C13107361/Secure_Cloud_Insights_Datasheet_EN_US.pdf) consisting of architectural workshops, Azure real-time information, security and identity threat models and various tools to provide insights into challenges, risks, recommendations and issues to an existing Azure environment with a key outcome such as [high-level modernization roadmap](https://download.microsoft.com/download/F/7/2/F72FAD7E-8BBD-4E04-8C7B-9AC4FE04A150/Cloud_Adoption_Discovery_and_Roadmap_Datasheet.pdf).
+**Assess:** Microsoft Services uses a [unified data-driven and tool-driven approach](https://download.microsoft.com/download/C/7/C/C7CEA89D-7BDB-4E08-B998-737C13107361/Secure_Cloud_Insights_Datasheet_EN_US.pdf) consisting of architectural workshops, Azure real-time information, security and identity threat models and various tools to provide insights into challenges, risks, recommendations and issues to an existing Azure environment with a key outcome such as [high-level modernization roadmap](https://download.microsoft.com/download/F/7/2/F72FAD7E-8BBD-4E04-8C7B-9AC4FE04A150/Cloud_Adoption_Discovery_and_Roadmap_Datasheet.pdf).
 
 **Adopt:** Using the [Azure cloud foundation](https://download.microsoft.com/download/D/8/7/D872DFD0-1C46-4145-95E4-B5EAB2958B96/Hybrid_Cloud_Foundation_Datasheet_EN_US.pdf) from Microsoft Services, establish your core Azure designs, patterns and governance architecture by mapping your requirements to the most appropriate reference architecture and plan, design and deploy the infrastructure, management, security, and identity required for workloads.
 

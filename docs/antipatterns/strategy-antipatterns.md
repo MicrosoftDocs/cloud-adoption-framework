@@ -12,7 +12,7 @@ ms.custom: think-tank
 
 # Cloud strategy antipatterns
 
-Customers often experience antipatterns during the Strategy phase of cloud adoption. These antipatterns can make it hard to align IT and business strategies. They also make it hard to measure the success of cloud projects.
+Customers often experience antipatterns during the Strategy phase of cloud adoption. These antipatterns can complicate the alignment of IT and business strategies. These antipatterns also make measuring the success of cloud projects more difficult.
 
 ## Antipattern: Adopt the cloud without establishing goals
 

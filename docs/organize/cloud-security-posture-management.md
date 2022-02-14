@@ -10,8 +10,6 @@ ms.subservice: organize
 ms.custom: internal
 ---
 
-<!-- docsTest:casing TVM -->
-
 # Function of cloud security posture management
 
 The main objective for a cloud security team working on posture management is to continuously report on and improve the security posture of the organization by focusing on disrupting a potential attacker's return on investment (ROI).

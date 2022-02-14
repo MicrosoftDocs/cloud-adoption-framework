@@ -46,8 +46,8 @@ Your company's cloud adoption journey is guided with foundational decisions that
 - [Get started aligning foundation decisions](./cloud-concepts.md)
 - [How does Azure work](./what-is-azure.md)
 - [Fundamental concepts](../ready/considerations/fundamental-concepts.md)
-- [Portfolio hierarchy](../reference/fundamental-concepts/hosting-hierarchy.md)
-- [Azure hierarchy support](../reference/fundamental-concepts/hierarchy-azure-tools.md)
+- [Portfolio hierarchy](../resources/fundamental-concepts/hosting-hierarchy.md)
+- [Azure hierarchy support](../resources/fundamental-concepts/hierarchy-azure-tools.md)
 
 ## Accelerate adoption
 

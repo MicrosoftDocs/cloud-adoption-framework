@@ -68,7 +68,7 @@ The output of the digital estate assessment provides the cloud platform team wit
 
 Your cloud adoption plan provides an accelerated approach to developing a project backlog. The backlog can then be modified to reflect assessment results, rationalization, needed skills, and partner contracting.
 
-A review of the short-term cloud adoption plan and backlog helps the cloud platform team understand the needs of the environment for the next few months. This background helps them to tighten the "definition of done" for the first few landing zones.
+A review of the short-term cloud adoption plan and backlog helps the cloud platform team understand the needs of the environment for the next few months. This background helps them to tighten their *definition of done* for the first few landing zones.
 
 **Deliverables:**
 
@@ -147,7 +147,7 @@ Migrating to the cloud without understanding ongoing operations is risky. In par
 
 - Deploy a management baseline.
 - Complete the operations management workbook.
-- Identify any workloads that require an Microsoft Azure Well-Architected Review assessment.
+- Identify any workloads that require a Microsoft Azure Well-Architected Review assessment.
 - Timeline risks:
   - Review the workbook: estimate one hour per application owner.
   - Complete the Microsoft Azure Well-Architected Review assessment: estimate one hour per application.

@@ -10,9 +10,6 @@ ms.subservice: strategy
 ms.custom: internal
 ---
 
-<!-- docutune:casing AGL WSP -->
-<!-- cSpell:ignore AGL Bee'ah WSP -->
-
 # Sustainability outcomes and benefits for business
 
 Though the impact and benefits of the cloud have been traditionally measured with financial and efficiency metrics, it's become more common for customers to seek understanding about how the cloud can help them to achieve their sustainability and environmental goals. Cloud computing can support your organization to reduce carbon emissions, use resources more efficiently, and lessen your environmental footprint.
@@ -26,9 +23,6 @@ Watch the following video to learn more about sustainability and how cloud migra
 <!-- markdownlint-enable MD034 -->
 
 Microsoft has been leading in many of these areas. The company has been operating as carbon-neutral since 2012 and has made a commitment to be carbon-negative by 2030. [The carbon benefits of cloud computing](https://download.microsoft.com/download/7/3/9/739BC4AD-A855-436E-961D-9C95EB51DAF9/Microsoft_Cloud_Carbon_Study_2018.pdf), a study on the Microsoft cloud in partnership with WSP, supports research on how moving on-premises datacenters to the Microsoft cloud can significantly reduce carbon footprints.
-
-<!-- docutune:casing "Bühler Insights" -->
-<!-- cspell:ignore Bühler -->
 
 [Bühler Group's](https://customers.microsoft.com/story/730776-buhler-group-consumer-goods-azure-iot-germany)'s IoT platform, known as Bühler Insights and powered by Azure IoT Hub, generates vital data so customers can monitor machine performance and generate accurate records for every product batch, helping food producers optimize safety, sustainability, and transparency across the supply chain.
 
@@ -57,7 +51,7 @@ These customer stories demonstrate how prioritizing sustainability and environme
 
 An intentional approach can help organizations to navigate their sustainability journey. These four steps can influence outcomes for your company:
 
-**Step 1:** Record and understand your company's carbon emissions. Start by categorizing your emissions, which will help you to list of areas on which to focus. The [Microsoft sustainability calculator](https://www.microsoft.com/sustainability/sustainability-guide/sustainability-calculator) can assist you with this task.
+**Step 1:** Record and understand your company's carbon emissions. Start by categorizing your emissions, which will help you to list of areas on which to focus. The [Microsoft sustainability calculator](https://www.microsoft.com/sustainability/emissions-impact-dashboard) can assist you with this task.
 
 **Step 2:** Evaluate whether your vendors, partners, and providers are taking steps to reduce their emissions and if these steps align with yours.
 
