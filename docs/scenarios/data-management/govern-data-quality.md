@@ -79,6 +79,6 @@ To implement data quality you need to both human and computational power:
 > [!TIP]
 > Data Quality rules should be defined at both a global and domain level. This allows the business to define it's standards for all data products which are created and allows data domains to create additional rules related to there domain.
 
-## Data quality products
+## Data quality solutions
 
-As of February 2022, Microsoft relies on partners, open-source solutions and custom solutions to a provide data quality solution. You are recomended to assess partners such as 
+As of February 2022, Microsoft depends on partners, open-source solutions and custom solutions to a provide data quality solution. You are recommended to assess partners such as Informatica, Talend, CloudIn and Ataccama One. For open-source, business have implemented Great-Expectations into there data pipelines.
