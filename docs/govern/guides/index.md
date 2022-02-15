@@ -35,7 +35,7 @@ Choose a governance guide below to begin your cloud adoption journey. Each guide
 
 The cloud governance guides demonstrate how to implement a governance MVP. From there, each guide shows how the cloud governance team can partner with the cloud adoption teams to accelerate adoption efforts. The CAF governance model guides the application of governance from foundation through subsequent improvements and evolutions.
 
-To begin a governance journey, choose between the two scenarios in the tables below. These tables outline the differences between the standard organization scenario and the complex enterprise scenario. The option titles indicate the complexity of the enterprise. The option descriptions are based on synthesized customer experiences.
+To begin a governance journey, choose between the two scenarios in the tables. These tables outline the differences between the standard organization scenario and the complex enterprise scenario. The option titles indicate the complexity of the enterprise. The option descriptions are based on synthesized customer experiences.
 
 > [!WARNING]
 > If your decision is more complex, a more robust governance starting point may be required. In such cases, consider the [CAF enterprise-scale landing zone](../../ready/enterprise-scale/index.md). This approach focuses on adoption teams who have a mid-term objective (within 24 months) to host more than 1,000 assets (infrastructure, apps, or data) in the cloud. The CAF enterprise-scale landing zone is the typical choice for complex governance scenarios in large cloud adoption efforts.
