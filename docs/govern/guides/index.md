@@ -47,7 +47,7 @@ To begin a governance journey, choose between the two scenarios in the tables. T
 
 | Characteristic | Standard organization | Complex enterprise |
 |---|---|---|
-| Geography (country or geopolitical region) | The staff or customers reside largely in one geography | The staff or customers reside in multiple geographies or require sovereign clouds. |
+| Geography (country or geopolitical region) | The staff or customers reside largely in one geography. | The staff or customers reside in multiple geographies or require sovereign clouds. |
 | Business units affected | Business units that share a common IT infrastructure | Multiple business units that do not share a common IT infrastructure. |
 | IT budget | Single IT budget | Budget allocated across business units and currencies. |
 | IT investments | Capital expense-driven investments are planned yearly and usually cover only basic maintenance. | Capital expense-driven investments are planned yearly and often include maintenance and a refresh cycle of three to five years. |
