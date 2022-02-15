@@ -19,11 +19,7 @@ The guides in this section illustrate the Cloud Adoption Framework (CAF) model's
 Choose a governance guide below to begin your cloud adoption journey. Each guide outlines a set of best practices based on a set of fictional customer experiences.
 
 > [!NOTE]
-<<<<<<< HEAD
 > If you are unsure which guide you should follow, continue on to the next section of this article. It compares the differences between the two guides, and its examples will help you determine which guide fits your scenario.  
-=======
-> If you are new to the CAF model's incremental approach, review this article before you choose a governance guide. This article compares the differences between the two guides, and its examples will help you determine which guide fits your scenario.  
->>>>>>> c674d33fd788c81a60db3eff12da1f00662dd79c
 
 - [Standard governance guide](./standard/index.md): A guide based on the recommended two-subscription model, designed for deployments in multiple regions but not spanning public and sovereign/government clouds. The standard governance guide is appropriate for most organizations.
 
