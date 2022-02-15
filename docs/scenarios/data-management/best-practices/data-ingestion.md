@@ -81,20 +81,6 @@ Event Hubs and IoT Hub are scalable event processing services that can ingest an
 
 The last Event Hubs or Apache Kafka landing zone inside the use case's specific landing zone should send its aggregated data to the data lake's raw layer in one of the data landing zones and to Event Hubs related to the data integration resource group in the data landing zone.
 
-## Enforce data quality
-
-As data is ingested, data quality checks should be implemented near the sources and before downstream subscribers use the datasets. If there's batch ingestion from the data lake, these checks should be done when moving data from raw to enriched.
-
-![Diagram of how to implement data quality during ingestion.](../images/adls-dq.png)
-
-- Before data is moved to enriched layer, its schema and columns are checked against the metadata registered in the data catalog.
-
-- If the data contains errors, the load will be aborted, and integration ops should be notified of the failure.
-
-- If the schema and column checks pass, the data is loaded into the enriched layers with conformed data types.
-
-- Before you move into the enriched layer, a data quality process checks for duplicate data, unknown values, and data type compliance. Integration operations can configure more checks and receive notifications about violations.
-
 ## Monitor ingestion
 
 Out-of-the-box [Azure Data Factory pipeline monitoring](/azure/data-factory/monitor-visually) can be used to monitor and troubleshoot the exceptions from the Data Factory pipelines. It reduces the effort of developing a custom monitoring and reporting solution.
