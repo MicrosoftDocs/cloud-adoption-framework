@@ -177,8 +177,10 @@ items:
         items:
         - name: Data lake overview
           href: ./best-practices/data-lake-overview.md
+        - name: What is Delta Lake?
+          href: ./best-practices/data-lake-delta-lake.md
         - name: Data lake zones
-          href: ./best-practices/data-lake-services.md
+          href: ./best-practices/data-lake-zones.md
         - name: Data lake key considerations
           href: ./best-practices/data-lake-key-considerations.md
         - name: Managing data lake access

@@ -41,7 +41,7 @@ This pattern enables any compute product that supports Azure AD Pass-through Aut
 
 The pattern described above also applies to data products in the curated data lake zone.
 
-For recommendations on the layout of your data lake please review [Provision three Azure Data Lake Storage Gen2 accounts for each data landing zone](best-practices/data-lake-services.md).
+For recommendations on the layout of your data lake please review [Provision three Azure Data Lake Storage Gen2 accounts for each data landing zone](best-practices/data-lake-zones.md).
 
 > [!NOTE]
 > Examples of compute products are Azure Databricks, Azure Synapse Analytics, Apache Spark, and Azure Synapse SQL on-demand pools enabled with Azure AD Pass-through Authentication.

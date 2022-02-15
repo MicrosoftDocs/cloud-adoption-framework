@@ -60,4 +60,4 @@ For more information about access control mechanisms, see [Access control and da
 
 ## Next steps
 
-[Provision three Azure Data Lake Storage Gen2 accounts for each data landing zone](./data-lake-services.md)
+[Provision three Azure Data Lake Storage Gen2 accounts for each data landing zone](./data-lake-zones.md)
