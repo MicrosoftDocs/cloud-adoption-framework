@@ -3,7 +3,7 @@ title: Data privacy for data management and analytics in Azure
 description: Learn about data privacy for the data management and analytics scenario in Azure.
 author: abdale
 ms.author: hamoodaleem
-ms.date: 11/25/2021
+ms.date: 02/14/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -41,24 +41,26 @@ This pattern enables any compute product that supports Azure AD Pass-through Aut
 
 The pattern described above also applies to data products in the curated data lake zone.
 
+For recommendations on the layout of your data lake please review [Provision three Azure Data Lake Storage Gen2 accounts for each data landing zone](best-practices/data-lake-services.md).
+
 > [!NOTE]
 > Examples of compute products are Azure Databricks, Azure Synapse Analytics, Apache Spark, and Azure Synapse SQL on-demand pools enabled with Azure AD Pass-through Authentication.
 
 ## Sensitive data (personal data)
 
-For **sensitive (personal data)**, the enterprise needs to restrict what users can see via policy or compute. In this case, the organization needs to consider moving or injecting the access control into the compute layer. There are three options to approach securing data within the data management and analytics scenario.
+For **sensitive (personal data)**, the enterprise needs to restrict what users can see via policy or compute. In this case, the organization needs to consider moving or injecting the access control into the compute layer. There are four options to approach securing data within the data management and analytics scenario.
 
 ### Example scenario
 
 The following example describes options for securing **sensitive (personal data)**:
 
-A data integration ingests a human resources (HR) personnel data asset for North America and Europe. The use case calls for European users to see only European personnel records and North American users to see only North American personnel records. It's further restricted so that only HR managers see columns containing salary data.
+A data application ingests a human resources (HR) personnel data product for North America and Europe. The use case calls for European users to see only European personnel records and North American users to see only North American personnel records. It's further restricted so that only HR managers see columns containing salary data.
 
 #### Option 1: Azure SQL Database, SQL Managed Instance, or Azure Synapse Analytics SQL pools
 
-A data integration uses SQL Database, SQL Managed Instance, or Azure Synapse Analytics SQL pools to load the data asset into a database that supports row-level security, column-level security, and dynamic data masking. Integration ops create different Azure AD groups and assign permissions that support the data's sensitivity.
+A data application uses SQL Database, SQL Managed Instance, or Azure Synapse Analytics SQL pools to load the data asset into a database that supports row-level security, column-level security, and dynamic data masking. The data application ops create different Azure AD groups and assign permissions that support the data's sensitivity.
 
-For this scenario's use case, integration ops would need to create the following four Azure AD groups with read-only access:
+For this scenario's use case, data application ops would need to create the following four Azure AD groups with read-only access:
 
 | Group | Permission|
 |--|--|
@@ -71,7 +73,7 @@ The first level of restrictions would support [dynamic data masking](/azure/azur
 
 The second level is to add [column-level security](/azure/synapse-analytics/sql-data-warehouse/column-level-security) to restrict non-HR managers from seeing salaries and [row-level security](/sql/relational-databases/security/row-level-security) to restrict which rows European and North American team members can see.
 
-In addition to transparent data encryption,  security layer would be to [encrypt the column of data](/sql/relational-databases/security/encryption/encrypt-a-column-of-data) and decrypt upon read.
+In addition to transparent data encryption, security layer would be to [encrypt the column of data](/sql/relational-databases/security/encryption/encrypt-a-column-of-data) and decrypt upon read.
 
 The tables can be made available to Azure Databricks with [Apache Spark connector: SQL Server and Azure SQL Database](/sql/connect/spark/connector).
 
@@ -135,7 +137,11 @@ As new datasets are deployed, part of the DevOps process would need to run scrip
 > [!NOTE]
 > Azure Databricks table access control can't be combined Azure AD Pass-through Authentication. Therefore, you could use only one Azure Databricks workspace and use table access control instead.
 
-#### Option 3: Policy engine
+#### Option 3: Apache Spark for Azure Synapse
+
+Need to add Synapse Tokenization
+
+#### Option 4: Policy engine
 
 The first two options provide a way to handle **sensitive (personal data)**, and they also grant control to integrations ops and data product teams to identify and restrict access. It might be enough for a small-scale analytics platform, but a policy engine should be placed in the data management landing zone for a large enterprise with hundreds of datasets. Policy engines support a central way of managing, securing, and controlling:
 

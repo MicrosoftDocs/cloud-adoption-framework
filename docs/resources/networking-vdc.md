@@ -1,10 +1,10 @@
 ---
 title: 'The virtual datacenter: A network perspective'
-description: Use the Cloud Adoption Framework for Azure to learn how to use Azure to seamlessly extend your infrastructure into the cloud and build multitier architectures.
+description: Use the Cloud Adoption Framework for Azure to learn how to seamlessly extend your infrastructure into the cloud and build multitier architectures.
 author: tracsman
 ms.author: brblanch
 manager: rossort
-ms.date: 02/25/2020
+ms.date: 02/04/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: general
@@ -13,30 +13,30 @@ ms.custom: think-tank, virtual-network
 
 # The virtual datacenter: A network perspective
 
-Applications migrated from on-premises will benefit from Azure's secure cost-efficient infrastructure, even with minimal application changes. Even so, enterprises should adapt their architectures to improve agility and take advantage of Azure's capabilities.
+Applications migrated from on-premises might benefit from Azure's secure cost-efficient infrastructure, even with minimal application changes. Enterprises might want to adapt their architectures to improve agility and take advantage of Azure's capabilities.
 
-Microsoft Azure delivers hyperscale services and infrastructure with enterprise-grade capabilities and reliability. These services and infrastructure offer many choices in hybrid connectivity, so customers can choose to access them over the internet or a private network connection. Microsoft partners can also provide enhanced capabilities by offering security services and virtual appliances that are optimized to run in Azure.
+Microsoft Azure delivers hyperscale services and infrastructure with enterprise-grade capabilities and reliability. These services and infrastructure offer many choices in hybrid connectivity, which allows customers to access them over the internet or a private network connection. Microsoft partners can also provide enhanced capabilities by offering security services and virtual appliances that are optimized to run in Azure.
 
 Customers can use Azure to seamlessly extend their infrastructure into the cloud and build multitier architectures.
 
 ## What is a virtual datacenter?
 
-The cloud began as a platform for hosting public-facing applications. Enterprises recognized the value of the cloud and began migrating internal line-of-business applications. These applications brought additional security, reliability, performance, and cost considerations that required additional flexibility when delivering cloud services. New infrastructure and networking services were designed to provide this flexibility, and new features provided for elastic scale, disaster recovery, and other considerations.
+The cloud began as a platform for hosting public-facing applications. Enterprises recognized the value of the cloud and began migrating internal line-of-business applications. These applications brought additional security, reliability, performance, and cost considerations that required additional flexibility when delivering cloud services. New infrastructure and networking services were designed to provide flexibility. New features provide elastic scale, disaster recovery, and other considerations.
 
-Cloud solutions were initially designed to host single, relatively isolated applications in the public spectrum. This approach worked well for a few years. As the benefits of cloud solutions became clear, multiple large-scale workloads were hosted on the cloud. Addressing security, reliability, performance, and cost concerns of deployments in one or more regions became vital throughout the lifecycle of the cloud service.
+Cloud solutions were initially designed to host single, relatively isolated applications in the public spectrum, which worked well for a few years. As the benefits of cloud solutions became clear, multiple large-scale workloads were hosted on the cloud. Addressing security, reliability, performance, and cost concerns is vital for the deployment and lifecycle of your cloud service.
 
 In the example cloud deployment diagram below, the red box highlights a security gap. The yellow box shows an opportunity to optimize network virtual appliances across workloads.
 
-![0][0]
+![Diagram that shows a cloud deployment and networking virtual datacenter.](../_images/vdc/networking-vdc-redundant.png)
 
-Virtual datacenters help achieve the scale required for enterprise workloads. This scale must address the challenges introduced when running large-scale applications in the public cloud.
+Virtual datacenters help achieve the scale required for enterprise workloads. The scale must address the challenges introduced when running large-scale applications in the public cloud.
 
-A virtual datacenter (VDC) implementation includes more than the application workloads in the cloud. It also provides the network, security, management, and other infrastructure such as DNS and Active Directory services. As enterprises migrate additional workloads to Azure, consider the infrastructure and objects that support these workloads. Carefully structuring your resources helps avoid proliferation of hundreds of separately managed "workload islands" with independent data flows, security models, and compliance challenges.
+A virtual datacenter implementation includes more than the application workloads in the cloud. It also provides network, security, management, DNS, and Active Directory services. As enterprises migrate more workloads to Azure, consider the infrastructure and objects that support these workloads. Good resource management helps avoid the increase of separately managed "workload islands" with independent data flows, security models, and compliance challenges.
 
-The virtual datacenter concept provides recommendations and high-level designs for implementing a collection of separate but related entities. These entities often have common supporting functions, features, and infrastructure. Viewing your workloads as a virtual datacenter helps realize reduced cost from economies of scale, optimized security via component and data flow centralization, and easier operations, management, and compliance audits.
+The virtual datacenter concept provides recommendations and high-level designs for implementing a collection of separate but related entities. These entities often have common supporting functions, features, and infrastructure. Viewing your workloads as a virtual datacenter helps realize reduced cost from economies of scale, It also helps with optimized security via component and data flow centralization, and easier operations, management, and compliance audits.
 
 > [!NOTE]
-> A virtual datacenter is **not** a specific Azure service. Rather, various Azure features and capabilities are combined to meet your requirements. A virtual datacenter is a way of thinking about your workloads and Azure usage to optimize your resources and capabilities in the cloud. It provides a modular approach to providing IT services in Azure while respecting the enterprise's organizational roles and responsibilities.
+> A virtual datacenter isn'ft a specific Azure service. Rather, various Azure features and capabilities are combined to meet your requirements. A virtual datacenter is a way of thinking about your workloads and Azure usage to optimize your resources and capabilities in the cloud. It provides a modular approach to providing IT services in Azure, while respecting the enterprise's organizational roles and responsibilities.
 
 A virtual datacenter helps enterprises deploy workloads and applications in Azure for the following scenarios:
 
