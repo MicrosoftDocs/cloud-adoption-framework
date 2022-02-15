@@ -19,7 +19,11 @@ The guides in this section illustrate the Cloud Adoption Framework (CAF) model's
 Choose a governance guide below to begin your cloud adoption journey. Each guide outlines a set of best practices based on a set of fictional customer experiences.
 
 > [!NOTE]
+<<<<<<< HEAD
 > If you are unsure which guide you should follow, continue on to the next section of this article. It compares the differences between the two guides, and its examples will help you determine which guide fits your scenario.  
+=======
+> If you are new to the CAF model's incremental approach, review this article before you choose a governance guide. This article compares the differences between the two guides, and its examples will help you determine which guide fits your scenario.  
+>>>>>>> c674d33fd788c81a60db3eff12da1f00662dd79c
 
 - [Standard governance guide](./standard/index.md): A guide based on the recommended two-subscription model, designed for deployments in multiple regions but not spanning public and sovereign/government clouds. The standard governance guide is appropriate for most organizations.
 
@@ -37,20 +41,20 @@ Choose a governance guide below to begin your cloud adoption journey. Each guide
 
 The cloud governance guides demonstrate how to implement a governance MVP. From there, each guide shows how the cloud governance team can partner with the cloud adoption teams to accelerate adoption efforts. The CAF governance model guides the application of governance from foundation through subsequent improvements and evolutions.
 
-To begin a governance journey, choose between the two scenarios in the tables below. These tables outline the differences between the standard organization scenario and the complex enterprise scenario. The option titles indicate the complexity of the enterprise. The option descriptions are based on synthesized customer experiences.
+To begin a governance journey, choose between the two scenarios in the tables. These tables outline the differences between the standard organization scenario and the complex enterprise scenario. The option titles indicate the complexity of the enterprise. The option descriptions are based on synthesized customer experiences.
 
 > [!WARNING]
-> If your decision is more complex, a more robust governance starting point may be required. In such cases, consider the [CAF enterprise-scale landing zone](../../ready/enterprise-scale/index.md). This approach focuses on adoption teams who have a mid-term objective (within 24 months) to host more than 1,000 assets (infrastructure, apps, or data) in the cloud. The CAF enterprise-scale landing zone is the typical choice for complex governance scenarios in large cloud adoption efforts.
+> If your decision is more complex, a more robust governance starting point might be required. In such cases, consider the [CAF enterprise-scale landing zone](../../ready/enterprise-scale/index.md). This approach focuses on adoption teams who have a mid-term objective (within 24 months) to host more than 1,000 assets (infrastructure, apps, or data) in the cloud. The CAF enterprise-scale landing zone is the typical choice for complex governance scenarios in large cloud adoption efforts.
 <!-- -->
 > [!NOTE]
-> It's unlikely that either guide will align entirely with your situation. Choose whichever guide is closest and use it as a starting point. Throughout the guide, additional information is provided to help you customize decisions to meet specific criteria.
+> It's unlikely that either guide will align entirely with your situation. Choose whichever guide is closest and use it as a starting point. Throughout the guide, you'll find additional information to help you customize decisions to meet specific criteria.
 
 ### Business characteristics
 
 | Characteristic | Standard organization | Complex enterprise |
 |---|---|---|
-| Geography (country or geopolitical region) | The staff or customers reside largely in one geography | The staff or customers reside in multiple geographies or require sovereign clouds. |
-| Business units affected | Business units that share a common IT infrastructure | Multiple business units that do not share a common IT infrastructure. |
+| Geography (country or geopolitical region) | The staff or customers reside largely in one geography. | The staff or customers reside in multiple geographies or require sovereign clouds. |
+| Business units affected | Business units that share a common IT infrastructure | Multiple business units that don't share a common IT infrastructure. |
 | IT budget | Single IT budget | Budget allocated across business units and currencies. |
 | IT investments | Capital expense-driven investments are planned yearly and usually cover only basic maintenance. | Capital expense-driven investments are planned yearly and often include maintenance and a refresh cycle of three to five years. |
 
