@@ -14,8 +14,6 @@ ms.custom: e2e-data-management, think-tank
 
 Data Quality is a management function of the data management and analytics scenario. It resides in the data management landing zone and is a core part of governance.
 
-Addressing data quality when you are in trouble can have serious consequences for a business as people can interpret it in different ways. This misinterpretation can prove costly to the business as decisions are based up on the data products. Going back and fixing data quality can be an expensive task with missing attributes as it would require full loads of the missing data from # of periods.
-
 ## Data quality considerations
 
 Data quality is the responsibility of every individual who creates and consumes data products. Those creating should adhere to the global and domain rules. Those consuming should report data inconsistencies to the owning data domain via a feedback loop.
@@ -81,4 +79,4 @@ To implement data quality you need to both human and computational power:
 
 ## Data quality solutions
 
-As of February 2022, Microsoft depends on partners, open-source solutions and custom solutions to a provide data quality solution. You are recommended to assess partners such as Informatica, Talend, CloudIn and Ataccama One. For open-source, business have implemented Great-Expectations into there data pipelines.
+As of February 2022, Microsoft depends on partners, open-source solutions and custom solutions to a provide data quality solution. You are recommended to assess partners such as Informatica, Talend, CludeIn and Ataccama One. For open-source, business have implemented Great-Expectations into there data pipelines.
