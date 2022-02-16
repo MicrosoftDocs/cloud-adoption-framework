@@ -66,7 +66,7 @@ To implement data quality you need to both human and computational power:
 - Domain experts who can step in when there's a requirement to train an algorithm due to a high number of errors passing through the compute layer.
 - Validate early. Traditional solutions have extracted, transformed and loaded data before any data quality has been applied. By this time the data product is already being consumed and errors being surfaced to downstream data products. Instead, as data is ingested from source, data quality checks should be implemented near the sources and before downstream consumers use the data products. If there's batch ingestion from the data lake, these checks should be done when moving data from raw to enriched.
 
-:::image type="content" source="/images/adls-dq.png" alt-text="Diagram of how to implement data quality during ingestion.":::
+:::image type="content" source="images/adls-dq.png" alt-text="Diagram of how to implement data quality during ingestion.":::
 
 - Before data is moved to enriched layer, its schema and columns are checked against the metadata registered in the data catalog.
 
