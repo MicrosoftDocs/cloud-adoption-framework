@@ -45,9 +45,9 @@ The end result of this architecture is a company-wide graph which provides a uni
 
 ## Data marketplace
 
-There is a growing trend in the industry to bring data closer to data analysts and scientists by using portals and data marketplaces that utilize the underlying metadata intensively. A data marketplace is an intuitive, secure, centralized, and standardized data shopping experience for all your data consumers. It is also meant to keep track over all your data products, which are typically stored across a range of data domains.
+Metadata has a strong relationship with data marketplaces. A data marketplace is an intuitive, secure, centralized, and standardized data shopping experience for all your data consumers. It is an approach to bring data closer to data analysts and scientists by utilizing the underlying metadata intensively. It is also meant to keep track over all your data products, which are typically stored across a range of data domains.
 
-To democratize data via your data mesh architecture, you need to focus on four important areas:
+To democratize data via your data mesh architecture, you need to focus on several important areas:
 
 - A *Data Product Experience Plane* allows data providers and data consumers to work together on what data can be made available. The interfaces should provide extensive search capabilities, allowing users to search on keywords, business terms, and natural languages. The collaboration side of data democratization is often linked to data catalogs, or fully managed metadata management services for easily searching and discovering metadata. A proven approach for a self-service collaboration portal is [Azure Purview](/azure/purview). It supports [data discovery](/azure/purview/how-to-browse-catalog), including glossaries and [classifications](/azure/purview/classification-insights), which enables your data consumers to easily find data. It also supports [data owner access policies](/azure/purview/how-to-data-owner-policy-authoring-generic) for providing data access in a self-service manner.
 
