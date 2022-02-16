@@ -169,7 +169,7 @@ This list provides recommended abbreviations for various Azure resource types to
    | `Dev Test Lab Formula`| `Microsoft.DevTestLab/labs/formulas` | `form` |
    | `Dev Test Lab Virtual Machine (Windows)`| `Microsoft.DevTestLab/labs/virtualmachines` | `vm` |
    | `Document DB Account`| `Microsoft.DocumentDB/databaseAccounts` | `dbact` |
-   | `Document DB SQL Database`| `Microsoft."DocumentDB/databaseAccounts/sqlDatabases	"` | `cosdb` |
+   | `Document DB SQL Database`| `Microsoft.DocumentDB/databaseAccounts/sqlDatabases` | `cosdb` |
    | `Event Grid Domain`| `Microsoft.EventGrid/domains` | `evgd` |
    | `Event Grid Domain Topic`| `Microsoft.EventGrid/domains/topics` | `egdt` |
    | `Event Grid Event Subscription`| `Microsoft.EventGrid/eventSubscriptions` | `egesu` |
@@ -243,7 +243,7 @@ This list provides recommended abbreviations for various Azure resource types to
    | `Local Network Gateway`| `Microsoft.Network/localNetworkGateways` | `lngw` |
    | `Network Interface`| `Microsoft.Network/networkInterfaces` | `nic` |
    | `Network Security Group`| `Microsoft.Network/networkSecurityGroups` | `nsg` |
-   | `Network Watcher`| `Microsoft.Network/networkWatchers` | `nw` |
+   | `Network Watcher`| `Microsoft.Network/networkWatchers` | `nwtch` |
    | `Private DNS Zone Virtual Network Link`| `Microsoft.Network/privateDnsZones/virtualNetworkLinks` | `pdnsv` |
    | `Private Link Service`| `Microsoft.Network/privateLinkServices` | `pls` |
    | `Public IP Address`| `Microsoft.Network/publicIPAddresses` | `pip` |
@@ -302,10 +302,9 @@ This list provides recommended abbreviations for various Azure resource types to
    | `SQL Elastic Pool`| `Microsoft.Sql/servers/elasticPools` | `sqlep` |
    | `SQL Failover Group`| `Microsoft.Sql/servers/failoverGroups` | `sqlfg` |
    | `SQL Firewall Rule`| `Microsoft.Sql/servers/firewallRules` | `sqlfw` |
-   | `Storage Account`| `Microsoft.Storage/storageAccounts` | `sa` |
-   | `Storage Account (Virtual Machine Disks)`| `Microsoft.Storage/storageAccounts` | `savm` |
-   | `Storage Sync Service`| `Microsoft.StorageSync/storageSyncServices` | `ssss` |
-   | `Storage Sync Group`| `Microsoft.StorageSync/storageSyncServices/syncGroups` | `sgrp` |
+   | `Storage Account`| `Microsoft.Storage/storageAccounts` | `stg` |
+   | `Storage Sync Service`| `Microsoft.StorageSync/storageSyncServices` | `stgsyncsvc` |
+   | `Storage Sync Group`| `Microsoft.StorageSync/storageSyncServices/syncGroups` | `stgsyncgrp` |
    | `Stor Simple Manager`| `Microsoft.StorSimple/managers` | `ssm` |
    | `Stream Analytics Cluster`| `Microsoft.StreamAnalytics/cluster` | `sac` |
    | `Stream Analytics Job`| `Microsoft.StreamAnalytics/streamingjobs` | `sasj` |
@@ -328,7 +327,7 @@ This list provides recommended abbreviations for various Azure resource types to
    | `Web Site (Function App)`| `Microsoft.Web/sites` | `func` |
    | `Web Site (Static Web App)`| `Microsoft.Web/sites` | `wsite` |
    | `Web Site (Web App)`| `Microsoft.Web/sites` | `wapp` |
-
+   
 ## Next steps
 
 Review recommendations for tagging your Azure resources and assets.
