@@ -65,7 +65,7 @@ The data landing zone group consists of three teams:
 
 Depending on your organization's size and structure, a data landing zone group can be assembled in different ways. For example, if you create one data landing zone where the business already has its own set of data engineers, program managers, and solution architects, like a business data office. You can provision a data landing zone and allow the business data office to operate the landing zone based on governance from your central platform group.
 
-Another option is for when a data landing zone's business doesn't have a business data office to build out their data integrations or data products. In this scenario, the central data office can consider itself a consultancy that shifts people from the bench to work on the data landing zone. Those resources should be embedded into the business to collect and execute on use cases with Scrum or agile methods. Once completed, they would return to the central data office.
+Another option is for when a data landing zone's business doesn't have a business data office to build out their data applications (which create data products). In this scenario, the central data office can consider itself a consultancy that shifts people from the bench to work on the data landing zone. Those resources should be embedded into the business to collect and execute on use cases with Scrum or agile methods. Once completed, they would return to the central data office.
 
 Individuals should work within multidisciplinary teams in both of these scenarios, sharing goals and diverse experience, skills, and approaches that support more effective outcomes than if everyone is in a silo.
 

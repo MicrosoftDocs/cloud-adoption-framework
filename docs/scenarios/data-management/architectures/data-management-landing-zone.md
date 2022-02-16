@@ -85,7 +85,7 @@ In data management and analytics scenario data, integrations become responsible 
 
 Data quality should happen as close to the source as possible to avoid quality issues replicating across the analytics and AI estate. Moving quality metrics and validation to the data integration aligns the quality process with the teams that are closest to the data. These teams have the deepest understanding of the data asset. Data lineage also provides data quality confidence and should be provided for all datasets and products.
 
-See how data quality can be implemented in [Enforcing data quality](../best-practices/data-ingestion.md#enforce-data-quality).
+See how data quality can be implemented in [Data quality](../govern-data-quality.md)
 
 ## Data modeling repository
 

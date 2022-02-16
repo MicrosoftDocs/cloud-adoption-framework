@@ -131,7 +131,7 @@ Managing access to data should be done using Azure AD groups. Add user principle
 
 For datasets in Azure data lakes, consider using access control lists (ACLs). For more information, see [Access control model in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-access-control-model). Using Azure AD passthrough with access control lists is supported by most native Azure services, including Azure Machine Learning, Azure Synapse SQL Serverless, Apache Spark for Azure Synapse and Azure Databricks.
 
-Other polyglot storage is likely to be used in data management and analytics scenario. Examples include Azure Database for PostgreSQL, Azure Database for MySQL, Azure SQL Database, SQL Managed Instance, and Azure Synapse SQL Dedicated Pools. They could be used by data integrations to store read data stores or by data product teams.
+Other polyglot storage is likely to be used in data management and analytics scenario. Examples include Azure Database for PostgreSQL, Azure Database for MySQL, Azure SQL Database, SQL Managed Instance, and Azure Synapse SQL Dedicated Pools. They could be used by data application teams to store data products.
 
 - [Use Azure Active Directory for authentication with Azure Database for PostgreSQL](/azure/postgresql/howto-configure-sign-in-aad-authentication)
 - [Use Azure Active Directory authentication](/azure/azure-sql/database/authentication-aad-overview) with Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics
@@ -141,7 +141,7 @@ We recommend that you use Azure AD groups to secure database objects instead of 
 
 This approach also gives a single management location and allows reviewing access rights inside the Azure Graph.
 
-For more details on how to drive security for data management landing zones and data landing zones managing your data estate, see [Provision security for data management and analytics in Azure](./security-provisioning.md).
+For more information on how to drive security for data management landing zones and data landing zones managing your data estate, see [Provision security for data management and analytics in Azure](./security-provisioning.md).
 
 ## Next steps
 

@@ -26,21 +26,17 @@ It's important to govern your master data maintenance. The challenge is identify
 
 Microsoft has partner with Profisee and CluedIn to provide native integrations into Azure Purview. It is recommended to assess these products for your master data requirements.
 
-[Data governance with Profisee and Azure Purview](/azure/architecture/reference-architectures/data/profisee-master-data-management-purview)
-[Migrate master data services to Azure with CluedIn and Azure Purview](/azure/architecture/reference-architectures/data/migrate-master-data-services-with-cluedin)
+- [Data governance with Profisee and Azure Purview](/azure/architecture/reference-architectures/data/profisee-master-data-management-purview)
+- [Migrate master data services to Azure with CluedIn and Azure Purview](/azure/architecture/reference-architectures/data/migrate-master-data-services-with-cluedin)
 
 ## Alternatives solutions
 
-Absent a purpose-built MDMapplication, some of the technical capabilities needed to build a MDM solution may be found within the Azure ecosystem.
+Absent a purpose-built MDMapplication, some of the technical capabilities needed to build an MDM solution may be found within the Azure ecosystem.
 
 - Data quality - When loading to an analytics platform, data quality can be built into integration processes. For example, applying data quality transformations in an [Azure Data Factory](https://azure.microsoft.com/services/data-factory/) pipeline can be accomplished with hardcoded scripts.
 - Data standardization and enrichment - [Azure Maps](https://azure.microsoft.com/services/azure-maps/) is available to provide data verification and standardization for address data. These can be used in Azure Functions and/or Azure Data Factory.  Standardization of other data may require development of hardcoded scripts.
 - Duplicate data management - Azure Data Factory can be used to [deduplicate rows](/azure/data-factory/how-to-data-flow-dedupe-nulls-snippets) where sufficient identifiers are available for an exact match.  In this case, the logic to merge matched with appropriate survivorship would likely require custom hardcoded scripts.
 - Data stewardship - [Power Apps](https://powerapps.microsoft.com/) can be used to quickly develop simple data stewardship solutions to manage data in Azure, along with appropriate user interfaces for review, workflow, alerts, and validations.
-
-## Govern consent management using master data
-
-MDM provides the ideal place for customer consent management. Collect consents from all applications that request it. Then match them with customer master data, and store all consents in extra tables along with the master data record in the MDM system.
 
 ## Next steps
 

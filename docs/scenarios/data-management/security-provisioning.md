@@ -19,7 +19,7 @@ Organizations can use [authentication](./secure-authentication.md) and [authoriz
 
 ## Automate security
 
-In other sections, we've focused on how to ingest different data types and how to onboard data integrations and data products. The focus has been predominantly on using automation as much as possible.
+In other sections, we've focused on how to ingest different data types and how to onboard data applications (which create data products). The focus has been predominantly on using automation as much as possible.
 
 The story for self-service access to data relies upon automation, which starts when a new dataset is registered. Even if your organization doesn't yet have an automated ingestion framework, we still recommend that you create a custom application, IT service management process, or an application built with Microsoft Power Apps to allow integration ops and data product teams to register datasets.
 

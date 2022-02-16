@@ -3,7 +3,7 @@ title: Requirements for governing data
 description: Learn about requirements for governing data
 author: mboswell
 ms.author: mboswell
-ms.date: 02/14/2022
+ms.date: 02/16/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -12,7 +12,7 @@ ms.custom: e2e-data-management, think-tank
 
 # Requirements for governing data
 
-The data management and analytics scenario recommends you consider the following requirements for governing data::
+The data management and analytics scenario recommends you consider the following requirements for governing data:
 
 - Data item and data entity definition to create a common business vocabulary in a business glossary.
 - Data item and data entity identification and discovery.
