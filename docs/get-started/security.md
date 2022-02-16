@@ -149,7 +149,7 @@ Security planning and cloud adoption planning should not be done in isolation. I
 
     Microsoft provides reference architectures and technology capabilities to help you as you build your architecture and roadmap, including:
 
-    - [Azure components and reference model](/security/compass/microsoft-security-compass-introduction#azure-components-and-reference-model-2151) to accelerate planning and design of Azure security roles.
+    - Learn about the [Azure components and reference model](/security/compass/microsoft-security-compass-introduction#azure-components-and-reference-model-2151) to accelerate planning and design of Azure security roles.
 
       ![Azure administration model](../_images/security/azure-administration-model.png)
 

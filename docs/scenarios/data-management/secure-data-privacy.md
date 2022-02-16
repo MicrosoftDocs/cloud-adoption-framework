@@ -18,11 +18,11 @@ The data management and analytics scenario frees organizations to determine the 
 
 | Confidential | Description |
 |------------|---------------|
-|Public   |Anyone can access and it can be sent to anyone, for example, open government data|
+|Public | Anyone can access and it can be sent to anyone, for example, open government data |
 |Internal use only | Employees only can access but cannot be sent outside the company |
-|Confidential  |  Should be shared only if needed for a specific task and cannot be sent outside the company without a non-disclosure agreement|
-|Sensitive (personal data) |Personal data that must be masked and shared only on a need to know basis for a limited time can't be sent to unauthorized personnel or outside the company |
-|Restricted  |  Only to be shared with named individuals who are accountable for its protection, for example, legal documents, trade secrets |
+|Confidential | Should be shared only if needed for a specific task and cannot be sent outside the company without a non-disclosure agreement |
+|Sensitive (personal data) | Personal data that must be masked and shared only on a need to know basis for a limited time can't be sent to unauthorized personnel or outside the company |
+|Restricted | Only to be shared with named individuals who are accountable for its protection, for example, legal documents, trade secrets |
 
 Before ingesting data, you must categorize the data as **confidential or below** or **sensitive (personal data)**:
 

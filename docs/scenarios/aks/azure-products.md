@@ -3,7 +3,7 @@ title: Azure products supporting the modern application platforms scenario
 description: A number of Azure products can support the modern application platform scenario depending on specific application and operations needs.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 05/01/2021
+ms.date: 08/09/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -29,7 +29,7 @@ The following table maps the questions above to a few Azure products to consider
 | Azure Stack HCI | Cloud runtime | Customizable | Fixed (private cloud only) | Shared host |
 | Azure Stack HCI for AKS | Customizable | Customizable | Fixed (private cloud only) | Shared host |
 | Azure Kubernetes Service (AKS) | Customizable | Customizable | Fixed (public cloud only) | Supports dedicated or shared hosts |
-| Azure Arc for Kubernetes | Not applicable | Cloud operations | Supports public and private cloud | Not applicable |
+| Azure Arc-enabled Kubernetes | Not applicable | Cloud operations | Supports public and private cloud | Not applicable |
 | Azure App Service on Kubernetes with Azure Arc | Cloud runtime | Customizable and cloud operations | Supports public and private cloud | Supports dedicated or shared hosts |
 
 ## Azure products alignment to various roles
@@ -75,7 +75,7 @@ Azure Kubernetes Service (AKS) provides a customizable runtime option based on K
   - AKS is designed to support dedicated containers per workload.
     - AKS can also be used to consolidate workloads, allowing central operations to extend support to container hosts.
 
-### Azure Arc for Kubernetes
+### Azure Arc-enabled Kubernetes
 
 Azure Arc extends operations of Kubernetes clusters allowing for consistent cloud operations across public cloud, private cloud, and edge deployments of Kubernetes clusters.
 
