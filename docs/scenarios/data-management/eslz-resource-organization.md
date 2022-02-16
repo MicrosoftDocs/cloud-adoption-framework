@@ -3,7 +3,7 @@ title: Resource organization for enterprise-scale data management and analytics
 description: Learn how this enterprise-scale scenario can improve management group and subscription organization for data management and analytics in Azure.
 author: mboswell
 ms.author: mboswell
-ms.date: 12/15/2021
+ms.date: 02/16/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario

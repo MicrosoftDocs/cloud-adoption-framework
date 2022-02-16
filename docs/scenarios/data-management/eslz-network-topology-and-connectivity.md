@@ -59,7 +59,7 @@ The data management and analytics scenario uses [Private Link](/azure/private-li
 
 For the current list of supported products, see [Private Link resources](/azure/private-link/private-endpoint-overview#private-link-resource).
 
-If you are planning on implementing cross tenant private endpoints it is recommend that you review [Limit cross-tenant private endpoint connections in Azure](../../ready/azure-best-practices/limit-cross-tenant-private-endpoint-connections.md).
+If you are planning on implementing cross tenant private endpoints, it's recommend that you review [Limit cross-tenant private endpoint connections in Azure](../../ready/azure-best-practices/limit-cross-tenant-private-endpoint-connections.md).
 
 > [!CAUTION]
 > By design, data management and analytics scenario networking uses private endpoints where available to connect to PaaS services.

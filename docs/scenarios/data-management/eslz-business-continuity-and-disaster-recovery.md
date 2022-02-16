@@ -50,7 +50,7 @@ If one of the data landing zones requires geo-redundancy, with Data Lake Storage
 > [!NOTE]
 > A storage account configured as RA-GRS or GRS can be part of a disaster recovery plan but requires due diligence analyzing RPO and RTO and reviewing other options such as a dual load scenario which copies data into two different Azure regions.
 
-Each data landing zone must have a recovery point objective for its data integrations and data products. Each data landing zone must have a defined replication strategy for its use cases.
+Each data landing zone must have a recovery point objective for its data products. Each data landing zone must have a defined replication strategy for its use cases.
 
 ### Azure Databricks
 

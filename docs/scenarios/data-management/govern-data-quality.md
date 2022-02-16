@@ -3,7 +3,7 @@ title: Data Quality
 description: Learn about data quality
 author: mboswell
 ms.author: mboswell
-ms.date: 02/15/2022
+ms.date: 02/16/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -77,6 +77,12 @@ To implement data quality you need to both human and computational power:
 > [!TIP]
 > Data Quality rules should be defined at both a global and domain level. This allows the business to define it's standards for all data products which are created and allows data domains to create additional rules related to there domain.
 
-## Data quality solutions
+[!INCLUDE [data-quality-solutions](includes/data-quality-solutions.md)]
 
-As of February 2022, Microsoft depends on partners, open-source solutions and custom solutions to a provide data quality solution. You are recommended to assess partners such as Informatica, Talend, CludeIn and Ataccama One. For open-source, business have implemented Great-Expectations into there data pipelines.
+## Data Quality Summary
+
+Fixing data quality, when you are in trouble. can have serious consequences for a business. It can lead to business units interpret data products in different ways. This misinterpretation can prove costly to the business bases decisions upon data products with lower data quality. Fixing data products, with missing attributes, can be an expensive task and could require full reloads of data from # of periods.
+
+Validate data quality early and put processes in to proactively address poor data quality. For example a data product can't be released to production until it achieves X amount of completeness.
+
+Tooling is a free choice but it should include expectations (rules), data metrics, profiling and the ability to secure the expectations so that you can implement global and domain based expectations.

@@ -3,7 +3,7 @@ title: Azure data management and analytics scenario overview
 description: Gain an overview of an end-to-end scenario for data management and analytics in the cloud, with a focus on Azure implementation.
 author: mboswell
 ms.author: mboswell
-ms.date: 02/09/2022
+ms.date: 02/16/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario

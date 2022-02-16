@@ -28,7 +28,7 @@ The following built-in roles are fundamental for all Azure resource types, inclu
 | **Contributor:**| This role can manage the resource but can't grant access to it. |
 | **Reader:**| This role can view the resource and information about it (except for sensitive information like access keys or secrets), but they can't make any changes to the resource.|
 
-Some services have specific RBAC roles like Storage Blob Data Contributor or Data Factory Contributor, which means that specific RBAC roles should be used for these services. RBAC is an additive model where adding role assignments is an active permission. RBAC also supports *deny* assignments which take precedence over *role* assignments.
+Some services have specific RBAC roles like Storage Blob Data Contributor or Data Factory Contributor, which means that specific RBAC roles should be used for these services. RBAC is an additive model where adding role assignments is an active permission. RBAC also supports *deny* assignments that take precedence over *role* assignments.
 
 ## RBAC general practices for the data management and analytics scenario in Azure
 

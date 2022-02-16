@@ -139,9 +139,9 @@ Upon certification, artifacts are collated and uploaded to a data product reposi
 
 Users can submit feedback with an IT service management solution or directly within the product as a ticket is routed to the data product owner. This individual triages the request and determines whether to escalate it to the data product team to fix or enter feedback into a product backlog and review during product planning cycles.
 
-## The data science products team
+## The data science applications team
 
-While the data science products team creates data products, it's distinct because their functions lead to data integrations, assets, or products. This results in published models becoming data products for others to use, and the pattern follows a Machine Learning ops model that's associated with the data landing zone.
+While the data science products team creates data products, it's distinct because their functions lead to data products. This results in published models becoming data products for others to use, and the pattern follows a Machine Learning ops model that's associated with the data landing zone.
 
 The data science products team starts by searching and finding relevant datasets for their use case. Data governance solutions can reveal more details like data quality, lineage, or a similar dataset or profile. They research if a sample dataset is available and if the data is relevant to the project. Once data access is granted via a data catalog or an Azure AD access package, the team uses the services in the data landing zone to explore and analyze the data.
 

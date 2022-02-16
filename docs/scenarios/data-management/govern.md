@@ -1,16 +1,16 @@
 ---
 title: Data summary and maturity model for Azure
 description: Understand the concept of data governance in the cloud and for Azure.
-author: BrianBlanchard
-ms.author: brblanch
-ms.date: 11/25/2021
+author: mboswell
+ms.author: mboswell
+ms.date: 02/16/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Data summary and maturity model for Azure
+# Data Governance Overview
 
 The key to successful data governance is to break down structured data into data entities and data subject areas. Then use a data governance solution to surround the specific data entities and data subject areas with people, processes, policies, and technology. This solution will help govern the lifecycle of these data entities. Establishing a common business vocabulary in a business glossary within a data catalog can help.
 
@@ -79,6 +79,10 @@ When you look at the data governance challenge, you might wonder how mature you 
 | No data access security tool | Data access security in multiple technologies | Data access security in multiple technologies | Data access security enforced in all systems |
 | No data privacy enforcement software | No data privacy enforcement software | Data privacy enforcement in some database management systems | Data privacy enforcement in all data stores |
 | No master data management system | Single entity master data management system | Multientity master data management system | Multientity master data management system |
+
+## Data Governance Maturity Summary
+
+Once you've worked out where you are on the governance maturity model you need to sit with your key stakeholders and map out your strategy for increasing your maturity. This requires defining your requirements, technology, data quality, metadata, data sharing and master data strategy.
 
 ## Next steps
 

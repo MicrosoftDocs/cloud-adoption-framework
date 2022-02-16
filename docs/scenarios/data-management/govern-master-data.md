@@ -31,7 +31,7 @@ Microsoft has partner with Profisee and CluedIn to provide native integrations i
 
 ## Alternatives solutions
 
-Absent a purpose-built MDMapplication, some of the technical capabilities needed to build a MDM solution may be found within the Azure ecosystem.
+Absent a purpose-built MDMapplication, some of the technical capabilities needed to build an MDM solution may be found within the Azure ecosystem.
 
 - Data quality - When loading to an analytics platform, data quality can be built into integration processes. For example, applying data quality transformations in an [Azure Data Factory](https://azure.microsoft.com/services/data-factory/) pipeline can be accomplished with hardcoded scripts.
 - Data standardization and enrichment - [Azure Maps](https://azure.microsoft.com/services/azure-maps/) is available to provide data verification and standardization for address data. These can be used in Azure Functions and/or Azure Data Factory.  Standardization of other data may require development of hardcoded scripts.

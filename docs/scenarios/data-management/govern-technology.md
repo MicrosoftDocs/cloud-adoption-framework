@@ -54,6 +54,8 @@ With the Azure Purview data catalog, business and technical users can quickly an
 
 With the Azure Purview data insights, data officers and security officers can get a bird's eye view and at a glance understand what data is actively scanned, where sensitive data is located, and how it moves.
 
+[!INCLUDE [data-quality-solutions](includes/data-quality-solutions.md)]
+
 ## Combine Microsoft technologies to help govern data
 
 In the context of data governance, these technologies can be combined to produce trusted reusable data assets.

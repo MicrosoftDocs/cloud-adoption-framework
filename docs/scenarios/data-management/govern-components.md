@@ -3,7 +3,7 @@ title: Components needed for data governance
 description: Understand the components for data governance.
 author: mboswell
 ms.author: mboswell
-ms.date: 02/14/2022
+ms.date: 02/16/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -115,7 +115,7 @@ Once you define policies and rules in a data catalog for each class in a data go
 
 It should then be possible to monitor data quality, privacy, access security, usage, maintenance, and retention of specific data entities throughout their lifecycle.
 
-## Data governance technology
+## Data governance component summary
 
 In summary, this guidance focuses on technologies needed for data governance.
 
