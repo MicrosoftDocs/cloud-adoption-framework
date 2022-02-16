@@ -129,7 +129,7 @@ The following role assignments are required for deploying a data integration and
 
 Managing access to data should be done using Azure AD groups. Add user principle names or service principal names to the Azure AD groups. Add the groups to the services and grant permissions to the group. This approach allows for fine-grained access control.
 
-For datasets in Azure data lakes, consider using access control lists (ACLs). For more information, see [Access control model in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-access-control-model). Using Azure AD passthrough with access control lists is supported by most native Azure services, including Azure Machine Learning, Azure Synapse SQL Serverless, Apache Spark for Azure Synapse and Azure Databricks.
+For data products in Azure data lakes, consider using access control lists (ACLs). For more information, see [Access control model in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-access-control-model). Using Azure AD passthrough with access control lists is supported by most native Azure services, including Azure Machine Learning, Azure Synapse SQL Serverless, Apache Spark for Azure Synapse and Azure Databricks.
 
 Other polyglot storage is likely to be used in data management and analytics scenario. Examples include Azure Database for PostgreSQL, Azure Database for MySQL, Azure SQL Database, SQL Managed Instance, and Azure Synapse SQL Dedicated Pools. They could be used by data application teams to store data products.
 

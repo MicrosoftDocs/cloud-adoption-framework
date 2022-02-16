@@ -160,13 +160,13 @@ Data assets in this zone should be highly governed and well-documented. For exam
 
 ## Workspace zone or data lake three
 
-Along with the data that's ingested by the **data integration** team from the source, the consumers of the data can also bring other useful datasets.
+Along with the data that's ingested by the **data integration** team from the source, the consumers of the data can also bring other useful data products.
 
-In this scenario, the data platform should allocate a workspace for these consumers so they can use the curated data along with the other datasets they bring, to generate valuable insights. For example, if a data science team wants to determine the product placement strategy for a new region, they can bring other datasets such as customer demographics and usage data of similar products from that region. This high-value sales insights data can be used to analyze the product market fit and the offering strategy.
+In this scenario, the data platform should allocate a workspace for these consumers so they can use the curated data along with the other data products they bring, to generate valuable insights. For example, if a data science team wants to determine the product placement strategy for a new region, they can bring other data products such as customer demographics and usage data of similar products from that region. This high-value sales insights data can be used to analyze the product market fit and the offering strategy.
 
-These datasets are usually of unknown quality and accuracy. They're still categorized as a **data product**, but are temporary and only relevant to the user group using the data.
+These data products are usually of unknown quality and accuracy. They're still categorized as a **data product**, but are temporary and only relevant to the user group using the data.
 
-Sometimes these datasets mature, and the enterprise should consider how they promote these **data products** from the workspace to the curated data zone. In order to keep data product teams responsible for new data products, it's recommended to provide these teams a dedicated folder on the curated data zone. Here they can store the new results and share them with other teams across the organization.
+Sometimes these data products mature, and the enterprise should consider how they promote these **data products** from the workspace to the curated data zone. In order to keep data product teams responsible for new data products, it's recommended to provide these teams a dedicated folder on the curated data zone. Here they can store the new results and share them with other teams across the organization.
 
 > [!NOTE]
 > For every Azure Synapse workspace, which is created, we recommend to use data lake three to create a container that can be used as the primary storage. This is to stop Azure Synapse workspaces from interfering with the curated and enriched zones throughput limits.
@@ -188,7 +188,7 @@ Below are general practices for data partitioning design.
 - Focus on security implication early and design data partitions together with authorization.
 - Data redundancy might be allowed in exchange for security.
 - Multiple nesting of folders is acceptable, but keep it consistent.
-- Don't combine mixed file formats or different datasets in a single folder structure.
+- Don't combine mixed file formats or different data products in a single folder structure.
 - Don't start the folder structure with date partitions. It's better to keep dates at the lower folder level.
 - Define a naming convention and adhere to it.
 - Include time element in the folder structure and file name.

@@ -65,7 +65,7 @@ If you have multiple data landing zones, the zones can connect to data lakes hos
 
 When designing for multiple data landing zones, ensure direct communication between workloads with large amounts of traffic. For large workloads across multiple subscriptions, we recommend peering the virtual networks, see [Network topology and connectivity for data management and analytics landing zones](../eslz-network-topology-and-connectivity.md)
 
-Data management and analytics scenario places a strong emphasis on central cataloging and classification to protect data and allow various groups to discover datasets.
+Data management and analytics scenario places a strong emphasis on central cataloging and classification to protect data and allow various groups to discover data products.
 
 ## Next steps
 

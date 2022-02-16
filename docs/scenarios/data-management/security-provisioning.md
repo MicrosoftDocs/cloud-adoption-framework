@@ -12,7 +12,7 @@ ms.custom: e2e-data-management, think-tank
 
 # Data Access Management
 
-Organizations can use [authentication](./secure-authentication.md) and [authorization](./secure-analytics-role-based-access-control.md) to control access to the scenario's services. Each product's best practice section features guidance about how to set up security for a particular service. For example, the Azure Data Lake best practices section describes how to grant access to datasets.
+Organizations can use [authentication](./secure-authentication.md) and [authorization](./secure-analytics-role-based-access-control.md) to control access to the scenario's services. Each product's best practice section features guidance about how to set up security for a particular service. For example, the Azure Data Lake best practices section describes how to grant access to data products.
 
 > [!NOTE]
 > Every business needs to define its data governance process in detail for each data integration and data product. For example, data with a **public** classification or **internal use only** might be secured by resources, but anything **confidential** or above is secured at a dataset (table name) level. For more classification types, see [Requirements for governing Azure data in a modern enterprise](./govern-requirements.md#data-governance-classification).
@@ -21,7 +21,7 @@ Organizations can use [authentication](./secure-authentication.md) and [authoriz
 
 In other sections, we've focused on how to ingest different data types and how to onboard data applications (which create data products). The focus has been predominantly on using automation as much as possible.
 
-The story for self-service access to data relies upon automation, which starts when a new dataset is registered. Even if your organization doesn't yet have an automated ingestion framework, we still recommend that you create a custom application, IT service management process, or an application built with Microsoft Power Apps to allow integration ops and data product teams to register datasets.
+The story for self-service access to data relies upon automation, which starts when a new dataset is registered. Even if your organization doesn't yet have an automated ingestion framework, we still recommend that you create a custom application, IT service management process, or an application built with Microsoft Power Apps to allow integration ops and data product teams to register data products.
 
 The high-level registration process should provide REST APIs to at least support:
 
@@ -37,7 +37,7 @@ The data management and analytics scenario is centered around onboarding new dat
 
 Azure Active Directory (Azure AD) entitlement management is an identity governance feature that automates workflows for access requests, access assignments, reviews, and expiration, supporting organizations to manage identity and the access lifecycle at scale. For guidance about configuring access, see an [overview of Azure AD entitlement management](/azure/active-directory/governance/entitlement-management-overview).
 
-The decision is based upon seeing scenarios where users receive access to a resource, they might hold on to access longer than is required for business purposes. Moving the entitlement packages allows delegate to non-administrators the ability to create access packages. These access packages contain resources, such as access to datasets, that users can request, and the delegated access package managers can define policies with rules for which users can request, who must approve their access, and when access expires.
+The decision is based upon seeing scenarios where users receive access to a resource, they might hold on to access longer than is required for business purposes. Moving the entitlement packages allows delegate to non-administrators the ability to create access packages. These access packages contain resources, such as access to data products, that users can request, and the delegated access package managers can define policies with rules for which users can request, who must approve their access, and when access expires.
 
 For a recap of entitlement management and its value, see the [What is Azure Active Directory entitlement management?](https://www.youtube.com/watch?v=_Lss6bFrnQ8) video.
 
@@ -48,7 +48,7 @@ Data access management is divided into the following tiers:
 - Access packages, a bundle of resources that a team or project needs and is governed by policies
 - Users and teams who try to access the dataset by requesting access or joining a dynamic group based on their user metadata.
 
-:::image type="content" source="./images/granting-access.png" alt-text="Diagram of granting access to datasets." lightbox="./images/granting-access.png":::
+:::image type="content" source="./images/granting-access.png" alt-text="Diagram of granting access to data products." lightbox="./images/granting-access.png":::
 
 The diagram shows how:
 
@@ -120,7 +120,6 @@ Figure 2 summarizes how different personas work together to control access to da
 > Tenants can currently provision 500 catalogs with 500 access packages; to increase this number, contact [Azure Support](https://azure.microsoft.com/support/options/).
 
 ## Next steps
-
-- [Data privacy for data management and analytics in Azure](./secure-data-privacy.md)
+- [Organize data operations team members for data management and analytics in Azure](./organize.md)
 - [How to deploy Azure Active Directory entitlement management](https://www.youtube.com/watch?feature=youtu.be&v=zaaKvaaYwI4) (video)
 - Explore [common scenarios in Azure AD entitlement management](/azure/active-directory/governance/entitlement-management-scenarios) for more information about how to manage entitlement.

@@ -52,7 +52,7 @@ A data application ingests a human resources (HR) personnel data product for Nor
 
 #### Option 1: Policy engine (recommended)
 
-The first two options provide a way to handle **sensitive (personal data)**, and they also grant control to integrations ops and data product teams to identify and restrict access. It might be enough for a small-scale analytics platform, but a policy engine should be placed in the data management landing zone for a large enterprise with hundreds of datasets. Policy engines support a central way of managing, securing, and controlling:
+The first two options provide a way to handle **sensitive (personal data)**, and they also grant control to integrations ops and data product teams to identify and restrict access. It might be enough for a small-scale analytics platform, but a policy engine should be placed in the data management landing zone for a large enterprise with hundreds of data products. Policy engines support a central way of managing, securing, and controlling:
 
 - Access to data
 - Managing the data lifecycle
@@ -64,9 +64,9 @@ The first two options provide a way to handle **sensitive (personal data)**, and
 
 Typically, a policy engine would integrate with a data catalog like Azure Purview. The Azure Marketplace features third-party vendor solutions, and some vendors work with Azure Synapse and Azure Databricks to encrypt and decrypt information while also providing row-level and column-level security. As at Jan 2022, Azure Purview has  launched a public preview for access policies to control access to data stored in Blob and Azure Data Lake Storage (ADLS) Gen2. See [Dataset provisioning by data owner for Azure Storage (preview)](/azure/purview/how-to-access-policies-storage).
 
-The policy engine should use Azure AD groups to apply policies to datasets. The expectation for any policy solution providing data privacy is to tokenize **sensitive (personal data)** and to always check through attribute access control so that the user has can detokenize the columns they need to access.
+The policy engine should use Azure AD groups to apply policies to data products. The expectation for any policy solution providing data privacy is to tokenize **sensitive (personal data)** and to always check through attribute access control so that the user has can detokenize the columns they need to access.
 
-As mentioned, for a policy engine to succeed, it's important for it to integrate into the data catalog and for DevOps to use a REST API to onboard a new dataset. As data integration and data product teams create read data sources, they would be registered in the data catalog and help identify **sensitive (personal data)**. The policy engine should import the definition and deny all access to data until the teams have set up its access policies. All of this should be done via a REST API workflow from the IT service management solution.
+As mentioned, for a policy engine to succeed, it's important for it to integrate into the data catalog and for DevOps to use a REST API to onboard a new dataset. As data application teams create read data sources, they would be registered in the data catalog and help identify **sensitive (personal data)**. The policy engine should import the definition and deny all access to data until the teams have set up its access policies. All of this should be done via a REST API workflow from the IT service management solution.
 
 #### Option 2: Data copies
 
@@ -150,7 +150,7 @@ Since columns are encrypted and can't be decrypted in the **confidential or belo
 
 Where table access is used, teams that require access are added to the Azure Databricks workspace. Azure Databricks would use service principals to map to Azure Data Lake Storage, but the data would be secured with Azure Databricks table access control.
 
-As new datasets are deployed, part of the DevOps process would need to run scripts to set up the table permissions in the Azure Databricks workspace and add the correct Azure AD groups to those permissions.
+As new data products are deployed, part of the DevOps process would need to run scripts to set up the table permissions in the Azure Databricks workspace and add the correct Azure AD groups to those permissions.
 
 > [!NOTE]
 > Azure Databricks table access control can't be combined Azure AD Pass-through Authentication. Therefore, you could use only one Azure Databricks workspace and use table access control instead.
@@ -165,4 +165,4 @@ The dedicated 'restricted' data management landing zone should connect to catalo
 
 ## Next steps
 
-[Organize data operations team members for data management and analytics in Azure](./organize.md)
+- [Data Access Management](security-provisioning.md)

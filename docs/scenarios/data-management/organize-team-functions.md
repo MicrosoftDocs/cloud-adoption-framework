@@ -22,7 +22,7 @@ The platform group consists of two teams:
 
 - **Platform ops:** Platform ops is part of the platform group. It operates and owns the cloud platform. This team is responsible for instantiating the data management landing zone and data landing zone scaffolding like networking, peering, core service, and monitoring within the data management and analytics scenario.
 
-They usually help data platform ops to develop IT service management interfaces for personas in the data landing zone at the start of rolling out the data management and analytics scenario. These interfaces tend to be REST API calls to a service to onboard datasets, set security, and add services to data landing zones.
+They usually help data platform ops to develop IT service management interfaces for personas in the data landing zone at the start of rolling out the data management and analytics scenario. These interfaces tend to be REST API calls to a service to onboard data products, set security, and add services to data landing zones.
 
 - **Data platform ops:** The data platform ops group is housed within the platform group. Data platform ops provides services such as central monitoring, cataloging, and reusable policies for data landing zones and products. Data platform ops owns the data management landing zone, and the team's other responsibilities are:
 
@@ -94,13 +94,13 @@ IT service management solutions field dataset onboarding requests from the busin
 - Creating Azure Data Lake folders for the dataset.
 - Notifying integration ops and data product teams of the new dataset.
 
-### Update existing datasets
+### Update existing data products
 
 IT service management solutions field dataset update requests from the business to integration ops. The team uses their forked repo to develop ingestion pipelines and deploy to their data integration resource groups. Upon deployment, they update the dataset in the data catalog and notify everyone in integration ops and the data product team of the new data asset.
 
-### Manage access requests to datasets
+### Manage access requests to data products
 
-As previously described in [Understand security provisioning for data management and analytics in Azure](./security-provisioning.md#grant-access), integration operations is responsible for approving access to datasets.
+As previously described in [Understand security provisioning for data management and analytics in Azure](./security-provisioning.md#grant-access), integration operations is responsible for approving access to data products.
 
 ### Review dataset telemetry
 
@@ -123,7 +123,7 @@ Product owners and business representatives create requests for new data product
 
 ### Certify data products
 
-In a self-service platform, anyone can create reports, curate datasets in an Azure Data Lake workspace account, and release data products for the business to use. Data product review requests occur when:
+In a self-service platform, anyone can create reports, curate data products in an Azure Data Lake workspace account, and release data products for the business to use. Data product review requests occur when:
 
 - Business sponsors log tickets to certify data products.
 - Data platform ops nominates data products based on popularity.
@@ -143,9 +143,9 @@ Users can submit feedback with an IT service management solution or directly wit
 
 While the data science products team creates data products, it's distinct because their functions lead to data products. This results in published models becoming data products for others to use, and the pattern follows a Machine Learning ops model that's associated with the data landing zone.
 
-The data science products team starts by searching and finding relevant datasets for their use case. Data governance solutions can reveal more details like data quality, lineage, or a similar dataset or profile. They research if a sample dataset is available and if the data is relevant to the project. Once data access is granted via a data catalog or an Azure AD access package, the team uses the services in the data landing zone to explore and analyze the data.
+The data science products team starts by searching and finding relevant data products for their use case. Data governance solutions can reveal more details like data quality, lineage, or a similar dataset or profile. They research if a sample dataset is available and if the data is relevant to the project. Once data access is granted via a data catalog or an Azure AD access package, the team uses the services in the data landing zone to explore and analyze the data.
 
-Before processing all data, the team uses local or remote compute to process and analyze sample datasets. They can optimize remote compute targets with larger datasets to train and develop machine learning models with runs, outputs, and models that are tracked inside Azure Machine Learning.
+Before processing all data, the team uses local or remote compute to process and analyze sample data products. They can optimize remote compute targets with larger data products to train and develop machine learning models with runs, outputs, and models that are tracked inside Azure Machine Learning.
 
 When the team has developed machine learning models, they start operationalizing them. For this, they expand the team to include DataOps and machine learning engineers who can assist with moving the models into a new data product, as outlined in a data product team role.
 
@@ -160,7 +160,7 @@ Analysts represent a large group that includes business analysts, power users, a
 
 ### Find and request data
 
-Analysts consult data marketplaces/catalogs to discover relevant datasets.
+Analysts consult data marketplaces/catalogs to discover relevant data products.
 
 - If the data asset can't be found or doesn't exist, then analysts open a support ticket with integration ops. Integration ops assist with finding the dataset or add the request to their backlog to assess it in another development cycle.
 
@@ -168,7 +168,7 @@ Analysts consult data marketplaces/catalogs to discover relevant datasets.
 
 ### Build new reports
 
-Analysts can use tools like Microsoft Power BI to integrate datasets into reports. These reports can be for their individual use or publishing a certified data product. Before publishing the report across the organization, it would need to be certified with a data product certification process for security, compliance, and performance.
+Analysts can use tools like Microsoft Power BI to integrate data products into reports. These reports can be for their individual use or publishing a certified data product. Before publishing the report across the organization, it would need to be certified with a data product certification process for security, compliance, and performance.
 
 ### Run as-needed queries
 

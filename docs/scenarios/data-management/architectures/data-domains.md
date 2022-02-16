@@ -125,7 +125,7 @@ First, there's granularity for functional domains and setting bounded contexts: 
 
 Second, there's granularity for technical domains and infrastructure utilization. These are your [data landing zones](./data-landing-zone.md) for enabling agility to service [data applications](./data-landing-zone-data-products.md)(which create data products) within it. Such a landing zone, with shared infrastructure and services underneath, how would you offer this to your different domain teams? The experiences are that many different aspects trigger functional domains will be logically grouped together and become candidates for sharing platform infrastructure. Here are some considerations:
 
-* Cohesion and efficiency in the way of working and sharing data is a strong driver of aligning functional domains to a data landing zone. This strongly relates to data gravity: tendency of constantly sharing large datasets between domains.
+* Cohesion and efficiency in the way of working and sharing data is a strong driver of aligning functional domains to a data landing zone. This strongly relates to data gravity: tendency of constantly sharing large data products between domains.
 * Regional boundaries could result in implementing additional data landing zones.
 * Ownership, security, or legal boundaries might force domains to be segregated. For example, some data cannot be allowed to be seen by other domains.
 * Flexibility and pace of change are important drivers. There can be the velocity of innovation within several domains, while other domains strongly value stability.

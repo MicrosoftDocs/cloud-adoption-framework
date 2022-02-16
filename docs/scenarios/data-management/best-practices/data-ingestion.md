@@ -17,7 +17,7 @@ Data integrations and data products teams examine, transform, and release data i
 > [!IMPORTANT]
 > Data integrations don't transform data, but if the business has several use cases whose data needs to be joined together (for example, weather and location data), then the team could be asked to create this in the curated layer.\
 \
-> Data products teams can apply transformations and create their datasets in the data lake's curated layer and the [polyglot storage](https://techcommunity.microsoft.com/t5/data-architecture-blog/polyglot-persistence-with-azure-data-services/ba-p/1514912) they've chosen to use.
+> Data products teams can apply transformations and create their data products in the data lake's curated layer and the [polyglot storage](https://techcommunity.microsoft.com/t5/data-architecture-blog/polyglot-persistence-with-azure-data-services/ba-p/1514912) they've chosen to use.
 
 Azure provides several services to ingest and release data to native and third-party platforms. Different services can be used, depending on volume, velocity, variety, and direction. Some of these services are:
 
@@ -31,7 +31,7 @@ Some of these connectors support being used as a source (read) or as a sink (wri
 
 Proprietary native and third-party tooling provides niche capabilities to integrate with specialized systems and near-real-time replication.
 
-- [Azure Data Share](/azure/data-share/) supports organizations to securely share data with multiple external customers and partners. Once you create a data share account and add datasets, customers and partners can be invited to the data share. Data providers are always in control of the data that they've shared. Azure Data Share makes it simple to manage and monitor what data is shared, when it was shared, and who shared it.
+- [Azure Data Share](/azure/data-share/) supports organizations to securely share data with multiple external customers and partners. Once you create a data share account and add data products, customers and partners can be invited to the data share. Data providers are always in control of the data that they've shared. Azure Data Share makes it simple to manage and monitor what data is shared, when it was shared, and who shared it.
 
 > [!IMPORTANT]
 > Every data landing zone has an [ingest and processing resource group](../architectures/data-landing-zone.md#ingest-and-processing) that exists for enterprises with an ingestion framework engine. If you don't have this framework engine, the only recommended resource is deploying an Azure Databricks data science and engineering workspace, which would be used by data integrations to run complex ingestion. See the [automated ingestion framework](./automated-ingestion-pattern.md#ingest-new-data-sources-automated) for potential automation patterns.
