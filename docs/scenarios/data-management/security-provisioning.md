@@ -15,18 +15,22 @@ ms.custom: e2e-data-management, think-tank
 Organizations can use [authentication](./secure-authentication.md) and [authorization](./secure-analytics-role-based-access-control.md) to control access to the scenario's services. Each product's best practice section features guidance about how to set up security for a particular service. For example, the Azure Data Lake best practices section describes how to grant access to data products.
 
 > [!NOTE]
-> Every business needs to define its data governance process in detail for each data integration and data product. For example, data with a **public** classification or **internal use only** might be secured by resources, but anything **confidential** or above is secured at a dataset (table name) level. For more classification types, see [Requirements for governing Azure data in a modern enterprise](./govern-requirements.md#data-governance-classification).
+> Every business needs to define its data governance process in detail for each data product. For example, data with a **public** classification or **internal use only** might be secured by resources, but anything **confidential** or above is secured using options outlined in [Data privacy for data management and analytics in Azure](secure-data-privacy.md). For more classification types, see [Requirements for governing Azure data in a modern enterprise](./govern-requirements.md#data-governance-classification).
 
-## Automate security
+There are two ways, within the Azure platform, to approach giving access to data products. Depending on your journey and size
 
-In other sections, we've focused on how to ingest different data types and how to onboard data applications (which create data products). The focus has been predominantly on using automation as much as possible.
+## Create Polyglot Security Groups and Access Packages
 
-The story for self-service access to data relies upon automation, which starts when a new dataset is registered. Even if your organization doesn't yet have an automated ingestion framework, we still recommend that you create a custom application, IT service management process, or an application built with Microsoft Power Apps to allow integration ops and data product teams to register data products.
+In other sections, we've focused on how to how to onboard data applications (which create data products). The focus has been predominantly on using automation as much as possible.
+
+The story for self-service access to data relies upon automation, which starts when a new data product is registered. Even if your organization doesn't yet have an automated ingestion framework, we still recommend that you create a custom application, IT service management process, or an application built with Microsoft Power Apps to allow data application teams to register data products.
+
+
 
 The high-level registration process should provide REST APIs to at least support:
 
 - Creating folders inside the data integration's or data product's Azure Data Lake containers.
-- Creating the required Azure AD groups for access. Each data asset in Azure Data Lake Storage owns two matching Azure AD groups.
+- Creating the required Azure AD groups for access. Each data asset in Azure Data Lake Storage owns two matching Azure AD groups. [Working with groups in Microsoft Graph](/graph/api/resources/groups-overview)
 - Creating an access package within [Azure AD entitlement management](/azure/active-directory/governance/entitlement-management-overview).
 
 The final step of creating an access package allows users to request access to the package and is based on features available within Azure AD identity governance.

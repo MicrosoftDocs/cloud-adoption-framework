@@ -68,7 +68,7 @@ The policy engine should use Azure AD groups to apply policies to data products.
 
 As mentioned, for a policy engine to succeed, it's important for it to integrate into the data catalog and for DevOps to use a REST API to onboard a new dataset. As data application teams create read data sources, they would be registered in the data catalog and help identify **sensitive (personal data)**. The policy engine should import the definition and deny all access to data until the teams have set up its access policies. All of this should be done via a REST API workflow from the IT service management solution.
 
-#### Option 2: Data copies
+#### Option 2: Confidential or below and sensitive (personal data) versions
 
 For every data product which is classified as **sensitive (personal data)** two copies are created by it's pipeline. One which is classified as **confidential or below** which has all the **sensitive (personal data)** columns removed and is created under the **confidential or below** folder for the data product. The other copy is created in the **sensitive (personal data)** folder, for the data product, which has all the sensitive data included. Each folder would be assigned an Azure Active Directory reader security group and an Azure Active Directory writer security group. Using [Data Access Management](security-provisioning.md) a user could request access to the data product.
 
