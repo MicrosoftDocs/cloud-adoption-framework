@@ -36,7 +36,7 @@ Following are guidelines on developing a data science template for your organiza
 
 ### Considerations for an initial setup
 
-In some cases, data scientists in your organization might require an environment for quick ad hoc analysis. It's common when a data science project isn't formally set up. For example, a project manager, cost code, or cost center, that might be required for cross-charging within Azure, might be missing because it needs approval. Users in your organization or team might need to access a data science environment to understand the data and possibly evaluate a project's feasibility. Also, some projects might not require a full data science environment because of the small number of datasets.
+In some cases, data scientists in your organization might require an environment for quick ad hoc analysis. It's common when a data science project isn't formally set up. For example, a project manager, cost code, or cost center, that might be required for cross-charging within Azure, might be missing because it needs approval. Users in your organization or team might need to access a data science environment to understand the data and possibly evaluate a project's feasibility. Also, some projects might not require a full data science environment because of the small number of data products.
 
 In other cases, a full data science project might be required, complete with a dedicated environment, project management, cost code, and cost center. Projects that are set up like this are typically required when multiple team members want to collaborate, share results, and need to operationalize models after the exploration phase succeeds.
 
@@ -78,7 +78,7 @@ These artifacts should include:
 
 - Sample notebooks that show how to:
 
-  - Load, mount, and work with datasets.
+  - Load, mount, and work with data products.
   - Log metrics and parameters.
   - Submit training jobs to compute clusters.
 
@@ -97,7 +97,7 @@ Artifacts can speed up data science projects' exploration and operationalization
 > [!TIP]
 > Azure Machine Learning sample pipelines should built with the Python software developer kit (SDK) or based on the YAML language. The new YAML experience will be more future-proof, as the Azure Machine Learning product team is currently working on a new SDK and command line interface (CLI). They are confident that YAML will serve as the definition language for all artifacts within Azure Machine Learning.
 
-Sample pipelines won't work out of the box for each project, but they can be used as a baseline. You can adjust them for projects. A pipeline should include the most relevant aspects of each project. For example, referencing a compute target, referencing datasets, defining parameters, defining inputs, and defining the execution steps. The same should be done for Azure Pipelines. Azure Pipelines should also use the Azure Machine Learning SDK or CLI.
+Sample pipelines won't work out of the box for each project, but they can be used as a baseline. You can adjust them for projects. A pipeline should include the most relevant aspects of each project. For example, referencing a compute target, referencing data products, defining parameters, defining inputs, and defining the execution steps. The same should be done for Azure Pipelines. Azure Pipelines should also use the Azure Machine Learning SDK or CLI.
 
 Pipelines should demonstrate how to:
 

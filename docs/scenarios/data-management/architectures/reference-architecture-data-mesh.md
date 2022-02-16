@@ -89,7 +89,7 @@ The following diagram illustrates a cross-domain data mesh architecture that use
 
 :::image type="content" source="../images/data-mesh-integration.png" alt-text="Diagram showing data integration." lightbox="../images/data-mesh-integration.png":::
 
-The network design allows a simple sharing of datasets across domains without bandwidth limitations, a single point of failure, and minimal cost. To help ensure security, you can use the Microsoft *Zero Trust* security model. Data management and analytics scenario proposes the use of network isolation through private endpoints and private network communication, an identity-driven data access model that uses MIs, UMIs, and nested security groups, following the *principle of least privilege*.
+The network design allows a simple sharing of data products across domains without bandwidth limitations, a single point of failure, and minimal cost. To help ensure security, you can use the Microsoft *Zero Trust* security model. Data management and analytics scenario proposes the use of network isolation through private endpoints and private network communication, an identity-driven data access model that uses MIs, UMIs, and nested security groups, following the *principle of least privilege*.
 
 You can use managed identities to ensure that a least privilege access model is followed. Applications and services in this model have limited access to data products. Azure policies, in conjunction with the upcoming data policies, are used to enable self-service and enforce compliant resources within all data products, at scale. With this design, you can have uniform data access, while staying fully in control via centralized data governance and auditing.
 
@@ -101,7 +101,7 @@ Data management and analytics scenario is designed with data mesh in mind. Data 
 
 A consideration to keep in mind, when you're implementing data mesh, is how to logically group and organize your domains. This requires an enterprise view and is likely also a cultural shift for your organization. The shift requires you to federate data ownership among data domains and owners who are accountable for providing their data as products. It also requires teams to conform to centralized capabilities that are offered by the data management landing zone. This new approach might require individual teams to give up their current mandates, which is likely to generate resistance. You might have to make certain political choices and strike a balance between centralized and decentralized approaches.
 
-You can scale a data mesh architecture by adding more landing zones to the architecture for individual domains. These landing zones use virtual network peering to connect to the data management landing zone and all other landing zones. This pattern allows you to share datasets and resources across zones. And by splitting into separate zones, you can spread workloads across Azure subscriptions and resources. This approach allows you to implement the data mesh organically.
+You can scale a data mesh architecture by adding more landing zones to the architecture for individual domains. These landing zones use virtual network peering to connect to the data management landing zone and all other landing zones. This pattern allows you to share data products and resources across zones. And by splitting into separate zones, you can spread workloads across Azure subscriptions and resources. This approach allows you to implement the data mesh organically.
 
 ## Learn more
 

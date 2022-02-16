@@ -66,7 +66,7 @@ items:
       href: ./secure-analytics-role-based-access-control.md
     - name: Data privacy
       href: ./secure-data-privacy.md
-    - name: Automating security
+    - name: Data Access Management
       href: ./security-provisioning.md
 
   - name: Organize people and teams

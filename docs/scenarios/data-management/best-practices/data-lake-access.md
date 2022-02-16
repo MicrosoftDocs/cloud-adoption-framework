@@ -91,7 +91,7 @@ We recommend that you assign access control entries to a security group rather t
 
 Even using groups, you may have many access control entries at top levels of the directory tree. This situation can happen when granular permissions for different groups are required.
 
-![Diagram shows several security groups requiring access to three datasets.](../images/flat-groups-issue.png)
+![Diagram shows several security groups requiring access to three data products.](../images/flat-groups-issue.png)
 
 ### Configure access using both Azure RBAC and access control lists
 

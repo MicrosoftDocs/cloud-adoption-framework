@@ -31,8 +31,8 @@ The metadata triggers Data Factory jobs and will have most of the parameters req
 
 For all job types (including indirect ingestion from sources like SAP), areas, and functions, the application should store the jobs' technical and operational metadata in a SQL database. Technical metadata can drive jobs because it has have most of the parameters required for this task. Data platform, data landing zone, and integration ops can use the metadata to:
 
-- Track jobs and the latest data-loading timestamps for datasets related to their functions.
-- Track available datasets.
+- Track jobs and the latest data-loading timestamps for data products related to their functions.
+- Track available data products.
 - Grow data volumes.
 - Obtain real-time updates about job failures.
 
@@ -43,7 +43,7 @@ Operational metadata can be used to track:
 - Data volume growth.
 - Job failures.
 - Source metadata changes.
-- Business functions that depend on datasets.
+- Business functions that depend on data products.
 
 If the business needs operational reports and event notifications, data landing zone ops and integration ops can use Microsoft Power BI to query the SQL Database to build them.
 
@@ -51,9 +51,9 @@ If the business needs operational reports and event notifications, data landing 
 
 Figure 2 recommends the following registration process for automating the ingestion of new data sources:
 
-![How new datasets are ingested (automated).](../images/new-dataset-ingestion.png)
+![How new data products are ingested (automated).](../images/new-dataset-ingestion.png)
 
-*Figure 2: How new datasets are ingested (automated).*
+*Figure 2: How new data products are ingested (automated).*
 
 Enterprises can use custom applications, Azure Logic Apps, or Microsoft Power Apps in the data management landing zone to enter data into the Data Factory metastore and gain the following benefits:
 

@@ -178,7 +178,7 @@ Taking a principled approach on other, but relevant considerations, such as data
 
 At Microsoft, we use four core principles of fairness, reliability and safety, privacy and security, and inclusiveness. Underpinning these principles are two foundational principles of transparency and accountability.
 
-We put responsible AI and our principles into practice through the development of resources and a system of governance. Some of our guidelines focus on human-AI interaction, conversational AI, inclusive design, an AI fairness checklist, and a data sheet for datasets.
+We put responsible AI and our principles into practice through the development of resources and a system of governance. Some of our guidelines focus on human-AI interaction, conversational AI, inclusive design, an AI fairness checklist, and a data sheet for data products.
 
 In addition to practices, we've developed a set of tools to help others understand, protect, and control AI at every stage of innovation. Our tools are a result of collaboration across various disciplines to strengthen and accelerate responsible AI, spanning software engineering and development, to social sciences, user research, law, and policy.
 
