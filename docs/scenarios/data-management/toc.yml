@@ -137,10 +137,8 @@ items:
         href: ./architectures/registration-of-data-products.md        
       - name: Data mesh governance
         href: ./architectures/data-mesh-governance.md
-      - name: Metadata standard
+      - name: Metadata standards and Data Marketplace
         href: ./architectures/metadata-standards.md
-      - name: Data Marketplace
-        href: ./architectures/data-marketplace.md
       - name: Models
         href: ./architectures/models-cdm.md
       - name: Data mesh master data management
