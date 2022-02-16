@@ -143,6 +143,7 @@ The following Azure AD group naming conventions are suggested for table access c
 
 
 ## Next steps
+
 - [Organize data operations team members for data management and analytics in Azure](./organize.md)
 - [How to deploy Azure Active Directory entitlement management](https://www.youtube.com/watch?feature=youtu.be&v=zaaKvaaYwI4) (video)
 - Explore [common scenarios in Azure AD entitlement management](/azure/active-directory/governance/entitlement-management-scenarios) for more information about how to manage entitlement.
