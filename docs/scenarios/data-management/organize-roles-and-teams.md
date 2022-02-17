@@ -72,11 +72,9 @@ The platform group consists of two teams:
 
 **Data Platform Ops:**
 
-- Define common policies for data landing zone, integration, and product services.
+- Define common policies for data landing zone and data applications.
 
-- Provision and operate data management services like the data catalog and runtimes for shared integration.
-
-- Instantiate data landing zone scaffolding, including data lakes and configuring how metadata is managed before passing it to data landing zone operations.
+- Instantiate data landing zone scaffolding, including core services before passing it to data landing zone operations.
 
 - Support stakeholders.
 
@@ -88,7 +86,7 @@ The platform group consists of two teams:
 
 ## The digital security office
 
-Digital security deals with the entire management and analytics scenario. It's usually a dedicated department lead by a chief information security officer. This department works closely with data platform ops, the data governance review board, and the architecture review board.
+Digital security deals with the entire data management and analytics scenario. It's usually a dedicated department lead by a chief information security officer. This department works closely with data platform ops, the data governance review board, and the architecture review board.
 
 ## Data governance roles and responsibilities
 
