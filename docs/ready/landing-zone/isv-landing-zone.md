@@ -161,7 +161,7 @@ In the [Azure landing zone resource organization hierarchy](./design-area/resour
 
 For convenient separation of roles and policies for enterprise customers, the **Platform** management group is frequently partitioned into three child management groups: **Identity**, **Management**, and **Connectivity**. In your organization, you might have a single team to manage all of the shared platform components like networking, identity, and management. If this is the case, and if you have no plans to separate the management across multiple teams, then consider using a single **Platform** management group. Within that management group, start by deploying one **Platform** Azure subscription.
 
-However, if you expect to need separate policies for different parts of the centralized platform, you should deploy the additional levels in the management group hierarchy under the **Platform** management group. This ensure you can separate the components that will be managed by different teams.
+However, if you expect that separate teams will manage different parts of the centralized platform, you should deploy the additional levels in the management group hierarchy under the **Platform** management group. This ensures you can assign separate policies for each part of the centralized platform.
 
 The following diagram illustrates two potential implementations of the **Platform** management group. Option A shows a more comprehensive scenario, where the **Platform** management group contains three child management groups: **Management and DevOps**, **Identity and Security**, and **Connectivity**, each containing a subscription with the relevant resources. Option B shows a simple scenario, where the **Platform** management group contains a single platform subscription.
 
