@@ -164,8 +164,6 @@ items:
 
     - name: Deployment templates
       href: ./architectures/deployment-templates.md
-    - name: Policies
-      href: ./architectures/policies.md
     - name: Connecting to environments privately
       href: ./architectures/connect-to-environments-privately.md
     - name: Frequently asked questions
