@@ -51,7 +51,7 @@ items:
       href: ./govern-technology.md
     - name: Master data management
       href: ./govern-master-data.md
-    - name: Data Quality
+    - name: Data quality
       href: ./govern-data-quality.md
     - name: Data sharing agreements
       href: ./govern-data-sharing-agreements.md
@@ -66,7 +66,7 @@ items:
       href: ./secure-analytics-role-based-access-control.md
     - name: Data privacy
       href: ./secure-data-privacy.md
-    - name: Data Access Management
+    - name: Data access Management
       href: ./security-provisioning.md
 
   - name: Organize people and teams
