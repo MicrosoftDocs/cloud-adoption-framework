@@ -4,7 +4,7 @@ description: Use the Cloud Adoption Framework for Azure to learn how to seamless
 author: tracsman
 ms.author: brblanch
 manager: rossort
-ms.date: 02/09/2022
+ms.date: 02/16/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: general
@@ -327,7 +327,7 @@ Azure monitor also allows the creation of custom dashboards. Azure dashboards al
 
 Finally, Azure monitor data is a native source for Power BI. Power BI is a business analytics service that provides interactive visualizations across a variety of data sources. It's also an effective means of making data available to others within and outside your organization. You can configure Power BI to automatically import log data from Azure monitor to take advantage of these additional visualizations.
 
-[Azure Network Watcher][NetWatch] provides tools to monitor, diagnose, and view metrics and enable or disable logs for resources in a virtual network in Azure. It's a multifaceted service that allows the following functionalities and more:
+[Azure network watcher][NetWatch] provides tools to monitor, diagnose, and view metrics and enable or disable logs for resources in a virtual network in Azure. It's a multifaceted service that allows the following functionalities and more:
 
 - Monitor communication between a virtual machine and an endpoint.
 - View resources in a virtual network and their relationships.
@@ -354,17 +354,17 @@ The workload possibilities are endless. The following are just a few of the poss
 - **Data-driven:** Data intensive with frequent access to databases or other storage.
 - **Integrated:** Offer integration with other systems within or outside the organization.
 
-**Customer-facing web sites (internet-facing or internally facing):** Most internet applications are web sites. Azure can run a web site via either an IaaS virtual machine or an [Azure Web Apps][WebApps] site (PaaS). Azure Web Apps integrates with virtual networks to deploy web apps in a spoke network zone. Internally facing web sites don't need to expose a public internet endpoint because the resources are accessible via private non-internet routable addresses from the private virtual network.
+**Customer-facing web sites (internet-facing or internally facing):** Most internet applications are web sites. Azure can run a web site via either an IaaS virtual machine or an [Azure Web Apps][WebApps] site (PaaS). Azure web apps integrates with virtual networks to deploy web apps in a spoke network zone. Internally facing web sites don't need to expose a public internet endpoint because the resources are accessible via private non-internet routable addresses from the private virtual network.
 
-**Big data analytics:** When data needs to scale up to larger volumes, relational databases may not perform well under the extreme load or unstructured nature of the data. [Azure HDInsight][HDInsight] is a managed, full-spectrum, open-source analytics service in the cloud for enterprises. You can use open-source frameworks such as Hadoop, Apache Spark, Apache Hive, LLAP, Apache Kafka, Apache Storm, and R. HDInsight supports deploying into a location-based virtual network, can be deployed to a cluster in a spoke of the virtual datacenter.
+**Big data analytics:** When data needs to scale up to larger volumes, relational databases might not perform well under the extreme load or unstructured nature of the data. [Azure HDInsight][HDInsight] is a managed, full-spectrum, open-source analytics service in the cloud for enterprises. You can use open-source frameworks such as Hadoop, Apache Spark, Apache Hive, LLAP, Apache Kafka, Apache Storm, and R. HDInsight. This supports deploying into a location-based virtual network, which can be deployed to a cluster in a spoke of the virtual datacenter.
 
-**Events and Messaging:** [Azure Event Hubs][EventHubs] is a big data streaming platform and event ingestion service. It can receive and process millions of events per second. It provides low latency and configurable time retention, enabling you to ingest massive amounts of data into Azure and read it from multiple applications. A single stream can support both real-time and batch-based pipelines.
+**Events and messaging:** [Azure Event Hubs][EventHubs] is a big data streaming platform and event ingestion service. It can receive and process millions of events per second. It provides low latency and configurable time retention, enabling you to ingest massive amounts of data into Azure and read it from multiple applications. A single stream can support both real-time and batch-based pipelines.
 
 You can implement a highly reliable cloud messaging service between applications and services through [Azure Service Bus][ServiceBus]. It offers asynchronous brokered messaging between client and server, structured first-in-first-out (FIFO) messaging, and publishes and subscribe capabilities.
 
 ![10][10]
 
-These examples barely scratch the surface of the types of workloads you can create in Azure&mdash;everything from a basic Web and SQL app to the latest in IoT, big data, machine learning, AI, and so much more.
+These examples barely scratch the surface of the types of workloads you can create in Azure. You can create everything from a basic Web and SQL app to the latest in IoT, big data, machine learning, AI, and so much more.
 
 ### Highly availability: multiple virtual datacenters
 
@@ -386,7 +386,7 @@ An Azure region that hosts your virtual datacenter must conform with regulatory 
 
 #### Disaster recovery
 
-The design of a disaster recovery plan depends on the types of workloads and the ability to synchronize state of those workloads between different VDC implementations. Ideally, most customers desire a fast fail-over mechanism, and this requirement may need application data synchronization between deployments running in multiple VDC implementations. However, when designing disaster recovery plans, it's important to consider that most applications are sensitive to the latency that can be caused by this data synchronization.
+The design of a disaster recovery plan depends on the types of workloads and the ability to synchronize state of those workloads between different VDC implementations. Ideally, most customers desire a fast fail-over mechanism, and this requirement might need application data synchronization between deployments running in multiple VDC implementations. However, when designing disaster recovery plans, it's important to consider that most applications are sensitive to the latency that can be caused by this data synchronization.
 
 Synchronization and heartbeat monitoring of applications in different VDC implementations requires them to communicate over the network. Multiple VDC implementations in different regions can be connected through:
 
@@ -402,11 +402,11 @@ Run network qualification tests to verify the latency and bandwidth of these con
 
 #### Disaster recovery: diverting traffic from one region to another
 
-Both [Azure Traffic Manager][azure-traffic-manager] and [Azure Front Door][azure-front-door] periodically check the service health of listening endpoints in different VDC implementations and, if those endpoints fail, route automatically to the next closest VDC. Traffic Manager uses real-time user measurements and DNS to route users to the closest (or next closest during failure). Azure Front Door is a reverse proxy at over 100 Microsoft backbone edge sites, using anycast to route users to the closest listening endpoint.
+Both [Azure Traffic Manager][azure-traffic-manager] and [Azure Front Door][azure-front-door] periodically check the service health of listening endpoints in different VDC implementations. If those endpoints fail, they route automatically to the next closest VDC. Traffic Manager uses real-time user measurements and DNS to route users to the closest (or next closest during failure). Azure Front Door is a reverse proxy at over 100 Microsoft backbone edge sites, using anycast to route users to the closest listening endpoint.
 
 ### Summary
 
-A virtual datacenter approach to datacenter migration creates a scalable architecture that optimizes Azure resource use, lowers costs, and simplifies system governance. The virtual datacenter is typical based on hub and spoke network topologies (using either virtual network peering or Virtual WAN hubs). Common shared services provided in the hub, and specific applications and workloads are deployed in the spokes. The virtual datacenter also matches the structure of company roles, where different departments such as Central IT, DevOps, and Operations and Maintenance all work together while performing their specific roles. The virtual datacenter supports migrating existing on-premises workloads to Azure, but also provides many advantages to cloud-native deployments.
+The virtual datacenter approach to migration is to create a scalable architecture that optimizes Azure resource use, lowers costs, and simplifies system governance. The virtual datacenter is typical based on hub and spoke network topologies (using either virtual network peering or Virtual WAN hubs). Common shared services provided in the hub, and specific applications and workloads are deployed in the spokes. The virtual datacenter also matches the structure of company roles, where different departments such as central IT, DevOps, and operations and maintenance all work together while performing their specific roles. The virtual datacenter supports migrating existing on-premises workloads to Azure, but also provides many advantages to cloud-native deployments.
 
 ## References
 
