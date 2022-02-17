@@ -32,20 +32,81 @@ This article presumes that you are familiar with Azure AD [entitlement managemen
 | Access package | A bundle of resources that a team or project needs and is governed with policies. An access package is always contained in a catalog. You would create a new access package for a scenario in which users need to request access.|
 | Access request | A request to access the resources in an access package. A request typically goes through an approval workflow. If approved, the requesting user receives an access package assignment.|
 | Assignment | An assignment of an access package to a user ensures the user has all the resource roles of that access package. Access package assignments typically have a time limit before they expire. |
-| Catalog | A container of related resources and access packages. Catalogs are used for delegation, so that non-administrators can create their own access packages. Catalog owners can add resources they own to a catalog.|
+| Catalogue | A container of related resources and access packages. Catalogs are used for delegation, so that non-administrators can create their own access packages. Catalog owners can add resources they own to a catalog.|
 |Catalog creator|A collection of users who are authorized to create new catalogs. When a non-administrator user who is authorized to be a catalog creator creates a new catalog, they automatically become the owner of that catalog.|
 |Connected organization|An external Azure AD directory or domain that you have a relationship with. The users from a connected organization can be specified in a policy as being allowed to request access.|
 |Policy|A set of rules that defines the access lifecycle, such as how users get access, who can approve, and how long users have access through an assignment. A policy is linked to an access package. For example, an access package could have two policies - one for employees to request access and a second for external users to request access.|
 
-## Configure Azure AD entitlement management
+## Data access management workflows
 
 The data management and analytics scenario roles map to the configurations and maintenance of an Azure AD entitlement management solution.
 
-An organization can use Azure AD entitlement management to delegate access governance to access package managers, which frees data landing zone staff to support themselves without deferring to platform teams.
+An organization can use a custom application with Azure AD entitlement management to delegate access governance to the domain data stewards and chief data officers, which frees data application teams to support themselves without deferring to platform teams. It is possible to set multiple levels of approval and to automate the end-to-end onboarding and data access management via [Microsoft Graph REST API](/graph/api/overview) and [Entitlement Management REST APIs](/graph/api/resources/entitlementmanagement-overview)
+
+The decision to use Azure AD entitlement management is based upon seeing scenarios where users receive access to a resource, they might hold on to access longer than is required for business purposes. Moving to entitlement packages allows delegation to non-administrators, such as data application teams, to create access packages. These access packages contain resources, such as access to data products, that users can request, and the delegated access package managers, such as data stewards, can define policies with rules for which users can request, who must approve their access, and when access expires.
+
+## Domain catalogue creation
+
+For each domain, it is recommended that you create a catalogue in entitlement management. Depending on the size of your implementation, and automation, you can:
+
+1. Approach this as part of your domain creation process and call the [Entitlement Management REST APIs](/graph/api/resources/entitlementmanagement-overview) to create a catalogue for the domain.
+1. Create an additional catalogue for the domain via the Entitlement Management portal.
+
+## Data Product Creation
+
+Data product onboarding has been covered in [Data onboarding](architectures/data-onboarding.md). As part of that onboarding, with a custom application, there is an expectation that the end-to-end security will be provisioned.
+
+The process requires key meta data such as:
+
+- Polyglot storage location (compute or data lake)
+- Approvers i.e. Data Stewards and Chief Data Officer for domain
+- Lifecycle requirements
+- Review requirements
+- Domain
+- Data product name
+- Classification
+
+:::image type="content" source="images/data-access-management-create-product-security-groups.png" alt-text="Create data product security groups" lightbox="images/data-access-management-create-product-security-groups.png":::
+
+Figure 1: Data access management data product creation
+
+In figure 1, we illustrate how a data application team automates the security provisioning for a data product which will reside in a data lake. Post the data product onboarding a request is sent to the Microsoft Graph REST APIs to:
+
+1. Create two security groups, one which will allow you to read/write and another which will allow read only, via the Azure Active Directory Graph API.
+    1. The following Azure AD group naming conventions are suggested for Azure AD Pass-through Authentication in the data lakes:
+
+        - Domain name
+        - Data product name
+        - Data lake layer:
+          - `RAW` for raw
+          - `ENR` for enriched
+          - `CUR` for curated
+        - Data product name
+          - `RW` for read-write
+          - `R` for read-only
+
+    1. The following Azure AD group naming conventions are suggested for table access control:
+
+    - Domain name
+    - Data product name
+    - Schema or table tame
+      - `RW` for read-write
+      - `R` for read-only
+
+1. Assign the security groups to the data product. For a data lake this would involve applying the two security groups at the data product folder level and at the correct layer of the lake (raw, enriched or curated).
+
+1. An access package is created which bundles the the security groups are bundled together along with the required approvers and life-cycle (access reviews and expiry)
+
+>[TIP] In complex scenarios a permission collection security group can be created to capture multiple security groups but this would be a manual task AFTER the data product security groups have been created.
+
+
+
+
+
 
 :::image type="content" source="./images/user-access-management.png" alt-text="User access management." lightbox="./images/user-access-management.png":::
 
-*Figure 2: Configuring Azure AD entitlement management.*
+*Figure 1: Create Azure AD entitlement management.*
 
 :::image type="content" source="./images/identity-governance-catalogs.png" alt-text="Screen capture of Identity Governance Catalogs." lightbox="./images/identity-governance-catalogs.png":::
 
@@ -68,11 +129,7 @@ Figure 2 summarizes how different personas work together to control access to da
 
 ## Create Security Groups and Access Packages
 
-
-
 The story for self-service access to data relies upon automation, which starts when a new data product is registered. Even if your organization doesn't yet have an automated ingestion framework, we still recommend that you create a custom application, IT service management process, or an application built with Microsoft Power Apps to allow data application teams to register data products.
-
-
 
 The high-level registration process should provide REST APIs to at least support:
 
@@ -140,7 +197,6 @@ The following Azure AD group naming conventions are suggested for table access c
 
 > [!IMPORTANT]
 > The diagram illustrates adding Azure AD user groups. The same process can help with adding Azure service principals, which are used by integration or data product teams for ingestion pipelines and more. It's recommended that you set up two lifecycle settings, one for users to request short-term access (30 days) and another for requesting longer access periods (90 days).
-
 
 ## Next steps
 
