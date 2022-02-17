@@ -3,7 +3,7 @@ title: Overview of application migration examples for Azure
 description: Provides an overview of the application migration examples included as part of the Migrate methodology of the Cloud Adoption Framework.
 author: deltadan
 ms.author: abuck
-ms.date: 07/01/2020
+ms.date: 02/17/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
