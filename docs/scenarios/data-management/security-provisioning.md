@@ -125,7 +125,7 @@ Using a custom application and the [Entitlement Management REST APIs](/graph/api
 
 Figure 2: Request access to a data product.
 
-As figure 2 illustrates, give an overview of the access request workflow.
+As figure 2 give an overview of a data product access request workflow.
 
 #### User access request
 
