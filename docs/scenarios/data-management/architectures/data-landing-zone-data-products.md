@@ -29,7 +29,7 @@ At a high level, data products are computed or polyglot persistence services tha
     - Data product B also consumes from data product C and the data lake in data landing zone 3.
 
   > [!IMPORTANT]
-  > In the case of interzone data consumption, since data product B reads from data landing zone 3, this would require approval from the [data landing zone operations](../organize-persona-and-teams.md#data-landing-zone-teams) and [integration operations](../organize-persona-and-teams.md#data-landing-zone-teams) team of data landing zone 3.
+  > In the case of interzone data consumption, since data product B reads from data landing zone 3, this would require approval from the [data landing zone operations](../organize-roles-and-teams.md#data-landing-zone-teams) and [integration operations](../organize-roles-and-teams.md#data-landing-zone-teams) team of data landing zone 3.
   > [!IMPORTANT]
   > Data product B consumes from data products A and C. Before this can happen, data product B must register its consumption of a data product via a data sharing agreement. This data sharing agreement should update the lineage from data product A to data product B and from data product C to data product B.
 
@@ -102,7 +102,7 @@ To explain the architecture definition process, we'll look at an example of a fi
 
 :::image type="content" source="../images/data-product-define-detail.png" alt-text="Diagram of define-data-product architecture in detail.":::
 
-The credit monitoring data product shown above consumes data from a *read data store* that has been ingested by the [integration operations team](../organize-persona-and-teams.md#data-landing-zone-teams) and produces data assets for two other data products.
+The credit monitoring data product shown above consumes data from a *read data store* that has been ingested by the [integration operations team](../organize-roles-and-teams.md#data-landing-zone-teams) and produces data assets for two other data products.
 
 > [!NOTE]
 > A read data source or store is also known as *golden record source*. These types of data sources have been cleaned but haven't had any transformation applied to them.

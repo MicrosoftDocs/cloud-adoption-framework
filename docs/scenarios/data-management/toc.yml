@@ -51,7 +51,7 @@ items:
       href: ./govern-technology.md
     - name: Master data management
       href: ./govern-master-data.md
-    - name: Data Quality
+    - name: Data quality
       href: ./govern-data-quality.md
     - name: Data sharing agreements
       href: ./govern-data-sharing-agreements.md
@@ -66,7 +66,7 @@ items:
       href: ./secure-analytics-role-based-access-control.md
     - name: Data privacy
       href: ./secure-data-privacy.md
-    - name: Data Access Management
+    - name: Data access management
       href: ./security-provisioning.md
 
   - name: Organize people and teams
@@ -75,8 +75,8 @@ items:
         href: ./organize.md
       - name: Organize for effective data operations
         href: ./organize-data-operations.md
-      - name: Personas and teams
-        href: ./organize-persona-and-teams.md
+      - name: Roles and teams
+        href: ./organize-roles-and-teams.md
       - name: Teams functions
         href: ./organize-team-functions.md
 
@@ -162,8 +162,6 @@ items:
 
     - name: Deployment templates
       href: ./architectures/deployment-templates.md
-    - name: Policies
-      href: ./architectures/policies.md
     - name: Connecting to environments privately
       href: ./architectures/connect-to-environments-privately.md
     - name: Frequently asked questions

@@ -60,7 +60,7 @@ The data governance solution should enable you to govern data throughout the lif
 
 ## Data governance roles and responsibilities guidance for people
 
-There are many data governance roles and responsibilities for people. To learn more, see [Data governance roles and responsibilities](./organize-persona-and-teams.md#data-governance-roles-and-responsibilities).
+There are many data governance roles and responsibilities for people. To learn more, see [Data governance roles and responsibilities](./organize-roles-and-teams.md#data-governance-roles-and-responsibilities).
 
 ## Data governance processes
 
