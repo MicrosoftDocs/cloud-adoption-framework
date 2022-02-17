@@ -45,6 +45,9 @@ This article presumes that you're familiar with Azure AD [entitlement management
 |Connected organization|An external Azure AD directory or domain that you have a relationship with. The users from a connected organization can be specified in a policy as being allowed to request access.|
 |Policy|A set of rules that defines the access lifecycle, such as how users get access, who can approve, and how long users have access through an assignment. A policy is linked to an access package. For example, an access package could have two policies - one for employees to request access and a second for external users to request access.|
 
+> [!IMPORTANT]
+> Tenants can currently provision 500 catalogs with 500 access packages; to increase this number, contact [Azure Support](https://azure.microsoft.com/support/options/).
+
 ## Data access management workflows
 
 An organization can use a custom application with Azure AD entitlement management to delegate access governance to the domain data stewards and chief data officers, which frees data application teams to support themselves without deferring to platform teams. It's possible to set multiple levels of approval and to automate the end-to-end onboarding and data access management via [Microsoft Graph REST API](/graph/api/overview) and [Entitlement Management REST APIs](/graph/api/resources/entitlementmanagement-overview)
@@ -71,9 +74,6 @@ If you are implementing a data mesh, then:
 
 > [!TIP]
 > Each catalogue can have their own group permissions to create packages and manage permissions.
-
-> [!IMPORTANT]
-> Tenants can currently provision 500 catalogs with 500 access packages; to increase this number, contact [Azure Support](https://azure.microsoft.com/support/options/).
 
 ### Data product creation
 
