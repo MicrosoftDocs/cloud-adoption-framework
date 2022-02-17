@@ -61,4 +61,4 @@ Keep in mind that the following services are not listed in the overview, because
 
 ## Next steps
 
-Learn about [Azure policies](policies.md) for data management and analytics scenario.
+- [Connect to environments privately](connect-to-environments-privately.md)

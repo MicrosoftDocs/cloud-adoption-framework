@@ -1,6 +1,6 @@
 ---
-title: Understand the personas and teams for data management and analytics in Azure
-description: Learn about the personas and teams for the data management and analytics scenario in Azure.
+title: Understand the roles and teams for data management and analytics in Azure
+description: Learn about the roles and teams for the data management and analytics scenario in Azure.
 author: abdale
 ms.author: hamoodaleem
 ms.date: 08/06/2021
@@ -10,17 +10,17 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Understand the personas and teams for data management and analytics in Azure
+# Understand the roles and teams for data management and analytics in Azure
 
 For the data management and analytics scenario, we recommend moving teams like ingest, processing, analysis, consumption, and visualization from working in horizontally siloed teams, to agile vertical cross domain teams in each tier. Platform teams like data platform operations and platform operations are grouped together in a common platform group.
 
 ![Overview of the data management and analytics scenario teams.](./images/enterprise-scale-analytics-ai-teams.png)
 
-## Personas
+## Roles
 
-Multiple personas are involved a data management and analytics scenario deployment. The following sections outline the personas that are key to a successful deployment, and data governance roles are described further down this page.
+Multiple roles are involved a data management and analytics scenario deployment. The following sections outline the roles that are key to a successful deployment, and data governance roles are described further down this page.
 
-| Persona | Role |
+| Role | Description |
 |-|-|
 |Product owners| They optimize Azure to transform solutions, bring agility to the business, and optimize business processes.|
 | Solution architects | They propose solutions for the boundaries of the enterprise business network and learn how to diagnose, analyze, design, deploy, and integrate Azure services. |
