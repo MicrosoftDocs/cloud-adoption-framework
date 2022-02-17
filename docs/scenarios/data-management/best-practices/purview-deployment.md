@@ -218,7 +218,7 @@ Review the following list of personas involved in an data management and analyti
 | Data scientists | Use your preferred tools and machine learning frameworks to build scalable data science solutions. Accelerate end-to-end machine learning lifecycle. | <li> Data Source Admin <li> Data Curator |
 | Machine learning engineers | Enable right processes and infrastructure for easy model deployment and model management. | <li> Data Source Admin <li> Data Curator |
 
-For more information about data personas, see [Personas and teams](../organize-roles-and-teams.md#personas).
+For more information about data roles, see [Roles and teams](../organize-roles-and-teams.md#personas).
 
 ## Next steps
 

@@ -36,13 +36,13 @@ Multiple roles are involved a data management and analytics scenario deployment.
 | Machine learning engineers | They support the right processes and infrastructure models to be deployed and managed easily. |
 
 > [!NOTE]
-> Azure policies assist these roles to control some of the scope that they oversee.
+> [Azure policies](eslz-policies.md) assist these roles to control some of the scope that they oversee.
 
 ## Data landing zone teams
 
 The data landing zone group consists of three teams:
 
-**Data Product teams (one team per product)**:
+**Data Application teams (one team per application)**:
 
 - Are responsible for delivering new data products such as insights, reports, notebooks, and applications.
 - Partner closely with business analysts and business unit stakeholders.
@@ -50,16 +50,10 @@ The data landing zone group consists of three teams:
 - Manage access hierarchy (groups) and approval requests.
 - Furnish metadata in data catalogs.
 
-**Integration ops (one team per integration)**:
-
-- Ingest and register new read data sources.
-- Manage access hierarchy (groups) and approval requests.
-- Furnish metadata in data catalogs.
-
 **Data landing zone ops (one group per data landing zone)**:
 
 - Operate and maintain their data landing zone instance.
-- Respond to new data integration and data product service requests.
+- Respond to new data application service requests.
 
 ### Decide between a central or business data office
 
@@ -70,7 +64,7 @@ Another option is for when a data landing zone's business doesn't have a busines
 Individuals should work within multidisciplinary teams in both of these scenarios, sharing goals and diverse experience, skills, and approaches that support more effective outcomes than if everyone is in a silo.
 
 > [!NOTE]
-> In the scenario where only one data landing zone is deployed, it's common for businesses to overlap in one data landing zone. This could create crossover functions where integration operations or data product teams are sourced from central and business data offices. However, data landing zone operations functions to be located in the central data office for this scenario.
+> In the scenario where only one data landing zone is deployed, it's common for businesses to overlap in one data landing zone. This could create crossover functions where data application teams are sourced from central and business data offices. However, data landing zone operations functions to be located in the central data office for this scenario.
 
 ## Teams within the platform group
 
