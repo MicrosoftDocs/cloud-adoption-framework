@@ -106,7 +106,7 @@ Upon certification, artifacts are collated and uploaded to a data product reposi
 
 Users can submit feedback with an IT service management solution or directly within the product as a ticket is routed to the data product owner. This individual triages the request and determines whether to escalate it to the data application team to fix or enter feedback into a product backlog and review during product planning cycles.
 
-## The data science applications team
+## Data science applications team
 
 While the data science products team creates data products, it's distinct because their functions lead to data products. This results in published models becoming data products for others to use, and the pattern follows a Machine Learning ops model that's associated with the data landing zone.
 
