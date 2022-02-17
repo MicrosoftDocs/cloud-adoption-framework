@@ -18,7 +18,12 @@ The best practice section features guidance about how to set up security for a p
 
 In other sections, we've focused on how to onboard data applications (which create data products). The focus has been predominantly on using automation as much as possible.
 
-There are two ways, within the Azure platform, to approach giving access to data products from within Azure Purview (data policies) or a custom data marketplace that uses Azure Active Directory Entitlement Management to grant access to data products. As Azure Purview (data policies) is covered in [Dataset provisioning by data owner for Azure Storage (preview)](/azure/purview/how-to-access-policies-storage), we'll concentrate on the scenario of using Azure Active Directory Entitlement Management with a custom data marketplace.
+There are two ways, within the Azure platform, to approach giving access to data products:
+
+1. Using Azure Purview (data policies)
+1. A custom data marketplace that uses Azure Active Directory Entitlement Management to grant access to data products.
+
+As Azure Purview (data policies) is covered in [Dataset provisioning by data owner for Azure Storage (preview)](/azure/purview/how-to-access-policies-storage), we'll concentrate on the scenario of using Azure Active Directory Entitlement Management with a custom data marketplace.
 
 > [!NOTE]
 > Every business needs to define its data governance process in detail for each data product. For example, data with a **public** classification or **internal use only** might be secured by resources, but anything **confidential** or above is secured using options outlined in [Data privacy for data management and analytics in Azure](secure-data-privacy.md). For  classification types, see [Requirements for governing Azure data in a modern enterprise](./govern-requirements.md#data-governance-classification).
