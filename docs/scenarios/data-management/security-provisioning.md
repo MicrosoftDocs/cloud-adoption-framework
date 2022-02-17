@@ -120,7 +120,7 @@ In figure 1, we illustrate how a data application team automates the security pr
 1. An access package is created which bundles the security groups are bundled together along with the required approvers and life-cycle (access reviews and expiry)
 
 > [!TIP]
-> Optional information to help a user be more successfulIn complex scenarios a permission collection security group can be created to capture multiple security groups but this would be a manual task AFTER the data product security groups have been created.
+> In complex scenarios a permission collection security group can be created to capture multiple security groups but this would be a manual task AFTER the data product security groups have been created.
 
 ### Request access to data product
 
@@ -130,7 +130,7 @@ Using a custom application and the [Entitlement Management REST APIs](/graph/api
 
 Figure 2: Request access to a data product.
 
-As figure 2 give an overview of a data product access request workflow.
+Figure 2 gives an overview of a data product access request workflow.
 
 #### User access request
 
