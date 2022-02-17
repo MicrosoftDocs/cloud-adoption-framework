@@ -149,6 +149,8 @@ The decision is based upon seeing scenarios where users receive access to a reso
 
 For a recap of entitlement management and its value, see the [What is Azure Active Directory entitlement management?](https://www.youtube.com/watch?v=_Lss6bFrnQ8) video.
 
+## Summary of data access management with Azure AD entitlement management
+
 Data access management is divided into the following tiers:
 
 - The physical layer (for example, the polyglot storing the dataset)
@@ -160,40 +162,18 @@ Data access management is divided into the following tiers:
 
 The diagram shows how:
 
-- Integration ops or data product teams onboard the new dataset or product to a data landing zone.
-- An Azure AD group is created and assigned to the dataset. Access can be granted with Azure AD Pass-through Authentication or table access control in Azure Databricks or Azure Synapse Analytics.
+- Data product teams onboard the new dataset or product to a data landing zone.
+- An Azure AD group is created and assigned to the dataset. Access can be granted with Azure AD Pass-through Authentication or table access control in Azure Databricks, Azure Synapse Analytics or other analytics polyglot store.
 
-The following Azure AD group naming conventions are suggested for Azure AD Pass-through Authentication:
+1. Azure AD entitlement management creates access packages in the domains access packages catalog. The access packages can contain multiple Azure AD groups. The `Finance Analysis` package gives access to finance and LOB A, while the `Finance Writers` package gives access to schema F and LOB A. Only grant write access to those who are creating the dataset. Otherwise, read-only access should be the default.
 
-- Data landing zone name
-- Data integration
-  - `RAW` for raw
-  - `ENR` for enriched
-  - `CUR` for curated
-- Schema or table name
-  - `RW` for read-write
-  - `R` for read-only
+1. Users browse an access package catalog, data marketplace or request access to the packages from a direct link.
 
-The following Azure AD group naming conventions are suggested for table access control:
+1. Subject to policy and account, approvers are notified and reviews the request in an access management portal.
 
-- Data landing zone name
-- Data product
-  - `CUR` for curated
-- Schema or table tame
-  - `RW` for read-write
-  - `R` for read-only
+    1. If approved, the user is notified and given access to the dataset.
 
-## Summary of data access management with Azure AD entitlement management
-
-1. Azure AD entitlement management creates access packages in the data landing zone access packages catalog. The access packages can contain multiple Azure AD groups. The `Finance Analysis` package gives access to finance and LOB A, while the `Finance Writers` package gives access to schema F and LOB A. Only grant write access to those who are creating the dataset. Otherwise, read-only access should be the default.
-
-1. Users browse an access package catalog or request access to the packages from a direct link (a docs link or a data catalog).
-
-1. Subject to policy and account, an approver is notified and reviews the request in an access management portal.
-
-1. If approved, the user is notified and given access to the dataset.
-
-1. If the enterprise wants to grant user permissions based on metadata (for example, a user's division, title, or location), then [dynamic groups in Azure AD](/azure/active-directory/enterprise-users/groups-create-rule) could be added as an approved group to the access package.
+1. If the business wants to grant user permissions based on metadata (for example, a user's division, title, or location), then [dynamic groups in Azure AD](/azure/active-directory/enterprise-users/groups-create-rule) could be added as an approved group to the access package.
 
 > [!IMPORTANT]
 > The diagram illustrates adding Azure AD user groups. The same process can help with adding Azure service principals, which are used by integration or data product teams for ingestion pipelines and more. It's recommended that you set up two lifecycle settings, one for users to request short-term access (30 days) and another for requesting longer access periods (90 days).
