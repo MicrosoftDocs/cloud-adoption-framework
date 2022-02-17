@@ -20,8 +20,9 @@ In other sections, we've focused on how to onboard data applications (which crea
 
 There are two ways, within the Azure platform, to approach giving access to data products:
 
-1. Using Azure Purview (data policies)
-1. A custom data marketplace that uses Azure Active Directory Entitlement Management to grant access to data products.
+- Using Azure Purview (data policies)
+
+- A custom data marketplace that uses Azure Active Directory Entitlement Management to grant access to data products.
 
 As Azure Purview (data policies) is covered in [Dataset provisioning by data owner for Azure Storage (preview)](/azure/purview/how-to-access-policies-storage), we'll concentrate on the scenario of using Azure Active Directory Entitlement Management with a custom data marketplace.
 
