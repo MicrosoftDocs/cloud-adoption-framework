@@ -49,10 +49,14 @@ The decision to use Azure AD entitlement management is based upon seeing scenari
 
 For each domain, it is recommended that you create a catalogue in entitlement management. Depending on the size of your implementation, and automation, you can:
 
-1. Approach this as part of your domain creation process and call the [Entitlement Management REST APIs](/graph/api/resources/entitlementmanagement-overview) to create a catalogue for the domain.
-1. Create an additional catalogue for the domain via the Entitlement Management portal.
+- Approach this as part of your domain creation process and call the [Entitlement Management REST APIs](/graph/api/resources/entitlementmanagement-overview) to create a catalogue for the domain.
+ 
+- Create an additional catalogue for the domain via the Entitlement Management portal.
+ 
+> [!TIP]
+> Each catalogue can have their own group permissions to create packages and manage permissions.
 
-## Data Product Creation
+## Data product creation
 
 Data product onboarding has been covered in [Data onboarding](architectures/data-onboarding.md). As part of that onboarding, with a custom application, there is an expectation that the end-to-end security will be provisioned.
 
@@ -104,11 +108,6 @@ In figure 1, we illustrate how a data application team automates the security pr
 
 
 
-:::image type="content" source="./images/user-access-management.png" alt-text="User access management." lightbox="./images/user-access-management.png":::
-
-*Figure 1: Create Azure AD entitlement management.*
-
-:::image type="content" source="./images/identity-governance-catalogs.png" alt-text="Screen capture of Identity Governance Catalogs." lightbox="./images/identity-governance-catalogs.png":::
 
 Figure 2 summarizes how different personas work together to control access to data assets:
 
@@ -171,7 +170,7 @@ The diagram shows how:
 
 1. Subject to policy and account, approvers are notified and reviews the request in an access management portal.
 
-    1. If approved, the user is notified and given access to the dataset.
+    - If approved, the user is notified and given access to the dataset.
 
 1. If the business wants to grant user permissions based on metadata (for example, a user's division, title, or location), then [dynamic groups in Azure AD](/azure/active-directory/enterprise-users/groups-create-rule) could be added as an approved group to the access package.
 
