@@ -12,14 +12,16 @@ ms.custom: e2e-data-management, think-tank
 
 # Data Access Management
 
-Organizations can use [authentication](./secure-authentication.md) and [authorization](./secure-analytics-role-based-access-control.md) to control access to the scenario's services. Each product's best practice section features guidance about how to set up security for a particular service. For example, the Azure Data Lake best practices section describes how to grant access to data products.
+Organizations can use [authentication](./secure-authentication.md) and [authorization](./secure-analytics-role-based-access-control.md) to control access to the scenario's services.
 
-> [!NOTE]
-> Every business needs to define its data governance process in detail for each data product. For example, data with a **public** classification or **internal use only** might be secured by resources, but anything **confidential** or above is secured using options outlined in [Data privacy for data management and analytics in Azure](secure-data-privacy.md). For more classification types, see [Requirements for governing Azure data in a modern enterprise](./govern-requirements.md#data-governance-classification).
+The best practice section features guidance about how to set up security for a particular services. For example, the Azure Data Lake best practices section describes for [Access control and data lake configurations in Azure Data Lake Storage](best-practices/data-lake-access.md).
 
 In other sections, we've focused on how to how to onboard data applications (which create data products). The focus has been predominantly on using automation as much as possible.
 
 There are two ways, within the Azure platform, to approach giving access to data products from within Azure Purview (data policies) or a custom data marketplace which uses Azure Active Directory Entitlement Management to grant access to data products. As Azure Purview (data policies) is covered in [Dataset provisioning by data owner for Azure Storage (preview)](/azure/purview/how-to-access-policies-storage), we will concentrate on the scenario of using Azure Active Directory Entitlement Management with a custom data marketplace.
+
+> [!NOTE]
+> Every business needs to define its data governance process in detail for each data product. For example, data with a **public** classification or **internal use only** might be secured by resources, but anything **confidential** or above is secured using options outlined in [Data privacy for data management and analytics in Azure](secure-data-privacy.md). For  classification types, see [Requirements for governing Azure data in a modern enterprise](./govern-requirements.md#data-governance-classification).
 
 ## What is Azure AD entitlement management?
 
@@ -39,22 +41,33 @@ This article presumes that you are familiar with Azure AD [entitlement managemen
 
 ## Data access management workflows
 
-The data management and analytics scenario roles map to the configurations and maintenance of an Azure AD entitlement management solution.
-
 An organization can use a custom application with Azure AD entitlement management to delegate access governance to the domain data stewards and chief data officers, which frees data application teams to support themselves without deferring to platform teams. It is possible to set multiple levels of approval and to automate the end-to-end onboarding and data access management via [Microsoft Graph REST API](/graph/api/overview) and [Entitlement Management REST APIs](/graph/api/resources/entitlementmanagement-overview)
 
-The decision to use Azure AD entitlement management is based upon seeing scenarios where users receive access to a resource, they might hold on to access longer than is required for business purposes. Moving to entitlement packages allows delegation to non-administrators, such as data application teams, to create access packages. These access packages contain resources, such as access to data products, that users can request, and the delegated access package managers, such as data stewards, can define policies with rules for which users can request, who must approve their access, and when access expires.
+Using Azure AD entitlement management packages allows delegation to non-administrators, such as data application teams, to create access packages. These access packages contain resources, such as access to data products, that users can request, and the delegated access package managers, such as data stewards, can define policies with rules for which users can request, who must approve their access, and when access expires.
 
-## Domain catalogue creation
+## Catalogue creation
 
-For each domain, it is recommended that you create a catalogue in entitlement management. Depending on the size of your implementation, and automation, you can:
+If you are implementing data lakehouse then:
 
-- Approach this as part of your domain creation process and call the [Entitlement Management REST APIs](/graph/api/resources/entitlementmanagement-overview) to create a catalogue for the domain.
- 
-- Create an additional catalogue for the domain via the Entitlement Management portal.
- 
+- For each data landing zone, it is recommended that you create a catalogue in entitlement management. Depending on the size of your implementation, and automation, you can:
+
+  - Approach this as part of your data landing zone creation process and call the [Entitlement Management REST APIs](/graph/api/resources/entitlementmanagement-overview) to create a catalogue for the domain.
+
+  - Create an additional catalogue for the data landing zone via the Entitlement Management portal.
+
+If you are implementing a data mesh then:
+
+- For each domain, it is recommended that you create a catalogue in entitlement management. Depending on the size of your implementation, and automation, you can:
+
+  - Approach this as part of your domain creation process and call the [Entitlement Management REST APIs](/graph/api/resources/entitlementmanagement-overview) to create a catalogue for the domain.
+
+  - Create an additional catalogue for the domain via the Entitlement Management portal.
+
 > [!TIP]
 > Each catalogue can have their own group permissions to create packages and manage permissions.
+
+> [!IMPORTANT]
+> Tenants can currently provision 500 catalogs with 500 access packages; to increase this number, contact [Azure Support](https://azure.microsoft.com/support/options/).
 
 ## Data product creation
 
@@ -103,48 +116,7 @@ In figure 1, we illustrate how a data application team automates the security pr
 
 >[TIP] In complex scenarios a permission collection security group can be created to capture multiple security groups but this would be a manual task AFTER the data product security groups have been created.
 
-
-
-
-
-
-
-Figure 2 summarizes how different personas work together to control access to data assets:
-
-1. Data platform ops creates a catalog for each individual data landing zone, and each can have their own group to create packages and manage permissions.
-
-1. Integration ops and data product create and manage data asset security groups. They use automated scripts that manage how the security groups are created and updated.
-
-1. A data manager part of integration ops or data product can curate access packages and define which access and applications are included. The access packages are published to their corresponding catalogs. Access packages typically correspond to user profiles (for example, a base package for finance users) and can include expiration and access review policies. Special policies also exist for external guest users.
-
-1. Users browse packages in a `MyAccess` portal and can request access to these packages themselves. However, a manager could also request that for an AP-admin (requires assignment-manager role) to grant their team access.
-
-1. Upon a request for access, the user must provide justification and submit.
-
-1. The delegated approver or data manager in integration ops can approve or reject the request.
-
-> [!IMPORTANT]
-> Tenants can currently provision 500 catalogs with 500 access packages; to increase this number, contact [Azure Support](https://azure.microsoft.com/support/options/).
-
-## Create Security Groups and Access Packages
-
-The story for self-service access to data relies upon automation, which starts when a new data product is registered. Even if your organization doesn't yet have an automated ingestion framework, we still recommend that you create a custom application, IT service management process, or an application built with Microsoft Power Apps to allow data application teams to register data products.
-
-The high-level registration process should provide REST APIs to at least support:
-
-- Creating folders inside the data integration's or data product's Azure Data Lake containers.
-- Creating the required Azure AD groups for access. Each data asset in Azure Data Lake Storage owns two matching Azure AD groups. [Working with groups in Microsoft Graph](/graph/api/resources/groups-overview)
-- Creating an access package within [Azure AD entitlement management](/azure/active-directory/governance/entitlement-management-overview).
-
-The final step of creating an access package allows users to request access to the package and is based on features available within Azure AD identity governance.
-
-### Grant access
-
-The data management and analytics scenario is centered around onboarding new data integration uses cases or data products via Azure Active Directory entitlement management.
-
-Azure Active Directory (Azure AD) entitlement management is an identity governance feature that automates workflows for access requests, access assignments, reviews, and expiration, supporting organizations to manage identity and the access lifecycle at scale. For guidance about configuring access, see an [overview of Azure AD entitlement management](/azure/active-directory/governance/entitlement-management-overview).
-
-The decision is based upon seeing scenarios where users receive access to a resource, they might hold on to access longer than is required for business purposes. Moving the entitlement packages allows delegate to non-administrators the ability to create access packages. These access packages contain resources, such as access to data products, that users can request, and the delegated access package managers can define policies with rules for which users can request, who must approve their access, and when access expires.
+## Request access to data product
 
 For a recap of entitlement management and its value, see the [What is Azure Active Directory entitlement management?](https://www.youtube.com/watch?v=_Lss6bFrnQ8) video.
 
