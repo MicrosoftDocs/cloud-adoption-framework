@@ -92,7 +92,7 @@ In figure 1, we illustrate how a data application team automates the security pr
 1. Create two security groups, one which will allow you to read/write and another which will allow read only, via the Azure Active Directory Graph API.
     1. The following Azure AD group naming conventions are suggested for Azure AD Pass-through Authentication in the data lakes:
 
-        - Domain name
+        - Domain name or data landing zone name
         - Data product name
         - Data lake layer:
           - `RAW` for raw
@@ -104,7 +104,7 @@ In figure 1, we illustrate how a data application team automates the security pr
 
     1. The following Azure AD group naming conventions are suggested for table access control:
 
-    - Domain name
+    - Domain name or data landing zone name
     - Data product name
     - Schema or table tame
       - `RW` for read-write
@@ -125,13 +125,13 @@ For a recap of entitlement management and its value, see the [What is Azure Acti
 Data access management is divided into the following tiers:
 
 - The physical layer (for example, the polyglot storing the dataset)
-- Azure AD groups (see the previous note about granularity)
+- Azure Active Directory security groups
 - Access packages, a bundle of resources that a team or project needs and is governed by policies
 - Users and teams who try to access the dataset by requesting access or joining a dynamic group based on their user metadata.
 
 :::image type="content" source="./images/granting-access.png" alt-text="Diagram of granting access to data products." lightbox="./images/granting-access.png":::
 
-The diagram shows how:
+The diagram shows an example of a data mesh implementation where a catalogue has been created per domain.
 
 - Data product teams onboard the new dataset or product to a data landing zone.
 - An Azure AD group is created and assigned to the dataset. Access can be granted with Azure AD Pass-through Authentication or table access control in Azure Databricks, Azure Synapse Analytics or other analytics polyglot store.
