@@ -25,7 +25,7 @@ There are two ways, within the Azure platform, to approach giving access to data
 
 ## What is Azure AD entitlement management?
 
-It is an [identity governance](/azure/active-directory/governance/identity-governance-overview) feature that enables organizations to manage identity and access lifecycle at scale, by automating access request workflows, access assignments, reviews, and expiration.
+It is an [identity governance](/azure/active-directory/governance/identity-governance-overview) feature that enables organizations to manage identity and access lifecycle at scale, by automating access request workflows, access assignments, reviews, and expiration. For a recap of entitlement management and its value, see the  [What is Azure Active Directory entitlement management?](https://www.youtube.com/watch?v=_Lss6bFrnQ8) video.
 
 This article presumes that you are familiar with Azure AD [entitlement management](/azure/active-directory/governance/entitlement-management-overview) or have at least studied the Microsoft documentation and understand the terminology below:
 
@@ -69,7 +69,7 @@ If you are implementing a data mesh then:
 > [!IMPORTANT]
 > Tenants can currently provision 500 catalogs with 500 access packages; to increase this number, contact [Azure Support](https://azure.microsoft.com/support/options/).
 
-## Data product creation
+### Data product creation
 
 Data product onboarding has been covered in [Data onboarding](architectures/data-onboarding.md). As part of that onboarding, with a custom application, there is an expectation that the end-to-end security will be provisioned.
 
@@ -114,11 +114,32 @@ In figure 1, we illustrate how a data application team automates the security pr
 
 1. An access package is created which bundles the the security groups are bundled together along with the required approvers and life-cycle (access reviews and expiry)
 
->[TIP] In complex scenarios a permission collection security group can be created to capture multiple security groups but this would be a manual task AFTER the data product security groups have been created.
+> [!TIP]
+> Optional information to help a user be more successfulIn complex scenarios a permission collection security group can be created to capture multiple security groups but this would be a manual task AFTER the data product security groups have been created.
 
-## Request access to data product
+### Request access to data product
 
-For a recap of entitlement management and its value, see the [What is Azure Active Directory entitlement management?](https://www.youtube.com/watch?v=_Lss6bFrnQ8) video.
+Using a custom application and the [Entitlement Management REST APIs](/graph/api/resources/entitlementmanagement-overview) it is possible to automate the granting of access to a data product.
+
+:::image type="content" source="images/data-access-management-request-access.png" alt-text="Request access to a data product" lightbox="images/data-access-management-request-access.png":::
+
+Figure 2: Request access to a data product.
+
+As figure 2 illustrates, give an overview of the access request workflow.
+
+#### User access request
+
+1. A data user access browse the data marketplace to discover the products they want access to.
+1. The data marketplace interfaces with the [Entitlement Management REST APIs](/graph/api/resources/entitlementmanagement-overview) and requests to add the user to the data product access package.
+1. Subject to policy and account, approvers are notified and reviews the request in an access management portal.
+
+    - If approved, the user is notified and given access to the dataset.
+
+1. If the business wants to grant user permissions based on metadata (for example, a user's division, title, or location), then [dynamic groups in Azure AD](/azure/active-directory/enterprise-users/groups-create-rule) could be added as an approved group to the access package.
+
+#### User request status
+
+The other services included in the data marketplace could check on the current status of the users requests to a data produce and this could interface with the [Entitlement Management REST APIs](/graph/api/resources/entitlementmanagement-overview) to list all the outstanding requests for a user or service principle name.
 
 ## Summary of data access management with Azure AD entitlement management
 
@@ -129,22 +150,14 @@ Data access management is divided into the following tiers:
 - Access packages, a bundle of resources that a team or project needs and is governed by policies
 - Users and teams who try to access the dataset by requesting access or joining a dynamic group based on their user metadata.
 
-:::image type="content" source="./images/granting-access.png" alt-text="Diagram of granting access to data products." lightbox="./images/granting-access.png":::
+:::image type="content" source="./images/granting-access.png" alt-text="Example of using Azure Active Directory Entitlement Management." lightbox="./images/granting-access.png":::
 
-The diagram shows an example of a data mesh implementation where a catalogue has been created per domain.
+The diagram above shows an example of a data mesh implementation where a catalogue has been created per domain.
 
-- Data product teams onboard the new dataset or product to a data landing zone.
+- Data product teams onboard the new dataset or product to a data domain.
 - An Azure AD group is created and assigned to the dataset. Access can be granted with Azure AD Pass-through Authentication or table access control in Azure Databricks, Azure Synapse Analytics or other analytics polyglot store.
 
-1. Azure AD entitlement management creates access packages in the domains access packages catalog. The access packages can contain multiple Azure AD groups. The `Finance Analysis` package gives access to finance and LOB A, while the `Finance Writers` package gives access to schema F and LOB A. Only grant write access to those who are creating the dataset. Otherwise, read-only access should be the default.
-
-1. Users browse an access package catalog, data marketplace or request access to the packages from a direct link.
-
-1. Subject to policy and account, approvers are notified and reviews the request in an access management portal.
-
-    - If approved, the user is notified and given access to the dataset.
-
-1. If the business wants to grant user permissions based on metadata (for example, a user's division, title, or location), then [dynamic groups in Azure AD](/azure/active-directory/enterprise-users/groups-create-rule) could be added as an approved group to the access package.
+Azure AD entitlement management creates access packages in the domains access packages catalog. The access packages can contain multiple Azure AD groups. The `Finance Analysis` package gives access to finance and LOB A, while the `Finance Writers` package gives access to schema F and LOB A. Only grant write access to those who are creating the dataset. Otherwise, read-only access should be the default.
 
 > [!IMPORTANT]
 > The diagram illustrates adding Azure AD user groups. The same process can help with adding Azure service principals, which are used by integration or data product teams for ingestion pipelines and more. It's recommended that you set up two lifecycle settings, one for users to request short-term access (30 days) and another for requesting longer access periods (90 days).
