@@ -59,17 +59,17 @@ We recommend that you have two teams to create balance across cloud adoption eff
 
 This proven approach is considered an MVP because it might not be sustainable. Each team is wearing many hats, as outlined in the [responsible, accountable, consulted, informed (RACI) charts](./raci-alignment.md).
 
-The following sections describe a fully staffed, proven organizational structure along with approaches to aligning the appropriate structure to your organization.
+The following sections describe a fully staffed, proven organizational structure, along with approaches to aligning the appropriate structure to your organization.
 
 ## Central IT team
 
 ![Diagram that shows the central IT team](../_images/ready/org-ready-central-it.png)
 
-As adoption scales, the cloud governance team might struggle to keep pace with the flow of innovation from multiple cloud adoption teams. This is especially true in environments that have heavy compliance, operations, or security requirements. At this stage, it is common for companies to shift cloud responsibilities to an existing central IT team. If that team can reassess tools, processes, and people to better support cloud adoption at scale, then including the central IT team can add significant value. Bringing in subject matter experts from operations, automation, security, and administration to modernize the central IT team can drive effective operational innovations.
+As adoption scales, the cloud governance team might struggle to keep pace with the flow of innovation from multiple cloud adoption teams. This is especially true in environments that have heavy compliance, operations, or security requirements. At this stage, it's common for companies to shift cloud responsibilities to an existing central IT team. If that team can reassess tools, processes, and people to better support cloud adoption at scale, then including the central IT team can add significant value. Subject matter experts from operations, automation, security, and administration to modernize the central IT team can drive effective operational innovations.
 
 Unfortunately, the central IT team phase can be one of the riskiest phases of organizational maturity. The central IT team must come to the table with a strong growth mindset. If the team views the cloud as an opportunity to grow and adapt, then it can provide great value throughout the process. However, if the central IT team views cloud adoption primarily as a threat to their existing model, then the central IT team becomes an obstacle to the cloud adoption teams and the business objectives they support. Some central IT teams have spent months or even years attempting to force the cloud into alignment with on-premises approaches, with only negative results. The cloud doesn't require that everything change within the central IT team, but it does require significant change. If resistance to change is prevalent within the central IT team, this phase of maturity can quickly become a cultural antipattern.
 
-Cloud adoption plans heavily focused on platform as a service (PaaS), DevOps, or other solutions that require less operations support are less likely to see value during this phase of maturity. On the contrary, these types of solutions are the most likely to be hindered or blocked by attempts to centralize IT. A higher level of maturity, like a [cloud center of excellence (CCoE)](#cloud-center-of-excellence), is more likely to yield positive results for those types of transformational efforts. To understand the differences between centralized IT in the cloud and a CCoE, see [Cloud center of excellence](./cloud-center-of-excellence.md).
+Cloud adoption plans heavily focused on platform as a service (PaaS), DevOps, or other solutions that require fewer operations support are less likely to see value during this phase of maturity. On the contrary, these types of solutions are the most likely to be hindered or blocked by attempts to centralize IT. A higher level of maturity, like a [cloud center of excellence (CCoE)](#cloud-center-of-excellence), is more likely to yield positive results for those types of transformational efforts. To understand the differences between centralized IT in the cloud and a CCoE, see [Cloud center of excellence](./cloud-center-of-excellence.md).
 
 ## Strategic alignment
 
@@ -77,7 +77,7 @@ Cloud adoption plans heavily focused on platform as a service (PaaS), DevOps, or
 
 As the investment in cloud adoption grows and business values are realized, business stakeholders often become more engaged. A defined cloud strategy team aligns those business stakeholders to maximize the value realized by cloud adoption investments.
 
-When maturity happens organically, as a result of IT-led cloud adoption efforts, strategic alignment is usually preceded by a governance or central IT team. When cloud adoption efforts are lead by the business, the focus on operating model and organization tends to happen earlier. Whenever possible, business outcomes and the cloud strategy team can be defined early in the process.
+When maturity happens organically, as a result of IT-led cloud adoption efforts, strategic alignment is preceded by a governance or central IT team. When cloud adoption efforts are lead by the business, the focus on operating model and organization tends to happen earlier. Whenever possible, business outcomes and the cloud strategy team can be defined early in the process.
 
 ## Operational alignment
 
