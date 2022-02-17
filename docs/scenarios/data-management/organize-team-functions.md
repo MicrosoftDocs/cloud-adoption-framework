@@ -100,7 +100,7 @@ IT service management solutions field dataset update requests from the business 
 
 ### Manage access requests to data products
 
-As previously described in [Understand security provisioning for data management and analytics in Azure](./security-provisioning.md#grant-access), integration operations is responsible for approving access to data products.
+As previously described in [Access control and data lake configurations in Azure Data Lake Storage](best-practices/data-lake-access.md) integration operations is responsible for approving access to data products.
 
 ### Review dataset telemetry
 
