@@ -183,7 +183,7 @@ The following Azure AD group naming conventions are suggested for table access c
   - `RW` for read-write
   - `R` for read-only
 
-## The Azure AD entitlement process
+## Summary of data access management with Azure AD entitlement management
 
 1. Azure AD entitlement management creates access packages in the data landing zone access packages catalog. The access packages can contain multiple Azure AD groups. The `Finance Analysis` package gives access to finance and LOB A, while the `Finance Writers` package gives access to schema F and LOB A. Only grant write access to those who are creating the dataset. Otherwise, read-only access should be the default.
 
