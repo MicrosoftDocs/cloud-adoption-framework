@@ -3,7 +3,7 @@ title: Overview of application migration examples for Azure
 description: Provides an overview of the application migration examples included as part of the Migrate methodology of the Cloud Adoption Framework.
 author: deltadan
 ms.author: abuck
-ms.date: 02/17/2022
+ms.date: 02/18/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -12,7 +12,7 @@ ms.custom: think-tank
 
 # Overview of application migration examples for Azure
 
-This section of the Cloud Adoption Framework there are examples of several common migration scenarios that demonstrate how you can migrate on-premises infrastructure to [Microsoft Azure](https://azure.microsoft.com/overview/what-is-azure/).
+This section of the Cloud Adoption Framework provides examples of several common migration scenarios and demonstrates how you can migrate on-premises infrastructure to [Microsoft Azure](https://azure.microsoft.com/overview/what-is-azure/).
 
 ## Introduction
 
@@ -28,14 +28,14 @@ As part of the hybrid cloud strategy, Azure provides growing solutions for migra
 
 ## Migration patterns
 
-Strategies for migration to the cloud fall into four broad patterns: rehost, refactor, rearchitect, or rebuild. The strategy you adopt depends on your business drivers and migration goals. You might adopt multiple patterns. For example, you could choose to rehost noncritical applications, while rearchitecting applications that are more complex and business-critical. Let's look at these patterns.
+Strategies for migration to the cloud fall into four broad patterns: rehost, refactor, rearchitect, or rebuild. The strategy you adopt depends on your business drivers and migration goals. You might adopt multiple patterns. For example, you could choose to rehost noncritical applications while rearchitecting applications that are more complex and business-critical. Let's look at these patterns.
 
 | Pattern | Definition | When to use |
 | --- | --- | --- |
-| **Rehost** | Often known as lift-and-shift migration, this option doesn't require code changes. You can use it to migrate your existing applications to Azure quickly. Each application is migrated to reap the benefits of the cloud without the risk and cost associated with code changes. | When you need to move applications quickly to the cloud. <br><br> When you want to move an application without modifying it. <br><br> When your applications are designed to take advantage of [Azure infrastructure as a service (IaaS)](https://azure.microsoft.com/overview/what-is-iaas/) scalability after migration. <br><br> When applications are important to your business, but you don't need to immediately change application capabilities. |
-| **Refactor** | Often known as "repackaging," refactoring requires minimal changes to applications so that they can connect to [Azure platform as a service (PaaS)](https://azure.microsoft.com/overview/what-is-paas/) and use cloud offerings. <br><br> For example, you could migrate existing applications to Azure App Service or Azure Kubernetes Service (AKS). <br><br> Or, you could refactor relational and nonrelational databases into options such as Azure SQL Managed Instance, Azure Database for MySQL, Azure Database for PostgreSQL, and Azure Cosmos DB. | If your application can easily be repackaged to work in Azure. <br><br> If you want to apply innovative DevOps practices provided by Azure, or if you're thinking about DevOps using a container strategy for workloads. <br><br> For refactoring, you need to think about the portability of your existing code base and available development skills. |
-| **Rearchitect** | Rearchitecting for migration focuses on modifying and extending application functionality and the code base to optimize the application architecture for cloud scalability. <br><br> For example, you could break down a monolithic application into a group of microservices that work together and scale easily. <br><br> You could also rearchitect relational and nonrelational databases to a fully managed database solution, such as SQL Managed Instance, Azure Database for MySQL, Azure Database for PostgreSQL, and Azure Cosmos DB. | When your applications need major revisions to incorporate new capabilities or to work effectively on a cloud platform. <br><br> When you want to use existing application investments, meet scalability requirements, apply innovative DevOps practices, and minimize use of virtual machines. |
-| **Rebuild** | Rebuild takes things a step further by rebuilding an application from scratch using Azure cloud technologies. <br><br> For example, you could build greenfield applications with [cloud-native](https://azure.microsoft.com/overview/cloudnative/) technologies like Azure Functions, AI, SQL Managed Instance, and Azure Cosmos DB. | When you want rapid development, and existing applications have limited functionality and lifespan. <br><br> When you're ready to expedite business innovation (including DevOps practices provided by Azure), build new applications using cloud-native technologies, and take advantage of advancements in AI, blockchain, and IoT. |
+| **Rehost** | Often referred to as a lift-and-shift migration, this option doesn't require code changes. You can use it to migrate your existing applications to Azure quickly. Each application is migrated as is to reap the benefits of the cloud without the risk and cost associated with code changes. | - When you need to move applications quickly to the cloud <br>- When you want to move an application without modifying it <br>- When your applications are designed to take advantage of [Azure infrastructure as a service (IaaS)](https://azure.microsoft.com/overview/what-is-iaas/) scalability after migration. <br>- When applications are important to your business, but you don't need to immediately change application capabilities. |
+| **Refactor** | Often referred to as a "repackaging," refactoring requires minimal changes to applications so that they can connect to [Azure platform as a service (PaaS)](https://azure.microsoft.com/overview/what-is-paas/) and use cloud offerings. <br>- For example, you could migrate existing applications to Azure App Service or Azure Kubernetes Service (AKS). <br>- Or, you could refactor relational and nonrelational databases into options such as Azure SQL Managed Instance, Azure Database for MySQL, Azure Database for PostgreSQL, and Azure Cosmos DB. | If your application can easily be repackaged to work in Azure <br>- If you want to apply innovative DevOps practices provided by Azure, or if you're thinking about DevOps using a container strategy for workloads <br>- For refactoring, you need to think about the portability of your existing code base and available development skills. |
+| **Rearchitect** | Rearchitecting for migration focuses on modifying and extending application functionality and the code base to optimize the application architecture for cloud scalability. <br>- For example, you could break down a monolithic application into a group of microservices that work together and scale easily. <br>- You could also rearchitect relational and nonrelational databases to a fully managed database solution, such as SQL Managed Instance, Azure Database for MySQL, Azure Database for PostgreSQL, and Azure Cosmos DB. | When your applications need major revisions to incorporate new capabilities or to work effectively on a cloud platform <br>- When you want to use existing application investments, meet scalability requirements, apply innovative DevOps practices, and minimize use of virtual machines |
+| **Rebuild** | Rebuild takes things a step further by rebuilding an application from scratch using Azure cloud technologies. <br>- For example, you could build greenfield applications with [cloud-native](https://azure.microsoft.com/overview/cloudnative/) technologies like Azure Functions, AI, SQL Managed Instance, and Azure Cosmos DB. | When you want rapid development, and existing applications have limited functionality and lifespan <br>- When you're ready to expedite business innovation (including DevOps practices provided by Azure), build new applications using cloud-native technologies, and take advantage of advancements in AI, blockchain, and IoT. |
 
 ## Migration example articles
 
@@ -54,7 +54,7 @@ This series focuses on each migration scenario, which is driven by slightly diff
 
 | Article | Details |
 | --- | --- |
-| [Assess on-premises resources for migration to Azure](../../plan/contoso-migration-assessment.md) | This article in the Plan methodology, discusses how to run an assessment of an on-premises application running on VMware. In the article, an example organization assesses application VMs by using Azure Migrate and the application SQL Server database by using Data Migration Assistant. |
+| [Assess on-premises resources for migration to Azure](../../plan/contoso-migration-assessment.md) | This article in the Plan methodology discusses how to run an assessment of an on-premises application running on VMware. In the article, an example organization assesses application VMs by using Azure Migrate and the application SQL Server database by using Data Migration Assistant. |
 
 ### Infrastructure
 
@@ -74,7 +74,7 @@ This series focuses on each migration scenario, which is driven by slightly diff
 | --- | --- |
 | [Migrate SQL Server databases to Azure](./contoso-migration-sql-server-db-to-azure.md) | This article demonstrates how the fictional company Contoso assessed, planned, and migrated its various on-premises SQL Server databases to Azure. |
 | [Rehost an application on an Azure VM and SQL Managed Instance](./contoso-migration-rehost-vm-sql-managed-instance.md) | This article provides an example of a lift-and-shift migration to Azure for an on-premises application. This process involves migrating the application front-end VM by using Azure Migrate and the application database to SQL Managed Instance by using [Azure Database Migration Service](/azure/dms/dms-overview). |
-| [Rehost an application on Azure VMs using SQL Server Always On availability groups](./contoso-migration-rehost-vm-sql-ag.md) | This example shows how to migrate an application and data by using Azure-hosted SQL Server VMs. It uses Azure Migrate to migrate the application VMs and Database Migration Service. This allows the migration of the application database to a SQL Server cluster that's protected by an Always On availability group. |
+| [Rehost an application on Azure VMs using SQL Server Always On availability groups](./contoso-migration-rehost-vm-sql-ag.md) | This example shows how to migrate an application and data by using Azure-hosted SQL Server VMs. It uses Azure Migrate to migrate the application VMs and Database Migration Service to migrate of the application database to a SQL Server cluster that's protected by an Always On availability group. |
 
 ### Linux and open-source databases
 
@@ -98,9 +98,9 @@ This series focuses on each migration scenario, which is driven by slightly diff
 
 | Article | Details |
 | --- | --- |
-| [Refactor a Windows application using App Service and SQL Database](./contoso-migration-refactor-web-app-sql.md) | This example shows how to migrate an on-premises Windows-based application to an Azure web app. It also shows how to migrate the application database to an Azure SQL Database server instance by using [Database Migration Service](/azure/dms/dms-overview). |
-| [Refactor a Windows application using App Service and SQL Managed Instance](./contoso-migration-refactor-web-app-sql-managed-instance.md) | This example shows how to migrate an on-premises Windows-based application to an Azure web app. It also shows how to migrate the application database to SQL Managed Instance by using [Database Migration Service](/azure/dms/dms-overview). |
-| [Refactor a Linux application to multiple regions using App Service, Azure Traffic Manager, and Azure Database for MySQL](./contoso-migration-refactor-linux-app-service-mysql.md) | This example shows how to migrate an on-premises Linux-based application to an Azure web app on multiple Azure regions by using Traffic Manager to integrate with GitHub for continuous delivery. The application database is migrated to an Azure Database for MySQL instance. |
+| [Refactor a Windows application by using App Service and SQL Database](./contoso-migration-refactor-web-app-sql.md) | This example shows how to migrate an on-premises Windows-based application to an Azure web app. It also shows how to migrate the application database to an Azure SQL Database server instance by using [Database Migration Service](/azure/dms/dms-overview). |
+| [Refactor a Windows application uby sing App Service and SQL Managed Instance](./contoso-migration-refactor-web-app-sql-managed-instance.md) | This example shows how to migrate an on-premises Windows-based application to an Azure web app. It also shows how to migrate the application database to SQL Managed Instance by using [Database Migration Service](/azure/dms/dms-overview). |
+| [Refactor a Linux application to multiple regions by using App Service, Azure Traffic Manager, and Azure Database for MySQL](./contoso-migration-refactor-linux-app-service-mysql.md) | This example shows how to migrate an on-premises Linux-based application to an Azure web app on multiple Azure regions by using Traffic Manager to integrate with GitHub for continuous delivery. The application database is migrated to an Azure Database for MySQL instance. |
 | [Rebuild an application in Azure](./contoso-migration-rebuild.md) | This article provides an example of rebuilding an on-premises application by using a range of Azure capabilities and managed services. These capabilities and services include App Service, AKS, Azure Functions, Azure Cognitive Services, and Azure Cosmos DB. |
 | [Refactor Team Foundation Server to Azure DevOps Services](./contoso-migration-tfs-vsts.md) | This article shows an example migration of an on-premises Team Foundation Server deployment to Azure DevOps Services in Azure. |
 
@@ -135,7 +135,7 @@ This series focuses on each migration scenario, which is driven by slightly diff
 
 ### Demo applications
 
-The example articles provided in these section use two demo applications: SmartHotel360 and osTicket.
+The example articles provided in this section use two demo applications: SmartHotel360 and osTicket.
 
 **SmartHotel360:** This test application was developed by Microsoft to use when you work with Azure. It's provided under an open-source license, and you can download it from [GitHub](https://github.com/Microsoft/SmartHotel360). It's an ASP.NET application connected to a SQL Server database. In the scenarios discussed in these articles, the current version of this application is deployed to two VMware VMs running Windows Server 2008 R2 and SQL Server 2008 R2. These application VMs are hosted on-premises and managed by vCenter Server.
 
