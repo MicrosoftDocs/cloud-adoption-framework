@@ -26,20 +26,6 @@ Subscriptions are a unit of management, billing, and scale within Azure. Subscri
 
 Most deployments will start with a single data landing zone connected to a data management landing zone. The single data landing zone can contain multiple domains and data applications.
 
-There are factors that will drive you towards multiple data landing zones such:
-
-| Factor              | Description                                                                                                                                                                                                     |
-|---------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Region              |  Multi-region data landing zone deployments.                                                                                                                                                                    |
-| Quotas              |  Consider that subscription quotas aren't capacity guarantees and are applied on a per region basis.                                                                                                            |
-| Data sovereignty    |  Due to regulations like California Consumer Privacy Act or EU's GDPR some data are required to be stored in a specific region or have region specific policies enforced.                                       |
-| Azure policies      |  Requirements for different Azure policies to be applied to a data landing zone                                                                                                                                 |
-| Management boundary |  Subscriptions provide a management boundary for governance and isolation, which clearly separates concerns.                                                                                                    |
-|  Networking         |  A landing zone is provisioned with a virtual network and given that vnets are regionally bound a new region implies a new landing zone and the vnets needs to bee peered to enable cross domain communication. |
-|  Limits             | There are some limits associated with a subscription scope and splitting into several subscriptions mitigate the chance of hitting any of these limits.                                                         |
-|  Cost Allocation    | Using a separate subscription creates a clean cut for cost allocation, but you can also use tags to achieve the same at resource group level                                                                                                                                                    |
-
-For a data mesh implementation, when deciding on the distribution of your data landing zones and your data domains also look at:
 
 | Factor   | Description                                                                                                                                                                                                                              |
 |----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
