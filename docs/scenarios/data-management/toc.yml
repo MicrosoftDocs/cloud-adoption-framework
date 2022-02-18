@@ -59,6 +59,8 @@ items:
       href: ./govern-data-quality.md
     - name: Data sharing agreements
       href: ./govern-data-sharing-agreements.md
+    - name: Metadata
+      href: ./govern-metadata-standards.md
 
   - name: Secure your analytics estate
     items:

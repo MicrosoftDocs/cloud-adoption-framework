@@ -84,7 +84,7 @@ Start with what reliability means and agree upon the definition among all key st
 
 #### Service Level Agreement - Data Team to Sales Team
 
-|||
+| Agreement | Description |
 |----|----|
 | **Business Area** | The Data team promises to empower sales team to make data driven decisions|
 |**Promise** | The Data promise to deliver yesterday's sales data that powers the sales dashboard.<br> This data can answer sales and conversion rates for all US regions.<br> Data pipelines will deliver data powering sales dashboard before 6:00 UTC|

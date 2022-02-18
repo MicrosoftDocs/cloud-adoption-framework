@@ -112,7 +112,7 @@ Data mesh decentralizes data ownership by distributing it among domain teams. Fo
   * Metadata for improved discoverability
   * Versioning information
   * Linkage of data attributes and business terms
-  * Integrity [metadata](./metadata-standards.md) information for allowing domains to better integrate with other domains
+  * Integrity [metadata](../govern-metadata-standards.md) information for allowing domains to better integrate with other domains
 * Adhering to data interoperability standards, including protocols, data formats and data types
 * Providing lineage by either linking source systems and integration services to scanners or manually providing lineage
 * Adhering to tasks related to data sharing, including IAM access review and creating data contracts
