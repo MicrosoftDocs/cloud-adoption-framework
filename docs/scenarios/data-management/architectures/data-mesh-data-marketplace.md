@@ -3,7 +3,7 @@ title: Data marketplace
 description: Learn about ata marketplace in Data Mesh
 author: PietheinStrengholt
 ms.author: pstrengholt
-ms.date: 02/09/2022
+ms.date: 02/18/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -11,7 +11,7 @@ ms.custom: e2e-data-management, think-tank
 ---
 # Data marketplace
 
-Metadata has a strong relationship with data marketplaces. A data marketplace is an intuitive, secure, centralized, and standardized data shopping experience for all your data consumers. It is an approach to bring data closer to data analysts and scientists by utilizing the underlying metadata intensively. It is also meant to keep track over all your data products, which are typically stored across a range of data domains.
+Data marketplaces have a strong relationship with [Metadata](../govern-metadata-standards.md). A data marketplace is an intuitive, secure, centralized, and standardized data shopping experience for all your data consumers. It is an approach to bring data closer to data analysts and scientists by utilizing the underlying metadata intensively. It is also meant to keep track over all your data products, which are typically stored across a range of data domains.
 
 To democratize data via your data mesh architecture, you need to focus on several important areas:
 
