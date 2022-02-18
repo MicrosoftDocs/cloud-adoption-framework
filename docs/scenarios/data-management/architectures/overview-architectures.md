@@ -52,7 +52,7 @@ This section includes many reference templates that can be deployed.
 
 The reference architecture is secure by design. It uses a multilayered security approach to overcome common data exfiltration risks that are raised by customers.
 
-This article on how to connect to environments securely via Azure Bastion host and jump boxes.
+This article on how to [connect to environments privately](connect-to-environments-privately.md) via Azure Bastion host and jump boxes.
 
 ## Frequently asked questions
 
