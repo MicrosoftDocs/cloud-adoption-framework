@@ -49,6 +49,10 @@ items:
       href: ./govern-components.md
     - name: Technology needed for end-to-end governance
       href: ./govern-technology.md
+    - name: Data Catalog
+      href: ./govern-data-catalog.md
+    - name: Data Lineage
+      href: ./govern-lineage.md
     - name: Master data management
       href: ./govern-master-data.md
     - name: Data quality
@@ -86,6 +90,8 @@ items:
       href: ./eslz-platform-automation-and-devops.md
     - name: Provision the platform
       href: ./eslz-provision-platform.md
+    - name: Observability
+      href: ./manage-observability.md
 
   - name: Well-architected considerations
     href: ./well-architected-framework.md
@@ -98,7 +104,8 @@ items:
       href: ./architectures/data-management-landing-zone.md
     - name: Data landing zone
       href: ./architectures/data-landing-zone.md
-
+    - name: Models
+      href: ./architectures/models-cdm.md
     - name: Data Products
       items:
         - name: Overview
@@ -129,18 +136,14 @@ items:
         href: ./architectures/what-is-data-product.md
       - name: Domain agnostics infra
         href: ./architectures/domain-agnostic-infra.md
-      - name: Observability
-        href: ./architectures/observability.md
       - name: Data Onboarding
         href: ./architectures/data-onboarding.md
       - name: Registration of data products
         href: ./architectures/registration-of-data-products.md        
       - name: Data mesh governance
         href: ./architectures/data-mesh-governance.md
-      - name: Metadata standards and Data Marketplace
-        href: ./architectures/metadata-standards.md
-      - name: Models
-        href: ./architectures/models-cdm.md
+      - name: Data Marketplace
+        href: ./architectures/data-mesh-data-marketplace.md
       - name: Data mesh master data management
         href: ./architectures/master-data-management.md        
 
