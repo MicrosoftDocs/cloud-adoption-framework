@@ -12,7 +12,7 @@ ms.custom: e2e-data-management, think-tank
 
 # Data sharing agreements in data management and analytics
 
-The data management and analytics scenario recommends can use Azure Active Directory (Azure AD) entitlement management or Azure Purview data owner policies to control access and sharing of data. Your organization might also require a sharing and contract repository. This repository should be in the [data management landing zone](architectures/data-management-landing-zone.md).
+The data management and analytics scenario recommends to use Azure Active Directory (Azure AD) entitlement management or Azure Purview data owner policies to control access and sharing of data. Your organization might also require a sharing and contract repository. This repository should be in the [data management landing zone](architectures/data-management-landing-zone.md).
 
 The data usage phase is important to understanding how data is consumed or distributed in your organization. In this phase, ensure accountability and transparency by using data sharing agreements. A data sharing agreement is a formal contract that defines the shared data and how that data can be used.
 
