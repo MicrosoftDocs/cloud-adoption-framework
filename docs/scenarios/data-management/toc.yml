@@ -137,8 +137,8 @@ items:
         href: ./architectures/data-domains.md
       - name: Data Products
         href: ./architectures/what-is-data-product.md
-      - name: Domain agnostics infra
-        href: ./architectures/domain-agnostic-infra.md
+      - name: Self-serve data platforms
+        href: ./architectures/self-serve-data-platforms.md
       - name: Data Onboarding
         href: ./architectures/data-onboarding.md
       - name: Registration of data products
