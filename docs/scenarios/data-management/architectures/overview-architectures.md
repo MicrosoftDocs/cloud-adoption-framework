@@ -1,6 +1,6 @@
 ---
-title: Scaling data management and analytics in Azure
-description: Learn how to scale data management and analytics in Azure. Decide whether to use a single or multiple data landing zones to design a scalable platform.
+title: Data management and analytics architecture overview in Azure
+description: Learn about Data management and analytics architecture overview in Azure
 author: mboswell
 ms.author: mboswell
 ms.date: 02/10/2022
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Scaling data management and analytics in Azure
+# Architectures Overview
 
 A scalable data platform is critical to accommodate the rapid growth of data. Vast amounts of data are generated every second. The amount of data to deal with is expected to grow exponentially over the next few years. The speed at which new data is generated and the speed at which data moves will increase. Even with more data, users expect that they'll get fast query results. Users expect to wait minutes rather than hours for results.
 
@@ -28,11 +28,23 @@ Most deployments will start with a single data landing zone connected to a data 
 
 There are factors that will drive you towards multiple data landing zones such:
 
-- Multi-region data landing zone deployments
-- Requirements for different Azure policies to be applied to a data landing zone
-- Subscriptions serve as a scale unit so component workloads can scale within the platform [subscription limits](/azure/azure-resource-manager/management/azure-subscription-service-limits). Make sure you consider subscription resource limits during your workload design sessions.
-- Subscriptions provide a management boundary for governance and isolation, which clearly separates concerns.
-- Consider that subscription quotas aren't capacity guarantees and are applied on a per-region basis.
+| Factor              | Description                                                                                                                                                                                                     |
+|---------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Region              |  Multi-region data landing zone deployments.                                                                                                                                                                    |
+| Quotas              |  Consider that subscription quotas aren't capacity guarantees and are applied on a per region basis.                                                                                                            |
+| Data sovereignty    |  Due to regulations like California Consumer Privacy Act or EU's GDPR some data are required to be stored in a specific region or have region specific policies enforced.                                       |
+| Azure policies      |  Requirements for different Azure policies to be applied to a data landing zone                                                                                                                                 |
+| Management boundary |  Subscriptions provide a management boundary for governance and isolation, which clearly separates concerns.                                                                                                    |
+|  Networking         |  A landing zone is provisioned with a virtual network and given that vnets are regionally bound a new region implies a new landing zone and the vnets needs to bee peered to enable cross domain communication. |
+|  Limits             | There are some limits associated with a subscription scope and splitting into several subscriptions mitigate the chance of hitting any of these limits.                                                         |
+|  Cost Allocation    | Using a separate subscription creates a clean cut for cost allocation, but you can also use tags to achieve the same at resource group level                                                                                                                                                    |
+
+For a data mesh implementation, when deciding on the distribution of your data landing zones and your data domains also look at:
+
+| Factor   | Description                                                                                                                                                                                                                              |
+|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Latency  | What domains collaborate a lot on large amounts of data, if they do you want to reduce the amount of data transferred. It will increase latency and in case of cross region you might increase cost.                                     |
+| Security | Some service deployments or configurations requires elevated privileges on a subscription and giving that to users in one domain will implicitly give them the privileges in another domain withing the scope of that same subscription. |
 
 Further considerations are documented in the cloud adoption framework guidance for [Subscriptions](../../../ready/landing-zone/design-area/resource-org-subscriptions.md).
 
