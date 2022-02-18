@@ -16,7 +16,7 @@ Data mesh is an exciting new approach to designing and developing data architect
 
 ## Azure data management and analytics scenario
 
-When you want to build a data mesh on Azure, the recommended approach is to adopt [Azure data management and analytics scenario](./overview-architectures.md). This framework is a deployable reference architecture and comes with (open-source) templates and best practices. The architecture uses two major building blocks, which are fundamental for all deployment choices:
+When you want to build a data mesh on Azure, the recommended approach is to adopt [Azure data management and analytics scenario](../index.md). This framework is a deployable reference architecture and comes with (open-source) templates and best practices. The architecture uses two major building blocks, which are fundamental for all deployment choices:
 
 * Data management landing zone: this is the fundament of your data architecture. It contains all critical capabilities for data management, such data catalog, data lineage, API catalog, master data management, and so on.
 * Data management landing zones: these are subscriptions that host your analytics and AI solutions. It includes key capabilities to host an analytics platform.
@@ -32,12 +32,12 @@ Before showing any scenario, it's important to understand that all architectures
 The simplest deployment pattern for building a data mesh architecture is using one data management landing zone and a single data landing zone. Your data architecture in such a scenario would look like the image below:
 
 :::image type="content" source="../images/domain-agnostic-infra-01.png" alt-text="Single landing zone for when you're just starting or prefer to be in control" lightbox="../images/domain-agnostic-infra-01.png":::
-
+ 
 In this model, all of your functional data domains will settle down on the same data landing zone. A single subscription will hold a standard set of services, while resource groups segregate different data domains and data products. Standard data services will apply to all domains, which are, for example,  Azure Data Lake Store, Azure Logic Apps and Azure Synapse Analytics.
 
 All data domains follow the principles of data mesh: data follows domain ownership and data is treated like products. Also the platform is fully self-service, although variations of services are limited. A consideration for this deployment option can be that you want all domains to strongly adhere and conform to the same principles for data management. This deployment option could also make sense for smaller sized companies or greenfield projects. You want to embrace data mesh, but don't over-complicate things. Finally, this deployment could also be a choice when you're at the start of building something more complex. You plan for expanding into multiple landing zones at a later moment in time.
 
-## Source system- and consumer-aligned landing zones
+## Source system- and consumer-aligned landing zones.
 
 In the previous model, we didn't take into account other subscriptions or on-premises applications. Therefore, you can make a subtle variation to the previous model by adding a source system-aligned landing zone for managing all incoming data. Having two data landing zones, makes sense, because data onboarding is a difficult process. It remains one of the most challenging problems when using data at large. It also often requires extra tools for addressing integration challenges, which contrast to the way data consumption takes place. Therefore it's logical to distinguish between providing and consuming data.
 
@@ -52,7 +52,7 @@ On the right, you optimize for consumption and expect services aimed to turn dat
 The next deployment option is another iteration of the previous design. This deployment follows a governed mesh topology: data is distributed via a central hub, in which data is partitioned per domain, logically isolated and thus not integrated. The hub in this model uses its own (domain-agnostic) data landing zone and could be owned by a central data governance team overseeing what data is distributed to what other domains. The hub also carries services to facilitate data onboarding, so therefore the overlap with the previous deployment option.
 
 :::image type="content" source="../images/domain-agnostic-infra-03.png" alt-text="Hub-, generic- and special data landing zones" lightbox="../images/domain-agnostic-infra-03.png":::
-
+ 
 For domains requiring standard services for consuming, using, analyzing and creating new data, a generic data landing zone will be used. This single subscription will hold a standard set of services and in a way is similar to the single landing zone deployment as seen previously. In this configuration, I also encourage you to apply data virtualization, because most of your data products are already persisted in the hub. There's no need for more data duplication.
 
 In addition, this deployment allows for 'specials': More landing zones that can be provisioned when logically grouping domains aren't possible. For example, when regional or legal boundaries apply, or when domains have unique and contrasting requirements. Or situations where a strong global subsidiary governance is applied, with exceptions for overseas activities. In such a situation of segregation, you could deploy another data landing zones.
@@ -64,12 +64,12 @@ The hub deployment option is a consideration for organization that strongly need
 An approach to scalability is provisioning multiple data landing zones for grouping functional domains based on the cohesion and efficiency in the way of working and sharing data. In such a scenario, all of your data landing zones adhere to the same controls and auditing, but you allow for flexibility and design changes between different data landing zones.
 
 :::image type="content" source="../images/domain-agnostic-infra-04.png" alt-text="Functional and regionally aligned data landing zones" lightbox="../images/domain-agnostic-infra-04.png":::
-
+ 
 There are different aspects driving what functional data domains will be logically grouped together and become candidates for sharing a data landing zone. Regional boundaries, for example, could result in the implementation of the same blueprints. Ownership, security or legal boundaries might force domains to be segregated. Flexibility, pace of change or potentially selling or separating off your capabilities are important drivers too. More guidance and best practices on this subject can be found on [data domains](./data-domains.md).
 
 Different landing zones don't stand on themselves. If you have multiple zones, the zones can connect to data lakes hosted in other zones. This approach allows domains to collaborate across the enterprise. You could also apply polyglot persistence to mix different data store technologies, allowing domains to directly read data from other domains without the need of data duplication.
 
-When deploying multiple data landing zones, you should be aware that there's some management overhead attached to each data landing zone: VNET peering must be applied between all data landing zones, extra private endpoints that must be managed, and so on.
+When deploying multiple data landing zones, you should be aware that there's some management overhead attached to each data landing zone: VNET peering must be applied between all data landing zones, extra private endpoints that must be managed, and so on. 
 
 Deploying multiple data landing zones is good consideration when your data architecture is larger. You can scale a data mesh architecture by adding more landing zones to the architecture for addressing common needs of different domains. These landing zones use virtual network peering to connect to the data management landing zone and all other landing zones. This pattern allows you to share datasets and resources across zones. And by splitting into separate zones, you can spread workloads across Azure subscriptions and resources. This approach allows you to implement the data mesh organically.
 
@@ -84,3 +84,5 @@ It's important to stress out that multiple data management landing zones, should
 ## Conclusion
 
 A transition towards data mesh is mostly a cultural shift that comes with nuances, trade offs and considerations. For the technology part, you can use the data management and analytics scenario to obtain best practices and executable resources. The reference architectures as described in this article can be starting point for kick-starting your implementation.
+
+
