@@ -16,11 +16,13 @@ With larger, more sophisticated forms of cloud adoption, the journey to the clou
 
 Before you consider deploying the data management and analytics scenario, you need to understand how close you're to agility within your organization today.
 
-Many enterprises have outdated data architectures that don't scale to the needs of large and multidisciplinary organizations. Centralized knowledge and capabilities introduce a bottleneck on a linear process workflow.
+Many enterprises have outdated data architectures that don't scale to the needs of multidisciplinary organizations. Centralized knowledge and capabilities introduce a bottleneck on a linear process workflow.
 
-If you're a small enterprise with limited staff, then having a centralized model mixed with some business subject matter experts might fit your operations model.
+- If you're a small enterprise with limited staff, then having a centralized model mixed with some business subject matter experts might fit your operations model.
 
-If you're a large multinational enterprise with hundreds of data engineers and analysts spread around the business, a distributed operating model like data mesh might fit your business better. Data management and analytics scenario provides guidance to deploy the infrastructure to underpin these operation models.
+- If you're a large multinational enterprise with hundreds of data engineers and analysts spread around the business, a distributed operating model like data mesh might fit your business better.
+
+Data management and analytics scenario provides guidance to deploy the infrastructure to underpin these operation models.
 
 Your business should consider how to best:
 
