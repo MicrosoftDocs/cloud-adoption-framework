@@ -36,11 +36,7 @@ This section focuses on the details of a physical implementation of the data man
 
 The data management and analytics scenario is scalable and [Scaling Data management and analytics scenario](scaling-architectures.md) addresses how to think about the number of data management landing zones you'll require.
 
-## Data analytics patterns
-
-Today, two major patterns exist in analytics - Data Lakehouse and Data mesh.
-
-### Data mesh
+## Data mesh
 
 [Data mesh](what-is-data-mesh.md) can be implemented using the data management and analytics scenario.
 
@@ -61,8 +57,6 @@ This article on how to connect to environments securely via Azure Bastion host a
 ## Frequently asked questions
 
 As we learn, we continue to put curate [Frequently asked questions](frequently-asked-questions.md) for others to access.
-
-[!INCLUDE [deployment-templates-table](../includes/deployment-templates-table.md)]
 
 ## Next steps
 
