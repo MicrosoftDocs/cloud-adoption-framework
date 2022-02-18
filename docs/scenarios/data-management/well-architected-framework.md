@@ -57,4 +57,4 @@ On top of these environmental controls, the workload team should consider:
 
 ## Next steps
 
-[Introduction to architectures for data management and analytics](architectures/architectures.md)
+[Introduction to architectures for data management and analytics](architectures/overview-architectures.md)
