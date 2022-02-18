@@ -12,7 +12,7 @@ ms.custom: e2e-data-management, think-tank
 
 # Data Sharing Overview
 
-In a decentralized architecture in which teams are responsible for their own data products, it's important to make formal sharing agreements between domains. A data contract is such a formal agreement between domains. It describes the data to be exchanged, its attributes, properties, its lifecycle, access controls and expected consumer usage patterns. Such contracts deliver better resilience to change. They avoid disruptive changes won't destabilize others. They also help to make your architecture secure and compliant.
+In a decentralized architecture in which teams are responsible for their own data products, it's important to make formal sharing agreements between [data domains](./data-domains.md). A data contract is such a formal agreement between domains. It describes the data to be exchanged, its attributes, properties, its lifecycle, access controls and expected consumer usage patterns. Such contracts deliver better resilience to change. They avoid disruptive changes won't destabilize others. They also help to make your architecture secure and compliant.
 
 Data contracts focus on different areas, which are:
 
@@ -26,7 +26,7 @@ Data contracts focus on different areas, which are:
 
 - Enterprise identifiers: For data consistency in a distributed environment, you should consider introducing enterprise identifiers. These identifiers uniquely identify enterprise data, such as [master data management identifiers](./master-data-management.md), enterprise reference data or data that can be used for row-level filtering and access management. Team, for example, might want to encapsulate metadata inside their data for security purposes. Such metadata must be uniquely identified.
 
-It's recommended to store all of your data contracts in a central [metadata](../govern-metadata-standards.md) repository. Such a contract repository is much more database. It's a control framework for your domain teams to discover data, validate and build on their data integrity. A well designed central contract repository also enables teams to analyze, see trends and violations. A good data contract repository also indirectly contributes to better data quality.
+It's recommended to store all of your data contracts in a central [metadata](../govern-metadata-standards.md) repository. Such a contract repository is much more than a database. It's a control framework for your domain teams to discover data, validate and build on their data integrity. A well designed central contract repository also enables teams to analyze, see trends and violations. A good data contract repository also indirectly contributes to better data quality.
 
 About the governance, it's the data product owner or data steward's job to ensure the contract integrity, including the contract lifecycle and modifications.
 
