@@ -46,9 +46,7 @@ A data landing zone is equal to an Azure subscription and allows single or multi
 
 Subscriptions are a unit of management, billing, and scale within Azure. Subscriptions play a critical role when you're designing for large-scale Azure adoption.
 
-Most deployments will start with a single data landing zone connected to a data management landing zone. The single data landing zone can contain multiple domains and data applications.
-
-### Scaling with data landing zones
+## Scaling with data landing zones
 
 Data management and analytics scenario is centered around the concepts of Data Management Zone and data landing zone. Each of these artifacts should land in a separate Azure subscription to allow for clear separation of duties, to follow the least privilege principal and to partially address the first issue mentioned in the [introduction](#introduction) around subscription scale issues. Hence, the minimal setup of Data management and analytics scenario consists of a single Data Management Zone and a single data landing zone.
 
@@ -101,7 +99,7 @@ Data management and analytics scenario places a strong emphasis on central catal
 
 Lastly, it needs to be highlighted that the prescriptive data management and analytics scenario architecture and the concept of data landing zones allows corporations to naturally increase the size of their data platform over time. Extra data landing zones can be added in a phased approach and customers aren't forced to start with a multi-data landing zone setup right from the start. When adopting the pattern, companies should start prioritizing few data landing zones and data products that should land inside them respectively, to make sure that the adoption of data management and analytics scenario is successful.
 
-### Scaling with Data Products
+## Scaling with Data Products
 
 Within a data landing zone, the Data management and analytics scenario allows organizations scale through the concept of data applications. A data application is a unit or component of the data architecture that encapsulates functionality for making read-optimized data product available for consumption by other data application. In the Azure context, a data application is an environment in form of resource group that allows cross-functional teams to implement data solutions and workloads on the platform. The associated team takes care of the end-to-end lifecycle of their data solution including ingest, cleansing, aggregation and serving tasks for a particular data-domain, subdomain, dataset or project.
 
@@ -113,7 +111,7 @@ In an ideal world, the data integration would be owned by the same team that own
 
 Integrated datasets from source systems become the foundation of the data platform and will enable Data Product teams to further innovate on top of the business fact tables to eventually improve decision making and optimize business processes. Both Data Integration and Data Product teams should offer SLAs to consumers and ensure hat agreements are met. These SLAs can be related to data quality, timeliness, error rates, uptime and other tasks.
 
-### Summary
+## Summary
 
 The sections above are summarizing the scaling mechanisms within Data management and analytics scenario that organizations can use to grow their data estate within Azure over time without running into well-known technical limitations. Both scaling mechanisms are helping to overcome different technical complexities and can be used in an efficient and simple way.
 

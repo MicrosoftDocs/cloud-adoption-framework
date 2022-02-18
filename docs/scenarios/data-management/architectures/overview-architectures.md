@@ -12,59 +12,58 @@ ms.custom: e2e-data-management, think-tank
 
 # Architectures Overview
 
-A scalable data platform is critical to accommodate the rapid growth of data. Vast amounts of data are generated every second. The amount of data to deal with is expected to grow exponentially over the next few years. The speed at which new data is generated and the speed at which data moves will increase. Even with more data, users expect that they'll get fast query results. Users expect to wait minutes rather than hours for results.
+In the previous sections, we've covered the data management and analytics scenario areas which you should consider before building out your first architecture.
 
-As a company, you want to enable business units to act on their own. Business units shouldn't rely on a central team to provision the environment, databases, and tools they need.
+| Section                         | Description                                                                                                                                                                                                            |
+|------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [**Building an Initial Strategy**](../strategy.md)| How to build out your data strategy and pivot to becoming a data driven organization
+| [**Defining your plan**](../plan.md)        | How to develop a plan for data management and analytics                                                                                                                                                                    |
+| [**Preparing analytics estate**](../ready.md)  | Overview of data management and data landing zones with key design area considerations such as enterpriser enrollment, networking, identity and access management, policies and business continuity and disaster recovery. |
+| [**Govern your analytics**](../govern.md)      | Requirements for governing data, data catalog, lineage, master data management, data quality, data sharing agreements and metadata                                                                                         |
+| [**Secure you analytics estate**](../secure.md) | How to security your analytics estate with authentication and authorization, data privacy and data access management                                                                                                       |
+| [**Organize people and teams**](../organize.md)   | How do you organize for effective operations, roles and teams, team functions                                                                                                                                              |
+| [**Manage your analytics estate**](../eslz-platform-automation-and-devops.md)| How do you provision the platform and the observability should you put in place for the scenario?                                                                                                                          |
 
-To extend your analytics platform to include other Azure services on demand, start by provisioning the platform with only the services you require. Extend your platform as you onboard new use cases. This approach allows your company to regulate the platform cost effectively.
+## Physical architecture
 
-When designing your analytics environment, consider regional dependencies and data residency requirements. Are there any local laws or regulations requiring data to stay in a specific location?
+This section focuses on the details of a physical implementation of the data management and analytics scenario. It maps out the physical architectures of [data management landing zone](data-management-landing-zone.md) and [data landing zone.](data-landing-zone.md).
 
-A data landing zone is equal to an Azure subscription and allows single or multiple data landing zones deployments. Data landing zones are connected to a data management landing zone for discovery and management of data. A data management landing zone is a single Azure subscription.
+## Data applications
 
-Subscriptions are a unit of management, billing, and scale within Azure. Subscriptions play a critical role when you're designing for large-scale Azure adoption.
+[Data applications](data-landing-zone-data-products.md) are a core concept of delivering a data product and can be aligned to both lakehouse and data mesh pattern.
 
-Most deployments will start with a single data landing zone connected to a data management landing zone. The single data landing zone can contain multiple domains and data applications.
+## Scaling Data management and analytics scenario
 
+The data management and analytics scenario is scalable and [Scaling Data management and analytics scenario](scaling-architectures.md) addresses how to think about the number of data management landing zones you'll require.
 
-| Factor   | Description                                                                                                                                                                                                                              |
-|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Latency  | What domains collaborate a lot on large amounts of data, if they do you want to reduce the amount of data transferred. It will increase latency and in case of cross region you might increase cost.                                     |
-| Security | Some service deployments or configurations requires elevated privileges on a subscription and giving that to users in one domain will implicitly give them the privileges in another domain withing the scope of that same subscription. |
+## Data analytics patterns
 
-Further considerations are documented in the cloud adoption framework guidance for [Subscriptions](../../../ready/landing-zone/design-area/resource-org-subscriptions.md).
+Today, two major patterns exist in analytics - Data Lakehouse and Data mesh.
 
-## Single data landing zone
+### Data mesh
 
-The following diagram shows an overview of a data management and analytics scenario platform with a data management landing zone and a single data landing zone.
+[Data mesh](what-is-data-mesh.md) can be implemented using the data management and analytics scenario.
 
-:::image type="content" source="../images/high-level-design-single-data-landing-zone.png" alt-text="Diagram of data management landing zone and single data landing zone.":::
+Whilst most the data management and analytics scenario guidance applies, there are some difference which needs to be taken into account. We highlight the data mesh specific for data domains, self-serve, onboarding data products, governance, data marketplace, data sharing and operating model.
 
-> [!NOTE]
-> Not all Azure services are represented in the diagram. It has been simplified to highlight the core concepts of how resources are organized within the architecture.
+## Deployment templates for data management and analytics scenario
 
-This approach allows you to conform to the principles of data management and analytics scenario. It gives you the option to add data landing zones as needed. This pattern builds out common core services with flexibility to add customizations. If you start with a single data landing zone, plan for expanding into multiple landing zones. Such planning avoids having to migrate data later.
+This section includes many reference templates that can be deployed.
 
-## Multiple data landing zones
+[!INCLUDE [deployment-templates-table](../includes/deployment-templates-table.md)]
 
-This diagram is an overview of a data management and analytics scenario platform with a central data management landing zone and multiple data landing zones:
+## Connect to environments privately
 
-:::image type="content" source="../images/high-level-design-multiple-landing-zones.png" alt-text="Diagram of data management landing zone and multiple data landing zones.":::
+The reference architecture is secure by design. It uses a multilayered security approach to overcome common data exfiltration risks that are raised by customers.
 
-> [!NOTE]
-> Not all Azure services are represented in the diagram. It has been simplified to highlight the core concepts of how resources are organized within the architecture.
+This article on how to connect to environments securely via Azure Bastion host and jump boxes.
 
-Data management and analytics scenario advocates consistent governance using a common architecture. The architecture defines baseline capabilities and policies. All data landing zones adhere to the same controls and auditing. Teams can create data pipelines, ingest sources, and create data products, such as reports and dashboards. Teams can do Spark/SQL analysis as needed. You can augment data landing zone capabilities by adding services to the capability in the policy. For instance, a team could add a third-party graph engine to address a niche business requirement.
+## Frequently asked questions
 
-If you have multiple data landing zones, the zones can connect to data lakes hosted in other zones. This approach allows groups to collaborate across the business.
+As we learn, we continue to put curate [Frequently asked questions](frequently-asked-questions.md) for others to access.
 
-> [!CAUTION]
-> We recommend against querying data cross region and instead recommend an approach to make sure that data is close to the compute executing it whilst respecting regional boundaries.
-
-When designing for multiple data landing zones, ensure direct communication between workloads with large amounts of traffic. For large workloads across multiple subscriptions, we recommend peering the virtual networks, see [Network topology and connectivity for data management and analytics landing zones](../eslz-network-topology-and-connectivity.md)
-
-Data management and analytics scenario places a strong emphasis on central cataloging and classification to protect data and allow various groups to discover data products.
+[!INCLUDE [deployment-templates-table](../includes/deployment-templates-table.md)]
 
 ## Next steps
 
-[Enterprise enrollment and Azure Active Directory tenants for data management and analytics scenario](../eslz-enterprise-enrollment-and-azure-ad-tenants.md)
+[Overview of the data management landing zone](data-management-landing-zone.md)
