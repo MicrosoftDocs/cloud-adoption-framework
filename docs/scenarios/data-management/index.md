@@ -104,7 +104,7 @@ The following common customer journeys support the cloud data management and ana
 
 - **Improve controls across your data estate.** Focus on [Govern your data estate](./govern.md) and [Secure your data estate](./secure.md) articles to integrate data management and analytics into existing operations.
 
-- **Influence changes to individual workloads:** As your data management and analytics processes improve, the central data governance teams will find requirements that depend on knowledge of the architecture behind individual workloads. Use the [Architecture](./architectures/architectures.md) articles to understand how you can use the scenario in for your use case.
+- **Influence changes to individual workloads:** As your data management and analytics processes improve, the central data governance teams will find requirements that depend on knowledge of the architecture behind individual workloads. Use the [Architecture](./architectures/overview-architectures.md) articles to understand how you can use the scenario in for your use case.
 
 - **Optimize individual workloads and workload teams.** Start with the [Azure Well-Architected Framework](./well-architected-framework.md) guidance to integrate data management and analytics strategies into individual workloads. The guidance describes best practices and architectures that central IT and governance teams typically deliver to accelerate individual workload development.
 

@@ -16,7 +16,7 @@ Data mesh is an exciting new approach to designing and developing data architect
 
 ## Azure data management and analytics scenario
 
-When you want to build a data mesh on Azure, the recommended approach is to adopt [Azure data management and analytics scenario](../index.md). This framework is a deployable reference architecture and comes with (open-source) templates and best practices. The architecture uses two major building blocks, which are fundamental for all deployment choices:
+When you want to build a data mesh on Azure, the recommended approach is to adopt [Azure data management and analytics scenario](./architectures.md). This framework is a deployable reference architecture and comes with (open-source) templates and best practices. The architecture uses two major building blocks, which are fundamental for all deployment choices:
 
 * Data management landing zone: this is the fundament of your data architecture. It contains all critical capabilities for data management, such data catalog, data lineage, API catalog, master data management, and so on.
 * Data management landing zones: these are subscriptions that host your analytics and AI solutions. It includes key capabilities to host an analytics platform.
