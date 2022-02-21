@@ -1,68 +1,16 @@
 ---
-title: Components needed for data governance
-description: Understand the components for data governance.
+title: Data governance processes
+description: Understand data governance processes
 author: mboswell
 ms.author: mboswell
-ms.date: 02/16/2022
+ms.date: 02/21/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Components needed for data governance
-
-At the top of the solution, is the data governance vision and [strategy](strategy.md). The strategy includes a vision statement, the stakeholders backing the data governance program, and goals of the program. These goals should be aligned with strategic business objectives to show contribution to common goals. The strategy also includes success metrics (KPIs) and targets to be reached to monitor the progress.
-
-There are two types of metrics to be considered.
-
-- **Risk management and compliance metrics:** Risk management and compliance metrics designed to measure improvements in data quality, security, privacy, and retention.
-
-- **Value creation metrics:** Value creation metrics help to monitor how data governance contributes to improving business value through the creation and use of trusted data. Business value might mean:
-
-- Reducing risk, such as protecting against a data breach
-- Reducing costs, for example, by eliminating data errors in business processes that cause unplanned costs to mount as people step in to fix them
-- Increasing revenue, such as providing high quality integrated and trusted data that improves accuracy of next best offer recommendations to drive up revenue
-
-The data governance strategy should include business cases where you describe the impact that ungoverned data is having on the business. Describing the business problems caused by ungoverned data helps to systematically identify candidate business cases. It also allows you to rank the business problems in order of severity and return on investment (ROI) when you solve the problems. Prioritizing problems where ungoverned data has the greatest business impact, is an effective way to get stakeholder sponsorship. It's effective because the priorities pinpoint the greatest opportunities to drive value.
-
-The data governance strategy should include the projects and initiatives needed to achieve the business objectives, meet targets, and deliver the ROI identified in business cases. It should include the budget given to these projects, who is leading the data governance program, and who is accountable for achieving them. It might also include some data principles. Two examples of data principles are:
-
-- Data should be treated as an asset
-
-- Data is the property of the company and should be shared
-
-## Data and the data lifecycle that require governance
-
-Data means data entities, documents, unstructured images, video, and audio. Examples of data entities are customer, product, employee, supplier, order, invoice, payment, and asset.
-
-:::image type="content" source="./images/data-life-cycle.png" alt-text="Diagram of the data life cycle.":::
-
-Examples of data entities include:
-
-- Customer
-- Product
-- Employee
-- Supplier
-- Order
-- Invoice
-- Payment
-- Asset
-- Risk
-
-Examples of documents include:
-
-- Supplier contract
-- Annual report
-- Product brochure
-
-The data governance solution should enable you to govern data throughout the lifecycle. That means governing data creation and ingestion protection, storage, use, maintenance, archiving, and destruction.
-
-## Data governance roles and responsibilities guidance for people
-
-There are many data governance roles and responsibilities for people. To learn more, see [Data governance roles and responsibilities](./organize-roles-and-teams.md#data-governance-roles-and-responsibilities).
-
-## Data governance processes
+# Data governance processes
 
 There are four categories of data governance processes.
 
@@ -114,27 +62,6 @@ Govern data by combining this classification scheme with policies and rules. Use
 Once you define policies and rules in a data catalog for each class in a data governance classification scheme, they can be passed to other technologies from a data catalog, via APIs, for them to enforce. Instead, a common data management platform that can connect to multiple data stores could potentially enforce them.
 
 It should then be possible to monitor data quality, privacy, access security, usage, maintenance, and retention of specific data entities throughout their lifecycle.
-
-## Data governance component summary
-
-In summary, this guidance focuses on technologies needed for data governance.
-
-- A data catalog that includes:
-  - A business glossary
-  - Automated data discovery, profiling, tagging, cataloging, and mapping to a glossary
-  - Automated sensitive data detection and governance classification
-  - Interoperability with other catalogs, tools, and applications to share metadata via APIs and open standards
-- Data lakes to ingest and process data
-- Enterprise data software with built-in support for:
-  - Datacenter, multicloud, and edge data connectivity
-  - Data stewardship tooling
-  - Data cleansing and integration
-  - Metadata lineage
-  - Data privacy masking
-  - Universal data access security across multiple data stores in a distributed data landscape
-- Data stores that support data encryption, dynamic data masking, and integration with the data catalog
-- AI assisted data governance
-- Master and reference data management
 
 ## Next steps
 

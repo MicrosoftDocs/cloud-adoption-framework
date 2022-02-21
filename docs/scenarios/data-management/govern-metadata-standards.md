@@ -10,9 +10,7 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Metadata Standards and Data Marketplace
-
-## Metadata Standards
+# Metadata Standards
 
 Metadata Management has a crucial role in your data architecture. Metadata is data about data. It describes other data, providing a reference that helps you to find, secure and control data. Metadata also binds data together. It can be used for validating the integrity and quality of the data, routing or replicating it to the new location, transforming the data, and knowing its meaning are all performed through metadata. Metadata is also essential in democratizing data through self-service portals.
 
@@ -29,7 +27,7 @@ Before you start implementing and deciding what metadata to manage centrally or 
 
 After you know what metadata you need, you need to find a place for storing and processing metadata. This brings you to Azure Purview.
 
-### Recommendation: Use Azure Purview for managing your data estate at large
+## Recommendation: Use Azure Purview for managing your data estate at large
 
 [Azure Purview](/azure/purview) is a unified data governance solution that helps you manage and govern your on-premises, multicloud, and software-as-a-service (SaaS) data. It does metadata management at scale, because it's a fully automated service that intelligently performs data discovery, data scanning and access management. It also provides a holistic map for providing many insights of your data mesh architecture.
 
@@ -37,8 +35,12 @@ When implementing Azure Purview, it's recommend not introducing too much change 
 
 For your domain-oriented architecture, it's recommended to align your Azure Purview Collections and Glossaries with your data domains. Collections in Azure Purview are used to organize assets and sources. You can use a Collection as a boundary for your assets and sources and align this with a particular domain. You can do the same for your glossary: create hierarchy structures within your glossary and align these with your domains. Ask your domains to take ownership for creating relationships between your glossary terms and collection attributes. This creates transparency over data ownership and improves your data semantics.
 
-### Recommendation: Use Azure Cosmos DB for your company's Knowledge Graph
+## Recommendation: Use Azure Cosmos DB for your company's Knowledge Graph
 
 There's a growing trend in the industry to bring insights of your data closer to data analysts and scientists by using portals that use more metadata intensively. This trend is also known as "Data observability" and features concepts like Metadata Lake, Knowledge Graph or Metadata Graph to describe platforms where metadata is centralized. For building a unified view of data for your organization with custom user experience it's recommended to look at Azure Cosmos DB, which is a globally distributed, multi-model database service with NoSQL endpoints. It provides a graph database service via the Gremlin API to store massive graphs with billions of vertices and edges.
 
 The end result of this architecture is a company-wide graph which provides a unified view of all data in your organization using end-to-end context. The metadata lake is not about only storing information. It actively organizes your metadata as a graph by connecting it to many other services and tools. This allows you cross-correlate subject areas such as: domains, data quality, data usage, business capabilities, application functions, information from your technical architecture, operational events, organizational metadata, application ownership metadata, location information, application life cycle management information, and so on.
+
+## Next steps
+
+[Secure data management and analytics in Azure](./secure.md)

@@ -39,4 +39,4 @@ Azure Purview can scan and automatically classify documents. For example, if you
 
 ## Next steps
 
-[Technology needed for end-to-end governance](./govern-technology.md)
+[Data lineage](govern-lineage.md)

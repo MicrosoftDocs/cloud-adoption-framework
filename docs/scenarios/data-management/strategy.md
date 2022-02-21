@@ -191,12 +191,6 @@ For certain specialized workloads, customers can secure execution environments l
 
 The extract, transform, load (ETL) construct relates to online analytical processing (OLAP) and data warehousing needs. One of the useful capabilities is the ability to automatically detect schema drift.
 
-### Building blocks
-
-After you make all the capability provisions and take a principled architectural view, you should have the building blocks for your cloud adoption strategy.
-
-:::image type="content" source="./images/data-strategy-building-block.png" alt-text="Diagram of a decision tree for managing credentials." lightbox="./images/data-strategy-building-block.png":::
-
 ### Data strategy summary
 
 Taking a principled approach on other (but relevant) considerations, such as data governance and responsible AI, will pay dividends later.

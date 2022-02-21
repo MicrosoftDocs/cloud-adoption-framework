@@ -104,8 +104,6 @@ The same applies to reference data such as code sets and financial markets data.
 
 Finally, there's a requirement for metadata lineage. You can use an audit trail to know where data originated and how it has been transformed on route to a report or a data store. You can use metadata to trace who or what is maintaining data, including when and where it occurs.
 
-:::image type="content" source="./images/data-lineage.png" alt-text="Diagram of data lineage.":::
-
 ## Summary of what is needed for end-to-end data governance
 
 You need an end-to-end solution that can govern data throughout its lifecycle across data stores in the edge, multiple clouds, and the datacenter.

@@ -45,4 +45,4 @@ Absent a purpose-built MDMapplication, some of the technical capabilities needed
 
 ## Next steps
 
-[Data sharing agreements in data management and analytics](./govern-data-sharing-agreements.md)
+[Data quality](govern-data-quality.md)
