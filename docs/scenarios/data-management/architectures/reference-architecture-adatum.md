@@ -109,6 +109,5 @@ Continue to the [Relecloud scenario for data management and analytics in Azure](
 Learn more in:
 
 - [Overview of the data landing zone](./data-landing-zone.md)
-- [Data management and analytics scenario data integrations in Azure](./data-landing-zone-data-integration.md)
 - [Overview of the data management landing zone](./data-management-landing-zone.md)
 - [Data management and analytics scenario data products in Azure](./data-landing-zone-data-products.md)

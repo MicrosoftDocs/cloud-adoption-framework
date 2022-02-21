@@ -38,6 +38,10 @@ Azure policies in data management and analytics scenario  were developed with th
 
 [Implementing custom policies](/azure/governance/policy/tutorials/create-and-manage) allows you to do more with Azure Policy. Data management and analytics scenario comes with a set of pre-created policies to help you implement any required guardrails in your environment.
 
+Azure Policy should be the core instrument of the Azure (Data) Platform team to ensure compliance of resources within the Data management landing zone, data landing zones as well as other landing zones within the organization's tenant. This platform feature should be used to introduce guardrails and enforce adherence to the overall approved service configuration within the respective management group scope. The platform teams can use Azure Policy to, for example, enforce private endpoints for any storage accounts that are being hosted within the data platform environment or enforce TLS 1.2 encryption in transit for any connections being made to the storage accounts. When done right, this will prohibit any data application teams from hosting services in an incompliant state within the respective tenant scope.
+
+The responsible IT teams should use this platform feature to address their security and compliance concerns and open up for a self-service approach within (Data) Landing Zones.
+
 Data management and analytics scenario contains custom policies related to **resource and cost management, authentication, encryption, network isolation, logging, resilience, and more**.
 
 > [!NOTE]

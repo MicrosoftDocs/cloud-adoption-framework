@@ -55,20 +55,6 @@ It will also develop a better understanding of the skills your teams will need t
 
 Developing a skilling plan is part of building the capability to drive your data strategy. It's important to create a clear mapping of the product, services, or tools capabilities maturity assessment, along with your organization's people skills. The exercise assists with how to decide who will help deliver on the achieving the overall objectives.
 
-### Assess capability maturity
-
-There must be an exercise in assessing the data analytics and AI capabilities required to deliver on a specific use case, holistically or at an organizational level. However, there has to be some guiding principles and processes to complete the assessment:
-
-- Define current capabilities and ambition
-- Identify risks and blockers to progress
-- Clearly state benefits and key stakeholders
-- Link benefits to stated business objectives
-- Identify key dependencies
-
-As a next step, look at Azure native services, and start mapping what you need to deliver success.
-
-Along with the capability maturity assessment, culture is also another important aspect that is the key focus of this framework to make it successful.
-
 ## Prepare your plan with these tips
 
 This section provides an overview of the critical tips that can improve your overall plan.

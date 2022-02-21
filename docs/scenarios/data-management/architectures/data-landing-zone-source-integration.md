@@ -73,4 +73,4 @@ Figure 2 shows the subprocess of adding an integration to a pre-existing Azure D
 
 ## Next steps
 
-[Data management and analytics scenario data products in Azure](./data-landing-zone-data-products.md)
+[Data Application Reference Patterns](data-reference-patterns.md)

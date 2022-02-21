@@ -183,10 +183,6 @@ Azure Synapse Analytics is the provisioned integrated analytics service that acc
 
 A data integration resource group, is responsible for data ingestion and enrichment only from external sources such as metrics, finance, and CRM. This layer can operate in both real-time, batch and micro-batch.
 
-> [!IMPORTANT]
-> To learn more about each of the services deployed in the data integration resource group, see [Data management and analytics scenario data integrations in Azure](./data-landing-zone-data-integration.md).
->
-
 ## Data products layer
 
 A data landing zone can have multiple data products. You can create the data products by ingesting data from data integrations read data stores. Or you can create data products by other data products inside the same data landing zone, or from across multiple data landing zones. The creation of the data products is subject to approval of the data steward.
@@ -212,4 +208,4 @@ This resource group could host virtual machines for third-party visualization se
 
 ## Next steps
 
-[Data management and analytics scenario data integrations in Azure](./data-landing-zone-data-integration.md)
+[Data management and analytics scenario data integrations in Azure](./data-landing-zone-source-integration.md)
