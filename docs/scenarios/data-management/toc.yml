@@ -161,13 +161,6 @@ items:
         - name: Data virtualization
           href: ./architectures/data-virtualization.md
 
-      - name: Data mesh operating model
-        href: ./architectures/data-mesh-dataops.md
-      - name: Data mesh networking
-        href: ./architectures/data-mesh-networking-considerations.md
-      - name: Data mesh security
-        href: ./architectures/data-mesh-security.md
-
     - name: Deployment templates
       href: ./architectures/deployment-templates.md
     - name: Connecting to environments privately

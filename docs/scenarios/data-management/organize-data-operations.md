@@ -90,4 +90,4 @@ Deployments to test and production should only be managed through a CI/CD pipeli
 
 ## Next steps
 
-[Understand the personas and teams for data management and analytics in Azure](./organize-roles-and-teams.md)
+[Understand the roles and teams for data management and analytics in Azure](organize-roles-and-teams.md)
