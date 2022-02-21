@@ -57,4 +57,4 @@ On top of these environmental controls, the workload team should consider:
 
 ## Next steps
 
-[Overview of the cloud scale analytics data management landing zone in Azure](./architectures/data-management-landing-zone.md)
+[Introduction to architectures for data management and analytics](architectures/overview-architectures.md)

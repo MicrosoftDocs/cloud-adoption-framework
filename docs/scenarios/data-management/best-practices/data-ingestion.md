@@ -17,7 +17,7 @@ Data integrations and data products teams examine, transform, and release data i
 > [!IMPORTANT]
 > Data integrations don't transform data, but if the business has several use cases whose data needs to be joined together (for example, weather and location data), then the team could be asked to create this in the curated layer.\
 \
-> Data products teams can apply transformations and create their datasets in the data lake's curated layer and the [polyglot storage](https://techcommunity.microsoft.com/t5/data-architecture-blog/polyglot-persistence-with-azure-data-services/ba-p/1514912) they've chosen to use.
+> Data products teams can apply transformations and create their data products in the data lake's curated layer and the [polyglot storage](https://techcommunity.microsoft.com/t5/data-architecture-blog/polyglot-persistence-with-azure-data-services/ba-p/1514912) they've chosen to use.
 
 Azure provides several services to ingest and release data to native and third-party platforms. Different services can be used, depending on volume, velocity, variety, and direction. Some of these services are:
 
@@ -31,7 +31,7 @@ Some of these connectors support being used as a source (read) or as a sink (wri
 
 Proprietary native and third-party tooling provides niche capabilities to integrate with specialized systems and near-real-time replication.
 
-- [Azure Data Share](/azure/data-share/) supports organizations to securely share data with multiple external customers and partners. Once you create a data share account and add datasets, customers and partners can be invited to the data share. Data providers are always in control of the data that they've shared. Azure Data Share makes it simple to manage and monitor what data is shared, when it was shared, and who shared it.
+- [Azure Data Share](/azure/data-share/) supports organizations to securely share data with multiple external customers and partners. Once you create a data share account and add data products, customers and partners can be invited to the data share. Data providers are always in control of the data that they've shared. Azure Data Share makes it simple to manage and monitor what data is shared, when it was shared, and who shared it.
 
 > [!IMPORTANT]
 > Every data landing zone has an [ingest and processing resource group](../architectures/data-landing-zone.md#ingest-and-processing) that exists for enterprises with an ingestion framework engine. If you don't have this framework engine, the only recommended resource is deploying an Azure Databricks data science and engineering workspace, which would be used by data integrations to run complex ingestion. See the [automated ingestion framework](./automated-ingestion-pattern.md#ingest-new-data-sources-automated) for potential automation patterns.
@@ -80,20 +80,6 @@ Organizations might need to support scenarios where publishers generate high-vel
 Event Hubs and IoT Hub are scalable event processing services that can ingest and process large event volumes and data with low latency and high reliability. Event Hubs is designed as a big data streaming and event ingestion service. IoT Hub is a managed service that serves as a central message hub for bidirectional communication between an IoT application and the devices it manages. From there, data can either be exported to a data lake at regular intervals (batch) and processed with Azure Databricks in near-real-time via Apache Spark Streaming, Azure Data Explorer, Stream Analytics, or Time Series Insights.
 
 The last Event Hubs or Apache Kafka landing zone inside the use case's specific landing zone should send its aggregated data to the data lake's raw layer in one of the data landing zones and to Event Hubs related to the data integration resource group in the data landing zone.
-
-## Enforce data quality
-
-As data is ingested, data quality checks should be implemented near the sources and before downstream subscribers use the datasets. If there's batch ingestion from the data lake, these checks should be done when moving data from raw to enriched.
-
-![Diagram of how to implement data quality during ingestion.](../images/adls-dq.png)
-
-- Before data is moved to enriched layer, its schema and columns are checked against the metadata registered in the data catalog.
-
-- If the data contains errors, the load will be aborted, and integration ops should be notified of the failure.
-
-- If the schema and column checks pass, the data is loaded into the enriched layers with conformed data types.
-
-- Before you move into the enriched layer, a data quality process checks for duplicate data, unknown values, and data type compliance. Integration operations can configure more checks and receive notifications about violations.
 
 ## Monitor ingestion
 

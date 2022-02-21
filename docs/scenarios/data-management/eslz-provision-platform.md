@@ -99,8 +99,8 @@ At the start of the project, the data platform has one Azure DevOps project with
 
 - One repository for the data management landing zone, pipelines, and a service connection to the cloud environment.
 - One template repository for the data landing zone, pipelines to deploy a data landing zone instance, and service connections to cloud environments.
-- One template repository for a data integration service, pipelines to deploy a data integration resource group, and service connections to cloud environments. These connections are forked from data landing zone Azure DevOps projects.
-- One template repository for data product services, pipelines to deploy a data product instance, and service connections to cloud environments. These connections are forked from data landing zone Azure DevOps projects.
+- One template repository for a data integration service, pipelines to deploy a data integration resource group, and service connections to cloud environments. These connections are forked from data landing zone Azure DevOps Projects.
+- One template repository for data product services, pipelines to deploy a data product instance, and service connections to cloud environments. These connections are forked from data landing zone Azure DevOps Projects.
 
 Once data landing zones have been deployed, cloud scale analytics prescribes that:
 

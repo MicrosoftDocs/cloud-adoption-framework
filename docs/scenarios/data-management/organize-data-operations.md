@@ -3,7 +3,7 @@ title: DevOps automation for data management and analytics in Azure
 description: Learn about DevOps automation for the cloud scale analytics in Azure.
 author: abdale
 ms.author: hamoodaleem
-ms.date: 12/15/2021
+ms.date: 02/17/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -35,7 +35,7 @@ Pipelines can contain multiple stages with various tasks and can have simple to 
 
 ### Infrastructure as code
 
-The term *code* in IaC often raises concerns for IT staff without a developer background, but IaC don't refer to writing code the way in which typical software developers do it. However, it adopts many of the same tools and principles from the software development processes to deliver infrastructure in a predictable format.
+The term *code* in IaC often raises concerns for IT staff without a developer background, but IaC doesn't refer to writing code the way in which typical software developers do it. However, it adopts many of the same tools and principles from the software development processes to deliver infrastructure in a predictable format.
 
 IaC helps infrastructure to be provisioned, configured, and managed as part of a DevOps pipeline with full change controls, audit history, tests, validations, and approval processes, ensuring that tasks can be delegated to the appropriate roles for the project without compromising security and compliance.
 
@@ -75,7 +75,7 @@ In Azure Resource Manager templates, the core provisioning is in the **resources
 ```
 
 > [!IMPORTANT]
-> Every layer of the cloud scale analytics such as data management landing zone, data landing zones, data integrations, or data products, should be defined with a declarative language like Azure Resource Manager or Terraform, checked into a repository, and deployed through CI/CD pipelines. This allows teams to track and version changes to the infrastructure and configuration of Azure scope while supporting different architecture levels to be automated in an agile way. This guidance leads teams to use Git repositories to always have visibility into the state of specific Azure scopes.
+> Every layer of the data management and analytics scenario such as data management landing zone, data landing zones or data applications (which create data products), should be defined with a declarative language like Azure Resource Manager or Terraform, checked into a repository, and deployed through CI/CD pipelines. This allows teams to track and version changes to the infrastructure and configuration of Azure scope while supporting different architecture levels to be automated in an agile way. This guidance leads teams to use Git repositories to always have visibility into the state of specific Azure scopes.
 
 ## Workflows and automation
 
@@ -86,8 +86,8 @@ The platform team is responsible for providing and maintaining deployment templa
 Deployments to test and production should only be managed through a CI/CD pipeline and a service connection with elevated permissions to enforce common best practices (for example, Azure Resource Manager templates).
 
 > [!CAUTION]
-> Integration ops and data product teams should only have read access to test and production environments, and deployments to these environments should only be executed through CI/CD pipelines and service connections with elevated permissions. To accelerate the path to production, integration ops and data product teams should have write access to the development environment.
+> Data application teams should only have read access to test and production environments, and deployments to these environments should only be executed through CI/CD pipelines and service connections with elevated permissions. To accelerate the path to production, data application teams should have write access to the development environment.
 
 ## Next steps
 
-[Understand the personas and teams for data management and analytics in Azure](./organize-persona-and-teams.md)
+[Understand the personas and teams for data management and analytics in Azure](./organize-roles-and-teams.md)

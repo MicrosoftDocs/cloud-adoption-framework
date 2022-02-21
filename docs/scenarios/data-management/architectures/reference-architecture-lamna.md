@@ -26,7 +26,7 @@ A critical concern for Lamna is the security of the patient data. As a healthcar
 
 ## Architectural solution
 
-Lamna will implement cloud scale analytics as their solution for a cloud-based analytics platform. They will rely on multiple landing zones both for increased scalability and for clear separation of sensitive datasets.
+Lamna will implement data management and analytics scenario as their solution for a cloud-based analytics platform. They will rely on multiple landing zones both for increased scalability and for clear separation of sensitive data products.
 
 ### Data management landing zone
 
@@ -36,17 +36,17 @@ A critical concept for every cloud scale analytics implementation is having one 
 
 In Lamna's organizational chart, the patient management group is part of the operations group. However, given the extreme sensitivity of the data they use, they will have their own data landing zone in the cloud scale analytics architecture.
 
-This landing zone will host a copy of the detailed patient data and health records from the company's patient management application and related datasets. These datasets will be loaded into the landing zone by data integrations that'll regularly ingest the data into the cloud and land it in Azure Data Lake Storage.
+This landing zone will host a copy of the detailed patient data and health records from the company's patient management application and related data products. These data products will be loaded into the landing zone by data integrations that'll regularly ingest the data into the cloud and land it in Azure Data Lake Storage.
 
 ### Operations data landing zone
 
 The operations group at Lamna is responsible for the company's core line of business, namely providing consulting services to healthcare providers. In their operations data landing zone, they store data related to these healthcare providers and the services with which they've engaged.
 
-Like all business data, there's an element of sensitivity to these datasets, and Lamna of wants to protect its list of clients. However, since this data doesn't include health information about individuals, it's not subject to the most stringent data protection laws.
+Like all business data, there's an element of sensitivity to these data products, and Lamna of wants to protect its list of clients. However, since this data doesn't include health information about individuals, it's not subject to the most stringent data protection laws.
 
 #### Data integrations
 
-The operations landing zone has a data integration that loads the healthcare provider data from Lamna's on-premises operations system. Like all data integrations, this lands the data in the cloud as-is and doesn't apply transformations to the datasets.
+The operations landing zone has a data integration that loads the healthcare provider data from Lamna's on-premises operations system. Like all data integrations, this lands the data in the cloud as-is and doesn't apply transformations to the data products.
 
 #### Data products
 
@@ -54,13 +54,13 @@ Analysts throughout Lamna need access to data to build reports for the business.
 
 ### Marketing data landing zone
 
-The marketing group is focused on obtaining new clients and managing Lamna's position within the marketplace. Their marketing landing zone is primarily used to store and analyze external datasets about the markets they serve and the healthcare industry.
+The marketing group is focused on obtaining new clients and managing Lamna's position within the marketplace. Their marketing landing zone is primarily used to store and analyze external data products about the markets they serve and the healthcare industry.
 
 However, to support a new marketing push, the group wants to conduct a study of health outcomes for the patients served by Lamna's clients. They hope to produce a fact-based report supported by strong statistical evidence showing that their approach to healthcare leads to better outcomes.
 
 To support this new effort, researchers in the marketing group will need to access the highly sensitive patient data in a secure and compliant manner while still being able to obtain the information that they need.
 
-To meet this need, the marketing team creates aggregated datasets from the tokenized patients dataset created by the operations team. These datasets don't contain individual health records. Instead, they group records across different axes. This helps researchers to conduct studies of the population as a whole without risking access to any individual's health information.
+To meet this need, the marketing team creates aggregated data products from the tokenized patients dataset created by the operations team. These data products don't contain individual health records. Instead, they group records across different axes. This helps researchers to conduct studies of the population as a whole without risking access to any individual's health information.
 
 :::image type="content" source="../images/lamna.png" alt-text="Diagram of architecture." lightbox="../images/lamna.png":::
 

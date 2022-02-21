@@ -16,6 +16,8 @@ A best practice for customers is to create a single, centralized cloud adoption 
 
 This article exposes considerations about data management and analytics that will affect your broader strategy.
 
+Before implementing the data management and analytics scenario, you should have a plan in place for your data strategy. You can start small with a single use-case or you might have a much set of large use-cases which will require prioritization. A strategy can help you establish your processes and start off the initial conversations, within the business, on the pillars you need to concentrate on.
+
 ## Prioritize business outcomes for your data strategy
 
 It's key to align your data strategy with your business outcomes. Having a successful data strategy will give you a competitive advantage. Most business outcomes can be classified under one or more of these four categories:
@@ -56,7 +58,7 @@ Creating a strategy is one thing. Executing a strategy at enterprise-scale poses
 
 The agility of the cloud has imposed the need for organizations to adapt quickly and bring efficiencies to all areas of business. According to the [report by Gartner on emerging risks](https://www.gartner.com/en/newsroom/press-releases/2018-10-24-gartner-survey-shows-digitalization-misconceptions-threaten-organizations-as-the-top-emerging-risk-in-3q19), although organizations continue to focus on digital initiatives and invest in them, two-thirds fail to deliver upon expectations and demonstrate enterprise weaknesses.
 
-### Data democratization
+## Operationalize data management
 
 Central IT has slowly been shifting to shadow IT, becoming more decentralized and enabling agility. Businesses want to innovate quickly by having access to enterprise-wide unified data in self-serve fashion to meet challenging business requirements. 
 
@@ -64,7 +66,9 @@ There are many reasons why businesses fail to tap into the full potential of the
 
 Data democratization helps deliver that value back to business and achieve challenging targets for business growth.
 
-### Governance
+- Understand and prioritize your LOBs needs'.
+- Distribute data across domains to enable ownership and bring data to closer to users.
+- Deploy self-service data products to drive insights and business value.
 
 With data governance, there has to be the right balance in the decentralized world of a data democratization approach. If governance is enforced too hard, it can stifle innovation. However, not having some core principles and processes in place might create data silos. These silos can result in damaging an organization's reputation and potential revenues. That's why a holistic data governance approach is fundamental to unlocking strategic value of data in a consistent way.
 
@@ -81,6 +85,8 @@ For more information, see [What is data governance?](./govern.md).
 To build a successful data strategy, you need a data-driven culture. Develop one that fosters open, collaborative participation consistently. The entire workforce can then learn, communicate, and improve the organization's business outcomes. Developing a data-driven culture will also improve each employee's ability to generate impact or influence, backed by data. 
 
 Where you start on the journey will depend on your organization, your industry, and where you are in the maturity curve. Let's look at what a maturity curve looks like.
+
+:::image type="content" source="./images/data-strategy-maturity.png" alt-text="Diagram of an organization's maturity evolving." lightbox="./images/data-strategy-maturity.png":::
 
 ### Level 0
 
@@ -185,15 +191,10 @@ The most popular organizational processing requirements come from online transac
 
 For certain specialized workloads, customers can secure execution environments like Azure confidential computing, which helps users secure data while it's in use on public cloud platforms. This state is required for efficient processing. The data is protected inside a trusted execution environment (TEE), also known as an enclave. This environment protects the code and data against viewing and modification from outside the TEE. It creates the ability to train AI models by using data sources from different organizations without sacrificing data confidentiality.
 
-### Analytics
+### Analytical processing
 
 The extract, transform, load (ETL) construct relates to online analytical processing (OLAP) and data warehousing needs. One of the useful capabilities is the ability to automatically detect schema drift. 
 
-Consider end-to-end architectures like automated enterprise BI with Azure Synapse Analytics and Azure Data Factory. To support advanced analytics, including Azure Machine Learning and AI capabilities, consider the reusability of platform technologies already in use for similar processing requirements.
-
-Batch processing on Azure Databricks, R, or Python--or for deep learning models--are common examples. Compute, storage, networking, orchestration, DevOps, and MLOps are important considerations here. For very large models, look at distributed training of deep learning models on Azure or the turning project. You also need to consider the ability to deal with data and model drift.
-
-A data management and analytics scenario helps collate the layers of a data strategy, together with people, process, security, and compliance. We also suggest using the recommended architectures from Azure landing zones to get started. They use the Microsoft Cloud Adoption Framework and incorporate our experience working through thousands of large-scale enterprise deployments.
 
 ### Building blocks
 

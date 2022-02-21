@@ -25,9 +25,9 @@ The data management landing zone is a separate subscription that has the standar
 
 ## Data catalog
 
-We recommend you have a catalog service provisioned to define the metadata of the datasets stored across the data landing zones.
+We recommend you have a catalog service provisioned to define the metadata of the data products stored across the data landing zones.
 
-The catalog registers and maintains the data information in a centralized place and makes it available for the organization. It ensures that enterprises avoid duplicate datasets caused by redundant data ingestion by different project teams.
+The catalog registers and maintains the data information in a centralized place and makes it available for the organization. It ensures that enterprises avoid duplicate data products caused by redundant data ingestion by different project teams.
 
 Data management and analytics scenario relies on [Azure Purview](/azure/purview/overview) to serve as:
 
@@ -38,7 +38,7 @@ Data management and analytics scenario relies on [Azure Purview](/azure/purview/
 - API for registering and reading data information.
 - Compliance dashboard hub
 
-The data catalog can communicate with each data landing zone via its VNet peering and self-hosted integration runtimes since it's part of the data management landing zone. Discovery of datasets in on-premises stores and other public clouds is achieved by more deployments of self-hosted integration runtimes.
+The data catalog can communicate with each data landing zone via its VNet peering and self-hosted integration runtimes since it's part of the data management landing zone. Discovery of data products in on-premises stores and other public clouds is achieved by more deployments of self-hosted integration runtimes.
 
 > [!NOTE]
 > Although this section of the documentation primarily focuses on using Azure Purview for data catalog capabilities combined with the data classification, labeling, and compliance policy enforcement capabilities of Azure Information Protection, we appreciate that many enterprises may have invested in other products such as Alation, Okera, and Collibra. If this is the case, work with your vendor to apply the principles described for a data management landing zone and get as close as you can. Be aware that some custom integration might be required.
@@ -70,7 +70,7 @@ Azure Purview can scan and automatically classify documents. For example, if you
 
 Data lineage plays an important component in an cloud scale analytics. Lineage is a factor in understanding data quality and validating compliance. Lineage also adds context to datasets and products that allows for discoverable and self-serviceable data products.
 
-One of the primary features of a data catalog is the ability to show the lineage between datasets. Azure Purview supports capturing data lineage from three Azure Data Factory activities: copy data, data flow, and execute SSIS package. Along with the native integration, custom lineage reporting is also supported via Apache Atlas hooks or REST API.
+One of the primary features of a data catalog is the ability to show the lineage between data products. Azure Purview supports capturing data lineage from three Azure Data Factory activities: copy data, data flow, and execute SSIS package. Along with the native integration, custom lineage reporting is also supported via Apache Atlas hooks or REST API.
 
 :::image type="content" source="../images/data-lineage.png" alt-text="Diagram of data lineage." lightbox="../images/data-lineage.png":::
 
@@ -81,17 +81,17 @@ One of the primary features of a data catalog is the ability to show the lineage
 
 Enterprises are advised to continue with their current solution.
 
-In cloud scale analytics data, integrations become responsible for producing datasets that are consumed by other data products. Integration ops owners are responsible for the business-aligned key performance indicators (KPIs) and the service-level goals around consumption of their read data sources.
+In data management and analytics scenario data, integrations become responsible for producing data products that are consumed by other data products. Integration ops owners are responsible for the business-aligned key performance indicators (KPIs) and the service-level goals around consumption of their read data sources.
 
-Data quality should happen as close to the source as possible to avoid quality issues replicating across the analytics and AI estate. Moving quality metrics and validation to the data integration aligns the quality process with the teams that are closest to the data. These teams have the deepest understanding of the data asset. Data lineage also provides data quality confidence and should be provided for all datasets and products.
+Data quality should happen as close to the source as possible to avoid quality issues replicating across the analytics and AI estate. Moving quality metrics and validation to the data integration aligns the quality process with the teams that are closest to the data. These teams have the deepest understanding of the data asset. Data lineage also provides data quality confidence and should be provided for all data products and products.
 
-See how data quality can be implemented in [Enforcing data quality](../best-practices/data-ingestion.md#enforce-data-quality).
+See how data quality can be implemented in [Data quality](../govern-data-quality.md)
 
 ## Data modeling repository
 
 Entity relationship models should be captured and stored in a central location, that is in the data management landing zone. It gives consumers of the data a single place to go for conceptual diagrams.
 
-[ER Studio](https://www.idera.com/products/er-studio/enterprise-data-modeling) and [iServer](https://www.orbussoftware.com/solutions/enterprise-architecture/data-architecture) are used by many enterprise customers to model their datasets before ingesting.
+[ER Studio](https://www.idera.com/products/er-studio/enterprise-data-modeling) and [iServer](https://www.orbussoftware.com/solutions/enterprise-architecture/data-architecture) are used by many enterprise customers to model their data products before ingesting.
 
 ### Industry-specific data models and Common Data Model with data lake
 
@@ -153,7 +153,7 @@ These contracts should give information on data validation, model, and security 
 
 ## Data lifecycle
 
-Data products may have different lifecycles. We recommend applying policies to regulate the data lifecycle. A typical pattern is that newly ingested data is used and accessed often. As the age since ingesting increases, the rate of data access decreases. Older data will see a drastic drop in usage. Your data products and entities in these products may have different lifecycles. Some data can stay unused after the initial ingestion or is rarely accessed once stored. Some datasets may expire days or months after creation, while other datasets are actively used and modified throughout their lifetimes. Most countries have regulations related to how long you're required to store data such as personal data and accounting data. For example, a country might require retention of primary documentation for five years, like incoming and outgoing invoices, cash book balances, bank vouchers, and salary slips. Retention of secondary documentation for three to five years, like letters, agreements, and notes.
+Data products may have different lifecycles. We recommend applying policies to regulate the data lifecycle. A typical pattern is that newly ingested data is used and accessed often. As the age since ingesting increases, the rate of data access decreases. Older data will see a drastic drop in usage. Your data products and entities in these products may have different lifecycles. Some data can stay unused after the initial ingestion or is rarely accessed once stored. Some data products may expire days or months after creation, while other data products are actively used and modified throughout their lifetimes. Most countries have regulations related to how long you're required to store data such as personal data and accounting data. For example, a country might require retention of primary documentation for five years, like incoming and outgoing invoices, cash book balances, bank vouchers, and salary slips. Retention of secondary documentation for three to five years, like letters, agreements, and notes.
 
 In Azure, the data lifecycle is handled by each relevant service containing persisted data.
 

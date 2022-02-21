@@ -3,7 +3,7 @@ title: Components needed for data governance
 description: Understand the components for data governance.
 author: mboswell
 ms.author: mboswell
-ms.date: 11/25/2021
+ms.date: 02/16/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -12,7 +12,7 @@ ms.custom: e2e-data-management, think-tank
 
 # Components needed for data governance
 
-At the top of the solution, is the data governance vision and strategy. The strategy includes a vision statement, the stakeholders backing the data governance program, and goals of the program. These goals should be aligned with strategic business objectives to show contribution to common goals. The strategy also includes success metrics (KPIs) and targets to be reached to monitor the progress.
+At the top of the solution, is the data governance vision and [strategy](strategy.md). The strategy includes a vision statement, the stakeholders backing the data governance program, and goals of the program. These goals should be aligned with strategic business objectives to show contribution to common goals. The strategy also includes success metrics (KPIs) and targets to be reached to monitor the progress.
 
 There are two types of metrics to be considered.
 
@@ -60,7 +60,7 @@ The data governance solution should enable you to govern data throughout the lif
 
 ## Data governance roles and responsibilities guidance for people
 
-There are many data governance roles and responsibilities for people. To learn more, see [Data governance roles and responsibilities](./organize-persona-and-teams.md#data-governance-roles-and-responsibilities).
+There are many data governance roles and responsibilities for people. To learn more, see [Data governance roles and responsibilities](./organize-roles-and-teams.md#data-governance-roles-and-responsibilities).
 
 ## Data governance processes
 
@@ -115,7 +115,7 @@ Once you define policies and rules in a data catalog for each class in a data go
 
 It should then be possible to monitor data quality, privacy, access security, usage, maintenance, and retention of specific data entities throughout their lifecycle.
 
-## Data governance technology
+## Data governance component summary
 
 In summary, this guidance focuses on technologies needed for data governance.
 

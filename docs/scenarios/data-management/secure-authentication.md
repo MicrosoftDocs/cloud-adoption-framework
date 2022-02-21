@@ -3,7 +3,7 @@ title: Authentication for data management and analytics in Azure
 description: Learn about authentication techniques for the cloud scale analytics in Azure, including user, application, and service-to-service authentication.
 author: mboswell
 ms.author: mboswell
-ms.date: 11/25/2021
+ms.date: 02/14/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -77,7 +77,7 @@ An Azure service principal is the alternative for applications and services that
 
 ## Database authentication and permissions
 
-The cloud scale analytics probably contains polyglot storage. Examples include PostgreSQL, MySQL, Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics. Data integrations could use them to store their read data stores. Data products could use polyglot storage.
+The data management and analytics scenario probably contains polyglot storage. Examples include PostgreSQL, MySQL, Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics.
 
 - [Use Azure Active Directory for authentication with PostgreSQL](/azure/postgresql/howto-configure-sign-in-aad-authentication)
 - [Use Azure Active Directory authentication with Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics](/azure/azure-sql/database/authentication-aad-overview)
@@ -86,7 +86,7 @@ The cloud scale analytics probably contains polyglot storage. Examples include P
 We recommend that you use Azure AD groups to secure database objects instead of individual Azure AD user accounts. Use these Azure AD groups to authenticate users and protects database objects. Similar to the data lake pattern, you could use your data integration or data products onboarding to create these groups.
 
 > [!NOTE]
-> Data integrations and data products can store sensitive data in Azure SQL Database, SQL Managed Instance, or Azure Synapse Analytics pools. For more information, see [Sensitive data](./secure-data-privacy.md#sensitive-data-personal-data).
+> Data applications can store sensitive data products in Azure SQL Database, SQL Managed Instance, or Azure Synapse Analytics pools. For more information, see [Sensitive data](./secure-data-privacy.md#sensitive-data-personal-data).
 
 ## Azure Data Lake security in the cloud scale analytics
 
@@ -94,11 +94,11 @@ To control access to data in the data lake, we recommend using access control li
 
 Similar to Azure RBAC general practices, the following rules should apply to ACL:
 
-- **Manage access using groups.** Assign access to Azure AD groups and manage membership of groups for ongoing access management.
+- **Manage access using groups.** Assign access to Azure AD groups and manage membership of groups for ongoing access management. See [Access control and data lake configurations in Azure Data Lake Storage](best-practices/data-lake-access.md).
 
 - **Least privilege.** In most cases, users should have only read permission to the folders and files they need in the data lake. A managed identity or service principal, such as the one used by Azure Data Factory, has read, write, and execute permissions. Data users shouldn't have access to the storage account container.
 
-- **Align with data partitioning scheme.** ACL and data partition design must align to ensure effective data access control. For more information, see [Data lake partitioning](./best-practices/data-lake-services.md#data-lake-partitioning).
+- **Align with data partitioning scheme.** ACL and data partition design must align to ensure effective data access control. For more information, see [Data lake partitioning](./best-practices/data-lake-zones.md#data-lake-partitioning).
 
 ## Next steps
 

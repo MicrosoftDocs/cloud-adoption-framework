@@ -64,7 +64,7 @@ An extra consideration for landing zones is how the teams responsible for the da
 
 ### Why not let sales transactions and customers share one data integration?
 
-By separating the customer data and the sales transaction data in their own data integrations, we allow the subject matter experts for those domains to make the best decisions for their particular datasets. They can choose the access patterns, ingestion engines, and storage options that best meet their needs without conflicting with one another.
+By separating the customer data and the sales transaction data in their own data integrations, we allow the subject matter experts for those domains to make the best decisions for their particular data products. They can choose the access patterns, ingestion engines, and storage options that best meet their needs without conflicting with one another.
 
 For example, the team that has expertise with the CRM system will be responsible for the customer data integration. Based on the team's skill set and the technologies used by the CRM system, they'll decide which tools best suit their needs. They won't have to worry if these decisions will also work for the sales transactions team. That team will be using their own toolset and won't have to compromise to meet the requirements of the customers team.
 
@@ -74,7 +74,7 @@ In this example, the corporate sales team is the first to move to the new cloud 
 
 ## How to evolve in the future
 
-Scaling is accomplished by adding more landing zones to the architecture. These landing zones will use VNet peering to connect to the data management landing zone and all of the other landing zones. This mesh pattern allows datasets and resources to be shared across zones. By splitting into different zones, the workloads are spread across Azure subscriptions and resources. This allows enterprises to avoid reaching the limits of the Azure services and continue to grow their data estates.
+Scaling is accomplished by adding more landing zones to the architecture. These landing zones will use VNet peering to connect to the data management landing zone and all of the other landing zones. This mesh pattern allows data products and resources to be shared across zones. By splitting into different zones, the workloads are spread across Azure subscriptions and resources. This allows enterprises to avoid reaching the limits of the Azure services and continue to grow their data estates.
 
 ## Deployment guidelines
 

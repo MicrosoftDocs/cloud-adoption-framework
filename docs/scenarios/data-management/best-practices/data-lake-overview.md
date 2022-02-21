@@ -16,7 +16,7 @@ We recommend you provision three [Azure Data Lake Storage Gen2](/azure/storage/b
 
 Data Lake Storage Gen2 supports:
 
-- Fine-grained [access control lists](/azure/storage/blobs/data-lake-storage-access-control) (ACLs), which protect data at the file and folder level. ACLs help enterprises implement tight security measures around datasets.
+- Fine-grained [access control lists](/azure/storage/blobs/data-lake-storage-access-control) (ACLs), which protect data at the file and folder level. ACLs help enterprises implement tight security measures around data products.
 - Secure data storage through encryption at rest, which helps store the data securely.
 - Access controls for Azure Active Directory (Azure AD) users and security groups, through integration with Azure AD for authentication and authorization.
 
@@ -50,7 +50,7 @@ Data residency rules, or a requirement to have data close to a user base, can dr
 
 ## Data lake access control list guidelines
 
-- Create Azure AD groups to represent data products, datasets, data integrations, or job functions. Assign access to Azure AD groups instead of individual users. This configuration will simplify operation and maintenance tasks as you'll only add and remove users from Azure AD groups. Modifying ACLs on files and folders in a data lake should happen infrequently, typically only at dataset creation.
+- Create Azure AD groups to represent data products, data products, data integrations, or job functions. Assign access to Azure AD groups instead of individual users. This configuration will simplify operation and maintenance tasks as you'll only add and remove users from Azure AD groups. Modifying ACLs on files and folders in a data lake should happen infrequently, typically only at dataset creation.
 - Set the lowest granularity for an access control list (ACL) at the dataset or table name level. A folder can represent this configuration in Data Lake Storage.
 - Define new Azure AD groups based on data roles and dataset groupings. Existing Azure AD groups might follow organizational structure, even though not all members in the same organizational unit need access to a data lake.
 - Default access control list (ACL) on every dataset folder must include *read* and *execute* permissions. Execute permission is required for users to traverse a restricted folder and access files under it. Access ACL assigned to an Azure AD group will include read and execute permissions on each dataset folder.
@@ -60,4 +60,4 @@ For more information about access control mechanisms, see [Access control and da
 
 ## Next steps
 
-[Provision three Azure Data Lake Storage Gen2 accounts for each data landing zone](./data-lake-services.md)
+[Provision three Azure Data Lake Storage Gen2 accounts for each data landing zone](./data-lake-zones.md)

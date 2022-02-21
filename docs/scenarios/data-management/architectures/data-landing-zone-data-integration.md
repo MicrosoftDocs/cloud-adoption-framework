@@ -12,7 +12,7 @@ ms.custom: e2e-data-management, think-tank
 
 # Data management and analytics scenario data integrations in Azure
 
-The role of integrations operations is explained under [integration ops (per integration)](../organize-persona-and-teams.md#data-landing-zone-teams).
+The role of integrations operations is explained under [integration ops (per integration)](../organize-roles-and-teams.md#data-landing-zone-teams).
 
 A data integration resource group is responsible for data ingestion and enrichment only from external sources such a telemetry, finance, and CRM. This layer can operate in both real-time, batch and micro-batch.
 

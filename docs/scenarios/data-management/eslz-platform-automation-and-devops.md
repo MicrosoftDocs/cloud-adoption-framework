@@ -43,20 +43,18 @@ Data management and analytics scenario consists of:
 
 - A data management landing zone.
 - One or more data landing zones.
-- One or more data integrations in each data landing zone.
-- One or more data products in each data landing zone.
+- One or more data application which product data products in each data landing zone.
 
 Each asset can evolve independently over time because of different requirements and lifecycles. For example, one of the data landing zones might require RA-GRS storage accounts at some point. It's important to have an infrastructure as code (IaC) representation of each of asset in a repository. This way, changes can be implemented based on requirements in the respective data landing zone, data integration, or data product.
 
-The following table summarizes the teams involved in an cloud scale analytics deployment.
+The following table summarizes the teams involved in a data management and analytics scenario deployment.
 
 | Name | Role | Number of teams |
 |-|-|-|
 | Cloud platform team | The Azure cloud platform team in your organization. | One for the whole Azure platform. |
-| Data platform team | In charge of creating and maintaining Azure Resource Manager template repositories for different levels of cloud scale analytics. Also maintains the data management landing zone and supports other teams if there are deployment issues or required enhancements. | One for cloud scale analytics. |
-| Data landing zone team | In charge of deploying and maintaining a specific data landing zone. Also supports the deployment and enhancement of data integrations and data products. | One team per data landing zone. |
-| Integration team | In charge of data integration deployment and updates. | One team per domain. |
-| Data product team |In charge of data products deployment and updates. | One team per data product. |
+| Data platform team | In charge of creating and maintaining Azure Resource Manager template repositories for different levels of data management and analytics scenario. Also maintains the data management landing zone and supports other teams if there are deployment issues or required enhancements. | One for data management and analytics scenario. |
+| Data landing zone team | In charge of deploying and maintaining a specific data landing zone. Also supports the deployment and enhancement of data applications which produce data products. | One team per data landing zone. |
+| Data applications team |In charge of data products deployment and updates. | One team per data application. |
 
 ## Next steps
 

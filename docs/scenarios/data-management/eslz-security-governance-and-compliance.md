@@ -3,7 +3,7 @@ title: Security, governance, and compliance for enterprise-scale data management
 description: Learn how to improve security, governance, and compliance for enterprise-scale data management and analytics in Azure.
 author: andrehass
 ms.author: anhass
-ms.date: 12/15/2021
+ms.date: 02/16/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -22,11 +22,11 @@ The cloud scale analytics pattern relies on several security features that can b
 
 ## Security design recommendations
 
-Both Microsoft and customers share responsibility for security. For generally accepted security guidance, refer to [Cybersecurity best practices](https://www.cisecurity.org/cybersecurity-best-practices/) by the Center for Internet Security. The following sections are security design recommendations.
+Both Microsoft and customers share responsibility for security. For accepted security guidance, refer to [Cybersecurity best practices](https://www.cisecurity.org/cybersecurity-best-practices/) by the Center for Internet Security. The following sections are security design recommendations.
 
 ### Data-at-rest encryption
 
-Data-at-rest encryption refers to the encryption of data as it persists in storage, and addresses the security risks related to direct physical access of storage media. Dar is a critical security control since the underlying data is unrecoverable and cannot be changed without its decryption key. Dar is an important layer in the defense-in-depth strategy of Microsoft datacenters. Often, there are compliance and governance reasons to deploy data-at-rest encryption.
+Data-at-rest encryption refers to the encryption of data as it persists in storage, and addresses the security risks related to direct physical access of storage media. Dar is a critical security control since the underlying data is unrecoverable and can't be changed without its decryption key. Dar is an important layer in the defense-in-depth strategy of Microsoft datacenters. Often, there are compliance and governance reasons to deploy data-at-rest encryption.
 
 Several Azure services support data-at-rest encryption, including Azure Storage and Azure SQL databases. Although common concepts and models influence the design of Azure services, each service can apply data-at-rest encryption at different stack layers or have different encryption requirements.
 
@@ -95,7 +95,7 @@ Azure Policy helps bring your resources into compliance through bulk remediation
 
 ### Automate deployments
 
-You can save time and reduce errors by automating deployments. Reduce the deployment complexity of end-to-end data landing zones, data integrations, and data products by creating reuseable code templates. This minimizes the time to deploy or redeploy solutions. For more information, see [Understand DevOps automation for the data management and analytics in Azure](./organize-data-operations.md)
+You can save time and reduce errors by automating deployments. Reduce the deployment complexity of end-to-end data landing zones and data applications (which create data products) by creating reuseable code templates. This minimizes the time to deploy or redeploy solutions. For more information, see [Understand DevOps automation for the data management and analytics in Azure](./organize-data-operations.md)
 
 ### Lock resources for production workloads
 
