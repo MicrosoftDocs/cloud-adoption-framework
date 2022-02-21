@@ -14,9 +14,9 @@ ms.custom: e2e-data-management, think-tank
 
 The [data management landing zone](../architectures/data-management-landing-zone.md) is responsible for the governance of the data management and analytics scenario platform. It relies on [Azure Purview](https://azure.microsoft.com/services/purview/) to provide data management capabilities:
 
-- [Data catalog](../architectures/data-management-landing-zone.md#data-catalog)
-- [Data classification](../architectures/data-management-landing-zone.md#data-classification)
-- [Data lineage](../architectures/data-management-landing-zone.md#data-lineage)
+- [Data catalog](../govern-data-catalog.md)
+- [Data classification](../govern-data-catalog.md#data-classification)
+- [Data lineage](../govern-lineage.md)
 
 Azure Purview is a unified data governance service. It helps organizations manage and govern data across on-premises, multicloud, and software as a service (SaaS). Azure Purview creates a holistic, up-to-date map of the data landscape with automated data discovery, sensitive data classification, and end-to-end data lineage. Azure Purview helps data consumers find valuable and trustworthy data.
 
