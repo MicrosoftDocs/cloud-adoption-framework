@@ -1,6 +1,6 @@
 ---
-title: Use Azure Synapse Analytics with data management and analytics scenario
-description: Learn how to use Azure Synapse Analytics with data management and analytics scenario.
+title: Use Azure Synapse Analytics with cloud scale analytics
+description: Learn how to use Azure Synapse Analytics with cloud scale analytics.
 author: mboswell
 ms.author: mboswell
 ms.date: 01/12/2022
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Use Azure Synapse Analytics with data management and analytics scenario
+# Use Azure Synapse Analytics with cloud scale analytics
 
 Azure Synapse Analytics is the provisioned, integrated analytics service that accelerates time to insight across data warehouses and big data systems. Azure Synapse Analytics brings together:
 
@@ -21,7 +21,7 @@ Azure Synapse Analytics is the provisioned, integrated analytics service that ac
 Azure Synapse studio is a tool in Azure Synapse that provides a unified experience for management, monitoring, coding, and security. Synapse studio has deep integration with other Azure services like Power BI, Azure Cosmos DB, and Azure Machine Learning.
 
 > [!NOTE]
-> This section aims to describe prescribed configurations which are specific to data management and analytics scenario. It's a compliment to the official [Azure Synapse Analytics documentation](/azure/synapse-analytics/).
+> This section aims to describe prescribed configurations which are specific to cloud scale analytics. It's a compliment to the official [Azure Synapse Analytics documentation](/azure/synapse-analytics/).
 
 ## Overview
 
@@ -37,7 +37,7 @@ The first step in the deployment Azure Synapse Analytics is to set up an Azure S
 
 A data landing zone creates workspaces with an [Azure Synapse Analytics managed virtual network](/azure/synapse-analytics/security/synapse-workspace-managed-vnet). Communication with Azure Synapse happens through the three endpoints it exposes: SQL pool, SQL on-demand, and the development endpoint.
 
-At the network level, data management and analytics scenario uses [synapse managed private endpoints](/azure/synapse-analytics/security/synapse-workspace-managed-private-endpoints). These endpoints ensure all of the traffic between the data landing zone virtual network and Azure Synapse workspaces moves entirely over the Microsoft backbone network.
+At the network level, cloud scale analytics uses [synapse managed private endpoints](/azure/synapse-analytics/security/synapse-workspace-managed-private-endpoints). These endpoints ensure all of the traffic between the data landing zone virtual network and Azure Synapse workspaces moves entirely over the Microsoft backbone network.
 
 ### Azure Synapse data access control
 

@@ -1,6 +1,6 @@
 ---
 title: DevOps automation for data management and analytics in Azure
-description: Learn about DevOps automation for the data management and analytics scenario in Azure.
+description: Learn about DevOps automation for the cloud scale analytics in Azure.
 author: abdale
 ms.author: hamoodaleem
 ms.date: 02/17/2022
@@ -21,7 +21,7 @@ Source control ensures that code and configurations persist and that changes are
 Branches isolate changes or feature developments without affecting other work that happens at the same time. The use of branches should be promoted to develop features, fix bugs, and safely experiment with new ideas. Pull requests merge the changes made from one branch into the default branch, and they support a controlled review process. For security purposes, the main branch should use pull requests to ensure code reviews.
 
 > [!IMPORTANT]
-> Follow these guidelines for the data management and analytics scenario repositories:
+> Follow these guidelines for the cloud scale analytics repositories:
 >
 > - Secure the repository's main branch by enforcing branches and pull requests to ensure a controlled review processes.
 > - Azure DevOps or GitHub repositories should be used for source control to track changes to the source code and allow multiple team members to develop code at the same time.

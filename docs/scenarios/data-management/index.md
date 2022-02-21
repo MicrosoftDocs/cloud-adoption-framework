@@ -1,5 +1,5 @@
 ---
-title: Azure data management and analytics scenario overview
+title: Azure cloud scale analytics overview
 description: Gain an overview of an end-to-end scenario for data management and analytics in the cloud, with a focus on Azure implementation.
 author: mboswell
 ms.author: mboswell
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Azure data management and analytics scenario
+# Azure cloud scale analytics
 
 With larger, more sophisticated forms of cloud adoption, the journey to the cloud becomes more complex. This article series covers technical and non-technical considerations for data management and analytics in the cloud. This guidance strives to be cloud agnostic to support hybrid and multicloud adoption, but the technical implementation examples focus on Azure products. It builds upon Microsoft's cloud adoption framework and requires understanding of landing zones. [What is a landing zone?](../../ready/landing-zone/index.md).
 
@@ -58,7 +58,7 @@ This scenario also provides a framework built on the following principles to add
 
 ## Implementation guidance
 
-The data management and analytics scenario is designed to guide the end-to-end customer journey through the cloud adoption lifecycle. The full journey requires the following key components or guidance sets:
+The cloud scale analytics is designed to guide the end-to-end customer journey through the cloud adoption lifecycle. The full journey requires the following key components or guidance sets:
 
 |Documentation  |Description  |
 |---------|---------|
@@ -67,7 +67,7 @@ The data management and analytics scenario is designed to guide the end-to-end c
 | [Data management and analytics scenario](ready.md)  |Representing a strategic design path for an Azure data management and analytics. The data management and analytics scenario pattern relies upon distribution of the data and its pipelines across domains. This pattern includes the capabilities such as storage, data lineage, data classification, data ingestion, networking, security, access management, encryption, resiliency and monitoring.         |
 
 > [!TIP]
-> Deployable reference implementations and templates make it easy to get started with the data management and analytics scenario. To learn more, see [Deployment templates](./architectures/deployment-templates.md).
+> Deployable reference implementations and templates make it easy to get started with the cloud scale analytics. To learn more, see [Deployment templates](./architectures/deployment-templates.md).
 
 ## Reference architecture
 
@@ -98,7 +98,7 @@ Expand the **Featured Azure products** section in the **Data management and anal
 
 ## Common customer journeys
 
-The following common customer journeys support the cloud data management and analytics scenario:
+The following common customer journeys support the cloud cloud scale analytics:
 
 - **Prepare your environment** Use [Prepare your environment](./plan.md) articles as resources. Establish processes and approaches to support the entire portfolio of workloads across your data estate.
 

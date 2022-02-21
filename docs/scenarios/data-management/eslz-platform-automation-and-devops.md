@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Platform automation and DevOps for a data management and analytics scenario
+# Platform automation and DevOps for a cloud scale analytics
 
 Data management and analytics scenario is focused on separating the runtime, automation, and user layers.
 
@@ -58,4 +58,4 @@ The following table summarizes the teams involved in a data management and analy
 
 ## Next steps
 
-[Provision the data management and analytics scenario platform](./eslz-provision-platform.md)
+[Provision the cloud scale analytics platform](./eslz-provision-platform.md)
