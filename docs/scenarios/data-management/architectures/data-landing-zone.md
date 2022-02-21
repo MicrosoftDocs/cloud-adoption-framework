@@ -208,4 +208,4 @@ This resource group could host virtual machines for third-party visualization se
 
 ## Next steps
 
-[Data management and analytics scenario data integrations in Azure](./data-landing-zone-source-integration.md)
+[Data management and analytics scenario data products in Azure](data-landing-zone-data-products.md)

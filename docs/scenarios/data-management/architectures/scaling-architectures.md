@@ -117,4 +117,4 @@ The sections above are summarizing the scaling mechanisms within Data management
 
 ## Next steps
 
-[What is data product?](what-is-data-mesh.md)
+[What is a data mesh?](what-is-data-mesh.md)

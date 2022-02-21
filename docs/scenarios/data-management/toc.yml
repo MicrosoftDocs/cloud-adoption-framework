@@ -106,8 +106,6 @@ items:
       href: ./architectures/data-management-landing-zone.md
     - name: Data landing zone
       href: ./architectures/data-landing-zone.md
-    - name: Models
-      href: ./architectures/models-cdm.md
     - name: Data Products
       items:
         - name: Overview
@@ -130,7 +128,8 @@ items:
         href: ./architectures/reference-architecture-lamna.md
       - name: Financial institution scenario for data mesh
         href: ./architectures/reference-architecture-data-mesh.md
-
+    - name: Common Data Models
+      href: ./architectures/models-cdm.md
     - name: Data mesh
       items:
       - name: Overview
