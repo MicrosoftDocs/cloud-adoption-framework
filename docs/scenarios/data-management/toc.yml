@@ -112,8 +112,10 @@ items:
       items:
         - name: Overview
           href: ./architectures/data-landing-zone-data-products.md
-        - name: Data Application Templates
-          href: ./architectures/data-landing-zone-data-integration.md
+        - name: Data Application Integration
+          href: ./architectures/data-landing-zone-source-integration.md
+        - name: Data Application Reference Patterns
+          href: ./architectures/data-reference-patterns.md
     - name: Scaling the architecture
       href: ./architectures/scaling-architectures.md
     - name: Reference architectures (archive)
