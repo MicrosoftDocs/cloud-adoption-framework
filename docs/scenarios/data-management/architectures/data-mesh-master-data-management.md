@@ -30,7 +30,7 @@ When distributing master identifiers, it is recommended that you not extrapolate
 
 ### Domain-level Master Data Management
 
-When you look for overlapping data, you’re likely to discover different degrees of overlap. Some data is generic and spans many domains; other data has limited overlap and spans only a few domains. To distinguish the importance and amount of overlap, you could also extend MDM to domain-level MDM by creating partial views of master data within a specific scope. This is useful for data that is shared between some, but not all, domains.
+When you look for overlapping data, you're likely to discover different degrees of overlap. Some data is generic and spans many domains; other data has limited overlap and spans only a few domains. To distinguish the importance and amount of overlap, you could also extend MDM to domain-level MDM by creating partial views of master data within a specific scope. This is useful for data that is shared between some, but not all, domains.
 
 :::image type="content" source="../images/master-data-management-02.png" alt-text="Domain-level Master Data Management" lightbox="../images/master-data-management-02.png":::
 
@@ -38,7 +38,7 @@ It's important for the overlapping domains to manage their data but to have no c
 
 ### Achieving MDM consistency via reusable components
 
-Another way of master data collaboration and reusability is code sharing. Here it’s not the master data that is shared but the underlying code (snippets and scripts) to generate the outputs and promote effective reuse. This code is stored in a central and open repository, including versioning, allowing [DataOps](./data-mesh-dataops.md) teams to contribute and improve upon what has been published.
+Another way of master data collaboration and reusability is code sharing. Here it's not the master data that is shared but the underlying code (snippets and scripts) to generate the outputs and promote effective reuse. This code is stored in a central and open repository, including versioning, allowing teams to contribute and improve upon what has been published.
 
 The benefit of this model is that business logic is applied only within domains, which allows teams to deviate, make improvements, or use slightly optimized versions of the logic as they see fit. In addition, these outputs can be regenerated as improvements from the community find their way to the central code repository. One drawback of this model is consistency, since allowing teams to modify their code can make
 comparing results between teams more difficult.
