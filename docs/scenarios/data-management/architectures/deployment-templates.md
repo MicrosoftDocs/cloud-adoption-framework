@@ -1,6 +1,6 @@
 ---
-title: Deployment templates for cloud scale analytics deployments
-description: Learn about the core starter templates for cloud scale analytics deployments.
+title: Deployment templates for data management and analytics scenario deployments
+description: Learn about the core starter templates for data management and analytics scenario deployments.
 author: mboswell
 ms.author: mboswell
 ms.date: 12/14/2021
@@ -10,9 +10,9 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-data-management
 ---
 
-# Deployment templates for cloud scale analytics
+# Deployment templates for data management and analytics scenario
 
-The cloud scale analytics has the following core starter templates:
+The data management and analytics scenario has the following core starter templates:
 
 [!INCLUDE [deployment-templates-table](../includes/deployment-templates-table.md)]
 

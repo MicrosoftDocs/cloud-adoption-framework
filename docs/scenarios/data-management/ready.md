@@ -52,8 +52,6 @@ At the heart of data management and analytics scenario, is its management capabi
 The **Data management landing zone** is a subscription that governs the platform and supports the following capabilities:
 
 - [Data catalog](architectures/data-management-landing-zone.md#data-catalog)
-- [Data classification](architectures/data-management-landing-zone.md#data-classification)
-- [Data lineage](architectures/data-management-landing-zone.md#data-lineage)
 - [Data quality](architectures/data-management-landing-zone.md#data-quality-management)
 - [Data modeling repository](architectures/data-management-landing-zone.md#data-modeling-repository)
 - [Master data management](architectures/data-management-landing-zone.md#master-data-management)

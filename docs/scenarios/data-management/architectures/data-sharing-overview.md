@@ -24,7 +24,7 @@ Data contracts focus on different areas, which are:
 
 - Versioning: Generally, only one or two versions of a given data product are deployed at any given point in time. Therefore you should version your data contracts so your users can see and predict changes.
 
-- Enterprise identifiers: For data consistency in a distributed environment, you should consider introducing enterprise identifiers. These identifiers uniquely identify enterprise data, such as [master data management identifiers](./master-data-management.md), enterprise reference data or data that can be used for row-level filtering and access management. Team, for example, might want to encapsulate metadata inside their data for security purposes. Such metadata must be uniquely identified.
+- Enterprise identifiers: For data consistency in a distributed environment, you should consider introducing enterprise identifiers. These identifiers uniquely identify enterprise data, such as [master data management identifiers](./data-mesh-master-data-management.md), enterprise reference data or data that can be used for row-level filtering and access management. Team, for example, might want to encapsulate metadata inside their data for security purposes. Such metadata must be uniquely identified.
 
 It's recommended to store all of your data contracts in a central [metadata](../govern-metadata-standards.md) repository. Such a contract repository is much more than a database. It's a control framework for your domain teams to discover data, validate and build on their data integrity. A well designed central contract repository also enables teams to analyze, see trends and violations. A good data contract repository also indirectly contributes to better data quality.
 

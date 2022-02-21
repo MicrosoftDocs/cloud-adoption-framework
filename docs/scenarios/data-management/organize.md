@@ -1,6 +1,6 @@
 ---
 title: Organize data operations team members for data management and analytics in Azure
-description: Learn how to organize data operations team members for the cloud scale analytics in Azure.
+description: Learn how to organize data operations team members for the data management and analytics scenario in Azure.
 author: abdale
 ms.author: hamoodaleem
 ms.date: 08/06/2021
@@ -12,7 +12,7 @@ ms.custom: e2e-data-management, think-tank
 
 # Organize data operations team members for data management and analytics in Azure
 
-The cloud scale analytics architecture was designed with a set of core principles.
+The data management and analytics scenario architecture was designed with a set of core principles.
 
 ## Core principles
 

@@ -1,6 +1,6 @@
 ---
-title: Data management and role-based access control for the cloud scale analytics in Azure
-description: Learn about data management and role-based access control for the cloud scale analytics in Azure.
+title: Data management and role-based access control for the data management and analytics scenario in Azure
+description: Learn about data management and role-based access control for the data management and analytics scenario in Azure.
 author: mboswell
 ms.author: mboswell
 ms.date: 02/14/2022
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Data management and role-based access control for the cloud scale analytics in Azure
+# Data management and role-based access control for the data management and analytics scenario in Azure
 
 Authorization is the act of granting an authenticated party permission to perform an action. The key principle of access control is giving users only the amount of access that they need to do their jobs and only allowing certain actions at a particular scope. Role-based security/role-based access control (RBAC) corresponds to access control and is used by many organizations to control access based on defined roles or job functions versus individual users. Users are then assigned one or more security roles, each of which is given authorized permissions to perform specific tasks.
 
@@ -30,7 +30,7 @@ The following built-in roles are fundamental for all Azure resource types, inclu
 
 Some services have specific RBAC roles like Storage Blob Data Contributor or Data Factory Contributor, which means that specific RBAC roles should be used for these services. RBAC is an additive model where adding role assignments is an active permission. RBAC also supports *deny* assignments that take precedence over *role* assignments.
 
-## RBAC general practices for the cloud scale analytics in Azure
+## RBAC general practices for the data management and analytics scenario in Azure
 
 The following best practices can help you to get started with RBAC:
 

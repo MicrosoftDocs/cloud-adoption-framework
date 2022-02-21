@@ -1,6 +1,6 @@
 ---
-title: Overview of Azure Data Lake Storage for the cloud scale analytics
-description: Gain an overview of Azure Data Lake Storage for the cloud scale analytics.
+title: Overview of Azure Data Lake Storage for the data management and analytics scenario
+description: Gain an overview of Azure Data Lake Storage for the data management and analytics scenario.
 author: mboswell
 ms.author: mboswell
 ms.date: 11/25/2021
@@ -10,9 +10,9 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Overview of Azure Data Lake Storage for the cloud scale analytics
+# Overview of Azure Data Lake Storage for the data management and analytics scenario
 
-We recommend you provision three [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction) accounts within a single resource group, similar to the `data lake services` resource group described in [Azure cloud scale analytics architecture data landing zone overview](../architectures/data-landing-zone.md). Each of the three data lakes within a data landing zone stores data in one of its three transformation stages: raw data, enriched and curated data, and workspace data. [Data products](../architectures/data-landing-zone-data-products.md) should only consume from the data lake that contains enriched and curated data.
+We recommend you provision three [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction) accounts within a single resource group, similar to the `data lake services` resource group described in [Azure data management and analytics scenario architecture data landing zone overview](../architectures/data-landing-zone.md). Each of the three data lakes within a data landing zone stores data in one of its three transformation stages: raw data, enriched and curated data, and workspace data. [Data products](../architectures/data-landing-zone-data-products.md) should only consume from the data lake that contains enriched and curated data.
 
 Data Lake Storage Gen2 supports:
 

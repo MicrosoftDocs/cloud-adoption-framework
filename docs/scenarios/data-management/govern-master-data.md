@@ -29,6 +29,11 @@ Microsoft has partner with Profisee and CluedIn to provide native integrations i
 - [Data governance with Profisee and Azure Purview](/azure/architecture/reference-architectures/data/profisee-master-data-management-purview)
 - [Migrate master data services to Azure with CluedIn and Azure Purview](/azure/architecture/reference-architectures/data/migrate-master-data-services-with-cluedin)
 
+Some of the vendors other in this space are:
+
+- [SAP master data governance](https://www.sap.com/products/master-data-governance.html)
+- [Semarchy](https://www.semarchy.com/)
+
 ## Alternatives solutions
 
 Absent a purpose-built MDMapplication, some of the technical capabilities needed to build an MDM solution may be found within the Azure ecosystem.

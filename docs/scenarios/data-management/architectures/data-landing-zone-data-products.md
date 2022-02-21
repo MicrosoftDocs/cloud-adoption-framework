@@ -1,6 +1,6 @@
 ---
 title: Data management and analytics scenario data products in Azure
-description: Learn about cloud scale analytics data products in Azure.
+description: Learn about data management and analytics scenario data products in Azure.
 author: mboswell
 ms.author: mboswell
 ms.date: 09/21/2021

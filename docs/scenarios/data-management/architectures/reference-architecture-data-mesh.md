@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-data-management
 
 # A financial institution scenario for data mesh
 
-This reference architecture is written for customers that want to use cloud scale analytics for scalability and *data mesh* architectures. It demonstrates a more complex scenario, with multiple landing zones, data integrations, and data products.
+This reference architecture is written for customers that want to use data management and analytics scenario for scalability and *data mesh* architectures. It demonstrates a more complex scenario, with multiple landing zones, data integrations, and data products.
 
 ## Customer profile
 
@@ -43,11 +43,11 @@ As we break down the data mesh concept into building blocks, here are some key p
 
 Data-as-a-product thinking and a self-service platform paradigm aren't new to Microsoft. We've observed best practices of distributed platforms, pipelines across domains, federated ownership, and self-explanatory data for many years.
 
-Woodgrove Bank can embark on its transition to data mesh by using cloud scale analytics. Data management and analytics scenario is an open-source and prescriptive blueprint for designing and quickly deploying modern data platforms. It has been coupled with Azure best practices and design principles, and is aligned with Azure Well-Architected Framework. Data management and analytics scenario aims to give enterprises an 80 percent prescribed viewpoint and the ability to customize the remaining 20 percent.
+Woodgrove Bank can embark on its transition to data mesh by using data management and analytics scenario. Data management and analytics scenario is an open-source and prescriptive blueprint for designing and quickly deploying modern data platforms. It has been coupled with Azure best practices and design principles, and is aligned with Azure Well-Architected Framework. Data management and analytics scenario aims to give enterprises an 80 percent prescribed viewpoint and the ability to customize the remaining 20 percent.
 
 Data management and analytics scenario offers enterprises a strategic design path toward data mesh, and it can be used to quickly set up such an architecture. It offers a blueprint, including core data platform services for data management.
 
-At the highest level, cloud scale analytics uses a data management capability, which is enabled through the data management landing zone. This zone is responsible for the federated data governance of an organization of the (self-service) platform, as well as the data domains that drive business value through data products. The benefit of this approach is that it abstracts away all technical complexity, while adhering to the same standards. It ensures that there is no proliferation of technology. It also allows enterprises to start modular, with a small footprint, and then grow over time.
+At the highest level, data management and analytics scenario uses a data management capability, which is enabled through the data management landing zone. This zone is responsible for the federated data governance of an organization of the (self-service) platform, as well as the data domains that drive business value through data products. The benefit of this approach is that it abstracts away all technical complexity, while adhering to the same standards. It ensures that there is no proliferation of technology. It also allows enterprises to start modular, with a small footprint, and then grow over time.
 
 The data management landing zone, as you can see in the following diagram, surrounds all data domains. It glues all domains together and provides the oversight that Woodgrove Bank is looking for.
 
@@ -69,11 +69,11 @@ When you zoom in on the inner architecture of such a data domain, you expect to 
 
 Data products fulfill a specific need within businesses that use data. Data products manage, organize, and make sense of the data across domains and then present the insights they've gained. A data product is a result of data from one or many data integrations or other data products. Data products, as you might expect, are closely aligned with data domains, and inherit the same ubiquitous language: a constructed, formalized language, agreed upon by stakeholders and designers, to serve the needs of the design. Each domain, which generates data, is responsible for making these data products available to the other domains.
 
-To help quickly deliver data products, cloud scale analytics offers various templates for data distribution and integration patterns. The framework provides data batch, streaming, and analytics for addressing the needs of a diverse set of consumers.
+To help quickly deliver data products, data management and analytics scenario offers various templates for data distribution and integration patterns. The framework provides data batch, streaming, and analytics for addressing the needs of a diverse set of consumers.
 
-One great thing about cloud scale analytics is how domains and data products are organized. Each data domain aligns with one data landing zone, which is a logical construct and a unit of scale in the cloud scale analytics architecture that enables data retention and execution of data workloads for generating insights and value with data. Each data product aligns with one resource group within the data landing zone, and all data landing zones and management zones align with subscriptions. This approach eases implementation and management.
+One great thing about data management and analytics scenario is how domains and data products are organized. Each data domain aligns with one data landing zone, which is a logical construct and a unit of scale in the data management and analytics scenario architecture that enables data retention and execution of data workloads for generating insights and value with data. Each data product aligns with one resource group within the data landing zone, and all data landing zones and management zones align with subscriptions. This approach eases implementation and management.
 
-All cloud scale analytics templates inherit the same set of policies from the data management landing zone. The templates automatically deliver all necessary metadata for data discoverability, governance, security, cost management, and operational excellence. This approach allows you to quickly onboard new data domains without the need of complex onboarding, integrating, and testing.
+All data management and analytics scenario templates inherit the same set of policies from the data management landing zone. The templates automatically deliver all necessary metadata for data discoverability, governance, security, cost management, and operational excellence. This approach allows you to quickly onboard new data domains without the need of complex onboarding, integrating, and testing.
 
 The following diagram illustrates what a data product might look like:
 
@@ -81,11 +81,11 @@ The following diagram illustrates what a data product might look like:
 
 A pragmatic approach to building data products is to either align with the source, where the data originates, or with the consuming use case. In both cases, you need to provide an abstract view of the underlying (complex) application data model. You must try to hide the technical details and optimize for intensive data consumption. An Azure Synapse view or Parquet file, which logically groups data together, is a good example of how a data product can be shared across various data domains.
 
-Next, you need to work on data discoverability, provenance, usage, and lineage. A proven approach is to use a data governance service, like Azure Purview, to register all data. From this standpoint, data integration in the cloud scale analytics perfectly connects the dots, because it allows building these data products as it simultaneously performs metadata registration. Data integration teams (also known as integration ops) are responsible for ingestion of data to a read data source. The data shouldn't have any data transformation applied apart from the data quality checks and data types that are applied.
+Next, you need to work on data discoverability, provenance, usage, and lineage. A proven approach is to use a data governance service, like Azure Purview, to register all data. From this standpoint, data integration in the data management and analytics scenario perfectly connects the dots, because it allows building these data products as it simultaneously performs metadata registration. Data integration teams (also known as integration ops) are responsible for ingestion of data to a read data source. The data shouldn't have any data transformation applied apart from the data quality checks and data types that are applied.
 
 By using data integration and aligning data domains and Azure Purview collections, you automatically capture all data origin, lineage, data quality details, and consumption information from the individual domains. With this approach, you can connect multiple data domains and products to a centralized governance solution, which stores all the metadata from each environment. The benefit is that it centrally integrates all the metadata and makes it easily accessible to various consumers. You can extend this architecture to register new data products.
 
-The following diagram illustrates a cross-domain data mesh architecture that uses cloud scale analytics data integration.
+The following diagram illustrates a cross-domain data mesh architecture that uses data management and analytics scenario data integration.
 
 :::image type="content" source="../images/data-mesh-integration.png" alt-text="Diagram showing data integration." lightbox="../images/data-mesh-integration.png":::
 
