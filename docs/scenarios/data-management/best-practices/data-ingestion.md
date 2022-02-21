@@ -1,6 +1,6 @@
 ---
-title: The ingest process with cloud scale analytics in Azure
-description: Understand the ingest process with cloud scale analytics in Azure.
+title: The ingest process with data management and analytics scenario in Azure
+description: Understand the ingest process with data management and analytics scenario in Azure.
 author: mboswell
 ms.author: mboswell
 ms.date: 11/25/2021
@@ -10,9 +10,9 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# The ingest process with cloud scale analytics in Azure
+# The ingest process with data management and analytics scenario in Azure
 
-Data integrations and data products teams examine, transform, and release data in cloud scale analytics.
+Data integrations and data products teams examine, transform, and release data in data management and analytics scenario.
 
 > [!IMPORTANT]
 > Data integrations don't transform data, but if the business has several use cases whose data needs to be joined together (for example, weather and location data), then the team could be asked to create this in the curated layer.\
@@ -55,7 +55,7 @@ This guidance elaborates on the information within:
 
 - [Securing access to Azure Data Lake Storage Gen2 from Azure Databricks](https://github.com/hurtn/datalake-ADLS-access-patterns-with-Databricks/blob/master/readme.md)
 - [Azure Databricks best practices](https://github.com/Azure/AzureDatabricksBestPractices/blob/master/toc.md)
-- [Use Azure Databricks within cloud scale analytics in Azure](./azure-databricks-implementation.md)
+- [Use Azure Databricks within data management and analytics scenario in Azure](./azure-databricks-implementation.md)
 
 - One premium Azure Databricks data engineering workspace should be deployed per data landing zone in the production ingest and processing resource group. It will enable a complete CI/CD experience and only allow notebooks to be deployed from Azure DevOps or GitHub.
 
@@ -119,4 +119,4 @@ Depending on the destination, Azure Database Migration Service can replicate fro
 
 ## Next steps
 
-[SAP ingestion with cloud scale analytics in Azure](sap-data-ingestion.md)
+[SAP ingestion with data management and analytics scenario in Azure](sap-data-ingestion.md)

@@ -1,5 +1,5 @@
 ---
-title: What is data mesh?
+title: What is a data mesh?
 description: Learn about data mesh in azure
 author: mboswell
 ms.author: mboswell
@@ -10,6 +10,6 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# What is data product?
+# What is a data mesh?
 
 xxxx

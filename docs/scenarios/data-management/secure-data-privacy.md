@@ -1,6 +1,6 @@
 ---
 title: Data privacy for data management and analytics in Azure
-description: Learn about data privacy for the cloud scale analytics in Azure.
+description: Learn about data privacy for the data management and analytics scenario in Azure.
 author: abdale
 ms.author: hamoodaleem
 ms.date: 02/14/2022
@@ -12,7 +12,7 @@ ms.custom: e2e-data-management, think-tank
 
 # Data privacy for data management and analytics in Azure
 
-The cloud scale analytics frees organizations to determine the best patterns to suit their requirements while guarding personal data at multiple levels. Personal data is any data that can be used to identify individuals, for example, driver's license numbers, social security numbers, bank account numbers, passport numbers, email addresses, and more. Many regulations exist today to protect user privacy.
+The data management and analytics scenario frees organizations to determine the best patterns to suit their requirements while guarding personal data at multiple levels. Personal data is any data that can be used to identify individuals, for example, driver's license numbers, social security numbers, bank account numbers, passport numbers, email addresses, and more. Many regulations exist today to protect user privacy.
 
 ## Data confidentiality classification scheme
 

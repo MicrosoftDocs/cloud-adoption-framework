@@ -12,9 +12,9 @@ ms.custom: e2e-data-management, think-tank
 
 # Understand the roles and teams for data management and analytics in Azure
 
-For the cloud scale analytics, we recommend moving teams like ingest, processing, analysis, consumption, and visualization from working in horizontally siloed teams, to agile vertical cross domain teams in each tier. Platform teams like data platform operations and platform operations are grouped together in a common platform group.
+For the data management and analytics scenario, we recommend moving teams like ingest, processing, analysis, consumption, and visualization from working in horizontally siloed teams, to agile vertical cross domain teams in each tier. Platform teams like data platform operations and platform operations are grouped together in a common platform group.
 
-![Overview of the cloud scale analytics teams.](./images/enterprise-scale-analytics-ai-teams.png)
+![Overview of the data management and analytics scenario teams.](./images/enterprise-scale-analytics-ai-teams.png)
 
 ## Roles
 

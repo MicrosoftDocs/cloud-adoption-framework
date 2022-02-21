@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-data-management
 
 # Lamna Healthcare scenario for data management and analytics in Azure
 
-This reference architecture is written for customers that want to use cloud scale analytics not only for scalability but to secure their data. It demonstrates how access to sensitive data can be controlled and how appropriately desensitized data can be shared with analysts.
+This reference architecture is written for customers that want to use data management and analytics scenario not only for scalability but to secure their data. It demonstrates how access to sensitive data can be controlled and how appropriately desensitized data can be shared with analysts.
 
 ## Customer profile
 
@@ -30,11 +30,11 @@ Lamna will implement data management and analytics scenario as their solution fo
 
 ### Data management landing zone
 
-A critical concept for every cloud scale analytics implementation is having one data management landing zone. This subscription contains resources that will be shared across all of the landing zones. This includes shared networking components, like a firewall and private DNS zones. It also includes resources for data and cloud governance, such as Azure Policy and Azure Purview.
+A critical concept for every data management and analytics scenario implementation is having one data management landing zone. This subscription contains resources that will be shared across all of the landing zones. This includes shared networking components, like a firewall and private DNS zones. It also includes resources for data and cloud governance, such as Azure Policy and Azure Purview.
 
 ### Patient data landing zone
 
-In Lamna's organizational chart, the patient management group is part of the operations group. However, given the extreme sensitivity of the data they use, they will have their own data landing zone in the cloud scale analytics architecture.
+In Lamna's organizational chart, the patient management group is part of the operations group. However, given the extreme sensitivity of the data they use, they will have their own data landing zone in the data management and analytics scenario architecture.
 
 This landing zone will host a copy of the detailed patient data and health records from the company's patient management application and related data products. These data products will be loaded into the landing zone by data integrations that'll regularly ingest the data into the cloud and land it in Azure Data Lake Storage.
 
@@ -114,5 +114,5 @@ Use the following templates to deploy other data integrations and data products 
 
 ## Next steps
 
-- Continue to [Deployment templates for cloud scale analytics](../architectures/deployment-templates.md).
-- Learn more in [Understand data privacy for the cloud scale analytics in Azure](../secure-data-privacy.md).
+- Continue to [Deployment templates for data management and analytics scenario](../architectures/deployment-templates.md).
+- Learn more in [Understand data privacy for the data management and analytics scenario in Azure](../secure-data-privacy.md).
