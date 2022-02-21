@@ -60,7 +60,7 @@ The agility of the cloud has imposed the need for organizations to adapt quickly
 
 ## Operationalize data management
 
-Central IT has slowly been shifting to shadow IT, becoming more decentralized and enabling agility. Businesses want to innovate quickly by having access to enterprise-wide unified data in self-serve fashion to meet challenging business requirements. 
+Central IT has slowly been shifting to shadow IT, becoming more decentralized and enabling agility. Businesses want to innovate quickly by having access to enterprise-wide unified data in self-serve fashion to meet challenging business requirements.
 
 There are many reasons why businesses fail to tap into the full potential of their data. It might be because business functions work in silos, where each team uses different tools and standards for data analysis. Or it might be a failure to link key performance indicators to overall business goals.
 
@@ -74,23 +74,19 @@ With data governance, there has to be the right balance in the decentralized wor
 
 In the absence of a well-thought-out data strategy, there's a clear need to just "get going" and quickly start demonstrating value back to the business. In this pursuit, acting on the preceding key themes or using them as strategic principles wrapped in a framework can address current business problems. It can also help the formation of a holistic data strategy, in an iterative way with validation, and still yield timely results.
 
-![Diagram of the framework for iterative data strategy validation.](./images/data-strategy-framework.png)
-
 Business and technology leaders need to develop the mindset and strategies required to generate value from data and scale quickly in a simplified, structured way.
 
 For more information, see [What is data governance?](./govern.md).
 
 ## Develop a data-driven culture
 
-To build a successful data strategy, you need a data-driven culture. Develop one that fosters open, collaborative participation consistently. The entire workforce can then learn, communicate, and improve the organization's business outcomes. Developing a data-driven culture will also improve each employee's ability to generate impact or influence, backed by data. 
+To build a successful data strategy, you need a data-driven culture. Develop one that fosters open, collaborative participation consistently. The entire workforce can then learn, communicate, and improve the organization's business outcomes. Developing a data-driven culture will also improve each employee's ability to generate impact or influence, backed by data.
 
-Where you start on the journey will depend on your organization, your industry, and where you are in the maturity curve. Let's look at what a maturity curve looks like.
-
-:::image type="content" source="./images/data-strategy-maturity.png" alt-text="Diagram of an organization's maturity evolving." lightbox="./images/data-strategy-maturity.png":::
+Where you start on the journey will depend on your organization, your industry, and where you are in the maturity curve.
 
 ### Level 0
 
-Data is not exploited programmatically and consistently. The data focus within the company is from an application development perspective. 
+Data is not exploited programmatically and consistently. The data focus within the company is from an application development perspective.
 
 On this level, an organization often has unplanned analytics projects. Additionally, each application is highly specialized to the unique data and stakeholder needs. Each application has significant code bases and engineering teams, with many being engineered outside IT. Finally, use case enablement and analytics are siloed.
 
@@ -100,23 +96,23 @@ Here, teams are being formed and strategy is being created, but analytics still 
 
 ### Level 2
 
-The innovation platform is almost ready, with workflows in place to deal with data quality. The organization can answer a few "why" questions. 
+The innovation platform is almost ready, with workflows in place to deal with data quality. The organization can answer a few "why" questions.
 
-At this level, organizations are actively looking for an end-to-end data strategy with centrally governed data lake stores controlling data store sprawl and improving data discoverability. They're ready for smart applications that bring compute to the centrally governed data lakes. These applications will reduce the need for federated copies of important data, reduce privacy risks, and reduce compute costs. 
+At this level, organizations are actively looking for an end-to-end data strategy with centrally governed data lake stores controlling data store sprawl and improving data discoverability. They're ready for smart applications that bring compute to the centrally governed data lakes. These applications will reduce the need for federated copies of important data, reduce privacy risks, and reduce compute costs.
 
 Organizations at this level are also ready for multitenant, centrally hosted, shared data services for common data computing tasks. These shared data services will enable the speed of insights from data-science-driven intelligence services.
 
 ### Level 3
 
-A characteristic of this level is a holistic approach to data. Projects related to data are deeply integrated with business outcomes. The organization uses analytics platforms to make predictions. 
+A characteristic of this level is a holistic approach to data. Projects related to data are deeply integrated with business outcomes. The organization uses analytics platforms to make predictions.
 
-At this level, organizations are unlocking digital innovation from the perspective of both data estate and application development. They have the foundational data services, including data lakes and shared data services, in place. 
+At this level, organizations are unlocking digital innovation from the perspective of both data estate and application development. They have the foundational data services, including data lakes and shared data services, in place.
 
 Multiple teams across the company are successfully delivering on critical business workloads, key business use cases, and measurable outcomes. Telemetry is being used to identify new shared data services. IT is a trusted advisor to teams across the company to help improve critical business processes through the end-to-end trusted and connected data strategy.
 
 ### Level 4
 
-Here, the entire company uses a data-driven culture, frameworks, and standards enterprise. Observers see automation, centers of excellence around analytics or automation, and data-driven feedback loops in action. 
+Here, the entire company uses a data-driven culture, frameworks, and standards enterprise. Observers see automation, centers of excellence around analytics or automation, and data-driven feedback loops in action.
 
 One of the outcomes of a data-driven culture is the use of AI in a meaningful way. Here, it's easy to define a maturity model like this example:
 
@@ -130,9 +126,9 @@ Identifying priorities in line with the business vision and keeping a "think big
 
 To build a strong data strategy, you first need to understand how data works. Understanding core characteristics of data will help you build a principled practice around how to deal with data.
 
-Data travels fast, but the velocity of data movement can't defy the laws of physics. It must conform to the laws of the land or the industry that created it. 
+Data travels fast, but the velocity of data movement can't defy the laws of physics. It must conform to the laws of the land or the industry that created it.
 
-Data never changes by itself, but it's prone to changes and accidental loss, unless explicit measures are in place to mitigate such challenges. To deal with unforeseen changes, ensure that anticorruption measures for controls, databases, and storage are in place. Also ensure that monitoring, audits, alerts, and downstream processes are in place to deal planned or unforeseen changes. 
+Data never changes by itself, but it's prone to changes and accidental loss, unless explicit measures are in place to mitigate such challenges. To deal with unforeseen changes, ensure that anticorruption measures for controls, databases, and storage are in place. Also ensure that monitoring, audits, alerts, and downstream processes are in place to deal planned or unforeseen changes.
 
 Data by itself, and simply the act of storing it, doesn't produce any insights or yield any value. To discover insights or extract value, most or all of the data, independent of the volume, velocity, variety, and veracity, has to go through four discrete steps:
 
@@ -141,13 +137,13 @@ Data by itself, and simply the act of storing it, doesn't produce any insights o
 1. Processing
 1. Analytics
 
-Each step has its own set of principles, processes, tools, and technologies. 
+Each step has its own set of principles, processes, tools, and technologies.
 
-Withholding data assets and related insights might affect socioeconomic, political, research, and investment decisions. That's why it's paramount for organizations to build the capability to provide insights in a secure and responsible way. All data that's generated or acquired must go through a data classification exercise, unless otherwise explicitly stated. Where needed, the gold standard for dealing with confidential data is encryption at rest and in transit. 
+Withholding data assets and related insights might affect socioeconomic, political, research, and investment decisions. That's why it's paramount for organizations to build the capability to provide insights in a secure and responsible way. All data that's generated or acquired must go through a data classification exercise, unless otherwise explicitly stated. Where needed, the gold standard for dealing with confidential data is encryption at rest and in transit.
 
-Data, applications, and services all have their own gravitational pull. But data is the heaviest here, and so it has the most gravitational pull. Unlike Newton's apple, data doesn't have a physical mass to draw in surrounding objects. Instead, latency and throughput act as accelerators to the analytics process. Latency, throughput, and ease of access often require duplication of data, even when that isn't the desired outcome. Set up people, processes, tools, and technologies appropriately to balance such requirements against the organization's data policies. 
+Data, applications, and services all have their own gravitational pull. But data is the heaviest here, and so it has the most gravitational pull. Unlike Newton's apple, data doesn't have a physical mass to draw in surrounding objects. Instead, latency and throughput act as accelerators to the analytics process. Latency, throughput, and ease of access often require duplication of data, even when that isn't the desired outcome. Set up people, processes, tools, and technologies appropriately to balance such requirements against the organization's data policies.
 
-Architectural constructs govern the speed at which data can be processed. And they're facilitated through innovations in software, hardware, and networking. Some of the architectural considerations are: 
+Architectural constructs govern the speed at which data can be processed. And they're facilitated through innovations in software, hardware, and networking. Some of the architectural considerations are:
 
 - Setting up data distribution
 - Partitioning
@@ -171,9 +167,9 @@ Let's take a closer look at the considerations to make when you're building desi
 
 ### Data ingestion
 
-A key consideration for data ingestion is the ability to build a data pipeline fast, from requirements to production, in a secure and compliant manner. Important elements include metadata-driven, self-service, low-code technologies to hydrate your data lake. 
+A key consideration for data ingestion is the ability to build a data pipeline fast, from requirements to production, in a secure and compliant manner. Important elements include metadata-driven, self-service, low-code technologies to hydrate your data lake.
 
-When you're building a pipeline, consider design, along with the ability to wrangle data, scale compute, and distribute data. Also, having the right DevOps support for the continuous integration and delivery of your pipeline is critical. 
+When you're building a pipeline, consider design, along with the ability to wrangle data, scale compute, and distribute data. Also, having the right DevOps support for the continuous integration and delivery of your pipeline is critical.
 
 Tools such as Azure Data Factory support a plethora of on-premises data sources, software as a service (SaaS) data sources, and data sources from other public clouds. Having such agility from the start is always helpful.
 
@@ -193,8 +189,7 @@ For certain specialized workloads, customers can secure execution environments l
 
 ### Analytical processing
 
-The extract, transform, load (ETL) construct relates to online analytical processing (OLAP) and data warehousing needs. One of the useful capabilities is the ability to automatically detect schema drift. 
-
+The extract, transform, load (ETL) construct relates to online analytical processing (OLAP) and data warehousing needs. One of the useful capabilities is the ability to automatically detect schema drift.
 
 ### Building blocks
 
