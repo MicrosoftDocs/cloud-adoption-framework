@@ -1,5 +1,5 @@
 ---
-title: Tailoring the Azure Landing Zones Architectures
+title: Tailoring the Azure Landing Zones Architecture
 description: Understand how to tailor the Azure Landing Zones Architecture to meet your business requirements
 author: jtracey93
 ms.author: jatracey
