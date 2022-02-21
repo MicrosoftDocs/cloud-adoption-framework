@@ -1,6 +1,6 @@
 ---
-title: Provision the data management and analytics scenario platform
-description: Learn how to provision the data management and analytics scenario by deploying landing zones and DevOps services.
+title: Provision the cloud scale analytics platform
+description: Learn how to provision the cloud scale analytics by deploying landing zones and DevOps services.
 author: abdale
 ms.author: hamoodaleem
 ms.date: 07/15/2021
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Provision the Azure data management and analytics scenario
+# Provision the Azure cloud scale analytics
 
 ## Data management landing zone deployment process
 
@@ -102,7 +102,7 @@ At the start of the project, the data platform has one Azure DevOps project with
 - One template repository for a data integration service, pipelines to deploy a data integration resource group, and service connections to cloud environments. These connections are forked from data landing zone Azure DevOps Projects.
 - One template repository for data product services, pipelines to deploy a data product instance, and service connections to cloud environments. These connections are forked from data landing zone Azure DevOps Projects.
 
-Once data landing zones have been deployed, data management and analytics scenario prescribes that:
+Once data landing zones have been deployed, cloud scale analytics prescribes that:
 
 - Each data landing zone will have its own Azure DevOps project with one or more Azure Boards.
 - For each new data integration or data product service, its data landing zone Azure DevOps project fork is created after request approval.
@@ -124,5 +124,5 @@ To control the deployment of data integration and data product services, follow 
 
 ## Next steps
 
-- [Deployment templates for data management and analytics scenario deployments](./architectures/deployment-templates.md)
+- [Deployment templates for cloud scale analytics deployments](./architectures/deployment-templates.md)
 - [An introduction to Azure Automation](/azure/automation/automation-intro)

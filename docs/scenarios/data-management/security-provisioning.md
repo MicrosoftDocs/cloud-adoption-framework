@@ -1,6 +1,6 @@
 ---
 title: Provision security for data management and analytics in Azure
-description: Learn how to provision security for the data management and analytics scenario in Azure.
+description: Learn how to provision security for the cloud scale analytics in Azure.
 author: mboswell
 ms.author: mboswell
 ms.date: 11/25/2021

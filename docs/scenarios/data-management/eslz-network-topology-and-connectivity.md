@@ -55,14 +55,14 @@ Site-to-Site VPNs can provide better continuity for your workloads in a hybrid c
 
 ## Private endpoints
 
-The data management and analytics scenario uses [Private Link](/azure/private-link/private-link-service-overview), where available, for shared platform as a service (PaaS) functionality. Private Link is available for several services and is in public preview for more services. Private Link addresses data exfiltration concerns related to service endpoints.
+The cloud scale analytics uses [Private Link](/azure/private-link/private-link-service-overview), where available, for shared platform as a service (PaaS) functionality. Private Link is available for several services and is in public preview for more services. Private Link addresses data exfiltration concerns related to service endpoints.
 
 For the current list of supported products, see [Private Link resources](/azure/private-link/private-endpoint-overview#private-link-resource).
 
 If you are planning on implementing cross tenant private endpoints, it's recommend that you review [Limit cross-tenant private endpoint connections in Azure](../../ready/azure-best-practices/limit-cross-tenant-private-endpoint-connections.md).
 
 > [!CAUTION]
-> By design, data management and analytics scenario networking uses private endpoints where available to connect to PaaS services.
+> By design, cloud scale analytics networking uses private endpoints where available to connect to PaaS services.
 
 ### Implement Azure DNS resolver for private endpoints
 

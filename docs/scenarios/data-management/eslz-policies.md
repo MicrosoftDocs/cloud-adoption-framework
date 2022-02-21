@@ -16,17 +16,17 @@ Before considering a deployment, it's important for your organization to put gua
 
 ## Background
 
-A core principle of data management and analytics scenario is to make it easy to create, read, update, and delete resources as needed. However, while giving unrestricted resource access to developers can make them agile, it can also lead to unintended cost consequences. The solution to this problem is resource access governance. This governance is the ongoing process of managing, monitoring, and auditing the use of Azure resources to meet the goals and requirements of your organization.
+A core principle of cloud scale analytics is to make it easy to create, read, update, and delete resources as needed. However, while giving unrestricted resource access to developers can make them agile, it can also lead to unintended cost consequences. The solution to this problem is resource access governance. This governance is the ongoing process of managing, monitoring, and auditing the use of Azure resources to meet the goals and requirements of your organization.
 
 The [Start with Cloud Adoption Framework enterprise-scale landing zones](../../ready/enterprise-scale/index.md) already uses this concept. Data management and analytics scenario adds [Custom Azure policies](#azure-policies-for-data-management-and-analytics-scenario) to build on these standards. The standards are then applied to our data management landing zones and data landing zones.
 
 ![Diagram that shows how Azure governance works.](./images/azure-governance.png)
 
-Azure Policy is important when ensuring security and compliance within data management and analytics scenario. It helps to enforce standards and to assess compliance at scale. Policies can be used to evaluate resources in Azure and compare them to the wanted properties. Several policies, or business rules, can be grouped into an initiative. Individual policies or initiatives can be assigned to different scopes in Azure. These scopes might be management groups, subscriptions, resource groups, or individual resources. The assignment applies to all resources within the scope, and subscopes can be excluded with exceptions if necessary.
+Azure Policy is important when ensuring security and compliance within cloud scale analytics. It helps to enforce standards and to assess compliance at scale. Policies can be used to evaluate resources in Azure and compare them to the wanted properties. Several policies, or business rules, can be grouped into an initiative. Individual policies or initiatives can be assigned to different scopes in Azure. These scopes might be management groups, subscriptions, resource groups, or individual resources. The assignment applies to all resources within the scope, and subscopes can be excluded with exceptions if necessary.
 
 ## Design considerations
 
-Azure policies in data management and analytics scenario were developed with the following design considerations in mind:
+Azure policies in cloud scale analytics were developed with the following design considerations in mind:
 
 - Use Azure policies to implement governance and enforce rules for resource consistency, regulatory compliance, security, cost, and management.
 - Use available prebuilt policies to save time.
@@ -34,7 +34,7 @@ Azure policies in data management and analytics scenario were developed with the
 - Limit Azure Policy assignments made at the root management group scope to avoid managing through exclusions at inherited scopes.
 - Only use policy exceptions if necessary, and they should require global admin approval.
 
-## Azure policies for data management and analytics scenario
+## Azure policies for cloud scale analytics
 
 [Implementing custom policies](/azure/governance/policy/tutorials/create-and-manage) allows you to do more with Azure Policy. Data management and analytics scenario comes with a set of pre-created policies to help you implement any required guardrails in your environment.
 
