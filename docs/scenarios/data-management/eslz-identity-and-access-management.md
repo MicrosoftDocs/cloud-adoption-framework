@@ -22,7 +22,21 @@ Data management and analytics scenario supports an access control model using Az
 
 Review the Azure administration and management activities your teams perform. Consider your data management and analytics on Azure. Determine the best possible distribution of responsibilities within your organization.
 
-### Role assignments
+## Role assignments
+
+In order to develop, deliver and serve data products autonomously within the data platform, data application teams require few access rights within the Azure environment. Before going through the respective RBAC requirements, it must be highlighted that different access models should be used for the development and higher environments. Also, security groups should be used wherever possible to reduce the number of role assignments and to simplify the management and review process of RBAC rights. This is critical, due to the [limited number of role assignments that can be created per subscription](/azure/azure-resource-manager/management/azure-subscription-service-limits#azure-rbac-limits).
+
+The development environment should be allowed to be accessed by the development team and their respective user identities to enable them to iterate more quickly, learn about certain capabilities within Azure services and troubleshoot issues effectively. Access to a development environment will help when developing or enhancing the infrastructure as code (IaC) and other code artifacts. Once an implementation within the development environment works as expected, it can be rolled out continuously to the higher environments. Higher environments, such as test and prod, should be locked off for the data application team. Only a service principal should have access to these environments and therefore all deployments must be executed through the service principal identity by using CI/CD pipelines. To summarize, in the development environment access rights should be provided to a service principal AND user identities and in higher environments access rights should only be provided to a service principal identity.
+
+To be able to create resources and role assignments between resources within the data application resource group(s), `Contributor` and `User Access Administrator` rights must be provided. This will allow the teams to create and control services within their environment within the [boundaries of Azure Policy](eslz-policies.md). Data management and analytics scenario recommends the usage of private endpoints to overcome the data exfiltration risk and as other connectivity options should be blocked by the Azure platform team via policies, data application teams will require access rights to the shared virtual network of a data landing zone to be able to successfully set up the required network connectivity for the services they're planning to use. To follow the least privilege principle, overcome conflicts between different data application teams and have a clear separation of teams, data management and analytics scenario proposes to create a dedicated subnet per data application team and create a `Network Contributor` role assignment to that subnet (child resource scope). This role assignment allows the teams to join the subnet using private endpoints.
+
+These two first role assignments will enable self-service deployment of data services within these environments. To address the cost management concern, organizations should add a cost center tag to the resource groups to enable cross-charging and distributed cost ownership. This raises awareness within the teams and enforces them to make the right decisions with respect to required SKUs and service tiers.
+
+To also enable self-service use of other shared resources within the data landing zone, few extra role assignments are required. If access to a Databricks environment is required, organizations should use the [SCIM Synch from AAD](/azure/databricks/administration-guide/users-groups/scim/aad) to provide access. This is important, as this mechanism automatically synchs users and groups from AAD to the Databricks data plane and also automatically removes access rights when an individual leaves the organization or business. This couldn't be the case, if separate user accounts are used in Azure Databricks. data application teams should be added to the Databricks workspace in the `shared-product-rg` and in the `shared-integration-rg`. Within Azure Databricks, the data application teams should be given `Can Restart` access rights to a predefined cluster to be able to run workloads within the workspace.
+
+Individual teams will require access to the central Purview account to discover data assets within the respective data landing zones. Therefore, the teams will have to be added as `Data Reader` to the Purview top-level collection. In addition, the teams will in most cases require the option to edit cataloged data assets that they're owning in order to provide extra details such as contact details of data owners and experts as well as more granular details about what columns within a dataset describe and what information they're including.
+
+### Summary of role based access control requirements
 
 For automation purposes of deploying data landing zones, you need these roles:
 
@@ -124,6 +138,12 @@ The following role assignments are required for deploying a data integration and
         (Child-resource scope) `/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName} /providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}"`
     :::column-end:::
 :::row-end:::
+
+## Access to other resources
+
+Outside of Azure, Data Product and Data Integration teams will also require access to a repository to store code artifacts, collaborate effectively and roll out updates and changes consistently via CI/CD to higher environments. In addition, a project board should be provided to allow for agile development, sprint planning, tracking of tasks and as well as user feedback and feature requests.
+
+Lastly, the CI/CD automation will require setting up a connection to Azure, which is done in most services via service principles. Hence, teams will require access to a service principle to achieve automation within their project.
 
 ## Managing access to data
 

@@ -128,7 +128,7 @@ To build a strong data strategy, you first need to understand how data works. Un
 
 Data travels fast, but the velocity of data movement can't defy the laws of physics. It must conform to the laws of the land or the industry that created it.
 
-Data never changes by itself, but it's prone to changes and accidental loss, unless explicit measures are in place to mitigate such challenges. To deal with unforeseen changes, ensure that anticorruption measures for controls, databases, and storage are in place. Also ensure that monitoring, audits, alerts, and downstream processes are in place to deal planned or unforeseen changes.
+Data never changes by itself, but it's prone to changes and accidental loss, unless explicit measures are in place to mitigate such challenges. To deal with unforeseen changes, ensure that anti-corruption measures for controls, databases, and storage are in place. Also ensure that monitoring, audits, alerts, and downstream processes are in place to deal planned or unforeseen changes.
 
 Data by itself, and simply the act of storing it, doesn't produce any insights or yield any value. To discover insights or extract value, most or all of the data, independent of the volume, velocity, variety, and veracity, has to go through four discrete steps:
 
