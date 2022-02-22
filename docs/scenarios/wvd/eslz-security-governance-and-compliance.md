@@ -18,10 +18,47 @@ As with any IT service, it's important to build the environment to scale, secure
 
 In most cases, Azure Virtual Desktop is deployed into a landing zone as part of the [Microsoft Cloud Adoption Framework](../../overview.md) for Azure. Microsoft recommends reviewing the Cloud Adoption Framework to ensure that your environment has the right foundation for security, compliance, governance, and cost management.
 
-## Design considerations
+## Governance Areas
 
-- **Identity:** Decide on a tool for multifactor authentication and conditional access for user identities. For Azure Virtual Desktop, as for most workloads in Azure, identity is a security boundary. User identity is the central mechanism of user access to desktops, applications, and company data. It's best to protect user credentials during sign-in with multifactor authentication and conditional access.
-- **Audit logs:** Audit logs and Azure Virtual Machines are critical to troubleshooting when issues arise, but also serve as a security tool for an Azure Virtual Desktop environment. What tools do you use to capture security or performance logs within your virtual machine (VM)? Are audit logs for Azure Virtual Desktop stored in a central Azure Monitor Logs workspace, or in an isolated Azure Monitor Logs workspace dedicated for Azure Virtual Desktop? Also consider whether to use a partner tool to analyze the logs for security patterns or other reporting needs. What tools do you use to capture security or performance logs within your VM?
+- ***Identity:*** 
+    - Conditional Access Policy for AVD users with MFA. 
+    - Leverage Azure PIM for either elevation of the privileged accounts over the AVD resources (i.e., Contributor role over AVD subscription and resource groups) 
+    - Validate the audit logs for Azure AD and Azure environment are collected. 
+
+-  ***Networking:***
+    - **Azure Virtual Network(s):** 
+        - Deploy ASGs for the session hosts – this would enable for streamline NSG rule creation and avoid IP subnet range assignment within NSG rules.
+        - NSG for AVD deployments with subset of rules for AD DS, DNS, AVD service tag. Depending on whether NVA is present for traffic control – rules for the on-premises applications or rules covering access to on-premises networks. 
+        - If Azure Firewall or 3rd party NVA is used for traffic control – add application rules for AVD dependencies and network rule collection for the KMS, WindowsVirtualDektop tag and recursive Azure resolvers.
+
+
+        - Validate the proxy requirements for the session hosts. If the explicit proxy is being used and assigned at the OS level via .PAC file or GPO, then ensure access for AVD management traffic is bypassed. 
+
+-  ***Session Hosts:***
+
+    - **OS Hardening:** 
+        - 	In general, Enterprise would have the OS hardening guidelines established via GPO or MDM (Mobile Device Management) security baseline.  
+        - OS can be hardened via existing GPOs if present for Windows 10/11. Otherwise create security baseline using Microsoft Security Compliance Toolkit. 
+        - MDM Security baselines can easily be configured in Microsoft Endpoint Manager on devices that run Windows 10 and 11. The following article provides the detail steps: Windows MDM (Mobile Device Management) baselines.
+        - Consider leveraging Azure Policy guest configuration for audit and potential remediation of security baseline on the session hosts
+
+    - **Patch Management**
+        - Assuming Cx is using Azure Image Builder – then image refresh pipeline would be used to rebuild “gold image” with the latest copy from Azure Marketplace. The host pools to be re-provisioned with a new image. 
+        - 	Existing Patch Management solutions like Microsoft Endpoint Configuration Manager or SCCM can be leveraged as well. 
+    - **Vulnerability, threat and endpoint protection** 
+        - Enable Microsoft Defender for Endpoint. Integration of Microsoft Defender for Cloud with Microsoft Defender for Endpoint or Qualys will help with identification of software vulnerabilities within OS. 
+        - Microsoft Defender for Endpoint can provide EDR capabilities as well. During the deployment of the session hosts. 
+        - If using Windows Defender Antivirus or 3rd party vendor – refer to Deployment guide for Windows Defender Antivirus in a VDI environment. 
+        - For profile solutions like FSLogix or other solutions that mount VHD files, we recommend excluding VHD file extensions
+
+    - **Data Protection/Exfiltration controls**
+        - Forward any logs from Azure Virtual Desktop to your security information event management (SIEM) solution which can be used to set up custom threat detections. Ensure you are monitoring different types of Azure assets for potential threats and anomalies.
+        - AVD Host pool controls
+        - Integration with Azure Information Protection (AIP)
+        - SSE encryption for the managed disks for the session hosts.
+        - AAD integration for Azure Files (user profile storage) 
+        - Private endpoint for Azure Files (user profile storage) 
+
 - **Compliance:** Nearly all corporations are required to comply with government or industry regulatory policies. It's important to review those policies with your compliance team and have the correct controls for your Azure Virtual Desktop landing zone. You may need controls for specific policies like the Payment Card Industry Data Security Standard (PCI DSS) or the Health Insurance Portability and Accountability Act of 1996 (HIPAA).
 - **Defined roles:** Defined administrative, operations, and engineering roles within your organization plays a large part in defining the day-to-day operations in the Azure Virtual Desktop environment. Knowing which team is responsible for what area will help determine Azure role-based access control (RBAC) roles and configuration. Be sure to review the identity and access management section for more information. Consider creating a RACI matrix to map who owns each responsibility, then build controls into the Cloud Adoption Framework management group structure.
 - **Security audit tools:** What tools and methods do you use to continually scan, and evaluate your environment for security audits, and vulnerabilities?
