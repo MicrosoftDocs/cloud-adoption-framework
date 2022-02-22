@@ -37,7 +37,7 @@ Additionally, while extensions provide additional capability for Azure Arc-enabl
 
 ### Extension installation
 
-Standardize the way in which extensions are installed, whether that is through the Portal, CLI, ARM templates, or another mechanism.  After installation, verify that the extension(s) have installed properly.
+Standardize the way in which extensions are installed, whether that is through the Portal, Azure Policy, CLI, ARM templates, or another mechanism.  After installation, verify that the extension(s) have installed properly.
 
 ### Update extensions
 
