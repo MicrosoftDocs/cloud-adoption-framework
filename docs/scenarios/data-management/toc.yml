@@ -148,7 +148,7 @@ items:
         href: ./architectures/data-mesh-governance.md
       - name: Data marketplace
         href: ./architectures/data-mesh-data-marketplace.md
-      - name: Master Data Management in Data Mesh
+      - name: Master data management in data mesh
         href: ./architectures/data-mesh-master-data-management.md        
 
       - name: Data sharing

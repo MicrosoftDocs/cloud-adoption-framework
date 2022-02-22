@@ -20,8 +20,9 @@ The data management landing zone is a separate subscription that has the standar
 
 > [!NOTE]
 > Polyglot persistence is an enterprise storage term used to describe choosing different data storage/data stores technologies to support the various data types and their storage needs. Polyglot persistence is essentially the idea that an application can use more than one core database or storage technology.
+
 > [!WARNING]
-> The data management landing zone must be deployed as a separate subscription under the platform branch of an enterprise-scale architecture. You can then control the governance across the enterprise. The [Cloud Adoption Framework enterprise-scale architecture](../../../ready/landing-zone/index.md) illustrates the way to approach enterprise-scale.
+> The data management landing zone must be deployed as a separate subscription under the platform branch of an enterprise-scale architecture. You can then control the governance across the enterprise. The [Azure landing zone accelerator](../../../ready/landing-zone/index.md) illustrates the way to approach Azure landing zones.
 
 ## Data catalog
 
@@ -32,6 +33,8 @@ The data management landing zone is a separate subscription that has the standar
 For more information, see [Data Catalog](../govern-data-catalog.md)
 
 ## Data quality management
+
+*Resource group: governance-rg2*
 
 Enterprises are advised to continue with their current solution.
 
@@ -101,7 +104,7 @@ To augment the Data management and analytics scenario capabilities, some organiz
 
 If you decide to build these product it is recommended that you have a user interface which acts as both a data marketplace and operation console. The interface will rely on an underling metadata store which we have previously discussed in [Metadata Standards](../govern-metadata-standards.md).
 
-The data marketplace, or operations console, would call a middle tier of functions to facilitate onboarding, metadata registration, security provisioning, data lifecycle and observability.
+The data marketplace, or operations console, would call a middle tier of microservices to facilitate onboarding, metadata registration, security provisioning, data lifecycle and observability.
 
 The automationdb-rg resource group can be provisioned to host the metadata store.
 
@@ -117,6 +120,11 @@ The automationdb-rg resource group can be provisioned to host the metadata store
 | Data Lifecycle                 | Responsible for maintaining the data lifecycle based upon the metadata. This could include moving data to cold storage or deleted records which should no longer be held. For more information, see [What is Data Lifecycle Management?](../govern-lifecycle.md)                                                                                              |
 | Data Domain Onboarding         | ONLY APPLICABLE TO DATA MESH. This service exposes ability to capture metadata pertaining to new domain & onboard them to as needed. Also capabilities to create, update, activate / deactivate any domain / service line would be built into microservice. For more information, see [Provision the Azure data management and analytics scenario](../manage-provision-platform.md) |
 
+### Data Standardization
+
+Although this isn't a feature or a product of the data management landing zone, it is important to call out data standardization across all the services. This defines the format in which data should land and be stored. Where possible, would recommend using delta-lake format as the defacto standard across all services and storage.
+
+For more information, see [Data Standardization](../best-practices/data-lake-delta-lake.md).
 
 ## Next steps
 
