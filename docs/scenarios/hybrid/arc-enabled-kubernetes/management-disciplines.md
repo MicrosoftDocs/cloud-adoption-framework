@@ -55,6 +55,7 @@ The following architecture diagram shows Azure Arc-enabled Kubernetes cluster mo
 - Review and consider the [supported configuration for Azure Monitor Container insights](/azure/azure-monitor/containers/container-insights-enable-arc-enabled-clusters?toc=/azure/azure-arc/kubernetes/toc.json#supported-configurations) with Azure Arc-enabled Kubernetes, and decide if Azure Monitor Container insights meet your business needs for monitoring Azure Arc-enabled Kubernetes clusters.
 - Consider using dedicated Log Analytics workspace per region to collect logs and metrics from Azure Arc-enabled Kubernetes cluster to monitoring and reporting across multiple cluster in a specific environment. Review [Designing your Azure Monitor Logs deployment](/azure/azure-monitor/logs/design-logs-deployment) for additional details.
 - Consider Azure Monitor [ITSM connector integration](/azure/azure-monitor/alerts/itsmc-overview) with your organization [IT service management] tools to raise incidents for Azure Monitor alerts and track issue resolution.
+- When using [the semi-connected network connectivity mode](/azure/azure-arc/kubernetes/conceptual-connectivity-modes#understand-connectivity-modes), consider using private endpoints to connect to [Azure Log Analytics](/azure/azure-monitor/logs/private-link-design) workspaces through ExpressRoute or VPN connectivity to collect logs and metrics from Azure Arc-enabled Kubernetes cluster and monitor.
 
 ## Design recommendations
 
