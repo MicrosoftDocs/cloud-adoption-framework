@@ -77,7 +77,7 @@ Three [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-intr
 
 ### Upload ingest storage
 
-Third-party data publishers require the ability to land their data into the platform so integration ops teams can pull it into their data lakes. The upload ingest storage resource group, shown below, enables provisioning of blob stores for third-parties.
+Third-party data publishers require the ability to land their data into the platform so data application teams can pull it into their data lakes. The upload ingest storage resource group, shown below, enables provisioning of blob stores for third-parties.
 
 ![Diagram of upload ingest storage service.](../images/data-landing-zone-ingest-storage.png)
 

@@ -3,7 +3,7 @@ title: Platform automation and DevOps for a data management and analytics enterp
 description: Learn how this enterprise-scale scenario can improve platform automation and DevOps of data management and analytics.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 11/25/2021
+ms.date: 02/22/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -43,9 +43,9 @@ Data management and analytics scenario consists of:
 
 - A data management landing zone.
 - One or more data landing zones.
-- One or more data application which product data products in each data landing zone.
+- One or more data application which produces data products in each data landing zone.
 
-Each asset can evolve independently over time because of different requirements and lifecycles. For example, one of the data landing zones might require RA-GRS storage accounts at some point. It's important to have an infrastructure as code (IaC) representation of each of asset in a repository. This way, changes can be implemented based on requirements in the respective data landing zone, data integration, or data product.
+Each application can evolve independently over time because of different requirements and lifecycles. For example, one of the data landing zones might require RA-GRS storage accounts at some point. It's important to have an infrastructure as code (IaC) representation of each of asset in a repository. This way, changes can be implemented based on requirements in the respective data landing zone and data applications.
 
 The following table summarizes the teams involved in a data management and analytics scenario deployment.
 
