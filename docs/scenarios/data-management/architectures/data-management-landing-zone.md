@@ -66,6 +66,22 @@ These contracts should give information on data validation, model, and security 
 
 - For more information, see [Data sharing agreements](../govern-data-sharing-agreements.md).
 
+## Container registry
+
+The data management landing zone hosts an Azure Container Registry. It allows the data platform operations to deploy standard containers for use in data science projects.
+
+## Global DNS
+
+Data management and analytics scenario uses Private Link, which relies on having a private DNS zone. Check with your networking team before deploying another private DNS as they might have already deployed the services.
+
+## Azure Synapse Private Link hub
+
+Azure Synapse Analytics Private Link hubs are Azure resources, which act as connectors between your secured network and the synapse studio web experience. Data management and analytics scenario uses the hubs to securely connect to Azure Synapse studio from your Azure Virtual Network using private links.
+
+There are two steps to connect to Azure Synapse studio using private links. First, you must create a Private Link hubs resource. Second, you must create a private endpoint from your Azure Virtual Network to this Private Link hub. You can then use private endpoints to securely communicate with Azure Synapse studio. Integrate the private endpoints with your DNS solution, either in your on-premises solution or with Azure Private DNS.
+
+For more information, see [Connect to Azure Synapse studio using private links](/azure/synapse-analytics/security/synapse-private-link-hubs).
+
 ## Automation interfaces (optional)
 
 Data management and analytics scenario creates three resource groups to help with the creation of your custom onboarding solutions for your data estate.
@@ -85,22 +101,6 @@ For example, you can implement the following workflow for an ingestion framework
 1. Once ingest requests have been approved, it will insert the source into the data management landing zone catalog via its API.
 1. The metadata would be used as a driver for Azure Data Factory jobs, and it will have most of the parameters required for running of jobs.
 1. ADF Master Pipeline will pull parameters from Metastore to land raw data lake, enrichment, with conformed data types, and creation of Hive View in Azure Databricks Metastore.
-
-## Container registry
-
-The data management landing zone hosts an Azure Container Registry. It allows the data platform operations to deploy standard containers for use in data science projects.
-
-## Global DNS
-
-Data management and analytics scenario uses Private Link, which relies on having a private DNS zone. Check with your networking team before deploying another private DNS as they might have already deployed the services.
-
-## Azure Synapse Private Link hub
-
-Azure Synapse Analytics Private Link hubs are Azure resources, which act as connectors between your secured network and the synapse studio web experience. Data management and analytics scenario uses the hubs to securely connect to Azure Synapse studio from your Azure Virtual Network using private links.
-
-There are two steps to connect to Azure Synapse studio using private links. First, you must create a Private Link hubs resource. Second, you must create a private endpoint from your Azure Virtual Network to this Private Link hub. You can then use private endpoints to securely communicate with Azure Synapse studio. Integrate the private endpoints with your DNS solution, either in your on-premises solution or with Azure Private DNS.
-
-For more information, see [Connect to Azure Synapse studio using private links](/azure/synapse-analytics/security/synapse-private-link-hubs).
 
 ## Next steps
 
