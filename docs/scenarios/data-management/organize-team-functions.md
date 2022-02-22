@@ -86,7 +86,7 @@ The data application team delivers new data products to the business. They sourc
 
 ### New data products
 
-Product owners and business representatives create requests for new data product when they're needed. The data office assesses the requirements and assembles a new data application team with a range of expertise. The team identifies the data products required for the data product and requests permission to the data asset. If a new data product is needed, data application team receives a ticket to ingest it. The team identifies the services required for the new data product and requests a new data product via the [data integration and data product deployment process](./manage-provision-platform.md#data-integration-and-data-product-deployment-process). The data application team receives a forked repo from the master data products template to deploy the data product.
+Product owners and business representatives create requests for new data product when they're needed. The data office assesses the requirements and assembles a new data application team with a range of expertise. The team identifies the data products required for the data product and requests permission to the data asset. If a new data product is needed, data application team receives a ticket to ingest it. The team identifies the services required for the new data product and requests a new data product via the [data integration and data product deployment process](./manage-provision-platform.md#data-application-deployment-process). The data application team receives a forked repo from the master data products template to deploy the data product.
 
 ### Certify data products
 
