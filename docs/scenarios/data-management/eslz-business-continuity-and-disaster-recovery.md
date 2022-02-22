@@ -76,4 +76,4 @@ For an overview of business continuity with Azure Synapse Analytics, see [High a
 
 ## Next steps
 
-[Platform automation and DevOps for a data management and analytics enterprise-scale scenario](./eslz-platform-automation-and-devops.md)
+[Platform automation and DevOps for a data management and analytics enterprise-scale scenario](./manage-platform-automation-and-devops.md)

@@ -89,9 +89,9 @@ items:
   - name: Manage your analytics estate
     items:
     - name: Overview
-      href: ./eslz-platform-automation-and-devops.md
+      href: ./manage-platform-automation-and-devops.md
     - name: Provision the platform
-      href: ./eslz-provision-platform.md
+      href: ./manage-provision-platform.md
     - name: Observability
       href: ./manage-observability.md
 

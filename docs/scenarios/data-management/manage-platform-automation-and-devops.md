@@ -58,4 +58,4 @@ The following table summarizes the teams involved in a data management and analy
 
 ## Next steps
 
-[Provision the data management and analytics scenario platform](./eslz-provision-platform.md)
+[Provision the data management and analytics scenario platform](./manage-provision-platform.md)

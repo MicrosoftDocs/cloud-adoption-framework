@@ -76,7 +76,7 @@ After a data landing zone has been created, onboarding can start for the data in
 
 Deployment is done either directly using DevOps tooling or called via pipelines/workflows exposed as APIs. Similar to the data landing zone, deployment begins with forking the original data integration or data product repository.
 
-![Diagram of the integration and product deployment automation.](./images/integration-product-deployment-automation.png)
+![Diagram of the integration and product deployment automation.](./images/data-application-deployment-automation.png)
 
 1. The user makes a request for new data integration or data product services.
 1. The workflow process requests approval from the data platform or data landing zone operations team.
