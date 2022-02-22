@@ -1,9 +1,9 @@
 ---
 title: Security, governance, and compliance for Azure Virtual Desktop infrastructure
-description: Learn key design considerations and recommendations for a governance baseline in an Azure Virtual Desktop infrastructure.
-author: AdamWhitlatch
-ms.author: brblanch
-ms.date: 05/18/2021
+description: Learn key design considerations and recommendations for a security and governance baseline in an Azure Virtual Desktop infrastructure.
+author: NataliaKonokhova
+ms.author: nataliak
+ms.date: 02/23/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -12,54 +12,37 @@ ms.custom: think-tank, e2e-avd
 
 # Governance baseline considerations for Azure Virtual Desktop
 
-This article covers key design considerations and recommendations for security, governance, and compliance in a [Cloud Adoption Framework enterprise-scale landing zone architecture](../../ready/landing-zone/index.md) for [Azure Virtual Desktop](/azure/virtual-desktop/overview).
+This article covers key design considerations and recommendations for security, governance, and compliance for [Azure Virtual Desktop](/azure/virtual-desktop/overview) deployed as part of landing zone to the [Microsoft Cloud Adoption Framework](../../overview.md) for Azure. 
 
-As with any IT service, it's important to build the environment to scale, secure it, and be able to operate your environment simply and efficiently. While the Azure Virtual Desktop service does most of the front-end work, you still need to have the right control mechanisms to keep your systems and data safe. You also need processes to continually review those controls, report changes and, if necessary, remediate. At the end of this article, you'll understand the critical design areas for security, governance, and compliance, and you'll have clear guidance on Microsoft recommendations in each area.
+## Security
 
-In most cases, Azure Virtual Desktop is deployed into a landing zone as part of the [Microsoft Cloud Adoption Framework](../../overview.md) for Azure. Microsoft recommends reviewing the Cloud Adoption Framework to ensure that your environment has the right foundation for security, compliance, governance, and cost management.
+### Identity
 
-## Governance Areas
+### Network
 
-- ***Identity:*** 
-    - Conditional Access Policy for AVD users with MFA. 
-    - Leverage Azure PIM for either elevation of the privileged accounts over the AVD resources (i.e., Contributor role over AVD subscription and resource groups) 
-    - Validate the audit logs for Azure AD and Azure environment are collected. 
+### Session Hosts (VMs)
 
--  ***Networking:***
-    - **Azure Virtual Network(s):** 
-        - Deploy ASGs for the session hosts – this would enable for streamline NSG rule creation and avoid IP subnet range assignment within NSG rules.
-        - NSG for AVD deployments with subset of rules for AD DS, DNS, AVD service tag. Depending on whether NVA is present for traffic control – rules for the on-premises applications or rules covering access to on-premises networks. 
-        - If Azure Firewall or 3rd party NVA is used for traffic control – add application rules for AVD dependencies and network rule collection for the KMS, WindowsVirtualDektop tag and recursive Azure resolvers.
+## Governance
 
+### Identity
 
-        - Validate the proxy requirements for the session hosts. If the explicit proxy is being used and assigned at the OS level via .PAC file or GPO, then ensure access for AVD management traffic is bypassed. 
+### Network 
 
--  ***Session Hosts:***
+### Session Hosts (VMs)
 
-    - **OS Hardening:** 
-        - 	In general, Enterprise would have the OS hardening guidelines established via GPO or MDM (Mobile Device Management) security baseline.  
-        - OS can be hardened via existing GPOs if present for Windows 10/11. Otherwise create security baseline using Microsoft Security Compliance Toolkit. 
-        - MDM Security baselines can easily be configured in Microsoft Endpoint Manager on devices that run Windows 10 and 11. The following article provides the detail steps: Windows MDM (Mobile Device Management) baselines.
-        - Consider leveraging Azure Policy guest configuration for audit and potential remediation of security baseline on the session hosts
+### Data Protection 
 
-    - **Patch Management**
-        - Assuming Cx is using Azure Image Builder – then image refresh pipeline would be used to rebuild “gold image” with the latest copy from Azure Marketplace. The host pools to be re-provisioned with a new image. 
-        - 	Existing Patch Management solutions like Microsoft Endpoint Configuration Manager or SCCM can be leveraged as well. 
-    - **Vulnerability, threat and endpoint protection** 
-        - Enable Microsoft Defender for Endpoint. Integration of Microsoft Defender for Cloud with Microsoft Defender for Endpoint or Qualys will help with identification of software vulnerabilities within OS. 
-        - Microsoft Defender for Endpoint can provide EDR capabilities as well. During the deployment of the session hosts. 
-        - If using Windows Defender Antivirus or 3rd party vendor – refer to Deployment guide for Windows Defender Antivirus in a VDI environment. 
-        - For profile solutions like FSLogix or other solutions that mount VHD files, we recommend excluding VHD file extensions
+## Compliance 
 
-    - **Data Protection/Exfiltration controls**
-        - Forward any logs from Azure Virtual Desktop to your security information event management (SIEM) solution which can be used to set up custom threat detections. Ensure you are monitoring different types of Azure assets for potential threats and anomalies.
-        - AVD Host pool controls
-        - Integration with Azure Information Protection (AIP)
-        - SSE encryption for the managed disks for the session hosts.
-        - AAD integration for Azure Files (user profile storage) 
-        - Private endpoint for Azure Files (user profile storage) 
+### Identity
 
-- **Compliance:** Nearly all corporations are required to comply with government or industry regulatory policies. It's important to review those policies with your compliance team and have the correct controls for your Azure Virtual Desktop landing zone. You may need controls for specific policies like the Payment Card Industry Data Security Standard (PCI DSS) or the Health Insurance Portability and Accountability Act of 1996 (HIPAA).
+### Network 
+
+### Session Hosts (VMs)
+
+### Data Protection 
+
+ Nearly all corporations are required to comply with government or industry regulatory policies. It's important to review those policies with your compliance team and have the correct controls for your Azure Virtual Desktop landing zone. You may need controls for specific policies like the Payment Card Industry Data Security Standard (PCI DSS) or the Health Insurance Portability and Accountability Act of 1996 (HIPAA).
 - **Defined roles:** Defined administrative, operations, and engineering roles within your organization plays a large part in defining the day-to-day operations in the Azure Virtual Desktop environment. Knowing which team is responsible for what area will help determine Azure role-based access control (RBAC) roles and configuration. Be sure to review the identity and access management section for more information. Consider creating a RACI matrix to map who owns each responsibility, then build controls into the Cloud Adoption Framework management group structure.
 - **Security audit tools:** What tools and methods do you use to continually scan, and evaluate your environment for security audits, and vulnerabilities?
 - **Software updates:** Define a strategy for continuous operations to keep Windows and applications current.
