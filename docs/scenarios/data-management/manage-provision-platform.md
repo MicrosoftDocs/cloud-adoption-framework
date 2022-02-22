@@ -70,20 +70,20 @@ Use the `Copy-GitRepository` function from the `GitAutomation` module to clone t
 
 This approach to data landing zone deployment is flexible, while ensuring that actions are compliant with organizational requirements. Lifecycle management is enabled by applying new features or optimizations from the original templates.
 
-## Data integration and data product deployment process
+## Data application deployment process
 
-After a data landing zone has been created, onboarding can start for the data integration and data product operations teams. The data platform or data landing zone operations teams grant deployment approval.
+After a data landing zone has been created, onboarding can start for the data application teams. The data platform or data landing zone operations teams grant deployment approval.
 
-Deployment is done either directly using DevOps tooling or called via pipelines/workflows exposed as APIs. Similar to the data landing zone, deployment begins with forking the original data integration or data product repository.
+Deployment is done either directly using DevOps tooling or called via pipelines/workflows exposed as APIs. Similar to the data landing zone, deployment begins with forking the original data application repository.
 
-![Diagram of the integration and product deployment automation.](./images/integration-product-deployment-automation.png)
+![Diagram of the data application deployment automation.](./images/data-application-deployment-automation.png)
 
-1. The user makes a request for new data integration or data product services.
+1. The user makes a request for new data application services.
 1. The workflow process requests approval from the data platform or data landing zone operations team.
 1. The workflow calls the IT service management API to create required resource groups, and creation of an Azure DevOps service connection. The workflow assigns a team to the Azure DevOps project.
-1. The workflow forks the original data integration or data product repository to create the destination Azure DevOps project.
+1. The workflow forks the original data application repository to create the destination Azure DevOps project.
 1. The workflow creates an Azure Resource Manager template parameter file and pipelines.
-1. The workflow then starts an Azure pipeline to create the networking requirements, and another Azure pipeline to deploy the data integration or data products services.
+1. The workflow then starts an Azure pipeline to create the networking requirements, and another Azure pipeline to deploy the data application services.
 1. The workflow notifies the user on completion.
 
 > [!TIP]
@@ -99,20 +99,19 @@ At the start of the project, the data platform has one Azure DevOps project with
 
 - One repository for the data management landing zone, pipelines, and a service connection to the cloud environment.
 - One template repository for the data landing zone, pipelines to deploy a data landing zone instance, and service connections to cloud environments.
-- One template repository for a data integration service, pipelines to deploy a data integration resource group, and service connections to cloud environments. These connections are forked from data landing zone Azure DevOps Projects.
 - One template repository for data product services, pipelines to deploy a data product instance, and service connections to cloud environments. These connections are forked from data landing zone Azure DevOps Projects.
 
 Once data landing zones have been deployed, data management and analytics scenario prescribes that:
 
 - Each data landing zone will have its own Azure DevOps project with one or more Azure Boards.
-- For each new data integration or data product service, its data landing zone Azure DevOps project fork is created after request approval.
-- Each data integration or data product service includes:
+- For each data application, its data landing zone Azure DevOps project fork is created after request approval.
+- Each data application includes:
   - A service connection.
   - A registered pipeline.
   - A DevOps team with access to their Azure board and repository.
   - A different set of policies for the forked repository.
 
-To control the deployment of data integration and data product services, follow these practices:
+To control the deployment of data applications, follow these practices:
 
 - The data landing zone operations team owns and secures the main repository branch.
 - Only the main branch is used to deploy to test and production environments.

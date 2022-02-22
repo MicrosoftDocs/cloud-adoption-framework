@@ -49,4 +49,4 @@ Publishing contracts centrally allows providers and consumers to resolve their d
 
 ## Next steps
 
-[Secure data management and analytics in Azure](./secure.md)
+[Metadata Standards](govern-metadata-standards.md)

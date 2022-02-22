@@ -86,3 +86,7 @@ Fixing data quality, when you are in trouble. can have serious consequences for 
 Validate data quality early and put processes in to proactively address poor data quality. For example a data product can't be released to production until it achieves X amount of completeness.
 
 Tooling is a free choice but it should include expectations (rules), data metrics, profiling and the ability to secure the expectations so that you can implement global and domain based expectations.
+
+## Next steps
+
+[What is Data Lifecycle Management?](govern-lifecycle.md)

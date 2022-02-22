@@ -45,10 +45,8 @@ items:
       href: ./govern.md
     - name: Requirements for governing data
       href: ./govern-requirements.md
-    - name: Components needed for data governance
+    - name: Data governance processes
       href: ./govern-components.md
-    - name: Technology needed for end-to-end governance
-      href: ./govern-technology.md
     - name: Data Catalog
       href: ./govern-data-catalog.md
     - name: Data Lineage
@@ -57,7 +55,7 @@ items:
       href: ./govern-master-data.md
     - name: Data quality
       href: ./govern-data-quality.md
-    - name: Data Lifecycle
+    - name: Data lifecycle
       href: ./govern-lifecycle.md
     - name: Data sharing agreements
       href: ./govern-data-sharing-agreements.md
@@ -91,9 +89,9 @@ items:
   - name: Manage your analytics estate
     items:
     - name: Overview
-      href: ./eslz-platform-automation-and-devops.md
+      href: ./manage-platform-automation-and-devops.md
     - name: Provision the platform
-      href: ./eslz-provision-platform.md
+      href: ./manage-provision-platform.md
     - name: Observability
       href: ./manage-observability.md
 
@@ -108,8 +106,6 @@ items:
       href: ./architectures/data-management-landing-zone.md
     - name: Data landing zone
       href: ./architectures/data-landing-zone.md
-    - name: Models
-      href: ./architectures/models-cdm.md
     - name: Data Products
       items:
         - name: Overview
@@ -120,20 +116,9 @@ items:
           href: ./architectures/data-reference-patterns.md
     - name: Scaling the architecture
       href: ./architectures/scaling-architectures.md
-    - name: Reference architectures (archive)
-      items:
-      - name: Overview
-        href: ./architectures/reference-architecture-overview.md
-      - name: Single data landing zone
-        href: ./architectures/reference-architecture-adatum.md
-      - name: Multiple data landing zones
-        href: ./architectures/reference-architecture-relecloud.md
-      - name: Highly sensitive data landing zones
-        href: ./architectures/reference-architecture-lamna.md
-      - name: Financial institution scenario for data mesh
-        href: ./architectures/reference-architecture-data-mesh.md
-
-    - name: Data mesh
+    - name: Common Data Models
+      href: ./architectures/models-cdm.md
+    - name: Data mesh specific guidance
       items:
       - name: Overview
         href: ./architectures/what-is-data-mesh.md
@@ -151,7 +136,7 @@ items:
         href: ./architectures/data-mesh-governance.md
       - name: Data marketplace
         href: ./architectures/data-mesh-data-marketplace.md
-      - name: Master Data Management in Data Mesh
+      - name: Master data management in data mesh
         href: ./architectures/data-mesh-master-data-management.md        
 
       - name: Data sharing
@@ -163,12 +148,18 @@ items:
         - name: Data virtualization
           href: ./architectures/data-virtualization.md
 
-      - name: Data mesh operating model
-        href: ./architectures/data-mesh-dataops.md
-      - name: Data mesh networking
-        href: ./architectures/data-mesh-networking-considerations.md
-      - name: Data mesh security
-        href: ./architectures/data-mesh-security.md
+    - name: Reference architectures
+      items:
+      - name: Overview
+        href: ./architectures/reference-architecture-overview.md
+      - name: Single data landing zone
+        href: ./architectures/reference-architecture-adatum.md
+      - name: Multiple data landing zones
+        href: ./architectures/reference-architecture-relecloud.md
+      - name: Highly sensitive data landing zones
+        href: ./architectures/reference-architecture-lamna.md
+      - name: Financial institution scenario for data mesh
+        href: ./architectures/reference-architecture-data-mesh.md
 
     - name: Deployment templates
       href: ./architectures/deployment-templates.md

@@ -22,7 +22,7 @@ In the previous sections, we've covered the data management and analytics scenar
 | [**Govern your analytics**](../govern.md)      | Requirements for governing data, data catalog, lineage, master data management, data quality, data sharing agreements and metadata                                                                                         |
 | [**Secure you analytics estate**](../secure.md) | How to security your analytics estate with authentication and authorization, data privacy and data access management                                                                                                       |
 | [**Organize people and teams**](../organize.md)   | How do you organize for effective operations, roles and teams, team functions                                                                                                                                              |
-| [**Manage your analytics estate**](../eslz-platform-automation-and-devops.md)| How do you provision the platform and the observability should you put in place for the scenario?                                                                                                                          |
+| [**Manage your analytics estate**](../manage-platform-automation-and-devops.md)| How do you provision the platform and the observability should you put in place for the scenario?                                                                                                                          |
 
 ## Physical architecture
 

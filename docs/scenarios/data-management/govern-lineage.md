@@ -23,4 +23,4 @@ One of the primary features of a data catalog is the ability to show the lineage
 
 ## Next steps
 
-[Technology needed for end-to-end governance](./govern-technology.md)
+- [Master data management](govern-master-data.md)
