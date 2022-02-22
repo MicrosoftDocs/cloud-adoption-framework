@@ -25,9 +25,11 @@ The data management landing zone is a separate subscription that has the standar
 
 ## Data catalog
 
+*Resource group: governance-rg*
+
 [!INCLUDE [data-catalog](../includes/data-catalog.md)]
 
-- For more information, see [Data Catalog](../govern-data-catalog.md)
+For more information, see [Data Catalog](../govern-data-catalog.md)
 
 ## Data quality management
 
@@ -35,9 +37,11 @@ Enterprises are advised to continue with their current solution.
 
 Data quality should happen as close to the source as possible to avoid quality issues replicating across the analytics and AI estate. Moving quality metrics and validation to the data integration aligns the quality process with the teams that are closest to the data. These teams have the deepest understanding of the data asset. Data lineage also provides data quality confidence and should be provided for all data products and products.
 
-- For more information, see [Data quality](../govern-data-quality.md)
+For more information, see [Data quality](../govern-data-quality.md)
 
 ## Data modeling repository
+
+*Resource group: governance-rg2*
 
 Entity relationship models should be captured and stored in a central location, that is in the data management landing zone. It gives consumers of the data a single place to go for conceptual diagrams.
 
@@ -45,13 +49,17 @@ Entity relationship models should be captured and stored in a central location, 
 
 ## Master data management
 
+*Resource group: governance-rg2*
+
 Master data management control resides in the data management landing zone. For data mesh there are specific considerations to call out in [Master Data Management in Data Mesh](data-mesh-master-data-management.md)
 
 Many master data management solutions fully integrate with Azure Active Directory. The integration allows you to secure the data and provide different views for different user groups.
 
-- For more information, see [master data management system](../govern-master-data.md).
+For more information, see [master data management system](../govern-master-data.md).
 
 ## API catalog
+
+*Resource group: governance-rg2*
 
 It's likely that teams across the enterprise will create various APIs for their data platforms and products. These APIs can be difficult to discover across the organization. Placing an API catalog in the data management landing zone can help solve this problem.
 
@@ -59,22 +67,24 @@ The API catalog can help standardize documentation and offers a place for intern
 
 ## Data sharing and contracts
 
+*Resource group: governance-rg2*
+
 Data management and analytics scenario uses
 [Azure AD entitlement management](/azure/active-directory/governance/entitlement-management-overview) or Azure Purview policies to control access to sharing of data. Your enterprise still might require a sharing and contract repository. The repository is an organizational function. It should be in the data management landing zone.
 
 These contracts should give information on data validation, model, and security policies.
 
-- For more information, see [Data sharing agreements](../govern-data-sharing-agreements.md).
+For more information, see [Data sharing agreements](../govern-data-sharing-agreements.md).
 
 ## Container registry
 
+*Resource group: containers-rg*
+
 The data management landing zone hosts an Azure Container Registry. It allows the data platform operations to deploy standard containers for use in data science projects.
 
-## Global DNS
-
-Data management and analytics scenario uses Private Link, which relies on having a private DNS zone. Check with your networking team before deploying another private DNS as they might have already deployed the services.
-
 ## Azure Synapse Private Link hub
+
+*Resource group: consumption-rg*
 
 Azure Synapse Analytics Private Link hubs are Azure resources, which act as connectors between your secured network and the synapse studio web experience. Data management and analytics scenario uses the hubs to securely connect to Azure Synapse studio from your Azure Virtual Network using private links.
 
@@ -84,23 +94,29 @@ For more information, see [Connect to Azure Synapse studio using private links](
 
 ## Automation interfaces (optional)
 
-Data management and analytics scenario creates three resource groups to help with the creation of your custom onboarding solutions for your data estate.
+To augment the Data management and analytics scenario capabilities, some organization could decide to create a number of automation services to drive conformity and onboarding solutions for your data estate.
 
-Typically, user interfaces are in the "governance" resource group. The application layer and database are in `automation` and `automationdb`, respectively.
+> [!IMPORTANT]
+> None of these automation interfaces are products and neither do they illustrate a roadmap item. They are listed to help you consider items which you might want to automate.
 
-You could use these resource groups to host an application that creates data landing zones, data integrations, and data products. You could develop a logic application to capture feedback and route to the correct teams.
+If you decide to build these product it is recommended that you have a user interface which acts as both a data marketplace and operation console. The interface will rely on an underling metadata store which we have previously discussed in [Metadata Standards](../govern-metadata-standards.md).
 
-### Ingestion framework engine user interface
+The data marketplace, or operations console, would call a middle tier of functions to facilitate onboarding, metadata registration, security provisioning, data lifecycle and observability.
 
-If your enterprise has already developed an ingestion framework engine for automatically ingesting data based on registering metadata, which includes connection strings, path to copy data from and to, and ingestion schedule, we suggest this application should reside in the data management landing zone.
+The automationdb-rg resource group can be provisioned to host the metadata store.
 
-For example, you can implement the following workflow for an ingestion framework engine:
+### Services
 
-1. The ingestion engines framework UI is deployed to the data management landing zone.
-1. The application communicates with an Azure Data Factory SQL Database metastore in each data landing zone to create new data sources for ingestion for landing into the data landing zones.
-1. Once ingest requests have been approved, it will insert the source into the data management landing zone catalog via its API.
-1. The metadata would be used as a driver for Azure Data Factory jobs, and it will have most of the parameters required for running of jobs.
-1. ADF Master Pipeline will pull parameters from Metastore to land raw data lake, enrichment, with conformed data types, and creation of Hive View in Azure Databricks Metastore.
+| Service                        | Service Scope                                                                                                                                                                                                                                                                                     |
+|--------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Data Landing Zone Provisioning | This service is responsible for creating a new data landing zone - it is unlikely to have a high usage but is included for completeness of an end-to-end onboarding solution  For more information, see [Provision the Azure data management and analytics scenario](../manage-provision-platform.md)                                        |
+| Data Product Onboarding        | This service exposes ability to create / amend resource groups pertaining to an onboarded tenant. Also capabilities to upgrade / degrade SKUs, activate / deactivate resource group for any onboarded tenant / service. It would create a new data landing zone DevOps. For more information, see [Provision the Azure data management and analytics scenario](../manage-provision-platform.md) |
+| Access Provisioning            | This service exposes the ability to create Access Packages, Access Policies, Asset access approval process(Manual/Auto) using SPN/UPN. This should also be able to expose an API to give the list of subscription requests (assets) that a user have been submitted in the last 90 days. For more information, see [Data Access Management](../security-provisioning.md)         |
+| Data Agnostic Ingestion        | The microservice communicates with an Azure Data Factory SQL Database metastore in each data landing zone to create new data sources for ingestion for landing into the data landing zones. For more information, see [How automated ingestion frameworks support data management and analytics scenario in Azure](../best-practices/automated-ingestion-pattern.md) |
+| Metadata                       | This service exposed and creates metadata for the platform. For more information, see [Metadata Standards](../govern-metadata-standards.md)                                                                                                                                                                                                            |
+| Data Lifecycle                 | Responsible for maintaining the data lifecycle based upon the metadata. This could include moving data to cold storage or deleted records which should no longer be held. For more information, see [What is Data Lifecycle Management?](../govern-lifecycle.md)                                                                                              |
+| Data Domain Onboarding         | ONLY APPLICABLE TO DATA MESH. This service exposes ability to capture metadata pertaining to new domain & onboard them to as needed. Also capabilities to create, update, activate / deactivate any domain / service line would be built into microservice. For more information, see [Provision the Azure data management and analytics scenario](../manage-provision-platform.md) |
+
 
 ## Next steps
 

@@ -24,7 +24,7 @@ In the data management and analytics scenario their are two ways to approach dat
 
 - Using the inbuilt data lifecycle features of each Azure service containing persisted data such as [Azure data lake](/azure/storage/blobs/lifecycle-management-overview). This is a great start for moving data to cold and archive tiers but fails to adhere to deleting of data after X amount of time.
 
-- Integrating data lifecycle as part of an onboarding process to give the application business owners the opportunity to define their data lifecycle policy. This process would involve a custom application which would capture key metrics into [metadata standards](govern-metadata-standards.md) per data product. Part of the custom process would handle moving data from hot to cold to archive and deleting of data after X amount of time. For more information, see [Automation Services](./govern-data-sharing-agreements.md).
+- Integrating data lifecycle as part of an onboarding process to give the application business owners the opportunity to define their data lifecycle policy. This process would involve a custom application which would capture key metrics into [metadata standards](govern-metadata-standards.md) per data product. Part of the custom process would handle moving data from hot to cold to archive and deleting of data after X amount of time.
 
 ## Next steps
 

@@ -130,7 +130,7 @@ items:
         href: ./architectures/reference-architecture-data-mesh.md
     - name: Common Data Models
       href: ./architectures/models-cdm.md
-    - name: Data mesh
+    - name: Data mesh specific guidance
       items:
       - name: Overview
         href: ./architectures/what-is-data-mesh.md
