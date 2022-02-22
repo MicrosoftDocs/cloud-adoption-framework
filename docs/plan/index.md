@@ -16,11 +16,11 @@ Cloud adoption plans convert the aspirational goals of a cloud adoption strategy
 
 Use the following exercises to help you document your organization's technology strategy. These exercises support cloud adoption efforts by capturing prioritized tasks. At the end of this process, your cloud adoption plan will map to the metrics and motivations defined in the cloud adoption strategy.
 
-| <span title="Icon">&nbsp;</span> | <span title="Description">&nbsp;</span> |
-|--|--|
-| <br> :::image type="icon" source="../_images/icons/1.png"::: | <br> [Digital estate](../digital-estate/rationalize.md): Inventory and rationalize your digital estate based on assumptions that align your organization's motivations and business outcomes. |
-| <br> :::image type="icon" source="../_images/icons/2.png"::: | <br> [Initial organizational alignment](./initial-org-alignment.md): Establish a plan for initial organizational alignment to support the adoption plan. |
-| <br> :::image type="icon" source="../_images/icons/3.png"::: | <br> [Skills readiness plan](./adapt-roles-skills-processes.md): Create a plan for addressing skills readiness gaps within your organization. |
-| <br> :::image type="icon" source="../_images/icons/4.png"::: | <br> [Cloud adoption plan](./plan-intro.md): Develop a cloud adoption plan to manage change across skills, the digital estate, and your organization. |
+| | |
+|:---:|---|
+| :::image type="icon" source="../_images/icons/1.png"::: | [Digital estate](../digital-estate/rationalize.md): Inventory and rationalize your digital estate based on assumptions that align your organization's motivations and business outcomes. |
+| :::image type="icon" source="../_images/icons/2.png"::: | [Initial organizational alignment](./initial-org-alignment.md): Establish a plan for initial organizational alignment to support the adoption plan. |
+| :::image type="icon" source="../_images/icons/3.png"::: | [Skills readiness plan](./adapt-roles-skills-processes.md): Create a plan for addressing skills readiness gaps within your organization. |
+| :::image type="icon" source="../_images/icons/4.png"::: | [Cloud adoption plan](./plan-intro.md): Develop a cloud adoption plan to manage change across skills, the digital estate, and your organization. |
 
 Download the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to track the outputs of each exercise as you build out your cloud adoption strategy. Also, learn about the [five Rs of cloud rationalization](../digital-estate/5-rs-of-rationalization.md) to help build your cloud adoption plan.
