@@ -164,7 +164,7 @@ items:
     - name: Deployment templates
       href: ./architectures/deployment-templates.md
     - name: Solution accelerators
-      href: ./architectures/solution-accelerators.md  
+      href: ./architectures/solution-accelerators.md
     - name: Connecting to environments privately
       href: ./architectures/connect-to-environments-privately.md
     - name: Frequently asked questions
