@@ -12,7 +12,7 @@ ms.custom: e2e-data-management, think-tank
 
 # Overview of the data landing zone in Azure
 
-Data landing zones are connected to the [data management landing zone](./data-management-landing-zone.md) by virtual network (VNet) peering. They're considered a [landing zone](../../../ready/landing-zone/index.md) related to the enterprise-scale architecture.
+Data landing zones are connected to the [data management landing zone](./data-management-landing-zone.md) by virtual network (VNet) peering. They're considered a [landing zone](../../../ready/landing-zone/index.md) related to the azure landing zone architecture.
 
 > [!IMPORTANT]
 > Before provisioning a data landing zone, you should have your DevOps and CI/CD operating model in place and a data management landing zone deployed.
@@ -24,7 +24,7 @@ The Azure subscription associated with the data landing zone is structured as fo
 
 | Layer | Required |Resource groups |
 |---|---|---|
-|[Core services](#core-services-layer) | Yes |<ul><li>[Network](#networking) <li> [Data lake services](#data-lake-services) <li> [Upload ingest storage](#upload-ingest-storage) <li> [Data agnostic ingestion](#data-agnostic-ingestion) <li> [Shared integration runtimes](#shared-integration-runtimes) <li> [Data landing zone key vault](#data-landing-zone-key-vault) <li> [Shared applications](#shared-applications)|
+|[Core services](#core-services-layer) | Yes |<ul><li>[Network](#networking) <li> [Data lake services](#data-lake-services) <li> [Upload ingest storage](#upload-ingest-storage) <li> [Data agnostic ingestion](#data-agnostic-ingestion) <li> [Shared integration runtimes](#shared-integration-runtimes) <li> [Data agnostic ingestion](#data-agnostic-ingestion) <li> [Shared applications](#shared-applications) |
 |[Data application](#data-application)     |Optional         |<ul><li>[Data application](#data-product-resource-group) (1 or more)</li></ul>         |
 |[Visualization](#visualization)    |Optional         |<ul><li>[Reporting and visualization](#reporting-and-visualization)</li></ul>         |
 
@@ -47,12 +47,16 @@ Included are all the required services to enable the data landing zone within th
 | Resource Group        | Required | Description             |
 |-----------------------|----------|-------------------------|
 | network-rg            | Yes      | Networking              |
+| databricks-monitoring-rg | Optional | Monitoring for Azure databricks workspaces |
+| hive-rg            | Optional      | Hive metastore for Azure databricks   |
 | storage-rg            | Yes      | Data lakes services     |
-| metadata-ingestion-rg | Optional | Data agnostic ingestion |
 | external-data-rg      | Yes      | Upload ingest storage   |
 | runtimes-rg           | Yes      | Shared integration runtimes |
-| key-rg                | Yes      | Data landing zone key vault |
-| share-application-rg  | Optional | Shared applications         |
+| mgmt-rg               | Yes      | CI/CD Agents |
+| metadata-ingestion-rg | Optional | Data agnostic ingestion |
+| databricks-monitoring-rg | Optional | Log analytics workspace for databricks workspaces in landing zone|
+| shared-synapse-rg  | Optional | Shared Azure Synapse |
+| shared-databricks-rg  | Optional | Shared Azure Databricks workspace |
 
 ### Networking
 
@@ -85,6 +89,29 @@ These storage blobs are requested by the data application teams and approved by 
 > [!IMPORTANT]
 > Since the provisioning of Azure Storage blobs is on an *as-needed* basis, we recommend to initially deploy an empty storage services resource group in every data landing zone.
 
+### Shared integration runtimes
+
+We recommend you deploy a virtual machine scale set with self-hosted integration runtimes into the data landing zone. It should be hosted in the shared integration resource group. This deployment will enable rapid onboarding of data products to the data landing zone.
+
+A self-hosted integration runtime will be deployed for use with Azure Purview to scan data inside the data landing zone. We recommend you understand how to [create and manage a self-hosted integration runtime in Azure Purview](/azure/purview/manage-integration-runtimes).
+
+:::image type="content" source="../images/data-landing-zone-shared-integration-rg.png" alt-text="Diagram of a data landing zone shared integration resource group.":::
+
+To enable the resource group, you need to:
+
+- Create at least one Azure Data Factory in the shared integration resource group in the data landing zone. It will only be used for linking the shared self-hosted integration runtime and not for data pipelines.
+- Create a [shared image for the Azure virtual machine scale set](/azure/virtual-machine-scale-sets/tutorial-use-custom-image-powershell) with a self-hosted integration runtime configured.
+- The [self hosted integration runtimes should be setup in high availability mode](/azure/data-factory/create-self-hosted-integration-runtime#high-availability-and-scalability).
+- The self-hosted integration runtimes should be associated with Azure data factories in the data landing zone(s).
+- [Azure Automation should be setup to update the self hosted integration runtime periodically](/azure/data-factory/self-hosted-integration-runtime-automation-scripts)
+
+> [!NOTE]
+> This does not restrict the deployment of integration runtimes inside a data landing zone or into third-party clouds.
+
+### CI/CD Agents
+
+CI/CD Agents for deploying data applications and changes to the the data landing zone.
+
 ### Data agnostic ingestion
 
 :::image type="content" source="../images/data-landing-zone-ingest-processing-rg.png" alt-text="Diagram of Data landing zone ingest and processing resource group.":::
@@ -106,35 +133,10 @@ Services included in the resource group include:
 |Azure Data Factory | Yes | Azure data factory is used as the orchestration engine for the data agnostic ingestion |
 |Azure SQL DB | Yes | Azure SQL DB is used as the metastore for Azure Data Factory |
 |Event Hubs or IoT Hub | Optional | Your ingestion framework engine can use Event Hubs or IoT Hub for real-time streaming to Event Hubs and for processing of batch and streaming via a Databricks engineering workspace. |
+| Azure Databricks | Optional | <li> You can deploy Azure Databricks or Azure Synapse Spark to use with the data agnostic ingestion engine. |
+| Azure Synapse | Optional | <li> You can deploy Azure Databricks or Azure Synapse Spark to use with the data agnostic ingestion engine. |
 
-### Shared integration runtimes
-
-We recommend you deploy a virtual machine scale set with self-hosted integration runtimes into the data landing zone. It should be hosted in the shared integration resource group. This deployment will enable rapid onboarding of data products to the data landing zone.
-
-A self-hosted integration runtime will be deployed for use with Azure Purview to scan data inside the data landing zone. We recommend you understand how to [create and manage a self-hosted integration runtime in Azure Purview](/azure/purview/manage-integration-runtimes).
-
-:::image type="content" source="../images/data-landing-zone-shared-integration-rg.png" alt-text="Diagram of a data landing zone shared integration resource group.":::
-
-To enable the resource group, you need to:
-
-- Create at least one Azure Data Factory in the shared integration resource group in the data landing zone. It will only be used for linking the shared self-hosted integration runtime and not for data pipelines.
-- Create a [shared image for the Azure virtual machine scale set](/azure/virtual-machine-scale-sets/tutorial-use-custom-image-powershell) with a self-hosted integration runtime configured.
-- The [self hosted integration runtimes should be setup in high availability mode](/azure/data-factory/create-self-hosted-integration-runtime#high-availability-and-scalability).
-- The self-hosted integration runtimes should be associated with Azure data factories in the data landing zone(s).
-- [Azure Automation should be setup to update the self hosted integration runtime periodically](/azure/data-factory/self-hosted-integration-runtime-automation-scripts)
-
-> [!NOTE]
-> This does not restrict the deployment of integration runtimes inside a data landing zone or into third-party clouds.
-
-## Data landing zone key vault
-
-An Azure Key Vault will be provisioned to store secrets relating to data landing zone services such as:
-
-- Azure Databricks PAT tokens
-- Service principal credentials
-- Data landing zone data lake services keys
-
-### Shared applications
+### Shared Databricks
 
 For each data landing zone, a shared Azure Synapse Analytics workspace and Azure Databricks workspaces get provisioned. The workspaces are for use by everyone in the data landing zone for exploratory purposes.
 
@@ -160,7 +162,7 @@ The azure landing zone pattern recommends all logs should be sent to a central L
 > [!IMPORTANT]
 > The Log Analytics workspace in the monitoring resource group should only be used for capturing Databricks Spark logs.
 
-#### Azure Synapse Analytics in shared products
+### Shared Azure Synapse Analytics
 
 Azure Synapse Analytics is the provisioned integrated analytics service that accelerates time to insight across data warehouses and big data systems. Azure Synapse Analytics brings together the best of **SQL** technologies used in enterprise data warehousing, Spark technologies used for big data, and **Pipelines** for data integration and extract, transform, load (ETL) or extract, load, transform (ELT). Azure Synapse studio provides a unified experience for management, monitoring, coding, and security. Synapse has deep integration with other Azure services such as Power BI, Azure Cosmos DB, and Azure Machine Learning.
 
