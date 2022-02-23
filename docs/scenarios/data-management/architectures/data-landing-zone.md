@@ -166,7 +166,7 @@ Azure Databricks service is one of the key consumers of the Azure Data Lake Stor
 :::image type="content" source="../images/data-landing-zone-shared-databricks-rg.png" alt-text="Diagram of data landing zone shared databricks resource group.":::
 
 > [!IMPORTANT]
-> An Azure Databricks workspace will be provisioned for all data scientists and DataOps called the Azure Databricks analytics and data science workspace as shown in the shared products resource group.
+> An Azure Databricks workspace will be provisioned for all data scientists and DataOps called the Azure Databricks (analytics) workspace as shown in the shared products resource group.
 > This workspace can be configured to connect to the Azure Data Lake using Azure Active Directory passthrough or table access control. Depending on the use case, conditional access can be configured as another security measure.
 
 The data management and analytics scenario guidance follows best practices to integrate Azure Databricks:
@@ -180,20 +180,20 @@ The azure landing zone pattern recommends all logs should be sent to a central L
 
 This resource group is optional.
 
-During the initial setup of a data landing zone, a single Azure Synapse Analytics workspace will be deployed to for use by all data analysts and scientists in the shared products resource group. More synapse workspaces can be optionally setup for data integrations and data products should cost management and recharge be required. Data integration and data product teams might make use of dedicated Azure Synapse Analytics workspaces for creating dedicated Azure SQL Database pools, as a read data store, which is used by the visualization layer.
+During the initial setup of a data landing zone, a single Azure Synapse Analytics workspace will be deployed to for use by all data analysts and scientists in the shared products resource group. More synapse workspaces can be optionally setup for data products should cost management and recharge be required. Data application teams might make use of dedicated Azure Synapse Analytics workspaces for creating dedicated Azure SQL Database pools, as a read data store, which is used by the visualization layer.
 
 > [!IMPORTANT]
 > The shared Azure Synapse workspace should be locked down to only allow SQL On-demand queries to stop the workspace being used to create data products. It is there for exploitative purposes only.
 
 ## Data application
 
-A data landing zone can have multiple data products. You can create the data products by ingesting data from data integrations read data stores. Or you can create data products by other data products inside the same data landing zone, or from across multiple data landing zones. The creation of the data products is subject to approval of the data steward.
+A data landing zone can have multiple data products. You can create the data products by ingesting data from source. Or you can create data products by using other data products inside the same data landing zone, or from across multiple data landing zones. The creation of the data products is subject to approval of the data steward.
 
 ### Data product resource group
 
 The resource group for a data product includes all the service required to make that data product. For example, there's a requirement to have an Azure Database for MySQL, that's used by a visualization tool. The data must be ingested and transformed before landing into the MySQL database. You can deploy an Azure Data Factory and Azure Database for MySQL into the data product resource group.
 
-For more information on how to onboard data products, see [Data management and analytics scenario data products in Azure](./data-landing-zone-data-products.md). The guidance explains the process to create the services and resource groups.
+For more information on how to onboard data products, see [Data management and analytics scenario data products in Azure](./data-landing-zone-data-products.md).
 
 ## Visualization
 
