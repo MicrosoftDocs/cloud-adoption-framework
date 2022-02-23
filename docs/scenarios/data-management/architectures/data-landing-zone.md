@@ -24,7 +24,7 @@ The Azure subscription associated with the data landing zone is structured as fo
 
 | Layer | Required |Resource groups |
 |---|---|---|
-|[Core services](#core-services-layer) | Yes |<ul><li>[Network](#networking) <li> [Data lake services](#data-lake-services) <li> [Upload ingest storage](#upload-ingest-storage) <li> [Data agnostic ingestion](#data-agnostic-ingestion) <li> [Shared integration runtimes](#shared-integration-runtimes) <li> [Data agnostic ingestion](#data-agnostic-ingestion) <li> [Shared applications](#shared-applications) |
+|[Core services](#core-services-layer) | Yes |<ul><li>[Network](#networking) <li> [Monitoring for Azure databricks workspaces](#monitoring-for-azure-databricks-workspaces) <li>[Hive metastore for Azure databricks](#hive-metastore-for-azure-databricks) <li> [Data lake services](#data-lake-services) <li> [Upload ingest storage](#upload-ingest-storage) <li> [Data agnostic ingestion](#data-agnostic-ingestion) <li> [Shared integration runtimes](#shared-integration-runtimes) <li> [CI/CD Agents](#cicd-agents) <li> [Data agnostic ingestion](#data-agnostic-ingestion) <li> [Shared Databricks](#shared-databricks) <li> [Shared Azure Synapse Analytics](#shared-azure-synapse-analytics) |
 |[Data application](#data-application)     |Optional         |<ul><li>[Data application](#data-product-resource-group) (1 or more)</li></ul>         |
 |[Visualization](#visualization)    |Optional         |<ul><li>[Reporting and visualization](#reporting-and-visualization)</li></ul>         |
 
@@ -64,6 +64,27 @@ Included are all the required services to enable the data landing zone within th
 
 The network resource group, contains core components such as [network security groups](/azure/virtual-network/network-security-groups-overview) (NSG), Azure [Network Watcher](/azure/network-watcher/network-watcher-monitoring-overview), and virtual network. All of these services are deployed into a single resource group. As part of the deployment, the virtual network of a data landing zone is [automatically peered with the data management landing zone's VNet](../eslz-network-topology-and-connectivity.md) and the [connectivity subscription's VNet](../../../ready/landing-zone/index.md).
 
+### Monitoring for Azure databricks workspaces
+
+This resource group is optional and should only be deploy with Azure Databricks.
+
+:::image type="content" source="../images/data-landing-zone-monitoring-rg.png" alt-text="Diagram of data landing zone monitoring resource group.":::
+
+The Azure landing zone pattern recommends all logs should be sent to a central Log Analytics workspace. However, there's also a monitoring resource group in each data landing zone to capture Spark logs from Databricks. The resource group contains a shared Log Analytics workspace and Azure Key Vault to store the Log Analytics keys.
+
+> [!IMPORTANT]
+> The Log Analytics workspace in the databricks monitoring resource group should only be used for capturing Azure Databricks Spark logs.
+
+For more information, see [Monitoring Azure Databricks](/azure/architecture/databricks-monitoring/).
+
+## Hive metastore for Azure databricks
+
+This resource group is optional and should only be deploy with Azure Databricks.
+
+An Azure Database for MySQL database and key vault will be provisioned . All Azure Databricks workspaces, in the data landing zone, use it as their external Apache Hive metastore.
+
+For more information, see [External Apache Hive metastore](/azure/databricks/data/metastores/external-hive-metastore).
+
 ### Data lake services
 
 :::image type="content" source="../images/data-landing-zone-data-lake-services-rg.png" alt-text="Diagram of data landing zone data lake services resource group.":::
@@ -93,8 +114,6 @@ These storage blobs are requested by the data application teams and approved by 
 
 We recommend you deploy a virtual machine scale set with self-hosted integration runtimes into the data landing zone. It should be hosted in the shared integration resource group. This deployment will enable rapid onboarding of data products to the data landing zone.
 
-A self-hosted integration runtime will be deployed for use with Azure Purview to scan data inside the data landing zone. We recommend you understand how to [create and manage a self-hosted integration runtime in Azure Purview](/azure/purview/manage-integration-runtimes).
-
 :::image type="content" source="../images/data-landing-zone-shared-integration-rg.png" alt-text="Diagram of a data landing zone shared integration resource group.":::
 
 To enable the resource group, you need to:
@@ -105,12 +124,14 @@ To enable the resource group, you need to:
 - The self-hosted integration runtimes should be associated with Azure data factories in the data landing zone(s).
 - [Azure Automation should be setup to update the self hosted integration runtime periodically](/azure/data-factory/self-hosted-integration-runtime-automation-scripts)
 
-> [!NOTE]
-> This does not restrict the deployment of integration runtimes inside a data landing zone or into third-party clouds.
+> [!IMPORTANT]
+> Shared integration runtimes should be deployed as close to the data source. The deployment of this shared integration runtimes does not restrict the deployment of integration runtimes inside a data landing zone or into third-party clouds. Instead it provides a fallback for cloud native, in region, data sources.
 
 ### CI/CD Agents
 
 CI/CD Agents for deploying data applications and changes to the the data landing zone.
+
+For more information, see [Azure Pipeline agents](/azure/devops/pipelines/agents/agents).
 
 ### Data agnostic ingestion
 
@@ -133,41 +154,36 @@ Services included in the resource group include:
 |Azure Data Factory | Yes | Azure data factory is used as the orchestration engine for the data agnostic ingestion |
 |Azure SQL DB | Yes | Azure SQL DB is used as the metastore for Azure Data Factory |
 |Event Hubs or IoT Hub | Optional | Your ingestion framework engine can use Event Hubs or IoT Hub for real-time streaming to Event Hubs and for processing of batch and streaming via a Databricks engineering workspace. |
-| Azure Databricks | Optional | <li> You can deploy Azure Databricks or Azure Synapse Spark to use with the data agnostic ingestion engine. |
-| Azure Synapse | Optional | <li> You can deploy Azure Databricks or Azure Synapse Spark to use with the data agnostic ingestion engine. |
+| Azure Databricks | Optional | You can deploy Azure Databricks or Azure Synapse Spark to use with the data agnostic ingestion engine. |
+| Azure Synapse | Optional | You can deploy Azure Databricks or Azure Synapse Spark to use with the data agnostic ingestion engine. |
 
 ### Shared Databricks
 
-For each data landing zone, a shared Azure Synapse Analytics workspace and Azure Databricks workspaces get provisioned. The workspaces are for use by everyone in the data landing zone for exploratory purposes.
+This resource group is optional and should only be deploy with Azure Databricks. The workspace would for used by everyone in the data landing zone.
 
-:::image type="content" source="../images/data-landing-zone-shared-products-rg.png" alt-text="Diagram of data landing zone shared products resource group.":::
+Azure Databricks service is one of the key consumers of the Azure Data Lake Storage service. The atomic file operations are optimized for Spark analytic engines. The optimization speeds up completion of Spark jobs issued from the Azure Databricks service.
 
-#### Azure Databricks in shared products
-
-Azure Databricks service is envisioned to be one of the key consumers of the Azure Data Lake Storage service. The atomic file operations are optimized for Spark analytic engines. The optimization speeds up completion of Spark jobs issued from the Azure Databricks service.
+:::image type="content" source="../images/data-landing-zone-shared-databricks-rg.png" alt-text="Diagram of data landing zone shared databricks resource group.":::
 
 > [!IMPORTANT]
 > An Azure Databricks workspace will be provisioned for all data scientists and DataOps called the Azure Databricks analytics and data science workspace as shown in the shared products resource group.
 > This workspace can be configured to connect to the Azure Data Lake using Azure Active Directory passthrough or table access control. Depending on the use case, conditional access can be configured as another security measure.
-
-An Azure Database for MySQL database will be provisioned. The Azure Databricks engineering workspaces and Azure Databricks analytics and data science workspace use it as their external Apache Hive metastore.
 
 The data management and analytics scenario guidance follows best practices to integrate Azure Databricks:
 
 - [Securing access to Azure Data Lake Gen2 from Azure Databricks](https://github.com/hurtn/datalake-ADLS-access-patterns-with-Databricks/blob/master/readme.md)
 - [Azure Databricks best practices](https://github.com/Azure/AzureDatabricksBestPractices/blob/master/toc.md)
 
-The azure landing zone pattern recommends all logs should be sent to a central Log Analytics workspace. However, there's also a monitoring resource group in each data landing zone to capture Spark logs from Databricks. The resource group contains a shared Log Analytics workspace and Azure Key Vault to store the Log Analytics keys.
-
-> [!IMPORTANT]
-> The Log Analytics workspace in the monitoring resource group should only be used for capturing Databricks Spark logs.
+The azure landing zone pattern recommends all logs should be sent to a central Log Analytics workspace. However, there's also a monitoring resource group in each data landing zone to capture Spark logs from Databricks.
 
 ### Shared Azure Synapse Analytics
 
-Azure Synapse Analytics is the provisioned integrated analytics service that accelerates time to insight across data warehouses and big data systems. Azure Synapse Analytics brings together the best of **SQL** technologies used in enterprise data warehousing, Spark technologies used for big data, and **Pipelines** for data integration and extract, transform, load (ETL) or extract, load, transform (ELT). Azure Synapse studio provides a unified experience for management, monitoring, coding, and security. Synapse has deep integration with other Azure services such as Power BI, Azure Cosmos DB, and Azure Machine Learning.
+This resource group is optional.
+
+During the initial setup of a data landing zone, a single Azure Synapse Analytics workspace will be deployed to for use by all data analysts and scientists in the shared products resource group. More synapse workspaces can be optionally setup for data integrations and data products should cost management and recharge be required. Data integration and data product teams might make use of dedicated Azure Synapse Analytics workspaces for creating dedicated Azure SQL Database pools, as a read data store, which is used by the visualization layer.
 
 > [!IMPORTANT]
-> During the initial setup of a data landing zone, a single Azure Synapse Analytics workspace will be deployed to for use by all data analysts and scientists in the shared products resource group. More synapse workspaces can be optionally setup for data integrations and data products should cost management and recharge be required. Data integration and data product teams might make use of dedicated Azure Synapse Analytics workspaces for creating dedicated Azure SQL Database pools, as a read data store, which is used by the visualization layer.
+> The shared Azure Synapse workspace should be locked down to only allow SQL On-demand queries to stop the workspace being used to create data products. It is there for exploitative purposes only.
 
 ## Data application
 
@@ -184,8 +200,6 @@ For more information on how to onboard data products, see [Data management and a
 ### Reporting and visualization
 
 For every data landing zone, an empty visualization resource group will be created. This group can be filled with services required to implement your visualization solution. Using the existing VNet will enable your solution to connect to data products.
-
-![A visualization resource group.](../images/visualization-resource-group.png)
 
 This resource group could host virtual machines for third-party visualization services.
 
