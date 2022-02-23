@@ -212,6 +212,8 @@ This list provides recommended abbreviations for various Azure resource types to
 | Azure Migrate project | `Microsoft.Migrate/assessmentProjects` | `migr-` |
 | Database Migration Service instance | `Microsoft.DataMigration/services` | `dms-` |
 | Recovery Services vault | `Microsoft.RecoveryServices/vaults` | `rsv-` |
+| Recovery Services vault backup policy | `Microsoft.RecoveryServices/vaults/backupPolicies` | `rsvbp-` |
+| Backup vault | `Microsoft.DataProtection/BackupVaults` | `bv-` |
 
 ## Deprecated product names
 
