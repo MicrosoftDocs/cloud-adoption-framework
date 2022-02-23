@@ -17,6 +17,30 @@ items:
     items:
     - name: Azure landing zones
       href: ready.md
+    - name: Design areas
+      items:
+      - name: Azure Arc-enabled Kubernetes
+        items:
+        - name: Identity and access management
+          href: arc-enabled-kubernetes/identity-access-management.md
+        - name: Network topology and connectivity
+          href: arc-enabled-kubernetes/network-connectivity.md
+        - name: Resource organization
+          href: arc-enabled-kubernetes/resource-organization.md
+        - name: Governance and security disciplines
+          href: arc-enabled-kubernetes/governance-disciplines.md
+        - name: Management disciplines
+          href: arc-enabled-kubernetes/management-disciplines.md
+        - name: Cost governance
+          href: arc-enabled-kubernetes/cost-governance.md
+        - name: Automation disciplines
+          href: arc-enabled-kubernetes/automation-disciplines.md
+        - name: Extensions management
+          href: arc-enabled-kubernetes/extensions-management.md
+        - name: CI/CD and GitOps disciplines
+          href: arc-enabled-kubernetes/cicd-gitops-disciplines.md
+        - name: Services observability
+          href: arc-enabled-kubernetes/services-observability.md
     - name: Implementation options
       items:
       - name: Start small with basic VM management

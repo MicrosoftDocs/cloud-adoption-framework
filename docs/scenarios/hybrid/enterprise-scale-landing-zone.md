@@ -1,6 +1,6 @@
 ---
 title: Enterprise-Scale support for hybrid and multicloud
-description: Learn how enterprise-scale can accelerate adoption of hybrid or multi-cloud architectures.
+description: Learn how enterprise-scale can accelerate adoption of hybrid or multicloud architectures.
 author: JefferyMitchell
 ms.author: doalle
 ms.date: 03/01/2021
@@ -99,6 +99,6 @@ As described in this article, Azure provides organizations with various manageme
 
 This provides a single management plane and a single view on the entire hybrid estate in order to make monitoring and management at scale as straightforward as possible.
 
-[Azure Arc](/azure/azure-arc/) simplifies governance and management by delivering a consistent multi-cloud and on-premises management platform. Azure Arc enables you to manage your entire environment, with a single pane of glass, by projecting your existing resources into [Azure Resource Manager](/azure/azure-resource-manager/management/overview).
+[Azure Arc](/azure/azure-arc/) simplifies governance and management by delivering a consistent multicloud and on-premises management platform. Azure Arc enables you to manage your entire environment, with a single pane of glass, by projecting your existing resources into [Azure Resource Manager](/azure/azure-resource-manager/management/overview).
 
 You can now manage virtual machines, Kubernetes clusters, and databases as if they are running in Azure. Regardless of where they live, you can use familiar Azure services and management capabilities. Azure Arc enables you to continue using traditional ITOps, while introducing DevOps practices to support new cloud native patterns in your environment.
