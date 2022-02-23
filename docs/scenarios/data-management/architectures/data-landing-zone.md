@@ -25,8 +25,11 @@ The Azure subscription associated with the data landing zone is structured as fo
 | Layer | Required |Resource groups |
 |---|---|---|
 |[Core services](#core-services-layer) | Yes |<ul><li>[Network](#networking) <li> [Data lake services](#data-lake-services) <li> [Upload ingest storage](#upload-ingest-storage) <li> [Data agnostic ingestion](#data-agnostic-ingestion) <li> [Shared integration runtimes](#shared-integration-runtimes) <li> [Shared applications](#shared-applications)|
-|[Data products](#data-application)     |Optional         |<ul><li>[Data products](#data-product-resource-group) (1 or more)</li></ul>         |
+|[Data application](#data-application)     |Optional         |<ul><li>[Data application](#data-product-resource-group) (1 or more)</li></ul>         |
 |[Visualization](#visualization)    |Optional         |<ul><li>[Reporting and visualization](#reporting-and-visualization)</li></ul>         |
+
+> [!NOTE]
+> A data application produce one or more data products.
 
 ## Data landing zone architecture
 
@@ -35,7 +38,7 @@ The architecture of the data landing zone illustrates the layers, their respecti
 :::image type="content" source="../images/data-landing-zone-2.png" alt-text="Diagram of the data landing zone architecture." lightbox="../images/data-landing-zone-2.png":::
 
  > [!TIP]
-> Before getting started with deploying a data landing zone, it's highly recommended that you first [consider the number of initial data landing zones you want to deploy](overview-architectures.md).
+> Before getting started with deploying a data landing zone, it's highly recommended that you first [consider the number of initial data landing zones you want to deploy](scaling-architectures.md).
 
 ## Core services layer
 
@@ -62,8 +65,13 @@ The network resource group, contains core enterprise components such as [network
 
 Three [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction) accounts will be provisioned in the single data lake services resource group as shown above. The data transformed at different stages will be saved on one of the data landing zone's three data lakes. It will be available for analytics, data science, and visualizations teams to consume.
 
-> [!IMPORTANT]
-> Why do we recommend three data lakes? For more information, see [Azure Data Lake services overview](../best-practices/data-lake-overview.md).
+For more information, see:
+
+- [Overview of Azure Data Lake Storage for the data management and analytics scenario](../best-practices/data-lake-overview.md)
+- [Data Standardization](../best-practices/data-lake-standardization.md)
+- [Provision three Azure Data Lake Storage Gen2 accounts for each data landing zone](../best-practices/data-lake-zones.md)
+- [Key considerations for Azure Data Lake Storage](../best-practices/data-lake-key-considerations.md)
+- [Access control and data lake configurations in Azure Data Lake Storage](../best-practices/data-lake-access.md)
 
 ### Upload ingest storage
 
@@ -81,12 +89,6 @@ These storage blobs are requested by the data application teams and approved by 
 :::image type="content" source="../images/data-landing-zone-ingest-processing-rg.png" alt-text="Diagram of Data landing zone ingest and processing resource group.":::
 
 This resource group is optional and it shouldn't prohibit you from deploying the landing zone. It applies if you have or are developing a data agnostic ingestion engine for automatically ingesting data based on registering metadata, which includes connection strings, path to copy data from and to, and ingestion schedule, the ingestion and processing resource group has key services to use such a framework.
-
-Consider the following guidelines for ingestion and processing:
-
-1. The ingestion framework engine should copy data through the layers of the data lake service from source to *Raw* to *Enriched*.
-2. As you register and integrate data sources into respective data lakes using a repeatable and consistent framework, the data should be registered with [Azure Purview](../best-practices/purview-deployment.md) for discovery. This can be done via a [marketplace](../govern-metadata-standards.md) or a operation console as outlined in [Automation interfaces (optional)](data-management-landing-zone.md#automation-interfaces-optional).
-3. If you have an ingestion framework engine, we recommend using Azure Data Factory as the primary orchestration engine for getting data into *Raw* to *Enriched*.
 
 > [!TIP]
 > For more information, see [How automated ingestion frameworks support data management and analytics scenario in Azure](../best-practices/automated-ingestion-pattern.md).

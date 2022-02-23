@@ -19,10 +19,10 @@ The data management landing zone is classified as a management function and is c
 The data management landing zone is a separate subscription that has the standard services of an Azure landing zone. They're connected to the data landing zones and connectivity subscription via virtual network peering. It allows the data governance of the data, via crawlers, which connect to the data lakes and polyglot storage in the data landing zones.
 
 > [!NOTE]
-> Polyglot persistence is an enterprise storage term used to describe choosing different data storage/data stores technologies to support the various data types and their storage needs. Polyglot persistence is essentially the idea that an application can use more than one core database or storage technology.
+> Polyglot persistence is an storage term used to describe choosing different data storage/data stores technologies to support the various data types and their storage needs. Polyglot persistence is essentially the idea that an application can use more than one core database or storage technology.
 
 > [!WARNING]
-> The data management landing zone must be deployed as a separate subscription under the platform branch of an enterprise-scale architecture. You can then control the governance across the enterprise. The [Azure landing zone accelerator](../../../ready/landing-zone/index.md) illustrates the way to approach Azure landing zones.
+> The data management landing zone must be deployed as a separate subscription under the platform branch of an azure landing zone architecture. You can then control the governance across the business. The [Azure landing zone accelerator](../../../ready/landing-zone/index.md) illustrates the way to approach Azure landing zones.
 
 ## Data catalog
 
@@ -36,7 +36,7 @@ For more information, see [Data Catalog](../govern-data-catalog.md) and [Azure P
 
 *Resource group: governance-rg2*
 
-Enterprises are advised to continue with their current solution.
+You are advised to continue with their current solution.
 
 Data quality should happen as close to the source as possible to avoid quality issues replicating across the analytics and AI estate. Moving quality metrics and validation to the data integration aligns the quality process with the teams that are closest to the data. These teams have the deepest understanding of the data asset. Data lineage also provides data quality confidence and should be provided for all data products and products.
 
@@ -48,7 +48,7 @@ For more information, see [Data quality](../govern-data-quality.md).
 
 Entity relationship models should be captured and stored in a central location, that is in the data management landing zone. It gives consumers of the data a single place to go for conceptual diagrams.
 
-[ER Studio](https://www.idera.com/products/er-studio/enterprise-data-modeling) and [iServer](https://www.orbussoftware.com/solutions/enterprise-architecture/data-architecture) are used by many enterprise customers to model their data products before ingesting.
+[ER Studio](https://www.idera.com/products/er-studio/enterprise-data-modeling) and [iServer](https://www.orbussoftware.com/solutions/enterprise-architecture/data-architecture) are used by many customers to model their data products before ingesting.
 
 ## Master data management
 
@@ -64,7 +64,7 @@ For more information, see [master data management system](../govern-master-data.
 
 *Resource group: governance-rg2*
 
-It's likely that teams across the enterprise will create various APIs for their data platforms and products. These APIs can be difficult to discover across the organization. Placing an API catalog in the data management landing zone can help solve this problem.
+It's likely that data application teams across will create various APIs for their data application. These APIs can be difficult to discover across the organization. Placing an API catalog in the data management landing zone can help solve this problem.
 
 The API catalog can help standardize documentation and offers a place for internal collaboration on APIs. It can also help drive consumption, publishing, and governance controls across the organization.
 
@@ -73,7 +73,7 @@ The API catalog can help standardize documentation and offers a place for intern
 *Resource group: governance-rg2*
 
 Data management and analytics scenario uses
-[Azure AD entitlement management](/azure/active-directory/governance/entitlement-management-overview) or [Azure Purview policies](../secure-data-privacy.md) to control access to sharing of data. Your enterprise still might require a sharing and contract repository. The repository is an organizational function. It should be in the data management landing zone.
+[Azure AD entitlement management](/azure/active-directory/governance/entitlement-management-overview) or [Azure Purview policies](../secure-data-privacy.md) to control access to sharing of data. You still might require a sharing and contract repository. The repository is an organizational function. It should be in the data management landing zone.
 
 These contracts should give information on data validation, model, and security policies.
 
