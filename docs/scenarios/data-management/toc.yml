@@ -110,7 +110,7 @@ items:
       items:
         - name: Overview
           href: ./architectures/data-landing-zone-data-products.md
-        - name: Data Application Source Integration
+        - name: Data Application (source-aligned)
           href: ./architectures/data-landing-zone-source-integration.md
         - name: Data Application Reference Patterns
           href: ./architectures/data-reference-patterns.md
@@ -163,6 +163,8 @@ items:
 
     - name: Deployment templates
       href: ./architectures/deployment-templates.md
+    - name: Solution accelerators
+      href: ./architectures/solution-accelerators.md  
     - name: Connecting to environments privately
       href: ./architectures/connect-to-environments-privately.md
     - name: Frequently asked questions

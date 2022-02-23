@@ -12,7 +12,7 @@ ms.custom: e2e-data-management, think-tank
 
 # Overview of the data landing zone in Azure
 
-Data landing zones are connected to the [data management landing zone](./data-management-landing-zone.md) by virtual network (VNet) peering. They're considered a [landing zone](../../../ready/landing-zone/index.md) related to the azure landing zone architecture.
+Data landing zones are connected to the [data management landing zone](./data-management-landing-zone.md) by virtual network (VNet) peering. They're considered a [landing zone](../../../ready/landing-zone/index.md) related to the Azure landing zone architecture.
 
 > [!IMPORTANT]
 > Before provisioning a data landing zone, you should have your DevOps and CI/CD operating model in place and a data management landing zone deployed.
@@ -24,7 +24,7 @@ The Azure subscription associated with the data landing zone is structured as fo
 
 | Layer | Required |Resource groups |
 |---|---|---|
-|[Core services](#core-services-layer) | Yes |<ul><li>[Network](#networking) <li> [Monitoring for Azure databricks workspaces](#monitoring-for-azure-databricks-workspaces) <li>[Hive metastore for Azure databricks](#hive-metastore-for-azure-databricks) <li> [Data lake services](#data-lake-services) <li> [Upload ingest storage](#upload-ingest-storage) <li> [Data agnostic ingestion](#data-agnostic-ingestion) <li> [Shared integration runtimes](#shared-integration-runtimes) <li> [CI/CD Agents](#cicd-agents) <li> [Data agnostic ingestion](#data-agnostic-ingestion) <li> [Shared Databricks](#shared-databricks) <li> [Shared Azure Synapse Analytics](#shared-azure-synapse-analytics) |
+|[Core services](#core-services-layer) | Yes |<ul><li>[Network](#networking) <li> [Monitoring for Azure Databricks workspaces](#monitoring-for-azure-databricks-workspaces) <li>[Hive metastore for Azure Databricks](#hive-metastore-for-azure-databricks) <li> [Data lake services](#data-lake-services) <li> [Upload ingest storage](#upload-ingest-storage) <li> [Data agnostic ingestion](#data-agnostic-ingestion) <li> [Shared integration runtimes](#shared-integration-runtimes) <li> [CI/CD Agents](#cicd-agents) <li> [Data agnostic ingestion](#data-agnostic-ingestion) <li> [Shared Databricks](#shared-databricks) <li> [Shared Azure Synapse Analytics](#shared-azure-synapse-analytics) |
 |[Data application](#data-application)     |Optional         |<ul><li>[Data application](#data-product-resource-group) (1 or more)</li></ul>         |
 |[Visualization](#visualization)    |Optional         |<ul><li>[Reporting and visualization](#reporting-and-visualization)</li></ul>         |
 
@@ -47,8 +47,8 @@ Included are all the required services to enable the data landing zone within th
 | Resource Group        | Required | Description             |
 |-----------------------|----------|-------------------------|
 | network-rg            | Yes      | Networking              |
-| databricks-monitoring-rg | Optional | Monitoring for Azure databricks workspaces |
-| hive-rg            | Optional      | Hive metastore for Azure databricks   |
+| databricks-monitoring-rg | Optional | Monitoring for Azure Databricks workspaces |
+| hive-rg            | Optional      | Hive metastore for Azure Databricks   |
 | storage-rg            | Yes      | Data lakes services     |
 | external-data-rg      | Yes      | Upload ingest storage   |
 | runtimes-rg           | Yes      | Shared integration runtimes |
@@ -64,9 +64,9 @@ Included are all the required services to enable the data landing zone within th
 
 The network resource group, contains core components such as [network security groups](/azure/virtual-network/network-security-groups-overview) (NSG), Azure [Network Watcher](/azure/network-watcher/network-watcher-monitoring-overview), and virtual network. All of these services are deployed into a single resource group. As part of the deployment, the virtual network of a data landing zone is [automatically peered with the data management landing zone's VNet](../eslz-network-topology-and-connectivity.md) and the [connectivity subscription's VNet](../../../ready/landing-zone/index.md).
 
-### Monitoring for Azure databricks workspaces
+### Monitoring for Azure Databricks workspaces
 
-This resource group is optional and should only be deploy with Azure Databricks.
+This resource group is optional and would only be deploy with Azure Databricks.
 
 :::image type="content" source="../images/data-landing-zone-monitoring-rg.png" alt-text="Diagram of data landing zone monitoring resource group.":::
 
@@ -77,11 +77,11 @@ The Azure landing zone pattern recommends all logs should be sent to a central L
 
 For more information, see [Monitoring Azure Databricks](/azure/architecture/databricks-monitoring/).
 
-## Hive metastore for Azure databricks
+## Hive metastore for Azure Databricks
 
 This resource group is optional and should only be deploy with Azure Databricks.
 
-An Azure Database for MySQL database and key vault will be provisioned . All Azure Databricks workspaces, in the data landing zone, use it as their external Apache Hive metastore.
+An Azure Database for MySQL database and key vault will be provisioned. All Azure Databricks workspaces, in the data landing zone, use it as their external Apache Hive metastore.
 
 For more information, see [External Apache Hive metastore](/azure/databricks/data/metastores/external-hive-metastore).
 
@@ -129,7 +129,7 @@ To enable the resource group, you need to:
 
 ### CI/CD Agents
 
-CI/CD Agents for deploying data applications and changes to the the data landing zone.
+CI/CD Agents for deploying data applications and changes to the data landing zone.
 
 For more information, see [Azure Pipeline agents](/azure/devops/pipelines/agents/agents).
 
@@ -174,13 +174,13 @@ The data management and analytics scenario guidance follows best practices to in
 - [Securing access to Azure Data Lake Gen2 from Azure Databricks](https://github.com/hurtn/datalake-ADLS-access-patterns-with-Databricks/blob/master/readme.md)
 - [Azure Databricks best practices](https://github.com/Azure/AzureDatabricksBestPractices/blob/master/toc.md)
 
-The azure landing zone pattern recommends all logs should be sent to a central Log Analytics workspace. However, there's also a monitoring resource group in each data landing zone to capture Spark logs from Databricks.
+The Azure landing zone pattern recommends all logs should be sent to a central Log Analytics workspace. However, there's also a monitoring resource group in each data landing zone to capture Spark logs from Databricks.
 
 ### Shared Azure Synapse Analytics
 
 This resource group is optional.
 
-During the initial setup of a data landing zone, a single Azure Synapse Analytics workspace will be deployed to for use by all data analysts and scientists in the shared products resource group. More synapse workspaces can be optionally setup for data products should cost management and recharge be required. Data application teams might make use of dedicated Azure Synapse Analytics workspaces for creating dedicated Azure SQL Database pools, as a read data store, which is used by the visualization layer.
+During the initial setup of a data landing zone, a single Azure Synapse Analytics workspace will be deployed to for use by all data analysts and scientists in the shared products resource group. More synapse workspaces can be optionally set up for data products should cost management and recharge be required. Data application teams might make use of dedicated Azure Synapse Analytics workspaces for creating dedicated Azure SQL Database pools, as a read data store, which is used by the visualization layer.
 
 > [!IMPORTANT]
 > The shared Azure Synapse workspace should be locked down to only allow SQL On-demand queries to stop the workspace being used to create data products. It is there for exploitative purposes only.
