@@ -1,16 +1,16 @@
 ---
-title: Data management and analytics scenario data integrations in Azure
-description: Learn about data management and analytics scenario data integrations in Azure.
+title: Data management and analytics scenario data applications (source-aligned)
+description: Learn about data management and analytics scenario data applications (source-aligned) in Azure.
 author: mboswell
 ms.author: mboswell
-ms.date: 03/03/2021
+ms.date: 02/23/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Data management and analytics scenario data integrations in Azure
+# Data applications (source-aligned)
 
 The role of integrations operations is explained under [integration ops (per integration)](../organize-roles-and-teams.md#data-landing-zone-teams).
 

@@ -12,7 +12,7 @@ ms.custom: e2e-data-management, think-tank
 
 # How automated ingestion frameworks support data management and analytics scenario in Azure
 
-The [ingest process with data management and analytics scenario in Azure](./data-ingestion.md#ingest-considerations-for-azure-data-factory) and [ingest and processing resource group](../architectures/data-landing-zone.md#ingest-and-processing) guide enterprises through how to build their own custom ingestion framework.
+The [ingest process with data management and analytics scenario in Azure](./data-ingestion.md#ingest-considerations-for-azure-data-factory) and [ingest and processing resource group](../architectures/data-landing-zone.md#data-agnostic-ingestion) guide enterprises through how to build their own custom ingestion framework.
 
 This section provides guidance for how custom ingestion frameworks can drive services and processes.
 
