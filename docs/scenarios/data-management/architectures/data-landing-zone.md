@@ -24,7 +24,7 @@ The Azure subscription associated with the data landing zone is structured as fo
 
 | Layer | Required |Resource groups |
 |---|---|---|
-|[Core services](#core-services-layer) | Yes |<ul><li>[Network](#networking) <li> [Data lake services](#data-lake-services) <li> [Upload ingest storage](#upload-ingest-storage) <li> [Data agnostic ingestion](#data-agnostic-ingestion) <li> [Shared integration runtimes](#shared-integration-runtimes) <li> [Shared applications](#shared-applications)|
+|[Core services](#core-services-layer) | Yes |<ul><li>[Network](#networking) <li> [Data lake services](#data-lake-services) <li> [Upload ingest storage](#upload-ingest-storage) <li> [Data agnostic ingestion](#data-agnostic-ingestion) <li> [Shared integration runtimes](#shared-integration-runtimes) <li> [Data landing zone key vault](#data-landing-zone-key-vault) <li> [Shared applications](#shared-applications)|
 |[Data application](#data-application)     |Optional         |<ul><li>[Data application](#data-product-resource-group) (1 or more)</li></ul>         |
 |[Visualization](#visualization)    |Optional         |<ul><li>[Reporting and visualization](#reporting-and-visualization)</li></ul>         |
 
@@ -42,7 +42,7 @@ The architecture of the data landing zone illustrates the layers, their respecti
 
 ## Core services layer
 
-Included are all the required services to enable the data landing zone within the context of enterprise-scale for analytics. The following resource groups form the suite of standard services available in every data landing zone that is deployed:
+Included are all the required services to enable the data landing zone within the context of data management and analytics scenario. The following resource groups form the suite of standard services available in every data landing zone that is deployed:
 
 | Resource Group        | Required | Description             |
 |-----------------------|----------|-------------------------|
@@ -51,13 +51,14 @@ Included are all the required services to enable the data landing zone within th
 | metadata-ingestion-rg | Optional | Data agnostic ingestion |
 | external-data-rg      | Yes      | Upload ingest storage   |
 | runtimes-rg           | Yes      | Shared integration runtimes |
+| key-rg                | Yes      | Data landing zone key vault |
 | share-application-rg  | Optional | Shared applications         |
 
 ### Networking
 
 :::image type="content" source="../images/data-landing-zone-network-rg.png" alt-text="Diagram of a data landing zone network resource group.":::
 
-The network resource group, contains core enterprise components such as [network security groups](/azure/virtual-network/network-security-groups-overview) (NSG), Azure [Network Watcher](/azure/network-watcher/network-watcher-monitoring-overview), and virtual network. All of these services are deployed into a single resource group. As part of the deployment, the virtual network of a data landing zone is [automatically peered with the data management landing zone's VNet](../eslz-network-topology-and-connectivity.md) and the [connectivity subscription's VNet](../../../ready/landing-zone/index.md).
+The network resource group, contains core components such as [network security groups](/azure/virtual-network/network-security-groups-overview) (NSG), Azure [Network Watcher](/azure/network-watcher/network-watcher-monitoring-overview), and virtual network. All of these services are deployed into a single resource group. As part of the deployment, the virtual network of a data landing zone is [automatically peered with the data management landing zone's VNet](../eslz-network-topology-and-connectivity.md) and the [connectivity subscription's VNet](../../../ready/landing-zone/index.md).
 
 ### Data lake services
 
@@ -90,6 +91,11 @@ These storage blobs are requested by the data application teams and approved by 
 
 This resource group is optional and it shouldn't prohibit you from deploying the landing zone. It applies if you have or are developing a data agnostic ingestion engine for automatically ingesting data based on registering metadata, which includes connection strings, path to copy data from and to, and ingestion schedule, the ingestion and processing resource group has key services to use such a framework.
 
+We would suggest deploying an Azure SQL Database instance to hold metadata for Azure Data Factory to use. An Azure Key Vault should be provisioned to store secrets relating to the automated ingestion services such as:
+
+- Azure Data Factory metastore credentials
+- Service principal credentials for the automated ingestion process
+
 > [!TIP]
 > For more information, see [How automated ingestion frameworks support data management and analytics scenario in Azure](../best-practices/automated-ingestion-pattern.md).
 
@@ -97,20 +103,9 @@ Services included in the resource group include:
 
 |Service | Required | Guidelines |
 |---|---|---|
-| Azure Databricks | Optional | <li> Always deploy Azure Databricks because integration operations teams can use it for ingestion, transformation, and loading of data. For more information about workspace deployments, see the [Azure Databricks section](#azure-databricks-in-shared-products). <li> An Azure Databricks workspace is provisioned for ingestion and processing that will connect to Azure Data Lake via Azure service principals. These workspaces are referred to as Azure Databricks engineering workspaces. <li> The Databricks workspaces should be locked down. The workspaces should only allow deployment of notebooks or jars from the data integration Azure DevOps repo via a data integrations service principal. |
-|Event Hubs or IoT Hub | Optional | <li> Your ingestion framework engine can use Event Hubs or IoT Hub for real-time streaming to Event Hubs and for processing of batch and streaming via a Databricks engineering workspace. |
-|Azure Data Factory |Optional | |
-
- If your organization has decided to develop your own ingestion framework engine based on the recommendations in the data management and analytics scenario ingestion flow, using either a Power Apps or .NET application, in the data management landing zone, we would suggest deploying an Azure SQL Database instance to hold metadata for Azure Data Factory to use.
-
-An Azure Key Vault will be provisioned to store secrets relating to data landing zone services such as:
-
-- Azure Data Factory metastore credentials
-- Azure Databricks PAT tokens for use with the automated ingestion process
-- Service principal credentials for the automated ingestion process
-- Data landing zone data lake services keys
-
-The types of data that you'll store in the data landing zone will help determine any other services that should be here. For example, if you're storing *sensitive (personal data)* data, you might include a tokenization engine. The tokenization engine will ensure that all *sensitive (personal data)* data can be tokenized as it's ingested into the data lake.
+|Azure Data Factory | Yes | Azure data factory is used as the orchestration engine for the data agnostic ingestion |
+|Azure SQL DB | Yes | Azure SQL DB is used as the metastore for Azure Data Factory |
+|Event Hubs or IoT Hub | Optional | Your ingestion framework engine can use Event Hubs or IoT Hub for real-time streaming to Event Hubs and for processing of batch and streaming via a Databricks engineering workspace. |
 
 ### Shared integration runtimes
 
@@ -130,6 +125,14 @@ To enable the resource group, you need to:
 
 > [!NOTE]
 > This does not restrict the deployment of integration runtimes inside a data landing zone or into third-party clouds.
+
+## Data landing zone key vault
+
+An Azure Key Vault will be provisioned to store secrets relating to data landing zone services such as:
+
+- Azure Databricks PAT tokens
+- Service principal credentials
+- Data landing zone data lake services keys
 
 ### Shared applications
 
@@ -152,7 +155,7 @@ The data management and analytics scenario guidance follows best practices to in
 - [Securing access to Azure Data Lake Gen2 from Azure Databricks](https://github.com/hurtn/datalake-ADLS-access-patterns-with-Databricks/blob/master/readme.md)
 - [Azure Databricks best practices](https://github.com/Azure/AzureDatabricksBestPractices/blob/master/toc.md)
 
-The enterprise-scale pattern recommends all logs should be sent to a central Log Analytics workspace. However, there's also a monitoring resource group in each data landing zone to capture Spark logs from Databricks. The resource group contains a shared Log Analytics workspace and Azure Key Vault to store the Log Analytics keys.
+The azure landing zone pattern recommends all logs should be sent to a central Log Analytics workspace. However, there's also a monitoring resource group in each data landing zone to capture Spark logs from Databricks. The resource group contains a shared Log Analytics workspace and Azure Key Vault to store the Log Analytics keys.
 
 > [!IMPORTANT]
 > The Log Analytics workspace in the monitoring resource group should only be used for capturing Databricks Spark logs.
