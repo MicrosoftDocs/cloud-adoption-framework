@@ -110,7 +110,7 @@ items:
       items:
         - name: Overview
           href: ./architectures/data-landing-zone-data-products.md
-        - name: Data Application Integration
+        - name: Data Application Source Integration
           href: ./architectures/data-landing-zone-source-integration.md
         - name: Data Application Reference Patterns
           href: ./architectures/data-reference-patterns.md
@@ -174,8 +174,8 @@ items:
         items:
         - name: Data lake overview
           href: ./best-practices/data-lake-overview.md
-        - name: What is Delta Lake?
-          href: ./best-practices/data-lake-delta-lake.md
+        - name: Data lake standardization
+          href: ./best-practices/data-lake-standardization.md
         - name: Data lake zones
           href: ./best-practices/data-lake-zones.md
         - name: Data lake key considerations

@@ -30,7 +30,7 @@ The data management landing zone is a separate subscription that has the standar
 
 [!INCLUDE [data-catalog](../includes/data-catalog.md)]
 
-For more information, see [Data Catalog](../govern-data-catalog.md)
+For more information, see [Data Catalog](../govern-data-catalog.md) and [Azure Purview deployment best practices for data management and analytics scenario](../best-practices/purview-deployment.md).
 
 ## Data quality management
 
@@ -40,7 +40,7 @@ Enterprises are advised to continue with their current solution.
 
 Data quality should happen as close to the source as possible to avoid quality issues replicating across the analytics and AI estate. Moving quality metrics and validation to the data integration aligns the quality process with the teams that are closest to the data. These teams have the deepest understanding of the data asset. Data lineage also provides data quality confidence and should be provided for all data products and products.
 
-For more information, see [Data quality](../govern-data-quality.md)
+For more information, see [Data quality](../govern-data-quality.md).
 
 ## Data modeling repository
 
@@ -73,7 +73,7 @@ The API catalog can help standardize documentation and offers a place for intern
 *Resource group: governance-rg2*
 
 Data management and analytics scenario uses
-[Azure AD entitlement management](/azure/active-directory/governance/entitlement-management-overview) or Azure Purview policies to control access to sharing of data. Your enterprise still might require a sharing and contract repository. The repository is an organizational function. It should be in the data management landing zone.
+[Azure AD entitlement management](/azure/active-directory/governance/entitlement-management-overview) or [Azure Purview policies](../secure-data-privacy.md) to control access to sharing of data. Your enterprise still might require a sharing and contract repository. The repository is an organizational function. It should be in the data management landing zone.
 
 These contracts should give information on data validation, model, and security policies.
 
@@ -83,11 +83,11 @@ For more information, see [Data sharing agreements](../govern-data-sharing-agree
 
 *Resource group: containers-rg*
 
-The data management landing zone hosts an Azure Container Registry. It allows the data platform operations to deploy standard containers for use in data science projects.
+The data management landing zone hosts an Azure Container Registry. It allows the data platform operations to deploy standard containers for use in data science projects for the data application teams to consume.
 
 ## Azure Synapse Private Link hub
 
-*Resource group: consumption-rg*
+*Resource group: synapse-link-rg*
 
 Azure Synapse Analytics Private Link hubs are Azure resources, which act as connectors between your secured network and the synapse studio web experience. Data management and analytics scenario uses the hubs to securely connect to Azure Synapse studio from your Azure Virtual Network using private links.
 
@@ -97,12 +97,12 @@ For more information, see [Connect to Azure Synapse studio using private links](
 
 ## Automation interfaces (optional)
 
-To augment the Data management and analytics scenario capabilities, some organization could decide to create a number of automation services to drive conformity and onboarding solutions for your data estate.
+To augment the data management and analytics scenario capabilities, some organization could decide to create many automation services to drive conformity and onboarding solutions for your analytics estate.
 
 > [!IMPORTANT]
 > None of these automation interfaces are products and neither do they illustrate a roadmap item. They are listed to help you consider items which you might want to automate.
 
-If you decide to build these product it is recommended that you have a user interface which acts as both a data marketplace and operation console. The interface will rely on an underling metadata store which we have previously discussed in [Metadata Standards](../govern-metadata-standards.md).
+If you decide to build these products, it's recommended that you have a user interface that acts as both a data marketplace and operation console. The interface would rely on an underlying metadata store that we've previously discussed in [Metadata Standards](../govern-metadata-standards.md).
 
 The data marketplace, or operations console, would call a middle tier of microservices to facilitate onboarding, metadata registration, security provisioning, data lifecycle and observability.
 
@@ -112,19 +112,22 @@ The automationdb-rg resource group can be provisioned to host the metadata store
 
 | Service                        | Service Scope                                                                                                                                                                                                                                                                                     |
 |--------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Data Landing Zone Provisioning | This service is responsible for creating a new data landing zone - it is unlikely to have a high usage but is included for completeness of an end-to-end onboarding solution  For more information, see [Provision the Azure data management and analytics scenario](../manage-provision-platform.md)                                        |
-| Data Product Onboarding        | This service exposes ability to create / amend resource groups pertaining to an onboarded tenant. Also capabilities to upgrade / degrade SKUs, activate / deactivate resource group for any onboarded tenant / service. It would create a new data landing zone DevOps. For more information, see [Provision the Azure data management and analytics scenario](../manage-provision-platform.md) |
-| Access Provisioning            | This service exposes the ability to create Access Packages, Access Policies, Asset access approval process(Manual/Auto) using SPN/UPN. This should also be able to expose an API to give the list of subscription requests (assets) that a user have been submitted in the last 90 days. For more information, see [Data Access Management](../security-provisioning.md)         |
-| Data Agnostic Ingestion        | The microservice communicates with an Azure Data Factory SQL Database metastore in each data landing zone to create new data sources for ingestion for landing into the data landing zones. For more information, see [How automated ingestion frameworks support data management and analytics scenario in Azure](../best-practices/automated-ingestion-pattern.md) |
+| Data landing zone provisioning | This service is responsible for creating a new data landing zone - it's unlikely to have a high usage but is included for completeness of an end-to-end onboarding solution  For more information, see [Provision the Azure data management and analytics scenario](../manage-provision-platform.md)                                        |
+| Data product onboarding        | This service exposes ability to create / amend resource groups pertaining to an onboarded tenant. Also capabilities to upgrade / degrade SKUs, activate / deactivate resource group for any onboarded tenant / service. It would create a new data landing zone DevOps. For more information, see [Provision the Azure data management and analytics scenario](../manage-provision-platform.md) |
+| Access provisioning            | This service exposes the ability to create Access Packages, Access Policies, Asset access approval process(Manual/Auto) using SPN/UPN. This should also be able to expose an API to give the list of subscription requests (assets) that a user have been submitted in the last 90 days. For more information, see [Data Access Management](../security-provisioning.md)         |
+| Data agnostic ingestion        | The microservice communicates with an Azure Data Factory SQL Database metastore in each data landing zone to create new data sources for ingestion for landing into the data landing zones. For more information, see [How automated ingestion frameworks support data management and analytics scenario in Azure](../best-practices/automated-ingestion-pattern.md) |
 | Metadata                       | This service exposed and creates metadata for the platform. For more information, see [Metadata Standards](../govern-metadata-standards.md)                                                                                                                                                                                                            |
-| Data Lifecycle                 | Responsible for maintaining the data lifecycle based upon the metadata. This could include moving data to cold storage or deleted records which should no longer be held. For more information, see [What is Data Lifecycle Management?](../govern-lifecycle.md)                                                                                              |
-| Data Domain Onboarding         | ONLY APPLICABLE TO DATA MESH. This service exposes ability to capture metadata pertaining to new domain & onboard them to as needed. Also capabilities to create, update, activate / deactivate any domain / service line would be built into microservice. For more information, see [Provision the Azure data management and analytics scenario](../manage-provision-platform.md) |
+| Data lifecycle                 | Responsible for maintaining the data lifecycle based upon the metadata. This could include moving data to cold storage or deleted records that should no longer be held. For more information, see [What is Data Lifecycle Management?](../govern-lifecycle.md)                                                                                              |
+| Data domain onboarding         | ONLY APPLICABLE TO DATA MESH. This service exposes ability to capture metadata pertaining to new domain & onboard them to as needed. Also capabilities to create, update, activate / deactivate any domain / service line would be built into microservice. For more information, see [Provision the Azure data management and analytics scenario](../manage-provision-platform.md) |
 
 ### Data Standardization
 
-Although this isn't a feature or a product of the data management landing zone, it is important to call out data standardization across all the services. This defines the format in which data should land and be stored. Where possible, would recommend using delta-lake format as the defacto standard across all services and storage.
+Although this isn't a feature or a product of the data management landing zone, it's important to call out data standardization across all services. This defines the format in which data should land and be stored.
 
-For more information, see [Data Standardization](../best-practices/data-lake-delta-lake.md).
+>[!TIP]
+>Where possible, would recommend using delta-lake format as the defacto standard across all services and storage.
+
+For more information, see [Data Standardization](../best-practices/data-lake-standardization.md).
 
 ## Next steps
 
