@@ -27,7 +27,7 @@ Watch the following 15-minute video to learn more about how to choose the Azure 
 
 <!-- markdownlint-enable MD034 -->
 
-You might also consider third-party implementations. Our partners have many implementations available through their services. For more information, visit [Evaluate a Microsoft partner's Azure landing zone](./partner-landing-zone.md).
+You might also consider third-party implementations. Our partners have many implementations available through their services. For more information, see [Evaluate a Microsoft partner's Azure landing zone](./partner-landing-zone.md).
 
 ## Overview of landing zone options
 
