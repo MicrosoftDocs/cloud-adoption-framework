@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
-# The ingest process with data management and analytics scenario in Azure
+# The Data flow with data management and analytics scenario in Azure
 
 Data integrations and data products teams examine, transform, and release data in data management and analytics scenario.
 

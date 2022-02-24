@@ -62,7 +62,7 @@ The following access control options are set for all Databricks workspaces:
 - Cluster visibility control: enabled (default: disabled)
 - Job visibility control: enabled (default: disabled)
 
-You might want to enable the following options for the Azure Databricks analyticsworkspace:
+You might want to enable the following options for the Azure Databricks analytics workspace:
 
 - Notebook exporting: disabled (default: enabled)
 - Notebook table clipboard features: disabled (default: enabled)
@@ -106,11 +106,9 @@ The new global init scripts API is in public preview. Public preview features in
 
 - This solution uses [Azure Database for MySQL](https://azure.microsoft.com/services/mysql/) to store the Apache Hive metastore instance. This database was chosen for its cost effectiveness and its high compatibility with Apache Hive.
 
-
 ## Next steps
 
 Data management and analytics scenario takes the following guidelines into account for integrating Azure Databricks:
 
-- [Power your data strategy with Azure Synapse Analytics](./synapse.md)
 - [Securing access to Azure Data Lake Gen2 from Azure Databricks](https://github.com/hurtn/datalake-ADLS-access-patterns-with-Databricks/blob/master/readme.md)
 - [Azure Databricks best practices](https://github.com/Azure/AzureDatabricksBestPractices/blob/master/toc.md)
