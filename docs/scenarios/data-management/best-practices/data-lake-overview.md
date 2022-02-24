@@ -12,7 +12,7 @@ ms.custom: e2e-data-management, think-tank
 
 # Overview of Azure Data Lake Storage for the data management and analytics scenario
 
-We recommend you provision three [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction) accounts within a single resource group, similar to the `data lake services` resource group described in [Azure data management and analytics scenario architecture data landing zone overview](../architectures/data-landing-zone.md). Each of the three data lakes within a data landing zone stores data in one of its three transformation stages: raw data, enriched and curated data, and workspace data. [Data products](../architectures/data-landing-zone-data-products.md) should only consume from the data lake that contains enriched and curated data.
+We recommend you provision three [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction) accounts within a single resource group, similar to the `storage-rg` resource group described in [Azure data management and analytics scenario architecture data landing zone overview](../architectures/data-landing-zone.md). Each of the three data lakes within a data landing zone stores data in one of its three transformation stages: raw data, enriched and curated data, and workspace data. With an automated data agnostic ingestion service it is likely [Data application](../architectures/data-landing-zone-data-products.md) should only consume from the data lake that contains enriched and curated data. However, as previously stated, in the case where you've chosen not to implement a data agnostics engine, for ingesting once from operational sources, or complex connections aren't facilitated in the data agnostics engine, you would create a [data application which is source aligned](../architectures/data-application-source-aligned.md).
 
 Data Lake Storage Gen2 supports:
 
@@ -29,6 +29,8 @@ If your data lake will contain a few data assets and only has automated processe
 You might be familiar with the dreaded *data swamp* analogy. Governance and organization are key to avoid this situation. When you create a solid foundation, it will increase the chance of sustained data lake success and business value.
 
 A robust data catalog system is increasingly critical as the size, or number of data assets, and complexity, or number of users or departments, of a data lake grows. The catalog will ensure that users who process, consume, and govern the lake can find, tag, and classify data.
+
+For more information, see [Data Governance Overview](../govern.md).
 
 ## The three data lakes
 
