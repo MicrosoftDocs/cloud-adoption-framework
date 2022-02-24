@@ -3,7 +3,7 @@ title: Access control and data lake configurations in Azure Data Lake Storage Ge
 description: Learn about access control and data lake configurations in Azure Data Lake Storage Gen2. This article describes using role-based access control and access control lists.
 author: mboswell
 ms.author: mboswell
-ms.date: 11/25/2021
+ms.date: 02/24/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -89,7 +89,7 @@ We recommend the access control lists configuration for data management and anal
 
 We recommend that you assign access control entries to a security group rather than an individual user or service principal. For more information, see [Use security groups versus individual users](/azure/storage/blobs/data-lake-storage-best-practices#use-security-groups-versus-individual-users). When adding or removing users from the group, no updates to Data Lake Storage are required. Using groups also reduces the chance of exceeding the 32 access control entries per file or folder ACL. After the four default entries, there are only 28 remaining for permission assignments.
 
-Even using groups, you may have many access control entries at top levels of the directory tree. This situation can happen when granular permissions for different groups are required.
+Even using groups, you could have many access control entries at top levels of the directory tree. This situation can happen when granular permissions for different groups are required.
 
 ![Diagram shows several security groups requiring access to three data products.](../images/flat-groups-issue.png)
 
@@ -126,10 +126,8 @@ This run permission propagates down any added child folders. The permission prop
 These usages are the recommended security patterns for each of the data lake zones:
 
 - Raw should allow access to data only by using security principal names (SPNs).
-- Enriched should allow access to data only by using security principal names (SPNs).
+- Enriched should allow access to data only by using security principal names (SPNs)
 - Curated should allow access with both security principal names (SPNs) and user principal names (UPNs).
-
-![Diagram summarizes the zone security patterns.](../images/adls-security-zones.png)
 
 ### Example scenario for using Azure AD security groups
 
@@ -146,10 +144,6 @@ To enable these activities, create a `LogsWriter` group and a `LogsReader` group
 If a user in the service engineering team transfers to a different team, just remove that users from the `LogsWriter` group.
 
 If you didn't add that user to a group, but instead, added a dedicated ACL entry for that user, you will need to remove that ACL entry from the `/LogData` directory. You will also need to remove the entry from all subdirectories and files in the entire directory hierarchy of the `/LogData` directory.
-
-### Summary of Azure Data Lake access
-
-No single approach to managing data lake access suits everyone. A major benefit of a data lake is to provide friction-free access to data. In practice, different organizations want different levels of governance and control over their data. Some organizations have a centralized team to manage access and provision groups under rigorous internal controls. Other organizations are more agile and have decentralized control. Choose the approach that meets your level of governance. Your choice shouldn't result in undue delays or friction in gaining access to data.
 
 ## Azure Synapse Analytics data access control
 
@@ -184,6 +178,10 @@ df.write.saveAsTable("table01")
 ```
 
 For more information, see [How to set up access control for your synapse workspace](/azure/synapse-analytics/security/how-to-set-up-access-control).
+
+### Summary of Azure Data Lake access
+
+No single approach to managing data lake access suits everyone. A major benefit of a data lake is to provide friction-free access to data. In practice, different organizations want different levels of governance and control over their data. Some organizations have a centralized team to manage access and provision groups under rigorous internal controls. Other organizations are more agile and have decentralized control. Choose the approach that meets your level of governance. Your choice shouldn't result in undue delays or friction in gaining access to data.
 
 ## Next steps
 

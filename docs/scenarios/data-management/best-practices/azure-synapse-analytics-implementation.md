@@ -3,7 +3,7 @@ title: Use Azure Synapse Analytics with data management and analytics scenario
 description: Learn how to use Azure Synapse Analytics with data management and analytics scenario.
 author: mboswell
 ms.author: mboswell
-ms.date: 01/12/2022
+ms.date: 02/24/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -27,7 +27,7 @@ Azure Synapse studio is a tool in Azure Synapse that provides a unified experien
 
 During the initial setup of a [data landing zone](../architectures/data-landing-zone.md), you can deploy a single Azure Synapse Analytics workspace for use by all analysts and data scientists. You can create more workspaces for specific data integrations or data products.
 
-You might need extra Azure Synapse Analytics workspaces if your data application (source-aligned) needs to provide access to the golden source with row-level and column-level security. You can provide these workspaces with Azure Synapse pools. Data products teams might require their own workspace for creating data products and a separate workspace that's only for product teams with scoped development access.
+You might need extra Azure Synapse Analytics workspaces if your data product needs to provide access to the [standardized data](../architectures/data-standardization.md) with row-level and column-level security. You can provide these workspaces with Azure Synapse pools. Data products teams might require their own workspace for creating data products and a separate workspace that's only for product teams with scoped development access.
 
 ## Azure Synapse Analytics setup
 
@@ -52,12 +52,14 @@ You can combine row-level security with column-level security to restrict access
 > [!NOTE]
 > Azure Synapse serverless SQL pool supports [Column-level security](/azure/synapse-analytics/sql-data-warehouse/column-level-security) but requires custom views as a workaround for Row-level security.
 
+For more information, see [Azure Synapse Analytics data access control](data-lake-access.md#azure-synapse-analytics-data-access-control).
+
 ### Azure Synapse data access control in Azure Data Lake
 
 When deploying an Azure Synapse Analytics workspace, you need an Azure Data Lake Storage account from the subscription or by manually using the storage account URL. The specified storage account is set as **primary** for the deployed Azure Synapse workspace to store its data. Azure Synapse stores data in a container that includes Apache Spark tables and Spark application logs in a folder called `/synapse/{workspaceName}`. It also has a container for managing any libraries that you choose to install.
 
 > [!TIP]
-> We recommend using a dedicated container on the [Workspace zone or data lake three](data-lake-zones.md#workspace-zone-or-data-lake-three) account. This container is used as primary storage to store Spark metadata.
+> We recommend using a dedicated container on the [Development zone or data lake three](data-lake-zones.md#development-zone-or-data-lake-three) account. This container is used as primary storage to store Spark metadata.
 
 Refer to [Azure Synapse Analytics data access control](data-lake-access.md#azure-synapse-analytics-data-access-control) for recommendations on how to set up data access.
 

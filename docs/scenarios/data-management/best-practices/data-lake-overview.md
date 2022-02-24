@@ -3,7 +3,7 @@ title: Overview of Azure Data Lake Storage for the data management and analytics
 description: Gain an overview of Azure Data Lake Storage for the data management and analytics scenario.
 author: mboswell
 ms.author: mboswell
-ms.date: 11/25/2021
+ms.date: 02/24/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -12,7 +12,7 @@ ms.custom: e2e-data-management, think-tank
 
 # Overview of Azure Data Lake Storage for the data management and analytics scenario
 
-We recommend you provision three [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction) accounts within a single resource group, similar to the `data lake services` resource group described in [Azure data management and analytics scenario architecture data landing zone overview](../architectures/data-landing-zone.md). Each of the three data lakes within a data landing zone stores data in one of its three transformation stages: raw data, enriched and curated data, and workspace data. [Data products](../architectures/data-landing-zone-data-products.md) should only consume from the data lake that contains enriched and curated data.
+We recommend you provision three [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction) accounts within a single resource group, similar to the `storage-rg` resource group described in [Azure data management and analytics scenario architecture data landing zone overview](../architectures/data-landing-zone.md). Each of the three data lakes within a data landing zone stores data in one of its three transformation stages: raw data, enriched and curated data, and workspace data. With an automated data agnostic ingestion service it's likely [Data application](../architectures/data-landing-zone-data-products.md) should only consume from the data lake that contains enriched and curated data. However, as previously stated, in the case where you've chosen not to implement a data agnostics engine, for ingesting once from operational sources, or complex connections aren't facilitated in the data agnostics engine, you would create a [data application that is source aligned](../architectures/data-application-source-aligned.md).
 
 Data Lake Storage Gen2 supports:
 
@@ -29,6 +29,8 @@ If your data lake will contain a few data assets and only has automated processe
 You might be familiar with the dreaded *data swamp* analogy. Governance and organization are key to avoid this situation. When you create a solid foundation, it will increase the chance of sustained data lake success and business value.
 
 A robust data catalog system is increasingly critical as the size, or number of data assets, and complexity, or number of users or departments, of a data lake grows. The catalog will ensure that users who process, consume, and govern the lake can find, tag, and classify data.
+
+For more information, see [Data Governance Overview](../govern.md).
 
 ## The three data lakes
 
@@ -48,16 +50,6 @@ We recommend you add three data lake accounts during your discovery and design p
 
 Data residency rules, or a requirement to have data close to a user base, can drive the requirement to create Azure Data Lake accounts in multiple Azure regions. We recommend you create a data landing zone in one region and then replicate global data using AzCopy, Azure Data Factory or third-party products. Local data remains in-region while global data is replicated across multiple regions.
 
-## Data lake access control list guidelines
-
-- Create Azure AD groups to represent data products, data products, data integrations, or job functions. Assign access to Azure AD groups instead of individual users. This configuration will simplify operation and maintenance tasks as you'll only add and remove users from Azure AD groups. Modifying ACLs on files and folders in a data lake should happen infrequently, typically only at dataset creation.
-- Set the lowest granularity for an access control list (ACL) at the dataset or table name level. A folder can represent this configuration in Data Lake Storage.
-- Define new Azure AD groups based on data roles and dataset groupings. Existing Azure AD groups might follow organizational structure, even though not all members in the same organizational unit need access to a data lake.
-- Default access control list (ACL) on every dataset folder must include *read* and *execute* permissions. Execute permission is required for users to traverse a restricted folder and access files under it. Access ACL assigned to an Azure AD group will include read and execute permissions on each dataset folder.
-- Only a managed identity or a service principal should grant *write* permission to a system. Changes can be made by an ingestion, transformation, or maintenance process.
-
-For more information about access control mechanisms, see [Access control and data lake configurations in Azure Data Lake Storage](./data-lake-access.md).
-
 ## Next steps
 
-[Provision three Azure Data Lake Storage Gen2 accounts for each data landing zone](./data-lake-zones.md)
+[Data lake zones and containers](./data-lake-zones.md)
