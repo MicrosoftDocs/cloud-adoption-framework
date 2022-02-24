@@ -3,7 +3,7 @@ title: Overview of the data management and analytics scenario data management la
 description: Gain an overview of the data management and analytics scenario data management landing zone in Azure
 author: mboswell
 ms.author: mboswell
-ms.date: 11/25/2021
+ms.date: 02/24/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
