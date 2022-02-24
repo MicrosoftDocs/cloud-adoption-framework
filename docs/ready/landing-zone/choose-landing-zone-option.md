@@ -173,7 +173,7 @@ The following table summarizes considerations for each landing zone implementati
         Automation capabilities like infrastructure as code (IaC) and Azure DevOps
     :::column-end:::
     :::column:::
-        You can use Azure Resource Manager, Azure Policy, and Azure Blueprints to create your own continuous integration and continuous development (CI/CD) pipeline.
+        Use Azure Resource Manager, Azure Policy, and Azure Blueprints to create your own continuous integration and continuous development (CI/CD) pipeline.
     :::column-end:::
     :::column:::
         You can use Azure Resource Manager, Azure Policy, and GitHub/Azure DevOps. CI/CD pipeline options are included in the reference implementation guidance.
