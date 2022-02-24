@@ -26,6 +26,8 @@ items:
           href: ./eslz-network-topology-and-connectivity.md
         - name: Network architecture considerations
           href: ./eslz-network-considerations.md
+        - name: Network architecture considerations
+          href: ../../ready/azure-best-practices/limit-cross-tenant-private-endpoint-connections.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
       - name: Resource organization
         href: ./eslz-resource-organization.md
       - name: Governance disciplines
@@ -174,6 +176,16 @@ items:
 
   - name: Best practices
     items:
+      - name: Data landing zone ingestion
+        items:
+        - name: Overview
+          href: ./best-practices/data-ingestion.md
+        - name: High level data flow
+          href: ./best-practices/data-ingestion-flow.md
+        - name: SAP data ingestion
+          href: ./best-practices/sap-data-ingestion.md
+        - name: Automated ingestion pattern
+          href: ./best-practices/automated-ingestion-pattern.md
       - name: Data lake implementation
         items:
         - name: Data lake overview
@@ -188,8 +200,6 @@ items:
         href: ./best-practices/azure-databricks-implementation.md
       - name: Azure Synapse Analytics implementation
         items:
-        - name: Overview
-          href: ./best-practices/synapse.md
         - name: Implementation
           href: ./best-practices/azure-synapse-analytics-implementation.md
         - name: High availability for Azure Synapse Analytics
@@ -214,14 +224,7 @@ items:
           href: ../../ready/azure-best-practices/ai-machine-learning-mlops.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
         - name: Data science best practices
           href: ./best-practices/data-science-best-practices.md
-      - name: Data landing zone ingestion
-        items:
-        - name: Data ingestion
-          href: ./best-practices/data-ingestion.md
-        - name: SAP data ingestion
-          href: ./best-practices/sap-data-ingestion.md
-        - name: Automated ingestion pattern
-          href: ./best-practices/automated-ingestion-pattern.md
+
 
   - name: Featured Azure products
     items:

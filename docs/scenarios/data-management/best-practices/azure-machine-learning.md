@@ -47,7 +47,7 @@ The following design principles can guide the implementation of Azure Machine Le
 ## Implementation overview
 
 > [!NOTE]
-> This section recommends configurations specific to the data management and analytics scenario. It complements Azure Machine Learning documentation and CAF best practices.
+> This section recommends configurations specific to the data management and analytics scenario. It complements Azure Machine Learning documentation and Cloud Adoption Framework best practices.
 
 ### Workspace organization and setup
 

@@ -3,7 +3,7 @@ title: Provision three Azure Data Lake Storage Gen2 accounts for each data landi
 description: Learn about the three Azure Data Lake Storage Gen2 accounts that should be provisioned for each data landing zone.
 author: mboswell
 ms.author: mboswell
-ms.date: 11/25/2021
+ms.date: 02/24/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -30,25 +30,23 @@ The three data lake accounts should align to the typical zones within a data lak
 | 3           | Development | 1            | Analytics Sandbox |
 | 3           | Development | #           | Synapse Primary Storage #  |
 
-Above are the standard number of container we would recommend per data landing zone. The exception to this recommendation is where immutable or different soft delete policies are required for the data held in the container. These requirements will drive the need for more containers.
+Above are the standard number of containers we would recommend per data landing zone. The exception to this recommendation is where immutable or different soft delete policies are required for the data held in the container. These requirements will drive the need for more containers.
 
 The services should be enabled with the hierarchical name space feature to allow efficient file management. The [hierarchical name space feature](/azure/storage/blobs/data-lake-storage-namespace) helps you organize objects and files within an account into a hierarchy of directories and nested subdirectories. It's organized in the same way that the file system on your computer is organized.
-
-> [!NOTE]
-> The Azure Blob Storage account must have hierarchical name space enabled to allow efficient file management.
-
-Provisioning three data lake accounts allows you to set different redundancy, retention, and access policies for each lake account. For example, you might want your raw data to be geo-redundant. The analytics sandbox might be used for data exploration and require locally redundant disaster recovery.
 
 > [!IMPORTANT]
 > While the data lake sits across three data lake accounts, multiple containers, and folders, it represents one logical data lake for the data landing zone.
 
-When a new system of record is register via the data agnostic or onboarding application should create the required folders on the raw containers and enriched standardized data lake container. If the data is being ingested using a **data application (source-aligned)** then the data application team would require the data landing zone team to create the folders, security groups, please either a Service principle name or managed identity into the correct group and then give the correct level of permissions - this process would to be documented as provided as a process to data landing zone and data application teams. For information on teams, see [Understand the roles and teams for data management and analytics in Azure](../organize-roles-and-teams.md).
+When a new system of record is registered via the data agnostic or onboarding application, it should create the required folders on the raw containers and enriched standardized data lake container. If the data is being ingested using a data application (source-aligned),** then the data application team would require the data landing zone team to create the folders, security groups, place either a Service principle name or managed identity into the correct group and then give the correct level of permissions - this process would be documented as a process to data landing zone and data application teams. For information on teams, see [Understand the roles and teams for data management and analytics in Azure](../organize-roles-and-teams.md).
 
 Each **data product** should have two folders on the curated data lake zones over which they should have ownership.
 
-At the standardized container, on the enriched data lake, there would be two folders per source system should be divided by classification. This classification leads to a general folder, for *confidential or below*, and a *sensitive* personal data folder with access controlled, to both folders, by access control lists (ACLs). By having these two folders you can choose to create a dataset with all the personal data removed located in the general folder. You can then have another dataset with all personal data in the *sensitive* personal data folder.
+At the standardized container, on the enriched data lake, there would be two folders per source system should be divided by classification. This classification leads to a general folder, for *confidential or below*, and a *sensitive* personal data folder with access controlled, to both folders, by access control lists (ACLs). By having these two folders, you can choose to create a dataset with all the personal data removed located in the general folder. You can then have another dataset with all personal data in the *sensitive* personal data folder.
 
 Access to the data is restricted by a combination of access control lists (ACLs) and Azure Active Directory (Azure AD) groups. These lists and groups control what can and can't be accessed by other groups. Data owners and data application teams can approve or reject access to their data assets. For more information, [Data Access Management](../security-provisioning.md) and [Restricted data](../secure-data-privacy.md#restricted-data).
+
+> [!WARNING]
+> Some products don't support mounting the root of a data lake container. Because of this, each data lake container in raw, curated, enriched, and development should have a single folder before branching off to multiple folders. Set up the folder permissions carefully. During the creation of a new folder from the root, the default access control list (ACL) on the parent directory determines a child directory's default access control list (ACL) and access ACL. A child file's access control list (ACL) files don't have a default ACL. For more information, see [Access control lists (ACLs) in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-access-control).
 
 ## Raw zone or data lake one
 
@@ -65,7 +63,7 @@ We define full load and delta loads as:
 - Full Load
   - The complete data from source can be onboarded under the below scenarios
     - The volume of data at source is small.
-    - The source system does not maintain any timestamp field to identify if the data has been added, updated or deleted.
+    - The source system doesn't maintain any timestamp field to identify if the data has been added, updated or deleted.
     - The source system overwrites the complete data each time.
 
 - Delta Load
@@ -74,7 +72,7 @@ We define full load and delta loads as:
     - The source system maintains a timestamp field to identify if the data has been added/updated or deleted
     - The source system creates/updates files on data changes.
 
-The raw data lake is comprised of the landing and conformance containers, each with a 100% mandatory folder structure specific to its purpose.
+The raw data lake is composed of the landing and conformance containers, each with a 100% mandatory folder structure specific to its purpose.
 
 ### Landing zone container layout
 
@@ -101,7 +99,7 @@ The landing container is reserved for raw data loaded by the data agnostic inges
 
 ### Landing zone conformance container
 
-This zone is data quality conformed data zone. As the data is copied to landing zone container the data processing and compute should be triggered to copy the data from the landing zone container. The first stage is to convert the data into delta lake and land in to input folder. Data quality is run and those records which pass are copied into the output folder. Failed records land into the error folder.
+This zone is data quality conformed data zone. As the data is copied to landing zone container the data processing and compute should be triggered to copy the data from the landing zone container. The first stage is to convert the data into delta lake and land in to input folder. Data quality is run and those records that pass are copied into the output folder. Failed records land into the error folder.
 
 ```markdown
 .
@@ -140,7 +138,7 @@ This zone is data quality conformed data zone. As the data is copied to landing 
 
 The next layer can be thought of as a filtration zone that removes impurities but could also involve enrichment.
 
-The standardization container comprises of consumable data from systems of record and masters.  Folders are segmented first by subject area, and then by entity.  Data is available in merged, partitioned tables optimized for analytics consumption.
+The standardization container hold systems of record and masters.  Folders are segmented first by subject area, and then by entity.  Data is available in merged, partitioned tables optimized for analytics consumption.
 
 ### Standardized container
 
@@ -201,7 +199,7 @@ Data assets in this zone should be highly governed and well-documented. For exam
 
 Along with the data that's ingested to the standardized container, the consumers of the data can also bring other useful data products.
 
-In this scenario, the data platform should allocate a analytics sandbox area for these consumers so they can use the curated data along with the other data products they bring, to generate valuable insights. For example, if a data science team wants to determine the product placement strategy for a new region, they can bring other data products such as customer demographics and usage data of similar products from that region. This high-value sales insights data can be used to analyze the product market fit and the offering strategy.
+In this scenario, the data platform should allocate an analytics sandbox area for these consumers so they can use the curated data along with the other data products they bring, to generate valuable insights. For example, if a data science team wants to determine the product placement strategy for a new region, they can bring other data products such as customer demographics and usage data of similar products from that region. This high-value sales insights data can be used to analyze the product market fit and the offering strategy.
 
 > [!NOTE]
 > The analytics sandbox area is intended as a working area for individual, or a small group of collaborators.  The sandbox folders will have a special set of policies intended to prevent using this area as part of a production solution.  This would include limits on total available storage and how long data can be stored.
@@ -212,25 +210,6 @@ Sometimes these data products mature, and the enterprise should consider how the
 
 > [!NOTE]
 > For every Azure Synapse workspace, which is created, we recommend to use data lake three to create a container that can be used as the primary storage. This is to stop Azure Synapse workspaces from interfering with the curated and enriched zones throughput limits.
-
-## Alignment of roles to write and reading of data
-
-:::image type="content" source="../images/data-lake-zones-quality.png" alt-text="Diagram showing an example of data lake zones." lightbox="../images/data-lake-zones-quality.png":::
-
-### Write data
-
-| Raw data          | Enriched data     | Curated data  | Workspace data                                  |
-|-------------------|-------------------|---------------|-------------------------------------------------|
-| Data integrations | Data integrations | Data products | Data products, data scientists, and BI analysts |
-
-### Read data
-
-| Raw data                          | Enriched data                                                                                                             | Curated data                                        | Workspace data               |
-|-----------------------------------|---------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------|------------------------------|
-| Data application (source-aligned) | Data application (source-aligned) and read access for others based on approval of data application (source-aligned) owner | Data products, analysts, data scientists, and users | Data scientists and analysts |
-
-> [!WARNING]
-> Some products don't support mounting the root of a data lake container. Because of this, each data lake container in raw, curated, enriched, and workspace should have a single folder before branching off to multiple folders. Set up the folder permissions carefully. During the creation of a new folder from the root, the default access control list (ACL) on the parent directory determines a child directory's default access control list (ACL) and access ACL. A child file's access control list (ACL) files don't have a default ACL. For more information, see [Access control lists (ACLs) in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-access-control).
 
 ## Next steps
 
