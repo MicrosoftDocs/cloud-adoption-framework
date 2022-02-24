@@ -77,7 +77,7 @@ The Azure landing zone pattern recommends all logs should be sent to a central L
 
 For more information, see [Monitoring Azure Databricks](/azure/architecture/databricks-monitoring/).
 
-## Hive metastore for Azure Databricks
+### Hive metastore for Azure Databricks
 
 This resource group is optional and should only be deploy with Azure Databricks.
 
@@ -90,6 +90,8 @@ For more information, see [External Apache Hive metastore](/azure/databricks/dat
 :::image type="content" source="../images/data-landing-zone-data-lake-services-rg.png" alt-text="Diagram of data landing zone data lake services resource group.":::
 
 Three [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction) accounts will be provisioned in the single data lake services resource group as shown above. The data transformed at different stages will be saved on one of the data landing zone's three data lakes. It will be available for analytics, data science, and visualizations teams to consume.
+
+[!INCLUDE [data-lake-layers](../includes/data-lake-layers.md)]
 
 For more information, see:
 

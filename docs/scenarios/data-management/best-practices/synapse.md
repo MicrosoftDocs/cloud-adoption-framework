@@ -27,7 +27,7 @@ For example, [Azure Synapse Analytics](https://azure.microsoft.com/services/syna
 Azure Synapse has several key features and capabilities:
 
 - Integrated platform services for management, security, monitoring, and metastore.
-- A data integration layer that interfaces with a decoupled storage layer.
+- A data application (source-aligned) layer that interfaces with a decoupled storage layer.
 - Integrated analytics runtimes, either provisioned or serverless on-demand.
 - Azure SQL Analytics using T-SQL for batch, streaming, and interactive processing.
 - Apache Spark for big data processing.

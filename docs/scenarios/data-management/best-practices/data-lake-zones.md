@@ -36,9 +36,9 @@ While the data lake sits across three data lake accounts, multiple containers, a
 
 Provisioning three data lake accounts allows you to set different redundancy, retention, and access policies for each lake account. For example, you might want your raw data to be geo-redundant. Workspace might be used for data exploration and require locally redundant disaster recovery.
 
-Each **data integration** should have two folders on the raw and enriched data lake zones over which they should have ownership. Each **data product** should have two folders on the curated data lake zones over which they should have ownership.
+Each **data application (source-aligned)** should have two folders on the raw and enriched data lake zones over which they should have ownership. Each **data product** should have two folders on the curated data lake zones over which they should have ownership.
 
-The two folders per **data integration** or **data product** should be divided by classification. This classification leads to a general folder, for *confidential or below*, and a *sensitive* personal data folder with access controlled by access control lists (ACLs). By having these two folders below **data integration** or **data product**, you can choose to create a dataset with all the personal data removed located in the general folder. You can then have another dataset with all personal data in the *sensitive* personal data folder.
+The two folders per **data application (source-aligned)** or **data product** should be divided by classification. This classification leads to a general folder, for *confidential or below*, and a *sensitive* personal data folder with access controlled by access control lists (ACLs). By having these two folders below **data application (source-aligned)** or **data product**, you can choose to create a dataset with all the personal data removed located in the general folder. You can then have another dataset with all personal data in the *sensitive* personal data folder.
 
 Access to the data is restricted by a combination of access control lists (ACLs) and Azure Active Directory (Azure AD) groups. These lists and groups control what can and can't be accessed by other groups. Integration operations teams** and data product teams can approve or reject access to their data assets.
 
@@ -53,7 +53,7 @@ This data is always immutable. It should be locked down and the permissions give
 
 Consider using lifecycle management to reduce long-term storage costs. This recommendation is because this layer usually stores the largest amount of data. Azure Data Lake Storage Gen2 supports moving data to the cool access tier either programmatically or through a lifecycle management policy. The policy defines a set of rules that run once a day and can be assigned to the account, filesystem, or folder level. The feature is free although the operations will incur a cost.
 
-Raw data from source systems for each **data integration** or source will land into either the general folder, for *confidential or below*, or *sensitive* personal data folder for each **data integration** on data lake one. Each ingestion process should have write access to only their associated folder.
+Raw data from source systems for each **data application (source-aligned)** or source will land into either the general folder, for *confidential or below*, or *sensitive* personal data folder for each **data application (source-aligned)** on data lake one. Each ingestion process should have write access to only their associated folder.
 
 ### Raw directory layout
 
@@ -93,7 +93,7 @@ Typical activities found in this layer are schema and data type definition, remo
 
 The organization of this zone is more business-driven rather than by source system. Typically, it might be a folder per department or project. Some consider this zone a staging zone where you grant permissions only to the automated jobs that run against it. If data analysts or scientists need access to the data in this form, you can grant them read-only access only.
 
-The enriched zone follows the same hierarchical directory structure as the raw zone and is located in either the general folder, for *confidential or below*, or *sensitive* personal data folder for each **data integration** * folder on data lake two.
+The enriched zone follows the same hierarchical directory structure as the raw zone and is located in either the general folder, for *confidential or below*, or *sensitive* personal data folder for each **data application (source-aligned)** * folder on data lake two.
 
 ### Enriched directory layout
 
@@ -156,11 +156,11 @@ Data assets in this zone are typically highly governed and well-documented. Perm
 > [!TIP]
 > When a decision is made to land the data into another read data store such as Azure SQL Database, as a high-speed serving layer, we recommend to have a copy of the data located in the curated data. Although users of the **data product** will be guided to the main read data store or Azure SQL Database instance, allowing them to do further data exploration using a wider set of tools if the data is also available in the data lake.
 
-Data assets in this zone should be highly governed and well-documented. For example, high-quality sales data might be data in the enriched data zone correlated with other demand forecasting signals such as social media trending patterns for a **data integration** that's used for predictive analytics on determining the sales projections for the next fiscal year.
+Data assets in this zone should be highly governed and well-documented. For example, high-quality sales data might be data in the enriched data zone correlated with other demand forecasting signals such as social media trending patterns for a **data application (source-aligned)** that's used for predictive analytics on determining the sales projections for the next fiscal year.
 
 ## Workspace zone or data lake three
 
-Along with the data that's ingested by the **data integration** team from the source, the consumers of the data can also bring other useful data products.
+Along with the data that's ingested by the **data application (source-aligned)** team from the source, the consumers of the data can also bring other useful data products.
 
 In this scenario, the data platform should allocate a workspace for these consumers so they can use the curated data along with the other data products they bring, to generate valuable insights. For example, if a data science team wants to determine the product placement strategy for a new region, they can bring other data products such as customer demographics and usage data of similar products from that region. This high-value sales insights data can be used to analyze the product market fit and the offering strategy.
 
@@ -210,7 +210,7 @@ Below are general practices for data partitioning design.
 
 |Raw data |Enriched data |Curated data| Workspace data|
 |---------|---------|---------|---------|
-| Data integration | Data integration and read access for others based on approval of data integration owner | Data products, analysts, data scientists, and users | Data scientists and analysts|
+| Data application (source-aligned) | Data application (source-aligned) and read access for others based on approval of data application (source-aligned) owner | Data products, analysts, data scientists, and users | Data scientists and analysts|
 
 > [!WARNING]
 > Some products don't support mounting the root of a data lake container. Because of this, each data lake container in raw, curated, enriched, and workspace should have a single folder before branching off to multiple folders. Set up the folder permissions carefully. During the creation of a new folder from the root, the default access control list (ACL) on the parent directory determines a child directory's default access control list (ACL) and access ACL. A child file's access control list (ACL) files don't have a default ACL. For more information, see [Access control lists (ACLs) in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-access-control).

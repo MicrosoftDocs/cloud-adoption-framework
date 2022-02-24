@@ -16,7 +16,7 @@ Azure Synapse Analytics is the provisioned, integrated analytics service that ac
 
 - The best SQL technologies used in enterprise data warehousing.
 - Spark technologies used for big data.
-- Pipelines for data integration and extract, transform, and load (ETL) or extract, load, and transform (ELT).
+- Pipelines for data application (source-aligned) and extract, transform, and load (ETL) or extract, load, and transform (ELT).
 
 Azure Synapse studio is a tool in Azure Synapse that provides a unified experience for management, monitoring, coding, and security. Synapse studio has deep integration with other Azure services like Power BI, Azure Cosmos DB, and Azure Machine Learning.
 
@@ -27,7 +27,7 @@ Azure Synapse studio is a tool in Azure Synapse that provides a unified experien
 
 During the initial setup of a [data landing zone](../architectures/data-landing-zone.md), you can deploy a single Azure Synapse Analytics workspace for use by all analysts and data scientists. You can create more workspaces for specific data integrations or data products.
 
-You might need extra Azure Synapse Analytics workspaces if your data integration needs to provide access to the golden source with row-level and column-level security. You can provide these workspaces with Azure Synapse pools. Data products teams might require their own workspace for creating data products and a separate workspace that's only for product teams with scoped development access.
+You might need extra Azure Synapse Analytics workspaces if your data application (source-aligned) needs to provide access to the golden source with row-level and column-level security. You can provide these workspaces with Azure Synapse pools. Data products teams might require their own workspace for creating data products and a separate workspace that's only for product teams with scoped development access.
 
 ## Azure Synapse Analytics setup
 
@@ -45,7 +45,7 @@ Use access control lists with [Azure Active Directory (Azure AD) pass-through in
 
 For data where you need to restrict columns and rows returned, we recommend row-level and column-level security to restrict the data access on the tables in Azure Synapse SQL dedicated or serverless pool. Row-level security and column-level security is implemented at the database level and in addition to the database roles.
 
-For example, row-level security ensures that users in a specific data integration or data product only see their own data. Even if the table contains data for the entire enterprise.
+For example, row-level security ensures that users in a specific data application (source-aligned) or data product only see their own data. Even if the table contains data for the entire enterprise.
 
 You can combine row-level security with column-level security to restrict access to columns with sensitive data. This way, both row-level security and column-level security apply the access restriction logic at the database tier rather than the application tier. The permission is evaluated every time data access is attempted from any tier.
 

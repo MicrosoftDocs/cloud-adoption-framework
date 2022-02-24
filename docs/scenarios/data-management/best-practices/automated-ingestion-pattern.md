@@ -21,7 +21,7 @@ This section provides guidance for how custom ingestion frameworks can drive ser
 
 ## Automated data source application
 
-The following illustrates how integration ops can use custom applications, Azure Logic Apps, or Microsoft Power Apps to register new data sources:
+The following illustrates how data application teams can use custom applications, Azure Logic Apps, or Microsoft Power Apps to register new data sources:
 
 ![Diagram of an automated ingestion process.](../images/automated-ingest-process.png)
 
@@ -29,7 +29,7 @@ The application can talk to an Azure Data Factory SQL Database metastore within 
 
 The metadata triggers Data Factory jobs and will have most of the parameters required for running pipelines. A Data Factory master pipeline pulls parameters from the Data Factory SQL Database metastore to transfer data from the source into the data lake and enrich it with conformed data types before creating a table definition in the Azure Databricks Apache Hive metastore.
 
-For all job types (including indirect ingestion from sources like SAP), areas, and functions, the application should store the jobs' technical and operational metadata in a SQL database. Technical metadata can drive jobs because it has have most of the parameters required for this task. Data platform, data landing zone, and integration ops can use the metadata to:
+For all job types (including indirect ingestion from sources like SAP), areas, and functions, the application should store the jobs' technical and operational metadata in a SQL database. Technical metadata can drive jobs because it has have most of the parameters required for this task. Data platform, data landing zone, and data application teams can use the metadata to:
 
 - Track jobs and the latest data-loading timestamps for data products related to their functions.
 - Track available data products.
@@ -45,7 +45,7 @@ Operational metadata can be used to track:
 - Source metadata changes.
 - Business functions that depend on data products.
 
-If the business needs operational reports and event notifications, data landing zone ops and integration ops can use Microsoft Power BI to query the SQL Database to build them.
+If the business needs operational reports and event notifications, data landing zone ops and data application teams can use Microsoft Power BI to query the SQL Database to build them.
 
 ## Register a new dataset (automated)
 
@@ -81,7 +81,7 @@ The Data Factory ingestion master pipeline reads configurations from a Data Fact
 
 If the data is ingested, it connects to an Azure Databricks data science and engineering workspace, and a data definition is created within the data management landing zone Apache Hive metastore. This data definition needs to be protected so that only the automation process can create, alter, or drop data definitions.
 
-If integration ops needs to use SQL pools to expose data, then the custom solution is to create external tables or ingest data directly into the SQL pools' internal tables.
+If data application teams needs to use SQL pools to expose data, then the custom solution is to create external tables or ingest data directly into the SQL pools' internal tables.
 
 ## Use the Azure Purview REST API to discover data
 

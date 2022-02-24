@@ -40,7 +40,7 @@ The following design principles can guide the implementation of Azure Machine Le
 
 - **Separation of concerns between data management and data consumption:** Identity passthrough is the default authentication type for Azure Machine Learning and storage.
 
-- **Faster data integration:** Azure Data Factory, Azure Synapse Analytics, and Databricks landing zones can be preconfigured to link to Azure Machine Learning.
+- **Faster data application (source-aligned):** Azure Data Factory, Azure Synapse Analytics, and Databricks landing zones can be preconfigured to link to Azure Machine Learning.
 
 - **Observability:** Central logging and reference configurations can help to monitor the environment.
 

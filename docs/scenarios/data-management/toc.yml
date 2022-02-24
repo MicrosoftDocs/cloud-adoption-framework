@@ -110,9 +110,9 @@ items:
       items:
         - name: Overview
           href: ./architectures/data-landing-zone-data-products.md
-        - name: Data Application (source-aligned)
+        - name: Data application (source-aligned)
           href: ./architectures/data-landing-zone-source-integration.md
-        - name: Data Application Reference Patterns
+        - name: Data application reference patterns
           href: ./architectures/data-reference-patterns.md
     - name: Scaling the architecture
       href: ./architectures/scaling-architectures.md

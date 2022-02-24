@@ -3,7 +3,7 @@ title: Data management and analytics scenario data applications (source-aligned)
 description: Learn about data management and analytics scenario data applications (source-aligned) in Azure.
 author: mboswell
 ms.author: mboswell
-ms.date: 02/23/2022
+ms.date: 02/24/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -12,64 +12,54 @@ ms.custom: e2e-data-management, think-tank
 
 # Data applications (source-aligned)
 
-The role of integrations operations is explained under [integration ops (per integration)](../organize-roles-and-teams.md#data-landing-zone-teams).
-
-A data integration resource group is responsible for data ingestion and enrichment only from external sources such a telemetry, finance, and CRM. This layer can operate in both real-time, batch and micro-batch.
-
-This section explains the infrastructure that's deployed for each data integration resource group inside a data landing zone.
+In the case where you've chosen not to implement a data agnostics engine, for ingesting once from operational sources, or complex connections aren't facilitated in the data agnostics engine, you would create a data application which is source aligned. It should follow the same flow as the data agnostics engine would for ingesting data from external data sources.
 
 ## Overview
 
-![Screen capture of data integrations.](../images/integration-resource-group.png)
+This application resource group would responsible for data ingestion and enrichment only from external sources such a telemetry, finance, and CRM. This layer can operate in both real-time, batch and micro-batch.
 
-For each data integration resource group in a data landing zone, create:
+This section explains the infrastructure that's deployed for each Data applications (source-aligned) resource group inside a data landing zone.
+
+> [!TIP]
+> For data mesh you could chose to deploy one of these per source or one per domain. The standards of data standardization, quality and lineage must still be followed. It is recommended that the Data platform ops teams develop snippets of standard code which can be called to achieve this.
+
+:::image type="content" source="../images/data-application-source-aligned.png" alt-text="Data application  (source-aligned) resource group":::
+
+For each data application (source-aligned) resource group in a data landing zone, you should create:
 
 - An Azure Key Vault.
 - An Azure Data Factory for running developed engineering pipelines to transform from raw to enriched.
-- An integration security user group used to give access to the Azure Databricks analytics and data science workspace.
-- A service principal used by the integration for deploying ingest jobs to the Azure Databricks engineering workspace.
+- If using Azure Databricks, a service principal used by the data application (source-aligned) for deploying ingest jobs to the Azure Databricks (ingest)
 
 Instances of other services such as Azure Event Hubs, Azure IoT Hub, Azure Stream Analytics, and Azure Machine Learning can optionally be created.
 
-There should be a data integration resource group per external integration.
-
 > [!NOTE]
-> Our prescribed view is to deploy Azure Data Factory instead of Azure Synapse Analytics workspace, for data integrations. Our adopted policy is to reduce the surface area to required features. Azure Synapse Analytics is more suited to our data product layer, large feature set and surface area.
+> To enforce the standard of delta lake, you will have to use a spark engine such as Azure Synapse Spark or Azure Databricks.
+>
+> If you decide to use Azure Databricks then we would recommend deploying Azure Data Factory instead of Azure Synapse Analytics workspace,. This would reduce the surface area to required features.
+>
+> However, if you need an all encompassing development area with pipelines and spark then use Azure Synapse Analytics. A policy should be applied to only allow the use of Spark and Pipelines to avoid data silo's being created in an Azure Synapse SQL Pool.
 
 ## Azure Key Vault
 
 Data management and analytics scenario will make use of Azure Key Vault functionality and store secrets within Azure whenever possible.
 
-Each data landing zone will have an Azure Key Vault per integration. This functionality will ensure that encryption key, secret, and certificate derivation meet the requirements of the environment. This is to allow better separation of administrative duties and reduce risk associated with mixing keys, secrets of differing classifications, and integrations.
+Each data application (source-aligned) resource group or data domain (if mesh) will have an Azure Key Vault. This functionality will ensure that encryption key, secret, and certificate derivation meet the requirements of the environment. This is to allow better separation of administrative duties and reduce risk associated with mixing keys, secrets of differing classifications, and integrations.
 
-All keys relating to the data integration should be held in this Azure Key Vault.
+All keys relating to the data application (source-aligned) should be held in this Azure Key Vault.
 
 > [!IMPORTANT]
-> Data integration-specific key vaults should follow the least-privilege model and avoid secret sharing across environments as well as transaction scale limits.
+> Data application (source-aligned) key vaults should follow the least-privilege model and avoid secret sharing across environments as well as transaction scale limits.
 
 ## Azure Data Factory
 
-An Azure Data Factory will be deployed to allow pipelines written by the integration operations team to take data from raw to enriched using developed pipelines. We prescribe using mapping data flows for transformations and breaking out to use Azure Databricks engineering workspace for complex transformations.
+An Azure Data Factory will be deployed to allow pipelines written by the data application team to take data from raw to enriched using developed pipelines. We prescribe using mapping data flows for transformations and breaking out to use Azure Databricks (ingest) workspace or Azure Synapse Spark for complex transformations.
 
-It should be connected to the DevOps instance of the integration ops repo responsible for the data integration to allow CI/CD deployments.
+It should be connected to the DevOps instance of the data application team repo responsible for the data application (source-aligned) to allow CI/CD deployments.
 
 ## Event Hubs
 
-If the integration has a requirement to stream data in, it's possible to deploy downstream Event Hubs in the integrations resource group.
-
-## Configuration specific to Azure Databricks of adding an integration to a data landing zone
-
-![Adding permissions to Azure Databricks workspaces.](../images/adding-permissions-databricks-workspaces.png)
-
-Figure 2 shows the subprocess of adding an integration to a pre-existing Azure Databricks engineering workspace within the data landing zone. The subprocess should add the security groups to the Azure enterprise application and then into the workspace. The integration service principal personal access token (PAT) is stored in an Azure Key Vault-backed scope in the data integration resource group for use with the developed engineering pipelines.
-
-### Azure Databricks engineering workspace process
-
-1. Add the integration service principal to the workspace.
-1. Obtain the personal access token (PAT) for the integration's service principal to be used with tools such as Azure Data Factory.
-1. Store the personal access token (PAT) in the integration Key Vault.
-1. Assign the integration service principal access to the cluster policies.
-1. Assign appropriate workspace permissions to integration service principal.
+If the data application (source-aligned)n has a requirement to stream data in, it's possible to deploy downstream Event Hubs in the Data application (source-aligned) resource group.
 
 ## Next steps
 

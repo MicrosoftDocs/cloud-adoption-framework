@@ -23,9 +23,9 @@ For every data landing zone you deploy, two shared workspaces are created.
 - The Azure Databricks engineering workspace is for ingestion and processing. This workspace connects to Azure Data Lake via Azure service principals.
 - The Azure Databricks analytics and data science workspace is provisioned for all data scientists and data operations teams. This workspace connects to Azure Data Lake by using Azure Active Directory (Azure AD) Pass-through Authentication. You share the Azure Databricks analytics and data science workspace across the data landing zone with all users who have access to the workspace. Don't use this workspace for data ingestion, transformation, or load. Use the Azure Databricks engineering workspace instead.
 
-If you have an automated ingestion framework engine, the Azure Databricks engineering workspace uses both an Azure Key Vault instance created in the Azure metadata service resource group for running data ingestion pipelines from **raw** into **enriched** and an Azure Key Vault instance created in the data integration resource group for running developed engineering pipelines to transform from **raw** to **enriched**.
+If you have an automated ingestion framework engine, the Azure Databricks engineering workspace uses both an Azure Key Vault instance created in the Azure metadata service resource group for running data ingestion pipelines from **raw** into **enriched** and an Azure Key Vault instance created in the data application (source-aligned) resource group for running developed engineering pipelines to transform from **raw** to **enriched**.
 
-If you don't have an automated ingestion framework engine, the Azure Databricks engineering workspace uses only the Azure Key Vault instance created in the data integration resource group for running developed engineering pipelines to transform from **raw** to **enriched**.
+If you don't have an automated ingestion framework engine, the Azure Databricks engineering workspace uses only the Azure Key Vault instance created in the data application (source-aligned) resource group for running developed engineering pipelines to transform from **raw** to **enriched**.
 
 > [!NOTE]
 > An automated ingestion framework engine is one in which you've developed an automated solution to register and ingest data that drives Azure Data Factory or another extract, transform, load (ETL) product. For a developed pipeline, an integration operations team wrote the pipeline end-to-end in Azure Data Factory or another ETL product.
@@ -95,7 +95,7 @@ For the Azure Databricks analytics and data science workspace:
 3. It enables workspace options specific to the Azure Databricks engineering workspace.
 
 > [!NOTE]
-> During the creation of a new data integration resource group, we'll alter the configuration of all Azure Databricks workspaces within a data landing zone. See [Data integration and data product deployment process](../manage-provision-platform.md#data-application-deployment-process) for how this is implemented with Azure Databricks shared workspaces.
+> During the creation of a new data application (source-aligned) resource group, we'll alter the configuration of all Azure Databricks workspaces within a data landing zone. See [Data application (source-aligned) and data product deployment process](../manage-provision-platform.md#data-application-deployment-process) for how this is implemented with Azure Databricks shared workspaces.
 
 ### External Hive metastore
 
@@ -106,6 +106,20 @@ In an Azure Databricks workspace deployment:
 The new global init scripts API is in public preview. Public preview features in Azure Databricks are ready for production environments and are supported by the support team. For more information, see [Azure Databricks preview releases](/azure/databricks/release-notes/release-types).
 
 - This solution uses [Azure Database for MySQL](https://azure.microsoft.com/services/mysql/) to store the Apache Hive metastore instance. This database was chosen for its cost effectiveness and its high compatibility with Apache Hive.
+
+## Configuration specific to Azure Databricks of adding an data product (source-aligned) to a data landing zone
+
+![Adding permissions to Azure Databricks workspaces.](../images/adding-permissions-databricks-workspaces.png)
+
+Figure 2 shows the subprocess of adding an integration to a pre-existing Azure Databricks engineering workspace within the data landing zone. The subprocess should add the security groups to the Azure enterprise application and then into the workspace. The integration service principal personal access token (PAT) is stored in an Azure Key Vault-backed scope in the data application (source-aligned) resource group for use with the developed engineering pipelines.
+
+### Azure Databricks engineering workspace process
+
+1. Add the integration service principal to the workspace.
+1. Obtain the personal access token (PAT) for the integration's service principal to be used with tools such as Azure Data Factory.
+1. Store the personal access token (PAT) in the integration Key Vault.
+1. Assign the integration service principal access to the cluster policies.
+1. Assign appropriate workspace permissions to integration service principal.
 
 ## Next steps
 
