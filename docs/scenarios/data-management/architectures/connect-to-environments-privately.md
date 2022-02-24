@@ -3,7 +3,7 @@ title: Network topology and connectivity for connecting to environments privatel
 description: Learn about the network topology for connecting to environments privately.
 author: marvinbuss
 ms.author: mabuss
-ms.date: 11/08/2021
+ms.date: 02/24/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario

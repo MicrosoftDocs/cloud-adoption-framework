@@ -1,19 +1,27 @@
 ---
-title: What is Delta Lake 
-description: Overview of Delta Lake and how it works as part of Azure Synapse Analytics
-services: synapse-analytics 
-author: jasonwhowell 
-ms.service: synapse-analytics 
-ms.topic: conceptual 
-ms.subservice: spark
-ms.date: 04/15/2020 
-ms.author: jasonh 
-ms.reviewer: euang
+title: Data Standardization in data management and analytics scenario.
+description: Understand data Standardization in data management and analytics scenario.
+author: mboswell
+ms.author: mboswell
+ms.date: 02/24/2022
+ms.topic: conceptual
+ms.service: cloud-adoption-framework
+ms.subservice: scenario
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Data Standardization
 
-Azure Synapse Analytics is compatible with Linux Foundation Delta Lake. Delta Lake is an open-source storage layer that brings ACID (atomicity, consistency, isolation, and durability) transactions to Apache Spark and big data workloads.
+Today, many organizations are standardizing their ingest format and focussing on separating compute from storage. This has led to the emergence of format called Delta lake as a preferred standard for the initial data ingestion through to enrichment. From the enrichment layer, data application team can serve the data into a format which reflects there use case.
+
+The section introduces what is delta lake, performance, how it can be used to assist with compliance support and how to standardize data as it flow from source data into the enriched layer.
+
+> [!TIP]
+> Delta lake support both batch and streaming use cases.
+
+## What is Delta Lake?
+
+Azure Synapse Analytics and Azure Databricks is compatible with Linux Foundation Delta Lake. Delta Lake is an open-source storage layer that brings ACID (atomicity, consistency, isolation, and durability) transactions to Apache Spark and big data workloads.
 
 The current version of Delta Lake included with Azure Synapse has language support for Scala, PySpark, and .NET. There are links at the bottom of the page to more detailed examples and documentation.
 
@@ -35,6 +43,23 @@ The current version of Delta Lake included with Azure Synapse has language suppo
 For full documentation, see the [Delta Lake Documentation Page](https://docs.delta.io/latest/delta-intro.html)
 
 For more information, see [Delta Lake Project](https://github.com/delta-io/delta).
+
+## Performance
+
+Lots of small files generally lead to suboptimal performance and potentially higher costs because of increased read/list operations. Azure Data Lake Storage Gen2 is optimized to perform better on larger files. Analytics jobs will run faster and at a lower cost. Delta Lake include a number of features to [Optimize performance with file management](/azure/databricks/delta/optimizations/file-mgmt).
+
+Examples are:
+
+- Delta Lake uses its transaction log to minimize expensive LIST operations.
+- Z-Ordering (multi-dimensional clustering) enables optimized predicate pushdown for query filters. Z-Ordering is a technique to colocate related information in the same set of files. This co-locality is automatically used by Delta Lake to enable data-skipping algorithms, in Azure Databricks and Azure Synapse Spark to dramatically reduce the amount of data that needs to be read.
+- It includes native caching and query optimizations to reduce the amount of storage scanning. For more information, see [Optimize performance with caching](/azure/databricks/delta/optimizations/delta-cache).
+- OPTIMIZE which coalesces small files into larger ones.
+
+These optimizations should be part of your data loading process to maintain data freshness and performance.
+
+## Compliance support
+
+Delta Lake adds a transactional layer that provides structured data management on top of your data lake, it can dramatically simplify and speed up your ability to locate and remove personal information (also known as "personal data") in response to consumer requests. It supports operations such as DELETE, UPDATE, and MERGE. For more information, see Best practices: Compliance using Delta Lake
 
 ## Next steps
 

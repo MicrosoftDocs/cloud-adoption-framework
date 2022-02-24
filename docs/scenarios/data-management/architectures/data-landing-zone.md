@@ -3,7 +3,7 @@ title: Overview of the data management and analytics scenario architecture data 
 description: Learn about the data management and analytics scenario architecture data landing zone in Azure.
 author: mboswell
 ms.author: mboswell
-ms.date: 11/25/2021
+ms.date: 02/24/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -194,6 +194,9 @@ A data landing zone can have multiple data products. You can create the data pro
 ### Data product resource group
 
 The resource group for a data product includes all the service required to make that data product. For example, there's a requirement to have an Azure Database for MySQL, that's used by a visualization tool. The data must be ingested and transformed before landing into the MySQL database. You can deploy an Azure Data Factory and Azure Database for MySQL into the data product resource group.
+
+> [!TIP]
+> In the case where you've chosen not to implement a data agnostics engine, for ingesting once from operational sources, or complex connections aren't facilitated in the data agnostics engine, you would create a data application which is source aligned. For more information, see [Data applications (source-aligned)](data-application-source-aligned.md)
 
 For more information on how to onboard data products, see [Data management and analytics scenario data products in Azure](./data-landing-zone-data-products.md).
 
