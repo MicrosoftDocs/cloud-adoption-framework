@@ -208,4 +208,4 @@ POST https://{accountName}.scan.purview.azure.com/datasources/{dataSourceName}/s
 
 ## Next steps
 
-[Best practices for data science projects with data management and analytics scenario in Azure](./data-science-best-practices.md)
+[Overview of Azure Data Lake Storage for the data management and analytics scenario](data-lake-overview.md)

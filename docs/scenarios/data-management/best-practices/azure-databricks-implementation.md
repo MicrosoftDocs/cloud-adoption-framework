@@ -27,7 +27,7 @@ For every data landing zone you deploy, you have the option to deploy two shared
 - The Azure Databricks engineering workspace for ingestion and processing would connects to Azure Data Lake via Azure service principals. It is called by the data agnostic ingestion.
 - The Azure Databricks analytics workspace could be provisioned for all data scientists and data operations teams. This workspace would connect to Azure Data Lake by using Azure Active Directory (Azure AD) Pass-through Authentication. You share the Azure Databricks analytics and data science workspace across the data landing zone with all users who have access to the workspace.
 
-If you have an automated ingestion framework engine, the Azure Databricks engineering workspace uses both an Azure Key Vault instance created in the Azure metadata service resource group for running data ingestion pipelines from **raw** into **enriched**.
+If you have an automated data agnostic ingestion engine, the Azure Databricks engineering workspace uses both an Azure Key Vault instance created in the Azure metadata service resource group for running data ingestion pipelines from **raw** into **enriched**.
 
 The Azure Databricks analytics workspace should have cluster policies that require you to create high concurrency clusters. This type of cluster allows data lake to be explored by using Azure AD credential pass-through. For more information, see [Access control and data lake configurations in Azure Data Lake Storage](data-lake-access.md).
 
@@ -71,7 +71,7 @@ You might want to enable the following options for the Azure Databricks analytic
 
 ## Deploy Azure Databricks
 
-The two Azure Databricks workspaces are deployed as part of a new data landing zone deployment. This following image shows the workflow of deploying an Azure Databricks environment in data management and analytics scenario.
+TIf you deploy the Azure Databricks workspaces as part of a new data landing zone deployment. This following image shows a sample workflow of deploying an Azure Databricks environment in data management and analytics scenario.
 
 ![Diagram of an Azure Databricks deployment into a data landing zone.](../images/databricks-deploy.png)
 
@@ -80,21 +80,18 @@ The two Azure Databricks workspaces are deployed as part of a new data landing z
 3. The process checks for a Log Analytics workspace in the data landing zone. If it fails to find the Log Analytics workspace, it quits and raises an error.
 4. For each workspace, it creates an Azure AD application and configures SCIM.
 
-For the Azure Databricks engineering workspace:
+For the Azure Databricks ingest workspace:
 
 1. The process configures the workspace with the service principal access.
 2. Data engineering policies that were defined by the data platform operations team are deployed.
 3. If the data landing zone operations team has requested Databricks pools or clusters, they can be integrated into the deployment process.
 4. It enables workspace options specific to the Azure Databricks engineering workspace.
 
-For the Azure Databricks analytics and data science workspace:
+For the Azure Databricks analytics workspace:
 
 1. The process deploys data analytic policies that were defined by the data platform operations team.
 2. If the data landing zone operations team has requested Databricks pools or clusters, they can be integrated into the deployment process.
 3. It enables workspace options specific to the Azure Databricks engineering workspace.
-
-> [!NOTE]
-> During the creation of a new data application (source-aligned) resource group, we'll alter the configuration of all Azure Databricks workspaces within a data landing zone. See [Data application (source-aligned) and data product deployment process](../manage-provision-platform.md#data-application-deployment-process) for how this is implemented with Azure Databricks shared workspaces.
 
 ### External Hive metastore
 
