@@ -180,8 +180,6 @@ items:
         items:
         - name: Overview
           href: ./best-practices/data-ingestion.md
-        - name: High level data flow
-          href: ./best-practices/data-ingestion-flow.md
         - name: SAP data ingestion
           href: ./best-practices/sap-data-ingestion.md
         - name: Automated ingestion pattern
