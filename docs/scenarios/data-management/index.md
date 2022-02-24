@@ -86,7 +86,7 @@ For more information, see:
 The following advanced, level-300+ articles in the **Data management and analytics scenario** table of contents can help central IT teams deploy tools and manage processes for data management and governance:
 
 - [Data lake implementation](best-practices/data-lake-overview.md)
-- [Azure Synapse Analytics implementation](best-practices/synapse.md)
+- [Use Azure Synapse Analytics with data management and analytics scenario](best-practices/azure-synapse-analytics-implementation.md)
 - [Azure Databricks implementation](best-practices/azure-databricks-implementation.md)
 - [Azure Purview implementation](best-practices/purview-checklist.md)
 - [Data landing zone ingestion](best-practices/data-ingestion.md)

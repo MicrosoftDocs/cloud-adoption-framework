@@ -165,6 +165,10 @@ The standardization container hold systems of record and masters.  Folders are s
 > [!NOTE]
 > This layer of data is considered the silver layer or read data source. It shouldn't have had any other transformations applied other than data quality, conversion to delta lake and alignment of data types.
 
+:::image type="content" source="../images/data-flow-high-level.png" alt-text="High level data flow" lightbox="../images/data-flow-high-level.png":::
+
+The above diagram brings together the flow of the data lakes and containers from source data through to the standardized container.
+
 ## Curated zone or data lake two
 
 The curated zone or data lake two is the consumption layer. It's optimized for analytics rather than data ingestion or data processing. It might store data in de-normalized data marts or star schemas.
