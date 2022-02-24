@@ -107,6 +107,20 @@ The new global init scripts API is in public preview. Public preview features in
 
 - This solution uses [Azure Database for MySQL](https://azure.microsoft.com/services/mysql/) to store the Apache Hive metastore instance. This database was chosen for its cost effectiveness and its high compatibility with Apache Hive.
 
+## Configuration specific to Azure Databricks of adding an data product (source-aligned) to a data landing zone
+
+![Adding permissions to Azure Databricks workspaces.](../images/adding-permissions-databricks-workspaces.png)
+
+Figure 2 shows the subprocess of adding an integration to a pre-existing Azure Databricks engineering workspace within the data landing zone. The subprocess should add the security groups to the Azure enterprise application and then into the workspace. The integration service principal personal access token (PAT) is stored in an Azure Key Vault-backed scope in the data integration resource group for use with the developed engineering pipelines.
+
+### Azure Databricks engineering workspace process
+
+1. Add the integration service principal to the workspace.
+1. Obtain the personal access token (PAT) for the integration's service principal to be used with tools such as Azure Data Factory.
+1. Store the personal access token (PAT) in the integration Key Vault.
+1. Assign the integration service principal access to the cluster policies.
+1. Assign appropriate workspace permissions to integration service principal.
+
 ## Next steps
 
 Data management and analytics scenario takes the following guidelines into account for integrating Azure Databricks:
