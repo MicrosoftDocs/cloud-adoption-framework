@@ -147,7 +147,7 @@ The following table summarizes considerations for each landing zone implementati
         Best practices from cloud provider
     :::column-end:::
     :::column:::
-        More best practices must be added using Cloud Adoption Framework methodologies to apply security governance and compliance.
+        Add more best practices by using Cloud Adoption Framework methodologies to apply security governance and compliance.
     :::column-end:::
     :::column:::
         Enterprise-scale includes Azure best practices and is the target technical state for your Azure environment.
