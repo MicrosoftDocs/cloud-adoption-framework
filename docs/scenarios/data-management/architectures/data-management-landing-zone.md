@@ -125,9 +125,9 @@ The automationdb-rg resource group can be provisioned to host the metadata store
 Although this isn't a feature or a product of the data management landing zone, it's important to call out data standardization across all services. This defines the format in which data should land and be stored.
 
 >[!TIP]
->Where possible, would recommend using delta-lake format as the defacto standard across all services and storage.
+>Where possible, we would recommend using delta-lake format as the defacto standard across all services and storage.
 
-For more information, see [Data Standardization](../best-practices/data-standardization.md).
+For more information, see [Data Standardization](data-standardization.md).
 
 ## Next steps
 
