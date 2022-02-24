@@ -127,7 +127,7 @@ Although this isn't a feature or a product of the data management landing zone, 
 >[!TIP]
 >Where possible, would recommend using delta-lake format as the defacto standard across all services and storage.
 
-For more information, see [Data Standardization](../best-practices/data-lake-standardization.md).
+For more information, see [Data Standardization](../best-practices/data-standardization.md).
 
 ## Next steps
 

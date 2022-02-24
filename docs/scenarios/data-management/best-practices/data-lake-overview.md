@@ -48,16 +48,6 @@ We recommend you add three data lake accounts during your discovery and design p
 
 Data residency rules, or a requirement to have data close to a user base, can drive the requirement to create Azure Data Lake accounts in multiple Azure regions. We recommend you create a data landing zone in one region and then replicate global data using AzCopy, Azure Data Factory or third-party products. Local data remains in-region while global data is replicated across multiple regions.
 
-## Data lake access control list guidelines
-
-- Create Azure AD groups to represent data products, data products, data integrations, or job functions. Assign access to Azure AD groups instead of individual users. This configuration will simplify operation and maintenance tasks as you'll only add and remove users from Azure AD groups. Modifying ACLs on files and folders in a data lake should happen infrequently, typically only at dataset creation.
-- Set the lowest granularity for an access control list (ACL) at the dataset or table name level. A folder can represent this configuration in Data Lake Storage.
-- Define new Azure AD groups based on data roles and dataset groupings. Existing Azure AD groups might follow organizational structure, even though not all members in the same organizational unit need access to a data lake.
-- Default access control list (ACL) on every dataset folder must include *read* and *execute* permissions. Execute permission is required for users to traverse a restricted folder and access files under it. Access ACL assigned to an Azure AD group will include read and execute permissions on each dataset folder.
-- Only a managed identity or a service principal should grant *write* permission to a system. Changes can be made by an ingestion, transformation, or maintenance process.
-
-For more information about access control mechanisms, see [Access control and data lake configurations in Azure Data Lake Storage](./data-lake-access.md).
-
 ## Next steps
 
 [Provision three Azure Data Lake Storage Gen2 accounts for each data landing zone](./data-lake-zones.md)

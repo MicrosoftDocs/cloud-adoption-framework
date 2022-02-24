@@ -96,7 +96,7 @@ Three [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-intr
 For more information, see:
 
 - [Overview of Azure Data Lake Storage for the data management and analytics scenario](../best-practices/data-lake-overview.md)
-- [Data Standardization](../best-practices/data-lake-standardization.md)
+- [Data Standardization](../best-practices/data-standardization.md)
 - [Provision three Azure Data Lake Storage Gen2 accounts for each data landing zone](../best-practices/data-lake-zones.md)
 - [Key considerations for Azure Data Lake Storage](../best-practices/data-lake-key-considerations.md)
 - [Access control and data lake configurations in Azure Data Lake Storage](../best-practices/data-lake-access.md)

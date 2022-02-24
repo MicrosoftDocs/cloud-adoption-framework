@@ -177,7 +177,7 @@ items:
         - name: Data lake overview
           href: ./best-practices/data-lake-overview.md
         - name: Data lake standardization
-          href: ./best-practices/data-lake-standardization.md
+          href: ./architectures/data-standardization.md
         - name: Data lake zones
           href: ./best-practices/data-lake-zones.md
         - name: Data lake key considerations

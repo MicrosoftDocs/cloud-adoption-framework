@@ -87,9 +87,9 @@ As this layer usually stores the largest amount of data, consider using lifecycl
 
 ## Enriched zone or data lake two
 
-The next layer can be thought of as a filtration zone that removes impurities but may also involve enrichment.
+The next layer can be thought of as a filtration zone that removes impurities but could also involve enrichment.
 
-Typical activities found in this layer are schema and data type definition, removal of unnecessary columns, and application of cleaning rules whether it be validation, standardization, harmonization. Enrichment processes may also combine data sets to further improve the value of insights.
+Typical activities found in this layer are schema and data type definition, removal of unnecessary columns, and application of cleaning rules whether it be validation, standardization, harmonization. Enrichment processes could also combine data sets to further improve the value of insights.
 
 The organization of this zone is more business-driven rather than by source system. Typically, it might be a folder per department or project. Some consider this zone a staging zone where you grant permissions only to the automated jobs that run against it. If data analysts or scientists need access to the data in this form, you can grant them read-only access only.
 
@@ -171,31 +171,6 @@ Sometimes these data products mature, and the enterprise should consider how the
 > [!NOTE]
 > For every Azure Synapse workspace, which is created, we recommend to use data lake three to create a container that can be used as the primary storage. This is to stop Azure Synapse workspaces from interfering with the curated and enriched zones throughput limits.
 
-## Data lake partitioning
-
-Data partitioning is the process of organizing data in the data store so that large-scale data can be managed, and data access can be controlled. Partitioning can improve scalability, reduce contention, and optimize performance. This section describes guideline and strategy for partitioning data in the Data Lake Storage. When partitioning the data lake, have a setup that:
-
-- Doesn't compromise security.
-- Has clear isolation and aligns with the data authorization model.
-- Fits well with data ingestion process.
-- Has a well-defined path for optimal data access.
-- Supports management and maintenance tasks.
-
-### General practices
-
-Below are general practices for data partitioning design.
-
-- Focus on security implication early and design data partitions together with authorization.
-- Data redundancy might be allowed in exchange for security.
-- Multiple nesting of folders is acceptable, but keep it consistent.
-- Don't combine mixed file formats or different data products in a single folder structure.
-- Don't start the folder structure with date partitions. It's better to keep dates at the lower folder level.
-- Define a naming convention and adhere to it.
-- Include time element in the folder structure and file name.
-
-> [!TIP]
-> Folder structures should have partitioning strategies that can optimize access patterns and appropriate file sizes. In the curated zones, plan the structure based on optimal retrieval, be cautious of choosing a partition key with high cardinality, which leads to over partitioning, which in turn leads to suboptimal file sizes.
-
 ## Alignment of personas to write and reading of data
 
 :::image type="content" source="../images/data-lake-zones-quality.png" alt-text="Diagram showing an example of data lake zones." lightbox="../images/data-lake-zones-quality.png":::
@@ -214,29 +189,6 @@ Below are general practices for data partitioning design.
 
 > [!WARNING]
 > Some products don't support mounting the root of a data lake container. Because of this, each data lake container in raw, curated, enriched, and workspace should have a single folder before branching off to multiple folders. Set up the folder permissions carefully. During the creation of a new folder from the root, the default access control list (ACL) on the parent directory determines a child directory's default access control list (ACL) and access ACL. A child file's access control list (ACL) files don't have a default ACL. For more information, see [Access control lists (ACLs) in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-access-control).
-
-## What data format and file size do I choose?
-
-### File format
-
-Data might arrive to your data lake account in different kinds of formats. Human readable formats might be used like JSON, .CSV, or XML files. Or compressed binary formats might be used like .tar or .gz. The data might be in variety of sizes that includes large files that are TB's in size, such as an export of a SQL table from your on-premises systems. Or the data might be in a large number of small files that are a few kbs like real-time events from your IoT solution. While Azure Data Lake Storage Gen2 supports storing all kinds of data without imposing any restrictions, it's better to think about data formats to maximize efficiency of your processing pipelines and optimize costs. You can achieve both by picking the right format and the right file sizes. Hadoop has a set of file formats it supports for optimized storage and processing of structured data.
-
-- [Avro](https://avro.apache.org/docs/current/)
-- [Parquet](https://parquet.apache.org/documentation/latest/)
-- [ORC](https://orc.apache.org/docs/)
-
-All of these formats are machine-readable binary file formats, offer compression to manage the file size, and are self-describing in nature with a schema embedded in the file. The difference between the formats is in how data is stored. Avro stores data in a row-based format and Parquet and ORC formats store data in a columnar format.
-
-- Avro file format is best where the I/O patterns are write heavy or the query patterns favor retrieving multiple rows of records in their entirety. For example, the Avro format is favored by message buses such as Azure Event Hubs or Apache Kafka writes multiple events or messages in succession.
-- Parquet and ORC file formats are best when the I/O patterns are more read heavy and when the query patterns are focused on a subset of columns in the records. For example, where the read transactions can be optimized to retrieve specific columns instead of reading the entire record.
-
-### File size
-
-Lots of small files generally lead to suboptimal performance and potentially higher costs because of increased read/list operations. Azure Data Lake Storage Gen2 is optimized to perform better on larger files. Analytics jobs will run faster and at a lower cost.
-
-Costs are reduced because of the shorter compute (Spark or Data Factory) times but also because of optimal read operations. For example, files greater than 4 MB in size incur a lower price for every 4-MB block of data read beyond the first 4 MB. For example, to read a single file that is 16 MB is cheaper than reading four files that are 4 MB each.
-
-When processing data with Apache Spark, the typical guidance is around 64 MB to 1 GB per file. It's well known in the Spark community that thousands of small files, or files KB in size, are a challenge to performance. In the raw zone, streaming data will typically have smaller files and messages at high velocity. Files will need to be regularly compacted and consolidated. If you're using the Delta format, then `OPTIMIZE` or `AUTO OPTIMIZE` can help.
 
 ## Next steps
 
