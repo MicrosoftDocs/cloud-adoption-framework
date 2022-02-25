@@ -3,7 +3,7 @@ title: Independent Software Vendor (ISV) considerations for Azure landing zones
 description: Discuss Independent Software Vendor (ISV) specific considerations for Azure landing zones.
 author: arsenvlad
 ms.author: arsenv
-ms.date: 02/07/2022
+ms.date: 02/25/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -11,9 +11,6 @@ ms.custom: internal
 ---
 
 # Independent Software Vendor (ISV) considerations for Azure landing zones
-
-> [!CAUTION]
-> **Note to reviewers:** The diagrams on this article are in draft, and will be revised to the correct visual style before publication.
 
 For many organizations, the [Azure landing zones](./index.md) conceptual architecture represents the destination in their cloud adoption journey. Landing zones describe how you can build an Azure environment with multiple subscriptions. A landing zone accounts for scale, security, governance, networking, and identity. It's based on feedback and lessons learned from many customers.
 
