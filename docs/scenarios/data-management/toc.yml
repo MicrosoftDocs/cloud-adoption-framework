@@ -26,7 +26,7 @@ items:
           href: ./eslz-network-topology-and-connectivity.md
         - name: Network architecture considerations
           href: ./eslz-network-considerations.md
-        - name: Network architecture considerations
+        - name: Limiting cross tenant endpoint connections
           href: ../../ready/azure-best-practices/limit-cross-tenant-private-endpoint-connections.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/data-management/toc.json
       - name: Resource organization
         href: ./eslz-resource-organization.md
