@@ -66,9 +66,9 @@ In the customer-deployed model, end customers purchase software from the ISV and
 
 ![Diagram that shows a customer-deployed deployment model. A customer deploys resources provided by the ISV into their own Azure subscription, and users use those resources.](./media/isv-landing-zone/isv-customer-deployed-deployment.png)
 
-Customers frequently deploy multiple products from different ISVs into their Azure subscriptions. They compose these individual products into a solution. For example, they might deploy a database product from one ISV, a network virtual appliance from another ISV, and a web application from a third ISV. Because of this, the *Customer's other workload* element the diagram above might represent either customer's own workload or another ISV product deployed within the customer's Azure subscription.
+Customers frequently deploy multiple products from different ISVs into their Azure subscriptions. They compose these individual products into a solution. For example, they might deploy a database product from one ISV, a network virtual appliance from another ISV, and a web application from a third ISV. Because of this, the *Customer's other workload* element in the diagram above might represent either customer's own workload or another ISV product deployed within the customer's Azure subscription.
 
-Examples of customer-deployed ISV products include network-virtual-appliances, storage-virtual-appliances, and many [virtual machine images](https://azuremarketplace.microsoft.com/marketplace/apps?filters=virtual-machine-images) and [Azure applications](https://azuremarketplace.microsoft.com/marketplace/apps?filters=solution-templates) in the Azure Marketplace.
+Examples of customer-deployed ISV products include the many [virtual machine images](https://azuremarketplace.microsoft.com/marketplace/apps?filters=virtual-machine-images) (such as network and storage virtual appliances) and [Azure applications](https://azuremarketplace.microsoft.com/marketplace/apps?filters=solution-templates) in the Azure Marketplace.
 
 For some customer-deployed solutions, ISVs, Solution Integrators (SIs), or Managed Service Providers (MSPs) provide management and updates of the solution deployed within the end-customer Azure subscriptions by using [Azure Lighthouse](/azure/lighthouse/overview) or [Azure Managed Applications](/azure/azure-resource-manager/managed-applications/overview).
 
@@ -79,7 +79,7 @@ When an ISV is migrating their existing customers' workloads to Azure, it's espe
 ISVs building solutions that customers will deploy into their own subscriptions should consider the following questions:
 
 * When should the customer deploy the ISV solution into its own dedicated subscription, and when should it be deployed into an existing subscription that contains related workloads?
-* How should customers establish network connectivity between their existing workloads (inside or out of Azure) and the ISV solution being deployed?
+* How should customers establish network connectivity between their existing workloads (both inside of and outside of Azure) and the ISV solution being deployed?
 * Does the ISV solution support authentication mechanisms provided by Azure AD? Or, does it require protocols like LDAP or Kerberos?
 * How can the ISV reduce or eliminate Azure Policy violations? These might be caused by a conflict between the ISV's solution templates and customer's Azure policies. For example, customers can have policies like "All subnets must have a Network Security Group" or "No Public IPs can be attached to NICs in the Corp landing zone".
 
@@ -89,7 +89,11 @@ Some SaaS solutions interact with or use resources that are deployed in the cust
 
 ![Diagram that shows a dual deployment SaaS deployment model.](./media/isv-landing-zone/isv-dual-deployment.png)
 
-For example, Power BI is a SaaS service that, optionally, uses a Power BI On-Premises Data Gateway deployed on a VM in the customer's Azure subscription. Contoso Virtual Desktop Manager provides a SaaS console interface to control Azure Virtual Desktop resources in the customer's Azure subscriptions. Fabrikam provides a SaaS console for data analytics, and dynamically creates and deletes compute node virtual machines in the customer's Azure subscription.
+Some examples of *dual deployment SaaS* include the following:
+
+* Power BI is a SaaS service that, optionally, uses a Power BI On-Premises Data Gateway deployed on a virtual machine in the customer's Azure subscription.
+* Suppose Contoso builds a product, Virtual Desktop Manager, that provides a SaaS console interface to control Azure Virtual Desktop resources in the customer's Azure subscription.
+* Suppose Fabrikam provides a SaaS console for data analytics, and dynamically creates and deletes compute node virtual machines in the customer's Azure subscription.
 
 As a dual deployment ISV, you should refer to the Azure landing zone for guidance on both how to structure your own Azure environment, which hosts your SaaS service, and how to make the components that deploy into your customers' Azure subscriptions interact correctly with the customers' Azure landing zones.
 
@@ -116,14 +120,14 @@ Each Azure landing zone and its management group hierarchy is rooted in *one* Az
 
 The [guidance for Azure landing zones and Azure AD tenants](./design-area/azure-ad-define.md) strongly recommends using a single Azure AD tenant. This is the correct approach for most customers. However, as a SaaS ISV, you might have reasons to separate the Azure AD tenant used by your SaaS operations team from the Azure AD tenant used by your own internal or corporate IT team.
 
-For some SaaS ISVs, one teams manages the corporate resources and a separate team operates the SaaS solution. This separation can be for operational reasons, or to comply with regulatory requirements. For example, the corporate IT team might not be allowed to manage the SaaS-related subscriptions and resources, and can't be administrators of the Azure AD tenant. If this scenario applies to you, consider using two separate Azure AD tenants: one Azure AD tenant for corporate IT resources like Office 365, and a separate Azure AD tenant for Azure resources that comprise the SaaS solution. Use separate domain names for each Azure AD tenant. For example, you might use `contoso.com` for your corporate Azure AD tenant, and `ContosoSaaSOps.com` for your SaaS Azure AD tenant.
+For some SaaS ISVs, one teams manages the corporate resources and a separate team operates the SaaS solution. This separation can be for operational reasons, or to comply with regulatory requirements. For example, the corporate IT team might not be allowed to manage the SaaS-related subscriptions and resources, and can't be administrators of the Azure AD tenant. If this scenario applies to you, consider using two separate Azure AD tenants: one Azure AD tenant for corporate IT resources like Office 365, and a separate Azure AD tenant for Azure resources that comprise the SaaS solution. Each Azure AD tenant uses its own domain name. For example, you might use `contoso.com` for your corporate Azure AD tenant, and `contoso-saas-ops.com` for your SaaS Azure AD tenant.
 
 > [!WARNING]
 > When you use multiple Azure AD tenants, you will have higher management overhead. You should only use multiple Azure AD tenants when it's required. Additionally, if you use Azure AD Premium features like Privileged Identity Management, you need to purchase the license for each of your Azure AD tenants, which can increase your costs.
 
 ![Diagram that shows Azure AD tenant options for ISVs with a single corporate tenant or separation between corporate and SaaS Ops tenants.](./media/isv-landing-zone/isv-aad-tenant.png)
 
-Avoid using separate Azure AD tenants for pre-production and production environments. For example, don't create tenants like `ContosoSaaSOpsPreProd.com` and `ContosoSaaSOpsProd.com` with separate Azure subscriptions under each one. Instead, use a single Azure AD tenant, and use management groups and Azure RBAC to govern the access to subscriptions and resources under that single tenant.
+Avoid using separate Azure AD tenants for pre-production and production environments. For example, don't create tenants like `contoso-saas-ops-preprod.com` and `contoso-saas-ops-prod.com` with separate Azure subscriptions under each one. Instead, use a single Azure AD tenant, and use management groups and Azure RBAC to govern the access to subscriptions and resources under that single tenant.
 
 For more information on the using multiple Azure AD tenants, see the [securing Azure environments with Azure Active Directory whitepaper](https://azure.microsoft.com/resources/securing-azure-environments-with-azure-active-directory/).
 
