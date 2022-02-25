@@ -14,9 +14,6 @@ ms.custom: e2e-data-management, think-tank
 
 It's important to plan the structure of your data before you land it into a data lake. This planning then allows security, partitioning, and processing to be used effectively. The [three data lakes](./data-lake-overview.md#the-three-data-lakes) outlines a starting point for data management and analytics scenario.
 
-> [!NOTE]
-> Prior to reading this please make sure that you have understood [The ingest process with data management and analytics scenario in Azure](data-ingestion.md). Otherwise sections relating to data lake layout will fail to make sense.
-
 ## Overview
 
 The three data lake accounts should align to the typical zones within a data lake.
@@ -132,7 +129,7 @@ This zone is data quality conformed data zone. As the data is copied to landing 
 ```
 
 > [!TIP]
-> Businesses need to think about scenarios where they might need to rebuild an analytics platform from scratch and should always consider the most granular data they would require to rebuild downstream read data stores. It is recommended to have a business continuity and disaster recovery plan in place for key components.
+> Businesses need to think about scenarios where they might need to rebuild an analytics platform from scratch and should always consider the most granular data they would require to rebuild downstream read data stores. It is recommended to have a [business continuity and disaster recovery](../eslz-business-continuity-and-disaster-recovery.md) plan in place for key components.
 
 ## Enriched zone or data lake two
 
@@ -181,7 +178,7 @@ If the dimensional modeling is done outside of the lake, for example, in the dat
 
 Data assets in this zone are typically highly governed and well-documented. Permission is assigned by department or function and organized by consumer group or by data mart.
 
-### Curated directory layout
+### Data products container
 
 ```markdown
 .
@@ -214,6 +211,12 @@ Sometimes these data products mature, and the enterprise should consider how the
 
 > [!NOTE]
 > For every Azure Synapse workspace, which is created, we recommend to use data lake three to create a container that can be used as the primary storage. This is to stop Azure Synapse workspaces from interfering with the curated and enriched zones throughput limits.
+
+## Example of data flow into products and analytics sandbox
+
+The follow diagram brings together the previous sections and illustrates how data would flow through to the data products and analytic sandbox.
+
+:::image type="content" source="../images/data-flow-data-products.png" alt-text="data flow into product container and analytics sandbox":::
 
 ## Next steps
 

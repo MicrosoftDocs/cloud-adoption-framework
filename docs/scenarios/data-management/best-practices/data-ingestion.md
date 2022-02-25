@@ -103,4 +103,4 @@ Depending on the destination, Azure Database Migration Service can replicate fro
 
 ## Next steps
 
-[The Data flow with data management and analytics scenario in Azure](data-ingestion-flow.md)
+[SAP ingestion with data management and analytics scenario in Azure](sap-data-ingestion.md)
