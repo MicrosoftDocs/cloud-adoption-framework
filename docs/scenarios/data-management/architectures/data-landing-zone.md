@@ -155,7 +155,7 @@ Services included in the resource group include:
 |---|---|---|
 |Azure Data Factory | Yes | Azure data factory is used as the orchestration engine for the data agnostic ingestion |
 |Azure SQL DB | Yes | Azure SQL DB is used as the metastore for Azure Data Factory |
-|Event Hubs or IoT Hub | Optional | Your ingestion framework engine can use Event Hubs or IoT Hub for real-time streaming to Event Hubs and for processing of batch and streaming via a Databricks engineering workspace. |
+|Event Hubs or IoT Hub | Optional | Your data agnostic ingestion engine can use Event Hubs or IoT Hub for real-time streaming to Event Hubs and for processing of batch and streaming via a Databricks engineering workspace. |
 | Azure Databricks | Optional | You can deploy Azure Databricks or Azure Synapse Spark to use with the data agnostic ingestion engine. |
 | Azure Synapse | Optional | You can deploy Azure Databricks or Azure Synapse Spark to use with the data agnostic ingestion engine. |
 

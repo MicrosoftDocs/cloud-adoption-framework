@@ -167,6 +167,8 @@ items:
 
     - name: Deployment templates
       href: ./architectures/deployment-templates.md
+    - name: Getting started checklist
+      href: ./architectures/data-mesh-checklist.md
     - name: Solution accelerators
       href: ./architectures/solution-accelerators.md
     - name: Connecting to environments privately
@@ -180,8 +182,6 @@ items:
         items:
         - name: Overview
           href: ./best-practices/data-ingestion.md
-        - name: High level data flow
-          href: ./best-practices/data-ingestion-flow.md
         - name: SAP data ingestion
           href: ./best-practices/sap-data-ingestion.md
         - name: Automated ingestion pattern

@@ -34,4 +34,4 @@ We recommends to use VNet peering between landing zones and private endpoints. F
 
 ## Next steps
 
-[Overview of Azure Data Lake Storage for the data management and analytics scenario](../best-practices/data-lake-overview.md)
+[The ingest process with data management and analytics scenario in Azure](../best-practices/data-ingestion.md)
