@@ -167,6 +167,8 @@ items:
 
     - name: Deployment templates
       href: ./architectures/deployment-templates.md
+    - name: Getting started checklist
+      href: ./architectures/data-mesh-checklist.md
     - name: Solution accelerators
       href: ./architectures/solution-accelerators.md
     - name: Connecting to environments privately
