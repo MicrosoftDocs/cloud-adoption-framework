@@ -3,7 +3,7 @@ title: How automated ingestion frameworks support data management and analytics 
 description: Learn about how automated ingestion frameworks support data management and analytics scenario in Azure.
 author: mboswell
 ms.author: mboswell
-ms.date: 11/25/2021
+ms.date: 02/25/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -11,8 +11,6 @@ ms.custom: e2e-data-management, think-tank
 ---
 
 # How automated ingestion frameworks support data management and analytics scenario in Azure
-
-The [ingest process with data management and analytics scenario in Azure](./data-ingestion.md#ingest-considerations-for-azure-data-factory) and [ingest and processing resource group](../architectures/data-landing-zone.md#data-agnostic-ingestion) guide enterprises through how to build their own custom ingestion framework.
 
 This section provides guidance for how custom ingestion frameworks can drive services and processes.
 
@@ -24,6 +22,8 @@ This section provides guidance for how custom ingestion frameworks can drive ser
 The following illustrates how data application teams can use custom applications, Azure Logic Apps, or Microsoft Power Apps to register new data sources:
 
 ![Diagram of an automated ingestion process.](../images/automated-ingest-process.png)
+
+A data agnostic ingestion engine UI is deployed to the data management landing zone. This could be integrated into a data marketplace or operations console.
 
 The application can talk to an Azure Data Factory SQL Database metastore within each data landing zone to create new data sources and ingest them into data landing zones. Once ingestion requests are approved, it uses the Azure Purview REST API to insert the sources into Azure Purview.
 
@@ -72,16 +72,7 @@ The following illustrates how registered data sources in a Data Factory SQL Data
 
 ![Diagram of how new data sources are ingested.](../images/new-datastore-ingestion.png)
 
-The Data Factory ingestion master pipeline reads configurations from a Data Factory SQL Database metastore and runs iteratively with the correct parameters. Data moves with little to no change from the source to the raw layer in Azure Data Lake. The data shape is validated based on the Data Factory metastore, and file formats are converted to either Apache Parquet or Avro formats before being copied into the enriched layer.
-
-> [!TIP]
-> The Parquet format is recommended when the input/output (I/O) patterns are more read-heavy or when the query patterns focus on a subset of columns in the records where read transactions can be optimized to retrieve specific columns instead of reading the entire record.\
-> \
-> The Apache Avro file format is recommended where I/O patterns are more write-heavy or when query patterns retrieve multiple and whole rows of records. For example, the Avro format is favored by a message bus like Apache Event Hubs or Kafka, which write multiple events/messages in succession.
-
-If the data is ingested, it connects to an Azure Databricks data science and engineering workspace, and a data definition is created within the data management landing zone Apache Hive metastore. This data definition needs to be protected so that only the automation process can create, alter, or drop data definitions.
-
-If data application teams needs to use SQL pools to expose data, then the custom solution is to create external tables or ingest data directly into the SQL pools' internal tables.
+The Data Factory ingestion master pipeline reads configurations from a Data Factory SQL Database metastore and runs iteratively with the correct parameters. Data moves with little to no change from the source to the raw layer in Azure Data Lake. The data shape is validated based on the Data Factory metastore, and file formats are converted to delta lake format.
 
 ## Use the Azure Purview REST API to discover data
 
