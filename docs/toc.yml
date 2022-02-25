@@ -480,6 +480,10 @@ items:
 
   - name: Adopt
     items:
+    - name: Establishing adoption horizons (DRAFT)
+      href: adopt/index.md
+    - name: Approaches (DRAFT)
+      href: adopt/migrate-modernize-approaches.md
     - name: Migrate
       items:
       - name: Overview
@@ -897,6 +901,13 @@ items:
 
       - name: Skills relevant to migrate
         href: migrate/suggested-skills.md
+    
+    - name: Modernize
+      items:
+      - name: Overview (PLACEHOLDER)
+        href: modernize/index.md
+      - name: Envision cloud modernization (DRAFT)
+        href: modernize/envision-cloud-modernization.md 
 
     - name: Innovate
       items:
