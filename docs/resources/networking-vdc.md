@@ -4,7 +4,7 @@ description: Use the Cloud Adoption Framework for Azure to learn how to seamless
 author: tracsman
 ms.author: brblanch
 manager: rossort
-ms.date: 02/18/2022
+ms.date: 02/24/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: general
@@ -127,12 +127,12 @@ In hub and spoke topologies, the hub is the central network zone that controls a
 
 The hub often contains common service components consumed by the spokes. The following examples are common central services:
 
-+ - The Windows Active Directory infrastructure is required for user authentication of third parties that access from untrusted networks before they get access to the workloads in the spoke. It includes the related Active Directory Federation Services (AD FS).
-+ - A Distributed Name System (DNS) service is used to resolve naming for the workload in the spokes and to access resources on-premises and on the internet if [Azure DNS][DNS] isn't used.
-+ - A public key infrastructure (PKI) is used to implement single sign-on on workloads.
-+ - Flow control of TCP and UDP traffic between the spoke network zones and the internet.
-+ - Flow control between the spokes and on-premises.
-+ - If needed, flow control between one spoke and another.
+- The Windows Active Directory infrastructure is required for user authentication of third parties that access from untrusted networks before they get access to the workloads in the spoke. It includes the related Active Directory Federation Services (AD FS)
+- A Distributed Name System (DNS) service is used to resolve naming for the workload in the spokes and to access resources on-premises and on the internet if [Azure DNS][DNS] isn't used
+- A public key infrastructure (PKI) is used to implement single sign-on on workloads
+- Flow control of TCP and UDP traffic between the spoke network zones and the internet
+- Flow control between the spokes and on-premises
+- If needed, flow control between one spoke and another
 
 A virtual datacenter reduces overall cost by using the shared hub infrastructure between multiple spokes.
 
