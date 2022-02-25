@@ -60,3 +60,6 @@ Network topology is a critical element of landing zone architecture, because it 
 
 - [Private Link and Domain Name System (DNS) integration at scale](../../azure-best-practices/private-link-and-dns-integration-at-scale.md) describes how to integrate Azure Private Link for PaaS services with Azure Private DNS zones in hub-and-spoke network architectures.
 - DNS is a critical design topic in enterprise-scale architecture. Some organizations might want to use their existing investments in DNS. Others might see cloud adoption as an opportunity to modernize their internal DNS infrastructure and use native Azure capabilities. [Configure DNS and name resolution for on-premises and Azure resources](../../azure-best-practices/dns-for-on-premises-and-azure-resources.md) explores guidance on planning DNS and name resolution for hybrid implementations.
+
+- [Plan for Virtual Machine remote access](../../azure-best-practices/plan-for-virtual-machine-remote-access.md) describes how to securely connect into Azure Virtual machine.
+
