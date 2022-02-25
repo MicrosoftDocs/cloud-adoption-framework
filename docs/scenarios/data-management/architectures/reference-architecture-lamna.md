@@ -36,7 +36,7 @@ A critical concept for every data management and analytics scenario implementati
 
 In Lamna's organizational chart, the patient management group is part of the operations group. However, given the extreme sensitivity of the data they use, they will have their own data landing zone in the data management and analytics scenario architecture.
 
-This landing zone will host a copy of the detailed patient data and health records from the company's patient management application and related data products. These data products will be loaded into the landing zone by data integrations that'll regularly ingest the data into the cloud and land it in Azure Data Lake Storage.
+This landing zone will host a copy of the detailed patient data and health records from the company's patient management application and related data products. These data products will be loaded into the landing zone by Data applications that'll regularly ingest the data into the cloud and land it in Azure Data Lake Storage.
 
 ### Operations data landing zone
 
@@ -44,9 +44,9 @@ The operations group at Lamna is responsible for the company's core line of busi
 
 Like all business data, there's an element of sensitivity to these data products, and Lamna of wants to protect its list of clients. However, since this data doesn't include health information about individuals, it's not subject to the most stringent data protection laws.
 
-#### Data integrations
+#### Data applications
 
-The operations landing zone has a data integration that loads the healthcare provider data from Lamna's on-premises operations system. Like all data integrations, this lands the data in the cloud as-is and doesn't apply transformations to the data products.
+The operations landing zone has a [data application](data-application-source-aligned.md) that loads the healthcare provider data from Lamna's on-premises operations system. Like all data applications, this lands the data in the cloud as-is and doesn't apply transformations to the data products.
 
 #### Data products
 
@@ -72,26 +72,6 @@ To meet this need, the marketing team creates aggregated data products from the 
 
 No. Only the most restricted data requiring specific protections, like just-in-time access or customer-managed keys, requires its own landing zone. For other scenarios, other data protection features in Azure provide a highly secure environment for your data. This includes row-level security, column-level security, and encrypted columns.
 
-## Deployment guidelines
-
-The customer scenario outlined above can be deployed by referencing the following architectures for the Lamna data management landing zone and data landing zone:
-
-### Data management landing zone deployment
-
-:::image type="content" source="../images/lamna-data-management-landing-zone.png" alt-text="Lamna data management landing zone." lightbox="../images/lamna-data-management-landing-zone.png":::
-
-### Patient data landing zone deployment
-
-:::image type="content" source="../images/lamna-patients-data-landing-zone.png" alt-text="Lamna billing data landing zone." lightbox="../images/lamna-patients-data-landing-zone.png":::
-
-### Operations data landing zone deployment
-
-:::image type="content" source="../images/lamna-operations-data-landing-zone.png" alt-text="Lamna operations data landing zone." lightbox="../images/lamna-operations-data-landing-zone.png":::
-
-### Marketing data landing zone deployment
-
-:::image type="content" source="../images/lamna-marketing-data-landing-zone.png" alt-text="Lamna marketing data landing zone." lightbox="../images/lamna-marketing-data-landing-zone.png":::
-
 ### Deployment templates
 
 To deploy the architectures, use the data management landing zone and the data landing zone reference implementation templates in the following GitHub repositories:
@@ -99,13 +79,13 @@ To deploy the architectures, use the data management landing zone and the data l
 - [Data management landing zone template](https://github.com/Azure/data-management-zone)
 - [Data landing zone template](https://github.com/Azure/data-landing-zone)
 
-Use the following templates to deploy other data integrations and data products in the Lamna data landing zones:
+Use the following templates to deploy other Data applications and data products in the Lamna data landing zones:
 
 |Name  |Data landing zone  |Type  |Template  |
 |---------|---------|---------|---------|
-|Patients     |Patients         |Data integration         |[Data product batch template](https://github.com/Azure/data-product-batch)         |
-|Health records     |Patients         |Data integration         |[Data product batch template](https://github.com/Azure/data-product-batch)         |
-|Providers     |Operations         |Data integration         |[Data product batch template](https://github.com/Azure/data-product-batch)         |
+|Patients     |Patients         |Data application         |[Data product batch template](https://github.com/Azure/data-product-batch)         |
+|Health records     |Patients         |Data application         |[Data product batch template](https://github.com/Azure/data-product-batch)         |
+|Providers     |Operations         |Data application         |[Data product batch template](https://github.com/Azure/data-product-batch)         |
 |Tokenized patients     |Operations         |Data product         |[Data product batch template](https://github.com/Azure/data-product-batch)         |
 |Aggregated patient data     |Marketing         |Data product         |[Data product batch template](https://github.com/Azure/data-product-batch)         |
 
