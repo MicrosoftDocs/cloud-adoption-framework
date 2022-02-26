@@ -39,7 +39,7 @@ These articles provide guidelines for creating your landing zone based on the de
 - [Identity and access management](./eslz-identity-and-access-management.md)
 - [Network topology and connectivity](./eslz-network-topology-and-connectivity.md)
 - [Resource organization](./eslz-resource-organization.md)
-- [Governance disciplines](./eslz-security-governance-and-compliance.md)
+- [Security and Governance](./eslz-security-governance-and-compliance.md)
 - [Operations management](./eslz-management-and-monitoring.md)
 - [Business continuity and disaster recovery](./eslz-business-continuity-and-disaster-recovery.md)
 - [Deployment options](./eslz-platform-automation-and-devops.md)
