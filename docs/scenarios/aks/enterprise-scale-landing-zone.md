@@ -3,7 +3,7 @@ title: AKS Landing Zone Accelerator
 description: Learn to deploy AKS Landing Zone Accelerator.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 04/30/2021
+ms.date: 02/25/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
