@@ -1,9 +1,9 @@
 ---
 title: Identity and access management considerations for AKS
 description: Describes how to improve identity and access management for the Azure Kubernetes Service.
-author: TomGeske
-ms.author: thomasge
-ms.date: 04/23/2021
+author: BrianBlanchard
+ms.author: brblanch
+ms.date: 02/25/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
