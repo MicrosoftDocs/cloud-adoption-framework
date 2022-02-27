@@ -102,4 +102,4 @@ Continue to the [Lamna Healthcare scenario for data management and analytics in 
 Learn more in:
 
 - [Azure Machine Learning as a data product for data management and analytics scenario](../best-practices/azure-machine-learning.md)
-- [Power your data strategy with Azure Synapse Analytics](../best-practices/synapse.md)
+- [Use Azure Synapse Analytics with data management and analytics scenario](../best-practices/azure-synapse-analytics-implementation.md)
